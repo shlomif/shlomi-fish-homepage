@@ -4,8 +4,7 @@
 
 <div class="sitemap">
 <:{
-my $site_map = $nav_bar->gen_site_map();
-print $site_map;
+print (map { "$_\n" } @{$nav_bar->gen_site_map()});
 }:>
 </div>
 

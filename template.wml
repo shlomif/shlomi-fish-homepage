@@ -3,7 +3,7 @@
 
 <:{
 use MyNavData;
-use Shlomif::NavMenu;
+use HTML::Widgets::NavMenu;
 
 my $filename = "$(FILENAME)";
 $filename =~ s!index\.html$!!;
@@ -11,26 +11,14 @@ $filename = "/$filename";
 
 use vars qw($nav_bar);
 
-$nav_bar = Shlomif::NavMenu->new(
+$nav_bar = HTML::Widgets::NavMenu->new(
     'path_info' => $filename,
     'current_host' => "$(SERVER)",
     MyNavData::get_params(),
+    'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
     );
 
-my $rendered_results = 
-        $nav_bar->render(
-            no_ie => 'true',
-            styles => 
-            {
-                'bar' => 'nav',
-                'level0' => 'navbarmain',
-                'level1' => 'navbarnested',
-                'level2' => "navbarnested",
-                'level3' => "navbarnested",
-                'level4' => "navbarnested",
-                'list' => "navbarmain",
-            },
-            );
+my $rendered_results = $nav_bar->render();
 
 use vars qw($nav_links);
 

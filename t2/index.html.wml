@@ -1,76 +1,64 @@
-<html>
-<head>
-<title>Shlomi Fish' Homepage </title>
-</head>
-<body bgcolor="white">
-
-<div align="center"><h1>Shlomi Fish' Homepage</h1></div>
-
-<br />
-<br />
-<br />
+#include '../template.wml'
+<subject "Shlomi Fish' Homepage" />
 
 <h2>News</h2>
 
-<ul>
+<h3 class="newsitem">26-Oct-2002</h3>
 
-<h3>26-Oct-2002</h3>
-
-<p>
+<p class="newsitem">
 Added the <a href="http://vipe.technion.ac.il/~shlomif/software-tools/">software 
 tools directory</a>.
 </p>
 
-<h3>7-Aug-2002</h3>
+<h3 class="newsitem">7-Aug-2002</h3>
 
-<p>
+<p class="newsitem">
 Added <a href="./humour/ways_to_do_it.html">Ways to do it according
 to the Programming Languages of the World</a> to the Humour section. Enjoy!
 </p>
 
-<h3>18-May-2002</h3>
+<h3 class="newsitem">18-May-2002</h3>
 
-<p>
+<p class="newsitem">
 I have placed the fortune files I am maintaining online 
 <a href="http://vipe.technion.ac.il/~shlomif/humour/fortunes/">here</a>.
 </p>
 
-<h3><a href="old-news.html">Old News Items</a></h3>
+<h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
 
-</ul>
 
 
 
 <h2>Personal Info</h2>
-<UL>
-<A HREF="personal.html">About Myself</A><BR>
-<BR>
-<A HREF="SFresume.html">My Resume</A><BR>
-<br>
+<div style="left-margin : 3em">
+<a href="personal.html">About Myself</a><br />
+<br />
+<a href="SFresume.html">My Resume</a><br />
+<br />
 <a href="http://www.advogato.org/person/shlomif/">My Diary at
-Advogato</a><br>
-</UL>
+Advogato</a><br />
+</div>
 
 
 <h2>Studies-Related</h2>
 
-<ul>
+<div style="left-margin : 3em">
 <h3><a href="http://comnet.technion.ac.il/~cn1w02/">My IP-Noise Project</a></h3>
 
 <h3><a href="./guide2ee/">Guide to the EE Faculty's Resources</a></h3>
-</ul>
+</div>
 
-<H2>Site Attractions</H2>
+<h2>Site Attractions</h2>
 
-<H3>Humour</H3>
-<UL>
+<h3>Humour</h3>
+<div class="indent">
 <p>
 <a href="humour.html">Collection of Humorous Bits</a> - This is a small (or at least momentarily small) collection of my own
 humourous bits.
 </p>
 
 <p>
-<A HREF="humour/TheEnemy">The Enemy and How I Helped to Fight it</A> - 
+<a href="humour/TheEnemy">The Enemy and How I Helped to Fight it</a> - 
 a complete story I wrote for your reading and enjoyment. A mathematical
 proof that the Hizbulla et al. are irrational.
 </p>
@@ -81,7 +69,7 @@ Intentions</a> - The sequel to "The Enemy". Work in Progress.
 </p>
 
 <p>
-<A HREF="humour/TOWTF/">The One with the Fountainhead</A> - 
+<a href="humour/TOWTF/">The One with the Fountainhead</a> - 
 a parody on Ayn Rand's "The Fountainhead" modelled on a two-part episode of
 "Friends".
 </p>
@@ -116,160 +104,121 @@ Simple-Site.
 Programming Languages of the World</a>
 </p>
 
-</UL>
+</div>
 
-<a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/"><h3>Freecell Solver</h3></a>
+<h3><a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell Solver</a></h3>
 
-<ul>
+<p class="indent">
 A program that automatically solves games of the Freecell card solitaire game.
-</ul>
+</p>
 
-<A HREF="MathVentures/"><H3>Math-Ventures</H3></A>
-<UL>
+
+<h3><a href="MathVentures/">Math-Ventures</a></h3>
+
+<p class="indent">
 This section is devoted to mathematical problems which I encountered 
 at real-life or thought about.
-</UL>
+</p>
 
-<a href="./art/"><h3>Computer Art</h3></a>
-<ul>
+
+<h3><a href="./art/">Computer Art</a></h3>
+<p class="indent">
 Various computer art I created with explanations about how I created
 it.
-</ul>
+</p>
 
 
-<A HREF="linux_banner/"><H3>Linux InstaParty Banner</H3></A>
-<UL>
-Here you can find a banner I designed for a <A HREF="http://www.linux.org.il/">Linux</A>' Installation
-Party at the Technion.<P>
+<h3><a href="linux_banner/">Linux InstaParty Banner</a></h3>
+<p class="indent">
+Here you can find a banner I designed for a <a href="http://www.linux.org.il/">Linux</a>' Installation
+Party at the Technion.
 
-</UL>
+</p>
 
-<A HREF="links.html"><H3>Cool Links List</H3></A>
+<h3><a href="links.html">Cool Links List</a></h3>
 
 
-<a href="http://vipe.technion.ac.il/~shlomif/lecture/"><h3>Lectures given to the Haifa Linux Club</h3></a>
+<h3><a href="http://vipe.technion.ac.il/~shlomif/lecture/">Lectures given to the Haifa Linux Club</a></h3>
 
 
 <h3>Open-Source Software I wrote</h3>
 
-<ul>
-<p>
-<A HREF="jmikmod/"><h4>MikMod for Java</h4></A>
-<UL>
+<h4><a href="jmikmod/">MikMod for Java</a></h4>
+<p class="indent">
 I ported this well-known MOD player to the Java environment, and you can
 freely download the latest release of it here.
-</UL>
 </p>
 
-<p>
-<a href="grad-fu/"><h4>Gradient-Fu Patch for the GIMP</h4></a>
 
-<ul>
-This is a patch for <A HREF="http://www.gimp.org/">the GIMP</A> that exposes
-the functionality of the gradient editor to scripts and plug-ins.<br>
-</ul>
+<h4><a href="grad-fu/">Gradient-Fu Patch for the GIMP</a></h4>
+
+<p class="indent">
+This is a patch for <a href="http://www.gimp.org/">the GIMP</a> that exposes
+the functionality of the gradient editor to scripts and plug-ins.<br />
 </p>
 
-<p>
-<a href="http://gamla.iglu.org.il/"><h4>Gamla</h4></a>
-<ul>
+<h4><a href="http://gamla.iglu.org.il/">Gamla</a></h4>
+<p class="indent">
 A project I'm involved in, that aims to create a WWW application server and
 a RAD tool for <a href="http://www.perl.com/">perl</a>.
-</ul>
 </p>
 
-<p>
-<a href="http://vipe.technion.ac.il/~shlomif/quadpres/"><h4>QuaD-Pres</h4></a>
-<ul>
+<h4><a href="http://vipe.technion.ac.il/~shlomif/quadpres/">QuaD-Pres</a></h4>
+<p class="indent">
 Short for Quick and Dirty presentations this is a tool I wrote to help write
 HTML lectures. Can work standalone or inside the 
 <a href="http://www.engelschall.com/sw/wml/">WebMetaLanguage</a>.
-</ul>
 </p>
 
-<p>
-<a href="http://vipe.technion.ac.il/~shlomif/rwlock/">
-<h4>A First-Come First-Served Readers/Writers Lock</h4>
-</a>
+<h4><a href="http://vipe.technion.ac.il/~shlomif/rwlock/">A First-Come First-Served Readers/Writers Lock</a></h4>
 
-<ul>
+<p class="indent">
 An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
-</ul>
 </p>
 
-<p>
-<a href="http://vipe.technion.ac.il/~shlomif/abstraction/">
-<h4>Portable Abstraction Libraries for C and C++</h4>
-</a>
+<h4><a href="http://vipe.technion.ac.il/~shlomif/abstraction/">Portable Abstraction Libraries for C and C++</a></h4>
 
-<ul>
+<p class="indent">
 A small directory with links to libraries that make writing portable
 software easier.
-</ul>
 </p>
 
-<p>
 <h4><a href="http://vipe.technion.ac.il/~shlomif/software-tools/">Directory 
 of Software Tools</a></h4>
 
-<ul>
+<p class="indent">
 A directory of tools for software construction, configuration, bug tracking,
 testing and revision control.
-</ul>
 </p>
 
-<p>
-<h4><a href="http://better-scm.berlios.de/">The "Better SCM"
-initiative</a></h3>
+<h4><a href="http://better-scm.berlios.de/">The Better SCM initiative</a></h4>
 
-<ul>
-An initiative meant to empower the current projects aiming at developing
+<p class="indent">
 better revision control or source configuration management (SCM) tools.
-</ul>
-
 </p>
 
 
-<p>
-<a href="http://vipe.technion.ac.il/~shlomif/lm-solve/">
-<h4>LM-Solve</h4>
-</a>
 
-<ul>
+<h4><a href="http://vipe.technion.ac.il/~shlomif/lm-solve/">LM-Solve</a></h4>
+
+
+<p class="indent">
 An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a> 
 written in Perl.
-</ul>
+</p>
 
-</ul>
+<h4><a href="http://vipe.technion.ac.il/~shlomif/i-bex/">I, Bex!</a></h4>
 
-<h4><a href-"http://vipe.technion.ac.il/~shlomif/i-bex/">I, Bex!</a></h4>
-
-<ul>
+<p class="indent">
 A Stone-Age Clone for Perl/SDL.
-</ul>
+</p>
 
 
 
-<a href="./DeCSS/"><h3>My own opinion on DeCSS</h3></a>
-<ul>
+<h3><a href="./DeCSS/">My own opinion on DeCSS</a></h3>
+<p class="indent">
 Just to show my support...
-</ul>
-
-<HR>
+</p>
 
 
-
-
-
-Designed by Shlomi Fish, <A HREF="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</A>
-<DIV ALIGN=RIGHT>
-<A HREF="http://www.technion.ac.il/">
-<!--
-<IMG SRC="http://www.technion.ac.il/img/anim/techlogo-3d.gif" ALT="Hosted at the Technion" BORDER=0>
--->
-<img src="images/techlogo.gif" alt="Hosted at the Technion" border="0"> 
-</A> 
-</DIV>
-
-</BODY>

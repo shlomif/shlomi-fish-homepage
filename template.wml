@@ -22,7 +22,10 @@
     "<get-var url />" 
     <ifeq "$(SERVER)" "<get-var host />"
         "$(ROOT)/<get-var url />"
-        "http://<get-var host />.technion.ac.il/~shlomif/<get-var url />"
+        <ifeq "<get-var host />" "t2"
+            "http://shlomif.il.eu.org/<get-var url />"
+            "http://vipe.technion.ac.il/~shlomif/<get-var url />"
+            />
     />
 />
 <restore title />

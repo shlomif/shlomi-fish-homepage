@@ -52,11 +52,9 @@ all: $(T2_TARGETS) $(VIPE_TARGETS)
 RSYNC = rsync --progress --verbose --rsh=ssh
 
 upload_t2: $(T2_TARGETS)
-	echo T2_DEST = $(T2_DEST)
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@t2.technion.ac.il:public_html/ )
+	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/ )
 
 upload_vipe: $(VIPE_TARGETS)
-	echo VIPE_DEST = $(VIPE_DEST)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )
 	
 upload: upload_t2 upload_vipe

@@ -1,6 +1,46 @@
 # #use wml::des::navbar
 #include '../std/logo.wml'
 
+<:{
+use MyNavData;
+use Shlomif::NavMenu;
+
+my $filename = "$(FILENAME)";
+$filename =~ s!index\.html$!!;
+$filename = "/$filename";
+
+my $nav_bar = Shlomif::NavMenu->new(
+    'path_info' => $filename,
+    'current_host' => "$(SERVER)",
+    MyNavData::get_params(),
+    );
+
+my $rendered_results = 
+        $nav_bar->render(
+            no_ie => 'true',
+            styles => 
+            {
+                'bar' => 'nav',
+                'level0' => 'navbarmain',
+                'level1' => 'navbarnested',
+                'level2' => "navbarnested",
+                'level3' => "navbarnested",
+                'level4' => "navbarnested",
+                'list' => "navbarmain",
+            },
+            );
+
+use vars qw($nav_links);
+
+$nav_links = $rendered_results->{nav_links};
+
+use vars qw($nav_html);
+
+$nav_html = $rendered_results->{html};
+
+}:>
+
+
 # Utility Functions.
 
 <define-tag software_patents>1</define-tag>
@@ -23,6 +63,14 @@ table.cv td { vertical-align : top }
 <head>
 <title>{#SUBJECT_LOC#}</title>
 <link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
+<:{
+use CGI qw();
+
+while (my ($key, $url) = each(%$nav_links))
+{
+    print "<link rel=\"$key\" href=\"" . CGI::escapeHTML($url) . "\" />\n"
+}
+}:>
 <if "$(PRINTABLE)" "<printable_style />" "" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -47,75 +95,7 @@ table.cv td { vertical-align : top }
 <restore host />
 <restore url /></define-tag>
 
-<define-tag navbarlink>
-<preserve host />
-<preserve title />
-<set-var %attributes />
-<set-var l="<rellink url="%0" host=<get-var host /> />" />
-<set-var t="<if "<get-var title />" <attributes-quote title=<get-var title /> /> "" />" />
-<if
-    ;;; Determine if %0 matches this document
-    <ifeq "$(FILENAME)" "%0"
-        "1"
-        <ifeq "$(FILENAME)" "%0index.html"
-            "1"
-            ""
-        />
-
-    />
-    ;;; If so - bolds the text
-    "<b>%1</b>"
-    ;;; If not - makes a hyperlink
-    
-    "<a href="<get-var l />" <get-var t /> >%1</a>"
-/>
-<restore title />
-<restore host />
-</define-tag>
-
-<define-tag humour:navbar>
-<ul class="navbarnested">
-<li><navbarlink "humour/TheEnemy/" "The Enemy and how I Helped to Fight it" /></li>
-<li><navbarlink "humour/TOWTF/" "The One with the Fountainhead" /></li>
-<li><navbarlink "humour/Pope/" "The Pope Died on Sunday" /></li>
-</ul>
-</define-tag>
-
 <define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
-<define-tag lect:link><navbarlink "lecture/%0" "%1" host="vipe" /></define-tag>
-
-<define-tag oss:navbar>
-<ul class="navbarnested">
-<li><navbarlink "freecell-solver/" "Freecell Solver" host="vipe" /></li>
-<li><navbarlink "jmikmod/" "MikMod for Java" /></li>
-<li><navbarlink "rwlock/" "FCFS RWLock" host="vipe" /></li>
-<li><navbarlink "lm-solve/" "LM-Solve" host="vipe" /></li>
-<li><navbarlink "quadpres/" "Quad-Pres" host="vipe" /></li>
-</ul>
-</define-tag>
-
-<define-tag is:oss><match "%0" "^(open-source|jmikmod|gradient-fu|quadpres|rwlock|lm-solve)/" action="report" /></define-tag>
-
-<define-tag lectures:navbar>
-<ul class="navbarnested">
-<li><lect:link "Perl/Newbies/" "Perl for Newbies" /></li>
-<li><lect:link "Freecell-Solver/" "Freecell Solver" /></li>
-<li><lect:link "Lambda-Calculus/" "Lambda Calculus" /></li>
-<li><lect:link "Gimp/" "The Gimp" /></li>
-<li><lect:link "Autotools/" "GNU Autotools" /></li>
-<li><lect:link "WebMetaLecture/" "Web Meta Lecture" /></li>
-</ul>
-</define-tag>
-
-<define-tag is:aboutme><match "%0" "^((SFresume(_detailed)?\.html)|(me/.*)|(personal\.html))$" action="report" /></define-tag>
-
-<define-tag aboutme:navbar>
-<ul class="navbarnested">
-<li><navbarlink "personal.html" "Bio" /></li>
-<li><navbarlink "me/contact-me/" "Contact" title="How to Contact Me" /></li>
-<li><navbarlink "me/resumes/" "My Resum&eacute;s" /></li>
-</ul>
-</define-tag>
 
 <define-tag validhtml>
 <br /><br /><br /><br />
@@ -159,42 +139,8 @@ Stop Using Internet Explorer!</a>
      style="border:0" /></a></div>"
     ""
     />
-
-<ul class="navbarmain">
-<li><navbarlink "" "Home" /></li>
-<li><navbarlink "me/" "About Myself" />
-<if <is:aboutme "$(FILENAME)" />
-    <aboutme:navbar />
-    ""
-    />    
-</li>
-<li><navbarlink "humour/" "Humour" />
-<if <match "$(FILENAME)" "humour/*" action="report" /> 
-    <humour:navbar /> 
-    "" 
-    />
-</li>
-<li><navbarlink "MathVentures/" "Math-Ventures" /></li>
-<li><navbarlink "art/" "Computer Art" /></li>
-<li><navbarlink "open-source/" "Software" />
-<if <is:oss "$(FILENAME)" />
-    <oss:navbar />
-    ""
-    />
-</li>
-<li><navbarlink "lecture/" "Lectures" host="vipe" />
-<if <match "$(FILENAME)" "^lecture/" action="report" /> 
-    <lectures:navbar /> 
-    "" 
-    />
-</li>
-<li><navbarlink "philosophy/" "Philosophy" /></li>
-<li><navbarlink "DeCSS/" "Opinion on DeCSS" /></li>
-<li><br /></li>
-<li><navbarlink "links.html" "Cool Links" /></li>
-<li><br /></li>
-<li><navbarlink "site-source/" "Site's Source Code" /></li>
-</ul>
+    
+<:{ print join("\n", @$nav_html); }:>
 
 <validhtml />
 

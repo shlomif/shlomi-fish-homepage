@@ -1,4 +1,4 @@
-WML_FLAGS += --passoption=2,-X3074 -DROOT~.
+WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ -DROOT~.
 
 # t2 macros
 
@@ -65,8 +65,9 @@ clean:
 	rm -fr $(T2_DEST)/*
 	rm -fr $(VIPE_DEST)/*
 
+DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 # t2 targets
-$(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml template.wml t2/.wmlrc
+$(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml t2/.wmlrc $(DOCS_COMMON_DEPS) 
 	( cd t2 && wml $(T2_WML_FLAGS) -DFILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst t2/%,%,$<) ) > $@
 
 $(T2_DIRS_DEST) :: $(T2_DEST)/% : unchanged
@@ -86,7 +87,7 @@ $(T2_COMMON_DIRS_DEST) :: $(T2_DEST)/% : unchanged
 
 # vipe targets
 
-$(VIPE_DOCS_DEST) :: $(VIPE_DEST)/% : vipe/%.wml template.wml vipe/.wmlrc
+$(VIPE_DOCS_DEST) :: $(VIPE_DEST)/% : vipe/%.wml vipe/.wmlrc $(DOCS_COMMON_DEPS)
 	( cd vipe && wml $(VIPE_WML_FLAGS) -DFILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst vipe/%,%,$<) ) > $@
 
 $(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : unchanged

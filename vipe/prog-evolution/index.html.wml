@@ -1,0 +1,36 @@
+#include '../template.wml'
+<subject "My Evolution as a Programmer" />
+
+<p>
+This is an auto-biography of myself as a software engineer with many interesting
+ancedotes. It is work in progress. I hope you'll find it amusing and a bit
+instructive.
+</p>
+
+<h2>Chapters</h2>
+
+<define-tag doc:versions>
+<set-var url="%0" />
+<td>
+<a href="<url />.html">HTML</a>
+</td>
+<td>
+<a href="<url />.pod">Perl POD Source</a>
+</td>
+<td>
+<a href="<url />.txt">Text</a>
+</td>
+</define-tag>
+
+<table style="border-width: 1">
+<tr>
+<td>
+The Pre-Elpas Years
+</td>
+<td>
+describes Shlomi Fish
+as a child and teenager programmer before his first serious work as one.
+</td>
+<doc:versions "pre-elpas" />
+</tr>
+</table>

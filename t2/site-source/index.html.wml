@@ -8,12 +8,13 @@ latest version install the
 and issue the following command:
 </p>
 
-<p>
-<tt>svn checkout http://stalker.iguide.co.il:8080/svn/shlomif-homepage/</tt>
-</p>
+<pre style="background-color : yellow">
+svn checkout http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trunk/
+</pre>
 
 <p>
-Afterwards, cd to <tt>shlomif-homepage/homepage/trunk</tt> and invoke the
+Afterwards, cd to <tt>trunk</tt> and invoke the
 command <tt>bash gen_helpers.sh</tt>. To build the site you'll need GNU make,
 and <a href="http://thewml.org/">Web Meta Language</a>.
 </p>
+

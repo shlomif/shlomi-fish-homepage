@@ -44,9 +44,11 @@ my $leading_path = $rendered_results->{leading_path};
 
 my $render_leading_path_component = sub {
     my $component = shift;
+    my $title = $component->title();
+    my $title_attr = defined($title) ? " title=\"$title\"" : "";
     return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
-    "\" title=\"" . $component->title() . "\">" .
-    $component->label() . "</a>";
+        "\"$title_attr>" .
+        $component->label() . "</a>";
 };
 
 use vars qw($leading_path_string);

@@ -1,4 +1,4 @@
-WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ -I../lib/ -DROOT~.
+WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=3,-w -I../lib/ -DROOT~.
 
 # t2 macros
 

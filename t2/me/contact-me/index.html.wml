@@ -1,32 +1,45 @@
 #include '../template.wml'
+#include <utils.wml>
 <subject "How to Reach Me" />
 
-<p>
-<b>Homepage:</b> <a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a><br />
-<b>E-mail:</b> <a href="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</a><br />
-<b>Instant Messaging:</b><br />
-<ul class="nospace">
-<li><b>Jabber:</b> ShlomiFish@jabber.org</li>
-<li><b>ICQ:</b> UIN #207733823</li>
-<li><b>AOL Instant Messager (AIM):</b> ShlomiFish</li>
-<li><b>Yahoo:</b> shlomif2</li>
-<li><b>MSN Messenger:</b> shlomif@iglu.org.il</li>
-</ul>
-<br />
-<b>IRC:</b> <tt>rindolf</tt> on <a href="http://www.freenode.org/">FreeNode</a>,
+<dl class="contact">
+<dt>Homepage:</dt>
+<dd><url_body_link href="http://www.shlomifish.org/" /></dd>
+<dt>E-mail:</dt> 
+<dd><email:link "shlomif@iglu.org.il" /></dd>
+<dt>Instant Messaging:</dt>
+<dd>
+<dl>
+<dt>Jabber</dt><dd>ShlomiFish@jabber.org</dd>
+<dt>ICQ</dt><dd>UIN #207733823</dd>
+<dt>AOL Instant Messager (AIM):</dt><dd>ShlomiFish</dd>
+<dt>Yahoo:</dt><dd>shlomif2</dd>
+<dt>MSN Messenger:</dt><dd>shlomif@iglu.org.il</dd>
+</dl>
+</dd>
+<dt>IRC:</dt>
+<dd><tt>rindolf</tt> on <a href="http://www.freenode.org/">FreeNode</a>,
 <a href="http://www.efnet.org/">EF-Net</a>, 
 <a href="http://www.oftc.net/">OFTC</a> and 
-<a href="http://www.xach.com/gimpnet/">GIMP-Net</a>.<br />
-<b>Snail Mail:</b><br />
+<a href="http://www.xach.com/gimpnet/">GIMP-Net</a>.
+</dd>
+<dt>Snail Mail:</dt>
+<dd>
 Shlomi Fish<br />
 4 Hakim St.<br />
 Tel Aviv 69120<br />
 Israel<br />
-<b>Telephone</b>: +972-3-6424668<br />
-<b>Cell-Phone</b>: +972-54-6232377 (Orange)<br />
-<b>Freshmeat</b>: <a href="http://freshmeat.net/~shlomif/">http://freshmeat.net/~shlomif/</a><br />
-<b>CPAN</b>: <a href="http://search.cpan.org/~shlomif/">http://search.cpan.org/~shlomif/</a><br />
-<b>Advogato</b>: <a href="http://www.advogato.org/person/shlomif/">http://www.advogato.org/person/shlomif</a><br />
-<b>Dmoz</b> (Open Directory Project): <a href="http://dmoz.org/profiles/shlomif.html">http://dmoz.org/profiles/shlomif.html</a><br />
-</p>
-
+</dd>
+<dt>Telephone</dt>
+<dd>+972-3-6424668</dd>
+<dt>Cell-Phone</dt>
+<dd>+972-54-6232377 (Orange)</dd>
+<dt>Freshmeat</dt>
+<dd><url_body_link href="http://freshmeat.net/~shlomif/" /></dd>
+<dt>CPAN</dt>
+<dd><url_body_link href="http://search.cpan.org/~shlomif/" /></dd>
+<dt>Advogato</dt>
+<dd><url_body_link href="http://www.advogato.org/person/shlomif/" /></dd>
+<dt>Dmoz (Open Directory Project)</dt> 
+<dd><url_body_link href="http://dmoz.org/profiles/shlomif.html" /></dd>
+</dl>

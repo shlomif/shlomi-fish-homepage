@@ -1,0 +1,7 @@
+<define-tag url_body_link>
+<preserve href />
+<set-var <attributes-extract href %attributes> />
+<a <attributes-quote <attributes-remove "/" %attributes> > ><get-var href /></a>
+<restore href />
+</define-tag>
+

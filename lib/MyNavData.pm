@@ -21,6 +21,10 @@ my $tree_contents =
     'subs' =>
     [
         {
+            'value' => "Home",
+            'url' => "",
+        },
+        {
             'value' => "About Myself",
             'url' => "me/",
             'subs' => 

@@ -1,0 +1,243 @@
+TODO: 
+    - Ask Yoram if we need to send an E-mail to the mailing list of the 
+    club announcing a coming seminar.
+
+H1: Seminars' Management Web-Interface Specification Document
+=============================================================
+
+H2: Description
+===============
+
+We will design a WWW-based interface that will allow managing seminars 
+in theTechnion. Specifically the interface will allow:
+
+1. Managing several classes of seminars (clubs, faculties, etc.) Possibly
+a two-level hierarchy - club and subject.
+
+2. Posting an announcement for seminars for each of the classes.
+
+3. Viewing a calendar of seminars (daily, weekly, monthly, etc.)
+
+4. Permissions: a site-wide administrator, admins for each of the clubs, 
+password and authentication, etc.
+
+H2: Technologies:
+=================
+
+We will write the back-end using several Perl scripts and modules. The site
+will be mostly XHTML/1.0 and will use Cascading Style Sheets (CSS) version 1.
+The HTML that will be generated will be as simple and as basic as possible. 
+
+We will use Apache as the web-server, possibly allowing the code to run
+on other web-servers as well. (it all depends on the extra functionality 
+which would be given to us by Mod-Perl). The web-server will run on top of 
+a UNIX box, most probably, but not limited to Linux. 
+
+We will use an Open-Source SQL server as the database back-end. 
+MySQL and PostgreSQL are both viable alternatives. InterBase also
+seems nice, but it is not as popular as the two other alternatives. (or as
+fast).
+
+
+H2: Implementation
+==================
+
+H3: SQL Tables
+--------------
+
+H4: Seminars
+------------
+
+This table will be the main table that will contain a listing of the seminars.
+It will contain the following fields:
+
+1. Seminar_ID - A unique identifier for the seminar. Primary Key of the table.
+
+2. Subject_ID - The subject of the club to which the seminar belongs.
+Indexed. 
+
+[Note:] Depending on what SQL gives us we may also need a Club_Id.
+
+3. Seminar_Title - The title of the seminar.
+
+4. Seminar_Description - A description of the seminar.
+
+5. Date - Indexed.
+
+6. Time - Indexed.
+
+7. TBD: Room, Building, Other Location, Lecturer, E-mail for more information,
+URL,...
+
+H4: Clubs:
+----------
+
+This table will contain a list of the available clubs. It contains the
+following fields:
+
+1. Club_ID - The primary key of the table. An integer.
+
+2. Name - The name of the club.
+
+3. TBD: URL, Description, Icon
+
+Note that the information about the Club's mailing list is stored in a
+separate table.
+
+H4: Subjects:
+-------------
+
+This table will contain a list of subjects within a club.
+
+1. Subject_ID - The primary key. Uniquely identifis the subject.
+
+2. Club_ID - The club to which this subject belongs.
+
+3. Name - The title of the subject.
+
+4. TBD: 
+
+H4: Users:
+----------
+
+This table will define the permanent users of the site.
+
+1. User_ID - Primary Key.
+
+2. Name 
+
+3. Super_Admin - a flag that determines if this user is a super-admin
+of the site.
+
+4. Password (hashed or otherwise)
+
+4. TBD: E-mail, URL
+
+
+H4: Permissions:
+----------------
+
+This table will associate each user with each club and define the permission
+he has on this club. If a user is not associated with a club (i.e: The
+record that contains (User_ID,Club_Id) is non-existent) than it is assumed
+the user does not have any permissions for the club.
+
+The table contains the following fields:
+
+1. User_ID
+
+2. Club_ID
+
+3. Add/Edit Seminars Permissions.
+
+4. Edit Subjects.
+
+
+H4: Mailing List:
+-----------------
+
+This table assists the clubs' table and contains information regarding the
+mailing list that is associated with the club.
+
+The following fields are present:
+
+1. Club_ID
+
+2. Mailing List Type
+
+3. TBD: Specific fields that are pertinent to the various types of mailing
+lists. (for instance: host, mailing list base address, online archive URL).
+
+
+H3: Back-End Queries
+--------------------
+
+H4: Calendar Lookup
+-------------------
+
+This is a read-only query that finds seminars that exist in a defined
+time-span. (e.g: a day, a week, a month). Constraints:
+
+1. Time Span.
+
+2. Specific Clubs.
+
+3. Specific Subjects.
+
+H5: SQL Format
+--------------
+
+SELECT [fields]
+FROM Seminars
+WHERE TIME-SPAN(Seminars.date)
+
+SELECT [fields]
+FROM Seminars, Subjects
+WHERE Seminars.Subject_ID = Subjects.Subject_ID and
+    Subjects.Club_ID = [Specific Club ID]
+
+SELECT [fields]
+FROM Seminars, Subjects
+WHERE Seminars.Subject_ID = [Specific Subject ID]
+
+H4: Seminar Lookup:
+-------------------
+
+Retrieve information regarding a specific seminar. Read-only.
+
+H5: SQL Format
+--------------
+
+SELECT [fields]
+FROM Seminars
+WHERE Seminar_ID = [Specific Seminar ID]
+
+H4: Insert New Seminar
+----------------------
+
+A query that inserts a new seminar of an existing subject and club.
+
+Sync Requirements: We need a unique ID for the seminar, that we can later
+use for reference. 
+
+INSERT INTO Seminars
+    Seminar_ID = [A new seminar ID]
+    TBD: Time, Date, Subject_ID, Abstract
+
+Sanity Checks: 
+1. The seminar is in the future.
+2. Subject_ID exists in the table.
+3. Query submitted by a user with valid permissions to do so.
+
+H4: Cancel Existing Future Seminar
+----------------------------------
+
+This query deletes a Seminar that has been canceled.
+
+DELETE FROM Seminars WHERE Seminar_ID = [ Specific Seminar ID]
+
+Sanity Checks:
+1. The seminar is in the future.
+2. Query submitted by a user with valid permission to do so.
+
+H4: Edit a Seminar
+------------------
+
+This query edits an existing seminar.
+
+UPDATE Seminars 
+SET
+    Field1 = Value1
+
+WHERE
+    Seminar_ID = [Specific Seminar ID]
+
+Sanity Checks:
+1. Query submitted by a user with valid permission to do so.
+
+H4: Insert New Subject
+----------------------
+
+
+
+

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>References to Functions</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./modules.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">1.1 References to Functions</h1>
+
+<p>
+Perl allows the programmer to store a reference to a function inside
+a scalar value. This variable can later be derefernced in order to
+invoke the function with any number of arguments.
+</p>
+
+<p>
+By using this mechanism, one can implement callbacks, and make sure a wrapper
+function can invoke several helper functions which it will treat the same.
+</p>
+
+<h2>Closures</h2>
+
+<p>
+In perl it is possible to define dynamic subroutines, inside the code of 
+the current scope. That scope can be a function or even another dynamic 
+subroutine. These subroutines, which are sometimes refered to as closures,
+can see all the variables of the scope in which they were declared, even
+after the function that created them stopped running.
+</p>
+
+<p>
+Closures enable the program to pass state information into callbacks that 
+do not accept state information, and are generally a very convenient 
+mechanism.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./modules.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

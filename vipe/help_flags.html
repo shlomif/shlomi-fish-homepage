@@ -1,0 +1,208 @@
+<h1>Time to Rethink Your Help Flag</h1>
+
+It may come as a surprise to many of you, but sometimes, featuritis
+can be a good thing. Sure, you may only use 20% or even just 10% of
+the features, but, to quote Joel Spolsky, everybody uses a different
+20%. Take 10 or 20 random people, and you'll get about 99%. You may
+happen to face the situation in which your program has gained more
+commandline arguments than GNU ls. How should you deal with the --help
+switch?
+
+<p>
+<hr>
+<p>
+
+<a href="http://freshmeat.net/projects/freecellsolver/">Freecell
+Solver</a> (one of my projects) is such a case. Its --help screen now
+takes seven clicks to display entirely when invoked with "fc-solve -h
+| less".  The problem is that people like choices, but don't want to
+be confused with a lot of options. If the program does nothing (or
+misbehaves in the first board layout you try) and you want a quick
+answer, you're not going to read through seven pages. <a
+href="http://www.joelonsoftware.com/">Spolsky</a> tends to be a bit
+GUIish, but the same rule applies to commandline programs.
+
+<p>
+
+Several solutions have been brought forth to deal with this situation:
+
+<ol>
+  <li>The <a href="http://freshmeat.net/projects/cvs/">CVS</a>
+      solution: --help displays a short screen giving      
+      pointers to other help screens (--help-options, --help-command,
+      -H command, etc.).
+  <li>Some programs differentiate between -h and --help; -h's output
+      is shorter and --help's is more comprehensive.      
+  <li>The RTFM solution: Refer the user to the man page, info
+      document, README, or online help for more information.
+  <li>The <a href="http://freshmeat.net/projects/perl/">Perl</a>
+      solution: --help displays part of the man page, while myprog
+      -man displays the entire man page (invoking the pager, too).
+</ol>
+
+<p>
+
+Here is my take on the pros and cons of each approach:
+
+<p>
+
+The CVS one is a bit annoying because I instinctively type "cvs
+--help" and get something absolutely useless. (This could be solved
+with a shell function, though).
+
+<p>
+
+-h and --help distinguishing is ok, but you may eventually make --help
+unusable, too.
+
+<p>
+
+The RTFM option: Many users will not bother to read a different
+source, so you may be losing some of them there. Also, if the man page
+is bloated, you are back to square one.
+
+<p>
+
+The Perl solution is not bad as long as you make sure the relevant
+parts of the man page are not bloated, and outsource things to
+different man pages.  <a
+href="http://freshmeat.net/projects/websitemetalanguage/">Website META
+Language</a> has an interactive application for displaying and
+accessing its various man pages.
+
+<p>
+
+My problem with Freecell Solver is that I want it be portable to Win32
+and other non-Unix platforms. If you stick to Unix, you can stay with
+the Perl approach and simply make sure your man pages are sane (and
+that you have HTML documentation and, optionally, a PDF file).
+
+<p>
+
+In any case, my portable solution is a combination of the CVS and Perl
+solutions. I am going to have a default CVS-like help screen, which
+could later be changed to something else, using an environment
+variable.
+
+<p>
+
+Here's what I'm going to write:
+
+<p>
+
+<table align="center">
+  <tr><td>
+<hr>
+<pre>
+fc-solve [flags] [board_file|-]
+
+Reads board from standard input by default or if a "-" is specified.
+
+- If it takes too long to finish, try one of the commandline
+  configurations presented in --help-configs.
+
+- If it erroneously reports a board as unsolvable, try "-to 01ABCDE".
+
+- If the solution is too long, try running it with the "-opt" flag or
+  with "--method a-star".
+
+- If you want to present the moves only, try "-m" (long notation) or
+  "-m -sn" (very compact).
+
+- For a description of all the options, type "--help-all".
+
+- For other problems, type "fc-solve --help-problems".
+
+- To turn --help back into something more useful, read
+  "--help-real-help".
+
+Contact Shlomi Fish, shlomif@vipe.technion.ac.il for more information.
+</pre>
+<hr>
+  </td></tr>
+</table>
+
+<p>
+
+This deals with common problems in a graceful way (of course, I'll
+have to implement the other help screens). If you're asking why I
+don't configure Freecell Solver so it won't have these problems,
+you're asking a good question. However, the default configuration
+works well for most of the boards out there, and I don't want to give
+the user something more complex that may or may not work better (and
+is itself a compound configuration).
+
+<p>
+
+I will use an environment variable named FREECELL_SOLVER_DEFAULT_HELP
+(I'm a bit obsessed with maintaining namespace integrity) to specify
+the default help screen. That way, the user can modify the help screen
+to something more useful than the summary (which would always be
+available in --help-summary). I haven't used environment variables
+before, but I don't think I have a choice now.
+
+<p>
+
+I guess I'll have to do something regarding usability before I add
+support for system threads<sup>[1]</sup>. That's why I'm planning that
+the 2.7.x tree will be dedicated entirely to rethinking usability. The
+factoring of the help screens would be one thing, but I'll also try to
+have better documentation with more diverse formats than text files
+(God bless Perl POD and <a
+href="http://freshmeat.net/projects/docbook/">DocBook</a>), and other
+such changes.
+
+<p>
+
+If you think human factors engineering does not apply to commandline
+programs, think again. Even in the Unix world, where Real
+Men<sup>(tm)</sup> and Real Women<sup>(tm)</sup> use commandline
+utilities like it was their second nature, you still need to make sure
+your program behaves in a sensible way. When was the last time you
+managed to find a forgotten flag in the gcc man page in less than two
+minutes?
+
+<p>
+
+Enough said.
+
+<p>
+
+<font size="-1">[1] Freecell Solver is thread-safe and can task
+switch but cannot be thread-enabled. If you are asking why I need to
+make it thread-enabled when most Freecell users will never need to run
+it on an SMP machine,  my answer is: Just for fun<sup>(tm)</sup>.
+</font>
+
+<p>
+<hr>
+<p>
+
+<a href="http://freshmeat.net/~shlomif/">Shlomi Fish</a> once defined
+himself as a "Programmer, Writer, Amateur Mathematician, Wannabe
+Philosopher, and someone who studies in the Technion in the vain hope
+of becoming an Electrical Engineer". He does not considers himself a
+sane person, but is quite certain that only makes him more
+interesting.
+
+<p>
+<hr>
+<p>
+
+<pre>
+
+projects to link:
+
+Freecell Solver						2851
+CVS							1627
+Perl							7742
+Website META Language					11465
+DocBook							14950
+
+
+categories to link:
+
+Topic :: Documentation					905
+Topic :: Software Development :: Documentation		847
+
+</pre>

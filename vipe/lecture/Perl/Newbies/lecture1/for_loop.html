@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>The For Loop</title>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./input.html" class="nav">Previous</a></td>
+<td>
+<a href="./conditionals/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">6 The For Loop</h1>
+
+<p>
+The for loop enables us to iterate over a sequence of numbers and repeat
+the same set of operations for each number.
+</p>
+
+<p>
+For example, the following program prints all the numbers from 1 to 100:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$i</FONT> (<FONT color=#ff00ff>1</FONT>..<FONT color=#ff00ff>100</FONT>)
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#008080>$i</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;    
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+Some explanations about the syntax:
+</p>
+
+<p>
+<ol>
+
+<li>
+<tt>$i</tt> is the iteration variable. It accepts the value 1, then the 
+value 2, then 3 and so forth until it is equal to 100, afterwards the 
+loop terminates.
+</li>
+
+<li>
+The curly brackets (<tt>{ ... }</tt>) encapsulate the loop block. The loop block
+is executed once for each value <tt>$i</tt> accepts. Within that block, called 
+the loop body, you can use <tt>$i</tt> and you'll get its current value.
+</li>
+
+</ol>
+</p>
+
+<p>
+We can nest loops, so for example the following program prints the 
+mulitplication board:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$y</FONT> (<FONT color=#ff00ff>1</FONT> .. <FONT color=#ff00ff>10</FONT>)
+{
+    <B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$x</FONT> (<FONT color=#ff00ff>1</FONT> .. <FONT color=#ff00ff>10</FONT>)
+    {
+        <FONT color=#008080>$product</FONT> = <FONT color=#008080>$y</FONT>*<FONT color=#008080>$x</FONT>;
+        <FONT color=#0000ff># Add as much whitespace as needed so the number will occupy</FONT>
+        <FONT color=#0000ff># exactly 4 characters.</FONT>
+        <B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$whitespace</FONT> (<FONT color=#ff00ff>1</FONT> .. (<FONT color=#ff00ff>4</FONT>-<B><FONT color=#804040>length</FONT></B>(<FONT color=#008080>$product</FONT>)))
+        {
+            <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff> </FONT><FONT color=#ff00ff>&quot;</FONT>;
+        }
+        <B><FONT color=#804040>print</FONT></B> <FONT color=#008080>$product</FONT>;
+    }
+    <FONT color=#0000ff># Move to the next line</FONT>
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+You may have noticed the program comments. In perl comments start with the 
+sharp sign (<tt>#</tt>) and extend to the end of the line. Writing the 
+multiplication boards with the labels that indicate which numbers are being 
+multiplied is left as an exercise to the reader.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./input.html" class="nav">Previous</a></td>
+<td>
+<a href="./conditionals/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Expressions</title>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../output/semicolons.html" class="nav">Previous</a></td>
+<td>
+<a href="operators.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">3 Expressions</h1>
+
+<p>
+Perl supports such mathematical operators as <tt>+</tt>, <tt>-</tt>,
+<tt>*</tt> (multiplication), and parenthesis (<tt>( ... )</tt>). An example
+is worth a thousand words:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>5 + 6 = </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>5</FONT>+<FONT color=#ff00ff>6</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>(2 + 3) * 6 = </FONT><FONT color=#ff00ff>&quot;</FONT>, (<FONT color=#ff00ff>2</FONT>+<FONT color=#ff00ff>3</FONT>)*<FONT color=#ff00ff>6</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2 + 3 * 6 = </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>2</FONT>+<FONT color=#ff00ff>3</FONT>*<FONT color=#ff00ff>6</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2 raised to the power of 8 is </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>2</FONT>**<FONT color=#ff00ff>8</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>10-5 = </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>10-5</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>. 5-10 = </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>5-10</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2/3 = </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>2</FONT>/<FONT color=#ff00ff>3</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+The output of this program is:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+shlomi:~/progs/perl# perl operators.pl
+5 + 6 = 11
+(2 + 3) * 6 = 30
+2 + 3 * 6 = 20
+2 raised to the power of 8 is 256
+10-5 = 5. 5-10 = -5
+2/3 = 0.666666666666667
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+The operators have the same precendence as their mathemtical equivalents. The
+parenthesis are useful for making sure a sub-expression will be evaluated before
+all others do.
+</p>
+
+<table border="1">
+<tr>
+<td>
+<h3>Note:</h3>
+
+You can use commas to print more than one expression at once. It beats 
+writing a separate <tt>print</tt> command for every expression you wish to 
+output. However, for better readability, it is recommended that you will 
+separate your expressions among several prints.
+</td>
+</tr>
+</table>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../output/semicolons.html" class="nav">Previous</a></td>
+<td>
+<a href="operators.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Escape Sequences</title>
+<link rel="StyleSheet" href="./../../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../../variables/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">3.3.1 Escape Sequences</h1>
+
+<p>
+We have already encountered the <tt>\n</tt> "escape sequence" which can come
+inside strings and designates a newline character. There are many others in 
+perl. Here is a list of the most important ones:
+</p>
+
+<p>
+
+<ul>
+<li>
+<tt>\\</tt> - designates an actual backslash (<tt>\</tt>)
+</li>
+
+<li>
+<tt>\"</tt> - designates an actual double-quote character (<tt>"</tt>)
+</li>
+
+<li>
+<tt>\$</tt> - an actual dollar sign (a real <tt>$</tt> does something else)
+</li>
+
+<li>
+<tt>\@</tt> - an actual at-sign (a non-escaped <tt>@</tt> does something else)
+</li>
+
+<li>
+<tt>\n</tt> - a newline character
+</li>
+
+<li>
+<tt>\r</tt> - a carriage return sign
+</li>
+
+<li>
+<tt>\t</tt> - a tab character
+</li>
+
+<li>
+<tt>\xDD</tt> - where "DD" are two hexadecimal digits - gives the character
+whose ascii code is "DD".
+</li>
+
+</ul>
+
+</p>
+
+<p>
+Here's an example to illustrate some of them:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>I said </FONT><FONT color=#6a5acd>\&quot;</FONT><FONT color=#ff00ff>hi!</FONT><FONT color=#6a5acd>\&quot;</FONT><FONT color=#ff00ff> to myself, and received no reply.</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>This program will cost you </FONT><FONT color=#6a5acd>\$</FONT><FONT color=#ff00ff>100 dollars.</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The KDE</FONT><FONT color=#6a5acd>\\</FONT><FONT color=#ff00ff>GNOME holy war makes life in the Linux world </FONT><FONT color=#ff00ff>&quot;</FONT> . 
+      <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>more interesting.</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+whose output is:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+I said "hi!" to myself, and received no reply.
+This program will cost you $100 dollars.
+The KDE\GNOME holy war makes life in the Linux world more interesting.
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../../variables/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

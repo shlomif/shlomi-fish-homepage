@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>Functions</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./operators.html" class="nav">Previous</a></td>
+<td>
+<a href="./strings/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">3.2 Functions</h1>
+
+<p>
+How many characters are in the perl motto? Perl can tell that right away:
+</p>
+
+<!-- TODO: Highlight -->
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>length</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>There's more than one way to do it</FONT><FONT color=#ff00ff>&quot;</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+<tt>length()</tt> is a built-in function that tells how many characters are in
+a string. A function is a named sub-routine that accepts several arguments
+and returns a value that can be further evaluated as part of a greater 
+expression, or used directly.
+</p>
+
+<p>
+To help us understand functions further, let's inspect the perl function 
+<tt>substr</tt> (short for "sub-string"). <tt>substr</tt> retrieves sub-strings
+of a given string. The first argument to it is a string, the second is the
+offset from which to take the substring, and the third (which is optional
+and defaults to the end of the string) is the length of the substring to be
+taken.
+</p>
+
+<p>
+An example will illustrate it best:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>substr</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>3</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>substr</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>1</FONT>, <FONT color=#ff00ff>4</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>substr</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>0</FONT>, <FONT color=#ff00ff>6</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+The output of this program is:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+ong string
+ lon
+A long
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>( You may notice that the position of the first character is 0. )</p>
+
+<p>The commas are used to separate the arguments to the function and they are 
+mandatory in perl. The parenthesis that enclose them are optional, though. The above
+program could have been re-written as:</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> ((<B><FONT color=#804040>substr</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>3</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>);
+<B><FONT color=#804040>print</FONT></B> ((<B><FONT color=#804040>substr</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>1</FONT>, <FONT color=#ff00ff>4</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>);
+<B><FONT color=#804040>print</FONT></B> ((<B><FONT color=#804040>substr</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A long string</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>0</FONT>, <FONT color=#ff00ff>6</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>);
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+We need an extra set of parenthesis so <tt>print</tt> (which is also a function) 
+would not be confused and consider only the result of the <tt>substr</tt> 
+operation as its argument. If it makes no sense, then it shouldn't; however, 
+remember that a set of parenthesis, that wraps up the argument list 
+of a function, can do you no harm.
+</p>
+
+<h2>The int() function</h2>
+
+<p>
+Another useful function is int(). This function takes a number and rounds it
+down to a near integer (= whole number). Here's an example:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The whole part of 5.67 is </FONT><FONT color=#ff00ff>&quot;</FONT> . <B><FONT color=#804040>int</FONT></B>(<FONT color=#ff00ff>5</FONT>.<FONT color=#ff00ff>67</FONT>) . <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./operators.html" class="nav">Previous</a></td>
+<td>
+<a href="./strings/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

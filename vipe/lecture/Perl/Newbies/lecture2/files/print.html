@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Using print with files</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./readline.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">5.1 Using print with files</h1>
+
+<p>
+The print command which we encountered before can also be used to send output 
+to files. In fact, the screen itself is a special filehandle, whose name is 
+<tt>STDOUT</tt>, but since its use is so common, perl allows it to be omitted.
+</p>
+
+<p>
+The syntax of printing to a file is 
+<tt>print File $string1, $string2, ... </tt>. Here's a short example that 
+prepares a file with a pyramid in it:</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#a020f0>#!/usr/bin/perl</FONT>
+
+<B><FONT color=#804040>use strict</FONT></B>;
+
+<B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$pyramid_side</FONT> = <FONT color=#ff00ff>20</FONT>;
+
+<B><FONT color=#804040>open</FONT></B> O, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&gt;pyramid.txt</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>for</FONT></B>(<FONT color=#008080>$a</FONT>=<FONT color=#ff00ff>1</FONT> ; <FONT color=#008080>$a</FONT> &lt;= <FONT color=#008080>$pyramid_side</FONT> ; <FONT color=#008080>$a</FONT>++)
+{
+    <B><FONT color=#804040>print</FONT></B> O <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>X</FONT><FONT color=#ff00ff>&quot;</FONT> x <FONT color=#008080>$a</FONT>;
+    <B><FONT color=#804040>print</FONT></B> O <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+<B><FONT color=#804040>close</FONT></B>(O);
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+In order to print to more than one file at once, one needs to use two
+separate print statements. Here's an example, that prints to one file the 
+sequnce 1, 1.1, 2, 2.1, 3, 3.1... and to the other the sequence 1, 1.5, 2, 2.5
+, 3, 3.5...
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>open</FONT></B> SEQ1, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&gt;seq1.txt</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>open</FONT></B> SEQ2, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&gt;seq2.txt</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>for</FONT></B>(<FONT color=#008080>$a</FONT>=<FONT color=#ff00ff>0</FONT>;<FONT color=#008080>$a</FONT>&lt;<FONT color=#ff00ff>100</FONT>;<FONT color=#008080>$a</FONT>++)
+{
+    <B><FONT color=#804040>print</FONT></B> SEQ1 <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+    <B><FONT color=#804040>print</FONT></B> SEQ2 <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+    <B><FONT color=#804040>print</FONT></B> SEQ1 (<FONT color=#008080>$a</FONT>+<FONT color=#ff00ff>0</FONT>.<FONT color=#ff00ff>1</FONT>);
+    <B><FONT color=#804040>print</FONT></B> SEQ2 (<FONT color=#008080>$a</FONT>+<FONT color=#ff00ff>0</FONT>.<FONT color=#ff00ff>5</FONT>);    
+    <B><FONT color=#804040>print</FONT></B> SEQ1 <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+    <B><FONT color=#804040>print</FONT></B> SEQ2 <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+
+<B><FONT color=#804040>close</FONT></B>(SEQ1);
+<B><FONT color=#804040>close</FONT></B>(SEQ2);
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./readline.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

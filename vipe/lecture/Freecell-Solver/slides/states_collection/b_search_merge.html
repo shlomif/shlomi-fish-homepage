@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+<title>
+Binary-Search-Based Merge to Add the Sort Margin
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./qsorted_sort_margin.html" class="nav">Previous</a></td>
+<td>
+<a href="./array_of_ptrs.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+3.3 Binary-Search-Based Merge to Add the Sort Margin
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+Instead of qsorting the sort margin in, keep it sorted and
+then use a binary-search based merge to merge it with the
+main array.
+</li>
+<li>
+The reason I used a binary search based merge, instead of a
+linear merge, is because I reasoned that the main array
+would become much larger than the margin (which has a constant
+size), and so this would result in a lot of comparisons.
+</li>
+<li>
+O(log(n)) lookup, O(n) insertion, and O(n<sup><small>2</small></sup>)
+accumulative complexity.
+</li>
+<li>
+Noticeably faster than qsorting.
+</li>
+</ul>
+</h3>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./qsorted_sort_margin.html" class="nav">Previous</a></td>
+<td>
+<a href="./array_of_ptrs.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

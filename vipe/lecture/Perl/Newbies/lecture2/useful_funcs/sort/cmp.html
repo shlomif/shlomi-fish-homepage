@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>&lt;=&gt; and cmp</title>
+<link rel="StyleSheet" href="./../../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../grep.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.3.1 &lt;=&gt; and cmp</h1>
+
+<p>
+Perl has two operators <tt>&lt;=&gt;</tt> and <tt>cmp</tt>, which are very useful
+when wishing to sort arrays. <tt>$a &lt;=&gt; $b</tt> returns -1 if <tt>$a</tt> 
+is numerically lesser than <tt>$b</tt>, 1 if its greater, and zero if they are 
+equal.
+</p>
+
+<p>
+<tt>cmp</tt> does the same for string comparison. For instance the previous 
+example could be re-written as:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@array</FONT> = (<FONT color=#ff00ff>100</FONT>,<FONT color=#ff00ff>5</FONT>,<FONT color=#ff00ff>8</FONT>,<FONT color=#ff00ff>92</FONT>,<FONT color=#ff00ff>-7</FONT>,<FONT color=#ff00ff>34</FONT>,<FONT color=#ff00ff>29</FONT>,<FONT color=#ff00ff>58</FONT>,<FONT color=#ff00ff>8</FONT>,<FONT color=#ff00ff>10</FONT>,<FONT color=#ff00ff>24</FONT>);
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@sorted_array</FONT> = (<B><FONT color=#a52929>sort</FONT></B> { <FONT color=#008c8c>$a</FONT> &lt;=&gt; <FONT color=#008c8c>$b</FONT> } <FONT color=#008c8c>@array</FONT>);
+
+<B><FONT color=#a52929>print</FONT></B> <B><FONT color=#a52929>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>,</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008c8c>@sorted_array</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Much more civil, isn't it? The following example, sorts an array of strings
+in reverse:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@input</FONT> = (
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Hello World!</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>You is all I need.</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>To be or not to be</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>There's more than one way to do it.</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Absolutely Fabulous</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Ci vis pacem, para belum</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Give me liberty or give me death.</FONT><FONT color=#ff00ff>&quot;</FONT>,
+    <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Linux - Because software problems should not cost money</FONT><FONT color=#ff00ff>&quot;</FONT>,
+);
+
+<FONT color=#0000ff># Do a case-insensitive sort</FONT>
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@sorted</FONT> = (<B><FONT color=#a52929>sort</FONT></B> { <B><FONT color=#a52929>lc</FONT></B>(<FONT color=#008c8c>$b</FONT>) <B><FONT color=#a52929>cmp</FONT></B> <B><FONT color=#a52929>lc</FONT></B>(<FONT color=#008c8c>$a</FONT>); } <FONT color=#008c8c>@input</FONT>);
+
+<B><FONT color=#a52929>print</FONT></B> <B><FONT color=#a52929>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008c8c>@sorted</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../grep.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

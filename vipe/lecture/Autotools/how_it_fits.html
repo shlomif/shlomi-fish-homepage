@@ -1,0 +1,64 @@
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+<title>
+How it all fits together
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./intro.html" class="nav">Previous</a></td>
+<td>
+<a href="./simple_project/" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+2 How it all fits together
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+Automake takes as input the file <tt>Makefile.am</tt> and produces
+<tt>Makefile.in</tt>.
+</li>
+<li>
+The "autoconf" program takes as input the file <tt>configure.in</tt>
+(or in Autoconf 2.5 the file <tt>configure.ac</tt>) and generates the
+<tt>./configure</tt> script out of it.
+</li>
+<li>
+Autoheader takes as input the files <tt>acconfig.h</tt> and generates the
+<tt>config.h.in</tt> template by parsing <tt>configure.in</tt>.
+</li>
+<li>
+<tt>./configure</tt>, when ran by the user generates the normal
+<tt>Makefile</tt> out of <tt>Makefile.in</tt> and optionally processes other
+files (such as <tt>config.h.in</tt> -&gt; <tt>config.h</tt>, an optional
+RPM Spec, Makefiles in other directories, etc.
+</li>
+</ul>
+</h3>
+<p>
+<img src="processing-diagram.png" border="0" alt="Processing the Files" width="489" height="361">
+</p>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./intro.html" class="nav">Previous</a></td>
+<td>
+<a href="./simple_project/" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

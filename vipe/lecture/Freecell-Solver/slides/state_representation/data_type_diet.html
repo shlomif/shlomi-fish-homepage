@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+<title>
+Reducing the Data Type Bit-Width
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./ptrs_to_stacks.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+6.1 Reducing the Data Type Bit-Width
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+When Freecell Solver started it represented each card and stack length
+specifier as a 32-bit quantity.
+</li>
+<li>
+This caused it to run out of memory or stack in some cases.
+</li>
+<li>
+To resolve it, I converted it to use 8-bit bytes.
+</li>
+<li>
+This did not only consume less memory but also made it much faster.
+</li>
+<li>
+I <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg07076.html">
+queried</a> the Linux-IL mailing-list about it and received some answers.
+</li>
+<li>
+The most probable reasons: less memory -&gt; less cache misses, and handling
+bytes is just as fast as handling ints.
+</li>
+</ul>
+</h3>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./ptrs_to_stacks.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

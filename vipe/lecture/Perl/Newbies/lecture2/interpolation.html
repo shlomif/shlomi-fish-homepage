@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>String interpolation</title>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./regexps/next_step.html" class="nav">Previous</a></td>
+<td>
+<a href="./useful_funcs/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">8 String interpolation</h1>
+
+<p>
+Perl supports inserting variables into string constants simply by 
+placing their name along with the dollars inside them. Here's an example:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$name</FONT>;
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Please enter your name:</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008c8c>$name</FONT> = &lt;&gt;;
+<B><FONT color=#a52929>chomp</FONT></B>(<FONT color=#008c8c>$name</FONT>);
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Hello, </FONT><FONT color=#008c8c>$name</FONT><FONT color=#ff00ff>!</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Note that perl will try to match as much as possible from the variable name, 
+even if a variable by that name does not exist. Thus if you write <tt>$ab</tt> 
+inside a string, it will not take <tt>$a</tt> and append "b" to it!
+</p>
+
+<p>
+In any case, interpolation is especially useful for building regular 
+expression, since the string may contain control characters.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./regexps/next_step.html" class="nav">Previous</a></td>
+<td>
+<a href="./useful_funcs/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,36 @@
+#0  stop () at user_util.c:104
+#1  0xa002a6f7 in kmem_cache_grow (cachep=0xa08000a0, flags=496) at slab.c:1110
+#2  0xa002ab15 in kmalloc (size=28, flags=496) at slab.c:1357
+#3  0xa50189fc in get_packet_info ()
+#4  0xa5019030 in ip_noise_arbitrator_packet_logic_decide_what_to_do_with_packet ()
+#5  0xa501856e in ipq_enqueue ()
+#6  0xa5018674 in netfilter_receive ()
+#7  0xa0095574 in nf_queue (skb=0xa0bc1480, elem=0xa5014718, pf=2, hook=1, 
+    indev=0xa015dca0, outdev=0x0, okfn=0xa009c350 <ip_local_deliver_finish>)
+    at netfilter.c:434
+#8  0xa00956cb in nf_hook_slow (pf=2, hook=1, skb=0xa0bc1480, 
+    indev=0xa015dca0, outdev=0x0, okfn=0xa009c350 <ip_local_deliver_finish>)
+    at netfilter.c:483
+#9  0xa009bf97 in ip_local_deliver (skb=0xa0bc1480) at ip_input.c:306
+#10 0xa009c2e0 in ip_rcv (skb=0xa0bc1480, dev=0xa015dca0, pt=0xa015f08c)
+    at ip_input.c:372
+#11 0xa008f97a in net_rx_action (h=0xa01743f0) at dev.c:1509
+#12 0xa0015090 in do_softirq () at softirq.c:90
+#13 0xa0123702 in _init () at hostaudio_kern.c:189
+#14 0xa009f890 in ip_build_xmit (sk=0xa1371780, 
+    getfrag=0xa00ba530 <udp_getfrag>, frag=0xa0f63ce8, length=48, 
+    ipc=0xa0f63d08, rt=0xa0ba0080, flags=0) at ip_output.c:713
+#15 0xa00ba9c1 in udp_sendmsg (sk=0xa1371780, msg=0xa0f63de8, len=40)
+    at udp.c:547
+#16 0xa00c0b83 in inet_sendmsg (sock=0xa0cb7f00, msg=0xa0f63de8, size=40, 
+    scm=0xa0f63d88) at af_inet.c:764
+#17 0xa00878eb in sock_sendmsg (sock=0xa0cb7f00, msg=0xa0f63de8, size=40)
+    at socket.c:509
+#18 0xa00888e8 in sys_sendto (fd=3, buff=0x8097448, len=40, flags=0, 
+    addr=0x80ae038, addr_len=16) at socket.c:1217
+#19 0xa0089320 in sys_socketcall (call=11, args=0x9ffff8a0) at socket.c:1591
+#20 0xa00d0938 in execute_syscall (regs=
+        {regs = {11, 2684352672, 1074667060, 134888640, 134928728, 134837320, 4294967258, 43, 43, 0, 0, 102, 1075901298, 35, 518, 2684352668, 43}})
+    at syscall_kern.c:410
+#21 0xa00d0a40 in syscall_handler (unused=0x0) at syscall_user.c:70
+

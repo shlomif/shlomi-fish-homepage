@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css" />
+<title>
+An Individual Page
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./render-modes.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+5.1 An Individual Page
+</h1>
+<ul class="point">
+<li>
+A QuaD-Pres sans WML page is a valid HTML page, with some meta-
+sections defined betweeen &lt;-- &amp; ... &gt; comments.
+</li>
+<li>
+Here is an example:
+</li>
+</ul>
+<table class="mycode" summary="">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; begin_header --</span><span style="color : #0000ff">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>html</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>head</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>title</b></span><span style="color : #008b8b">&gt;</span><span style="color : #ff00ff"><b>Do it with the GIMP</b></span><span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>title</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>head</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>body</b></span><span style="color : #008b8b"> </span><span style="color : #2e8b57"><b>bgcolor</b></span><span style="color : #008b8b">=</span><span style="color : #ff00ff">&quot;#FFFFFF&quot;</span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>h1</b></span><span style="color : #008b8b">&gt;</span><span style="color : #ff00ff"><b>Do it with the GIMP</b></span><span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>h1</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; end_header --</span><span style="color : #0000ff">&gt;</span>
+
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>h3</b></span><span style="color : #008b8b"> </span><span style="color : #2e8b57"><b>class</b></span><span style="color : #008b8b">=</span><span style="color : #ff00ff">&quot;notbold&quot;</span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>ul</b></span><span style="color : #008b8b">&gt;</span>
+
+<span style="color : #008b8b">&lt;</span><span style="color : #a52a2a"><b>li</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #ff00ff"><b>As opposed to Look-Up Tables, areal filters may take into account the values</b></span>
+<span style="color : #ff00ff"><b>of the neighbouring pixels and use them to calculate the value of the resultant</b></span>
+<span style="color : #ff00ff"><b>pixel.</b></span>
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>li</b></span><span style="color : #008b8b">&gt;</span>
+
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>ul</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>h3</b></span><span style="color : #008b8b">&gt;</span>
+
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; begin_contents --</span><span style="color : #0000ff">&gt;</span>
+
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; end_contents --</span><span style="color : #0000ff">&gt;</span>
+
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; begin_footer --</span><span style="color : #0000ff">&gt;</span>
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>body</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #008b8b">&lt;/</span><span style="color : #a52a2a"><b>html</b></span><span style="color : #008b8b">&gt;</span>
+<span style="color : #0000ff">&lt;!</span><span style="color : #0000ff">--&amp; end_footer --</span><span style="color : #0000ff">&gt;</span>
+
+
+</pre>
+</td>
+</tr>
+</table>
+<ul class="point">
+<li>
+<tt>begin_header</tt> to <tt>end_header</tt> denote the header, and it will be
+replaced by the file's header. Whatever comes between it is ignored.
+</li>
+<li>
+Similarly <tt>begin_footer</tt> and <tt>end_footer</tt> denote the footer.
+</li>
+<li>
+<tt>begin_contents</tt> and <tt>end_contents</tt> insert a table of contents
+into the text
+</li>
+</ul>
+<hr />
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./render-modes.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

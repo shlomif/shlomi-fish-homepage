@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>output_vars.scm.html</TITLE>
+</HEAD>
+<BODY BGcolor=#FFFFFF TEXT=#000000>
+<PRE>
+<FONT color=#0000ff>; Welcome to Scheme!</FONT>
+<FONT color=#0000ff>; In Scheme function calls (or other constructs) start with a &quot;(&quot; </FONT>
+<FONT color=#0000ff>; and end with a &quot;)&quot;. The arguments are separated by whitespaces.</FONT>
+<FONT color=#0000ff>; </FONT>
+<FONT color=#0000ff>; The first argument is the function name and the rest are arguments.</FONT>
+<FONT color=#0000ff>;</FONT>
+<FONT color=#0000ff>; Examples:</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; Returns: 11</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> <FONT color=#ff00ff>2</FONT> <FONT color=#ff00ff>3</FONT><FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> <FONT color=#ff00ff>1</FONT> <FONT color=#ff00ff>7</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#0000ff>; Returns: 13</FONT>
+
+<FONT color=#0000ff>; A function can have more than two arguments</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#ff00ff>1</FONT> <FONT color=#ff00ff>2</FONT> <FONT color=#ff00ff>3</FONT> <FONT color=#ff00ff>4</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; Returns: 10</FONT>
+
+<FONT color=#0000ff>; The function &quot;display&quot; can be used to output scalars</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>5</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; Prints 5</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;Hello World&quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; Prints &quot;Hello World&quot;</FONT>
+
+<FONT color=#0000ff>; The function newline can be used to print a new line</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;5+6=&quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#0000ff>; Prints:</FONT>
+<FONT color=#0000ff>; 5+6=</FONT>
+<FONT color=#0000ff>; 11</FONT>
+
+<FONT color=#0000ff>; Use define to declare a variable and set its value</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>5</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> b <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#ff00ff>9</FONT> <FONT color=#ff00ff>8</FONT><FONT color=#6a5acd>))</FONT>
+
+<FONT color=#0000ff>; Use set! to set the value of a variable that was already declared</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> a <FONT color=#ff00ff>500</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> b <FONT color=#ff00ff>&quot;Hello&quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> myvar <FONT color=#ff00ff>89</FONT><FONT color=#6a5acd>)</FONT> <FONT color=#0000ff>; Error - myvar was not declared.</FONT>
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>lc_Y.scm.html</TITLE>
+</HEAD>
+<BODY BGcolor=#FFFFFF TEXT=#000000>
+<PRE>
+<FONT color=#0000ff>; The Y Combinator</FONT>
+<FONT color=#0000ff>; ----------------</FONT>
+
+<FONT color=#0000ff>; The Y combinator is defined as follows:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> Y
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>f<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT>
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>x<FONT color=#6a5acd>)</FONT>
+                    <FONT color=#6a5acd>(</FONT>f <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>y<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>((</FONT>x x<FONT color=#6a5acd>)</FONT> y<FONT color=#6a5acd>)))</FONT>
+            <FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>x<FONT color=#6a5acd>)</FONT>
+                    <FONT color=#6a5acd>(</FONT>f <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>y<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>((</FONT>x x<FONT color=#6a5acd>)</FONT> y<FONT color=#6a5acd>)))</FONT>
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; It has the property that (Y f) is equivalent to (f (Y f)) (and so to</FONT>
+<FONT color=#0000ff>; infinity. One can use the Y combinator to implement recursion in </FONT>
+<FONT color=#0000ff>; lambda calculus.</FONT>
+
+<FONT color=#0000ff>; Let's see an example in Scheme on how to use the Y combinator:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>car</FONT> x<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cadr</FONT> x<FONT color=#6a5acd>))</FONT>        <FONT color=#0000ff>; (cadr x) is equivalent to (car (cdr x))</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>result x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>caddr</FONT> x<FONT color=#6a5acd>))</FONT>
+
+<FONT color=#0000ff>; This function calculates the sum of integers from (var x) to (top x).</FONT>
+<FONT color=#0000ff>; Note that we can only pass one argument to the Y's function so a </FONT>
+<FONT color=#0000ff>; list is used to pass multiple arguments.</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> mysum
+    <FONT color=#6a5acd>(</FONT>Y <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>f<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>x<FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>&lt;=</FONT> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>))</FONT>
+                <FONT color=#0000ff>; If part</FONT>
+                    <FONT color=#0000ff>; The Y combinator enables us to use f to call </FONT>
+                    <FONT color=#0000ff>; itself recursively.</FONT>
+                <FONT color=#6a5acd>(</FONT>f <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>list</FONT> 
+                    <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>)</FONT> 
+                    <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>)</FONT> <FONT color=#ff00ff>1</FONT><FONT color=#6a5acd>)</FONT> 
+                    <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> <FONT color=#6a5acd>(</FONT>result x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>))</FONT>
+                <FONT color=#6a5acd>))</FONT>
+                <FONT color=#0000ff>; Else part</FONT>
+                x
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> solution <FONT color=#6a5acd>(</FONT>mysum <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>list</FONT> <FONT color=#ff00ff>10</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>0</FONT><FONT color=#6a5acd>)))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;The solution is: &quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>result solution<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Naturally, we can convert this entire thing to lambda calculus:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>lc_car x<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>lc_car <FONT color=#6a5acd>(</FONT>lc_cdr x<FONT color=#6a5acd>)))</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>result x<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>lc_car <FONT color=#6a5acd>(</FONT>lc_cdr <FONT color=#6a5acd>(</FONT>lc_cdr x<FONT color=#6a5acd>))))</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> make-mysum-list
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>top<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>var<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>result<FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>((</FONT>lc_cons top<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>((</FONT>lc_cons var<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>((</FONT>lc_cons result<FONT color=#6a5acd>)</FONT> zero<FONT color=#6a5acd>)))</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>))</FONT>
+
+<FONT color=#0000ff>; Notice that we wrap the inner if's in lambdas and pass zero as no_use.</FONT>
+<FONT color=#0000ff>; Otherwise, both conditional clauses will always be evaluated and it will</FONT>
+<FONT color=#0000ff>; run an infinite number of times.</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> mysum
+    <FONT color=#6a5acd>(</FONT>Y <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>f<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>x<FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>(((((</FONT>less-or-equal <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>))</FONT> <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>))</FONT> <FONT color=#0000ff>; If var x &lt; top x</FONT>
+                <FONT color=#0000ff>; If part</FONT>
+                <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>no_use<FONT color=#6a5acd>)</FONT>
+                    <FONT color=#6a5acd>(</FONT>f 
+                        <FONT color=#6a5acd>(((</FONT>make-mysum-list 
+                            <FONT color=#6a5acd>(</FONT>top x<FONT color=#6a5acd>))</FONT> 
+                            <FONT color=#6a5acd>(</FONT>succ <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>)))</FONT> 
+                            <FONT color=#6a5acd>((</FONT>add <FONT color=#6a5acd>(</FONT>result x<FONT color=#6a5acd>))</FONT> <FONT color=#6a5acd>(</FONT>var x<FONT color=#6a5acd>))</FONT>
+                        <FONT color=#6a5acd>)</FONT>
+                    <FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>))</FONT>
+                <FONT color=#0000ff>; Else part</FONT>
+                <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>no_use<FONT color=#6a5acd>)</FONT>
+                    x
+                <FONT color=#6a5acd>))</FONT> 
+                    zero <FONT color=#0000ff>;  Pass zero as argument to no_use</FONT>
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> solution <FONT color=#6a5acd>(</FONT>mysum 
+    <FONT color=#6a5acd>(((</FONT>make-mysum-list 
+        <FONT color=#6a5acd>(</FONT>int-&gt;church <FONT color=#ff00ff>10</FONT><FONT color=#6a5acd>))</FONT>
+        <FONT color=#6a5acd>(</FONT>int-&gt;church <FONT color=#ff00ff>5</FONT><FONT color=#6a5acd>))</FONT>
+        <FONT color=#6a5acd>(</FONT>int-&gt;church <FONT color=#ff00ff>0</FONT><FONT color=#6a5acd>))</FONT>
+        <FONT color=#6a5acd>))</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;The solution is: &quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>church-&gt;int <FONT color=#6a5acd>(</FONT>result solution<FONT color=#6a5acd>)))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+</PRE>
+</BODY>
+</HTML>

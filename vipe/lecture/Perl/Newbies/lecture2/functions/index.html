@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Functions</title>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../my/use_strict.html" class="nav">Previous</a></td>
+<td>
+<a href="recursion.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4 Functions</h1>
+
+<p>
+We already encountered some of perl's built-in functions. Perl enables us to
+define our own functions using perl code. Whenever you use a piece of code 
+more than once in a program, it is a good idea to make it into a function. 
+That way, you won't have to change it in more than one place.
+</p>
+
+<p>
+In perl, every function accepts an array of arguments and returns an array of
+return values. The arguments (also known as "parameters") can be found in the
+<tt>@_</tt> variable. This variable is magical and need not and should not be 
+declared with <tt>my</tt>. In order to return values from a function, one can
+use the <tt>return</tt> keyword.
+</p>
+
+<p>To declare a function use type <tt>sub function_name {</tt> at the beginning
+and a <tt>}</tt> at the end. Everything in between, is the function body.
+
+<p>
+Here's an example, for a function that returns the maximum and the 
+minimum of an array of numbers.
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>use strict</FONT></B>;
+
+<B><FONT color=#804040>sub</FONT></B><FONT color=#008080> </FONT><FONT color=#008080>min_and_max</FONT>
+{
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>@numbers</FONT>);
+
+    <FONT color=#008080>@numbers</FONT> = <FONT color=#008080>@_</FONT>;
+
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>$min</FONT>, <FONT color=#008080>$max</FONT>);
+
+    <FONT color=#008080>$min</FONT> = <FONT color=#008080>$numbers</FONT>[<FONT color=#ff00ff>0</FONT>];
+    <FONT color=#008080>$max</FONT> = <FONT color=#008080>$numbers</FONT>[<FONT color=#ff00ff>0</FONT>];
+
+    <B><FONT color=#804040>foreach</FONT></B> <B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$i</FONT> (<FONT color=#008080>@numbers</FONT>)
+    {
+        <B><FONT color=#804040>if</FONT></B> (<FONT color=#008080>$i</FONT> &gt; <FONT color=#008080>$max</FONT>)
+        {
+            <FONT color=#008080>$max</FONT> = <FONT color=#008080>$i</FONT>;
+        }
+        <B><FONT color=#804040>elsif</FONT></B> (<FONT color=#008080>$i</FONT> &lt; <FONT color=#008080>$min</FONT>)
+        {
+            <FONT color=#008080>$min</FONT> = <FONT color=#008080>$i</FONT>;
+        }
+    }
+
+    <B><FONT color=#804040>return</FONT></B> (<FONT color=#008080>$min</FONT>, <FONT color=#008080>$max</FONT>);
+}
+
+<B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>@test_array</FONT>, <FONT color=#008080>@ret</FONT>);
+<FONT color=#008080>@test_array</FONT> = (<FONT color=#ff00ff>123</FONT>, <FONT color=#ff00ff>23</FONT> , <FONT color=#ff00ff>-6</FONT>, <FONT color=#ff00ff>7</FONT> , <FONT color=#ff00ff>80</FONT>, <FONT color=#ff00ff>300</FONT>, <FONT color=#ff00ff>45</FONT>, <FONT color=#ff00ff>2</FONT>, <FONT color=#ff00ff>9</FONT>, <FONT color=#ff00ff>1000</FONT>, <FONT color=#ff00ff>-90</FONT>, <FONT color=#ff00ff>3</FONT>);
+
+<FONT color=#008080>@ret</FONT> = min_and_max(<FONT color=#008080>@test_array</FONT>);
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The minimum is </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$ret</FONT>[<FONT color=#ff00ff>0</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The maximum is </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$ret</FONT>[<FONT color=#ff00ff>1</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+And here's another one for a function that calculates the hypotenuse of a
+right triangle according to its other sides:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>sub</FONT></B><FONT color=#008080> </FONT><FONT color=#008080>pythagoras</FONT>
+{
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>$x</FONT>, <FONT color=#008080>$y</FONT>);
+
+    (<FONT color=#008080>$x</FONT>, <FONT color=#008080>$y</FONT>) = <FONT color=#008080>@_</FONT>;
+
+    <B><FONT color=#804040>return</FONT></B> <B><FONT color=#804040>sqrt</FONT></B>(<FONT color=#008080>$x</FONT>**<FONT color=#ff00ff>2</FONT>+<FONT color=#008080>$y</FONT>**<FONT color=#ff00ff>2</FONT>);
+}
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The hypotenuse of a right triangle with sides 3 and 4 is </FONT><FONT color=#ff00ff>&quot;</FONT>,
+    pythagoras(<FONT color=#ff00ff>3</FONT>,<FONT color=#ff00ff>4</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../my/use_strict.html" class="nav">Previous</a></td>
+<td>
+<a href="recursion.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Behaviour of next in the for loop</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./whence_for.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">1.1 Behaviour of next in the for loop</h1>
+
+<p>
+An important difference between the <tt>for</tt> loop and the <tt>while</tt>
+loop is the behaviour of <tt>next</tt> inside it. In a <tt>for</tt> loop,
+<tt>next</tt> skips the rest of the iteration but still executes the 
+iteration commands which were passed to the loop as arguments.
+</p>
+
+<p>
+For example, the following program prints the first 200 primes:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+MAIN_LOOP: <B><FONT color=#804040>for</FONT></B>( 
+    <FONT color=#008080>@primes</FONT>=(<FONT color=#ff00ff>2</FONT>), <FONT color=#008080>$i</FONT>=<FONT color=#ff00ff>3</FONT> ; 
+    <B><FONT color=#804040>scalar</FONT></B>(<FONT color=#008080>@primes</FONT>) &lt; <FONT color=#ff00ff>200</FONT> ; 
+    <FONT color=#008080>$i</FONT>++
+    )
+{
+    <B><FONT color=#804040>foreach</FONT></B> <FONT color=#008080>$p</FONT> (<FONT color=#008080>@primes</FONT>)
+    {
+        <B><FONT color=#804040>if</FONT></B> (<FONT color=#008080>$i</FONT> % <FONT color=#008080>$p</FONT> == <FONT color=#ff00ff>0</FONT>)
+        {
+            <B><FONT color=#804040>next</FONT></B> MAIN_LOOP;
+        }
+    }
+
+    <B><FONT color=#804040>push</FONT></B> <FONT color=#008080>@primes</FONT>, <FONT color=#008080>$i</FONT>;
+}
+
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT> , <FONT color=#008080>@primes</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Now, the equivalent program using a while loop:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+
+<FONT color=#008080>@primes</FONT> = (<FONT color=#ff00ff>2</FONT>);
+<FONT color=#008080>$i</FONT> = <FONT color=#ff00ff>3</FONT>;
+MAIN_LOOP:
+<B><FONT color=#804040>while</FONT></B> (<B><FONT color=#804040>scalar</FONT></B>(<FONT color=#008080>@primes</FONT>) &lt; <FONT color=#ff00ff>200</FONT>)
+{
+    <B><FONT color=#804040>foreach</FONT></B> <FONT color=#008080>$p</FONT> (<FONT color=#008080>@primes</FONT>)
+    {
+        <B><FONT color=#804040>if</FONT></B> (<FONT color=#008080>$i</FONT> % <FONT color=#008080>$p</FONT> == <FONT color=#ff00ff>0</FONT>)
+        {
+            <B><FONT color=#804040>next</FONT></B> MAIN_LOOP;
+        }
+    }
+
+    <B><FONT color=#804040>push</FONT></B> <FONT color=#008080>@primes</FONT>, <FONT color=#008080>$i</FONT>;
+    <FONT color=#008080>$i</FONT>++;
+}
+
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT> , <FONT color=#008080>@primes</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+<p>gets stuck. (<b>why?</b>)</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./whence_for.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

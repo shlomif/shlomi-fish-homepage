@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>The Suitability of BitKeeper and bkbits.net for Free Software Projects</title>
+    </head>
+    <body style="background-color : white">
+        <h1>The Suitability of BitKeeper and bkbits.net for Free Software Projects</h1>
+
+        <h2>Introduction</h2>
+
+        <p>
+        The purpose of this document is to analyze how suitable are
+        of <a href="http://www.bitkeeper.com/">BitKeeper</a> and the
+        <a href="http://bkbits.net/">bkbits.net</a> hosting service offered by 
+        BitMover (BitKeeper's parent company), for use by free software 
+        projects.        
+        </p>
+
+        <p>
+        I, Shlomi Fish, am a former user of BitKeeper and the BKBits.net 
+        service, a user of other revision control tools such as CVS and 
+        <a href="http://subversion.tigris.org/">Subversion</a>, and the
+        founder of the "Better SCM" initiative.
+        </p>
+
+        <h2>The Technical Merits of BitKeeper</h2>
+
+        <p>
+        BitKeeper itself is a very feature-rich, powerful and impressive
+        product, and free users receive access to its full capabilities. For
+        my limited use of it for <a href="http://vipe.technion.ac.il/~shlomif/lm-solve">LM-Solve</a>, which is a very small-scale project, it worked very well,
+        but naturally, I did not stress test it. Nevertheless, the Linux kernel
+        developers probably stress test it enough, which proves BitKeeper 
+        scales for large-scale projects.
+        </p>
+
+        <p>
+        The free use of BitKeeper requires that the comments attached to the
+        changesets be sent by E-mail to 
+        <a href="http://www.bitkeeper.com/v2_logging/">OpenLogging</a>. This
+        should not be a problem for most developers of publicly hosted 
+        Open-Source projects as they expect the history of the project in
+        the repositories to be publicly available anyways. (there is a
+        small amount of added network traffic, however)
+        </p>
+
+        <h2>The Support Offered for BitKeeper</h2>
+
+        <p>
+        As someone who relied on the BitKeeper support to ask some questions
+        on BitKeeper and to receive support for some initial problems
+        I had in setting it up, I can say that Larry McVoy and the other 
+        BitMover employees, are in general very friendly and helpful 
+        to free users. I strongly recommend free users to ask questions at
+        the 
+        <a href="http://www.bitmover.com/mailman/listinfo/bitkeeper-users">bitkeeper-users mailing list</a> and not at the support E-mail which is intended 
+        mainly for paying customers. (that was a mistake I made due to the
+        fact that the BitKeeper web-site was not very clear about it). Note
+        that bitkeeper-users is dedicated for technical discussions of the 
+        product and political comments should be kept off it. (another mistake
+        I made)
+        </p>
+
+        <h2>The BitKeeper License</h2>
+
+        <p>
+        The BitKeeper License, however, is not very suitable or acceptable for 
+        most Open-Source developers. An old Linux Weekly News editorial I read
+        about it described the fact that a few years ago BitKeeper was almost 
+        free software except for the necessity to keep the OpenLogging feature.
+        Since then, its source code is no longer publicly available and the
+        license has been changed several times. Sometimes it was made less
+        restrictive, but often quite the opposite.
+        </p>
+
+        <p>
+        I kept LM-Solve on BKBits, but I also kept several layouts of logic
+        mazes I found on the <a href="http://www.logicmazes.com/">Logic Mazes
+        site</a> and similar sites, so users of the program could feed
+        the solver with them. These mazes were copyrighted by Robert Abbott and
+        others and as far as I knew were not free content. (naturally, they 
+        were distributed as a separate package, with an appropriate notice
+        explaining who originated and owned them)
+        </p>
+
+        <p>
+        A few monthes ago, Larry McVoy decided to <a href="http://lwn.net/Articles/8717/">change the license</a>. Apparently, he was worried that some users
+        of BitKeeper did not put anything meaningful in the comments sent to 
+        Open-Logging. Thus, he required that the code be made available under a 
+        free software license. Naturally, I could not do it for the mazes
+        layout I transcribed, without asking for permission from their respective
+        owners. Plus, <b>I</b> did not do anything wrong: my project was hosted
+        on BKBits.net, it was free software, and my comments were perfectly 
+        meaningful. Nevertheless, I could no longer host it there.
+        </p>
+
+        <p>
+        I still wanted to toy with BitKeeper afterwards, but then I discovered
+        the license had previously changed to make sure a BitKeeper user cannot
+        work on competing revision control systems. Since I was planning
+        to contribute to an open-source (which I have already did since then)
+        I could no longer legally use it. This has been slashdotted and in
+        one of the comments a Slashdot reader claimed he used BitKeeper until a
+        few years ago when the license was changed and made him unavailable to
+        use it any longer. So, I'm not alone.
+        </p>
+
+        <p>
+        The unavailability of the source code also made my life harder. At once,
+        I suggested to Mr. McVoy and Co. that BitKeeper would cache the 
+        OpenLogging comments and send them after many were collected. That way,
+        the Technion's relatively poor connection to the Internet backbone 
+        would not be constantly flooded with E-mail messages, should it adopt
+        BitKeeper system-wide. I believe he implictly agreed it would be a 
+        good idea. I thought about implementing it myself and sending him the 
+        patch, but I evidently discovered that I could not in a straightforward
+        way.
+        </p>
+
+        <p>
+        The pattern is here clear: by restricting the availability and license 
+        of BitKeeper, BitMover harms perfectly valid users who are happily 
+        using BitKeeper, and wish to contribute to its development by feedback
+        , help for newbies or even code. It is all done in order to prevent
+        a minority of abusers from abusing BitKeeper, and despite the fact 
+        that I seriously doubt that they would have become paying customers one
+        way or the other.
+        </p>
+
+        <p>
+        The BitKeeper gratis license clearly specifies that one should upgrade
+        to the new version of BitKeeper and not use the old one for production
+        work, even if a change of license has occurred. This has a very 
+        disturbing UCITA feel to it.
+        </p>
+
+        <p>
+        In short, the BitKeeper license is not suitable for use by most open-
+        source developers, even if they are not "idealistic" enough to 
+        refrain from using a package that deviates from the Open Source 
+        Definition, and the Free Software Definitions so much. It is simply
+        way too restrictive.
+        </p>
+
+        <h2>The BKBits.net Hosting Service</h2>
+
+        <p>
+        As opposed to the license, the BKBits.net hosting service is very 
+        good. It is discrete, reliable and useful. Starting a
+        project requires some RTFMing, but otherwise no intervention on the
+        part of BitMover's employees. I never lost data using it, and the
+        connectivity from the Technion and from my home ADSL connection was
+        very fast and good. (again - I did not stress-test it).
+        </p>
+
+        <p>
+        The main caveat here is that you have to make sure you don't make 
+        Larry McVoy (the person) angry. He is known to take comments about the
+        licensing and what he considers abuse of his service very harshly,
+        and wants people to leave him alone.
+        </p>
+
+        <h2>Verdict</h2>
+
+        <p>
+        As can be seen, the only bad point here is the license. But the license
+        is the most important factor that determines the success of a 
+        <a href="http://www.joelonsoftware.com/articles/FiveWorlds.html">"shrinkwrap"</a>
+        software project. We all know how the AT&amp;T licensing of System V
+        has done more harm to UNIX than Microsoft could have done alone. We all
+        know how the Linux Kernel GPL license gave it an unbeatable edge 
+        over the BSDs. I can tell from my experience that my own pet project,
+        has become a category killer because it was distributed from the start
+        as Public Domain, instead of GPL or simply proprietary license in the 
+        case of its many alternatives. (thus making it accessible for many 
+        Freeware and Shareware programs which would like to use it as an API)
+        </p>
+
+        <p>
+        BitKeeper fails miserably here, at least as far as free software
+        developers are concerned. Many free software developers are too 
+        idealistic to use something like that. That was not the case for me
+        when I started using BitKeeper, and I got burned in the hands from 
+        using it. I still remember having liked it a lot and being very 
+        impressed by its capabilities. But it has become inaccessible for
+        me and now I grew to like Subversion too, and use it for all my work 
+        (including writing this very document). It does not have all of 
+        BitKeeper's features but is very usable, and I'm impressed by its
+        architecture as well. I recommend every developer to look into some
+        of the available alternatives to CVS (CVS is limited in many ways),
+        before they settle on using it. The main reason I started using
+        BitKeeper was because it offered an attractive free-of-charge public 
+        hosting service. If the same existed for Subversion, I would probably
+        have used it instead.
+        </p>
+
+        <p>
+        Here, the ball passes to the court of the Hosting Services. Setting
+        up hosting of an alternative to CVS (which many times is much more 
+        straightforward to manage than CVS, which is known as very insecure by 
+        default) will practically make sure no free software developer except
+        perhaps the Linux kernel developers will use BitKeeper out of his own 
+        free will. Other than that, it is obvious that the limitations of CVS
+        and the alternatives to it are the talk of the day in several online 
+        forums I frequently visit.
+        </p>
+            
+    </body>
+</html>

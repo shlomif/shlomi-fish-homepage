@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Alternation with "|"</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./grouping.html" class="nav">Previous</a></td>
+<td>
+<a href="./binding.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">7.5 Alternation with "|"</h1>
+
+<p>
+One can specify several possibilities for an expression to match with <tt>|</tt>.
+For instance, <tt>dog|cat|mouse</tt> will match either "dog" or "cat" or "mouse".
+But naturally the options can themselves be regular expression which are as 
+complex as perl supports.
+</p>
+
+<p>
+The alternation operator will try to match as much of the expression as it can,
+so it is recommended to use parenthesis to bound it. 
+(e.g: <tt>(dog|cat|mouse)</tt>)
+</p>
+
+<p>
+The following pattern matches a sentence that may contain numbers: 
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<tt>([a-zA-Z]+|[0-9]+)( +([a-zA-Z]+|[0-9]+))*</tt>
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./grouping.html" class="nav">Previous</a></td>
+<td>
+<a href="./binding.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>The arrow operators</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./curly_brackets.html" class="nav">Previous</a></td>
+<td>
+<a href="./dereferencing.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">10.5 The arrow operators</h1>
+
+<p>
+An arrow (<tt>-&gt;</tt>) followed by a square or curly brackets can be used
+to directly access the elements of an array or a hash referenced by a certain
+hash. For instance: <tt>$array_ref-&gt;[5]</tt> will retrieve the 5th element 
+of the array pointed to by <tt>$array_ref</tt>.
+</p>
+
+<p>
+As an example let's print a tree of the contents of the part of the lecture
+that was presented in the previous slide:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>do</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>lol.pl</FONT><FONT color=#ff00ff>&quot;</FONT>;         <FONT color=#0000ff># Load the other file</FONT>
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$cont</FONT> = get_contents();
+
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#008c8c>$cont</FONT>-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>title</FONT><FONT color=#ff00ff>'</FONT>}, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#008c8c>$cont</FONT>-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>subs</FONT><FONT color=#ff00ff>'</FONT>}-&gt;[<FONT color=#ff00ff>0</FONT>]-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>url</FONT><FONT color=#ff00ff>'</FONT>}, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#008c8c>$cont</FONT>-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>subs</FONT><FONT color=#ff00ff>'</FONT>}-&gt;[<FONT color=#ff00ff>0</FONT>]-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>subs</FONT><FONT color=#ff00ff>'</FONT>}-&gt;[<FONT color=#ff00ff>1</FONT>]-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>title</FONT><FONT color=#ff00ff>'</FONT>}, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Note that the arrows following the first arrow are optional as perl sees 
+that the programmer wishes to access the subseqeunt sub-items. However, the
+first one is mandatory because the expression <tt>$array_ref{'elem'}</tt> looks
+for the hash <tt>%array_ref</tt>.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./curly_brackets.html" class="nav">Previous</a></td>
+<td>
+<a href="./dereferencing.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

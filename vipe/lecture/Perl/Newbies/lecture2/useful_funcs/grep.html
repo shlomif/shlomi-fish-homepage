@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>grep</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./sort/cmp.html" class="nav">Previous</a></td>
+<td>
+<a href="./../references/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.4 grep</h1>
+
+<p>
+The <tt>grep</tt> function can be used to filter items out of an array based
+on a boolean expression or a regular expression. The syntax for the block 
+usage is similar to <tt>map</tt> while the syntax for the regexp usage is 
+similar to <tt>split</tt>.
+</p>
+
+<p>
+Here is an example that takes a file and filters only the perl comments whose
+length is lesser than 80 characters:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<PRE>
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> (<FONT color=#008c8c>@lines</FONT>, <FONT color=#008c8c>$l</FONT>);
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$filename</FONT> = <B><FONT color=#a52929>shift</FONT></B>;
+
+<FONT color=#0000ff># Insecure, $filename should be checked for special characters.</FONT>
+<B><FONT color=#a52929>open</FONT></B> I, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&lt;</FONT><FONT color=#008c8c>$filename</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52929>while</FONT></B> (<FONT color=#008c8c>$l</FONT> = &lt;I&gt;)
+{
+    <B><FONT color=#a52929>chomp</FONT></B>(<FONT color=#008c8c>$l</FONT>);
+    <B><FONT color=#a52929>push</FONT></B> <FONT color=#008c8c>@lines</FONT>, <FONT color=#008c8c>$l</FONT>;
+}
+<B><FONT color=#a52929>close</FONT></B>(I);
+
+<FONT color=#0000ff># Filter the comments</FONT>
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@comments</FONT> = <B><FONT color=#a52929>grep</FONT></B>(<B><FONT color=#a52929>/</FONT></B><FONT color=#ff00ff>^#</FONT><B><FONT color=#a52929>/</FONT></B>, <FONT color=#008c8c>@lines</FONT>);
+<FONT color=#0000ff># Filter out the long comments</FONT>
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@short_comments</FONT> = (<B><FONT color=#a52929>grep</FONT></B> { <B><FONT color=#a52929>length</FONT></B>(<FONT color=#008c8c>$_</FONT>) &lt;= <FONT color=#ff00ff>80</FONT> ; } <FONT color=#008c8c>@comments</FONT>);
+
+<B><FONT color=#a52929>print</FONT></B> <B><FONT color=#a52929>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008c8c>@short_comments</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+And here's how <tt>grep</tt> can help us find the first 100 primes:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@primes</FONT> = (<FONT color=#ff00ff>2</FONT>);
+<B><FONT color=#a52929>for</FONT></B>(<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$n</FONT>=<FONT color=#ff00ff>3</FONT> ; <B><FONT color=#a52929>scalar</FONT></B>(<FONT color=#008c8c>@primes</FONT>) &lt; <FONT color=#ff00ff>100</FONT> ; <FONT color=#008c8c>$n</FONT>++)
+{
+    <B><FONT color=#a52929>if</FONT></B> (<B><FONT color=#a52929>scalar</FONT></B>(<B><FONT color=#a52929>grep</FONT></B> { <FONT color=#008c8c>$n</FONT> % <FONT color=#008c8c>$_</FONT> == <FONT color=#ff00ff>0</FONT> ; } <FONT color=#008c8c>@primes</FONT>) == <FONT color=#ff00ff>0</FONT>)
+    {
+        <B><FONT color=#a52929>push</FONT></B> <FONT color=#008c8c>@primes</FONT>, <FONT color=#008c8c>$n</FONT>;
+    }
+}
+<B><FONT color=#a52929>print</FONT></B> <B><FONT color=#a52929>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008c8c>@primes</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./sort/cmp.html" class="nav">Previous</a></td>
+<td>
+<a href="./../references/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

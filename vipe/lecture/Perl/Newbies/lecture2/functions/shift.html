@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Use of "shift" in functions</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./recursion.html" class="nav">Previous</a></td>
+<td>
+<a href="./../files/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4.2 Use of "shift" in functions</h1>
+
+<p>
+One can use the <tt>shift</tt> function to extract arguments out of the 
+argument array. Since this use is so common, then simply typing <tt>shift</tt>
+without any arguments will do exactly that.
+</p>
+
+<p>
+Here is the split program from the previous slide, which was 
+re-written using <tt>shift</tt>:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>sub</FONT></B><FONT color=#008080> </FONT><FONT color=#008080>mysplit</FONT>
+{
+    <B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$total</FONT> = <B><FONT color=#804040>shift</FONT></B>;
+    <B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$num_elems</FONT> = <B><FONT color=#804040>shift</FONT></B>;
+    <B><FONT color=#804040>my</FONT></B> <FONT color=#008080>@accum</FONT> = <FONT color=#008080>@_</FONT>;
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>@ret</FONT>, <FONT color=#008080>@new_accum</FONT>);
+
+
+    <B><FONT color=#804040>if</FONT></B> (<FONT color=#008080>$num_elems</FONT> == <FONT color=#ff00ff>1</FONT>)
+    {
+        <B><FONT color=#804040>push</FONT></B> <FONT color=#008080>@accum</FONT>, <FONT color=#008080>$total</FONT>;
+        <B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>,</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>@accum</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+        <B><FONT color=#804040>return</FONT></B>;
+    }
+        
+    <B><FONT color=#804040>for</FONT></B>(<B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$a</FONT>=<FONT color=#ff00ff>0</FONT>;<FONT color=#008080>$a</FONT>&lt;<FONT color=#008080>$total</FONT>;<FONT color=#008080>$a</FONT>++)
+    {
+        <FONT color=#008080>@new_accum</FONT> = (<FONT color=#008080>@accum</FONT>, <FONT color=#008080>$a</FONT>);
+        mysplit(<FONT color=#008080>$total</FONT>-<FONT color=#008080>$a</FONT>, <FONT color=#008080>$num_elems</FONT><FONT color=#ff00ff>-1</FONT>, <FONT color=#008080>@new_accum</FONT>);        
+    }
+}
+
+mysplit(<FONT color=#ff00ff>10</FONT>,<FONT color=#ff00ff>3</FONT>);
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./recursion.html" class="nav">Previous</a></td>
+<td>
+<a href="./../files/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

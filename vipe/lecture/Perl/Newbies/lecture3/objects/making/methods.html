@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Defining Methods</title>
+<link rel="StyleSheet" href="./../../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./constructor.html" class="nav">Previous</a></td>
+<td>
+<a href="./inheritance/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4.3.2 Defining Methods</h1>
+
+<p>
+You define a method for this class by defining a function in that namespace,
+that accepts the object's instance as its first argument.
+</p>
+
+<p>
+Here are two example methods in the class Foo, that retrieve and set its name:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52a2a>sub</FONT></B><FONT color=#008b8b> </FONT><FONT color=#008b8b>get_name</FONT>
+{
+    <FONT color=#0000ff># This step is necessary so it will be treated as a method</FONT>
+    <B><FONT color=#a52a2a>my</FONT></B> <FONT color=#008b8b>$self</FONT> = <B><FONT color=#a52a2a>shift</FONT></B>;
+    
+    <B><FONT color=#a52a2a>return</FONT></B> <FONT color=#008b8b>$self</FONT>-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>name</FONT><FONT color=#ff00ff>'</FONT>};
+}
+
+<B><FONT color=#a52a2a>sub</FONT></B><FONT color=#008b8b> </FONT><FONT color=#008b8b>assign_name</FONT>
+{
+    <B><FONT color=#a52a2a>my</FONT></B> <FONT color=#008b8b>$self</FONT> = <B><FONT color=#a52a2a>shift</FONT></B>;
+
+    <FONT color=#0000ff># Notice that we can pass regular arguments from now on.</FONT>
+    <B><FONT color=#a52a2a>my</FONT></B> <FONT color=#008b8b>$new_name</FONT> = <B><FONT color=#a52a2a>shift</FONT></B> || <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Fooish</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+    <FONT color=#008b8b>$self</FONT>-&gt;{<FONT color=#ff00ff>'</FONT><FONT color=#ff00ff>name</FONT><FONT color=#ff00ff>'</FONT>} = <FONT color=#008b8b>$new_name</FONT>;
+
+    <B><FONT color=#a52a2a>return</FONT></B> <FONT color=#ff00ff>0</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+And here's a script that makes use of these functions. Can you guess what it's
+output would be?
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#a020f0>#!/usr/bin/perl</FONT>
+
+<B><FONT color=#a52a2a>use strict</FONT></B>;
+
+<B><FONT color=#a52a2a>use </FONT></B>Foo;
+
+<B><FONT color=#a52a2a>my</FONT></B> <FONT color=#008b8b>$foo</FONT> = Foo-&gt;<B><FONT color=#a52a2a>new</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>MyFoo</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>500</FONT>);
+
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#008b8b>$foo</FONT>-&gt;get_name(), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<FONT color=#008b8b>$foo</FONT>-&gt;assign_name(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Shlomi Fish</FONT><FONT color=#ff00ff>&quot;</FONT>);
+
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#008b8b>$foo</FONT>-&gt;get_name(), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./constructor.html" class="nav">Previous</a></td>
+<td>
+<a href="./inheritance/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

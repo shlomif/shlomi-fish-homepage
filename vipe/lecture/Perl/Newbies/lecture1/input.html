@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Input</title>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./variables/plus-equal.html" class="nav">Previous</a></td>
+<td>
+<a href="./for_loop.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">5 Input</h1>
+
+<p>
+In order to receive a value from the user perl supplies the <tt>&lt;&gt;</tt>
+operator. When entered, this operator reads a line from the console, and
+returns it (along with the newline).
+</p>
+
+<p>Here's an example:</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Please enter your name:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$name</FONT> = &lt;&gt;;
+<B><FONT color=#804040>chomp</FONT></B>(<FONT color=#008080>$name</FONT>);
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Hello, </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$name</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>!</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+Notice the <tt>chomp</tt> function which strips off the trailing 
+newline character from the variable. You would usually want to use it, 
+when getting input from the user.
+</p>
+
+<p>
+Here's another example:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Please enter a string:</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$string</FONT> = &lt;&gt;;
+<B><FONT color=#804040>chomp</FONT></B>(<FONT color=#008080>$string</FONT>);
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>The string you entered contain </FONT><FONT color=#ff00ff>&quot;</FONT>, <B><FONT color=#804040>length</FONT></B>(<FONT color=#008080>$string</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff> characters.\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./variables/plus-equal.html" class="nav">Previous</a></td>
+<td>
+<a href="./for_loop.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

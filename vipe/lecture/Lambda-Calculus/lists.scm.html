@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<TITLE>lists.scm.html</TITLE>
+</HEAD>
+<BODY BGcolor=#FFFFFF TEXT=#000000>
+<PRE>
+<FONT color=#0000ff>; Tuples</FONT>
+<FONT color=#0000ff>; ------</FONT>
+
+<FONT color=#0000ff>; The basic building block of the Scheme language is a tuple. A tuple is a pair</FONT>
+<FONT color=#0000ff>; that contains two elements. The first is called the car, the second is called</FONT>
+<FONT color=#0000ff>; the cdr. The car and the cdr may both be other tuples. (or the same tuple !)</FONT>
+
+<FONT color=#0000ff>; (Note in Mathematics, tuples are an ordered group of elements which have a </FONT>
+<FONT color=#0000ff>; finite number of elements, which is not necessarily two. I will use the terms</FONT>
+<FONT color=#0000ff>; &quot;tuple&quot; and &quot;pair&quot; interchangebly because Scheme does not have an internal</FONT>
+<FONT color=#0000ff>; support for tuples of greater sizes)</FONT>
+
+<FONT color=#0000ff>; Construct a tuple using cons</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> complex-one <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>6</FONT> <FONT color=#ff00ff>7</FONT><FONT color=#6a5acd>)))</FONT>
+
+<FONT color=#0000ff>; Get the tuple first element by using the function car</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>car</FONT> a<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Get the second element by using cdr</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cdr</FONT> a<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Lists</FONT>
+<FONT color=#0000ff>; -----</FONT>
+
+<FONT color=#0000ff>; Lists are linked lists of tuples whose cars contains the elements and</FONT>
+<FONT color=#0000ff>; the cdr contains a reference to the next tuple in the list.</FONT>
+<FONT color=#0000ff>; The cdr of the last tuple contains a reference to the empty tuple</FONT>
+
+<FONT color=#0000ff>; Construct a list using the function &quot;list&quot;.</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> mylist <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>list</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>500</FONT> <FONT color=#ff00ff>&quot;Hello&quot;</FONT> <FONT color=#ff00ff>4</FONT> <FONT color=#ff00ff>4.3</FONT><FONT color=#6a5acd>))</FONT>
+
+<FONT color=#0000ff>; Note: that statement is shorthand for:</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> mylist <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>500</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>&quot;Hello&quot;</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>4</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cons</FONT> <FONT color=#ff00ff>4.3</FONT> <FONT color=#6a5acd>'()))))))</FONT>
+
+<FONT color=#0000ff>; The folllowing code prints this list:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>print-list a-list<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> <FONT color=#6a5acd>(</FONT>myprint rest-of-list element-num<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>not</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>null?</FONT> rest-of-list<FONT color=#6a5acd>))</FONT>
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>begin</FONT></B>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> element-num<FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;: &quot;</FONT><FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>car</FONT> rest-of-list<FONT color=#6a5acd>))</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT>myprint <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>cdr</FONT> rest-of-list<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> element-num <FONT color=#ff00ff>1</FONT><FONT color=#6a5acd>))</FONT>
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT>myprint a-list <FONT color=#ff00ff>0</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT>print-list mylist<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Output:</FONT>
+<FONT color=#0000ff>; 0: 5</FONT>
+<FONT color=#0000ff>; 1: 500</FONT>
+<FONT color=#0000ff>; 2: Hello</FONT>
+<FONT color=#0000ff>; 3: 4</FONT>
+<FONT color=#0000ff>; 4: 4.3</FONT>
+
+<FONT color=#0000ff>; Nested Lists</FONT>
+<FONT color=#0000ff>; ------------</FONT>
+
+<FONT color=#0000ff>; One can nest lists by passing the return value of list as </FONT>
+<FONT color=#0000ff>; one of the arguments to list</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> towers-of-hanoi <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>list</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>list</FONT> <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>4</FONT> <FONT color=#ff00ff>3</FONT> <FONT color=#ff00ff>2</FONT> <FONT color=#ff00ff>1</FONT><FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>'()</FONT> <FONT color=#6a5acd>'()))</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> towers-of-hanoi<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>;((5 4 3 2 1) () ())</FONT>
+
+<FONT color=#0000ff>; Shorthand for nestes lists of constants: (quote) or '</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> students <FONT color=#6a5acd>'((</FONT>shlomi fish<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>orr dunkleman<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT>tzafrir cohen<FONT color=#6a5acd>)))</FONT>
+
+<FONT color=#0000ff>; Note: inside the list there are now symbols not strings. You can </FONT>
+<FONT color=#0000ff>; convert strings and symbols to each other using:</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>symbol-&gt;string</FONT> <FONT color=#6a5acd>'</FONT>hello<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>string-&gt;symbol</FONT> <FONT color=#ff00ff>&quot;mystring&quot;</FONT><FONT color=#6a5acd>)</FONT>
+</PRE>
+</BODY>
+</HTML>

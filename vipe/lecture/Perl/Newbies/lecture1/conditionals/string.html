@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>String Comparison Operators</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./numerical.html" class="nav">Previous</a></td>
+<td>
+<a href="./boolean.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">7.2 String Comparison Operators</h1>
+
+<p>
+In order to compare for string equality, or if one string is alphabetically 
+bigger than another, you can use the six string comparison operators. Here 
+are the string operators together with the numerical operators they correspond
+too:
+</p>
+
+<p>
+<table border="1">
+<tr>
+<td>
+<b>String Operator</b>
+</td>
+<td>
+<b>Numerical Operator</b>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>eq</tt>
+</td>
+<td>
+<tt>==</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>ne</tt>
+</td>
+<td>
+<tt>!=</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>gt</tt>
+</td>
+<td>
+<tt>&gt;</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>lt</tt>
+</td>
+<td>
+<tt>&lt;</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>ge</tt>
+</td>
+<td>
+<tt>&gt;=</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>le</tt>
+</td>
+<td>
+<tt>&lt;=</tt>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Notice that the string operators are built from the initials of their 
+abbreviated names. (E.g: eq = equal, gt = greater than). Perl's string 
+comparison is case-sensitive. If you want a case insensitive 
+string comparison, use the <tt>lc</tt> function to convert the strings to 
+lowercase beforehand.
+</p>
+
+<p>Example:</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Please enter your private name:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$name</FONT> = &lt;&gt;;
+<B><FONT color=#804040>chomp</FONT></B>(<FONT color=#008080>$name</FONT>);
+<B><FONT color=#804040>if</FONT></B> (<B><FONT color=#804040>lc</FONT></B>(<FONT color=#008080>$name</FONT>) <B><FONT color=#804040>eq</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>rachel</FONT><FONT color=#ff00ff>&quot;</FONT>)
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Your name is Rachel!</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+<B><FONT color=#804040>else</FONT></B>
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Your name is not Rachel!</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./numerical.html" class="nav">Previous</a></td>
+<td>
+<a href="./boolean.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

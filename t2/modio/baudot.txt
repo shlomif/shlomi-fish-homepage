@@ -1,0 +1,57 @@
+
+From omerz@actcom.co.il Thu Oct 28 09:26:52 1999
+Date: Sat, 9 Oct 1999 22:07:03 +0200 (IST)
+From: Omer Zak <omerz@actcom.co.il>
+To: Shlomi Fish <shlomif@vipe.technion.ac.il>
+Subject: Baudot encoding
+
+Source:
+             EIA STANDARDS PROJECT PN-1663
+         Telecommunications Devices for the Deaf
+                       Draft 9
+                      June, 1986
+
+    Prepared by the EIA Engineering Committee TR-41
+
+The standard was never completed, due to disagreement between the
+American manufacturers of the TTYs.
+
+The following table is in page 42 of the above document.
+
+Code (HEX)        LETTER       FIGURE      NOTES
+----------        ------       ------      -----
+00                NULL         NULL        (backspace)
+01                E            3
+02                <LF>         <LF>
+03                A            -
+04                SPACE        SPACE
+05                S
+06                I            8
+07                U            7
+08                <CR>         <CR>
+09                D            $
+0A                R            4
+0B                J
+0C                N            ,
+0D                F
+0E                C            :
+0F                K            (
+10                T            5
+11                Z            "
+12                L            )
+13                W            2
+14                H
+15                Y            6
+16                P            0
+17                Q            1
+18                O            9
+19                B            ?
+1A                G
+1B                FIG          FIG         (shift to figures)
+1C                M            .
+1D                X            /
+1E                V            ;
+1F                LTRS         LTRS        (shift to letters)
+
+That's all, folks!  (for now)
+                                        --- Omer

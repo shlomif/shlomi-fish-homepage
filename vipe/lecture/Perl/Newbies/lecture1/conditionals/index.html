@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Conditionals</title>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../for_loop.html" class="nav">Previous</a></td>
+<td>
+<a href="numerical.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">7 Conditionals</h1>
+
+<p>
+Conditionals enable us to execute a group of statements if a 
+certain condition is met. For example the following program, reports to the
+user whether or not his name starts with the letter "A":
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Please enter your name:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$name</FONT> = &lt;&gt;;
+<B><FONT color=#804040>if</FONT></B> (<B><FONT color=#804040>substr</FONT></B>(<FONT color=#008080>$name</FONT>,<FONT color=#ff00ff>0</FONT>,<FONT color=#ff00ff>1</FONT>) <B><FONT color=#804040>eq</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>A</FONT><FONT color=#ff00ff>&quot;</FONT>)
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Your name starts with 'A'!</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+<B><FONT color=#804040>else</FONT></B>
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Your name does not start with 'A'!</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+The code <tt>substr($name,0,1) eq "A"</tt> is a condition expression which uses 
+the perl <tt>eq</tt> operator, which returns true if and only if the strings 
+are the same. There are more such operators and they will be explained shortly.
+</p>
+
+<p>
+Inside the curly brackets following the <tt>if</tt> there is the code to 
+be executed by the conditional. That code can be as long as you like. The else
+part is executed assuming the conditional was found to be false, and is 
+optional.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../for_loop.html" class="nav">Previous</a></td>
+<td>
+<a href="numerical.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

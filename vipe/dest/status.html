@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description"
+content="syscall tracker allows the 'root' user to track invocations of
+system calls across your Linux system. You specify rules that specify which
+system call invocations will be tracked, and what to do when a rule
+matches a system call invocation. " />
+<meta name="keywords"
+content="syscalltrack linux system calls project open source track
+systemcalls invocations " />
+<title>System Call Tracker - Current Status</title>
+</head>
+<body bgcolor="#CCDDFF" text="#000000" link="#003399" alink="#000000"
+ vlink="#0077DD">
+<table width="100%" border="0" align="center" cellspacing="0" cellpadding="0" summary="">
+    <tr>
+        <td width="10%" valign="top">
+            <table width="200" border="0" cellpadding="0" cellspacing="0" align="left" summary="">
+                 <tr>
+                    <td height="75">
+                      <p align="center"><img src="logo/sct5.jpg" alt="Syscalltrack Tux" width="150" height="178" /></p>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td height="8"><br />
+                        <div align="center"><h2 class="nav">All you wanted to know</h2></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="71" valign="top">
+                    <div align="center">
+                        <a href="index.html" class="nav">Home</a><br />
+                        <a href="when.html" class="nav">When to use it?</a><br />
+                        <a href="status.html" class="nav">Current Status</a><br />
+                        <a href="how.html" class="nav">How to get it?</a><br />
+                        <a href="call.html" class="nav">Call for participants</a><br />
+                        <a href="contribute.html" class="nav">Contributors</a><br />
+                        <a href="logo.html" class="nav">Various Logos</a><br />
+                        <a href="relevant.html" class="nav">Interesting Projects</a><br />
+                        <a href="shirts.html" class="nav">Get a T-Shirt Now!</a><br />
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br /><br />
+                    <div align="center">
+                        <h2 class="nav">The Cream of CVS</h2><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/COMPILING">Compiling</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/RUNNING">Running</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/README">Readme</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/DEVELOPING">Developing</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/doc/index.html">documentation</a>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br /><br />
+                    <div align="center">
+                        <h2 class="nav">Important Links</h2>
+                        <a href="http://www.sourceforge.net/projects/syscalltrack">The project's site on SourceForge</a><br />
+                        <a href="http://lists.sourceforge.net/lists/listinfo/syscalltrack-hackers">syscalltrack-hackers mailing list</a><br />
+                        <a href="http://linuxclub.il.eu.org/">Haifux: the Haifa Linux Club</a><br />
+                        <a href="relevant.html">Interesting Projects</a><br />
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br />
+                    <div align="center"><h2 class="nav">Hosted By</h2>
+                        <a href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=33589" width="88" height="31" border="0" alt="SourceForge Logo" /></a>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="99%" valign="top">
+            <div align="center">
+                <table width="100%" border="0" cellpadding="2" cellspacing="3" summary="">
+                    <tr>
+                        <td height="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div align="center">
+                                <h1>Current Status</h1>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="104" valign="top">
+<div align="center"> (Adapted from <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/NEWS">News</a>)<br /></div>
+<h3>Major new features for 0.72 (mostly a bug fix and new syscalls release)</h3>
+<ul>
+<li> Many new system calls supported, including but not limited to
+  exit(1), fork(2), read(3) and write(4).</li>
+<li>Fixed bug when evaluating a buffer node and a bug with pattern
+  matching on a buffer node.</li>
+<li>Fixed bug when matching for a constant [filter_expression {1}] to
+  return true, as it should, instead of false, as it did.</li>
+<li>Fixed several in-kernel memory leaks and erronous kernel string
+  handling.</li>
+</ul>
+<h3>Major new features for 0.71 (mostly a bug fix and cleanup
+release)</h3>
+<ul>
+<li>
+  add a 'get rule count' and 'get rules' API to to the
+  sct_ctrl_lib. 'get rule count' will return the number of currently
+  registered rules, 'get rules' will return to user space from the
+  kernel a linked list of the before and after rules for each system
+  call.
+  </li>
+  <li>
+  Support for constants when specifying matching rules, for example,
+  O_RDONLY, O_EXCL and friends for open(2).
+  </li>
+  <li>
+  Support for octal/hex numbers in filter expressions.
+  </li>
+  <li>
+  Support for specifying and printing multiplex syscall ids as
+  "syscall:func", for example "102:5" for accept(2).
+  </li>
+  <li>
+  Assorted internal cleanups, code refactoring, bug fixes and memory
+  leaks plugged, too many to list here. Documentation and header file
+  updates. See the ChangeLog for the gory details.
+  </li>
+</ul>
+<h3>Major new features for 0.7</h3>
+<ul>
+  <li>
+  Support for dynamic-cast of 'struct' syscall parameters when filtering
+  based on them, and for logging. See the relevant section in
+  doc/sct_config_manual.html for how to use this feature. Mostly useful now
+  for checking struct parameters in socket calls, so now its possible
+  to check if a client prorgam tries to connect to a given port or IP address,
+  etc.
+  </li>
+  <li>
+  Support for 'fail syscall' actions - allows you to specify that a matching
+  syscall invocation will prematurely return a given error code (or '0')
+  before the system call is actually performed. Handle with care, as failing
+  the wrong syscall invocations might render your system unuseable. Good
+  usage example: TODO
+  </li>
+  <li>
+  Support for convenience-macros in rule config files. Currently supported
+  macros include:
+    <ul>
+    <li> ipaddr("127.0.0.1") -&gt; translates an IP address to an unsigned long
+                             in network byte-order.
+    </li><li> htons(7) -&gt; host to network byte-order for 'short' numbers.
+    </li><li> usernametoid("root") -&gt; translates user name to UID.
+    </li><li> groupnametoid("wheel") -&gt; translates group name to GID.
+    </li>
+    </ul>
+  </li><li>
+  Experimental Device-driver control support - the syscalltrack kernel module
+  can now be controlled via a device-file interface - specify "-c device_file"
+  when running 'sct_config' to use it. The interface is currently
+  functionaly-equivalent to the existing 'sysctl' interface - but it will be
+  enhanced in the future to support logging via a device-file interface,
+  getting rule list via the device-file interface, etc.
+  </li><li>
+  Support for 'log_format' definition per rule, to override the global
+  'log_format'.
+  Initial correctness-testing script added. Currently only runs 2 tests -
+  will become more functional on the next release.
+  </li><li>
+  Support for new system calls - waitpid, close and creat.
+</li></ul>
+<h3>major bug fixes for version 0.7:</h3>
+<ul>
+  <li>
+  Fixes for white-space parsing in 'sct_config'.
+  </li><li>
+  Fix small memory leak when deserializing 'log' actions
+  </li><li>
+  Fix bug in the kernel module that would leave dangling function pointers
+  in case a user cleared only the 'before' function pointer. This bug
+  wasn't triggered, since sct_config always erased _all_ rules, causing this
+  code path to remain yet unused.
+</li></ul>
+<h3> Major new features for 0.66.6 (mostly a bug-fix version) </h3>
+<ul>
+  <li>
+  Support for new process parameters: PPID, PCOMM.
+  Special attention should be given to PCOMM, which allows matching
+  on the name of the program the process parent is executing.
+</li></ul>
+<h3>major bug fixes for version 0.66.6:</h3>
+<ul>
+  <li>
+  Fix the bug where filter expression with '!' or '~' weren't parsed correctly.
+  </li><li>
+  Fix the bug where filter expression first token was a '(' (LPAREN),
+  we looped endlessly because we never advanced to the next token.
+  thanks to Padraig Brady &lt;padraig @antefacto.com&gt; for triggeting it.
+</li></ul>
+<h3> Major new features for 0.66 </h3>
+<ul>
+  <li>
+  Support for tracking some socket calls (e.g. 'socket', 'listen', 'accept',
+  'connect') - yet still without the ability to match against the address
+  that a socket connects to.
+  </li><li>
+  Support for 'after' rules (i.e. rules that are matched right after a syscall
+  is invoked, and thus can match and log also the syscall's return value).
+  This in addition to the existing 'before' rules (which are matched right
+  before entering into the system call). Defining if a rule is a 'before'
+  or 'after' rule is done using the 'when' keyword. Also, log formats can be
+  specified seperatly for the 'before' rules and for the 'after'
+  rules.
+  Note: syntax for specifying a 'log_format' in the config file has changed.
+        please look at doc/sct_config_manual.txt for details.
+  </li><li>
+  Support for an 'in' operator in filter expressions (e.g:
+  <pre>  filter_expression { PARAMS[1] in ("passwd", "nsswitch.conf") }
+  </pre>
+  With strings it looks for a substring match. With numbers it looks for
+  an exact match.
+  </li><li>
+  Optimization - variables values are now calculated only when they are used
+  (using a callback mechanism) - rather then all values assigned before invoking
+  the rule matching engine.
+  </li><li>
+  Modified the behaviour of unregistering system calls that are 'busy' -
+  they are fully unregistered by 'sct_rules.o', so it could be unloaded at will.
+  However, 'syscall_hijack.o' unregisters them without yet reducing its module
+  use count - it'll do that when the 'busy' syscall invocation(s) return.
+  Some syscalls may be blocking for days (e.g. sshd version 1.X blocks on
+  'accept' until a client connects to it, which could be days) - and not
+  allow unloading 'syscall_hijack.o' - but it won't incur any overhead on
+  new system call invocations.
+</li></ul>
+<h3>major bug fixes for version 0.66:</h3>
+<ul>
+  <li>
+  Quoted strings in filter expressions could not contain any special
+  characters (e.g. dot, equals sign and other operators, brackets, etc).
+  now they can, and they may also contain escaped double quotes, e.g.:
+  <pre>  "Tom said \"hello there!\""
+  </pre>
+  </li><li>
+  Fix for a potential reference-count breaking problem in
+  syscall_hijack.
+  </li><li>
+   Fixes for potential memory leaks in the rule engine and filters code.
+  </li><li>
+  The 'tester' stability testing program now only prints real error messages,
+  so its output can actually be read.
+  </li><li>
+  Various other minor bug fixes, as well as various code rewrites, aggregating
+  variables into structures, etc.
+</li></ul>
+<h3> Major new features for 0.64 (mostly a bug-fix version) </h3>
+<ul>
+  <li> Filter expressions are now fully supported, and are the prefered method
+  to define filtering criteria for rules. This includes better error
+  messages, and full parameter/variable type checking.
+  </li><li> Added support for pointer parameters in system calls, and printing the
+  address they contain when logging them.
+</li></ul>
+<h3>major bug fixes for version 0.64:</h3>
+<ul>
+  <li>Unary operators ('~', '!') didn't work at all - now they do.
+  </li><li>Fixed a bug in 'sct_config' that could cause crashes, due to a missing
+  copy constructor/assigment operator for a struct that was pushed into
+  an STL container.
+  </li><li>Fixed a potential crasihng bug in filter expressions evaluation in the
+  kernel.
+  </li><li>Fixed a few potential memory leaks while evaluating filter expressions
+  or while failing to get locks in system call stub functions.
+</li></ul>
+<h3> Major new features for 0.63 </h3>
+<ul>
+  <li> User defined logging format: it is now possible to define the format
+  the log message will take. The default log format is
+    syscall: %pid[%comm]: %sid_%sname(%params) (rule %ruleid)
+  For example, let us consider an invocation of the 'mkdir' system call:
+    syscall: 876[mkdir]: 39_mkdir("foo", 509) (rule 1)
+</li><li>Validity checks on system call parameters: sct_config now makes it
+  easier to catch rule file erros by making sure that the parameter,
+  operand and operator are of matching types. Validity checks are
+  implemented for 'param_condition' and 'process_condition' directives
+  only.
+</li><li>
+ Experimental filter expression: sct_config now allows writing clear,
+  concise filter expressions. Here's a filter expression to match a
+  system call invocation where the user is root (uid 0) and the first
+  parameter contains "passwd":
+  filter_expression: (UID == 0) &amp;&amp; (PARAMS[1] ~= "passwd")
+  (This feature is experimental and does minimal input validation at
+  the moment).
+</li><li>
+  Support for structure parameters: you can now match system calls
+  which get a structure as one of their parameters - for example,
+  settimeofday(), which gets a 'struct timeval' and 'struct timezone'
+  parameters.
+</li><li>
+Support for (more) process parameters: we now support the following
+  process parameters: UID, EUID, SUID, GID, EGID, SGID, PID,
+  COMM. Special attention should be given to COMM, which allows matching
+  on the name of the program the process is executing.
+</li><li>
+ Improved sct_config error diagnostics: sct_config now gives clear,
+  concise message on configuration file errors, with line numbers for
+  easier rule file debugging.
+</li><li>
+ syscalltrack should compile with the latest 2.2 kernel and every 2.4
+  kernel, and has been tested with at least 2.2.19, 2.4.5, 2.4.9,
+  2.4.10, 2.4.10-ac11 2.4.12, 2.4.12-ac3 and 2.4.12-um3.
+</li><li>
+Additional compilation and run time test programs.
+</li></ul>
+<h3>major bug fixes for version 0.63:</h3>
+<ul>
+<li> memory leaks in the kernel plugged and eradicated.
+</li></ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p align="center">&nbsp;</p>
+            <div align="center"></div>
+        </td>
+        <td width="0%">
+        </td>
+    </tr>
+</table>
+</body>
+</html>

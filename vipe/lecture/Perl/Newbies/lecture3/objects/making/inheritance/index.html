@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Object Inheritance</title>
+<link rel="StyleSheet" href="../../../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../../../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../methods.html" class="nav">Previous</a></td>
+<td>
+<a href="super.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4.3.3 Object Inheritance</h1>
+
+<p>
+Now, let's suppose we would like to create a class similar to <tt>Foo</tt>, 
+that's also keeps track of the number of times its name was assigned. While 
+we can write a completely different object, we can <b>inherit</b> from Foo 
+and use what we already have in place.
+</p>
+
+<p>
+Here's a class derived from <tt>Foo</tt> that has a method 
+<tt>assign_name_ext</tt> that keeps track of the number of times it was
+called, and a method <tt>get_num_times_assigned</tt> that retrieves this 
+number:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<font color="#a52a2a"><b>package</b></font><font color="#2e8b57"><b> Bar;</b></font>
+
+<font color="#a52a2a"><b>use strict</b></font>;
+
+<font color="#0000ff"># @ISA is not lexically scoped so it has to be declared with </font>
+<font color="#0000ff"># use vars.</font>
+<font color="#0000ff">#</font>
+<font color="#0000ff"># qw(My Constant String) is equivalent to split(/\s+/, &quot;My Constant String&quot;)</font>
+<font color="#a52a2a"><b>use vars</b></font> <font color="#ff00ff">qw(</font><font color="#ff00ff">@ISA</font><font color="#ff00ff">)</font>;
+
+<font color="#0000ff"># We use Foo during our inheritance so we should load it.</font>
+<font color="#a52a2a"><b>use </b></font>Foo;
+
+<font color="#0000ff"># This command actually inherits Foo.</font>
+<font color="#008b8b">@ISA</font>=<font color="#ff00ff">qw(</font><font color="#ff00ff">Foo</font><font color="#ff00ff">)</font>;
+
+<font color="#a52a2a"><b>sub</b></font><font color="#008b8b"> </font><font color="#008b8b">assign_name_ext</font>
+{
+    <font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$self</font> = <font color="#a52a2a"><b>shift</b></font>;
+
+    <font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$name</font> = <font color="#a52a2a"><b>shift</b></font>;
+
+    <font color="#0000ff"># Call the method of the base class</font>
+    <font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$ret</font> = <font color="#008b8b">$self</font>-&gt;assign_name(<font color="#008b8b">$name</font>);
+    <font color="#a52a2a"><b>if</b></font> (! <font color="#008b8b">$ret</font>)
+    {
+        <font color="#008b8b">$self</font>-&gt;{<font color="#ff00ff">'</font><font color="#ff00ff">num_times</font><font color="#ff00ff">'</font>}++;
+    }
+
+    <font color="#a52a2a"><b>return</b></font> <font color="#008b8b">$ret</font>;
+}
+
+<font color="#a52a2a"><b>sub</b></font><font color="#008b8b"> </font><font color="#008b8b">get_num_times_assigned</font>
+{
+    <font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$self</font> = <font color="#a52a2a"><b>shift</b></font>;
+
+    <font color="#a52a2a"><b>return</b></font>
+        (<font color="#a52a2a"><b>exists</b></font>(<font color="#008b8b">$self</font>-&gt;{<font color="#ff00ff">'</font><font color="#ff00ff">num_times</font><font color="#ff00ff">'</font>}) ?
+            <font color="#008b8b">$self</font>-&gt;{<font color="#ff00ff">'</font><font color="#ff00ff">num_times</font><font color="#ff00ff">'</font>} :
+            <font color="#ff00ff">0</font>
+        );
+}
+
+<font color="#ff00ff">1</font>;
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../../../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../methods.html" class="nav">Previous</a></td>
+<td>
+<a href="super.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+<title>
+Using changequote
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./common_macros/AC_CHECK_HEADERS.html" class="nav">Previous</a></td>
+<td>
+<a href="./Makefile_am/" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+5 Using changequote
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+The m4 preprocessor which is used to process <tt>configure.in</tt>
+uses <tt>[</tt> and <tt>]</tt> for grouping arguments.
+</li>
+<li>
+If you want to use them yourself, type <tt>changequote(, )</tt> at the
+beginning of the offending code and <tt>changequote([, ])</tt> afterwards.
+</li>
+<li>
+Here's an example:
+</li>
+</ul>
+</h3>
+<table class="mycode" summary="">
+<tr class="mycode">
+<td class="mycode">
+<pre>
+<font color="#008b8b">AC_ARG_ENABLE</font><font color="#6a5acd">(</font>max-num-stacks<font color="#6a5acd">,</font>
+ <font color="#6a5acd">[</font>  --enable-max-num-stacks<font color="#6a5acd">[</font><font color="#a52a2a"><b>=</b></font>stacks num<font color="#6a5acd">]</font> Set the maximal number of Stacks<font color="#6a5acd">],</font>
+ <font color="#6a5acd">[</font> <font color="#a52a2a"><b>if</b></font>   <font color="#a52a2a"><b>test</b></font> <font color="#ff00ff">&quot;x$enableval&quot;</font> <font color="#a52a2a"><b>=</b></font> <font color="#ff00ff">&quot;x&quot;</font> <font color="#6a5acd">;</font> <font color="#a52a2a"><b>then</b></font>
+      max_num_stacks<font color="#a52a2a"><b>=</b></font><font color="#ff00ff">8</font>
+   <font color="#a52a2a"><b>else</b></font>
+       changequote<font color="#6a5acd">(,</font> <font color="#6a5acd">)</font>
+       <font color="#0000ff"># Check if it's indeed a number</font>
+       <font color="#a52a2a"><b>if</b></font> echo <font color="#ff00ff">&quot;0$enableval&quot;</font> <font color="#a52a2a"><b>|</b></font> grep '<font color="#6a5acd">[</font>^<font color="#ff00ff">0-9</font><font color="#6a5acd">]</font>' <font color="#a52a2a"><b>&gt;</b></font> /dev/null <font color="#6a5acd">;</font> <font color="#a52a2a"><b>then</b></font>
+           echo
+           echo <font color="#ff00ff">&quot;Error!&quot;</font>
+           echo <font color="#ff00ff">&quot;max-num-stacks should be a number!&quot;</font>
+           exit <font color="#ff00ff">-1</font>
+       elif expr $enableval <font color="#a52a2a"><b>\&lt;</b></font> <font color="#ff00ff">8</font> <font color="#a52a2a"><b>&gt;</b></font> /dev/null <font color="#6a5acd">;</font> <font color="#a52a2a"><b>then</b></font>
+           echo
+           echo <font color="#ff00ff">&quot;Error!&quot;</font>
+           echo <font color="#ff00ff">&quot;max-num-stacks cannot be lower than 8&quot;</font>
+           exit <font color="#ff00ff">-1</font>
+       elif expr $enableval <font color="#a52a2a"><b>\&gt;</b></font> <font color="#ff00ff">20</font> <font color="#a52a2a"><b>&gt;</b></font> /dev/null <font color="#6a5acd">;</font> <font color="#a52a2a"><b>then</b></font>
+           echo
+           echo <font color="#ff00ff">&quot;Error!&quot;</font>
+           echo <font color="#ff00ff">&quot;max-num-stacks cannot be greater than 20&quot;</font>
+           exit <font color="#ff00ff">-1</font>
+       <font color="#a52a2a"><b>else</b></font>
+           max_num_stacks<font color="#a52a2a"><b>=</b></font><font color="#ff00ff">&quot;$enableval&quot;</font>
+       <font color="#a52a2a"><b>fi</b></font>
+       changequote<font color="#6a5acd">([,</font> <font color="#6a5acd">])</font>
+   <font color="#a52a2a"><b>fi</b></font><font color="#6a5acd">])</font>
+
+</pre>
+</td>
+</tr>
+</table>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./common_macros/AC_CHECK_HEADERS.html" class="nav">Previous</a></td>
+<td>
+<a href="./Makefile_am/" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

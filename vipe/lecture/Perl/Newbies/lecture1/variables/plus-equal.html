@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>"+=" and friends</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../input.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4.1 "+=" and friends</h1>
+
+<p>
+Perl provides a shortcut for writing "$myvar = $myvar + $value", or
+"$myvar = $myvar / $value" and similar operations. Here's an example:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#008080>$a</FONT> = <FONT color=#ff00ff>1</FONT>;
+<FONT color=#008080>$b</FONT> = <FONT color=#ff00ff>0</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT> += <FONT color=#ff00ff>1</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT> += <FONT color=#ff00ff>1</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT> += <FONT color=#ff00ff>1</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT> += <FONT color=#ff00ff>1</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT> += <FONT color=#ff00ff>1</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+Since the operations <tt>$a += 1</tt> and <tt>$a -= 1</tt> are so commonly used, 
+they were also assigned a separate operator. One can use <tt>$a++</tt> and 
+<tt>$a--</tt> to perform them. For example, the above program could have 
+been written as:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#008080>$a</FONT> = <FONT color=#ff00ff>1</FONT>;
+<FONT color=#008080>$b</FONT> = <FONT color=#ff00ff>0</FONT>;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT>++;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT>++;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT>++;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT>++;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$a</FONT> *= <FONT color=#ff00ff>2</FONT>; <FONT color=#008080>$b</FONT>++;
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>2^</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$b</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>=</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>$a</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./../input.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

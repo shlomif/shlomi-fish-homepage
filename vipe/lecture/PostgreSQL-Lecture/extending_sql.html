@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>PostgreSQL - Extending the Database: SQL Functions</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>Extending the Database: SQL Functions</h1>
+
+<h3>
+
+* SQL functions are group of SQL statements which return the last statement,
+which should be a SELECT one.<br>
+<br>
+* Example:<br>
+</h3>
+<tt>
+test=&gt; CREATE FUNCTION name_len(employees)<br>
+test-&gt; RETURNS int4<br>
+test-&gt; AS<br>
+test-&gt; 'SELECT<br>
+test'&gt;     CASE WHEN $1.last_name = null THEN 0 ELSE char_length($1.last_name) END<br>
+test'&gt;     + 1 +<br>
+test'&gt;     CASE WHEN $1.last_name = null THEN 0 ELSE char_length($1.last_name) END<br>
+test'&gt;  AS name_length'<br>
+test-&gt; LANGUAGE 'sql' \g<br>
+CREATE<br>
+
+</tt>
+<br>
+<h3>
+* Now you can use this function inside your queries:<br>
+
+</h3>
+<tt>
+test=&gt; SELECT name_len(employees)<br>
+test-&gt; FROM employees \g<br>
+</tt>
+
+<h3>
+</h3>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Numerical Comparison Operators</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./string.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">7.1 Numerical Comparison Operators</h1>
+
+<p>
+Perl supplies the user with 6 numerical comparison operators which test 
+for the comparison of two numbers. They are:
+</p>
+
+<p>
+<table border="1">
+
+<tr>
+<td>
+<tt>$a == $b</tt>
+</td>
+<td>
+<tt>$a</tt> and <tt>$b</tt> are equal.
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$a &gt; $b</tt>
+</td>
+<td>
+<tt>$a</tt> is greater than <tt>$b</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$a &lt; $b</tt>
+</td>
+<td>
+<tt>$a</tt> is lesser than <tt>$b</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$a &gt;= $b</tt>
+</td>
+<td>
+<tt>$a</tt> is greater or equal to <tt>$b</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$a &lt;= $b</tt>
+</td>
+<td>
+<tt>$a</tt> is lesser or equal to <tt>$b</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$a != $b</tt>
+</td>
+<td>
+<tt>$a</tt> is not equal to <tt>$b</tt>
+</td>
+</tr>
+
+</table>
+</p>
+
+<p>
+Those operators can be used inside conditionals and also outside,
+as part of a normal expression. The following program prints all the numbers 
+between 1 and 100 that are not divisable by 3:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$a</FONT> (<FONT color=#ff00ff>1</FONT> .. <FONT color=#ff00ff>100</FONT>)
+{
+    <B><FONT color=#804040>if</FONT></B> ((<FONT color=#008080>$a</FONT> % <FONT color=#ff00ff>3</FONT>) != <FONT color=#ff00ff>0</FONT>)
+    {
+        <B><FONT color=#804040>print</FONT></B> <FONT color=#008080>$a</FONT>,<FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+    }
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./string.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>PostgreSQL - Using Sequences</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>Using Sequences</h1>
+
+<h3>
+* Sequences are a PostgreSQL extension to SQL that allows to generate unique
+number IDs in one atomic operation.<br>
+<br>
+* Example:<br>
+<br>
+</h3>
+<pre>
+test=&gt; CREATE SEQUENCE my_seq \g
+CREATE
+test=&gt; SELECT NEXTVAL('my_seq') \g
+nextval
+-------
+      1
+(1 row)
+
+test=&gt; SELECT NEXTVAL('my_seq') \g
+nextval
+-------
+      2
+(1 row)
+
+</pre>
+
+<h3>
+
+</h3>
+</body>
+</html>

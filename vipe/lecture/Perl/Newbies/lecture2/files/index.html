@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>File Input/Output</title>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../functions/shift.html" class="nav">Previous</a></td>
+<td>
+<a href="print.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">5 File Input/Output</h1>
+
+<p>
+By now you are probably wondering how perl can be used to interact with
+the external world, and this is where <b>File Input/Output</b> enters the
+frame. 
+</p>
+
+<p>
+In perl, file I/O is handled by using sessions: you are opening a file for
+reading or writing (or both), do with it what you want, and then close it. 
+In perl filehandles are placed on a separate namespace than that of the 
+variables. It is generally marked with a starting asterik (<tt>*</tt>), which
+can be omitted if the first letter is a capital one.
+</p>
+
+<p>
+To open a file use the <tt>open MyFileHandle, $file_path;</tt> notation, and
+to close a file use the <tt>close(MyFileHandle);</tt> notation. 
+The first characters of <tt>$file_path</tt> determine whether the file will be 
+open for reading, writing, appending or both. The following table should give 
+you a quick reference:
+</p>
+
+<table border=1>
+
+
+<tr>
+<td>
+&gt;
+</td>
+<td>
+Writing (the original file will be erased before the function starts).
+</td>
+</tr>
+
+
+<tr>
+<td>
+&lt; (or nothing)
+</td>
+<td>
+Reading
+</td>
+</tr>
+<tr>
+<td>
+&gt;&gt;
+</td>
+<td>
+Appending (the file pointer will start at the end and the file will not be
+overriden)
+</td>
+</tr>
+
+
+<tr>
+<td>
++&lt;
+</td>
+<td>
+Read-write, or just write without truncating.
+</td>
+
+</table>
+
+<p>
+The rest of <tt>$file_path</tt> is the pathname of the file to open relative
+to the script current working directory (<b>CWD</b>). For instance, the
+command <tt>open I, "&lt;../hello.txt";</tt> opens the file "hello.txt" found
+a directory below the current directory to reading.
+</p>
+
+<p>
+<table class="note">
+<tr class="note">
+<td class="note">
+
+<h3 class="note">Note</h3>
+
+<p>
+Be careful on opening files whose filenames were inputted from the user. If 
+not properly checked, you may open an improper file, or you may actually run
+programs (we will learn about that later), or cause unexpected results.
+</p>
+
+<p>
+Such badly written code was part of the problem in which the 
+<a href="http://www.chguy.net/news/oct99/defendsys.html">
+Gibraltar Hack</a> against the PC-Week Linux test server was 
+successful.
+</p>
+
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../functions/shift.html" class="nav">Previous</a></td>
+<td>
+<a href="print.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description"
+content="syscall tracker allows the 'root' user to track invocations of
+system calls across your Linux system. You specify rules that specify which
+system call invocations will be tracked, and what to do when a rule
+matches a system call invocation. " />
+<meta name="keywords"
+content="syscalltrack linux system calls project open source track
+systemcalls invocations " />
+<title>System Call Tracker - Call for Participants</title>
+</head>
+<body bgcolor="#CCDDFF" text="#000000" link="#003399" alink="#000000"
+ vlink="#0077DD">
+<table width="100%" border="0" align="center" cellspacing="0" cellpadding="0" summary="">
+    <tr>
+        <td width="10%" valign="top">
+            <table width="200" border="0" cellpadding="0" cellspacing="0" align="left" summary="">
+                 <tr>
+                    <td height="75">
+                      <p align="center"><img src="logo/sct5.jpg" alt="Syscalltrack Tux" width="150" height="178" /></p>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td height="8"><br />
+                        <div align="center"><h2 class="nav">All you wanted to know</h2></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="71" valign="top">
+                    <div align="center">
+                        <a href="index.html" class="nav">Home</a><br />
+                        <a href="when.html" class="nav">When to use it?</a><br />
+                        <a href="status.html" class="nav">Current Status</a><br />
+                        <a href="how.html" class="nav">How to get it?</a><br />
+                        <a href="call.html" class="nav">Call for participants</a><br />
+                        <a href="contribute.html" class="nav">Contributors</a><br />
+                        <a href="logo.html" class="nav">Various Logos</a><br />
+                        <a href="relevant.html" class="nav">Interesting Projects</a><br />
+                        <a href="shirts.html" class="nav">Get a T-Shirt Now!</a><br />
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br /><br />
+                    <div align="center">
+                        <h2 class="nav">The Cream of CVS</h2><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/COMPILING">Compiling</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/RUNNING">Running</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/README">Readme</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/DEVELOPING">Developing</a><br />
+                        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/doc/index.html">documentation</a>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br /><br />
+                    <div align="center">
+                        <h2 class="nav">Important Links</h2>
+                        <a href="http://www.sourceforge.net/projects/syscalltrack">The project's site on SourceForge</a><br />
+                        <a href="http://lists.sourceforge.net/lists/listinfo/syscalltrack-hackers">syscalltrack-hackers mailing list</a><br />
+                        <a href="http://linuxclub.il.eu.org/">Haifux: the Haifa Linux Club</a><br />
+                        <a href="relevant.html">Interesting Projects</a><br />
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" valign="top">
+                    <br />
+                    <div align="center"><h2 class="nav">Hosted By</h2>
+                        <a href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=33589" width="88" height="31" border="0" alt="SourceForge Logo" /></a>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="99%" valign="top">
+            <div align="center">
+                <table width="100%" border="0" cellpadding="2" cellspacing="3" summary="">
+                    <tr>
+                        <td height="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div align="center">
+                                <h1>Call for Participants</h1>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="104" valign="top">
+<p>
+The project is still young, and as we have a very large list of things to do,
+we hereby call you - programmers who wish to help and/or learn - to join
+us. There is work to do in kernel mode as well as in user-mode. There is
+also need for more documentation. And above all - there is work to do
+regarding testing - both manual and automated tests.
+</p>
+<p>
+Among the activities that are worked on now (and in the near future)
+are:
+</p>
+<ul>
+<li> Support for more system call types.</li>
+<li> Support for other action types (e.g. suspending the process that matched
+  a tracking rule's filter).</li>
+<li> Support for 'process tree' logging (i.e. parent process of the process that
+  invoked the syscall, parent of that process, etc, up to the top-level
+  process) - to allow answering questions such as 'ok, so the '/bin/kill'
+  command killed my process, but who the heck invoked it?'.</li>
+<li> speed and locking optimizations (to reduce impact of rule matching on
+  overall system performance).</li>
+<li>Support for logging via a device file.</li>
+<li>Support for FreeBSD.</li>
+</ul>
+<p>
+NOTE: The above is just what we plan to do real soon now. There are larger
+plans for the long run, so keep tuned.
+</p>
+<p>
+If you wish to participate in the project's development, please look
+at our code-page, and register to the development mailing list - details
+available at:
+<a href="http://lists.sourceforge.net/lists/listinfo/syscalltrack-hackers">
+http://lists.sourceforge.net/lists/listinfo/syscalltrack-hackers</a>.
+You may also wish to read the
+<a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/syscalltrack/syscalltrack/DEVELOPING">
+'DEVELOPING'</a> file that comes with the source
+code, for information for developers. Finally, you might wish to do most of
+the development and basic testing using
+<a href="http://user-mode-linux.sourceforge.net/">User-Mode Linux</a> - a port
+of Linux to... the Linux kernel architecture ;). This has saved us a lot
+of time recovering from kernel Oops.
+</p>
+<p>
+The developers also hang out on the IRC channel #syscalltrack, on the
+Efnet IRC network. Come by and say hi sometime...
+</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p align="center">&nbsp;</p>
+            <div align="center"></div>
+        </td>
+        <td width="0%">
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,223 @@
+Description of the Algorithm for Verifiying The Isomorphism of Two Graphs
+-------------------------------------------------------------------------
+
+                                                           Shlomi Fish
+
+Revision 2
+
+1. Preface
+----------
+
+Two graphs are considered isomorphic if they have the same topology. That is,
+there is a one-to-one mapping between the indexes of their nodes so that, when
+the indexes of one graph are converted to the indexes of the other, they will
+have the same adjency matrix.
+
+This proposed algorithm attempts to solve the question whether two graphs with
+the same number of nodes are isomorphic or not, in a time that will usually be
+better than that of trying all V! possibilities.
+
+2. Notation and Preliminary Notes
+---------------------------------
+
+Since two graphs are involved they will be marked with G[1](V[1],E[1]) and
+G[2](V[2],E[2]). V[i] is the group of nodes (or vertices) of graph i and 
+E[i] is the group of links (or edges) of the graph i.
+
+The algorithm can handle variable link multiplicity, i.e. that two nodes can be 
+connected by more than one link. The number of links leading from each node to
+the other will be referred as link multiplicity or link width.
+
+Each node is uniquely marked with an index in the range [ 0 .. (|V|-1)]. The
+choice of indexes for each graph is not important but will be preserved
+throughout the algorithm.
+
+Throughout the algorithm nodes will be assigned IDs, and those IDs will be 
+manipulated. While those IDs are integers in the range [ 0 .. (|V|-1) ], they
+should not be confused with the node indexes. Two IDs can be shared by the
+same node.
+
+The algorithm will focus on non-directed graph but it can also be adapted to
+directed graphs.
+
+3. Decsription of the Algorithm
+-------------------------------
+
+3.1 The p->n Transformation
+---------------------------
+
+The p->n transforms between two vectors of "previous" IDs p[1,2], to two
+vectors of "next" IDs n[1,2], based one two graphes G. It uses an 
+associative array (dictionary) that maps nodes templates (to be 
+explained later) to IDs. The associative array to be marked H is 
+initialize to {} at the beginning of the
+transformation and is nor returned by it.
+
+Given the Graph G(V,E) and p[0 .. |V|] a vector of IDs, the new template for
+each node i is allocated using the following fields:
+1. p[g][i].
+2. The number of self-links i has.
+3.    
+4.
+5.
+.
+.
+3+[maximal link multiplicity in G]-1
+
+In each multiplicity the prev IDs of the nodes at the end of the links of that
+multiplicity. The list should be sorted numerically.
+
+Next, the algorithm matches a new ID for every template it found and puts it
+in n[g][i]. If it allocated a new ID for the second graph it checked it 
+returns false as its error code. That is because if the graphs have the 
+same topology and the same prev IDs (in different order), than they must 
+have the same next IDs too (in a corresponding different order).
+
+Then it checks whether n[1] and n[2] contain the same number of instances out
+of each ID. If they don't, it returns FALSE.
+
+Else, it returns TRUE and n[1,2];
+
+3.2 The (p->n)^V transformation
+-------------------------------
+
+(p->n)^V runs (p->n) on the two graphs |V| times, while passing the n of the
+previous iteration as the p of the next iteration. If one of the (p->n)
+iterations fail, it returns an error code. If all the iterations return
+positive error codes, it returns the final n.
+
+The (p->n)^V transform can terminate in the middle if for i=1,2 p[i]==n[i], in 
+which case it returns true. The intuition for this is that for each i the 
+n return value of (p->n) transform is based only on the graph topology and on
+p, so if it (p->n)[p[i]] = p[i] then it will give the same results in the left
+iterations.
+
+The reason for the limit of |V| is that it takes at most |V| iterations to
+propagate all the information from one node in the graph to every other node.
+(Re: BFS and DFS Trees from each node)
+
+3.4 The Recurser Function
+-------------------------
+
+The recurser function is a recursive function that accepts two graphs, 
+and an initial two arrays of IDs (p). It returns an error code and (on 
+a true value of the error code) a mapping of the indexes from the nodes 
+of one graph to the other.
+
+The recurser performs the following steps:
+
+1. It calls the (p->n)^V transform on p to get n. 
+
+2. If the transformation returns a false error code it also terminates 
+    with a false error code.
+
+3. The function seeks an ID in n[1] that appears more than once. If it didn't
+find one it returns a mapping based on the IDs of the n[1] and n[2] and a true
+error code.
+
+4. Assuming it did find such an ID, it sets the first occurence of that ID 
+in n[1] to the first ID in [ 0 .. |V|-1 ] which isn't occupied. Then it 
+loops on every occurence of the id in n[2] and for each one temporarily 
+sets it the same ID, and calls itself with a copy of n as the parameter p.
+
+5. If in one of the loop's iterations the child instance of the function 
+returned a true error code, it returns true with the mapping as specified by
+the child.
+
+6. If the loop terminates, it returns a false error code.
+
+3.5 The main function
+---------------------
+
+The main function is very simple. It initializes two vectors of IDs to all
+zeros, and then returns whatever graph_iso_recurser(G1,G2,init_ids) returns.
+
+4. Notes and Optimizations
+--------------------------
+
+1. All the sorts in the algorithm sort numbers  limited to the range of 
+[ 0 .. (|V|-1) ]. Thus, they can be done in a linear time using the Counting
+Sort algorithm.
+
+2. In step 4 of the Recurser function the function may choose to set the ID
+with the least number of occurences in the arrays, that is still larger than 
+one. I'm not sure whether it is a good strategy.
+
+3. For efficiency's sake, the (p->n) transformation can be splitted into two
+variants: one which will be excuted for the first time in the algorithm and
+the other one in all the other times. The first will consider only the number
+of inner links, and the number of connected nodes in each link width. The
+second will be the same as the definition except for not considering the
+number of self-links.
+
+5. Complexity Analysis
+----------------------
+
+Assuming the graphs are given as adjency matrices and that we use a
+linear-time sort, we can see that each (p->n) transform is O(V^2), and that
+the (p->n)^V transform is O(V^3). Now, for analysing the recursion.
+
+The depth of the recursion is at most |V|. The width of it, starts with at
+most |V| at the start and decreases by at least one in each depth level. Thus,
+a naive deduction will conclude that it has a worst-case running time of 
+O(V!). This makes the total complexity of the algorithm O(V!*V^3) or
+O((V+3)!).
+
+That does not looks good considering that the brute force algorithm has a
+complexity of O(V!*V^2). However, I believe this algorithm will prove to be 
+more efficient in most real-life situations, and possibly many symmetric and
+pseudo-symmetric graphs given to it as input. For most non-isomorphic graphs,
+the first (p->n)^V transform will show that they are indeed so, and most
+isomorphic graphs do not contain too many levels of symmetry and
+pseudo-symettery.
+
+6. Off-the-shelf Proof
+----------------------
+
+Well, it is trivial to prove that if the algorithm finds the graphs to be
+isomorphic, they are indeed isomorphic. The algorithm returns a one-to-one
+mapping between the nodes of one graph to the other, that according to the 
+qualities of the p->n transform, will make one graph have the same topology 
+of the other, with the same ordering of the nodes.
+
+According to the rules of logic, it also proves that if graphs are not 
+isomorphic, the algorithm will say they are indeed not. Now, we have to show
+that for isomorphic graphs the algorithm will always say they are isomorphic.
+
+Like it was said in the preface the definition of isomorphism dictates that
+such a mapping exists, but there can be more than one. Now, to prove that the
+algorithm works, all we have to do is prove this lemma:
+
+Lemma 2: If there is a map from node indexes to IDs in the two graphs, in
+which every node from graph G1 has the same ID as a matching node from graph
+G2, then applying the p->n transform one time will not change this condition.
+
+This is easy to prove because if the graphs are indeed isomorphic, then the
+p->n transform which is symmetric regarding the indexes of the nodes, will
+also generate such a mapping from indexes to IDs.
+
+The algorithm performs a complete scan and matches every node with an ID that 
+appears more than once to every other node with that ID (and so recursively), 
+so it cannot fail.
+
+This is not a full proof, but I believe it can be built using this as a
+skeleton.
+
+7. References:
+--------------
+
+http://t2.technion.ac.il/~shlomif/graphs_equal/
+
+    Contains Refernce Source code in perl and various test programs in C and 
+    in perl. Also contains an online version of this document.
+
+[ I'll have to ask Prof. Shimon Even for more]
+
+8. To Do
+----------
+
+- Proper Proof.
+- More References.
+- Convert to LaTeX and/or MS-Word (oh my).
+- Learn LaTeX.
+

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>split</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./map.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.1 split</h1>
+
+<p>
+The <tt>split</tt> function can be used to split a string according to
+a regular expression. The syntax of the split function is as follows:
+</p>
+
+<p>
+<tt>@components = split(/$regexp/, $string);</tt>
+</p>
+
+<p>
+Here's a simple example that retrieves the user-id of a given
+username: 
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> (<FONT color=#008c8c>$line</FONT>, <FONT color=#008c8c>@parts</FONT>);
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$user_name</FONT> = <B><FONT color=#a52929>shift</FONT></B>;
+
+<B><FONT color=#a52929>open</FONT></B> I, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&lt;/etc/passwd</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52929>while</FONT></B> (<FONT color=#008c8c>$line</FONT> = &lt;I&gt;)
+{
+    <FONT color=#008c8c>@parts</FONT> = <B><FONT color=#a52929>split</FONT></B>(<B><FONT color=#a52929>/</FONT></B><FONT color=#ff00ff>:</FONT><B><FONT color=#a52929>/</FONT></B>, <FONT color=#008c8c>$line</FONT>);
+    <B><FONT color=#a52929>if</FONT></B> (<FONT color=#008c8c>$parts</FONT>[<FONT color=#ff00ff>0</FONT>] <B><FONT color=#a52929>eq</FONT></B> <FONT color=#008c8c>$user_name</FONT>)
+    {
+        <B><FONT color=#a52929>print</FONT></B> <FONT color=#008c8c>$user_name</FONT> . <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>'s user ID is </FONT><FONT color=#ff00ff>&quot;</FONT> . <FONT color=#008c8c>$parts</FONT>[<FONT color=#ff00ff>2</FONT>] . <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+        <B><FONT color=#a52929>exit</FONT></B>(<FONT color=#ff00ff>0</FONT>);
+    }    
+}
+<B><FONT color=#a52929>close</FONT></B>(I);
+
+<B><FONT color=#a52929>print</FONT></B> <FONT color=#008c8c>$user_name</FONT> . <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>'s user ID was not found!</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#a52929>exit</FONT></B>(<FONT color=#ff00ff>-1</FONT>);
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+The following code splits a sentence into words and prints them:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52929>use strict</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$sentence</FONT> = <B><FONT color=#a52929>shift</FONT></B>;
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@words</FONT> = <B><FONT color=#a52929>split</FONT></B>(<B><FONT color=#a52929>/</FONT></B><FONT color=#6b5ace>\s</FONT><FONT color=#6b5ace>+</FONT><B><FONT color=#a52929>/</FONT></B>, <FONT color=#008c8c>$sentence</FONT>);
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>$i</FONT>;
+<B><FONT color=#a52929>for</FONT></B>(<FONT color=#008c8c>$i</FONT>=<FONT color=#ff00ff>0</FONT>;<FONT color=#008c8c>$i</FONT>&lt;<B><FONT color=#a52929>scalar</FONT></B>(<FONT color=#008c8c>@words</FONT>);<FONT color=#008c8c>$i</FONT>++)
+{
+    <B><FONT color=#a52929>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#008c8c>$i</FONT><FONT color=#ff00ff>: </FONT><FONT color=#ff00ff>&quot;</FONT> . <FONT color=#008c8c>$words</FONT>[<FONT color=#008c8c>$i</FONT>] . <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./map.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

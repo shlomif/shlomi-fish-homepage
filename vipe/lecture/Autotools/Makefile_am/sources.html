@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+<title>
+Specifying the source files
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./super.html" class="nav">Previous</a></td>
+<td>
+<a href="./ldadd.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+6.2 Specifying the source files
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+One can specify the source files for each super target by typing the base
+name of the package (with <tt>_</tt>'s instead of <tt>-</tt>'s etc) followed
+by <tt>_SOURCES</tt> followed by an equal sign and a list of the sources.
+</li>
+<li>Example:</li>
+</ul>
+</h3>
+<table class="mycode" summary="">
+<tr class="mycode">
+<td class="mycode">
+<pre>
+<font color="#a52a2a"><b>lib_LTLIBRARIES </b></font>= libpthread_rwlock_fcfs.la
+<font color="#2e8b57"><b>libpthread_rwlock_fcfs_la_SOURCES </b></font>= rwlock.c queue.c
+</pre>
+</td>
+</tr>
+</table>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./super.html" class="nav">Previous</a></td>
+<td>
+<a href="./ldadd.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

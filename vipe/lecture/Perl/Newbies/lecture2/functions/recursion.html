@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Function Recursion</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./shift.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">4.1 Function Recursion</h1>
+
+<p>
+Functions can call other functions. In fact, function can call themselves, 
+either directly or indirectly. Functions calling themselves is known as
+<b>recursion</b>, a computer science methodology which can be implemented 
+with or without functions.
+</p>
+
+<p>
+Here's an example where recursion is used to find all the permutations of 
+splitting 10 among three numbers:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>sub</FONT></B><FONT color=#008080> </FONT><FONT color=#008080>mysplit</FONT>
+{
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>$total</FONT>, <FONT color=#008080>$num_elems</FONT>, <FONT color=#008080>@accum</FONT>) = <FONT color=#008080>@_</FONT>;
+    <B><FONT color=#804040>my</FONT></B> (<FONT color=#008080>@ret</FONT>, <FONT color=#008080>@new_accum</FONT>);
+
+
+    <B><FONT color=#804040>if</FONT></B> (<FONT color=#008080>$num_elems</FONT> == <FONT color=#ff00ff>1</FONT>)
+    {
+        <B><FONT color=#804040>push</FONT></B> <FONT color=#008080>@accum</FONT>, <FONT color=#008080>$total</FONT>;
+        <B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>,</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>@accum</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+        <B><FONT color=#804040>return</FONT></B>;
+    }
+        
+    <B><FONT color=#804040>for</FONT></B>(<B><FONT color=#804040>my</FONT></B> <FONT color=#008080>$a</FONT>=<FONT color=#ff00ff>0</FONT>;<FONT color=#008080>$a</FONT>&lt;<FONT color=#008080>$total</FONT>;<FONT color=#008080>$a</FONT>++)
+    {
+        <FONT color=#008080>@new_accum</FONT> = (<FONT color=#008080>@accum</FONT>, <FONT color=#008080>$a</FONT>);
+        mysplit(<FONT color=#008080>$total</FONT>-<FONT color=#008080>$a</FONT>, <FONT color=#008080>$num_elems</FONT><FONT color=#ff00ff>-1</FONT>, <FONT color=#008080>@new_accum</FONT>);        
+    }
+}
+
+mysplit(<FONT color=#ff00ff>10</FONT>,<FONT color=#ff00ff>3</FONT>);
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+A couple of notes are in place. First of all, perl does not handle tail 
+recursion very well, at least not in the current incarnation of the compiler. 
+If your recursion can be done using a simple loop, do it with it.
+</p>
+
+<p>
+Secondly, some systems (such as Microsft Windows) limit an executable to a 
+certain amount of stack, as far as such langauges as Assembler or C are 
+concerned. This should not be of any concern to perl hackers, because the 
+perl interpreter does not translate a perl function call into a C function 
+call. (not to mention that the perl interpreter on those systems is compiled 
+with enough stack for itself).
+</p>
+
+<p>
+Sometimes, recursion is helpful, but if you see that your recursion is getting
+too deep, you should consider using your own dedicated stack (which can be 
+implemented as an array) instead. It's a good programming practice.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./shift.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

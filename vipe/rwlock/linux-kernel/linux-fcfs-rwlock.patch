@@ -1,0 +1,13 @@
+--- orig/linux-2.5.30/fs/locks.c	Fri Aug  2 00:16:39 2002
++++ linux-2.5.30/fs/locks.c	Fri Aug 16 17:48:49 2002
+@@ -510,7 +510,9 @@
+ {
+ 	switch (caller_fl->fl_type) {
+ 	case F_RDLCK:
+-		return (sys_fl->fl_type == F_WRLCK);
++		return ((sys_fl->fl_type == F_WRLCK) || 
++			(!list_empty(&sys_fl->fl_block))
++		);
+ 
+ 	case F_WRLCK:
+ 		return (1);

@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>BEGIN and END</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./importing/variables.html" class="nav">Previous</a></td>
+<td>
+<a href="./main.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">3.3 BEGIN and END</h1>
+
+<p>
+There are two special code blocks for perl modules - <tt>BEGIN</tt> and
+<tt>END</tt>. These blocks are executed when a module is first loaded,
+and when the perl interpreter is about to unload it, respectively.
+</p>
+
+<p>
+Here's an example for a logging module that makes use of this facility:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#0000ff># File : MyLog.pm</FONT>
+<FONT color=#0000ff>#</FONT>
+
+<B><FONT color=#a52a2a>package</FONT></B><B><FONT color=#2e8b57> MyLog;</FONT></B>
+
+<FONT color=#a020f0>BEGIN</FONT>
+{
+    <B><FONT color=#a52a2a>open</FONT></B> <FONT color=#008b8b>MYLOG</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>&gt;mylog.txt</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+
+<B><FONT color=#a52a2a>sub</FONT></B><FONT color=#008b8b> </FONT><FONT color=#008b8b>log</FONT>
+{
+    <B><FONT color=#a52a2a>my</FONT></B> <FONT color=#008b8b>$what</FONT> = <B><FONT color=#a52a2a>shift</FONT></B>;
+
+    <FONT color=#0000ff># Strip the string of newline characters</FONT>
+    <FONT color=#008b8b>$what</FONT> =~ <B><FONT color=#a52a2a>s/</FONT></B><FONT color=#6a5acd>\n</FONT><B><FONT color=#a52a2a>//g</FONT></B>;
+
+    <FONT color=#0000ff># The MYLOG filehandle is already open by virtue of the BEGIN</FONT>
+    <FONT color=#0000ff># block.</FONT>
+    <B><FONT color=#a52a2a>print</FONT></B> <FONT color=#008b8b>MYLOG</FONT> <FONT color=#008b8b>$what</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+
+<FONT color=#a020f0>END</FONT>
+{
+    <B><FONT color=#a52a2a>close</FONT></B>(MYLOG);
+}
+
+<FONT color=#ff00ff>1</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./importing/variables.html" class="nav">Previous</a></td>
+<td>
+<a href="./main.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+<title>
+Why not C++?
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./board_gen.html" class="nav">Previous</a></td>
+<td>
+<a href="./flame_war.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+8 Why not C++?
+</h1>
+<p>
+<a href="http://www.oberhumer.com/mfx/">Markus Oberhumer</a>
+(of <a href="http://www.oberhumer.com/opensource/pysol/">PySol</a>
+fame) asked if I thought about converting Freecell Solver to C++. (I suppose
+he meant with STL, templates and all). Here is a full answer why I'm
+not going to do it:
+</p>
+<h3 class="notbold">
+<ol>
+<li>
+The solver is already working in ANSI C.
+</li>
+<li>
+The code is not overly object-oriented. Whatever OOP concepts exist there
+fit well enough within what ANSI C gives me.
+</li>
+<li>
+C++/STL may make it slower, perhaps even considerably. I'd rather not
+spend time risking something like that, only to roll it back later.
+</li>
+<li>
+ANSI C compiles much faster. (at least with gcc)
+</li>
+<li>
+ANSI C is cleaner, more portable and causes less unexpected problems
+than C++.
+</li>
+</ol>
+</h3>
+<p>
+I'm more willing to integrate C++-derived features there into the
+ANSI C code. Things like namespaces, (non-inherited) classes, or inline
+functions. However, for the time being, I'd like to maintain the code as
+pure ANSI C.
+</p>
+<p>
+For that matter, some of the gcc extensions can prove very useful too, but
+I cannot use them either.
+</p>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./board_gen.html" class="nav">Previous</a></td>
+<td>
+<a href="./flame_war.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

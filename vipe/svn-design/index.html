@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<!-- Created by texi2html 1.56k from svn-design.texi on 25 October 2002 -->
+
+<TITLE>Subversion Design - Table of Contents</TITLE>
+</HEAD>
+<BODY>
+<H1>Subversion</H1>
+<ADDRESS>Jim Blandy &#60;<A HREF="mailto:<A HREF="mailto:jimb@redhat.com">jimb@redhat.com</A>"><A HREF="mailto:jimb@redhat.com">jimb@redhat.com</A></A>&#62;</ADDRESS>
+<ADDRESS>Karl Fogel &#60;<A HREF="mailto:<A HREF="mailto:kfogel@collab.net">kfogel@collab.net</A>"><A HREF="mailto:kfogel@collab.net">kfogel@collab.net</A></A>&#62;</ADDRESS>
+<ADDRESS>Ben Collins-Sussman &#60;<A HREF="mailto:<A HREF="mailto:sussman@collab.net">sussman@collab.net</A>"><A HREF="mailto:sussman@collab.net">sussman@collab.net</A></A>&#62;</ADDRESS>
+<P>
+<P><HR><P>
+<UL>
+<LI><A NAME="TOC1" HREF="svn-design.html#SEC1">Goals</A>
+<UL>
+<LI><A NAME="TOC2" HREF="svn-design.html#SEC2">Rename/removal/resurrection support</A>
+<LI><A NAME="TOC3" HREF="svn-design.html#SEC3">Text vs binary issues</A>
+<LI><A NAME="TOC4" HREF="svn-design.html#SEC4">I18N/Multilingual support</A>
+<LI><A NAME="TOC5" HREF="svn-design.html#SEC5">Branching and tagging</A>
+<LI><A NAME="TOC6" HREF="svn-design.html#SEC6">Miscellaneous new behaviors</A>
+<UL>
+<LI><A NAME="TOC7" HREF="svn-design.html#SEC7">Log messages</A>
+<LI><A NAME="TOC8" HREF="svn-design.html#SEC8">Client side diff plug-ins</A>
+<LI><A NAME="TOC9" HREF="svn-design.html#SEC9">Better merging</A>
+<LI><A NAME="TOC10" HREF="svn-design.html#SEC10">Conflicts resolution</A>
+</UL>
+</UL>
+<LI><A NAME="TOC11" HREF="svn-design.html#SEC11">Model</A>
+<UL>
+<LI><A NAME="TOC12" HREF="svn-design.html#SEC12">Working Directories and Repositories</A>
+<LI><A NAME="TOC13" HREF="svn-design.html#SEC13">Transactions and Revision Numbers</A>
+<LI><A NAME="TOC14" HREF="svn-design.html#SEC14">How Working Directories Track the Repository</A>
+<LI><A NAME="TOC15" HREF="svn-design.html#SEC15">Subversion Does Not Lock Files</A>
+<LI><A NAME="TOC16" HREF="svn-design.html#SEC16">Properties</A>
+<LI><A NAME="TOC17" HREF="svn-design.html#SEC17">Merging and Ancestry</A>
+</UL>
+<LI><A NAME="TOC18" HREF="svn-design.html#SEC18">Architecture</A>
+<UL>
+<LI><A NAME="TOC19" HREF="svn-design.html#SEC19">Client Layer</A>
+<LI><A NAME="TOC20" HREF="svn-design.html#SEC20">Network Layer</A>
+<LI><A NAME="TOC21" HREF="svn-design.html#SEC21">Filesystem Layer</A>
+</UL>
+<LI><A NAME="TOC22" HREF="svn-design.html#SEC22">Deltas</A>
+<UL>
+<LI><A NAME="TOC23" HREF="svn-design.html#SEC23">Text Deltas</A>
+<LI><A NAME="TOC24" HREF="svn-design.html#SEC24">Property Deltas</A>
+<LI><A NAME="TOC25" HREF="svn-design.html#SEC25">Tree Deltas</A>
+<LI><A NAME="TOC26" HREF="svn-design.html#SEC26">Postfix Text Deltas</A>
+<LI><A NAME="TOC27" HREF="svn-design.html#SEC27">Serializing Deltas via the "Editor" Interface</A>
+</UL>
+<LI><A NAME="TOC28" HREF="svn-design.html#SEC28">Client</A>
+<UL>
+<LI><A NAME="TOC29" HREF="svn-design.html#SEC29">Working copies and the working copy library</A>
+<UL>
+<LI><A NAME="TOC30" HREF="svn-design.html#SEC30">The layout of working copies</A>
+<LI><A NAME="TOC31" HREF="svn-design.html#SEC31">The working copy management library</A>
+</UL>
+<LI><A NAME="TOC32" HREF="svn-design.html#SEC32">The repository access library</A>
+<LI><A NAME="TOC33" HREF="svn-design.html#SEC33">The client operation library</A>
+</UL>
+<LI><A NAME="TOC34" HREF="svn-design.html#SEC34">Protocol</A>
+<LI><A NAME="TOC35" HREF="svn-design.html#SEC35">Server</A>
+<UL>
+<LI><A NAME="TOC36" HREF="svn-design.html#SEC36">Filesystem</A>
+<UL>
+<LI><A NAME="TOC37" HREF="svn-design.html#SEC37">Filesystem Overview</A>
+<LI><A NAME="TOC38" HREF="svn-design.html#SEC38">API</A>
+<LI><A NAME="TOC39" HREF="svn-design.html#SEC39">Repository Structure</A>
+<UL>
+<LI><A NAME="TOC40" HREF="svn-design.html#SEC40">Schema</A>
+<LI><A NAME="TOC41" HREF="svn-design.html#SEC41">Bubble-Up Method</A>
+<LI><A NAME="TOC42" HREF="svn-design.html#SEC42">Diffy Storage</A>
+</UL>
+<LI><A NAME="TOC43" HREF="svn-design.html#SEC43">Implementation</A>
+</UL>
+<LI><A NAME="TOC44" HREF="svn-design.html#SEC44">Repository Library</A>
+</UL>
+<LI><A NAME="TOC45" HREF="svn-design.html#SEC45">Future</A>
+<UL>
+<LI><A NAME="TOC46" HREF="svn-design.html#SEC46">High Priority Items</A>
+<UL>
+<LI><A NAME="TOC47" HREF="svn-design.html#SEC47">Annotation</A>
+<LI><A NAME="TOC48" HREF="svn-design.html#SEC48">Repository Conversion</A>
+</UL>
+<LI><A NAME="TOC49" HREF="svn-design.html#SEC49">Blue Sky Items</A>
+<UL>
+<LI><A NAME="TOC50" HREF="svn-design.html#SEC50">Server Grep</A>
+<LI><A NAME="TOC51" HREF="svn-design.html#SEC51">Scripting Language</A>
+<LI><A NAME="TOC52" HREF="svn-design.html#SEC52">Smart conflict resolution</A>
+<LI><A NAME="TOC53" HREF="svn-design.html#SEC53">Mirroring Servers</A>
+<LI><A NAME="TOC54" HREF="svn-design.html#SEC54">Inter-Repository Communication</A>
+<LI><A NAME="TOC55" HREF="svn-design.html#SEC55">SQL Back-End</A>
+<LI><A NAME="TOC56" HREF="svn-design.html#SEC56">Digital Signatures</A>
+<LI><A NAME="TOC57" HREF="svn-design.html#SEC57">SMTP access</A>
+</UL>
+</UL>
+<LI><A NAME="TOC58" HREF="svn-design.html#SEC58">License</A>
+</UL>
+<P><HR><P>
+This document was generated on 25 October 2002 using
+<A HREF="http://wwwinfo.cern.ch/dis/texi2html/">texi2html</A>&nbsp;1.56k.
+</BODY>
+</HTML>

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>cond.scm.html</TITLE>
+</HEAD>
+<BODY BGcolor=#FFFFFF TEXT=#000000>
+<PRE>
+<FONT color=#0000ff>; Conditionals</FONT>
+<FONT color=#0000ff>; ------------</FONT>
+
+<FONT color=#0000ff>; Use the if statement to put a conditional.</FONT>
+<FONT color=#0000ff>; Syntax:</FONT>
+<FONT color=#0000ff>; (if cond [true statement] [optional false statement])</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>50</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> b <FONT color=#ff00ff>30</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>&lt;</FONT> a b<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;a is lesser than b&quot;</FONT><FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;a is not lesser than b&quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Note: there can only be _one_ statement in the if conditionals. If you want</FONT>
+<FONT color=#0000ff>; to execute more than one statement use the &quot;begin&quot; construct. &quot;begin&quot; packs </FONT>
+<FONT color=#0000ff>; a few statements into one statement (and returns the value of the </FONT>
+<FONT color=#0000ff>; last statement.</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>&lt;</FONT> a b<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>begin</FONT></B>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> a<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot; is lesser than &quot;</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> b<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; The if returns the value of the expression that was executed.</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> max-of-a-and-b <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>&gt;</FONT> a b<FONT color=#6a5acd>)</FONT> a b<FONT color=#6a5acd>))</FONT>
+
+
+</PRE>
+</BODY>
+</HTML>

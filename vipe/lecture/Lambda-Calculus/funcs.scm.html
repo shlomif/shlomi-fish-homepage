@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<TITLE>funcs.scm.html</TITLE>
+</HEAD>
+<BODY BGcolor=#FFFFFF TEXT=#000000>
+<PRE>
+<FONT color=#0000ff>; Functions</FONT>
+<FONT color=#0000ff>; ---------</FONT>
+
+<FONT color=#0000ff>; use the &quot;lambda&quot; keyword to define an anonymous function.</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> pythagoras 
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>a b<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>sqrt</FONT> 
+            <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> 
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> a a<FONT color=#6a5acd>)</FONT> 
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> b b<FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>pythagoras <FONT color=#ff00ff>3</FONT> <FONT color=#ff00ff>4</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; Displays 5</FONT>
+
+<FONT color=#0000ff>; Note: you can declare a lambda and execute it in the same statement:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> myvar <FONT color=#6a5acd>((</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>a<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> <FONT color=#ff00ff>2</FONT> a<FONT color=#6a5acd>))</FONT> <FONT color=#ff00ff>10</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#0000ff>; myvar will be set to 20</FONT>
+
+<FONT color=#0000ff>; A function executes all the statements inside it and returns the last statement.</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> myfunc 
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>a b<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> a<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;+&quot;</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> b<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;=&quot;</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> a b<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>myfunc <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>;Will display:</FONT>
+<FONT color=#0000ff>;5+6=11</FONT>
+
+<FONT color=#0000ff>; More about &quot;define&quot; and &quot;set!&quot;</FONT>
+<FONT color=#0000ff>; ------------------------------</FONT>
+
+<FONT color=#0000ff>; A define inside a function will only be visible inside that function.</FONT>
+<FONT color=#0000ff>; Assuming a variable of the same name was defined in the outside, it will </FONT>
+<FONT color=#0000ff>; be restored to the same value as soon as the function terminates.</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>500</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> myfunc
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>()</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> a<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT>myfunc<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> a<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; A function can see all the variables that were defined on the outside.</FONT>
+
+<FONT color=#0000ff>; set! sets the variable that is most closest to the current scope. (hence </FONT>
+<FONT color=#0000ff>; is in the inner-most scope).</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>&quot;a_old_value&quot;</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> b <FONT color=#ff00ff>&quot;b_old_value&quot;</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> myfunc
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>()</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> a <FONT color=#ff00ff>30</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> a <FONT color=#ff00ff>&quot;a_new_value&quot;</FONT><FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> b <FONT color=#ff00ff>&quot;b_new_value&quot;</FONT><FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> a<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> b<FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; This code will print:</FONT>
+<FONT color=#0000ff>; a_old_value</FONT>
+<FONT color=#0000ff>; b_new_value</FONT>
+
+<FONT color=#0000ff>; Functions inside functions</FONT>
+<FONT color=#0000ff>; --------------------------</FONT>
+
+<FONT color=#0000ff>; One can define functions inside functions. Those functions can see the</FONT>
+<FONT color=#0000ff>; variables of the outer functions even after those functions terminated.</FONT>
+<FONT color=#0000ff>; This behaviour is called lexical scoping.</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> display_sums 
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>a b c d e f<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> display_sum 
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>one two<FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> one<FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;+&quot;</FONT><FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> two<FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#ff00ff>&quot;=&quot;</FONT><FONT color=#6a5acd>)</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> one two<FONT color=#6a5acd>))</FONT>
+                <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT>display_sum a b<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT>display_sum c d<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT>display_sum e f<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>if</FONT></B> <FONT color=#ff00ff>#f</FONT>
+    <FONT color=#6a5acd>(</FONT>display_sum <FONT color=#ff00ff>5</FONT> <FONT color=#ff00ff>6</FONT><FONT color=#6a5acd>)</FONT> <FONT color=#0000ff>; Error!, display_sum is not defined in this scope.</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+
+
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> make-counter
+    <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>start_from<FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> increment
+            <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>()</FONT>
+                <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> start_from <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>+</FONT> start_from <FONT color=#ff00ff>1</FONT><FONT color=#6a5acd>))</FONT>
+                start_from
+            <FONT color=#6a5acd>)</FONT>
+        <FONT color=#6a5acd>)</FONT>
+        increment
+    <FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>)</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> counter <FONT color=#6a5acd>(</FONT>make-counter <FONT color=#ff00ff>100</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>counter<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>counter<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#0000ff>; This code will print:</FONT>
+<FONT color=#0000ff>; 100</FONT>
+<FONT color=#0000ff>; 101</FONT>
+
+<FONT color=#0000ff>;;; Now let's define a second counter</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> second-counter <FONT color=#6a5acd>(</FONT>make-counter <FONT color=#ff00ff>100</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>second-counter<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>counter<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; Lambdas are regular variables</FONT>
+<FONT color=#0000ff>; -----------------------------</FONT>
+
+<FONT color=#0000ff>; You can pass them around. For example:</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> myfunc <FONT color=#ff00ff>0</FONT><FONT color=#6a5acd>)</FONT>
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>set!</FONT></B> myfunc <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>h<FONT color=#6a5acd>)</FONT> <FONT color=#6a5acd>(</FONT><FONT color=#008b8b>*</FONT> <FONT color=#ff00ff>3</FONT> h<FONT color=#6a5acd>)))</FONT>
+
+<FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>define</FONT></B> twice <FONT color=#6a5acd>(</FONT><B><FONT color=#a52a2a>lambda</FONT></B> <FONT color=#6a5acd>(</FONT>func x<FONT color=#6a5acd>)</FONT>
+    <FONT color=#6a5acd>(</FONT>func <FONT color=#6a5acd>(</FONT>func x<FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>))</FONT>
+
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>display</FONT> <FONT color=#6a5acd>(</FONT>twice myfunc <FONT color=#ff00ff>2</FONT><FONT color=#6a5acd>))</FONT>
+<FONT color=#6a5acd>(</FONT><FONT color=#008b8b>newline</FONT><FONT color=#6a5acd>)</FONT>
+
+<FONT color=#0000ff>; This will print 18</FONT>
+</PRE>
+</BODY>
+</HTML>

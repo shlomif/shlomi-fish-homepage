@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css" />
+<title>
+The Modified Template
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./navbar.html" class="nav">Previous</a></td>
+<td>
+<a href="./navbar-frame.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+7.3 The Modified Template
+</h1>
+<p>
+<table class="mycode" summary="">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font>&#123;#SUBJECT_LOC#&#125;<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>link</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>rel</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;StyleSheet&quot;</font><font color="#008b8b"> </font><font color="#2e8b57"><b>href</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;&#036;(ROOT)/style.css&quot;</font><font color="#008b8b"> </font><font color="#2e8b57"><b>type</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;text/css&quot;</font><font color="#008b8b"> /&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b">&gt;</font>
+
+&#091;FRAMES::&#093;
+&#091;NOFRAMES:
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>table</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>width</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;99%&quot;</font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>tr</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>td</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>valign</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;top&quot;</font><font color="#008b8b"> </font><font color="#2e8b57"><b>width</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;20%&quot;</font><font color="#008b8b"> </font><font color="#2e8b57"><b>class</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;navbar&quot;</font><font color="#008b8b">&gt;</font>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>define-tag</b></font><font color="#008b8b"> navbarlink&gt;</font>
+<font color="#008b8b">&lt;</font>if<font color="#008b8b"> </font>
+<font color="#008b8b">    &#059;&#059;&#059; Determine if %0 matches this document</font>
+<font color="#008b8b">    </font><span style="background-color: #ff0000"><font color="#ffffff">&lt;</font></span><font color="#008b8b">ifeq </font><font color="#ff00ff">&quot;&#036;(FILENAME)&quot;</font><font color="#008b8b"> </font><font color="#ff00ff">&quot;%0&quot;</font><font color="#008b8b"> </font>
+<font color="#008b8b">        </font><font color="#ff00ff">&quot;1&quot;</font><font color="#008b8b"> </font>
+<font color="#008b8b">        </font><span style="background-color: #ff0000"><font color="#ffffff">&lt;</font></span><font color="#008b8b">ifeq </font><font color="#ff00ff">&quot;&#036;(FILENAME)&quot;</font><font color="#008b8b"> </font><font color="#ff00ff">&quot;%0index.html&quot;</font><font color="#008b8b"> </font>
+<font color="#008b8b">            </font><font color="#ff00ff">&quot;1&quot;</font><font color="#008b8b"> </font>
+<font color="#008b8b">            </font><font color="#ff00ff">&quot;&quot;</font><font color="#008b8b"> </font>
+<font color="#008b8b">        /&gt;</font>
+
+    /<span style="background-color: #ff0000"><font color="#ffffff">&gt;</font></span>
+    &#059;&#059;&#059; If so - bolds the text
+    &quot;<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>b</b></font><font color="#008b8b">&gt;</font>%1<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>b</b></font><font color="#008b8b">&gt;</font>&quot;
+    &#059;&#059;&#059; If not - makes a hyperlink
+    &quot;<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>a</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>href</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;&#036;(ROOT)/%0&quot;</font><font color="#008b8b">&gt;</font>%1<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>a</b></font><font color="#008b8b">&gt;</font>&quot;
+/<span style="background-color: #ff0000"><font color="#ffffff">&gt;</font></span><font color="#008b8b">&lt;</font><font color="#a52a2a"><b>br</b></font><font color="#008b8b"> /&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>define-tag</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#0000ff">#include 'navbar.wml'</font>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>br</b></font><font color="#008b8b"> /&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>a</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>href</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;&#036;(ROOT)/frames.html&quot;</font><font color="#008b8b">&gt;</font>Frames Enabled Site<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>a</b></font><font color="#008b8b">&gt;</font><font color="#008b8b">&lt;</font><font color="#a52a2a"><b>br</b></font><font color="#008b8b"> /&gt;</font>
+
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>td</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>td</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>valign</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;top&quot;</font><font color="#008b8b">&gt;</font>
+:&#093;
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font>&#123;#SUBJECT_LOC#&#125;<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font>
+&#123;#BODY#&#125;
+&#091;FRAMES::&#093;
+&#091;NOFRAMES:
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>td</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>tr</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>table</b></font><font color="#008b8b">&gt;</font>
+:&#093;
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>define-tag</b></font><font color="#008b8b"> subject&gt;</font>
+&#123;#SUBJECT_LOC#:%0:##&#125;
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>define-tag</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#0000ff">#   per default we are in body</font>
+&#123;#BODY#:
+
+
+</pre>
+</td>
+</tr>
+</table>
+</p>
+<h2>Explanation</h2>
+<p>
+<ul>
+<li>
+<tt>&#091;SLICE:Text of Slice:&#093;</tt> denotes a text that appears only if
+the slice <tt>SLICE</tt> is defined.
+</li>
+<li>
+It is possible to do such stuff on slices' union, intersection, etc. Consult
+the man page of <tt>wml_p9_slice</tt> for more information.
+</li>
+</ul>
+</p>
+<hr />
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./navbar.html" class="nav">Previous</a></td>
+<td>
+<a href="./navbar-frame.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

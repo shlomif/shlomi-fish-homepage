@@ -1,0 +1,88 @@
+From mjd@plover.com Sat Oct 26 11:28:31 2002
+Date: Wed, 23 Oct 2002 16:10:15 -0400
+From: Mark-Jason Dominus <mjd@plover.com>
+Reply-To: perl-qotw-discuss@plover.com
+To: perl-qotw@plover.com
+Subject: Perl 'Expert' Quiz-of-the-Week #2
+
+
+The local high school baseball team, the Randal Schwartz High School
+Phoenixes, will be playing a series of games against their rivals, the
+Richard M. Nixon Memorial High School Growlin' Fungus.  The series
+lasts at most five games, and ends when one team has won three games.
+You want to bet $80 on the Phoenixes to win the series, but your
+bookie will only take bets on individual games.  (The bookie pays even
+money on all bets.)
+
+A mathematically-inclined friend solves the problem for you, giving
+you the following instructions:
+
+  Bet $30 on each of the first two games.
+
+  Bet $20 on the third game if either team has won both of the first two
+  games, $40 otherwise.
+
+  Bet $40 on the fourth game, if there is one.
+  Bet $80 on the fifth game, if there is one.
+
+  At the end of the series, you will be ahead by exactly $80 if the
+  Fightin' Quakers have won the series, and behind by exactly $80 if
+  the Sewer Fungus have won.
+
+We could summarize the instructions in a table like this:
+
+        If the game score is:
+           0 to 0, bet $30
+           1 to 0, bet  30
+           1 to 1, bet  40
+           2 to 0, bet  20
+           2 to 1, bet  40
+           2 to 2, bet  80
+
+Write a function which calculates the appropriate bet for any such
+contest, given the total amount you want to risk on the series, the
+length of the series, and the current game score.  For example,
+
+        bet(80, 5, 2, 1)
+
+should return 40, because if you want to risk $80 on a 5-game
+series, and one team is presently ahead 2 games to 1, you should bet
+$40.  
+
+Similarly 
+
+        bet(1000, 7, 2, 1)
+
+should return 375.  
+
+(That is, if you're trying to bet $1000 on the current World Series
+baseball match, you need to bet $375 on the outcome of tonight's game.
+If you started with $1000, and followed this function's advice, you'd
+have $625 left if you had been betting on the Giants and $1375 if you
+had been betting on the Angels.  For people living in places where the
+World Series is irrelevant: the match is a best-four-of-seven series
+of games; at present, the Anaheim Angels are beating the San Francisco
+Giants two games to one, with the fourth game scheduled for tonight.)
+
+----------------------------------------------------------------
+
+The same notes as last week; read them *all* if you didn't read them
+last week:
+
+ * I'll post an example solution here on Monday.
+
+ * perl-qotw will only carry the quizzes and solutions.  Discussion,
+   remarks, comments, and soforth should go to
+   perl-qotw-discuss@plover.com.  To subscribe to that list, send mail
+   to perl-qotw-discuss-subscribe@plover.com.
+
+ * I'd like to request that nobody post any sample solutions or other
+   spoilers to the discussion list until at least Saturday.
+
+ * Even after Saturday, any solutions or other spoilers should always
+   be marked with the word SPOILER in the subject line, so that other
+   people won't see them by accident.
+
+ * If you'd like to contribute a quiz question, send it to me.
+
+Thanks.

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>sort</title>
+<link rel="StyleSheet" href="../../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../map.html" class="nav">Previous</a></td>
+<td>
+<a href="cmp.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.3 sort</h1>
+
+<p>
+The <tt>sort</tt> function can sort an array based on a comparison expression.
+As with the <tt>map</tt> function, this expression can be as complex as you'd 
+like and may actually include a call to a dedicated function.
+</p>
+
+<p>
+Within the comparison block, the variables <tt>$a</tt> and <tt>$b</tt> indicate 
+the two elements to be compared. If the expression returns a negative value
+it means that <tt>$a</tt> should precede <tt>$b</tt>. If it's positive, it means
+that <tt>$b</tt> should come before <tt>$a</tt>. If it's zero it indicates that
+it does not matter which one will come first.
+</p>
+
+<p>
+The following example sorts an array of integers:
+</p>
+
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@array</FONT> = (<FONT color=#ff00ff>100</FONT>,<FONT color=#ff00ff>5</FONT>,<FONT color=#ff00ff>8</FONT>,<FONT color=#ff00ff>92</FONT>,<FONT color=#ff00ff>-7</FONT>,<FONT color=#ff00ff>34</FONT>,<FONT color=#ff00ff>29</FONT>,<FONT color=#ff00ff>58</FONT>,<FONT color=#ff00ff>8</FONT>,<FONT color=#ff00ff>10</FONT>,<FONT color=#ff00ff>24</FONT>);
+
+<B><FONT color=#a52929>my</FONT></B> <FONT color=#008c8c>@sorted_array</FONT> = 
+    (<B><FONT color=#a52929>sort</FONT></B>
+        {
+            <B><FONT color=#a52929>if</FONT></B> (<FONT color=#008c8c>$a</FONT> &lt; <FONT color=#008c8c>$b</FONT>)
+            {
+                <B><FONT color=#a52929>return</FONT></B> <FONT color=#ff00ff>-1</FONT>;
+            }
+            <B><FONT color=#a52929>elsif</FONT></B> (<FONT color=#008c8c>$b</FONT> &gt; <FONT color=#008c8c>$a</FONT>)
+            {
+                <B><FONT color=#a52929>return</FONT></B> <FONT color=#ff00ff>1</FONT>;
+            }
+            <B><FONT color=#a52929>else</FONT></B>
+            {
+                <B><FONT color=#a52929>return</FONT></B> <FONT color=#ff00ff>0</FONT>;
+            }
+        }
+        <FONT color=#008c8c>@array</FONT>
+    );
+
+<B><FONT color=#a52929>print</FONT></B> <B><FONT color=#a52929>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>,</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008c8c>@sorted_array</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6b5ace>\n</FONT><FONT color=#ff00ff>&quot;</FONT>
+</pre>
+</td>
+</tr>
+</table>
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../map.html" class="nav">Previous</a></td>
+<td>
+<a href="cmp.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

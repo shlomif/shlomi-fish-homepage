@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>The x operator</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./functions.html" class="nav">Previous</a></td>
+<td>
+<b class="nav">Next</b></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.4 The x operator</h1>
+
+<p>
+The expression <tt>(@array) x $num_times</tt> returns an array that is composed
+of <tt>$num_times</tt> copies of <tt>@array</tt> one after the other. The 
+expression <tt>$scalar x $num_times</tt>, on the other hand, returns 
+a string containing <tt>$num_times</tt> copies of <tt>$scalar</tt> 
+concatenated together string-wise.
+</p>
+
+<p>
+Therefore it is important whether the left operand is wrapped in parenthesis 
+or not. It is usually a wise idea to assign the left part to a variable 
+before using x so you'll have the final expression ready.
+</p>
+
+<p>Here's an example to illustrate the use:</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Test 1:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>@myarray</FONT> = (<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Hello</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>World</FONT><FONT color=#ff00ff>&quot;</FONT>);
+<FONT color=#008080>@array2</FONT> = ((<FONT color=#008080>@myarray</FONT>) x <FONT color=#ff00ff>5</FONT>);
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>@array2</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Test 2:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>@array3</FONT> = (<FONT color=#008080>@myarray</FONT> x <FONT color=#ff00ff>5</FONT>);
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#008080>@array3</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Test 3:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<FONT color=#008080>$string</FONT> = <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>oncatc</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> ((<FONT color=#008080>$string</FONT> x <FONT color=#ff00ff>6</FONT>), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n\n</FONT><FONT color=#ff00ff>&quot;</FONT>);
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Test 4:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>, ((<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>hello</FONT><FONT color=#ff00ff>&quot;</FONT>) x <FONT color=#ff00ff>5</FONT>)), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+<B><FONT color=#804040>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>Test 5:</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+<B><FONT color=#804040>print</FONT></B> <B><FONT color=#804040>join</FONT></B>(<FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>, (<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>hello</FONT><FONT color=#ff00ff>&quot;</FONT> x <FONT color=#ff00ff>5</FONT>)), <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+Can you guess what the output of this program will be?
+</p>
+
+<p>Here's a spoiler</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+Test 1:
+Hello, World, Hello, World, Hello, World, Hello, World, Hello, World
+
+Test 2:
+22222
+
+Test 3:
+oncatconcatconcatconcatconcatconcatc
+
+Test 4:
+hello
+hello
+hello
+hello
+hello
+
+Test 5:
+hellohellohellohellohello
+
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./functions.html" class="nav">Previous</a></td>
+<td>
+<b class="nav">Next</b></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

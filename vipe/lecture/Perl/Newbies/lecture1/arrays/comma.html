@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>The ',' operator</title>
+<link rel="StyleSheet" href="./../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./foreach/" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9.1 The ',' operator</h1>
+
+<p>
+In perl the comma (<tt>,</tt>) is an operator, which we encountered it before
+in function calls. The comma concatenates two arrays. We can use it to
+initialize an array in one call:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#008080>@lines</FONT> = (<FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>One fish</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>two fish</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>red fish</FONT><FONT color=#ff00ff>&quot;</FONT>, <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>blue fish</FONT><FONT color=#ff00ff>&quot;</FONT>);
+
+<B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$a</FONT> (<FONT color=#ff00ff>0</FONT> .. <FONT color=#008080>$#lines</FONT>)
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#008080>$lines</FONT>[<FONT color=#008080>$a</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+We can also use it to concatenate two existing arrays:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#008080>@primes1</FONT> = (<FONT color=#ff00ff>2</FONT>,<FONT color=#ff00ff>3</FONT>,<FONT color=#ff00ff>5</FONT>);
+<FONT color=#008080>@primes2</FONT> = (<FONT color=#ff00ff>7</FONT>,<FONT color=#ff00ff>11</FONT>,<FONT color=#ff00ff>13</FONT>);
+<FONT color=#008080>@primes</FONT> = (<FONT color=#008080>@primes1</FONT>,<FONT color=#008080>@primes2</FONT>,<FONT color=#ff00ff>17</FONT>);
+<FONT color=#008080>@primes</FONT> = (<FONT color=#008080>@primes</FONT>,<FONT color=#ff00ff>19</FONT>);
+
+<B><FONT color=#804040>for</FONT></B> <FONT color=#008080>$a</FONT> (<FONT color=#ff00ff>0</FONT> .. <FONT color=#008080>$#primes</FONT>)
+{
+    <B><FONT color=#804040>print</FONT></B> <FONT color=#008080>$primes</FONT>[<FONT color=#008080>$a</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+So why it is used in function calls? In perl every function accepts an array
+of arguments and returns an array of return values. That's why the comma is
+useful for calling functions which accept more than one argument.
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./foreach/" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

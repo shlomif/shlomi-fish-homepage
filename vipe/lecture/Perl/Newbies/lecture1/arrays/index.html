@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>Arrays</title>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../while/last_and_next.html" class="nav">Previous</a></td>
+<td>
+<a href="comma.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+<h1 class="fcs">9 Arrays</h1>
+
+<p>
+Arrays are a sequence of variables, whose members can be retrieved and 
+assigned to by using their indices. An index passed to an array may well be
+, and usually is another variable.
+</p>
+
+<p>
+To refer to the <tt>$i</tt>'th element of the array <tt>@myarray</tt>, one uses
+the syntax <tt>$myarray[$i]</tt>. This element can be assigned to or its
+value can be retrieved, with the same notation.
+</p>
+
+<p>
+Array indices are whole numbers and the first index is 0. As in the 
+length of a string, the number of elements in an array is bounded only by
+the amount of available memory the computer has.
+</p>
+
+<p>
+The following program prints the primes up to 200:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#008b8b>$num_primes</FONT> = <FONT color=#ff00ff>0</FONT>;
+
+<FONT color=#0000ff># Put 2 as the first prime so we won't have an empty array,</FONT>
+<FONT color=#0000ff># what might confuse the interpreter</FONT>
+<FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$num_primes</FONT>] = <FONT color=#ff00ff>2</FONT>;
+<FONT color=#008b8b>$num_primes</FONT>++;
+
+MAIN_LOOP: 
+<B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$number_to_check</FONT> (<FONT color=#ff00ff>3</FONT> .. <FONT color=#ff00ff>200</FONT>)
+{
+    <B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$p</FONT> (<FONT color=#ff00ff>0</FONT> .. (<FONT color=#008b8b>$num_primes</FONT><FONT color=#ff00ff>-1</FONT>))
+    {
+        <B><FONT color=#a52a2a>if</FONT></B> (<FONT color=#008b8b>$number_to_check</FONT> % <FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$p</FONT>] == <FONT color=#ff00ff>0</FONT>)
+        {
+            <B><FONT color=#a52a2a>next</FONT></B> MAIN_LOOP;
+        }
+    }
+
+    <FONT color=#0000ff># If we reached this point it means $number_to_check is not</FONT>
+    <FONT color=#0000ff># divisable by any prime number that came before it.</FONT>
+    <FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$num_primes</FONT>] = <FONT color=#008b8b>$number_to_check</FONT>;
+    <FONT color=#008b8b>$num_primes</FONT>++;
+}
+
+<B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$p</FONT> (<FONT color=#ff00ff>0</FONT> .. (<FONT color=#008b8b>$num_primes</FONT><FONT color=#ff00ff>-1</FONT>))
+{
+    <B><FONT color=#a52a2a>print</FONT></B> <FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$p</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+<p>
+The notation <tt>scalar(@myarray)</tt> can be used to refer to the number
+of elements in an array. This number is equal to the maximal index which
+was assigned in the array plus one. You will also the notation 
+<tt>$#myarray</tt> which is equal to the maximal index itself.
+</p>
+
+<p>
+Thus, for example, the above program could have been written as follows:
+</p>
+
+<p>
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<FONT color=#0000ff># Put 2 as the first prime so we won't have an empty array,</FONT>
+<FONT color=#0000ff># what might confuse the interpreter</FONT>
+<FONT color=#008b8b>$primes</FONT>[<FONT color=#ff00ff>0</FONT>] = <FONT color=#ff00ff>2</FONT>;
+
+MAIN_LOOP: 
+<B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$number_to_check</FONT> (<FONT color=#ff00ff>3</FONT> .. <FONT color=#ff00ff>200</FONT>)
+{
+    <B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$p</FONT> (<FONT color=#ff00ff>0</FONT> .. <FONT color=#008b8b>$#primes</FONT>)
+    {
+        <B><FONT color=#a52a2a>if</FONT></B> (<FONT color=#008b8b>$number_to_check</FONT> % <FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$p</FONT>] == <FONT color=#ff00ff>0</FONT>)
+        {
+            <B><FONT color=#a52a2a>next</FONT></B> MAIN_LOOP;
+        }
+    }
+
+    <FONT color=#0000ff># If we reached this point it means $number_to_check is not</FONT>
+    <FONT color=#0000ff># divisable by any prime number that came before it.</FONT>
+    <FONT color=#008b8b>$primes</FONT>[<B><FONT color=#a52a2a>scalar</FONT></B>(<FONT color=#008b8b>@primes</FONT>)] = <FONT color=#008b8b>$number_to_check</FONT>;
+}
+
+<B><FONT color=#a52a2a>for</FONT></B> <FONT color=#008b8b>$p</FONT> (<FONT color=#ff00ff>0</FONT> .. <FONT color=#008b8b>$#primes</FONT>)
+{
+    <B><FONT color=#a52a2a>print</FONT></B> <FONT color=#008b8b>$primes</FONT>[<FONT color=#008b8b>$p</FONT>], <FONT color=#ff00ff>&quot;</FONT><FONT color=#ff00ff>, </FONT><FONT color=#ff00ff>&quot;</FONT>;
+}
+<B><FONT color=#a52a2a>print</FONT></B> <FONT color=#ff00ff>&quot;</FONT><FONT color=#6a5acd>\n</FONT><FONT color=#ff00ff>&quot;</FONT>;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</p>
+
+
+
+<hr>
+<table>
+<tr>
+<td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../while/last_and_next.html" class="nav">Previous</a></td>
+<td>
+<a href="comma.html" class="nav">Next</a></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

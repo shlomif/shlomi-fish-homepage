@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="StyleSheet" href="../../style.css" type="text/css">
+<title>
+Hash Optimizations
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./function.html" class="nav">Previous</a></td>
+<td>
+<a href="./../../moves/" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+3.6.2 Hash Optimizations
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+Storing the (non-moduloed) hash values along with the keys. That way, the
+hash values can be compared first before comparing the entire keys.
+</li>
+<li>
+Moving elements that were successfully hit to the start of their chains.
+</li>
+<li>
+When rehashing (= extending the hash to a greater number of buckets),
+use the same malloc'ed elements, only re-link them to their new
+followers.
+</li>
+</ul>
+</h3>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./function.html" class="nav">Previous</a></td>
+<td>
+<a href="./../../moves/" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="StyleSheet" href="../style.css" type="text/css">
+<title>
+Creating a Sub-Directory with a Different Configuration
+</title>
+</head>
+<body>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./mylib-config.html" class="nav">Next</a></td>
+</tr>
+</table>
+<h1>
+8.1 Creating a Sub-Directory with a Different Configuration
+</h1>
+<h3 class="notbold">
+<ul>
+<li>
+To have a directory with its own separate <tt>configure</tt> script, first
+put it in the <tt>SUBDIRS</tt> variable of Makefile.am
+</li>
+<li>
+Then use the <tt>AC_CONFIG_SUBDIRS</tt> macro in <tt>configure.in</tt> to
+configure them as separate sub-directories.
+</li>
+<li>
+If a sub-directory inherits from the same subdirectory, then they will
+also be linked against all the shared libraries, which may not be
+desirable.
+</li>
+</ul>
+</h3>
+<hr>
+<table summary="">
+<tr>
+<td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Previous</a></td>
+<td>
+<a href="./mylib-config.html" class="nav">Next</a></td>
+</tr>
+</table>
+</body>
+</html>

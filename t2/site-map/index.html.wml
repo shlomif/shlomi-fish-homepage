@@ -1,0 +1,11 @@
+#include '../template.wml'
+
+<subject "Site Map" />
+
+<div class="sitemap">
+<:{
+my $site_map = $nav_bar->gen_site_map();
+print $site_map;
+}:>
+</div>
+

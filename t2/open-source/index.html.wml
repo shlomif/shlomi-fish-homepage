@@ -1,31 +1,58 @@
 #include '../template.wml'
-<subject "About Myself" />
+<subject "Open Source Software I wrote" />
 
-<h2><a href="$(ROOT)/personal.html">About Myself</a></h2>
+<define-tag linkto:vipe endtag="required">
+<preserve where />
+<set-var %attributes />
+<a href="http://vipe.technion.ac.il/~shlomif/<get-var where />">%body</a>
+<restore where />
+</define-tag>
+
+<h2><linkto:vipe where="freecell-solver/">Freecell Solver</linkto:vipe></h2>
 
 <p>
-A page with a picture of me and some history and background. What I did,
-and when.
+A program and a library written in ANSI C that automatically solves games of
+Freecell and similar Solitaire variants.
 </p>
 
-<h2><a href="$(ROOT)/SFresume.html">My C.V.</h</a></h2>
+<h2><linkto:vipe where="quadpres/">Quad-Pres</linkto:vipe></h2>
 
 <p>
-My resume (or Corricolum Vitae if you may) that gives my past experience
-in my fields of expertise.
+Short for Quick-and-Dirty Presentations, this is a tool written in Perl for
+preparing HTML presentations. Based on <a href="http://thewml.org/">WebMetaLanguage</a>.
 </p>
 
-<h2><a href="$(ROOT)/SFresume_detailed.html">My Detailed C.V.</a></h2>
+<h2><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
 
 <p>
-A C.V. with more detailed information.
+A simulator for IP-Noise for Linux systems based on the Linux Kernel version
+2.4.x or above.
 </p>
 
-<h2><a href="http://www.advogato.org/person/shlomif/">My Public Diary at
-Advogato</a></h2>
+<h2><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h2>
 
 <p>
-A web-log (i.e: public journal) I'm keeping to keep track of my thoughts and 
-to keep the people who care about me up-to-date with my whereabouts.
+A port of the well-known MOD player <a href="http://www.mikmod.org/">MikMod</a>
+(that was originally written in ANSI C) to Java.
+</p>
+
+<h2><a href="$(ROOT)/gradient-fu/">Gradient-Fu Patch for the GIMP</a></h2>
+
+<p>
+A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
+and to scripting interfaces.
+</p>
+
+<h2><linkto:vipe where="rwlock/">A First-Come First-Served Readers/Writers Lock</linkto:vipe></h2>
+
+<p>
+An implementation of it for POSIX Threads, which can also be used as a 
+reference implementation. 
+</p>
+
+<h2><linkto:vipe where="lm-solve/">LM-Solve</linkto:vipe></h2>
+
+<p>
+An automatic solver for <a href="http://www.logicmazes.com/">Logc Mazes</a> written in Perl
 </p>
 

@@ -1,6 +1,17 @@
 # #use wml::des::navbar
 #include '../std/logo.wml'
 
+# Utility Functions.
+
+<define-tag mynot><if "%0" "" "1" /></define-tag>
+
+<define-tag printable_style>
+<style type="text/css">
+table.cv { width : 100% ; border : none ; }
+table.cv td { vertical-align : top }
+</style>
+</define-tag>
+
 # The Definition of the page itself
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html 
@@ -10,6 +21,7 @@
 <head>
 <title>{#SUBJECT_LOC#}</title>
 <link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
+<if "$(PRINTABLE)" "<printable_style />" "" />
 </head>
 <body>
 <define-tag rellink whitespace="delete">
@@ -103,8 +115,36 @@
 </ul>
 </define-tag>
 
+<define-tag validhtml>
+<br /><br /><br /><br />
+<p>
+<a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0!"><img 
+    class="highlight" style="border:0" 
+    src="http://www.w3.org/Icons/valid-xhtml10" 
+    alt="Valid XHTML 1.0!" height="31" width="88" 
+    /></a>
+</p>
+<p>
+ <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"><img 
+    class="highlight" style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss" 
+    alt="Valid CSS!" /></a>
+</p>
+<p>
+<a href="http://thewml.org/" title="Website META Language"><img 
+src="$(ROOT)/images/logo-wml.png" alt="Website Meta Language" style="border:0" 
+width="100" height="50" /></a>
+</p>
+<p>
+<a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!"><img src="$(ROOT)/images/noIE.png" 
+class="highlight" style="border:0" 
+alt="Stop Using Internet Explorer!" /><br />
+Stop Using Internet Explorer!</a>
+</p>
+</define-tag>
 
 
+<define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
 <tr>
 <td valign="top" class="navbar" style="width:20%">
@@ -144,41 +184,19 @@
 <li><navbarlink "site-source/" "Site's Source Code" /></li>
 </ul>
 
-<define-tag validhtml>
-<br /><br /><br /><br />
-<p>
-<a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0!"><img 
-    class="highlight" style="border:0" 
-    src="http://www.w3.org/Icons/valid-xhtml10" 
-    alt="Valid XHTML 1.0!" height="31" width="88" 
-    /></a>
-</p>
-<p>
- <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"><img 
-    class="highlight" style="border:0;width:88px;height:31px"
-    src="http://jigsaw.w3.org/css-validator/images/vcss" 
-    alt="Valid CSS!" /></a>
-</p>
-<p>
-<a href="http://thewml.org/" title="Website META Language"><img 
-src="$(ROOT)/images/logo-wml.png" alt="Website Meta Language" style="border:0" 
-width="100" height="50" /></a>
-</p>
-<p>
-<a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!"><img src="$(ROOT)/images/noIE.png" 
-class="highlight" style="border:0" 
-alt="Stop Using Internet Explorer!" /><br />
-Stop Using Internet Explorer!</a>
-</p>
-</define-tag>
-
 <validhtml />
 
 </td>
 <td valign="top" class="main">
+</define-tag>
+
+# </define-tag>
+<if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
+
 <h1>{#SUBJECT_LOC#}</h1>
 {#BODY#}
 
+<define-tag end_table>
 </td>
 </tr>
 </table>
@@ -208,9 +226,14 @@ Designed and Maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.org.il">shl
     <hosted:at:tech />
     <backtomyhp />
     />
+</define-tag>
+
+<if <mynot "$(PRINTABLE)" /> "<end_table />" "" />
 
 </body>
 </html>
+
+
 
 <define-tag subject>
 {#SUBJECT_LOC#:%0:##}

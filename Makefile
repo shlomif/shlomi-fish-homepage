@@ -1,4 +1,4 @@
-WML_FLAGS += --passoption=2,-X -DROOT~.
+WML_FLAGS += --passoption=2,-X3074 -DROOT~.
 
 # t2 macros
 

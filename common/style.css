@@ -1,4 +1,7 @@
-a:hover, img.highlight:hover { background-color : LightGreen }
+:link:hover, :visited:hover, img.highlight:hover 
+{ 
+    background-color : LightGreen;
+}
 td.navbar 
 { 
     background-color: moccasin;  

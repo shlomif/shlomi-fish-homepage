@@ -42,6 +42,19 @@ my $tree_contents =
                 {
                     'value' => "My Resum&eacute;s",
                     'url' => "me/resumes/",
+                    'subs' =>
+                    [
+                        {
+                            'value' => "English Resum&eacute;",
+                            'url' => "SFresume.html",
+                            'skip' => 1,
+                        },
+                        {
+                            'value' => "Detailed English Resum&eacute;",
+                            'url' => "SFresume_detailed.html",
+                            'skip' => 1,
+                        },
+                    ],
                 },
             ],               
         },

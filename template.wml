@@ -73,7 +73,7 @@ table.cv td { vertical-align : top }
 <head>
 <title>{#SUBJECT_LOC#}</title>
 <link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
-<link rel="shortcut icon" href="$(ROOT)/favicon.ico" />
+<link rel="shortcut icon" href="$(ROOT)/favicon.ico" type="image/x-icon" />
 <:{
 use CGI qw();
 

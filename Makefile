@@ -2,7 +2,7 @@ WML_FLAGS += --passoption=2,-X -DROOT~.
 
 # t2 macros
 
-T2_DOCS = $(shell bash find-wmls-t2.sh)
+include make_helpers/include.mak
 
 T2_DEST_BASE = /var/www/html/shlomi/
 T2_DEST_DIR = t2-homepage
@@ -14,17 +14,11 @@ T2_WML_FLAGS = $(WML_FLAGS) -DSERVER=t2
 
 T2_DOCS_DEST = $(patsubst t2/%.wml,$(T2_DEST)/%,$(T2_DOCS))
 
-T2_DIRS = $(shell find t2 -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
-
 T2_DIRS_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_DIRS))
-
-T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$$')
 
 T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
 
 # vipe macros
-
-VIPE_DOCS = $(shell bash find-wmls-vipe.sh)
 
 VIPE_DEST_BASE = /var/www/html/shlomi/
 VIPE_DEST_DIR = vipe-homepage
@@ -34,11 +28,7 @@ VIPE_WML_FLAGS = $(WML_FLAGS) -DSERVER=vipe
 
 VIPE_DOCS_DEST = $(patsubst vipe/%.wml,$(VIPE_DEST)/%,$(VIPE_DOCS))
 
-VIPE_DIRS = $(shell find vipe -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
-
 VIPE_DIRS_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_DIRS))
-
-VIPE_IMAGES = $(shell find vipe -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$$')
 
 VIPE_IMAGES_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_IMAGES))
 

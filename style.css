@@ -1,5 +1,9 @@
 a:hover, img.highlight:hover { background-color : LightGreen }
-td.navbar { background-color: #ddf747;  width : 20% }
+td.navbar 
+{ 
+    background-color: moccasin;  
+    width : 20% 
+}
 p.desc { margin-left : 3em }
 ul.navbarmain { padding-left : 1em ; margin-left : 1em }
 ul.navbarnested { padding-left : 0em ; margin-left : 2em }
@@ -13,5 +17,10 @@ div.rightalign { text-align : right }
     with a different colour. That's CSS 2.
     http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
 */
-td.navbar a:hover { background-color : orange }
 
+table.shlomif { border-width : 1 ; border-color : black }
+table.shlomif td { vertical-align : top ; align : left }
+td.main 
+{
+    padding-left : 1em;
+}

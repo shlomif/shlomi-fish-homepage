@@ -1,3 +1,5 @@
+WML_FLAGS += --passoption=2,-X
+
 # t2 macros
 
 T2_DOCS = $(shell bash find-wmls-t2.sh)
@@ -6,9 +8,9 @@ T2_DEST_BASE = /var/www/html/shlomi/
 T2_DEST_DIR = t2-homepage
 T2_DEST = $(T2_DEST_BASE)$(T2_DEST_DIR)
 
-WML_FLAGS += --passoption=2,-X
 
-T2_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DVIPE_URL="/shlomi/vipe-homepage"
+
+T2_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DSERVER=t2
 
 T2_DOCS_DEST = $(patsubst t2/%.wml,$(T2_DEST)/%,$(T2_DOCS))
 
@@ -28,9 +30,7 @@ VIPE_DEST_BASE = /var/www/html/shlomi/
 VIPE_DEST_DIR = vipe-homepage
 VIPE_DEST = $(VIPE_DEST_BASE)$(VIPE_DEST_DIR)
 
-WML_FLAGS += --passoption=2,-X
-
-VIPE_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DVIPE_URL="/shlomi/vipe-homepage"
+VIPE_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DSERVER=vipe
 
 VIPE_DOCS_DEST = $(patsubst vipe/%.wml,$(VIPE_DEST)/%,$(VIPE_DOCS))
 
@@ -58,7 +58,7 @@ upload: all
 
 # t2 targets
 $(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml template.wml t2/.wmlrc
-	( cd t2 && wml $(WML_FLAGS) -DFILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst t2/%,%,$<) > $@ )
+	( cd t2 && wml $(T2_WML_FLAGS) -DFILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst t2/%,%,$<) > $@ )
 
 $(T2_DIRS_DEST) :: $(T2_DEST)/% : t2/%
 	mkdir -p $@
@@ -73,7 +73,7 @@ $(T2_DEST)/style.css : style.css
 # vipe targets
 
 $(VIPE_DOCS_DEST) :: $(VIPE_DEST)/% : vipe/%.wml template.wml vipe/.wmlrc
-	( cd vipe && wml $(WML_FLAGS) -DFILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst vipe/%,%,$<) > $@ )
+	( cd vipe && wml $(VIPE_WML_FLAGS) -DFILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst vipe/%,%,$<) > $@ )
 
 $(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : vipe/%
 	mkdir -p $@

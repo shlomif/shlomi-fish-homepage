@@ -95,7 +95,7 @@ my $tree_contents =
             [
                 {
                     'value' => "Freecell Solver",
-                    'url' => "freecell-solver/",
+                    'url' => "open-source/projects/freecell-solver/",
                 },
                 {
                     'value' => "MikMod for Java",
@@ -106,11 +106,12 @@ my $tree_contents =
                     'value' => "FCFS RWLock",
                     'title' => "A First-Come First-Served Readers/Writers Lock",
                     'url' => "rwlock/",
+                    'host' => "vipe",
                 },
                 {
                     'value' => "Quad-Pres",
                     'title' => "A Tool for Creating HTML Presentations",
-                    'url' => "quadpres/",
+                    'url' => "open-source/projects/quad-pres/",
                 },
                 {
                     'value' => "Favourite OSS",
@@ -157,7 +158,7 @@ my $tree_contents =
                 {
                     'value' => "Lambda Calculus",
                     'title' => "A presentation about a Turing-complete programming environment with only two primitives",
-                    'url' => "lecture/Lambda-Calculus/",
+                    'url' => "lecture/lc/",
                 },
                 {
                     'value' => "The Gimp",
@@ -172,12 +173,6 @@ my $tree_contents =
                     'value' => "Web Meta Lecture",
                     'title' => "A Presentation about the Web Meta Language",
                     'url' => "lecture/WebMetaLecture/",
-                },
-                {
-                    'value' => "Haskell",
-                    'title' => "Haskell for Perl Programmers",
-                    'url' => "lecture/Perl/Haskell/",
-                    'hide' => 1,
                 },
             ],
         },

@@ -1,5 +1,13 @@
 #include '../template.wml'
 
+<define-tag detailed endtag="required">
+<if "<is:detailed />" "%body" "" />
+</define-tag>
+
+<define-tag undetailed endtag="required">
+<if "<is:detailed />" "" "%body" />
+</define-tag>
+
 <subject "Shlomi Fish' Resume" />
 
 <br />
@@ -17,7 +25,7 @@ Home Page: http://t2.technion.ac.il/~shlomif/<br />
 <br />
 <br />
 
-<table cellspacing="0" cellpadding="7" border="0" width="650">
+<table cellspacing="0" cellpadding="7" border="0" width="100%">
 
 <tr>
 <td colspan="2">
@@ -60,22 +68,33 @@ Major Subjects: Mathematics, English, Physics and Arabic<br />
 
 <tr>
     <td valign="top">
-        2001-Present
+    2001 - Present
     </td>
     <td>
+<undetailed>
+The Israeli Group of Linux Users Server<br />
+Co-Administrator<br />
+<br />
+Administrating a 100% uptime server carrying FTP, SMTP and numerous
+WWW-services.
+</undetailed>
+<detailed>    
         <p>
         An Administrator for the <a href="http://www.iglu.org.il/">iglu.org.il</a>
         site.
         </p>
 
+
         <p>
         Maintaining several online services supported by the main server of 
         the Israeli Group of Linux Users (IGLU). Experience with Apache, Zope,
-        Perl, rsync, qmail and other programs. Created several online content
-        using these tools.
+        Perl, rsync, qmail and other programs. Created several online pieces
+        of content using these tools.
         </p>
+</detailed>
     </td>
 </tr>
+<detailed>
 <tr>
     <td valign="top">
         1999-Present
@@ -84,15 +103,18 @@ Major Subjects: Mathematics, English, Physics and Arabic<br />
         <p>
         Maintaining a private Linux workstation
         </p>
+
         <p>
         Maintained several home systems and one at the Computer Networks 
-        Laboratory of the EE Department of the Technion. Experience with package
-        maintainance, system configuration, installing software, fixing 
-        glitches, and daily use. Used RedHat Linux (version 5.x, 6.x) and 
-        Mandrake Linux (version 7.1, 7.2, 8.0, 8.1, 8.2 and 9.0).
+        Laboratory of the EE Department of the Technion. Experience with 
+        package maintainance, system configuration, installing software, 
+        fixing glitches, and daily use. Used RedHat Linux (version 5.x, 6.x) 
+        and Mandrake Linux (version 7.x, 8.2 and 9.x).
         </p>
+
     </td>
 </tr>
+</detailed>
 <tr>
 <td valign="top">
 2000
@@ -101,6 +123,11 @@ Major Subjects: Mathematics, English, Physics and Arabic<br />
     <a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell Solver</a> (an independent project)<br />
 Main Programmer<br />
 <br />
+<undetailed>
+A C program that automatically solves games of Freecell and similar variants
+of card solitaire.<br />
+</undetailed>
+<detailed>
 <p>
 Started a C project to automatically solved games of Freecell. Continued in
 adding more features, optimizations, and clean-ups. Experienced with ANSI C
@@ -113,6 +140,7 @@ Internet.
 Freecell Solver is distributed under the public domain, and has been integrated
 into three Freecell implementations so far. 
 </p>
+</detailed>
 </td>
 </tr>
 
@@ -126,12 +154,14 @@ MikMod for Java (an independent project)<br />
 Programmer<br />
 <br />
 Converting a program from ANSI C to Java<br />
+<detailed>
 <br />
 Mod Files are music files whose instruments are given as samples, and are 
 played at different notes and effects to create the melody. The conversion 
 was done by converting to C++, and then several steps of Javaization. The 
 resultant code was working and produced good output, but was not very conformant
 to the Java style.
+</detailed>
 </td>
 </tr>
 
@@ -144,6 +174,7 @@ Smart Link Ltd.<br />
 Programmer and Tester<br />
 <br />
 Testing a software-based modem (Modio), Windows 95 Programming<br />
+<detailed>
 <br />
 <p>
 I began working at Smart-Link as a tester for their software-based modem
@@ -157,6 +188,7 @@ high-level programmer/general jack-of-all-trades.
 I worked with the Windows Drivers, MFC, Perl for Win32, DJGPP, Cygwin, a myriad
 of games and modem-related software, as well as Microsoft IIS.
 </p>
+</detailed>
 </td>
 </tr>
 
@@ -170,13 +202,14 @@ Programmer, WWW Site Maintainer, Limited UNIX Maintainance<br />
 <br />
 HTML composition, CGI programming, TCP/IP client/server programs<br />
 <br />
-
+<detailed>
 <p>
 I worked in Cortext as a web-designer and CGI programmer. I worked with HTML, 
 Apache, Perl, various UNIX flavours (FreeBSD, SunOS 4.1.3, IRIX) and Windows
 95 Workstations. Built several sites there, while still using almost exclusively
 Perl due to my limited knowledge (at that point) of UNIX.
 </p>
+</detailed>
 </td>
 </tr>
 
@@ -191,11 +224,12 @@ Chief Programmer of EIRIS (Elpas Infra-Red Identification System)<br />
 Databases, client/server programs (with NetDDE), English/Hebrew
 MS-Windows GUI<br />
 <br />
+<detailed>
 <p>
 Elpas manufactured a network of sensors that was installed in each room
 of a building (say a hospital), received input from infra-red badges, that made
 it possible to determine where each person or piece of equipment was located. I
-maintained the software that run on a centralized computer, received the raw 
+maintained the software that ran on a centralized computer, received the raw 
 input from the sensors and processed it. My main issue was to replace an SCO 
 UNIX server software with something internal of out own. We inspected working
 with Microsoft Access and ODBC, and eventually realized our own in-memory data
@@ -205,6 +239,7 @@ managing was the most suitable solution due to the real-time nature of the appli
 Specialized in Windows (16-bit) Programming, SQL, ODBC, ANSI C and C++. Worked
 primarily with Borland C++ 4.5 and the Microsoft Developer Network CD.
 </p>
+</detailed>
 </td>
 </tr>
 

@@ -4,9 +4,11 @@ WML_FLAGS += --passoption=2,-X -DROOT~.
 
 include make_helpers/include.mak
 
-T2_DEST_BASE = /var/www/html/shlomi/
+ALL_DEST_BASE = dest
+
+T2_DEST_BASE = $(ALL_DEST_BASE)
 T2_DEST_DIR = t2-homepage
-T2_DEST = $(T2_DEST_BASE)$(T2_DEST_DIR)
+T2_DEST = $(T2_DEST_BASE)/$(T2_DEST_DIR)
 
 
 
@@ -26,9 +28,9 @@ T2_COMMON_DIRS_DEST = $(patsubst common/%,$(T2_DEST)/%,$(COMMON_DIRS))
 
 # vipe macros
 
-VIPE_DEST_BASE = /var/www/html/shlomi/
+VIPE_DEST_BASE = $(ALL_DEST_BASE)
 VIPE_DEST_DIR = vipe-homepage
-VIPE_DEST = $(VIPE_DEST_BASE)$(VIPE_DEST_DIR)
+VIPE_DEST = $(VIPE_DEST_BASE)/$(VIPE_DEST_DIR)
 
 VIPE_WML_FLAGS = $(WML_FLAGS) -DSERVER=vipe
 

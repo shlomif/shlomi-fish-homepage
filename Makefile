@@ -15,7 +15,7 @@ T2_DIRS = $(shell find t2 -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +
 
 T2_DIRS_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_DIRS))
 
-T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' | grep -v '/\.svn')
+T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' | grep -v '/\.svn' | grep -v '~$$')
 
 T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
 

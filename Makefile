@@ -34,6 +34,7 @@ $(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml template.wml t2/.wmlrc
 
 $(T2_DIRS_DEST) :: $(T2_DEST)/% : t2/%
 	mkdir -p $@
+	touch $@
 
 $(T2_IMAGES_DEST) :: $(T2_DEST)/% : t2/%
 	cp -f $< $@

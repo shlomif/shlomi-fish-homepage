@@ -1,8 +1,12 @@
 #include '../template.wml'
 <subject "The gringotts-shlomif Patch" />
 
+<p>
+<b>Last Updated:</b> 14-February-2005.
+</p>
+
 <define-tag patch_fn whitespace="delete">
-gringotts-shlomif-patch-rev2.diff
+gringotts-shlomif-patch-rev3.diff
 </define-tag>
 
 <define-tag link_to_patch endtag="required" whitespace="delete">
@@ -21,8 +25,11 @@ does, so far is:
 <ol>
 <li>
 Allow it to compile against recent versions of the Gtk+ library. (tested 
-against Gtk+ 2.4.9). So far it does that by undeffing GTK_DISABLE_DEPRECATED
-in one of the files.
+against Gtk+ 2.4.9). This is done by porting the API calls to the new ones.
+</li>
+<li>
+Allow it to compile with stricter gcc flags. 
+(<tt>-Wall -Wstrict-prototypes -Werror-implicit-function-declaration</tt>)
 </li>
 <li>
 Add keyboard shortcuts to the menus, so you can press Alt+F+S to save a file,
@@ -43,5 +50,11 @@ Document another minor issue in the <tt>BUGS</tt> file.
 Gringotts is distributed under the GPL, so this patch is GPLed too. Note that
 I disclaim any explicit ownership of the changes, and the original author can
 relicense the patch along with the rest of Gringotts if he sees fit.
+</p>
+
+<h2>Older Versions</h2>
+
+<p>
+<a href="gringotts-shlomif-patch-rev2.diff">Revision 2</a>
 </p>
 

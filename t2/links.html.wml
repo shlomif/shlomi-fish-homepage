@@ -8,7 +8,7 @@
 <h3><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
 
 <p>
-The university where I study in.
+The university where I studied in.
 </p>
 
 <h3><a href="http://www.ee.technion.ac.il/">Department of Electrical Engineering</a></h3>
@@ -20,7 +20,7 @@ My Department.
 <h3><a href="http://comnet.technion.ac.il/">The Computer Networks Laboratory</a></h3>
 
 <p>
-A very cool laboratory where I did my projects and like to hang out.
+A very cool laboratory where I did my projects and liked to hang out.
 </p>
 
 </div>
@@ -33,7 +33,7 @@ A very cool laboratory where I did my projects and like to hang out.
 
 <p>
 The most recent comapny I worked for an extended period. 
-Smart Link develops software-based modems for Windows (and maybe Linux too
+Smart Link developed software-based modems for Windows (and maybe Linux too
 by now).
 </p>
 
@@ -116,6 +116,14 @@ lectures on a myriad of topics there, and enjoy going to listen to the
 other people lecturing.
 </p>
 
+<h3><a href="http://www.cs.tau.ac.il/telux/">Tel Aviv Linux Club</a></h3>
+
+<p>
+The Tel Aviv Linux Club (or Telux for short) is a club in a similar format
+to Haifux. Right now, due to the fact that I'm living in Tel Aviv, I tend
+to attend its lectures and be more active there, instead of in Haifux. 
+</p>
+
 <h3><a href="http://groups.yahoo.com/group/hackers-il/">Hackers-IL</a></h3>
 
 <p>
@@ -141,7 +149,7 @@ find the seminal <a href="http://www.tuxedo.org/~esr/writings/cathedral-bazaar/"
 engineer should read), and other truly enlightening articles.
 </p>
 
-<h3><a href="http://www.JoelOnSoftware.com/">Joel on Software</a></h3>
+<h3><a href="http://www.joelonsoftware.com/">Joel on Software</a></h3>
 
 <p>
 Joel Spolsky is an experienced information technology worker who maintains
@@ -155,7 +163,7 @@ funny and amusing style of writing and look on life.
 
 <p>
 Paul Graham is an experienced programmer in LISP and other languages.
-He is LISP-oriented, but lovers of any language can find a home there.
+His articles are insightful, interesting and thought-provoking.
 </p>
 
 <h3><a href="http://www.dwheeler.com/">David A. Wheeler</a></h3>
@@ -191,9 +199,15 @@ a successful Linux User Group.
 <div class="indent">
 <p>
 <a href="http://www.ida.net/users/housley/">Ken Housley</a><br />
+<!-- Remmed out due to inavailability.
 <a href="http://alexsh.hectic.net/">Alex Shnitman</a><br />
+-->
 <a href="http://members.tripod.com/professor_tom/">Tom Holroyd</a><br />
 <a href="http://home.earthlink.net/~fomalhaut/">Michael Keller</a><br />
+<a href="http://texasdex.com:1234/adexter/">Andrew (Drew) Dexter</a><br />
+<a href="http://loxosceles.org/about_me.shtml">Beth Skwarecki</a><br />
+<a href="http://www.xslf.com/">Shoshannah Forbes</a><br />
+<a href="http://www.goldshmidt.org/">Oleg Goldshmidt</a><br />
 </p>
 
 
@@ -203,7 +217,8 @@ a successful Linux User Group.
 <a href="http://users.actcom.co.il/~choo/">Guy Keren</a><br />
 <a href="http://www.mulix.org/">Muli Ben-Yehuda</a><br />
 <a href="http://vipe.technion.ac.il/~orrd/me/">Orr Dunkelman</a><br />
-<a href="http://nadav.harel.org.il/">Nadav Har'El</a>
+<a href="http://nadav.harel.org.il/">Nadav Har'El</a><br />
+<a href="http://vipe.technion.ac.il/~ladypine/">Orna Agmon</a><br />
 </p>
 
 <h3>Israeli Perl Mongers</h3>
@@ -211,6 +226,7 @@ a successful Linux User Group.
 <p>
 <a href="http://cs.haifa.ac.il/~shlomo/">Shlomo Yona</a><br />
 <a href="http://okaye.esmartweb.com/">Offer Kaye</a><br />
+<a href="http://www.szabgab.com/index.html">Gabor Szabo</a><br />
 </p>
 
 <h3>Weblogs I like to read</h3>
@@ -290,8 +306,41 @@ and better all the time. (feel free to contribute something of your own!).
 
 </div>
 
-<h3>Cool and non-Commercial Software</h3>
+<h2>Software</h2>
 
+<h3><a href="$(ROOT)/open-source/favourite/">Open Source Software</a></h3>
+
+<p>
+Refer to this link, for a page about my favourite open source.
+</p>
+
+<h3>Non-open-source software</h3>
+
+<p>
+Who says all commercial software is bad? Here's some of the 
+non-free-as-in-speech software I got to like
+</p>
+
+<ul>
+<li>
+<a href="http://office.microsoft.com/en-us/FX010858001033.aspx">Microsoft
+Excel</a> - the best Spreadsheet program I've worked with. Excel 95 was nice;
+Excel 97 and especially 2000 were buggy as hell and in general hideous. Excel
+XP was finally a new decent version. I haven't encountered an open-source
+product that's quite up to it, but I'm hopeful something up-to-par with it
+will be developed in the future.
+</li>
+<li>
+<a href="http://www.corel.com/servlet/Satellite?pagename=Corel2/Products/Home&amp;pid=1047022690654">Corel-Draw</a> - 
+an excellent vector graphics program for Windows (with a lesser Linux 
+availability), which is very easy to use and yet very powerful. The only 
+limitation I found in it was that it does not (or at least did not) support 
+Alpha translucency well. (for a program with this capability, my favourite
+is the open-source <a href="http://www.inkscape.org/">Inkscape</a>.)
+</li>
+</ul>
+
+<define-tag removed_software_1>
 <div class="indent">
 
 <p>
@@ -302,8 +351,9 @@ Here's a short list of free software which I found to be very useful:
 <a href="http://www.delorie.com/djgpp">The DJGPP Collection</a> - A collection of many
 GNU utilities for DOS, that support Win95's long filenames. Anything from grep,
 sed and the Bourne shell to a 32 bit C/C++ compiler.<br />
-<a href="http://www.perl.com/">Perl</a> - The world's best scripting
-langauge, IMO. And my favourite language all in all.<br />
+<a href="http://www.perl.com/">Perl</a> - The world's best agile language
+(also referred to as "a scripting langauge"), IMO. And my favourite language 
+all in all.<br />
 <a href="http://www.apache.org/">The Apache HTTP server</a> - a portable, secure
 and versatile web-server. The most commonly used on the Internet.<br />
 <a href="http://www.vim.org/">Vim</a> - a good editor.<br />
@@ -320,7 +370,9 @@ open-source memory debugger for Linux x86.<br />
 </p>
 
 </div>
+</define-tag>
 
+<h3></h3>
 <h3>MOD Files</h3>
 
 <div class="indent">
@@ -348,38 +400,72 @@ archives.<br />
 Resources Index</a><br />
 <a href="http://www.hornet.org/">The Hornet Archive</a> - contains
 many MOD players, composers and utilites for the PC.<br />
-<a href="http://www.mikmod.org/">MikMod</a> - a portable MOD-playing library.
+<a href="http://mikmod.raphnet.net/">MikMod</a> - a portable MOD-playing 
+library.<br />
 </p>
 
 </div>
 
 <h3>Humour</h3>
 
-<div class="indent">
-
+<ul>
+<li>
 <a href="http://friends-cafe.hypermart.net/">The Friends' Cafe</a> - a nice
-site about the T.V show.<br />
+site about the T.V show.
+</li>
+<li>
 <a href="http://www.geocities.com/Hollywood/3142/friends.htm">Complete "Friends" Page</a> - 
-and another one. <br />
+and another one.
+</li>
+<li>
 <a href="http://prime-mover.cc.waikato.ac.nz/Bastard.html">The Bastard Operator from Hell</a> -
-A really funny story, for those who know about UNIX.<br />
+A really funny story, for those who know about UNIX.
+</li>
+<li>
 <a href="http://i-want-a-website.com/about-linux/">Humorix</a> - Linux-related
-humour items.<br />
+humour items.
+</li>
+<li>
+<a href="http://www.divisiontwo.com/">Divisiontwo Magazine</a> - a great
+collection of parodies of the Internet Life. Includes 
+<a href="http://www.divisiontwo.com/articles/mcse2.htm">"Windows vs. Linux on
+the Server and on the Desktop" by Jorge Lopez, MCSE</a> and 
+<a href="http://www.divisiontwo.com/articles/kellysworld.htm">a parody of
+bad web pages</a>.
+</li>
+</ul>
 
 <h4>Comic Strips</h4>
 
-<div class="indent">
-<a href="http://www.garfield.com/">Garfield</a><br />
-<a href="http://www.unitedmedia.com/comics/luann/">Luann</a><br />
-<a href="http://www.ozyandmillie.org/">Ozy and Millie</a><br />
+<ul>
+<li>
+<a href="http://www.garfield.com/">Garfield</a> - a fat Cat with an
+attitude. (and a stupid owner and some friends) Lots of slapstick and
+cheap humour.
+</li>
+<li>
+<a href="http://www.unitedmedia.com/comics/luann/">Luann</a> - a comic
+strip about adolescence. Very funny.
+</li>
+<li>
+<a href="http://www.ozyandmillie.org/">Ozy and Millie</a> - a comic strip
+about two young foxes, along with their fellow company. Very funny
+humour, with a nice plot, and lot of Zen-like discussions.
+</li>
+<li>
 <a href="http://www.userfriendly.org/">User Friendly</a> - a very funny comic 
-strip about an unusual Internet service provider.<br />
+strip about an unusual Internet service provider.
+</li>
+<li>
 <a href="http://www.shanecollinge.com/?section=linux">HelpDex</a> - a funny
-strip about Linux.<br />
-<a href="http://www.angryflower.com/">Bob the Angry Flower</a><br />
-</div>
-
-</div>
+strip about Linux.
+</li>
+<li>
+<a href="http://www.angryflower.com/">Bob the Angry Flower</a> - Jokes
+about Science, Philosophy, Fiction, etc. I don't always understand
+the punchline.
+</li>
+</ul>
 
 <h2>Various Sites of Interest</h2>
 

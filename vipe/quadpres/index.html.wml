@@ -1,14 +1,8 @@
-<html>
-<head>
-<title>QuaD-Pres</title>
-<link rel="StyleSheet" href="../style.css" type="text/css" />
-</head>
-<body>
-
-<h1>QuaD-Pres</h1>
+#include '../template.wml'
+<subject "Quad-Pres" />
 
 <p>
-QuaD-Pres stands for Quick and Dirty Presentations and is a set of perl
+Quad-Pres stands for "Quick and Dirty Presentations" and is a set of perl
 scripts and modules that can generate HTML out of (surprise) HTML, and a
 file containing the logical structure of the lecture. Alternatively,
 <a href="http://thewml.org/">WebMetaLanguage</a> can be used to write the slides
@@ -16,7 +10,7 @@ in style.
 </p>
 
 <p>
-To start using QuaD-Pres, download one of the examples here and modify it.
+To start using Quad-Pres, download one of the examples here and modify it.
 </p>
 
 <p>
@@ -91,5 +85,3 @@ here</a>.
 <a href="http://t2.technion.ac.il/~shlomif/"><img src="../images/bk2hp.gif" alt="Back to my Homepage" style="border:0" /></a>
 </p>
 
-</body>
-</html>

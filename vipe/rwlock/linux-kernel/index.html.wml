@@ -1,11 +1,6 @@
-<html>
-<head>
-<title>FCFS Behaviour for the Linux Kernel fcntl/flock Locks</title>
-</head>
+#include '../template.wml'
 
-<body style="background-color : white">
-
-<h1>Linux Kernel FCFS fcntl/flock Locks</h1>
+<subject "Linux Kernel FCFS fcntl/flock Locks" />
 
 <h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>
 
@@ -24,5 +19,3 @@ test program</a> can demonstrate the two behaviours (try running it as
 <tt>test_flock 20 2</tt>).
 </p>
 
-</body>
-</html>

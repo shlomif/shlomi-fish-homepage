@@ -1,11 +1,5 @@
-<html>
-<head>
-<title>A First-Come First-Served Readers/Writers Lock</title>
-</head>
-
-<body bgcolor="white">
-
-<h1>A First-Come First-Served Readers/Writers Lock</h1>
+#include '../template.wml'
+<subject "A First-Come First-Served Readers/Writers Lock" />
 
 <h2><a href="./linux-kernel/">New! FCFS flock for the Linux Kernel</a></h2>
 
@@ -82,8 +76,8 @@ variables. The new scheme for it (which is a bit more complex) can be found
 <a href="Scheme_RLE.txt">here</a>.
 </p>
 
-<br>
-<br>
+<br />
+<br />
 
 <h2>Older Versions</h2>
 
@@ -91,8 +85,3 @@ variables. The new scheme for it (which is a bit more complex) can be found
 <a href="pthread_rwlock_fcfs-0.2.0.tar.gz">Version 0.2.0</a>
 </p>
 
-
-<a href="http://t2.technion.ac.il/~shlomif/"><img src="../images/bk2hp.gif" alt="Back to my Homepage" border=0></a>
-
-</body>
-</html>

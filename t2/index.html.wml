@@ -24,6 +24,22 @@ information</a>.
 
 <if "<software_patents />" "<software_patents_notice />" "" />
 
+
+<h2>About this Site</h2>
+
+<p>
+This is the personal site of <a href="personal.html">Shlomi Fish</a>. I am
+an Israeli <a href="./open-source/">software developer</a>, 
+<a href="./humour/">writer</a>, <a href="./philosophy/">essayist</a>,
+and occasional <a href="<vipe:url "lecture/" />">lecturer</a>.
+</p>
+
+<p>
+You can explore the site using the navigation bar to the right. Alternatively,
+you can traverse it page by page using the arrows at the top, or the 
+Mozilla/Firefox site navigation bar.
+</p>
+
 <h2><a href="./me/">Personal Info</a></h2>
 
 <p class="indent">
@@ -78,6 +94,39 @@ Just to show my support...
 </div>
 
 <h2>News</h2>
+
+<h3 class="newsitem">23-Sep-2004</h3>
+
+<p class="newsitem">
+The site has seen a major revamp in the last couple of days. Here is a list
+of the most important changes and news:
+</p>
+
+<ol class="newsitem">
+<li>
+I added the <a href="http://swpat.ffii.org/">"Stop Software Patents!"</a> nag 
+image to all my pages and a top frame to the front page.
+</li>
+<li>
+There's a new code for the navigation menu. The old code was an unholy mess,
+and the new code is a pure Perl one, which makes the nav-menu much easier
+to maintain.
+</li>
+<li>
+Thanks to the new navigation menu code, there are now Mozilla/Firefox 
+navigation links, that allow traversing the site page by page. For those who
+are unfortunate enough not to use these browsers, some rudimentary arrows were
+added above the navigation menu.
+</li>
+<li>
+I now have an Uber-kitchy leading path of the page sections and sub-sections at 
+the top.
+</li>
+<li>
+I'm now <a href="./work/private-lessons/">giving private lessons</a> in
+high-school subjects and computer-related topics.
+</li>
+</ol>
 
 <h3 class="newsitem">10-Aug-2004</h3>
 

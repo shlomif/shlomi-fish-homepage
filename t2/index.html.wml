@@ -1,14 +1,11 @@
 #include '../template.wml'
 <subject "Shlomi Fish' Homepage" />
 
-<div class="center">
-<table border="1" width="80%">
+<table class="center" border="1" width="80%" summary="Only one cell containing an ad for an upcoming Israeli Perl conference">
 <tr>
 <td>
 <div class="center">
-<p>
-<a href="http://www.perl.org.il/YAPC/2003/" title="Yet Another Perl Conference in Haifa"><img src="./images/yapsi-transparent.png" alt="YAPC::Israel::2003" class="highlight" /></a>
-</p>
+<a href="http://www.perl.org.il/YAPC/2003/" title="Yet Another Perl Conference in Haifa"><img src="./images/yapsi-transparent.png" alt="YAPC::Israel::2003" class="highlight" style="margin-top : 1em ; vertical-align : middle ; border : 0"/></a><br />
 <p>
 <a href="http://www.perl.org.il/YAPC/2003/">YAPC::Israel::2003</a> - be there or be square!
 </p>
@@ -16,7 +13,6 @@
 </td>
 </tr>
 </table>
-</div>
 
 <h2><a href="./me/">Personal Info</a></h2>
 

@@ -4,10 +4,11 @@
 ; the path of the bugs in the bugs following each other problem, in case the
 ; bugs are not entirely infinitesimal.
 ;
-; Copyright (C) 1999, 2004 Shlomi Fish
+; Copyright (C) 1999 Shlomi Fish
 ;
 ; This file can be freely used, modified and distributed under the terms of 
 ; the MIT X11 license.
+;
 ;
 ; INSTRUCTIONS:
 ; Put this file in your ~/.gimp/scripts directory. Run the gimp and
@@ -37,11 +38,11 @@
 )
 
 (define (regular-brush)
-  (gimp-brushes-set-brush "Circle (01)")
+  (gimp-context-set-brush "Circle (01)")
 )
 
 (define (path-brush)
-  (gimp-brushes-set-brush "Circle (03)")
+  (gimp-context-set-brush "Circle (03)")
 )
 
 (define (my-path-pencil drawable coords)
@@ -53,12 +54,12 @@
 (define (script-fu-shlomif1-bugs width height bMarkPath ratio)
     (let* (
          (img (car (gimp-image-new (+ width 20) (+ height 20) RGB)))
-         (bg-layer (car (gimp-layer-new img (+ width 20) (+ height 20) RGB_IMAGE "Background" 100 NORMAL)))
+         (bg-layer (car (gimp-layer-new img (+ width 20) (+ height 20) RGB-IMAGE "Background" 100 NORMAL)))
          (coords (list 10 10 (+ 10 width) 10 (+ 10 width) (+ 10 height) 10 (+ 10 height)))
          (new-coords (make-list 8 0))
-         (old-bg (car (gimp-palette-get-background)))
+         (old-bg (car (gimp-context-get-background)))
          (a 0)
-         (old-brush (car (gimp-brushes-get-brush)))
+         (old-brush (car (gimp-context-get-brush)))
          (squares '())
          (path-x 10)
          (path-y 10)
@@ -66,10 +67,10 @@
          
          (gimp-image-add-layer img bg-layer 1)
      
-         (gimp-palette-set-background '(255 255 255))
+         (gimp-context-set-background '(255 255 255))
          ;(gimp-edit-fill img bg-layer)
          (gimp-edit-fill bg-layer BG-IMAGE-FILL)
-         (gimp-palette-set-background old-bg)
+         (gimp-context-set-background old-bg)
          
         
          ; Set the ratio to a value between 0 and 1
@@ -119,7 +120,7 @@
              (set! coords new-coords)
          )
 
-         (gimp-brushes-set-brush old-brush)
+         (gimp-context-set-brush old-brush)
          
          (gimp-display-new img)
     )

@@ -108,7 +108,7 @@ foreach my $key (@keys)
     <ifeq "$(SERVER)" "<get-var host />"
         "$(ROOT)/<get-var url />"
         <ifeq "<get-var host />" "t2"
-            "http://shlomif.il.eu.org/<get-var url />"
+            "http://www.shlomifish.org/<get-var url />"
             "http://vipe.technion.ac.il/~shlomif/<get-var url />"
             />
     />

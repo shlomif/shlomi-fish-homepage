@@ -4,7 +4,7 @@ my $hosts =
 {
     't2' => 
     {
-        'base_url' => "http://shlomif.il.eu.org/",
+        'base_url' => "http://www.shlomifish.org/",
     },
     'vipe' =>
     {

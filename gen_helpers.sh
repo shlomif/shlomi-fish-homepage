@@ -11,7 +11,7 @@ newline()
 for host in t2 vipe ; do
     upper_host=`echo -n $host | tr a-z A-Z`
     
-    echo -n "${upper_host}_DOCS = " ; ./find-wmls-$host.sh ; echo
+    echo -n "${upper_host}_DOCS = " ; ./find-wmls.sh "$host" ; echo
     newline
     echo "${upper_host}_DIRS = " $(find $host -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
     newline

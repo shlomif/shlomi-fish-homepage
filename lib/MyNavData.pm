@@ -104,6 +104,19 @@ my $tree_contents =
             'value' => "Computer Art",
             'url' => "art/",
             'title' => "Computer art I created while explaining how.",
+            'subs' =>
+            [
+                {
+                    'value' => "Back to my Homepage",
+                    'url' => "art/bk2hp/",
+                    'title' => "A Back to my Homepage logo not unlike the one from the movie &quot;Back to the Future&quot;",
+                },
+                {
+                    'value' => "Linux Banner",
+                    'url' => "art/linux_banner/",
+                    'title' => "Linux - Because Software Problems should not Cost Money",
+                },
+            ],
         },
         {
             'value' => "Software",
@@ -140,6 +153,11 @@ my $tree_contents =
                     'value' => "Interviews",
                     'title' => "Interviews with Open-Source People",
                     'url' => "open-source/interviews/",
+                },
+                {
+                    'value' => "Contributions",
+                    'title' => "Contributions to Other Projects, that I did not Start",
+                    'url' => "open-source/contributions/",
                 },
                 {
                     'value' => "Portability Libraries",
@@ -200,6 +218,11 @@ my $tree_contents =
             'title' => "Various Essays and Articles about Technology and Philosophy in General",
             'subs' =>
             [
+                {
+                    'value' => "Index to Essays",
+                    'url' => "philosophy/Index/",
+                    'title' => "Index to Essays and Articles I wrote.",
+                },
                 {
                     'value' => "What is Open Source?",
                     'url' => "philosophy/foss-other-beasts/",

@@ -1,0 +1,109 @@
+#include '../template.wml'
+
+<subject "Contributions Made to external Open-Source Projects" />
+
+<p>
+<b>Last Updated:</b> 4-October-2004.
+</p>
+
+<h2><a href="http://www.gimp.org/">GIMP - The GNU Image 
+Manipulation Program</a></h2>
+
+<p>
+I wrote the so-called gradient-fu patch, which adds Procedural Database (or
+PDB) handlers to manipulate gradients. This patch was written and re-written
+for several versions of the GIMP, and was finally integrated in the 2.1.x
+branch (which will lead to GIMP 2.2.0), with some help by Michael Natterer.
+</p>
+
+<p>
+Afterwards, I added a rudimentary PDB entry to gimpressionist. Seeing its
+code could use a lot of refactoring, I started a heavy refactoring of the 
+gimpressionist code, and am now its maintainer. This was followed by a small
+amount of bug squashing and cleanups.
+</p>
+
+<h2><a href="http://subversion.tigris.org/">Subversion - A Compelling Version 
+Control System</a></h2>
+
+<p>
+I started out by bug-squashing some bugs I found in the 
+<a href="http://subversion.tigris.org/project_issues.html">Issue Tracker</a>.
+The largest contribution I did was adding a <tt>--config-dir</tt> directive
+to the Subversion clients, to specify a different directory where the 
+configuration files reside. The original motive for this, was to fix the
+test suite when ran using a configuration that breaks it.
+</p>
+
+<p>
+After some break, I 
+<a href="http://subversion.tigris.org/issues/show_bug.cgi?id=1846">worked 
+on the get_locations() patch</a> which enabled tracing the past locations
+of nodes in the Subversion repository. (which is useful for performing some
+operations). This patch took a lot of research, a lot work, and I received a 
+lot of help from different people. Eventually, a reworked version of the
+Patch, was applied by Peter N. Lundblad.
+</p>
+
+<h2><a href="http://www.perl.org/">Perl 5 Core</a></h2>
+
+<p>
+I contributed some patches to 
+<a href="http://www.perldoc.com/perl5.8.4/pod.html">the perl 5 core 
+documentation</a> to make it clearer and easier to understand.
+</p>
+
+<h2><a href="http://syscalltrack.sourceforge.net/">Syscalltrack - A Framework
+for Tracking System Calls</a></h2>
+
+<p>
+I contributed many cleanups and refactorings to a Perl 5 script that generated
+code out of system calls definitions. As an appreciation of my work, I and
+all the other contributors got a T-shirt with the Syscalltrack logo.
+</p>
+
+<p>
+Later on, I did some work on the project's web-site.
+</p>
+
+<h2><a href="http://search.cpan.org/dist/WWW-Form/">WWW::Form - a Perl Module 
+for Web Forms Managament</a></h2>
+
+<p>
+I encountered WWW::Form because I looked for an easy way to handle Web forms 
+in Perl. After experimenting with it a bit I discovered that there were more
+stuff there that I needed (and added it to my copy), so I contacted the author,
+<a href="http://www.benschmaus.com/">Benjamin Schmaus</a> and he was quite
+cooperative. Eventually, I also discovered some 
+<a href="http://www.securiteam.com/unixfocus/5IP0L2KBPM.html">Cross Site 
+Scripting</a> bugs there, which were also fixed. Other than that, the module
+was extended, improved, and a rudimentary test suite was written for it.
+</p>
+
+<p>
+Ben and I have since been chatting using Instant Messaging.
+</p>
+
+<h2><a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell 
+Pro</a></h2>
+
+<p>
+Freecell Pro is a feature-ful implementation of the solitaire card game 
+<a href="http://en.wikipedia.org/wiki/Freecell">Freecell</a> for Win32. Being
+the author of 
+<a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell 
+Solver</a>, I wanted to integrate it into Freecell Pro. Thus, I reached
+one of the Freecell Pro core developers and current maintainer, 
+<a href="$(ROOT)/open-source/interviews/adrian-ettlinger.html">Adrian 
+Ettlinger</a>. Adrian was eager to incorporate my solver as well, and we
+cooperated on incoroporating it. 
+</p>
+
+<p>
+The two programs had some incompatibility problems, which had to be 
+resolved by Adrian and I. Eventually, however, the integration was performed
+successfully. Adrian and I became friends, and we have been talking by
+E-mail since then.
+</p>
+
+

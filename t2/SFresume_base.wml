@@ -1,11 +1,11 @@
 #include '../template.wml'
 
 <define-tag detailed endtag="required">
-<if "<is:detailed />" "%body" "" />
+<if "<get-var is:detailed />" "%body" "" />
 </define-tag>
 
 <define-tag undetailed endtag="required">
-<if "<is:detailed />" "" "%body" />
+<if "<get-var is:detailed />" "" "%body" />
 </define-tag>
 
 <subject "Shlomi Fish' Resume" />
@@ -340,7 +340,7 @@ SQL, Delphi, ODBC, MS-Access, miniSQL/MySQL, PostgreSQL
 <b>Internet Related:</b>
 </td>
 <td>
-HTML, CGI programming, JavaScript, TCP/IP Sockets, WebMetaLanguage
+HTML, CGI programming, JavaScript, TCP/IP Sockets, Web Meta Language
 </td>
 </tr>
 

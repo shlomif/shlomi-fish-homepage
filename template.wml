@@ -116,17 +116,22 @@ while (my ($key, $url) = each(%$nav_links))
 <define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
 
 <define-tag validhtml>
-<br /><br /><br /><br />
+<p>
+<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img 
+   style="margin-top:1em; border:0;" alt="Get Firefox!" 
+   title="Get Firefox! A safer, faster, better web-browser." 
+   src="$(ROOT)/images/get-firefox.gif" /></a>
+</p>
 <p>
 <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0!"><img 
-    class="highlight" style="border:0" 
+    class="highlight" style="border:0;" 
     src="$(ROOT)/images/valid-xhtml10.png" 
     alt="Valid XHTML 1.0!" height="31" width="88" 
     /></a>
 </p>
 <p>
  <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"><img 
-    class="highlight" style="border:0;width:88px;height:31px"
+    class="highlight" style="border:0;"
     src="$(ROOT)/images/valid-css.png" 
     alt="Valid CSS!" /></a>
 </p>

@@ -1,9 +1,6 @@
-<html>
-<head>
-<title>Shlomi Fish' Resume</title>
-</head>
-<body style="background-color : white">
-<center><h1>Resume</h1></center>
+#include '../template.wml'
+
+<subject "Shlomi Fish' Resume" />
 
 <br />
 <br />
@@ -24,7 +21,7 @@ Home Page: http://t2.technion.ac.il/~shlomif/<br />
 
 <tr>
 <td colspan="2">
-<b><u>Education</u></b>
+<h2>Education</h2>
 </td>
 </tr>
 
@@ -51,13 +48,13 @@ Major Subjects: Mathematics, English, Physics and Arabic<br />
 
 <tr>
 <td colspan="2">
-<b><u>Experience</u></b>
+<h2>Experience</h2>
 </td>
 </tr>
 
 <tr>
 <td colspan="2">
-<u>Programming</u>
+<h3>Programming</h3>
 </td>
 </tr>
 
@@ -95,8 +92,7 @@ Major Subjects: Mathematics, English, Physics and Arabic<br />
         Mandrake Linux (version 7.1, 7.2, 8.0, 8.1, 8.2 and 9.0).
         </p>
     </td>
-
-
+</tr>
 <tr>
 <td valign="top">
 2000
@@ -116,6 +112,7 @@ Internet.
 <p>
 Freecell Solver is distributed under the public domain, and has been integrated
 into three Freecell implementations so far. 
+</p>
 </td>
 </tr>
 
@@ -159,6 +156,7 @@ high-level programmer/general jack-of-all-trades.
 <p>
 I worked with the Windows Drivers, MFC, Perl for Win32, DJGPP, Cygwin, a myriad
 of games and modem-related software, as well as Microsoft IIS.
+</p>
 </td>
 </tr>
 
@@ -212,7 +210,7 @@ primarily with Borland C++ 4.5 and the Microsoft Developer Network CD.
 
 <tr>
 <td colspan="2">
-<u>Mathematics</u>
+<h3>Mathematics</h3>
 </td>
 </tr>
 
@@ -228,7 +226,7 @@ Along with: Kobi Karlibakh, Or Tsok and Amit Zinger<br />
 
 <tr>
 <td colspan="2">
-<u>Creative Writing</u>
+<h3>Creative Writing</h3>
 </td>
 </tr>
 
@@ -257,7 +255,7 @@ A satire about the situation in the Israeli-Lebanese border<br />
 
 <tr>
 <td colspan="2">
-<b><u>References</u></b>
+<h2>References</h2>
 </td>
 </tr>
 
@@ -269,7 +267,7 @@ Will be supplied upon request
 
 <tr>
 <td colspan="2">
-<b><u>Fields of Expertise</u></b>
+<h2>Fields of Expertise</h2>
 </td>
 </tr>
 
@@ -307,7 +305,7 @@ SQL, Delphi, ODBC, MS-Access, miniSQL/MySQL, PostgreSQL
 <b>Internet Related:</b>
 </td>
 <td valign="top">
-HTML, CGI programming, JavaScript, TCP/IP Sockets
+HTML, CGI programming, JavaScript, TCP/IP Sockets, WebMetaLanguage
 </td>
 </tr>
 
@@ -331,7 +329,7 @@ Autoconf/Automake/Libtool, CVS, Subversion, BitKeeper
 
 <tr>
 <td colspan="2">
-<b><u>Personal</b></u>
+<h2>Personal</h2>
 </td>
 </tr>
 
@@ -343,4 +341,3 @@ Single<br />
 </tr>
 
 </table>
-</body>

@@ -11,7 +11,7 @@
 <link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
 </head>
 <body>
-<define-tag rellink>
+<define-tag rellink whitespace="delete">
 <preserve url />
 <preserve host />
 <set-var %attributes />
@@ -24,8 +24,7 @@
     />
 />
 <restore host />
-<restore url />
-</define-tag>
+<restore url /></define-tag>
 
 <define-tag navbarlink>
 <preserve host />
@@ -84,6 +83,16 @@
 </ul>
 </define-tag>
 
+<define-tag is:aboutme><match "%0" "^((SFresume(_detailed)?\.html)|(me/(index\.html)?)|(personal\.html))$" action="report" /></define-tag>
+
+<define-tag aboutme:navbar>
+<ul class="navbarnested">
+<li><navbarlink "personal.html" "Bio" /></li>
+<li><navbarlink "SFresume.html" "C.V." /></li>
+<li><navbarlink "SFresume_detailed.html" "Detailed C.V." /></li>
+</ul>
+</define-tag>
+
 
 
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
@@ -91,7 +100,12 @@
 <td valign="top" class="navbar" style="width:20%">
 <ul class="navbarmain">
 <li><navbarlink "" "Home" /></li>
-<li><navbarlink "me/" "About Myself" /></li>
+<li><navbarlink "me/" "About Myself" />
+<if <is:aboutme "$(FILENAME)" />
+    <aboutme:navbar />
+    ""
+    />    
+</li>
 <li><navbarlink "humour/" "Humour" />
 <if <match "$(FILENAME)" "humour/*" action="report" /> 
     <humour:navbar /> 

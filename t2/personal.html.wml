@@ -2,15 +2,8 @@
 
 <subject "About Myself" />
 
-<table>
-<tr>
-<td valign="top">
-<img src="images/shlomif1.jpg" alt="Picture of Shlomi Fish" />
-</td>
-<td>
-&nbsp;
-</td>
-<td valign="top">
+<img src="$(ROOT)/images/shlomif1.jpg" alt="Picture of Shlomi Fish" 
+ style="float : right ; padding-left : 2em ; padding-bottom : 2em" />
 <p>
 I was born on May 5, 1977 in Israel. When I was about 1 year old, my
 parents moved to the United States for my Father's Post-Doctorate. I stayed
@@ -94,10 +87,4 @@ I hope you enjoy my web-site!
 <p class="indent">
 <i>Shlomi Fish</i>
 </p>
-
-
-</td>
-</tr>
-
-</table>
 

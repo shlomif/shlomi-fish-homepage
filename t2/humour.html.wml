@@ -2,9 +2,16 @@
 
 <subject "My Humour Collection" />
 
-<HR>
-<BR>
-<H3><I>A Jewish Deduction</I></H3>
+<define-tag joke endtag="required">
+%body
+<hr class="joke"/>
+</define-tag>
+
+<joke>
+
+<h3><i>A Jewish Deduction</i></h3>
+
+<p>
 The Bible dictates that "Thou shalt not seethe [=cook] a kid [= young goat] 
 in his mother's milk." To avoid any possibility of breaking that regulation, 
 the Jewish tradition ruled that it also applies to female goats, 
@@ -13,70 +20,86 @@ goats. It is also forbidden to eat the meat with fresh milk, and it
 applies to beef and mutten as well (including mixing the milk and meat 
 of two different beasts). Finally, chicken, which are incapable of 
 milk production, may not be eaten along with any mammal's milk either. 
-<BR><BR>
+</p>
+
+<p>
 We are fortunate that most mathematicians were not Jewish. Otherwise, 
 it would have been forbidden to divide by all numbers between -1 and 1.
+</p>
 
-<BR><BR><BR>
-<UL><I>This bit used to appear on my signature for a short while, but people
-got mad because it was too long, so I replaced it.</I></UL>
+<p class="indent">
+<i>This bit used to appear on my signature for a short while, but people
+got mad because it was too long, so I replaced it.</i>
+</p>
+</joke>
 
-<HR>
-<BR>
+<joke>
 I used to be arrogant. Now I'm simply perfect.
 
-<UL><UL><I>Ronen Borshack (my cousin)</I></UL></UL>
+<p class="indent">
+<i>Ronen Borshack (my cousin)</i>
+</p>
+</joke>
 
-<HR>
-<BR>
+<joke>
+<p>
 If the ancient Greeks had invented UNIX, Murphy's Law would have been known
-as Aristotle's Law.<BR>
+as Aristotle's Law.<br />
 Had they invented MS-Windows, Murphy's Law would have been known as the
-Law of Socrates.<BR>
+Law of Socrates.<br />
+</p>
+</joke>
 
-<BR><HR>
 
-<BR>
-Microsoft's slogan used to be "Microsoft - making it all make sense." <BR>
-Today it should be: "Microsoft - making everything make sense. <B>Ours</B>."<BR>
-<BR>
-And another twist:<BR>
+<joke>
+<p>
+Microsoft's slogan used to be "Microsoft - making it all make sense." <br />
+Today it should be: "Microsoft - making everything make sense. <b>Ours</b>."<br />
+</p>
+
+<p>
+And another twist:<br />
 "Microsoft - friendliness is our outstanding quality. No matter how much we
 mess up your computer work, we will always consider you our friend."
+</p>
+</joke>
 
-<BR><BR>
-<HR>
-<BR>
+<joke>
+<p>
 The American Lottery - all you need is a dollar and a dream. We will take the
 dollar, but you can keep the dream.
+</p>
 
-<UL><I>(One of my previous E-mail signatures)</I></UL>
+<p class="indent">
+<i>(One of my previous E-mail signatures)</i>
+</p>
+</joke>
 
-<HR>
-<BR>
-I don't believe in fairies. Oops! A fairy died.<BR>
+<joke>
+I don't believe in fairies. Oops! A fairy died.<br />
 I don't believe in fairies. Oops! Another fairy died.
 
-<UL><I>I don't really know who said it, so it's possible that I invented
-it.</I></UL>
+<p class="indent"><i>I don't really know who said it, so it's possible that I invented
+it.</i></p>
+</joke>
 
-<HR>
-<BR>
-<PRE>
-:)-<
+<joke>
+<pre>
+:)-&lt;
  +--
-</PRE>
+</pre>
 
-<UL><I>Moses the Smiley</I></UL>
-<HR>
-<BR>
+<p class="indent"><i>Moses the Smiley</i></p>
+</joke>
 
+<joke>
+<p>
 The prefix "God Said" has the extraordinary logical property of converting
 any statement that follows it into a true one.
+</p>
+</joke>
 
-<hr>
-<br>
-
+<joke>
 <h3>Deltas to "Shit Happens" according to Religions:</h3>
 
 <p>
@@ -90,72 +113,62 @@ Or alternatively:
 God is all the shit, all the non-shit and all the intermediate demi-shits in 
 between.
 </p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 Let's interpret the past according to the present and not the present
 according to the past.
 </p>
 
-<ul>
+<p class="indent">
 <i>(From an E-mail discussion with Ben Pfaff)</i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 "Computer Sciense is no more about computers than astronomy is about
 telescopes"
 </p>
 
-<ul>
+<p class="indent">
 <i>Edsgar W. Dijkstra</i>
-</ul>
+</p>
 
 <p>
-"Programming Science is no more about computers than astronomy is about 
+"C programming is no more about computers than astronomy is about 
 stars."
 </p>
 
-<ul>
+<p class="indent">
 <i>Shlomi Fish</i>
-</ul>
+</p>
 
-<br>
-<br>
-<hr>
-<br>
+</joke>
 
+<joke>
+<p>
 A more experienced programmer does not make less bugs. He just realizes 
 what went wrong more quickly.
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
+<p>
 I promised, I forgot, I broke my promise - just shoot me and get on 
 with it!
+</p>
 
-<ul>
+<p class="indent">
 <i>
 Potentially some famous last words, I also came up with this bit, and I'm
 not sure if I heard it before.
 </i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 The first phrase that need to be taught when teaching a new language is how to 
 say "Do you speak English?".
@@ -165,57 +178,50 @@ say "Do you speak English?".
 The first thing that needs to be taught when teaching a new computer tool 
 is how to exit it.
 </p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
-If:<br>
-1. A is A.<br>
-2. A is not not-A.<br>
-does it also imply that:<br>
-1. B is B.<br>
-2. B is not not-B.<br>
+If:<br />
+1. A is A.<br />
+2. A is not not-A.<br />
+does it also imply that:<br />
+1. B is B.<br />
+2. B is not not-B.<br />
 </p>
 
-<ul>
+<p class="indent">
 <i>If you don't understand it, either forget it or consult the following
 threads: 
-<a href="http://groups.google.com/groups?hl=en&threadm=deca99a9.0110250144.654613e9%40posting.google.com&prev=/groups%3Fnum%3D25%26hl%3Den%26group%3Dhumanities.philosophy.objectivism%26start%3D25%26group%3Dhumanities.philosophy.objectivism">
+<a href="http://groups.google.com/groups?hl=en&amp;threadm=deca99a9.0110250144.654613e9%40posting.google.com&amp;prev=/groups%3Fnum%3D25%26hl%3Den%26group%3Dhumanities.philosophy.objectivism%26start%3D25%26group%3Dhumanities.philosophy.objectivism">
 Usenet</a>, 
 <a href="http://www.mail-archive.com/lin-club@vipe.technion.ac.il/msg00750.html">
 Haifa Linux Club
 </a></i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 I know I'm blond, but I have to colour my hair brown, so people would
 not think I'm stupid. Because, like the title of the book says: "You've only
 got Three Seconds".
+</p>
 
+<p>
 Actaully, since Dad has two books like that, you've only got six seconds.
 </p>
 
-<ul>
-<i>Noa Fish (my sister)</i>
-</ul>
+<p class="indent">
+<i>Noa Fish (my sister, whose hair is naturally brown)</i>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <h3>Re-inventing the Wheel</h3>
 
 <p>
-He who re-invents the wheel, will have a much better understanding how a 
+He who re-invents the wheel, will understand much better how a 
 wheel works.
 </p>
 
@@ -235,79 +241,74 @@ He who re-invents the wheel, may actually invent a much better wheel.
 He who re-invents the wheel will likely design a square wheel and spend
 a year trying to figure out why it doesn't work properly.
 </p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 IMO, C++ supports Object-Oriented Programming roughly as much as COBOL supports
 Functional Programming.
 </p>
 
-<ul>
+<p class="indent">
 <i>You have to be a relatively experienced hacker to get this joke. So don't 
 worry if you don't understand it.</i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 Sometimes you don't need to be familiar with a better alternative to know
 that something sucks. Take Microsoft Word for example.
 </p>
 
-<ul>
+<p class="indent">
 <i>Eran Keidar (my friend)</i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
-<br />
-<br />
-<hr />
-<br />
+<joke>
 
 <p>
-I hope that if it had not been clear before, it is not less clear now.
+The difference between a good student and a bad student is that a bad student
+forgets the material five minutes before the test, while a good student five
+minutes afterwards.
 </p>
 
-<ul>
+<p class="indent">
+<i>Hugo Krawczyk</i>
+</p>
+
+</joke>
+
+<joke>
+<p>
+I hope that if it was not clear before, it is not less clear now.
+</p>
+
+<p class="indent">
 <i>Dov Levin</i>
-</ul>
+</p>
+</joke>
 
-<br>
-<br>
-<hr>
-<br>
-
+<joke>
 <p>
 The first law of Thermodynamics: A system with a constant energy, volume
 and pressure behaves in any way it wants.
 </p>
 
-<ul>
+<p class="indent">
 <i>Falk Fish</i> (my father)
-</ul>
+</p>
+</joke>
 
-<H3><A HREF="wysiwyt.html">IRPWUG announces project "What you see is what you think"</A></H3>
+<joke>
+<h3><a href="wysiwyt.html">IRPWUG announces project "What you see is what you think"</a></h3>
 
+<p>
 My attempt at one of those computer industry related "news-flashes", that
 are hanging around the net. Describes a project by the IRPWUG organization
 that aims at making Microsoft Windows 95 reflect the way its users feel
-about it...<BR>
+about it...</p>
+</joke>
 
-
-
-<BR><BR>
-<HR>
-Designed by Shlomi Fish, <A HREF="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</A><BR>
-<BR>
 

@@ -1,0 +1,19 @@
+#include '../template.wml'
+<subject "This Site's Source Code" />
+
+<p>
+This site source code is maintained inside <a href="http://stalker.iguide.co.il:8080/svn/shlomif-homepage/">a Subversion repository</a>. To check out the
+latest version install the 
+<a href="http://subversion.tigris.org/">Subversion</a> client
+and issue the following command:
+</p>
+
+<p>
+<tt>svn checkout http://stalker.iguide.co.il:8080/svn/shlomif-homepage/</tt>
+</p>
+
+<p>
+Afterwards, cd to <tt>shlomif-homepage/homepage/trunk</tt> and invoke the
+command <tt>bash gen_helpers.sh</tt>. To build the site you'll need GNU make,
+and <a href="http://thewml.org/">Web Meta Language</a>.
+</p>

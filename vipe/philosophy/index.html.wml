@@ -1,16 +1,12 @@
-<html>
-<head>
-<title>Shlomi Fish' Philosophical Writings</title>
-</head>
+#include '../template.wml'
 
-<body bgcolor="white">
-
-<h1>My Philosophical Writings</h1>
+<subject "Shlomi Fish' Philosophical Writings" />
 
 <h2><a href="./ideas/">Random (Practical) Ideas I have</a></h2>
 
 <h2>Resources</h2>
 
+<div class="indent">
 <h3><a href="http://groups.yahoo.com/group/hackers-il/">The Hackers-IL
 Archives</a></h3>
 
@@ -33,15 +29,16 @@ Another group that I'm a member of and regularily posts stuff there.
 I also post there occasionally.
 </p>
 
+</div>
+
 <h2>Articles</h2>
 
+<div class="indent">
 <h3>
 <a href="./open-letter/">Open Letter to the Israeli Prime Minister
 (deprecated but still pertinent</a>
 </h3>
 
-<h3><a href="./solving">Solving</a></h3>
+<h3><a href="./solving/">Solving</a></h3>
+</div>
 
-
-</body>
-</html>

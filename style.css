@@ -1,4 +1,4 @@
-a:hover { background-color : LightGreen }
+a:hover, img.highlight:hover { background-color : LightGreen }
 td.navbar { background-color: #ddf747;  width : 20% }
 p.desc { margin-left : 3em }
 ul.navbarmain { padding-left : 1em }
@@ -8,3 +8,10 @@ p.newsitem { margin-left : 6em }
 div.indent { margin-left : 3em }
 p.indent { margin-left : 3em  }
 div.rightalign { text-align : right }
+/*
+    Make sure the links inside the navigation bar are highlited
+    with a different colour. That's CSS 2.
+    http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
+*/
+td.navbar a:hover { background-color : orange }
+

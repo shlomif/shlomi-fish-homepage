@@ -1,17 +1,19 @@
-<HTML>
-<TITLE>Math-Ventures: Toggling Squares is not that Trivial...</TITLE>
+#include '../template.wml'
 
-<BODY BGCOLOR="#FFFFFF">
-
-<CENTER><H2>Toggling Squares is not that Trivial...</H2></CENTER>
-
-Well, this page is not ready yet, and will take some time to be written.<P>
-
-For the time being, the Java game, I'm referring to can be found here:
-<A HREF="http://www.ida.net/users/housley/atag.htm">http://www.ida.net/users/housley/atag.htm</A><P>
+<subject "Toggling Squares is not that Trivial..." />
 
 <p>
-I also write an implementation of it in JavaScript. It can be found here:
+Well, this page is not ready yet, and will take some time to be written.
+</p>
+
+<p>
+For the time being, the Java game, I'm referring to can be found here:
+<a href="http://www.ida.net/users/housley/atag.htm">http://www.ida.net/users/housley/atag.htm</a>
+</p>
+
+<p>
+I have also written an implementation of it in JavaScript. It can be found 
+here:
 </p>
 
 <p>
@@ -20,24 +22,21 @@ http://www.iglu.org.il/shlomif/toggle_squares/
 </a>
 </p>
 
+<p>
 You should experience with it, and try to figure out a methodical way to
-solve it. Afterwards, you can read <A HREF="../toggle.html">this report</A>
+solve it. Afterwards, you can read <a href="../toggle.html">this report</a>
 which I prepared for Ken Housley, who programmed the game applet. The report
 describes an algorithm which we figured out to solve the game, and proves
-why this algorithm is working.<P>
+why this algorithm is working.
+</p>
 
-I frequently used many Linear Algebra terms there, so you may need to be familiar
-with this field to fully understand it. When I prepare this page, I will
-explain everything with more basic material, but for now, this will have
-to do.
+<p>
+I frequently used many Linear Algebra terms there, so you may need to be 
+familiar with this field to fully understand it. When I prepare this page, 
+I will try to explain everything with more basic material, but for now, this 
+will have to do.
+</p>
 
-<BR><BR>
+<hr />
 
-<HR>
-
-<A HREF="./"><H3>Back to the Math-Ventures Web page</H3></A><P>
-<A HREF="../"><H3>Back to Shlomi Fish' Homepage</H3></A>
-
-
-</BODY>
-</HTML>
+<h2><a href="./">Back to the Math-Ventures Web Page</a></h2>

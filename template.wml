@@ -71,7 +71,7 @@
 </ul>
 </define-tag>
 
-<define-tag is:oss><match "%0" "^(open-source|jmikmod|gradient-fu)/" action="report" /></define-tag>
+<define-tag is:oss><match "%0" "^(open-source|jmikmod|gradient-fu|quadpres|rwlock|lm-solve)/" action="report" /></define-tag>
 
 <define-tag lectures:navbar>
 <ul class="navbarnested">

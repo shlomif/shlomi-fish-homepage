@@ -55,12 +55,18 @@ RSYNC = rsync --progress --verbose --rsh=ssh
 upload: all
 	echo T2_DEST = $(T2_DEST)
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@t2.technion.ac.il:public_html/ )
+	echo VIPE_DEST = $(VIPE_DEST)
+	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )
+
+clean:
+	rm -fr $(T2_DEST)/*
+	rm -fr $(VIPE_DEST)/*
 
 # t2 targets
 $(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml template.wml t2/.wmlrc
 	( cd t2 && wml $(T2_WML_FLAGS) -DFILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst t2/%,%,$<) > $@ )
 
-$(T2_DIRS_DEST) :: $(T2_DEST)/% : t2/%
+$(T2_DIRS_DEST) :: $(T2_DEST)/% : unchanged
 	mkdir -p $@
 	touch $@
 
@@ -75,7 +81,7 @@ $(T2_DEST)/style.css : style.css
 $(VIPE_DOCS_DEST) :: $(VIPE_DEST)/% : vipe/%.wml template.wml vipe/.wmlrc
 	( cd vipe && wml $(VIPE_WML_FLAGS) -DFILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst vipe/%,%,$<) > $@ )
 
-$(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : vipe/%
+$(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : unchanged
 	mkdir -p $@
 	touch $@
 

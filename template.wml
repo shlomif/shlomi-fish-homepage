@@ -161,7 +161,11 @@ Stop Using Internet Explorer!</a>
      alt="Welcome to Linux 2004 in Israel" /></a><br />
 </div>
 </define-tag>
-<w2l_banner />
+<if <ifeq "$(FILENAME)" "index.html" 
+        <ifeq "$(SERVER)" "t2" "t2" "" /> "" /> 
+    <w2l_banner />
+    ""
+    />
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
 <tr>
 <td colspan="2" class="leading_path">

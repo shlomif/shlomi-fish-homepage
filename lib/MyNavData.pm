@@ -46,6 +46,20 @@ my $tree_contents =
             ],               
         },
         {
+            'value' => "Work",
+            'url' => "work/",
+            'title' => "Work-Related Pages",
+            'show_always' => 1,
+            'subs' => 
+            [
+                {
+                    'value' => "Private Lessons",
+                    'url' => "work/private-lessons/",
+                    'title' => "I'm Giving Private Lessons for High School Subjects and Computing.",
+                },
+            ],
+        },
+        {
             'value' => "Humour", 
             'url' => "humour/",
             'title' => "My Humorous Creations",

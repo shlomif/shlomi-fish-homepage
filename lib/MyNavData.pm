@@ -121,6 +121,7 @@ my $tree_contents =
         {
             'value' => "Software",
             'url' => "open-source/",
+            'expand_re' => "^open-source/",
             'title' => "Pages related to Software (mostly Open-Source)",
             'subs' => 
             [

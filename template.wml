@@ -59,6 +59,7 @@
 </define-tag>
 
 <define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
+<define-tag lect:link><navbarlink "lecture/%0" "%1" host="vipe" /></define-tag>
 
 <define-tag oss:navbar>
 <ul class="navbarnested">
@@ -72,7 +73,16 @@
 
 <define-tag is:oss><match "%0" "^(open-source|jmikmod|gradient-fu)/" action="report" /></define-tag>
 
-
+<define-tag lectures:navbar>
+<ul class="navbarnested">
+<li><lect:link "Perl/Newbies/" "Perl for Newbies" /></li>
+<li><lect:link "Freecell-Solver/" "Freecell Solver" /></li>
+<li><lect:link "Lambda-Calculus/" "Lambda Calculus" /></li>
+<li><lect:link "Gimp/" "The Gimp" /></li>
+<li><lect:link "Autotools/" "GNU Autotools" /></li>
+<li><lect:link "WebMetaLecture/" "WebMetaLecture" /></li>
+</ul>
+</define-tag>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
 <tr>
 <td valign="top" class="navbar" style="width:20%">
@@ -93,7 +103,12 @@
     ""
     />
 </li>
-<li><navbarlink "lecture/" "Lectures" host="vipe" /></li>
+<li><navbarlink "lecture/" "Lectures" host="vipe" />
+<if <match "$(FILENAME)" "lecture/*" action="report" /> 
+    <lectures:navbar /> 
+    "" 
+    />
+</li>
 <li><navbarlink "DeCSS/" "Opinion on DeCSS" /></li>
 <li><br /></li>
 <li><navbarlink "links.html" "Cool Links" /></li>

@@ -20,30 +20,34 @@ T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' -not -name '.*' | grep -v
 
 T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
 
-# vipe Macros
+# vipe macros
 
-T2_DOCS = $(shell bash find-wmls-t2.sh)
+VIPE_DOCS = $(shell bash find-wmls-vipe.sh)
 
-T2_DEST_BASE = /var/www/html/shlomi/
-T2_DEST_DIR = t2-homepage
-T2_DEST = $(T2_DEST_BASE)$(T2_DEST_DIR)
+VIPE_DEST_BASE = /var/www/html/shlomi/
+VIPE_DEST_DIR = vipe-homepage
+VIPE_DEST = $(VIPE_DEST_BASE)$(VIPE_DEST_DIR)
 
 WML_FLAGS += --passoption=2,-X
 
-T2_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DVIPE_URL="/shlomi/vipe-homepage"
+VIPE_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DVIPE_URL="/shlomi/vipe-homepage"
 
-T2_DOCS_DEST = $(patsubst t2/%.wml,$(T2_DEST)/%,$(T2_DOCS))
+VIPE_DOCS_DEST = $(patsubst vipe/%.wml,$(VIPE_DEST)/%,$(VIPE_DOCS))
 
-T2_DIRS = $(shell find t2 -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
+VIPE_DIRS = $(shell find vipe -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
 
-T2_DIRS_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_DIRS))
+VIPE_DIRS_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_DIRS))
 
-T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$$')
+VIPE_IMAGES = $(shell find vipe -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$$')
 
-T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
+VIPE_IMAGES_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_IMAGES))
+
+T2_TARGETS = $(T2_DIRS_DEST) $(T2_DOCS_DEST) $(T2_DEST)/style.css $(T2_IMAGES_DEST)
+
+VIPE_TARGETS = $(VIPE_DIRS_DEST) $(VIPE_DOCS_DEST) $(VIPE_DEST)/style.css $(VIPE_IMAGES_DEST)
 
 
-all: $(T2_DIRS_DEST) $(T2_DOCS_DEST) $(T2_DEST)/style.css $(T2_IMAGES_DEST)
+all: $(T2_TARGETS) $(VIPE_TARGETS)
 #all: $(T2_DIRS_DEST) $(T2_DOCS_DEST) 
 
 RSYNC = rsync --progress --verbose --rsh=ssh
@@ -52,6 +56,7 @@ upload: all
 	echo T2_DEST = $(T2_DEST)
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@t2.technion.ac.il:public_html/ )
 
+# t2 targets
 $(T2_DOCS_DEST) :: $(T2_DEST)/% : t2/%.wml template.wml t2/.wmlrc
 	( cd t2 && wml $(WML_FLAGS) -DFILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst t2/%,%,$<) > $@ )
 
@@ -63,5 +68,20 @@ $(T2_IMAGES_DEST) :: $(T2_DEST)/% : t2/%
 	cp -f $< $@
 
 $(T2_DEST)/style.css : style.css
+	cp -f $< $@
+
+# vipe targets
+
+$(VIPE_DOCS_DEST) :: $(VIPE_DEST)/% : vipe/%.wml template.wml vipe/.wmlrc
+	( cd vipe && wml $(WML_FLAGS) -DFILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst vipe/%,%,$<) > $@ )
+
+$(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : vipe/%
+	mkdir -p $@
+	touch $@
+
+$(VIPE_IMAGES_DEST) :: $(VIPE_DEST)/% : vipe/%
+	cp -f $< $@
+
+$(VIPE_DEST)/style.css : style.css
 	cp -f $< $@
 

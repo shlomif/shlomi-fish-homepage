@@ -44,3 +44,16 @@ ul.nospace
     border-style : double;
     padding : 0.5em;
 }
+/* This is for the leading path at the top. */
+.leading_path
+{
+    background-color : #80d000;
+}
+.leading_path a:visited
+{
+    color : #FFFF00;
+}
+.leading_path a:hover
+{
+    background-color : orange;
+}

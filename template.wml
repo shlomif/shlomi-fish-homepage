@@ -38,6 +38,24 @@ use vars qw($nav_html);
 
 $nav_html = $rendered_results->{html};
 
+my $leading_path = $rendered_results->{leading_path};
+
+my $render_leading_path_component = sub {
+    my $component = shift;
+    return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+    "\" title=\"" . $component->title() . "\">" .
+    $component->label() . "</a>";
+};
+
+use vars qw($leading_path_string);
+
+$leading_path_string =
+    join(" &rarr; ",
+        (map
+        { $render_leading_path_component->($_) }
+        @$leading_path
+        ));
+
 }:>
 
 
@@ -128,6 +146,11 @@ Stop Using Internet Explorer!</a>
 
 <define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
+<tr>
+<td colspan="2" class="leading_path">
+<:{ print $leading_path_string ; }:>
+</td>
+</tr>
 <tr>
 <td valign="top" class="navbar" style="width:20%">
 

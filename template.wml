@@ -12,11 +12,25 @@
 </head>
 <body>
 <define-tag rellink>
-<if <match "%0" "^http://" action="report" /> "%0" "$(ROOT)/%0" />
+<preserve url />
+<preserve host />
+<set-var %attributes />
+<set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
+<if <match "<get-var url />" "^http://" action="report" />
+    "<get-var url />" 
+    <ifeq "$(SERVER)" "<get-var host />"
+        "$(ROOT)/<get-var url />"
+        "http://<get-var host />.technion.ac.il/~shlomif/<get-var url />"
+    />
+/>
+<restore host />
+<restore url />
 </define-tag>
 
 <define-tag navbarlink>
-<set-var l="<rellink "%0" />" />
+<preserve host />
+<set-var %attributes />
+<set-var l="<rellink url="%0" host=<get-var host /> />" />
 <if
     ;;; Determine if %0 matches this document
     <ifeq "$(FILENAME)" "%0"
@@ -33,6 +47,7 @@
     
     "<a href="<get-var l />">%1</a>"
 />
+<restore host />
 </define-tag>
 
 <define-tag humour:navbar>
@@ -47,11 +62,11 @@
 
 <define-tag oss:navbar>
 <ul class="navbarnested">
-<li><navbarlink "<vipe:url "freecell-solver/" />" "Freecell Solver" /></li>
+<li><navbarlink "freecell-solver/" "Freecell Solver" host="vipe" /></li>
 <li><navbarlink "jmikmod/" "MikMod for Java" /></li>
-<li><navbarlink "<vipe:url "rwlock/" />" "FCFS RWLock" /></li>
-<li><navbarlink "<vipe:url "lm-solve/" />" "LM-Solve" /></li>
-<li><navbarlink "<vipe:url "quadpres/" />" "Quad-Pres" /></li>
+<li><navbarlink "rwlock/" "FCFS RWLock" host="vipe" /></li>
+<li><navbarlink "lm-solve/" "LM-Solve" host="vipe" /></li>
+<li><navbarlink "quadpres/" "Quad-Pres" host="vipe" /></li>
 </ul>
 </define-tag>
 
@@ -78,7 +93,7 @@
     ""
     />
 </li>
-<li><navbarlink "http://vipe.technion.ac.il/~shlomif/lecture/" "Lectures" /></li>
+<li><navbarlink "lecture/" "Lectures" host="vipe" /></li>
 <li><navbarlink "DeCSS/" "Opinion on DeCSS" /></li>
 <li><br /></li>
 <li><navbarlink "links.html" "Cool Links" /></li>

@@ -224,5 +224,32 @@ Objects
     Destructors
         The DESTROY method
     isa() and can()
+End of lecture
+
 <TODO: add Exceptions: die and eval { }>
+
+Lecture No. 4:
+
+* Installing and Using CPAN Modules
+* sprintf 
+* Alternate forms for writing strings.
+    * Here Documents - <<EOF.
+* Executing Other Processes:
+    - system
+    - `command`
+    - open "|hello";
+    - open "cat hello | "
+* More about behaviour of || and &&
+    - For sort: $a->{'name'} cmp $b->{'name'} || $a->{'address'} cmp $b->{'address'}
+    - The "and" and "or" operators
+* Exceptions:
+    - die 
+    - eval
+    - The Carp module (carp, croak)
+    - The Error.pm module on CPAN
+
+
+
+
+
 

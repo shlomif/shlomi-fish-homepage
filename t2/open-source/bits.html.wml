@@ -6,7 +6,7 @@
 ./bits-and-bobs/%0
 </define-tag>
 
-<h2>GnuPG Insta-Party Signature List Verification Script</a></h2>
+<h2 id="gnupg_sign_verify">GnuPG Insta-Party Signature List Verification Script</h2>
 
 <p>
 Some key-signing parties are conducted in a way that the 
@@ -30,14 +30,14 @@ time, where I signed each key individually, using my password like a zillion
 times.
 </p>
 
-<h2>TWiki Installation Scripts</h2>
+<h2 id="twiki_install">TWiki Installation Scripts</h2>
 
 <p>
 This is <a href="<bit_link "shlomif-twiki-installation-automation-2004-09-10.tar.gz" />">a collection of bash scripts I wrote</a> to automate the installation
 of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation. 
 </p>
 
-<h2><a href="<bit_link "open-inventor-bsd-daemon/" />">Open Inventor 
+<h2 id="open_inventor_bsd_daemon"><a href="<bit_link "open-inventor-bsd-daemon/" />">Open Inventor 
 3-D BSD Daemon</a></h2>
 
 <p>
@@ -45,11 +45,24 @@ An OpenInventor-based three-dimensional model of Beastie the BSD Daemon,
 created as a Technion project in the Computer Graphics course.
 </p>
 
-<h2><a href="<bit_link "gringotts-patch/" />">Patch for Gringotts</a></h2>
+<h2 id="gringotts"><a href="<bit_link "gringotts-patch/" />">Patch for Gringotts</a></h2>
 
 <p>
 This is a patch for
 <a href="http://devel.pluto.linux.it/projects/Gringotts/">gringotts</a> that
 allows it to compile with the latest Gtk+, and fixes some other annoyances.
+</p>
+
+<h2 id="xchat_xmms_nowplay"><a href="<bit_link "nowplay-xchat.pl" />">X-Chat /nowplay command using XMMS</a></h2>
+
+<p>
+What this little Perl script does is register an 
+<a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
+that whenever invoked displays a message of "/me is listening to My Artist -
+My Song" in the current channel. Feel free to make any use of it whatsoever 
+under the terms of the MIT X11 license. You need to install the 
+<a href="http://search.cpan.org/dist/Xmms-Perl/">Xmms-Perl distribution</a>
+and have the X-Chat Perl interface. To use, make it executable and put it 
+under your <tt>$HOME/.xchat2</tt> directory.
 </p>
 

@@ -15,6 +15,7 @@
 <define-tag rellink whitespace="delete">
 <preserve url />
 <preserve host />
+<preserve title />
 <set-var %attributes />
 <set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
 <if <match "<get-var url />" "^http://" action="report" />
@@ -24,13 +25,16 @@
         "http://<get-var host />.technion.ac.il/~shlomif/<get-var url />"
     />
 />
+<restore title />
 <restore host />
 <restore url /></define-tag>
 
 <define-tag navbarlink>
 <preserve host />
+<preserve title />
 <set-var %attributes />
 <set-var l="<rellink url="%0" host=<get-var host /> />" />
+<set-var t="<if "<get-var title />" <attributes-quote title=<get-var title /> /> "" />" />
 <if
     ;;; Determine if %0 matches this document
     <ifeq "$(FILENAME)" "%0"
@@ -45,8 +49,9 @@
     "<b>%1</b>"
     ;;; If not - makes a hyperlink
     
-    "<a href="<get-var l />">%1</a>"
+    "<a href="<get-var l />" <get-var t /> >%1</a>"
 />
+<restore title />
 <restore host />
 </define-tag>
 
@@ -89,6 +94,7 @@
 <define-tag aboutme:navbar>
 <ul class="navbarnested">
 <li><navbarlink "personal.html" "Bio" /></li>
+<li><navbarlink "me/contact-me/" "Contact" title="How to Contact Me" /></li>
 <li><navbarlink "SFresume.html" "C.V." /></li>
 <li><navbarlink "SFresume_detailed.html" "Detailed C.V." /></li>
 </ul>

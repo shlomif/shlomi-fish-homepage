@@ -15,7 +15,7 @@ table.cv td { vertical-align : top }
 </define-tag>
 
 # The Definition of the page itself
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -24,6 +24,7 @@ table.cv td { vertical-align : top }
 <title>{#SUBJECT_LOC#}</title>
 <link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
 <if "$(PRINTABLE)" "<printable_style />" "" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <define-tag rellink whitespace="delete">
@@ -112,8 +113,7 @@ table.cv td { vertical-align : top }
 <ul class="navbarnested">
 <li><navbarlink "personal.html" "Bio" /></li>
 <li><navbarlink "me/contact-me/" "Contact" title="How to Contact Me" /></li>
-<li><navbarlink "SFresume.html" "C.V." /></li>
-<li><navbarlink "SFresume_detailed.html" "Detailed C.V." /></li>
+<li><navbarlink "me/resumes/" "My Resum&eacute;s" /></li>
 </ul>
 </define-tag>
 

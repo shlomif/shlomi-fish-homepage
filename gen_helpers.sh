@@ -18,4 +18,10 @@ for host in t2 vipe ; do
     echo "${upper_host}_IMAGES = " $(find $host -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$')
     newline
 done;
+
+echo "COMMON_IMAGES = " $(find common -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$')
+newline
+echo "COMMON_DIRS = " $(find common -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
+
 ) >> "$file"
+

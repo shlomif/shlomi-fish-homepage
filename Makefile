@@ -18,6 +18,12 @@ T2_DIRS_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_DIRS))
 
 T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
 
+T2_COMMON_IMAGES_DEST = $(patsubst common/%,$(T2_DEST)/%,$(COMMON_IMAGES))
+
+T2_COMMON_DIRS_DEST = $(patsubst common/%,$(T2_DEST)/%,$(COMMON_DIRS))
+
+
+
 # vipe macros
 
 VIPE_DEST_BASE = /var/www/html/shlomi/
@@ -32,10 +38,13 @@ VIPE_DIRS_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_DIRS))
 
 VIPE_IMAGES_DEST = $(patsubst vipe/%,$(VIPE_DEST)/%,$(VIPE_IMAGES))
 
-T2_TARGETS = $(T2_DIRS_DEST) $(T2_DOCS_DEST) $(T2_DEST)/style.css $(T2_IMAGES_DEST)
+VIPE_COMMON_IMAGES_DEST = $(patsubst common/%,$(VIPE_DEST)/%,$(COMMON_IMAGES))
 
-VIPE_TARGETS = $(VIPE_DIRS_DEST) $(VIPE_DOCS_DEST) $(VIPE_DEST)/style.css $(VIPE_IMAGES_DEST)
+VIPE_COMMON_DIRS_DEST = $(patsubst common/%,$(VIPE_DEST)/%,$(COMMON_DIRS))
 
+T2_TARGETS = $(T2_DIRS_DEST) $(T2_DOCS_DEST) $(T2_COMMON_IMAGES_DEST) $(T2_IMAGES_DEST) $(T2_COMMON_DIRS_DEST)
+
+VIPE_TARGETS = $(VIPE_DIRS_DEST) $(VIPE_DOCS_DEST) $(VIPE_COMMON_IMAGES_DEST) $(VIPE_IMAGES_DEST) $(VIPE_COMMON_DIRS_DEST)
 
 all: $(T2_TARGETS) $(VIPE_TARGETS)
 #all: $(T2_DIRS_DEST) $(T2_DOCS_DEST) 
@@ -67,8 +76,13 @@ $(T2_DIRS_DEST) :: $(T2_DEST)/% : unchanged
 $(T2_IMAGES_DEST) :: $(T2_DEST)/% : t2/%
 	cp -f $< $@
 
-$(T2_DEST)/style.css : style.css
+$(T2_COMMON_IMAGES_DEST) :: $(T2_DEST)/% : common/%
 	cp -f $< $@
+
+$(T2_COMMON_DIRS_DEST) :: $(T2_DEST)/% : unchanged
+	mkdir -p $@
+	touch $@
+
 
 # vipe targets
 
@@ -82,8 +96,12 @@ $(VIPE_DIRS_DEST) :: $(VIPE_DEST)/% : unchanged
 $(VIPE_IMAGES_DEST) :: $(VIPE_DEST)/% : vipe/%
 	cp -f $< $@
 
-$(VIPE_DEST)/style.css : style.css
+$(VIPE_COMMON_IMAGES_DEST) :: $(VIPE_DEST)/% : common/%
 	cp -f $< $@
+
+$(VIPE_COMMON_DIRS_DEST) :: $(VIPE_DEST)/% : unchanged
+	mkdir -p $@
+	touch $@
 
 t2/SFresume.html.wml : t2/SFresume_base.wml
 	touch $@

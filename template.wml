@@ -166,11 +166,9 @@
 
 
 
-<define-tag hostedattech>
+<define-tag hosted:at:tech>
 <div class="rightalign">
-<a href="http://www.technion.ac.il/">
-<img src="images/techlogo.gif" alt="Hosted at the Technion" style="border : 0" /> 
-</a>
+<a href="http://www.technion.ac.il/"><img src="images/techlogo.gif" alt="Hosted at the Technion" class="highlight" style="border : 0" /></a>
 </div>
 </define-tag>
 
@@ -183,8 +181,11 @@
 Designed and Maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</a>
 </p>
 
-<ifeq "$(FILENAME)" "index.html" 
-    <hostedattech />
+;;; If it is the t2 index than display the hosted:at:tech macro
+;;; Else - display the back to my homepage image
+<if <ifeq "$(FILENAME)" "index.html" 
+        <ifeq "$(SERVER)" "t2" "t2" "" /> "" /> 
+    <hosted:at:tech />
     <backtomyhp />
     />
 

@@ -1,6 +1,63 @@
 #include '../template.wml'
 <subject "Shlomi Fish' Homepage" />
 
+
+
+
+
+<h2><a href="./me/">Personal Info</a></h2>
+
+<p class="indent">
+Bio, C.V.'s and other information about the man behind the name Shlomi Fish.
+</p>
+
+<h2>Studies-Related</h2>
+
+<div class="indent">
+<h3><a href="http://comnet.technion.ac.il/~cn1w02/">My IP-Noise Project</a></h3>
+
+<h3><a href="http://comnet.technion.ac.il/~cn1s02/">My Seminars Management Project</a></h3>
+
+<h3><a href="./guide2ee/">Guide to the EE Faculty's Resources</a></h3>
+</div>
+
+<h2>Site Attractions</h2>
+
+<div class="indent">
+<h3><a href="./humour/">Humour</a></h3>
+
+<p class="indent">
+Some humourous writing and euphorisms I came up with. Read and enjoy!
+</p>
+
+<h3><a href="MathVentures/">Math-Ventures</a></h3>
+
+<p class="indent">
+This section is devoted to mathematical problems which I encountered 
+at real-life or thought about.
+</p>
+
+
+<h3><a href="./art/">Computer Art</a></h3>
+<p class="indent">
+Various computer art I created with explanations about how I created
+it.
+</p>
+
+<h3><a href="links.html">Cool Links List</a></h3>
+
+
+<h3><a href="http://vipe.technion.ac.il/~shlomif/lecture/">Lectures given to the Haifa Linux Club</a></h3>
+
+
+<h3><a href="./open-source/">Open-Source Software I wrote</a></h3>
+
+<h3><a href="./DeCSS/">My own opinion on DeCSS</a></h3>
+<p class="indent">
+Just to show my support...
+</p>
+</div>
+
 <h2>News</h2>
 
 <h3 class="newsitem">26-Oct-2002</h3>
@@ -25,200 +82,4 @@ I have placed the fortune files I am maintaining online
 </p>
 
 <h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
-
-
-
-
-<h2>Personal Info</h2>
-<div style="left-margin : 3em">
-<a href="personal.html">About Myself</a><br />
-<br />
-<a href="SFresume.html">My Resume</a><br />
-<br />
-<a href="http://www.advogato.org/person/shlomif/">My Diary at
-Advogato</a><br />
-</div>
-
-
-<h2>Studies-Related</h2>
-
-<div style="left-margin : 3em">
-<h3><a href="http://comnet.technion.ac.il/~cn1w02/">My IP-Noise Project</a></h3>
-
-<h3><a href="./guide2ee/">Guide to the EE Faculty's Resources</a></h3>
-</div>
-
-<h2>Site Attractions</h2>
-
-<h3>Humour</h3>
-<div class="indent">
-<p>
-<a href="humour.html">Collection of Humorous Bits</a> - This is a small (or at least momentarily small) collection of my own
-humourous bits.
-</p>
-
-<p>
-<a href="humour/TheEnemy">The Enemy and How I Helped to Fight it</a> - 
-a complete story I wrote for your reading and enjoyment. A mathematical
-proof that the Hizbulla et al. are irrational.
-</p>
-
-<p>
-<a href="humour/RoadToHeaven">The Road to Heaven is Paved with Bad
-Intentions</a> - The sequel to "The Enemy". Work in Progress.
-</p>
-
-<p>
-<a href="humour/TOWTF/">The One with the Fountainhead</a> - 
-a parody on Ayn Rand's "The Fountainhead" modelled on a two-part episode of
-"Friends".
-</p>
-
-<p>
-<a href="humour/Pope/">The Pope Died on Sunday</a> -
-a description of a rather insane week in the life of a graphics artist in
-America. A typical Holywood story with not so typical elements.
-</p>
-
-<p>
-<a href="http://humanity.berlios.de/">Humanity - The Cathedral, The Bazaar, 
-the Rest...</a> - a parody on humanity and especially modern life. It describes
-a day in the life of a Semitic city circa 500 B.C. and has a very
-interesting twist at the end...
-</p>
-
-<p>
-<a href="http://vipe.technion.ac.il/~shlomif/humour/fortunes/">Collection
-of Fortune Files</a> - several collections of fortune files for the UNIX
-"fortune" program. (which are viewable online)
-</p>
-
-<p>
-<a href="http://humanity.berlios.de/usr-bin-perl/">#!/usr/bin/perl</a> - 
-a series of screenplays for a sitcom about a web publishing company named
-Simple-Site.
-</p>
-
-<p>
-<a href="./humour/ways_to_do_it.html">Ways to do it According to the
-Programming Languages of the World</a>
-</p>
-
-</div>
-
-<h3><a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell Solver</a></h3>
-
-<p class="indent">
-A program that automatically solves games of the Freecell card solitaire game.
-</p>
-
-
-<h3><a href="MathVentures/">Math-Ventures</a></h3>
-
-<p class="indent">
-This section is devoted to mathematical problems which I encountered 
-at real-life or thought about.
-</p>
-
-
-<h3><a href="./art/">Computer Art</a></h3>
-<p class="indent">
-Various computer art I created with explanations about how I created
-it.
-</p>
-
-
-<h3><a href="linux_banner/">Linux InstaParty Banner</a></h3>
-<p class="indent">
-Here you can find a banner I designed for a <a href="http://www.linux.org.il/">Linux</a>' Installation
-Party at the Technion.
-
-</p>
-
-<h3><a href="links.html">Cool Links List</a></h3>
-
-
-<h3><a href="http://vipe.technion.ac.il/~shlomif/lecture/">Lectures given to the Haifa Linux Club</a></h3>
-
-
-<h3>Open-Source Software I wrote</h3>
-
-<h4><a href="jmikmod/">MikMod for Java</a></h4>
-<p class="indent">
-I ported this well-known MOD player to the Java environment, and you can
-freely download the latest release of it here.
-</p>
-
-
-<h4><a href="grad-fu/">Gradient-Fu Patch for the GIMP</a></h4>
-
-<p class="indent">
-This is a patch for <a href="http://www.gimp.org/">the GIMP</a> that exposes
-the functionality of the gradient editor to scripts and plug-ins.<br />
-</p>
-
-<h4><a href="http://gamla.iglu.org.il/">Gamla</a></h4>
-<p class="indent">
-A project I'm involved in, that aims to create a WWW application server and
-a RAD tool for <a href="http://www.perl.com/">perl</a>.
-</p>
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/quadpres/">QuaD-Pres</a></h4>
-<p class="indent">
-Short for Quick and Dirty presentations this is a tool I wrote to help write
-HTML lectures. Can work standalone or inside the 
-<a href="http://www.engelschall.com/sw/wml/">WebMetaLanguage</a>.
-</p>
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/rwlock/">A First-Come First-Served Readers/Writers Lock</a></h4>
-
-<p class="indent">
-An implementation of it for POSIX Threads, which can also be used as a
-reference implementation.
-</p>
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/abstraction/">Portable Abstraction Libraries for C and C++</a></h4>
-
-<p class="indent">
-A small directory with links to libraries that make writing portable
-software easier.
-</p>
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/software-tools/">Directory 
-of Software Tools</a></h4>
-
-<p class="indent">
-A directory of tools for software construction, configuration, bug tracking,
-testing and revision control.
-</p>
-
-<h4><a href="http://better-scm.berlios.de/">The Better SCM initiative</a></h4>
-
-<p class="indent">
-better revision control or source configuration management (SCM) tools.
-</p>
-
-
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/lm-solve/">LM-Solve</a></h4>
-
-
-<p class="indent">
-An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a> 
-written in Perl.
-</p>
-
-<h4><a href="http://vipe.technion.ac.il/~shlomif/i-bex/">I, Bex!</a></h4>
-
-<p class="indent">
-A Stone-Age Clone for Perl/SDL.
-</p>
-
-
-
-<h3><a href="./DeCSS/">My own opinion on DeCSS</a></h3>
-<p class="indent">
-Just to show my support...
-</p>
-
 

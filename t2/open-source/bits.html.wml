@@ -1,0 +1,47 @@
+#include '../template.wml'
+
+<subject "Open Source Bits and Bobs" />
+
+<define-tag bit_link whitespace="delete">
+./bits-and-bobs/%0
+</define-tag>
+
+<h2>GnuPG Insta-Party Signature List Verification Script</a></h2>
+
+<p>
+Some key-signing parties are conducted in a way that the 
+a file containing the fingerprints is distributed to everybody, and is then
+verified to be correct by its SHA1 hash. Then, the keyring is made available 
+to the public. Now the question is whether the signatures in the keyring are 
+the same as those in the file.
+</p>
+
+<p>
+To resolve it, I wrote <a href="<bit_link "gpg-verify.pl" />">a script</a> 
+that checks the signatures in the file and verifies that they are the same
+as those reported by GPG in the key-ring. You can freely use it under
+the terms of the MIT X11 license.
+</p>
+
+<p>
+Using it I signed the keys, by first running it, and then using kgpg (part
+of kdeutils) to sign all the keys at once. Truly an improvement over the
+time, where I signed each key individually, using my password like a zillion
+times.
+</p>
+
+<h2>TWiki Installation Scripts</h2>
+
+<p>
+This is <a href="<bit_link "shlomif-twiki-installation-automation-2004-09-10.tar.gz" />">a collection of bash scripts I wrote</a> to automate the installation
+of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation. 
+</p>
+
+<h2><a href="<bit_link "open-inventor-bsd-daemon/" />">Open Inventor 
+3-D BSD Daemon</a></h2>
+
+<p>
+An OpenInventor-based three-dimensional model of Beastie the BSD Daemon, 
+created as a Technion project in the Computer Graphics course.
+</p>
+

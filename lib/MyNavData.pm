@@ -161,6 +161,11 @@ my $tree_contents =
                     'url' => "open-source/contributions/",
                 },
                 {
+                    'value' => "Bits and Bobs",
+                    'title' => "Various Small-Scale Open-Source Works",
+                    'url' => "open-source/bits.html",
+                },
+                {
                     'value' => "Portability Libraries",
                     'title' => "Cross-Platform Abstraction Libraries",
                     'url' => "abstraction/",

@@ -89,7 +89,7 @@
 </ul>
 </define-tag>
 
-<define-tag is:aboutme><match "%0" "^((SFresume(_detailed)?\.html)|(me/(index\.html)?)|(personal\.html))$" action="report" /></define-tag>
+<define-tag is:aboutme><match "%0" "^((SFresume(_detailed)?\.html)|(me/.*)|(personal\.html))$" action="report" /></define-tag>
 
 <define-tag aboutme:navbar>
 <ul class="navbarnested">

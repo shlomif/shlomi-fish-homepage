@@ -1,15 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="generator"
-content="HTML Tidy for Linux/x86 (vers 1st August 2002), see www.w3.org" />
-<title>Math-Ventures: On and on it seems to go...</title>
-</head>
-<body bgcolor="#FFFFFF">
-<center>
-<h2>On and on it seems to go...</h2>
-</center>
+#include '../template.wml'
+
+<subject "On and on it seems to go..." />
 
 A while ago, I was introduced to a couple of questions about
 digital codes being broadcasted. This made me think of a new code
@@ -19,8 +10,7 @@ rec.puzzles which is dedicated to riddles and puzzles of all sorts.
 <p>The original message from Deja-News follows:</p>
 
 <pre>
-<b>Subject:      <font size="+1"
-color="#C60012">Repeating Code Possibilities</font>
+<b>Subject:      <span style=" color : #C60012 ; font-size : large ">Repeating Code Possibilities</span>
 From:         Shlomi Fish &lt;shlomi@medusa.cortext.co.il&gt;
 Date:         1996/06/10
 Message-ID:   &lt;31BC1616.34C6@medusa.cortext.co.il&gt;
@@ -52,77 +42,9 @@ repetition that is some integer division of l, it's still of length
 l. E.g: the code 10101010... is still considered the 4-bits code
 1010 (or 0101). The continuation which includes the answer can be
 found a couple of pages below. <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
+
+<longblank />
  Well, the rec.puzzles guys did not know how to solve it either,
 and someone suggested that I should post it to sci.math instead.
 <p>Eventually, I had an idea. Like I said, some codes have an
@@ -137,8 +59,7 @@ monthes after my original posting. The solution presented there is
 not intirely correct, so read my notes below.</p>
 
 <pre>
-<b>Subject:      <font size="+1"
-color="#C60012">Repeating Code Riddle (+ Spoiler)</font>
+<b>Subject:      <span style=" color : #C60012 ; font-size : large ">Repeating Code Riddle (+ Spoiler)</span>
 From:         ffish@euronet.co.il (Shlomi Fish)
 Date:         1996/08/16
 Message-ID:   &lt;4v1nm5$583@shelly.inter.net.il&gt;
@@ -238,11 +159,4 @@ for all other numbers<br />
 <p>Otherwise the solution is fine. You can view a C program that
 calculates the number of such codes for all numbers up to 24 <a
 href="check_codes.c">here</a>.</p>
-
-<hr />
-<h3><a href="./">Back to the Math-Ventures Web page</a></h3>
-
-<h3><a href="../">Back to Shlomi Fish' Homepage</a></h3>
-</body>
-</html>
 

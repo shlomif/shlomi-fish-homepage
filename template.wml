@@ -190,8 +190,11 @@ Stop Using Internet Explorer!</a>
             },
        )
    {
+        my $dir = $button->{dir};
+        my $key = substr($dir, 0, 1);
+        my $key_uc = uc($key);
         $nav_buttons_html .= "<a href=\"" . CGI::escapeHTML($nav_links->{$button->{dir}}) . 
-            "\" title=\"$button->{title}\"><img src=\"$(ROOT)/images/arrow-$button->{button}.png\" alt=\"$button->{title}\" style=\"border:0\" /></a>\n";
+            "\" title=\"$button->{title} (Alt+$key_uc)\" accesskey=\"$key\"><img src=\"$(ROOT)/images/arrow-$button->{button}.png\" alt=\"$button->{title}\" style=\"border:0\" /></a>\n";
    }
    print "<div class=\"center\">\n$nav_buttons_html\n</div>";
 }:>    

@@ -26,4 +26,7 @@ td.main
     padding-left : 1em;
 }
 ul.noindent { margin-left : 0em }
-
+div.center { text-align: center }
+table.center { margin-left : auto ; margin-right : auto }
+table.cv { width : 100% ; border : none ; }
+table.cv td { vertical-align : top }

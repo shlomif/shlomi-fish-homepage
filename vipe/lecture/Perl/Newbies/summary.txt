@@ -233,7 +233,8 @@ Lecture No. 4:
 * Installing and Using CPAN Modules
 * sprintf 
 * Alternate forms for writing strings.
-    * Here Documents - <<EOF.
+    - q{} qq{}, etc.
+    - Here Documents - <<EOF.
 * Executing Other Processes:
     - system
     - `command`
@@ -247,9 +248,10 @@ Lecture No. 4:
     - eval
     - The Carp module (carp, croak)
     - The Error.pm module on CPAN
-
-
-
-
-
-
+* Some more system functions
+    - opendir/readdir and friends
+    - seek/tell
+    - -X (-e, -f and friends)
+    - chdir
+    - mkdir
+    - stat

@@ -1,40 +1,94 @@
 #include '../template.wml'
 
-<subject "Haifa Linux Club Lectures given by Shlomi Fish" />
+<subject "Lectures given by Shlomi Fish" />
 
-<br /><br />
+<h2><a href="./Perl/Newbies/">Perl for Perl Newbies</a></h2>
 
-<a href="./PostgreSQL-Lecture/">The PostgreSQL Relational Database Server</a><br />
-<br />
-<a href="./Command-Line/">Notes from lecture about the UNIX command-line</a><br />
-<br />
-<a href="./Lambda-Calculus/">Scheme and Lambda Calculus</a><br />
-<br />
-<a href="./Perl/Newbies/">Perl for Perl Newbies</a><br />
-<br />
-<a href="./Gimp/">Do it with the GIMP</a><br />
-<br />
-<a href="./Bash/">Bash Shell Usage and Programming</a><br />
-<br />
-<a href="./W2L/Basic_Use/slides">"Welcome to Linux" Basic Use Slides</a><br />
-<br />
-<a href="./Freecell-Solver/">Freecell Solver - Evolution of a C Program</a><br />
-<br />
-<a href="./Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a><br />
-<br />
-<a href="./Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a><br />
-<br />
-<a href="./WebMetaLecture/">WebMetaLecture - a lecture about the
-WebMetaLanguage</a> (upcoming lecture)<br />
-<br />
-<a href="./CatB/">The Cathedral and the Bazaar - an Overview</a><br />
-<br />
+<p>
+A series of lectures that teach Perl for Perl beginners. No knowledge of 
+any other programming language is required, but it will be helpful.
+</p>
+
+<h2><a href="./Lambda-Calculus/">Scheme and Lambda Calculus</a></h2>
+
+<p>
+A presentation that briefly covers the Scheme programming language and
+then use it to present the Lambda Calculus: a model for programming,
+which is a full-fledge programming language with just two primitives.
+</p>
+
+<h2>Various Tools</h2>
+
+<dl>
+<dt>
+<a href="./Gimp/">Do it with the GIMP</a>
+</dt>
+<dd>
+a lecture about the <a href="http://www.gimp.org/">GNU Image 
+Manipulation Program</a>, a free Photoshop-like alternative with many 
+powerful features.
+</dd>
+<dt>
+<a href="./PostgreSQL-Lecture/">The PostgreSQL Database Server</a>
+</dt>
+<dd>
+A lecture about the Postgres database server, a free and powerful SQL 
+server for UNIX systems.
+</dd>
+<dt>
+<a href="./Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a>
+</dt>
+<dd>
+A tool about these two tools for helping to write compilers and interpreters.
+</dd>
+<dt>
+<a href="./Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a>
+</dt>
+<dd>
+A trio of tools that make writing programs that compile on various UNIX
+(and Win32) platforms easier.
+</dd>
+<dt>
+<a href="./WebMetaLecture/">Web Meta Lecture - a lecture about the
+Web Meta Language</a> (upcoming lecture)
+</dt>
+<dd>
+A tool for helping generate sophisticated static HTML web-sites.
+</dd>
+</dl>
+
+# <a href="./Bash/">Bash Shell Usage and Programming</a><br />
+# <br />
+
+<h2>"Welcome to Linux" Lectures</h2>
+
+<div class="indent">
+
+<h3><a href="./W2L/Basic_Use/slides/">Basic Use</a></h3>
+
+<p>
+Slides that cover the basic use of the Linux system.
+</p>
+
+</div>
+
+<h2><a href="./Freecell-Solver/">Freecell Solver - Evolution of a C Program</a></h2>
+
+<p>
+The history of my pet project, Freecell Solver.
+</p>
+
+<h2><a href="./CatB/">The Cathedral and the Bazaar - an Overview</a></h2>
+
+<p>
+An overview of Eric Raymond's "The Cathedral and the Bazaar" series which
+is considered one of the most important works on the Open Source world.
+</p>
 
 <h2>Presentation Tools</h2>
 
-<a href="./Quad-Pres/">A lecture about QuaD-Pres</a><br />
+<a href="./Quad-Pres/">QuaD-Pres</a><br />
 <br />
-<a href="./Pres-Tools/Perl-Point/">A lecture about PerlPoint</a><br />
+<a href="./Pres-Tools/Perl-Point/">PerlPoint</a><br />
 <br />
-<hr />
 

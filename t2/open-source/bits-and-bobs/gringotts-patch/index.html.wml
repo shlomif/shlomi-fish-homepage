@@ -1,0 +1,47 @@
+#include '../template.wml'
+<subject "The gringotts-shlomif Patch" />
+
+<define-tag patch_fn whitespace="delete">
+gringotts-shlomif-patch-rev2.diff
+</define-tag>
+
+<define-tag link_to_patch endtag="required" whitespace="delete">
+<a href="<patch_fn />">%body</a>
+</define-tag>
+
+<h2><link_to_patch>The Latest Version of the Patch</link_to_patch></h2>
+
+<p>
+This is <link_to_patch>a patch</link_to_patch> for 
+<a href="http://devel.pluto.linux.it/projects/Gringotts/">the Gringotts 
+encrypted note manager, version 1.2.8</a> for Linux, by Germano Rizzo. What it 
+does, so far is:
+</p>
+
+<ol>
+<li>
+Allow it to compile against recent versions of the Gtk+ library. (tested 
+against Gtk+ 2.4.9). So far it does that by undeffing GTK_DISABLE_DEPRECATED
+in one of the files.
+</li>
+<li>
+Add keyboard shortcuts to the menus, so you can press Alt+F+S to save a file,
+or Alt+E+C to copy.
+</li>
+<li>
+Add a rudimentary autogen.sh file.
+</li>
+<li>
+Make sure that when searching, the text view scrolls to view the found pattern.
+</li>
+<li>
+Document another minor issue in the <tt>BUGS</tt> file.
+</li>
+</ol>
+
+<p>
+Gringotts is distributed under the GPL, so this patch is GPLed too. Note that
+I disclaim any explicit ownership of the changes, and the original author can
+relicense the patch along with the rest of Gringotts if he sees fit.
+</p>
+

@@ -1,0 +1,27 @@
+#include '../template.wml'
+<subject "Objectivism and Open Source" />
+
+<p>
+Here you can find an essay I wrote titled "Objectivism and Open Source"
+that aims to explain why the two are compatible. 
+</p>
+
+<h2>Formats</h2>
+
+<set-var docbase=obj-oss />
+
+<ul>
+<li><a href="<get-var docbase />/book1.html">HTML (read online)</a></li>
+<li><a href="<get-var docbase />.pdf">Acrobat Reader (PDF)</a></li>
+<li><a href="<get-var docbase />.rtf">MS Word RTF</a></li>
+</ul>
+
+<h2>DocBook/XML Sources</h2>
+
+<ul>
+<li><a href="<get-var docbase />.xml">XML Source</a></li>
+<li><a href="mystyle.dsl">DSSSL Stylesheet</a></li>
+<li><a href="jadetex.cfg">jadetex.cfg</a></li>
+<li><a href="Makefile">Makefile to Generate everything.</a></li>
+</ul>
+

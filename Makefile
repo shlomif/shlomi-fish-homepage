@@ -1,3 +1,26 @@
+# t2 macros
+
+T2_DOCS = $(shell bash find-wmls-t2.sh)
+
+T2_DEST_BASE = /var/www/html/shlomi/
+T2_DEST_DIR = t2-homepage
+T2_DEST = $(T2_DEST_BASE)$(T2_DEST_DIR)
+
+WML_FLAGS += --passoption=2,-X
+
+T2_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DVIPE_URL="/shlomi/vipe-homepage"
+
+T2_DOCS_DEST = $(patsubst t2/%.wml,$(T2_DEST)/%,$(T2_DOCS))
+
+T2_DIRS = $(shell find t2 -type d | grep -v '/\.svn' | grep -v '^\.svn' | tail +2)
+
+T2_DIRS_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_DIRS))
+
+T2_IMAGES = $(shell find t2 -type f -not -name '*.wml' -not -name '.*' | grep -v '/\.svn' | grep -v '~$$')
+
+T2_IMAGES_DEST = $(patsubst t2/%,$(T2_DEST)/%,$(T2_IMAGES))
+
+# vipe Macros
 
 T2_DOCS = $(shell bash find-wmls-t2.sh)
 

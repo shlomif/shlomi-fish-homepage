@@ -4,6 +4,7 @@ td.navbar
     background-color: moccasin;  
     width : 20%;
     padding-right : 1em;
+    padding-top : 0.5em;
 }
 p.desc { margin-left : 3em }
 ul.navbarmain { padding-left : 1em ; margin-left : 1em }
@@ -34,4 +35,12 @@ ul.nospace
 {
     margin-top : 0em;
     margin-bottom : 0em;
+}
+.colored_frame
+{
+    background-color : #F8FF98;
+    border-color : black;
+    border-width : medium;
+    border-style : double;
+    padding : 0.5em;
 }

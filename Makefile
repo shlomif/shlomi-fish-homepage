@@ -1,4 +1,4 @@
-WML_FLAGS += --passoption=2,-X
+WML_FLAGS += --passoption=2,-X -DROOT~.
 
 # t2 macros
 
@@ -10,7 +10,7 @@ T2_DEST = $(T2_DEST_BASE)$(T2_DEST_DIR)
 
 
 
-T2_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DSERVER=t2
+T2_WML_FLAGS = $(WML_FLAGS) -DSERVER=t2
 
 T2_DOCS_DEST = $(patsubst t2/%.wml,$(T2_DEST)/%,$(T2_DOCS))
 
@@ -30,7 +30,7 @@ VIPE_DEST_BASE = /var/www/html/shlomi/
 VIPE_DEST_DIR = vipe-homepage
 VIPE_DEST = $(VIPE_DEST_BASE)$(VIPE_DEST_DIR)
 
-VIPE_WML_FLAGS = $(WML_FLAGS) -DROOT~. -DSERVER=vipe
+VIPE_WML_FLAGS = $(WML_FLAGS) -DSERVER=vipe
 
 VIPE_DOCS_DEST = $(patsubst vipe/%.wml,$(VIPE_DEST)/%,$(VIPE_DOCS))
 

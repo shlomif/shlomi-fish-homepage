@@ -84,8 +84,10 @@ table.cv td { vertical-align : top }
 <:{
 use CGI qw();
 
-while (my ($key, $url) = each(%$nav_links))
+my @keys = (sort { $a cmp $b } keys(%$nav_links));
+foreach my $key (@keys)
 {
+    my $url = $nav_links->{$key};
     print "<link rel=\"$key\" href=\"" . CGI::escapeHTML($url) . "\" />\n"
 }
 }:>
@@ -164,10 +166,35 @@ Stop Using Internet Explorer!</a>
      title="Stop Software Patents!"><img 
      src="$(ROOT)/images/noepatents_liberty.png" 
      alt="Stop Software Patents" class="highlight" 
-     style="border:0" /></a></div>"
+     style="border:0;margin-bottom:0.5em;" /></a></div>"
     ""
     />
-    
+<:{ 
+    my $nav_buttons_html = "";
+    foreach my $button 
+        (
+            { 
+                'dir' => "prev", 
+                'button' => "left", 
+                'title' => "Previous Page",
+            },
+            { 
+                'dir' => "up", 
+                'button' => "up", 
+                'title' => "Up in the Site",
+            },
+            {
+                'dir' => "next", 
+                'button' => "right", 
+                'title' => "Next Page",
+            },
+       )
+   {
+        $nav_buttons_html .= "<a href=\"" . CGI::escapeHTML($nav_links->{$button->{dir}}) . 
+            "\" title=\"$button->{title}\"><img src=\"$(ROOT)/images/arrow-$button->{button}.png\" alt=\"$button->{title}\" style=\"border:0\" /></a>\n";
+   }
+   print "<div class=\"center\">\n$nav_buttons_html\n</div>";
+}:>    
 <:{ print join("\n", @$nav_html); }:>
 
 <validhtml />

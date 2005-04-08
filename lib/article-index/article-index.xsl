@@ -14,7 +14,6 @@
     <body>
 <xsl:apply-templates select="contents" mode="toc"/>
 </body>
-<!--http://rafb.net/paste/results/lTurEi25.html-->
 </html>
 </xsl:template>
 

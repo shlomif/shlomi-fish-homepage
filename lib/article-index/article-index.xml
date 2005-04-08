@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xml" href="article-index.xsl"?>
+<!DOCTYPE index SYSTEM "article-index.dtd">
+<index>
+<meta>
+</meta>
+<contents>
+<section id="computing" title="Essays and Articles about Computing">
+<entry id="joy_of_perl" title="The Joy of Perl" url="http://www.nntp.perl.org/group/perl.advocacy/2108">
+<p>
+An essay that explains why I like Perl so much. Also see 
+<a href="http://perl.org.il/pipermail/perl/2004-February/004184.html">a 
+discussion of it in perl.org.il</a>
+</p>
+</entry>
+<entry id="cross_unix_portability" title="Cross UNIX Portability - Facts and Myths" url="http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&amp;ixPost=99574">
+<p>
+The title says it all pretty much.
+</p>
+</entry>
+<entry id="lm_solve" title="Solving Puzzles with LM-Solve" url="http://www.perl.com/pub/a/2003/11/17/lmsolve.html">
+<p>
+An article about the 
+<a href="http://vipe.technion.ac.il/~shlomif/lm-solve/">LM-Solve</a> puzzle
+solving framework, and how to utilize it for a new puzzle.
+</p>
+</entry>
+<entry id="version_control_systems_overview" title="The New Breed of Version Control Systems" url="http://www.oreillynet.com/pub/a/onlamp/2004/01/29/scm_overview.html">
+<p>
+An article giving an overview of several prominent open-source version control
+systems that provide an alternative to CVS.
+</p>
+</entry>
+<entry id="wikis_overview" title="Which Open Source Wiki Works For You?" url="http://www.oreillynet.com/pub/a/onlamp/2004/11/04/which_wiki.html">
+<p>
+An article giving a roundup of open-source Wiki implementations which enable
+the user to create a world-editable web-site.
+</p>
+</entry>
+<entry id="devel_linetrace" title="Debug Your Programs with Devel::LineTrace" url="http://www.perl.com/pub/a/2005/03/31/lightning2.html?page=2">
+<p>
+A lightning article about how to insert debugging callbacks into a Perl 
+program without modifying its code.
+</p>
+</entry>
+</section>      
+</contents>
+</index>

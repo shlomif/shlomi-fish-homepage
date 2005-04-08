@@ -110,3 +110,6 @@ t2/SFresume.html.wml : t2/SFresume_base.wml
 t2/SFresume_detailed.html.wml : t2/SFresume_base.wml
 	touch $@
 
+t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
+	touch $@
+

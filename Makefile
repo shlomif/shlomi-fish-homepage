@@ -58,8 +58,14 @@ upload_t2: $(T2_TARGETS)
 
 upload_vipe: $(VIPE_TARGETS)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )
-	
-upload: upload_t2 upload_vipe
+
+upload_t2_temp: $(T2_TARGETS)
+	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )
+
+upload_vipe_temp: $(VIPE_TARGETS)
+	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/vipe/ )
+
+upload: upload_t2_temp upload_vipe_temp
 
 clean:
 	rm -fr $(T2_DEST)/*

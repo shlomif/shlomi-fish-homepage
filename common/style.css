@@ -1,10 +1,10 @@
 :link:hover, :visited:hover, img.highlight:hover 
 { 
-    background-color : LightGreen;
+    background-color : #90EE90; /* LightGreen */
 }
 td.navbar 
 { 
-    background-color: moccasin;  
+    background-color: #FFE4B5; /* moccasin */
     width : 20%;
     padding-right : 1em;
     padding-top : 0.5em;
@@ -31,8 +31,6 @@ div.rightalign { text-align : right }
     http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
 */
 
-table.shlomif { border-width : 1 ; border-color : black }
-table.shlomif td { vertical-align : top ; align : left }
 td.main 
 {
     padding-left : 1em;
@@ -66,5 +64,5 @@ ul.nospace
 }
 .leading_path a:hover
 {
-    background-color : orange;
+    background-color : #FFA500; /* orange */
 }

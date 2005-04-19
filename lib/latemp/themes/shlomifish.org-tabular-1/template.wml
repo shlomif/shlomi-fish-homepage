@@ -1,61 +1,7 @@
-# #use wml::des::navbar
-#include '../std/logo.wml'
-
-<:{
-use MyNavData;
-use HTML::Widgets::NavMenu;
-
-my $filename = "$(LATEMP_FILENAME)";
-$filename =~ s!index\.html$!!;
-$filename = "/$filename";
-
-use vars qw($nav_bar);
-
-$nav_bar = HTML::Widgets::NavMenu->new(
-    'path_info' => $filename,
-    'current_host' => "$(LATEMP_SERVER)",
-    MyNavData::get_params(),
-    'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
-    );
-
-my $rendered_results = $nav_bar->render();
-
-use vars qw($nav_links);
-
-$nav_links = $rendered_results->{nav_links};
-
-use vars qw($nav_html);
-
-$nav_html = $rendered_results->{html};
-
-my $leading_path = $rendered_results->{leading_path};
-
-my $render_leading_path_component = sub {
-    my $component = shift;
-    my $title = $component->title();
-    my $title_attr = defined($title) ? " title=\"$title\"" : "";
-    return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
-        "\"$title_attr>" .
-        $component->label() . "</a>";
-};
-
-use vars qw($leading_path_string);
-
-$leading_path_string =
-    join(" &rarr; ",
-        (map
-        { $render_leading_path_component->($_) }
-        @$leading_path
-        ));
-
-}:>
-
+<latemp_init_h_w_navmenu />
 
 # Utility Functions.
-
 <define-tag software_patents>1</define-tag>
-
-<define-tag mynot><if "%0" "" "1" /></define-tag>
 
 <define-tag printable_style>
 <style type="text/css">
@@ -64,29 +10,8 @@ table.cv td { vertical-align : top }
 </style>
 </define-tag>
 
-# The Definition of the page itself
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>{#SUBJECT_LOC#}</title>
-<link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
-<link rel="shortcut icon" href="$(ROOT)/favicon.ico" type="image/x-icon" />
-<:{
-use CGI qw();
-
-my @keys = (sort { $a cmp $b } keys(%$nav_links));
-foreach my $key (@keys)
-{
-    my $url = $nav_links->{$key};
-    print "<link rel=\"$key\" href=\"" . CGI::escapeHTML($url) . "\" />\n"
-}
-}:>
-<if "$(PRINTABLE)" "<printable_style />" "" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
+<latemp_html_header standard="xhtml1.1" />
+<latemp_html_head_tag />
 <body>
 <define-tag rellink whitespace="delete">
 <preserve url />
@@ -210,7 +135,7 @@ Stop Using Internet Explorer!</a>
 # </define-tag>
 <if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
 
-<h1>{#SUBJECT_LOC#}</h1>
+<h1>{#LATEMP_SUBJECT_LOC#}</h1>
 {#BODY#}
 
 <define-tag end_table>

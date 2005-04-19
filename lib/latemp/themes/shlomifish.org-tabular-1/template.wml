@@ -35,40 +35,6 @@ table.cv td { vertical-align : top }
 
 <define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
 
-<define-tag validhtml>
-<p>
-<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img 
-   style="margin-top:1em; border:0;" alt="Get Firefox!" 
-   title="Get Firefox! A safer, faster, better web-browser." 
-   src="$(ROOT)/images/get-firefox.gif" /></a>
-</p>
-<p>
-<a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0!"><img 
-    class="highlight" style="border:0;" 
-    src="$(ROOT)/images/valid-xhtml10.png" 
-    alt="Valid XHTML 1.0!" height="31" width="88" 
-    /></a>
-</p>
-<p>
- <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"><img 
-    class="highlight" style="border:0;"
-    src="$(ROOT)/images/valid-css.png" 
-    alt="Valid CSS!" /></a>
-</p>
-<p>
-<a href="http://thewml.org/" title="Website META Language"><img 
-src="$(ROOT)/images/logo-wml.png" alt="Website Meta Language" style="border:0" 
-width="100" height="50" /></a>
-</p>
-<p>
-<a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!"><img src="$(ROOT)/images/noIE.png" 
-class="highlight" style="border:0" 
-alt="Stop Using Internet Explorer!" /><br />
-Stop Using Internet Explorer!</a>
-</p>
-</define-tag>
-
-
 <define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
 <tr>
@@ -126,7 +92,7 @@ Stop Using Internet Explorer!</a>
 <a href="<rellink host="t2" url="site-map/" />"><b>Site Map</b></a>
 </p>
 
-<validhtml />
+<latemp_affiliations_buttons_text />
 
 </td>
 <td valign="top" class="main">

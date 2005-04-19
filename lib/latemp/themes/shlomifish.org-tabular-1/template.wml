@@ -33,35 +33,7 @@ table.cv td { vertical-align : top }
      style="border:0;margin-bottom:0.5em;" /></a></div>"
     ""
     />
-<:{ 
-    my $nav_buttons_html = "";
-    foreach my $button 
-        (
-            { 
-                'dir' => "prev", 
-                'button' => "left", 
-                'title' => "Previous Page",
-            },
-            { 
-                'dir' => "up", 
-                'button' => "up", 
-                'title' => "Up in the Site",
-            },
-            {
-                'dir' => "next", 
-                'button' => "right", 
-                'title' => "Next Page",
-            },
-       )
-   {
-        my $dir = $button->{dir};
-        my $key = substr($dir, 0, 1);
-        my $key_uc = uc($key);
-        $nav_buttons_html .= "<a href=\"" . CGI::escapeHTML($nav_links->{$button->{dir}}) . 
-            "\" title=\"$button->{title} (Alt+$key_uc)\" accesskey=\"$key\"><img src=\"$(ROOT)/images/arrow-$button->{button}.png\" alt=\"$button->{title}\" style=\"border:0\" /></a>\n";
-   }
-   print "<div class=\"center\">\n$nav_buttons_html\n</div>";
-}:>
+<latemp_get_html_body_nav_links with_accesskey="1" />
 <latemp_get_nav_menu_html />
 <p>
 <a href="<rellink host="t2" url="site-map/" />"><b>Site Map</b></a>

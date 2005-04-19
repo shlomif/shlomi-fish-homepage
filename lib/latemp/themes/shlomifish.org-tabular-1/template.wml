@@ -1,3 +1,5 @@
+#include "utils.wml"
+
 <latemp_init_h_w_navmenu />
 
 # Utility Functions.
@@ -13,9 +15,6 @@ table.cv td { vertical-align : top }
 <latemp_html_header standard="xhtml1.1" />
 <latemp_html_head_tag />
 <body>
-
-#include "utils.wml"
-
 <define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
 <tr>
@@ -123,12 +122,6 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 
 </body>
 </html>
-
-
-
-<define-tag subject>
-{#SUBJECT_LOC#:%0:##}
-</define-tag>
 
 <define-tag longblank>
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

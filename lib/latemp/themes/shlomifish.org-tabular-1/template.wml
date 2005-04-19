@@ -13,27 +13,8 @@ table.cv td { vertical-align : top }
 <latemp_html_header standard="xhtml1.1" />
 <latemp_html_head_tag />
 <body>
-<define-tag rellink whitespace="delete">
-<preserve url />
-<preserve host />
-<preserve title />
-<set-var %attributes />
-<set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
-<if <match "<get-var url />" "^http://" action="report" />
-    "<get-var url />" 
-    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
-        "$(ROOT)/<get-var url />"
-        <ifeq "<get-var host />" "t2"
-            "http://www.shlomifish.org/<get-var url />"
-            "http://vipe.technion.ac.il/~shlomif/<get-var url />"
-            />
-    />
-/>
-<restore title />
-<restore host />
-<restore url /></define-tag>
 
-<define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
+#include "utils.wml"
 
 <define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">

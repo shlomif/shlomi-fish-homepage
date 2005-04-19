@@ -5,3 +5,25 @@
 <restore href />
 </define-tag>
 
+<define-tag rellink whitespace="delete">
+<preserve url />
+<preserve host />
+<preserve title />
+<set-var %attributes />
+<set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
+<if <match "<get-var url />" "^http://" action="report" />
+    "<get-var url />" 
+    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
+        "$(ROOT)/<get-var url />"
+        <ifeq "<get-var host />" "t2"
+            "http://www.shlomifish.org/<get-var url />"
+            "http://vipe.technion.ac.il/~shlomif/<get-var url />"
+            />
+    />
+/>
+<restore title />
+<restore host />
+<restore url /></define-tag>
+
+<define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
+

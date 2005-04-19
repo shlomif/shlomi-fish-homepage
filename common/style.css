@@ -16,6 +16,21 @@ td.navbar
     font-size : small;
     margin-left : 0.3em;
 }
+
+.nav_links
+{
+    text-align: center;
+    padding-left : 0em;
+    padding-top : 0em;
+}
+.nav_links li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 0.2em;
+    padding-top: 0em;
+}
+
 p.desc { margin-left : 3em }
 ul.navbarmain { padding-left : 1em ; margin-left : 1em }
 ul.navbarnested { padding-left : 0em ; margin-left : 2em }
@@ -66,3 +81,9 @@ ul.nospace
 {
     background-color : #FFA500; /* orange */
 }
+/* Border-less */
+.bless
+{
+    border : none;
+}
+

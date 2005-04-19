@@ -5,7 +5,7 @@
 use MyNavData;
 use HTML::Widgets::NavMenu;
 
-my $filename = "$(FILENAME)";
+my $filename = "$(LATEMP_FILENAME)";
 $filename =~ s!index\.html$!!;
 $filename = "/$filename";
 
@@ -13,7 +13,7 @@ use vars qw($nav_bar);
 
 $nav_bar = HTML::Widgets::NavMenu->new(
     'path_info' => $filename,
-    'current_host' => "$(SERVER)",
+    'current_host' => "$(LATEMP_SERVER)",
     MyNavData::get_params(),
     'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
     );
@@ -96,7 +96,7 @@ foreach my $key (@keys)
 <set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
 <if <match "<get-var url />" "^http://" action="report" />
     "<get-var url />" 
-    <ifeq "$(SERVER)" "<get-var host />"
+    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
         "$(ROOT)/<get-var url />"
         <ifeq "<get-var host />" "t2"
             "http://www.shlomifish.org/<get-var url />"
@@ -240,8 +240,8 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 
 ;;; If it is the t2 index than display the hosted:at:tech macro
 ;;; Else - display the back to my homepage image
-<if <ifeq "$(FILENAME)" "index.html" 
-        <ifeq "$(SERVER)" "t2" "t2" "" /> "" /> 
+<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
+        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
     <hosted:at:tech />
     <backtomyhp />
     />

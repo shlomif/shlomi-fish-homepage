@@ -61,8 +61,8 @@ table.cv td { vertical-align : top }
             "\" title=\"$button->{title} (Alt+$key_uc)\" accesskey=\"$key\"><img src=\"$(ROOT)/images/arrow-$button->{button}.png\" alt=\"$button->{title}\" style=\"border:0\" /></a>\n";
    }
    print "<div class=\"center\">\n$nav_buttons_html\n</div>";
-}:>    
-<:{ print join("\n", @$nav_html); }:>
+}:>
+<latemp_get_nav_menu_html />
 <p>
 <a href="<rellink host="t2" url="site-map/" />"><b>Site Map</b></a>
 </p>

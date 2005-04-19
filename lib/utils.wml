@@ -8,7 +8,6 @@
 <define-tag rellink whitespace="delete">
 <preserve url />
 <preserve host />
-<preserve title />
 <set-var %attributes />
 <set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
 <if <match "<get-var url />" "^http://" action="report" />
@@ -21,7 +20,6 @@
             />
     />
 />
-<restore title />
 <restore host />
 <restore url /></define-tag>
 

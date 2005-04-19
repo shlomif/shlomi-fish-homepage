@@ -1,0 +1,95 @@
+#include "utils.wml"
+
+<latemp_init_h_w_navmenu />
+
+# Utility Functions.
+<define-tag software_patents>1</define-tag>
+
+<define-tag printable_style>
+<style type="text/css">
+table.cv { width : 100% ; border : none ; }
+table.cv td { vertical-align : top }
+</style>
+</define-tag>
+
+<latemp_html_header standard="xhtml1.1" />
+<latemp_html_head_tag />
+<body>
+<define-tag start_table>
+<table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
+<tr>
+<td colspan="2" class="leading_path">
+<latemp_get_breadcrumbs_trail />
+</td>
+</tr>
+<tr>
+<td valign="top" class="navbar" style="width:20%">
+
+<if "<software_patents />" 
+    "<div class="center"><a href="http://swpat.ffii.org/" 
+     title="Stop Software Patents!"><img 
+     src="$(ROOT)/images/noepatents_liberty.png" 
+     alt="Stop Software Patents" class="highlight" 
+     style="border:0;margin-bottom:0.5em;" /></a></div>"
+    ""
+    />
+<latemp_get_html_body_nav_links with_accesskey="1" />
+<latemp_get_nav_menu_html />
+<p>
+<a href="<rellink host="t2" url="site-map/" />"><b>Site Map</b></a>
+</p>
+
+<latemp_affiliations_buttons_text />
+
+</td>
+<td valign="top" class="main">
+</define-tag>
+
+# </define-tag>
+<if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
+
+<h1>{#LATEMP_SUBJECT_LOC#}</h1>
+{#LATEMP_BODY#}
+
+<define-tag end_table>
+</td>
+</tr>
+</table>
+<hr />
+
+
+
+<define-tag hosted:at:tech>
+<div class="rightalign">
+<a href="http://www.actcom.co.il/"><img src="images/actcom-50-2.gif" 
+   alt="Hosted at Actcom" class="highlight" style="border : 0" 
+   title="Hosted at Actcom" /></a>
+</div>
+</define-tag>
+
+<define-tag backtomyhp>
+<div>
+<a href="<rellink url="" host="t2" />"><img src="$(ROOT)/images/bk2hp.png" class="highlight" style="border : 0" alt="Back to my Homepage" /></a>
+</div>
+</define-tag>
+<p>
+Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</a>
+</p>
+
+;;; If it is the t2 index than display the hosted:at:tech macro
+;;; Else - display the back to my homepage image
+<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
+        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
+    <hosted:at:tech />
+    <backtomyhp />
+    />
+</define-tag>
+
+<if <mynot "$(PRINTABLE)" /> "<end_table />" "" />
+
+</body>
+</html>
+
+#   per default we are in body
+{#LATEMP_BODY#:
+

@@ -82,7 +82,7 @@ table.cv td { vertical-align : top }
 <if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
 
 <h1>{#LATEMP_SUBJECT_LOC#}</h1>
-{#BODY#}
+{#LATEMP_BODY#}
 
 <define-tag end_table>
 </td>
@@ -123,17 +123,6 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 </body>
 </html>
 
-<define-tag longblank>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</define-tag>
-
-<define-tag email:link>
-<a href="mailto:%0">%0</a>
-</define-tag>
-
 #   per default we are in body
-{#BODY#:
+{#LATEMP_BODY#:
 

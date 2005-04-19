@@ -1,6 +1,8 @@
-WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=3,-w -I../lib/ -DROOT~.
+WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=3,-w -I../lib/ -I/home/shlomi/progs/wml/Latemp/latemp/trunk/multi-host-site/lib -DROOT~. -DLATEMP_THEME=shlomifish.org-tabular-1
 
 ALL_DEST_BASE = dest
+
+DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
 all: latemp_targets
 	
@@ -29,8 +31,6 @@ upload: upload_t2 upload_vipe
 clean:
 	rm -fr $(T2_DEST)/*
 	rm -fr $(VIPE_DEST)/*
-
-DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
 t2/SFresume.html.wml : lib/SFresume_base.wml
 	touch $@

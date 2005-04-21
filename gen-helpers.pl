@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-use lib "/home/shlomi/progs/wml/Latemp/latemp/trunk/multi-host-site";
-
 use HTML::Latemp::GenMakeHelpers;
 
 my $generator = 

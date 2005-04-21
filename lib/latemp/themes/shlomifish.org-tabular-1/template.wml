@@ -1,9 +1,16 @@
 #include "utils.wml"
 
+<define-tag latemp_theme_breadcrumbs_trail_html>
+<tr>
+<td colspan="2" class="leading_path">
+<latemp_get_breadcrumbs_trail_unconditionally />
+</td>
+</tr>
+</define-tag>
+
 <latemp_init_h_w_navmenu />
 
 # Utility Functions.
-<define-tag software_patents>1</define-tag>
 
 <define-tag printable_style>
 <style type="text/css">
@@ -17,22 +24,10 @@ table.cv td { vertical-align : top }
 <body>
 <define-tag start_table>
 <table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
-<tr>
-<td colspan="2" class="leading_path">
 <latemp_get_breadcrumbs_trail />
-</td>
-</tr>
 <tr>
 <td valign="top" class="navbar" style="width:20%">
-
-<if "<software_patents />" 
-    "<div class="center"><a href="http://swpat.ffii.org/" 
-     title="Stop Software Patents!"><img 
-     src="$(ROOT)/images/noepatents_liberty.png" 
-     alt="Stop Software Patents" class="highlight" 
-     style="border:0;margin-bottom:0.5em;" /></a></div>"
-    ""
-    />
+<latemp_top_left_corner_logo_text />
 <latemp_get_html_body_nav_links with_accesskey="1" />
 <latemp_get_nav_menu_html />
 <p>

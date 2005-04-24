@@ -10,16 +10,7 @@
 
 <latemp_init_h_w_navmenu />
 
-# Utility Functions.
-
-<define-tag printable_style>
-<style type="text/css">
-table.cv { width : 100% ; border : none ; }
-table.cv td { vertical-align : top }
-</style>
-</define-tag>
-
-<latemp_html_header standard="xhtml1.1" />
+<latemp_html_header />
 <latemp_html_head_tag />
 <body>
 <define-tag start_table>
@@ -30,9 +21,6 @@ table.cv td { vertical-align : top }
 <latemp_top_left_corner_logo_text />
 <latemp_get_html_body_nav_links with_accesskey="1" />
 <latemp_get_nav_menu_html />
-<p>
-<a href="<rellink host="t2" url="site-map/" />"><b>Site Map</b></a>
-</p>
 
 <latemp_affiliations_buttons_text />
 

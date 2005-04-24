@@ -282,6 +282,15 @@ my $tree_contents =
             'skip' => 1,
         },
         {
+            'url' => "site-map/",
+            'text' => "Site Map",
+            'title' => "A site map showing all of the main pages.",
+        },
+        {
+            'separator' => 1,
+            'skip' => 1,
+        },
+        {
             'url' => "site-source/",
             'text' => "Site's Source",
             'title' => "The source code used to generate this site",

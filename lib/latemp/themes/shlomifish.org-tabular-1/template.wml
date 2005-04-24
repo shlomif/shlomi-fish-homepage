@@ -40,30 +40,11 @@
 </table>
 <hr />
 
-
-
-<define-tag hosted:at:tech>
-<div class="rightalign">
-<a href="http://www.actcom.co.il/"><img src="images/actcom-50-2.gif" 
-   alt="Hosted at Actcom" class="highlight" style="border : 0" 
-   title="Hosted at Actcom" /></a>
-</div>
-</define-tag>
-
-<define-tag backtomyhp>
-<div>
-<a href="<rellink url="" host="t2" />"><img src="$(ROOT)/images/bk2hp.png" class="highlight" style="border : 0" alt="Back to my Homepage" /></a>
-</div>
-</define-tag>
 <latemp_webmaster_text />
+<latemp_timestamp_text />
+<latemp_license_text />
+<latemp_foot_image_text />
 
-;;; If it is the t2 index than display the hosted:at:tech macro
-;;; Else - display the back to my homepage image
-<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
-        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
-    <hosted:at:tech />
-    <backtomyhp />
-    />
 </define-tag>
 
 <if <mynot "$(PRINTABLE)" /> "<end_table />" "" />

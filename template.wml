@@ -1,9 +1,11 @@
+#include "utils.wml"
 <define-tag software_patents>1</define-tag>
 <set-var latemp_with_favicon="1" />
 <set-var latemp_with_xml_declaration="1" />
 <set-var latemp_with_breadcrumbs_trail="1" />
 <set-var latemp_html_standard="xhtml1.1" />
 <set-var latemp_nav_links_allowed_places="top-left" />
+<set-var latemp_gen_plain_page="$(PRINTABLE)" />
 #include "latemp/latemp-main.wml"
 
 <latemp_top_left_corner_logo>

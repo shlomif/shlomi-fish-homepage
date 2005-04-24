@@ -2,7 +2,7 @@ LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-include-path)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ -I$(LATEMP_WML_INCLUDE_PATH) \
-	-DROOT~. -DLATEMP_THEME=shlomifish.org-tabular-1
+	-DROOT~. -DLATEMP_THEME=perl-begin-1
 
 ALL_DEST_BASE = dest
 

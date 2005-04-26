@@ -1,7 +1,7 @@
-LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-include-path)
+LATEMP_WML_FLAGS =$(shell latemp-config --wml-flags)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
-	--passoption=3,-w -I../lib/ -I$(LATEMP_WML_INCLUDE_PATH) \
+	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
 	-DROOT~. -DLATEMP_THEME=perl-begin-1
 
 ALL_DEST_BASE = dest

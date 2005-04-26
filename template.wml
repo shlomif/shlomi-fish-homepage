@@ -7,6 +7,7 @@
 <set-var latemp_nav_links_allowed_places="top-left" />
 <set-var latemp_gen_plain_page="$(PRINTABLE)" />
 #include "latemp/latemp-main.wml"
+#include "shlomif/affiliations.wml"
 
 <latemp_top_left_corner_logo>
 <if "<software_patents />" 
@@ -25,30 +26,7 @@
 <latemp_common_keywords "Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Subversion, version control, Web, Web Design, DeCSS, Software" />
 <latemp_meta_desc "Shlomi Fish' Homepage" />
 <latemp_affiliations_buttons>
-<p>
-<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img 
-   style="margin-top:1em; border:0;" alt="Get Firefox!" 
-   title="Get Firefox! A safer, faster, better web-browser." 
-   src="$(ROOT)/images/get-firefox.gif" /></a>
-</p>
-<p>
-<a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!"><img 
-    class="highlight bless"
-    src="$(ROOT)/images/valid-xhtml11.png" 
-    alt="Valid XHTML 1.1!" height="31" width="88" 
-    /></a>
-</p>
-<p>
- <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"><img 
-    class="highlight" style="border:0;"
-    src="$(ROOT)/images/valid-css.png" 
-    alt="Valid CSS!" /></a>
-</p>
-<p>
-<a href="http://thewml.org/" title="Website META Language"><img 
-src="$(ROOT)/images/logo-wml.png" alt="Website Meta Language" style="border:0" 
-width="100" height="50" /></a>
-</p>
+<affil_collection_shlomif />
 <p>
 <a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!"><img src="$(ROOT)/images/noIE.png" 
 class="highlight" style="border:0" 

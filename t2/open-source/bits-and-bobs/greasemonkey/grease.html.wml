@@ -1,0 +1,19 @@
+#include '../template.wml'
+<latemp_subject "Greasemonkey Scripts" />
+
+<h2><a href="no-accesskey.user.js">Eliminate Access Keys</a></h2>
+
+<p>
+What this script does is remove access keys from all the elements of the 
+page. This is relevant to sites such as 
+<a href="http://www.wikipedia.org/">the Wikipedia</a> that trap many commonly
+used shortcuts (like Alt+F, Alt+E).
+</p>
+
+<p>
+Note that because of 
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290801">a 
+bug in Mozilla</a> it cannot cancel accesskeys assigned to &lt;input /&gt;
+boxes. It would be able to do so once the bug is fixed.
+</p>
+

@@ -158,6 +158,13 @@ my $tree_contents =
                     'url' => "open-source/projects/quad-pres/",
                 },
                 {
+                    'text' => "Gradient-Fu",
+                    'title' => "Gradient-Fu Patch for the GIMP",
+                    'url' => "grad-fu/",
+                    'host' => "t2",
+                    'hide' => 1,
+                },                
+                {
                     'text' => "Favourite OSS",
                     'title' => "Favourite Open-Source Software",
                     'url' => "open-source/favourite/",

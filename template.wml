@@ -6,6 +6,7 @@
 <set-var latemp_html_standard="xhtml1.1" />
 <set-var latemp_nav_links_allowed_places="top-left" />
 <set-var latemp_gen_plain_page="$(PRINTABLE)" />
+<set-var latemp_with_head_meta_tags="1" />
 #include "latemp/latemp-main.wml"
 #include "shlomif/affiliations.wml"
 

@@ -55,6 +55,12 @@ my $tree_contents =
                         },
                     ],
                 },
+                {
+                    'text' => "Personal Ad",
+                    'url' => "me/personal-ad.html",
+                    'title' => "My Personal Ad: what I'm looking for in a prospective girlfriend and what I can add to the relationship.",
+                },
+                
             ],               
         },
         {
@@ -86,6 +92,11 @@ my $tree_contents =
                     'text' => "TOWTF",
                     'url' => "humour/TOWTF/",
                     'title' => "The One with the Fountainhead",
+                },
+                {
+                    'text' => "HHFG",
+                    'url' => "humour/human-hacking/",
+                    'title' => "The Human Hacking Field Guide",
                 },
                 {
                     'text' => "The Pope",
@@ -201,7 +212,7 @@ my $tree_contents =
             ],
         },
         {
-            'text' => "Lectures", 
+            'text' => "Lectures",
             'url' => "lecture/",
             'expand' => { 're' => "^lecture/", },
             'title' => "Presentations I Wrote (Mostly Technical)",

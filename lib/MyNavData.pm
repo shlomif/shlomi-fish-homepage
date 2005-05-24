@@ -116,6 +116,12 @@ my $tree_contents =
                     'host' => "vipe",
                     'hide' => 1,
                 },
+                {
+                    'text' => "Ways to do it",
+                    'title' => "&quot;Ways to do it&quot; according to the programming languages of the world",
+                    'url' => "humour/ways_to_do_it.html",
+                    'hide' => 1,
+                },
             ],
         },
         {

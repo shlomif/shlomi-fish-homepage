@@ -4,6 +4,7 @@
 }
 .navbar 
 { 
+    float : left;
     background-color: #FFE4B5; /* moccasin */
     width : 20%;
     padding-right : 1em;
@@ -47,9 +48,10 @@ div.rightalign { text-align : right }
     http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
 */
 
-td.main 
+.main 
 {
     padding-left : 1em;
+    margin-left : 25%;
 }
 ul.noindent { margin-left : 0em }
 div.center { text-align: center }
@@ -73,6 +75,10 @@ ul.nospace
 .leading_path
 {
     background-color : #80d000;
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.15em;
 }
 .leading_path a:visited
 {
@@ -86,5 +92,18 @@ ul.nospace
 .bless
 {
     border : none;
+}
+.footer {
+    clear : both;
+    margin-right : 30px;
+    padding-top: 0.5em;
+}
+/* Workaround to get the <hr /> element at the bottom to properly display 
+   with Konqueror 3.3.x
+   */
+.footer hr
+{
+    width:100%;
+    clear:both;
 }
 

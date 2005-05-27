@@ -55,6 +55,12 @@ my $tree_contents =
                         },
                     ],
                 },
+                {
+                    'text' => "Personal Ad",
+                    'url' => "me/personal-ad.html",
+                    'title' => "My Personal Ad: what I'm looking for in a prospective girlfriend and what I can add to the relationship.",
+                },
+                
             ],               
         },
         {
@@ -88,6 +94,11 @@ my $tree_contents =
                     'title' => "The One with the Fountainhead",
                 },
                 {
+                    'text' => "HHFG",
+                    'url' => "humour/human-hacking/",
+                    'title' => "The Human Hacking Field Guide",
+                },
+                {
                     'text' => "The Pope",
                     'url' => "humour/Pope/",
                     'title' => "The Pope Died on Sunday",
@@ -103,6 +114,12 @@ my $tree_contents =
                     'title' => "Collection of Files for Input to the UNIX 'fortune' Program",
                     'url' => "humour/fortunes/",
                     'host' => "vipe",
+                    'hide' => 1,
+                },
+                {
+                    'text' => "Ways to do it",
+                    'title' => "&quot;Ways to do it&quot; according to the programming languages of the world",
+                    'url' => "humour/ways_to_do_it.html",
                     'hide' => 1,
                 },
             ],
@@ -201,7 +218,7 @@ my $tree_contents =
             ],
         },
         {
-            'text' => "Lectures", 
+            'text' => "Lectures",
             'url' => "lecture/",
             'expand' => { 're' => "^lecture/", },
             'title' => "Presentations I Wrote (Mostly Technical)",

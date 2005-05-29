@@ -13,8 +13,13 @@ svn checkout http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trun
 </pre>
 
 <p>
+To build the site you'll need 
+<a href="http://web-cpan.berlios.de/latemp/">Latemp</a> and all of its 
+depenedencies.
+</p>
+
+<p>
 Afterwards, cd to <tt>trunk</tt> and invoke the
-command <tt>bash gen_helpers.sh</tt>. To build the site you'll need GNU make,
-and <a href="http://thewml.org/">Web Meta Language</a>.
+command <tt>perl gen-helpers.pl</tt>. 
 </p>
 

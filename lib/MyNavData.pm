@@ -60,7 +60,11 @@ my $tree_contents =
                     'url' => "me/personal-ad.html",
                     'title' => "My Personal Ad: what I'm looking for in a prospective girlfriend and what I can add to the relationship.",
                 },
-                
+                {
+                    'text' => "My Weblogs",
+                    'url' => "me/blogs/",
+                    'title' => "Links to my online journals.",
+                },
             ],               
         },
         {

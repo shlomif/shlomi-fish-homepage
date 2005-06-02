@@ -149,6 +149,12 @@ my $tree_contents =
                     'url' => "art/linux_banner/",
                     'title' => "Linux - Because Software Problems should not Cost Money",
                 },
+                {
+                    'text' => "Made with Latemp",
+                    'url' => "art/made-with-latemp/",
+                    'title' => "&quot;Made with Latemp&quot; Button",
+                },
+                
             ],
         },
         {

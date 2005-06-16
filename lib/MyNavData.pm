@@ -154,6 +154,11 @@ my $tree_contents =
                     'url' => "art/made-with-latemp/",
                     'title' => "&quot;Made with Latemp&quot; Button",
                 },
+                {
+                    'text' => "HHFG Background",
+                    'url' => "art/hhfg-background/",
+                    'title' => "Background Image for the &quot;Human Hacking Field Guide&quot; Story",
+                },
                 
             ],
         },

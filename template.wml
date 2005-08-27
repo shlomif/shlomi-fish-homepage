@@ -10,15 +10,6 @@
 #include "latemp/latemp-main.wml"
 #include "shlomif/affiliations.wml"
 
-
-<latemp_top_banner>
-<div class="banner"><a 
-href="http://www.jlc.org.il/welcome2005/"><img 
-class="bless" src="$(ROOT)/images/W2L-banner1-black.jpg" 
-alt="Out on vacation with Linux in Jerusalem!" title="Go out on vacation with 
-Linux in Jerusalem!" /></a></div>
-</latemp_top_banner>
-
 <latemp_top_left_corner_logo>
 <if "<software_patents />" 
     "<div class="center"><a href="http://swpat.ffii.org/" 

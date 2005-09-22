@@ -6,9 +6,11 @@ WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 
 ALL_DEST_BASE = dest
 
+FORTUNES_TARGET = dest/vipe-homepage/humour/fortunes/fortunes-index.html
+
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: latemp_targets
+all: latemp_targets $(FORTUNES_TARGET)
 	
 include include.mak
 include rules.mak
@@ -44,4 +46,7 @@ t2/SFresume_detailed.html.wml : lib/SFresume_base.wml
 
 t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 	touch $@
+
+$(FORTUNES_TARGET): vipe/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEPS)
+	( cd vipe && wml $(WML_FLAGS) -DLATEMP_SERVER=vipe -DLATEMP_FILENAME=humour/fortunes/index.html humour/fortunes/fortunes-index.html.wml ) > $@
 

@@ -117,6 +117,14 @@ ul.nospace
     text-align: center;
     margin-bottom: 4pt;
 }
+.books
+{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-image: url("./images/grsites-beige049-modified.png");
+}
 .books dt
 {
     border: 1pt solid #E080E0;
@@ -134,6 +142,7 @@ ul.nospace
     margin-right: 0.5em;
     margin-top: 0.7em;
     margin-bottom: 0.7em;
+    border: 1pt solid black;
 }
 .books dd p
 {

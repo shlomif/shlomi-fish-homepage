@@ -117,5 +117,26 @@ ul.nospace
     text-align: center;
     margin-bottom: 4pt;
 }
-
-
+.books dt
+{
+    border: 1pt solid #E080E0;
+    padding: 0.2em;
+    background-color: #F0F0FF;
+}
+.books dd
+{
+    background-color: #E0FFE0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-left: 0.5em;    
+    margin-right: 0.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+.books dd p
+{
+    margin-top: 3pt;
+    margin-bottom: 7pt;
+}

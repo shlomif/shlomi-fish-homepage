@@ -214,6 +214,40 @@ UNIX software. You can read
 <a href="http://wiki.perl.org.il/index.php/Book_Review_-_The_Art_of_Unix_Programming_-_reviewed_by_Shlomi_Fish">a 
 more detailed review and critique</a> of this book by me, and also <a href="http://www.catb.org/~esr/writings/taoup/">read it online</a>.
 </dd>
+<dt><a href="http://www.amazon.com/exec/obidos/tg/detail/-/1893115402/qid=1128840577/sr=8-1/ref=pd_bbs_1/104-2278436-7340713">The qmail Handbook</a> by Dave
+Sill</dt>
+<dd>
+<p>
+A very good book about the <a href="http://qmail.org/">qmail mail
+server</a>. Introduces the fundamental concepts of the server, and then
+instructs how to operate it, and configure other software for it. One thing
+to note about this book is that it convinced me that I should avoid using
+qmail unless it's already installed and has a configuration. qmail has a very
+problematic license, lacks most necessary features out of the box, is no
+longer maintained, has a very problematic creator and copyright owner, etc.
+</p>
+<p>
+If you're going to install a new mail server, take a look at 
+<a href="http://www.postfix.org/">Postfix</a>, 
+<a href="http://www.exim.org/">Exim</a>, 
+<a href="http://www.courier-mta.org/">Courier</a> or whatever. These are
+open-source, are actively developed, and lack all of the aforementioned
+problems. "The qmail Handbook", however, is useful for those who need to 
+administer existing qmail configurations, or migrate them to a different
+implementation. You can also take a look at 
+<a href="http://www.lifewithqmail.org/">Life with qmail</a> which is a guide
+to qmail, by the same author.
+</p>
+</dd>
+<dt><a href="http://www.amazon.com/exec/obidos/tg/detail/-/1590590198/qid=1128841842/sr=1-1/ref=sr_1_1/104-2278436-7340713">SVG 
+Programming - The Graphical Web</a> by Kurt Cagle</dt>
+<dd>
+A great book about <a href="http://www.w3.org/Graphics/SVG/">SVG</a> 
+(= Scalable Vector Graphics), the emerging standard for vector graphics,
+animation and interactive applets on the web. It explains the standard step
+by step, with many nuances covered. The final chapters cover some advanced
+techniques. Highly recommended.
+</dd>
 ;;; To add:
 </dl>
 

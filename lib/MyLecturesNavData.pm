@@ -109,7 +109,7 @@ my $essays_tree_contents =
                         },
                         {
                             'text' => "Project Intro",
-                            'url' => "lecture/Freecell-Solver/The-Next-Pres/project-intro/",
+                            'url' => "lecture/Freecell-Solver/project-intro/",
                             'title' => "Freecell Solver: Project Introduction",
                         },
                     ],

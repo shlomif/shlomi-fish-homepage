@@ -73,10 +73,14 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 </latemp_foot_image>
 
 #include "sub-menus/essays.wml"
+#include "sub-menus/lectures.wml"
 
 <latemp_after_main_title>
 <if "<match "$(LATEMP_FILENAME)" "^philosophy/" action="report" />"
     "<essays_sub_menu />"
-    "" />
+    "<if "<match "$(LATEMP_FILENAME)" "^lecture/" action="report" />"
+        "<lectures_sub_menu />"
+        "" />"
+    />
 </latemp_after_main_title>
 

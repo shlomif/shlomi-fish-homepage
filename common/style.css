@@ -177,4 +177,11 @@ ul.nospace
 {
    padding-left:10pt;
 }
-
+/* 
+This is to make sure the visited links look clear in Konqueror or other
+browsers where they are magenta by default.
+*/
+.sub_menu :visited
+{
+    color: #800080; /* Purple */
+}

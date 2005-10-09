@@ -63,7 +63,7 @@ $(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/philosophy/%.html.wml: $(PHILOSOPHY_DE
 
 T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))
 
-$(T2_LECTURES_DOCS_SRC):: $(T2_SRC_DIR)/lectures/%.html.wml: $(LECTURES_DEPS)
+$(T2_LECTURES_DOCS_SRC):: $(T2_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
 	touch $@
 
 VIPE_LECTURES_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/lecture/%,$(VIPE_DOCS_SRC))

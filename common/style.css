@@ -153,3 +153,28 @@ ul.nospace
     margin-top: 3pt;
     margin-bottom: 7pt;
 }
+.sub_menu
+{
+    background-color: #C0C0C0;
+    padding-top: 7pt;
+    padding-bottom: 7pt;
+    float: right;
+    margin-left: 7pt;
+    margin-right: 10pt;
+    padding-right:5pt;
+}
+.sub_menu ul
+{
+    list-style-type:disc;
+    list-style-position:inside;
+    margin-top:0;
+    margin-bottom:0;
+    padding-left:3pt;
+    font-size:80%;
+    font-family:sans-serif;
+}
+.sub_menu ul.nm_nested
+{
+   padding-left:10pt;
+}
+

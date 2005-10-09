@@ -44,9 +44,16 @@ t2/SFresume.html.wml : lib/SFresume_base.wml
 t2/SFresume_detailed.html.wml : lib/SFresume_base.wml
 	touch $@
 
-t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
+PHILOSOPHY_DEPS = lib/sub-menus/essays.wml lib/MyEssaysNavData.pm
+t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl $(PHILOSOPHY_DEPS)
 	touch $@
 
 $(FORTUNES_TARGET): vipe/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEPS)
 	( cd vipe && wml $(WML_FLAGS) -DLATEMP_SERVER=vipe -DLATEMP_FILENAME=humour/fortunes/index.html humour/fortunes/fortunes-index.html.wml ) > $@
+
+T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
+T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC)))
+
+$(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/philosophy/%.html.wml: $(PHILOSOPHY_DEPS)
+	touch $@
 

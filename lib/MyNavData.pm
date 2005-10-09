@@ -280,30 +280,27 @@ my $tree_contents =
             'title' => "Various Essays and Articles about Technology and Philosophy in General",
             'subs' =>
             [
+            
                 {
                     'text' => "Index to Essays",
                     'url' => "philosophy/Index/",
                     'title' => "Index to Essays and Articles I wrote.",
                 },
                 {
-                    'text' => "What is Open Source?",
-                    'url' => "philosophy/foss-other-beasts/",
-                    'title' => "Free Software, Open Source and Other Beasts",
+                    'text' => "Computing",
+                    'url' => "philosophy/computers/",
+                    'title' => "Computing-related Essays and Articles",
                 },
                 {
-                    'text' => "Perl &amp; Newcomers",
-                    'url' => "philosophy/perl-newcomers/",
-                    'title' => "&quot;Usability&quot; of the Perl Online World for Newcomers",
-                },
-                {
-                    'text' => "Objectivism and Open Source",
-                    'url' => "philosophy/obj-oss/",
-                    'title' => "Objectivism and Open Source",
+                    'text' => "Political Essays",
+                    'url' => "philosophy/politics/",
+                    'title' => "Essays about Politics and" . 
+                        "Philosophical Politics",
                 },
                 {
                     'text' => "The Eternal Jew",
                     'url' => "philosophy/the-eternal-jew/",
-                    'title' => "The Eternal Jew - An Essay about Philosophy",
+                    'title' => "The Eternal Jew - An Essay about the value of Self",
                 },
             ],
         },

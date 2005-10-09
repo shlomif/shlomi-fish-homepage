@@ -44,6 +44,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/perl/joy-of-perl/",
                     'title' => "An Essay about why I Like Perl so much.",
                 },
+                {
+                    'text' => "Perl 6 Critique",
+                    'url' => "philosophy/computers/perl/perl6-critique/",
+                    'title' => "Critique of where Perl 6 is Heading",
+                },
             ],
         },
         {

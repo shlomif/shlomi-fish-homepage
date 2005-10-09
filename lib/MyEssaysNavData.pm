@@ -38,7 +38,12 @@ my $essays_tree_contents =
                     'text' => "When C is the Best?",
                     'url' => "philosophy/computers/when-c-is-best/",
                     'title' => "An Essay that Explains when the C Language should be used instead of Other Languages",
-                },  
+                },
+                {
+                    'text' => "The Joy of Perl",
+                    'url' => "philosophy/computers/perl/joy-of-perl/",
+                    'title' => "An Essay about why I Like Perl so much.",
+                },
             ],
         },
         {

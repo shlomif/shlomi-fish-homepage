@@ -54,6 +54,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/perl/perl6-critique/",
                     'title' => "Critique of where Perl 6 is Heading",
                 },
+                {
+                    'text' => "Which Wiki?",
+                    'url' => "philosophy/computers/web/which-wiki/",
+                    'title' => "Which Open Source Wiki Engine Works for you",
+                },
             ],
         },
         {

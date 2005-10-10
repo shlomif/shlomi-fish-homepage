@@ -224,8 +224,7 @@ my $tree_contents =
                 {
                     'text' => "Portability Libraries",
                     'title' => "Cross-Platform Abstraction Libraries",
-                    'url' => "abstraction/",
-                    'host' => "vipe",
+                    'url' => "open-source/portability-libs/",
                     'hide' => 1,
                 },
                 {

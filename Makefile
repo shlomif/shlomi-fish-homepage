@@ -20,7 +20,7 @@ include rules.mak
 RSYNC = rsync --progress --verbose --rsh=ssh
 
 upload_t2: $(T2_TARGETS)
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/ )
+	( cd $(T2_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/ )
 
 upload_vipe: $(VIPE_TARGETS)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )

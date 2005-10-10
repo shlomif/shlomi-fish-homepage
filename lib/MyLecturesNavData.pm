@@ -121,6 +121,50 @@ my $essays_tree_contents =
                 },
             ],
         },
+        {
+            'text' => "CatB",
+            'url' => "lecture/CatB/",
+            'title' => "Presentation about the Cathedral and the Bazaar",
+        },
+        {
+            'text' => "Pres Tools",
+            'url' => "lecture/cat/pres-tools/",
+            'title' => "Tools for Preparing Slides for Presentations",
+            'subs' =>
+            [
+                {
+                    'text' => "Quad-Pres",
+                    'url' => "lecture/Quad-Pres/",
+                },
+                {
+                    'text' => "PerlPoint",
+                    'url' => "lecture/Pres-Tools/Perl-Point/",
+                },
+            ],
+        },
+        {
+            'text' => "Lightning Talks",
+            'url' => "lecture/cat/lightning-talks/",
+            'title' => "Short Presentations",
+            'subs' =>
+            [
+                {
+                    'text' => "Meta-Data Database Access",
+                    'url' => "lecture/mini/mdda/",
+                },
+                {
+                    'text' => "Graham Function",
+                    'url' => "lecture/Perl/Graham-Function/",
+                    'title' => "Presentation about Finding the Graham Function",
+
+                },
+                {
+                    'text' => "The Template Toolkit",
+                    'url' => "lecture/Perl/Template-Toolkit/",
+                    'title' => "A Powerful Templating System for Perl",
+                },
+            ],
+        },
     ],
 };
 

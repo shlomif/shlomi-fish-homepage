@@ -72,7 +72,7 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
     />
 </latemp_foot_image>
 
-<latemp_after_main_title>
+<latemp_before_main_title>
 <:{
     use MySectNavData;
 
@@ -88,5 +88,5 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 
     print $section_nav_menu->get_html();
 }:>
-</latemp_after_main_title>
+</latemp_before_main_title>
 

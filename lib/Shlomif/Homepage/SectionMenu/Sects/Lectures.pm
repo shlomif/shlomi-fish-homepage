@@ -1,4 +1,9 @@
-package MyLecturesNavData;
+package Shlomif::Homepage::SectionMenu::Sects::Lectures;
+
+use strict;
+use warnings;
+
+use MyNavData;
 
 my $essays_tree_contents =
 {

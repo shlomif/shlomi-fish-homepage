@@ -44,8 +44,9 @@ t2/SFresume.html.wml : lib/SFresume_base.wml
 t2/SFresume_detailed.html.wml : lib/SFresume_base.wml
 	touch $@
 
-PHILOSOPHY_DEPS = lib/sub-menus/essays.wml lib/MyEssaysNavData.pm
-LECTURES_DEPS = lib/sub-menus/lectures.wml lib/MyLecturesNavData.pm
+SECTION_MENU_DEPS = lib/Shlomif/Homepage/SectionMenu.pm
+PHILOSOPHY_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Essays.pm 
+LECTURES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Lectures.pm
 
 t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl $(PHILOSOPHY_DEPS)
 	touch $@

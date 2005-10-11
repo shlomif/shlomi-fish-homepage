@@ -1,4 +1,9 @@
-package MyEssaysNavData;
+package Shlomif::Homepage::SectionMenu::Sects::Essays;
+
+use strict;
+use warnings;
+
+use MyNavData;
 
 my $essays_tree_contents =
 {

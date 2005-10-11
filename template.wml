@@ -72,15 +72,21 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
     />
 </latemp_foot_image>
 
-#include "sub-menus/essays.wml"
-#include "sub-menus/lectures.wml"
-
 <latemp_after_main_title>
-<if "<match "$(LATEMP_FILENAME)" "^philosophy/" action="report" />"
-    "<essays_sub_menu />"
-    "<if "<match "$(LATEMP_FILENAME)" "^lecture/" action="report" />"
-        "<lectures_sub_menu />"
-        "" />"
-    />
+<:{
+    use MySectNavData;
+
+    use vars (qw($section_nav_menu));
+    my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
+    $filename =~ s{index\.html$}{};
+    $filename = "/$filename";
+
+    $section_nav_menu = MySectNavData::get_nav_menu(
+        'path_info' => $filename,
+        'current_host' => "<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />",
+        );
+
+    print $section_nav_menu->get_html();
+}:>
 </latemp_after_main_title>
 

@@ -17,7 +17,11 @@ my @sections =
         'regex' => "^/lecture/",
         'class' => "Lectures",
     },
-    
+    {
+        'id' => "software",
+        'regex' => "^/(open-source|jmikmod|grad-fu|rwlock|software-tools)/",
+        'class' => "Software",
+    },    
 );
 
 sub get_nav_menu

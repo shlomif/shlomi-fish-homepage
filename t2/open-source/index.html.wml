@@ -1,14 +1,8 @@
 #include '../template.wml'
 <latemp_subject "Open Source Software I wrote" />
 
-<define-tag linkto:vipe endtag="required">
-<preserve where />
-<set-var %attributes />
-<a href="http://vipe.technion.ac.il/~shlomif/<get-var where />">%body</a>
-<restore where />
-</define-tag>
-
-<h2><linkto:vipe where="freecell-solver/">Freecell Solver</linkto:vipe></h2>
+<h2><a href="<rellink host="vipe" url="freecell-solver/" />">Freecell 
+Solver</a></h2>
 
 <p>
 A program and a library written in ANSI C that automatically solves games of
@@ -43,8 +37,9 @@ A simulator for IP-Noise for Linux systems based on the Linux Kernel version
 <h2><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h2>
 
 <p>
-A port of the well-known MOD player <a href="http://www.mikmod.org/">MikMod</a>
-(that was originally written in ANSI C) to Java.
+A port of the well-known MOD player 
+<a href="http://mikmod.raphnet.net/">MikMod</a> (that was originally written 
+in ANSI C) to Java.
 </p>
 
 <h2><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h2>
@@ -54,14 +49,15 @@ A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
 and to scripting interfaces.
 </p>
 
-<h2><linkto:vipe where="rwlock/">A First-Come First-Served Readers/Writers Lock</linkto:vipe></h2>
+<h2><a href="<rellink host="vipe" url="rwlock/" />">A
+First-Come First-Served Readers/Writers Lock</a></h2>
 
 <p>
 An implementation of it for POSIX Threads, which can also be used as a 
 reference implementation. 
 </p>
 
-<h2><linkto:vipe where="lm-solve/">LM-Solve</linkto:vipe></h2>
+<h2><a href="<rellink host="vipe" url="lm-solve/" />">LM-Solve</a></h2>
 
 <p>
 An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a> 
@@ -106,7 +102,7 @@ A small directory of libraries that make writing applications that run on
 UNIXes as well as on Windows 32-bit easier.
 </p>
 
-<h3><linkto:vipe where="software-tools/">Software Building and Management Tools</linkto:vipe></h3>
+<h3><a href="<rellink host="vipe" url="software-tools/" />">Software Building and Management Tools</a></h3>
 
 <p>
 A small directory of tools for building, configuring and maintaining software.

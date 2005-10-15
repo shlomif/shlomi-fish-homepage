@@ -45,8 +45,9 @@ t2/SFresume_detailed.html.wml : lib/SFresume_base.wml
 	touch $@
 
 SECTION_MENU_DEPS = lib/Shlomif/Homepage/SectionMenu.pm
-PHILOSOPHY_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Essays.pm 
+PHILOSOPHY_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Essays.pm
 LECTURES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Lectures.pm
+SOFTWARE_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Software.pm
 
 t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl $(PHILOSOPHY_DEPS)
 	touch $@
@@ -70,5 +71,18 @@ $(T2_LECTURES_DOCS_SRC):: $(T2_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
 VIPE_LECTURES_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/lecture/%,$(VIPE_DOCS_SRC))
 
 $(VIPE_LECTURES_DOCS_SRC):: $(VIPE_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
+	touch $@
+
+T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
+					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
+					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC))
+
+$(T2_SOFTWARE_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
+	touch $@
+
+VIPE_SOFTWARE_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/rwlock/%,$(VIPE_DOCS_SRC)) \
+						 $(filter $(VIPE_SRC_DIR)/software-tools/%,$(VIPE_DOCS_SRC))
+
+$(VIPE_SOFTWARE_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
 	touch $@
 

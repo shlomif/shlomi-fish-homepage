@@ -64,6 +64,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/web/which-wiki/",
                     'title' => "Which Open Source Wiki Engine Works for you",
                 },
+                {
+                    'text' => "GPL, BSD and Suckerism",
+                    'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
+                    'title' => "The GPL, The BSD License and Being a Sucker",
+                },
             ],
         },
         {

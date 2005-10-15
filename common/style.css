@@ -162,6 +162,8 @@ ul.nospace
     margin-left: 7pt;
     margin-right: 10pt;
     padding-right:5pt;
+    padding-left:5pt;
+    width:25%;
 }
 .sub_menu ul
 {
@@ -185,4 +187,20 @@ browsers where they are magenta by default.
 .sub_menu :visited
 {
     color: #800080; /* Purple */
+}
+
+.sub_menu h2
+{
+   font-size: medium;
+   padding-top:0;
+   margin-top:0;
+   margin-bottom:0;  
+}
+.sub_menu .toggle_sect_menu
+{
+   float:right;
+}
+.hide
+{
+    display:none;
 }

@@ -16,6 +16,7 @@ __PACKAGE__->mk_accessors(qw(
     path_info
     results
     sections
+    title
 ));
 
 sub initialize
@@ -56,6 +57,7 @@ sub initialize
         my $results = $nav_menu->render();
         $self->nav_menu($nav_menu);
         $self->results($results);
+        $self->title($current_sect->{'title'});
     }
 }
 
@@ -69,8 +71,11 @@ sub get_html
     else
     {
         return qq{<div class="sub_menu">\n} .
+            qq{<h2>} . $self->title() . qq{</h2>\n} .
+            qq{<a id="toggle_sect_menu" href="javascript:toggle_sect_menu()" class="toggle_sect_menu">Hide</a>\n} .
+            qq{<div id="sect_menu_wrapper">\n} .
             join("\n", @{$self->results()->{html}}) .
-            qq{\n</div>\n};
+            qq{\n</div>\n</div>\n};
     }
 }
 

@@ -27,7 +27,7 @@ my @sections =
     },
     {
         'id' => "humour",
-        'regex' => "^/(humour/|(humour|wysiwyt.html))",
+        'regex' => "^/(humour/|((humour|wysiwyt|wonderous)\.html))",
         'class' => "Humour",
         'title' => "Humour Section Menu",
     },

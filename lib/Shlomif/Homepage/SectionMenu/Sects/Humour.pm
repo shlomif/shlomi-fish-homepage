@@ -91,6 +91,10 @@ my $humour_tree_contents =
                     'url' => "wysiwyt.html",
                     'title' => "A Project by the International Really Pissed-off Windows User Group",
                 },
+                {
+                    'text' => "Wonderous are the Ways of Microsoft",
+                    'url' => "wonderous.html",
+                },
             ],
         },
     ],

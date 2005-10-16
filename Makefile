@@ -92,7 +92,8 @@ $(VIPE_SOFTWARE_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
 
 T2_HUMOUR_DOCS_SRC = $(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/humour.html.wml,$(T2_DOCS_SRC)) \
-					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC))
+					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC)) \
+					 $(filter $(T2_SRC_DIR)/wonderous.html.wml,$(T2_DOCS_SRC))
 
 $(T2_HUMOUR_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(HUMOUR_DEPS)
 	touch $@

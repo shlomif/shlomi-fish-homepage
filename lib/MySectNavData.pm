@@ -25,6 +25,13 @@ my @sections =
         'class' => "Software",
         'title' => "Software Section Menu",
     },
+    {
+        'id' => "humour",
+        'regex' => "^/(humour/|(humour|wysiwyt.html))",
+        'class' => "Humour",
+        'title' => "Humour Section Menu",
+    },
+    
 );
 
 sub get_nav_menu

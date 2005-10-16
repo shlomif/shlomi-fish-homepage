@@ -38,7 +38,7 @@ my $humour_tree_contents =
                 {
                     'text' => "TOW The Fountainhead",
                     'url' => "humour/TOWTF/",
-                    'title' => "A Parody on \"The Fountainhead\"",
+                    'title' => "A Parody on &quot;The Fountainhead&quot;",
                 },
                 {
                     'text' => "The Pope Died on Sunday",

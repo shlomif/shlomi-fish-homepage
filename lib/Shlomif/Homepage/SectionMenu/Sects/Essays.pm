@@ -87,6 +87,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/israel-pales/",
                     'title' => "A Solution to the Israeli Palestinian Conflict",
                 },
+                {
+                    'text' => "Case for File Swapping",
+                    'url' => "philosophy/case-for-file-swapping/",
+                    'title' => "Why File Swapping is Ethical and Moral and should be Legal",
+                },
             ],
         },
         {

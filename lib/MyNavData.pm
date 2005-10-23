@@ -41,7 +41,7 @@ my $tree_contents =
                 {
                     'text' => "Contact",
                     'url' => "me/contact-me/",
-                    'title'=> "How to Contact me in Every Conceivable Way",
+                    'title'=> "How to Contact Me",
                 },
                 {
                     'text' => "My Resum&eacute;s",
@@ -75,6 +75,7 @@ my $tree_contents =
         {
             'text' => "Work",
             'url' => "work/",
+            'expand' => { 're' => "^work/", },
             'title' => "Work-Related Pages",
             'show_always' => 1,
             'subs' => 
@@ -89,6 +90,7 @@ my $tree_contents =
         {
             'text' => "Humour", 
             'url' => "humour/",
+            'expand' => { 're' => "^humour/", },
             'title' => "My Humorous Creations",
             'subs' => 
             [
@@ -136,11 +138,13 @@ my $tree_contents =
         {
             'text' => "Math-Ventures",
             'url' => "MathVentures/",
+            'expand' => { 're' => "^art/", },
             'title' => "Mathematical Riddles and their Solutions",
         },
         {
             'text' => "Computer Art",
             'url' => "art/",
+            'expand' => { 're' => "^art/", },
             'title' => "Computer art I created while explaining how.",
             'subs' =>
             [
@@ -276,6 +280,7 @@ my $tree_contents =
         {
             'text' => "Essays",
             'url' => "philosophy/",
+            'expand' => { 're' => "^philosophy/", },
             'title' => "Various Essays and Articles about Technology and Philosophy in General",
             'subs' =>
             [

@@ -2,7 +2,7 @@
 
 <latemp_subject "My Cool Links List" />
 
-<h2>Studies Related</h2>
+<h2 id="studies">Studies Related</h2>
 
 <div class="indent">
 <h3><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
@@ -25,7 +25,7 @@ A very cool laboratory where I did my projects and liked to hang out.
 
 </div>
 
-<h2>Past Workplaces</h2>
+<h2 id="past_workplaces">Past Workplaces</h2>
 
 <div class="indent">
 
@@ -46,7 +46,7 @@ These are my previous workplaces. Check them out, if you'd like.
 
 </div>
 
-<h2>Philosophy and Politics</h2>
+<h2 id="philosophy">Philosophy and Politics</h2>
 
 <div class="indent">
 <h3><a href="http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/">The Google Directory Objectivism Branch</a></h3>
@@ -82,7 +82,7 @@ Neo-Tech by (snail) mail.
 
 </div>
 
-<h2>Linux and Free Software</h2>
+<h2 id="foss">Linux and Free Software</h2>
 
 <div class="indent">
 <h3><a href="http://www.linux.org/">The Linux' Homepage</a></h3>
@@ -143,7 +143,7 @@ A web-site dedicated to open-source advocacy.
 
 </div>
 
-<h2>Software "Gurus"</h2>
+<h2 id="software_gurus">Software "Gurus"</h2>
 <div class="indent">
 <h3><a href="http://www.tuxedo.org/~esr/">Eric S. Raymond</a></h3>
 
@@ -206,7 +206,7 @@ to Tens of Thousands of Legal Music Downloads"</a>.
 
 </div>
 
-<h2>My Friends' Home Pages</h2>
+<h2 id="friends">My Friends' Home Pages</h2>
 
 <ul>
 <li><a href="http://www.ida.net/users/housley/">Ken Housley</a> - talked
@@ -239,7 +239,7 @@ the Israeli Linux online community.</li>
 
 
 
-<h3>Haifa Linux Clubbers</h3>
+<h3 id="friends_haifux">Haifa Linux Clubbers</h3>
 
 <ul>
 <li><a href="http://users.actcom.co.il/~choo/">Guy Keren</a></li>
@@ -249,7 +249,7 @@ the Israeli Linux online community.</li>
 <li><a href="http://vipe.technion.ac.il/~ladypine/">Orna Agmon</a></li>
 </ul>
 
-<h3>Israeli Perl Mongers</h3>
+<h3 id="friends_perl_il">Israeli Perl Mongers</h3>
 
 <ul>
 <li><a href="http://cs.haifa.ac.il/~shlomo/">Shlomo Yona</a></li>
@@ -258,7 +258,7 @@ the Israeli Linux online community.</li>
 <li><a href="http://www.semuel.co.il/">Semuel Vomberg</a></li>
 </ul>
 
-<h3>Weblogs I like to read</h3>
+<h3 id="friends_weblogs">Weblogs I like to read</h3>
 
 <p>
 Weblogs are the latest (as of late 2003) craze in the Internet and everybody
@@ -286,7 +286,8 @@ at use.perl.org</a> - kept strictly related to his Perl activities. As a result,
 it has a high signal-to-noise ratio, but it's not updated often.</li>
 </ul>
 
-<h2>Favourite Pages for Searching and Locating Resources on the Web</h2>
+<h2 id="net_search">Favourite Pages for Searching and Locating Resources on 
+the Web</h2>
 
 <div class="indent">
 <p>
@@ -295,21 +296,26 @@ you to other sites of interest:
 </p>
 
 <ul>
-<li><a href="http://www.google.com/">Google</a> - a fast and accurate search engine.</li>
-<li><a href="http://directory.google.com/">Google Directory</a> - a directory of 
-resources. The original is <a href="http://dmoz.org/">DMoz</a>.</li>
+<li><a href="http://www.google.com/">Google</a> - a fast and high-relevance 
+search engine.</li>
+<li><a href="http://directory.google.com/">Google Directory</a> - a directory 
+of resources. The original is <a href="http://dmoz.org/">DMoz</a>.</li>
 <li><a href="http://www.altavista.com/">Altavista</a> - a text-based search
 engine in case Google fails.</li>
 <li><a href="http://www.alltheweb.com/">AllTheWeb</a> - search for FTP files and
 other stuff.</li>
-<li><a href="http://www.gnu.org/manual/manual.html">GNU documentation</a> - an excellent online reference for many UNIX (or UNIX-originated) commands and utilities.</li>
+<li>
+<a href="http://www.gnu.org/manual/manual.html">GNU documentation</a> - an
+excellent online reference for many UNIX (or UNIX-originated) commands and
+utilities.
+</li>
 <li><a href="http://www.gamelan.com/">Gamelan</a> - A big Java directory</li>
 <li><a href="http://freshmeat.net/">Freshmeat</a> - a comprehensive directory of
 software for Linux</li>
 </ul>
 </div>
 
-<h2>Interesting Reference Sites</h2>
+<h2 id="reference_sites">Interesting Reference Sites</h2>
 
 <ul>
 <li><a href="http://www.imdb.com/">The Internet Movie Database</a> - an on-line
@@ -323,13 +329,13 @@ documentation on all aspects of the Linux operating system.</li>
 <li><a href="http://www.tuxedo.org/~esr/jargon/">The Jargon File</a> - a dictionary
 of computer geeks' jargon.</li>
 <li><a href="http://slashdot.org/">Slashdot</a> - a really cool computer-related news page.</li>
-<li><a href="http://www.wikipedia.org/">The Wikipedia</a> - a world-viewable, 
+<li><a href="http://www.wikipedia.org/">The Wikipedia</a> - a world-viewable,
 world-editable encyclopedia that is very comprehensive and getting better
 and better all the time. (feel free to contribute something of your own!).
 </li>
 </ul>
 
-<h2>Software</h2>
+<h2 id="software">Software</h2>
 
 <h3><a href="$(ROOT)/open-source/favourite/">Open Source Software</a></h3>
 
@@ -337,11 +343,11 @@ and better all the time. (feel free to contribute something of your own!).
 Refer to this link, for a page about my favourite open source.
 </p>
 
-<h3>Non-open-source software</h3>
+<h3 id="software_commercial">Non-open-source software</h3>
 
 <p>
 Who says all commercial software is bad? Here's some of the 
-non-free-as-in-speech software I got to like
+non-free-as-in-speech software I came to like.
 </p>
 
 <ul>
@@ -395,8 +401,7 @@ open-source memory debugger for Linux x86.</li>
 </div>
 </define-tag>
 
-<h3></h3>
-<h3>MOD Files</h3>
+<h3 id="mod_music_files">MOD Files</h3>
 
 <div class="indent">
 
@@ -428,7 +433,7 @@ library.</li>
 </ul>
 </div>
 
-<h2>Humour</h2>
+<h2 id="humour">Humour</h2>
 
 <ul>
 <li>
@@ -436,12 +441,12 @@ library.</li>
 site about the T.V show.
 </li>
 <li>
-<a href="http://www.geocities.com/Hollywood/3142/friends.htm">Complete "Friends" Page</a> - 
-and another one.
+<a href="http://www.geocities.com/Hollywood/3142/friends.htm">Complete 
+"Friends" Page</a> - and another one.
 </li>
 <li>
-<a href="http://prime-mover.cc.waikato.ac.nz/Bastard.html">The Bastard Operator from Hell</a> -
-A really funny story, for those who know about UNIX.
+<a href="http://prime-mover.cc.waikato.ac.nz/Bastard.html">The Bastard 
+Operator from Hell</a> - A really funny story, for those who know about UNIX.
 </li>
 <li>
 <a href="http://humorix.org/">Humorix</a> - Linux-related humour items.
@@ -460,7 +465,7 @@ Girlfriend and I have Argued about</a> - a page with some very funny stories.
 </li>
 </ul>
 
-<h3>Comic Strips</h3>
+<h3 id="humour_cartoon_strips">Cartoon Strips</h3>
 
 <ul>
 <li>
@@ -492,7 +497,7 @@ the punchline.
 </li>
 </ul>
 
-<h3>Funny Stories</h3>
+<h3 id="humour_funny_stories">Funny Stories</h3>
 
 <ul>
 <li>
@@ -581,11 +586,13 @@ of Brazil from a trip by an IRC correspondant.
 </li>
 </ul>
 
-<h2>Various Sites of Interest</h2>
+<h2 id="various">Various Sites of Interest</h2>
 
 <ul>
-<li><a href="http://www.presentationhelper.co.uk/">Presentation Helper</a> - 
+<li>
+<a href="http://www.presentationhelper.co.uk/">Presentation Helper</a> - 
 a great site dedicated to the various issues of giving and preparing
-a presentation.</li>
+a presentation.
+</li>
 </ul>
 

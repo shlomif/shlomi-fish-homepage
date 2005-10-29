@@ -103,3 +103,7 @@ VIPE_HUMOUR_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/humour/%,$(VIPE_DOCS_SRC))
 $(VIPE_HUMOUR_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(HUMOUR_DEPS)
 	touch $@
 
+rss:
+	./bin/fetch-shlomif_hsite-feed.pl
+	touch t2/index.html.wml
+

@@ -32,6 +32,21 @@
 <latemp_meta_desc "Shlomi Fish' Homepage" />
 <latemp_affiliations_buttons>
 <affil_collection_shlomif />
+<p>
+<a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 
+    src="$(ROOT)/images/rss-feed-sticker.png"
+    alt="RSS Feed" title="RSS Feed for Easy Notification on Update"
+    class="bless"
+    /></a>
+</p>
+<p>
+<a href="http://www.livejournal.com/community/shlomif_hsite/data/atom" 
+    class="bless"><img 
+    src="$(ROOT)/images/atom-feed-sticker.png"
+    alt="Atom Feed" title="Atom Feed for Easy Notification on Update"
+    class="bless"
+    /></a>
+</p>
 <define-tag no_ie_link endtag="required">
 <a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!">%body</a>
 </define-tag>
@@ -91,5 +106,7 @@ Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.or
 </latemp_before_main_title>
 
 <latemp_extra_head_elements>
-<script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script> 
+<script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
+<link rel="alternate" type="application/rss+xml" title="Shlomi Fish' Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
+<link rel="alternate" type="application/atom+xml" title="Shlomi Fish' Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
 </latemp_extra_head_elements>

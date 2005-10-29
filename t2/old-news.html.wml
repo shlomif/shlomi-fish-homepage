@@ -2,6 +2,13 @@
 
 <latemp_subject "Shlomi Fish' Homepage Old News Items" />
 
+<:{
+use Shlomif::Homepage::News;
+
+my $news = Shlomif::Homepage::News->new();
+print $news->render_old();
+}:>
+
 
 <h3 class="newsitem">30-Oct-2004</h3>
 

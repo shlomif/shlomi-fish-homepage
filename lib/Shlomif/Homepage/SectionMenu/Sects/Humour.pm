@@ -8,13 +8,13 @@ use MyNavData;
 my $humour_tree_contents =
 {
     'host' => "t2",
-    'text' => "Shlomi Fish' Stories and Euphorisms",
-    'title' => "Shlomi Fish' Stories and Euphorisms",
+    'text' => "Shlomi Fish' Stories and Aphorisms",
+    'title' => "Shlomi Fish' Stories and Aphorisms",
     'show_always' => 1,
     'subs' =>
     [
         {
-            'text' => "Stories and Euphorisms",
+            'text' => "Stories and Aphorisms",
             'url' => "humour/",
         },
         {
@@ -58,14 +58,14 @@ my $humour_tree_contents =
             ],
         },
         {
-            'text' => "Euphorisms and Quotes",
-            'url' => "humour/euphorisms/",
+            'text' => "Aphorisms and Quotes",
+            'url' => "humour/aphorisms/",
             'subs' =>
             [
                 {
                     'text' => "Humour Archive",
                     'url' => "humour.html",
-                    'title' => "Archive of my own Funny Quotes and Euphorisms",
+                    'title' => "Archive of my own Funny Quotes and Aphorisms",
                 },
                 {
                     'text' => "Fortune Cookies Collection",

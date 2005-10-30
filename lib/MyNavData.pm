@@ -294,12 +294,14 @@ my $tree_contents =
                     'text' => "Computing",
                     'url' => "philosophy/computers/",
                     'title' => "Computing-related Essays and Articles",
+                    'expand' => { 're' => "^philosophy/computers/", },
                 },
                 {
                     'text' => "Political Essays",
                     'url' => "philosophy/politics/",
                     'title' => "Essays about Politics and" . 
                         "Philosophical Politics",
+                    'expand' => { 're' => "^philosophy/politics/", },
                 },
                 {
                     'text' => "The Eternal Jew",

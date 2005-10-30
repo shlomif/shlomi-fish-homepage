@@ -53,8 +53,11 @@ Invoke the GIMP round corners script.
 ("&lt;Image&gt; &rarr; Select &rarr; Round")
 </li>
 <li>
-Apply Gaussian Blur with a large radius (identical in X and in Y) to the 
-Image. This gives a nice rounded-rectangle black-to-white gradient.
+Fill the rounded frame with the colour black.
+</li>
+<li>
+Apply the "Gaussian Blur" effect with a large radius (identical in X and in Y) 
+to the Image. This gives a nice rounded-rectangle black-to-white gradient.
 </li>
 <li>
 Invoke the GIMP Gradient Map 
@@ -65,14 +68,14 @@ This gives <a href="final-image.png">the final image</a>.
 Afterwards, all that is left to do is to slice and dice the image 
 appropriately. A horizontal strip from the middle which was a few pixels high
 was ideal as a background for most of the page. Then, I took the upper and 
-lower parts (until the width stabilizes), and created separate images out of
-them.
+lower parts (until the width of the inner frame stabilizes), and created 
+separate images out of them.
 </li>
 </ol>
 
 <p>
 The final result is not identical to the original, but it looks very crisp
 and I'm quite happy with it. I thought that a blur may make it better, but
-it only seemed to have made it worse, so I discarded the idea.
+it only seemed to have made it worse, so I abandoned the idea.
 </p>
 

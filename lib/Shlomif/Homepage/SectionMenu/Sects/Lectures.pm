@@ -30,7 +30,7 @@ my $essays_tree_contents =
             'host' => "t2",
         },
         {
-            'text' => "Scheme & Lambda Calculus",
+            'text' => "Scheme &amp; Lambda Calculus",
             'url' => "lecture/Lambda-Calculus/",
         },
         {
@@ -55,7 +55,7 @@ my $essays_tree_contents =
                     'title' => "The PostgreSQL Database Server",
                 },
                 {
-                    'text' => "Lex & Yacc",
+                    'text' => "Lex &amp; Yacc",
                     'url' => "lecture/Sys-Call-Track/Lex-Yacc/",
                     'title' => "Lex and Yacc - for Tokenizing and Parsing",
                 },

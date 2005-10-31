@@ -95,9 +95,21 @@ my $essays_tree_contents =
             ],
         },
         {
-            'text' => "The Eternal Jew",
-            'url' => "philosophy/the-eternal-jew/",
-            'title' => "The Eternal Jew - An Essay about the value of Self",
+            'text' => "Philosophy",
+            'url' => "philosophy/philosophy/",
+            'title' => "Writings about General Philosophy",
+            'subs' =>
+            [
+                {
+                    'text' => "The Eternal Jew",
+                    'url' => "philosophy/the-eternal-jew/",
+                    'title' => "The Eternal Jew - An Essay about the value of Self",
+                },
+                {
+                    'text' => "Guide to Neo-Tech",
+                    'url' => "philosophy/philosophy/guide-to-neo-tech/",
+                },
+            ],
         },
     ],
 };

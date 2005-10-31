@@ -304,9 +304,9 @@ my $tree_contents =
                     'expand' => { 're' => "^philosophy/politics/", },
                 },
                 {
-                    'text' => "The Eternal Jew",
-                    'url' => "philosophy/the-eternal-jew/",
-                    'title' => "The Eternal Jew - An Essay about the value of Self",
+                    'text' => "General Philosophy",
+                    'url' => "philosophy/philosophy/",
+                    'expand' => { 're' => "^philosophy/(philosophy/|the-eternal-jew/)" },
                 },
             ],
         },

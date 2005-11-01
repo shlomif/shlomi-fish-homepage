@@ -25,12 +25,34 @@
     /></a></div>
 </latemp_top_left_corner_logo>
 
+<define-tag google_search>
+<form method="get" action="http://www.google.com/search">
+<div class="search">
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="hidden" name="oe" value="UTF-8" />
+<input type="text" name="q" size="15" maxlength="255" value="" />
+<input type="hidden" name="domains" value="www.shlomifish.org,vipe.technion.ac.il" />
+<br />
+<input type="radio" name="sitesearch" value="" /> WWW <br />
+<input type="radio" name="sitesearch" value="www.shlomifish.org" checked="checked" />
+shlomifish.org
+<br />
+<input type="submit" name="btnG" value="Google Search" />
+</div>
+</form>
+</define-tag>
+
 <latemp_lang "en-US" />
 <latemp_encoding "utf-8" />
 <latemp_author "Shlomi Fish" />
 <latemp_common_keywords "Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Subversion, version control, Web, Web Design, DeCSS, Software" />
 <latemp_meta_desc "Shlomi Fish' Homepage" />
 <latemp_affiliations_buttons>
+<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
+        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
+    "<google_search />"
+    ""
+    />
 <affil_collection_shlomif />
 <p>
 <a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 

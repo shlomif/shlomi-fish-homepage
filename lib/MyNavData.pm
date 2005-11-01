@@ -138,7 +138,7 @@ my $tree_contents =
         {
             'text' => "Math-Ventures",
             'url' => "MathVentures/",
-            'expand' => { 're' => "^art/", },
+            'expand' => { 're' => "^MathVentures/", },
             'title' => "Mathematical Riddles and their Solutions",
         },
         {

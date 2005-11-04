@@ -63,7 +63,7 @@ Several new additions were added to the site. The <a href="./art/">art
 section</a> now contains two new pieces. I also added 
 <a href="./open-source/bits.html#old_pmwiki_revert">a new script</a>
 to the "Open Source Bits and Bobs section". Several new programs were
-added to <a href="./open-source/favourite/index.html.wml">my favourite
+added to <a href="./open-source/favourite/">my favourite
 free software</a>. Some new languages were added to
 <a href="./humour/ways_to_do_it.html">the "Ways to do it" according
 to the programming languages of the World</a> page. 
@@ -132,7 +132,7 @@ The <a href="./links.html">Links Page</a> was updated.
 Several new essays and articles are now part of 
 the <a href="./philosophy/">Philosophy
 section</a>. Especially note 
-<a href="./philosophy/computers/when-c-is-the-best/">the "When C is the
+<a href="./philosophy/computers/when-c-is-best/">the "When C is the
 Best" essay</a> which started 
 <a href="http://osnews.com/comment.php?news_id=12189">an active discussion 
 in OSNews</a>.

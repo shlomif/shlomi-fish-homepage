@@ -18,7 +18,8 @@ binary packages, distributing modified sources (only patches), etc. There are
 other open-source alternatives that work just as well.
 </li>
 <li>
-It is no longer actively maintained. Many patches are available for it, but
+It is no longer actively maintained. The last version was released on 1998. 
+That's over 7 years from now. Many patches are available for it, but
 they may not apply cleanly one after the other, and are not supported by the
 author. It even no longer compiles cleanly on Linux.
 </li>
@@ -33,7 +34,7 @@ It has a completely user-unfriendly build system, a long build process, and
 its code is incredibly unreadable.
 </li>
 <li>
-The ezmlm-idx has a lot of duplicacy in its configuration. It hard-codes the
+The ezmlm-idx has a lot of duplication in its configuration. It hard-codes the
 various paths in many different places.
 </li>
 <li>
@@ -41,7 +42,7 @@ Many bugs were discovered in qmail since its last release (including some
 security bugs) and were left unfixed in the vanilla version.
 </li>
 <li>
-qmail lags behind other MTA's in its feature-set.
+qmail lags behind other MTAs in its feature-set.
 </li>
 </ol>
 

@@ -226,6 +226,12 @@ my $tree_contents =
                     'url' => "open-source/bits.html",
                 },
                 {
+                    'text' => "Anti Pages",
+                    'title' => "Against Commonly Used but Bad Software",
+                    'url' => "open-source/anti/",
+                    'expand' => { 're' => "^(no-ie|open-source/anti)/", },
+                },                
+                {
                     'text' => "Portability Libraries",
                     'title' => "Cross-Platform Abstraction Libraries",
                     'url' => "open-source/portability-libs/",
@@ -238,6 +244,7 @@ my $tree_contents =
                     'host' => "vipe",
                     'hide' => 1,
                 },
+                
             ],
         },
         {

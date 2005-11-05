@@ -76,7 +76,8 @@ $(VIPE_LECTURES_DOCS_SRC):: $(VIPE_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
 
 T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC))
+					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \
+					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC))
 
 $(T2_SOFTWARE_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
 	touch $@

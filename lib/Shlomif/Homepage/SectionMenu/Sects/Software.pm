@@ -92,6 +92,23 @@ my $software_tree_contents =
                 },
             ],
         },
+        {
+            'text' => "Against Bad Software",
+            'url' => "open-source/anti/",
+            'subs' =>
+            [
+                {
+                    'text' => "Internet Explorer",
+                    'url' => "no-ie/",
+                    'title' => "Stop Using Internet Explorer!",
+                },
+                {
+                    'text' => "Against qmail",
+                    'url' => "open-source/anti/qmail/",
+                    'title' => "Against using the qmail SMTP Server",
+                },
+            ],
+        },        
     ],
 };
 

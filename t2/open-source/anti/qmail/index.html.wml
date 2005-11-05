@@ -1,0 +1,92 @@
+#include '../template.wml'
+<latemp_subject "The Anti-qmail Page" />
+
+<p>
+<b>Last Updated:</b> 05-November-2005
+</p>
+
+<p>
+You should avoid setting up <a href="http://qmail.org/">the qmail mail
+server</a> on new installations and try to convert existing installations
+into a different MTA. That's because:
+</p>
+
+<ol>
+<li>
+It's not open-source, and has a very problematic license, that does not allow
+binary packages, distributing modified sources (only patches), etc. There are
+other open-source alternatives that work just as well.
+</li>
+<li>
+It is no longer actively maintained. Many patches are available for it, but
+they may not apply cleanly one after the other, and are not supported by the
+author. It even no longer compiles cleanly on Linux.
+</li>
+<li>
+The author (<a href="http://cr.yp.to/">Daniel J. Bernstein</a>) is full of 
+bad attitude, is incredibly stubborn, has a feelings of superiority, and
+routinely attacks everyone else. Furthermore, he has completely lost interest 
+in maintaining qmail.
+</li>
+<li>
+It has a completely user-unfriendly build system, a long build process, and
+its code is incredibly unreadable.
+</li>
+<li>
+The ezmlm-idx has a lot of duplicacy in its configuration. It hard-codes the
+various paths in many different places.
+</li>
+<li>
+Many bugs were discovered in qmail since its last release (including some 
+security bugs) and were left unfixed in the vanilla version.
+</li>
+<li>
+qmail lags behind other MTA's in its feature-set.
+</li>
+</ol>
+
+<h2>Alternatives</h2>
+
+<p>
+Instead you should use one of the following MTA's:
+</p>
+
+<ol>
+<li>
+<a href="http://www.postfix.org/">Postfix</a>
+</li>
+<li>
+<a href="http://www.courier-mta.org/">Courier</a>
+</li>
+<li>
+<a href="http://www.exim.org/">Exim</a>
+</li>
+<li>
+<a href="http://freshmeat.net/browse/32/">Other SMTP Servers</a>. (Also see
+<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen's comparison of
+common Mail Transport Agents</a>.)
+</li>
+</ol>
+
+<h2>Links</h2>
+
+<ul>
+<li>
+<a href="http://perl.org.il/pipermail/perl/2004-October/005989.html">Discussion
+in the Israeli Perl mailing list</a>
+</li>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.72853.10">Discussion
+in the Joel on Software forum</a>
+</li>
+<li>
+<a href="http://lwn.net/Articles/85493/">Discussion in LWN.Net</a>
+</li>
+<li>
+<a href="http://linmagazine.co.il/node/view/9620">Blog entry in Aviram Jenik's
+blog about Dan J. Bernstein not giving the money for a remote root exploit 
+that was found in qmail</a>
+</li>
+</ul>
+
+

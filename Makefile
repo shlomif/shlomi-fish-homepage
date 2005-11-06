@@ -107,4 +107,5 @@ $(VIPE_HUMOUR_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(HUMOUR_DEPS)
 rss:
 	./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
+	touch t2/old-news.html.wml
 

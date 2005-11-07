@@ -158,10 +158,24 @@ my $tree_contents =
             ],
         },
         {
-            'text' => "Math-Ventures",
-            'url' => "MathVentures/",
-            'expand' => { 're' => "^MathVentures/", },
-            'title' => "Mathematical Riddles and their Solutions",
+            'text' => "Puzzles",
+            'url' => "puzzles/",
+            'expand' => { 're' => "^(MathVentures/|puzzles/)", },
+            'title' => "Puzzles, Riddles and Brain-teasers",
+            'subs' =>
+            [
+                {
+                    'text' => "Math-Ventures",
+                    'url' => "MathVentures/",
+                    'expand' => { 're' => "^MathVentures/", },
+                    'title' => "Mathematical Riddles and their Solutions",
+                },
+                {
+                    'text' => "Logic Puzzles",
+                    'url' => "puzzles/logic/",
+                    'expand' => { 're' => "^puzzles/logic/", },
+                },
+            ],
         },
         {
             'text' => "Computer Art",

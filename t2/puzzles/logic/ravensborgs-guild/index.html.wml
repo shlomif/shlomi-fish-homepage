@@ -1,0 +1,123 @@
+#include '../template.wml'
+
+<latemp_subject "Ravensborg's Guild - A Logic Puzzle" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css" 
+type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<h2>Introduction</h2>
+
+<p>
+I originally wrote this puzzle for a Role-Playing Game tournament of my
+friends' local RPG club, back when I was in high school. It does not require
+any knowledge in Fantasy Role Playing Games to solve.
+</p>
+
+<h2>The puzzle itself</h2>
+
+<p>
+There are five members inn the council of Ravensborg's Guild. Two of them
+are thieves, two wizards and one warrior, that got there due to a wrong
+number. It is known that thieves always lie; wizards say one true statements
+and one false out of every two statements they utter, and warriors
+always say the truth.
+</p>
+
+<p>
+Can you find out according to the statements of the council members, the
+profession of each one and who is the guild's leader?
+</p>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Name</th>
+<th>Statements</th>
+</tr>
+
+<tr>
+<td>Simon</td>
+<td>
+<ol>
+<li>One of the thieves is Krenin.</li>
+<li>The leader is a wizard.</li>
+</ol>
+</td>
+</tr>
+
+<tr>
+<td>Lamber</td>
+<td>
+<ol>
+<li>I am a thief.</li>
+<li>Simon is not a thief.</li>
+</ol>
+</td>
+</tr>
+
+<tr>
+<td>Krenin</td>
+<td>
+<ol>
+<li>I am the leader</li>
+<li>Rupert is a warrior.</li>
+</ol>
+</td>
+</tr>
+
+<tr>
+<td>Walter</td>
+<td>
+<ol>
+<li>Our warrior is Rupert.</li>
+<li>Our warrior is the leader.</li>
+</ol>
+</td>
+</tr>
+
+<tr>
+<td>Rupert</td>
+<td>
+<ol>
+<li>Lamber is one of the thieves.</li>
+<li>Our leader is one of the wizards.</li>
+</ol>
+</td>
+</tr>
+</table>
+
+<p>
+The solution can be found below.
+</p>
+
+<h2 style="margin-top: 50em">Solution</h2>
+
+<table class="logic_sayings">
+<tr>
+<th>Name</th>
+<th>Profession</th>
+</tr>
+<tr>
+<td>Simon</td>
+<td>Warrior</td>
+</tr>
+<tr>
+<td>Lamber</td>
+<td>Wizard</td>
+</tr>
+<tr>
+<td>Krenin</td>
+<td>Thief</td>
+</tr>
+<tr>
+<td>Walter</td>
+<td>Thief</td>
+</tr>
+<tr>
+<td>Rupert</td>
+<td>Wizard (Leader)</td>
+</tr>
+</table>
+

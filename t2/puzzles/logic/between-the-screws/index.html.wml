@@ -1,0 +1,149 @@
+#include '../template.wml'
+
+<latemp_subject "Between the Screws - A Logic Puzzle" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css" 
+type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<h2>Introduction</h2>
+
+<p>
+I originally wrote this puzzle for the magazine of a local Role-Playing
+Games' club, back in high school. It was originally written in Hebrew, but
+is presented here in its English translation.
+</p>
+
+<h2>The Puzzle Itself</h2>
+
+<p>
+When Nom the gnome went to build his new airplane "Little Wing", he
+ran into a funny situation when he wanted to attach the wing to the body
+of the plane.
+</p>
+
+<p>
+For that, he had to use for attaching the four screws based on a particular
+order, with four screw-drivers with different colours - one of them green.
+Each screw had a different shape and a different length.
+</p>
+
+<p>
+Your mission is to find out the order in which the screws were attached with
+their screw-driver colours, their lengthes, and their shapes.
+</p>
+
+<ol>
+<li>
+The screw, that the gnome used the last time was longer than the screw with
+the blue screwdriver, but was not twice its length or more. (Albeit a twice
+as long screw than the blue screw does exist.)
+</li>
+<li>
+The Diamond-shaped screw was screwed after the screw with the blue screwdriver,
+but before the 6cm-lengthed screw.
+</li>
+<li>
+Only once did a shorter screw followed a longer one.
+</li>
+<li>
+The screw with the red screw-driver that isn't the hexagonal one, was the last.
+The diamond-shpaed screw did not come right before it.
+</li>
+<li>
+The triangular screw came before the 2cm-long screw.
+</li>
+<li>
+The screw with the purple screw-driver, whose length is 8 cm, did not
+follow the 2cm-long screw.
+</li>
+<li>
+The 4cm-long screw, was not the square-shaped one.
+</li>
+</ol>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Time</th>
+<th>Screw Length</th>
+<th>Screw-driver Colour</th>
+<th>Screw Shape</th>
+</tr>
+
+<tr>
+<td>1.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>2.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>3.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>4.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+<p>
+The solution can be found below.
+</p>
+
+<h2 style="margin-top: 50em">Solution</h2>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Time</th>
+<th>Screw Length</th>
+<th>Screw-driver Colour</th>
+<th>Screw Shape</th>
+</tr>
+
+<tr>
+<td>1.</td>
+<td>4 cm</td>
+<td>Blue</td>
+<td>Triangle</td>
+</tr>
+
+<tr>
+<td>2.</td>
+<td>8 cm</td>
+<td>Purple</td>
+<td>Diamond</td>
+</tr>
+
+<tr>
+<td>3.</td>
+<td>2 cm</td>
+<td>Green</td>
+<td>Hexagon</td>
+</tr>
+
+<tr>
+<td>4.</td>
+<td>6 cm</td>
+<td>Red</td>
+<td>Square</td>
+</tr>
+
+</table>
+

@@ -2,28 +2,29 @@
 <latemp_subject "The Anti-qmail Page" />
 
 <p>
-<b>Last Updated:</b> 05-November-2005
+<b>Last Updated:</b> 07-November-2005
 </p>
 
 <p>
 You should avoid deploying <a href="http://qmail.org/">the qmail mail
 server</a> on new installations and try to convert existing installations
-into a different MTA. That's because:
+to a different MTA. That's because:
 </p>
 
 <ol>
 <li>
-It's not open-source, and has a very problematic license, that does not allow
+It's not open-source, and has a very problematic licence, that does not allow
 binary packages, distributing modified sources (only patches), etc.  As such
 it is not distributed as part of distributions of operating systems, and is
-not regularly kept up-to-date.. There are other open-source alternatives that 
+not regularly kept up-to-date. There are other open-source alternatives that 
 work just as well.
 </li>
 <li>
 It is no longer actively maintained. The last version was released on 1998. 
-That's over 7 years from now. Many patches are available for it, but
-they may not apply cleanly one after the other, and are not supported by the
-author. It even no longer compiles cleanly on Linux.
+So qmail has been abandonware for over 7 years at the time of this writing
+(November 2005). Many patches are available for it, but they may not apply 
+cleanly one after the other, and are not supported by the author. It even no 
+longer compiles cleanly on Linux.
 </li>
 <li>
 The author (<a href="http://cr.yp.to/">Daniel J. Bernstein</a>) is full of 
@@ -33,7 +34,7 @@ in maintaining qmail.
 </li>
 <li>
 It has a completely user-unfriendly build system, a long build process, and
-its code is incredibly unreadable. Bernstein uses a lot of one or two letter
+incredibly unreadable code. Bernstein uses a lot of one- or two-letter
 variable names, and cryptic function names.
 </li>
 <li>
@@ -52,7 +53,7 @@ qmail lags behind other MTAs in its feature-set.
 <h2>Alternatives</h2>
 
 <p>
-Instead you should use one of the following MTA's:
+Instead you should use one of the following MTAs:
 </p>
 
 <ol>
@@ -95,7 +96,7 @@ page</a>
 FAQ about Daniel J. Bernstein's Software</a>
 </li>
 <li>
-<a href="http://linmagazine.co.il/node/view/9620">Hebrew Blog entry in Aviram 
+<a href="http://linmagazine.co.il/node/view/9620">Hebrew blog entry in Aviram 
 Jenik's blog about Dan J. Bernstein not giving the money he promised for a 
 remote root exploit that was found in qmail</a>
 </li>

@@ -1,0 +1,145 @@
+#include '../template.wml'
+
+<latemp_subject "On the Tip of the Sword - A Logic Puzzle" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css" 
+type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<h2>Introduction</h2>
+
+<p>
+I originally wrote this puzzle for the magazine of a local Role-Playing
+Games' club, back in high school. I later on slightly de-RPGed and sent it
+to <a href="http://www.dellmagazines.com/">Dell Magazines</a> for 
+publication. I received no reply.
+</p>
+
+<h2>The Puzzle Itself</h2>
+
+<p>
+When Pierre de Fermat, the famous French mathematician, was just a 
+student, he had to visit the most obscure places for his studies. One
+evening he was a guest at the house of an old French hero - the Marquis
+François de Fougéres - who told him many tall tales about his adventurous
+life.
+</p>
+
+<p>
+At the beginning of the narrative, the old swashbuckler told him that during
+his adventures he managed to collect a set of fix luxurious swords: two
+ordinary, two silver tipped and a very precious golden sword. One sword was
+given to him as a gift by the king Henry the IV, and he found
+the rest (at least as he told) in a dragon's lair, in a pirate's ship,
+in an ancient tomb, and inside a treasure box. Each sword is of a different
+type: a khopesh (an Egyptian sword), a long sword, a short sword, a rapier
+(the sword of swashbucklers), and a scimitar (an Arabian sword). The warrior,
+who was very proud of his collection, put it on his room's wall, in a
+horizontal row.
+</p>
+
+<p>
+Once he heard that, Fermat's interest was arousd and during the narrative
+of de Fougégers he tried to find every detail given about the swords. He also
+noted a couple of notes on a piece of paper which he held in his hands.
+</p>
+
+<p>
+After the Marquis had finished his story, Fermat could tell him the order
+in which he had arranged his swords. Can you discover, according to the 
+following excerpts from the marquis' story, what is the tip color, the type
+and the origin of the swords in every place, as well?
+</p>
+
+<ol>
+
+<li>
+<p>
+"First I found the golden sword a month after I had started adventuring. I put
+it to the left of both of the ordinary  swords, so its appearance won't be
+diminished. Still, it isn't on one of the edges, so that it will stand
+out. In addition, I didn't place the silvered swords, close to each other."
+</p>
+</li>
+
+<li>
+<p>
+"Three years after the death of my comrade Damian, I have found the long sword
+in the dragon's lair. I didn't put it in the rightmost position."
+</p>
+</li>
+
+<li>
+<p>
+"Three years after the death of my comrade Damian, I have found the long sword
+in the dragon's lair. I didn't put it in the rightmost position."
+</p>
+</li>
+
+<li>
+<p>
+"There is a sword, which I found in the ship of the pirate Draco 'the Dumb' and
+which isn't short as the pirate custom for such swords is. I placed it left
+from another extraoridnary sword. The latter was given to me as a present by
+our noble king for the kiling of Draco. Unfortunately, it wasn't silvered."
+</p>
+<p>
+"Left to the sword which I found in the pirate's ship, is the scimitar, which
+wasn't found in the ancient tomb. It is not silvered, either."
+</p>
+</li>
+
+<li>
+<p>
+"Now let's return to my collection: I have placed one of the simple swords, the
+rapier, and the khopesh one besides the other. They make  awonderful 
+combination!! The khopesh is also right to the short sword."
+</p>
+</li>
+</ol>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Place</th>
+<th>Leftmost</th>
+<th>Middle-Left</th>
+<th>Center</th>
+<th>Middle-Right</th>
+<th>Rightmost</th>
+</tr>
+
+<tr>
+<td><b>Tip</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><b>Type</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><b>Origin</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+<p>
+(I still have to re-trace the solution, as I misplaced it.)
+</p>
+

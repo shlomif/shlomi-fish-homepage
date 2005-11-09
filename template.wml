@@ -1,4 +1,6 @@
 #include "utils.wml"
+#include "paypal.wml"
+
 <define-tag software_patents>1</define-tag>
 <set-var latemp_with_favicon="1" />
 <set-var latemp_with_xml_declaration="1" />
@@ -75,6 +77,8 @@ shlomifish.org
     "<google_search />"
     ""
     />
+
+<paypal_donate_code />
 <affil_collection_shlomif />
 <p>
 <a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 

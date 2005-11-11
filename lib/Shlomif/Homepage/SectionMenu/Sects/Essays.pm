@@ -92,6 +92,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/case-for-file-swapping/",
                     'title' => "Why File Swapping is Ethical and Moral and should be Legal",
                 },
+                {
+                    'text' => "Why Scientology is Bad",
+                    'url' => "philosophy/politics/why-scientology-is-bad/",
+                    'title' => "How I Concluded that Scientology is Bad",
+                },
             ],
         },
         {

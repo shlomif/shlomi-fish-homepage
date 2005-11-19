@@ -97,15 +97,23 @@ my $tree_contents =
         {
             'text' => "Work",
             'url' => "work/",
-            'expand' => { 're' => "^work/", },
+            'expand' => { 're' => "", },
             'title' => "Work-Related Pages",
-            'show_always' => 1,
-            'subs' => 
+            'subs' =>
             [
                 {
-                    'text' => "Private Lessons",
-                    'url' => "work/private-lessons/",
-                    'title' => "I'm Giving Private Lessons for High School Subjects and Computing.",
+                    'text' => "Hire Me!",
+                    'url' => "work/hire-me/",
+                    'title' => "I'm a Geek for Hire",
+                    'expand' => { 're' => "work/", },
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Private Lessons",
+                            'url' => "work/private-lessons/",
+                            'title' => "I'm Giving Private Lessons for High School Subjects and Computing.",
+                        },
+                    ],
                 },
             ],
         },

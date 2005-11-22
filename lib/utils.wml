@@ -36,3 +36,9 @@
 <a href="mailto:%0">%0</a>
 </define-tag>
 
+<define-tag note endtag="required">
+<div class="colored_frame">
+%body
+</div>
+</define-tag>
+

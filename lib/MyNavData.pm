@@ -284,8 +284,7 @@ my $tree_contents =
                 {
                     'text' => "Software Tools",
                     'title' => "Software Constructions and Management Tools",
-                    'url' => "software-tools/",
-                    'host' => "vipe",
+                    'url' => "open-source/resources/software-tools/",
                     'hide' => 1,
                 },
                 

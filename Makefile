@@ -2,7 +2,8 @@ LATEMP_WML_FLAGS =$(shell latemp-config --wml-flags)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
-	-DROOT~. -DLATEMP_THEME=better-scm
+	-DROOT~. -DLATEMP_THEME=better-scm \
+	-I $${HOME}/apps/wml
 
 ALL_DEST_BASE = dest
 

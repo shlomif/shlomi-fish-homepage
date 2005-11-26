@@ -1,23 +1,28 @@
 #include '../template.wml'
 
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "My Cool Links List" />
+
+<h2*>Table of Contents</h2*>
+<toc />
 
 <h2 id="studies">Studies Related</h2>
 
 <div class="indent">
-<h3><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
+<h3 id="technion"><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
 
 <p>
 The university where I studied in.
 </p>
 
-<h3><a href="http://www.ee.technion.ac.il/">Department of Electrical Engineering</a></h3>
+<h3 id="technion_ee"><a href="http://www.ee.technion.ac.il/">Department of Electrical Engineering</a></h3>
 
 <p>
 My Department.
 </p>
 
-<h3><a href="http://comnet.technion.ac.il/">The Computer Networks Laboratory</a></h3>
+<h3 id="technion_ee_comnet"><a href="http://comnet.technion.ac.il/">The Computer Networks Laboratory</a></h3>
 
 <p>
 A very cool laboratory where I did my projects and liked to hang out.
@@ -29,7 +34,7 @@ A very cool laboratory where I did my projects and liked to hang out.
 
 <div class="indent">
 
-<h3><a href="http://www.pti.co.il/">PTI - Perl Technology Israel</a></h3>
+<h3 id="current_workplaces_pti"><a href="http://www.pti.co.il/">PTI - Perl Technology Israel</a></h3>
 
 <p>
 PTI is a small consulting and training firm that specialises in open source
@@ -44,15 +49,15 @@ system</a>
 
 <div class="indent">
 
-<h3><a href="http://www.smlink.com/">Smart Link</a></h3>
+<h3 id="past_workplaces_smart_link"><a href="http://www.smlink.com/">Smart Link</a></h3>
 
 <p>
 Smart Link develops software-based modems for Windows (and maybe Linux too
 by now). It has also now entered the ADSL market.
 </p>
 
-<h3><a href="http://www.elpas.co.il/">Elpas Electro-optic Systems Ltd.</a></h3>
-<h3><a href="http://www.cortext.co.il/">Cortext Web Design</a></h3>
+<h3 id="past_workplaces_elpas"><a href="http://www.elpas.co.il/">Elpas Electro-optic Systems Ltd.</a></h3>
+<h3 id="past_workplaces_cortext"><a href="http://www.cortext.co.il/">Cortext Web Design</a></h3>
 
 <p>
 These are my previous workplaces. Check them out, if you'd like.
@@ -63,7 +68,7 @@ These are my previous workplaces. Check them out, if you'd like.
 <h2 id="philosophy">Philosophy and Politics</h2>
 
 <div class="indent">
-<h3><a href="http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/">The Google Directory Objectivism Branch</a></h3>
+<h3 id="philosophy_objectivism"><a href="http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/">The Google Directory Objectivism Branch</a></h3>
 
 <p>
 I became very interested in Objectivism in the past few years, so I recommend
@@ -79,11 +84,11 @@ for Objectivist resources on the web, and there is a lot of introductury
 material there.
 </p>
 
-<h3><a href="http://www.neo-tech.com/">The Neo-Tech Homepage</a></h3>
+<h3 id="philosophy_neo_tech"><a href="http://www.neo-tech.com/">The Neo-Tech Homepage</a></h3>
 
 <p>
-"Neo-Tech" is an extension of Objectivism that I also became familiar with. It has
-some substancial additions over Objectivism. For example, it integrates
+"Neo-Tech" is an extension of Objectivism that I also became familiar with. It 
+has some substancial additions over Objectivism. For example, it integrates
 psychology and business advisory into the philosphy.
 </p>
 
@@ -99,8 +104,8 @@ Neo-Tech by (snail) mail.
 <h2 id="foss">Linux and Free Software</h2>
 
 <div class="indent">
-<h3><a href="http://www.linux.org/">The Linux' Homepage</a></h3>
-<h3><a href="http://www.iglu.org.il/">The Israeli Group of Linux Users</a></h3>
+<h3 id="foss_linux"><a href="http://www.linux.org/">The Linux' Homepage</a></h3>
+<h3 id="foss_iglu"><a href="http://www.iglu.org.il/">The Israeli Group of Linux Users</a></h3>
 
 <p>
 I'm very interested in computers. For a long time I knew DOS and Windows were
@@ -122,7 +127,7 @@ User's Group, which is the local Linux mailing list, community server and
 users' "guild".
 </p>
 
-<h3><a href="http://www.haifux.org/">The Haifa Linux Club</a></h3>
+<h3 id="foss_haifux"><a href="http://www.haifux.org/">The Haifa Linux Club</a></h3>
 
 <p>
 The Haifa Linux Club (or Haifux for short) gives lectures on Linux-related 
@@ -132,7 +137,7 @@ lectures on a myriad of topics there, and enjoy going to listen to the
 other people lecturing.
 </p>
 
-<h3><a href="http://www.cs.tau.ac.il/telux/">Tel Aviv Linux Club</a></h3>
+<h3 id="foss_telux"><a href="http://www.cs.tau.ac.il/telux/">Tel Aviv Linux Club</a></h3>
 
 <p>
 The Tel Aviv Linux Club (or Telux for short) is a club in a similar format
@@ -140,7 +145,7 @@ to Haifux. Right now, due to the fact that I'm living in Tel Aviv, I tend
 to attend its lectures and be more active there, instead of in Haifux. 
 </p>
 
-<h3><a href="http://www.hackers.org.il/">Hackers-IL</a></h3>
+<h3 id="foss_hackers_il"><a href="http://www.hackers.org.il/">Hackers-IL</a></h3>
 
 <p>
 Hackers-IL is a community of Israeli-oriented 
@@ -149,7 +154,7 @@ Hackers-IL is a community of Israeli-oriented
 philosophical computing issues and discussing other areas of science.
 </p>
 
-<h3><a href="http://www.advogato.org/">Advogato - Open-Source Advocacy</a></h3>
+<h3 id="foss_advogato"><a href="http://www.advogato.org/">Advogato - Open-Source Advocacy</a></h3>
 
 <p>
 A web-site dedicated to open-source advocacy.
@@ -159,7 +164,7 @@ A web-site dedicated to open-source advocacy.
 
 <h2 id="software_gurus">Software "Gurus"</h2>
 <div class="indent">
-<h3><a href="http://www.tuxedo.org/~esr/">Eric S. Raymond</a></h3>
+<h3 id="software_gurus_esr"><a href="http://www.tuxedo.org/~esr/">Eric S. Raymond</a></h3>
 
 <p>
 Eric Raymond is the number one Open-Source Guru. On his homepage one can
@@ -167,7 +172,7 @@ find the seminal <a href="http://www.tuxedo.org/~esr/writings/cathedral-bazaar/"
 engineer should read), and other truly enlightening articles.
 </p>
 
-<h3><a href="http://www.joelonsoftware.com/">Joel on Software</a></h3>
+<h3 id="software_gurus_joel_on_software"><a href="http://www.joelonsoftware.com/">Joel on Software</a></h3>
 
 <p>
 Joel Spolsky is an experienced information technology worker who maintains
@@ -177,14 +182,14 @@ there, but some of his articles are very enlightening. He also has a very
 funny and amusing style of writing and look on life.
 </p>
 
-<h3><a href="http://www.paulgraham.com/">Paul Graham</a></h3>
+<h3 id="software_gurus_paul_graham"><a href="http://www.paulgraham.com/">Paul Graham</a></h3>
 
 <p>
 Paul Graham is an experienced programmer in LISP and other languages.
 His articles are insightful, interesting and thought-provoking.
 </p>
 
-<h3><a href="http://www.dwheeler.com/">David A. Wheeler</a></h3>
+<h3 id="software_gurus_david_a_wheeler"><a href="http://www.dwheeler.com/">David A. Wheeler</a></h3>
 
 <p>
 An open source engineer and consultant. His lines-of-code counter program 
@@ -192,7 +197,7 @@ An open source engineer and consultant. His lines-of-code counter program
 is much more awe-striking. Has other good articles.
 </p>
 
-<h3><a href="http://linas.org/">Linas Vepstas</a></h3>
+<h3 id="software_gurus_linas_vepstas"><a href="http://linas.org/">Linas Vepstas</a></h3>
 
 <p>
 His web-site contains pages with a lot of information about RAID in Linux,
@@ -200,7 +205,7 @@ CORBA, clusters, bug tracking. Also has some software he wrote, papers on
 software freedom and other oddities.
 </p>
 
-<h3><a href="http://www.linuxmafia.com/~rick/">Rick Moen</a></h3>
+<h3 id="software_gurus_rick_moen"><a href="http://www.linuxmafia.com/~rick/">Rick Moen</a></h3>
 
 <p>
 Net-geek for hire and Linux Guru extra-ordinaire. Contains more philosophical
@@ -209,7 +214,7 @@ forking does not happen a lot and is not a threat, and a guide to establishing
 a successful Linux User Group.
 </p>
 
-<h3><a href="http://www.goingware.com/">Michael David 
+<h3 id="software_gurus_goingware"><a href="http://www.goingware.com/">Michael David 
 Crawford (GoingWare)</a></h3>
 
 <p>
@@ -218,7 +223,7 @@ there is <a href="http://www.goingware.com/tips/legal-downloads.html">"Links
 to Tens of Thousands of Legal Music Downloads"</a>.
 </p>
 
-<h3><a href="http://www.jwz.org/">Jamie Zawinski</a></h3>
+<h3 id="software_gurus_jamie_zawinsky"><a href="http://www.jwz.org/">Jamie Zawinski</a></h3>
 
 <p>
 A very famous software developer, and his homepage that contains a lot of
@@ -360,7 +365,7 @@ and better all the time. (feel free to contribute something of your own!).
 
 <h2 id="software">Software</h2>
 
-<h3><a href="$(ROOT)/open-source/favourite/">Open Source Software</a></h3>
+<h3 id="software_foss"><a href="$(ROOT)/open-source/favourite/">Open Source Software</a></h3>
 
 <p>
 Refer to this link, for a page about my favourite open source.
@@ -630,4 +635,5 @@ a presentation.
 excellent and modern HTML and CSS tutorials by a good expert on the topic.
 </li>
 </ul>
+
 

@@ -37,7 +37,7 @@ my $essays_tree_contents =
                 {
                     'text' => "What is Open Source?",
                     'url' => "philosophy/foss-other-beasts/",
-                    'title' => "Free Software, Open Source and Other Beasts",
+                    'title' => "Open Source, Free Software and Other Beasts",
                 },
                 {
                     'text' => "Perl &amp; Newcomers",
@@ -113,6 +113,11 @@ my $essays_tree_contents =
                 {
                     'text' => "Guide to Neo-Tech",
                     'url' => "philosophy/philosophy/guide-to-neo-tech/",
+                },
+                {
+                    'text' => "Advice for the Young",
+                    'url' => "philosophy/philosophy/advice-for-the-young/",
+                    'title' => "Advice for the Young (and for the not-so Young)",
                 },
             ],
         },

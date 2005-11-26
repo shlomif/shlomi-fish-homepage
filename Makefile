@@ -10,7 +10,7 @@ FORTUNES_TARGET = dest/vipe-homepage/humour/fortunes/fortunes-index.html
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: latemp_targets $(FORTUNES_TARGET)
+all: latemp_targets $(FORTUNES_TARGET) sitemap_targets
 	
 include include.mak
 include rules.mak
@@ -108,4 +108,11 @@ rss:
 	./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
 	touch t2/old-news.html.wml
+
+T2_SITEMAP_FILE = $(T2_DEST)/sitemap.xml.gz
+
+sitemap_targets: $(T2_SITEMAP_FILE)
+
+$(T2_SITEMAP_FILE): bin/gen-google-site-map.pl
+	$<
 

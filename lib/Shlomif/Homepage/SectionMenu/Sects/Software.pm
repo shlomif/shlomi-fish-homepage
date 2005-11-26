@@ -86,8 +86,7 @@ my $software_tree_contents =
                     'title' => "Index of Libraries for Portability",
                 },
                 {
-                    'url' => "software-tools/",
-                    'host' => "vipe",
+                    'url' => "open-source/resources/software-tools/",
                     'text' => "Software Building and Management Tools",
                 },
             ],

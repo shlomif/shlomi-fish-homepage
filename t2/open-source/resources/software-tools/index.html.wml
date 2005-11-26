@@ -1,65 +1,87 @@
 #include '../template.wml'
 <latemp_subject "Software Construction and Management Tools" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="sb.css" type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<div class="software_build">
 <h2>Software Building</h2>
 
-<p>
+<ul>
+<li>
 <a href="http://www.gnu.org/software/make/">GNU Make</a> - the best make in 
 town! An implementation of make with many enhancements and some 
 parallelization. There's a drop-in replacement for it written in Perl called 
 <a href="http://makepp.sourceforge.net/">Makepp</a>.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.canb.auug.org.au/~millerp/cook/cook.html">Cook</a> - 
 a make replacement with variables, user-defined functions, parallelization,
 file checksums, and other powerful features.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.dsmit.com/cons/">CONS</a> - a make replacement written
 in Perl with file checksums and other features. 
-<a href="http://www.scons.org/">SCons</a> is a Python version.
-</p>
+<a href="http://www.scons.org/">SCons</a> is a Python version, that has been
+more actively maintained recently.
+</li>
 
-<p>
+<li>
 <a href="http://jakarta.apache.org/ant/">Ant</a> - a make replacement
 written in Java that uses an XML description language.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">
 Google's Web Directory for Make Tools</a> - contains other useful links.
-</p>
+</li>
 
-<p>
+<li>
+<a href="http://www.a-a-p.org/tools_build.html">A-A-P Build Tools List</a> -
+A very comprehensive list of build tools.
+</li>
+
+<li>
 <a href="http://en.wikipedia.org/wiki/Make">The Wikipedia Entry for Make</a> -
 contains a list of alternatives.
-</p>
+</li>
+</ul>
 
 <h2>Software Pre-building Configuration</h2>
 
-<p>
+<ul>
+<li>
 GNU <a href="http://www.gnu.org/software/autoconf/autoconf.html">Autoconf</a>,
 <a href="http://www.gnu.org/software/automake/automake.html">Automake</a>,
 and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
 a trio of programs to portably build applications across multiple UNIX
 platforms. The de-facto standard in the open-source world.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.dubois.ws/software/imake-stuff/">Imake</a> - a
 portability tool that ships with X11.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.cleanscape.net/stdprod/qef/qef.html">QEF</a> - a 
 high-level software construction system. Operates consistently across UNIX
 and Windows NT platforms. Proprietary.
-</p>
+</li>
+
+<li>
+<a href="http://www.scons.org/">SCons</a> can be used for writing such tests
+as well.
+</li>
+</ul>
 
 <h2>Software Packaging</h2>
 
-<p>
+<ul>
+<li>
 <a href="http://www.rpm.org/">RPM</a> - a package management system used on
 RedHat Linux and other RPM-based distributions. Also look at 
 <a href="http://www.linux-mandrake.com/cooker/urpmi.html">urpmi</a>, 
@@ -67,132 +89,153 @@ RedHat Linux and other RPM-based distributions. Also look at
 up2date</a>, <a href="http://apt-rpm.tuxfamily.org/">apt-rpm</a>, 
 and <a href="http://ximian.com/products/redcarpet/">Ximian Red Carpet</a>,
 which install packages and resolve dependencies.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://freshmeat.net/projects/dpkg/">dpkg</a> - The Debian Package
 Manager, which is also used on similar distributions. Also look at 
 <a href="http://www.debian.org/doc/manuals/apt-howto/index.en.html">Apt</a> 
 which automatically installs packages and resolves dependencies.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.gentoo.org/">Portage - The Gentoo Package Manager</a> - 
 a package management system for Gentoo Linux. Akin to the BSD ports but
 based on Python.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.openpkg.org/">OpenPKG</a> - a cross-platform UNIX
 software packaging system.
-</p>
-
+</li>
+</ul>
 
 <h2>Source Control Managament Systems</h2>
 
-<p>
+<ul>
+<li>
 <a href="http://www.cvshome.org/">CVS</a> - the current standard of
 open-source source control systems. Functional and stable, but limited in 
 many ways.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://aegis.sourceforge.net/">Aegis</a> - an SCM system by Peter
 Miller, with changesets, distributed repositories, file renames and other
 powerful features. Can be networked over HTTP.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://subversion.tigris.org/">Subversion</a> - a CVS replacement
 with atomic commits, networking over HTTP, efficient handling of binary file
 and other features.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://arch.fifthvision.net/">Arch</a> - a
 distributed source control system with renames, networking over FTP and
 other features.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.opencm.org/">OpenCM</a> - a CVS replacement which is not
 as feature rich as CVS but supports some useful things that CVS lacks.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.vestasys.org/">Vesta</a> - a distributed configuration
 management system, which depends on its own internal building process. Very
 mature and LGPLed.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/">Dmoz.org's 
 Category for Version Control Systems</a> - contains links to many
 other implementations and resources. <a href="http://dir.google.com/Top/Computers/Software/Configuration_Management/Tools/">The Google Directory's equivalent
 directory may also prove helpful.</a>.
-</p>
+</li>
+</ul>
 
 <h2>Bug Tracking</h2>
 
-<div class="indent">
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
 to very prominent open-source ones, and to directories where comprehensive 
 lists can be found.
 </p>
-</div>
 
-<p>
+<ul>
+<li>
 <a href="http://www.mozilla.org/projects/bugzilla/">Bugzilla</a> - a
 WWW-based bug management system written as part of the Mozilla project with 
 many advanced features. 
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.gnu.org/software/gnats/">GNATS</a> - The GNU Bug
 Tracking System, which uses Plaintext files to store its information and
 has several front-ends.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://gforge.org/">GForge</a> - The open-source derivative of
 the original VA SourceForge codebase contains a rudimentary bug-tracking
 system as part of the many web-based collaborative services it offers for 
 developers.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://mantisbt.sourceforge.net/">Mantis</a> - An open-source 
 PHP/MySQL web-based bug tracking system.
-</p>
+</li>
 
-<p>
+<li>
+<a href="http://www.edgewall.com/trac/">Trac</a> - a wiki and issue tracking 
+system for software development projects. Written in Python and based on 
+Subversion.
+</li>
+
+<li>
+<a href="http://www.bestpractical.com/rt/">Request Tracker</a> - <q>"RT is an 
+enterprise-grade ticketing system which enables a group of people to 
+intelligently and efficiently manage tasks, issues, and requests submitted 
+by a community of users."</q>. Among else, it is used for 
+<a href="http://rt.cpan.org/">tracking CPAN issues</a>.
+</li>
+
+<li>
 <a href="http://directory.google.com/Top/Computers/Software/Configuration_Management/Bug_Tracking/">
 Google's Web Directory Bug Tracking Category</a> - contains links to many
 other implementations.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://dmoz.org/Computers/Software/Configuration_Management/Bug_Tracking/">DMoz Bug Tracking</a> - a perhaps more updated version of the same resource,
 with slower access times, and lack of Google's PageRank integration.
-</p>
+</li>
+
+</ul>
 
 <h2>Testing Frameworks</h2>
 
-<p>
+<ul>
+<li>
 <a href="http://www.gnu.org/software/dejagnu/dejagnu.html">DejaGNU</a> -
 a testing framework by the GNU project based on Tcl and Expect.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://www.xprogramming.com/software.htm">XUnit</a> - A testing
 framework that was suggested by Extreme Programming.
-</p>
+</li>
 
-<p>
+<li>
 <a href="http://tetworks.opengroup.org/">TET</a> - A cross-platform
 testing framework by the Open Group.
-</p>
+</li>
+</ul>
+
+</div>
 
 <!-- To add:
 

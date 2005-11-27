@@ -31,6 +31,25 @@ google_color_url = "008000";
 </script>
 </define-tag>
 
+<define-tag google_adsense_code_side>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2480595666283917";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "008000";
+google_color_text = "6F6F6F";
+google_color_bg = "FFFFFF";
+google_color_link = "0000CC";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</define-tag>
+
 <latemp_top_banner>
 <div class="banner">
 <google_adsense_code />
@@ -66,6 +85,10 @@ shlomifish.org
 </form>
 </define-tag>
 
+<define-tag no_ie_link endtag="required">
+<a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!">%body</a>
+</define-tag>
+
 <latemp_lang "en-US" />
 <latemp_encoding "utf-8" />
 <latemp_author "Shlomi Fish" />
@@ -95,16 +118,21 @@ shlomifish.org
     class="bless"
     /></a>
 </p>
-<define-tag no_ie_link endtag="required">
-<a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!">%body</a>
-</define-tag>
-<div style="text-align:center">
+
+
+<div id="noie">
 <no_ie_link><img src="$(ROOT)/images/noIE.png" 
 class="highlight" style="border:0" 
 alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 <no_ie_link>Stop Using Internet Explorer!</no_ie_link>
 </div>
+<div class="center">
+<google_adsense_code_side />
+</div>
 </latemp_affiliations_buttons>
+
+
+
 <latemp_webmaster>
 <p>
 Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</a>. 

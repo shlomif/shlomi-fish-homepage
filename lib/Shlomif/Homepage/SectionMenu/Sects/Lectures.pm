@@ -32,7 +32,7 @@ my $essays_tree_contents =
         {
             'text' => "CatB",
             'url' => "lecture/CatB/",
-            'title' => "Presentation about \"The Cathedral and the Bazaar\"",
+            'title' => "Presentation about &quot;The Cathedral and the Bazaar&quot;",
         },        
         {
             'text' => "Programming Languages",

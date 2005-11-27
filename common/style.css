@@ -5,7 +5,8 @@
 .navbar 
 { 
     float : left;
-    background-color: #FFE4B5; /* moccasin */
+    /* derived from moccasin, but less intrusive, as a background.*/
+    background-color: #FFEED3; 
     width : 20%;
     padding-right : 1em;
     padding-top : 1.5em;
@@ -81,10 +82,11 @@ ul.nospace
     border-style : double;
     padding : 0.5em;
 }
-/* This is for the leading path at the top. */
+
+/* This is for the breadcrumbs trail (= leading path) at the top. */
 .leading_path
 {
-    background-color : #80d000;
+    background-color : #ccffd0;
     margin-bottom: 0.2em;
     padding-left: 0.2em;
     padding-top: 0.1em;
@@ -93,12 +95,13 @@ ul.nospace
 }
 .leading_path a:visited
 {
-    color : #FFFF00;
+    color : #B24;
 }
 .leading_path a:hover
 {
     background-color : #FFA500; /* orange */
 }
+
 /* Border-less */
 .bless
 {

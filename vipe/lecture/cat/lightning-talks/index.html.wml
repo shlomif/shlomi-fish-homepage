@@ -1,6 +1,24 @@
 #include '../template.wml'
-<latemp_subject "Presentations Category - Lightning Talks" />
+
+<latemp_subject "Lightning Talks" />
 
 <p>
-Nothing here at the moment.
+These are <a href="http://perl.plover.com/lt/lightning-talks.html">lightning
+talks</a> - short presentations about specific subjects - that I have given
+in the past.
 </p>
+
+<ul>
+<li>
+<a href="$(ROOT)/lecture/mini/mdda/">Meta-Data Database Access</a>
+</li>
+<li>
+<a href="$(ROOT)/lecture/Perl/Graham-Function/">Presentation about Finding the 
+Graham Function</a>
+</li>
+<li>
+<a href="$(ROOT)/lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful 
+Templating System for Perl</a>
+</li>
+</ul>
+

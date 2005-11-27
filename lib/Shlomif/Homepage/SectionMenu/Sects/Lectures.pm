@@ -30,14 +30,26 @@ my $essays_tree_contents =
             'host' => "t2",
         },
         {
-            'text' => "Scheme &amp; Lambda Calculus",
-            'url' => "lecture/Lambda-Calculus/",
-        },
+            'text' => "CatB",
+            'url' => "lecture/CatB/",
+            'title' => "Presentation about \"The Cathedral and the Bazaar\"",
+        },        
         {
-            'text' => "Haskell for Perlers",
-            'url' => "lecture/Perl/Haskell/",
-            'title' => "The Haskell Programming Language for Perl Programmers",
-        },
+            'text' => "Programming Languages",
+            'url' => "lecture/cat/programming-languages/",
+            'subs' =>
+            [
+                {
+                    'text' => "Scheme &amp; Lambda Calculus",
+                    'url' => "lecture/Lambda-Calculus/",
+                },
+                {
+                    'text' => "Haskell for Perlers",
+                    'url' => "lecture/Perl/Haskell/",
+                    'title' => "The Haskell Programming Language for Perl Programmers",
+                },
+            ],
+        },            
         {
             'text' => "Tools",
             'url' => "lecture/cat/various-tools/",
@@ -68,6 +80,22 @@ my $essays_tree_contents =
                     'text' => "Web Meta Lecture",
                     'url' => "lecture/WebMetaLecture/",
                     'title' => "Presentation about Web Meta Language",
+                },
+                {
+                    'text' => "Pres Tools",
+                    'url' => "lecture/cat/pres-tools/",
+                    'title' => "Tools for Preparing Slides for Presentations",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Quad-Pres",
+                            'url' => "lecture/Quad-Pres/",
+                        },
+                        {
+                            'text' => "PerlPoint",
+                            'url' => "lecture/Pres-Tools/Perl-Point/",
+                        },
+                    ],
                 },
             ],
         },
@@ -123,27 +151,6 @@ my $essays_tree_contents =
                     'text' => "LM-Solve",
                     'url' => "lecture/LM-Solve/",
                     'title' => "LM-Solve - a Logic Mazes Solver",
-                },
-            ],
-        },
-        {
-            'text' => "CatB",
-            'url' => "lecture/CatB/",
-            'title' => "Presentation about the Cathedral and the Bazaar",
-        },
-        {
-            'text' => "Pres Tools",
-            'url' => "lecture/cat/pres-tools/",
-            'title' => "Tools for Preparing Slides for Presentations",
-            'subs' =>
-            [
-                {
-                    'text' => "Quad-Pres",
-                    'url' => "lecture/Quad-Pres/",
-                },
-                {
-                    'text' => "PerlPoint",
-                    'url' => "lecture/Pres-Tools/Perl-Point/",
                 },
             ],
         },

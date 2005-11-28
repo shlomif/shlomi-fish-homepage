@@ -388,9 +388,23 @@ my $tree_contents =
             'skip' => 1,
         },
         {
-            'url' => "site-source/",
-            'text' => "Site's Source",
-            'title' => "The source code used to generate this site",
+            'expand_re' => "^meta/",
+            'url' => "meta/",
+            'text' => "Meta Info",
+            'title' => "Information about this Site",
+            'show_always' => 1,
+            'subs' =>
+            [
+                {
+                    'url' => "meta/site-source/",
+                    'text' => "Site's Source",
+                    'title' => "The source code used to generate this site",
+                },
+                {
+                    'url' => "meta/donate/",
+                    'text' => "Please Donate",
+                },
+            ],
         },
     ],
 };

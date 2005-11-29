@@ -97,6 +97,7 @@ much up-to-date, but may still prove useful.
 <:{
 use Shlomif::Homepage::News;
 
+binmode STDOUT, ":utf8";
 my $news = Shlomif::Homepage::News->new();
 print $news->render_front_page();
 }:>

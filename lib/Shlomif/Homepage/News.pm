@@ -3,6 +3,8 @@ package Shlomif::Homepage::News;
 use strict;
 use warnings;
 
+use utf8;
+
 use base 'HTML::Widgets::NavMenu::Object';
 use base 'Class::Accessor';
 
@@ -70,7 +72,7 @@ to the programming languages of the World</a> page.
 </p>
 
 <p class="newsitem">
-Some of my newer projects are now mentioned in my resume&eacute;s. I added
+Some of my newer projects are now mentioned in my resumés. I added
 a link to <a href="./lecture/LAMP/slides/">a presentation about Web 
 Publishing using LAMP</a>. Finally, 
 <a href="./philosophy/obj-oss/">the Objectivism and Open Source</a>
@@ -158,6 +160,7 @@ sub file_to_news_item
     my $text = do {
         local $/;
         open my $file, "<", $self->dir()."/".$filename;
+        binmode $file, ":utf8";
         <$file>;
     };
     $text =~ s!<p>!<p class="newsitem">!g;

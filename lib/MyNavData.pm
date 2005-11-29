@@ -212,7 +212,11 @@ my $tree_contents =
                     'url' => "art/hhfg-background/",
                     'title' => "Background Image for the &quot;Human Hacking Field Guide&quot; Story",
                 },
-                
+                {
+                    'text' => "Better SCM Logo",
+                    'url' => "art/better-scm/",
+                    'title' => "Logo for the  &quot;Better SCM&quot; Site",
+                },
             ],
         },
         {

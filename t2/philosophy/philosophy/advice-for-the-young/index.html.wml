@@ -110,12 +110,12 @@ enumerating all of them here would be not possible.
 
 <p>
 Just search for <a href="http://www.google.com/search?q=%22linux%20vs.%20windows%22">"Linux vs. Windows"</a> or "Open Source vs. Windows.". Windows is trying 
-to catch up but usually gives solutions that are either buggy at first or 
-not as integrated, or not as good or worse, or simply too little too 
-late. In Microsoft conferences, the Microsofties are notorious for getting 
-excited about new Windows features that Linux has had for years. The Win32 API
-is horrible and very programmer unfriendly, while the various Unix APIs are 
-in very good shape.
+to catch up but usually gives solutions that are either buggy at first or
+not as integrated, or not as good or worse, or simply too little too
+late. In Microsoft conferences, the Microsofties are notorious for getting
+excited about new Windows features that Linux and other UNIXes has had for
+years. The Win32 API is horrible and very programmer unfriendly, while the 
+various Unix APIs are in very good shape.
 </p>
 
 <p>
@@ -130,17 +130,30 @@ at least here in Israel. No-one can find any. Linux is hot.
 Microsoft will probably survive. It has .NET which is very portable. (either
 the proprietary version by Microsoft which runs fine on FreeBSD), or the
 open-source Mono. It also has many other good products and some decent APIs
-that can be ported to Linux. But Windows is dead.
+that can be ported to Linux. And as
+<a href="http://www.joelonsoftware.com/articles/APIWar.html">Joel Spolsky
+notes</a> it still has a lot of space to manuever, having a lot of money
+in the bank and being very profitable, and can still end up re-inventing
+itself into something else.
+</p>
+
+<p>
+But Windows is dead. It does not mean it will not be used for years to come
+in various forms (just like Novell NetWare, DOS, Mac OS Classic, and other
+dead OSes can still be encountered in various places), but it will still
+be dead.
 </p>
 
 <p>
 I'm not as 
 <a href="http://lxer.com/module/newswire/view/16376/index.html">paranoid as 
 ESR is</a> about what Microsoft will do next. I think they
-will simply embrace Linux, port their software to run on it. We will see
-programs written in the Win32 API and APIs above that for years to
-come. (There are still programs that run under DOS, and were not 
-ported yet.)
+will simply embrace Linux, port their software to run on it. 
+</p>
+
+<p>
+Why is all that important? Because you'd better learn Unix now rather than
+later, knowing that it is going to be the future of computing.
 </p>
 
 <h2 id="technologies_to_learn">Learn Many Different and Orthogonal 
@@ -319,9 +332,9 @@ Free (to Wear Sunscreen)</a>. Just don't take it too seriously...
 <dt>Written By:</dt>
 <dd><a href="http://www.shlomifish.org/">Shlomi Fish</a></dd>
 <dt>Publication Date:</dt>
-<dd>15-December-2005</dd>
+<dd>17-December-2005</dd>
 <dt>Last Updatd:</dt>
-<dd>15-Decemeber-2005</dd>
+<dd>17-Decemeber-2005</dd>
 <dt>License:</dt>
 <dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>.<!--/Creative Commons License--></dd>
 </dl>

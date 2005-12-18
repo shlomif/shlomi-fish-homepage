@@ -1,6 +1,12 @@
 #include '../template.wml'
 
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "Shlomi Fish' Advice for the Young" />
+
+<h2* id="toc">Table of Contents</h2*>
+
+<toc />
 
 <h2 id="intro">Introduction</h2>
 
@@ -326,7 +332,7 @@ Free (to Wear Sunscreen)</a>. Just don't take it too seriously...
 </li>
 </ol>
 
-<h2>Meta Information</h2>
+<h2 id="meta_info">Meta Information</h2>
 
 <dl>
 <dt>Written By:</dt>

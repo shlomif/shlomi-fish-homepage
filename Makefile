@@ -117,3 +117,5 @@ sitemap_targets: $(T2_SITEMAP_FILE)
 $(T2_SITEMAP_FILE): bin/gen-google-site-map.pl
 	$<
 
+%.show:
+	@echo "$* = $($*)"

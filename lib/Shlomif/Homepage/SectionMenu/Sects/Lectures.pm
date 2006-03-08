@@ -111,9 +111,10 @@ my $essays_tree_contents =
                     'title' => "Basic Linux Use",
                 },
                 {
-                    'text' => "Linux for the Technion Student",
-                    'url' => "lecture/W2L/Technion/",
-                    'title' => "Performing Common Programming Tasks in Linux",
+                    'text' => "Development",
+                    'host' => "t2",
+                    'url' => "lecture/W2L/Development/",
+                    'title' => "Software Development under Linux",
                 },
                 {
                     'text' => "Blitz",
@@ -175,6 +176,22 @@ my $essays_tree_contents =
                     'url' => "lecture/Perl/Template-Toolkit/",
                     'title' => "A Powerful Templating System for Perl",
                 },
+                {
+                    'text' => "Optimising Multitasking in PDL",
+                    'host' => "t2",
+                    'url' => "lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/",
+                },
+                {
+                    'text' => "Test::Run",
+                    'host' => "t2",
+                    'url' => "lecture/Perl/Lightning/Test-Run/",
+                    'title' => "Test::Run - a New and Improved Test Harness",
+                },
+                {
+                    'text' => "Too Many Ways to do it",
+                    'host' => "t2",
+                    'url' => "lecture/Perl/Lightning/Too-Many-Ways/",
+                },                   
             ],
         },
     ],

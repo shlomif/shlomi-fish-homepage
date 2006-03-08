@@ -1,7 +1,13 @@
 #include '../template.wml'
-<latemp_subject "Welcome to Linux Presentation by Shlomi Fish" />
+<latemp_subject "&quot;Welcome to Linux&quot; Presentations by Shlomi Fish" />
 
-<h2>The presentations themselves</h2>
+<p>
+These are presentations that have been given as part of the Israeli 
+<a href="http://welcome.linux.org.il/">Welcome to Linux</a> series, that
+aims to introduce Linux to beginners.
+</p>
+
+<h2>The Presentations Themselves</h2>
 
 <ul>
 <li>
@@ -12,8 +18,10 @@
 Shachar Reindel.
 </li>
 <li>
-<a href="./Technion/">Development under Linux</a> - content authored by
-Meir Maor.
+<a href="<rellink host="t2" url="lecture/W2L/Development/" />">Development
+under Linux</a> - the content of this presentation was originally authored 
+by Meir Maor. <a href="./Technion/">An older incarnation of this 
+presentation</a> is also available.
 </li>
 <li>
 <a href="./Why_Linux/">What Linux is to Me</a>

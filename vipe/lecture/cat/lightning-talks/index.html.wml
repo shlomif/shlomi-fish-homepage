@@ -8,6 +8,10 @@ talks</a> - short presentations about specific subjects - that I have given
 in the past.
 </p>
 
+<define-tag t2_lect whitespace="delete">
+http://www.shlomifish.org/lecture/Perl/Lightning/%0/
+</define-tag>
+
 <ul>
 <li>
 <a href="$(ROOT)/lecture/mini/mdda/">Meta-Data Database Access</a>
@@ -19,6 +23,16 @@ Graham Function</a>
 <li>
 <a href="$(ROOT)/lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful 
 Templating System for Perl</a>
+</li>
+<li>
+<a href="<t2_lect "Opt-Multi-Task-in-PDL" />">Optimising Multitasking in 
+PDL</a>
+</li>
+<li>
+<a href="<t2_lect "Test-Run" />">Test::Run - a New and Improved Test Harness</a>
+</li>
+<li>
+<a href="<t2_lect "Too-Many-Ways" />">There are too Many Ways to Do it</a>
 </li>
 </ul>
 

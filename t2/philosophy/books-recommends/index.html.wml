@@ -1,7 +1,10 @@
 #include '../template.wml'
 
+#include "amazon.wml"
+
 ;;; To add:
-;;; * Best of The Perl Journal: vol.'s 1 and 3.
+
+;;; Not to add:
 ;;; * Writing Perl Modules for CPAN
 
 <latemp_subject "Shlomi Fish' Book Recommendations" />
@@ -170,6 +173,15 @@ covers everyday things like doors, taps or phones , and why or why not they
 make sense. This book is amusing, insightful and makes a very good read.
 </dd>
 
+<dt id="guns_germs_and_steel"><a href="<affil_link id="0393061310" />">Guns,
+Germs and Steel: The Fates of Human Societies</a> by Jared Diamond</dt>
+<dd>
+This books tries to answer the question of why did different human societies 
+evolve differently. It demonstrates that geography and bio-geography played
+a big role in shaping the destinies of people in different places on our 
+planet. This book contains many interesting ancedotes, a wonderful theme, and
+is a pleasure to read. Highly recommended.
+</dd>
 
 
 </dl>
@@ -312,6 +324,42 @@ think it will be perfectly acceptable this way. But Windows is only one OS,
 and the x86's is only one processor architecture. In the UNIX world, there are 
 plenty of other operating systems and processor architectures. Often many 
 subtle problems can occur because of luck of knowledge of UNIX concepts.
+</p>
+</dd>
+
+<dt id="perl_journal_vol_1"><a href="<affil_link id="0596003102" />">Computer
+Science &amp; Perl Programming: Best of The Perl Journal</a></dt>
+
+<dd>
+The first installment in the series of three books containing a collection of 
+articles from "the Perl Journal". Very nice book, with interesting articles. 
+You can <a href="http://www.perl.org.il/books/0596003102.html">read my review 
+of it</a> to the Perl mongers.
+</dd>
+
+<dt id="perl_journal_vol_3"><a href="<affil_link id="0596003129" />">Games, 
+Diversions &amp; Perl Culture: Best of the Perl Journal</a></dt>
+
+<dd>
+The third installment in the series of three books containing a collection of 
+articles from "the Perl Journal". As a whole it is very entertaining and
+enlightening. You can <a href="http://www.perl.org.il/books/0596003129.html">read my review of it</a> to the Perl mongers.
+</dd>
+
+<dt id="higher_order_perl"><a href="<affil_link id="1558607013" />">Higher
+Order Perl: Transforming Programs with Programs</a></dt>
+
+<dd>
+<p>
+"Higher Order Perl" is both enjoyable and accessible. Mark Jason Dominus
+demonstrates some techniques that originated from the LISP world and shows how
+to implement them in Perl, and how they can be put into good use. I learend a
+lot from this book: how currying, iterators and streams can be useful, how a
+recursive descent parser can be implemented, and many other things.  
+</p> 
+<p>
+Also see <a href="http://www.perl.org.il/books/1558607013.html">my review on
+the Israeli Perl Mongers site</a>.
 </p>
 </dd>
 

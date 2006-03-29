@@ -61,7 +61,7 @@ my $tree_contents =
                     ],
                 },
                 {
-                    'text' => "Contact",
+                    'text' => "Contact Me",
                     'url' => "me/contact-me/",
                     'title'=> "How to Contact Me",
                 },

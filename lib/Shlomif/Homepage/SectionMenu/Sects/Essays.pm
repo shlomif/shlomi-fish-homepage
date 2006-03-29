@@ -40,6 +40,11 @@ my $essays_tree_contents =
                     'title' => "Open Source, Free Software and Other Beasts",
                 },
                 {
+                    'text' => "Create a Homesite",
+                    'url' => "philosophy/computers/web/create-a-great-personal-homesite/",
+                    'title' => "Create a Great Personal Homesite",
+                },
+                {
                     'text' => "Perl &amp; Newcomers",
                     'url' => "philosophy/perl-newcomers/",
                     'title' => "&quot;Usability&quot; of the Perl Online World for Newcomers",

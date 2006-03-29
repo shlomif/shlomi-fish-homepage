@@ -1,10 +1,23 @@
 #include '../template.wml'
 
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "Create a Great Personal Home Site" />
 <latemp_description "How to create a Great Personal Homesite" />
 <latemp_more_keywords "Shlomi Fish, Shlomi, Fish, HTML, Homesite, Homepage, Home, Page, Site, Perl, PHP, Python, JavaScript, Content, Presentations" />
 
-<h2 id="meta">Document Information</h3>
+<h2 id="about">About this Document</h2>
+
+<p>
+This documents explains why and how to create a great personal homesite. The
+text can be found below.
+</p>
+
+<h2 id="toc">Table of Contents</h2>
+
+<toc />
+
+<h2 id="meta">Document Information</h2>
 
 <dl class="meta">
 <dt>

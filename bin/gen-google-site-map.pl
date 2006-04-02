@@ -35,7 +35,7 @@ sub get_params
     }
     return (
         'loc' => "$base_url$filename",
-        'lastmod' => get_file_last_mod("$host/$filename"),
+        'lastmod' => get_file_last_mod($host, $filename),
     );
 }
 
@@ -51,8 +51,13 @@ sub get_real_file
 
 sub get_file_last_mod
 {
+    my $host = shift;
     my $file = shift;
-    my $real_file = get_real_file($file);
+    my $real_file = get_real_file("$host/$file");
+    if (! -f $real_file)
+    {
+        $real_file = get_real_file("common/$file");
+    }
     if (! -f $real_file)
     {
         croak "File does not exist \"$real_file\"!";
@@ -74,7 +79,10 @@ foreach my $params (
     {host => "t2", fn => "philosophy/", },
     {host => "t2", fn => "puzzles/", },
     {host => "t2", fn => "open-source/", },
-    {host => "vipe", fn => "lecture/",},
+    # Seems like the Google sitemaps' processor does not like out of-host
+    # URLs.
+    # {host => "vipe", fn => "lecture/",},
+    {host => "t2", fn => "lecture/",},
     {host => "t2", fn => "DeCSS/",},
     {host => "t2", fn => "links.html",},
     )

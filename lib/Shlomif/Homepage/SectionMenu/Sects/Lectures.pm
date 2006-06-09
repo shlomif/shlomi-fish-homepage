@@ -82,6 +82,12 @@ my $essays_tree_contents =
                     'title' => "Presentation about Web Meta Language",
                 },
                 {
+                    'host' => "t2",
+                    'text' => "Vim for Beginners",
+                    'url' => "lecture/Vim/beginners/",
+                    'title' => "The Vim (Vi-Improved) Editor for Beginners",
+                },
+                {
                     'text' => "Pres Tools",
                     'url' => "lecture/cat/pres-tools/",
                     'title' => "Tools for Preparing Slides for Presentations",

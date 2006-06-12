@@ -75,6 +75,11 @@ VIPE_LECTURES_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/lecture/%,$(VIPE_DOCS_SRC))
 $(VIPE_LECTURES_DOCS_SRC):: $(VIPE_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
 	touch $@
 
+COMMON_LECTURES_DOCS_SRC = $(patsubst %,common/%.wml,$(filter lecture/%,$(COMMON_DOCS)))
+
+$(COMMON_LECTURES_DOCS_SRC):: common/lecture/%.html.wml: $(LECTURES_DEPS)
+	touch $@
+
 T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \

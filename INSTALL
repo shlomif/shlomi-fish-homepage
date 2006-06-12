@@ -1,0 +1,19 @@
+You need to install Web Meta Language ( http://thewml.org/,
+http://thewml.berlios.de/ ), Latemp ( http://web-cpan.berlios.de/latemp/ ),
+Bundle::Latemp, as well as the following CPAN modules:
+
+* IO::All
+
+* Template::Preprocessor::TTML
+
+* DateTime
+
+* HTML::TokeParser Simple
+
+* XML::LibXSLT
+
+* WWW::Google::SiteMap
+
+And the WML Extended APIs:
+
+* http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/

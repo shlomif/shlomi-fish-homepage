@@ -36,8 +36,11 @@ upload_t2_temp: $(T2_TARGETS)
 upload_vipe_temp: $(VIPE_TARGETS)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/vipe/ )
 
+upload_vipe_alt: $(VIPE_TARGETS)
+	( cd $(VIPE_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/Vipe/ )
+
 # upload: upload_t2_temp upload_vipe_temp
-upload: upload_t2 upload_vipe
+upload: upload_t2 upload_vipe_alt
 
 clean:
 	rm -fr $(T2_DEST)/*

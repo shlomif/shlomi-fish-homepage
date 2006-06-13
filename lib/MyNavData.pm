@@ -8,7 +8,7 @@ my $hosts =
     },
     'vipe' =>
     {
-        'base_url' => "http://vipe.technion.ac.il/~shlomif/",
+        'base_url' => "http://www.shlomifish.org/Vipe/",
     },
 };
 

@@ -2,16 +2,12 @@
 { 
     background-color : #90EE90; /* LightGreen */
 }
+[% SET navbar_width = "20%" %]
+[% PROCESS "shlomif/navbar.ttml" %]
 .navbar 
-{ 
-    float : left;
+{
     /* derived from moccasin, but less intrusive, as a background.*/
     background-color: #FFEED3; 
-    width : 20%;
-    padding-right : 1em;
-    padding-top : 1.5em;
-    padding-left : 1em;
-    padding-bottom: 2em;
 }
 .navbar ul
 {
@@ -19,21 +15,7 @@
     font-size : small;
     margin-left : 0.3em;
 }
-
-.nav_links
-{
-    text-align: center;
-    padding-left : 0em;
-    padding-top : 0em;
-}
-.nav_links li
-{
-    display: inline;
-    list-style-type: none;
-    padding-right: 0.2em;
-    padding-top: 0em;
-}
-
+[% INCLUDE "nav_links.ttml" %]
 p.desc { margin-left : 3em }
 ul.navbarmain { padding-left : 1em ; margin-left : 1em }
 ul.navbarnested { padding-left : 0em ; margin-left : 2em }

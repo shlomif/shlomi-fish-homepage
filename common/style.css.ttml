@@ -16,12 +16,7 @@
     margin-left : 0.3em;
 }
 [% INCLUDE "nav_links.ttml" %]
-p.desc { margin-left : 3em }
-ul.navbarmain { padding-left : 1em ; margin-left : 1em }
-ul.navbarnested { padding-left : 0em ; margin-left : 2em }
-h3.newsitem { text-indent: 3em }
-p.newsitem { margin-left : 6em }
-ol.newsitem { margin-left : 6em }
+[% PROCESS "newsitem.css.ttml" %]
 div.indent { margin-left : 3em }
 p.indent { margin-left : 3em  }
 div.rightalign { text-align : right }
@@ -56,14 +51,7 @@ ul.nospace
     margin-top : 0em;
     margin-bottom : 0em;
 }
-.colored_frame
-{
-    background-color : #F8FF98;
-    border-color : black;
-    border-width : medium;
-    border-style : double;
-    padding : 0.5em;
-}
+[% PROCESS "shlomif/note.ttml" %]
 
 /* This is for the breadcrumbs trail (= leading path) at the top. */
 .leading_path
@@ -221,3 +209,5 @@ table.thumbs
 {
     border:0;
 }
+[% PROCESS "shlomif/common_defs.ttml" %]
+

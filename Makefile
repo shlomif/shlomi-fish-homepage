@@ -3,7 +3,7 @@ LATEMP_WML_FLAGS =$(shell latemp-config --wml-flags)
 COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
-	-DROOT~. -DLATEMP_THEME=better-scm \
+	-DROOT~. -DLATEMP_THEME=css-zen-garden \
 	-I $${HOME}/apps/wml
 
 TTML_FLAGS += $(COMMON_PREPROC_FLAGS) -I lib

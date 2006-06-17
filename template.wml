@@ -53,8 +53,15 @@ google_color_url = "008000";
 </script>
 </define-tag>
 
+<define-tag ap5_notice>
+<a href="http://august.penguin.org.il/AUG5/" title="August Penguin 5 - The Annual Israeli Community Conference for Free and Open Source Software"><img
+     src="$(ROOT)/images/ap5-banner.png" class="bless" 
+     alt="August Penguin 5 - Israeli Community FOSS Con" /></a>
+</define-tag>
+
 <latemp_top_banner>
 <div class="banner">
+<ap5_notice />
 <google_adsense_code />
 </div>
 </latemp_top_banner>

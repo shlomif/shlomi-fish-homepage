@@ -154,7 +154,6 @@ my $tree_contents =
                     'text' => "Fortune Cookies Collection",
                     'title' => "Collection of Files for Input to the UNIX 'fortune' Program",
                     'url' => "humour/fortunes/",
-                    'host' => "vipe",
                     'hide' => 1,
                 },
                 {

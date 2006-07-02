@@ -20,7 +20,7 @@ $generator->process_all();
 use IO::All;
 
 my $text = io("include.mak")->slurp();
-$text =~ s!^(VIPE_DOCS = .*)humour/fortunes/fortunes-index.html!$1!m;
+$text =~ s!^(T2_DOCS = .*)humour/fortunes/fortunes-index.html!$1!m;
 io("include.mak")->print($text);
 
 1;

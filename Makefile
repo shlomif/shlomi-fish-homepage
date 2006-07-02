@@ -11,7 +11,7 @@ WML_FLAGS += $(COMMON_PREPROC_FLAGS)
 
 ALL_DEST_BASE = dest
 
-FORTUNES_TARGET = dest/vipe-homepage/humour/fortunes/fortunes-index.html
+FORTUNES_TARGET = dest/t2-homepage/humour/fortunes/fortunes-index.html
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
@@ -61,8 +61,8 @@ HUMOUR_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Humour
 t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl $(PHILOSOPHY_DEPS)
 	touch $@
 
-$(FORTUNES_TARGET): vipe/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS)
-	( cd vipe && wml $(WML_FLAGS) -DLATEMP_SERVER=vipe -DLATEMP_FILENAME=humour/fortunes/index.html humour/fortunes/fortunes-index.html.wml ) > $@
+$(FORTUNES_TARGET): t2/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS)
+	( cd t2 && wml $(WML_FLAGS) -DLATEMP_SERVER=t2 -DLATEMP_FILENAME=humour/fortunes/index.html humour/fortunes/fortunes-index.html.wml ) > $@
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))

@@ -49,3 +49,6 @@ ver.txt: Makefile
 upload: dist
 	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) $(INDEX_FILE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/" 
 
+print_package_base:
+	@echo $(PACKAGE_BASE)
+

@@ -7,7 +7,7 @@ use MyNavData;
 
 my $essays_tree_contents =
 {
-    'host' => "vipe",
+    'host' => "t2",
     'text' => "Shlomi Fish' Presentations",
     'title' => "Shlomi Fish' Presentations",
     'show_always' => 1,

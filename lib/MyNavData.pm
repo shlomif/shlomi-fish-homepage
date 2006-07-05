@@ -298,7 +298,6 @@ my $tree_contents =
             'url' => "lecture/",
             'expand' => { 're' => "^lecture/", },
             'title' => "Presentations I Wrote (Mostly Technical)",
-            'host' => "vipe",
             'subs' => 
             [
                 {

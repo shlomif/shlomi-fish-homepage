@@ -238,7 +238,6 @@ my $tree_contents =
                     'text' => "FCFS RWLock",
                     'title' => "A First-Come First-Served Readers/Writers Lock",
                     'url' => "rwlock/",
-                    'host' => "vipe",
                 },
                 {
                     'text' => "Quad-Pres",
@@ -249,7 +248,6 @@ my $tree_contents =
                     'text' => "Gradient-Fu",
                     'title' => "Gradient-Fu Patch for the GIMP",
                     'url' => "grad-fu/",
-                    'host' => "t2",
                     'hide' => 1,
                 },                
                 {

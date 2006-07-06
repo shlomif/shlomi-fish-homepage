@@ -45,7 +45,6 @@ my $software_tree_contents =
                 {
                     'text' => "FCFS RWLock",
                     'url' => "rwlock/",
-                    'host' => "vipe",
                     'title' => "A First-Come First-Served Readers/Writers Lock",
                 },
                 {

@@ -413,8 +413,16 @@ my $tree_contents =
                     'title' => "The source code used to generate this site",
                 },
                 {
-                    'url' => "meta/donate/",
-                    'text' => "Please Donate",
+                    'url' => "meta/how-to-help/",
+                    'text' => "How to Help",
+                    'title' => "How you can help promote this site",
+                    'subs' =>                     
+                    [
+                        {
+                            'url' => "meta/donate/",
+                            'text' => "Please Donate",
+                        },
+                    ],
                 },
             ],
         },

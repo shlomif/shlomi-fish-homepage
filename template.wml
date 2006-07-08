@@ -126,13 +126,12 @@ class="bless"><img
 </define-tag>
 
 <latemp_affiliations_buttons>
-<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
-        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
-    "<google_search />"
-    ""
-    />
+<google_search />
 
-<paypal_donate_code />
+<div class="search">
+<a href="<rellink host="t2" url="meta/how-to-help/" />">Like this site? Please Help</a>
+</div>
+
 <affil_collection_shlomif />
 <p>
 <a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 

@@ -34,7 +34,7 @@ sub run
         open O, ">", $filename;
         print O $text;
         close(O);
-        system("svn", "add", $filename);
+        system("svn", "add", "-q", $filename);
     }
 }
 

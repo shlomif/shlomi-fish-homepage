@@ -1,4 +1,4 @@
-VER = 0.6.55
+VER = 0.6.57
 
 DIST_BASE = fortunes-shlomif
 
@@ -30,7 +30,7 @@ $(DATS):: %.dat : %
 test: $(DATS)
 	@fortune -e $(FILES)
 	
-dist: $(PACKAGE_BASE) html
+dist: $(PACKAGE_BASE)
 
 html: $(INDEX_FILE)
 

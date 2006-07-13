@@ -17,7 +17,7 @@ sub get_hosts
     return $hosts;
 }
 
-my @personal_expand = ('expand' => { 're' => "^(me/|personal\.html)", },);
+my @personal_expand = ('expand' => { 'bool' => 1, },);
 
 my $tree_contents =
 {
@@ -40,21 +40,19 @@ my $tree_contents =
                     'text' => "Bio",
                     'url' => "personal.html",
                     'title' => "A Short Biography of Myself",
-                    @personal_expand,
+                    'expand' => { 're' => "^(?:me|personal/)", },
                     'subs' =>
                     [
                         {
                             'text' => "Intros",
                             'url' => "me/intros/",
                             'title' => "Introductions of Me to Various Forums",
-                            @personal_expand,
                             'subs' =>
                             [
                                 {
                                     'text' => "MIT Writers",
                                     'url' => "me/intros/writers/",
                                     'title' => "My Intro to the MIT Writers Mailing List",
-                                    @personal_expand,
                                 },
                             ],
                         },

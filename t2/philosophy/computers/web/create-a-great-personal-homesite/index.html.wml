@@ -276,8 +276,25 @@ Alternatively, if you want to have a server-side generated web-site you need
 to make sure it doesn't have SQL injection attacks, Cross-Site Scripting (or
 HTML injection or XSS) attacks, privilege escalation, comment or wiki spam
 (see <a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html">the
-rel="nofollow" attribute</a>), or any other security problem. This requires 
-much more conscious effort and discipline than a plain HTML site.
+rel="nofollow" attribute</a> for instance), or any other security problem. 
+This requires much more conscious effort and discipline than a plain HTML site.
+</p>
+
+<p>
+A server-side Content Management System (CMS) of some sort allows one to edit 
+the pages using a web browser, and also allows web page visitors to add 
+comments or even extra content to the pages. (With all the other 
+implications of such interactivity). One possible way to have such a CMS is
+CMS hosting. Essentially, a CMS hosting provider manages many instances of the
+same CMS on its servers, allows one to register his own instances, and
+maintains and upgrades them all at once. That way, you can have your own
+CMS without much of the maintenance headaches.
+</p>
+
+<p>
+Of course, if the CMS host neglects to install an update in time, then you
+still have a security problem. But it is still probably a better idea than
+deploying your own CMS on a normal hosting account. 
 </p>
 
 <h5 id="pres_navigation">Navigation Aids</h5>

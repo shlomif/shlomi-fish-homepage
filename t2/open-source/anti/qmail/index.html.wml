@@ -39,8 +39,10 @@ incredibly unreadable code. Bernstein uses a lot of one- or two-letter
 variable names, and cryptic function names.
 </li>
 <li>
-The ezmlm-idx has a lot of duplication in its configuration. It hard-codes the
-various paths in many different places.
+The ezmlm-idx mailing list manager, whose use with qmail is popular
+has a lot of duplication in its configuration. It hard-codes the various paths 
+in many different places. It is also exclusive to qmail. (Note that one can
+use one or more different mailing list managers using qmail).
 </li>
 <li>
 Many bugs were discovered in qmail since its last release (including some 

@@ -74,6 +74,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                     'title' => "The GPL, The BSD License and Being a Sucker",
                 },
+                {
+                    'text' => "Choice of Doc Formats",
+                    'url' => "philosophy/computers/web/choice-of-docs-formats/",
+                    'title' => "Coverage of the Current Choice of Document Formats",
+                },
             ],
         },
         {

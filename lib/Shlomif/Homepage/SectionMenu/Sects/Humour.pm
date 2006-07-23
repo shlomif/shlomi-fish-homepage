@@ -70,7 +70,6 @@ my $humour_tree_contents =
                 {
                     'text' => "Fortune Cookies Collection",
                     'url' => "humour/fortunes/",
-                    'host' => "vipe",
                     'title' => "Collection of Quotes by Me and Others in the UNIX Fortune Format",
                 },
            ],

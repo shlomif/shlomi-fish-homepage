@@ -181,7 +181,7 @@ that the order of tags are incorrect, which takes me much less time to solve.
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The 
-Camel Book and other perl books were written in POD. I wroted some
+Camel Book and other perl books were written in POD. I wrote some
 documentation for Perl and non-Perl projects in POD. I also write all my man
 pages in POD because nroff scares me.
 </p>
@@ -191,9 +191,9 @@ But if you feel that you want something better, you have many options.
 </p>
 
 <p>
-<b>P.S:</b> DocBook/XML is problematic for using in Bi-Directional texts 
-because of implementation problems. Otherwise, its Unicode support should be 
-very good.
+One final note is that DocBook/XML was problematic for using in bi-directional
+texts because of implementation or standard problems, last time I checked. 
+Otherwise, its Unicode support should be very good.
 </p>
 
 <h2 id="coverage">Coverage and Comments</h2>

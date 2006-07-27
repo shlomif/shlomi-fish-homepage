@@ -79,6 +79,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/web/choice-of-docs-formats/",
                     'title' => "Coverage of the Current Choice of Document Formats",
                 },
+                {
+                    'text' => "Online Communities",
+                    'url' => "philosophy/computers/web/online-communities/",
+                    'title' => "Reflections on Online Communities",
+                },
             ],
         },
         {

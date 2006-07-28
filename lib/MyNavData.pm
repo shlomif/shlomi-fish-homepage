@@ -419,6 +419,11 @@ my $tree_contents =
             'subs' =>
             [
                 {
+                    'url' => "meta/FAQ/",
+                    'text' => "FAQ",
+                    'title' => "Frequently Asked Questions and Answers List (FAQ)",
+                },
+                {
                     'url' => "meta/site-source/",
                     'text' => "Site's Source",
                     'title' => "The source code used to generate this site",

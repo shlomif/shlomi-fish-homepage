@@ -14,6 +14,12 @@ my @sections =
         'title' => "Essays Section Menu",
     },
     {
+        'id' => "puzzles",
+        'regex' => "^/(?:puzzles|MathVentures)/",
+        'class' => "Puzzles",
+        'title' => "Puzzles Section Menu",
+    },
+    {
         'id' => "lectures",
         'regex' => "^/lecture/",
         'class' => "Lectures",

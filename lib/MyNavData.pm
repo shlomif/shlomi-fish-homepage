@@ -123,43 +123,56 @@ my $tree_contents =
             'subs' => 
             [
                 {
-                    'text' => "The Enemy", 
-                    'url' => "humour/TheEnemy/",
-                    'title' => "The Enemy and How I Helped to Fight It",
+                    'text' => "Stories",
+                    'url' => "humour/stories/",
+                    'title' => "Large-Scale Stories I Wrote",
+                    'expand' => { 're' => "^humour/", },
+                    'subs' =>
+                    [
+                        {
+                            'text' => "The Enemy", 
+                            'url' => "humour/TheEnemy/",
+                            'title' => "The Enemy and How I Helped to Fight It",
+                        },
+                        {
+                            'text' => "TOWTF",
+                            'url' => "humour/TOWTF/",
+                            'title' => "The One with the Fountainhead",
+                        },
+                        {
+                            'text' => "HHFG",
+                            'url' => "humour/human-hacking/",
+                            'title' => "The Human Hacking Field Guide",
+                        },
+                        {
+                            'text' => "The Pope",
+                            'url' => "humour/Pope/",
+                            'title' => "The Pope Died on Sunday",
+                        },
+                    ],
                 },
                 {
-                    'text' => "TOWTF",
-                    'url' => "humour/TOWTF/",
-                    'title' => "The One with the Fountainhead",
+                    'text' => "Aphorisms and Quotes",
+                    'url' => "humour/aphorisms/",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Humour Archive",
+                            'title' => "Archive of Humorous Bits I came up with",
+                            'url' => "humour.html",
+                        },
+                        {
+                            'text' => "Fortune Cookies Collection",
+                            'title' => "Collection of Files for Input to the UNIX 'fortune' Program",
+                            'url' => "humour/fortunes/",
+                        },
+                    ],
                 },
                 {
-                    'text' => "HHFG",
-                    'url' => "humour/human-hacking/",
-                    'title' => "The Human Hacking Field Guide",
-                },
-                {
-                    'text' => "The Pope",
-                    'url' => "humour/Pope/",
-                    'title' => "The Pope Died on Sunday",
-                },
-                {
-                    'text' => "Humour Archive",
-                    'title' => "Archive of Humorous Bits I came up with",
-                    'url' => "humour.html",
-                    'hide' => 1,
-                },
-                {
-                    'text' => "Fortune Cookies Collection",
-                    'title' => "Collection of Files for Input to the UNIX 'fortune' Program",
-                    'url' => "humour/fortunes/",
-                    'hide' => 1,
-                },
-                {
-                    'text' => "Ways to do it",
-                    'title' => "&quot;Ways to do it&quot; according to the programming languages of the world",
-                    'url' => "humour/ways_to_do_it.html",
-                    'hide' => 1,
-                },
+                    'text' => "Small Scale",
+                    'url' => "humour/bits/",
+                    'title' => "Small Scale Funny Works of Mine",
+                }
             ],
         },
         {

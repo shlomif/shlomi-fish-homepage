@@ -24,7 +24,12 @@ include rules.mak
 
 RSYNC = rsync --progress --verbose --rsh=ssh
 
-upload_t2: $(T2_TARGETS)
+FORTUNES_DIR = humour/fortunes
+
+copy_fortunes:
+	cp -f t2/$(FORTUNES_DIR)/fortunes-shlomif-*.tar.gz $(T2_DEST)/$(FORTUNES_DIR)
+
+upload_t2: $(T2_TARGETS) copy_fortunes
 	( cd $(T2_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/ )
 
 upload_vipe: $(VIPE_TARGETS)
@@ -40,7 +45,9 @@ upload_vipe_alt: $(VIPE_TARGETS)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/Vipe/ )
 
 # upload: upload_t2_temp upload_vipe_temp
-upload: upload_t2 upload_vipe_alt
+upload: upload_t2
+
+upload_all: upload_t2 upload_vipe_alt
 
 clean:
 	rm -fr $(T2_DEST)/*

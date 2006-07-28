@@ -236,4 +236,19 @@ table.thumbs
     background-color:transparent;
     color: #C44;
 }
+.revhistory th, .revhistory td
+{
+    vertical-align:top;
+    text-align: left;
+}
+.revhistory
+{
+    border-collapse: collapse;
+}
+.revhistory td, .revhistory th
+{
+    border: 1.5pt black solid;
+    padding: 2pt;
+}
+
 

@@ -112,6 +112,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/politics/why-scientology-is-bad/",
                     'title' => "How I Concluded that Scientology is Bad",
                 },
+                {
+                    'text' => "Case for Drug Legalisation",
+                    'url' => "philosophy/politics/drug-legalisation/",
+                    'title' => "Why the War on Drugs is the Real Drug Problem",
+                },
             ],
         },
         {

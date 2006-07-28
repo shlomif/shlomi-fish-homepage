@@ -94,6 +94,10 @@ my $humour_tree_contents =
                     'text' => "Wonderous are the Ways of Microsoft",
                     'url' => "wonderous.html",
                 },
+                {
+                    'text' => "I Like Job Control",
+                    'url' => "humour/bits/I-Like-Job-Control/",
+                },
             ],
         },
     ],

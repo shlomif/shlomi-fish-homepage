@@ -182,3 +182,23 @@ annoying.
 </li>
 </ol>
 
+<h3 id="docbook_and_html_to_wikis">DocBook and HTML to Wiki Format and Back 
+Again</h3>
+
+<p>
+The CPAN Module 
+<a href="http://search.cpan.org/dist/HTML-WikiConverter/">HTML-WikiConverer</a>
+allows one to convert HTML to the formats of most popular Wikis. DocBook/XML
+and POD can generate HTML, which means they can be fed to it in turn.
+</p>
+
+<p>
+MediaWiki has a 
+<a href="http://svn.wikimedia.org/viewvc/mediawiki/trunk/wiki2xml/">set of
+scripts named wiki2xml</a>, which converts the MediaWiki format to XML
+and from that to DocBook and many other formats. Finally there's 
+<a href="http://fedoraproject.org/wiki/SummerOfCode/2006/MikkoVirkkilä">a Google
+Summer of Code project</a> for working on a MoinMoin to-and-from DocBook/XML
+conversion.
+</p>
+

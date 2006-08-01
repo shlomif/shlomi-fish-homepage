@@ -250,5 +250,15 @@ table.thumbs
     border: 1.5pt black solid;
     padding: 2pt;
 }
-
-
+.self_picture
+{
+    margin : 2em;
+}
+.self_picture.heb
+{
+    float : left;
+}
+.self_picture.eng
+{
+    float : right;
+}

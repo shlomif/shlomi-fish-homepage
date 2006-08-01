@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "My Humour Collection" />
 
@@ -7,7 +8,7 @@
 <hr class="joke"/>
 </define-tag>
 
-<h2>Introduction</h2>
+<h2 id="intro">Introduction</h2>
 
 <p>
 This is a growing collection of aphorisms and funny bits I came up with 
@@ -18,9 +19,13 @@ through the years. They are arranged in roughly chronlogical order.
 You can also find them and others <a href="<rellink url="humour/fortunes/" host="t2" />">in machine-readble UNIX fortune cookies collections</a>.
 </p>
 
+<h2*>Table of Contents</h2>
+
+<toc />
+
 <joke>
 
-<h3><i>A Jewish Deduction</i></h3>
+<h3 id="jewish_deduction"><i>A Jewish Deduction</i></h3>
 
 <p>
 The Bible dictates that "Thou shalt not seethe [=cook] a kid [= young goat] 
@@ -107,7 +112,7 @@ any statement that follows it into a true one.
 </joke>
 
 <joke>
-<h3>Deltas to "Shit Happens" according to Religions:</h3>
+<h3 id="shit_happens">Deltas to "Shit Happens" according to Religions:</h3>
 
 <p>
 Judaism: God knows you will do shit, does nothing to prevent it, but makes you take
@@ -221,7 +226,7 @@ Actually, since Amazon sent us two books like that, you've only got six seconds.
 </joke>
 
 <joke>
-<h3>Re-inventing the Wheel</h3>
+<h3 id="reinvent_the_wheel">Re-inventing the Wheel</h3>
 
 <p>
 He who re-invents the wheel, will understand much better how a 
@@ -597,3 +602,12 @@ To have bugs is human - to find them - divine.
 </ul>
 
 </joke>
+
+<joke>
+<h3 id="might_be_mad">"Might be mad..."</h3>
+
+<p>
+<i>I might be mad. But I'm a mad genius.</i>
+</p>
+</joke>
+

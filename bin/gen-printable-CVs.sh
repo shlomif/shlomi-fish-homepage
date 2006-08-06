@@ -7,6 +7,8 @@ render()
     -I../lib/ -DROOT~. -DLATEMP_SERVER=t2 -DLATEMP_FILENAME="$filename" \
     -DPRINTABLE=1 "${filename}.wml" $(latemp-config --wml-flags) \
     -DLATEMP_THEME=better-scm \
+    -I $HOME/conf/wml/Latemp/lib \
+    -I $HOME/apps/wml \
     "$filename"
     ) > printable/"$filename"
 }

@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 <en>
 
 <latemp_subject "Shlomi Fish - Geek for Hire!" />
@@ -29,6 +30,8 @@
 
 </he>
 
+
+
 <en>
 <p>
 I'm an experienced software developer, and writer of stories, articles,
@@ -44,8 +47,10 @@ Among the possibilities are:
 </p>
 </he>
 
+<toc />
+
 <en>
-<h2>Work as a Consultant or Contractor</h2>
+<h2 id="consultant">Work as a Consultant or Contractor</h2>
 
 <p>
 I can be hired to work as a consultant or contractor in any of my fields of
@@ -60,7 +65,7 @@ The hourly consultant pay is negotiable.
 </en>
 
 <he>
-<h2>לעבוד כיועץ או קבלן</h2>
+<h2 id="consultant">לעבוד כיועץ או קבלן</h2>
 
 <p>
 ניתן לשכור אותי לעבודה כיועץ או קבלן בכל אחד מתחומי ההתמחות שלי. ניתן להסתכל 
@@ -76,7 +81,7 @@ The hourly consultant pay is negotiable.
 </he>
 
 <en>
-<h2>As a Hired Employee</h2>
+<h2 id="hired_employee">As a Hired Employee</h2>
 
 <p>
 You can also hire me as a full-time or half-time employee. I prefer to get
@@ -88,7 +93,7 @@ and produce code of good quality.
 <he>
 
 
-<h2>כעובד שכיר</h2>
+<h2 id="hired_employee">כעובד שכיר</h2>
 
 <p>
 ניתן גם לשכור אותי כעובד במשרה מלאה או חצי-משרה. אני מעדיף לקבל 
@@ -98,7 +103,7 @@ and produce code of good quality.
 </he>
 
 <en>
-<h2>Web-Site Construction and Maintenance</h2>
+<h2 id="website_construction">Web-Site Construction and Maintenance</h2>
 
 <p>
 I can also be hired to perform web-site construction or maintenance. I can 
@@ -116,7 +121,7 @@ appealing.)
 </en>
 
 <he>
-<h2>בניית ותחזוקת אתרי וו'ב</h2>
+<h2 id="website_construction">בניית ותחזוקת אתרי וו'ב</h2>
 
 <p>
 ניתן גם לשכור אותי כדי לבצע תכנון, בנייה ותחזוקה של אתרי וו'ב. באפשרותי 
@@ -131,7 +136,7 @@ appealing.)
 </he>
 
 <en>
-<h2>Private Lessons</h2>
+<h2 id="private_lessons">Private Lessons</h2>
 
 <p>
 I am able to <a href="$(ROOT)/work/private-lessons/">give private
@@ -142,7 +147,7 @@ topics.
 
 <he>
 
-<h2>שיעורים פרטיים</h2>
+<h2 id="private_lessons">שיעורים פרטיים</h2>
 
 <p>
 יש באפשרותי 

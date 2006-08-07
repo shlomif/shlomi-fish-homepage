@@ -15,7 +15,7 @@ FORTUNES_TARGET = dest/t2-homepage/humour/fortunes/index.html
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: latemp_targets $(FORTUNES_TARGET) sitemap_targets
+all: latemp_targets $(FORTUNES_TARGET) sitemap_targets copy_fortunes
 	
 include include.mak
 include rules.mak

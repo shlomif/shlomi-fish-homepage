@@ -15,7 +15,7 @@
 #include "latemp/latemp-driver.wml"
 #include "shlomif/affiliations.wml"
 
-<define-tag google_adsense_code>
+<define-tag google_adsense_code_top_wide>
 <script type="text/javascript"><!--
 google_ad_client = "pub-2480595666283917";
 google_ad_width = 468;
@@ -35,7 +35,7 @@ google_color_url = "008000";
 </define-tag>
 
 
-<define-tag google_adsense_code_top>
+<define-tag google_adsense_code_top_narrow>
 <script type="text/javascript"><!--
 google_ad_client = "pub-2480595666283917";
 google_ad_width = 125;
@@ -80,6 +80,17 @@ google_color_url = "008000";
      alt="August Penguin 5 - Israeli Community FOSS Con" /></a>
 </define-tag>
 
+<set-var with_banner="" />
+
+<define-tag top_with_banner>
+<ap5_notice />
+<google_adsense_code_top_narrow />
+</define-tag>
+
+<define-tag top_without_banner>
+<google_adsense_code_top_wide />
+</define-tag>
+
 <latemp_top_banner>
 <div class="banner">
 <a href="<rellink url="" host="t2" />" 
@@ -88,8 +99,10 @@ google_color_url = "008000";
     alt="EvilPHish by Illiad" class="highlight" 
     style="border:0;margin-bottom:0.5em;" 
     /></a>
-<ap5_notice />
-<google_adsense_code_top />
+<if "<get-var with_banner />"
+    "<top_with_banner />"
+    "<top_without_banner />"
+    />
 </div>
 </latemp_top_banner>
 

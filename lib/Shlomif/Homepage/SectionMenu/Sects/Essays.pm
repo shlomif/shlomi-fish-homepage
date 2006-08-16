@@ -117,6 +117,12 @@ my $essays_tree_contents =
                     'url' => "philosophy/politics/drug-legalisation/",
                     'title' => "Why the War on Drugs is the Real Drug Problem",
                 },
+                {
+                    'text' => "Define \"Zionism\"!",
+                    'url' => "philosophy/politics/define-zionism/",
+                    'title' => ("What is &quot;Zionism&quot; really? What " . 
+                        "does anti-Israel, anti-Zionist, etc. mean?"),
+                }
             ],
         },
         {

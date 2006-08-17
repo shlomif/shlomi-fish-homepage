@@ -9,7 +9,7 @@ my @sections =
 (
     {
         'id' => "essays",
-        'regex' => "^/philosophy/",
+        'regex' => "^/(?:philosophy|prog-evolution)/",
         'class' => "Essays",
         'title' => "Essays Section Menu",
     },

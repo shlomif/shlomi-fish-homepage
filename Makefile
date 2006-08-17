@@ -75,9 +75,9 @@ $(FORTUNES_TARGET): t2/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEP
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))
 
-T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC)))
+T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC))) $(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC))
 
-$(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/philosophy/%.html.wml: $(PHILOSOPHY_DEPS)
+$(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(PHILOSOPHY_DEPS)
 	touch $@
 
 T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))

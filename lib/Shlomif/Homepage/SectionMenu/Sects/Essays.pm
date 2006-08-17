@@ -84,6 +84,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/web/online-communities/",
                     'title' => "Reflections on Online Communities",
                 },
+                {
+                    'text' => "My Memoirs",
+                    'url' => "prog-evolution/",
+                    'title' => "My Memoirs as a Programmer",
+                },
             ],
         },
         {

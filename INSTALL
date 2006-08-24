@@ -17,3 +17,51 @@ Bundle::Latemp, as well as the following CPAN modules:
 And the WML Extended APIs:
 
 * http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
+
+How to build the homesite:
+--------------------------
+
+1. Install Subversion and run:
+
+svn co http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trunk/
+
+2. Install perl 5.8.x in case it's not already installed. 
+
+3. Run and configure CPAN (see - http://sial.org/howto/perl/life-with-cpan/) 
+and type:
+
+    $ perl -MCPAN -e 'install Task::Sites::ShlomiFish'
+
+Or if you have CPANPLUS installed:
+
+    $ perl -MCPANPLUS -e 'install Task::Sites::ShlomiFish'
+
+4. Install Latemp:
+
+    $ svn co http://svn.berlios.de/svnroot/repos/web-cpan/latemp/trunk/
+    $ cd trunk/installer
+    $ scons PREFIX="$HOME/apps/latemp/" install
+    $ cd ../support-headers
+    $ perl install.pl
+
+5. Add Latemp to the beginning of your path:
+
+    $ PATH="$HOME/apps/latemp/bin:$PATH"
+
+6. 
+    $ svn co http://stalker.iguide.co.il:8080/svn/shlomif-homepage/wml-affiliations/trunk/wml/
+    $ cd trunk/wml
+    $ bash Install.bash
+
+7.
+    $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
+    $ cd trunk/xhtml/1.x/
+    $ bash Install.bash
+
+8. Do the following to build the site, after all dependencies were installed:
+
+    $ svn co http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trunk/
+    $ ./gen-helpers.pl
+    $ (cd t2/humour/fortunes/ && make)
+    $ make
+

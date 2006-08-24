@@ -152,6 +152,19 @@ my $essays_tree_contents =
                 },
             ],
         },
+        {
+            'text' => "Random Ideas",
+            'url' => "philosophy/ideas/",
+            'title' => "Various Random (and Practical) Ideas I Have",
+            'subs' =>
+            [
+                {
+                    'text' => "Fortunes Mania",
+                    'url' => "philosophy/ideas/fortunes-mania/",
+                    'title' => "A community site for collecting and organising fortune cookies",
+                },
+            ],
+        }
     ],
 };
 

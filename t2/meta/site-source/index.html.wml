@@ -2,24 +2,11 @@
 <latemp_subject "This Site's Source Code" />
 
 <p>
-This site source code is maintained inside <a href="http://stalker.iguide.co.il:8080/svn/shlomif-homepage/">a Subversion repository</a>. To check out the
-latest version install the 
-<a href="http://subversion.tigris.org/">Subversion</a> client
-and issue the following command:
-</p>
-
-<pre style="background-color : yellow">
-svn checkout http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trunk/
-</pre>
-
-<p>
-To build the site you'll need 
-<a href="http://web-cpan.berlios.de/latemp/">Latemp</a> and all of its 
-depenedencies.
+This site source code is maintained inside <a href="http://stalker.iguide.co.il:8080/svn/shlomif-homepage/">a Subversion repository</a>, and is constructed
+using <a href="http://web-cpan.berlios.de/">Latemp</a> and several other
+dependencies.
 </p>
 
 <p>
-Afterwards, cd to <tt>trunk</tt> and invoke the
-command <tt>perl gen-helpers.pl</tt>. 
+Detailed instructions for building the site are available in the <a href="./INSTALL"><b>INSTALL</b> File</a>.
 </p>
-

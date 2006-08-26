@@ -29,7 +29,9 @@ FORTUNES_DIR = humour/fortunes
 copy_fortunes:
 	cp -f t2/$(FORTUNES_DIR)/fortunes-shlomif-*.tar.gz $(T2_DEST)/$(FORTUNES_DIR)
 
-upload_t2: $(T2_TARGETS) copy_fortunes
+upload_deps: $(T2_TARGETS) copy_fortunes
+
+upload_t2: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/ )
 
 upload_vipe: $(VIPE_TARGETS)
@@ -46,6 +48,9 @@ upload_vipe_alt: $(VIPE_TARGETS)
 
 # upload: upload_t2_temp upload_vipe_temp
 upload: upload_t2
+
+upload_backup: upload_deps
+	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
 
 upload_all: upload_t2 upload_vipe_alt
 

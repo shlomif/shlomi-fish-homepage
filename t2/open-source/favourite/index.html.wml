@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "Favourite Free Software of Mine" />
 
@@ -7,29 +8,33 @@ This page documents my favourite pieces of free software. You are welcome
 to check these packages out, and see if they are useful to you as well.
 </p>
 
-<h2><a href="http://www.linux.org/">Linux</a></h2>
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="linux"><a href="http://www.linux.org/">Linux</a></h2>
 
 <p>
 Linux is a UNIX clone for many platforms including regular PCs. It is fast,
 stable, powerful and very cool. 
 </p>
 
-<h2>Desktop Applications</h2>
+<h2 id="desktop_apps">Desktop Applications</h2>
 
-<h3><a href="http://www.kde.org/">KDE - The K Desktop Environment</a></h3>
+<h3 id="kde"><a href="http://www.kde.org/">KDE - The K Desktop Environment</a></h3>
 
 <p>
 KDE is an attractive and powerful desktop environment for UNIXes.
 </p>
 
-<h3><a href="http://www.mozilla.org/">Mozilla</a></h3>
+<h3 id="mozilla"><a href="http://www.mozilla.org/">Mozilla</a></h3>
 
 <p>
 Mozilla is a cross-platform web-browser which is standards-compliant and
 has many powerful features.
 </p>
 
-<h4>Plug-ins for Mozilla</h4>
+<h4 id="mozilla_plugins">Plug-ins for Mozilla</h4>
 
 <ul>
 <li>
@@ -65,34 +70,34 @@ attach JavaScript snippets to pages altering their behaviour.
 </li>
 </ul>
 
-<h3><a href="http://www.konqueror.org/">Konqueror</a></h3>
+<h3 id="konqueror"><a href="http://www.konqueror.org/">Konqueror</a></h3>
 
 <p>
 Konqueror is a nice web-browser and file manager for the KDE environment.
 </p>
 
-<h3><a href="http://www.xchat.org/">XChat</a></h3>
+<h3 id="xchat"><a href="http://www.xchat.org/">XChat</a></h3>
 
 <p>
 A nice IRC client for X-Windows.
 </p>
 
-<h3><a href="http://www.icewm.org/">IceWM</a></h3>
+<h3 id="icewm"><a href="http://www.icewm.org/">IceWM</a></h3>
 
 <p>
 IceWM is a lightweight but functional window manager for X-Windows.
 </p>
 
-<h3><a href="http://gaim.sourceforge.net/">gaim</a></h3>
+<h3 id="gaim"><a href="http://gaim.sourceforge.net/">gaim</a></h3>
 
 <p>
 A very nice and convenient multi-protocol instant messaging client for
 Linux and other platforms.
 </p>
 
-<h2>Development</h2>
+<h2 id="development">Development</h2>
 
-<h3><a href="http://www.perl.org/">Perl</a></h3>
+<h3 id="perl"><a href="http://www.perl.org/">Perl</a></h3>
 
 <p>
 My favourite language by far. Perl is a high-level language with many 
@@ -101,49 +106,49 @@ and comprehensive culture around it, and is good for use in many diverse
 areas.
 </p>
 
-<h3><a href="http://gcc.gnu.org/">GCC - the GNU Compiler Collection</a></h3>
+<h3 id="gcc"><a href="http://gcc.gnu.org/">GCC - the GNU Compiler Collection</a></h3>
 
 <p>
 A powerful, portable and reliable C/C++/other languages compiler. A must
 for any programmer on a UNIX system. 
 </p>
 
-<h3><a href="http://www.vim.org/">Vim - VI Improved</a></h3>
+<h3 id="vim"><a href="http://www.vim.org/">Vim - VI Improved</a></h3>
 
 <p>
 A powerful, portable editor which is very lightweight and nice.
 </p>
 
-<h3><a href="http://subversion.tigris.org/">Subversion</a></h3>
+<h3 id="subversion"><a href="http://subversion.tigris.org/">Subversion</a></h3>
 
 <p>
 This is a version-control system with style. Runs on UNIXes and Windows.
 </p>
 
-<h3>Web Development</h3>
+<h3 id="web_devel">Web Development</h3>
 
-<h4><a href="http://httpd.apache.org/">The Apache Web-server</a></h4>
+<h4 id="apache"><a href="http://httpd.apache.org/">The Apache Web-server</a></h4>
 
 <p>
 A powerful, secure and reliable web-server for many platforms including UNIX
 and Win32. 
 </p>
 
-<h4><a href="http://perl.apache.org/">mod_perl</a></h4>
+<h4 id="mod_perl"><a href="http://perl.apache.org/">mod_perl</a></h4>
 
 <p>
 A Perl subsystem for Apache, that greatly accelerates it and provides other
 capabilities.
 </p>
 
-<h4><a href="http://thewml.org/">Website Meta Language</a></h4>
+<h4 id="website_meta_lang"><a href="http://thewml.org/">Website Meta Language</a></h4>
 
 <p>
 WML is a powerful generator for offline HTML content. I now use it for most
 of my sites, including this one.
 </p>
 
-<h4><a href="http://www.linpro.no/lwp/">Libwww-perl (LWP)</a></h4>
+<h4 id="libwww_perl"><a href="http://www.linpro.no/lwp/">Libwww-perl (LWP)</a></h4>
 
 <p>
 LWP is a very powerful Perl framework for retrieving documents from the
@@ -151,41 +156,41 @@ World Wide Web. It's a must if you want to automate web processes in
 Perl.
 </p>
 
-<h2>Multimedia</h2>
+<h2 id="multimedia">Multimedia</h2>
 
-<h3><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation 
+<h3 id="gimp"><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation 
 Program</a></h3>
 
 <p>
 A powerful image-processing application.
 </p>
 
-<h3><a href="http://www.xmms.org/">XMMS - The X Multimedia System</a></h3>
+<h3 id="xmms"><a href="http://www.xmms.org/">XMMS - The X Multimedia System</a></h3>
 
 <p>
 A WinAmp clone for X-Windows, that is better than the original.
 </p>
 
-<h3><a href="http://www.mplayerhq.hu/homepage/">MPlayer</a></h3>
+<h3 id="mplayer"><a href="http://www.mplayerhq.hu/homepage/">MPlayer</a></h3>
 
 <p>
 A capable multimedia player that can play any video format under the sun.
 </p>
 
-<h3><a href="http://mikmod.raphnet.net/">MikMod</a></h3>
+<h3 id="mikmod"><a href="http://mikmod.raphnet.net/">MikMod</a></h3>
 
 <p>
 A great player for many popular variants of MOD files with excellent quality,
 wonderful portability, and very good performance.
 </p>
 
-<h3><a href="http://www.inkscape.org/">Inkscape</a></h3>
+<h3 id="inkscape"><a href="http://www.inkscape.org/">Inkscape</a></h3>
 
 <p>
 A very nice cross-platform vector graphics program.
 </p>
 
-<h3><a href="http://www.illiminable.com/ogg/">Illiminable Ogg Directshow 
+<h3 id="ogg_for_wmp"><a href="http://www.illiminable.com/ogg/">Illiminable Ogg Directshow 
 Filters for Free Codecs for Windows Media Player (WMP), etc.</a></h3>
 
 <p>
@@ -196,87 +201,87 @@ tweaks, and even did not play the files well or supported visualization.
 Illiminable's on the other hand work well out of the box.
 </p>
 
-<h2>Office</h2>
+<h2 id="office">Office</h2>
 
-<h3><a href="http://www.latex-project.org/">LaTeX</a></h3>
+<h3 id="latex"><a href="http://www.latex-project.org/">LaTeX</a></h3>
 
 <p>
 A high-quality type-setting system.
 </p>
 
-<h3><a href="http://www.docbook.org/">DocBook</a></h3>
+<h3 id="docbook"><a href="http://www.docbook.org/">DocBook</a></h3>
 
 <p>
 A document preparation system that can create HTML, PDF, Word RTF - all
 from the same source.
 </p>
 
-<h3><a href="http://www.openoffice.org/">OpenOffice</a></h3>
+<h3 id="openoffice"><a href="http://www.openoffice.org/">OpenOffice.org</a></h3>
 
 <p>
 A feature-rich cross-platform office suite.
 </p>
 
-<h2>Games</h2>
+<h2 id="games">Games</h2>
 
-<h3><a href="http://www.oberhumer.com/opensource/pysol/">PySol</a></h3>
+<h3 id="pysol"><a href="http://www.oberhumer.com/opensource/pysol/">PySol</a></h3>
 
 <p>
 A comprehensive, and feature-rich collection of Solitaire games. It's
 written in Python and so is cross-platform.
 </p>
 
-<h2>Networking</h2>
+<h2 id="networking">Networking</h2>
 
-<h3><a href="http://kmail.kde.org/">KMail</a></h3>
+<h3 id="kmail"><a href="http://kmail.kde.org/">KMail</a></h3>
 
 <p>
 A powerful and easy-to-use mail client for the KDE environment. Has excellent
 internationalization.
 </p>
 
-<h3><a href="http://spamassassin.org/">SpamAssassin</a></h3>
+<h3 id="spamassassin"><a href="http://spamassassin.org/">SpamAssassin</a></h3>
 
 <p>
 A very nice Junk E-mail filtering mechanism that makes reading the inbox
 much more enjoyable.
 </p>
 
-<h3><a href="http://www.gnu.org/software/wget/wget.html">wget</a></h3>
+<h3 id="wget"><a href="http://www.gnu.org/software/wget/wget.html">wget</a></h3>
 
 <p>
 A command-line utility for fetching URLs and documents from the Internet 
 through various protocols. Very powerful and feature-rich.
 </p>
 
-<h3><a href="http://curl.haxx.se/">cURL</a></h3>
+<h3 id="curl"><a href="http://curl.haxx.se/">cURL</a></h3>
 
 <p>
 Another command-line URL fetcher which has proven useful. Also a library
 for use within your C programs.
 </p>
 
-<h3><a href="http://perl.overmeer.net/mailbox/">Mail::Box</a></h3>
+<h3 id="perl_mail_box"><a href="http://perl.overmeer.net/mailbox/">Mail::Box</a></h3>
 
 <p>
 A set of Perl modules that enables one to manage the E-mail folders, prune
 old messages, etc. Very very nice, but kinda slow.
 </p>
 
-<h3><a href="http://www.procmail.org/">procmail</a></h3>
+<h3 id="procmail"><a href="http://www.procmail.org/">procmail</a></h3>
 
 <p>
 A useful UNIX utility that can be used to sort and process incoming E-mail 
 messages. 
 </p>
 
-<h3><a href="http://samba.org/rsync/">rsync</a></h3>
+<h3 id="rsync"><a href="http://samba.org/rsync/">rsync</a></h3>
 
 <p>
 A feature-rich tool for incremental remote transfer of files.
 </p>
 
-<h3><a href="http://www.ethereal.com/">Ethereal</a></h3>
+<h3 id="wireshark"><a href="http://www.wireshark.org/">Wireshark</a></h3>
 
 <p>
 A graphical tool for recording, analyzing and displaying network

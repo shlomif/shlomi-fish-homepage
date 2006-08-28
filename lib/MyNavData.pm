@@ -353,7 +353,7 @@ my $tree_contents =
         {
             'text' => "Essays",
             'url' => "philosophy/",
-            'expand' => { 're' => "^philosophy/", },
+            'expand' => { 're' => "^(philosophy|prog-evolution)/", },
             'title' => "Various Essays and Articles about Technology and Philosophy in General",
             'subs' =>
             [

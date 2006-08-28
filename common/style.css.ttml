@@ -262,3 +262,13 @@ table.thumbs
 {
     float : right;
 }
+table.visible
+{
+    border: #286 medium solid;
+}
+.visible td
+{
+    vertical-align: top;
+    padding: 0.2em 0.2em 1em 0.2em;
+    border: #689 thin solid;
+}

@@ -11,62 +11,29 @@ instructive.
 <h2>Chapters</h2>
 
 <define-tag mytd endtag="required">
-<td style="vertical-align : top">
+<td>
 %body
 </td>
 </define-tag>
 
-<set-var global:url="" />
-<define-tag url:td endtag="required">
-<preserve ext />
-<preserve desc />
-<set-var ext="%0" />
-<set-var desc="%1" />
-<mytd>
-<a href="<get-var url />.<get-var ext />"><get-var desc /></a>
-</mytd>
-<restore desc />
-<restore ext />
-</define-tag>
-
-<define-tag doc:versions endtag="required">
-<preserve url />
-<preserve title />
-<set-var url="%0" />
-<set-var title="%1" />
-<set-var global:url="<get-var url/>" />
-
+<table class="visible">
 <tr>
 <mytd>
-<get-var title />
+<a href="pre-elpas.html">The Pre-Elpas Years</a>
 </mytd>
 <mytd>
-%body
-</mytd>
-<url:td "html" "HTML" />
-<url:td "pod" "Perl POD" />
-<url:td "txt" "Text" />
-</tr>
-<restore title />
-<restore url />
-</define-tag>
-
-<table border="1">
-<doc:versions "pre-elpas" "The Pre-Elpas Years">
 Describes Shlomi Fish as a child and teenager programmer before his first 
 serious job as one.
-</doc:versions>
+</mytd>
+</tr>
 <tr>
 <mytd>
-At Elpas
+<a href="shlomif-at-elpas.html">At Elpas</a>
 </mytd>
 <mytd>
 Describe my experiences in <a href="http://www.elpas.com/">Elpas</a> -
 my first workplace as a programmer.
 </mytd>
-<td style="vertical-align : top" colspan="3">
-<a href="shlomif-at-elpas.html">HTML</a>
-</td>
 </tr>
 </table>
 

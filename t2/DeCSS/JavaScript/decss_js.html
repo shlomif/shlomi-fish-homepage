@@ -1,5 +1,14 @@
-<html>
-<body bgcolor="#FFFFFF">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>DeCSS for JavaScript</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body style="background-color:white;">
 
 <h1>DeCSS for JavaScript</h1>
 
@@ -49,12 +58,13 @@ All the information is encoded and decoded with C-style escape sequences
 <td>
 
 <h3>A DeCSS for JavaScript Form By Hackers-IL</h3>
-<form name="decss_js_form">
 
-<script language="JavaScript" src="decss_js.js">
+<form id="decss_js_form" action=".">
+
+<script type="text/javascript" src="decss_js.js">
 </script>
 
-<script language="JavaScript">
+<script type="text/javascript">
 <!--
 
 function performDescramble()
@@ -78,35 +88,40 @@ function performDescramble()
 // -->
 </script>
 
-Input:<br>
+<p>
+Input:
+</p>
+
+<p>
 <textarea name="myinput" cols="50" rows="20">
 </textarea>
-<br>
-<br>
+</p>
 
 <table>
 <tr>
 <td>
-<input type="button" value="DeCSS!" onClick="performDescramble()">
+<input type="button" value="DeCSS!" onclick="performDescramble()" />
 </td>
 <td>
-Key: <input name="mykey" value="abcdef">
+Key: <input name="mykey" value="abcdef" />
 </td>
+</tr>
 </table>
 
-<br>
-<br>
-Output:<br>
+<p>
+Output:
+</p>
+
+<p>
 <textarea name="myoutput" cols="50" rows="20">
 </textarea>
+</p>
 
 </form>
 
 </td>
 </tr>
 </table>
-<br>
-<br>
 
 <p>
 Hackers-IL's DeCSS for JavaScript is:

@@ -1,6 +1,48 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type="text/xml" href="product-syndication.xsl"?>
 <!DOCTYPE comparison SYSTEM "product-syndication.dtd">
+<!--
+;;; To add:
+;;; Yehuda Poliker - Live at Caesarea.
+;;; Boney M collection
+;;; Abba Gold
+;;; Michael Jackson - HIStory
+;;; Spice Girls - Disc 1
+;;; Harvey Danger - Little by Little
+;;; Lebo M - Rhythm of the Pride Lands.
+;;; The Lion King
+;;; Offspring - Americana
+;;; Queen - Greatest Hits I and II
+;;; Innovators
+;;; Pink Floyd - Obscured by Clouds
+;;; Disney's Hercules
+;;; The Neverending Story
+;;; Arizona Dream
+;;; Rabin Memorial Disc
+;;; Hooked on Classics
+;;; Evanescence
+;;; Bugsy Malone
+;;; Aqua
+;;; Black Eyed Peas - Elephunk
+;;; U2 - 1980-1990, 1990-2000.
+;;; Vangelis
+;;;     - Themes I
+;;;     - Albedo
+;;;     - Spiral
+;;; SleepWalks
+
+
+Added:
+;;; + Beatles - Red Album
+;;; + Beatles - Blue Album
+;;; + Shania Twain - Greatest Hits
+;;; + Blues Brothers
+;;; + The Best of Enya 
+;;; + Ace of Base - First CD.
+;;; + Explosive - the best of bond
+;;; + Dirty Dancing
+
+-->
 <product-syndication>
     <data>
         <cat id="music">
@@ -54,6 +96,12 @@
                         pop country) songs in a fun way, and the arrangement is
                         very nice.
                     </p>
+                    <p>
+                        On the IRC (Internet Relay Chat) someone jokingly
+                        said that the empty set is defined as the people who
+                        like both Shania Twain and Pink Floyd. So I guess I
+                        belong to the empty set.
+                    </p>
                 </desc>
             </prod>
             <prod id="blues_brothers_sountrack">
@@ -83,6 +131,50 @@
                         show), "Book of Days", "Orinoco Flow", "Carribean
                         Blue" and many other of my favourites. Highly
                         recommended.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="ace_of_base_1">
+                <title>The Sign</title>
+                <creator type="performer">Ace of Base</creator>
+                <isbn>B000002VNS</isbn>
+                <desc>
+                    <p>
+                        My sister bought this 
+                        <a href="http://en.wikipedia.org/wiki/Ace_of_Base">Ace 
+                            of Base</a> album back when we were in high
+                        school. I grew to like several of its songs. Ace of
+                        Base have interesting beats, the singers have good
+                        voices and the Dance/Pop/Rock arrangement is pleasant
+                        to listen to.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="explosive_best_of_bond">
+                <title>Explosive - The Best of Bond</title>
+                <creator type="performer">Bond</creator>
+                <isbn>B0009NCQJ6</isbn>
+                <desc>
+                    <p>
+                        Bond are a string quartet made out of four hot chicks,
+                        who are doing lots of nice crossover classical music.
+                        Being a fan of crossover classic and having heard some
+                        of Bond's song, I went to the records store determined
+                        to find a Bond song. I found this album, which is
+                        very nice.
+                    </p>
+                </desc>
+            </prod>    
+            <prod id="dirty_dancing">
+                <title>Dirty Dancing</title>
+                <isbn>B00000JJM2</isbn>
+                <desc>
+                    <p>
+                        The Movie Dirty Dancing featured a lot of great music,
+                        and this Double-CD compilation containing the music 
+                        from the movie makes for a great listening. With some
+                        old hits and completely new recordings, this CD is a
+                        must have.
                     </p>
                 </desc>
             </prod>

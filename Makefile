@@ -148,6 +148,15 @@ sitemap_targets: $(T2_SITEMAP_FILE)
 $(T2_SITEMAP_FILE): bin/gen-google-site-map.pl
 	$<
 
+PROD_SYND_MUSIC_DIR = lib/prod-synd/music
+PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
+
+$(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
+	touch $@
+
+$(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml
+	perl $<
+
 %.show:
 	@echo "$* = $($*)"
 

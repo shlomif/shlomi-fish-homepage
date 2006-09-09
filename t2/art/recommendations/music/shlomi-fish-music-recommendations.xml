@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xml" href="product-syndication.xsl"?>
+<!DOCTYPE comparison SYSTEM "product-syndication.dtd">
+<product-syndication>
+    <data>
+        <cat id="music">
+            <title>Music</title>
+            <desc>
+                <p>
+                    These are my favourite popular music CDs.
+                </p>
+            </desc>
+            <prod id="beatles_red_album">
+                <title>The Beatles - The Red Album - 1962 - 1966</title>
+                <isbn>B000002UYZ</isbn>
+                <desc>
+                    <p>
+                        A double album of the first years of my favourite 
+                        English-singing band. Some pretty nifty songs, with
+                        very revolutionary melodies and style.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="beatles_blue_album">
+                <title>The Beatles - The Blue Album - 1962 - 1966</title>
+                <isbn>B000002UZ1</isbn>
+                <desc>
+                    <p>
+                        The later Beatles' years. Songs have become more
+                        expermintal, but also very good.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="shania_twain">
+                <title>Greatest Hits</title>
+                <creator type="performer">Shania Twain</creator>
+                <isbn>B0002Z1EG2</isbn>
+                <desc>
+                    <p>
+                        I've been a fan of some of Shania Twain's MTv hits, and
+                        downloaded them from Peer-to-Peer networks. One day
+                        when I went to a local store looking for certain CDs, 
+                        I saw her "Greatest Hits" compilation. Since I was
+                        looking for other CDs, I did not buy it then, but
+                        rather went another day and bought Twain's CD.
+                    </p>
+                    <p>
+                        The CD did not disappoint me. With some great songs like
+                        "Up", "Come on over", "Man, I feel like a woman!", 
+                        "Any man of mine", "Party for Two", and my old
+                        favourites "That don't impress me much", "You're Still
+                        the One", and "I'm Gonna Getcha" - this CD is one of
+                        my favourites. Shania Twain sings her country, (perhaps
+                        pop country) songs in a fun way, and the arrangement is
+                        very nice.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="blues_brothers_sountrack">
+                <title>The Blues Brothers: Original Soundtrack Recording</title>
+                <creator type="performer">The Blues Brothers</creator>
+                <isbn>B000002J5K</isbn>
+                <desc>
+                    <p>
+                        The soundtrack to the movie "The Blues Brothers"
+                        contains a wonderful collection of Blues and rock
+                        songs some of them are classics. 
+                    </p>
+                </desc>
+            </prod>
+        </cat>
+    </data>
+</product-syndication>

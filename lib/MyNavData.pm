@@ -398,6 +398,11 @@ my $tree_contents =
             'title' => "An incomplete list of links I find cool and/or useful.",
         },
         {
+            'text' => "Recommendations",
+            'url' => "recommendations/",
+            'title' => "Recommendations of Books, Compact Discs, Movies, etc.",
+        },
+        {
             'separator' => 1,
             'skip' => 1,
         },

@@ -82,22 +82,22 @@ VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST
 
 T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC))) $(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC))
 
-$(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(PHILOSOPHY_DEPS)
+$(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(PHILOSOPHY_DEPS)
 	touch $@
 
 T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))
 
-$(T2_LECTURES_DOCS_SRC):: $(T2_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
+$(T2_LECTURES_DOCS_SRC):: $(T2_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
 VIPE_LECTURES_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/lecture/%,$(VIPE_DOCS_SRC))
 
-$(VIPE_LECTURES_DOCS_SRC):: $(VIPE_SRC_DIR)/lecture/%.html.wml: $(LECTURES_DEPS)
+$(VIPE_LECTURES_DOCS_SRC):: $(VIPE_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
 COMMON_LECTURES_DOCS_SRC = $(patsubst %,common/%.wml,$(filter lecture/%,$(COMMON_DOCS)))
 
-$(COMMON_LECTURES_DOCS_SRC):: common/lecture/%.html.wml: $(LECTURES_DEPS)
+$(COMMON_LECTURES_DOCS_SRC):: common/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
 T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
@@ -105,13 +105,13 @@ T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC))
 
-$(T2_SOFTWARE_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
+$(T2_SOFTWARE_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
 
 VIPE_SOFTWARE_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/rwlock/%,$(VIPE_DOCS_SRC)) \
 						 $(filter $(VIPE_SRC_DIR)/software-tools/%,$(VIPE_DOCS_SRC))
 
-$(VIPE_SOFTWARE_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(SOFTWARE_DEPS)
+$(VIPE_SOFTWARE_DOCS_SRC):: $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
 
 
@@ -122,18 +122,18 @@ T2_HUMOUR_DOCS_SRC = $(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wonderous.html.wml,$(T2_DOCS_SRC))
 
-$(T2_HUMOUR_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(HUMOUR_DEPS)
+$(T2_HUMOUR_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
 	touch $@
 
 VIPE_HUMOUR_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/humour/%,$(VIPE_DOCS_SRC))
 
-$(VIPE_HUMOUR_DOCS_SRC):: $(VIPE_SRC_DIR)/%.html.wml: $(HUMOUR_DEPS)
+$(VIPE_HUMOUR_DOCS_SRC):: $(VIPE_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
 	touch $@
 
 
 T2_PUZZLES_DOCS_SRC = $(filter $(T2_SRC_DIR)/puzzles/%,$(T2_DOCS_SRC)) $(filter $(T2_SRC_DIR)/MathVentures/%,$(T2_DOCS_SRC))
 
-$(T2_PUZZLES_DOCS_SRC):: $(T2_SRC_DIR)/%.html.wml: $(PUZZLES_DEPS)
+$(T2_PUZZLES_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(PUZZLES_DEPS)
 	touch $@
 
 rss:

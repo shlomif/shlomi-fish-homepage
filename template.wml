@@ -15,8 +15,8 @@
 #include "latemp/latemp-driver.wml"
 #include "shlomif/affiliations.wml"
 
-<define-tag google_adsense_code_top_wide>
-<script type="text/javascript"><!--
+<define-tag google_adsense_code_top_proto>
+<script type="text/javascript">
 google_ad_client = "pub-2480595666283917";
 google_ad_width = 468;
 google_ad_height = 60;
@@ -28,15 +28,23 @@ google_color_text = "000000";
 google_color_bg = "FFFFFF";
 google_color_link = "0000FF";
 google_color_url = "008000";
-//--></script>
+</script>
 <script type="text/javascript"
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </define-tag>
 
+<define-tag google_adsense_code_top_wide>
+<div class="ads">
+<if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
+    "  <object data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
+    "<google_adsense_code_top_proto />"
+    />
+</div>    
+</define-tag>
 
 <define-tag google_adsense_code_top_narrow>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 google_ad_client = "pub-2480595666283917";
 google_ad_width = 125;
 google_ad_height = 125;
@@ -48,15 +56,15 @@ google_color_bg = "FFFFFF";
 google_color_link = "000000";
 google_color_text = "0000FF";
 google_color_url = "008000";
-//--></script>
+</script>
 <script type="text/javascript"
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </define-tag>
 
 
-<define-tag google_adsense_code_side>
-<script type="text/javascript"><!--
+<define-tag google_adsense_code_side_proto>
+<script type="text/javascript">
 google_ad_client = "pub-2480595666283917";
 google_ad_width = 120;
 google_ad_height = 600;
@@ -68,10 +76,19 @@ google_color_text = "6F6F6F";
 google_color_bg = "FFFFFF";
 google_color_link = "0000CC";
 google_color_url = "008000";
-//--></script>
+</script>
 <script type="text/javascript"
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+</define-tag>
+
+<define-tag google_adsense_code_top_side>
+<div class="ads">
+<if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
+    "  <object data="$(ROOT)/images/ads/ads-side.html" type="text/html"></object>"
+    "<google_adsense_code_side_proto />"
+    />
+</div>    
 </define-tag>
 
 <define-tag google_adsense_code_referrals>

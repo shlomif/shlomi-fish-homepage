@@ -25,7 +25,7 @@ my $puzzles_tree_contents =
             'subs' =>
             [
                 {
-                    'text' => "Combinatorics and the Art of D&D",
+                    'text' => "Combinatorics and the Art of D&amp;D",
                     'url' => "MathVentures/3d_outof_4d.html",
                     'title' => "The 3 Maximal Dice out of 4 Dice",
                 },

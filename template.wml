@@ -35,12 +35,10 @@ google_color_url = "008000";
 </define-tag>
 
 <define-tag google_adsense_code_top_wide>
-<div class="ads">
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
-    "  <object data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
+    "  <object class="ads_top_wide" data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
     "<google_adsense_code_top_proto />"
     />
-</div>    
 </define-tag>
 
 <define-tag google_adsense_code_top_narrow>
@@ -83,12 +81,10 @@ google_color_url = "008000";
 </define-tag>
 
 <define-tag google_adsense_code_side>
-<div class="ads">
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
-    "  <object data="$(ROOT)/images/ads/ads-side.html" type="text/html"></object>"
+    "  <object class="ads_side" data="$(ROOT)/images/ads/ads-side.html" type="text/html"></object>"
     "<google_adsense_code_side_proto />"
     />
-</div>    
 </define-tag>
 
 <define-tag google_adsense_code_referrals>

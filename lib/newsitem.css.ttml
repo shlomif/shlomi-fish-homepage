@@ -1,2 +1,6 @@
 /* h3.newsitem { text-indent: 3em } */
 p.newsitem, ol.newsitem, ul.newsitem { margin-left : 3em }
+.newsitem p, .newsitem ol, .newsitem ul
+{
+    margin-left: 0.5em;
+}

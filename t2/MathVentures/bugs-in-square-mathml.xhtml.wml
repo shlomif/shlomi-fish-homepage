@@ -1,4 +1,15 @@
-#include "../template.wml"
+#include "utils.wml"
+#include "paypal.wml"
+#include "latemp/latemp-prelude.wml"
+<set-var latemp_with_favicon="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_xml_declaration="1" />
+<set-var latemp_with_breadcrumbs_trail="1" />
+<set-var latemp_html_standard="xhtml1.1" />
+<set-var latemp_nav_links_allowed_places="top-left" />
+<set-var latemp_gen_plain_page="$(PRINTABLE)" />
+<set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
 
 <define-tag latemp_html_header>
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -6,6 +17,11 @@
 "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" > 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{#LATEMP_LANG#}"> 
 </define-tag>
+
+#include "latemp/latemp-driver.wml"
+#include "shlomif/affiliations.wml"
+#include "rest-of-template.wml"
+
 <page_extra_head_elements>
 <link rel="stylesheet" type="text/css" href="bugs-in-square.css" /> 
 </page_extra_head_elements>
@@ -48,9 +64,9 @@ The solution can be found some space below:
 
 <h2>Solution:</h2>
 <object data="bugs-in-square.svg" type="image/svg+xml"
-        width="300" height="300" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; " 
-        alt="Bugs Path Illustration"
+        width="300" height="300" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; "
         >
+<p>Bugs Path Illustration</p>
 </object>
 
 <!--l. 15--><p class="noindent">I&#x2019;ll use the following model to simplify the problem: suppose the bugs don&#x2019;t move towards each other

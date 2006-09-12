@@ -47,8 +47,11 @@ The solution can be found some space below:
 <longblank />
 
 <h2>Solution:</h2>
-
-<img src="bugs.gif" alt="Bugs Path Illustration" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; " />
+<object data="bugs-in-square.svg" type="image/svg+xml"
+        width="300" height="300" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; " 
+        alt="Bugs Path Illustration"
+        >
+</object>
 
 <!--l. 15--><p class="noindent">I&#x2019;ll use the following model to simplify the problem: suppose the bugs don&#x2019;t move towards each other
 in&#xFB01;nitesimly, but rather move in a straight line, and then stop, and then move again toward their new positions,
@@ -377,12 +380,20 @@ class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                      
 second.
 </p>
 
+<h2>Scripts and Visulatiosations</h2>
+
 <p>
 Here's <a href="bugs.scm">a script</a>
 for <a href="http://www.gimp.org/">Gimp</a> version 1.2 
 that generates a series of squares inside squares, and optionally marks the 
 path of a single bug. And here's the <a href="bugs-2.2.scm">corresponding
 script for Gimp version 2.2</a>.
+</p>
+
+<p>
+Here's <a href="gen-bugs-in-square-svg.pl">a Perl script</a> to generate an 
+<a href="http://www.w3.org/Graphics/SVG/">SVG</a> image of the squares inside
+each other (that was displayed above).
 </p>
 
 <h2><a href="./">Back to the Math-Ventures Web page</a></h2>

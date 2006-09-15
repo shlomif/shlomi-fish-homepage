@@ -209,9 +209,10 @@ common look and feel, a style that's hopefully semantic, converted to use
 </p>
 
 <p>
-All of the source code for the site is available online in various places (I'm
-soon going to prepare a top-to-bottom document for how to compile the site from
-scratch). Some of the hand-crafted code was released as 
+All of the source code for the site is available online in various places. I've
+prepared <a href="$(ROOt)/meta/site-source/">a top-to-bottom 
+document</a> on how to compile the site from
+scratc). Some of the hand-crafted code was released as 
 <a href="http://web-cpan.berlios.de/latemp/">the Latemp Content Management 
 System</a> or various <a href="http://search.cpan.org/~shlomif/">assisting 
 CPAN modules</a> under an open-source license.
@@ -221,6 +222,72 @@ CPAN modules</a> under an open-source license.
 I am still working on the site, both by adding new content and attractions, 
 by revising or correcting existing ones, by making it more usable, or by
 trying to publicise new attractions in various online resources.
+</p>
+
+<h3 id="site_history">What can you tell me about this site's history?</h3>
+
+<p>
+Well, a journey of a thousand miles begins with one small step and continues
+with many subsequent small steps.
+</p>
+
+<p>
+My homesite started from a small number of static HTML pages kept on the
+server of my workplace back then (<a href="http://www.smlink.com/">Smart 
+Link</a>). It had the address http://www.smlink.com/~shlomif/, now disactive,
+where shlomif was my username on ibm.net back then (which ended up becoming
+my general unofficial ID). We hosted the server behind our Point-to-Point
+connection (not such a smart idea retrospectively) and we had to create the
+alias in IIS specifically for me to put stuff there.
+</p>
+
+<p>
+I recall that I had <a href="$(ROOT)/humour.html">the Humour collection</a>
+with a few jokes I originated, as well as <a href="http://www.shlomifish.org/toggle.html">the report about the algorithmic solution to the Toggle Squares
+puzzle</a> I sent to its originator (with whom I was corresponding at 
+the time). And it also had a rudimentary pageful of links and a bio.
+</p>
+
+<p>
+When I became a student in the Technion, I moved my site to its undergraduate
+server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
+and more resources to the site. I had a limited quota there, and when I got
+an account on "vipe", a server managed by the students, I hosted part of
+my home site there as well, as http://vipe.technion.ac.il/~shlomif/ . The
+two parts of the site had cross-links to one another.
+</p>
+
+<p>
+Eventually, I was about to graduate and so moved the t2.technion.ac.il part
+of my homesite, first to shlomif.il.eu.org (a free hostname, which ended up
+causing too many DNS problems), and then to www.shlomifish.org which is
+where it residing now. In the process, I converted all of the main pages to
+use <a href="http://thewml.org/">Website Meta Language</a> and what would
+eventually become <a href="http://web-cpan.berlios.de/latemp/">Latemp</a>.
+This has enabled the site to have a common look and feel, a nice CSS 
+stylesheet, a navigation menu and other navigation aids and other nice 
+features.
+</p>
+
+<p>
+Eventually I realised that the vipe server is too much down time (due
+to problems at the Technion's network) and moved all of its content over 
+to the www.shlomifish.org domain.
+</p>
+
+<p>
+Throughout all this time, many resources were added to the homesite: software,
+essays, stories, artwork, presentations, puzzles, and more information about
+myself. I also now maintain a large number of 
+<a href="$(ROOT)/me/blogs/">blogs</a> and sites for my projects, as well as 
+sites I volunteered to maintain. I really like the way the web allows me to
+express myself, and to communicate using text, hypertext, and other types of
+media.
+</p>
+
+<p>
+In case you're interested in setting up a personal web site of your own, I 
+wrote <a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/">an article about it</a>, which you can read.
 </p>
 
 <h3 id="idf_service">Did you serve in the Israeli Military (the IDF)?</h3>

@@ -3,15 +3,7 @@
 
 <define-tag software_patents>1</define-tag>
 #include "latemp/latemp-prelude.wml"
-<set-var latemp_with_favicon="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_xml_declaration="1" />
-<set-var latemp_with_breadcrumbs_trail="1" />
-<set-var latemp_html_standard="xhtml1.1" />
-<set-var latemp_nav_links_allowed_places="top-left" />
-<set-var latemp_gen_plain_page="$(PRINTABLE)" />
-<set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
+#include "local-defs.wml"
 #include "latemp/latemp-driver.wml"
 #include "shlomif/affiliations.wml"
 

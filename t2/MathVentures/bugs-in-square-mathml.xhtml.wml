@@ -1,21 +1,11 @@
 #include "utils.wml"
 #include "paypal.wml"
 #include "latemp/latemp-prelude.wml"
-<set-var latemp_with_favicon="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_xml_declaration="1" />
-<set-var latemp_with_breadcrumbs_trail="1" />
-<set-var latemp_html_standard="xhtml1.1" />
-<set-var latemp_nav_links_allowed_places="top-left" />
-<set-var latemp_gen_plain_page="$(PRINTABLE)" />
-<set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
-<set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
+#include "local-defs.wml"
 
-<define-tag latemp_html_header>
-<?xml version="1.0" encoding="utf-8" ?> 
+<define-tag latemp_html_doctype>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
 "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" > 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{#LATEMP_LANG#}"> 
 </define-tag>
 
 #include "latemp/latemp-driver.wml"
@@ -80,7 +70,7 @@ for the proportion <!--l. 24--><math
 display="inline" ><mi 
 >p</mi> <mo 
 class="MathClass-rel">=</mo> <mn>0</mn><mo 
-class="MathClass-punc">.</mo><mn>1</mn><mn>5</mn></math>.
+class="MathClass-punc">.</mo><mn>1</mn><mn>0</mn></math>.
 </p><!--l. 26--><p class="noindent">Now, if the length of a given square is <!--l. 26--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 

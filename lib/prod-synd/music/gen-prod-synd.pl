@@ -18,6 +18,10 @@ my $ps = XML::Grammar::ProductsSyndication->new(
     },
 );
 
+if (!$ps->is_valid())
+{
+    die "Not valid.";
+}
 my $xml = $ps->transform_into_html({ 'output' => "xml" });
 
 my $xc = XML::LibXML::XPathContext->new($xml);

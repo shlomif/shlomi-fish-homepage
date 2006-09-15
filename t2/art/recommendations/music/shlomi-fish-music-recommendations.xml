@@ -5,11 +5,9 @@
 ;;; To add:
 ;;; Yehuda Poliker - Live at Caesarea.
 ;;; Boney M collection
-;;; Abba Gold
 ;;; Michael Jackson - HIStory
 ;;; Spice Girls - Disc 1
 ;;; Harvey Danger - Little by Little
-;;; Lebo M - Rhythm of the Pride Lands.
 ;;; The Lion King
 ;;; Offspring - Americana
 ;;; Queen - Greatest Hits I and II
@@ -41,6 +39,8 @@ Added:
 ;;; + Dirty Dancing
 ;;; + Arizona Dream
 ;;; + Innovators
+;;; + Lebo M - Rhythm of the Pride Lands.
+;;; + Abba Gold
 -->
 <product-syndication>
     <data>
@@ -74,8 +74,8 @@ Added:
             </prod>
             <prod id="shania_twain">
                 <title>Greatest Hits</title>
-                <creator type="performer">Shania Twain</creator>
                 <isbn>B0002Z1EG2</isbn>
+                <creator type="performer">Shania Twain</creator>
                 <desc>
                     <p>
                         I've been a fan of some of Shania Twain's MTv hits, and
@@ -105,8 +105,8 @@ Added:
             </prod>
             <prod id="blues_brothers_sountrack">
                 <title>The Blues Brothers: Original Soundtrack Recording</title>
-                <creator type="performer">The Blues Brothers</creator>
                 <isbn>B000002J5K</isbn>
+                <creator type="performer">The Blues Brothers</creator>
                 <desc>
                     <p>
                         The soundtrack to the movie "The Blues Brothers"
@@ -117,8 +117,8 @@ Added:
             </prod>
             <prod id="best_of_enya">
                 <title>Paint the Sky with Stars: The Best of Enya</title>
-                <creator type="performer">Enya</creator>
                 <isbn>B000002NJH</isbn>
+                <creator type="performer">Enya</creator>
                 <desc>
                     <p>
                         <a href="http://en.wikipedia.org/wiki/Enya">Enya</a>
@@ -135,8 +135,8 @@ Added:
             </prod>
             <prod id="ace_of_base_1">
                 <title>The Sign</title>
-                <creator type="performer">Ace of Base</creator>
                 <isbn>B000002VNS</isbn>
+                <creator type="performer">Ace of Base</creator>
                 <desc>
                     <p>
                         My sister bought this 
@@ -151,8 +151,8 @@ Added:
             </prod>
             <prod id="explosive_best_of_bond">
                 <title>Explosive - The Best of Bond</title>
-                <creator type="performer">Bond</creator>
                 <isbn>B0009NCQJ6</isbn>
+                <creator type="performer">Bond</creator>
                 <desc>
                     <p>
                         Bond are a string quartet made out of four hot chicks,
@@ -231,6 +231,7 @@ Added:
                 </desc>
             </prod>
             <set id="u2_best">
+                <title>Best of U2</title>
                 <prod id="u2_1980_to_1990">
                     <title>The Best of 1980-1990</title>
                     <isbn>B00000DFSK</isbn>
@@ -250,8 +251,50 @@ Added:
                         listen to them again and again.
                     </p>
                 </desc>
-                
             </set>
+            <prod id="rhythm_of_the_pride_lands">
+                <title>Rhythm of the Pride Lands</title>
+                <isbn>B000001M8A</isbn>
+                <creator type="performer">Lebo M</creator>
+                <desc>
+                    <p>
+                        This is a CD of music inspired by the Disney movie
+                        <a href="http://www.imdb.com/title/tt0110357/">The
+                            Lion King</a>. It contains some modern arragements
+                        of African-sounding songs, which are inspiring,
+                        addictive, and compulsing. The CD contains a booklet
+                        with the words and their meaning in English.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="abba_gold">
+                <title>ABBA Gold</title>
+                <isbn>B000001DZO</isbn>
+                <creator type="performer">ABBA</creator>
+                <desc>
+                    <p>
+                        This CD contains the greatest hits of the 
+                        <a href="http://en.wikipedia.org/wiki/ABBA">Swedish
+                            70's-80's band ABBA</a>. While some of the songs
+                        here are not very good, it does contain many gems
+                        such as "Dancing Queen", "Waterloo", "The Winner Takes
+                        it all", "Super trouper", "Take a chance on me", 
+                        "Knowing Me, Knowing You", and "Money, Money, Money".
+                        As such it is a very good buy.
+                    </p>
+                </desc>
+            </prod>
+            <prod id="michael_jackson_history">
+                <title>HIStory: Past, Present and Future, Book I</title>
+                <isbn>B0000029LG</isbn>
+                <creator type="performer">Michael Jackson</creator>
+                <desc>
+                    <p>
+                        This disc is the best of Michael Jackson, along with
+                        some new songs. I liked it very much.
+                    </p>
+                </desc>
+            </prod>
         </cat>
     </data>
 </product-syndication>

@@ -79,3 +79,44 @@ the long run. Think about it.
 An idea for a community site for the collection of fortune cookies.
 </p>
 
+<h3 id="tucan">Tucan - Interfacing High-level Languages</h3>
+
+<p>
+From a conversation I had with 
+<a href="http://tddpirate.livejournal.com/">TDDPirate</a> on IRC, we came
+to the conclusion that it would be desirable to have a framework that will
+enable code written in a certain high level language (say Perl) to make
+use of code written in a different high level language (say Python) and that
+from every high-level language to every other high-level language.
+</p>
+
+<p>
+Currently there are:
+</p>
+
+<ol>
+<li>
+<a href="http://www.swig.org/">SWIG</a> - enables writing one interface that
+will eventually generate bindings to a C library for any high-level language.
+However, it cannot interface a pure-Perl code into a pure-Perl code.
+</li>
+<li>
+<a href="http://www.parrotcode.org/">Parrot</a> - a virtual machine for
+dynamic languages. Its main problem is that it requires all such languages
+to implement compilers for its bytecode (along with any bindings they have
+to C).
+</li>
+<li>
+The <a href="http://www.gimp.org/">GIMP</a> contains a procedural database
+that allows registering functions in any language and calling them from
+any other language. However, this is limited to the GIMP and uses custom
+GIMP datatypes.
+</li>
+</ol>
+
+<p>
+It may be a good idea to use <a href="http://www.yaml.org/">YAML</a> and/or
+<a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a> to implement
+Tucan.
+</p>
+

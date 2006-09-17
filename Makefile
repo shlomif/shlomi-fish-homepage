@@ -137,7 +137,7 @@ $(T2_PUZZLES_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(PUZZLES_DEPS)
 	touch $@
 
 rss:
-	./bin/fetch-shlomif_hsite-feed.pl
+	perl ./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
 	touch t2/old-news.html.wml
 
@@ -146,7 +146,7 @@ T2_SITEMAP_FILE = $(T2_DEST)/sitemap.xml.gz
 sitemap_targets: $(T2_SITEMAP_FILE)
 
 $(T2_SITEMAP_FILE): bin/gen-google-site-map.pl
-	$<
+	perl $<
 
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
 PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html

@@ -25,7 +25,7 @@ VERSION_FILE = ver.txt
 all: dist test
 
 $(DATS):: %.dat : %
-	/usr/sbin/strfile $<
+	strfile $<
 
 test: $(DATS)
 	@fortune -e $(FILES)

@@ -19,7 +19,7 @@ __PACKAGE__->mk_accessors(qw(
     title
 ));
 
-sub initialize
+sub _init
 {
     my $self = shift;
     my (%args) = @_;

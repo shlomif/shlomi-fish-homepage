@@ -198,7 +198,7 @@ sub calc_items
     return [@old_news_items, @{$self->calc_rss_items()}];
 }
 
-sub initialize
+sub _init
 {
     my $self = shift;
 

@@ -1,4 +1,4 @@
-VER = 0.6.75
+VER = 0.6.76
 
 DIST_BASE = fortunes-shlomif
 
@@ -25,7 +25,7 @@ VERSION_FILE = ver.txt
 all: dist test
 
 $(DATS):: %.dat : %
-	strfile $<
+	PATH="$$PATH:/usr/sbin" strfile $<
 
 test: $(DATS)
 	@fortune -e $(FILES)

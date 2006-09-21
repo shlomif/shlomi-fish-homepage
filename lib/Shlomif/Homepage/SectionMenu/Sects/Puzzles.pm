@@ -26,7 +26,7 @@ my $puzzles_tree_contents =
             [
                 {
                     'text' => "Combinatorics and the Art of D&amp;D",
-                    'url' => "MathVentures/3d_outof_4d.html",
+                    'url' => "MathVentures/3d-outof-4d-mathml.xhtml",
                     'title' => "The 3 Maximal Dice out of 4 Dice",
                 },
                 {

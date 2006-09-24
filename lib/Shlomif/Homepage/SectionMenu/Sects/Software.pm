@@ -106,7 +106,12 @@ my $software_tree_contents =
                     'title' => "Against using the qmail SMTP Server",
                 },
             ],
-        },        
+        },
+        {
+            'text' => "Nostalgia",
+            'url' => "open-source/nostalgia/",
+            'title' => "Software I wrote for DOS back in the prehistoric days",
+        },
     ],
 };
 

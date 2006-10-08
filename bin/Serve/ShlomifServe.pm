@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 use CGI;
-use IO::All;
 use MIME::Types;
 
 sub serve
@@ -63,7 +62,13 @@ EOF
     }
 
     my $file_full_path = $dir_to_serve.$path;
-    my $text = io()->file($file_full_path)->slurp();
+    my $text;
+    do {
+        local $/;
+        open my $in, "<", $file_full_path;
+        $text = <$in>;
+        close($in);
+    };
     my $mime_type = $mimetypes->mimeTypeOf($file_full_path);
     if ($mime_type eq "text/html")
     {

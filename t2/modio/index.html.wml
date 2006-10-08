@@ -1,0 +1,70 @@
+#include '../template.wml'
+
+<latemp_subject "Adding Modio Support for TTYs of deaf people" />
+
+<p>
+This page describes a student's project to add support for deaf people
+TTYs into Smart-Link's <a href="http://www.smlink.com/">Modio</A> 
+software-based modem.
+</p>
+
+<p>
+Deaf TTYs speak between themselves in a protocol called V. 18, whose 
+documentation can be ordered from the <A HREF="http://www.itu.int/">ITU</A>. 
+V. 18 lies directly above the phone line and doesn't use V. 8 or V. 21 to 
+speak with other V. 18 devices. Furthermore, the TTYs understand a character 
+set called Weitbrecht/Baudot, which is different from ASCII and whose 
+<a href="baudot.txt">documentationcan be found here</a>.
+</p>
+
+<p>
+So, what a student who wishes to implement this needs to code is:
+</p>
+
+<ol>
+<li>
+A module to read waveform data from the sound card and convert it into Baudot
+</li>
+<li>
+A module to convert from Baudot (plus shift codes) into ASCII.
+</li>
+<li>
+A module to convert from ASCII into Baudot (with shift codes and perhaps also 
+line breaks after 72 characters in each line)
+</li>
+<li>
+Module to convert from the Baudot into waveforms.
+</li>
+</ol>
+
+<p>
+Those modules can be implemented using a Modio Soundcard/Modem, and basic
+drivers to read waveforms from the telephone line that will be supplied by
+Smart-Link.  They will be written in Windows-95/98 or Windows NT using VtoolsD
+or VdWorks.
+</p>
+
+<p>
+TTYs or TTY-compatible modems will be required to test the drivers against.
+It is possible that the Association of the Deaf in Israel will be able to
+supply the student with TTYs. Otherwise, TTY-compatible modems can be bought
+from NXi Corp.
+</p>
+
+<h2>Other Important Links</h2>
+
+<ul>
+<li>
+<a href="http://www.smlink.com/">Modio's Homepage</a>
+</li>
+<li>
+<a href="http://www.weizmann.ac.il/deaf-info/tty_faq.html">Omer Zak's FAQ regarding communication with Deaf TTYs</a>
+</li>
+<li>
+<a href="mailto:shlomif@vipe.technion.ac.il">Shlomi Fish' E-mail</a> (for questions regarding this project)
+</li>
+<li>
+<a href="http://www.nxicom.com/">NXi Corp.</a> - They manufacture modems that can talk with TTYs
+</li>
+</ul>
+

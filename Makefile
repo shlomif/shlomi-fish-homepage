@@ -75,7 +75,8 @@ t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/art
 	touch $@
 
 $(FORTUNES_TARGET): t2/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) t2/humour/fortunes/Makefile
-	( cd t2 && wml $(WML_FLAGS) -DLATEMP_SERVER=t2 -DLATEMP_FILENAME=humour/fortunes/index.html -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd humour/fortunes && make print_package_base )" humour/fortunes/fortunes-index.html.wml ) > $@
+	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd humour/fortunes && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) )
+
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))

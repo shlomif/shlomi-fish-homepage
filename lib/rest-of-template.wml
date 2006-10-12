@@ -82,16 +82,23 @@ google_ad_channel = "";
 </script>
 </define-tag>
 
+<define-tag w2l_notice>
+<a href="http://welcome.linux.org.il/?gad=CIr1zrMBEgjwLDUQw2srtBjPo5P_AyCgtK4M" title="ברוכים הבאים ללינוקס 2006 - הכירו את הסביבה היציבה, החזקה והמגוונת"><img
+     src="$(ROOT)/images/welcome-to-linux-2004-banner-256.png" 
+     style="border-width:0" alt="Welcome to Linux 2006 in Israel"
+     /></a>
+</define-tag>
+
 <define-tag ap5_notice>
 <a href="http://ap5.israel.net/" title="August Penguin 5 - The Annual Israeli Community Conference for Free and Open Source Software"><img
      src="$(ROOT)/images/ap5-banner.png" class="bless" 
      alt="August Penguin 5 - Israeli Community FOSS Con" /></a>
 </define-tag>
 
-<set-var with_banner="" />
+<set-var with_banner="1" />
 
 <define-tag top_with_banner>
-<ap5_notice />
+<w2l_notice />
 <google_adsense_code_top_narrow />
 </define-tag>
 

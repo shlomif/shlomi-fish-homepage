@@ -81,7 +81,7 @@ $(FORTUNES_TARGET): t2/humour/fortunes/fortunes-index.html.wml $(DOCS_COMMON_DEP
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))
 
-T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC))) $(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC))
+T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/books-recommends/%,$(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC))) $(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC)))
 
 $(T2_PHILOSOPHY_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(PHILOSOPHY_DEPS)
 	touch $@
@@ -152,6 +152,9 @@ $(T2_SITEMAP_FILE): bin/gen-google-site-map.pl
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
 PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
 
+PROD_SYND_NON_FICTION_BOOKS_DIR = lib/prod-synd/non-fiction-books
+PROD_SYND_NON_FICTION_BOOKS_INC = $(PROD_SYND_NON_FICTION_BOOKS_DIR)/include-me.html
+
 $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 	touch $@
 
@@ -159,6 +162,15 @@ $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/a
 	perl $<
 	./gen-helpers.pl
 	svn add -q t2/art/recommendations/music/images/*.jpg
+	$(MAKE)
+
+$(T2_SRC_DIR)/philosophy/books-recommends/index.html.wml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
+	touch $@
+
+$(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml
+	perl $<
+	./gen-helpers.pl
+	svn add -q t2/philosophy/books-recommends/images/*.jpg
 	$(MAKE)
 
 %.show:

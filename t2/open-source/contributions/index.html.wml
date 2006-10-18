@@ -1,12 +1,18 @@
 #include '../template.wml'
 
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "Contributions Made to external Open-Source Projects" />
 
 <p>
 <b>Last Updated:</b> 4-October-2004.
 </p>
 
-<h2><a href="http://www.gimp.org/">GIMP - The GNU Image 
+<h2 id="toc">Table of Contents</h2>
+
+<toc />
+
+<h2 id="gimp"><a href="http://www.gimp.org/">GIMP - The GNU Image 
 Manipulation Program</a></h2>
 
 <p>
@@ -23,7 +29,7 @@ gimpressionist code, and am now its maintainer. This was followed by a small
 amount of bug squashing and cleanups.
 </p>
 
-<h2><a href="http://subversion.tigris.org/">Subversion - A Compelling Version 
+<h2 id="subversion"><a href="http://subversion.tigris.org/">Subversion - A Compelling Version 
 Control System</a></h2>
 
 <p>
@@ -45,7 +51,7 @@ lot of help from different people. Eventually, a reworked version of the
 Patch, was applied by Peter N. Lundblad.
 </p>
 
-<h2><a href="http://www.perl.org/">Perl 5 Core</a></h2>
+<h2 id="perl5"><a href="http://www.perl.org/">Perl 5 Core</a></h2>
 
 <p>
 I contributed some patches to 
@@ -53,7 +59,7 @@ I contributed some patches to
 documentation</a> to make it clearer and easier to understand.
 </p>
 
-<h2><a href="http://syscalltrack.sourceforge.net/">Syscalltrack - A Framework
+<h2 id="syscalltrack"><a href="http://syscalltrack.sourceforge.net/">Syscalltrack - A Framework
 for Tracking System Calls</a></h2>
 
 <p>
@@ -66,7 +72,7 @@ all the other contributors got a T-shirt with the Syscalltrack logo.
 Later on, I did some work on the project's web-site.
 </p>
 
-<h2><a href="http://web-cpan.berlios.de/modules/WWW-Form/">WWW::Form - a Perl Module 
+<h2 id="www-form"><a href="http://web-cpan.berlios.de/modules/WWW-Form/">WWW::Form - a Perl Module 
 for Web Forms Managament</a></h2>
 
 <p>
@@ -84,7 +90,7 @@ was extended, improved, and a rudimentary test suite was written for it.
 Ben and I have since been chatting using Instant Messaging.
 </p>
 
-<h2><a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell 
+<h2 id="freecell-pro"><a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell 
 Pro</a></h2>
 
 <p>

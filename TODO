@@ -1,3 +1,12 @@
+* Change the Objectivism-FOSS page to refer to XSL instead of DSSSL.
+
+* Investigate the following subversion scenario:
+    - svn rm myfile.
+    - svn cp ../../IP/myfile myfile.
+    - svn revert -R .
+    - change myfile.
+    - commit.
+
 * Style the .prod_set's on the CD recommendations page.
 
 * Style the section navigation menus better.

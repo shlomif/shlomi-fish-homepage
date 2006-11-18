@@ -75,6 +75,17 @@ my $puzzles_tree_contents =
                 },
             ],
         },
+        {
+            'text' => "Computer Science",
+            'url' => "puzzles/cs/",            
+            'subs' =>
+            [
+                {
+                    'text' => "&quot;Lotg&quot; Code",
+                    'url' => "puzzles/cs/lotg/",
+                },
+            ],
+        }
     ],
 };
 

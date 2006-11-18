@@ -76,6 +76,18 @@ my $puzzles_tree_contents =
             ],
         },
         {
+            'text' => "Situation Puzzles",
+            'url' => "puzzles/situation/",
+            'title' => "Puzzles where one has to guess what caused the situation using Yes/No questions",
+            'subs' =>
+            [
+                {
+                    'text' => "A Book Under a Rock",
+                    'url' => "puzzles/situation/book-under-rock.html",
+                },
+            ],
+        },
+        {
             'text' => "Computer Science",
             'url' => "puzzles/cs/",            
             'subs' =>
@@ -85,7 +97,7 @@ my $puzzles_tree_contents =
                     'url' => "puzzles/cs/lotg/",
                 },
             ],
-        }
+        },
     ],
 };
 

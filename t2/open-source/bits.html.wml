@@ -63,7 +63,7 @@ What this little Perl script does is register an
 <a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
 that whenever invoked displays a message of "/me is listening to My Artist -
 My Song" in the current channel. Feel free to make any use of it whatsoever 
-under the terms of the MIT X11 license. You need to install the 
+under the terms of the MIT X11 license. You need to install the
 <a href="http://search.cpan.org/dist/Xmms-Perl/">Xmms-Perl distribution</a>
 and have the X-Chat Perl interface. To use, make it executable and put it 
 under your <tt>$HOME/.xchat2</tt> directory.
@@ -99,3 +99,16 @@ patch</a> against the CVS source.
 <b>Update</b>: the package was fixed to work on Firefox 1.5.0.1. It should also
 work on further versions of Firefox 1.5.
 </p>
+
+<h2 id="kaddressbook_dist_lists"><a href="<bit_link "convert-kabc-dist-lists.pl" />">Forward Port the KAddressBook Distributions Lists to Version 3.5.4</a></h2>
+
+<p>
+The format used for the distribution lists has changed from earlier versions
+of KDE's 
+<a href="http://pim.kde.org/components/kaddressbook.php">KAddressBook</a> to
+the one supplied by kdepim-3.5.4. This Perl script can be used to do the porting
+automatically. Read the instructions at its top. Note that it will skip
+lists that have raw emails inside the distribution lists' directives. This
+script is available under the MIT X11 licence, with absolutely no warranty.
+</p>
+

@@ -1,4 +1,4 @@
-VER = 0.6.89
+VER = 0.8.0
 
 DIST_BASE = fortunes-shlomif
 
@@ -9,6 +9,7 @@ PACKAGE_BASE = $(DIST_DIR).tar.gz
 FILES = \
 	friends \
 	joel-on-software \
+	nyh-sigs \
 	osp_rules \
 	paul-graham \
 	shlomif \

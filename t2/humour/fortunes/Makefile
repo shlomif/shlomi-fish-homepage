@@ -1,4 +1,4 @@
-VER = 0.6.85
+VER = 0.6.89
 
 DIST_BASE = fortunes-shlomif
 
@@ -43,7 +43,7 @@ $(PACKAGE_BASE): $(DATS) $(VERSION_FILE)
 $(INDEX_FILE): fortunes-index.html $(PACKAGE_BASE)
 	cat $< | sed '/%%PACKAGE_BASE%%/ s/href=".*"/href="$(PACKAGE_BASE)"/' > $@
 
-ver.txt: Makefile
+$(VERSION_FILE): Makefile
 	echo $(VER) > $@
 
 upload: dist

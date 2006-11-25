@@ -112,3 +112,28 @@ lists that have raw emails inside the distribution lists' directives. This
 script is available under the MIT X11 licence, with absolutely no warranty.
 </p>
 
+<h2 id="amarok">Amarok Scripts</h2>
+
+<p>
+<a href="http://amarok.kde.org/">Amarok</a> is a powerful and easy to use
+music player for the <a href="http://www.kde.org/">KDE Desktop Environment</a>.
+Amarok supports 
+<a href="http://amarok.kde.org/wiki/Script-Writing_HowTo">scripts</a> which
+allow one to customise the player using practically any language.
+</p>
+
+<p>
+Here are links to the Amarok scripts I wrote:
+</p>
+
+<ul>
+<li id="amarok__per_song_volume">
+<a href="http://www.kde-apps.org/content/show.php?content=49151">Per-Song
+Volume Script</a> - This Perl script maintains a per-song volume information.
+What it means is that a volume is associated with each song, which is recorded
+whenever the volume changes, and is restored to its last value when the song is
+played again. This is useful if you have several songs which sound louder or
+softer than the rest.
+</li>
+</ul>
+

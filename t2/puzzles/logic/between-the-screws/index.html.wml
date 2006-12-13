@@ -25,13 +25,13 @@ of the plane.
 
 <p>
 For that, he had to use for attaching the four screws based on a particular
-order, with four screw-drivers with different colours - one of them green.
+order, with four screwdrivers with different colours - one of them green.
 Each screw had a different shape and a different length.
 </p>
 
 <p>
 Your mission is to find out the order in which the screws were attached with
-their screw-driver colours, their lengthes, and their shapes.
+their screwdriver colours, their lengthes, and their shapes.
 </p>
 
 <ol>
@@ -41,21 +41,21 @@ the blue screwdriver, but was not twice its length or more. (Albeit a twice
 as long screw than the blue screw does exist.)
 </li>
 <li>
-The Diamond-shaped screw was screwed after the screw with the blue screwdriver,
+The diamond-shaped screw was screwed after the screw with the blue screwdriver,
 but before the 6cm-lengthed screw.
 </li>
 <li>
 Only once did a shorter screw followed a longer one.
 </li>
 <li>
-The screw with the red screw-driver that isn't the hexagonal one, was the last.
-The diamond-shpaed screw did not come right before it.
+The screw with the red screwdriver that isn't the hexagonal one, was the last.
+The diamond-shaped screw did not come right before it.
 </li>
 <li>
 The triangular screw came before the 2cm-long screw.
 </li>
 <li>
-The screw with the purple screw-driver, whose length is 8 cm, did not
+The screw with the purple screwdriver, whose length is 8 cm, did not
 follow the 2cm-long screw.
 </li>
 <li>
@@ -68,7 +68,7 @@ The 4cm-long screw, was not the square-shaped one.
 <tr>
 <th>Time</th>
 <th>Screw Length</th>
-<th>Screw-driver Colour</th>
+<th>Screwdriver Colour</th>
 <th>Screw Shape</th>
 </tr>
 
@@ -108,12 +108,95 @@ The solution can be found below.
 
 <h2 style="margin-top: 50em">Solution</h2>
 
+<p>
+From the puzzle we gather that the data we have is:
+</p>
+
+<ul>
+<li><b>Screw Lengths:</b> 2cm, 4cm, 6cm and 8cm.</li>
+<li><b>Screwdriver Colours:</b> green, blue, red and purple.</li>
+<li><b>Screw Shapes:</b> square, diamond, hexagon, and triangle.</li>
+</ul>
+
+<p>
+Based on hint #1, we can tell that the blue screwdriver screw and the
+last screw were either 4cm and 6cm long respectivly or alterantively 6cm
+and 8cm respectively, as no other allocations fullfill the hint. According to
+hint #2 we know that the 6cm-long screw is in time #3 or #4. If 6cm were in
+time #3, then place #4 must be 8cm (to follow hint #1). However, then #3
+must be the blue screwdriver which is impossible according to hint #2, which 
+puts it at time #1 or time #2. Therefore, 6cm is in time #4 and the blue 
+screwdriver was used for the 4cm screw. So far we have:
+</p>
+
+<ul>
+<li>Time #1 or Time #2 - 4cm - Blue</li>
+<li>Time #2 or Time #3 - Diamond</li>
+<li>Time #4 - 6cm</li>
+</ul>
+
+<p>
+All mutually exclusive.
+</p>
+
+<p>
+According to hint #4 we know that Time #4 has the red screw driver and that
+it isn't the hexagonal one. So we know that 
+<b>«Time #4 - 6cm - red - Not Hex»</b>. Hint #4 also tells us that the diamond
+shaped screw did not come right before it. Thus the diamond shaped screw must
+be at Time #2 and the 4cm screw must be at Time #1. So what we have so far
+is:
+</p>
+
+<ul>
+<li>Time #1 - 4cm - Blue</li>
+<li>Time #2 - Diamond</li>
+<li>Time #4 - 6cm - Red - Not Hex</li>
+</ul>
+
+<p>
+Now according to hint #3 we know that the order cannot be 
+<b>4cm&rarr;2cm&rarr;8cm&rarr;6cm</b> because that way two shorter
+screws will follow two longer ones. So we have:
+</p>
+
+<ul>
+<li>Time #1 - 4cm - Blue</li>
+<li>Time #2 - 8cm - Diamond</li>
+<li>Time #3 - 2cm</li>
+<li>Time #4 - 6cm - Red - Not Hex</li>
+</ul>
+
+<p>
+According to hint #5 the triangular screw preceded the 2cm screw, so it must
+be at Time #1. Since the Time #4 screw is not the hexagonal screw, then the
+hexagonal one must be Time #3, and time #4 must be the square screw. Thus,
+we have:
+</p>
+
+<ul>
+<li>Time #1 - 4cm - Blue - Triangle</li>
+<li>Time #2 - 8cm - Diamond</li>
+<li>Time #3 - 2cm - Hexagonal</li>
+<li>Time #4 - 6cm - Red - Square</li>
+</ul>
+
+<p>
+Now all we have to determine are the colours of time #2 and time #3. According
+to hint #6 we know that the 8cm screw was used with the purple screwdriver, so
+Time #2 is Purple and Time #3 must be green.
+</p>
+
+<p>
+Our final results are:
+</p>
+
 <table class="logic_sayings">
 
 <tr>
 <th>Time</th>
 <th>Screw Length</th>
-<th>Screw-driver Colour</th>
+<th>Screwdriver Colour</th>
 <th>Screw Shape</th>
 </tr>
 

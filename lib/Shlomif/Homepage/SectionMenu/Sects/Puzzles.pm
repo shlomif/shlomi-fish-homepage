@@ -50,6 +50,10 @@ my $puzzles_tree_contents =
                     'text' => "Bugs in a Square",
                     'url' => "MathVentures/bugs-in-square-mathml.xhtml",
                 },
+                {
+                    'text' => "What is this Sequence?",
+                    'url' => "MathVentures/sequence-4-8-7-5.html",
+                },
             ],
         },
         {

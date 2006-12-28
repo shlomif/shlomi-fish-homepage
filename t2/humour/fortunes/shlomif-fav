@@ -725,3 +725,56 @@ time).
 
     Linus Torvalds announcing the 2.6.19 Linux kernel.
     http://lwn.net/Articles/211904/
+%
+ <castoff>  merlyn: is it true that array itteration is better
+            performance wise than hash itteration?
+         *  avar would guess that array iter is faster than hash iter
+  <merlyn>  what is "hash iter"?
+  <merlyn>  with "each()"?
+ <castoff>  foreach key...
+    <avar>  yeah, or keys
+  <merlyn>  I don't see those as comparable
+  <merlyn>  when you have a hash, and you need to iterate, you do.
+  <merlyn>  when you have an array, and you need to iterate, you do
+  <merlyn>  what is there to choose between?
+ <castoff>  the hash has no real value stored other than the key so i
+            converted to arrays
+    <avar>  merlyn: you can compare the speed of the two operations
+    <avar>  well duh
+  <merlyn>  Why would you compare the speed of unrelated events?
+  <merlyn>  "let's time baking this bread compared to driving to
+            seattle"
+  <merlyn>  it's pointless
+    <ides>  merlyn: heh, yes, but I think it would make a funny
+            performance comparison article! :)
+  <merlyn>  "always optimize for baking bread!"
+         *  avar eats merlyn
+    <ides>  merlyn: I was thinking more along the lines of "Performance
+            comparison on Perl vs RoR vs Ice Fishing"
+  <merlyn>  "I repeated baking bread 5000 times to get the average"
+  <merlyn>  "It took me six years"
+    <ides>  merlyn: too bad there isn't a Benchmark module for my
+            oven...
+  <merlyn>  Ovenmark
+
+    Freenode's #perl
+%
+  <Teratogen>  Two atoms are walking down the street when one of them
+               says "I think I've lost an electron." The second one says
+               "are you sure?", to which the first one replies "Yes, I'm
+               positive".
+ <mpeg4codec>  So officer Schroedinger pulls over this quantum particle
+               and he says ``Do you know how fast you were going?''
+ <mpeg4codec>  the particle says, ``No, but I know exactly where I am.''
+  <Teratogen>  everybody has heard of Schroedinger's cat experiment
+  <Teratogen>  but very few people know that Schroedinger hated cats
+  <Teratogen>  with a passion
+  <Teratogen>  and actually experimented on them
+  <Teratogen>  he even owned a set of cat-fur gloves
+  <Teratogen>  cats mysteriously disappeared around Schroedinger's
+               laboratory
+  <Teratogen>  and there was no Chinese restaurant close by to explain
+               the disappearances
+ <mpeg4codec>  Schroedinger's cat: wanted dead AND alive
+
+    Freenode's #perl

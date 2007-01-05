@@ -32,6 +32,7 @@ sub run
         my $issued = $entry->issued();
         my $filename = "lib/feeds/shlomif_hsite/" . $issued->ymd() . ".html";
         open O, ">", $filename;
+        binmode O, ":utf8";
         print O $text;
         close(O);
         system("svn", "add", "-q", $filename);

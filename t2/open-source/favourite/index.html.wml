@@ -312,8 +312,17 @@ containing viruses that are sent to you. It is regularly updated.
 <p>
 If you're <a href="$(ROOT)/open-source/anti/qmail/">unfortunate enough
 to use qmail</a> for some of your mail accounts, and still wish to filter
-all the viruses that arrivate at your account, then Qclam may be the
+out all the viruses that arrivate at your account, then Qclam may be the
 right solution for you. QClam is a program that feeds the message to ClamAV,
 and reports the verdict in a way that dot-qmail files can understand.
+</p>
+
+<h3 id="openssh"><a href="http://www.openssh.com/">OpenSSH</a></h3>
+
+<p>
+OpenSSH, which is a free implementation of the SSH protocol, allows one to
+establish secure and authenticated connections to a different computer
+over the network. It allows one to login and execute remote commands, and 
+transfer files from one host to another. 
 </p>
 

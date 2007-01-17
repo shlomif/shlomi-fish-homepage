@@ -299,3 +299,21 @@ conversations. Very useful for debugging networking protocols and
 for other purposes.
 </p>
 
+<h3 id="clamav"><a href="http://www.clamav.net/">Clam AntiVirus 
+(ClamAV)</a></h3>
+
+<p>
+ClamAV is an open source anti-virus that can help filter out email messages 
+containing viruses that are sent to you. It is regularly updated.
+</p>
+
+<h3 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h3>
+
+<p>
+If you're <a href="$(ROOT)/open-source/anti/qmail/">unfortunate enough
+to use qmail</a> for some of your mail accounts, and still wish to filter
+all the viruses that arrivate at your account, then Qclam may be the
+right solution for you. QClam is a program that feeds the message to ClamAV,
+and reports the verdict in a way that dot-qmail files can understand.
+</p>
+

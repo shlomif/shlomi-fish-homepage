@@ -54,6 +54,9 @@ upload_backup: upload_deps
 
 upload_all: upload_t2 upload_vipe_alt
 
+upload_remote: upload
+	( cd $(T2_DEST) && $(RSYNC) -r * $${__HOMEPAGE_REMOTE_PATH}/ )
+
 clean:
 	rm -fr $(T2_DEST)/*
 	rm -fr $(VIPE_DEST)/*

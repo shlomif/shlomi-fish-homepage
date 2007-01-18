@@ -29,30 +29,13 @@ FORTUNES_DIR = humour/fortunes
 copy_fortunes:
 	cp -f t2/$(FORTUNES_DIR)/fortunes-shlomif-*.tar.gz $(T2_DEST)/$(FORTUNES_DIR)
 
-upload_deps: $(T2_TARGETS) copy_fortunes
+upload_deps: all
 
-upload_t2: upload_deps
+upload: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/ )
-
-upload_vipe: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )
-
-upload_t2_temp: $(T2_TARGETS)
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )
-
-upload_vipe_temp: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/vipe/ )
-
-upload_vipe_alt: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/Vipe/ )
-
-# upload: upload_t2_temp upload_vipe_temp
-upload: upload_t2
 
 upload_backup: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
-
-upload_all: upload_t2 upload_vipe_alt
 
 upload_remote: upload
 	( cd $(T2_DEST) && $(RSYNC) -r * $${__HOMEPAGE_REMOTE_PATH}/ )

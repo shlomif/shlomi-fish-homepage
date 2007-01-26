@@ -11,14 +11,20 @@ WML_FLAGS += $(COMMON_PREPROC_FLAGS)
 
 ALL_DEST_BASE = dest
 
-FORTUNES_TARGET = dest/t2-homepage/humour/fortunes/index.html
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: latemp_targets $(FORTUNES_TARGET) sitemap_targets copy_fortunes
+all: latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install 
 	
 include include.mak
 include rules.mak
+
+SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
+FORTUNES_TARGET = $(T2_DEST)/humour/fortunes/index.html
+
+site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
+
+fortunes-target: $(FORTUNES_TARGET)
 
 # t2 macros
 
@@ -158,6 +164,9 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 	./gen-helpers.pl
 	svn add -q t2/philosophy/books-recommends/images/*.jpg
 	$(MAKE)
+
+$(SITE_SOURCE_INSTALL_TARGET): INSTALL
+	cp -f $< $@
 
 %.show:
 	@echo "$* = $($*)"

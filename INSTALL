@@ -29,7 +29,7 @@ Or if you have CPANPLUS installed:
     $ PATH="$HOME/apps/latemp/bin:$PATH"
 
 7. 
-    $ svn co http://stalker.iguide.co.il:8080/svn/shlomif-homepage/wml-affiliations/trunk/wml/
+    $ svn co http://opensvn.csie.org/shlomif/wml-affiliations/trunk/wml/
     $ cd trunk/wml
     $ bash Install.bash
 
@@ -40,7 +40,7 @@ Or if you have CPANPLUS installed:
 
 9. Do the following to build the site, after all dependencies were installed:
 
-    $ svn co http://stalker.iguide.co.il:8080/svn/shlomif-homepage/homepage/trunk/
+    $ svn co http://opensvn.csie.org/shlomif/homepage/trunk/
     $ ./gen-helpers.pl
     $ (cd t2/humour/fortunes/ && make)
     $ make

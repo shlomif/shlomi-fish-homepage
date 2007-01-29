@@ -1,12 +1,18 @@
 #include '../template.wml'
-<latemp_subject "Software Construction and Management Tools" />
+#include "xhtml/1.x/std/toc.wml"
 
+<latemp_subject "Software Construction and Management Tools" />
 <page_extra_head_elements>
 <link rel="stylesheet" href="sb.css" type="text/css" media="screen, projection" title="Normal" />
 </page_extra_head_elements>
 
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
 <div class="software_build">
-<h2>Software Building</h2>
+<h2 id="build">Software Building</h2>
 
 <ul>
 <li>
@@ -33,10 +39,14 @@ more actively maintained recently.
 <a href="http://jakarta.apache.org/ant/">Ant</a> - a make replacement
 written in Java that uses an XML description language.
 </li>
+</ul>
 
+<h3 id="build_links">Links to Lists, Comparisons and other Resources</h3>
+
+</ul>
 <li>
-<a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">
-Google's Web Directory for Make Tools</a> - contains other useful links.
+<a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">Google's 
+Web Directory for Make Tools</a> - contains other useful links.
 </li>
 
 <li>
@@ -48,9 +58,15 @@ A very comprehensive list of build tools.
 <a href="http://en.wikipedia.org/wiki/Make">The Wikipedia Entry for Make</a> -
 contains a list of alternatives.
 </li>
+
+<li>
+<a href="http://spreadsheets.google.com/pub?key=prEdSidtHryEXastzzgO5DQ">A
+Google Spreasheet with a Comparison of various Alternatives</a> 
+</li>
+
 </ul>
 
-<h2>Software Pre-building Configuration</h2>
+<h2 id="configure">Software Pre-building Configuration</h2>
 
 <ul>
 <li>
@@ -78,7 +94,7 @@ as well.
 </li>
 </ul>
 
-<h2>Software Packaging</h2>
+<h2 id="package">Software Packaging</h2>
 
 <ul>
 <li>
@@ -110,7 +126,7 @@ software packaging system.
 </li>
 </ul>
 
-<h2>Source Control Managament Systems</h2>
+<h2 id="scm">Source Control Managament Systems</h2>
 
 <ul>
 <li>
@@ -156,7 +172,7 @@ directory may also prove helpful.</a>.
 </li>
 </ul>
 
-<h2>Bug Tracking</h2>
+<h2 id="bug_tracking">Bug Tracking</h2>
 
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
@@ -216,7 +232,7 @@ with slower access times, and lack of Google's PageRank integration.
 
 </ul>
 
-<h2>Testing Frameworks</h2>
+<h2 id="testing">Testing Frameworks</h2>
 
 <ul>
 <li>

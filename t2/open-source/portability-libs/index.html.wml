@@ -1,4 +1,6 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "Cross-Platform Abstraction Libraries" />
 
 <p>
@@ -17,7 +19,11 @@ such as <a href="http://www.perl.org/">Perl</a>,
 for such things within the language.
 </p>
 
-<h2>Data Structures</h2>
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="data_structures">Data Structures</h2>
 
 <ul>
 <li>
@@ -60,7 +66,7 @@ Library of Basics for C that contains a pool allocator, a Perl-like vector
 </li>
 </ul>
 
-<h2>System-Services Abstractions</h2>
+<h2 id="system_services">System-Services Abstractions</h2>
 
 <ul>
 <li>
@@ -145,7 +151,7 @@ with SAX2 and DOM interfaces.
 </li>
 </ul>
 
-<h2>Graphical User-Interface</h2>
+<h2 id="gui">Graphical User-Interface</h2>
 
 <ul>
 <li>
@@ -208,7 +214,7 @@ systems)
 </li>
 </ul>
 
-<h2>Multimedia</h2>
+<h2 id="multimedia">Multimedia</h2>
 
 <ul>
 <li>
@@ -265,7 +271,7 @@ SDK. LGPLed.
 </li>
 </ul>
 
-<h2>Database Access</h2>
+<h2 id="database">Database Access</h2>
 
 <ul>
 <li>
@@ -278,8 +284,7 @@ rather heavyweight database abstraction layer for C.
 
 <li>
 <p>
-<a href="http://directory.google.com/Top/Computers/Software/Operating_Systems/Linux/Projects/Data_Management/Databases/">
-Other Databases for Linux resources</a>
+<a href="http://directory.google.com/Top/Computers/Software/Operating_Systems/Linux/Projects/Data_Management/Databases/">Other Databases for Linux resources</a>
 </p>
 </li>
 
@@ -305,8 +310,6 @@ Borlands VCL
 Databases:
 ==========
 
-* ODBC, unixODBC, etc.
-* Gnome-DB - is it available for Windows?
 * libdbi - DBI for C - http://libdbi.sourceforge.net/
     - not native Win32 for the time being
 

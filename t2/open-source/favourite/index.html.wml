@@ -19,6 +19,17 @@ Linux is a UNIX clone for many platforms including regular PCs. It is fast,
 stable, powerful and very cool. 
 </p>
 
+<h3 id="user_mode_linux"><a href="http://user-mode-linux.sourceforge.net/">User-mode 
+Linux</a></h3>
+
+<p>
+User-mode Linux is a port of the Linux kernel to run as a process on top of a
+normal operating system. This is very useful for virtualisation, security,
+and kernel development. It is now an integral part of the Linux kernel.
+There's <a href="http://umlwin32.sourceforge.net/">a port to Windows 32-bit</a>
+available as well.
+</p>
+
 <h2 id="desktop_apps">Desktop Applications</h2>
 
 <h3 id="kde"><a href="http://www.kde.org/">KDE - The K Desktop Environment</a></h3>
@@ -164,6 +175,14 @@ of my sites, including this one.
 LWP is a very powerful Perl framework for retrieving documents from the
 World Wide Web. It's a must if you want to automate web processes in
 Perl.
+</p>
+
+<h3 id="cygwin"><a href="http://www.cygwin.com/">cygwin</a></h3>
+
+<p>
+cygwin is an open-source Linux-like environment for Windows, that enables
+one to run many UNIX programs and libraries on top of Windows. Make using
+Windows much more bearable.
 </p>
 
 <h2 id="multimedia">Multimedia</h2>
@@ -348,4 +367,21 @@ establish secure and authenticated connections to a different computer
 over the network. It allows one to login and execute remote commands, and 
 transfer files from one host to another. 
 </p>
+
+<h3 id="vnc"><a href="http://www.tightvnc.com/">TightVNC</a></h3>
+
+<p>
+VNC is a cross-platform remote desktop utility that enables viewing a desktop
+on a different machine from a different networked computer. It is very
+easy to set up. TightVNC is a popular open-source implementation of it. Also
+of interest is <a href="http://www.uvnc.com/index.html">UltraVNC</a>.
+</p>
+
+<h3 id="rdesktop"><a href="http://www.rdesktop.org/">rdesktop</a></h3>
+
+<p>
+A Windows' remote desktop protocol client for UNIXes that enables one to work
+on a remote Windows computer from them.
+</p>
+
 

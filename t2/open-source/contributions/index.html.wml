@@ -19,7 +19,7 @@ Manipulation Program</a></h2>
 I wrote the so-called gradient-fu patch, which adds Procedural Database (or
 PDB) handlers to manipulate gradients. This patch was written and re-written
 for several versions of the GIMP, and was finally integrated in the 2.1.x
-branch (which will lead to GIMP 2.2.0), with some help by Michael Natterer.
+branch (which has lead to GIMP 2.2.0), with some help by Michael Natterer.
 </p>
 
 <p>
@@ -137,4 +137,27 @@ Error.pm"</a> - the blog entry that started it all.
 Conclusion"</a> - what happened afterwards.
 </li>
 </ul>
+
+<h2 id="xml-rss"><a href="http://search.cpan.org/dist/XML-RSS/">XML::RSS - a
+CPAN Module for Processing RSS</a></h2>
+
+<p>
+After running into an XML::RSS bug, I submitted a patch for it, which was
+eventually integrated. I noticed the module had many open tickets, so I
+submitted patches to fix bugs (while adding regression tests to make sure
+they wouldn't be re-introduced). When I started contributing, the module in
+general suffered from poor code quality and a low test coverage. Together
+with the maintainer, I have gradually remedied the issues from which the
+module suffered.
+</p>
+
+<p>
+In 4 January 2007, I received 
+<a href="http://news.perl-foundation.org/2007/01/grants_awards.html">a
+grant from The Perl Foundation to continue working on XML::RSS</a>. In
+accordance with the grant, I increased the test coverage of XML::RSS to 100%
+and then heavily refactored and cleaned up the module's code. As a result, the
+code quality of the module has heavily increased and it was made safer and more
+amenable for future changes. 
+</p>
 

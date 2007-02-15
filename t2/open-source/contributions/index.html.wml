@@ -169,3 +169,13 @@ bug-fixing to it and made the code more secure, and converted the code from
 C++ to C, so it will have less dependencies. My changes were incorporated into
 version 0.6.
 </p>
+
+<h2 id="loggedfs"><a href="http://loggedfs.sourceforge.net/">LoggedFS - Filesystem Monitoring with Fuse</a></h2>
+
+<p>
+I fixed some incompatibilities that made loggedfs unusable to wrap 
+the KDE configuration directory, and ported it to the new version of FUSE. My
+changes were incorporated into version 0.4 of LoggedFS.
+</p>
+
+

@@ -5,7 +5,7 @@
 <latemp_subject "Contributions Made to external Open-Source Projects" />
 
 <p>
-<b>Last Updated:</b> 4-October-2004.
+<b>Last Updated:</b> 16-February-2007.
 </p>
 
 <h2 id="toc">Table of Contents</h2>
@@ -161,3 +161,11 @@ code quality of the module has heavily increased and it was made safer and more
 amenable for future changes. 
 </p>
 
+<h2 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h2>
+
+<p>
+QClam is a simple program to use ClamAV in dot-qmail files. I performed some
+bug-fixing to it and made the code more secure, and converted the code from
+C++ to C, so it will have less dependencies. My changes were incorporated into
+version 0.6.
+</p>

@@ -118,15 +118,23 @@ my $essays_tree_contents =
                 },
                 {
                     'text' => "Development",
-                    'host' => "t2",
                     'url' => "lecture/W2L/Development/",
                     'title' => "Software Development under Linux",
                 },
                 {
+                    'text' => "Networking",
+                    'url'  => "lecture/W2L/Network/",
+                    'title' => "Networking in Linux Explanation and Howto",
+                },
+                {
                     'text' => "Blitz",
                     'url' => "lecture/W2L/Blitz/",
-                    'host' => "t2",
                     'title' => "Getting up to speed with Linux (Hebrew)",
+                },
+                {
+                    'text' => "Why Linux",
+                    'url' => "lecture/W2L/Why_Linux/",
+                    'title' => "What Linux is to me.",
                 },
             ],
         },

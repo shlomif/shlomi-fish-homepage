@@ -1048,3 +1048,48 @@ and it always does not work in exactly the same way.
  <Earle_Martin>  avar: the real world sucks
 
     Perl, dongs and everything between on Freenode's #perl
+%
+    <polak>  mauke: so how does that "translate" into eng
+   <merlyn>  "eng"?
+    <mauke>  I spe eng goo
+  <rindolf>  mauke: I spe eng wel
+  <rindolf>  I spe goo eng
+      <sts>  just a short question. besides personal preference is there
+             any difference if you use if(! or unless(?
+  <rindolf>  sts: no.
+  <rindolf>  sts: they do the same thing.
+    <Botje>  sts: pfft. Real Men(tm) use unless(!...)
+  <rindolf>  Botje: heh.
+      <sts>  lol unless(! makes sense. thanks Botje, i'll rather use
+             this one. =D
+  <LeoNerd>  For me it's a readability thing - I express what seems more
+             likely
+  <rindolf>  Botje: File::HomeDir used to have a triple or quadruple
+             negative in one of its test files.
+    <Botje>  unless(! $str !~ /(?!foo)/)
+  <rindolf>  Botje: heh
+   <merlyn>  whoa
+   <merlyn>  unless (!) makes no sense to me at all
+    <Botje>  of course not.
+      <sts>  Botje: wow!
+    <Botje>  it's still cool to confuse people with :]
+  <LeoNerd>  Heh.. Should just use !!! in there anywa y:)
+   <merlyn>  it's 7 characters too many
+     <xand>  some people don't understand double negatives
+   <merlyn>  I don't want no complaints!
+    <Botje>  xand: you mean don't not understnad?
+  <LeoNerd>  We don't know nobody who don't want no double-negatives
+      <sts>  Botje: what does (?!foo) do?
+ <nanonyme>  lol
+     <xand>  Botje: don't not misunderstand
+    <mauke>  Botje: that always executes the block
+   <merlyn>  there's an argument that can be successfully made that "I
+             don't want no complaints" doesn't necessarily work
+             logically
+    <Botje>  xand: oh, I don't not think I didn't not misunderstand you.
+    <Botje>  mauke: I know. it just looks cool.
+    <mauke>  and you want !($str !~ /.../)
+     <xand>  don't you?#
+   <merlyn>  so it might actually mean what people think they're meaning
+
+    N-uple negative on Freenode's #perl

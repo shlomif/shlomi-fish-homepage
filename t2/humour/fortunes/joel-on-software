@@ -586,3 +586,66 @@ I'm going back to ones and zeros.
 
     Joel Spolsky, "The Perils of JavaSchools"
     http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html
+%
+Of course, these are not the only factors that determine success or failure: in
+particular, if you have a great software team working on a product that nobody
+wants, well, people aren't going to want it. And it's possible to imagine a
+team of "gunslingers" that doesn't do any of this stuff that still manages to
+produce incredible software that changes the world. But, all else being equal,
+if you get these 12 things right, you'll have a disciplined team that can
+consistently deliver.
+
+    Joel Spolsky, "The Joel Test: 12 Steps for Better Code"
+    http://www.joelonsoftware.com/articles/fog0000000043.html
+%
+The very first version of Microsoft Word for Windows was considered a "death
+march" project. It took forever. It kept slipping. The whole team was working
+ridiculous hours, the project was delayed again, and again, and again, and the
+stress was incredible. When the dang thing finally shipped, years late,
+Microsoft sent the whole team off to Cancun for a vacation, then sat down for
+some serious soul-searching.
+
+What they realized was that the project managers had been so insistent on
+keeping to the "schedule" that programmers simply rushed through the coding
+process, writing extremely bad code, because the bug fixing phase was not a
+part of the formal schedule. There was no attempt to keep the bug-count down.
+Quite the opposite. The story goes that one programmer, who had to write the
+code to calculate the height of a line of text, simply wrote "return 12;" and
+waited for the bug report to come in about how his function is not always
+correct. The schedule was merely a checklist of features waiting to be turned
+into bugs. In the post-mortem, this was referred to as "infinite defects
+methodology".
+
+To correct the problem, Microsoft universally adopted something called a "zero
+defects methodology". Many of the programmers in the company giggled, since it
+sounded like management thought they could reduce the bug count by executive
+fiat. Actually, "zero defects" meant that at any given time, the highest
+priority is to eliminate bugs before writing any new code.
+
+    Joel Spolsky, "The Joel Test: 12 Steps for Better Code"
+    http://www.joelonsoftware.com/articles/fog0000000043.html
+%
+Writing code in a compiled language is one of the last things that still can't
+be done instantly on a garden variety home computer. If your compilation
+process takes more than a few seconds, getting the latest and greatest computer
+is going to save you time. If compiling takes even 15 seconds, programmers will
+get bored while the compiler runs and switch over to reading The Onion, which
+will suck them in and kill hours of productivity.
+
+Debugging GUI code with a single monitor system is painful if not impossible.
+If you're writing GUI code, two monitors will make things much easier.
+
+Most programmers eventually have to manipulate bitmaps for icons or toolbars,
+and most programmers don't have a good bitmap editor available. Trying to use
+Microsoft Paint to manipulate bitmaps is a joke, but that's what most
+programmers have to do.
+
+At my last job, the system administrator kept sending me automated spam
+complaining that I was using more than ... get this ... 220 megabytes of hard
+drive space on the server. I pointed out that given the price of hard drives
+these days, the cost of this space was significantly less than the cost of the
+toilet paper I used. Spending even 10 minutes cleaning up my directory would be
+a fabulous waste of productivity.
+
+    Joel Spolsky, "The Joel Test: 12 Steps for Better Code"
+    http://www.joelonsoftware.com/articles/fog0000000043.html

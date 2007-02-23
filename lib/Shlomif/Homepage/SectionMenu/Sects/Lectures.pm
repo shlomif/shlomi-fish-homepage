@@ -30,10 +30,22 @@ my $essays_tree_contents =
             'host' => "t2",
         },
         {
-            'text' => "CatB",
-            'url' => "lecture/CatB/",
-            'title' => "Presentation about &quot;The Cathedral and the Bazaar&quot;",
-        },        
+            'text' => "Software Management",
+            'url' => "lecture/cat/software-management/",
+            'title' => "Presentation about Software Management",
+            'subs' => 
+            [
+                {
+                    'text' => "CatB",
+                    'url' => "lecture/CatB/",
+                    'title' => "Presentation about &quot;The Cathedral and the Bazaar&quot;",
+                },
+                {
+                    'text' => "The Joel Test",
+                    'url' => "lecture/joel-test/",
+                },
+            ],
+        },
         {
             'text' => "Programming Languages",
             'url' => "lecture/cat/programming-languages/",

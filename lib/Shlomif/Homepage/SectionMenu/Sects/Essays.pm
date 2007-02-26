@@ -85,6 +85,10 @@ my $essays_tree_contents =
                     'title' => "Reflections on Online Communities",
                 },
                 {
+                    'text' => "The \"Use qmail instead\" Syndrome",
+                    'url' => "philosophy/computers/web/use-qmail-instead/",
+                },
+                {
                     'text' => "My Memoirs",
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",

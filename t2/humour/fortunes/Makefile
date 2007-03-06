@@ -1,4 +1,4 @@
-VER = 0.8.23
+VER = 0.10.0
 
 DIST_BASE = fortunes-shlomif
 
@@ -35,9 +35,9 @@ dist: $(PACKAGE_BASE)
 
 html: $(INDEX_FILE)
 
-$(PACKAGE_BASE): $(DATS) $(VERSION_FILE)
+$(PACKAGE_BASE): $(DATS) Makefile $(VERSION_FILE)
 	mkdir $(DIST_DIR)
-	cp $(FILES) $(DATS) $(DIST_DIR)
+	cp $(FILES) $(DATS) Makefile $(DIST_DIR)
 	tar -czvf $(PACKAGE_BASE) $(DIST_DIR)
 	rm -fr $(DIST_DIR)
 

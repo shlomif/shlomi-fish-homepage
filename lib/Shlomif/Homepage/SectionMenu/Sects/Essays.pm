@@ -93,6 +93,19 @@ my $essays_tree_contents =
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",
                 },
+                {
+                    'text' => "Education",
+                    'url' => "philosophy/computers/education/",
+                    'title' => "Articles about Computer Learning and Education",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "EE in the Technion",
+                            'url' => "philosophy/computers/education/opinion-on-the-technion/",
+                            'title' => "My Opinion on Electrical Engineering Stuies in the Technion",
+                        },
+                    ],
+                },
             ],
         },
         {

@@ -89,6 +89,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/computers/web/use-qmail-instead/",
                 },
                 {
+                    'text' => "The Linus Bus Factor",
+                    'url' => "philosophy/computers/open-source/linus-torvalds-bus-factor/",
+                    'title' => "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
+                },
+                {
                     'text' => "My Memoirs",
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",

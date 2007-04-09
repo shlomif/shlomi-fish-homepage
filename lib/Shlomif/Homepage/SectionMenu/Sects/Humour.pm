@@ -55,6 +55,10 @@ my $humour_tree_contents =
                     'url' => "humour/human-hacking/",
                     'title' => "Story about Teenage Computer Enthusiasts in 2005's Los Angeles",
                 },
+                {
+                    'text' => "Star Trek: We the Living Dead",
+                    'url' => "humour/Star-Trek/We-the-Living-Dead/",
+                },
             ],
         },
         {

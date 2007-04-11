@@ -38,6 +38,15 @@ $xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
     }
 }
 
+# Remove the Author one - they confuse the ToC API.
+{
+    my @nodes = $xpc->findnodes(q{//xhtml:h3[@class = 'author']});
+    foreach my $node (@nodes)
+    {
+         my $container = $node->parentNode();
+         $container->removeChild($node);
+    }
+}
 {
     my ($body_node) = $xpc->findnodes('//xhtml:body');
 

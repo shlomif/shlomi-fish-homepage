@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install 
+all: docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install 
 	
 include include.mak
 include rules.mak
@@ -167,6 +167,11 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
+
+docbook_targets: lib/docbook/rendered/intro-prog-lang.html
+
+lib/docbook/rendered/intro-prog-lang.html: lib/docbook/essays/introductory-language/intro-lang-all-in-one.html
+	./bin/clean-up-docbook-xsl-xhtml.pl $< > $@
 
 %.show:
 	@echo "$* = $($*)"

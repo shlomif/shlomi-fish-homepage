@@ -1,19 +1,33 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
-<latemp_subject "Toughts about the Best Introductory Language" />
+<latemp_subject "Thoughts about the Best Introductory Language" />
 
-<h2 style="clear:right;">The Article Itself</h2>
-<:{
-if (system(
-    "../bin/clean-up-docbook-xsl-xhtml.pl",
-    "../lib/docbook/essays/introductory-language/intro-lang-all-in-one.html",
-    ))
-{
-    die "system failed";
-}
-}:>
+<h2 id="main_intro">Introduction</h2>
 
-<h2>Other Formats</h2>
+<p>
+What makes programming languages are suitable or unsuitable as introductory
+languages? Which languages are better learnt first and at which order? And
+why what the masses think is the most suitable introductory programming 
+language is not in fact that.
+</p>
+
+<p>
+This paper examines several approaches to which programming language is the
+best, and afterwards gives several useful relations for which languages
+should come first. Finally it gives a final verdict, defends it and then
+gives some other good food for thought.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="itself" style="clear:right;">The Article Itself</h2>
+
+#include "../lib/docbook/rendered/intro-prog-lang.html"
+
+<h2 id="other_formats">Other Formats</h2>
 
 <ul>
 <li>

@@ -1,0 +1,26 @@
+#include '../template.wml'
+
+<latemp_subject "Toughts about the Best Introductory Language" />
+
+<h2 style="clear:right;">The Article Itself</h2>
+<:{
+if (system(
+    "../bin/clean-up-docbook-xsl-xhtml.pl",
+    "../lib/docbook/essays/introductory-language/intro-lang-all-in-one.html",
+    ))
+{
+    die "system failed";
+}
+}:>
+
+<h2>Other Formats</h2>
+
+<ul>
+<li>
+<a href="./introductory-language.pdf">Acrobat Reader (PDF) Format</a>.
+</li>
+<li>
+<a href="./introductory-language.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+

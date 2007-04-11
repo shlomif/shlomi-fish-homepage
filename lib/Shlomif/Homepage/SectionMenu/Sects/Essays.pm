@@ -109,6 +109,11 @@ my $essays_tree_contents =
                             'url' => "philosophy/computers/education/opinion-on-the-technion/",
                             'title' => "My Opinion on Electrical Engineering Stuies in the Technion",
                         },
+                        {
+                            'text' => "Best Introudctory Language",
+                            'url' => "philosophy/computers/education/introductory-language/",
+                            'title' => "What is the best Introductory Programming Language?",
+                        },
                     ],
                 },
             ],

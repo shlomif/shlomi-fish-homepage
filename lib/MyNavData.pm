@@ -145,6 +145,10 @@ my $tree_contents =
                             'title' => "The Human Hacking Field Guide",
                         },
                         {
+                            'text' => "We, the Living Dead",
+                            'url' => "humour/Star-Trek/We-the-Living-Dead/",
+                        },
+                        {
                             'text' => "The Pope",
                             'url' => "humour/Pope/",
                             'title' => "The Pope Died on Sunday",

@@ -105,6 +105,11 @@ my $software_tree_contents =
                     'url' => "open-source/anti/qmail/",
                     'title' => "Against using the qmail SMTP Server",
                 },
+                {
+                    'text' => "Against Apple Inc.",
+                    'url' => "open-source/anti/apple/",
+                    'title' => "Against Apple, Mac OS, etc.",
+                },
             ],
         },
         {

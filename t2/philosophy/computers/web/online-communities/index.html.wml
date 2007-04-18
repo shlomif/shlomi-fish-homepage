@@ -1,22 +1,55 @@
 #include '../template.wml'
 
+#include "xhtml/1.x/std/toc.wml"
+
 #include <utils.wml>
 
 <latemp_subject "Reflections on Online Communities" />
 
 <note>
-<h2>Note</h2>
+<h2 id="note">Note</h2>
 
 <p>
-This is the first, and now deprecated, version of this essay. After I
-<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">referenced 
-it in the Joel on Software Forum</a>, I received a comment from someone that
-made me rethink this entire article. <a href="./">The new version</a> should
-be more adequate, and this article is kept here for historical purposes.
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">On
+this discussion</a> Michael H. Pryor notes that I'm violating the
+<a href="http://www.joelonsoftware.com/linking.html">Joel on Software
+quoting policy</a>. However, I believe that:
 </p>
+
+<ol>
+<li>
+Both Joel and the Law Professor is quoting are wrong on ethical grounds. See
+my essay <a href="$(ROOT)/philosophy/case-for-file-swapping/">"The Case for
+File Swapping"</a> for some things that are wrong with the current copyright
+law, and links to more.
+</li>
+
+<li>
+This article in part may be considered a critique of Joel's article. As such, 
+one can say that "fair use" law allows me to quote substantial parts of it.
+</li>
+
+<li>
+I'd rather build on an existing effort, than write my own incoherent article
+from scratch. Joel should take it as a compliment because "Copying is the
+sincerest form of flattery".
+</li>
+</ol>
+
+<p>
+I realise that "A man's will is is honour.". However, sometimes people wish
+for very irrational things. Many of the clauses in the EULAs of software
+products are not enforcable or unethical, and I don't feel that I need to
+respect them, even if they exist.
+</p>
+
 </note>
 
-<h2>Introduction</h2>
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="intro">Introduction</h2>
 
 <p>
 This essay gives my thoughts about Joel on Software's 
@@ -27,13 +60,13 @@ on Software subscribers by E-mail, while the public web version had less
 content. I will respond only to the public web version.
 </p>
 
-<h2>Dates</h2>
+<h2 id="dates">Dates</h2>
 
 <dl>
 <dt>Published:</dt>
 <dd>12-November-2005</dd>
 <dt>Last Modified:</dt>
-<dd>22-November-2005</dd>
+<dd>18-April-2007</dd>
 </dl>
 
 <h2 id="text">The Essay Itself</h2>
@@ -281,6 +314,63 @@ indeed the case, and after I replaced the shortened URL with the full one
 But why wasn't the reason for the rejection of the post given? That's a bug!
 So don't be cryptic - if something is wrong let the user know exactly what
 that is.
+</p>
+
+<h4 id="acceptance">Aceptance of Posts</h4>
+
+<p>
+Accepting good posts is a must for a forum. Furthermore, giving the poster
+a proper feedback for why his post was rejected, or what he can do to remedy
+it is also necessary. I almost gave up on publicising my posts in 
+<a href="http://slashdot.org/">Slashdot</a> because they routinely rejected
+many posts to my essays that I consider to be very good, while accepting
+some incredibly weird, rehearsed or low-quality news items. 
+
+<p>
+Now, in Slashdot, the post notice just say "rejected", without any reason 
+why. So I don't know how to better improve. An editor I contacted about it
+commented that they don't want to do it because people then will ask questions
+about it which will start a dialog. However, this causes the most avid 
+contributors to give up on Slashdot, and move to greener pastures.
+</p>
+
+<p>
+A different thing happened to me with 
+<a href="http://www.kuro5hin.org/">kuro5hin</a>. For once the moderators
+there reject posts that are just links to existing articles on the site. This 
+makes it necessary to format the existing essay in the subset of HTML accepted 
+by kuro5hin, to forget about getting traffic to your site - a lot of hassle.
+</p>
+
+<p>
+However, even after I did all that, my article was rejected by the moderation
+of the users because they felt that:
+</p>
+
+<ol>
+<li>
+The paragraph in which I described myself
+was too long (while being intended for the regular article, and still being a 
+small amount of the article) - a <a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style over substance fallacy</a>.
+</li>
+<li>
+That I was not eligible to post such an article because I had not been very
+active in the site before - an 
+<a href="http://en.wikipedia.org/wiki/Ad-hominem">Ad-hominem fallacy</a>.
+</li>
+</ol>
+
+<p>
+As a result most of them decided that they wanted to reject my post on the
+grounds that it was low-quality. I completely gave up on kuro5hin from then
+on.
+</p>
+
+<h4 id="the_people">The People</h4>
+
+<p>
+Which brings us to another important part: the people who are present and
+make up the community.
 </p>
 
 <h3 id="finale">Finale</h3>

@@ -50,6 +50,7 @@ ul.nospace
     margin-top : 0em;
     margin-bottom : 0em;
 }
+[% SET note_background_color = "#DFD" %]
 [% PROCESS "shlomif/note.ttml" %]
 
 /* This is for the breadcrumbs trail (= leading path) at the top. */

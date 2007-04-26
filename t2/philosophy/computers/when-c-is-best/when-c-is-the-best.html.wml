@@ -38,7 +38,7 @@ Last Updated:
 </dd>
 </dl>
 
-<h2>Introduction</h2>
+<h2 id="intro">Introduction</h2>
 
 <ul>
 <li>
@@ -79,9 +79,9 @@ extensions) or C99 or C++ with many C primitives used. The so-called Standard
 C++ is entirely different.
 </p>
 
-<h2>Reasons for Wanting to Prefer C</h2>
+<h2 id="reasons">Reasons for Wanting to Prefer C</h2>
 
-<h3>Portability</h3>
+<h3 id="portability">Portability</h3>
 
 <p>
 ANSI C is portable for every architecture there's a gcc backend or any other
@@ -91,7 +91,7 @@ a gcc back-end), but nonetheless, C is still more portable than anything
 written using it.
 </p>
 
-<h3>Open-Source Considerations</h3>
+<h3 id="open_source">Open-Source Considerations</h3>
 
 <p>
 <a href="http://gcc.gnu.org/">gcc</a> is a full-featured and robust compiler
@@ -100,7 +100,7 @@ problematic license. It's not distributed as part of most Linux distributions
 due to this.
 </p>
 
-<h3>Low-levelness</h3>
+<h3 id="low_level">Low-levelness</h3>
 
 <p>
 You cannot effectively duplicate a struct containing other structs in Java or
@@ -114,14 +114,14 @@ memory-management routines.
 Many problem domains call for ANSI C.
 </p>
 
-<h3>Self-contained-ness</h3>
+<h3 id="self_contained">Self-contained-ness</h3>
 
 <p>
 You can compile a C library and distribute it as is. With Java or Perl one
 often needs a substantial run-time.
 </p>
 
-<h3>Making use of UNIXisms</h3>
+<h3 id="unixisms">Making use of UNIXisms</h3>
 
 <p>
 There's no fork() in Java, and not many other UNIX system calls. You need to
@@ -135,7 +135,7 @@ some of the system calls and APIs are not available in the Java distribution
 by Sun.
 </p>
 
-<h3>Integrability</h3>
+<h3 id="integrability">Integrability</h3>
 
 <p>
 A C library can be used by Perl code, Python code, Tcl code, Ruby code, to a
@@ -143,7 +143,7 @@ lesser extent Java code, etc. Code written in a high-level language is mostly
 usable only in that language.
 </p>
 
-<h3>Speed and Memory Consumption</h3>
+<h3 id="speed_and_memory">Speed and Memory Consumption</h3>
 
 <p>
 And naturally there's speed and memory consumption. Often when speed or low
@@ -156,7 +156,7 @@ various APIs, virtual machines, simulations, graphics, audio, video and 3-D
 programs, etc.
 </p>
 
-<h2>Case Study: Freecell Solver</h2>
+<h2 id="case_study_fcs">Case Study: Freecell Solver</h2>
 
 <p>
 <a href="http://fc-solve.berlios.de/">Freecell Solver</a> is an ANSI C library
@@ -199,7 +199,7 @@ Luckily, I have written
 that covers the main data structures and algorithms used.
 </p>
 
-<h3>Why Freecell Solver should be written in C?</h3>
+<h3 id="why_fcs_in_c">Why Freecell Solver should be written in C?</h3>
 
 <p>
 The best way to realize why C is the ideal language for Freecell Solver is
@@ -289,7 +289,7 @@ probably be much slower and more memory hungry. All of these things add up
 to a lot. C is the best language for writing a Freecell solver in.
 </p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>
 Despite the fact that computers have become much faster, and that there are now

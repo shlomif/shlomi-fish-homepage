@@ -40,11 +40,6 @@ my $essays_tree_contents =
                     'title' => "Open Source, Free Software and Other Beasts",
                 },
                 {
-                    'text' => "Create a Homesite",
-                    'url' => "philosophy/computers/web/create-a-great-personal-homesite/",
-                    'title' => "Create a Great Personal Homesite",
-                },
-                {
                     'text' => "Perl &amp; Newcomers",
                     'url' => "philosophy/perl-newcomers/",
                     'title' => "&quot;Usability&quot; of the Perl Online World for Newcomers",
@@ -65,28 +60,14 @@ my $essays_tree_contents =
                     'title' => "Critique of where Perl 6 is Heading",
                 },
                 {
-                    'text' => "Which Wiki?",
-                    'url' => "philosophy/computers/web/which-wiki/",
-                    'title' => "Which Open Source Wiki Engine Works for you",
-                },
-                {
                     'text' => "GPL, BSD and Suckerism",
                     'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                     'title' => "The GPL, The BSD License and Being a Sucker",
                 },
                 {
-                    'text' => "Choice of Doc Formats",
-                    'url' => "philosophy/computers/web/choice-of-docs-formats/",
-                    'title' => "Coverage of the Current Choice of Document Formats",
-                },
-                {
                     'text' => "Online Communities",
                     'url' => "philosophy/computers/web/online-communities/",
                     'title' => "Reflections on Online Communities",
-                },
-                {
-                    'text' => "The \"Use qmail instead\" Syndrome",
-                    'url' => "philosophy/computers/web/use-qmail-instead/",
                 },
                 {
                     'text' => "The Linus Bus Factor",
@@ -97,6 +78,37 @@ my $essays_tree_contents =
                     'text' => "My Memoirs",
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",
+                },
+                {
+                    text => "Web",
+                    url => "philosophy/computers/web/",
+                    title => "Web-related Articles",
+                    subs =>
+                    [
+                        {
+                            'text' => "Create a Homesite",
+                            'url' => "philosophy/computers/web/create-a-great-personal-homesite/",
+                            'title' => "Create a Great Personal Homesite",
+                        },
+                        {
+                            'text' => "Which Wiki?",
+                            'url' => "philosophy/computers/web/which-wiki/",
+                            'title' => "Which Open Source Wiki Engine Works for you",
+                        },
+                        {
+                            'text' => "Choice of Doc Formats",
+                            'url' => "philosophy/computers/web/choice-of-docs-formats/",
+                            'title' => "Coverage of the Current Choice of Document Formats",
+                        },
+                        {
+                            'text' => "The \"Use qmail instead\" Syndrome",
+                            'url' => "philosophy/computers/web/use-qmail-instead/",
+                        },
+                        {
+                            'text' => "Homepage vs. Blog",
+                            'url' => "philosophy/computers/web/homepage-vs-blog/",
+                        },
+                    ],
                 },
                 {
                     'text' => "Education",

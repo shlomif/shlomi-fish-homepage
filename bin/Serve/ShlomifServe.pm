@@ -32,7 +32,7 @@ sub serve
         else
         {
             opendir D, $dir_to_serve.$path;
-            my @files = (grep { $_ ne "." } readdir(D));
+            my @files = (sort { $a cmp $b } grep { $_ ne "." } readdir(D));
             closedir(D);
             print $cgi->header();
             my $title = "Listing for " . CGI::escapeHTML($path);

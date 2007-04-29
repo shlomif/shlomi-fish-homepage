@@ -30,21 +30,27 @@
 
 </he>
 
-<en>
+<define-tag picture_tag>
+
+<preserve alt class title />
+<set-var %attributes />
+
 <a href="http://www.flickr.com/photos/81969889@N00/180695966/" 
-title="Shlomi Fish sitting next to the computer - click for the image on Flickr"
-><img src="$(ROOT)/images/shlomif-next-to-computer.jpg" alt="Picture of Shlomi Fish" 
- class="self_picture eng"
+title="<get-var title />"
+><img src="$(ROOT)/images/shlomif-next-to-computer.jpg" alt="<get-var alt />" 
+ class="self_picture <get-var class />"
  /></a>
+
+<restore alt class title />
+
+</define-tag>
+
+<en>
+<picture_tag alt="Picture of Shlomi Fish" class="eng" title="Shlomi Fish sitting next to the computer - click for the image on Flickr" />
 </en>
 
 <he>
-<a href="http://www.flickr.com/photos/81969889@N00/180695966/" 
-title="שלומי פיש יושב ליד המחשב - לחצו בשביל התמונה בפליקר"
-><img src="$(ROOT)/images/shlomif-next-to-computer.jpg" alt="תמונה של שלומי פיש" 
- class="self_picture heb"  
- /></a>
-
+<picture_tag alt="תמונה של שלומי פיש" class="heb" title="שלומי פיש יושב ליד המחשב - לחצו בשביל התמונה בפליקר" />
 </he>
 
 <en>

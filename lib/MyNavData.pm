@@ -161,8 +161,9 @@ my $tree_contents =
                     'subs' =>
                     [
                         {
-                            'text' => "Humour Archive",
-                            'title' => "Archive of Humorous Bits I came up with",
+                            'text' => "My Quotes Collection",
+                            'title' => ("Collection of Funny or Insightful " . 
+                                "Quotes or Aphorism I came up with"),
                             'url' => "humour.html",
                         },
                         {

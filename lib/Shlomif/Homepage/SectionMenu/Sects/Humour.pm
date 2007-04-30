@@ -67,9 +67,9 @@ my $humour_tree_contents =
             'subs' =>
             [
                 {
-                    'text' => "Humour Archive",
+                    'text' => "My Aphorisms Collection",
                     'url' => "humour.html",
-                    'title' => "Archive of my own Funny Quotes and Aphorisms",
+                    'title' => "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                 },
                 {
                     'text' => "Fortune Cookies Collection",

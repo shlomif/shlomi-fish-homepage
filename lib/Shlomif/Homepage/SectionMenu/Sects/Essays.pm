@@ -40,34 +40,14 @@ my $essays_tree_contents =
                     'title' => "Open Source, Free Software and Other Beasts",
                 },
                 {
-                    'text' => "Perl &amp; Newcomers",
-                    'url' => "philosophy/perl-newcomers/",
-                    'title' => "&quot;Usability&quot; of the Perl Online World for Newcomers",
-                },
-                {
                     'text' => "When C is the Best?",
                     'url' => "philosophy/computers/when-c-is-best/",
                     'title' => "An Essay that Explains when the C Language should be used instead of Other Languages",
                 },
                 {
-                    'text' => "The Joy of Perl",
-                    'url' => "philosophy/computers/perl/joy-of-perl/",
-                    'title' => "An Essay about why I Like Perl so much.",
-                },
-                {
-                    'text' => "Perl 6 Critique",
-                    'url' => "philosophy/computers/perl/perl6-critique/",
-                    'title' => "Critique of where Perl 6 is Heading",
-                },
-                {
                     'text' => "GPL, BSD and Suckerism",
                     'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                     'title' => "The GPL, The BSD License and Being a Sucker",
-                },
-                {
-                    'text' => "Online Communities",
-                    'url' => "philosophy/computers/web/online-communities/",
-                    'title' => "Reflections on Online Communities",
                 },
                 {
                     'text' => "The Linus Bus Factor",
@@ -78,6 +58,29 @@ my $essays_tree_contents =
                     'text' => "My Memoirs",
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",
+                },
+                {
+                    'text' => "Perl",
+                    'url' => "philosophy/computers/perl/",
+                    'title' => "Articles Related to the Perl Programming Language",
+                    subs =>
+                    [
+                        {
+                            'text' => "Perl &amp; Newcomers",
+                            'url' => "philosophy/perl-newcomers/",
+                            'title' => "&quot;Usability&quot; of the Perl Online World for Newcomers",
+                        },
+                        {
+                            'text' => "The Joy of Perl",
+                            'url' => "philosophy/computers/perl/joy-of-perl/",
+                            'title' => "An Essay about why I Like Perl so much.",
+                        },
+                        {
+                            'text' => "Perl 6 Critique",
+                            'url' => "philosophy/computers/perl/perl6-critique/",
+                            'title' => "Critique of where Perl 6 is Heading",
+                        },
+                    ],
                 },
                 {
                     text => "Web",
@@ -107,6 +110,11 @@ my $essays_tree_contents =
                         {
                             'text' => "Homepage vs. Blog",
                             'url' => "philosophy/computers/web/homepage-vs-blog/",
+                        },
+                        {
+                            'text' => "Online Communities",
+                            'url' => "philosophy/computers/web/online-communities/",
+                            'title' => "Reflections on Online Communities",
                         },
                     ],
                 },

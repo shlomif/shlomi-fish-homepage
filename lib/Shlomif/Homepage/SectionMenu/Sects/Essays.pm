@@ -35,29 +35,31 @@ my $essays_tree_contents =
             'subs' =>
             [
                 {
-                    'text' => "What is Open Source?",
-                    'url' => "philosophy/foss-other-beasts/",
-                    'title' => "Open Source, Free Software and Other Beasts",
-                },
-                {
                     'text' => "When C is the Best?",
                     'url' => "philosophy/computers/when-c-is-best/",
                     'title' => "An Essay that Explains when the C Language should be used instead of Other Languages",
                 },
                 {
-                    'text' => "GPL, BSD and Suckerism",
-                    'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
-                    'title' => "The GPL, The BSD License and Being a Sucker",
-                },
-                {
-                    'text' => "The Linus Bus Factor",
-                    'url' => "philosophy/computers/open-source/linus-torvalds-bus-factor/",
-                    'title' => "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
-                },
-                {
-                    'text' => "My Memoirs",
-                    'url' => "prog-evolution/",
-                    'title' => "My Memoirs as a Programmer",
+                    'text' => "Open Source",
+                    'url' => "philosophy/computers/open-source/",
+                    subs =>
+                    [
+                        {
+                            'text' => "What is Open Source?",
+                            'url' => "philosophy/foss-other-beasts/",
+                            'title' => "Open Source, Free Software and Other Beasts",
+                        },
+                        {
+                            'text' => "GPL, BSD and Suckerism",
+                            'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
+                            'title' => "The GPL, The BSD License and Being a Sucker",
+                        },
+                        {
+                            'text' => "The Linus Bus Factor",
+                            'url' => "philosophy/computers/open-source/linus-torvalds-bus-factor/",
+                            'title' => "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
+                        },
+                    ],
                 },
                 {
                     'text' => "Perl",
@@ -135,6 +137,11 @@ my $essays_tree_contents =
                             'title' => "What is the best Introductory Programming Language?",
                         },
                     ],
+                },
+                {
+                    'text' => "My Memoirs",
+                    'url' => "prog-evolution/",
+                    'title' => "My Memoirs as a Programmer",
                 },
             ],
         },

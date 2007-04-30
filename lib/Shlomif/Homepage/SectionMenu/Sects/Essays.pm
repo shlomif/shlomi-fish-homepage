@@ -52,7 +52,7 @@ my $essays_tree_contents =
                         {
                             'text' => "GPL, BSD and Suckerism",
                             'url' => "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
-                            'title' => "The GPL, The BSD License and Being a Sucker",
+                            'title' => "The GPL, The BSD Licence and Being a Sucker",
                         },
                         {
                             'text' => "The Linus Bus Factor",

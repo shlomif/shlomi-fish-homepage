@@ -62,6 +62,19 @@ my $essays_tree_contents =
                     ],
                 },
                 {
+                    'text' => "Software Management",
+                    'url' => "philosophy/computers/software-management/",
+                    'title' => "Managing Software Teams, People, Projects",
+                    subs =>
+                    [
+                        {
+                            'text' => "The End of IT Slavery",
+                            'url' => "philosophy/computers/software-management/end-of-it-slavery/",
+                            'title' => "The end of Info-Tech/High-Tech slavery - if you want great people to work for you, make sure they love your workplace",
+                        },
+                    ],
+                },
+                {
                     'text' => "Perl",
                     'url' => "philosophy/computers/perl/",
                     'title' => "Articles Related to the Perl Programming Language",

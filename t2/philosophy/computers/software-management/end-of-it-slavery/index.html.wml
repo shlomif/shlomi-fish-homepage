@@ -1,0 +1,39 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "The End of Info-Tech Slavery" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+Do you want to find good software developers? Do you have a problem finding
+ones? Have you been unhappy with your latest jobs? Read this and understand 
+why.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="itself" style="clear:right;">The Article Itself</h2>
+
+#include "../lib/docbook/rendered/end-of-it-slavery.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="./end-of-it-slavery.pdf">Acrobat Reader (PDF) Format</a>.
+</li>
+<li>
+<a href="./end-of-it-slavery.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+None yet.
+</p>
+

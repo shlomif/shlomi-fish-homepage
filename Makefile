@@ -168,9 +168,13 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
-docbook_targets: lib/docbook/rendered/intro-prog-lang.html
+DOCBOOK_DOCS = introductory-language end-of-it-slavery
 
-lib/docbook/rendered/intro-prog-lang.html: lib/docbook/essays/introductory-language/intro-lang-all-in-one.html
+DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
+
+docbook_targets: $(DOCBOOK_TARGETS)
+
+lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl $< > $@
 
 %.show:

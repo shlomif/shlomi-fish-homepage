@@ -316,7 +316,21 @@ So don't be cryptic - if something is wrong let the user know exactly what
 that is.
 </p>
 
-<h4 id="acceptance">Aceptance of Posts</h4>
+<h4 id="permanent_urls">Permanent URLs</h4>
+
+<p>
+One thing I dislike about the "Joel on Software" forum is that the URLs don't
+remain the same. Instead it seems tha the number of posts is appended to them.
+That way, one often finds that threads he has already read are marked as
+unread again. This is annoying.
+</p>
+
+<p>
+A better solution would be to display the number of comments added since the
+discussion was last visited by that specific reader.
+</p>
+
+<h4 id="acceptance">Acceptance of Posts</h4>
 
 <p>
 Accepting good posts is a must for a forum. Furthermore, giving the poster
@@ -324,7 +338,8 @@ a proper feedback for why his post was rejected, or what he can do to remedy
 it is also necessary. I almost gave up on publicising my posts in 
 <a href="http://slashdot.org/">Slashdot</a> because they routinely rejected
 many posts to my essays that I consider to be very good, while accepting
-some incredibly weird, rehearsed or low-quality news items. 
+some incredibly weird, rehearsed or low-quality news items.
+</p>
 
 <p>
 Now, in Slashdot, the post notice just say "rejected", without any reason 
@@ -350,8 +365,10 @@ of the users because they felt that:
 <ol>
 <li>
 The paragraph in which I described myself
-was too long (while being intended for the regular article, and still being a 
-small amount of the article) - a <a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style over substance fallacy</a>.
+was too long (while being intended for the regular article, and still being a
+small amount of the article) - a 
+<a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style 
+over substance fallacy</a>.
 </li>
 <li>
 That I was not eligible to post such an article because I had not been very

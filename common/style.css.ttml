@@ -223,26 +223,26 @@ table.thumbs
 [% INCLUDE "lang_switch.css.ttml" %]
 .about_site
 {
-    width: 11em;
+    width: 50%;
     float: right;
     margin-left: 1em;
     margin-right: 10pt;
-    border: #008000 solid 3pt;
+    [% SET about_color = "#008000" %]
+    [% SET vert_style = about_color _ " solid 1pt" %]
+    [% SET horiz_style = about_color _  " solid 3pt" %]
+    border-left: [% vert_style %];
+    border-right: [% vert_style %];
+    border-bottom: [% horiz_style %];
+    border-top: [% horiz_style %];
     padding: 5pt;
-    background-color: #D0FFD0;
+}
+.about_site h2
+{
+    margin-top: 0em;
 }
 .about_site p
 {
     margin-top:0;
-}
-.about_site a:visited
-{
-    color: #88C;
-}
-.about_site a:hover
-{
-    background-color:transparent;
-    color: #C44;
 }
 .revhistory th, .revhistory td
 {

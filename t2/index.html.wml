@@ -2,20 +2,78 @@
 <latemp_subject "Shlomi Fish' Homepage" />
 
 <div class="about_site">
+
+<h2 id="about_site">About this Site</h2>
+
 <p>
-This is the personal site of <a href="personal.html">Shlomi Fish</a>. I am
-an Israeli software developer, and writer of stories, articles, essays and 
+This is the personal site of <a href="personal.html"><b>Shlomi Fish</b></a>. I 
+am an Israeli software developer, and writer of stories, articles, essays and 
 presentations.
 </p>
 
 <p>
-You can explore the site using the <a href="#navbar">navigation bar</a> to the 
-left.  Alternatively, you can traverse it page by page using the arrows at the 
-top, or <a href="http://diveintoaccessibility.org/day_9_providing_additional_navigation_aids.html">site navigation bars of various browsers</a>.
+You can explore the site using the <a href="#navbar"><b>navigation bar</b></a> 
+to the 
+left.  Alternatively, you can traverse it page by page using the <b>arrows at 
+the top</b>. Alternatively see <a href="#news">this site's <b>news feed</b></a>
+for what's new here.
 </p>
+
+<p>
+Here are some of the things you can find here:
+</p>
+
+<h3 id="humour"><a href="humour/">Humour</a></h3>
+
+<p>
+Humoristic stories, aphorisms and bits. Also contains 
+<a href="humour/fortunes/">a large collection of fortune cookies</a> by
+myself and others.
+</p>
+
+<h3 id="philosophy"><a href="philosophy/">Articles and Essays</a></h3>
+
+<p>
+Articles and Essays I wrote about <a href="philosophy/philosophy/">general 
+philosophy</a>, <a href="philosophy/computers/">computers</a>, 
+<a href="philosophy/politics/">politics</a>, 
+and other topics.
+</p>
+
+<h3 id="open-source"><a href="open-source/">Open Source Software and 
+Resources</a></h3>
+
+<p>
+Links to software I wrote, some resources with links to other software. Knock
+yourself out!
+</p>
+
+<h3 id="presentations"><a href="lecture/">Presentation</a></h3>
+
+<p>
+Presentations I prepared. Especially recommended is the 
+<a href="lecture/Perl/Newbies/">"Perl for Newbies" series</a> 
+introducing <a href="http://perl-begin.org/">the Perl programming 
+language</a> to absolute beginners.
+</p>
+
+<h3 id="links"><a href="links.html">Links</a></h3>
+
+<p>
+There are many links on the site, but I also concentrated many of them in
+one place. Who doesn't like links?
+</p>
+
+<h3>Enjoy!</h3>
+
+<p>
+I hope you enjoy my web-site. If you do, please link here or recommend 
+it to your friends.
+</p>
+
 </div>
 
-<h2>News</h2>
+<h2 id="news">News</h2>
 
 <:{
 use Shlomif::Homepage::News;

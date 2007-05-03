@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>Interview with Ben Collins-Sussman</title>
+#include '../template.wml'
+
+<latemp_subject "Interview with Ben Collins-Sussman" />
+
+<page_head_extra_elements>
 <style type="text/css">
 .question { color: green }
 .question b, .answer b { color : black }
 .meta { font-style : italic ; color : blue }
 body { background-color : white }
 </style>
-</head>
-<body>
-<h1>Interview with Ben Collins-Sussman</h1>
+</page_head_extra_elements>
+
 <p class="meta">
 This is an interview of Ben Collins-Sussman conducted by Shlomi Fish. It was
 conducted over the IRC at 23 February, 2004, and then over E-mail at
@@ -581,5 +577,4 @@ The only other one I've worked on is
 Thank you for your time, Ben, and may you have good luck and success in all
 of your endeavours.
 </p>
-</body>
-</html>
+

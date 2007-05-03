@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head>
-<title>Interview with Adrian Ettlinger</title>
+#include '../template.wml'
+
+<page_extra_head_elements>
 <style type="text/css">
 .question { color: green }
 .question b, .answer b { color : black }
 .meta { font-style : italic ; color : blue }
 .box { border: 1pt black solid; padding: 0.3em; }
 </style>
-</head>
-<body>
-<h1>Interview with Adrian Ettlinger</h1>
+</page_extra_head_elements>
+
+<latemp_subject "Interview with Adrian Ettlinger" />
+
 <p class="meta">
 This is an interview of Adrian Ettlinger by Shlomi Fish that was conducted in
 August 21, 2003 over the IRC. It was later edited by both parties for content
@@ -638,5 +635,3 @@ These were all my questions.
 <b>A.E.:</b>
 OK, so long for now.
 </p>
-</body>
-</html>

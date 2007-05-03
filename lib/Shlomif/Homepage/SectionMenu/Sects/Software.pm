@@ -78,6 +78,19 @@ my $software_tree_contents =
                     'text' => "Interviews",
                     'url' => "open-source/interviews/",
                     'title' => "Interviews with Open Source Figures",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Adrian Ettlinger",
+                            'url' => "open-source/interviews/adrian-ettlinger.html",
+                            'title' => "Interview with Adrian Ettlinger",
+                        },
+                        {
+                            'text' => "Ben Collins-Sussman",
+                            'url' => "open-source/interviews/sussman.html",
+                            'title' => "Interview with Ben Collins-Sussman",
+                        },
+                    ],
                 },
                 {
                     'url' => "open-source/portability-libs/",

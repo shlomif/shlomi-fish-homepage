@@ -3,6 +3,17 @@ package Shlomif::Homepage::SectionMenu;
 use strict;
 use warnings;
 
+package Shlomif::Homepage::SectionMenu::NavLinks;
+
+use base 'HTML::Latemp::NavLinks::GenHtml::ArrowImages';
+
+sub get_image_base
+{
+    return 'sect-arrow-';
+}
+
+package Shlomif::Homepage::SectionMenu;
+
 use base 'HTML::Widgets::NavMenu::Object';
 use base 'Class::Accessor';
 
@@ -15,6 +26,7 @@ __PACKAGE__->mk_accessors(qw(
     nav_menu
     path_info
     results
+    root
     sections
     title
 ));
@@ -27,6 +39,7 @@ sub _init
     $self->path_info($args{'path_info'});
     $self->empty(0);
     $self->current_host($args{current_host});
+    $self->root($args{root});
 
     my $current_sect;
     SECTION_LOOP: foreach my $sect (@{$self->sections()})
@@ -61,6 +74,16 @@ sub _init
     }
 }
 
+sub get_nav_links
+{
+    my $self = shift;
+
+    return Shlomif::Homepage::SectionMenu::NavLinks->new(
+        nav_links => $self->results()->{nav_links},
+        nav_links_obj => $self->results()->{nav_links_obj},
+        root => $self->root(),
+    )->get_total_html();
+}
 sub get_html
 {
     my $self = shift;
@@ -72,6 +95,7 @@ sub get_html
     {
         return qq{<div class="sub_menu">\n} .
             qq{<h2>} . $self->title() . qq{</h2>\n} .
+            $self->get_nav_links() .
             qq{<a id="toggle_sect_menu" href="javascript:toggle_sect_menu()" class="toggle_sect_menu">Hide</a>\n} .
             qq{<div id="sect_menu_wrapper">\n} .
             join("\n", @{$self->results()->{html}}) .

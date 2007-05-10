@@ -281,6 +281,7 @@ you have found what I did helpful or entertaining, please consider
     $section_nav_menu = MySectNavData::get_nav_menu(
         'path_info' => $filename,
         'current_host' => "<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />",
+        'root' => "$(ROOT)",
         );
 
     print $section_nav_menu->get_html();

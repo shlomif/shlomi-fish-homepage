@@ -153,7 +153,6 @@ $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml
 	perl $<
 	./gen-helpers.pl
-	svn add -q t2/art/recommendations/music/images/*.jpg
 	$(MAKE)
 
 $(T2_SRC_DIR)/philosophy/books-recommends/index.html.wml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
@@ -162,7 +161,6 @@ $(T2_SRC_DIR)/philosophy/books-recommends/index.html.wml : $(PROD_SYND_NON_FICTI
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml
 	perl $<
 	./gen-helpers.pl
-	svn add -q t2/philosophy/books-recommends/images/*.jpg
 	$(MAKE)
 
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL

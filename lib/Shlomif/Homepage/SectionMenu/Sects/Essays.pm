@@ -38,6 +38,13 @@ my $essays_tree_contents =
                     'text' => "When C is the Best?",
                     'url' => "philosophy/computers/when-c-is-best/",
                     'title' => "An Essay that Explains when the C Language should be used instead of Other Languages",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "The Text Itself",
+                            'url' => "philosophy/computers/when-c-is-best/when-c-is-the-best.html",
+                        },
+                    ],
                 },
                 {
                     'text' => "Open Source",
@@ -89,6 +96,13 @@ my $essays_tree_contents =
                             'text' => "The Joy of Perl",
                             'url' => "philosophy/computers/perl/joy-of-perl/",
                             'title' => "An Essay about why I Like Perl so much.",
+                            'subs' =>
+                            [
+                                {
+                                    'text' => "The Text Itself",
+                                    'url' => "philosophy/computers/perl/joy-of-perl/joy-of-perl.html",
+                                },
+                            ],
                         },
                         {
                             'text' => "Perl 6 Critique",
@@ -112,6 +126,13 @@ my $essays_tree_contents =
                             'text' => "Which Wiki?",
                             'url' => "philosophy/computers/web/which-wiki/",
                             'title' => "Which Open Source Wiki Engine Works for you",
+                            'subs' =>
+                            [
+                                {
+                                    'text' => "July 2006 Update",
+                                    'url' => "philosophy/computers/web/which-wiki/update-2006-07/",
+                                },
+                            ],
                         },
                         {
                             'text' => "Choice of Doc Formats",
@@ -155,6 +176,23 @@ my $essays_tree_contents =
                     'text' => "My Memoirs",
                     'url' => "prog-evolution/",
                     'title' => "My Memoirs as a Programmer",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Pre-Elpas",
+                            'url' => "prog-evolution/pre-elpas.html",
+                            'title' => ("Memoirs as a Programmer from" 
+                                . " Elementary School, High School, etc."),
+                        },
+                        {
+                            'text' => "At Elpas",
+                            'url' => "prog-evolution/shlomif-at-elpas.html",
+                            'title' => ("Memoirs as a Programmer from"
+                                . " Elpas, which was my first workplace as a"
+                                . " programmer"
+                            ),
+                        },
+                    ],
                 },
             ],
         },
@@ -229,6 +267,11 @@ my $essays_tree_contents =
                     'text' => "Fortunes Mania",
                     'url' => "philosophy/ideas/fortunes-mania/",
                     'title' => "A community site for collecting and organising fortune cookies",
+                },
+                {
+                    'text' => "Unixdoc",
+                    'url' => "philosophy/ideas/unixdoc/",
+                    'title' => "An Integrated Offline and Online Documentation Framework",
                 },
             ],
         }

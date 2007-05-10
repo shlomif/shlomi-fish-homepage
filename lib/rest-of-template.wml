@@ -274,6 +274,13 @@ you have found what I did helpful or entertaining, please consider
     use MySectNavData;
 
     use vars (qw($section_nav_menu));
+
+    sub init_section_nav_menu
+    {
+        if (defined($section_nav_menu))
+        {
+            return;
+        }
     my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
     $filename =~ s{index\.html$}{};
     $filename = "/$filename";
@@ -284,6 +291,10 @@ you have found what I did helpful or entertaining, please consider
         'root' => "$(ROOT)",
         );
 
+return;
+    }
+
+    init_section_nav_menu();
     print $section_nav_menu->get_html();
 }:>
 </latemp_before_main_title>
@@ -311,4 +322,5 @@ td { vertical-align : top; }
     "<my_extra_head_elements />"
     />
 </latemp_extra_head_elements>
+
 

@@ -11,6 +11,7 @@ my $software_tree_contents =
     'text' => "Shlomi Fish' Software",
     'title' => "Shlomi Fish' Software",
     'show_always' => 1,
+    'url' => "open-source/",
     'subs' =>
     [
         {

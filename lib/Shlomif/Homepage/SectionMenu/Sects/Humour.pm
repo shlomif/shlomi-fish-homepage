@@ -11,6 +11,7 @@ my $humour_tree_contents =
     'text' => "Shlomi Fish' Stories and Aphorisms",
     'title' => "Shlomi Fish' Stories and Aphorisms",
     'show_always' => 1,
+    'url' => "humour/",
     'subs' =>
     [
         {

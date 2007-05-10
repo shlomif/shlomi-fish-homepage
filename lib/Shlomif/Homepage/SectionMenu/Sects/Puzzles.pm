@@ -11,6 +11,7 @@ my $puzzles_tree_contents =
     'text' => "Shlomi Fish' Essays",
     'title' => "Shlomi Fish' Essays",
     'show_always' => 1,
+    'url' => "puzzles/",
     'subs' =>
     [
         {

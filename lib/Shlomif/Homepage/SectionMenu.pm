@@ -84,6 +84,7 @@ sub get_nav_links
         root => $self->root(),
     )->get_total_html();
 }
+
 sub get_html
 {
     my $self = shift;
@@ -100,6 +101,39 @@ sub get_html
             qq{<div id="sect_menu_wrapper">\n} .
             join("\n", @{$self->results()->{html}}) .
             qq{\n</div>\n</div>\n};
+    }
+}
+
+sub total_leading_path
+{
+    my $self = shift;
+    my $args = shift;
+
+    my @main_leading_path = @{$args->{main_leading_path}};
+
+    if ($self->empty)
+    {
+        return [ @main_leading_path ];
+    }
+    else
+    {
+        my @local_path = @{$self->results()->{'leading_path'}};
+
+        use Data::Dumper;
+
+        # warn Dumper([\@main_leading_path, \@local_path, ]);
+        while ( @local_path && 
+                (
+                    $local_path[0]->direct_url() ne 
+                    $main_leading_path[-1]->direct_url()
+                )
+            )
+        {
+            shift(@local_path);
+        }
+        shift(@local_path);
+        # warn "Foo foo" . Dumper([\@main_leading_path, \@local_path, ]);
+        return [ @main_leading_path, @local_path];
     }
 }
 

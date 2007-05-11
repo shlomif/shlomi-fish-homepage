@@ -166,7 +166,10 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
-DOCBOOK_DOCS = introductory-language end-of-it-slavery
+DOCBOOK_DOCS = \
+	case-for-drug-legalisation \
+	end-of-it-slavery \
+	introductory-language
 
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
 

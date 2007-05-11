@@ -242,30 +242,38 @@ my $tree_contents =
             'subs' => 
             [
                 {
-                    'text' => "Freecell Solver",
-                    'url' => "open-source/projects/freecell-solver/",
+                    'text' => "Projects",
+                    'url' => "open-source/projects/",
+                    'expand' => { 're' => "^(open-source/projects|jmikmod|rwlock|grad-fu)/", },
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Freecell Solver",
+                            'url' => "open-source/projects/freecell-solver/",
+                        },
+                        {
+                            'text' => "MikMod for Java",
+                            'title' => "A Player for MOD Files (a type of Music Files) for the Java Environment",
+                            'url' => "jmikmod/",
+                        },
+                        {
+                            'text' => "FCFS RWLock",
+                            'title' => "A First-Come First-Served Readers/Writers Lock",
+                            'url' => "rwlock/",
+                        },
+                        {
+                            'text' => "Quad-Pres",
+                            'title' => "A Tool for Creating HTML Presentations",
+                            'url' => "open-source/projects/quad-pres/",
+                        },
+                        {
+                            'text' => "Gradient-Fu",
+                            'title' => "Gradient-Fu Patch for the GIMP",
+                            'url' => "grad-fu/",
+                            'hide' => 1,
+                        },                
+                    ],
                 },
-                {
-                    'text' => "MikMod for Java",
-                    'title' => "A Player for MOD Files (a type of Music Files) for the Java Environment",
-                    'url' => "jmikmod/",
-                },
-                {
-                    'text' => "FCFS RWLock",
-                    'title' => "A First-Come First-Served Readers/Writers Lock",
-                    'url' => "rwlock/",
-                },
-                {
-                    'text' => "Quad-Pres",
-                    'title' => "A Tool for Creating HTML Presentations",
-                    'url' => "open-source/projects/quad-pres/",
-                },
-                {
-                    'text' => "Gradient-Fu",
-                    'title' => "Gradient-Fu Patch for the GIMP",
-                    'url' => "grad-fu/",
-                    'hide' => 1,
-                },                
                 {
                     'text' => "Favourite OSS",
                     'title' => "Favourite Open-Source Software",

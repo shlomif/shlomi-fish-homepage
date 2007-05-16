@@ -190,7 +190,9 @@ $(SCREENPLAY_XMLS):: lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
 
 SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
-docbook_targets: $(DOCBOOK_TARGETS) $(SCREENPLAY_DOCBOOK_HTMLS)
+ST_WTLD_TEXT_IN_TREE = $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
+
+docbook_targets: $(DOCBOOK_TARGETS) $(SCREENPLAY_DOCBOOK_HTMLS) $(ST_WTLD_TEXT_IN_TREE)
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -204,7 +206,10 @@ include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
 lib/docbook/essays/%/all-in-one.html: lib/docbook/xml/%.xml
 	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst lib/docbook/essays/%/all-in-one.html,lib/docbook/essays/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
-	
+
+$(ST_WTLD_TEXT_IN_TREE): lib/screenplay-xml/txt/star-trek--we-the-living-dead.txt
+	cp -f $< $@
+
 %.show:
 	@echo "$* = $($*)"
 

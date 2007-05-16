@@ -5,6 +5,13 @@ use warnings;
 
 use XML::LibXML;
 use XML::LibXML::XPathContext;
+use Getopt::Long;
+
+my $out_fn;
+
+GetOptions(
+    "output|o=s" => \$out_fn,
+);
 
 # Input the filename
 my $filename = shift(@ARGV)
@@ -61,7 +68,10 @@ $xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
 
     # Fixed in Perl 6...
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;
-    binmode STDOUT, ":utf8";
-    print $s;
+
+    open my $out, ">", $out_fn;
+    binmode $out, ":utf8";
+    print {$out} $s;
+    close($out);
 }
 

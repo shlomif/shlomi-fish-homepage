@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install 
+all: docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
 	
 include include.mak
 include rules.mak
@@ -166,18 +166,45 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
+SCREENPLAY_DOCS = \
+	star-trek--we-the-living-dead
+
 DOCBOOK_DOCS = \
 	case-for-drug-legalisation \
 	end-of-it-slavery \
-	introductory-language
+	introductory-language \
+	$(SCREENPLAY_DOCS)
 
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
+SCREENPLAY_DOCBOOKS = $(patsubst %,lib/docbook/xml/%.xml,$(SCREENPLAY_DOCS))
+SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
+SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
 
-docbook_targets: $(DOCBOOK_TARGETS)
+lib/docbook/xml/%.xml: lib/screenplay-xml/xml/%.xml
+	perl -MXML::Grammar::Screenplay::App::ToDocBook -e 'run()' -- \
+	-o $@ $<
+
+$(SCREENPLAY_XMLS):: lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
+	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
+	-o $@ $<
+
+SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
+
+docbook_targets: $(DOCBOOK_TARGETS) $(SCREENPLAY_DOCBOOK_HTMLS)
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
-	./bin/clean-up-docbook-xsl-xhtml.pl $< > $@
+	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
+DOCBOOK_MAK_PATH = /home/shlomi/apps/docbook-builder
+
+DOCBOOK_MAK_MAKEFILES_PATH = $(DOCBOOK_MAK_PATH)/share/make/
+
+include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
+
+lib/docbook/essays/%/all-in-one.html: lib/docbook/xml/%.xml
+	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst lib/docbook/essays/%/all-in-one.html,lib/docbook/essays/%,$@) xhtml $<
+	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
+	
 %.show:
 	@echo "$* = $($*)"
 

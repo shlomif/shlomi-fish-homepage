@@ -233,7 +233,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/politics/define-zionism/",
                     'title' => ("What is &quot;Zionism&quot; really? What " . 
                         "does anti-Israel, anti-Zionist, etc. mean?"),
-                }
+                },
+                {
+                    'text' => "Dispelling Some Myths about Israel",
+                    'url' => "philosophy/politics/dispelling-myths-about-israel/",
+                },
             ],
         },
         {

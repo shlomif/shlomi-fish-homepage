@@ -80,6 +80,14 @@ my $humour_tree_contents =
                 {
                     'text' => "Star Trek: We the Living Dead",
                     'url' => "humour/Star-Trek/We-the-Living-Dead/",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Ongoing Text",
+                            'url' => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",
+                            'title' => "Ongoing Text of the Screenplay",
+                        },
+                    ],
                 },
             ],
         },

@@ -35,7 +35,6 @@ sub run
         binmode O, ":utf8";
         print O $text;
         close(O);
-        system("svn", "add", "-q", $filename);
     }
 }
 

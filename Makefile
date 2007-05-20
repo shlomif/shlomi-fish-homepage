@@ -179,10 +179,15 @@ DOCBOOK_DOCS = \
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
 SCREENPLAY_DOCBOOKS = $(patsubst %,lib/docbook/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
+SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
 SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
 
 lib/docbook/xml/%.xml: lib/screenplay-xml/xml/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToDocBook -e 'run()' -- \
+	-o $@ $<
+
+lib/screenplay-xml/html/%.html: lib/screenplay-xml/xml/%.xml
+	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
 	-o $@ $<
 
 $(SCREENPLAY_XMLS):: lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt

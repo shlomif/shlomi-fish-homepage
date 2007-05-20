@@ -180,7 +180,11 @@ DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
 SCREENPLAY_DOCBOOKS = $(patsubst %,lib/docbook/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
-SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
+
+# SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
+SCREENPLAY_DOCBOOK_HTMLS = 
+
+SCREENPLAY_RENDERED_HTMLS = $(patsubst %,lib/screenplay-xml/rendered-html/%.html,$(SCREENPLAY_DOCS))
 
 lib/docbook/xml/%.xml: lib/screenplay-xml/xml/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToDocBook -e 'run()' -- \
@@ -190,6 +194,9 @@ lib/screenplay-xml/html/%.html: lib/screenplay-xml/xml/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
 	-o $@ $<
 
+lib/screenplay-xml/rendered-html/%.html: lib/screenplay-xml/html/%.html
+	./bin/extract-screenplay-xml-html.pl -o $@ $<
+
 $(SCREENPLAY_XMLS):: lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
 	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
 	-o $@ $<
@@ -198,7 +205,7 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 ST_WTLD_TEXT_IN_TREE = $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(SCREENPLAY_DOCBOOK_HTMLS) $(ST_WTLD_TEXT_IN_TREE)
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS)
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<

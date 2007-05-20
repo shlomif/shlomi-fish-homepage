@@ -217,6 +217,14 @@ my $essays_tree_contents =
                     'text' => "Case for File Swapping",
                     'url' => "philosophy/case-for-file-swapping/",
                     'title' => "Why File Swapping is Ethical and Moral and should be Legal",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Revision 3 Text",
+                            'url' => "philosophy/case-for-file-swapping/revision-3/",
+                            'title' => "Text of the Third Revision",
+                        },
+                    ],
                 },
                 {
                     'text' => "Why Scientology is Bad",

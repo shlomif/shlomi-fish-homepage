@@ -171,6 +171,7 @@ SCREENPLAY_DOCS = \
 
 DOCBOOK_DOCS = \
 	case-for-drug-legalisation \
+	case-for-file-swapping-rev3 \
 	end-of-it-slavery \
 	introductory-language \
 	$(SCREENPLAY_DOCS)

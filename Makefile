@@ -175,7 +175,9 @@ DOCBOOK_DOCS = \
 	case-for-file-swapping-rev3 \
 	end-of-it-slavery \
 	introductory-language \
-	$(SCREENPLAY_DOCS)
+
+#   Removing, because we no longer need to build the DocBook.
+#   $(SCREENPLAY_DOCS)
 
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
 SCREENPLAY_DOCBOOKS = $(patsubst %,lib/docbook/xml/%.xml,$(SCREENPLAY_DOCS))
@@ -198,7 +200,7 @@ lib/screenplay-xml/html/%.html: lib/screenplay-xml/xml/%.xml
 lib/screenplay-xml/rendered-html/%.html: lib/screenplay-xml/html/%.html
 	./bin/extract-screenplay-xml-html.pl -o $@ $<
 
-$(SCREENPLAY_XMLS):: lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
+lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
 	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
 	-o $@ $<
 

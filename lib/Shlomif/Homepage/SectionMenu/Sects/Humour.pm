@@ -71,6 +71,14 @@ my $humour_tree_contents =
                     'text' => "Humanity",
                     'url' => "humour/humanity/",
                     'title' => "A Parody about Humanity and Modern Life in Particular",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Ongoing Text",
+                            'url' => "humour/humanity/ongoing-text.html",
+                            'title' => "Ongoing Text of the Screenplay",
+                        },
+                    ],
                 },
                 {
                     'text' => "Human Hacking Field Guide",

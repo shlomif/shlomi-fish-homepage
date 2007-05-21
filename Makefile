@@ -168,7 +168,8 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 
 SCREENPLAY_DOCS = \
 	star-trek--we-the-living-dead \
-	TOW_Fountainhead_1
+	TOW_Fountainhead_1  \
+	TOW_Fountainhead_2
 
 DOCBOOK_DOCS = \
 	case-for-drug-legalisation \

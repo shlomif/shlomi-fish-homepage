@@ -167,6 +167,7 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
 SCREENPLAY_DOCS = \
+	Humanity-Movie \
 	star-trek--we-the-living-dead \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2

@@ -167,7 +167,8 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
 SCREENPLAY_DOCS = \
-	star-trek--we-the-living-dead
+	star-trek--we-the-living-dead \
+	TOW_Fountainhead_1
 
 DOCBOOK_DOCS = \
 	case-for-drug-legalisation \

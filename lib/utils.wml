@@ -42,3 +42,13 @@
 </div>
 </define-tag>
 
+<define-tag link_to_screenplay>
+<preserve base desc />
+<set-var %attributes />
+<a href="<get-var base />.txt"><get-var desc />Source in text format</a> 
+(requires
+<a href="http://search.cpan.org/dist/XML-Grammar-Screenplay/">XML-Grammar-Screenplay</A> 
+to render)
+<restore base desc />
+</define-tag>
+

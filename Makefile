@@ -208,9 +208,9 @@ lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
 
 SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
-ST_WTLD_TEXT_IN_TREE = $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
+SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS)
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST)
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -225,7 +225,16 @@ lib/docbook/essays/%/all-in-one.html: lib/docbook/xml/%.xml
 	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst lib/docbook/essays/%/all-in-one.html,lib/docbook/essays/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
-$(ST_WTLD_TEXT_IN_TREE): lib/screenplay-xml/txt/star-trek--we-the-living-dead.txt
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: lib/screenplay-xml/txt/TOW_Fountainhead_1.txt
+	cp -f $< $@
+
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: lib/screenplay-xml/txt/TOW_Fountainhead_2.txt
+	cp -f $< $@
+
+$(T2_DEST)/humour/humanity/Humanity-Movie.txt: lib/screenplay-xml/txt/Humanity-Movie.txt
+	cp -f $< $@
+
+$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: lib/screenplay-xml/txt/star-trek--we-the-living-dead.txt
 	cp -f $< $@
 
 %.show:

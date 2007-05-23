@@ -135,12 +135,12 @@ my $tree_contents =
                             'title' => "The Enemy and How I Helped to Fight It",
                         },
                         {
-                            'text' => "TOWTF",
+                            'text' => "TOW The Fountainhead",
                             'url' => "humour/TOWTF/",
                             'title' => "The One with the Fountainhead",
                         },
                         {
-                            'text' => "HHFG",
+                            'text' => "Human Hacking Field Guide",
                             'url' => "humour/human-hacking/",
                             'title' => "The Human Hacking Field Guide",
                         },

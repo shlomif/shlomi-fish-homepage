@@ -1258,3 +1258,83 @@ means.
    <Shaine>  i like star shaped wheels :/
 
     Freenode's #perl on the many types of Wheels.
+%
+  <ferret>  LeoNerd: That was one of the first blobs of Java I wrote,
+            it's allowed to be even more verbose and convoluted than
+            Java normally is. ;P
+ <rindolf>  ferret: link?
+  <ferret>  /las Cat.java
+ <rindolf>  ferret: an implementation of the UNIX "cat" program in
+            Java??
+  <ferret>  Actually, specifically the GNU cat program, and only a
+            subset thereof.
+ <rindolf>  ferret: oh.
+ <rindolf>  ferret: how many lines did it take?
+         *  f00li5h heads off to #codegolf and tries to convince them to
+            allow java submissions
+  <ferret>  rindolf: It's mostly argument parser.
+ <rindolf>  ferret: I once implemented a parser for a subset of the
+            Bourne Shell args, in really hideous ANSI C.
+ <rindolf>  f00li5h: good luck.
+ <rindolf>  f00li5h: Java Golf...
+ <f00li5h>  yeah, for sure!
+ <rindolf>  Java Golf would be longer than a non-Golfed Perl program.
+ <f00li5h>  rindolf: this is true
+ <rindolf>  f00li5h: COBOL Golf!
+
+    The Pyramid of Code Golf on Freenode's #perl
+%
+        <pasteling>  "struggling intern" at 129.162.1.31 pasted "Here it
+                     is.." (220 lines, 5.7K) at
+                     http://sial.org/pbot/25279
+ <strugglingintern>  woohoo
+ <strugglingintern>  there it goes...
+          <rindolf>  strugglingintern: oh my god!
+          <rindolf>  strugglingintern: this code looks really bad.
+ <strugglingintern>  heh...
+          <rindolf>  strugglingintern: if ($records eq 0 ) - don't you
+                     want ($records == 0)?
+          <rindolf>  strugglingintern: do you have unit tests?
+          <rindolf>  strugglingintern: and you should factor it better.
+          <rindolf>  strugglingintern: and possibly use Template Toolkit
+                     or something.
+          <rindolf>  strugglingintern: and you may have some
+                     HTML-injection (or XSS) problems.
+            <Ani-_>  rindolf: and probably SQL injection problems.
+          <rindolf>  Ani-_: indeed!
+ <strugglingintern>  :-/
+            <Ani-_>  strugglingintern: really, ask them to review that
+                     code when they get back.
+ <strugglingintern>  alright
+ <strugglingintern>  I appreciate it anyway
+          <rindolf>  strugglingintern: how long have you been
+                     programming perl?
+ <strugglingintern>  hah, about 3 months
+ <strugglingintern>  This isn't all my code ;)
+ <strugglingintern>  I'll look into it
+ <strugglingintern>  Thanks guys (and gals).
+          <rindolf>  strugglingintern: you're welcome.
+ <strugglingintern>  not my choice ;)
+ <strugglingintern>  it's my 3rd week here :)
+          <rindolf>  Amazing how much more experienced programmers can
+                     tell a code is bad from a quick glance.
+          <rindolf>  It's a bit scary.
+            <Ani-_>  nothing amazing about it. It's called skill. :)
+           <The_SB>  yeh even I can tell it by a look
+            <ology>  It's not scary or amazing at all.
+            <ology>  It is called experience!
+            <Ani-_>  rindolf: what do you find scary?
+            <Ani-_>  rindolf: that experienced programmers can tell it?
+                     Or the code itself?
+            <Ani-_>  I would disagree on the first one but agree on the
+                     later! :)
+          <rindolf>  Ani-_: no, that I'm so experienced.
+          <rindolf>  Ani-_: I hope I don't sound out as a snob.
+            <ology>  narcissism is fun
+          <rindolf>  I should get a life.
+          <rindolf>  Get a girlfriend, go to movies.
+          <rindolf>  Instead all I do is write Perl.
+          <rindolf>  And chat about writing Perl.
+           <Ikarus>  a life, tried that, didn't mix with me
+
+    -- Scary Perl Expertise on Freenode's #perl

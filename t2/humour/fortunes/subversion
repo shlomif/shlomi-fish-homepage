@@ -457,3 +457,23 @@ Any ideas how we can still use SVN to store everything?
     Konrad Rosenbaum on the Subversion Users' mailing list
     http://svn.haxx.se/users/archive-2006-04/0008.shtml
     1 April 2006
+%
+Linus isn't saying that CVS and Subversion have fixable bugs or missing
+features. It's not about the code.
+
+He is saying that they solve the wrong problem. The Subversion team wants to
+solve Problem A, and Linus wants to solve Problem B. No amount of code will
+turn the solution to Problem A into a solution for Problem B. Bothering the
+Subversion team with code addressing Problem B will only irritate them, since
+they're working on Problem A.
+
+The right way to handle differing goals is to start a different project. That's
+what he did.
+
+Don't be confused by the labels. Source Code Management means different things
+to different people, and there isn't always much overlap in how each person
+defines it. Ships and airplanes are both 'vehicles', but that doesn't mean that
+a few changes will turn one to the other.
+
+    zzatz on:
+    http://developers.slashdot.org/comments.pl?sid=237163&cid=19367821

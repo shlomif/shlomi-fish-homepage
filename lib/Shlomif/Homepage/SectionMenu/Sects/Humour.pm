@@ -137,9 +137,15 @@ my $humour_tree_contents =
                     'url' => "wonderous.html",
                 },
                 {
+                    'text' => "Spam for Everyone",
+                    'url' => "humour/bits/Spam-for-Everyone/",
+                    'title' => "The Campaign for Accessible Spam",
+                },
+                {
                     'text' => "I Like Job Control",
                     'url' => "humour/bits/I-Like-Job-Control/",
                 },
+
             ],
         },
     ],

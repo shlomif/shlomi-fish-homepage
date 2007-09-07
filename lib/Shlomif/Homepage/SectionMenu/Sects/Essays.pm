@@ -287,7 +287,11 @@ my $essays_tree_contents =
                     'title' => "An Integrated Offline and Online Documentation Framework",
                 },
             ],
-        }
+        },
+        {
+            'text' => "By Others",
+            'url' => "philosophy/by-others/",
+        },
     ],
 };
 

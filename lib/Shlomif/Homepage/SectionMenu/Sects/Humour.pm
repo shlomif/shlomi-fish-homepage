@@ -148,6 +148,10 @@ my $humour_tree_contents =
 
             ],
         },
+        {
+            'text' => "By Others",
+            'url' => "humour/by-others/",
+        },
     ],
 };
 

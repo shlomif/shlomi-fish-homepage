@@ -161,3 +161,26 @@ See <a href="$(ROOT)/prog-evolution/pre-elpas.html">this page</a> for the
 story of how I originally recreated the fluttering flag effect.
 </p>
 
+<h2 id="slidy_shlomif"><a href="<bit_link "slidy-shlomif-0.2.0.js" />">JavaScript 
+Presentation Helper</a></h2>
+
+<p>
+This is a JavaScript script based on 
+<a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily 
+reduced and evolved. It supplies use of the left and right arrow keys for
+moving between slides (<tt>&lt;li&gt;</tt> elements
+somewhere inside an element with a class named "<tt>point</tt>"). It also
+provides the "n" and "p" keys to follow the links with the appropriate
+accesskey.
+</p>
+
+<p>
+If the global variable <tt>rtl_keys</tt> is set to true, then the left and
+right keys are reversed to be suitable for a language that is written
+from right to left.
+</p>
+
+<p>
+This file is distributed under the same terms as the original file, and I
+disclaim any explicit or implicit ownership.
+</p>

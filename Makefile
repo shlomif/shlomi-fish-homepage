@@ -45,7 +45,7 @@ upload_backup: upload_deps
 
 upload_remote: upload upload_remote_only
 
-upload_remote_only: 
+upload_remote_only: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * $${__HOMEPAGE_REMOTE_PATH}/ )
 
 clean:

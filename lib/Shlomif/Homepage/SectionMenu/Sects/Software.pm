@@ -124,6 +124,16 @@ my $software_tree_contents =
                     'url' => "open-source/anti/apple/",
                     'title' => "Against Apple, Mac OS, etc.",
                 },
+                {
+                    'text' => "Against Windows Vista",
+                    'url' => "open-source/anti/windows-vista/",
+                    'title' => "A collection of links against Windows Vista",
+                },
+                {
+                    'text' => "Against MySQL",
+                    'url' => "open-source/anti/mysql/",
+                    'title' => "A collection of links detailing MySQL Problems",
+                },
             ],
         },
         {

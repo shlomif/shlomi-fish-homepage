@@ -120,6 +120,11 @@ my $software_tree_contents =
                     'title' => "Against using the qmail SMTP Server",
                 },
                 {
+                    'text' => "Stop Using the C-Shell",
+                    'url' => "open-source/anti/csh/",
+                    'title' => "Stop Using (and Teaching) the C-Shell",
+                },
+                {
                     'text' => "Against Apple Inc.",
                     'url' => "open-source/anti/apple/",
                     'title' => "Against Apple, Mac OS, etc.",

@@ -55,7 +55,9 @@ Bash is the default scripting and login shell on Linux.
 </li>
 
 <li>
-ksh is the default login and scripting shell on non-GNU System V systems. 
+<a href="http://www.kornshell.com/">ksh - the Korn Shell</a>, a Bourne-shell 
+derivative, is the default login and scripting shell on 
+non-GNU System V systems. 
 </li>
 
 <li>
@@ -69,8 +71,8 @@ shell.
 </li>
 
 <li>
-On cygwin the default shell is bash. zsh is available for either cygwin
-or for non-cygwinned win32.
+On cygwin the default shell is bash. <a href="http://www.zsh.org/">zsh</a> is 
+available for either cygwin or for non-cygwinned win32.
 </li>
 
 </ol>
@@ -91,15 +93,15 @@ This is impossible to do in csh which forces loops to be on separate lines.
 
 <li>
 <p>
-Sub-shells and capture-subshells (<tt>$(...)</tt>) actually work in Bourne 
-Shell. And Bash actually <b>has</b> capture-subshells which are much safer than 
-back-ticks (<tt>`...`</tt>).
+Sub-shells and capture-subshells (<tt>$(...)</tt>) actually work in Bourne
+Shell. And Bash actually <b>has</b> capture-subshells which are much safer
+than back-ticks (<tt>`...`</tt>).
 </p>
 </li>
 
 <li>
 <p>
-The students tend to conclude that C-shell is "The UNIX Shell". Seeing how 
+The students tend to conclude that C-shell is "The UNIX Shell". Seeing how
 lame C-shell is they tend to believe that the UNIX shell sucks. Which is not
 the case for Bash and friends which are beautiful and a joy to work with.
 </p>
@@ -107,10 +109,10 @@ the case for Bash and friends which are beautiful and a joy to work with.
 
 <li>
 <p>
-The wrong legacy reasons: many institutions once thought they had to make a 
-choice between sh (which had a sane syntax and programmability but bad for 
-interactive use) and tcsh which had bad programmability but with good
-interactive capabilities.
+The wrong legacy reasons: many institutions once thought they had to make a
+choice between the Bourne shell, sh, which had a sane syntax and
+programmability but bad for interactive use, and tcsh which had bad
+programmability but with good interactive capabilities.
 </p>
 
 <p>
@@ -166,7 +168,8 @@ Linux-IL thread with many comments</a>
 </li>
 
 <li>
-<a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A thread in the Haifa Linux Club mailing list with some comments</a>
+<a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A 
+thread in the Haifa Linux Club mailing list with some comments</a>
 </li>
 
 </ul>

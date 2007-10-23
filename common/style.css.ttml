@@ -318,3 +318,31 @@ table.visible
     margin:0;
     padding:0;
 }
+
+[% SET sponsored_ad_border = "#407" %]
+
+.spons.ad
+{
+     border: solid 1.5pt [% sponsored_ad_border %];
+     margin-bottom: 1em;
+     padding: 0;
+     background-color: white;
+}
+
+.spons.ad h2
+{
+    font-size: medium;
+    padding-top: 1pt;
+    padding-bottom: 1pt;
+    display: block;
+    background-color: [% sponsored_ad_border %];
+    color: white;
+    margin-top: 0;
+}
+
+.spons.ad .in
+{
+    margin: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}

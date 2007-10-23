@@ -1472,3 +1472,46 @@ God was relieved and returned to his dwarfish deeds, as dwarfs do.
  <GumbyBRAIN>  do it to list.
 
     - Got the Slashdot? on Freenode's #perl.
+%
+ <WebDragon>  y'all should spell it in uppercase it being an acronym and
+              all
+  <reaction>  Yes, but we're *lazy*!
+           *  WebDragon *so* noticed ;)
+       <dkr>  WebDragon: people that use CamelCase have no right to
+              criticize about capitalization. :)
+ <WebDragon>  dkr: I hate underscores
+           *  dkr contemplates a source code filter that does lets you
+              use spaces in var names by switch them to underscores at
+              compile time
+ <preaction>  black magic
+       <mst>  dkr: source filters are evil.
+       <mst>  dkr: in a bad way.
+       <mst>  dkr: hacking the compiler is much more fun, and evil in a
+              useful way :)
+       <mst>  WebDragon: recommended perl style is $var_name
+       <mst>  WebDragon: it's also more readable than $varName or
+              $VarName
+       <mst>  WebDragon: I'd recommend trying it for at least a month
+       <mst>  WebDragon: also note that it'll make life easier because
+              you'll be consistent with the rest of perl code
+ <WebDragon>  mst: I was thinking more along the lines of filenames and
+              irc nicknames than perl variables
+       <mst>  WebDragon: ah. fair enough :)
+           *  WebDragon doesn't use camelcase for perlvars
+       <mst>  WebDragon: then I shall cease complaining :)
+      <avar>  ${"Insert a descriptive essay about the variable here"}
+ <WebDragon>  rofl
+   <rindolf>  avar: that won't work with 'use strict 'refs''
+ <WebDragon>  avar: I've seen things like that in RL and had recurring
+              nightmares about them when I saw similar and sometimes
+              worse things on thedailywtf.com
+       <mst>  rindolf: ${main::}{"Insert a descriptive essay about the
+              variable here"} would :)
+       <mst>  rindolf: or you could just use %_ :)
+       <dkr>  my boss still occasionally uses vars like $x. still trying
+              to beat that behavior out of him
+           *  WebDragon only uses x|y|z for cartesian coordinate math
+ <WebDragon>  which, since I hardly ever do any of that, means the
+              obvious
+
+    What's in a variable-name? on Freenode's #perl.

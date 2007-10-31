@@ -731,3 +731,93 @@ Bravo. Here's a quarter, buy yourself a treat.
 
     Joel Spolsky, "Strategy Letter II: Chicken and Egg Problems"
     http://www.joelonsoftware.com/articles/fog0000000054.html
+%
+Software developers don’t really like to make schedules. Usually, they try to
+get away without one. "It’ll be done when it’s done!" they say, expecting that
+such a brave, funny zinger will reduce their boss to a fit of giggles, and in
+the ensuing joviality, the schedule will be forgotten. 
+
+Most of the schedules you do see are halfhearted attempts. They’re stored on a
+file share somewhere and completely forgotten. When these teams ship, two years
+late, that weird guy with the file cabinet in his office brings the old
+printout to the post mortem, and everyone has a good laugh. "Hey look! We
+allowed two weeks for rewriting from scratch in Ruby!" 
+
+Hilarious! If you’re still in business.
+
+    Joel Spolsky, "Evidence Based Scheduling"
+    http://www.joelonsoftware.com/items/2007/10/26.html
+%
+Most estimators get the scale wrong but the relative estimates right.
+Everything takes longer than expected, because the estimate didn’t account for
+bug fixing, committee meetings, coffee breaks, and that crazy boss who
+interrupts all the time. This common estimator has very consistent velocities,
+but they’re below 1.0. For example, {0.6, 0.5, 0.6, 0.6, 0.5, 0.6, 0.7, 0.6}
+
+    Joel Spolsky, "Evidence Based Scheduling"
+    http://www.joelonsoftware.com/items/2007/10/26.html
+%
+Let me walk you through a quick example. To make this example as simple as
+possible, I'm going to imagine a very predictable programmer, John, whose whole
+job is writing those one-line getter and setter functions that inferior
+programming languages require. All day long this is all he does: 
+
+    private int width;
+    public int getWidth () { return width; }
+    public void setWidth (int _width} { width = _width; } 
+
+I know, I know... it's a deliberately dumb example, but you know you've met
+someone like this. 
+
+Anyway. Each getter or setter takes him 2 hours. So his task estimates look
+like this: 
+
+{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, ... } 
+
+Now, this poor guy has a boss who interrupts him every once in a while with a
+two-hour conversation about marlin fishing. Now, of course, John could have a
+task on his schedule called "Painful conversations about marlin," and put that
+on his timesheet, but this might not be politically prudent. Instead, John just
+keeps the clock running. So his actual times look like this: 
+
+{2, 2, 2, 2, 4, 2, 2, 2, 2, 4, 2, ... } 
+
+And his velocities are: 
+
+{1, 1, 1, 1, 0.5, 1, 1, 1, 1, 0.5, 1, ... }
+
+    Joel Spolsky, "Evidence Based Scheduling"
+    http://www.joelonsoftware.com/items/2007/10/26.html
+%
+Assuming you had everything planned down to the last detail when you started
+work, EBS works great. To be honest, though, you may do some features that you
+hadn’t planned. You get new ideas, your salespeople sell features you don’t
+have, and somebody on the board of directors comes up with a cool new idea to
+make your golf cart GPS application monitor EKGs while golfers are buzzing
+around the golf course. All this leads to delays that could not have been
+predicted when you did the original schedule.
+
+    Joel Spolsky, "Evidence Based Scheduling"
+    http://www.joelonsoftware.com/items/2007/10/26.html
+%
+Way back when I was working on Excel 5, our initial feature list was huge and
+would have gone way over schedule. "Oh my!" we thought. "Those are all super
+important features! How can we live without a macro editing wizard?"
+
+As it turns out, we had no choice, and we cut what we thought was "to the bone"
+to make the schedule. Everybody felt unhappy about the cuts. To make people
+feel better, we told ourselves that we weren’t cutting the features, we were
+simply deferring them to Excel 6. 
+
+As Excel 5 was nearing completion, I started working on the Excel 6 spec with a
+colleague, Eric Michelman. We sat down to go through the list of "Excel 6"
+features that had been punted from the Excel 5 schedule. Guess what? It was the
+shoddiest list of features you could imagine. Not one of those features was
+worth doing. I don’t think a single one of them ever was. The process of
+culling features to fit a schedule was the best thing we could have done. If we
+hadn’t done this, Excel 5 would have taken twice as long and included 50%
+useless crap features that would have had to be supported, for backwards
+compatibility, until the end of time.
+
+    Joel Spolsky, "Evidence Based Scheduling"
+    http://www.joelonsoftware.com/items/2007/10/26.html

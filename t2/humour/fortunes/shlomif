@@ -1525,3 +1525,105 @@ God was relieved and returned to his dwarfish deeds, as dwarfs do.
              have less entropy and will compress better.
 
     Freenode's #perlcafe
+%
+  <convivial>  high-rez, but I don't know enough to help you because I
+               am a newbie to perl programming and although I am in deep
+               luv with perl and planning on marrying perl, I still have
+               a lot to learn.
+    <rindolf>  convivial: you can only marry Perl if polygamy is legal
+               where you live.
+    <rindolf>  convivial: because Perl and I are already married. :-D
+  <convivial>  why is that? i'm single :)
+    <rindolf>  convivial: but Perl isn't.
+  <convivial>  oh crap !
+  <convivial>  all the good languages are already married :(
+    <rindolf>  convivial: COBOL is still single.
+    <rindolf>  convivial: but I heard she's a total bitch.
+  <convivial>  ewwwwwwwwwwww, so is JCL and no one is knocking down
+               either of their doors
+  <convivial>  rindolf, janet reno is single!
+    <rindolf>  convivial: what kind of programming language is "Janet
+               Reno"?
+  <convivial>  :)
+  <convivial>  she is a person
+    <rindolf>  convivial: I'm not interested in people, I'm only
+               interested in programming languages.
+ <shaldannon>  rindolf: you should try Ada
+    <rindolf>  shaldannon: Ada 95?
+ <shaldannon>  yeah
+ <shaldannon>  the syntax of Pascal, the power of Basic and the
+               friendliness of Java
+
+    Commiting yourself to a programming language on Freenode's #perl.
+%
+            *  shaldannon beats iank over the head with an encyclopedia
+    <rindolf>  shaldannon: all volumes of an encyclopedia?
+        <dwu>  rindolf: ha
+ <shaldannon>  rindolf: every last one of 'em
+    <rindolf>  shaldannon: or perhaps a printout of the Wikipedia?
+       <iank>  rindolf: the whole bookcase
+    <rindolf>  shaldannon: which Encyclopedia?
+       <iank>  rindolf: naw, just get the DVD :)
+ <shaldannon>  rindolf: I couldn't lift that
+ <shaldannon>  rindolf: Britanica
+       <iank>  You could lift the DVD!
+        <dwu>  shaldannon: Start. Working. Out.
+ <shaldannon>  dwu: oh?
+        <dwu>  shaldannon: Dude, being able to lift the Britannica is
+               hot.
+            *  iank -> the internet
+ <shaldannon>  :-}
+        <dwu>  Seriously.
+        <dwu>  "I can hold the accepted knowledge of a percentage of the
+               human race in my arms!" "Oh, god, that is so sexy."
+ <shaldannon>  hahahaha
+        <dwu>  Seriously. Smart is hot. Smart and funny... well.
+            *  shaldannon is hillarious ;)
+        <dwu>  Uhm. kay.
+    <rindolf>  If you start reading the wikipedia lexicographically,
+               will you ever finish at the rate articles are added
+               there?
+  <tarrybone>  rindolf: yes (citation needed)
+        <dwu>  ha
+ <shaldannon>  lol @ tarrybone
+        <dwu>  tarrybone++
+    <rindolf>  This reminds me of James Bond 1, where the girl there
+               read an encyclopedia, instead of going to school.
+     <yrlnry>  Does anyone near Philadelphia want to come to my house
+               and take away my 1920 Britannica?
+ <shaldannon>  rindolf: hey...when I was in elementary school, I used to
+               read the World Book encyclopedia instead of doing my
+               homework
+
+    Making use of Encyclopedias at FreeNode's #perl
+%
+      <dwave>  anyone envy me? i'm refactoring production code that uses
+               the fact that "" is defined, as a hash key.
+      <dwave>  if (ref $ref->{""} ne "ARRAY") {
+      <dwave>  $ref->{""} = [$ref->{""},$_];
+      <dwave>  } else {
+      <dwave>  $ref->{""} = [@{$ref->{""}},$_];
+      <dwave>  }
+      <dwave>  :(
+       <iank>  hey, that looks like fun.
+   <integral>  Has the author been lynched yet?
+            *  integral would have used "\0" :-P
+      <dwave>  the best of it all, is that it's an XML parser
+      <mauke>  $ref->{""} = [ref $ref->{""} eq "ARRAY" ? @{$ref->{""}} :
+               $ref->{""}, $_]; # fixed
+    <rindolf>  dwave: does this XML parser makes use of an existing XML
+               parser from CPAN?
+    <rindolf>  dwave: or does it do everything from scratch?
+      <dwave>  rindolf: everything from scratch :)
+    <rindolf>  dwave: nice!
+      <dwave>  i'm trying to get rid of it
+    <rindolf>  dwave: re-inventing square wheels.
+      <dwave>  there's a home made unicode lib too
+      <dwave>  !
+    <rindolf>  dwave: ouch!
+ <shaldannon>  nice
+       <iank>  Brilliant!
+ <shaldannon>  dwave: I suggest a dailywtf.com submission
+    <rindolf>  dwave: yeah, I second shaldannon
+
+    Freenode's #perl.

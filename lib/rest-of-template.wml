@@ -85,9 +85,9 @@ google_ad_channel = "";
 </define-tag>
 
 <define-tag w2l_notice>
-<a href="http://welcome.linux.org.il/?gad=CIr1zrMBEgjwLDUQw2srtBjPo5P_AyCgtK4M" title="ברוכים הבאים ללינוקס 2006 - הכירו את הסביבה היציבה, החזקה והמגוונת"><img
+<a href="http://welcome.linux.org.il/2007/" title="ברוכים הבאים ללינוקס 2007 - הכירו את הסביבה היציבה, החזקה והמגוונת"><img
      src="$(ROOT)/images/welcome-to-linux-2004-banner-256.png" 
-     style="border-width:0" alt="Welcome to Linux 2006 in Israel"
+     style="border-width:0" alt="Welcome to Linux 2007 in Israel"
      /></a>
 </define-tag>
 
@@ -97,7 +97,7 @@ google_ad_channel = "";
      alt="August Penguin 5 - Israeli Community FOSS Con" /></a>
 </define-tag>
 
-<set-var with_banner="" />
+<set-var with_banner="1" />
 
 <define-tag top_with_banner>
 <w2l_notice />

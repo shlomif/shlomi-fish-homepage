@@ -1627,3 +1627,68 @@ God was relieved and returned to his dwarfish deeds, as dwarfs do.
     <rindolf>  dwave: yeah, I second shaldannon
 
     Freenode's #perl.
+%
+   <CIA-1>  shlomif * r1712 gegl/ (ChangeLog docs/index-static.html.in):
+   <CIA-1>  * docs/index-static.html.in: fixed "GEGLs" into "GEGL's" and
+            "GIMPs"
+   <CIA-1>  into "GIMP's" in the homepage.
+   <mitch>  why is breaking the correct writing a fix?
+   <mitch>  rindolf: ?
+   <mitch>  rindolf: oh i misread :)
+         *  rindolf gives some GEGLs and GIMPs to the mitches.
+   <mitch>  haha :)
+ <rindolf>  One GEGL each!
+ <rindolf>  There's not enough for everybody.
+   <mitch>  GEGLS FOR THE MASSES
+ <rindolf>  We should have an assembly line of GEGLs.
+ <rindolf>  Mass-produce them for the ever-growing demand.
+
+    - One GEGL Per Child on GIMPNet's #gimp channel.
+%
+   <adeht>  rindolf: my brother had AIMA in hard-cover.. and maybe I can
+            get a hold of PAIP
+   <adeht>  s/had/has/;
+         *  adeht yays for perl
+ <rindolf>  adeht: what did perl do?
+   <adeht>  <adeht> s/had/has/;
+ <rindolf>  adeht: it's actually from sed and ed before that.
+   <adeht>  I know, but I'm using perl syntax :)
+ <rindolf>  adeht: now write it in Lisp.
+   <adeht>  heh.
+   <adeht>  in Lisp you wouldn't use a regex for this kind of dumb
+            substitution.. though you could
+   <adeht>  rindolf: a nice way of writing CL code is to imagine your
+            dream language for expressing that particular problem, and
+            then realizing it :)
+ <rindolf>  You probably wouldn't use a regex in Python either.
+ <rindolf>  adeht: I see.
+ <rindolf>  adeht: I'm not going to implement Perl in Common Lisp. :-D
+   <adeht>  heh
+
+   Freenode's #lisp-il.
+%
+> This reminds me of Paul Graham's articles, in which he claims that LISP
+> programmers are better. But why is it so (whether or not you agree to
+> the conclusion)? There are at least two opposite reasons: 1. Because
+> programmers that learned LISP become better 2. Because good programmers
+> prefer LISP when they come to know it.
+
+No. 1 is true, naturally. No. 2 is not true - I know LISP but I prefer Perl. 
+Other like Python, etc. The reasons I don't prefer LISP are:
+
+1. The standards of Common LISP and Scheme don't define anything practical.
+2. LISP is at the moment incredibly verbose.
+3. As Larry Wall noted, all LISP code comes in parenthesis and so it all looks 
+the same. (Perl is the exact opposite in this regard).
+4. I cannot make heads nor tails of serious LISP code. Many LISPers create so 
+many macros and use them along with regular LISP code, so you keep having to 
+refer to the previous definitions, and make a lot of research to get you 
+started.
+
+SICP Scheme is easy and fun. But serious LISP code can take too much time to 
+understand. OTOH, recently I had little problem reading the source code of 
+other Perl programmers, and extending it or fixing bugs. (likewise for 
+Python).
+
+    Shlomi Fish
+    http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39629.html

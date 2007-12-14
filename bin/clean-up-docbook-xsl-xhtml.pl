@@ -63,8 +63,11 @@ $xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
     $s =~ s{</body>\z}{};
 
     # It's a kludge
-    $s =~ s{ lang="en"}{};
-    $s =~ s{ xml:lang="en"}{};
+    $s =~ s{ lang="en"}{}g;
+    $s =~ s{ xml:lang="en"}{}g;
+    $s =~ s{ type="(1|disc)"}{}g;
+    $s =~ s{<hr[^/]*/>}{<hr />}g;
+    $s =~ s{ target="_top"}{}g;
 
     # Fixed in Perl 6...
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;

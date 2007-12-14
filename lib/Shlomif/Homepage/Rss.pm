@@ -23,12 +23,22 @@ sub _init
     return 0;
 }
 
+sub _calc_entry_body
+{
+    my ($self, $entry) = @_;
+    my $body = $entry->content()->body();
+
+    $body =~ s{<a name="cut[^"]*"></a>}{}g;
+
+    return $body;
+}
+
 sub run
 {
     my $self = shift;
     foreach my $entry ($self->feed()->entries())
     {
-        my $text = $entry->content()->body() . "\n\n" . "<p><a href=\"" . CGI::escapeHTML($entry->link()) . "\">See comments and comment on this.</a></p>\n";
+        my $text = $self->_calc_entry_body($entry) . "\n\n" . "<p><a href=\"" . CGI::escapeHTML($entry->link()) . "\">See comments and comment on this.</a></p>\n";
         my $issued = $entry->issued();
         my $filename = "lib/feeds/shlomif_hsite/" . $issued->ymd() . ".html";
         open O, ">", $filename;

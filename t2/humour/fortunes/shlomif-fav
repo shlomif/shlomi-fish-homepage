@@ -1232,3 +1232,77 @@ shenanigans to sell overpriced door stoppers! Coming soon...
 
     -- creimer:
     -- http://developers.slashdot.org/comments.pl?sid=376757&cid=21544637
+%
+Among the generalists, the conventional wisdom is that the worse-is-better
+approach is more adaptive. Personally, I get a little tired of the argument: My
+worse-is-better is better than your worse-is-better because I'm better at being
+worser! Is it really true that the worse-is-better approach always wins? With
+Perl 6 we're trying to sneak one better-is-better cycle in there and hope to
+come out ahead before reverting to the tried and true worse-is-better approach.
+Whether that works, only time will tell.
+
+    Larry Wall in "State of the Onion 11"
+    http://www.perl.com/pub/a/2007/12/06/soto-11.html?page=3
+%
+    <ew73>  I have discovered another benefit to the unemployed status!
+    <ew73>  I can cook whenever I want.
+    <sili>  ew73: cooking with... imagination?
+    <ew73>  sili: I'm actually quite good at teh cookingz.
+    <sili>  ew73: ARE YOU GOOD PROGRAMMAR 2/
+    <ew73>  no :(
+    <sili>  I guess that explains why you're unemployed :p
+    <ew73>  That was mean!
+    <sili>  it's not like I stole your bike
+    <ew73>  That also would be mean.
+ <phroggy>  good cooking impresses the ladies a lot more than good
+            programming.
+ <utopia_>  depends on the lady
+ <phroggy>  (any present female company excepted, of course)
+   <jdv79>  phroggy: except when you don't have any money
+    <ew73>  phroggy: But imagine, a good cook AND a good programmer.
+    <sili>  I can cook some stuff.
+ <phroggy>  jdv79: yeah, that nixes the deal. I have that problem too.
+   <jdv79>  its a start
+    <ew73>  "Here's my recipie for mushroom stir-fry. And HERE's the
+            source for my nutritional database system."
+ <phroggy>  haha
+     <jim>  ew73: so when you load the data model, do you get the recipe
+            free?
+    <ew73>  jim: Geek.
+         *  jim looks around...
+     <jim>  like yer any different :)
+
+    -- Too many Freenode #perl cooks.
+%
+            -->  FilipeMendes has joined #perl
+ <FilipeMendes>  any way to avoid having users running perl? I need
+                 specify who can or who can not
+ <dondelelcaro>  FilipeMendes: uh... why?
+ <FilipeMendes>  security purposes
+        <mauke>  haha
+        <mauke>  chmod 0 /usr/bin/perl
+ <dondelelcaro>  question repeated, with more emphasis and incredulity
+ <FilipeMendes>  i want specify some users
+       <Caelum>  FilipeMendes: why would you not want users running
+                 perl?
+ <FilipeMendes>  chmod wouldnt be useful
+          <dkr>  FilipeMendes: chmod 750 /usr/bin/perl; chgrp leet
+                 /usr/bin/perl; and put the leet people in that group ?
+ <FilipeMendes>  hmmm
+ <dondelelcaro>  you realize that any user who wants can just stick
+                 their own perl executable there?
+     <go|dfish>  FilipeMendes: ACL , maybe.
+          <dkr>  also your system scripts might rely on it
+ <dondelelcaro>  (and probably all of the users actually end up using
+                 perl?)
+          <dkr>  modify the perl code to have it exit based on checking
+                 a uid whitelist. :)
+          <dkr>  change the name to something obscure only the cool
+                 people know
+        <mauke>  _perl
+          <dkr>  realize that removing tools does not remove abilities
+                 and give up
+        <mauke>  the _ means it's private!
+          <dkr>  mauke: :D
+
+    -- Security by perl-deprivation on Freenode's #perl.

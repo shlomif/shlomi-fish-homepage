@@ -11,18 +11,9 @@ my $remote = Xmms::Remote->new();
 
 sub get_amarok_title
 {
-    my $t = `dcop amarok player title`;
-    my $a = `dcop amarok player artist`;
+    my $t = `dcop amarok player nowPlaying`;
     chomp($t);
-    chomp($a);
-    if (length($t) + length($a) > 0)
-    {
-        return "$a - $t";
-    }
-    else
-    {
-        return undef;
-    }
+    return $t;
 }
 
 sub get_xmms_title

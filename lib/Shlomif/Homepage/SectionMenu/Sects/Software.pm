@@ -54,6 +54,11 @@ my $software_tree_contents =
                     'title' => "A Tool for Generating HTML Presenttions",
                 },
                 {
+                    'text' => "yjobs.co.il on Firefox/Mozilla",
+                    'url' => "open-source/projects/yjobs-on-mozilla/",
+                    'title' => "Workaround to use yjobs.co.il using (cross-platform) Mozilla-based browsers such as Firefox",
+                },
+                {
                     'text' => "Bits and Bobs",
                     'url' => "open-source/bits.html",
                     'title' => "Small Open Source Programs",

@@ -1,4 +1,4 @@
-VER = 0.10.66
+VER = 0.10.67
 
 DIST_BASE = fortunes-shlomif
 

@@ -90,6 +90,11 @@ my $tree_contents =
                     'url' => "me/blogs/",
                     'title' => "Links to my online journals.",
                 },
+                {
+                    'text' => "Interviews",
+                    'url' => "me/interviews/",
+                    'title' => "Interviews that were conducted with me",
+                },
             ],               
         },
         {

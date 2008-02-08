@@ -19,6 +19,11 @@ all: docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortune
 include include.mak
 include rules.mak
 
+FORTUNES_DIR = humour/fortunes
+T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
+
+include $(T2_FORTUNES_DIR)/arcs-list.mak
+
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 FORTUNES_TARGET = $(T2_DEST)/humour/fortunes/index.html
 
@@ -30,10 +35,12 @@ fortunes-target: $(FORTUNES_TARGET)
 
 RSYNC = rsync --progress --verbose --rsh=ssh
 
-FORTUNES_DIR = humour/fortunes
+T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST)/$(FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
-copy_fortunes:
-	cp -f t2/$(FORTUNES_DIR)/fortunes-shlomif-*.tar.gz $(T2_DEST)/$(FORTUNES_DIR)
+copy_fortunes: $(T2_DEST_FORTUNES)
+
+$(T2_DEST_FORTUNES) :: $(T2_DEST)/% : t2/%
+	cp -f $< $@
 
 upload_deps: all
 

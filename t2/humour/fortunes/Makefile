@@ -1,4 +1,4 @@
-VER = 0.10.74
+VER = 0.10.77
 
 DIST_BASE = fortunes-shlomif
 
@@ -31,7 +31,7 @@ $(DATS):: %.dat : %
 test: $(DATS)
 	@fortune -e $(FILES)
 	
-dist: $(PACKAGE_BASE)
+dist: $(PACKAGE_BASE) list-files
 
 html: $(INDEX_FILE)
 
@@ -53,3 +53,5 @@ upload: dist
 print_package_base:
 	@echo $(PACKAGE_BASE)
 
+list-files:
+	perl -le 'print "FORTUNES_ARCS_LIST = " . join(" ", glob("fortunes-shlomif-*.tar.gz"))' > arcs-list.mak

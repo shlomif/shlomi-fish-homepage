@@ -477,3 +477,22 @@ a few changes will turn one to the other.
 
     zzatz on:
     http://developers.slashdot.org/comments.pl?sid=237163&cid=19367821
+%
+> Regarding keyword substituion: It turns out that Linus thinks it's a
+> horrible idea: http://kerneltrap.org/mailarchive/git/2006/10/9/223932
+
+His argument is that it may destroy binary files.
+
+This is bogus since keyword-substitution is *off* by default.
+It will occur only for files that were explicitly marked for
+substitution. For example in subversion:
+
+       svn propset svn:keywords "Id Author Revision" *.h *.c
+
+As a substitute (pun intended) for the lack in this feature he gives
+a hand crafted, build system dependent, manual (i.e: error prone) method.
+
+What a lame excuse.
+
+    -- Oron Peled in 
+       http://hamakor.org.il/pipermail/haifux/2008-February/000164.html

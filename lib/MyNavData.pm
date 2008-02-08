@@ -168,7 +168,7 @@ my $tree_contents =
                         {
                             'text' => "My Quotes Collection",
                             'title' => ("Collection of Funny or Insightful " . 
-                                "Quotes or Aphorism I came up with"),
+                                "Quotes or Aphorisms I came up with"),
                             'url' => "humour.html",
                         },
                         {
@@ -182,7 +182,13 @@ my $tree_contents =
                     'text' => "Small Scale",
                     'url' => "humour/bits/",
                     'title' => "Small Scale Funny Works of Mine",
-                }
+                },
+                {
+                    'text' => "By Others",
+                    'url' => "humour/by-others/",
+                    'expand' => { 're' => "^humour/(?:by-others|GNU-Visual-Basic)/", },
+                    'title' => "Humorous Works by Other People",
+                },
             ],
         },
         {

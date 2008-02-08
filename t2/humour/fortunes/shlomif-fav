@@ -1627,3 +1627,62 @@ been selling us for years.
 
     -- boguslinks in:
     -- http://yro.slashdot.org/comments.pl?sid=442082&cid=22303924
+%
+      <x86>  can someone tell me what this epoch translates to in
+             %Y-%m-%d format? 1202256000
+ <integral>  eval: POSIX::strftime("%Y-%m-%d", gmtime(1202256000))
+   <buubot>  integral: 2008-02-06
+      <x86>  nice!
+ <integral>  note that if you're not specifying timezone you're in for a
+             world of hate
+ <integral>  err, *pain
+     <iank>  s/pain/butter/
+     <iank>  I will dump butter on you unless you specify tz.
+     <iank>  Also if you do specify tz.
+     <iank>  Fuck it, I will dump butter on you, fullstop.
+ <integral>  don't waste good butter on them, try margarine
+
+    -- Timezone'd on Freenode's #perl
+%
+            <x86>  gah
+            <x86>  DateTime::Format::Strptime is not one of the core
+                   modules
+           <iank>  boo hoo cpan it
+        <apeiron>  "i (can't|don't want to) use external modules"
+           <iank>  (If only we had some sort of comprehensive archive
+                   network.. for perl stuff.. complete with a convenient
+                   tool you could use to easily fetch, build, and
+                   install modules!)
+           <iank>  apeiron: "oh, but you're a dumbass"
+           <iank>  "carry on then"
+ <simcop2387-lab>  iank! i know i'll call it Ruby on Rails!
+       <integral>  well, it'd be different if CPAN and CPANPLUS really
+                   were convenient.
+            <x86>  POSIX::strptime is not a core module either
+            <x86>  this sucks
+        <apeiron>  Send patches or shut up. :)
+           <iank>  CPAN IS VERY FUCKING CONVENIENT DO YOU WANT ME TO
+                   PUNCH YOU IN THE SPLEEN
+       <integral>  apt-get : cpan :: brilliant : annoying
+           <iank>  this : pretentious and awkward :: 1 : 1
+            <x86>  iank: not so conveinent when you're writing software
+                   to be deployed on 100 servers and you dont want to
+                   have to install the same module 100 times
+       <integral>  bundle it with your app.
+           <iank>  x86: stop failing at sysadmining
+           <iank>  Or that.
+       <integral>  They're also pure-perl so this is very, very trivial.
+       <integral>  We have PARs which are jsut like Java's JARs for even
+                   more deployability win
+           <iank>  woohoo
+            <mst>  and people have this retarded obsession with only
+                   using core
+            <mst>  I mean, anybody who does perl for a living grows out
+                   of it pretty fucking fast
+            <mst>  but there's always colossal whining the first time
+                   you tell someone to get something from CPAN
+       <integral>  But due to my last point, PAR isn't as well known as
+                   it should be
+            <mst>  x86: thanks for being today's example :)
+
+    -- CPAN is your Friend (or Enemy) on Frenode's #perl

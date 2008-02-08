@@ -7,9 +7,10 @@ use HTML::Widgets::NavMenu;
 use CGI qw();
 use MyNavLinks;
 
+my $my_THE_filename = "puzzles/situation/book-under-rock.html";
 {
-my $filename = "philosophy/Index/index.html";
-$filename =~ s!index\.html$!!;
+my $filename = $my_THE_filename;
+$filename =~ s{index\.html$}{};
 $filename = "/$filename";
 
 use vars qw($nav_bar);
@@ -75,7 +76,7 @@ $nav_links_renderer = MyNavLinks->new(
         {
             return;
         }
-    my $filename = "philosophy/Index/index.html";
+    my $filename = $my_THE_filename;
     $filename =~ s{index\.html$}{};
     $filename = "/$filename";
 

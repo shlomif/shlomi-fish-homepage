@@ -11,7 +11,6 @@ my $essays_tree_contents =
     'text' => "Shlomi Fish' Presentations",
     'title' => "Shlomi Fish' Presentations",
     'show_always' => 1,
-    'url' => "lecture/",
     'subs' =>
     [
         {

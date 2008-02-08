@@ -131,7 +131,7 @@ my $tree_contents =
                     'text' => "Stories",
                     'url' => "humour/stories/",
                     'title' => "Large-Scale Stories I Wrote",
-                    'expand' => { 're' => "^humour/", },
+                    'expand' => { 're' => "^humour/", 'capt' => 0,},
                     'subs' =>
                     [
                         {

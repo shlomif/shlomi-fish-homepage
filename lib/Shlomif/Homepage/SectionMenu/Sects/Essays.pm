@@ -290,6 +290,14 @@ my $essays_tree_contents =
         {
             'text' => "By Others",
             'url' => "philosophy/by-others/",
+            subs =>
+            [
+                {
+                    'text' => "James Carr - &quot;Completely Overrated&quot;",
+                    'url' => "philosophy/by-others/james-carr--completely-overrated.html",
+                    'title' => "James Carr about the anti-Muslim Cartoons",
+                },
+            ],
         },
     ],
 };

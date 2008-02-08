@@ -150,6 +150,24 @@ my $humour_tree_contents =
         {
             'text' => "By Others",
             'url' => "humour/by-others/",
+            'subs' =>
+            [
+                {
+                    'text' => "GNU Visual Basic",
+                    'url' => "humour/GNU-Visual-Basic/GNU-Visual-Basic.html",
+                    'title' => "Richard Stallman Switches to Basic",
+                },
+                {
+                    'text' => "Darien - Everybody's Free (to Ping Timeout)",
+                    'url' => "humour/by-others/darien--everybody-is-free.html",
+                    'title' => "The IRC Version of &quot;Everybody's Free to Wear Sunscreen&quot;",
+                },
+                {
+                    'text' => "Technion Bit #1",
+                    'url' => "humour/by-others/technion-bit-1.html",
+                    'title' => "A bit I found at the Technion",
+                },
+            ],
         },
     ],
 };

@@ -144,7 +144,14 @@ my $humour_tree_contents =
                     'text' => "I Like Job Control",
                     'url' => "humour/bits/I-Like-Job-Control/",
                 },
-
+                {
+                    'text' => "The GPL is not Compatible with Itself",
+                    'url' => "humour/bits/GPL-is-not-Compatible-with-Itself/",
+                },
+                {
+                    'text' => "Introducing RMS-Lint",
+                    'url' => "humour/bits/RMS-Lint/",
+                },
             ],
         },
         {

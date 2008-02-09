@@ -17,7 +17,7 @@ sub get_hosts
     return $hosts;
 }
 
-my @personal_expand = ('expand' => { 'bool' => 1, },);
+my @personal_expand = ('expand' => { 'bool' => 1, 'capt' => 0,},);
 
 my $tree_contents =
 {
@@ -100,7 +100,7 @@ my $tree_contents =
         {
             'text' => "Work",
             'url' => "work/",
-            'expand' => { 're' => "", },
+            'expand' => { 're' => "", 'capt' => 0,},
             'title' => "Work-Related Pages",
             'subs' =>
             [
@@ -181,6 +181,7 @@ my $tree_contents =
                 {
                     'text' => "Small Scale",
                     'url' => "humour/bits/",
+                    'expand' => { 're' => "^humour/bits/", },
                     'title' => "Small Scale Funny Works of Mine",
                 },
                 {

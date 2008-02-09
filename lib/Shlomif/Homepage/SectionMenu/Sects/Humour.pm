@@ -152,6 +152,10 @@ my $humour_tree_contents =
                     'text' => "Introducing RMS-Lint",
                     'url' => "humour/bits/RMS-Lint/",
                 },
+                {
+                    'text' => "Cracka's Paradise",
+                    'url' => "humour/bits/Crackas-Paradise/",
+                },
             ],
         },
         {

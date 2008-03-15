@@ -106,6 +106,17 @@ my $software_tree_contents =
                     'url' => "open-source/resources/software-tools/",
                     'text' => "Software Building and Management Tools",
                 },
+                {
+                    'url' => "open-source/resources/israel/",
+                    'text' => "Israel-Related",
+                    'subs' =>
+                    [
+                        {
+                            'url' => "open-source/resources/israel/list-of-projects/",
+                            'text' => "List of Israeli Projects",
+                        },
+                    ],
+                },
             ],
         },
         {

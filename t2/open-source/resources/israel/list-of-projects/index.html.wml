@@ -1,0 +1,242 @@
+#include "../template.wml"
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "List of Israeli Open-Source Projects" />
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a list of Israeli open-source projects that used to reside on
+the Hackers-IL wiki.
+</p>
+
+<p>
+<b>Note</b>: 
+For <a href="http://www.perl.org.il/">Perl</a> projects refer to
+<a href="http://www.perl.org.il/misc.html#projects" title="http://www.perl.org.il/misc.html#projects">the 
+Israeli Perl Projects list</a> on the 
+<a href="http://www.perl.org.il/" title="http://www.perl.org.il/">Israeli 
+Perl Mongers web-site</a>. You can also find 
+<a href="http://www.python.org.il/mediawiki/index.php/Projects" title="http://www.python.org.il/mediawiki/index.php/Projects">a 
+list of some more Python Projects</a> at 
+<a href="http://www.python.org.il/" title="http://www.python.org.il/">the 
+site of the Israeli Pythoneers</a>.
+</p>
+
+<h2 id="Large_or_Very_Large_Scale_Projects"> Large or Very Large Scale 
+Projects </h2>
+
+<p>
+<a href="http://www.php.net/" title="http://www.php.net/">PHP</a> - a 
+server-side scripting language that is actively developed by 
+<a href="http://www.zend.com/" title="http://www.zend.com/">Zend</a> and many 
+other volunteers. Zend is an Israeli company.
+</p>
+
+<p>
+<a href="http://www.mosix.org/" title="http://www.mosix.org/">MOSIX</a> - a 
+clustering-solution for the Linux kernel. Actively developed by Amnon Barak 
+and his team at the Hebrew University. (<b>Note</b> - there may be some 
+licensing issues)
+</p>
+
+<p>
+<a href="http://openmosix.sourceforge.net/"
+title="http://openmosix.sourceforge.net/">openMosix </a> - a MOSIX-derivative
+that professes a more open development model than MOSIX. Actively developed by
+<a href="http://www.qlusters.com" title="http://www.qlusters.com">Qlusters</a>
+and many other contributors.
+</p>
+
+<p>
+<a href="http://nsis.sourceforge.net/Main_Page" 
+title="http://nsis.sourceforge.net/Main_Page">Nullsoft Scriptable Install 
+System</a> - a tool for creating sotware installers for Windows programs. Led 
+by Amir Szekely, who is an Israeli. See also 
+<a href="http://sourceforge.net/potm/potm-2006-01.php" title="http://sourceforge.net/potm/potm-2006-01.php">its SourceForge "Project of the Month" review</a>.
+</p>
+
+<p>
+<a href="http://culmus.sourceforge.net/" title="http://culmus.sourceforge.net/">The Culmus Fonts</a> - a collection of free-as-in-speech Hebrew fonts, by Maxim Iorsh.
+</p>
+
+<p>
+<a href="http://opdb.berlios.de/" title="http://opdb.berlios.de/">The Open 
+Phishing Database</a> -  an effort to create and maintain an open database of 
+phishing sites, in addition to providing browser extensions which utilise this 
+database.
+</p>
+
+<h2 id="Medium_Scale_Projects"> Medium Scale Projects</h2>
+
+<p>
+<a href="http://www.nongnu.org/websec/" title="http://www.nongnu.org/websec/">Web 
+Secretary</a> - a program that
+scans Internet sites and reports when changes are made to them.
+</p>
+
+<p>
+<a href="http://www.shlomifish.org/" title="http://www.shlomifish.org/">Freecell 
+Solver</a> - an ANSI C library and a standalone command line program to solve games of Freecell and similar variants of card Solitaire. Also see <a href="http://www.hackers.org.il/mediawiki/index.php/Freecell_Solver" 
+title="Freecell Solver">this page</a>.
+</p>
+
+<p>
+<a href="http://volnorm.sourceforge.net/" title="http://volnorm.sourceforge.net/">XMMS-Volnorm</a> - a plug-in for
+XMMS that normalizes the sound volume between the played songs.
+</p>
+
+<p>
+<a href="http://xparam.sourceforge.net/" title="http://xparam.sourceforge.net/">XParam</a> - a data serialisation/de-serialisation library for C++.
+</p>
+
+<p>
+<a href="http://www.ivrix.org.il/projects/spell-checker/" title="http://www.ivrix.org.il/projects/spell-checker/">Hspell</a> - a 
+spell checking program for Hebrew language documents.
+</p>
+
+<p>
+<a href="http://dbsconv.sourceforge.net/" title="http://dbsconv.sourceforge.net/">Database Super Converter </a> - 
+a cross-database abstraction layer.
+</p>
+
+<p>
+<a href="http://jmikmod.berlios.de/" title="http://jmikmod.berlios.de/">MikMod for Java </a> - a player of
+<a href="http://www.modarchive.com/" title="http://www.modarchive.com/">MOD Files</a> for Java.
+</p>
+
+<p>
+<a href="http://www.jinchess.com/" title="http://www.jinchess.com/">Jin</a> - an open source, cross-platform, graphical client for playing chess with other 
+people around the world.
+</p>
+
+<p>
+<a href="http://syscalltrack.sourceforge.net/" title="http://syscalltrack.sourceforge.net/">Syscalltrack</a> - a Linux kernel module and accompanying user-land software for tracking system calls. (historical)
+</p>
+
+<p>
+<a href="http://baruch.ev-en.org/proj/chktex/" title="http://baruch.ev-en.org/proj/chktex/">ChkTex</a> - a Program for checking the typographical validity of TeX documents.
+</p>
+
+<p><a href="http://libhdate.sourceforge.net/" title="http://libhdate.sourceforge.net/">LibHdate</a> - A small C,C++ library for Hebrew calendar, dates, holidays, and reading sequence. (python, perl and pascal bindings available)
+</p>
+
+<p>
+<a href="http://hocr.berlios.de/" title="http://hocr.berlios.de/">hocr</a> -
+A Hebrew character recognition c/c++ library. Command line, GNOME and QT 
+graphical user interfaces available.
+</p>
+
+<p><a href="http://krusader.sourceforge.net/" title="http://krusader.sourceforge.net/">Krusader</a> - An 
+advanced twin panel (commander style) file manager for KDE led by 
+Rafi Yanai &amp; Shie Erlich.
+</p>
+
+<p>
+<a href="http://www.iosart.com/firefox/" title="http://www.iosart.com/firefox/">FoxyTunes and other Firefox Extensions by Alex Sirota</a> - see also 
+<a href="https://addons.mozilla.org/extensions/authorprofiles.php?application=firefox&amp;id=142">the 
+mozilla.org page</a> and 
+<a href="http://www.haaretz.co.il/captain/pages/ShArtCaptain.jhtml?contrassID=11&amp;subContrassID=8&amp;itemNo=660219">an Ha'aretz article</a>.
+</p>
+
+<p>
+<a href="http://sourceforge.net/projects/rsyncrypto" title="http://sourceforge.net/projects/rsyncrypto">rsyncrypto</a> - rsync friendly file encryption. By 
+Lingnu.
+</p>
+
+<p>
+<a href="http://pgfoundry.org/projects/oledb" 
+title="http://pgfoundry.org/projects/oledb">PgOleDb</a> - an OLE DB back-end for PostgreSQL. By Lingnu.
+</p>
+
+<p>
+<a href="http://sourceforge.net/projects/tesseract/" title="http://sourceforge.net/projects/tesseract/">Cube/Tesseract</a> - a 4 dimensional hypercube 
+(Tesseract) game that behaves like Rubiks Cube. By Michael Brand and Shachar 
+Shemesh.
+</p>
+
+<p>
+<a href="http://www.typo.co.il/~mooffie/geresh/" title="http://www.typo.co.il/~mooffie/geresh/">Geresh - a simple, multi-lingual console-based 
+text-editor</a> by Mooffie.
+</p>
+
+<p>
+<a href="http://vamosproject.org/" title="http://vamosproject.org/">Vamos</a>
+- On demand computing platform, based on Debian. By Hadar Weiss
+</p>
+
+<h2 id="Small_Scale_Projects">Small Scale Projects</h2>
+
+<p>
+<a href="http://hcal.sourceforge.net/" title="http://hcal.sourceforge.net/">hcal - Hebrew Calendar for Gtk+</a>
+</p>
+
+<p>
+<a href="http://hdateapplet.sourceforge.net/" title="http://hdateapplet.sourceforge.net/">Hdate applet</a> - Hebrew date applet and desktop calendar using the GNOME toolkit.
+</p>
+
+<p>
+<a href="http://hspell-gui.sourceforge.net/" title="http://hspell-gui.sourceforge.net/">Hspell GUI</a> - Hspell graphical user interface using the GNOME toolkit.
+</p>
+
+<p>
+<a href="http://baruch.ev-en.org/proj/autofw/autofw.html" title="http://baruch.ev-en.org/proj/autofw/autofw.html">Autofw</a> - An automatic Firewall script by <a href="http://baruch.ev-en.org/" title="http://baruch.ev-en.org/">Baruch Even</a>.
+</p>
+
+<p>
+<a href="http://spacepong.sourceforge.net/" title="http://spacepong.sourceforge.net/">SpacePong</a> - a cool space game by <a href="http://shlomil.blogspot.com/" title="http://shlomil.blogspot.com/">Shlomi Loubaton</a>
+</p>
+
+<p>
+<a href="http://pyfribidi.sourceforge.net/" title="http://pyfribidi.sourceforge.net/">pyFribidi</a> - PyFribidi is a simple fribidi binding to python.
+</p>
+
+<p>
+<a href="http://sourceforge.net/projects/sshpass/" title="http://sourceforge.net/projects/sshpass/">sshpass</a> - Non interactive ssh password authentication. By Shachar Shemesh.
+</p>
+
+<p>
+<a href="http://sourceforge.net/projects/nch/" title="http://sourceforge.net/projects/nch/">NetChat</a> - a network version of the "chat" utlity. By Shachar Shemesh.
+</p>
+
+<p>
+<a href="http://pgfoundry.org/projects/pattern/" title="http://pgfoundry.org/projects/pattern/">FLMLS4PG</a> - Field Level Multilingual Support for PG.
+</p>
+
+<h2 id="Linux_Distributions">Linux Distributions</h2>
+
+<p>
+<a href="http://kinneret.berlios.de/" title="http://kinneret.berlios.de/">GNU/Linux Kinneret</a> - a Knoppix
+based bootable LiveCD which was translated to Hebrew.
+</p>
+
+<p><a href="http://linbrew.sourceforge.net/" title="http://linbrew.sourceforge.net/">Linbrew</a> - a GNU/Linux distribution that is intended for new Israeli users who are looking for built-in Hebrew support and Israeli localization.
+</p>
+
+<p><a href="http://kazit.berlios.de/" title="http://kazit.berlios.de/">Kazit</a> - a Knoppix-derived LiveCD.
+</p>
+
+<p><a href="http://ehad.berlios.de/" title="http://ehad.berlios.de/">Ehad</a> - a remastering of the <a href="http://www.mandrivalinux.com/" title="http://www.mandrivalinux.com/">Mandriva Linux</a> distribution so it will be suitable for the Israeli audience and fit on one CD.
+</p>
+
+<p><a href="http://debian-hebrew.alioth.debian.org/" title="http://debian-hebrew.alioth.debian.org/">DebianHebrew</a> - a remastering of the <a href="http://www.debian.org/" title="http://www.debian.org/">Debian GNU/Linux</a> distribution so it will be suitable for the Israeli audience and fit on one CD.
+</p>
+
+<p><a href="http://www.gentoo.org.il/" title="http://www.gentoo.org.il/">Gentoo Israel</a> - The Gentoo distribution community in israel. Includes wiki, forums and other help for Gentoo users.
+</p>
+
+<p><a href="http://xorcom.com/rapid/" title="http://xorcom.com/rapid/">Xorcom Rapid</a> - Asterisk Installation from a bootable CD.
+</p>
+
+<h2 id="Web_Sites"> Web-sites </h2>
+
+<p><a href="http://better-scm.berlios.de/" title="http://better-scm.berlios.de/">The Better SCM Site</a> - A web site for discussion and advocacy of Version Control and Source Configuration Management systems.
+</p>
+
+<p><a href="http://www.jlc.org.il/limon/" title="http://www.jlc.org.il/limon/">Limon</a> - Free Hebrew-Eglish-Hebrew dictionary web site.
+</p>
+

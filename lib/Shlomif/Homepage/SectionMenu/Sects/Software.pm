@@ -112,6 +112,11 @@ my $software_tree_contents =
                     'subs' =>
                     [
                         {
+                            'url' => "open-source/resources/israel/guide-to-israeli-foss-resources/",
+                            'text' => "Guide to Israeli FOSS Resources",
+                            'title' => "Guide to online Israeli open-source-related resources",
+                        },
+                        {
                             'url' => "open-source/resources/israel/list-of-projects/",
                             'text' => "List of Israeli Projects",
                         },

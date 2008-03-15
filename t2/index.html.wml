@@ -1,6 +1,13 @@
 #include '../template.wml'
 <latemp_subject "Shlomi Fish's Homepage" />
 
+<page_extra_affil>
+<a href="http://www.linuxchix.org/?ref=banner60x30" 
+    title="LinuxChix - a community for promoting Open Source Software"><img 
+    src="$(ROOT)/images/linuxchix60x30.png"
+    alt="LinuxChix button"></a>
+</page_extra_affil>
+
 <div class="about_site">
 
 <h2 id="about_site">About this Site</h2>

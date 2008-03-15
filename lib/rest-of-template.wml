@@ -205,6 +205,9 @@ of resources which I update and can be commented on">My Blogs</a>
 
 
 <affil_collection_shlomif />
+
+{#PAGE_EXTRA_AFFIL#}
+
 <p>
 <a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 
     src="$(ROOT)/images/rss-feed-sticker.png"
@@ -305,6 +308,10 @@ return;
 
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">
 {#PAGE_EXTRA_HEAD_ELEMENTS#:%body:##}
+</define-tag>
+
+<define-tag page_extra_affil endtag="required" whitespace="delete">
+{#PAGE_EXTRA_AFFIL#:%body:##}
 </define-tag>
 
 <define-tag my_extra_head_elements>

@@ -1723,3 +1723,70 @@ come along and say this, that's not a bad thing.
 Q: How many hardware engineers does it take to replace a lightbulb?
 
 A: None! We'll fix it in software.
+%
+When the first caveman programmer chiseled the first program on the walls of
+the first cave computer, it was a program to paint the string `Hello, world' in
+Antelope pictures. Roman programming textbooks began with the `Salut, Mundi'
+program. I don't know what happens to people who break with this tradition, but
+I think it's safer not to find out. We'll start with a series of hello world
+programs that demonstrate the different aspects of the basics of writing a
+kernel module.
+
+    -- Ori Pomerantz in http://tldp.org/LDP/lkmpg/2.4/html/x149.html
+%
+The difference between a program and a script isn't as subtle as most people
+think. A script is interpreted, and a program is compiled.
+
+Of course, there's no reason you can't write a compiler that immediately
+executes the compiled form of a program without writing compilation artifacts
+to disk, but that's an implementation detail, and precision in technical
+matters is important.
+
+Though Perl 5, for example, doesn't write out the artifacts of compilation to
+disk and Java and .Net do, Perl 5 is clearly an interpreter even though it
+evaluates the compiled form of code in the same way that the JVM and the CLR
+do. Why? Because it's a scripting language.
+ 
+Okay, that's a facetious explanation.
+
+The difference between a program and a script is if there's native compilation
+available in at least one widely-used implementation. Thus Java before the
+prevalence of even the HotSpot JVM and its JIT was a scripting language and now
+it's a programming language, except that you can write a C interpreter that
+doesn't have a JIT and C programs become scripts.
+    -- chromatic in http://use.perl.org/~chromatic/journal/35804
+%
+Of course, if someone were to write an extra optimizer step for Perl 5 to
+evaluate certain parts of the optree and generate native code in memory on
+certain platforms without writing it out to disk (uh oh...) and then execute
+that code under certain conditions, all Perl 5 scripts would automatically turn
+into programs.  You know, like .pmc files, or Python's .pyc files. Uh.
+ 
+As well, if more people use Punie (Perl 1 on Parrot) this year than native Perl
+1 -- a possibility -- then Perl 1 scripts automatically become Perl 1 programs
+becaues Punie can use Parrot's JIT. I don't know if this powerful upgrade from
+script to program is retroactive, but I see no reason why not.
+
+Perl 5 scripts were briefly programs while Ponie was viable, but the removal of
+the code from the Parrot tree has now downgraded them back to scripts. We
+apologize for the inconvenience.
+
+    chromatic in http://use.perl.org/~chromatic/journal/35804
+%
+To summarize, if you have a separate compilation step visible to developers,
+you have programs. If not, you have scripts. An exception is that if you have a
+separate, partial compilation step at runtime and not visible to users, then
+you may have programs. The presence of one implementation that performs
+additional compilationy thingies at runtime instantly upgrades all scripts to
+programs, while the presence of an interpreter for a language in which people
+normally write programs, not scripts, does not downgrade programs to scripts.
+Program-ness is sticky.
+
+I hope this is now clear.
+
+Ironically some JavaScript implementations have JITs, so the colloquial name of
+the language should change from JavaScript to JavaProgram.
+
+Script bad, four-legs good.
+
+    chromatic in http://use.perl.org/~chromatic/journal/35804

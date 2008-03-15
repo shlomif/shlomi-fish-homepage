@@ -821,3 +821,29 @@ compatibility, until the end of time.
 
     Joel Spolsky, "Evidence Based Scheduling"
     http://www.joelonsoftware.com/items/2007/10/26.html
+%
+Last week, Microsoft published the binary file formats for Office. These
+formats appear to be almost completely insane. The Excel 97-2003 file format is
+a 349 page PDF file. But wait, that’s not all there is to it! This document
+includes the following interesting comment: 
+
+    Each Excel workbook is stored in a compound file. 
+
+You see, Excel 97-2003 files are OLE compound documents, which are,
+essentially, file systems inside a single file. These are sufficiently
+complicated that you have to read another 9 page spec to figure that out. And
+these “specs” look more like C data structures than what we traditionally think
+of as a spec. It's a whole hierarchical file system.
+
+If you started reading these documents with the hope of spending a weekend
+writing some spiffy code that imports Word documents into your blog system, or
+creates Excel-formatted spreadsheets with your personal finance data, the
+complexity and length of the spec probably cured you of that desire pretty darn
+quickly. A normal programmer would conclude that Office’s binary file formats: 
+
+* are deliberately obfuscated 
+* are the product of a demented Borg mind 
+* were created by insanely bad programmers 
+* and are impossible to read or create correctly.
+
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/02/19.html

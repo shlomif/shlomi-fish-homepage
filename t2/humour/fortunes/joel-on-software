@@ -875,3 +875,27 @@ you vomit.
 
     -- a Hack in 
     -- http://discuss.joelonsoftware.com/default.asp?joel.3.383234.18
+%
+A few months ago when we released CityDesk, I got an email from a customer
+complaining that he was used to doing Alt+F, Alt+S to save files. Unfortunately
+due to a tiny, unnoticed bug, that keyboard shortcut saved the file and then
+closed it, irritatingly. I had never noticed because I'm in the habit of doing
+Alt+F,S to save files, not Alt+F,Alt+S -- a tiny difference -- and Alt+F,S
+worked fine.
+
+Once you get into the habit of doing Alt+F,Alt+S to save, it becomes so
+automatic you don't think of it as Alt+F,Alt+S. You think of it as save. And
+when you push the "save" button in your brain and the file you were working on
+goes away, it makes you feel like you're not in control of your environment.
+It's a small thing, but about the fourth time that it happens, you're going to
+be seriously unhappy. That's why I spent several hours tracking down this bug
+and fixing it. In a bizarre application of Murphy's Law, this fix led to a
+cascade of events that caused us to waste something like a week, but that's
+neither here nor there. It was worth the time spent. This is what it means to
+be concerned about usability. If you still think that something as small as how
+long you hold down the Alt key when you active a menu command doesn't matter,
+well, your software is going to make people unhappy. These tiny inconsistencies
+are what makes Swing applications so unbearably annoying to use, and in my
+opinion it's why there are virtually no commercially successful Java GUI
+applications.
+    -- http://www.joelonsoftware.com/navLinks/fog0000000262.html

@@ -1,10 +1,25 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
+<!--
+
+TODO: Add:
+
+* Ivrix.org.il (once it is restored).
+-->
 <latemp_subject "Guide to Israeli Free and Open Source Software Resources" />
+
+<h2* id="toc">Table of Contents</h2*>
+
+<toc />
 
 <h2 id="portals">Portals, News, etc.</h2>
 
 <ul>
+
+<li>
+<a href="http://www.linux.org.il/">The Israeli Linux Homepage</a>
+</li>
 
 <li>
 <a href="http://www.hamakor.org.il/">Hamakor - the Israeli Society for
@@ -35,6 +50,12 @@ blogs.
 <a href="http://www.penguin.org.il/">Penguin.org.il - guides, support 
 and news</a>
 </li>
+
+<li>
+<a href="http://www.guides.co.il/linux.php">Hebrew Guides to Linux from
+guides.co.il</a>
+</li>
+
 </ul>
 
 <h2 id="forums">Forums</h2>
@@ -47,9 +68,29 @@ in Israel</a> - index to the mailing lists, with
 subscription/unsubscription/post/archives information.
 </li>
 
+<li>
+<a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=PNphpBB2&amp;file=index">Whatsup Forums</a> - various forums in Hebrew for questions.
+</li>
+
+<li>
+<a href="http://www.ynet.co.il/linux/">Ynet's Linux Forum</a>
+</li>
+
+<li>
+<a href="http://community.walla.co.il/ts.cgi?tsscript=forum_new/index&amp;forum_id=1289&amp;offset=&amp;cat_id=310">Walla's Linux Forum</a>
+</li>
+
+<li>
+<a href="http://www.tapuz.co.il/tapuzforum/main/forumpage.asp?id=236">Tapuz's
+Linus Forum</a>
+</li>
+
+<li>
+<a href="http://forums.nana.co.il/forum.asp?id=2092">Nana Linux Forum</a>
+</li>
 </ul>
 
-<h2 id="clubs">Clubs, Conferences and Associations</h2>
+<h2 id="clubs">Clubs and Associations</h2>
 
 <ul>
 
@@ -70,11 +111,6 @@ installation parties. Site inclues a wiki, forums, and other information.
 </li>
 
 <li>
-<a href="http://august.penguin.org.il/">August Penguin</a> - an annual
-community conference for FOSS in Israel.
-</li>
-
-<li>
 <a href="http://www.perl.org.il/">Israeli Perl Mongers 
 (Israel.pm or Perl-IL)</a>.
 </li>
@@ -89,6 +125,87 @@ community conference for FOSS in Israel.
 
 <li>
 <a href="http://php-israel.org/drupal/">Israeli PHP User Group</a>.
+</li>
+
+<li>
+<a href="http://www.grid.org.il/">Israeli Association of Grid Technologies</a>
+</li>
+
+<li>
+<a href="http://www.chameleon.org.il/">Hebrew SUSE Linux Portal</a>
+</li>
+
+<li>
+<a href="http://www.redhat.org.il/">Redhat.org.il</a> - a web-site for Linux 
+in Israel and RedHat in particular.
+</li>
+</ul>
+
+<h2 id="conferences">Conferences</h2>
+
+<ul>
+
+<li>
+<a href="http://august.penguin.org.il/">August Penguin</a> - an annual
+community conference for FOSS in Israel.
+</li>
+
+<li>
+<a href="http://www.osdc.org.il/">Open Source Developers' Conference in
+Israel</a> -
+a conference for developers who use open-source technologies.
+</li>
+
+<li>
+<a href="http://welcome.linux.org.il/">Welcome to Linux</a> - an annual
+series of presentations introducing Linux to beginners.
+</li>
+
+</ul>
+
+<h2 id="downloads">Software Downloads and Other mirrors</h2>
+
+<ul>
+
+<li>
+<a href="http://mirror.hamakor.org.il/">Index of Free Software Mirrors in
+Israel.</a>
+</li>
+
+</ul>
+
+<h2 id="wikis">Wikis</h2>
+
+<ul>
+
+<li>
+<a href="http://www.whatsup.org.il/index.php?op=modload&amp;name=phpWiki&amp;file=index">Mah Qoreh - the Whatsup Wiki</a>
+</li>
+
+<li>
+<a href="http://wiki.perl.org.il/">The Perl-IL Wiki</a>
+</li>
+
+<li>
+<a href="http://wiki.osdc.org.il/">The Wiki of OSDC::Israel</a>.
+</li>
+
+</ul>
+
+<h2 id="lists">Lists of Resources</h2>
+
+<ul>
+
+<li>
+<a href="../list-of-projects/">List of Israeli Open-source Projects</a>
+</li>
+
+<li>
+<a href="http://www.whatsup.org.il/wiki/רשימת+נותני+שירותים+של+קוד+פתוח+בישראל">List of 
+Providers of Free and Open Source Services</a> - open for everybody. Note that
+there's a list of a similar purpose on 
+<a href="http://www.hamakor.org.il/">Hamakor's site</a> that is open only for
+individuals that are friends or members of Hamakor.
 </li>
 
 </ul>

@@ -14,10 +14,12 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
+all: make-dirs docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
 	
 include include.mak
 include rules.mak
+
+make-dirs: $(T2_DIRS_DEST) 
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
@@ -249,3 +251,5 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 %.show:
 	@echo "$* = $($*)"
 
+tidy: all
+	perl bin/run-tidy.pl

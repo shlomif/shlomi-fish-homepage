@@ -66,6 +66,7 @@ sub _init
             (eval "${class}::get_params()"),
             'ul_classes' => 
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
+            'no_leading_dot' => 1,
             );
         my $results = $nav_menu->render();
         $self->nav_menu($nav_menu);

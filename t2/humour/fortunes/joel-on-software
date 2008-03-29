@@ -921,3 +921,131 @@ for every developer who needs to design interoperable systems.
 
     -- Joel Spolsky - "Martian Headsets"
     -- http://www.joelonsoftware.com/items/2008/03/17.html
+%
+And the whole problem hinges on the little tiny decision of what IE8 should do
+when it encounters a page that claims to support “standards”, but has probably
+only been tested against IE7. 
+
+What the hell is a standard?
+
+Don’t they have standards in all kinds of engineering endeavors? (Yes.)
+
+Don’t they usually work? (Mmmm…..)
+
+Why are “web standards” so frigging messed up? (It’s not just Microsoft’s
+fault. It’s your fault too. And Jon Postel’s (1943-1998). I’ll explain that
+later.)
+
+There is no solution. Each solution is terribly wrong. Eric Bangeman at ars
+technica writes, “The IE team has to walk a fine line between tight support for
+W3C standards and making sure sites coded for earlier versions of IE still
+display correctly.” This is incorrect. It’s not a fine line. It’s a line of
+negative width. There is no place to walk. They are damned if they do and
+damned if they don’t.
+
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/03/17.html
+%
+That’s why I can’t take sides on this issue and I’m not going to. But every
+working software developer should understand, at least, how standards work, how
+standards should work, how we got into this mess, so I want to try to explain a
+little bit about the problem here, and you’ll see that it’s the same reason
+Microsoft Vista is selling so poorly, and it’s the same issue I wrote about
+when I referred to the Raymond Chen camp (pragmatists) at Microsoft vs. the
+MSDN camp (idealists), the MSDN camp having won, and now nobody can figure out
+where their favorite menu commands went in Microsoft Office 2007, and nobody
+wants Vista, and it’s all the same debate: whether you are an Idealist (”red”)
+or a Pragmatist (”blue”).
+
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/03/17.html
+%
+Imagine that you went to Mars, where you discovered that the beings who live
+there don’t have the portable music player. They’re still using boom boxes.
+
+You realize this is a huge business opportunity and start selling portable MP3
+players (except on Mars they’re called Qxyzrhjjjjukltks) and compatible
+headphones. To connect the MP3 player to the headphones, you invent a neat kind
+of metal jack that looks like this:
+
+Picture of a stereo headphone jackBecause you control the player and the
+headphone, you can ensure that your player works with your headphones. This is
+a ONE TO ONE market. One player, one headphone.
+
+    -- Joel Spolsky - "Martian Headsets"
+    -- http://www.joelonsoftware.com/items/2008/03/17.html
+%
+So far, all is well. We have a de-facto standard for headphone jacks here. The
+written spec is not complete and not adequate, but anybody who wants to make a
+compatible headphone just has to plug it into your personal stereo device and
+test it, and if it works, all is well, they can sell it, and it will work. 
+
+Until you decide to make a new version, the Qxyzrhjjjjukltk 2.0. 
+
+The Qxyzrhjjjjukltk 2.0 is going to include a telephone (turns out Marslings
+didn’t figure out cell phones on their own, either) and the headphone is going
+to have to have a built-in microphone, which requires one more conductor, so
+you rework the connector into something totally incompatible and kind of ugly,
+with all kinds of room for expansion: 
+ 
+Completely different 25-conductor connectorAnd the Qxyzrhjjjjukltk 2.0 is a
+complete and utter failure in the market. Yes, it has a nice telephone thing,
+but nobody cared about that. They cared about their large collections of
+headphones. It turns out that when I said Marslings are very particular about
+the color of things that they stick in their ears, I meant it. Most trendy
+Marslings at this point have a whole closet full of nice headphones. They all
+look the same to you (red), but Marslings are very, very finicky about shades
+of red in a way that you never imagined. The newest high-end apartments on Mars
+are being marketed with a headphone closet. I kid you not.
+    
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/03/17.html
+%
+A few years pass; you’re still selling Qxyzrhjjjjukltks like crazy; but now
+there are lots of Qxyzrhjjjjukltk clones on the market, like the open source
+FireQx, and lots of headphones, and you all keep inventing new features that
+require changes to the headphone jack and it’s driving the headphone makers
+crazy because they have to test their new designs out against every
+Qxyzrhjjjjukltk clone which is costly and time consuming and frankly most of
+them don’t have time and just get it to work on the most popular
+Qxyzrhjjjjukltk 5.0, and if that works, they’re happy, but of course when you
+plug the headphones into FireQx 3.0 lo and behold they explode in your hands
+because of a slight misunderstanding about some obscure thing in the spec which
+nobody really understands called hasLayout, and everybody understands that when
+it’s raining the hasLayout property is true and the voltage is supposed to
+increase to support the windshield-wiper feature, but there seems to be some
+debate over whether hail and snow are rain for the purpose of hasLayout,
+because the spec just doesn’t say. FireQx 3.0 treats snow as rain, because you
+need windshield wipers in the snow, Qxyzrhjjjjukltk 5.0 does not, because the
+programmer who worked on that feature lives in a warm part of Mars without snow
+and doesn’t have a driver’s license anyway. Yes, they have driver’s licenses on
+Mars.
+
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/03/17.html
+%
+And eventually some tedious bore writes a lengthy article on her blog
+explaining a trick you can use to make Qxyzrhjjjjukltk 5.0 behave just like
+FireQx 3.0 through taking advantage of a bug in Qxyzrhjjjjukltk 5.0 in which
+you trick Qxyzrhjjjjukltk into deciding that it’s raining when it’s snowing by
+melting a little bit of the snow, and it’s ridiculous, but everyone does it,
+because they have to solve the hasLayout incompatibility. Then the
+Qxyzrhjjjjukltk team fixes that bug in 6.0, and you’re screwed again, and you
+have to go find some new bug to exploit to make your windshield-wiper-equipped
+headphone work with either device. 
+
+NOW. This is the MANY-MANY market. Many players on the left hand side who don’t
+cooperate, and SCRILLIONS of players on the right hand side. And they’re all
+making mistakes because To Err Is Human.
+
+    Joel Spolsky, http://www.joelonsoftware.com/items/2008/03/17.html
+%
+If you’ve ever visited the ultra-orthodox Jewish communities of Jerusalem, all
+of whom agree in complete and utter adherence to every iota of Jewish law, you
+will discover that despite general agreement on what constitutes kosher food,
+that you will not find a rabbi from one ultra-orthodox community who is willing
+to eat at the home of a rabbi from a different ultra-orthodox community. And
+the web designers are discovering what the Jews of Mea Shearim have known for
+decades: just because you all agree to follow one book doesn’t ensure
+compatibility, because the laws are so complex and complicated and convoluted
+that it’s almost impossible to understand them all well enough to avoid traps
+and landmines, and you’re safer just asking for the fruit plate.
+
+    -- Joel Spolsky - "Martian Headsets"
+    -- http://www.joelonsoftware.com/items/2008/03/17.html

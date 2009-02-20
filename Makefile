@@ -199,6 +199,12 @@ DOCBOOK_XMLS = $(patsubst %,lib/docbook/xml/%.xml,$(DOCBOOK_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
 
+DOCBOOK_FO_DIR = lib/docbook/fo
+DOCBOOK_FOS = $(patsubst %,$(DOCBOOK_FO_DIR)/%.fo,$(DOCBOOK_DOCS))
+
+DOCBOOK_PDF_DIR = lib/docbook/pdf
+DOCBOOK_PDFS = $(patsubst %,$(DOCBOOK_PDF_DIR)/%.pdf,$(DOCBOOK_DOCS))
+
 # SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
 SCREENPLAY_DOCBOOK_HTMLS = 
 
@@ -223,14 +229,19 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST)
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS)
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
-DOCBOOK_MAK_PATH = /home/shlomi/apps/docbook-builder
+$(DOCBOOK_FO_DIR)/%.fo: lib/docbook/xml/%.xml
+	$(XMLTO_WITH_PARAMS) -o $(DOCBOOK_FO_DIR) --stringparam "docmake.output.format=fo" -m $(FO_XSLT_SS) fo $<
 
-DOCBOOK_MAK_MAKEFILES_PATH = $(DOCBOOK_MAK_PATH)/share/make/
+$(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
+	fop -fo $< -pdf $@
+
+DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
+DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
 
 include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
 

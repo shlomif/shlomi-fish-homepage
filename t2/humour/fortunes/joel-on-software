@@ -1049,3 +1049,36 @@ and landmines, and you’re safer just asking for the fruit plate.
 
     -- Joel Spolsky - "Martian Headsets"
     -- http://www.joelonsoftware.com/items/2008/03/17.html
+%
+Last week Kent Beck made a claim that you don't really need bug tracking
+databases when you're doing Extreme Programming, because the combination of
+pair programming (with persistent code review) and test driven development
+(guaranteeing 100% code coverage of the automated tests) means you hardly ever
+have bugs.
+
+Lo and behold, I discovered that very few of the bugs in there would have been
+discovered with pair programming or test driven development. Many of our "bugs"
+are really what XP calls stories -- basically, just feature requests.
+
+A lot of the other bugs were only discovered after much use in the field. The
+Polish keyboard thing. There's no way pair programming was going to find that.
+And logical mistakes that never occurred to us in the way that different
+features work together. The larger and more complex a program, the more
+interactions between the features that you don't think about. A particular
+unlikely sequence of characters ({${?, if you must know) that confuses the
+lexer. Some ftp servers produce an error when you delete a file that doesn't
+exist (our ftp server does not complain so this never occurred to us.)
+
+I carefully studied every bug. Out of 106 bugs we fixed for the service pack
+release of CityDesk, exactly 5 of them could have been prevented through pair
+programming or test driven design. We actually had more bugs that we knew about
+and thought weren't important (only to be corrected by our customers!) than
+bugs that could have been caught by XP methods.
+
+But Kent is right, for other types of development. For most corporate
+development applications, none of these things would be considered a bug.
+Program crashes on invalid input? Run it again, and this time watch your
+{${?'s! And we only have One Kind of FTP server and nobody in the whole company
+uses Polish Windows.
+
+    Joel Spolsky, http://www.joelonsoftware.com/articles/FiveWorlds.html

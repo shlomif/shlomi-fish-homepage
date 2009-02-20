@@ -12,7 +12,7 @@ my $parser = XML::LibXML->new();
 
 my $doc = $parser->parse_file($filename);
 
-my @fortunes = $doc->findnodes("//fortune[\@id='histeria-did-the-fall-hurt-you']");
+my @fortunes = $doc->findnodes("//fortune[\@id='o-and-m-smithosnian']");
 
 my $cont = 0;
 foreach my $fort (@fortunes)
@@ -60,7 +60,7 @@ foreach my $fort (@fortunes)
 
         my $content = $cdata->nodeValue();
 
-        if ($content =~ s{Excerpt from the T\.V\. show "Histeria!"[\s\n]*\z}{}ms)
+        if (1 or $content =~ s{Excerpt from the T\.V\. show "Histeria!"[\s\n]*\z}{}ms)
         {
             # Everything is OK.
             print "OK\n";

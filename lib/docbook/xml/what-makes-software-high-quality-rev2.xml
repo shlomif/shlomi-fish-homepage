@@ -1386,13 +1386,13 @@ make: *** [param.h] Error 127
         <para>
             This is relatively easy to fix, but still frustrating. Freecell
             Solver on the other hand, has been fully converted to the
-            GNU Autotools, and can be built as a static and shared library 
+            GNU Autotools, and can be built as a static and shared library
             (a.k.a DLL), as well as several proof-of-concept, but still
             usable, command line utilities that link against it.
         </para>
         <para id="quality-analysis--usability">
             Freecell Solver has very good <emphasis role="bold">usability</emphasis>: it mostly respects
-            <ulink url="http://www.catb.org/~esr/writings/taoup/">the 
+            <ulink url="http://www.catb.org/~esr/writings/taoup/">the
                 Unix conventions and best practices</ulink>,
             it can start solving from any arbitrary Solitaire board position 
             given to it as input, and has kept command line interface 
@@ -1447,12 +1447,13 @@ make: *** [param.h] Error 127
             </footnote> On the other hand, Patsolve is
             distributed
             under the
-            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL 
-                licence</ulink> which while usable is 
+            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL
+                licence</ulink> which while usable is
             considerably more restrictive than Public Domain, or BSD-style
             licences. This is also the case for
             <ulink url="http://kevin.atkinson.dhs.org/freecell/">this
-                Common Lisp solver</ulink>. Many other solvers, including
+                Common Lisp solver</ulink> by Kevin Atkinson and Shari 
+            Holstege. Many other solvers, including
             Campbell's are binary-only, "All Rights Reserved", which makes
             them a complete no-starter for most open-source applications
             out there. Furthermore, many non-open-source applications will
@@ -1497,7 +1498,10 @@ make: *** [param.h] Error 127
             solutions that are less than 200 moves. It is highly possible
             this is not the default in Freecell Pro. But like I said, there
             are many different parameters for quality than just speed
-            and solution-length.
+            and solution-length. Another fact worth of noting is that a
+            beta-tester who tried out some of the Freecell Solver solutions
+            in Freecell Pro, said that he found them to be very "creative"
+            and interesting.
         </para>
         <para id="quality-analysis--other-advantages">
             Freecell Solver has some other advantages: it is capable

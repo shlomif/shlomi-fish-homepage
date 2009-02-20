@@ -147,36 +147,36 @@ the train is travelling?
       <meta>
         <title>God is Dead</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA["God is Dead"
+      <quote>
+          <body>
+              <p>"God is Dead"</p>
 
-    Neitzsche 
+              <p>-- Neitzsche </p>
 
-"Neitzsche is Dead"
+              <p>"Neitzsche is Dead"</p>
 
-    God
+              <p>-- God</p>
 
-( writing on a toilet's wall )
-]]></text>
+              <p>( writing on a toilet's wall )</p>
         </body>
         <info/>
-      </raw>
+      </quote>
     </fortune>
     <fortune id="wittgenstein-1">
       <meta>
         <title>A serious Philosophical Work</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[A serious and good philosophical work could be written that would consist
-entirely of jokes.
+          <p>A serious and good philosophical work could be written that would consist
+              entirely of jokes.</p>
 	
-	Ludwig Wittgenstein
-]]></text>
+          <p>-- Ludwig Wittgenstein</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Ludwig Wittgenstein</author>
+        </info>
+      </quote>
     </fortune>
     <fortune id="diff-between-good-and-bad-students">
       <meta>
@@ -196,7 +196,7 @@ student five minutes after it.
       <meta>
         <title>Histeria! - "did the Fall Hurt You?"</title>
       </meta>
-      <raw>
+      <raw><!-- TODO : screenplay -->
         <body>
           <text><![CDATA[[Isaac Newton falls off the tree]
 
@@ -223,6 +223,7 @@ Newton: It wasn't the fall; it was the sudden stop at the end.
         </body>
         <info>
             <author>Donald Knuth</author>
+            <work href="http://www-cs-staff.stanford.edu/~uno/faq.html">Memo to Peter van Emde Boas</work>
         </info>
       </quote>
     </fortune>
@@ -230,77 +231,90 @@ Newton: It wasn't the fall; it was the sudden stop at the end.
       <meta>
         <title>Stallmanism vs. Stalinism</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[> > "It's not because they have suddenly converted to Stallmanism."
+            <p>&gt; &gt; "It's not because they have suddenly converted to Stallmanism."</p>
 
-> Anyone else misread that as "Stalinism"? 
+            <p>&gt; Anyone else misread that as "Stalinism"?</p>
 
-The word "Stalinism" is deprecated, the correct term is "GNU/Communism".
+            <p>The word "Stalinism" is deprecated, the correct term is "GNU/Communism".</p>
 
-	Spotted on Slashdot
-]]></text>
+            <p>-- Spotted on Slashdot</p>
         </body>
-        <info/>
-      </raw>
+        <info/><!-- TODO : Find the link on Slasdhot -->
+      </quote>
     </fortune>
     <fortune id="slashdot-creative-shells">
       <meta>
         <title>Slashdot: Creative Shells</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Personally, I'd have a far better time writing scripts if I had some more
-creative shells to script in...
+            <p>
+                Personally, I'd have a far better time writing scripts if I had some more
+                creative shells to script in...</p>
 
-ASMsh: The Assembly shell. Commands include MOV, SHL, SHR, JNE, etc.
+            <p>
+                ASMsh: The Assembly shell. Commands include MOV, SHL, SHR, JNE, etc.
+                </p>
 
+                <p>
 shellTM: Turing machine shell. Only four commands. Read, write, move left,
 move right. Capable of producing any programming language imaginable, given
 enough time and nerves of steel.
+</p>
 
+<p>
 GeneSH: Four commands. G, A, T, C. Need I say more?
+</p>
 
+<p>
 Qsh: Only uses one environment variable, which contains all possible values
 simultaneously. Method of scripting: isolate the universe in which the
 desired result is already accomplished, and intersect with it.
+</p>
 
+<p>
 Of course, I never said they'd be easy to use. But then, if these shells
 existed, and I knew a sysadmin who used any of them, you can believe
 Sysadmin Day would be a far more celebrated holiday. 
-    
+</p>
+
+<p>
 	The Night Watchman on a Slashdot Comment
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info/><!-- TODO : Find the link on Slasdhot -->
+      </quote>
     </fortune>
     <fortune id="mission-from-god">
       <meta>
         <title>Mission from God</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[We're on a mission from God.
+            <p>We're on a mission from God.</p>
 
-	The Blues Brothers
-]]></text>
+            <p>-- The Blues Brothers</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Dan Aykroyd and John Landis</author>
+            <work href="http://en.wikiquote.org/wiki/Blues_brothers">"The Blues Brothers"</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sitting-doing-nothing">
       <meta>
         <title>Sitting Here Doing Nothing</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[It may look like I'm just sitting here doing nothing, but I'm really 
+      <quote>
+          <body>
+          <p>It may look like I'm just sitting here doing nothing, but I'm really 
 actively waiting for all my problems to go away.
-]]></text>
+</p>
         </body>
         <info/>
-      </raw>
+      </quote>
     </fortune>
     <fortune id="have-heard-it-before">
       <meta>

@@ -20,6 +20,7 @@ use base 'Class::Accessor';
 use HTML::Widgets::NavMenu;
 
 __PACKAGE__->mk_accessors(qw(
+    bottom_code
     current_host
     empty
     menu
@@ -40,6 +41,7 @@ sub _init
     $self->empty(0);
     $self->current_host($args{current_host});
     $self->root($args{root});
+    $self->bottom_code($args{bottom_code});
 
     my $current_sect;
     SECTION_LOOP: foreach my $sect (@{$self->sections()})
@@ -95,13 +97,18 @@ sub get_html
     }
     else
     {
-        return qq{<div class="sub_menu">\n} .
+        return 
+            qq{<div class="menu_floaty">} .
+            qq{<div class="sub_menu">\n} .
             qq{<h2>} . $self->title() . qq{</h2>\n} .
             $self->get_nav_links() .
             qq{<a id="toggle_sect_menu" href="javascript:toggle_sect_menu()" class="toggle_sect_menu">Hide</a>\n} .
             qq{<div id="sect_menu_wrapper">\n} .
             join("\n", @{$self->results()->{html}}) .
-            qq{\n</div>\n</div>\n};
+            qq{\n</div>\n} .
+            qq{\n</div>\n} .
+            (defined($self->bottom_code()) ? $self->bottom_code() : "") .
+            qq{\n</div>\n};
     }
 }
 

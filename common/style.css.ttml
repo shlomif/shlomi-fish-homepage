@@ -134,18 +134,22 @@ ul.nospace
     margin-top: 3pt;
     margin-bottom: 7pt;
 }
+.menu_floaty
+{
+    float: right;
+    width:25%;
+    min-width:275px;
+    margin-left: 7pt;
+    margin-right: 10pt;
+}
 .sub_menu
 {
     background-color: #C0C0C0;
     padding-top: 7pt;
     padding-bottom: 7pt;
-    float: right;
-    margin-left: 7pt;
-    margin-right: 10pt;
     padding-right:5pt;
     padding-left:5pt;
-    width:25%;
-    min-width:275px;
+    margin-bottom: 1em;
 }
 .sub_menu ul
 {

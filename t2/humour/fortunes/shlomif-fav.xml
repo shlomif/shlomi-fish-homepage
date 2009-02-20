@@ -662,20 +662,24 @@ to fail.
       <meta>
         <title>ESR: "To follow the Path"</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[To follow the path:
-look to the master,
-follow the master,
-walk with the master,
-see through the master,
-become the master.
+            <p>To follow the path:<br />
+                look to the master,<br />
+                follow the master,<br />
+                walk with the master,<br />
+                see through the master,<br />
+                become the master.</p>
 
+<p>
 	Eric S. Raymond in "How To Become a Hacker"
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Eric Raymond</author>
+            <work href="http://www.catb.org/~esr/faqs/hacker-howto.html">How to Become a Hacker</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-gimp-manipulate-svgs">
       <meta>
@@ -706,50 +710,57 @@ become the master.
       <meta>
         <title>Hanah Senesh: Walk to Caesarea</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[My God, My God, 
-May it never, never end. 
-The sand and the sea, 
-the jitter of the water, 
-the shine of the sky, 
-the prayer of Man.
+            <p>My God, My God, <br/>
+                May it never, never end. <br/>
+                The sand and the sea, <br/>
+                the jitter of the water, <br/>
+                the shine of the sky, <br/>
+                the prayer of Man.
+            </p>
 
-	"A Walk to Caesarea" / Hanah Senesh
-	( Translated from Hebrew by Shlomi Fish )
-]]></text>
+            <p>"A Walk to Caesarea" / Hanah Senesh<br />
+	( Translated from Hebrew by Shlomi Fish )</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Hanah Senesh</author>
+            <work>Walk to Caesarea</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="without-artifice-for-magic">
       <meta>
         <title>"I am not without artifice where magic is concerned…"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA['You must know that I am not without artifice where magic is concerned,'
+      <quote>
+          <body>
+
+            <p>'You must know that I am not without artifice where magic is 
+                concerned,'
 said Weasel. 'Only last year did I - assisted by my friend there - part
 the notoriously powerful Archmage of Ymitury from his staff, his belt of
 moon jewels, and his life, in that approximate order.'
-
-	Excerpt from "The Colour of Magic" / Terry Pratchett
-]]></text>
-        </body>
-        <info/>
-      </raw>
+</p>
+           </body>
+           <info>
+               <author>Terry Pratchett</author>
+               <work href="http://en.wikipedia.org/wiki/The_Colour_of_Magic">The Colour of Magic</work>
+           </info>
+      </quote>
     </fortune>
     <fortune id="linus-about-security-of-sha1">
       <meta>
         <title>Linus Torvalds about the SHA1 Security</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[If we want to have any kind of confidence that the hash is really
+            <p>If we want to have any kind of confidence that the hash is really
 unbreakable, we should make it not just longer than 160 bits, we should
 make sure that it's two or more hashes, and that they are based on totally
-different principles.
+different principles.</p>
 
+<p>
 And we should all digitally sign every single object too, and we should
 use 4096-bit PGP keys and unguessable passphrases that are at least 20
 words in length. And we should then build a bunker 5 miles underground,
@@ -757,26 +768,32 @@ encased in lead, so that somebody cannot flip a few bits with a ray-gun,
 and make us believe that the sha1's match when they don't. Oh, and we need 
 to all wear aluminum propeller beanies to make sure that they don't use 
 that ray-gun to make us do the modification _ourselves_.
-
-	Linus Torvalds in http://lwn.net/Articles/132513/
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://lwn.net/Articles/132513/">Message to the git mailing list</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="neo-tech-about-capitalism">
       <meta>
         <title>Neo-Tech: About Capitalism</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[The dictionary definition of capitalism is: An economic system characterized
+      <quote>
+          <body>
+              <p>
+          The dictionary definition of capitalism is: An economic system characterized
 by private ownership of capital goods and by investments that are determined
 by private decision rather than by state control. Prices, production and
 distribution of goods are determined by a free market. 
+</p>
 
+<p>
 ...
+</p>
 
+<p>
 But most writers and commentators put dishonest altruistic-platonistic
 connotations on the meaning of capitalism: A system of exploitation of the
 weak by the strong -- devoid of love and good will. A system in which
@@ -784,81 +801,93 @@ unwanted goods and services are pushed onto consumers through clever,
 deceptive advertising for the sole purpose of profits and greed. Capitalism
 dominates most Western governments. Capitalism, big business, and fascism
 are synonymous.
+</p>
 
-	Neo-Tech IV / The Neo-Tech Discovery.
-]]></text>
+<p>
+    Neo-Tech IV / The Neo-Tech Discovery.
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Frank R. Wallace</author>
+            <work href="http://xrl.us/bmszm">Neo Tech IV</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="linus-people-who-disagree">
       <meta>
         <title>"People who disagree with me…"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Which mindset is right? Mine, of course. People who disagree with me are by
+      <quote>
+          <body>
+              <p>
+          Which mindset is right? Mine, of course. People who disagree with me are by
 definition crazy. (Until I change my mind, when they can suddenly become
 upstanding citizens. I'm flexible, and not black-and-white.)
+</p>
 
-	Linus Torvalds in 
-	http://os.newsforge.com/article.pl?sid=05/06/09/2128249
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://www.linux.com/articles/45571">Linus compares Linxu and BSDs</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="one-bug-two-bugs">
       <meta>
         <title>One bug, two bugs, tar bugs, su bugs,</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[One bug, two bugs, tar bugs, su bugs,
-   grep bugs, mew bugs, old bugs, new bugs.
-This bug has a little hack,
- This bug has a broken stack.
-   Say! What a lot of bugs to track. 
-Yes, some are in tar, and some in su.
-   Some are old. And some are new. 
-Some in sed, and some in jed.
-   And some are even in parted.
- Why are they in parted, jed and sed?
-   I do not know. Bugs should be dead! 
-Some in jpeg, and some in TIFF
-   This TIFF one has an attached diff. 
-From there to here, from here to there   
-Test release bugs are everywhere.
-
-	From the Fedora Core 2 Release Notes.
-]]></text>
+      <quote>
+          <body>
+              <p>
+                  One bug, two bugs, tar bugs, su bugs,<br/>
+                  grep bugs, mew bugs, old bugs, new bugs.<br/>
+                  This bug has a little hack,<br/>
+                  This bug has a broken stack.<br/>
+                  Say! What a lot of bugs to track. <br/>
+                  Yes, some are in tar, and some in su.<br/>
+                  Some are old. And some are new. <br/>
+                  Some in sed, and some in jed.<br/>
+                  And some are even in parted.<br/>
+                  Why are they in parted, jed and sed?<br/>
+                  I do not know. Bugs should be dead! <br/>
+                  Some in jpeg, and some in TIFF<br/>
+                  This TIFF one has an attached diff. <br/>
+                  From there to here, from here to there   <br/>
+                  Test release bugs are everywhere.
+              </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Red Hat Inc. Fedora Workers</author>
+            <work href="http://linux.derkeiler.com/Newsgroups/linux.redhat.misc/2004-03/0327.html">Fedora Core 2 Test 2 available for x86 and x86-64</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="charlene-sweet-life">
       <meta>
         <title>Charlene: The Sweet Life</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA["I took the sweet life 
-but I never knew 
-I'd be bitter from the sweet"
-
-	-- Never Been to Me / Charlene
-]]></text>
+      <quote>
+          <body>
+              <p>
+                  "I took the sweet life<br/>
+                  but I never knew<br/>
+                  I'd be bitter from the sweet"
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Charlene</author>
+            <work href="http://en.wikipedia.org/wiki/I've_Never_Been_to_Me">I've Never Been to Me</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="neo-tech-fully-integrated-honesty">
       <meta>
         <title>Neo-Tech: Fully Integrated Honesty</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Yet, acting on fully integrated honesty (Neo-Tech), not reason itself, is
+      <quote>
+          <body>
+              <p>
+          Yet, acting on fully integrated honesty (Neo-Tech), not reason itself, is
 the basic moral act. When Genghis Khan, for example, chose to use reasoning
 for a specific military move, then in an out-of-context sense, he chose to
 act morally by protecting himself and his troops (thus filling human
@@ -869,83 +898,106 @@ The highly destructive, irrational immorality of Genghis Khan's overall
 dictatorial military actions far outweighed any narrow, out-of-context
 "moral" actions. ...Genghis Khan was enormously evil as were Stalin, Hitler,
 Mao, Castro, Pol Pot.
+</p>
 
-	Neo-Tech Orientation and Definitions
-	http://www.neo-tech.com/orientation/
-]]></text>
+<p>
+    Neo-Tech Orientation and Definitions<br />
+    http://www.neo-tech.com/orientation/
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Frank R. Wallace</author>
+            <work href="http://www.shlomifish.org/n-t-/neo-tech/Neo-Tech/orientation.html">Neo Tech Orientation and Definitions</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="chromatic-ruby-code-cant-be-bad">
       <meta>
         <title>chromatic: "Ruby Code Can't Be Bad"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Why are there so many unmaintainable applications written in PHP and Perl?
+      <quote>
+          <body>
+              <p>
+          Why are there so many unmaintainable applications written in PHP and Perl?
 Because PHP and Perl let undisciplined, inexperienced programmers write
 useful code. So does Ruby -- but give it the popularity and longevity of PHP
 and Perl (at least in English-speaking circles) and I bet you'll see plenty
 of bad code written in Ruby too.
+</p>
 
+<p>
 This seems like a variant of the Hackers and Painters fallacy. (Paul Graham
 is rich. Paul Graham writes Lisp. Therefore everyone who writes Lisp will
 get rich.) "All of the good, smart programmers I know are using Ruby. They
 write good code. Therefore you can't write bad code in Ruby!"
+</p>
 
+<p>
 It feels like there's another fallacy in there somewhere. I want to call it
 the Pre-Post-Java Blindspot, where Java was the beginning of Serious
 Programming Languages and only its successor will unseat it. (Like any good
 fallacy, you have to ignore history, such as the fact that Ruby's between 10
 and 12 years old.)
+</p>
 
+<p>
 (I mean, if you really just can't read regular expressions, why not admit
 it? You could start a twelve-step program or something.)
-
-	chromatic in http://xrl.us/iyzb
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>chromatic</author>
+            <work href="http://www.advogato.org/person/chromatic/diary.html?start=237">Blog Post for 17-Novemeber-2005</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sheep-in-big-city-plot-device">
       <meta>
         <title>I Upgraded the Plot Device's…</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[I have upgraded the plot device's hard-drive, soft-drive and squishy drive,
-and it is now being the world's most powerful super-computer!
+      <quote>
+          <body>
+              <p>
+            I have upgraded the plot device's hard-drive, soft-drive and squishy
+            drive,and it is now being the world's most powerful super-computer!
+            </p>
 
-	The Angry Scientist in "Sheep in the Big City"
-]]></text>
+            <p>
+                The Angry Scientist in "Sheep in the Big City"
+            </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Mo Willems</author>
+            <work href="http://en.wikipedia.org/wiki/Sheep_in_the_Big_City">Sheep in the Big City</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="affairs-of-dragons">
       <meta>
         <title>Affairs of Dragons</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Do not meddle in the affairs of Dragons, for you are crunchy and taste good
-with ketchup.
+      <quote>
+          <body>
+              <p>
+          Do not meddle in the affairs of Dragons, for you are crunchy and taste good
+          with ketchup.
+          </p>
 
-	Source unknown.
-]]></text>
+          <p>
+              Source unknown.
+          </p>
         </body>
         <info/>
-      </raw>
+      </quote>
     </fortune>
     <fortune id="stroustrup-about-java">
       <meta>
         <title>Bjarne Stroustrup about Java</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Much of the relative simplicity of Java is - like for most new languages -
+      <quote>
+          <body>
+              <p>
+          Much of the relative simplicity of Java is - like for most new languages -
 partly an illusion and partly a function of its incompleteness. As time
 passes, Java will grow significantly in size and complexity. It will double
 or triple in size and grow implementation-dependent extensions or libraries.
@@ -953,30 +1005,35 @@ That is the way every commercially successful language has developed. Just
 look at any language you consider successful on a large scale. I know of no
 exceptions, and there are good reasons for this phenomenon. [I wrote this
 before 2000; now see a preview of Java 1.5 - http://xrl.us/kb3a ] 
-
-	Bjarne Stroustrup in 
-	http://public.research.att.com/~bs/bs_faq.html#Java
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Bjarne Stroustrup</author>
+            <work href="http://public.research.att.com/~bs/bs_faq.html#Java">F.A.Q. Entry about Java</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="uncyclopedia-redundancy">
       <meta>
         <title>Oscar Wilde on Redundancy (from the Uncyclopedia)</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA["I simply hate, detest, loathe, despise, and abhor redundancy."
+      <quote>
+          <body>
+              <p>
+                  "I simply hate, detest, loathe, despise, and abhor redundancy."
+                  </p>
 
+                  <p>
 An Oscar Wilde quote, that quotes Oscar Wilde on his views on Redundancy
 in a quote.
+</p>
 
-	http://uncyclopedia.org/wiki/Redundancy
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Uncyclopedia</author>
+            <work href="http://uncyclopedia.org/wiki/Redundancy">Uncyclopedia entry about Redundancy</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="dailywtf-marketing-speak-1">
       <meta>

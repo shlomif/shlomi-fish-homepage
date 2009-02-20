@@ -2,13 +2,211 @@
 
 #include "xhtml/1.x/std/toc.wml"
 
-<latemp_subject "Why Closed Books Are So 19th-Century" />
+<latemp_subject "Why Closed Books are So 19th-Century" />
 
 <h2* id="toc">Table of Contents</h2*>
 
 <toc />
 
+<h2 id="intro">Abstract</h2>
+
+<p>
+This document will explain why it is a bad idea, in this day and age, to write
+a book that is not available online for everyone to see, link to, redistribute,
+and possibly modify.
+</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>
+Recently Ask Bjørn Hansen (of perl.org and Perl fame) has <a 
+href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html">reviewed
+the book "JavaScript: The Good Parts"</a> on his blog. I <a href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html#comment-2055840">wrote</a> the following
+comment:
+</p>
+
+<blockquote>
+<p>
+Hi Ask!
+</p>
+
+<p>
+Interesting. Is this book available online for free?
+</p>
+
+<p>
+Regards,
+</p>
+
+<p>
+Shlomi Fish
+</p>
+</blockquote>
+
+<p>
+To which he <a href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html#comment-2056988">replied</a>:
+</p>
+
+<blockquote>
+    <p>
+    Why would it be available for free?
+    </p>
+
+    <p>
+    Please support the publisher and the author by paying them the $20 (Amazon 
+    US) or the £13 (Amazon UK) to buy the book.
+    </p>
+
+    <p>
+     - ask
+    </p>
+</blockquote>
+
+<p>
+This essay is my reply to that.
+</p>
+
 <h2 id="intro">Introduction</h2>
+
+<p>
+Since the invention of the Press, the traditional method of spreading knowledge
+was to write a book, and get a publisher to publish it. Indeed, we can recall
+many important and influential historical books. However, as computer
+networking became faster, less error-prone, more ubiquitous, a different
+medium of communicating knowledge has emerged: the Internet. To 
+<a href="http://www.boingboing.net/2004/11/06/save-canadas-interne.html">quote
+    Cory Doctorow</a>:
+</p>
+
+<define-tag book_examples>
+<a href="http://en.wikipedia.org/wiki/Philosophiæ_Naturalis_Principia_Mathematica">Isaac 
+    Newton's "Prinicipia"</a>, 
+<a href="http://en.wikipedia.org/wiki/The_Origin_of_Species">Charles 
+    Darwin's "The Origin of the Species"</a>,
+<a href=""></a>
+</define-tag>
+
+<blockquote>
+    <p>
+    The Internet has one overarching feature that makes it superior to the
+    technologies that preceded it: it can copy arbitrary blobs of data from one
+    place to another at virtually no cost, in virutally no time, with virtually
+    no control. This is not a bug. This is what the Internet is supposed to do.
+    </p>
+</blockquote>
+
+<p>
+As a result, more and more people depend on the Internet for getting 
+information, and getting more knowledge and understanding. Not only does the
+Internet allows information to be retrieved, it also allows one to publish
+information and collaborate on it. Perhaps the most prominent examples for
+that are the various <a href="http://www.wikimedia.org/">Wikimedia projects</a>
+of which <a href="http://en.wikipedia.org/">the English wikipedia is the
+    largest and most popular</a>. Thousands of large-scale, and 100's of 
+thousands minor contributors, have individually created an online encyclopedia
+that contains mostly comprehensive information about practically every
+imaginable topic.
+</p>
+
+<p>
+And despite all that, we can often see that books are getting published
+on paper, and either completely not available online, or their free 
+re-distribution is restricted. They are often available on
+Peer-to-Peer networks or illegally, but their use is still restricted,
+and complicates things.
+</p>
+
+<p>
+In this article, I'd like to note why non-open books (or at least books that
+are not available online) are as pointless as 
+<a href="$(ROOT)/philosophy/foss-other-beasts/">non-open-source 
+    software</a>.
+</p>
+
+<h2 id="some-quotes">Some Quotes</h2>
+
+<p>
+In my older essay <a href="$(ROOT)/philosophy/case-for-file-swapping/">the
+    Case for File Swapping</a>, I made the claim that while copyrights are
+an important concept, the Law must not resrict non-commercial distribution
+of copyrighted works. Naturally, due to a generation gap, and the fact that
+governments and copyright-owners have not yet gived in to the fact that the
+Internet practically changes the ability to regulate the free distribution
+of copyrighted material, the Law was still not modified accordingly.
+</p>
+
+<p>
+As producers of copyrightable works it is therefore our choice whether
+what we generate will be available online for all the public to experience
+(and possibly re-distribute and enhance) or that we'd rather make it an 
+"All-Rights-Reserved" document that is only available offline or illegally.
+</p>
+
+<p>
+Here's what Paul Graham wrote about online encyclopedias:
+</p>
+
+<blockquote>
+    <p>
+    The second big element of Web 2.0 is democracy. We now have several
+    examples to prove that <a 
+        href="http://www.paulgraham.com/opensource.html">amateurs</a> can 
+    surpass professionals, when they have
+    the right kind of system to channel their efforts. <a 
+        href="http://wikipedia.org/">Wikipedia</a> may be the
+    most famous. Experts have given Wikipedia middling reviews, but they miss
+    the critical point: it's good enough. And it's free, which means people
+    actually read it. On the web, <b>articles you have to pay for might as well
+        not exist</b>. Even if you were willing to pay to read them yourself, 
+    you can't link to them. They're not part of the conversation.
+    </p>
+</blockquote>
+
+<p>
+Graham continues to <a 
+    href="http://www.paulgraham.com/opensource.html">say that</a>:
+</p>
+
+<blockquote>
+<p>
+One measure of the incompetence of newspapers is that so many still make you register to read stories. I have yet to find a blog that tried that.
+</p>
+</blockquote>
+
+<p>
+Mr. Graham is not the only or the first one to say things along this line. <a 
+    href="http://catb.org/~esr/">Eric S. Raymond</a> have written his
+<a href="http://catb.org/~esr/faqs/hacker-howto.html">"How 
+    to Become a Hacker"</a> (where "Hacker" is a software enthusiast and not
+a computer intruder), and has been propagating similar ideas in
+<a href="http://catb.org/~esr/writings/cathedral-bazaar/">his "The Cathedral
+    and the Bazaar"</a> series of essays (an older version of which was 
+also published as a paperback book). <a 
+    href="http://catb.org/~esr/faqs/hacker-howto.html#believe2">Quoting</a>
+from the howto:
+</p>
+
+<blockquote>
+
+    <p> 2. No problem should ever have to be solved twice.  </p>
+
+    <p> Creative brains are a valuable, limited resource. They shouldn't be
+    wasted on re-inventing the wheel when there are so many fascinating new
+    problems waiting out there.  </p>
+
+    <p> To behave like a hacker, you have to believe that the thinking time of
+    other hackers is precious — so much so that it's almost a moral duty for
+    you to share information, solve problems and then give the solutions away
+    just so other hackers can solve new problems instead of having to
+    perpetually re-address old ones.  </p>
+
+</blockquote>
+
+<p>
+Now, if you ask me, publishing a non-open book is a classical example of 
+requiring other people to solve the problem you've solved again, because they
+cannot share their work with other people.
+</p>
 
 <h2 id="meta_info">Meta Information</h2>
 
@@ -17,8 +215,8 @@
 <dd><a href="http://www.shlomifish.org/">Shlomi Fish</a></dd>
 <dt>Publication Date:</dt>
 <dd>28-May-2008</dd>
-<dt>Last Updatd:</dt>
-<dd>17-Decemeber-2005</dd>
+<dt>Last Updated:</dt>
+<dd>FILL IN</dd>
 <dt>Licence:</dt>
 <dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</a> (or at your option, any later version).<!--/Creative Commons License--></dd>
 </dl>

@@ -1,6 +1,6 @@
 include fortunes-list.mak
 
-VER = 0.10.114
+VER = 0.10.115
 
 DIST_BASE = fortunes-shlomif
 
@@ -20,6 +20,8 @@ INDEX_FILE = index.html
 
 VERSION_FILE = ver.txt
 
+.PHONY: all test html distdir upload list_files
+
 all: dist test
 
 $(DATS):: %.dat : %
@@ -28,13 +30,22 @@ $(DATS):: %.dat : %
 test: $(DATS)
 	@fortune -e $(FILES)
 	
-dist: $(PACKAGE_BASE) list-files
+dist: $(PACKAGE_BASE) list_files
 
 html: $(INDEX_FILE)
 
-$(PACKAGE_BASE): $(DATS) Makefile $(VERSION_FILE)
+EXTRA_FILES = Makefile fortunes-list.mak
+
+PACKAGE_DEPS = $(DATS) $(EXTRA_FILES) $(VERSION_FILE)
+
+distdir: $(DIST_DIR)
+
+$(DIST_DIR): $(PACKAGE_DEPS)
 	mkdir $(DIST_DIR)
-	cp $(FILES) $(DATS) Makefile $(DIST_DIR)
+	cp $(FILES) $(DATS) $(EXTRA_FILES) $(DIST_DIR)
+
+$(PACKAGE_BASE): $(PACKAGE_DEPS)
+	@make distdir
 	tar -czvf $(PACKAGE_BASE) $(DIST_DIR)
 	rm -fr $(DIST_DIR)
 
@@ -50,8 +61,12 @@ upload: dist
 print_package_base:
 	@echo $(PACKAGE_BASE)
 
-list-files:
-	@perl -le 'print "FORTUNES_ARCS_LIST = " . join(" ", glob("fortunes-shlomif-*.tar.gz"))' > arcs-list.mak
+ARCS_LIST_INCLUDE = arcs-list.mak
+
+list_files: $(ARCS_LIST_INCLUDE)
+
+$(ARCS_LIST_INCLUDE): $(VERSION_FILE)
+	@perl -le 'print "FORTUNES_ARCS_LIST = " . join(" ", glob("fortunes-shlomif-*.tar.gz"))' > $@
 
 xhtmls: $(XHTMLS)
 

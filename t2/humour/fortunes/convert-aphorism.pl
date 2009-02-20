@@ -7,7 +7,7 @@ use XML::LibXML;
 
 my ($id) = @ARGV;
 
-my $filename = "shlomif.xml";
+my $filename = "shlomif-fav.xml";
 
 my $parser = XML::LibXML->new();
 

@@ -3542,21 +3542,26 @@ come along and say this, that's not a bad thing.
       <meta>
         <title>Linux Kernel Module's Programmer Guide: Beginning Programmers</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[When the first caveman programmer chiseled the first program on the walls of
+            <p>When the first caveman programmer chiseled the first program on the walls of
 the first cave computer, it was a program to paint the string `Hello, world' in
 Antelope pictures. Roman programming textbooks began with the `Salut, Mundi'
 program. I don't know what happens to people who break with this tradition, but
 I think it's safer not to find out. We'll start with a series of hello world
 programs that demonstrate the different aspects of the basics of writing a
 kernel module.
+</p>
 
-    -- Ori Pomerantz in http://tldp.org/LDP/lkmpg/2.4/html/x149.html
-]]></text>
+<p>
+
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Ori Pomerantz</author>
+            <work href="http://tldp.org/LDP/lkmpg/2.4/html/x149.html">Linux Kernel Module's Programmer Guide</work>
+        </info>
+
+      </quote>
     </fortune>
     <fortune id="chromatic-program-vs-script-1">
       <meta>

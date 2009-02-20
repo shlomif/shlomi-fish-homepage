@@ -413,9 +413,10 @@ from a few technologies that turned out to be real stinkers.
       <meta>
           <title>Paul Graham: Java Aims Low</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[2. It's aimed low. In the original Java white paper, Gosling explicitly says
+      <quote>
+          <body>
+              <p>
+          2. It's aimed low. In the original Java white paper, Gosling explicitly says
 Java was designed not to be too difficult for programmers used to C. It was
 designed to be another C++: C plus a few ideas taken from more advanced
 languages. Like the creators of sitcoms or junk food or package tours,
@@ -423,13 +424,13 @@ Java's designers were consciously designing a product for people not as
 smart as them. Historically, languages designed for other people to use have
 been bad: Cobol, PL/I, Pascal, Ada, C++. The good languages have been those
 that were designed for their own creators: C, Perl, Smalltalk, Lisp.
-
-	Paul Graham
-	Java's Cover - http://www.paulgraham.com/javacover.html
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Paul Graham</author>
+            <work href="http://www.paulgraham.com/javacover.html">Java's Cover</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="paul-graham-wrong-people-like-java">
       <meta>

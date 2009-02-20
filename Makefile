@@ -201,6 +201,7 @@ DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOC
 DOCBOOK_INSTALLED_XMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).xml)
 DOCBOOK_INSTALLED_RTFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).rtf)
 DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc))
+DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
 
 # DOCBOOK_DOCS = \
 # 	case-for-drug-legalisation \
@@ -256,7 +257,7 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -268,7 +269,7 @@ $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 
 $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
-	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR) $<
+	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR)  $<
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
 	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $@ xhtml $<
@@ -300,7 +301,7 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls
+.PHONY: install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs
 
 install_docbook_pdfs: make-dirs $(DOCBOOK_INSTALLED_PDFS)
 
@@ -309,7 +310,9 @@ install_docbook_xmls: make-dirs $(DOCBOOK_INSTALLED_XMLS)
 install_docbook_rtfs: make-dirs  $(DOCBOOK_INSTALLED_RTFS)
 
 install_docbook_individual_xhtmls: make-dirs $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS)
-	
+
+install_docbook_css_dirs: make-dirs $(DOCBOOK_INSTALLED_CSS_DIRS)
+
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 $(DOCBOOK_INSTALLED_PDFS) : $(DOCBOOK_PDFS)
@@ -323,3 +326,6 @@ $(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
 	rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+
+$(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
+	rsync -r -v $< $@

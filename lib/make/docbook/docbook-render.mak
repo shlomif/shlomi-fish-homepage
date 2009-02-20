@@ -8,7 +8,7 @@ DOCMAKE_DSSSL_PATH = $(DOCMAKE_SGML_PATH)/dsssl-stylesheets
 
 DB2_DSSSL_SS = $(DOCMAKE_DSSSL_PATH)/shlomif-essays.dsl
 
-DB2_COMMON_FLAGS = -c /etc/sgml/catalog
+DB2_COMMON_FLAGS = -c /etc/sgml/catalog -l /usr/share/sgml/xml.dcl
 DB2_PRINT_FLAGS = $(DB2_COMMON_FLAGS) -d '$(DB2_DSSSL_SS)\#print'
 DB2_HTML_FLAGS = $(DB2_COMMON_FLAGS) -d '$(DB2_DSSSL_SS)\#html'
 

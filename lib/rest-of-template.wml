@@ -364,8 +364,15 @@ td { vertical-align : top; }
     />
 </latemp_extra_head_elements>
 
+<latemp_before_main_title>
+;;; For the Hebrew layout.
+<if "<get-var rtl_layout />" "<div class="hebrew">" />
+</latemp_before_main_title>
+
 <latemp_after_body>
 <add_this_button /><br />
 <google_adsense_code_after_text />
+;;; For the div class=hebrew.
+<if "<get-var rtl_layout />" "</div>" />
 </latemp_after_body>
 

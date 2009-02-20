@@ -1,11 +1,8 @@
-
+<set-var rtl_layout="1" />
 #include "../template.wml"
 #include "xhtml/1.x/std/toc.wml"
 #include <utils.wml>
 
-<latemp_before_main_title>
-<div class="hebrew">
-</latemp_before_main_title>
 
 <latemp_subject "בעד הלגליזציה של הסמים" />
 
@@ -368,7 +365,3 @@ This work is licensed under the <a href="http://creativecommons.org/licenses/by/
 </p>
 </li>
 </ul>
-
-# for <div class="hebrew">
-</div>
-

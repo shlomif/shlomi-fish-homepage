@@ -1,5 +1,10 @@
+
 #include '../template.wml'
 #include "xhtml/1.x/std/toc.wml"
+<he>
+<set-var rtl_layout="1" />
+</he>
+
 <en>
 
 <latemp_subject "About Myself" />
@@ -421,9 +426,4 @@ I hope you enjoy my web-site!
 <p class="heb_indent">
 <b>שלומי פיש</b>
 </p>
-</he>
-
-<he>
-# for <div class="hebrew">
-</div>
 </he>

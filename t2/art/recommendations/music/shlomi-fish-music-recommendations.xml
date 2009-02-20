@@ -1,5 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?xml-stylesheet type="text/xml" href="product-syndication.xsl"?>
 <!DOCTYPE comparison SYSTEM "product-syndication.dtd">
 <!--
 ;;; To add:
@@ -50,6 +49,12 @@ Added:
             <desc appendtoc="1">
                 <p>
                     These are my favourite popular music CDs.
+                    <a 
+                        href="shlomi-fish-music-recommendations.xml">The 
+                        source</a> used to generate this page can be converted
+                    to HTML
+                    using the <a 
+                        href="http://search.cpan.org/dist/XML-Grammar-ProductsSyndication/">XML-Grammar-ProductsSyndication</a> CPAN module.
                 </p>
             </desc>
             <prod id="beatles_red_album">

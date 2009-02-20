@@ -17,6 +17,7 @@ DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 all: make-dirs docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
 
 include lib/make/gmsl/gmsl
+include lib/make/fortunes/fortunes-list.mak
 	
 include include.mak
 include rules.mak
@@ -33,7 +34,7 @@ FORTUNES_TARGET = $(T2_DEST)/humour/fortunes/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
 
-fortunes-target: $(FORTUNES_TARGET)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls
 
 # t2 macros
 
@@ -330,3 +331,17 @@ $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
 
 $(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	rsync -r -v $< $@
+
+FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
+
+FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
+FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
+FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
+
+fortunes-compile-xmls: $(FORTUNES_XHTMLS)
+
+$(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml
+	bash $(T2_FORTUNES_DIR)/run-validator.bash $<
+	perl $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $< $@
+	# This is to make sure we compile the .html.wml again.
+	touch $(patsubst %.xml,%.html.wml,$<)

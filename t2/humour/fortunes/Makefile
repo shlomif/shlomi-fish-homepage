@@ -6,16 +6,6 @@ DIST_DIR = $(DIST_BASE)-$(VER)
 
 PACKAGE_BASE = $(DIST_DIR).tar.gz
 
-FILES = \
-	friends \
-	joel-on-software \
-	nyh-sigs \
-	osp_rules \
-	paul-graham \
-	shlomif \
-	shlomif-fav \
-	subversion \
-	tinic
 
 DATS = $(addsuffix .dat,$(FILES))
 

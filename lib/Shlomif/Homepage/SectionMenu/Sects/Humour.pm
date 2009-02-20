@@ -228,6 +228,18 @@ my $humour_tree_contents =
                 },
             ],
         },
+        {
+            'text' => "Recommendations",
+            'url' => "humour/recommendations/",
+            'subs' =>
+            [
+                {
+                    'text' => "Films",
+                    'url' => "humour/recommendations/films/",
+                    'title' => "Recommendations of Films",
+                },
+            ],
+        },
     ],
 };
 

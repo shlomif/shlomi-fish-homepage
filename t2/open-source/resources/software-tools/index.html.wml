@@ -69,17 +69,26 @@ Google Spreasheet with a Comparison of various Alternatives</a>
 <h2 id="configure">Software Pre-building Configuration</h2>
 
 <ul>
+
 <li>
 GNU <a href="http://www.gnu.org/software/autoconf/autoconf.html">Autoconf</a>,
 <a href="http://www.gnu.org/software/automake/automake.html">Automake</a>,
 and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
 a trio of programs to portably build applications across multiple UNIX
-platforms. The de-facto standard in the open-source world.
+platforms. The de-facto standard in the open-source world, but very kludgy
+and cause many problems.
 </li>
 
 <li>
 <a href="http://www.dubois.ws/software/imake-stuff/">Imake</a> - a
-portability tool that ships with X11.
+portability tool that ships with X11. Old and deprecated.
+</li>
+
+<li>
+<a href="http://www.cmake.org/">CMake</a> - a generator for cross-platform
+makefiles, not unlike Autoconf, but works much better. Actively used by
+<a href="http://www.kde.org/">KDE</a> starting from version 4 and by many
+other projects.
 </li>
 
 <li>

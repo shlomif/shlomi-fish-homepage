@@ -117,6 +117,10 @@ my $software_tree_contents =
                     'text' => "Software Building and Management Tools",
                 },
                 {
+                    'url' => "rindolf/",
+                    'text' => "Rindolf - a Dialect of Perl based on Perl 5",
+                },
+                {
                     'url' => "open-source/resources/israel/",
                     'text' => "Israel-Related",
                     'subs' =>

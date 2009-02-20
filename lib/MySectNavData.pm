@@ -27,7 +27,7 @@ my @sections =
     },
     {
         'id' => "software",
-        'regex' => "^/(open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie)/",
+        'regex' => "^/(open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/",
         'class' => "Software",
         'title' => "Software Section Menu",
     },

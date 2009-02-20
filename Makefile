@@ -188,6 +188,7 @@ DOCBOOK_DOCS = \
 	case-for-file-swapping-rev3 \
 	end-of-it-slavery \
 	introductory-language \
+	what-makes-software-high-quality
 
 #   Removing, because we no longer need to build the DocBook.
 #   $(SCREENPLAY_DOCS)

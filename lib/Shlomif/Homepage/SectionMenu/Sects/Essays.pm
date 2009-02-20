@@ -82,6 +82,10 @@ my $essays_tree_contents =
                     ],
                 },
                 {
+                    'text' => "What Makes Software High-Quality?",
+                    'url' => "philosophy/computers/high-quality-software/",
+                },
+                {
                     'text' => "Perl",
                     'url' => "philosophy/computers/perl/",
                     'title' => "Articles Related to the Perl Programming Language",

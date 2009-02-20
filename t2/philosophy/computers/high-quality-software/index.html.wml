@@ -1,0 +1,38 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "What Makes Software High-Quality?" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+What is high-quality software? And which parameters or methods, while
+desirable, are not directly quality? This article, inspired by a
+post of someoneelse post on a mailing list I started for one of my 
+projects aims to answer this question.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h3 id="itself" style="clear:right;">The Article Itself - 2nd Revision</h3>
+
+#include "../lib/docbook/rendered/what-makes-software-high-quality.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="./what-makes-software-high-quality.pdf">Acrobat Reader (PDF) Format</a>.
+</li>
+<li>
+<a href="./what-makes-software-high-quality.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<h3 id="coverage-1st">1st Edition</h3>
+

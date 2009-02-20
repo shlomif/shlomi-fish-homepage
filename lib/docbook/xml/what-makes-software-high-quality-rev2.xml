@@ -113,7 +113,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <para>
         Why is high quality in software important? Low-quality software
         applications will require the users or end-developers to work
-        around its bugs and limitations, write a lot of extra functionality
+        around their bugs and limitations, write a lot of extra functionality
         themselves, and as a result, duplicate a lot of effort and 
         cause a lot of frustration and unhappiness. This is assuming 
         they don't give up on it soon or right away, and end up looking
@@ -121,7 +121,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 
     <para>
-        But what makes a popular software application "high-quality"? 
+        But what makes a popular software application "high-quality"?
         A high-quality program or library can be defined as one that
         is usable as is, that causes very few frustrations, and that
         requires little if any modifications or workarounds to get
@@ -129,8 +129,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
     
     <para>
-        I'm not talking about the application that's the most hyped, or the 
-        fastest, most featureful, or best. Sometimes you can often hear 
+        I'm not talking about the application that's the most hyped, or the
+        fastest, most featureful, or best. Sometimes you can often hear
         endless rants
         and <ulink
             url="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
@@ -210,11 +210,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            This article is written from the point-of-view as me as a developer
+            This article is written from my point-of-view as a developer
             of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">"Free 
-                and Open Source Software"</ulink>, and will focus on open-source
-            and pseudo-open-source software. However, a lot of what I say is
-            more universal.
+                and Open Source Software"</ulink>, and will focus on 
+            open-source and pseudo-open-source software. However, a lot of
+            what I say is more universal.
         </para>
     </section>
 </section>
@@ -250,7 +250,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         One note that is in order is that these are <emphasis 
             role="bold">many parameters in a generic "weight 
             function"</emphasis>, and not a list of requirements which
-        must all be fullfilled. <footnote id="parameters-not-foss" 
+        must all be fullfilled. <footnote id="parameters-not-foss"
             label="Licence">
             <para>
                 For example, I mention later that the more liberal the
@@ -265,10 +265,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
             <para>
                 Similarly, libraries or programs that are distributed
-                under the relatively restrictive <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU 
-                    General Public Licence (GPL)</ulink> (and which are 
+                under the relatively restrictive <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU
+                    General Public Licence (GPL)</ulink> (and which are
                 considered open-source and usable by most Linux distributions) 
-                are being prevented from used in many common situations,
+                cannot be used in many common situations,
                 and so would be of lesser quality than programs under a more
                 permissive licence.
             </para>
@@ -288,7 +288,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
         <para>
             Alternatively, in the case of 
-            <ulink url="http://en.wikipedia.org/wiki/Coverity">the 
+            <ulink url="http://en.wikipedia.org/wiki/Coverity">the
                 "Stanford checker"</ulink>, which is
             a sophisticated tool for static code analysis, it is not available
             for download, but instead is a service provided by its parent
@@ -305,7 +305,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             In the "Cathedral and the Bazaar", Eric Raymond recommends
             <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html">to
-                "release Early and release Often"</ulink>. Make frequent,
+                "release early and release often"</ulink>. Make frequent,
             incremental releases, so your project won't stagnate. If you
             take your project and work on it yourself for too long, people
             will give up.
@@ -317,7 +317,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             projects, that have been open-source since their inception, have 
             started this way: the Linux kernel, gcc, vim, perl, CPython. If 
             you look at the earliest versions of all of them, you'll find that
-            they were very limited if not downright hideous, but now they are 
+            they were very limited if not downright hideous, but now they are
             often among the best of breed.
         </para>
     </section>
@@ -332,8 +332,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             A good software always indicates its version number in the
-            archive file name, the opening directory file name, has a 
-            <literal>--version</literal> command-line flag, 
+            archive file name, the opening directory file name, has a
+            <literal>--version</literal> command-line flag,
             and the version mentioned in the about dialogue if there is
             one.
         </para>
@@ -370,11 +370,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             or cares to understand.
         </para>
         <para>
-            As a result, many people will find a program with a licence that 
+            As a result, many people will find a program with a licence that
             is not 100%
             <ulink url="http://www.gnu.org/philosophy/free-sw.html">Free
                 and Open Source Software</ulink> - unacceptable. To be truly
-            useful the software needs to also be
+            useful the application also needs be
             <ulink url="http://www.dwheeler.com/essays/gpl-compatible.html">GPL
                 compatible</ulink>, and naturally usable public-domain licences
             such as the modified BSD licence, the MIT X11 licence, or even
@@ -405,7 +405,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Public License (LGPL) are somewhere in between.
         </para>
         <para>
-            While some software on Linux has become popular despite being
+            While some programs on Linux have become popular despite being
             under non-optimal licences, many Linux distributions pride
             themselves that the core system consists of "100% free software".
             Most software that became non-open-source, was eventually forked
@@ -413,7 +413,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             As a result, a high-quality software has a licence that is the
-            most usable in the context of its common use cases. These 
+            most usable in the context of its common use cases. These
             licences are doubly-important for freely-distributed UNIX software.
         </para>
     </section>
@@ -468,7 +468,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     like people expect it to. The Emacs-based editors, which
                     are an alternative to Vim, do not invoke the menus upon
                     pressing "Alt+F", "Alt+E", etc. which is the Windows
-                    convention to them. 
+                    convention to them.
                 </para>
                 <para>
                     Furthermore, when putting a single-line prompt, the prompt
@@ -502,14 +502,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Most software of high-quality has a homepage which introduces
             the software, has download information, gives links, and
             provides a starting point to receive more information. And no - a
-            /project/myprogram/ page on 
+            <literal>/project/myprogram/</literal> page on 
             <ulink url="http://sourceforge.net/">Source Forge</ulink> or
             whatever is much more sub-optimal than that, and leaves a bad
             impression.
         </para>
     </section>
     <section id="easy_to_compile_and_install">
-        <title>The Software is Easy to Compile, Deploy and Install</title>
+        <title>The Program is Easy to Compile, Deploy and Install</title>
         <para>
             A high-quality software is easy to compile, deploy and install.
             It builds out of the box with minimal hassles. There are several
@@ -521,17 +521,17 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     The common standard building procedure using the
                     <ulink url="http://sourceware.org/autobook/">GNU 
-                        Autotools</ulink> is 
-                    <literal>./configure --prefix=$PREFIX ; 
+                        Autotools</ulink> is
+                    <literal>./configure --prefix=$PREFIX ;
                         make ; make install</literal>.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    There are now 
-                    <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">some 
-                        more modern alternatives to the GNU Autotools</ulink>, 
-                    which may also prove useful. 
+                    There are now
+                    <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">some
+                        more modern alternatives to the GNU Autotools</ulink>,
+                    which may also prove useful.
                 </para>
             </listitem>
             <listitem>
@@ -540,7 +540,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     Perl distributions have a similar <literal>perl
                         Makefile.PL</literal> procedure or more recently
                     also one using <literal>perl
-                        Build.PL</literal> which tends to be less quirky 
+                        Build.PL</literal> which tends to be less quirky
                     (see <ulink url="http://cpan.uwinnipeg.ca/dist/Module-Build">Module-Build</ulink> ).
                 </para>
                 <para>
@@ -570,7 +570,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             However, it's not uncommon to find software that fails to
             build even on GNU/Linux on an x86 computer, which is the most
-            common platform for development. Or the case of 
+            common platform for development. Or the case of
             <ulink url="http://www.shlomifish.org/open-source/anti/qmail/">the
                 qmail email server</ulink>, which has a long and quirky
             build process. It reportedly fails to compile on modern
@@ -585,9 +585,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
         <para>
             If we take <ulink url="http://plagger.org/">Plagger</ulink>,
-            a web-feed mix-and-match framework in Perl (not unlike 
+            a web-feed mix-and-match framework in Perl (not unlike
             <ulink url="http://pipes.yahoo.com/">Yahoo Pipes</ulink>, but
-            predates it), then its <ulink url="http://search.cpan.org/dist/Plagger/">Plagger 
+            predates it), then its <ulink url="http://search.cpan.org/dist/Plagger/">Plagger
                 distribution on CPAN</ulink> contains all of its plug-ins
             inside, and as a result requires "half of CPAN" including such
             obscure modules, as those for handling Chinese and Japanese dates.
@@ -610,7 +610,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         
     </section>
     <section id="has_packages">
-        <title>The Software Has Packages for Most Common Distributions</title>
+        <title>The Program Has Packages for Most Common Distributions</title>
         <para>
             A good program has packages for most common distributions, or such
             packages can be easily prepared.
@@ -638,7 +638,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
     <section id="documentation">
-        <title>The Software Has Good, Extensive and Usable Documentation</title>
+        <title>The Program Has Good, Extensive and Usable Documentation</title>
         <para>
             If your GUI program is simple and well-designed, then you normally 
             don't need good documentation. However, a command line program,

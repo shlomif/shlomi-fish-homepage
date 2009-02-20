@@ -223,13 +223,41 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         of popular, high-quality software lacks some of them, while its
         competition may do better in this respect.
     </para>
+    <para>
+        One note that is in order is that these are <emphasis 
+            role="bold">many parameters in a generic "weight 
+            function"</emphasis>, and not a list of requirements which
+        must all be fullfilled. <footnote id="parameters-not-foss" 
+            label="Licence">
+            <para>
+                For example, I mention later that the more liberal the
+                source licence of a program, the higher quality it is.
+                Obviously, a lot of <ulink 
+                    url="http://en.wikipedia.org/wiki/FOSS">non-"Free and 
+                    Open Source Software"</ulink> or even binary-only
+                applications are high-quality too. But, the use of such
+                software is still more limited than an open-source one, so it 
+                would be of lesser quality than an identical software that is
+                open-source.
+            </para>
+            <para>
+                Similarly, libraries or programs that are distributed
+                under the relatively restrictive <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU 
+                    General Public Licence (GPL)</ulink> (and which are 
+                considered open-source and usable by most Linux distributions) 
+                are being prevented from used in many common situations,
+                and so would be less high-quality than programs under a more
+                permissive licence.
+            </para>
+        </footnote>
+    </para>
     <section id="software_is_available">
         <title>The Program is Available for Downloading or Buying</title>
         <para>
             That may seem like a silly thing to say, but you'll be surprised
             how many times people get it wrong. How many times have you seen
             web-sites of software that claim that the new version of the
-            software (or even the first) is currently under work, will change
+            program (or even the first) is currently under work, will change
             the world, but is not available yet? How many times have you heard
             of web-sites that are not live yet, and refuse to tell people
             exactly what they are about?
@@ -241,7 +269,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             company.
         </para>
         <para>
-            A software should be available in the wild somehow (for downloading
+            A program should be available in the wild somehow (for downloading
             or at least buying) so people can use it, play with it, become
             impressed or unimpressed, report bugs, and ask for new features.
             Otherwise it's just in-house software or at most a service, that
@@ -374,14 +402,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
             <listitem>
                 <para>
-                    It has most of the <emphasis role="bold">features people 
+                    It has most of the <emphasis role="bold">features people
                         want</emphasis> and does not lack essential ones. For
                     example, GNU Arch, an old and now mostly unused
                     version control program, did not work on Windows 32-bit,
                     while Subversion, a different and popular alternative,
                     has a native port. Moreover, Mercurial,
                     a different alternative, cannot keep
-                    empty directories in the repository. This may make both
+                    empty directories (or trees of directories not containing
+                    files) in the repository. This may make both
                     Mercurial and GNU Arch a no-starter for many uses.
                 </para>
                 <para>

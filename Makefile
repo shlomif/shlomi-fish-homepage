@@ -268,8 +268,7 @@ $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
 	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR) $<
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
-	mkdir -p $@
-	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $@/index.html xhtml $<
+	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $@ xhtml $<
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
@@ -318,4 +317,4 @@ $(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
 	cp -f $(DOCBOOK_RTF_DIR)/$(notdir $@) $@
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
-	cp -fr $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $@
+	rsync -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $@

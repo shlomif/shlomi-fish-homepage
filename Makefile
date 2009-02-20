@@ -203,7 +203,9 @@ DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOC
 DOCBOOK_INSTALLED_XMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).xml)
 DOCBOOK_INSTALLED_RTFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).rtf)
 DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc))
+DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK_INDIVIDUAL_XHTMLS))
 DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
+DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
 # DOCBOOK_DOCS = \
 # 	case-for-drug-legalisation \
@@ -273,9 +275,9 @@ $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
 	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR)  $<
 
+
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
 	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -m $(XHTML_XSLT_SS) -o $@ xhtml $<
-	cp -f $(DOCMAKE_XSLT_PATH)/style.css $@/style.css
 	touch $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
@@ -313,7 +315,7 @@ install_docbook_xmls: make-dirs $(DOCBOOK_INSTALLED_XMLS)
 
 install_docbook_rtfs: make-dirs  $(DOCBOOK_INSTALLED_RTFS)
 
-install_docbook_individual_xhtmls: make-dirs $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS)
+install_docbook_individual_xhtmls: make-dirs $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
 
 install_docbook_css_dirs: make-dirs $(DOCBOOK_INSTALLED_CSS_DIRS)
 
@@ -328,7 +330,7 @@ $(DOCBOOK_INSTALLED_XMLS) : $(DOCBOOK_XMLS)
 $(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
 	cp -f $(DOCBOOK_RTF_DIR)/$(notdir $@) $@
 
-$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
+$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS) $(DOCMAKE_XSLT_PATH)/style.css
 	rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
 
 $(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
@@ -348,3 +350,6 @@ $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	perl $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $< $@ && \
 	touch $(patsubst %.xml,%.html.wml,$<)
+
+$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
+	cp -f $< $@

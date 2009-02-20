@@ -240,7 +240,7 @@ sub _process_single_fortune
             else
             {
                 $line =~ m{\A\s+(.*)};
-                $text .= $1;
+                $text .= " $1";
             }
         }
         continue

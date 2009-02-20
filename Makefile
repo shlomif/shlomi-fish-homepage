@@ -277,9 +277,8 @@ $(DOCBOOK_FO_DIR)/%.fo: $(DOCBOOK_XML_DIR)/%.xml
 $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 
-$(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
-	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR)  $<
-
+$(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_FO_DIR)/%.fo
+	fop -fo $< -rtf $@
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
 	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -m $(XHTML_XSLT_SS) -o $@ xhtml $<

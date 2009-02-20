@@ -125,7 +125,7 @@ $(VIPE_SOFTWARE_DOCS_SRC):: $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 
 #### Humour thing
 
-T2_HUMOUR_DOCS_SRC = $(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC)) \
+T2_HUMOUR_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/humour/recommendations/%,$(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC))) \
 					 $(filter $(T2_SRC_DIR)/humour.html.wml,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wonderous.html.wml,$(T2_DOCS_SRC))
@@ -162,6 +162,9 @@ PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
 PROD_SYND_NON_FICTION_BOOKS_DIR = lib/prod-synd/non-fiction-books
 PROD_SYND_NON_FICTION_BOOKS_INC = $(PROD_SYND_NON_FICTION_BOOKS_DIR)/include-me.html
 
+PROD_SYND_FILMS_DIR = lib/prod-synd/films
+PROD_SYND_FILMS_INC = $(PROD_SYND_FILMS_DIR)/include-me.html
+
 $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 	touch $@
 
@@ -177,6 +180,15 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 	perl $<
 	./gen-helpers.pl
 	$(MAKE)
+
+$(T2_SRC_DIR)/humour/recommendations/films/index.html.wml: $(PROD_SYND_FILMS_INC)
+	touch $@
+
+$(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml
+	perl $<
+	./gen-helpers.pl
+	$(MAKE)
+
 
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xml" href="product-syndication.xsl"?>
+<!DOCTYPE comparison SYSTEM "product-syndication.dtd">
+<!--
+;;; To add:
+* The Princess Bride.
+* Spaceballs.
+* Eight days a week.
+* http://www.imdb.com/title/tt0095304/ - High Spirits
+* http://www.imdb.com/title/tt0103241/ - What About Bob?
+* The Neverending Story (I).
+* Star Wars IV-VI.
+* Jerry Maguire.
+* Willo and the Princess.
+* Bring it On (I)
+* The Emperor's New Groove
+* The Lion King
+* Disney's Aladdin
+* Mary Poppins.
+* The one with 
+* http://www.imdb.com/title/tt0060640/ - Dick-van-Dyke Lt. Robin Crusoe, U.S.N
+* "Speed"
+* Robin Hood - Men in Tights.
+* Robin Hood - Prince of Thieves.
+* Hot Shots I + II
+* Stand by Me.
+-->
+
+<product-syndication>
+    <data>
+        <cat id="films">
+            <title>Shlomi Fish's Films' Recommendations</title>
+            <desc appendtoc="1">
+<p>
+    This is a list of films I have watched and can recommend.
+</p>
+
+            </desc>
+            <cat id="favourite-films">
+                <title>My Favourite Films</title>
+                <desc>
+                    <p>
+                        This is a list of my favourite films.
+                    </p>
+                </desc>
+                <prod id="princess-bride">
+                    <title>The Princess Bride</title>
+                    <isbn>B00005LOKQ</isbn>
+                    <creator type="director">Rob Reiner</creator>
+                    <desc>
+
+<p>
+This is my favourite movie, and the favourite of a lot of others from
+my generation. It has an excellent dialogue, with many power sentences. The
+acting is excellent, and the film is very enjoyable.
+</p>
+
+<p>
+The Princess Bride has the format of a classic fairy tale, but with a few
+interesting and non-ordinary twists. It is funny, engaging and highly
+recommended.
+</p>
+
+                    </desc>
+                </prod>
+            </cat>
+        </cat>
+    </data>
+</product-syndication>

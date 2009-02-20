@@ -251,6 +251,9 @@ corrections, feel free to E-mail me about it. I'd love to hear from you. If
 you have found what I did helpful or entertaining, please consider
 <a href="http://www.shlomifish.org/meta/donate/">making a donation</a>.
 </p>
+<script type="text/javascript">
+$("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append( ' <span class="selfl">[<a href="#' + this.id + '">link</a>]</span>' ) })
+</script>
 </latemp_webmaster>
 
 <define-tag hosted:at:tech>
@@ -317,6 +320,7 @@ return;
 
 <define-tag my_extra_head_elements>
 <script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
+<script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish' Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish' Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
 {#PAGE_EXTRA_HEAD_ELEMENTS#}

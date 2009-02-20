@@ -15,6 +15,8 @@ ALL_DEST_BASE = dest
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
 all: make-dirs docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
+
+include lib/make/gmsl/gmsl
 	
 include include.mak
 include rules.mak
@@ -183,13 +185,24 @@ SCREENPLAY_DOCS = \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2
 
-DOCBOOK_DOCS = \
-	case-for-drug-legalisation \
-	case-for-file-swapping-rev3 \
-	end-of-it-slavery \
-	introductory-language \
-	objectivism-and-open-source \
-	what-makes-software-high-quality
+$(call set,DOCBOOK_DIRS_MAP,case-for-drug-legalisation,philosophy/politics/drug-legalisation)
+$(call set,DOCBOOK_DIRS_MAP,case-for-file-swapping-rev3,philosophy/case-for-file-swapping/revision-3)
+$(call set,DOCBOOK_DIRS_MAP,end-of-it-slavery,philosophy/computers/software-management/end-of-it-slavery)
+$(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
+$(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
+$(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
+
+DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
+
+DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).pdf)
+
+# DOCBOOK_DOCS = \
+# 	case-for-drug-legalisation \
+# 	case-for-file-swapping-rev3 \
+# 	end-of-it-slavery \
+# 	introductory-language \
+# 	objectivism-and-open-source \
+# 	what-makes-software-high-quality
 
 #   Removing, because we no longer need to build the DocBook.
 #   $(SCREENPLAY_DOCS)
@@ -229,7 +242,7 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS)
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_pdfs
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -266,3 +279,10 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
 tidy: all
 	perl bin/run-tidy.pl
+
+install_pdfs: $(DOCBOOK_PDFS) $(DOCBOOK_INSTALLED_PDFS)
+
+# This copies all the .pdf's at once - not ideal, but still
+# working.
+$(DOCBOOK_INSTALLED_PDFS) : $(DOCBOOK_PDFS)
+	cp -f $(DOCBOOK_PDF_DIR)/$(notdir $@) $@

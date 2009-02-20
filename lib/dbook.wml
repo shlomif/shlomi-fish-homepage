@@ -6,7 +6,7 @@
 # Append a / if the directory's not empty. 
 <set-var dir="<ifeq "<get-var dir />" "" "" "<get-var dir />/" />" />
 
-<h<get-var level /> id="<get-var doc />-sources">Formats</h<get-var level />>
+<h<get-var level /> id="<get-var doc />-formats">Formats</h<get-var level />>
 
 <ul>
 <li><a href="<get-var dir /><get-var doc />/">HTML (read online)</a></li>

@@ -20,6 +20,7 @@ my %skip =
         "me/contact-me/index.html",
         "open-source/resources/israel/guide-to-israeli-foss-resources/index.html",
         "philosophy/computers/web/create-a-great-personal-homesite/index.html",
+        "philosophy/politics/drug-legalisation/hebrew.html",
         "philosophy/computers/web/which-wiki/update-2006-07/index.html",
         "philosophy/open-letter/open_letter.html",
         "rwlock/index.html",

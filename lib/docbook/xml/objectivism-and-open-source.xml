@@ -1,6 +1,6 @@
 <?xml version='1.0' ?>
 
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
 "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
 ]>
 <!-- -->
@@ -10,12 +10,46 @@
 <!-- -->
 <!-- General reminders: -->
 
-<book id="index">
+<article id="index">
+    <articleinfo>
+        <title>Objectivism and Open Source</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@iglu.org.il</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2003</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice>
+            <para>
+<!--Creative Commons License-->
+This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</ulink> (or at your option a greater version of it).
+            </para>
+        </legalnotice>
 
-<title>Objectivism and Open Source</title>
-
-
-<chapter id="introduction">
+        <revhistory>
+            <revision>
+                <revnumber>5034</revnumber>
+                <date>12 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Started keeping track of version. Changed the "book"
+                    schema to an "article"-based one. Changed more spelling
+                    to Commonwealth one. Changed the two-level of Ethics
+                    to "Ethical" and "Moral".
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+<section id="introduction">
 
 <title>Introduction</title>
 
@@ -37,9 +71,9 @@ the open source world and Objectivism, and why Objectivists can
 support it, without having guilt feelings of behaving un-Capitalistically.
 </para>
 
-</chapter>
+</section>
 
-<chapter id="what_is_open_source">
+<section id="what_is_open_source">
 
 <title>What is Open Source?</title>
 
@@ -91,9 +125,9 @@ people who are more knowledgable in some respects help their less
 experienced peers.
 </para>
 
-</chapter>
+</section>
 
-<chapter id="what_is_objectivism">
+<section id="what_is_objectivism">
 
 <title>What is Objectivism?</title>
 
@@ -114,7 +148,7 @@ well-being. It demonstrates that by acting out of their rational self-interest
 </para>
 
 <para>
-Similarily it believes that Altruism (advocating the must to contribute to an
+Similarly it believes that Altruism (advocating the must to contribute to an
 external cause) is a harmful notion that one has to reject from within
 and without. Objectivism does not oppose individuals voluntarily 
 contributing time, effort, or other resources to further the well-being
@@ -148,42 +182,45 @@ to demonstrate my points, and hope they will be commonly accepted enough by
 everyone.
 </para>
 </section>
-</chapter>
+</section>
 
-<chapter id="two_levels_of_morality">
+<section id="two_levels_of_morality">
 <title>Two Levels of Ethics and How Open Source Measures Against Them</title>
 
 <para>
-There are two levels of Ethics: Constitutionality and Beneficiality.
-<footnote id="moral_and_legal">
-<para>
-I usually think about them as "legality" and "morality" respectively. However
-to make this document more accessible I'll use these two less ambigious terms.
-</para>
-</footnote>
-A constitutional action is such that is allowed under objective ethics. I.e:
+There are two levels of Ethics: Ethos and Morality.
+An ethical action is such that is allowed under objective ethics. I.e:
 if you wish to perform it, then no-one can prevent you from doing it. It may
-not necessarily be a good action to take, but it is still allowed. A 
-non-constitutional action is such that will harm others and so is not allowed.
+not necessarily be a good action to take, but it is still allowed. A
+non-ethical action is such that will harm others and so is not allowed.
 </para>
 
 <para>
-Now a constitutional action is beneficial if it delivers genuine gain for
+Now an ethical action is moral if it delivers genuine gain for
 you or for someone else. This distinction should be made because some
-constitutional actions are very harmful (such as commiting suicide or
-consuming harmful substances).
+ethical actions are very harmful (such as commiting suicide or
+consuming harmful substances).<footnote id="ammoral" label="Ammoral">
+    <para>
+        Related to moral and ethical choices are ammoral decisions. An ammoral
+        choice is a matter of taste and is neither moral nor immoral.
+        Examples are: your favourite food, your favourite Ice-cream flabour,
+        your preferences in members-of-the-appropriate-sex, what you prefer
+        to do at the moment, etc.
+    </para>
+</footnote>
 </para>
 
+
 <para>
-The aim of this chapter is to show that working on open source software is not
-only constitutional but beneficial as well.
+The aim of this section is to show that working on open source software is not
+only ethical but moral as well.
 </para>
 
-<section id="why_oss_is_constitutional">
-<title>Why Open-Source is Constitutional</title>
+<section id="why_oss_is_ethical">
+<title>Why Open-Source is Ethical</title>
 
 <para>
-The best summary of what is constitutional and what isn't can be found
+The best summary of what is ethical and what isn't can be found
 in the <ulink url="http://www.neo-tech.com/neotech/advantages/advantage83.html">
 Neo-Tech Constitution</ulink>. This document contains a preamble, followed
 by three articles, followed by 6 axioms. The articles are the most relevant
@@ -228,15 +265,15 @@ Thus, creating and maintaining open source software is a constitutional action.
 </para>
 </section>
 <section id="why_oss_is_beneficial">
-<title>Why Open-Source Development is Beneficial</title>
+<title>Why Open-Source Development is Moral</title>
 
 <para>
 Naively, some Objectivists may come to believe that working on open-source
-software is, while perfectly constitutional, not a good action to take. 
+software is, while perfectly ethical, not a good action to take. 
 "You work on software that the masses could use, and instead of selling
 it and earning a honest buck, you give it away to everybody, and have
 others benefit from your efforts. What's in it for you?" But let's first
-formulate a definition of what is beneficial and what isn't. 
+formulate a definition of what is moral and what isn't.
 </para>
 
 <para>
@@ -280,9 +317,9 @@ as well, it may not yield the same immediate and long-term profit from
 working on an open-source package.
 </para>
 </section>
-</chapter>
+</section>
 
-<chapter id="beyond_morality">
+<section id="beyond_morality">
 <title>Beyond Morality: Why Open Source is Good for You</title>
 
 <para>
@@ -310,8 +347,8 @@ software)
 The third part, <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink> analyzes the economics of the
 open-source world. It demonstrates why non-free commercial software is 
 problematic and why open-source works so well. It gives several places in which
-companies and individuals can utilize distributing a software under an 
-open-source license for their own commercial gains. He also dispels the
+companies and individuals can utilise distributing a software under an 
+open-source licence for their own commercial gains. He also dispels the
 myth that programmers will be out of job because of free software by
 noting that the majority of code in the world (and what the vast majority 
 of programmers are working on) is code for internal use: in-house applications,
@@ -356,9 +393,9 @@ large number of well-defined projects, the open source world ensures that
 development is done at a highly accelerated pace.
 </para>
 
-</chapter>
+</section>
 
-<chapter id="why_dichotomy">
+<section id="why_dichotomy">
 
 <title>Why the Apparent Dichotomy Exists in the First Place?</title>
 
@@ -414,9 +451,9 @@ pieces of open-source software (or for that matter freeware), have millions
 of users who can testify for their superior quality and working experience.
 </para>
 
-</chapter>
+</section>
 
-<chapter id="oss_and_capitalism">
+<section id="oss_and_capitalism">
 <title>Open Source and Capitalism</title>
 
 <para>
@@ -427,11 +464,11 @@ values that are sold in the marketplace.
 </para>
 
 <para>
-A bit bucket once produced and finalized (a procedure that may require a lot
+A bit bucket once produced and finalised (a procedure that may require a lot
 of money, effort and time), can be later distributed free-of-charge by
 electronic means, without causing loss to the originator of the bit bucket.
-This is opposed to physical products such as food or tools, which cost money
-to produce and distribute a unit of.
+This is oas pposed to physical products such as food or tools, which cost money
+to produce and distribute each unit of.
 </para>
 
 <para>
@@ -445,9 +482,9 @@ endorsed distributing cheaper alternatives to products for a long time.
 For a more thorough discussion of the economics of open source software refer
 to Eric Raymond's Essay <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink>.
 </para>
-</chapter>
+</section>
 
-<chapter id="community_and_collectivism">
+<section id="community_and_collectivism">
 
 <title>The Open Source Community and Collectivism</title>
 
@@ -477,7 +514,7 @@ Moreover, the members of the Open Source community are active there at will.
 There's no force, threat of force, or fraud involved by anyone to convince
 him to become an open-source user or activist. If people just use open-source
 software because of its benefits or lower price, without contributing anything
-back, it is considered OK and fully allowed by the licenses of the software.
+back, it is considered OK and fully allowed by the licences of the software.
 </para>
 
 <para>
@@ -485,9 +522,9 @@ Thus, the open source community is not a collectivist phenomenon, and
 participating in it should not be regarded as such.
 </para>
 
-</chapter>
+</section>
 
-<chapter id="doc_info">
+<section id="doc_info">
 
 <title>Document Information</title>
 
@@ -546,10 +583,10 @@ software.
 
 <!-- Creative Commons License -->
 <para>
-This work is licensed under a 
-<ulink url="http://creativecommons.org/licenses/by/2.0/">Creative 
-Commons License</ulink> - The Attribution License Version 2.0 or greater. Year
-of Copyright is 2003.
+This work is licensed under a
+<ulink url="http://creativecommons.org/licenses/by/2.0/">Creative
+    Commons License</ulink> - The Attribution License Version 2.0 or 
+greater. Year of Copyright is 2003.
 </para>
 <!-- /Creative Commons License -->
 
@@ -592,7 +629,7 @@ of Copyright is 2003.
 <title>Thanks</title>
 
 <para>
-Thanks should go to 
+Thanks should go to
 <ulink url="http://nadav.harel.org.il/">Nadav Har'El</ulink> and 
 <ulink url="http://www.zak.co.il/">Omer Zak</ulink> for reviewing the early
 drafts of this document and supplying some useful corrections and 
@@ -601,6 +638,6 @@ additions to the document.
 </para>
 </section>
 
-</chapter>
+</section>
 
-</book>    <!-- End of the book -->
+</article>    <!-- End of the book -->

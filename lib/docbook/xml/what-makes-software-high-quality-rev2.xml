@@ -944,6 +944,21 @@ No package named this-does-not-exist
             has its merits, its verbosity still makes it much more painful
             to use than urpmi, when I have to work on Ubuntu.
         </para>
+        <para>
+            Back to more visual aesthics, one of the reasons that made me
+            want to use Linux more than Windows 95' or 98' was the fact that
+            its desktops were truly themable and could be made to look much
+            better without effort. If I got tired of the same look, I could
+            easily switch. While Windows XP shipped with a more attractive 
+            theme, and also had some proprietary and non-gratis theming
+            software, Linux supplied all of that out-of-the-box and with
+            a more attractive theme. The 
+            <ulink url="http://youtube.com/watch?v=xC5uEe5OzNQ">effects 
+                supplied by the Linux 3-D desktops</ulink>, which
+            have put the 9-milliard Dollar effects of Vista to shame,
+            have convinced some people to install Linux on their comptuer
+            aftern seeing them.
+        </para>
     </section>
     <section id="quality-parameters-conclusion">
         <title>Conclusion</title>
@@ -1020,6 +1035,34 @@ No package named this-does-not-exist
                 excellent article "Rub a dub dub"</ulink>
             for some of the motivation and practices of good refactoring
             instead of throwing away the code and restarting from scratch.
+        </para>
+        <para>
+            A reviewer of an early version of this article told me about
+            an early and relatively large PHP code of her that was badly
+            written, relatively buggy and yet proved to be popular among 
+            some of her clients, who have deployed it on many hosts and won't
+            effectively upgrade it. So she still has to maintain it, even
+            though she'd rather not recommend it. She claimed that this is
+            an indication that such low-quality in code, is a criterion of
+            low-quality.
+        </para>
+        <para>
+            She has a point in the fact that usually badly-written or
+            non-modular code results in more external low-quality factors
+            such as bugs, security problems and lack of extensibility.
+            However, even if the code was extremely well-written it is likely
+            that it would need to be maintained, extended, and corrected.
+            And if the clients in question don't have or don't want a good way 
+            to pull changes from a central place, or install updates properly,
+            it's a procedural and organisational problem. 
+        </para>
+        <para>
+            Organisational quality deserves its own separate article (or
+            arguably book, web-site, or even more than one book), but
+            external software quality (much less internal one), is not a 
+            substitute for it. Please refer to <ulink url="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
+                partial list I prepared on a different article</ulink>,
+            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software "gurus" links on my links' list.</ulink>
         </para>
     </section>
     <section id="automated-tests">

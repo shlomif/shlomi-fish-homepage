@@ -1103,20 +1103,28 @@ I put in their suggestion boxes.
       <meta>
           <title>Slashdot: Vim Version 7</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Version 7? [of Vim]
+      <quote>
+          <body>
+              <p>
+                  Version 7? [of Vim]
+                  </p>
 
+                  <p>
 GNU Emacs is at version 21.4. Can we really trust such an immature 
 editor?
+</p>
 
+<p>
     "yet another coward" in a Slashdot comment for the announcement 
     of the release of Vim version 7.
-    http://it.slashdot.org/comments.pl?sid=185216&cid=15286781
-]]></text>
+    http://it.slashdot.org/comments.pl?sid=185216&amp;cid=15286781
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>yet another coward</author>
+            <work href="http://it.slashdot.org/comments.pl?sid=185216&amp;cid=15286781">Comment on the release of Vim version 7</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-bmp-star-trek-plot">
       <meta>
@@ -1171,63 +1179,67 @@ editor?
       <meta>
         <title>I'd love to change the world</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[I'd love to change the world, but they won't give me the source code.
+      <quote>
+          <body>
+              <p>
+                  I'd love to change the world, but they won't give me the source code.
+                  </p>
 
-    -- Unknown
-]]></text>
+                  <p>
+                      -- Unknown
+                  </p>
         </body>
         <info/>
-      </raw>
+      </quote>
     </fortune>
     <fortune id="lion-king-what-are-stars">
       <meta>
         <title>"What are stars?" on the Lion King</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Pumbaa: Timon, ever wonder what those sparkly dots are up there?
-
-Timon: Pumbaa, I don't wonder; I know.
-
-Pumbaa: Oh. What are they?
-
-Timon: They're fireflies. Fireflies that, uh... got stuck up on that big
+      <screenplay><body><saying character="Pumbaa"><para>Timon, ever wonder what those sparkly dots are up there?
+</para></saying><saying character="Timon"><para>Pumbaa, I don't wonder; I know.
+</para></saying><saying character="Pumbaa"><para>Oh. What are they?
+</para></saying><saying character="Timon"><para>They're fireflies. Fireflies that, uh... got stuck up on that big
 bluish-black thing.
-
-Pumbaa: Oh, gee. I always thought they were gigantic balls of gas burning 
+</para></saying><saying character="Pumbaa"><para>Oh, gee. I always thought they were gigantic balls of gas burning 
 billions of miles away.
-
-Timon: Pumbaa, with you, everything's gas. 
-
-    Quote from the animated movie "The Lion King".
-]]></text>
-        </body>
-        <info/>
-      </raw>
+</para></saying><saying character="Timon"><para>Pumbaa, with you, everything's gas.
+</para></saying></body>
+<info>
+    <author>Walt Disney Corp</author>
+    <work href="http://www.imdb.com/title/tt0110357/">"The Lion King"</work>
+</info></screenplay>
     </fortune>
     <fortune id="joel-forum-unix-shooting-in-the-foot">
       <meta>
         <title>Martin about UNIX Letting You Shoot Yourself in the Foot</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[>That's the nice thing about UNIX, it gives you so many 
->ways to shoot yourself in the foot.  :)
+      <quote>
+          <body>
+              <p>
+          &gt;That's the nice thing about UNIX, it gives you so many 
+          &gt;ways to shoot yourself in the foot.  :)
+          </p>
 
-At least it does allow you to shoot yourself in the foot.
-It doesn't say "shooting feet isn't supported"
+          <p>
+              At least it does allow you to shoot yourself in the foot.
+          </p>
+
+          <p>
+              It doesn't say "shooting feet isn't supported"
+          </p>
+
+          <p>
 Or you can shoot yourself in the foot by writing a management console plugin
 that will pass the data to Word using VBA and then call Excel via com to split
 it into columns and then write an activeX control to get the columns back as
-..........
-
-    Martin in http://discuss.joelonsoftware.com/default.asp?joel.3.351421.
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Martin</author>
+            <work href="http://discuss.joelonsoftware.com/default.asp?joel.3.351421">Comment in the JoS Forum</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="dazjorz-irc-we-are-the-borg">
       <meta>
@@ -1255,68 +1267,85 @@ it into columns and then write an activeX control to get the columns back as
       <meta>
         <title>God is my favourite…</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA["(God) is my favourite fictional character." - Homer Simpson
-]]></text>
+      <quote>
+          <body>
+              <p>
+                  "(God) is my favourite fictional character." - Homer Simpson
+              </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Matt Groening</author>
+            <work href="http://en.wikipedia.org/wiki/The_Simpsons">The Simpsons</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="yaakov-learn-several-new-words">
       <meta>
         <title>Learn several new words everyday</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[You should learn several new words everyday--eventually you will forget how to 
-speak so others can understand you.
+      <quote>
+          <body>
+              <p>
+          You should learn several new words everyday--eventually you will forget how to 
+          speak so others can understand you.
+          </p>
 
-    Yaakov on Freenode's #perl
-]]></text>
+          <p>
+              Yaakov on Freenode's #perl
+              </p>
         </body>
         <info/>
-      </raw>
+      </quote>
     </fortune>
     <fortune id="acme-newmath">
       <meta>
         <title>Acme::NewMath</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[For thousands of years, we have been plagued by mathematicians insisting that
+      <quote>
+          <body>
+              <p>
+          For thousands of years, we have been plagued by mathematicians insisting that
 two plus two equals four. Who elected them? I, Stevie-O, am promoting an
 entirely new system, where two plus two equals FIVE. Eventually, it will be
 extended to provide other stuff these power-hungry madmen kept hidden away for
 themselves, such as division by zero, cold fusion, the ability to solve the
 halting problem, and the secret to attracting hot chicks.
+</p>
 
-    Stevie-O on the Acme::NewMath POD document.
+<p>
+    Stevie-O on the Acme::NewMath POD document.<br />
     http://search.cpan.org/dist/Acme-NewMath/
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Stevie-O</author>
+            <work href="http://search.cpan.org/dist/Acme-NewMath/">Acme::NewMath POD document</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="should-perl-drop-sco-support">
       <meta>
         <title>Should Perl drop SCO Support?</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[> Should Perl do the same? [= Drop SCO Support]
+      <quote>
+          <body>
+              <p>
+                  &gt; Should Perl do the same? [= Drop SCO Support]
+              </p>
 
+              <p>
     Absolutely not.  Perl supports defunct operating systems, buggy
 operating systems, commercial operating systems, and poorly marketed
 operating systems.  It would be inappropropriate to drop SCO just
 because it happens to be all of the above.
-
-    Kurt Starsinic
-    http://www.mail-archive.com/advocacy%40perl.org/msg01815.html
-]]></text>
+</p>
+  
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Kurt Starsinic</author>
+            <work href="http://www.mail-archive.com/advocacy%40perl.org/msg01815.html">advocacy@perl.org Email</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="perlcafe-climbing-for-the-apocalypse">
       <meta>
@@ -1348,15 +1377,21 @@ because it happens to be all of the above.
       <meta>
         <title>Slashdot: "In Soviet Russia…"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[In Soviet Russia, every time you kill a kitten, god masturbates
+      <quote>
+          <body>
+              <p>
+                  In Soviet Russia, every time you kill a kitten, god masturbates
+              </p>
 
-    GyroTech on http://linux.slashdot.org/comments.pl?sid=195378&cid=16009070
-]]></text>
+              <p>
+                  GyroTech on http://linux.slashdot.org/comments.pl?sid=195378&amp;cid=16009070
+                  </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>GyroTech</author>
+            <work href="http://linux.slashdot.org/comments.pl?sid=195378&amp;cid=16009070">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="perlcafe-wrote-this-much-code">
       <meta>
@@ -1382,12 +1417,15 @@ because it happens to be all of the above.
       <meta>
           <title>Slashdot: Dealing with RMS's Vim Attitude</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Recently, Richard Stallman gave a speech in which he illustrated an academic
+      <quote>
+          <body>
+              <p>
+          Recently, Richard Stallman gave a speech in which he illustrated an academic
 point about programming history by quoting a guy who described vi as 'an editor
 spread at sword-point and which is really hard to use'.
+</p>
 
+<p>
 I think I speak for all moderate vi(m) users when I say -- DEATH and DAMNATION
 (in that order) to this Cardinal of the CTRL key! Needless to say my own local
 vim user group has dispatched assassins to kill Mr. Stallman, but this is
@@ -1397,122 +1435,163 @@ behalf of all editors of text everywhere, I implore EMACS users to return to
 the true path, lest you be burned at the stake and then go to hell, the Buffer
 From Which There Is No Unloading. We'll see how productive you are then, with
 your ctrl-meta-alt and your ELISP and your 'ring buffer', whatever THAT is.
+</p>
 
-Peace and love to all.
-^C
-^X
-quit
-q
-QUIT
-exit :exit
-zz
-ZZ
+<p>
+    Peace and love to all.<br/>
+    ^C<br/>
+    ^X<br/>
+    quit<br/>
+    q<br/>
+    QUIT<br/>
+    exit :exit<br/>
+    zz<br/>
+    ZZ
+</p>
 
-    kahei on http://linux.slashdot.org/comments.pl?sid=196931&cid=16136657
-]]></text>
+<p>
+    kahei on http://linux.slashdot.org/comments.pl?sid=196931&amp;cid=16136657
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>kahei</author>
+            <work href="http://linux.slashdot.org/comments.pl?sid=196931&amp;cid=16136657">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="linus-debugging-my-own-machines">
       <meta>
         <title>Linus: "debugging my own machines"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[The thing is, I don't actually enjoy debugging my own machines. I _much_ 
+      <quote>
+          <body>
+              <p>
+          The thing is, I don't actually enjoy debugging my own machines. I _much_ 
 prefer having other people debug _their_ machines, and fixing my machine 
 in the process. So I didn't want just something that worked on the Mac 
 Mini, I wanted something that works _universally_, so that hopefully 
 people who are even crazier than me will waste _their_ time trying to get 
 these machines working.
+</p>
 
+<p>
     Linus Torvalds in http://lwn.net/Articles/188123/
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://lwn.net/Articles/188123/">Email Message</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="slashdot-iran-first-they-came-for">
       <meta>
         <title>Slasdhot: Iran: "First they came for"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Re:Silly Iranians... ALWAYS!
-----------------------------
+      <quote>
+          <body>
+              <p>
+                  Re:Silly Iranians... ALWAYS!
+                  </p>
 
+                  <p>
 First, they came for the newspapers, and I did nothing because the Farsi Side 
 comic was just re-prints now.
+</p>
 
+<p>
 Next, they came for the books, and I looked the other way because the Death to 
 America Book of the Month Club was only recommending books to burn anyway.
+</p>
 
+<p>
 Then, they came for the Satellite Dishes, and I said nothing because I still 
 had a year left on my Infidelphia Cable contract.
+</p>
 
+<p>
 Finally, they came for my Internet Service, and no one was left
 to hear my ululation!
+</p>
 
+<p>
     patrixmyth on Slashdot
-    http://yro.slashdot.org/comments.pl?sid=201413&cid=16490111
-]]></text>
+    http://yro.slashdot.org/comments.pl?sid=201413&amp;cid=16490111
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>patrixmyth</author>
+            <work href="http://yro.slashdot.org/comments.pl?sid=201413&amp;cid=16490111">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="linus-not-always-change-my-mind">
       <meta>
           <title>Linus Torvalds: "I Won't Always Change my Mind"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[I don't guarantee that I always change my mind, but I _can_ guarantee that if
+      <quote>
+          <body>
+              <p>
+          I don't guarantee that I always change my mind, but I _can_ guarantee that if
 most of the people I trust tell me I'm a dick-head, I'll at least give it a
 passing thought.
+</p>
 
-[ Chorus: "You're a dick-head, Linus" ]
+<p>
+    [ Chorus: "You're a dick-head, Linus" ]
+</p>
 
+<p>
     Linus Torvalds on http://lwn.net/Articles/201440/
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://lwn.net/Articles/201440/">Email Message</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="amazon-review-of-the-oed">
       <meta>
         <title>Review of the Oxford English Dictionary</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Review of the Oxford English Dictionary on Amazon.com:
-------------------------------------------------------
+      <quote>
+          <body>
+              <p>
+                  Review of the Oxford English Dictionary on Amazon.com:
+              </p>
+              
+              <p>[One Star] </p>
 
-[One Star] 
+              <p>"an epic work that has trouble holding the interest"</p>
 
-"an epic work that has trouble holding the interest"
+              <p>By: a customer</p>
 
-By: a customer
-
+              <p>
 I'm at the ABs, and I still can't get a grip on the plot. Characters enter, are
 introduced in exhausting detail -- and then disappear again! Very frustrating.
 The only time an old character shows up again is in another's history! A lot
 like _A Dance to the Music of Time_, I suppose.
+</p>
 
+<p>
 Perhaps things will become clearer when we meet Oxford, English or Dictionary
 -- clearly three key figures. Some kind of menage a trois?
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <work href="http://www.amazon.com/Oxford-English-Dictionary-20-Set/dp/0198611862">Amazon.com: Oxford English Dictionary</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="neo-tech-selfishness">
       <meta>
         <title>Neo-Tech: Selfishness</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Although the contents of her book, The Virtue of Selfishness, are precisely
+      <quote>
+          <body>
+              <p>
+          Although the contents of her book, The Virtue of Selfishness, are precisely
 accurate and widely integrated, Ayn Rand committed an error by distorting the
 word "selfishness" in fashioning a dramatic statement. The word "selfishness"
 does have valuable, precise denotations of "an irrational, harmful disregard
@@ -1521,28 +1600,38 @@ wording such as rational self-growth. Instead, she unnecessarily bent and
 undermined the precise, valuable meaning of selfishness. ...As with
 selflessness, selfishness is a form of immature, destructive, irrational
 behavior -- a form of stupid behavior.
+</p>
 
-    Neo-Tech Advantage No. 14 - "Self-Growth vs. Selfless View"
+<p>
+    Neo-Tech Advantage No. 14 - "Self-Growth vs. Selfless View"<br/>
     http://www.neo-tech.com/neotech/advantages/advantage14.html
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Frank R. Wallace</author>
+            <work href="http://www.neo-tech.com/neotech/advantages/advantage14.html">Neo-Tech Advantage No. 14 - "Self-Growth vs. Selfless View"</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="alan-kay-on-cpp">
       <meta>
         <title>Alan Kay on C++</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[I invented the term Object-Oriented, and I can tell you I did not have C++ in 
-mind.
+      <quote>
+          <body>
+              <p>
+          I invented the term Object-Oriented, and I can tell you I did not have C++ in 
+          mind.
+          </p>
 
-    Alan Kay (Attributed)
-]]></text>
+          <p>
+              Alan Kay (Attributed)
+              </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Alan Kay</author>
+        </info>
+      </quote>
     </fortune>
     <fortune id="perl-vb.net-and-java-func-call">
       <meta>
@@ -1564,55 +1653,68 @@ mind.
       <meta>
         <title>Wilderness Cat: Extra Peculiar</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Extra Peculiar
---------------
+      <quote>
+          <body>
+              <p>
+                  Extra Peculiar
+                  </p>
 
+                  <p>
 Did you watch Uri Geller's show last night? He said that if anything
 extraordinary happened at home during the show, people should phone in, or
 report it at his website. During the entire show I was installing Hebrew
 Windows XP for my mother-in-law, and something extraordinary did happen. The
 operating system got installed, came up, ran without a glitch. Should I report
 this to Uri?
- 
-    http://wildernesscat.livejournal.com/530346.html
+</p>
 
-khatul's comment:
+<p>khatul's comment:</p>
 
+<p>
 Without a glitch, huh? Apparently you (and Uri) managed to install Linux from a
 Windows XP installation CD. This is much more than telekinesis. It smells like
 pure alien intervention. Report immediately!
+</p>
 
-    http://wildernesscat.livejournal.com/530346.html?thread=3105962#t3105962
-]]></text>
+    
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>wildernesscat</author>
+            <work href="http://wildernesscat.livejournal.com/530346.html">wildernesscat : Extra Peculiar (Blog Entry)</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="linus-rare-perfect-kernels">
       <meta>
         <title>Linus Torvalds: Rare "Perfect" Kernels</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[It's one of those rare "perfect" kernels. So if it doesn't 
+      <quote>
+          <body>
+              <p>
+          It's one of those rare "perfect" kernels. So if it doesn't 
 happen to compile with your config (or it does compile, but then does 
 unspeakable acts of perversion with your pet dachshund), you can rest easy 
 knowing that it's all your own d*mn fault, and you should just fix your 
 evil ways.
+</p>
 
+<p>
 You could send me and the kernel mailing list a note about it anyway, of 
 course. (And perhaps pictures, if your dachshund is involved. Not that 
 we'd be interested, of course. No. Just so that we'd know to avoid it next 
 time).
+</p>
 
-    Linus Torvalds announcing the 2.6.19 Linux kernel.
+<p>
+    Linus Torvalds announcing the 2.6.19 Linux kernel.<br />
     http://lwn.net/Articles/211904/
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://lwn.net/Articles/211904/">Email Message</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-perl-not-comparable">
       <meta>

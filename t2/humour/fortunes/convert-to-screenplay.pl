@@ -12,7 +12,7 @@ my $parser = XML::LibXML->new();
 
 my $doc = $parser->parse_file($filename);
 
-my @fortunes = $doc->findnodes("//fortune[\@id='o-and-m-smithosnian']");
+my @fortunes = $doc->findnodes("//fortune[\@id='lion-king-what-are-stars']");
 
 my $cont = 0;
 foreach my $fort (@fortunes)

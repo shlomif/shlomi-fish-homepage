@@ -2,6 +2,16 @@
 
 <latemp_subject "Shlomi Fish's Personal Ad" />
 
+<:{
+use DateTime;
+
+my $birth = DateTime->new(year => 1977, month => 5, day => 5);
+
+my $now = DateTime->now();
+
+our $age = $now - $birth;
+}:>
+
 <div style="text-align: right; direction: rtl;">
 <p>
 מפתח תוכנה מנוסה, בוגר טכניון בהנדסת חשמל, מחפש בחורה
@@ -9,7 +19,7 @@
 הומור, ולעבוד מתוך הנאה.
 </p>
 <p>
-אני בן 28, שיער שחור ומתולתל, גר בתל-אביב. אני עובד על פרוייקטי תוכנה ותיעוד
+אני בן <:{ print $age->years(); }:>, שיער שחור ומתולתל, גר בתל-אביב. אני עובד על פרוייקטי תוכנה ותיעוד
 ותורם לקהילת התוכנה והאינטרנט העולמית והישראלית. מלבד זאת, אני אדם ישר,
 אידיאליסט, בעל חוש הומור טוב, אכפתי, גאה (אך משתדל לא להיות גאוותן) ויצרני
 מאוד.
@@ -31,7 +41,7 @@ An experienced software developer, who is a Technion Graduate in Electrical Engi
 pleasure.
 </p>
 <p>
-I'm 28, black curly hair, and live in Tel Aviv. At the moment, I'm working on 
+I'm <:{ print $age->years(); }:>, black curly hair, and live in Tel Aviv. At the moment, I'm working on 
 Software and Documentation Projects and contributes to the Israeli and 
 International software and Internet community. Aside from that, I'm honest,
 idealistic, with a good sense of humour, proud (but tries not to be boastful)

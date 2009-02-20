@@ -1,0 +1,16 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Rules of Open Source Programming Fortunes" />
+
+<h2*>The Rules of Open Source Programming Fortunes Collection</h2*>
+
+<h3*>Table of Contents</h3*>
+
+<toc />
+
+<h2 id="fortunes-list">The Fortune Themselves</h2>
+<div class="fortunes_list">
+#include "$(LATEMP_FILENAME)-xhtml-for-input"
+</div>
+

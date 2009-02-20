@@ -1,4 +1,4 @@
-VER = 0.10.113
+VER = 0.10.114
 
 DIST_BASE = fortunes-shlomif
 
@@ -64,4 +64,4 @@ xhtmls: $(XHTMLS)
 
 $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 	perl convert-to-xhtml.pl $<
-
+	touch $(patsubst %.xml,%.html.wml,$<)

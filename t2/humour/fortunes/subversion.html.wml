@@ -1,0 +1,23 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Fortune Cookies about Subversion" />
+
+<h2*>About</h2*>
+
+<p>
+These are fortune cookies related to the 
+<a href="http://subversion.tigris.org/">Subversion version control system</a>.
+</p>
+
+<h3*>Table of Contents</h3*>
+
+<toc />
+
+<h2 id="fortunes-list">The Fortune Themselves</h2>
+<div class="fortunes_list">
+#include "$(LATEMP_FILENAME)-xhtml-for-input"
+</div>
+
+
+

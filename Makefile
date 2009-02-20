@@ -225,9 +225,11 @@ DOCBOOK_XML_DIR = lib/docbook/xml
 DOCBOOK_FO_DIR = lib/docbook/fo
 DOCBOOK_PDF_DIR = lib/docbook/pdf
 DOCBOOK_RTF_DIR = lib/docbook/rtf
+DOCBOOK_RENDERED_DIR = lib/docbook/rendered
 DOCBOOK_INDIVIDUAL_XHTML_DIR = lib/docbook/indiv-nodes
+DOCBOOK_ALL_IN_ONE_XHTML_DIR = lib/docbook/essays
 
-DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
+DOCBOOK_TARGETS = $(patsubst %,$(DOCBOOK_RENDERED_DIR)/%.html,$(DOCBOOK_DOCS))
 DOCBOOK_XMLS = $(patsubst %,$(DOCBOOK_XML_DIR)/%.xml,$(DOCBOOK_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
@@ -240,8 +242,7 @@ DOCBOOK_RTFS = $(patsubst %,$(DOCBOOK_RTF_DIR)/%.rtf,$(DOCBOOK_DOCS))
 
 DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK_DOCS))
 
-# SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
-SCREENPLAY_DOCBOOK_HTMLS = 
+DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,lib/screenplay-xml/rendered-html/%.html,$(SCREENPLAY_DOCS))
 
@@ -260,15 +261,15 @@ lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
 	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
 	-o $@ $<
 
-SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
+SCREENPLAY_TARGETS = $(patsubst %,$(DOCBOOK_RENDERED_DIR)/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
 docbook_extended: $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_rtfs 
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
+docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
 
-lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
+$(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
 $(DOCBOOK_FO_DIR)/%.fo: $(DOCBOOK_XML_DIR)/%.xml
@@ -289,8 +290,8 @@ DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
 
 include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
 
-lib/docbook/essays/%/all-in-one.html: $(DOCBOOK_XML_DIR)/%.xml
-	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst lib/docbook/essays/%/all-in-one.html,lib/docbook/essays/%,$@) xhtml $<
+$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK_XML_DIR)/%.xml
+	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: lib/screenplay-xml/txt/TOW_Fountainhead_1.txt

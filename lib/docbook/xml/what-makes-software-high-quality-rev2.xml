@@ -499,19 +499,19 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="homepage">
         <title>The Program has a Homepage</title>
         <para>
-            Most software of high-quality has a homepage which introduces
-            the software, has download information, gives links, and
-            provides a starting point to receive more information. And no - a
-            <literal>/project/myprogram/</literal> page on 
+            Most software applicationsa and libraries of high-quality have a 
+            homepage which introduces them, has download information, gives 
+            links, and provides a starting point to receive more information.
+            And no - a <literal>/project/myprogram/</literal> page on 
             <ulink url="http://sourceforge.net/">Source Forge</ulink> or
-            whatever is much more sub-optimal than that, and leaves a bad
-            impression.
+            a different software hub - is much more sub-optimal than that, and 
+            leaves a bad impression.
         </para>
     </section>
     <section id="easy_to_compile_and_install">
         <title>The Program is Easy to Compile, Deploy and Install</title>
         <para>
-            A high-quality software is easy to compile, deploy and install.
+            A high-quality program is easy to compile, deploy and install.
             It builds out of the box with minimal hassles. There are several
             common standard building procedures for such software:
         </para>
@@ -568,7 +568,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </orderedlist>
 
         <para>
-            However, it's not uncommon to find software that fails to
+            However, it's not uncommon to find a program that fails to
             build even on GNU/Linux on an x86 computer, which is the most
             common platform for development. Or the case of
             <ulink url="http://www.shlomifish.org/open-source/anti/qmail/">the
@@ -603,7 +603,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             While reducing the number of dependencies often means re-inventing
             wheels, it still increases the quality of your software. I'm not
-            saying software cannot be high-quality if it has a large amount
+            saying a program cannot be high-quality if it has a large amount
             of dependencies, but it's still a good idea to keep it to a
             minimum.
         </para>
@@ -653,7 +653,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             wikis, etc. If the program is well-designed, then the user should
             be able to get up and running quickly. An exception to this are
             various highly specialised programs, such as 3-D graphics
-            programs, or CADs, that require some learning.
+            programs, or CAD programs, that require some extensive learning.
         </para>
         <para>
             If we take Subversion as an example, then it has a 
@@ -692,12 +692,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             It is tempting to believe that by writing a program for one
             platform, you can gain most of your market-share. However, people
             are using many platforms on many different CPU architectures:
-            Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux 
+            Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux
             on a multitude of platforms; BSD systems (NetBSD, FreeBSD, OpenBSD
             and others) on many architectures as well; Mac OS X; Sun 
-            Solaris (now also OpenSolaris), and more obscure (but still 
-            popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64 
-            (formerly Digital Unix), etc. And to say nothing of more exotic, 
+            Solaris (now also OpenSolaris), and more obscure (but still
+            popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64
+            (formerly Digital Unix), etc. And to say nothing of more exotic,
             non-UNIX, non-Microsoft operating systems like Novell Netware,
             Digital Corp.s's VMS or OpenVMS, IBM's VM/CMS or OS/390 (MVS),
             BeOS, AmigaOS, Mac OS 9 or earlier, PalmOS, VxWorks, etc. etc.
@@ -734,7 +734,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             For example, Subversion has made it a high priority to work
-            properly on Windows. On the other hand many of its early 
+            properly on Windows. On the other hand many of its early
             alternatives, especially GNU Arch, could not work there due to
             their architectures. As a result, many mixed shops, Windows-only
             shops, or companies where some developers wanted to use Windows
@@ -743,7 +743,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             The bootstrapping ANSI C compiler of gcc for example, is written in
-            very portable 
+            very portable
             <ulink url="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R 
                 C</ulink>, so it can be compiled by any C compiler. Later
             on, this compiler can be used to compile most of the rest of the
@@ -753,15 +753,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Compare that to many compilers for other languages that are
             written in the same language. For example,
             <ulink url="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
-                Compiler</ulink> is written in itself, and requires a modern
-            enough version of itself to compile itself. So you need to
-            bootstrap several intermediate compilers to build it.
+                Compiler</ulink> is written in itself, and requires a
+            relatively recent version of itself to compile itself. So you need
+            to bootstrap several intermediate compilers to build it.
         </para>
     </section>
     <section id="security">
         <title>Security</title>
         <para>
-            A high-quality software is secure. It has a relatively small
+            A high-quality program is secure. It has a relatively small
             number of security issues, and bugs are fixed there as soon as
             possible.
         </para>
@@ -814,8 +814,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             On the other hand, the perl5 developers have been maintaining
             backwards compatibility between 5.000, 5.001, 5.002 up to
             5.6.x, 5.8.x and now 5.10.x. As such one can normally expect older
-            scripts to just work. perl5 can also run a lot of perl4 code and
-            below, and perl4 code can be ported to modern versions of perl5
+            scripts to just work. perl5 can also run a lot of Perl 4 code and
+            below, and Perl 4 code can be ported to modern versions of perl5
             with relative ease. While sometimes scripts, programs
             or modules were broken (due to lack
             of "bug-to-bug compatibility"), or became slower,
@@ -825,7 +825,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="good_ways_to_provide_support">
         <title>Good Ways to Provide Support</title>
         <para>
-            A high-quality software has good ways for its users to 
+            A high-quality software has good ways for its users to
             receive support. Some examples for ways to do that are:
         </para>
         <orderedlist>
@@ -889,8 +889,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             A good example for how such optimisations can make such a huge
-            difference are the 
-            <ulink url="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and 
+            difference are the
+            <ulink url="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and
                 Firefox 3</ulink>, which greatly improved its
             performance, memory consumption, and reduced the
             number of memory leaks. It should be noted that often,
@@ -933,8 +933,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             is considered aesthetic. In 
             <ulink url="http://catb.org/~esr/writings/taoup/">The 
                 Art of UNIX Programming</ulink>, Eric Raymond <ulink url="http://catb.org/~esr/writings/taoup/html/ch11s09.html">makes the case for
-                the "Silence is Golden" principle of designing UNIX 
-                command-line interfaces</ulink>. 
+                the "Silence is Golden" principle of designing UNIX
+                command-line interfaces</ulink>.
             Basically, a command line program should output as little as
             possible. Now observe the behaviour of aptitude (a unified
             interface for package management) on Ubuntu Gutsy Gibbon, when
@@ -992,11 +992,11 @@ No package named this-does-not-exist
             want to use Linux more than Windows 95' or 98' was the fact that
             its desktops were truly themable and could be made to look much
             better without effort. If I got tired of the same look, I could
-            easily switch. While Windows XP shipped with a more attractive 
+            easily switch. While Windows XP shipped with a more attractive
             theme, and also had some proprietary and non-gratis theming
             software, Linux supplied all of that out-of-the-box and with
-            a more attractive theme. The 
-            <ulink url="http://youtube.com/watch?v=xC5uEe5OzNQ">effects 
+            a more attractive theme. The
+            <ulink url="http://youtube.com/watch?v=xC5uEe5OzNQ">effects
                 supplied by the Linux 3-D desktops</ulink>, which
             have put the 9-milliard Dollar effects of Vista to shame,
             have convinced some people to install Linux on their comptuer
@@ -1018,8 +1018,8 @@ No package named this-does-not-exist
             to manage, because their licence is less problematic than the
             GPL, etc. However, they forget that Linux has some
             advantages like being more popular (and so one can get support
-            more easily), or like the fact that its kernel supports much 
-            more hardware, or that it has better vendor acceptance, and 
+            more easily), or like the fact that its kernel supports much
+            more hardware, or that it has better vendor acceptance, and
             because more software is guaranteed to run with less problems
             on Linux than on the BSDs.
             <footnote id="software-only-on-linux" label="linux-bsd-soft">
@@ -1047,7 +1047,7 @@ No package named this-does-not-exist
 <section id="ways-to-achieve-quality">
     <title>Ways to Achieve Quality</title>
     <para>
-        Now that we've covered the elements that make programs high-quality 
+        Now that we've covered the elements that make programs high-quality
         here's a non-exhaustive list of ways to actually achieve it. None of
         them are absolutely necessary for achieving the quality, but they
         certainly help a lot.
@@ -1097,7 +1097,7 @@ No package named this-does-not-exist
             that it would need to be maintained, extended, and corrected.
             And if the clients in question don't have or don't want a good way 
             to pull changes from a central place, or install updates properly,
-            it's a procedural and organisational problem. 
+            it's a procedural and organisational problem.
         </para>
         <para>
             Organisational quality deserves its own separate article (or
@@ -1105,7 +1105,7 @@ No package named this-does-not-exist
             external software quality (much less internal one), is not a
             substitute for it. Please refer to <ulink url="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
                 partial list I prepared on a different article</ulink>,
-            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software "gurus" links</ulink> on my links' list.
+            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software "gurus" links</ulink> on my home-site's links' list.
         </para>
     </section>
     <section id="automated-tests">
@@ -1131,7 +1131,7 @@ No package named this-does-not-exist
             or before we fix a bug, and accumulating such tests
             (the so-called <ulink url="http://en.wikipedia.org/wiki/Test-driven_development">"Test-driven development"</ulink>
             paradigm), is a good practice which helps maintain
-            a high-quality software, and facilitates refactoring
+            high-quality code, and facilitates refactoring
             and makes it safer.
         </para>
     </section>
@@ -1164,7 +1164,7 @@ No package named this-does-not-exist
     <section id="good-software-management">
         <title>Good Software Management</title>
         <para>
-            There are several sources, online and offline, explaining good 
+            There are several sources, online and offline, explaining good
             software management for "shrinkwrap" software (open-source,
             commercial or other distributed) and for other types of software
             development (embedded, in-house, etc.), from which good advice
@@ -1183,7 +1183,7 @@ No package named this-does-not-exist
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.joelonsoftware.com/">The "Joel 
+                    <ulink url="http://www.joelonsoftware.com/">The "Joel
                         on Software" site</ulink>
                 </para>
             </listitem>
@@ -1215,7 +1215,7 @@ No package named this-does-not-exist
             Often, social engineering should be made part of the design of the 
             software, or the web-sites dedicated to it. For example, it took 
             me several iterations of having to fill the same project form in
-            <ulink url="http://savannah.gnu.org/">the 
+            <ulink url="http://savannah.gnu.org/">the
                 GNU Savannah software-hub</ulink>, only for it to be
             rejected, and me having to follow the process again. Despite
             the fact the admins were polite, it still was annoying.
@@ -1267,7 +1267,7 @@ No package named this-does-not-exist
             communication skills: very good English; pleasantness and tact;
             good phrasing, proper
             grammar, syntax, phrasing and capitalisation; clear writing;
-            patience and tolerance; etc. If he doesn't, then the project may 
+            patience and tolerance; etc. If they don't, then the project may 
             encounter problems as people will find the project's developers
             hard to understand or tolerate, and, thus, hard to work with.
         </para>
@@ -1360,7 +1360,7 @@ No package named this-does-not-exist
             helps a lot.
         </para>
         <para>
-            Also consider what <ulink url="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus 
+            Also consider what <ulink url="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus
                 Torvalds said about Linux and 386BSD</ulink> (half jokingly):
         </para>
         <blockquote>
@@ -1459,7 +1459,7 @@ No package named this-does-not-exist
             buying. For
             example, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill 
                 Raymond's solver</ulink> (named "Cat in the Sack") which he
-            has been talking about extensively, has not been released yet, 
+            has been talking about extensively, has not been released yet,
             under any licensing terms. Similarly, Danny A. Jones has kept his
             solver (mentioned in <link linkend="introduction">the
                 introduction</link>) for himself, and has not released it
@@ -1552,7 +1552,7 @@ make: *** [param.h] Error 127
             usable, command line utilities that link against it.
         </para>
         <para id="quality-analysis--usability">
-            Freecell Solver has very good 
+            Freecell Solver has very good
             <emphasis role="bold">usability</emphasis>: it mostly respects
             <ulink url="http://www.catb.org/~esr/writings/taoup/">the
                 Unix conventions and best practices</ulink>,
@@ -1572,10 +1572,10 @@ make: *** [param.h] Error 127
             the <ulink url="http://fc-solve.berlios.de/">Freecell
                 Solver homepage</ulink> has many pages, a navigation
             menu, a common look-and-feel and many links and information. On
-            the other hand, Patsolve is nothing but a link in
+            the other hand, Patsolve's homepage is nothing but a link in
             <ulink url="http://members.tripod.com/professor_tom/archives/">Tom
                 Holroyd's software archive</ulink>, which
-            can easily be missed. Gary Campbell's 
+            can easily be missed. Gary Campbell's
             <ulink url="http://www.numin8r.us/programs/">homepage
                 for his solver</ulink> has a Baroque design
             and quite a lot of marketing-speak. And it's only one page with no
@@ -1679,7 +1679,7 @@ make: *** [param.h] Error 127
             parallelised testing using mutli-threading much easier. It also
             has namespace-purity in the sense that all variables start
             with the <literal>freecell_solver_</literal> prefix. Moreover,
-            FCS has a well-defined and stable API, which is not 
+            FCS has a well-defined and stable API, which is not
             well-documented, but should be easy-to-use.
         </para>
 
@@ -1786,8 +1786,8 @@ make: *** [param.h] Error 127
         </para>
         <para>
             Finally, thanks to all the past and present people who helped
-            me with Freecell Solver, and with the rest of my "Free and
-            Open Source Software" endeavours.
+            me with Freecell Solver, and with the rest of my Free and
+            Open Source Software (FOSS) endeavours.
         </para>
     </section>
 </section>

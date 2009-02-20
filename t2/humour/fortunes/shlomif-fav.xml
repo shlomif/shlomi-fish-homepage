@@ -2536,18 +2536,23 @@ is uninstalled. Just like IE is.</p>
       <meta>
         <title>Writing a Mailing List Manager from Scratch</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Apart from the fact that I congratulate you for writing bugless software
+      <quote>
+          <body>
+              <p>
+          Apart from the fact that I congratulate you for writing bugless software
 without peer review, I also congratulate you for being able to write a fully
 RFC compliant MLM that won't blow up when you receive input you didn't account
 for.
+</p>
 
+<p>
 Quite frankly, even a crappy sysadmin can get a reasonable mailman setup
 working (including nice archiving), quicker than the best coder can rewrite a
 full MLM from scratch.  And you still have time left over to modify/fix/improve
 mailman to do the few things it didn't do quite right for you.
+</p>
 
+<p>
 But if your attitude to coding is "I'd rather rewrite all this than soiling my
 eyes and hands looking at someone else's code", that's not a very good way to
 get hired anywhere as a coder, and even if you are super brilliant, you end up
@@ -2555,27 +2560,32 @@ being a DJB that people snicker at with "that guy thinks he's so bright that he
 had to write his own libc" (instead of fixing/wrapping the few problematic
 pieces of them, and in the case of reasonable maintainers, contributing the
 code back).
-
-    Marc Merlin
-    http://allium.zgp.org/pipermail/linux-elitists/2007-October/012251.html
-]]></text>
+</p>
+    
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Marc Merlin</author>
+            <work href="http://allium.zgp.org/pipermail/linux-elitists/2007-October/012251.html">linux-elitists blog post</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="spaceballs">
       <meta>
         <title>"Not doing it for money"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[We're not doing it for money...We're doing it for a shitload of money!
+      <quote>
+          <body>
+              <p>
+                  We're not doing it for money...We're doing it for a shitload of money!
+                  </p>
 
-    Excerpt from Spaceballs
-]]></text>
+                  <p>Excerpt from Spaceballs</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Mel Brooks</author>
+            <work href="http://www.imdb.com/title/tt0094012/">Spaceballs</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-perl-something-on-something">
       <meta>
@@ -2619,50 +2629,62 @@ code back).
       <meta>
           <title>Slashdot: Response to "BBC Creates 'Perl on Rails'"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Slasdhot Response to "BBC Creates 'Perl on Rails'":
----------------------------------------------------
+      <quote>
+          <body>
+              <p>
+                  Slasdhot Response to "BBC Creates 'Perl on Rails'":
+                  </p>
 
+                  <p>
 This is proof that there is a conspiracy to make up absurd programming
 shenanigans to sell overpriced door stoppers! Coming soon...
- 
-* "Perl on Rails for Dummies"
-* "Perl on Rails for Idiots"
-* "Perl on Rails Bible"
-* "Perl on Rails in 24 Hours"
-* "Perl on Rails in a Nutshell"
-* "Perl on Rails: The Missing Manual"
- 
-...at a bookstore near you to burn a hole in your wallet!
+</p>
 
-    -- creimer:
-    -- http://developers.slashdot.org/comments.pl?sid=376757&cid=21544637
-]]></text>
+<ul>
+<li>"Perl on Rails for Dummies"</li>
+<li>"Perl on Rails for Idiots"</li>
+<li>"Perl on Rails Bible"</li>
+<li>"Perl on Rails in 24 Hours"</li>
+<li>"Perl on Rails in a Nutshell"</li>
+<li>"Perl on Rails: The Missing Manual"</li>
+</ul>
+
+<p>
+    ...at a bookstore near you to burn a hole in your wallet!
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>creimer</author>
+            <work href="http://developers.slashdot.org/comments.pl?sid=376757&amp;cid=21544637">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="larry-wall-worse-is-better">
       <meta>
         <title>"Worse is Better" (Larry Wall)</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Among the generalists, the conventional wisdom is that the worse-is-better
+      <quote>
+          <body>
+              <p>
+          Among the generalists, the conventional wisdom is that the worse-is-better
 approach is more adaptive. Personally, I get a little tired of the argument: My
 worse-is-better is better than your worse-is-better because I'm better at being
 worser! Is it really true that the worse-is-better approach always wins? With
 Perl 6 we're trying to sneak one better-is-better cycle in there and hope to
 come out ahead before reverting to the tried and true worse-is-better approach.
 Whether that works, only time will tell.
+</p>
 
-    Larry Wall in "State of the Onion 11"
+<p>
+    Larry Wall in "State of the Onion 11"<br/>
     http://www.perl.com/pub/a/2007/12/06/soto-11.html?page=3
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Larry Wall</author>
+            <work href="http://www.perl.com/pub/a/2007/12/06/soto-11.html?page=3">State of the Onion 11</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-perl-too-many-cooks">
       <meta>
@@ -2742,27 +2764,35 @@ Whether that works, only time will tell.
       <meta>
         <title>"It was 20 years ago today…"</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[It was 20 years ago today
-Larry Wall taught some text to play
-It's been going in & out of style
-But it's stuck around for quite a while()
-So may I introduce to you
-The tool you've loved for all these years
-Larry's Practical Extract & Report Laaaanguage
+      <quote>
+          <body>
+              <p>
+It was 20 years ago today<br/>
+Larry Wall taught some text to play<br/>
+It's been going in &amp; out of style<br/>
+But it's stuck around for quite a while()<br/>
+So may I introduce to you<br/>
+The tool you've loved for all these years<br/>
+Larry's Practical Extract &amp; Report Laaaanguage<br/>
+</p>
 
-It's Larry's Practical Extract Report Lang
-5.10 still has some bugs to fix
-Larry's Practical Extract Report Lang
-Don't ask for a date for version 6...
+<p>
+It's Larry's Practical Extract Report Lang<br/>
+5.10 still has some bugs to fix<br/>
+Larry's Practical Extract Report Lang<br/>
+Don't ask for a date for version 6...<br/>
+</p>
 
-    http://perlbuzz.com/2007/12/it-was-twenty-years-ago-today.html
+<p>
+    http://perlbuzz.com/2007/12/it-was-twenty-years-ago-today.html<br />
     on Perl's 20th Birthday
-]]></text>
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Andy Lester</author>
+            <work href="http://perlbuzz.com/2007/12/it-was-twenty-years-ago-today.html">Perl's 20th Birthday</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="linus-the-purpose-of-holidays">
       <meta>

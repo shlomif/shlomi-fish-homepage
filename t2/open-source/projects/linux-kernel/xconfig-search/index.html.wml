@@ -1,0 +1,31 @@
+#include '../template.wml'
+
+<latemp_subject "Linux Kernel Patch: &quot;make xconfig&quot; Search Enhancement" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a patch to <a href="http://www.kernel.org/">the Linux kernel</a>
+that enhances the search dialog of "make xconfig". According to the input
+of the kernel developers, it was done in a modular way by enhancing the
+kernel C configuration API.
+</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+<li>
+<a href="xconfig-search-patch-take3-11.diff"><b>take3-11 - Latest Version</b></a> -
+applies and compiles cleanly on linux-2.6.25-rc6, some earlier kernels and
+probably later ones up to and including 2.6.25.
+</li>
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+I hereby disclaim any explicit or implicit claims to copyrights of the
+GPLed code that I modified. I added some new files and they are under
+the X11 Licence.
+</p>
+

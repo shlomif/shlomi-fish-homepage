@@ -63,6 +63,11 @@ my $software_tree_contents =
                     'title' => "Park - a Dialect of the Lisp Programming Language inspired by Arc",
                 },
                 {
+                    'text' => "Kernel Configuration Search Enhancement",
+                    'url' => "open-source/projects/linux-kernel/xconfig-search/",
+                    'title' => "Patch to Enhance the Configuration Searching of the Linux Kernel",
+                },
+                {
                     'text' => "Bits and Bobs",
                     'url' => "open-source/bits.html",
                     'title' => "Small Open Source Programs",

@@ -374,10 +374,92 @@ revise the document in the future, and allow some derivative works based
 and inspired from it.
 </p>
 
+<h3 id="admission-of-failure">5. It's an Admission of Failure</h3>
+
+<p>
+Let's say you've found that the current built-in documentation of a software
+project is inadequate and you've decided to write a closed book remedying
+it. What does it say? That the online documentation is bad, and that thanks
+to you, it will remain this way. So don't do that.
+</p>
+
+<p>
+On the IRC, I discussed my frustration with the current state of 
+the art of the current state of the documentation of 
+<a href="http://git.or.cz/">git</a>, whose commands have extremely
+terse and unintelligible <tt>--help</tt> displays, and exhaustive
+and confusing man pages. Then someone told me he suggested 
+<a href="http://www.stonehenge.com/merlyn/">Randal Schwartz</a> to
+write an O'Reilly book about git. Now, if this book will indeed be written
+(and not made available online for free), it <b>will not improve the bad 
+documentation</b> of the current system. Instead, it will be an admission of 
+failure.
+</p>
+
+<p>
+I voiced similar concerns about the Perl documentation back in my time
+in my old <a href="$(ROOT)/philosophy/perl-newcomers/">"Usability" 
+of the Perl Online World for Newcomers</a> essay. Quoting from it:
+</p>
+
+<blockquote>
+
+<p>
+I don't have anything against people trying to make money off Perl by selling
+books. But these people are the same people who are the Perl project leaders,
+and so are responsible to make sure Perl is well-documented. If people get
+frustrated learning Perl, and become unhappy with it, they will criticize
+"Perl". Not the Perl documentation. Not the Perl community. Not even the Perl
+leaders. "Perl". If Larry Wall et al. care enough about Perl, they should make
+sure it has good online documentation.
+</p>
+
+<p>
+…
+<p>
+
+<p>
+Such books need not be available online if their authors so much don't desire.
+However, Perl is very hard to learn from public electronic resources alone. I
+believe there may even be a clash of interests because the core Perl people
+also write them and so may not have enough motivation to improve the online
+documentation. Making them public will resolve that.
+</p>
+
+</blockquote>
+
+<p>
+I may have been a bit too blunt there, but I think you get my point.
+</p>
+
+<p>
+Also consider <a href="http://www.ruby-doc.org/">Ruby-Doc</a>, which
+illustrates the pathetic state of the online Ruby documentation (at
+least in English). Only one available free book, and it already has a 
+newer edition, which is more up-to-date. And it doesn't cover "Ruby-on-Rails".
+Many newer books were published, but none of them were made available online,
+and I was told what most Ruby newcomers do is download illegal copies of
+such books.
+</p>
+
+<p>
+If you care enough about your technology or topic, make sure to publish
+your work online too. Otherwise, you're admitting that the current
+documentation is inadequate, that you care more for getting money than for
+making your work more popular, and that you don't care enough about the
+legitimate uses that I mentioned.
+</p>
+
+<h3 id="does-not-hurt-sales">6. Does not Hurt Sales</h3>
+
+<p>
+<b>FILL IN</b>.
+</p>
+
 <h2 id="thanks">Thanks</h2>
 
 <p>
-Thanks to <a href="http://jwn.name/">firespeaker</a> for doing some 
+Thanks to <a href="http://jwn.name/">firespeaker</a> for doing some
 copy-editing of this document.
 </p>
 

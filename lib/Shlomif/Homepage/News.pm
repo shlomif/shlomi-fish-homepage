@@ -170,7 +170,7 @@ sub file_to_news_item
     }
     $text =~ s!<p>!<p class="newsitem">!g;
     $text =~ s!<ol>!<ol class="newsitem">!g;
-    $text =~ s!<ul>!<ol class="newsitem">!g;
+    $text =~ s!<ul>!<ul class="newsitem">!g;
     $filename =~ /^(\d{4})-(\d{2})-(\d{2})\.html$/;
     my ($y, $m, $d) = ($1, $2, $3);
     my $date = DateTime->new(year => $y, month => $m, day => $d);

@@ -286,6 +286,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/philosophy/advice-for-the-young/",
                     'title' => "Advice for the Young (and for the not-so Young)",
                 },
+                {
+                    'text' => "Why Closed Books are So 19th Century",
+                    'url' => "philosophy/philosophy/closed-books-are-so-19th-century/",
+                    'title' => "Why authors of books should make sure they are publically available online.",
+                },
             ],
         },
         {

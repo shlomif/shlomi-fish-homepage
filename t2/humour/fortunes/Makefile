@@ -19,11 +19,15 @@ FILES = \
 
 DATS = $(addsuffix .dat,$(FILES))
 
+XMLS = $(addsuffix .xml,$(FILES))
+
+XHTMLS = $(patsubst %.xml,%.xhtml,$(XMLS))
+
 INDEX_FILE = index.html
 
 VERSION_FILE = ver.txt
 
-all: dist test
+all: dist test xhtmls
 
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile $<
@@ -55,3 +59,9 @@ print_package_base:
 
 list-files:
 	@perl -le 'print "FORTUNES_ARCS_LIST = " . join(" ", glob("fortunes-shlomif-*.tar.gz"))' > arcs-list.mak
+
+xhtmls: $(XHTMLS)
+
+$(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
+	perl convert-to-xhtml.pl $<
+

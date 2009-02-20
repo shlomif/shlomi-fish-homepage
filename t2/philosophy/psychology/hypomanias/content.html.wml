@@ -1,0 +1,40 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "Dealing with Hypomanias" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+<b>TODO :</b> FILL IN.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "../lib/docbook/rendered/dealing-with-hypomanias.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="dealing-with-hypomanias.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don't.)
+</li>
+<li>
+<a href="dealing-with-hypomanias.xml">Original DocBook/XML</a>.
+</li>
+<li>
+<a href="dealing-with-hypomanias.rtf">Word RTF</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+<b>TODO :</b> fill in.
+</p>
+

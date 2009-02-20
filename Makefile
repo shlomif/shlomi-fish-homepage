@@ -17,7 +17,6 @@ DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 all: make-dirs docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
 
 include lib/make/gmsl/gmsl
-include lib/make/fortunes/fortunes-list.mak
 	
 include include.mak
 include rules.mak
@@ -28,6 +27,7 @@ FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
 
 include $(T2_FORTUNES_DIR)/arcs-list.mak
+include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 FORTUNES_TARGET = $(T2_DEST)/humour/fortunes/index.html

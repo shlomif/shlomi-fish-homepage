@@ -1,3 +1,5 @@
+include fortunes-list.mak
+
 VER = 0.10.114
 
 DIST_BASE = fortunes-shlomif
@@ -6,6 +8,7 @@ DIST_DIR = $(DIST_BASE)-$(VER)
 
 PACKAGE_BASE = $(DIST_DIR).tar.gz
 
+FILES = $(FORTUNES_FILES_BASE)
 
 DATS = $(addsuffix .dat,$(FILES))
 
@@ -17,7 +20,7 @@ INDEX_FILE = index.html
 
 VERSION_FILE = ver.txt
 
-all: dist xhtmls test
+all: dist test
 
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile $<
@@ -53,6 +56,9 @@ list-files:
 xhtmls: $(XHTMLS)
 
 $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
-	bash run-validator.bash $<
+	bash run-validator.bash $< $@
 	perl convert-to-xhtml.pl $<
 	touch $(patsubst %.xml,%.html.wml,$<)
+
+%.show:
+	@echo "$* = $($*)"

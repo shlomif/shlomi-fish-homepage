@@ -62,7 +62,7 @@ my $info_text =
 "<info>\n" .
 (" " x 4) . "<author>Joel Spolsky</author>\n" .
 (" " x 4) . ($url ? "<work href=\"$url\"" : "<work" ) .
-"$title</work>\n" .
+">$title</work>\n" .
 "</info>"
 ;
 

@@ -50,7 +50,7 @@ $(T2_DEST_FORTUNES) :: $(T2_DEST)/% : t2/%
 upload_deps: all
 
 upload: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/ )
+	( cd $(T2_DEST) && $(RSYNC) -a * $${HOMEPAGE_SSH_PATH}/ )
 
 upload_backup: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
@@ -58,7 +58,7 @@ upload_backup: upload_deps
 upload_remote: upload upload_remote_only
 
 upload_remote_only: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -r * $${__HOMEPAGE_REMOTE_PATH}/ )
+	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/ )
 
 clean:
 	rm -fr $(T2_DEST)/*

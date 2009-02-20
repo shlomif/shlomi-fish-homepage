@@ -1,6 +1,11 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "Shlomi Fish's Philosophical Writings" />
+
+<h2*>Table of Contents</h2*>
+
+<toc />
 
 <h2><a href="./Index/">Index to my Essays</a></h2>
 

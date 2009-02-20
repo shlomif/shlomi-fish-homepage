@@ -63,5 +63,6 @@ list-files:
 xhtmls: $(XHTMLS)
 
 $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
+	bash run-validator.bash $<
 	perl convert-to-xhtml.pl $<
 	touch $(patsubst %.xml,%.html.wml,$<)

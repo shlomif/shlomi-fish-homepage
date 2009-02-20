@@ -6,8 +6,7 @@ shift
     ~/apps/perl/perl-5.8.8-debug/bin/perl \
     -Mblib -MXML::Grammar::Fortune \
     -e 'exit(XML::Grammar::Fortune->new(
-        {mode => "validate", input => shift(@ARGV)})->run());'
-       ' \
+        {mode => "validate", input => shift(@ARGV)})->run());' \
        "$cur_dir/$filename"
 )
 

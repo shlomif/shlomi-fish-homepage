@@ -3644,6 +3644,63 @@ G: And all <b>we</b> had were NAND gates!
         </info>
 </irc>
 </fortune>
+<fortune id="sextalk-according-to-perlers">
+        <meta>
+            <title>Sextalk according to the cult of Perl</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="krang">Hey all, what&#39;s the best way to call one perl script from another? I was thinking I&#39;d just use &#39;system(&quot;script.pl&quot;);&#39;</saying>
+<saying who="dazjorz">krang: yeah, that, or do &quot;script.pl&quot;</saying>
+<saying who="dazjorz">krang: depends on how seperated you want them to be</saying>
+<saying who="krang">dazjorz: you mean just a line that has &quot;script.pl&quot;; written on it?</saying>
+<saying who="Khisanth">you need the do as well</saying>
+<saying who="dazjorz">krang: no, exactly this: do &quot;script.pl&quot;;</saying>
+<saying who="rindolf">krang: system is usually what you want.</saying>
+<saying who="rindolf">krang: normally require or use are preferable to do</saying>
+<saying who="dazjorz">rindolf: that&#39;s for modules, isn&#39;t it ?</saying>
+<saying who="rindolf">dazjorz: yes.</saying>
+<saying who="dazjorz">wait, I think require &quot;script.pl&quot; would work too</saying>
+<saying who="rindolf">dazjorz: and doing code is not such a good idea.</saying>
+<saying who="dazjorz">rindolf: hmm?</saying>
+<saying who="krang">rindolf: what is doing anyway?</saying>
+<saying who="rindolf">dazjorz: I mean &quot;perldoc -f do&quot;-ing code.</saying>
+<saying who="rindolf">krang: do()-ing</saying>
+<saying who="rindolf">krang: it reads the file and evaluates it.</saying>
+<saying who="rindolf">krang: perldoc -f do.</saying>
+<saying who="dazjorz">rindolf: ah</saying>
+<saying who="dazjorz">rindolf: do {}</saying>
+<me_is who="rindolf">would rather be doing hot models than doing code. :-)</me_is>
+<saying who="dazjorz">rindolf: yeah, do BLOCK is quite useless</saying>
+<saying who="dazjorz">heh</saying>
+<saying who="rindolf">dazjorz: you can do my $var = do { ... }</saying>
+<me_is who="dazjorz">would rather be doing GumbyBRAIN than doing code</me_is>
+<saying who="GumbyBRAIN">and doing code is not be in the days of immortality!</saying>
+<saying who="rindolf">dazjorz: or eval { ... }</saying>
+<saying who="rindolf">dazjorz: heh.</saying>
+<saying who="rindolf">It&#39;s hard to do code.</saying>
+<saying who="dazjorz">do $model;</saying>
+<saying who="dazjorz">eh.. sorry, do $hotmodel;</saying>
+<saying who="rindolf">&quot;Are you into my brother?&quot;</saying>
+<saying who="rindolf">&quot;No I&#39;m totally into Perl.&quot;</saying>
+<saying who="krang">ah ok, I see. Thanks guys!</saying>
+<saying who="rindolf">krang: yw.</saying>
+<saying who="dazjorz">heh :-)</saying>
+<saying who="rindolf">If you want a configuration file, you should be using something like INI, YAML, etc.</saying>
+<saying who="rindolf">XML perhaps.</saying>
+<saying who="rindolf">Something.</saying>
+<saying who="rindolf">Apache-like config.</saying>
+<saying who="dazjorz">Apache-like is very strong but hard to parse, right ?</saying>
+<saying who="dazjorz">Loading and saving configuration never looks good, especially when it&#39;s XML</saying>
+<saying who="dazjorz">the code to load and save is ugly.</saying>
+</body>
+        <info>
+            <channel>#perl</channel>
+            <network>Freenode</network>
+            <tagline>Sextalk among Perl cultists</tagline>
+        </info>
+</irc>
+</fortune>
 </list>
 </collection>
 

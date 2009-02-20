@@ -17,7 +17,7 @@ my ($fortune) = $doc->findnodes("//fortune[\@id='$id']");
 
 my ($raw) = $fortune->findnodes("raw");
 
-my ($text) = $raw->findnodes("//text");
+my ($text) = $raw->findnodes("descendant::text");
 
 my @cdata = $text->childNodes();
 

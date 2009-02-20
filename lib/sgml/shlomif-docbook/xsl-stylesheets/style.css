@@ -18,16 +18,17 @@ a:hover { background-color : palegreen; }
     margin-right: 1%;
     
 }
-.section .section
-{
-      margin-left:0;
-      border-left: none;
-}
-.article, .section, .navheader, .ads_top
+
+div.article, div.section, div.navheader, div.ads_top
 {
     margin-left: 17%;
     border-left: solid 3pt black;
     padding-left: 0.7%;
+}
+.section .section, .article .section
+{
+      margin-left:0;
+      border-left: none;
 }
 hr
 {
@@ -42,4 +43,5 @@ hr
 {
     margin-bottom:0;
 }
+
 

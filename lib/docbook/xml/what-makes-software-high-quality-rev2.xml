@@ -127,6 +127,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                         Made many other corrections.
                 </revremark>
             </revision>
+            <revision>
+                <revnumber>5492</revnumber>
+                <date>09 June 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed "manifest" to "is manifested".
+                </revremark>
+            </revision>
         </revhistory>
     </articleinfo>
 
@@ -926,10 +934,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             There are several related aspects of performance, that also
             affect the general quality and usability of a program. One of them
-            is responsiveness, which often manifest as people complain that
-            the program is "sluggish". Java programs are especially notorious
-            for being such, for some reason, while programs written in
-            <ulink url="http://www.perl.org/">Perl</ulink> and
+            is responsiveness, which is often manifested when people complain 
+            that the program is "sluggish". Java programs are especially 
+            notorious for being such, for some reason, while programs written
+            in <ulink url="http://www.perl.org/">Perl</ulink> and
             <ulink url="http://www.python.org/">Python</ulink> are more
             responsive and feel snappy, despite the fact that their backends
             are generally slower than the Java virtual machine.

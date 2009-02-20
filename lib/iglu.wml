@@ -1,0 +1,6 @@
+<define-tag iglu_url whitespace="delete">
+<preserve url />
+<set-var %attributes />
+http://www.shlomifish.org/Iglu/<get-var url />
+<restore url />
+</define-tag>

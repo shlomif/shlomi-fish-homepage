@@ -1,8 +1,9 @@
 #include '../template.wml'
+#include "iglu.wml"
 
 <latemp_subject "Lightning Talk: The Template Toolkit" />
 
-<h2><a href="http://www.iglu.org.il/shlomif/lecture/Template-Toolkit/">The 
+<h2><a href="<iglu_url url="shlomif/lecture/Template-Toolkit/" />">The 
 Slides</a></h2>
 
 <h2>Introduction</h2>

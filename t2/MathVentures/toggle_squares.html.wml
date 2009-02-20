@@ -1,5 +1,7 @@
 #include '../template.wml'
 
+#include "iglu.wml"
+
 <latemp_subject "Toggling Squares is not that Trivial..." />
 
 <p>
@@ -12,14 +14,7 @@ For the time being, the Java game, I'm referring to can be found here:
 </p>
 
 <p>
-I have also written an implementation of it in JavaScript. It can be found 
-here:
-</p>
-
-<p>
-<a href="http://www.iglu.org.il/shlomif/toggle_squares/">
-http://www.iglu.org.il/shlomif/toggle_squares/
-</a>
+I have also written <a href="<iglu_url url="shlomif/toggle_squares/" />">an implementation of it in JavaScript</a>.
 </p>
 
 <p>

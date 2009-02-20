@@ -173,16 +173,26 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         try to define high quality here, and try to show when a program
         is high quality, and when it is not exactly the case.
     </para>
+
     <para>
-        I initially wanted to give some examples for software that I considered
-        to be of exceptional high-quality, but I decided against it. That's
-        because it is a matter of taste if this is the case for them, and
-        since it may provoke too much criticism against this essay as a
-        whole. Thus, I'll just give some examples, possibly accompanied by
-        screenshots, of places where one program does something better than
-        a different program, while not even implying that the latter is in
-        fact lower-quality in all possible respects.
+        I initially wanted to give some examples for open-source software
+        that I considered to be of exceptional high-quality, but I decided
+        against it. That's because it is a matter of taste if this is the case
+        for them, and since it may provoke too much criticism against this
+        essay as a whole. Thus, I'll just give some examples, possibly
+        accompanied by screenshots, of places where one program does something
+        better than a different program, while not even implying that the
+        latter is in fact lower-quality in all possible respects.
     </para>
+
+    <para>
+        This article is written from the point-of-view as me as a developer
+        of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">"Free 
+            and Open Source Software"</ulink>, and will focus on open-source
+        and pseudo-open-source software. However, a lot of what I say is
+        more universal.
+    </para>
+
 </section>
 <section id="parameters-of-quality">
     <title>Parameters of Quality</title>
@@ -1460,7 +1470,7 @@ make: *** [param.h] Error 127
             Which brings us to the features - Freecell Solver has
             <ulink url="http://fc-solve.berlios.de/features.html">a long
                 list of features</ulink>, and I'm not aware of any
-            solver with so many of them. Especially of note is that it
+            other solver with so many. Especially of note is that it
             can solve many other Solitaire variants, including
             <ulink 
                 url="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple 
@@ -1475,6 +1485,35 @@ make: *** [param.h] Error 127
             and for analysing large sets of different games. (see the
             <ulink url="http://www.solitairelaboratory.com/fcfaq.html">Freecell
             FAQ</ulink> for more information).
+        </para>
+        <para id="quality-analysis--solution-length">
+            In his original message, Mr. Campbell claimed that the
+            <ulink url="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell 
+                Pro</ulink> solvers (Freecell Solver, Patsolve and the solver
+            that originated from Don Woods) generated long and unusable
+            solutions. That has not been my experience with Freecell Solver
+            in some of its (practically infinite) configurations. Using
+            the so-called "good-intentions" configuration I typically get
+            solutions that are less than 200 moves. It is highly possible
+            this is not the default in Freecell Pro. But like I said, there
+            are many different parameters for quality than just speed
+            and solution-length.
+        </para>
+        <para id="quality-analysis--other-advantages">
+            Freecell Solver has some other advantages: it is capable
+            of being fully instantiated, as it stores everything in an
+            "instance" C-struct, while using global variables only for
+            constants (and not using static variables). This makes doing
+            parallelised testing using mutli-threading much easier. It also
+            has namespace-purity in the sense that all variables start
+            with the <literal>freecell_solver_</literal> prefix. Moreover,
+            FCS has a well-defined and stable API, which is not 
+            well-documented, but should be easy-to-use. 
+        </para>
+        <para>
+            Part of the API is a parser for a list of command-line-like
+            strings, which allow for configuring without making many standalone
+            function calls.
         </para>
     </section>
     <section id="freecell-solvers-quality--conclusion">

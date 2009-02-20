@@ -55,6 +55,15 @@
 
 <!-- Insert some AdSense Ads -->
 <xsl:template name="user.header.navigation">
+    <div class="site_nav_menu">
+        <ul>
+            <li><a href="../../../../">Home</a></li>
+            <li><a href="../../../../humour/">Humour</a></li>
+            <li><a href="../../../../philosophy/">Articles and Essays</a></li>
+            <li><a href="../../../../puzzles/">Puzzles</a></li>
+            <li><a href="../../../../art/">Computer Art</a></li>
+        </ul>
+    </div>
     <div class="center ads_top">
     <script type="text/javascript">
 google_ad_client = "pub-2480595666283917";

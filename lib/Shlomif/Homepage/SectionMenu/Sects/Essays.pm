@@ -84,6 +84,14 @@ my $essays_tree_contents =
                 {
                     'text' => "What Makes Software High-Quality?",
                     'url' => "philosophy/computers/high-quality-software/",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "2nd Revision",
+                            'url' => "philosophy/computers/high-quality-software/rev2/",
+                            'title' => "'What Makes Software High Quality?' - Revision 2",
+                        },
+                    ],
                 },
                 {
                     'text' => "Perl",

@@ -100,6 +100,11 @@ my $essays_tree_contents =
                     'title' => "The Vim (Vi-Improved) Editor for Beginners",
                 },
                 {
+                    'host' => "t2",
+                    'text' => "Vim Tips and Tricks",
+                    'url' => "lecture/Vim/telux-tips-and-tricks/",
+                },
+                {
                     'text' => "Pres Tools",
                     'url' => "lecture/cat/pres-tools/",
                     'title' => "Tools for Preparing Slides for Presentations",

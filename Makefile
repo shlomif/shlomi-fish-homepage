@@ -273,6 +273,7 @@ $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
 	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $@ xhtml $<
+	touch $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook

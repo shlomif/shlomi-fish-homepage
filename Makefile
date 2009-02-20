@@ -188,13 +188,14 @@ SCREENPLAY_DOCS = \
 
 $(call set,DOCBOOK_DIRS_MAP,case-for-drug-legalisation,philosophy/politics/drug-legalisation)
 $(call set,DOCBOOK_DIRS_MAP,case-for-file-swapping-rev3,philosophy/case-for-file-swapping/revision-3)
+$(call set,DOCBOOK_DIRS_MAP,dealing-with-hypomanias,philosophy/psychology/hypomanias/)
 $(call set,DOCBOOK_DIRS_MAP,end-of-it-slavery,philosophy/computers/software-management/end-of-it-slavery)
-$(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
-$(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
-$(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
 $(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/revision-2)
-$(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
+$(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
 $(call set,DOCBOOK_DIRS_MAP,isr-pales-conflict-solution,philosophy/israel-pales)
+$(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
+$(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
+$(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality-rev2,philosophy/computers/high-quality-software/rev2)
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)

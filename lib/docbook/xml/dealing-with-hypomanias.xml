@@ -1,0 +1,175 @@
+<?xml version='1.0' ?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" 
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+
+<article id="index">
+    <articleinfo>
+        <title>Dealing with Hypomanias</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@iglu.org.il</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2008</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice>
+            <para>
+<!--Creative Commons License-->
+This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option a greater version of it).
+		<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+	<dc:title>The Case for File Swapping</dc:title>
+	<dc:date>2005</dc:date>
+	<dc:description>An essay that explains why Internet File Swapping (using Peer-to-Peer networks, etc.) is not only moral and ethical, but also should be legal, and cannot be banned. Discusses other issues.</dc:description>
+	<dc:creator><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:creator>
+	<dc:rights><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:rights>
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+		</Work>
+		<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->                
+            </para>
+        </legalnotice>
+        <abstract>
+            <para>
+                I'll discuss some of my experience as a person with Bipolar
+                Disorder (or Mania-Depressia), and how I deal with the various
+                periods of "hypomania": periods of strong excitement and 
+                feelings of self-grandioisity.
+            </para> 
+        </abstract>
+
+        <revhistory>
+            <revision>
+                <revnumber>5389</revnumber>
+                <date>30 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the template from a previous work and working on 
+                    it.
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+<section id="introduction">
+    <title>Introduction</title>
+
+    <para>
+        Why is high quality in software important? Low-quality software
+        applications will require the users or end-developers to work
+        around their bugs and limitations, write a lot of extra functionality
+        themselves, and as a result, duplicate a lot of effort and 
+        cause a lot of frustration and unhappiness. This is assuming 
+        they don't give up on it soon or right away, and end up looking
+        for something else.
+    </para>
+
+    <para>
+        But what makes a popular software application "high-quality"?
+        A high-quality program or library can be defined as one that
+        is usable as is, that causes very few frustrations, and that
+        requires little if any modifications or workarounds to get
+        it up-to-speed.
+    </para>
+    
+    <para>
+        I'm not talking about the application that's the most hyped, or the
+        fastest, most featureful, or best. Sometimes you can often hear
+        endless rants
+        and <ulink
+            url="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
+            Uncertainty and Doubt (FUD)</ulink> attacks about it. Often, it has
+        competing programs that are superior in many respects. 
+    </para>
+
+    <para>
+        In this essay we'll look at what quality metrics apply to software.
+    </para>
+
+    <section id="motivation">
+        <title>Motivation</title>
+        
+        <para>
+            How did it occur to me to ponder this question? I am active in the
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss 
+                mailing list</ulink>,
+            which is dedicated to computerised techniques for solving
+            <ulink url="http://www.freecell.org/">the Freecell solitaire card
+                game</ulink>, and for discussing other automated solving
+            and research of Solitaire games. This mailing list was started after
+            I wrote
+            <ulink url="http://fc-solve.berlios.de/">Freecell Solver</ulink> (with
+            a lowercase "c" and an uppercase "S"), an open-source solver,
+            which has proven to be quite popular. However, the mailing list
+            was not restricted to discussing it exclusively, and was joined
+            by many other Freecell solving experts, researchers and enthusiasts.
+        </para>
+        <para>
+            Recently, Gary Campbell wrote 
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this 
+                message</ulink> reading:
+        </para>
+        <blockquote>
+            <para>
+                I think the solver discussion in the Wikipedia should mention that
+                the FCPro solvers give quite lengthy and virtually unusable
+                solutions. No human wants to follow the several hundred steps that
+                usually result in order to get at what's really required to solve a
+                given layout. If someone wants a solution that can be understood,
+                they want one that is under 100 steps.  This is a major
+                contribution and it should be stated. There are a lot of 
+                <emphasis role="bold">"toy"</emphasis>
+                solvers and only a very few of <emphasis role="bold">"industrial strength."</emphasis> 
+                One of the
+                latter is the solver by Danny Jones. I don't see that on your list.
+                The results he has gotten from his solver pretty much put your
+                solver to shame. The more you hype Freecell Solver, the more
+                criticism you open yourself up to.
+            </para>
+        </blockquote>
+        <para>
+            Unfortunately, it's hard for me to determine what "industrial
+            strength", "enterprise grade" and other such buzzwords are. But I'll
+            try to define high quality here, and try to show when a program
+            is high quality.
+        </para>
+    </section>
+    <section id="organisation">
+        <title>Organisation of this Document</title>
+
+        <para>
+            I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
+            that I considered to be of exceptional high-quality, but I decided
+            against it. 
+        </para>
+        
+        <para>
+            That's because their exceptional quality is a matter of taste, and 
+            it may provoke too much criticism against this essay as a whole. 
+            Thus, I'll just give some examples, possibly accompanied by 
+            screenshots, of places where one program does something
+            better than a different program. I won't even going to imply 
+            that the latter is in fact lower-quality in all 
+            possible respects.
+        </para>
+
+        <para>
+            This article is written from my point-of-view as a developer
+            of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">"Free 
+                and Open Source Software"</ulink>, and will focus on 
+            open-source and pseudo-open-source software. However, a lot of
+            what I say is more universal.
+        </para>
+    </section>
+</section>
+</article>    <!-- End of the article -->

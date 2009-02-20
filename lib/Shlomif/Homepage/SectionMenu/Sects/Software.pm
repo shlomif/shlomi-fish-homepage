@@ -58,6 +58,11 @@ my $software_tree_contents =
                     'title' => "Workaround to use yjobs.co.il using (cross-platform) Mozilla-based browsers such as Firefox",
                 },
                 {
+                    'text' => "Park - A Lisp Dialect",
+                    'url' => "open-source/projects/Park-Lisp/",
+                    'title' => "Park - a Dialect of the Lisp Programming Language inspired by Arc",
+                },
+                {
                     'text' => "Bits and Bobs",
                     'url' => "open-source/bits.html",
                     'title' => "Small Open Source Programs",

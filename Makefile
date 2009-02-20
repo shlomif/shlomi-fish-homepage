@@ -191,6 +191,7 @@ $(call set,DOCBOOK_DIRS_MAP,end-of-it-slavery,philosophy/computers/software-mana
 $(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
 $(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
+$(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/revision-2/)
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 

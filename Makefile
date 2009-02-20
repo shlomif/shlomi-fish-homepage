@@ -195,6 +195,7 @@ $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computer
 $(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/revision-2)
 $(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
 $(call set,DOCBOOK_DIRS_MAP,isr-pales-conflict-solution,philosophy/israel-pales)
+$(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality-rev2,philosophy/computers/high-quality-software/rev2)
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 

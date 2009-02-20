@@ -78,7 +78,9 @@ sub _process_fortune_file
 
     my $fort_file = shift;
 
-    open my $xml_out, ">", "$fort_file.xml";
+    my $xml_outfile = "$fort_file-non-format.xml";
+
+    open my $xml_out, ">", $xml_outfile;
     binmode $xml_out, ":utf8";
 
     my $writer = XML::Writer->new(OUTPUT => $xml_out);
@@ -135,6 +137,9 @@ sub _process_fortune_file
     $writer->end();
 
     close($xml_out);
+
+    system("xmllint", "--format", "--output", "$fort_file.xml", $xml_outfile);
+    unlink($xml_outfile);
 }
 
 sub _get_next_id

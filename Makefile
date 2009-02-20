@@ -340,8 +340,9 @@ FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.x
 
 fortunes-compile-xmls: $(FORTUNES_XHTMLS)
 
+# The touch is to make sure we compile the .html.wml again.
+
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml
-	bash $(T2_FORTUNES_DIR)/run-validator.bash $<
-	perl $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $< $@
-	# This is to make sure we compile the .html.wml again.
+	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
+	perl $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $< $@ && \
 	touch $(patsubst %.xml,%.html.wml,$<)

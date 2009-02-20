@@ -1102,10 +1102,10 @@ No package named this-does-not-exist
         <para>
             Organisational quality deserves its own separate article (or
             arguably book, web-site, or even more than one book), but
-            external software quality (much less internal one), is not a 
+            external software quality (much less internal one), is not a
             substitute for it. Please refer to <ulink url="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
                 partial list I prepared on a different article</ulink>,
-            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software "gurus" links on my links' list.</ulink>
+            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software "gurus" links</ulink> on my links' list.
         </para>
     </section>
     <section id="automated-tests">
@@ -1164,12 +1164,12 @@ No package named this-does-not-exist
     <section id="good-software-management">
         <title>Good Software Management</title>
         <para>
-            There are several sources online and offline explaining good 
+            There are several sources, online and offline, explaining good 
             software management for "shrinkwrap" software (open-source,
             commercial or other distributed) and for other types of software
             development (embedded, in-house, etc.), from which good advice
             can be taken for how to best run a software project. While
-            the are sometimes contradictory, and often false, they still make
+            they are sometimes contradictory, and often false, they still make
             a good read and are thought-provoking.
         </para>
         <para>
@@ -1214,7 +1214,7 @@ No package named this-does-not-exist
         <para>
             Often, social engineering should be made part of the design of the 
             software, or the web-sites dedicated to it. For example, it took 
-            me several iterations of having to fill the same project form in 
+            me several iterations of having to fill the same project form in
             <ulink url="http://savannah.gnu.org/">the 
                 GNU Savannah software-hub</ulink>, only for it to be
             rejected, and me having to follow the process again. Despite
@@ -1231,8 +1231,10 @@ No package named this-does-not-exist
             good software engineering policy can certainly help a lot.
         </para>
     </section>
+
     <section id="bad-politics">
         <title>No Bad Politics</title>
+
         <para>
             Bad politics in a software project is a lot like
             subjectivity,
@@ -1245,6 +1247,7 @@ No package named this-does-not-exist
             angry and possibly leave the project - and the project may
             risk forking.
         </para>
+
         <para>
             So it's a good idea to keep bad politics at bay and to a minimum.
             How to do that is out of the scope of the document, but it's
@@ -1254,7 +1257,9 @@ No package named this-does-not-exist
             for open-source and similar projects, a fork is often an option
             in this case, or in other similar cases.
         </para>
+
     </section>
+
     <section id="good-communication-skills">
         <title>Good Communication Skills</title>
         <para>
@@ -1267,6 +1272,7 @@ No package named this-does-not-exist
             hard to understand or tolerate, and, thus, hard to work with.
         </para>
     </section>
+
     <section id="hype">
         <title>Hype</title>
         <para>
@@ -1301,7 +1307,7 @@ No package named this-does-not-exist
             is still heavily actively used and has many fans.
         </para>
         <para>
-            Similar criticism has been voiced against 
+            Similar criticism has been voiced against
             <ulink url="http://subversion.tigris.org/">the
                 Subversion version control system</ulink>,
             Linux, etc. One thing one can notice about such highly-criticised
@@ -1345,7 +1351,7 @@ No package named this-does-not-exist
         <para>
             On the other hand, the competing project "Subversion"
             has a much better name, since it has nothing to do with CVS,
-            or Windows NT, and since it is an English word and 
+            or Windows NT, and since it is an English word and
             sounds cool.
         </para>
         <para>
@@ -1447,18 +1453,17 @@ No package named this-does-not-exist
     <section id="freecell-solvers-quality--analysis">
         <title>The Analysis Itself</title>
         <para id="quality-analysis--availability">
-            As is not uncommon in many software niches, some Freecell 
+            As is not uncommon in many software niches, some Freecell
             solvers are <emphasis role="bold">not commonly 
                 available</emphasis> for downloading or even for 
             buying. For
             example, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill 
                 Raymond's solver</ulink> (named "Cat in the Sack") which he
             has been talking about extensively, has not been released yet, 
-            under any licensing terms. Similarly, Danny A. Jones has kept his 
-            solver (mentioned in <link linkend="introduction">the 
-                introduction</link>) for himself, and has not released it 
-            to the wild in either source
-            or binary forms. 
+            under any licensing terms. Similarly, Danny A. Jones has kept his
+            solver (mentioned in <link linkend="introduction">the
+                introduction</link>) for himself, and has not released it
+            to the wild in either source or binary forms. 
         </para>
         <para>
             As such, the utility of such solvers is heavily reduced. For once,
@@ -1471,12 +1476,12 @@ No package named this-does-not-exist
         <para>
             <ulink url="http://fc-solve.berlios.de/links.html#other_solvers">Most 
                 other solvers</ulink>
-            are <emphasis role="bold">available for free 
+            are <emphasis role="bold">available for free
                 download</emphasis>, and many are accompanied
             with the source, most probably under an open-source licence.
         </para>
         <para id="quality-analysis--prog-lang">
-            <ulink url="http://www.numin8r.us/programs/">Gary 
+            <ulink url="http://www.numin8r.us/programs/">Gary
                 Campbell's Solver</ulink> is written in 8086 Assembly, with
             some 32-bit extensions, and only runs on DOS and DOS-compatible
             platforms. The assembly is compiled using a self-hosting
@@ -1502,7 +1507,7 @@ No package named this-does-not-exist
             So they would be preferable.
         </para>
         <para>
-            Similarly, when writing <emphasis role="bold">portable 
+            Similarly, when writing <emphasis role="bold">portable
                 programs</emphasis> for
             <ulink url="http://en.wikipedia.org/wiki/Unix">the various
                 Unix flavours</ulink> and other POSIX-capable or
@@ -1510,8 +1515,8 @@ No package named this-does-not-exist
             in x86 Assembly exclusively will make it a non-starter.
             <footnote id="portions-in-assembly" label="Portions of Assembly">
                 <para>
-                    In some cases, the developers of portable software 
-                    maintain versions of parts of the code in Assembly of 
+                    In some cases, the developers of portable software
+                    maintain versions of parts of the code in Assembly of
                     selected architectures, while keeping more portable
                     versions written in C or C++. This is done to optimise
                     some parts for common CPU architectures.
@@ -1519,8 +1524,8 @@ No package named this-does-not-exist
         </footnote>
         </para>
         <para id="quality-analysis--build-system">
-            Some Freecell solvers also 
-            <link linkend="easy_to_compile_and_install">don't build 
+            Some Freecell solvers also
+            <link linkend="easy_to_compile_and_install">don't build
                 out of the box</link>. For example, typing
             <literal>make</literal> inside the patsolve distribution yields
             the following output:
@@ -1547,11 +1552,12 @@ make: *** [param.h] Error 127
             usable, command line utilities that link against it.
         </para>
         <para id="quality-analysis--usability">
-            Freecell Solver has very good <emphasis role="bold">usability</emphasis>: it mostly respects
+            Freecell Solver has very good 
+            <emphasis role="bold">usability</emphasis>: it mostly respects
             <ulink url="http://www.catb.org/~esr/writings/taoup/">the
                 Unix conventions and best practices</ulink>,
             it can start solving from any arbitrary Solitaire board position 
-            given to it as input, and has kept command line interface 
+            given to it as input, and has kept command line interface
             usability in mind. Campbell's solver on the other hand, as of this
             writing, does not
             operate on a standard input/standard output manner, is poorly
@@ -1569,7 +1575,8 @@ make: *** [param.h] Error 127
             the other hand, Patsolve is nothing but a link in
             <ulink url="http://members.tripod.com/professor_tom/archives/">Tom
                 Holroyd's software archive</ulink>, which
-            can easily be missed. Gary Campbell's <ulink url="http://www.numin8r.us/programs/">homepage 
+            can easily be missed. Gary Campbell's 
+            <ulink url="http://www.numin8r.us/programs/">homepage
                 for his solver</ulink> has a Baroque design
             and quite a lot of marketing-speak. And it's only one page with no
             anchors or a navigation menu, and very few links.
@@ -1616,6 +1623,7 @@ make: *** [param.h] Error 127
             prefer to use a Public Domain solver, rather than paying royalties
             or risking "copyrights" and source availability problems.
         </para>
+
         <para id="quality-analysis--documentation">
             Freecell Solver (FCS) is extensively documented, and even its 
             <ulink url="http://freshmeat.net/articles/view/519/">online
@@ -1623,6 +1631,7 @@ make: *** [param.h] Error 127
             are much less documented, but arguably they also have much
             fewer options and features than Freecell Solver does.
         </para>
+
         <para id="quality-analysis--features">
             Which brings us to the features - Freecell Solver has
             <ulink url="http://fc-solve.berlios.de/features.html">a long
@@ -1634,6 +1643,7 @@ make: *** [param.h] Error 127
                 Simon</ulink>, of which FCS is probably the only solver
             capable of solving.
         </para>
+
         <para id="quality-analysis--speed">
             Most of the solvers out there are fast, but some are more than
             others. Normally, for solving an individual game on the
@@ -1643,6 +1653,7 @@ make: *** [param.h] Error 127
             <ulink url="http://www.solitairelaboratory.com/fcfaq.html">Freecell
             FAQ</ulink> for more information).
         </para>
+
         <para id="quality-analysis--solution-length">
             In his original message, Mr. Campbell claimed that the
             <ulink url="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell 
@@ -1659,6 +1670,7 @@ make: *** [param.h] Error 127
             in Freecell Pro, said that he found them to be very "creative"
             and interesting.
         </para>
+
         <para id="quality-analysis--other-advantages">
             Freecell Solver has some other advantages: it is capable
             of being fully instantiated, as it stores everything in an
@@ -1668,13 +1680,15 @@ make: *** [param.h] Error 127
             has namespace-purity in the sense that all variables start
             with the <literal>freecell_solver_</literal> prefix. Moreover,
             FCS has a well-defined and stable API, which is not 
-            well-documented, but should be easy-to-use. 
+            well-documented, but should be easy-to-use.
         </para>
+
         <para>
             Part of the API is a parser for a list of command-line-like
             strings, which allow for configuring without making many standalone
             function calls.
         </para>
+
     </section>
     <section id="freecell-solvers-quality--conclusion">
         <title>Conclusion</title>
@@ -1738,7 +1752,7 @@ make: *** [param.h] Error 127
                 Solver</ulink>, a Public Domain Library for solving games
             of Freecell and other types of Solitaire. However, he also
             <ulink url="http://www.shlomifish.org/open-source/projects/">initiated 
-                several other projects</ulink> and
+               some other projects</ulink> and
             <ulink url="http://www.shlomifish.org/open-source/contributions/">made
                 important contributions to projects he did not initiate</ulink>
             some of them very large scale. Recently, most of his contribution
@@ -1773,7 +1787,7 @@ make: *** [param.h] Error 127
         <para>
             Finally, thanks to all the past and present people who helped
             me with Freecell Solver, and with the rest of my "Free and
-            Open Source Software" (= FOSS) endeavours.
+            Open Source Software" endeavours.
         </para>
     </section>
 </section>

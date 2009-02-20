@@ -316,6 +316,11 @@ my $essays_tree_contents =
                     'url' => "philosophy/by-others/james-carr--completely-overrated.html",
                     'title' => "James Carr about the anti-Muslim Cartoons",
                 },
+                {
+                    'text' => "Hebrew Translation of &quot;Ten Reasons for Web Standards&quot;",
+                    'url' => "philosophy/by-others/mashhoor--10-reasons--hebrew.html",
+                    'title' => "10 Reasons for Companies to Consider Web Standards - Hebrew Translation",
+                },
             ],
         },
     ],

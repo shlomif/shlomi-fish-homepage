@@ -191,7 +191,9 @@ $(call set,DOCBOOK_DIRS_MAP,end-of-it-slavery,philosophy/computers/software-mana
 $(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
 $(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
-$(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/revision-2/)
+$(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/revision-2)
+$(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
+$(call set,DOCBOOK_DIRS_MAP,isr-pales-conflict-solution,philosophy/israel-pales)
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 
@@ -298,13 +300,15 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 tidy: all
 	perl bin/run-tidy.pl
 
-install_docbook_pdfs: $(DOCBOOK_INSTALLED_PDFS)
+.PHONY: install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls
 
-install_docbook_xmls: $(DOCBOOK_INSTALLED_XMLS)
+install_docbook_pdfs: make-dirs $(DOCBOOK_INSTALLED_PDFS)
 
-install_docbook_rtfs: $(DOCBOOK_INSTALLED_RTFS)
+install_docbook_xmls: make-dirs $(DOCBOOK_INSTALLED_XMLS)
 
-install_docbook_individual_xhtmls: $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS)
+install_docbook_rtfs: make-dirs  $(DOCBOOK_INSTALLED_RTFS)
+
+install_docbook_individual_xhtmls: make-dirs $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS)
 	
 # This copies all the .pdf's at once - not ideal, but still
 # working.
@@ -318,4 +322,4 @@ $(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
 	cp -f $(DOCBOOK_RTF_DIR)/$(notdir $@) $@
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
-	rsync -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $@
+	rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)

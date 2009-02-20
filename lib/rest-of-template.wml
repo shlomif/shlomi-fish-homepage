@@ -378,7 +378,7 @@ td { vertical-align : top; }
 
 <latemp_before_main_title>
 ;;; For the Hebrew layout.
-<if "<get-var rtl_layout />" "<div class="hebrew">" />
+<if "<get-var rtl_layout />" "<div class="hebrew" xml:lang="he-IL">" />
 </latemp_before_main_title>
 
 <latemp_after_body>

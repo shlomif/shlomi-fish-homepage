@@ -470,6 +470,11 @@ my $tree_contents =
                         },
                     ],
                 },
+                {
+                    'url' => "meta/hosting/",
+                    'text' => "Hosting",
+                    'title' => "About this site's hosting provider.",
+                },
             ],
         },
     ],

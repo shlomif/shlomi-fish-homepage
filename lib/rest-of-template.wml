@@ -283,11 +283,11 @@ $("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append
 </script>
 </latemp_webmaster>
 
-<define-tag hosted:at:tech>
+<define-tag hosting_link>
 <div class="rightalign">
-<a href="http://www.actcom.co.il/"><img src="images/actcom-50-2.gif" 
-   alt="Hosted at Actcom" class="highlight" style="border : 0" 
-   title="Hosted at Actcom" /></a>
+<a href="$(ROOT)/meta/hosting/#eonspace"><img src="images/eonspace1.png" 
+   alt="Hosted at Eonspace" class="highlight" style="border : 0"
+   title="Hosted at Eonspace" /></a>
 </div>
 </define-tag>
 
@@ -297,12 +297,12 @@ $("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append
 </div>
 </define-tag>
 
-;;; If it is the t2 index than display the hosted:at:tech macro
+;;; If it is the t2 index than display the <hosting_link> macro
 ;;; Else - display the back to my homepage image
 <latemp_foot_image>
 <if <ifeq "$(LATEMP_FILENAME)" "index.html" 
         <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
-    <hosted:at:tech />
+    <hosting_link />
     <backtomyhp />
     />
 </latemp_foot_image>

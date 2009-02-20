@@ -344,8 +344,9 @@ FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
+FORTUNES_TEXTS = $(patsubst %.xml,%,$(FORTUNES_XMLS_SRC))
 
-fortunes-compile-xmls: $(FORTUNES_XHTMLS)
+fortunes-compile-xmls: $(FORTUNES_XHTMLS) $(FORTUNES_TEXTS)
 
 # The touch is to make sure we compile the .html.wml again.
 
@@ -353,6 +354,10 @@ $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	perl $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $< $@ && \
 	touch $(patsubst %.xml,%.html.wml,$<)
+
+$(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
+	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
+	perl $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@

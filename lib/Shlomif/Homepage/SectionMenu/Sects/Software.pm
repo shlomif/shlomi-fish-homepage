@@ -72,6 +72,19 @@ my $software_tree_contents =
                     'url' => "open-source/bits.html",
                     'title' => "Small Open Source Programs",
                 },
+                {
+                    'text' => "Personal Configuration",
+                    'url' => "open-source/projects/conf/",
+                    'title' => "The Personal Configuration of some of the Programs on my Computer",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Vim",
+                            'url' => "open-source/projects/conf/vim/",
+                            'title' => "Vim Editor Configuration Files (.vimrc, etc.)",
+                        },
+                    ],
+                },
             ],
         },
         {

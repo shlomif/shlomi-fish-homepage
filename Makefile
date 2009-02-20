@@ -197,6 +197,7 @@ DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).pdf)
 DOCBOOK_INSTALLED_XMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).xml)
 DOCBOOK_INSTALLED_RTFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).rtf)
+DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc))
 
 # DOCBOOK_DOCS = \
 # 	case-for-drug-legalisation \
@@ -213,6 +214,7 @@ DOCBOOK_XML_DIR = lib/docbook/xml
 DOCBOOK_FO_DIR = lib/docbook/fo
 DOCBOOK_PDF_DIR = lib/docbook/pdf
 DOCBOOK_RTF_DIR = lib/docbook/rtf
+DOCBOOK_INDIVIDUAL_XHTML_DIR = lib/docbook/indiv-nodes
 
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
 DOCBOOK_XMLS = $(patsubst %,$(DOCBOOK_XML_DIR)/%.xml,$(DOCBOOK_DOCS))
@@ -224,6 +226,8 @@ DOCBOOK_FOS = $(patsubst %,$(DOCBOOK_FO_DIR)/%.fo,$(DOCBOOK_DOCS))
 DOCBOOK_PDFS = $(patsubst %,$(DOCBOOK_PDF_DIR)/%.pdf,$(DOCBOOK_DOCS))
 
 DOCBOOK_RTFS = $(patsubst %,$(DOCBOOK_RTF_DIR)/%.rtf,$(DOCBOOK_DOCS))
+
+DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK_DOCS))
 
 # SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
 SCREENPLAY_DOCBOOK_HTMLS = 
@@ -249,7 +253,7 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_xmls install_docbook_rtfs
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -262,6 +266,10 @@ $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 
 $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_XML_DIR)/%.xml $(MAIN_SOURCES)
 	db2rtf $(DB2_PRINT_FLAGS) -o $(DOCBOOK_RTF_DIR) $<
+
+$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
+	mkdir -p $@
+	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $@/index.html xhtml $<
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
@@ -296,6 +304,8 @@ install_docbook_xmls: $(DOCBOOK_INSTALLED_XMLS)
 
 install_docbook_rtfs: $(DOCBOOK_INSTALLED_RTFS)
 
+install_docbook_individual_xhtmls: $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS)
+	
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 $(DOCBOOK_INSTALLED_PDFS) : $(DOCBOOK_PDFS)
@@ -307,3 +317,5 @@ $(DOCBOOK_INSTALLED_XMLS) : $(DOCBOOK_XMLS)
 $(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
 	cp -f $(DOCBOOK_RTF_DIR)/$(notdir $@) $@
 
+$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS)
+	cp -fr $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $@

@@ -2030,3 +2030,158 @@ C: Oh, I'd love to do Shania Twain.
  <rindolf>  spx2: Python is for the WEAK and TIMID!
     <spx2>  rindolf: TOTALLY !
          *  spx2 examines the war grounds
+%
+    <edeca>  Hrm. More infernal questions, mainly because I am trying to
+             make my perl prettier and contain less nasty if's. I have
+             $foo and $bar which are obtained from split(/ /, 'kitten
+             loving'). But I don't want undef if the split fails, I'd
+             rather '' for $bar or both. What's the nicest way to do
+             that?
+ <Khisanth>  ($foo, $bar) = map { $_ // "" } split / /, $str; # 5.10
+             version :)
+    <edeca>  Noo 5.10! :)
+ <Khisanth>  ($foo, $bar) = map { defined $_ ? $_ : "" } split / /,
+             $str; # probably some other shorter ways too
+  <rindolf>  edeca: [bad idea] you can also try using the
+             conditional->inheritance refactoring.
+  <rindolf>  :-)
+          *  Khisanth pours boiling coffee on rindolf
+  <rindolf>  Khisanth: I hate coffee, but I guess I deserved it.
+  <rindolf>  That was a joke, of course.
+ <Khisanth>  you weren't really supposed to like having boiling anything
+             poured on you but I guess you are into the kinkier stuff
+
+    -- Freenode's #perl
+%
+ <rindolf>  rbastic: QBasic was the sh*t!
+ <rindolf>  rbastic: well, not really.
+ <rbastic>  rindolf: yup, that language is responsible for me having
+            gotten into programming to begin with.
+ <rbastic>  8 yrs old and writing qbasic scripts with QBasic for Dummies
+            by my side
+ <rindolf>  rbastic: I started when I was 10.
+ <rindolf>  rbastic: I know some people who started much later.
+  <talexb>  Late bloomer .. didn't start till I was 15.
+  <Zoffix>  heh, I started at 14... I could not have a computer before
+            that
+ <rindolf>  rbastic: but I know a girl who started programming when she
+            was 6.
+ <rindolf>  Or was it 8?
+  <Zoffix>  rindolf, CAN HAS PHONE NUMBER?!
+ <rbastic>  lol
+ <rindolf>  Zoffix: NO CAN!
+  <Zoffix>  :(
+ <rindolf>  Zoffix: only have her MSN.
+  <Zoffix>  gimmegimmegimme
+  <talexb>  Heh.
+  <Zoffix>  :)
+ <rindolf>  Zoffix: LOL.
+
+    -- Geek love on Freenode's #perl
+%
+ <rbastic>  Juerd: eh in today's world of heavy JS on the clientside, i
+            think it makes a little more sense to use the same lang.
+            everywhere
+   <Juerd>  rbastic: JS on the client side is because often it's the
+            only option the universe provides.
+ <rbastic>  Juerd: from a business perspective, you reduce the
+            complexity and potential difficulties in finding new hires
+            with the same skillset
+ <rindolf>  rbastic: have you heard of RJS?
+   <Juerd>  rbastic: On the server side, however, you have great
+            freedom.
+ <rbastic>  rindolf: no, what's that?
+  <Caelum>  larry wants perl6 to run on javascript :)
+ <rindolf>  rbastic: "One Language; and One Sayings".
+   <Juerd>  rbastic: Exactly. I would never hire a server side
+            programmer who knows *only* Javascript, and is too stupid to
+            learn whatever we're using on the server side.
+ <rindolf>  rbastic: my translation to a sentence from the Tower of
+            Babel myth.
+ <rbastic>  Juerd: i'll agree with that also. any real programmer knows
+            or has at least coded in half a dozen languages before
+   <Juerd>  From a business perspective, you should avoid crap coders at
+            all cost.
+   <Juerd>  Knows *or* has coded... Hmmm...!
+ <rindolf>  rbastic: though according to what most scholars believe it
+            was not about using one language but rather thinking the
+            same.
+   <Juerd>  I hope they haven't coded in half a dozen languages without
+            knowing them.
+   <Juerd>  That'd be scary.
+   <zshzn>  Reality is scary, Juerd
+  <talexb>  Hmm, BASIC, FORTRAN, COBOL, assembler, C, more assembler, C,
+            Pascal ... Perl!
+    -- The Grand Unified Programming Language
+%
+ <rindolf>  rbastic: now I'm working with C++.
+ <rindolf>  rbastic: I found out that my project compiles really
+            quickly.
+ <rindolf>  rbastic: under 5 or 10 minutes on a P4-2.4GHz with 1 GB of
+            RAM.
+ <rindolf>  rbastic: maybe KDE is making g++ look bad.
+ <rbastic>  rindolf: yeah, i'm not a big KDE fan
+ <rindolf>  rbastic: actually I'm using KDE-3.5.8 here.
+ <rindolf>  rbastic: I was talking about the compilation speed of KDE
+            apps and KDE itself.
+ <rindolf>  rbastic: possibly because each file has half-a-gazillion
+            headers.
+ <rindolf>  My C++ code is a server one, so we don't have too many deps.
+ <rbastic>  yeah, isn't there a way to cache header files? ie. in their
+            "compiled" form?
+ <rbastic>  or is that something I'm remembering from some other
+            programming language that purported to build on top of C?
+ <rindolf>  rbastic: MSVC has that.
+ <rbastic>  ahh, nods
+ <rindolf>  rbastic: no, Visual C++ has precompiled headers.
+ <rindolf>  rbastic: I remember that I kept deleting them.
+ <rbastic>  yeah, couldn't remember
+ <rbastic>  lol
+ <rindolf>  Pascal compiles very quickly.
+ <rindolf>  That's one of the things I enjoyed in Delphi.
+ <rbastic>  ugh, the app i'm been maintaining in Java was originally a
+            fat client/server desktop app, written in Delphi
+ <rindolf>  rbastic: ah.
+ <rbastic>  i remember booting up the old app for the first time, and
+            being amazed at how slow it was
+ <rbastic>  eventually, i had to duplicate a feature in the Java code
+            and i wasn't sure how it was implemented before
+ <rindolf>  rbastic: you mean the Java app is faster? :S
+ <rbastic>  so being as i had no Delphi experience, and the newer Delphi
+            environments made NO sense to me at all, i just opened up
+            the SQL Server query analyzer
+ <rbastic>  rindolf: yes, but only b/c the Delphi programmer was an
+            idiot, issuing queries over and over again needlessly
+ <rbastic>  rindolf: if you could've seen the MSSQL Performance Analyzer
+            or whatever, it was basically just.. Query1, Query2, Query3,
+            Query1, Query2, Query3, repeat.
+ <rbastic>  it was probably the worst ive ever seen in my life.. belongs
+            on www.thedailywtf.com
+
+    -- Can I haz a fast compiler on Freenode's #perl
+%
+  <rindolf>  scrottie: hi.
+ <scrottie>  hi rindolf!
+  <rindolf>  scrottie: are you the scrottie from use.perl.org?
+ <scrottie>  yeah.
+  <rindolf>  scrottie: ah, nice to meet you.
+  <rindolf>  Well, chat with you on IRC at least.
+          *  scrottie cowers from the swinging fist probably coming his
+             way
+  <rindolf>  scrottie: I'm "Shlomi%20Fish"
+ <scrottie>  oh, heh, thanks
+  <rindolf>  It's a curse.
+ <scrottie>  hmm. i vaguely remember interesting stuff from you but
+             can't honestly place what.
+ <scrottie>  I know I've seen you around here before too.
+  <rindolf>  Yeah, my use.perl.org blog is mostly technical and
+             perl-related.
+ <scrottie>  I post on use.perl.org entirely too much.
+  <rindolf>  So it may be a bit boring.
+  <rindolf>  Sometimes it's a bit philosophical.
+  <rindolf>  scrottie: yes.
+ <scrottie>  heh. and mine is offensively off-topic.
+  <rindolf>  scrottie: I have other blogs.
+ <scrottie>  I've posted to livejournal twice!
+
+    -- I think too much - therefore I blog too much on Freenode's #perl

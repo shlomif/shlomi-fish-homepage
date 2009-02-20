@@ -3553,102 +3553,123 @@ programs that demonstrate the different aspects of the basics of writing a
 kernel module.
 </p>
 
-<p>
-
         </body>
         <info>
             <author>Ori Pomerantz</author>
             <work href="http://tldp.org/LDP/lkmpg/2.4/html/x149.html">Linux Kernel Module's Programmer Guide</work>
         </info>
-
       </quote>
     </fortune>
     <fortune id="chromatic-program-vs-script-1">
       <meta>
         <title>chromatic - "Program vs. Script" - #1</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[The difference between a program and a script isn't as subtle as most people
-think. A script is interpreted, and a program is compiled.
+      <quote>
+          <body>
+              <p>
+          The difference between a program and a script isn't as subtle as most people
+          think. A script is interpreted, and a program is compiled.
+      </p>
 
+      <p>
 Of course, there's no reason you can't write a compiler that immediately
 executes the compiled form of a program without writing compilation artifacts
 to disk, but that's an implementation detail, and precision in technical
 matters is important.
+</p>
 
+<p>
 Though Perl 5, for example, doesn't write out the artifacts of compilation to
 disk and Java and .Net do, Perl 5 is clearly an interpreter even though it
 evaluates the compiled form of code in the same way that the JVM and the CLR
 do. Why? Because it's a scripting language.
- 
-Okay, that's a facetious explanation.
+</p>
 
+<p>
+Okay, that's a facetious explanation.
+</p>
+
+<p>
 The difference between a program and a script is if there's native compilation
 available in at least one widely-used implementation. Thus Java before the
 prevalence of even the HotSpot JVM and its JIT was a scripting language and now
 it's a programming language, except that you can write a C interpreter that
 doesn't have a JIT and C programs become scripts.
-    -- chromatic in http://use.perl.org/~chromatic/journal/35804
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>chromatic</author>
+            <work href="http://use.perl.org/~chromatic/journal/35804">"Program vs. Script"</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="chromatic-program-vs-script-2">
       <meta>
         <title>chromatic - "Program vs. Script" - #2</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Of course, if someone were to write an extra optimizer step for Perl 5 to
+            <p>Of course, if someone were to write an extra optimizer step for Perl 5 to
 evaluate certain parts of the optree and generate native code in memory on
 certain platforms without writing it out to disk (uh oh...) and then execute
 that code under certain conditions, all Perl 5 scripts would automatically turn
 into programs.  You know, like .pmc files, or Python's .pyc files. Uh.
- 
-As well, if more people use Punie (Perl 1 on Parrot) this year than native Perl
+</p>
+
+<p>
+ As well, if more people use Punie (Perl 1 on Parrot) this year than native Perl
 1 -- a possibility -- then Perl 1 scripts automatically become Perl 1 programs
 becaues Punie can use Parrot's JIT. I don't know if this powerful upgrade from
 script to program is retroactive, but I see no reason why not.
+</p>
 
+<p>
 Perl 5 scripts were briefly programs while Ponie was viable, but the removal of
 the code from the Parrot tree has now downgraded them back to scripts. We
 apologize for the inconvenience.
+</p>
 
-    chromatic in http://use.perl.org/~chromatic/journal/35804
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>chromatic</author>
+            <work href="http://use.perl.org/~chromatic/journal/35804">"Program vs. Script"</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="chromatic-program-vs-script-3">
       <meta>
         <title>chromatic - "Program vs. Script" - #3</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[To summarize, if you have a separate compilation step visible to developers,
+            <p>To summarize, if you have a separate compilation step visible to developers,
 you have programs. If not, you have scripts. An exception is that if you have a
 separate, partial compilation step at runtime and not visible to users, then
 you may have programs. The presence of one implementation that performs
 additional compilationy thingies at runtime instantly upgrades all scripts to
 programs, while the presence of an interpreter for a language in which people
 normally write programs, not scripts, does not downgrade programs to scripts.
-Program-ness is sticky.
+Program-ness is sticky.</p>
 
-I hope this is now clear.
+<p>
+    I hope this is now clear.
+</p>
 
+<p>
 Ironically some JavaScript implementations have JITs, so the colloquial name of
 the language should change from JavaScript to JavaProgram.
+</p>
 
-Script bad, four-legs good.
+<p>
+    Script bad, four-legs good.
+    </p>
 
-    chromatic in http://use.perl.org/~chromatic/journal/35804
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>chromatic</author>
+            <work href="http://use.perl.org/~chromatic/journal/35804">"Program vs. Script"</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="stroustrup-easy-to-use-computer">
       <meta>

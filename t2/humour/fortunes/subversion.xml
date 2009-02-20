@@ -36,75 +36,101 @@
       <meta>
         <title>Writing a Bitkeeper Replacement</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Writing a BitKeeper replacement is probably easier at this point than
-getting its license changed.
+            <p>
+                Writing a BitKeeper replacement is probably easier at this 
+                point than getting its license changed.
+            </p>
 
-        Matt Mackall on OFTC.net #offtopic.
-]]></text>
+            <p>
+                Matt Mackall on OFTC.net #offtopic.
+            </p>
+
+            <p>
+                P.S: Matt Mackall have eventually projected Mercurial, which
+                aims to be a BitKeeper replacement.
+            </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Matt Mackal</author>
+        </info>
+      </quote>
     </fortune>
     <fortune id="svn-internal-ms-code">
       <meta>
         <title>Internal Microsoft Code</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Sometimes I think Microsoft has more internal code than code it sells to the
-outside.
+            <p>
+                Sometimes I think Microsoft has more internal code than code 
+                it sells to the outside.
+            </p>
 
-	Shlomi Fish
-]]></text>
+            <p>Shlomi Fish</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Shlomi Fish</author>
+        </info>
+      </quote>
     </fortune>
     <fortune id="svn-contributing-member">
       <meta>
         <title>Subversion: Contributing Member</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Great. Just Great. I wanted to remain a lazy leech, just using the
+            <p>
+                Great. Just Great. I wanted to remain a lazy leech, just using the
 selfless work others have done on subversion for my own personal
 advantage. The problem is, as soon as I read HACKING and learn how to
 submit a patch and begin by contributing something as tiny as a FAQ fix,
 I'll be hooked, and I'll start to become a contributing member of
 society. Next, I'm afraid I'll want to tackle a bite-sized task and help
 fix bugs and develop the product. (You guys are so sneaky!!)  :-)
+</p>
 
+<p>
 ("Sorry, Honey. Can you take care of that? I have to submit another svn
 patch...")
+</p>
 
-	Steve Dwire on the Subversion Development List
-]]></text>
+    <p>
+    Steve Dwire on the Subversion Development List
+</p>
+
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Steve Dwire</author>
+            <work href="http://svn.haxx.se/dev/archive-2003-09/0077.shtml">Post to svn-dev</work>
+        </info>
+      </quote>
     </fortune>
-    <fortune id="svn-what-happened-to-cmpilator">
+    <fortune id="svn-what-happened-to-cmpilato">
       <meta>
         <title>What happened to Christopher Michael Pilato?</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[What happened to Christopher Michael Pilato?
-Is he gone?
-Is he gone for good?
-Is he gone for better?
-Is he gone for best?
-Is he gone forever?
-Will he return?
-Who is Christopher Michael Pilato, anyway?
+            <p>What happened to Christopher Michael Pilato?<br />
+                Is he gone?<br />
+                Is he gone for good?<br />
+                Is he gone for better?<br />
+                Is he gone for best?<br />
+                Is he gone forever?<br />
+                Will he return?<br />
+                Who is Christopher Michael Pilato, anyway?<br />
+            </p>
 
-	Shlomi Fish
-]]></text>
+            <p>Shlomi Fish</p>
+
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Shlomi Fish</author>
+            <work>Adapted from an IRC Monologue</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="svn-bad-build-system-code">
       <meta>
@@ -627,85 +653,123 @@ Who is Christopher Michael Pilato, anyway?
       <meta>
         <title>Versioning 3-D Objects</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Hi, 
- 
+            <p>Hi, </p>
+
+                <p>
 a friend of mine runs a small restaurant and wants to professionalize his 
 IT. Our idea was to store everything in subversion (we use Debian with svn 
 1.3). We had absolutely no problems with the 2D objects, converting recipes 
 to ASCII and storing them was peanuts. However the 3D objects are giving us 
 a headache - the forks and knifes are stuck in the keyboard, we even 
 destroyed a floppy drive trying to read an apple. 
- 
-Any ideas how we can still use SVN to store everything?
+</p>
 
-    Konrad Rosenbaum on the Subversion Users' mailing list
-    http://svn.haxx.se/users/archive-2006-04/0008.shtml
+<p>
+    Any ideas how we can still use SVN to store everything?
+</p>
+
+<p>
+    Konrad Rosenbaum on the Subversion Users' mailing list<br />
+    http://svn.haxx.se/users/archive-2006-04/0008.shtml<br />
     1 April 2006
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Konrad Rosenbaum</author>
+            <work href="http://svn.haxx.se/users/archive-2006-04/0008.shtml">Post to svn-users on 1 April 2006</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="svn-slashdot-comment-about-svn-vs-git">
       <meta>
         <title>Slashdot Comment about Subversion vs. Git</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Linus isn't saying that CVS and Subversion have fixable bugs or missing
-features. It's not about the code.
+            <p>
+            Linus isn't saying that CVS and Subversion have fixable bugs 
+            or missing features. It's not about the code.
+        </p>
 
+        <p>
 He is saying that they solve the wrong problem. The Subversion team wants to
 solve Problem A, and Linus wants to solve Problem B. No amount of code will
 turn the solution to Problem A into a solution for Problem B. Bothering the
 Subversion team with code addressing Problem B will only irritate them, since
 they're working on Problem A.
+</p>
 
+<p>
 The right way to handle differing goals is to start a different project. That's
 what he did.
+</p>
 
+<p>
 Don't be confused by the labels. Source Code Management means different things
 to different people, and there isn't always much overlap in how each person
 defines it. Ships and airplanes are both 'vehicles', but that doesn't mean that
 a few changes will turn one to the other.
+</p>
 
-    zzatz on:
-    http://developers.slashdot.org/comments.pl?sid=237163&cid=19367821
-]]></text>
+<p>
+    zzatz on:<br />
+    http://developers.slashdot.org/comments.pl?sid=237163&amp;cid=19367821<br />
+</p>
+
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>zzatz</author>
+            <work href="http://developers.slashdot.org/comments.pl?sid=237163&amp;cid=19367821">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="svn-linus-and-keywords-subst">
       <meta>
         <title>Subversion: Linus and Keywords Substitution</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[> Regarding keyword substituion: It turns out that Linus thinks it's a
-> horrible idea: http://kerneltrap.org/mailarchive/git/2006/10/9/223932
+            <p>
+                > Regarding keyword substituion: It turns out that Linus thinks it's a<br />
+                > horrible idea: http://kerneltrap.org/mailarchive/git/2006/10/9/223932<br />
+            </p>
 
-His argument is that it may destroy binary files.
+            <p>
+                His argument is that it may destroy binary files.
+            </p>
 
-This is bogus since keyword-substitution is *off* by default.
-It will occur only for files that were explicitly marked for
-substitution. For example in subversion:
+            <p>
+                This is bogus since keyword-substitution is *off* by default.
+                It will occur only for files that were explicitly marked for
+                substitution. For example in subversion:
+            </p>
 
-       svn propset svn:keywords "Id Author Revision" *.h *.c
+            <p>
+                svn propset svn:keywords "Id Author Revision" *.h *.c
+            </p>
 
-As a substitute (pun intended) for the lack in this feature he gives
-a hand crafted, build system dependent, manual (i.e: error prone) method.
+            <p>
+                As a substitute (pun intended) for the lack in this feature 
+                he gives a hand crafted, build system dependent, manual (i.e: 
+                error prone) method.
+            </p>
 
-What a lame excuse.
+            <p>
+                What a lame excuse.
+            </p>
 
-    -- Oron Peled in 
-       http://hamakor.org.il/pipermail/haifux/2008-February/000164.html
-]]></text>
+            <p>
+                -- Oron Peled in <br />
+                http://hamakor.org.il/pipermail/haifux/2008-February/000164.html<br />
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Oron Peled</author>
+            <work href="http://hamakor.org.il/pipermail/haifux/2008-February/000164.html">Post to the Haifa Linux Club mailing list</work>
+        </info>
+      </quote>
     </fortune>
   </list>
 </collection>

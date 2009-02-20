@@ -1783,20 +1783,25 @@ time).
       <meta>
           <title>Tel Aviv - a functional definition</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Tel Aviv - a functional definition:
------------------------------------
+      <quote>
+          <body>
+              <p>
+                  Tel Aviv - a functional definition:
+              </p>
+              <p>
+                  Free parking space free space.
+              </p>
 
-Free parking space free space.
-
-    Shachar Shemesh
-
-    http://blog.shemesh.biz/?p=435
-]]></text>
+              <p>
+                  Shachar Shemesh<br/>
+                  http://blog.shemesh.biz/?p=435
+              </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Shachar Shemesh</author>
+            <work href="http://blog.shemesh.biz/?p=435">"Tel Aviv - a Functional Definition" (Blog Post)</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-perl-finding-someone-to-blame">
       <meta>
@@ -1827,59 +1832,77 @@ Free parking space free space.
       <meta>
         <title>Linus Torvalds: Releasing Kernel 2.6.20 on Superbowl Sunday</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[In a widely anticipated move, Linux "headcase" Torvalds today announced
+      <quote>
+          <body>
+              <p>
+          In a widely anticipated move, Linux "headcase" Torvalds today announced
 the immediate availability of the most advanced Linux kernel to date,
 version 2.6.20.
+</p>
 
+<p>
 Before downloading the actual new kernel, most avid kernel hackers have
 been involved in a 2-hour pre-kernel-compilation count-down, with some
 even spending the preceding week doing typing exercises and reciting PI
 to a thousand decimal places.
+</p>
 
+<p>
 The half-time entertainment is provided by randomly inserted trivial
 syntax errors that nerds are expected to fix at home before completing
 the compile, but most people actually seem to mostly enjoy watching the
 compile warnings, sponsored by Anheuser-Busch, scroll past. 
+</p>
 
+<p>
 As ICD head analyst Walter Dickweed put it: "Releasing a new kernel on
 Superbowl Sunday means that the important 'pasty white nerd'
 constituency finally has something to do while the rest of the country
 sits comatose in front of their 65" plasma screens". 
+</p>
 
+<p>
 Walter was immediately attacked for his racist and insensitive remarks
 by Geeks without Borders representative Marilyn vos Savant, who pointed
 out that not all of their members are either pasty nor white.  "Some of
 them even shower!" she added, claiming that the constant stereotyping
 hurts nerds' standing in society. 
+</p>
 
+<p>
 Geeks outside the US were just confused about the whole issue, and were
 heard wondering what the big hoopla was all about. Some of the more
 culturally aware of them were heard snickering about balls that weren't
 even round.
+</p>
 
-    Linus Torvalds announcing kernel 2.6.20 ( http://lwn.net/Articles/220544/ )
-]]></text>
+<p>
+    -- Linus Torvalds announcing kernel 2.6.20 ( http://lwn.net/Articles/220544/ )
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Linus Torvalds</author>
+            <work href="http://lwn.net/Articles/220544/">Announcement of Kernel 2.6.20</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sesquipedallian-def">
       <meta>
         <title>Sesquipedallianism</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Sesquipedallianism, adj.:
+            <p>Sesquipedallianism:</p>
 
-Making excessive use of long words.
+            <p>Making excessive use of long words.</p>
 
-    http://www.urbandictionary.com/define.php?term=sesquipedallian
-]]></text>
+            <p>http://www.urbandictionary.com/define.php?term=sesquipedallian</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <work href="http://www.urbandictionary.com/define.php?term=sesquipedallian">Definition 
+                for Sesquipedallian</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="larry-wall-TimToady-lament">
       <meta>
@@ -1900,36 +1923,46 @@ Making excessive use of long words.
       <meta>
         <title>Slashdot: The Spanish Inquisition</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[You fool. Why did you tell him the Spanish Inquisition is coming. Now he's
-going to expect it.
+      <quote>
+          <body>
+              <p>
+          You fool. Why did you tell him the Spanish Inquisition is coming. Now he's
+          going to expect it.
+          </p>
 
-    niconorsk on a Slashdot Comment
-    http://politics.slashdot.org/comments.pl?sid=224312&cid=18164404
-]]></text>
+          <p>
+              niconorsk on a Slashdot Comment<br />
+              http://politics.slashdot.org/comments.pl?sid=224312&amp;cid=18164404
+    </p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>niconorsk</author>
+            <work href="http://politics.slashdot.org/comments.pl?sid=224312&amp;cid=18164404">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="beowulf-cluster-of-386s">
       <meta>
         <title>Cluster of 386s</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[From the Beowulf Cluster FAQ:
------------------------------
+            <p>From the Beowulf Cluster FAQ:</p>
 
-11. Should I build a cluster of these 100 386s? [1999-05-13]
+            <p>
+                11. Should I build a cluster of these 100 386s? [1999-05-13]
+            </p>
 
 
+            <p>
 If it's OK with you that it'll be slower than a single Celeron-333
 machine, sure.  Great way to learn.
-]]></text>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <work href="http://www.canonical.org/~kragen/beowulf-faq.txt">Beowulf mailing list FAQ</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="sharp-perl-x-installs-y">
       <meta>
@@ -1944,7 +1977,7 @@ machine, sure.  Great way to learn.
           <saying who="jeeger">In soviet russia ...</saying>
           <saying who="jeeger">Software installs YOU!</saying>
           <me_is who="dazjorz">rm -rf zaba</me_is>
-          <me_is who="f00li5h">is in Soviet Australia Are</me_is>
+          <me_is who="f00li5h">is in Soviet Australia</me_is>
         </body>
         <info>
             <channel>#perl</channel>
@@ -1957,72 +1990,99 @@ machine, sure.  Great way to learn.
       <meta>
         <title>Losing my Abstraction</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[That's me in the corner.
-That's me in the spotlight.
-Losing my abstraction.
+            <p>That's me in the corner.<br/>
+                That's me in the spotlight.<br/>
+                Losing my abstraction.
+            </p>
 
-Trying to keep my point of view...
-And I don't know if I can do it.
-Oh no, I code too much.
-Haven't debugged enough.
+            <p>
+                Trying to keep my point of view...<br/>
+                And I don't know if I can do it.<br/>
+                Oh no, I code too much.<br/>
+                Haven't debugged enough.<br/>
+</p>
 
-Is that why I heard you laughing?
-I thought that I heard you ping.
-I think I thought I saw you reply.
-
-    Andy Armstrong and Randal L. Schwartz in:
-    http://www.nntp.perl.org/group/perl.module-authors/2007/05/msg5435.html
-]]></text>
+<p>
+    Is that why I heard you laughing?<br/>
+    I thought that I heard you ping.<br/>
+    I think I thought I saw you reply.<br/>
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Andy Armstrong and Randal L. Schwartz</author>
+            <work href="http://www.nntp.perl.org/group/perl.module-authors/2007/05/msg5435.html">Perl module-authors post</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="slashdot-memorial-day-sql-dbs">
       <meta>
         <title>Memorial Day Weekend and SQL Databases</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Slashdot Comment on Reasons to or not to use MySQL:
----------------------------------------------------
+      <quote>
+          <body>
+              <p>
+                  Slashdot Comment on Reasons to or not to use MySQL:
+              </p>
 
+              <p>
     A nice flame war. I'm just going to sit back, crack a beer and enjoy it. 
     It is almost memorial day weekend, you know. Hopefully it get hot enough 
     in here to roast a hot dog.
+    </p>
 
-Oh goody! I'll help get things going:
+    <p>
+        Oh goody! I'll help get things going:
+        </p>
 
+        <ul>
+            <li>
 * MySQL users will have to wait until you are done with the fire before they
 can roast their hot dogs, since MySQL is not a real database and does not 
 support concurrent roasting; 
+</li>
 
+            <li>
 * I've read the PostgreSQL manual eight times and still can't figure out 
 something as bloody simple as roasting a hot dog, though I did figure out I 
 have to call VACUUM before I can apply ketchup; 
+</li>
 
+            <li>
 * Serious enterprises who care about their hot dogs use Oracle, since you can
 roast over 10,000 dogs at once and optionally impart the taste of filet mignon; 
-
+</li>
+            <li>
 * If you try to roast a footlong hotdog using MySQL it will silently truncate 
 it to regular size, causing your child to cry;
+</li>
 
-* Oracle will sue you if you complain about the difficulty of starting your
-* fire or the blackened taste of the dogs; 
+            <li>
+                * Oracle will sue you if you complain about the difficulty of 
+                starting your fire or the blackened taste of the dogs; 
+            </li>
 
-* With SQLite your hot dogs are pre-roasted; 
+            <li>
+                * With SQLite your hot dogs are pre-roasted; 
+                </li>
 
+            <li>
 * Last year on Memorial Day, mysqld leapt out of my MacBook Pro and pushed my
 cousin into the fire, resulting in third degree burns. And also it causes
 cancer. And terrorism. Blindness. Violent puppy death. BOO! MYSQL IS SCARY
 DON'T USE MYSQL!!  
+</li>
+</ul>
 
-    - http://developers.slashdot.org/comments.pl?sid=236249&cid=19275875
-]]></text>
+<p>
+http://developers.slashdot.org/comments.pl?sid=236249&amp;cid=19275875
+</p>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <work href="http://developers.slashdot.org/comments.pl?sid=236249&amp;cid=19275875">Slashdot Comment</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="dailywtf-calculator-2.0">
       <meta>

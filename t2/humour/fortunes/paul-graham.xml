@@ -456,62 +456,76 @@ These people's opinions change with every wind.</p>
       <meta>
           <title>Paul Graham: Popularity and Being a Scripting Language</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[Let's start by acknowledging one external factor that does affect the
+      <quote>
+          <body>
+              <p>
+          Let's start by acknowledging one external factor that does affect the
 popularity of a programming language. To become popular, a programming
 language has to be the scripting language of a popular system. Fortran and
 Cobol were the scripting languages of early IBM mainframes. C was the
 scripting language of Unix, and so, later, was Perl. Tcl is the scripting
 language of Tk. Java and Javascript are intended to be the scripting
-languages of web browsers.
+languages of web browsers.</p>
 
-Lisp is not a massively popular language because it is not the scripting
+<p>Lisp is not a massively popular language because it is not the scripting
 language of a massively popular system. What popularity it retains dates
 back to the 1960s and 1970s, when it was the scripting language of MIT. A
 lot of the great programmers of the day were associated with MIT at some
 point. And in the early 1970s, before C, MIT's dialect of Lisp, called
 MacLisp, was one of the only programming languages a serious hacker would
-want to use.
+want to use.</p>
 
-	Paul Graham
-	"Being Popular" - http://www.paulgraham.com/popular.html
-]]></text>
-        </body>
-        <info/>
-      </raw>
+</body>
+        <info>
+            <author>Paul Graham</author>
+            <work href="http://www.paulgraham.com/popular.html">Being Popular</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="paul-graham-prog-langs-brevity">
       <meta>
           <title>Paul Graham: Brevity of Programming Languages</title>
       </meta>
-      <raw>
-        <body>
-          <text><![CDATA[One thing hackers like is brevity. Hackers are lazy, in the same way that
+      <quote>
+          <body>
+              <p>
+          One thing hackers like is brevity. Hackers are lazy, in the same way that
 mathematicians and modernist architects are lazy: they hate anything
 extraneous. It would not be far from the truth to say that a hacker about to
 write a program decides what language to use, at least subconsciously, based
 on the total number of characters he'll have to type. If this isn't
 precisely how hackers think, a language designer would do well to act as if
 it were.
+</p>
 
+<p>
 It is a mistake to try to baby the user with long-winded expressions that
 are meant to resemble English. Cobol is notorious for this flaw. A hacker
 would consider being asked to write
+</p>
 
-	add x to y giving z
+<p>
+    add x to y giving z
+</p>
 
-instead of
+<p>
+    instead of
+    </p>
 
-	z = x+y
+    <p>
+        z = x+y
+        </p>
 
-as something between an insult to his intelligence and a sin against God.
+        <p>
+            as something between an insult to his intelligence and a sin against God.
+            </p>
 
-	Paul Graham / "Being Popular" - http://www.paulgraham.com/popular.html
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Paul Graham</author>
+            <work href="http://www.paulgraham.com/popular.html">Being Popular</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="paul-graham-evolution-dead-ens">
       <meta>

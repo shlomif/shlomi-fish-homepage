@@ -188,13 +188,14 @@ DOCBOOK_DOCS = \
 	case-for-file-swapping-rev3 \
 	end-of-it-slavery \
 	introductory-language \
+	objectivism-and-open-source \
 	what-makes-software-high-quality
 
 #   Removing, because we no longer need to build the DocBook.
 #   $(SCREENPLAY_DOCS)
 
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
-SCREENPLAY_DOCBOOKS = $(patsubst %,lib/docbook/xml/%.xml,$(SCREENPLAY_DOCS))
+DOCBOOK_XMLS = $(patsubst %,lib/docbook/xml/%.xml,$(DOCBOOK_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
 

@@ -111,89 +111,112 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <title>Introduction</title>
 
     <para>
-        What makes a popular software application high-quality? I'm not
-        talking about the application that's the most hyped, or the fastest,
-        most featureful, or best. Sometimes you can often hear endless rants
+        Why is high quality in software important? Low-quality software
+        applications will require the users or end-developers to work
+        around its bugs and limitations, write a lot of extra functionality
+        themselves, and as a result, duplicate a lot of effort and 
+        cause a lot of frustration and unhappiness. This is assuming 
+        they don't give up on it soon or right away, and end up looking
+        for something else.
+    </para>
+
+    <para>
+        But what makes a popular software application "high-quality"? 
+        A high-quality program or library can be defined as one that
+        is usable as is, that causes very few frustrations, and that
+        requires little if any modifications or workarounds to get
+        it up-to-speed.
+    </para>
+    
+    <para>
+        I'm not talking about the application that's the most hyped, or the 
+        fastest, most featureful, or best. Sometimes you can often hear 
+        endless rants
         and <ulink
             url="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
             Uncertainty and Doubt (FUD)</ulink> attacks about it. Often, it has
-        competing programs that are superior in many respects. But at the end
-        of the day, it is one of the most popular programs out
-        there and is what many people like to use, what they find as the right
-        tool for the job, and often what they are told (or even forced) to use.
+        competing programs that are superior in many respects. 
     </para>
 
     <para>
-        How did it occur to me to ponder this question? I am active in the
-        <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss 
-            mailing list</ulink>,
-        which is dedicated to computerised techniques for solving
-        <ulink url="http://www.freecell.org/">the Freecell solitaire card
-            game</ulink>, and for discussing other automated solving
-        and research of Solitaire games. This mailing list was started after
-        I wrote
-        <ulink url="http://fc-solve.berlios.de/">Freecell Solver</ulink> (with
-        a lowercase "c" and an uppercase "S"), an open-source solver,
-        which has proven to be quite popular. However, this mailing list
-        was not restricted to discussing it exclusively, and was joined
-        by many other Freecell solving experts, researchers and enthusiasts.
+        In this essay we'll look at what quality metrics apply to software.
     </para>
-    <para>
-        Later on, I lost interest in Freecell Solver, and have only been
-        fixing bugs in the latest stable version (2.8.x). Since
-        it is open source, and with an aim to be a
-        <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/">Bazaar-like
-            project</ulink> I welcome <ulink url="http://fc-solve.berlios.de/current-status.html">other people to take over</ulink> and am willing to help
-        them,
-        but it is still very functional as it is.
-    </para>
-    <para>
-        Recently, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this message</ulink> was written by Gary Campbell, who wrote:
-    </para>
-    <blockquote>
+
+    <section id="motivation">
+        <title>Motivation</title>
+        
         <para>
-            I think the solver discussion in the Wikipedia should mention that
-            the FCPro solvers give quite lengthy and virtually unusable
-            solutions. No human wants to follow the several hundred steps that
-            usually result in order to get at what's really required to solve a
-            given layout. If someone wants a solution that can be understood,
-            they want one that is under 100 steps.  This is a major
-            contribution and it should be stated. There are a lot of 
-            <emphasis role="bold">"toy"</emphasis>
-            solvers and only a very few of <emphasis role="bold">"industrial strength."</emphasis> 
-            One of the
-            latter is the solver by Danny Jones. I don't see that on your list.
-            The results he has gotten from his solver pretty much put your
-            solver to shame. The more you hype Freecell Solver, the more
-            criticism you open yourself up to.
+            How did it occur to me to ponder this question? I am active in the
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss 
+                mailing list</ulink>,
+            which is dedicated to computerised techniques for solving
+            <ulink url="http://www.freecell.org/">the Freecell solitaire card
+                game</ulink>, and for discussing other automated solving
+            and research of Solitaire games. This mailing list was started after
+            I wrote
+            <ulink url="http://fc-solve.berlios.de/">Freecell Solver</ulink> (with
+            a lowercase "c" and an uppercase "S"), an open-source solver,
+            which has proven to be quite popular. However, the mailing list
+            was not restricted to discussing it exclusively, and was joined
+            by many other Freecell solving experts, researchers and enthusiasts.
         </para>
-    </blockquote>
-    <para>
-        Unfortunately, it's hard for me to determine what "industrial
-        strength", "enterprise grade" and other such buzzwords are. But I'll
-        try to define high quality here, and try to show when a program
-        is high quality.
-    </para>
+        <para>
+            Recently, Gary Campbell wrote 
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this 
+                message</ulink> reading:
+        </para>
+        <blockquote>
+            <para>
+                I think the solver discussion in the Wikipedia should mention that
+                the FCPro solvers give quite lengthy and virtually unusable
+                solutions. No human wants to follow the several hundred steps that
+                usually result in order to get at what's really required to solve a
+                given layout. If someone wants a solution that can be understood,
+                they want one that is under 100 steps.  This is a major
+                contribution and it should be stated. There are a lot of 
+                <emphasis role="bold">"toy"</emphasis>
+                solvers and only a very few of <emphasis role="bold">"industrial strength."</emphasis> 
+                One of the
+                latter is the solver by Danny Jones. I don't see that on your list.
+                The results he has gotten from his solver pretty much put your
+                solver to shame. The more you hype Freecell Solver, the more
+                criticism you open yourself up to.
+            </para>
+        </blockquote>
+        <para>
+            Unfortunately, it's hard for me to determine what "industrial
+            strength", "enterprise grade" and other such buzzwords are. But I'll
+            try to define high quality here, and try to show when a program
+            is high quality.
+        </para>
+    </section>
+    <section id="organisation">
+            <title>Organisation of this Document</title>
 
-    <para>
-        I initially wanted to give some examples for open-source software
-        that I considered to be of exceptional high-quality, but I decided
-        against it. That's because it is a matter of taste if this is the case
-        for them, and since it may provoke too much criticism against this
-        essay as a whole. Thus, I'll just give some examples, possibly
-        accompanied by screenshots, of places where one program does something
-        better than a different program, while not even implying that the
-        latter is in fact lower-quality in all possible respects.
-    </para>
+        <para>
+            I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
+            that I considered to be of exceptional high-quality, but I decided
+            against it. 
+        </para>
+        
+        <para>
+            That's because their exceptional quality is a matter of taste, and 
+            it may provoke too much criticism against this essay as a whole. 
+            Thus, I'll just give some examples, possibly accompanied by 
+            screenshots, of places where one program does something
+            better than a different program. I won't even going to imply 
+            that the latter is in fact lower-quality in all 
+            possible respects.
+        </para>
 
-    <para>
-        This article is written from the point-of-view as me as a developer
-        of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">"Free 
-            and Open Source Software"</ulink>, and will focus on open-source
-        and pseudo-open-source software. However, a lot of what I say is
-        more universal.
-    </para>
-
+        <para>
+            This article is written from the point-of-view as me as a developer
+            of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">"Free 
+                and Open Source Software"</ulink>, and will focus on open-source
+            and pseudo-open-source software. However, a lot of what I say is
+            more universal.
+        </para>
+    </section>
 </section>
 <section id="parameters-of-quality">
     <title>Parameters of Quality</title>
@@ -246,7 +269,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     General Public Licence (GPL)</ulink> (and which are 
                 considered open-source and usable by most Linux distributions) 
                 are being prevented from used in many common situations,
-                and so would be less high-quality than programs under a more
+                and so would be of lesser quality than programs under a more
                 permissive licence.
             </para>
         </footnote>
@@ -262,12 +285,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             of web-sites that are not live yet, and refuse to tell people
             exactly what they are about?
         </para>
+
         <para>
-            Alternatively, in the case of the "Stanford checker", which is
+            Alternatively, in the case of 
+            <ulink url="http://en.wikipedia.org/wiki/Coverity">the 
+                "Stanford checker"</ulink>, which is
             a sophisticated tool for static code analysis, it is not available
             for download, but instead is a service provided by its parent
             company.
         </para>
+
         <para>
             A program should be available in the wild somehow (for downloading
             or at least buying) so people can use it, play with it, become
@@ -286,11 +313,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             If you have a new idea for a program, make sure you implement some
             basic but adequate functionality, and then release it so people
-            can play with it, and learn about it. Most successful projects that
-            were open-source from the start have started this way: the Linux
-            kernel, gcc, vim, perl, CPython. If you look at the earliest 
-            versions of them all, you'll find they were very limited if not 
-            downright hideous, but now they are often among the best of breed.
+            can play with it, and learn about it. Most successful open-source
+            projects, that have been open-source since their inception, have 
+            started this way: the Linux kernel, gcc, vim, perl, CPython. If 
+            you look at the earliest versions of all of them, you'll find that
+            they were very limited if not downright hideous, but now they are 
+            often among the best of breed.
         </para>
     </section>
     <section id="version_number_indicated">
@@ -314,11 +342,20 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <title>The Source is Available, Preferably under a Usable 
             Licence</title>
         <para>
-            Public availability of the source is a great advantage for a 
+            Public availability of the source is a great advantage for a
             program to have. Many people will usually not take a look at it
             otherwise, for many reasons, some ideological but some also
-            practical. (Assuming there was ever a true ideology that was 
-            not also practical.) Without the source, and without it being
+            practical. <footnote id="ideology" label="Ideology">
+                <para>Assuming there was ever a true ideology 
+                    that was not also practical. </para>
+                <para>
+                    The way I see it, an ideology (and ethics in general)
+                    are a strategy that aims to make a person lead a better,
+                    happier life. If it isn't, then it's just a destructive
+                    dogma, or just plain stubbornness.
+                </para>
+            </footnote>
+            Without the source, and without it being
             under a proper licence, the software will not become part of
             most distributions of Linux, the BSD operating systems, etc.
         </para>
@@ -342,14 +379,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 compatible</ulink>, and naturally usable public-domain licences
             such as the modified BSD licence, the MIT X11 licence, or even
             pure Public Domain source code<footnote id="public-domain-source" label="public-domain">
+
                 <para>
-                    Using a pure-public-domain Licence for your software is
-                    problematic because not all countries have a concept of
-                    "public-domain", similar to that of the United States, 
-                    because many people mis-interpret it, and because
-                    it is not clear whether software can be licensed under
-                    the public-domain to begin with. (And other such issues).
+                    Using a pure-public-domain licensing terms for your
+                    software is problematic because not all countries have a
+                    concept of "public-domain", similar to that of the United
+                    States, because many people mis-interpret it, and because
+                    it is not clear whether software can be licensed under the
+                    public-domain to begin with. (And other such issues).
                 </para>
+
                 <para>
                     While <ulink url="http://freshmeat.net/browse/197/">quite
                         a lot of important programs has been released under 
@@ -366,7 +405,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Public License (LGPL) are somewhere in between.
         </para>
         <para>
-            While some software on Linux has become popular despite being 
+            While some software on Linux has become popular despite being
             under non-optimal licences, many Linux distributions pride
             themselves that the core system consists of "100% free software".
             Most software that became non-open-source, was eventually forked
@@ -374,8 +413,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             As a result, a high-quality software has a licence that is the
-            most usable in the context of its operation. These licences are
-            doubly-important for freely-distributed UNIX software.
+            most usable in the context of its common use cases. These 
+            licences are doubly-important for freely-distributed UNIX software.
         </para>
     </section>
     <section id="just_works">
@@ -427,7 +466,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     A "just works" software also has <emphasis role="bold">good 
                         usability</emphasis>. What it means is that it behaves
                     like people expect it to. The Emacs-based editors, which
-                    are an alternative to Vim do not invoke the menus upon
+                    are an alternative to Vim, do not invoke the menus upon
                     pressing "Alt+F", "Alt+E", etc. which is the Windows
                     convention to them. 
                 </para>
@@ -461,7 +500,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <title>The Program has a Homepage</title>
         <para>
             Most software of high-quality has a homepage which introduces
-            the software, has download information, links, etc. And no - a
+            the software, has download information, gives links, and
+            provides a starting point to receive more information. And no - a
             /project/myprogram/ page on 
             <ulink url="http://sourceforge.net/">Source Forge</ulink> or
             whatever is much more sub-optimal than that, and leaves a bad
@@ -526,6 +566,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 </para>
             </listitem>
         </orderedlist>
+
         <para>
             However, it's not uncommon to find software that fails to
             build even on GNU/Linux on an x86 computer, which is the most
@@ -541,6 +582,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             One thing that detracts from a piece of software being
             high-quality is a large amount of dependencies.
         </para>
+
         <para>
             If we take <ulink url="http://plagger.org/">Plagger</ulink>,
             a web-feed mix-and-match framework in Perl (not unlike 
@@ -555,8 +597,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             very few dependencies and
             they are normally included in the package, if necessary to build
             the system. They are all written in very portable ANSI C and POSIX
-            and have been successfully deployed on all modern UNIX-flavours, on 
-            Microsoft Windows and on many other more obscure systems.
+            and have been successfully deployed on all modern UNIX-flavours, 
+            on Microsoft Windows and on many other more obscure systems.
         </para>
         <para>
             While reducing the number of dependencies often means re-inventing
@@ -604,18 +646,18 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             what to do.
         </para>
         <para>
-            There are many types of documentation: the 
-            <ulink url="http://freshmeat.net/articles/view/519/">--help 
+            There are many types of documentation: the
+            <ulink url="http://freshmeat.net/articles/view/519/">--help
                 flag</ulink>, the man page, the README/USAGE/INSTALL files,
             full-fledged in-depth guides, documents about the philosophy,
             wikis, etc. If the program is well-designed, then the user should
-            be able to get up and running quickly. An exception to this is
+            be able to get up and running quickly. An exception to this are
             various highly specialised programs, such as 3-D graphics
             programs, or CADs, that require some learning.
         </para>
         <para>
             If we take Subversion as an example, then it has a 
-            <ulink url="http://svnbook.red-bean.com/">full Book 
+            <ulink url="http://svnbook.red-bean.com/">full Book
                 online</ulink>, several tutorials, an <literal>svn 
                 help</literal> command which provides help to all the
             other commands, and a lot of help can be found using a
@@ -639,7 +681,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             most people cannot make heads nor tails of it. There is a short
             Emacs tutorial, but it isn't as extensive as Vim's. Nor does it
             explain how to configure Emacs to behave in a better way than its
-            default way in which it behaves completely different to what
+            default, in which it behaves completely differently to what
             people who are used to Windows-like conventions or vim-like
             conventions expect.
         </para>
@@ -651,13 +693,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             platform, you can gain most of your market-share. However, people
             are using many platforms on many different CPU architectures:
             Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux 
-            on a multitude of platform; BSD systems (NetBSD, FreeBSD, OpenBSD
+            on a multitude of platforms; BSD systems (NetBSD, FreeBSD, OpenBSD
             and others) on many architectures as well; Mac OS X; Sun 
             Solaris (now also OpenSolaris), and more obscure (but still 
             popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64 
             (formerly Digital Unix), etc. And to say nothing of more exotic, 
             non-UNIX, non-Microsoft operating systems like Novell Netware,
-            Digital Corp.s's VMS or OpenVMS, IBM's VM/CMS or OS/390 (MVS), 
+            Digital Corp.s's VMS or OpenVMS, IBM's VM/CMS or OS/390 (MVS),
             BeOS, AmigaOS, Mac OS 9 or earlier, PalmOS, VxWorks, etc. etc.
         </para>
         <para>
@@ -709,7 +751,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             Compare that to many compilers for other languages that are
-            written in the same language. For example, 
+            written in the same language. For example,
             <ulink url="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
                 Compiler</ulink> is written in itself, and requires a modern
             enough version of itself to compile itself. So you need to
@@ -764,7 +806,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             where every primary digit breaks the compatibility with the older
             one: PHP 4 was not compatible with PHP 3 and PHP 5 was not
             compatible with PHP 4. Furthermore, sometimes existing user-land
-            code was broken in minor-digit releases. As such maintaining
+            code was broken in minor-digit releases. As such, maintaining
             PHP code into the future is a very costy process, especially if
             you want it to work with a range of versions.
         </para>
@@ -774,7 +816,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             5.6.x, 5.8.x and now 5.10.x. As such one can normally expect older
             scripts to just work. perl5 can also run a lot of perl4 code and
             below, and perl4 code can be ported to modern versions of perl5
-            with some ease. While sometimes scripts broke (due to lack
+            with relative ease. While sometimes scripts, programs
+            or modules were broken (due to lack
             of "bug-to-bug compatibility"), or became slower,
             upgrading to a new version of Perl is normally straightforward.
         </para>
@@ -861,9 +904,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             is responsiveness, which often manifest as people complain that
             the program is "sluggish". Java programs are especially notorious
             for being such, for some reason, while programs written in
-            <ulink url="http://www.perl.org/">Perl</ulink>,
-            <ulink url="http://www.python.org/">Python</ulink>, are more
-            responsive and feel snappy, despite the fact that their backend
+            <ulink url="http://www.perl.org/">Perl</ulink> and
+            <ulink url="http://www.python.org/">Python</ulink> are more
+            responsive and feel snappy, despite the fact that their backends
             are generally slower than the Java virtual machine.
         </para>
         <para>
@@ -876,7 +919,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="aesthetics">
         <title>Aesthetics</title>
         <para>
-            A good software (or web site) or other resource is aesthetically
+            A good program (or web site) or other resource is aesthetically
             pleasing. Aesthetics in this context, does not necessarily mean
             very "artsy" or having a breath-taking style. But we may have
             run into software (usually one for internal use or one
@@ -1690,7 +1733,7 @@ make: *** [param.h] Error 127
         <para>
             Shlomi Fish was born in Israel in 1977, and has lived there most of
             his life. He is a user, developer, advocate and activist of
-            Open Source Software. His greatest single contribution so far in
+            Open Source Software. His single greatest contribution so far in
             this area has been <ulink url="http://fc-solve.berlios.de/">Freecell
                 Solver</ulink>, a Public Domain Library for solving games
             of Freecell and other types of Solitaire. However, he also
@@ -1719,8 +1762,10 @@ make: *** [param.h] Error 127
             original message provided the inspiration for this article. Thanks
             to <ulink url="http://www.zak.co.il/">Omer Zak</ulink>, who
             went over an early draft of this article and supplied many
-            useful comments. Thanks to Jarich, who gave some useful comments
-            on the first edition, and to "Limbic_Region", for noting an
+            useful comments. Thanks to Jacinta Richardson of 
+            <ulink url="http://perltraining.com.au/">Perl Training Australia</ulink>, 
+            who gave some very useful comments on the first and second 
+            revisions, and to "Limbic_Region", for noting an
             ommission from it. Thanks to many people on the IRC
             (= Internet Relay Chat) who have read the article and commented,
             and chose not to be explicitly credited.

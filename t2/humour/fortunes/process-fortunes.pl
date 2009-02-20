@@ -78,9 +78,14 @@ sub _process_fortune_file
 
     my $fort_file = shift;
 
-    my $writer = XML::Writer->new(OUTPUT => \*STDOUT);
+    open my $xml_out, ">", "$fort_file.xml";
+    binmode $xml_out, ":utf8";
+
+    my $writer = XML::Writer->new(OUTPUT => $xml_out);
 
     $self->_xml_writer($writer);
+
+    $writer->xmlDecl("utf-8");
 
     $writer->startTag("collection");
     $writer->emptyTag("head");
@@ -128,6 +133,8 @@ sub _process_fortune_file
     $writer->endTag(); # collection.
 
     $writer->end();
+
+    close($xml_out);
 }
 
 sub _get_next_id

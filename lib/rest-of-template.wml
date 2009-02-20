@@ -1,5 +1,11 @@
+
 #include "sponsored_ad.wml"
 #include "add-this.wml"
+
+<define-tag hebrew_open_div>
+{#HEBREW_XML_LANG_SCRIPT#:<script src="$(ROOT)/js/moz-lang.js" type="text/javascript"></script>:##}
+<div class="hebrew" xml:lang="he-IL">
+</define-tag>
 
 <define-tag google_adsense_code_top_proto>
 <script type="text/javascript">
@@ -378,7 +384,7 @@ td { vertical-align : top; }
 
 <latemp_before_main_title>
 ;;; For the Hebrew layout.
-<if "<get-var rtl_layout />" "<div class="hebrew" xml:lang="he-IL">" />
+<if "<get-var rtl_layout />" "<hebrew_open_div />" />
 </latemp_before_main_title>
 
 <latemp_after_body>
@@ -386,5 +392,12 @@ td { vertical-align : top; }
 <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
+{#HEBREW_XML_LANG_SCRIPT#}
 </latemp_after_body>
 
+
+<define-tag hebrew_div endtag="required">
+<hebrew_open_div />
+%body
+</div>
+</define-tag>

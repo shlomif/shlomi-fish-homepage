@@ -1,3 +1,9 @@
+<define-tag body endtag="required">
+<body* onload="lang_load()">
+%body
+</body*>
+</define-tag>
+
 #include "utils.wml"
 #include "paypal.wml"
 

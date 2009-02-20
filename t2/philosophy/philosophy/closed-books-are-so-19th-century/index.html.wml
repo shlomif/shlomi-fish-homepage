@@ -144,7 +144,8 @@ what we generate will be available online for all the public to experience
 </p>
 
 <p>
-Here's what Paul Graham wrote about online encyclopedias:
+Here's what Paul Graham <a href="http://www.paulgraham.com/web20.html">wrote 
+about online encyclopedias</a>:
 </p>
 
 <blockquote>
@@ -170,7 +171,9 @@ Graham continues to <a
 
 <blockquote>
 <p>
-One measure of the incompetence of newspapers is that so many still make you register to read stories. I have yet to find a blog that tried that.
+One measure of the incompetence of newspapers is that <b>so many still
+make you register</b> to read stories. I have yet to find a blog that tried
+that.
 </p>
 </blockquote>
 
@@ -181,15 +184,15 @@ Mr. Graham is not the only or the first one to say things along this line. <a
     to Become a Hacker"</a> (where "Hacker" is a software enthusiast and not
 a computer intruder), and has been propagating similar ideas in
 <a href="http://catb.org/~esr/writings/cathedral-bazaar/">his "The Cathedral
-    and the Bazaar"</a> series of essays (an older version of which was 
-also published as a paperback book). <a 
+    and the Bazaar"</a> series of essays (an older version of which was
+also published as a paperback book). <a
     href="http://catb.org/~esr/faqs/hacker-howto.html#believe2">Quoting</a>
 from the howto:
 </p>
 
 <blockquote>
 
-    <p> 2. No problem should ever have to be solved twice.  </p>
+    <p> 2. <b>No problem should ever have to be solved twice.</b>  </p>
 
     <p> Creative brains are a valuable, limited resource. They shouldn't be
     wasted on re-inventing the wheel when there are so many fascinating new
@@ -206,7 +209,134 @@ from the howto:
 <p>
 Now, if you ask me, publishing a non-open book is a classical example of 
 requiring other people to solve the problem you've solved again, because they
-cannot share their work with other people.
+cannot share your work with other people.
+</p>
+
+<h2 id="the-problems">The Problems with Closed Books</h2>
+
+<p>
+I can think of several important problems with closed books:
+</p>
+
+<h3 id="no-linking-problem">1. One Cannot Effectively Link to Them</h3>
+
+<p>
+If I want to point someone at a text on the wikipedia, I can give him a 
+direct link to the article, or even a sub-section of it, an anchor or
+that of a previous version. On the other hand, with the online Britannica, the
+link will likely not work, because my friend won't be registered. This is
+even worse for books that are not available online.
+</p>
+
+<p>
+In this day and age, people give links in chats (Instant Messaging, IRC, etc.),
+on web pages and other documents, in blog posts and comments, on web forums, 
+in emails, and in an increasing and more diverse forms of Internet mediums.
+They are also given in many offline methods: books, newspapers, scientific
+papers, notes, voice calls, SMSes, etc. People who get these link expect
+these links to just work and show them the goods - not require registration
+or payment.
+</p>
+
+<p>
+So if you're making your web resource closed, you're likely to alienate
+a large amount of people who will experience it, tell it to their friends,
+link to it on their blogs, etc. 
+</p>
+
+<p>
+If you're worried that without registration you won't be able to track what
+visitors do - don't. There are several software packages that allow you to 
+track what every individual visitor did, and deploying and utilising
+them is justifiable if you want to better monitor your visitors. I personally
+don't much, because I feel I have better ways to spend time on making my
+site more attractive, like by writing more material, or by doing white-hat
+publicity and <a 
+href="http://en.wikipedia.org/wiki/Search_engine_optimization">Search
+Engine Optimisation</a>, but your milage may vary depending on your
+resources and philosophy.
+</p>
+
+<h3 id="quoting-problem">2. Makes Quoting and Re-using Harder</h3>
+
+<p>
+It's much easier to quote an online document than an offline one. Either
+by "copy-and-paste" or by inspecting the HTML markup. Compare this to a
+paperback book where you have to type the text character-by-character
+or use OCR. Or to <a href="http://safari.oreilly.com/">O'Reilly's Safari
+service</a>, whose pages are scrambled JavaScript junk, meant as a measure
+of <a href="http://en.wikipedia.org/wiki/Digital_rights_management">Digital
+Restrictions Management (DRM)</a>. It's nothing the "View Formatted Source"
+of some Firefox extensions cannot cope with, but it's still annoying.
+</p>
+
+<p>
+On the other hand, a freely available document can easily be quoted,
+re-used and re-distributed. One can save it as a self-contained file and send
+it to friends. One can rebute it part by part. One can quote it in the
+context of grander document (like I did earlier).
+</p>
+
+<h3 id="not-preventing-piracy-problem">3. Doesn't Prevent Illegal Use</h3>
+
+<p>
+When J. K. Rowling released the 6th Harry Potter book, she decided not to make
+an Electronic version available, in order to prevent piracy. However, it took
+<a href="http://www.mobileread.com/forums/showthread.php?threadid=4501">less 
+than 24 hours before "pirates" have made a complete 
+online version available</a> for everyone to read. Now, if the publishers 
+would have made an electronic version available, then at least they could have
+made money by selling many electronic copies. 
+</p>
+
+<p>
+It's not hard to find books online illegitmately. There's an ,
+<a href="http://www.unix.com.ua/orelly/">Ukrainian site carrying many O'Reilly
+titles online</a> (if you don't like the link then send me a
+<a href="http://en.wikipedia.org/wiki/DMCA">DMCA takedown notice</a>), which 
+is easily found using a Google search. Whenver people give a link to this site
+on Perl IRC channels or mailing lists, many Perl hackers keep mentioning that 
+it is illegal and should not be used. But it's there and accessible, and many
+people, especially young ones, won't feel or know they're doing something
+wrong. And if you ask me, there's <a 
+href="$(ROOT)/philosophy/case-for-file-swapping/">nothing 
+wrong with non-commercial redistribution of publically-available 
+content</a>.
+</p>
+
+<p>
+There's also the element of convenience. Some people will buy a book because
+it is a physical object. If we take Harry Potter for example, then most people
+will not be content reading it on the computer. Moreover, Joel Spolsky
+has published <a 
+href="http://www.joelonsoftware.com/">many articles on his "Joel on 
+Software" site</a>, and later compiled many of them into 
+<a href="http://www.amazon.com/Joel-Software-Occasionally-Developers-Designers/dp/1590593898">a book</a>.
+The latter has become a best-seller, and even I decided to buy it as a gift
+for a workplace I was fired from (but still thought highly of), so they can 
+read it and learn from it.
+</p>
+
+<p>
+Similarly, after reading the <a href="http://www.shlomifish.org/philosophy/books-recommends/#programming_perl">3rd 
+edition of "Programming Perl"</a> which I borrowed from the Israeli Perl
+Mongers library, I decided that I liked it so much, and so bought it so I can
+read it at home.
+</p>
+
+<p>
+By making your book available online, you're giving yourself a huge publicity,
+and earning a lot of repute. You can also make some extra income from
+ads, store affiliations, and other revenue. If it's under a strict-enough
+licence, then you can also make money by licensing it for commercial use. And
+some people will still want to buy a paperback book, an electronic copy,
+or license it on commercial book-viewing sites (such as the previously
+mentioned Safari).
+</p>
+
+<p>
+In short, keeping your work closed harms legitimate uses, but does not 
+prevent illegitimate ones. So you become bald from here and from here.
 </p>
 
 <h2 id="thanks">Thanks</h2>

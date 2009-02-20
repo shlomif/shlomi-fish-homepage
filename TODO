@@ -1,15 +1,8 @@
-* Put a Google Ads bar below the "Bookmark me" button.
-
 * Upload the Presentations Quad-Pres source. ("All ideas are golden").
 
 * Abstract the Hebrew page layout into the template.
 
-* Investigate the following subversion scenario:
-    - svn rm myfile.
-    - svn cp ../../IP/myfile myfile.
-    - svn revert -R .
-    - change myfile.
-    - commit.
+* Add the "make xconfig" Search enhancement kernel patch.
 
 * Style the .prod_set's on the CD recommendations page.
 
@@ -52,6 +45,13 @@ descriptions.
     - MikMod
     - Adopted CPAN Modules
     - Wikipedia and related sites.
+
+* Investigate the following subversion scenario:
+    - svn rm myfile.
+    - svn cp ../../IP/myfile myfile.
+    - svn revert -R .
+    - change myfile.
+    - commit.
 
 Long Term:
 ----------

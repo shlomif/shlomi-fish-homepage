@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "Shlomi Fish's Writings about Computing" />
 
@@ -13,6 +14,10 @@ all of them under this section of the homepage.
 Some of these essays will require some technical knowledge, but most of them
 can be read by anyone with a pseudo-technical background. 
 </p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
 
 <h2 id="articles-and-essays">The Articles and Essays</h2>
 
@@ -36,6 +41,15 @@ Software Management</a></h3>
 <p class="indent">
 Software management: leading a team, designing software, working on software,
 hiring employees, growing a user base, software engineering, etc.
+</p>
+
+<h3 id="high-quality-soft"><a href="high-quality-software/">"What Makes
+Software High-Quality?"</a></h3>
+
+<p class="indent">
+An overview of the parameters that make software high-quality, with a focus
+on open-source software, and the various methods that can be used to
+maintain good quality and increase it.
 </p>
 
 <h3 id="perl"><a href="./perl/">Articles about Perl</a></h3>

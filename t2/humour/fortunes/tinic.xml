@@ -766,40 +766,51 @@ Asterisk tools and DO have children but are not datiyim!
       <meta>
           <title>Linux-IL: Which Substances Russians Use for Drinks</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[Well, no. Russians do not use everything for drinks. It has been
+            <p>
+            Well, no. Russians do not use everything for drinks. It has been
 empirically proved that some substances - e.g. slag - cannot be
 used to make drinks.
+</p>
 
+            <p>
 Worse, some substances - e.g. slag - cannot be even used for the
 after-drink zakuska.
-
+</p>
+            <p>
 Yet even worse than that, some substances - e.g. slag - are not
 even useful for bottling drinks.
-
+</p>
+            <p>
 The silver lining on the rain cloud, however, is that there are precious
 few such substances. Namely, one - slag.
-
-Slainte!
-
-    Marc A. Volovic in:
-    http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39712.html
-]]></text>
+</p>
+            <p>
+                Slainte!
+                </p>   
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Marc A. Volovic</author>
+            <work href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39712.html">Linux-IL Post</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="hackers-il-shelf-vs-skycraper">
       <meta>
           <title>Hackers-IL: Shelf vs. Skycraper</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[> My personal advice and preferences:
-> Don't bother with advice about understanding 50-line code blocks.
-> Advise how to make 10,000,000 line code base easier to understand.
- 
+            
+                
+<p>
+    &gt; My personal advice and preferences:<br/>
+    &gt; Don't bother with advice about understanding 50-line code blocks.<br/>
+    &gt; Advise how to make 10,000,000 line code base easier to understand.<br/>
+</p>
+
+<p>
 Your advice is similar to going to a guy explaining home-improvement on TV
 and showing how to build a shelf (or whatever) well, and telling him: "don't
 bother with advice about building a shelf - advise how to build a 150 story
@@ -807,25 +818,29 @@ sky-scraper!". True, if a someone is about to build a sky-scraper, they should
 not bother with the details on how to make a shelf (they'll hire someone to
 do that), but most people will never need to build a sky-scraper in their
 lives, while building shelves is a useful skill.
- 
+</p>
+
+<p>
 Similarly, most hobbyist (or even most professional) programmers will benefit
 more from advice on writing 10,000 line programs than from advice on how to
 write 10,000,000 lines.
-
-    Nadav Har'El
-    http://tech.groups.yahoo.com/group/hackers-il/message/1222
-]]></text>
+</p>    
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Nadav Har'El</author>
+            <work href="http://tech.groups.yahoo.com/group/hackers-il/message/1222">Hackers-IL Message No 1,222</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="hackers-il-cs-in-real-life-1">
       <meta>
           <title>Hackers-IL: CS in Real Life - #1</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[I have much more books than I can put on my night-stand. Books that are
+            
+<p>
+I have much more books than I can put on my night-stand. Books that are
 on my night-stand are quickly accessible (when I'm in bed, that is), and
 books on the shelf are not (I hate getting up from the cozy, warm, bed).
 So, when I suddenly feel like reading a book that is not on the night-
@@ -835,50 +850,59 @@ asleep, another process, known as "sleepwalkd" got me the book I wanted.
 Also, when my nightstand already has too many books on it, The sleepwalk
 process moves one of the books - the one I'm least likely to want to read
 next - back to the shelf.
+</p>
 
+<p>                            
 Last month, four Europeans with weird names decided to mess around with my
 book-reading system. One called Alan decided that in some cases I should
 move *all* my books to the shelf, go to bed without any books the same
 night, and instead fill the nightstand with crap. And if somehow all my
 shelves are full I should just burn one at random (if it burns the whole
-shelf, or the wrong shelf, who cares).
+shelf, or the wrong shelf, who cares).<br/>
 Another one, called Andrea, decided that I should redesign my whole
 sleepwalking routine according to his master-plan. However, this made my
 sleepwalking become so strange, that people were hesitant to call me
 "stable" any more. Alan thought my new sleepwalking was a sure sign of
-be not being stable.
+be not being stable.<br/>
 But then a third European, Linus, finally made a judgment-call, and decided
 that I was stable, even with Andrea's new sleepwalking routine. He then
 told yet another European, Marcello, that from now he's resposible for
 keeping me stable. I thought it was my shrink's resposibility, but
 Marcello said no, that now that he finally has some responsibility he's not
 going to just give it up.
-
-    Nadav Har'El
-    http://tech.groups.yahoo.com/group/hackers-il/message/1408
-]]></text>
+</p>
+  
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Nadav Har'El</author>
+            <work href="http://tech.groups.yahoo.com/group/hackers-il/message/1408">Hackers-IL Message No. 1,408</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="hackers-il-cs-in-real-life-2">
       <meta>
          <title>Hackers-IL: CS in Real Life - #2</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[2. Journaling filesystems:
+            
+<p>
+2. Journaling filesystems:
+</p>
 
+<p>
 Imagine writing stuff on a lot of different notes and pieces of papers,
 etc., and then suddenly getting hit in the head and forgetting everything
 (call this rebooting). You suddenly don't know which was the note you
 were in the middle of writing, and you may end up finding a note saying
-"kill <name>" not knowing you really meant to write "kill <name>'s jobs on
+"kill &lt;name&gt;" not knowing you really meant to write "kill &lt;name&gt;'s jobs on
 the department's workstation, because they are hogging all resources" before
 you got hit on the head. That's why you should have a journal. Write
 everything that you do in there, one entry after another, and only when
 you complete a whole note, cut it out of the journal and keep it.
+</p>
 
+<p>
 Also, when you go to the bathroom, don't forget to write down in the
 journal about whether you're already done with #1, #2, or #3 (don't ask
 what #3 is...). That way, if you suddenly get hit on the head (say, the
@@ -887,21 +911,27 @@ asking yourself questions like "Oops, I don't remember if I did #2 or not,
 so should I reach for some toilet paper or not?" If you had a journal,
 everything would have been much simpler. Just look in there, and see what
 you've been up to.
+</p>
 
-    Nadav Har'El, http://tech.groups.yahoo.com/group/hackers-il/message/1408
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Nadav Har'El</author>
+            <work href="http://tech.groups.yahoo.com/group/hackers-il/message/1408">Hackers-IL Message No. 1,408</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="hackers-il-cs-in-real-life-3">
       <meta>
          <title>Hackers-IL: CS in Real Life - #3</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[3. Blue Screen of Death:
+            
+<p>                
+3. Blue Screen of Death:
+</p>
 
+<p>
 Some people, after a bit of strenuous activity, or simply a couple of
 days of normal life, suddenly go blue and freeze up. Some people call it
 the blues, others just call it death, but in OS lingo it's simply the
@@ -910,13 +940,14 @@ needs to hit you on the head (this is called a "reboot", after the footwear
 usually worn while kicking someone's head). After a minute, you wake up,
 forgetting everything you didn't write down before the event, but
 functioning much better than you did before (at least for the first hour).
+</p>
 
-    Nadav Har'El
-    http://tech.groups.yahoo.com/group/hackers-il/message/1408
-]]></text>
         </body>
-        <info/>
-      </raw>
+        <info>
+            <author>Nadav Har'El</author>
+            <work href="http://tech.groups.yahoo.com/group/hackers-il/message/1408">Hackers-IL Message No. 1,408</work>
+        </info>
+      </quote>
     </fortune>
     <fortune id="hackers-il-cs-in-real-life-4">
       <meta>
@@ -924,8 +955,12 @@ functioning much better than you did before (at least for the first hour).
       </meta>
       <raw>
         <body>
-          <text><![CDATA[4. User Friendliness and Graphical User Interface:
+            <text><![CDATA[
 
+                <p>
+                    4. User Friendliness and Graphical User Interface:
+
+<p>
 Most people are not very user-friendly. Try talking to a person (especially
 of the opposite sex) and trying to guess what you're supposed to do now,
 what the other person wants from you, what would happen if you did this,
@@ -936,6 +971,7 @@ complex command line language we call "Hebrew", when you can just look at
 the menu, see the options "Leave me alone" and "Let's have sex" and just
 chose the one you want! Better yet, why not have a toolbar, with nice little
 icons?
+</p>
 
     Nadav Har'El
     http://tech.groups.yahoo.com/group/hackers-il/message/1408
@@ -951,7 +987,8 @@ icons?
       <raw>
         <body>
           <text><![CDATA[5. Authentication:
-
+              
+<p>
 In the simple old days, to recognize someone you'd just look at his face
 and try to remember who it is (if you didn't forget it in one of the Blue
 Screen of Death episodes). But there's a much better way, which is more
@@ -966,7 +1003,7 @@ the other person the result (hoping that the other guy doesn't get bored
 by you reading out aloud the digits "one" and "zero" a thousand times) and
 ask him to try to guess the random number from it. If he succeeds, he's
 not Hannibal Lektor - but he's probably mad anyway.
-
+</p>
     Nadav Har'El
     http://tech.groups.yahoo.com/group/hackers-il/message/1408
 ]]></text>

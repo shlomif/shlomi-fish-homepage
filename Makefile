@@ -110,7 +110,8 @@ $(COMMON_LECTURES_DOCS_SRC):: common/lecture/%.wml: $(LECTURES_DEPS)
 T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC))
+					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC)) \
+					   $(filter $(T2_SRC_DIR)/rindolf/%,$(T2_DOCS_SRC))
 
 $(T2_SOFTWARE_DOCS_SRC):: $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
@@ -194,6 +195,7 @@ $(call set,DOCBOOK_DIRS_MAP,foss-and-other-beasts,philosophy/foss-other-beasts/r
 $(call set,DOCBOOK_DIRS_MAP,introductory-language,philosophy/computers/education/introductory-language)
 $(call set,DOCBOOK_DIRS_MAP,isr-pales-conflict-solution,philosophy/israel-pales)
 $(call set,DOCBOOK_DIRS_MAP,objectivism-and-open-source,philosophy/obj-oss)
+$(call set,DOCBOOK_DIRS_MAP,rindolf-spec,rindolf)
 $(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality-rev2,philosophy/computers/high-quality-software/rev2)

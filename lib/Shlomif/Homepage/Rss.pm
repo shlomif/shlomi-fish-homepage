@@ -30,7 +30,7 @@ sub _calc_entry_body
 
     $body =~ s{<a name="cut[^"]*"></a>}{}g;
 
-    return $body;
+    return "<!-- TITLE=" . CGI::escapeHTML($entry->title()) . "-->\n" . $body;
 }
 
 sub run

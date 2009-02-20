@@ -163,6 +163,11 @@ sub file_to_news_item
         binmode $file, ":utf8";
         <$file>;
     };
+    my $title;
+    if ($text =~ s{\A<!-- TITLE=(.*?)-->\n}{})
+    {
+        $title = $1;
+    }
     $text =~ s!<p>!<p class="newsitem">!g;
     $text =~ s!<ol>!<ol class="newsitem">!g;
     $text =~ s!<ul>!<ol class="newsitem">!g;
@@ -173,6 +178,7 @@ sub file_to_news_item
         +{
             'date' => (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
             'body' => $text,
+            'title' => $title,
         };
 }
 
@@ -214,8 +220,13 @@ sub get_item_html
 {
     my $self = shift;
     my $item = shift;
-    return "<h3 class=\"newsitem\">" . $item->{'date'} . "</h3>\n\n" .
-        $item->{'body'};
+
+    my $title = $item->{title};
+    return "<h3 class=\"newsitem\">" . $item->{'date'}
+        . (defined($title) ? ": $title" : "")
+        . "</h3>\n\n"
+        . $item->{'body'}
+        ;
 }
 
 sub render_items

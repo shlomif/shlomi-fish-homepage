@@ -3498,6 +3498,48 @@ G: And all <b>we</b> had were NAND gates!
             </info>
         </quote>
     </fortune>
+    <fortune id="sharp-python-on-incrementing">
+        <meta>
+            <title>#python on Incrementing</title>
+        </meta>
+        <irc>
+            <body>
+    <saying who="rindolf">Hi all.</saying>
+<saying who="scorchsaber">&lt;all&gt; Hi rindolf</saying>
+<saying who="rindolf">scorchsaber: heh.</saying>
+<saying who="rindolf">scorchsaber++</saying>
+<saying who="rindolf">Or in Python:</saying>
+<saying who="rindolf">scorchsaber+=1</saying>
+<saying who="rillo">??</saying>
+<saying who="rindolf">rillo: Python does not have a ++ operator.</saying>
+<saying who="scorchsaber">rindolf: Oh, but it does have a + operator.</saying>
+<saying who="rillo">ah. i&#39;m new to python so i diddnt know</saying>
+<saying who="scorchsaber">A few days ago, it was suggested that I implement ++ using the + operator.</saying>
+<saying who="scorchsaber">And I did so. :)</saying>
+<saying who="scorchsaber">So, really, a++; is valid in Python, and it may even increment a by one. If somebody was crazy, anyhow, and if a was mutable.</saying>
+<saying who="rillo">shall i move back to perl to get the ++</saying>
+<saying who="rillo">?</saying>
+<saying who="rindolf">rillo: no, use COBOL instead.</saying>
+<saying who="rindolf">ADD 1 TO COBOL GIVING COBOL</saying>
+<saying who="verte">:(</saying>
+<saying who="verte">eww, magic numbers!</saying>
+<saying who="rindolf">&quot;COBOL is the old Java&quot;</saying>
+<saying who="verte">ADD ONE TO COBOL GIVING COBOL</saying>
+<saying who="rindolf">verte: heh.</saying>
+<saying who="rindolf">verte: 1 is not a magic number.</saying>
+<saying who="rindolf">ASSIGN 1 to ONE</saying>
+<saying who="rindolf">0, 1, infinity.</saying>
+<saying who="rindolf">verte: LOL.</saying>
+<saying who="rindolf">verte++</saying>
+<saying who="\amethyst">COMPUTE COBOL = COBOL + 1</saying>
+</body>
+        <info>
+            <channel>#python</channel>
+            <network>Freenode</network>
+            <tagline>On Incrementing</tagline>
+        </info>
+</irc>
+</fortune>
 </list>
 </collection>
 

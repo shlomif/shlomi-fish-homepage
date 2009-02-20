@@ -392,3 +392,14 @@ table.visible
     overflow: hidden;
 }
 
+.fortunes_list .info
+{
+    border-collapse: collapse;
+}
+
+.fortunes_list .info td
+{
+    border: black thin solid;
+    padding: 0.2em;
+}
+

@@ -27,7 +27,7 @@ INDEX_FILE = index.html
 
 VERSION_FILE = ver.txt
 
-all: dist test xhtmls
+all: dist xhtmls test
 
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile $<

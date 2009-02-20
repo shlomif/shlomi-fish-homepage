@@ -195,6 +195,7 @@ $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computer
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 
 DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).pdf)
+DOCBOOK_INSTALLED_XMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).xml)
 
 # DOCBOOK_DOCS = \
 # 	case-for-drug-legalisation \
@@ -207,15 +208,17 @@ DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOC
 #   Removing, because we no longer need to build the DocBook.
 #   $(SCREENPLAY_DOCS)
 
+DOCBOOK_XML_DIR = lib/docbook/xml
+DOCBOOK_FO_DIR = lib/docbook/fo
+DOCBOOK_PDF_DIR = lib/docbook/pdf
+
 DOCBOOK_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(DOCBOOK_DOCS))
-DOCBOOK_XMLS = $(patsubst %,lib/docbook/xml/%.xml,$(DOCBOOK_DOCS))
+DOCBOOK_XMLS = $(patsubst %,$(DOCBOOK_XML_DIR)/%.xml,$(DOCBOOK_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
 
-DOCBOOK_FO_DIR = lib/docbook/fo
 DOCBOOK_FOS = $(patsubst %,$(DOCBOOK_FO_DIR)/%.fo,$(DOCBOOK_DOCS))
 
-DOCBOOK_PDF_DIR = lib/docbook/pdf
 DOCBOOK_PDFS = $(patsubst %,$(DOCBOOK_PDF_DIR)/%.pdf,$(DOCBOOK_DOCS))
 
 # SCREENPLAY_DOCBOOK_HTMLS = $(patsubst %,lib/docbook/essays/%/all-in-one.html,$(SCREENPLAY_DOCS))
@@ -242,7 +245,7 @@ SCREENPLAY_TARGETS = $(patsubst %,lib/docbook/rendered/%.html,$(SCREEPLAY_DOCS))
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
-docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_pdfs
+docbook_targets: $(DOCBOOK_TARGETS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_xmls
 
 lib/docbook/rendered/%.html: lib/docbook/essays/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -280,9 +283,16 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 tidy: all
 	perl bin/run-tidy.pl
 
-install_pdfs: $(DOCBOOK_PDFS) $(DOCBOOK_INSTALLED_PDFS)
+install_docbook_pdfs: $(DOCBOOK_INSTALLED_PDFS)
+
+install_docbook_xmls: $(DOCBOOK_INSTALLED_XMLS)
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 $(DOCBOOK_INSTALLED_PDFS) : $(DOCBOOK_PDFS)
 	cp -f $(DOCBOOK_PDF_DIR)/$(notdir $@) $@
+
+$(DOCBOOK_INSTALLED_XMLS) : $(DOCBOOK_XMLS)
+	cp -f $(DOCBOOK_XML_DIR)/$(notdir $@) $@
+
+

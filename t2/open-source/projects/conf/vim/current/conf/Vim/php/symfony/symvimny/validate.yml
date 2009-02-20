@@ -1,0 +1,11 @@
+methods:
+  get: [ field ]
+  post: [ field ]
+
+names:
+  field:
+    required: yes
+    required_msg: Error
+
+fillin:
+  activate: yes

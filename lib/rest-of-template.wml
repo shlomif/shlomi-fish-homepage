@@ -341,6 +341,10 @@ return;
     init_section_nav_menu();
     print $section_nav_menu->get_html();
 }:>
+<div style="float: right">
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://reddit.com/button.js?t=2"></script>
+</div>
 </latemp_before_main_title>
 
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">

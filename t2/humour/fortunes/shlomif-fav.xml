@@ -24,9 +24,9 @@
           <body>
               <p>
                   I/O, I/O, <br/>
-                  It's off to disk I go, <br />
+                  It's off to disk I go, <br/>
                   a bit or byte to read or write, <br/>
-                  I/O, I/O, I/O, I/O<br />
+                  I/O, I/O, I/O, I/O<br/>
              </p>
         </body>
         <info>
@@ -41,9 +41,9 @@
       </meta>
       <quote>
         <body>
-            <p>Will: "Roses are red,<br />
-                Violets are Blue.<br />
-                Jazz and I are black,<br />
+            <p>Will: "Roses are red,<br/>
+                Violets are Blue.<br/>
+                Jazz and I are black,<br/>
                 But, Carlton, what are you?"
             </p>
             <p>Excerpt from "The Fresh Prince of Bel-Air"</p>
@@ -90,17 +90,17 @@
       </meta>
       <quote>
         <body>
-          <p>I'm sexy, I'm cute, I'm popular to boot.<br />
-I'm bitchin', great hair, the boys all love to stare! <br />
-I'm wanted, I'm hot, I'm everything you're not.<br />
-I'm pretty, I'm cool, I dominate this school. <br />
-Who am I? Just guess. Guys wanna touch my chest. <br />
-I'm rockin', I smile and many think I'm vile. <br />
-I'm flying, I jump you can look but don't you hump.  Whoo! <br />
-I major, I roar. I swear I'm not a whore. <br />
-We cheer and we lead - we act like we're on speed. <br />
-You hate us cause we're beautiful but we don't like you either. <br />
-We're cheerleaders. We are cheerleaders!<br />
+          <p>I'm sexy, I'm cute, I'm popular to boot.<br/>
+I'm bitchin', great hair, the boys all love to stare! <br/>
+I'm wanted, I'm hot, I'm everything you're not.<br/>
+I'm pretty, I'm cool, I dominate this school. <br/>
+Who am I? Just guess. Guys wanna touch my chest. <br/>
+I'm rockin', I smile and many think I'm vile. <br/>
+I'm flying, I jump you can look but don't you hump.  Whoo! <br/>
+I major, I roar. I swear I'm not a whore. <br/>
+We cheer and we lead - we act like we're on speed. <br/>
+You hate us cause we're beautiful but we don't like you either. <br/>
+We're cheerleaders. We are cheerleaders!<br/>
 </p>
 
 <p>Excerpt from "Bring it On"</p>
@@ -196,19 +196,27 @@ student five minutes after it.
       <meta>
         <title>Histeria! - "did the Fall Hurt You?"</title>
       </meta>
-      <raw><!-- TODO : screenplay -->
-        <body>
-          <text><![CDATA[[Isaac Newton falls off the tree]
-
-Cho-Cho: Did the fall hurt you?
-
-Newton: It wasn't the fall; it was the sudden stop at the end.
-
-	Excerpt from the T.V. show "Histeria!"
-]]></text>
-        </body>
-        <info/>
-      </raw>
+      <screenplay>
+          <body>
+              <description>
+                  <para>Isaac Newton falls off the tree</para>
+              </description>
+              
+              <saying character="Cho-Cho">
+                  <para>Did the fall hurt you?</para>
+              </saying>
+              
+              <saying character="Newton">
+                  <para>
+                      It wasn't the fall; it was the sudden stop at the end.
+                  </para>
+              </saying>
+          </body>
+          <info>
+              <author>Tom Ruegger</author>
+              <work href="http://en.wikipedia.org/wiki/Histeria!">Histeria!</work>
+          </info>
+      </screenplay>
     </fortune>
     <fortune id="beware-of-bugs">
       <meta>

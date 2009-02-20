@@ -112,6 +112,54 @@ my $humour_tree_contents =
                     'text' => "Fortune Cookies Collection",
                     'url' => "humour/fortunes/",
                     'title' => "Collection of Quotes by Me and Others in the UNIX Fortune Format",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "friends",
+                            'url' => "humour/fortunes/friends.html",
+                            'title' => "Excerpts from the T.V. Show &quot;Friends^quot;",
+                        },
+                        {
+                            'text' => "joel-on-software",
+                            'url' => "humour/fortunes/joel-on-software.html",
+                            'title' => "Quotes from &quot;Joel on Software&quot;",
+                        },
+                        {
+                            'text' => "nyh-sigs",
+                            'url' => "humour/fortunes/nyh-sigs.html",
+                            'title' => "Nadav Har'El's Signatures",
+                        },
+                        {
+                            'text' => "osp_rules",
+                            'url' => "humour/fortunes/osp_rules.html",
+                            'title' => "Rules of Open Source Programming",
+                        },
+                        {
+                            'text' => "paul-graham",
+                            'url' => "humour/fortunes/paul-graham.html",
+                            'title' => "Paul Graham Quotes",
+                        },
+                        {
+                            'text' => "shlomif",
+                            'url' => "humour/fortunes/shlomif.html",
+                            'title' => "Quotes with my Participation",
+                        },
+                        {
+                            'text' => "shlomif-fav",
+                            'url' => "humour/fortunes/shlomif-fav.html",
+                            'title' => "Other Favourite Quotes",
+                        },
+                        {
+                            'text' => "subversion",
+                            'url' => "humour/fortunes/subversion.html",
+                            'title' => "Quotes from the Online Folklore of the Subversion Version Control System",
+                        },
+                        {
+                            'text' => "tinic",
+                            'url' => "humour/fortunes/tinic.html",
+                            'title' => "Quotes from the online Linux-IL Folklore",
+                        },
+                    ],
                 },
            ],
         },

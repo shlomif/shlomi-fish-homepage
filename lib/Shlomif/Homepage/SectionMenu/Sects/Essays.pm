@@ -234,6 +234,13 @@ my $essays_tree_contents =
                     'text' => "Case for Drug Legalisation",
                     'url' => "philosophy/politics/drug-legalisation/",
                     'title' => "Why the War on Drugs is the Real Drug Problem",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Hebrew Translation",
+                            'url' => "philosophy/politics/drug-legalisation/hebrew.html",
+                        },
+                    ],
                 },
                 {
                     'text' => "Define \"Zionism\"!",

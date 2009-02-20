@@ -4,6 +4,7 @@
 
 <define-tag hebrew_open_div>
 {#HEBREW_XML_LANG_SCRIPT#:<script src="$(ROOT)/js/moz-lang.js" type="text/javascript"></script>:##}
+{#BODY_PARAMS#: onload="lang_load()":##}
 <div class="hebrew" xml:lang="he-IL">
 </define-tag>
 

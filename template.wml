@@ -1,5 +1,5 @@
 <define-tag body endtag="required">
-<body* onload="lang_load()">
+<body*{#BODY_PARAMS#}>
 %body
 </body*>
 </define-tag>

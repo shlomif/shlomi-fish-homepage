@@ -181,7 +181,7 @@ sub _process_single_fortune
         $writer->endTag("meta");
     };
 
-    if (any { $_ =~ m{\A *<[^>]+>} } @$lines)
+    if (any { $_ =~ m{\A +<[^>]+>} } @$lines)
     {
         my $title;
         if ($lines->[-1] =~ m{\A *([^ ]+)})
@@ -266,6 +266,8 @@ sub _process_single_fortune
         $writer->cdata(join("\n", @$lines, ""));
         $writer->endTag("text");
         $writer->endTag("body");
+        $writer->startTag("info");
+        $writer->endTag("info");
         $writer->endTag("raw");
     }
 

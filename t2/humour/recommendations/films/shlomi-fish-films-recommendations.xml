@@ -2,7 +2,6 @@
 <!DOCTYPE comparison SYSTEM "product-syndication.dtd">
 <!--
 ;;; To add:
-* Eight days a week.
 * http://www.imdb.com/title/tt0103241/ - What About Bob?
 * Star Wars IV-VI.
 * Jerry Maguire.
@@ -47,6 +46,7 @@ Done:
 * Spaceballs.
 * http://www.imdb.com/title/tt0095304/ - High Spirits
 * The Neverending Story (I).
+* Eight days a week.
 
 -->
 
@@ -56,7 +56,10 @@ Done:
             <title>Shlomi Fish's Films' Recommendations</title>
             <desc appendtoc="1">
 <p>
-    This is a list of films I have watched and can recommend.
+    This is a list of films I have watched and can recommend. <a 
+        href="shlomi-fish-films-recommendations.xml">The source</a> used 
+    to generate this page can be rendered using the
+    <a href="http://search.cpan.org/dist/XML-Grammar-ProductsSyndication/">XML-Grammar-ProductsSyndication</a> CPAN module.
 </p>
 
             </desc>

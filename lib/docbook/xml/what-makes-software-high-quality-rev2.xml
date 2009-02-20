@@ -104,6 +104,29 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     converted to DocBook-4.5.
                 </revremark>
             </revision>
+            <revision>
+                <revnumber>5329</revnumber>
+                <date>24 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                        Added the suggestion of speaking about "Why software
+                        quality is important", and the note about popularity
+                        to the introduction. Placed the Intro FCS story in the
+                        "Motivation" section. Added the "organisation" 
+                        sub-section to the Intro.
+                        Added the note about the generic "weight function".
+                        Aded a link to "The Stanford Checker". Corrected
+                        many "a software" instances. Added the note about
+                        how Linux and Windows looked to the Aesthetics.
+                        Added the note about low-quality code and
+                        organisational quality to the "good code" section.
+                        Added the footnote about a comprehensive comparison
+                        of Freecell solvers. Added the note about solution
+                        length and "other advantages" of FCS.
+                        Updated the "Thanks" section.
+                        Made many other corrections.
+                </revremark>
+            </revision>
         </revhistory>
     </articleinfo>
 
@@ -191,7 +214,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
     <section id="organisation">
-            <title>Organisation of this Document</title>
+        <title>Organisation of this Document</title>
 
         <para>
             I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
@@ -499,7 +522,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="homepage">
         <title>The Program has a Homepage</title>
         <para>
-            Most software applicationsa and libraries of high-quality have a 
+            Most software applications and libraries of high-quality have a 
             homepage which introduces them, has download information, gives 
             links, and provides a starting point to receive more information.
             And no - a <literal>/project/myprogram/</literal> page on 
@@ -810,22 +833,24 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             PHP code into the future is a very costy process, especially if
             you want it to work with a range of versions.
         </para>
+
         <para>
             On the other hand, the perl5 developers have been maintaining
-            backwards compatibility between 5.000, 5.001, 5.002 up to
-            5.6.x, 5.8.x and now 5.10.x. As such one can normally expect older
+            backwards compatibility between 5.000, 5.001, 5.002 up to 5.6.x,
+            5.8.x and now 5.10.x. Therefore, one can normally expect older
             scripts to just work. perl5 can also run a lot of Perl 4 code and
             below, and Perl 4 code can be ported to modern versions of perl5
-            with relative ease. While sometimes scripts, programs
-            or modules were broken (due to lack
-            of "bug-to-bug compatibility"), or became slower,
-            upgrading to a new version of Perl is normally straightforward.
+            with relative ease. While sometimes scripts, programs or modules
+            were broken (due to lack of "bug-to-bug compatibility"), or became
+            slower, upgrading to a new version of Perl is normally
+            straightforward.
         </para>
+
     </section>
     <section id="good_ways_to_provide_support">
         <title>Good Ways to Provide Support</title>
         <para>
-            A high-quality software has good ways for its users to
+            A piece of high-quality software has good ways for its users to
             receive support. Some examples for ways to do that are:
         </para>
         <orderedlist>

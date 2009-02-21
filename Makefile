@@ -244,10 +244,13 @@ DOCBOOK_RENDERED_DIR = lib/docbook/rendered
 DOCBOOK_INDIVIDUAL_XHTML_DIR = lib/docbook/indiv-nodes
 DOCBOOK_ALL_IN_ONE_XHTML_DIR = lib/docbook/essays
 
+SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
+
 DOCBOOK_TARGETS = $(patsubst %,$(DOCBOOK_RENDERED_DIR)/%.html,$(DOCBOOK_DOCS))
 DOCBOOK_XMLS = $(patsubst %,$(DOCBOOK_XML_DIR)/%.xml,$(DOCBOOK_DOCS))
-SCREENPLAY_XMLS = $(patsubst %,lib/screenplay-xml/xml/%.xml,$(SCREENPLAY_DOCS))
-SCREENPLAY_HTMLS = $(patsubst %,lib/screenplay-xml/html/%.html,$(SCREENPLAY_DOCS))
+
+SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_BASE_DIR)/xml/%.xml,$(SCREENPLAY_DOCS))
+SCREENPLAY_HTMLS = $(patsubst %,$(SCREENPLAY_XML_BASE_DIR)/html/%.html,$(SCREENPLAY_DOCS))
 
 DOCBOOK_FOS = $(patsubst %,$(DOCBOOK_FO_DIR)/%.fo,$(DOCBOOK_DOCS))
 
@@ -259,20 +262,20 @@ DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOC
 
 DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
 
-SCREENPLAY_RENDERED_HTMLS = $(patsubst %,lib/screenplay-xml/rendered-html/%.html,$(SCREENPLAY_DOCS))
+SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_BASE_DIR)/rendered-html/%.html,$(SCREENPLAY_DOCS))
 
-$(DOCBOOK_XML_DIR)/%.xml: lib/screenplay-xml/xml/%.xml
+$(DOCBOOK_XML_DIR)/%.xml: $(SCREENPLAY_XML_BASE_DIR)/xml/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToDocBook -e 'run()' -- \
 	-o $@ $<
 
-lib/screenplay-xml/html/%.html: lib/screenplay-xml/xml/%.xml
+$(SCREENPLAY_XML_BASE_DIR)/html/%.html: $(SCREENPLAY_XML_BASE_DIR)/xml/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
 	-o $@ $<
 
-lib/screenplay-xml/rendered-html/%.html: lib/screenplay-xml/html/%.html
+$(SCREENPLAY_XML_BASE_DIR)/rendered-html/%.html: $(SCREENPLAY_XML_BASE_DIR)/html/%.html
 	./bin/extract-screenplay-xml-html.pl -o $@ $<
 
-lib/screenplay-xml/xml/%.xml: lib/screenplay-xml/txt/%.txt
+$(SCREENPLAY_XML_BASE_DIR)/xml/%.xml: $(SCREENPLAY_XML_BASE_DIR)/txt/%.txt
 	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
 	-o $@ $<
 
@@ -313,16 +316,16 @@ $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: lib/screenplay-xml/txt/TOW_Fountainhead_1.txt
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: $(SCREENPLAY_XML_BASE_DIR)/txt/TOW_Fountainhead_1.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: lib/screenplay-xml/txt/TOW_Fountainhead_2.txt
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(SCREENPLAY_XML_BASE_DIR)/txt/TOW_Fountainhead_2.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/humanity/Humanity-Movie.txt: lib/screenplay-xml/txt/Humanity-Movie.txt
+$(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_BASE_DIR)/txt/Humanity-Movie.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: lib/screenplay-xml/txt/star-trek--we-the-living-dead.txt
+$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_BASE_DIR)/txt/star-trek--we-the-living-dead.txt
 	cp -f $< $@
 
 %.show:

@@ -226,6 +226,11 @@ my $humour_tree_contents =
                     'url' => "humour/by-others/technion-bit-1.html",
                     'title' => "A bit I found at the Technion",
                 },
+                {
+                    'text' => "Hitchhiker's Guide to Star Trek TNG",
+                    'url' => "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
+                    'title' => "A Cross of the Douglas Adams Book and the T.V. Series",
+                },
             ],
         },
         {

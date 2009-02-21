@@ -5,7 +5,6 @@ use warnings;
 
 use IO::All;
 use CGI;
-use Getopt::Long;
 
 open my $arcs_list_fh, "<", "fortunes-list.mak";
 my @lines = <$arcs_list_fh>;
@@ -51,7 +50,7 @@ $out->print(
     (
         (map { ( "$_.xml", $_, "$_.dat" ) } @fortunes),
         (map { $_->filename(); } 
-        io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|atom|rss)\z} })->all_files()),
+        io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|atom|rss|spec\.in)\z} })->all_files()),
         "Makefile", "ver.txt",
     )
 );

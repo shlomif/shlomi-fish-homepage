@@ -1,6 +1,6 @@
 include fortunes-list.mak
 
-VER = 0.10.148
+VER = 0.10.150
 
 DIST_BASE = fortunes-shlomif
 
@@ -11,6 +11,9 @@ VERSION_FILE = ver.txt
 ARCS_LIST_INCLUDE = arcs-list.mak
 
 SOURCE_FILES_LIST = source-files-list.html
+
+RPM_SPEC = $(DIST_BASE).spec
+RPM_SPEC_IN = $(RPM_SPEC).in
 
 DIST_DIR = $(DIST_BASE)-$(VER)
 
@@ -39,7 +42,7 @@ dist: $(PACKAGE_BASE) list_files gen_sources_list
 
 html: $(INDEX_FILE)
 
-EXTRA_FILES = Makefile fortunes-list.mak
+EXTRA_FILES = Makefile fortunes-list.mak $(RPM_SPEC) $(RPM_SPEC_IN)
 
 PACKAGE_DEPS = $(DATS) $(EXTRA_FILES) $(VERSION_FILE)
 
@@ -82,6 +85,9 @@ gen_sources_list: $(SOURCE_FILES_LIST)
 
 $(SOURCE_FILES_LIST): generate-file-list.pl $(ARCS_LIST_INCLUDE) 
 	perl $<
+
+$(RPM_SPEC): $(RPM_SPEC_IN) $(VERSION_FILE)
+	perl update-spec.pl -i $< -o $@ --ver $(VER)
 
 %.show:
 	@echo "$* = $($*)"

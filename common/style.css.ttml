@@ -228,7 +228,7 @@ table.thumbs
 [% INCLUDE "lang_switch.css.ttml" %]
 .about_site
 {
-    width: 50%;
+    width: 35%;
     float: right;
     margin-left: 1em;
     margin-right: 10pt;
@@ -238,16 +238,20 @@ table.thumbs
     border-left: [% vert_style %];
     border-right: [% vert_style %];
     border-bottom: [% horiz_style %];
-    border-top: [% horiz_style %];
-    padding: 5pt;
+    /* padding: 5pt; */
 }
 .about_site h2
 {
     margin-top: 0em;
+    background-color: [% about_color %];
+    color: white;
+    padding: 3pt;
 }
-.about_site p
+.about_site p, .about_site h3
 {
     margin-top:0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 .revhistory th, .revhistory td
 {

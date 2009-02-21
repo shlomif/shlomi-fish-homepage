@@ -66,6 +66,17 @@
                 </revremark>
             </revision>
 
+            <revision>
+                <revnumber>6036</revnumber>
+                <date>02 August 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Started adding the essential tools section with
+                    more information, instead of just the knowledge
+                    in the Ether.
+                </revremark>
+            </revision>
+
         </revhistory>
     </articleinfo>
 
@@ -330,7 +341,7 @@
                 </para>
                 <para>
                     At the same workplace, I was given a computer with a
-                    read-only CD-ROM drive. It was not even a DVD reader.
+                    read-only CD-ROM drive. It was not even a DVD reader
                     I brought a DVD of audio files from home, and could not
                     read it. In this day and age, read/write DVD drives
                     are the standard, and are ultra-cheap.
@@ -345,10 +356,12 @@
                 </para>
 
                 <para>
-                    Make sure your workers have a <emphasis role="bold">high-quality screen</emphasis>. They
+                    Make sure your workers have a
+                    <emphasis role="bold">high-quality 
+                        screen</emphasis>. They
                     need to look at it most of the day, and they want it
                     to look nice. A decent 19" LCD screen nowadays is very
-                    cheap nowadays and well worth the added productivity.
+                    cheap and well worth the added productivity.
                 </para>
 
                 <para>
@@ -380,6 +393,7 @@
                     While sometimes asking them to stay late to finish a
                     deadline is acceptable, the so-called "crunch mode" is
                     under-effective and a recipe for disaster.
+                    Refer to the link for the details.
                 </para>
             </section>
 
@@ -1409,11 +1423,14 @@ function create_employee(params)
                 forums.
             </para>
         </section>
-        <section id="knowledge-in-the-ether">
-            <title>Avoiding "Knowledge in the Ether"</title>
+        <section id="essential-software">
+            <title>Essential Organisational Software to Have</title>
+            <section id="essential-software--wiki">
+                <title>A Wiki to Prevent 
+                    the "Knowledge in the Ether" Anti-Pattern</title>
             <para>
                 One of the anti-patterns I encountered in previous workplaces
-                and one especially is that of <ulink 
+                is that of <ulink 
                     url="http://use.perl.org/~Shlomi+Fish/journal/33013">the 
                     "Knowledge in the Ether"</ulink>. Quoting from my
                 original post:
@@ -1464,9 +1481,71 @@ function create_employee(params)
                 there, which proved to be much more convenient, accessible 
                 and quick. 
             </para>
+        </section>
+
+        <section id="essential-software--bug-tracker">
+            <title>A Bug-Tracker</title>
+
+            <para>
+                Another essential software is a good web-based <ulink 
+                    url="http://en.wikipedia.org/wiki/Bugtracker"><emphasis role="bold">bug-tracker</emphasis></ulink>. 
+                Joel Spolsky has <ulink 
+                    url="http://www.joelonsoftware.com/articles/fog0000000029.html">an 
+                    article about the motivation and strategy 
+                    for bug-tracking</ulink>, which is well worth reading.
+            </para>
+
+            <para>
+                The reason you need it to be web-based is so that it
+                would be accessible from all operating systems, so it can
+                be exposed to the outside and so you wouldn't need to install
+                a client on all machines. Microsoft's internal bug tracking
+                system is not web-based (for legacy reasons) and they've been 
+                criticised for the fact that Internet Explorer, unlike 
+                the Mozille-based browsers, does not have a publically 
+                available bug-tracker. 
+            </para>
+
+            <para>
+                Furthermore, in a previous workplace of mine, I was stationed 
+                on a Linux workstation (which was the deployment platform
+                and what I like working on), and found that I couldn't
+                interact with our bug-tracker, which only
+                had a windows client. Its more recent versiosn already
+                had a web-interface, but they wouldn't upgrade for fear of
+                breaking the other people's workflow. This indicates another
+                problem in not having a standards-compliant web-interface that 
+                can run on most browsers.
+            </para>
 
         </section>
-        <section id="which-technology">
+
+        <section id="essential-software--vcs">
+            <title>Version Control Software</title>
+            <para>
+                A good team should have a good version control server
+                and clients available to every developer. I originally started
+                the <ulink url="http://better-scm.berlios.de/">"Better 
+                    SCM" site</ulink> as a way to concentrate the material
+                for the various alternative available, after I realised
+                CVS has become inadequate for most needs.
+            </para>
+            <para>
+                My rule of the thumb for choosing a version control system
+                is the following: "When in doubt - use <ulink 
+                    url="http://better-scm.berlios.de/subversion/">Subversion</ulink>.
+                See <ulink url="http://blog.red-bean.com/sussman/?p=79">Ben Collins-Sussman's 
+                    article "Version Control and 'the 80%'"</ulink>
+                for some of the motivation for this statment. Another one
+                is that from my impression most of the new breed "Distributed
+                Version Control Systems" tend to have catches for the unwary
+                and other things that don't exactly work as expected, and 
+                sometimes have poor portability to Microsoft Windows -
+                a fact which is often a deal-breaker.
+            </para>
+        </section>
+    </section>
+    <section id="which-technology">
             <title>Choose Your Technology Carefully</title>
             <para>
                 So which technology should you choose? I'm not giving

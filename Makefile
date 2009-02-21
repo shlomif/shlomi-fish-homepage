@@ -376,8 +376,8 @@ $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	perl $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
-$(FORTUNES_ATOM_FEED): $(FORTUNES_XMLS_SRC)
-	perl $(T2_FORTUNES_DIR)/generate-web-feeds.pl $@ $(T2_FORTUNES_DIR)
+$(FORTUNES_ATOM_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
+	perl $< $@ $(T2_FORTUNES_DIR)
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@

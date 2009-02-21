@@ -38,6 +38,9 @@ my @cmd_line =
     "--yaml-data" => "$abs_dir/fortunes-shlomif-ids-data.yaml",
     "--atom-output" => $abs_atom,
     "--master-url" => "http://www.shlomifish.org/humour/fortunes/",
+    "--title" => "Shlomi Fish's Fortune Feeds",
+    "--tagline" => "Shlomi Fish's Fortune Feeds",
+    "--author" => "Shlomi Fish",
 );
 print join(" ", @cmd_line), "\n";
 exit(system(@cmd_line));

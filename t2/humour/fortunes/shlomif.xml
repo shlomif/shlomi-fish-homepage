@@ -4193,5 +4193,56 @@ more classification.
         </info>
     </quote>
 </fortune>
+<fortune id="sharp-perl-assign-named-foo-and-bar">
+    <meta>
+        <title>Assign Named $foo and $bar</title>
+    </meta>
+    <irc>
+        <body>
+<saying who="LeoNerd">I feel there must be a way to do this...  given   func( foo =&gt; 1, bar =&gt; 2 );   how to write   my ( $foo, $bar ) = ....  inside the function?</saying>
+<saying who="LeoNerd">My current attempt is    my ( $foo, $bar ) = @{{@_}}{qw( foo bar )};   which is messy as sin</saying>
+<saying who="icke">LeoNerd: what&#39;s the problem? readability?</saying>
+<saying who="LeoNerd">Yah</saying>
+<saying who="dazjorz">LeoNerd: I&#39;d change specs to be func({ foo =&gt; 1, bar =&gt; 2})</saying>
+<saying who="dazjorz">then my ($foo, $bar) = ($_[0]{foo}, $_[0]{bar});</saying>
+<saying who="ton">Leonerd: If you insist on doing it on one line, that&#39;s about as good as it gets. But why not use a temporary hash ? Should be just as fast and as readable</saying>
+<saying who="LeoNerd">Hrm.. :/ Then it&#39;s only marginally nicer as    my ( $foo, $bar ) = @{$_[0]}{qw( foo bar )};</saying>
+<saying who="LeoNerd">my %args = @_;  my ( $foo, $bar ) = @args{qw( foo bar )};  ya... that works</saying>
+<saying who="mst">LeoNerd: my ($foo, $bar) = do { my %a = @_; @a{qw(foo bar)} };</saying>
+<saying who="ton">if you combine it with a delete you can then check if %args is empty and catch typos or unexpected arguments....</saying>
+<saying who="LeoNerd">Oooh.. a do block</saying>
+<saying who="vincent">or use padwalker</saying>
+<saying who="LeoNerd">Oh, args won&#39;t be empty... this is a wrapper function that pulls a few named args off and sends the rest to a nested inner function</saying>
+<saying who="LeoNerd">Now.. I want to call a function &quot;foreach&quot; but that breaks things... suggestions?</saying>
+<saying who="icke">a method could be named &#39;foreach&#39;</saying>
+<saying who="LeoNerd">Ya.. but this is a plain function</saying>
+<saying who="icke">tough</saying>
+<saying who="LeoNerd">I suppose &quot;iterate&quot; is about as best as I&#39;ll get</saying>
+<saying who="icke">for_each</saying>
+<saying who="ton">LeoNerd: forall ?</saying>
+<saying who="LeoNerd">I&#39;ll think on it overnight maybe.. I guess it&#39;s home time now</saying>
+<saying who="icke">foreachandeverysingleone</saying>
+<saying who="ton">forever, forfun, forlorn...</saying>
+<saying who="vincent">FOREACH</saying>
+<saying who="icke">boo</saying>
+<saying who="LeoNerd">one_for $all and $all for @one;</saying>
+<saying who="rindolf">forevery?</saying>
+<saying who="rindolf">&lt;LeoNerd&gt; one_for $all and $all for @one; - heh</saying>
+<saying who="rindolf">$one for @all and @all for @one</saying>
+<saying who="rindolf">$one for @all and @all for @$one</saying>
+<saying who="rindolf">$one for @all and @all for $one</saying>
+<saying who="rindolf">Works too.</saying>
+<saying who="LeoNerd">Hrm.. it does?</saying>
+<saying who="LeoNerd">deparse: $one for @all and @all for $one</saying>
+<saying who="buubot">LeoNerd: Error: syntax error at (eval 107195) line 1, near &quot;@all for &quot;</saying>
+<saying who="LeoNerd">You can&#39;t use two postmod fors in a single statement</saying>
+        </body>
+        <info>
+            <channel>#perl</channel>
+            <network>Freenode</network>
+            <tagline>Syntax Fun</tagline>
+        </info>
+    </irc>
+</fortune>
 </list>
 </collection>

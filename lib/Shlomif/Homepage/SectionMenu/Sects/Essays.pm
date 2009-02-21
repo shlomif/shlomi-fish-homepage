@@ -106,6 +106,10 @@ my $essays_tree_contents =
                     ],
                 },
                 {
+                    'text' => "Optimising Code for Speed",
+                    'url' => "philosophy/computers/optimizing-code-for-speed/",
+                },
+                {
                     'text' => "Perl",
                     'url' => "philosophy/computers/perl/",
                     'title' => "Articles Related to the Perl Programming Language",

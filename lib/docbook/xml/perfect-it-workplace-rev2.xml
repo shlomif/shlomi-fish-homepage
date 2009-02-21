@@ -1042,7 +1042,8 @@
                 <para>
                     A similar fallacy is the <emphasis role="bold">"Mountains
                         of documentation fallacy"</emphasis> of having superflous
-                    commenting, Literate programming, etc. The problem with
+                    commenting, "Literate programming" (see
+                    <ulink url="http://en.wikipedia.org/wiki/Literate_programming">the Wikipedia article</ulink>), etc. The problem with
                     this approach is that the extra documentation is often
                     redundant if the code is well written and factored out
                     <footnote id="extract-method" label="Extract Method">
@@ -1131,7 +1132,7 @@ function create_employee(params)
                     <ulink url="http://www.joelonsoftware.com/articles/FogBugzIII.html">has been
                         illustrated by Fog Creek software</ulink>. What
                     they did was implement a compiler from a common language, 
-                    to several target languages. Naturally, this compiler also 
+                    to several target languages. Naturally, this compiler also
                     needs to be maintained and extended, but it is less work
                     and less error-prone than maintaining several different
                     codebases.
@@ -1209,7 +1210,7 @@ function create_employee(params)
                 paying for upgrades or as a "software-as-a-service" model.
             </para>
             <para>
-                Joel Spolsky <ulink url="http://www.inc.com/magazine/20080401/how-hard-could-it-be-fire-and-motion.html?partner=fogcreek">also 
+                Joel Spolsky <ulink url="http://www.inc.com/magazine/20080401/how-hard-could-it-be-fire-and-motion.html?partner=fogcreek">also
                     notes that good customer service is part of the key
                 to a small ISV's success</ulink>. 
             </para>

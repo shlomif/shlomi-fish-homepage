@@ -83,6 +83,13 @@ my $essays_tree_contents =
                             'text' => "The Perfect Info-Tech Workplace",
                             'url' => "philosophy/computers/software-management/perfect-workplace/",
                             'title' => "How to make an Info-Tech Workplace Where Programmers Will Be Happy, Want to Stay, Be Super-Productive and Efficient and will Rave About",
+                            subs =>
+                            [
+                                {
+                                    'text' => "Revision 1",
+                                    'url' => "philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml",
+                                },
+                            ],
                         },
                     ],
                 },

@@ -8,8 +8,8 @@ use MyNavData;
 my $puzzles_tree_contents =
 {
     'host' => "t2",
-    'text' => "Shlomi Fish' Essays",
-    'title' => "Shlomi Fish' Essays",
+    'text' => "Shlomi Fish's Puzzles",
+    'title' => "Shlomi Fish's Puzzles",
     'show_always' => 1,
     'subs' =>
     [

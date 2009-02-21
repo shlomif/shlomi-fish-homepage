@@ -8,8 +8,8 @@ use MyNavData;
 my $software_tree_contents =
 {
     'host' => "t2",
-    'text' => "Shlomi Fish' Software",
-    'title' => "Shlomi Fish' Software",
+    'text' => "Shlomi Fish's Software",
+    'title' => "Shlomi Fish's Software",
     'show_always' => 1,
     'subs' =>
     [

@@ -8,15 +8,15 @@ use MyNavData;
 my $essays_tree_contents =
 {
     'host' => "t2",
-    'text' => "Shlomi Fish' Essays",
-    'title' => "Shlomi Fish' Essays",
+    'text' => "Shlomi Fish's Essays",
+    'title' => "Shlomi Fish's Essays",
     'show_always' => 1,
     'subs' =>
     [
         {
             'text' => "Essays",
             'url' => "philosophy/",
-            'title' => "Nav Menu for Shlomi Fish' Essays",
+            'title' => "Nav Menu for Shlomi Fish's Essays",
         },
         {
             'text' => "Index to Essays",

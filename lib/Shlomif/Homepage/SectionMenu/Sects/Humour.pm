@@ -8,8 +8,8 @@ use MyNavData;
 my $humour_tree_contents =
 {
     'host' => "t2",
-    'text' => "Shlomi Fish' Stories and Aphorisms",
-    'title' => "Shlomi Fish' Stories and Aphorisms",
+    'text' => "Shlomi Fish's Stories and Aphorisms",
+    'title' => "Shlomi Fish's Stories and Aphorisms",
     'show_always' => 1,
     'subs' =>
     [

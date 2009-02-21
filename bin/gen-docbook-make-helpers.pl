@@ -131,24 +131,18 @@ my @end_formats =
 my $tt = Template->new({});
 
 open my $make_fh, ">", "lib/make/docbook/sf-homepage-docbooks-generated.mak";
-$tt->process(\*DATA, 
+open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
+
+$tt->process($template_fh, 
     {
         docs => \@documents,
         fmts => \@end_formats,
+        top_header => <<"EOF",
+### This file is auto-generated from gen-dobook-make-helpers.pl
+EOF
     },
     $make_fh
 );
+
+close ($template_fh);
 close ($make_fh);
-__DATA__
-### This file is auto-generated from gen-dobook-make-helpers.pl
-
-[% FOREACH d = docs %]
-$(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
-[% END %]
-
-[% FOREACH fmt = fmts %]
-DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
-
-DOCBOOK_[% fmt.var %]_DIR = lib/docbook/[% fmt.dir %]
-[% END %]
-

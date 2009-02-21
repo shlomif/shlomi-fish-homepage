@@ -1,0 +1,11 @@
+[% top_header %]
+
+[% FOREACH d = docs %]
+$(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
+[% END %]
+
+[% FOREACH fmt = fmts %]
+DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
+
+DOCBOOK_[% fmt.var %]_DIR = lib/docbook/[% fmt.dir %]
+[% END %]

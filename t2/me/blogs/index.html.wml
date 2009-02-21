@@ -87,6 +87,16 @@ Pictures</a></h3>
 A stream of pictures I'm posting to <a href="http://www.flickr.com/">Flickr</a>.
 </p>
 
+<h3 id="fortunes"><a href="$(ROOT)/humour/fortunes/">Unix-like 
+Fortune Cookies Collection</a></h3>
+
+<p>
+As I add more and more fortunes to my fortune cookies collection, I'm uploading
+them to my site, and rendering them into various formats from their XML
+source. They also have <a href="$(ROOT)/humour/fortunes/#web-feed">their
+own web-feeds</a> for subscribing using a web-feed aggregator.
+</p>
+
 <h2 id="aggregated_feeds">Aggregated Feeds</h2>
 
 <p>
@@ -96,7 +106,7 @@ than one of these feeds:
 
 <ol>
 <li>
-<a href="agg/shlomif-blogs-aggregate.xml"><b>All Feeds (including the Flickr 
+<a href="agg/shlomif-blogs-aggregate.xml"><b>All Feeds (including the Flickr
 photos)</b></a>
 </li>
 <li>
@@ -104,8 +114,29 @@ photos)</b></a>
 Flickr)</a>
 </li>
 <li>
-<a href="agg/shlomif-english-blogs-aggregate.xml">All Mostly English 
+<a href="agg/shlomif-english-blogs-aggregate.xml">All Mostly English
 Blogs (also excluding Flickr)</a>
+</li>
+<li>
+<a href="agg/shlomif-tech-aggregate.xml">My Technical Blogs</a> -
+the "use.perl.org" blog and "shlomif-tech".
 </li>
 </ol>
 
+<p>
+If you're interested in different ways to mix-and-match such feeds look at:
+</p>
+
+<ol>
+
+<li>
+<a href="http://search.cpan.org/dist/XML-Feed/">XML-Feed</a> - a Perl-based
+CPAN module to mix, match and manipulate feeds of various formats.
+</li>
+
+<li>
+<a href="http://pipes.yahoo.com/pipes/">Yahoo Pipes</a> - an online
+application with a web-interface.
+</li>
+
+</ol>

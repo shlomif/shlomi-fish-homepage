@@ -37,6 +37,8 @@ shift(@lines);
 my @fortunes = (map { /([\w\-_]+)/ ; $1 } @lines);
 chdir($fortune_xml_base_dir);
 
+my $master_url = "http://www.shlomifish.org/humour/fortunes/";
+
 my @cmd_line = 
 (
     $good_perl_path,
@@ -47,10 +49,11 @@ my @cmd_line =
     "--yaml-data" => "$abs_dir/fortunes-shlomif-ids-data.yaml",
     "--atom-output" => $abs_atom,
     "--rss-output" => $abs_rss,
-    "--master-url" => "http://www.shlomifish.org/humour/fortunes/",
+    "--master-url" => $master_url,
     "--title" => "Shlomi Fish's Fortune Feeds",
     "--tagline" => "Shlomi Fish's Fortune Feeds",
-    "--author" => "Shlomi Fish",
+    "--author" => "shlomif\@iglu.org.il (Shlomi Fish)",
 );
-print join(" ", @cmd_line), "\n";
+
+print join(" ", map { m{ } ? qq{"$_"} : $_ } @cmd_line), "\n";
 exit(system(@cmd_line));

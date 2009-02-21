@@ -77,6 +77,16 @@
                 </revremark>
             </revision>
 
+            <revision>
+                <revnumber>6048</revnumber>
+                <date>04 August 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the "Building, Configuration and Packaging"
+                    section.
+                </revremark>
+            </revision>
+
         </revhistory>
     </articleinfo>
 
@@ -1543,6 +1553,45 @@ function create_employee(params)
                 sometimes have poor portability to Microsoft Windows -
                 a fact which is often a deal-breaker.
             </para>
+        </section>
+        <section id="essential-software--build-and-config">
+            <title>Building, Configuration and Packaging</title>
+
+            <para>
+                In this day and age, you'd probably expect the new system
+                to be packaged for the target platforms (of which there 
+                can be many), to be capable of being configured according
+                to the constraints of the platform and according to various
+                limitations and to properly be able to be built incrementally
+                and tested.
+            </para>
+
+            <para>
+                If you're not convinced, refer to the <ulink 
+                    url="http://www.onlamp.com/pub/a/onlamp/2004/04/08/disaster_recovery.html">Robert 
+                    Jones' OnLAMP.com
+                    article on "Planning for Disaster Recovery on LAMP 
+                    Systems"</ulink>, and 
+                What Joel Spolsky says in <ulink 
+                    url="http://www.joelonsoftware.com/articles/fog0000000043.html">the 
+                    Joel Test</ulink> about "Making 
+                a build in one step", and about having daily builds.
+            </para>
+
+            <para>
+                So you need a good building, configuration and packaging
+                system. I <ulink url="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/#easy_to_compile_and_install">covered
+                    such systems in an earlier article</ulink>,
+                and also maintain <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">a list of links to some prominent
+                    ones and to other more comprehensive 
+                    lists</ulink>, so you have a high-quality selection.
+            </para>
+
+            <para>
+                But you need to use something, and preferably something
+                common, standardised, well-tested and high-quality.
+            </para>
+
         </section>
     </section>
     <section id="which-technology">

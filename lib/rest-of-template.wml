@@ -314,7 +314,20 @@ $("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append
     />
 </latemp_foot_image>
 
+<define-tag section_nav_menu_elements endtag="required" whitespace="delete"> 
+{#SECTION_NAV_MENU_ELEMS#:%body:##}
+</define-tag>
+
+
 <latemp_before_main_title>
+{#SECTION_NAV_MENU_ELEMS#}
+<div style="float: right">
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://reddit.com/button.js?t=2"></script>
+</div>
+</latemp_before_main_title>
+
+<section_nav_menu_elements>
 <:{
     use MySectNavData;
 
@@ -348,12 +361,7 @@ return;
     init_section_nav_menu();
     print $section_nav_menu->get_html();
 }:>
-<div style="float: right">
-<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://reddit.com/button.js?t=2"></script>
-</div>
-</latemp_before_main_title>
-
+</section_nav_menu_elements>
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">
 {#PAGE_EXTRA_HEAD_ELEMENTS#:%body:##}
 </define-tag>

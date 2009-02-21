@@ -27,10 +27,9 @@ my @documents =
         path => "philosophy/computers/software-management/end-of-it-slavery", 
         base => "end-of-it-slavery",
     },
-    
     {
-        id => "foss-and-other-beasts", 
-        path => "philosophy/foss-other-beasts/revision-2", 
+        id => "foss-and-other-beasts",
+        path => "philosophy/foss-other-beasts/revision-2",
         base => "foss-and-other-beasts",
     },
     
@@ -80,6 +79,12 @@ my @documents =
         path => "philosophy/computers/software-management/perfect-workplace", 
         base => "perfect-it-workplace",
     },
+    {
+        id => "perfect-it-workplace-rev2", 
+        path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
+        base => "perfect-it-workplace-rev2",
+    },
+    
     {
         id => "foss-licences-wars", 
         path => "philosophy/computers/open-source/foss-licences-wars", 

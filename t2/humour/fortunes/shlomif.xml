@@ -4122,5 +4122,43 @@ Two female dogs talking about modern-life:
         </info>
     </quote>
 </fortune>
+<fortune id="shlomif-functional-specs--second-birth-of-an-editor">
+    <meta>
+        <title>Second Birth of an Editor</title>
+    </meta>
+    <quote>
+        <body>
+
+            <p>
+                After several weeks of having the editor on CPAN, Richard has
+                received many patches, and wrote a lot of code on his own. Now
+                Emacs is not only an editor but a calendar tool, an Eliza
+                program, a web browser, a mail user agent and many other
+                things.
+            </p>
+
+            <p> 
+                So in order to release version 30.000.00 he needs to update the
+                categorisation.  He runs ./Build config --gui again, and adds
+                more categories. However, he enters too many categories
+                (because Emacs now does them all), and the GUI refuses  to save
+                the file because it will overflow the limit that the
+                web-service specified the CPAN classification services allow to
+                handle. So Richard keeps only the important categories, adds
+                more tags, and saves it.
+            </p>
+
+            <p>
+                He then tests the distribution again, and uploads the new
+                distribution to the CPAN.
+            </p>
+
+        </body>
+        <info>
+            <author>Shlomi Fish</author>
+            <work href="http://svn.berlios.de/svnroot/repos/web-cpan/CPAN-Module-Classification/trunk/docs/functional-spec-for-CPAN-Classification-Proposal.txt">Functional Spec for the CPAN Classification Proposal</work>
+        </info>
+    </quote>
+</fortune>
 </list>
 </collection>

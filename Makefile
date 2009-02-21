@@ -203,25 +203,11 @@ SCREENPLAY_DOCS = \
 
 include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
-DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
-
 DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK_INDIVIDUAL_XHTMLS))
 DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
-# DOCBOOK_DOCS = \
-# 	case-for-drug-legalisation \
-# 	case-for-file-swapping-rev3 \
-# 	end-of-it-slavery \
-# 	introductory-language \
-# 	objectivism-and-open-source \
-# 	what-makes-software-high-quality
-
-#   Removing, because we no longer need to build the DocBook.
-#   $(SCREENPLAY_DOCS)
-
 DOCBOOK_RENDERED_DIR = lib/docbook/rendered
-DOCBOOK_INDIVIDUAL_XHTML_DIR = lib/docbook/indiv-nodes
 DOCBOOK_ALL_IN_ONE_XHTML_DIR = lib/docbook/essays
 
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
@@ -334,17 +320,6 @@ install_docbook_css_dirs: make-dirs $(DOCBOOK_INSTALLED_CSS_DIRS)
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
-$(DOCBOOK_INSTALLED_PDFS) : $(DOCBOOK_PDFS)
-	cp -f $(DOCBOOK_PDF_DIR)/$(notdir $@) $@
-
-$(DOCBOOK_INSTALLED_XMLS) : $(DOCBOOK_XMLS)
-	cp -f $(DOCBOOK_XML_DIR)/$(notdir $@) $@
-
-$(DOCBOOK_INSTALLED_RTFS) : $(DOCBOOK_RTFS)
-	cp -f $(DOCBOOK_RTF_DIR)/$(notdir $@) $@
-
-$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) : $(DOCBOOK_INDIVIDUAL_XHTMLS) $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
-	rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
 
 $(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	rsync -r -v $< $@
@@ -375,3 +350,4 @@ $(FORTUNES_ATOM_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_
 
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
+

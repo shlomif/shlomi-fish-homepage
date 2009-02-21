@@ -4,8 +4,28 @@
 $(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
 [% END %]
 
+DOCBOOK_DOCS = [% FOREACH d = docs %][% d.base %] [% END %]
+
 [% FOREACH fmt = fmts %]
 DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
 
 DOCBOOK_[% fmt.var %]_DIR = lib/docbook/[% fmt.dir %]
+
+[% END %]
+
+# The individual docs.
+[% FOREACH d = docs %]
+
+$(T2_DEST)/[% d. path %]/[% d.base %].pdf: $(DOCBOOK_PDF_DIR)/[% d.base %].pdf
+[% "\t" %]cp -f $< $@
+
+$(T2_DEST)/[% d. path %]/[% d.base %].xml: $(DOCBOOK_XML_DIR)/[% d.base %].xml
+[% "\t" %]cp -f $< $@
+
+$(T2_DEST)/[% d. path %]/[% d.base %].rtf: $(DOCBOOK_RTF_DIR)/[% d.base %].rtf
+[% "\t" %]cp -f $< $@
+
+$(T2_DEST)/[% d.path %]/[% d.base %]: $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]
+[% "\t" %]rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+
 [% END %]

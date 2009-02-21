@@ -93,7 +93,10 @@ sub process_simple_end_format
 
     my %f = %$fmt;
 
-    $f{dir} = lc($f{var});
+    if (!exists($f{dir}))
+    {
+        $f{dir} = lc($f{var});
+    }
 
     return \%f;
 }
@@ -121,8 +124,9 @@ my @end_formats =
             skip_install => 1,
         },
         {
-            var => "INVIDIVIDUAL_XHTML",
+            var => "INDIVIDUAL_XHTML",
             ext => "",
+            dir => "indiv-nodes",
         },
         )
     )

@@ -48,6 +48,11 @@ my $software_tree_contents =
                     'title' => "A First-Come First-Served Readers/Writers Lock",
                 },
                 {
+                    'text' => "File-Dir-Dumper",
+                    'url' => "open-source/projects/File-Dir-Dumper/",
+                    'title' => "Dump the Meta-Data of Directory Structures",
+                },
+                {
                     'text' => "Quad-Pres",
                     'url' => "open-source/projects/quad-pres/",
                     'title' => "A Tool for Generating HTML Presenttions",

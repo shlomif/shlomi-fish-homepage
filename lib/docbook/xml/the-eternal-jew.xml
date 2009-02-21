@@ -20,7 +20,7 @@
                 <surname>Fish</surname>
                 <affiliation>
                     <address>
-                        <email>shlomif@vipe.technion.ac.il</email>
+                        <email>shlomif@iglu.org.il</email>
                     </address>
                 </affiliation>
             </author>
@@ -42,6 +42,15 @@
         </legalnotice>
 
         <revhistory>
+            <revision>
+                <revnumber>6067</revnumber>
+                <date>8 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some broken links.
+                </revremark>
+            </revision>
+            
             <revision>
                 <revnumber>1407</revnumber>
                 <date>8 October 2005</date>
@@ -703,7 +712,7 @@
         I had the opportunity to contribute to several open source projects
         and even to head some projects of my own. The project I invested the
         largest amount of effort on so far is
-        <ulink url="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell 
+        <ulink url="http://fc-solve.berlios.de/">Freecell 
             Solver</ulink>.
         It started out as a command line application to solve games of 
         Freecell, and gradually evolved. Now it can be compiled as a library

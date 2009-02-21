@@ -28,4 +28,13 @@ $(T2_DEST)/[% d. path %]/[% d.base %].rtf: $(DOCBOOK_RTF_DIR)/[% d.base %].rtf
 $(T2_DEST)/[% d.path %]/[% d.base %]: $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]
 [% "\t" %]rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
 
+$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
+[% "\t" %]$(DOCMAKE_WITH_PARAMS) \
+[% "\t\t" %]--stringparam "docmake.output.format=xhtml" \
+[% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \
+[% IF d.work_in_progress %][% "\t\t" %]--stringparam "docmake.output.work_in_progress=1" \
+[% END -%]
+[% "\t\t" %]-x $(XHTML_XSLT_SS) -o $@ xhtml $< \
+[% "\t" %]&& touch $@
+
 [% END %]

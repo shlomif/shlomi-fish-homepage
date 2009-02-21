@@ -17,7 +17,7 @@ DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 all: make-dirs docbook_targets latemp_targets fortunes-target sitemap_targets copy_fortunes site-source-install
 
 include lib/make/gmsl/gmsl
-	
+
 include include.mak
 include rules.mak
 
@@ -268,10 +268,6 @@ $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 
 $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
-
-$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
-	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -x $(XHTML_XSLT_SS) -o $@ xhtml $< \
-	&& touch $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook

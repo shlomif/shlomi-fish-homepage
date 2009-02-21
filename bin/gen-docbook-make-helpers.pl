@@ -21,6 +21,7 @@ my @documents =
         id => "dealing-with-hypomanias", 
         path => "philosophy/psychology/hypomanias/", 
         base => "dealing-with-hypomanias",
+        work_in_progress => 1,
     },
     {
         id => "end-of-it-slavery", 
@@ -46,20 +47,20 @@ my @documents =
     },
     
     {
-        id => "objectivism-and-open-source", 
-        path => "philosophy/obj-oss", 
+        id => "objectivism-and-open-source",
+        path => "philosophy/obj-oss",
         base => "objectivism-and-open-source",
     },
     
     {
-        id => "rindolf-spec", 
-        path => "rindolf", 
+        id => "rindolf-spec",
+        path => "rindolf",
         base => "rindolf-spec",
     },
     
     {
-        id => "the-eternal-jew", 
-        path => "philosophy/the-eternal-jew", 
+        id => "the-eternal-jew",
+        path => "philosophy/the-eternal-jew",
         base => "the-eternal-jew",
     },
     
@@ -83,12 +84,14 @@ my @documents =
         id => "perfect-it-workplace-rev2", 
         path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
         base => "perfect-it-workplace-rev2",
+        work_in_progress => 1,
     },
     
     {
         id => "foss-licences-wars", 
         path => "philosophy/computers/open-source/foss-licences-wars", 
         base => "foss-licences-wars",
+        work_in_progress => 1,
     },
 );
 

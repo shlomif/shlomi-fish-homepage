@@ -66,6 +66,7 @@
         </ul>
     </div>
     -->
+
     <div class="center ads_top">
     <script type="text/javascript">
 google_ad_client = "pub-2480595666283917";
@@ -84,6 +85,7 @@ google_color_url = "008000";
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>
+    <xsl:if test="docmake.output.work_in_progress">
     <div class="center warning">
         <p>
             <b>Note:</b> This document is work-in-progress. Please don't 
@@ -91,6 +93,7 @@ google_color_url = "008000";
             without the author's permission. Private linking is acceptable.
         </p>
     </div>
+    </xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>

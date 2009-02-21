@@ -87,24 +87,45 @@ my @documents =
     },
 );
 
+sub process_simple_end_format
+{
+    my $fmt = shift;
+
+    my %f = %$fmt;
+
+    $f{dir} = lc($f{var});
+
+    return \%f;
+}
+
 my @end_formats = 
 (
-    {
-        var => "PDF",
-        ext => ".pdf",
-    },
-    {
-        var => "XML",
-        ext => ".xml",
-    },
-    {
-        var => "RTF",
-        ext => ".rtf",
-    },
-    {
-        var => "INVIDIVIDUAL_XHTML",
-        ext => "",
-    },
+    (
+        map { process_simple_end_format($_) }
+        (
+        {
+            var => "PDF",
+            ext => ".pdf",
+        },
+        {
+            var => "XML",
+            ext => ".xml",
+        },
+        {
+            var => "RTF",
+            ext => ".rtf",
+        },
+        {
+            var => "FO",
+            ext => ".fo",
+            skip_install => 1,
+        },
+        {
+            var => "INVIDIVIDUAL_XHTML",
+            ext => "",
+        },
+        )
+    )
 );
 
 my $tt = Template->new({});
@@ -127,5 +148,7 @@ $(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
 
 [% FOREACH fmt = fmts %]
 DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
+
+DOCBOOK_[% fmt.var %]_DIR = lib/docbook/[% fmt.dir %]
 [% END %]
 

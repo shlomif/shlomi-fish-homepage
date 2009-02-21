@@ -205,10 +205,6 @@ include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 
-# DOCBOOK_INSTALLED_PDFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).pdf)
-# DOCBOOK_INSTALLED_XMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).xml)
-# DOCBOOK_INSTALLED_RTFS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc).rtf)
-# DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/$(doc))
 DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK_INDIVIDUAL_XHTMLS))
 DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
@@ -224,10 +220,6 @@ DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 #   Removing, because we no longer need to build the DocBook.
 #   $(SCREENPLAY_DOCS)
 
-DOCBOOK_XML_DIR = lib/docbook/xml
-DOCBOOK_FO_DIR = lib/docbook/fo
-DOCBOOK_PDF_DIR = lib/docbook/pdf
-DOCBOOK_RTF_DIR = lib/docbook/rtf
 DOCBOOK_RENDERED_DIR = lib/docbook/rendered
 DOCBOOK_INDIVIDUAL_XHTML_DIR = lib/docbook/indiv-nodes
 DOCBOOK_ALL_IN_ONE_XHTML_DIR = lib/docbook/essays
@@ -255,10 +247,6 @@ DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOC
 DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
-
-$(DOCBOOK_XML_DIR)/%.xml: $(SCREENPLAY_XML_XML_DIR)/%.xml
-	perl -MXML::Grammar::Screenplay::App::ToDocBook -e 'run()' -- \
-	-o $@ $<
 
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \

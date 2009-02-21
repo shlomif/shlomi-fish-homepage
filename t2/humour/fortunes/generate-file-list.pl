@@ -33,6 +33,14 @@ $out->print(<<"EOF");
 <body>
 <h1>Shlomi Fish's Fortunes' Files List</h1>
 
+<h2 id="intro">Introduction</h2>
+
+<p>
+Download this list using <tt>wget -r --level=1</tt>.
+</p>
+
+<h2 id="list">The List</h2>
+
 <ul>
 EOF
 

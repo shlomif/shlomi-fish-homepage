@@ -4079,5 +4079,48 @@ Two female dogs talking about modern-life:
     </info>
     </quote>
 </fortune>
+<fortune id="shlomif-functional-specs--birth-of-an-editor">
+    <meta>
+        <title>Birth of an Editor</title>
+    </meta>
+    <quote>
+        <body>
+
+            <p>
+                Richard M. Stallman (RMS) decides to release his brand-new
+                editor, "Emacs" on the CPAN with its first version 29.999.99.
+                In order to package it, he invokes the trusty ol'
+                module-starter (see http://search.cpan.org/dist/Module-Starter/
+                ) which creates a skeleton of a CPAN distribution for him.
+            </p>
+
+            <p> 
+                He fills in the skeleton with the actual code of Emacs, types
+                "perl Build.PL", and "./Build test" and makes sure all the
+                tests pass. Then he types "./Build config --gui" and gets a
+                nice GUI to configure the various parameters of the Module
+                meta-data.[M-B-Data]
+            </p>
+
+            <p> 
+                In the GUI, Richard goes to the Trove categorisation tab, and
+                selects categories. This is done in a similar way to
+                Freshmeat's project categorisation dialog (a list of options to
+                the left, with selected options to the right and arrows to move
+                them left or right, while allowing multiple select options.).
+                He chooses such categories as "Programming Language :: Lisp",
+                and "Intended Audience :: Emacs Users", "Operating System ::
+                GNU", and "Topic :: Editors". (Note: I believe the category
+                list should be fetched using a public web-service to keep them
+                up-to-date.)
+            </p>
+
+        </body>
+        <info>
+            <author>Shlomi Fish</author>
+            <work href="http://svn.berlios.de/svnroot/repos/web-cpan/CPAN-Module-Classification/trunk/docs/functional-spec-for-CPAN-Classification-Proposal.txt">Functional Spec for the CPAN Classification Proposal</work>
+        </info>
+    </quote>
+</fortune>
 </list>
 </collection>

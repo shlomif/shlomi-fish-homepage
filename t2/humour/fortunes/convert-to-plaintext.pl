@@ -8,7 +8,7 @@ use warnings;
 
 my $fortune_xml_base_dir = "$ENV{HOME}/progs/perl/cpan/XML/Grammar/Fortune/trunk/XML-Grammar-Fortune/module";
 
-my $good_perl_path = "$ENV{HOME}/apps/perl/perl-5.8.8-debug/bin/perl";
+my $good_perl_path = "$ENV{HOME}/apps/perl/perl-5.8.x-latest/bin/perl";
 
 ##########################################################################
 

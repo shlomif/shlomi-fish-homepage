@@ -1,5 +1,13 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
 <latemp_subject "Fortune Cookie Files" />
+
+<h2* id="toc">Table of Contents</h2*>
+
+<toc />
+
+<h2 id="intro">Introduction</h2>
 
 <p>
 These are some fortune cookie files I created that can be used with the UNIX
@@ -9,8 +17,22 @@ collections.
 </p>
 
 <p>
-They are in the process of being converted to a custom XML grammar.
+They have been converted to a custom XML grammar, but they may still contain
+some conversion errors, or not-entirely-semantic-markup.
 </p>
+
+<h2 id="web-feed">Web Feeds</h2>
+
+<ul>
+<li><a href="fortunes-shlomif-all.atom"><b>Atom feed for these fortunes</b></a> - 
+keep track of the newest ones added using 
+<a href="http://en.wikipedia.org/wiki/Aggregator">a Web-Feed 
+Reader/Aggregator</a> (see <a 
+href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikipedia</a>).
+</li>
+</ul>
+
+<h2 id="view">View and Download</h2>
 
 <p>
 <a href="$(PACKAGE_BASE)"><b>These fortunes in a tar.gz file</b></a>
@@ -39,17 +61,17 @@ EOF
 }:>
 </ul>
 
-<h2>Commentary and Disclaimer</h2>
+<h2 id="disclaimer">Commentary and Disclaimer</h2>
 
 <p>
 Please report any typos or inaccuracies to me by 
-<a href="mailto:shlomif@vipe.technion.ac.il">E-mail</a>. The quotations
+<a href="mailto:shlomif@iglu.org.il">E-mail</a>. The quotations
 here are owned by their respective copyright holders, and come with
 no warranty of any kind.
 </p>
 
 
-<h2>Links</h2>
+<h2 id="links">Links</h2>
 
 <ul>
 <li>
@@ -65,7 +87,7 @@ Stephen Wright.
 </li>
 <li>
 <a href="http://cx.capsi.com/code-jargonfortunes.html">Fortunes from
-the Hackers's Jargon File</a>
+the Hackers' Jargon File</a>
 </li>
 <li>
 <a href="http://humorix.org/downloads/#Fortunes">Humorix' Fortunes</a>

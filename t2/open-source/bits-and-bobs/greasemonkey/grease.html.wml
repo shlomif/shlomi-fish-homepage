@@ -32,3 +32,17 @@ ViewVC and <a href="http://sourceforge.net/">SourceForge</a> ones,
 but support for more can be added.
 </p>
 
+<h2 id="eliminate-from-rss"><a href="get-rid-of-from-rss.user.js">Get Rid
+of "from=rss" in the URL</a></h2>
+
+<p>
+I am always annoyed that when I follow links in the RSS feeds of 
+<a href="http://slashdot.org/">Slashdot</a> or other Slash-based sites,
+I'm getting a "?from=rss" or "&amp;from=rss" CGI parameter at the URL. 
+This later implies more work for me when I want to link to them. 
+</p>
+
+<p>
+So what this incredibly silly script does is redirect to a new page without
+this suffix.
+</p>

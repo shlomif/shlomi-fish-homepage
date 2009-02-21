@@ -33,7 +33,7 @@ system("./bin/gen-docbook-make-helpers.pl");
     my $orig_dir = getcwd();
 
     chdir("t2/humour/fortunes");
-    system("make", "dist");
+    system("make", "list_files", "dist");
 
     chdir($orig_dir);
 }

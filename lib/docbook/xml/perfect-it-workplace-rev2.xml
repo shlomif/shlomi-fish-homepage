@@ -1,7 +1,7 @@
 <?xml version='1.0' ?>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" 
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 ]>
 
 <article id="index">
@@ -12,6 +12,9 @@
                 <firstname>Shlomi</firstname>
                 <surname>Fish</surname>
                 <affiliation>
+                    <orgname><ulink 
+                            url="http://www.shlomifish.org/">Shlomi
+                            Fish</ulink></orgname>
                     <address>
                         <email>shlomif@iglu.org.il</email>
                     </address>
@@ -51,6 +54,18 @@
                 </revremark>
             </revision>
 
+            <revision>
+                <revnumber>5977</revnumber>
+                <date>26 July 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the revision 1 version and started working
+                    on revision 2. Fixed many typos. Added the motivation
+                    for automated tests. Added more text to the design
+                    section.
+                </revremark>
+            </revision>
+
         </revhistory>
     </articleinfo>
 
@@ -80,8 +95,8 @@
             employers (and employees) as to how to best treat their employees,
             and give them good conditions, so they'll be happier and more
             productive. Going over the original article, I can see that I
-            indeed had a very ranting tone, and gave bad examples for
-            what not to do exclusively.
+            indeed had a very ranting tone, and had given bad examples
+            for what not to do, exclusively.
         </para>
 
         <para>
@@ -903,6 +918,44 @@
                     </listitem>                   
                 </itemizedlist>
                 <para>
+                    Why are automated tests important? For several important
+                    reasons:
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            They provide a certain kind of executable and
+                            machine and human-understandable specification
+                            for the program, for new features and for
+                            bug reports. By writing a test such as
+                            <literal>add(5,6) == 11</literal> both humans
+                            and machines can tell that that's what the "add()" 
+                            function is supposed to do.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            A test suite with a good test coverage can better
+                            ascertain that doing refactoring, adding new 
+                            features, removing them, or fixing bugs, won't
+                            break anything.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            When the program breaks, then, without automated 
+                            tests, one cannot easily determine what exactly is 
+                            wrong there. On the other hand if you have a lot
+                            of tests, with good coverage, you can see which
+                            tests fail, and what exactly went wrong.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+                <para>
+                    In short, writing automated tests gives more confidence
+                    in the code and in changing it. 
+                </para>
+                <para>
                     Note that having automated tests is not a substitute for
                     having <ulink url="http://www.joelonsoftware.com/articles/fog0000000067.html">dedicated 
                         software testers</ulink> (and vice versa). By
@@ -915,10 +968,17 @@
                 <para>
                     Most people agree that designing a software, planning
                     it and thinking about it is a good idea. Extreme
-                    Programming  suggests to have one design meeting every 
-                    day. I personally feel that too much design like that is 
-                    equivalent to very little of it, but still design and 
-                    planning should be done
+                    Programming suggests to have one design meeting every 
+                    week, which sounds reasonable.
+                </para>
+                <para>
+                    Joel Spolsky 
+                    <ulink url="http://www.joelonsoftware.com/articles/NothingIsSimple.html">gives 
+                        the motivation for designing software in one of 
+                        his articles</ulink>, which is a recommended read.
+                    He also voices an opinion about over-formal design 
+                    (with lots of UML diagrams, etc.) that can actually
+                    be a disadvantage to a project's success.
                 </para>
             </section>
             <section id="refactoring">
@@ -964,7 +1024,7 @@
                 <para>
                     The first is the
                     <emphasis role="bold">"Huge-design-up-front"</emphasis>,
-                    where an "architect" or even the entire team spends
+                    where an "architect" or even the entire team spend
                     a very long time writing an extremely comprehensive
                     and detailed technical document that specifies
                     in detail how the software will work.
@@ -974,7 +1034,7 @@
                     waste of time and also it is impossible to design
                     a large project top-down like that. A better way is to
                     involve the entire team in a good design session (a week
-                    long at first) while writing some functional specs, 
+                    long at most) while writing some functional specs,
                     diagrams and some other documents, and then to write
                     it incrementally.
                 </para>
@@ -1132,7 +1192,7 @@ function create_employee(params)
             </para>
             <para>
                 As Joel indicates, a bug report, email, or query usually
-                indicates a problem in the software: a bug, a missing feature,
+                indicate a problem in the software: a bug, a missing feature,
                 or something that's not clear enough. Such problems need to
                 be fixed in the code.
             </para>
@@ -1157,7 +1217,7 @@ function create_employee(params)
             <title>"Good Poets Borrow. Great Poets Steal."</title>
             <para>
                 Originality and "innovation" is not as important as people
-                think it is. It is perfectly OK to create a product in 
+                think it is. It is perfectly OK to create a product in
                 <ulink url="http://www.joelonsoftware.com/articles/fog0000000056.html">a 
                     niche which has a lot of existing competition</ulink>, 
                 it's OK to build on other people's efforts, and it's OK to
@@ -1321,7 +1381,7 @@ function create_employee(params)
                 demotivating on purpose. This was one of the reasons
                 that caused me to assume a
                 <ulink url="http://en.wikipedia.org/wiki/Hypomania">variation
-                    of a clinical depression called "Hypomania"</ulink>, 
+                    on a clinical depression called "Hypomania"</ulink>, 
                 which in turn made me under-productive.
             </para>
         </section>
@@ -1411,7 +1471,7 @@ function create_employee(params)
                 to give a direct answer, and often there are many factors
                 that make one more appropriate in certain cases than others.
                 Joel Spolsky <ulink url="http://www.joelonsoftware.com/items/2006/09/01.html">attempted 
-                    to answer this question</ulink>, but ended up falling into 
+                    to answer this question</ulink>, but ended up falling into
                 many common miconceptions and prejudices (while still making
                 a few good points). He was also focusing exclusively on
                 web-development.
@@ -1450,7 +1510,7 @@ function create_employee(params)
                     <ulink url="http://www.faqs.org/docs/artu/ch16s01.html">Eric
                         Raymond's "Tale of J. Random Newbie"</ulink> is 
                     illustrative of the many problems programmers encounter
-                    in highly-prorietary environments. Generally however,
+                    in highly-prorietary environments. However,
                     even if you're using proven, mature,
                     well-documented and functional technology, you are
                     likely to encounter bugs. 
@@ -1547,7 +1607,7 @@ function create_employee(params)
                         PHP</ulink>,
                     against Sendmail,
                     and against other technologies. From my experience, such
-                    common criticisms often have a lot of substance for them
+                    common criticisms often have a lot of substance,
                     and should be evaluated, especially if there are
                     equally affordable technologies, but such of a better
                     reputation.
@@ -1597,7 +1657,7 @@ function create_employee(params)
                 <para>
                     With my PHP code barely working and prune to many errors,
                     I decided to quit after about a month, out of being
-                    appaled by the bad code craftmanship I could do there.
+                    appaled by the bad code craftmanship I had done there.
                     Make sure you don't repeat such a mistake.
                 </para>
             </section>
@@ -1609,7 +1669,7 @@ function create_employee(params)
             Not all the possible advice for how to manage a workplace was
             covered here. I refer you to the links at the beginning and
             inside the document for more reading. You should read them and
-            be enlightened. 
+            be enlightened.
         </para>
         <para>
             The workplace I'm talking about is a workplace that aims to

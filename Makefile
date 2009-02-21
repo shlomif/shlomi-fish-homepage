@@ -195,6 +195,7 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 
 SCREENPLAY_DOCS = \
 	Humanity-Movie \
+	ae-interview \
 	star-trek--we-the-living-dead \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2

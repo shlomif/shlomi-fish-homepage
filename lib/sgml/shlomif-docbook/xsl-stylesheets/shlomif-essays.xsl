@@ -84,7 +84,13 @@ google_color_url = "008000";
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>
+    <div class="center warning">
+        <p>
+            <b>Note:</b> This document is work-in-progress. Please don't 
+            publish it on news sites, or otherwise link to it in public
+            without the author's permission. Private linking is acceptable.
+        </p>
+    </div>
 </xsl:template>
-
 
 </xsl:stylesheet>

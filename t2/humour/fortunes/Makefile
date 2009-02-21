@@ -1,6 +1,6 @@
 include fortunes-list.mak
 
-VER = 0.10.147
+VER = 0.10.148
 
 DIST_BASE = fortunes-shlomif
 

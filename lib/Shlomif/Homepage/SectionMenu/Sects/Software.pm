@@ -191,6 +191,11 @@ my $software_tree_contents =
                     'url' => "open-source/anti/mysql/",
                     'title' => "A collection of links detailing MySQL Problems",
                 },
+                {
+                    'text' => "PHP Sucks",
+                    'url' => "open-source/anti/php/",
+                    'title' => "&quot;PHP Sucks&quot; - originally by czth",
+                },
             ],
         },
         {

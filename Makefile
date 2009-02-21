@@ -287,7 +287,7 @@ $(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.htm
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
 $(DOCBOOK_FO_DIR)/%.fo: $(DOCBOOK_XML_DIR)/%.xml
-	$(XMLTO_WITH_PARAMS) -o $(DOCBOOK_FO_DIR) --stringparam "docmake.output.format=fo" -m $(FO_XSLT_SS) fo $<
+	$(DOCMAKE_WITH_PARAMS) -o $@ --stringparam "docmake.output.format=fo" -x $(FO_XSLT_SS) fo $<
 
 $(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
@@ -296,7 +296,7 @@ $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
-	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -m $(XHTML_XSLT_SS) -o $@ xhtml $<
+	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -x $(XHTML_XSLT_SS) -o $@ xhtml $<
 	touch $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
@@ -304,8 +304,10 @@ DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
 
 include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
 
+DOCMAKE_PARAMS = -v
+
 $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK_XML_DIR)/%.xml
-	$(XMLTO) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
+	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: lib/screenplay-xml/txt/TOW_Fountainhead_1.txt

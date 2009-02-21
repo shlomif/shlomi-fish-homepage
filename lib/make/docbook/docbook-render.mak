@@ -66,9 +66,9 @@ HTML_ONE_CHUNK_TARGET_FILE = $(HTML_ONECHUNK_TARGET)/index.html
 
 # Define common Commands
 
-XMLTO ?= xmlto
+DOCMAKE ?= docmake
 
-XMLTO_WITH_PARAMS = $(XMLTO) $(XMLTO_PARAMS)
+DOCMAKE_WITH_PARAMS = $(DOCMAKE) $(DOCMAKE_PARAMS)
 
 # Define upload-related macros
 
@@ -131,7 +131,7 @@ all_in_one_html: $(HTML_ONE_CHUNK_TARGET_FILE)
 # HTML.
 
 $(HTML_XSL_TARGET_FILE_IN_DIR): $(XSL_SOURCES)
-	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $(HTML_XSL_TARGET) xhtml $<
+	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_XSLT_SS) -o $(HTML_XSL_TARGET) xhtml $<
 
 $(HTML_OTHER_SOURCES_DEST) :: $(HTML_XSL_TARGET)/%: %
 	cp -f $< $@
@@ -140,7 +140,7 @@ $(HTML_DSSSL_TARGET): $(DSSSL_SOURCES)
 	db2html $(DB2_HTML_FLAGS) $(MAIN_SOURCE)
 
 $(HTML_ONE_CHUNK_TARGET_FILE): $(XSL_SOURCES)
-	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(HTML_XSL_TARGET)-onechunk xhtml $<
+	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" -m $(XHTML_ONE_CHUNK_XSLT_SS) -o $(HTML_XSL_TARGET)-onechunk xhtml $<
 
 
 # PDF and RTF.
@@ -148,7 +148,7 @@ $(HTML_ONE_CHUNK_TARGET_FILE): $(XSL_SOURCES)
 # $(PDF_DOC): $(DSSSL_SOURCES)
 #	db2pdf $(DB2_PRINT_FLAGS) $(MAIN_SOURCE)
 $(FO_DOC): $(XSL_SOURCES)
-	$(XMLTO_WITH_PARAMS) --stringparam "docmake.output.format=fo" -m $(FO_XSLT_SS) fo $<
+	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=fo" -m $(FO_XSLT_SS) fo $<
 
 $(PDF_DOC): $(FO_DOC)
 	fop -fo $< -pdf $@

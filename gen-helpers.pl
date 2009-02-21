@@ -25,6 +25,8 @@ my $text = io("include.mak")->slurp();
 $text =~ s!^(T2_DOCS = .*)humour/fortunes/index.html!$1!m;
 io("include.mak")->print($text);
 
+system("./bin/gen-docbook-make-helpers.pl");
+
 # This is to in order to generate the t2/humour/fortunes/arcs-list.mak
 # file, which is inclduded by the makefile.
 {

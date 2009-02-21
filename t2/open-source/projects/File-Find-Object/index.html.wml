@@ -1,0 +1,78 @@
+#include '../template.wml'
+
+<latemp_subject "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
+
+<p>
+The perl 5 distribution ships with the File::Find module, which can be used
+to traverse directory trees. However, it has some serious limitations:
+</p>
+
+<ol>
+
+<li>
+It cannot be instantiated, and also makes use of some global variables.
+</li>
+
+<li>
+It cannot be easily interrupted in the middle.
+</li>
+
+</ol>
+
+<p>
+File-Find-Object is a CPAN module, which was originally created by 
+<a href="http://search.cpan.org/~nanardon/">Olivier Thauvin</a> and
+now mostly maintained by me (= Shlomi Fish) that aims to address these
+limitations and more, and provide Perl programmers with a robust, 
+object-oriented and usable alternative.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<ul>
+
+<li>
+<a href="http://search.cpan.org/dist/File-Find-Object/">File-Find-Object 
+on search.cpan.org</a> - download and more information.
+</li>
+
+<li>
+<a href="http://cpan.uwinnipeg.ca/dist/File-Find-Object">File-Find-Object
+on kobesearch</a>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+File-Find-Object is multi-licensed under the GNU General Public Licence (GPL)
+version 2 or later, and the 
+<a href="http://en.wikipedia.org/wiki/Artistic_License">Artistic 
+Licence version 2.0 or later</a>.
+</p>
+
+<h2 id="news">News</h2>
+
+<h3 id="news-2009-01-09">2009-01-09: File-Find-Object 0.1.6 Was Released With 
+a Huge Speed Boost</h3>
+
+<p>
+Recently, File-Find-Object was benchmarked using a test program that
+traversed a directory and printed the result. It turned out to run at
+2 minutes (120 seconds) while File-Find did it at 4-5 seconds. As a result,
+we spent a lot of time in optimising File-Find-Object, and now it does
+the scan at about 30 seconds. These optimisations were integrated into
+version 0.1.6 which was uploaded to CPAN today and will be available
+shortly.
+</p>
+
+<p>
+One thing to note is that we are now using 
+<a href="http://search.cpan.org/dist/Class-XSAccessor/">Class-XSAccessor</a>
+instead of 
+<a href="http://search.cpan.org/dist/Class-Accessor/">Class-Accessor</a>,
+because converting to the former yielded a substantial increase in speed. More
+information can be found in the Changes file in the distribution.
+</p>
+

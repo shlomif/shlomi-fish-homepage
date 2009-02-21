@@ -282,6 +282,8 @@ SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2
 
 docbook_extended: $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_rtfs 
 
+docbook_indiv: $(DOCBOOK_INDIVIDUAL_XHTMLS)
+
 docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
 
 $(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html

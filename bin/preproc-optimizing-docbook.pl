@@ -46,6 +46,8 @@ sub replace
     return $node;
 }
 
+=begin Code
+
 {
     my ($title) = $doc->findnodes("/book/bookinfo/title");
     replace($title, "Optimizing Code for Speed");
@@ -56,5 +58,22 @@ sub replace
 
     replace($legal, "Permission to use, copy, modify and distribute this document under version 2.5 (or later) of the Creative Commons' Attribution License or version 1.2 (or later) of the GNU Free Documentation License ");
 }
+
+=end Code
+
+=cut
+
+my $book = $doc->findnodes("/book");
+my $bookinfo = $book->findnodes("bookinfo");
+
+$book->removeChild($bookinfo);
+
+my $article = $book->findnodes("article");
+replace($book, [$article->childNodes()]);
+$article = $book;
+$article->setNodeName("article");
+
+
+
 
 print $doc->toString();

@@ -4319,5 +4319,49 @@ more classification.
         </info>
     </irc>
 </fortune>
+<fortune id="sharp-perl-bit-by-bit">
+    <meta>
+        <title>Bit by bit</title>
+    </meta>
+    <irc>
+        <body>
+<saying who="Similian">is there a smart way to read a file to a certain string bit by bit ?</saying>
+<saying who="Similian">which loop to use?</saying>
+<saying who="rindolf">Similian: you can read it byte by byte.</saying>
+<saying who="rindolf">Similian: do you want to read the whole thing?</saying>
+<saying who="Similian">no</saying>
+<saying who="Similian">too big 200 MB</saying>
+<saying who="simcop2387-lab">reading bit by bit is usually not supported by most operating systems</saying>
+<saying who="rindolf">Similian: then do you want to read one byte at a time?</saying>
+<saying who="ik">or one line at a time?</saying>
+<saying who="Similian">guess a line would be better</saying>
+<saying who="rindolf">simcop2387-lab: it is on my rindolfOS running on Intel 1001.</saying>
+<saying who="rindolf">Which was a 1-bit processor.</saying>
+<saying who="ik">heh</saying>
+<saying who="ik">I had a half-bit processor</saying>
+<saying who="ik">it just stored ones</saying>
+<saying who="danieldg">ik: that would be a zero-bit processor then</saying>
+<saying who="ik">no no</saying>
+<saying who="danieldg">half-bit processor stores 0&#39;s or sqrt(2)&#39;s</saying>
+<saying who="ik">sqrt(2) may as well be 1</saying>
+<saying who="simcop2387-lab">rindolf: a 1 bit processor would be a hell of a thing to work with</saying>
+<saying who="danieldg">not if you can&#39;t test it unless it&#39;s one</saying>
+<saying who="ik">We&#39;re not talking about numbers, we&#39;re talking about on and off, true and false, whatever you want to call it</saying>
+<saying who="ik">sqrt(2) is nonzero, so it&#39;s one.</saying>
+<saying who="rindolf">danieldg: not 1/sqrt(2)?</saying>
+<saying who="danieldg">hmm it would probably be that, yes</saying>
+<saying who="simcop2387-lab">my proc uses sqrt[-1]!</saying>
+<saying who="ik">may as well</saying>
+<saying who="danieldg">ik: think quantum computers. It tests true with probability 1/sqrt(2)</saying>
+<saying who="ik">I&#39;m not talking about a quantum computer..</saying>
+<saying who="danieldg">well a 1/2 bit computer clearly can&#39;t be classical</saying>
+        </body>
+        <info>
+            <channel>#perl</channel>
+            <network>Freenode</network>
+            <tagline>Bit by bit</tagline>
+        </info>
+    </irc>
+</fortune>
 </list>
 </collection>

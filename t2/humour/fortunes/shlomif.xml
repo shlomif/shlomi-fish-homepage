@@ -3841,5 +3841,77 @@ Two female dogs talking about modern-life:
     </info>
     </quote>
 </fortune>
+<fortune id="perl6-about-lisp-mentality-and-usability">
+    <meta>
+        <title>#perl6 about Lisp Mentality and Usability</title>
+    </meta>
+    <irc>
+        <body>
+<saying who="pmurias">rindolf: what is Park/Spark?</saying>
+<saying who="rindolf">pmurias: http://www.shlomifish.org/open-source/projects/Park-Lisp/</saying>
+<saying who="rindolf">pmurias: it&#39;s still incomplete.</saying>
+<saying who="rindolf">And I haven&#39;t updated it.</saying>
+<saying who="pmurias">rindolf: if you like lisp/perl6 projects you might consider helping with a common lisp elf backend</saying>
+<saying who="rindolf">pmurias: Common Lisp.</saying>
+<saying who="rindolf">pmurias: thing is I think both CL and Scheme suck.</saying>
+<saying who="rindolf">I like Lisp as a concept.</saying>
+<saying who="rindolf">Arc is nice, but has too many implementation problems.</saying>
+<saying who="rindolf">And missing features.</saying>
+<saying who="vixey">Arc is not nice</saying>
+<saying who="rindolf">I want to give a presentation to the Perl Mongers about &quot;Foreign Languages: Lisp&quot;</saying>
+<saying who="rindolf">vixey: I like it.</saying>
+<saying who="rindolf">Though I hate that &quot;(not)&quot; has become &quot;(no)&quot;</saying>
+<saying who="rindolf">it&#39;s so non-English.</saying>
+<saying who="vixey">it&#39;s just TCL with horrible syntax</saying>
+<saying who="rindolf">vixey: but it&#39;s missing  a lot of exciting features.</saying>
+<saying who="rindolf">Which PG deemed as unnecessary.</saying>
+<saying who="rindolf">Doesn&#39;t look like the 100-years language to me.</saying>
+<saying who="rindolf">Which is why - Spark!</saying>
+<saying who="pmurias">why not just write an s-expression p6 dialect?</saying>
+<saying who="rindolf">pmurias: could be.</saying>
+<saying who="rindolf">pmurias: it&#39;s another approach.</saying>
+<saying who="rindolf">But some things make sense in Lisp and not in p6.</saying>
+<saying who="rindolf">For example, Perl does not like to use + for string or list concat.</saying>
+<saying who="rindolf">While Python does and it seems to be OK in Arc too.</saying>
+<saying who="rindolf">And in CL you have (concatenate) (yuck!).</saying>
+<saying who="pbuetow">(((hehe)))</saying>
+<saying who="pmurias">+ for strings sucks</saying>
+<saying who="Auzon">seconded.</saying>
+<saying who="vixey">rindolf: If you don&#39;t like CONCATENATE you can just rename it</saying>
+<saying who="rindolf">vixey: yeah.</saying>
+<saying who="rindolf">vixey: but I&#39;d rather not rename concatenate because then people won&#39;t understand my code.</saying>
+<saying who="rindolf">vixey: as TimToady said people hate abstractions.</saying>
+<saying who="vixey">yes they will rindolf</saying>
+<saying who="rindolf">They want things to work out of the box.</saying>
+<saying who="vixey">A program is many many totally newly defined procedures</saying>
+<saying who="vixey">just renaming one thing is nothing in the context of a big program</saying>
+<saying who="rindolf">vixey: &quot;let&#39;s spend 3 days creating a new language, and 1 day implementing the solution with it.&quot;</saying>
+<saying who="TimToady">if it would take 10 days without the new language, it&#39;s worth it</saying>
+<saying who="rindolf">TimToady: yeah.</saying>
+<saying who="rindolf">TimToady: but this is the CL mentality.</saying>
+<saying who="vixey">no it&#39;s not</saying>
+<saying who="rindolf">Sometimes you can take 1 day to write an API.</saying>
+<saying who="vixey">CL is too diverse you cannot generalize like that</saying>
+<saying who="rindolf">vixey: I meant a common idiom there.</saying>
+<saying who="rindolf">I think I&#39;ll /quit and do something productive.</saying>
+<saying who="rindolf">Like work on Spark.</saying>
+<saying who="vixey">another quote:</saying>
+<saying who="vixey">how to write any computer program in two easy stages:</saying>
+<saying who="vixey">Design and implement the programming language which would be best for solving the problem.</saying>
+<saying who="vixey">Write the program in the language you’ve just implemented.</saying>
+<saying who="rindolf">vixey: or just use Perl which is the best for everything.</saying>
+<saying who="vixey">heh</saying>
+<saying who="TimToady">the second step is obvious--the best language for the job is one that does the job on a null input</saying>
+<me_is who="pmichaud">notes that vixey&#39;s algorithm is somewhat recursive</me_is>
+<saying who="TimToady">&quot;All rules of thumb are false, including this one.&quot;</saying>
+<saying who="pmurias">rindolf: when you feel like writing Common Lisp backends, contact me or mncharity ;)</saying>
+        </body>
+        <info>
+            <channel>#perl6</channel>
+            <network>Freenode</network>
+            <tagline>Lisp Dialects (Scheme, Common Lisp, Arc, Spark) Mentality and Usability</tagline>
+        </info>
+    </irc>
+</fortune>
 </list>
 </collection>

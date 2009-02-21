@@ -269,13 +269,97 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             The BSD licence has proved to be popular for other software
             written for UNIX-like operating systems (and open-source 
-            software in general).
+            software in general). Later on, several variations on this
+            licence were initiated and also become popular. 
         </para>
     </section>
     <section id="history--gpl">
         <title>The GNU Project and the Creation of the GPL Licence</title>
         <para>
             <emphasis role="bold"> TODO : add.</emphasis>
+        </para>
+        <para>
+            In 27 September 1983, <ulink 
+                url="http://en.wikipedia.org/wiki/Richard_Stallman">Richard
+                M. Stallman (RMS)</ulink> announced the GNU project 
+            (by writing <ulink url="http://www.gnu.org/gnu/manifesto.html">the 
+                so-called "GNU Manifesto"</ulink>)
+            aim of creating a new operating that would be entirely "free
+            software", where free is as in "free speech", rather than as in
+            gratis goods. From what I understood <ulink 
+                url="http://lwn.net/Articles/161270/">based on what
+                Bruce Perens said</ulink>, what he meant "free software" was 
+            at the time not conclusively defined, and that the so-called
+            <ulink url="http://www.gnu.org/philosophy/free-sw.html">"Free
+                Software Definition"</ulink> is a much more recent document,
+            that aimed to provide an anti-thesis to the open-source
+            definition.
+        </para>
+        <para>
+            Stallman opted against using the BSD licence for the original
+            software created by the GNU project and instead phrased his
+            own more restrictive licence entitled <ulink 
+                url="http://en.wikipedia.org/wiki/GNU_General_Public_License">the 
+                "GNU General Public License"</ulink> (or GPL for short),
+            and used it for GNU's software.
+        </para>
+
+        <para>
+            The GPL is a relatively complex licence with many fine points.
+            I admit that I did not fully understand version 2.0 of the GPL
+            back when I tried to read it, and know what I know about it
+            by reading knowledgable sources.
+        </para>
+
+        <para>
+            Here are the main points about it:
+        </para>
+
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://www.gnu.org/copyleft/">Copyleft</ulink>
+                    - making sure that derived work that are distributed to the
+                    outside includes the source and is distributed under the
+                    same licence. Note that this does not apply to
+                    modifications done for internal or private use.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Restrictive Integration by Other Code bases - GPL code can
+                    only be linked against code with free software licences
+                    that match some criteria. This property has been recently
+                    referred to as "viral". 
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Despite the first item, GPLed software can be made to
+                    run on operating systems and other platforms, whose
+                    licences are not incopmatible with itself, including with
+                    proprietary, or even binary-only software.
+                </para>
+            </listitem>
+        </orderedlist>
+
+        <para>
+            The GNU Project began to work on software programs and libraries
+            to replace or complement, existing ones in the proprietary UNIX
+            world, and most of them were placed under the GPL. The GPL
+            was adopted for other software released on the Internet and
+            elsewhere for Unix and non-Unix operating systems, but some
+            people still released software under public-domain-like licences,
+            such as the BSDL, the licence of the MIT X Window System 
+            (so-called MITL, MIT, X11L or X11) and the pure Public Domain.
+        </para>
+
+        <para>
+            This co-existence of the GPL and Public-Domain-like licences still
+            exist to this very day. One should note that some software
+            released for UNIX-like OSes, along with its source, have carried
+            different or even non-free-as-in-speech/non-open-source licences
+            altogether.
         </para>
     </section>
     <section id="history--lgpl-and-friends">

@@ -4147,5 +4147,41 @@ up.  (I wrote tests for part of it.)
         </info>
       </quote>
     </fortune>
+    <fortune id="sharp-perl-what-are-you-trying-to-achieve">
+      <meta>
+        <title>What are You Trying to Achieve?</title>
+      </meta>
+      <irc>
+          <body>
+<saying who="sQuEE">eval: [qr/^(\d)(?{ &quot;x{$1}&quot; })$/]</saying>
+<saying who="buubot">sQuEE:  [qr/(?-xism:^(\d)(?{ &quot;x{$1}&quot; })$)/]</saying>
+<me_is who="mauke">looks at sQuEE </me_is>
+<saying who="sQuEE">:$</saying>
+<saying who="fizztpok_">Man, I always feel like I&#39;m getting the hang of Perl until I see nonsense like that.</saying>
+<saying who="mauke">what are you trying to do?</saying>
+<saying who="sQuEE">im trying to eval qr/$regex/ which contains ^(\d)(??{ &quot;x{$1}&quot; })$ , but $@ returns null</saying>
+<saying who="mauke">no, what are you actually trying to do?</saying>
+<saying who="ik">sQuEE: what is the point of doing the thing that you are doing?</saying>
+<saying who="sQuEE">no, thats just a testing example</saying>
+<saying who="sQuEE">im trying to assign $regex what i captured from a previous match using qr// , eval { $regex = qr/$2/ };</saying>
+<saying who="sQuEE">im not sure what im doing wrong</saying>
+<saying who="mauke">I&#39;m not interested in what you&#39;re doing; what are you trying to achieve?</saying>
+<saying who="ik">You&#39;re capturing a regex with a regex and attempting to use said regex?</saying>
+<saying who="ik">I hope the data you&#39;re matching isn&#39;t input :(</saying>
+<saying who="PerlJam">mauke: I&#39;m trying to achieve world peace and this regex is the last thing standing in my way!  ;)</saying>
+<saying who="Khisanth">there will be no world peace!</saying>
+<me_is who="Khisanth">stabs PerlJam</me_is>
+<saying who="DrForr">Can I at least have whirled peas?</saying>
+<me_is who="PerlJam"> fires up the whirly gig for DrForr and inserts some peas</me_is>
+<me_is who="Khisanth">dumps a bowl of whirled peas on DrForr&#39;s head</me_is>
+<saying who="DrForr">Mmm, whirled peas.</saying>
+          </body>
+        <info>
+            <channel>#perl</channel>
+            <network>Freenode</network>
+            <tagline>"What are you trying to achieve?"</tagline>
+        </info>
+      </irc>
+    </fortune>
   </list>
 </collection>

@@ -53,6 +53,11 @@ my $software_tree_contents =
                     'title' => "Dump the Meta-Data of Directory Structures",
                 },
                 {
+                    'text' => "File-Find-Object",
+                    'url' => "open-source/projects/File-Find-Object/",
+                    'title' => "An Object-Oriented Alternative to File::Find",
+                },
+                {
                     'text' => "Quad-Pres",
                     'url' => "open-source/projects/quad-pres/",
                     'title' => "A Tool for Generating HTML Presenttions",

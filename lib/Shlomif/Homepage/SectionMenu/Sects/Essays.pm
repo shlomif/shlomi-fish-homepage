@@ -79,6 +79,11 @@ my $essays_tree_contents =
                             'url' => "philosophy/computers/software-management/end-of-it-slavery/",
                             'title' => "The end of Info-Tech/High-Tech slavery - if you want great people to work for you, make sure they love your workplace",
                         },
+                        {
+                            'text' => "The Perfect Info-Tech Workplace",
+                            'url' => "philosophy/computers/software-management/perfect-workplace/",
+                            'title' => "How to make an Info-Tech Workplace Where Programmers Will Be Happy, Want to Stay, Be Super-Productive and Efficient and will Rave About",
+                        },
                     ],
                 },
                 {

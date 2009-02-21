@@ -6,14 +6,6 @@ use File::Spec;
 use String::ShellQuote;
 use Getopt::Long;
 
-### Definitions:
-
-# my $fortune_xml_base_dir = "$ENV{HOME}/progs/perl/cpan/XML/Grammar/Fortune/trunk/XML-Grammar-Fortune/module";
-
-my $good_perl_path = "$ENV{HOME}/apps/perl/perl-5.8.8-debug/bin/perl";
-
-##########################################################################
-
 my $master_url = "http://www.shlomifish.org/humour/fortunes/";
 
 my $atom_arg;
@@ -40,7 +32,7 @@ my @fortunes = (map { /([\w\-_]+)/ ; $1 } @lines);
 
 my @cmd_line = 
 (
-    $good_perl_path,
+    $^X,
     "-MXML::Grammar::Fortune::Synd::App",
     "-e",
     "run()",

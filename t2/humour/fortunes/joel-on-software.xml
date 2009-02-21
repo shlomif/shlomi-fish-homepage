@@ -1309,5 +1309,39 @@ sales are growing steadily. The People won't stop buying it.
           </info>
       </quote>
     </fortune>
+    <fortune id="joel-rub-dub-dub-2">
+      <meta>
+          <title>"Joel on Software" - Rub a dub dub</title>
+      </meta>
+      <quote>
+          <body>
+              <p>
+So we did version 2.0. This was an attempt to add some of the most obviously
+needed features. While David worked on version 2.0 we honestly didn't think it
+was worth that much effort, so he tended to do things in what you might call an
+"expedient" fashion rather than, say, an "elegant" fashion. Certain, ahem,
+design issues in the original code were allowed to fester. There were two
+complete sets of nearly identical code for drawing the main bug-editing page.
+SQL statements were scattered throughout the HTML hither and yon, to and fro,
+pho and ton. Our HTML was creaky and designed for those ancient browsers that
+were so buggy they could crash loading about:blank.
+</p>
+
+<p>
+Yeah, it worked brilliantly, we've been at zero known bugs for a while now.
+But inside, the code was, to use the technical term, a "big mess." Adding new
+features was a hemorrhoid. To add one field to the central bug table would
+probably require 50 modifications, and you'd still be finding places you forgot
+to modify long after you bought your first family carplane for those weekend
+trips to your beach house on Mars.              
+              </p>
+
+          </body>
+          <info>
+              <author>Joel Spolsky</author>
+              <work href="http://www.joelonsoftware.com/articles/fog0000000348.html">Rub a dub dub</work>
+          </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

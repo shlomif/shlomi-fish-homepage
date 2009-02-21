@@ -1,0 +1,50 @@
+#include '../template.wml'
+<latemp_subject "PHP Sucks (originally by czth)" />
+
+<h2 id="note">Note</h2>
+
+<p>
+This is a copy of a page that went offline from czth.net. I'll add links to
+it below.
+</p>
+
+<p> <a href="http://www.php.net/">PHP</a> Sucks. 
+
+<i>"PHP is an abomination." - David Robins, December 17, 2002.</i> </p> 
+
+<ul> 
+    <li> <a href="http://n3dst4.com/articles/phpannoyances/">PHP annoyances</a> </li> 
+    <li> <a href="http://use.perl.org/articles/02/09/06/2043234.shtml?tid=9">Some comments from use Perl;</a> </li> 
+    <li> <a href="http://www.ukuug.org/events/linux2002/papers/html/php/">Experiences of Using PHP in Large Websites</a> </li>
+    <li> <a href="http://archive.develooper.com/advocacy@perl.org/msg01457.html">Nathan Torkington's list of PHP's shortcomings</a> </li>
+    <li> <a href="http://www.gnu-friends.org/story/2002/5/29/113829/681">GNU-Friends article by lupo</a> </li>
+    <li> <a href="http://tnx.nl/php.txt">PHP in contrast to perl</a> systematically points out PHP inconsistencies </li> 
+    <li> <a href="http://www.joelonsoftware.com/items/2003/10/10.html">Joel on Software</a> mentions PHP's willful ignorance of character encodings[1] </li> 
+    <li> The <a href="http://search.cpan.org/%7Espoon/PHP-Strings/Strings.pm">PHP::Strings</a> perl module will provide much enlightenment </li> 
+</ul> 
+
+<p> [1] character encodings are a pain in the neck, but they <i>are</i> necessary </p> 
+
+<p> Some points of my own: </p>
+
+<p> Of course you can write complex scripts in PHP - it's Turing complete. It's just painful. (See Paul Graham's <a href="http://www.paulgraham.com/power.html">Succinctness is Power</a>
+article.) You can write complex scripts in assembler; it's also
+painful. But assembler has a niche, a place where it shines: when you
+need to hand-optimize something or write low-level code (think kernels,
+trampolines, compiler magic). PHP doesn't. There's nothing for which it
+is the best choice. </p> 
+
+<p> A simple problem and a perl solution: remove all matches to <tt>id=<i>some integer value</i></tt> (at the end of a string) from a list, also stripping off <tt>id=<i>value</i></tt> from the other strings. (Admittedly this seems a little contrived but it was actually needed by somebody at some point.) </p> 
+
+<pre>@array = grep { s/id=(\d+)$// ? $1 != $value : 1 } @array;</pre> 
+
+<p> [2005-02-04] Finally there's a PHP equivalent from Jason Sweat, after almost 2 years: </p> 
+
+<pre>$array = array_filter($array, create_function('$v','return !preg_match(\'/id=\d+$|id='.$value.'$/\',$v);'));</pre> 
+
+<p> At least it's possible, but note the following two things: it has to parse code at runtime (think <tt>eval STRING</tt>),
+and that it makes use of perl regular expression matching (beats
+reinventing the wheel I guess). It just doesn't have the elegance of
+the perl (IMO). </p>
+
+

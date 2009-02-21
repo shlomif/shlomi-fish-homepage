@@ -299,8 +299,8 @@ $(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
 $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%: $(DOCBOOK_XML_DIR)/%.xml $(XSL_SOURCES)
-	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -x $(XHTML_XSLT_SS) -o $@ xhtml $<
-	touch $@
+	$(DOCMAKE_WITH_PARAMS) --stringparam "docmake.output.format=xhtml" --stringparam "docmake.output.path_to_root="$(shell perl -e '$$_=shift;$$c=tr[/][];print "../"x($$c+2)' $(call get,DOCBOOK_DIRS_MAP,$(patsubst $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,%,$@))) -x $(XHTML_XSLT_SS) -o $@ xhtml $< \
+	&& touch $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook

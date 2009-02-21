@@ -197,3 +197,13 @@ This is a program I wrote, after someone asked if it's possible to decompose a
 sine wave using square waves.
 </p>
 
+<h2 id="du-output-analyser"><a href="http://svn.berlios.de/svnroot/repos/web-cpan/du-output-analyser/trunk/du-output-analyser/analyse-du.pl">du 
+Output Analyser</a></h2>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Du_(Unix)">du</a> is a UNIX command
+that can recursively scan directory trees and output the space used by
+them. After one has done <tt>\du . &gt; du.txt</tt>, one can use this script
+to analyse the file by filtering the sub-directories of a certain depth (and
+under a certain sub-directory). (Licensed the MIT/X11 Licence).
+</p>

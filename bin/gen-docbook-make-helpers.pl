@@ -87,12 +87,33 @@ my @documents =
     },
 );
 
+my @end_formats = 
+(
+    {
+        var => "PDF",
+        ext => ".pdf",
+    },
+    {
+        var => "XML",
+        ext => ".xml",
+    },
+    {
+        var => "RTF",
+        ext => ".rtf",
+    },
+    {
+        var => "INVIDIVIDUAL_XHTML",
+        ext => "",
+    },
+);
+
 my $tt = Template->new({});
 
 open my $make_fh, ">", "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 $tt->process(\*DATA, 
     {
         docs => \@documents,
+        fmts => \@end_formats,
     },
     $make_fh
 );
@@ -102,5 +123,9 @@ __DATA__
 
 [% FOREACH d = docs %]
 $(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
+[% END %]
+
+[% FOREACH fmt = fmts %]
+DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
 [% END %]
 

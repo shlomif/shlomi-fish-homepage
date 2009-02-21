@@ -149,6 +149,11 @@ my $essays_tree_contents =
                     'title' => "Getting up to speed with Linux (Hebrew)",
                 },
                 {
+                    'text' => "Mini-Intro",
+                    'url' => "lecture/W2L/Mini-Intro/",
+                    'title' => "Getting up to speed with Linux (Hebrew)",
+                },
+                {
                     'text' => "Why Linux",
                     'url' => "lecture/W2L/Why_Linux/",
                     'title' => "What Linux is to me.",

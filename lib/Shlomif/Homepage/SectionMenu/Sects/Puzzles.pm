@@ -54,6 +54,10 @@ my $puzzles_tree_contents =
                     'text' => "What is this Sequence?",
                     'url' => "MathVentures/sequence-4-8-7-5.html",
                 },
+                {
+                    'text' => "Two Gates and Two Angels - with a Twist",
+                    'url' => "MathVentures/two-angels-and-two-gates.html",
+                },
             ],
         },
         {

@@ -3944,5 +3944,51 @@ Let a thousand flowers bloom!
         </info>
       </quote>
     </fortune>
+    <fortune id="larry-wall-lets-go-scripting-basic">
+      <meta>
+        <title>Larry Wall on BASIC</title>
+      </meta>
+      <quote>
+          <body>
+
+              <p> Now, however it was initially intended, I think BASIC turned
+                  out to be one of the first major scripting languages,
+                  especially the extended version that DEC put onto its
+                  minicomputers called BASIC/PLUS, which happily included
+                  recursive functions with arguments. I started out as a BASIC
+                  programmer. Some people would say that I'm permanently
+                  damaged. Some people are undoubtedly right.  </p>
+
+              <p> But I'm not going to apologize for that. All language
+                  designers have their occasional idiosyncracies. I'm just
+                  better at it than most. :-) </p>
+
+              <p> Anyway, when I was a RSTS programmer on a PDP-11, I certainly
+                  treated BASIC as a scripting language, at least in terms of
+                  rapid prototyping and process control. I'm sure it warped my
+                  brain forever. Perl's statement modifiers are straight out of
+                  BASIC/PLUS. It even had some cute sigils on the ends of its
+                  variables to distinguish string and integer from floating
+                  point.  </p>
+
+              <p> But you could do extreme programming. In fact, I had a
+                  college buddy I did pair programming with. We took a compiler
+                  writing class together and studied all that fancy stuff from
+                  the dragon book. Then of course the professor announced we
+                  would be implementing our own language, called PL/0. After
+                  thinking about it a while, we announced that we were going to
+                  do our project in BASIC. The professor looked at us like were
+                  insane. Nobody else in the class was using BASIC. And you
+                  know what? Nobody else in the class finished their compiler
+                  either. We not only finished but added I/O extensions, and
+                  called it PL 0.5. That's rapid prototyping.  </p>
+
+          </body>
+        <info>
+            <author>Larry Wall</author>
+            <work href="http://www.perl.com/pub/a/2007/12/06/soto-11.html">"Proggramming is Hard, Let's Go Scripting"</work>
+        </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

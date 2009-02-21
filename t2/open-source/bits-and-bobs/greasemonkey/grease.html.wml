@@ -46,3 +46,43 @@ This later implies more work for me when I want to link to them.
 So what this incredibly silly script does is redirect to a new page without
 this suffix.
 </p>
+
+<h2 id="o-and-m-title"><a href="ozy-millie-title.user.js">Ozy and Millie
+Title Generator</a></h2>
+
+<p>
+This script is intended for a specialised purpose, and doesn't add to the
+user experience, so I didn't put it on userscripts.org. What this script does
+is generate an entry with basic information that can be used for my 
+MediaWiki-based transcription of the 
+<a href="http://www.ozyandmillie.org/">Ozy and Millie</a> cartoons on each
+page of the cartoon. That way one can copy and paste it instead of entering
+it manually.
+</p>
+
+<p>
+This script is useful for people doing transcription of Ozy and Millie,
+but otherwise should not be used.
+</p>
+
+<h2 id="o-and-m-mediawiki-edit-transcripts"><a
+href="mediawiki-edit-ozy-and-millie-transcripts.user.js">Ozy
+and Millie MediaWiki Transcripting Aid</a></h2>
+
+<p>
+I'm using MediaWiki to prepare a transcript for the "Ozy and Millie"
+comics. This script does auto-completion for several addresses by the
+common characters based on their first letters.
+</p>
+
+<p>
+So, for example "*Oz" Becomes "* '''Ozy''': ", and "**Ms" becomes
+"** '''Ms. Mudd'''". There's a complete list of mappings in the "var
+ids_to_fullnames" mapping in the file.
+</p>
+
+<p>
+Since this script is also intended for a specialised purpose, I haven't 
+uploaded it to userscripts.org either.
+</p>
+

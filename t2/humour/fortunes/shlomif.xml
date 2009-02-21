@@ -4559,5 +4559,124 @@ more classification.
         </info>
       </quote>
     </fortune>
+    <fortune id="sharp-perl-how-to-name-a-flickr-module">
+        <meta>
+            <title>How to name a new Flickr-module</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="jfroebe">trying to come up with a replacement name for my Flickr::Simple2.. (it is based off of XML::Simple rather than XML::Parser::Lite::Tree) - Net::Flickr, Flickr::API, Flickr::Simple are already taken.  Any ideas?  I&#39;m coming up blank for a name</saying>
+<saying who="jfroebe">It is a Perl interface to Flickr</saying>
+<saying who="mofino">wait</saying>
+<saying who="rindolf">jfroebe: ah, I saw your message on Chicago.pm</saying>
+<saying who="rindolf">jfroebe: maybe WWW::Flickr</saying>
+<saying who="mofino">you found others and decided you needed to make ANOTHER perl interface to flickr?</saying>
+<saying who="jfroebe">the other ones have been broken for a long time (either because of use of the abandoned XML::Parser::Lite::Tree module or because the authentication method was never correctly implemented)</saying>
+<saying who="buu">jfroebe: Please no more names involving ::Simple</saying>
+<saying who="rindolf">buu: ::Tiny</saying>
+<saying who="jfroebe">WWW::Flickr is a good possibility</saying>
+<saying who="buu">Thanks rindolf.</saying>
+<saying who="mofino">hah tiny is the new simple</saying>
+<saying who="rindolf">::Minimal.</saying>
+<saying who="buu">::SeriouslyfuckingSmall</saying>
+<saying who="rindolf">::NotEnough</saying>
+<saying who="rindolf">::GargantuanlySmall</saying>
+<saying who="rindolf">::Minuscule</saying>
+<saying who="apeiron">::Warning::Uses::XML::Simple::And::Thus::Has::Terrible::Performance::And::Memory::Usage</saying>
+<saying who="Fah">::Deficient</saying>
+<saying who="mofino">stay in the Flickr:: space</saying>
+<saying who="rindolf">apeiron++</saying>
+<saying who="mofino">if there already is one</saying>
+<saying who="jfroebe">mofino.. that&#39;s the problem what to name it</saying>
+<saying who="nadim">::Nano</saying>
+<saying who="nadim">that should be small enough and it sounds serious</saying>
+<saying who="mofino">jfroebe, something in Flickr:: ;)</saying>
+<saying who="rindolf">::Femto</saying>
+<saying who="jfroebe">lol - understood</saying>
+<saying who="mofino">jfroebe, ::Improved ::Modern ::Lite ::Tiny ::FUCKYEAH</saying>
+<saying who="rindolf">jfroebe: a Rose by any other name...</saying>
+<saying who="mofino">IS A DUCK</saying>
+<saying who="rindolf">I think half the posts to module-authors are about &quot;How shall I name this module?&quot;</saying>
+<saying who="mofino">haha</saying>
+<saying who="ik">I use perlmonks for that ^_^</saying>
+<saying who="rindolf">jfroebe: I&#39;m not a fan of XML::Simple either.</saying>
+<saying who="mofino">XML::Simple is teh awesome</saying>
+<saying who="ik">1;</saying>
+<saying who="ik">XML::Simple is teh sux</saying>
+<saying who="mofino">whatever</saying>
+<saying who="ik">&quot;this could be an arrayref or a hashref or a nothingref depending on how many thingies were in your doo-dad&quot;</saying>
+<saying who="mofino">force it</saying>
+<saying who="ik">yes</saying>
+<saying who="mofino">but yeah, that is a bit annoying</saying>
+<saying who="rindolf">ik++ - my thoughts exactly.</saying>
+<saying who="mofino">OH SUDDEN HASHREF</saying>
+<saying who="apeiron">XML::Simple is the MySQL of XML parsers.</saying>
+<saying who="mofino">haha</saying>
+<saying who="mofino">ahh mysql, DOOOMED</saying>
+<saying who="rindolf">Haha # apeiron++</saying>
+<saying who="kent\n">lol @ &gt; apeiron</saying>
+<saying who="drforr">There&#39;s a reason it&#39;s called &quot;Simple.&quot; You&#39;ll find out about 3 days after you start using it.</saying>
+<saying who="kent\n">would it be anything releated to being feature-incomplete</saying>
+<saying who="drforr">That would be be why it&#39;s &quot;simple&quot;.</saying>
+<saying who="jfroebe"> but for simple XML data (i.e. Flickr&#39;s REST API), it is more than sufficient</saying>
+<saying who="kent\n">define &quot;simple&quot; XML</saying>
+<saying who="kent\n">$xml = &#39;&lt;&#39; # already too complex</saying>
+<saying who="jfroebe">kent - lol</saying>
+<saying who="jfroebe">:)</saying>
+<saying who="jfroebe">thoughts on  Flickr::YA::API ?</saying>
+<saying who="jfroebe">for a name</saying>
+<saying who="mofino">jfroebe, YA?</saying>
+<saying who="jfroebe">yet another</saying>
+<saying who="mofino">...</saying>
+<saying who="mofino">just pick a name</saying>
+<saying who="mofino">Flickr::API</saying>
+<saying who="mofino">oh, nevermind</saying>
+<saying who="jfroebe">mofino - now you see.. all the good ones are taken ;-)</saying>
+<saying who="mofino">maybe you had it at Flickr::Simple2</saying>
+<saying who="kent\n">Flickr::API:: something</saying>
+<saying who="kent\n">or something</saying>
+<saying who="mofino">kent\n, namespace already in use</saying>
+<saying who="rindolf">Flickr::Two</saying>
+<saying who="mofino">jfroebe, since your API is an improvement over Simple</saying>
+<saying who="nadim">mst: lol</saying>
+<saying who="kent\n">Flickr::API::SucksLess</saying>
+<saying who="rindolf">jfroebe: you can call it Flickr::Jfroebey</saying>
+<saying who="jfroebe">mofino, I think you might be right.</saying>
+<saying who="kent\n">Flicker::API::FAFINAFA</saying>
+<saying who="jfroebe">rindolf - lol ... my head is already big enough lol</saying>
+<saying who="mofino">jfroebe, i mean, if that&#39;s what it is, it shows a clear progression from Simple</saying>
+<saying who="kent\n">( Flicker::API::FAFINAFA is not a flickr api )</saying>
+<saying who="nadim">Flicker::rekcilF</saying>
+<saying who="rindolf">jfroebe: I have released Spork::Shlomify with some random changes to Spork that I needed.</saying>
+<saying who="rindolf">Well, I use subclassing to implement them.</saying>
+<saying who="jfroebe">lmao</saying>
+<saying who="apeiron">You forked that spork!</saying>
+<saying who="rindolf">apeiron: it&#39;s not a fork! It&#39;s an improved spork!</saying>
+<saying who="rindolf">Flickr::Bettr</saying>
+<saying who="kent\n">Flickr::Strobe</saying>
+<saying who="kent\n">( its a bit brighter )</saying>
+<saying who="kent\n">Flickr::OnAndOff</saying>
+<saying who="nadim">Flickr::FullBeam</saying>
+<saying who="nadim">Flickr::FullLights</saying>
+<saying who="kent\n">Flickr::2009</saying>
+<saying who="mofino">Flickr::Meat</saying>
+<saying who="kent\n">that way somebody will be able to invent something better next year</saying>
+<saying who="kent\n">and call it Flickr::2010</saying>
+<saying who="mofino">Flickr::rkcilF</saying>
+<saying who="mofino">Flickr::Barbie::Edition</saying>
+<saying who="mofino">Flickr::Nuts</saying>
+<saying who="nadim">Flickr::3b0f3a25d07e5d9dbdf98db15ee70410 (and no, it is not random)</saying>
+<saying who="mofino">Flickr::911wasaninsidejob</saying>
+<saying who="nadim">hehe</saying>
+<saying who="mofino">haha</saying>
+<saying who="jfroebe">thanks guys :)  I&#39;ve requested the Flickr::Simple2 namespace via pause</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>"A rose by any other name…" (and a little on XML::Simple)</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

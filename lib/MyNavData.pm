@@ -24,11 +24,11 @@ my $tree_contents =
 {
     'host' => "t2",
     'text' => "Shlomi Fish",
-    'title' => "Shlomi Fish' Homepage",
+    'title' => "Shlomi Fish's Homepage",
     'subs' =>
     [
         {
-            'text' => "Home",
+            'text' => "Shlomi Fish's Homepage",
             'url' => "",
         },
         {

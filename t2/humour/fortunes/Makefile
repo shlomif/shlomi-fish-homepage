@@ -4,6 +4,14 @@ VER = 0.10.141
 
 DIST_BASE = fortunes-shlomif
 
+INDEX_FILE = index.html
+
+VERSION_FILE = ver.txt
+
+ARCS_LIST_INCLUDE = arcs-list.mak
+
+SOURCE_FILES_LIST = source-files-list.html
+
 DIST_DIR = $(DIST_BASE)-$(VER)
 
 PACKAGE_BASE = $(DIST_DIR).tar.gz
@@ -16,9 +24,6 @@ XMLS = $(addsuffix .xml,$(FILES))
 
 XHTMLS = $(patsubst %.xml,%.xhtml,$(XMLS))
 
-INDEX_FILE = index.html
-
-VERSION_FILE = ver.txt
 
 .PHONY: all test html distdir upload list_files
 
@@ -30,7 +35,7 @@ $(DATS):: %.dat : %
 test: $(DATS)
 	@fortune -e $(FILES)
 	
-dist: $(PACKAGE_BASE) list_files
+dist: $(PACKAGE_BASE) list_files gen_sources_list
 
 html: $(INDEX_FILE)
 
@@ -61,8 +66,6 @@ upload: dist
 print_package_base:
 	@echo $(PACKAGE_BASE)
 
-ARCS_LIST_INCLUDE = arcs-list.mak
-
 list_files: $(ARCS_LIST_INCLUDE)
 
 $(ARCS_LIST_INCLUDE): $(VERSION_FILE)
@@ -75,5 +78,12 @@ $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 	perl convert-to-xhtml.pl $<
 	touch $(patsubst %.xml,%.html.wml,$<)
 
+gen_sources_list: $(SOURCE_FILES_LIST)
+
+$(SOURCE_FILES_LIST): generate-file-list.pl $(ARCS_LIST_INCLUDE) 
+	perl $<
+
 %.show:
 	@echo "$* = $($*)"
+
+

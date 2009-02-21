@@ -94,7 +94,7 @@ from UserFriendly</a>.
 
 <p class="newsitem">
 Finally, several fortunes were added to
-<a href="http://vipe.technion.ac.il/~shlomif/humour/fortunes/">the fortune
+<a href="http://www.shlomifish.org/humour/fortunes/">the fortune
 cookies collection</a> and it now also contains a collection of quotes by
 <a href="http://www.paulgraham.com/">Paul Graham</a>.
 </p>
@@ -120,7 +120,7 @@ friend, was added to the <a href="./art/">art section</a>.
 New section navigation menus were added to 
 <a href="./philosophy/">the Essays
 and Articles section</a>, <a href="./open-source/">the Software
-section</a>, and <a href="http://vipe.technion.ac.il/~shlomif/lecture/">the
+section</a>, and <a href="http://www.shlomifish.org/lecture/">the
 Lectures section</a>. They will allow the main navigation menu to be
 less crowded, and will give way for a faster update of the site.
 </li>

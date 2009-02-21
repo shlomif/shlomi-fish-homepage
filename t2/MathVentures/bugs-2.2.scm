@@ -130,7 +130,7 @@
 (script-fu-register "script-fu-shlomif1-bugs"
                     "<Toolbox>/Xtns/Script-Fu/Shlomif/Bugs"
                     "Bugs in a square image"
-                    "Shlomi Fish <shlomif@vipe.technion.ac.il>"
+                    "Shlomi Fish <shlomif@iglu.org.il>"
                     "Shlomi Fish"
                     "September 1998"
                     ""

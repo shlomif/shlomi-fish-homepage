@@ -6,7 +6,6 @@
 * Star Wars IV-VI.
 * Willo and the Princess.
 * Bring it On (I)
-* The Emperor's New Groove
 * The Lion King
 * Disney's Aladdin
 * Mary Poppins.
@@ -48,6 +47,8 @@
 * http://en.wikipedia.org/wiki/Punchline_(film)
 * http://www.imdb.com/title/tt0190521/ - Kiss My Act
 * The Cutting Edge
+* Alien Mine.
+* Airborne
 
 Done:
 =====
@@ -58,6 +59,7 @@ Done:
 * Eight days a week.
 * The Naked Gun, 1, 2 and 3.
 * Jerry Maguire.
+* The Emperor's New Groove
 
 -->
 
@@ -218,7 +220,7 @@ a woman!
                 <set id="naked-guns">
                     <title>The Naked Guns</title>
                     <prod id="the-naked-gun">
-                        <title>The Naked Gun: From the Files of Polic Squad</title>
+                        <title>The Naked Gun: From the Files of Police Squad</title>
                         <isbn>0792166469</isbn>
                         <creator type="director">David Zucker</creator>
                         <rellink href="http://www.imdb.com/title/tt0095705/"
@@ -293,6 +295,51 @@ a woman!
                         </p>
                     </desc>
                 </prod>
+            </cat>
+            <cat id="sci-fi">
+                <title>Science Fiction</title>
+                <set id="star-wars-original">
+                    <title>Star Wars IV-VI (The Original Series)</title>
+                    <prod id="star-wars-iv">
+                        <title>Star Wars IV: A New Hope</title>
+                        <isbn>B000FQJAIW</isbn>
+                        <creator type="director">George Lucas</creator>
+                        <rellink href="http://www.imdb.com/title/tt0076759/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_IV:_A_New_Hope"
+                            text="Wikipeida" />
+                    </prod>
+                    <prod id="empire-strikes-back">
+                        <title>Star Wars V: The Empire Strikes Back</title>
+                        <isbn>B000FQJAJG</isbn>
+                        <creator type="director">Irvin Kershner</creator>
+                        <rellink href="http://www.imdb.com/title/tt0080684/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_V:_The_Empire_Strikes_Back"
+                            text="Wikipeida" />
+                    </prod>
+                    <prod id="return-of-the-jedi">
+                        <title>Star Wars VI: The Return of the Jedi</title>
+                        <isbn>B000FQVX78</isbn>
+                        <creator type="director">Richard Marquand</creator>
+                        <rellink href="http://www.imdb.com/title/tt0086190/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_VI:_Return_of_the_Jedi"
+                            text="Wikipedia" />
+                    </prod>
+                    <desc>
+                        <p>
+                            I guess you've already heard of
+                            <a href="http://en.wikipedia.org/wiki/Star_Wars">Star 
+                                Wars</a>. I watched these movies on video
+                            as a child, and recall liking them a lot. Star
+                            Wars is a mixture of Science Fiction, Fantasy,
+                            and Adventure, with a lot of vivid imagination,
+                            wonderful special effects (especially for
+                            its time) and an engaging plot.
+                        </p>
+                    </desc>
+                </set>
             </cat>
             <cat id="fantasy">
                 <title>Fantasy</title>

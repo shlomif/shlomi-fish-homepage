@@ -18,6 +18,7 @@ sub get_hosts
 }
 
 my @personal_expand = ('expand' => { 'bool' => 1, 'capt' => 0,},);
+my @humour_expand = ('re' => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
 
 my $tree_contents =
 {
@@ -123,7 +124,7 @@ my $tree_contents =
         {
             'text' => "Humour", 
             'url' => "humour/",
-            'expand' => { 're' => "^humour/", },
+            'expand' => { @humour_expand },
             'title' => "My Humorous Creations",
             'subs' => 
             [
@@ -131,7 +132,7 @@ my $tree_contents =
                     'text' => "Stories",
                     'url' => "humour/stories/",
                     'title' => "Large-Scale Stories I Wrote",
-                    'expand' => { 're' => "^humour/", 'capt' => 0,},
+                    'expand' => { @humour_expand, 'capt' => 0,},
                     'subs' =>
                     [
                         {
@@ -163,6 +164,7 @@ my $tree_contents =
                 {
                     'text' => "Aphorisms and Quotes",
                     'url' => "humour/aphorisms/",
+                    'expand' => { @humour_expand, 'capt' => 0,},
                     'subs' =>
                     [
                         {

@@ -8,11 +8,13 @@ use Getopt::Long;
 
 ### Definitions:
 
-my $fortune_xml_base_dir = "$ENV{HOME}/progs/perl/cpan/XML/Grammar/Fortune/trunk/XML-Grammar-Fortune/module";
+# my $fortune_xml_base_dir = "$ENV{HOME}/progs/perl/cpan/XML/Grammar/Fortune/trunk/XML-Grammar-Fortune/module";
 
 my $good_perl_path = "$ENV{HOME}/apps/perl/perl-5.8.8-debug/bin/perl";
 
 ##########################################################################
+
+my $master_url = "http://www.shlomifish.org/humour/fortunes/";
 
 my $atom_arg;
 my $rss_arg;
@@ -35,15 +37,14 @@ close($arcs_list_fh);
 shift(@lines);
 
 my @fortunes = (map { /([\w\-_]+)/ ; $1 } @lines);
-chdir($fortune_xml_base_dir);
-
-my $master_url = "http://www.shlomifish.org/humour/fortunes/";
 
 my @cmd_line = 
 (
     $good_perl_path,
-    "-Mblib",
-    "bin/web-feed-syndicate.pl",
+    "-MXML::Grammar::Fortune::Synd::App",
+    "-e",
+    "run()",
+    "--",
     "--dir" => $abs_dir,
     (map { ("--xml-file" , "$_.xml") } (@fortunes)),
     "--yaml-data" => "$abs_dir/fortunes-shlomif-ids-data.yaml",

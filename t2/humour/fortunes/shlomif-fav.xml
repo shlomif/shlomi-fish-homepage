@@ -4082,5 +4082,40 @@ Let a thousand flowers bloom!
         </info>
       </quote>
     </fortune>
+    <fortune id="chromatic-perl-reliable-state-of-the-art">
+      <meta>
+        <title>chromatic - Perl's reliable state of the art</title>
+      </meta>
+      <quote>
+          <body>
+
+              <p>
+That's not helpful.  When a project doesn't release a new version, some people 
+say "Oh, don't use it!  They don't release new versions!"  When a project 
+does release a new version, some people say "Oh, don't use it!  It's not 
+perfect yet!"
+</p>
+
+<p>
+Meanwhile, the so-called reliable state of the art is a jumble of Perl which 
+writes cross platform shell scripts to install Perl code, and you customize 
+that by writing a superclass from which platform-specific modules inherit 
+pseudo-methods which use regular expressions to search and replace 
+cross-platform cross-shell code, with all of the cross-platform and 
+cross-shell quoting issues that entails.  I wish I were making any of this 
+up.  (I wrote tests for part of it.)
+</p>
+
+<p>
+
+    This is why we can't have nice things.
+    </p>
+          </body>
+        <info>
+            <author>chromatic</author>
+            <work href="http://www.nntp.perl.org/group/perl.perl5.porters/2008/09/msg140206.html">"Re: Module::Build 0.30 is released"</work>
+        </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

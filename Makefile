@@ -232,6 +232,8 @@ DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOC
 
 DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
 
+DOCBOOK_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(DOCBOOK_ALL_IN_ONE_XHTMLS))
+
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
@@ -253,7 +255,7 @@ docbook_extended: $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_do
 
 docbook_indiv: $(DOCBOOK_INDIVIDUAL_XHTMLS)
 
-docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
+docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
 
 $(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -352,3 +354,5 @@ $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feed
 $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
+$(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS):: %: $(DOCMAKE_STYLE_CSS)
+	cp -f $< $@

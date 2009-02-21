@@ -213,6 +213,7 @@ $(call set,DOCBOOK_DIRS_MAP,the-eternal-jew,philosophy/the-eternal-jew)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality,philosophy/computers/high-quality-software)
 $(call set,DOCBOOK_DIRS_MAP,what-makes-software-high-quality-rev2,philosophy/computers/high-quality-software/rev2)
 $(call set,DOCBOOK_DIRS_MAP,perfect-it-workplace,philosophy/computers/software-management/perfect-workplace)
+$(call set,DOCBOOK_DIRS_MAP,foss-licences-war,philosophy/computers/open-source/foss-licences-war)
 
 DOCBOOK_DOCS = $(call keys,DOCBOOK_DIRS_MAP)
 

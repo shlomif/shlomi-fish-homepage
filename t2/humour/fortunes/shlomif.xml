@@ -4477,5 +4477,32 @@ more classification.
         </info>
       </quote>
     </fortune>
+    <fortune id="sharp-perl-the-irc-based-unix-shell">
+        <meta>
+            <title>The IRC-Based UNIX Shell</title>
+        </meta>
+        <irc>
+            <body>
+                <me_is who="Zoffix">&amp;</me_is>
+                <saying who="^Quiddity">Zoffix: fg</saying>
+                <saying who="apeiron">^Quiddity, no</saying>
+                <saying who="apeiron">kill %1</saying>
+                <saying who="rindolf">kill -9 apeiron</saying>
+                <saying who="apeiron">rindolf, EPERM</saying>
+                <saying who="^Quiddity">kill: apeiron: arguments must be process or job IDs</saying>
+                <saying who="rindolf">apeiron: sudo kill -9 apeiron</saying>
+                <saying who="^Quiddity">killall -9 apeiron</saying>
+                <saying who="rindolf">pkill -9 apeiron</saying>
+                <saying who="apeiron">rindolf, user rindolf is not in the sudoers file, this event will be reported</saying>
+                <me_is who="apeiron">wonders what it says about him that he has that error message pretty much memorized</me_is>
+                <saying who="^Quiddity">apeiron: that you don&#39;t spend enough time issuing commands correctly</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>The IRC-Based UNIX Shell</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

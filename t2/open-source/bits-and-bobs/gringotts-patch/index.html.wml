@@ -2,8 +2,23 @@
 <latemp_subject "The gringotts-shlomif Patch" />
 
 <p>
-<b>Last Updated:</b> 01-January-2007.
+<b>Last Updated:</b> 21-September-2008.
 </p>
+
+<note>
+<h2 id="note">Note (21-September-2008)</h2>
+
+<p>
+This page is no longer relevant because development on gringotts
+has resumed <a href="http://gringotts.berlios.de/">on Berlios</a>, and this
+patch and others have been incorporated into gringotts version 1.2.9.
+</p>
+
+<p>
+This page is kept here for historical reasons only.
+</p>
+
+</note>
 
 <define-tag patch_fn whitespace="delete">
 gringotts-shlomif-patch-0.4.4.diff
@@ -12,8 +27,6 @@ gringotts-shlomif-patch-0.4.4.diff
 <define-tag link_to_patch endtag="required" whitespace="delete">
 <a href="<patch_fn />">%body</a>
 </define-tag>
-
-<h2><link_to_patch>The Latest Version of the Patch</link_to_patch></h2>
 
 <p>
 This is <link_to_patch>a patch</link_to_patch> for 

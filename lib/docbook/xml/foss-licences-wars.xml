@@ -173,4 +173,97 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 </section>
+<section id="history-and-overview">
+    <title>History and Overview of Common Licences</title>
+
+    <section id="history--public-domain">
+        <title>In the Beginning - there was the Public Domain</title>
+
+        <para>
+            As computers became more popular after World War II, people
+            started writing software for them and sometimes distributing it. 
+            This software written in Machine code, Assembly, or more portable
+            high-level programming languages, enabled people other than
+            the original author to run the code and make use of it. 
+            The traditional "licence" for such software was 
+            <ulink url="http://en.wikipedia.org/wiki/Public_domain">the 
+                Public Domain</ulink>, which is a legal term in the United 
+            States and other countries that describes what becomes of
+            an intellectual artwork whose (limited) copyright term has
+            expired. As traditionally understood, a Public Domain artwork
+            can be freely distributed (commercially or non-commercially),
+            freely derived from and included in future artworks, and freely
+            used and enjoyed. As a result, such software was generally
+            free-for-all-to-use.
+        </para>
+
+        <para>
+            That's not all. In fact, as many computer workers at that point 
+            in hisotry understood, it was unnaturaly for software to be
+            copyrighted and be under any licence besides the Public Domain.
+            Evidence for this can be found in <ulink 
+                url="http://en.wikipedia.org/wiki/Open_Letter_to_Hobbyists">Bill
+                Gates' "Open Letter to (Altair) Hobbyists"</ulink>,
+            where he expressed dismay on them contacting him about copying
+            his company's version of BASIC for the Altair (an early home
+            computer), instead of buying it for money.
+        </para>
+
+        <para>
+            Non-public-domain software (from now on "proprietary" or 
+            "non-free" software) actually preceded Gates, and was common on
+            mainframe (LINK) or mini-computers (LINK), which were the
+            very big (and in today's standards' - incredibly under-equiped)
+            computers that preceded the now common microprocessor-based.
+            However, there was still a strong tradition of what we now
+            called open-source software back then. See for example,
+            <ulink url="http://en.wikipedia.org/wiki/SHARE_%28computing%29">the
+            SHARE group that shared software for IBM-based computers</ulink>.
+        </para>
+    </section>
+    <section id="history--unix-and-bsd">
+        <title>AT&amp;T UNIX, BSD, and the BSD Licence</title>
+        <para>
+            The original UNIX was an operating system originally created by 
+            AT&amp;T's
+            Bell Labs Workers for Digital Equipment Corporation's (LINK) 
+            PDP-11 (LINK) computers, based on earlier
+            efforts, which was distributed along with its source code in
+            the C programming language to interested parties across the
+            world. 
+        </para>
+        <para>
+            One of the hallmarks of AT&amp;T UNIX was that despite the fact
+            that its source code was not fully-open-source (see below)
+            in today's standards, it was still a fully functional operating
+            system distributed along with its source, which rapidly gained
+            popularity.
+        </para>
+        <para>
+            Eventually, several workers in the University of California 
+            in Berkeley started working on their own version of Unix, based
+            on AT&amp;T's. This was called "Berkeley Software Development"
+            or BSD for short. The licence for its original parts became
+            known as
+            <ulink url="http://en.wikipedia.org/wiki/Bsd_license">the 
+                BSD Licence (or BSDL or even "BSD" for short)</ulink>
+            and according to its popular distribution was public-domain-like
+            in the sense that it allowed free modification, redistribution,
+            and conversion of derived code to any different licence. 
+        </para>
+        <para>
+            The original BSD licence had an "advertising clause" that required
+            the one who distributes or modify the code to advertise its use
+            by the copyrights holder. This clause was later deamed as
+            undesirable, and non-GPL-compatible by the Free Software
+            Foundation due to the proliferation of people that require
+            attribution. Therefore, it is now recommended to use the 
+            so-called "Modified BSD Licence" with 3-clauses or the further
+            modified one with 2-clauses, which are both GPL-compatible.
+        </para>
+        <para>
+            
+        </para>
+    </section>
+</section>
 </article>    <!-- End of the article -->

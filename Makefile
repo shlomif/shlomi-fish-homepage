@@ -321,6 +321,7 @@ install_docbook_css_dirs: make-dirs $(DOCBOOK_INSTALLED_CSS_DIRS)
 
 $(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	rsync -r -v $< $@
+	find $@ -name '.svn' -print0 | xargs -0 rm -fr
 
 FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 

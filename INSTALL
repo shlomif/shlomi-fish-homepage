@@ -7,19 +7,22 @@ a package for it in your system.
 
 3. Install perl 5.8.x (or later) in case it's not already installed. 
 
-4. Run and configure CPAN (see - http://sial.org/howto/perl/life-with-cpan/) 
+4. Run and configure CPAN (see - http://sial.org/howto/perl/life-with-cpan/ )
 and type:
 
+    $ export PERL_MM_USE_DEFAULT=1
     $ perl -MCPAN -e 'install Task::Sites::ShlomiFish'
 
 Or if you have CPANPLUS installed:
 
+    $ export PERL_MM_USE_DEFAULT=1
     $ perl -MCPANPLUS -e 'install Task::Sites::ShlomiFish'
 
 5. Install Latemp:
 
     $ svn co http://svn.berlios.de/svnroot/repos/web-cpan/latemp/trunk/
     $ cd trunk/installer
+    $ mkdir "$HOME/apps/latemp"
     $ scons PREFIX="$HOME/apps/latemp/" install
     $ cd ../support-headers
     $ perl install.pl
@@ -29,7 +32,7 @@ Or if you have CPANPLUS installed:
     $ PATH="$HOME/apps/latemp/bin:$PATH"
 
 7. 
-    $ svn co http://opensvn.csie.org/shlomif/wml-affiliations/trunk/wml/
+    $ svn co http://opensvn.csie.org/shlomif/wml-affiliations/trunk/
     $ cd trunk/wml
     $ bash Install.bash
 
@@ -41,7 +44,7 @@ Or if you have CPANPLUS installed:
 9. Do the following to build the site, after all dependencies were installed:
 
     $ svn co http://opensvn.csie.org/shlomif/homepage/trunk/
+    $ cd trunk
     $ ./gen-helpers.pl
-    $ (cd t2/humour/fortunes/ && make)
     $ make
 

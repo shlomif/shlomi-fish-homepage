@@ -51,8 +51,8 @@ $out->print(
         (map { ( "$_.xml", $_, "$_.dat" ) } @fortunes),
         (map { $_->filename(); }
         io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in)\z} })->all_files()),
-        "fortunes-shlomif-all.atom"
-        "fortunes-shlomif-all.rss"
+        "fortunes-shlomif-all.atom",
+        "fortunes-shlomif-all.rss",
         "Makefile", "ver.txt", 
     )
 );

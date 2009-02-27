@@ -20,6 +20,7 @@ include lib/make/gmsl/gmsl
 
 include include.mak
 include rules.mak
+include deps.mak
 
 make-dirs: $(T2_DIRS_DEST) 
 

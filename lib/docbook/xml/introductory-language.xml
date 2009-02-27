@@ -75,7 +75,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <revremark>
                     Corrected some problems in the new text. 2nd Revision.
                 </revremark>
-            </revision>     
+            </revision>
+            <revision>
+                <revnumber>2319</revnumber>
+                <date>27 February 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added missing id=""'s to footnotes, so they won't
+                    be randomly generated.
+                </revremark>
+            </revision>
         </revhistory>
     </articleinfo>
 
@@ -325,7 +334,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     It may actually make them think programming is loathsome
                     or otherwise a very strict process instead of a very
-                    creative process.<footnote label="haskell">
+                    creative process.<footnote id="haskell_expressive_power" label="haskell">
                         <para>
                             <ulink url="http://lambda-the-ultimate.org/node/2194#comment-28811">A 
                                 comment to the first revision of this
@@ -346,7 +355,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     </para>
                     <para>
                         I believe that Haskell derives its
-                        expressiveness from its strictness, but rather
+                        expressiveness not from its strictness, but rather
                         from its abstractions, and that this expressiveness
                         can be duplicated to a large extent in a less
                         strongly typed language. However, my mastery of
@@ -568,7 +577,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             language, teach your students some basic English first. It might 
             take longer, but will save more time and frustation later on. Plus,
             programming is a great way to expand one's mastery of English,
-            especially today when the Internet is so prevalent.<footnote label="globalisation">
+            especially today when the Internet is so prevalent.<footnote id="globalisation" label="globalisation">
                 <para>
                     A few people who read this article claimed I was
                     advocating globalisation. However, consider what
@@ -737,7 +746,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 Perl instead of C, similarly to the fact that he'd prefer
                 to teach English over Esperanto, because beginners would prefer
                 a language that allows them to express themselves.
-                <footnote label="esperanto">
+                <footnote id="esperanto_footnote" label="esperanto">
                     <para>
                         Several people contacted me saying I have
                         mis-represented
@@ -771,7 +780,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 to CPAN are not moderated (on purpose) and therefore it
                 is sometimes hard to find a suitable CPAN module out of the
                 many bad or unsuitable ones (if there actually is one
-                available). <footnote label="rethinking-cpan">
+                available). <footnote id="rethinking_cpan" label="rethinking-cpan">
                     <para>
                         As of April, 2008, there is <ulink url="http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html">an effort 
                             underway to revamp 
@@ -926,7 +935,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             brain-share, comprehensiveness (especially as far as APIs are
             concerned), usability, richness or 
             "sex-appeal"
-            <footnote label="consistency">
+            <footnote id="consistency_in_prog_langs_footnote" label="consistency">
                 <para>
                 Some people
                 assume that the more consistent a language is the better.
@@ -1149,7 +1158,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 by George Bernard Shaw</ulink> is amusing, but simply not
             true, as I've demonstrated here. Being a great teacher is much more
             difficult than being a great doer, and is much more enlightening.
-            <footnote label="those_who_can">
+            <footnote id="those_who_can_footnote" label="those_who_can">
                 <para>
                 What is true, in my opinion. is that "Those who can - do. 
                 Those who can't - complain." However, often people who can 

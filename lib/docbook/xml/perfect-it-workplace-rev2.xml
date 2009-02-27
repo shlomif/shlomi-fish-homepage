@@ -97,6 +97,15 @@
                 </revremark>
             </revision>
 
+            <revision>
+                <revnumber>2319 (svn)</revnumber>
+                <date>27 February 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added missing id=""'s to footnotes, so they won't
+                    be randomly generated.
+                </revremark>
+            </revision>
         </revhistory>
     </articleinfo>
 
@@ -714,8 +723,8 @@
             </para>
             <para>
                 If your employees are productive, you should not really be
-                concerned what they are doing on their work time.<footnote 
-                    id="eric-sink-scrabble" label="EricSink">
+                concerned what they are doing on their work time.
+                <footnote id="eric-sink-scrabble" label="EricSink">
                     <para>
                         Eric Sink wrote <ulink url="http://www.ericsink.com/entries/scrabble_1994.html">a 
                             wonderful entry about the tolerance of 
@@ -802,8 +811,8 @@
                 companies want people with a lot of experience in a certain
                 niche, is because they tend to overcome problems they
                 encounter more easily and so can help themselves and their
-                co-workers with their problem more easily.<footnote 
-                    id="linux-systems" label="Linux Systems Programming">
+                co-workers with their problem more easily.
+                <footnote id="linux-systems" label="Linux Systems Programming">
             
                     <para>
                         For example, I have a lot of experience working on Linux
@@ -1291,8 +1300,7 @@ function create_employee(params)
 
             <para>
                 Even making rounder wheels is a good way to earn
-                a living and to get respect.<footnote 
-                    id="ideas-at-the-same-time" label="Ideas at Same Time">
+                a living and to get respect.<footnote id="ideas-at-the-same-time" label="Ideas at Same Time">
                     <para>
                         I once saw a quote that said:
                     </para>

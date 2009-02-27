@@ -49,9 +49,11 @@ $out->print(
     sort { $a cmp $b }
     (
         (map { ( "$_.xml", $_, "$_.dat" ) } @fortunes),
-        (map { $_->filename(); } 
-        io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|atom|rss|spec\.in)\z} })->all_files()),
-        "Makefile", "ver.txt",
+        (map { $_->filename(); }
+        io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in)\z} })->all_files()),
+        "fortunes-shlomif-all.atom"
+        "fortunes-shlomif-all.rss"
+        "Makefile", "ver.txt", 
     )
 );
 

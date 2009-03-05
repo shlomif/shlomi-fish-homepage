@@ -4256,5 +4256,92 @@ up.  (I wrote tests for part of it.)
           </info>
       </quote>
     </fortune>
+    <fortune id="sharp-moose-someone-is-wrong">
+      <meta>
+        <title>"Someone is Wrong"</title>
+      </meta>
+      <irc>
+          <body>
+<saying who="mst">but jrockway will bitch about them all anyway</saying>
+<saying who="stevan">rhesa: 100% of those with the last name &quot;Rockway&quot; will do that</saying>
+<saying who="rhesa">hehehe</saying>
+<saying who="rjbs">Subject: catalyst framework not compatible with PERL</saying>
+<saying who="jrockway">stevan: i am going to name my kid &quot;Someone is WRONG&quot;</saying>
+<saying who="stevan">jrockway: I think that will be implied, no need to actually name him that </saying>
+<saying who="perigrin">Someone is WRONG rockway</saying>
+<saying who="perigrin">has a nice ring to it</saying>
+<saying who="Penfold">aka &#39;little Bobby wrong&#39;?</saying>
+<saying who="rhesa">would make a great children&#39;s book series: SiW in the zoo etc</saying>
+<saying who="stevan">:D</saying>
+<saying who="stevan">the first one in the series should be Someone is Wrong on the internet</saying>
+<saying who="jrockway">rhesa: that is a great idea!</saying>
+<saying who="jrockway">rhesa: i have a friend who is writing a children&#39;s book</saying>
+<saying who="jrockway">i will tell her to change the title and content immediately!</saying>
+<saying who="jrockway">someone is wrong in the children&#39;s book industry!</saying>
+<saying who="rjbs">&quot;No, zookeeper.  That animal doesn&#39;t have a tail; it&#39;s *not* a monkey!&quot;</saying>
+          </body>
+        <info>
+            <channel>#moose</channel>
+            <network>irc.perl.org</network>
+            <tagline>"Someone is Wrong"</tagline>
+        </info>
+      </irc>
+    </fortune>
+    <fortune id="sharp-moose-lightning-fast-objects">
+      <meta>
+        <title>Lightning Fast Objects</title>
+      </meta>
+      <irc>
+          <body>
+<saying who="jrockway">btw, feel free to LOL: http://stackoverflow.com/questions/605641/how-to-use-classarrayobjects</saying>
+<saying who="jrockway">wow, such concise code</saying>
+<saying who="jrockway">and i can FEEL THE SPEED from using arrays</saying>
+<saying who="rjbs">bowl full of mush</saying>
+<saying who="rindolf">jrockway: there was a discussion about using arrays as objects in module-authors.</saying>
+<saying who="jrockway">i read it and laughed</saying>
+<saying who="jrockway">(yeah, someone is wrong on the internet, but i don&#39;t really care)</saying>
+<saying who="rjbs">I use JSON strings as my objects, and define my classes in terms of regexps that pull out the right attributes.</saying>
+<saying who="rjbs">It makes the code portable to JavaScript, except the methods.</saying>
+<saying who="jrockway">great plan!</saying>
+<saying who="jrockway">regexps are fast in perl, because perl is designed for parsing text</saying>
+<saying who="rjbs">tx, can I add &quot;endorsed by jon rockway&quot; to my precis?</saying>
+<saying who="jrockway">oh yeah</saying>
+<saying who="jrockway">i recommend you reverse the JSON first, though, to provide better encapsulation</saying>
+<saying who="jrockway">otherwise people could read the objects... and that breaks encapsulation, dontchaknow</saying>
+<saying who="rjbs">I use UTF-16 and rot4096.</saying>
+<saying who="jrockway">UTF-16 IS TOO SLOW!</saying>
+<saying who="rindolf">Heh.</saying>
+<saying who="jrockway">i can&#39;t believe we are even having this conversation... utf-16...</saying>
+<saying who="jrockway">i am never speaking to you again!</saying>
+<me_is who="rindolf">wonders how one can combine JSON with inside-out objects.</me_is>
+<saying who="rjbs">jrockway: no, no, WITHOUT the bom</saying>
+<saying who="rjbs">BOM is what makes it slow.</saying>
+<saying who="rjbs">rindolf: sub id { my $self = shift; $json_parser_for{ $self }-&gt;decode($json_for{ $self })-&gt;{id} }</saying>
+<saying who="rindolf">rjbs: LOL.</saying>
+<saying who="rindolf">rjbs++</saying>
+<saying who="Dylan">unicode: somebody set us up the BOM</saying>
+<saying who="ilmari">BOM-de-ada</saying>
+<saying who="rindolf">Where&#39;s the BOM? There was supposed to be an earth-shattering Ka-BOM!</saying>
+<saying who="rjbs">I think Iran has it.</saying>
+<saying who="perigrin">if it doesn&#39;t ... Sen. McCain will introduce a bill to provide them with one</saying>
+<saying who="rjbs">give the bom bom bom, bom to Iran</saying>
+<saying who="rjbs">funnier if you pronounce Iran properly</saying>
+<saying who="perigrin">iran ... iran so far away ... </saying>
+<saying who="rindolf">iRack - http://www.youtube.com/watch?v=rw2nkoGLhrE</saying>
+<saying who="autarch">someone set us up the BOM</saying>
+<saying who="jnapiorkowski">I thought all our base waz ownzed or something like that</saying>
+<me_is who="confound">is the king of BOM</me_is>
+<saying who="rjbs">who&#39;s the BOM king?</saying>
+<saying who="confound">I&#39;m the BOM king!</saying>
+<saying who="ubu">&quot;once i was the King of BOM&quot;</saying>
+<saying who="rjbs">hear me now</saying>
+          </body>
+        <info>
+            <channel>#moose</channel>
+            <network>irc.perl.org</network>
+            <tagline>Lightning Fast Objects</tagline>
+        </info>
+      </irc>
+    </fortune>
   </list>
 </collection>

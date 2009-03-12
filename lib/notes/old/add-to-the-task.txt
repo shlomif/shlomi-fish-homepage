@@ -1,0 +1,19 @@
+This is a list of modules to add to the Task-Sites-ShlomiFish :
+
+App::XML::DocBook::Builder
+XML::Grammar::Screenplay
+XML::Grammar::Fortune
+String::ShellQuote
+XML::Grammar::Fortune::Synd::App
+
+-----------------
+
+* Fix XML-Grammar-ProductsSyndication - the --prefix should not be mandatory.
+(See the post to the Module::Build mailing list.)
+
+* Replace the latemp build system with a perl-based script. (SCons seems to
+have broken compatibility).
+
+* Fix XML-Grammar-Screenplay - the --prefix should not be mandatory.
+(See the post to the Module::Build mailing list.)
+

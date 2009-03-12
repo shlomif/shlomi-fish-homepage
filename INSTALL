@@ -24,7 +24,7 @@ Or if you have CPANPLUS installed:
 
     $ svn co http://svn.berlios.de/svnroot/repos/web-cpan/latemp/trunk/
     $ cd trunk/installer
-    $ mkdir "$HOME/apps/latemp"
+    $ mkdir -p "$HOME/apps/latemp"
     $ scons PREFIX="$HOME/apps/latemp/" install
     $ cd ../support-headers
     $ perl install.pl
@@ -48,5 +48,5 @@ Or if you have CPANPLUS installed:
     $ svn co http://opensvn.csie.org/shlomif/homepage/trunk/
     $ cd trunk
     $ ./gen-helpers.pl
+        ( Ignore the make warning. )
     $ make
-

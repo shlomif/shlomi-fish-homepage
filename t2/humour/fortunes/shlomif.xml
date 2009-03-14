@@ -4763,5 +4763,38 @@ more classification.
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-good-scalar-localtime">
+        <meta>
+            <title>Good scalar localtime()</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">Good localtime(), #perl!</saying>
+<saying who="sproingie">rindolf: good scalar localtime to you</saying>
+<saying who="rindolf">sproingie: oooh! scalar context.</saying>
+<saying who="sproingie">well i didn&#39;t want to make ya parse it</saying>
+<saying who="rindolf">sproingie: it is implied however.</saying>
+<saying who="sproingie">(er unparse it)</saying>
+<saying who="rindolf">Good strftime($format, localtime()).</saying>
+<saying who="rindolf">But better use DateTime.</saying>
+<saying who="rindolf">Or something.</saying>
+<saying who="icke">sub good ($$$) { ... }</saying>
+<saying who="rindolf">icke: yes.</saying>
+<saying who="rindolf">eval: good localtime(), #perl!</saying>
+<saying who="buubot3">rindolf: ERROR: syntax error at (eval 21) line 1, near &quot;good localtime&quot;</saying>
+<saying who="Altreus">eval: &#39;hi rindolf how is your &#39;.scalar localtime.&#39;?&#39;</saying>
+<saying who="buubot3">Altreus: hi rindolf how is your Tue Mar 10 15:43:13 2009?</saying>
+<saying who="rindolf">Altreus: how is my Tuesday, 10-March-2009?</saying>
+<saying who="rindolf">Altreus: or do you mean down right to that exact second.</saying>
+<saying who="Altreus">rindolf: I gave you as much information as I could for you to use as you see fit.</saying>
+<saying who="Altreus">If you don&#39;t need it all you can just take the date</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Good scalar localtime()</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

@@ -4343,5 +4343,49 @@ up.  (I wrote tests for part of it.)
         </info>
       </irc>
     </fortune>
+    <fortune id="pgtap-0.20-announcement">
+      <meta>
+        <title>"pgTAP 0.20 Infiltrates Community"</title>
+      </meta>
+      <quote>
+          <body>
+              <p>
+                  I did all I could to stop it, but it just wasn't possible.
+                  pgTAP 0.20  has somehow made its way from my Subversion
+                  server and infiltrated the  PostgreSQL community. Can nothing
+                  be done to stop this menace? Its use  leads to cleaner, more
+                  stable, and more-safely refctored code. This  insanity must
+                  be stopped! Please review the following list of its  added
+                  vileness since 0.19 to determine how you can stop the
+                  terrible,  terrible influence on your PostgreSQL unit-testing
+                  practices that is  pgTAP: …
+              </p>
+              <p>
+Don't make the same mistake I did, where I wrote a lot of pgTAP tests  for a
+client, and now testing database upgrades from 8.2 to 8.3 is  just too
+reliable! And by all means, DO NOT read the documentation or  download and
+install this monstrosity, since it could easily lead to  cleaner, more stable
+code, and therefore losing your job!
+</p>
+
+<p>
+http://pgtap.projects.postgresql.org/
+http://pgfoundry.org/frs/?group_id=1000389
+</p>
+
+<p>
+YOU HAVE BEEN WARNED.
+</p>
+
+<p>
+Good luck with your mission.
+</p>             
+          </body>
+        <info>
+            <author>David E. Wheeler</author>
+            <work href="http://testanything.org/pipermail/tap-l/2009-March/000314.html">pgTAP 0.20 Infiltrates Community</work>
+        </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

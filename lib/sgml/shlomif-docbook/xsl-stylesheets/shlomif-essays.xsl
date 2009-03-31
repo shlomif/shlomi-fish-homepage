@@ -85,7 +85,7 @@ google_color_url = "008000";
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>
-    <xsl:if test="$docmake.output.work_in_progress">
+    <xsl:if test="string($docmake.output.work_in_progress)">
     <div class="center warning">
         <p>
             <b>Note:</b> This document is work-in-progress. Please don't 

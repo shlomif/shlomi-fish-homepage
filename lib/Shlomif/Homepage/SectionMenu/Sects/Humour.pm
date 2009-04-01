@@ -204,6 +204,10 @@ my $humour_tree_contents =
                     'text' => "Cracka's Paradise",
                     'url' => "humour/bits/Crackas-Paradise/",
                 },
+                {
+                    'text' => "Mastering cat",
+                    'url' => "humour/bits/Mastering-Cat/",
+                },
             ],
         },
         {

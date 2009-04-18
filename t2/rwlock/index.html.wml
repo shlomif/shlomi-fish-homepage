@@ -1,10 +1,12 @@
 #include '../template.wml'
 <latemp_subject "A First-Come First-Served Readers/Writers Lock" />
 
-<h2><a href="./linux-kernel/">New! FCFS flock for the Linux Kernel</a></h2>
+<p>
+<a href="pthread_rwlock_fcfs-0.8.0.tar.bz2"><b>Download the latest (0.8.0) stable version source code.</b></a>
+</p>
 
 <p>
-<a href="pthread_rwlock_fcfs-0.6.0.tar.bz2">Download the latest (0.6.0) stable version source code.</a>
+<a href="./linux-kernel/">FCFS flock for the Linux Kernel</a>
 </p>
 
 <define-tag devel_version>
@@ -120,6 +122,10 @@ variables. The new scheme for it (which is a bit more complex) can be found
 <h2>Older Versions</h2>
 
 <ul>
+
+<li>
+<a href="pthread_rwlock_fcfs-0.6.0.tar.bz2">Version 0.6.0</a>
+</li>
 
 <li>
 <a href="pthread_rwlock_fcfs-0.4.0.tar.gz">Version 0.4.0</a>

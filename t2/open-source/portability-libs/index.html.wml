@@ -19,6 +19,23 @@ such as <a href="http://www.perl.org/">Perl</a>,
 for such things within the language.
 </p>
 
+<define-tag licence_qt>
+LGPLed starting from version 4.5. Previously licensed under either the GPL
+or a commercial licence.
+</define-tag>
+
+<define-tag lib_qt_core>
+
+<li>
+<p>
+<a href="http://doc.trolltech.com/4.1/qtcore.html">QtCore</a> - 
+part of <a href="#lib_qt">Qt</a> that provides data structures and system
+services (and not GUI). <licence_qt />
+</p>
+</li>
+
+</define-tag>
+
 <h2*>Table of Contents</h2*>
 
 <toc />
@@ -64,6 +81,9 @@ Library of Basics for C that contains a pool allocator, a Perl-like vector
 , hashes, Perl-like strings, and matrix and vector functions. LGPLed.
 </p>
 </li>
+
+<lib_qt_core />
+
 </ul>
 
 <h2 id="system_services">System-Services Abstractions</h2>
@@ -117,7 +137,8 @@ for many system services.
 
 <li>
 <p>
-<a href="http://www.wxwindows.org/">wxBase</a> - a subset of the wxWindows
+<a href="http://www.wxWidgets.org/">wxBase</a> - a subset of the 
+<a href="lib_wx">wxWidgets</a>
 library that can be used for multi-threading and the such. C++ and LGPLed.
 </p>
 </li>
@@ -149,25 +170,28 @@ streams, shared libraries and class loading, sockets and network protocols
 with SAX2 and DOM interfaces.
 </p>
 </li>
+
+<lib_qt_core />
+
 </ul>
 
 <h2 id="gui">Graphical User-Interface</h2>
 
 <ul>
-<li>
+
+<li id="lib_wx">
 <p>
-<a href="http://www.wxwindows.org/">wxWindows</a> - a C++ cross-platform GUI
-library with Win32 and X-Windows Back-ends. LGPL.
+<a href="http://www.wxwidgets.org/">wxWidgets</a> (formerly wxWindows) - 
+a C++ cross-platform GUI library with Win32 , X-Windows and Mac OS X 
+back-ends. LGPLed.
 </p>
 </li>
 
-<li>
+<li id="lib_qt">
 <p>
 <a href="http://www.trolltech.com/">Qt</a> -  a C++ cross-platform GUI
 library with Win32, X-Windows and Mac OS X backends. A very encompassing API. 
-Dually Licensed GPL/QPL for X-Windows, Mac OS X, and since version 4.x for 
-Microsoft Win32 as well. Developing commercial applications with it will 
-require a license from its vendor, Troll-Tech.
+<licence_qt />
 </p>
 </li>
 
@@ -191,7 +215,8 @@ LGPLed.
 <p>
 <a href="http://www.borland.com/">Borland's VCL</a> - The GUI library behind
 Delphi and C++ Builder. Proprietary License, which is free for use for
-developing Open-Source Programs.
+developing Open-Source Programs. <b>Note:</b> Linux version no longer 
+up-to-date or supported.
 </p>
 </li>
 
@@ -228,8 +253,8 @@ flavours of UNIX. Has bindings to many other languages
 <p>
 <a href="http://www.opengl.org/">OpenGL</a> - a portable library for
 3-D and 2-D graphics, that provides many graphics primitives. Has an 
-open-source LGPLed implementation titled <a href="http://www.mesa3d.org/">
-Mesa</a>.
+open-source LGPLed implementation titled 
+<a href="http://www.mesa3d.org/">Mesa</a>.
 </p>
 </li>
 
@@ -303,8 +328,6 @@ Multi-media:
 
 GUI:
 ====
-
-Borlands VCL
 
 Databases:
 ==========

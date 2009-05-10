@@ -1,0 +1,25 @@
+#include '../template.wml'
+
+<script type="text/javasript" src="toggle-squares.js"></script>
+<script type="text/javascript" src="ts-2.js"></script>
+
+<latemp_subject "Toggle Squares Game" />
+
+<p>
+This game originated from a Java game by Dr. Ken Housley, whose personal
+site has since gone offline. This implementation is JavaScript-based.
+</p>
+
+<form action="" method="post">
+<p>
+Num Squares: <input name="num_squares" value="5">
+</p>
+
+<p>
+<input type="Submit" value="Generate">
+</p>
+
+</form>
+
+<div id="board">
+</div>

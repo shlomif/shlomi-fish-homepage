@@ -54,24 +54,23 @@ function press_button(x, y)
 function toggle_button(ix,iy)
 {
     var button_name = "button_" + ix + "_" + iy;
-    var button_handle = document.images[button_name];
+    var button_handle = $("#" + button_name);
+
     //document.mydebug.out.value += "SRC = " + button_handle.src + "\n";
-    var old_src = button_handle.src;
-    var old_src_len = old_src.length;
-    var old_src_last = old_src.substring(old_src_len-5, old_src_len);
+    var old_src = button_handle.attr("src");
     //document.mydebug.out.value += "old_src_last = " + old_src_last + "\n";
     
-    var old_state = (old_src_last == "1.png")
+    var old_state = (old_src == "1.png")
     var new_state = !old_state;
 
     if (new_state)
     {
-        button_handle.src = "1.png";
+        button_handle.attr("src", "1.png");
         //button_handle.alt = "black";
     }
     else
     {   
-        button_handle.src = "0.png";
+        button_handle.attr("src", "0.png");
         //button_handle.alt = "white";
     }
 }

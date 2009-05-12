@@ -456,6 +456,10 @@ my $tree_contents =
                     'title' => "Frequently Asked Questions and Answers List (FAQ)",
                 },
                 {
+                    'url' => "meta/privacy-policy/",
+                    'text' => "Privacy Policy",
+                },
+                {
                     'url' => "meta/site-source/",
                     'text' => "Site's Source",
                     'title' => "The source code used to generate this site",

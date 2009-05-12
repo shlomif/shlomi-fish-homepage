@@ -28,4 +28,5 @@ for (y=0 ; y < n ; y++)
 board_html += "</table>\n";
 $(document).ready(function() {
     $("#board").html(board_html);
+    randomize_squares();
     });

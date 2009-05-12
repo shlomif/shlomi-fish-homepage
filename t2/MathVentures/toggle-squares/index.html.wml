@@ -1,5 +1,23 @@
 #include '../template.wml'
 
+<page_extra_head_elements>
+<style type="text/css">
+.game, .game td, .game tr, .game img
+{
+    border-collapse: collapse;
+    border-width: 0;
+    border: none;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+.game img
+{
+    display: block;
+}
+</style>
+</page_extra_head_elements>
+
 <script type="text/javascript" src="toggle-squares.js"></script>
 <script type="text/javascript" src="ts-2.js"></script>
 
@@ -12,11 +30,11 @@ site has since gone offline. This implementation is JavaScript-based.
 
 <form action="" method="post">
 <p>
-Num Squares: <input name="num_squares" value="5">
+Num Squares: <input name="num_squares" value="5" />
 </p>
 
 <p>
-<input type="Submit" value="Generate">
+<input type="submit" value="Generate" />
 </p>
 
 </form>

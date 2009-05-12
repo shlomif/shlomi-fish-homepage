@@ -1,7 +1,7 @@
 var board_html = "";
 var n = 5;
 var y, x;
-board_html += "<table border=\"0\" cellspacing=\"0\">";
+board_html += "<table class=\"game\">";
 
 function button_html(x, y, value)
 {
@@ -11,19 +11,19 @@ function button_html(x, y, value)
         "\" alt=\"" + 
         (value ? "white" : "black") + 
         "\" id=\"button_" + x + "_" + y + "\"" + 
-        "onclick=\"press_button(" + x + "," + y + "); return false;\">"
+        "onclick=\"press_button(" + x + "," + y + "); return false;\" />"
         );
 }
 
 
 for (y=0 ; y < n ; y++)
 {
-    board_html += "<tr>\n";
+    board_html += "<tr>";
     for(x=0 ; x < n ; x++)
     {
         board_html += "<td>" + button_html(x,y,false) + "</td>";
     }
-    board_html += "</tr>\n";
+    board_html += "</tr>";
 }
 board_html += "</table>\n";
 $(document).ready(function() {

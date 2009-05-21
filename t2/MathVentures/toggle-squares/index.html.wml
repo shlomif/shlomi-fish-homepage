@@ -30,11 +30,11 @@ site has since gone offline. This implementation is JavaScript-based.
 
 <form action="" method="post">
 <p>
-Num Squares: <input name="num_squares" value="5" />
+Num Squares: <input name="num_squares" value="5" id="num_squares" />
 </p>
 
 <p>
-<input type="submit" value="Generate" />
+<input type="button" name="generate" value="Generate" onclick="generate_board()" />
 </p>
 
 </form>

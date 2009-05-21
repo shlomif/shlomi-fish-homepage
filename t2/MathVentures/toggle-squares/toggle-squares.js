@@ -75,12 +75,13 @@ function toggle_button(ix,iy)
     }
 }
 
-function randomize_squares()
+function randomize_squares(new_N)
 {
+    set_N(new_N);
     var x,y;
-    for(x=0;x<=N_squares-1;x++)
+    for(x=0;x<N_squares;x++)
     {
-        for(y=0;y<=N_squares-1;y++)
+        for(y=0;y<N_squares;y++)
         {
             if (Math.random()*2 < 1)
             {                

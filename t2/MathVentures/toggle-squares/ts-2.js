@@ -1,7 +1,4 @@
-var board_html = "";
-var n = 5;
-var y, x;
-board_html += "<table class=\"game\">";
+var n;
 
 function button_html(x, y, value)
 {
@@ -16,17 +13,31 @@ function button_html(x, y, value)
 }
 
 
-for (y=0 ; y < n ; y++)
+function generate_board()
 {
-    board_html += "<tr>";
-    for(x=0 ; x < n ; x++)
+    var board_html = "";
+    var y, x;
+
+    n = parseInt($("#num_squares").val());
+
+    board_html += "<table class=\"game\">";
+
+    for (y=0 ; y < n ; y++)
     {
-        board_html += "<td>" + button_html(x,y,false) + "</td>";
+        board_html += "<tr>";
+        for(x=0 ; x < n ; x++)
+        {
+            board_html += "<td>" + button_html(x,y,false) + "</td>";
+        }
+        board_html += "</tr>";
     }
-    board_html += "</tr>";
-}
-board_html += "</table>\n";
-$(document).ready(function() {
+
+    board_html += "</table>\n";
+
     $("#board").html(board_html);
-    randomize_squares();
+    randomize_squares(n);
+}
+
+$(document).ready(function() {
+        generate_board();
     });

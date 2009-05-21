@@ -380,7 +380,7 @@ my $tree_contents =
         {
             'text' => "Essays",
             'url' => "philosophy/",
-            'expand' => { 're' => "^(philosophy|prog-evolution)/", },
+            'expand' => { 're' => "^(philosophy|prog-evolution|DeCSS)/", },
             'title' => "Various Essays and Articles about Technology and Philosophy in General",
             'subs' =>
             [
@@ -409,11 +409,6 @@ my $tree_contents =
                     'expand' => { 're' => "^philosophy/(philosophy/|the-eternal-jew/)" },
                 },
             ],
-        },
-        {
-            'text' => "Opinion on DeCSS",
-            'url' => "DeCSS/",
-            'title' => "My Opinion on the DeCSS (= DVDs' de-scrambling code) fiasco",
         },
         {
             'separator' => 1,

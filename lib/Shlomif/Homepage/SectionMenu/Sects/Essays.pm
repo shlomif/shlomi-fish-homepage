@@ -280,6 +280,11 @@ my $essays_tree_contents =
                     'text' => "Dispelling Some Myths about Israel",
                     'url' => "philosophy/politics/dispelling-myths-about-israel/",
                 },
+                {
+                    'text' => "Opinion on DeCSS",
+                    'url' => "DeCSS/",
+                    'title' => "My Opinion on the DeCSS (= DVDs' de-scrambling code) fiasco",
+                },
             ],
         },
         {

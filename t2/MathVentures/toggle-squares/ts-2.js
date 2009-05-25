@@ -8,7 +8,7 @@ function button_html(x, y, value)
         "\" alt=\"" + 
         (value ? "white" : "black") + 
         "\" id=\"button_" + x + "_" + y + "\"" + 
-        "onclick=\"press_button(" + x + "," + y + "); return false;\" />"
+        "onclick=\"user_press_button(" + x + "," + y + "); return false;\" />"
         );
 }
 

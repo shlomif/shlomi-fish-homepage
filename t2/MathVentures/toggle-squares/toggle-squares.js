@@ -1,8 +1,10 @@
 var N_squares = 5;
+var count_of_ons = 0;
 
 function set_N(new_n)
 {
     N_squares = new_n;
+    count_of_ons = 0;
 }
 
 function get_min(x)
@@ -66,11 +68,13 @@ function toggle_button(ix,iy)
     if (new_state)
     {
         button_handle.attr("src", "1.png");
+        count_of_ons++;
         //button_handle.alt = "black";
     }
     else
     {   
         button_handle.attr("src", "0.png");
+        count_of_ons--;
         //button_handle.alt = "white";
     }
 }
@@ -88,5 +92,14 @@ function randomize_squares(new_N)
                 press_button(x,y);
             }
         }
+    }
+}
+
+function user_press_button(x, y)
+{
+    press_button(x, y);
+    if ((count_of_ons == 0) || (count_of_ons == (N_squares * N_squares)))
+    {
+        alert("Congratulations! You solved the game!");
     }
 }

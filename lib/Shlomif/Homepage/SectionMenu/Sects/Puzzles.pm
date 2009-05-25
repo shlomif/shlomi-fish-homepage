@@ -45,6 +45,13 @@ my $puzzles_tree_contents =
                 {
                     'text' => "Toggling Squares is not that Trivial",
                     'url' => "MathVentures/toggle_squares.html",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "The Toggle Squares Game",
+                            'url' => "MathVentures/toggle-squares/",
+                        },
+                    ],
                 },
                 {
                     'text' => "Bugs in a Square",

@@ -565,7 +565,42 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
                 Licence</ulink>
         </para>
 
-</section>
+    </section>
+
+    <section id="which-licence-gpl-or-lgpl">
+        <title>Bad Idea No. 6: Using the GPL or the LGPL</title>
+
+        <para>
+            The GNU General Public Licence (GPL) and GNU Lesser General
+            Public Licence (LGPL) contain many additional restrictions to the 
+            concept of copyleft, and are very mis-understood, over-hyped, and 
+            don't maintain compatibility with newer versions. Even 
+            <ulink url="http://discuss.joelonsoftware.com/default.asp?joel.3.642822.36">the LGPL is 
+            reportedly problematic</ulink>
+        </para>
+
+
+        <para> 
+            The GPL and LGPL are of more political nature than other similar
+            FOSS licences, and as such should be avoided. I recommend using the
+            <ulink url="http://en.wikipedia.org/wiki/Sleepycat_License">Sleepycat 
+                licence</ulink>, which is a strong-copyleft licence, that is
+            compatible with GPLv2 and above, instead of the GPL and the 
+            Artistic 2.0 (or above) licence instead of the LGPL. And naturally
+            permissive, non-copyleft, open-source licences such as the MIT 
+            X11 Licence are an option.
+        </para>
+
+        <para> 
+            I read the GPLv2 originally once and couldn't understand it. The
+            LGPLv2 or the GPLv3 would likely prove to be more problematic.
+            I find it harder to trust lengthy documents that I am unable to
+            understand. I had no problem understanding the Sleepcat licence,
+            the Perl Artistic licence, or the MIT X11 and BSD licences,
+            so I can better recommend them instead.
+        </para>
+    </section>
+
 </section>
 
 </article>    <!-- End of the article -->

@@ -464,4 +464,67 @@ thinks otherwise. We have enough problems with the suitability of the GPL for
 embedded systems, that we don't need to kill the prospering web-apps market too.
 </para>
 </section>
+<section id="which-licence-to-choose">
+    <title>Which Licence To Choose</title>
+    <para>
+        Now that we covered the controversy of whether some licences are
+        open-source/free software or not, let's move on to which licence you
+        should choose. I'll start with some bad ideas of what not to do.
+    </para>
+    <section id="which-licence-non-open-source">
+        <title>Bad Idea No. 1: Choose a non-Open-Source Licence</title>
+        <para>
+            Well, I'm not sure it is a bad idea, but choosing a licence for a
+            non-FOSS program is out of the scope for what I'm trying to write.
+            I'm not going to stop you from trying, but I'm not going to help
+            you with the licence choice, either. My best advice is to consult 
+            a lawyer.
+        </para>
+    </section>
+
+    <section id="which-licence-non-gpl-compatible">
+        <title>Bad Idea No. 2: Choose a non-GPL-Compatible Licence</title>
+
+        <para>
+            David A. Wheeler <ulink 
+                url="http://www.dwheeler.com/essays/gpl-compatible.html">wrote 
+                about why it is important to pick a GPL-compatible licence
+            for one's software project</ulink>.
+        </para>
+
+        <para> 
+            Now, since version 2 of the GPL is incompatible with version
+            3, and vice-versa (due to the additional restrictions imposed 
+            by version 3) you shouldn't choose GPLv2-only or GPLv3-only or
+            GPLv3-and-above, because some projects may be licensed only under
+            one of them. Also, the version 3 of the LGPL is incompatible with 
+            the GPLv2, so you shouldn't choose it either.  
+            GPL-version-2-or-above or LGPL-version-2.1-or-above should be 
+            OK in this respect.
+        </para>
+
+    </section>
+
+    <section id="which-licence-custom">
+        <title>Bad Idea No. 3: Choose a Custom Licence</title>
+
+        <para>
+            You shouldn't phrase your own licence and hope it will be
+            considered open-source and GPL-compatible as there
+            are plenty of 
+            <ulink url="http://en.wikipedia.org/wiki/List_of_FSF_approved_software_licences">open-source licences</ulink> to
+            choose from. Creating your own license may put your users
+            and you under risk of abuse and will contribute to the problem
+            of <ulink url="http://en.wikipedia.org/wiki/License_proliferation">Licence 
+                proliferation</ulink>, and may confuse your users who will
+            need to read your unusual licence in order to study it.
+        </para>
+
+        <para>
+            So, don't do that.
+        </para>
+    </section>
+
+</section>
+
 </article>    <!-- End of the article -->

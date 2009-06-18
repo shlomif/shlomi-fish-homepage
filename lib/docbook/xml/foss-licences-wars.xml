@@ -49,6 +49,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </abstract>
 
         <revhistory>
+
+             <revision>
+                <revnumber>2431</revnumber>
+                <date>18 June 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the part about the GPL and the hacker attitude.
+                </revremark>
+            </revision>
+
              <revision>
                 <revnumber>2428</revnumber>
                 <date>15 June 2009</date>
@@ -612,6 +622,77 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             the Perl Artistic licence, or the MIT X11 and BSD licences,
             so I can better recommend them instead.
         </para>
+
+        <para>
+            One fact I should note is that the GPL often stands against
+            <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html#attitude">the 
+                Hacker's attitude</ulink> as presented by Eric Raymond
+            in <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">the
+            document "How to become a Hacker"</ulink>. It states that:
+        </para>
+
+        <blockquote>
+            <itemizedlist>
+
+                <listitem>
+                    <para>
+                        The world is full of fascinating problems waiting to 
+                        be solved.
+                    </para>
+                </listitem>
+
+                <listitem>
+                    <para>
+                        No problem should ever have to be solved twice.
+                    </para>
+                </listitem>
+
+            </itemizedlist>
+        </blockquote>
+
+        <para>
+            For example, the Free Software Foundation now started the
+            <ulink url="http://en.wikipedia.org/wiki/GNU_PDF">GNU 
+                PDF project</ulink> that is licensed under the GPL version 3,
+            because all the other Free software PDF projects are GPL version 2
+            only. So because the GPL was used, the same problem need to
+            be solved twice.
+        </para>
+
+        <para>
+            Another case where it happened was <ulink url="http://www.osnews.com/story/7241">this story of an the Inkscape set operations patch</ulink>:
+        </para>
+
+        <blockquote>
+            <para>
+
+                Once before, someone had contributed a patch to add boolean
+                operations, but that patch relied on a polygon clipping library
+                provided under an incompatible license. There's little more
+                frustrating than having a solution in hand, only to be
+                hamstrung by legal problems. Even though it was an important
+                feature for us, we regretfully postponed development of it into
+                the distant future on our roadmap and proceeded with other
+                work.
+
+            </para>
+        </blockquote>
+
+        <para>
+            Furthermore, the 
+            <ulink url="http://en.wikipedia.org/wiki/OpenBSD">OpenBSD</ulink>
+            project are now re-implementing a lot of software that is only 
+            available as GPL or similar licences, under BSD-style licences,
+            due to OpenBSD's more pedantic licensing policy. 
+        </para>
+
+        <para>
+            And finally, often one can build upon non-GPL-like-code and 
+            not release the derived work as free and open source software,
+            without it causing any harm, and actually causing a lot of good.
+            Which is otherwise prevented if the code is GPLed.
+        </para>
+
     </section>
 
 </section>

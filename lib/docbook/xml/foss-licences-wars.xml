@@ -464,8 +464,9 @@ everybody into abiding by irrational rules.
     Another curious licence is the <ulink 
         url="http://en.wikipedia.org/wiki/Affero_General_Public_License">Affero GPL</ulink> - 
 - which aims to close the "Application Service Provider Loophole". What it 
-means is that if I install an AGPLed program on a web-server and modify it 
-then I must make my modifications public. However, <link linkend="what-is-a-free-software-licence">the Free Software 
+means is that if I install an AGPLed program on a public web-server and modify 
+it then I must make my modifications public. However, <link 
+    linkend="what-is-a-free-software-licence">the Free Software 
 Definition</link> , says that one must have "The 
 freedom to study how the program works, and adapt it to his needs.". As a 
 result, I personally don't consider the AGPL as free (because I may wish to 
@@ -485,9 +486,9 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         <title>Bad Idea No. 1: Choose a non-Open-Source Licence</title>
         <para>
             Well, I'm not sure it is a bad idea, but choosing a licence for a
-            non-FOSS program is out of the scope for what I'm trying to write.
-            I'm not going to stop you from trying, but I'm not going to help
-            you with the licence choice, either. My best advice is to consult 
+            non-FOSS program is out of the scope for this document.
+            I'm not going to stop you from trying, but neither can I help
+            you with the licence choice. My best advice is to consult 
             a lawyer.
         </para>
     </section>
@@ -496,7 +497,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         <title>Bad Idea No. 2: Choose a non-GPL-Compatible Licence</title>
 
         <para>
-            David A. Wheeler <ulink 
+            David A. Wheeler <ulink
                 url="http://www.dwheeler.com/essays/gpl-compatible.html">wrote 
                 about why it is important to pick a GPL-compatible licence
             for one's software project</ulink>.
@@ -522,10 +523,12 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             You shouldn't phrase your own licence and hope it will be
             considered open-source and GPL-compatible as there
             are plenty of 
-            <ulink url="http://en.wikipedia.org/wiki/List_of_FSF_approved_software_licences">open-source licences</ulink> to
+            <ulink url="http://en.wikipedia.org/wiki/List_of_FSF_approved_software_licences">open-source 
+                licences</ulink> to
             choose from. Creating your own license may put your users
             and you under risk of abuse and will contribute to the problem
-            of <ulink url="http://en.wikipedia.org/wiki/License_proliferation">Licence 
+            of <ulink 
+                url="http://en.wikipedia.org/wiki/License_proliferation">licence 
                 proliferation</ulink>, and may confuse your users who will
             need to read your unusual licence in order to study it.
         </para>

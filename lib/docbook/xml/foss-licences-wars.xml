@@ -51,6 +51,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
 
             <revision>
+                <revnumber>2434</revnumber>
+                <date>18 June 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the Freecell though experiment.
+                </revremark>
+            </revision>
+
+            <revision>
                 <revnumber>2433</revnumber>
                 <date>18 June 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -820,6 +829,106 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         possibility.
     </para>
 
+    <para>
+        Quoting again:
+    </para>
+
+    <blockquote>
+        <blockquote>
+        <para>
+            For example, someone integrated my <ulink url="http://fc-solve.berlios.de/">Freecell Solver library</ulink> in a 
+            <ulink url="http://www.ambermango.com/php/am/f3d/index.php">shareware
+                
+                (without source) game he wrote titled Freecell 3D</ulink>
+        </para>
+
+        <para>
+            He sells ths game online. It did not do any damage, because
+            there are plenty of Freecell implementations around. I on my part
+            am pretty happy with the open-source PySolFC.
+        </para>
+
+</blockquote>
+
+<para>
+Let's imagine that you wrote a great freecell solver library, but you suck at
+UI and failed to create a graphical game based on that library, and wish that
+someone created a UI on top of your library. If your library is BSD, someone
+could create this UI but make it commercial and not even you can use it.
+If your library is GPL, this person is forced to either make his code public
+(so you and your friends can use it) or pay you for a new license.
+Which of those scenarios will make you happier? I can't see how the GPL isn't
+better in this scenario.
+</para>
+
+</blockquote>
+
+<para>
+    Well, first of all I should note that that is a lot of "if"'s. When I 
+    started working on Freecell Solver, there were already plenty of graphical 
+    Freecell games, possibly with support for other variants of Solitaire. And
+    there were also several open-source ones, including some very polished
+    ones.
+</para>
+
+<para>
+    As a result, I could have easily integrated my solver into one of them. So
+    your thought experiment is not very realistic, although it may be valid in
+    the general case.
+</para>
+
+<para>
+    Back to it, however, a person who would be interested in creating
+    a commercial Freecell UI and still use my library can also:
+</para>
+
+<orderedlist>
+
+    <listitem>
+        <para>
+            Develop his own Freecell solving library from scratch. That will
+            probably be less work than developing a graphical Freecell game.
+        </para>
+    </listitem>
+
+    <listitem>
+        <para>
+            Write a command line executable that uses the library call it, and
+            process its output. This strategy was taken by the developers of
+            the open-source
+            <ulink 
+                url="http://pysolfc.sourceforge.net/">PySolFC</ulink> out of 
+            convenience using my existing "fc-solve" executable.
+        </para>
+    </listitem>
+
+    <listitem>
+        <para>
+            Write a GPLed server for solving Freecell that the graphical
+            game would communicate with using TCP/IP or a different IPC
+            mechanism.
+        </para>
+    </listitem>
+
+    <listitem>
+        <para>
+            Decide that developing a graphical game only to later release it
+            as free software won't be worth his time, and as a result not
+            develop it at all.
+        </para>
+    </listitem>
+
+</orderedlist>
+
+<para>
+    In all of these cases, we won't have a graphical game as FOSS.
+</para>
+
+<para>
+    Finally I'd rather have a proprietary derived work than no derived
+    program at all, or that instead someone will duplicate my effort in 
+    creating a BSD-style or a proprietary replacement for my work.
+</para>
 </section>
 
 </article>    <!-- End of the article -->

@@ -50,7 +50,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
         <revhistory>
 
-             <revision>
+            <revision>
+                <revnumber>2433</revnumber>
+                <date>18 June 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the Exceed thought-experiment.
+                </revremark>
+            </revision>
+
+            <revision>
                 <revnumber>2431</revnumber>
                 <date>18 June 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -59,7 +68,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 </revremark>
             </revision>
 
-             <revision>
+            <revision>
                 <revnumber>2428</revnumber>
                 <date>15 June 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -78,6 +87,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     it.
                 </revremark>
             </revision>
+
         </revhistory>
     </articleinfo>
 
@@ -749,4 +759,67 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </listitem>
     </itemizedlist>
 </section>
+
+<section id="strong-copyleft-and-threats-to-foss">
+    <title>Strong Copyleft and Preventing Threats to FOSS</title>
+
+    <para>
+        When I <ulink 
+            url="http://tech.groups.yahoo.com/group/hackers-il/message/5009">posted an early draft of this essay</ulink> 
+        to <ulink url="http://www.hackers.org.il/">Hackers-IL 
+            mailing list</ulink>, I received <ulink 
+            url="http://tech.groups.yahoo.com/group/hackers-il/message/5017">a
+            comment about the fact that GPL (or other strong copyleft licences
+            prevents threats to free and open source software</ulink>. I'd
+        like to reply to it here.
+    </para>
+
+    <para>
+        Quoting from the comment:
+    </para>
+
+    <blockquote>
+        <para>
+
+            In the second half of the 90s, <ulink 
+                url="http://en.wikipedia.org/wiki/X_Window_System">X-Windows</ulink> 
+            was quite popular - a
+            department (in universities, companies, etc.) would have strong
+            Unix workstations (from Sun, DEC, SGI, HP and other vendors) and
+            people would have cheaper machines showing the output from the
+            strong machine using X-Windows. As MS-Windows grew popular, people
+            wanted to use their PC running Windows to display X-Windows
+            sessions. But unfortunately, the only X server available for
+            Windows was commercial software (Exceed), which could happen
+            because X was BSD-licensed and not GPL. Users (at the time, most
+            had corporate or university funds - they weren't home users) bit
+            the bullet and paid. It took literarly years before a free X server
+            for Windows became available.
+
+        </para>
+    </blockquote>
+
+    <para>
+        My response is that this was indeed a problem and inconvenieced the
+        users of Exceed. However, if X-Windows were GPLed, then the 
+        people who made Exceed and wanted to sell it, would not have made it 
+        in the first place, because they had to make it GPLed and keep
+        it as FOSS. So either they would have implemented it from scratch or 
+        not at all. It is possible that a different group would have created a 
+        free X server for Windows, but it is possible that no free X server 
+        would have been available at all. And if a different group
+        could have created a free X server for Windows without Exceed, they 
+        could have certainly created it with it.
+    </para>
+
+    <para>
+        Furthermore, If X11 had been initiated under a non-BSD-style-licence, 
+        then it is possible it would not have become as ubiquitous as it is in 
+        the UNIX world, thus making it irrelevant to port it to Windows in the
+        first place. We can't tell that for sure, but I think it is a
+        possibility.
+    </para>
+
+</section>
+
 </article>    <!-- End of the article -->

@@ -311,16 +311,68 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Prominent examples of Public Domain licences include 
-            <ulink url="http://en.wikipedia.org/wiki/BSD_licenses">the
-                various BSD licences</ulink> (of which the most recommended are
-            the 3-clause or 2-clause variants - not the original 4-clause 
-            one), the 
-            <ulink url="http://en.wikipedia.org/wiki/MIT_License">MIT 
-                X11 Licence</ulink>, <ulink url="http://en.wikipedia.org/wiki/Apache_License">the Apache Licence</ulink>
-            and <ulink url="http://en.wikipedia.org/wiki/ISC_license">the
-            ISC licence</ulink>.
+            Prominent examples of Public Domain licences include:
         </para>
+
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/BSD_licenses">The
+                        various BSD licences</ulink>, under which
+                    the "Berkeley Software Development" UNIX variant
+                    were made available. The original 4-clause 
+                    BSD licence contained an additional <ulink 
+                        url="http://www.gnu.org/philosophy/bsd.html">advertising clause</ulink>,
+                    that required publishing the names of the copyright
+                    holders on every advertising material. This proved
+                    to be a problem and was rendered GPL-incompatible
+                    and so using this licence is no longer recommended.
+                </para>
+                <para>
+                    Later on, the advertising clause was removed to formulate
+                    3-clause and 2-clause BSD licences, which are both less
+                    problematic and GPL-compatible. 
+                </para>
+            </listitem>
+
+            <listitem>
+                <para>
+                    The <ulink 
+                        url="http://en.wikipedia.org/wiki/MIT_License">MIT 
+                        X11 Licence</ulink> was created by MIT for their
+                    X Window System software. It explicitly allows to do
+                    many activities with the licensed code, including 
+                    sub-licensing, which means converting derived works
+                    of the code to different licences.
+                </para>
+            </listitem>
+
+            <listitem>
+                <para>
+                    <ulink 
+                        url="http://en.wikipedia.org/wiki/Apache_License">the 
+                        Apache Licence</ulink> was formulated for the Apache
+                    project and has seen several revisions. It includes some
+                    language to deal with patent-related issues. The latest
+                    version - Apache 2.0 was partially created in order
+                    to be compatible with version 2 of the GPL, but the
+                    FSF ruled the Apache Licence as incompatible with it.
+                    The Apache Licence, however, was declared as compatible
+                    with version 3 of the GPL.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/ISC_license">The
+                        ISC licence</ulink> is functionally equivalent
+                    to the 2-clause BSD-licence, with some "language
+                    made unneccessaty by the Berne convention removed".
+                    This licence is also favoured by the 
+                    <ulink url="http://www.openbsd.org/">OpenBSD 
+                        project</ulink>.
+                </para>
+            </listitem>
+        </orderedlist>
 
     </section>
 

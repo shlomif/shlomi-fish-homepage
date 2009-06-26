@@ -395,7 +395,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Otherwise, weak copyleft licences allow free distribution, use
             , selling copies of the code or the binaries (as long as the
-            binaries are accompanied by the code), etc.
+            binaries are accompanied by the (unobfuscated) source code), etc.
         </para>
 
         <para>
@@ -509,9 +509,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <para>
     Moreover, the Apache 2.0 Licence was specifically phrased to be 
     GPL-compatible, and is considered GPL compatible by the Apache Software 
-    Foundation, but the FSF concluded it was not compatible with the GPLv2 
-    (although it is with the GPLv3 that was published afterwards). Their legal 
-    teams still disagree on that matter. So who are you going to believe?
+    Foundation, but the FSF concluded that, while it was a free-software
+    licence, it was not compatible with the GPLv2 (although it is with the 
+    GPLv3 that was published afterwards). Their legal teams still disagree
+    on that matter.
     </para>
 
     <para>
@@ -520,13 +521,18 @@ The Creative Commons Attribution (CC-by) and Attribution-ShareAlike Licences
 <ulink url="http://www.gnu.org/philosophy/license-list.html#OtherLicenses">their licences page</ulink>), while the 
 Debian legal team concluded that they were not free up to version 3.0, which
 was.
+
 <footnote id="debian-free-software-guidelines-for-non-software" 
     label="DFSG for Non-software">
+
     <para>
     I should note that I have issues with the entire Debian policy of 
 including only free-as-in-speech material in their distribution, regardless 
-of its type. I don't feel that non-software-content should abide by the same 
-rules as software, and even <ulink url="http://developers.slashdot.org/article.pl?sid=05/01/09/191257">RMS said that computer games are morally allowed 
+of its type. I don't feel that non-software-content (e.g: documents in human
+languages, graphics, audio, video, animations, non-code binary data, etc.) 
+should be treated by the same rules as software, and even 
+<ulink url="http://developers.slashdot.org/article.pl?sid=05/01/09/191257">Richard
+    Stallman said that computer games are morally allowed 
 to have non-free graphics, sound, and plots as long as their engines are 
 free</ulink>.
 </para>
@@ -535,10 +541,13 @@ free</ulink>.
 So Debian are trying to be holier than the pope here and try to coerce 
 everybody into abiding by irrational rules.
 </para>
+
 <para>
-    But this is besides the point of whether they are free or not.
+But this is besides the point of whether they are free or not.
 </para>
+
 </footnote>
+
 </para>
 
 <para>
@@ -615,6 +624,14 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </para>
 
         <para>
+            Using your own custom licence deprives you of the benefit of using
+            a well-reviewed, well-understood and debugged licence. This is
+            similar to writing your own program from scratch instead of
+            using an existing, well-tested software solution. (Thanks to
+            Omer Zak for this analogy.)
+        </para>
+
+        <para>
             So, don't do that.
         </para>
     </section>
@@ -629,11 +646,22 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             <ulink url="http://en.wikipedia.org/wiki/CPAN">CPAN</ulink> modules
             and other Perl code) on my Perl blog. It was also 
             <ulink url="http://perlbuzz.com/2008/04/the-problem-with-same-terms-as-perl-licensing.html">covered
-                on Perlbuzz</ulink>. I'm not going to repeat these arguments
-            here, and just say that using the Artistic Licence Version 2.0 
-            or later, or a GPL-compatible permissive licence such as the
-            MIT/X11 Licence would be preferable.
+                on Perlbuzz</ulink>. I'm only going to summarise these
+            arguments here, and conclude by saying that using the Artistic
+            Licence Version 2.0 or later, or a GPL-compatible permissive
+            licence such as the MIT/X11 Licence would be preferable.
         </para>
+
+        <para>
+            Essentially, the licence of perl (the Perl implementation) has 
+            changed several times since its inception - from a non-free licence,
+            to the GPL, to a dual GPL and Artistic licensing. Furthermore, the
+            Artistic license is not considered free and GPL compatible by the
+            Free Software Foundation, so it's not a wise choice, and the
+            GPL has its share of problems too (see below) so it's not a wise
+            choice either.
+        </para>
+
     </section>
 
     <section id="which-licence-public-domain">
@@ -650,13 +678,12 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </para>
 
         <para>
-            The concept of "Public Domain" is not recognised in many
-            jurisdictions, and it is not clear whether one can place a
-            software under the public domain in the first place. If you're
-            interested in making your software as-close-to-PD-as-possible, you
-            should choose the <ulink 
+            If you're interested in making your software
+            as-close-to-PD-as-possible, you should choose the <ulink 
                 url="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 
-                Licence</ulink>
+                Licence</ulink> or a similar licence such as 
+            <ulink url="http://en.wikipedia.org/wiki/ISC_license">the
+            ISC licence.</ulink>
         </para>
 
     </section>
@@ -682,7 +709,15 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             compatible with GPLv2 and above, instead of the GPL and the 
             Artistic 2.0 (or above) licence instead of the LGPL. And naturally
             permissive, non-copyleft, open-source licences such as the MIT 
-            X11 Licence are an option.
+            X11 Licence are an option. What the SleepyCat licence says
+            is that code distributed under it, must remain under it, and
+            that one must release the source code for publically-distributed 
+            binaries that link against it. However, from my understand, as
+            opposed to the GPL, this source code doesn't have to be completely
+            free. It doesn't have the additional
+            restrictions on licences compatibility that the GPL has, nor does
+            it have the other obscure and not-well-understood restrictions
+            that the GPL has.
         </para>
 
         <para> 
@@ -900,7 +935,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             am pretty happy with the open-source PySolFC.
         </para>
 
-</blockquote>
+        </blockquote>
 
 <para>
 Let's imagine that you wrote a great freecell solver library, but you suck at
@@ -939,7 +974,8 @@ better in this scenario.
     <listitem>
         <para>
             Develop his own Freecell solving library from scratch. That will
-            probably be less work than developing a graphical Freecell game.
+            probably be less work than developing the rest of the
+            graphical Freecell game.
         </para>
     </listitem>
 

@@ -31,7 +31,16 @@ limitations and more, and provide Perl programmers with a robust,
 object-oriented and usable alternative.
 </p>
 
+<p>
+Also available is <b>File-Find-Object-Rule</b>, which is a port of
+File-Find-Rule to File-Find-Object. This gives Perl programmer a convenient,
+declarative interface for File-Find-Object, while overcoming the limitations
+of File::Find.
+</p>
+
 <h2 id="links">Project Links</h2>
+
+<h3 id="links-file-find-object">For File-Find-Object</h3>
 
 <ul>
 
@@ -52,6 +61,29 @@ Record</a>
 
 </ul>
 
+<h3 id="links-file-find-object-rule">File-Find-Object-Rule</h3>
+
+<ul>
+
+<li>
+<a href="http://search.cpan.org/dist/File-Find-Object-Rule/">File-Find-Object-Rule
+on search.cpan.org</a> - download and more information.
+</li>
+
+<li>
+<a href="http://cpan.uwinnipeg.ca/dist/File-Find-Object-Rule">File-Find-Object-Rule
+on kobesearch</a>
+</li>
+
+<define-tag freshmeat_removed>
+<li>
+<a href="http://freshmeat.net/projects/file-find-object/">Freshmeat.net 
+Record</a>
+</li>
+</define-tag>
+
+</ul>
+
 <h2 id="licence">Licence</h2>
 
 <p>
@@ -61,7 +93,31 @@ version 2 or later, and the
 Licence version 2.0 or later</a>.
 </p>
 
+<p>
+File-Find-Object-Rule is derived from the original File-Find-Rule, and
+is distributed under its same terms with all subsequent copyright claims
+to the modifications disclaimed.
+</p>
+
 <h2 id="news">News</h2>
+
+<h3 id="news-2009-06-26">2009-06-26: File-Find-Object-Rule Version 0.0300</h3>
+
+<p>
+Version 0.0300 of File-Find-Object-Rule was released yesterday. The main
+highlight of this release is that the iterative <tt>-&gt;start()</tt>
+and <tt>-&gt;match()</tt> methods are now truly iterative and use 
+File-Find-Object to scan the tree incrementally, instead of building a long
+list of results in memory, and then iterating over it.
+</p>
+
+<p>
+Other, more minor, improvements included a cleanup of the code to use
+<a href="http://search.cpan.org/dist/Class-XSAccessor/">Class-XSAccessor</a>
+, POD tests and full POD coverage, update of the documentation for
+File-Find-Object-Rule (instead of the original File-Find-Rule) and more links
+and keywords as META.yml meta-data.
+</p>
 
 <h3 id="news-2009-01-09">2009-01-09: File-Find-Object 0.1.6 Was Released With 
 a Huge Speed Boost</h3>

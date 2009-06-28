@@ -58,6 +58,11 @@ my $software_tree_contents =
                     'title' => "An Object-Oriented Alternative to File::Find",
                 },
                 {
+                    'text' => "docmake",
+                    'url' => "open-source/projects/docmake/",
+                    'title' => "Automate the conversion of DocBook/XML to different formats",
+                },
+                {
                     'text' => "Quad-Pres",
                     'url' => "open-source/projects/quad-pres/",
                     'title' => "A Tool for Generating HTML Presenttions",

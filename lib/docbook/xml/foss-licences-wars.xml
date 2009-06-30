@@ -51,6 +51,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
 
             <revision>
+                <revnumber>2453</revnumber>
+                <date>30 June 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added descriptions of weak copyleft licences.
+                </revremark>
+            </revision>
+
+            <revision>
                 <revnumber>2452</revnumber>
                 <date>30 June 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -408,15 +417,99 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Examples of weak copyleft licences include the 
-            <ulink url="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">GNU 
-                Lesser General Public Licence (or LGPL for short)</ulink>,
-            <ulink url="http://en.wikipedia.org/wiki/Artistic_License">Version
-                2.0 of the Artistic Licence</ulink> (used by Perl 6 and other 
-            projects), and
-            <ulink url="http://en.wikipedia.org/wiki/Mozilla_Public_License">the
-                Mozilla Public Licence</ulink>.
+            Examples of weak copyleft licences include:
         </para>
+
+        <orderedlist>
+
+            <listitem>
+                <para>
+                    <ulink 
+                        url="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">The GNU 
+                        Lesser General Public Licence (or LGPL for short)</ulink>
+                    - this licence was formulated by the <ulink 
+                        url="http://www.fsf.org/">Free 
+                        Software Foundation</ulink> based on the
+                    <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public Licence (or GPL)</ulink>. Its text is longer
+                    than the GPL, and it is reportedly a more complicated
+                    licence. Besides the general 
+                    "you-can-link-it-against-everything-as-long-as-you-keep-inclusive-code-LGPLed", 
+                    it allows an explicit conversion to the GPL, has 
+                    patent-related clauses, and contains many additional
+                    restrictions.
+                </para>
+                <para>
+                    Version 2 of the LGPL was succeeded by version 2.1,
+                    and now there's also version 3 which is based on a short
+                    adaptation of the version 3 of the GPL (see below).
+                </para>
+            </listitem>
+
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/Artistic_License">Version
+                        2.0 of the Artistic Licence</ulink>, which was formulated
+                    by the Perl foundation is used by <ulink url="http://www.parrot.org/">the Parrot Virtul Machine</ulink>,
+                    some Perl 6 implementations, and other projects. The
+                    original Artistic Licence has problematic phrasing,
+                    and is unrecommended for general use, unless possibly
+                    when dually licensed with a different licence (as is the
+                    case for perl 5 and many Perl modules on the CPAN). 
+                </para>
+
+                <para>
+                    The Artistic Licence version 2 is relatively short and
+                    easy to digest. One note about it is that it allows
+                    distributing binaries that were derived from a modified
+                    source, without the obligation to release the modifications
+                    of the source. However, if one wishes to distribute
+                    a modified source, he must make his modifications under
+                    the same licence. 
+                </para>
+
+                <para>
+                    An anecdote about this licence is that it <ulink url="http://perlbuzz.com/2008/02/rem-releases-videos-under-artistic-license-20.html">was 
+                        chosen by R.E.M for licensing some 
+                        video-clips</ulink> from one of their albums.
+                </para>
+            </listitem>
+
+            
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/Mozilla_Public_License">The 
+                        Mozilla Public Licence (or MPL)</ulink> was phrased for
+                    the public source release of the <ulink 
+                        url="http://www.mozilla.org/">Mozilla 
+                        project</ulink>. It was characterised as a
+                    hybridisation of the modified BSD licence and the GPL.
+                    This licence was ruled as GPL-incompatible, which eventually
+                    caused the Mozilla project to relicense its code
+                    under a triple MPL, GPL and LGPL licence. This is
+                    still the licensing terms of Mozilla projects such as
+                    <ulink url="http://www.getfirefox.com/">the
+                        Firefox web-browser</ulink> up to today.
+                </para>
+            </listitem>
+
+            
+            <listitem>
+                <para>
+                    <emphasis role="bold">GPL with 
+                        an Exemption Clause</emphasis> - the GPL
+                    is a <link linkend="strong-copyleft-licences">strong
+                        copy-left licence</link>, but sometimes an additional
+                    clause is added that allows it to be linked against code
+                    of non-GPL-compatible licences (including non-open-source
+                    code). This strategy was chosen by Sun Microsystems
+                    when they decided to release 
+                    <ulink url="http://www.java.com/">the source of
+                        the Java programming language</ulink> under
+                    an open-source licence.
+                </para>
+            </listitem>
+
+        </orderedlist>
         
     </section>
 

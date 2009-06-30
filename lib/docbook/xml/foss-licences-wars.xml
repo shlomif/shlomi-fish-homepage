@@ -51,6 +51,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
 
             <revision>
+                <revnumber>2452</revnumber>
+                <date>30 June 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some typos and misphrasings.
+                </revremark>
+            </revision>
+            
+            <revision>
                 <revnumber>2434</revnumber>
                 <date>18 June 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -860,14 +869,17 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     <title>Strong Copyleft and Preventing Threats to FOSS</title>
 
     <para>
-        When I <ulink 
-            url="http://tech.groups.yahoo.com/group/hackers-il/message/5009">posted an early draft of this essay</ulink> 
-        to <ulink url="http://www.hackers.org.il/">Hackers-IL 
-            mailing list</ulink>, I received <ulink 
+
+        When I <ulink
+            url="http://tech.groups.yahoo.com/group/hackers-il/message/5009">posted
+            an early draft of this essay</ulink> to <ulink
+            url="http://www.hackers.org.il/">Hackers-IL mailing list</ulink>, I
+        received <ulink
             url="http://tech.groups.yahoo.com/group/hackers-il/message/5017">a
-            comment about the fact that GPL (or other strong copyleft licences
-            prevents threats to free and open source software</ulink>. I'd
-        like to reply to it here.
+            comment</ulink> about the fact that GPL (or other strong copyleft
+        licences) prevent threats to free and open source software. I'd like to
+        reply to it here.
+
     </para>
 
     <para>
@@ -965,8 +977,9 @@ better in this scenario.
 </para>
 
 <para>
-    Back to it, however, a person who would be interested in creating
-    a commercial Freecell UI and still use my library can also:
+    Back to the thought experiment, a person who would be interested in 
+    creating a commercial Freecell UI and still integrate a solving mechanism
+    to it could:
 </para>
 
 <orderedlist>

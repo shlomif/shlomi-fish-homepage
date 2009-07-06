@@ -69,13 +69,13 @@ function toggle_button(ix,iy)
     {
         button_handle.attr("src", "1.png");
         count_of_ons++;
-        //button_handle.alt = "black";
+        button_handle.attr("alt", "on");
     }
     else
     {   
         button_handle.attr("src", "0.png");
         count_of_ons--;
-        //button_handle.alt = "white";
+        button_handle.attr("alt", "off");
     }
 }
 

@@ -208,6 +208,10 @@ my $humour_tree_contents =
                     'text' => "Mastering cat",
                     'url' => "humour/bits/Mastering-Cat/",
                 },
+                {
+                    'text' => "Programs Every Programmer Has Written",
+                    'url' => "humour/bits/Programs-Every-Programmer-has-Written/",
+                },
             ],
         },
         {

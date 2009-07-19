@@ -412,3 +412,16 @@ table.visible
 .adHeadline {font: bold 10pt Arial; text-decoration: underline; color: #0000FF;}
 .adText {font: normal 10pt Arial; text-decoration: none; color: #000000;}
 /* End of Adbrite */
+
+.wishlist_notice
+{
+    border: thin solid darkgreen;
+    padding: 0.3em;
+    overflow: hidden;
+}
+
+.wishlist_notice p
+{
+    padding: 0;
+    margin: 0;
+}

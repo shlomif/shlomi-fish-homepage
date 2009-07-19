@@ -1,6 +1,7 @@
 
 #include "sponsored_ad.wml"
 #include "add-this.wml"
+#include "amazon.wml"
 
 <define-tag ad_brite_top_proto>
 <!-- Begin: AdBrite, Generated: 2009-07-19 17:29:07  -->
@@ -409,6 +410,10 @@ td { vertical-align : top; }
 </latemp_extra_head_elements>
 
 <latemp_before_main_title>
+<div class="wishlist_notice">
+<p>If you like this site, I would appreciate a gift from <a href="<amazon_wishlist_link />">my wishlist</a>.</p>
+</div>
+
 ;;; For the Hebrew layout.
 <if "<get-var rtl_layout />" "<hebrew_open_div />" />
 </latemp_before_main_title>

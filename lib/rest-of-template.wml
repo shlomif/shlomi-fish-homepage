@@ -2,6 +2,15 @@
 #include "sponsored_ad.wml"
 #include "add-this.wml"
 
+<define-tag ad_brite_top_proto>
+<!-- Begin: AdBrite, Generated: 2009-07-19 17:29:07  -->
+<script type="text/javascript">
+try{var AdBrite_Iframe=window.top!=window.self?2:1;var AdBrite_Referrer=document.referrer==''?document.location:document.referrer;AdBrite_Referrer=encodeURIComponent(AdBrite_Referrer);}catch(e){var AdBrite_Iframe='';var AdBrite_Referrer='';}
+document.write(String.fromCharCode(60,83,67,82,73,80,84));document.write(' src="http://ads.adbrite.com/mb/text_group.php?sid=1266822&br=1&dk=726567697374657220646f6d61696e5f365f325f776562&col=3&ifr='+AdBrite_Iframe+'&ref='+AdBrite_Referrer+'" type="text/javascript">');document.write(String.fromCharCode(60,47,83,67,82,73,80,84,62));</script>
+<div><a class="adHeadline" target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=1266822&afsid=1">Your Ad Here</a></div>
+<!-- End: AdBrite -->
+</define-tag>
+
 <define-tag hebrew_open_div>
 {#HEBREW_XML_LANG_SCRIPT#:<script src="$(ROOT)/js/moz-lang.js" type="text/javascript"></script>:##}
 {#BODY_PARAMS#: onload="lang_load()":##}
@@ -33,6 +42,14 @@ google_color_url = "008000";
     "<google_adsense_code_top_proto />"
     />
 </define-tag>
+
+<define-tag google_adsense_code_top_wide>
+<if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
+    "  <object class="ads_top_wide" data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
+    "<ad_brite_top_proto />"
+    />
+</define-tag>
+
 
 <define-tag google_adsense_code_top_narrow>
 <script type="text/javascript">

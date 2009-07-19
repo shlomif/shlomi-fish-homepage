@@ -1,5 +1,7 @@
 #include '../template.wml'
 
+#include "amazon.wml"
+
 <latemp_subject "I accept Donations" />
 
 <p>
@@ -18,7 +20,7 @@ lot of pleasure, I still would like to see some financial benefit. That's why
 I decided to ask for donations using PayPal. <b>So if what I created has 
 benefited you in some way, please consider donating</b>. If you don't want
 to make a direct monetary donation, you can also 
-<a href="http://www.amazon.com/gp/registry/3K9IITLFAIUG2/wishlist">purchase
+<a href="<amazon_wishlist_link />" rel="amazon wishlist">purchase
 items out of my <b>Amazon.com wishlist</b></a>.
 </p>
 
@@ -48,5 +50,5 @@ So, don't delay - donate today!
 <paypal_donate_code type="nolink" />
 
 <p>
-<a href="http://www.amazon.com/gp/registry/3K9IITLFAIUG2/wishlist">Amazon.com Wishlist</a>
+<a href="<amazon_wishlist_link />" rel="amazon wishlist">Amazon.com Wishlist</a>
 </p>

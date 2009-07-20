@@ -339,7 +339,10 @@ $("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append
 
 <latemp_before_main_title>
 {#SECTION_NAV_MENU_ELEMS#}
-<div style="float: right">
+<div class="wishlist_notice">
+<p>If you like this site, I would appreciate a gift from <a href="<amazon_wishlist_link />">my wishlist</a>.</p>
+</div>
+<div class="news_buttons"> 
 <script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://reddit.com/button.js?t=2"></script>
 </div>
@@ -410,9 +413,6 @@ td { vertical-align : top; }
 </latemp_extra_head_elements>
 
 <latemp_before_main_title>
-<div class="wishlist_notice">
-<p>If you like this site, I would appreciate a gift from <a href="<amazon_wishlist_link />">my wishlist</a>.</p>
-</div>
 
 ;;; For the Hebrew layout.
 <if "<get-var rtl_layout />" "<hebrew_open_div />" />

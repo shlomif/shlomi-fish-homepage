@@ -418,10 +418,16 @@ table.visible
     border: thin solid darkgreen;
     padding: 0.3em;
     overflow: hidden;
+    margin-bottom: 0.5em;
 }
 
 .wishlist_notice p
 {
     padding: 0;
     margin: 0;
+}
+
+.news_buttons
+{
+    float: right;
 }

@@ -51,6 +51,10 @@ google_color_url = "008000";
     />
 </define-tag>
 
+;;; Temporarily adding to disable AdBrite which messes up the look of
+;;; the page in MSIE 8.
+<define-tag google_adsense_code_top_wide>
+</define-tag>
 
 <define-tag google_adsense_code_top_narrow>
 <script type="text/javascript">

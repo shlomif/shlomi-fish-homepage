@@ -13,7 +13,7 @@ Author URI: http://www.byprelco.com
 [% SET widget_id = "#nav_menu" %]
 
 html, body, div, span, applet, object, iframe,
-p, blockquote, pre,
+blockquote, pre,
 abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -37,7 +37,9 @@ body {
     background: #01698f;
     text-align: center;
     font-family: Helvetica, sans-serif;
+[% IF 0 %]
     font-size: 12px;
+[% END %]
     color: #666;
 }
 

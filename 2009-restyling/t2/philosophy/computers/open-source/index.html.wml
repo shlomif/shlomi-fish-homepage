@@ -1,0 +1,43 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Essays about Open-Source Software" />
+
+<p>
+Essays related to Free and Open Source Software.
+</p>
+
+<toc />
+
+<h2 id="articles-list">The Articles List</h2>
+
+<div class="indent">
+
+<h3 id="foss-other-beasts"><a 
+href="$(ROOT)/philosophy/foss-other-beasts/">Open Source, Free Software
+and Other Beasts</a></h3>
+
+<p>
+An article that introduces the Open Source world to people who are not
+very familiar with it.
+</p>
+
+<h3 id="gpl-bsd-and-suckerism"><a href="./gpl-bsd-and-suckerism/">The GPL, the BSD 
+Licence and Being a Sucker</a></h3>
+
+<p>
+An essay that explains why contributing to open source software under any
+licence does not cause you to be exploited by others.
+</p>
+
+<h3 id="linus-bus-factor"><a href="./linus-torvalds-bus-factor/">The Linus
+Torvalds Bus Factor</a></h3>
+
+<p>
+An essay that explains why it is a good idea to have multiple committers to
+a central repository in a project, and why overthrowing the project's
+benevolent dictator is a good idea. It then touches on some logical
+fallacies.
+</p>
+
+</div>

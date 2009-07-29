@@ -1,0 +1,16 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Quotes from Friends - (Fortunes Cookies) - Shlomi Fish's Collection" />
+
+<h2*>The Fortune "friends" Collection</h2*>
+
+<h3*>Table of Contents</h3*>
+
+<toc />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/friends.xhtml-for-input"
+</div>
+

@@ -1,0 +1,17 @@
+<define-tag body endtag="required">
+<body*{#BODY_PARAMS#}>
+%body
+</body*>
+</define-tag>
+
+#include "utils.wml"
+#include "paypal.wml"
+
+<define-tag software_patents>1</define-tag>
+#include "latemp/latemp-prelude.wml"
+#include "local-defs.wml"
+#include "latemp/latemp-driver.wml"
+#include "shlomif/affiliations.wml"
+
+#include "rest-of-template.wml"
+

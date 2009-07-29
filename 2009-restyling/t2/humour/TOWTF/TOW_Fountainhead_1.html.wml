@@ -1,0 +1,10 @@
+#include '../template.wml'
+
+<latemp_subject "The One with the Fountainhead - Part 1" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
+
+#include "screenplay-xml/rendered-html/TOW_Fountainhead_1.html"
+

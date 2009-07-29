@@ -1,0 +1,16 @@
+#include "../template.wml"
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "The Case for Drug Legalisation" />
+
+<h2* id="toc">Table of Contents</h2*>
+
+<toc />
+
+<h2 id="itself">The Article Itself</h2>
+
+<h3 id="body">Body</h3>
+
+#include "../lib/docbook/rendered/case-for-drug-legalisation.html"
+

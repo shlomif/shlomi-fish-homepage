@@ -1,0 +1,731 @@
+#include '../template.wml'
+<latemp_subject "Links against Apple Inc." />
+
+<p>
+<b>Last Updated:</b> 14-April-2007
+</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+Some years ago, I talked with my friend and partner for Technion projects
+about the computer world. I asked him if he thinks Mac OS X is better than
+Windows and he told me that he'd rather not try it because he doesn't trust
+Apple. Since then I noticed more and more abuses from Apple and things they've
+been doing wrong. The Apple community is full of hubris, believes Mac OS to
+be superior and cannot see the abuses from their parent company.
+</p>
+
+<p>
+In this page, I'll try to collect all the bad links about Apple.
+</p>
+
+<ol>
+
+<li>
+<a href="http://freshmeat.net/articles/view/1011/">"Learning from 
+Kaleidoscope"</a> - Apple decides that Mac OS X is too cool to have themes,
+and moreover, hunts for Aqua-like themes on the Net and requests their 
+removal.
+</li>
+
+<li>
+<a href="http://www.infoworld.com/article/06/05/17/78300_21OPcurve_1.html">"Apple
+closes down OS X"</a> - Apple hid the source code for the Mac OS X kernel 
+("Darwin"). They later revealed it again, but then relicensed it under a
+<a href="http://www.fsf.org/">non-free</a>/non-<a href="http://www.opensource.org/">open-source</a> 
+licence, which forbids a lot of common use.
+</li>
+
+<li>
+<a href="http://blogs.zdnet.com/BTL/?p=3482">Apple sues companies for using
+the "pod" "trademark"</a>.
+</li>
+
+<li>
+<a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">Joel
+on Software's story about Pete and Gena</a> - illustrates the fact that Apple
+lacks a lot of Windows' (and Linux-based desktops) usability improvements. 
+<br />
+<ul>
+<li>
+<a href="http://www.joelonsoftware.com/design/1stDraft/03.html">More about
+Pete and the lack of Mac OS X usability.</a>.
+</li>
+</ul>
+</li>
+<li>
+<a href="http://en.wikipedia.org/wiki/FairPlay">FairPlay - the Apple iPod and 
+QuickTime DRM ("Digital Restrictions Management")</a>
+</li>
+<li>
+<a href="http://www.advogato.org/person/fxn/diary.html?start=401">Mac OS X'
+tar and other programs meta-data brain-damage</a> - makes it incompatible 
+with other UNIX clones, and breaks CPAN modules.
+</li>
+<li>
+<a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg41985.html">Linux-IL
+thread (in English) about the lack of BiDi support in OS X applications</a>
+</li>
+<li>
+<a href="http://www.linuxdevcenter.com/pub/a/linux/2006/06/01/switching-back.html">chromatic on "Switching Back" from Mac OS X to Linux</a> - very insightful.
+<br />
+<ul>
+<li>
+<a href="http://www.yepthatsme.com/2006/06/09/chromatic-writes-on-switching-back-to-desktop-linux-from-mac-os-x/">Its "Yep, that's me" Coverage</a>.
+</li>
+</ul>
+</li>
+<li>
+<a href="http://daringfireball.net/2007/06/wwdc_2007_keynote">WWDC 2007 
+Keynote News</a> - a bit against the iPhone.
+</li>
+<li>
+<a href="http://john.jubjubs.net/2007/06/14/a-pictures-worth-100m-users/">"A
+Picture's Worth 100 Million Users"</a> - about the Safari for Windows. 
+</li>
+<li>
+<a href="http://opendotdotdot.blogspot.com/2007/06/idontphone.html">iDon'tPhone</a>
+</li>
+<li>
+<a href="http://www.joelonsoftware.com/items/2007/06/11.html">"Apple Safari for
+Windows: The world's slowest web browser" from "Joel on Software"</a> - a
+little about Apple's advertising regarding its products' performance.
+</li>
+<li>
+<a href="http://www.oreillynet.com/onlamp/blog/2007/09/eight_things_i_absolutely_hate.html">Eight Things I Absolutely Hate About Apple</a> by Noah Gift on 
+OnLAMP.com.
+</li>
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=07/09/14/1831236">Apple
+Cuts Off Linux iPod Users</a> - Apple does not want for programs other than
+iTunes to access newer iPod. (And it also mentions that newer iPods encrypt
+their firmware, to prevent replacing the OS).
+</li>
+<li>
+<a href="http://use.perl.org/~perrin/journal/34574">"Mac OS X is a Harsh
+Mistress"</a> - a journal entry by perrin.
+</li>
+<li>
+<a href="http://use.perl.org/~rjbs/journal/34846">Coping with Mac OS 10.5</a>
+</li>
+<li>
+<a href="http://use.perl.org/~AndyArmstrong/journal/34814">"Leopard's tar is
+broken"</a>
+</li>
+<li>
+<a href="http://www.askbjoernhansen.com/2007/11/11/mac_idisk_going_crazy_again.html">".Mac
+iDisk going crazy, again."</a> - from Ask Bjørn Hansen's blog.
+</li>
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=07/11/15/2135204">"Apple Fixes
+'Misleading' Leopard Firewall Settings"</a> - From Slashdot.
+</li>
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=07/12/16/0055211">A Little
+.Mac Security Flaw</a> - Apple deletes posts regarding a serious security
+flaw and doesn't answer requests to get them done.
+</li>
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=07/12/24/0131228">"Should 
+Apple Give Back Replaced Disks?"</a> - Apple replaces a failed disk for a 
+customer for a pay, and then doesn't give back the original, risking
+data theft.
+</li>
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=07/12/27/1921201">Apple
+Patents 'Buy Stuff Wirelessly, Skip Lines' Tech"</a>
+</li>
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/01/23/038241">Apple 
+QuickTime DRM Disables Video Editing Apps</a>
+</li>
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=08/01/22/2156244">Apple
+Cripped its DTrace Port so it won't be able to trace iTunes</a>
+</li>
+<li>
+<a href="http://use.perl.org/~rjbs/journal/35476">"Reinstalling Leopard - 
+Not So Bad" by rjbs</a> - re-installing just to get Mail.app to work.
+</li>
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/02/23/1915254">Apple
+Sends Cease-and-Desist To the Hymn Project</a> - Apple abuses the Law System
+to protect the iTunes Digital Restrictions Management scheme.
+</li>
+<li>
+<a href="http://john.jubjubs.net/2008/03/21/apple-software-update/">"Apple
+Software Update" - Apple pushes Safari to Users of its Windows Software</a>
+<br />
+<ul>
+<li>
+<a href="http://linmagazine.co.il/node/view/47487">Coverage in
+linmagazine.co.il</a> (in Hebrew).
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/03/27/129236">"Safari
+3.1 For Windows Violates Its Own EULA, Vulnerable to Hacks"</a>
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/03/11/1216211">"iPhone
+SDK Rules Block Skype, Firefox, Java"</a>
+</li>
+
+<li>
+<a href="http://mobile.slashdot.org/article.pl?sid=08/03/28/0349242">"iPhone's
+Development Limitations Could Hurt It In the Long Run"</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~jonasbn/journal/36423">jonasbn - "iPhone 
+Trouble"</a>
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/04/08/1932232">"Apple Error
+Leaves iPhone Developers In the Lurch"</a>
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/06/11/1855218">"Safari
+'Carpet Bomb' Attack Cdoe Released"</a>
+</li>
+
+<li>
+<a href="http://www.mozillazine.org/talkback.html?article=23813">"Mozilla 
+Firefox 3 Release Candidate 3 Works Around Mac OS X Bug"</a> (from 
+<a href="http://www.mozillazine.org/">MozillaZine</a>).
+</li>
+
+<li>
+<a href="http://blog.karppinen.fi/2008/07/apple-just-gave-out-my-apple-i.html">"Apple 
+just gave out my Apple ID password because someone asked"</a> - by
+Marko Karppinen.
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/06/18/1919224">"Mac OS X 
+Root Escalation Through AppleScript"</a>
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/07/28/2311240">"Apple 
+Still Has Not Patched the DNS Hole"</a>
+</li>
+
+<li>
+<a href="http://www.fsf.org/blogs/community/5-reasons-to-avoid-iphone-3g">"5
+reasons to avoid iPhone 3G"</a> - by the Free Software Foundation.
+</li>
+
+<li>
+<a href="http://use.perl.org/~mir/journal/36965">mir - "On OS's and user
+friendliness"</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~Beatnik/journal/36877">"iPhone 3G in BE 
+WTF?!?!?!? [parte deux]"</a> - by beatnik.
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/37236">"iPhone: 
+The Last Straw?"</a> - by Ovid.
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/08/03/0031228">"Two Black
+Hat Talks on Apple Security Cancelled"</a><br />
+<ul>
+<li>
+<a href="http://osnews.com/story/20140/Apple_Bails_on_Black_Hat_Talk">OSNews.com
+coverage</a>.
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/08/26/2148250">Psystar Will
+Countersue Apple</a> - a Mac clone maker claims that Apple engages in
+anti-competitive business practices.
+</li>
+
+<li>
+<a href="http://osnews.com/story/20136/Psystar_Retains_Law_Firm_with_Past_Success_Against_Apple">"Psystar 
+Retains Law Firm with Pass Success Against Apple"</a> - about the Apple
+law-suit against the Mac clones.
+</li>
+
+<li>
+<a href="http://blog.shemesh.biz/?p=551">"Apple vs. Psystar" on Shachar 
+Shemesh's .blog (in Hebrew)</a>
+</li>
+
+<li>
+<a href="http://opendotdotdot.blogspot.com/2008/07/real-dan-lyons-really-good.html">"Real 
+Dan Lyons: Really Good"</a> - about Apple's PR people.
+</li>
+
+<li>
+<a href="http://osnews.com/story/20151/The_Value_Of_Open_Platforms_aka_Why_I_Don_t_Own_iPhone_">"The 
+Value of Open Platforms (aka Why I Don't Own an iPhone)"</a>
+</li>
+
+<li>
+<a href="http://www.linux.com/feature/131752">The iPhone SDK and free software: not a match</a> - about the restrictions of the iPhone SDK. (15-April-2008)
+</li>
+
+<li>
+<a href="http://use.perl.org/~pudge/journal/37400">Pudge - iTunes / Front
+Row Updates</a> (10-September-2008)
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/09/11/217236">"iTunes 8 a Real Killer App: Taking Down Vista"</a> (11-September-2008)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/09/12/1442213">"iPhone Takes Screenshots
+of Everything You Do"</a> - from a talk about
+iPhone forensics. (12-September-2008)
+</li>
+
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/09/13/1924215">"Apple
+Rejects iPhone App as Competitive to iTunes"</a>
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/09/13/2114214">"Apple
+Declares DRM War on Sneaker Hackers"</a> (14-September-2008)
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/09/14/0249251">"Users
+Report Faulty WPA in 2nd-Gen iPod Touch"</a> (14-September-2008)
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/09/21/122225">"Apple
+Bans iPhone App for Competing with Mail.app</a> (21-September-2008)
+</li>
+
+<li>
+<a href="http://osnews.com/story/20321/Apple_Adds_NDA_to_App_Store_Rejection_Notices">"Apple 
+Adds NDA to App Store Rejection Notices" (OSNews.com)</a> (24-September-2008)
+</li>
+
+<li>
+<a href="http://hardware.slashdot.org/article.pl?sid=08/09/25/1434252">"SDK
+Shoot Out, Android vs. iPhone"</a> (25-September-2008)
+</li>
+
+<li>
+<a href="http://osnews.com/story/20339/Hockenberry_App_Store_Policies_Killing_Our_Enthusiasm_">Hockenberry: 
+App Store Policies are 'Killing Our Enthusiasm'</a> (29-September-2008)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/10/08/1224224">Steve Jobs
+Patents "The Dock"</a> - the thread contains other insightful comments.
+(8-Octboer-2008)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/10/19/1511231">"Lawsuit
+Between Apple adn Psystar Moves Toward Settlement"</a> (19-October-2008)
+</li>
+
+<li>
+<a href="http://osnews.com/story/20455/Apple_Not_Accepting_Opera_Mini_on_iPhone_">"Apple Not Accepting Opera Mini on the iPhone"</a> - from OSNews.com. 
+(29-October-2008)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=08/11/17/1920206">"Why
+Developers Are Switching to Macs"</a>
+</li>
+
+<li>
+<a href="http://opendotdotdot.blogspot.com/2008/11/mac-fanboys-face-music-and-video.html">open dot dot dot - "Mac Fanboys Face the Music (and Video)"</a> -
+about DRM restrictions in iTunes-downloaded videos. (20-November-2008)
+</li>
+
+<li>
+<a href="http://myrtfm.blogspot.com/2008/11/iphone.html">To develop for the
+iPhone (in Hebrew)</a> (22-November-2008).
+</li>
+
+<li>
+<a href="http://osnews.com/story/20573/_App_Store_Lessons_Try_and_Try_Again_">"App
+Store Lessons: Try and Try Again"</a>
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/11/23/017227">"BluWiki
+Seeks iPodHash Author, Hopes for Help from EFF"</a> (23-November-2008)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/11/24/0041238">"Psystar
+Case Reveals Poor Email Archiving At Apple"</a> (23-November-2008)
+</li>
+
+<li>
+<a href="http://talash.livejournal.com/363490.html">talash - "ipod"</a>
+(29-November-2008)
+</li>
+
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=08/12/02/1314208">"Apple
+Quietly Recommends Antivirus Software For Macs"</a>
+</li>
+
+<li>
+<a href="http://osnews.com/story/20601/Apple_Hits_Psystar_with_DMCA_Charges">"Apple
+Hits Psystar with DMCA Charges"</a> (2-December-2008).
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/12/05/135207">"Grey
+Lines Mar MacBook Air Displays"</a> (5-December-2008).
+</li>
+
+<li>
+<a href="http://osnews.com/story/20660/France_Orders_Break_Up_of_Orange_iPhone_Exclusivity_Deal">"France 
+Orders Break Up of Orange iPhone Exclusivity Deal"</a> (18-December-2008).
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=08/12/22/0150239">"Will
+People Really Boycott Apple Over DRM?"</a> (22-December-2008).
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=08/12/22/2333234">"Psystar
+Claims Apple Forgot To Copyright Mac OS"</a> (22-December-2008).
+</li>
+
+<li>
+<a href="http://osnews.com/story/20690/PsyStar_Claims_Apple_s_Mac_OS_X_Copyright_Is_Invalid">"PsyStar
+Claims Apple's Mac OS X Copyright is Invalid"</a> (24-December-2008).
+</li>
+
+<li>
+<a href="http://news.cnet.com/8301-13579_3-10130908-37.html">"Switcher's
+lament: The case against Mac"</a> - by Rafe Needleman on cnet. (5-January-2009).
+</li>
+
+<li>
+<a href="http://osnews.com/story/20826/Apple_Hints_at_Legal_Action_Against_Palm">"Apple 
+Hints at Legal Action Against Palm"</a> (22-January-2009)
+</li>
+
+<li>
+<a href="http://osnews.com/story/20845/Palm_Quietly_Responds_to_Apple_s_Quiet_Threat">"Palm Quietly Responds to Apple's Quiet Threat"</a> (24-January-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~nicholas/journal/38370">"(OS X 10.5)--" by
+Nicholas</a> (30-January-2009)
+</li>
+
+<li>
+<a href="http://osnews.com/story/20909/iLife_Quietly_Moves_Intel_Dual_Core_Only">"iLife Quietly Moves Intel Dual Core Only" - on OSNews.com</a> (4-February-2009)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=09/02/07/1920243">"Is Apple's
+Multi-Touch Patent Valid?"</a> (7-February-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/38472">"MacBook Pro Graphic
+Cards Failures" - on Ovid's Journal</a> (13-February-2009)
+</li>
+
+
+<li>
+<ul>
+<li>
+<a href="http://lwn.net/Articles/319198/">"Apple: why iPhone jailbreaking
+should not be allowed" on LWN.net</a> (13-February-2009)
+</li>
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=09/02/13/1722237">"Apple
+Claims That Jail-Breaking Is Illegal" on Slashdot</a> (13-February-2009)
+</li>
+<li>
+<a href="http://osnews.com/story/20977/Apple_iPhone_Jailbreaking_Is_Illegal">"Apple:
+iPhone Jailbreaking is Illegal" on OSNews.com</a> (13-February-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<ul>
+<li>
+<a href="http://bulknews.typepad.com/blog/2009/02/mac-os-x-security-update-2009001-breaks-perl-cpan.html">Miyagawa: "Mac OS X Security Update 2009-001
+might break your Perl"</a> (12-February-2009)
+</li>
+<li>
+<a href="http://perlbuzz.com/2009/02/mac-os-x-security-update-2009-001-might-break-your-perl.html">Perlbuzz: "Mac 
+OS X Security Update 2009-001 might break your Perl"</a> (16-February-2009)
+</li>
+<li>
+<a href="http://use.perl.org/~jk2addict/journal/38503">jk2addict: 
+"Dear Apple"</a> (17-February-2009)
+</li>
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=09/02/18/1435227">Slashdot:
+"Apple's Mac OS X Update Breaks Perl"</a> (18-February-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://osnews.com/story/21056/Safari_4_Beta_UI_Disaster">"Safari 4
+Beta: UI Disaster" - on OSNews.com</a> (28-February-2009)
+</li>
+
+<li>
+<a href="http://osnews.com/story/21099/First_Unauthorised_iPhone_App_Store_To_Open_Up_Shop">OSNews.com: 
+"First Unauthorised iPhone App Store To Open Up Shop"</a> (07-March-2009)
+</li>
+
+<li>
+<a href="http://tech.slashdot.org/article.pl?sid=09/03/08/1156247">Slashdot: 
+"Apple's iPhone Developer Crisis"</a> (08-March-2009)
+</li>
+
+<li>
+<a href="http://osnews.com/story/21104/What_Is_the_Issue_in_the_Psystar_Case_">
+OSNews.com: "What is the Issue in the Psystar Case?"</a> (09-March-2009)
+</li>
+
+<li>
+<a href="http://tech.slashdot.org/article.pl?sid=09/03/10/0157221">Slasdhot:
+"The Realities of Selling on Apple's App Store"</a> (10-March-2009)
+</li>
+
+<li>
+<a href="http://osnews.com/story/21171/Miller_on_Mac_OS_X_Chrome_Firefox_Economics">"Miller on Mac OS X, Chrome, Firefox, Economics"</a> - 
+about exploiting Safari and other browsers on Mac OS X. (20-March-2009)
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=09/03/20/1555220">Slashdot:
+"Apple and AT&amp;T Sued, Again, Over 3G"</a> (20-March-2009)
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=09/03/28/0143249">Slashdot:
+"iPhone App Refund Policies Could Cost Devs"</a> (28-March-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21383/Apple_Sued_Over_Legal_Threats_to_Wiki_Operator">"Apple 
+Sued Over Legal Threats to Wiki Operator"</a> - on OSNews.com 
+(27-April-2009)<br />
+<ul>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=09/04/28/141259">"EFF Sues
+Apple Over BluWiki Legal Threats"</a> - on Slashdot. (28-April-2009)
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21378/The_iPhone_Is_Not_a_Netbook_quot_I_Can_quot_">"The 
+iPhone is Not a Netbook: 'I can'"</a> - on OSNews.com (27-April-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21465/GNU_Psystar_Charlie">OSNews.com's 
+"Week in Review"</a> - "This all is just further evidence of the decay in 
+quality on Apple reporting." (10-May-2009)
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=09/05/11/1920258">"Apple 
+Refusing Any BitTorrent Related Apps?"</a> - on Slashdot (11-May-2009)
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/article.pl?sid=09/05/14/2124236">"Apple
+Hires Former OLPC Security Directory"</a> - "His hiring comes at a crucial time
+for a company that ties security to its marketing campaigns despite public
+knowledge that it's rather trivial to launch exploits against the Mac.'" 
+(14-May-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21522/9_Month_Old_Critical_Java_Vuln_Still_Not_Patched_in_Mac_OS_X">"9 
+Month Old Critical Java Vulnerability Still Not Patched in Mac OS X"</a> - on
+OSNews.com (19-May-2009)<br />
+<ul>
+<li>
+<a href="http://it.slashdot.org/article.pl?sid=09/05/19/2344239">"Mac OS X 
+Users Vulnerable To Major Java Flaw"</a> - on Slasdhot.org (20-May-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://yro.slashdot.org/article.pl?sid=09/05/23/1747241">Slashdot.org: 
+"Safari 4's Messy Trail"</a> (23-May-2009)<br />
+<ul>
+<li>
+<a href="http://www.osnews.com/story/21558/Safari_4_s_Privacy_Bug_Should_Raise_Red_Flags_at_Browser_Makers">OSNews.com: "Safari 4's Privacy Bug Should Raise Red Flags at Browser Makers"</a> (26-May-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://apple.slashdot.org/story/09/06/03/006206/Apple-Bans-RSS-Reader-Due-To-Bad-Word-In-Feed-Link">Slashdot: Apple Bans RSS Reader due to Bad Word in
+Feed Link</a> (03-June-2009)<br />
+<ul>
+<li>
+<a href="http://www.osnews.com/story/21620/Apple_Bans_3rd_Party_EFF_RSS_App_from_App_Store">Coverage is OSNews.com</a> (05-June-2009)
+</ul>
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21634/Snow_Leopard_To_Arrive_in_Sept_29_USD_Safari_4_Out">OSNews.com: "Snow Leopard"</a> - "[Snow Leopard] will be 
+available coming September for All Intel Macs, past and present (so, as 
+expected, <b>no PowerPC</b>)." (08-June-2009) 
+</li>
+
+<li>
+<a href="http://www.joelonsoftware.com/items/2009/06/10c.html">Joel 
+on Software: "Platform vendors"</a> - covers the 
+<a href="http://www.ismashphone.com/2009/06/15-apps-rendered-obsolete-by-the-new-iphone-.html">"15 Apps Rendered Obsolete by the New iPhone 3GS"</a>
+article. (10-June-2009)<br />
+<ul>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.758169.3">More insightful comments on the forum</a> (10-June-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://it.slashdot.org/story/09/06/16/0017221/Hackers-Find-Remote-iPhone-Crack">Slashdot.org: 
+"Hackers Find Remote iPhone Crack"</a> (16-June-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21678/WWDC_quot_A_Giant_Middle_Finger_to_iPhone_Developers_quot_">OSNews.com: "WWDC: 'A Giant Middle Finger to iPhone Developers'"</a> (16-June-2009)
+</li>
+
+<li>
+<a href="http://benhamo.org/wp/?p=1523">Hetz Ben Hamo: "A few words on
+incorrect calculations regarding the iPhone in Israel" (in Hebrew)</a>
+(17-June-2009)
+</li>
+
+<li>
+<a href="http://broadcast.oreilly.com/2009/06/big-learning-curve-for-iphone.html">O'Reilly Broadcast: "Big Learning Curve for iPhone Development"</a> (22-June-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~AndyArmstrong/journal/39207">Andy Armstrong: 
+"Safari 4 likes clicking"</a> (02-July-2009)
+</li>
+
+<li>
+<a href="http://leaukiprog.blogspot.com/2009/07/iphone-debug-zombies-and-finally-vmware.html">LeaukiProg: 
+"iPhone debug zombies and finally VMware"</a> (06-July-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21863/How_Apple_s_App_Review_Is_Undermining_The_iPhone">"How 
+Apple's App Review is Undermining the iPhone"</a> - on OSNews.com
+(20-July-2009)<br />
+<ul>
+<li>
+<a href="http://mobile.slashdot.org/story/09/07/20/2318201/How-Apples-App-Review-Is-Sabotaging-the-iPhone">Slashdot coverage</a> (20-July-2009)
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21878/Apple_Tries_to_Downplay_iPod_Fire_Incidents">"Apple 
+Tries to Downplay iPod Fire Incidents"</a> - on OSNews.com (22-July-2009)
+</li>
+</ol>
+
+<h2 id="jokes">Jokes</h2>
+
+<ul>
+
+<li>
+<b>Mac O'Sucks</b> - my pun on Mac OS X.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/300-page_iPhone_bill">The 300-page 
+iPhone Bill</a>
+</li>
+
+<li>
+<a href="http://www.youtube.com/watch?v=1xXNoB3t8vM">Conan - iPhone
+Commercial</a> - it's everything you wanted. (Via <a href="http://sijp.no-ip.info/node/197">Shlomi Israel's Blog</a>.)
+</li>
+
+<li>
+<a href="http://www.youtube.com/watch?v=xgZKjJt-TkU">MadTV - iPhone</a>. 
+(Also via <a href="http://sijp.no-ip.info/node/197">Shlomi Israel's Blog</a>).
+</li>
+
+<li>
+<a href="http://youtube.com/watch?v=hrpS9m2VF1c">PC vs. Mac on YouTube</a> -
+countering the "I'm a PC, I'm a Mac.". Also see the related videos.
+</li>
+
+<li>
+<a href="http://www.youtube.com/watch?v=_hnOCUkbix0">Lenovo X300 commercial
+(vs. MacBook Air)</a> - YouTube video.
+</li>
+
+<li>
+<a href="http://digg.com/apple/Not_Calvin_and_Hobbes_but_Calvin_and_Steve_Jobs_COMIC">"Digg.com 
+- Calvin and Steve Jobs"</a> - (via <a href="http://idkn.wordpress.com/2008/08/03/%D7%A1%D7%98%D7%99%D7%91-%D7%92%D7%95%D7%91%D7%A1-%D7%9C%D7%A4%D7%99-calvin-and-hobbs/">Ido Kanner's Blog</a>).
+</li>
+
+<li>
+<a href="http://xkcd.com/488/">xkcd - A Webcomic - "Steal This Comic"</a>
+</li>
+
+<li>
+<a href="http://ars.userfriendly.org/cartoons/?id=20071107&amp;mode=classic">UserFriendly -
+Stupid iPhone</a>
+</li>
+
+<li>
+<a href="http://ars.userfriendly.org/cartoons/?id=20080604&amp;mode=classic">UserFriendly - Safari for Windows</a>
+</li>
+
+<li>
+<a href="http://img503.imageshack.us/img503/3562/iphoners8.jpg">"iPhone vs.
+Stone"</a>
+</li>
+
+<li>
+<a href="http://www.iwood3b.com/index.php">"Introducing the 
+all new i-wood 3B"</a> - iPhone parody.
+</li>
+
+<li>
+<a href="http://daringfireball.net/2009/05/diary_of_an_app_store_reviewer">Excerpts
+from the Diary of an [iPhone] App Store Reviewer</a>
+</li>
+</ul>
+

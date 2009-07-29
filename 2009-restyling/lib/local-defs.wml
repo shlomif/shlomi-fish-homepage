@@ -1,0 +1,35 @@
+<set-var latemp_with_favicon="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_xml_declaration="1" />
+<set-var latemp_with_breadcrumbs_trail="1" />
+<set-var latemp_html_standard="xhtml1.1" />
+<set-var latemp_nav_links_allowed_places="top-left" />
+<set-var latemp_gen_plain_page="$(PRINTABLE)" />
+<set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
+<set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
+<define-tag latemp_get_breadcrumbs_trail_unconditionally>
+<:{
+    init_section_nav_menu();
+    my $total_leading_path = $section_nav_menu->total_leading_path(
+        {
+            main_leading_path => $leading_path,
+        }
+    );
+
+    my $render_leading_path_component = sub {
+        my $component = shift;
+        my $title = $component->title();
+        my $title_attr = defined($title) ? " title=\"$title\"" : "";
+        return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+            "\"$title_attr>" .
+            $component->label() . "</a>";
+    };
+
+    print join(" &rarr; ",
+        (map
+        { $render_leading_path_component->($_) }
+        @$total_leading_path
+        ));
+}:>
+</define-tag>
+

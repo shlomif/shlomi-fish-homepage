@@ -1,0 +1,67 @@
+* Fortunes Atom Feed:
+    - Make it validate
+    - Syndicate it into the rest.
+
+* File-Dir-Dumper:
+    - add the Freshmeat.net record.
+    - link to the similar projects.
+
+* Upload the non-Quad-Pres presentations source.
+
+* Make the purpose of the site clearly understood from each and every
+page (at the moment no one knows it's my page.
+
+* Add a page collecting the links to all the files under humour/fortunes/ .
+
+* Deprecate the gringotts-shlomif patch in favour of gringotts.berlios.de .
+
+Minor Problems:
+---------------
+
+* Fix the fact that the "Private Tutor HTML Ad" goes beyond the right 
+margins.
+
+* Go over the pages of the individual presentations and add meaningful 
+descriptions.
+    - link to the new presentation in "Linux for the Technion student".
+
+* Add to the external FOSS contributions:
+    - Mandriva
+    - MikMod
+    - Adopted CPAN Modules
+    - Wikipedia and related sites.
+
+* Investigate the following subversion scenario:
+    - svn rm myfile.
+    - svn cp ../../IP/myfile myfile.
+    - svn revert -R .
+    - change myfile.
+    - commit.
+
+Long Term:
+----------
+
+* Add more essays I wrote to the Essays Index.
+
+* Revamp the Math-Ventures site and re-write the formulae in TeX, MathML 
+etc.
+
+* Put more meaningful descriptions in the place holders for all the
+presentations.
+
+* Style the .prod_set's on the CD recommendations page.
+
+* Style the section navigation menus better.
+
+* Generate the DocBook/XML makefile rules using a Perl script.
+    - Check for more possible stuff.
+
+* Link the Hebrew Errors Page to the main one.
+
+* Add Recommendations:
+    - Movies
+    - Fiction Books
+
+* Add <rellink's (relevant links) to:
+    - Book recommendations.
+    - Music recommendations.

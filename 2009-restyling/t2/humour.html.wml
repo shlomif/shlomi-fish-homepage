@@ -1,0 +1,920 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "My Humour Collection" />
+
+<define-tag joke endtag="required">
+%body
+<hr class="joke"/>
+</define-tag>
+
+<define-tag header_joke endtag="required">
+<preserve id header />
+<set-var %attributes />
+<joke>
+<h2 id="<get-var id />"><get-var header /></h2>
+
+%body
+</joke>
+<restore id header />
+</define-tag>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a growing collection of aphorisms and funny bits I came up with 
+throughout the years. They are arranged in roughly chronlogical order.
+</p>
+
+<p>
+You can also find them and others <a href="<rellink url="humour/fortunes/" host="t2" />">in machine-readble UNIX fortune cookies collections</a>.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<header_joke id="jewish_deduction" header="A Jewish Deduction"> 
+
+<p>
+The Bible dictates that "Thou shalt not seethe [=cook] a kid [= young goat] 
+in his mother's milk." To avoid any possibility of breaking that regulation, 
+the Jewish tradition ruled that it also applies to female goats, 
+to mature goats, and to the meat and milk of two completely unrelated 
+goats. It is also forbidden to eat the meat with fresh milk, and it 
+applies to beef and mutten as well (including mixing the milk and meat 
+of two different beasts). Finally, chicken, which are incapable of 
+milk production, may not be eaten along with any mammal's milk either. 
+</p>
+
+<p>
+We are fortunate that most mathematicians were not Jewish. Otherwise, 
+it would have been forbidden to divide by all numbers between -1 and 1.
+</p>
+
+<p class="indent">
+<i>This bit used to appear on my signature for a short while, but people
+got mad because it was too long, so I replaced it.</i>
+</p>
+</header_joke>
+
+<header_joke id="used_to_be_arrogant" header="I Used to be Arrogant">
+
+<p>
+I used to be arrogant. Now I'm simply perfect.
+</p>
+
+<p>
+<i>This bit was once said by a relative of mine...</i>
+</p>
+
+</header_joke>
+
+<header_joke id="murphys_law_greeks" header="Murphy's Law">
+
+<p>
+If the ancient Greeks had invented UNIX, Murphy's Law would have been known
+as Aristotle's Law.
+</p>
+<p>
+Had they invented MS-Windows, Murphy's Law would have been known as the
+Law of Socrates.
+</p>
+
+</header_joke>
+
+
+<header_joke id="microsoft_slogan" header="Microsoft's Slogan">
+
+<p>
+Microsoft's slogan used to be "Microsoft - making it all make sense." <br />
+Today it should be: "Microsoft - making everything make sense. <b>Ours</b>."<br />
+</p>
+
+<p>
+And another twist:<br />
+"Microsoft - friendliness is our outstanding quality. No matter how much we
+mess up your computer work, we will always consider you our friend."
+</p>
+</header_joke>
+
+<header_joke id="american_lottery" header="The American Lottery">
+
+<p>
+The American Lottery - all you need is a dollar and a dream. We will take the
+dollar, but you can keep the dream.
+</p>
+
+<p class="indent">
+<i>(One of my previous E-mail signatures)</i>
+</p>
+</header_joke>
+
+<header_joke id="believe_in_fairies" header="I don't Believe in Fairies">
+
+<p>
+I don't believe in fairies. Oops! A fairy died.<br />
+I don't believe in fairies. Oops! Another fairy died.
+</p>
+
+<p class="indent"><i>I don't really know who said it, so it's possible that I invented
+it.</i></p>
+</header_joke>
+
+<header_joke id="moses_the_smiley" header="Moses the Smiley">
+
+<pre>
+:)-&lt;
+ +--
+</pre>
+
+</header_joke>
+
+<header_joke id="prefix_god_said" header="The prefix &quot;God Said&quot;">
+<p>
+The prefix "God Said" has the extraordinary logical property of converting
+any statement that follows it into a true one.
+</p>
+</header_joke>
+
+<header_joke id="shit_happens" header="Deltas to &quot;Shit Happens&quot; according to Religions">
+
+<p>
+Judaism: God knows you will do shit, does nothing to prevent it, but makes you take
+the blame for it anyways.
+</p>
+<p>
+Or alternatively:
+</p>
+<p>
+God is all the shit, all the non-shit and all the intermediate demi-shits in 
+between.
+</p>
+</header_joke>
+
+<header_joke id="interpret_the_past" header="Interpret the Past">
+<p>
+Let's interpret the past according to the present and not the present
+according to the past.
+</p>
+
+<p class="indent">
+<i>(From an E-mail discussion with Ben Pfaff)</i>
+</p>
+</header_joke>
+
+<header_joke id="computer_science_and_c_programming" header="Computer Science and C Programming">
+<p>
+"Computer Science is no more about computers than astronomy is about
+telescopes"
+</p>
+
+<p class="indent">
+<i>Edsgar W. Dijkstra</i>
+</p>
+
+<p>
+"C programming is no more about computers than astronomy is about 
+stars."
+</p>
+
+<p class="indent">
+<i>Shlomi Fish</i>
+</p>
+
+</header_joke>
+
+<header_joke id="more_experienced_programmer" header="A more experienced programmer...">
+<p>
+A more experienced programmer does not make less bugs. He just realizes 
+what went wrong more quickly.
+</p>
+</header_joke>
+
+<header_joke id="I_promised" header="I promised, I forgot, I broke my promise...">
+<p>
+I promised, I forgot, I broke my promise - just shoot me and get on 
+with it!
+</p>
+
+<p class="indent">
+<i>
+Potentially some famous last words, I also came up with this bit, and I'm
+not sure if I heard it before.
+</i>
+</p>
+</header_joke>
+
+<header_joke id="first_phrase" 
+header="The First Phrase that needs to be Taught">
+<p>
+The first phrase that needs to be taught when teaching a new language is how to 
+say "Do you speak English?".
+</p>
+
+<p>
+The first thing that needs to be taught when teaching a new computer tool 
+is how to exit it.
+</p>
+</header_joke>
+
+<header_joke id="if_A_is_A" header="If A is A and A is not not-A...">
+<p>
+If:<br />
+1. A is A.<br />
+2. A is not not-A.<br />
+does it also imply that:<br />
+1. B is B.<br />
+2. B is not not-B.<br />
+</p>
+
+<p class="indent">
+<i>If you don't understand it, either forget it or consult the following
+threads: 
+<a href="http://groups.google.com/groups?hl=en&amp;threadm=deca99a9.0110250144.654613e9%40posting.google.com&amp;prev=/groups%3Fnum%3D25%26hl%3Den%26group%3Dhumanities.philosophy.objectivism%26start%3D25%26group%3Dhumanities.philosophy.objectivism">Usenet</a>,
+<a href="http://www.mail-archive.com/lin-club@vipe.technion.ac.il/msg00750.html">Haifa 
+Linux Club</a></i>
+</p>
+</header_joke>
+
+<header_joke id="know_im_blond" header="I know I'm blond...">
+<p>
+I know I'm blond, but I have to colour my hair brown, so people would
+not think I'm stupid. Because, like the title of the book says: "You've only
+got Three Seconds".
+</p>
+
+<p>
+Actually, since Amazon sent us two books like that, you've only got six seconds.
+</p>
+</header_joke>
+
+<header_joke id="reinvent_the_wheel" header="Re-inventing the Wheel">
+
+<p>
+He who re-invents the wheel, will understand much better how a 
+wheel works.
+</p>
+
+<p>
+<i>Or:</i>
+</p>
+
+<p>
+He who re-invents the wheel, may actually invent a much better wheel.
+</p>
+
+<p>
+<i><a href="http://nadav.harel.org.il/">Nadav Har'El</a>'s response was:</i>
+</p>
+
+<p>
+He who re-invents the wheel will likely design a square wheel and spend
+a year trying to figure out why it doesn't work properly.
+</p>
+</header_joke>
+
+<header_joke id="cpp_and_oop" header="C++ and Object-Oriented Programming">
+<p>
+IMO, C++ supports Object-Oriented Programming roughly as much as COBOL supports
+Functional Programming.
+</p>
+
+<p class="indent">
+<i>You have to be a relatively experienced hacker to get this joke. So don't 
+worry if you don't understand it.</i>
+</p>
+</header_joke>
+
+<header_joke id="better_alternative" header="A Better Alternative">
+<p>
+Sometimes you don't need to be familiar with a better alternative to know
+that something sucks. Take Microsoft Word for example.
+</p>
+
+<p class="indent">
+<i>This was said by my friend</i>
+</p>
+</header_joke>
+
+<header_joke id="good_student_vs_bad_student" header="Good Student vs. Bad Student">
+
+<p>
+The difference between a good student and a bad student is that a bad student
+forgets the material five minutes before the test, while a good student five
+minutes afterwards.
+</p>
+
+<p class="indent">
+<i>This was said by a lecturer of mine</i>
+</p>
+
+</header_joke>
+
+<header_joke id="not_clear" header="If it was not Clear">
+<p>
+I hope that if it was not clear before, it is not less clear now.
+</p>
+
+<p class="indent">
+<i>Also by a lecturer</i>
+</p>
+</header_joke>
+
+<header_joke id="apple_a_day" header="An Apple a Day">
+<p>
+An apple a day keeps a doctor away. Two apples a day will keep two doctors
+away.
+</p>
+</header_joke>
+
+<header_joke id="smg_next_film" header="Sarah Michelle Gellar's Next Movie">
+<p>
+[Discussing the shortage of IT workers as of 1998 on E-mail]
+</p>
+
+<p>
+Shlomi Fish to Omer Zak: "Even the NSA doesn't have enough programmers. But it
+is not likely that they will have more and that's because 'Summerschool at
+the NSA' may might as well be the name of Sarah Michelle Gellar's next
+movie."
+</p>
+
+<p>
+Omer Zak to Shlomi Fish: "And as opposed to 'I Know What You Did Last
+Summer' it is going to be scary."
+</p>
+</header_joke>
+
+<header_joke id="objective_philosophy" Header="Objective Philosophy...">
+<p>
+Objective philosophy is like a pencil sharpener for one's mind.
+</p>
+</header_joke>
+
+<header_joke id="turing_test" header="Taking a Turing Test">
+<p>
+From <a href="http://groups.yahoo.com/group/hackers-il/message/2465">
+Hackers-IL message No. 2465</a>:
+
+</p>
+
+<p>
+&gt;<br />
+&gt; Shlomi,<br />
+&gt;<br />
+&gt; Have you ever considered taking a Turing test? ;-)<br />
+&gt;<br />
+</p>
+
+<p>
+&lt;sarcasm&gt;<br />
+Sure I did. I sat at one point of an IRC channel, and someone
+tested me. Eventually it was discovered that I am a computer, but it
+turned out the other side was an Eliza program. Strangely enough, I could
+not detect that the latter fact was true.<br />
+&lt;/sarcasm&gt;<br />
+</p>
+</header_joke>
+
+<header_joke id="hi_sophie" header="Hi, Sophie!">
+<p>
+<b>Jack</b>: Hi, Sophie!
+</p>
+
+<p>
+<b>Sophie</b>: Don't "Hi, Sophie!" me.
+</p>
+
+<p>
+<b>Jack</b>: Don't "Don't 'Hi, Sophie!' me" me!
+</p>
+</header_joke>
+
+<header_joke id="corollary_of_godwyn" header="Corollary of Godwyn's Law">
+<p>
+Shlomi, I'm considering naming a corollary of Godwyn's law after you -
+any discussion of anything is over when you mention Freecell Solver.
+</p>
+
+<p class="indent">
+	Muli Ben-Yeuhuda on #kernelnewbies (irc.kernelnewbiews.org)
+</p>
+
+<p>
+Muli: BTW, I think that any discussion only begins to gain momentum
+when I mention Freecell Solver.
+</p>
+
+<p class="indent">
+	Shlomi Fish on #offtopic (irc.kernelnewbies.org)
+</p>
+</header_joke>
+
+<header_joke id="keeping_an_idea_to_yourself" header="Keeping an Idea to Yourself">
+<p>
+There's no point in keeping an idea to yourself since there's a 10 to 1
+chance that somebody already has it and will share it before you.
+</p>
+</header_joke>
+
+<header_joke id="you_are_banished" header="You are banished!">
+<p>
+You are banished! You are banished! You are banished! - Hey! I'm just
+kidding!
+</p>
+</header_joke>
+
+<header_joke id="opinions_crazy" header="Crazy Opinions">
+My opinions may seem crazy but they all make sense. Insane sense, but
+sense nonetheless.
+</header_joke>
+
+<header_joke id="foreign_languages" header="Foreign Languages"> 
+
+<p>
+<i>[Discussing Foreign Languages Knowledge in the U.S.A]</i>
+</p>
+
+<p>
+<b>Ben Collins-Sussman</b>: Tis' true, unlike Europe, the language doesn't
+change every 100 miles.
+</p>
+
+<p>
+<b>Shlomi Fish</b>: And unlike England, the accent does not change every 10
+miles.
+</p>
+</header_joke>
+
+<header_joke id="happened_to_cmpilato" header="What Happened to Christopher Michael Pilato?">
+<p>
+What happened to Christopher Michael Pilato?<br />
+Is he gone?<br />
+Is he gone for good?<br />
+Is he gone for better?<br />
+Is he gone for best?<br />
+Is he gone forever?<br />
+Will he return?<br />
+Who is Christopher Michael Pilato, anyway?
+</p>
+</header_joke>
+
+<header_joke id="in_philosophy_as_in_soft_eng" header="In Philosophy, as much as in software engineering,">
+<p>
+In Philosophy, as much as in software engineering, you don't get credit for
+originality. What matters is the final product, not who came up with
+the idea for each feature first.
+</p>
+</header_joke>
+
+<header_joke id="he_has_high_degree" header="He has a high degree of...">
+<p>
+He has a high degree of idealism, a high degree of stubbornness, and an even
+higher degree of inability to distiniguish between the two.
+</p>
+<div class="indent">
+<p>
+<i>
+I originally thought of something similar to that about 
+<a href="http://www.stallman.org/">Richard M. Stallman</a> who has headed the
+<a href="http://www.fsf.org/">Free Software Foundation</a> and its GNU 
+project since it's inception. He is known for his radical and uncomprising 
+views that combine both idealism and just plain stubburness. Otherwise, he's
+a great and noble guy, and I had the opportunity of meeting and talking 
+him during his visit to Israel. (He is much more pleasant in real life than
+online.)
+</i>
+</p>
+</div>
+</header_joke>
+
+<header_joke id="hacker_sees_bug" header="Hacker Sees Bug">
+<p>
+Hacker sees bug. Hacker fixes bug.
+</p>
+<div class="indent">
+<p>
+<i>I was told that the natural continuation to this should be "Hack, hacker,
+hack!"</i>
+</p>
+</div>
+</header_joke>
+
+<header_joke id="linus_95_percent_of_programmers" header="95% of Programmers">
+<p>
+Linus Torvalds: "95% of Programmers consider themselves in the top 5%".
+</p>
+<p>
+Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did not write, in the bottom 5%." 
+</p>
+<div class="indent">
+<p>
+<i>Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">a discussion of it on the Joel on Software forum</a></i>
+</p>
+</div>
+</header_joke>
+
+<header_joke id="too_girly" header="Too Girly">
+<pre>  
+  &lt;rindolf&gt;    Linuxgrrl: well The Gilmore Girls is also a drama. Sort 
+               of a dramedie, but a serious one.
+&lt;Linuxgrrl&gt;    Meh.
+&lt;Linuxgrrl&gt;    Too girly for me.
+  &lt;rindolf&gt;    Linuxgrrl: you are a girl.
+  &lt;rindolf&gt;    Linuxgrrl: let me guess - you're using Debian or Gentoo, 
+               right?
+&lt;Linuxgrrl&gt;    Gentoo.
+  &lt;rindolf&gt;    Linuxgrrl: knew it.
+  &lt;rindolf&gt;    Linuxgrrl: no self-respecting tomboy would use Mandrake.
+</pre>
+<p><i>rindolf here is Shlomi Fish</i >
+</p>
+</header_joke>
+
+<header_joke id="cpp_is_complex" header="C++ is...">
+<p>
+C++ is complex, complexifying and complexified.
+</p>
+<p>
+(With apologies to the Oxford English Dictionary). 
+</p>
+</header_joke>
+
+<header_joke id="linux_because_software_problems" header="Linux - Because Software Problems...">
+<p>
+Linux - Because Software Problems Should not Cost Money
+</p>
+<p>
+<i>Refer to <a href="$(ROOT)/art/linux_banner/">this page about that Slogan
+and a resultant graphics made from it.</a>
+</i>
+</p>
+</header_joke>
+
+<header_joke id="real_programmers_dont_write" header="Real Programmers Don't Write">
+<p>
+Real programmers don't write workarounds. They tell their users to
+upgrade their software.
+</p>
+</header_joke>
+
+<header_joke id="if_his_programming" header="If his Programming...">
+<p>If his programming is anything like his philosophising, he would find 10
+imaginary bugs in the "Hello World" program.</p>
+</header_joke>
+
+<header_joke id="blogging_memes" header="Blogging Memes">
+<pre>
+  &lt;rindolf&gt;  I'm siicckk of blogging memes.
+  &lt;rindolf&gt;  You are this file type.
+  &lt;rindolf&gt;  You are that type of cloth.
+&lt;jkauffman&gt;  You are this member of the Friends show
+  &lt;rindolf&gt;  jkauffman: LOL.
+&lt;jkauffman&gt;  "January 4th, 2005: Just took an online quiz and it
+             turns out I'm a Joey type"
+</pre>
+<p>
+<i>rindolf here is Shlomi Fish</i>
+</p>
+</header_joke>
+
+<header_joke id="tcl_is_lisp_on_drugs" header="Tcl is Lisp on Drugs...">
+<p>
+Tcl is LISP on drugs. Using strings instead of S-expressions for closures is 
+Evil with one of those gigantic E's you can find at the beginning of 
+book chapters.
+</p>
+</header_joke>
+
+<header_joke id="jewish_atheists" header="Jewish Atheists">
+<p>
+Jewish Atheists are the only true Atheists. They beat the hell out of Goy
+Atheists.
+</p>
+<p>
+<i>Yet more Jew-over-Gentile superiority, this time by me. In case you're
+wondering, Judaism is primarily a peopleship and the Jewish religion is only
+part of it.</i>
+</p>
+</header_joke>
+
+<header_joke id="original_philosopher" header="An Original Philosopher...">
+<p>
+An original philosopher knows the right combination of ideas to steal.
+</p>
+</header_joke>
+
+<header_joke id="to_err_is_human_corrolaries" header="Corrolaries to &quot;To err is human&hellip;&quot;">
+
+<p>
+Here are some corrolaries to <q>To err is human - to forgive divine</q>. 
+</p>
+
+<ul>
+<li>
+To err is human - to apologise - divine.
+</li>
+<li>
+To have bugs is human - to fix them - divine.
+</li>
+<li>
+To have bugs is human - to find them - divine.
+</li>
+</ul>
+
+</header_joke>
+
+<header_joke id="might_be_mad" header="Might be mad...">
+
+<p>
+I might be mad. But I'm a mad genius.
+</p>
+</header_joke>
+
+<header_joke id="if_god_exists" header="If God exists...">
+
+<p>
+If God exists and is the ego-maniacal, sadistic and helpless creature that
+is described in the Old Testament, then we're in deep trouble.
+</p>
+</header_joke>
+
+<header_joke id="bad_thing_about_hardware" header="The bad thing about hardware">
+
+<p>
+The bad thing about hardware is that it sometimes work and sometimes doesn't.
+The good thing about software is that it's consistent: it always does not work,
+and it always does not work in exactly the same way.
+</p>
+
+</header_joke>
+
+<header_joke id="table_with_cups" header="Let's suppose you have a table">
+
+<p>
+<b>Sophie:</b> Let's suppose you have a table with 2<sup>n</sup> cups...<br />
+<b>Jack:</b> Wait a second - is 'n' a natural number?
+</p>
+
+</header_joke>
+
+<header_joke id="chuck_norris_and_perl6" header="Chuck Norris and Perl 6">
+
+<p>
+Chuck Norris wrote a complete Perl 6 implementation in a day, but then
+destroyed all evidence with his bare hands so no one will know his secrets.
+</p>
+
+<div class="indent">
+<p>
+<i>There's more about Chuck Norris and Perl 6 
+<a href="$(ROOT)/humour/fortunes/shlomif">in this Unix fortune file</a> and 
+more about Norris on <a href="http://www.chucknorrisfacts.com/">the 
+Chuck Norris Facts web-site.</a>.</i>
+</p>
+</div>
+
+</header_joke>
+
+<header_joke id="ee_in_the_technion" header="Electrical Engineering studies.">
+<p>
+Electrical Engineering studies. In the Technion. Been there. Done that.
+Forgot a lot. Remember too much.
+</p>
+</header_joke>
+
+<header_joke id="not_an_actor" header="I'm not an Actor">
+<p>
+I'm not an actor - I just play one on T.V.
+</p>
+</header_joke>
+
+<header_joke id="internet_porn" header="Blocking Internet Pornography">
+<p>
+Trying to block Internet pornography is like climbing a waterfall and trying 
+to stay dry.
+</p>
+<p>
+<i>Drew Dexter</i>
+</p>
+</header_joke>
+
+<header_joke id="Im_not_straight" header="I'm not straight...">
+<p>
+I'm not straight - I'm Israeli!
+</p>
+<p>
+<i>Just for the record, I am straight, and I hate being a macho.</i>
+</p>
+</header_joke>
+
+<header_joke id="i_do_not_think_it_means" header="I do not think it means...">
+<pre>
+&gt; You keep using that word.  I do not think it means what you think it
+&gt; means.
+
+It does not mean what I think it means, but it means what *you* think it
+means.
+
+&lt;evil-laugh&gt;Muahahahah...&lt;/evil-laugh&gt;
+</pre>
+
+<p>
+<i>Taken from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011935.html">this E-mail to the Linux-Elitists mailing list</a></i>
+</p>
+
+</header_joke>
+
+<header_joke id="chuck_norris_2" header="Chuck Norris Fact #2">
+
+<p>
+If Chuck Norris had been born before World War II, there would have been only
+one world war.
+</p>
+
+<p>
+<i>I feel a bit uneasy about saying it, but it is still kind of funny, for
+those who like <a href="http://www.chucknorrisfacts.com/">Chuck 
+Norris facts</a></i>
+</p>
+
+</header_joke>
+
+<header_joke id="we_dont_know_his_cellphone_numer" header="We don't know his cellphone number">
+
+<p>
+We don't know his cellphone number, and even if we did, we would tell you that
+we didn't know it.
+</p>
+
+</header_joke>
+
+<header_joke id="sometimes_two_bugs" header="Sometimes two bugs...">
+
+<pre>
+ &lt;rindolf&gt;  sarnold: you go to OGI?
+ &lt;sarnold&gt;  rindolf: no; but my boss and a co-worker are professors there,
+            and other co-workers earned degrees there..
+ &lt;rindolf&gt;  sarnold: OK.
+    &lt;muli&gt;  sarnold, have you got one of those pesky things?
+ &lt;sarnold&gt;  muli: just Bachelor of Arts .. no Masters or Ph.D...
+ &lt;rindolf&gt;  sarnold: B.Sc or B.A.?
+    &lt;muli&gt;  rindolf, Bachelor of Arts is B.A. 
+ &lt;rindolf&gt;  muli: I know. But I was just checking.
+ &lt;sarnold&gt;  rindolf: ah, you&#39;re right, B.Sc.. I chickened out on the language 
+            requirements :)
+ &lt;rindolf&gt;  muli: see?? LOL.
+    &lt;muli&gt;  rindolf, sometimes, two bugs cancel each other.  
+ &lt;rindolf&gt;  muli: wisely spoken.
+ &lt;rindolf&gt;  But mine wasn&#39;t a bug - it was a sanity check.
+
+    -- #offtopic on OFTC
+</pre>
+
+</header_joke>
+
+<header_joke id="what_do_you_mean" header="What do you mean...">
+
+<p>
+What do you mean by "WDYM"?
+</p>
+
+</header_joke>
+
+<header_joke id="windows_vs_linux" header="Windows vs. Linux">
+
+<p>
+<b>Chen Shapira:</b>  spent 5 hours yesterday trying to get Windows to print
+on my new wireless printer. It still doesn't work. On Ubuntu it worked after
+few minutes.
+</p>
+
+<p>
+<b>Shlomi Fish:</b> Heh. Linux++ .
+</p>
+
+<p>
+<b>Chen Shapira:</b> I'd do Windows-- , but this may result in an integer
+underflow.
+</p>
+
+</header_joke>
+
+<header_joke id="pedantic_people" header="Pedantic People">
+
+<p>
+"I often wonder why I hang out with so many people who are so pedantic. And
+then I remember - because they are so pedantic."
+</p>
+
+<p>
+<i>An Israeli Perl Monger</i>
+</p>
+
+</header_joke>
+
+<header_joke id="met_a_guy_in_the_bar" header="I Met a Guy in the Bar">
+
+<p>
+I met a guy in the bar, talked to her and she gave me her phone number.
+</p>
+
+<div class="indent">
+
+<p>
+This is an anti-thesis to the fact that many <a 
+href="http://en.wikipedia.org/wiki/Feminazi">Feminazis</a> claim that using
+"girl" for "a female guy", is derogatory, despite the fact that it is very
+common, and quite harmless. In Hebrew, there's a perfectly good word for
+a girl, which is not a female child, and since I think in Hebrew about 50%
+of the time, I tend to import such things into my English speech. There are
+much worse derogatory etymologies in Hebrew of course, but "guy"/"girl" is
+not one of them.
+</p>
+
+<p>
+While as a general rule I support the woman liberation movement, and believe
+in equality of opportunities among the genders, I still don't believe that
+a Politically-Correct re-engineering of the English language to be
+100% gender-neutral (and mostly only the English language, because most
+other European and Semitic languages are not gender-neutral, and even have
+genders for objects) is a good idea. I also don't believe in applying
+government control in order to "promote" women, and think that members of
+both genders, and all other divisions should learn to cope with
+discrimination and other abuse as they encounter it, instead of just bitching
+about how they were discriminated against, or accusing the other party of
+being "sexist" or "racist" or whatever.
+</p>
+
+<p>
+So I'm going to continue using "girl" for a "female guy", regardless of what
+other people think. I also don't mind using the term 
+<a href="http://shlomif.livejournal.com/53966.html">nazi for someone 
+who's unnecessarily strict</a> or calling Black people "Negros", which is
+just the Spanish word for the colour "Black".
+</p>
+
+</div>
+
+</header_joke>
+
+<header_joke id="on_the_Internet" header="On the Internet">
+
+<p>
+Two female dogs talking about modern-life:
+</p>
+
+<p>
+<b>Jasmine:</b> It's so cool! On the Internet, no one knows you're a dog!
+</p>
+
+<p>
+<b>Daisy:</b> Yeah, but everyone can tell right away that you're a bitch!
+</p>
+
+<div class="indent">
+
+<p>
+<a href="http://www.unc.edu/depts/jomc/academics/dri/idog.html">See this page
+about "On the Internet"</a> for context.
+</p>
+
+</div>
+
+</header_joke>
+
+<header_joke id="God_gave_us_two_eyes" header="God gave us…">
+
+<p>
+God gave us two eyes and ten fingers so we will type five times as much as
+we read.
+</p>
+
+</header_joke>
+
+<header_joke id="only_wimps_complain_about_bad_code" header="Only wimps complain about bad code">
+
+<p>
+Only wimps complain about bad code. Real men clean it up.
+</p>
+
+</header_joke>
+
+<header_joke id="wikipedia_has" header="Wikipedia has…">
+
+<p>
+Wikipedia has a page about everything including the 
+<a href="http://en.wikipedia.org/wiki/Kitchen_sink">http://en.wikipedia.org/wiki/Kitchen_sink</a> .
+</p>
+
+</header_joke>
+
+<header_joke id="what_does_IDK_stand_for" header="What does IDK stand for?">
+
+<p>
+What does "IDK" stand for? I don't know.
+</p>
+
+</header_joke>
+

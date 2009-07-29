@@ -1,0 +1,84 @@
+
+WML_FLAGS = ;
+
+WML_FLAGS = [WML_FLAGS] --passoption\=2,-X -DROOT~.;
+
+/*
+ * t2 macros
+ */
+
+DEST_BASE = /var/www/html/shlomi/;
+
+myhosts = t2 vipe;
+
+loop host = [myhosts]
+{
+    [host]_DOCS = [shell bash find-wmls-[host].sh];
+    [host]_DEST_DIR = [host]-homepage;
+    [host]_DEST = [DEST_BASE][[host]_DEST_DIR];
+    [host]_WML_FLAGS = [WML_FLAGS] -DSERVER\=[host];
+    [host]_DOCS_DEST = [patsubst [host]/%.wml [[host]_DEST]/% [[host]_DOCS]];
+    
+    [host]_DIRS = [shell find [host] -type d | grep -v \'/\\.svn\' | grep -v \'^\\.svn\' | tail +2];
+    [host]_DIRS_DEST = [patsubst [host]/% [[host]_DEST]/% [[host]_DIRS]];
+    [host]_IMAGES = [shell find [host] -type f -not -name \'*.wml\' -not -name \'.*\' | grep -v \'/\\.svn\' | grep -v \'~$\'];
+    [host]_IMAGES_DEST = [patsubst [host]/% [[host]_DEST]/% [[host]_IMAGES]];
+
+    [host]_TARGETS = [[host]_DIRS_DEST] [[host]_DOCS_DEST] [[host]_DEST]/style.css [[host]_IMAGES_DEST];
+}
+
+/* all : mydebug; */
+
+all : [t2_DIRS_DEST];
+
+/* all: [t2_TARGETS] [vipe_TARGETS]; */
+/*
+ * all: $(t2_DIRS_DEST) $(t2_DOCS_DEST)
+ */
+
+RSYNC = rsync --progress --verbose --rsh\=ssh;
+
+upload: all
+{
+	echo t2_DEST \= [t2_DEST];
+	( cd [t2_DEST] && [RSYNC] -r * shlomif@t2.technion.ac.il\:public_html/ );
+	echo vipe_DEST \= [vipe_DEST];
+	( cd [vipe_DEST] && [RSYNC] -r * shlomif@vipe.technion.ac.il\:public_html/ );
+}
+clean:
+{
+	rm -fr [t2_DEST]/\*;
+	rm -fr [vipe_DEST]/\*;
+}
+
+loop host = [myhosts]
+{
+    /* Targets Processing */
+
+    [[host]_DEST]/%0%: [host]/%0%.wml template.wml [host]/.wmlrc
+        if [in [target] [[host]_DOCS_DEST]]
+    {
+        ( cd [host] && wml [[host]_WML_FLAGS] -DFILENAME\=[patsubst [[host]_DEST]/% % [patsubst %.wml % [target]]] [patsubst [host]/% % [resolve [head [need]]]] > [target] );
+    }
+    [[host]_DEST]/%0%: unchanged
+        if [in [target] [[host]_DIRS_DEST]]
+    {
+        mkdir -p [target];
+        touch [target];
+    }
+    [[host]_DEST]/%0%: [host]/%0%
+        if [in [target] [[host]_IMAGES_DEST]]
+    {
+        cp -f [resolve [head [need]]] [target];
+    }
+    [[host]_DEST]/style.css: style.css
+    {
+        cp -f [resolve [head [need]]] [target];
+    }
+}
+
+mydebug:
+{
+    echo [t2_DIRS];
+}
+

@@ -1,0 +1,14 @@
+<define-tag shlomif_sponsored_ad endtag="required">
+{#SHLOMIF_SPONSORED_AD#:
+<div class="spons ad">
+<h2>Notice</h2>
+<div class="in">
+%body
+</div>
+</div>
+:##}
+</define-tag>
+
+<define-tag shlomif_sponsored_ad_text>
+{#SHLOMIF_SPONSORED_AD#}
+</define-tag>

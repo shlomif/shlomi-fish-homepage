@@ -1,0 +1,52 @@
+Follow the following steps to build the homesite:
+
+1. Install Subversion.
+
+2. Install perl 5.8.x (or later) in case it's not already installed. You
+should have a package for for your system.
+
+3. Install Website Meta Language (version 2.0.12 or later):
+
+http://developer.berlios.de/projects/thewml/
+
+4. Run and configure CPAN (see - http://sial.org/howto/perl/life-with-cpan/ )
+and type:
+
+    $ export PERL_MM_USE_DEFAULT=1
+    $ perl -MCPAN -e 'install Task::Sites::ShlomiFish'
+
+Or if you have CPANPLUS installed:
+
+    $ export PERL_MM_USE_DEFAULT=1
+    $ perl -MCPANPLUS -e 'install Task::Sites::ShlomiFish'
+
+5. Install Latemp:
+
+    $ svn co http://svn.berlios.de/svnroot/repos/web-cpan/latemp/trunk/
+    $ cd trunk/installer
+    $ mkdir -p "$HOME/apps/latemp"
+    $ scons PREFIX="$HOME/apps/latemp/" install
+    $ cd ../support-headers
+    $ perl install.pl
+
+6. Add Latemp to the beginning of your path:
+
+    $ PATH="$HOME/apps/latemp/bin:$PATH"
+
+7. 
+    $ svn co http://opensvn.csie.org/shlomif/wml-affiliations/trunk/
+    $ cd trunk/wml
+    $ bash Install.bash
+
+8.
+    $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
+    $ cd trunk/xhtml/1.x/
+    $ bash Install.bash
+
+9. Do the following to build the site, after all dependencies were installed:
+
+    $ svn co http://opensvn.csie.org/shlomif/homepage/trunk/
+    $ cd trunk
+    $ ./gen-helpers.pl
+        ( Ignore the make warning. )
+    $ make

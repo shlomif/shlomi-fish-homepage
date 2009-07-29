@@ -1,0 +1,105 @@
+#include '../template.wml'
+
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Shlomi Fish's Open Source Projects" />
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h2>
+
+<p>
+A program and a library written in ANSI C that automatically solves games of
+Freecell and similar Solitaire variants.
+</p>
+
+<h2 id="latemp"><a href="<rellink url="open-source/projects/latemp/" />">Latemp - a Content 
+Management System for Static HTML Page</a></h2>
+
+<p>
+Latemp is a content management system for generatic sophisticated static HTML
+sites. It is based on the excellent <a href="http://thewml.org/">Website Meta
+Language</a> by Ralf S. Engelschall and Denis Barbier. This site 
+<a href="http://web-cpan.berlios.de/latemp/examples/">and others</a> are
+generated using Latemp.
+</p>
+
+<h2 id="quad-pres"><a href="<rellink url="open-source/projects/quad-pres/" />">Quad-Pres</a></h2>
+
+<p>
+Short for Quick-and-Dirty Presentations, this is a tool written in Perl for
+preparing HTML presentations. Based on 
+<a href="http://thewml.org/">WebMetaLanguage</a>.
+</p>
+
+<h2 id="ip-noise"><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
+
+<p>
+A simulator for IP-Noise for Linux systems based on the Linux Kernel version
+2.4.x or above.
+</p>
+
+<h2 id="jmikmod"><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h2>
+
+<p>
+A port of the well-known MOD player <a href="http://www.mikmod.org/">MikMod</a>
+(that was originally written in ANSI C) to Java.
+</p>
+
+<h2 id="gradient-fu"><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h2>
+
+<p>
+A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
+and to scripting interfaces.
+</p>
+
+<h2 id="rwlock"><a href="<rellink url="rwlock/" />">A First-Come First-Served
+Readers/Writers Lock</a></h2>
+
+<p>
+An implementation of it for POSIX Threads, which can also be used as a 
+reference implementation. 
+</p>
+
+<h2 id="lm-solve"><a href="<rellink url="lm-solve/" />">LM-Solve</a></h2>
+
+<p>
+An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a> 
+written in Perl.
+</p>
+
+<h2 id="yjobs-on-mozilla"><a href="<rellink url="open-source/projects/yjobs-on-mozilla/" />">Workaround to Get yjobs.co.il Working with Firefox</a></h2>
+
+<p>
+This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.il/">the yjobs.co.il Israeli job-board</a> using Firefox, and other
+Mozilla-based browsers.
+</p>
+
+<h2 id="web-cpan"><a href="http://web-cpan.berlios.de/">Web-CPAN</a></h2>
+
+<p>
+A collection of web-related Perl CPAN modules.
+</p>
+
+<h2 id="cpan-modules"><a href="http://search.cpan.org/~shlomif/">My CPAN Modules</a></h2>
+
+<p>
+I wrote several modules for <a href="http://search.cpan.org/">CPAN</a> - the
+Comprehensive Perl Archive Network. 
+</p>
+
+<h2 id="bits"><a href="$(ROOT)/open-source/bits.html">Bits and Bobs</a></h2>
+
+<p>
+A random collection of small programs I created, and are made available to
+the public.
+</p>
+
+<h2 id="conf"><a href="conf/">Personal Configuration Files</a></h2>
+
+<p>
+These are configuration files of various programs I'm using on my home
+machines.
+</p>

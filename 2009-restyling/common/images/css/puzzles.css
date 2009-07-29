@@ -1,0 +1,34 @@
+.logic_sayings td, .logic_sayings th
+{
+    vertical-align: top;
+    border-left: 1pt black solid;
+    border-right: 1pt black solid;
+    padding-left: 5pt;
+    padding-right: 5pt;
+    padding-top: 3pt;
+    padding-bottom: 3pt;
+}
+.logic_sayings ol
+{
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 0;
+    padding-left: 1.5em;
+}
+.logic_sayings
+{
+    border-collapse:collapse;
+}
+.logic_sayings tr
+{
+    border-top : 1px black solid;
+    border-bottom : 1px black solid;
+}
+.logic .branch
+{
+    border: 1px black dashed;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}

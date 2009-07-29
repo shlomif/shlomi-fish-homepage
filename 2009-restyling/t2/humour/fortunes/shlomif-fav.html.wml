@@ -1,0 +1,22 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Shlomi Fish's Favourite Fortunes" />
+
+<h2*>The shlomif Fortune Collection</h2*>
+
+<p>
+These are amusing or insightful fortunes I collected from various sources.
+Most of them don't appear elsewhere.
+</p>
+
+<h3*>Table of Contents</h3*>
+
+<toc />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/shlomif-fav.xhtml-for-input"
+</div>
+
+

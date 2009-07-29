@@ -1,0 +1,54 @@
+<define-tag url_body_link>
+<preserve href />
+<set-var <attributes-extract href %attributes> />
+<a <attributes-quote <attributes-remove "/" %attributes> > ><get-var href /></a>
+<restore href />
+</define-tag>
+
+<define-tag rellink whitespace="delete">
+<preserve url />
+<preserve host />
+<set-var %attributes />
+<set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
+<if <match "<get-var url />" "^http://" action="report" />
+    "<get-var url />" 
+    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
+        "$(ROOT)/<get-var url />"
+        <ifeq "<get-var host />" "t2"
+            "http://www.shlomifish.org/<get-var url />"
+            "http://www.shlomifish.org/Vipe/<get-var url />"
+            />
+    />
+/>
+<restore host />
+<restore url /></define-tag>
+
+<define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
+
+<define-tag longblank>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</define-tag>
+
+<define-tag email:link>
+<a href="mailto:%0">%0</a>
+</define-tag>
+
+<define-tag note endtag="required">
+<div class="note">
+%body
+</div>
+</define-tag>
+
+<define-tag link_to_screenplay>
+<preserve base desc />
+<set-var %attributes />
+<a href="<get-var base />.txt"><get-var desc />Source in text format</a> 
+(requires
+<a href="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/">XML-Grammar-Screenplay</a> 
+to render)
+<restore base desc />
+</define-tag>
+

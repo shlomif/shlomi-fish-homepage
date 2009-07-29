@@ -1,0 +1,10 @@
+<define-tag affil_link whitespace="delete">
+<preserve id />
+<set-var %attributes />
+http://www.amazon.com/exec/obidos/ASIN/<get-var id />/ref=nosim/shlomifishhom-20
+<restore id />
+</define-tag>
+
+<define-tag amazon_wishlist_link whitespace="delete">
+http://www.amazon.com/gp/registry/3K9IITLFAIUG2/wishlist
+</define-tag>

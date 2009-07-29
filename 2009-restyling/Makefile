@@ -58,7 +58,7 @@ upload: upload_remote
 upload_remote: upload_local upload_remote_only
 
 upload_remote_only: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/ )
+	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/css-temp-380/ )
 
 clean:
 	rm -fr $(T2_DEST)/*

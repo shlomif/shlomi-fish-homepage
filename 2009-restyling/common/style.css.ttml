@@ -1,12 +1,13 @@
-[% IF 0 %]
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
 { 
     background-color : #90EE90; /* LightGreen */
 }
-[% END %]
 [% SET navbar_width = "20%" %]
 [% PROCESS "smoked-wp-theme.css.ttml" %]
-[% IF 0 %]
+.invisible
+{
+    visibility: hidden;
+}
 div.indent { margin-left : 3em }
 p.indent { margin-left : 3em  }
 div.rightalign { text-align : right }
@@ -39,9 +40,7 @@ ul.nospace
 /* This is for the breadcrumbs trail (= leading path) at the top. */
 .leading_path
 {
-[% IF 0 %]
     background-color : #ccffd0;
-[% END %]
     margin-bottom: 0.2em;
     padding-left: 0.2em;
     padding-top: 0.1em;
@@ -54,9 +53,7 @@ ul.nospace
 }
 .leading_path a:hover
 {
-[% IF 0 %]
     background-color : #FFA500; /* orange */
-[% END %]
 }
 
 /* Border-less */
@@ -91,9 +88,7 @@ ul.nospace
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    [% IF 0 %]
     background-image: url("./images/grsites-beige049-modified.png");
-    [% END %]
     border: 4pt double #E02030;
 }
 .books dt
@@ -103,15 +98,11 @@ ul.nospace
     padding-bottom: 0.25em;
     padding-left: 0.3em;
     padding-right: 0.3em;
-[% IF 0 %]
     background-color: #FFFFBB;
-    [% END %]
 }
 .books dd
 {
-[% IF 0 %]
     background-color: #E0FFE0;
-    [% END %]
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-top: 0.3em;
@@ -137,9 +128,7 @@ ul.nospace
 }
 .sub_menu
 {
-[% IF 0 %]
     background-color: #C0C0C0;
-[% END %]
     padding-top: 7pt;
     padding-bottom: 2em;
     padding-right:5pt;
@@ -237,9 +226,7 @@ table.thumbs
 .about_site h2
 {
     margin-top: 0em;
-[% IF 0 %]
     background-color: [% about_color %];
-[% END %]
     color: white;
     padding: 3pt;
 }
@@ -331,9 +318,7 @@ table.visible
      border: solid 1.5pt [% sponsored_ad_border %];
      margin-bottom: 1em;
      padding: 0;
-     [% IF 0 %]
      background-color: white;
-     [% END %]
 }
 
 .spons.ad h2
@@ -342,9 +327,7 @@ table.visible
     padding-top: 1pt;
     padding-bottom: 1pt;
     display: block;
-     [% IF 0 %]
     background-color: [% sponsored_ad_border %];
-     [% END %]
     color: white;
     margin-top: 0;
 }
@@ -431,4 +414,3 @@ table.visible
 {
     float: right;
 }
-[% END %]

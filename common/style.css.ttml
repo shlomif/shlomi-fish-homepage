@@ -127,11 +127,14 @@ ul.nospace
 .sub_menu
 {
     background-color: #C0C0C0;
-    padding-top: 7pt;
+    padding-top: 20pt;
     padding-bottom: 2em;
-    padding-right:5pt;
-    padding-left:5pt;
+    padding-left:10pt;
+    padding-right:10pt;
     margin-bottom: 1em;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
 }
 .sub_menu ul
 {

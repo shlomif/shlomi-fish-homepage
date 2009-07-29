@@ -18,9 +18,7 @@ div.rightalign { text-align : right }
 */
 
 ul.noindent { margin-left : 0em }
-[% IF 0 %]
 .center { text-align: center }
-[% END %]
 #noie
 {
     text-align: center;
@@ -208,7 +206,9 @@ table.thumbs
 {
     border:0;
 }
+[% PROCESS "shlomif/navbar.ttml" %]
 [% INCLUDE "lang_switch.css.ttml" %]
+[% INCLUDE "nav_links.ttml" %]
 .about_site
 {
     width: 35%;

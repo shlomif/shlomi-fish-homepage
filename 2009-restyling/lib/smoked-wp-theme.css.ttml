@@ -109,7 +109,9 @@ body {
 }
 
 [% sidebar_id %] ul li a {
+[% IF 0 %]
 	color: #5A5A43;
+[% END %]
 	text-decoration: none;
 }
 
@@ -153,7 +155,9 @@ body {
 }
 
 [% widget_id %] a {
+[% IF 0 %]
 	color:#01698f;
+[% END %]
 }
 
 
@@ -526,4 +530,9 @@ a.tagsz-5 { font-size: 16px; }
 	color: #FFF;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+[% sidebar_id %] a:link {
+    color: #448800 ;
+    text-decoration: underline;
 }

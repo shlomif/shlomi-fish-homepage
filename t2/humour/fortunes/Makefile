@@ -1,12 +1,12 @@
 include fortunes-list.mak
 
-VER = 0.10.194
+VERSION_FILE = ver.txt
+
+VER = $(shell head -1 $(VERSION_FILE))
 
 DIST_BASE = fortunes-shlomif
 
 INDEX_FILE = index.html
-
-VERSION_FILE = ver.txt
 
 ARCS_LIST_INCLUDE = arcs-list.mak
 
@@ -59,9 +59,6 @@ $(PACKAGE_BASE): $(PACKAGE_DEPS)
 
 $(INDEX_FILE): fortunes-index.html $(PACKAGE_BASE)
 	cat $< | sed '/%%PACKAGE_BASE%%/ s/href=".*"/href="$(PACKAGE_BASE)"/' > $@
-
-$(VERSION_FILE): Makefile
-	echo $(VER) > $@
 
 upload: dist
 	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) $(INDEX_FILE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/" 

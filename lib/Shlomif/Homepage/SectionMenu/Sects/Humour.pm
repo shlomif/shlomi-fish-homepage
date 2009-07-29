@@ -239,6 +239,10 @@ my $humour_tree_contents =
                     'url' => "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
                     'title' => "A Cross of the Douglas Adams Book and the T.V. Series",
                 },
+                {
+                    'text' => "How Many Usenet Readers does it Take to Change a Lightbulb?",
+                    'url' => "humour/by-others/how-many-newsgroup-readers-does-it-take-to-change-a-lightbulb.html",
+                },
             ],
         },
         {

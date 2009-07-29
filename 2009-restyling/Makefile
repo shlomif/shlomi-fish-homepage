@@ -354,3 +354,7 @@ $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 
 $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
+
+common/style.css.ttml: lib/smoked-wp-theme.css.ttml
+	touch $@
+

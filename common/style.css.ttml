@@ -4,10 +4,9 @@
 }
 [% SET navbar_width = "20%" %]
 [% PROCESS "smoked-wp-theme.css.ttml" %]
-.invisible
-{
-    visibility: hidden;
-}
+[% PROCESS "shlomif/navbar.ttml" %]
+[% INCLUDE "nav_links.ttml" %]
+[% PROCESS "newsitem.css.ttml" %]
 div.indent { margin-left : 3em }
 p.indent { margin-left : 3em  }
 div.rightalign { text-align : right }
@@ -16,6 +15,11 @@ div.rightalign { text-align : right }
     with a different colour. That's CSS 2.
     http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
 */
+
+.main img
+{
+     margin-right: 1em;
+}
 
 ul.noindent { margin-left : 0em }
 .center { text-align: center }
@@ -38,7 +42,7 @@ ul.nospace
 /* This is for the breadcrumbs trail (= leading path) at the top. */
 .leading_path
 {
-    background-color : white;
+    background-color : #ccffd0;
     margin-bottom: 0.2em;
     padding-left: 0.2em;
     padding-top: 0.1em;
@@ -129,8 +133,8 @@ ul.nospace
     background-color: #C0C0C0;
     padding-top: 20pt;
     padding-bottom: 2em;
-    padding-left:10pt;
-    padding-right:10pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
     margin-bottom: 1em;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -210,9 +214,8 @@ table.thumbs
 {
     border:0;
 }
-[% PROCESS "shlomif/navbar.ttml" %]
+[% PROCESS "shlomif/common_defs.ttml" %]
 [% INCLUDE "lang_switch.css.ttml" %]
-[% INCLUDE "nav_links.ttml" %]
 .about_site
 {
     width: 35%;

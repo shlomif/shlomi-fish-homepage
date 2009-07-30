@@ -147,8 +147,8 @@ ul.nospace
     background-color: #C0C0C0;
     padding-top: 7pt;
     padding-bottom: 2em;
-    padding-right:5pt;
-    padding-left:5pt;
+    padding-right: 5pt;
+    padding-left: 5pt;
     margin-bottom: 1em;
 }
 .sub_menu ul
@@ -207,6 +207,7 @@ browsers where they are magenta by default.
     direction:rtl;
     text-align:right;
     padding-right: 0.75cm;
+    font-family: "David CLM", David, Serif;
 }
 .hilight dt
 {
@@ -419,6 +420,7 @@ table.visible
     padding: 0.3em;
     overflow: hidden;
     margin-bottom: 0.5em;
+    margin-right: 1em;
 }
 
 .wishlist_notice p

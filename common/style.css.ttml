@@ -1,9 +1,9 @@
+[% PROCESS "smoked-wp-theme.css.ttml" %]
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
 { 
     background-color : #90EE90; /* LightGreen */
 }
 [% SET navbar_width = "20%" %]
-[% PROCESS "smoked-wp-theme.css.ttml" %]
 [% PROCESS "shlomif/navbar.ttml" %]
 [% INCLUDE "nav_links.ttml" %]
 [% PROCESS "newsitem.css.ttml" %]

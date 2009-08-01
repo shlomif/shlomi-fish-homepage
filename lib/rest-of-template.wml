@@ -285,7 +285,7 @@ alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 <div class="center">
 <google_adsense_code_referrals />
 <br />
-<google_adsense_code_side />
+# <google_adsense_code_side />
 </div>
 </latemp_affiliations_buttons>
 
@@ -365,6 +365,10 @@ $("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append
         my $ads_side = <<"EOF_ADS_CODE";
 <google_adsense_code_side />
 EOF_ADS_CODE
+
+        # Adding to disable the google ads since they're not
+        # operational.
+        $ads_side = "";
     
         if (defined($section_nav_menu))
         {
@@ -426,7 +430,7 @@ td { vertical-align : top; }
 
 <latemp_after_body>
 <share_this_button /><br />
-<google_adsense_code_after_text />
+# <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}

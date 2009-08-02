@@ -1,3 +1,28 @@
 #include 'template.wml'
 
-<h1><font color="red">FILL IN</font></h1>
+<p>
+Software design methodologists distinguish between several types of
+automated tests. First of all, <b>unit tests</b> (also see
+<a href="http://en.wikipedia.org/wiki/Unit_testing">the Wikipedia article</a>)
+test only a single "unit" of the code (say a module or a class), to 
+see if it behaves as expected. They generaly make sure that the behaviour
+of the module is sane and desirable, while not trying to see if it works
+as part of the larger scheme.
+</p>
+
+<p>
+On the other hand, <b>system tests</b> test the entire system. For example,
+if we're writing code to generate a web-site, we could test that the various
+pages of the resultant site contain some of the qualities that we expect.
+System tests tests the system as a whole, to see if there'e a bug somewhere.
+</p>
+
+<p>
+Between unit tests and system tests there could be several intermediate layers
+of tests, normally called <b>integration tests</b> .
+</p>
+
+<p>
+You can write all these tests using TAP, Test::More and other testing
+modules on the CPAN, but it's important to be aware of the distinction.
+</p>

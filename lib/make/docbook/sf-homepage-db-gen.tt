@@ -48,12 +48,23 @@ P4N[% n %]_DEPS = $(patsubst %,$(P4N[% n %]_BASE)/%,Contents.pm template.wml)
 P4N[% n %]_DEST = $(T2_DEST)/lecture/Perl/Newbies/lecture[% n %]
 P4N[% n %]_DEST_INDEX = $(P4N[% n %]_DEST)/index.html
 
-p4n[% n %]: $(P4N[% n %]_DEST_INDEX)
+p4n[% n %]: $(P4N[% n %]_DEST_INDEX) $(patsubst %,$(P4N[% n %]_DEST)/%,[% p4n_files.$n.join(" ") %])
+
+[% BLOCK cmd %]
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $(P4N[% n %]_BASE) && qp render -a && qp pack && qp upload)
+[% END %]
 
 [% pres_targets.push("p4n" _ n) %]
 	
 $(P4N[% n %]_DEST_INDEX): $(P4N[% n %]_DEPS)
-	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $(P4N[% n %]_BASE) && qp render -a && qp pack && qp upload)
+[%- INCLUDE cmd %]
+
+[% FOREACH path = p4n_files.$n %]
+
+$(P4N[% n %]_DEST)/[% path %]: $(P4N[% n %]_BASE)/src/[% path %].wml
+[%- INCLUDE cmd %]
+
+[% END %]
 
 [% END %]
 

@@ -5,6 +5,8 @@ use warnings;
 
 use Template;
 
+use File::Find::Object::Rule;
+
 my @documents =
 (
     {
@@ -145,6 +147,25 @@ my $tt = Template->new({});
 open my $make_fh, ">", "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
+sub get_p4n_files
+{
+    my $n = shift;
+
+    my $dir = "lib/presentations/qp/perl-for-newbies/$n/src";
+
+    my @files = File::Find::Object::Rule->name('*.html.wml')->in(
+        $dir
+    );
+
+    foreach my $f (@files)
+    {
+        $f =~ s{\A\Q$dir\E/}{}ms;
+        $f =~ s{\.wml\z}{};
+    }
+
+    return [ sort { $a cmp $b } grep { $_ ne "index.html" } @files];
+}
+
 $tt->process($template_fh, 
     {
         docs => \@documents,
@@ -152,6 +173,10 @@ $tt->process($template_fh,
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF
+        p4n_files =>
+        {
+            (map { $_ => get_p4n_files($_), } (1..5))
+        },
     },
     $make_fh
 );

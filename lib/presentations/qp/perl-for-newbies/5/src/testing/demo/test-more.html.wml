@@ -19,7 +19,7 @@ performs a deep comparison of nested data structures, and others.
 </p>
 
 <p>
-You may also notice the <tt>\# TEST</tt> comments - these are 
+You may also notice the <tt># TEST</tt> comments - these are 
 <a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> annotations
 that allow us to keep track of the number of tests we've ran and update
 it. (So we'll know exactly how many tests we want.)
@@ -72,7 +72,8 @@ Gabor Szabo</a> - comprehensive material of a talk about Perl and testing.
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a>.
+<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> - allows
+one to keep track of the number of assertions in the test file.
 </li>
 
 <li>

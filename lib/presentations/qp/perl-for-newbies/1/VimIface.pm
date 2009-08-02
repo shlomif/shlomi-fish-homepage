@@ -3,6 +3,8 @@ package VimIface;
 use strict;
 use warnings;
 
+use Test::Trap qw( trap $trap :flow:stderr(systemsafe):stdout(systemsafe):warn );
+
 sub is_newer
 {
     my $file1 = shift;
@@ -24,7 +26,17 @@ sub get_syntax_highlighted_html_from_file
 
     if (is_newer( $filename, $html_filename))
     {
-       system("gvim","-f","+syn on", "+so \$VIMRUNTIME/syntax/2html.vim", "+wq", "+q", $filename);
+        trap {
+            system(
+                "gvim","-f","+syn on", 
+                "+so \$VIMRUNTIME/syntax/2html.vim",
+                "+wq", "+q", $filename
+            );
+        };
+        if ($trap->exit())
+        {
+            die "gvim failed!";
+        }
     }
     local *I;
     open I, "<", $html_filename;

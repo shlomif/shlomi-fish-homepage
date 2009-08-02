@@ -1,0 +1,49 @@
+#include 'template.wml'
+
+
+<define-tag perl_pod_page>
+<preserve name />
+<set-var %attributes />
+<a href="http://perldoc.perl.org/<get-var name />.html"><get-var name /></a>
+<restore name />
+</define-tag>
+
+<h2>Relevant Perl Man Pages</h2>
+
+<ul>
+<li>
+<perl_pod_page name="perlref" /> - The Perl References Man Page - covers references to functions.
+</li>
+
+<li>
+<perl_pod_page name="perlmod" /> - The Perl Modules Introduction
+</li>
+
+<li>
+<perl_pod_page name="perlboot" /> - Perl's Beginner's Object Oriented Tutorial
+</li>
+
+<li>
+<perl_pod_page name="perltoot" /> - Tom's Object-Oriented Tutorial
+</li>
+
+<li>
+<perl_pod_page name="perlobj" /> - The Perl Objects Man-Page
+</li>
+
+<li>
+<perl_pod_page name="perlbot" /> - The Perl Bag of Object Tricks
+</li>
+</ul>
+
+<h2>Articles</h2>
+
+<ul>
+<li>
+<a href="http://www.perl.com/pub/a/2002/05/29/closure.html">Achieving Closure</a> - an article by Simon Cozens about closures.
+</li>
+</ul>
+
+
+
+

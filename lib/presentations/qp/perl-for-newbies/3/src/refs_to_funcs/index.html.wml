@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+
+
+<p>
+One can take the reference of a function and store it inside a
+scalar variable (or an array or hash value). This value can
+later be dereferenced and called with some arguments.
+</p>
+
+<p>
+The effect of such call is exactly the same as the effect of calling the
+function directly.
+</p>
+
+<qpcontents />
+
+
+

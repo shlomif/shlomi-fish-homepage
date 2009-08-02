@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<p>
+A destructor is a special method that is called whenever the instance
+of the class goes out of scope. To define a destructor in Perl just define
+a method by the name of <tt>DESTROY</tt>.
+</p>
+
+<p>
+To demonstrate it, I present a class derived from <tt>Bar2</tt> that
+prints the number of times it's name was assigned to the screen before it is destroyed:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/objects/making/Count.pm" />
+</quadpres_code_block>
+

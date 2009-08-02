@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install
+all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets
 
 include lib/make/gmsl/gmsl
 
@@ -358,3 +358,7 @@ $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 common/style.css.ttml: lib/smoked-wp-theme.css.ttml
 	touch $@
 
+presentations_targets: p4n1
+
+p4n1:
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd lib/presentations/qp/perl-for-newbies/1/ && qp render -a && qp pack && qp upload)

@@ -38,3 +38,23 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 [% "\t" %]&& touch $@
 
 [% END %]
+
+[% SET pres_targets = [] %]
+[% FOREACH n = [1] %]
+
+P4N[% n %]_BASE = lib/presentations/qp/perl-for-newbies/[% n %]
+
+P4N[% n %]_DEPS = $(patsubst %,$(P4N[% n %]_BASE)/%,Contents.pm template.wml)
+P4N[% n %]_DEST = $(T2_DEST)/lecture/Perl/Newbies/lecture[% n %]
+P4N[% n %]_DEST_INDEX = $(P4N[% n %]_DEST)/index.html
+
+p4n[% n %]: $(P4N[% n %]_DEST_INDEX)
+
+[% pres_targets.push("p4n" _ n) %]
+	
+$(P4N[% n %]_DEST_INDEX): $(P4N[% n %]_DEPS)
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $(P4N[% n %]_BASE) && qp render -a && qp pack && qp upload)
+
+[% END %]
+
+presentations_targets: [% pres_targets.join(" ") %]

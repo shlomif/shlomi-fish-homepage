@@ -1,24 +1,24 @@
 #include '../template.wml'
-<latemp_subject "Perl for Perl Newbies - Lecture Series" />
+<latemp_subject "Perl for Perl Newbies" />
 
 <p>
-<a href="http://www.perl.org/">Perl</a> is a useful language for working on
+<a href="http://perl-begin.org/">Perl</a> is a useful language for working on
 Linux and other flavours of UNIX as well as on many other platforms where it
-is available (including the Palm Pilot ;-)). Perl is useful for text
-processing and generation, GUI programming, system administration,
-programming for the Web, working with databases, and most other things which 
-are not very time sensitive.
+is available. Perl is useful for text processing and generation, GUI
+programming, system administration, programming for the Web, working with 
+databases, and most other things which are not very time sensitive.
 </p>
 
 <p>
-The material of these lectures aims to give a good introduction to the basic
-and most important elements of Perl programming. Knowledge of another
-programming language is recommended, but is not necessary.
+The material of these talks (also useful as normal web-based tutorials) aims
+to give a good introduction to the basic and most important elements of Perl
+programming. Knowledge of another programming language is recommended, but is
+not necessary.
 </p>
 
 <p>
-If you have any other questions or comments regarding this series, send an 
-E-mail to <a href="http://www.haifux.org/">the club's</a> mailing-list.
+If you have any other questions or comments regarding this series, then
+<a href="$(ROOT)/me/contact-me/">contace me about them</a>.
 </p>
 
 <h2>Available Material</h2>
@@ -31,24 +31,34 @@ E-mail to <a href="http://www.haifux.org/">the club's</a> mailing-list.
 </tr>
 </thead>
 <tbody>
+
 <tr>
-<td><a href="lecture1/"><b>Lecture 1</b> - the basics</a></td>
+<td><a href="lecture1/"><b>Part 1</b> - the basics</a></td>
 <td><a href="lecture1/src.tar.gz">Source</a></td>
 </tr>
+
 <tr>
-<td><a href="lecture2/"><b>Lecture 2</b> - more advanced topics</a></td>
+<td><a href="lecture2/"><b>Part 2</b> - more advanced topics</a></td>
 <td><a href="lecture2/src.tar.gz">Source</a></td>
 </tr>
+
 <tr>
-<td><a href="lecture3/"><b>Lecture 3</b> - subroutine references, 
-modules, namespaces and objects</a></td>
+<td><a href="lecture3/"><b>Part 3</b> - modules and objects</a></td>
 <td><a href="lecture3/src.tar.gz">Source</a></td>
 </tr>
+
 <tr>
-<td><a href="lecture4/"><b>Lecture 4</b> - CPAN, sprintf, 
+<td><a href="lecture4/"><b>Part 4</b> - CPAN, sprintf, 
 system functions, exceptions.</a></td>
 <td><a href="lecture4/src.tar.gz">Source</a></td>
 </tr>
+
+<tr>
+<td><a href="lecture5/"><b>Part 5</b> - good programming practices</a>
+(not complete yet)</td>
+<td><a href="lecture5/src.tar.gz">Source</a></td>
+</tr>
+
 </tbody>
 </table>
 
@@ -70,7 +80,8 @@ these lectures</a>
 useful portal for beginners.
 </li>
 <li>
-<a href="http://www.haifux.org/">The Haifa Linux Club</a>
+<a href="http://www.haifux.org/">The Haifa Linux Club</a> - where these
+talks were originally given.
 </li>
 <li>
 <a href="http://www.perl.org/">The Perl Homepage</a>
@@ -84,7 +95,8 @@ and resources about Perl.
 the Israeli Perl Mongers.
 </li>
 <li>
-<a href="http://use.perl.org/">Use Perl;</a> - Perl News
+<a href="http://perlbuzz.com/">Perl Buzz</a> - the newest and best of
+the Perl world.
 </li>
 </ul>
 

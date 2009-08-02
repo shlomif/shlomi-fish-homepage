@@ -40,7 +40,7 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 [% END %]
 
 [% SET pres_targets = [] %]
-[% FOREACH n = [1,2,3] %]
+[% FOREACH n = [1,2,3,4] %]
 
 P4N[% n %]_BASE = lib/presentations/qp/perl-for-newbies/[% n %]
 

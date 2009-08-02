@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<p>
+The <tt>system()</tt> function executes a shell command, while maintaining 
+the same standard input, standard output and environment of the invoking 
+script. If called with one argument, it passes this argument as is to the
+shell, which in turn will process it for special characters. If passed an
+array, it will call the command in the first member with the rest of the
+array as command line arguments.
+</p>
+
+<p>
+Here are some examples, that will only work on UNIX systems.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/processes/system.pl" />
+</quadpres_code_block>
+

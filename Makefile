@@ -358,7 +358,13 @@ $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 common/style.css.ttml: lib/smoked-wp-theme.css.ttml
 	touch $@
 
+P4N1_BASE = lib/presentations/qp/perl-for-newbies/1
+
+P4N1_DEPS = $(patsubst %,$(P4N1_BASE)/%,Contents.pm quadpres.ini template.wml)
+P4N1_DEST = $(T2_DEST)/lecture/Perl/Newbies/lecture1
 presentations_targets: p4n1
 
-p4n1:
-	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd lib/presentations/qp/perl-for-newbies/1/ && qp render -a && qp pack && qp upload)
+p4n1: $(P4N1_DEST)/index.html
+	
+$(P4N1_DEST): $(P4N1_DEPS)
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $(P4N1_BASE) && qp render -a && qp pack && qp upload)

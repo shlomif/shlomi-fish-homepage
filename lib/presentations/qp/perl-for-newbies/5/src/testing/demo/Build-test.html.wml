@@ -1,3 +1,29 @@
 #include 'template.wml'
 
-<h1><font color="red">FILL IN</font></h1>
+<p>
+Standard CPAN and CPAN-like Perl packages contain their tests as a group
+of <tt>*.t</tt> under the sub-directory <tt>t/</tt> and allow running them
+by invoking the <tt>make test</tt> or <tt>./Build test</tt> commands.
+</p>
+
+<p>
+Using the CPAN package 
+<a href="http://search.cpan.org/dist/Module-Starter/">Module-Starter</a>
+one can generate a skeleton for one's own CPAN-like package, that 
+can have tests to afterwards. Keeping your code organised in such packages
+allows one to make use of the rest of the convenience of using a build-system
+such as <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a>
+, to package it as operating-sytem-wide packages, which can be removed
+easily and to later upload them to CPAN for sharing with other users
+and developers.
+</p>
+
+<p>
+Here's an example of testing a CPAN distribution from CPAN using 
+<tt>./Build test</tt>:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/testing/demo/Test-Count-transcript.txt" />
+</quadpres_code_block>
+

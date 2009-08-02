@@ -1,0 +1,9 @@
+$myvar = 17;
+$a = 2;
+print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
+$a = 10;
+print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
+$a = 75;
+print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
+$a = 24;
+print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";

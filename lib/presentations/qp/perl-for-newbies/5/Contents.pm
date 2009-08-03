@@ -77,6 +77,26 @@ my $contents =
                 },
             ],
         },
+
+        {
+            url => "accessors",
+            title => "Class Accessors",
+            subs =>
+            [
+                {
+                    url => "example.html",
+                    title => "Example",
+                },
+                {
+                    url => "motivation.html",
+                    title => "Motivation",
+                },
+                {
+                    url => "cpan-modules.html",
+                    title => "Accessor modules on the CPAN",
+                },
+            ],
+        },
     ],
     'images' =>
     [

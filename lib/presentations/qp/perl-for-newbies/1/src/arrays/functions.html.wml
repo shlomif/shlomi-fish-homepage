@@ -14,7 +14,7 @@ end of an array variable. The syntax is <tt>push @array_to_append_to, @array_to_
 <p>
 Notice that <tt>push</tt> is equivalent to typing 
 <tt>@array = (@array, $extra_elem)</tt>, but it is recommended 
-to use it, because it minimizes error and it executes faster.
+to use it, because it minimises error and it executes faster.
 </p>
 
 <h2>pop</h2>

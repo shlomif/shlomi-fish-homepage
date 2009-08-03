@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-Just like <tt>print</tt> can be generalized to files, so can the 
+Just like <tt>print</tt> can be generalised to files, so can the 
 <tt>&lt;&gt;</tt> which we encountered before. If you place the name of the 
 filehandle inside the operator, it will read a line from the file opened by 
 that filehandle.

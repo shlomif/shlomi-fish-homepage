@@ -61,6 +61,22 @@ my $contents =
                 },
             ],
         },
+
+        {
+            url => "version-control",
+            title => "Version Control",
+            subs =>
+            [
+                {
+                    url => "motivation.html",
+                    title => "Motivation for Version Control",
+                },
+                {
+                    url => "subversion-demo.html",
+                    title => "Demo of Subversion",
+                },
+            ],
+        },
     ],
     'images' =>
     [

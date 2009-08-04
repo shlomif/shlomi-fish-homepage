@@ -97,6 +97,38 @@ my $contents =
                 },
             ],
         },
+
+        {
+            url => "new-features",
+            title => "Useful Features in Recent Perls",
+            subs =>
+            [
+                {
+                    url => "use-base.html",
+                    title => "use base",
+                },
+                {
+                    url => "lexical-filehandles.html",
+                    title => "Lexical Filehandles",
+                },
+            ],
+        },
+        {
+            url => "local-keyword",
+            title => "The local keyword",
+            subs =>
+            [
+                {
+                    url => "use-and-abuse.html",
+                    title => "Use and Abuse",
+                },
+                {
+                    url => "references.html",
+                    title => "References",
+                },
+            ],
+        },
+        
     ],
     'images' =>
     [

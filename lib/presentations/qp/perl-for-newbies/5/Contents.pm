@@ -122,13 +122,8 @@ my $contents =
                     url => "use-and-abuse.html",
                     title => "Use and Abuse",
                 },
-                {
-                    url => "references.html",
-                    title => "References",
-                },
             ],
         },
-        
     ],
     'images' =>
     [

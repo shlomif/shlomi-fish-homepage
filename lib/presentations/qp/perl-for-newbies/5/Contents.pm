@@ -124,6 +124,29 @@ my $contents =
                 },
             ],
         },
+        {
+            url => "pod-documentation",
+            title => "Using POD for Documentation",
+            subs =>
+            [
+                {
+                    url => "demo.html",
+                    title => "POD Demonstration",
+                },
+                {
+                    url => "pod-testing.html",
+                    title => "Testing and Verifying POD",
+                },
+                {
+                    url => "literate-programming.html",
+                    title => "Literate Programming",
+                },
+                {
+                    url => "extensions.html",
+                    title => "POD Extensions",
+                },
+            ],
+        },
     ],
     'images' =>
     [

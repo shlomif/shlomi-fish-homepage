@@ -8,9 +8,7 @@ up to the next <tt>=cut</tt> directive also on a line of its own. Here are
 some POD directives:
 </p>
 
-<ul>
-
-<li>
+<h3 id="headers">Headers</h3>
 
 <p>
 <tt>=head1</tt>, <tt>=head2</tt>, <tt>=head3</tt>, etc. - these are headers.
@@ -23,16 +21,15 @@ For example:
 <quadpres_include_colorized_file filename="src/pod-documentation/headers.pod" />
 </quadpres_code_block>
 
-</li>
+<h3 id="regular-text">Regular Text</h3>
 
-<li>
 <p>
 As you can see, a regular paragraph text is a paragraph. Paragraphs are separated by
 blank lines, and newlines are ignored.
 </p>
-</li>
 
-<li>
+<h3 id="code-blocks">Code Blocks</h3>
+
 <p>
 A <b>code block</b> (or verbatim paragraph) can be added by creating a portion 
 of the text that's indented by using whitespace. In code blocks, newlines are
@@ -44,7 +41,41 @@ not ignored. For example:
 </quadpres_code_block>
 
 
+<h3 id="formatting-codes">Formatting Codes</h3>
+<p>
+One can use some formatting code:
+</p>
+
+<ul>
+
+<li>
+<tt>I&lt;text&gt;</tt> - for italic text.
+<li>
+
+<li>
+<tt>B&lt;text&gt;</tt> - for bold text.
 </li>
 
+<li>
+<tt>C&lt;text&gt;</tt> - for code (monospace) text.
+</li>
 
-</ul>
+<li>
+<tt>L&lt;text&gt;</tt> - hyperlinks - see 
+<a href="http://perldoc.perl.org/perlpod.html">perldoc perlpod</a> for
+more information.
+</li>
+
+<li>
+<tt>E&lt;lt&gt;</tt> , <tt>E&lt;gt&gt;</tt> , <tt>E&lt;htmlname&gt;</tt>,
+etc. are escapes.
+</li>
+</ul> 
+
+<p>
+One should note that one can combine several styles at once using 
+<tt>BI&lt; ... &gt;</tt> notation. Furthermore, one can enclose text with
+special characters (such as <tt>&lt;</tt> and <tt>&gt;</tt>) using
+several <tt>&lt;&lt;&lt;</tt> and trailing <tt>&gt;&gt;&gt;</tt> characters.
+</p>
+

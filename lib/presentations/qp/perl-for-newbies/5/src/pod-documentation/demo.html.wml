@@ -1,6 +1,6 @@
 #include 'template.wml'
 
-<h2 id="how">How to write POD</h2>
+<h2 id="pod-demo-how">How to write POD</h2>
 
 <p>
 POD sections start with a single POD directive on an empty line and continue
@@ -8,7 +8,7 @@ up to the next <tt>=cut</tt> directive also on a line of its own. Here are
 some POD directives:
 </p>
 
-<h3 id="headers">Headers</h3>
+<h3 id="pod-demo-headers">Headers</h3>
 
 <p>
 <tt>=head1</tt>, <tt>=head2</tt>, <tt>=head3</tt>, etc. - these are headers.
@@ -28,7 +28,7 @@ As you can see, a regular paragraph text is a paragraph. Paragraphs are separate
 blank lines, and newlines are ignored.
 </p>
 
-<h3 id="code-blocks">Code Blocks</h3>
+<h3 id="pod-demo-code-blocks">Code Blocks</h3>
 
 <p>
 A <b>code block</b> (or verbatim paragraph) can be added by creating a portion 
@@ -41,7 +41,8 @@ not ignored. For example:
 </quadpres_code_block>
 
 
-<h3 id="formatting-codes">Formatting Codes</h3>
+<h3 id="pod-demo-formatting-codes">Formatting Codes</h3>
+
 <p>
 One can use some formatting code:
 </p>
@@ -78,4 +79,23 @@ One should note that one can combine several styles at once using
 special characters (such as <tt>&lt;</tt> and <tt>&gt;</tt>) using
 several <tt>&lt;&lt;&lt;</tt> and trailing <tt>&gt;&gt;&gt;</tt> characters.
 </p>
+
+<h3 id="pod-demo-lists">Lists</h3>
+
+<p>
+One can use lists in POD by writing <tt>=over 4</tt> (or some other value
+of indent-level instead of "4"), and then several <tt>=item</tt>'s and
+finally <tt>=back</tt>. An item can be <tt>=item *</tt> for a bullet, 
+<tt>=item 1.</tt> to produce numbered lists or <tt>=item title</tt> to 
+produce a definition list.
+</p>
+
+<p>
+For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/list1.pod" />
+</quadpres_code_block>
+
 

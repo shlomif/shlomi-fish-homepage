@@ -1,3 +1,50 @@
 #include 'template.wml'
 
-<h1><font color="red">FILL IN</font></h1>
+<h2 id="how">How to write POD</h2>
+
+<p>
+POD sections start with a single POD directive on an empty line and continue
+up to the next <tt>=cut</tt> directive also on a line of its own. Here are
+some POD directives:
+</p>
+
+<ul>
+
+<li>
+
+<p>
+<tt>=head1</tt>, <tt>=head2</tt>, <tt>=head3</tt>, etc. - these are headers.
+The lower the header number is, the more significant it is and the bigger
+font will be used for it. Headers are followed by the text of the header.
+For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/headers.pod" />
+</quadpres_code_block>
+
+</li>
+
+<li>
+<p>
+As you can see, a regular paragraph text is a paragraph. Paragraphs are separated by
+blank lines, and newlines are ignored.
+</p>
+</li>
+
+<li>
+<p>
+A <b>code block</b> (or verbatim paragraph) can be added by creating a portion 
+of the text that's indented by using whitespace. In code blocks, newlines are
+not ignored. For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/code-block.pod" />
+</quadpres_code_block>
+
+
+</li>
+
+
+</ul>

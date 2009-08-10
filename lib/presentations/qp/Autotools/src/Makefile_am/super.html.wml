@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+There are several top targets available. In each one, you can specify several
+targets to build.
+</li>
+
+<li>
+A partial list is:<br />
+<ol>
+<li>
+<tt>bin_PROGRAMS</tt> - programs that should be compiled and installed.
+</li>
+<li>
+<tt>bin_SCRIPTS</tt> - programs that should be installed but not compiled
+</li>
+<li>
+<tt>man_MANS</tt> - man pages that should be installed.
+</li>
+<li>
+<tt>lib_LTLIBRARIES</tt> - Libraries that should be built using libtool.
+</li>
+<li>
+<tt>noinst_PROGRAMS</tt> - Programs that should be compiled but not installed.
+</li>
+</ol>
+</li>
+
+</points>
+

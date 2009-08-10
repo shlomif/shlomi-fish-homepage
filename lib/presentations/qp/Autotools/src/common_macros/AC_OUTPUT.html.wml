@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+<tt>AC_OUTPUT</tt> generates files that are required for building the packages.
+</li>
+
+<li>
+Its first argument is a whitespace separated list of files. The script will
+look for these files along with the suffix <tt>.in</tt> and convert them
+to their output files while substituting the output variable values.
+</li>
+
+<li>
+Two optional argument are commands to be excuted afterwards, and commands to
+be excuted beforehand.
+</li>
+
+<li>
+Example:
+</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/common_macros/AC_OUTPUT/configure.in" />
+</quadpres_code_block>

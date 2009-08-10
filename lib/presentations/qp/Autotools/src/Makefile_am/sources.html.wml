@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+One can specify the source files for each super target by typing the base
+name of the package (with <tt>_</tt>'s instead of <tt>-</tt>'s etc) followed
+by <tt>_SOURCES</tt> followed by an equal sign and a list of the sources.
+</li>
+
+<li>Example:</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/Makefile_am/sources/Makefile.am" />
+</quadpres_code_block>
+

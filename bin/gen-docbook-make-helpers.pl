@@ -242,6 +242,13 @@ EOF
                 )},
                 dest_dir => "lecture/Gimp/1/slides",
             },
+            'autotools' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Autotools",
+                )},
+                dest_dir => "lecture/Autotools/slides",
+            },
         },
     },
     $make_fh

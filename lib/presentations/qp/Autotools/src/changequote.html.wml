@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+The m4 preprocessor which is used to process <tt>configure.in</tt>
+uses <tt>[</tt> and <tt>]</tt> for grouping arguments.
+</li>
+
+<li>
+If you want to use them yourself, type <tt>changequote(, )</tt> at the
+beginning of the offending code and <tt>changequote([, ])</tt> afterwards.
+</li>
+
+<li>
+Here's an example:
+</li>
+
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/changequote/configure.in" />
+</quadpres_code_block>
+

@@ -1,0 +1,13 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>AC_CHECK_FUNCS</tt> checks for the existence of functions in the C standard
+library.
+</li>
+
+<li>
+If found, the preprocessor macro <tt>HAVE_[function]</tt> is defined.
+</li>
+</points>
+

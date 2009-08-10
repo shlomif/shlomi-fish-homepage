@@ -311,6 +311,13 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Basic_Use/slides",
             },
+            'w2l_technion' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/welcome-to-linux/Technion",
+                )},
+                dest_dir => "lecture/W2L/Technion/slides",
+            },
         },
     },
     $make_fh

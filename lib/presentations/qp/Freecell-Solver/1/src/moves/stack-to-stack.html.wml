@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<points>
+<li>
+To test the initial versions I generated a 1000 test boards.
+</li>
+
+<li>
+I noticed some of them were not solvable.
+</li>
+
+<li>
+I played some of them manually, and noticed they were solvable using
+a move that I missed.
+</li>
+
+<li>
+The latter was a meta-move that placed a card on a parent card on the
+same stack
+</li>
+
+<li>
+By implementing it, all of my boards turned out to be solvable.
+</li>
+</points>

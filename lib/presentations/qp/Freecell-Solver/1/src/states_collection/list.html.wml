@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<points>
+<li>
+An unordered list of states.
+</li>
+
+<li>
+Insertion is O(1), but lookup is O(n).
+</li>
+
+<li>
+Dirt Slow.
+</li>
+
+<li>
+As a general rule O(n) lookup is a very bad idea.
+</li>
+</points>

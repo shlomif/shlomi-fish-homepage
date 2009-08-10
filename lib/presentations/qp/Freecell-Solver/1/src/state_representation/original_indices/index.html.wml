@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<points>
+<li>
+In Freecell, it is possible that several similar states would be
+reached, that are only different in the order of the stacks or of the
+freecells.
+</li>
+
+<li>
+To solve this, I sorted the stacks and the freecells.
+</li>
+
+<li>
+This, however, made the run-time display of the states display
+them with a confused order.
+</li>
+
+</points>

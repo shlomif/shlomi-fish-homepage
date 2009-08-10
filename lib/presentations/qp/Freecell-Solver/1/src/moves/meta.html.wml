@@ -1,0 +1,37 @@
+#include 'template.wml'
+
+<points>
+<li>
+Starting from the early versions, I decided to use <b>meta-moves</b> instead
+of <b>atomic moves</b>.
+</li>
+
+<li>
+Namely, I do several moves at once while trying to achieve a certain
+"desirable" end in mind.
+</li>
+
+<li>
+Examples:<br />
+<ul>
+<li>
+Put top stack cards in the foundations.
+</li>
+<li>
+Put Freecell cards in the foundations.
+</li>
+<li>
+Put non-top stack cards in the foundations. (by moving cards above them
+to freecells or vacant stacks).
+</li>
+<li>
+Move stack cards to different stacks.
+</li>
+<li>
+Move sequences of cards onto free stacks.
+</li>
+</ul>
+</li>
+
+
+</points>

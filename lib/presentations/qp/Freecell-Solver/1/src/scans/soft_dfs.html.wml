@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+PySol board No. 980662 recursed into a depth of over 3000. On Win32, this
+caused a stack overflow which resulted in an ugly segfault.
+</li>
+
+<li>
+I decided to implement a Soft-DFS scan which does not utilize procedural
+recursion but rather its own dedicated stack.
+</li>
+
+<li>
+This turned out to have an O(1) suspend and resume time instead of O(d)
+for hard-DFS.
+</li>
+
+<li>
+(I later on discovered that a Win32 program can be compiled with more stack
+space, but I still think Soft-DFS is a better idea.
+</li>
+</points>

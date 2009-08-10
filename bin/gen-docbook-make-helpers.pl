@@ -203,10 +203,17 @@ EOF
             'lamp' =>
             {
                 @{get_quad_pres_files(
-                     "lib/presentations/qp/web-publishing-with-LAMP",
+                    "lib/presentations/qp/web-publishing-with-LAMP",
                 )},
                 dest_dir => "lecture/LAMP/slides",
-            }
+            },
+            'catb' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/CatB",
+                )},
+                dest_dir => "lecture/CatB/slides",
+            },
         },
     },
     $make_fh

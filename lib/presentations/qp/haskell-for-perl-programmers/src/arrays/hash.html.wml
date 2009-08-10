@@ -1,0 +1,153 @@
+#include 'template.wml'
+
+<points>
+<li>
+This example will show the implementation of a hash - an array of linked
+lists of elements that are sorted according to a hash function.
+</li>
+<li>
+We will also rehash it, and increase the number of elements there.
+</li>
+</points>
+
+<mycode>
+<pre>
+<span class="Type">module</span> Hash <span class="Type">where</span>
+
+<span class="PreProc">import</span> Array
+
+<span class="Type">data</span> Hash hash_function compare_function size table num_elems <span class="Statement">=</span>
+    MyHash hash_function compare_function size table num_elems
+
+get_hash_function (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span> hash_function
+
+get_compare_function (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span> compare_function
+
+get_size (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span> size
+
+get_table (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span> table
+
+get_num_elems (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span> num_elems
+
+<span class="Type">type</span> IntHash <span class="Statement">=</span> Hash (Int <span class="Statement">-&gt;</span> Int) (Int <span class="Statement">-&gt;</span> Int <span class="Statement">-&gt;</span> Int) Int (Array Int [(Int,Int)]) Int
+
+<span class="Type">type</span> StringHash <span class="Statement">=</span> Hash (String <span class="Statement">-&gt;</span> Int) (String <span class="Statement">-&gt;</span> String <span class="Statement">-&gt;</span> Int) Int (Array Int [(Int,String)]) Int
+
+<span class="Type">type</span> StringToString <span class="Statement">=</span> (String,String)
+
+<span class="Type">type</span> StringToStringHash <span class="Statement">=</span> Hash (StringToString <span class="Statement">-&gt;</span> Int) (StringToString <span class="Statement">-&gt;</span> StringToString <span class="Statement">-&gt;</span> Int) Int (Array Int [(Int,StringToString)]) Int
+
+exists (MyHash hash_function compare_function size table num_elems) myelem <span class="Statement">=</span>
+    ((length
+    (filter
+        cmp_element
+        (table<span class="Statement">!</span>index)
+    )) <span class="Statement">&gt;</span> <span class="Constant">0</span>) <span class="Type">where</span>
+        hash_value <span class="Statement">=</span> (hash_function myelem)
+        index <span class="Statement">=</span> (hash_value <span class="Statement">`mod`</span> size)
+        cmp_element x <span class="Statement">=</span> (
+                (hash_value <span class="Statement">==</span> (fst x)) <span class="Statement">&amp;&amp;</span>
+                ((compare_function myelem (snd x)) <span class="Statement">==</span> <span class="Constant">0</span>)
+            )
+
+
+insert (MyHash hash_function compare_function size table num_elems) myelem <span class="Statement">=</span>
+    (<span class="Statement">if</span> (exists (MyHash hash_function compare_function size table num_elems) myelem)
+    <span class="Statement">then</span> (MyHash hash_function compare_function size table num_elems)
+    <span class="Statement">else</span>
+    (MyHash
+        hash_function
+        compare_function
+        size
+        (table <span class="Statement">//</span> [(index , new_list)])
+        (num_elems<span class="Statement">+</span><span class="Constant">1</span>)
+    )) <span class="Type">where</span>
+        hash_value <span class="Statement">=</span> (hash_function myelem)
+        index <span class="Statement">=</span> (hash_value <span class="Statement">`mod`</span> size)
+        new_list <span class="Statement">=</span> (hash_value,myelem)<span class="Statement">:</span>(table<span class="Statement">!</span>index)
+
+remove (MyHash hash_function compare_function size table num_elems) myelem <span class="Statement">=</span>
+    (MyHash
+        hash_function
+        compare_function
+        size
+        (table <span class="Statement">//</span> [(index, new_list)])
+        (<span class="Statement">if</span> orig_len <span class="Statement">==</span> length(new_list)
+         <span class="Statement">then</span> num_elems
+         <span class="Statement">else</span> (num_elems<span class="Statement">-</span><span class="Constant">1</span>)
+        )
+    ) <span class="Type">where</span>
+        hash_value <span class="Statement">=</span> (hash_function myelem)
+        index <span class="Statement">=</span> (hash_value <span class="Statement">`mod`</span> size)
+        orig_len <span class="Statement">=</span> length(table<span class="Statement">!</span>index)
+        cmp_element x <span class="Statement">=</span> (
+                (hash_value <span class="Statement">==</span> (fst x)) <span class="Statement">&amp;&amp;</span>
+                ((compare_function myelem (snd x)) <span class="Statement">==</span> <span class="Constant">0</span>)
+            )
+        new_list <span class="Statement">=</span>
+            (filter
+                (<span class="Statement">\</span>x <span class="Statement">-&gt;</span> (not(cmp_element x)))
+                (table<span class="Statement">!</span>index)
+            )
+
+get_value (MyHash hash_function compare_function size table num_elems) myelem <span class="Statement">=</span>
+    item_list <span class="Type">where</span>
+        hash_value <span class="Statement">=</span> (hash_function myelem)
+        index <span class="Statement">=</span> (hash_value <span class="Statement">`mod`</span> size)
+        cmp_element x <span class="Statement">=</span> (
+                (hash_value <span class="Statement">==</span> (fst x)) <span class="Statement">&amp;&amp;</span>
+                ((compare_function myelem (snd x)) <span class="Statement">==</span> <span class="Constant">0</span>)
+            )
+        item_list <span class="Statement">=</span>
+            [ snd(i) <span class="Statement">|</span> i <span class="Statement">&lt;-</span> (filter cmp_element (table<span class="Statement">!</span>index) ) ]
+
+replace_or_add (MyHash hash_function compare_function size table num_elems) myelem <span class="Statement">=</span>
+    (MyHash
+        hash_function
+        compare_function
+        size
+        (table <span class="Statement">//</span> [(index, new_list)])
+        (<span class="Statement">if</span> orig_len <span class="Statement">==</span> length(new_list)
+         <span class="Statement">then</span> num_elems
+         <span class="Statement">else</span> (num_elems<span class="Statement">-</span><span class="Constant">1</span>)
+        )
+    ) <span class="Type">where</span>
+        hash_value <span class="Statement">=</span> (hash_function myelem)
+        index <span class="Statement">=</span> (hash_value <span class="Statement">`mod`</span> size)
+        orig_len <span class="Statement">=</span> length(table<span class="Statement">!</span>index)
+        cmp_element x <span class="Statement">=</span> (
+                (hash_value <span class="Statement">==</span> (fst x)) <span class="Statement">&amp;&amp;</span>
+                ((compare_function myelem (snd x)) <span class="Statement">==</span> <span class="Constant">0</span>)
+            )
+        new_list <span class="Statement">=</span> (myreplace (table<span class="Statement">!</span>index)) <span class="Type">where</span>
+            myreplace <span class="Statement">::</span> [(Int,StringToString)] <span class="Statement">-&gt;</span> [(Int,StringToString)]
+            myreplace [] <span class="Statement">=</span> [(hash_value,myelem)]
+            myreplace (a<span class="Statement">:</span>as) <span class="Statement">=</span>
+                (<span class="Statement">if</span> (cmp_element a)
+                 <span class="Statement">then</span> ((hash_value,myelem)<span class="Statement">:</span>as)
+                 <span class="Statement">else</span> (a<span class="Statement">:</span>myreplace(as)))
+
+get_all_values (MyHash hash_function compare_function size table num_elems) <span class="Statement">=</span>
+    [ snd(a) <span class="Statement">|</span> i <span class="Statement">&lt;-</span> [ <span class="Constant">0</span> <span class="Statement">..</span> (size<span class="Statement">-</span><span class="Constant">1</span>) ] , a <span class="Statement">&lt;-</span> table<span class="Statement">!</span>i ]
+
+rehash (MyHash hash_function compare_function size table num_elems) new_size <span class="Statement">=</span>
+    (MyHash
+        hash_function
+        compare_function
+        new_size
+        new_table
+        num_elems
+    ) <span class="Type">where</span>
+        new_table <span class="Statement">=</span> (accumArray
+            (<span class="Statement">\</span>present <span class="Statement">-&gt;</span> <span class="Statement">\</span>new_elem <span class="Statement">-&gt;</span> (new_elem<span class="Statement">:</span>present))
+            ]
+            (<span class="Constant">0</span>,(new_size<span class="Statement">-</span><span class="Constant">1</span>))
+            [   (hash_value <span class="Statement">`mod`</span> new_size, (hash_value,elem)) <span class="Statement">|</span>
+                i <span class="Statement">&lt;-</span> [ <span class="Constant">0</span> <span class="Statement">..</span> (size<span class="Statement">-</span><span class="Constant">1</span>) ],
+                (hash_value,elem) <span class="Statement">&lt;-</span> table<span class="Statement">!</span>i
+            ]
+        )
+</pre>
+</mycode>
+
+

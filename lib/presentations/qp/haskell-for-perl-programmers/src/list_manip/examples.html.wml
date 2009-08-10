@@ -1,0 +1,43 @@
+#include 'template.wml'
+
+<h2>Greatest Common Prefix of a List of Strings</h2>
+
+<mycode>
+<pre>
+prefix_2 <span class="Statement">::</span> Eq a <span class="Statement">=&gt;</span> [a] <span class="Statement">-&gt;</span> [a] <span class="Statement">-&gt;</span> [a]
+
+prefix_2 xs [] <span class="Statement">=</span> []
+prefix_2 [] xs <span class="Statement">=</span> []
+prefix_2 (a<span class="Statement">:</span>as) (b<span class="Statement">:</span>bs) <span class="Statement">=</span> <span class="Statement">if</span> a <span class="Statement">==</span> b
+                         <span class="Statement">then</span> a<span class="Statement">:</span>(prefix_2 as bs)
+                         <span class="Statement">else</span> []
+
+<span class="Comment">-- Can also be expressed as:</span>
+prefix_2_other xs ys <span class="Statement">=</span> map fst <span class="Statement">.</span> takeWhile (uncurry (<span class="Statement">==</span>)) <span class="Statement">$</span> (zip xs ys)
+
+gc_prefix <span class="Statement">::</span> Eq a <span class="Statement">=&gt;</span> [[a]] <span class="Statement">-&gt;</span> [a]
+
+gc_prefix [] <span class="Statement">=</span> []
+gc_prefix (a<span class="Statement">:</span>as) <span class="Statement">=</span> foldl prefix_2 a as
+</pre>
+</mycode>
+
+<h2>Split</h2>
+
+<mycode>
+<pre>
+<span class="PreProc">import</span> List
+
+mysplit <span class="Statement">::</span> Eq a <span class="Statement">=&gt;</span> [a] <span class="Statement">-&gt;</span> [a] <span class="Statement">-&gt;</span> [[a]]
+
+mysplit separator base <span class="Statement">=</span> helper base <span class="Type">where</span>
+    len <span class="Statement">=</span> (length separator)
+    helper [] <span class="Statement">=</span> [[]]
+    helper base <span class="Statement">=</span>
+        (<span class="Statement">if</span> (isPrefixOf separator base)
+         <span class="Statement">then</span> []<span class="Statement">:</span>(helper (drop len base))
+         <span class="Statement">else</span> <span class="Statement">let</span> ret <span class="Statement">=</span> (helper (tail base))
+              <span class="Statement">in</span> (head(base)<span class="Statement">:</span>head(ret)) <span class="Statement">:</span> tail(ret)
+        )
+</pre>
+</mycode>

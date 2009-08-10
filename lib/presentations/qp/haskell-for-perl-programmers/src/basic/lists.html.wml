@@ -1,0 +1,47 @@
+#include 'template.wml'
+
+<h2>Reversing a List</h2>
+
+<mycode>
+<pre>
+myreverse <span class="Statement">::</span> [a] <span class="Statement">-&gt;</span> [a]
+
+myreverse mylist <span class="Statement">=</span> helper mylist [] <span class="Type">where</span>
+    helper <span class="Statement">::</span> [a] <span class="Statement">-&gt;</span> [a] <span class="Statement">-&gt;</span> [a]
+    <span class="Comment">-- A stopping condition</span>
+    helper [] as <span class="Statement">=</span> as
+    <span class="Comment">-- Recurse</span>
+    helper (b<span class="Statement">:</span>bs) as <span class="Statement">=</span> helper bs (b<span class="Statement">:</span>as)
+</pre>
+</mycode>
+
+<h2>Run-Length Encoding</h2>
+
+<mycode>
+<pre>
+rle <span class="Statement">::</span> Eq a <span class="Statement">=&gt;</span> [a] <span class="Statement">-&gt;</span> [(a,Integer)]
+
+rle [] <span class="Statement">=</span> []
+rle (a<span class="Statement">:</span>[]) <span class="Statement">=</span> [(a,<span class="Constant">1</span>)]
+rle (x<span class="Statement">:</span>xs) <span class="Statement">=</span> (<span class="Statement">if</span> (x <span class="Statement">==</span> a)
+              <span class="Statement">then</span> (a,count<span class="Statement">+</span><span class="Constant">1</span>)<span class="Statement">:</span>as
+              <span class="Statement">else</span> (x,<span class="Constant">1</span>)<span class="Statement">:</span>(a,count)<span class="Statement">:</span>as
+             ) <span class="Type">where</span>
+        ((a,count)<span class="Statement">:</span>as) <span class="Statement">=</span> (rle xs)
+</pre>
+</mycode>
+
+<h2>Quick-Sort</h2>
+
+<mycode>
+<pre>
+qsort []     <span class="Statement">=</span> []
+<span class="Comment">-- ++ is list concatenation</span>
+qsort (x<span class="Statement">:</span>xs) <span class="Statement">=</span> qsort elts_lt_x <span class="Statement">++</span> [x] <span class="Statement">++</span> qsort elts_greq_x
+                 <span class="Type">where</span>
+                   <span class="Comment">-- Choose the elements out of xs that are lesser than x</span>
+                   elts_lt_x   <span class="Statement">=</span> [y <span class="Statement">|</span> y <span class="Statement">&lt;-</span> xs, y <span class="Statement">&lt;</span> x]
+                   elts_greq_x <span class="Statement">=</span> [y <span class="Statement">|</span> y <span class="Statement">&lt;-</span> xs, y <span class="Statement">&gt;=</span> x]
+</pre>
+</mycode>
+

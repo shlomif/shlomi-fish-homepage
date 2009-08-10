@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<mycode>
+<pre>
+primes <span class="Statement">=</span> sieve [<span class="Constant">2</span><span class="Statement">..</span>] <span class="Type">where</span>
+    sieve (x<span class="Statement">:</span>xs) <span class="Statement">=</span> x<span class="Statement">:</span>(sieve [a <span class="Statement">|</span> a <span class="Statement">&lt;-</span> xs, a <span class="Statement">`mod`</span> x <span class="Statement">/=</span> <span class="Constant">0</span> ])
+</pre>
+</mycode>
+
+<points>
+<li>
+This code has low efficiency because it uses division (or modulo) a lot.
+</li>
+</points>

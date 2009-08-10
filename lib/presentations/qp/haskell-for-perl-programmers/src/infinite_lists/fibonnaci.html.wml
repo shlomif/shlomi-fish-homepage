@@ -1,0 +1,11 @@
+#include 'template.wml'
+
+<mycode>
+<pre>
+fibs <span class="Statement">=</span> [<span class="Constant">0</span>,<span class="Constant">1</span>] <span class="Statement">++</span> [a<span class="Statement">+</span>b <span class="Statement">|</span> (a,b) <span class="Statement">&lt;-</span> zip fibs (tail fibs) ]
+
+<span class="Comment">-- zip is defined as:</span>
+<span class="Comment">-- zip (x:xs) (y:xs) = (x,y) : zip xs ys</span>
+<span class="Comment">-- zip xs ys = []</span>
+</pre>
+</mycode>

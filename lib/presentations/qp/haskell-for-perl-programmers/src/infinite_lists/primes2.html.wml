@@ -1,0 +1,12 @@
+#include 'template.wml'
+
+<mycode>
+<pre>
+primes <span class="Statement">=</span> sieve [<span class="Constant">2</span><span class="Statement">..</span>] <span class="Type">where</span>
+    sieve (p<span class="Statement">:</span>xs) <span class="Statement">=</span>
+        p <span class="Statement">:</span> (sieve (remove p xs)) <span class="Type">where</span>
+            remove what (a<span class="Statement">:</span>as)  <span class="Statement">|</span> a <span class="Statement">&lt;</span> what <span class="Statement">=</span> a<span class="Statement">:</span>(remove what as)
+                                <span class="Statement">|</span> a <span class="Statement">==</span> what <span class="Statement">=</span> (remove (what<span class="Statement">+</span>p) as)
+                                <span class="Statement">|</span> a <span class="Statement">&gt;</span> what <span class="Statement">=</span> a<span class="Statement">:</span>(remove (what<span class="Statement">+</span>p) as)
+</pre>
+</mycode>

@@ -221,6 +221,13 @@ EOF
                 )},
                 dest_dir => "lecture/joel-test/heb-slides",
             },
+            'haskell_for_perlers' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/haskell-for-perl-programmers",
+                )},
+                dest_dir => "lecture/Perl/Haskell/slides",
+            },
             
         },
     },

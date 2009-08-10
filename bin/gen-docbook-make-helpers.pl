@@ -150,25 +150,33 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 sub get_quad_pres_files
 {
     my $dir = shift;
+    my $dir_src = "$dir/src";
 
     my @files = File::Find::Object::Rule->name('*.html.wml')->in(
-        $dir
+        $dir_src,
     );
 
     foreach my $f (@files)
     {
-        $f =~ s{\A\Q$dir\E/}{}ms;
+        $f =~ s{\A\Q$dir_src\E/}{}ms;
         $f =~ s{\.wml\z}{};
     }
 
-    return [ sort { $a cmp $b } grep { $_ ne "index.html" } @files];
+    return
+    [
+        'src_dir' => $dir,
+        'src_files' =>
+        [ 
+            sort { $a cmp $b } grep { $_ ne "index.html" } @files
+        ],
+    ];
 }
 
 sub get_p4n_files
 {
     my $n = shift;
 
-    return get_quad_pres_files("lib/presentations/qp/perl-for-newbies/$n/src");
+    return get_quad_pres_files("lib/presentations/qp/perl-for-newbies/$n");
 }
 
 $tt->process($template_fh, 
@@ -178,14 +186,28 @@ $tt->process($template_fh,
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF
-        p4n_files =>
+        quadp_presentations =>
         {
-            (map { $_ => get_p4n_files($_), } (1..5))
+            (map 
+                {
+                    (
+                        "p4n$_" => 
+                        {
+                            dest_dir => "lecture/Perl/Newbies/lecture$_",
+                            @{get_p4n_files($_)},
+                        },
+                    )
+                }
+                (1 .. 5)
+            ),
+            'lamp' =>
+            {
+                @{get_quad_pres_files(
+                     "lib/presentations/qp/web-publishing-with-LAMP",
+                )},
+                dest_dir => "lecture/LAMP/slides",
+            }
         },
-        lamp_files => 
-        get_quad_pres_files(
-            "lib/presentations/qp/web-publishing-with-LAMP/src",
-        ),
     },
     $make_fh
 );

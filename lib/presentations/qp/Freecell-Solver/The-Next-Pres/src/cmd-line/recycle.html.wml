@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<points>
+<li>
+Starting from Freecell Solver 2.6.0, it can recycle instances so that they
+will have the same configuration as before, but still would be a candidate
+for trying to solve another board.
+</li>
+<li>
+This involved quite a lot of delicate coding to make sure that everything
+works perfectly, as the initialization and freeing up of an FCS instance
+is very complex.
+</li>
+</points>

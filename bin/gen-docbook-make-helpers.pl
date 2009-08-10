@@ -283,6 +283,13 @@ EOF
                 )},
                 dest_dir => "lecture/Freecell-Solver/The-Next-Pres/slides",
             },
+            'freecell_solver_project_intro' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Freecell-Solver/project-intro",
+                )},
+                dest_dir => "lecture/Freecell-Solver/project-intro/slides",
+            },
         },
     },
     $make_fh

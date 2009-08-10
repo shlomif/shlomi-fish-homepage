@@ -228,7 +228,13 @@ EOF
                 )},
                 dest_dir => "lecture/Perl/Haskell/slides",
             },
-            
+            'gimp_2_2' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Gimp/2.2",
+                )},
+                dest_dir => "lecture/Gimp/1/2.2-slides",
+            },
         },
     },
     $make_fh

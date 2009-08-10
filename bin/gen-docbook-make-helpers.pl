@@ -147,11 +147,9 @@ my $tt = Template->new({});
 open my $make_fh, ">", "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
-sub get_p4n_files
+sub get_quad_pres_files
 {
-    my $n = shift;
-
-    my $dir = "lib/presentations/qp/perl-for-newbies/$n/src";
+    my $dir = shift;
 
     my @files = File::Find::Object::Rule->name('*.html.wml')->in(
         $dir
@@ -166,6 +164,13 @@ sub get_p4n_files
     return [ sort { $a cmp $b } grep { $_ ne "index.html" } @files];
 }
 
+sub get_p4n_files
+{
+    my $n = shift;
+
+    return get_quad_pres_files("lib/presentations/qp/perl-for-newbies/$n/src");
+}
+
 $tt->process($template_fh, 
     {
         docs => \@documents,
@@ -177,6 +182,10 @@ EOF
         {
             (map { $_ => get_p4n_files($_), } (1..5))
         },
+        lamp_files => 
+        get_quad_pres_files(
+            "lib/presentations/qp/web-publishing-with-LAMP/src",
+        ),
     },
     $make_fh
 );

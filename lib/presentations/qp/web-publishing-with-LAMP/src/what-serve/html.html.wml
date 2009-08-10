@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<points>
+<li>
+Three current standards:<br />
+<ol>
+<li>
+HTML 4.01 Transitional/Strict.
+</li>
+<li>
+XHTML 1.0 Transitional/Strict - corresponds to HTML 4.01, but based on XML.
+</li>
+<li>
+XHTML 1.1 - more or less XHTML 1.0 Strict, with a few things
+done differently.
+</li>
+</ol>
+</li>
+<li>
+HTML 4.01 is better supported by older browsers, but XHTML can help
+detect a lot of bugs.
+</li>
+<li>
+The Transitional variants may be recommended, because the strict ones
+disallows many features that are better supported by older or buggy
+browsers.
+</li>
+</points>

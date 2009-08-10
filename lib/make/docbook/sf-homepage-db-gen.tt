@@ -40,6 +40,10 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 [% END %]
 
 [% SET pres_targets = [] %]
+
+[% # The Perl-for-Newbies files handling.
+%]
+
 [% FOREACH n = [1,2,3,4,5] %]
 
 P4N[% n %]_BASE = lib/presentations/qp/perl-for-newbies/[% n %]
@@ -67,5 +71,35 @@ $(P4N[% n %]_DEST)/[% path %]: $(P4N[% n %]_BASE)/src/[% path %].wml
 [% END %]
 
 [% END %]
+
+[% # The Webpublishing using LAMP files.
+%]
+
+[% SET v = "PRES_LAMP" %]
+[% SET l = "pres_lamp" %]
+[% v %]_BASE = lib/presentations/qp/web-publishing-with-LAMP/
+
+[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
+[% v %]_DEST = $(T2_DEST)/lecture/LAMP/slides
+[% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
+
+[% l %]: $([% v %]_DEST_INDEX) $(patsubst %,$([% v %]_DEST)/%,[% lamp_files.$n.join(" ") %])
+
+[% BLOCK cmd %]
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $([% v %]_BASE) && qp render -a && qp pack && qp upload)
+[% END %]
+
+[% pres_targets.push(l) %]
+	
+$([% v %]_DEST_INDEX): $([% v %]_DEPS)
+[%- INCLUDE cmd %]
+
+[% FOREACH path = lamp_files.$n %]
+
+$([% v %]_DEST)/[% path %]: $([% v %]_BASE)/src/[% path %].wml
+[%- INCLUDE cmd %]
+
+[% END %]
+
 
 presentations_targets: [% pres_targets.join(" ") %]

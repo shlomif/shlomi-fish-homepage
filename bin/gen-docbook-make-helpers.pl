@@ -290,6 +290,13 @@ EOF
                 )},
                 dest_dir => "lecture/Freecell-Solver/project-intro/slides",
             },
+            'lm_solve' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/LM-Solve",
+                )},
+                dest_dir => "lecture/LM-Solve/slides",
+            },
         },
     },
     $make_fh

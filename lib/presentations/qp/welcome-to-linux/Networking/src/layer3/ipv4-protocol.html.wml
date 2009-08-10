@@ -1,0 +1,20 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+The IPv4 protocol
+assigns each device which is connected to the network a 32 bits number (IP
+address), which should identify it uniquely.
+</li>
+<li>The problem is that large ranges in the IP "address-space"
+are reserved for different usages, or assigned to organizations which
+don't use even a small part of the range .
+</li>
+<li>
+Therefore, a new standard for the Network Layer, called
+IPv6, which has a much larger address space, has been created, and is
+fully supported by Linux, but it is not commonly used yet.
+</li>
+</points>
+

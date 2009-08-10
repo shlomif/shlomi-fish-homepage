@@ -46,26 +46,29 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 
 [% FOREACH n = [1,2,3,4,5] %]
 
-P4N[% n %]_BASE = lib/presentations/qp/perl-for-newbies/[% n %]
+[% SET v = "PRES_P4N" _ n %]
+[% SET l = "pres_p4n" _ n %]
 
-P4N[% n %]_DEPS = $(patsubst %,$(P4N[% n %]_BASE)/%,Contents.pm template.wml)
-P4N[% n %]_DEST = $(T2_DEST)/lecture/Perl/Newbies/lecture[% n %]
-P4N[% n %]_DEST_INDEX = $(P4N[% n %]_DEST)/index.html
+[% v %]_BASE = lib/presentations/qp/perl-for-newbies/[% n %]
 
-p4n[% n %]: $(P4N[% n %]_DEST_INDEX) $(patsubst %,$(P4N[% n %]_DEST)/%,[% p4n_files.$n.join(" ") %])
+[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
+[% v %]_DEST = $(T2_DEST)/lecture/Perl/Newbies/lecture[% n %]
+[% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
+
+[% l %]: $([% v %]_DEST_INDEX) $(patsubst %,$([% v %]_DEST)/%,[% p4n_files.$n.join(" ") %])
 
 [% BLOCK cmd %]
-	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $(P4N[% n %]_BASE) && qp render -a && qp pack && qp upload)
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $([% v %]_BASE) && qp render -a && qp pack && qp upload)
 [% END %]
 
-[% pres_targets.push("p4n" _ n) %]
+[% pres_targets.push(l) %]
 	
-$(P4N[% n %]_DEST_INDEX): $(P4N[% n %]_DEPS)
+$([% v %]_DEST_INDEX): $([% v %]_DEPS)
 [%- INCLUDE cmd %]
 
 [% FOREACH path = p4n_files.$n %]
 
-$(P4N[% n %]_DEST)/[% path %]: $(P4N[% n %]_BASE)/src/[% path %].wml
+$([% v %]_DEST)/[% path %]: $([% v %]_BASE)/src/[% path %].wml
 [%- INCLUDE cmd %]
 
 [% END %]

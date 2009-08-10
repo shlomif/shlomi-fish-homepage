@@ -297,6 +297,14 @@ EOF
                 )},
                 dest_dir => "lecture/LM-Solve/slides",
             },
+            'mdda' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/meta-data-database-access",
+                )},
+                dest_dir => "lecture/mini/mdda/slides",
+            },
+            
         },
     },
     $make_fh

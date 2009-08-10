@@ -325,6 +325,13 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Network/slides",
             },
+            'w2l_devel' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/welcome-to-linux/Development",
+                )},
+                dest_dir => "lecture/W2L/Development/slides",
+            },
         },
     },
     $make_fh

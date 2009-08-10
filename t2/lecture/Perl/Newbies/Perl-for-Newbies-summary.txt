@@ -308,7 +308,7 @@ Part 5: Good Programming Practices:
             - Class::MethodMaker
             - Class::Methodist
 * Plugins, multi-inheritance, traits, etc.
-    - NEXT
+    - NEXT -> MRO::Compat/mro.
 * Some Niceties in Advanced versions of Perl:
     - use base instead of @ISA
     - Lexical Filehandles. 
@@ -322,12 +322,29 @@ Part 5: Good Programming Practices:
     - Literate Programming.
         - Why I'm not using it. (yet)
         - DocBook/XML
-    - Perldoc.pm on CPAN by Ingy.
+    - Extensions:
+        - Pod::PseudoPod
+        - MOD by Mark Jason Dominus.
+        - Perldoc.pm on CPAN by Ingy.
 * IO::Handle:
     - IO::File
     - IO::Dir
     - IO::Socket
     - IO::All
+* Tying it all together - Module-Starter and Module-Build.
+    - The module-starter invocation command.
+        - arguments
+        - Generate MyMath::Ops
+    - What to do after we have the module.
+        - perl Build.PL
+        - ./Build
+        - ./Build test
+        - ./Build disttest.
+        - ./Build dist
+    - Add a meaningful MyMath::Ops::Add module.
+        - Test first.
+    - Get rid of the failures in t/boilerplate.t.
+* Summary.
 
 Part 6: Practical Perl Programming:
 -----------------------------------

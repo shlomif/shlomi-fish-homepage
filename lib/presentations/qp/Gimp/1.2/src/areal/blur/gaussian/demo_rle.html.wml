@@ -1,0 +1,42 @@
+#include 'template.wml'
+
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Create a blank white image.
+</li>
+
+<li>
+Place a black text caption on it using the text tool.
+</li>
+
+<li>
+Select
+
+<menupath>
+&lt;Image&gt; -&gt; Filters -&gt; Blur -&gt; "Gaussian Blur (RLE)..."
+</menupath>
+
+</li>
+
+<li>
+Select radii of x = 5 and y = 5.
+</li>
+
+<li>
+Press the "Apply" Button.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>

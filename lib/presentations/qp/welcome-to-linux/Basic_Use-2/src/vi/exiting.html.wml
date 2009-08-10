@@ -1,0 +1,15 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+To exit Vi, one has to be at command mode.
+</li>
+<li>
+When in command mode, type <tt>:q</tt> and press Enter to
+exit from Vi.
+</li>
+<li>
+You cannot exit this way unless the file you edited is saved.
+</li>
+</points>

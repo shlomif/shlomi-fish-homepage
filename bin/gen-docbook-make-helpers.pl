@@ -304,7 +304,13 @@ EOF
                 )},
                 dest_dir => "lecture/mini/mdda/slides",
             },
-            
+            'w2l_basic_use' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/welcome-to-linux/Basic_Use-2",
+                )},
+                dest_dir => "lecture/W2L/Basic_Use/slides",
+            },
         },
     },
     $make_fh

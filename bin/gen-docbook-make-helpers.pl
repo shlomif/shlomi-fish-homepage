@@ -150,6 +150,10 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 sub get_quad_pres_files
 {
     my $dir = shift;
+    my $args = shift || {};
+
+    my $include_cb = $args->{'include_cb'} || sub { return 1; };
+
     my $dir_src = "$dir/src";
 
     my @files = File::Find::Object::Rule->name('*.html.wml')->in(
@@ -167,7 +171,10 @@ sub get_quad_pres_files
         'src_dir' => $dir,
         'src_files' =>
         [ 
-            sort { $a cmp $b } grep { $_ ne "index.html" } @files
+            sort { $a cmp $b }
+            grep { $include_cb->($_) }
+            grep { $_ ne "index.html" } 
+            @files
         ],
     ];
 }
@@ -248,6 +255,19 @@ EOF
                     "lib/presentations/qp/Autotools",
                 )},
                 dest_dir => "lecture/Autotools/slides",
+            },
+            'website_meta_lect' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Website-Meta-Lecture",
+                    {
+                        include_cb => sub {
+                            my $fn = shift;
+                            return ($fn !~ m{\Aexamples/})
+                        },
+                    },
+                )},
+                dest_dir => "lecture/WebMetaLecture/slides",
             },
         },
     },

@@ -214,6 +214,14 @@ EOF
                 )},
                 dest_dir => "lecture/CatB/slides",
             },
+            'joel_test' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/joel-test",
+                )},
+                dest_dir => "lecture/joel-test/heb-slides",
+            },
+            
         },
     },
     $make_fh

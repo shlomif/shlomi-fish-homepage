@@ -57,8 +57,9 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 [% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
 [% v %]_DEST = $(T2_DEST)/[% val.dest_dir %]
 [% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
+[% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,[% files.join(" ") %])
 
-[% l %]: $([% v %]_DEST_INDEX) $(patsubst %,$([% v %]_DEST)/%,[% files.join(" ") %])
+[% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
 
 [% BLOCK cmd %]
 	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $([% v %]_BASE) && qp render -a && qp pack && qp upload)
@@ -69,12 +70,8 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 $([% v %]_DEST_INDEX): $([% v %]_DEPS)
 [%- INCLUDE cmd %]
 
-[% FOREACH path = files %]
-
-$([% v %]_DEST)/[% path %]: $([% v %]_BASE)/src/[% path %].wml
+$([% v %]_DEST_FILES): $([% v %]_DEST)/%: $([% v %]_BASE)/src/%.wml
 [%- INCLUDE cmd %]
-
-[% END %]
 
 [% END %]
 

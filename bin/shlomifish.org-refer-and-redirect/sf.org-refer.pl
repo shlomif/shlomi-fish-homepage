@@ -10,6 +10,43 @@ my $path = $ENV{'REDIRECT_SCRIPT_URL'};
 my $link = "http://www.shlomifish.org$path";
 my $link_esc = CGI::escapeHTML($link);
 
+if (my ($id) = $path =~ m{\A/p/([^/]+)\z})
+{
+    my %map =
+    (
+        "intro-lang" => "http://www.shlomifish.org/philosophy/computers/education/introductory-language/",
+    );
+
+    my $url = $map{$id};
+
+    if (defined($url))
+    {
+        print $cgi->redirect(
+            -uri => $url,
+            -status => 301,
+        );
+        exit(0);
+    }
+    else
+    {
+        print <<'EOF'
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Unknown Redirect</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<h1>Unknown Redirect</h1>
+</body>
+</html>
+EOF
+    }
+}
+
 my $title = "There's Nothing Here on Purpose - see http://www.shlomifish.org/";
 
 print $cgi->header();

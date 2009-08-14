@@ -22,7 +22,7 @@ sub new
     bless $self, $class;
 
     # Now we can retrieve the other arguments passed to the 
-    # construtor.
+    # constructor.
     
     my $name = shift || "Fooish";
     my $number = shift || 5;

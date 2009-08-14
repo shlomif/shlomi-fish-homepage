@@ -60,6 +60,9 @@ upload_remote: upload_local upload_remote_only
 upload_remote_only: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/ )
 
+upload_adbrite_only: upload_deps
+	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/adbrite-ie8-breakage/ )
+
 clean:
 	rm -fr $(T2_DEST)/*
 	rm -fr $(VIPE_DEST)/*

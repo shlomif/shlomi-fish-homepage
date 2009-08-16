@@ -83,6 +83,11 @@ my @documents =
         base => "perfect-it-workplace",
     },
     {
+        id => "Spark-Pre-Birth-of-a-Modern-Lisp", 
+        path => "open-source/projects/Spark/mission", 
+        base => "Spark-Pre-Birth-of-a-Modern-Lisp",
+    },
+    {
         id => "perfect-it-workplace-rev2", 
         path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
         base => "perfect-it-workplace-rev2",
@@ -95,6 +100,7 @@ my @documents =
         base => "foss-licences-wars",
         work_in_progress => 1,
     },
+
 );
 
 sub process_simple_end_format

@@ -360,3 +360,6 @@ $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 
 common/style.css.ttml: lib/smoked-wp-theme.css.ttml
 	touch $@
+
+lib/docbook/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
+	asciidoc --backend=docbook -o $@ $<

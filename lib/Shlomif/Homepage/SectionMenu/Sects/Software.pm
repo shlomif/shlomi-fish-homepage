@@ -73,9 +73,21 @@ my $software_tree_contents =
                     'title' => "Workaround to use yjobs.co.il using (cross-platform) Mozilla-based browsers such as Firefox",
                 },
                 {
-                    'text' => "Park - A Lisp Dialect",
-                    'url' => "open-source/projects/Park-Lisp/",
-                    'title' => "Park - a Dialect of the Lisp Programming Language inspired by Arc",
+                    'text' => "Spark - A Lisp Dialect",
+                    'url' => "open-source/projects/Spark/",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Mission Statement",
+                            'url' => "open-source/projects/Spark/mission/",
+                            'title' => "Spark - Pre-Birth of a Modern Lisp",
+                        },
+                        {
+                            'text' => "Old Document ( \"Park\" )",
+                            'url' => "open-source/projects/Park-Lisp/",
+                            'title' => "Park - a Dialect of the Lisp Programming Language inspired by Arc",
+                        },
+                    ],
                 },
                 {
                     'text' => "Kernel Configuration Search Enhancement",

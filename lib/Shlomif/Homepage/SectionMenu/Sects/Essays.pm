@@ -66,6 +66,11 @@ my $essays_tree_contents =
                             'url' => "philosophy/computers/open-source/linus-torvalds-bus-factor/",
                             'title' => "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
                         },
+                        {
+                            'text' => "FOSS Licences Wars",
+                            'url' => "philosophy/computers/open-source/foss-licences-wars/",
+                            'title' => "An overview of open-source licences and some recommendations and opinions",
+                        },
                     ],
                 },
                 {

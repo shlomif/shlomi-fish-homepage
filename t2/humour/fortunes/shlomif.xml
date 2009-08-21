@@ -5316,5 +5316,92 @@ What does "IDK" stand for? I don't know.
         </info>
       </quote>
     </fortune>
+    <fortune id="sharp-sharp-programming-why-XSLT-is-so-evil">
+        <meta>
+            <title>Why XSLT is so evil?</title>
+        </meta>
+        <irc>
+            <body>
+<joins who="xmler">has joined ##programming</joins>
+<saying who="xmler">Hi</saying>
+<saying who="xmler">How can I do &lt;a href=&quot;$variable&quot;&gt;blah&lt;/a&gt; in XSLT?</saying>
+<saying who="rindolf">xmler: you can use &lt;xsl:attribute&gt;</saying>
+<saying who="rindolf">xmler: or use ${...}</saying>
+<saying who="rindolf">xmler: have you read the Zvon XSLT tutorial?</saying>
+<saying who="xmler">rindolf: I&#39;ve read various resources; perhaps it&#39;s the fault of XML::XSLT on CPAN</saying>
+<saying who="rindolf">xmler: use XML::LibXSLT instead.</saying>
+<saying who="rindolf">It&#39;s faster and better.</saying>
+<saying who="Zuu">&lt;insert mean statement about XSLT&gt;</saying>
+<saying who="Zuu">:)</saying>
+<saying who="rindolf">&quot;XSLT is the work of Satan&quot;</saying>
+<saying who="rindolf">&quot;It&#39;s the worst thing since non-sliced bread.&quot;</saying>
+<saying who="Zuu">Hahaha :D</saying>
+<saying who="rindolf">&quot;Mothers used to tell their children about XSLT to scare them.&quot;</saying>
+<saying who="xmler">Haha</saying>
+<saying who="Zuu">That last one is good</saying>
+<saying who="xmler">XSLT seems pretty cool</saying>
+<saying who="Zuu">xmler, no no, that&#39;s not mean</saying>
+<saying who="Zuu">you&#39;re doing it wrong</saying>
+<saying who="Zuu">:P</saying>
+<saying who="xmler">XSLT is too cool to be mean to :p</saying>
+<saying who="Zuu">Hehe</saying>
+<saying who="rindolf">&quot;XSLT is the number one cause of programmers&#39; suicides since Visual Basic 1.0&quot;</saying>
+<saying who="tommy_the-dragon">lol</saying>
+<saying who="Zuu">:&gt;</saying>
+<saying who="Zuu">I could believe in that</saying>
+<saying who="rindolf">&quot;The X in XSLT stands for eXtermination.&quot;</saying>
+<saying who="rindolf">&quot;XSLT makes the baby jesus cry.&quot;</saying>
+<saying who="rindolf">&quot;The only things worse than XSLT are Excel and sugarless tea.&quot;</saying>
+<saying who="tommy_the-dragon">rofl</saying>
+<me_is who="Zuu">kinda likes Excel</me_is>
+<saying who="rindolf">Zuu: yes, it was a joke.</saying>
+<saying who="Zuu">Noooh!</saying>
+<saying who="Zuu">they are all true!</saying>
+<saying who="rindolf">Now I&#39;m out of ideas.</saying>
+<saying who="Zuu">i havent even had a single idea yet..</saying>
+<saying who="rindolf">&quot;XSLT is what Chuck Norris has nightmares of.&quot;</saying>
+<saying who="Zuu">Whoah!</saying>
+<saying who="Zuu">wait.. that would somehow make XSLT cooler than Chuck Norris...</saying>
+<saying who="Zuu">Chuck Norris dont have mightmares</saying>
+<saying who="rindolf">&quot;Confucius e says: &#39;XSLT made me realise humanity was hopeless.&quot;</saying>
+<saying who="Zuu">&quot;Even APL wont make friends with XSLT&quot;</saying>
+<saying who="Zuu">yay, i maded one!</saying>
+<saying who="rindolf">&quot;God considered using XSLT as the tenth plague of Egypt, but thought it was too evil.&quot;</saying>
+<saying who="rindolf">Zuu: :-)</saying>
+<saying who="Zuu">Haha :D</saying>
+<saying who="Zuu">that plauge one is awesome</saying>
+<saying who="rindolf">&quot;In Soviet Russia, XSLT codes you. Badly!&quot;</saying>
+<saying who="rindolf">&quot;Satan condemned Hitler for a million years of writing XSLT&quot;</saying>
+<saying who="rindolf">OK, back to work.</saying>
+<saying who="rindolf">C - not XSLt.</saying>
+<saying who="Zuu">:)</saying>
+<saying who="rindolf">&quot;The KGB used to torture their victims by having them look at scrolling XSLT code&quot;</saying>
+<saying who="xmler">rindolf: lol, love the KGB + XSLT one</saying>
+<saying who="xmler">rindolf: by the way, what&#39;s with the XSLT hate by the way, is it some kind of meme? :p</saying>
+<me_is who="Zuu">gives xmler an XSLT interpreter written in XSLT</me_is>
+<saying who="Jck_true">I wanna make ASM code from XSLT</saying>
+<saying who="rindolf">&quot;My name is Inigo Montoya. You forced my father to write XSLT. Prepare to die! And be thankful I don&#39;t force you to write XSLT.&quot;</saying>
+<saying who="xmler">Ah for gawd&#39;s sake.  Can&#39;t install XML::LibXML, it says I don&#39;t have libxml2 (I do)</saying>
+<saying who="rindolf">xmler: do you have the -devel package?</saying>
+<saying who="rindolf">xmler: what is your distro?</saying>
+<saying who="rindolf">OS distro I mean.</saying>
+<saying who="xmler">rindolf: Debian 4.0</saying>
+<saying who="xmler">Ooh, perhaps I don&#39;t actually</saying>
+<saying who="rindolf">xmler: ok, then apt-get install libxml-libxslt-perl</saying>
+<me_is who="Zuu">have to go o/</me_is>
+<saying who="rindolf">xmler: maybe we should discuss it on #perl?</saying>
+<saying who="rindolf">Zuu: bye</saying>
+<saying who="rindolf">Zuu: and beware of stray XSLT code.</saying>
+<saying who="Zuu">I will :P</saying>
+<saying who="rindolf">Zuu: OK.</saying>
+<saying who="xmler">rindolf: sure, uno memento :)</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Chuck Norris is out! XSLT is in!</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

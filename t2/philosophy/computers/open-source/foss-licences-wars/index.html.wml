@@ -1,0 +1,35 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "FOSS Licences Wars" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+This article gives an overview of the various options in picking up a licence
+for one's Free and Open Source Software (FOSS) project, and tries to give
+some guidelines choosing one.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "../lib/docbook/rendered/foss-licences-wars.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="foss-licences-wars.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don't.)
+</li>
+<li>
+<a href="foss-licences-wars.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+

@@ -525,12 +525,69 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Examples of strong copyleft licences include
-            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">the 
-                GNU General Public Licence (or GPL for short)</ulink>,
-            which has two common primary versions - version 2 and version
-            3, and <ulink url="http://en.wikipedia.org/wiki/Sleepycat_License">the
-            Sleepycat licence</ulink>.
+            Examples of strong copyleft licences include:
+        </para>
+
+        <para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">the 
+                            GNU General Public Licence (or GPL for short)</ulink>,
+                        which has two common primary versions - version 2 and 
+                        version 3. The GPL has a complicated language (I read
+                        the GPL version 2 once and did not fully understand it)
+                        and has some additional restrictions beyond just making
+                        sure that code incoporating its code would be under
+                        compatible, open-source licences.
+                    </para>
+                    <para>
+                        Note that there is a difference between the GPL version
+                        2, and the GPL version 3 and that they are mutually
+                        incompatible. Some people use the langauge "Licensed
+                        under the GNU General Public Licence, version 2, or
+                        at your option any later version" which avoids this 
+                        problem. However, many projects including 
+                        <ulink url="http://en.wikipedia.org/wiki/Linux_kernel">the
+                            Linux kernel</ulink> are GPL version 2 only.
+                    </para>
+                </listitem>
+                <listitem>
+
+                    <para>
+                        <ulink url="http://en.wikipedia.org/wiki/Sleepycat_License">The
+                            Sleepycat licence</ulink>. This licence was formulated by
+                        Sleepycat Software (now part of 
+                        <ulink url="http://www.oracle.com/">Oracle</ulink>)
+                        for use in their Berkeley DB database product. The reason
+                        this licence was chosen instead of the GPL was because
+                        the source for the Berkeley DB was originally written
+                        under one of the BSD licences, and it was not clear 
+                        whether it was possible to sub-license it under the
+                        GPL. 
+                    </para>
+
+                    <para>
+                        The Sleepycat licence is short and has a simple language,
+                        and is easy to understand. From my reading of it, it seems
+                        that it is both recursive (requires code that originated
+                        from it to be licensed under the same licence) and that
+                        it mandates releasing the source code of software 
+                        applications that linked against it, but under a 
+                        non-specified (and possibly non-free) licence.
+                    </para>
+
+                    <para>
+                        Sleepycat has also provided a commercial licence for using
+                        Berkeley DB which allows incorporating it into a larger
+                        work without the need to release the source. This is a
+                        valid business model with originators of GPL-licensed 
+                        software and other strong copyleft licences.
+                    </para>
+
+                </listitem>
+
+            </orderedlist>
         </para>
     </section>
 </section>
@@ -569,7 +626,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <listitem>
             <para>
                 Considered non-free by <ulink url="http://www.redhat.com/">the
-                Red Hat Linux distribution</ulink>.
+                    Red Hat Linux distributions</ulink> of Fedora and Red Hat
+                Enterprise Linux.
             </para>
         </listitem>
 
@@ -667,6 +725,136 @@ thinks otherwise. We have enough problems with the suitability of the GPL for
 embedded systems, that we don't need to kill the prospering web-apps market too.
 </para>
 </section>
+
+<section id="other-opinions">
+    <title>Some Opinions about the Different Licences</title>
+
+    <para>
+        The so-called "GPL vs. BSD" war probably started from as early
+        as the time when the GPL was phrased in stark contrast to the 
+        BSD or generic public-domain licences used up to that point
+        by the free software community. Here are some links that
+        I can recall:
+    </para>
+
+    <orderedlist>
+        <listitem>
+            <para>
+                <ulink url="http://en.wikipedia.org/wiki/Ken_Coar">Ken Coar</ulink> 
+                ,famous for his involvement with the Apache project, 
+                published an
+                <ulink url="http://ken.coar.org/musings/free-source.html">essay
+                    titled "Ken's 
+                    Musings about Free Software and Open Source"</ulink>
+                where he explained why he prefers BSD-style licences over
+                copyleft licences. Reading from the essay:
+            </para>
+
+            <blockquote>
+                <para>
+                     I consider myself an open sourcerer; I won't work on (or
+                     release) software covered by the GPL or any other copyleft
+                     licence except in unusual circumstances. I feel that the
+                     infective nature of copyleft licences does a disservice to
+                     the developer community and, more importantly, to the
+                     industry as a whole.
+                 </para>
+
+                 <para> 
+                     Regardless of whether there are viable alternatives, a
+                     lot of commercial organisations are extremely reluctant to
+                     release the source code to their products, regarding the
+                     source as a trade secret. And many copyleft licences
+                     include terms that prevent any part of software covered by
+                     them from being included as part of a package that is not
+                     itself completely source-available.
+                 </para>
+
+            </blockquote>
+        </listitem>
+
+        <listitem>
+            <para>
+            <ulink url="http://catb.org/~esr/">Eric S. Raymond</ulink>
+            , an open-source developer and advocate famous for his 
+            writing of <ulink url="http://catb.org/~esr/writings/cathedral-bazaar/">the "Cathedral and the Bazaar"</ulink> series
+            was <ulink url="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html?page=last&amp;x-order=date&amp;x-maxdepth=0">interviewed
+                by O'ReillyNet</ulink>, and in the Interview he claimed that
+            BSD-style licences are preferable over the GPL and the LGPL.
+            Raymond 
+            later <ulink url="http://osnews.com/story/21192/ESR_GPL_No_Longer_Needed">continued this theme in a different interview</ulink>.
+            </para>
+        </listitem>
+
+        <listitem>
+            <para>
+                Zed Shaw published 
+                <ulink url="http://www.zedshaw.com/blog/2009-07-13.html">an 
+                    essay titled "Why I (A/L)GPL"</ulink> which
+                was also <ulink url="http://developers.slashdot.org/story/09/07/14/1414259/6-Reasons-To-License-Software-Under-the-ALGPL">featured
+                    on Slashdot</ulink>. In my opinion, Shaw 
+                seems to speak out of a lot of cynicism there, which heavily
+                detracts from his arguments.
+            </para>
+        </listitem>
+
+        <listitem>
+            <para>
+                The Free Software Foundation had published 
+                <ulink url="http://www.gnu.org/licenses/why-not-lgpl.html">an 
+                    article explaining why, in their opinion, a free
+                    software developer should use the GPL instead of the 
+                    LGPL</ulink>, even for libraries.
+            </para>
+        </listitem>
+
+        <listitem>
+            <para>
+                Elad Efrat, an Israeli developer of NetBSD, 
+                wrote
+                <ulink url="http://tech.groups.yahoo.com/group/hackers-il/message/4277">a 
+                    message to the Hackers-IL mailing list (in English)</ulink>
+                (Hackers in this context are any software and software
+                development enthusiasts, not necessarily comptuer intruders)
+                arguing that using the GPL for one's software is standing
+                against the Hacker Attitude (as phrased by Eric S.
+                Raymond in his 
+                <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">"How
+                    to become a Hacker"</ulink> document), due to its
+                "No problem should ever be solved twice" clause. I
+                <ulink url="http://tech.groups.yahoo.com/group/hackers-il/message/4279">replied</ulink> saying
+                that copyleft licences may sometime aid in making sure
+                that no problem should be solved twice, because they prevent
+                proprietary solutions that later on need to be implemented
+                as open-source software.
+            </para>
+            <para>
+                One can also find further emails in support of this view
+                by Mr. Efrat in 
+                <ulink url="http://mirror.hamakor.org.il/archives/discussions/">the 
+                    "Hamakor discussions" mailing list archive</ulink>.
+                His opinions are not unique among proponents of
+                permissively licensed software.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                <ulink url="http://community.livejournal.com/shlomif_tech/931.html">This 
+                    IRC (=Internet Relay Chat) discussion</ulink>
+                is illustrative of various people's opinions on the GPL
+                and BSDL licences.
+            </para>
+        </listitem>
+    </orderedlist>
+
+    <para>
+        Of course, this is just the tip of the iceberg. Searching the
+        web for <ulink url="http://www.google.com/search?q=gpl+bsd">"gpl bsd"</ulink> 
+        and similar searches will yield many other resources. So let's move
+        on to my recommendations.
+    </para>
+
+</section>
 <section id="which-licence-to-choose">
     <title>Which Licence To Choose</title>
     <para>
@@ -748,7 +936,9 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             <ulink url="http://en.wikipedia.org/wiki/CPAN">CPAN</ulink> modules
             and other Perl code) on my Perl blog. It was also 
             <ulink url="http://perlbuzz.com/2008/04/the-problem-with-same-terms-as-perl-licensing.html">covered
-                on Perlbuzz</ulink>. I'm only going to summarise these
+                on Perlbuzz</ulink>
+            and <ulink url="http://perlbuzz.com/2009/07/help-end-licensing-under-same-terms-as-perl-itself.html">covered 
+                there again</ulink>. I'm only going to summarise these
             arguments here, and conclude by saying that using the Artistic
             Licence Version 2.0 or later, or a GPL-compatible permissive
             licence such as the MIT/X11 Licence would be preferable.
@@ -909,7 +1099,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     <title>Why I Prefer the MIT X11 Licence</title>
 
     <para>
-        I personally accept the fact that people would like to use
+        I personally accept the fact that some developers would like to use
         weak copyleft or strong copyleft licences for their works. However,
         I still prefer to use the MIT X11 Licence for works that I
         originate and now I'd like to explain why:
@@ -965,7 +1155,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
 
         When I <ulink
             url="http://tech.groups.yahoo.com/group/hackers-il/message/5009">posted
-            an early draft of this essay</ulink> to <ulink
+            an early draft of this essay</ulink> to the <ulink
             url="http://www.hackers.org.il/">Hackers-IL mailing list</ulink>, I
         received <ulink
             url="http://tech.groups.yahoo.com/group/hackers-il/message/5017">a
@@ -1120,9 +1310,10 @@ better in this scenario.
 
 <para>
     Finally I'd rather have a proprietary derived work than no derived
-    program at all, or that instead someone will duplicate my effort in 
+    program at all, or that instead someone will duplicate my effort in
     creating a BSD-style or a proprietary replacement for my work.
 </para>
 </section>
 
 </article>    <!-- End of the article -->
+

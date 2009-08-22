@@ -147,6 +147,29 @@ my $contents =
                 },
             ],
         },
+        {
+            url => "module-build-and-starter",
+            title => "Module-Build and Module-Starter",
+            subs =>
+            [
+                {
+                    url => "invocation.html",
+                    title => "The Module-Starter Invocation Command",
+                },
+                {
+                    url => "commands.html",
+                    title => "Module-Build comamnds",
+                },
+                {
+                    url => "coding.html",
+                    title => "Adding meaningful code",
+                },
+                {
+                    url => "boilerplate.html",
+                    title => "Getting rid of the boilerplate",
+                },
+            ],
+        },
     ],
     'images' =>
     [

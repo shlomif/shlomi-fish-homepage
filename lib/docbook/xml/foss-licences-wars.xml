@@ -51,6 +51,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
 
             <revision>
+                <revnumber>2659</revnumber>
+                <date>21 August 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some small typos and mis-phrasings.
+                </revremark>
+            </revision>
+
+            <revision>
                 <revnumber>2651</revnumber>
                 <date>21 August 2009</date>
                 <authorinitials>shlomif</authorinitials>
@@ -916,7 +925,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             are plenty of 
             <ulink url="http://en.wikipedia.org/wiki/List_of_FSF_approved_software_licences">open-source 
                 licences</ulink> to
-            choose from. Creating your own license may put your users
+            choose from. Creating your own licence may put your users
             and you under risk of abuse and will contribute to the problem
             of <ulink 
                 url="http://en.wikipedia.org/wiki/License_proliferation">licence 
@@ -1015,7 +1024,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             X11 Licence are an option. What the SleepyCat licence says
             is that code distributed under it, must remain under it, and
             that one must release the source code for publicly-distributed 
-            binaries that link against it. However, from my understand, as
+            binaries that link against it. However, from my understanding, as
             opposed to the GPL, this source code doesn't have to be completely
             free. It doesn't have the additional
             restrictions on licences compatibility that the GPL has, nor does
@@ -1028,7 +1037,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             LGPLv2 or the GPLv3 would likely prove to be more problematic.
             I find it harder to trust lengthy documents that I am unable to
             understand. I had no problem understanding the Sleepycat licence,
-            the Perl Artistic licence, or the MIT X11 and BSD licences,
+            the Artistic 2.0 licence, or the MIT X11 and BSD licences,
             so I can better recommend them instead.
         </para>
 
@@ -1232,7 +1241,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             For example, someone integrated my <ulink url="http://fc-solve.berlios.de/">Freecell Solver library</ulink> in a 
             <ulink url="http://www.ambermango.com/php/am/f3d/index.php">shareware
                 
-                (without source) game he wrote titled Freecell 3D</ulink>
+                (without source) game he wrote titled Freecell 3D</ulink>.
         </para>
 
         <para>
@@ -1266,7 +1275,7 @@ better in this scenario.
 
 <para>
     As a result, I could have easily integrated my solver into one of them. So
-    your thought experiment is not very realistic, although it may be valid in
+    his thought experiment is not very realistic, although it may be valid in
     the general case.
 </para>
 
@@ -1288,8 +1297,8 @@ better in this scenario.
 
     <listitem>
         <para>
-            Write a command line executable that uses the library call it, and
-            process its output. This strategy was taken by the developers of
+            Write a command line executable that uses the library, invoke it, 
+            and process its output. This strategy was taken by the developers of
             the open-source
             <ulink 
                 url="http://pysolfc.sourceforge.net/">PySolFC</ulink> out of 

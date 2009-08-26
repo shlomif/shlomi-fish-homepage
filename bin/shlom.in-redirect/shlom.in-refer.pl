@@ -25,6 +25,66 @@ my @urls =
         url => "http://www.shlomifish.org/humour/TheEnemy/",
         desc => "The Enemy and How I Helped to Fight it",
     },
+    {
+        id => "humanity",
+        url => "http://www.shlomifish.org/humour/humanity/",
+        desc => "Humanity - The Movie",
+    },
+    {
+        id => "sussman",
+        url => "http://www.shlomifish.org/open-source/interviews/sussman.html",
+        desc => "Interview with Ben Collins-Sussman",
+    },
+    {
+        id => "optimise",
+        url => "http://www.shlomifish.org/philosophy/computers/optimizing-code-for-speed/",
+        desc => "Optimising Code for Speed",
+    },
+    {
+        id => "towtf",
+        url => "http://www.shlomifish.org/humour/TOWTF/",
+        desc => "The One With the Fountainhead",
+    },
+    {
+        id => "rethinking-cpan",
+        url => "http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html",
+        desc => "Rethinking CPAN",
+    },
+    {
+        id => "st-wtld",
+        url => "http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/",
+        desc => qq{Star Trek: "We, the Living Dead"},
+    },
+    {
+        id => "file-swap",
+        url => "http://www.shlomifish.org/philosophy/case-for-file-swapping/",
+        desc => qq{The Case for File Swapping},
+    },
+    {
+        id => "hhfg",
+        url => "http://www.shlomifish.org/humour/human-hacking/",
+        desc => qq{The Human Hacking Field Guide},
+    },
+    {
+        id => "oss-fs",
+        url => "http://www.shlomifish.org/philosophy/foss-other-beasts/",
+        desc => qq{Open Source, Free Software and Other Beasts},
+    },
+    {
+        id => "def-zionism",
+        url => "http://www.shlomifish.org/philosophy/politics/define-zionism/",
+        desc => qq{Define "Zionism"},
+    },
+    {
+        id => "sw-quality",
+        url => "http://www.shlomifish.org/philosophy/computers/high-quality-software/",
+        desc => qq{What Makes Software High-Quality?},
+    },
+    {
+        id => "joy-of-perl",
+        url => "http://www.shlomifish.org/philosophy/computers/perl/joy-of-perl/",
+        desc => qq{The Joy of Perl},
+    },
 );
 
 my %urls_by_id;

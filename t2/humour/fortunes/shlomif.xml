@@ -724,9 +724,13 @@ p5p. Seriously.</p>
           <saying who="rindolf">mitch: heh</saying>
           <saying who="rindolf">mitch: (plug-in-rindolf-sleep ...</saying>
           <saying who="mitch">:)</saying>
-          <saying who="Kevin">(plug-in-rindolf-sleep 8 HOURS) in Contemplating some potential procedural database functions</saying>
+          <saying who="Kevin">(plug-in-rindolf-sleep 8 HOURS)</saying>
         </body>
-        <info/>
+        <info>
+            <channel>#gimp</channel>
+            <network>GimpNet</network>
+            <tagline>Contemplating some potential procedural database functions</tagline>
+        </info>
       </irc>
     </fortune>
     <fortune id="contributing-to-gimp">
@@ -743,9 +747,13 @@ p5p. Seriously.</p>
           <me_is who="nomis">waits for the "oh, I cannot program at all".</me_is>
           <saying who="rindolf">nomis: faster if he learns how to program, and then contributes.</saying>
           <saying who="nomis">:)</saying>
-          <saying who="yacoob">rindolf: you wouldn't like me to contribute, believe me ;) #gimp</saying>
+          <saying who="yacoob">rindolf: you wouldn't like me to contribute, believe me ;)</saying>
         </body>
-        <info/>
+        <info>
+            <channel>#gimp</channel>
+            <network>GimpNet</network>
+            <tagline>Faster, faster!</tagline>            
+        </info>
       </irc>
     </fortune>
     <fortune id="girly-men">
@@ -829,11 +837,16 @@ chapters.</p><p>	Shlomi Fish
       <meta>
         <title>95% of Programmers</title>
       </meta>
-      <quote><body><p>Linus Torvalds: "95% of Programmers consider themselves in the top 5%".
- 
-Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they
-did not write, in the bottom 5%."
-</p></body><info>
+      <quote><body>
+              <p><b>Linus Torvalds:</b> "95% of Programmers consider 
+                  themselves in the top 5%".
+              </p>
+              <p><b>Shlomi Fish's Corollary:</b>
+                  "95% of Programmers consider 95% of the code they
+                  did not write, in the bottom 5%."
+              </p>
+              </body>
+              <info>
     <author>Shlomi Fish</author>
     <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
 </info></quote>
@@ -851,7 +864,7 @@ did not write, in the bottom 5%."
           <saying who="rindolf">Linuxgrrl: let me guess - you're using Debian or Gentoo, right?</saying>
           <saying who="Linuxgrrl">Gentoo.</saying>
           <saying who="rindolf">Linuxgrrl: knew it.</saying>
-          <saying who="rindolf">Linuxgrrl: no self-respecting tomboy would use Mandrake. 	Shlomi</saying>
+          <saying who="rindolf">Linuxgrrl: no self-respecting tomboy would use Mandrake.</saying>
       </body>
         <info>
             <channel>#linuxchics</channel>
@@ -1040,9 +1053,19 @@ is how to exit it.</p><p>	Shlomi Fish
       <meta>
         <title>Re-inventing the Wheel</title>
       </meta>
-      <quote><body><p>He who re-invents the wheel, will understand much better how a wheel works.</p><p>He who re-invents the wheel, may actually invent a much better wheel. </p><p>	Shlomi Fish</p><p>He who re-invents the wheel will likely design a square wheel and spend a
-year trying to figure out why it doesn't work properly.</p><p>	Nadav Har'El
-</p></body><info>
+      <quote><body>
+              <blockquote>
+              <p>
+                  He who re-invents the wheel, will understand much better how a wheel works.</p><p>He who re-invents the wheel, may actually invent a much better wheel. </p>
+              </blockquote>
+              <p>Shlomi Fish</p>
+              <blockquote>
+              <p>He who re-invents the wheel will likely design a square wheel and spend a
+                  year trying to figure out why it doesn't work properly.</p>
+              
+              </blockquote>
+              <p>Nadav Har'El</p>
+              </body><info>
     <author>Shlomi Fish</author>
     <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
 </info></quote>
@@ -1052,7 +1075,7 @@ year trying to figure out why it doesn't work properly.</p><p>	Nadav Har'El
         <title>Better Alternative</title>
       </meta>
       <quote><body><p>Sometimes you don't need to be familiar with a better alternative to know
-that something sucks. Take Microsoft Word for example. </p><p>	Eran Keidar
+that something sucks. Take Microsoft Word for example. </p><p>
 </p></body><info>
     <author>Shlomi Fish</author>
     <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
@@ -1066,7 +1089,7 @@ that something sucks. Take Microsoft Word for example. </p><p>	Eran Keidar
 student forgets the material five minutes before the test, while a good
 student five minutes afterwards.
 </p></body><info>
-    <author>Shlomi Fish</author>
+    <author>One of Shlomi Fish's Technion Lecturer</author>
     <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
 </info></quote>
     </fortune>
@@ -1086,7 +1109,7 @@ their software.</p><p>	Shlomi Fish
         <title>Jewish Atheists</title>
       </meta>
       <quote><body><p>Jewish Atheists are the only true Atheists. They beat the hell out of Goy
-Atheists.</p><p>	Shlomi Fish
+Atheists.</p><p>Shlomi Fish
 </p></body><info>
     <author>Shlomi Fish</author>
     <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>

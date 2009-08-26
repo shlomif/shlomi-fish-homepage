@@ -7,17 +7,47 @@ use CGI;
 
 my $cgi = CGI->new();
 my $path = $ENV{'REDIRECT_SCRIPT_URL'};
-my $link = "http://www.shlomifish.org$path";
-my $link_esc = CGI::escapeHTML($link);
 
-if (my ($id) = $path =~ m{\A/p/([^/]+)\z})
+my @urls =
+(
+    {
+        id => "intro-lang",
+        url => "http://www.shlomifish.org/philosophy/computers/education/introductory-language/",
+        desc => "Thoughts about the Best Introductory Programming Language"
+    },
+    {
+        id => "hp",
+        url => "http://www.shlomifish.org/",
+        desc => "Shlomi Fish's Homepage",
+    },
+    {
+        id => "enemy",
+        url => "http://www.shlomifish.org/humour/TheEnemy/",
+        desc => "The Enemy and How I Helped to Fight it",
+    },
+);
+
+my %urls_by_id;
+
+my $idx = 0;
+foreach my $rec (@urls)
 {
-    my %map =
-    (
-        "intro-lang" => "http://www.shlomifish.org/philosophy/computers/education/introductory-language/",
-    );
+    if (!($rec->{id} && $rec->{url} && $rec->{desc}))
+    {
+        print $cgi->header();
+        print "Ask Shlomi Fish to fix record No. $idx";
+        exit(0);
+    }
+    $urls_by_id{$rec->{id}} = $rec->{url};
+}
+continue
+{
+    $idx++;
+}
 
-    my $url = $map{$id};
+if (my ($id) = $path =~ m{\A/([^/]+)\z})
+{
+    my $url = $urls_by_id{$id};
 
     if (defined($url))
     {
@@ -29,28 +59,8 @@ if (my ($id) = $path =~ m{\A/p/([^/]+)\z})
     }
     else
     {
-        print <<'EOF'
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown Redirect</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-<h1>Unknown Redirect</h1>
-</body>
-</html>
-EOF
-    }
-}
-
-my $title = "There's Nothing Here on Purpose - see http://www.shlomifish.org/";
-
-print $cgi->header();
-print <<"EOF";
+        print $cgi->header();
+        print <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
     html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -61,16 +71,15 @@ print <<"EOF";
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<h1>$title</h1>
+
+<h1>URL not found</h1>
 
 <p>
-This domain is kept empty in order to not fragment the links and page rank of
-Shlomi Fish' site. Please don't use it. See 
-<a href="$link_esc">$link_esc</a> for the page on the
-site.
+This URL alias is not defined.
 </p>
-
 </body>
 </html>
 EOF
+    }
+}
 

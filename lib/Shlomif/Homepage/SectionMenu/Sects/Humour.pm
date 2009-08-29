@@ -212,6 +212,10 @@ my $humour_tree_contents =
                     'text' => "Programs Every Programmer Has Written",
                     'url' => "humour/bits/Programs-Every-Programmer-has-Written/",
                 },
+                {
+                    'text' => "How many Wikipedia Editors does it take to Change a Lightbulb?",
+                    'url' => "humour/bits/How-many-Wikipedia-Editors/",
+                },
             ],
         },
         {

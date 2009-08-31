@@ -422,6 +422,24 @@ td { vertical-align : top; }
     />
 </latemp_extra_head_elements>
 
+<define-tag disqus_javascript>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/shlomifish/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
+</define-tag>
+
+
 <latemp_before_main_title>
 
 ;;; For the Hebrew layout.
@@ -434,6 +452,7 @@ td { vertical-align : top; }
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}
+<if "<get-var enable_disqus />" "<disqus_javascript />" />
 </latemp_after_body>
 
 

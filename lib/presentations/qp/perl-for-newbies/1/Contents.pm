@@ -199,8 +199,10 @@ expressions/strings/escape.pl
 expressions/length.pl
 expressions/int.pl
 expressions/operators.pl
+expressions/operators.out.txt
 expressions/substr2.pl
 expressions/substr.pl
+expressions/substr.out.txt
 expressions/concat.pl
 )
     ],

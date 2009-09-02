@@ -85,6 +85,11 @@ my @urls =
         url => "http://www.shlomifish.org/philosophy/computers/perl/joy-of-perl/",
         desc => qq{The Joy of Perl},
     },
+    {
+        id => "gpl-bsd-sucker",
+        url => "http://www.shlomifish.org/philosophy/computers/open-source/gpl-bsd-and-suckerism/",
+        desc => qq{The GPL, The BSD Licence and Being a Sucker},
+    },
 );
 
 my %urls_by_id;

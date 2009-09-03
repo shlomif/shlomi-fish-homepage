@@ -216,6 +216,30 @@ my $humour_tree_contents =
                     'text' => "How many Wikipedia Editors does it take to Change a Lightbulb?",
                     'url' => "humour/bits/How-many-Wikipedia-Editors/",
                 },
+                {
+                    'text' => "Collections of Facts",
+                    'url' => "humour/bits/facts/",
+                    'title' => "Collection of funny facts about various people an things",
+                    'subs' =>
+                    [
+                        {
+                            'url' => "humour/bits/facts/Chuck-Norris/",
+                            'text' => "Chuck Norris",
+                        },
+                        {
+                            'url' => "humour/bits/facts/Knuth/",
+                            'text' => "Knuth",
+                        },
+                        {
+                            'url' => "humour/bits/facts/Larry-Wall/",
+                            'text' => "Larry Wall",
+                        },
+                        {
+                            'url' => "humour/bits/facts/XSLT/",
+                            'text' => "XSLT",
+                        },
+                    ],
+                }
             ],
         },
         {

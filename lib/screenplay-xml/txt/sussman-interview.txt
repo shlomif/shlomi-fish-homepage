@@ -28,23 +28,25 @@ write musicals and scores for theater around the country.
 
 S.F.: Have you been a computer enthusiast during your teens?
 
-Ben C-S: I did BASIC programming as a kid, between the ages of 9 and 12, then lost interest in computers completely.
+Ben C-S: I did BASIC programming as a kid, between the ages of 9 and 12, then
+lost interest in computers completely.
 
-+++: At the age of 17, getting ready for college, I started getting into fractals
-I was generating Julia Sets on my apple IIe, and it would take 10 hours for
-each.
++++: At the age of 17, getting ready for college, I started getting into
+fractals I was generating Julia Sets on my apple IIe, and it would take 10
+hours for each.
 
 S.F.: &lt;giggle /&gt;
 
-Ben C-S: My calculus teacher in high school said, "hey, lemme introduce you to this
-guy, he can help you." And that's how I met my friend Matt Braithwaite. He
+Ben C-S: My calculus teacher in high school said, "hey, lemme introduce you to
+this guy, he can help you." And that's how I met my friend Matt Braithwaite. He
 had a 286 and Turbo C. I learned C by watching him implement Mandelbrot sets.
 
 S.F.: Cool.
 
-Ben C-S: Then I went off to college, and continued to write little toy programs in C for fun. My summers in college, I worked for the US Dept of Energy as an assistant
-to a professor who was simultating global climate changes on massively
-parallel supercomputers. That's how I learned Unix.
+Ben C-S: Then I went off to college, and continued to write little toy programs
+in C for fun. My summers in college, I worked for the US Dept of Energy as an
+assistant to a professor who was simultating global climate changes on
+massively parallel supercomputers. That's how I learned Unix.
 
 +++: I remember in the summer of 1991, Karl Fogel and I were temporary roommates.
 (Karl and I have been friends since I was 13)
@@ -52,19 +54,19 @@ parallel supercomputers. That's how I learned Unix.
 +++: We both decided to install linux 0.95c on our 386 computers. :-) It barely
 worked. X windows blew out his monitor.
 
-+++: Anyway, after college, I spent many years as a unix sysadmin. But I finally
-decided that coding was more fun. I also got married. :-)
++++: Anyway, after college, I spent many years as a unix sysadmin. But I
+finally decided that coding was more fun. I also got married. :-)
 
 +++: What else would you like to know?
 
 S.F.: OK, that's fine for now. Now let's move to some other questions.
 
-+++: You maintain <a href="http://www.red-bean.com/sussman/">a homepage</a> with
-various odds and ends. How much time did you spend maintaining it? How do you
-maintain it?
++++: You maintain <a href="http://www.red-bean.com/sussman/">a homepage</a>
+with various odds and ends. How much time did you spend maintaining it? How do
+you maintain it?
 
-Ben C-S: I update the homepage about once a year, heh. My webpage is actually an svn
-working copy. My repository has a post-commit hook that updates the live
+Ben C-S: I update the homepage about once a year, heh. My webpage is actually
+an svn working copy. My repository has a post-commit hook that updates the live
 working copy. It exists mainly for my relatives, not my friends.
 
 S.F.: OK.
@@ -75,11 +77,12 @@ programming skills have improved in time?
 
 Ben C-S: Ha. My programming skills aren't very great, no. Honestly.
 
-+++: My strengths lie in organizing things. Whenever there's a hugely complicated
-topic that needs to be sorted out, everyone in the Collabnet Chicago office
-asks me to do it. For example, "go learn WebDAV/DeltaV" or "figure out what'
-s happening in that complex email thread; summarize all the positions"
-My talent is in being able to present high-level overviews of complex topics.
++++: My strengths lie in organizing things. Whenever there's a hugely
+complicated topic that needs to be sorted out, everyone in the Collabnet
+Chicago office asks me to do it. For example, "go learn WebDAV/DeltaV" or
+"figure out what' s happening in that complex email thread; summarize all the
+positions" My talent is in being able to present high-level overviews of
+complex topics.
 
 +++: And I guess I'm also sort of the unofficial publicity/marketing guy on the svn
 lists. I seem to be worried about svn's image more than I should be. :-)
@@ -181,24 +184,25 @@ S.F.: Which of the core Subversion hackers do you admire and for what?
 Ben C-S: What is this, a performance review? :-) I admire Jim Blandy, for designing
 the repository. That was the single most important design in all of subversion.
 
-S.F.: Long question now.
-I noticed a certain trend in OSS. If we take Perl and Python for example,
-they are two languages who compete for the same niche, yet are very different
-and incompatible. Now, we can hear a lot of Perl-bashing from Python people
-("Here's some working 'ugly' Perl code - let's rewrite it in Python",
-"Perl does not scale to large codebases.", "All Perl code is ugly",
-"Perl code is not different than line noise" "Oh, I tweaked some Perl
-code - I feel violated".) etc.
+S.F.: Long question now.  
 
-+++: On the other hand, criticism of Python among Perl hackers is much less covert
-and gentle. Most Perl people will be happy that an unhappy Perl hacker became
-a happy Python hacker. They hardly ever claim that Python is bad, just that
-they may not like it much, or that Perl works for them.
++++: I noticed a certain trend in OSS. If we take Perl and
+Python for example, they are two languages who compete for the same niche, yet
+are very different and incompatible. Now, we can hear a lot of Perl-bashing
+from Python people ("Here's some working 'ugly' Perl code - let's rewrite it in
+Python", "Perl does not scale to large codebases.", "All Perl code is ugly",
+"Perl code is not different than line noise" "Oh, I tweaked some Perl code - I
+feel violated".) etc.
 
-+++: It seems that there's a similar situation with Subversion and Arch. Subversion
-users just confess that they like subversion and not that it's superior to
-Arch or to anything. Arch people, OTOH, attack Subversion all the time on
-various grounds.
++++: On the other hand, criticism of Python among Perl hackers is much less
+covert and gentle. Most Perl people will be happy that an unhappy Perl hacker
+became a happy Python hacker. They hardly ever claim that Python is bad, just
+that they may not like it much, or that Perl works for them.
+
++++: It seems that there's a similar situation with Subversion and Arch.
+Subversion users just confess that they like subversion and not that it's
+superior to Arch or to anything. Arch people, OTOH, attack Subversion all the
+time on various grounds.
 
 +++: It does not seem to be applicable everywhere. I didn't notice it much with
 Linux and FreeBSD.
@@ -209,8 +213,8 @@ yourself? ;-)
 
 Ben C-S: Hoo. Here's my analysis: basic human nature.
 
-+++: If there are 2 products to fill a niche, and one of them is more popular, the
-less popular one will always being trying to "tear down" the other.
++++: If there are 2 products to fill a niche, and one of them is more popular,
+the less popular one will always being trying to "tear down" the other.
 
 +++: The more popular product dosen't fling mud, because, well, it feels secure
 in its popularity.
@@ -440,8 +444,8 @@ S.F.: What other open source projects have you contributed to besides Subversion
 Ben C-S: The only other one I've worked on is
 <a href="http://www.openrpg.com/">OpenRPG</a>.
 
-S.F.: Thank you for your time, Ben, and may you have good luck and success in all
-of your endeavours.
+S.F.: Thank you for your time, Ben, and may you have good luck and success in 
+all of your endeavours.
 
 
 </s>

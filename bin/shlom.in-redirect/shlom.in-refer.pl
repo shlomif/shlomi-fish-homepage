@@ -90,6 +90,11 @@ my @urls =
         url => "http://www.shlomifish.org/philosophy/computers/open-source/gpl-bsd-and-suckerism/",
         desc => qq{The GPL, The BSD Licence and Being a Sucker},
     },
+    {
+        id => "perfect-workplace",
+        url => "http://www.shlomifish.org/philosophy/computers/software-management/perfect-workplace/",
+        desc => qq{The Perfect Info-Tech Workplace},
+    },
 );
 
 my %urls_by_id;

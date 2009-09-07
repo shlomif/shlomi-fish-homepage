@@ -88,6 +88,11 @@ my @documents =
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",
     },
     {
+        id => "human-hacking-field-guide", 
+        path =>  "humour/human-hacking",
+        base => "human-hacking-field-guide",
+    },   
+    {
         id => "perfect-it-workplace-rev2", 
         path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
         base => "perfect-it-workplace-rev2",

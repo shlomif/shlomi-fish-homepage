@@ -1,0 +1,38 @@
+CMake Talk Summary:
+-------------------
+
+Introudction:
+
+    CMake - cross platform make.
+    - configure the software build process and generate makefiles (or IDE 
+    project files) automatically on many systems.
+    - Advantages over GNU Autotools.
+        - Smaller archive files and downloads (no huge "configure", 
+        "configure.in"/"configure.ac", Makefile.am, Makefile.in, etc.)
+        - Faster configurations (using the CMake command).
+            - no excessive forking and running processes in CMake.
+        - make/build runs faster (due to no "libtool" commands).
+        - much easier to maintain and tends to break less than Autoconf's
+        m4 macros generating /bin/sh code, with many other tools in between.
+        Show:
+            - http://www.seul.org/docs/autotut/figure1.png
+        - Better Microsoft Windows support:
+            - can prepare Windows NSIS packages out-of-the-box.
+        - Its licence is mod-BSDL instead of Autotools' GPL.
+
+Core language:
+    - A Specialised Domain-Specific Language (DSL) with an interpreter written 
+    in C++
+    - Turing Complete.
+    - Supports Lists.
+        - separated by ";".
+    - $VAR expands lists.
+    - "$VAR" expands a string into a single variable.
+        - Use it when it doubt.
+    - Sometimes variables are accessed by name and sometimes by their value.
+        - read the documentation to be sure.
+
+Hello world:
+    - http://www.cmake.org/cmake/help/examples.html
+
+

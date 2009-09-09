@@ -280,6 +280,13 @@ my $essays_tree_contents =
                     'url' => "philosophy/politics/define-zionism/",
                     'title' => ("What is &quot;Zionism&quot; really? What " . 
                         "does anti-Israel, anti-Zionist, etc. mean?"),
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Hebrew Translation",
+                            'url' => "philosophy/politics/define-zionism/heb/",
+                        },
+                    ],
                 },
                 {
                     'text' => "Dispelling Some Myths about Israel",

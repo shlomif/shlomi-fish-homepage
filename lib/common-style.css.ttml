@@ -134,7 +134,6 @@ ul.nospace
     margin-top:0;
     margin-bottom:0;
     padding-left:3pt;
-    font-size:80%;
     font-family:sans-serif;
     margin-left:0;
 }
@@ -409,8 +408,13 @@ table.visible
 {
     float: right;
 }
-
 .main li
 {
     margin-bottom: 0.5em;
+}
+
+.sub_menu li
+{
+    margin-bottom:0;
+    font-size: 90%;
 }

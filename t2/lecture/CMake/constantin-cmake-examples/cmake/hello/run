@@ -1,0 +1,11 @@
+#!/bin/sh -x
+
+rm -rf `cat remove`
+
+cmake .
+make clean 
+make
+
+./hello
+
+# VERBOSE=1  \make

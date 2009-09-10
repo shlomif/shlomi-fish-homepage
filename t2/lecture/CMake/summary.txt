@@ -31,8 +31,40 @@ Core language:
         - Use it when it doubt.
     - Sometimes variables are accessed by name and sometimes by their value.
         - read the documentation to be sure.
+    - identifiers are case-insensitive.
 
 Hello world:
+    - constantin-cmake-examples/
     - http://www.cmake.org/cmake/help/examples.html
 
+The core language:
+    - SET
+    - IF
+    - WHILE
+    - FOREACH
+    - MACRO
+    - FUNCTION
+    - FILE
+    - INCLUDE
+    - MESSAGE
+        - useful for debugging
+    - Utility functions:
+        - LIST
+        - MATH
+        - STRING
 
+Building targets:
+    - add_library
+    - add_executable
+    - add_custom_target
+    - add_custom_command
+
+
+Checks for features and libraries:
+    - pkg_check_modules
+        - uses pkg_config.
+    - configure_files
+    - CHECK_C_COMPILER_FLAG
+    - WIN32 (variable)
+    - UNIX (variable)
+    - 

@@ -2,6 +2,7 @@ body {
     background: white; 
 }
 .master {
+    padding-right:1em;
 /* display: table; */
 }
 .wrapper { 
@@ -12,9 +13,11 @@ div.nav_menu {
     padding-left: 1em;
     padding-right: 1em;
 } 
-div.about_site {
+.wrapper {
+    padding-right: 10em;
+}
+.about_site {
     display: table-cell;
-    padding-right: 1em;
 }
 div.main { 
     display: table-cell; 
@@ -34,9 +37,21 @@ h1, h2
     font-size: x-large;
 } 
 
+.about_site
+{
+    padding-top: 0;
+    border-left: #008000 solid 1pt;
+    border-right: #008000 solid 1pt;
+    border-bottom: #008000 solid 3pt;
+}
 .about_site h2
 {
+    margin-top: 0;
     background-color: darkgreen;
-    color: white;    
+    color: white;
+    padding: 3pt;
 }
-
+.about_site .inner
+{
+    margin: 0.5em;
+}

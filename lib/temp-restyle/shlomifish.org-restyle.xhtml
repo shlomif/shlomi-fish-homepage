@@ -6,23 +6,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Test for Rindolf</title> 
-<style type="text/css"> 
+<style type="text/css">
 body {
-width:100%; height:100%; background:#01698f; 
-} 
+    width:100%; height:100%; background:#01698f; 
+}
+.master {
+display: table;
+}
 .wrapper { 
-display: table-row;
-      } /* div { overflow:auto; position:absolute; background:#dff0f8; margin:
-           0.5em 0.25em; padding-left : 0.5em;    padding-right : 0.5em; padding-top :
-           0.5em; padding-bottom: 2em; font-family:arial; } */ 
+    display: table-row;
+} 
 div.nav_menu { 
-display: table-cell; /* left:0; right:80%; top:0; bottom:14%; */ 
+display: table-cell;
 } 
 div.about_site {
-display: table-cell; /* left:80%; right:0; top:0; bottom:14%; */ }
+display: table-cell;
+}
 div.main { 
-display: table-cell; /* left:21%; right:21%; top:0; bottom:14%; */ } 
-div.footer { display: table-row; /* left:0; right:0 top:5em; bottom:0; */ } 
+display: table-cell; 
+} 
+div.footer
+{ 
+    display: table-row;
+} 
 h1, h2 { background:#008800; color:#ffffff; } 
 div.navmenu h1, div.aboutsite
 h1, h2 { font-family:arial; font-size:medium; } 
@@ -30,6 +36,7 @@ div.content h1 { font-size:x-large; }
 </style>
 </head>
 <body>
+<div class="master">
 <div class="wrapper"> 
 <div class="nav_menu"> 
     <h1>Navigation</h1>
@@ -323,49 +330,28 @@ it to your friends.
 
 </div> 
 
-<div class="footer"> <p>Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Quisque iaculis tempor ipsum, vel aliquet
-    felis consectetur porttitor. Vestibulum pretium ante id erat iaculis vehicula
-    sit amet id libero. Sed nisl felis, dictum ut accumsan sed, fringilla id
-    sapien. Phasellus scelerisque felis at nibh faucibus id vehicula dui gravida.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id justo ac
-    enim elementum facilisis vitae et lacus. Duis consectetur nisl sit amet erat
-    mollis a tincidunt lacus rutrum. In hac habitasse platea dictumst. Mauris
-    pharetra lacinia laoreet. Sed egestas urna vel diam auctor tempus. Praesent sed
-    justo dolor.</p> <p>Duis vehicula dapibus nunc sit amet consectetur. Ut eu
-    sapien mauris. Nam mauris nulla, rhoncus ac venenatis ac, fringilla in velit.
-    Fusce eu elementum turpis. Fusce in consequat erat. Suspendisse diam orci,
-    aliquet laoreet pulvinar nec, egestas sed augue. Suspendisse vitae enim vitae
-    libero lacinia malesuada suscipit venenatis sem. Aliquam ac lorem at ligula
-    gravida gravida. Aenean sed turpis nisl. Vivamus mattis malesuada aliquam.
-    Fusce semper leo vel lacus pulvinar consectetur.</p> <p>Etiam odio mi, feugiat
-    sed congue ac, vulputate nec purus. Duis euismod lacinia nisi eget imperdiet.
-    Aenean nec mi eget lorem consequat consectetur vitae at eros. Phasellus sed
-    lectus mauris. Ut mollis accumsan justo, id suscipit erat laoreet vel. Nulla
-    facilisi. Duis malesuada semper enim, sed gravida enim luctus at. Maecenas in
-    condimentum augue. Sed sodales mollis felis id tincidunt. Quisque justo dui,
-    mattis in pulvinar et, convallis quis ligula. Curabitur laoreet turpis et risus
-    mattis vestibulum. Praesent sed dolor et ligula volutpat varius et ac enim. In
-    ut tempor ipsum. Pellentesque luctus ullamcorper eros sed venenatis.</p>
-    <p>Aliquam porttitor turpis a ipsum condimentum nec vestibulum leo imperdiet.
-    Phasellus eget tempus lectus. Morbi ut nisi aliquet odio adipiscing luctus
-    molestie in nunc. In ante nisl, adipiscing id semper eget, lobortis nec neque.
-    Mauris pulvinar imperdiet rhoncus. Aliquam vulputate, quam et rhoncus
-    porttitor, risus ante consequat odio, sed ultricies libero arcu vel orci. Sed
-    bibendum erat et lorem fringilla scelerisque. Proin fringilla odio ac quam
-    faucibus mollis. Aenean tristique faucibus lorem ut consequat. Praesent ac
-    tellus arcu.</p> <p>Suspendisse imperdiet velit eget lorem dapibus ultrices.
-    Etiam dui elit, laoreet vitae semper in, semper eget elit. Ut at ipsum non
-    turpis volutpat pellentesque. Donec ultrices sem quis lectus pulvinar mattis.
-    Sed convallis ultricies mi, non aliquet libero fermentum vitae. In lobortis
-    erat nec nunc suscipit aliquam. Fusce lobortis ligula a odio viverra cursus.
-    Morbi varius leo vitae nulla aliquam faucibus. Donec varius tempus tempus.
-    Donec et odio vel orci viverra commodo a nec nunc. Morbi semper tristique
-    sapien at ultrices. Vestibulum vehicula imperdiet tellus et fermentum. Integer
-    elementum massa ut eros aliquet vehicula. Nullam feugiat eros at magna molestie
-    ornare quis vel diam. Maecenas rhoncus nulla eget magna molestie luctus.
-    Vestibulum nec orci vel nulla malesuada egestas.</p> 
     </div> 
-    </div> 
+<div class="footer">
+<hr />
+<div class="righty">
+</div>
+<div class="foot_left">
+<p>
+Written, designed and maintained by Shlomi Fish, <a href="mailto:shlomif@iglu.org.il">shlomif@iglu.org.il</a>.
+</p>
+<p>
+If you like what you see here, or have any comments, suggestions or
+corrections, feel free to E-mail me about it. I'd love to hear from you. If
+you have found what I did helpful or entertaining, please consider
+<a href="./meta/how-to-help/">helping</a>.
+</p>
+<p>
+Style and look based on the
+<a href="http://wordpress.org/extend/themes/smoked">Smoked WordPress Theme</a>
+by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin</a>.
+</p>
+</div>
+</div> 
+</div>
     </body>
-    </html>
+</html>

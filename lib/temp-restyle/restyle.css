@@ -8,10 +8,11 @@ body {
 .wrapper { 
     display: table-row;
 } 
-div.nav_menu { 
+.nav_menu { 
     display: table-cell;
     padding-left: 1em;
     padding-right: 1em;
+    background-color: #dff0f8;
 } 
 .wrapper {
     padding-right: 10em;
@@ -19,11 +20,14 @@ div.nav_menu {
 .about_site {
     display: table-cell;
 }
-div.main { 
+.main { 
     display: table-cell; 
     padding-right: 1em;
+    background-color: #e0ebef;
+    padding-left: 1em;
+    margin-left: 1em;
 } 
-div.footer
+.footer
 { 
 } 
 /* h1, h2 { background:#008800; color:#ffffff; } */
@@ -54,4 +58,10 @@ h1, h2
 .about_site .inner
 {
     margin: 0.5em;
+}
+.nav_menu, .main
+{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;    
 }

@@ -95,6 +95,11 @@ my @urls =
         url => "http://www.shlomifish.org/philosophy/computers/software-management/perfect-workplace/",
         desc => qq{The Perfect Info-Tech Workplace},
     },
+    {
+        id => "sourceware",
+        url => "http://www.shlomifish.org/philosophy/foss-other-beasts/revision-2/foss-and-other-beasts/criteria.html#criteria_sourceware",
+        desc => qq{Open source vs. Sourceware},
+    },
 );
 
 my %urls_by_id;

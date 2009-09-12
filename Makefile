@@ -363,3 +363,13 @@ common/style.css.ttml: lib/smoked-wp-theme.css.ttml
 
 lib/docbook/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoc --backend=docbook -o $@ $<
+
+t2/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
+
+lib/htmls/The-Enemy-rev5.html-part: t2/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
+	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
+
+t2/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-rev5.html-part
+
+lib/htmls/The-Enemy-English-rev5.html-part: t2/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
+	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -

@@ -1,4 +1,3 @@
-<set-var enable_disqus=1 />
 #include '../template.wml'
 
 <latemp_subject "How many Wikipeders does it take to Change a Light Bulb?" />
@@ -170,12 +169,3 @@ premiere "content-free" Encyclopedia.
 <a href="$(ROOT)/humour.html#wikipedia_has">"Wikipedia has…"</a> and <a href="$(ROOT)/humour.html#chuck-norris-and-the-wikipedia">"Chuck Norris and the Wikipedia"</a> aphorisms in my aphorisms collection.
 </li>
 </ul>
-
-<define-tag disqus_thread>
-<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/shlomifish/embed.js"></script><noscript><a href="http://shlomifish.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-<br />
-<br />
-</define-tag>
-
-<disqus_thread />
-

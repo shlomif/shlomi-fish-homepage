@@ -454,6 +454,11 @@ td { vertical-align : top; }
 </script>
 </define-tag>
 
+<define-tag disqus_thread>
+<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/shlomifish/embed.js"></script><noscript><a href="http://shlomifish.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<br />
+<br />
+</define-tag>
 
 <latemp_before_main_title>
 
@@ -462,12 +467,14 @@ td { vertical-align : top; }
 </latemp_before_main_title>
 
 <latemp_after_body>
+<disqus_thread />
 <share_this_button /><br />
 # <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}
-<if "<get-var enable_disqus />" "<disqus_javascript />" />
+<if "<latemp_mynot "<get-var disable_disqus />" />"
+    "<disqus_javascript />" />
 </latemp_after_body>
 
 

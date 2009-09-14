@@ -91,7 +91,7 @@ my $essays_tree_contents =
                 {
                     'text' => "Web Meta Lecture",
                     'url' => "lecture/WebMetaLecture/",
-                    'title' => "Presentation about Web Meta Language",
+                    'title' => "Presentation about Website Meta Language",
                 },
                 {
                     'host' => "t2",

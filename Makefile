@@ -211,8 +211,9 @@ DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK_IND
 DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
-DOCBOOK_RENDERED_DIR = lib/docbook/rendered
-DOCBOOK_ALL_IN_ONE_XHTML_DIR = lib/docbook/essays
+DOCBOOK_BASE_DIR = lib/docbook
+DOCBOOK_RENDERED_DIR = $(DOCBOOK_BASE_DIR)/rendered
+DOCBOOK_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK_BASE_DIR)/essays
 
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
 SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
@@ -236,7 +237,8 @@ DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOC
 
 DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
 
-DOCBOOK_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(DOCBOOK_ALL_IN_ONE_XHTMLS))
+# We have our own style for human-hacking-field-guide so we get rid of it.
+DOCBOOK_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(filter-out human-hacking-%,$(DOCBOOK_ALL_IN_ONE_XHTMLS)))
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 
@@ -259,7 +261,7 @@ docbook_extended: $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_do
 
 docbook_indiv: $(DOCBOOK_INDIVIDUAL_XHTMLS)
 
-docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs
+docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images
 
 $(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -373,3 +375,18 @@ t2/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-
 
 lib/htmls/The-Enemy-English-rev5.html-part: t2/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
+
+DOCBOOK_HHFG_IMAGES_RAW = \
+	background-image.png \
+	background-shlomif.png \
+	bottom-shlomif.png \
+	style.css \
+	top-shlomif.png
+
+DOCBOOK_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
+DOCBOOK_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK_HHFG_DEST_DIR)/%,$(DOCBOOK_HHFG_IMAGES_RAW))
+
+docbook_hhfg_images: $(DOCBOOK_HHFG_IMAGES_DEST)
+
+$(DOCBOOK_HHFG_IMAGES_DEST): $(DOCBOOK_HHFG_DEST_DIR)/%: $(DOCBOOK_BASE_DIR)/style/human-hacking-field-guide/%
+	cp -f $< $@

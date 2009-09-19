@@ -63,6 +63,9 @@ Building targets:
 Checks for features and libraries:
     - pkg_check_modules
         - uses pkg_config.
+    - configuration options:
+        - SET (MAX_NUM_FREECELLS 8 CACHE STRING "Maximal Number of Freecells")
+            - BOOL, etc.        
     - configure_files
     - CHECK_C_COMPILER_FLAG
     - WIN32 (variable)

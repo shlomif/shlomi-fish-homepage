@@ -83,6 +83,13 @@ my $humour_tree_contents =
                     'text' => "Human Hacking Field Guide",
                     'url' => "humour/human-hacking/",
                     'title' => "Story about Teenage Computer Enthusiasts in 2005's Los Angeles",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Conclusions and Reviews",
+                            'url' => "humour/human-hacking/conclusions/",
+                        },
+                    ],
                 },
                 {
                     'text' => "Star Trek: We the Living Dead",

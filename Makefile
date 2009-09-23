@@ -198,6 +198,7 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
 SCREENPLAY_DOCS = \
+    Blue-Rabbit-Log-Part-1 \
 	Humanity-Movie \
 	ae-interview \
 	star-trek--we-the-living-dead \

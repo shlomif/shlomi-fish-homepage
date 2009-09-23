@@ -103,6 +103,24 @@ my $humour_tree_contents =
                         },
                     ],
                 },
+                {
+                    'text' => "The Blue Rabbit's Log",
+                    'url' => "humour/Blue-Rabbit-Log/",
+                    'title' => "Movies that Parody Role-Playing Games",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Part I",
+                            'url' => "humour/Blue-Rabbit-Log/part-1.html",
+                            'title' => "Ongoing Text of the First Part",
+                        },
+                        {
+                            'text' => "Random Ideas",
+                            'url' => "humour/Blue-Rabbit-Log/ideas.html",
+                            'title' => "Random ideas and future excerpts",
+                        },
+                    ],
+                },
             ],
         },
         {

@@ -1,0 +1,10 @@
+#include '../template.wml'
+
+<latemp_subject "The Blue Rabbit Log - Part I" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
+
+#include "screenplay-xml/rendered-html/Blue-Rabbit-Log-Part-1.html"
+

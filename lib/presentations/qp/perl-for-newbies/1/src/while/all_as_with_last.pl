@@ -19,7 +19,7 @@ while ($position < length($string))
 }
 
 # If the position is the end of the string it means the loop was not
-# terminated prematurally, so an "a" was not encountered.
+# terminated prematurely, so an "a" was not encountered.
 if ($position == length($string))
 {
     print "The string you entered is all A's!\n";

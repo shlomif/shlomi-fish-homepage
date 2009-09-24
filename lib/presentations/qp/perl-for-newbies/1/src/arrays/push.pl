@@ -16,7 +16,7 @@ for $number_to_check (3 .. 200)
     }
 
     # If we reached this point it means $number_to_check is not
-    # divisable by any prime number that came before it.
+    # divisible by any prime number that came before it.
     push @primes, $number_to_check;
 }
 

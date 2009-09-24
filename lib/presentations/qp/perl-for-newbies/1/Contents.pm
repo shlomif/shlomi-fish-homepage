@@ -44,7 +44,7 @@ my $contents =
             [
                 {
                     'url' => "operators.html",
-                    'title' => "Operators and Precendence",
+                    'title' => "Operators and Precedence",
                 },
                 {
                     'url' => "functions.html",
@@ -190,7 +190,7 @@ input/input2.pl
 while/all_as.pl
 while/all_as_with_last.pl
 while/power_of_2.pl
-while/pyramide1.pl
+while/pyramid1.pl
 output/hello.pl
 output/oftf1.pl
 output/oftf2.pl

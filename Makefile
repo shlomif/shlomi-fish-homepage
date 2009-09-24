@@ -392,3 +392,13 @@ docbook_hhfg_images: $(DOCBOOK_HHFG_IMAGES_DEST)
 
 $(DOCBOOK_HHFG_IMAGES_DEST): $(DOCBOOK_HHFG_DEST_DIR)/%: $(DOCBOOK_BASE_DIR)/style/human-hacking-field-guide/%
 	cp -f $< $@
+
+DOCBOOK5_XSL_STYLESHEETS_PATH := $(HOME)/Download/unpack/file/docbook/docbook-xsl-snapshot
+
+DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/xhtml
+
+DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
+
+lib/docbook/5/rendered/objectivism-and-open-source.xhtml: lib/docbook/5/xml/objectivism-and-open-source.xml 
+	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
+	xsltproc --path $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) -o $@ $(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET) $<

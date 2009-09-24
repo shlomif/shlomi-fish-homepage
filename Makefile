@@ -400,15 +400,30 @@ DOCBOOK5_XSL_STYLESHEETS_FO_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/fo
 
 DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
 
-lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml: lib/docbook/5/xml/objectivism-and-open-source.xml 
+DOCBOOK5_DOCS = dealing-with-hypomanias objectivism-and-open-source
+DOCBOOK5_BASE_DIR = lib/docbook/5
+DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
+DOCBOOK5_SOURCES_DIR = $(DOCBOOK5_BASE_DIR)/xml
+DOCBOOK5_FO_DIR = $(DOCBOOK5_BASE_DIR)/fo
+DOCBOOK5_PDF_DIR = $(DOCBOOK5_BASE_DIR)/pdf
+DOCBOOK5_RENDERED_DIR = $(DOCBOOK5_BASE_DIR)/rendered
+
+DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
+DOCBOOK5_RENDERED_HTMLS = $(patsubst %,$(DOCBOOK5_RENDERED_DIR)/%.xhtml,$(DOCBOOK5_DOCS))
+DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
+DOCBOOK5_PDFS = $(patsubst %,$(DOCBOOK5_PDF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
+
+docbook5_targets: $(DOCBOOK5_RENDERED_HTMLS) $(DOCBOOK5_FOS)
+
+$(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
 	xsltproc --path $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) -o $@ $(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET) $<
 
-lib/docbook/5/rendered/objectivism-and-open-source.xhtml: lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml
+$(DOCBOOK5_RENDERED_DIR)/%.xhtml: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
-lib/docbook/5/fo/objectivism-and-open-source.fo: lib/docbook/5/xml/objectivism-and-open-source.xml 
+$(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	xsltproc --path $(DOCBOOK5_XSL_STYLESHEETS_FO_PATH) -o $@ $(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET) $<
 
-lib/docbook/5/pdf/objectivism-and-open-source.pdf: lib/docbook/5/fo/objectivism-and-open-source.fo
+$(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -pdf $@

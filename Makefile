@@ -399,6 +399,10 @@ DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/xhtml
 
 DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
 
-lib/docbook/5/rendered/objectivism-and-open-source.xhtml: lib/docbook/5/xml/objectivism-and-open-source.xml 
+lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml: lib/docbook/5/xml/objectivism-and-open-source.xml 
 	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
 	xsltproc --path $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) -o $@ $(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET) $<
+
+lib/docbook/5/rendered/objectivism-and-open-source.xhtml: lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml
+	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
+

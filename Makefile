@@ -396,6 +396,7 @@ $(DOCBOOK_HHFG_IMAGES_DEST): $(DOCBOOK_HHFG_DEST_DIR)/%: $(DOCBOOK_BASE_DIR)/sty
 DOCBOOK5_XSL_STYLESHEETS_PATH := $(HOME)/Download/unpack/file/docbook/docbook-xsl-snapshot
 
 DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/xhtml
+DOCBOOK5_XSL_STYLESHEETS_FO_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/fo
 
 DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
 
@@ -406,3 +407,8 @@ lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml: lib/docbook/5
 lib/docbook/5/rendered/objectivism-and-open-source.xhtml: lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
+lib/docbook/5/fo/objectivism-and-open-source.fo: lib/docbook/5/xml/objectivism-and-open-source.xml 
+	xsltproc --path $(DOCBOOK5_XSL_STYLESHEETS_FO_PATH) -o $@ $(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET) $<
+
+lib/docbook/5/pdf/objectivism-and-open-source.pdf: lib/docbook/5/fo/objectivism-and-open-source.fo
+	fop -fo $< -pdf $@

@@ -208,13 +208,13 @@ SCREENPLAY_DOCS = \
 
 include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
-DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK_INDIVIDUAL_XHTMLS))
-DOCBOOK_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK_DOCS),$(T2_DEST)/$(call get,DOCBOOK_DIRS_MAP,$(doc))/docbook-css)
+DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_INDIVIDUAL_XHTMLS))
+DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
-DOCBOOK_BASE_DIR = lib/docbook
-DOCBOOK_RENDERED_DIR = $(DOCBOOK_BASE_DIR)/rendered
-DOCBOOK_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK_BASE_DIR)/essays
+DOCBOOK4_BASE_DIR = lib/docbook
+DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
+DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
 
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
 SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
@@ -222,24 +222,24 @@ SCREENPLAY_XML_TXT_DIR = $(SCREENPLAY_XML_BASE_DIR)/txt
 SCREENPLAY_XML_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/html
 SCREENPLAY_XML_RENDERED_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/rendered-html
 
-DOCBOOK_TARGETS = $(patsubst %,$(DOCBOOK_RENDERED_DIR)/%.html,$(DOCBOOK_DOCS))
-DOCBOOK_XMLS = $(patsubst %,$(DOCBOOK_XML_DIR)/%.xml,$(DOCBOOK_DOCS))
+DOCBOOK4_TARGETS = $(patsubst %,$(DOCBOOK4_RENDERED_DIR)/%.html,$(DOCBOOK4_DOCS))
+DOCBOOK4_XMLS = $(patsubst %,$(DOCBOOK4_XML_DIR)/%.xml,$(DOCBOOK4_DOCS))
 
 SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 SCREENPLAY_HTMLS = $(patsubst %,$(SCREENPLAY_XML_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 
-DOCBOOK_FOS = $(patsubst %,$(DOCBOOK_FO_DIR)/%.fo,$(DOCBOOK_DOCS))
+DOCBOOK4_FOS = $(patsubst %,$(DOCBOOK4_FO_DIR)/%.fo,$(DOCBOOK4_DOCS))
 
-DOCBOOK_PDFS = $(patsubst %,$(DOCBOOK_PDF_DIR)/%.pdf,$(DOCBOOK_DOCS))
+DOCBOOK4_PDFS = $(patsubst %,$(DOCBOOK4_PDF_DIR)/%.pdf,$(DOCBOOK4_DOCS))
 
-DOCBOOK_RTFS = $(patsubst %,$(DOCBOOK_RTF_DIR)/%.rtf,$(DOCBOOK_DOCS))
+DOCBOOK4_RTFS = $(patsubst %,$(DOCBOOK4_RTF_DIR)/%.rtf,$(DOCBOOK4_DOCS))
 
-DOCBOOK_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK_DOCS))
+DOCBOOK4_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK4_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK4_DOCS))
 
-DOCBOOK_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_DOCS))
+DOCBOOK4_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_DOCS))
 
 # We have our own style for human-hacking-field-guide so we get rid of it.
-DOCBOOK_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(filter-out human-hacking-%,$(DOCBOOK_ALL_IN_ONE_XHTMLS)))
+DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(filter-out human-hacking-%,$(DOCBOOK4_ALL_IN_ONE_XHTMLS)))
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 
@@ -256,33 +256,43 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt
 
-docbook_extended: $(DOCBOOK_FOS) $(DOCBOOK_PDFS) install_docbook_pdfs install_docbook_rtfs 
+docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
+	install_docbook4_pdfs install_docbook4_rtfs \
+	install_docbook5_pdfs install_docbook5_rtfs 
 
-docbook_indiv: $(DOCBOOK_INDIVIDUAL_XHTMLS)
+docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
-docbook_targets: $(DOCBOOK_TARGETS) $(DOCBOOK_ALL_IN_ONE_XHTMLS) $(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS) $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) install_docbook_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) 
 
-$(DOCBOOK_RENDERED_DIR)/%.html: $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
+docbook_targets: docbook4_targets screenplay_targets \
+	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images docbook5_targets install_docbook5_xmls
+
+docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
+
+docbook5_targets: $(DOCBOOK5_TARGETS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS)
+
+$(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
-$(DOCBOOK_FO_DIR)/%.fo: $(DOCBOOK_XML_DIR)/%.xml
+$(DOCBOOK4_FO_DIR)/%.fo: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE_WITH_PARAMS) -o $@ --stringparam "docmake.output.format=fo" -x $(FO_XSLT_SS) fo $<
 
-$(DOCBOOK_PDF_DIR)/%.pdf: $(DOCBOOK_FO_DIR)/%.fo
+
+$(DOCBOOK4_PDF_DIR)/%.pdf: $(DOCBOOK4_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 
-$(DOCBOOK_RTF_DIR)/%.rtf: $(DOCBOOK_FO_DIR)/%.fo
+$(DOCBOOK4_RTF_DIR)/%.rtf: $(DOCBOOK4_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
-DOCBOOK_MAK_MAKEFILES_PATH = lib/make/docbook
+DOCBOOK4_MAK_MAKEFILES_PATH = lib/make/docbook
 
-include $(DOCBOOK_MAK_MAKEFILES_PATH)/docbook-render.mak
+include $(DOCBOOK4_MAK_MAKEFILES_PATH)/docbook-render.mak
 
 DOCMAKE_PARAMS = -v
 
-$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK_XML_DIR)/%.xml
-	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
+$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
+	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_1.txt
@@ -312,22 +322,25 @@ $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DI
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: install_docbook_pdfs install_docbook_xmls install_docbook_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs
 
-install_docbook_pdfs: make-dirs $(DOCBOOK_INSTALLED_PDFS)
+install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
+install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
 
-install_docbook_xmls: make-dirs $(DOCBOOK_INSTALLED_XMLS)
+install_docbook4_xmls: make-dirs $(DOCBOOK4_INSTALLED_XMLS)
+install_docbook5_xmls: make-dirs $(DOCBOOK5_INSTALLED_XMLS)
 
-install_docbook_rtfs: make-dirs  $(DOCBOOK_INSTALLED_RTFS)
+install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
+install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
 
-install_docbook_individual_xhtmls: make-dirs $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
+install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
 
-install_docbook_css_dirs: make-dirs $(DOCBOOK_INSTALLED_CSS_DIRS)
+install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 
-$(DOCBOOK_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
+$(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	rsync -r -v $< $@
 	find $@ -name '.svn' -print0 | xargs -0 rm -fr
 
@@ -356,10 +369,10 @@ $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
 	perl $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
 
-$(DOCBOOK_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
+$(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
-$(DOCBOOK_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
+$(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
 common/style.css.ttml: lib/smoked-wp-theme.css.ttml
@@ -378,19 +391,19 @@ t2/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-
 lib/htmls/The-Enemy-English-rev5.html-part: t2/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
 
-DOCBOOK_HHFG_IMAGES_RAW = \
+DOCBOOK4_HHFG_IMAGES_RAW = \
 	background-image.png \
 	background-shlomif.png \
 	bottom-shlomif.png \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
-DOCBOOK_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK_HHFG_DEST_DIR)/%,$(DOCBOOK_HHFG_IMAGES_RAW))
+DOCBOOK4_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
+DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
-docbook_hhfg_images: $(DOCBOOK_HHFG_IMAGES_DEST)
+docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST)
 
-$(DOCBOOK_HHFG_IMAGES_DEST): $(DOCBOOK_HHFG_DEST_DIR)/%: $(DOCBOOK_BASE_DIR)/style/human-hacking-field-guide/%
+$(DOCBOOK4_HHFG_IMAGES_DEST): $(DOCBOOK4_HHFG_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/%
 	cp -f $< $@
 
 DOCBOOK5_XSL_STYLESHEETS_PATH := $(HOME)/Download/unpack/file/docbook/docbook-xsl-snapshot
@@ -406,14 +419,45 @@ DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
 DOCBOOK5_SOURCES_DIR = $(DOCBOOK5_BASE_DIR)/xml
 DOCBOOK5_FO_DIR = $(DOCBOOK5_BASE_DIR)/fo
 DOCBOOK5_PDF_DIR = $(DOCBOOK5_BASE_DIR)/pdf
+DOCBOOK5_RTF_DIR = $(DOCBOOK5_BASE_DIR)/rtf
 DOCBOOK5_RENDERED_DIR = $(DOCBOOK5_BASE_DIR)/rendered
 
-DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
-DOCBOOK5_RENDERED_HTMLS = $(patsubst %,$(DOCBOOK5_RENDERED_DIR)/%.xhtml,$(DOCBOOK5_DOCS))
-DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
-DOCBOOK5_PDFS = $(patsubst %,$(DOCBOOK5_PDF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
+# DOCBOOK4_BASE_DIR = lib/docbook
+# DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
+# DOCBOOK4_SOURCES_DIR = $(DOCBOOK4_BASE_DIR)/xml
+# DOCBOOK4_FO_DIR = $(DOCBOOK4_BASE_DIR)/fo
+# DOCBOOK4_PDF_DIR = $(DOCBOOK4_BASE_DIR)/pdf
+# DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
+
+# DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
+# DOCBOOK5_RENDERED_HTMLS = $(patsubst %,$(DOCBOOK5_RENDERED_DIR)/%.xhtml,$(DOCBOOK5_DOCS))
+# DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
+# DOCBOOK5_PDFS = $(patsubst %,$(DOCBOOK5_PDF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
+# DOCBOOK5_RTFS = $(patsubst %,$(DOCBOOK5_RTF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
 
 docbook5_targets: $(DOCBOOK5_RENDERED_HTMLS) $(DOCBOOK5_FOS)
+
+
+
+
+
+$(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
+	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
+
+$(DOCBOOK4_FO_DIR)/%.fo: $(DOCBOOK4_XML_DIR)/%.xml
+	$(DOCMAKE_WITH_PARAMS) -o $@ --stringparam "docmake.output.format=fo" -x $(FO_XSLT_SS) fo $<
+
+$(DOCBOOK4_PDF_DIR)/%.pdf: $(DOCBOOK4_FO_DIR)/%.fo
+	fop -fo $< -pdf $@
+
+$(DOCBOOK4_RTF_DIR)/%.rtf: $(DOCBOOK4_FO_DIR)/%.fo
+	fop -fo $< -rtf $@
+
+$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
+	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
+	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
+
+
 
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
@@ -427,3 +471,6 @@ $(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 
 $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
+
+$(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
+	fop -fo $< -rtf $@

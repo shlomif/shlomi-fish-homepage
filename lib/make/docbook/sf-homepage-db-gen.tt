@@ -1,35 +1,40 @@
 [%- USE String -%]
 [% top_header %]
 
+[% FOREACH db_ver = [4,5] %]
+[% docs = ((db_ver == 4) ? docs_4 : docs_5) %]
+[% db_ver_path = (db_ver == 4 ? "" : (db_ver _ "/")) %]
+[% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
+
 [% FOREACH d = docs %]
-$(call set,DOCBOOK_DIRS_MAP,[% d.base %],[% d.path %])
+$(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% END %]
 
-DOCBOOK_DOCS = [% FOREACH d = docs %][% d.base %] [% END %]
+[% db_macro_prefix %]_DOCS = [% FOREACH d = docs %][% d.base %] [% END %]
 
 [% FOREACH fmt = fmts %]
-DOCBOOK_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
+[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
 
-DOCBOOK_[% fmt.var %]_DIR = lib/docbook/[% fmt.dir %]
+[% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
 
 [% END %]
 
 # The individual docs.
 [% FOREACH d = docs %]
 
-$(T2_DEST)/[% d. path %]/[% d.base %].pdf: $(DOCBOOK_PDF_DIR)/[% d.base %].pdf
+$(T2_DEST)/[% d. path %]/[% d.base %].pdf: $([% db_macro_prefix %]_PDF_DIR)/[% d.base %].pdf
 [% "\t" %]cp -f $< $@
 
-$(T2_DEST)/[% d. path %]/[% d.base %].xml: $(DOCBOOK_XML_DIR)/[% d.base %].xml
+$(T2_DEST)/[% d. path %]/[% d.base %].xml: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml
 [% "\t" %]cp -f $< $@
 
-$(T2_DEST)/[% d. path %]/[% d.base %].rtf: $(DOCBOOK_RTF_DIR)/[% d.base %].rtf
+$(T2_DEST)/[% d. path %]/[% d.base %].rtf: $([% db_macro_prefix %]_RTF_DIR)/[% d.base %].rtf
 [% "\t" %]cp -f $< $@
 
-$(T2_DEST)/[% d.path %]/[% d.base %]: $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]
-[% "\t" %]rsync -r -v $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+$(T2_DEST)/[% d.path %]/[% d.base %]: $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]
+[% "\t" %]rsync -r -v $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
 
-$(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
+$([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
 [% "\t" %]$(DOCMAKE_WITH_PARAMS) \
 [% "\t\t" %]--stringparam "docmake.output.format=xhtml" \
 [% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \
@@ -39,6 +44,9 @@ $(DOCBOOK_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $(DOCBOOK_XML_DIR)/[% d.base %].xm
 [% "\t" %]&& touch $@
 
 [% END %]
+
+[% END # db_ver loop.
+%]
 
 [% SET pres_targets = [] %]
 

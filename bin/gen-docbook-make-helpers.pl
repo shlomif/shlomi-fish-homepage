@@ -7,6 +7,8 @@ use Template;
 
 use File::Find::Object::Rule;
 
+use List::MoreUtils qw(any);
+
 my @documents =
 (
     {
@@ -24,6 +26,7 @@ my @documents =
         path => "philosophy/psychology/hypomanias/", 
         base => "dealing-with-hypomanias",
         work_in_progress => 1,
+        db_ver => 5,
     },
     {
         id => "end-of-it-slavery", 
@@ -107,6 +110,18 @@ my @documents =
     },
 
 );
+
+foreach my $d (@documents)
+{
+    if (! exists($d->{db_ver}))
+    {
+        $d->{db_ver} = 4;
+    }
+    elsif (! (any { $d->{db_ver} eq $_ } (4,5)))
+    {
+        die "Illegal db_ver $d->{db_ver}!";
+    }
+}
 
 sub process_simple_end_format
 {
@@ -199,7 +214,8 @@ sub get_p4n_files
 
 $tt->process($template_fh, 
     {
-        docs => \@documents,
+        docs_4 => [ grep { $_->{db_ver} != 5 } @documents],
+        docs_5 => [ grep { $_->{db_ver} == 5 } @documents],
         fmts => \@end_formats,
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
@@ -346,7 +362,7 @@ EOF
         },
     },
     $make_fh
-);
+) or die $tt->error();
 
 close ($template_fh);
 close ($make_fh);

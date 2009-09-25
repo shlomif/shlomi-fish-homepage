@@ -57,7 +57,9 @@ upload: upload_remote
 
 upload_remote: upload_local upload_remote_only
 
-upload_remote_only: upload_deps
+upload_remote_only: upload_deps upload_remote_only_without_deps
+
+upload_remote_only_without_deps:
 	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/ )
 
 upload_adbrite_only: upload_deps

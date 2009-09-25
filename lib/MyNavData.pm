@@ -65,17 +65,17 @@ my $tree_contents =
                     'title'=> "How to Contact Me",
                 },
                 {
-                    'text' => "My Resum&eacute;s",
+                    'text' => "My Resumés",
                     'url' => "me/resumes/",
                     'subs' =>
                     [
                         {
-                            'text' => "English Resum&eacute;",
+                            'text' => "English Resumé",
                             'url' => "SFresume.html",
                             'skip' => 1,
                         },
                         {
-                            'text' => "Detailed English Resum&eacute;",
+                            'text' => "Detailed English Resumé",
                             'url' => "SFresume_detailed.html",
                             'skip' => 1,
                         },

@@ -1,4 +1,20 @@
-#include '../template.wml'
+<define-tag body endtag="required">
+<body*{#BODY_PARAMS#}>
+%body
+</body*>
+</define-tag>
+
+#include "utils.wml"
+#include "paypal.wml"
+
+<define-tag software_patents>1</define-tag>
+#include "latemp/latemp-prelude.wml"
+#include "local-defs.wml"
+<set-var latemp_html_standard="xhtml5" />
+#include "latemp/latemp-driver.wml"
+#include "shlomif/affiliations.wml"
+
+#include "rest-of-template.wml"
 
 <latemp_subject "Ideas for &quot;The Blue Rabbit's Log&quot;" />
 
@@ -221,39 +237,81 @@ colouring the subject blue, a year and a half before.</p>
 
 <p>Gon: Truly curious.</p>
 
-<p>* RPG character-life as a soap opera</p>
+<h2 id="random-ideas">Random Ideas</h2>
 
-<p>* The 1d20's as a lethal weapon</p>
+<ul>
+<li> RPG character-life as a soap opera</li>
 
-<p>* The Purple-necked Ogres who were brought from the past</p>
+<li>The 1d20's as a lethal weapon</li>
 
-<p>The Fight scene</p>
+<li>The Purple-necked Ogres who were brought from the past</li>
+</ul>
 
-<p>The characters fight in a skirmish. Then they hear the sound of an argument between the GM and one of the players. ( "an orc with a  thaco of 17, cannot possiblty inflict 6 hitpoints on my charcter which has an Armor Class of …")</p>
-<p>They say it will take a while and meanwhile one of the orcs tell them about his previous gigs as a character. He then sais that his manager tells him that pretty soon he will be able to get a gig as a PC. The PCs tell him that it's a bad idea, because [FILL IN].</p>
+<h2 id="the-fight-scene">The Fight Scene</h2>
 
+<p>
+The characters fight in a skirmish. Then they hear the sound of an argument
+between the GM and one of the players. ( "an orc with a  thaco of 17, cannot
+possiblty inflict 6 hitpoints on my charcter which has an Armor Class of
+…")
+</p>
+<p>
+They say it will take a while and meanwhile one of the orcs tell them about his
+previous gigs as a character. He then says that his manager tells him that
+pretty soon he will be able to get a gig as a PC. The PCs tell him that it's a
+bad idea, because [FILL IN].
+</p>
 
-<p>MRS (#2)</p>
+<h2 id="mrs-2">MRS (#2)</h2>
 
-<p>There is a handle, which specifies which instrument is used for input. Gon pulls and the labels beside it show:</p>
-<p>Lute …</p>
-<p>Flute …</p>
-<p>Harp …</p>
-<p>Yamaha CS2X Synthesizer</p>
+<p>
+There is a handle, which specifies which instrument is used for input. Gon
+pulls and the labels beside it show:
+</p>
 
-<p>The Scene with the players at the beginning credits of the movie</p>
+<ul>
+<li>Lute …</li>
+<li>Flute …</li>
+<li>Harp …</li>
+<li>Yamaha CS2X Synthesizer</li>
+</ul>
 
-<p>The camera shows the middle of the table; about 80% of the table area is shown. We hear the players and stuff like that. The session takes place in one of the players’ home. </p>
+<h2 id="scene-with-players-at-opening-credits">The Scene with the Players at
+the Opening Credits</h2>
 
-<p>The right-lower corner of the screen shows the time display. At the beginning it reads “10:00 – Schedule Time”. The player puts on a CD, and the same song plays throughout the entire stuff. Various players come in at different times.</p>
+<ul>
+<li>
+The camera shows the middle of the table; about 80% of the table area is
+shown. We hear the players and stuff like that. The session takes place in one
+of the players’ home.
+</li>
 
-<p>The clock shows various stuff: like several players talking gossip, or playing a computer game. Two players are making a contest to see who swings a die for the longest time.</p>
+<li>
+The right-lower corner of the screen shows the time display. At the beginning
+it reads “10:00 – Schedule Time”. The player puts on a CD, and the same song
+plays throughout the entire stuff. Various players come in at different
+times.
+</li>
 
-<p>Eventually the clock says: “10:54:37 – Schedule time plus the Epstein-Steinberg constant”. A few seconds afterwards, the last player rings on the door.</p>
+<li>
+The clock shows various stuff: like several players talking gossip, or playing
+a computer game. Two players are making a contest to see who spins a die for
+the longest time.
+</li>
 
-<p>After the end of that frame the game commences. </p>
+<li>
+Eventually the clock says: “10:54:37 – Schedule time plus the Epstein-Steinberg
+constant”. A few seconds afterwards, the last player rings on the door.
+</li>
 
-<p>Karl the Knife-Thrower  ( or maybe knife -&gt; dagger)</p>
+<li>
+After the end of that frame the game commences.
+</li>
+</ul>
+
+<h2 id="to-sort-out">TO-SORT-OUT</h2>
+
+<p>Karl the Knife-Thrower  ( or maybe knife → dagger)</p>
 
 <p>He throws a knife at a bulls-eye on a  tree, the knife hits the bulls-eye with its handle, compresses like a spring and bounces back into his hand. He tries it one more time and the same thing happens. Then, he holds the knife by its blade and throws it at the tree. Then, the knife hits the bulls-eye with its blade, and the entire tree from the bulls-eye downward gets compressed and the tree flies at him.</p>
 
@@ -307,11 +365,9 @@ colouring the subject blue, a year and a half before.</p>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
 alt="Creative Commons License" style="border-width:0"
 src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The
-Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#"
-href="http://www.shlomifish.org/" property="cc:attributionName"
-rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license"
+xmlns:dc="http://purl.org/dc/elements/1.1/">The
+Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#">Shlomi 
+Fish</a> is licensed under a <a rel="license"
 href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a
 work at <a xmlns:dc="http://purl.org/dc/elements/1.1/"

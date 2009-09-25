@@ -116,7 +116,7 @@ my $humour_tree_contents =
                         },
                         {
                             'text' => "Random Ideas",
-                            'url' => "humour/Blue-Rabbit-Log/ideas.html",
+                            'url' => "humour/Blue-Rabbit-Log/ideas.xhtml",
                             'title' => "Random ideas and future excerpts",
                         },
                     ],

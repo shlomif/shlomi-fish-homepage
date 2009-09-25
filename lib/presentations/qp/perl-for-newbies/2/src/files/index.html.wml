@@ -72,6 +72,6 @@ Read-write, or just write without truncating.
 <tt>$file_path</tt> is the pathname of the file to open relative
 to the script current working directory (<b>CWD</b>). For instance, the
 command <tt>open I, "&lt;", "../hello.txt";</tt> opens the file "hello.txt" 
-found a directory below the current directory to reading.
+found a directory above the current directory for reading.
 </p>
 

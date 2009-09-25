@@ -16,8 +16,9 @@ so it is recommended to use grouping to bound it.
 </p>
 
 <p>
-The following pattern matches a sentence that may contain numbers: 
-</p>
+The following pattern matches a sequence of whitespace-delimited "words" 
+that each may contain either a set of letters or a set of digits (= a
+positive integer):
 
 <quadpres_code_block>
 (?:[a-zA-Z]+|[0-9]+)(?: +(?:[a-zA-Z]+|[0-9]+))*

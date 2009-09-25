@@ -10,10 +10,12 @@ placing their name along with the dollars inside them. Here's an example:
 </quadpres_code_block>
 
 <p>
-Note that perl will try to match as much as possible from the variable name, 
-even if a variable by that name does not exist. Thus if you write <tt>$ab</tt> 
-inside a string, it will not take <tt>$a</tt> and append "b" to it! To overcome
-this limitation, you can limit the variable name using curly braces: 
+Note that once perl encounters a <tt>$</tt>-sign, it will try to use as
+many characters as possible from the string as the variable name, 
+even if a variable by that name does not exist. Therefore, if you write 
+<tt>$ab</tt> inside a string, it will not take the value of <tt>$a</tt> and
+append the string "b" to it! To overcome this limitation, you can limit the
+variable name using curly braces:
 <tt>"Hello ${boy}and${girl}"</tt>.
 </p>
 

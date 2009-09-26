@@ -898,10 +898,63 @@ probably cost you money, but not too much.
 </p>
 <p>
 One can use various mechanisms to update the remote copy from your local copy.
-Covering them all is out of scope here, but it's possible you can find 
-some documentation on your hosting provider's site.
+Some of the most prominent ones are:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol"><b>FTP</b></a> -
+short for File Transfer Protocol is the oldest. It is commonly supported,
+but transfers passwords and data in plain-text. Many hosts are likely to
+support it, but there are already better alternatives.
 </p>
 </li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/SSH_file_transfer_protocol"><b>SFTP</b></a> 
+- short for SSH File Transfer Protocol is similar to FTP, but provides
+full encryption and a secure authentication and transfer. As such it is more
+recommended.
+</p>
+
+<p>
+Many popular open-source file transfer clients such as 
+<a href="http://filezilla-project.org/">FileZilla</a> and
+<a href="http://lftp.yar.ru/">LFTP</a> also support transferring using
+SFTP.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Files_transferred_over_shell_protocol">The
+<b>Files transferrred over shell</b> protocol</a> can be used instead
+of SFTP, if you only have an ssh account. 
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.samba.org/rsync/"><b>rsync</b></a> is a gratis and
+open-source program that allows one to transfer files over a secure
+shell connection incrementally. I.e: if you changed a word in a file, or
+changed some text, it will only transfer the modifications. It is also smart
+enough to avoid transferring files that haven't changed since the last
+time again and again. 
+</p>
+<p>
+rsync is especially useful for incrementally uploading data on top of a home
+connection with a limited upstream bandwidth.
+</p>
+</li>
+
+</ol>
+
+</li>
+
 <li id="how_to__version_control">
 <p>
 <b>Use a Version Control System for Maintaining your Site</b> - as you work on 

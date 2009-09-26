@@ -881,5 +881,47 @@ a few changes will turn one to the other.
         </info>
       </quote>
     </fortune>
+    <fortune id="svn-sussman-on-git-1">
+      <meta>
+        <title>sussman on git #1</title>
+      </meta>
+      <quote>
+        <body>
+            <p>
+Computer Scientists love git, not just because it comes first
+alphabetically, but because it's stupid. Everyone else loves git
+because it's GIT!
+</p>
+
+<p>
+"Git is the stupid content tracker."
+</p>
+
+<p>
+    And git doesn't waste space on my Newton MessagePad. Just look:
+</p>
+
+<p>
+    -rwxr-xr-x 1 root 24 Oct 29 2009 /bin/git<br />
+    -rwxr-xr-t 4 root 1310720 Jan 1 2005 /usr/bin/hg<br />
+    -rwxr-xr-x 1 root 5.89824e37 Oct 22 2001 /usr/local/subversion/bin/svn<br />
+</p>
+
+<p>
+Of course, on the system *I* administrate, hg is symlinked to git.
+svn has been replaced by a shell script which 1) Generates a syslog
+message at level LOG_EMERG; 2) reduces the user's disk quota by 10GB;
+and 3) RUNS GIT!!!!!!
+</p>
+<p>
+    "Git is the stupid content tracker."
+</p>
+        </body>
+        <info>
+            <author>Ben Collins-Sussman</author>
+            <work href="http://blog.red-bean.com/sussman/?p=226">Git, man! man git</work>
+        </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

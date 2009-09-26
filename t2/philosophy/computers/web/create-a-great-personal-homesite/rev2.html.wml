@@ -448,14 +448,15 @@ aids mentioned here.
 </p>
 
 <p>
-One thing that was omitted from the article (due to being too new to be 
-included) is 
-<a href="http://www.google.com/webmasters/sitemaps/docs/en/protocol.html">a 
-Google Sitemap</a>. This provides a list of interesting pages in the site for Google
-and other search engines, and is also recommended. One can see it in action
-<a href="http://www.google.com/search?hl=en&amp;lr=&amp;c2coff=1&amp;q=kde&amp;btnG=Search">in
-the Google search for KDE</a>, where the top result displays more pages in the
-site.
+One thing that was omitted from the article (due to being too new to be
+included) is
+<a href="http://www.google.com/webmasters/sitemaps/docs/en/protocol.html">a
+Google Sitemap</a>. This provides a list of interesting pages in the site for
+Google and other search engines. Note however, that it is only necessary if
+these pages are not directly accessible from the main page, for example if
+you're using JavaScript for navigation or to generate a common navigation
+menu, or if you're using a content management system that manages the pages
+internally.
 </p>
 
 <h5 id="pres_visual_appeal">Visual Appeal</h5>

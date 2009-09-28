@@ -44,7 +44,7 @@ body {
 #header {
     margin: 0 auto;
     height: 158px;
-    width: 900px;
+    width: 1200px;
     background: url('images/header.jpg');
     text-align: left;
     overflow: hidden;
@@ -72,15 +72,15 @@ body {
 #faux {
     margin: 10px auto 0 auto;
     height: 100%;
-    width: 900px;
-    background: url('images/faux.jpg') repeat;
+    width: 1200px;
+    background: url('images/faux-extended-1200.jpg') repeat;
 }
 
 #container-all {
     margin: 0;
     height: auto;
-    width: 900px;
-    background: url('images/container-top.jpg') top no-repeat;
+    width: 1200x;
+    background: url('images/container-top-extended-1200.jpg') top no-repeat;
     overflow: hidden;
 }
 
@@ -231,7 +231,7 @@ a.tagsz-5 { font-size: 16px; }
 
 [% content_id %] {
     margin: 10px auto 0 0px;
-    width: 630px;
+    width: 930px;
     height: auto;
     float: right;
     text-align: left;
@@ -517,8 +517,8 @@ a.tagsz-5 { font-size: 16px; }
     clear: both;
     margin: 0;
     height: 46px;
-    width: 900px;
-    background: url('images/container-bottom.jpg') top no-repeat;
+    width: 1200px;
+    background: url('images/container-bottom-extended-1200.jpg') top no-repeat;
 }
 
 #footer {

@@ -498,15 +498,24 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
-ART_SLOGANS_DOCS = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies $(T2_DEST)/art/slogans/give-me-ascii/give-me-ASCII-or-give-me-death $(T2_DEST)/art/slogans/chromaticd/kiss-me-my-blog-post-got-chormaticd
+ART_SLOGANS_DOCS = \
+	dont-believe-in-fairies/dont-believe-in-fairies  \
+	give-me-ascii/give-me-ASCII-or-give-me-death \
+	chromaticd/kiss-me-my-blog-post-got-chormaticd \
 
-ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_DOCS))
-ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_DOCS))
+
+ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
 art_slogans_targets: $(ART_SLOGANS_THUMBS)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
-	inkscape --export-png="$@" $<
+	inkscape --export-png="$(patsubst %.png,%.temp.png,$@)" $<
+	pngcrush $(patsubst %.png,%.temp.png,$@) $@
+	rm -f $(patsubst %.png,%.temp.png,$@)
 
 $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
-	convert -resize '200' $< $@
+	convert -resize '200' $< $(patsubst %.png,%.temp.png,$@)
+	pngcrush $(patsubst %.png,%.temp.png,$@) $@
+	rm -f $(patsubst %.png,%.temp.png,$@)

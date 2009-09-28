@@ -246,6 +246,11 @@ my $tree_contents =
                     'url' => "art/better-scm/",
                     'title' => "Logo for the  &quot;Better SCM&quot; Site",
                 },
+                {
+                    'text' => "Slogans' Designs",
+                    'url' => "art/slogans/",
+                    'title' => "The design of my aphorism - useful for T-shirts and other merchandise",
+                },
             ],
         },
         {

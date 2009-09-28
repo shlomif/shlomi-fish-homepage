@@ -426,3 +426,25 @@ table.visible
     margin-bottom:0;
     font-size: 90%;
 }
+
+.designs th, .designs td
+{
+    vertical-align:top;
+    text-align: left;
+}
+.designs
+{
+    background-color: white;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+.designs td, .designs th
+{
+    border: 1.5pt black solid;
+    padding: 2pt;
+}
+
+.designs img
+{
+    border: none;
+}

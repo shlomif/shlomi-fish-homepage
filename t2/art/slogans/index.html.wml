@@ -3,9 +3,14 @@
 <latemp_subject "My Aphorisms as Graphic Designs" />
 
 <define-tag mydesign endtag="required">
-<preserve img_alt img_base />
+<preserve id img_alt img_base title />
 <set-var %attributes />
 
+<tr>
+<td colspan="2">
+<h3 id="<get-var id />"><get-var title /></h3>
+</td>
+</tr>
 <tr>
 
 <td>
@@ -24,13 +29,17 @@ alt="<get-var img_alt />"
 </td>
 
 </tr>
-<restore img_alt img_base />
+<restore id img_alt img_base title />
 </define-tag>
 
 <table class="designs">
 
-<mydesign img_base="dont-believe-in-fairies/dont-believe-in-fairies"
-    img_alt="Don't believe in Fairies Thumbnail">
+<mydesign 
+    id="dont-believe-in-fairies"
+    img_base="dont-believe-in-fairies/dont-believe-in-fairies"
+    img_alt="Don't believe in Fairies Thumbnail"
+    title="I don't believe in fairies"
+    >
 
 <blockquote>
 <p>
@@ -43,8 +52,11 @@ I don't believe in fairies. Oops! Another fairy died.
 
 </mydesign>
 
-<mydesign img_base="give-me-ascii/give-me-ASCII-or-give-me-death"
-img_alt="Give me ASCII or Give me Deaþ!">
+<mydesign id="give-me-ascii"
+    img_base="give-me-ascii/give-me-ASCII-or-give-me-death"
+    img_alt="Give me ASCII or Give me Deaþ!"
+    title="Give me ASCII…"
+    >
 
 <blockquote>
 <p class="last">
@@ -54,8 +66,11 @@ Give me ASCII or Give me Deaþ!
 
 </mydesign>
 
-<mydesign img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd"
-    img_alt="Kiss me! My blog post got chromatic'd!">
+<mydesign id="chromaticd"
+    img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd"
+    img_alt="Kiss me! My blog post got chromatic'd!"
+    title="chromatic'd!"
+    >
 <blockquote>
 <p class="last">
 Kiss me! My blog post got chromatic'd!
@@ -72,8 +87,11 @@ I decided to prepare this design to commemorate the occasion.
 
 </mydesign>
 
-<mydesign img_base="CPP-supports-OOP/CPP-supports-OOP-as-much-as"
-    img_alt="C++ supports OOP roughly as much as COBOL supports FP">
+<mydesign id="cpp-supports-oop"
+    img_base="CPP-supports-OOP/CPP-supports-OOP-as-much-as"
+    img_alt="C++ supports OOP roughly as much as COBOL supports FP"
+    title="C++ supports Object Oriented Programming…"
+    >
 
 <blockquote>
 <p class="last">

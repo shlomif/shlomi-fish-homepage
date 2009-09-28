@@ -23,9 +23,14 @@ alt="<get-var img_alt />"
 <td>
 %body
 
-<p>
+<ul>
+<li>
 <a href="<get-var img_base />.png">PNG File</a>
-</p>
+</li>
+<li>
+<a href="<get-var img_base />.svg">Original Inkscape SVG Source</a>
+</li>
+</ul>
 </td>
 
 </tr>

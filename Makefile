@@ -503,6 +503,7 @@ ART_SLOGANS_DOCS = \
 	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
 	dont-believe-in-fairies/dont-believe-in-fairies  \
 	give-me-ascii/give-me-ASCII-or-give-me-death \
+	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 
 
 ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))

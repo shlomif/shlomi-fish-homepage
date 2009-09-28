@@ -450,3 +450,30 @@ table.visible
     border: none;
     margin: 10pt;
 }
+
+.designs blockquote
+{
+    border: grey thin solid;
+    padding: 0.5em;
+    font-style: italic;
+    margin-left: 0.5em;
+}
+.designs blockquote p:first-child:before
+{
+    content: "‶";
+}
+.designs blockquote p:first-child
+{
+    padding-top:0;
+    margin-top:0;
+}
+.designs blockquote .last:after
+{
+    content: "″";
+}
+.designs blockquote .last:after
+{
+    margin-bottom:0;
+    padding-top:0;
+}
+

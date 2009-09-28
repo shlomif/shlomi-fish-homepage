@@ -499,9 +499,10 @@ $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
 ART_SLOGANS_DOCS = \
+	chromaticd/kiss-me-my-blog-post-got-chormaticd \
+	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
 	dont-believe-in-fairies/dont-believe-in-fairies  \
 	give-me-ascii/give-me-ASCII-or-give-me-death \
-	chromaticd/kiss-me-my-blog-post-got-chormaticd \
 
 
 ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))

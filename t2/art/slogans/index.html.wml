@@ -57,5 +57,40 @@ Give me ASCII or Give me Deaþ!
 </td>
 </tr>
 
+<set-var img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd" />
+<tr>
+
+<td>
+
+<a href="<get-var img_base />.svg"><img 
+src="<get-var img_base />.thumb.png"
+alt="Kiss me! My blog post got chromatic'd!"
+/></a>
+
+</td>
+<td>
+
+<blockquote>
+<p class="last">
+Kiss me! My blog post got chromatic'd!
+</p>
+</blockquote>
+
+<p>
+Based on <a href="http://use.perl.org/~Shlomi+Fish/journal/36812">a
+true story</a>. chromatic has been criticising other people's blog posts
+on his <a href="http://use.perl.org/~chromatic/journal/">use.perl.org
+journal</a>, and when he did it for a feature I placed on my homepage,
+I decided to prepare this design to commemorate the occasion.
+</p>
+
+<p>
+<a href="<get-var img_base />.png">PNG File</a>
+</p>
+
+</td>
+
+</tr>
+
 </table>
 

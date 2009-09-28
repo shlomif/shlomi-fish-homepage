@@ -498,7 +498,7 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
-ART_SLOGANS_DOCS = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies $(T2_DEST)/art/slogans/give-me-ascii/give-me-ASCII-or-give-me-death
+ART_SLOGANS_DOCS = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies $(T2_DEST)/art/slogans/give-me-ascii/give-me-ASCII-or-give-me-death $(T2_DEST)/art/slogans/chromaticd/kiss-me-my-blog-post-got-chormaticd
 
 ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_DOCS))

@@ -41,7 +41,7 @@ body {
     color: black;
 }
 
-[% SET page_width = 1200 %]
+[% SET page_width = 1024 %]
 [% SET content_width = page_width - 420; %]
 [% SET put_page_width = "width: " _ page_width _ "px;" %]
 
@@ -84,7 +84,7 @@ body {
     margin: 0;
     height: auto;
     [% put_page_width %]
-    background: url('images/container-top-extended-1200.jpg') top no-repeat;
+    background: url('images/container-top-extended-1200.jpg') top left no-repeat;
     overflow: hidden;
 }
 
@@ -522,7 +522,7 @@ a.tagsz-5 { font-size: 16px; }
     margin: 0;
     height: 46px;
     [% put_page_width %]
-    background: url('images/container-bottom-extended-1200.jpg') top no-repeat;
+    background: url('images/container-bottom-extended-1200.jpg') top left no-repeat;
 }
 
 #footer {

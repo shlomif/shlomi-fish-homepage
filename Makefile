@@ -498,13 +498,15 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
-ART_SLOGANS_FAIRIES_BASE = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies
+ART_SLOGANS_DOCS = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies $(T2_DEST)/art/slogans/give-me-ascii/give-me-ASCII-or-give-me-death
 
-art_slogans_targets: $(ART_SLOGANS_FAIRIES_BASE).thumb.png
+ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_DOCS))
 
-$(ART_SLOGANS_FAIRIES_BASE).png: $(ART_SLOGANS_FAIRIES_BASE).svg
+art_slogans_targets: $(ART_SLOGANS_THUMBS)
+
+$(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png="$@" $<
 
-$(ART_SLOGANS_FAIRIES_BASE).thumb.png: $(ART_SLOGANS_FAIRIES_BASE).png
+$(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $@
-

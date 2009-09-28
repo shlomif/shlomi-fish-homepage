@@ -239,6 +239,14 @@ my $essays_tree_contents =
                     'text' => "Objectivism and Open Source",
                     'url' => "philosophy/obj-oss/",
                     'title' => "Objectivism and Open Source",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Revision 2",
+                            'url' => "philosophy/obj-oss/rev2/",
+                            'title' => "Revision 2 of the Objectivism and Open Source Article",
+                        },
+                    ],
                 },
                 {
                     'text' => "Israeli-Palestinian Conflict",

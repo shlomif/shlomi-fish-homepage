@@ -29,17 +29,8 @@ alt="<get-var img_alt />"
 
 <table class="designs">
 
-<tr>
-
-<td>
-
-<a href="dont-believe-in-fairies/dont-believe-in-fairies.svg"><img 
-src="dont-believe-in-fairies/dont-believe-in-fairies.thumb.png"
-alt="Don't believe in Fairies Thumbnail"
-/></a>
-
-</td>
-<td>
+<mydesign img_base="dont-believe-in-fairies/dont-believe-in-fairies"
+    img_alt="Don't believe in Fairies Thumbnail">
 
 <blockquote>
 <p>
@@ -50,24 +41,10 @@ I don't believe in fairies. Oops! Another fairy died.
 </p>
 </blockquote>
 
-<p>
-<a href="dont-believe-in-fairies/dont-believe-in-fairies.png">PNG File</a>
-</p>
+</mydesign>
 
-</td>
-</tr>
-
-<tr>
-
-<td>
-
-<a href="give-me-ascii/give-me-ASCII-or-give-me-death.svg"><img 
-src="give-me-ascii/give-me-ASCII-or-give-me-death.thumb.png"
-alt="Give me ASCII or Give me Deaþ!"
-/></a>
-
-</td>
-<td>
+<mydesign img_base="give-me-ascii/give-me-ASCII-or-give-me-death"
+img_alt="Give me ASCII or Give me Deaþ!">
 
 <blockquote>
 <p class="last">
@@ -75,12 +52,7 @@ Give me ASCII or Give me Deaþ!
 </p>
 </blockquote>
 
-<p>
-<a href="give-me-ascii/give-me-ASCII-or-give-me-death.png">PNG File</a>
-</p>
-
-</td>
-</tr>
+</mydesign>
 
 <mydesign img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd"
     img_alt="Kiss me! My blog post got chromatic'd!">

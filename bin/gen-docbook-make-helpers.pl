@@ -56,7 +56,14 @@ my @documents =
         path => "philosophy/obj-oss",
         base => "objectivism-and-open-source",
     },
-    
+
+    {
+        id => "objectivism-and-open-source-r2",
+        path => "philosophy/obj-oss/rev2",
+        base => "objectivism-and-open-source",
+        db_ver => 5,
+    },
+ 
     {
         id => "rindolf-spec",
         path => "rindolf",

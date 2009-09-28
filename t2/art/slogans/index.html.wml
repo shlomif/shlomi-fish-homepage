@@ -2,6 +2,27 @@
 
 <latemp_subject "My Aphorisms as Graphic Designs" />
 
+<define-tag mydesign endtag="required">
+<preserve img_base />
+<set-var %attributes />
+
+<tr>
+
+<td>
+<a href="<get-var img_base />.svg"><img 
+src="<get-var img_base />.thumb.png"
+alt="Kiss me! My blog post got chromatic'd!"
+/></a>
+
+</td>
+<td>
+%body
+</td>
+
+</tr>
+<restore img_base />
+</define-tag>
+
 <table class="designs">
 
 <tr>
@@ -57,19 +78,7 @@ Give me ASCII or Give me Deaþ!
 </td>
 </tr>
 
-<set-var img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd" />
-<tr>
-
-<td>
-
-<a href="<get-var img_base />.svg"><img 
-src="<get-var img_base />.thumb.png"
-alt="Kiss me! My blog post got chromatic'd!"
-/></a>
-
-</td>
-<td>
-
+<mydesign img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd">
 <blockquote>
 <p class="last">
 Kiss me! My blog post got chromatic'd!
@@ -87,10 +96,7 @@ I decided to prepare this design to commemorate the occasion.
 <p>
 <a href="<get-var img_base />.png">PNG File</a>
 </p>
-
-</td>
-
-</tr>
+</mydesign>
 
 </table>
 

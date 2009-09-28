@@ -42,7 +42,7 @@ body {
 }
 
 [% SET page_width = 1024 %]
-[% SET content_width = page_width - 420; %]
+[% SET content_width = page_width - 280; %]
 [% SET put_page_width = "width: " _ page_width _ "px;" %]
 
 #header {
@@ -234,7 +234,7 @@ a.tagsz-5 { font-size: 16px; }
 
 
 [% content_id %] {
-    margin: 10px auto 0 80px;
+    margin: 10px auto 0 40px;
     width: [% content_width %]px;
     height: auto;
     float: left;

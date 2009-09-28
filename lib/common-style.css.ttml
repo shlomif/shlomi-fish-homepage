@@ -434,7 +434,6 @@ table.visible
 }
 .designs
 {
-    background-color: white;
     border-collapse: collapse;
     overflow: hidden;
 }
@@ -446,5 +445,8 @@ table.visible
 
 .designs img
 {
+    background-color: white;
+    padding: 5pt;
     border: none;
+    margin: 10pt;
 }

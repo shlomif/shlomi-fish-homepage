@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets
+all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets art_slogans_targets
 
 include lib/make/gmsl/gmsl
 
@@ -497,3 +497,14 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
+
+ART_SLOGANS_FAIRIES_BASE = $(T2_DEST)/art/slogans/dont-believe-in-fairies/dont-believe-in-fairies
+
+art_slogans_targets: $(ART_SLOGANS_FAIRIES_BASE).thumb.png
+
+$(ART_SLOGANS_FAIRIES_BASE).png: $(ART_SLOGANS_FAIRIES_BASE).svg
+	inkscape --export-png="$@" $<
+
+$(ART_SLOGANS_FAIRIES_BASE).thumb.png: $(ART_SLOGANS_FAIRIES_BASE).png
+	convert -resize '200' $< $@
+

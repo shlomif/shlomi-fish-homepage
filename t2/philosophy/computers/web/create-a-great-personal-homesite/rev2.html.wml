@@ -1108,7 +1108,8 @@ love. The more you care for your home site, the more popular it will become
 The purpose of this section is to review some prominent home sites which I'm
 familiar with, and see what their originators have done well, and what
 they have not. All these web-sites have these things in common: they
-all belong to people I don't know very well, and they all have great content.
+all belong to people who are not close friends of mine, they are all famous
+people in the software world, and they all have great content.
 I will conclude by reviewing <a href="http://www.shlomifish.org/">my own 
 personal site</a>.
 </p>
@@ -1150,21 +1151,17 @@ but in the case of Graham's site it stands for "Hackers and Painters".
 <p>
 The <a href="http://www.joelonsoftware.com/">Joel on Software</a> site hosts
 Joel Spolsky's weblog about the software industry, as well as articles
-he routinely publishes. The web-site I'm talking about is 
-<a href="http://web.archive.org/web/20041130084416/http://www.joelonsoftware.com/">its 
-slightly older incarnation</a>, as Spolsky heavily modified the style and
-layout of his homesite recently (for better or for worse). The front page used 
-to be a tag soup, that did not even
-validate as HTML 4.01 Transitional. Now <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.joelonsoftware.com%2F">it's much 
-better</a>, but there are still many problems. Some of the other pages also 
-do not validate. The web pages do look fine
+he routinely publishes. The site uses the XHTML 1.0 Strict DOCTYPE but 
+<a href="http://validator.w3.org/check?verbose=1&uri=http%3A%2F%2Fwww.joelonsoftware.com%2F">does not validate</a>. The web pages look fine
 in <a href="http://lynx.browser.org/">the lynx browser</a>, and so they are 
 most probably very accessible.
 </p>
 
 <p>
-The site contains a navigation menu and some links to the left, which is 
-good. The <a href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">book 
+The front page contains a navigation menu and some site branding to the right,
+which is nice. The other pages such as 
+<a href="http://www.joelonsoftware.com/articles/fog0000000069.html">this one</a> do not.
+ The <a href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">book 
 reviews</a> 
 section contains only the books Joel thinks are a must, and not others that he
 read and reviewed in time, or mentioned. (That's not good.)
@@ -1176,7 +1173,7 @@ but there are still some leftover articles like that.
 </p>
 
 <p>
-The site looks great, and is very aesthetic and pleasing. 
+The site looks great, and is very aesthetic and pleasing.
 </p>
 
 <h4 id="critique_esr">Eric S. Raymond's Site</h4>
@@ -1186,8 +1183,9 @@ The site looks great, and is very aesthetic and pleasing.
 a lot of software Raymond has written, documents he wrote, and some
 information. Most of the pages on the site validate as XHTML 1.0. Most of the
 pages contain a rudimentary navigation menu to the left, but it remains static,
-and doesn't change. The pages are quite plain looking and boring from this 
-regard. The site contains <a href="http://www.catb.org/~esr/sitemap.html">a 
+and doesn't change from page page. The pages are quite plain looking and
+boring from this  regard. The site contains 
+<a href="http://www.catb.org/~esr/sitemap.html">a 
 site map</a> which is a good thing.
 </p>
 
@@ -1223,12 +1221,13 @@ preserved in their page</a>.
 </p>
 
 <p>
-I heard ambivalent opinions about the design of the page. Some people said
-it was attractive enough, and other claimed it still looks plain. It has
-some colours, some images, etc. but I otherwise didn't try to push HTML
-to its limits in its design. Instead, I opted to create a familiar home site
-layout that the vast majority of visitors will feel comfortable with,
-right away.
+The old style of the site was a bit "Web 1.0"-esque, with some plain colours
+and boring (it's still for reference as an alternate stylesheet). 
+A few months ago, I switched the style to a style based on 
+<a href="http://wordpress.org/extend/themes/smoked">the "Smoked" WordPress 
+theme</a>, and then heard several complaints that the text was too narrow.
+This was fixed a few days ago, when I tweaked the style, and it's accompanying
+images to make them wider.
 </p>
 
 <p>
@@ -1236,20 +1235,17 @@ Some of the sections of the homepage, contain their own navigation menus,
 in order to make the main navigation menu less crowded.
 </p>
 
-<p>
-One thing bad about the site is that it stretches across two domains:
-<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>
-and 
-<a href="http://vipe.technion.ac.il/~shlomif/">http://vipe.technion.ac.il/~shlomif/</a>.
-What's worse is that the number of components in the URL of each domain, is
-different by 1, and so may be confusing. There are cross-links from pages
-of each domain to those of the different one.
-</p>
 
 <p>
-The layout of the site is mostly hierarchical, but often breaks, due to 
-the fact pages were placed at certain places, and I'd rather not move them,
-so they won't break in the results pages of search engines.
+The layout of the site is mostly hierarchical, but often there are
+pages or categories outside their containing categories (for
+example <a href="http://www.shlomifish.org/MathVentures/">my MathVentures 
+section is at /MathVentures/</a> and is contained in 
+<a href="http://www.shlomifish.org.org/puzzles/"> /puzzles/ </a>, due to 
+the fact pages were originally placed at certain places, and I'd rather not 
+move them, so they won't break in the results' pages of search engines.
+The breadcrumbs trail and the section navigation menus compensate for part
+of that, but it's still a problem.
 </p>
 
 <h3 id="conclusion">Conclusion</h3>
@@ -1278,8 +1274,9 @@ So until then, happy web-authoring!
 <a href="http://www.catb.org/~esr/html-hell.html">the HTML Hell page</a>,
 which makes a pretty good read. <a href="http://www.useit.com/">Jakob
 Nielsen's site about web usability</a> has a lot of good advice. Especially of 
-note is his <a href="http://www.useit.com/alertbox/designmistakes.html">the
-worst Web design mistakes series</a>. 
+note is his series 
+<a href="http://www.useit.com/alertbox/designmistakes.html">"the
+worst Web design mistakes"</a>. 
 </p>
 
 <p>

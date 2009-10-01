@@ -3,6 +3,7 @@
 #include "share-this.wml"
 #include "amazon.wml"
 
+
 <define-tag ad_brite_top_proto>
 <!-- Begin: AdBrite, Generated: 2009-07-19 17:29:07  -->
 <script type="text/javascript">
@@ -12,6 +13,7 @@ document.write(String.fromCharCode(60,83,67,82,73,80,84));document.write(' src="
 <!-- End: AdBrite -->
 </define-tag>
 
+;;; Contains some non-valid code so we over-ride it below.
 <define-tag project_wonderful_top_proto>
 <!-- Beginning of Project Wonderful ad code: -->
 <!-- Ad box ID: 42457 -->
@@ -28,6 +30,22 @@ pw_d.projectwonderful_background_color = "";
 <noscript><map name="admap42457" id="admap42457"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=0&amp;id=42457&amp;type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" /></map>
 <table cellpadding="0" border="0" cellspacing="0" width="468" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=42457&amp;type=1" width="468" height="60" usemap="#admap42457" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=42457&amp;type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr><tr><td colspan="1" valign="top" width="468" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
 </noscript>
+<!-- End of Project Wonderful ad code. -->
+</define-tag>
+
+<define-tag project_wonderful_top_proto>
+<!-- Beginning of Project Wonderful ad code: -->
+<!-- Ad box ID: 42457 -->
+<script type="text/javascript">
+<!--
+var pw_d=document;
+pw_d.projectwonderful_adbox_id = "42457";
+pw_d.projectwonderful_adbox_type = "1";
+pw_d.projectwonderful_foreground_color = "";
+pw_d.projectwonderful_background_color = "";
+//-->
+</script>
+<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
 <!-- End of Project Wonderful ad code. -->
 </define-tag>
 

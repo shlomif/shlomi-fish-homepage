@@ -6,6 +6,6 @@ cmake .
 make clean 
 make
 
-./demo
-
 # VERBOSE=1  \make
+
+ls -l libcommon.so

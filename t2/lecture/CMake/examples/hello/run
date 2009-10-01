@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-rm -rf `cat remove`
+rm -rf `cat tmp.files`
 
 cmake .
 make clean 

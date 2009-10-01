@@ -1,2 +1,8 @@
-(cd hello; ./run)
-(cd demo; ./run)
+#!/bin/sh
+
+rm -rf `cat tmp.files`
+
+( cd hello ; ./run ) 
+( cd lib ; ./run ) 
+( cd app ; ./run )
+( cd cross ; ./run ) 

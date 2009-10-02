@@ -10,6 +10,18 @@ array as command line arguments.
 </p>
 
 <p>
+If you receive an arbitrary array and you fear it may contain only
+one argument, you can use the <tt>system { $cmd_line[0] } @cmd_line</tt>
+notation (similar to <tt>print()</tt>'s ). 
+</p>
+
+<p>
+On success, system() returns 0 (not a true value) and one should make
+sure to throw an exception upon failure while referencing the built-in
+error variable <tt>$?</tt>.
+</p>
+
+<p>
 Here are some examples, that will only work on UNIX systems.
 </p>
 

@@ -132,7 +132,7 @@ google_color_url = "008000";
 </script>
 </define-tag>
 
-<define-tag google_adsense_code_side>
+<define-tag shlomif_web_ads_code_side>
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
     "  <object class="ads_side" data="$(ROOT)/images/ads/ads-side.html" type="text/html"></object>"
     "<google_adsense_code_side_proto />"
@@ -343,7 +343,7 @@ alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 <div class="center">
 <google_adsense_code_referrals />
 <br />
-# <google_adsense_code_side />
+# <shlomif_web_ads_code_side />
 </div>
 </latemp_affiliations_buttons>
 
@@ -417,7 +417,7 @@ by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin<
     sub init_section_nav_menu
     {
         my $ads_side = <<"EOF_ADS_CODE";
-<google_adsense_code_side />
+<shlomif_web_ads_code_side />
 EOF_ADS_CODE
 
         # Adding to disable the google ads since they're not

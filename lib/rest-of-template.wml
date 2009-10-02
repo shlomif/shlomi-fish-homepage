@@ -74,14 +74,14 @@ google_color_url = "008000";
 </script>
 </define-tag>
 
-<define-tag google_adsense_code_top_wide>
+<define-tag shlomif_web_ads_code_top_proto>
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
     "  <object class="ads_top_wide" data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
     "<google_adsense_code_top_proto />"
     />
 </define-tag>
 
-<define-tag google_adsense_code_top_wide>
+<define-tag shlomif_web_ads_code_top_proto>
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
     "  <object class="ads_top_wide" data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
     "<project_wonderful_top_proto />"
@@ -90,7 +90,7 @@ google_color_url = "008000";
 
 ;;; Temporarily adding to disable AdBrite which messes up the look of
 ;;; the page in MSIE 7, MSIE 8 and Opera.
-;;; <define-tag google_adsense_code_top_wide>
+;;; <define-tag shlomif_web_ads_code_top_proto>
 ;;; </define-tag>
 
 <define-tag google_adsense_code_top_narrow>
@@ -197,7 +197,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </define-tag>
 
 <define-tag top_without_banner>
-<google_adsense_code_top_wide />
+<shlomif_web_ads_code_top_proto />
 </define-tag>
 
 <latemp_top_banner>

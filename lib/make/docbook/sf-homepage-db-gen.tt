@@ -75,7 +75,7 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 
 [% pres_targets.push(l) %]
 	
-$([% v %]_DEST_INDEX): $([% v %]_DEPS)
+$([% v %]_DEST_INDEX): $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml
 [%- INCLUDE cmd %]
 
 $([% v %]_DEST_FILES): $([% v %]_DEST)/%: $([% v %]_BASE)/src/%.wml

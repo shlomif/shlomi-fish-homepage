@@ -10,7 +10,14 @@
 <define-tag software_patents>1</define-tag>
 #include "latemp/latemp-prelude.wml"
 #include "local-defs.wml"
-<set-var latemp_html_standard="xhtml5" />
+
+;;; Commenting out because we need XHTML+RDFa
+;;; <set-var latemp_html_standard="xhtml5" />
+
+<define-tag latemp_html_doctype>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+</define-tag>
+
 #include "latemp/latemp-driver.wml"
 #include "shlomif/affiliations.wml"
 
@@ -409,8 +416,10 @@ answers that it does not.</p>
 
 <hr />
 
+
 <h2 id="licence">Licence</h2>
 
+<define-tag old_non_rdfa_licence>
 <p>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
 alt="Creative Commons License" style="border-width:0"
@@ -427,3 +436,13 @@ this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
 href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
 rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
 </p>
+</define-tag>
+
+<define-tag rdfa_enabled_licence>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
+</p>
+</define-tag>
+
+<rdfa_enabled_licence />
+

@@ -206,6 +206,8 @@ sub get_quad_pres_files
         [ 
             sort { $a cmp $b }
             grep { $include_cb->($_) }
+            # Filtering out explicitly because it has its own separate
+            # dependency.
             grep { $_ ne "index.html" } 
             @files
         ],

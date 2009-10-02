@@ -51,6 +51,15 @@ while (my $line = &lt;$read_from_process&gt;)
 </quadpres_code_block>
 
 <p>
-These are safer than using the interpolated version as a gigantic 
-open string.
+Doing something like 
+<tt>open my $print_to_process, "|-", "sendmail", $to_address;</tt>
+is safer than doing:
+<tt>open my $print_to_process, "|-", "sendmail $to_address";</tt>
+Because a malicious person may put some offending shell characters in 
+<tt>$to_address</tt> and end up with something like:
 </p>
+
+<quadpres_code_block>
+sendmail ; rm -fr $HOME
+</quadpres_code_block>
+

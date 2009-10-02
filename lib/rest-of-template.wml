@@ -132,10 +132,26 @@ google_color_url = "008000";
 </script>
 </define-tag>
 
+<define-tag project_wonderful_code_side_proto>
+<!-- Beginning of Project Wonderful ad code: -->
+<!-- Ad box ID: 42545 -->
+<script type="text/javascript">
+<!--
+var pw_d=document;
+pw_d.projectwonderful_adbox_id = "42545";
+pw_d.projectwonderful_adbox_type = "3";
+pw_d.projectwonderful_foreground_color = "";
+pw_d.projectwonderful_background_color = "";
+//-->
+</script>
+<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
+<!-- End of Project Wonderful ad code. -->
+</define-tag>
+
 <define-tag shlomif_web_ads_code_side>
 <if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
     "  <object class="ads_side" data="$(ROOT)/images/ads/ads-side.html" type="text/html"></object>"
-    "<google_adsense_code_side_proto />"
+    "<project_wonderful_code_side_proto />"
     />
 </define-tag>
 
@@ -343,7 +359,7 @@ alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 <div class="center">
 <google_adsense_code_referrals />
 <br />
-# <shlomif_web_ads_code_side />
+<shlomif_web_ads_code_side />
 </div>
 </latemp_affiliations_buttons>
 

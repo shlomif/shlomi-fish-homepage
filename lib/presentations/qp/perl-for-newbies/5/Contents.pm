@@ -158,7 +158,7 @@ my $contents =
                 },
                 {
                     url => "commands.html",
-                    title => "Module-Build comamnds",
+                    title => "Module-Build commands",
                 },
                 {
                     url => "coding.html",

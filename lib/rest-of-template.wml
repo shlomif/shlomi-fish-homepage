@@ -364,11 +364,7 @@ Style and look based on the
 <a href="http://wordpress.org/extend/themes/smoked">Smoked WordPress Theme</a>
 by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin</a>.
 </p>
-<script type="text/javascript">
-<!--
-$("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]").each(function(i){ \$(this).append( ' <span class="selfl">[<a href="#' + this.id + '">link</a>]</span>' ) })
--->
-</script>
+<script type="text/javascript" src="$(ROOT)/js/selfl.js"></script>
 </latemp_webmaster>
 
 <define-tag hosting_link>

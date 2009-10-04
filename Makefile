@@ -504,6 +504,7 @@ ART_SLOGANS_DOCS = \
 	dont-believe-in-fairies/dont-believe-in-fairies  \
 	give-me-ascii/give-me-ASCII-or-give-me-death \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
+	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
 
 ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))

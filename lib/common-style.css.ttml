@@ -480,4 +480,8 @@ table.visible
     margin-bottom:0;
     padding-top:0;
 }
-
+.article p, .article li, .article pre
+{
+    margin: 0 40px;
+    line-height: 1.3;
+}

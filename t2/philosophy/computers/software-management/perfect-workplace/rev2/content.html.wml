@@ -1,0 +1,56 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+#include <utils.wml>
+
+<latemp_subject "The Perfect Info-Tech Workplace" />
+
+<note>
+
+<h2 id="under-construction-note">Note</h2>
+
+<p>
+This page is temporary, under construction and should not be publicised or
+publicly linked to. Please send comments to 
+<a href="$(ROOT)/me/contact-me/">the author</a> in private.
+</p>
+
+</note>
+
+<p class="hilight">
+[ <a href="#itself"><b>Skip to the main content</b></a> ]
+</p>
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+<b>TODO :</b> FILL IN.
+</p>
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "../lib/docbook/5/rendered/perfect-it-workplace-rev2.xhtml"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="perfect-it-workplace-rev2.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don't.)
+</li>
+<li>
+<a href="perfect-it-workplace-rev2.xml">Original DocBook/XML</a>.
+</li>
+<li>
+<a href="perfect-it-workplace-rev2.rtf">Word RTF</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+<b>TODO :</b> fill in.
+</p>
+

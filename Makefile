@@ -442,7 +442,7 @@ DOCBOOK5_XSL_STYLESHEETS_FO_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/fo
 
 DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
 
-DOCBOOK5_DOCS = dealing-with-hypomanias objectivism-and-open-source
+DOCBOOK5_DOCS = dealing-with-hypomanias perfect-it-workplace-rev2 objectivism-and-open-source
 
 
 # DOCBOOK4_BASE_DIR = lib/docbook

@@ -106,6 +106,7 @@ my @documents =
         id => "perfect-it-workplace-rev2", 
         path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
         base => "perfect-it-workplace-rev2",
+        db_ver => 5,
         work_in_progress => 1,
     },
     

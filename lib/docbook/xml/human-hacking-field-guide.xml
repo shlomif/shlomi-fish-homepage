@@ -293,6 +293,16 @@
                     Made various corrections and enhancements.
                 </revremark>
             </revision>
+            <revision>
+                <revnumber>3001</revnumber>
+                <date>06 October 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Some grammar, and formatting corrections. Changed 
+                    dot-dot-dots to Unicode ellipses ("…"). Converted
+                    a quote to a blockquote.
+                </revremark>
+            </revision>
         </revhistory>
     </articleinfo>
 
@@ -2877,14 +2887,12 @@ Sincerely yours,
         to a web-page, and not my idea of a page I'd like to visit often. Then
         Eve showed me his former personal ad. It reads, and I quote:
     </para>
-    <para>
-        <emphasis role="italic">
+    <blockquote>
+        <para>
             I'm a single atheist white man, 50, reputedly intelligent, with
             unusual interests in politics, science, music and dance. 
-        </emphasis>
-    </para>
-    <para>
-        <emphasis role="italic">
+        </para>
+        <para>
             I'd like to meet a woman with varied
             interests, curious about the world, comfortable expressing her
             likes and dislikes (I hate struggling to guess), delighting in her
@@ -2893,17 +2901,15 @@ Sincerely yours,
             bouts of intense, passionately kind awareness of each other,
             alternating with tolerant warmth while we're absorbed in other
             aspects of life.  
-        </emphasis>        
-    </para>
-    <para>
-        <emphasis role="italic">
+        </para>
+        <para>
             My 19-year-old child, the Free Software Movement, occupies most of
             my life, leaving no room for more children, but I still have room
             to love a sweetheart. I spend a lot of my time traveling to give
             speeches, often to Europe, Asia and Latin America; it would be
             nice if you were free to travel with me some of the time.
-        </emphasis>
-    </para>
+        </para>
+    </blockquote>
     <para>
         "Oh, my God!" I said after I read it.
     </para>

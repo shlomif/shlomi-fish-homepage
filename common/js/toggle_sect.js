@@ -1,16 +1,13 @@
-function toggle_sect_menu()
-{
-    var wrapper = document.getElementById("sect_menu_wrapper");
-    var action_link = document.getElementById("toggle_sect_menu");
-    if (wrapper.getAttribute("class") == "hide")
-    {
-        wrapper.setAttribute("class", "");
-        action_link.innerHTML = "Hide";
-    }
-    else
-    {
-        wrapper.setAttribute("class", "hide");
-        action_link.innerHTML = "Show";
-    }
-}
+function toggle_sect_menu() {
+    var elem = $("#toggle_sect_menu");
 
+    if (elem.hasClass("off")) {
+        elem.text("Hide");
+    }
+    else {
+        elem.text("Show");
+    }
+    $("#sect_menu_wrapper").toggleClass("novis");
+    elem.toggleClass("off");
+    elem.toggleClass("on");
+}

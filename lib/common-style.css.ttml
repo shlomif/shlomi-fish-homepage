@@ -157,10 +157,44 @@ browsers where they are magenta by default.
    margin-top:0;
    margin-bottom:0;  
 }
-.sub_menu .toggle_sect_menu
+/* Start of the .toggle_sect_menu */
+#sect_menu_wrapper.novis
+{
+    display: none;
+}
+[% SET sect_m = ".toggle_sect_menu" %]
+.sub_menu [% sect_m %]
 {
    float:right;
 }
+[% sect_m _ ", " _ sect_m _ ":hover" %]
+{
+    padding: 0.2em 0.5em;
+    [% SET border_radius = "5px" %]
+    [% FOREACH prop IN ["-moz-border-radius", "-webkit-border-radius", "border-radius"] %]
+    [% prop _ ":" _ border_radius _ ";" %]
+    [% END %]
+    border: 2pt solid black;
+}
+
+button[% sect_m %]
+{
+    color: black;
+    text-decoration: none;
+}
+[% sect_m %]
+{
+    border-color: black;
+    background-color: PaleGoldenRod;
+}
+[% sect_m _ ":hover" %]
+{
+    cursor: pointer;
+    border-color: red;
+    background-color: yellow;
+}
+/* End of toggle sect menu. */
+
 .hide
 {
     display:none;

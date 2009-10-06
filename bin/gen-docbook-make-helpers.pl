@@ -118,6 +118,15 @@ my @documents =
         work_in_progress => 1,
     },
 
+    {
+        id => "The-Pope-Died-on-Sunday-hebrew", 
+        path => "humour/Pope/", 
+        base => "The-Pope-Died-on-Sunday-hebrew",
+        work_in_progress => 1,
+        db_ver => 5,
+    },
+    
+
 );
 
 foreach my $d (@documents)

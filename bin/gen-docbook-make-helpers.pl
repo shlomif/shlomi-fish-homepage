@@ -101,6 +101,7 @@ my @documents =
         id => "human-hacking-field-guide", 
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide",
+        custom_css => 1,
     },   
     {
         id => "perfect-it-workplace-rev2", 
@@ -128,6 +129,11 @@ foreach my $d (@documents)
     elsif (! (any { $d->{db_ver} eq $_ } (4,5)))
     {
         die "Illegal db_ver $d->{db_ver}!";
+    }
+
+    if (! exists($d->{custom_css}) )
+    {
+        $d->{custom_css} = 0;
     }
 }
 

@@ -31,8 +31,14 @@ $(T2_DEST)/[% d. path %]/[% d.base %].xml: $([% db_macro_prefix %]_XML_DIR)/[% d
 $(T2_DEST)/[% d. path %]/[% d.base %].rtf: $([% db_macro_prefix %]_RTF_DIR)/[% d.base %].rtf
 [% "\t" %]cp -f $< $@
 
+[% SET rm_line = "" %]
+[% IF d.custom_css %]
+[% SET rm_line = "\trm -f \$\@/style.css\n" %]
+[% END %]
+
 $(T2_DEST)/[% d.path %]/[% d.base %]: $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]
 [% "\t" %]rsync -r -v $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+[% rm_line %]
 
 $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
 [% "\t" %]$(DOCMAKE_WITH_PARAMS) \

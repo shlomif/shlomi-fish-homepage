@@ -11,9 +11,6 @@
 #include "latemp/latemp-prelude.wml"
 #include "local-defs.wml"
 
-;;; Commenting out because we need XHTML+RDFa
-;;; <set-var latemp_html_standard="xhtml5" />
-
 <define-tag latemp_html_doctype>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 </define-tag>

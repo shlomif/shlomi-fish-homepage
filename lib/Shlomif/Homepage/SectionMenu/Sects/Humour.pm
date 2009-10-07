@@ -65,6 +65,13 @@ my $humour_tree_contents =
                     'text' => "The Pope Died on Sunday",
                     'url' => "humour/Pope/",
                     'title' => "An Insane Week in the Life of a Female American Graphics Artist",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Hebrew Text",
+                            'url' => "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
+                        },
+                    ],
                 },
                 {
                     'text' => "Humanity",

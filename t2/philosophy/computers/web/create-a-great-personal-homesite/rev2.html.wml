@@ -1,8 +1,17 @@
-#include '../template.wml'
+#include "utils.wml"
+#include "paypal.wml"
+#include "latemp/latemp-prelude.wml"
+#include "local-defs.wml"
+
+<define-tag latemp_html_doctype>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+</define-tag>
+
+#include "latemp/latemp-driver.wml"
+#include "shlomif/affiliations.wml"
+#include "rest-of-template.wml"
 
 #include "xhtml/1.x/std/toc.wml"
-
-#include <utils.wml>
 
 <latemp_subject "Create a Great Personal Home Site - 2nd Revision" />
 <latemp_meta_desc "How to create a Great Personal Internet Home Site" />
@@ -153,29 +162,24 @@ Last Updated:
 <h3 id="licence">Licence</h3>
 
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by/2.5/"><img 
-alt="Creative Commons License" class="bless"
-src="$(ROOT)/images/somerights20.png"
-/></a><br />
-This work is licensed under a 
-<a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative 
-Commons Attribution 2.5  License</a> or at your option any later version.
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+href="http://purl.org/dc/dcmitype/Text" property="dc:title"
+rel="dc:type">Create a Great Personal Home Site - 2nd Revision</span> by <a
+xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/"
+property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is
+licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+3.0 Unported License</a>.<br />Based on a work at <a
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+href="http://www.shlomifish.org/philosophy/computers/web/create-a-great-personal-homesite/rev2.html"
+rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of
+this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
+href="http://www.shlomifish.org/me/contact-me/"
+rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
 </p>
-
-<!-- 
-<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-	<Work rdf:about="">
-		<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
-	<dc:title>Create a Great Personal Homesite</dc:title>
-	<dc:date>2005</dc:date>
-	<dc:description>An article that explains why and how to create an attractive personal home site on the Web.</dc:description>
-	<dc:creator><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:creator>
-	<dc:rights><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:rights>
-	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
-	<dc:source rdf:resource="http://localhost/sites/hp/shlomif/philosophy/computers/web/create-a-great-personal-homesite/" />
-	</Work>
-	<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> 
--->
 
 <div class="article">
 
@@ -1154,7 +1158,7 @@ but in the case of Graham's site it stands for "Hackers and Painters".
 The <a href="http://www.joelonsoftware.com/">Joel on Software</a> site hosts
 Joel Spolsky's weblog about the software industry, as well as articles
 he routinely publishes. The site uses the XHTML 1.0 Strict DOCTYPE but 
-<a href="http://validator.w3.org/check?verbose=1&uri=http%3A%2F%2Fwww.joelonsoftware.com%2F">does not validate</a>. The web pages look fine
+<a href="http://validator.w3.org/check?verbose=1&amp;uri=http%3A%2F%2Fwww.joelonsoftware.com%2F">does not validate</a>. The web pages look fine
 in <a href="http://lynx.browser.org/">the lynx browser</a>, and so they are 
 most probably very accessible.
 </p>

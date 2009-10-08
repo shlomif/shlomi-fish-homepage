@@ -291,7 +291,7 @@ docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) 
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) 
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
 	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images docbook5_targets install_docbook5_xmls

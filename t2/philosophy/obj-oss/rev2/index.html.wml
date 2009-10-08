@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "xhtml/1.x/std/toc.wml"
 #include <utils.wml>
+#include "dbook.wml"
 
 <latemp_subject "Objectivism and Open Source - Revision 2 - Text" />
 
@@ -15,6 +16,10 @@
 <h3 id="itself3">Article</h3>
 
 #include "../lib/docbook/5/rendered/objectivism-and-open-source.xhtml"
+
+<h2 id="formats">Formats</h2>
+
+<shlomif_docbook_doc_text doc="objectivism-and-open-source" />
 
 <h2 id="coverage">Coverage</h2>
 

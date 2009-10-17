@@ -348,6 +348,8 @@ $(T2_DEST)/open-source/interviews/sussman.html: $(SCREENPLAY_XML_RENDERED_HTML_D
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
 
+$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/rev2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-rev2.xhtml
+
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-Part-1.txt
 	cp -f $< $@
 

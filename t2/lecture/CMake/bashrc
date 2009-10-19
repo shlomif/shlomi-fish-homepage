@@ -1,0 +1,11 @@
+cmake-tutorial-open() # odp -> xml
+{
+	mkdir cmake-tutorial.odp.d
+	unzip cmake-tutorial.odp -d cmake-tutorial.odp.d
+}
+
+cmake-tutorial-close() # xml -> odp
+{
+	( cd cmake-tutorial.odp.d; zip -r ../cmake-tutorial.odp  .)
+  	unzip -t cmake-tutorial.odp
+}

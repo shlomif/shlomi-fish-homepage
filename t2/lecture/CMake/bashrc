@@ -1,7 +1,19 @@
+#!/bin/sh
+
+xmlformat()
+{
+	while test -n "$1"; do
+	echo xmlformat $1
+	xmllint --format  $1  --output $1
+	shift
+	done
+}
+
 odp2xml() # odp -> xml
 {
 	mkdir cmake-tutorial.odp.d
 	unzip -o cmake-tutorial.odp -d cmake-tutorial.odp.d
+	xmlformat cmake-tutorial.odp.d/content.xml  cmake-tutorial.odp.d/meta.xml  cmake-tutorial.odp.d/settings.xml  cmake-tutorial.odp.d/styles.xml
 }
 
 xml2odp() # xml -> odp

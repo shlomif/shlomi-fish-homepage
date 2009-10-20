@@ -6,6 +6,7 @@ odp2xml() # odp -> xml
 
 xml2odp() # xml -> odp
 {
-	( cd cmake-tutorial.odp.d; zip -r ../cmake-tutorial.odp  .)
+	mv cmake-tutorial.odp cmake-tutorial.odp.save
+	( cd cmake-tutorial.odp.d; zip -r ../cmake-tutorial.odp . -x *.svn-base)
   	unzip -t cmake-tutorial.odp
 }

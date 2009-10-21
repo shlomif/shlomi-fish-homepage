@@ -265,72 +265,69 @@
       <style:text-properties fo:color="#5e11a6" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
     </style:style>
     <style:style style:name="T21" style:family="text">
-      <style:text-properties fo:color="#008000" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-    </style:style>
-    <style:style style:name="T22" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="22pt"/>
     </style:style>
-    <style:style style:name="T23" style:family="text">
+    <style:style style:name="T22" style:family="text">
       <style:text-properties fo:color="#008000" fo:font-size="22pt"/>
     </style:style>
-    <style:style style:name="T24" style:family="text">
+    <style:style style:name="T23" style:family="text">
       <style:text-properties fo:color="#008000" fo:font-size="18pt"/>
     </style:style>
-    <style:style style:name="T25" style:family="text">
+    <style:style style:name="T24" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="15pt"/>
     </style:style>
-    <style:style style:name="T26" style:family="text">
+    <style:style style:name="T25" style:family="text">
       <style:text-properties fo:color="#008080" fo:font-size="15pt"/>
     </style:style>
-    <style:style style:name="T27" style:family="text">
+    <style:style style:name="T26" style:family="text">
       <style:text-properties fo:color="#008000" fo:font-size="15pt"/>
     </style:style>
-    <style:style style:name="T28" style:family="text">
+    <style:style style:name="T27" style:family="text">
       <style:text-properties fo:font-size="18pt"/>
     </style:style>
-    <style:style style:name="T29" style:family="text">
+    <style:style style:name="T28" style:family="text">
       <style:text-properties fo:font-size="18pt" fo:font-weight="bold"/>
     </style:style>
-    <style:style style:name="T30" style:family="text">
+    <style:style style:name="T29" style:family="text">
       <style:text-properties fo:font-size="12pt"/>
     </style:style>
-    <style:style style:name="T31" style:family="text">
+    <style:style style:name="T30" style:family="text">
       <style:text-properties fo:font-size="28pt" fo:font-weight="bold"/>
     </style:style>
-    <style:style style:name="T32" style:family="text">
+    <style:style style:name="T31" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="18pt"/>
     </style:style>
-    <style:style style:name="T33" style:family="text">
+    <style:style style:name="T32" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="16pt"/>
     </style:style>
-    <style:style style:name="T34" style:family="text">
+    <style:style style:name="T33" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="26pt"/>
     </style:style>
-    <style:style style:name="T35" style:family="text">
+    <style:style style:name="T34" style:family="text">
       <style:text-properties fo:color="#333333" fo:font-size="26pt" fo:font-style="italic"/>
     </style:style>
-    <style:style style:name="T36" style:family="text">
+    <style:style style:name="T35" style:family="text">
       <style:text-properties fo:color="#008000" fo:font-size="26pt"/>
     </style:style>
-    <style:style style:name="T37" style:family="text">
+    <style:style style:name="T36" style:family="text">
       <style:text-properties fo:font-family="Courier" style:font-family-generic="modern" style:font-pitch="fixed" fo:font-size="18pt"/>
     </style:style>
-    <style:style style:name="T38" style:family="text">
+    <style:style style:name="T37" style:family="text">
       <style:text-properties fo:font-size="10pt"/>
     </style:style>
-    <style:style style:name="T39" style:family="text">
+    <style:style style:name="T38" style:family="text">
       <style:text-properties fo:font-size="16pt"/>
     </style:style>
-    <style:style style:name="T40" style:family="text">
+    <style:style style:name="T39" style:family="text">
       <style:text-properties fo:color="#ff0000" fo:font-size="16pt"/>
     </style:style>
-    <style:style style:name="T41" style:family="text">
+    <style:style style:name="T40" style:family="text">
       <style:text-properties fo:font-size="12pt" fo:font-weight="bold"/>
     </style:style>
-    <style:style style:name="T42" style:family="text">
+    <style:style style:name="T41" style:family="text">
       <style:text-properties fo:font-size="22pt" fo:font-weight="bold"/>
     </style:style>
-    <style:style style:name="T43" style:family="text">
+    <style:style style:name="T42" style:family="text">
       <style:text-properties fo:font-size="22pt"/>
     </style:style>
     <text:list-style style:name="L1">
@@ -1243,30 +1240,16 @@
           <draw:text-box>
             <text:list text:style-name="L2">
               <text:list-item>
-                <text:p>Setting CMake variables:</text:p>
+                <text:p>Variables:</text:p>
                 <text:list>
                   <text:list-item>
                     <text:list>
-                      <text:list-header>
-                        <text:p>
-                          <text:span text:style-name="T21"># add -g to C compiler parameters:</text:span>
-                        </text:p>
-                      </text:list-header>
                       <text:list-item>
                         <text:p>
                           <text:span text:style-name="T14">set</text:span>
                           <text:span text:style-name="T15">(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")</text:span>
                         </text:p>
                       </text:list-item>
-                    </text:list>
-                  </text:list-item>
-                </text:list>
-              </text:list-item>
-              <text:list-item>
-                <text:p>Checking it:</text:p>
-                <text:list>
-                  <text:list-item>
-                    <text:list>
                       <text:list-item>
                         <text:p>
                           <text:span text:style-name="T14">message</text:span>
@@ -1278,6 +1261,48 @@
                           <text:span text:style-name="T14">message</text:span>
                           <text:span text:style-name="T15">(${CMAKE_C_FLAGS})</text:span>
                         </text:p>
+                      </text:list-item>
+                    </text:list>
+                  </text:list-item>
+                </text:list>
+              </text:list-item>
+              <text:list-item>
+                <text:p>Lists</text:p>
+                <text:list>
+                  <text:list-item>
+                    <text:list>
+                      <text:list-item>
+                        <text:p>
+                          <text:span text:style-name="T14">set</text:span>
+                          <text:span text:style-name="T15">(L 1;2;3) # </text:span>
+                        </text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>
+                          <text:span text:style-name="T14">list</text:span>
+                          <text:span text:style-name="T15">(APPEND L a b c )</text:span>
+                        </text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>
+                          <text:span text:style-name="T14">message</text:span>
+                          <text:span text:style-name="T15">("\${L}=" ${L})</text:span>
+                        </text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>
+                          <text:span text:style-name="T14">message</text:span>
+                          <text:span text:style-name="T15">("\"\${L}\"=" "${L}")</text:span>
+                        </text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>Output:</text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>${L}=123abc</text:p>
+                      </text:list-item>
+                      <text:list-item>
+                        <text:p>"${L}"=1;2;3;a;b;c</text:p>
                       </text:list-item>
                     </text:list>
                   </text:list-item>
@@ -1305,63 +1330,63 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T22">Very simple syntax:</text:span>
+                  <text:span text:style-name="T21">Very simple syntax:</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T23"># This is a comment</text:span>
+                      <text:span text:style-name="T22"># This is a comment</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T22">Commands syntax: COMMAND( arg1 arg2 ... )</text:span>
+                      <text:span text:style-name="T21">Commands syntax: COMMAND( arg1 arg2 ... )</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T22">Lists </text:span>
-                      <text:span text:style-name="T23">A;B;C # semi-colon separated values</text:span>
+                      <text:span text:style-name="T21">Lists </text:span>
+                      <text:span text:style-name="T22">A;B;C # semi-colon separated values</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T22">Variables </text:span>
-                      <text:span text:style-name="T23">${VAR}</text:span>
+                      <text:span text:style-name="T21">Variables </text:span>
+                      <text:span text:style-name="T22">${VAR}</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T22">Conditional constructs</text:span>
+                      <text:span text:style-name="T21">Conditional constructs</text:span>
                     </text:p>
                     <text:list>
                       <text:list-item>
                         <text:p text:style-name="P7">
-                          <text:span text:style-name="T23">IF() ... ELSE()/ELSEIF() ... ENDIF()</text:span>
+                          <text:span text:style-name="T22">IF() ... ELSE()/ELSEIF() ... ENDIF()</text:span>
                         </text:p>
                         <text:list>
                           <text:list-item>
                             <text:p text:style-name="P7">
-                              <text:span text:style-name="T24">Very useful: IF( APPLE ); IF( UNIX ); IF( WIN32 )</text:span>
+                              <text:span text:style-name="T23">Very useful: IF( APPLE ); IF( UNIX ); IF( WIN32 )</text:span>
                             </text:p>
                           </text:list-item>
                         </text:list>
                       </text:list-item>
                       <text:list-item>
                         <text:p text:style-name="P7">
-                          <text:span text:style-name="T23">WHILE() ... ENDWHILE()</text:span>
+                          <text:span text:style-name="T22">WHILE() ... ENDWHILE()</text:span>
                         </text:p>
                       </text:list-item>
                       <text:list-item>
                         <text:p text:style-name="P7">
-                          <text:span text:style-name="T23">FOREACH() ... ENDFOREACH()</text:span>
+                          <text:span text:style-name="T22">FOREACH() ... ENDFOREACH()</text:span>
                         </text:p>
                       </text:list-item>
                     </text:list>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T22">Regular expressions (check CMake FAQ for details...)</text:span>
+                      <text:span text:style-name="T21">Regular expressions (check CMake FAQ for details...)</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
@@ -1388,71 +1413,71 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">INCLUDE_DIRECTORIES( “dir1” “dir2” ... )</text:span>
+                  <text:span text:style-name="T24">INCLUDE_DIRECTORIES( “dir1” “dir2” ... )</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">AUX_SOURCE_DIRECTORY( “source” )</text:span>
+                  <text:span text:style-name="T24">AUX_SOURCE_DIRECTORY( “source” )</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">ADD_EXECUTABLE</text:span>
+                  <text:span text:style-name="T24">ADD_EXECUTABLE</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">ADD_LIBRARY</text:span>
+                  <text:span text:style-name="T24">ADD_LIBRARY</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">ADD_CUSTOM_TARGET</text:span>
+                  <text:span text:style-name="T24">ADD_CUSTOM_TARGET</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">ADD_DEPENDENCIES( target1 t2 t3 ) </text:span>
-                  <text:span text:style-name="T26">target1 depends on t2 and t3</text:span>
+                  <text:span text:style-name="T24">ADD_DEPENDENCIES( target1 t2 t3 ) </text:span>
+                  <text:span text:style-name="T25">target1 depends on t2 and t3</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">ADD_DEFINITIONS( “-Wall -ansi -pedantic”)</text:span>
+                  <text:span text:style-name="T24">ADD_DEFINITIONS( “-Wall -ansi -pedantic”)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">TARGET_LINK_LIBRARIES( target-name lib1 lib2 ...) </text:span>
-                  <text:span text:style-name="T26">Individual settings for each target</text:span>
+                  <text:span text:style-name="T24">TARGET_LINK_LIBRARIES( target-name lib1 lib2 ...) </text:span>
+                  <text:span text:style-name="T25">Individual settings for each target</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">LINK_LIBRARIES( lib1 lib2 ...) </text:span>
-                  <text:span text:style-name="T26">All targets link with the same set of libs</text:span>
+                  <text:span text:style-name="T24">LINK_LIBRARIES( lib1 lib2 ...) </text:span>
+                  <text:span text:style-name="T25">All targets link with the same set of libs</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">SET_TARGET_PROPERTIES( ... ) </text:span>
-                  <text:span text:style-name="T26">lots of properties... OUTPUT_NAME, VERSION, ....</text:span>
+                  <text:span text:style-name="T24">SET_TARGET_PROPERTIES( ... ) </text:span>
+                  <text:span text:style-name="T25">lots of properties... OUTPUT_NAME, VERSION, ....</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">MESSAGE( STATUS|FATAL_ERROR “message” )</text:span>
+                  <text:span text:style-name="T24">MESSAGE( STATUS|FATAL_ERROR “message” )</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T25">INSTALL( FILES “f1” “f2” “f3” DESTINATION . )</text:span>
+                  <text:span text:style-name="T24">INSTALL( FILES “f1” “f2” “f3” DESTINATION . )</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T25">DESTINATION relative to ${CMAKE_INSTALL_PREFIX}</text:span>
+                      <text:span text:style-name="T24">DESTINATION relative to ${CMAKE_INSTALL_PREFIX}</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
@@ -1480,63 +1505,63 @@
         <draw:frame presentation:style-name="pr9" draw:text-style-name="P17" draw:layer="layout" svg:width="26.035cm" svg:height="21.715cm" svg:x="0.635cm" svg:y="3.51cm" presentation:class="outline" presentation:user-transformed="true">
           <draw:text-box>
             <text:p text:style-name="P18">
-              <text:span text:style-name="T25"/>
+              <text:span text:style-name="T24"/>
             </text:p>
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">SET( VAR value [CACHE TYPE DOCSTRING [FORCE]])</text:span>
+                  <text:span text:style-name="T24">SET( VAR value [CACHE TYPE DOCSTRING [FORCE]])</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">LIST( APPEND|INSERT|LENGTH|GET|REMOVE_ITEM|REMOVE_AT|SORT ...)</text:span>
+                  <text:span text:style-name="T24">LIST( APPEND|INSERT|LENGTH|GET|REMOVE_ITEM|REMOVE_AT|SORT ...)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">STRING( TOUPPER|TOLOWER|LENGTH|SUBSTRING|REPLACE|REGEX ...)</text:span>
+                  <text:span text:style-name="T24">STRING( TOUPPER|TOLOWER|LENGTH|SUBSTRING|REPLACE|REGEX ...)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">SEPARATE_ARGUMENTS( VAR ) </text:span>
-                  <text:span text:style-name="T27">convert space separated string to list</text:span>
+                  <text:span text:style-name="T24">SEPARATE_ARGUMENTS( VAR ) </text:span>
+                  <text:span text:style-name="T26">convert space separated string to list</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">FILE( WRITE|READ|APPEND|GLOB|GLOB_RECURSE|REMOVE|MAKE_DIRECTORY ...)</text:span>
+                  <text:span text:style-name="T24">FILE( WRITE|READ|APPEND|GLOB|GLOB_RECURSE|REMOVE|MAKE_DIRECTORY ...)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">FIND_FILE</text:span>
+                  <text:span text:style-name="T24">FIND_FILE</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">FIND_LIBRARY</text:span>
+                  <text:span text:style-name="T24">FIND_LIBRARY</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">FIND_PROGRAM</text:span>
+                  <text:span text:style-name="T24">FIND_PROGRAM</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">FIND_PACKAGE</text:span>
+                  <text:span text:style-name="T24">FIND_PACKAGE</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">EXEC_PROGRAM( bin [work_dir] ARGS &lt;..&gt; [OUTPUT_VARIABLE var] [RETURN_VALUE var] )</text:span>
+                  <text:span text:style-name="T24">EXEC_PROGRAM( bin [work_dir] ARGS &lt;..&gt; [OUTPUT_VARIABLE var] [RETURN_VALUE var] )</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T25">OPTION( OPTION_VAR “description string” [initial value] )</text:span>
+                  <text:span text:style-name="T24">OPTION( OPTION_VAR “description string” [initial value] )</text:span>
                 </text:p>
               </text:list-item>
             </text:list>
@@ -1564,66 +1589,66 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T28">
+                  <text:span text:style-name="T27">
                     <text:a xlink:href="http://ilcsoft.desy.de/">http://ilcsoft.desy.de</text:a>
                   </text:span>
-                  <text:span text:style-name="T28"> -&gt; General Documentation -&gt; “How to use the CMake building tool for the ILC Software”</text:span>
+                  <text:span text:style-name="T27"> -&gt; General Documentation -&gt; “How to use the CMake building tool for the ILC Software”</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T28">
+                  <text:span text:style-name="T27">
                     <text:a xlink:href="http://www.cmake.org/">http://www.cmake.org</text:a>
                   </text:span>
-                  <text:span text:style-name="T28"> </text:span>
+                  <text:span text:style-name="T27"> </text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T28">Documentation</text:span>
+                      <text:span text:style-name="T27">Documentation</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T28">FAQ</text:span>
+                      <text:span text:style-name="T27">FAQ</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T29">Mastering CMake</text:span>
+                  <text:span text:style-name="T28">Mastering CMake</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T28">Ken Martin, Bill Hoffman</text:span>
+                      <text:span text:style-name="T27">Ken Martin, Bill Hoffman</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T28">Published by Kitware, Inc.</text:span>
+                      <text:span text:style-name="T27">Published by Kitware, Inc.</text:span>
                     </text:p>
                   </text:list-item>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T28">ISBN: 1-930934-16-5</text:span>
+                      <text:span text:style-name="T27">ISBN: 1-930934-16-5</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T28">This talk: </text:span>
-                  <text:span text:style-name="T28">
+                  <text:span text:style-name="T27">This talk: </text:span>
+                  <text:span text:style-name="T27">
                     <text:a xlink:href="http://ilcsoft.desy.de/">http://ilcsoft.desy.de</text:a>
                   </text:span>
-                  <text:span text:style-name="T28"> -&gt; General Documentation</text:span>
+                  <text:span text:style-name="T27"> -&gt; General Documentation</text:span>
                 </text:p>
               </text:list-item>
             </text:list>
             <text:p text:style-name="P19">
-              <text:span text:style-name="T30"/>
+              <text:span text:style-name="T29"/>
             </text:p>
           </draw:text-box>
         </draw:frame>
@@ -1683,7 +1708,7 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T31">CMake Modules</text:span>
+                  <text:span text:style-name="T30">CMake Modules</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
@@ -1713,48 +1738,48 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T32">CMAKE_MODULE_PATH</text:span>
+                  <text:span text:style-name="T31">CMAKE_MODULE_PATH</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T33">Path to where the CMake modules are located</text:span>
+                      <text:span text:style-name="T32">Path to where the CMake modules are located</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T32">CMAKE_INSTALL_PREFIX</text:span>
+                  <text:span text:style-name="T31">CMAKE_INSTALL_PREFIX</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T33">Where to put files when calling 'make install'</text:span>
+                      <text:span text:style-name="T32">Where to put files when calling 'make install'</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T32">CMAKE_BUILD_TYPE</text:span>
+                  <text:span text:style-name="T31">CMAKE_BUILD_TYPE</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T33">Type of build (Debug, Release, ...)</text:span>
+                      <text:span text:style-name="T32">Type of build (Debug, Release, ...)</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T32">BUILD_SHARED_LIBS</text:span>
+                  <text:span text:style-name="T31">BUILD_SHARED_LIBS</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T33">Switch between shared and static libraries</text:span>
+                      <text:span text:style-name="T32">Switch between shared and static libraries</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
@@ -1767,23 +1792,23 @@
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T32">Variables can be changed directly in the build files (CmakeLists.txt) or through the command line by prefixing a variable's name with '</text:span>
-                  <text:span text:style-name="T24">-D</text:span>
-                  <text:span text:style-name="T32">':</text:span>
+                  <text:span text:style-name="T31">Variables can be changed directly in the build files (CmakeLists.txt) or through the command line by prefixing a variable's name with '</text:span>
+                  <text:span text:style-name="T23">-D</text:span>
+                  <text:span text:style-name="T31">':</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T32">cmake </text:span>
-                      <text:span text:style-name="T24">-D</text:span>
-                      <text:span text:style-name="T32">BUILD_SHARED_LIBS=OFF</text:span>
+                      <text:span text:style-name="T31">cmake </text:span>
+                      <text:span text:style-name="T23">-D</text:span>
+                      <text:span text:style-name="T31">BUILD_SHARED_LIBS=OFF</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T32">GUI also available: ccmake</text:span>
+                  <text:span text:style-name="T31">GUI also available: ccmake</text:span>
                 </text:p>
               </text:list-item>
             </text:list>
@@ -1806,46 +1831,46 @@
         <draw:frame presentation:style-name="pr6" draw:text-style-name="P22" draw:layer="layout" svg:width="26.035cm" svg:height="14.538cm" svg:x="0.635cm" svg:y="3.51cm" presentation:class="outline" presentation:user-transformed="true">
           <draw:text-box>
             <text:p text:style-name="P18">
-              <text:span text:style-name="T34"/>
+              <text:span text:style-name="T33"/>
             </text:p>
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">Created in the build tree (</text:span>
-                  <text:span text:style-name="T35">CMakeCache.txt</text:span>
-                  <text:span text:style-name="T34">)</text:span>
+                  <text:span text:style-name="T33">Created in the build tree (</text:span>
+                  <text:span text:style-name="T34">CMakeCache.txt</text:span>
+                  <text:span text:style-name="T33">)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">Contains Entries </text:span>
-                  <text:span text:style-name="T36">VAR:TYPE=VALUE</text:span>
+                  <text:span text:style-name="T33">Contains Entries </text:span>
+                  <text:span text:style-name="T35">VAR:TYPE=VALUE</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">Populated/Updated during configuration phase</text:span>
+                  <text:span text:style-name="T33">Populated/Updated during configuration phase</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">Speeds up build process</text:span>
+                  <text:span text:style-name="T33">Speeds up build process</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">Can be initialized with </text:span>
-                  <text:span text:style-name="T35">cmake -C &lt;file&gt;</text:span>
+                  <text:span text:style-name="T33">Can be initialized with </text:span>
+                  <text:span text:style-name="T34">cmake -C &lt;file&gt;</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">GUI can be used to change values</text:span>
+                  <text:span text:style-name="T33">GUI can be used to change values</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P15">
-                  <text:span text:style-name="T34">There should be no need to edit it manually!!</text:span>
+                  <text:span text:style-name="T33">There should be no need to edit it manually!!</text:span>
                 </text:p>
               </text:list-item>
             </text:list>
@@ -1867,10 +1892,10 @@
         </draw:frame>
         <draw:custom-shape draw:style-name="gr14" draw:text-style-name="P23" draw:id="id10" draw:layer="layout" svg:width="7.006cm" svg:height="2.54cm" svg:x="10.44cm" svg:y="5.45cm">
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">Dir1/CMakeLists.txt</text:span>
+            <text:span text:style-name="T27">Dir1/CMakeLists.txt</text:span>
           </text:p>
           <text:p text:style-name="P8">
-            <text:span text:style-name="T37">SUBDIRS(Dir3 Dir4)</text:span>
+            <text:span text:style-name="T36">SUBDIRS(Dir3 Dir4)</text:span>
           </text:p>
           <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:path-stretchpoint-x="10800" draw:path-stretchpoint-y="10800" draw:text-areas="?f3 ?f4 ?f5 ?f6" draw:type="round-rectangle" draw:modifiers="3600" draw:enhanced-path="M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N">
             <draw:equation draw:name="f0" draw:formula="45"/>
@@ -1889,7 +1914,7 @@
         </draw:custom-shape>
         <draw:custom-shape draw:style-name="gr14" draw:text-style-name="P24" draw:id="id12" draw:layer="layout" svg:width="7.006cm" svg:height="2.646cm" svg:x="10.461cm" svg:y="9.789cm">
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">Dir2/CMakeLists.txt</text:span>
+            <text:span text:style-name="T27">Dir2/CMakeLists.txt</text:span>
           </text:p>
           <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:path-stretchpoint-x="10800" draw:path-stretchpoint-y="10800" draw:text-areas="?f3 ?f4 ?f5 ?f6" draw:type="round-rectangle" draw:modifiers="3600" draw:enhanced-path="M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N">
             <draw:equation draw:name="f0" draw:formula="45"/>
@@ -1908,16 +1933,16 @@
         </draw:custom-shape>
         <draw:custom-shape draw:style-name="gr15" draw:text-style-name="P24" draw:id="id11" draw:layer="layout" svg:width="7.55cm" svg:height="3.175cm" svg:x="0.936cm" svg:y="7.355cm">
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">Project's Top-Level</text:span>
+            <text:span text:style-name="T27">Project's Top-Level</text:span>
           </text:p>
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">CmakeLists.txt</text:span>
+            <text:span text:style-name="T27">CmakeLists.txt</text:span>
           </text:p>
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28"/>
+            <text:span text:style-name="T27"/>
           </text:p>
           <text:p text:style-name="P8">
-            <text:span text:style-name="T37">SUBDIRS(Dir1 Dir2)</text:span>
+            <text:span text:style-name="T36">SUBDIRS(Dir1 Dir2)</text:span>
           </text:p>
           <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:path-stretchpoint-x="10800" draw:path-stretchpoint-y="10800" draw:text-areas="?f3 ?f4 ?f5 ?f6" draw:type="round-rectangle" draw:modifiers="3600" draw:enhanced-path="M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N">
             <draw:equation draw:name="f0" draw:formula="45"/>
@@ -1942,7 +1967,7 @@
         </draw:connector>
         <draw:custom-shape draw:style-name="gr14" draw:text-style-name="P23" draw:id="id13" draw:layer="layout" svg:width="7.006cm" svg:height="2.54cm" svg:x="19.351cm" svg:y="3.545cm">
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">Dir3/CMakeLists.txt</text:span>
+            <text:span text:style-name="T27">Dir3/CMakeLists.txt</text:span>
           </text:p>
           <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:path-stretchpoint-x="10800" draw:path-stretchpoint-y="10800" draw:text-areas="?f3 ?f4 ?f5 ?f6" draw:type="round-rectangle" draw:modifiers="3600" draw:enhanced-path="M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N">
             <draw:equation draw:name="f0" draw:formula="45"/>
@@ -1961,7 +1986,7 @@
         </draw:custom-shape>
         <draw:custom-shape draw:style-name="gr14" draw:text-style-name="P24" draw:id="id14" draw:layer="layout" svg:width="7.006cm" svg:height="2.646cm" svg:x="19.33cm" svg:y="7.249cm">
           <text:p text:style-name="P8">
-            <text:span text:style-name="T28">Dir4/CMakeLists.txt</text:span>
+            <text:span text:style-name="T27">Dir4/CMakeLists.txt</text:span>
           </text:p>
           <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:path-stretchpoint-x="10800" draw:path-stretchpoint-y="10800" draw:text-areas="?f3 ?f4 ?f5 ?f6" draw:type="round-rectangle" draw:modifiers="3600" draw:enhanced-path="M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N">
             <draw:equation draw:name="f0" draw:formula="45"/>
@@ -1987,25 +2012,25 @@
         <draw:frame presentation:style-name="pr13" draw:text-style-name="P25" draw:layer="layout" svg:width="26.035cm" svg:height="5.159cm" svg:x="0.636cm" svg:y="12.871cm" presentation:class="outline" presentation:user-transformed="true">
           <draw:text-box>
             <text:p text:style-name="P19">
-              <text:span text:style-name="T38"/>
+              <text:span text:style-name="T37"/>
             </text:p>
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T39">Subdirectories added with SUBDIRS/ADD_SUBDIRECTORY</text:span>
+                  <text:span text:style-name="T38">Subdirectories added with SUBDIRS/ADD_SUBDIRECTORY</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T39">Child inherits from parent (feature that is lacking in traditional Makefiles)</text:span>
+                  <text:span text:style-name="T38">Child inherits from parent (feature that is lacking in traditional Makefiles)</text:span>
                 </text:p>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T40">Order of processing</text:span>
-                  <text:span text:style-name="T39">: </text:span>
-                  <text:span text:style-name="T40">Dir1;Dir3;Dir4;Dir2</text:span>
-                  <text:span text:style-name="T39">(When CMake finds a SUBDIR command it stops processing the current file immediately and goes down the tree branch)</text:span>
+                  <text:span text:style-name="T39">Order of processing</text:span>
+                  <text:span text:style-name="T38">: </text:span>
+                  <text:span text:style-name="T39">Dir1;Dir3;Dir4;Dir2</text:span>
+                  <text:span text:style-name="T38">(When CMake finds a SUBDIR command it stops processing the current file immediately and goes down the tree branch)</text:span>
                 </text:p>
               </text:list-item>
             </text:list>
@@ -2028,44 +2053,44 @@
         <draw:frame presentation:style-name="pr14" draw:text-style-name="P26" draw:layer="layout" svg:width="26.035cm" svg:height="14.028cm" svg:x="0.635cm" svg:y="3.51cm" presentation:class="outline" presentation:user-transformed="true">
           <draw:text-box>
             <text:p text:style-name="P19">
-              <text:span text:style-name="T41"/>
+              <text:span text:style-name="T40"/>
             </text:p>
             <text:list text:style-name="L2">
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T42">Create a build directory</text:span>
-                  <text:span text:style-name="T43">(“out-of-source-build” concept)</text:span>
+                  <text:span text:style-name="T41">Create a build directory</text:span>
+                  <text:span text:style-name="T42">(“out-of-source-build” concept)</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T43">mkdir build ; cd build</text:span>
+                      <text:span text:style-name="T42">mkdir build ; cd build</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T42">Configure</text:span>
-                  <text:span text:style-name="T43">the package for your system:</text:span>
+                  <text:span text:style-name="T41">Configure</text:span>
+                  <text:span text:style-name="T42">the package for your system:</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T43">cmake [options] &lt;source_tree&gt;</text:span>
+                      <text:span text:style-name="T42">cmake [options] &lt;source_tree&gt;</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>
               </text:list-item>
               <text:list-item>
                 <text:p text:style-name="P7">
-                  <text:span text:style-name="T42">Build</text:span>
-                  <text:span text:style-name="T43">the package:</text:span>
+                  <text:span text:style-name="T41">Build</text:span>
+                  <text:span text:style-name="T42">the package:</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
                     <text:p text:style-name="P7">
-                      <text:span text:style-name="T43">make</text:span>
+                      <text:span text:style-name="T42">make</text:span>
                     </text:p>
                   </text:list-item>
                 </text:list>

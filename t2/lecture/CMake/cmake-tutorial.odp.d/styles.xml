@@ -4,6 +4,9 @@
     <draw:gradient draw:name="Gradient_20_7" draw:display-name="Gradient 7" draw:style="linear" draw:start-color="#000000" draw:end-color="#ffffff" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="0" draw:border="0%"/>
     <draw:hatch draw:name="Hatch_20_1" draw:display-name="Hatch 1" draw:style="single" draw:color="#000000" draw:distance="0.02cm" draw:rotation="0"/>
     <draw:fill-image draw:name="Bitmape_20_1" draw:display-name="Bitmape 1" xlink:href="Pictures/10000000000000200000002000309F1C.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+    <draw:fill-image draw:name="aqua1" xlink:href="Pictures/100000000000031A00000253D1D24142.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+    <draw:fill-image draw:name="bwmed" xlink:href="Pictures/1000000000000320000002585C39BAEF.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+    <draw:fill-image draw:name="sunrise_5f_box" draw:display-name="sunrise_box" xlink:href="Pictures/100000000000032000000258EC8EC29B.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
     <draw:marker draw:name="Arrow" svg:viewBox="0 0 20 30" svg:d="m10 0-10 30h20z"/>
     <draw:stroke-dash draw:name="Dash_20_2" draw:display-name="Dash 2" draw:style="rect" draw:dots1="1" draw:dots1-length="0.02cm" draw:dots2="1" draw:dots2-length="0.02cm" draw:distance="0.02cm"/>
     <style:default-style style:family="graphic">
@@ -560,11 +563,11 @@
     </draw:layer-set>
     <style:handout-master presentation:presentation-page-layout-name="AL0T31" style:page-layout-name="PM0" draw:style-name="Mdp2">
       <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="4.327cm" draw:page-number="1"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="4.327cm" draw:page-number="2"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm" draw:page-number="3"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="13.071cm" draw:page-number="4"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="13.071cm" draw:page-number="5"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm" draw:page-number="6"/>
       <draw:frame draw:style-name="Mgr1" draw:text-style-name="MP1" draw:layer="backgroundobjects" svg:width="12.124cm" svg:height="1.078cm" svg:x="0cm" svg:y="0cm" presentation:class="header">
         <draw:text-box>
           <text:p text:style-name="MP1">
@@ -599,60 +602,51 @@
         <draw:text-box>
           <text:p text:style-name="MP2">
             <text:span text:style-name="MT1">
-              <text:page-number>15</text:page-number>
+              <text:page-number>&lt;number&gt;</text:page-number>
             </text:span>
             <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="4.327cm"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="4.327cm" draw:page-number="7"/>
       <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm" draw:page-number="8"/>
       <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="13.071cm"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="13.071cm" draw:page-number="9"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm" draw:page-number="10"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="4.327cm" draw:page-number="11"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="4.327cm" draw:page-number="12"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm" draw:page-number="13"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="13.071cm" draw:page-number="14"/>
       <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="4.327cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="2.794cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="11.176cm" svg:y="13.071cm"/>
-      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm"/>
+      <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm" draw:page-number="15"/>
     </style:handout-master>
     <style:master-page style:name="Default" style:page-layout-name="PM1" draw:style-name="Mdp1">
       <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-      <draw:frame presentation:style-name="Default-title" draw:layer="backgroundobjects" svg:width="25.199cm" svg:height="2.338cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title" presentation:placeholder="true">
+      <draw:frame presentation:style-name="Default-title" draw:layer="backgroundobjects" svg:width="25.199cm" svg:height="3.506cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title" presentation:placeholder="true">
         <draw:text-box/>
       </draw:frame>
-      <draw:frame presentation:style-name="Default-outline1" draw:layer="backgroundobjects" svg:width="25.199cm" svg:height="13.86cm" svg:x="1.4cm" svg:y="3.81cm" presentation:class="outline" presentation:placeholder="true">
+      <draw:frame presentation:style-name="Default-outline1" draw:layer="backgroundobjects" svg:width="25.199cm" svg:height="13.859cm" svg:x="1.4cm" svg:y="4.914cm" presentation:class="outline" presentation:placeholder="true">
         <draw:text-box/>
       </draw:frame>
       <draw:frame presentation:style-name="Mpr1" draw:text-style-name="MP3" draw:layer="backgroundobjects" svg:width="6.523cm" svg:height="1.448cm" svg:x="1.4cm" svg:y="19.131cm" presentation:class="date-time">
         <draw:text-box>
           <text:p text:style-name="MP3">
-            <text:span text:style-name="MT1">
-              <presentation:date-time/>
-            </text:span>
-            <text:span text:style-name="MT1"> </text:span>
+            <presentation:date-time/>
           </text:p>
         </draw:text-box>
       </draw:frame>
       <draw:frame presentation:style-name="Mpr1" draw:text-style-name="MP4" draw:layer="backgroundobjects" svg:width="8.875cm" svg:height="1.448cm" svg:x="9.576cm" svg:y="19.131cm" presentation:class="footer">
         <draw:text-box>
           <text:p text:style-name="MP4">
-            <text:span text:style-name="MT1">
-              <presentation:footer/>
-            </text:span>
-            <text:span text:style-name="MT1"> </text:span>
+            <presentation:footer/>
           </text:p>
         </draw:text-box>
       </draw:frame>
       <draw:frame presentation:style-name="Mpr1" draw:text-style-name="MP5" draw:layer="backgroundobjects" svg:width="6.523cm" svg:height="1.448cm" svg:x="20.076cm" svg:y="19.131cm" presentation:class="page-number">
         <draw:text-box>
           <text:p text:style-name="MP5">
-            <text:span text:style-name="MT1">
-              <text:page-number>15</text:page-number>
-            </text:span>
-            <text:span text:style-name="MT1"> </text:span>
+            <text:page-number>&lt;number&gt;</text:page-number>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -665,40 +659,28 @@
         <draw:frame presentation:style-name="Mpr2" draw:text-style-name="MP3" draw:layer="backgroundobjects" svg:width="9.369cm" svg:height="1.396cm" svg:x="0cm" svg:y="0cm" presentation:class="header">
           <draw:text-box>
             <text:p text:style-name="MP3">
-              <text:span text:style-name="MT1">
-                <presentation:header/>
-              </text:span>
-              <text:span text:style-name="MT1"> </text:span>
+              <presentation:header/>
             </text:p>
           </draw:text-box>
         </draw:frame>
         <draw:frame presentation:style-name="Mpr2" draw:text-style-name="MP5" draw:layer="backgroundobjects" svg:width="9.369cm" svg:height="1.396cm" svg:x="12.22cm" svg:y="0cm" presentation:class="date-time">
           <draw:text-box>
             <text:p text:style-name="MP5">
-              <text:span text:style-name="MT1">
-                <presentation:date-time/>
-              </text:span>
-              <text:span text:style-name="MT1"> </text:span>
+              <presentation:date-time/>
             </text:p>
           </draw:text-box>
         </draw:frame>
         <draw:frame presentation:style-name="Mpr3" draw:text-style-name="MP3" draw:layer="backgroundobjects" svg:width="9.369cm" svg:height="1.396cm" svg:x="0cm" svg:y="26.543cm" presentation:class="footer">
           <draw:text-box>
             <text:p text:style-name="MP3">
-              <text:span text:style-name="MT1">
-                <presentation:footer/>
-              </text:span>
-              <text:span text:style-name="MT1"> </text:span>
+              <presentation:footer/>
             </text:p>
           </draw:text-box>
         </draw:frame>
         <draw:frame presentation:style-name="Mpr3" draw:text-style-name="MP5" draw:layer="backgroundobjects" svg:width="9.369cm" svg:height="1.396cm" svg:x="12.22cm" svg:y="26.543cm" presentation:class="page-number">
           <draw:text-box>
             <text:p text:style-name="MP5">
-              <text:span text:style-name="MT1">
-                <text:page-number>15</text:page-number>
-              </text:span>
-              <text:span text:style-name="MT1"> </text:span>
+              <text:page-number>&lt;number&gt;</text:page-number>
             </text:p>
           </draw:text-box>
         </draw:frame>

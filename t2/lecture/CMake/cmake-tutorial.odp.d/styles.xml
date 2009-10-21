@@ -571,6 +571,7 @@
             <text:span text:style-name="MT1">
               <presentation:header/>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -580,6 +581,7 @@
             <text:span text:style-name="MT1">
               <presentation:date-time/>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -589,6 +591,7 @@
             <text:span text:style-name="MT1">
               <presentation:footer/>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -596,8 +599,9 @@
         <draw:text-box>
           <text:p text:style-name="MP2">
             <text:span text:style-name="MT1">
-              <text:page-number>&lt;number&gt;</text:page-number>
+              <text:page-number>15</text:page-number>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -615,6 +619,7 @@
       <draw:page-thumbnail draw:layer="backgroundobjects" svg:width="5.586cm" svg:height="4.189cm" svg:x="19.558cm" svg:y="13.071cm"/>
     </style:handout-master>
     <style:master-page style:name="Default" style:page-layout-name="PM1" draw:style-name="Mdp1">
+      <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
       <draw:frame presentation:style-name="Default-title" draw:layer="backgroundobjects" svg:width="25.199cm" svg:height="2.338cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title" presentation:placeholder="true">
         <draw:text-box/>
       </draw:frame>
@@ -627,6 +632,7 @@
             <text:span text:style-name="MT1">
               <presentation:date-time/>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -636,6 +642,7 @@
             <text:span text:style-name="MT1">
               <presentation:footer/>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
@@ -643,12 +650,14 @@
         <draw:text-box>
           <text:p text:style-name="MP5">
             <text:span text:style-name="MT1">
-              <text:page-number>&lt;number&gt;</text:page-number>
+              <text:page-number>15</text:page-number>
             </text:span>
+            <text:span text:style-name="MT1"> </text:span>
           </text:p>
         </draw:text-box>
       </draw:frame>
       <presentation:notes style:page-layout-name="PM2">
+        <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
         <draw:page-thumbnail presentation:style-name="Default-title" draw:layer="backgroundobjects" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" presentation:class="page"/>
         <draw:frame presentation:style-name="Default-notes" draw:layer="backgroundobjects" svg:width="17.271cm" svg:height="12.572cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
           <draw:text-box/>
@@ -659,6 +668,7 @@
               <text:span text:style-name="MT1">
                 <presentation:header/>
               </text:span>
+              <text:span text:style-name="MT1"> </text:span>
             </text:p>
           </draw:text-box>
         </draw:frame>
@@ -668,6 +678,7 @@
               <text:span text:style-name="MT1">
                 <presentation:date-time/>
               </text:span>
+              <text:span text:style-name="MT1"> </text:span>
             </text:p>
           </draw:text-box>
         </draw:frame>
@@ -677,6 +688,7 @@
               <text:span text:style-name="MT1">
                 <presentation:footer/>
               </text:span>
+              <text:span text:style-name="MT1"> </text:span>
             </text:p>
           </draw:text-box>
         </draw:frame>
@@ -684,8 +696,9 @@
           <draw:text-box>
             <text:p text:style-name="MP5">
               <text:span text:style-name="MT1">
-                <text:page-number>&lt;number&gt;</text:page-number>
+                <text:page-number>15</text:page-number>
               </text:span>
+              <text:span text:style-name="MT1"> </text:span>
             </text:p>
           </draw:text-box>
         </draw:frame>

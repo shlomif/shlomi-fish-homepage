@@ -11,14 +11,14 @@ xmlformat()
 
 odp2xml() # odp -> xml
 {
-	mkdir cmake-tutorial.odp.d
-	unzip -o cmake-tutorial.odp -d cmake-tutorial.odp.d
-	xmlformat cmake-tutorial.odp.d/content.xml  cmake-tutorial.odp.d/meta.xml  cmake-tutorial.odp.d/settings.xml  cmake-tutorial.odp.d/styles.xml
+	mkdir introduction_to_cmake-2.odp.d
+	unzip -o introduction_to_cmake-2.odp -d introduction_to_cmake-2.odp.d
+	xmlformat introduction_to_cmake-2.odp.d/content.xml  introduction_to_cmake-2.odp.d/meta.xml  introduction_to_cmake-2.odp.d/settings.xml  introduction_to_cmake-2.odp.d/styles.xml
 }
 
 xml2odp() # xml -> odp
 {
-	mv cmake-tutorial.odp cmake-tutorial.odp.save
-	( cd cmake-tutorial.odp.d; zip -r ../cmake-tutorial.odp . -x *.svn-base)
-  	unzip -t cmake-tutorial.odp
+	mv introduction_to_cmake-2.odp introduction_to_cmake-2.odp.save
+	( cd introduction_to_cmake-2.odp.d; zip -r ../introduction_to_cmake-2.odp . -x *.svn-base)
+  	unzip -t introduction_to_cmake-2.odp
 }

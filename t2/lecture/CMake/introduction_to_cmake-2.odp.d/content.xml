@@ -477,7 +477,6 @@
             <text:p>
               <text:span text:style-name="T1">Introduction to </text:span>
               <text:span text:style-name="T2">CMake, v. 2</text:span>
-              <text:span text:style-name="T1"> </text:span>
             </text:p>
           </draw:text-box>
         </draw:frame>
@@ -1349,7 +1348,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="14" presentation:class="page"/>
           <draw:frame presentation:style-name="pr3" draw:text-style-name="P11" draw:layer="layout" svg:width="17.271cm" svg:height="12.573cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>
@@ -1413,7 +1411,7 @@
             <text:p text:style-name="P6">Finding libraries </text:p>
           </draw:text-box>
         </draw:frame>
-        <draw:frame presentation:style-name="pr11" draw:text-style-name="P20" draw:layer="layout" svg:width="26.035cm" svg:height="15.54cm" svg:x="0.635cm" svg:y="3.51cm" presentation:class="outline" presentation:user-transformed="true">
+        <draw:frame presentation:style-name="pr11" draw:text-style-name="P20" draw:layer="layout" svg:width="26.035cm" svg:height="15.953cm" svg:x="0.635cm" svg:y="3.51cm" presentation:class="outline" presentation:user-transformed="true">
           <draw:text-box>
             <text:list text:style-name="L2">
               <text:list-header>
@@ -1429,7 +1427,7 @@
                 <text:p text:style-name="P6">
                   <text:span text:style-name="T6">/usr/share/cmake-2.6/Modules/Platform/</text:span>
                   <text:span text:style-name="T28">Linux.cmake</text:span>
-                  <text:span text:style-name="T6"> :</text:span>
+                  <text:span text:style-name="T6">:</text:span>
                 </text:p>
                 <text:list>
                   <text:list-item>
@@ -1453,7 +1451,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="16" presentation:class="page"/>
           <draw:frame presentation:style-name="pr3" draw:text-style-name="P11" draw:layer="layout" svg:width="17.271cm" svg:height="12.573cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>
@@ -1490,7 +1487,7 @@
                           <text:span text:style-name="T12">string</text:span>
                           <text:span text:style-name="T13">(REGEX </text:span>
                           <text:span text:style-name="T30">REPLACE</text:span>
-                          <text:span text:style-name="T13"> "b.*" "BC" S ${S})</text:span>
+                          <text:span text:style-name="T13">"b.*" "BC" S ${S})</text:span>
                         </text:p>
                         <text:p>
                           <text:span text:style-name="T12"/>
@@ -1507,7 +1504,7 @@
                           <text:span text:style-name="T12">string</text:span>
                           <text:span text:style-name="T13">(REGEX </text:span>
                           <text:span text:style-name="T31">MATCHALL</text:span>
-                          <text:span text:style-name="T13"> "([0-9]+)" </text:span>
+                          <text:span text:style-name="T13">"([0-9]+)" </text:span>
                         </text:p>
                         <text:p>
                           <text:span text:style-name="T13">
@@ -1662,9 +1659,11 @@
                       <text:span text:style-name="T18">
                         <text:tab/>
                       </text:span>
+                      <text:span text:style-name="T18"> </text:span>
                       <text:span text:style-name="T18">
                         <text:tab/>
                       </text:span>
+                      <text:span text:style-name="T18"> </text:span>
                     </text:p>
                   </text:list-header>
                 </text:list>
@@ -1808,7 +1807,7 @@
                       <text:span text:style-name="T14">set</text:span>
                       <text:span text:style-name="T15">(</text:span>
                       <text:span text:style-name="T13">CMAKE_CXX_COMPILER</text:span>
-                      <text:span text:style-name="T15"> /opt/arm-2009q1/bin/arm-none-linux-gnueabi-gcc)</text:span>
+                      <text:span text:style-name="T15">/opt/arm-2009q1/bin/arm-none-linux-gnueabi-gcc)</text:span>
                     </text:p>
                     <text:p>
                       <text:span text:style-name="T14">set</text:span>
@@ -1908,7 +1907,7 @@
                           <text:a xlink:href="http://websvn.kde.org/trunk/KDE/kdetoys/">http://websvn.kde.org/trunk/KDE/kdetoys/</text:a>
                         </text:p>
                         <text:p>
-                          <text:a xlink:href="http://websvn.kde.org/trunk/KDE/kdetoys/">http://websvn.kde.org/trunk/KDE/kdetoys/</text:a>
+                          <text:a xlink:href="http://websvn.kde.org/trunk/KDE/kdelibs/">http://websvn.kde.org/trunk/KDE/kdelibs/</text:a>
                         </text:p>
                         <text:p/>
                       </text:list-header>
@@ -1963,7 +1962,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="24" presentation:class="page"/>
           <draw:frame presentation:style-name="pr13" draw:text-style-name="P14" draw:layer="layout" svg:width="17.271cm" svg:height="12.322cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>
@@ -2260,7 +2258,6 @@
         </presentation:notes>
       </draw:page>
       <draw:page draw:name="page29" draw:style-name="dp4" draw:master-page-name="Default" presentation:presentation-page-layout-name="AL1T1" presentation:use-footer-name="ftr1">
-        <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
         <draw:frame presentation:style-name="pr1" draw:text-style-name="P6" draw:layer="layout" svg:width="25.199cm" svg:height="3.507cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title">
           <draw:text-box>
             <text:p text:style-name="P6">CmakeLists.txt Files</text:p>
@@ -2332,7 +2329,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="29" presentation:class="page"/>
           <draw:frame presentation:style-name="pr3" draw:text-style-name="P11" draw:layer="layout" svg:width="17.271cm" svg:height="12.573cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>
@@ -2340,7 +2336,6 @@
         </presentation:notes>
       </draw:page>
       <draw:page draw:name="page30" draw:style-name="dp4" draw:master-page-name="Default" presentation:presentation-page-layout-name="AL1T1" presentation:use-footer-name="ftr1">
-        <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
         <draw:frame presentation:style-name="pr1" draw:text-style-name="P6" draw:layer="layout" svg:width="25.199cm" svg:height="3.507cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title">
           <draw:text-box>
             <text:p text:style-name="P6">CmakeLists.txt Files</text:p>
@@ -2424,7 +2419,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="30" presentation:class="page"/>
           <draw:frame presentation:style-name="pr3" draw:text-style-name="P11" draw:layer="layout" svg:width="17.271cm" svg:height="12.573cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>
@@ -2432,7 +2426,6 @@
         </presentation:notes>
       </draw:page>
       <draw:page draw:name="page31" draw:style-name="dp4" draw:master-page-name="Default" presentation:presentation-page-layout-name="AL1T1" presentation:use-footer-name="ftr1">
-        <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
         <draw:frame presentation:style-name="pr1" draw:text-style-name="P6" draw:layer="layout" svg:width="25.199cm" svg:height="3.507cm" svg:x="1.4cm" svg:y="0.837cm" presentation:class="title">
           <draw:text-box>
             <text:p text:style-name="P6">CmakeLists.txt Files</text:p>
@@ -2486,7 +2479,6 @@
           </draw:text-box>
         </draw:frame>
         <presentation:notes draw:style-name="dp2">
-          <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
           <draw:page-thumbnail draw:style-name="gr5" draw:layer="layout" svg:width="13.968cm" svg:height="10.476cm" svg:x="3.81cm" svg:y="2.123cm" draw:page-number="31" presentation:class="page"/>
           <draw:frame presentation:style-name="pr3" draw:text-style-name="P11" draw:layer="layout" svg:width="17.271cm" svg:height="12.573cm" svg:x="2.159cm" svg:y="13.271cm" presentation:class="notes" presentation:placeholder="true">
             <draw:text-box/>

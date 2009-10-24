@@ -14,8 +14,13 @@ message("\"\${L}\"=" "${L}")
 
 macro(macro1 arg1 arg2)
 	message("macro1 ${ARGV}")
-endmacro(macro1)
+endmacro()
 macro1(1 2)
+
+function(func1 arg1 arg2)
+	message("func1 ${ARGV}")
+endfunction()
+func1(1 2)
 
 #message(SEND_ERROR SEND_ERROR)
 message(STATUS STATUS)

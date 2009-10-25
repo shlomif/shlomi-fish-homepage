@@ -31,6 +31,10 @@ option(opt "help string describing option" 0)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
 # unset(CMAKE_C_FLAGS) # doesn't work
 
+set(abc a b c)
+message("abc="${abc})
+message("abc=" "${abc}")
+
 set(string "abc")
 string(REGEX REPLACE "b.*" "BC" string ${string})
 message( - ${string} -)
@@ -52,3 +56,11 @@ endif()
 
 add_executable(hello hello.c)
 install(TARGETS hello DESTINATION /tmp)
+
+
+# file
+# option
+message("CMAKE_MODULE_PATH=" ${CMAKE_MODULE_PATH})
+message("CMAKE_BUILD_TYPE=" ${CMAKE_BUILD_TYPE})
+message("CMAKE_INSTALL_PREFIX=" ${CMAKE_INSTALL_PREFIX})
+

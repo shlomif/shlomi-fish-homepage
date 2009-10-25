@@ -54,8 +54,8 @@ message(2)
 else()
 endif()
 
-add_executable(hello hello.c)
-install(TARGETS hello DESTINATION /tmp)
+add_executable(hello2 hello.c)
+install(TARGETS hello2 DESTINATION /tmp)
 
 
 # file

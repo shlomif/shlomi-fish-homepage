@@ -6,3 +6,5 @@ rm -rf `cat tmp.files`
 ( cd lib ; ./run ) 
 ( cd app ; ./run )
 ( cd cross ; ./run ) 
+
+cmake .

@@ -18,3 +18,29 @@
     height: 80px;
     background-color: white;
 }
+
+/* This is for the breadcrumbs trail (= leading path) at the top. */
+.leading_path
+{
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.15em;
+    margin-right: 10pt;
+}
+.leading_path a
+{
+    color: #FF8800;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.leading_path a:visited
+{
+    color: white;
+}
+.leading_path a:hover
+{
+    color: #40FF40;
+    background-color: transparent;
+}
+

@@ -30,17 +30,19 @@
 }
 .leading_path a
 {
-    color: #FF8800;
     text-decoration: underline;
     font-weight: bold;
 }
-.leading_path a:visited
+.leading_path a:link
 {
     color: white;
+}
+.leading_path a:visited
+{
+    color: #FF8800;
 }
 .leading_path a:hover
 {
     color: #40FF40;
     background-color: transparent;
 }
-

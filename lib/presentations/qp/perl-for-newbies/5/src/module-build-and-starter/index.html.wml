@@ -11,11 +11,11 @@ CPAN, there's a standard way to build and install it -
 <p>
 When creating packages of Perl code, it is preferable to
 make them capable of being built this way, even if they are intended for
-interenal use. That's because, packaging them this way gives you many
+internal use. That is because packaging them this way gives you many
 advantages, among them the ability to specify CPAN (and in-house) 
-dependencies, integrity tests, configruability in building and installation,
-and simplification of the preparation of system packages (such as 
-<tt>.rpm</tt>s or <tt>.deb</tt>s)
+dependencies, integrity tests, configurability in building and installation,
+and simplification of the preparation of system packages (such as
+<tt>.rpm</tt>s or <tt>.deb</tt>s).
 </p>
 
 <p>

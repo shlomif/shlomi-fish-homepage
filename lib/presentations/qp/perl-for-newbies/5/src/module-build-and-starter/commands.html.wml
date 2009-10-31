@@ -1,3 +1,11 @@
 #include 'template.wml'
 
-<h1><font color="red">FILL IN</font></h1>
+<p>
+The first thing we should do is change the directory to the directory that
+Module-Starter created and run <tt>perl Build.PL</tt>. We get some
+output like the following:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/module-build-and-starter/perl-Build-PL-1-output.txt" />
+</quadpres_code_block>

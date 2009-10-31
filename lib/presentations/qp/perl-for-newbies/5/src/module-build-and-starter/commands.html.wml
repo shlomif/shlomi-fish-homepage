@@ -9,3 +9,19 @@ output like the following:
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/module-build-and-starter/perl-Build-PL-1-output.txt" />
 </quadpres_code_block>
+
+<p>
+What the <tt>perl Build.PL</tt> command does is generate the <tt>Build</tt>
+script in the current directory that can be used to perform such operations
+as building, testing, packaging, and installing of the distribution. Sometimes
+we need to re-run <tt>perl Build.PL</tt> if we modified the configuration.
+</p>
+
+<p>
+Now let's run <tt>./Build</tt> and <tt>./Build test</tt>.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/module-build-and-starter/perl-Build-and-Build-test-1.txt" />
+</quadpres_code_block>
+

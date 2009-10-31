@@ -184,6 +184,7 @@ testing/demo/add2-test-2.pl
 testing/demo/Test-More-1.t
 module-build-and-starter/module-starter.help.txt
 module-build-and-starter/perl-Build-PL-1-output.txt
+module-build-and-starter/perl-Build-and-Build-test-1.txt
         ),
     ],
 };

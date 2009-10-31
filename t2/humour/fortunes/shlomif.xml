@@ -6189,7 +6189,7 @@ What does "IDK" stand for? I don't know.
 <saying who="ispy_">hehe</saying>
             </body>
             <info>
-                <channel>#perl</channel>
+                <channel>##programming</channel>
                 <network>Freenode</network>
                 <tagline>Emulating a Clueless Newbie</tagline>
             </info>
@@ -6299,5 +6299,41 @@ What does "IDK" stand for? I don't know.
             </info>
         </irc>
     </fortune>
+<fortune id="sharp-perlcafe-trusting-the-docs">
+    <meta>
+        <title>Reflections on Trusting Documentation</title>
+    </meta>
+    <irc>
+        <body>
+<saying who="whoppix">Quick git question, perhaps someone knows the answer: I have a file in my git tree (locally and in the repository), but I want git to ignore the file completely, i.e. git is not to touch the file on the filesystem by updating it or merging local changes into the repostiroy</saying>
+<saying who="rindolf">whoppix: you can use .gitignore</saying>
+<saying who="rindolf">I think</saying>
+<saying who="whoppix">rindolf, hmm, good idea, thanks.</saying>
+<saying who="whoppix">that was slow.</saying>
+<saying who="whoppix">rindolf, hm, I think git update-index --assume-unchanged is what I need.</saying>
+<saying who="whoppix">.gitignore is only for untracked files</saying>
+<saying who="rindolf">whoppix: OK, have no clue what that is.</saying>
+<saying who="rindolf">Git is so complicated.</saying>
+<saying who="rindolf">And so opaque</saying>
+<saying who="whoppix">rindolf, me neither, but the doc tells me to use that.</saying>
+<saying who="rindolf">whoppix: can you believe the docs?</saying>
+<saying who="rindolf">The docs may be lying.</saying>
+<saying who="rindolf">Don&#39;t trust the docs.</saying>
+<saying who="rindolf">Don&#39;t trust anything.</saying>
+<saying who="rindolf">You&#39;re all alone.</saying>
+<saying who="rindolf">It&#39;s you against the machine.</saying>
+<saying who="rindolf">When in doubt, use the source code.</saying>
+<saying who="rindolf">Not some sissy documentation.</saying>
+<saying who="whoppix">right</saying>
+<saying who="whoppix">I&#39;ll have some of what you&#39;ve been smoking</saying>
+<saying who="rindolf">whoppix: I&#39;m 100% clean.</saying>
+        </body>
+        <info>
+            <channel>#perlcafe</channel>
+            <network>Freenode</network>
+            <tagline>Reflections on trusting documentation</tagline>
+        </info>
+    </irc>
+</fortune>
 </list>
 </collection>

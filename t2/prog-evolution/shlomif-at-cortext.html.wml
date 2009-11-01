@@ -81,9 +81,10 @@ quite crawled, and more so when I started the
 <p>
 It still came with version 4 of the perl interprter, not version 5, which
 was what I needed. Also since my primary system was a Windows 3.11, I had to
-download a suitable for Perl for it and for DOS could also only find perl 4.  I
+download a suitable Perl for it and for DOS could also only find perl 4.  I
 started reading about Perl from a monolithic PDF that contained what was then
-known as "the perl man pages" and now also known as <tt>perl*.pod</tt>.  This
+known as "the perl man pages" and now also known as <tt>perl*.pod</tt>
+or <a href="http://perldoc.perl.org/">the perldocs</a>.  This
 was a long and exhausting read, and, since they referred to many UNIX idioms
 that I were not familiar with, I didn't fully understand them. And I believe
 that if I hadn't had a lot of programming and computing background back then,
@@ -164,3 +165,28 @@ enabled me to be really creative and is actually reflected to a large extent
 in them.
 </p>
 
+<h2 id="cortext-computers">The Cortext Computers</h2>
+
+<p>
+Cortext was quite an operation. The main computer I worked on was a Pentium I
+(about 100 MHz - can't remember the exact number), that first ran Linux and
+was later converted to a FreeBSD installation. I used it as a UNIX workstation
+to write code on. Most of the other Cortextuals used 
+<a href="http://en.wikipedia.org/wiki/Vi">the vi editor</a>, but I could not get
+used to it and so installed Emacs (under /usr/local I think) and tried
+to learn it. I didn't get too far (and until this day could never really
+get used to Emacs). However, I ended up watching a different Cortext worker
+use an editor which he said was called 
+<a href="http://joe-editor.sourceforge.net/">"joe" (Joe's Own Editor)</a>
+and after installing it was able to become accustomed to it, and had been 
+using it for a long time since as my default terminal editor.
+</p>
+
+<p>
+At Cortext, we consistently used 
+<a href="$(ROOT)/open-source/anti/csh/">the tcsh shell</a>, but back then I 
+didn't notice a lot of difference between it and 
+<a href="http://www.gnu.org/software/bash/">GNU Bash</a> that I had at home
+on my Linux system, despite the fact that they are radically different (I now
+wouldn't recommend tcsh for any use). 
+</p>

@@ -14,6 +14,18 @@ shorter than books. I hope you enjoy reading them.
 
 <define-tag humour_link>$(ROOT)/humour/%0</define-tag>
 
+<define-tag humour_story endtag="required">
+<preserve id humour_href text tag /> 
+<set-var %attributes />
+<div class="story">
+<<get-var tag /> id="<get-var id />"><a 
+href="<humour_link "<get-var humour_href />" />"><get-var text /></<get-var 
+tag />>
+%body
+</div>
+<restore id humour_href text tag />
+</define-tag>
+
 <h3>"The Enemy" Series</h3>
 
 <div class="indent">
@@ -22,22 +34,24 @@ This is a series of stories telling the whereabouts of the ex-Member of the
 Organization.
 </p>
 
-<h4><a href="<humour_link "TheEnemy/" />">The Enemy and How I Helped to Fight it</a></h4>
-
+<humour_story tag="h4" id="enemy-how-i-helped" humour_href="TheEnemy/" 
+text="The Enemy and How I Helped to Fight it">
 <p>
 A political satire about the situation that prevailed in the Israeli-Lebanese
 border. Lots of exits about mathematical logic, and a general critique of the
 irrationality guiding political bodies.
 </p>
+</humour_story>
 
-<h4><a href="<humour_link "RoadToHeaven/" />">The Road to Heaven is Paved with Bad Intentions</a></h4>
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/" 
+text="The Road to Heaven is Paved with Bad Intentions">
 
 <p>
 The sequel to "The Enemy". The protagonist travels back in time and tries to
 prevent World War II.
 </p>
 
-</div>
+</humour_story>
 
 <h3><a href="<humour_link "TOWTF/" />">The One with the Fountainhead</a></h3>
 

@@ -429,7 +429,12 @@ $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
-common/style.css.ttml: lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml
+COMMON_CSSS = lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml
+
+common/style.css.ttml: $(COMMON_CSSS)
+	touch $@
+
+common/style-2008.css.ttml: $(COMMON_CSSS)
 	touch $@
 
 lib/docbook/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt

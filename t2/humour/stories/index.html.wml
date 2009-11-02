@@ -19,7 +19,7 @@ shorter than books. I hope you enjoy reading them.
 <set-var %attributes />
 <div class="story">
 <<get-var tag /> id="<get-var id />"><a 
-href="<humour_link "<get-var humour_href />" />"><get-var text /></<get-var 
+href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var 
 tag />>
 %body
 </div>
@@ -53,7 +53,10 @@ prevent World War II.
 
 </humour_story>
 
-<h3><a href="<humour_link "TOWTF/" />">The One with the Fountainhead</a></h3>
+</div>
+
+<humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
+text="The One with the Fountainhead">
 
 <p>
 A two-part episode of Friends that parodies the book "The Fountainhead" by
@@ -61,13 +64,18 @@ Ayn Rand. Note that I received input from one person who is not familiar with
 the show, yet enjoyed this work very much.
 </p>
 
-<h3><a href="<humour_link "human-hacking/" />">The Human Hacking Field Guide</a></h3>
+</humour_story>
+
+<humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
+text="The Human Hacking Field Guide">
 
 <p>
 A teen-story (sort-of), but one that will appeal to grown-ups as well. Also
 may serve as propaganda for getting more youngsters involved in programming
 and engineering.
 </p>
+
+</humour_story>
 
 <h3><a href="<humour_link "Star-Trek/We-the-Living-Dead/" />">Star
 Trek: We the Living Dead</a></h3>

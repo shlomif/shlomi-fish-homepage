@@ -100,6 +100,11 @@ my @urls =
         url => "http://www.shlomifish.org/philosophy/foss-other-beasts/revision-2/foss-and-other-beasts/criteria.html#criteria_sourceware",
         desc => qq{Open source vs. Sourceware},
     },
+    {
+        id => "closed-books",
+        url => "http://www.shlomifish.org/philosophy/philosophy/closed-books-are-so-19th-century/",
+        desc => qq{Why Closed Books are So 19th-Century},
+    },
 );
 
 my %urls_by_id;

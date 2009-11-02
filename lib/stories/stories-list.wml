@@ -1,0 +1,121 @@
+
+<define-tag humour_link>$(ROOT)/humour/%0</define-tag>
+
+<define-tag humour_story endtag="required">
+<preserve id humour_href text tag /> 
+<set-var %attributes />
+<div class="story">
+<<get-var tag /> id="<get-var id />"><a 
+href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var 
+tag />>
+%body
+</div>
+<restore id humour_href text tag />
+</define-tag>
+
+<define-tag humour_stories_list_text>
+<h3>"The Enemy" Series</h3>
+
+<div class="indent">
+
+<p>
+This is a series of stories telling the whereabouts of the ex-Member of the 
+Organization.
+</p>
+
+<humour_story tag="h4" id="enemy-how-i-helped" humour_href="TheEnemy/" 
+text="The Enemy and How I Helped to Fight it">
+
+<p>
+A political satire about the situation that prevailed in the Israeli-Lebanese
+border. Lots of exits about mathematical logic, and a general critique of the
+irrationality guiding political bodies.
+</p>
+
+</humour_story>
+
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/" 
+text="The Road to Heaven is Paved with Bad Intentions">
+
+<p>
+The sequel to "The Enemy". The protagonist travels back in time and tries to
+prevent World War II.
+</p>
+
+</humour_story>
+
+</div>
+
+<humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
+text="The One with the Fountainhead">
+
+<p>
+A two-part episode of Friends that parodies the book "The Fountainhead" by
+Ayn Rand. Note that I received input from one person who is not familiar with
+the show, yet enjoyed this work very much.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
+text="The Human Hacking Field Guide">
+
+<p>
+A teen-story (sort-of), but one that will appeal to grown-ups as well. Also
+may serve as propaganda for getting more youngsters involved in programming
+and engineering.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
+text="Star Trek: We the Living Dead">
+
+<p>
+My own invented episode of the new crop of Star Trek series. In this episode
+we discover the true essence of the Q Continuum, and some "Living Dead":
+conscious beings (including humans) who reportedly died, but actually
+were saved and still live a prosperous life elsewhere.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="pope-died-on-sunday" humour_href="Pope"
+text="The Pope Died on Sunday">
+
+<p>
+A description of an insane week in the life of a female American 
+graphic artist. A typical Holywoodian story with not so Holywoodian elements.
+Work under progress, and available only in Hebrew for the time being.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="humanity" humour_href="humanity/" text="Humanity">
+
+<p>
+A parody about humanity and modern life in particular. Humanity describes
+a day in the life of a Semitic city circa 500 B.C. Work under progress.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="blue-rabbit" humour_href="Blue-Rabbit-Log/"
+text="The Blue Rabbit Log">
+
+<p>
+Screenplays for a series of crazy comedy films parodying 
+<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy 
+Role-Playing Games</a>. Join the band of Player Characters called "The
+Blue Rabbit Adventuring Company", as they journey in the imaginary 
+world that was invented by the game master, and their struggles and
+encounters with monsters, the non-player characters, their players,
+and... the Game Master! (Muahahahahaha).
+</p>
+
+<p>
+Work in progress.
+</p>
+
+</humour_story>
+</define-tag>

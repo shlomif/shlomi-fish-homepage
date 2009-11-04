@@ -55,7 +55,9 @@ my $doc = $parser->parse_file($input_file);
 
 my ($main_title) = $xpc->findnodes(q{/db:article/db:info/db:title}, $doc);
 my $main_title_text = $main_title->textContent();
-my ($main_id) = $xpc->findnodes(q{/db:article[@xml:id]}, $doc);
+my ($main_article) = $xpc->findnodes(q{/db:article}, $doc);
+my $main_id_text = $main_article->getAttributeNS($xml_uri, "id");
+
 
 my @sections = $xpc->findnodes(q{/db:article/db:section}, $doc);
 
@@ -83,7 +85,7 @@ sub _out_section
 }
 
 my $total =
-      qq{<body id="} . _esc_for_attr($main_id->textContent()) . qq{">\n\n}
+      qq{<body id="} . _esc_for_attr($main_id_text) . qq{">\n\n}
     . qq{<title>} . _esc($main_title_text) . qq{</title>\n\n}
     . join("\n\n", map { _out_section($_) } @sections)
     . qq{</body>\n\n}

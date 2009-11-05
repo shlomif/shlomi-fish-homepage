@@ -58,6 +58,19 @@ my $software_tree_contents =
                     'title' => "An Object-Oriented Alternative to File::Find",
                 },
                 {
+                    'text' => "The XML-Grammar Project",
+                    'url' => "open-source/projects/XML-Grammar/",
+                    'title' => "Provides specialised XML grammars, with processors and converters for various tasks",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "XML-Grammar-Fiction",
+                            'url' => "open-source/projects/XML-Grammar/Fiction/",
+                            'title' => "A lightweight markup language and an XML grammar for writing Prose.",
+                        },
+                    ],
+                },
+                {
                     'text' => "docmake",
                     'url' => "open-source/projects/docmake/",
                     'title' => "Automate the conversion of DocBook/XML to different formats",

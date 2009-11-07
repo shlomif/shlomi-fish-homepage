@@ -142,6 +142,9 @@ pw_d.projectwonderful_background_color = "";
 </latemp_top_left_corner_logo>
 
 <define-tag google_search>
+
+<h2 id="site-google-search">Google Search</h2>
+
 <form method="get" action="http://www.google.com/search">
 <div class="search">
 <input type="hidden" name="ie" value="UTF-8" />
@@ -216,22 +219,8 @@ in general.
 
 </div>
 
-<div class="search">
-<h2>External resources</h2>
-
-<ul class="navbarmain">
-<li>
-<a href="$(ROOT)/me/blogs/" title="Weblogs (or Blogs) or other streams
-of resources which I update and can be commented on">My Blogs</a>
-</li>
-</ul>
-</div>
-
 <google_search />
 
-<div class="search">
-<a href="<rellink host="t2" url="meta/how-to-help/" />">Like this site? Please Help</a>
-</div>
 
 
 <affil_collection_shlomif />

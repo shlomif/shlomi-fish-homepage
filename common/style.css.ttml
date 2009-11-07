@@ -47,3 +47,26 @@
     color: #40FF40;
     background-color: transparent;
 }
+[% SET bottom_contact_links = "#footer ul" %]
+[% bottom_contact_links %]
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1em;
+}
+[% bottom_contact_links %] li:first-child
+{
+    border-left-color: transparent;
+}
+[% bottom_contact_links %] li
+{
+    display: inline-block;
+    margin-left: 0.2em;
+    padding-left: 0.3em;
+    border-left: white solid 1px;
+}
+#footer p
+{
+    clear: left;
+}

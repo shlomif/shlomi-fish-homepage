@@ -360,6 +360,11 @@ $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.html: $(SCREENPLAY_XML_RENDERED_HTML_
 $(T2_DEST)/open-source/interviews/adrian-ettlinger.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/ae-interview.html
 $(T2_DEST)/open-source/interviews/sussman.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/sussman-interview.html
 
+# Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are 
+# modified.
+
+$(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DOCBOOK4_RENDERED_DIR)/introductory-language.html
+
 # Rebuild the embedded docbook5 pages in the $(T2_DEST) after they are 
 # modified.
 

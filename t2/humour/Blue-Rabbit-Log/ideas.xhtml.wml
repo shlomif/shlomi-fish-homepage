@@ -1,24 +1,10 @@
-<define-tag body endtag="required">
-<body*{#BODY_PARAMS#}>
-%body
-</body*>
-</define-tag>
-
-#include "utils.wml"
-#include "paypal.wml"
-
-<define-tag software_patents>1</define-tag>
-#include "latemp/latemp-prelude.wml"
-#include "local-defs.wml"
+#include "prelude.wml"
 
 <define-tag latemp_html_doctype>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 </define-tag>
 
-#include "latemp/latemp-driver.wml"
-#include "shlomif/affiliations.wml"
-
-#include "rest-of-template.wml"
+#include "driver.wml"
 
 <latemp_subject "Ideas for &quot;The Blue Rabbit's Log&quot;" />
 

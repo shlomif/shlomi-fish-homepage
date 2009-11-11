@@ -1,16 +1,9 @@
-#include "utils.wml"
-#include "paypal.wml"
-#include "latemp/latemp-prelude.wml"
-#include "local-defs.wml"
-
+#include "prelude.wml"
 <define-tag latemp_html_doctype>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
 "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" > 
 </define-tag>
-
-#include "latemp/latemp-driver.wml"
-#include "shlomif/affiliations.wml"
-#include "rest-of-template.wml"
+#include "driver.wml"
 
 <latemp_subject "Combinatorics and the art of Dungeons and Dragons" />
 

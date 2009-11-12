@@ -30,7 +30,7 @@ markup languages</b> that are in turn converted to the XML.
 <li>
 <a href="http://web-cpan.berlios.de/modules/XML-CompareML/">XML-CompareML</a>
 - an XML grammar for managing multi-system and multi-item comparisons. (Not
-in the XML-Grammar namespace for historical reasons.
+in the XML-Grammar namespace for historical reasons.)
 </li>
 
 <li>
@@ -39,9 +39,16 @@ stories, novellas or novels).
 </li>
 
 <li>
-<a href="http://web-cpan.berlios.de/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> - allows one to collect quotes (or Unix-like fortune cookies) using 
+<a href="http://web-cpan.berlios.de/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> -
+allows one to collect quotes (or Unix-like fortune cookies) using 
 an XML grammar, with a lot of rich meta-data, and to produce XHTML and 
 plain-text from them. 
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/XML-Grammar-ProductsSyndication/">XML-Grammar-ProductsSyndication</a> -
+an XML grammar for creating lists of products. See 
+<a href="$(ROOT)/recommendations/">my recommendations page</a> for examples.
 </li>
 
 <li>
@@ -50,6 +57,7 @@ for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
 and other scripts (for plays, T.V. shows, etc.). Include a convenient 
 proto-text format.
 </li>
+
 </ol>
 
 

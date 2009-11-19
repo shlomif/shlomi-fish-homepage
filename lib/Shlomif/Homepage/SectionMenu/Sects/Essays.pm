@@ -154,6 +154,13 @@ my $essays_tree_contents =
                             'text' => "Create a Homesite",
                             'url' => "philosophy/computers/web/create-a-great-personal-homesite/",
                             'title' => "Create a Great Personal Homesite",
+                            'subs' =>
+                            [
+                                {
+                                    'text' => "Revision 2",
+                                    'url' => "philosophy/computers/web/create-a-great-personal-homesite/rev2.html",
+                                },
+                            ],
                         },
                         {
                             'text' => "Which Wiki?",

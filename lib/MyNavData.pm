@@ -399,7 +399,35 @@ my $tree_contents =
                     'text' => "Computing",
                     'url' => "philosophy/computers/",
                     'title' => "Computing-related Essays and Articles",
-                    'expand' => { 're' => "^philosophy/computers/", },
+                    'expand' => { 're' => "^(?:philosophy/computers/|prog-evolution)", },
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Open Source",
+                            'url' => "philosophy/computers/open-source/",
+                            'title' => "Essays about Free and Open Source Software (FOSS)",
+                        },
+                        {
+                            'text' => "Software Management",
+                            'url' => "philosophy/computers/software-management/",
+                            'title' => "Essays about how to manage software workplaces, projects and teams",
+                        },
+                        {
+                            'text' => "Perl",
+                            'url' => "philosophy/computers/perl/",
+                            'title' => "Essays about the Perl programming language",
+                        },
+                        {
+                            'text' => "The Web (WWW)",
+                            'url' => "philosophy/computers/web/",
+                            'title' => "About the World-Wide-Web",
+                        },
+                        {
+                            'text' => "Education",
+                            'url' => "philosophy/computers/education/",
+                            'title' => "About Computer and Technical Education",
+                        },
+                    ],
                 },
                 {
                     'text' => "Political Essays",

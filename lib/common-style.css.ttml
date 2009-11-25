@@ -136,13 +136,12 @@ browsers where they are magenta by default.
 }
 [% END %]
 
-
-[% IF (with_sub_menu) %]
 /* Start of the .toggle_sect_menu */
 #sect_menu_wrapper.novis
 {
     display: none;
 }
+[% IF (with_sub_menu) %]
 [% SET sect_m = ".toggle_sect_menu" %]
 .sub_menu [% sect_m %]
 {

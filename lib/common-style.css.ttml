@@ -141,7 +141,6 @@ browsers where they are magenta by default.
 {
     display: none;
 }
-[% IF (with_sub_menu) %]
 [% SET sect_m = ".toggle_sect_menu" %]
 .sub_menu [% sect_m %]
 {
@@ -174,7 +173,6 @@ button[% sect_m %]
     background-color: yellow;
 }
 /* End of toggle sect menu. */
-[% END %]
 [% # commenting out the sub_menu style.
 %]
 .sub_menu h2

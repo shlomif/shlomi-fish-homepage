@@ -55,7 +55,8 @@ upload_local: upload_deps
 upload_backup: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
 
-upload: upload_remote
+# upload: upload_remote
+upload: upload_local
 
 upload_remote: upload_local upload_remote_only
 

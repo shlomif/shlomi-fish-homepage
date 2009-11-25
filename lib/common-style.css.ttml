@@ -108,6 +108,10 @@ ul.nospace
     margin-left: 7pt;
     margin-right: 10pt;
 }
+[% SET with_sub_menu = 0 %]
+[% # disabling the sub_menu style.
+%]
+[% IF (with_sub_menu) %]
 .sub_menu ul
 {
     list-style-type:disc;
@@ -130,19 +134,14 @@ browsers where they are magenta by default.
 {
     color: #800080; /* Purple */
 }
+[% END %]
 
-.sub_menu h2
-{
-   font-size: medium;
-   padding-top:0;
-   margin-top:0;
-   margin-bottom:0;  
-}
 /* Start of the .toggle_sect_menu */
 #sect_menu_wrapper.novis
 {
     display: none;
 }
+[% IF (with_sub_menu) %]
 [% SET sect_m = ".toggle_sect_menu" %]
 .sub_menu [% sect_m %]
 {
@@ -175,7 +174,16 @@ button[% sect_m %]
     background-color: yellow;
 }
 /* End of toggle sect menu. */
-
+[% END %]
+[% # commenting out the sub_menu style.
+%]
+.sub_menu h2
+{
+   font-size: medium;
+   padding-top:0;
+   margin-top:0;
+   margin-bottom:0;  
+}
 .hide
 {
     display:none;
@@ -442,11 +450,13 @@ table.visible
     margin-top:    0.25em;
     margin-bottom: 0.25em;
 }
+[% IF (with_sub_menu) %]
 .sub_menu li
 {
     margin-bottom:0;
     font-size: 90%;
 }
+[% END %]
 
 .designs th, .designs td
 {

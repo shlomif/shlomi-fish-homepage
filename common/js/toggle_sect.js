@@ -11,3 +11,12 @@ function toggle_sect_menu() {
     elem.toggleClass("off");
     elem.toggleClass("on");
 }
+
+$(document).ready(function(){
+	// first example
+	$("#sect_menu_wrapper > ul").treeview({
+		persist: "location",
+		collapsed: false,
+		unique: true
+	});
+})

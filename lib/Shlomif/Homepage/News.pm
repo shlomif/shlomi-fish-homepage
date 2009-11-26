@@ -168,9 +168,19 @@ sub file_to_news_item
     {
         $title = $1;
     }
+
+=begin Removed
+
+Removing because we no longer want such excessive "newsitem" classes in the
+text.
+
     $text =~ s!<p>!<p class="newsitem">!g;
     $text =~ s!<ol>!<ol class="newsitem">!g;
     $text =~ s!<ul>!<ul class="newsitem">!g;
+=end Removed
+
+=cut
+
     $filename =~ /^(\d{4})-(\d{2})-(\d{2})\.html$/;
     my ($y, $m, $d) = ($1, $2, $3);
     my $date = DateTime->new(year => $y, month => $m, day => $d);
@@ -222,10 +232,11 @@ sub get_item_html
     my $item = shift;
 
     my $title = $item->{title};
-    return "<h3 class=\"newsitem\">" . $item->{'date'}
+    return qq{<div class="news_item"><h3 class="newsitem">} . $item->{'date'}
         . (defined($title) ? ": $title" : "")
         . "</h3>\n\n"
         . $item->{'body'}
+        . qq{\n</div>\n}
         ;
 }
 

@@ -14,14 +14,40 @@ shamelessly duplicate my efforts and create similar art.
 
 <toc />
 
+<div class="graphic_designs">
+
 <h2 id="graphics">Graphics</h2>
 
+<define-tag my_image endtag="required">
+<preserve id url thumb_url thumb_alt title />
+<set-var %attributes />
+
+<div class="design">
+<h3 id="<get-var id />"><a href="<get-var url />"><get-var title /></a></h3>
+
+<a href="<get-var url />"><img 
+    src="<get-var thumb_url />" alt="<get-var thumb_alt />" 
+    /></a>
+
+%body
+</div>
+<restore id url thumb_url thumb_alt title />
+</define-tag>
+
+<my_image id="back-to-my-homepage"
+    url="bk2hp/" 
+    thumb_url="$(ROOT)/images/bk2hp.png"
+    thumb_alt="Back to my Homepage (Like Back to the Future)" 
+    title="Back to my Homepage">
+
+<p>
+A "Back to my Homepage" image, many of them were common in ye olde web, but
+this time modelled like the "Back to the Future" logo.
+</p>
+
+</my_image>
+
 <table border="1">
-<tr>
-<td align="left">
-<a href="./bk2hp/"><img src="../images/bk2hp.png" alt="My back to my homepage logo" style="border : 0" /></a>
-</td>
-</tr>
 <tr>
 <td align="left">
 <a href="./linux_banner/"><img src="./images/linux1-scaled.png" alt="Linux - Because software problems should not cost money" style="border : 0" /></a>
@@ -48,6 +74,7 @@ style="border : solid 20pt green;" /></a>
 </tr>
 
 </table>
+</div>
 
 <h2 id="slogans"><a href="slogans/">Slogans</a></h2>
 

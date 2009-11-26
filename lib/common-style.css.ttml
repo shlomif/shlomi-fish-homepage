@@ -146,13 +146,19 @@ browsers where they are magenta by default.
 {
    float:right;
 }
+[% BLOCK set_radius %]
+
+[% FOREACH prop IN ["-moz-border-radius", "-webkit-border-radius", "border-radius"] %]
+[% prop _ ":" _ border_radius _ ";" %]
+[% END %]
+
+[% END %]
+
 [% sect_m _ ", " _ sect_m _ ":hover" %]
 {
     padding: 0.2em 0.5em;
     [% SET border_radius = "5px" %]
-    [% FOREACH prop IN ["-moz-border-radius", "-webkit-border-radius", "border-radius"] %]
-    [% prop _ ":" _ border_radius _ ";" %]
-    [% END %]
+    [% INCLUDE set_radius %]
     border: 2pt solid black;
 }
 
@@ -527,4 +533,21 @@ table.visible
 {
     font-style: italic;
     color: brown;
+}
+
+/* Graphic Designs on /art/ */
+[% SET g = ".graphic_designs .design" %]
+
+[% g %]
+{
+    border: 2pt solid black;
+    padding: 1em;
+    margin-bottom: 1em;
+    [% SET border_radius = "5px" %]
+    [% INCLUDE set_radius %]
+}
+
+[% g %]:hover
+{
+    border-color: grey;
 }

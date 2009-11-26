@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets art_slogans_targets
+all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets
 
 include lib/make/gmsl/gmsl
 
@@ -577,3 +577,33 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $(patsubst %.png,%.temp.png,$@)
 	pngcrush $(patsubst %.png,%.temp.png,$@) $@
 	rm -f $(patsubst %.png,%.temp.png,$@)
+
+LC_PRES_PATH = lecture/Lambda-Calculus/slides
+
+LC_PRES_SCMS = \
+	cond_funcs_loops.scm \
+	cond.scm \
+	funcs.scm \
+	lc_bool_ops.scm \
+	lc_bools_conds_tuples.scm \
+	lc_church_div_old.scm \
+	lc_church_div.scm \
+	lc_church_ops.scm \
+	lc_church.scm \
+	lc_constructs.scm \
+	lc_intro.scm \
+	lc_recursion.scm \
+	lc_Y.scm \
+	lists.scm \
+	loops.scm \
+	notes.scm \
+	output_vars.scm \
+	shriram.scm \
+
+LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(T2_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
+
+lc_pres_targets: $(LC_PRES_DEST_HTMLS)
+
+# Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
+$(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
+	text-vimcolor --format html --full-page $< --output $@

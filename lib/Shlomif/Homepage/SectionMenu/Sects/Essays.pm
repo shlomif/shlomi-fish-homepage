@@ -342,6 +342,19 @@ my $essays_tree_contents =
             ],
         },
         {
+            'text' => "Psychology",
+            'url' => "philosophy/psychology/",
+            'title' => "Writings about Psychology",
+            'subs' =>
+            [
+                {
+                    'text' => "The Elephant in the Circus",
+                    'url' => "philosophy/psychology/elephant-in-the-circus/",
+                    'title' => "A (non-original) story with self-growth implications",
+                },
+            ],
+        },
+        {
             'text' => "Random Ideas",
             'url' => "philosophy/ideas/",
             'title' => "Various Random (and Practical) Ideas I Have",

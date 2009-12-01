@@ -1,9 +1,3 @@
-
-#include "sponsored_ad.wml"
-#include "share-this.wml"
-#include "amazon.wml"
-
-
 <define-tag ad_brite_top_proto>
 <!-- Begin: AdBrite, Generated: 2009-07-19 17:29:07  -->
 <script type="text/javascript">
@@ -331,10 +325,7 @@ by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin<
 <div class="wishlist_notice">
 <p>If you like this site, I would appreciate a gift from <a href="<amazon_wishlist_link />">my wishlist</a>.</p>
 </div>
-<div class="news_buttons"> 
-<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://reddit.com/button.js?t=2"></script>
-</div>
+<news_sites_buttons />
 </latemp_before_main_title>
 
 <section_nav_menu_elements>

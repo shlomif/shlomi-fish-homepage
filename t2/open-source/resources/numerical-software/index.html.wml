@@ -1,0 +1,63 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Directory of Numerical Software" />
+<page_extra_head_elements>
+<link rel="stylesheet" href="sb.css" type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained directory of numerical software:
+spreadsheets, statistical analysis software, computer algebra systems (CASes),
+matrix/tensor-based packages, etc.
+</p>
+
+<h2 id="matlab-like">MATLAB-like - based on bulk Matrices/tensors/vectors operations</h2>
+
+<ul>
+
+<li>
+<a href="http://www.mathworks.com/products/matlab/">MATLAB</a> 
+(<a href="http://en.wikipedia.org/wiki/MATLAB">Wikipedia Entry</a>) - a
+commercial and non-open-source, very comprehensive package, which runs on 
+Windows, Linux and other UNIXes. 
+</li>
+
+<li>
+<a href="http://www.gnu.org/software/octave/">GNU Octave</a> 
+(<a href="http://en.wikipedia.org/wiki/GNU_Octave">Wikipedia Entry</a>) - an
+open-source (GPLed) and incomplete MATLAB clone.
+</li>
+
+<li>
+<a href="http://www.scipy.org/">SciPy</a> - a package offering similar 
+tensor-based functionality for the Python programming language.  
+</li>
+
+<li>
+<a href="http://pdl.perl.org/">PDL - The Perl Data Language</a> - a package
+offering tensor-based functionality for the Perl programming language.
+</li>
+
+</ul>
+
+;;; End of MATLAB-like
+
+<!-- To add:
+
+Configuration: the SC entries, 
+SCMs: BitKeeper.
+Testing: Expect.
+
+-->
+
+
+
+

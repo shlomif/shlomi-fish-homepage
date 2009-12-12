@@ -351,6 +351,13 @@ my $essays_tree_contents =
                     'text' => "The Elephant in the Circus",
                     'url' => "philosophy/psychology/elephant-in-the-circus/",
                     'title' => "A (non-original) story with self-growth implications",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Hebrew Translation",
+                            'url' => "philosophy/psychology/elephant-in-the-circus/hebrew.html",
+                        },
+                    ],
                 },
             ],
         },

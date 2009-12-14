@@ -191,6 +191,16 @@ my $humour_tree_contents =
                             'url' => "humour/fortunes/tinic.html",
                             'title' => "Quotes from the online Linux-IL Folklore",
                         },
+                        {
+                            'text' => "#perl",
+                            'url' => "humour/fortunes/sharp-perl.html",
+                            'title' => "Quotes from the Freenode #perl channel",
+                        },
+                        {
+                            'text' => "##programming",
+                            'url' => "humour/fortunes/sharp-programming.html",
+                            'title' => "Quotes from the Freenode ##programming channel",
+                        },
                     ],
                 },
            ],

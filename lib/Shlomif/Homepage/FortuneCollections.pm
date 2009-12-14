@@ -58,6 +58,14 @@ the ultimate collection of reasons why
 "there is no IGLU cabal", and other Israeli Linux on-line folklore.
 EOF
     },
+    {
+        'id' => "sharp-perl",
+        desc => "a collection of conversations from Freenode's #perl",
+    },
+    {
+        'id' => "sharp-programming",
+        desc => "a collection of conversations from Freenode's ##programming",
+    },
 );
 
 sub get_fortune_records

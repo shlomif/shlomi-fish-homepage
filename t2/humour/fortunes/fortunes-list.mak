@@ -5,6 +5,7 @@ FORTUNES_FILES_BASE = \
 	osp_rules \
 	paul-graham \
 	sharp-perl \
+	sharp-programming \
 	shlomif \
 	shlomif-fav \
 	subversion \

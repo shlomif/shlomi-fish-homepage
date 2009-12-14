@@ -4,6 +4,7 @@ FORTUNES_FILES_BASE = \
 	nyh-sigs \
 	osp_rules \
 	paul-graham \
+	sharp-perl \
 	shlomif \
 	shlomif-fav \
 	subversion \

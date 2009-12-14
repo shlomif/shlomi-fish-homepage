@@ -60,7 +60,11 @@ EOF
     },
     {
         'id' => "sharp-perl",
-        desc => "a collection of conversations from Freenode's #perl"
+        desc => "a collection of conversations from Freenode's #perl",
+    },
+    {
+        'id' => "sharp-programming",
+        desc => "a collection of conversations from Freenode's ##programming",
     },
 );
 

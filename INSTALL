@@ -34,7 +34,9 @@ Or if you have CPANPLUS installed:
     $ PATH="$HOME/apps/latemp/bin:$PATH"
 
 7. 
-    $ svn co http://opensvn.csie.org/shlomif/wml-affiliations/trunk/
+    $ svn co https://seed1.projectlocker.com/shlomif/svn/wml-affiliations/trunk/
+        - Username: svn@shlomifish.org 
+        - Password: 123456
     $ cd trunk/wml
     $ bash Install.bash
 
@@ -45,7 +47,9 @@ Or if you have CPANPLUS installed:
 
 9. Do the following to build the site, after all dependencies were installed:
 
-    $ svn co http://opensvn.csie.org/shlomif/homepage/trunk/
+    $ svn co https://seed1.projectlocker.com/shlomif/svn/homepage/trunk
+        - Username: svn@shlomifish.org 
+        - Password: 123456
     $ cd trunk
     $ ./gen-helpers.pl
         ( Ignore the make warning. )

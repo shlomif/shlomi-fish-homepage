@@ -356,6 +356,13 @@ EOF
                 )},
                 dest_dir => "lecture/mini/mdda/slides",
             },
+            'mdda' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Quad-Pres",
+                )},
+                dest_dir => "lecture/Quad-Pres/slides",
+            },            
             'w2l_basic_use' =>
             {
                 @{get_quad_pres_files(

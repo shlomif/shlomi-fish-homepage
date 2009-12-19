@@ -613,6 +613,7 @@ SPORK_LECTURES_BASENAMES = \
 	Perl/Lightning/Opt-Multi-Task-in-PDL \
 	Perl/Lightning/Test-Run \
 	Perl/Lightning/Too-Many-Ways \
+	Vim/beginners \
 
 
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
@@ -636,3 +637,5 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; done)) \
 	)
 
+lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
+	cat $< | perl -pe 's!^\+!!' > $@

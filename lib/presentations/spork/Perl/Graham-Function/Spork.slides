@@ -1,0 +1,76 @@
+----
+presentation_topic: Graham's Function
+presentation_title: Finding Graham's Function Using Perl
+presentation_place: Ramat Gan, Israel
+presentation_date: FILL IN
+----
+
+== The Challenge
+
+    Date: Wed, 11 Dec 2002 15:07:25 -0500
+    From: Mark Jason Dominus
+    Reply-To: perl-qotw-discuss@plover.com
+    To: perl-qotw@plover.com
+    Subject: Perl 'Expert' Quiz-of-the-Week #8
+
+
+    Graham's function (named for Ronald L. Graham, director of research at
+    AT&T Bell Labs) of a positive integer n is computed as follows: Find
+    an increasing sequence of integers a0, a1, ..., a_k such that
+
+            1. a0 = n
+            2. The product of the integers is a perfect square
+            3. a_k is as small as possible.
+
+    Then G(n) = a_k.
+
+    ...
+
+    Write a function, 'Graham', which, given a positive integer n, returns G(n)
+
+----
+== Naive Approach to Solution
+
+* Brute Force
+* Check all the possible series that end with n+1, then those that end with n+2 , then those that end with n+3.
+* Very inefficient. (exponential complexity)
+----
+== Some Analysis
+
+* In a perfect square, all the factors are raised to an even exponent.
+* Thus, when multiplying integers to form a perfect square, what matters is their uneven-exponented factors.
+* Thus, an integer can be represented (as far as we're concerned) as a vector of its squaring factors:
+** 120 = 2^3 * 3^1 * 5^1
+** 120[sq] = 2 * 3 * 5
+* When multiplying two squaring vectors, their components cancel each other. So if p existed in both vectors, it won't exist in the product.
+----
+== Some Linear Algebra Concepts
+
+* By using the Gauss Elimination, we can form a base of the vectors we encountered so far.
+* Using this base we can span every product possible from our group of numbers.
+* If from n+1..m we can span n, it means that m is a valid candidate for the Graham function.
+----
+== My Algorithm
+
+* Keep a base of controlling vectors for each prime number.
+* Keep $n_vec - the vector starting with n[sq] that has to be composed out of the base.
+* As we encounter the next integer $i - 
+00 Get its squaring factors
+00 Check if it's not square or prime (which are useless for us)
+00 Stair-shape it, by multiplying it with the controlling vectors of its factors
+00 Possibly assign it as the controlling vector of the minimal (ID-wise) prime in its stair shape version, and canonize the rest of the base accordingly.
+00 Try to canonize $n_vec.
+* Once $n_vec becomes 0, we stop and return.
+----
+== Optimizations
+* Memoizing the get_squaring_factors() function. 
+* The Memoize.pm module proved to be too heavy, so I used my own memoization code.
+----
+== Largest Factor Optimization
+* Check if between n and n+largest_factor we can fit a square times get_squaring_factors{n*(n+largest_factor)}. If so, return n+largest_factor.
+* If n+largest_factor is factored to largest_factor with an even power, use n+2*largest_factor.
+----
+== Returning the Constructing Series
+* We can keep for each squaring factors vector a vector of its constructing integers.
+* When multiplying the vectors, we can multiply the constructing integers vector in the same way.
+

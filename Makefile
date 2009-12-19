@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets
+all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets
 
 include lib/make/gmsl/gmsl
 
@@ -607,3 +607,20 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
 	text-vimcolor --format html --full-page $< --output $@
+
+GFUNC_PRES_BASE = lib/presentations/spork/Perl/Graham-Function
+GFUNC_PRES_DEST = $(T2_DEST)/lecture/Perl/Graham-Function
+GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)/slides/start.html
+GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)/slides/start.html
+
+graham_func_pres_targets: $(GFUNC_PRES_DEST_START)
+
+$(GFUNC_PRES_DEST_START): $(GFUNC_PRES_BASE_START)
+	rsync -a $(GFUNC_PRES_BASE)/slides/ $(GFUNC_PRES_DEST)/slides
+
+$(GFUNC_PRES_BASE_START): $(GFUNC_PRES_BASE)/Spork.slides $(GFUNC_PRES_BASE)/config.yaml
+	(cd $(GFUNC_PRES_BASE) ; \
+		shspork -make ; \
+		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; done)) \
+	)
+

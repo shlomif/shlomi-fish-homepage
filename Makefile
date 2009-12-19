@@ -612,6 +612,7 @@ SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \
 	Perl/Lightning/Opt-Multi-Task-in-PDL \
 	Perl/Lightning/Test-Run \
+	Perl/Lightning/Too-Many-Ways \
 
 
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork

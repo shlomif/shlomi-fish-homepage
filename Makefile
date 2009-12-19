@@ -613,6 +613,7 @@ SPORK_LECTURES_BASENAMES = \
 	Perl/Lightning/Opt-Multi-Task-in-PDL \
 	Perl/Lightning/Test-Run \
 	Perl/Lightning/Too-Many-Ways \
+	SCM/subversion/for-pythoneers \
 	Vim/beginners \
 
 

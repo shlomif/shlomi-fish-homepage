@@ -610,7 +610,9 @@ $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \
-	Perl/Lightning/Opt-Multi-Task-in-PDL
+	Perl/Lightning/Opt-Multi-Task-in-PDL \
+	Perl/Lightning/Test-Run \
+
 
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
 GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function

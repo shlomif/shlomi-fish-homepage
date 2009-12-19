@@ -608,18 +608,27 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
 	text-vimcolor --format html --full-page $< --output $@
 
-GFUNC_PRES_BASE = lib/presentations/spork/Perl/Graham-Function
+SPORK_LECTURES_BASENAMES = \
+	Perl/Graham-Function \
+	Perl/Lightning/Opt-Multi-Task-in-PDL
+
+SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
+GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
 GFUNC_PRES_DEST = $(T2_DEST)/lecture/Perl/Graham-Function
 GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)/slides/start.html
 GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)/slides/start.html
 
-graham_func_pres_targets: $(GFUNC_PRES_DEST_START)
+SPORK_LECTURES_DESTS = $(patsubst %,$(T2_DEST)/lecture/%,$(SPORK_LECTURES_BASENAMES))
+SPORK_LECTURES_DEST_STARTS = $(patsubst %,%/slides/start.html,$(SPORK_LECTURES_DESTS))
+SPORK_LECTURES_BASE_STARTS = $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html,$(SPORK_LECTURES_BASENAMES))
 
-$(GFUNC_PRES_DEST_START): $(GFUNC_PRES_BASE_START)
-	rsync -a $(GFUNC_PRES_BASE)/slides/ $(GFUNC_PRES_DEST)/slides
+graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)
 
-$(GFUNC_PRES_BASE_START): $(GFUNC_PRES_BASE)/Spork.slides $(GFUNC_PRES_BASE)/config.yaml
-	(cd $(GFUNC_PRES_BASE) ; \
+$(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_SOURCE_BASE)/%/start.html
+	rsync -a $(patsubst %/start.html,%/,$<) $(patsubst %/start.html,%/,$@)
+
+$(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
+	(cd $(patsubst %/slides/start.html,%,$@) ; \
 		shspork -make ; \
 		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; done)) \
 	)

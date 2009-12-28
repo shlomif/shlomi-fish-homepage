@@ -1,4 +1,5 @@
 [% PROCESS "smoked-wp-theme.css.ttml" %]
+[% SET sponsored_ad_border = "#207020" %]
 [% PROCESS "common-style.css.ttml" %]
 .sub_menu
 {

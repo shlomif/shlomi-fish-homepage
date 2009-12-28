@@ -345,7 +345,6 @@ table.visible
     padding:0;
 }
 
-[% SET sponsored_ad_border = "#407" %]
 
 .spons.ad
 {
@@ -362,7 +361,7 @@ table.visible
     padding-bottom: 1pt;
     display: block;
     background-color: [% sponsored_ad_border %];
-    color: white;
+    color: white !important;
     margin-top: 0;
 }
 

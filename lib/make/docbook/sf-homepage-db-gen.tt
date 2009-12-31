@@ -75,8 +75,10 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 
 [% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
 
+[% # TODO : change from qp to "quadp".
+%]
 [% BLOCK cmd %]
-	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" ; (cd $([% v %]_BASE) && qp render -a && qp pack && qp upload)
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" WMLOPTS="--passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/presentations/qp/common/')"; (cd $([% v %]_BASE) && qp render -a && qp pack && qp upload)
 [% END %]
 
 [% pres_targets.push(l) %]

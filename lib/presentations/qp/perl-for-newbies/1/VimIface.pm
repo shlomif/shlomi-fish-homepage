@@ -3,7 +3,7 @@ package VimIface;
 use strict;
 use warnings;
 
-use Test::Trap qw( trap $trap :flow:stderr(systemsafe):stdout(systemsafe):warn );
+use Text::VimColor;
 
 sub is_newer
 {
@@ -21,29 +21,33 @@ sub is_newer
 sub get_syntax_highlighted_html_from_file
 {
     my (%args) = (@_);
+
     my $filename = $args{'filename'};
+    
     my $html_filename = "$filename.html";
 
     if (is_newer( $filename, $html_filename))
     {
-        trap {
-            system(
-                "gvim","-f","+syn on", 
-                "+so \$VIMRUNTIME/syntax/2html.vim",
-                "+wq", "+q", $filename
-            );
-        };
-        if ($trap->exit())
-        {
-            die "gvim failed!";
-        }
+        my $syntax = Text::VimColor->new(
+            file => $filename,
+            html_full_page => 1,
+        );
+
+        open my $out, ">", $html_filename
+            or die "Could not open HTML file '$html_filename' for output - $!";
+
+        print {$out} $syntax->html();
+        close($out);
     }
-    local *I;
-    open I, "<", $html_filename;
-    my $text = join("", <I>);
-    close(I);
+
+    open my $in, "<", $html_filename
+        or die "Could not open HTML file '$html_filename' for input - $!";
+    my $text = do { local $/; <$in> };
+    close($in);
+
     $text =~ s{^.*<pre>[\s\n\r]*}{}s;
     $text =~ s{[\s\n\r]*</pre>.*$}{}s;
+
     return $text;
 }
 

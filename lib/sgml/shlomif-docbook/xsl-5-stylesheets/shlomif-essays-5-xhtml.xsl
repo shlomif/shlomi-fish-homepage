@@ -26,11 +26,16 @@
     -->
     <xsl:param name="fop1.extensions">1</xsl:param>
 
-<!-- insert some adsense ads -->
+<!-- Insert some adsense ads -->
 <xsl:template name="user.header.navigation">
 </xsl:template>
 
 <xsl:template name="user.header.content">
     <xsl:call-template name="user.header.navigation"/>
 </xsl:template>
+
+<!-- Disable the title="" attribute in sections. -->
+<xsl:template name="generate.html.title">
+</xsl:template>
+
 </xsl:stylesheet>

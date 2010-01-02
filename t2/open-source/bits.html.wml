@@ -207,5 +207,25 @@ Output Analyser</a></h2>
 that can recursively scan directory trees and output the space used by
 them. After one has done <tt>\du . &gt; du.txt</tt>, one can use this script
 to analyse the file by filtering the sub-directories of a certain depth (and
-under a certain sub-directory). (Licensed the MIT/X11 Licence).
+under a certain sub-directory). (Licensed under the MIT/X11 License).
 </p>
+
+<h2 id="set_xfce_workspaces"><a 
+href="<bit_link "xfce-set-virtual-workspaces.rb" />">Set the
+Xfce Virtual Workspaces Number and Names</a></h2>
+
+<p>
+This command line Ruby script sets the names (and number) of the 
+Xfce desktop's <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual 
+workspaces (also known as virtual desktop</a>. You can simply pass the names
+as arguments in the command line (possibly inside qoutes).
+</p>
+
+<p>
+This is useful to restore them in case they were reset. Use this script while 
+Xfce is running. (See 
+<a href="http://foo-projects.org/pipermail/xfce/2009-December/026469.html">a
+discussion on the Xfce mailing list</a> for more information.) Licensed 
+under the MIT/X11 License.
+</p>
+

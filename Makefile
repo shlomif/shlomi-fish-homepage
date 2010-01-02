@@ -370,7 +370,7 @@ $(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DO
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
 
-$(T2_DEST)/philosophy/politics/drug-legalisation/index.html.wml: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
+$(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-rev2.xhtml
 
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.

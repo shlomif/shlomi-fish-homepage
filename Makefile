@@ -370,6 +370,8 @@ $(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DO
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
 
+$(T2_DEST)/philosophy/politics/drug-legalisation/index.html.wml: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
+
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
@@ -391,6 +393,7 @@ $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DI
 	cp -f $< $@
 
 t2/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html.wml: lib/docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml
+
 
 %.show:
 	@echo "$* = $($*)"
@@ -495,6 +498,7 @@ DOCBOOK5_XSL_STYLESHEETS_FO_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/fo
 DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
 
 DOCBOOK5_DOCS = \
+	case-for-drug-legalisation-rev2 \
 	dealing-with-hypomanias \
 	perfect-it-workplace-rev2 \
 	objectivism-and-open-source \

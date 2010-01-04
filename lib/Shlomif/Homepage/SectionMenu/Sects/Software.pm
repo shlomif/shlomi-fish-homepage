@@ -86,6 +86,11 @@ my $software_tree_contents =
                     'title' => "Workaround to use yjobs.co.il using (cross-platform) Mozilla-based browsers such as Firefox",
                 },
                 {
+                    'text' => "libtap",
+                    'url' => "open-source/projects/libtap/",
+                    'title' => "Write test programs in C that output to the Test Anything Protocol (TAP)",
+                },
+                {
                     'text' => "Spark - A Lisp Dialect",
                     'url' => "open-source/projects/Spark/",
                     'subs' =>

@@ -4,5 +4,10 @@
 
     <!-- Avoid Generating a Table-of-Contents-->
     <xsl:param name="generate.toc"></xsl:param>
+
+<!-- Disable the title="" attribute in sections. -->
+<xsl:template name="generate.html.title">
+</xsl:template>
+
 </xsl:stylesheet>
 

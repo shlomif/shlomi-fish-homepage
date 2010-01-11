@@ -1,0 +1,58 @@
+#include '../template.wml'
+
+<latemp_subject "Black Hole Solitaire Solver" />
+
+<p>
+This is a Perl CPAN distribution to solve
+<a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
+Solitaire variant called "Black Hole"</a>. It provides a command line
+application that after being fed with a layout will emit the cards to move
+to the "black hole" (the foundation).
+</p>
+
+<h2 id="download">Download</h2>
+
+<p>
+<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">Download
+Games-Solitaire-BlackHole-Solver from the CPAN</a>
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<ul>
+
+<li>
+<a href="http://svn.berlios.de/svnroot/repos/fc-solve/black-hole-solitaire/">Subversion
+repository</a>
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">search.cpan.org
+Record</a>
+</li>
+
+<li>
+<a href="http://cpan.uwinnipeg.ca/dist/Games-Solitaire-BlackHole-Solver">kobesearch Record</a>
+</li>
+
+</ul>
+
+<h2 id="similar-projects">Similar Projects</h2>
+
+<ul>
+
+<li>
+<a href="http://fc-solve.berlios.de/">Freecell Solver</a> and
+<a href="http://fc-solve.berlios.de/links.html#other_solvers">other Solitaire
+solvers</a>
+</li>
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+File-Dir-Dumper is original work and is subject to the terms of the
+<a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11
+licence</a>, which is a Public Domain-like open-source licence.
+</p>
+

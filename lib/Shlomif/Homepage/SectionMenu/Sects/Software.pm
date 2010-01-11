@@ -53,6 +53,11 @@ my $software_tree_contents =
                     'title' => "Dump the Meta-Data of Directory Structures",
                 },
                 {
+                    'text' => "\"Black Hole\" Solitaire Solver",
+                    'url' => "open-source/projects/black-hole-solitaire-solver/",
+                    'title' => "Solve layouts of the patience card game 'Black Hole'",
+                },
+                {
                     'text' => "File-Find-Object",
                     'url' => "open-source/projects/File-Find-Object/",
                     'title' => "An Object-Oriented Alternative to File::Find",

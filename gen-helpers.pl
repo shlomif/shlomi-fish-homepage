@@ -5,8 +5,6 @@ use warnings;
 
 use HTML::Latemp::GenMakeHelpers;
 
-use Cwd (qw(getcwd));
-
 my $generator = 
     HTML::Latemp::GenMakeHelpers->new(
         'hosts' =>
@@ -23,20 +21,11 @@ use IO::All;
 
 my $text = io("include.mak")->slurp();
 $text =~ s!^(T2_DOCS = .*)humour/fortunes/index.html!$1!m;
+$text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;
 io("include.mak")->print($text);
 
 system("./bin/gen-docbook-make-helpers.pl");
-
-# This is to in order to generate the t2/humour/fortunes/arcs-list.mak
-# file, which is inclduded by the makefile.
-{
-    my $orig_dir = getcwd();
-
-    chdir("t2/humour/fortunes");
-    system("make", "list_files", "dist");
-
-    chdir($orig_dir);
-}
+system("./bin/gen-fortunes.pl");
 
 1;
 

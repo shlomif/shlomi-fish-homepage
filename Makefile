@@ -45,6 +45,9 @@ RSYNC = rsync --progress --verbose --rsh=ssh
 
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST)/$(FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
+$(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
+	cp -f $< $@
+
 copy_fortunes: $(T2_DEST_FORTUNES)
 
 upload_deps: all

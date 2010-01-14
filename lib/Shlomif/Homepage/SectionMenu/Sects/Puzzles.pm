@@ -103,6 +103,17 @@ my $puzzles_tree_contents =
             ],
         },
         {
+            'text' => "Maths",
+            'url' => "puzzles/maths/",
+            'subs' =>
+            [
+                {
+                    'text' => "Modulo 5^n Riddle",
+                    'url' => "puzzles/maths/n5-riddle/",
+                },
+            ],
+        },
+        {
             'text' => "Computer Science",
             'url' => "puzzles/cs/",            
             'subs' =>

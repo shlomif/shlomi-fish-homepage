@@ -363,7 +363,7 @@ EOF
                     "lib/presentations/qp/Quad-Pres",
                 )},
                 dest_dir => "lecture/Quad-Pres/slides",
-            },            
+            },
             'w2l_basic_use' =>
             {
                 @{get_quad_pres_files(
@@ -371,6 +371,14 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Basic_Use/slides",
             },
+            'w2l_blitz' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/welcome-to-linux/Blitz",
+                )},
+                dest_dir => "lecture/W2L/Blitz/slides",
+            },
+            
             'w2l_technion' =>
             {
                 @{get_quad_pres_files(

@@ -386,6 +386,14 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Technion/slides",
             },
+            'w2l_mini_intro' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/welcome-to-linux/Mini-Intro",
+                )},
+                dest_dir => "lecture/W2L/Mini-Intro/slides",
+            },
+            
             'w2l_networking' =>
             {
                 @{get_quad_pres_files(

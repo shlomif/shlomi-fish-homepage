@@ -1,0 +1,86 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "List of Text Editors and IDEs" />
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained list of text editors and IDEs (Integrated
+Development Environments), useful for programmers and other developers.
+</p>
+
+<h2 id="open-source">Open Source Text Editors and IDEs</h2>
+
+<h3 id="cross-platform-open-editors">Cross-Platform Open Source Editors</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.vim.org/">Vim and gvim</a> - a cross-platform vi-derivative
+editor (with many enhancments) with a Windows-conventions-emulating 
+configuration (<tt>:source $VIMRUNTIME/mswin.vim</tt>). Has many plugins
+available on the site, supports Unicode and encodings, syntax highlighting,
+has both console and a GUI versions. Vim licence (open-source and 
+GPL-compatible licence).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.xemacs.org/">XEmacs</a> - cross-platform Emacs derivative,
+with console and GUI versions. Is mostly written in and extendable with the 
+built-in Emacs Lisp scripting language. Very hard to get used to from my 
+experience. (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://projects.gnome.org/gedit/">gedit</a> - a text-editor for
+the Gtk+/GNOME environment, with many plugins and extensions, and good unicode
+support. (GPLed)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.geany.org/">geany</a> - another gtk+-based programmer's
+editor. (open-source, GPLed)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.jedit.org/">jEdit</a> - a cross-platform programmer's text 
+editor written in Java, with many plugins. (Open-Source,  GPL 2.0).
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Category:Text_editors">Wikipedia's text
+editors category</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://perl-begin.org/IDEs-and-tools/">IDEs and Other Tools for Perl 
+on the Perl-Begin site</a>
+</p>
+</li>
+
+</ul>
+

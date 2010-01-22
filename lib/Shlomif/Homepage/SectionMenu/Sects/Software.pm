@@ -180,6 +180,11 @@ my $software_tree_contents =
                     'text' => "Software Building and Management Tools",
                 },
                 {
+                    'url' => "open-source/resources/editors-and-IDEs/",
+                    'text' => "Editors and IDEs",
+                    'title' => "Index of Editors and Integrated Development Environments",
+                },
+                {
                     'url' => "open-source/resources/numerical-software/",
                     'text' => "Numerical Software",
                 },

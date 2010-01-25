@@ -110,6 +110,11 @@ my @urls =
         url => "http://www.shlomifish.org/meta/FAQ/#reply_to_list",
         desc => qq{Reply to the list.},
     },
+    {
+        id => "port-libs",
+        url => "http://www.shlomifish.org/open-source/portability-libs/",
+        desc => qq{List of Cross-Platform, Abstraction, Portability Libraries},
+    },
 );
 
 my %urls_by_id;

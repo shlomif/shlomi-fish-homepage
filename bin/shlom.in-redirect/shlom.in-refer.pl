@@ -105,6 +105,11 @@ my @urls =
         url => "http://www.shlomifish.org/philosophy/philosophy/closed-books-are-so-19th-century/",
         desc => qq{Why Closed Books are So 19th-Century},
     },
+    {
+        id => "reply",
+        url => "http://www.shlomifish.org/meta/FAQ/#reply_to_list",
+        desc => qq{Reply to the list.},
+    },
 );
 
 my %urls_by_id;

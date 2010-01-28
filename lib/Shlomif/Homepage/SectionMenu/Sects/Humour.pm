@@ -201,6 +201,11 @@ my $humour_tree_contents =
                             'url' => "humour/fortunes/sharp-programming.html",
                             'title' => "Quotes from the Freenode ##programming channel",
                         },
+                        {
+                            'text' => "shlomif-factoids",
+                            'url' => "humour/fortunes/shlomif-factoids.html",
+                            'title' => "Funny Factoids about People and Things (Chuck Norris, etc.)",
+                        },
                     ],
                 },
            ],

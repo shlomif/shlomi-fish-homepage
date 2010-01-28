@@ -250,6 +250,11 @@ my $software_tree_contents =
                     'url' => "open-source/anti/php/",
                     'title' => "&quot;PHP Sucks&quot; - originally by czth",
                 },
+                {
+                    'text' => "GNU Autohell",
+                    'url' => "open-source/anti/autohell/",
+                    'title' => "Escape from GNU Autohell!",
+                },
             ],
         },
         {

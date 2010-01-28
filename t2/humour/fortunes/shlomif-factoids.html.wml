@@ -1,0 +1,24 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Shlomi Fish and Friends' Additions to the Chuck Norris/Etc. Facts" />
+
+<h2*>About</h2*>
+
+<p>
+Additions to <a href="http://www.shlomifish.org/humour/bits/facts/">the
+collections of Factoids about people and things (e.g: Chuck Norris)</a> 
+in Unix fortune format.
+</p>
+
+<h3*>Table of Contents</h3*>
+
+<toc />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/shlomif-factoids.xhtml-for-input"
+</div>
+
+
+

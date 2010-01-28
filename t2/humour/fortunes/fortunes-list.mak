@@ -7,6 +7,7 @@ FORTUNES_FILES_BASE = \
 	sharp-perl \
 	sharp-programming \
 	shlomif \
+	shlomif-factoids \
 	shlomif-fav \
 	subversion \
 	tinic

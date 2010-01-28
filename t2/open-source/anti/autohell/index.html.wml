@@ -68,6 +68,22 @@ the more compact tar.bz2 (which takes 291,531 bytes) and a tar.xz (which takes
 
 <li>
 <p>
+GNU Autohell has a huge problem with backwards compatibility, forward 
+compatibility and other regressions. It requires constant maintenance, while 
+CMake tends to keep very good backwards compatibility.
+</p>
+</li>
+
+<li>
+<p>
+As opposed to GNU Autotools, CMake runs natively on Win32 and generates
+native Win32 makefiles, and project configurations for many common Integrated
+Development Environment (such as Microsoft Developer Studio).
+</p>
+</li>
+
+<li>
+<p>
 CMake uses <a href="http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22.29">the 
 modified BSD license</a> (which is GPL-compatible and allows virtually any
 use), instead of GNU Autotools' GNU General Public License (GPL) which is
@@ -75,8 +91,12 @@ much more restrictive.
 </p>
 </li>
 
-
 </ol>
+
+<p>
+Save the developers! Save on carbon emission (on bandwidth and compile times)!
+Escape from GNU Autohell!
+</p>
 
 <h2>Links</h2>
 
@@ -85,3 +105,4 @@ much more restrictive.
 <a href="">TODO - Fill in.</a>
 </li>    
 </ul>
+

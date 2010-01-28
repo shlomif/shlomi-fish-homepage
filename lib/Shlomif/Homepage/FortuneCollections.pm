@@ -66,6 +66,11 @@ EOF
         'id' => "sharp-programming",
         desc => "a collection of conversations from Freenode's ##programming",
     },
+    {
+        'id' => "shlomif-factoids",
+        desc => "a collection of factoids about people and things (e.g: Chuck Norris)",
+    },
+    
 );
 
 sub get_fortune_records

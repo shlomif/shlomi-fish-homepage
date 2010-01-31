@@ -98,6 +98,43 @@ Save the developers! Save on carbon emission (from bandwidth and compile times)!
 Escape from GNU Autohell!
 </p>
 
+<h2 id="refute-arguments">Refuting Common Arguments Against CMake</h2>
+
+<h3 id="poor-docs">CMake is Poorly Documented</h3>
+
+<p>
+CMake has a tutorial and a reference document as a large
+page on <a href="http://www.cmake.org/">the CMake site</a>,
+<a href="http://www.cmake.org/Wiki/CMake">a helpful wiki</a>, and web
+searches can also prove of help. It also has a mailing list and an IRC
+channel where one can get help. I find it much better than Autoconf and
+friend's documentation, which tends to be incomplete, verbose, split
+and confusing.
+</p>
+
+<h3 id="shared-and-static-libs">One cannot build both a shared library and
+a static library in CMake</h3>
+
+<p>
+TODO : FILL IN .
+</p>
+
+<h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to 
+Autoconf's sh+m4</h3>
+
+<p>
+While Bourne Shell ("sh") and m4 have POSIX standards behind them, they are 
+very awful and vile. Moreover, Autoconf mandates on using GNU m4, which isn't
+standard. Writing Autoconf macros or customising the Autoconf code is
+hard and the results tend to be very easy to break. 
+</p>
+
+<p>
+CMake, on the other hand uses a custom syntax, which is consistent, 
+trustworthy, predictable and reliable. The fact that it isn't "standard" does 
+not make it bad.
+</p>
+
 <h2 id="links">Links</h2>
 
 <ul>

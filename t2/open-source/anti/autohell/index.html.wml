@@ -116,7 +116,13 @@ and confusing.
 a static library in CMake</h3>
 
 <p>
-TODO : FILL IN .
+As a matter of fact, it is possible. Some code to do exactly that is present 
+<a href="http://svn.berlios.de/viewcvs/fc-solve/trunk/fc-solve/source/CMakeLists.txt?view=log">in 
+the Freecell Solver CMakeLists.txt file</a>, based on an insight by
+Risko Gergely, who is its current Debian package maintainer. One disadvantage
+to that is that the objects of the libraries need to be compiled twice, but
+it can be mitigated during the active development stage of the package where 
+only one version of the library is needed.
 </p>
 
 <h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to 

@@ -31,6 +31,7 @@ sub get_syntax_highlighted_html_from_file
         my $syntax = Text::VimColor->new(
             file => $filename,
             html_full_page => 1,
+            ($args{'filetype'} ? (filetype => $args{'filetype'}) : ()),
         );
 
         open my $out, ">", $html_filename
@@ -47,6 +48,7 @@ sub get_syntax_highlighted_html_from_file
 
     $text =~ s{^.*<pre>[\s\n\r]*}{}s;
     $text =~ s{[\s\n\r]*</pre>.*$}{}s;
+    $text =~ s{(class=")syn}{$1}g;
 
     return $text;
 }

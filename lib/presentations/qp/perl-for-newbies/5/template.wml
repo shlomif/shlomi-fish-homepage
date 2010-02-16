@@ -20,12 +20,12 @@ require VimIface;
 </define-tag>
 
 <define-tag quadpres_include_colorized_file whitespace="delete">
-<preserve filename />
+<preserve filename filetype />
 <set-var %attributes />
 <:{
-print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />", 'filetype' => "<get-var filetype />");
 }:>
-<restore filename />
+<restore filename filetype />
 </define-tag>
 
 

@@ -376,6 +376,8 @@ $(T2_DEST)/philosophy/computers/open-source/foss-licences-wars/index.html : $(DO
 
 $(T2_DEST)/philosophy/obj-oss/rev2/index.html: $(DOCBOOK5_RENDERED_DIR)/objectivism-and-open-source.xhtml
 
+$(T2_DEST)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/index.html : $(DOCBOOK4_RENDERED_DIR)/Spark-Pre-Birth-of-a-Modern-Lisp.html
+
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 

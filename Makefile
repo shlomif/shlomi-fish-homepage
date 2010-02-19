@@ -122,13 +122,13 @@ T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \
 					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/rindolf/%,$(T2_DOCS_SRC))
+					   $(filter $(T2_SRC_DIR)/rindolf/%,$(T2_DOCS_SRC)) \
+					   $(filter $(T2_SRC_DIR)/rwlock/%,$(T2_DOCS_SRC))
 
 $(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
 
-VIPE_SOFTWARE_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/rwlock/%,$(VIPE_DOCS_SRC)) \
-						 $(filter $(VIPE_SRC_DIR)/software-tools/%,$(VIPE_DOCS_SRC))
+VIPE_SOFTWARE_DOCS_SRC =
 
 $(VIPE_SOFTWARE_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
@@ -144,7 +144,7 @@ T2_HUMOUR_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/humour/recommendations/%,$(filte
 $(T2_HUMOUR_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
 	touch $@
 
-VIPE_HUMOUR_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/humour/%,$(VIPE_DOCS_SRC))
+VIPE_HUMOUR_DOCS_SRC = 
 
 $(VIPE_HUMOUR_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
 	touch $@

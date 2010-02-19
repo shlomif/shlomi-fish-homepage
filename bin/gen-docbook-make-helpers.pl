@@ -260,12 +260,12 @@ EOF
                 }
                 (1 .. 5)
             ),
-            'lamp' =>
+            'autotools' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/web-publishing-with-LAMP",
+                    "lib/presentations/qp/Autotools",
                 )},
-                dest_dir => "lecture/LAMP/slides",
+                dest_dir => "lecture/Autotools/slides",
             },
             'catb' =>
             {
@@ -274,19 +274,12 @@ EOF
                 )},
                 dest_dir => "lecture/CatB/slides",
             },
-            'joel_test' =>
+            'gimp_1_2' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/joel-test",
+                    "lib/presentations/qp/Gimp/1.2",
                 )},
-                dest_dir => "lecture/joel-test/heb-slides",
-            },
-            'haskell_for_perlers' =>
-            {
-                @{get_quad_pres_files(
-                    "lib/presentations/qp/haskell-for-perl-programmers",
-                )},
-                dest_dir => "lecture/Perl/Haskell/slides",
+                dest_dir => "lecture/Gimp/1/slides",
             },
             'gimp_2_2' =>
             {
@@ -295,32 +288,26 @@ EOF
                 )},
                 dest_dir => "lecture/Gimp/1/2.2-slides",
             },
-            'gimp_1_2' =>
+            'haskell_for_perlers' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/Gimp/1.2",
+                    "lib/presentations/qp/haskell-for-perl-programmers",
                 )},
-                dest_dir => "lecture/Gimp/1/slides",
+                dest_dir => "lecture/Perl/Haskell/slides",
             },
-            'autotools' =>
+            'joel_test' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/Autotools",
+                    "lib/presentations/qp/joel-test",
                 )},
-                dest_dir => "lecture/Autotools/slides",
+                dest_dir => "lecture/joel-test/heb-slides",
             },
-            'website_meta_lect' =>
+            'lamp' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/Website-Meta-Lecture",
-                    {
-                        include_cb => sub {
-                            my $fn = shift;
-                            return ($fn !~ m{\Aexamples/})
-                        },
-                    },
+                    "lib/presentations/qp/web-publishing-with-LAMP",
                 )},
-                dest_dir => "lecture/WebMetaLecture/slides",
+                dest_dir => "lecture/LAMP/slides",
             },
             'freecell_solver_1' =>
             {
@@ -357,7 +344,7 @@ EOF
                 )},
                 dest_dir => "lecture/mini/mdda/slides",
             },
-            'mdda' =>
+            'quad_pres' =>
             {
                 @{get_quad_pres_files(
                     "lib/presentations/qp/Quad-Pres",
@@ -378,13 +365,12 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Blitz/slides",
             },
-            
-            'w2l_technion' =>
+            'w2l_devel' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/welcome-to-linux/Technion",
+                    "lib/presentations/qp/welcome-to-linux/Development",
                 )},
-                dest_dir => "lecture/W2L/Technion/slides",
+                dest_dir => "lecture/W2L/Development/slides",
             },
             'w2l_mini_intro' =>
             {
@@ -393,7 +379,6 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Mini-Intro/slides",
             },
-            
             'w2l_networking' =>
             {
                 @{get_quad_pres_files(
@@ -401,12 +386,25 @@ EOF
                 )},
                 dest_dir => "lecture/W2L/Network/slides",
             },
-            'w2l_devel' =>
+            'w2l_technion' =>
             {
                 @{get_quad_pres_files(
-                    "lib/presentations/qp/welcome-to-linux/Development",
+                    "lib/presentations/qp/welcome-to-linux/Technion",
                 )},
-                dest_dir => "lecture/W2L/Development/slides",
+                dest_dir => "lecture/W2L/Technion/slides",
+            },
+            'website_meta_lect' =>
+            {
+                @{get_quad_pres_files(
+                    "lib/presentations/qp/Website-Meta-Lecture",
+                    {
+                        include_cb => sub {
+                            my $fn = shift;
+                            return ($fn !~ m{\Aexamples/})
+                        },
+                    },
+                )},
+                dest_dir => "lecture/WebMetaLecture/slides",
             },
         },
     },

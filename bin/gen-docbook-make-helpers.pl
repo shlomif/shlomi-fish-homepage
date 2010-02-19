@@ -12,6 +12,11 @@ use List::MoreUtils qw(any);
 my @documents =
 (
     {
+        id => "case-for-drug-legalisation",
+        path => "philosophy/politics/drug-legalisation",
+        base => "case-for-drug-legalisation",
+    },    
+    {
         id => "case-for-drug-legalisation-rev2",
         path => "philosophy/politics/drug-legalisation",
         base => "case-for-drug-legalisation-rev2",

@@ -24,7 +24,7 @@ sub get_syntax_highlighted_html_from_file
 
     my $filename = $args{'filename'};
     
-    my $html_filename = "$filename.html";
+    my $html_filename = "$filename.html-for-quad-pres";
 
     if (is_newer( $filename, $html_filename))
     {

@@ -142,13 +142,12 @@ $(VIPE_SOFTWARE_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 
 #### Humour thing
 
-T2_HUMOUR_DOCS_SRC = $(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC)) \
-					 $(filter $(T2_SRC_DIR)/humour.html.wml,$(T2_DOCS_SRC)) \
-					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC)) \
-					 $(filter $(T2_SRC_DIR)/wonderous.html.wml,$(T2_DOCS_SRC))
+T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
+					 $(filter $(T2_DEST)/humour.html.wml,$(T2_DOCS_DEST)) \
+					 $(filter $(T2_DEST)/wysiwyt.html.wml,$(T2_DOCS_DEST)) \
+					 $(filter $(T2_DEST)/wonderous.html.wml,$(T2_DOCS_DEST))
 
-$(T2_HUMOUR_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
-	touch $@
+$(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
 VIPE_HUMOUR_DOCS_SRC = 
 
@@ -198,8 +197,7 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 	./gen-helpers.pl
 	$(MAKE)
 
-$(T2_SRC_DIR)/humour/recommendations/films/index.html.wml: $(PROD_SYND_FILMS_INC)
-	touch $@
+$(T2_DEST)/humour/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml
 	perl $<

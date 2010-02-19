@@ -87,8 +87,7 @@ SOFTWARE_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Soft
 HUMOUR_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm
 PUZZLES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Puzzles.pm
 
-t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl $(PHILOSOPHY_DEPS)
-	touch $@
+$(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
 	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) )
@@ -97,15 +96,10 @@ $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMO
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))
 
-T2_PHILOSOPHY_DOCS_SRC = \
-	$(filter-out $(T2_SRC_DIR)/philosophy/books-recommends/%, \
-		$(filter-out $(T2_SRC_DIR)/philosophy/Index/%, \
-			$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC)) \
-		)  \
-		$(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC)) \
- 	) $(filter $(T2_SRC_DIR)/DeCSS/%,$(T2_DOCS_SRC)) 
-
-T2_PHILOSOPHY_DOCS = $(patsubst $(T2_SRC_DIR)/%.wml,$(T2_DEST)/%,$(T2_PHILOSOPHY_DOCS_SRC))
+T2_PHILOSOPHY_DOCS = \
+	$(filter $(T2_DEST)/philosophy/%,$(T2_DOCS_DEST)) \
+	$(filter $(T2_DEST)/prog-evolution/%,$(T2_DOCS_DEST)) \
+	$(filter $(T2_DEST)/DeCSS/%,$(T2_DOCS_DEST)) 
 
 $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 
@@ -189,8 +183,7 @@ $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/a
 	./gen-helpers.pl
 	$(MAKE)
 
-$(T2_SRC_DIR)/philosophy/books-recommends/index.html.wml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
-	touch $@
+$(T2_DEST)/philosophy/books-recommends/index.html : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml
 	perl $<

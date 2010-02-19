@@ -97,7 +97,13 @@ $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMO
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))
 
-T2_PHILOSOPHY_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/philosophy/books-recommends/%,$(filter-out $(T2_SRC_DIR)/philosophy/Index/%,$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC))) $(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC)))
+T2_PHILOSOPHY_DOCS_SRC = \
+	$(filter-out $(T2_SRC_DIR)/philosophy/books-recommends/%, \
+		$(filter-out $(T2_SRC_DIR)/philosophy/Index/%, \
+			$(filter $(T2_SRC_DIR)/philosophy/%,$(T2_DOCS_SRC)) \
+		)  \
+		$(filter $(T2_SRC_DIR)/prog-evolution/%,$(T2_DOCS_SRC)) \
+ 	) $(filter $(T2_SRC_DIR)/DeCSS/%,$(T2_DOCS_SRC)) 
 
 T2_PHILOSOPHY_DOCS = $(patsubst $(T2_SRC_DIR)/%.wml,$(T2_DEST)/%,$(T2_PHILOSOPHY_DOCS_SRC))
 
@@ -136,7 +142,7 @@ $(VIPE_SOFTWARE_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 
 #### Humour thing
 
-T2_HUMOUR_DOCS_SRC = $(filter-out $(T2_SRC_DIR)/humour/recommendations/%,$(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC))) \
+T2_HUMOUR_DOCS_SRC = $(filter $(T2_SRC_DIR)/humour/%,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/humour.html.wml,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wysiwyt.html.wml,$(T2_DOCS_SRC)) \
 					 $(filter $(T2_SRC_DIR)/wonderous.html.wml,$(T2_DOCS_SRC))

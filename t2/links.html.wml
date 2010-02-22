@@ -1,5 +1,7 @@
 #include '../template.wml'
 
+#include "div2mag.wml"
+
 #include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "My Cool Links List" />
@@ -558,11 +560,11 @@ Operator from Hell</a> - A really funny story, for those who know about UNIX.
 <a href="http://humorix.org/">Humorix</a> - Linux-related humour items.
 </li>
 <li>
-<a href="http://www.divisiontwo.com/">Divisiontwo Magazine</a> - a great
+<a href="<get-var d2url />">Divisiontwo Magazine</a> - a great
 collection of parodies of the Internet Life. Includes 
-<a href="http://www.divisiontwo.com/articles/mcse2.htm">"Windows vs. Linux on
+<a href="<get-var d2url />articles/mcse2.htm">"Windows vs. Linux on
 the Server and on the Desktop" by Jorge Lopez, MCSE</a> and 
-<a href="http://www.divisiontwo.com/articles/kellysworld.htm">a parody of
+<a href="<get-var d2url />articles/kellysworld.htm">a parody of
 bad web pages</a>.
 </li>
 <li>

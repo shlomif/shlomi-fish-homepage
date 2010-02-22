@@ -323,6 +323,11 @@ my $humour_tree_contents =
                     'text' => "How Many Usenet Readers does it Take to Change a Lightbulb?",
                     'url' => "humour/by-others/how-many-newsgroup-readers-does-it-take-to-change-a-lightbulb.html",
                 },
+                {
+                    'text' => "Division Two Magazine",
+                    'url' => "humour/by-others/division-two/",
+                    'title' => "A mirror of a hilarious parodical site that went offline",
+                },
             ],
         },
         {

@@ -324,6 +324,10 @@ my $humour_tree_contents =
                     'url' => "humour/by-others/how-many-newsgroup-readers-does-it-take-to-change-a-lightbulb.html",
                 },
                 {
+                    'text' => "Top 12 things likely to be overheard if you had a Klingon Programmer",
+                    'url' => "humour/by-others/top-12-things-likely-to-be-overheard-if-you-had-a-klingon-programmer.html",
+                },
+                {
                     'text' => "Division Two Magazine",
                     'url' => "humour/by-others/division-two/",
                     'title' => "A mirror of a hilarious parodical site that went offline",

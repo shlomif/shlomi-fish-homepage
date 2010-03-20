@@ -76,7 +76,9 @@ GNU <a href="http://www.gnu.org/software/autoconf/autoconf.html">Autoconf</a>,
 and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
 a trio of programs to portably build applications across multiple UNIX
 platforms. The de-facto standard in the open-source world, but very kludgy
-and cause many problems.
+and cause many problems. See my 
+<a href="$(ROOT)/open-source/anti/autohell/">"Escape
+from GNU Autohell!"</a> page.
 </li>
 
 <li>
@@ -85,7 +87,7 @@ portability tool that ships with X11. Old and deprecated.
 </li>
 
 <li>
-<a href="http://www.cmake.org/">CMake</a> - a generator for cross-platform
+<a href="http://www.cmake.org/">CMake</a> - a cross-platform generator for
 makefiles, not unlike Autoconf, but works much better. Actively used by
 <a href="http://www.kde.org/">KDE</a> starting from version 4 and by many
 other projects.
@@ -99,7 +101,16 @@ and Windows NT platforms. Proprietary.
 
 <li>
 <a href="http://www.scons.org/">SCons</a> can be used for writing such
-configuration tasks as well.
+configuration tasks as well. It's written in Python, does not distinguish
+between the configuration phase and the build phase and tends to be slow.
+(open source, MIT/X11 License).
+</li>
+
+<li>
+<a href="http://code.google.com/p/waf/">Waf</a> - an open-source (modified
+BSD) tool based on SCons, CMake and other tools and also written in Python.
+Created for KDE 4 as an enhanced version of SCons, but they eventually decided
+to use CMake instead.
 </li>
 
 </ul>

@@ -8,13 +8,14 @@
 <h2 id="intro">Introduction</h2>
 
 <p>
-Almost all GNU packages and most other free and open-source UNIX software are
-using the <a href="http://en.wikipedia.org/wiki/GNU_build_system">GNU
-Autotools suite</a> (Autoconf, Automake, Libtool, etc.) for configuration and 
-building. Due to its many inherent problems, many people have started referring
-to it as <b>GNU Autohell</b>, and this page will explain why this is the
-case and why you should use <a href="http://www.cmake.org/">CMake</a> or
-a different configuration-and-build system.
+Almost all GNU packages and most other free and open-source UNIX software
+packages are using the <a
+href="http://en.wikipedia.org/wiki/GNU_build_system">GNU Autotools suite</a>
+(Autoconf, Automake, Libtool, etc.) for configuration and building. Due to its
+many inherent problems, many people have started referring to it as <b>GNU
+Autohell</b>, and this page will explain why this is the case and why you
+should use <a href="http://www.cmake.org/">CMake</a> or a different
+configuration-and-build system.
 </p>
 
 <h2 id="disadvantages">Disadvantages of GNU Autotools</h2>

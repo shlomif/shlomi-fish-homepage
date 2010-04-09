@@ -2821,6 +2821,48 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="web-devel-frameworks">
+        <meta>
+            <title>Web Development Frameworks</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="markl_">so while i&#39;m on the subject, is there a good perl HTML framework similar to what CakePHP is to PHP ?</saying>
+<saying who="markl_">like an MVC style environment</saying>
+<saying who="markl_">so i&#39;m wondering if mason is &quot;state of the art&quot; or if there are other tools to consider these days :)</saying>
+<saying who="DrForr">Catalyst.</saying>
+<saying who="markl_">catalyst ok, cool ty</saying>
+<saying who="rindolf">markl_: there are plenty of other web-devel frameworks.</saying>
+<saying who="rindolf">perlbot: web frameworks</saying>
+<saying who="perlbot">rindolf: CGI-Application (and Titanium), CGI-Application-Plus, CGI-Builder, CGI-Prototype, Jifty, Catalyst (and Reaction), Mojo, SweetPea, Dancer, Gantry, AxKit, WebGUI</saying>
+<saying who="markl_">rindolf: hmm, way too many it would appear :)</saying>
+<saying who="rindolf">markl_: yeah.</saying>
+<saying who="markl_">what are the easiest ones for people good with perl but not HTML/CSS/AJAX experts ?</saying>
+<saying who="rindolf">markl_: not that Ruby or PHP have fewer.</saying>
+<saying who="markl_">or the most widely adopted one ?</saying>
+<saying who="rindolf">markl_: the most popular appears to be Catalyst.</saying>
+<saying who="markl_">catalyst seems to at least have a book :)</saying>
+<saying who="rindolf">markl_: it has several books.</saying>
+<saying who="rindolf">markl_: I worked a bit with Mojolicious, and it wasn&#39;t too bad, but it reinvents a lot of wheels.</saying>
+<saying who="rindolf">Due to its philosophy.</saying>
+<saying who="rindolf">markl_: I also did some Catalyst projects.</saying>
+<saying who="rindolf">Catalyst is a bit complicated.</saying>
+<saying who="rindolf">sawyer: can you comment about Dancer?</saying>
+<saying who="sawyer">Dancer is a lightweight web framework, it aims to make website development easy and rapid</saying>
+<saying who="Su-Shee">like all the other web frameworks :)</saying>
+<saying who="sawyer">for complex or extensive websites, i recommend Catalyst</saying>
+<saying who="sawyer">but for smaller or not-as-complex website, Dancer is what i use</saying>
+<saying who="markl_">ok ty</saying>
+<me_is who="Su-Shee">wants the one which makes it hard, complicated and difficult ;)</me_is>
+<saying who="sawyer">Su-Shee, true :)</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Web Development Frameworks</tagline>
+            </info>
+        </irc>
+    </fortune>
     <fortune id="slippers-and-perl">
         <meta>
             <title>Slippers and Perl</title>

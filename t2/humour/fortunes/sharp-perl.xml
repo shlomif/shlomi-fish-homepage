@@ -2821,5 +2821,174 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="slippers-and-perl">
+        <meta>
+            <title>Slippers and Perl</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="mst">frikinz: but you&#39;re welcome to ignore us, just come back for your &quot;I told you so&quot; when the penny finally drops :D</saying>
+<saying who="rindolf">buu: define penny finally drops</saying>
+<saying who="rindolf">buubot: define penny finally drops</saying>
+<saying who="buubot">rindolf: penny n 1: a fractional monetary unit of Ireland and the United Kingdom; equal to one hundredth of a pound 2: a coin worth one-hundredth of the value of the basic unit [syn: {cent}, {centime}] [also: {pence} (pl)]</saying>
+<saying who="dngor">frikinz: Reflex is still pretty raw, but it&#39;s eventy without so much loopy.</saying>
+<saying who="rindolf">In Hebrew we say &quot;The phone token has fallen&quot; instead of &quot;the penny finally drops&quot;.</saying>
+<saying who="dngor">Is that related to &quot;the other shoe has dropped&quot;?</saying>
+<saying who="rindolf">dngor: well, it means the same thing as the English expression - &quot;I finally got to the bottom of it.&quot;</saying>
+<saying who="rindolf">Or understood it.</saying>
+<saying who="dngor">Oh, they&#39;re completely different idioms.</saying>
+<me_is who="mst">beats dngor with a slipper</me_is>
+<saying who="rindolf">mst: :-D</saying>
+<saying who="Su-Shee">kinky.</saying>
+<saying who="mst">Su-Shee: wrt the topic [&quot;Su-Shee wants the web-development framework that makes web-development hard, difficult and complicated&quot;], it&#39;s called Maypole :)</saying>
+<saying who="rindolf">mst: heh.</saying>
+<saying who="rindolf">mst: yes, I can imagine that about Maypole.</saying>
+<saying who="Su-Shee">mst, avar: thank you so much. ;)</saying>
+<saying who="Su-Shee">please mail the sourcecode to rindolf who put it in the topic ;)</saying>
+<saying who="rindolf">Su-Shee: I can CPAN it.</saying>
+<saying who="Su-Shee">the topic?</saying>
+<saying who="mutewit">I have a string and am looking for a quick way to extract all 5-character slices out of it.</saying>
+<saying who="rindolf">Su-Shee: :-)</saying>
+<saying who="rindolf">IRC-Freenode-Perl-Topic-SuShee-WebDevelFrameworks-v0.0.1.tar.gz</saying>
+<saying who="mutewit">For eg. &#39;abcdef&#39; returns &#39;abcde&#39;, &#39;bcdef&#39;</saying>
+<saying who="mutewit">Any suggestions?</saying>
+<saying who="rindolf">mutewit: use subst</saying>
+<saying who="rindolf">mutewit: use substr</saying>
+<saying who="rindolf">mutewit: with a map</saying>
+<saying who="rindolf">eval: my $long_str = &quot;0123456789abcdefgh&quot;; [map { substr($long_s, $_, $_+5 } (0 .. length($long_s)-5)]</saying>
+<saying who="buubot">rindolf: ERROR: syntax error at (eval 36) line 1, at EOF</saying>
+<saying who="rindolf">eval: my $long_str = &quot;0123456789abcdefgh&quot;; [map { substr($long_s, $_, $_+5) } (0 .. length($long_s)-5)]</saying>
+<saying who="buubot">rindolf: []</saying>
+<saying who="mutewit">rindolf: Awesome.</saying>
+<saying who="rindolf">eval: my $long_s = &quot;0123456789abcdefgh&quot;; [map { substr($long_s, $_, $_+5) } (0 .. length($long_s)-5)]</saying>
+<saying who="buubot">rindolf: [&quot;01234&quot;,123456,2345678,&quot;3456789a&quot;,&quot;456789abc&quot;,&quot;56789abcde&quot;,&quot;6789abcdefg&quot;,&quot;789abcdefgh&quot;,&quot;89abcdefgh&quot;,&quot;9abcdefgh&quot;,&quot;abcdefgh&quot;,&quot;bcdefgh&quot;,&quot;cdefgh&quot;,&quot;defgh&quot;]</saying>
+<saying who="rindolf">Thrid time the charm!</saying>
+<saying who="mst">... thrid</saying>
+<me_is who="rindolf">hits buubot with a big strict pragma.</me_is>
+<me_is who="mst">turns the slipper on rindolf</me_is>
+<saying who="rindolf">mst: yes, my typing sucks today.</saying>
+<saying who="rindolf">But f**k it! IRC is not exactly the declaration of independence.</saying>
+<saying who="pragma_">ow!</saying>
+<saying who="rindolf">pragma_: pardon?</saying>
+<me_is who="rindolf">hits pragma_ with mst&#39;s slipper so it will really hurt.</me_is>
+<saying who="pragma_">why are you hitting buubot with me?</saying>
+<saying who="rindolf">pragma_: the strict pragma.</saying>
+<saying who="rindolf">pragma_: not you.</saying>
+<saying who="rindolf">perlbot: strict</saying>
+<saying who="perlbot">rindolf: Perl strictures - http://perldoc.perl.org/strict.html</saying>
+<saying who="rindolf">pragma_: ^^^</saying>
+<saying who="rindolf">pragma_: we call the lowercase modules pragmata (sp?) in Perl.</saying>
+<saying who="rindolf">http://en.wiktionary.org/wiki/Special:Search?search=pragmata - hmm....</saying>
+<saying who="rindolf">I thought pragmata was a valid plural of pragma.</saying>
+<saying who="dngor">ow?  ow!</saying>
+<saying who="mutewit">rindolf: Are you sure that generates only strings of length 5?</saying>
+<saying who="rindolf">mutewit: well, you need to watch from fencepost errors.</saying>
+<saying who="mst">mutewit: hey, he got you half way there</saying>
+<saying who="rindolf">mutewit: oh wait.</saying>
+<saying who="mst">mutewit: how about you read p3rl.org/substr and p3rl.org/map and have a go yourself</saying>
+<saying who="rindolf">mutewit: yes  , you need substr($long_s, $_, 5)</saying>
+<saying who="mst">mutewit: this is a help-you-to-learn channel</saying>
+<saying who="mst">mutewit: not a &quot;write your code for you&quot; channel</saying>
+<saying who="rindolf">mutewit: and beware from fencepost errors.</saying>
+<saying who="rindolf">like substr($long_s , 1000, 5)</saying>
+<saying who="rindolf">Because that will be &quot;&quot;</saying>
+<saying who="rindolf">Or a 4 chars length.</saying>
+<saying who="mutewit">rindolf: I wanted the length argument to be 5 :p</saying>
+<saying who="mutewit">mst: I understand, I just missed the $_ + 5 issue.</saying>
+<saying who="mst">mutewit: right. what I&#39;m saying is, you should have experimented</saying>
+<saying who="rindolf">mutewit: yes, I know.</saying>
+<saying who="mst">mutewit: then shown us the experiment and said &quot;I can&#39;t work out why this is still wrong, here&#39;s what I&#39;ve worked out so far&quot;</saying>
+<saying who="mst">mutewit: then we can help you learn</saying>
+<saying who="mst">mutewit: assuming learning to write stuff yourself is what you&#39;re aiming for</saying>
+<me_is who="rindolf">waits for tybalt89 to come up with a funky regex to do it.</me_is>
+<saying who="mst">(if it isn&#39;t, please just throw yourself off a cliff or something, kthx ;)</saying>
+<saying who="rindolf">mst: I think that&#39;s the case, no need to preach to mutewit about it.</saying>
+<saying who="mutewit">mutewit: I did, and figured out the soln. when switching windows.</saying>
+<saying who="mst">mutewit: aye. I&#39;m just trying to explain how to get the most learning out of us as well as the most working code.</saying>
+<me_is who="rindolf">sometimes thinks we spend much more IRC volume discussing netiquette than actually suffering from the bad netiquette.</me_is>
+<saying who="mutewit">But by the time I came back to the channel there was a whole page of &quot;preaching&quot;.</saying>
+<saying who="mutewit">I was using a split method with array indexing and it felt too much like a C-approach.</saying>
+<saying who="rindolf">mutewit: oh, you split the string into chars?</saying>
+<saying who="mst">yeah, by the time you&#39;ve done map, join, split, ...</saying>
+<saying who="mst">you&#39;ve basically just reimplemented substr badly :)</saying>
+<saying who="mutewit">rindolf: That&#39;s what I was doing, but the map/substr approach is a lot cleaner.</saying>
+<saying who="rindolf">mutewit: yeah/</saying>
+<saying who="rindolf">mutewit: split into chars sometimes has some uses.</saying>
+<saying who="rindolf">mutewit: but this reminds me too much of SICP.</saying>
+<saying who="rindolf">perlbot: sicp</saying>
+<saying who="perlbot">rindolf: http://mitpress.mit.edu/sicp/ - &quot;Structure and Interpretation of Computer Programs&quot; - A Classical Text on Programming</saying>
+<saying who="rindolf">mutewit: see - http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide13.html</saying>
+<saying who="rindolf">mutewit: this is how an SICP programmer will implement a simple text processing task.</saying>
+<saying who="mutewit">SICP, love the book.</saying>
+<saying who="mutewit">and all the OCaml work this year has given rise to a functional bent of mind</saying>
+<saying who="mutewit">which is kinda screwing around with my perl code.</saying>
+<saying who="rindolf">mutewit: yeah.</saying>
+<saying who="rindolf">mutewit: http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide12.html - this is the fastest Perl solution.</saying>
+<saying who="rindolf">At least in speed.</saying>
+<saying who="rindolf">It can be a little shorter with a regex lookahead, but it&#39;s less elegant and slower.</saying>
+<saying who="rindolf">http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide9.html - there you go.</saying>
+<saying who="rindolf">mutewit: did you know how to program before reading SICP?</saying>
+<saying who="rindolf">I think it&#39;s not a good introductory book.</saying>
+<saying who="rindolf">MIT are going to ditch it in favour of some Python/Robotics curriculum.</saying>
+<saying who="mst">I think it&#39;s only a good introductory book if you know some math and have the brain to follow it</saying>
+<saying who="mst">it teaches a lot of hard concepts very quickly</saying>
+<saying who="Su-Shee">mst: from a &quot;I&#39;m from the humanities department&quot; point of view it&#39;s managable. it&#39;s not easy, but everyone can work with it.</saying>
+<saying who="tybalt89">eval: $_ = &quot;0123456789abcdefgh&quot;; [ /(?=(.{5}))/g ]</saying>
+<saying who="buubot">tybalt89: [&quot;01234&quot;,12345,23456,34567,45678,56789,&quot;6789a&quot;,&quot;789ab&quot;,&quot;89abc&quot;,&quot;9abcd&quot;,&quot;abcde&quot;,&quot;bcdef&quot;,&quot;cdefg&quot;,&quot;defgh&quot;]</saying>
+<saying who="mutewit">rindolf: Yes.</saying>
+<saying who="rindolf">mutewit: ah. Using what?</saying>
+<saying who="rindolf">tybalt89++ # Up for the challenge.</saying>
+<saying who="mutewit">and yes, MIT ditched SICP in favor of a Python-based intro course.</saying>
+<saying who="tybalt89">rindolf: I was off in other windows :(</saying>
+<saying who="tybalt89">mutewit: ^^  for 5 char slices</saying>
+<saying who="rindolf">mutewit: don&#39;t use it if you want future generations to understand it.</saying>
+<me_is who="rindolf">slaps tybalt89 with mst&#39;s slipper for golfing mutewit&#39;s solution and telling him it&#39;s a good idea.</me_is>
+<saying who="tybalt89">rindolf: that&#39;s not golfing, just common simple regex :)</saying>
+<saying who="rindolf">tybalt89: sigh.</saying>
+<saying who="rindolf">tybalt89: simple.</saying>
+<saying who="rindolf">irregular regular expression.</saying>
+<saying who="rindolf">Maybe use Regexp::Common</saying>
+<saying who="mutewit">I added in tybalt89&#39;s code but commented it for future reference.</saying>
+<saying who="mst">I&#39;d definitely use the substr approach for real code</saying>
+<saying who="mst">tybalt89&#39;s code is cleverness to prove it can be done; I don&#39;t believe he was recommending it</saying>
+<saying who="tybalt89">mst: sigh, yes, I am recommending it.  It&#39;s the clearest solution.</saying>
+<saying who="mst">tybalt89: I respectfully disagree.</saying>
+<saying who="mst">I find the substr approach far more obvious</saying>
+<saying who="Chazz">rindolf, ty. :)</saying>
+<saying who="mst">but then, I mostly write applications perl rather than scripts, so I only engage in regexp cleverness when actively useful</saying>
+<saying who="rindolf">tybalt89: look-aheads and look-behinds are dark corners of the Perl not-so-reg-regexes</saying>
+<saying who="Yaakov">In the context of this particular problem, it&#39;s pretty straightforward, but, knowledge of the development/maintenance team(s) would push my choce one way or another.</saying>
+<saying who="tybalt89">mst: note it took rindolf three tries, and even then he got it wrong.</saying>
+<saying who="rindolf">tybalt89: well, I&#39;m not focused now.</saying>
+<saying who="mst">tybalt89: map substr($str, $_, 5), 0 .. length($str)-5; ?</saying>
+<saying who="mst">maybe -6</saying>
+<me_is who="tybalt89">turns the lens, trying to focus rindolf </me_is>
+<saying who="rindolf">mst: -5</saying>
+<saying who="mst">but it&#39;s hardly difficult; rindolf&#39;s just having a day of silly mistakes</saying>
+<saying who="rindolf">Unit tests!</saying>
+<saying who="mst">I&#39;d expect him to get it right first time when on form too :)</saying>
+<saying who="rindolf">Some clear code is hard to get right.</saying>
+<saying who="rindolf">Doesn&#39;t make it less clear.</saying>
+<saying who="mst">yeah</saying>
+<saying who="rindolf">Most people will not write a correct binary search at first try.</saying>
+<saying who="tybalt89">&quot;maybe -6&quot; is proof of unclearness :)</saying>
+<saying who="rindolf">But the correct binary search is easy to digest.</saying>
+<saying who="mst">tybalt89: no, it&#39;s proof it&#39;s 8pm on a sunday and I&#39;m not particularly awake either</saying>
+<saying who="mst">but your code just made me go &quot;hang on, WHAT?!&quot;</saying>
+<saying who="mst">then I had to stop and dissect it</saying>
+<saying who="mst">-then- I saw what you were doing</saying>
+<saying who="rindolf">mst++</saying>
+<saying who="mst">also, the substr approach displays the semantics and the reasoning</saying>
+<saying who="mst">whereas the regex approach displays, well, line noise, frankly</saying>
+<saying who="rindolf">mst: why don&#39;t we agree to disagree with tybalt89 ?</saying>
+<saying who="rindolf">mst: so how&#39;s the weather? ;-)</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Slippers and Perl</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

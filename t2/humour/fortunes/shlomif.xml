@@ -3143,5 +3143,65 @@ What does "IDK" stand for? I don't know.
         </info>
     </irc>
 </fortune>
+<fortune id="d3x-and-shlomif-about-foss-versioning">
+    <meta>
+        <title>FOSS Versioning</title>
+    </meta>
+    <irc>
+        <body>
+<saying who="d3x">btw, you can do mplayer -dumpaudio -dumpfile file.mp3</saying>
+<saying who="d3x">no need to reencode</saying>
+<saying who="rindolf">This -dumpfile is a nice trick.</saying>
+<saying who="rindolf">Is it new?</saying>
+<saying who="rindolf">I wonder when mplayer will hit 1.0 already.</saying>
+<saying who="rindolf">Ah.</saying>
+<saying who="rindolf">All the stuff I saw told me to use WAV and then encode.</saying>
+<saying who="d3x">mplayer and 1.0? i&#39;m not really sure it&#39;s their goal</saying>
+<saying who="rindolf">They will stay at 1.0RC-foo forever?</saying>
+<saying who="d3x">although i would be glad if they had some sensible versioning</saying>
+<saying who="rindolf">Yes.</saying>
+<saying who="rindolf">At the moment perl-Mojolicious is at 0.999924.</saying>
+<saying who="rindolf">At least perl-Moose hit 1.00</saying>
+<saying who="d3x">lol</saying>
+<saying who="rindolf">Without any substantial changes from 0.99.</saying>
+<saying who="rindolf">But you&#39;ve got to upgrade somehow.</saying>
+<saying who="rindolf">perl-Moose is MDV/RH notation, but I like it.</saying>
+<saying who="d3x">imo it&#39;s just stupid not to release 1.0</saying>
+<saying who="rindolf">I dislike libmoose-perl</saying>
+<saying who="rindolf">Yes.</saying>
+<saying who="d3x">wine did so and now they have normal versioning</saying>
+<saying who="rindolf">Though most of my CPAN modules are sub-1.0.</saying>
+<saying who="rindolf">http://search.cpan.org/~shlomif/</saying>
+<saying who="rindolf">I think except for one  module (where I used 0.2.0 0.4.0 and eventually hit 0.8.0 and had to go to 1.000) all my 1.0 and above modules are adopted.</saying>
+<saying who="d3x">they are sub-1.0, but they are not 0.9.999.2010.03.11-rc5</saying>
+<saying who="d3x">:)</saying>
+<saying who="rindolf">One of them used the CVS revisions as  versions.</saying>
+<saying who="rindolf">d3x : LOL.</saying>
+<saying who="rindolf">Yes.</saying>
+<saying who="rindolf">d3x: can I quote you on that?</saying>
+<saying who="d3x">i say it&#39;s stupid to make releases up to 0.9.something and then not to release 1.0</saying>
+<saying who="rindolf">I collect quotes on my homepage.</saying>
+<saying who="d3x">sure you can</saying>
+<saying who="rindolf">At the moment I have freecell-solver-2.42.0</saying>
+<saying who="rindolf">But I hope the new release will be 3.0.0</saying>
+<saying who="d3x">the one that was bought by freecell enterprise? :D</saying>
+<saying who="rindolf">I&#39;ve left GNOME and gtk+/glib behind.</saying>
+<saying who="rindolf">d3x yes.</saying>
+<saying who="rindolf">Freecell Solver Enterprises™ Inc.</saying>
+<saying who="rindolf">Ah, so you&#39;ve seen that.</saying>
+<saying who="d3x">yes, you posted a link on #debian</saying>
+<saying who="rindolf">Yes.</saying>
+<saying who="rindolf">You should add a digest to the version.</saying>
+<saying who="rindolf"> 0.9.999.2010.03.11-rc5-adc83b19e793491b1c6ea0fd8b46cd9f32e592fc</saying>
+<saying who="d3x">lol</saying>
+<saying who="rindolf">In case you&#39;re using git or hg.</saying>
+        </body>
+        <info>
+            <channel>private conversation</channel>
+            <network>Freenode</network>
+            <tagline>d3x and Shlomi Fish (rindolf) about FOSS Versioning</tagline>
+        </info>
+    </irc>
+</fortune>
 </list>
 </collection>

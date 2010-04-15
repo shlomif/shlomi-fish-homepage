@@ -398,7 +398,7 @@ $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae
 $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 	cp -f $< $@
 
-t2/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html.wml: lib/docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml
+$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: lib/docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml
 
 
 %.show:

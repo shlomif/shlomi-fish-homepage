@@ -5,8 +5,22 @@ use warnings;
 
 use CGI;
 
+sub debug
+{
+    require Data::Dumper;
+    print "Content-Type: text/plain\n\nHello\n";
+    print Data::Dumper::Dumper(\%ENV);
+    exit(0);
+}
+
+# debug();
 my $cgi = CGI->new();
 my $path = $ENV{'REDIRECT_SCRIPT_URL'};
+
+if (!defined($path) and !exists($ENV{APACHE_REDIRECT_URL}))
+{
+    $path = "/";
+}
 
 my @urls =
 (
@@ -135,22 +149,25 @@ continue
     $idx++;
 }
 
+my $url;
+
 if (my ($id) = $path =~ m{\A/([^/]+)\z})
 {
-    my $url = $urls_by_id{$id};
+    $url = $urls_by_id{$id};
+}
 
-    if (defined($url))
-    {
-        print $cgi->redirect(
-            -uri => $url,
-            -status => 301,
-        );
-        exit(0);
-    }
-    else
-    {
-        print $cgi->header();
-        print <<'EOF';
+if (defined($url))
+{
+    print $cgi->redirect(
+        -uri => $url,
+        -status => 301,
+    );
+    exit(0);
+}
+else
+{
+    print $cgi->header();
+    print <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
     html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -170,6 +187,5 @@ This URL alias is not defined.
 </body>
 </html>
 EOF
-    }
 }
 

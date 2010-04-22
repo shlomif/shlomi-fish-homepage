@@ -3032,5 +3032,82 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="worst-perl-programmer-in-the-world">
+        <meta>
+            <title>Worst Perl Programmer in the World</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="papertigers">is there just a way of importing the global variables in the module from the main script?</saying>
+<saying who="anno">no</saying>
+<saying who="nadim">yes</saying>
+<saying who="rindolf">anno: you can using Exporter</saying>
+<saying who="anno">depends</saying>
+<saying who="nadim">but I hope no one will teach you</saying>
+<saying who="rindolf">nadim: sorry. :-(</saying>
+<saying who="anno">from the main script?</saying>
+<saying who="nadim">for what?</saying>
+<saying who="rindolf">nadim: about the Exporter.</saying>
+<saying who="nadim">bad boy!</saying>
+<saying who="tm604">papertigers: yes. but definitely don&#39;t do this: { no strict &#39;refs&#39;; *{&quot;main::$_&quot;} = sub () { $constant{$_} } foreach keys %constant; }</saying>
+<saying who="rindolf">nadim: :-(</saying>
+<saying who="rindolf">papertigers: please design a good API using subroutines and objects.</saying>
+<saying who="nadim">OK I get it you are all working towards the same goal. making the worst perl developer in the universe</saying>
+<saying who="rindolf">nadim: yes, someone has to outcompete me.</saying>
+<saying who="Khisanth">that would be hard</saying>
+<saying who="rindolf">nadim: I&#39;m tired of being the worst Perl hacker for 5 years straight.</saying>
+<saying who="simcop2387">heh</saying>
+<saying who="rindolf">nadim: it&#39;s not easy.</saying>
+<saying who="nadim">.me hands the black camel to rindolf</saying>
+<saying who="rindolf">nadim: it involves many commitments.</saying>
+<saying who="nadim">rindolf: lol, true</saying>
+<saying who="Khisanth">but at least it explains all the advice you have been giving</saying>
+<saying who="nadim">hehe</saying>
+<saying who="rindolf">Khisanth: true. :-)</saying>
+<saying who="rindolf">LOL.</saying>
+<saying who="simcop2387">rindolf: i dunno if anyone actually read the code to Language::Farnsworth they might think otherwise</saying>
+<saying who="Khisanth">and I am not joking</saying>
+<saying who="nadim">http://search.cpan.org/dist/Lingua-tlhInganHol-yIghun/ all!</saying>
+<saying who="nadim">rindolf: when you can program perl like that it will be a good day to die</saying>
+<saying who="rindolf">nadim: Klingon?</saying>
+<saying who="nadim">right</saying>
+<saying who="simcop2387">nadim++</saying>
+<saying who="rindolf">nadim: heh, nice.</saying>
+<saying who="squeeks">klingon? http://search.cpan.org/~jwalt/Acme-Lingua-NIGERIAN-1.0.0/NIGERIAN.pm blah.</saying>
+<saying who="shorten">squeeks&#39;s url is at http://xrl.us/bhg9bo</saying>
+<saying who="rindolf">nadim: I&#39;ll recommend it to someone so he can outcompete me.</saying>
+<me_is who="rindolf">rubs his hands with an evil grin on his face.</me_is>
+<saying who="Khisanth">nadim: that doesn&#39;t seem to be using the correct font</saying>
+<saying who="nadim">the module is impressing (Damian is no joke) even the documentation is great</saying>
+<saying who="rindolf">nadim: we&#39;ve got a plan!</saying>
+<me_is who="nadim">hides</me_is>
+<me_is who="mst">dearly loves Damian&#39;s code</me_is>
+<saying who="mst">but I really do wish it was all in the Acme:: namespace where it belongs</saying>
+<saying who="rindolf">mst: heh.</saying>
+<saying who="nadim">I like his API&#39;s. very difficult to find something that is not complete and well thought</saying>
+<saying who="rindolf">nadim: yes, but he tends to neglect them and then they accumulate bugs.</saying>
+<saying who="nadim">I could list ten other names here</saying>
+<saying who="nadim">Ingy!</saying>
+<saying who="rindolf">nadim: heh.</saying>
+<saying who="nadim">oops, I tried not to :)</saying>
+<saying who="mst">nadim: IO::All</saying>
+<saying who="mst">nadim: not *everything* ingy writes needs to be Acme</saying>
+<saying who="mst">though, yes, quite a bit of it :D</saying>
+<saying who="nadim">mst: I didn&#39;t mean acme. I think Ingy has a lot of great ideas.</saying>
+<saying who="mst">oh, you&#39;re talking about maintainership</saying>
+<saying who="nadim">yes</saying>
+<saying who="mst">yeah, why do you think I got so good at giving my modules away?</saying>
+<saying who="nadim">what&#39;s your secret?</saying>
+<saying who="tm604">ingy was responsible for jemplate, I think - still one of my favourites.</saying>
+<saying who="mst">nadim: first you give &#39;em commit bits, then you give &#39;em co-maint, then when they&#39;re not looking you make a run for it.</saying>
+<me_is who="nadim">makes a mental note</me_is>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>World's Worst Perl Programmer (5 years straight)</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

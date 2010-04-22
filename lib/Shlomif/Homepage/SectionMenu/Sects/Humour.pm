@@ -264,6 +264,10 @@ my $humour_tree_contents =
                     'url' => "humour/bits/How-many-Wikipedia-Editors/",
                 },
                 {
+                    'text' => "Announcing Freecell Solver™ Enterprise Edition",
+                    'url' => "humour/bits/Freecell-Solver-Enterprise-Edition/",
+                },
+                {
                     'text' => "Collections of Facts",
                     'url' => "humour/bits/facts/",
                     'title' => "Collection of funny facts about various people an things",

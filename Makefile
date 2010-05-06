@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets
+all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres 
 
 include lib/make/gmsl/gmsl
 
@@ -467,6 +467,14 @@ common/style.css.ttml: $(COMMON_CSSS)
 
 common/style-2008.css.ttml: $(COMMON_CSSS)
 	touch $@
+
+
+MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
+
+mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1)
+
+$(MOJOLICIOUS_LECTURE_SLIDE1): t2/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+	asciidoc -o $@ $<
 
 lib/docbook/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoc --backend=docbook -o $@ $<

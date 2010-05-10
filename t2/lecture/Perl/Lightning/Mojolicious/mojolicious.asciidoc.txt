@@ -14,7 +14,7 @@ its core modules.
 * As a result: implements a lot of functionality that exists in many other
 CPAN distributions in slightly different ways.
 
-* Licence: [Artistic 2.0]http://opensource.org/licenses/artistic-license-2.0.php 
+* Licence: http://opensource.org/licenses/artistic-license-2.0.php[Artistic 2.0]
 (open-source, mostly BSD-style).
 
 Code Examples
@@ -236,7 +236,17 @@ password.
 
 -----------------------
 
-Why I don't like it
+What I like about it
+--------------------
+
+* Easy to install (due to the lack of dependencies).
+
+* Mostly bug-free.
+** The code appears to be of good quality.
+
+* Results in brief, yet easy to understand code.
+
+What I don't like about it
 -------------------
 
 * Too many reinvented wheels to the ones on CPAN.
@@ -249,3 +259,16 @@ or debugging the source.
 
 * "I just work here." - I got paid for doing a Mojolicious::Lite project
 and was instructed to use Mojolicious which I did.
+** I got paid to work with much worse technologies, though.
+
+Verdict
+-------
+
+* The reinvented wheels is a deal breaker for me.
+
+* Mojolicious seems like a nice try, and I'm happy to get paid writing
+Mojolicious code, but it's still not my pot at the end of the rainbow.
+
+* Some friends told me that http://search.cpan.org/dist/Dancer/[Dancer] is 
+nice, and it relies premade CPAN modules.
+** No first-hand experience with it.

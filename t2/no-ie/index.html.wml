@@ -547,17 +547,27 @@ known as the Mozilla suite, SeaMonkey is an integrated Internet application
 suite that includes a browser, and an email application.
 </li>
 <li>
-<a href="http://www.konqueror.org/">Konqueror</a> - an open-source 
-web-browser for the UNIXes' <a href="http://www.kde.org/">KDE</a> environment. 
-Very convenient and integrated well into KDE.
-</li>
-<li>
-<a href="http://www.apple.com/safari/">Safari</a> - a browser based on
-Konqueror's KHTML engine for Mac OS X.
+<a href="http://www.apple.com/safari/">Safari</a> - a browser by Apple
+(with <a href="$(ROOT)/open-source/anti/apple/">all the warnings regarding
+Apple</a> based on the open-source <a href="http://webkit.org/">WebKit 
+engine</a> that was derived from the now under-maintained KHTML engine by
+the KDE project. Safari itself is not open-source and only runs on Mac OS X
+and Windows.
 </li>
 <li>
 <a href="http://www.opera.com/">Opera</a> - a very configurable and fast
 cross-platform browser. (Not open-source and binary only, though).
+</li>
+<li>
+<a href="http://code.google.com/chromium/">Google Chromium/Chrome</a> - an
+open-source browser from Google based on WebKit and many other open-source
+projects (which
+<a href="http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora">some 
+developers complained about Google forking frequently</a>). Has an 
+<a href="http://community.livejournal.com/shlomif_tech/46078.html">unusual 
+and non-standard UI</a>, which some people love and some people hate. Also
+may report a lot of information about one's browsing habits to Google by
+default. 
 </li>
 </ul>
 

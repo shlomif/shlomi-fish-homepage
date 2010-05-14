@@ -243,8 +243,10 @@ table.thumbs
 [% INCLUDE "lang_switch.css.ttml" %]
 .about_site
 {
+[% IF 0 %]
     width: 35%;
     float: right;
+[% END %]
     margin-left: 1em;
     margin-right: 10pt;
     [% SET about_color = "#008000" %]

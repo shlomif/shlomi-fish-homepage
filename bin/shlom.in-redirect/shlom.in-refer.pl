@@ -154,15 +154,40 @@ my $url;
 if (my ($id) = $path =~ m{\A/([^/]+)\z})
 {
     $url = $urls_by_id{$id};
-}
+    if (defined($url))
+    {
+        print $cgi->redirect(
+            -uri => $url,
+            -status => 301,
+        );
+        exit(0);
+    }
+    else
+    {
+        print $cgi->header();
+        print <<'EOF';
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Unknown shlom.in URL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
 
-if (defined($url))
-{
-    print $cgi->redirect(
-        -uri => $url,
-        -status => 301,
-    );
-    exit(0);
+<h1>URL not found</h1>
+
+<p>
+This URL alias is not defined. If you've reached this URL and think it should
+be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
+Fish (the Webmaster)</a> and let him know of this problem.
+</p>
+</body>
+</html>
+EOF
+    }
 }
 else
 {
@@ -174,18 +199,28 @@ else
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>$title</title>
+<title>Welcome to http://shlom.in/</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 
-<h1>URL not found</h1>
+<h1>Welcome to http://shlom.in/</h1>
 
 <p>
-This URL alias is not defined.
+This domain serves as <a href="http://www.shlomifish.org/">Shlomi Fish's</a>
+<b>non-public</b> URL shortening service. As such, it is fully under his
+control, does not have a convenient web-interface to add more links, and
+cannot be used to redirect to spam links. Therefore, I ask you not to block
+it in spam filters.
 </p>
+
+<p>
+In the future, there may be a list of public URLs that are pointed by this
+service, but it's not implemented yet. For more information please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
+</p>
+
 </body>
 </html>
 EOF
 }
-

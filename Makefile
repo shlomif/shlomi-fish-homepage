@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres 
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres
 
 include lib/make/gmsl/gmsl
 
@@ -658,3 +658,17 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | perl -pe 's!^\+!!' > $@
+
+GEN_STYLE_CSS_FILES = style.css style-2008.css
+
+T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
+VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))
+
+css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS)
+
+$(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(TTMLS_COMMON_DEPS)
+	perl bin/gen-css.pl -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
+
+$(VIPE_CSS_TARGETS) : $(VIPE_DEST)/% : lib/%.ttml $(TTMLS_COMMON_DEPS)
+	perl bin/gen-css.pl -o $@ $(VIPE_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
+

@@ -214,20 +214,21 @@ my $essays_tree_contents =
                 },
                 {
                     'text' => "Optimising Multitasking in PDL",
-                    'host' => "t2",
                     'url' => "lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/",
                 },
                 {
                     'text' => "Test::Run",
-                    'host' => "t2",
                     'url' => "lecture/Perl/Lightning/Test-Run/",
                     'title' => "Test::Run - a New and Improved Test Harness",
                 },
                 {
                     'text' => "Too Many Ways to do it",
-                    'host' => "t2",
                     'url' => "lecture/Perl/Lightning/Too-Many-Ways/",
-                },                   
+                },
+                {
+                    'text' => "Mojolicious and Mojolicious::Lite",
+                    'url' => "lecture/Perl/Lightning/Mojolicious/",
+                },
             ],
         },
     ],

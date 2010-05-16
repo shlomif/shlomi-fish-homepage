@@ -8,7 +8,7 @@ package Template::Preprocessor::TTML;
 use warnings;
 use strict;
 
-use base 'Template::Preprocessor::TTML::Base';
+use base 'Class::Accessor';
 
 use Template;
 use Template::Preprocessor::TTML::CmdLineProc;
@@ -38,20 +38,7 @@ our $VERSION = '0.0101';
 
 =head1 FUNCTIONS
 
-=head2 initialize()
-
-Internal function for initializing the object.
-
 =cut
-
-sub initialize
-{
-    my $self = shift;
-    my %args = (@_);
-    $self->argv([@{$args{'argv'}}]);
-
-    return 0;
-}
 
 =head2 run
 
@@ -164,6 +151,6 @@ sub _mode_regular
 
 package main;
 
-Template::Preprocessor::TTML->new('argv' => [@ARGV])->run();
+Template::Preprocessor::TTML->new({'argv' => [@ARGV]})->run();
 
 

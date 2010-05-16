@@ -664,11 +664,15 @@ GEN_STYLE_CSS_FILES = style.css style-2008.css
 T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
 VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
+CSS_GEN_SCRIPT = bin/gen-css.pl
+
+CSS_TARGETS_COMMON_DEPS = $(TTMLS_COMMON_DEPS) $(CSS_GEN_SCRIPT)
+
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS)
 
-$(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(TTMLS_COMMON_DEPS)
-	perl bin/gen-css.pl -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
+$(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
+	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
 
-$(VIPE_CSS_TARGETS) : $(VIPE_DEST)/% : lib/%.ttml $(TTMLS_COMMON_DEPS)
-	perl bin/gen-css.pl -o $@ $(VIPE_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
+$(VIPE_CSS_TARGETS) : $(VIPE_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
+	perl $(CSS_GEN_SCRIPT) -o $@ $(VIPE_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
 

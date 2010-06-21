@@ -3620,7 +3620,7 @@ into programs.  You know, like .pmc files, or Python's .pyc files. Uh.
 </p>
 
 <p>
- As well, if more people use Punie (Perl 1 on Parrot) this year than native Perl
+As well, if more people use Punie (Perl 1 on Parrot) this year than native Perl
 1 -- a possibility -- then Perl 1 scripts automatically become Perl 1 programs
 becaues Punie can use Parrot's JIT. I don't know if this powerful upgrade from
 script to program is retroactive, but I see no reason why not.
@@ -4712,5 +4712,41 @@ Good luck with your mission.
         </info>
       </quote>
     </fortune>
+    <fortune id="larry-wall-about-do-one-thing-and-do-it-well">
+      <meta>
+        <title>Larry Wall about Do One Thing and Do it Well</title>
+      </meta>
+      <quote>
+          <body>
+              <p>
+                  Or think about shell programming, and reductionism. How many
+                  times have we heard the mantra that a program should do one
+                  thing and do it well?
+              </p>
+
+              <p> 
+                  Well...Perl does one thing, and does it well. What it does
+                  well is to integrate all its features into one language. More
+                  importantly, it does this without making them all look like
+                  each other. Ducts shouldn't look like girders, and girders
+                  shouldn't look like ducts. Neither of those should look like
+                  water pipes, and it's really important that water pipes not
+                  look like sewer pipes. Or smell like sewer pipes. Modernism
+                  says that we should make all these things look the same (and
+                  preferably invisible). Postmodernism says it's okay for them
+                  to stick out, and to look different, because a duct ought to
+                  look like a duct, and a sewer pipe ought to look like a sewer
+                  pipe, and hammer ought to look like a hammer, and a telephone
+                  ought to look like either a telephone, or a Star Trek
+                  communicator. Things that are different should look
+                  different.
+              </p>
+          </body>
+          <info>
+              <author>Larry Wall</author>
+              <work href="http://www.wall.org/~larry/pm.html">"Perl, the first postmodern computer language"</work>
+          </info>
+      </quote>
+  </fortune>
   </list>
 </collection>

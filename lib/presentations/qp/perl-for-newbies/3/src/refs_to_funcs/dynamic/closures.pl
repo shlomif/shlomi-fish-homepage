@@ -14,7 +14,7 @@ sub create_counter
     return $counter_func;
 }
 
-my @counters = (&create_counter(), &create_counter());
+my @counters = (create_counter(), create_counter());
 
 # Initialize the random number generator to a constant value;
 srand(24);

@@ -16,20 +16,20 @@ use vars qw(@ISA @EXPORT);
 # This function calculates the greatest common divisor of two integers 
 sub gcd
 {
-    my $a = shift;
-    my $b = shift;
+    my $m = shift;
+    my $n = shift;
 
-    if ($b > $a)
+    if ($n > $m)
     {
-        ($a, $b) = ($b , $a);
+        ($m, $n) = ($n , $m);
     }
     
-    while ($a % $b > 0)
+    while ($m % $n > 0)
     {
-        ($a, $b) = ($b, $a % $b);
+        ($m, $n) = ($n, $m % $n);
     }
 
-    return $b;
+    return $n;
 }
 
 1;

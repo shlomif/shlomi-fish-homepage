@@ -5,8 +5,8 @@ use warnings;
 
 use Calc;
 
-my $a = 200;
-my $b = 15;
+my $m = 200;
+my $n = 15;
 
-print "gcd(\$a,\$b) == " , gcd($a,$b), "\n";
+print "gcd($m,$n) == " , gcd($m,$n), "\n";
 

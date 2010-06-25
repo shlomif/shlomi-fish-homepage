@@ -56,7 +56,7 @@ sub create_bank_account
 }
 
 # Create ten bank accounts
-my @accounts = (map { &create_bank_account("Person #".$_) } (0 .. 9));
+my @accounts = (map { create_bank_account("Person #".$_) } (0 .. 9));
 
 while (my $line = <>)
 {

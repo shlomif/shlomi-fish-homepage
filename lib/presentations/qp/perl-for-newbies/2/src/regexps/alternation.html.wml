@@ -19,6 +19,7 @@ so it is recommended to use grouping to bound it.
 The following pattern matches a sequence of whitespace-delimited "words" 
 that each may contain either a set of letters or a set of digits (= a
 positive integer):
+</p>
 
 <quadpres_code_block>
 (?:[a-zA-Z]+|[0-9]+)(?: +(?:[a-zA-Z]+|[0-9]+))*

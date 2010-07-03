@@ -268,6 +268,10 @@ my $humour_tree_contents =
                     'url' => "humour/bits/Freecell-Solver-Enterprise-Edition/",
                 },
                 {
+                    'text' => "COBOL, the New Age Programming Language",
+                    'url' => "humour/bits/COBOL-the-New-Age-Programming-Language/",
+                },
+                {
                     'text' => "Collections of Facts",
                     'url' => "humour/bits/facts/",
                     'title' => "Collection of funny facts about various people an things",

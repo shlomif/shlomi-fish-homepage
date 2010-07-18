@@ -255,6 +255,11 @@ my $software_tree_contents =
                     'url' => "open-source/anti/autohell/",
                     'title' => "Escape from GNU Autohell!",
                 },
+                {
+                    'text' => "Stop Abusing JavaScript",
+                    'url' => "open-source/anti/javascript/",
+                    'title' => "Why JavaScript Should not be Used Outside Web Browser Scripting",
+                },
             ],
         },
         {

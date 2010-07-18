@@ -1,0 +1,118 @@
+#include '../template.wml'
+<latemp_subject "Don't Abuse JavaScript!" />
+
+<p>
+<b>Last Updated:</b> 28-January-2010
+</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+JavaScript has become popular due to being useful for scripting browsers,
+which is acceptable due to being the only commonly-acceptable portable
+choice for that. However, lately, it has been utilised as a host language
+for many other realms where there are far saner and superior alternatives.
+</p>
+
+<p>
+This page aims to explain why JavaScript should not be abused for such stuff.
+</p>
+
+<h2 id="drawbacks">Drawbacks of JavaScript</h2>
+
+<h3 id="sprintf">No sprintf</h3>
+
+<p>
+JavaScript has no <a href="http://en.wikipedia.org/wiki/Printf">sprintf-like
+function</a> for formatting strings.
+</p>
+
+<h3 id="date-formatting">No date-formatting routines</h3>
+
+<p>
+In addition to that, JavaScript does not have a date formatting function.
+</p>
+
+<h3 id="sort">No sorting routines</h3>
+
+<p>
+JavaScript has no built-in routines for sorting lists or arrays.
+</p>
+
+<h3 id="implicit-scoping">Implicit scoping - var is optional</h3>
+
+<p>
+In JavaScript, variables can spring into existence with the <tt>var</tt>
+keyword being optional.
+</p>
+
+<h3 id="line-break">Line breaks terminate expressions</h3>
+
+<p>
+Line breaks (in addition to ";") terminate expressions. This can cause
+many subtle errors.
+</p>
+
+<h3 id="closures">Starting a closure is not convenient</h3>
+
+<p>
+One needs to type "(function () { function() { ... } })" to start a closure.
+</p>
+
+<h3 id="foreach">Foreach Loop</h3>
+
+<p>
+JavaScript's foreach loop loops on the indices of the list 
+instead of its values.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li>
+<a href="http://www.youtube.com/watch?v=hQVTIJBZook">"JavaScript: The Good 
+Parts" Tech Talk</a> - should be called "JavaScript: The Bad Parts".
+</li>
+<li>
+<a href="http://weblogs.mozillazine.org/roadmap/archives/2008/04/popularity.html">"Popularity"</a> (via 
+<a href="http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html">chromatic's 
+"A Short History of the Development of JavaScript"</a>):<br />
+<ul>
+<li>
+<blockquote>
+<p>
+Whether any existing language could be used, instead of inventing a new one,
+was also not something I decided. The diktat from upper engineering management
+was that the language must “look like Java”. That ruled out Perl, Python, and
+Tcl, along with Scheme. Later, in 1996, John Ousterhout came by to pitch Tk and
+lament the missed opportunity for Tcl.
+</p>
+</blockquote>
+</li>
+
+<li>
+<blockquote>
+<p>
+Ok, back to JavaScript popularity. We know certain Ajax libraries are popular. Is JavaScript popular? It's hard to say. Some Ajax developers profess (and demonstrate) love for it. Yet many curse it, including me. I still think of it as a quickie love-child of C and Self. Dr. Johnson's words come to mind: "the part that is good is not original, and the part that is original is not good."
+</p>
+</blockquote>
+</li>
+
+</ul>
+</li>
+</ul>
+
+<h2 id="hall_of_shame">Hall of Shame</h2>
+
+<ul>
+
+<li>
+<a href="http://amarok.kde.org/wiki/Development/Scripting_HowTo_2.0">Amarok 2.0
+Scripting</a> (dropping backwards compatibility with older scripts).
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/GNOME_Shell">GNOME Shell</a>
+</li>
+
+</ul>

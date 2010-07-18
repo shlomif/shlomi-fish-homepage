@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 An object is a set of variables and functions that are associated with
 this set. By calling these functions (commonly referred to as methods) 
@@ -18,10 +16,7 @@ methods.
 </p>
 
 <p>
-By making a set of perl functions into a class, it is possible to make sure,
+By making a set of perl functions into a class, it is possible to make sure
 they can be instantiated and re-used. Furthermore, this class can later be
 expanded into a more powerful class, by making another class inherit it.
 </p>
-
-
-

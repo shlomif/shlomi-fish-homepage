@@ -137,9 +137,9 @@ $(VIPE_SOFTWARE_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 #### Humour thing
 
 T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/humour.html.wml,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/wysiwyt.html.wml,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/wonderous.html.wml,$(T2_DOCS_DEST))
+					 $(filter $(T2_DEST)/humour.html,$(T2_DOCS_DEST)) \
+					 $(filter $(T2_DEST)/wysiwyt.html,$(T2_DOCS_DEST)) \
+					 $(filter $(T2_DEST)/wonderous.html,$(T2_DOCS_DEST))
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 

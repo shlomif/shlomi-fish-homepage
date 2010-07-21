@@ -392,8 +392,8 @@
                     hard-disk due to several large source code checkouts,
                     and as a result needed a bigger hard-disk. And the
                     only hard-disks the lab had were 80 GB ones, which were
-                    bought because they were the cheapest (per-disk, not 
-                    per-capacity). Please, <emphasis role="bold">buy
+                    bought because they were the cheapest (per unit, not 
+                    per capacity). Please, <emphasis role="bold">buy
                         large enough hard-disks</emphasis>.
                 </para>
                 <para>
@@ -407,8 +407,8 @@
                 <para>
                     Sometimes you'll need <emphasis role="bold">several
                         computers</emphasis>, or a
-                    decent <emphasis role="bold">virtual machine 
-                        emulator</emphasis>, to run 
+                    decent <emphasis role="bold">virtual machine
+                        emulator</emphasis>, to run
                     alternative operating systems on the same machine.
                 </para>
 
@@ -422,7 +422,7 @@
                 </para>
 
                 <para>
-                    You also need a 
+                    You also need a
                     <link xlink:href="http://better-scm.berlios.de/">state-of-the-art
                         version control system</link> , of which there are
                     currently several high-quality open-source alternatives.
@@ -432,8 +432,9 @@
                 </para>
 
                 <para>
-                    If there's a good commercial software that your employees
-                    like to use and can recommend, don't hesitate to buy it.
+                    If there's a good commercial software application
+                    that your employees like to use and can recommend, don't
+                    hesitate to buy it.
                     You'll also find <link xlink:href="http://safari.oreilly.com/">O'Reilly 
                         Safari</link> Licences to be a good idea so your
                     employees can easily look up and read information in many 
@@ -964,12 +965,12 @@
                     explains the motivation and method of writing functional
                     spec. A functional spec describes how the end-user will
                     use and interact with the program. It is not a technical
-                    spec which explains how the inner software will work.
+                    spec which explains how the inner code will work.
                 </para>
                 <para>
                     From my experience, functional specs are fun to write,
                     reveal many problems in the initial design, and make you
-                    think how the software will work on the inside.
+                    think how the program will work on the inside.
                 </para>
                 <para>
                     Here are three examples for functional specs I wrote:
@@ -1081,7 +1082,7 @@
                     <title>Design and Planning</title>
                 </info>
                 <para>
-                    Most people agree that designing a software, planning
+                    Most people agree that designing a program, planning
                     it and thinking about it is a good idea. Extreme
                     Programming suggests to have one design meeting every 
                     week, which sounds reasonable.
@@ -1137,7 +1138,7 @@
                     <title>Software Engineering Methods to Avoid</title>
                 </info>
                 <para>
-                    There are few software engineering methods that I find
+                    There are a few software engineering methods that I find
                     pointless, so I'd like to briefly point them out.
                 </para>
                 <para>
@@ -1319,7 +1320,7 @@ function create_employee(params)
             </para>
             <para>
                 As Joel indicates, a bug report, email, or query usually
-                indicate a problem in the software: a bug, a missing feature,
+                indicate a problem in the application: a bug, a missing feature,
                 or something that's not clear enough. Such problems need to
                 be fixed in the code.
             </para>
@@ -1376,26 +1377,27 @@ function create_employee(params)
             </para>
 
             <para>
-                Similar in software, you can often see competing products
-                displacing more established competition, or sometimes
-                a market where there isn't a clear winner (e.g: 
+                Similarly, in the software world, you can often see competing 
+                products displacing more established competition, or sometimes
+                a market where there isn't a clear winner (e.g:
                 <link xlink:href="http://xwinman.org/">window
                     managers and desktop environments for Unix</link>,
-                Bug trackers, text editors, etc.) 
+                Bug trackers, text editors, etc.)
             </para>
 
             <para>
                 Even making rounder wheels is a good way to earn
                 a living and to get respect.<footnote xml:id="ideas-at-the-same-time" label="IdeasSameTime">
                     <para>
-                        I once saw a quote that said:
+                        <link xlink:href="http://www.shlomifish.org/humour/fortunes/shlomif-fav.html#same-ideas-as-everybody-else">Barry Jones said</link>
                     </para>
                     <blockquote>
                         <para>
-                            If you have the same ideas two weeks before 
-                            everybody else - you'll be considered a visionary. 
-                            If you have them two years before everybody else,
-                            you'll be considered a lunatic.
+                            If you have the same ideas as everybody else, but
+                            have them one week earlier than everyone else -
+                            then you will be hailed as a visionary. But if you
+                            have them five years earlier, you will be named a
+                            lunatic.
                         </para>
                     </blockquote>
                     <para>
@@ -1590,7 +1592,7 @@ function create_employee(params)
                 a repetitive task, they should write a script to do that. And 
                 it's a good idea to keep good README files, comments, etc. and 
                 to use a standard building procedure, or prepare 
-                distribution-level packages for the software.
+                distribution-level packages for the program.
             </para>
 
             <para>
@@ -1613,7 +1615,7 @@ function create_employee(params)
             </info>
 
             <para>
-                Another essential software is a good web-based <link 
+                Another essential program to use is a good web-based <link 
                     xlink:href="http://en.wikipedia.org/wiki/Bugtracker"><emphasis role="bold">bug-tracker</emphasis></link>. 
                 Joel Spolsky has <link 
                     xlink:href="http://www.joelonsoftware.com/articles/fog0000000029.html">an 
@@ -1960,14 +1962,14 @@ function create_employee(params)
             which is very insightful and inspiring. Among other things, Spolsky
             says there that every support request needs to be fixed twice:
             first of all by providing a fix or a workaround for the customer, 
-            and secondly by implementing a permanent fix in the software,
+            and secondly by implementing a permanent fix in the product,
             the web-site or whatever, to prevent your establishment
             from ever getting such requests again. 
         </para>
         <para>
             In addition to what Spolsky says there, I should note that you 
             should provide help in as many channels as possible: from 
-            telephone to E-mail to 
+            telephone to E-mail to
             <link xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC 
                 (Internet Relay Chat)</link> to providing your own web forums
             and mailing lists for help, etc. In order to prevent 
@@ -1988,14 +1990,14 @@ function create_employee(params)
             A particularly bad example of an awful tech support incident
             is <link xlink:href="http://community.livejournal.com/shlomif_hsite/11327.html">the 
                 suspension of my former Google AdSense account</link>. On April,
-            2009, I was informed that my Google AdSense Account was Disabled
+            2009, I was informed that my Google AdSense account was disabled
             because it caused a "significant risk to Google's AdWords
             advertisers", and from then on I could not log in to my account
             to get help. After I filled and submitted an appeal form, I 
             received no reply after a month. Another appeal I sent did not
             get any response either. I next tried the Google AdSense support
             forum and received some replies from people who were not Google
-            employees that did not seem like a likely cause for an account
+            employees, that did not seem like a likely cause for an account
             termination, and no reply from an AdSense employee. After I talked
             with a few Google employees I know trying to reach someone in
             AdSense, one of them told me they did not know how to contact 
@@ -2008,13 +2010,13 @@ function create_employee(params)
             A somewhat better, but still bad incident was with the <link
                 xlink:href="http://sharethis.com/">ShareThis.com button</link>
             that I installed in my site. After they started using Google
-            Analytics in their re-usable widget (which I don't want), I wrote a
+            Analytics in their re-usable widget (which I didn't want), I wrote a
             support request and was replied with a laconic E-mail that only
             said: <quote>At this time, there is no way to disable our widget
                 from accessing Google Analytics.</quote>. The problem with this
             is that they are likely to receive the same complaint from other
             users like me, and so will have to reply times and again, instead
-            of fixing the underlying problem, like Joel Spolsky suggested.
+            of fixing the underlying problem, like Spolsky suggested.
             I myself have decided to move away from ShareThis and others
             are likely to follow suit.
         </para>
@@ -2034,6 +2036,7 @@ function create_employee(params)
         </para>
 
     </section>
+
     <section xml:id="weekly-reports">
         <info>
             <title>Weekly Reports and Other Ways to Keep Track of Your Employees</title>

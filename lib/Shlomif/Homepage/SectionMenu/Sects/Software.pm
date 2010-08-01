@@ -121,6 +121,14 @@ my $software_tree_contents =
                     'text' => "Bits and Bobs",
                     'url' => "open-source/bits.html",
                     'title' => "Small Open Source Programs",
+                    'subs' =>
+                    [
+                        {
+                            'text' => "Greasemonkey Scripts",
+                            'url' => "open-source/bits-and-bobs/greasemonkey/grease.html",
+                            'title' => "Greasemonkey User Scripts for Firefox and other browsers",
+                        },
+                    ],
                 },
                 {
                     'text' => "Personal Configuration",

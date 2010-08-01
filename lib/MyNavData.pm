@@ -291,6 +291,11 @@ my $tree_contents =
                             'url' => "grad-fu/",
                             'hide' => 1,
                         },                
+                        {
+                            'text' => "Bits and Bobs",
+                            'title' => "Various Small-Scale Open-Source Works",
+                            'url' => "open-source/bits.html",
+                        },
                     ],
                 },
                 {
@@ -307,11 +312,6 @@ my $tree_contents =
                     'text' => "Contributions",
                     'title' => "Contributions to Other Projects, that I did not Start",
                     'url' => "open-source/contributions/",
-                },
-                {
-                    'text' => "Bits and Bobs",
-                    'title' => "Various Small-Scale Open-Source Works",
-                    'url' => "open-source/bits.html",
                 },
                 {
                     'text' => "Anti Pages",

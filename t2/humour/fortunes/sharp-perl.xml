@@ -3184,5 +3184,37 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="it-is-slower">
+        <meta>
+            <title>It's slower</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="tm604">eval: my $txt = &quot;this is a test&quot;; my $rslt = substr($txt, 4, length($txt) - 4, undef); [ $txt, $rslt ];</saying>
+<saying who="buubot">tm604: [&quot;this&quot;,&quot; is a test&quot;]</saying>
+<saying who="tm604">^ can anyone suggest a neater way of writing that? thought undef for the 3rd substr parameter would work instead of explicitly giving a length.</saying>
+<saying who="rindolf">eval: my $txt = &quot;this is a test&quot;; my $rslt = substr($txt, 4, - 4, q{}); [ $txt, $rslt ];</saying>
+<saying who="buubot">rindolf: [&quot;thistest&quot;,&quot; is a &quot;]</saying>
+<saying who="tm604">Just surprised that omitting the length for substr isn&#39;t the same as passing undef.</saying>
+<saying who="anno">tm604: sometimes perl makes a difference between &quot;not specified&quot; and undef</saying>
+<saying who="ishi">tm604: wouldn&#39;t regexpr be shorted?  I&#39;m not sure what passes as &#39;neat&#39; in perl :)</saying>
+<saying who="ishi">shorter, even...</saying>
+<saying who="rindolf">eval: @s = (&quot;Long string this is a test&quot; =~ m{\A(.{0,6})(.*?)\z}ms); [@s]</saying>
+<saying who="buubot">rindolf: [&quot;Long s&quot;,&quot;tring this is a test&quot;]</saying>
+<saying who="rindolf">tm604: will that work?</saying>
+<saying who="tm604">rindolf: thanks, that may be a better option.</saying>
+<saying who="rindolf">tm604: nice. :-)</saying>
+<saying who="Khisanth">that would definitely not be &quot;better&quot; ...</saying>
+<saying who="ishi">it&#39;s slower ;)</saying>
+<saying who="tm604">hmm, since I&#39;m passing this through SOAP::Lite through a vpn on the other side of the world maybe three times a day, I think I&#39;ll have to rewrite this part in highly-efficient x64 assembler with fallback to GPU if available.</saying>
+<saying who="sacx">nah you need an FPGA</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Mission critical fast</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

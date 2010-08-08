@@ -4,8 +4,8 @@ use strict;
 
 foreach my $file (@ARGV)
 {
-    open I, "<$file";
-    my $contents = join("",<I>);
+    open my $in, "<", $file;
+    my $contents = join("",<$in>);
     close(I);
 
     my $c = "[\\x00-\\xFF]";
@@ -17,7 +17,7 @@ foreach my $file (@ARGV)
     my $end = "</pre>\n</td>\n</tr>\n</table>\n";
     $contents =~ s/(<p>(\s*\n)*<pre>($c*?)<\/pre>)/<p>\n$start$3$end\n/g;
 
-    open O, ">$file";
-    print O $contents;
-    close(O);
+    open my $out, ">", $file;
+    print {$out} $contents;
+    close($out);
 }

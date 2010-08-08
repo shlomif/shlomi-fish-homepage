@@ -5,8 +5,8 @@ my (@lines, $l);
 
 my $filename = shift;
 
-open I, "<", $filename;
-while ($l = <I>)
+open my $in, "<", $filename;
+while ($l = <$in>)
 {
     chomp($l);
     push @lines, $l;

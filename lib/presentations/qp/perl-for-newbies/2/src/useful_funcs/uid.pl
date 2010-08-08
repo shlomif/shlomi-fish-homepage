@@ -6,8 +6,8 @@ my ($line, @parts);
 
 my $user_name = shift;
 
-open I, "<", "/etc/passwd";
-while ($line = <I>)
+open my $in, "<", "/etc/passwd";
+while ($line = <$in>)
 {
     @parts = split(/:/, $line);
     if ($parts[0] eq $user_name)
@@ -16,7 +16,7 @@ while ($line = <I>)
         exit(0);
     }    
 }
-close(I);
+close($in);
 
 print $user_name . "'s user ID was not found!\n";
 exit(-1);

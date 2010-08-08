@@ -5,8 +5,8 @@ my ($filename, $lines_num, $line, $c);
 
 $lines_num = 0;
 $filename = "input.txt";
-open I,  "<", $filename;
-while ($line = <I>)
+open my $in,  "<", $filename;
+while ($line = <$in>)
 {
     $c = substr($line, 0, 1);
     if (lc($c) eq "a")
@@ -14,7 +14,7 @@ while ($line = <I>)
         $lines_num++;
     }
 }
-close(I);
+close($in);
 
 print "In " , $filename, " there are ", 
     $lines_num, " lines that start with \"A\".\n";

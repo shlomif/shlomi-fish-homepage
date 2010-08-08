@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
-open I, "<./src/intro.html";
-my $text = join("",<I>);
-close(I);
+open my $in, "<", "./src/intro.html";
+my $text = join("",<$in>);
+close($in);
 
 $text =~ 

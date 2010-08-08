@@ -18,19 +18,21 @@ sub wanted
 
 foreach my $filename (@files)
 {
-    open I, "<$filename";
-    open O, ">$filename.wml";
+    open my $in, "<", $filename
+        or die "Cannot open input file - $filename - $!";
+    open my $out, ">", "$filename.wml"
+        or die "Cannot open output file - $filename - $!";
     
-    print O "#include 'template.wml'\n\n";
-    my $text = join("", <I>);
+    print {$out} "#include 'template.wml'\n\n";
+    my $text = join("", <$in>);
 
     $text =~ s/<!--+ *& *begin_footer *-->.*?<!--+ *& *end_footer *--+>//s;
     $text =~ s/<!--+ *& *begin_header *-->.*?<!--+ *& *end_header *--+>//s;
     $text =~ s/<!--+ *& *begin_contents *-->.*?<!--+ *& *end_contents *--+>/<qpcontents \/>/gs;
     $text =~ s/<!--+ *& *begin_menupath *-->(.*?)<!--+ *& *end_menupath *--+>/<menupath>$1<\/menupath>/gs;
     
-    print O $text;
-    close(I);
-    close(O);
+    print {$out} $text;
+    close($in);
+    close($out);
     
 }

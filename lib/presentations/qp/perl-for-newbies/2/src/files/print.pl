@@ -5,10 +5,10 @@ use warnings;
 
 my $pyramid_side = 20;
 
-open O, ">", "pyramid.txt";
+open my $out, ">", "pyramid.txt";
 for($a=1 ; $a <= $pyramid_side ; $a++)
 {
-    print O "X" x $a;
-    print O "\n";
+    print {$out} "X" x $a;
+    print {$out} "\n";
 }
-close(O);
+close($out);

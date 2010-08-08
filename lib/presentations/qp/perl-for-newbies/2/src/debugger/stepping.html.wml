@@ -57,7 +57,7 @@ main::(add_cr.pl:8):	{
   DB&lt;1&gt; n
 main::(add_cr.pl:9):	    $contents = "";
   DB&lt;1&gt; n
-main::(add_cr.pl:11):	    open I, "&lt;$file";
+main::(add_cr.pl:11):	    open my $in, "&lt;", $file;
   DB&lt;1&gt; 
 </quadpres_code_block>
 

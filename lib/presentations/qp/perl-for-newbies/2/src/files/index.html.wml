@@ -16,9 +16,9 @@ capital one.
 </p>
 
 <p>
-To open a file use the <tt>open MyFileHandle, $mode, $file_path;</tt> 
-notation, and to close a file use the <tt>close(MyFileHandle);</tt> notation. 
-The <tt>$mode</tt> determines whether the file will be 
+To open a file use the <tt>open my $my_file_handle, $mode, $file_path;</tt> 
+notation, and to close a file use the <tt>close($my_file_handle);</tt> 
+notation. The <tt>$mode</tt> determines whether the file will be 
 open for reading, writing, appending or some of them. The following table 
 should give  you a quick reference:
 </p>

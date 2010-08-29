@@ -4785,5 +4785,39 @@ Hmm... This is an old story, so this probably won't receive any mods, but I have
           </info>
       </quote>
     </fortune>
+    <fortune id="szabgab-on-if-it-aint-broke-dont-fix-it">
+      <meta>
+        <title>What does "If it ain't broke, don't fix it." really mean?</title>
+      </meta>
+      <quote>
+          <body>
+<p>
+I keep hearing and reading this nice proverb <b>if it ain't broke, don't fix it</b>. The latest
+apperance was in response to <a href="http://community.livejournal.com/shlomif_tech/37969.html">Shlomi Fish</a>
+suggesting that some Ancient Perl code should be replaced by Modern Perl code.
+</p>
+<p>
+I am not saying that every pices of code should be rewritten every 6 months but in my understanding
+that sentence actually translates to <b>let's wait till it breaks and then panic</b>.
+</p>
+<p>
+I think people who say that sentence are afraid that the new version will break something. Sure 
+there is always a chance that a change introduces an error but if we are afraid to touch the code 
+what will happen when later on we encounter a case where it does not work? For example if we
+need to use it in a new environment. Will we have the courage to change the code then? How much will it 
+cost in money, time, and lost sleep?
+</p>
+<p>
+I think we have been trying to teach ourselves that we should have really good test coverage of our
+code and then we can easily refactor it and get rid of technical debt. So why do we keep hearing
+that sentence?
+</p>
+          </body>
+          <info>
+              <author>Gabor Szabo</author>
+              <work href="http://szabgab.com/blog/2009/11/1259431123.html">What does "If it ain't broke, don't fix it." really mean?</work>
+          </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

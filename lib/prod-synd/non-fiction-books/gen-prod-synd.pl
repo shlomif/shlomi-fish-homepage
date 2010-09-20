@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use Term::ReadPassword;
+
 use XML::Grammar::ProductsSyndication;
 
 use XML::LibXML::XPathContext;
@@ -44,7 +46,8 @@ $ps->update_cover_images(
             },
         'amazon_token' => "0VRRHTFJECHSKYNYD282",
         'amazon_associate' => "shlomifishhom-20",
-    }
+        'amazon_sak' => read_password('Secret Access Key: '),
+    },
 );
 
 1;

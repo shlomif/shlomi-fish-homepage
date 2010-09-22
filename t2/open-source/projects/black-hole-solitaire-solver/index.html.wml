@@ -3,19 +3,39 @@
 <latemp_subject "Black Hole Solitaire Solver" />
 
 <p>
-This is a Perl CPAN distribution to solve
+This is a solver, written in C, to solve
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
-Solitaire variant called "Black Hole"</a>. It provides a command line
-application that after being fed with a layout will emit the cards to move
-to the "black hole" (the foundation).
+Solitaire variant called "Black Hole"</a>. It provides a portable C library,
+and a command line application that after being fed with a layout will emit 
+the cards to move to the "black hole" (the foundation).
 </p>
 
 <h2 id="download">Download</h2>
 
-<p>
-<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">Download
-Games-Solitaire-BlackHole-Solver from the CPAN</a>
-</p>
+<set-var ver="0.2.0" />
+<set-var arc="black_hole_solver-<get-var ver />.tar.xz" />
+<set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
+<set-var sqlite_dump_url="http://prdownload.berlios.de/fc-solve/<get-var sqlite_dump_arc />" />
+
+<ul>
+
+<li>
+<a href="http://prdownload.berlios.de/fc-solve/<get-var arc />"><get-var arc /></a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">The Games-Solitaire-BlackHole-Solver CPAN Distribution</a> - an older version of the
+solver written as a proof-of-concept, which produces identical results, but
+is much slower and consumes more memory.
+</li>
+
+<li>
+<a href="<get-var sqlite_dump_url />"><get-var sqlite_dump_arc /></a> - results
+from running the solver on the first 1 million PySolFC deals - inside the dump
+of an <a href="http://www.sqlite.org/">SQLite</a> database. 
+</li>
+
+</ul>
 
 <h3 id="download-solving-data">Solving Data</h3>
 
@@ -60,7 +80,7 @@ Record</a>
 <li>
 <a href="http://fc-solve.berlios.de/">Freecell Solver</a> and
 <a href="http://fc-solve.berlios.de/links.html#other_solvers">other Solitaire
-solvers</a>
+solvers</a>.
 </li>
 </ul>
 

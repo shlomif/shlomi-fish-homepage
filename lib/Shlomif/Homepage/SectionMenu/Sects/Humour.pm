@@ -276,6 +276,10 @@ my $humour_tree_contents =
                     'url' => "humour/bits/COBOL-the-New-Age-Programming-Language/",
                 },
                 {
+                    'text' => "Copying Ubuntu Bug No. 1",
+                    'url' => "humour/bits/Copying-Ubuntu-Bug-No-1/",
+                },
+                {
                     'text' => "Collections of Facts",
                     'url' => "humour/bits/facts/",
                     'title' => "Collection of funny facts about various people an things",

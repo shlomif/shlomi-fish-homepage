@@ -3332,5 +3332,40 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="discussion-revision-numbers">
+        <meta>
+            <title>Revision Numbers</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">jawnsy: no version numbers of what?</saying>
+<saying who="jawnsy">rindolf: version numbers for your documentation stuff. like a way to download the web site as a tarball, with a version number (maybe even a date)</saying>
+<saying who="rindolf">jawnsy: ah.</saying>
+<saying who="rindolf">jawnsy: I&#39;m using Subversion for it.</saying>
+<saying who="rindolf">jawnsy: I can start making releases with version numbers.</saying>
+<saying who="tag">subversion revision numbers are not the same as version numbers, and typically shouldn&#39;t be used to source version numbers.</saying>
+<saying who="tag">unless you don&#39;t care that the version number is totally meaningless.  In that case, you might as well use a date so it can atleast mean *something*</saying>
+<saying who="buu">tag: Let&#39;s use UUIDS!</saying>
+<saying who="tag">oh, like git?</saying>
+<saying who="tag">yeah it&#39;s the same</saying>
+<saying who="buu">&quot;Dude, version 91239213912ASD!@#ASDASDADS!@#!@!&quot; is totally superiour to &quot;124912312ASD1242412FF232&quot;</saying>
+<saying who="tag">They have no real value, other than the ability to uniquely identify a something</saying>
+<saying who="rindolf">buu: LOL.</saying>
+<saying who="Botje">well, git&#39;s sha1 sum at least identify a point in time</saying>
+<saying who="rindolf">tag: I won&#39;t use subversion rev numbers.</saying>
+<saying who="tag">without telling you jack shit about what that something is</saying>
+<saying who="buu">To be fair, svn numbers increase..</saying>
+<saying who="rindolf">buu: yes, but an earlier branch can have a later rev number.</saying>
+<saying who="rindolf">buu: I think Config-IniFiles used CVS revisions as version numbers.</saying>
+<saying who="buu">rindolf: Uh oh</saying>
+<saying who="buu">rindolf: I feel the world around me collapsing.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Discussing revision numbers</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

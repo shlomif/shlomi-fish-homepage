@@ -53,8 +53,12 @@ $(DIST_DIR): $(PACKAGE_DEPS)
 	cp $(FILES) $(DATS) $(EXTRA_FILES) $(DIST_DIR)
 
 $(PACKAGE_BASE): $(PACKAGE_DEPS)
+	if test -e $@ ; then \
+		echo "Error! Cannot overwrite an existing archive. Please bump the version" 1>&2 ;\
+		exit -1 ;\
+	fi
 	@make distdir
-	tar -czvf $(PACKAGE_BASE) $(DIST_DIR)
+	tar -czvf $@ $(DIST_DIR)
 	rm -fr $(DIST_DIR)
 
 $(INDEX_FILE): fortunes-index.html $(PACKAGE_BASE)

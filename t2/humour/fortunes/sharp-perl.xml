@@ -1058,33 +1058,6 @@
         </info>
       </irc>
     </fortune>
-    <fortune id="sharp-offtopic-not-a-bug">
-      <meta>
-        <title>Not a bug on #offtopic on OFTC</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sarnold: you go to OGI?</saying>
-          <saying who="sarnold">rindolf: no; but my boss and a co-worker are professors there, and other co-workers earned degrees there..</saying>
-          <saying who="rindolf">sarnold: OK.</saying>
-          <saying who="muli">sarnold, have you got one of those pesky things?</saying>
-          <saying who="sarnold">muli: just Bachelor of Arts .. no Masters or Ph.D...</saying>
-          <saying who="rindolf">sarnold: B.Sc or B.A.?</saying>
-          <saying who="muli">rindolf, Bachelor of Arts is B.A. </saying>
-          <saying who="rindolf">muli: I know. But I was just checking.</saying>
-          <saying who="sarnold">rindolf: ah, you're right, B.Sc.. I chickened out on the language  requirements :)</saying>
-          <saying who="rindolf">muli: see?? LOL.</saying>
-          <saying who="muli">rindolf, sometimes, two bugs cancel each other.  </saying>
-          <saying who="rindolf">muli: wisely spoken.</saying>
-          <saying who="rindolf">But mine wasn't a bug - it was a sanity check.</saying>
-        </body>
-        <info>
-            <channel>#perl</channel>
-            <network>Freenode</network>
-            <tagline>Not a bug</tagline>
-        </info>
-      </irc>
-    </fortune>
     <fortune id="sharp-perl-who-youre-gonna-call">
       <meta>
         <title>Who you're gonna call on Freenode's #perl</title>
@@ -3373,7 +3346,6 @@
         </meta>
         <irc>
             <body>
-
 <saying who="Glanzmann">Hello; Is there a perl module that can all a routine with complex typed defined in a wsdl file?</saying>
 <saying who="Debolaz">Glanzmann: You mean a SOAP client with WSDL support?</saying>
 <saying who="Su-Shee">wsdl as in soap and wsdl? then there is SOAP::WSDL.</saying>
@@ -3391,6 +3363,52 @@
                 <channel>#perl</channel>
                 <network>Freenode</network>
                 <tagline>SOAP</tagline>
+            </info>
+        </irc>
+    </fortune>
+    <fortune id="eclipsed">
+        <meta>
+            <title>Eclipsed</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="kleanchap">Is there an IDE for Perl?  I need to debug some of my code.</saying>
+<saying who="Altreus">kleanchap: well there&#39;s Padre, but you&#39;ll spend as long trying to install it ...</saying>
+<saying who="Zaba">kleanchap, perl has a debugger: perl -d</saying>
+<saying who="Cipher-0">There&#39;s always Komodo.</saying>
+<saying who="Cipher-0">I use Notepad++, but as people here will attest, I suck.</saying>
+<saying who="rindolf">perlbot: ide </saying>
+<saying who="perlbot">rindolf: Padre - padre.perlide.org, Komodo, Eclipse (with EPIC), KDevelop, X/GNU Emacs, gvim, TextMate; see also http://perl.net.au/wiki/Perl_developer_tools and definitely not Xcode</saying>
+<saying who="rindolf">kleanchap: ^^^</saying>
+<saying who="rindolf">kleanchap: and it&#39;s in the FAQ for crying out loud.</saying>
+<saying who="rindolf">anno: yes.</saying>
+<saying who="kleanchap">Zaba, rindolf and Altreus Thnx!</saying>
+<saying who="squeeks">definitely not Xcode? but.. but... but... I went to all the effort to make http://github.com/squeeks/Xcode-Perl-File-Templates</saying>
+<saying who="rindolf">kleanchap: I can recommend perl -d as well.</saying>
+<saying who="Altreus">is perl+eclipse any good?</saying>
+<saying who="Altreus">oh right I remember</saying>
+<saying who="Altreus">I wanted a vim plugin for $IDE and none of them worked</saying>
+<saying who="squeeks">&quot;is...eclipse any good&quot; what</saying>
+<saying who="Altreus">squeeks: valid question &gt;:(</saying>
+<saying who="kent\n">eclipse seems to be one of those platforms which make me wonder what processor development has really acheived in the last 20 years.</saying>
+<saying who="Altreus">it means you can do more shit really really slowly</saying>
+<saying who="kent\n">&quot;Gosh, I can still type faster than this, something is very wrong in the universe&quot;</saying>
+<saying who="thrig">&quot;Gosh, eclipse killed the devo database through sheer numbers of DB connections&quot;</saying>
+<saying who="kent\n">I&#39;d rather spend time programming, not sitting on my hands while eclipse decides it might work today</saying>
+<saying who="kent\n">If I wanted to sit on my hands, I&#39;d be using C++ ;)</saying>
+<saying who="LeoNerd">&quot;I hear eclipse is really nice, but I&#39;m still waiting for it to load&quot;</saying>
+<saying who="rokoteko">&quot;Gosh, eclipse&#39;s spell checker got confused between cvs and csv.&quot;</saying>
+<saying who="Altreus">kent\n: swordfights</saying>
+<saying who="squeeks">kent\n: so you could effectively hit your head against the keyboard</saying>
+<saying who="kent\n">eclipse: What your momma causes when she stands up</saying>
+<saying who="rokoteko">written using eclipse&#39;s help: sub look_mom_I_can_parse_HTML_with_regex { $_[0] =~ /HTML/ }</saying>
+<saying who="squeeks">What was that comment that went something along the lines of &quot;I&#39;m a grown up now, I can eat raw cookie dough and parse HTML with regular expressions&quot;</saying>
+<me_is who="kent\n">thinks he should compile a list of things to bash and make it a factoid. PHP, Eclipse, Microsoft,  # there&#39;s a start</me_is>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Eclipsed</tagline>
             </info>
         </irc>
     </fortune>

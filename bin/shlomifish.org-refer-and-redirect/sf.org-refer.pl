@@ -7,6 +7,12 @@ use CGI;
 
 my $cgi = CGI->new();
 my $path = $ENV{'REDIRECT_SCRIPT_URL'};
+
+if (! $path)
+{
+    $path = '/';
+}
+
 my $link = "http://www.shlomifish.org$path";
 my $link_esc = CGI::escapeHTML($link);
 

@@ -33,19 +33,26 @@ Or if you have CPANPLUS installed:
 
     $ PATH="$HOME/apps/latemp/bin:$PATH"
 
-7. 
+7. Install the latest version of Quad-Pres from:
+
+    $ svn co http://svn.berlios.de/svnroot/repos/quad-pres/quad-pres/trunk/installer
+    $ cd installer
+
+See its INSTALL file. Put a working quadp executable in your shell's PATH.
+
+8. 
     $ svn co https://seed1.projectlocker.com/shlomif/svn/wml-affiliations/trunk/
         - Username: svn@shlomifish.org 
         - Password: 123456
     $ cd trunk/wml
     $ bash Install.bash
 
-8.
+9.
     $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
     $ cd trunk/xhtml/1.x/
     $ bash Install.bash
 
-9. Do the following to build the site, after all dependencies were installed:
+10. Do the following to build the site, after all dependencies were installed:
 
     $ svn co https://seed1.projectlocker.com/shlomif/svn/homepage/trunk
         - Username: svn@shlomifish.org 

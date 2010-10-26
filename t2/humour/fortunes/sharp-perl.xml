@@ -3412,5 +3412,71 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="paint-of-the-bikeshed">
+        <meta>
+            <title>Paint of the Bikeshed</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">Regarding perlipc.pod : in the beginning of the sentence should I write &quot;N.B. If the signal is fired, something bad happens.&quot; or &quot;N.B.: if the signal is fired, something bad happens.&quot; ?</saying>
+<saying who="talexb">With the colon, plz. :)</saying>
+<saying who="rindolf">talexb: I see.</saying>
+<saying who="rindolf">talexb: and a lowercase &quot;if&quot;?</saying>
+<saying who="talexb">No, I think that could be upper case ..</saying>
+<saying who="rindolf">talexb: I thought so too, but the original was the other way.</saying>
+<saying who="talexb">it&#39;s a sentence unto itself.</saying>
+<saying who="rindolf">talexb: but it&#39;s after a colon.</saying>
+<saying who="rindolf">talexb: a colon does not start a new sentence.</saying>
+<saying who="talexb">I dunno. My degree&#39;s in Engineering, not English. :(</saying>
+<saying who="talexb">For me, the colon says, &quot;Thing to the left is the title, thing to the right is the content.</saying>
+<saying who="rindolf">talexb: OK, thanks anyway.</saying>
+<saying who="PerlJam">rindolf: I&#39;d capitalize &quot;If&quot;</saying>
+<saying who="sdgvf">rindolf: how about just &#39;Note:&#39;</saying>
+<me_is who="talexb">\o/</me_is>
+<saying who="PerlJam">sdgvf: because he wants to &quot;Note Well:&quot; not just &quot;Note:&quot;  :)</saying>
+<saying who="Zaba">http://en.wikipedia.org/wiki/Colon_(punctuation), &#39;Use of capitals&#39;</saying>
+<saying who="anno">Note well: ...</saying>
+<saying who="sdgvf">most people, even if they know what N.B. stands for, aren&#39;t going to note it a whole lot harder than if it just says Note:</saying>
+<saying who="rindolf">Bikeshedding.</saying>
+<saying who="rindolf">PerlJam: according to Zaba&#39;s wikipedia link, it should not be capitalised.</saying>
+<saying who="Su-Shee">what it&#39;s for nota bene?</saying>
+<saying who="PerlJam">rindolf: My reading of the article is inconclusive as to what it &quot;should&quot; be.  It seems to all depend on who&#39;s manual of style you subscribe to.</saying>
+<saying who="^Mike\b">Su-Shee: yes</saying>
+<saying who="Su-Shee">if a real sentence which could stand for its own follows, I start with a capital letter. if not, I don&#39;t.</saying>
+<saying who="talexb">By the way: Don&#39;t forget what colour you&#39;d like the bike shed painted.</saying>
+<saying who="PerlJam">talexb: &quot;color&quot;  ;-&gt;</saying>
+<saying who="talexb">Pffffffft. ;)</saying>
+<saying who="LeoNerd">Wait.. we&#39;re -painting- the bikeshed now? Nobody ever mentioned paint before...</saying>
+<saying who="talexb">LeoNerd And you&#39;re head of the committee to choose the new COLOUR.</saying>
+<saying who="Su-Shee">&quot;first we choose the color, then we choose the paint.&quot; (from my english teacher at school.. :)</saying>
+<saying who="LeoNerd">$ perl -MConvert::Color -E&#39;say Convert::Color-&gt;new(&quot;bikeshed&quot;)-&gt;as_rgb-&gt;rgb&#39;   =&gt;  Unable to parse color name bikeshed at -e line 1</saying>
+<saying who="kent\n">doesn&#39;t the paint type preclude the colour choice? and paint manufacturer?</saying>
+<saying who="LeoNerd">Hehe.. Now we&#39;re arguing about the process of bikeshedding.. Go meta :)</saying>
+<saying who="kent\n">LeoNerd: you read my mind</saying>
+<saying who="kent\n">and now I mention that, were&#39; metameta something</saying>
+<saying who="talexb">Taking things a *little* too literally.</saying>
+<saying who="Su-Shee">kent\n: it&#39;s a lesson to illustrate that color and paint are two different things...</saying>
+<saying who="LeoNerd">Colour is very complex problem...</saying>
+<saying who="LeoNerd">A lot of computer-type techies think it&#39;s just an RGB triplet, or maybe a triplet in some other space...</saying>
+<saying who="talexb">And anyway, Google&#39;s just patented the primary colours in their logo. But mauve is still available. For good reason.</saying>
+<saying who="Su-Shee">LeoNerd: luckily, I&#39;ve learned &quot;color&quot; by actual &quot;paint&quot;. ;)</saying>
+<saying who="kent\n">Yeah, it matters about whats in the proximity of the bikeshed, perceptual colour :(</saying>
+<saying who="anno">German uses the same word for color and paint, so we need to be taught the difference</saying>
+<saying who="anno">same with shadow and shade</saying>
+<me_is who="LeoNerd">takes anno out back to &quot;teach him a lesson&quot;</me_is>
+<saying who="Su-Shee">anno: excellent example. same with freedom and liberty.</saying>
+<me_is who="kent\n">wonders if the bikeshed has to be colourblind safe </me_is>
+<me_is who="talexb">wonders what colour a duck blind is. Oh. Camoflage. Never mind.</me_is>
+<saying who="Su-Shee">camouflage. you&#39;ve just introduced french into the discussion ;)</saying>
+<saying who="kent\n">talexb: what colours are blind ducks painted though?</saying>
+<saying who="kent\n">wait till we start painting our words, bikeshed synaesthesia sounds like a win.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Which paint do you want your bikeshed?</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

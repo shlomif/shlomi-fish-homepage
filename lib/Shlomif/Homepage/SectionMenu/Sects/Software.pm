@@ -151,6 +151,11 @@ my $software_tree_contents =
             'title' => "Contributions to Open Source Projects I did not Initiate",
         },
         {
+            'text' => "Mentoring FOSS Contributors",
+            'url' => "open-source/mentoring/",
+            'title' => "Providing mentoring and guidance to those who want to become open-source contributors",
+        },
+        {
             'text' => "Documents and Resources",
             'url' => "open-source/resources/",
             'subs' =>

@@ -58,6 +58,11 @@ my $software_tree_contents =
                     'title' => "Solve layouts of the patience card game 'Black Hole'",
                 },
                 {
+                    'text' => "Kakurasu Solver",
+                    'url' => "open-source/projects/japanese-puzzle-games/kakurasu/",
+                    'title' => "Automatically Solve the Kakurasu Puzzle Game",
+                },
+                {
                     'text' => "File-Find-Object",
                     'url' => "open-source/projects/File-Find-Object/",
                     'title' => "An Object-Oriented Alternative to File::Find",

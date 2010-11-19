@@ -10,3 +10,34 @@
 
 * Add quad-pres to the installation instructions.
 
+* Add the "Escape from GNU Autohell" page.
+
+* Add the "Editors and IDEs" software resources page.
+
+* Add the "Don't abuse JavaScript" page:
+    - Hall of Shame:
+        - Amarok 2.x
+        - GNOME 3.0.
+    - "JavaScript: The Good Parts" Google Tech Talk video.
+        - more accurately "JS: The Bad Parts"
+    - JS has no sprintf.
+    - JS has no date formatting.
+    - JS has no sort.
+    - "var" is optional.
+    - line breaks imply new expressions - forces the "if (COND()) {" style.
+    - the new JavaScript standard presentation on Google Tech Talk.
+        - many JS shortcoming.
+    - JS's foreach loop loops over indices instead of the array's contents.
+    - http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html
+    - function() function() to start a closure.
+
+* Convert the gvimisation of the source code in the quad-pres presentations
+to the Lambda Calculus lecture's CPAN module.
+
+* Put the Template-Toolkit presentation slides on the site.
+
+* Convert the CSS away from TTML and into a script that will process
+them using an explicit call to Template Toolkit.
+
+* Upload the non-Quad-Pres presentations sources.
+

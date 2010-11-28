@@ -1,3 +1,7 @@
+* Fix the 404 page on sub-directories:
+    - http://www.shlomifish.org/open-source/projects/Module-Format/foo.html
+    - $(ROOT) is wrong.
+
 * Fortunes Atom Feed:
     - Make it validate
     - Syndicate it into the rest.

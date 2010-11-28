@@ -41,3 +41,7 @@ them using an explicit call to Template Toolkit.
 
 * Upload the non-Quad-Pres presentations sources.
 
+* Fix the 404 page on sub-directories:
+    - http://www.shlomifish.org/open-source/projects/Module-Format/foo.html
+    - $(ROOT) is wrong.
+

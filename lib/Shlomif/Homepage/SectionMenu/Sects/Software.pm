@@ -68,6 +68,11 @@ my $software_tree_contents =
                     'title' => "An Object-Oriented Alternative to File::Find",
                 },
                 {
+                    'text' => "Module-Format",
+                    'url' => "open-source/projects/Module-Format/",
+                    'title' => "Perform operations on a number of Perl modules by handling their different stringification formats.",
+                },
+                {
                     'text' => "The XML-Grammar Project",
                     'url' => "open-source/projects/XML-Grammar/",
                     'title' => "Provides specialised XML grammars, with processors and converters for various tasks",

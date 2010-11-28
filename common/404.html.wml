@@ -1,3 +1,6 @@
+# This makes sure all the URLs point at the / of the site because the 404
+# page may resolve to many pages.
+$(ROOT=)
 #include '../template.wml'
 
 <latemp_subject "404 Not Found" />

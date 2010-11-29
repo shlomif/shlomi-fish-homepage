@@ -353,6 +353,11 @@ my $essays_tree_contents =
             subs =>
             [
                 {
+                    text => "Dealing with Hypomanias",
+                    url => "philosophy/psychology/hypomanias/",
+                    title => "How I deal with the bad psychological periods that affect me",
+                },
+                {
                     text => "The Elephant in the Circus",
                     url => "philosophy/psychology/elephant-in-the-circus/",
                     title => "A (non-original) story with self-growth implications",

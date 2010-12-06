@@ -46,6 +46,14 @@ my $software_tree_contents =
                     text => "FCFS RWLock",
                     url => "rwlock/",
                     title => "A First-Come First-Served Readers/Writers Lock",
+                    subs =>
+                    [
+                        {
+                            text => "For the Linux Kernel",
+                            url => "rwlock/linux-kernel/",
+                            title => "Make Linux's flock/fcntl calls First-come First-served",
+                        },
+                    ],
                 },
                 {
                     text => "File-Dir-Dumper",

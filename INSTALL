@@ -52,7 +52,19 @@ See its INSTALL file. Put a working quadp executable in your shell's PATH.
     $ cd trunk/xhtml/1.x/
     $ bash Install.bash
 
-10. Do the following to build the site, after all dependencies were installed:
+10. Install inkscape ( http://inkscape.org/ ) and put its executable in 
+the path.
+
+11. Install jing and put it in the path:
+    - http://www.thaiopensource.com/relaxng/jing.html
+
+12. Install Apache FOP and put it in the path:
+    - http://xmlgraphics.apache.org/fop/
+
+13. Install pngcrush and put it in the path:
+    - http://pmt.sourceforge.net/pngcrush/
+
+14. Do the following to build the site, after all dependencies were installed:
 
     $ svn co https://seed1.projectlocker.com/shlomif/svn/homepage/trunk
         - Username: svn@shlomifish.org 

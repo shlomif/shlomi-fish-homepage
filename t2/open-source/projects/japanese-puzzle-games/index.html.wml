@@ -1,0 +1,60 @@
+#include '../template.wml'
+
+<latemp_subject "Solvers and Other Programs for Japanese Puzzle Games" />
+
+<p>
+Japanese puzzle games, either those published by the Japanese publisher Nikoli 
+or similar, have become popular in recent years, and I've been enjoying solving
+them on the computer (or sometimes on paper) as well. Like any good programmer,
+I've been asking myself "How can I get a computer to do the hard work for me?"
+and started working on some solvers for them. This section contains the
+solvers that I started to work on, or mostly completed.
+</p>
+
+<p>
+You can find some good online implementations of these games here:
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.brainbashers.com/games.asp">The BrainBashers.com Games
+Page</a>.
+</p>
+</li>
+
+
+<li>
+<p>
+<a href="http://www.logicgamesonline.com/nurikabe/">Logic Games Online's Nurikabe</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.kakuro.com/">Kakuro.com</a> (requires Flash).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.menneske.no/eng/">Vegard Hanssens's Homepage</a> -
+contains an implementation of many games with numbers.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.puzzle-light-up.com/">Puzzle Light Up and friends</a>
+- numbered puzzles.
+</p>
+</li>
+
+</ul>
+
+<h2 id="programs">The Programs</h2>
+
+<h3 id="abc-path-solver"><a href="abc-path">ABC Path Solver</a></h3>
+
+<h3 id="kakurasu-solver"><a href="kakurasu">Kakurasu Solver</a></h3>

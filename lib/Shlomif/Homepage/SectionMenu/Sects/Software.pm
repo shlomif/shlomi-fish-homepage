@@ -66,9 +66,21 @@ my $software_tree_contents =
                     title => "Solve layouts of the patience card game 'Black Hole'",
                 },
                 {
-                    text => "Kakurasu Solver",
-                    url => "open-source/projects/japanese-puzzle-games/kakurasu/",
-                    title => "Automatically Solve the Kakurasu Puzzle Game",
+                    text => "Japanase Puzzle Games",
+                    url => "open-source/projects/japanese-puzzle-games/",
+                    subs =>
+                    [
+                        {
+                            text => "ABC Path Solver",
+                            url => "open-source/projects/japanese-puzzle-games/abc-path/",
+                            title => "Solver for ABC Path as featured on BrainBashers.com",
+                        },
+                        {
+                            text => "Kakurasu Solver",
+                            url => "open-source/projects/japanese-puzzle-games/kakurasu/",
+                            title => "Automatically Solve the Kakurasu Puzzle Game",
+                        },
+                    ],
                 },
                 {
                     text => "File-Find-Object",

@@ -1,0 +1,62 @@
+#include '../template.wml'
+
+<latemp_subject "Solver for ABC Path" />
+
+<set-var modname="Games-ABC_Path-Solver" />
+<set-var sco_mod="http://search.cpan.org/dist/<get-var modname />/" />
+<p>
+The 
+<a href="<get-var sco_mod />"><get-var modname /></a> Perl 5 CPAN distribution implements a solver for 
+<a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
+brainbashers.com. It provides a standalone command-line "abc-path-solver"
+program and an Application Programmer Interface (API).
+</p>
+
+<p>
+Currently documentation is a little lacking.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-module-format">For the ABC Path Solver</h3>
+
+<ul>
+
+<li>
+<a href="<get-var sco_mod />">The ABC Path Solver
+on search.cpan.org</a> - download and more information.
+</li>
+
+<li>
+<a href="http://cpan.uwinnipeg.ca/dist/<get-var modname />">The ABC Path
+Solver on kobesearch</a>
+</li>
+
+<li>
+<p>
+<a href="http://svn.berlios.de/svnroot/repos/fc-solve/abc-path/">Subversion
+Repository</a><br />
+<ul>
+<li>
+<a href="http://svn.berlios.de/viewvc/fc-solve/abc-path/">Browse using
+ViewVC</a>
+</li>
+</ul>
+</p>
+</li>
+
+<li>
+<a href="FILL_IN">Freshmeat.net Record - FILL IN</a>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+<get-var modname /> is licensed under the 
+<a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>
+</p>
+
+<h2 id="news">News</h2>
+

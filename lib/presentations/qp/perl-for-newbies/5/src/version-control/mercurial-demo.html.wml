@@ -1,16 +1,16 @@
 #include 'template.wml'
 
 <p>
-This section will demonstrate basic version control usage using the Subversion
-version control system.
+This section will demonstrate basic version control usage using the
+<a href="http://mercurial.selenic.com/">Mercurial version control system</a>.
 </p>
 
 <p>
-<b>Please note:</b> by choosing Subversion I do
+<b>Please note:</b> by choosing Mercurial I do
 not mean to imply that it is the best VCS out there or that you should
 necessary use it. By all means, it is likely that there are other VCSes
-which are better in many respects. However, I'm the most familiar with 
-Subversion, and I think it is suitable for the demonstration here.
+which are better in many respects. However, I'm familiar with Mercurial, and I 
+think it is suitable for the demonstration here.
 </p>
 
 <p>
@@ -35,3 +35,119 @@ Wikipedia list of version control systems</a>
 </li>
 
 </ul>
+
+<h2 id="demo">The Demo</h2>
+
+<p>
+First of all, install Mercurial using your operating system's package
+management, or by downloading an installer from the 
+<a href="http://mercurial.selenic.com/">Mercurial site</a>. 
+</p>
+
+<p>
+The create a new empty directory and run <tt>hg init .</tt>:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test$ hg init .
+</quadpres_code_block>
+
+<p>
+Now let's add some files, run your favourite and create this file
+in MyModule.pm:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/version-control/MyModule.pm" />
+</quadpres_code_block>
+
+<p>
+Now let's put it under version control:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test$ mkdir MyModule
+$p4n/5/merc-test$ cd MyModule/
+$p4n/5/merc-test/MyModule$ gvim MyModule.pm # Edit it.
+$p4n/5/merc-test/MyModule$ ls
+MyModule.pm
+$p4n/5/merc-test/MyModule$ hg status
+? MyModule/MyModule.pm
+</quadpres_code_block>
+
+<p>
+As we can see from the output of <tt>hg status</tt>, the file is not
+tracked. Let's add it:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg add MyModule.pm 
+$p4n/5/merc-test/MyModule$ hg status
+A MyModule/MyModule.pm
+$p4n/5/merc-test/MyModule$ 
+</quadpres_code_block>
+
+<p>
+Now the file is scheduled to be commited (see the <tt>A</tt>). Let's 
+commit it:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg commit -m "Added MyModule.pm"
+$p4n/5/merc-test/MyModule$ hg status
+$p4n/5/merc-test/MyModule$ 
+</quadpres_code_block>
+
+<p>
+We can see it in the output of the version control log <tt>hg log</tt>:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg log
+changeset:   0:7dec17ed3e88
+tag:         tip
+user:        Shlomi Fish <shlomif@iglu.org.il>
+date:        Fri Jan 14 18:07:32 2011 +0200
+summary:     Added MyModule.pm
+</quadpres_code_block>
+
+<p>
+Now let's add a test:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ gvim mytest.t # Test
+$p4n/5/merc-test/MyModule$ cat mytest.t
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Test::More tests =&gt; 1;
+
+use MyModule;
+
+# TEST
+is (MyModule::add(0, 0), 0, "0+0 is 0.");
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ prove mytest.t
+mytest.t .. ok   
+All tests successful.
+Files=1, Tests=1,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
+Result: PASS
+$p4n/5/merc-test/MyModule$ hg st 
+? MyModule/mytest.t
+$p4n/5/merc-test/MyModule$ hg add mytest.t
+$p4n/5/merc-test/MyModule$ 
+</quadpres_code_block>
+
+<p>
+And let's commit it as well by using <tt>hg commit</tt>.
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg commit -m "Added the test."
+</quadpres_code_block>
+
+<p>
+
+</p>

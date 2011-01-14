@@ -72,8 +72,8 @@ my $contents =
                     title => "Motivation for Version Control",
                 },
                 {
-                    url => "subversion-demo.html",
-                    title => "Demo of Subversion",
+                    url => "mercurial-demo.html",
+                    title => "Demo of Mercurial",
                 },
             ],
         },

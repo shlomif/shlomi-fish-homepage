@@ -149,5 +149,77 @@ $p4n/5/merc-test/MyModule$ hg commit -m "Added the test."
 </quadpres_code_block>
 
 <p>
+Now let's another test assertion:
+</p>
 
+<quadpres_code_block>
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ cat mytest.t
+\#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Test::More tests =&gt; 2;
+
+use MyModule;
+
+\# TEST
+is (MyModule::add(0, 0), 0, "0+0 is 0.");
+
+\# TEST
+is (MyModule::add(2, 0), 2, "2+0 is 2.");
+
+
+$p4n/5/merc-test/MyModule$ prove mytest.t
+mytest.t .. ok   
+All tests successful.
+Files=1, Tests=2,  0 wallclock secs ( 0.03 usr  0.00 sys +  0.02 cusr  0.00 csys =  0.05 CPU)
+Result: PASS
+</quadpres_code_block>
+
+<p>
+But before we commit let's see which changes have been made:
+</p>
+
+<quadpres_code_block>
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ hg diff
+diff -r e2b34f948dcd MyModule/mytest.t
+--- a/MyModule/mytest.t Fri Jan 14 18:14:05 2011 +0200
++++ b/MyModule/mytest.t Fri Jan 14 18:18:57 2011 +0200
+@@ -3,9 +3,13 @@
+ use strict;
+ use warnings;
+ 
+-use Test::More tests =&gt; 1;
++use Test::More tests =&gt; 2;
+ 
+ use MyModule;
+ 
+ \# TEST
+ is (MyModule::add(0, 0), 0, "0+0 is 0.");
++
++# TEST
++is (MyModule::add(2, 0), 2, "2+0 is 2.");
++
+</quadpres_code_block>
+
+<p>
+This displays the differences from the working copy to the pristine
+version in the repository.
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg status
+M MyModule/mytest.t
+$p4n/5/merc-test/MyModule$ hg commit -m "Add another assertion"
+$p4n/5/merc-test/MyModule$ hg status
+</quadpres_code_block>
+
+<p>
+And it's commited.
+</p>
+
+<p>
+We can now continue doing commits, adding more tests and fixing bugs
+as we go.
 </p>

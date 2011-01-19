@@ -3,14 +3,17 @@
 use strict;
 use warnings;
 
-open I, "/sbin/ifconfig |";
-my ($line, @addrs);
-while ($line = <I>)
+open my $in, "/sbin/ifconfig |";
+
+my (@addrs);
+
+while (my $line = <$in>)
 {
     if ($line =~ /inet addr:((\d+\.)+\d)/)
     {
         push @addrs, $1;
     }
 }
-close(I);
+close($in);
+
 print "You have the following addresses: \n", join("\n",@addrs), "\n";

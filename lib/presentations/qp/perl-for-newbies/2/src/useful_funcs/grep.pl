@@ -11,7 +11,7 @@ while ($l = <$in>)
     chomp($l);
     push @lines, $l;
 }
-close(I);
+close($in);
 
 # Filter the comments
 my @comments = grep(/^#/, @lines);

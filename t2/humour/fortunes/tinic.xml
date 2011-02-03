@@ -1297,5 +1297,35 @@ characters for it in Unicode).
           </info>
       </quote>
     </fortune>
+    <fortune id="kernel-compilation-speedups">
+      <meta>
+          <title>Kernel Compilation Speedups</title>
+      </meta>
+      <quote>
+          <body>
+              <p>Shlomi Fish Wrote:</p>
+              <blockquote>
+                  <p>
+                  Well, I've also built some kernels for ocassions. The vanilla
+                  2.6.37 kernel I built seemed snappier than the shipped-in
+                  Mandriva kernel, and Freecell Solver executed there at
+                  72.7685720920563s instead of 73.6936609745026s (the fractions
+                  are what was reported by my script and copy pasted here -
+                  they are not very accurate.).
+                  </p>
+              </blockquote>
+              <p>
+                  I hope that you agree with me that 99.9218485921% of the
+                  users wouldn't bother themselves with recompilation (or any
+                  other manual step for that matter) to make their games run
+                  1.27127529900685765% faster ;-)
+              </p>
+          </body>
+          <info>
+              <author>Nadav Har'El</author>
+              <work href="http://www.mail-archive.com/haifux@haifux.org/msg04429.html">Haifux Post - "No! No! Don't copmile your kernel!"</work>
+          </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

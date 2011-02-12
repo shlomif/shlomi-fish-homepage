@@ -3785,5 +3785,84 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="digits-in-variable-names">
+        <meta>
+            <title>Digits in Variable Names</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="jim">which perldoc for doin stuff with arrays? want to copy all but first of one array to another</saying>
+<saying who="DrForr">perldoc perldsc</saying>
+<saying who="DrForr">Or just (undef,@new) = @old;</saying>
+<saying who="rindolf">Also $old[1..$#old]</saying>
+<saying who="DrForr">Of course TIMTOWTDI...</saying>
+<saying who="rindolf">Well, @old[1..$#old]</saying>
+<saying who="rindolf">I think in perl 6 you can do @old[1..*-1]</saying>
+<saying who="jim">@a2 = @a1[1..$#a1]?</saying>
+<saying who="jim">not perl6in yet</saying>
+<saying who="rindolf">jim: yes, but with different names. </saying>
+<saying who="rindolf">jim: else you want an array or a hash of arrays.</saying>
+<saying who="rindolf">perlbot: varvarname</saying>
+<saying who="perlbot">rindolf: Why it&#39;s stupid to `use a variable as a variable name&#39; - http://perl.plover.com/varvarname.html</saying>
+<saying who="jim">wait, are you sure mine is wrong?</saying>
+<saying who="rindolf">jim: it&#39;s not wrong per-ce, just a red flag.</saying>
+<saying who="jim">what&#39;s the flag?</saying>
+<saying who="rindolf">jim: varvarname.</saying>
+<saying who="jim">note I said @a-&gt;2&lt;- = ...</saying>
+<saying who="rindolf">jim: well, it&#39;s like  doing my ($x1,$x2,$x3,$x4...) - better use an array.</saying>
+<saying who="rindolf">Assuming you want that.</saying>
+<saying who="rindolf">Yes, what is the difference between @a2 and @a1? What is their significance?</saying>
+<saying who="jim">@a1 is a complete list of phone numbers, @a2 is a list of phone numbers not yet uploaded to the phone</saying>
+<saying who="thrig">@phone_numbers!</saying>
+<saying who="jim">it&#39;s like that in the code</saying>
+<saying who="thrig">oh, okay</saying>
+<saying who="jim">I&#39;m just not typin that crap into the irc window as irc isn&#39;t the most wonderful medium for posting code</saying>
+<saying who="jim">believe me, my variable names from 20 years ago tell me what they are for</saying>
+<saying who="thrig">var_name_from_20_years_ago_you_re_still_not_taking_out_the_damn_trash</saying>
+<saying who="jim">I&#39;m not necessarily at liberty to specify exactly what I&#39;m doing</saying>
+<saying who="jim">even tho I did so in this case</saying>
+<saying who="thrig">otherwise the mafia arranges a boaking accident?</saying>
+<saying who="mfontani">worse; nobody expects the spanish inquisition!</saying>
+<saying who="rindolf">I&#39;m going  crazy without buubot.</saying>
+<saying who="rindolf">Where is he and buu?</saying>
+<saying who="jim">well the way you&#39;re acting doesn&#39;t exactly induce the greatest amount of openness</saying>
+<saying who="rindolf">jim: I apologise.</saying>
+<saying who="rindolf">jim: we may have erred in this.</saying>
+<saying who="jim">ohman, buubot is gone&gt;?</saying>
+<saying who="rindolf">jim: yes!</saying>
+<saying who="rindolf">jim: for the time being.</saying>
+<saying who="rindolf">Don&#39;t know where buu is.</saying>
+<saying who="jim">that&#39;s been one useful bot</saying>
+<saying who="mfontani">eval: @a=1..4; (undef,@b)=@a; \@b</saying>
+<saying who="perlbot">mfontani: [2,3,4]</saying>
+<saying who="DrForr">jim: You&#39;ve got several answers already. Do they not satisfy?</saying>
+<saying who="rindolf">perlbot: define boaking</saying>
+<saying who="perlbot">rindolf: No factoid found. Did you mean one of these: [debian perldoc] [define vrby : vrby]</saying>
+<saying who="rindolf">jim: I think simcop has put the buubot code on github or something like that.</saying>
+<saying who="rindolf">Well, good night @everyone.</saying>
+<saying who="rindolf">An array .</saying>
+<saying who="jim">DrForr: they do... it&#39;s all this stuff afterwards that has me closing, &quot;spanish inquisition&quot;, &quot;mafia breakaleg&quot;... it&#39;s just unnecessary</saying>
+<saying who="jim">rindolf: thanks</saying>
+<saying who="rindolf">jim: well, we sometimes enjoy having fun.</saying>
+<saying who="DrForr">Shrug. You&#39;re the one that brought up &quot;may not be at liberty...&quot;</saying>
+<saying who="rindolf">jim: seems like thrig&#39;s main function, aside from being the benevolent dictator of #perl, is to interject short jokes.</saying>
+<saying who="thrig">I make jokes about tall people, too</saying>
+<saying who="simcop2387">rindolf: yea i have</saying>
+<saying who="rindolf">thrig: :-)</saying>
+<saying who="simcop2387">perlbot: source</saying>
+<saying who="perlbot">simcop2387: check out my insides (i&#39;m based off buubot, so ask him for his source if you really want to start); http://github.com/simcop2387/perlbuut/ or go to http://github.com/simcop2387/buubot/</saying>
+<saying who="rindolf">We can have notbuubot or buubot2 or something.</saying>
+<saying who="rindolf">Well, buubot2 is varvarname.</saying>
+<saying who="rindolf">;-)</saying>
+<saying who="thrig">it&#39;s not going to be @buubot</saying>
+<saying who="rindolf">thrig: LOL.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Digits in Variable Names</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

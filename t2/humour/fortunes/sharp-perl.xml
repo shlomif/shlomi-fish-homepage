@@ -3864,5 +3864,111 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="when-to-use-xml-and-popcorn">
+        <meta>
+            <title>When to use XML and Popcorn?</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="designerjean">http://scsys.co.uk:8002/87521</saying>
+<saying who="designerjean">i know i&#39;m not supposed to be using XML::Simple</saying>
+<saying who="designerjean">but it&#39;s only one statement in the program</saying>
+<saying who="rindolf">designerjean: is it causing problems?</saying>
+<saying who="mst">yes, and it&#39;s the one that makes the $config you can&#39;t work out how to use</saying>
+<saying who="designerjean">maybe</saying>
+<saying who="rindolf">mst: :-)</saying>
+<saying who="mst">your exact problem is &quot;unable to use the results of XML::Simple&quot;</saying>
+<saying who="mst">because you&#39;re stupid and XML::Simple is shit</saying>
+<saying who="mst">please switch to XML::Twig</saying>
+<saying who="designerjean">ok thanks</saying>
+<saying who="dhoss">people still use xml?</saying>
+<saying who="rindolf">dhoss: it&#39;s a dirty job, but it pays.</saying>
+<saying who="dhoss">i guess there&#39;s that</saying>
+<saying who="designerjean">another case of stupid youth</saying>
+<saying who="dhoss">designerjean: how old are you</saying>
+<saying who="rindolf">dhoss: well, I&#39;m using XML for some stuff willingly.</saying>
+<saying who="rindolf">dhoss: JSON wouldn&#39;t have been usable.</saying>
+<saying who="dhoss">rindolf: i guess that&#39;s a legit reason</saying>
+<saying who="rindolf">Because I use them for text and stuff like that.</saying>
+<saying who="rindolf">And it&#39;s hard to do something like &lt;p&gt;Hello &lt;b&gt;dhoss&lt;/b&gt;!&lt;/p&gt; in JSON.</saying>
+<saying who="rokoteko">I think its mainly amongst web programmers where JSON is appreciated the most.</saying>
+<saying who="rindolf">rokoteko: JSON has many valid uses.</saying>
+<saying who="DuClare">XML has none</saying>
+<saying who="LeoNerd">XML is for putting attribute markup within a stream of text.</saying>
+<saying who="dhoss">rindolf: yea i can see that. json is more useful in a cross language barrier bit where markup isn&#39;t needed</saying>
+<saying who="LeoNerd">(mostly because it came out of SGML)</saying>
+<saying who="rindolf">DuClare: not true.</saying>
+<saying who="rokoteko">XML is very widely used. that&#39;s like saying &quot;I dont need to know Java, because the language sucks&quot; ..</saying>
+<saying who="Su-Shee">rindolf: you&#39;re mixing semantics with style here anyways. that would be bad xml.</saying>
+<saying who="rindolf">Su-Shee: I was giving an illustrative example.</saying>
+<saying who="Su-Shee">rindolf: then give a proper one. that was exactly how NOT to XML.</saying>
+<saying who="rindolf">Su-Shee: besides , I think that &lt;b&gt; has some valid, semantic meaning.</saying>
+<saying who="rindolf">And it&#39;s also shorter than &lt;strong&gt;&lt;/strong&gt;</saying>
+<saying who="rindolf">Su-Shee: ok.</saying>
+<saying who="Su-Shee">rindolf: no. bold doesn&#39;t mean &quot;be bold and courageous here&quot;. it means &quot;print this shit in bold typeface&quot;</saying>
+<saying who="rindolf">&lt;p&gt;Hello &lt;name&gt;Su-Shee&lt;/name&gt;!&lt;/p&gt;</saying>
+<saying who="rindolf">XML is useful for wrapping and annotating text.</saying>
+<saying who="Dorward">XML is only useful for wrapping and annotating text if you use a properly designed application of XML and everyone reading the document agrees on what the meaning is.</saying>
+<saying who="rokoteko">XTML vs XDML could derive from XML. (text and data respectively). then of course you should be able to embed XDML in XTML.</saying>
+<saying who="rokoteko">oh wait. Im thinkin aloud.</saying>
+<saying who="rindolf">rokoteko: I&#39;ve recently played with an XML-specific compression tool.</saying>
+<saying who="rindolf">rokoteko: it achieved better compression than xz -9 --extreme but OTOH mishandled some «&quot;» not inside attributes - converting them to &amp;quot;</saying>
+<saying who="rokoteko">rindolf: what requirements are you trying to meet by compressing xml?</saying>
+<saying who="PerlJam">smaller XML docs :)</saying>
+<saying who="rindolf">rokoteko: well, to reduce the size.</saying>
+<saying who="rokoteko">well, doh. but why?</saying>
+<saying who="rindolf">rokoteko: like over the Net, etc.</saying>
+<saying who="rindolf">rokoteko: it&#39;s like gzip compression/decompression.</saying>
+<saying who="rokoteko">rindolf: I yet fail to see the point. :(</saying>
+<saying who="rindolf">Only domain-specific.</saying>
+<saying who="rokoteko">why?</saying>
+<saying who="rindolf">And if you have a lot of it it occupies less on the hard disk.</saying>
+<saying who="rokoteko">Ah. you have like SHITLOADS of XML ?</saying>
+<saying who="rindolf">It could happen.</saying>
+<saying who="rindolf">Java...</saying>
+<saying who="PerlJam">anyone who deals with XML probably has that much  ;)</saying>
+<saying who="rokoteko">Well, disk is pretty cheap.</saying>
+<saying who="rindolf">I don&#39;t have too much XML.</saying>
+<saying who="rindolf">Well, maybe a lot of XHTML.</saying>
+<saying who="rokoteko">I was just curious about rindolf&#39;s use case.</saying>
+<saying who="rokoteko">I was afraid that he was storing some binary data in XML. :)</saying>
+<saying who="mst">I think he was just experimenting with technology</saying>
+<saying who="rindolf">Yes, I probably have more disk wasted on .mp3&#39;s and .flv&#39;s. </saying>
+<saying who="rindolf">rokoteko: I have some interest in compression methods.</saying>
+<saying who="rindolf">rokoteko: back from high school.</saying>
+<saying who="rokoteko">rindolf: :)</saying>
+<saying who="Su-Shee">if you&#39;re the company who&#39;s transferring 120 years of documents of a car company into something flexible - THEN you have a shitload of XML.</saying>
+<saying who="rindolf">There have been some recent advancements.</saying>
+<saying who="rokoteko">So just out of curiousity, that&#39;s fine with me. :) Im just nosy sometimes.</saying>
+<saying who="rindolf">rokoteko: I think the wikipedia XML dump is pretty large.</saying>
+<saying who="mst">I find it&#39;s usually safe to assume that whatver rindolf&#39;s doing, there isn&#39;t a good reason for it.</saying>
+<saying who="rindolf">rokoteko: there was some stuff about processing it quickly using Perl, etc.</saying>
+<saying who="rindolf">mst: :-)</saying>
+<saying who="rindolf">mst++ # Nice burn.</saying>
+<saying who="Su-Shee">popcorn anyone? ;)</saying>
+<saying who="rindolf">mst: but it has a huge grain of truth in it I admit.</saying>
+<saying who="rindolf">Su-Shee: microwave popcorn?</saying>
+<saying who="Su-Shee">I don&#39;t have a microwave and I was being sarcastic...</saying>
+<saying who="Su-Shee">I need a smiley for that.</saying>
+<saying who="rindolf">Su-Shee: ah.</saying>
+<saying who="Su-Shee">rindolf-shaped, obviously.</saying>
+<saying who="rindolf">Su-Shee: yes, I was playing along.</saying>
+<saying who="petn-randall">why not an XML-conform &lt;/sarcasm&gt; ?</saying>
+<me_is who="rindolf">prepares some popcorn and shares it with Su-Shee using the Popcorn-over-IRC protocol.</me_is>
+<saying who="DrForr">What&#39;s this about burnt popcorn?</saying>
+<saying who="rindolf">Popcorn-over-IRC also preserves the butter taste.</saying>
+<saying who="burnedcelery">you&#39;re getting my keyboard all greasy</saying>
+<saying who="apeiron">ew, butter</saying>
+<saying who="rindolf">And it also supports multicasting popcorn.</saying>
+<saying who="PerlJam">butter++</saying>
+<saying who="PerlJam">though not so much butter that it makest he popcorn soggy.  I hate that.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>XML and Popcorn</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

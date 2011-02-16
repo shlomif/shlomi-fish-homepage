@@ -35,7 +35,7 @@ my $humour_tree_contents =
                         },
                         {
                             text => "Text in English",
-                            url => "humour/TheEnemy/The-Enemy-English-rev5.html",
+                            url => "humour/TheEnemy/The-Enemy-English-rev6.html",
                             title => "Text of &quot;The Enemy&quot; In English",
                         },
                     ],

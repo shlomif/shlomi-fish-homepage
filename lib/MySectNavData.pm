@@ -27,13 +27,13 @@ my @sections =
     },
     {
         'id' => "software",
-        'regex' => "^/(open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/",
+        'regex' => "^/(?:open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/",
         'class' => "Software",
         'title' => "Software Section Menu",
     },
     {
         'id' => "humour",
-        'regex' => "^/(humour/|((humour|wysiwyt|wonderous)\.html))",
+        'regex' => "^/(?:humour/|(?:(?:humour(?:-heb)?|wysiwyt|wonderous)\.html))",
         'class' => "Humour",
         'title' => "Humour Section Menu",
     },

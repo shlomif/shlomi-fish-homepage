@@ -180,7 +180,7 @@ to make 10 ways to do something. :-)/
         my $old = $_;
         while (/\./) {
             $old = $_;
-            s~\.~~;
+            s/\.//;
         }
 
         return $old;
@@ -190,7 +190,7 @@ to make 10 ways to do something. :-)/
     sub delpoint2 ($) {
         local $_ = shift;
 
-        while (s~\.(.*\.)~$1~) {}
+        while (s/\.(.*\.)/$1/) {}
 
         return $_;
     }
@@ -201,7 +201,7 @@ to make 10 ways to do something. :-)/
 +* But there are more.
 
 ----
-== Funky Solution with Hash
+== Funky Solution with a Hash
     sub delpoint8 ($) {
         local $_ = shift;
 

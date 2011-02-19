@@ -1,0 +1,79 @@
+אף על פי שהסיסמה של פרל היא "יש יותר מדרך אחת לעשות זאת", אני לא שש שתהיינה
+10 דרכבים לעשות משהו. :-)
+
+-- לארי וול.
+
+א-----------------------
+
+הוא חיפש ביטוי רגולרי שמסיר את כל סימני ה"נקודה" במחרוזת ("." - dot or full stop)
+מלבד האחרונה. 
+"perl.is.the.best.txt" ==> "perlisthebesttest.txt".
+
+אני הכללתי זאת לכל שגרה.
+
+א--------------
+
+* כמה פתרונות שונים תוכלו למצוא?
+
+* חידון של פרל על מציאת פתרונות רבים ככל האפשר.
+
+* אילו פתרונות אתם יכולים לחשוב עליהם?
+
+א-------------
+
+* מה עושים דבר ראשון?
+
+	- כותבים בדיקות אוטומטיות!
+
+א-------------
+
+* http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide6.html
+
+via_split
+
+מפצלים את המחרוזת ליחידות/רכיבים בהתאם לנקודות שבה. ואז מרכיבים שוב.
+
+א-------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide7.html
+
+ביטוי רגולרי מהופך (לא קשור לסקס):
+
+הופכים את המחרוזת, מבצעים את זממנו, ואז הופכים את המחרוזת פעם נוספת.
+
+א-----------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide8.html
+
+שני חלקים:
+
+מוצאים את כל תת-המחרוזת עד לנקודה האחרונה ואת מה שאחריה. מסירים את כל סימני הנקודה
+מהצד השני, ומרכיבים מחדש.
+
+א----------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide9.html
+
+With Look Ahead:
+
+ביטוי רגולרי יחיד עם negative lookahead שזאת הרחבה של פרל.
+
+א------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide10.html
+
+Solution #5 - Count and Replace
+
+סופרים ואז מסירים עד האחרון בעזרת s///ge .
+
+א-------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide11.html
+
+Solution #6 - Eliminate the Last
+
+מחליפים כל נקודה מלבד האחרונה במחרוזרת שלא יכולה להמצא (מפאת אורכה), ואז מסירים את כל
+המחרוזות הדמה הללו, ומחזירים את המחרוזת שקיבלנו.
+
+א------------------
+

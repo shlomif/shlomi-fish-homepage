@@ -294,6 +294,7 @@ Linux Club</a></i>.
 <i>
 צריך להיות שפצר מחשבים מנוסה מספיק כדי להבין את הבדיחה הזאת. אי לכך, אל תדאגו
 אם אתם לא מבינים.
+</i>
 </p>
 </header_joke>
 
@@ -435,12 +436,13 @@ Shlomi Fish on #offtopic (irc.kernelnewbies.org)
 </p>
 </header_joke>
 
-<header_joke id="opinions_crazy" header="Crazy Opinions">
-My opinions may seem crazy but they all make sense. Insane sense, but
-sense nonetheless.
+<header_joke id="opinions_crazy" header="דעות משוגעות">
+<p>
+הדעות שלי נראות משוגעות אבל יש בהן הגיון. הגיון לא שפוי אבל בכל זאת הגיון. 
+</p>
 </header_joke>
 
-<header_joke id="foreign_languages" header="Foreign Languages">
+<no_header_joke id="foreign_languages" header="Foreign Languages">
 
 <p>
 <i>[Discussing Foreign Languages Knowledge in the U.S.A]</i>
@@ -455,9 +457,9 @@ change every 100 miles.
 <b>Shlomi Fish</b>: And unlike England, the accent does not change every 10
 miles.
 </p>
-</header_joke>
+</no_header_joke>
 
-<header_joke id="happened_to_cmpilato" header="What Happened to Christopher Michael Pilato?">
+<no_header_joke id="happened_to_cmpilato" header="What Happened to Christopher Michael Pilato?">
 <p>
 What happened to Christopher Michael Pilato?<br />
 Is he gone?<br />
@@ -468,7 +470,7 @@ Is he gone forever?<br />
 Will he return?<br />
 Who is Christopher Michael Pilato, anyway?
 </p>
-</header_joke>
+</no_header_joke>
 
 <header_joke id="in_philosophy_as_in_soft_eng" header="In Philosophy, as much as in software engineering,">
 <p>
@@ -478,54 +480,42 @@ the idea for each feature first.
 </p>
 </header_joke>
 
-<header_joke id="he_has_high_degree" header="He has a high degree of...">
+<header_joke id="he_has_high_degree" header="יש לו מידה גדולה של…">
 <p>
-He has a high degree of idealism, a high degree of stubbornness, and an even
-higher degree of inability to distiniguish between the two.
+יש לו מידה גדולה של אידיאליזם, מידה גדולה של עקשנות, ומידה גדולה עוד יותר
+של חוסר יכולת להבדיל בין השניים.
 </p>
+</header_joke>
+
+<header_joke id="hacker_sees_bug" header="האקר רואה באג">
+<p>
+האקר רואה באג. האקר לא רוצה את הבאג. האקר מתקן באג.
+<p>
 <div class="indent">
 <p>
-<i>
-I originally thought of something similar to that about
-<a href="http://www.stallman.org/">Richard M. Stallman</a> who has headed the
-<a href="http://www.fsf.org/">Free Software Foundation</a> and its GNU
-project since it's inception. He is known for his radical and uncomprising
-views that combine both idealism and just plain stubburness. Otherwise, he's
-a great and noble guy, and I had the opportunity of meeting and talking
-him during his visit to Israel. (He is much more pleasant in real life than
-online.)
-</i>
+<i>אמרו לי שההמשך צריך להיות "שפצר, האקר, שפצר!"</i>
 </p>
 </div>
 </header_joke>
 
-<header_joke id="hacker_sees_bug" header="Hacker Sees Bug">
+<header_joke id="linus_95_percent_of_programmers" header="95% מהתמתכנתים">
 <p>
-Hacker sees bug. Hacker fixes bug.
+לינוס טורבלדס: "95% מהמתכנתים מחשיבים את עצמם ב-5% העליונים.
 </p>
+
+<p>
+המקבילה של שלומי פיש: "95% מהמתכנתים מחשיבים 95% מהקוד שהם לא כתוב ב-5% התחתונים."
+</p>
+
 <div class="indent">
 <p>
-<i>I was told that the natural continuation to this should be "Hack, hacker,
-hack!"</i>
+<i>ראו גם 
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">דיון על כך (באנגלית) בפורום של "יואל על תוכנה"</a></i>
 </p>
 </div>
 </header_joke>
 
-<header_joke id="linus_95_percent_of_programmers" header="95% of Programmers">
-<p>
-Linus Torvalds: "95% of Programmers consider themselves in the top 5%".
-</p>
-<p>
-Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did not write, in the bottom 5%."
-</p>
-<div class="indent">
-<p>
-<i>Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">a discussion of it on the Joel on Software forum</a></i>
-</p>
-</div>
-</header_joke>
-
-<header_joke id="too_girly" header="Too Girly">
+<no_header_joke id="too_girly" header="Too Girly">
 <pre>
   &lt;rindolf&gt;    Linuxgrrl: well The Gilmore Girls is also a drama. Sort
                of a dramedie, but a serious one.
@@ -538,16 +528,13 @@ Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did n
   &lt;rindolf&gt;    Linuxgrrl: knew it.
   &lt;rindolf&gt;    Linuxgrrl: no self-respecting tomboy would use Mandrake.
 </pre>
-<p><i>rindolf here is Shlomi Fish</i >
+<p><i>rindolf here is Shlomi Fish</i>
 </p>
-</header_joke>
+</no_header_joke>
 
-<header_joke id="cpp_is_complex" header="C++ is...">
+<header_joke id="cpp_is_complex" header="C++ הינה…">
 <p>
-C++ is complex, complexifying and complexified.
-</p>
-<p>
-(With apologies to the Oxford English Dictionary).
+C++ הינה שפה מסובכת, מתסבכת ומתוסבכת.
 </p>
 </header_joke>
 

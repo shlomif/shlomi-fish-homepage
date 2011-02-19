@@ -143,6 +143,14 @@ my $humour_tree_contents =
                     text => "My Aphorisms Collection",
                     url => "humour.html",
                     title => "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Versions of the Aphorisms",
+                            url => "humour-heb.html",
+                            title => "The Aphorisms in Hebrew",
+                        },
+                    ],
                 },
                 {
                     text => "Fortune Cookies Collection",

@@ -517,6 +517,7 @@ DOCBOOK5_DOCS = \
 	dealing-with-hypomanias \
 	perfect-it-workplace-rev2 \
 	objectivism-and-open-source \
+	foss-licences-wars-rev2 \
 	$(FICTION_DOCS)
 
 # DOCBOOK4_BASE_DIR = lib/docbook
@@ -553,7 +554,6 @@ $(DOCBOOK4_RTF_DIR)/%.rtf: $(DOCBOOK4_FO_DIR)/%.fo
 $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
-
 
 
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml

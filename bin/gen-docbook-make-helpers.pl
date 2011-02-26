@@ -121,7 +121,6 @@ my @documents =
         id => "foss-licences-wars", 
         path => "philosophy/computers/open-source/foss-licences-wars", 
         base => "foss-licences-wars",
-        work_in_progress => 1,
     },
 
     {
@@ -131,7 +130,13 @@ my @documents =
         work_in_progress => 1,
         db_ver => 5,
     },
-    
+    {
+        id => "foss-licences-wars-rev2",
+        path => "philosophy/computers/open-source/foss-licences-wars/rev2/",
+        base => "foss-licences-wars-rev2",
+        work_in_progress => 1,
+        db_ver => 5,
+    },
 
 );
 

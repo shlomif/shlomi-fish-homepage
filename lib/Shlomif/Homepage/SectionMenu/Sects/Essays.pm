@@ -211,7 +211,7 @@ my $essays_tree_contents =
                             title => "My Opinion on Electrical Engineering Stuies in the Technion",
                         },
                         {
-                            text => "Best Introudctory Language",
+                            text => "Best Introductory Language",
                             url => "philosophy/computers/education/introductory-language/",
                             title => "What is the best Introductory Programming Language?",
                         },

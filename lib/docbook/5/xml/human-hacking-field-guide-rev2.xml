@@ -1,12 +1,13 @@
 <!-- Converted by db4-upgrade version 1.0 -->
 
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xmlns:xlink="http://www.w3.org/1999/xlink">
     <info><title>The Human Hacking Field Guide</title>
         
         <authorgroup>
             <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@iglu.org.il</email>
+                        <uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish's Homepage</uri>
                     </address>
                 </affiliation></author>
          </authorgroup>
@@ -20,8 +21,8 @@
                 <!-- belum. ;-) -->
                 This document is copyrighted by Shlomi Fish
                 under the 
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by-sa/2.0/">Creative
-                    Commons Attribution Share-Alike License version 2.0</link> 
+                <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+                    Commons Attribution Share-Alike Unported License version 3.0</link> 
                 (or at your option a greater version).
             </para>
         </legalnotice>
@@ -165,7 +166,7 @@
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed some missing quotes, courtesy of Freenode's 
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://rob.axpr.net/">AthlonRob</link>.
+                    <link xlink:href="http://rob.axpr.net/">AthlonRob</link>.
                 </revremark>
             </revision>
             <revision>
@@ -297,6 +298,15 @@
                     Converted the spelling of "Maths" to the commonwealth
                     spelling (which is the standard spelling used for my
                     English stories).
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>3904</revnumber>
+                <date>2011-02-27</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Converted to DocBook 5, upgraded the licence to 
+                    CC-by-sa-3.0, and added my homepage as a link.
                 </revremark>
             </revision>
         </revhistory>

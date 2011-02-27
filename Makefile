@@ -520,6 +520,7 @@ DOCBOOK5_DOCS = \
 	perfect-it-workplace-rev2 \
 	objectivism-and-open-source \
 	foss-licences-wars-rev2 \
+	human-hacking-field-guide-rev2 \
 	$(FICTION_DOCS)
 
 # DOCBOOK4_BASE_DIR = lib/docbook

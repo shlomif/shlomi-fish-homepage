@@ -137,7 +137,13 @@ my @documents =
         work_in_progress => 1,
         db_ver => 5,
     },
-
+    {
+        id => "human-hacking-field-guide-rev2", 
+        path =>  "humour/human-hacking",
+        base => "human-hacking-field-guide-rev2",
+        custom_css => 1,
+        db_ver => 5,
+    },
 );
 
 foreach my $d (@documents)

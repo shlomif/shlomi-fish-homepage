@@ -1,0 +1,17 @@
+<set-var rtl_layout=1 />
+#include "multi-lang.wml"
+<set-var shlomif_lang="he" />
+
+#include '../template.wml'
+# TODO : Add later.
+# #include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "האויב ואיך עזרתי להילחם בו (גרסה 6)" />
+
+<h2* id="toc">תוכן העניינים</h2*>
+
+# <toc />
+
+<p><b>מאת:</b> שלומי פיש </p>
+
+#include "docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml"

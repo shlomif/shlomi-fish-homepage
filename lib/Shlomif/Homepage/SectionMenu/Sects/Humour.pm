@@ -30,7 +30,7 @@ my $humour_tree_contents =
                     [
                         {
                             text => "Text in Hebrew",
-                            url => "humour/TheEnemy/The-Enemy-rev5.html",
+                            url => "humour/TheEnemy/The-Enemy-rev6.html",
                             title => "Text of &quot;The Enemy&quot; In Hebrew",
                         },
                         {

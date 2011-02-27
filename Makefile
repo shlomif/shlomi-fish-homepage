@@ -206,6 +206,7 @@ SCREENPLAY_DOCS = \
 	TOW_Fountainhead_2
 
 FICTION_DOCS = \
+	The-Enemy-Hebrew-rev6 \
 	The-Pope-Died-on-Sunday-hebrew
 
 DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_INDIVIDUAL_XHTMLS))
@@ -395,6 +396,7 @@ $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DI
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: lib/docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml
 
+$(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: lib/docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml
 
 %.show:
 	@echo "$* = $($*)"

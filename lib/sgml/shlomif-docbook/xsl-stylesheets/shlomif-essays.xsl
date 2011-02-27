@@ -66,6 +66,7 @@
         </ul>
     </div>
     -->
+    <div class="center ads_top"></div>
     <xsl:if test="string($docmake.output.work_in_progress)">
     <div class="center warning">
         <p>

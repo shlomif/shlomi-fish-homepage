@@ -497,8 +497,12 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	background-image.png \
 	background-shlomif.png \
 	bottom-shlomif.png \
+	hhfg-bg-bottom.png \
+	hhfg-bg-middle.png \
+	hhfg-bg-top.png \
 	style.css \
 	top-shlomif.png
+
 
 DOCBOOK4_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
 DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))

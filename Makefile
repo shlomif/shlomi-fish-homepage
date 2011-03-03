@@ -204,6 +204,7 @@ SCREENPLAY_DOCS = \
 	sussman-interview \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2
+	# hitchhikers-guide-to-star-trek-tng \
 
 FICTION_DOCS = \
 	The-Enemy-Hebrew-rev6 \
@@ -333,6 +334,9 @@ DOCMAKE_PARAMS = -v
 $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
+
+$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : bin/processors/convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
+	perl $<
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_1.txt
 	cp -f $< $@

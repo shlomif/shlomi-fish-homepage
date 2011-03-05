@@ -156,6 +156,14 @@ shlomifish.org
 </form>
 </define-tag>
 
+<define-tag wikia_wiki_link>
+<ul class="relevant_links">
+<li>
+<a href="http://shlomif.wikia.com/" rel="main_wiki_page">The Shlomif Wikia</a>
+</li>
+</ul>
+</define-tag>
+
 <define-tag no_ie_link endtag="required">
 <a href="<rellink url="no-ie/" host="t2" />" title="Stop Using Internet Explorer!">%body</a>
 </define-tag>
@@ -214,8 +222,7 @@ in general.
 </div>
 
 <google_search />
-
-
+<wikia_wiki_link />
 
 <affil_collection_shlomif />
 

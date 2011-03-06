@@ -67,3 +67,20 @@ publicly linked to. Please send comments to
 </note>
 
 </define-tag>
+
+<define-tag cc_by_sa_license_british>
+<preserve year />
+<set-var %attributes />
+<h3 id="license">Copyright and Licence</h3>
+
+<p>
+This document is Copyright by Shlomi Fish, <get-var year />, and is available 
+under the
+terms of <a rel="license" 
+href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons 
+Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<restore year />
+</define-tag>

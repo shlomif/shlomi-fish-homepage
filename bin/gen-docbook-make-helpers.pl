@@ -144,6 +144,12 @@ my @documents =
         custom_css => 1,
         db_ver => 5,
     },
+    {
+        id => "foss-and-other-beasts-v3",
+        path => "philosophy/foss-other-beasts/version-3",
+        base =>  "foss-and-other-beasts-v3",
+        db_ver => 5,
+    },
 );
 
 foreach my $d (@documents)

@@ -528,6 +528,7 @@ DOCBOOK5_DOCS = \
 	dealing-with-hypomanias \
 	perfect-it-workplace-rev2 \
 	objectivism-and-open-source \
+	foss-and-other-beasts-v3 \
 	foss-licences-wars-rev2 \
 	human-hacking-field-guide-rev2 \
 	$(FICTION_DOCS)

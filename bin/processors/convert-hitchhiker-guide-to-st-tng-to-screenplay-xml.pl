@@ -48,7 +48,7 @@ sub process_scene
     $s =~ s{^ +}{}gms;
     $s =~ tr/()/[]/;
 
-    $s =~ s{^(\w[^\n]+\n)+}{calc_new_para($1)}egms;
+    $s =~ s{^((?:\w[^\n]+\n)+)}{calc_new_para($1)}egms;
 
     return $s;
 }
@@ -56,14 +56,20 @@ sub process_scene
 my $END = '* * *      T  h  e      E  n  d      * * *';
 $text =~ s{\A(.*?)^(SCENE 1:)}{wrap_as_desc($1) . $2}ems;
 $text =~ 
-s{^((?:SCENE (\d+)|EPILOGUE):[^\n]*\n(?: +[^\n]*\n)*)(.*?)(?=^(?:(?:SCENE|EPILOGUE)|(?:\s*\Q$END\E)))}
-{
-    # print "Foo <D1 = $1> <D2 = $2> <D3 = $3>"; 
-    my $id = defined($2) ? $2 : "EPILOGUE"; 
-    qq{\n\n<s id="scene_$id" title="Scene $id">\n\n}
-    . wrap_as_desc($1) . "\n\n" . process_scene($3) .
-    "\n\n</s>\n\n"
-}egms;
+s{^(?<start_line>(?:SCENE (?<id>\d+)|EPILOGUE):[^\n]*\n(?: +[^\n]*\n)*)(?<body>.*?)(?=^(?:(?:SCENE|EPILOGUE)|(?:\s*\Q$END\E)))}
+[
+    my ($start_line, $id, $body) = @+{qw(start_line id body)};
+
+    my $s_line = 
+        defined($id)
+        ? qq{\n\n<s id="scene_$id" title="Scene $id">\n\n}
+        : qq{\n\n<s id="epilogue" title="Epilogue">\n\n}
+        ;
+
+    $s_line
+    . wrap_as_desc($start_line) . "\n\n" . process_scene($body)
+    . "\n\n</s>\n\n"
+]egms;
 
 $text =~ s{^(\s*\Q$END\E.*)\z}{
     qq{\n\n<s id="end" title="End">\n\n}

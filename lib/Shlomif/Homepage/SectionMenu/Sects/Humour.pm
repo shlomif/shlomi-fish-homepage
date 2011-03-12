@@ -342,6 +342,14 @@ my $humour_tree_contents =
                     text => "Hitchhiker's Guide to Star Trek TNG",
                     url => "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
                     title => "A Cross of the Douglas Adams Book and the T.V. Series",
+                    subs =>
+                    [
+                        {
+                            text => "HTMLised Version",
+                            url => "humour/by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html",
+                            title => "Nicely formatted version after converted to HTML",
+                        },
+                    ],
                 },
                 {
                     text => "How Many Usenet Readers does it Take to Change a Lightbulb?",

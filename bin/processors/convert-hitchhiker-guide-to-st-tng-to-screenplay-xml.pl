@@ -14,7 +14,7 @@ sub prefix_lines
 {
     my $s = shift;
 
-    $s =~ s{^}{// }gms;
+    $s =~ s{^\s+}{}gms;
     $s =~ s{$}{<br />}gms;
     $s =~ s{([\[\]])}{\\$1}g;
 

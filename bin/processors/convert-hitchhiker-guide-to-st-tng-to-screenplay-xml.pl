@@ -37,6 +37,7 @@ sub calc_new_para
     }
     else
     {
+        $para =~ tr/()/[]/;
         return $para;
     }
 }
@@ -46,9 +47,8 @@ sub process_scene
     my $s = shift;
 
     $s =~ s{^ +}{}gms;
-    $s =~ tr/()/[]/;
 
-    $s =~ s{^((?:\w[^\n]+\n)+)}{calc_new_para($1)}egms;
+    $s =~ s{(^\n)((?:[\w\*\"][^\n]+\n)+)}{$1.calc_new_para($2)}egms;
 
     return $s;
 }
@@ -72,8 +72,10 @@ s{^(?<start_line>(?:SCENE (?<id>\d+)|EPILOGUE):[^\n]*\n(?: +[^\n]*\n)*)(?<body>.
 ]egms;
 
 $text =~ s{^(\s*\Q$END\E.*)\z}{
+    my $text = $1;
+    $text =~ tr/[]/()/;
     qq{\n\n<s id="end" title="End">\n\n}
-    . wrap_as_desc($1)
+    . wrap_as_desc($text)
     . qq{\n\n</s>\n\n}
 }ems;
 

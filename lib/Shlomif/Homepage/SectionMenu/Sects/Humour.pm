@@ -364,6 +364,11 @@ my $humour_tree_contents =
                     url => "humour/by-others/division-two/",
                     title => "A mirror of a hilarious parodical site that went offline",
                 },
+                {
+                    text => "Oded C.'s Stories",
+                    url => "humour/by-others/oded-c/",
+                    title => "Humorous stories by Oded C. in Hebrew",
+                },
             ],
         },
         {

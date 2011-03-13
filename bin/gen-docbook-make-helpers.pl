@@ -138,9 +138,9 @@ my @documents =
         db_ver => 5,
     },
     {
-        id => "human-hacking-field-guide-rev2", 
+        id => "human-hacking-field-guide-v2", 
         path =>  "humour/human-hacking",
-        base => "human-hacking-field-guide-rev2",
+        base => "human-hacking-field-guide-v2",
         custom_css => 1,
         db_ver => 5,
     },

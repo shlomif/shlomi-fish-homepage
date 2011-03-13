@@ -521,7 +521,7 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 DOCBOOK4_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
 DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
-HHFG_V2_IMAGES_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide-rev2
+HHFG_V2_IMAGES_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide-v2
 HHFG_V2_IMAGES_DEST = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST)
@@ -546,7 +546,7 @@ DOCBOOK5_DOCS = \
 	objectivism-and-open-source \
 	foss-and-other-beasts-v3 \
 	foss-licences-wars-rev2 \
-	human-hacking-field-guide-rev2 \
+	human-hacking-field-guide-v2 \
 	$(FICTION_DOCS)
 
 # DOCBOOK4_BASE_DIR = lib/docbook

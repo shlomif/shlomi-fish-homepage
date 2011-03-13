@@ -313,6 +313,10 @@ table.visible
     padding: 0.2em 0.2em 1em 0.2em;
     border: #689 thin solid;
 }
+.visible th
+{
+    font-weight: bold;
+}
 [% PROCESS "shlomif/products-syndication.ttml" %]
 .ads_side, .ads_top_wide
 {

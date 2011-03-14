@@ -142,6 +142,7 @@ my @documents =
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide-v2",
         custom_css => 1,
+        del_revhistory => 1,
         db_ver => 5,
     },
     {
@@ -166,6 +167,11 @@ foreach my $d (@documents)
     if (! exists($d->{custom_css}) )
     {
         $d->{custom_css} = 0;
+    }
+
+    if (! exists($d->{del_revhistory}) )
+    {
+        $d->{del_revhistory} = 0;
     }
 }
 

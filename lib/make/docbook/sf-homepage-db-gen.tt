@@ -4,6 +4,11 @@
 QUADPRES_EXE = quadp
 
 [% FOREACH db_ver = [4,5] %]
+[% IF db_ver == '5' %]
+[% xslt_ss = '$(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET)' %]
+[% ELSE %]
+[% xslt_ss = '$(XHTML_XSLT_SS)' %]
+[% END %]
 [% docs = ((db_ver == 4) ? docs_4 : docs_5) %]
 [% db_ver_path = (db_ver == 4 ? "" : (db_ver _ "/")) %]
 [% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
@@ -48,7 +53,8 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 [% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \
 [%- SET v = d.work_in_progress ? "1" : "" %]
 [% "\t\t" %]--stringparam "docmake.output.work_in_progress=[% v %]" \
-[% "\t\t" %]-x $(XHTML_XSLT_SS) -o $@ xhtml $< \
+[% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
+[% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml $< \
 [% "\t" %]&& touch $@
 
 [% END %]

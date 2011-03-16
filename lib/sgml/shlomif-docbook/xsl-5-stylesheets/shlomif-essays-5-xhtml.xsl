@@ -5,7 +5,7 @@
     xmlns:d="http://docbook.org/ns/docbook"
     version='1.0'
     >
-    <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/docbook.xsl" />
+    <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl" />
     <xsl:param name="use.id.as.filename">1</xsl:param>
     <xsl:param name="html.stylesheet">style.css</xsl:param>
     <xsl:param name="itemizedlist.propagates.style">1</xsl:param>

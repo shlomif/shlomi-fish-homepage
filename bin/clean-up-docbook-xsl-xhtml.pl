@@ -65,7 +65,7 @@ $xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
     # It's a kludge
     $s =~ s{ lang="en"}{}g;
     $s =~ s{ xml:lang="en"}{}g;
-    $s =~ s{ type="(1|disc)"}{}g;
+    $s =~ s{ type="(?:1|disc)"}{}g;
     $s =~ s{<hr[^/]*/>}{<hr />}g;
     $s =~ s{ target="_top"}{}g;
 

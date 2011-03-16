@@ -36,8 +36,6 @@ sub _slurp
 }
 
 {
-    my ($body_node) = $xpc->findnodes('//xhtml:body');
-
     my $s = _slurp($filename);
 
     $s =~ s{\A.*?<body[^>]*>}{}sm;

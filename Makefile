@@ -590,7 +590,8 @@ $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
-	xsltproc --path  $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) -o $@ $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) $<
+	xsltproc --stringparam root.filename $@ --path  $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) $<
+	mv -f $@.html $@
 
 $(DOCBOOK5_RENDERED_DIR)/%.xhtml: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
 	./bin/clean-up-docbook-5-xsl-xhtml-1_1.pl -o $@ $<

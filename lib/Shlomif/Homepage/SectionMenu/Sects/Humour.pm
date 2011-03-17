@@ -232,6 +232,13 @@ my $humour_tree_contents =
                     text => "Ways to Do it",
                     url => "humour/ways_to_do_it.html",
                     title => "Ways to Do it According to the Programming Languages of the World",
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Translation",
+                            url => "humour/ways_to_do_it-heb.html",
+                        },
+                    ],
                 },
                 {
                     text => "IRPWUG Announces Project WYSIWYT",

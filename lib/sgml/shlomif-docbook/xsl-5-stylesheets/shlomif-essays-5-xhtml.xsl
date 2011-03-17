@@ -26,12 +26,29 @@
     -->
     <xsl:param name="fop1.extensions">1</xsl:param>
 
-<!-- Insert some adsense ads -->
+<!-- Insert some AdSense Ads -->
 <xsl:template name="user.header.navigation">
-</xsl:template>
-
-<xsl:template name="user.header.content">
-    <xsl:call-template name="user.header.navigation"/>
+    <!--
+    <div class="site_nav_menu">
+        <ul>
+            <li><a href="{$docmake.output.path_to_root}">Home</a></li>
+            <li><a href="{$docmake.output.path_to_root}humour/">Humour</a></li>
+            <li><a href="{$docmake.output.path_to_root}philosophy/">Articles and Essays</a></li>
+            <li><a href="{$docmake.output.path_to_root}puzzles/">Puzzles</a></li>
+            <li><a href="{$docmake.output.path_to_root}art/">Computer Art</a></li>
+        </ul>
+    </div>
+    -->
+    <div class="center ads_top"></div>
+    <xsl:if test="string($docmake.output.work_in_progress)">
+    <div class="center warning">
+        <p>
+            <b>Note:</b> This document is work-in-progress. Please don't 
+            publish it on news sites, or otherwise link to it in public
+            without the author's permission. Private linking is acceptable.
+        </p>
+    </div>
+    </xsl:if>
 </xsl:template>
 
 <!-- Disable the title="" attribute in sections. -->

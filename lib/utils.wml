@@ -36,6 +36,13 @@
 <a href="mailto:%0">%0</a>
 </define-tag>
 
+<define-tag mailto_link_to_self>
+<preserve email />
+<set-var %attributes />
+<a href="mailto:<get-var email />"><get-var email /></a>
+<restore email />
+</define-tag>
+
 <define-tag note endtag="required">
 <div class="note">
 %body
@@ -83,4 +90,8 @@ later version).
 </p>
 
 <restore year />
+</define-tag>
+
+<define-tag main_email whitespace="delete">
+shlomif@shlomifish.org
 </define-tag>

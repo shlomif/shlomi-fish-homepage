@@ -6,7 +6,7 @@
 <dt>Homepage:</dt>
 <dd><url_body_link href="http://www.shlomifish.org/" /></dd>
 <dt>E-mail:</dt> 
-<dd><email:link "shlomif@iglu.org.il" /></dd>
+<dd><mailto_link_to_self email="<main_email />" /></dd>
 <dt>Instant Messaging:</dt>
 <dd>
 <dl>
@@ -40,7 +40,7 @@
 <dt>Yahoo</dt>
 <dd><url_body_link href="http://profiles.yahoo.com/shlomif2" /></dd>
 <dt>GMail</dt>
-<dd>(<b>Note:</b> don't E-mail me there instead of <a href="mailto:shlomif@iglu.org.il">my regular E-mail</a>!) <email:link "shlomif@gmail.com" /></dd>
+<dd>(<b>Note:</b> don't E-mail me there instead of <a href="mailto:<main_email />">my regular E-mail</a>!) <mailto_link_to_self email="shlomif@gmail.com" /></dd>
 <dt>Flickr</dt>
 <dd><url_body_link href="http://www.flickr.com/photos/shlomif/" /></dd>
 <dt>Frappr</dt>

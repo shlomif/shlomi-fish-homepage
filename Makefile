@@ -472,14 +472,7 @@ $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
-COMMON_CSSS = lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml
-
-common/style.css.ttml: $(COMMON_CSSS)
-	touch $@
-
-common/style-2008.css.ttml: $(COMMON_CSSS)
-	touch $@
-
+COMMON_CSS_TARGET_DEPS = lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml
 
 MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
@@ -700,7 +693,7 @@ VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
 CSS_GEN_SCRIPT = bin/gen-css.pl
 
-CSS_TARGETS_COMMON_DEPS = $(TTMLS_COMMON_DEPS) $(CSS_GEN_SCRIPT)
+CSS_TARGETS_COMMON_DEPS = $(COMMON_CSS_TARGET_DEPS) $(TTMLS_COMMON_DEPS) $(CSS_GEN_SCRIPT)
 
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS)
 

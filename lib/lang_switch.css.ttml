@@ -19,6 +19,10 @@
     float :left;
     padding : 0;
     margin : 0;
+}
+.lang_switch li a , .lang_switch li b
+{
+    display : block;
     padding-top : 3pt;
     padding-bottom : 3pt;
     padding-left : 0.5em;
@@ -30,7 +34,6 @@
 }
 .lang_switch li a
 {
-    display : block;
     text-decoration : none;
 }
 .lang_switch li.title

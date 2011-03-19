@@ -1,0 +1,12 @@
+<define-tag lang_switch>
+<preserve url:eng url:heb />
+<set-var %attributes />
+<div class="lang_switch">
+<ul>
+<li class="title"><b>Switch Language</b></li>
+<li class="lang"><a href="<get-var url:eng />">English</a></li>
+<li class="lang"><a href="<get-var url:heb />">Hebrew (עברית)</a></li>
+</ul>
+</div>
+<restore url:eng url:heb />
+</define-tag>

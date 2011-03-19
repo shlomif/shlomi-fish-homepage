@@ -3,6 +3,9 @@
 
 <latemp_subject "My Humour Collection" />
 
+#include "pages/t2/humour.wml"
+
+<div class="main_text">
 <define-tag joke endtag="required">
 %body
 <hr class="joke"/>
@@ -998,3 +1001,4 @@ dishwasher.
 
 </header_joke>
 
+</div> ;;; End for main_text

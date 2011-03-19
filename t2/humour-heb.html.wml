@@ -4,6 +4,10 @@
 
 <latemp_subject "מקבץ אמרות השפר והציטוטים של שלומי פיש" />
 
+#include "pages/t2/humour.wml"
+
+<div class="main_text">
+
 <define-tag joke endtag="required">
 %body
 <hr class="joke"/>
@@ -996,3 +1000,5 @@ English spelling aims to be consistent. Publicly and methodically.
 </p>
 
 </header_joke>
+
+</div> ;;; End for main_text

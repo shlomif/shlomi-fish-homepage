@@ -1,3 +1,7 @@
+body
+{
+    font-family: Arial, Sans-Serif;
+}
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
 { 
     background-color : #90EE90; /* LightGreen */
@@ -217,7 +221,10 @@ button[% sect_m %]
     direction:rtl;
     text-align:right;
     padding-right: 0.75cm;
+[%# Commenting out because we want Arial also for Hebrew.
+    
     font-family: "David CLM", David, Serif;
+%]
 }
 .english
 {

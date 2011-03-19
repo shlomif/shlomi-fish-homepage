@@ -573,3 +573,12 @@ table.visible
     padding-top: 1em;
     overflow: hidden;
 }
+.main .hebrew li
+{
+    overflow: hidden;
+    list-style-position: inside;
+}
+.main .hebrew ul li
+{
+    list-style-type: disc;
+}

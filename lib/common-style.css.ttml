@@ -246,7 +246,6 @@ table.thumbs
     border:0;
 }
 [% PROCESS "shlomif/common_defs.ttml" %]
-[% INCLUDE "lang_switch.css.ttml" %]
 .about_site
 {
 [% IF 0 %]
@@ -582,3 +581,4 @@ table.visible
 {
     list-style-type: disc;
 }
+[% INCLUDE "lang_switch.css.ttml" %]

@@ -21,6 +21,8 @@
     margin : 0;
     padding-top : 3pt;
     padding-bottom : 3pt;
+    padding-left : 0.5em;
+    padding-right : 0.5em;
 }
 .lang_switch li.lang
 {
@@ -30,11 +32,6 @@
 {
     display : block;
     text-decoration : none;
-}
-.lang_switch li
-{
-    padding-left : 0.5em;
-    padding-right : 0.5em;
 }
 .lang_switch li.title
 {

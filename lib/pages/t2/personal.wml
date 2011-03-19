@@ -1,32 +1,20 @@
 
 #include '../template.wml'
 #include "xhtml/1.x/std/toc.wml"
+#include "lang_switch.wml"
 
 <en>
-
 <latemp_subject "About Myself" />
-
-<div class="lang_switch">
-<ul>
-<li><a href="./personal.html">English</a></li>
-<li><a href="./personal-heb.html">Hebrew (עברית)</a></li>
-</ul>
-</div>
-
 </en>
 
 <he>
-
-<div class="lang_switch">
 <latemp_subject "אודות עצמי (שלומי פיש)" />
-
-<ul>
-<li><a href="./personal.html">English</a></li>
-<li><a href="./personal-heb.html">Hebrew (עברית)</a></li>
-</ul>
-</div>
-
 </he>
+
+
+<lang_switch url:eng="personal.html" url:heb="personal-heb.html" />
+
+<div class="main_text">
 
 <define-tag picture_tag>
 
@@ -493,3 +481,5 @@ I hope you enjoy my web-site!
 <b>שלומי פיש</b>
 </p>
 </he>
+
+</div> ;;; End for main_text

@@ -1,6 +1,13 @@
 #include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "Copyright Terms of Shlomi Fish's Homesite" />
+
+<h2* id="toc">Table of Contents</h2*>
+
+<toc />
+
+<h2 id="global_copyrights">Global Copyrights' Terms</h2>
 
 <p>
 It's hard for me to assign a permissive copyrights term (like one of

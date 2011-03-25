@@ -372,7 +372,7 @@
                     <title>The Best Tools That Money Can Buy</title>
                 </info>
                 <para>
-                    This cannot stressed enough. As <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Spolsky notes</link> (based
+                    This cannot be stressed enough. As <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Spolsky notes</link> (based
                     on Steve McConnell) in item No. 9 of the Joel 
                     Test, you need to "use the best tools that money can buy".
                 </para>
@@ -470,7 +470,7 @@
                     there isn't good public transportation. The money you spend
                     on the cabs is very small compared to the one you would
                     lose by lost productivity, and by frustrations of
-                    travelling.  
+                    travelling.
                 </para>
 
             </section>
@@ -879,7 +879,7 @@
                     and developing for it, with Perl and doing mostly
                     Algorithms and Text Processing in C. Recently, however I
                     got a job as a developer for a Linux Server-side C/C++
-                    application. (dealing with sockets, processes, threads,
+                    application (dealing with sockets, processes, threads,
                     Unicode and other such advanced problems). While I made a
                     lot of progress, I noticed that I often got stuck on many
                     problems, for which I had no idea how to easily resolve. In
@@ -928,7 +928,7 @@
                 even incorrect conclusions or reasoning can bring useful
                 insights, and give some food for thought. Sometimes, I find
                 some useful insights in rehearsed things or short blog
-                entries. 
+                entries.
             </para>
             <para>
                 If you're a manager or team-leader, you should make sure
@@ -1113,9 +1113,9 @@
                 <para>
                     "Joel on Software" features two excellent article about
                     the motivation for refactoring: <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things You Should Never Do,
-                        Part I (why rewriting functional code from 
-                        scratch is a bad idea)"</link>, and <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub 
-                        a dub dub" (how and why to do refactoring).</link>.
+                        Part I"</link> (why rewriting functional code from 
+                        scratch is a bad idea), and <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub 
+                        a dub dub"</link> (how and why to do refactoring).
                 </para>
                 <para>
                     There are many other resources for that on-line, along with
@@ -1289,7 +1289,7 @@ function create_employee(params)
             </para>
             <para>
                 Once, before I started my undergraduate studies, I worked
-                for a developer of a software-based modem (so-called
+                s a developer of a software-based modem (so-called
                 "Winmodems"). I was impressed from the atmosphere there,
                 and how professional and clueful the managers were. One of
                 the things I liked about the job was that while I was
@@ -1309,8 +1309,9 @@ function create_employee(params)
                 <title>Listen to Your Customers or Users</title>
             </info>
             <para>
-                Joel on Software gives <link xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">a lot of good advice on having
-                    a good customer service</link>. You should listen to
+                Joel on Software gives <link xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">a 
+                    lot of good advice on having a good customer 
+                    service</link>. You should listen to
                 what your customers (or users) say. Don't dismiss them.
                 Don't give them annoying canned responses. Open your
                 bug-tracker to the world as a web-service. There are many
@@ -1328,11 +1329,10 @@ function create_employee(params)
             <para>
                 Furthermore, if one or more of your customers are requesting a
                 feature, and it seems to be important enough, give a priority
-                to implementing it. As a Mercury Interactive (Now part of HP)
-                developer
+                to implementing it. As a developer from Mercury Interactive (Now part of HP)
                 <link xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/2751">noted</link>
                 usually the features requested by the customers, are the
-                ones that will yield the most newer customers,
+                ones that will yield the largest amount of newer customers,
                 not-to-mention will allow keeping customers, if they are
                 paying for upgrades or as a "software-as-a-service" model.
             </para>
@@ -1516,7 +1516,7 @@ function create_employee(params)
                 demotivating on purpose. This was one of the reasons
                 that caused me to assume a
                 <link xlink:href="http://en.wikipedia.org/wiki/Hypomania">variation
-                    on a clinical depression called "Hypomania
+                    on clinical depression called "Hypomania
                     " (= below-Mania)</link>, 
                 which in turn made me under-productive.
             </para>
@@ -1602,7 +1602,7 @@ function create_employee(params)
                 told me that in his previous workplace they kept a
                 knowledge-base as a group of Microsoft Word documents stored
                 inside a Visual SourceSafe repository. As a result, people 
-                felt it was too much bother to update and maintain them.
+                felt it was too complicated to update and maintain them.
                 Eventually, he set up an instance of <link
                     xlink:href="http://www.mediawiki.org/">MediaWiki</link>
                 there, which proved to be much more convenient, accessible
@@ -1665,8 +1665,10 @@ function create_employee(params)
                 My rule of the thumb for choosing a version control system
                 is the following: "When in doubt - use <link 
                     xlink:href="http://better-scm.berlios.de/subversion/">Subversion</link>.
-                See <link xlink:href="http://blog.red-bean.com/sussman/?p=79">Ben Collins-Sussman's 
-                    article "Version Control and 'the 80%'"</link>
+                See 
+                <link xlink:href="http://blog.red-bean.com/sussman/?p=79">Ben 
+                    Collins-Sussman's article "Version Control and
+                    'the 80%'"</link>
                 for some of the motivation for this statement. Another one
                 is that from my impression most of the new breed "Distributed
                 Version Control Systems" tend to have catches for the unwary
@@ -1725,7 +1727,7 @@ function create_employee(params)
                 So which technology should you choose? I'm not going
                 to give a direct answer, and often there are many factors
                 that make one more appropriate in certain cases than others.
-                Joel Spolsky <link xlink:href="http://www.joelonsoftware.com/items/2006/09/01.html">attempted 
+                Joel Spolsky <link xlink:href="http://www.joelonsoftware.com/items/2006/09/01.html">attempted
                     to answer this question</link>, but ended up falling into
                 many common misconceptions and prejudices (while still making
                 a few good points). He also focused exclusively on
@@ -1767,7 +1769,7 @@ function create_employee(params)
                 </info>
                 <para>
                     <link xlink:href="http://www.faqs.org/docs/artu/ch16s01.html">Eric
-                        Raymond's "Tale of J. Random Newbie"</link> is 
+                        Raymond's "Tale of J. Random Newbie"</link> is
                     illustrative of the many problems programmers encounter
                     in highly-proprietary environments. However,
                     even if you're using proven, mature,

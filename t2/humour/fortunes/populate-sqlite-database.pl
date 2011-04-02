@@ -27,6 +27,8 @@ my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
 
 $dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), text TEXT)");
 
+$dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
+
 my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (str_id, text) VALUES(?, ?)");
 
 my @lines = io->file("$script_dir/fortunes-list.mak")->getlines();
@@ -34,7 +36,7 @@ my @file_bases = (map { /(\b[a-z_\-]+\b)/g } @lines);
 
 foreach my $basename (@file_bases)
 {
-    my $tree = HTML::TreeBuilder::LibXML->new_from_file("./dest/t2-homepage/humour/fortunes/$basename.html");
+    my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
 
     my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
 
@@ -45,7 +47,7 @@ foreach my $basename (@file_bases)
     while (defined(my $node = shift(@$nodes_list)))
     {
         printf ("%-70s\r", "$basename $idx/$count");
-        my $id = $node->findnodes(q{//h3[@id]})->[0]->id;
+        my $id = $node->findnodes(q{descendant::h3[@id]})->[0]->id;
 
         if (! $id)
         {

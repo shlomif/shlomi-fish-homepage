@@ -13,21 +13,23 @@ my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 use HTML::TreeBuilder::LibXML;
 use DBI;
 use File::Spec;
+use IO::All;
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$script_dir/$db_base_name","","");
 
-foreach my $file_path (glob("./dest/t2-homepage/humour/fortunes/*.html"))
-{
-    my $tree = HTML::TreeBuilder::LibXML->new;
+my @lines = io->file("$script_dir/fortunes-list.mak")->getlines();
+my @file_bases = (map { /(\b[a-z_\-]+\b)/g } @lines);
 
-    $tree->load($file_path);
+foreach my $basename (@file_bases)
+{
+    my $tree = HTML::TreeBuilder::LibXML->new_from_file("./dest/t2-homepage/humour/fortunes/$basename.html");
 
     my $nodes_list = $tree->findnodes(q{//div[contains(@class, 'fortune')]});
 
-    while (defined(my $node = $nodes_list->shift()))
+    while (defined(my $node = shift(@$nodes_list)))
     {
         print "\n\n\n[[[START]]]\n";
-        print $node->toString();
+        print $node->as_XML();
         print "\n[[[END]]]\n\n\n";
     }
 }

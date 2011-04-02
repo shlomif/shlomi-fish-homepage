@@ -24,11 +24,12 @@ foreach my $basename (@file_bases)
 {
     my $tree = HTML::TreeBuilder::LibXML->new_from_file("./dest/t2-homepage/humour/fortunes/$basename.html");
 
-    my $nodes_list = $tree->findnodes(q{//div[contains(@class, 'fortune')]});
+    my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
 
     while (defined(my $node = shift(@$nodes_list)))
     {
-        print "\n\n\n[[[START]]]\n";
+        my $id = $node->findnodes(q{//h3[@id]})->[0]->id;
+        print "\n\n\n[[[START ID=$id]]]\n";
         print $node->as_XML();
         print "\n[[[END]]]\n\n\n";
     }

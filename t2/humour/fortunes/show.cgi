@@ -101,12 +101,18 @@ EOF
 <head>
 <title>Fortune "@{[CGI::escapeHTML($str_id)]}"</title>
 <link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
-a:hover { background-color: palegreen; }
-</style>
 </head>
 <body>
+
+<ul id="nav">
+
+<li><a href="./">Back to the Main Fortunes Page</a></li>
+
+<li><a href="/">Shlomi Fish's Homepage</a></li>
+
+</ul>
 
 <h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>
 

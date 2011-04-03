@@ -3,14 +3,27 @@
 use strict;
 use warnings;
 
+use Sys::Hostname;
+
+BEGIN
+{
+    if (hostname() =~ m{heptagon})
+    {
+        eval <<'EOF';
 use lib "/home/shlomifish/apps/perl5/lib/perl5";
 
 use local::lib  "/home/shlomifish/apps/perl5/lib/perl5";
+EOF
+    }
+}
 
 use CGI;
 use DBI;
+use Encode qw(decode);
 
 use File::Spec::Functions qw( catpath splitpath rel2abs );
+
+binmode STDOUT, ':encoding(utf8)';
 
 # The Directory containing the script.
 my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
@@ -27,13 +40,22 @@ my $select_sth = $dbh->prepare(
 
 my $cgi = CGI->new;
 
+sub _header
+{
+    my $params = shift || [];
+
+    print $cgi->header(-charset => 'utf-8', @$params);
+
+    return;
+}
+
 my $str_id = $cgi->param('id');
 
 sub _main
 {
     if (! $str_id)
     {
-        print $cgi->header();
+        _header();
         print <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
@@ -63,7 +85,7 @@ EOF
 
     if (! $html_text)
     {
-        print $cgi->header();
+        _header();
 
         print <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +113,9 @@ EOF
         return;
     }
 
-    print $cgi->header();
+    $html_text = decode('utf-8', $html_text);
+
+    _header();
     print <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE

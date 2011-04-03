@@ -102,10 +102,13 @@ EOF
 <title>Fortune "@{[CGI::escapeHTML($str_id)]}"</title>
 <link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+a:hover { background-color: palegreen; }
+</style>
 </head>
 <body>
 
-<h1>Fortune @{[CGI::escapeHTML($str_id)]}</h1>
+<h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>
 
 <div class="fortunes_list">
 $html_text

@@ -92,6 +92,7 @@ EOF
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
 <title>Unknown fortune ID</title>
+<link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
@@ -103,6 +104,8 @@ $html_text
 </body>
 </html>
 EOF
+
+    return;
 }
 
 _main();

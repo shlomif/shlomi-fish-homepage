@@ -20,7 +20,8 @@ $generator->process_all();
 use IO::All;
 
 my $text = io("include.mak")->slurp();
-$text =~ s!^(T2_DOCS = .*)humour/fortunes/index.html!$1!m;
+$text =~ s!^(T2_DOCS = .*)humour/fortunes/index\.html!$1!m;
+$text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;
 $text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;
 io("include.mak")->print($text);
 

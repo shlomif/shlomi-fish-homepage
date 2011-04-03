@@ -30,6 +30,8 @@ close($text_fh);
 $contents =~ s{\A(.*?)<body>}{}ms;
 $contents =~ s{</body>(.*?)\z}{}ms;
 
+$contents =~ s{<h3( id="[^>]+>[^<]+)</h3>}{<fortune_h3$1</fortune_h3>}g;
+
 open my $xhtml_raw_out, ">", "${abs_out_fn}-for-input";
 binmode ($xhtml_raw_out, ":utf8");
 print {$xhtml_raw_out} $contents;

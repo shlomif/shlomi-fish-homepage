@@ -44,6 +44,10 @@ foreach my $basename (@file_bases)
 
     my $idx = 0;
 
+    # We split the work to 50-items batches per the advice on 
+    # Freenode's #perl by tm604 and jql.
+    $dbh->begin_work;
+
     while (defined(my $node = shift(@$nodes_list)))
     {
         printf ("%-70s\r", "$basename $idx/$count");
@@ -63,6 +67,12 @@ foreach my $basename (@file_bases)
     }
     continue
     {
-        $idx++;
+        if ((++$idx) % 50 == 0)
+        {
+            $dbh->commit;
+            $dbh->begin_work;
+        }
     }
+
+    $dbh->commit;
 }

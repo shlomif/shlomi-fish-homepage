@@ -588,7 +588,7 @@ implement menu entries in Scheme. The Scheme scripts reside in
 ~/.gimp-1.2/scripts and whenever changed they need to be refreshed by
 selecting <Toolbox> -> Xtns -> Script-Fu -> Refresh.
 
-Besides that, GIMP sports an interactive Script-Fu Console. It can be invoked
+Beside that, GIMP sports an interactive Script-Fu Console. It can be invoked
 by selecting <Toolbox> -> Xtns -> Script-Fu -> Console.
 
     Demo:
@@ -693,7 +693,8 @@ http://gimp-plug-ins.sourceforge.net/
 Because Plug-Ins are given access to the GIMP's PDB, Plug-ins can invoke 
 other plug-ins, so don't worry about modularity.
 
-Besides that it seems that there is also Gimp-Python, Gimp-Guile and Gimp-Tcl.
+Except for that, it seems that there is also Gimp-Python, Gimp-Guile and 
+Gimp-Tcl.
 None of them seems too much alive, but one can try using them at his own
 risk.
 

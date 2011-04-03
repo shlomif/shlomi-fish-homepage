@@ -1,5 +1,16 @@
 package Shlomif::Homepage::Amazon;
 
+use strict;
+use warnings;
+
+sub import
+{
+    my ($module, $args) = @_; 
+    return Shlomif::Homepage::Amazon::Obj->new($args)->process;
+}
+
+package Shlomif::Homepage::Amazon::Obj;
+
 use Moose;
 
 use XML::Grammar::ProductsSyndication;

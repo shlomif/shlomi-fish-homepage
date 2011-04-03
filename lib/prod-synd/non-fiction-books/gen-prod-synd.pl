@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Term::ReadPassword;
+use Shlomif::Homepage::Amazon;
 
 use XML::Grammar::ProductsSyndication;
 
@@ -34,21 +34,11 @@ binmode $out, ":utf8";
 print {$out} $xc->findnodes('/html:html/html:body/html:div')->[0]->toString(0);
 close ($out);
 
-$ps->update_cover_images(
+Shlomif::Homepage::Amazon->new(
     {
-        'size' => "l",
-        'resize_to' => { 'width' => 150, 'height' => 250 },
-        'name_cb' => 
-            sub 
-            {
-                my $args = shift;
-                return "$wml_dir/images/$args->{id}.jpg";
-            },
-        'amazon_token' => "0VRRHTFJECHSKYNYD282",
-        'amazon_associate' => "shlomifishhom-20",
-        'amazon_sak' => read_password('Secret Access Key: '),
-    },
-);
+        ps => $ps,
+        wml_dir => $wml_dir,
+    })->process;
 
 1;
 

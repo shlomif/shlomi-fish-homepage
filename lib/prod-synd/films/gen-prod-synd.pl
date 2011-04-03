@@ -7,6 +7,8 @@ use XML::Grammar::ProductsSyndication;
 
 use XML::LibXML::XPathContext;
 
+use Term::ReadPassword;
+
 my $wml_dir = "t2/humour/recommendations/films";
 my $lib_dir = "lib/prod-synd/films";
 my $ps = XML::Grammar::ProductsSyndication->new(
@@ -44,6 +46,7 @@ $ps->update_cover_images(
             },
         'amazon_token' => "0VRRHTFJECHSKYNYD282",
         'amazon_associate' => "shlomifishhom-20",
+        'amazon_sak' => read_password('Secret Access Key: '),
     }
 );
 

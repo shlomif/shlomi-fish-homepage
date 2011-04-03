@@ -9,8 +9,6 @@ use XML::Grammar::ProductsSyndication;
 
 use XML::LibXML::XPathContext;
 
-use Term::ReadPassword;
-
 my $wml_dir = "t2/art/recommendations/music";
 my $lib_dir = "lib/prod-synd/music";
 my $ps = XML::Grammar::ProductsSyndication->new(

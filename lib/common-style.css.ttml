@@ -395,52 +395,7 @@ table.visible
     color: #8A2BE2; /* BlueViolet */
 }
 
-.fortunes_list .irc-conversation .who
-{
-    vertical-align: top;
-    text-align: right;
-    color: #33d;
-    padding-right: 7pt;
-    padding-left: 10pt;
-    white-space: nowrap;
-}
-
-.fortunes_list .irc-conversation .text
-{
-    vertical-align: top;
-    text-align: left;
-    padding-left: 3pt;
-}
-
-.fortunes_list .irc-conversation td
-{
-     padding-top: 1pt;
-     padding-bottom: 2pt;
-     font-family: Courier New;
-     font-size: small;
-}
-
-.fortunes_list .irc-conversation .me_is td
-{
-     color: red;
-}
-
-.fortunes_list table.irc-conversation
-{
-    overflow: hidden;
-}
-
-.fortunes_list .info
-{
-    border-collapse: collapse;
-    margin: 0.7em;
-}
-
-.fortunes_list .info td
-{
-    border: black thin solid;
-    padding: 0.2em;
-}
+[% INCLUDE "fortunes.css.ttml" %]
 
 /* For Adbrite */
 .adHeadline {font: bold 10pt Arial; text-decoration: underline; color: #0000FF;}

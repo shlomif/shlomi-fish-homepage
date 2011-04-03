@@ -1,0 +1,20 @@
+a:hover { background-color: palegreen; }
+#nav {
+    width: 100%;
+    float: left;
+    padding-left: 0.5em;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+    list-style: none;
+}
+#nav li {
+    float: left;
+    margin-right: 5pt;
+    border: black solid 1pt;
+}
+
+#nav li a {
+    display: block;
+    padding: 2pt 3pt;
+    text-decoration: none;    
+}

@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use CGI;
+use DBI;
 
 use File::Spec::Functions qw( catpath splitpath rel2abs );
 
@@ -11,6 +12,8 @@ use File::Spec::Functions qw( catpath splitpath rel2abs );
 my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 
 my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
+
+my $full_db_path = "$script_dir/$db_base_name";
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
 

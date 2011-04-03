@@ -33,20 +33,27 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
-FORTUNES_TARGET =  $(T2_DEST)/$(FORTUNES_DIR)/index.html
+T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
+FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls
+T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
+
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI)
 
 # t2 macros
 
 RSYNC = rsync --progress --verbose --rsh=ssh
 
-T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST)/$(FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
+T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
 $(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
 	cp -f $< $@
+
+$(T2_DEST_SHOW_CGI): $(T2_DEST)/%: $(T2_SRC_DIR)/%
+	cp -f $< $@
+	chmod +x $@
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 
@@ -690,7 +697,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | perl -pe 's!^\+!!' > $@
 
-GEN_STYLE_CSS_FILES = style.css style-2008.css
+GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css
 
 T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
 VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))

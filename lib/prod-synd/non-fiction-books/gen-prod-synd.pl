@@ -11,34 +11,15 @@ use XML::LibXML::XPathContext;
 
 my $wml_dir = "t2/philosophy/books-recommends";
 my $lib_dir = "lib/prod-synd/non-fiction-books";
-my $ps = XML::Grammar::ProductsSyndication->new(
+my $xml_basename = "shlomi-fish-non-fiction-books-recommendations.xml";
+
+my $amazon = 
+    Shlomif::Homepage::Amazon->new(
     {
-        'source' =>
-        {
-            'file' => "$wml_dir/shlomi-fish-non-fiction-books-recommendations.xml",
-        }
-    },
-);
-
-if (!$ps->is_valid())
-{
-    die "Not valid.";
-}
-my $xml = $ps->transform_into_html({ 'output' => "xml" });
-
-my $xc = XML::LibXML::XPathContext->new($xml);
-$xc->registerNs('html' => "http://www.w3.org/1999/xhtml");
-
-open my $out, ">", "$lib_dir/include-me.html";
-binmode $out, ":utf8";
-print {$out} $xc->findnodes('/html:html/html:body/html:div')->[0]->toString(0);
-close ($out);
-
-Shlomif::Homepage::Amazon->new(
-    {
-        ps => $ps,
+        lib_dir => $lib_dir,
+        xml_basename => $xml_basename,
         wml_dir => $wml_dir,
-    })->process;
+    });
 
-1;
+$amazon->process;
 

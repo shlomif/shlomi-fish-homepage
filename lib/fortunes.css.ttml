@@ -44,3 +44,18 @@
     border: black thin solid;
     padding: 0.2em;
 }
+
+.fortune .disp
+{
+    float: right;
+}
+
+.fortune .disp:before
+{
+    content: "[";
+}
+
+.fortune .disp:after
+{
+    content: "]";
+}

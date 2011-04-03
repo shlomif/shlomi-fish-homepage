@@ -8,8 +8,6 @@ use Shlomif::Homepage::Amazon;
 use XML::Grammar::ProductsSyndication;
 use XML::LibXML::XPathContext;
 
-use Term::ReadPassword;
-
 my $wml_dir = "t2/humour/recommendations/films";
 my $lib_dir = "lib/prod-synd/films";
 my $ps = XML::Grammar::ProductsSyndication->new(
@@ -40,3 +38,4 @@ Shlomif::Homepage::Amazon->new(
         ps => $ps,
         wml_dir => $wml_dir,
     })->process;
+

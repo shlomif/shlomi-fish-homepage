@@ -1,0 +1,11 @@
+#include "xhtml/1.x/std/toc.wml"
+
+<define-tag fortune_h3 endtag="required">
+<preserve id />
+<set-var %attributes />
+<h3 id="<get-var id />">%body</h3>
+<p class="disp">
+<a href="show.cgi?id=<get-var id />">Display</a>
+</p>
+<restore id />
+</define-tag>

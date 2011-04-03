@@ -3,6 +3,10 @@
 use strict;
 use warnings;
 
+use lib "/home/shlomifish/apps/perl5/lib/perl5";
+
+use local::lib  "/home/shlomifish/apps/perl5/lib/perl5";
+
 use CGI;
 use DBI;
 
@@ -87,6 +91,7 @@ EOF
         return;
     }
 
+    print $cgi->header();
     print <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
@@ -94,11 +99,13 @@ EOF
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>Unknown fortune ID</title>
+<title>Fortune "@{[CGI::escapeHTML($str_id)]}"</title>
 <link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
+
+<h1>Fortune @{[CGI::escapeHTML($str_id)]}</h1>
 
 <div class="fortunes_list">
 $html_text

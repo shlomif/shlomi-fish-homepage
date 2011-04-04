@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "xhtml/1.x/std/toc.wml"
+#include "stories/stories-list.wml"
 
 <latemp_subject "The Enemy and How I Helped to Fight it" />
 
@@ -13,14 +14,7 @@
 
 <h2 id="intro">Introduction</h2>
 
-<p>
-A member of the terrorist organisation "The Organisation" gets up
-in the morning, goes to his post and quits. But before he leaves he
-makes a suggestion that causes his former comrades to fight each other
-to the death. Join the now ex-Member of the Organisation as he embarks on an
-ego-trip, where he tries to prove that A can in fact be non-A, regardless
-of what Aristotle could differ. 
-</p>
+<the_enemy_summary />
 
 <p>
 It's a political satire, but one that is universal in its message, and

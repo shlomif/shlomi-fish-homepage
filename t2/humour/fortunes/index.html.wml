@@ -40,12 +40,30 @@ href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikip
 
 <h2 id="view">View and Download</h2>
 
+<ul>
+
+<li>
 <p>
 <a href="$(PACKAGE_BASE)"><b>These fortunes in a tar.gz file</b></a>
 </p>
+</li>
 
+<li>
 <p>
 <a href="source-files-list.html">The Sources Files List</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="show.cgi?mode=random"><b>Random fortune</b></a>
+</p>
+</li>
+
+<li>
+
+<p>
+Individual HTML pages for the fortune collection:
 </p>
 
 <ul>
@@ -69,6 +87,9 @@ $desc
 EOF
 }
 }:>
+</ul>
+</li>
+
 </ul>
 
 <h2 id="disclaimer">Commentary and Disclaimer</h2>

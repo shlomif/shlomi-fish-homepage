@@ -100,29 +100,6 @@ my $tree_contents =
             ],               
         },
         {
-            text => "Work",
-            url => "work/",
-            expand => { re => "", capt => 0,},
-            title => "Work-Related Pages",
-            subs =>
-            [
-                {
-                    text => "Hire Me!",
-                    url => "work/hire-me/",
-                    title => "I'm a Geek for Hire",
-                    expand => { re => "work/", },
-                    subs =>
-                    [
-                        {
-                            text => "Private Lessons",
-                            url => "work/private-lessons/",
-                            title => "I'm Giving Private Lessons for High School Subjects and Computing.",
-                        },
-                    ],
-                },
-            ],
-        },
-        {
             text => "Humour", 
             url => "humour/",
             expand => { @humour_expand },
@@ -186,6 +163,14 @@ my $tree_contents =
                     url => "humour/bits/",
                     expand => { re => "^humour/bits/", },
                     title => "Small Scale Funny Works of Mine",
+                    subs =>
+                    [
+                        {
+                            text => "Factoids",
+                            title => "&quot;Facts&qout; about Chuck Norris and other things",
+                            url => "humour/bits/facts/",
+                        },
+                    ],
                 },
                 {
                     text => "By Others",
@@ -441,6 +426,29 @@ my $tree_contents =
                     text => "General Philosophy",
                     url => "philosophy/philosophy/",
                     expand => { re => "^philosophy/(philosophy/|the-eternal-jew/)" },
+                },
+            ],
+        },
+        {
+            text => "Work",
+            url => "work/",
+            expand => { re => "", capt => 0,},
+            title => "Work-Related Pages",
+            subs =>
+            [
+                {
+                    text => "Hire Me!",
+                    url => "work/hire-me/",
+                    title => "I'm a Geek for Hire",
+                    expand => { re => "work/", },
+                    subs =>
+                    [
+                        {
+                            text => "Private Lessons",
+                            url => "work/private-lessons/",
+                            title => "I'm Giving Private Lessons for High School Subjects and Computing.",
+                        },
+                    ],
                 },
             ],
         },

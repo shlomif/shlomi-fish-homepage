@@ -367,6 +367,10 @@ my $humour_tree_contents =
                     url => "humour/by-others/top-12-things-likely-to-be-overheard-if-you-had-a-klingon-programmer.html",
                 },
                 {
+                    text => "SOAP - The S stands for Simple",
+                    url => "humour/by-others/s-stands-for-simple/",
+                },
+                {
                     text => "Division Two Magazine",
                     url => "humour/by-others/division-two/",
                     title => "A mirror of a hilarious parodical site that went offline",

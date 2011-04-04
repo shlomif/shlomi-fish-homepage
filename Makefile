@@ -39,8 +39,10 @@ FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
 
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
+T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
+T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_SHOW_CGI).txt
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT)
 
 # t2 macros
 
@@ -51,9 +53,13 @@ T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 $(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
 	cp -f $< $@
 
-$(T2_DEST_SHOW_CGI): $(T2_DEST)/%: $(T2_SRC_DIR)/%
+$(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	cp -f $< $@
 	chmod +x $@
+
+$(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
+	cp -f $< $@
+	chmod -x $@
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 

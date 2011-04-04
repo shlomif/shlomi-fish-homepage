@@ -167,7 +167,7 @@ my $tree_contents =
                     [
                         {
                             text => "Factoids",
-                            title => "&quot;Facts&qout; about Chuck Norris and other things",
+                            title => "&quot;Facts&quot; about Chuck Norris and other things",
                             url => "humour/bits/facts/",
                         },
                     ],

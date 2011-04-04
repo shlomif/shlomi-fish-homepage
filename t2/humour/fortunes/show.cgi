@@ -25,6 +25,9 @@ use File::Spec::Functions qw( catpath splitpath rel2abs );
 
 binmode STDOUT, ':encoding(utf8)';
 
+# We're using rand() later.
+srand();
+
 # The Directory containing the script.
 my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 
@@ -38,6 +41,14 @@ my $select_sth = $dbh->prepare(
     q{SELECT text FROM fortune_cookies WHERE str_id = ?}
 );
 
+my $select_max_id = $dbh->prepare(
+    q{SELECT MAX(id) FROM fortune_cookies}
+);
+
+my $lookup_str_id_from_id = $dbh->prepare(
+    q{SELECT str_id FROM fortune_cookies WHERE id = ?}
+);
+
 my $cgi = CGI->new;
 
 sub _header
@@ -49,10 +60,128 @@ sub _header
     return;
 }
 
-my $str_id = $cgi->param('id');
+my $mode = ($cgi->param('mode') || 'str_id');
 
-sub _main
+if ($mode eq "random")
 {
+    _pick_random();
+}
+elsif ($mode eq "str_id")
+{
+    my $str_id = $cgi->param('id');
+    _show_by_str_id($str_id);
+}
+else
+{
+    _invalid_mode();
+}
+
+sub _invalid_mode
+{
+    _header();
+    print <<'EOF';
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Unknown fortune ID</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<h1>Error! Invalid mode "@{[CGI::escapeHTML($str_id)]}".</h1>
+
+<p>
+Only valid modes are <tt>random</tt> and <tt>str_id</tt> (the latter is the
+default).
+</p>
+
+</body>
+</html>
+EOF
+    return;
+}
+
+sub _pick_random
+{
+    my $rv = $select_max_id->execute();
+
+    my ($max_id) = $select_max_id->fetchrow_array;
+
+    if (! $max_id)
+    {
+        _header();
+
+        print <<"EOF";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Unknown fortune ID</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<h1>Query failed</h1>
+
+<p>
+Report this problem to the webmaster.
+</p>
+</body>
+</html>
+EOF
+        return;
+    }
+
+    $rv = $lookup_str_id_from_id->execute(
+        int(rand() * ($max_id)) + 1
+    );
+
+    my ($str_id) = $lookup_str_id_from_id->fetchrow_array();
+
+    if (! $str_id)
+    {
+        _header();
+
+        print <<"EOF";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Unknown fortune ID</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<h1>lookup_str_id_from_id query failed</h1>
+
+<p>
+Report this problem to the webmaster.
+</p>
+</body>
+</html>
+EOF
+        return;
+
+    }
+
+    # str_id must not contain any strange HTML/URI/etc. characters
+    # If it does - then we suck.
+    print $cgi->redirect("./show.cgi?id=$str_id");
+
+    return;
+}
+
+sub _show_by_str_id
+{
+    my ($str_id) = @_;
+
     if (! $str_id)
     {
         _header();
@@ -129,26 +258,18 @@ EOF
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-
 <ul id="nav">
-
 <li><a href="./">Back to the Main Fortunes Page</a></li>
-
 <li><a href="/">Shlomi Fish's Homepage</a></li>
-
+<li><a href="show.cgi?mode=random">Random Fortune</a></li>
 </ul>
-
 <h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>
-
 <div class="fortunes_list">
 $html_text
 </div>
-
 </body>
 </html>
 EOF
 
     return;
 }
-
-_main();

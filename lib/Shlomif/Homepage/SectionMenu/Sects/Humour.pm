@@ -41,11 +41,6 @@ my $humour_tree_contents =
                     ],
                 },
                 {
-                    text => "Road to Heaven",
-                    url => "humour/RoadToHeaven/",
-                    title => "The Road to Heaven is Paved with Bad Intentions",
-                },
-                {
                     text => "TOW The Fountainhead",
                     url => "humour/TOWTF/",
                     title => "A Parody on &quot;The Fountainhead&quot;",
@@ -131,6 +126,11 @@ my $humour_tree_contents =
                             title => "Random ideas and future excerpts",
                         },
                     ],
+                },
+                {
+                    text => "Road to Heaven",
+                    url => "humour/RoadToHeaven/",
+                    title => "The Road to Heaven is Paved with Bad Intentions",
                 },
             ],
         },

@@ -7,7 +7,27 @@ body
     background-color : #90EE90; /* LightGreen */
 }
 [% SET navbar_width = "20%" %]
-[% PROCESS "shlomif/navbar.ttml" %]
+
+.navbar 
+{ 
+    float : left;
+    width : [% navbar_width %];
+    padding-left : 0.5em;    
+    padding-right : 0.5em;
+    padding-top : 1.5em;
+    padding-bottom: 2em;
+}
+ul.navbarmain
+{ 
+    padding-left: 0;
+    margin-left : 0.3em;
+}
+ul.navbarnested
+{
+    padding-left : 0em; 
+    margin-left : 1.5em;
+}
+
 [% INCLUDE "nav_links.ttml" %]
 [% PROCESS "newsitem.css.ttml" %]
 div.indent { margin-left : 3em }

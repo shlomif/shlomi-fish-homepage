@@ -1,3 +1,15 @@
+<define-tag the_enemy_summary>
+
+<p>
+A member of the terrorist organisation "The Organisation" gets up
+in the morning, goes to his post and quits. But before he leaves he
+makes a suggestion that causes his former comrades to fight each other
+to the death. Join the now ex-Member of the Organisation as he embarks on an
+ego-trip, where he tries to prove that A can in fact be non-A, regardless
+of what Aristotle could differ. 
+</p>
+
+</define-tag>
 
 <define-tag humour_link>$(ROOT)/humour/%0</define-tag>
 
@@ -14,16 +26,8 @@ tag />>
 </define-tag>
 
 <define-tag humour_stories_list_text>
-<h3>"The Enemy" Series</h3>
 
-<div class="indent">
-
-<p>
-This is a series of stories telling the whereabouts of the ex-Member of the 
-Organization.
-</p>
-
-<humour_story tag="h4" id="enemy-how-i-helped" humour_href="TheEnemy/" 
+<humour_story tag="h3" id="enemy-how-i-helped" humour_href="TheEnemy/" 
 text="The Enemy and How I Helped to Fight it">
 
 <p>
@@ -32,19 +36,9 @@ border. Lots of exits about mathematical logic, and a general critique of the
 irrationality guiding political bodies.
 </p>
 
-</humour_story>
-
-<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/" 
-text="The Road to Heaven is Paved with Bad Intentions">
-
-<p>
-The sequel to "The Enemy". The protagonist travels back in time and tries to
-prevent World War II.
-</p>
+<the_enemy_summary />
 
 </humour_story>
-
-</div>
 
 <humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
 text="The One with the Fountainhead">
@@ -117,6 +111,20 @@ and... the Game Master! (Muahahahahaha).
 
 <p>
 Work in progress.
+</p>
+
+</humour_story>
+
+</define-tag>
+
+<define-tag rejects_road_to_heaven>
+
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/" 
+text="The Road to Heaven is Paved with Bad Intentions">
+
+<p>
+The sequel to "The Enemy". The protagonist travels back in time and tries to
+prevent World War II.
 </p>
 
 </humour_story>

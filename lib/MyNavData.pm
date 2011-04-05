@@ -133,6 +133,11 @@ my $tree_contents =
                             url => "humour/Star-Trek/We-the-Living-Dead/",
                         },
                         {
+                            text => "Humanity - The Movie",
+                            url => "humour/humanity/",
+                            title => "Parody of Humanity and Modern Life in Particular",
+                        },
+                        {
                             text => "The Pope",
                             url => "humour/Pope/",
                             title => "The Pope Died on Sunday",

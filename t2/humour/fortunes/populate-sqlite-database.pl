@@ -34,6 +34,12 @@ my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (str_id, text) VALUE
 my @lines = io->file("$script_dir/fortunes-list.mak")->getlines();
 my @file_bases = (map { /(\b[a-z_\-]+\b)/g } @lines);
 
+# We split the work to 50-items batches per the advice on 
+# Freenode's #perl by tm604 and jql.
+$dbh->begin_work;
+
+my $global_idx = 0;
+
 foreach my $basename (@file_bases)
 {
     my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
@@ -44,13 +50,9 @@ foreach my $basename (@file_bases)
 
     my $idx = 0;
 
-    # We split the work to 50-items batches per the advice on 
-    # Freenode's #perl by tm604 and jql.
-    $dbh->begin_work;
-
     while (defined(my $node = shift(@$nodes_list)))
     {
-        printf ("%-70s\r", "$basename $idx/$count");
+        printf ("%-70s\r", "$basename $idx/$count ($global_idx)");
         my $id = $node->findnodes(q{descendant::h3[@id]})->[0]->id;
 
         if (! $id)
@@ -67,12 +69,15 @@ foreach my $basename (@file_bases)
     }
     continue
     {
-        if ((++$idx) % 50 == 0)
+        $idx++;
+
+        if ((++$global_idx) % 100 == 0)
         {
             $dbh->commit;
             $dbh->begin_work;
         }
     }
-
-    $dbh->commit;
 }
+
+# Commit the remainaing items.
+$dbh->commit;

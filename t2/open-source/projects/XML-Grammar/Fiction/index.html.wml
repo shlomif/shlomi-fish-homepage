@@ -83,6 +83,40 @@ is written in Fiction-Text.
 
 <h2 id="news">News</h2>
 
+<h3 id="news-2011-04-05">2011-04-05: <get-var cpan_dist /> version 0.1.5 is
+out</h3>
+
+<p>
+This release has many small bug-fixes and improvements: 
+</p>
+
+<ol>
+
+<li>
+<p>
+The handling of a colon (":") inside a top-level description in 
+XML-Grammar-Screenplay was fixed.
+</p>
+</li>
+
+<li>
+<p>
+Fixed an innerdesc on the start of a line in hte middle of a paragraph.
+</p>
+</li>
+
+<li>
+<p>
+Add support for &lt;i&gt; tags in XML-Grammar-Screenplay.
+</p>
+</li>
+
+</ol>
+
+<p>
+Everyone are recommended to upgrade.
+</p>
+
 <h3 id="news-2009-11-25">2009-11-25: <get-var cpan_dist /> version 0.0.2 was
 released</h3>
 

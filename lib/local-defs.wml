@@ -9,6 +9,8 @@
 <set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{
+    use utf8;
+
     init_section_nav_menu();
     my $total_leading_path = $section_nav_menu->total_leading_path(
         {
@@ -25,11 +27,70 @@
             $component->label() . "</a>";
     };
 
-    print join(" → ",
-        (map
-        { $render_leading_path_component->($_) }
-        @$total_leading_path
-        ));
+    sub _wrap_as_utf8 {
+        my ($cb) = @_;
+
+        binmode STDOUT, ":utf8";
+        
+        $cb->();
+
+        binmode STDOUT, ":raw";
+    }
+
+    {
+        _wrap_as_utf8( sub {
+            print join(" → ",
+                (map
+                 { $render_leading_path_component->($_) }
+                 @$total_leading_path
+                ));
+        });
+    }
 }:>
 </define-tag>
 
+<define-tag latemp_get_nav_menu_html>
+<:{ 
+
+{
+    _wrap_as_utf8( sub {
+        print join("\n", @$nav_html); 
+    });
+}
+
+}:>
+</define-tag>
+
+
+<define-tag latemp_get_html_head_nav_links>
+<:{
+my @keys = (sort { $a cmp $b } keys(%$nav_links_obj));
+foreach my $key (@keys)
+{
+    my $val = $nav_links_obj->{$key};
+    my $url = CGI::escapeHTML($val->direct_url());
+    my $title = $val->title();
+    _wrap_as_utf8( sub {
+        print "<link rel=\"$key\" href=\"$url\" title=\"$title\" />\n";
+    });
+}
+}:>
+</define-tag>
+
+
+<define-tag latemp_get_html_body_nav_links_helper>
+<preserve with_accesskey />
+<set-var %attributes />
+<:{
+    my $with_accesskey = "<get-var with_accesskey />";
+    my @params;
+    if ($with_accesskey ne "")
+    {
+        push @params, ('with_accesskey' => $with_accesskey);
+    }
+    _wrap_as_utf8(sub {
+        print $nav_links_renderer->get_total_html(@params);
+    });
+}:>
+<restore with_accesskey />
+</define-tag>

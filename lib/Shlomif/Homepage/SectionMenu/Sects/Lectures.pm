@@ -3,6 +3,8 @@ package Shlomif::Homepage::SectionMenu::Sects::Lectures;
 use strict;
 use warnings;
 
+use utf8;
+
 use MyNavData;
 
 my $essays_tree_contents =
@@ -38,7 +40,7 @@ my $essays_tree_contents =
                 {
                     text => "CatB",
                     url => "lecture/CatB/",
-                    title => "Presentation about &quot;The Cathedral and the Bazaar&quot;",
+                    title => "Presentation about “The Cathedral and the Bazaar” series by Eric Raymond",
                 },
                 {
                     text => "The Joel Test",

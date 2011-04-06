@@ -1,5 +1,10 @@
 package MyNavData;
 
+use strict;
+use warnings;
+
+use utf8;
+
 my $hosts =
 {
     t2 => 
@@ -172,7 +177,7 @@ my $tree_contents =
                     [
                         {
                             text => "Factoids",
-                            title => "&quot;Facts&quot; about Chuck Norris and other things",
+                            title => "“Facts” about Chuck Norris and other things",
                             url => "humour/bits/facts/",
                         },
                     ],
@@ -215,7 +220,7 @@ my $tree_contents =
                 {
                     text => "Back to my Homepage",
                     url => "art/bk2hp/",
-                    title => "A Back to my Homepage logo not unlike the one from the movie &quot;Back to the Future&quot;",
+                    title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
                 },
                 {
                     text => "Linux Banner",
@@ -225,17 +230,17 @@ my $tree_contents =
                 {
                     text => "Made with Latemp",
                     url => "art/made-with-latemp/",
-                    title => "&quot;Made with Latemp&quot; Button",
+                    title => "“Made with Latemp” Button",
                 },
                 {
                     text => "HHFG Background",
                     url => "art/hhfg-background/",
-                    title => "Background Image for the &quot;Human Hacking Field Guide&quot; Story",
+                    title => "Background Image for the “Human Hacking Field Guide” Story",
                 },
                 {
                     text => "Better SCM Logo",
                     url => "art/better-scm/",
-                    title => "Logo for the  &quot;Better SCM&quot; Site",
+                    title => "Logo for the “Better SCM” Site",
                 },
                 {
                     text => "Slogans' Designs",

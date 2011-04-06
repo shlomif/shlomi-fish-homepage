@@ -4,7 +4,9 @@
 
 <div class="sitemap">
 <:{
+_wrap_as_utf8 (sub {
 print (map { "$_\n" } @{$nav_bar->gen_site_map()});
+});
 }:>
 </div>
 

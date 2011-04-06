@@ -3,6 +3,8 @@ package Shlomif::Homepage::SectionMenu::Sects::Puzzles;
 use strict;
 use warnings;
 
+use utf8;
+
 use MyNavData;
 
 my $puzzles_tree_contents =
@@ -119,8 +121,9 @@ my $puzzles_tree_contents =
             subs =>
             [
                 {
-                    text => "&quot;Lotg&quot; Code",
+                    text => "The “Lotg” Code",
                     url => "puzzles/cs/lotg/",
+                    title => "A minimalistic programming language that I came up with",
                 },
             ],
         },

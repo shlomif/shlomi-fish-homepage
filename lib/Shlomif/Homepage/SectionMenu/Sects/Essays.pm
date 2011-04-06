@@ -3,6 +3,7 @@ package Shlomif::Homepage::SectionMenu::Sects::Essays;
 use strict;
 use warnings;
 
+use utf8;
 use MyNavData;
 
 my $essays_tree_contents =
@@ -128,7 +129,7 @@ my $essays_tree_contents =
                         {
                             text => "Perl &amp; Newcomers",
                             url => "philosophy/perl-newcomers/",
-                            title => "&quot;Usability&quot; of the Perl Online World for Newcomers",
+                            title => "“Usability” of the Perl Online World for Newcomers",
                         },
                         {
                             text => "The Joy of Perl",
@@ -185,7 +186,7 @@ my $essays_tree_contents =
                             title => "Coverage of the Current Choice of Document Formats",
                         },
                         {
-                            text => "The \"Use qmail instead\" Syndrome",
+                            text => "The “Use qmail instead” Syndrome",
                             url => "philosophy/computers/web/use-qmail-instead/",
                         },
                         {
@@ -296,9 +297,9 @@ my $essays_tree_contents =
                     ],
                 },
                 {
-                    text => "Define \"Zionism\"!",
+                    text => "Define “Zionism”!",
                     url => "philosophy/politics/define-zionism/",
-                    title => ("What is &quot;Zionism&quot; really? What " . 
+                    title => ("What is “Zionism” really? What " . 
                         "does anti-Israel, anti-Zionist, etc. mean?"),
                     subs =>
                     [
@@ -395,12 +396,12 @@ my $essays_tree_contents =
             subs =>
             [
                 {
-                    text => "James Carr - &quot;Completely Overrated&quot;",
+                    text => "James Carr - “Completely Overrated”",
                     url => "philosophy/by-others/james-carr--completely-overrated.html",
                     title => "James Carr about the anti-Muslim Cartoons",
                 },
                 {
-                    text => "Hebrew Translation of &quot;Ten Reasons for Web Standards&quot;",
+                    text => "Hebrew Translation of “Ten Reasons for Web Standards”",
                     url => "philosophy/by-others/mashhoor--10-reasons--hebrew.html",
                     title => "10 Reasons for Companies to Consider Web Standards - Hebrew Translation",
                 },

@@ -343,6 +343,10 @@ by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin<
 <:{
     use MySectNavData;
 
+    BEGIN
+    {
+        # binmode STDOUT, ":encoding(utf-8)";
+    }
 
     use vars (qw($section_nav_menu));
 
@@ -375,7 +379,11 @@ return;
     }
 
     init_section_nav_menu();
-    print $section_nav_menu->get_html();
+    {
+        _wrap_as_utf8 (sub {
+            print $section_nav_menu->get_html();
+        });
+    }
 }:>
 </section_nav_menu_elements>
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">

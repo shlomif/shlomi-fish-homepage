@@ -3,13 +3,15 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 use strict;
 use warnings;
 
+use utf8;
+
 use MyNavData;
 
 my $humour_tree_contents =
 {
     host => "t2",
-    text => "Shlomi Fish's Stories and Aphorisms",
-    title => "Shlomi Fish's Stories and Aphorisms",
+    text => "Shlomi Fish’s Stories and Aphorisms",
+    title => "Shlomi Fish’s Stories and Aphorisms",
     show_always => 1,
     subs =>
     [
@@ -31,19 +33,19 @@ my $humour_tree_contents =
                         {
                             text => "Text in Hebrew",
                             url => "humour/TheEnemy/The-Enemy-rev6.html",
-                            title => "Text of &quot;The Enemy&quot; In Hebrew",
+                            title => "Text of “The Enemy” In Hebrew",
                         },
                         {
                             text => "Text in English",
                             url => "humour/TheEnemy/The-Enemy-English-rev6.html",
-                            title => "Text of &quot;The Enemy&quot; In English",
+                            title => "Text of “The Enemy” In English",
                         },
                     ],
                 },
                 {
                     text => "TOW The Fountainhead",
                     url => "humour/TOWTF/",
-                    title => "A Parody on &quot;The Fountainhead&quot;",
+                    title => "A Parody on “The Fountainhead” by Ayn Rand",
                     subs =>
                     [
                         {
@@ -80,7 +82,7 @@ my $humour_tree_contents =
                             title => "Ongoing Text of the Screenplay",
                         },
                         {
-                            text => "\"Buy the Fish\" Song in Hebrew",
+                            text => "“Buy the Fish” Song in Hebrew",
                             url => "humour/humanity/buy-the-fish-in-hebrew.html",
                         },
                     ],
@@ -88,7 +90,7 @@ my $humour_tree_contents =
                 {
                     text => "Human Hacking Field Guide",
                     url => "humour/human-hacking/",
-                    title => "Story about Teenage Computer Enthusiasts in 2005's Los Angeles",
+                    title => "Story about Teenage Computer Enthusiasts in 2005’s Los Angeles",
                     subs =>
                     [
                         {
@@ -110,7 +112,7 @@ my $humour_tree_contents =
                     ],
                 },
                 {
-                    text => "The Blue Rabbit's Log",
+                    text => "The Blue Rabbit’s Log",
                     url => "humour/Blue-Rabbit-Log/",
                     title => "Movies that Parody Role-Playing Games",
                     subs =>
@@ -161,17 +163,17 @@ my $humour_tree_contents =
                         {
                             text => "friends",
                             url => "humour/fortunes/friends.html",
-                            title => "Excerpts from the T.V. Show &quot;Friends^quot;",
+                            title => "Excerpts from the T.V. Show “Friends”",
                         },
                         {
                             text => "joel-on-software",
                             url => "humour/fortunes/joel-on-software.html",
-                            title => "Quotes from &quot;Joel on Software&quot;",
+                            title => "Quotes from the site “Joel on Software”",
                         },
                         {
                             text => "nyh-sigs",
                             url => "humour/fortunes/nyh-sigs.html",
-                            title => "Nadav Har'El's Signatures",
+                            title => "Nadav Har’El’s Signatures",
                         },
                         {
                             text => "osp_rules",
@@ -267,7 +269,7 @@ my $humour_tree_contents =
                     url => "humour/bits/RMS-Lint/",
                 },
                 {
-                    text => "Cracka's Paradise",
+                    text => "Cracka’s Paradise",
                     url => "humour/bits/Crackas-Paradise/",
                 },
                 {
@@ -336,9 +338,9 @@ my $humour_tree_contents =
                     title => "Richard Stallman Switches to Basic",
                 },
                 {
-                    text => "Darien - Everybody's Free (to Ping Timeout)",
+                    text => "Darien - Everybody’s Free (to Ping Timeout)",
                     url => "humour/by-others/darien--everybody-is-free.html",
-                    title => "The IRC Version of &quot;Everybody's Free to Wear Sunscreen&quot;",
+                    title => "The IRC Version of “Everybody’s Free to Wear Sunscreen”",
                 },
                 {
                     text => "Technion Bit #1",
@@ -346,7 +348,7 @@ my $humour_tree_contents =
                     title => "A bit I found at the Technion",
                 },
                 {
-                    text => "Hitchhiker's Guide to Star Trek TNG",
+                    text => "Hitchhiker’s Guide to Star Trek TNG",
                     url => "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
                     title => "A Cross of the Douglas Adams Book and the T.V. Series",
                     subs =>
@@ -376,7 +378,7 @@ my $humour_tree_contents =
                     title => "A mirror of a hilarious parodical site that went offline",
                 },
                 {
-                    text => "Oded C.'s Stories",
+                    text => "Oded C.’s Stories",
                     url => "humour/by-others/oded-c/",
                     title => "Humorous stories by Oded C. in Hebrew",
                 },

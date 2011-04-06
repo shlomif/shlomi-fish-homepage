@@ -3,6 +3,8 @@ package Shlomif::Homepage::SectionMenu::Sects::Software;
 use strict;
 use warnings;
 
+use utf8;
+
 use MyNavData;
 
 my $software_tree_contents =
@@ -61,7 +63,7 @@ my $software_tree_contents =
                     title => "Dump the Meta-Data of Directory Structures",
                 },
                 {
-                    text => "\"Black Hole\" Solitaire Solver",
+                    text => "“Black Hole” Solitaire Solver",
                     url => "open-source/projects/black-hole-solitaire-solver/",
                     title => "Solve layouts of the patience card game 'Black Hole'",
                 },
@@ -136,7 +138,7 @@ my $software_tree_contents =
                             title => "Spark - Pre-Birth of a Modern Lisp",
                         },
                         {
-                            text => "Old Document ( \"Park\" )",
+                            text => "Old Document ( “Park” )",
                             url => "open-source/projects/Park-Lisp/",
                             title => "Park - a Dialect of the Lisp Programming Language inspired by Arc",
                         },
@@ -291,7 +293,7 @@ my $software_tree_contents =
                 {
                     text => "PHP Sucks",
                     url => "open-source/anti/php/",
-                    title => "&quot;PHP Sucks&quot; - originally by czth",
+                    title => "“PHP Sucks” - originally by czth",
                 },
                 {
                     text => "GNU Autohell",

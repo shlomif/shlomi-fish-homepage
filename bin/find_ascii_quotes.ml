@@ -12,8 +12,7 @@ let find_quotes input filename =
                 Printf.printf "%s:%d:%s\n" filename (row+idx) line
             end ;
             (iter (List.tl rest) (idx+1))
-            end 
-            in
+            end in
         iter lines 0 in
     Xmlm.input_doc_tree ~el ~data input;;
 

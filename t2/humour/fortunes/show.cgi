@@ -265,6 +265,8 @@ EOF
 <li><a href="/">Shlomi Fish's Homepage</a></li>
 <li><a href="./">Fortune Cookies Page</a></li>
 <li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
+</ul>
+<ul id="random">
 <li><a href="show.cgi?mode=random">Random Fortune</a></li>
 </ul>
 <h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>

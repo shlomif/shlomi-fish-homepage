@@ -38,7 +38,7 @@ my $full_db_path = "$script_dir/$db_base_name";
 my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
 
 my $select_sth = $dbh->prepare(<<'EOF');
-SELECT f.text, c.str_id, c.title
+SELECT f.text, f.title, c.str_id, c.title
 FROM fortune_cookies AS f, fortune_collections AS c
 WHERE ((f.str_id = ?) AND (f.collection_id = c.id))
 EOF
@@ -212,7 +212,7 @@ EOF
 
     my $rv = $select_sth->execute($str_id);
 
-    if (! (my ($html_text, $col_str_id, $col_title) = $select_sth->fetchrow_array))
+    if (! (my ($html_text, $html_title, $col_str_id, $col_title) = $select_sth->fetchrow_array))
     {
         _header();
 
@@ -245,6 +245,7 @@ EOF
     {
 
         $html_text = decode('utf-8', $html_text);
+        my $title_esc = CGI::escapeHTML($html_title) . " - Fortune";
 
         _header();
         print <<"EOF";
@@ -254,7 +255,7 @@ EOF
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>Fortune "@{[CGI::escapeHTML($str_id)]}"</title>
+<title>$title_esc</title>
 <link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/screenplay.css" type="text/css" media="screen, projection" />
@@ -269,7 +270,7 @@ EOF
 <ul id="random">
 <li><a href="show.cgi?mode=random">Random Fortune</a></li>
 </ul>
-<h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>
+<h1>$title_esc</h1>
 <div class="fortunes_list">
 $html_text
 </div>

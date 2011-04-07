@@ -62,6 +62,30 @@ sub _header
     return;
 }
 
+sub _wrap_error_html
+{
+    my ($args) = @_;
+
+    my $title = $args->{title};
+    my $body = $args->{body};
+
+    print <<"ERROR_HTML";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>$title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+$body
+</body>
+</html>
+ERROR_HTML
+}
+
 my $mode = ($cgi->param('mode') || 'str_id');
 
 if ($mode eq "random")
@@ -75,34 +99,26 @@ elsif ($mode eq "str_id")
 }
 else
 {
-    _invalid_mode();
+    _invalid_mode($mode);
 }
 
 sub _invalid_mode
 {
-    _header();
-    print <<'EOF';
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown fortune ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
+    my ($mode) = @_;
 
-<h1>Error! Invalid mode "@{[CGI::escapeHTML($str_id)]}".</h1>
+    my $mode_esc = CGI::escapeHTML($mode);
+
+    _header();
+    _wrap_error_html({ 
+            title => qq{Error! Invalid mode "$mode_esc"},
+            body => <<"END_OF_BODY", });
+<h1>Error! Invalid mode "$mode_esc".</h1>
 
 <p>
-Only valid modes are <tt>random</tt> and <tt>str_id</tt> (the latter is the
-default).
+Only valid modes are <tt>random</tt> and <tt>str_id</tt> 
+(where <tt>str_id</tt> is the default).
 </p>
-
-</body>
-</html>
-EOF
+END_OF_BODY
     return;
 }
 
@@ -116,26 +132,15 @@ sub _pick_random
     {
         _header();
 
-        print <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown fortune ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-
+        _wrap_error_html({ 
+                title => "Query failed",
+                body => <<"END_OF_BODY", });
 <h1>Query failed</h1>
 
 <p>
 Report this problem to the webmaster.
 </p>
-</body>
-</html>
-EOF
+END_OF_BODY
         return;
     }
 
@@ -149,28 +154,15 @@ EOF
     {
         _header();
 
-        print <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown fortune ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-
+        _wrap_error_html({ title => q{Unknown fortune ID},
+                body => <<'EOF'});
 <h1>lookup_str_id_from_id query failed</h1>
 
 <p>
 Report this problem to the webmaster.
 </p>
-</body>
-</html>
 EOF
         return;
-
     }
 
     # str_id must not contain any strange HTML/URI/etc. characters
@@ -191,7 +183,7 @@ sub _display_fortune_from_data
         ;
 
     _header();
-    print <<"EOF";
+    print <<"FORTUNE";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
 html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -219,7 +211,7 @@ $html_text
 </div>
 </body>
 </html>
-EOF
+FORTUNE
 
     return;
 }
@@ -231,26 +223,14 @@ sub _show_by_str_id
     if (! $str_id)
     {
         _header();
-        print <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown fortune ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-
+        _wrap_error_html({ title => q{Unknown fortune ID},
+                body => <<'END_OF_BODY'});
 <h1>Error! Must specify id parameter</h1>
 
 <p>
 The ID parameter must be specified.
 </p>
-</body>
-</html>
-EOF
+END_OF_BODY
         return;
     }
 
@@ -264,18 +244,8 @@ EOF
     {
         _header();
 
-        print <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>Unknown fortune ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-
+        _wrap_error_html({ title => q{URL not found},
+                body => <<"END_OF_BODY"});
 <h1>URL not found</h1>
 
 <p>
@@ -284,9 +254,7 @@ If you've reached this URL and think it should
 be defined please contact <a href="mailto:shlomif\@shlomifish.org">Shlomi
 Fish (the Webmaster)</a> and let him know of this problem.
 </p>
-</body>
-</html>
-EOF
+END_OF_BODY
         return;
     }
 }

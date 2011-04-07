@@ -25,6 +25,7 @@ body
     font-family: Helvetica, sans-serif
     color: black
 
+// TODO : convert the page_width to the logic in lib/smoked-wp-theme.css.ttml
 #header
     margin: 0 auto
     height: 158px
@@ -79,54 +80,6 @@ body
         line-height: 18px
         a
             text-decoration: none
-
-.domtab
-    width: 250px
-    text-align: center
-
-.domtabs li
-    display: inline
-    list-style: none
-
-#nav_menu
-    text-align: left
-    width: 230px
-    margin-left: 10px
-    margin-top: 5px
-
-.domtabs-link
-    color: #333
-    font-weight: bold
-
-.domtabs-description
-    font-size: 11px
-    color: #999
-    font-weight: bold
-    border-bottom: 1px dashed #999
-    margin-bottom: 5px
-    font-family: Arial, Helvetica, sans-serif
-    color: #01698f
-
-#nav_menu
-    text-align: left
-    width: 230px
-    margin-left: 10px
-    margin-top: 20px
-    a
-
-a
-    &.tagsz-1
-        font-size: 8px
-    &.tagsz-2
-        font-size: 10px
-    &.tagsz-3
-        font-size: 12px
-    &.tagsz-4
-        font-size: 14px
-    &.tagsz-5
-        font-size: 16px
-
-#navbar
     #searchform .hidden
         display: none
     form#searchform div
@@ -173,6 +126,52 @@ a
             color: #516999
             font-weight: bold
             text-decoration: none
+    a:link
+        color: #448800
+        text-decoration: underline
+
+.domtab
+    width: 250px
+    text-align: center
+
+.domtabs li
+    display: inline
+    list-style: none
+
+#nav_menu
+    text-align: left
+    width: 230px
+    margin-left: 10px
+    margin-top: 5px
+    text-align: left
+    width: 230px
+    margin-left: 10px
+    margin-top: 20px
+
+.domtabs-link
+    color: #333
+    font-weight: bold
+
+.domtabs-description
+    font-size: 11px
+    color: #999
+    font-weight: bold
+    border-bottom: 1px dashed #999
+    margin-bottom: 5px
+    font-family: Arial, Helvetica, sans-serif
+    color: #01698f
+
+a
+    &.tagsz-1
+        font-size: 8px
+    &.tagsz-2
+        font-size: 10px
+    &.tagsz-3
+        font-size: 12px
+    &.tagsz-4
+        font-size: 14px
+    &.tagsz-5
+        font-size: 16px
 
 #main
     margin: 10px auto 0 40px
@@ -181,6 +180,14 @@ a
     float: left
     text-align: left
     padding-right: 0.5em
+    .comments
+        margin: 10px auto auto auto
+        width: 590px
+        font-family: Tahoma, Geneva, sans-serif
+        a
+            text-decoration: none
+            color: #666666
+            font-weight: bold
 
 .post
     text-align: justify
@@ -298,15 +305,6 @@ a
         &.aligncenter
             text-align: center
 
-#main .comments
-    margin: 10px auto auto auto
-    width: 590px
-    font-family: Tahoma, Geneva, sans-serif
-    a
-        text-decoration: none
-        color: #666666
-        font-weight: bold
-
 .comments-template
     width: 530px
     p
@@ -416,8 +414,4 @@ a
         color: #FF8800
         text-decoration: underline
         font-weight: bold
-
-#navbar a:link
-    color: #448800
-    text-decoration: underline
 

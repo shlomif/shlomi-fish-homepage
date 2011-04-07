@@ -245,7 +245,9 @@ EOF
     {
 
         $html_text = decode('utf-8', $html_text);
-        my $title_esc = CGI::escapeHTML(decode('utf-8', $html_title)) . " - Fortune";
+        my $title_esc =
+            CGI::escapeHTML(decode('utf-8', $html_title)) . " - Fortune"
+            ;
 
         _header();
         print <<"EOF";

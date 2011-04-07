@@ -179,7 +179,7 @@ EOF
 
 sub _display_fortune_from_data
 {
-    my ($html_text, $html_title, $col_str_id, $col_title) = @_;
+    my ($str_id, $html_text, $html_title, $col_str_id, $col_title) = @_;
 
     $html_text = decode('utf-8', $html_text);
 
@@ -209,6 +209,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <li><a href="/">Shlomi Fish's Homepage</a></li>
 <li><a href="./">Fortune Cookies Page</a></li>
 <li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
+<li><a href="${col_str_id}.html#${str_id}">Fortune Cookie</a></li>
 </ul>
 <ul id="random">
 <li><a href="show.cgi?mode=random">Random Fortune</a></li>
@@ -245,7 +246,7 @@ END_OF_BODY
 
     if (my @data = $select_sth->fetchrow_array)
     {
-        return _display_fortune_from_data(@data);
+        return _display_fortune_from_data($str_id, @data);
     }
     else
     {

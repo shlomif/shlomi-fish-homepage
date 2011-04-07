@@ -66,7 +66,7 @@ sub _emit_error
 {
     my ($args) = @_;
 
-    _header();
+    _header(['-status' => '404 Not Found',]);
     _wrap_error_html($args);
 
     return;

@@ -12,8 +12,8 @@ my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 
 use HTML::TreeBuilder::LibXML;
 use DBI;
-use File::Spec;
-use IO::All;
+
+use Shlomif::Homepage::FortuneCollections;
 
 STDOUT->autoflush(1);
 
@@ -31,8 +31,11 @@ $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (str_id, text) VALUES(?, ?)");
 
-my @lines = io->file("$script_dir/fortunes-list.mak")->getlines();
-my @file_bases = (map { /(\b[a-z_\-]+\b)/g } @lines);
+my @file_bases =
+(
+    map { $_->id() } 
+    @{Shlomif::Homepage::FortuneCollections->sorted_fortunes()},
+);
 
 # We split the work to 50-items batches per the advice on 
 # Freenode's #perl by tm604 and jql.

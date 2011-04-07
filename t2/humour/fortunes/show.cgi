@@ -188,6 +188,9 @@ sub _display_fortune_from_data
         ;
 
     _header();
+
+    my $base_dir = '../..';
+
     print <<"FORTUNE";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
@@ -196,9 +199,9 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
 <title>$title_esc</title>
-<link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="/screenplay.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="$base_dir/fortunes.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="$base_dir/fortunes_show.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="$base_dir/screenplay.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>

@@ -62,6 +62,16 @@ sub _header
     return;
 }
 
+sub _emit_error
+{
+    my ($args) = @_;
+
+    _header();
+    _wrap_error_html($args);
+
+    return;
+}
+
 sub _wrap_error_html
 {
     my ($args) = @_;
@@ -108,8 +118,7 @@ sub _invalid_mode
 
     my $mode_esc = CGI::escapeHTML($mode);
 
-    _header();
-    _wrap_error_html({ 
+    _emit_error({ 
             title => qq{Error! Invalid mode "$mode_esc"},
             body => <<"END_OF_BODY", });
 <h1>Error! Invalid mode "$mode_esc".</h1>
@@ -130,9 +139,7 @@ sub _pick_random
 
     if (! $max_id)
     {
-        _header();
-
-        _wrap_error_html({ 
+        _emit_error({ 
                 title => "Query failed",
                 body => <<"END_OF_BODY", });
 <h1>Query failed</h1>
@@ -152,9 +159,7 @@ END_OF_BODY
 
     if (! $str_id)
     {
-        _header();
-
-        _wrap_error_html({ title => q{Unknown fortune ID},
+        _emit_error({ title => q{Unknown fortune ID},
                 body => <<'EOF'});
 <h1>lookup_str_id_from_id query failed</h1>
 
@@ -222,8 +227,7 @@ sub _show_by_str_id
 
     if (! $str_id)
     {
-        _header();
-        _wrap_error_html({ title => q{Unknown fortune ID},
+        _emit_error({ title => q{Unknown fortune ID},
                 body => <<'END_OF_BODY'});
 <h1>Error! Must specify id parameter</h1>
 
@@ -242,9 +246,7 @@ END_OF_BODY
     }
     else
     {
-        _header();
-
-        _wrap_error_html({ title => q{URL not found},
+        _emit_error({ title => q{URL not found},
                 body => <<"END_OF_BODY"});
 <h1>URL not found</h1>
 

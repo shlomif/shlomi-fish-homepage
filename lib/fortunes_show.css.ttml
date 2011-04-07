@@ -4,17 +4,41 @@ a:hover { background-color: palegreen; }
     float: left;
     padding-left: 0.5em;
     margin-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+#random {
+    width: 100%;
+    float: right;
+    padding-left: 0.5em;
+    margin-left: 0;
     margin-bottom: 1.5em;
     list-style: none;
 }
-#nav li {
-    float: left;
+#nav li, #random li a {
     margin-right: 5pt;
     border: black solid 1pt;
 }
 
-#nav li a {
+#nav li {
+    float: left;
+}
+
+#random li {
+    float: right;
+}
+
+#nav li a, #random li a {
     display: block;
     padding: 2pt 3pt;
     text-decoration: none;    
+}
+
+#random li a { 
+    background-color: GreenYellow;
+    color: black;
+}
+
+#random li a:hover {
+    background-color: #adb02f;
 }

@@ -14,6 +14,21 @@ __PACKAGE__->mk_accessors(qw(
     desc
     ));
 
+sub nav_record
+{
+    my ($self) = @_;
+
+    return
+    { 
+        text => scalar($self->text()),
+        url => sprintf(
+            "humour/fortunes/%s.html",
+            scalar($self->id())
+        ),
+        title => scalar($self->title()),
+    };
+}
+
 package Shlomif::Homepage::FortuneCollections;
 
 use strict;
@@ -148,6 +163,13 @@ sub sorted_fortunes
         sort { $a->id() cmp $b->id() }
         @{get_fortune_records()}
     ];
+}
+
+sub nav_data
+{
+    return
+    [ map { $_->nav_record() } @{sorted_fortunes()} ]
+    ;
 }
 
 1;

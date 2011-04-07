@@ -29,12 +29,12 @@ $dbh->do("CREATE TABLE fortune_collections (id INTEGER PRIMARY KEY ASC, str_id V
 
 $dbh->do("CREATE UNIQUE INDEX fortune_collections_strings ON fortune_collections ( str_id )");
 
-$dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), text TEXT, collection_id INTEGER)");
+$dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, collection_id INTEGER)");
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 
-my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (collection_id, str_id, text) VALUES(?, ?, ?)");
+my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (collection_id, str_id, title, text) VALUES(?, ?, ?, ?)");
 
 my $collections_aref = Shlomif::Homepage::FortuneCollections->sorted_fortunes();
 
@@ -89,14 +89,18 @@ foreach my $basename (@file_bases)
     while (defined(my $node = shift(@$nodes_list)))
     {
         printf ("%-70s\r", "$basename $idx/$count ($global_idx)");
-        my $id = $node->findnodes(q{descendant::h3[@id]})->[0]->id;
+
+        my $h3_node = $node->findnodes(q{descendant::h3[@id]})->[0];
+
+        my $id = $h3_node->id;
+        my $title = $h3_node->string_value();
 
         if (! $id)
         {
             die "No ID in file '$basename' in " . $node->as_XML . "!";
         }
 
-        $insert_sth->execute($collection_id, $id, $node->as_XML());
+        $insert_sth->execute($collection_id, $id, $title, $node->as_XML());
 
         # Some debugging statement.
         # print "\n\n\n[[[START ID=$id]]]\n";

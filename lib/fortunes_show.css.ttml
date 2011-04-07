@@ -23,10 +23,6 @@ h1 {
     margin-bottom: 1.5em;
     list-style: none;
 }
-#random li a {
-    margin-right: 5pt;
-    border: black solid 1pt;
-}
 
 #nav li {
     float: left;
@@ -59,13 +55,17 @@ h1 {
 
 #random li a { 
     display: block;
-    background-color: GreenYellow;
+    /* Derived from GreenYellow (#ADFF2F) but hurts the eyes less. */
+    background-color: #cdff8f;
     color: black;
     padding: 2pt 3pt;
+    margin-right: 5pt;
+    border: black solid 1pt;
+    border-radius: 5px;
 }
 
 #random li a:hover {
-    background-color: #adb02f;
+    background-color: #adb08f;
 }
 
 .fortunes_list {

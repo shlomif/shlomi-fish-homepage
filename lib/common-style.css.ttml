@@ -513,6 +513,7 @@ table.visible
 {
     clear: right;
 }
+
 /* Right floaty */
 .rfloaty
 {
@@ -520,12 +521,7 @@ table.visible
     margin: 1em;
 }
 
-/* For the screenplays */
-.description
-{
-    font-style: italic;
-    color: brown;
-}
+[% INCLUDE "screenplay-xml/css/screenplay.css.ttml" %]
 
 /* Graphic Designs on /art/ */
 [% SET g = ".graphic_designs .design" %]

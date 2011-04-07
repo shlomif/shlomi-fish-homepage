@@ -7,6 +7,8 @@ use utf8;
 
 use MyNavData;
 
+use Shlomif::Homepage::FortuneCollections;
+
 my $humour_tree_contents =
 {
     host => "t2",
@@ -160,65 +162,19 @@ my $humour_tree_contents =
                     title => "Collection of Quotes by Me and Others in the UNIX Fortune Format",
                     subs =>
                     [
-                        {
-                            text => "friends",
-                            url => "humour/fortunes/friends.html",
-                            title => "Excerpts from the T.V. Show “Friends”",
-                        },
-                        {
-                            text => "joel-on-software",
-                            url => "humour/fortunes/joel-on-software.html",
-                            title => "Quotes from the site “Joel on Software”",
-                        },
-                        {
-                            text => "nyh-sigs",
-                            url => "humour/fortunes/nyh-sigs.html",
-                            title => "Nadav Har’El’s Signatures",
-                        },
-                        {
-                            text => "osp_rules",
-                            url => "humour/fortunes/osp_rules.html",
-                            title => "Rules of Open Source Programming",
-                        },
-                        {
-                            text => "paul-graham",
-                            url => "humour/fortunes/paul-graham.html",
-                            title => "Paul Graham Quotes",
-                        },
-                        {
-                            text => "shlomif",
-                            url => "humour/fortunes/shlomif.html",
-                            title => "Quotes with my Participation",
-                        },
-                        {
-                            text => "shlomif-fav",
-                            url => "humour/fortunes/shlomif-fav.html",
-                            title => "Other Favourite Quotes",
-                        },
-                        {
-                            text => "subversion",
-                            url => "humour/fortunes/subversion.html",
-                            title => "Quotes from the Online Folklore of the Subversion Version Control System",
-                        },
-                        {
-                            text => "tinic",
-                            url => "humour/fortunes/tinic.html",
-                            title => "Quotes from the online Linux-IL Folklore",
-                        },
-                        {
-                            text => "#perl",
-                            url => "humour/fortunes/sharp-perl.html",
-                            title => "Quotes from the Freenode #perl channel",
-                        },
-                        {
-                            text => "##programming",
-                            url => "humour/fortunes/sharp-programming.html",
-                            title => "Quotes from the Freenode ##programming channel",
-                        },
-                        {
-                            text => "shlomif-factoids",
-                            url => "humour/fortunes/shlomif-factoids.html",
-                            title => "Funny Factoids about People and Things (Chuck Norris, etc.)",
+                        map
+                        { 
+                            +{ 
+                                text => scalar($_->text()),
+                                url => sprintf(
+                                    "humour/fortunes/%s.html",
+                                    scalar($_->id())
+                                ),
+                                title => scalar($_->title()),
+                            }
+                        }
+                        sort { $a->id() cmp $b->id() }
+                        @{Shlomif::Homepage::FortuneCollections->get_fortune_records()
                         },
                     ],
                 },

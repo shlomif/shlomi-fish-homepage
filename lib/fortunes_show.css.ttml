@@ -4,6 +4,8 @@ a:hover { background-color: palegreen; }
     float: left;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-left: 0;
     list-style: none;
     margin-bottom: 0;
@@ -40,7 +42,6 @@ a:hover { background-color: palegreen; }
 }
 
 #nav li a, #random li a {
-    padding: 2pt 3pt;
     text-decoration: none;    
 }
 
@@ -50,12 +51,14 @@ a:hover { background-color: palegreen; }
     margin-bottom: 2pt;
     margin-left: 0.1em;
     margin-right: 0.1em;
+    padding:1pt;
 }
 
 #random li a { 
     display: block;
     background-color: GreenYellow;
     color: black;
+    padding: 2pt 3pt;
 }
 
 #random li a:hover {

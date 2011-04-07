@@ -25,15 +25,16 @@ unlink($full_db_path, "$full_db_path-journal");
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
 
-$dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), text TEXT)");
-
-$dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
-
 $dbh->do("CREATE TABLE fortune_collections (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(60), desc TEXT, title VARCHAR(100), tooltip TEXT)");
 
 $dbh->do("CREATE UNIQUE INDEX fortune_collections_strings ON fortune_collections ( str_id )");
 
-my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (str_id, text) VALUES(?, ?)");
+$dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), text TEXT, collection_id INTEGER)");
+
+$dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
+
+
+my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (collection_id, str_id, text) VALUES(?, ?, ?)");
 
 my $collections_aref = Shlomif::Homepage::FortuneCollections->sorted_fortunes();
 
@@ -56,6 +57,10 @@ EOF
 
 my @file_bases = ( map { $_->id() } @$collections_aref);
 
+my $collection_query_id_sth = $dbh->prepare(
+    q{SELECT id FROM fortune_collections WHERE str_id = ?}
+);
+
 # We split the work to 50-items batches per the advice on 
 # Freenode's #perl by tm604 and jql.
 $dbh->begin_work;
@@ -64,6 +69,15 @@ my $global_idx = 0;
 
 foreach my $basename (@file_bases)
 {
+    my $collection_id;
+
+    if ( not (($collection_id) = 
+            $collection_query_id_sth->execute_array({}, $basename))
+    )
+    {
+        die "Cannot find for '$basename'!";
+    }
+    
     my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
 
     my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
@@ -82,7 +96,7 @@ foreach my $basename (@file_bases)
             die "No ID in file '$basename' in " . $node->as_XML . "!";
         }
 
-        $insert_sth->execute($id, $node->as_XML());
+        $insert_sth->execute($collection_id, $id, $node->as_XML());
 
         # Some debugging statement.
         # print "\n\n\n[[[START ID=$id]]]\n";

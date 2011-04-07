@@ -173,8 +173,8 @@ my $humour_tree_contents =
                                 title => scalar($_->title()),
                             }
                         }
-                        sort { $a->id() cmp $b->id() }
-                        @{Shlomif::Homepage::FortuneCollections->get_fortune_records()
+                        @{Shlomif::Homepage::FortuneCollections
+                            ->sorted_fortunes()
                         },
                     ],
                 },

@@ -71,9 +71,9 @@ foreach my $basename (@file_bases)
 {
     my $collection_id;
 
-    if ( not (($collection_id) = 
-            $collection_query_id_sth->execute_array({}, $basename))
-    )
+    my $rv = $collection_query_id_sth->execute($basename);
+
+    if ( not (($collection_id) = $collection_query_id_sth->fetchrow_array()) )
     {
         die "Cannot find for '$basename'!";
     }

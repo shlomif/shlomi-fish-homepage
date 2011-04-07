@@ -37,9 +37,11 @@ my $full_db_path = "$script_dir/$db_base_name";
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
 
-my $select_sth = $dbh->prepare(
-    q{SELECT text FROM fortune_cookies WHERE str_id = ?}
-);
+my $select_sth = $dbh->prepare(<<'EOF');
+SELECT f.text, c.str_id, c.title
+FROM fortune_cookies AS f, fortune_collections AS c
+WHERE ((f.str_id = ?) AND (f.collection_id = c.id))
+EOF
 
 my $select_max_id = $dbh->prepare(
     q{SELECT MAX(id) FROM fortune_cookies}
@@ -210,9 +212,7 @@ EOF
 
     my $rv = $select_sth->execute($str_id);
 
-    my ($html_text) = $select_sth->fetchrow_array;
-
-    if (! $html_text)
+    if (! (my ($html_text, $col_str_id, $col_title) = $select_sth->fetchrow_array))
     {
         _header();
 
@@ -241,11 +241,13 @@ Fish (the Webmaster)</a> and let him know of this problem.
 EOF
         return;
     }
+    else
+    {
 
-    $html_text = decode('utf-8', $html_text);
+        $html_text = decode('utf-8', $html_text);
 
-    _header();
-    print <<"EOF";
+        _header();
+        print <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
     html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -260,8 +262,9 @@ EOF
 </head>
 <body>
 <ul id="nav">
-<li><a href="./">Back to the Main Fortunes Page</a></li>
 <li><a href="/">Shlomi Fish's Homepage</a></li>
+<li><a href="./">Fortune Cookies Page</a></li>
+<li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
 <li><a href="show.cgi?mode=random">Random Fortune</a></li>
 </ul>
 <h1>Fortune "@{[CGI::escapeHTML($str_id)]}"</h1>
@@ -272,5 +275,6 @@ $html_text
 </html>
 EOF
 
-    return;
+        return;
+    }
 }

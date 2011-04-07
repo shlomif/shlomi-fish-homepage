@@ -29,13 +29,32 @@ $dbh->do("CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCH
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
+$dbh->do("CREATE TABLE fortune_collections (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(60), desc TEXT, title VARCHAR(100), tooltip TEXT)");
+
+$dbh->do("CREATE UNIQUE INDEX fortune_collections_strings ON fortune_collections ( str_id )");
+
 my $insert_sth = $dbh->prepare("INSERT INTO fortune_cookies (str_id, text) VALUES(?, ?)");
 
-my @file_bases =
-(
-    map { $_->id() } 
-    @{Shlomif::Homepage::FortuneCollections->sorted_fortunes()},
-);
+my $collections_aref = Shlomif::Homepage::FortuneCollections->sorted_fortunes();
+
+{
+    my $col_insert_sth = $dbh->prepare(<<'EOF');
+INSERT INTO fortune_collections (str_id, title, tooltip, desc) 
+VALUES(?, ?, ?, ?)
+EOF
+
+    $dbh->begin_work;
+
+    foreach my $col (@$collections_aref)
+    {
+        $col_insert_sth->execute($col->id(), $col->text(), $col->title(), $col->desc());
+    }
+
+    $dbh->commit;
+
+}
+
+my @file_bases = ( map { $_->id() } @$collections_aref);
 
 # We split the work to 50-items batches per the advice on 
 # Freenode's #perl by tm604 and jql.

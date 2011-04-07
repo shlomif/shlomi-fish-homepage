@@ -1,16 +1,19 @@
 a:hover { background-color: palegreen; }
 #nav {
-    width: 100%;
     float: left;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: 0;
+    margin-right: 0.5em;
     list-style: none;
     margin-bottom: 0;
     border-top: 1pt solid black;
     border-bottom: 1pt solid black;
+}
+h1 {
+    clear: left;
 }
 #random {
     width: 100%;
@@ -63,4 +66,23 @@ a:hover { background-color: palegreen; }
 
 #random li a:hover {
     background-color: #adb02f;
+}
+
+.fortunes_list {
+    border: 1pt solid darkgreen;
+    border-radius: 10px;
+    padding: 0.5em;
+    background-color: #ddf;
+}
+
+.fortunes_list:hover {
+    border-color: #787;
+}
+
+.fortunes_list h3 {
+    margin-top: 0.2em;
+}
+
+.fortunes_list a {
+    padding: 1pt;
 }

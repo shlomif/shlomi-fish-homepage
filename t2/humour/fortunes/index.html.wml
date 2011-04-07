@@ -73,8 +73,8 @@ use Shlomif::Homepage::FortuneCollections;
 
 foreach my $r (@{Shlomif::Homepage::FortuneCollections->get_fortune_records()})
 {
-    my $id = $r->{id};
-    my $desc = $r->{desc};
+    my $id = $r->id;
+    my $desc = $r->desc;
 
     print <<"EOF";
 <li>

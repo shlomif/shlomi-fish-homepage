@@ -1,9 +1,44 @@
+package Shlomif::Homepage::FortuneCollections::Record;
+
+use strict;
+use warnings;
+
+use base 'Class::Accessor';
+
+__PACKAGE__->mk_accessors(qw(
+    id
+    text
+    title
+    desc
+    ));
+
 package Shlomif::Homepage::FortuneCollections;
 
 use strict;
 use warnings;
 
+use Carp;
+use Data::Dumper;
+
+sub _init_fortune
+{
+    my $rec = shift;
+
+    foreach my $req_field (qw(id desc))
+    {
+        if (!exists($rec->{$req_field}))
+        {
+            Carp::confess("Field $req_field does not exist in record for ".
+                Dumper($rec) . "!");
+        }
+    }
+
+    return Shlomif::Homepage::FortuneCollections::Record->new($rec);
+}
+
 my @forts =
+(
+    map { _init_fortune($_) }
 (
     {
         'id' => "shlomif",
@@ -70,7 +105,7 @@ EOF
         'id' => "shlomif-factoids",
         desc => "a collection of factoids about people and things (e.g: Chuck Norris)",
     },
-    
+)
 );
 
 sub get_fortune_records

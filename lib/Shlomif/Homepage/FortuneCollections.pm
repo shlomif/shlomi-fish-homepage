@@ -141,5 +141,14 @@ sub get_fortune_records
     return \@forts;
 }
 
+sub sorted_fortunes
+{
+    return 
+    [
+        sort { $a->id() cmp $b->id() }
+        @{get_fortune_records()}
+    ];
+}
+
 1;
 

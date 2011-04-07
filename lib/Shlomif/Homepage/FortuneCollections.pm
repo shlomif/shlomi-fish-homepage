@@ -167,9 +167,7 @@ sub sorted_fortunes
 
 sub nav_data
 {
-    return
-    [ map { $_->nav_record() } @{sorted_fortunes()} ]
-    ;
+    return [ map { $_->nav_record() } @{sorted_fortunes()} ] ;
 }
 
 1;

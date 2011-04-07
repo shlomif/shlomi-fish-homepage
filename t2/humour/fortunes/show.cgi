@@ -255,6 +255,7 @@ EOF
 <title>Fortune "@{[CGI::escapeHTML($str_id)]}"</title>
 <link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/screenplay.css" type="text/css" media="screen, projection" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>

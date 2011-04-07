@@ -160,23 +160,7 @@ my $humour_tree_contents =
                     text => "Fortune Cookies Collection",
                     url => "humour/fortunes/",
                     title => "Collection of Quotes by Me and Others in the UNIX Fortune Format",
-                    subs =>
-                    [
-                        map
-                        { 
-                            +{ 
-                                text => scalar($_->text()),
-                                url => sprintf(
-                                    "humour/fortunes/%s.html",
-                                    scalar($_->id())
-                                ),
-                                title => scalar($_->title()),
-                            }
-                        }
-                        @{Shlomif::Homepage::FortuneCollections
-                            ->sorted_fortunes()
-                        },
-                    ],
+                    subs => Shlomif::Homepage::FortuneCollections->nav_data(),
                 },
            ],
         },

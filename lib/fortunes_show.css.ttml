@@ -3,9 +3,12 @@ a:hover { background-color: palegreen; }
     width: 100%;
     float: left;
     padding-left: 0.5em;
+    padding-right: 0.5em;
     margin-left: 0;
     list-style: none;
     margin-bottom: 0;
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
 }
 #random {
     width: 100%;
@@ -15,7 +18,7 @@ a:hover { background-color: palegreen; }
     margin-bottom: 1.5em;
     list-style: none;
 }
-#nav li, #random li a {
+#random li a {
     margin-right: 5pt;
     border: black solid 1pt;
 }
@@ -24,17 +27,31 @@ a:hover { background-color: palegreen; }
     float: left;
 }
 
+#nav li:before {
+    content: "→";
+}
+
+#nav li:first-child:before {
+    content: "";
+}
+
 #random li {
     float: right;
 }
 
 #nav li a, #random li a {
-    display: block;
     padding: 2pt 3pt;
     text-decoration: none;    
 }
 
+#nav li a {
+    display: inline-block;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+}
+
 #random li a { 
+    display: block;
     background-color: GreenYellow;
     color: black;
 }

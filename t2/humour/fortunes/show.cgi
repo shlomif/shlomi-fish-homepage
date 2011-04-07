@@ -180,6 +180,50 @@ EOF
     return;
 }
 
+sub _display_fortune_from_data
+{
+    my ($html_text, $html_title, $col_str_id, $col_title) = @_;
+
+    $html_text = decode('utf-8', $html_text);
+
+    my $title_esc =
+        CGI::escapeHTML(decode('utf-8', $html_title)) . " - Fortune"
+        ;
+
+    _header();
+    print <<"EOF";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>$title_esc</title>
+<link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/screenplay.css" type="text/css" media="screen, projection" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<ul id="nav">
+<li><a href="/">Shlomi Fish's Homepage</a></li>
+<li><a href="./">Fortune Cookies Page</a></li>
+<li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
+</ul>
+<ul id="random">
+<li><a href="show.cgi?mode=random">Random Fortune</a></li>
+</ul>
+<h1>$title_esc</h1>
+<div class="fortunes_list">
+$html_text
+</div>
+</body>
+</html>
+EOF
+
+    return;
+}
+
 sub _show_by_str_id
 {
     my ($str_id) = @_;
@@ -212,7 +256,11 @@ EOF
 
     my $rv = $select_sth->execute($str_id);
 
-    if (! (my ($html_text, $html_title, $col_str_id, $col_title) = $select_sth->fetchrow_array))
+    if (my @data = $select_sth->fetchrow_array)
+    {
+        return _display_fortune_from_data(@data);
+    }
+    else
     {
         _header();
 
@@ -239,47 +287,6 @@ Fish (the Webmaster)</a> and let him know of this problem.
 </body>
 </html>
 EOF
-        return;
-    }
-    else
-    {
-
-        $html_text = decode('utf-8', $html_text);
-        my $title_esc =
-            CGI::escapeHTML(decode('utf-8', $html_title)) . " - Fortune"
-            ;
-
-        _header();
-        print <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-<head>
-<title>$title_esc</title>
-<link rel="stylesheet" href="/fortunes.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="/fortunes_show.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="/screenplay.css" type="text/css" media="screen, projection" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-<ul id="nav">
-<li><a href="/">Shlomi Fish's Homepage</a></li>
-<li><a href="./">Fortune Cookies Page</a></li>
-<li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
-</ul>
-<ul id="random">
-<li><a href="show.cgi?mode=random">Random Fortune</a></li>
-</ul>
-<h1>$title_esc</h1>
-<div class="fortunes_list">
-$html_text
-</div>
-</body>
-</html>
-EOF
-
         return;
     }
 }

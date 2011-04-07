@@ -499,41 +499,4 @@ table.visible
     ul li
         list-style-type: disc
 
-.lang_switch
-    direction: ltr
-    text-align: left
-    border: black double medium
-    overflow: hidden
-    border-radius: 5px
-    float: left
-    margin-bottom: 1em
-    ul
-        margin: 0
-        padding: 0
-    li
-        display: block
-        float: left
-        padding: 0
-        margin: 0
-        a, b
-            display: block
-            padding-top: 3pt
-            padding-bottom: 3pt
-            padding-left: 0.5em
-            padding-right: 0.5em
-        &.lang
-            background-color: #8e8
-        a
-            text-decoration: none
-        &.title
-            display: block
-            background-color: #3b3b3b
-            color: white
-        &.lang:hover
-            background-color: #beb
-            a
-                background-color: #beb
-
-.main_text
-    clear: left
-
+@import "lang_switch"

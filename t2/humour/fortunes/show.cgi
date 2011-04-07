@@ -227,9 +227,9 @@ sub _show_by_str_id
 
     if (! $str_id)
     {
-        _emit_error({ title => q{Unknown fortune ID},
+        _emit_error({ title => q{ID parameter not specified},
                 body => <<'END_OF_BODY'});
-<h1>Error! Must specify id parameter</h1>
+<h1>Error! Must specify ID parameter</h1>
 
 <p>
 The ID parameter must be specified.

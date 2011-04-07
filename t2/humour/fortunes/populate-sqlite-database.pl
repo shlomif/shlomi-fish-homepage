@@ -82,5 +82,5 @@ foreach my $basename (@file_bases)
     }
 }
 
-# Commit the remainaing items.
+# Commit the remaining items.
 $dbh->commit;

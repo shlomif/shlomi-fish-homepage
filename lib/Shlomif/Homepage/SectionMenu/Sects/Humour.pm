@@ -135,6 +135,13 @@ my $humour_tree_contents =
                     text => "Road to Heaven",
                     url => "humour/RoadToHeaven/",
                     title => "The Road to Heaven is Paved with Bad Intentions",
+                    subs =>
+                    [
+                        {
+                            text => "Abstract in Hebrew",
+                            url => "humour/RoadToHeaven/abstract.xhtml",
+                        },
+                    ],
                 },
             ],
         },

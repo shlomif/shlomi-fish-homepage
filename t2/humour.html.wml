@@ -15,7 +15,7 @@
 <preserve id header />
 <set-var %attributes />
 <joke>
-<h2 id="<get-var id />"><get-var header /></h2>
+<h3 id="<get-var id />"><get-var header /></h3>
 
 %body
 </joke>
@@ -37,6 +37,7 @@ You can also find them and others <a href="<rellink url="humour/fortunes/" host=
 
 <toc />
 
+<h2 id="list">List of Aphorisms</h2>
 <header_joke id="jewish_deduction" header="A Jewish Deduction">
 
 <p>
@@ -1001,4 +1002,9 @@ dishwasher.
 
 </header_joke>
 
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2002" />
+
 </div> ;;; End for main_text
+

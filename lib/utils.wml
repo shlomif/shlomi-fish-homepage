@@ -75,12 +75,9 @@ publicly linked to. Please send comments to
 
 </define-tag>
 
-<define-tag cc_by_sa_license_british>
-<preserve year head_tag />
+<define-tag cc_by_sa_british_blurb>
+<preserve year />
 <set-var %attributes />
-<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h3" />" 
-    />
-<<get-var head_tag /> id="license">Copyright and Licence</<get-var head_tag />>
 
 <p>
 This document is Copyright by Shlomi Fish, <get-var year />, and is available 
@@ -91,7 +88,24 @@ Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
 later version).
 </p>
 
+<restore year />
+
+</define-tag>
+
+<define-tag cc_by_sa_license_british>
+
+<preserve year head_tag />
+
+<set-var %attributes />
+<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h3" />" 
+    />
+
+<<get-var head_tag /> id="license">Copyright and Licence</<get-var head_tag />>
+
+<cc_by_sa_british_blurb year="<get-var year />" />
+
 <restore year head_tag />
+
 </define-tag>
 
 <define-tag main_email whitespace="delete">

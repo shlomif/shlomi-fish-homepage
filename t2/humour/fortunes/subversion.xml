@@ -1,986 +1,954 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xml" href="fortune-xml-to-html.xsl"?>
 <collection>
-  <head/>
-  <list>
-    <fortune id="svn-libsvn_wc">
-      <meta>
-        <title>A typical day on #svn, the Subversion channel</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman: I get a " " instead of "!"</saying>
-          <saying who="sussman">!!</saying>
-          <saying who="sussman">for the parent directory?</saying>
-          <me_is who="sussman">banishes libsvn_wc into the underworld</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-sussman-files-a-dup">
-      <meta>
-        <title>The Subversion developers acting like children on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="kfogel">heh</saying>
-          <saying who="kfogel">sussman just filed a dup, sussman just filed a dup, sussman just fi</saying>
-          <me_is who="epg">points and laughs at sussman</me_is>
-          <saying who="kfogel">everyone: point and laugh at sussman</saying>
-          <me_is who="kfogel">hears the raucous, hyena-like sound of #svn  laughing at sussman</me_is>
-          <me_is who="sussman">crumbles</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-writing-a-bk-replacement">
-      <meta>
-        <title>Writing a Bitkeeper Replacement</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-                Writing a BitKeeper replacement is probably easier at this 
-                point than getting its license changed.
-            </p>
+    <head/>
+    <list>
+        <fortune id="svn-libsvn_wc">
+            <meta>
+                <title>A typical day on #svn, the Subversion channel</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman: I get a " " instead of "!"</saying>
+                    <saying who="sussman">!!</saying>
+                    <saying who="sussman">for the parent directory?</saying>
+                    <me_is who="sussman">banishes libsvn_wc into the underworld</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-sussman-files-a-dup">
+            <meta>
+                <title>The Subversion developers acting like children on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="kfogel">heh</saying>
+                    <saying who="kfogel">sussman just filed a dup, sussman just filed a dup, sussman just fi</saying>
+                    <me_is who="epg">points and laughs at sussman</me_is>
+                    <saying who="kfogel">everyone: point and laugh at sussman</saying>
+                    <me_is who="kfogel">hears the raucous, hyena-like sound of #svn  laughing at sussman</me_is>
+                    <me_is who="sussman">crumbles</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-writing-a-bk-replacement">
+            <meta>
+                <title>Writing a Bitkeeper Replacement</title>
+            </meta>
+            <quote>
+                <body>
 
-            <p>
-                Matt Mackall on OFTC.net #offtopic.
-            </p>
+                    <p> Writing a BitKeeper replacement is probably easier at
+                        this point than getting its license changed.  </p>
 
-            <p>
-                P.S: Matt Mackall has eventually projected Mercurial, which
-                aims to be a BitKeeper replacement.
-            </p>
-        </body>
-        <info>
-            <author>Matt Mackal</author>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-internal-ms-code">
-      <meta>
-        <title>Internal Microsoft Code</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-                Sometimes I think Microsoft has more internal code than code 
-                it sells to the outside.
-            </p>
+                    <p> Matt Mackall on OFTC.net #offtopic.  </p>
 
-            <p>Shlomi Fish</p>
-        </body>
-        <info>
-            <author>Shlomi Fish</author>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-contributing-member">
-      <meta>
-        <title>Subversion: Contributing Member</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-                Great. Just Great. I wanted to remain a lazy leech, just using the
-selfless work others have done on subversion for my own personal
-advantage. The problem is, as soon as I read HACKING and learn how to
-submit a patch and begin by contributing something as tiny as a FAQ fix,
-I'll be hooked, and I'll start to become a contributing member of
-society. Next, I'm afraid I'll want to tackle a bite-sized task and help
-fix bugs and develop the product. (You guys are so sneaky!!)  :-)
-</p>
+                    <p> P.S: Matt Mackall has eventually projected Mercurial,
+                        which is a version control system,
+                        and an alternative to BitKeeper.</p>
 
-<p>
-(“Sorry, Honey. Can you take care of that? I have to submit another svn
-patch…”)
-</p>
+                </body>
+                <info>
+                    <author>Matt Mackal</author>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-internal-ms-code">
+            <meta>
+                <title>Internal Microsoft Code</title>
+            </meta>
+            <quote>
+                <body>
+                    <p>
+                        Sometimes I think Microsoft has more internal code than code 
+                        it sells to the outside.
+                    </p>
 
-    <p>
-    Steve Dwire on the Subversion Development List
-</p>
+                    <p>Shlomi Fish</p>
+                </body>
+                <info>
+                    <author>Shlomi Fish</author>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-contributing-member">
+            <meta>
+                <title>Subversion: Contributing Member</title>
+            </meta>
+            <quote>
+                <body>
+                    <p>
+                        Great. Just Great. I wanted to remain a lazy leech, just using the
+                        selfless work others have done on subversion for my own personal
+                        advantage. The problem is, as soon as I read HACKING and learn how to
+                        submit a patch and begin by contributing something as tiny as a FAQ fix,
+                        I'll be hooked, and I'll start to become a contributing member of
+                        society. Next, I'm afraid I'll want to tackle a bite-sized task and help
+                        fix bugs and develop the product. (You guys are so sneaky!!)  :-)
+                    </p>
 
-        </body>
-        <info>
-            <author>Steve Dwire</author>
-            <work href="http://svn.haxx.se/dev/archive-2003-09/0077.shtml">Post to svn-dev</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-what-happened-to-cmpilato">
-      <meta>
-        <title>What happened to Christopher Michael Pilato?</title>
-      </meta>
-      <quote>
-        <body>
-            <p>What happened to Christopher Michael Pilato?<br />
-                Is he gone?<br />
-                Is he gone for good?<br />
-                Is he gone for better?<br />
-                Is he gone for best?<br />
-                Is he gone forever?<br />
-                Will he return?<br />
-                Who is Christopher Michael Pilato, anyway?<br />
-            </p>
+                    <p>
+                        (“Sorry, Honey. Can you take care of that? I have to submit another svn
+                        patch…”)
+                    </p>
 
-            <p>Shlomi Fish</p>
+                    <p>
+                        Steve Dwire on the Subversion Development List
+                    </p>
 
-        </body>
-        <info>
-            <author>Shlomi Fish</author>
-            <work>Adapted from an IRC Monologue</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-bad-build-system-code">
-      <meta>
-        <title>Discussing the Subversion Build System in #svn.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman: for the record, I think the build system is the ultimate  proof that python code can be as bad as Perl one.</saying>
-          <me_is who="clkao">giggles</me_is>
-          <saying who="jackr">hehe</saying>
-          <me_is who="rindolf">hopes he's not starting a flamewar</me_is>
-          <saying who="clkao">btw, freebsd svn port maintainer was complaining about unable to  do --with-swig specifying only perl or pythong bindings to build..</saying>
-          <me_is who="cmpilato">notes that the topic of this channel is Subversion.</me_is>
-          <saying who="clkao">(so he refused to include the option for building either bindings  in the port!)</saying>
-          <saying who="rindolf">I once saw a perl5 code written in perl4 style. Now that was hideous.</saying>
-          <saying who="fitz">complicated != bad</saying>
-          <saying who="fitz">"Building is complicated--that's why build systems are complicated." --kfogel </saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-python-vs-perl">
-      <meta>
-        <title>Python vs. Perl on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">Is gstein the person to blame for the anti-Perl FUD on  http://viewcvs.sf.net/?</saying>
-          <saying who="sussman">yes.</saying>
-          <saying who="cmpilato">likely. . . .</saying>
-          <saying who="ghudson">Subversion used to be this amazing nest of anti-perl people.   That's calmed down a bit... largely because Greg Stein has been  distracted. :)</saying>
-          <saying who="rindolf">I personally am a Perl guy who despises Python, but can still  tolerate the Subversion tests because they are actually shell  scripts in disguise.</saying>
-          <me_is who="jackr">thinks there are other Python-loving Perl haters around</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-faster-checkouts">
-      <meta>
-        <title>#svn - Faster Checkouts</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="sussman">wow.</saying>
-          <saying who="sussman">so 0.33 is gonna have way faster checkouts/updates in both network layers.</saying>
-          <saying who="sussman">that's fantastic.</saying>
-          <saying who="josander">how is this compared to http, svn-ssh and cvs: svn co floppy:// ? Have anyome measured this?</saying>
-          <saying who="ghudson">floppy://?</saying>
-          <saying who="sussman">hehehe</saying>
-          <saying who="josander">yes, the floppy network. -:)</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-rollin-rollin-rollin">
-      <meta>
-        <title>#svn while releasing svn 0.34</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="sussman">rollin rollin rollin</saying>
-          <saying who="sussman">keep that tarball rollin</saying>
-          <saying who="plasmabal">o/~ roll roll roll the ball o/~</saying>
-          <saying who="plasmabal">o/~ gently down the stream o/~</saying>
-          <saying who="sussman">roll the plasma ball?</saying>
-          <me_is who="plasmabal">roll~~~ #svn</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-kfogel-paranoid">
-      <meta>
-        <title>kfogel is Paranoid on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="kfogel">ghudson: there was a three hour difference, so people would have noticed the warnings</saying>
-          <saying who="kfogel">but yes, that's the only dfiference</saying>
-          <saying who="kfogel">i.e., you could theoretically test with the current test tarball</saying>
-          <saying who="ghudson">Yeah, not important for my purposes, is what I meant.</saying>
-          <me_is who="kfogel">is super paranoid and prefers testing of the real tarball, but has retained just enough sanity to know that this is paranoia...</me_is>
-          <saying who="kfogel">"Why, what could *possibly* go wrong?"</saying>
-          <me_is who="fitz">watches kfogel's hair spontaneously combust</me_is>
-          <saying who="kfogel">arrrrgh</saying>
-          <saying who="CIA">kfogel committed revision 7737: * CHANGES: Mention APR req upgrade for 0.33.</saying>
-          <me_is who="rooneg">wonders how kfogel will deal with having burning hair... </me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-red-hat-9">
-      <meta>
-        <title>#svn - Red Hat 9</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="sussman">ghudson: what OS did you compile the tarball on?</saying>
-          <saying who="ghudson">Red Hat 9.</saying>
-          <saying who="sussman">me too, hm.</saying>
-          <me_is who="sussman">wishes he were still using freebsd, for diversity's sake</me_is>
-          <me_is who="fitz">wishes sussman were a chocolate cake</me_is>
-          <saying who="fitz">mmmm... cake...</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-commit-thuds">
-      <meta>
-        <title>#svn - Commit Thuds</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rooneg">weird, mine and jack's come out way too fast with this  player...  but the others all work fine.</saying>
-          <saying who="rooneg">and after hearing them all, i have two thinigs to say:  first, it must be really amusing hearing that stuff randomly throughout the day in the office, and two, cmike spent far too long on his ;-)</saying>
-          <saying who="sussman">rooneg: yours and jack's got corrupted</saying>
-          <saying who="sussman">cmpilato goofed when converting from mp3 to ogg</saying>
-          <saying who="sussman">he's gonna fix it, tho</saying>
-          <saying who="rooneg">cool</saying>
-          <me_is who="rooneg">considers filing a critical issue about the problem ;-)</me_is>
-          <saying who="sussman">heh</saying>
-          <saying who="rooneg">obviously this will block any 1.0 release</saying>
-          <saying who="sussman">indeed.</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-swedish-chef">
-      <meta>
-        <title>Swedish Chef on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="mbk">bork bork bork</saying>
-          <saying who="sabor">svn mv mbk "swedish chef"</saying>
-          <saying who="breser">ROFL</saying>
-          <saying who="mbk">svn revert</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-petting">
-      <meta>
-        <title>Petting stuff on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="CIA">sussman committed revision 6517: A minimal C client app, for  demonstration purposes.  Now we can point</saying>
-          <me_is who="sussman">pets CIA again</me_is>
-          <me_is who="rindolf">pets sussman again</me_is>
-          <saying who="sussman">eep</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-what-cia-watches">
-      <meta>
-        <title>What CIA Watches on #svn</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="kfogel">rindolf: CIA watches much more than just Subversion.  Google  on it (uh, include the word "commit" too I guess), the details  are quite interesting.</saying>
-          <saying who="fitz">it's currently watching kfogel's houseplants</saying>
-          <saying who="kfogel">rindolf: If you don't know Fitz, you'll probably assume he's  joking.</saying>
-          <saying who="sussman">go into #commits</saying>
-          <saying who="sussman">you can see all the CIA commits for different opensource  projects</saying>
-          <saying who="kfogel">...which is to say, all the commits.</saying>
-          <saying who="kfogel">muwah-ha-hah-hah-haaaaah</saying>
-          <me_is who="fitz">hides</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-whispering">
-      <meta>
-        <title>A typical day at #svn (the Subversion channel)</title>
-      </meta>
-      <irc>
-        <body>
-          <me_is who="rindolf">is compiling the Mozilla 1.6 RPM now</me_is>
-          <me_is who="dsp">whispers, "Firebird"</me_is>
-          <me_is who="sussman">whispers, "Galeon"</me_is>
-          <me_is who="theoddbot">whispers "Safari"</me_is>
-          <saying who="sussman">Ah, Linux.  Have it Your Way.</saying>
-          <me_is who="rindolf">wonders why so many people are whispering</me_is>
-          <saying who="sussman">shhhhh!</saying>
-          <me_is who="rindolf">shouts "Stop the whispering insanity!"</me_is>
-          <me_is who="theoddbot">whispers "Whats up with that rindolf guy ?"</me_is>
-          <me_is who="sussman">says, "when did we all get trapped in a MUD"?</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-huge-repository">
-      <meta>
-        <title>Huge Repository on #svn - the Subversion channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="jackr">clkao: I have a 1.25Tb CVS repo that I'm afraid they'll ask me  to convert</saying>
-          <saying who="sussman">fear!</saying>
-          <saying who="jackr">... and loathing!</saying>
-          <saying who="clkao">you must! since you're @collab</saying>
-          <saying who="clkao">heh</saying>
-          <saying who="sussman">indeed.</saying>
-          <saying who="jackr">It would probably go into several SVN repos (there are no  boundaries inside CVS, so it's not necessarily 1::1).  But  individual pieces are often much bigger than 10.5g</saying>
-          <saying who="sussman">fear, indeed.</saying>
-          <me_is who="sussman">covers his eyes, ears, and mouth.</me_is>
-          <saying who="sussman">"there's no problem here"</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-stand-in-sussman">
-      <meta>
-        <title>A not-so-typical day at #svn.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">Hmmmppf... sussman is not here?</saying>
-          <saying who="rindolf">What is #svn without sussman?</saying>
-          <saying who="rindolf">It's like a cat without a mustache!</saying>
-          <saying who="dionisos">:-)</saying>
-          <saying who="fitz">heh</saying>
-          <saying who="dionisos">maybe we need a stand-in-sussman..!</saying>
-          <saying who="rindolf">dionisos: a sussman-bot</saying>
-          <saying who="dionisos">yea. working on *that* though...</saying>
-          <me_is who="dionisos">is now known as sussman-temp</me_is>
-          <joins who="sussman">has joined #svn</joins> 
-          <me_is who="ChanServ"> gives channel operator status to sussman</me_is>
-          <saying who="rindolf">sussman-temp: oops! </saying>
-          <me_is who="sussman-temp"> is now known as dionisos</me_is>
-          <saying who="rindolf">hi sussman</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-murder-and-mayhem">
-      <meta>
-        <title>Murder and Mayhem at #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <me_is who="rindolf">feels a desire for mayhem and murder of the Subversion  developers</me_is>
-          <saying who="darix">rindolf: don't do this!  </saying>
-          <saying who="darix">we still need them</saying>
-          <saying who="rindolf">darix: heh heh right.</saying>
-          <saying who="rindolf">Of course, I am a Subversion developer, too.</saying>
-          <me_is who="darix">gives rindolf a sword</me_is>
-          <saying who="darix">do harakiri then ... that keeps us enough other devs ;p</saying>
-          <saying who="darix">and you killed at least one of them ;)</saying>
-          <me_is who="rindolf">feels a desire for mayhem and murder of darix</me_is>
-          <me_is who="rindolf">takes darix' sword and uses it to stab darix</me_is>
-          <saying who="DigiGuy">YAY!</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-all-alone">
-      <meta>
-        <title>All alone on #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">Hi all</saying>
-          <saying who="rindolf">sussman: here?</saying>
-          <saying who="rindolf">kfogel: here?</saying>
-          <saying who="rindolf">fitz: here?</saying>
-          <saying who="rindolf">Am I alone in the world?</saying>
-          <saying who="rindolf">Have everyone abandoned me?</saying>
-          <saying who="rindolf">Why doesn't anybody answer?</saying>
-          <me_is who="rindolf">starts to cry</me_is>
-          <saying who="sussman">here</saying>
-          <me_is who="rindolf">stops crying</me_is>
-          <me_is who="rindolf">hugs sussman</me_is>
-          <me_is who="rindolf">whispers to him "I'm so glad you're back"</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-if-only-you-were-arch">
-      <meta>
-        <title>"If only SVN were Arch" on #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">Oh! Subversion, Subversion! If only you were Arch!</saying>
-          <me_is who="sussman">hands svk to rindolf</me_is>
-          <me_is who="rindolf">whispers "Or BitKeeper!" and runs.</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-real-IDE">
-      <meta>
-        <title>"Real IDE" on #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="sussman">you need to use gdb in a real IDE, like emacs, or ddd.</saying>
-          <saying who="sussman">something that shows a pointer moving down your code.</saying>
-          <saying who="rindolf">sussman: IDEs are for wimps... ;-)</saying>
-          <saying who="rindolf">Seriously, sometimes invoking gdb is very quick and I'm  accustomed to it.</saying>
-          <saying who="rindolf">ddd is quite on the heavy side.</saying>
-          <saying who="rindolf">"Programming happens in the mind, not in the IDE"  --- Gil'ad Ben-Yossef</saying>
-          <saying who="rindolf">So does debugging.</saying>
-          <saying who="sussman">sure.</saying>
-          <saying who="sussman">why would you possibly want to see all your code at once?</saying>
-          <saying who="sussman">it's much easier to see single lines printed out and try  to remember what the function looks like. :-)</saying>
-          <saying who="rindolf">ed, anyone? ;-)</saying>
-          <saying who="rindolf">"I wanna use ex and I wanna use vee (=vi). Ed is dead, ed is dead,  baby!"</saying>
-          <saying who="sussman">"Ed is for people who can *remember* what they're working on."</saying>
-          <me_is who="jackr">remembers when he could remember what he was working on. Sometimes.</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-bot-playing">
-      <meta>
-        <title>Bot playing at #svn - the Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="sussman">ayita: learn ayita=ayita?</saying>
-          <saying who="ayita">I'll try to remember 'ayita?' about 'ayita'.</saying>
-          <saying who="sussman">ayita?</saying>
-          <saying who="ayita">ayita?</saying>
-          <saying who="sussman">no infinite loop, unfortunately.</saying>
-          <saying who="dionisos">lol :-)</saying>
-          <saying who="rindolf">subversion?</saying>
-          <saying who="ayita">subversion is a Next-Generation Open Source Version Control  System (with a space at the beginning)</saying>
-          <saying who="dionisos">sander tried her to get to leave when she first came in :-)</saying>
-          <saying who="dionisos">giving here some \n string</saying>
-          <saying who="rindolf">ayita: learn subversion=subversion is a Next-Generation Open  Source Version Control System</saying>
-          <saying who="ayita">rindolf: you're not authorised to tell me that.</saying>
-          <me_is who="rindolf">kills dionisos</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-info-bot">
-      <meta>
-        <title>"Write an Info-bot" on #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">What should I do now? Use printf's?</saying>
-          <saying who="rindolf">Talking about retro.</saying>
-          <saying who="dionisos">no. write an info-bot.</saying>
-          <saying who="rindolf">a gdb info-bot?</saying>
-          <saying who="dionisos">sure.</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-physical-violence">
-      <meta>
-        <title>Physical violence at #svn - The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">How can I best install Subversion on a Debian Stable system?</saying>
-          <saying who="breser">rindolf: Presumably with apt.</saying>
-          <saying who="rindolf">breser: subversion is not present in Debian Stable, and  installing it from testing or unstable may require upgrading  half if not more of the system.</saying>
-          <saying who="rindolf">And I know what apt is.</saying>
-          <me_is who="rindolf">kicks breser so he won't give obvious but useless  answers like Microsoft support persons.</me_is>
-          <me_is who="breser">kicks rindolf so he won't ask vague questions that  result in obvious but useless responses when he already  knows the obvious but usless response is the obvious  response to give.</me_is>
-          <me_is who="rindolf">kicks breser for no reason at all.</me_is>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-looking-for-sussman">
-      <meta>
-        <title>Looking for sussman, at #svn, the Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman's been idle for 15 minutes.</saying>
-          <saying who="rindolf">And I need to talk to him.</saying>
-          <saying who="rindolf">sussman, oh sussman! Where art thou, sussman?</saying>
-          <saying who="rindolf">Or is it "wherefore"?</saying>
-          <saying who="arild_f">The shakespearian version is "wherefore", IIRC</saying>
-          <saying who="rindolf">Where have all the sussmans gone? (Long time passing)</saying>
-          <saying who="rindolf">Where have all the sussmans gone? (Long time ago)</saying>
-          <saying who="rindolf">Where have all the sussmans gone? They've been idle, everyone.</saying>
-          <saying who="rindolf">When will they ever learn?</saying>
-          <saying who="rindolf">When will they ever learn?</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-men-adopting-wife-maiden-name">
-      <meta>
-        <title>Discussing the beauties of men adopting their wife's maiden name on on #svn - The sussman^W Subversion channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman: people mock your name (= Ben Collins-Sussman) here:  http://tinyurl.com/5vl69</saying>
-          <saying who="rindolf">sussman: and it's the only comments I got regarding the interview  except for kfogel's</saying>
-          <saying who="sussman">rindolf: I replied.</saying>
-          <saying who="rindolf">sussman: reloading</saying>
-          <saying who="rindolf">sussman: 220$ for a last name change? Holy virgin mother of god!</saying>
-          <saying who="sussman">why?</saying>
-          <saying who="rindolf">sussman: but if you were Ben Collins, people would have confused you  with BenC. And no-one will understand who "sussman" is.</saying>
-          <saying who="rindolf">sussman: $220 is a lot of money, especially in Israel.</saying>
-          <saying who="sussman">Horrible sexist discrimination, really.   I had to pay $400 and  swear in front of a judge, to get my name changed.</saying>
-          <saying who="sussman">My wife had to do nothing.  She just showed her marriage license,  and instantly got a new ID.</saying>
-          <saying who="rindolf">sussman: another fortune cookie coming right up. </saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-finding-nemo">
-      <meta>
-        <title>#svn's tribute to "Finding Nemo"</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="darix">oooooooooooooooooooooh noooooooooooooo</saying>
-          <saying who="rindolf">darix: what's wrong?</saying>
-          <saying who="rindolf">What's wrooooooooooooooooooooooooooong</saying>
-          <saying who="darix">rindolf: sussman is gone.</saying>
-          <saying who="rindolf">I can speak whale.</saying>
-          <saying who="rindolf">Caaaaaaaaaan yoooooooouuuuuuu speaaaaaaaakkkkkkkk  whaaaaaaaaaaaale?</saying>
-          <saying who="edmund">ha ha</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-baby-talk">
-      <meta>
-        <title>Baby talk at FreeNode's #svn, the Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman: have your wife and you decided what your newborn is going  to be called?</saying>
-          <saying who="DannyB">"Baby Sussman"</saying>
-          <saying who="PerlJam">Sussbaby</saying>
-          <saying who="DannyB">Sussman 2.0</saying>
-          <saying who="PerlJam">minisuss</saying>
-          <saying who="DannyB">Suss SFF</saying>
-          <saying who="rindolf">5|_|55m/-\n</saying>
-          <saying who="DannyB">Sussman baby edition</saying>
-          <saying who="Rytmis_">Ben Mini?</saying>
-          <saying who="rindolf">Will he have a last name of Collins-Sussman as well, or just  Sussman?</saying>
-          <saying who="PerlJam">rindolf: he may have a completely different last name!  Why limit  the selection so?  ;)</saying>
-          <saying who="sussman">heh</saying>
-          <saying who="sussman">no names yet</saying>
-          <saying who="sussman">yes, twill be collins-sussman</saying>
-          <saying who="rindolf">Collman or Susslis.</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-pebkac">
-      <meta>
-        <title>PEBKAC - Freenode #svn - The Subversion channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">Success!!!</saying>
-          <saying who="rindolf">I discovered another copy-and-paste-bug and now everything is working. In Perl.</saying>
-          <saying who="rindolf">Problem between the keyboard and the chair.</saying>
-          <saying who="Rytmis">The most common sort</saying>
-          <saying who="rindolf">_My_ keyboard and chair.</saying>
-          <saying who="Rytmis">I stand by my statement *grin*</saying>
-          <saying who="rindolf">That's the problem with starting from a code that does things differently, and does more.</saying>
-          <saying who="rindolf">It's a good thing I wrote this test case.</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-who-killed-ayita">
-      <meta>
-        <title>"Who killed ayita?" on Freenode #svn, The Subversion Channel.</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">ayita: kfogel interview is http://developers.slashdot.org/article.pl?sid=05/07/27/1555228</saying>
-          <saying who="ayita">Thanks!</saying>
-          <saying who="rindolf">ayita: good girl.</saying>
-          <saying who="rindolf">ayita: kfogel interview?</saying>
-          <saying who="rindolf">ayita: kfogel interview?</saying>
-          <me_is who="Dave`">smells ayita timing out</me_is>
-          <saying who="darix">ayita: index kfogel.*</saying>
-          <saying who="darix">you killed her it seems</saying>
-          <saying who="rindolf">darix: LOL</saying>
-          <saying who="davidjames">It's not nice to hurt people</saying>
-          <saying who="Dave`">Oh my god, they killed ayita!</saying>
-          <saying who="sussman">hiiiiiiiiiidey ho!</saying>
-          <me_is who="rindolf">quickly finds someone else to blame.</me_is>
-          <saying who="rindolf">a scape-goat!</saying>
-          <saying who="rindolf">sussman: you'll be the ideal scape-goat for the murder of ayita.</saying>
-          <saying who="sussman">I think you'de be good at the 'werewolf' game</saying>
-          <saying who="rindolf">"You know it would be the easiest thing to blame it on Nanny."</saying>
-          <saying who="rindolf">"Let's do it then."</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-quest-for-holy-grail">
-      <meta>
-        <title>Freenode #svn's Quest for the Holy Grail</title>
-      </meta>
-      <irc>
-        <body>
-          <saying who="rindolf">sussman: don't say the BK-word...</saying>
-          <saying who="clkao">dude, no one mentioned bk until you did</saying>
-          <saying who="rindolf">clkao: &lt;sussman&gt; just like most of the decentralized SCMs, like arch, bitkeeper, etc.</saying>
-          <saying who="rindolf">"We are the knights who say "BitKeeper"."</saying>
-          <saying who="danderson">"We are NO LONGER the knights who say "BitKeeper". We are the knights who say "git git git cogito Linus!".</saying>
-          <saying who="rindolf">danderson: "Subversion!". "Bleh, that's one word that the knights who say "git git git cogito Linus!" cannot hear."</saying>
-          <saying who="rindolf">"What is your name?" "What is your quest?" "What is the  asymptotic complexity of the Subversion delta algorithm."</saying>
-          <saying who="rindolf">"Which one? vdelta or xdelta?"</saying>
-          <saying who="danderson">what do you mean, xdelta or vdelta?</saying>
-          <saying who="rindolf">"I don't know!"</saying>
-          <me_is who="rindolf">falls into the chasm</me_is>
-          <saying who="danderson">"How come you know so much about delta algorithms? - Well, you have to know these things when you're a commiter."</saying>
-        </body>
-        <info>
-            <channel>#svn</channel>
-            <network>Freenode</network>
-        </info>
-      </irc>
-    </fortune>
-    <fortune id="svn-versioning-3d-objects">
-      <meta>
-        <title>Versioning 3-D Objects</title>
-      </meta>
-      <quote>
-        <body>
-            <p>Hi, </p>
+                </body>
+                <info>
+                    <author>Steve Dwire</author>
+                    <work href="http://svn.haxx.se/dev/archive-2003-09/0077.shtml">Post to svn-dev</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-what-happened-to-cmpilato">
+            <meta>
+                <title>What happened to Christopher Michael Pilato?</title>
+            </meta>
+            <quote>
+                <body>
+                    <p>What happened to Christopher Michael Pilato?<br />
+                        Is he gone?<br />
+                        Is he gone for good?<br />
+                        Is he gone for better?<br />
+                        Is he gone for best?<br />
+                        Is he gone forever?<br />
+                        Will he return?<br />
+                        Who is Christopher Michael Pilato, anyway?<br />
+                    </p>
 
-                <p>
-a friend of mine runs a small restaurant and wants to professionalize his 
-IT. Our idea was to store everything in subversion (we use Debian with svn 
-1.3). We had absolutely no problems with the 2D objects, converting recipes 
-to ASCII and storing them was peanuts. However the 3D objects are giving us 
-a headache - the forks and knifes are stuck in the keyboard, we even 
-destroyed a floppy drive trying to read an apple. 
-</p>
+                    <p>Shlomi Fish</p>
 
-<p>
-    Any ideas how we can still use SVN to store everything?
-</p>
+                </body>
+                <info>
+                    <author>Shlomi Fish</author>
+                    <work>Adapted from an IRC Monologue</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-bad-build-system-code">
+            <meta>
+                <title>Discussing the Subversion Build System in #svn.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman: for the record, I think the build system is the ultimate  proof that python code can be as bad as Perl one.</saying>
+                    <me_is who="clkao">giggles</me_is>
+                    <saying who="jackr">hehe</saying>
+                    <me_is who="rindolf">hopes he's not starting a flamewar</me_is>
+                    <saying who="clkao">btw, freebsd svn port maintainer was complaining about unable to  do --with-swig specifying only perl or pythong bindings to build..</saying>
+                    <me_is who="cmpilato">notes that the topic of this channel is Subversion.</me_is>
+                    <saying who="clkao">(so he refused to include the option for building either bindings  in the port!)</saying>
+                    <saying who="rindolf">I once saw a perl5 code written in perl4 style. Now that was hideous.</saying>
+                    <saying who="fitz">complicated != bad</saying>
+                    <saying who="fitz">"Building is complicated--that's why build systems are complicated." --kfogel </saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-python-vs-perl">
+            <meta>
+                <title>Python vs. Perl on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">Is gstein the person to blame for the anti-Perl FUD on  http://viewcvs.sf.net/?</saying>
+                    <saying who="sussman">yes.</saying>
+                    <saying who="cmpilato">likely. . . .</saying>
+                    <saying who="ghudson">Subversion used to be this amazing nest of anti-perl people.   That's calmed down a bit... largely because Greg Stein has been  distracted. :)</saying>
+                    <saying who="rindolf">I personally am a Perl guy who despises Python, but can still  tolerate the Subversion tests because they are actually shell  scripts in disguise.</saying>
+                    <me_is who="jackr">thinks there are other Python-loving Perl haters around</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-faster-checkouts">
+            <meta>
+                <title>#svn - Faster Checkouts</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="sussman">wow.</saying>
+                    <saying who="sussman">so 0.33 is gonna have way faster checkouts/updates in both network layers.</saying>
+                    <saying who="sussman">that's fantastic.</saying>
+                    <saying who="josander">how is this compared to http, svn-ssh and cvs: svn co floppy:// ? Have anyome measured this?</saying>
+                    <saying who="ghudson">floppy://?</saying>
+                    <saying who="sussman">hehehe</saying>
+                    <saying who="josander">yes, the floppy network. -:)</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-rollin-rollin-rollin">
+            <meta>
+                <title>#svn while releasing svn 0.34</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="sussman">rollin rollin rollin</saying>
+                    <saying who="sussman">keep that tarball rollin</saying>
+                    <saying who="plasmabal">o/~ roll roll roll the ball o/~</saying>
+                    <saying who="plasmabal">o/~ gently down the stream o/~</saying>
+                    <saying who="sussman">roll the plasma ball?</saying>
+                    <me_is who="plasmabal">roll~~~ #svn</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-kfogel-paranoid">
+            <meta>
+                <title>kfogel is Paranoid on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="kfogel">ghudson: there was a three hour difference, so people would have noticed the warnings</saying>
+                    <saying who="kfogel">but yes, that's the only dfiference</saying>
+                    <saying who="kfogel">i.e., you could theoretically test with the current test tarball</saying>
+                    <saying who="ghudson">Yeah, not important for my purposes, is what I meant.</saying>
+                    <me_is who="kfogel">is super paranoid and prefers testing of the real tarball, but has retained just enough sanity to know that this is paranoia...</me_is>
+                    <saying who="kfogel">"Why, what could *possibly* go wrong?"</saying>
+                    <me_is who="fitz">watches kfogel's hair spontaneously combust</me_is>
+                    <saying who="kfogel">arrrrgh</saying>
+                    <saying who="CIA">kfogel committed revision 7737: * CHANGES: Mention APR req upgrade for 0.33.</saying>
+                    <me_is who="rooneg">wonders how kfogel will deal with having burning hair... </me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-red-hat-9">
+            <meta>
+                <title>#svn - Red Hat 9</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="sussman">ghudson: what OS did you compile the tarball on?</saying>
+                    <saying who="ghudson">Red Hat 9.</saying>
+                    <saying who="sussman">me too, hm.</saying>
+                    <me_is who="sussman">wishes he were still using freebsd, for diversity's sake</me_is>
+                    <me_is who="fitz">wishes sussman were a chocolate cake</me_is>
+                    <saying who="fitz">mmmm... cake...</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-commit-thuds">
+            <meta>
+                <title>#svn - Commit Thuds</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rooneg">weird, mine and jack's come out way too fast with this  player...  but the others all work fine.</saying>
+                    <saying who="rooneg">and after hearing them all, i have two thinigs to say:  first, it must be really amusing hearing that stuff randomly throughout the day in the office, and two, cmike spent far too long on his ;-)</saying>
+                    <saying who="sussman">rooneg: yours and jack's got corrupted</saying>
+                    <saying who="sussman">cmpilato goofed when converting from mp3 to ogg</saying>
+                    <saying who="sussman">he's gonna fix it, tho</saying>
+                    <saying who="rooneg">cool</saying>
+                    <me_is who="rooneg">considers filing a critical issue about the problem ;-)</me_is>
+                    <saying who="sussman">heh</saying>
+                    <saying who="rooneg">obviously this will block any 1.0 release</saying>
+                    <saying who="sussman">indeed.</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-swedish-chef">
+            <meta>
+                <title>Swedish Chef on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="mbk">bork bork bork</saying>
+                    <saying who="sabor">svn mv mbk "swedish chef"</saying>
+                    <saying who="breser">ROFL</saying>
+                    <saying who="mbk">svn revert</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-petting">
+            <meta>
+                <title>Petting stuff on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="CIA">sussman committed revision 6517: A minimal C client app, for  demonstration purposes.  Now we can point</saying>
+                    <me_is who="sussman">pets CIA again</me_is>
+                    <me_is who="rindolf">pets sussman again</me_is>
+                    <saying who="sussman">eep</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-what-cia-watches">
+            <meta>
+                <title>What CIA Watches on #svn</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="kfogel">rindolf: CIA watches much more than just Subversion.  Google  on it (uh, include the word "commit" too I guess), the details  are quite interesting.</saying>
+                    <saying who="fitz">it's currently watching kfogel's houseplants</saying>
+                    <saying who="kfogel">rindolf: If you don't know Fitz, you'll probably assume he's  joking.</saying>
+                    <saying who="sussman">go into #commits</saying>
+                    <saying who="sussman">you can see all the CIA commits for different opensource  projects</saying>
+                    <saying who="kfogel">...which is to say, all the commits.</saying>
+                    <saying who="kfogel">muwah-ha-hah-hah-haaaaah</saying>
+                    <me_is who="fitz">hides</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-whispering">
+            <meta>
+                <title>A typical day at #svn (the Subversion channel)</title>
+            </meta>
+            <irc>
+                <body>
+                    <me_is who="rindolf">is compiling the Mozilla 1.6 RPM now</me_is>
+                    <me_is who="dsp">whispers, "Firebird"</me_is>
+                    <me_is who="sussman">whispers, "Galeon"</me_is>
+                    <me_is who="theoddbot">whispers "Safari"</me_is>
+                    <saying who="sussman">Ah, Linux.  Have it Your Way.</saying>
+                    <me_is who="rindolf">wonders why so many people are whispering</me_is>
+                    <saying who="sussman">shhhhh!</saying>
+                    <me_is who="rindolf">shouts "Stop the whispering insanity!"</me_is>
+                    <me_is who="theoddbot">whispers "Whats up with that rindolf guy ?"</me_is>
+                    <me_is who="sussman">says, "when did we all get trapped in a MUD"?</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-huge-repository">
+            <meta>
+                <title>Huge Repository on #svn - the Subversion channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="jackr">clkao: I have a 1.25Tb CVS repo that I'm afraid they'll ask me  to convert</saying>
+                    <saying who="sussman">fear!</saying>
+                    <saying who="jackr">... and loathing!</saying>
+                    <saying who="clkao">you must! since you're @collab</saying>
+                    <saying who="clkao">heh</saying>
+                    <saying who="sussman">indeed.</saying>
+                    <saying who="jackr">It would probably go into several SVN repos (there are no  boundaries inside CVS, so it's not necessarily 1::1).  But  individual pieces are often much bigger than 10.5g</saying>
+                    <saying who="sussman">fear, indeed.</saying>
+                    <me_is who="sussman">covers his eyes, ears, and mouth.</me_is>
+                    <saying who="sussman">"there's no problem here"</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-stand-in-sussman">
+            <meta>
+                <title>A not-so-typical day at #svn.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">Hmmmppf... sussman is not here?</saying>
+                    <saying who="rindolf">What is #svn without sussman?</saying>
+                    <saying who="rindolf">It's like a cat without a mustache!</saying>
+                    <saying who="dionisos">:-)</saying>
+                    <saying who="fitz">heh</saying>
+                    <saying who="dionisos">maybe we need a stand-in-sussman..!</saying>
+                    <saying who="rindolf">dionisos: a sussman-bot</saying>
+                    <saying who="dionisos">yea. working on *that* though...</saying>
+                    <me_is who="dionisos">is now known as sussman-temp</me_is>
+                    <joins who="sussman">has joined #svn</joins> 
+                    <me_is who="ChanServ"> gives channel operator status to sussman</me_is>
+                    <saying who="rindolf">sussman-temp: oops! </saying>
+                    <me_is who="sussman-temp"> is now known as dionisos</me_is>
+                    <saying who="rindolf">hi sussman</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-murder-and-mayhem">
+            <meta>
+                <title>Murder and Mayhem at #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <me_is who="rindolf">feels a desire for mayhem and murder of the Subversion  developers</me_is>
+                    <saying who="darix">rindolf: don't do this!  </saying>
+                    <saying who="darix">we still need them</saying>
+                    <saying who="rindolf">darix: heh heh right.</saying>
+                    <saying who="rindolf">Of course, I am a Subversion developer, too.</saying>
+                    <me_is who="darix">gives rindolf a sword</me_is>
+                    <saying who="darix">do harakiri then ... that keeps us enough other devs ;p</saying>
+                    <saying who="darix">and you killed at least one of them ;)</saying>
+                    <me_is who="rindolf">feels a desire for mayhem and murder of darix</me_is>
+                    <me_is who="rindolf">takes darix' sword and uses it to stab darix</me_is>
+                    <saying who="DigiGuy">YAY!</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-all-alone">
+            <meta>
+                <title>All alone on #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">Hi all</saying>
+                    <saying who="rindolf">sussman: here?</saying>
+                    <saying who="rindolf">kfogel: here?</saying>
+                    <saying who="rindolf">fitz: here?</saying>
+                    <saying who="rindolf">Am I alone in the world?</saying>
+                    <saying who="rindolf">Have everyone abandoned me?</saying>
+                    <saying who="rindolf">Why doesn't anybody answer?</saying>
+                    <me_is who="rindolf">starts to cry</me_is>
+                    <saying who="sussman">here</saying>
+                    <me_is who="rindolf">stops crying</me_is>
+                    <me_is who="rindolf">hugs sussman</me_is>
+                    <me_is who="rindolf">whispers to him "I'm so glad you're back"</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-if-only-you-were-arch">
+            <meta>
+                <title>"If only SVN were Arch" on #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">Oh! Subversion, Subversion! If only you were Arch!</saying>
+                    <me_is who="sussman">hands svk to rindolf</me_is>
+                    <me_is who="rindolf">whispers "Or BitKeeper!" and runs.</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-real-IDE">
+            <meta>
+                <title>"Real IDE" on #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="sussman">you need to use gdb in a real IDE, like emacs, or ddd.</saying>
+                    <saying who="sussman">something that shows a pointer moving down your code.</saying>
+                    <saying who="rindolf">sussman: IDEs are for wimps... ;-)</saying>
+                    <saying who="rindolf">Seriously, sometimes invoking gdb is very quick and I'm  accustomed to it.</saying>
+                    <saying who="rindolf">ddd is quite on the heavy side.</saying>
+                    <saying who="rindolf">"Programming happens in the mind, not in the IDE"  --- Gil'ad Ben-Yossef</saying>
+                    <saying who="rindolf">So does debugging.</saying>
+                    <saying who="sussman">sure.</saying>
+                    <saying who="sussman">why would you possibly want to see all your code at once?</saying>
+                    <saying who="sussman">it's much easier to see single lines printed out and try  to remember what the function looks like. :-)</saying>
+                    <saying who="rindolf">ed, anyone? ;-)</saying>
+                    <saying who="rindolf">"I wanna use ex and I wanna use vee (=vi). Ed is dead, ed is dead,  baby!"</saying>
+                    <saying who="sussman">"Ed is for people who can *remember* what they're working on."</saying>
+                    <me_is who="jackr">remembers when he could remember what he was working on. Sometimes.</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-bot-playing">
+            <meta>
+                <title>Bot playing at #svn - the Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="sussman">ayita: learn ayita=ayita?</saying>
+                    <saying who="ayita">I'll try to remember 'ayita?' about 'ayita'.</saying>
+                    <saying who="sussman">ayita?</saying>
+                    <saying who="ayita">ayita?</saying>
+                    <saying who="sussman">no infinite loop, unfortunately.</saying>
+                    <saying who="dionisos">lol :-)</saying>
+                    <saying who="rindolf">subversion?</saying>
+                    <saying who="ayita">subversion is a Next-Generation Open Source Version Control  System (with a space at the beginning)</saying>
+                    <saying who="dionisos">sander tried her to get to leave when she first came in :-)</saying>
+                    <saying who="dionisos">giving here some \n string</saying>
+                    <saying who="rindolf">ayita: learn subversion=subversion is a Next-Generation Open  Source Version Control System</saying>
+                    <saying who="ayita">rindolf: you're not authorised to tell me that.</saying>
+                    <me_is who="rindolf">kills dionisos</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-info-bot">
+            <meta>
+                <title>"Write an Info-bot" on #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">What should I do now? Use printf's?</saying>
+                    <saying who="rindolf">Talking about retro.</saying>
+                    <saying who="dionisos">no. write an info-bot.</saying>
+                    <saying who="rindolf">a gdb info-bot?</saying>
+                    <saying who="dionisos">sure.</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-physical-violence">
+            <meta>
+                <title>Physical violence at #svn - The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">How can I best install Subversion on a Debian Stable system?</saying>
+                    <saying who="breser">rindolf: Presumably with apt.</saying>
+                    <saying who="rindolf">breser: subversion is not present in Debian Stable, and  installing it from testing or unstable may require upgrading  half if not more of the system.</saying>
+                    <saying who="rindolf">And I know what apt is.</saying>
+                    <me_is who="rindolf">kicks breser so he won't give obvious but useless  answers like Microsoft support persons.</me_is>
+                    <me_is who="breser">kicks rindolf so he won't ask vague questions that  result in obvious but useless responses when he already  knows the obvious but usless response is the obvious  response to give.</me_is>
+                    <me_is who="rindolf">kicks breser for no reason at all.</me_is>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-looking-for-sussman">
+            <meta>
+                <title>Looking for sussman, at #svn, the Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman's been idle for 15 minutes.</saying>
+                    <saying who="rindolf">And I need to talk to him.</saying>
+                    <saying who="rindolf">sussman, oh sussman! Where art thou, sussman?</saying>
+                    <saying who="rindolf">Or is it "wherefore"?</saying>
+                    <saying who="arild_f">The shakespearian version is "wherefore", IIRC</saying>
+                    <saying who="rindolf">Where have all the sussmans gone? (Long time passing)</saying>
+                    <saying who="rindolf">Where have all the sussmans gone? (Long time ago)</saying>
+                    <saying who="rindolf">Where have all the sussmans gone? They've been idle, everyone.</saying>
+                    <saying who="rindolf">When will they ever learn?</saying>
+                    <saying who="rindolf">When will they ever learn?</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-men-adopting-wife-maiden-name">
+            <meta>
+                <title>Discussing the beauties of men adopting their wife's maiden name on on #svn - The sussman^W Subversion channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman: people mock your name (= Ben Collins-Sussman) here:  http://tinyurl.com/5vl69</saying>
+                    <saying who="rindolf">sussman: and it's the only comments I got regarding the interview  except for kfogel's</saying>
+                    <saying who="sussman">rindolf: I replied.</saying>
+                    <saying who="rindolf">sussman: reloading</saying>
+                    <saying who="rindolf">sussman: 220$ for a last name change? Holy virgin mother of god!</saying>
+                    <saying who="sussman">why?</saying>
+                    <saying who="rindolf">sussman: but if you were Ben Collins, people would have confused you  with BenC. And no-one will understand who "sussman" is.</saying>
+                    <saying who="rindolf">sussman: $220 is a lot of money, especially in Israel.</saying>
+                    <saying who="sussman">Horrible sexist discrimination, really.   I had to pay $400 and  swear in front of a judge, to get my name changed.</saying>
+                    <saying who="sussman">My wife had to do nothing.  She just showed her marriage license,  and instantly got a new ID.</saying>
+                    <saying who="rindolf">sussman: another fortune cookie coming right up. </saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-finding-nemo">
+            <meta>
+                <title>#svn's tribute to "Finding Nemo"</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="darix">oooooooooooooooooooooh noooooooooooooo</saying>
+                    <saying who="rindolf">darix: what's wrong?</saying>
+                    <saying who="rindolf">What's wrooooooooooooooooooooooooooong</saying>
+                    <saying who="darix">rindolf: sussman is gone.</saying>
+                    <saying who="rindolf">I can speak whale.</saying>
+                    <saying who="rindolf">Caaaaaaaaaan yoooooooouuuuuuu speaaaaaaaakkkkkkkk  whaaaaaaaaaaaale?</saying>
+                    <saying who="edmund">ha ha</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-baby-talk">
+            <meta>
+                <title>Baby talk at FreeNode's #svn, the Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman: have your wife and you decided what your newborn is going  to be called?</saying>
+                    <saying who="DannyB">"Baby Sussman"</saying>
+                    <saying who="PerlJam">Sussbaby</saying>
+                    <saying who="DannyB">Sussman 2.0</saying>
+                    <saying who="PerlJam">minisuss</saying>
+                    <saying who="DannyB">Suss SFF</saying>
+                    <saying who="rindolf">5|_|55m/-\n</saying>
+                    <saying who="DannyB">Sussman baby edition</saying>
+                    <saying who="Rytmis_">Ben Mini?</saying>
+                    <saying who="rindolf">Will he have a last name of Collins-Sussman as well, or just  Sussman?</saying>
+                    <saying who="PerlJam">rindolf: he may have a completely different last name!  Why limit  the selection so?  ;)</saying>
+                    <saying who="sussman">heh</saying>
+                    <saying who="sussman">no names yet</saying>
+                    <saying who="sussman">yes, twill be collins-sussman</saying>
+                    <saying who="rindolf">Collman or Susslis.</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-pebkac">
+            <meta>
+                <title>PEBKAC - Freenode #svn - The Subversion channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">Success!!!</saying>
+                    <saying who="rindolf">I discovered another copy-and-paste-bug and now everything is working. In Perl.</saying>
+                    <saying who="rindolf">Problem between the keyboard and the chair.</saying>
+                    <saying who="Rytmis">The most common sort</saying>
+                    <saying who="rindolf">_My_ keyboard and chair.</saying>
+                    <saying who="Rytmis">I stand by my statement *grin*</saying>
+                    <saying who="rindolf">That's the problem with starting from a code that does things differently, and does more.</saying>
+                    <saying who="rindolf">It's a good thing I wrote this test case.</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-who-killed-ayita">
+            <meta>
+                <title>"Who killed ayita?" on Freenode #svn, The Subversion Channel.</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">ayita: kfogel interview is http://developers.slashdot.org/article.pl?sid=05/07/27/1555228</saying>
+                    <saying who="ayita">Thanks!</saying>
+                    <saying who="rindolf">ayita: good girl.</saying>
+                    <saying who="rindolf">ayita: kfogel interview?</saying>
+                    <saying who="rindolf">ayita: kfogel interview?</saying>
+                    <me_is who="Dave`">smells ayita timing out</me_is>
+                    <saying who="darix">ayita: index kfogel.*</saying>
+                    <saying who="darix">you killed her it seems</saying>
+                    <saying who="rindolf">darix: LOL</saying>
+                    <saying who="davidjames">It's not nice to hurt people</saying>
+                    <saying who="Dave`">Oh my god, they killed ayita!</saying>
+                    <saying who="sussman">hiiiiiiiiiidey ho!</saying>
+                    <me_is who="rindolf">quickly finds someone else to blame.</me_is>
+                    <saying who="rindolf">a scape-goat!</saying>
+                    <saying who="rindolf">sussman: you'll be the ideal scape-goat for the murder of ayita.</saying>
+                    <saying who="sussman">I think you'de be good at the 'werewolf' game</saying>
+                    <saying who="rindolf">"You know it would be the easiest thing to blame it on Nanny."</saying>
+                    <saying who="rindolf">"Let's do it then."</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-quest-for-holy-grail">
+            <meta>
+                <title>Freenode #svn's Quest for the Holy Grail</title>
+            </meta>
+            <irc>
+                <body>
+                    <saying who="rindolf">sussman: don't say the BK-word...</saying>
+                    <saying who="clkao">dude, no one mentioned bk until you did</saying>
+                    <saying who="rindolf">clkao: &lt;sussman&gt; just like most of the decentralized SCMs, like arch, bitkeeper, etc.</saying>
+                    <saying who="rindolf">"We are the knights who say "BitKeeper"."</saying>
+                    <saying who="danderson">"We are NO LONGER the knights who say "BitKeeper". We are the knights who say "git git git cogito Linus!".</saying>
+                    <saying who="rindolf">danderson: "Subversion!". "Bleh, that's one word that the knights who say "git git git cogito Linus!" cannot hear."</saying>
+                    <saying who="rindolf">"What is your name?" "What is your quest?" "What is the  asymptotic complexity of the Subversion delta algorithm."</saying>
+                    <saying who="rindolf">"Which one? vdelta or xdelta?"</saying>
+                    <saying who="danderson">what do you mean, xdelta or vdelta?</saying>
+                    <saying who="rindolf">"I don't know!"</saying>
+                    <me_is who="rindolf">falls into the chasm</me_is>
+                    <saying who="danderson">"How come you know so much about delta algorithms? - Well, you have to know these things when you're a commiter."</saying>
+                </body>
+                <info>
+                    <channel>#svn</channel>
+                    <network>Freenode</network>
+                </info>
+            </irc>
+        </fortune>
+        <fortune id="svn-versioning-3d-objects">
+            <meta>
+                <title>Versioning 3-D Objects</title>
+            </meta>
+            <quote>
+                <body>
+                    <p>Hi, </p>
 
-<p>
-    Konrad Rosenbaum on the Subversion Users' mailing list<br />
-    http://svn.haxx.se/users/archive-2006-04/0008.shtml<br />
-    1 April 2006
-</p>
-        </body>
-        <info>
-            <author>Konrad Rosenbaum</author>
-            <work href="http://svn.haxx.se/users/archive-2006-04/0008.shtml">Post to svn-users on 1 April 2006</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-slashdot-comment-about-svn-vs-git">
-      <meta>
-        <title>Slashdot Comment about Subversion vs. Git</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-            Linus isn't saying that CVS and Subversion have fixable bugs 
-            or missing features. It's not about the code.
-        </p>
+                    <p> a friend of mine runs a small restaurant and wants to
+                        professionalize his IT. Our idea was to store
+                        everything in subversion (we use Debian with svn 1.3).
+                        We had absolutely no problems with the 2D objects,
+                        converting recipes to ASCII and storing them was
+                        peanuts. However the 3D objects are giving us a
+                        headache - the forks and knifes are stuck in the
+                        keyboard, we even destroyed a floppy drive trying to
+                        read an apple.  </p>
 
-        <p>
-He is saying that they solve the wrong problem. The Subversion team wants to
-solve Problem A, and Linus wants to solve Problem B. No amount of code will
-turn the solution to Problem A into a solution for Problem B. Bothering the
-Subversion team with code addressing Problem B will only irritate them, since
-they're working on Problem A.
-</p>
+                    <p> Any ideas how we can still use SVN to store everything?
+                    </p>
 
-<p>
-The right way to handle differing goals is to start a different project. That's
-what he did.
-</p>
+                    <p> Konrad Rosenbaum on the Subversion Users' mailing
+                        list<br />
+                        http://svn.haxx.se/users/archive-2006-04/0008.shtml<br
+                            /> 1 April 2006 </p>
 
-<p>
-Don't be confused by the labels. Source Code Management means different things
-to different people, and there isn't always much overlap in how each person
-defines it. Ships and airplanes are both 'vehicles', but that doesn't mean that
-a few changes will turn one to the other.
-</p>
+                </body>
+                <info>
+                    <author>Konrad Rosenbaum</author>
+                    <work href="http://svn.haxx.se/users/archive-2006-04/0008.shtml">Post to svn-users on 1 April 2006</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-slashdot-comment-about-svn-vs-git">
+            <meta>
+                <title>Slashdot Comment about Subversion vs. Git</title>
+            </meta>
+            <quote>
+                <body>
 
-<p>
-    zzatz on:<br />
-    http://developers.slashdot.org/comments.pl?sid=237163&amp;cid=19367821<br />
-</p>
+                    <p> Linus isn't saying that CVS and Subversion have fixable
+                        bugs or missing features. It's not about the code.
+                    </p>
 
-        </body>
-        <info>
-            <author>zzatz</author>
-            <work href="http://developers.slashdot.org/comments.pl?sid=237163&amp;cid=19367821">Slashdot Comment</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-linus-and-keywords-subst">
-      <meta>
-        <title>Subversion: Linus and Keywords Substitution</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-                &gt; Regarding keyword substituion: It turns out that Linus thinks it's a<br />
-                &gt; horrible idea: http://kerneltrap.org/mailarchive/git/2006/10/9/223932<br />
-            </p>
+                    <p> He is saying that they solve the wrong problem. The
+                        Subversion team wants to solve Problem A, and Linus
+                        wants to solve Problem B. No amount of code will turn
+                        the solution to Problem A into a solution for Problem
+                        B. Bothering the Subversion team with code addressing
+                        Problem B will only irritate them, since they're
+                        working on Problem A.  </p>
 
-            <p>
-                His argument is that it may destroy binary files.
-            </p>
+                    <p> The right way to handle differing goals is to start a
+                        different project. That's what he did.  </p>
 
-            <p>
-                This is bogus since keyword-substitution is *off* by default.
-                It will occur only for files that were explicitly marked for
-                substitution. For example in subversion:
-            </p>
+                    <p> Don't be confused by the labels. Source Code Management
+                        means different things to different people, and there
+                        isn't always much overlap in how each person defines
+                        it. Ships and airplanes are both 'vehicles', but that
+                        doesn't mean that a few changes will turn one to the
+                        other.  </p>
 
-            <p>
-                svn propset svn:keywords "Id Author Revision" *.h *.c
-            </p>
+                </body>
+                <info>
+                    <author>zzatz</author>
+                    <work href="http://developers.slashdot.org/comments.pl?sid=237163&amp;cid=19367821">Slashdot Comment</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-linus-and-keywords-subst">
+            <meta>
+                <title>Subversion: Linus and Keywords Substitution</title>
+            </meta>
+            <quote>
+                <body>
 
-            <p>
-                As a substitute (pun intended) for the lack in this feature 
-                he gives a hand crafted, build system dependent, manual (i.e: 
-                error prone) method.
-            </p>
+                    <blockquote>
+                        <p>
+                            Regarding keyword substituion: It turns out that Linus thinks it's a<br />
+                            horrible idea: http://kerneltrap.org/mailarchive/git/2006/10/9/223932<br />
+                        </p>
+                    </blockquote>
+                    <p>
+                        His argument is that it may destroy binary files.
+                    </p>
 
-            <p>
-                What a lame excuse.
-            </p>
+                    <p> This is bogus since keyword-substitution is *off* by
+                        default.  It will occur only for files that were
+                        explicitly marked for substitution. For example in
+                        subversion: </p>
 
-            <p>
-                -- Oron Peled in <br />
-                http://hamakor.org.il/pipermail/haifux/2008-February/000164.html<br />
-    </p>
-        </body>
-        <info>
-            <author>Oron Peled</author>
-            <work href="http://hamakor.org.il/pipermail/haifux/2008-February/000164.html">Post to the Haifa Linux Club mailing list</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-dazjorz-on-bzr">
-      <meta>
-        <title>Dazjorz on bzr</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-                bzr is slower than Subversion in combination with Sourceforge.
-            </p>
-            <p>
-                <a href="http://dazjorz.com/">Dazjorz</a> (17-September-2009)
-            </p>
-        </body>
-        <info>
-            <author>Dazjorz</author>
-            <work>Chat with Shlomi Fish</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-sussman-on-git-1">
-      <meta>
-        <title>sussman on git #1</title>
-      </meta>
-      <quote>
-        <body>
-            <p>
-Computer Scientists love git, not just because it comes first
-alphabetically, but because it's stupid. Everyone else loves git
-because it's GIT!
-</p>
+                    <p> svn propset svn:keywords "Id Author Revision" *.h *.c
+                    </p>
 
-<p>
-"Git is the stupid content tracker."
-</p>
+                    <p> As a substitute (pun intended) for the lack in this
+                        feature he gives a hand crafted, build system
+                        dependent, manual (i.e: error prone) method.  </p>
 
-<p>
-    And git doesn't waste space on my Newton MessagePad. Just look:
-</p>
+                    <p> What a lame excuse.  </p>
 
-<p>
-    -rwxr-xr-x 1 root 24 Oct 29 2009 /bin/git<br />
-    -rwxr-xr-t 4 root 1310720 Jan 1 2005 /usr/bin/hg<br />
-    -rwxr-xr-x 1 root 5.89824e37 Oct 22 2001 /usr/local/subversion/bin/svn<br />
-</p>
+                </body>
+                <info>
+                    <author>Oron Peled</author>
+                    <work href="http://hamakor.org.il/pipermail/haifux/2008-February/000164.html">Post to the Haifa Linux Club mailing list</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-dazjorz-on-bzr">
+            <meta>
+                <title>Dazjorz on bzr</title>
+            </meta>
+            <quote>
+                <body>
 
-<p>
-Of course, on the system *I* administrate, hg is symlinked to git.
-svn has been replaced by a shell script which 1) Generates a syslog
-message at level LOG_EMERG; 2) reduces the user's disk quota by 10GB;
-and 3) RUNS GIT!!!!!!
-</p>
-<p>
-    "Git is the stupid content tracker."
-</p>
-        </body>
-        <info>
-            <author>Ben Collins-Sussman</author>
-            <work href="http://blog.red-bean.com/sussman/?p=226">Git, man! man git</work>
-        </info>
-      </quote>
-    </fortune>
-    <fortune id="svn-sussman-on-git-2">
-      <meta>
-        <title>sussman on git #2</title>
-      </meta>
-      <quote>
-          <body>
+                    <p> bzr is slower than Subversion in combination with
+                        Sourceforge.  </p>
 
-              <p>
-"Git is the stupid content tracker."
-</p>
+                    <p> <a href="http://dazjorz.com/">Dazjorz</a>
+                        (17-September-2009) </p>
 
-              <p>
-Git, the greatest WYGIWYG revision control system of all.
-</p>
+                </body>
+                <info>
+                    <author>Dazjorz</author>
+                    <work>Chat with Shlomi Fish</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-sussman-on-git-1">
+            <meta>
+                <title>sussman on git #1</title>
+            </meta>
+            <quote>
+                <body>
 
-              <p>
-GIT IS THE TRUE PATH TO NIRVANA! GIT HAS BEEN THE CHOICE OF EDUCATED
-AND IGNORANT ALIKE FOR CENTURIES! GIT WILL NOT CORRUPT YOUR PRECIOUS
-BODILY FLUIDS!! GIT IS THE STUPID CONTENT TRACKER! GIT MAKES THE SUN
-SHINE AND THE BIRDS SING AND THE GRASS GREEN!! GIT WAS HANDED DOWN TO
-US FROM LINUS UPON THE MOUNTAIN, AND LINUX USERS SHALL NOT WORSHIP ANY
-OTHER TRACKER!
-</p>
+                    <p> Computer Scientists love git, not just because it comes
+                        first alphabetically, but because it's stupid. Everyone
+                        else loves git because it's GIT!  </p>
 
-              <p>
-When I use a version control system, I don't want eight extra
-MEGABYTES of worthless HTTP protocol support. I just want to GIT on
-with my coding! I don't want to subvert away or mercurialize!
-Those aren't even WORDS!!! GIT! GIT! GIT IS THE STUPID!!!
-</p>
+                    <p> "Git is the stupid content tracker." </p>
 
-              <p>
-CONTENT TRACKER.
-</p>
+                    <p> And git doesn't waste space on my Newton MessagePad.
+                        Just look: </p>
 
-              <p>
-When Linus, in his ever-present omnipotence, needed to base his patch
-juggling habits on existing tools, did he mimic svn? No. Hg? Surely
-you jest. He created the most karmic version tracker of all. The
-stupid one.
-</p>
+                    <p> -rwxr-xr-x 1 root 24 Oct 29 2009 /bin/git<br />
+                        -rwxr-xr-t 4 root 1310720 Jan 1 2005 /usr/bin/hg<br />
+                        -rwxr-xr-x 1 root 5.89824e37 Oct 22 2001
+                        /usr/local/subversion/bin/svn<br /> </p>
 
-              <p>
-Git is for those who can *remember* what project they are working on.
-If you are an idiot, you should use subversion. If you are
-subversive, you should not be mercurial. If you use GIT, you are on
-THE PATH TO REDEMPTION. THE SO-CALLED "FRIENDLY" SCM SYSTEMS HAVE
-BEEN PLACED HERE BY GIT TO TEMPT THE FAITHLESS. DO NOT GIVE IN!!! THE
-MIGHTY LINUS HAS SPOKEN!!!
-</p>
+                    <p> Of course, on the system *I* administrate, hg is
+                        symlinked to git.  svn has been replaced by a shell
+                        script which 1) Generates a syslog message at level
+                        LOG_EMERG; 2) reduces the user's disk quota by 10GB;
+                        and 3) RUNS GIT!!!!!!  </p>
 
-          </body>
-          <info>
-              <author>Ben Collins-Sussman</author>
-              <work href="http://blog.red-bean.com/sussman/?p=226">Git, man! man git</work>
-          </info>
-      </quote>
-  </fortune>
-  </list>
+                    <p> "Git is the stupid content tracker." </p>
+
+                </body>
+                <info>
+                    <author>Ben Collins-Sussman</author>
+                    <work href="http://blog.red-bean.com/sussman/?p=226">Git, man! man git</work>
+                </info>
+            </quote>
+        </fortune>
+        <fortune id="svn-sussman-on-git-2">
+            <meta>
+                <title>sussman on git #2</title>
+            </meta>
+            <quote>
+                <body>
+
+                    <p> "Git is the stupid content tracker." </p>
+
+                    <p> Git, the greatest WYGIWYG revision control system of
+                        all.  </p>
+
+                    <p> GIT IS THE TRUE PATH TO NIRVANA! GIT HAS BEEN THE
+                        CHOICE OF EDUCATED AND IGNORANT ALIKE FOR CENTURIES!
+                        GIT WILL NOT CORRUPT YOUR PRECIOUS BODILY FLUIDS!! GIT
+                        IS THE STUPID CONTENT TRACKER! GIT MAKES THE SUN SHINE
+                        AND THE BIRDS SING AND THE GRASS GREEN!! GIT WAS HANDED
+                        DOWN TO US FROM LINUS UPON THE MOUNTAIN, AND LINUX
+                        USERS SHALL NOT WORSHIP ANY OTHER TRACKER!  </p>
+
+                    <p> When I use a version control system, I don't want eight
+                        extra MEGABYTES of worthless HTTP protocol support. I
+                        just want to GIT on with my coding! I don't want to
+                        subvert away or mercurialize!  Those aren't even
+                        WORDS!!! GIT! GIT! GIT IS THE STUPID!!!  </p>
+
+                    <p> CONTENT TRACKER.  </p>
+
+                    <p> When Linus, in his ever-present omnipotence, needed to
+                        base his patch juggling habits on existing tools, did
+                        he mimic svn? No. Hg? Surely you jest. He created the
+                        most karmic version tracker of all. The stupid one.
+                    </p>
+
+                    <p> Git is for those who can *remember* what project they
+                        are working on.  If you are an idiot, you should use
+                        subversion. If you are subversive, you should not be
+                        mercurial. If you use GIT, you are on THE PATH TO
+                        REDEMPTION. THE SO-CALLED "FRIENDLY" SCM SYSTEMS HAVE
+                        BEEN PLACED HERE BY GIT TO TEMPT THE FAITHLESS. DO NOT
+                        GIVE IN!!! THE MIGHTY LINUS HAS SPOKEN!!!  </p>
+
+                </body>
+                <info>
+                    <author>Ben Collins-Sussman</author>
+                    <work href="http://blog.red-bean.com/sussman/?p=226">Git, man! man git</work>
+                </info>
+            </quote>
+        </fortune>
+    </list>
 </collection>

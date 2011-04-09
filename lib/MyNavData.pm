@@ -193,7 +193,7 @@ my $tree_contents =
         {
             text => "Puzzles",
             url => "puzzles/",
-            expand => { re => "^(MathVentures/|puzzles/)", },
+            expand => { re => q{^(MathVentures/|puzzles/|toggle\.html)}, },
             title => "Puzzles, Riddles and Brain-teasers",
             subs =>
             [

@@ -15,7 +15,7 @@ my @sections =
     },
     {
         'id' => "puzzles",
-        'regex' => "^/(?:(?:puzzles|MathVentures)/|toggle.html)\$",
+        'regex' => q{^/(?:(?:puzzles|MathVentures)/|toggle.html$)},
         'class' => "Puzzles",
         'title' => "Puzzles Section Menu",
     },

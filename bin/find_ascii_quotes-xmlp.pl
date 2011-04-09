@@ -19,7 +19,7 @@ foreach my $filename (@ARGV)
                 {
                     my $l = $lines[$idx];
 
-                    if ($l =~ m{"})
+                    if ($l =~ m{["']})
                     {
                         printf {*STDOUT}
                         (

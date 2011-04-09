@@ -53,6 +53,10 @@ my $puzzles_tree_contents =
                             text => "The Toggle Squares Game",
                             url => "MathVentures/toggle-squares/",
                         },
+                        {
+                            text => "Mathematical Analysis",
+                            url => "toggle.html",
+                        }
                     ],
                 },
                 {

@@ -193,7 +193,7 @@ my $tree_contents =
         {
             text => "Puzzles",
             url => "puzzles/",
-            expand => { re => q{^(MathVentures/|puzzles/|toggle\.html)}, },
+            expand => { re => q{^(?:MathVentures/|puzzles/|toggle\.html)}, },
             title => "Puzzles, Riddles and Brain-teasers",
             subs =>
             [
@@ -259,7 +259,7 @@ my $tree_contents =
                 {
                     text => "Projects",
                     url => "open-source/projects/",
-                    expand => { re => "^(open-source/projects|jmikmod|rwlock|grad-fu)/", },
+                    expand => { re => "^(?:open-source/projects|jmikmod|rwlock|grad-fu)/", },
                     subs =>
                     [
                         {
@@ -313,7 +313,7 @@ my $tree_contents =
                     text => "Anti Pages",
                     title => "Against Commonly Used but Bad Software",
                     url => "open-source/anti/",
-                    expand => { re => "^(no-ie|open-source/anti)/", },
+                    expand => { re => "^(?:no-ie|open-source/anti)/", },
                 },                
                 {
                     text => "Portability Libraries",
@@ -381,7 +381,7 @@ my $tree_contents =
         {
             text => "Essays",
             url => "philosophy/",
-            expand => { re => "^(philosophy|prog-evolution|DeCSS)/", },
+            expand => { re => "^(?:philosophy|prog-evolution|DeCSS)/", },
             title => "Various Essays and Articles about Technology and Philosophy in General",
             subs =>
             [
@@ -435,7 +435,7 @@ my $tree_contents =
                 {
                     text => "General Philosophy",
                     url => "philosophy/philosophy/",
-                    expand => { re => "^philosophy/(philosophy/|the-eternal-jew/)" },
+                    expand => { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
                 },
             ],
         },

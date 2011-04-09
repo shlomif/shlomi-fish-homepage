@@ -17,6 +17,6 @@ $(document).ready(function(){
 	$("#sect_menu_wrapper > ul").treeview({
 		persist: "location",
 		collapsed: false,
-		unique: true
+		unique: false
 	});
 })

@@ -3,6 +3,6 @@ $(document).ready(function(){
 	$("#nav_menu > ul").treeview({
 		persist: "location",
 		collapsed: true,
-		unique: true
+		unique: false
 	});
 })

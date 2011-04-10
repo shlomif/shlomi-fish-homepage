@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<latemp_subject "The GPL, The BSD Licence and Being a Sucker" />
+<latemp_subject "The GPL, the BSD Licence, and Being a Sucker" />
 
 <h2>Introduction</h2>
 
@@ -17,15 +17,15 @@ for one's open-source project and how it relates to being a sucker.
 <dt>Translated to English:</dt>
 <dd>15-October-2005</dd>
 <dt>Last Modified:</dt>
-<dd>23-October-2005</dd>
+<dd>10-April-2011</dd>
 </dl>
 
 <h2 id="text">The Essay Itself</h2>
 
 <p>
 At <a href="http://linmagazine.co.il/node/view/11659">this (Hebrew) 
-discussion in Linmagazine.co.il</a> a claim was made that people who 
-distribute  code that they wrote under BSD-style licences are suckers, while 
+discussion in Linmagazine.co.il</a>, a claim was made that people who 
+distribute code that they wrote under BSD-style licences are suckers, while 
 people who distribute their code under <a href="http://www.gnu.org/licenses/gpl-faq.html">the GPL (GNU General Public Licence)</a> 
 are not, since they make sure no one will make a proprietary use of their code. In this essay, I'd like to reply to this in
 a rational manner. (As opposed to the flamefest in the original discussion).
@@ -68,6 +68,7 @@ want to sell a software that you have written, albeit you may want to make
 sure the source code is viewable. Now, would using an LGPL licence (that 
 allows linking to proprietary code) be a Suckerish act?
 </p>
+
 <p>
 It isn't that either. It's possible that the originator has an interest or a
 desire that people will do a commercial use of his code. Whether it's
@@ -86,7 +87,7 @@ programmers of software under BSD-style licences so? Again, they are not.
 First of all, they helped their neighbour (which naturally also includes
 commercial companies) and not just did a "suckery" act. Secondly, it is
 possible that they want people to integrate and modify this code. Perhaps
-because they want it to be part of an Embedded software. Perhaps they want to
+because they want it to be part of an embedded software. Perhaps they want to
 have proprietary derived products that they can draw ideas and inspiration
 from. And perhaps they (and I included) just don't want to worry what possible
 illegal use people make of their code. If you release a code under the Public
@@ -112,7 +113,7 @@ For further reading see:
 <ol>
 <li>
 <a href="http://ken.coar.org/musings/free-source.html">Ken's Musings about 
-Free Software and Open Source</a> - an essay of Ken Coar, one of the core 
+Free Software and Open Source</a> - an essay of Ken Coar, one of the core
 members of <a href="http://www.apache.org/">the Apache project</a>. Towards
 the end he explains why he prefers BSD-like licences.
 </li>
@@ -122,14 +123,14 @@ where he discusses his BSD-like "Beerware" licence.
 </li>
 <li>
 <a href="http://groups.yahoo.com/group/hackers-il/message/2809">The Well and 
-the Wall</a> - an essay I wrote as a result of reading 
+the Wall</a> - an essay I wrote as a result of reading
 <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">the "Cathedral 
 and the Bazaar"</a> on a pet project of mine, and why it turned out that the
 Public Domain licensing I chose for it, was ideal in this circumstance.
 </li>
 <li>
 <a href="http://www.advogato.org/person/bagder/diary.html?start=188">An
-entry in Daniel Stenberg's diary</a> notifying his feeling with the release
+entry in Daniel Stenberg's diary</a> echoing his sentiments with the release
 of a new version of cURL and libcurl, that are distributed under a BSD-style
 licence.
 </li>
@@ -150,7 +151,7 @@ essay and gave some useful commentary.
 <p>
 <b id="footnote1">Footnote 1</b>: 
 Some people mistakenly believe that Selfishness and Selflessness are the only 
-two possible strategies. But <a href="http://www.neo-tech.com/neotech/advantages/advantage14.html">there 
+two possible strategies. But <a href="http://www.neo-tech.com/neotech/advantages/advantage14.html">there
 is a third option - Rational Self Growth</a>.
 </p>
 
@@ -165,14 +166,4 @@ essay on Linmagazine.co.il</a> - plus some discussion.
 
 <h2 id="licence">Licence</h2>
 
-<p>
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img 
-alt="Creative Commons License" class="bless"
-src="$(ROOT)/images/somerights20.png"
-/></a><br />
-This work is licensed under the
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative 
-Commons Attribution 3.0 (Unported) License</a> (CC-by) (or at your option any 
-later version of the same licence).
-</p>
-
+<cc_by_british_blurb year="2005" />

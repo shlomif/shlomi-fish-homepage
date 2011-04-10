@@ -75,6 +75,36 @@ publicly linked to. Please send comments to
 
 </define-tag>
 
+<define-tag cc_by_british_blurb>
+<preserve year />
+<set-var %attributes />
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img 
+alt="Creative Commons License" class="bless"
+src="$(ROOT)/images/somerights20.png"
+/></a></p>
+
+<p>
+This document is Copyright by Shlomi Fish, <get-var year />, and is available 
+under the
+terms of <a rel="license" 
+href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons 
+Attribution License 3.0 Unported</a> (or at your option any
+later version of that licence).
+</p>
+
+<p>
+For securing additional rights, please contact 
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+<restore year />
+
+</define-tag>
+
 <define-tag cc_by_sa_british_blurb>
 <preserve year />
 <set-var %attributes />

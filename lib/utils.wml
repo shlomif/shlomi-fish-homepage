@@ -145,6 +145,40 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 
 </define-tag>
 
+
+<define-tag cc_by_hebrew_blurb>
+<preserve year />
+<set-var %attributes />
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img 
+alt="Creative Commons License" class="bless"
+src="$(ROOT)/images/somerights20.png"
+/></a></p>
+
+<p>
+זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת <get-var year/>,
+תחת תנאי 
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he">הרשיון
+ייחוס 2.5 לא מותאם של קריאייטיב קומונס Creative Commons)</a>
+(או לשיקלוכם כל גרסה מאוחרת יותר של אותו הרשיון.)
+</p>
+
+<p>
+בשביל לרכוש זכויות נוספות, אנא צרו קשר עם
+<a href="http://www.shlomifish.org/me/contact-me/">שלומי פיש</a>
+ושימו לב
+<a href="http://www.shlomifish.org/meta/copyrights/">לדרישות המפורשות</a>
+שהוא דורש כדי לעמוד בתנאי הרשיון הזה.
+</p>
+
+<restore year />
+
+</define-tag>
+
+
+
 <define-tag main_email whitespace="delete">
 shlomif@shlomifish.org
 </define-tag>
+

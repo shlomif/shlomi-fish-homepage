@@ -1,13 +1,29 @@
-# This makes sure all the URLs point at the / of the site because the 404
-# page may resolve to many pages.
-$(ROOT=)
-#include '../template.wml'
+#include "footer.wml"
 
-<latemp_subject "404 Not Found" />
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>404 Not Found</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Shlomi Fish" />
+<meta name="description" content="404 Page for Shlomi Fish’s Homepage" />
+<link rel="stylesheet" type="text/css" href="/style-404.css" />
+</head>
+<body>
+
+<h1>404 Not Found</h1>
 
 <p>
-We could not find this resource on this site. If you've reached this page
-from a link, please <a href="$(ROOT)/me/contact-me/">report the linking
+<a href="/" title="Shlomi Fish’s Homepage"><img 
+    src="/images/evilphish.png"
+    alt="EvilPHish from UserFriendly.org by Illiad" /></a>
+</p>
+<p>
+We could not find this resource on this site. If you’ve reached this page
+from a link, please <a href="/me/contact-me/">report the linking
 page and its link to the webmaster</a> so he can see about restoring the
 missing page or alternatively fixing the link.
 </p>
@@ -20,19 +36,27 @@ In the meanwhile, you may wish to read other resources in this site, such as:
 
 <li>
 <p>
-<a href="$(ROOT)/humour/"><b>My Humorous Creations</b></a>
+<a href="/humour/"><b>My Humorous Creations</b></a>
 </p>
 </li>
 <li>
 <p>
-<a href="$(ROOT)/philosophy/"><b>My Essays</b></a>
+<a href="/philosophy/"><b>My Essays</b></a>
 </p>
 </li>
 <li>
 <p>
-<a href="$(ROOT)/open-source/"><b>Open Source Software Resources</b></a>
+<a href="/open-source/"><b>Open Source Software Resources</b></a>
 </p>
 </li>
 
 </ul>
 
+<hr />
+
+<div id="footer">
+<webmaster_footer />
+</div>
+
+</body>
+</html>

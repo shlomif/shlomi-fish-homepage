@@ -256,38 +256,11 @@ alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 </div>
 </latemp_affiliations_buttons>
 
-
+#include "footer.wml"
 
 <latemp_webmaster>
 
-<ul class="bt_nav">
-<li>
-<a href="$(ROOT)/">Home</a>
-</li>
-<li>
-<a href="$(ROOT)/me/">About</a>
-</li>
-<li>
-<a href="$(ROOT)/me/contact-me/">Contact Us</a>
-</li>
-<li>
-<a href="$(ROOT)/meta/privacy-policy/">Privacy Policy</a>
-</li>
-<li>
-<a href="$(ROOT)/meta/anti-spam-policy/">Anti-Spam Policy</a>
-</li>
-<li>
-<a href="$(ROOT)/meta/FAQ/" title="Frequently asked questions list">FAQ</a>
-</li>
-<li>
-<a href="$(ROOT)/me/blogs/">RSS/Atom Feeds</a>
-</li>
-</ul>
-
-<p>
-Written, designed and maintained by Shlomi Fish, 
-<mailto_link_to_self email="<main_email />" />
-</p>
+<webmaster_footer />
 <p>
 If you like what you see here, or have any comments, suggestions or
 corrections, feel free to E-mail me about it. I'd love to hear from you. If

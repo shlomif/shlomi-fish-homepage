@@ -30,7 +30,6 @@ my $tree_contents =
     host => "t2",
     text => "Shlomi Fish",
     title => "Shlomi Fish’s Homepage",
-    show_always => 1,
     subs =>
     [
         {

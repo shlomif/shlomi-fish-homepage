@@ -29,12 +29,12 @@ my $tree_contents =
 {
     host => "t2",
     text => "Shlomi Fish",
-    title => "Shlomi Fish's Homepage",
+    title => "Shlomi Fish’s Homepage",
     show_always => 1,
     subs =>
     [
         {
-            text => "Shlomi Fish's Homepage",
+            text => "Shlomi Fish’s Homepage",
             url => "",
         },
         {
@@ -90,7 +90,7 @@ my $tree_contents =
                 {
                     text => "Personal Ad",
                     url => "me/personal-ad.html",
-                    title => "My Personal Ad: what I'm looking for in a prospective girlfriend and what I can add to the relationship.",
+                    title => "My Personal Ad: what I’m looking for in a prospective girlfriend and what I can add to the relationship.",
                 },
                 {
                     text => "My Weblogs",
@@ -163,7 +163,7 @@ my $tree_contents =
                         },
                         {
                             text => "Fortune Cookies Collection",
-                            title => "Collection of Files for Input to the UNIX 'fortune' Program",
+                            title => "Collection of Files for Input to the UNIX ‘fortune’ Program",
                             url => "humour/fortunes/",
                         },
                     ],
@@ -243,7 +243,7 @@ my $tree_contents =
                     title => "Logo for the “Better SCM” Site",
                 },
                 {
-                    text => "Slogans' Designs",
+                    text => "Slogans’ Designs",
                     url => "art/slogans/",
                     title => "The design of my aphorism - useful for T-shirts and other merchandise",
                 },
@@ -449,14 +449,14 @@ my $tree_contents =
                 {
                     text => "Hire Me!",
                     url => "work/hire-me/",
-                    title => "I'm a Geek for Hire",
+                    title => "I’m a Geek for Hire",
                     expand => { re => "work/", },
                     subs =>
                     [
                         {
                             text => "Private Lessons",
                             url => "work/private-lessons/",
-                            title => "I'm Giving Private Lessons for High School Subjects and Computing.",
+                            title => "I’m Giving Private Lessons for High School Subjects and Computing.",
                         },
                     ],
                 },
@@ -508,7 +508,7 @@ my $tree_contents =
                 },
                 {
                     url => "meta/site-source/",
-                    text => "Site's Source",
+                    text => "Site’s Source",
                     title => "The source code used to generate this site",
                 },
                 {
@@ -526,7 +526,7 @@ my $tree_contents =
                 {
                     url => "meta/hosting/",
                     text => "Hosting",
-                    title => "About this site's hosting provider.",
+                    title => "About this site’s hosting provider.",
                 },
             ],
         },

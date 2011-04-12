@@ -25,7 +25,7 @@
                 (or at your option a greater version).
             </para>
         </legalnotice>
-        <revhistory>
+        <revhistory xml:id="hhfg-revhistory">
             <revision>
                 <revnumber>1134</revnumber>
                 <date>2004-08-20</date>
@@ -323,6 +323,14 @@
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Add the third IRC conversation - “She must be a fine cat”.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>4354</revnumber>
+                <date>2011-04-12</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Finished writing the “She must be a fine cat” chapter.
                 </revremark>
             </revision>
         </revhistory>
@@ -3159,28 +3167,28 @@ Sincerely yours,
     <programlisting>
         <![CDATA[
         <jennray>  OK, so I invited my friend over here (the one we ended
-                   up transforming, per perlygatekeeper's advice) and she 
+                   up transforming, per perlygatekeeper’s advice) and she 
                    should be here soon.
         <blarned>  She must be a fine cat.
               -->  erisa has joined #perl
         <jennray>  erisa: hi! Good timing, I just told the channel
                    about your arrival.
-          <erisa>  jennray: Jennifer: ♥! I'll see if I like the company here.
+          <erisa>  jennray: Jennifer: ♥! I’ll see if I like the company here.
                 *  blarned paws at erisa
-        <rindolf>  Hi erisa! Meet blarned - he's our resident cat. Kudos
+        <rindolf>  Hi erisa! Meet blarned - he’s our resident cat. Kudos
                    for the Unicode, too.
           <erisa>  blarned: meow!
           <erisa>  rindolf: UTF-Love!
-        <rindolf>  erisa: and ISO-8859-Hate.
+        <rindolf>  erisa: and ISO-Hate-Hate-Five-Nine-*.
 <perlygatekeeper>  erisa: so I understand your transformation was 
                    successful?
-          <erisa>  perlygatekeeper: oh yes! I'm a completely different
+          <erisa>  perlygatekeeper: oh yes! I’m a completely different
                    person now.
           <erisa>  Hold on.
           <erisa>  http://eve-siegel.eu.org/temp-images/eve-before.jpg vs.
                    http://eve-siegel.eu.org/temp-images/eve-after.jpg .
-          <erisa>  And that's just the way I look.
-                *  blarned claws the 'before' and nuzzles the 'after'.
+          <erisa>  And that’s just the way I look.
+                *  blarned claws the ‘before’ and nuzzles the ‘after’.
 <perlygatekeeper>  erisa: yes, they are a difference of earth and heaven.
         <rindolf>  erisa: awesome. I understand you are jennray's 
                    classmate?
@@ -3193,9 +3201,55 @@ Sincerely yours,
                    “script-kiddies”.
         <blarned>  Perl cats like to waste time, but we are at a constant
                    war with those pesky script-kiddie critters.
-          <erisa>  I'll join that Perl Cats' herd (“clowder”?). Meow!
+          <erisa>  I’ll join that Perl Cats’ herd (“clowder”?). Meow!
+        <rindolf>  erisa: by the way, how did you reach that conclusion about
+                   IRC?
+          <erisa>  rindolf: hmmm… let me think.
+          <erisa>  Well, I used to enjoy chatting on IRC a bit before I became
+                   a rebel, but then I recall an E-mail exchange with someone
+                   whom I believed told me that the reason he was such a great
+                   hacker was because he lacked any social life.
+        <jennray>  A “nerd” so-to-speak?
+          <erisa>  Yes, exactly.
+          <erisa>  Oh my God…
         ]]>
 </programlisting>
+
+    <para>
+        At which point, I received a phone call. It was Erisa and she was 
+        crying.
+    </para>
+
+    <para>
+        “Jennifer, I think I’ve realised why I became the punk that I was…
+        it was all because of that E-mail exchange. I think… I think… I was 
+        trying to emulate a nerd, because I cared a lot about hacking.”
+    </para>
+
+    <para>
+        “Oh, Eve!” I told her. “Maybe I should come to your house?”
+    </para>
+
+    <para>
+        There was a pause. “Well, OK… if it’s not much trouble.”
+    </para>
+
+    <para>
+        “Its not, really. You’re my friend after all.” I told her.
+    </para>
+
+    <para>
+        I went to her house, and when I came, she was still very excited.
+        She told me about her past, how she was not happy with what
+        she was, and how non-sensical her philosophy appeared to her now.
+        She returned to her happy, joyful, state after a while and we
+        returned to the IRC conversation taking turns to type things at
+        the computer. I showed her some of my other favourite channels,
+        and she ended up making new IRC friends. Eventually Eve concluded
+        by saying: “Wow! Wasting time can be a lot of fun. I should do it
+        more often, I think”.
+    </para>
+
 </section>
 <section xml:id="search_of_lost_time"><info><title>I can write my own replacement for 'In Search of Lost Time'</title></info>
     

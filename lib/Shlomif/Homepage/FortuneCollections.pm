@@ -75,7 +75,7 @@ my @forts =
         'id' => "friends",
         desc => "quotes from the scripts of the T.V. show Friends. They cover the first three seasons.",
         text => "friends",
-        title => "Excerpts from the T.V. Show “Friends”",
+        title => "Excerpts from the T.V. Show Friends",
     },
     {
         'id' => "joel-on-software",

@@ -1,10 +1,10 @@
 #include '../template.wml'
 
-<latemp_subject "Interview with the author of &quot;Mastering cat&quot;" />
+<latemp_subject "Interview with the author of “Mastering cat”" />
 
 <div style="float:right; border: green solid thin; padding: 0.5em; margin-left: 0.5em;">
 <a href="mastering-cat-cover.jpg"
-    title="Mastering cat - a new book from O'Reilly"><img
+    title="Mastering cat - a new book from O’Reilly"><img
     src="small-cover.png" alt="Mastering cat Cover" style="border:0" /></a>
 </div>
 
@@ -18,11 +18,11 @@ has taken the time to sit down with us for an interview on his latest
 book, <i>Mastering cat</i>. In this 344 pages-long book, Fish details
 everything  you wanted to know about the UNIX <tt>cat</tt> command. We
 decided to  have an interview with him to find out more about the
-book's motivation, content, and philosophy.
+book’s motivation, content, and philosophy.
 </p>
 
 <p>
-<b>O'Reilly Net</b>: Hi Shlomi!
+<b>O’Reilly Net</b>: Hi Shlomi!
 </p>
 
 <p>
@@ -30,12 +30,12 @@ book's motivation, content, and philosophy.
 </p>
 
 <p>
-<b>O'Reilly Net</b>: So, what has motivated you to write the book?
+<b>O’Reilly Net</b>: So, what has motivated you to write the book?
 </p>
 
 <p>
 <b>Shlomi Fish</b>: Well, I realised people use <tt>cat</tt> so often
-that they don't take the time to fully investigate it and learn it.
+that they don’t take the time to fully investigate it and learn it.
 For example, many people I worked with believed that <tt>cat</tt> can
 only be used to output one file at a  time. So to output several files
 they used something like:
@@ -60,7 +60,7 @@ understand the command.
 </p>
 
 <p>
-<b>O'Reilly Net</b>: Isn't mastering <tt>cat</tt> supposed to be quite
+<b>O’Reilly Net</b>: Isn’t mastering <tt>cat</tt> supposed to be quite
 easy? Does it really necessitates its own book?
 </p>
 
@@ -89,13 +89,13 @@ already in its own file, you can simply use <tt>cat prefix.txt
 
 <p>
 Of course, if you want to append the same text to both the start and
-the end of a file, you can't do that with <tt>cat - myfile.txt -</tt>.
-It simply doesn't work that way. So, I end up explaining a lot about
+the end of a file, you can’t do that with <tt>cat - myfile.txt -</tt>.
+It simply doesn’t work that way. So, I end up explaining a lot about
 UNIX pipeline concepts in the book.
 </p>
 
 <p>
-<b>O'Reilly Net</b>: So what else does your book cover?
+<b>O’Reilly Net</b>: So what else does your book cover?
 </p>
 
 <p>
@@ -125,13 +125,13 @@ Overview of the GNU cat codebase (for programmers).
 </ol>
 
 <p>
-I'm also focusing on the various <tt>cat</tt> flags, which aid in its
+I’m also focusing on the various <tt>cat</tt> flags, which aid in its
 interactive use. For example, the <tt>-E</tt>/<tt>--show-ends</tt>
 flag, that places dollar signs at the end of the lines.
 </p>
 
 <p>
-Aside from all that, I'm also covering
+Aside from all that, I’m also covering
 <a href="http://jl.photodex.com/dog/">dog</a> which is a program
 that provides a superset of the <tt>cat</tt> program. I should also
 mention <tt>mouse</tt> which aimed to provide an even greater
@@ -140,13 +140,13 @@ based on code of the leaked Windows 2000 sources.
 </p>
 
 <p>
-<b>O'Reilly Net</b>: Your book seems bound to be popular (for some
+<b>O’Reilly Net</b>: Your book seems bound to be popular (for some
 values of popularity). What can we expect from you next?
 </p>
 
 <p>
 <b>Shlomi Fish</b>: Well, I hope many people will buy the book, or
-read it online so they'll be educated about <tt>cat</tt>. If you like
+read it online so they’ll be educated about <tt>cat</tt>. If you like
 <i>Mastering cat</i>, look forward to my next book - <i>Mastering echo</i>. I
 expect it to be published next fall.
 </p>
@@ -171,8 +171,8 @@ Slashdot.org</a> - with many comments.
 </li>
 
 <li>
-<a href="http://broadcast.oreilly.com/2009/04/mastering-cat-the-newest-oreil.html">“‘Mastering cat’, the newest O'Reilly title” - by James Turner on 
-O'Reilly Broadcast</a>
+<a href="http://broadcast.oreilly.com/2009/04/mastering-cat-the-newest-oreil.html">“‘Mastering cat’, the newest O’Reilly title” - by James Turner on 
+O’Reilly Broadcast</a>
 </li>
 
 <li>
@@ -187,7 +187,7 @@ the Linux-IL mailing list</a> (with some replies)
 
 <li>
 <a href="http://sdteffen.blogspot.com/2009/04/mastering-cat.html">On Steffen 
-Macke's blog</a>
+Macke’s blog</a>
 </li>
 
 <li>

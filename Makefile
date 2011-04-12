@@ -742,3 +742,6 @@ $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DE
 # 
 # $(T2_DEST)/screenplay.css: lib/screenplay-xml/css/screenplay.css.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
+#
+
+$(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml

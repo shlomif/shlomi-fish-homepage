@@ -502,7 +502,7 @@ $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
 # COMMON_CSS_TARGET_DEPS = lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml lib/fortunes.css.ttml lib/fortunes_show.css.ttml lib/screenplay-xml/css/screenplay.css.ttml
-COMMON_CSS_TARGET_DEPS = lib/sass/common-style.sass lib/sass/newsitem.sass lib/sass/smoked-wp-theme.sass lib/sass/lang_switch.sass lib/sass/fortunes.sass lib/sass/fortunes_show.sass lib/sass/screenplay.sass lib/sass/footer.sass
+COMMON_CSS_TARGET_DEPS = lib/sass/common-style.sass lib/sass/newsitem.sass lib/sass/smoked-wp-theme.sass lib/sass/lang_switch.sass lib/sass/fortunes.sass lib/sass/fortunes_show.sass lib/sass/screenplay.sass lib/sass/footer.sass lib/sass/common-body.sass
 
 MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 

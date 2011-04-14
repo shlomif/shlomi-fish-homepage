@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-use Sys::Hostname;
-
 use CGI;
 use DBI;
 use Encode qw(decode);

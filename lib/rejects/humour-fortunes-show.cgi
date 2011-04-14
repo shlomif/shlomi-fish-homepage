@@ -1,5 +1,7 @@
 =begin removed
 
+use Sys::Hostname;
+
 BEGIN
 {
     if (hostname() =~ m{heptagon})

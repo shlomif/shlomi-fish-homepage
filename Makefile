@@ -728,11 +728,14 @@ CSS_TARGETS_COMMON_DEPS = $(COMMON_CSS_TARGET_DEPS)
 
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
+SASS_STYLE = compressed
+SASS_CMD = sass --style $(SASS_STYLE)
+
 $(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DEPS)
-	sass $< $@
+	$(SASS_CMD) $< $@
 
 $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DEPS)
-	sass $< $@
+	$(SASS_CMD) $< $@
 
 # $(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<

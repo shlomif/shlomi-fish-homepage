@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use CGI;
+use CGI::Minimal;
 use DBI;
 use Encode qw(decode);
 
@@ -37,13 +37,13 @@ my $lookup_str_id_from_id = $dbh->prepare(
     q{SELECT str_id FROM fortune_cookies WHERE id = ?}
 );
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
+
+my $NL = "\015\012";
 
 sub _header
 {
-    my $params = shift || [];
-
-    print $cgi->header(-charset => 'utf-8', @$params);
+    print "Content-Type: text/html; charset=utf-8$NL$NL";
 
     return;
 }
@@ -52,7 +52,9 @@ sub _emit_error
 {
     my ($args) = @_;
 
-    _header(['-status' => '404 Not Found',]);
+    print "Status: 404 Not Found$NL";
+    _header();
+
     _wrap_error_html($args);
 
     return;
@@ -102,7 +104,7 @@ sub _invalid_mode
 {
     my ($mode) = @_;
 
-    my $mode_esc = CGI::escapeHTML($mode);
+    my $mode_esc = $cgi->htmlize($mode);
 
     _emit_error({ 
             title => qq{Error! Invalid mode "$mode_esc"},
@@ -158,7 +160,7 @@ EOF
 
     # str_id must not contain any strange HTML/URI/etc. characters
     # If it does - then we suck.
-    print $cgi->redirect("./show.cgi?id=$str_id");
+    print "Location: ./show.cgi?id=$str_id$NL$NL";
 
     return;
 }
@@ -170,7 +172,7 @@ sub _display_fortune_from_data
     $html_text = decode('utf-8', $html_text);
 
     my $title_esc =
-        CGI::escapeHTML(decode('utf-8', $html_title)) . " - Fortune"
+        $cgi->htmlize(decode('utf-8', $html_title)) . " - Fortune"
         ;
 
     _header();
@@ -194,7 +196,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <ul id="nav">
 <li><a href="/">Shlomi Fish's Homepage</a></li>
 <li><a href="./">Fortune Cookies Page</a></li>
-<li><a href="${col_str_id}.html">@{[CGI::escapeHTML($col_title)]}</a></li>
+<li><a href="${col_str_id}.html">@{[$cgi->htmlize($col_title)]}</a></li>
 <li><a href="${col_str_id}.html#${str_id}">Fortune Cookie</a></li>
 </ul>
 <ul id="random">
@@ -241,7 +243,7 @@ END_OF_BODY
 <h1>URL not found</h1>
 
 <p>
-The fortune ID @{[CGI::escapeHTML($str_id)]} is not recognised.
+The fortune ID @{[$cgi->htmlize($str_id)]} is not recognised.
 If you've reached this URL and think it should
 be defined please contact <a href="mailto:shlomif\@shlomifish.org">Shlomi
 Fish (the Webmaster)</a> and let him know of this problem.

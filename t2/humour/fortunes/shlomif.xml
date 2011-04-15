@@ -5,12 +5,12 @@
   <list>
     <fortune id="believe-in-fairies">
         <meta>
-            <title>I don't Believe in Fairies</title>
+            <title>I don’t Believe in Fairies</title>
         </meta>
         <quote>
             <body>
-                <p>I don't believe in fairies. Oops! A fairy died.<br/>
-                    I don't believe in fairies. Oops! Another fairy died.</p>
+                <p>I don’t believe in fairies. Oops! A fairy died.<br/>
+                    I don’t believe in fairies. Oops! Another fairy died.</p>
 
                 <p>
                     Shlomi Fish
@@ -48,7 +48,7 @@
                 <p>A Jewish Deduction</p>
 
                 <p> The Bible dictates that “Thou shalt not seethe [= cook] a
-                    kid [= young goat] in his mother's milk”. To avoid any
+                    kid [= young goat] in his mother’s milk”. To avoid any
                     possibility of breaking that regulation, the Jewish
                     tradition ruled that it also applies to female goats, to
                     mature goats, and to the meat and milk of two completely
@@ -56,7 +56,7 @@
                     fresh milk, and it applies to beef and mutten as well
                     (including mixing the milk and meat of two different
                     beasts). Finally, chicken, which are incapable of milk
-                    production, may not be eaten along with any mammal's milk
+                    production, may not be eaten along with any mammal’s milk
                     either.  </p>
 
                 <p> We are fortunate that most mathematicians were not Jewish.
@@ -100,18 +100,18 @@
             </body>
             <info>
                 <author>Shlomi Fish</author>
-                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
+                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
             </info>
         </quote>
     </fortune>
     <fortune id="microsoft-slogan">
         <meta>
-            <title>Microsoft's Slogan</title>
+            <title>Microsoft’s Slogan</title>
         </meta>
         <quote>
             <body>
 
-                <p>Microsoft's slogan used to be “Microsoft - making it all
+                <p>Microsoft’s slogan used to be “Microsoft - making it all
                     make sense.”</p>
 
                 <p>Today it should be: “Microsoft - making everything make
@@ -120,7 +120,7 @@
             </body>
             <info>
                 <author>Shlomi Fish</author>
-                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
+                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
             </info>
         </quote>
     </fortune>
@@ -152,7 +152,7 @@
             </body>
             <info>
                 <author>Shlomi Fish</author>
-                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
+                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
             </info>
         </quote>
     </fortune>
@@ -169,7 +169,7 @@
             </body>
             <info>
                 <author>Shlomi Fish</author>
-                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
+                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
             </info>
         </quote>
     </fortune>
@@ -187,7 +187,7 @@
             </body>
             <info>
                 <author>Shlomi Fish</author>
-                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish's Aphorisms Collection</work>
+                <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
             </info>
         </quote>
     </fortune>
@@ -4419,6 +4419,88 @@ And I thought Attila was a Humanitarian.
             <info>
                 <author>Shlomi Fish</author>
                 <work href="http://www.shlomifish.org/humour.html">Shlomi Fish’s Aphorisms Collection</work>
+            </info>
+        </quote>
+    </fortune>
+    <fortune id="your-programming-language-must-suck">
+        <meta>
+            <title>Your Programming Language Must Suck</title>
+        </meta>
+        <quote>
+            <body>
+
+                <p> All languages of the world suck. If you require people to
+                    declare variables (like in Pascal, C, <a
+                        href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
+                    or Perl 5 with <a
+                        href="http://perldoc.perl.org/strict.html">strict</a>),
+                    then people will tell you they like variables to spring up
+                    upon first use. Without variable declarations, then you get
+                    various weird side-effects of the implicit scoping. If you
+                    use curly braces for scoping, then you’ll have to type more
+                    and there’s more clutter. With indentation-based scoping
+                    (like in Python), you’ll find it hard to introduce
+                    multiple-expression <a
+                        href="http://en.wikipedia.org/wiki/Lambda_calculus#First-class_functions">lambdas</a>.</p>
+
+                <p>Rob Pike and Paul Graham hated object oriented programming
+                    (OOP) and so they didn’t introduce it in their <a
+                        href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">“Go”</a>
+                    and <a
+                        href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">“Arc“</a>
+                    languages, well after OOP has become mainstream. And guess
+                    what? Many people, including me, think that OOP is still a
+                    good thing (and no, in my opinion, C++ did not do OOP very
+                    well) and so gave up on Arc quickly and did not look
+                    closely at Go.</p>
+
+                <p>Dynamically typed languages (like Perl 5, Python, Ruby, or
+                    Lisp) possibly suffer from many subtle errors&#160;;
+                    Statically typed languages (like Haskell) are less
+                    expressive and it seems that about one third of the
+                    language design papers published on <a
+                        href="http://lambda-the-ultimate.org/">Lambda the
+                        Ultimate</a> are about various funky extensions to the
+                    Haskell type system to allow for better expressiveness.</p>
+
+                <p>Purely functional languages have no assignment and most
+                    people find them harder, in part because the world around
+                    us has a lot of state, and they also need to do funky
+                    compiler tricks to make you feel like you don’t need
+                    assignment. Non-functional languages have side-effects and
+                    so are prone to many errors.</p>
+
+                <p>If you have goto or goto-like statements (such as exceptions
+                    or Perl 5’s “last LABEL;” (more like “break” in C) or 
+                    “next LABEL;”), then you encourage code to not be factored
+                    correctly. If you don’t have such stuff, then programmers
+                    will hate you for having to go through many hoops to write
+                    quick-and-dirty code.</p>
+
+                <p>Perl 5 has a dedicated regular expression syntax which is
+                    treated magically by the parser. PHP and Java use strings
+                    for them, and require weird escaping and backslashing rules
+                    to interpolate the sub-regexes inside them. And if you
+                    incorporate a first-order syntax for regular expressions,
+                    then people will want similar first-order syntaxes for
+                    XPath, for XML (like some recent versions of Visual Basic
+                    .NET have), and for all other grammars you may need to
+                    embed.</p>
+
+                <p>Finally, many people absolutely hate all the clutter created
+                    by the leading <a
+                        href="http://en.wikipedia.org/wiki/Sigil_%28computer_programming%29">sigils</a>
+                    of Perl 5 (the "$", "@", etc.), and similar languages, but
+                    they allow for much better backward compatibility,
+                    facilitate the so-called “interpolation” (= embedding
+                    inside strings), and also give some important visual cues
+                    when skimming code (even without syntax highlighting).</p>
+
+                <p><b>You are damned either way</b>, whatever you do.</p>
+            </body>
+            <info>
+                <author>Shlomi Fish</author>
+                <work href="http://shlomif-tech.livejournal.com/57811.html">Your Programming Language Must Suck</work>
             </info>
         </quote>
     </fortune>

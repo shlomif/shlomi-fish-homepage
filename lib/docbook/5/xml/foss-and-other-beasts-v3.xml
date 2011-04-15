@@ -925,18 +925,20 @@ Classes (MFC), that are accompanied with their source.
 <para>
 2. <link xlink:href="http://www.trilon.com/xv/">xv</link> - a very popular 
 shareware image viewer and manipulator for X-Windows that has been 
-distributed with its source code.
+distributed with its source code. Note: it is no longer actively maintained,
+and its developer can no longer be actively reached, and so its use is no
+longer recommended.
 </para>
 </listitem>
 
 <listitem>
 <para>
-3. <link xlink:href="http://www.qmail.org/">qmail</link> - a popular mail server
+3. <link xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">qmail</link> - a popular mail server
 whose source code was available and can be deployed free of charge, but its
 licensing terms specified that it is illegal to distribute modified binaries 
 or sources (at least outside the organization) This is enough to make it 
 non-open-source, but it still had been a very popular program. More recently,
-the source of qmail and several related programs by the same author were made
+the source of qmail, and several related programs by the same author, were made
 public domain, which now makes it open-source software.
 </para>
 </listitem>
@@ -946,8 +948,8 @@ public domain, which now makes it open-source software.
 <para>
 None of these packages qualify as free software, but they are all
 accompanied with the source. There are many others around. A quick search
-on <link xlink:href="http://freshmeat.net/">Freshmeat</link> 
-will find many such packages.
+on the <link xlink:href="http://freshmeat.net/">Freshmeat directory
+of UNIX software</link> will find many such packages.
 </para>
 
 <para>
@@ -1073,7 +1075,7 @@ paradigm, it will imply that programmers will "starve to death". As
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/ar01s03.html">Eric
 Raymond notes in the Magic Cauldron</link>, the vast majority of software
 applications out there are one without a sale value: be it software that large
-organization like banks, insurance companies or armies use to power their
+organization like banks, insurance companies or miltaries use to power their
 critical systems, customizations, scripts or code used within smaller
 organizations (Microsoft Access customizations, spreadsheets' formulae and
 macros, Perl or shell scripts),
@@ -1109,9 +1111,6 @@ for something else entirely that is more productive.
 
 
 <section xml:id="myths_about_open_source"><info><title>Other Myths about Linux and Open Source Software</title></info>
-
-    
-
 
 <para>
 One can very often hear many myths or generally accepted "truths" about
@@ -1167,7 +1166,7 @@ public.
 
 <para>
 Myth #5 is not entirely true. While it is possible to fork a piece of
-open-source software, most packages were not effectively forked. Eric
+open-source software, most packages have not been actually forked. Eric
 Raymond covers the customs that relate to forking a package in
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">"Homesteading the Noosphere"</link>, and Rick Moen explains why when
 major packages forked, it was not necessarily a bad thing in his <link xlink:href="http://www.linuxmafia.com/~rick/essays/forking.html">"Fear of
@@ -1186,10 +1185,216 @@ incompatible with one another.)
 
 </section>
 
+<section xml:id="challenges_to_foss">
+
+<info>
+<title>Challenges to Free and Open Source Software</title>
+</info>
+
+<para>
+Open source appears to be very successful, but as of 2011, there are some
+challenges that threaten to undermine it. While it is not probable that 
+open-source software will completely die as a result, these challenges should
+nonetheless be taken into consideration. This section aims to list them.
+</para>
+
+<section xml:id="challenges__software_patents">
+
+<info>
+<title>Software Patents</title>
+</info>
+
+<para>
+<link xlink:href="http://en.wikipedia.org/wiki/Software_patent">Software
+patents</link> are patents that cover algorithms used inside a computer
+program, and prevent a competitor from implementing it as well. Software
+patents can often be very generic, can be trivial to think about, can have
+some prior art upon acceptance, and their cost of issuing and cost of
+patent litigation are beyond the reach of most small-time open-source
+developers.
+</para>
+
+<para>
+There have been many cases of patent litigation in the past by large companies,
+and there are some companies which consist entirely of lawyers who get hold
+of some patents and sue large companies for infringement, hoping to make some
+money. The English Wikipedia has
+<link xlink:href="http://en.wikipedia.org/wiki/Software_patent_debate">coverage of the software patent debate</link>
+</para>
+</section>
+
+<section xml:id="challenges__copyright_infringement_laws">
+
+<info>
+<title>Copyright Infringement Laws</title>
+</info>
+
+<para>
+( TODO : FILL IN)
+</para>
+
+</section>
+
+<section xml:id="challenges__licence_proliferation">
+
+<info>
+<title>Licence Proliferation</title>
+</info>
+
+<para>
+Many source code licences were approved as free software or open source
+by either the Free Software Foundation or the Open Source Initiative. The
+problem is that if one encounters a software package that is distributed
+under one of these licences, they will have to become aware of this licence's
+peculiar restrictions. Furthermore, it will be difficult to tell whether it 
+will be compatible with code under a different licence.
+</para>
+
+<para>
+As a result, there's the problem of
+<link xlink:href="http://en.wikipedia.org/wiki/License_proliferation">licence 
+proliferation</link>.
+</para>
+
+<section xml:id="challenges__reimplementing_due_to_incompatible_licences">
+
+<info>
+<title>Having to reimplement software due to incompatible licences</title>
+</info>
+
+<para>
+Some licences are known to be incompatible with one another: the GPL version
+2 with the GPL version 3 or LGPL version 3, the GPL version 2 with the Apache
+License, all versions of the GPL with the original BSD licence, and many
+other non-GPL-version-2 or non-GPL-version-3 compatible licences. As a result,
+often, a program that is open-source is still unusable, and will have to 
+be reimplemented.
+</para>
+
+<para>
+Furthermore, some projects or organisations may consider the software under
+Strong copyleft licences, or even weak copyleft licences to be too restrictive,
+and will instead opt to rewrite it. Here are some cases of open source code
+being made unusable due to problems with their licensing:
+</para>
+<orderedlist>
+
+<listitem>
+<para>
+For example, the Free Software Foundation now started the
+<link xlink:href="http://en.wikipedia.org/wiki/GNU_PDF">GNU PDF project</link> 
+that is licensed under the GPL version 3,
+because all the other Free software PDF projects are GPL version 2
+only. So because the GPL was used, the same problem need to
+be solved twice.
+</para>
+</listitem>
+
+<listitem>
+<para>
+Another case where it happened was <link xlink:href="http://www.osnews.com/story/7241">this story of an the Inkscape set operations patch</link>:
+</para>
+
+<blockquote>
+<para>
+
+Once before, someone had contributed a patch to add boolean
+operations, but that patch relied on a polygon clipping library
+provided under an incompatible license. There's little more
+frustrating than having a solution in hand, only to be
+hamstrung by legal problems. Even though it was an important
+feature for us, we regretfully postponed development of it into
+the distant future on our roadmap and proceeded with other
+work.
+
+</para>
+</blockquote>
+
+</listitem>
+
+<listitem>
+
+<para>
+Furthermore, the 
+<link xlink:href="http://en.wikipedia.org/wiki/OpenBSD">OpenBSD</link>
+project are now re-implementing a lot of software that is only 
+available as GPL or similar licences, under BSD-style licences,
+due to OpenBSD's more pedantic licensing policy. 
+</para>
+
+</listitem>
+
+<listitem>
+<para>
+The GNU Project had to start working on develop the LGPLed
+<link xlink:href="http://www.gnu.org/software/gnutls/">GnuTLS</link>
+because the licence of the also open-source OpenSSL library was not compatible 
+with its GPLv2 and GPLv3 licences.
+</para>
+</listitem>
+
+</orderedlist>
+
+<para>
+Reimplmenting source code from scratch due to licence incompatibility is
+unfortunate, because open source developers have much more productive tasks
+to accomplish in their precious time. As a result, several open-source
+developers have opinionated that one should use a simple, non-copyleft and
+GPL-compatible licence, such as the MIT/X11 licence for all original
+source code, to encourage its reusability.
+</para>
+
+<para>
+In an O’Reilly Media 
+<link xlink:href="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html">interview</link> with him, back in 2005, Eric Raymond (who wrote the “Cathedral 
+and the Bazaar” and spearheaded the Open Source Initiative organisation)
+has voiced the opinion that “We don't need the GPL anymore” and that people
+should avoid using that licence for new projects. Naturally, some people still
+disagree.
+</para>
+
+</section>
+
+</section>
+
+<section xml:id="challenges__copyright_assignment">
+
+<info>
+<title>Copyright Assignment</title>
+</info>
+
+<para>
+( TODO : FILL IN)
+</para>
+
+</section>
+
+<section xml:id="challenges__foss_becoming_unmaintained">
+
+<info>
+<title>Open Source Becoming Unmaintained</title>
+</info>
+
+<para>
+( TODO : FILL IN)
+</para>
+
+</section>
+
+<section xml:id="challenges__removing_sesame_seeds">
+
+<info>
+<title>The “Removing sesame seeds” syndrome</title>
+</info>
+
+<para>
+Deletionism.
+</para>
+
+</section>
+
+</section>
 <section xml:id="where_i_stand"><info><title>Where I Stand</title></info>
-
-
-
 
 <para>
 It is customary in documents of this kind to convey the personal opinion of

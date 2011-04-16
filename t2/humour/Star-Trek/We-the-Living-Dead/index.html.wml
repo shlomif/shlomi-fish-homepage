@@ -1,18 +1,16 @@
 #include '../template.wml'
 #include "utils.wml"
+#include "stories/stories-list.wml"
 
 <latemp_subject "Star Trek: &quot;We, the Living Dead&quot;" />
 
 <p>
-This is my own Star Trek episode to end all Star Trek episodes, (and, more
-generally - story to end all stories). In this episode we find out about
-the true nature of the Q Continuum, and meet some prominent ancient figures in 
-their life-after-death, and also some famous ancient figures who were always
-alive.
+A Star Trek episode to end all Star Trek episodes, (and, more
+generally - story to end all stories). <we_the_living_dead_abstract />
 </p>
 
 <p>
-This is my own invented episode of the "Star Trek: Deep Space Nine", but 
+This is my own invented episode of the <i>Star Trek: Deep Space Nine</i>, but 
 otherwise has some non-Star-Trek elements and in some cases actually mocks
 Star Trek.
 </p>
@@ -202,8 +200,8 @@ to Become a Hacker"</a>
 </li>
 
 <li>
-<a href="$(ROOT)/humour/human-hacking/">"The Human Hacking Field Guide"</a> -
-another story I wrote about hackerdom.
+<a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking 
+Field Guide</i></a> - another story I wrote about hackerdom.
 </li>
 
 </ul>

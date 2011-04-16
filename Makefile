@@ -414,8 +414,7 @@ $(T2_DEST)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/i
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
-$(T2_DEST)/humour/index.html: lib/stories/stories-list.wml
-$(T2_DEST)/humour/stories/index.html: lib/stories/stories-list.wml
+$(T2_DEST)/humour/index.html $(T2_DEST)/humour/stories/index.html $(T2_DEST)/humour/stories/Star-Trek/index.html $(T2_DEST)/humour/stories/Star-Trek/We-the-Living-Dead/index.html $(T2_DEST)/humour/TheEnemy/index.html: lib/stories/stories-list.wml
 
 $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/rev2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-rev2.xhtml
 

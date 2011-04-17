@@ -1230,7 +1230,19 @@ money. The English Wikipedia has
 </info>
 
 <para>
-( TODO : FILL IN)
+Some recent anti-copyright infringement laws such as the notorious
+<link xlink:href="http://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act">Digital 
+Millenium Copyright Act (or “DMCA” for short.)</link> or the more recent
+<link xlink:href="http://en.wikipedia.org/wiki/Anti-Counterfeiting_Trade_Agreement">ACTA</link>, can be used to prohibit the distribution of some open
+source software, such as those that can be used to break the
+copyright-protection measures of some content providers.
+</para>
+
+<para>
+The Electronic Frontier Foundation has published
+<link xlink:href="http://www.eff.org/wp/unintended-consequences-under-dmca">a
+document titled “Unintended Consequences: Twelve Years under the DMCA”</link>,
+which contains a list of “cases where the anti-circumvention provisions of the DMCA have been invoked not against pirates, but against consumers, scientists, and legitimate competitors”.
 </para>
 
 </section>
@@ -1364,7 +1376,21 @@ disagree.
 </info>
 
 <para>
-( TODO : FILL IN)
+Some projects done by companies, or other individuals, require 
+<link xlink:href="http://lwn.net/Articles/414051/">copyright assignment</link>
+on the part of their contributors, so the copyrights will remain under the
+same copyright owners, who may then be able to relicense their code under
+different terms. Many people have been reluctant to contribute to projects that
+require such copyright assingment, because they would like to keep their own
+copyrights. As a result, this undermines the
+<link xlink:href="#history_open_source">Bazaar
+model of development</link> and the atmosphere of community in general.
+</para>
+
+<para>
+Copyright assignment is a complete non-issue with projects licensed under
+permissive licences (a.k.a BSD-styled ones), whose licences allow the copyright
+owners, or every other party, to sublicense such a project.
 </para>
 
 </section>
@@ -1372,13 +1398,25 @@ disagree.
 <section xml:id="challenges__foss_becoming_unmaintained">
 
 <info>
-<title>Open Source Becoming Unmaintained</title>
+<title>Open Source Software Becoming Unmaintained</title>
 </info>
 
 <para>
-( TODO : FILL IN)
+There is a risk that open-source packages will become unmaintained, or spin-off
+a non-open-source version that will be more actively maintained. This is often
+seen as the risk of BSD-style licensed software, but it is not completely
+absent with GPLed one (see the story of 
+<link xlink:href="http://en.wikipedia.org/wiki/Nessus_%28software%29">the
+Nessus Vulnerability scanner</link>). Even if the licence is a copyleft one,
+then there's a risk of the originators of the programs stopping to update
+them, and no one stepping up to maintain them instead.
 </para>
 
+<para>
+This problem is not specific to the FOSS world, because proprietary software
+also has become under-maintained or discontinued, but naturally the problem
+still exists.
+</para>
 </section>
 
 <section xml:id="challenges__removing_sesame_seeds">
@@ -1388,12 +1426,49 @@ disagree.
 </info>
 
 <para>
-Deletionism.
+<emphasis role="italics">Joel on Software</emphasis>
+<link xlink:href="http://www.joelonsoftware.com/items/2007/09/11.html">describes a situation of eliminating sesame seeds</link>:
+</para>
+
+<blockquote>
+
+<para>
+In one of Gerald Weinberg’s books, probably 
+<link xlink:href="http://www.amazon.com/dp/0932633013">The Secrets of 
+Consulting</link>, there’s the apocryphal story of the giant multinational
+hamburger chain where some bright MBA figured out that eliminating just 
+<emphasis>three sesame seeds</emphasis>
+from a sesame-seed bun would be <emphasis>completely
+unnoticeable by anyone</emphasis> yet
+would save the company $126,000 per year. So they do it, and time passes, and
+another bushy-tailed MBA comes along, and does another study, and concludes
+that removing another five sesame seeds wouldn’t hurt either, and would save
+even more money, and so on and so forth, every year or two, the new management
+trainee looking for ways to save money proposes removing a sesame seed or two,
+until eventually, they’re shipping hamburger buns with exactly three sesame
+seeds artfully arranged in a triangle, and nobody buys their hamburgers any
+more.
+</para>
+</blockquote>
+
+<para>
+Such a situation may occur with open-source software or free content resources, 
+where people gradually eliminate features or contents, or introduce more bugs
+until the software is too unusable. A prime example for such case
+is the so-called <link xlink:href="http://en.wikipedia.org/wiki/Deletionism_and_inclusionism_in_Wikipedia">”Deletionism”</link> in Wikipedia and other
+collaborative online wikis, where people gradually remove pages or parts
+thereof that they do not like.
+</para>
+
+<para>
+Another bad aspect of that is driving away the contributors who donated these
+features, who feel demotivated by such an attitude.
 </para>
 
 </section>
 
 </section>
+
 <section xml:id="where_i_stand"><info><title>Where I Stand</title></info>
 
 <para>

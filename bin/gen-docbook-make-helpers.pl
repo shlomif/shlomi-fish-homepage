@@ -110,9 +110,9 @@ my @documents =
         custom_css => 1,
     },   
     {
-        id => "perfect-it-workplace-rev2", 
-        path =>  "philosophy/computers/software-management/perfect-workplace/rev2",
-        base => "perfect-it-workplace-rev2",
+        id => "perfect-it-workplace-v2", 
+        path =>  "philosophy/computers/software-management/perfect-workplace/v2",
+        base => "perfect-it-workplace-v2",
         db_ver => 5,
         work_in_progress => 1,
     },

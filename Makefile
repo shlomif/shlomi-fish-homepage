@@ -570,7 +570,7 @@ DOCBOOK5_XSL_FO_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/sh
 DOCBOOK5_DOCS = \
 	case-for-drug-legalisation-rev2 \
 	dealing-with-hypomanias \
-	perfect-it-workplace-rev2 \
+	perfect-it-workplace-v2 \
 	objectivism-and-open-source \
 	foss-and-other-beasts-v3 \
 	foss-licences-wars-rev2 \

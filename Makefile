@@ -567,15 +567,7 @@ DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheet
 DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml-onechunk.xsl
 DOCBOOK5_XSL_FO_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-fo.xsl
 
-DOCBOOK5_DOCS = \
-	case-for-drug-legalisation-rev2 \
-	dealing-with-hypomanias \
-	perfect-it-workplace-v2 \
-	objectivism-and-open-source \
-	foss-and-other-beasts-v3 \
-	foss-licences-wars-rev2 \
-	human-hacking-field-guide-v2 \
-	$(FICTION_DOCS)
+DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 # DOCBOOK4_BASE_DIR = lib/docbook
 # DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays

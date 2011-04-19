@@ -124,13 +124,6 @@ my @documents =
     },
 
     {
-        id => "The-Pope-Died-on-Sunday-hebrew", 
-        path => "humour/Pope/", 
-        base => "The-Pope-Died-on-Sunday-hebrew",
-        work_in_progress => 1,
-        db_ver => 5,
-    },
-    {
         id => "foss-licences-wars-rev2",
         path => "philosophy/computers/open-source/foss-licences-wars/rev2/",
         base => "foss-licences-wars-rev2",
@@ -152,6 +145,19 @@ my @documents =
         db_ver => 5,
     },
 );
+
+=begin foo
+    # Removed due to it already being in FICTION_DOCS in Makefile.
+    {
+        id => "The-Pope-Died-on-Sunday-hebrew", 
+        path => "humour/Pope/", 
+        base => "The-Pope-Died-on-Sunday-hebrew",
+        work_in_progress => 1,
+        db_ver => 5,
+    },
+=end foo
+
+=cut
 
 foreach my $d (@documents)
 {

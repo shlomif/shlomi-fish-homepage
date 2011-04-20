@@ -5,7 +5,7 @@
     xmlns:d="http://docbook.org/ns/docbook"
     version='1.0'
     >
-    <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml-1_1/chunk.xsl" />
+    <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml-1_1/chunk.xsl" />
     <xsl:import href="shlomif-essays-5-xhtml-common.xsl" />
     <xsl:param name="use.id.as.filename">1</xsl:param>
     <xsl:param name="html.stylesheet">style.css</xsl:param>

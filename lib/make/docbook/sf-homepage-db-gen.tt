@@ -54,7 +54,7 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 [%- SET v = d.work_in_progress ? "1" : "" %]
 [% "\t\t" %]--stringparam "docmake.output.work_in_progress=[% v %]" \
 [% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
-[% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml $< \
+[% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml-1_1 $< \
 [% "\t" %]&& touch $@
 
 [% END %]

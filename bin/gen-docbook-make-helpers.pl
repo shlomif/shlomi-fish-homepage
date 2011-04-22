@@ -144,6 +144,12 @@ my @documents =
         base =>  "foss-and-other-beasts-v3",
         db_ver => 5,
     },
+    {
+        id => "usability-of-perl-world-for-newcomers",
+        path => "philosophy/perl-newcomers/v1",
+        base => "usability-of-perl-world-for-newcomers",
+        db_ver => 5,
+    },
 );
 
 =begin foo

@@ -4,9 +4,13 @@
 
 #include '../template.wml'
 
+#include "pages/t2/philosophy/elephant-in-circus.wml"
+
 #include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "משל הפיל בקרקס" />
+
+<div class="main_text">
 
 <h2* id="toc">תוכן העניינים</h2*>
 
@@ -57,3 +61,5 @@
 איני יודע מי יצר במקור את הסיפור המקורי, שקיבלתי בדואר-אלקטרוני פעם (בעברית)
 אבל אשמח לקבל כל הארות או קצי-חוט למקור.
 </p>
+
+</div> ;;; End for main_text

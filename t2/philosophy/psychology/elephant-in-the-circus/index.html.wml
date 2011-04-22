@@ -1,8 +1,15 @@
+#include "multi-lang.wml"
+<set-var shlomif_lang="en" />
+
 #include '../template.wml'
+
+#include "pages/t2/philosophy/elephant-in-circus.wml"
 
 #include "xhtml/1.x/std/toc.wml"
 
 <latemp_subject "The Elephant in the Circus" />
+
+<div class="main_text">
 
 <h2* id="toc">Table of Contents</h2*>
 
@@ -60,3 +67,5 @@ page</a> and <a href="http://www.shlomifish.org/">to my homepage</a>.
 I don't know who originated the original story, which I received by E-mail
 once (in Hebrew), but I'd appreciate any insights or leads for its source.
 </p>
+
+</div> ;;; End for main_text

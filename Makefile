@@ -613,9 +613,11 @@ $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
 
+# DOCBOOK5_RELAXNG = http://www.docbook.org/xml/5.0/rng/docbook.rng
+DOCBOOK5_RELAXNG = rng/docbook.rng
 
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml
-	jing http://www.docbook.org/xml/5.0/rng/docbook.rng $<
+	jing $(DOCBOOK5_RELAXNG) $<
 	xsltproc --stringparam root.filename $@.temp.xml --path  $(DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH) $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) $<
 	xsltproc --output $@ ./bin/clean-up-docbook-xhtml-1.1.xslt $@.temp.xml.html
 	rm -f $@.temp.xml.html

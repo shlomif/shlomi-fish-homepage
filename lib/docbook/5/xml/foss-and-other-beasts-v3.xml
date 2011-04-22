@@ -24,8 +24,8 @@
     <!-- belum. ;-) -->
         This document is copyrighted by Shlomi Fish under the 
         <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
-        Commons Attribution License (CC-by) version 3.0</link> (or at 
-        your option a greater version).
+        Commons Attribution Unported Licence version 3.0</link> (or, at 
+        your option, any greater version).
     </para>
 </legalnotice>
 
@@ -215,7 +215,7 @@ movement. Several Bell Labs Engineers led by Ken Thompson developed UNIX
 for their own use, and out of legal restrictions AT&amp;T faced, decided to
 distribute it to academic organizations and other organizations free-of-charge
 with the source included. (that licence did not qualify as open-source but
-it was pretty close). UNIX eventually sported the C programming languages,
+it was pretty close). UNIX eventually sported the C programming language,
 which enabled writing code that would run on many platforms easier, and the
 UNIX sources included a C compiler that was itself written in C. Around the
 early 70's the only computers capable of running UNIX were main-frames and
@@ -351,7 +351,7 @@ core GNU system would always remain free as well.
 
 <para>
 Encouraged by Stallman's growing momentum behind the Free Software Foundation
-and the GNU project, Berkeley university changed the
+and the GNU project, Berkeley University changed the
 licence of the parts that they have originated, to a <link 
 xlink:href="http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29">a 
 free software licence which is now called "The Original 'BSD License'"</link>,
@@ -367,7 +367,10 @@ and use of the original BSD licence is no longer recommended by the FSF,
 although some FOSS packages are still distributed under it.
 </para>
 </footnote>
-To add to this effort, some UCB students decided to <link xlink:href="http://www.groklaw.net/article.php?story=20050623114426823">rewrite the remaining parts that were licensed to AT&amp;T under the BSD licence</link>. This task was
+To add to this effort, some UCB students decided to <link
+    xlink:href="http://www.groklaw.net/article.php?story=20050623114426823">rewrite
+    the remaining parts that were licensed to AT&amp;T under the BSD
+    licence</link>. This task was
 eventually completed that resulted in a BSD system that was entirely under the
 BSD licence.
 </para>
@@ -378,8 +381,9 @@ other companies, for claiming they actually own parts of the BSD operating
 system. This brought uncertainty into the BSD world, which would not be
 resolved until the 1990s, when the law-suit was decided mostly in favour
 of UCB. As a result of this uncertainty, some spin-offs of BSD (such as
-<link xlink:href="http://en.wikipedia.org/wiki/386BSD">386BSD</link> and
-derived operating systems such as FreeBSD or NetBSD.
+<link xlink:href="http://en.wikipedia.org/wiki/386BSD">386BSD</link>, and
+its derived operating systems such as FreeBSD or NetBSD status was in a
+legal limbo.
 </para>
 </section>
 
@@ -426,7 +430,7 @@ for determining which software is
 </para>
 
 <para>
-Note that they deviate from the free software definition (which was phrased
+Note that they deviate from the Free Software Definition (which was published
 later on) and include some licences that are not free. I.e: "Debian Free" is a 
 superset of free software according to the Stallman definition.
 </para>
@@ -444,9 +448,9 @@ Guidelines formed the basis for the open-source definition.
 <para>
 Eric Steven Raymond (now also known as ESR) wrote 
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">an essay titled
-"The Cathedral and the Bazaar"</link> and
+"The Cathedral and the Bazaar"</link>, and
 presented it to the Linux Kongress at 21 May 1997. This contrasted the Bazaar
-way of managing a software project and the old "Cathedral" way, that was
+way of managing a software project to the old "Cathedral" way, that was
 used by almost all non-free projects and (until that point at least) by most
 free ones.
 </para>
@@ -460,7 +464,7 @@ small except for some of the larger projects.
 </para>
 
 <para>
-The article is considered one of the seminal works on free software and was
+The article is considered one of the seminal works on free software, and was
 followed by other works in what is collectively known as the
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">"Cathedral
     and the Bazaar" (or CatB for short) series</link>. It has made
@@ -484,7 +488,9 @@ acceptance in the corporate world.
 </para>
 
 <para>
-During the following week, Eric Raymond, and Bruce Perens launched the <link xlink:href="http://www.opensource.org">opensource.org</link> web-site, and formed
+During the following week, Eric Raymond, and Bruce Perens launched the <link
+xlink:href="http://www.opensource.org">opensource.org</link> web-site, and
+formed
 the Open source definition. This was based on the Debian Free Software
 Guidelines.
 </para>
@@ -555,8 +561,8 @@ solution for the desktop.
 </para>
 
 <para>
-Apple's MacOS X was released and is based on Darwin, which is an
-open-source BSD-derived system. MacOS X can run UNIX applications natively,
+Apple's Mac OS X was released and is based on Darwin, which is an
+open-source BSD-derived system. Mac OS X can run UNIX applications natively,
 and supports the X-Windows system, which is the de-facto GUI framework for
 UNIXes (including Linux). It is therefore a popular UNIX choice for
 PowerMac computers (and more recently for Macintosh computer based on 
@@ -605,7 +611,7 @@ and usable office productivity software for Windows, Linux and other
 platforms, <link xlink:href="http://www.gimp.org/">the GIMP (GNU Image Manipulation
 Program)</link>, a sophisticated raster image editing program, and
 <link xlink:href="http://www.inkscape.org/">Inkscape</link>, a vector editing
-program, many open-source music and media players such as <link xlink:href="http://www.videolan.org/vlc/">VLC</link> and also most Peer-to-Peer networking 
+program, many open-source music and media players such as <link xlink:href="http://www.videolan.org/vlc/">VLC</link>, and also most Peer-to-Peer networking 
 clients. These have probably seen less popularity than Firefox, but are still 
 providing cheap, open, modifiable alternatives to traditional binary-only
 software.
@@ -622,7 +628,7 @@ indication for its general mainstream acceptance and usefulness.
 <para>
 Another important recent trend was <emphasis role="bold">the rise 
 of open content</emphasis>. 
-<link xlink:href="http://fc-solve.berlios.de/oss-fs/docbook/">The 
+<link xlink:href="http://fc-solve.berlios.de/oss-fs/docbook/">The
 first edition of this article</link>, included 
 <link xlink:href="http://fc-solve.berlios.de/oss-fs/docbook/oss-fs/x181.html">a 
 small section about "open content"</link>, where I concluded by saying that
@@ -716,7 +722,7 @@ recurring in many places.
 <section xml:id="difference_stallmanism"><info><title>Stallmanism</title></info>
 
 <para>
-Proprietary software is legal but illegitimate and immoral. Manufacturing
+Proprietary software is legal, but illegitimate and immoral. Manufacturing
 and using proprietary software causes a lot of unhappy social and psychological
 side-effects. The knowledge that a software cannot be shared causes people
 to become reluctant to sharing, which is a natural and good part of living
@@ -759,7 +765,7 @@ This approach basically says this:
 </para>
 
 <para>
-"I like free software because I can get a lot of useful software without
+“I like free software because I can get a lot of useful software without
 charge. I may like contributing to free software because it helps other
 people, makes me happy and may indirectly benefit me technically or
 financially. But proprietary software is perfectly valid as well, if it's
@@ -767,7 +773,7 @@ done right, and I may choose to use it or contribute to it.
 </para>
 
 <para>
-In short: write code, use whatever tool you wish, and be happy."
+In short: write code, use whatever tool you wish, and be happy.”
 </para>
 
 <para>
@@ -798,8 +804,8 @@ its philosophy.
 </para>
 
 <para>
-The terms themselves are used interchangeably by many people. "Open
-source" has become more common, partly because free software can mean
+The terms themselves are used interchangeably by many people. “Open
+source” has become more common, partly because free software can mean
 software that is given free of charge. (the standard "free as in free
 speech" or "free as in free beer" distinction). Moreover, both the Free
 Software Foundation, and the people associated with the Open Source
@@ -812,7 +818,7 @@ not belong to either camp.
 Like I said earlier, the fact that some licences would qualify as
 open-source and not as free software is usually a negligible fact. While
 some esoteric software has been released under custom licences that are
-open-source while not free software, most of the important software
+open-source while not being free software, most of the important software
 applications out there (and most applications generally started by individuals) is free as
 well.
 <footnote xml:id="custom_licence">
@@ -902,7 +908,7 @@ into a proprietary software product by a third party, and often have been.
 <section xml:id="criteria_sourceware"><info><title>Open Source vs. Sourceware</title></info>
 
 <para>
-Open source does not mean any software that is accompanied by its source,
+Not any software application that is accompanied by its source is open source,
 albeit many people who are new to the term would be tempted to think that.
 It is possible to write non-open-source software while accompanying it with the
 source.
@@ -923,11 +929,11 @@ Classes (MFC), that are accompanied with their source.
 
 <listitem>
 <para>
-2. <link xlink:href="http://www.trilon.com/xv/">xv</link> - a very popular 
+2. <link xlink:href="http://www.trilon.com/xv/">xv</link> - a popular 
 shareware image viewer and manipulator for X-Windows that has been 
-distributed with its source code. Note: it is no longer actively maintained,
-and its developer can no longer be actively reached, and so its use is no
-longer recommended.
+distributed with its source code. <emphasis role="bold">Note:</emphasis> it is 
+no longer actively maintained, and its developer can no longer be actively 
+reached, and so its use is no longer recommended.
 </para>
 </listitem>
 
@@ -964,8 +970,8 @@ it must be also free of some other restrictions.
 In a query given by an Israeli Member of the parliament in the past, to an 
 Israeli Defense Force representative about
 whether all the software used by the Israeli military is open-source, the 
-latter interpreted open-source as software that the IDF has access to its 
-source. This is an even more radical deviation from the correct meaning.
+latter interpreted open-source software as software that the IDF has access to 
+its source. This is an even more radical deviation from the correct meaning.
 </para>
 </footnote>
 
@@ -1085,7 +1091,7 @@ that powers web-sites and was not released to the public, etc.
 
 <para>
 The majority of programmers out there are employed for developing such
-software, whose codebase dwarfs that of the marketplace software that
+code, whose codebase dwarfs that of the marketplace software that
 includes all commercial and open-source software put together.
 </para>
 
@@ -1159,7 +1165,7 @@ Myth #2 has a grain of truth in it. However, some open source packages
 nevertheless had very poor security records out of poor programming
 practices. Some closed-source offerings, on the other hand, have a very
 good security record. In most packages, security bugs occurred due to sloppy
-programming practice or lack of auditing of the code. They can be mostly
+programming practice, or lack of auditing of the code. They can be mostly
 avoided whether or not the package's source code is available to the
 public.
 </para>
@@ -1477,9 +1483,9 @@ the author in this case. This document will not be an exception.
 </para>
 
 <para>
-I am a user, developer and advocate of free software. However, I do not
-think that proprietary software is inherently immoral or destructive. I
-know some vendors of such software abuse their customers. However, I
+I am a user, developer and advocate of free and open-source software. However,
+I do not think that proprietary software is inherently immoral or destructive.
+I know some vendors of such software abuse their customers. However, I
 generally see them as suppliers of goods, which took a lot of time to
 develop, and which they perfectly naturally wish to sell for money.
 </para>
@@ -1559,13 +1565,14 @@ source movement is pretty much one and the same. I also like both terms.
 I don't use GNU/Linux despite the fact that a large and integral part of it
 stems from the GNU project, for marketing reasons. GNU/Linux is longer than
 Linux and does not add more information, just a lot of pseudo-ideology. Add
-to the fact that many people will pronounce it "jee-en-you-slash-Linux"
+to the fact that many people will pronounce it "djee-enn-you-slash-Linux"
 when they first see it, and you'll get something that makes a very bad
 marketing name. Here's a nice quote from Linus Torvalds on why "Linux" is
 superior to "386BSD" (a 90's BSD clone that was free software as well):
 </para>
 
 <blockquote>
+<attribution><link xlink:href="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus Torvalds</link></attribution>
 <para>
 <screen>
 &gt; &gt; Other than the fact Linux has a cool name, could someone explain why I
@@ -1587,20 +1594,23 @@ Well, GNU/Linux is a step in the wrong direction in this regard.
 </para>
 
 <para>
-As a developer I try to use Public Domain licences (like a pure PD, or
-variations of the BSD licence or the MIT/X11 licence) for software I
-produce. I don't mind people making a derived code proprietary much less
+As a developer, I try to use permissive licences (usually the MIT/X11 licence),
+for software packages I develop and distribute. I don't mind people making a
+derived code proprietary much less
 integrating it inside proprietary products. If the original code, which I
 modify or derive from, is distributed under a different licence, I respect
 the original licence, whatever it may be. 
 </para>
 
 <para>
-I agree that some systems are critical enough to justify GPLing or LGPLing
-them. Even so, there are many BSD, MIT X11, or otherwise public domain
-projects out there, and they don't seem to suffer from it. Assuming that
-the GPL is the perfect licence for everything is a relatively immature
-notion, in my opinion.
+I used to think that some systems were critical enough to justify GPLing or 
+LGPLing them. My opinion of all that changed after the entire mess caused
+by the enaction of the GPL version 3 and the LGPL version 3, which are
+mutually incompatible with the previously released version 2 of the GPL.
+I now believe that even if we distaste proprietary software, then copyleft 
+licences such as the GPL or the LGPL are not worth the trouble and cause
+more harm than good. There is a lot of open-source code out there under
+permissive licences, and they don't seem to suffer a lot from it. 
 </para>
 
 </section>
@@ -1781,11 +1791,10 @@ Mention some other projects other than Linux and other operating systems. (?)
 
 <section xml:id="copyright"><info><title>Copyright</title></info>
 
-
-
 <para>
-This document is copyrighted by Shlomi Fish under <link xlink:href="http://creativecommons.org/licenses/by/2.5/">the Creative Commons
-Attribution licence version 2.5</link> or at your option a greater version. 
+This document is copyrighted by Shlomi Fish under <link xlink:href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
+Attribution Unported Licence version 3.0</link>, or, at your option, any
+greater version of this licence. 
 </para>
 
 </section>

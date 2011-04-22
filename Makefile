@@ -399,12 +399,19 @@ $(T2_DEST)/open-source/interviews/sussman.html: $(SCREENPLAY_XML_RENDERED_HTML_D
 # Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are 
 # modified.
 
+$(T2_DEST)/philosophy/computers/high-quality-software/rev2/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality-rev2.html
+$(T2_DEST)/philosophy/computers/high-quality-software/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality.html
+
 $(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DOCBOOK4_RENDERED_DIR)/introductory-language.html
+
+$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml : $(DOCBOOK4_RENDERED_DIR)/perfect-it-workplace.html
 
 # Rebuild the embedded docbook5 pages in the $(T2_DEST) after they are 
 # modified.
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
+
+$(T2_DEST)/philosophy/case-for-file-swapping/revision-3/index.html: $(DOCBOOK4_RENDERED_DIR)/case-for-file-swapping-rev3.html
 
 $(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-rev2.xhtml
 
@@ -414,12 +421,15 @@ $(T2_DEST)/philosophy/obj-oss/rev2/index.html: $(DOCBOOK5_RENDERED_DIR)/objectiv
 
 $(T2_DEST)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/index.html : $(DOCBOOK4_RENDERED_DIR)/Spark-Pre-Birth-of-a-Modern-Lisp.html
 
+$(T2_DEST)/philosophy/computers/software-management/end-of-it-slavery/index.html : $(DOCBOOK4_RENDERED_DIR)/end-of-it-slavery.html
+
+
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
 $(T2_DEST)/humour/index.html $(T2_DEST)/humour/stories/index.html $(T2_DEST)/humour/stories/Star-Trek/index.html $(T2_DEST)/humour/stories/Star-Trek/We-the-Living-Dead/index.html $(T2_DEST)/humour/TheEnemy/index.html: lib/stories/stories-list.wml
 
-$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/rev2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-rev2.xhtml
+$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/v2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-v2.xhtml
 
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-Part-1.txt
 	cp -f $< $@
@@ -433,9 +443,9 @@ $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae
 $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: lib/docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml
+$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
 
-$(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: lib/docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml
+$(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml
 
 %.show:
 	@echo "$* = $($*)"

@@ -130,6 +130,13 @@ my $essays_tree_contents =
                             text => "Perl &amp; Newcomers",
                             url => "philosophy/perl-newcomers/",
                             title => "“Usability” of the Perl Online World for Newcomers",
+                            subs =>
+                            [
+                                {
+                                    text => "Version 1",
+                                    url => "philosophy/perl-newcomers/v1/",
+                                },
+                            ],
                         },
                         {
                             text => "The Joy of Perl",

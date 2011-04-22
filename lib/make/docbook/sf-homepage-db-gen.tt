@@ -10,7 +10,7 @@ QUADPRES_EXE = quadp
 [% xslt_ss = '$(XHTML_XSLT_SS)' %]
 [% END %]
 [% docs = ((db_ver == 4) ? docs_4 : docs_5) %]
-[% db_ver_path = (db_ver == 4 ? "" : (db_ver _ "/")) %]
+[% db_ver_path = ( db_ver _ "/" ) %]
 [% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
 
 [% FOREACH d = docs %]

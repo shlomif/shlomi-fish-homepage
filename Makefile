@@ -20,7 +20,6 @@ include lib/make/gmsl/gmsl
 
 include include.mak
 include rules.mak
-include deps.mak
 
 make-dirs: $(T2_DIRS_DEST) 
 
@@ -232,7 +231,7 @@ DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_I
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
-DOCBOOK4_BASE_DIR = lib/docbook
+DOCBOOK4_BASE_DIR = lib/docbook/4
 DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
 DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
 
@@ -523,7 +522,7 @@ mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1)
 $(MOJOLICIOUS_LECTURE_SLIDE1): t2/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
 	asciidoc -o $@ $<
 
-lib/docbook/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
+$(DOCBOOK4_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoc --backend=docbook -o $@ $<
 
 t2/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
@@ -579,7 +578,7 @@ DOCBOOK5_XSL_FO_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/sh
 
 DOCBOOK5_DOCS += $(FICTION_DOCS)
 
-# DOCBOOK4_BASE_DIR = lib/docbook
+# DOCBOOK4_BASE_DIR = lib/docbook/4
 # DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
 # DOCBOOK4_SOURCES_DIR = $(DOCBOOK4_BASE_DIR)/xml
 # DOCBOOK4_FO_DIR = $(DOCBOOK4_BASE_DIR)/fo

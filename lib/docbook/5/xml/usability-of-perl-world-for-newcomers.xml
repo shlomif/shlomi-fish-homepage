@@ -1,25 +1,35 @@
 <!-- Converted by db4-upgrade version 1.0 -->
 
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
     
     <info>
         <title>"Usability" of the Perl Online World for Newcomers</title>
-         
+
         <authorgroup>
-            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
+            <author>
+                <personname>
+                    <firstname>Shlomi</firstname>
+                    <surname>Fish</surname>
+                </personname>
+                <affiliation>
                     <address>
-                        <email>shlomif@vipe.technion.ac.il</email>
+                        <email>shlomif@shlomifish.org</email>
+                        <uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish's Homepage</uri>
                     </address>
-                </affiliation></author>
+                </affiliation>
+            </author>
         </authorgroup>
         <copyright>
             <year>2003</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-        <legalnotice>
+        <legalnotice xml:id="main_legal_notice">
             <para>
                 This document is copyrighted by Shlomi Fish under the terms
-                of the Open Publication License version 2.0 or greater.
+                of the Open Publication License version 2.0 or greater, or 
+                alternatively under the 
+                <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution Unported License version 3.0</link> (or at your option any greater version of it).
             </para>
         </legalnotice>
         <revhistory>
@@ -56,7 +66,7 @@
     </info>
     <section xml:id="me_as_a_perl_newbie">
         <info><title>Me as a Perl Newbie</title></info>
-        
+
         <para>
             "Shlomi, it takes 10 years to learn UNIX. I want you to learn it 
             in a month". My future supervisor in a web publishing house I 
@@ -152,7 +162,7 @@
         <para>
             So Mel goes on looking for this strange and perfect language 
             called "perl" (without the 'a'). Where does she go first?
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.google.com/">Google</link>? Most probably. 
+            <link xlink:href="http://www.google.com/">Google</link>? Most probably. 
             What does she discover? www.perl.com is the first hit. An 
             overcrowded site with a lot of O'Reillyisms with several articles
             that are way over her head. Perl Mongers is the second hit. She
@@ -168,7 +178,7 @@
         <para>
             She refines her query: "learn perl", "begin perl", "perl newbie"
             or "perl beginners". The concentrated site for perl beginners is
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://learn.perl.org/">learn.perl.org</link>. It 
+            <link xlink:href="http://learn.perl.org/">learn.perl.org</link>. It 
             contains some reviews of books (which Mel may not have time to
             read), a free online book (again, same issue) and no links to 
             tutorials whatsoever. IMHO, the site's visual side is also very 
@@ -205,7 +215,7 @@
             Perl, Python and everything else. Some Killer apps of this kind
             include: Slash (the back-end of Slashdot), SourceForge/GForge,
             Bugzilla, Zope, PySol, The Mandrake Linux System Tools and
-            Installer, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link> (;-)), SpamAssassin, and many other things
+            Installer, <link xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link> (;-)), SpamAssassin, and many other things
             I don't recall or forgot about momentarily. Furthermore, a lot of
             code of such languages is used internally and not exposed to the
             world, and plays a large role behind the scenes.
@@ -226,7 +236,7 @@
             with Perl than with the others. No, it's not because Perl is a
             harder <emphasis>language</emphasis> than the others. I don't think
             it is. It's because the resources available online are inadequate
-            or may scare her. And as <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.com/pub/a/2001/05/29/tides.html">Casey
+            or may scare her. And as <link xlink:href="http://www.perl.com/pub/a/2001/05/29/tides.html">Casey
                 West noted in a previous attempt at correcting the
                 situation</link>, the Perl community is relatively hostile to
             newbies and does not put up with them as much as those that are
@@ -250,7 +260,7 @@
             </para>
             <para>
                 I also took some proactive effort in the direction. I wrote the
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/">Perl
+                <link xlink:href="http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/">Perl
                     for Perl Newbies</link> lecture series for the Haifa Linux
                 Club. I wrote them
                 with absolute beginners in mind, and decided to teach a very
@@ -260,11 +270,11 @@
             </para>
             <para>
                 Lately, out of frustration with the learn.perl.org site, I started
-                working on <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perl-begin.berlios.de/">my 
+                working on <link xlink:href="http://perl-begin.berlios.de/">my 
                     own version of a Perl beginners site</link>. Now here is where
                 things went a bit wrong in my opinion. However, I don't want
                 to defame anyone so I'll summarize. Both the 
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://use.perl.org/">use.perl.org</link>'s editor 
+                <link xlink:href="http://use.perl.org/">use.perl.org</link>'s editor 
                 and a very prominent Perl figure that stumbled upon the site,
                 believed that I should merge my work with learn.perl.org. At
                 first, I thought it was a good idea, but then discover I 
@@ -356,7 +366,7 @@
                 sure it has good online documentation. They don't have to do 
                 it themselves, as a simple call for action by a very prominent
                 Perl figure will do. (in accordance to Eric Raymond's 
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">"The Cathedral and the Bazaar"</link>)
+                <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">"The Cathedral and the Bazaar"</link>)
             </para>
             <para>
                 If we take a look at Python or PHP for instance, then they 
@@ -407,7 +417,7 @@
                 Then there are the mailing lists. I think (but am not sure) 
                 that most Perl Mongers mailing lists will gladly accept 
                 questions from newbies and answer them kindly. I know this is
-                the case for <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.org.il/">Israel.PM</link>. 
+                the case for <link xlink:href="http://www.perl.org.il/">Israel.PM</link>. 
                 As a general rule
                 Perl Mongers should make sure that the newbies mailing list 
                 would be the first list they see on the site, or try to 
@@ -499,7 +509,7 @@
             
             <para>
                 Hubris is one of the three great virtues of the programmer
-                according to Larry Wall. But he <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.oreilly.com/catalog/opensources/book/larry.html">also noted in "Open Sources"</link>
+                according to Larry Wall. But he <link xlink:href="http://www.oreilly.com/catalog/opensources/book/larry.html">also noted in "Open Sources"</link>
                 that humility was a good quality as well. Don't get me wrong
                 some projects have much more hubris than Perl: Python and Linux
                 come to mind. I'm not saying all Pythoneers or Linuxers are
@@ -571,7 +581,7 @@
         </para>
         <para>
             We all know 80% of the users use 20% of the features of a given
-            program. However, as <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000020.html">Joel
+            program. However, as <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000020.html">Joel
                 Spolsky identified</link> they often use a differnet set of
             features. Perl's feature-set is huge, but you can survive with
             knowing maybe 10% or even less of it. Moreover, you can gradually
@@ -608,7 +618,7 @@
             secretary, to sort all the files into several directories a week
             from now, which can otherwise be done with a 10-liner Perl script.
             This will leave Robert enough time to answer phone calls and play
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link> 
+            <link xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link> 
             (which is written in Perl) in between: things that Perl or any 
             other software cannot do for him.
         </para>
@@ -758,11 +768,11 @@
                         Rik van Riel of the Linux Kernel fame, told me and some
                         IRC folks about a system which was written for internal
                         use by Connectiva (his former workplace), that uses a
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://dmoz.org/">DMoz</link>-like
+                        <link xlink:href="http://dmoz.org/">DMoz</link>-like
                         category tree, where Slashdot-like comments are added.
                         This sound like a nice integration of a few ideas. The
                         Connectiva code is written in PHP and is not ready for
-                        release.  Nevertheless, I think tweaking <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.slashcode.com/">Slash</link> to do
+                        release.  Nevertheless, I think tweaking <link xlink:href="http://www.slashcode.com/">Slash</link> to do
                         just that should not be too hard, and may prove as a
                         useful alternative or a complement to Wikis.
                     </para>
@@ -828,7 +838,7 @@
                         software and open source movement. As such, he accepts
                         the fact that he has become a saint and does not charge
                         money for that. As he once told me and some other
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.iglu.org.il/">IGLU</link>'ers:
+                        <link xlink:href="http://www.iglu.org.il/">IGLU</link>'ers:
                         "Advocacy is everything I do".
                     </para>
                     <para>
@@ -866,9 +876,9 @@
                         oreillynetism. Since it is the first hit on Google, it
                         should be a decent page where newbies can easily find
                         their way in. Something like 
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.python.org/">the Python 
+                        <link xlink:href="http://www.python.org/">the Python 
                             Homepage</link> or 
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.php.net/">PHP's</link>. Plain,
+                        <link xlink:href="http://www.php.net/">PHP's</link>. Plain,
                         simple and effective. (note that I don't have a problem
                         with the O'Reilly Net format as a general rule, it's 
                         just not suitable for newbies who may have never heard

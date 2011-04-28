@@ -219,7 +219,7 @@ SCREENPLAY_DOCS = \
 	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	star-trek--we-the-living-dead \
-	selena-mandrake-the-vampire-slayer \
+	selena-mandrake-the-slayer \
 	sussman-interview \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2

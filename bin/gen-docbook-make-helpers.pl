@@ -150,6 +150,14 @@ my @documents =
         base => "usability-of-perl-world-for-newcomers",
         db_ver => 5,
     },
+    {
+        id => "The-Enemy-English-v7",
+        path => "humour/TheEnemy",
+        base => "The-Enemy-English-v7",
+        custom_css => 1,
+        del_revhistory => 1,
+        db_ver => 5,
+    },
 );
 
 =begin foo

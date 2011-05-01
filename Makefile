@@ -226,6 +226,7 @@ SCREENPLAY_DOCS = \
 
 FICTION_DOCS = \
 	The-Enemy-Hebrew-rev6 \
+	The-Enemy-Hebrew-v7 \
 	The-Pope-Died-on-Sunday-hebrew
 
 DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_INDIVIDUAL_XHTMLS))
@@ -448,6 +449,10 @@ $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DI
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
 
 $(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml
+
+$(T2_DEST)/humour/TheEnemy/The-Enemy-Hebrew-v7.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-v7.xhtml
+
+$(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-English-v7.xhtml
 
 %.show:
 	@echo "$* = $($*)"

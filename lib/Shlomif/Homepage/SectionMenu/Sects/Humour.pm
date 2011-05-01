@@ -34,12 +34,12 @@ my $humour_tree_contents =
                     [
                         {
                             text => "Text in Hebrew",
-                            url => "humour/TheEnemy/The-Enemy-rev6.html",
+                            url => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
                             title => "Text of “The Enemy” In Hebrew",
                         },
                         {
                             text => "Text in English",
-                            url => "humour/TheEnemy/The-Enemy-English-rev6.html",
+                            url => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
                             title => "Text of “The Enemy” In English",
                         },
                     ],

@@ -114,6 +114,18 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "Selena Mandrake - The Slayer",
+                    url => "humour/Selena-Mandrake/",
+                    subs =>
+                    [
+                        {
+                            text => "Ongoing Text",
+                            url => "humour/Selena-Mandrake/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
                     text => "The Blue Rabbit’s Log",
                     url => "humour/Blue-Rabbit-Log/",
                     title => "Movies that Parody Role-Playing Games",

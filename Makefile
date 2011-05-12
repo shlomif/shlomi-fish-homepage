@@ -225,9 +225,11 @@ SCREENPLAY_DOCS = \
 	TOW_Fountainhead_2
 
 FICTION_DOCS = \
+	human-hacking-field-guide-hebrew-v2 \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7 \
 	The-Pope-Died-on-Sunday-hebrew
+	
 
 DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_INDIVIDUAL_XHTMLS))
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)

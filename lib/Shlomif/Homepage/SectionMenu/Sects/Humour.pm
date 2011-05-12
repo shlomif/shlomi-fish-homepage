@@ -99,6 +99,10 @@ my $humour_tree_contents =
                             text => "Conclusions and Reviews",
                             url => "humour/human-hacking/conclusions/",
                         },
+                        {
+                            text => "Hebrew Translation",
+                            url => "humour/human-hacking/hebrew-v2.html",
+                        },
                     ],
                 },
                 {

@@ -229,7 +229,6 @@ FICTION_DOCS = \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7 \
 	The-Pope-Died-on-Sunday-hebrew
-	
 
 DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS = $(patsubst %,%/style.css,$(DOCBOOK4_INDIVIDUAL_XHTMLS))
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
@@ -311,23 +310,10 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selena-Mandrake/selena-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
-FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt
+HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
+HHFG_HEB_V2_DEST = $(T2_DEST)/humour/human-hacking/$(HHFG_HEB_V2_TXT)
 
-docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
-	install_docbook4_pdfs install_docbook4_rtfs \
-	install_docbook5_pdfs install_docbook5_rtfs 
-
-docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
-
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS)
-
-docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
-	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images docbook5_targets install_docbook5_xmls
-
-docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
-
-docbook5_targets: $(DOCBOOK5_TARGETS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS)
-
+FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST)
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml 
 	perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 		-o $@ $<
@@ -386,6 +372,9 @@ $(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanit
 	cp -f $< $@
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
+	cp -f $< $@
+
+$(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/$(HHFG_HEB_V2_TXT)
 	cp -f $< $@
 
 # Rebuild the embedded screenplays pages in the $(T2_DEST) after they are
@@ -453,6 +442,8 @@ $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DI
 	cp -f $< $@
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
+
+$(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-hebrew-v2.xhtml
 
 $(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml
 
@@ -768,3 +759,20 @@ $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DE
 #
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
+
+docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
+	install_docbook4_pdfs install_docbook4_rtfs \
+	install_docbook5_pdfs install_docbook5_rtfs 
+
+docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
+
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS)
+
+docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
+	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images docbook5_targets install_docbook5_xmls
+
+docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
+
+docbook5_targets: $(DOCBOOK5_TARGETS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS)
+
+

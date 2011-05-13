@@ -16,7 +16,7 @@ __PACKAGE__->mk_accessors(qw(
 sub _init
 {
     my $self = shift;
-    my $feed = XML::Feed->parse($ENV{'SF_HSITE_FEED_FILE'} || URI->new("http://www.livejournal.com/community/shlomif_hsite/data/atom"))
+    my $feed = XML::Feed->parse($ENV{'SF_HSITE_FEED_FILE'} || URI->new("http://shlomif-hsite.livejournal.com/data/atom"))
         or die XML::Feed->errstr;
     $self->feed($feed);
 

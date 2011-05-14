@@ -727,7 +727,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | perl -pe 's!^\+!!' > $@
 
-GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css
+GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css
 
 T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
 VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))

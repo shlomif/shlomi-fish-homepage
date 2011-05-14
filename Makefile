@@ -742,11 +742,22 @@ css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 SASS_STYLE = compressed
 SASS_CMD = sass --style $(SASS_STYLE)
 
-$(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DEPS)
+$(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass 
 	$(SASS_CMD) $< $@
 
-$(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass $(CSS_TARGETS_COMMON_DEPS)
+$(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass
 	$(SASS_CMD) $< $@
+
+FORT_SASS_DEPS = lib/sass/fortunes.sass
+COMMON_SASS_DEPS = lib/sass/common-body.sass
+
+$(T2_DEST)/style.css $(T2_DEST)/style-2008.css : lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS)
+
+$(T2_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
+
+$(T2_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
+
+$(T2_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
 
 # $(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<

@@ -16,6 +16,14 @@ web-browsers, and for conversions to different formats, including PDF.
 </p>
 
 <p>
+Also provided is <b>Screenplay-Text</b> and <b>Screenplay-XML</b> which are
+used for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays 
+(or scripts)</a>, and can be translated to XHTML or
+to <a href="http://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI-XML (Text
+Encoding Initivate)</a>
+</p>
+
+<p>
 <get-var cpan_dist /> is part of the <a href="../">Web-CPAN XML-Grammar
 project</a> that provides several specialised processors for XML grammars
 for various tasks.
@@ -54,7 +62,16 @@ License</a>, a permissive, public-domain-like licence.
 
 <h2 id="examples">Examples</h2>
 
+<h3 id="fiction_examples">Fiction-Text Examples</h3>
+
 <ul>
+
+<li>
+<p>
+<b>Distributed Examples</b> - there are some short examples under 
+<tt>t/fiction/data/</tt> in the distribution (mostly in English).
+</p>
+</li>
 
 <li>
 <p>
@@ -73,11 +90,73 @@ is written in Fiction-Text.
 
 <li>
 <p>
-<b>Distributed Examples</b> - there are some short examples under 
-<tt>t/data/</tt> in the distribution (mostly in English).
+<a href="http://www.shlomifish.org/humour/human-hacking/"><i>The 
+Human Hacking Field Guide</i></a> - the Hebrew translation was written using
+Fiction-Text.
 </p>
 </li>
 
+</ul>
+
+<h3 id="screenplay_examples">Screenplay-Text Examples</h3>
+
+<ul>
+
+<li>
+<p>
+Some short and silly examples can be found in the <tt>t/screenplay/data</tt>
+directory in the distribution.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/TOWTF/">The One with the 
+Fountainhead</a> - original text, but fan fiction of the T.V. show 
+"Friends".
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/humanity/">Humanity - The 
+Movie</a> - all original text and concept. Under the CC-by-sa license.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+Trek - "We The Living Dead"</a> - all original text, but fan fiction of
+Star Trek.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/open-source/interviews/">Interviews with
+Open Source People</a> - several interviews whose original hacky 
+like-XML-but-not-quite source was converted to ScreenplayText and then
+rendered into XML and XHTML.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">"The Hitchhiker's Guide to Star Trek - The Next Generation"</a> - David T. Lu's and Mickey McCarter's old parodical screenplay crosses <i>The 
+Hitchhiker's Guide to the Galaxy</i> and <i>Star Trek: The Next Generation</i>.
+It was converted into Screenplay-Text format using a crude perl-5.10.x script
+and from that translated into XHTML.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/Selena-Mandrake/"><i>Selena Mandrake 
+- The Slayer</i></a> - screenplay for a film in English. Original text, but
+fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture.
+</p>
+</li>
 </ul>
 
 <h2 id="news">News</h2>

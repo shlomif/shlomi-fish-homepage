@@ -1,8 +1,13 @@
 #include '../template.wml'
+#include "vim_include_code.wml"
 
 <set-var cpan_dist="XML-Grammar-Fiction" /> 
 
 <latemp_subject "<get-var cpan_dist /> - Markup Languages for Writing Prose" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
 
 <p>
 <get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight 
@@ -237,6 +242,24 @@ Package: XML-Grammar-Fiction"</a>
 </li>
 
 </ul>
+
+<h2 id="demos">Demos</h2>
+
+<h3 id="demo-screenplay1">Screenplay Demo 1</h3>
+
+<p>
+If we have this sample screenplay:
+</p>
+
+<shlomif_code_block>
+<shlomif_include_colorized_file filename="../lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt" />
+</shlomif_code_block>
+
+<p>
+Then after converting it to XML and then to XHTML we get this:
+</p>
+
+#include "screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html"
 
 <h2 id="similar">Similar Projects</h2>
 

@@ -1,0 +1,20 @@
+<:{
+require VimIface;
+}:>
+<define-tag shlomif_code_block endtag="required" whitespace="delete">
+<div class="code_block">
+<pre>
+%body
+</pre>
+</div>
+</define-tag>
+
+<define-tag shlomif_include_colorized_file whitespace="delete">
+<preserve filename />
+<set-var %attributes />
+<:{
+print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+}:>
+<restore filename />
+</define-tag>
+

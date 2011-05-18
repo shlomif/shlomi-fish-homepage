@@ -522,7 +522,7 @@ $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@
 
 # COMMON_CSS_TARGET_DEPS = lib/common-style.css.ttml lib/newsitem.css.ttml lib/smoked-wp-theme.css.ttml lib/lang_switch.css.ttml lib/fortunes.css.ttml lib/fortunes_show.css.ttml lib/screenplay-xml/css/screenplay.css.ttml
-COMMON_CSS_TARGET_DEPS = lib/sass/common-style.sass lib/sass/newsitem.sass lib/sass/smoked-wp-theme.sass lib/sass/lang_switch.sass lib/sass/fortunes.sass lib/sass/fortunes_show.sass lib/sass/screenplay.sass lib/sass/footer.sass lib/sass/common-body.sass
+COMMON_CSS_TARGET_DEPS = lib/sass/common-style.sass lib/sass/newsitem.sass lib/sass/smoked-wp-theme.sass lib/sass/lang_switch.sass lib/sass/fortunes.sass lib/sass/fortunes_show.sass lib/sass/screenplay.sass lib/sass/footer.sass lib/sass/common-body.sass lib/sass/code_block.sass
 
 MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
@@ -755,7 +755,7 @@ $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass
 FORT_SASS_DEPS = lib/sass/fortunes.sass
 COMMON_SASS_DEPS = lib/sass/common-body.sass
 
-$(T2_DEST)/style.css $(T2_DEST)/style-2008.css : lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS)
+$(T2_DEST)/style.css $(T2_DEST)/style-2008.css : lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass
 
 $(T2_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 

@@ -336,6 +336,11 @@ my $humour_tree_contents =
                     url => "humour/by-others/s-stands-for-simple/",
                 },
                 {
+                    text => "Was the Death Star Attack an Inside Job?",
+                    url => "humour/by-others/was-the-death-star-attack-an-inside-job/",
+                    title => "A conspiracy theory set in the Star Wars World. Via “Debunking 911” via “Websurdity”",
+                },
+                {
                     text => "Division Two Magazine",
                     url => "humour/by-others/division-two/",
                     title => "A mirror of a hilarious parodical site that went offline",

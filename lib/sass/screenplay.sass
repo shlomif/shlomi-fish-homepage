@@ -3,12 +3,15 @@
 /* .description
     font-style: italic
     color: brown
-  
-.screenplay
+
+=story_box_style
     border: 1pt solid black
     padding: 0.5em
     background-color: white
     border-radius: 0.5em
+
+.screenplay
+    +story_box_style
 
     .description
         border: 2pt solid orange
@@ -20,3 +23,16 @@
 
         p
             margin: 0
+
+.fiction_xml
+    +story_box_style
+
+    h3, h4, h5
+        text-decoration: none
+    h3
+        font-size: 120%
+    h4        
+        font-size: 110%
+    h5
+        font-size: 100%
+

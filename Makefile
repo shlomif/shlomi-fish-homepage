@@ -226,6 +226,7 @@ SCREENPLAY_DOCS = \
 	TOW_Fountainhead_2
 
 FICTION_DOCS = \
+    fiction-text-example-for-X-G-Fiction-demo \
 	human-hacking-field-guide-hebrew-v2 \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7 \
@@ -391,6 +392,8 @@ $(T2_DEST)/open-source/interviews/adrian-ettlinger.html: $(SCREENPLAY_XML_RENDER
 $(T2_DEST)/open-source/interviews/sussman.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/sussman-interview.html
 $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt
 $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html
+$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt
+$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml
 
 # Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are 
 # modified.

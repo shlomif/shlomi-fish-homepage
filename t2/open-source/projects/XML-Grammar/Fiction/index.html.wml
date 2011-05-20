@@ -245,6 +245,24 @@ Package: XML-Grammar-Fiction"</a>
 
 <h2 id="demos">Demos</h2>
 
+<h3 id="demo-fiction1">Fiction Demo 1</h3>
+
+<p>
+If we have this sample Fiction-Text document:
+</p>
+
+<shlomif_code_block>
+<shlomif_include_colorized_file filename="../lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt" />
+</shlomif_code_block>
+
+<p>
+Then after converting it to XML and then to XHTML we get this:
+</p>
+
+<div class="fiction_xml">
+#include "docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml"
+</div>
+
 <h3 id="demo-screenplay1">Screenplay Demo 1</h3>
 
 <p>

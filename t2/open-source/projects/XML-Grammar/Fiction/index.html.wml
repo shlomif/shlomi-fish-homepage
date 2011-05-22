@@ -166,6 +166,53 @@ fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture
 
 <h2 id="news">News</h2>
 
+<h3 id="news-2011-05-22">2011-05-22: <get-var cpan_dist /> version 0.5.1 is
+out</h3>
+
+<p>
+There are many improvements in this release. Since the last news item here, 
+there were:
+</p>
+
+<ol>
+
+<li>
+<p>
+New tags - <tt>&lt;ol&gt;</tt>, <tt>&lt;ul&gt;</tt>, <tt>&lt;li&gt;</tt>,
+<tt>&lt;programlisting&gt;</tt> and <tt>&lt;a href=&gt;</tt> (the
+latter for for hypertext.)
+</p>
+</li>
+
+<li>
+<p>
+Documentation improvement.
+</p>
+</li>
+
+<li>
+<p>
+An XSLT stylesheet to convert Screenplay-Text to
+<a href="#similar_proj_tei">TEI</a> .
+</p>
+</li>
+
+<li>
+<p>
+Got rid of the <tt>&lt;!DOCTYPE…</tt> declaration in the Screenplay-XML
+output. It made debugging difficult and was not necessary.
+</p>
+</li>
+
+<li>
+<p>
+Add support for numeric entities such as <tt>&amp;#91;</tt>.
+</p>
+</li>
+
+</ol>
+
+
 <h3 id="news-2011-04-05">2011-04-05: <get-var cpan_dist /> version 0.1.5 is
 out</h3>
 
@@ -283,7 +330,7 @@ Then after converting it to XML and then to XHTML we get this:
 
 <ul>
 
-<li>
+<li id="similar_proj_tei">
 <p>
 <a href="http://www.tei-c.org/">TEI: Text Encoding Initiative</a> - provides
 an XML grammar and related tools for encoding texts in digital form (including

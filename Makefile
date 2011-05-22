@@ -250,6 +250,8 @@ SCREENPLAY_XML_RENDERED_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/rendered-html
 FICTION_XML_BASE_DIR = lib/fiction-xml
 FICTION_XML_XML_DIR = $(FICTION_XML_BASE_DIR)/xml
 FICTION_XML_TXT_DIR = $(FICTION_XML_BASE_DIR)/txt
+FICTION_XML_DB5_XSLT_DIR = $(FICTION_XML_BASE_DIR)/docbook5-post-proc
+FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 
 DOCBOOK5_BASE_DIR = lib/docbook/5
 DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
@@ -316,9 +318,18 @@ HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
 HHFG_HEB_V2_DEST = $(T2_DEST)/humour/human-hacking/$(HHFG_HEB_V2_TXT)
 
 FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST)
+
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml 
-	perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-		-o $@ $<
+	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
+	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
+	if test -e "$$xslt" ; then \
+		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o "$$temp_db5" $< ; \
+		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
+	else \
+		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o $@ $< ; \
+	fi
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	perl -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \

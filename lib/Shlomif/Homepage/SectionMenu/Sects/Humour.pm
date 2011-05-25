@@ -84,6 +84,11 @@ my $humour_tree_contents =
                             title => "Ongoing Text of the Screenplay",
                         },
                         {
+                            text => "Hebrew Translation",
+                            url => "humour/humanity/ongoing-text-hebrew.html",
+                            title => "Hebrew translation of the screenplay.",
+                        },
+                        {
                             text => "“Buy the Fish” Song in Hebrew",
                             url => "humour/humanity/buy-the-fish-in-hebrew.html",
                         },

@@ -216,6 +216,7 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 SCREENPLAY_DOCS = \
     Blue-Rabbit-Log-Part-1 \
 	Humanity-Movie \
+	Humanity-Movie-hebrew \
 	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \

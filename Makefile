@@ -398,6 +398,7 @@ $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/$(HHFG_HEB_V2_TXT)
 # modified.
 $(T2_DEST)/humour/Blue-Rabbit-Log/part-1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Blue-Rabbit-Log-Part-1.html
 $(T2_DEST)/humour/humanity/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie.html
+$(T2_DEST)/humour/humanity/ongoing-text-hebrew.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie-hebrew.html
 $(T2_DEST)/humour/Selena-Mandrake/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/selena-mandrake-the-slayer.html
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/star-trek--we-the-living-dead.html
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/TOW_Fountainhead_1.html

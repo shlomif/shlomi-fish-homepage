@@ -446,6 +446,8 @@ $(T2_DEST)/philosophy/computers/software-management/end-of-it-slavery/index.html
 
 $(T2_DEST)/humour/index.html $(T2_DEST)/humour/stories/index.html $(T2_DEST)/humour/stories/Star-Trek/index.html $(T2_DEST)/humour/stories/Star-Trek/We-the-Living-Dead/index.html $(T2_DEST)/humour/TheEnemy/index.html: lib/stories/stories-list.wml
 
+$(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.html $(T2_DEST)/humour/humanity/buy-the-fish-in-hebrew.html $(T2_DEST)/humour/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
+
 $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/v2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-v2.xhtml
 
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-Part-1.txt

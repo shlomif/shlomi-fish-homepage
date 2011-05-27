@@ -61,7 +61,7 @@ my @forts =
 (
     {
         'id' => "shlomif",
-        desc => "a collection of my own quotes.",
+        desc => "A collection of my own quotes.",
         text => "shlomif",
         title => "Quotes by Shlomi Fish",
     },
@@ -73,13 +73,13 @@ my @forts =
     },
     {
         'id' => "friends",
-        desc => "quotes from the scripts of the T.V. show Friends. They cover the first three seasons.",
+        desc => "Quotes from the scripts of the T.V. show Friends. They cover the first three seasons.",
         text => "friends",
         title => "Excerpts from the T.V. Show Friends",
     },
     {
         'id' => "joel-on-software",
-        desc => "quotes from the <a href=\"http://www.joelonsoftware.com/\">Joel on Software</a> site.",
+        desc => qq{Quotes from the <a href="http://www.joelonsoftware.com/">Joel on Software</a> site.},
         text => "joel-on-software",
         title => "Quotes from the site “Joel on Software”",
     },
@@ -124,7 +124,7 @@ EOF
     {
         'id' => "tinic",
         desc => <<"EOF",
-the ultimate collection of reasons why
+The ultimate collection of reasons why
 "there is no IGLU cabal", and other Israeli Linux on-line folklore.
 EOF
         text => "tinic",
@@ -132,19 +132,19 @@ EOF
     },
     {
         'id' => "sharp-perl",
-        desc => "a collection of conversations from Freenode's #perl",
+        desc => "A collection of conversations from Freenode's #perl .",
         text => "#perl",
         title => "Quotes from the Freenode #perl channel",
     },
     {
         'id' => "sharp-programming",
-        desc => "a collection of conversations from Freenode's ##programming",
+        desc => "A collection of conversations from Freenode's ##programming .",
         text => "##programming",
         title => "Quotes from the Freenode ##programming channel",
     },
     {
         'id' => "shlomif-factoids",
-        desc => "a collection of factoids about people and things (e.g: Chuck Norris)",
+        desc => "A collection of factoids about people and things (e.g: Chuck Norris).",
         text => "shlomif-factoids",
         title => "Funny Factoids about People and Things (Chuck Norris, etc.)",
     },

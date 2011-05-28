@@ -1,4 +1,8 @@
-.navbar { display: none;}
+.navbar, .menu_floaty, .menu_floaty .sub_menu, .banner,
+.leading_path, .invisible
+{ 
+    display: none;
+}
 .hebrew
 {
     direction:rtl;

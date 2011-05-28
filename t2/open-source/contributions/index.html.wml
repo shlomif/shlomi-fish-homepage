@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Contributions Made to External Open-Source Projects" />
 
@@ -8,9 +8,7 @@
 <b>Last Updated:</b> 21-November-2009.
 </p>
 
-<h2* id="toc">Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="gimp"><a href="http://www.gimp.org/">GIMP - The GNU Image 
 Manipulation Program</a></h2>

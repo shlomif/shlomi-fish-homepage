@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish's Writings about Computing" />
 
@@ -15,9 +15,7 @@ Some of these essays will require some technical knowledge, but most of them
 can be read by anyone with a pseudo-technical background. 
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="articles-and-essays">The Articles and Essays</h2>
 

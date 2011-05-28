@@ -1,14 +1,12 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish at Cortext: HTML, UNIX and Perl - oh my!" />
 <latemp_meta_desc "Some Memoirs of Shlomi Fish when Working at Cortext" />
 <latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Cortext, Perl, UNIX, Unix,  HTML" />
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

@@ -1,14 +1,12 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish at Elpas" />
 <latemp_meta_desc "Some memoirs of Shlomi Fish when Working at Elpas" />
 <latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Elpas, Windows" />
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

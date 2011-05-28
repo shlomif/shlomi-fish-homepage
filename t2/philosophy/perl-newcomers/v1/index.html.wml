@@ -1,6 +1,6 @@
 <set-var disable_comments="1" />
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "“Usability” of the Perl Online World for Newcomers - Version 1" />
@@ -19,9 +19,7 @@ discussed the suitability of the Perl online world for newcomers. It had
 received a lot of commentary, both supporting, and criticising.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h3 id="itself">The Article Itself - 2nd Revision</h3>
 

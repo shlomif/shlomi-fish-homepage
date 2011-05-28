@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <!--
 
@@ -9,9 +9,7 @@ TODO: Add:
 -->
 <latemp_subject "Guide to Israeli Free and Open Source Software Resources" />
 
-<h2* id="toc">Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="portals">Portals, News, etc.</h2>
 

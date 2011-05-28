@@ -1,13 +1,11 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Optimizing Code for Speed" />
 <latemp_meta_desc "An overview of why and how one can optimize code for speed" />
 <latemp_more_keywords "optimization,optimisation,optimize,optimise,code,c,freecell solver,perl,speed,memory,software quality,snappiness,moore's law" />
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

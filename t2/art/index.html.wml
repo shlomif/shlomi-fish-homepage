@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish’s Art" />
 
@@ -10,9 +10,7 @@ created. I will explain how I created the graphic art, so you can
 shamelessly duplicate my efforts and create similar art.
 </p>
 
-<h2* id="toc">Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <div class="graphic_designs">
 

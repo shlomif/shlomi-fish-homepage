@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "&quot;The Enemy and How I Helped to Fight it&quot; - Text of the English Translation - Revision 6" />
 
@@ -7,9 +7,7 @@
 <b>Written and Translated By:</b> Shlomi Fish
 </p>
 
-<h2* id="toc">Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <div class="note">
 <h2 id="historical_introduction">Historical Introduction to the Story</h2>

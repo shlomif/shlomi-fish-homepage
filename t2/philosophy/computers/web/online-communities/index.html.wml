@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 #include <utils.wml>
 
@@ -45,9 +45,7 @@ respect them, even if they exist.
 
 </note>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="intro">Introduction</h2>
 

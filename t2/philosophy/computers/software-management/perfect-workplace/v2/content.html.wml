@@ -1,6 +1,6 @@
 <set-var disable_comments="1" />
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "The Perfect Info-Tech Workplace" />
 
@@ -16,9 +16,7 @@
 <b>TODO :</b> FILL IN.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <div class="article">
 

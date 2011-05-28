@@ -430,7 +430,7 @@ td { vertical-align : top; }
 
 <latemp_after_body>
 # <if "<get-var disable_disqus />" "" "<disqus_thread />" />
-<share_this_button /><br />
+<share_this_button />
 # <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />

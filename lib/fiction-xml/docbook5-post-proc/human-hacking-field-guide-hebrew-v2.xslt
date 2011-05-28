@@ -14,7 +14,7 @@
     </xsl:template>
 
     <xsl:template match="/db:article/db:info">
-        <info>
+        <info xml:lang="en-UK">
             <xsl:apply-templates/>
             <authorgroup>
                 <author>

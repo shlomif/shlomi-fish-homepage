@@ -803,6 +803,7 @@ $(T2_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/for
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
 
 docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
+	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \
 	install_docbook4_pdfs install_docbook4_rtfs \
 	install_docbook5_pdfs install_docbook5_rtfs 
 

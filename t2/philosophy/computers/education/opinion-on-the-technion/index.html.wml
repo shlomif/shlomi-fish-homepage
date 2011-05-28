@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 ;;; Placed on 14-July-2010
 ;;; Remove after a year - 14-July-2011
@@ -27,9 +27,7 @@ Technion</a> close and after graduation. Some of it may be applicable to other h
 institutes.
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

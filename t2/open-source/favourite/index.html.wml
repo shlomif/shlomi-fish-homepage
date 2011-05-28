@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Favourite Free Software of Mine" />
 
@@ -10,9 +10,7 @@ and open source software (FOSS)</a>. You are welcome to check these packages
 out, and see if they are useful to you as well.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="linux"><a href="http://www.linux.org/">Linux</a></h2>
 

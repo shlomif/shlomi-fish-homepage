@@ -1,14 +1,12 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "The Case for File Swapping - Revision 3 - Text" />
 
 <h2 id="back"><a href="../">Back to the Cover Page of this Article</a></h2>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="itself">The Article Itself</h2>
 

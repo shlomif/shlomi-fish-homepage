@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "My Humour Collection" />
 
@@ -33,9 +33,7 @@ throughout the years. They are arranged in roughly chronlogical order.
 You can also find them and others <a href="<rellink url="humour/fortunes/" host="t2" />">in machine-readble UNIX fortune cookies collections</a>.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="list">List of Aphorisms</h2>
 <header_joke id="jewish_deduction" header="A Jewish Deduction">

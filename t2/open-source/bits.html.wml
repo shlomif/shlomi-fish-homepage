@@ -1,9 +1,9 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Open Source Bits and Bobs" />
 
-<toc />
+<toc_div />
 
 <define-tag bit_link whitespace="delete">
 ./bits-and-bobs/%0

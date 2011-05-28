@@ -3,12 +3,11 @@
 <set-var rtl_layout="1" />
 
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "האויב ואיך עזרתי להילחם בו - טקסט בעברית" />
 
-<h2*>תוכן העניינים</h2*>
-<toc />
+<toc_div lang="he" />
 
 <p>האויב ואיך עזרתי להילחם בו </p>
 <p>מאת: שלומי פיש </p>

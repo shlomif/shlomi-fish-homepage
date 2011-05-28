@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "The Linus Torvalds Bus Factor" />
 <latemp_meta_desc "The Value of Multiple Committers and of &quot;Hitting the Benevolent Dictator with a Bus&quot;" />
@@ -15,9 +15,7 @@ more general, and illustrates a good point about open source software
 development.
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

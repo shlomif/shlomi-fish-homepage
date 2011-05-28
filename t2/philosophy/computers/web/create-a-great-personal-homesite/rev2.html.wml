@@ -6,7 +6,7 @@
 
 #include "driver.wml"
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Create a Great Personal Home Site - 2nd Revision" />
 <latemp_meta_desc "How to create a Great Personal Internet Home Site" />
@@ -125,9 +125,7 @@ moderately famous</a> and am very far from being a millionaire.
 [ <a href="#article-itself"><b>Skip to the main content</b></a> ]
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "What Makes Software High-Quality?" />
@@ -24,9 +24,7 @@ inspired by a post of someone else on a mailing list I started for one of my
 projects aims to answer this question.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h3 id="itself">The Article Itself</h3>
 

@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_more_keywords "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" />
 <latemp_subject "Cross-Platform Abstraction Libraries" />
@@ -37,9 +37,7 @@ services (and not GUI). <licence_qt />
 
 </define-tag>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="data_structures">Data Structures</h2>
 

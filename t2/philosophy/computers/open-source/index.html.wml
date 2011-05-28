@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Essays about Open-Source Software" />
 
@@ -7,7 +7,7 @@
 Essays related to Free and Open Source Software.
 </p>
 
-<toc />
+<toc_div />
 
 <h2 id="articles-list">The Articles List</h2>
 

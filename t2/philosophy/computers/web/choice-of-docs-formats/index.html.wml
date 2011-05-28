@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Choice of Document Formats" />
 <latemp_meta_desc "Choice of Document Formats" />
@@ -15,9 +15,7 @@ derived from a reply I wrote to a thread in the
 mailing list</a>.
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

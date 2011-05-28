@@ -1,6 +1,6 @@
 <set-var rtl_layout="1" />
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "הגדר \"ציונות\"!" />
 
@@ -14,9 +14,7 @@
     
     /></a>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="intro">מבוא</h2>
 

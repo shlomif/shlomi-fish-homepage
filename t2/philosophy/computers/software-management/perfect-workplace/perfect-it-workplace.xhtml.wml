@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "The Perfect IT Workplace - Revision 1" />
@@ -16,9 +16,7 @@ I'm OK with it publicisied as is and would just work on the second revision
 now which will be better publicised.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 
 <h3 id="itself">The Article Itself</h3>

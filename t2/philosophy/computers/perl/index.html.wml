@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Perl-Related Essays" />
 
@@ -8,7 +8,7 @@ Essays related to the <a href="http://perl-begin.berlios.de/">Perl</a>
 programming languages.
 </p>
 
-<toc />
+<toc_div />
 
 <h2 id="articles-list">The Articles List</h2>
 

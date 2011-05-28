@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish's Frequently Asked Questions (FAQ) List" />
 <latemp_meta_desc "Shlomi Fish's Frequently Asked Questions (FAQ) List" />
@@ -19,9 +19,7 @@ But this document is here just in case, you have a question, or at least so
 I can link to it.
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="about">About Shlomi Fish and this Site</h2>
 

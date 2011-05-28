@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Homepage vs. Blog" />
 <latemp_meta_desc "Explains the distinction between a homepage (or homesite) and a blog, and why this site is not a blog" />
@@ -15,9 +15,7 @@ from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011919.h
 post to the Linux-Elitists mailing list</a>.
 </p>
 
-<h2 id="toc">Table of Contents</h2>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

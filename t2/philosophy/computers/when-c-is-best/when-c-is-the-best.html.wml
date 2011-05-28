@@ -1,13 +1,11 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "When C is the Best (Tool for the Job)" />
 <latemp_meta_desc "Gives some reasons why the C language still has its place and explains when it should be used instead of other alternatives" />
 <latemp_more_keywords "C,best,tool for the job,java,perl,ANSI C,C++,high level,low level,programming,languages" />
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="meta">Document Information</h2>
 

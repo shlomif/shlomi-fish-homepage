@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "What Makes Software High-Quality? (Revision 2)" />
@@ -18,9 +18,7 @@ This is the second revision of <a href="../">the original article</a>
 with many corrections and additions.
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h3 id="itself">The Article Itself - 2nd Revision</h3>
 

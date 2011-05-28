@@ -1,6 +1,6 @@
 <set-var rtl_layout="1" />
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "מקבץ אמרות השפר והציטוטים של שלומי פיש" />
 
@@ -39,9 +39,7 @@
 מבוססות XML הניתנות לקריאה על ידי מכונה
 </p>
 
-<h2*>תוכן העניינים</h2*>
-
-<toc />
+<toc_div lang="he" />
 
 <header_joke id="jewish_deduction" header="הגיון יהודי">
 

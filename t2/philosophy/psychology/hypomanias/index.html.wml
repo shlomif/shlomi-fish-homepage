@@ -1,6 +1,6 @@
 <set-var disable_comments="1" />
 #include '../template.wml'
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 <latemp_subject "Dealing with Hypomanias" />
@@ -19,9 +19,7 @@ clinical depressions, clinical anxieties and especially hypomanias (=
 "below-manias"), which I have been suffering from for many years. 
 </p>
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h3 id="itself">The Article Itself - 2nd Revision</h3>
 

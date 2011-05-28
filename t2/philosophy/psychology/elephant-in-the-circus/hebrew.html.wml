@@ -6,15 +6,13 @@
 
 #include "pages/t2/philosophy/elephant-in-circus.wml"
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "משל הפיל בקרקס" />
 
 <div class="main_text">
 
-<h2* id="toc">תוכן העניינים</h2*>
-
-<toc />
+<toc_div lang="he" />
 
 <h2 id="intro">מבוא</h2>
 

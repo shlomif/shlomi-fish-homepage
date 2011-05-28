@@ -1,6 +1,6 @@
 <set-var rtl_layout="1" />
 #include "../template.wml"
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 #include <utils.wml>
 
 
@@ -10,9 +10,7 @@
 
 <div class="main_text">
 
-<h2* id="toc">Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <p class="en">
 <!--Creative Commons License-->

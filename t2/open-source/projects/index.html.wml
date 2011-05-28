@@ -1,12 +1,10 @@
 #include '../template.wml'
 
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish's Open Source Projects" />
 
-<h2*>Table of Contents</h2*>
-
-<toc />
+<toc_div />
 
 <h2 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h2>
 

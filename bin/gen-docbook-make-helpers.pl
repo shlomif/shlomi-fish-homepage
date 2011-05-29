@@ -110,6 +110,11 @@ my @documents =
         custom_css => 1,
     },   
     {
+        id => "human-hacking-field-guide-v2-arabic", 
+        path =>  "humour/human-hacking",
+        base => "human-hacking-field-guide-v2-arabic",
+    },   
+    {
         id => "perfect-it-workplace-v2", 
         path =>  "philosophy/computers/software-management/perfect-workplace/v2",
         base => "perfect-it-workplace-v2",

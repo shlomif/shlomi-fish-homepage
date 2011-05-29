@@ -111,7 +111,7 @@ my @documents =
     },   
     {
         id => "human-hacking-field-guide-v2-arabic", 
-        path =>  "humour/human-hacking",
+        path =>  "humour/human-hacking/arabic-v2",
         base => "human-hacking-field-guide-v2-arabic",
     },   
     {

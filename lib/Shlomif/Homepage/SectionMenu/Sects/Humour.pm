@@ -105,6 +105,11 @@ my $humour_tree_contents =
                             url => "humour/human-hacking/conclusions/",
                         },
                         {
+                            text => "Arabic Translation",
+                            url => "humour/human-hacking/arabic-v2.html",
+                            title => "Translation to Literary Arabic by Vieq",
+                        },
+                        {
                             text => "Hebrew Translation",
                             url => "humour/human-hacking/hebrew-v2.html",
                         },

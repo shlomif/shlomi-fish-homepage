@@ -315,10 +315,13 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 
 SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selena-Mandrake/selena-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
+HHFG_DIR = $(T2_DEST)/humour/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
-HHFG_HEB_V2_DEST = $(T2_DEST)/humour/human-hacking/$(HHFG_HEB_V2_TXT)
+HHFG_HEB_V2_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
+HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
 
-FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST)
+
+FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST)
 
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml 
 	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
@@ -392,6 +395,9 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR
 	cp -f $< $@
 
 $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/$(HHFG_HEB_V2_TXT)
+	cp -f $< $@
+
+$(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
 	cp -f $< $@
 
 # Rebuild the embedded screenplays pages in the $(T2_DEST) after they are

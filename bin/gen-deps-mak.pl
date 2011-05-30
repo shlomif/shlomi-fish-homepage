@@ -38,7 +38,20 @@ sub _map_wmls_to_deps
                 re => qr{^\#include *"\Q$_\E\.wml"}ms,
                 files => [],
             },
-        } qw(toc_div xml_g_fiction),
+        } 
+        qw(
+            amazon
+            dbook
+            div2mag
+            iglu
+            multi-lang
+            SFresume_base
+            stories/blurbs
+            stories/stories-list
+            toc_div
+            vim_include_code
+            xml_g_fiction
+        ),
     );
 
     foreach my $fn (@files)

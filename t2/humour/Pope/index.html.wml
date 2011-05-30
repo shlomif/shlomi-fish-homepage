@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xml_g_fiction.wml"
 
 <latemp_subject "The Pope Died on Sunday" />
 
@@ -33,10 +34,7 @@ Text - read online. (HTML)</b></a>
 
 <li>
 <p>
-<a href="The-Pope-Died-on-Sunday-hebrew.txt">Fiction-Text Source</a> (in UTF-8
-encoding) - readable as-is, but can be converted into XML, XHTML and
-DocBook/XML using
-<a href="$(ROOT)/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction</a>.
+<link_to_fiction_text base="The-Pope-Died-on-Sunday-hebrew" />
 </p>
 </li>
 

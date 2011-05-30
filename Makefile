@@ -750,8 +750,8 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_S
 	rsync -a $(patsubst %/start.html,%/,$<) $(patsubst %/start.html,%/,$@)
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
-	(cd $(patsubst %/slides/start.html,%,$@) ; \
-		shspork -make ; \
+	(cd $(patsubst %/slides/start.html,%,$@) && \
+		shspork -make && \
 		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; done)) \
 	)
 

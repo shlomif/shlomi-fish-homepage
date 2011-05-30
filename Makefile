@@ -325,7 +325,7 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
 	if test -e "$$xslt" ; then \
 		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-			-o "$$temp_db5" $< ; \
+			-o "$$temp_db5" $< && \
 		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
 	else \
 		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \

@@ -19,8 +19,8 @@
             <authorgroup>
                 <author>
                     <personname>
-                        <firstname>Shlomi</firstname>
-                        <surname>Fish</surname>
+                        <firstname>שלומי</firstname>
+                        <surname>פיש</surname>
                     </personname>
                     <affiliation>
                         <address>
@@ -52,7 +52,7 @@
                 <para>
                     ראו את <link
                         xlink:href="http://www.shlomifish.org/meta/copyrights/">דף
-                        תנאי זכויות היוצרים של שלומי פיש</link> על כיצד לעמוד
+                        תנאי זכויות היוצרים שלי</link> על כיצד לעמוד
                     בתנאי רשיון זה.
                 </para>
 

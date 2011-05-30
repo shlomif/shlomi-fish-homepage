@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "xml_g_fiction.wml"
 
 <latemp_subject "The Human Hacking Field Guide" />
 
@@ -66,7 +67,7 @@ Sources:<br />
 <ul>
 
 <li>
-<a href="human-hacking-field-guide-hebrew-v2.txt">Fiction-Text Source</a>
+<link_to_fiction_text base="human-hacking-field-guide-hebrew-v2" />
 </li>
 
 <li>

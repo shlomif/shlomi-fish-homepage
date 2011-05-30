@@ -29,21 +29,71 @@ io("include.mak")->print($text);
 system("./bin/gen-docbook-make-helpers.pl");
 system("./bin/gen-fortunes.pl");
 
-# Write deps.mak
+sub _map_wmls_to_deps
 {
-    my @files =
-        map {
+    my $files = shift;
+
+    return
+    [
+        map
+        {
             my $s = $_;
             $s =~ s{\.wml\z}{};
             $s =~ s{\A(?:\./)?t2/}{\$(T2_DEST)/};
             $s;
-            }
+        } 
+        @$files
+    ];
+}
+
+# Write deps.mak
+{
+    my @files =
         File::Find::Object::Rule
             ->name('*.wml')
-            ->grep(qr/\A#include *"toc_div/)
             ->in('t2');
 
-    io->file("deps.mak")->print("@files: lib/toc_div.wml");
+    my %files_containing_headers =
+    (
+        map {
+            $_ =>
+            {
+                re => qr{^\#include *"\Q$_\E\.wml"}ms,
+                files => [],
+            },
+        } qw(toc_div xml_g_fiction),
+    );
+
+    foreach my $fn (@files)
+    {
+        my $contents = io->file($fn)->slurp;
+
+        foreach my $header (keys(%files_containing_headers))
+        {
+            if ($contents =~ $files_containing_headers{$header}{re})
+            {
+                push @{ $files_containing_headers{$header}{files} }, 
+                    $fn;
+            }
+        }
+    }
+    
+    my $deps_text = "";
+
+    foreach my $header (sort { $a cmp $b } keys(%files_containing_headers))
+    {
+        $deps_text .= 
+            join(' ', 
+                @{ _map_wmls_to_deps(
+                        $files_containing_headers{$header}{files}
+                    ) 
+                }
+            );
+
+        $deps_text .= ": lib/$header.wml\n\n";
+    }
+
+    io->file("deps.mak")->print($deps_text);
 }
 
 

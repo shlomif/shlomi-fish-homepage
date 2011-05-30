@@ -14,7 +14,7 @@
     </xsl:template>
 
     <xsl:template match="/db:article/db:info">
-        <info xml:lang="en-UK">
+        <info xml:lang="he-IL">
             <xsl:apply-templates/>
             <authorgroup>
                 <author>
@@ -25,26 +25,45 @@
                     <affiliation>
                         <address>
                             <email>shlomif@shlomifish.org</email>
-                            <uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+                            <uri type="homepage" xlink:href="http://www.shlomifish.org/">דף הבית של שלומי פיש</uri>
                         </address>
                     </affiliation>
                 </author>
             </authorgroup>
             <copyright>
-                <year>2004</year>
-                <holder>Shlomi Fish</holder>
+                <year>2011</year>
+                <holder>שלומי פיש</holder>
             </copyright>
             <legalnotice>
+
                 <para>
-                    This document is copyrighted by Shlomi Fish
-                    under the 
-                    <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
-                        Commons Attribution Share-Alike Unported License version 3.0</link> 
-                    (or at your option a greater version). Please see
-                    <link xlink:href="http://www.shlomifish.org/meta/copyrights/">Shlomi 
-                        Fish's copyright terms</link> for how to comply with the
-                    licence.
+                    זהו תרגום לעברית של סיפור מקורי ובדיוני מאת <link
+                        xlink:href="http://www.shlomifish.org/">שלומי
+                        פיש</link>.
                 </para>
+
+                <para>
+                    התרגום, כמו הסיפור זמין תחת רשיון <link
+                        xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">רשיון
+                        הייחוס-שיתוף-זהה 3.0 (Unported) של קריאטיב קומונס
+                        (CC-by-sa)</link> או לשיקולכם כל גרסה מאוחרת יותר.
+                </para>
+
+                <para>
+                    ראו את <link
+                        xlink:href="http://www.shlomifish.org/meta/copyrights/">דף
+                        תנאי זכויות היוצרים של שלומי פיש</link> על כיצד לעמוד
+                    בתנאי רשיון זה.
+                </para>
+
+                <para>
+                    הזכויות לסיפור שמורות לשלומי פיש, 2005.
+                </para>
+
+                <para>
+                    הזכויות לתרגום שמורות לשלומי פיש, 2011.
+                </para>
+
             </legalnotice>
         </info>
     </xsl:template>

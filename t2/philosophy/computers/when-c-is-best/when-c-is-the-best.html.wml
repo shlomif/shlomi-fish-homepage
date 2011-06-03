@@ -49,7 +49,7 @@ Last Updated:
 <a href="http://www.paulgraham.com/avg.html">"LISP is better than C"</a>.
 </li>
 <li>
-"If you need speed, use O'Caml or Haskell - don't bother with C." 
+"If you need speed, use O'Caml or Haskell - don’t bother with C." 
 </li>
 <li>
 "C is for kernels."
@@ -58,7 +58,7 @@ Last Updated:
 
 <p>
 We hear these things all the time and still people insist on using C for some
-tasks. OK, these sentences are not entirely false. Most of the time (I don't 
+tasks. OK, these sentences are not entirely false. Most of the time (I don’t 
 know if it’s 90%, 80% or slightly above 60%, 
 <a href="http://www.amazon.com/exec/obidos/ASIN/0809058405/qid=1116707804/sr=2-1/ref=pd_bbs_b_2_1/102-7111030-9246531">I 
 didn't count</a>), it is preferable to use something else. But what about the
@@ -124,7 +124,7 @@ often needs a substantial run-time.
 <p>
 There's no fork() in Java, and not many other UNIX system calls. You need to
 create bindings for them (which require JNI) or work around them. Perl and
-other languages, usually don't have this limitation.
+other languages, usually don’t have this limitation.
 </p>
 
 <p>
@@ -187,7 +187,7 @@ to agree with the Extreme Programming camp that it is really better to refactor
 and make the code easier to understand than to comment redundantly. But since
 it was essential that it would run as fast as possible, I could not structure
 it appropriately. However, I can assure you that the code is modular, and of
-good quality and maintainable. So don't believe
+good quality and maintainable. So don’t believe
 <a href="http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&amp;ixPost=110136&amp;ixReplies=71">those who claim it’s bad</a>.
 </p>
 

@@ -42,7 +42,7 @@ is the best choice. </p>
 
 <pre>$array = array_filter($array, create_function('$v','return !preg_match(\'/id=\d+$|id='.$value.'$/\',$v);'));</pre>
 
-<p> At least it's possible, but note the following two things: it has to parse code at runtime (think <tt>eval STRING</tt>),
+<p> At least it’s possible, but note the following two things: it has to parse code at runtime (think <tt>eval STRING</tt>),
 and that it makes use of perl regular expression matching (beats
 reinventing the wheel I guess). It just doesn’t have the elegance of
 the perl (IMO). </p>

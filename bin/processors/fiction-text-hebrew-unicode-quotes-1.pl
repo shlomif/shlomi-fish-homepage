@@ -17,8 +17,6 @@ sub _process_paragraph
 {
     my $s = shift;
 
-    print "<<<< PARA == $s >>>>\n\n\n";
-
     if ($s =~ m{<})
     {
         return $s;

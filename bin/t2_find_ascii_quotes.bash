@@ -4,7 +4,7 @@
 # exactly.
 temp_filter()
 {
-    grep -vP '(humour/human-hacking/hebrew-v2|humour/humanity/buy-the-fish-in-hebrew|humour/humanity/ongoing-text-hebrew\.html)'
+    grep -vP '(humour/human-hacking/hebrew-v2|humour/humanity/buy-the-fish-in-hebrew|humour/humanity/ongoing-text-hebrew\.html|humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text)'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 

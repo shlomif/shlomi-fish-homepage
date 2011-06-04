@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<latemp_subject "Shlomi Fish's Personal Ad" />
+<latemp_subject "Shlomi Fish’s Personal Ad" />
 
 <:{
 use DateTime;
@@ -41,9 +41,9 @@ An experienced software developer, who is a Technion Graduate in Electrical Engi
 pleasure.
 </p>
 <p>
-I'm <:{ print $age->years(); }:>, black curly hair, and live in Tel Aviv. At the moment, I'm working on 
+I’m <:{ print $age->years(); }:>, black curly hair, and live in Tel Aviv. At the moment, I’m working on 
 Software and Documentation Projects and contributes to the Israeli and 
-International software and Internet community. Aside from that, I'm honest,
+International software and Internet community. Aside from that, I’m honest,
 idealistic, with a good sense of humour, proud (but tries not to be boastful)
 and very productive.
 </p>

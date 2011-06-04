@@ -3,7 +3,7 @@
 <latemp_subject "Two Gates and Two Angels - with a Twist" />
 
 <p>
-There's a famous riddle that goes like this:
+There’s a famous riddle that goes like this:
 </p>
 
 <blockquote>
@@ -35,7 +35,7 @@ You are standing in front of two gates (a left one and a right one) - one
 leads to paradise and the other leads to hell. Beside the gates, there are
 two angels, each one of them can either tell the truth all the time, or
 constantly lie. Every angel knows where each door leads to, and the other
-angel's orientation, but you don’t, nor can assume anything.
+angel’s orientation, but you don’t, nor can assume anything.
 (They can both be liars or both truth-tellers, or one of each).
 </p>
 
@@ -55,8 +55,8 @@ The solution can be found some space below.
 <h2>Solution:</h2>
 
 <p>
-The solution to the first puzzle is to ask one of the angels "If I asked
-the other angel, if the left gate leads to paradise, would he answer yes?".
+The solution to the first puzzle is to ask one of the angels “If I asked
+the other angel, if the left gate leads to paradise, would he answer yes?”.
 One can see, that in this case, one will always get a false answer, according
 to which one can determine which is the right gate.
 </p>
@@ -69,45 +69,45 @@ ask one of the angels:
 <blockquote>
 
 <p>
-"If I asked the other angel what you would answer, if I asked you what 
+“If I asked the other angel what you would answer, if I asked you what 
 he would answer if I asked him if the left gate leads to paradise - what would 
-he answer?"
+he answer?”
 </p>
 
 </blockquote>
 
 <p>
-The answer will evaluate to a true one, so if it’s "yes" - go to the left gate,
-and if it’s "no" - go to the right. 
+The answer will evaluate to a true one, so if it’s “yes” - go to the left gate,
+and if it’s “no” - go to the right. 
 </p>
 
 <p>
-Now here's some explanation: think of an answer passing through an angel
+Now here’s some explanation: think of an answer passing through an angel
 as being <a href="http://en.wikipedia.org/wiki/Exclusive_nor">XNORed</a>
-with "T" if the angel is a truth-teller or "F" if he's a liar. So the
+with “T” if the angel is a truth-teller or “F” if he’s a liar. So the
 logical evaluation of the question I constructed looks like so:
 </p>
 
 <img src="two-angels.png" alt="Two Angels Logic Diagram" />
 
 <p>
-(Here's the <a href="two-angels.svg.gz">original Inkscape SVG image</a>).
+(Here’s the <a href="two-angels.svg.gz">original Inkscape SVG image</a>).
 </p>
 
 <p>
-As you can see, the angel values "L" (Left) and "R" right are XNORed exactly 
+As you can see, the angel values “L” (Left) and “R” right are XNORed exactly 
 twice in the way to the solution. Since XNOR is <a 
 href="http://en.wikipedia.org/wiki/Commutative">Commutative</a> and 
 <a href="http://en.wikipedia.org/wiki/Distributivity">Distributive</a>, we
-get "Truth XNOR (L XNOR L) XNOR (R XNOR R)". Since for every boolean 
-"X XNOR X" is true, we get "Truth XNOR T XNOR T" which is the "Truth".
+get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Since for every boolean 
+“X XNOR X” is true, we get “Truth XNOR T XNOR T” which is the “Truth”.
 </p>
 
 <p>
 I originally published this riddle on
 <a href="http://groups.google.com/group/rec.puzzles/msg/4e05d7f0912f3944">on
 rec.puzzles on Usenet</a>. Someone emailed me back and suggested that
-I could simply ask an angel "If I asked you which gate leads to paradise -
-what would you say?" and he'd give the right answer. However, this leads
+I could simply ask an angel “If I asked you which gate leads to paradise - what 
+would you say?” and he'd give the right answer. However, this leads
 to interesting philosophical problems.
 </p>

@@ -1,7 +1,7 @@
 #include '../template.wml'
 #include "render_fortunes_pages.wml"
 
-<latemp_subject "Shlomi Fish and Friends' Additions to the Chuck Norris/Etc. Facts" />
+<latemp_subject "Shlomi Fish and Friends’ Additions to the Chuck Norris/Etc. Facts" />
 
 <h2*>About</h2*>
 
@@ -17,6 +17,4 @@ in Unix fortune format.
 <div class="fortunes_list">
 #include "fortunes/xhtmls/shlomif-factoids.xhtml-for-input"
 </div>
-
-
 

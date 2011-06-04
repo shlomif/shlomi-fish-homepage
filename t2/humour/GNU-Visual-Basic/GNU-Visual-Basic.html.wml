@@ -2,61 +2,61 @@
 
 <latemp_subject "GNU Visual Basic" />
 
-<p> 
+<p>
 Richard Stallman, leader of the Free Software Foundation and the
 GNU Project, today announced the first developers release of GNU Visual
 Basic.
 </p>
 
 <p>
-"It's been nagging at me for years," Stallman told freshmeat news
-correspondent Jeff Covey, "Why do I keep clinging to lisp?  <b>Lisp</b>
+“It’s been nagging at me for years,” Stallman told freshmeat news
+correspondent Jeff Covey, “Why do I keep clinging to lisp?  <b>Lisp</b>
 of all things?  I mean, who even <i>writes</i> in lisp any more?  Look
 at all that lisp code the AI community churned out for years and years
--- did it get us closer to a machine that's any smarter than a
-well-trained bag of dirt?  It's just time to move on."
+-- did it get us closer to a machine that’s any smarter than a
+well-trained bag of dirt?  It’s just time to move on.”
 </p>
 
 <p>
-Last year, Stallman started looking around at the alternatives.  "We've
+Last year, Stallman started looking around at the alternatives.  “We’ve
 abandoned Scheme, and will slowly be removing Guile from all our
 projects over the course of this summer.  We had to find an extension
 language to replace it.  I looked at Perl, Python, Eiffel, LOGO...
-even at TCL." 
+even at TCL.”
 </p>
 
 <p>
-"Then one day I was in a doctor's office and I saw the receptionist
+“Then one day I was in a doctor’s office and I saw the receptionist
 running all these neat macros in her word processor.  I investigated
 further, and came to realize that this was exactly what I was looking
 for -- a language already in widespread use that would come with its
 own user base.  We just had to clone it, and there would be a whole
 community right there ready to use it.  I started work on it that
 night, and it’s consumed most of my time in between speaking
-engagements ever since."
+engagements ever since.”
 </p>
 
 <p>
 The first large project which will adopt GNU/VB will be one of
-Stallman's most famous works, the GNU/EMACS editor.
+Stallman’s most famous works, the GNU/EMACS editor.
 </p>
 
 <p>
-"Preliminary work is complete on our elisp-to-GNU/VBscript converter,"
-Stallman said.  "Once all the .el files in the EMACS distribution have
+“Preliminary work is complete on our elisp-to-GNU/VBscript converter,”
+Stallman said.  “Once all the .el files in the EMACS distribution have
 been converted to .gvb files and tested, the next release of GNU/EMACS
 will be extensible only in GNU/VBscript.  I realize this will cause
-some preliminary inconvenience to our users, but they'll have to accept
-that they can't stand in the way of progress." 
+some preliminary inconvenience to our users, but they’ll have to accept
+that they can’t stand in the way of progress.”
 </p>
 
 <p>
 While Linus Torvalds has declined to comment at this time on the
 question of whether the Linux kernel will be rewritten in GNU/VB, other
-GNU developers have been enthusiastic in their support of Stallman's
-decision.  GNOME project leader Miguel de Icaza declared this "the
-groundwork for a monumental leap forward for the GNU desktop".  Reached
-by IRC, he said, "We've been coordinating with the GNU/VB team for
+GNU developers have been enthusiastic in their support of Stallman’s
+decision.  GNOME project leader Miguel de Icaza declared this “the
+groundwork for a monumental leap forward for the GNU desktop”.  Reached
+by IRC, he said, “We’ve been coordinating with the GNU/VB team for
 months to create the GNU/VB bindings for GTK+, and are very excited
 about the features it will allow us to incorporate into our work.  Take
 AbiWord, for instance.  In the next release, whenever you open a Word
@@ -64,12 +64,12 @@ document, any VBscript macros found in it will be automatically
 executed.  You can imagine how powerful this will be in combination
 with the GNOME address book and the mail clients.  This compatibility
 with the Windows desktop will give us an edge that we think will help
-us to finally overtake that other desktop environment."
+us to finally overtake that other desktop environment.”
 </p>
 
 <p>
-"Look, will people stop DCCing me the DeCSS code?  I'm trying to 
-talk here," he concluded.
+“Look, will people stop DCCing me the DeCSS code?  I’m trying to
+talk here,” he concluded.
 </p>
 
 <p>
@@ -81,19 +81,19 @@ available in binary format only, and will not be available for download
 from the Internet.
 </p>
 
-<p> 
-"More and more, I go into stores like CompUSA and Best Buy, and I
-see shelves filled with 'Linux This' and 'Linux That'," Stallman said.
-"Why aren't we getting any of that action?  Distributing GNU/VB
+<p>
+“More and more, I go into stores like CompUSA and Best Buy, and I
+see shelves filled with ‘Linux This’ and ‘Linux That’,” Stallman said.
+“Why aren’t we getting any of that action?  Distributing GNU/VB
 strictly as shrinkwrapped software will not only lend an air of
-legitimacy that software can't have when it’s free, it will get the GNU
+legitimacy that software can’t have when it’s free, it will get the GNU
 brand name out there to the general public.  It may even get us to my
-ultimate dream -- seeing a box with 'GNU' on it on the shelves at
-Walmart."
+ultimate dream -- seeing a box with ‘GNU’ on it on the shelves at
+Walmart.”
 </p>
 
 <p>
-The GNU Project welcomes any developers who wish to participate in 
+The GNU Project welcomes any developers who wish to participate in
 beta testing the upcoming builds; anyone interested should contact
 gnu@gnu.org to request a copy of the Non-Disclosure Agreement.
 </p>
@@ -101,7 +101,7 @@ gnu@gnu.org to request a copy of the Non-Disclosure Agreement.
 <h2>Note</h2>
 
 <p>
-This article was originally published on 
+This article was originally published on
 <a href="http://freshmeat.net/">Freshmeat.net</a> on April 1. It was
 since misplaced there. This is a copy of it that is placed here for
 posterity. It was not written by me (= Shlomi Fish).

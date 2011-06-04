@@ -10,11 +10,14 @@ use open IO => ':encoding(utf8)';
 
 use Carp;
 
+binmode STDOUT, ':encoding(utf8)';
 local $/;
 
 sub _process_paragraph
 {
     my $s = shift;
+
+    print "<<<< PARA == $s >>>>\n\n\n";
 
     if ($s =~ m{<})
     {
@@ -41,7 +44,6 @@ sub _process_paragraph
 
 my $text = <ARGV>;
 
-$text =~ s{(?<=\n\n)((?:(?: *\S+)+\n)+)(?=\n)}{_process_paragraph($1)}egms;
+$text =~ s{(?<=\n\n)((?:(?: *\S+)+ *\n)+)(?=\n)}{_process_paragraph($1)}egms;
 
-binmode STDOUT, ':encoding(utf8)';
 print $text;

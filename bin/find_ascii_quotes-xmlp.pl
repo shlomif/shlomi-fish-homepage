@@ -6,6 +6,7 @@ use warnings;
 use XML::Parser;
 
 binmode STDOUT, ":encoding(utf8)";
+
 foreach my $filename (@ARGV)
 {
     my $parser = XML::Parser->new(
@@ -36,5 +37,12 @@ foreach my $filename (@ARGV)
         },
     );
 
-    $parser->parsefile($filename);
+    eval {
+        $parser->parsefile($filename);
+    };
+
+    if (my $err = $@)
+    {
+        die "Error '$err' at filename '$filename'";
+    }
 }

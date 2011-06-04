@@ -9,15 +9,15 @@ use MyNavData;
 my $essays_tree_contents =
 {
     host => "t2",
-    text => "Shlomi Fish's Essays",
-    title => "Shlomi Fish's Essays",
+    text => "Shlomi Fish’s Essays",
+    title => "Shlomi Fish’s Essays",
     show_always => 1,
     subs =>
     [
         {
             text => "Essays",
             url => "philosophy/",
-            title => "Nav Menu for Shlomi Fish's Essays",
+            title => "Nav Menu for Shlomi Fish’s Essays",
         },
         {
             text => "Index to Essays",
@@ -112,7 +112,7 @@ my $essays_tree_contents =
                         {
                             text => "2nd Revision",
                             url => "philosophy/computers/high-quality-software/rev2/",
-                            title => "'What Makes Software High Quality?' - Revision 2",
+                            title => "“What Makes Software High Quality?” - Revision 2",
                         },
                     ],
                 },
@@ -323,7 +323,7 @@ my $essays_tree_contents =
                 {
                     text => "Opinion on DeCSS",
                     url => "DeCSS/",
-                    title => "My Opinion on the DeCSS (= DVDs' de-scrambling code) fiasco",
+                    title => "My Opinion on the DeCSS (= DVDs’ de-scrambling code) fiasco",
                 },
             ],
         },

@@ -10,8 +10,8 @@ use MyNavData;
 my $puzzles_tree_contents =
 {
     host => "t2",
-    text => "Shlomi Fish's Puzzles",
-    title => "Shlomi Fish's Puzzles",
+    text => "Shlomi Fish’s Puzzles",
+    title => "Shlomi Fish’s Puzzles",
     show_always => 1,
     subs =>
     [
@@ -85,7 +85,7 @@ my $puzzles_tree_contents =
                     title => "Which are the 4 different Screws Used to build an Airplane?",
                 },
                 {
-                    text => "Ravensborg's Guild",
+                    text => "Ravensborg’s Guild",
                     url => "puzzles/logic/ravensborgs-guild/",
                     title => "5 members of a guild with different profession, one of them is the leader.",
                 },

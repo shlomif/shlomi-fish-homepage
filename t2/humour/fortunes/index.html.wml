@@ -74,6 +74,7 @@ foreach my $r (@{Shlomif::Homepage::FortuneCollections->get_fortune_records()})
     my $id = $r->id;
     my $desc = $r->desc;
 
+    binmode STDOUT, ":utf8";
     print <<"EOF";
 <li>
 <p>
@@ -116,7 +117,7 @@ So one should take care.
 <p>
 If you feel any of these quotes is doing you damage, and you wish it to be
 removed or modified, then <a href="$(ROOT)/me/contact-me/">contact 
-Shlomi Fish</a> and he'll see what he can do.
+Shlomi Fish</a> and he’ll see what he can do.
 </p>
 
 <h2 id="links">Links</h2>
@@ -137,21 +138,21 @@ Perl 5/CPAN and XSLT code to convert the XML to XHTML and to plaintext.
 <ul>
 <li>
 <a
-href="http://www.splitbrain.org/index.php?x=.%2FFortunes">splitbrain.org's
+href="http://www.splitbrain.org/index.php?x=.%2FFortunes">splitbrain.org’s
 Fortunes</a> - contains fortunes from the X Files, Disc World, Forrest Gump,
-Star Wars, The Simpsons, and the Hitchhiker's guide to the galaxy.
+Star Wars, The Simpsons, and the Hitchhiker’s guide to the galaxy.
 </li>
 <li>
-<a href="http://www.catb.org/~esr/fortunes/">Eric S. Raymond's
+<a href="http://www.catb.org/~esr/fortunes/">Eric S. Raymond’s
 Fortunes</a> - quotes about individual rights, and some from the comedian
 Stephen Wright.
 </li>
 <li>
 <a href="http://cx.capsi.com/code-jargonfortunes.html">Fortunes from
-the Hackers' Jargon File</a>
+the Hackers’ Jargon File</a>
 </li>
 <li>
-<a href="http://humorix.org/downloads/#Fortunes">Humorix' Fortunes</a>
+<a href="http://humorix.org/downloads/#Fortunes">Humorix’s Fortunes</a>
 - including Linux slogans, quotes from Linus Torvalds and others, brief
 Microsoft jokes, and some portions of their articles.
 </li>

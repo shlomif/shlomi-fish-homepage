@@ -133,7 +133,7 @@ as:
        O(n) = [ T(n) - (T(q1) + T(q2) + T(q3) ... + T(qt) ) ] / n
        ( O(1) = 2)
 
-O(n) denotes the number of codes which are "original" to n and weren’t
+O(n) denotes the number of codes which are “original” to n and weren’t
 inherited from any smaller number.
 
 Now if q1, q2...qt will again stand for the dividers of n then the
@@ -148,7 +148,7 @@ total number of codes n have are:
 Well, I didn’t take in mind that a number can indirectly receive
 codes from a divider by two or more other dividers (like 12 that
 gets codes from 2 through both 4 and 6). Thus, O(n) the function
-that denotes the number of "original" codes of n should be
+that denotes the number of “original” codes of n should be
 recursive and defined as following:
 <p><b>O(1) = 2</b><br />
 <b>O(n) = T(n)/n</b> for every prime number n<br />

@@ -6,12 +6,12 @@
 I first encountered this problem in the science journal of a laboratory
 building I used to study physics in. It is rather well known, and I found
 some other solutions to it. One used differential equations which is rather
-high stuff. The other is "intuitive", and so lacks enough support, so it
-didn't satisfy me either. Anyway, I devised my own solution beforehand.
+high stuff. The other is “intuitive”, and so lacks enough support, so it
+didn’t satisfy me either. Anyway, I devised my own solution beforehand.
 </p>
 
 <p>
-Here's the riddle:
+Here’s the riddle:
 </p>
 
 <table border="1">
@@ -41,7 +41,7 @@ The solution can be found some space below:
 <img src="bugs.gif" alt="Bugs Path Illustration" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; " />
 
 <p>
-I'll use the following model to simplify the problem: suppose the bugs don’t
+I’ll use the following model to simplify the problem: suppose the bugs don’t
 move towards each other infinitesimly, but rather move in a straight line, and
 then stop, and then move again toward their new positions, and so forth. The bugs
 move toward their initial position until they reach a position which is in proportion
@@ -128,16 +128,16 @@ p-&gt;0      2 - 2*0
 </pre>
 
 <p>
-Therefore, the length of a bug's path is equal to the length of the original
-square's side. The time it will take a 1 meter per second fast bugs who stand at
+Therefore, the length of a bug’s path is equal to the length of the original
+square’s side. The time it will take a 1 meter per second fast bugs who stand at
 the corner of a 1*1 meter square to meet is 1/1 = 1 second.
 </p>
 
 
 <p>
-Here's <a href="bugs.scm">a script</a>
+Here’s <a href="bugs.scm">a script</a>
 for <a href="http://www.gimp.org/">Gimp</a> version 1.2 
 that generates a series of squares inside squares, and optionally marks the 
-path of a single bug. And here's the <a href="bugs-2.2.scm">corresponding
+path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
 script for Gimp version 2.2</a>.
 </p>

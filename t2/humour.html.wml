@@ -23,11 +23,13 @@
 </define-tag>
 
 <define-tag quote endtag="required">
+<blockquote>
 %body
+</blockquote>
 </define-tag>
 
 <define-tag comment endtag="required">
-<div class="indent">
+<div class="comment">
 %body
 </div>
 </define-tag>
@@ -46,6 +48,9 @@ You can also find them and others <a href="<rellink url="humour/fortunes/" host=
 <toc_div />
 
 <h2 id="list">List of Aphorisms</h2>
+
+<div class="aphorisms">
+
 <header_joke id="jewish_deduction" header="A Jewish Deduction">
 
 <quote>
@@ -1505,6 +1510,8 @@ post on my blog</a>.
 </comment>
 
 </header_joke>
+
+</div> ;;; End of aphorisms div.
 
 <h2 id="license">Copyright and Licence</h2>
 

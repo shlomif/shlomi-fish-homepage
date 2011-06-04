@@ -9,6 +9,6 @@ temp_filter()
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 
     sort | 
-    grep -vP '(catb-heb|WebMetaLecture/slides/examples|t2-homepage/rewrite\.html|humour/by-others/|humour/bits/COBOL-the-New-Age|humour/bits/Mastering-Cat|humour/fortunes/nyh-sigs|humour/fortunes/sharp-perl|humour/fortunes/sharp-programming|humour/fortunes/|humour/human-hacking/arabic-v2|humour/human-hacking/human-hacking-field-guide/|humour/human-hacking/human-hacking-field-guide-v2-arabic/)' | 
+    grep -vP '(catb-heb|WebMetaLecture/slides/examples|t2-homepage/rewrite\.html|humour/by-others/|humour/bits/COBOL-the-New-Age|humour/bits/Mastering-Cat|humour/fortunes/nyh-sigs|humour/fortunes/sharp-perl|humour/fortunes/sharp-programming|humour/fortunes/|humour/human-hacking/arabic-v2|humour/human-hacking/human-hacking-field-guide/|humour/human-hacking/human-hacking-field-guide-v2-arabic/|humour/TheEnemy/TheEnemy_eng\.html|humour/TheEnemy/The-Enemy-English-rev4\.html|humour/TheEnemy/The-Enemy-English-rev5\.html|humour/TheEnemy/The-Enemy-English-rev6\.html|humour/TheEnemy/The-Enemy-English-v7/|humour/TheEnemy/The-Enemy-Hebrew-v7\.html|humour/TheEnemy/The-Enemy-English-v7\.html|humour/TheEnemy/TheEnemy\.html|humour/TheEnemy/The-Enemy-rev[456]\.html)' | 
     temp_filter |
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

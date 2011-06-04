@@ -807,6 +807,7 @@ $(T2_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/for
 #
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
+$(T2_DEST)/humour.html $(T2_DEST)/humour-heb.html: lib/pages/t2/humour.wml
 
 docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \

@@ -96,7 +96,7 @@ EOF
     {
         'id' => "osp_rules",
         desc => <<"EOF",
-"The Rules of Open-Source Programming".
+“The Rules of Open-Source Programming”.
 Also check a <a href="http://www.advogato.org/article/395.html">discussion of it</a> on 
 <a href="http://www.advogato.org/">Advogato</a>.
 EOF
@@ -125,7 +125,7 @@ EOF
         'id' => "tinic",
         desc => <<"EOF",
 The ultimate collection of reasons why
-"there is no IGLU cabal", and other Israeli Linux on-line folklore.
+“there is no IGLU cabal”, and other Israeli Linux on-line folklore.
 EOF
         text => "tinic",
         title => "Quotes from the online Linux-IL Folklore",

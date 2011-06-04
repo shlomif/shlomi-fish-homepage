@@ -36,6 +36,7 @@ my @matches =
     "hadn't",
     "hasn't",
     "haven't",
+    "he'd",
     "he'll",
     "Here's",
     "he's",

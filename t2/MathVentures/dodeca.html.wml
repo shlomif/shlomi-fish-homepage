@@ -1,13 +1,13 @@
 #include '../template.wml'
 
-<latemp_subject "What's the Volume of a Dodecahedron?" />
+<latemp_subject "What’s the Volume of a Dodecahedron?" />
 
 <latemp_more_keywords "volume, dodecahedron, pythagoran solid, solid, pythagoran, perfect, pentagons, 12, 5, geometry, mathematics, maths, math, spatial geometry" />
 
 <img src="dodeca.gif" alt="A Dodecahedron" /> <br />
 
 <p>
-The picture above shows a dodecahedron. It's a solid body which has
+The picture above shows a dodecahedron. It’s a solid body which has
 12 perfect pentagons of the same size as its sides. I wondered what
 is the volume of such a body.
 </p>
@@ -32,7 +32,7 @@ a?</td>
 Since a dodecahedron is a perfect solid with 12 identical sides at
 the same distance from its center, we can divide it into twelve
 identical pyramids. The corner of each pyramid is found at the
-dodecahedron's center, and the base is one of the sides.
+dodecahedron’s center, and the base is one of the sides.
 </p>
 
 <p>The volume of a pyramid is the area of the base multiplied by
@@ -42,13 +42,13 @@ are adjacent at every edge of the dodecahedron, we can find it by
 taking the angle between two adjacent sides of the dodecahedron and
 dividing it by 2.</p>
 
-<p>To find that, let's take a corner of the dodecahedron, and form
+<p>To find that, let’s take a corner of the dodecahedron, and form
 a triangle at the points which are at a certain distance along the
 edges. We get the following picture:</p>
 
 <p><img src="dodeca_corner.gif"
 alt="Corner of a dodecahedron from two different views" /><br />
-From point C, which is found somewhere along the edge, let's lower
+From point C, which is found somewhere along the edge, let’s lower
 two perpendiculars to the edge, down to the edges of the base
 triangle. We get the triangle CAB. Now since the surface sides of
 this pyramid are isoscles triangles, and the angle of a perfect
@@ -63,7 +63,7 @@ is half the angle between two sides of the dodecahedron and the
 angle we seek, is equal to arcsin(1/(2*sin(36&deg;))).
 (approximately 58.28&deg;).</p>
 
-<p>Now, let's take the look at a side pyramid of a dodecahedron and
+<p>Now, let’s take the look at a side pyramid of a dodecahedron and
 calculate its volume:</p>
 
 <p><img src="dodeca_side_pyramid.gif"

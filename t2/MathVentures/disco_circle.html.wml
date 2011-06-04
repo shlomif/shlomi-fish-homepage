@@ -42,14 +42,14 @@ The solution can be found some space below:
 
 <p>
 The secret to solving this problem lies in representing it in a proper
-model. Let's take a piece of paper (or an empty pad in a drawing program)
+model. Let’s take a piece of paper (or an empty pad in a drawing program)
 and draw one circle for every boy and one for every girl. We can mark the
-boys' circles with "B1", "B2", "B3" and so on and the girls' with "G1",
-"G2".
+boys’ circles with “B1”, “B2”, “B3” and so on and the girls’ with “G1”,
+“G2”.
 </p>
 
 <p>
-Now, let's suppose a girl invited a boy to dance with her in the middle of
+Now, let’s suppose a girl invited a boy to dance with her in the middle of
 the disco circle. After a short while, the girl would leave and the boy
 would be able to invite a girl to join him in the center. If we keep tracing
 who is the person in the middle who can (now or in a short while) invite a
@@ -62,7 +62,7 @@ Imagine we put the pencil inside the circle of the kid that is in the
 middle , and when he is replaced by the one he invited, we move the
 pencil towards the circle of the new kid, thus drawing a line between
 the two circles. Assuming that a dancing routine in which every pair
-danced once can be achieved, we'll end up with a drawing in which every
+danced once can be achieved, we’ll end up with a drawing in which every
 boy is connected to every girl (and vice-versa).
 </p>
 
@@ -70,13 +70,13 @@ boy is connected to every girl (and vice-versa).
 If we can traverse this drawing, so that every link is drawn once,
 and the pencil is not lifted off the paper, then we found a dancing
 order that satistfies the request. In mathematical terminology a
-drawing with lines and circles is commonly called a <b>"Graph"</b>, and
+drawing with lines and circles is commonly called a <b>“Graph”</b>, and
 the field of mathemtics that deals with graphs is called <b>Graph
 Theory</b>.
 </p>
 
 <p>
-A very famous theorem in Graph Theory, called Euler's Circle Law,
+A very famous theorem in Graph Theory, called Euler’s Circle Law,
 proves that a graph can be drawn in one draw if and only if the
 following condition is fullfilled:<br />
 Every circle is connected by an even number of links or there are only
@@ -88,7 +88,7 @@ In our case, it’s obvious that the number of links for every girl is
 equal to the number of boys and vice versa. Thus, to have an even
 number of links that emerge from every circle, we will need to have an
 even number of boys <b>and</b> an even number of girls. Plus, if there
-are two boys and an uneven number of girls, we'll still get a graph
+are two boys and an uneven number of girls, we’ll still get a graph
 with only two circles having an uneven number of links. (and likewise
 for two girls and an uneven number of boys).
 </p>

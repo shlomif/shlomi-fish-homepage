@@ -22,6 +22,16 @@
 <restore id header />
 </define-tag>
 
+<define-tag quote endtag="required">
+%body
+</define-tag>
+
+<define-tag comment endtag="required">
+<div class="indent">
+%body
+</div>
+</define-tag>
+
 <h2 id="intro">Introduction</h2>
 
 <p>
@@ -38,6 +48,7 @@ You can also find them and others <a href="<rellink url="humour/fortunes/" host=
 <h2 id="list">List of Aphorisms</h2>
 <header_joke id="jewish_deduction" header="A Jewish Deduction">
 
+<quote>
 <p>
 The Bible dictates that "Thou shalt not seethe [=cook] a kid [= young goat]
 in his mother's milk." To avoid any possibility of breaking that regulation,
@@ -53,93 +64,129 @@ milk production, may not be eaten along with any mammal's milk either.
 We are fortunate that most mathematicians were not Jewish. Otherwise,
 it would have been forbidden to divide by all numbers between -1 and 1.
 </p>
+</quote>
 
-<p class="indent">
-<i>This bit used to appear on my signature for a short while, but people
-got mad because it was too long, so I replaced it.</i>
+<comment>
+<p>
+This bit used to appear on my signature for a short while, but people
+got mad because it was too long, so I replaced it.
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="used_to_be_arrogant" header="I Used to be Arrogant">
 
+<quote>
 <p>
 I used to be arrogant. Now I'm simply perfect.
 </p>
+</quote>
 
+<comment>
 <p>
-<i>This bit was once said by a relative of mine…</i>
+This bit was once said by a relative of mine…
 </p>
+</comment>
 
 </header_joke>
 
 <header_joke id="murphys_law_greeks" header="Murphy's Law">
 
+<quote>
 <p>
 If the ancient Greeks had invented UNIX, Murphy's Law would have been known
 as Aristotle's Law.
 </p>
+
 <p>
 Had they invented MS-Windows, Murphy's Law would have been known as the
 Law of Socrates.
 </p>
+</quote>
 
 </header_joke>
 
 
 <header_joke id="microsoft_slogan" header="Microsoft's Slogan">
 
+<quote>
 <p>
-Microsoft's slogan used to be "Microsoft - making it all make sense." <br />
-Today it should be: "Microsoft - making everything make sense. <b>Ours</b>."<br />
+Microsoft's slogan used to be “Microsoft - making it all make sense.”
 </p>
 
 <p>
-And another twist:<br />
-"Microsoft - friendliness is our outstanding quality. No matter how much we
-mess up your computer work, we will always consider you our friend."
+Today it should be: “Microsoft - making everything make sense. <b>Ours</b>.”
 </p>
+
+<p>
+And another twist:
+</p>
+
+<p>
+“Microsoft - friendliness is our outstanding quality. No matter how much we
+mess up your computer work, we will always consider you our friend.”
+</p>
+
+</quote>
+
 </header_joke>
 
 <header_joke id="american_lottery" header="The American Lottery">
 
+<quote>
 <p>
 The American Lottery - all you need is a dollar and a dream. We will take the
 dollar, but you can keep the dream.
 </p>
+</quote>
 
-<p class="indent">
-<i>(One of my previous E-mail signatures)</i>
-</p>
 </header_joke>
 
 <header_joke id="believe_in_fairies" header="I don’t Believe in Fairies">
+
+<quote>
 
 <p>
 I don’t believe in fairies. Oops! A fairy died.<br />
 I don’t believe in fairies. Oops! Another fairy died.
 </p>
 
-<p class="indent"><i>I don’t really know who said it, so it’s possible that I invented
-it.</i></p>
+</quote>
+
+<comment>
+<p>
+I don’t really know who said it, so it’s possible that I invented it.
+</p>
+</comment>
+
 </header_joke>
 
 <header_joke id="moses_the_smiley" header="Moses the Smiley">
 
+<quote>
 <pre>
 :)-&lt;
  +--
 </pre>
+</quote>
 
 </header_joke>
 
 <header_joke id="prefix_god_said" header="The prefix &quot;God Said&quot;">
+
+<quote>
 <p>
 The prefix "God Said" has the extraordinary logical property of converting
 any statement that follows it into a true one.
 </p>
+</quote>
+
 </header_joke>
 
 <header_joke id="shit_happens" header="Deltas to &quot;Shit Happens&quot; according to Religions">
+
+<quote>
 
 <p>
 Judaism: God knows you will do shit, does nothing to prevent it, but makes you take
@@ -152,63 +199,90 @@ Or alternatively:
 God is all the shit, all the non-shit and all the intermediate demi-shits in
 between.
 </p>
+
+</quote>
+
 </header_joke>
 
 <header_joke id="interpret_the_past" header="Interpret the Past">
+
+<quote>
 <p>
 Let's interpret the past according to the present and not the present
 according to the past.
 </p>
+</quote>
 
-<p class="indent">
-<i>(From an E-mail discussion with Ben Pfaff)</i>
+<comment>
+<p>
+(From an E-mail discussion with Ben Pfaff)
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="computer_science_and_c_programming" header="Computer Science and C Programming">
+
+<quote>
+“Computer Science is no more about computers than astronomy is about
+telescopes”
+</quote>
+
+<comment>
 <p>
-"Computer Science is no more about computers than astronomy is about
-telescopes"
+Edsger W. Dijkstra
 </p>
+</comment>
 
-<p class="indent">
-<i>Edsger W. Dijkstra</i>
-</p>
-
+<quote>
 <p>
-"C programming is no more about computers than astronomy is about
-stars."
+“C programming is no more about computers than astronomy is about
+stars.”
 </p>
+</quote>
 
-<p class="indent">
-<i>Shlomi Fish</i>
+<comment>
+<p>
+Shlomi Fish
 </p>
+</comment>
 
 </header_joke>
 
 <header_joke id="more_experienced_programmer" header="A more experienced programmer…">
+
+<quote>
 <p>
 A more experienced programmer does not make less bugs. He just realizes
 what went wrong more quickly.
 </p>
+</quote>
+
 </header_joke>
 
 <header_joke id="I_promised" header="I promised, I forgot, I broke my promise…">
+
+<quote>
 <p>
 I promised, I forgot, I broke my promise - just shoot me and get on
 with it!
 </p>
+</quote>
 
-<p class="indent">
-<i>
+<comment>
+<p>
 Potentially some famous last words, I also came up with this bit, and I'm
 not sure if I heard it before.
-</i>
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="first_phrase"
 header="The First Phrase that needs to be Taught">
+
+<quote>
+
 <p>
 The first phrase that needs to be taught when teaching a new language is how to
 say "Do you speak English?".
@@ -218,9 +292,15 @@ say "Do you speak English?".
 The first thing that needs to be taught when teaching a new computer tool
 is how to exit it.
 </p>
+
+</quote>
+
 </header_joke>
 
 <header_joke id="if_A_is_A" header="If A is A and A is not not-A…">
+
+<quote>
+
 <p>
 If:<br />
 1. A is A.<br />
@@ -230,16 +310,24 @@ does it also imply that:<br />
 2. B is not not-B.<br />
 </p>
 
-<p class="indent">
-<i>If you don’t understand it, either forget it or consult the following
+</quote>
+
+<comment>
+<p>
+If you don’t understand it, either forget it or consult the following
 threads:
 <a href="http://groups.google.com/groups?hl=en&amp;threadm=deca99a9.0110250144.654613e9%40posting.google.com&amp;prev=/groups%3Fnum%3D25%26hl%3Den%26group%3Dhumanities.philosophy.objectivism%26start%3D25%26group%3Dhumanities.philosophy.objectivism">Usenet</a>,
 <a href="http://www.mail-archive.com/lin-club@vipe.technion.ac.il/msg00750.html">Haifa
-Linux Club</a></i>
+Linux Club</a>
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="know_im_blond" header="I know I'm blond…">
+
+<quote>
+
 <p>
 I know I'm blond, but I have to colour my hair brown, so people would
 not think I'm stupid. Because, like the title of the book says: "You've only
@@ -249,57 +337,85 @@ got Three Seconds".
 <p>
 Actually, since Amazon sent us two books like that, you've only got six seconds.
 </p>
+
+</quote>
+
 </header_joke>
 
 <header_joke id="reinvent_the_wheel" header="Re-inventing the Wheel">
+
+<quote>
 
 <p>
 He who re-invents the wheel, will understand much better how a
 wheel works.
 </p>
 
-<p>
-<i>Or:</i>
-</p>
+</quote>
 
+<p>Or:</p>
+
+<quote>
 <p>
 He who re-invents the wheel, may actually invent a much better wheel.
 </p>
+</quote>
 
 <p>
-<i><a href="http://nadav.harel.org.il/">Nadav Har'El</a>'s response was:</i>
+<a href="http://nadav.harel.org.il/">Nadav Har'El</a>'s response was:
 </p>
+
+<quote>
+
 
 <p>
 He who re-invents the wheel will likely design a square wheel and spend
 a year trying to figure out why it doesn’t work properly.
 </p>
+
+</quote>
+
 </header_joke>
 
 <header_joke id="cpp_and_oop" header="C++ and Object-Oriented Programming">
+<quote>
+
 <p>
 IMO, C++ supports Object-Oriented Programming roughly as much as COBOL supports
 Functional Programming.
 </p>
 
-<p class="indent">
-<i>You have to be a relatively experienced hacker to get this joke. So don’t
-worry if you don’t understand it.</i>
+</quote>
+
+<comment>
+<p>
+You have to be a relatively experienced hacker to get this joke. So don’t
+worry if you don’t understand it.
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="better_alternative" header="A Better Alternative">
+
+<quote>
+
 <p>
 Sometimes you don’t need to be familiar with a better alternative to know
 that something sucks. Take Microsoft Word for example.
 </p>
 
-<p class="indent">
-<i>This was said by my friend</i>
-</p>
+</quote>
+
+<comment>
+<p>This was said by my friend</p>
+</comment>
+
 </header_joke>
 
 <header_joke id="good_student_vs_bad_student" header="Good Student vs. Bad Student">
+
+<quote>
 
 <p>
 The difference between a good student and a bad student is that a bad student
@@ -307,20 +423,32 @@ forgets the material five minutes before the test, while a good student five
 minutes afterwards.
 </p>
 
-<p class="indent">
-<i>This was said by a lecturer of mine</i>
+</quote>
+
+<comment>
+<p>
+This was said by a lecturer of mine.
 </p>
+</comment>
 
 </header_joke>
 
 <header_joke id="not_clear" header="If it was not Clear">
+
+<quote>
+
 <p>
 I hope that if it was not clear before, it is not less clear now.
 </p>
 
-<p class="indent">
-<i>Also by a lecturer</i>
+</quote>
+
+<comment>
+<p>
+Also by a lecturer.
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="apple_a_day" header="An Apple a Day">
@@ -399,18 +527,22 @@ Shlomi, I'm considering naming a corollary of Godwyn's law after you -
 any discussion of anything is over when you mention Freecell Solver.
 </p>
 
-<p class="indent">
+<comment>
+<p>
 Muli Ben-Yeuhuda on #kernelnewbies (irc.kernelnewbiews.org)
 </p>
+</comment>
 
 <p>
 Muli: BTW, I think that any discussion only begins to gain momentum
 when I mention Freecell Solver.
 </p>
 
-<p class="indent">
+<comment>
+<p>
 Shlomi Fish on #offtopic (irc.kernelnewbies.org)
 </p>
+</comment>
 </header_joke>
 
 <header_joke id="keeping_an_idea_to_yourself" header="Keeping an Idea to Yourself">
@@ -434,9 +566,11 @@ sense nonetheless.
 
 <header_joke id="foreign_languages" header="Foreign Languages">
 
+<comment>
 <p>
-<i>[Discussing Foreign Languages Knowledge in the U.S.A]</i>
+[Discussing Foreign Languages Knowledge in the U.S.A]
 </p>
+</comment>
 
 <p>
 <b>Ben Collins-Sussman</b>: Tis' true, unlike Europe, the language doesn’t
@@ -475,9 +609,8 @@ the idea for each feature first.
 He has a high degree of idealism, a high degree of stubbornness, and an even
 higher degree of inability to distiniguish between the two.
 </p>
-<div class="indent">
+<comment>
 <p>
-<i>
 I originally thought of something similar to that about
 <a href="http://www.stallman.org/">Richard M. Stallman</a> who has headed the
 <a href="http://www.fsf.org/">Free Software Foundation</a> and its GNU
@@ -486,35 +619,43 @@ views that combine both idealism and just plain stubburness. Otherwise, he's
 a great and noble guy, and I had the opportunity of meeting and talking
 him during his visit to Israel. (He is much more pleasant in real life than
 online.)
-</i>
 </p>
-</div>
+</comment>
 </header_joke>
 
 <header_joke id="hacker_sees_bug" header="Hacker Sees Bug">
 <p>
 Hacker sees bug. Hacker does not want bug. Hacker fixes bug.
 </p>
-<div class="indent">
+
+<comment>
+
 <p>
-<i>I was told that the natural continuation to this should be "Hack, hacker,
-hack!"</i>
+I was told that the natural continuation to this should be “Hack, hacker,
+hack!”
 </p>
-</div>
+
+</comment>
+
 </header_joke>
 
 <header_joke id="linus_95_percent_of_programmers" header="95% of Programmers">
+
 <p>
 Linus Torvalds: "95% of Programmers consider themselves in the top 5%".
 </p>
+
 <p>
-Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did not write, in the bottom 5%."
+Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did
+not write, in the bottom 5%."
 </p>
-<div class="indent">
+
+<comment>
 <p>
-<i>Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">a discussion of it on the Joel on Software forum</a></i>
+Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">a discussion of it on the Joel on Software forum</a>
 </p>
-</div>
+</comment>
+
 </header_joke>
 
 <header_joke id="too_girly" header="Too Girly">
@@ -530,8 +671,11 @@ Shlomi Fish's Corollary: "95% of Programmers consider 95% of the code they did n
   &lt;rindolf&gt;    Linuxgrrl: knew it.
   &lt;rindolf&gt;    Linuxgrrl: no self-respecting tomboy would use Mandrake.
 </pre>
-<p><i>rindolf here is Shlomi Fish</i >
-</p>
+
+<comment>
+<p>rindolf here is Shlomi Fish</p>
+</comment>
+
 </header_joke>
 
 <header_joke id="cpp_is_complex" header="C++ is…">
@@ -547,11 +691,14 @@ C++ is complex, complexifying and complexified.
 <p>
 Linux - Because Software Problems Should not Cost Money
 </p>
+
+<comment>
 <p>
-<i>Refer to <a href="$(ROOT)/art/linux_banner/">this page about that Slogan
+Refer to <a href="$(ROOT)/art/linux_banner/">this page about that Slogan
 and a resultant graphics made from it.</a>
-</i>
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="real_programmers_dont_write" header="Real Programmers Don't Write">
@@ -576,9 +723,13 @@ imaginary bugs in the "Hello World" program.</p>
 &lt;jkauffman&gt;  "January 4th, 2005: Just took an online quiz and it
              turns out I'm a Joey type"
 </pre>
+
+<comment>
 <p>
-<i>rindolf here is Shlomi Fish</i>
+rindolf here is Shlomi Fish
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="tcl_is_lisp_on_drugs" header="Tcl is Lisp on Drugs…">
@@ -594,11 +745,14 @@ book chapters.
 Jewish Atheists are the only true Atheists. They beat the hell out of Goy
 Atheists.
 </p>
+
+<comment>
 <p>
-<i>Yet more Jew-over-Gentile superiority, this time by me. In case you're
+Yet more Jew-over-Gentile superiority, this time by me. In case you're
 wondering, Judaism is primarily a peopleship and the Jewish religion is 
-only a part of it.</i>
+only a part of it.
 </p>
+</comment>
 </header_joke>
 
 <header_joke id="original_philosopher" header="An Original Philosopher…">
@@ -669,15 +823,15 @@ Chuck Norris wrote a complete Perl 6 implementation in a day, but then
 destroyed all evidence with his bare hands so no one will know his secrets.
 </p>
 
-<div class="indent">
+<comment>
 <p>
-<i>There's more about Chuck Norris and Perl 6
+There's more about Chuck Norris and Perl 6
 <a href="$(ROOT)/humour/fortunes/shlomif.html">in this
 Unix fortune file</a> and more about Norris on
 <a href="http://www.chucknorrisfacts.com/">the Chuck Norris Facts
-web-site.</a>.</i>
+web-site.</a>.
 </p>
-</div>
+</comment>
 
 </header_joke>
 
@@ -699,18 +853,26 @@ I'm not an actor - I just play one on T.V.
 Trying to block Internet pornography is like climbing a waterfall and trying
 to stay dry.
 </p>
+
+<comment>
 <p>
-<i>Drew Dexter</i>
+Drew Dexter
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="Im_not_straight" header="I'm not straight…">
 <p>
 I'm not straight - I'm Israeli!
 </p>
+
+<comment>
 <p>
-<i>Just for the record, I am straight, and I hate being a macho.</i>
+Just for the record, I am straight, and I hate being a macho.
 </p>
+</comment>
+
 </header_joke>
 
 <header_joke id="i_do_not_think_it_means" header="I do not think it means…">
@@ -724,10 +886,11 @@ means.
 &lt;evil-laugh&gt;Muahahahah…&lt;/evil-laugh&gt;
 </pre>
 
+<comment>
 <p>
-<i>Taken from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011935.html">this E-mail to the Linux-Elitists mailing list</a></i>
+Taken from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011935.html">this E-mail to the Linux-Elitists mailing list</a>
 </p>
-
+</comment>
 </header_joke>
 
 <header_joke id="chuck_norris_2" header="Chuck Norris Fact #2">
@@ -737,11 +900,13 @@ If Chuck Norris had been born before World War II, there would have been only
 one world war.
 </p>
 
+<comment>
 <p>
-<i>I feel a bit uneasy about saying it, but it is still kind of funny, for
+I feel a bit uneasy about saying it, but it is still kind of funny, for
 those who like <a href="http://www.chucknorrisfacts.com/">Chuck
-Norris facts</a></i>
+Norris facts</a>
 </p>
+</comment>
 
 </header_joke>
 
@@ -812,9 +977,11 @@ underflow.
 then I remember - because they are so pedantic."
 </p>
 
+<comment>
 <p>
-<i>An Israeli Perl Monger</i>
+An Israeli Perl Monger
 </p>
+</comment>
 
 </header_joke>
 
@@ -824,7 +991,7 @@ then I remember - because they are so pedantic."
 I met a guy in the bar, talked to her and she gave me her phone number.
 </p>
 
-<div class="indent">
+<comment>
 
 <p>
 This is an anti-thesis to the fact that many <a
@@ -859,7 +1026,7 @@ who's unnecessarily strict</a> or calling Black people "Negros", which is
 just the Spanish word for the colour "Black".
 </p>
 
-</div>
+</comment>
 
 </header_joke>
 
@@ -877,14 +1044,14 @@ Two female dogs talking about modern-life:
 <b>Daisy:</b> Yeah, but everyone can tell right away that you're a bitch!
 </p>
 
-<div class="indent">
+<comment>
 
 <p>
 <a href="http://www.unc.edu/depts/jomc/academics/dri/idog.html">See this page
 about "On the Internet"</a> for context.
 </p>
 
-</div>
+</comment>
 
 </header_joke>
 
@@ -981,11 +1148,11 @@ Chuck Norris deletes deletionists that he considers lame.
 
 </blockquote>
 
-<div class="indent">
+<comment>
 <p>
 See <a href="http://opendotdotdot.blogspot.com/2008/04/includipedia-count-us-in.html">"Includipedia - Count Us In" on open-dot-dot-dot</a> for the context.
 </p>
-</div>
+</comment>
 </header_joke>
 
 
@@ -1041,12 +1208,16 @@ E-mail, web feeds, and doing something productive — choose two.
 The worst way to waste your time is to never waste it.
 </p>
 
+<comment>
+
 <p>
-<i>For more information about that, see the book
+For more information about that, see the book
 <a href="http://en.wikipedia.org/wiki/Momo_%28novel%29">Momo</a> by Michael 
 Ende and <a href="http://unarmed.shlomifish.org/1342.html">this 
-post on my blog</a>.</i>
+post on my blog</a>.
 </p>
+
+</comment>
 
 </header_joke>
 

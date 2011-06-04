@@ -13,6 +13,12 @@ use Carp;
 binmode STDOUT, ':encoding(utf8)';
 local $/;
 
+my ($start, $end) = ('„', '“');
+if ($ENV{'ENG'})
+{
+    ($start, $end) = ('“', '”');
+}
+
 sub _process_paragraph
 {
     my $s = shift;
@@ -30,7 +36,7 @@ sub _process_paragraph
     }
 
     my $i = 0;
-    $s =~ s/"/(($i++) % 2 == 0) ? '„' : '“'/ge;
+    $s =~ s/"/(($i++) % 2 == 0) ? $start: $end/ge;
 
     if ($i != $count)
     {

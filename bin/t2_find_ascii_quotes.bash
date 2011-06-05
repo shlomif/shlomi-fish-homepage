@@ -12,7 +12,7 @@ temp_filter()
 
 temp_only_from_reached()
 {
-    perl -lne 'print if m{t2-homepage/open-source}..1'
+    perl -lne 'print if m{t2-homepage/personal-heb}..1'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 
@@ -24,4 +24,6 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'open-source/anti/php/index\.html' | # Contains code
     grep -vP 'open-source/bits-and-bobs/greasemonkey/grease\.html' | # Contains HTML markup
     grep -vP 'open-source/projects/Module-Format/index\.html' | # contains code
+    grep -vP 'open-source/projects/XML-Grammar/Fiction/index\.html' | # contains markup
+    grep -vP 'open-source/projects/Spark/mission/' | # contains code
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

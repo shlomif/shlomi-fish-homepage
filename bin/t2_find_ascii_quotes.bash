@@ -15,7 +15,7 @@ temp_filter()
 
 temp_only_from_reached()
 {
-    perl -lne 'print if m{t2-homepage/philosophy/computers/when-c-is-best}..1'
+    perl -lne 'print if m{t2-homepage/prog-evolution}..1'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 

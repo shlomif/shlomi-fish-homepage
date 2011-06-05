@@ -19,12 +19,12 @@ qmail package has been released into the public domain</a>.
 <p>
 You should avoid deploying <a href="http://qmail.org/">the qmail mail
 server</a> on new installations and try to convert existing installations
-to a different MTA. That's because:
+to a different MTA. That’s because:
 </p>
 
 <ol>
 <li>
-It's not open-source, and has a very problematic licence, that does not allow
+It’s not open-source, and has a very problematic licence, that does not allow
 binary packages, distributing modified sources (only patches), etc.  As such
 it is not distributed as part of distributions of operating systems, and is
 not regularly kept up-to-date. There are other open-source alternatives that 
@@ -82,7 +82,7 @@ Instead you should use one of the following MTAs:
 </li>
 <li>
 <a href="http://freshmeat.net/browse/32/">Other SMTP Servers</a>. (Also see
-<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen's comparison of
+<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s comparison of
 common Mail Transport Agents</a>.)
 </li>
 </ol>
@@ -102,24 +102,25 @@ in the Joel on Software forum</a>
 <a href="http://lwn.net/Articles/85493/">Discussion in LWN.Net</a>
 </li>
 <li>
-<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen's MTA comparison
+<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s MTA comparison
 page</a>
 </li>
 <li>
-<a href="http://linuxmafia.com/~rick/faq/index.php?page=warez#djb">Rick Moen's
-FAQ about Daniel J. Bernstein's Software</a>
+<a href="http://linuxmafia.com/~rick/faq/index.php?page=warez#djb">Rick Moen’s
+FAQ about Daniel J. Bernstein’s Software</a>
 </li>
 <li>
 <a href="http://linmagazine.co.il/node/view/9620">Hebrew blog entry in Aviram 
-Jenik's blog about Dan J. Bernstein not giving the money he promised for a 
+Jenik’s blog about Dan J. Bernstein not giving the money he promised for a 
 remote root exploit that was found in qmail</a>
 </li>
 <li>
-<a href="http://lwn.net/Articles/257004/">Coverage of "Ten Years of qmail
-Security" on LWN.net</a> - contains many instructive comments.
+<a href="http://lwn.net/Articles/257004/">Coverage of 
+“Ten Years of qmail Security” on LWN.net</a> - contains many instructive comments.
 </li>
 <li>
-<a href="http://developers.slashdot.org/article.pl?sid=07/11/06/0131227">Slashdot discussion of "Qmail at 10 Years"</a>
+<a href="http://developers.slashdot.org/article.pl?sid=07/11/06/0131227">Slashdot 
+discussion of “Qmail at 10 Years”</a>
 </li>
 </ul>
 

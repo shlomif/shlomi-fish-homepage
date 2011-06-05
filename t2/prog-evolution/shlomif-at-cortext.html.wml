@@ -51,7 +51,7 @@ Indy computer</a>, that ran
 ran on SGI computers), and he was busy editing some code. We started talking.
 I already knew about Berkeley sockets, from my then work, where I started
 working on TCP/IP. Ran said one can write a Berkeley sockets client in Perl in
-10 lines and a Berkeley socket's server in 20 lines. This sounded very
+10 lines and a Berkeley socket’s server in 20 lines. This sounded very
 impressive to me. As I looked at the Perl code he wrote, I could not
 understand it.
 </p>
@@ -60,8 +60,8 @@ understand it.
 Ran accepted me to the job, and said I could start working in a few weeks,
 when they moved to their office in Southern-Middle Tel Aviv (Near 
 <a href="http://en.wikipedia.org/wiki/Shalom_Meir_Tower">Migdal Shalom</a>,
-in Herzl street). Ran said "It takes 10 years to learn UNIX - I want you
-to learn it in a month". So I set out to learn both UNIX and Perl.
+in Herzl street). Ran said “It takes 10 years to learn UNIX - I want you to 
+learn it in a month”. So I set out to learn both UNIX and Perl.
 </p>
 
 <h2 id="prepartions">Preparations</h2>
@@ -81,31 +81,31 @@ It still came with version 4 of the perl interprter, not version 5, which
 was what I needed. Also since my primary system was a Windows 3.11, I had to
 download a suitable Perl for it and for DOS could also only find perl 4.  I
 started reading about Perl from a monolithic PDF that contained what was then
-known as "the perl man pages" and now also known as <tt>perl*.pod</tt>
+known as “the perl man pages” and now also known as <tt>perl*.pod</tt>
 or <a href="http://perldoc.perl.org/">the perldocs</a>.  This
 was a long and exhausting read, and, since they referred to many UNIX idioms
-that I were not familiar with, I didn't fully understand them. And I believe
-that if I hadn't had a lot of programming and computing background back then,
+that I were not familiar with, I didn’t fully understand them. And I believe
+that if I hadn’t had a lot of programming and computing background back then,
 and general good intuition, I would have had a much harder time.
 </p>
 
 <p>
-I had to practically work "on dry", because I only had perl 4 at home. I also
+I had to practically work “on dry”, because I only had perl 4 at home. I also
 started experimnting more with UNIX. I experimented previously with UNIX
-on my ISP's servers, and <a href="shlomif-at-elpas.html">at Elpas</a>. As it
-turned out, I didn't learn UNIX to a level that my boss could have hoped I
+on my ISP’s servers, and <a href="shlomif-at-elpas.html">at Elpas</a>. As it
+turned out, I didn’t learn UNIX to a level that my boss could have hoped I
 would learn in a month (or in 10 years), but it turned out to be enough
 to be productive there.
 </p>
 
-<h2 id="the-story-of-the-enemy">The Story of "The Enemy"</h2>
+<h2 id="the-story-of-the-enemy">The Story of <i>The Enemy</i></h2>
 
 <p>
 My work at Cortext proved to be a catalyst for my writing of the story
-<a href="$(ROOT)/humour/TheEnemy/">"The Enemy and
-How I Helped to Fight it"</a>. I've told the 
+<a href="$(ROOT)/humour/TheEnemy/"><i>The Enemy and
+How I Helped to Fight it</i></a>. I’ve told the 
 <a href="http://www.advogato.org/person/shlomif/diary/227.html">more
-complete story here</a>, but I'd like to tell it from a more Cortext-oriented
+complete story here</a>, but I’d like to tell it from a more Cortext-oriented
 perspective. Before going to Cortext, I had spent some time reading the
 <a href="$(ROOT)/philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a>
 book my father had bought when I was in the 9th grade. Neo-Tech is highly
@@ -113,7 +113,7 @@ enlightening, but very easy to misunderstand at first and I misunderstood it
 to a large extent back when I still worked for 
 <a href="shlomif-at-elpas.html.wml">Elpas</a>, but it started sinking in
 at Cortext. While Neo-Tech is technically primarily based on 
-<a href="http://en.wikipedia.org/wiki/Objectivism_%28Ayn_Rand%29">Ayn Rand's
+<a href="http://en.wikipedia.org/wiki/Objectivism_%28Ayn_Rand%29">Ayn Rand’s
 Objectivism</a>, but takes a different approach in conveying it, and
 deviates on many points. 
 </p>
@@ -126,10 +126,10 @@ did not exist yet, which made research back then more difficult).
 Moreover, my boss, Ran, referred me to the story 
 <a href="http://members.iinet.net.au/~bofh/">The Bastard Operator From Hell</a>
 which I read (originally as a giant MS Word document) and loved. It proved
-to be the main literary inspiration for my "The Enemy" story, with some
+to be the main literary inspiration for my <i>The Enemy</i> story, with some
 secondary previous inspiration from 
-<a href="http://en.wikipedia.org/wiki/The_Metamorphosis">Kafka's 
-"The Metamorposis"</a> which I had to read and learn in high-school.
+<a href="http://en.wikipedia.org/wiki/The_Metamorphosis">Kafka’s 
+<i>The Metamorposis</i></a> which I had to read and learn in high-school.
 </p>
 
 <p>
@@ -155,7 +155,7 @@ further versions of the story.
 </p>
 
 <p>
-"The Enemy and How I Helped to Fight it" proved to be the first really
+<i>The Enemy and How I Helped to Fight it</i> proved to be the first really
 serious story that I wrote, and was followed by other stories and screenplays,
 which other people seem to have liked, or liked to a large extent. I think
 it had to do with me reaching a certain kind of personal philosophy that
@@ -167,15 +167,15 @@ in them.
 
 <p>
 Cortext was quite an operation. The main computer I worked on was a Pentium I
-(about 100 MHz - can't remember the exact number), that first ran Linux and
+(about 100 MHz - can’t remember the exact number), that first ran Linux and
 was later converted to a FreeBSD installation. I used it as a UNIX workstation
 to write code on. Most of the other Cortextuals used 
 <a href="http://en.wikipedia.org/wiki/Vi">the vi editor</a>, but I could not get
 used to it and so installed Emacs (under /usr/local I think) and tried
-to learn it. I didn't get too far (and until this day could never really
+to learn it. I didn’t get too far (and until this day could never really
 get used to Emacs). However, I ended up watching a different Cortext worker
 use an editor which he said was called 
-<a href="http://joe-editor.sourceforge.net/">"joe" (Joe's Own Editor)</a>
+<a href="http://joe-editor.sourceforge.net/">“joe” (Joe’s Own Editor)</a>
 and after installing it was able to become accustomed to it, and had been 
 using it for a long time since as my default terminal editor.
 </p>
@@ -183,8 +183,8 @@ using it for a long time since as my default terminal editor.
 <p>
 At Cortext, we consistently used 
 <a href="$(ROOT)/open-source/anti/csh/">the tcsh shell</a>, but back then I 
-didn't notice a lot of difference between it and 
+didn’t notice a lot of difference between it and 
 <a href="http://www.gnu.org/software/bash/">GNU Bash</a> that I had at home
 on my Linux system, despite the fact that they are radically different (I now
-wouldn't recommend tcsh for any use). 
+wouldn’t recommend tcsh for any use). 
 </p>

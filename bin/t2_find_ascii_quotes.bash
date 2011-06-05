@@ -12,7 +12,7 @@ temp_filter()
 
 temp_only_from_reached()
 {
-    perl -lne 'print if m{t2-homepage/philosophy}..1'
+    perl -lne 'print if m{t2-homepage/philosophy/computers/high-quality-software}..1'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 
@@ -28,4 +28,8 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'open-source/projects/Spark/mission/' | # contains code
     grep -vP 'philosophy/by-others/mashhoor--10-reasons--hebrew\.html' | # contains code
     grep -vP 'philosophy/computers/high-quality-software/index\.html$' | # old essay
+    grep -vP 'philosophy/computers/high-quality-software/rev2/index\.html$' | # contains output
+    grep -vP 'philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2/freecell-solvers-quality\.html$' | # contains output
+    grep -vP 'philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2/parameters-of-quality\.html$' | # contains output
+    grep -vP 'philosophy/computers/high-quality-software/what-makes-software-high-quality/' | # old
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

@@ -81,8 +81,17 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <date>27 February 2009</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
-                    Added missing id=""'s to footnotes, so they won't
+                    Added missing id’s to footnotes, so they won’t
                     be randomly generated.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>4855</revnumber>
+                <date>05 June 2011</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Convert many ASCII single-quotes and double quotes to
+                    Unicode ones.
                 </revremark>
             </revision>
         </revhistory>
@@ -98,8 +107,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <para>
         First, I will mention several approaches taken by other people who
         discussed this issue before, and try to explain why I disagree with 
-        them. Then I will propose and explain some relations ("Language A
-        should be learned before Language B") that are good to follow. After
+        them. Then I will propose and explain some relations (“Language A
+        should be learned before Language B”) that are good to follow. After
         that, I will propose my verdict, and discuss some orthogonal 
         alternatives. Finally, I will discuss some different types of
         teaching and how each should be conducted differently.
@@ -117,8 +126,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         technologies and still do to a large extent.
     </para>
     <para>
-        One note that is in order is that you shouldn't feel bad about
-        having followed a different ordered in the programing languages you've
+        One note that is in order is that you shouldn’t feel bad about
+        having followed a different ordered in the programing languages you’ve
         learned. By all means, you can still learn things on your own
         otherwise.
     </para>
@@ -127,13 +136,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <title>The Various (Wrong) Approaches to Introductory 
         Programming Languages</title>
     <section id="linda_mciver_approach">
-        <title>Linda McIver's Thesis Approach</title>
+        <title>Linda McIver’s Thesis Approach</title>
         <para>
             <ulink url="http://www.csse.monash.edu.au/~lindap/">Linda 
                 McIver</ulink> published along with Damian Conway
             a <ulink url="http://www.csse.monash.edu.au/~lindap/papers/SevenDeadlySins.pdf">paper 
-                titled "Seven Deadly Sins of Introductory Programming Language
-                Design"</ulink> that explains the problems they found with
+                titled “Seven Deadly Sins of Introductory Programming Language
+                Design”</ulink> that explains the problems they found with
             most popular introductory programming languages. The article makes
             a very good read.
         </para>
@@ -146,7 +155,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
         <para>
             Now, if I had to summarise this language in one word it would be
-            this: sexless. It's incredibly limited, not flexible, and not fun.
+            this: sexless. It’s incredibly limited, not flexible, and not fun.
             It has no pointers or references and instead relies on nested
             structures and arrays. There are two basic data types - a number
             and a string. The language does not have functions
@@ -157,38 +166,38 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            When I program, I'm using every tool in my arsenal, and expect
+            When I program, I’m using every tool in my arsenal, and expect
             the language to be powerful enough to be able to translate my
-            thoughts into code. McIver's language is too limited and limiting,
+            thoughts into code. McIver’s language is too limited and limiting,
             to be effective for programming in, and being planned exclusively
             for beginners, lacks the richness and interesting idioms that
             make programmers like or even love their languages.
         </para>
         
         <para>
-            This is a language that I won't enjoy programming in. And I
-            don't believe a professor who doesn't enjoy programming in a
+            This is a language that I won’t enjoy programming in. And I
+            don’t believe a professor who doesn’t enjoy programming in a
             certain language can effectively convey it to his students, while
             lacking the enthusiasm and love for the tool he chose.
         </para>
 
         <para>
-            McIver's approach is flawed in the sense that she is trying too
+            McIver’s approach is flawed in the sense that she is trying too
             hard to save the students from all possible problems they may
             encounter in trying to understand their introductory language.
             However, programming is hard to learn, and learning the first
-            language is always difficult. Creating a "flawless" language that
+            language is always difficult. Creating a “flawless” language that
             lacks any sex-appeal is not going to make it better, but much
             worse as both the professors and programmers will detest it.
         </para>
     </section>
     <section id="sicp_approach">
-        <title>The "Structure and Interpretation of Computer Programs" 
+        <title>The “Structure and Interpretation of Computer Programs” 
             Approach</title>
 
         <para>
-            <ulink url="http://mitpress.mit.edu/sicp/">"Structure and
-                Interpretation of Computer Programs"</ulink> (or SICP
+            <ulink url="http://mitpress.mit.edu/sicp/">“Structure and 
+                Interpretation of Computer Programs”</ulink> (or SICP
             for short) is a classic text and course material on
             programming, taught at MIT and many other universities
             around the world. SICP uses Scheme (a minimalistic dialect
@@ -238,14 +247,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             studied BASIC, I was able to use it for programming games, 
             graphical demonstrations and animations, scripts, and other uses.
             I continued to use BASIC on DOS and Windows, until I learned the
-            much-superior Perl, which I'm using today.
+            much-superior Perl, which I’m using today.
         </para>
     </section>
     <section id="back_to_basics_approach">
-        <title>The "Teach in C" Approach</title>
+        <title>The “Teach in C” Approach</title>
 
         <para>
-            In his <ulink url="http://www.joelonsoftware.com/articles/fog0000000319.html">"Back to Basics" essay</ulink>,
+            In his <ulink url="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</ulink>,
             Joel Spolsky gave a case for teaching ANSI C as an introductory
             language instead of more high level languages. His argument is
             that programmers will end up writing sub-optimal code because
@@ -261,7 +270,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            However, C has one major deficiency: it's too close to the
+            However, C has one major deficiency: it’s too close to the
             processor to be useful. In order to perform an operation on two
             objects, one should allocate them first, perform the operation,
             and then take care of freeing both objects and the result (to say
@@ -288,12 +297,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Spolsky's argument about the efficiency of some operations is
-            wrong, because programmers who learn such languages won't often
+            Spolsky’s argument about the efficiency of some operations is
+            wrong, because programmers who learn such languages won’t often
             notice the difference from such inefficient operations, due to
             the incredible speed of contemporary computers and the fact that
             their data sets are generally too small. Moreover, many instructors
-            and exercise checkers won't penalise for the presence of
+            and exercise checkers won’t penalise for the presence of
             such issues in their homework.
         </para>
 
@@ -308,8 +317,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
     <section id="programming_languages_make_you_write_good_code">
-        <title>The "First Programming Language Should Make Sure You
-            Write Good Code" Fallacy</title>
+        <title>The “First Programming Language Should Make Sure You
+            Write Good Code” Fallacy</title>
         <para>
             You many times hear people saying that beginning programmers
             should be taught using a programming language that restricts them
@@ -319,7 +328,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             start learning from such a language.
         </para>
         <para>
-            What's wrong with this approach? Several things:
+            What’s wrong with this approach? Several things:
         </para>
         <itemizedlist>
             <listitem>
@@ -327,7 +336,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     The more strict the language is, then generally the less
                     expressive it is. Programmers like to express themselves
                     and be able to implement algorithms using the entire power
-                    of the language. They don't want to declare a lot of type 
+                    of the language. They don’t want to declare a lot of type 
                     definitions, many constraints, write a lot of syntax, or
                     otherwise be encumbered in the way. 
                 </para>
@@ -347,11 +356,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                         <ulink 
                             url="http://en.wikipedia.org/wiki/S-expression">S-expressions</ulink>
                         and that they are lacking some functions that were
-                        added to Haskell, O'Caml and SML. 
+                        added to Haskell, O’Caml and SML. 
                         <ulink url="http://dev.perl.org/perl6/">Perl 
                             6</ulink> aims to combine more idioms from
                         Haskell and Lisp than Perl 5 already has, yielding
-                        a language that's generally even more succinct.
+                        a language that’s generally even more succinct.
                     </para>
                     <para>
                         I believe that Haskell derives its
@@ -359,7 +368,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                         from its abstractions, and that this expressiveness
                         can be duplicated to a large extent in a less
                         strongly typed language. However, my mastery of
-                        Haskell is still somewhat superficial, and so I'm
+                        Haskell is still somewhat superficial, and so I’m
                         not fully qualified to comment on it.
                     </para>
                     </footnote>
@@ -374,7 +383,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     writing).
                 </para>
                 <para>
-                    I don't expect them to become superb programming in a day.
+                    I don’t expect them to become superb programming in a day.
                     Becoming a better programmer is a process, and cannot be
                     taught in a semester or a year of hard work.
                 </para>
@@ -382,10 +391,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </itemizedlist>
     </section>
     <section id="have_decent_ide">
-        <title>The "It Should Have a Decent IDE" Fallacy</title>
+        <title>The “It Should Have a Decent IDE” Fallacy</title>
         <para>
             Many education institutions reject many languages as introductory
-            languages because they don't have a decent <ulink url="http://en.wikipedia.org/wiki/Integrated_development_environment">integrated development
+            languages because they don’t have a decent <ulink url="http://en.wikipedia.org/wiki/Integrated_development_environment">integrated development
                 environment</ulink> (or IDE for short). An IDE as useful and 
             convenient as it is, however, is not an absolute requirement.
         </para>
@@ -399,7 +408,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             There is a myth that programming using a text editor and a command
             line is too difficult for mortals. This is false because, as late
-            as the 1980's or 1990's, almost all personal computers used a
+            as the 1980’s or 1990’s, almost all personal computers used a
             command-line interface (often a BASIC interpreter or DOS), and
             required programming using non-graphical editors, and it was
             still adequate for most people. (To say nothing of earlier
@@ -412,11 +421,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 </section>
 <section id="relations">
     <title>Some useful relations</title>
+
     <para>
-    This section will introduce some useful relations ("Language A should be
-    taught before Language B") to consider in teaching programming, and explain
-    them. By using these relations one can more easily reach a final verdict.
+        This section will introduce some useful relations ( “Language A
+        should be taught before Language B”) to consider in teaching
+        programming, and explain them. By using these relations one can more
+        easily reach a final verdict.
     </para>
+
     <section id="high_level_before_C">
         <title>A High Level Language Should Come Before C</title>
         <para>
@@ -442,7 +454,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         PHP is a fine language for the web and for other uses,
         especially because its implementation makes deployment of some
         large-scale web applications easier. However, the other languages in
-        the so-called "dynamic", "agile", or "scripting" class of languages
+        the so-called “dynamic”, “agile”, or “scripting” class of languages
         are not harder to learn, and less problematic. So they should be
         taught first instead.
         </para>
@@ -477,9 +489,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             The reason for that is that people who dive right into Assembly,
-            tend to write sub-optimal code because they don't understand well
+            tend to write sub-optimal code because they don’t understand well
             how this code is executed by the processor and how to compile it.
-            This is while programmers who've learned C are better equipped
+            This is while programmers who’ve learned C are better equipped
             to understand how Assembly code works, because it is somewhat
             more convenient yet still very close to Assembly.
         </para>
@@ -502,12 +514,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             computers, one could 
             write games, graphical demos, text processing and command 
             execution scripts, and even serious applications. While BASIC is
-            in today's standards a very limited language that should no longer
+            in today’s standards a very limited language that should no longer
             be taught as a first language, I still fondly remember it as being
             a lot of fun. I even continued using BASIC after I learned ANSI C
             and what was then C++, because it was quicker and more convenient.
             (I no longer do, because I now feel that Perl is superior to BASIC
-            in every way, and that's what I'm using now.)
+            in every way, and that’s what I’m using now.)
         </para>
         <para>
             On the other hand, Scheme as in SICP is an awful choice for an
@@ -522,10 +534,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             ways.
         </para>
         <para>
-            Different people I talked to, agreed with me that "You cannot do
-            anything with Scheme". Compare it to languages such as C and C++, 
+            Different people I talked to, agreed with me that 
+            “You cannot do anything with Scheme”. Compare it to languages such 
+            as C and C++, 
             Perl/Python/Tcl/Ruby/PHP, Java/.NET, etc. that feel very
-            practical, and you'll see why hardly any industrial-strength
+            practical, and you’ll see why hardly any industrial-strength
             code is written in Scheme.
         </para>
         <para>
@@ -570,24 +583,24 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             English are impossible to translate to other languages. And
             yet another is that such languages tend to be very ad-hoc
             and incomplete. Finally, code that is written in them cannot be
-            understood by programmers who don't know this language.
+            understood by programmers who don’t know this language.
         </para>
         <para>
             So, to sum up, instead of starting with a localised programming
             language, teach your students some basic English first. It might 
             take longer, but will save more time and frustation later on. Plus,
-            programming is a great way to expand one's mastery of English,
+            programming is a great way to expand one’s mastery of English,
             especially today when the Internet is so prevalent.<footnote id="globalisation" label="globalisation">
                 <para>
                     A few people who read this article claimed I was
                     advocating globalisation. However, consider what
                     Eric Raymond writes in 
-                    <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">"How 
-                        to Become a Hacker"</ulink>:
+                    <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">“How 
+                        to Become a Hacker”</ulink>:
                 </para>
                 <blockquote>
                     <para>
-                        4. If you don't have functional English, learn it.
+                        4. If you don’t have functional English, learn it.
                     </para>
 
                     <para>
@@ -619,8 +632,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <title>Java Should be Taught After Perl</title>
         <para>
             Joel Spolsky wrote an essay titled 
-            <ulink url="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">"The 
-                Perils of JavaSchools"</ulink> where he argued that teaching
+            <ulink url="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">“The 
+                Perils of JavaSchools”</ulink> where he argued that teaching
             Java in Computer Science curriculums is inferior to teaching
             ANSI C and Scheme, which was what he learned. The article is wrong
             on many points, but it highlights some of the problems with Java.
@@ -629,9 +642,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Java is too verbose. Some people may argue that this can be
             solved by using a proper IDE, but as 
             <ulink url="http://www.paulgraham.com/popular.html">Paul Graham 
-                explains</ulink>, verbose code also has the "the cost of
+                explains</ulink>, verbose code also has the “the cost of
             reading it, and the cost of the space it takes up on your
-            screen.".
+            screen.”.
         </para>
         <para>
             Moreover, Java code tend to be very monotonous. Almost all
@@ -639,8 +652,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             <ulink url="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">Steve 
-                Yegge's very funny article "Execution in the Kingdom of 
-                Nouns"</ulink> illustrates another problem with
+                Yegge’s very funny article “Execution in the Kingdom of 
+                Nouns”</ulink> illustrates another problem with
             Java. Everything has to be a noun, with no verbs or even 
             the many keywords which Perl 5 is infamous for but which
             Perl programmers love. And instead of having some Perl 5-like
@@ -651,7 +664,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Java was supposed to be kept simple, and many important concepts
             like closures, multiple-inheritance, defining methods at runtime (a
-            la Smalltalk), runtime code evalutation (the Lisp-derived "eval"
+            la Smalltalk), runtime code evalutation (the Lisp-derived “eval”
             operator, which is now common in most dynamic languages), operator
             overloading, and many other elements had been kept out of it. As
             such it turned out to be very unusable. Java 1.5/5.0 introduced
@@ -662,10 +675,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Paul Graham's essay 
-            <ulink url="http://www.paulgraham.com/javacover.html">Java's 
+            Paul Graham’s essay 
+            <ulink url="http://www.paulgraham.com/javacover.html">Java’s 
                 Cover</ulink>, which he wrote to explain why he decided not
-            to learn Java is very instructive. I read Graham's article, some 
+            to learn Java is very instructive. I read Graham’s article, some 
             time after it has been written and felt it reflected my 
             feelings about the language. Back when Java started to become hyped
             , I had ended up learning Java to see what the hype was about and
@@ -675,8 +688,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
 
         <para>
-            Perhaps I'm getting too carried away in criticising Java. My point 
-            is that, as Joel Spolsky indicated in his "JavaSchools" essay,
+            Perhaps I’m getting too carried away in criticising Java. My point 
+            is that, as Joel Spolsky indicated in his “JavaSchools” essay,
             teaching Java as the first language, makes many of the people who
             have learned it airheads, who cannot think outside the limited
             constraints that it imposes on the programmer. Teaching an
@@ -701,22 +714,22 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
     <para>
         Eric Raymond recommends this in his excellent
-        <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">"How to
-            become a Hacker" document</ulink>. He suggests one should start
+        <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">“How to 
+            become a Hacker” document</ulink>. He suggests one should start
         with XHTML, which while not being a programming language but rather
         a formatting language will still intrduce many programming idioms
         and disciplines as well as prove useful later on.
     </para>
 
     <para>
-        After XHTML, Raymond recommends one to learn Python. However, I'm
+        After XHTML, Raymond recommends one to learn Python. However, I’m
         not sure whether Perl 5 or Ruby will not be as suitable as Python,
         or more. Unfortunately, I cannot reach a conclusion here, but
         rather give some of my thoughts on each three languages.
     </para>
 
     <para>
-        (If I need to teach programming, I'll start with Perl because I know
+        (If I need to teach programming, I’ll start with Perl because I know
         it very well, and like it a lot. However, programmers who are well
         versed in Python or Ruby, may wish to teach them instead.)
     </para>
@@ -741,17 +754,17 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
             <para>
                 Perl is very expressive. I believe programmers will appreciate
-                its "There is more than one way to do it" philosophy. A
-                correspondant once told me he'd prefer to teach beginners
-                Perl instead of C, similarly to the fact that he'd prefer
+                its “There is more than one way to do it” philosophy. A
+                correspondant once told me he’d prefer to teach beginners
+                Perl instead of C, similarly to the fact that he’d prefer
                 to teach English over Esperanto, because beginners would prefer
                 a language that allows them to express themselves.
                 <footnote id="esperanto_footnote" label="esperanto">
                     <para>
                         Several people contacted me saying I have
                         mis-represented
-                        Esperanto here. I should note that I'm quoting
-                        someone else, and I admit that I don't know Esperanto
+                        Esperanto here. I should note that I’m quoting
+                        someone else, and I admit that I don’t know Esperanto
                         well enough to be sure if it indeed suffers from
                         many problems attributed to artificial languages.
                     </para>
@@ -825,8 +838,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
 
             <para>
-                Python's philosophy is "There's one good way to do it.". It
-                doesn't mean that there aren't other ways, but there is one
+                Python’s philosophy is “There’s one good way to do it.”. It
+                doesn’t mean that there aren’t other ways, but there is one
                 commonly acceptable way to write most code. Whether this is
                 a good thing or not for an introductory language is
                 debatable.
@@ -844,10 +857,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
 
             <para>
-                If you've learned Python as your mother language, you should
+                If you’ve learned Python as your mother language, you should
                 take the mental leap and learn Perl, which is the Tower of
                 Babel of languages, and also has many DWIMmeries 
-                ("Do-What-I-Mean"'s) and other expressiveness. (Of course, 
+                (“Do-What-I-Mean”’s) and other expressiveness. (Of course, 
                 a Perl programmer should also learn Python due to its
                 elegenace, and the fact it is extensively used and useful.)
             </para>
@@ -857,7 +870,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <title>Ruby</title>
 
             <para>
-                Before I discuss Ruby a word of warning: I don't know it very
+                Before I discuss Ruby a word of warning: I don’t know it very
                 well. So far all the limited tasks I tried to accomplish using 
                 it worked well after some trial and error, but I still did not
                 take the time to thoroughly study it.
@@ -869,7 +882,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 created a language that tried to combine the best elements of
                 Smalltalk, Perl and Python. Ruby aims to be
                 elegant and consistent, yet still very expressive and shares
-                Perl's "There's more than one way to do it" philosophy.
+                Perl’s “There’s more than one way to do it” philosophy.
             </para>
 
             <para>
@@ -882,23 +895,23 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 The worst problem with Ruby, however, is the lack of good 
                 documentation. Ruby has 
                 <ulink url="http://www.rubycentral.com/book/">one old 
-                    edition of the "Programming Ruby" book</ulink> available
+                    edition of the “Programming Ruby” book</ulink> available
                 online,
-                and that's it. Furthermore, this book is intended for absolute
+                and that’s it. Furthermore, this book is intended for absolute
                 beginners and will be too slow paced for people with extensive
                 experience in similar languages. 
             </para>
             <para>
                 All the other books from the Pragmattic Programmer series
                 are not available online (including the new editions of the
-                "Programming Ruby" book). What many people end up doing is
-                downloading them from "warez" sites or from Peer-to-Peer
-                networks, but I wouldn't encourage professors to tell their
+                “Programming Ruby” book). What many people end up doing is
+                downloading them from “warez” sites or from Peer-to-Peer
+                networks, but I wouldn’t encourage professors to tell their
                 students to do that.
             </para>
             <para>
                 I recall trying to find out how to tag methods in Ruby,
-                in a similar way to Perl's method or variable attributes.
+                in a similar way to Perl’s method or variable attributes.
                 Google was no help and no one on Freenode on #ruby-lang told
                 me and I asked several times, and people tried to research it.
                 Eventually, someone I knew on #perl was able to give me the
@@ -917,7 +930,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="final_verdict">
         <title>Final Verdict</title>
         <para>
-            All things considered, I'd say that Perl is the best choice now,
+            All things considered, I’d say that Perl is the best choice now,
             as Python is too strict and unexpressive, and Ruby is documented
             in an extremely inadequate way. Again, any of the three languages
             would be a fine choice, and all of them should be learned by
@@ -934,7 +947,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             have the 
             brain-share, comprehensiveness (especially as far as APIs are
             concerned), usability, richness or 
-            "sex-appeal"
+            “sex-appeal”
             <footnote id="consistency_in_prog_langs_footnote" label="consistency">
                 <para>
                 Some people
@@ -942,7 +955,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 However, just as most people prefer expressive and inconsistent
                 natural human languages like English, many of them would prefer
                 their programming language to have some inconsistencies,
-                Do-what-I-mean-erries, gotchas, etc. In Perl 5's case it is well
+                Do-what-I-mean-erries, gotchas, etc. In Perl 5’s case it is well
                 known that these make the language more expressive and <ulink url="http://www.paulgraham.com/power.html">succinct</ulink> in the hands of 
                 a competent programmer.
                 </para>
@@ -958,7 +971,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         to be considered when they are done. 
     </para>
     <para>
-        The first type I'll discuss is a self-teaching enthusiast who is
+        The first type I’ll discuss is a self-teaching enthusiast who is
         trying to teach himself programming, perhaps with some help from
         his friends or people he is interacting with on the Internet. Such
         an enthusiast usually has a lot of motivation to learn, but on the
@@ -997,20 +1010,19 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
     <para>
         How does this influence the choice of the introductory language? It 
-        probably doesn't. However, it influences the way the language should 
+        probably doesn’t. However, it influences the way the language should 
         be taught and which parts of it should be taught first. 
     </para>
 </section>
 <section id="conclusion">
     <title>Conclusion</title>
 
-    <para>
-        I talked with a few people on the IRC about it and some of them
-        told me something along the lines of "What makes you think that you
-        know better than all the universities and colleges (and other schools)
-        that are now teaching Java?". Well, this is the majority must be right
-        fallacy:
-    </para>
+    <para> I talked with a few people on the IRC about it and some of them told
+        me something along the lines of “What makes you think that you know
+        better than all the universities and colleges (and other schools) that
+        are now teaching Java?”. Well, this is the majority must be right
+        fallacy: </para>
+
     <orderedlist>
         <listitem>
             <para>
@@ -1029,11 +1041,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
     <para>
         Etc. I can think of many other cases where a common consensus, even
-        among experts turned out to be false. But I'll still explain a bit.
+        among experts turned out to be false. But I’ll still explain a bit.
     </para>
 
     <para>
-        Universities have tended to teach the "hottest" language on the
+        Universities have tended to teach the “hottest” language on the
         market. They used to teach Assembler. They used to teach COBOL (an
         awful language by all means, and one which proved to be a dead-end
         in language design). They taught Fortran and PL/I. They taught Pascal.
@@ -1047,7 +1059,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         studied - at least one dynamic language such as Perl, Python or Ruby
         ; ANSI C;  an assemby language; Lisp (Scheme, Common Lisp or perhaps
         now <ulink url="http://www.paulgraham.com/arc.html">Arc</ulink>);
-        Haskell, O'Caml or SML; and probably some specialised languages when
+        Haskell, O’Caml or SML; and probably some specialised languages when
         they are appropriate. But the first language need not be what is the 
         most hyped language in the industry, or even what most the rest of the
         studies will be conducted in.
@@ -1073,7 +1085,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         developers to more than one language, and a prospective programmer
         should not worry if he started out with a language that I consider
         sub-optimal. With good ambition and motivation and with the right
-        attitude ("I know that I do not know"), one can become a better and
+        attitude (“I know that I do not know”), one can become a better and
         better programmer regardless of his initial background.
     </para>
 </section>
@@ -1083,12 +1095,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         This section will bring other good for thought about teaching.
     </para>
     <section id="live_learn">
-        <title>"Live as if you were to die tomorrow. Learn as if you were to 
-            live forever."</title>
+        <title>“Live as if you were to die tomorrow. Learn as if you were to 
+            live forever.”</title>
         <para>
             This is a quote attributed to
             <ulink url="http://en.wikipedia.org/wiki/Mahatma_Gandhi">Gandhi</ulink>.
-            The "Learn like you were going to live forever" part is not widely
+            The “Learn like you were going to live forever” part is not widely
             understood by many workers. Many programmers believe that their
             knowledge of a few programming languages is enough, and that it is
             not necessary that they learn completely different ones.
@@ -1096,7 +1108,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             It is well known that learning a new and different programming
             language will make you a better programmer also in the original
-            languages you know. Programmers who don't learn new programming 
+            languages you know. Programmers who don’t learn new programming 
             languages eventually stagnate. They are bounded by their limited
             knowledge, and cannot think outside their box. They deserve the
             stagnation they receive due to this bad attitude, and mental
@@ -1105,16 +1117,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             If you want to grow as a programmer, make sure you keep studying
             new languages and technologies. Not only they may turn out to be
-            useful, but they'll also make you think in completely
+            useful, but they’ll also make you think in completely
             different ways.
         </para>
     </section>
     <section id="three_levels_of_learning">
         <title>Three Levels of Learning</title>
         <para>
-            Rabbi Hanina used to say "I learned a lot from my teachers,
-            and from my friends more than my teachers, and from my pupils the
-            most." I believe this means that there are in fact
+            Rabbi Hanina used to say “I learned a lot from my teachers, and
+            from my friends more than my teachers, and from my pupils the 
+            most.” I believe this means that there are in fact
             three levels of learning: 
         </para>
         <orderedlist>
@@ -1129,7 +1141,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     <emphasis role="bold">Level 2 - Experiencing</emphasis>
                     - in this level you work with the material you learned,
-                    and try to implement what you've learned and integrate it.
+                    and try to implement what you’ve learned and integrate it.
                     This requires more understanding, because you have to
                     work with the material.
                 </para>
@@ -1145,23 +1157,23 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
         </orderedlist>
         <para>
-            Perhaps there's a fourth level - 
+            Perhaps there’s a fourth level - 
             <emphasis role="bold">Science</emphasis> in which the knowledge
             is expanded. However, this implies that to truly understand the
             material, one needs to experiment with it (preferably in
             production) and better yet teach it to someone else.
         </para>
         <para>
-            The old adage "He who can - does. He who cannot - teaches." which
+            The old adage “He who can - does. He who cannot - teaches.” which
             was
             <ulink url="http://en.wikiquote.org/wiki/George_Bernard_Shaw">said 
                 by George Bernard Shaw</ulink> is amusing, but simply not
-            true, as I've demonstrated here. Being a great teacher is much more
+            true, as I’ve demonstrated here. Being a great teacher is much more
             difficult than being a great doer, and is much more enlightening.
             <footnote id="those_who_can_footnote" label="those_who_can">
                 <para>
-                What is true, in my opinion. is that "Those who can - do. 
-                Those who can't - complain." However, often people who can 
+                What is true, in my opinion. is that “Those who can - do. 
+                Those who can’t - complain.” However, often people who can 
                 and do, still complain. I recall this quote being
                 attributed to 
                 <ulink url="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus
@@ -1207,14 +1219,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             projects) is to read code, and to enhance existing code.
         </para>
         <para>
-            <ulink url="http://www.joelonsoftware.com/">Joel Spolsky ("Joel on
-                Software")</ulink> gave the following 
-            "cardinal rule of programming" in his famous
-            <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things you must never do, part I" essay</ulink>:
+            <ulink url="http://www.joelonsoftware.com/">Joel Spolsky (“Joel on
+                Software”)</ulink> gave the following 
+            “cardinal rule of programming” in his famous
+            <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things you must never do, part I” essay</ulink>:
         </para>
         <blockquote>
             <para>
-                It's harder to read code than to write it.
+                It’s harder to read code than to write it.
             </para>
         </blockquote>
         <para>
@@ -1225,7 +1237,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             programmers are likely to encounter in the wild.
         </para>
         <para>
-            It's a shame most of the code students write as part of their
+            It’s a shame most of the code students write as part of their
             curriculum is only for themselves, and ends up being of little
             value to the world at large. Even if some code ends up as an open
             source project, it is usually too incomplete and lacks essential

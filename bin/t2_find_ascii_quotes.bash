@@ -22,5 +22,5 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     temp_filter |
     grep -vP 'meta/copyrights/index\.html' | # Contains rel="nofollow"
     grep -vP 'open-source/anti/php/index\.html' | # Contains code
-    grep -vP 'open-source/bits-and-bobs/gringotts-patch/index\.html' | # Contains HTML markup
+    grep -vP 'open-source/bits-and-bobs/greasemonkey/grease\.html' | # Contains HTML markup
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

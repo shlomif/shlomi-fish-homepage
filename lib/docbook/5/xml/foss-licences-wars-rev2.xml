@@ -1,4 +1,4 @@
-<?xml version='1.0' ?>
+<?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
     <info>
@@ -156,10 +156,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <para>
         Like Joel, I have a home-site and several blogs, where I post articles
-        and essays about my thoughts, and this time I've decided to risk
+        and essays about my thoughts, and this time I’ve decided to risk
         something similar to what Joel has done on an equally flamatory topic:
         <link xlink:href="http://en.wikipedia.org/wiki/Free_software_licence">licences
-            of open-source software</link>. I'm going to introduce the various
+            of open-source software</link>. I’m going to introduce the various
         options, explain a little about their motivation and then
         give some advice according to my own personal opinion.
     </para>
@@ -180,7 +180,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 expects common citizens to be aware of it and not violate
                 it, even if they are not lawyers. As software developers, we
                 do not limit discussions on software and computing to people
-                with a Bachelor's degree in Computer Science (much less a
+                with a Bachelor’s degree in Computer Science (much less a
                 Ph.D. or whatever) and often not-too-qualified people can be
                 very knowledgeable and/or productive.
             </para>
@@ -190,8 +190,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 lawyers, or Law Professors.
             </para>
         </footnote>
-        I think what I'm writing here is correct, but would still appreciate
-        any correction for future versions. If you're unsure about my advice,
+        I think what I’m writing here is correct, but would still appreciate
+        any correction for future versions. If you’re unsure about my advice,
         then you should consult a legal expert (if you
         can afford one) or your local or global Free and Open Source Software
         organisation. I cannot guarantee my advice is valid.
@@ -202,7 +202,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </info>
 
         <para>
-            In this spoiler I'll explain what I'm using right away, which is
+            In this spoiler I’ll explain what I’m using right away, which is
             also what I recommend other people to use. When I started
             releasing my code as open-source software, I used <link
                 xlink:href="http://en.wikipedia.org/wiki/Public_domain">the 
@@ -233,7 +233,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             I started distributing my original code under <link
                 xlink:href="http://en.wikipedia.org/wiki/X11_license">the 
                 MIT X11 Licence</link>, a BSD-style licence which is the 
-            closest one to the Public Domain. If the project I'm
+            closest one to the Public Domain. If the project I’m
             contributing to has a different licence, then I disclaim any
             explicit or implicit ownership on the code I wrote, and allow
             the existing copyright holders to do with my code as they see
@@ -241,7 +241,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
         <para>
-            Note that I'm using different terms for other types of
+            Note that I’m using different terms for other types of
             digital artworks. Most of my essays (including this one) are
             under the <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative 
                 Commons Attribution Licence</link>, my original (i.e: 
@@ -312,14 +312,14 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             qualify as open-source and not as free software. This is usually
             not an issue, because the majority of open source software out
             there is free as well. (And few people would like to create an
-            open-source licence that's not endorsed by the Free Software
+            open-source licence that’s not endorsed by the Free Software
             foundation.)
 
         </para>
 
         <para>
             A software licence qualifies as a free software/open-source 
-            licence, if it allows those four freedoms. There's still a lot of 
+            licence, if it allows those four freedoms. There’s still a lot of 
             room to manoeuvre and to impose various restrictions, but otherwise
             these freedoms make them usable enough for the users and
             co-developers. 
@@ -471,7 +471,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
                 <para>
                     Version 2 of the LGPL was succeeded by version 2.1,
-                    and now there's also version 3 which is based on a short
+                    and now there’s also version 3 which is based on a short
                     adaptation of the version 3 of the GPL (see below).
                 </para>
             </listitem>
@@ -630,7 +630,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </info>
 
     <para>
-        The first thing I'd like to note is that it is not entirely agreed
+        The first thing I’d like to note is that it is not entirely agreed
         upon which licences are free/open-source and which are not.
     </para>
 
@@ -723,7 +723,7 @@ was.
     <para>
     I should note that I have issues with the entire Debian policy of 
 including only free-as-in-speech material in their distribution, regardless 
-of its type. I don't feel that non-software-content (e.g: documents in human
+of its type. I don’t feel that non-software-content (e.g: documents in human
 languages, graphics, audio, video, animations, non-code binary data, etc.) 
 should be treated by the same rules as software, and even 
 <link xlink:href="http://developers.slashdot.org/article.pl?sid=05/01/09/191257">Richard
@@ -754,10 +754,10 @@ it then I must make my modifications public. However, <link
     linkend="what-is-a-free-software-licence">the Free Software 
 Definition</link> , says that one must have "The 
 freedom to study how the program works, and adapt it to his needs.". As a 
-result, I personally don't consider the AGPL as free (because I may wish to 
+result, I personally don’t consider the AGPL as free (because I may wish to 
 run it on my publicly accessible web-server and modify it), but the FSF 
 thinks otherwise. We have enough problems with the suitability of the GPL for 
-embedded systems, that we don't need to kill the prospering web-apps market too.
+embedded systems, that we don’t need to kill the prospering web-apps market too.
 </para>
 </section>
 
@@ -781,7 +781,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
                 ,famous for his involvement with the Apache project, 
                 published an
                 <link xlink:href="http://ken.coar.org/musings/free-source.html">essay
-                    titled "Ken's 
+                    titled "Ken’s 
                     Musings about Free Software and Open Source"</link>
                 where he explained why he prefers BSD-style licences over
                 copyleft licences. Reading from the essay:
@@ -789,7 +789,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
 
             <blockquote>
                 <para>
-                     I consider myself an open sourcerer; I won't work on (or
+                     I consider myself an open sourcerer; I won’t work on (or
                      release) software covered by the GPL or any other copyleft
                      licence except in unusual circumstances. I feel that the
                      infective nature of copyleft licences does a disservice to
@@ -816,7 +816,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             , an open-source developer and advocate famous for his 
             writing of <link xlink:href="http://catb.org/~esr/writings/cathedral-bazaar/">the "Cathedral and the Bazaar"</link> series
             was <link xlink:href="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html?page=last&amp;x-order=date&amp;x-maxdepth=0">interviewed
-                by O'ReillyNet</link>, and in the Interview he claimed that
+                by O’ReillyNet</link>, and in the Interview he claimed that
             BSD-style licences are preferable over the GPL and the LGPL.
             Raymond 
             later <link xlink:href="http://osnews.com/story/21192/ESR_GPL_No_Longer_Needed">continued this theme in a different interview</link>.
@@ -853,7 +853,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
                     message to the Hackers-IL mailing list (in English)</link>
                 (Hackers in this context are any software and software
                 development enthusiasts, not necessarily computer intruders)
-                arguing that using the GPL for one's software is standing
+                arguing that using the GPL for one’s software is standing
                 against the Hacker Attitude (as phrased by Eric S.
                 Raymond in his 
                 <link xlink:href="http://catb.org/~esr/faqs/hacker-howto.html">"How
@@ -878,7 +878,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             <para>
                 <link xlink:href="http://community.livejournal.com/shlomif_tech/931.html">This 
                     IRC (=Internet Relay Chat) discussion</link>
-                is illustrative of various people's opinions on the GPL
+                is illustrative of various people’s opinions on the GPL
                 and BSDL licences.
             </para>
         </listitem>
@@ -887,7 +887,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     <para>
         Of course, this is just the tip of the iceberg. Searching the
         web for <link xlink:href="http://www.google.com/search?q=gpl+bsd">"gpl bsd"</link> 
-        and similar searches will yield many other resources. So let's move
+        and similar searches will yield many other resources. So let’s move
         on to my recommendations.
     </para>
 
@@ -898,17 +898,17 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     </info>
     <para>
         Now that we covered the controversy of whether some licences are
-        open-source/free software or not, let's move on to which licence you
-        should choose. I'll start with some bad ideas of what not to do.
+        open-source/free software or not, let’s move on to which licence you
+        should choose. I’ll start with some bad ideas of what not to do.
     </para>
     <section xml:id="which-licence-non-open-source">
     <info>
         <title>Bad Idea No. 1: Choose a non-Open-Source Licence</title>
     </info>
         <para>
-            Well, I'm not sure it is a bad idea, but choosing a licence for a
+            Well, I’m not sure it is a bad idea, but choosing a licence for a
             non-FOSS program is out of the scope for this document.
-            I'm not going to stop you from trying, but neither can I help
+            I’m not going to stop you from trying, but neither can I help
             you with the licence choice. My best advice is to consult 
             a lawyer.
         </para>
@@ -923,16 +923,16 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             David A. Wheeler <link
                 xlink:href="http://www.dwheeler.com/essays/gpl-compatible.html">wrote 
                 about why it is important to pick a GPL-compatible licence
-            for one's software project</link>.
+            for one’s software project</link>.
         </para>
 
         <para> 
             Now, since version 2 of the GPL is incompatible with version
             3, and vice-versa (due to the additional restrictions imposed 
-            by version 3) you shouldn't choose GPLv2-only or GPLv3-only or
+            by version 3) you shouldn’t choose GPLv2-only or GPLv3-only or
             GPLv3-and-above, because some projects may be licensed only under
             one of them. Also, the version 3 of the LGPL is incompatible with 
-            the GPLv2, so you shouldn't choose it either.  
+            the GPLv2, so you shouldn’t choose it either.  
             GPL-version-2-or-above or LGPL-version-2.1-or-above should be 
             OK in this respect.
         </para>
@@ -945,7 +945,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     </info>
 
         <para>
-            You shouldn't phrase your own licence and hope it will be
+            You shouldn’t phrase your own licence and hope it will be
             considered open-source and GPL-compatible as there
             are plenty of 
             <link xlink:href="http://en.wikipedia.org/wiki/List_of_FSF_approved_software_licences">open-source 
@@ -967,7 +967,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </para>
 
         <para>
-            So, don't do that.
+            So, don’t do that.
         </para>
     </section>
 
@@ -985,7 +985,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             <link xlink:href="http://perlbuzz.com/2008/04/the-problem-with-same-terms-as-perl-licensing.html">covered
                 on Perlbuzz</link>
             and <link xlink:href="http://perlbuzz.com/2009/07/help-end-licensing-under-same-terms-as-perl-itself.html">covered 
-                there again</link>. I'm only going to summarise these
+                there again</link>. I’m only going to summarise these
             arguments here, and conclude by saying that using the Artistic
             Licence Version 2.0 or later, or a GPL-compatible permissive
             licence such as the MIT/X11 Licence would be preferable.
@@ -996,8 +996,8 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             changed several times since its inception - from a non-free licence,
             to the GPL, to a dual GPL and Artistic licensing. Furthermore, the
             Artistic license is not considered free and GPL compatible by the
-            Free Software Foundation, so it's not a wise choice, and the
-            GPL has its share of problems too (see below) so it's not a wise
+            Free Software Foundation, so it’s not a wise choice, and the
+            GPL has its share of problems too (see below) so it’s not a wise
             choice either.
         </para>
 
@@ -1009,7 +1009,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
     </info>
 
         <para>
-            It is not wise to licence one's code under the Public Domain
+            It is not wise to licence one’s code under the Public Domain
             because the Public Domain is not widely understood or
             accepted internationally, and because licensing code under the
             Public Domain may not be possible. 
@@ -1019,7 +1019,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </para>
 
         <para>
-            If you're interested in making your software
+            If you’re interested in making your software
             as-close-to-PD-as-possible, you should choose the <link
                 xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 
                 Licence</link> or a similar licence such as 
@@ -1038,7 +1038,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             The GNU General Public Licence (GPL) and GNU Lesser General
             Public Licence (LGPL) contain many additional restrictions to the 
             concept of copyleft, and are very mis-understood, over-hyped, and 
-            don't maintain compatibility with newer versions. Even 
+            don’t maintain compatibility with newer versions. Even 
             <link xlink:href="http://discuss.joelonsoftware.com/default.asp?joel.3.642822.36">the LGPL is 
             reportedly problematic</link>
         </para>
@@ -1056,15 +1056,15 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             is that code distributed under it, must remain under it, and
             that one must release the source code for publicly-distributed 
             binaries that link against it. However, from my understanding, as
-            opposed to the GPL, this source code doesn't have to be completely
-            free. It doesn't have the additional
+            opposed to the GPL, this source code doesn’t have to be completely
+            free. It doesn’t have the additional
             restrictions on licences compatibility that the GPL has, nor does
             it have the other obscure and not-well-understood restrictions
             that the GPL has.
         </para>
 
         <para> 
-            I read the GPLv2 originally once and couldn't understand it. The
+            I read the GPLv2 originally once and couldn’t understand it. The
             LGPLv2 or the GPLv3 would likely prove to be more problematic.
             I find it harder to trust lengthy documents that I am unable to
             understand. I had no problem understanding the Sleepycat licence,
@@ -1075,7 +1075,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         <para>
             One fact I should note is that the GPL often stands against
             <link xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html#attitude">the 
-                Hacker's attitude</link> as presented by Eric Raymond
+                Hacker’s attitude</link> as presented by Eric Raymond
             in <link xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html">the
             document "How to become a Hacker"</link>. It states that:
         </para>
@@ -1117,7 +1117,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
 
                 Once before, someone had contributed a patch to add boolean
                 operations, but that patch relied on a polygon clipping library
-                provided under an incompatible license. There's little more
+                provided under an incompatible license. There’s little more
                 frustrating than having a solution in hand, only to be
                 hamstrung by legal problems. Even though it was an important
                 feature for us, we regretfully postponed development of it into
@@ -1132,7 +1132,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             <link xlink:href="http://en.wikipedia.org/wiki/OpenBSD">OpenBSD</link>
             project are now re-implementing a lot of software that is only 
             available as GPL or similar licences, under BSD-style licences,
-            due to OpenBSD's more pedantic licensing policy. 
+            due to OpenBSD’s more pedantic licensing policy. 
         </para>
 
         <para>
@@ -1155,7 +1155,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         I personally accept the fact that some developers would like to use
         weak copyleft or strong copyleft licences for their works. However,
         I still prefer to use the MIT X11 Licence for works that I
-        originate and now I'd like to explain why:
+        originate and now I’d like to explain why:
     </para>
 
     <itemizedlist>
@@ -1175,8 +1175,8 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         <listitem>
             <para>
                 By using such permissive licences, one has much fewer worries
-                on how people can violate one's licence. While I commonly
-                hear about GPL violations, I don't ever recall hearing
+                on how people can violate one’s licence. While I commonly
+                hear about GPL violations, I don’t ever recall hearing
                 about a violation of a permissive, BSD-style licence. 
             </para>
         </listitem>
@@ -1194,7 +1194,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </listitem>
         <listitem>
             <para>
-                By using such a licence one can boast that one's program
+                By using such a licence one can boast that one’s program
                 is Public Domain / BSD-style-licensed.
             </para>
         </listitem>
@@ -1215,7 +1215,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         received <link
             xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/5017">a
             comment</link> about the fact that GPL (or other strong copyleft
-        licences) prevent threats to free and open source software. I'd like to
+        licences) prevent threats to free and open source software. I’d like to
         reply to it here.
 
     </para>
@@ -1238,7 +1238,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
             sessions. But unfortunately, the only X server available for
             Windows was commercial software (Exceed), which could happen
             because X was BSD-licensed and not GPL. Users (at the time, most
-            had corporate or university funds - they weren't home users) bit
+            had corporate or university funds - they weren’t home users) bit
             the bullet and paid. It took literally years before a free X server
             for Windows became available.
 
@@ -1262,7 +1262,7 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         Furthermore, If X11 had been initiated under a non-BSD-style-licence, 
         then it is possible it would not have become as ubiquitous as it is in 
         the UNIX world, thus making it irrelevant to port it to Windows in the
-        first place. We can't tell that for sure, but I think it is a
+        first place. We can’t tell that for sure, but I think it is a
         possibility.
     </para>
 
@@ -1288,20 +1288,20 @@ embedded systems, that we don't need to kill the prospering web-apps market too.
         </blockquote>
 
 <para>
-Let's imagine that you wrote a great Freecell solver library, but you suck at
+Let’s imagine that you wrote a great Freecell solver library, but you suck at
 UI and failed to create a graphical game based on that library, and wish that
 someone created a UI on top of your library. If your library is BSD, someone
 could create this UI but make it commercial and not even you can use it.
 If your library is GPL, this person is forced to either make his code public
 (so you and your friends can use it) or pay you for a new license.
-Which of those scenarios will make you happier? I can't see how the GPL isn't
+Which of those scenarios will make you happier? I can’t see how the GPL isn’t
 better in this scenario.
 </para>
 
 </blockquote>
 
 <para>
-    Well, first of all I should note that that is a lot of "if"'s. When I 
+    Well, first of all I should note that that is a lot of "if"’s. When I 
     started working on Freecell Solver, there were already plenty of graphical 
     Freecell games, possibly with support for other variants of Solitaire. And
     there were also several open-source ones, including some very polished
@@ -1352,7 +1352,7 @@ better in this scenario.
     <listitem>
         <para>
             Decide that developing a graphical game only to later release it
-            as free software won't be worth his time, and as a result not
+            as free software won’t be worth his time, and as a result not
             develop it at all.
         </para>
     </listitem>
@@ -1360,11 +1360,11 @@ better in this scenario.
 </orderedlist>
 
 <para>
-    In all of these cases, we won't have a graphical game as FOSS.
+    In all of these cases, we won’t have a graphical game as FOSS.
 </para>
 
 <para>
-    Finally I'd rather have a proprietary derived work than no derived
+    Finally I’d rather have a proprietary derived work than no derived
     program at all, or that instead someone will duplicate my effort in
     creating a BSD-style or a proprietary replacement for my work.
 </para>

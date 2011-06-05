@@ -435,7 +435,7 @@ $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/perfect-it
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
 
-$(T2_DEST)/philosophy/perl-newcomers-v1/index.html: $(DOCBOOK5_RENDERED_DIR)/usability-of-perl-world-for-newcomers.xhtml
+$(T2_DEST)/philosophy/perl-newcomers/v1/index.html: $(DOCBOOK5_RENDERED_DIR)/usability-of-perl-world-for-newcomers.xhtml
 
 $(T2_DEST)/philosophy/case-for-file-swapping/revision-3/index.html: $(DOCBOOK4_RENDERED_DIR)/case-for-file-swapping-rev3.html
 

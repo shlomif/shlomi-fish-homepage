@@ -1,24 +1,25 @@
 #include '../template.wml'
 #include "toc_div.wml"
-<latemp_subject "&quot;Fortunes Mania&quot; : A Community Quotes Sites" />
+
+<latemp_subject "“Fortunes Mania” : A Community Quotes Sites" />
 
 <toc_div />
 
 <h2 id="intro">Introduction</h2>
 
 <p>
-When I told some people on <a href="irc://irc.freenode.net/#perl">Freenode's
+When I told some people on <a href="irc://irc.freenode.net/#perl">Freenode’s
 \#perl</a> that I had an idea for a 
 <a href="http://www.paulgraham.com/web20.html">Web 2.0</a> site, someone
-told me: "write it down, and then burn it". But I still think it’s a good
+told me: “write it down, and then burn it”. But I still think it’s a good
 idea. So here goes.
 </p>
 
-<h2 id="what_is">What is "Fortunes Mania"</h2>
+<h2 id="what_is">What is “Fortunes Mania”</h2>
 
 <p>
 In a nutshell, Fortunes Mania is a community sharing sites for quotations,
-(or "fortune cookies" or "fortunes" as they are called in UNIX speak. People
+(or “fortune cookies” or “fortunes” as they are called in UNIX speak. People
 can create feeds of quotes, syndicate and aggregate them, tag and categorise
 them, rate and comment on them, etc.
 </p>
@@ -31,10 +32,10 @@ quotations sites online</a>, but most of them are not user editable. Now,
 <a href="http://www.wikiquote.org/">The wikiquotes</a> are the most prominent
 user-editable quotations wikis I know. However, being wikis they suffer from
 being free-form and the fact one has to parse the pages to effectively
-transform them into UNIX fortunes' collection or any other machine readable
+transform them into UNIX fortunes’ collection or any other machine readable
 form. They also suffer from lack of proper categorisation: quotes
 that are attributed to people are kept on the people pages, and relatively
-few are categorised into the topics' pages.
+few are categorised into the topics’ pages.
 </p>
 
 <p>
@@ -52,7 +53,7 @@ The site will allow users to register an account, and start publishing
 fortunes. The fortunes can be categorised into several categories and
 sub-categories, as well as tagged. There will be streams of fortunes (with
 the appropriate RSS/Atom feeds) that can be controlled and/or moderated 
-by groups of editors (using the site's permission system).
+by groups of editors (using the site’s permission system).
 </p>
 
 <h3 id="formats">The Formats</h3>
@@ -70,7 +71,7 @@ formats), HTML snippets, the various Wiki formats, etc.
 
 <p>
 Thus, it makes sense to define an intermediate format (defined by an XML
-grammar) for the exchange of fortunes. The "Fortunes Mania" system will allow 
+grammar) for the exchange of fortunes. The “Fortunes Mania” system will allow 
 input in any of the input formats, will convert each one to the intermediate
 format (while possibly keeping the original) and will export it to the final 
 formats on demand. I also believe this format needs to have structured markup.
@@ -93,9 +94,9 @@ non-open-source clients to emerge eventually.
 
 <p>
 The site should supply a way to export to and from Wikiquote and other such
-quotes sites. For more information refer to Joel on Software's 
-<a href="http://www.joelonsoftware.com/articles/fog0000000052.html">"Let me
-go Back" essay</a>.
+quotes sites. For more information refer to Joel on Software’s 
+<a href="http://www.joelonsoftware.com/articles/fog0000000052.html">“Let me
+go Back” essay</a>.
 </p>
 
 <h2 id="commercial_value">Commercial Value</h2>

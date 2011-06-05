@@ -12,7 +12,7 @@ temp_filter()
 
 temp_only_from_reached()
 {
-    perl -lne 'print if m{t2-homepage/philosophy/computers/high-quality-software}..1'
+    perl -lne 'print if m{t2-homepage/philosophy/computers/when-c-is-best}..1'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 
@@ -38,5 +38,6 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'philosophy/computers/web/create-a-great-personal-homesite/index\.html' | # in code
     grep -vP 'philosophy/computers/web/create-a-great-personal-homesite/rev2\.html' | # in code
     grep -vP 'philosophy/computers/web/online-communities/index\.html' | # in code
+    grep -vP 'philosophy/foss-other-beasts/revision-2/' | # in code
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > \
         ascii_quotes_results.txt

@@ -36,16 +36,16 @@
 Many people will hear about Linux in the news, being the cool new operating
 system that everyone can use free of charge. Those who become interested in
 it enough or actually start working with it, will learn that it is made out
-of many independent "open source" components. Now, after enough time
-(perhaps very soon), they will learn that the term "free software" (where
-free is free as in "free speech" and not free as in "free beer") can be
-used as an alternative to the adjective "open source". But what is open
+of many independent “open source” components. Now, after enough time
+(perhaps very soon), they will learn that the term “free software” (where
+free is free as in “free speech” and not free as in “free beer”) can be
+used as an alternative to the adjective “open source”. But what is open
 source and free software? What distinguishes them from other software that
 is available to the public at no cost or is distributed as shareware?
 </para>
 
 <para>
-Note that the terms "free software" and "open source" would be used
+Note that the terms “free software” and “open source” would be used
 throughout this article to refer to the same phenomenon. I do not religiously
 stick to either term.
 </para>
@@ -53,7 +53,10 @@ stick to either term.
 </section>
 
 
-<section xml:id="licences_and_proprietary_software"><info><title>Software Licences and "Proprietary" Software</title></info>
+<section xml:id="licences_and_proprietary_software">
+    <info>
+        <title>Software Licences and “Proprietary” Software</title>
+    </info>
 
 <para>
 This section deals with the legal details of distributing software, and the
@@ -74,7 +77,7 @@ Copyright involves making sure that the software as given to someone else
 other than its originator or copyright holder will be restricted in use or
 modification. An originator can outline what he believes to be a proper use
 of the software in a code licence (which applies to the code) or an
-"End-User License Agreement" (or EULA which applies to given binaries).
+“End-User License Agreement” (or EULA which applies to given binaries).
 </para>
 
 <para>
@@ -82,7 +85,7 @@ Proprietary software, i.e: such whose use, modification or distribution is
 encumbered, was a relatively new phenomenon if you take a look at the old
 history of computing. It actually started even before the time when
 Microsoft, then a very small company wrote Altair Basic, and Bill Gates
-published the famous (or possibly infamous) <link xlink:href="http://www.blinkenlights.com/classiccmp/gateswhine.html">"Open Letter to Altair Hobbyists"</link>. 
+published the famous (or possibly infamous) <link xlink:href="http://www.blinkenlights.com/classiccmp/gateswhine.html">“Open Letter to Altair Hobbyists”</link>. 
 In fact, IBM and other companies distributed proprietary software for 
 mainframe systems, a long time before the Personal Computer revolution.
 </para>
@@ -218,7 +221,7 @@ it was pretty close). UNIX eventually sported the C programming language,
 which enabled writing code that would run on many platforms easier, and the
 UNIX sources included a C compiler that was itself written in C. Around the
 early 70’s the only computers capable of running UNIX were main-frames and
-the so-called "mini-computers" so there initially weren’t as many
+the so-called “mini-computers” so there initially weren’t as many
 installations as only large organizations could support buying computers to
 deploy UNIX on. 
 </para>
@@ -247,8 +250,9 @@ commonplace and the number of UNIX installations exploded.
 The University of California at Berkeley (a.k.a UCB) forked its own version of 
 AT&amp;T UNIX and started re-writing parts of the code, and incorporating many
 changes of its own. The parts that the Berkeley developers wrote on their
-own had originally been licensed UCB and kept as non-FOSS (= "free and open
-source software") "All Rights Reserved" licence. The BSD system became very 
+own had originally been licensed to UCB and kept as non-FOSS (= 
+“free and open source software”) “All Rights Reserved” licence. The BSD system 
+became very 
 popular (perhaps even more than the AT&amp;T one).
 </para>
 
@@ -264,11 +268,14 @@ components and add-ons of UNIX on the Internet.
 
 </section>
 
-<section xml:id="history_gnu_free_soft"><info><title>Richard Stallman, the GNU Project, and the "Free Software" term</title></info>
+<section xml:id="history_gnu_free_soft">
+    <info>
+        <title>Richard Stallman, the GNU Project, and the “Free Software” term</title>
+    </info>
 
 <para>
 After a while, the legal restrictions posed on AT&amp;T subsided, and it
-started to "smell money" and believe it can do better selling UNIX
+started to “smell money” and believe it can do better selling UNIX
 commercially. It created the AT&amp;T System V’s system, touted it was better
 than AT&amp;T UNIX and the BSDs, and sold it to vendors. System V was sold
 under a very restrictive licence, that forced them to hold the source code for
@@ -285,8 +292,8 @@ other software distributed under similar licences.
 </para>
 
 <para>
-To answer this threat, a new phenomenon sprang into existence: the "free
-software" movement, the GNU project and the copyleft licences, all led by
+To answer this threat, a new phenomenon sprang into existence: the “free 
+software” movement, the GNU project and the copyleft licences, all led by
 one dynamic personality: Richard M. Stallman.
 </para>
 
@@ -294,7 +301,7 @@ one dynamic personality: Richard M. Stallman.
 Richard Stallman (aka RMS) published 
 <link xlink:href="http://www.gnu.org/gnu/manifesto.html">the 
 GNU Manifesto</link> in 1984, which
-coined the term "free software", and explained the rationale behind it.
+coined the term “free software”, and explained the rationale behind it.
 The Manifesto was also a creed for the the GNU project which aimed to be a
 complete UNIX-compatible replacement for UNIX systems, while being
 completely original work. The software of the GNU project was released as
@@ -328,7 +335,7 @@ Restrictive Integration by Other Code bases - GPL code can only be linked
 against code with free software licences that match some criteria. 
 <footnote xml:id="viral">
 <para>
-At one point in time, this property had been sometimes referred to as "viral",
+At one point in time, this property had been sometimes referred to as “viral”,
 which appear to have originated from Microsoft’s early criticism of it.
 However, while the GPL requires programs that use it to be licensed
 under compatible FOSS licences, the worst thing that can happen is that
@@ -353,7 +360,7 @@ Encouraged by Stallman’s growing momentum behind the Free Software Foundation
 and the GNU project, Berkeley University changed the
 licence of the parts that they have originated, to a <link 
 xlink:href="http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29">a 
-free software licence which is now called "The Original ‘BSD License’"</link>,
+free software licence which is now called “The Original ‘BSD License’”</link>,
 which qualified as free software, but as opposed to the GPL was 
 public-domain-like.
 <footnote xml:id="orig_bsd_clause">
@@ -390,7 +397,7 @@ legal limbo.
 
 <para>
 In 1992, Linus Torvalds, then a student at Helsinki University, began
-writing the "Linux" kernel - a 32-bit kernel for UNIX-like operating
+writing the “Linux” kernel - a 32-bit kernel for UNIX-like operating
 systems. The kernel development advanced rapidly and was released under the
 GPL licence starting from an early stage. To complete the system and make
 it into a usable UNIX system, the Linux developers used various existing
@@ -400,9 +407,9 @@ scratch.
 </para>
 
 <para>
-From an early stage, this entire system was dubbed "Linux" as well.
-Richard Stallman instead has advocated the name <link xlink:href="http://www.gnu.org/gnu/linux-and-gnu.html">"GNU/Linux"</link> (pronounced
-"ggnoo-Linux") which acknowledges the fact that the GNU project
+From an early stage, this entire system was dubbed “Linux” as well.
+Richard Stallman instead has advocated the name <link xlink:href="http://www.gnu.org/gnu/linux-and-gnu.html">“GNU/Linux”</link> (pronounced
+“ggnoo-Linux”) which acknowledges the fact that the GNU project
 contributed the lion’s share of the system. (as well as some pre-requisites
 of the Linux kernel itself).  Most people haven’t consistently followed this
 piece of advice.
@@ -421,16 +428,16 @@ the acceptance of free software into the mainstream.
 <para>
 <link xlink:href="http://www.debian.org/">Debian GNU/Linux</link> was a Linux distribution that was eventually endorsed
 by the GNU project. One of the things that made it unique was the fact it
-distinguished between "free" and "non-free" packages as far as the
+distinguished between “free” and “non-free” packages as far as the
 user is concerned. The 
 <link xlink:href="http://www.debian.org/social_contract.html">guidelines 
 for determining which software is
-"free" in the Debian sense</link> were phrased by Bruce Perens.
+“free” in the Debian sense</link> were phrased by Bruce Perens.
 </para>
 
 <para>
 Note that they deviate from the Free Software Definition (which was published
-later on) and include some licences that are not free. I.e: "Debian Free" is a 
+later on) and include some licences that are not free. I.e: “Debian Free” is a 
 superset of free software according to the Stallman definition.
 </para>
 
@@ -442,20 +449,23 @@ Guidelines formed the basis for the open-source definition.
 </section>
 
 
-<section xml:id="history_open_source"><info><title>The "Cathedral and the Bazaar" and the coining of the term "Open-Source"</title></info>
+<section xml:id="history_open_source">
+<info>
+<title>The “Cathedral and the Bazaar” and the coining of the term “Open-Source”</title>
+</info>
 
 <para>
 Eric Steven Raymond (now also known as ESR) wrote 
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">an essay titled
-"The Cathedral and the Bazaar"</link>, and
+“The Cathedral and the Bazaar”</link>, and
 presented it to the Linux Kongress at 21 May 1997. This contrasted the Bazaar
-way of managing a software project to the old "Cathedral" way, that was
+way of managing a software project to the old “Cathedral” way, that was
 used by almost all non-free projects and (until that point at least) by most
 free ones.
 </para>
 
 <para>
-"Bazaar" projects are characterised by frequent and incremental release
+“Bazaar” projects are characterised by frequent and incremental release
 schedules, treating the users as co-developers, and generally getting a lot
 of peer review, ideas, input and cooperation. Despite a common misconception, 
 the core group of the project contributors still usually remains relatively
@@ -465,20 +475,20 @@ small except for some of the larger projects.
 <para>
 The article is considered one of the seminal works on free software, and was
 followed by other works in what is collectively known as the
-<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">"Cathedral
-    and the Bazaar" (or CatB for short) series</link>. It has made
+<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">“Cathedral 
+and the Bazaar” (or CatB for short) series</link>. It has made
 Eric Raymond a famous person, at least among the community of free software
 hackers.
 </para>
 
 <para>
 In February 3, 1998, in Palo Alto Califronia, a brainstorming session
-which Raymond attended, coined the term "open source" as an alternative
-for "free software". Their incentive was that when talking to a
+which Raymond attended, coined the term “open source” as an alternative
+for “free software”. Their incentive was that when talking to a
 businessman, either free software will be understood as software that costs
 nothing, or it will be associated with the relatively anti-Capitalistic views
 held by Richard Stallman (who claims non-free software is immoral).
-They decided that the term "open source" would be a better candidate for
+They decided that the term “open source” would be a better candidate for
 acceptance in the corporate world.
 </para>
 
@@ -495,24 +505,23 @@ Guidelines.
 </para>
 
 <para>
-The term "open source" caught on. Very soon, Richard Stallman decided to
+The term “open source” caught on. Very soon, Richard Stallman decided to
 reject it on the premise that the freedom of software is more important than
-the "openness" of its code. While he does not oppose the openness of the
+the “openness” of its code. While he does not oppose the openness of the
 code, and acknowledges the fact that free software is open source as well,
 its freedom remained more important. For more about this stance, read the 
 document
-<link xlink:href="http://www.gnu.org/philosophy/free-software-for-freedom.html">"Free 
-    Software for Freedom"</link> on the GNU web-site.
+<link xlink:href="http://www.gnu.org/philosophy/free-software-for-freedom.html">“Free Software for Freedom”</link> on the GNU web-site.
 </para>
 
 <para>
-While some people have continuously sticked to the term "free software" and a
-few others converted to using "open source" entirely, most knowledgeable
+While some people have continuously sticked to the term “free software” and a
+few others converted to using “open source” entirely, most knowledgeable
 people don’t completely reject either term, and use each one whenever they
-see fit. Nevertheless, the term "open source" is more commonly used by both
+see fit. Nevertheless, the term “open source” is more commonly used by both
 open source developers and even more so by non open source developers. See
 <link xlink:href="http://catb.org/~esr/writings/terminology/">Eric Raymond’s 
-"Terminology Wars"</link> for more details.
+“Terminology Wars”</link> for more details.
 </para>
 
 </section>
@@ -597,7 +606,7 @@ browser</link> from the home of the Mozilla Foundation (and now also the
 Mozilla Corporation), is an open-source,  modern and sophisticated browser,
 that has been virally publicised by various means such as 
 <link xlink:href="http://www.spreadfirefox.com/">the various
-"Spread Firefox" campaigns</link>. It has become popular and as of July
+“Spread Firefox” campaigns</link>. It has become popular and as of July
 2006 has passed the 10% usage in web site hits according to some firms,
 and in some countries much more so. It is still gaining some market share,
 even if it’s growth has declined somewhat.
@@ -630,10 +639,10 @@ of open content</emphasis>.
 <link xlink:href="http://fc-solve.berlios.de/oss-fs/docbook/">The
 first edition of this article</link>, included 
 <link xlink:href="http://fc-solve.berlios.de/oss-fs/docbook/oss-fs/x181.html">a 
-small section about "open content"</link>, where I concluded by saying that
-"Only time can tell whether other elements of open source besides its freely 
+small section about “open content”</link>, where I concluded by saying that
+“Only time can tell whether other elements of open source besides its freely 
 distributable nature will have an impact in other areas of creative arts 
-besides software.". Now, about 3 years later, I can say that by all means
+besides software.”. Now, about 3 years later, I can say that by all means
 open content has already proven to be a great success.
 </para>
 
@@ -697,18 +706,22 @@ open or semi-open content is everywhere.
 </section>
 
 
-<section xml:id="difference_of_views"><info><title>Difference between "Open Source" and "Free Software".</title></info>
+<section xml:id="difference_of_views">
+<info>
+<title>Difference between “Open Source” and “Free Software”.</title>
+</info>
 
 <para> 
-The term "free software" was coined by Richard Stallman, and is
+The term “free software” was coined by Richard Stallman, and is
 associated with the <link xlink:href="http://www.fsf.org/">Free Software
-Foundation</link>.  The term "open source" was coined by Eric Raymond and is
+Foundation</link>.  The term “open source” was coined by Eric Raymond and is
 advocated by him and other people at the 
 <link xlink:href="http://www.opensource.org/">Open Source Initiative</link>. 
 Nevertheless, those who consider themselves in either camp, much less those 
 who use either or both terms, do not necessarily hold the opinions of these 
-figures. Therefore I will not globally associate them with the "free software 
-movement" or the "open source movement" because both include many users and 
+figures. Therefore I will not globally associate them with the 
+“free software movement” or the “open source movement” because both include
+many users and 
 developers with heterogeneous opinions on the subject. Moreover, they are 
 pretty much one and the same.  
 </para>
@@ -778,7 +791,7 @@ In short: write code, use whatever tool you wish, and be happy.”
 <para>
 The most prominent figure who holds this view is Linus Torvalds, but there
 are many others, some of them quite prominent. Such figures, however, tend
-to be less loud than the "religious" advocates of the other two views,
+to be less loud than the “religious” advocates of the other two views,
 and thus it may seem that they are at a minority. Part of the reason is
 that many of them inherently tend to value productive code and decisions
 over advocacy.
@@ -805,8 +818,9 @@ its philosophy.
 <para>
 The terms themselves are used interchangeably by many people. “Open
 source” has become more common, partly because free software can mean
-software that is given free of charge. (the standard "free as in free
-speech" or "free as in free beer" distinction). Moreover, both the Free
+software that is given free of charge. (the standard 
+“free as in free speech” or “free as in free beer” distinction). Moreover,
+both the Free
 Software Foundation, and the people associated with the Open Source
 Institute are on friendly terms with each other and answer questions, give
 feedback, accept contributions, etc. from each other or from people that do
@@ -1028,9 +1042,9 @@ This analogy was rejected and treated in a semi-jokily manner by most people
 who did not oppose Capitalism as a whole. A true understanding of why
 open-source does not contradict the liberal ideals of Capitalism and
 Individualism originated from Eric Raymond’s 
-<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">"Homesteading the Noosphere"</link>
+<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">“Homesteading the Noosphere”</link>
 and 
-<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</link>, 
+<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">“The Magic Cauldron”</link>, 
 which are a very good read anyway you look at it.
 </para>
 
@@ -1054,16 +1068,17 @@ After all, we enjoy the fruits of the many people who contributed to open
 source, the Wikipedias and other Wikimedia projects and various other free
 or mostly free works of culture and code, which would probably not have
 happened without them being free. As a result, even if open-source is indeed
-communistic or socialistic, it is nevertheless "good for the people" so
+communistic or socialistic, it is nevertheless “good for the people” so
 to speak and should not be discouraged.
 </para>
 
 <para>
 All of that put aside, it is clear that copyright laws do not and must not
-prevent people from applying not-fully-restrictive (nicknamed "All Rights
-Reserved") licences to their original works, so eventually there will be
-enough people who out of either desiring to <link xlink:href="http://www.shlomifish.org/philosophy/computers/open-source/gpl-bsd-and-suckerism/">"help their
-neighbour" 
+prevent people from applying not-fully-restrictive (nicknamed 
+“All Rights Reserved”) licences to their original works, so eventually there 
+will be enough people who out of either desiring to 
+<link xlink:href="http://www.shlomifish.org/philosophy/computers/open-source/gpl-bsd-and-suckerism/">“help their
+neighbour” 
 and/or out of motives that have more an aspect of a rational 
 self-interest</link> and without being forced to do so against their will,
 will be willing to release their works under open or semi-open licences.
@@ -1072,11 +1087,14 @@ will be willing to release their works under open or semi-open licences.
 </section>
 
 
-<section xml:id="out_of_work"><info><title>The "Programmers Will be out of Work" because of Free Software Myth</title></info>
+<section xml:id="out_of_work">
+<info>
+<title>The “Programmers Will be out of Work” because of Free Software Myth</title>
+</info>
 
 <para>
 It is unlikely that assuming Open Source becomes the dominant
-paradigm, it will imply that programmers will "starve to death". As 
+paradigm, it will imply that programmers will “starve to death”. As 
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/ar01s03.html">Eric
 Raymond notes in the Magic Cauldron</link>, the vast majority of software
 applications out there are one without a sale value: be it software that large
@@ -1118,7 +1136,7 @@ for something else entirely that is more productive.
 <section xml:id="myths_about_open_source"><info><title>Other Myths about Linux and Open Source Software</title></info>
 
 <para>
-One can very often hear many myths or generally accepted "truths" about
+One can very often hear many myths or generally accepted “truths” about
 open source software and Linux, some of which negative and other positive.
 Examples include:
 </para>
@@ -1173,9 +1191,8 @@ public.
 Myth #5 is not entirely true. While it is possible to fork a piece of
 open-source software, most packages have not been actually forked. Eric
 Raymond covers the customs that relate to forking a package in
-<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">"Homesteading the Noosphere"</link>, and Rick Moen explains why when
-major packages forked, it was not necessarily a bad thing in his <link xlink:href="http://www.linuxmafia.com/~rick/essays/forking.html">"Fear of
-    Forking essay"</link>.
+<link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">“Homesteading the Noosphere”</link>, and Rick Moen explains why when
+major packages forked, it was not necessarily a bad thing in his <link xlink:href="http://www.linuxmafia.com/~rick/essays/forking.html">“Fear of Forking essay”</link>.
 </para>
 
 <para>
@@ -1519,7 +1536,7 @@ develop, and which they perfectly naturally wish to sell for money.
 The fact that open-source developers develop similar goods and distribute
 them for no cost or little cost under a less restrictive open-source
 licence, does not invalidate this fact. I agree with most of what Eric
-Raymond said in the "Cathedral and the Bazaar" series, part of which is
+Raymond said in the “Cathedral and the Bazaar” series, part of which is
 that proprietary software is problematic. However, I think that a world
 dominated by free software (which I hope to see soon) can inhibit some
 proprietary software without it having a generally harmful effect on the
@@ -1529,7 +1546,7 @@ computer world at large.
 <para>
 I do not hate Microsoft, just think that their systems are much inferior to
 GNU/Linux, which I like better. I still use Windows when I find it
-appropriate, or when I need to. (I’m not an "I only use free software"
+appropriate, or when I need to. (I’m not an “I only use free software”
 kind of guy). I realise the superiority of Linux may have stemmed from the
 fact it is free software, but otherwise don’t use it only because it is
 free software. I just like to work with it better.
@@ -1558,7 +1575,7 @@ environment, we will see a much less abusive Microsoft.
 </para>
 
 <para>
-My general ideology used to be a variation of "in for free beer". Use,
+My general ideology used to be a variation of “in for free beer”. Use,
 code, and be guiltless and happy. A recent encounter with a free for some
 uses proprietary software whose licence changed and I became unable to use
 it any longer, slightly modified it. In the future, I’ll be more careful in
@@ -1569,14 +1586,14 @@ it gets the job done.
 </para>
 
 <para>
-My stance regarding the war between the term "open source" and "free
-software" is that I use either one when I find it appropriate, and am not
+My stance regarding the war between the term “open source” and 
+“free software” is that I use either one when I find it appropriate, and am not
 fanatical to either term. It depends on the context of using it, who I
 speak to, what I wish to imply, what sounds right, or the first thing that
-pops out of my head. I usually prefer saying "Linux" over "GNU/Linux"
+pops out of my head. I usually prefer saying “Linux” over “GNU/Linux”
 because it is shorter, and more snappy and people will understand what I
-talk about. I do sometimes resort to "GNU/Linux", but not very often, and
-use the term a "GNU system" even more.
+talk about. I do sometimes resort to “GNU/Linux”, but not very often, and
+use the term a “GNU system” even more.
 </para>
 
 <para>
@@ -1591,7 +1608,7 @@ I don’t normally refer to Linux as “GNU/Linux” despite the fact that a lar
 and integral part of it is derived from the GNU project, for marketing 
 reasons. GNU/Linux is longer than Linux and does not add more information,
 just a lot of pseudo-ideology. Add that to the fact that many people will 
-pronounce it "djee-enn-you-slash-Linux", when they first see it, and you’ll 
+pronounce it “djee-enn-you-slash-Linux”, when they first see it, and you’ll 
 get something that makes a very bad marketing name. Here’s a nice quote from
 Linus Torvalds on why “Linux” is
 superior to “386BSD” (a 90’s BSD clone that was free software as well):
@@ -1607,7 +1624,7 @@ superior to “386BSD” (a 90’s BSD clone that was free software as well):
 &gt; No.  That’s it.  The cool name, that is.  We worked very hard on
 &gt; creating a name that would appeal to the majority of people, and it
 &gt; certainly paid off: thousands of people are using linux just to be able
-&gt; to say "OS/2? Hah.  I’ve got Linux.  What a cool name".  386BSD made the
+&gt; to say “OS/2? Hah.  I’ve got Linux.  What a cool name”.  386BSD made the
 &gt; mistake of putting a lot of numbers and weird abbreviations into the
 &gt; name, and is scaring away a lot of people just because it sounds too
 &gt; technical.
@@ -1641,13 +1658,24 @@ permissive licences, and they don’t seem to suffer a lot from it.
 
 </section>
 
-<section xml:id="references"><info><title>Links and References</title></info>
+<section xml:id="references">
+<info>
+<title>Links and References</title>
+</info>
 
     
 
-<section xml:id="resources_for_further_reading"><info><title>Resources for Further Reading</title></info>
+<section xml:id="resources_for_further_reading">
+<info>
+<title>Resources for Further Reading</title>
+</info>
     
-    <section xml:id="ref_resources_gnu"><info><title><link xlink:href="http://www.fsf.org/philosophy/philosophy.html">The GNU Project Philosophy</link></title></info>
+    <section xml:id="ref_resources_gnu">
+    <info>
+    <title>
+    <link xlink:href="http://www.fsf.org/philosophy/philosophy.html">The GNU Project Philosophy</link>
+    </title>
+    </info>
         
 
         <para>
@@ -1665,19 +1693,20 @@ permissive licences, and they don’t seem to suffer a lot from it.
         <para>
             Contains many interesting articles and writing about Open Source,
             from one of its most prominent figures, including the immortal
-            "The Cathedral and the Bazaar Series".
+            “The Cathedral and the Bazaar Series”.
         </para>
         <itemizedlist>
             <listitem>
                 <para>
-                    <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">The Cathedral and the Bazaar</link> - a document explaining the "Bazaar"
+                    <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">The Cathedral and the Bazaar</link> - a document explaining the 
+                    “Bazaar”
                     way of managing a project.
                 </para>
             </listitem>
             <listitem>
                 <para>
                     <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">Homesteading the Noosphere</link> - an analysis of the 
-                    "ownership" customs of the open-source developers community
+                    “ownership” customs of the open-source developers community
                     and their culture in general.
                 </para>
             </listitem>
@@ -1690,7 +1719,7 @@ permissive licences, and they don’t seem to suffer a lot from it.
             <listitem>
                 <para>
                     <link xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become a Hacker</link> - a how-to document explaining how to become 
-                    a "hacker", an expert and enthusiastic computer developer.
+                    a “hacker”, an expert and enthusiastic computer developer.
                 </para>
             </listitem>
             <listitem>
@@ -1722,7 +1751,7 @@ permissive licences, and they don’t seem to suffer a lot from it.
             <listitem>
                 <para>
                     <link xlink:href="http://www.joelonsoftware.com/articles/FiveWorlds.html">Five Worlds</link> -
-                    explains the differences between the different "worlds"
+                    explains the differences between the different “worlds”
                     of software development and the rules that apply to each.
                 </para>
             </listitem>
@@ -1795,7 +1824,7 @@ Stallman for some factual corrections on earlier versions of this document.
 
 <para>
 And naturally thanks to Richard Stallman for starting the GNU project, Eric
-Raymond for writing the "Cathedral and the Bazaar" series and so all the
+Raymond for writing the “Cathedral and the Bazaar” series and so all the
 way back to thanking God for creating the universe.
 </para>
 

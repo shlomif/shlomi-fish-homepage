@@ -7,7 +7,8 @@ temp_filter()
     grep -vP '(humour/human-hacking/hebrew-v2|humour/humanity/buy-the-fish-in-hebrew|humour/humanity/ongoing-text-hebrew\.html|humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text)' |
     grep -vP '^(dest/t2-homepage/index\.html)' |
     grep -vP '^(dest/t2-homepage/old-news\.html)' |
-    grep -vP '^(dest/t2-homepage/lecture/)'
+    grep -vP '^(dest/t2-homepage/lecture/)' |
+    grep -vP '^(dest/t2-homepage/philosophy/politics/define-zionism/heb/index\.html)'
 }
 
 temp_only_from_reached()

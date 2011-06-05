@@ -16,8 +16,8 @@ where I learned that they were some features in it that I missed. The
 <p>
 Well, GIMP now requires gtk+-2.4.x and part of the reason were the much
 anticipated and improved file choice dialog. Having installed it, I now
-have to use it when I'm editing files using GIMP. I also was looking forward
-for something quite decent. So here's my review.
+have to use it when I’m editing files using GIMP. I also was looking forward
+for something quite decent. So here’s my review.
 </p>
 
 <p>
@@ -40,17 +40,17 @@ Now here are the problems I encountered with it:
 
 <ol>
 <li>
-After entering the home directory, the upper components ("home" and
-"shlomi") are deleted and there's no way to go up except for selecting
-the "Filesystem" bookmark. (which leads you straight to "/").
+After entering the home directory, the upper components (“home” and
+“shlomi”) are deleted and there’s no way to go up except for selecting
+the “Filesystem” bookmark. (which leads you straight to “/”).
 </li>
 <li>
 There is no up button. You need to press the last component at the top,
 to go up.
 </li>
 <li>
-There is no entry for filename. You can't <b>type the filename</b> for
-goodness' sake. Furthermore, even pressing the letter keys in the listbox
+There is no entry for filename. You can’t <b>type the filename</b> for
+goodness’ sake. Furthermore, even pressing the letter keys in the listbox
 does nothing. The keyboard can be used with tab, shift-tab, up, down, etc,
 but I want more.
 </li>
@@ -66,25 +66,25 @@ The files filter only has descriptions and no extensions. This may be a
 GIMP-specific problem.
 </li>
 <li>
-There are no columns in the files list-view except "Name" and "Modified", 
-and there's no way to add more. You can't even tell if a file is a file
+There are no columns in the files list-view except “Name” and “Modified”, 
+and there’s no way to add more. You can’t even tell if a file is a file
 or a directory!
 </li>
 </ol>
 
 <p>
 In short, this is one of the worst file choosing dialogs, I have ever laid
-eyes on. It's worse than Gtk+ 1.2.x's (checked now with GIMP 1.2); worse
-than Windows and even Mozilla. And it’s a far cry from KDE's file-choice
+eyes on. It’s worse than Gtk+ 1.2.x’s (checked now with GIMP 1.2); worse
+than Windows and even Mozilla. And it’s a far cry from KDE’s file-choice
 dialog, which is the best one I know of.
 </p>
 
 <p>
 It is possible that the GNOME 2.4.x file-choice dialog is better. 
-I can't tell, because I did not try GNOME 2.4.x yet. In any case, this is
+I can’t tell, because I did not try GNOME 2.4.x yet. In any case, this is
 another proof that the GNOME people are clueless in regard to how to design 
 a good GUI. They could if they wanted to, but instead they are following
-their HIG (or Horrible (ok, "Human") Interface Guidelines), which leads them
+their HIG (or Horrible (ok, “Human”) Interface Guidelines), which leads them
 into greater and greater depths of unusability. Even the conversion to the
 Spatial interface have made flavourgusted, because I recall it was the first 
 thing I cancelled in Windows 95. (and never enabled it afterwards). And in

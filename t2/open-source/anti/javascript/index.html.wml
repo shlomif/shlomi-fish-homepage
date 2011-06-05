@@ -1,5 +1,5 @@
 #include '../template.wml'
-<latemp_subject "Don't Abuse JavaScript!" />
+<latemp_subject "Don’t Abuse JavaScript!" />
 
 <p>
 <b>Last Updated:</b> 28-January-2010
@@ -51,20 +51,20 @@ keyword being optional.
 <h3 id="line-break">Line breaks terminate expressions</h3>
 
 <p>
-Line breaks (in addition to ";") terminate expressions. This can cause
+Line breaks (in addition to “;”) terminate expressions. This can cause
 many subtle errors.
 </p>
 
 <h3 id="closures">Starting a closure is not convenient</h3>
 
 <p>
-One needs to type "(function () { function() { ... } })" to start a closure.
+One needs to type “(function () { function() { ... } })” to start a closure.
 </p>
 
 <h3 id="foreach">Foreach Loop</h3>
 
 <p>
-JavaScript's foreach loop loops on the indices of the list 
+JavaScript’s foreach loop loops on the indices of the list 
 instead of its values.
 </p>
 
@@ -72,13 +72,13 @@ instead of its values.
 
 <ul>
 <li>
-<a href="http://www.youtube.com/watch?v=hQVTIJBZook">"JavaScript: The Good 
-Parts" Tech Talk</a> - should be called "JavaScript: The Bad Parts".
+<a href="http://www.youtube.com/watch?v=hQVTIJBZook"> “JavaScript: The Good Parts” Tech Talk</a> - 
+should be called “JavaScript: The Bad Parts”.
 </li>
 <li>
-<a href="http://weblogs.mozillazine.org/roadmap/archives/2008/04/popularity.html">"Popularity"</a> (via 
-<a href="http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html">chromatic's 
-"A Short History of the Development of JavaScript"</a>):<br />
+<a href="http://weblogs.mozillazine.org/roadmap/archives/2008/04/popularity.html">“Popularity”</a> (via 
+<a href="http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html">chromatic’s 
+“A Short History of the Development of JavaScript”</a>):<br />
 <ul>
 <li>
 <blockquote>
@@ -96,10 +96,11 @@ lament the missed opportunity for Tcl.
 <blockquote>
 <p>
 Ok, back to JavaScript popularity. We know certain Ajax libraries are popular.
-Is JavaScript popular? It's hard to say. Some Ajax developers profess (and
+Is JavaScript popular? It’s hard to say. Some Ajax developers profess (and
 demonstrate) love for it. Yet many curse it, including me. I still think of it
-as a quickie love-child of C and Self. Dr. Johnson's words come to mind: "the
-part that is good is not original, and the part that is original is not good."
+as a quickie love-child of C and Self. Dr. Johnson’s words come to mind: 
+“the part that is good is not original, and the part that is original is not
+good.”
 </p>
 </blockquote>
 </li>
@@ -108,18 +109,19 @@ part that is good is not original, and the part that is original is not good."
 </li>
 
 <li>
-<a href="http://www.youtube.com/watch?v=-yDS1eGfuWQ">"Upcoming Changes to the 
-JavaScript Language"</a> - about ECMAScript 4.0, while detailing many
+<a href="http://www.youtube.com/watch?v=-yDS1eGfuWQ">
+“Upcoming Changes to the JavaScript Language”</a> - about ECMAScript 4.0, while detailing many
 of the current shortcomings of JavaScript.
 </li>
 
 <li>
 <a href="http://blogs.perl.org/users/jhannah_mutation_grid/2010/11/javascript-scoping-perls.html">Jay @ Mutation Grid: 
-"JavaScript's scoping != Perl's"</a> (4-November-2010) 
+“JavaScript’s scoping != Perl’s”</a> (4-November-2010) 
 </li>
 
 <li>
-<a href="http://www.jwz.org/blog/2010/10/every-day-i-learn-something-new-and-stupid/">jwz: "Everyday I learn something new… and stupid"</a> - about JavaScript's
+<a href="http://www.jwz.org/blog/2010/10/every-day-i-learn-something-new-and-stupid/">jwz: 
+“Everyday I learn something new… and stupid”</a> - about JavaScript’s
 numbers and integers.
 </li>
 

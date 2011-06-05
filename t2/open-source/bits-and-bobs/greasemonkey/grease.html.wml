@@ -36,18 +36,18 @@ repositories, so they can be accessed using the svn command line client.
 </p>
 
 <p>
-So far it works on <a href="http://developer.berlios.de/">BerliOS</a>'s
+So far it works on <a href="http://developer.berlios.de/">BerliOS</a>’s
 ViewVC and <a href="http://sourceforge.net/">SourceForge</a> ones,
 but support for more can be added.
 </p>
 
 <h2 id="eliminate-from-rss"><a href="get-rid-of-from-rss.user.js">Get Rid
-of "from=rss" in the URL</a></h2>
+of “from=rss” in the URL</a></h2>
 
 <p>
 I am always annoyed that when I follow links in the RSS feeds of 
 <a href="http://slashdot.org/">Slashdot</a> or other Slash-based sites,
-I'm getting a "?from=rss" or "&amp;from=rss" CGI parameter at the URL. 
+I’m getting a “?from=rss” or “&amp;from=rss” CGI parameter at the URL. 
 This later implies more work for me when I want to link to them. 
 </p>
 
@@ -85,7 +85,7 @@ Title Generator</a></h2>
 
 <p>
 This script is intended for a specialised purpose, and doesn’t add to the
-user experience, so I didn't put it on userscripts.org. What this script does
+user experience, so I didn’t put it on userscripts.org. What this script does
 is generate an entry with basic information that can be used for my 
 MediaWiki-based transcription of the 
 <a href="http://www.ozyandmillie.org/">Ozy and Millie</a> cartoons on each
@@ -103,19 +103,19 @@ href="mediawiki-edit-ozy-and-millie-transcripts.user.js">Ozy
 and Millie MediaWiki Transcripting Aid</a></h2>
 
 <p>
-I'm using MediaWiki to prepare a transcript for the "Ozy and Millie"
+I’m using MediaWiki to prepare a transcript for the <i>Ozy and Millie</i>
 comics. This script does auto-completion for several addresses by the
 common characters based on their first letters.
 </p>
 
 <p>
-So, for example "*Oz" Becomes "* '''Ozy''': ", and "**Ms" becomes
-"** '''Ms. Mudd'''". There's a complete list of mappings in the "var
-ids_to_fullnames" mapping in the file.
+So, for example “*Oz” Becomes “* '''Ozy''': ”, and “**Ms” becomes
+“** '''Ms. Mudd'''”. There’s a complete list of mappings in the 
+“var ids_to_fullnames” mapping in the file.
 </p>
 
 <p>
-Since this script is also intended for a specialised purpose, I haven't 
+Since this script is also intended for a specialised purpose, I haven’t 
 uploaded it to userscripts.org either.
 </p>
 

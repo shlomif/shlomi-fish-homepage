@@ -36,7 +36,7 @@ Last Updated:
 <p>
 I started working in <a href="http://www.elpas.com/">Elpas</a> after I
 graduated from high school, back in 1996, and had some time left until I was 
-supposed to join the Israeli Defense Force (which I didn't eventually, as you 
+supposed to join the Israeli Defense Force (which I didn’t eventually, as you 
 will see). So I started working there to kill the time, because I was very 
 bored.
 </p>
@@ -54,7 +54,7 @@ piece of equipment is located, as well as organisations with similar needs.
 <p>
 At first I started writing some simulations for this that ran on 
 <a href="http://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11 or 
-"Windows for Workgroups"</a>. Eventually I was also assigned to work on the
+“Windows for Workgroups”</a>. Eventually I was also assigned to work on the
 software that concentrated the data from the EIRIS network and presented it
 to the user. 
 </p>
@@ -69,7 +69,7 @@ Elpas developed. Next, we wanted to eliminate the dependence on the SCO UNIX
 system.
 </p>
 
-<h2 id="start">Let's start coding!</h2>
+<h2 id="start">Let’s start coding!</h2>
 
 <p>
 I had a rough idea of what was required. So what I did was to gradually 
@@ -83,12 +83,12 @@ name for an array in which all elements are placed one after the other.
 
 <p>
 I started doing it and made some progress. However, then I was told that
-they'd rather I didn't use some kind of proprietary vector based lookup, but
-a "standard database" such as Informix, Oracle, etc. We didn't have one like
+they’d rather I didn’t use some kind of proprietary vector based lookup, but
+a “standard database” such as Informix, Oracle, etc. We didn’t have one like
 that so they told me to start with Microsoft Access.
 </p>
 
-<h2 id="access">Let's start coding with Access</h2>
+<h2 id="access">Let’s start coding with Access</h2>
 
 <p>
 Access... we had Access 2.0, and I had to find a way to work against it from
@@ -99,10 +99,10 @@ in C.
 </p>
 
 <p>
-What can I tell you? It was slow, it kept crashing, and it didn't work too
+What can I tell you? It was slow, it kept crashing, and it didn’t work too
 well. Eventually we got a consultant. He said he thinks Borland Delphi would
 be the perfect platform for what we needed to do, but also told us they were
-working with ODBC ("Open Data-Base Connectivity") to access the data from 
+working with ODBC (“Open Data-Base Connectivity”) to access the data from 
 Windows.
 </p>
 
@@ -117,7 +117,7 @@ eventually did it. So I converted the code to use ODBC.
 It was a bit faster than using DDE and NetDDE, but was still slow and still
 crashed a lot. We thought that we might need a better database but then we got
 a few other consultants who brought us to a realisation: since we needed to
-query the database in real time, we couldn't afford to construct SQL queries
+query the database in real time, we couldn’t afford to construct SQL queries
 send them to an SQL server that will parse them, process them relatively
 inefficiently, and then return the results over a stream which will need to 
 be processed and parsed (to say nothing of API overhead). We needed something
@@ -150,10 +150,10 @@ to O(N**2).
 
 <p>
 I finished the work some time before the date most of the other people at my 
-office went to the CeBIT conference to present our products. I didn't travel
+office went to the CeBIT conference to present our products. I didn’t travel
 to Germany for it, and during the conference, I still came to work, to
 continue working on many of my priorities. My father and I still said to
-each other that "When the cats are away, the mice go out and play.".
+each other that “When the cats are away, the mice go out and play.”.
 </p>
 
 <p>

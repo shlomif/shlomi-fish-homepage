@@ -1,5 +1,4 @@
-<!-- Converted by db4-upgrade version 1.0 -->
-
+<?xml version='1.0' encoding='UTF-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en-GB">
     
 <info>
@@ -91,7 +90,7 @@ mainframe systems, a long time before the Personal Computer revolution.
 <para>
 The PC revolution, however, made the situation more critical. Soon,
 computers became faster, more powerful, with larger memory, and more common
-as time went by. At the moment, there are 100's of millions of Pentiums and
+as time went by. At the moment, there are 100s of millions of Pentiums and
 other computers out there, and millions of newer computers are sold each year.
 </para>
 
@@ -115,7 +114,7 @@ It is not the only place where free software can be used. It is in fact
 possible to turn a Windows installation into a Linux-like GNU system as
 well (see <link 
     xlink:href="http://www.cygwin.com/">Cygwin</link> for instance) or run 
-many native Microsoft Windows open-source programs on one's Windows 
+many native Microsoft Windows open-source programs on one’s Windows 
 installation.
 </para>
 
@@ -218,8 +217,8 @@ with the source included. (that licence did not qualify as open-source but
 it was pretty close). UNIX eventually sported the C programming language,
 which enabled writing code that would run on many platforms easier, and the
 UNIX sources included a C compiler that was itself written in C. Around the
-early 70's the only computers capable of running UNIX were main-frames and
-the so-called "mini-computers" so there initially weren't as many
+early 70’s the only computers capable of running UNIX were main-frames and
+the so-called "mini-computers" so there initially weren’t as many
 installations as only large organizations could support buying computers to
 deploy UNIX on. 
 </para>
@@ -270,7 +269,7 @@ components and add-ons of UNIX on the Internet.
 <para>
 After a while, the legal restrictions posed on AT&amp;T subsided, and it
 started to "smell money" and believe it can do better selling UNIX
-commercially. It created the AT&amp;T System V's system, touted it was better
+commercially. It created the AT&amp;T System V’s system, touted it was better
 than AT&amp;T UNIX and the BSDs, and sold it to vendors. System V was sold
 under a very restrictive licence, that forced them to hold the source code for
 themselves. Even cooperation between two different vendors was not allowed.
@@ -330,7 +329,7 @@ against code with free software licences that match some criteria.
 <footnote xml:id="viral">
 <para>
 At one point in time, this property had been sometimes referred to as "viral",
-which appear to have originated from Microsoft's early criticism of it.
+which appear to have originated from Microsoft’s early criticism of it.
 However, while the GPL requires programs that use it to be licensed
 under compatible FOSS licences, the worst thing that can happen is that
 they will lose the ability to legally use the GPL-licensed code, while
@@ -350,11 +349,11 @@ core GNU system would always remain free as well.
 </para>
 
 <para>
-Encouraged by Stallman's growing momentum behind the Free Software Foundation
+Encouraged by Stallman’s growing momentum behind the Free Software Foundation
 and the GNU project, Berkeley University changed the
 licence of the parts that they have originated, to a <link 
 xlink:href="http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29">a 
-free software licence which is now called "The Original 'BSD License'"</link>,
+free software licence which is now called "The Original ‘BSD License’"</link>,
 which qualified as free software, but as opposed to the GPL was 
 public-domain-like.
 <footnote xml:id="orig_bsd_clause">
@@ -404,8 +403,8 @@ scratch.
 From an early stage, this entire system was dubbed "Linux" as well.
 Richard Stallman instead has advocated the name <link xlink:href="http://www.gnu.org/gnu/linux-and-gnu.html">"GNU/Linux"</link> (pronounced
 "ggnoo-Linux") which acknowledges the fact that the GNU project
-contributed the lion's share of the system. (as well as some pre-requisites
-of the Linux kernel itself).  Most people haven't consistently followed this
+contributed the lion’s share of the system. (as well as some pre-requisites
+of the Linux kernel itself).  Most people haven’t consistently followed this
 piece of advice.
 </para>
 
@@ -509,10 +508,10 @@ document
 <para>
 While some people have continuously sticked to the term "free software" and a
 few others converted to using "open source" entirely, most knowledgeable
-people don't completely reject either term, and use each one whenever they
+people don’t completely reject either term, and use each one whenever they
 see fit. Nevertheless, the term "open source" is more commonly used by both
 open source developers and even more so by non open source developers. See
-<link xlink:href="http://catb.org/~esr/writings/terminology/">Eric Raymond's 
+<link xlink:href="http://catb.org/~esr/writings/terminology/">Eric Raymond’s 
 "Terminology Wars"</link> for more details.
 </para>
 
@@ -561,7 +560,7 @@ solution for the desktop.
 </para>
 
 <para>
-Apple's Mac OS X was released and is based on Darwin, which is an
+Apple’s Mac OS X was released and is based on Darwin, which is an
 open-source BSD-derived system. Mac OS X can run UNIX applications natively,
 and supports the X-Windows system, which is the de-facto GUI framework for
 UNIXes (including Linux). It is therefore a popular UNIX choice for
@@ -601,7 +600,7 @@ that has been virally publicised by various means such as
 "Spread Firefox" campaigns</link>. It has become popular and as of July
 2006 has passed the 10% usage in web site hits according to some firms,
 and in some countries much more so. It is still gaining some market share,
-even if it's growth has declined somewhat.
+even if it’s growth has declined somewhat.
 </para>
 
 <para>
@@ -654,7 +653,7 @@ publishing and use.
 </para>
 
 <para>
-Creative Commons' licences have proven to be very popular among many web 
+Creative Commons’ licences have proven to be very popular among many web 
 publishers for use in their works.
 </para>
 </listitem>
@@ -751,7 +750,7 @@ sure certain software is not abused. (Note, however that even Raymond
 recently voiced 
 <link xlink:href="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html">his opinion</link> that the GPL is no longer a wise choice as licence for
 new code). It is not immoral to use proprietary
-software, it's just risky. Using or producing software that is not 100%
+software, it’s just risky. Using or producing software that is not 100%
 open-source but pretty close, can be a good idea, depending on its licence
 and the general attitude of its developers.
 </para>
@@ -768,7 +767,7 @@ This approach basically says this:
 “I like free software because I can get a lot of useful software without
 charge. I may like contributing to free software because it helps other
 people, makes me happy and may indirectly benefit me technically or
-financially. But proprietary software is perfectly valid as well, if it's
+financially. But proprietary software is perfectly valid as well, if it’s
 done right, and I may choose to use it or contribute to it.
 </para>
 
@@ -980,7 +979,7 @@ its source. This is an even more radical deviation from the correct meaning.
 <para>
 I believe the term open-source is a bit dangerous in this regard. Then
 again, free software may not automatically be associated with freedom and
-liberty, so it isn't perfect either. But I guess finding a description that
+liberty, so it isn’t perfect either. But I guess finding a description that
 accurately describes it in a short space is not very possible, so these
 terms will have to do.
 </para>
@@ -992,10 +991,10 @@ terms will have to do.
 
 <section xml:id="myths_and_issues"><info><title>Myths about Open Source and Other Issues</title></info>
    
-<section xml:id="sharing_and_communism"><info><title>Sharing software huh? Isn't it a bit like Communism?</title></info>
+<section xml:id="sharing_and_communism"><info><title>Sharing software huh? Isn’t it a bit like Communism?</title></info>
 
 <para>
-This analogy is not new but very deceptive. First of all, there's nothing
+This analogy is not new but very deceptive. First of all, there’s nothing
 anti-Capitalistic about sharing something voluntarily. While in a
 Capitalistic country, goods are generally sold and have to be paid for,
 people can
@@ -1015,7 +1014,7 @@ encumbered by it being used by a million people instead of a thousand.
 
 <para>
 Furthermore, by making a software package open-source and keeping it so, it is
-possible to gain other economical and psychological advantages: you'll make
+possible to gain other economical and psychological advantages: you’ll make
 sure it is maintained, gain feedback and admiration of others, and may be able
 to eventually receive input and contributions from the outside. Distributing
 software as commercial proprietary packages does not automatically
@@ -1028,7 +1027,7 @@ work at all, and not be out-competed by something better.
 This analogy was rejected and treated in a semi-jokily manner by most people
 who did not oppose Capitalism as a whole. A true understanding of why
 open-source does not contradict the liberal ideals of Capitalism and
-Individualism originated from Eric Raymond's 
+Individualism originated from Eric Raymond’s 
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">"Homesteading the Noosphere"</link>
 and 
 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</link>, 
@@ -1083,7 +1082,7 @@ Raymond notes in the Magic Cauldron</link>, the vast majority of software
 applications out there are one without a sale value: be it software that large
 organization like banks, insurance companies or miltaries use to power their
 critical systems, customizations, scripts or code used within smaller
-organizations (Microsoft Access customizations, spreadsheets' formulae and
+organizations (Microsoft Access customizations, spreadsheets’ formulae and
 macros, Perl or shell scripts),
 embedded software whose source code is not released to the public, software
 that powers web-sites and was not released to the public, etc.
@@ -1166,7 +1165,7 @@ nevertheless had very poor security records out of poor programming
 practices. Some closed-source offerings, on the other hand, have a very
 good security record. In most packages, security bugs occurred due to sloppy
 programming practice, or lack of auditing of the code. They can be mostly
-avoided whether or not the package's source code is available to the
+avoided whether or not the package’s source code is available to the
 public.
 </para>
 
@@ -1263,13 +1262,13 @@ which contains a list of “cases where the anti-circumvention provisions of the
 Many source code licences were approved as free software or open source
 by either the Free Software Foundation or the Open Source Initiative. The
 problem is that if one encounters a software package that is distributed
-under one of these licences, they will have to become aware of this licence's
+under one of these licences, they will have to become aware of this licence’s
 peculiar restrictions. Furthermore, it will be difficult to tell whether it 
 will be compatible with code under a different licence.
 </para>
 
 <para>
-As a result, there's the problem of
+As a result, there’s the problem of
 <link xlink:href="http://en.wikipedia.org/wiki/License_proliferation">licence 
 proliferation</link>.
 </para>
@@ -1318,7 +1317,7 @@ Another case where it happened was <link xlink:href="http://www.osnews.com/story
 
 Once before, someone had contributed a patch to add boolean
 operations, but that patch relied on a polygon clipping library
-provided under an incompatible license. There's little more
+provided under an incompatible license. There’s little more
 frustrating than having a solution in hand, only to be
 hamstrung by legal problems. Even though it was an important
 feature for us, we regretfully postponed development of it into
@@ -1337,7 +1336,7 @@ Furthermore, the
 <link xlink:href="http://en.wikipedia.org/wiki/OpenBSD">OpenBSD</link>
 project are now re-implementing a lot of software that is only 
 available as GPL or similar licences, under BSD-style licences,
-due to OpenBSD's more pedantic licensing policy. 
+due to OpenBSD’s more pedantic licensing policy. 
 </para>
 
 </listitem>
@@ -1366,7 +1365,7 @@ source code, to encourage its reusability.
 In an O’Reilly Media 
 <link xlink:href="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html">interview</link> with him, back in 2005, Eric Raymond (who wrote the “Cathedral 
 and the Bazaar” and spearheaded the Open Source Initiative organisation)
-has voiced the opinion that “We don't need the GPL anymore” and that people
+has voiced the opinion that “We don’t need the GPL anymore” and that people
 should avoid using that licence for new projects. Naturally, some people still
 disagree.
 </para>
@@ -1414,7 +1413,7 @@ seen as the risk of BSD-style licensed software, but it is not completely
 absent with GPLed one (see the story of 
 <link xlink:href="http://en.wikipedia.org/wiki/Nessus_%28software%29">the
 Nessus Vulnerability scanner</link>). Even if the licence is a copyleft one,
-then there's a risk of the originators of the programs stopping to update
+then there’s a risk of the originators of the programs stopping to update
 them, and no one stepping up to maintain them instead.
 </para>
 
@@ -1481,19 +1480,19 @@ features, who feel demotivated by such an attitude.
 
 <para>
 Many people in the open-source community are known for their hostility towards
-people whom they don't like. I voiced some
+people whom they don’t like. I voiced some
 <link xlink:href="http://www.shlomifish.org/philosophy/perl-newcomers/">criticism</link>
 of the “usability” of the Perl Online World for Newcomers, and there are similar
 sentiments about problems in treating people in the
 <link xlink:href="http://tldp.org/HOWTO/Encourage-Women-Linux-HOWTO/">“HOWTO
-Encourage Women in Linux” document</link>. I've also witnessed how one 
+Encourage Women in Linux” document</link>. I’ve also witnessed how one 
 very important open-source project, which I was involved in, stagnated,
 because its developers were incredibly rude on their on-line forums and scared
 away most potential contributors.
 </para>
 
 <para>
-Such hostility may be detrimnetal to a project's success or the success of the
+Such hostility may be detrimnetal to a project’s success or the success of the
 open-source community in general.
 </para>
 
@@ -1530,20 +1529,20 @@ computer world at large.
 <para>
 I do not hate Microsoft, just think that their systems are much inferior to
 GNU/Linux, which I like better. I still use Windows when I find it
-appropriate, or when I need to. (I'm not an "I only use free software"
+appropriate, or when I need to. (I’m not an "I only use free software"
 kind of guy). I realise the superiority of Linux may have stemmed from the
-fact it is free software, but otherwise don't use it only because it is
+fact it is free software, but otherwise don’t use it only because it is
 free software. I just like to work with it better.
 </para>
 
 <para>
-I don't see Microsoft or other suppliers of proprietary software as enemies
+I don’t see Microsoft or other suppliers of proprietary software as enemies
 of the free software movement. I expect that people will continue to buy
 some proprietary software even after Linux and free software take over,
 assuming they do. I think Microsoft will eventually port their software to
 Linux if it gains enough market share. While they may lose the revenue
 generated from selling Windows and providing various services for it, I
-don't think they will disappear entirely. And they may be able to find
+don’t think they will disappear entirely. And they may be able to find
 different revenue streams.
 </para>
 
@@ -1562,9 +1561,9 @@ environment, we will see a much less abusive Microsoft.
 My general ideology used to be a variation of "in for free beer". Use,
 code, and be guiltless and happy. A recent encounter with a free for some
 uses proprietary software whose licence changed and I became unable to use
-it any longer, slightly modified it. In the future, I'll be more careful in
+it any longer, slightly modified it. In the future, I’ll be more careful in
 relying upon proprietary software, because it may become inaccessible to
-me, but otherwise still don't hold the vendors of it as immoral. I still
+me, but otherwise still don’t hold the vendors of it as immoral. I still
 use some not-entirely-free software because I like it and am used to it or
 it gets the job done.
 </para>
@@ -1581,21 +1580,21 @@ use the term a "GNU system" even more.
 </para>
 
 <para>
-The fact I don't stick to either open-source or free software, stems from
+The fact I don’t stick to either open-source or free software, stems from
 the fact that I respect both the Free Software Foundation, and the Open
 Source Institute, and believe that the free software movement and the open
 source movement is pretty much one and the same. I also like both terms. 
 </para>
 
 <para>
-I don't normally refer to Linux as “GNU/Linux” despite the fact that a large 
+I don’t normally refer to Linux as “GNU/Linux” despite the fact that a large 
 and integral part of it is derived from the GNU project, for marketing 
 reasons. GNU/Linux is longer than Linux and does not add more information,
 just a lot of pseudo-ideology. Add that to the fact that many people will 
-pronounce it "djee-enn-you-slash-Linux", when they first see it, and you'll 
-get something that makes a very bad marketing name. Here's a nice quote from
+pronounce it "djee-enn-you-slash-Linux", when they first see it, and you’ll 
+get something that makes a very bad marketing name. Here’s a nice quote from
 Linus Torvalds on why “Linux” is
-superior to “386BSD” (a 90's BSD clone that was free software as well):
+superior to “386BSD” (a 90’s BSD clone that was free software as well):
 </para>
 
 <blockquote>
@@ -1605,10 +1604,10 @@ superior to “386BSD” (a 90's BSD clone that was free software as well):
 &gt; &gt; Other than the fact Linux has a cool name, could someone explain why I
 &gt; &gt; should use Linux over BSD?
 &gt;
-&gt; No.  That's it.  The cool name, that is.  We worked very hard on
+&gt; No.  That’s it.  The cool name, that is.  We worked very hard on
 &gt; creating a name that would appeal to the majority of people, and it
 &gt; certainly paid off: thousands of people are using linux just to be able
-&gt; to say "OS/2? Hah.  I've got Linux.  What a cool name".  386BSD made the
+&gt; to say "OS/2? Hah.  I’ve got Linux.  What a cool name".  386BSD made the
 &gt; mistake of putting a lot of numbers and weird abbreviations into the
 &gt; name, and is scaring away a lot of people just because it sounds too
 &gt; technical.
@@ -1622,7 +1621,7 @@ Well, the name “GNU/Linux” is a step in the wrong direction in this regard.
 
 <para>
 As a developer, I try to use permissive licences (usually the MIT/X11 licence),
-for software packages I develop and distribute. I don't mind people making a
+for software packages I develop and distribute. I don’t mind people making a
 derived code proprietary much less
 integrating it inside proprietary products. If the original code, which I
 modify or derive from, is distributed under a different licence, I respect
@@ -1637,7 +1636,7 @@ mutually incompatible with the previously released version 2 of the GPL.
 I now believe that even if we distaste proprietary software, then copyleft 
 licences such as the GPL or the LGPL are not worth the trouble and cause
 more harm than good. There is a lot of open-source code out there under
-permissive licences, and they don't seem to suffer a lot from it. 
+permissive licences, and they don’t seem to suffer a lot from it. 
 </para>
 
 </section>
@@ -1660,7 +1659,7 @@ permissive licences, and they don't seem to suffer a lot from it.
         </para>
 
     </section>
-    <section xml:id="ref_resources_esr"><info><title><link xlink:href="http://www.catb.org/~esr/writings/">Eric S. Raymond's Writings</link></title></info>
+    <section xml:id="ref_resources_esr"><info><title><link xlink:href="http://www.catb.org/~esr/writings/">Eric S. Raymond’s Writings</link></title></info>
         
         
         <para>
@@ -1708,15 +1707,15 @@ permissive licences, and they don't seem to suffer a lot from it.
         <para>
             Joel Spolsky is a veteran software engineer that conveys his
             sometimes unusual views on software management and design in his
-            site. Please don't take them too seriously, because he obviously
-            doesn't either. Not all of his articles are relevant to the topic 
+            site. Please don’t take them too seriously, because he obviously
+            doesn’t either. Not all of his articles are relevant to the topic 
             hand and here is a selected few which are.  
         </para>
         <itemizedlist>
             <listitem>
                 <para>
                     <link xlink:href="http://www.joelonsoftware.com/articles/StrategyLetterV.html">Strategy Letter V</link> - 
-                    explains why big companies support open source and what's
+                    explains why big companies support open source and what’s
                     in it for them.
                 </para>
             </listitem>
@@ -1729,7 +1728,7 @@ permissive licences, and they don't seem to suffer a lot from it.
             </listitem>
         </itemizedlist>
     </section>
-    <section xml:id="ref_resources_david_wheeler"><info><title><link xlink:href="http://www.dwheeler.com/">David A. Wheeler's Site</link></title></info>
+    <section xml:id="ref_resources_david_wheeler"><info><title><link xlink:href="http://www.dwheeler.com/">David A. Wheeler’s Site</link></title></info>
         
         <para>
             A free software consultant and analyst which has many interesting 

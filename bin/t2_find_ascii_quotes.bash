@@ -44,5 +44,6 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' | # in code
     grep -vP 'philosophy/obj-oss/objectivism-and-open-source/' | # old
     grep -vP 'philosophy/politics/drug-legalisation/case-for-drug-legalisation/' | # old
+    grep -vP 'rindolf/rindolf-spec/' | # old and contains code
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > \
         ascii_quotes_results.txt

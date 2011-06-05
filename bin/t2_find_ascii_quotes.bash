@@ -8,7 +8,9 @@ temp_filter()
     grep -vP '^(dest/t2-homepage/index\.html)' |
     grep -vP '^(dest/t2-homepage/old-news\.html)' |
     grep -vP '^(dest/t2-homepage/lecture/)' |
-    grep -vP '^(dest/t2-homepage/philosophy/politics/define-zionism/heb/index\.html)'
+    grep -vP '^(dest/t2-homepage/philosophy/politics/define-zionism/heb/index\.html)' |
+    grep -vP '^(dest/t2-homepage/philosophy/politics/drug-legalisation/hebrew\.html)'
+    cat
 }
 
 temp_only_from_reached()
@@ -41,5 +43,6 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'philosophy/computers/web/online-communities/index\.html' | # in code
     grep -vP 'philosophy/foss-other-beasts/revision-2/' | # in code
     grep -vP 'philosophy/obj-oss/objectivism-and-open-source/' | # old
+    grep -vP 'philosophy/politics/drug-legalisation/case-for-drug-legalisation/' | # old
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > \
         ascii_quotes_results.txt

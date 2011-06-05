@@ -27,4 +27,5 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'open-source/projects/XML-Grammar/Fiction/index\.html' | # contains markup
     grep -vP 'open-source/projects/Spark/mission/' | # contains code
     grep -vP 'philosophy/by-others/mashhoor--10-reasons--hebrew\.html' | # contains code
+    grep -vP 'philosophy/computers/high-quality-software/index\.html$' | # old essay
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

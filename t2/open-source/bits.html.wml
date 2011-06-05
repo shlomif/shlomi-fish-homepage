@@ -61,8 +61,8 @@ allows it to compile with the latest Gtk+, and fixes some other annoyances.
 <p>
 What this little Perl script does is register an 
 <a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
-that whenever invoked displays a message of "/me is listening to My Artist -
-My Song" in the current channel. Feel free to make any use of it whatsoever 
+that whenever invoked displays a message of “/me is listening to My Artist -
+My Song” in the current channel. Feel free to make any use of it whatsoever 
 under the terms of the MIT X11 license. It queries either 
 <a href="http://amarok.kde.org/">Amarok</a> or <a href="http://www.xmms.org/">XMMS 1.x</a>.
 </p>
@@ -96,7 +96,7 @@ Scripts for <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a>.
 <p>
 Click on the Link to download or install the
 <a href="http://linkvisitor.mozdev.org/">LinkVisitor extension</a> for Firefox 
-2.0.x and below. Here's 
+2.0.x and below. Here’s 
 <a href="<bit_link "linkvisitor-firefox-2.0-patch.diff" />">the patch</a>
 against the CVS source.
 </p>
@@ -109,11 +109,11 @@ against the CVS source.
 
 <p>
 The format used for the distribution lists has changed from earlier versions
-of KDE's 
+of KDE’s 
 <a href="http://pim.kde.org/components/kaddressbook.php">KAddressBook</a> to
 the one supplied by kdepim-3.5.4. This Perl script can be used to do the porting
 automatically. Read the instructions at its top. Note that it will skip
-lists that have raw emails inside the distribution lists' directives. This
+lists that have raw emails inside the distribution lists’ directives. This
 script is available under the MIT X11 licence, with absolutely no warranty.
 </p>
 
@@ -158,7 +158,7 @@ Fluttering Flag</a></h2>
 <p>
 This is a fluttering flag, not quite unlike the one presented at the
 beginning of <a href="http://en.wikipedia.org/wiki/Unreal_(demo)">the
-Future Crew's Unreal Demo</a>, but still not as polished. It's one
+Future Crew’s Unreal Demo</a>, but still not as polished. It’s one
 self-contained ANSI C file, that requires <a href="http://www.libsdl.org/">the
 SDL (Simple DirectMedia Layer) Library</a>.
 </p>
@@ -176,8 +176,8 @@ This is a JavaScript script based on
 <a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily 
 reduced and evolved. It supplies use of the left and right arrow keys for
 moving between slides (<tt>&lt;li&gt;</tt> elements
-somewhere inside an element with a class named "<tt>point</tt>"). It also
-provides the "n" and "p" keys to follow the links with the appropriate
+somewhere inside an element with a class named “<tt>point</tt>”). It also
+provides the “n” and “p” keys to follow the links with the appropriate
 accesskey.
 </p>
 
@@ -216,7 +216,7 @@ Xfce Virtual Workspaces Number and Names</a></h2>
 
 <p>
 This command line Ruby script sets the names (and number) of the 
-Xfce desktop's <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual 
+Xfce desktop’s <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual 
 workspaces (also known as virtual desktop</a>. You can simply pass the names
 as arguments in the command line (possibly inside qoutes).
 </p>

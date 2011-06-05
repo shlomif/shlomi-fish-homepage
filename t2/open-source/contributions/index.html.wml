@@ -61,18 +61,18 @@ documentation</a> to make it clearer and easier to understand.
 
 <p>
 Mandriva is an open-source, desktop-oriented, distribution of the Linux
-operating system (sometimes known as "GNU/Linux"). I have been using Mandriva
-since Mandrake (Mandriva's previous name) 7.1 and have been enjoying it.
+operating system (sometimes known as “GNU/Linux”). I have been using Mandriva
+since Mandrake (Mandriva’s previous name) 7.1 and have been enjoying it.
 </p>
 
 <p>
-For a few years now, I've been using 
+For a few years now, I’ve been using 
 <a href="http://wiki.mandriva.com/en/Cooker">Mandriva Cooker</a>, which is
 the Mandriva bleeding edge distribution and have been reporting,
 triaging, fixing bugs or providing workarounds for them 
 as I encounter them. I am the user 
-"shlomif@iglu.org.il" on 
-<a href="https://qa.mandriva.com/">the Mandriva bugzilla</a> (here's 
+“shlomif@iglu.org.il” on 
+<a href="https://qa.mandriva.com/">the Mandriva bugzilla</a> (here’s 
 <a href="https://qa.mandriva.com/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=RESOLVED&amp;bug_status=REOPENED&amp;bug_status=VERIFIED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailqa_contact1=1&amp;emailcc1=1&amp;emaillongdesc1=1&amp;emailtype1=exact&amp;email1=shlomif%40iglu.org.il&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailqa_contact2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">a
 search for my user-ID there</a>). I know my way around building 
 <a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">RPM</a>
@@ -89,7 +89,7 @@ all the other contributors got a T-shirt with the Syscalltrack logo.
 </p>
 
 <p>
-Later on, I did some work on the project's web-site.
+Later on, I did some work on the project’s web-site.
 </p>
 
 <h2 id="www-form"><a href="http://web-cpan.berlios.de/modules/WWW-Form/">WWW::Form - a Perl Module 
@@ -149,12 +149,12 @@ Also see:
 
 <ul>
 <li>
-<a href="http://use.perl.org/~Shlomi+Fish/journal/29151">"Maintenance of 
-Error.pm"</a> - the blog entry that started it all.
+<a href="http://use.perl.org/~Shlomi+Fish/journal/29151">“Maintenance of
+Error.pm”</a> - the blog entry that started it all.
 </li>
 <li>
-<a href="http://use.perl.org/~Shlomi+Fish/journal/29210">"Error.pm - the 
-Conclusion"</a> - what happened afterwards.
+<a href="http://use.perl.org/~Shlomi+Fish/journal/29210">
+“Error.pm - the Conclusion”</a> - what happened afterwards.
 </li>
 </ul>
 
@@ -165,7 +165,7 @@ CPAN Module for Processing RSS</a></h2>
 After running into an XML::RSS bug, I submitted a patch for it, which was
 eventually integrated. I noticed the module had many open tickets, so I
 submitted patches to fix bugs (while adding regression tests to make sure
-they wouldn't be re-introduced). When I started contributing, the module in
+they wouldn’t be re-introduced). When I started contributing, the module in
 general suffered from poor code quality and a low test coverage. Together
 with the maintainer, I have gradually remedied the issues from which the
 module suffered.
@@ -176,7 +176,7 @@ In 4 January 2007, I received
 <a href="http://news.perl-foundation.org/2007/01/grants_awards.html">a
 grant from The Perl Foundation to continue working on XML::RSS</a>. In
 accordance with the grant, I increased the test coverage of XML::RSS to 100%
-and then heavily refactored and cleaned up the module's code. As a result, the
+and then heavily refactored and cleaned up the module’s code. As a result, the
 code quality of the module has heavily increased and it was made safer and more
 amenable for future changes. 
 </p>

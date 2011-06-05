@@ -6,14 +6,14 @@
 
 <li>
 The Windows 95 explorer can handle long filenames. The Windows 95
-"file manager" cannot. On Windows NT 4.0, both the explorer and the
-"file manager" handle long filenames.
+“file manager” cannot. On Windows NT 4.0, both the explorer and the
+“file manager” handle long filenames.
 </li>
 
 <li>
 The Edit command-prompt utility that comes with Windows 95 can
 handle long filenames and open more than one file at once. Windows NT
-4.0's Edit cannot.
+4.0’s Edit cannot.
 </li>
 
 <li>
@@ -27,15 +27,15 @@ the DJGPP distribution is supposed to program the wretched thing?)
 
 <li>
 Speaking of Edit: on all Windows 3.11, Windows 95, and Windows NT,
-Edit can handle files containing only "line-feed" characters at the end
+Edit can handle files containing only “line-feed” characters at the end
 of the line, (such as those originating from UNIXes) pretty well, and
-even converts them to CR-LF when saving (a nice "feature"). Notepad on
+even converts them to CR-LF when saving (a nice “feature”). Notepad on
 the other hand does not, and places many adjacent lines on one line.
 </li>
 
 <li>
-Notepad for Windows 95, as was Windows 3.11's Notepad, is limited
-and can only view files whose file-length does not exceed 64 KB. NT's
+Notepad for Windows 95, as was Windows 3.11’s Notepad, is limited
+and can only view files whose file-length does not exceed 64 KB. NT’s
 notepad can view files of any size.
 </li>
 

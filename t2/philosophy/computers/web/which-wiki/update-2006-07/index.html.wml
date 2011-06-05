@@ -8,7 +8,7 @@
 <p>
 Since I wrote the <a href="../">previous article</a>, I learned a lot more
 about wikis. Furthermore wiki spam has become much more of a problem, and 
-I'd like to detail some ways of fighting it. Without further ado: here it is.
+I’d like to detail some ways of fighting it. Without further ado: here it is.
 </p>
 
 <toc_div />
@@ -48,7 +48,7 @@ Last Updated:
 <p>
 One should note that UseModWiki has been unmaintained for a long time. However,
 it has been forked into <a href="http://www.oddmuse.org/">Oddmuse</a>, which
-was then heavily extended and improved. I didn't try it yet, but according to 
+was then heavily extended and improved. I didn’t try it yet, but according to 
 all reports, it should be better that UseModWiki. One should note that the
 MediaWiki syntax is backwards compatible with the UseModWiki one.
 </p>
@@ -126,8 +126,8 @@ Monitoring the <b>RSS/Atom Feeds</b>.
 Installing and enabling the <a href="http://meta.wikimedia.org/wiki/SpamBlacklist_extension">MediaWiki 
 SpamBlacklist extension</a>, and making sure the master list is updated (using
 a small cron job). Afterwards, I found it necessary to also maintain my own 
-private blacklist, with URLs that I've been spammed with (to prevent them from
-re-appearing). That's because the wikimedia blacklist has some latency.
+private blacklist, with URLs that I’ve been spammed with (to prevent them from
+re-appearing). That’s because the wikimedia blacklist has some latency.
 </p>
 </li>
 <li>
@@ -186,7 +186,7 @@ and POD can generate HTML, which means they can be fed to it in turn.
 MediaWiki has a 
 <a href="http://svn.wikimedia.org/viewvc/mediawiki/trunk/wiki2xml/">set of
 scripts named wiki2xml</a>, which converts the MediaWiki format to XML
-and from that to DocBook and many other formats. Finally there's 
+and from that to DocBook and many other formats. Finally there’s 
 <a href="http://fedoraproject.org/wiki/SummerOfCode/2006/MikkoVirkkilä">a Google
 Summer of Code project</a> for working on a MoinMoin to-and-from DocBook/XML
 conversion.

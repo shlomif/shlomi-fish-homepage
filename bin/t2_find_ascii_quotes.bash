@@ -39,5 +39,6 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'philosophy/computers/web/create-a-great-personal-homesite/rev2\.html' | # in code
     grep -vP 'philosophy/computers/web/online-communities/index\.html' | # in code
     grep -vP 'philosophy/foss-other-beasts/revision-2/' | # in code
+    grep -vP 'philosophy/obj-oss/objectivism-and-open-source/' | # old
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > \
         ascii_quotes_results.txt

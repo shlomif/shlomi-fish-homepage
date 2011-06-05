@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<latemp_subject "Ravensborg's Guild - A Logic Puzzle" />
+<latemp_subject "Ravensborg’s Guild - A Logic Puzzle" />
 
 <page_extra_head_elements>
 <link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css" 
@@ -18,14 +18,14 @@ and added an explanation of how to reach the solution.
 
 <p>
 I originally wrote this puzzle for a Role-Playing Game tournament of my
-friends' local RPG club, back when I was in high school. It does not require
+friends’ local RPG club, back when I was in high school. It does not require
 any knowledge in Fantasy Role Playing Games to solve.
 </p>
 
 <h2>The Puzzle Itself</h2>
 
 <p>
-There are five members inn the council of Ravensborg's Guild. Two of them
+There are five members inn the council of Ravensborg’s Guild. Two of them
 are thieves, two wizards and one warrior, that got there due to a wrong
 number. It is known that thieves always lie; wizards say one true statements
 and one false out of every two statements they utter, and warriors
@@ -34,7 +34,7 @@ always say the truth.
 
 <p>
 Can you find out according to the statements of the council members, the
-profession of each one and who is the guild's leader?
+profession of each one and who is the guild’s leader?
 </p>
 
 <table class="logic_sayings">
@@ -108,7 +108,7 @@ a wizard whose statement #1 is false, and his #2 statement is true.
 </p>
 
 <p>
-Rupert says that Lamber is a thief, so he's lying in his #1 statement. So
+Rupert says that Lamber is a thief, so he’s lying in his #1 statement. So
 he cannot be a warrior. Thus, Krenin and Walter are lying in their #2 and
 \#1 statements respectively , and they cannot be warriors either. So the only 
 one who can be a warrior is Simon.

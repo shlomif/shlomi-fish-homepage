@@ -1,4 +1,5 @@
 #include '../template.wml'
+
 <latemp_subject "Mathematical Analysis of the Toggle Squares Game" />
 <latemp_more_keywords "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" />
 
@@ -12,7 +13,7 @@ write in ASCII than in HTML. However, I will try to emphasize some
 stuff in the text with HTML formatting.</p>
 <p>I hope everything is clear to you. If you want clarification on
 something, send a message to 
-<mailto_link_to_self email="<main_email />" /> and I'll place
+<mailto_link_to_self email="<main_email />" /> and I’ll place
 the clarification on this page.</p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Shlomi Fish</p>
@@ -74,7 +75,7 @@ boards</a>
 
 <h2 id="One_Dimensional_Board">Analysis of a 1-D Toggle-board</h2>
 <pre>
-First, I'll prove some analogous statements about a one-dimensional
+First, I’ll prove some analogous statements about a one-dimensional
 toggle-squares board, i.e: conjectures that apply to the set of rows of size
 1*n and in which the presses are:
 110000 ,
@@ -86,7 +87,7 @@ toggle-squares board, i.e: conjectures that apply to the set of rows of size
       
 Mathematically, it can be treated as vectors that belong to the linear
 space (or vector field) {0,1}^n where the operations in the set {0,1} are
-XOR for '+' and AND for '*'.
+XOR for ‘+’ and AND for ‘*’.
 
 </pre>
 
@@ -107,7 +108,7 @@ If 1000000 can be solved then along with the press 110000...00 than
 111000...00 =
 -------------
 001000...00
-and from here it can be proved inductively that the vectors with all 0's
+and from here it can be proved inductively that the vectors with all 0s
 and one 1, are solveable. Since this is a basis of {1,0}^N then every state
 is solveable. (i.e contained in Sp{Presses} )
 
@@ -117,7 +118,7 @@ is solveable. (i.e contained in Sp{Presses} )
 
 <p>
 A 1-D toggle field of size N is solveable for every state if N = 3k
-or N = 3k+1 and isn't if N = 3k+2 for some non-negative integer
+or N = 3k+1 and isn’t if N = 3k+2 for some non-negative integer
 k.
 </p>
 
@@ -297,7 +298,7 @@ the presses of one column:
 110000
 
 and the same for every other column. Now, if we look on any row of cells,
-we will see that the "sticks" that were generated from the various columns
+we will see that the “sticks” that were generated from the various columns
 in that row are also the 1-D TogSqrs sequence. Because N=3k,3k+1 again,
 every row is solveable for all states, and therefore, the entire board is
 solveable for all states.
@@ -357,7 +358,7 @@ which is soon cleared to 000...000000000.
 
 This provides us with a method to clear rows by pressing cells in the row
 beneath them, and we can use it to clear all rows except the bottom one.
-Now, let's take a look at a situation in which there is a partially filled
+Now, let’s take a look at a situation in which there is a partially filled
 row, and above it, at least two empty ones. I will prove that clearing it
 by pressing the cells in the row above it, will make the two rows above it
 a duplicate of its original state. For example if the status was:
@@ -483,7 +484,7 @@ I think I can prove it by showing that the presses of a corner
 meaning is that any number of them other than zero XORed together will
 not generate the clear state.
 
-I'll demonstrate on a 5*5 board:
+I’ll demonstrate on a 5*5 board:
 
     |  |
   - 00000
@@ -492,7 +493,7 @@ I'll demonstrate on a 5*5 board:
   - 00000
     00000
 
-The '-'s and '|'s mark the relevant presses. Let's assume that a
+The ‘-’s and ‘|’s mark the relevant presses. Let’s assume that a
 certain number of presses in the square can form the clear state. If
 so, then Pr(4,4) cannot be one of them because it is the only press
 that can affect square (5,5). Moreover, Pr(3,4) and Pr(4,3) cannot be
@@ -523,7 +524,7 @@ that the number of moves it took me with it was greater than the number
 which was returned from my matrix-canonization program.
 
 However, I believe it is agreeable that it is the simplest algorithm
-(yet) regarding "CPU" requirement and growing complexity, and has the
+(yet) regarding “CPU” requirement and growing complexity, and has the
 advantage that it can be utilized without the aid of a computer.
 
 </pre>

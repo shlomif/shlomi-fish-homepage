@@ -143,7 +143,7 @@ in general. It is a must read for every person living in the 21st century.
 <p>
 This book presents a theory on the evolution of human consciousness that sounds
 fantastic at first, but that the author backs with a lot of evidence.
-Essentially, consciousness (or rather "sentience") is a learned layer that is
+Essentially, consciousness (or rather “sentience”) is a learned layer that is
 not necessary for normal operation. Furthermore, all humans up to around 
 1300 BC were completely void of consciousness, when they developed it out
 of necessity, starting at the Near East.
@@ -303,9 +303,9 @@ a very engaging way. I bought it and enjoyed it.
                     Note that programmers who don’t know how to program Perl at all yet, cannot use it 
                     in order to learn the language. Instead, it is
                     recommended, that they first learn Perl and only then 
-                    read "Programming Perl". For learning Perl, see 
+                    read “Programming Perl”. For learning Perl, see 
                     <a href="http://perl-begin.org/">the Perl Beginners’
-                        Site</a>. (Thanks to "infidel" from Freenode for
+                        Site</a>. (Thanks to “infidel” from Freenode for
                     suggesting this.)
                     </p>
 
@@ -375,6 +375,7 @@ a very engaging way. I bought it and enjoyed it.
                         <creator type="author">Martin Fowler</creator>
                         <desc>
                             <p>
+
                                 <a href="http://www.refactoring.com/">Refactoring</a>
                                 is improving the internal design of a
                                 code without changing its external
@@ -382,17 +383,19 @@ a very engaging way. I bought it and enjoyed it.
                                 guide to refactoring, at least in
                                 object-oriented systems.
                             </p>
+
                             <p>
+
                                 The first chapters of the book are rather
                                 general. They introduce the motivation
                                 for refactoring, why it is good, and why
                                 it actually speeds up development.
-                                Also, they also give a list of "bad
-                                smells" in the code that indicate that
+                                Also, they also give a list of “bad smells” in the code that indicate that
                                 a refactoring is needed (like
                                 duplicate code or magic numbers). I found
                                 the bad smells part to be the most
                                 illuminating part of the book.
+
                             </p>
 
                             <p> 
@@ -415,7 +418,7 @@ a very engaging way. I bought it and enjoyed it.
                                 also interesting to read. They consist of an
                                 essay by William Opdyke (who wrote a very
                                 early research paper on refactoring) titled
-                                "Refactoring, Reuse and Reality", a chapter
+                                “Refactoring, Reuse and Reality”, a chapter
                                 about <a
                                     href="http://www.refactoring.com/tools.html">Refactoring
                                     Tools</a>, and a short summarising chapter
@@ -443,7 +446,7 @@ a very engaging way. I bought it and enjoyed it.
                                 refactor and write code, and I try to
                                 refactor in a way that will minimize
                                 the errors caused by it. I’m also now
-                                more aware of the "two hats", as
+                                more aware of the “two hats”, as
                                 Fowler puts it, of either refactoring
                                 code or adding new features.
                             </p>
@@ -495,7 +498,7 @@ a very engaging way. I bought it and enjoyed it.
                     <a href="http://www.exim.org/">Exim</a>, 
                     <a href="http://www.courier-mta.org/">Courier</a> or whatever. These are
                     open-source, are actively developed, and lack all of the aforementioned
-                    problems. "The qmail Handbook", however, is useful for those who need to 
+                    problems. “The qmail Handbook”, however, is useful for those who need to 
                     administer existing qmail configurations, or migrate them to a different
                     implementation. You can also take a look at 
                     <a href="http://www.lifewithqmail.org/">Life with qmail</a> which is a guide
@@ -584,7 +587,7 @@ a very engaging way. I bought it and enjoyed it.
                     <p>
 
                     The first installment in the series of three books containing a collection of 
-                    articles from "the Perl Journal". Very nice book, with interesting articles. 
+                    articles from “the Perl Journal”. Very nice book, with interesting articles. 
                     You can <a href="http://www.perl.org.il/books/0596003102.html">read my review 
                     of it</a> to the Perl mongers.
 
@@ -601,7 +604,7 @@ a very engaging way. I bought it and enjoyed it.
                     <p>
 
                     The third installment in the series of three books containing a collection of 
-                    articles from "the Perl Journal". As a whole it is very entertaining and
+                    articles from “the Perl Journal”. As a whole it is very entertaining and
                     enlightening. You can <a href="http://www.perl.org.il/books/0596003129.html">read my review of it</a> to the Perl mongers.
 
 
@@ -616,7 +619,7 @@ a very engaging way. I bought it and enjoyed it.
                         <desc>
 
                     <p>
-                    "Higher Order Perl" is both enjoyable and accessible. Mark Jason Dominus
+                    “Higher Order Perl” is both enjoyable and accessible. Mark Jason Dominus
                     demonstrates some techniques that originated from the LISP world and shows how
                     to implement them in Perl, and how they can be put into good use. I learned a
                     lot from this book: how currying, iterators and streams can be useful, how a
@@ -632,7 +635,8 @@ a very engaging way. I bought it and enjoyed it.
                     <prod id="perl_hacks">
                         <title>Perl Hacks</title>
                         <isbn>0596526741</isbn>
-                        <creator type="author">chromatic, with Damian Conway and Curtis "Ovid" Poe</creator>
+                        <creator type="author">chromatic, with Damian Conway 
+                            and Curtis “Ovid” Poe</creator>
                         <desc>
 
 <p>
@@ -645,7 +649,7 @@ read.
 </p>
 
 <p>
-The book covers various useful "hacks" or small tricks that allow one to
+The book covers various useful “hacks” or small tricks that allow one to
 achieve a lot of cool tasks when working with Perl. These tricks are unorthodox
 and stretch the limit of one’s Perl knowledge. Since they require an advanced
 knowledge and understanding of Perl, I would recommend this book only for Perl
@@ -672,11 +676,11 @@ Once upon a time, someone I talked with on IRC suggested I create and publicise
 a wishlist on Amazon.com so people can buy me gifts. I did so, and after a few
 months someone ordered me both this book and  <a
 href="http://www.amazon.com/exec/obidos/ASIN/0345348036/ref=nosim/shlomifishhom-20/">the
-book "The Princess Bride"</a> (which I have read since then and also liked). 
+book “The Princess Bride”</a> (which I have read since then and also liked). 
 </p>
 
 <p>
-"Perl Best Practices" generated a lot of buzz in the Perl world, and so I had
+“Perl Best Practices” generated a lot of buzz in the Perl world, and so I had
 some good expectations. And happily the book has indeed fulfilled them. Perl
 Best Practices enumerates and explains the practice and rationale behind 256
 best practices of Perl, that according to the author will result in better,
@@ -710,7 +714,7 @@ so they can later be searched for.
 
 <p>
 This book is a collection of essays Joel Spolsky published on his
-<a href="http://www.joelonsoftware.com/">"Joel on Software" site</a>. Joel
+<a href="http://www.joelonsoftware.com/"><i>Joel on Software</i> site</a>. Joel
 is an excellent writer, writing in a humorous and accessible way
 and providing many insights. I enjoyed reading his site, so I believe the
 book will definitely be very nice too.
@@ -791,10 +795,10 @@ book makes for a very good read. Highly recommended.
 <p>
 Mastering Perl is the third book in the installment of O’Reilly’s three
 books which introduce Perl to people who are not familiar with. I haven’t
-read "Learning Perl" and "Intermediate Perl", which are the first two
+read <i>Learning Perl</i> and <i>Intermediate Perl</i>, which are the first two
 installments of the series, because I felt that I already knew most of
 the material that they are going to cover. Now, brian has written 
-"Mastering Perl" with the help of the community, by maintaining its
+<i>Mastering Perl</i> with the help of the community, by maintaining its
 sources in a version control repository, and that’s how I ended up finally
 reading it in 2009.
 </p>

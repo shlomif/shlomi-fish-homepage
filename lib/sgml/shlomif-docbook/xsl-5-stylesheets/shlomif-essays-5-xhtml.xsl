@@ -1,9 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <xsl:stylesheet
     exclude-result-prefixes="d"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:d="http://docbook.org/ns/docbook"
-    version='1.0'
+    version="1.0"
     >
     <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml-1_1/chunk.xsl" />
     <xsl:import href="shlomif-essays-5-xhtml-common.xsl" />
@@ -44,9 +45,9 @@
     <xsl:if test="string($docmake.output.work_in_progress)">
     <div class="center warning">
         <p>
-            <b>Note:</b> This document is work-in-progress. Please don't 
+            <b>Note:</b> This document is work-in-progress. Please don’t 
             publish it on news sites, or otherwise link to it in public
-            without the author's permission. Private linking is acceptable.
+            without the author’s permission. Private linking is acceptable.
         </p>
     </div>
     </xsl:if>

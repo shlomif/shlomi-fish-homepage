@@ -34,4 +34,5 @@ find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print |
     grep -vP 'philosophy/computers/high-quality-software/what-makes-software-high-quality/' | # old
     grep -vP 'philosophy/computers/optimizing-code-for-speed/index\.html$' | # old
     grep -vP 'philosophy/computers/perl/joy-of-perl/joy-of-perl\.html$' | # contains some code
+    grep -vP 'philosophy/computers/software-management/perfect-workplace/perfect-it-workplace(/|\.xhtml$)' | # old
     xargs -d '\n' perl bin/find_ascii_quotes-xmlp.pl > results.txt

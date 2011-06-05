@@ -45,13 +45,13 @@ I went to Tel Aviv university, where I met Ran. He accepted me to the job
 and said I should learn Perl. Having told him I knew about Berkeley Sockets,
 (from my previous workplace) he said that one can write a sockets client in
 Perl in 10 lines and a server in 20 lines. He showed a piece of Perl code
-he wrote to handle a client's request, which seemed awfully short. I did not 
+he wrote to handle a client’s request, which seemed awfully short. I did not 
 understand what was going on there.
 </p>
 
 <p>
 Between Jobs I was given time to adapt to the new workplace. Ran said:
-"Shlomi, it takes 10 years to learn UNIX. I want you to learn it in a month".
+“Shlomi, it takes 10 years to learn UNIX. I want you to learn it in a month”.
 I set out to install <a href="http://www.linux.org/">Linux</a> and experiment 
 with UNIX and Perl. When I got the
 job, I read the Perl man pages (which I downloaded in PDF format), and also
@@ -83,8 +83,8 @@ immediately became my favourite language (and still is).
 </p>
 
 <p>
-Back then, I even wrote my "shell scripts" in Perl since I hadn't taken the 
-time to learn shell well. (Since then, I've known of other people who have 
+Back then, I even wrote my “shell scripts” in Perl since I hadn’t taken the 
+time to learn shell well. (Since then, I’ve known of other people who have 
 followed this trend, and learned shell programming only after learning Perl,
 and I expect this trend to grow.) 
 </p>
@@ -118,8 +118,8 @@ automatically install things) so I don’t re-invent too many wheels as before.
 <p>
 I like the fact that Perl is orthogonal and does not force the poor programmer
 who wishes to learn it to learn too many paradigms. In Java, for example, the
-"Hello World" involves initializing a class and several methods, only to call
-the uncivil '<tt>System.out.println("Hello World");</tt>'.  In Perl, it is 
+“Hello World” involves initializing a class and several methods, only to call
+the uncivil “<tt>System.out.println("Hello World");</tt>”.  In Perl, it is 
 simply 
 </p>
 
@@ -153,8 +153,9 @@ future programs.
 <p>
 Many times I found paradigms in other languages or books and discovered
 they were readily applicable in Perl. For instance, after reading the
-excellent book <a href="http://mitpress.mit.edu/sicp/">"Structure and Interpretation of Computer Programs"</a> and seeing how closures could prove to be 
-useful, I tried it in Perl and it  immediately worked. From then on, I 
+excellent book <a href="http://mitpress.mit.edu/sicp/">“Structure and 
+Interpretation of Computer Programs”</a> and seeing how closures could prove 
+to be useful, I tried it in Perl and it immediately worked. From then on, I 
 sometimes found myself using closures in Perl. 
 </p>
 
@@ -164,21 +165,21 @@ practical tasks. In some languages I encountered, like Scheme or Haskell,
 one always get the feeling that while being nice to play with, they cannot
 be effectively used for anything practical. This is not the case for Perl,
 that provides both usable and intuitive syntactical primitives as well as 
-many primitives and open source API's for calling the services of the system.
+many primitives and open source API’s for calling the services of the system.
 This is one property that is shared (to a lesser or greater extent) by 
 similar languages such as Python, Ruby or PHP.
 </p>
 
 <p>
-What makes Perl quite unique among most languages, is its "There's more 
-than one way to do it" philosophy. I, actually, am very fond of this. Any time
+What makes Perl quite unique among most languages, is its “There’s more 
+than one way to do it” philosophy. I, actually, am very fond of this. Any time
 I write a script or a module, (even a very trivial one) I am glad I have 
-several ways I can think of to write it. Contrast this with Python's "There's
-one good way to do it", in which the language designers tried to create a
+several ways I can think of to write it. Contrast this with Python’s “There’s
+one good way to do it”, in which the language designers tried to create a
 unified way for programmers to use it. If you ask me, a programming language
-in which "there's only one way to do it" is almost as bad as a spoken language
-in which "there's only one way to say it". Such a language may be easy to 
-learn, but it certainly won't be fun to use. Neither are such programming
+in which “there’s only one way to do it” is almost as bad as a spoken language
+in which “there’s only one way to say it”. Such a language may be easy to 
+learn, but it certainly won’t be fun to use. Neither are such programming
 languages.
 </p>
 
@@ -188,28 +189,28 @@ of the programming languages. That you can write Python in Perl, and LISP
 in Perl, and BASIC in Perl, and C in Perl. All of this diversity comes with
 a cost, as many newcomers will find reading the Perl code of expert
 programmers (or of their peers with a different education) very difficult. 
-It's probably similar trying to understand a text of English by a very
-knowledgeable writer when you've only studied it for 6 months.
+It’s probably similar trying to understand a text of English by a very
+knowledgeable writer when you’ve only studied it for 6 months.
 </p>
 
 <p>
 However, I believe that despite common belief, Perl code is not hard to 
 understand more than other languages. (unless it’s purposely obfuscated).
 You just have to be familiar with more idioms, and conventions. It takes
-some time, but it’s well worth it. Of course, it is possible that you won't
+some time, but it’s well worth it. Of course, it is possible that you won’t
 understand what the algorithm of the program is doing. But you can encounter
 the latter problem in any language regardless of how rich or poor it is in
 programming paradigms.
 </p>
 
 <p>
-Perl is also a no-nonsense language. I'm reminded of a time when a person
+Perl is also a no-nonsense language. I’m reminded of a time when a person
 I know from my university was assigned to write a web-based system for
 managing the lab he was working in. He decided that Perl, PHP and Python
 all sucked and would rather use his favourite language: C++. It took
 him over a year and he did not finish, in what I would estimate as a one
 month project using either Perl, PHP or Python. In the midst of this, he kept
-telling me about the "beautiful abstractions" he built in C++. Every time, 
+telling me about the “beautiful abstractions” he built in C++. Every time, 
 I kept telling him that in Perl it was equally or more trivial to do.
 </p>
 
@@ -225,9 +226,9 @@ oriented languages.
 
 <p>
 You can hear many complaints about the Perl syntax. (I even heard that Perl
-is "a syntactical disaster"). However, I actually like it. The reason is that I 
-can immediately tell what's going on by looking at the code. If I see a dollar
-sign it usually indicates that there's a scalar involved. If I see square
+is “a syntactical disaster”). However, I actually like it. The reason is that I 
+can immediately tell what’s going on by looking at the code. If I see a dollar
+sign it usually indicates that there’s a scalar involved. If I see square
 brackets, I know it’s an array subscript, etc. Larry Wall said in one of his
 speeches, that in LISP all the code comes in parenthesis, so all the code
 looks the same. Perl is the exact opposite of LISP, in this regard, and a 
@@ -241,7 +242,7 @@ to the many modules of CPAN (some of which are downright useless, but
 still fun), to many web-sites with lots of good resources there. In fact,
 it is very fun being a part of the Perl community, which cares about so much
 more than writing Perl code for a living. (even though many people do that
-and there's nothing wrong with it). For the Perl community, Perl is fun, and
+and there’s nothing wrong with it). For the Perl community, Perl is fun, and
 it keeps trying to find more fun things to do with it.
 </p>
 
@@ -249,33 +250,33 @@ it keeps trying to find more fun things to do with it.
 Larry Wall as a Linguist, tried to make Perl feel like a natural language. 
 And it indeed does, more than any other language I have encountered. I, 
 recall an incident that happened to me in high school. In English class,
-we were taught about forming speeches (the standard "First of all,", 
-"Moreover/Furthermore", "To sum up" stuff). Then we played the balloon
+we were taught about forming speeches (the standard “First of all,”, 
+“Moreover/Furthermore”, “To sum up” stuff). Then we played the balloon
 game: we were split into teams and given an assignment to write a speech 
 together, in which we had to explain why we of all the other people in
 the balloon had to be saved.
 </p>
 
 <p>
-Now, most of the speeches given in class were quite mechanical: "First of
-all... moreover... furthermore... to sum up,". I, however, assumed the role
+Now, most of the speeches given in class were quite mechanical: “First of 
+all… moreover… furthermore… to sum up,”. I, however, assumed the role
 of President Roosevelt after the Pearl Harbor attack, and wrote a nice speech
-in which I don’t think I've used any of these key-words once. (I also
+in which I don’t think I’ve used any of these key-words once. (I also
 volunteered to give the speech first and so was able to read it from the
-paper). It ended up being the Teacher's favourite, and won third place.
+paper). It ended up being the Teacher’s favourite, and won third place.
 (because two of the other speeches were funny, but in my humble
 and prejudiced opinion, quite lame as well)
 </p>
 
 <p>
-The moral of the story is, that you can't survive with knowing the technique
+The moral of the story is, that you can’t survive with knowing the technique
 alone when writing prose. You need to know how to make it flow together. In
 a sense Perl is not about technique alone. Knowing the syntax, the keywords
 and the functions can only get you so far. But you still need to know how to
-write beautiful programs that will make the one who reads them say "Wow!".
-To quote Abelman and Sussman from "Structure and Interpretation of Computer
-Programs": "Programs should be written for people to read,
-and only incidentally for machines to execute."
+write beautiful programs that will make the one who reads them say “Wow!”.
+To quote Abelman and Sussman from <i>Structure and Interpretation of Computer
+Programs</i>: “Programs should be written for people to read, and only 
+incidentally for machines to execute.”
 </p>
 
 <h2 id="recent_history">Recent History</h2>
@@ -284,7 +285,7 @@ and only incidentally for machines to execute."
 A couple of years ago, life was brought into the dormant Israeli
 Perl community. A <a href="http://www.perl.org.il/">web-site was being
     maintained</a>, monthly 
-meetings are now the norm, and there's also an active mailing list. We
+meetings are now the norm, and there’s also an active mailing list. We
 even had a perl conference
 (<a href="http://www.perl.org.il/YAPC/2003/">YAPC::Israel::2003</a>) and
 planning to have another one. I am grateful for the people who made this
@@ -301,8 +302,8 @@ other.
 I now meet Ran Eilam (who as you may remember introduced me to Perl in the 
 first place), in our monthly meetings. Having spent the time we were apart
 in the industry working for his living, he is now full of various industry
-trends (and hypes), advocates "Extreme Programming" and calls user-interface
-geometry managers, "the geometry manager pattern". (I guess that what
+trends (and hypes), advocates Extreme Programming and calls user-interface
+geometry managers, “the geometry manager pattern”. (I guess that what
 happens during all the time you spend studying in university, and hacking
 on open-source software) He still seems to be very productive, and gave some 
 very good presentations to the local Perl Mongers.
@@ -321,10 +322,10 @@ means a Perl newcomer), that I had to buy it. (which I did)
 <p>
 I don’t regret specializing in UNIX and Perl. One constantly hear about
 all those over-hyped technologies: the Java world on one end and the
-Windows and .NET on the other. Don't get me started for my opinion of
+Windows and .NET on the other. Don’t get me started for my opinion of
 Windows - I don’t work on it, except if I don’t have a choice. Java is
 a nice language, but shivers in comparison to Perl. .NET seems like something
-a bit better than Java, but still closer to it than Perl. I'll take the time
+a bit better than Java, but still closer to it than Perl. I’ll take the time
 to learn it, if and when I need to. (its promises of cross-language
 programming are pretty void, because it’s mostly the same language with a few
 syntactical differences).
@@ -339,14 +340,14 @@ technologies, and their quality speak for itself.
 
 <p>
 Eric Raymond <a href="http://www.faqs.org/docs/artu/ch14s05.html">claims</a> 
-in <a href="http://www.faqs.org/docs/artu/">"The Art of 
-    UNIX Programming"</a> this:
+in <a href="http://www.faqs.org/docs/artu/"><i>The Art of 
+    UNIX Programming</i></a> this:
 </p>
 
 <blockquote>
     <p>
     Python has risen in popularity as rapidly as Tcl has fallen. Though the 
-    Perl community is still twice the size of Python's, a visible tendency of 
+    Perl community is still twice the size of Python’s, a visible tendency of 
     the brightest Perl hackers to migrate to Python has been rather ominous 
     for the former language, especially as there is no migration at all in 
     the opposite direction.
@@ -354,18 +355,18 @@ in <a href="http://www.faqs.org/docs/artu/">"The Art of
 </blockquote>
 
 <p>
-I'm not sure if I qualify as one of the brightest Perl programmers (after all,
+I’m not sure if I qualify as one of the brightest Perl programmers (after all,
 the baker cannot testify for his dough). But I know a few very bright Perl
 programmers who avoid Python like the plague. And I don’t see prominent Perl
 figures like Larry Wall, Tom Christiansen, Randal L. Schwartz, Damian Conway, 
-Mark Jason Dominus, etc. converting to Python. (even though I'm pretty sure
+Mark Jason Dominus, etc. converting to Python. (even though I’m pretty sure
 they know it well). I think this trend is an indication of a fact: Perl is not
 for everybody. All the qualities I described can sometimes lure people away
-from it into the beauty of the much different Python. And that's good, because,
-I don’t think one language can actually be suitable for everybody, and I'd
+from it into the beauty of the much different Python. And that’s good, because,
+I don’t think one language can actually be suitable for everybody, and I’d
 rather have co-programmers who _love_ the languages they program in. (and for
 the record, I read something by someone who claimed Java was much better than
-either Perl, Python or Tcl, so you can't tell)
+either Perl, Python or Tcl, so you can’t tell)
 </p>
 
 <p>
@@ -381,12 +382,12 @@ they were not. Needless to say, it did not make me more convinced.
 
 <p>
 So, I don’t think we should feel intimidated by Python any time now. Not anymore
-than cats should be intimidated by dogs for people's affection. (I'm not trying
-to make a generalization between the two divisions - there isn't any).
+than cats should be intimidated by dogs for people’s affection. (I’m not trying
+to make a generalization between the two divisions - there isn’t any).
 </p>
 
 <p>
-So, keep the Shift key and the "4" key on your keybords in order, because 
-you'll need to use them a lot in your future.
+So, keep the Shift key and the “4” key on your keybords in order, because 
+you’ll need to use them a lot in your future.
 </p>
 

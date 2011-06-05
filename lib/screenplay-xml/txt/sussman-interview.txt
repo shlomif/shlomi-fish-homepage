@@ -37,8 +37,8 @@ hours for each.
 
 S.F.: &lt;giggle /&gt;
 
-Ben C-S: My calculus teacher in high school said, "hey, lemme introduce you to
-this guy, he can help you." And that’s how I met my friend Matt Braithwaite. He
+Ben C-S: My calculus teacher in high school said, “hey, lemme introduce you to
+this guy, he can help you.” And that’s how I met my friend Matt Braithwaite. He
 had a 286 and Turbo C. I learned C by watching him implement Mandelbrot sets.
 
 S.F.: Cool.
@@ -79,9 +79,9 @@ Ben C-S: Ha. My programming skills aren’t very great, no. Honestly.
 
 +++: My strengths lie in organizing things. Whenever there’s a hugely
 complicated topic that needs to be sorted out, everyone in the Collabnet
-Chicago office asks me to do it. For example, "go learn WebDAV/DeltaV" or
-"figure out what’s happening in that complex email thread; summarize all the
-positions" My talent is in being able to present high-level overviews of
+Chicago office asks me to do it. For example, “go learn WebDAV/DeltaV” or
+“figure out what’s happening in that complex email thread; summarize all the
+positions” My talent is in being able to present high-level overviews of
 complex topics.
 
 +++: And I guess I’m also sort of the unofficial publicity/marketing guy on the svn
@@ -91,8 +91,8 @@ lists. I seem to be worried about svn’s image more than I should be. :-)
 clever either. But sure, everyone gets better over time. I guess that’s all I
 can say on this question.
 
-S.F.: OK. Do you ever look at your old code, and say: "who’s the idiot that wrote
-this junk?".
+S.F.: OK. Do you ever look at your old code, and say: “who’s the idiot that wrote
+this junk?”.
 
 Ben C-S: Only my perl code. :-)
 
@@ -105,7 +105,7 @@ a free software project?
 
 Ben C-S: I think they’re everything. I think the reason svn is successful as a project
 is because of Karl Fogel’s ability to be a good leader. I can point to other
-projects that have excellent technology, but failed to "coelesce" as a
+projects that have excellent technology, but failed to “coelesce” as a
 community, because of bad leadership.
 
 +++: Having good technology doesn’t mean you automatically get a community. You
@@ -123,7 +123,7 @@ Ben C-S: 1. Don’t be a jerk.
 +++: 2. don’t be a control freak. I belong to once open-source project where
 there’s *one* guy who is writing the next-generation 2.0 version of the
 software from scratch, and he  show the code to <b>anyone</b>.
-He refuses to put it into CVS until it’s "done", because he doesn’t want
+He refuses to put it into CVS until it’s “done”, because he doesn’t want
 anyone to comment on it.
 
 +++: I guess that leads to
@@ -141,12 +141,12 @@ not to file issues without discussion first, we have a voting system.
 
 +++: I guess it’s really hard to separate politics and social behaviors when
 email is your main medium of cohesion. But project leaders should lay down
-political laws (i.e "how does one become a committer? how does one vote?"),
+political laws (i.e “how does one become a committer? how does one vote?”),
 as well as standards of social conduct, and not be afraid to boot people out
 of the community if they ignore either set of standards.
 
 +++: Eventually. you end up with a community that polices itself automatically.
-You’ve selected the community for a certain type of "plays well with others"
+You’ve selected the community for a certain type of “plays well with others”
 kind of person, and so the group learns to automatically reject the opposite
 sort of person.
 
@@ -214,7 +214,7 @@ yourself? ;-)
 Ben C-S: Hoo. Here’s my analysis: basic human nature.
 
 +++: If there are 2 products to fill a niche, and one of them is more popular,
-the less popular one will always being trying to "tear down" the other.
+the less popular one will always being trying to “tear down” the other.
 
 +++: The more popular product doesn’t fling mud, because, well, it feels secure
 in its popularity.
@@ -225,7 +225,7 @@ about managing patches? Subversion chose a side, but doesn’t believe it’s
 the <i>only</i> side. Honestly, Tom Lord, great guy as he is, is completely
 convinced that patch-management is the <i>only</i> answer to the problem.
 And so his position spreads through the arch community. It becomes a sort of
-evangelism: "we must make everyone see the truth!" Whereas the svn guys don’t
+evangelism: “we must make everyone see the truth!” Whereas the svn guys don’t
 think there’s a single correct approach to version control. We have nothing
 to preach.
 
@@ -258,11 +258,11 @@ any less complicated.
 complicated, and thus the code must be too, to some degree.
 
 S.F.: <a href="http://www.joelonsoftware.com/">Joel Spolsky</a> said in his famous
-article <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things
-you Should Never Do - Part I"</a> that one should never re-write a complete
-working codebase from scratch, no matter how "bad" it seems. In the sequel
-<a href="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub a
-dub dub"</a> he demonstrated how to improve an existing codebase to increase
+article <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things
+you Should Never Do - Part I”</a> that one should never re-write a complete
+working codebase from scratch, no matter how “bad” it seems. In the sequel
+<a href="http://www.joelonsoftware.com/articles/fog0000000348.html">“Rub a
+dub dub”</a> he demonstrated how to improve an existing codebase to increase
 its quality and maintainability. I can tell from experience that his
 recommendation works.
 
@@ -271,15 +271,15 @@ CVS workers. Do you think it could have been faster to replace CVS
 (or <a href="http://www.cvsnt.com/cvspro/">CVSNT</a>) component by component,
 thus yielding Subversion?
 
-Ben C-S: CVS has no "components", that’s the problem. If we had spent 4 years
-"improving" the CVS codebase, the result would have been a nice-to-read CVS
+Ben C-S: CVS has no “components”, that’s the problem. If we had spent 4 years
+“improving” the CVS codebase, the result would have been a nice-to-read CVS
 codebase. Something very clean and intelligible. But that was never our goal.
 
-+++: It’s not like we looked at CVS and said, "this code base is unmaintainable,
-let’s start over". What we said was, "The quality of CVS code is irrelevant;
++++: It’s not like we looked at CVS and said, “this code base is unmaintainable,
+let’s start over”. What we said was, “The quality of CVS code is irrelevant;
 there’s no way we can add the features we want given CVS’s design. We need a
-new design.". And when you’re changing the fundamental design of something, no
-amount of "cleaning up" a codebase is useful. Cleaning doesn’t change the
+new design.”. And when you’re changing the fundamental design of something, no
+amount of “cleaning up” a codebase is useful. Cleaning doesn’t change the
 underlying design. It just makes code more maintainable.
 
 +++: We had a specific design that was fundamentally incompatible with CVS’s design.
@@ -303,10 +303,10 @@ patches.
 
 +++: Same with Subversion’s order-1 branch/copy feature. It’s nice that branching
 is so fast compared to CVS, but the tradeoff is that it’s no longer easy to
-ask the question " which branches does this particular version of this file
-exist in?" So my answer is: there is no single best architecture, or best
+ask the question “ which branches does this particular version of this file
+exist in?” So my answer is: there is no single best architecture, or best
 solution to the problem. Different groups or companies need to choose a system
-that "feel best" to them, and live with the particular tradeoffs.
+that “feel best” to them, and live with the particular tradeoffs.
 
 S.F.: You happen to be a musician. Tell us about your Music experience,
 throughout the years.
@@ -353,13 +353,13 @@ ago I switched back to Linux. I’ve decided that FreeBSD is the best
 <b>server</b> OS out there. But it’s not as instantly easy to get going as
 a desktop workstation -- Linux is better at APM, cardbus support,
 thread support, usb HID support, wifi gui applets, instant CUPS
-support, and has tools like valgrind. All that stuff "just works"
+support, and has tools like valgrind. All that stuff “just works”
 when you install Linux on a notebook; on FreeBSD, that stuff either
 doesn’t work, or is tricky to get going. (Granted, this is all FreeBSD 4;
 I have not tried FreeBSD 5 yet.)
 
 +++: In my former life as a Unix sysadmin - I can say that FreeBSD, as an
-OS, is the "tightest" distribution out there. Linux distros feel like
+OS, is the “tightest” distribution out there. Linux distros feel like
 a bunch of pieces shoved together: a kernel, a toolchain, some user
 space apps, and so on. FreeBSD is  coherent system, everything
 compilable from source in a single ‘make world’. It makes the system
@@ -386,18 +386,18 @@ causing problems with making sure it is working perfectly with Win32?
 
 Ben C-S: Not at all. I think that we have unbelievable win32 support compared
 to just about any open source project out there. Show me <b>any</b> open
-source project where the core developer group are all "win32
-enthusiasts". It doesn’t exist.
+source project where the core developer group are all “win32
+enthusiasts”. It doesn’t exist.
 
 +++: The real problem is simply a conflict of cultures. Unix culture
 promotes free software: the system comes with compilers and languages,
 and encourages users to tinker with everything. The line between
-"user" and "developer" is blurred. Windows is the opposite: it has
-"users" and "developers", and the latter category is a small minority
+“user” and “developer” is blurred. Windows is the opposite: it has
+“users” and “developers”, and the latter category is a small minority
 of people off in the corner.
 
-+++: Subversion’s team isn’t the stereotypical "we’re all unix-users,
-windows sucks, go away Microsoft" sort of group. We even have team
++++: Subversion’s team isn’t the stereotypical “we’re all unix-users,
+windows sucks, go away Microsoft” sort of group. We even have team
 members who work (or worked) for Microsoft. Many of us have win32
 compilers, and a subset of us build and test on windows almost every
 day.
@@ -423,7 +423,7 @@ tell us more about it? Do you learn any other languages? Do you wish to
 learn any others?
 
 Ben C-S: I’m interested in relationships between languages (the biological
-"tree"), and studying how languages change over time. I’m always
+“tree”), and studying how languages change over time. I’m always
 excited to learn new languages... but lack the time. Probably a
 separate conversation here...
 

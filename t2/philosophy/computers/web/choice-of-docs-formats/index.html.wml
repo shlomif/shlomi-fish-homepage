@@ -55,8 +55,8 @@ A previous correspondent wrote:
 Write it in POD?
 </p>
 <p>
-I'm not aware of any POD based Wikis, but it doesn’t seem like it would
-be hard to merge the two approaches, with a "traditional" web-facing
+I’m not aware of any POD based Wikis, but it doesn’t seem like it would
+be hard to merge the two approaches, with a “traditional” web-facing
 wiki front-end that stores things as a POD-like syntax on the back.
 </p>
 <p>
@@ -67,8 +67,8 @@ out there to convert the POD source to PDF etc.
 
 <p>
 I think <a href="http://www.kwiki.org/">Kwiki</a> has a 
-plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl's so-called
-"Plain, Old, Documentation")</a>.
+plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl’s so-called
+“Plain, Old, Documentation”)</a>.
 </p>
 
 <p>
@@ -83,7 +83,7 @@ an intermediate format. POD can be translated into DocBook/XML using
 </p>
 
 <p>
-Don't use the original module by Alligator Descartes which is the still the 
+Don’t use the original module by Alligator Descartes which is the still the 
 default on <a href="http://www.cpan.org/">CPAN</a> out of being 
 <a href="http://www.mail-archive.com/module-authors%40perl.org/msg00793.html">a
 Dead Camel</a>. It is old and broken and has been unmaintained for a long time.
@@ -98,7 +98,7 @@ to the fact DocBook is richer than POD.
 Other alternatives for such markups that are somewhat
 text-with-brief-style-specifiers can be found in
 <a href="http://zgp.org/pipermail/linux-elitists/2005-August/thread.html#11265">this 
-Linux-elitists thread called "mini-markup language?"</a>. Prominent examples
+Linux-elitists thread called “mini-markup language?”</a>. Prominent examples
 include <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> which can
 be converted to HTML, XHTML and DocBook/XML, and 
 <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> which can only
@@ -113,7 +113,7 @@ formats, and some may not have an ability to export as DocBook. I like the
 extension of that of 
 <a href="http://www.usemod.com/cgi-bin/wiki.pl">UseModWiki</a> (and its 
 <a href="http://www.oddmuse.org/">Oddmuse Wiki fork</a>, which should be 
-better.), but I think that DokuWiki's format is 
+better.), but I think that DokuWiki’s format is 
 also quite good. I really dislike the default Kwiki format, and despite all
 the flood of Kwiki plugins, no-one has written a 
 UseModWiki/Oddmuse/MediaWiki-subset format for it yet. I keep intendening to 
@@ -166,7 +166,7 @@ other way around.
 LaTeX is much less verbose than DocBook/XML, but I think you can find a less 
 problematic format. It is is still excellent for writing texts with lots of 
 mathematical formulae, but still a very problematic format. When working with 
-LaTeX I often get obscure TeX errors that I can't tell immediately what 
+LaTeX I often get obscure TeX errors that I can’t tell immediately what 
 exactly went wrong. In DocBook/XML it just reports that one tag is missing, or 
 that the order of tags are incorrect, which takes me much less time to solve.
 </p>

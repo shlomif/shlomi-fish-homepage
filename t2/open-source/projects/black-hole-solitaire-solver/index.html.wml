@@ -5,9 +5,9 @@
 <p>
 This is a solver, written in C, to solve
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
-Solitaire variant called "Black Hole"</a>. It provides a portable C library,
+Solitaire variant called “Black Hole”</a>. It provides a portable C library,
 and a command line application that after being fed with a layout will emit 
-the cards to move to the "black hole" (the foundation).
+the cards to move to the “black hole” (the foundation).
 </p>
 
 <h2 id="download">Download</h2>
@@ -40,7 +40,7 @@ of an <a href="http://www.sqlite.org/">SQLite</a> database.
 <h3 id="download-solving-data">Solving Data</h3>
 
 <p>
-We've ran the solver on the first 1 million 
+We’ve ran the solver on the first 1 million 
 <a href="http://pysolfc.sourceforge.net/">PySolFC</a> Black Hole Solitaire
 deals and one can 
 <a href="http://prdownload.berlios.de/fc-solve/black_hole_solver.dump.xz"><b>download</b>
@@ -49,7 +49,7 @@ the data from that</a> as a compressed textual dump of an
 </p>
 
 <p>
-Here's a description of the tables of the database:
+Here’s a description of the tables of the database:
 </p>
 
 <ol>
@@ -64,11 +64,11 @@ the solver on the boards. Its columns are:
 <b>idx</b> - the index of the PySolFC deal.
 </li>
 <li>
-<b>status</b> - a character representing the verdict - 'U' for unsolved,
-'S' for solved.
+<b>status</b> - a character representing the verdict - ‘U’ for unsolved,
+‘S’ for solved.
 </li>
 <li>
-<b>num_checked</b> - the number of iterations that were checked ("num_times").
+<b>num_checked</b> - the number of iterations that were checked (“num_times”).
 If the game was unsolved, then it will be equal to num_generated (see below).
 </li>
 <li>
@@ -89,7 +89,7 @@ solved boards. Its columns are:
 <ol>
 
 <li>
-<b>idx</b> - the index of the deal (that must be 'S' on "bhs_runs").
+<b>idx</b> - the index of the deal (that must be ‘S’ on “bhs_runs”).
 </li>
 
 <li>
@@ -97,7 +97,7 @@ solved boards. Its columns are:
 the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
 the corresponding moved cards after calculating 
 <tt>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</tt> where the suits
-are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here's 
+are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s 
 <a href="http://svn.berlios.de/svnroot/repos/fc-solve/black-hole-solitaire/trunk/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
 </li>

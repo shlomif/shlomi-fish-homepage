@@ -3,14 +3,14 @@
 <!DOCTYPE comparison SYSTEM "product-syndication.dtd">
 <!--
 ;;; To do:
-* Add rellink's.
+* Add rellink’s.
 ;;; To add:
 * Postfix TDG
 * Refactoring by Fowler.
 * Programming Pearls.
 * More Programming Pearls.
 * The Algorithm Design Manual.
-* chromatic's Modern Perl Book.
+* chromatic’s Modern Perl Book.
 * xUnit Test Patterns.
 * The reviews I did on the Perl Mongers site.
 
@@ -22,7 +22,7 @@
 <product-syndication>
     <data>
         <cat id="books">
-            <title>Shlomi Fish's Book Recommendations</title>
+            <title>Shlomi Fish’s Book Recommendations</title>
             <desc appendtoc="1">
 <p>
 This is a list of books I have read and can recommend. At the moment, it is
@@ -31,7 +31,7 @@ section.
 </p>
 
 <p>
-So if you're looking for a good book to read, and are desperate enough to
+So if you’re looking for a good book to read, and are desperate enough to
 take my advice (☺), look no further than here. Happy reading!
 </p>
 
@@ -51,8 +51,8 @@ take my advice (☺), look no further than here. Happy reading!
                     <creator type="author">John Allen Paulus</creator>
                     <desc>
 <p>
-This is a great book about how the fact that people don't understand
-Mathematics or don't apply it well leads to various side-effects, such as
+This is a great book about how the fact that people don’t understand
+Mathematics or don’t apply it well leads to various side-effects, such as
 believing in superstition, irrational fears, or mis-approximations.
 </p>
 </desc>
@@ -74,7 +74,7 @@ from the Neo-Tech Discovery</a>.
 This is the most influential book I ever read. Neo-Tech is an extension and
 re-organization of 
 <a href="http://en.wikipedia.org/wiki/Objectivist_philosophy">Ayn 
-Rand's Objectivism</a>, that also integrates 
+Rand’s Objectivism</a>, that also integrates 
 Psychology, Business Practices, Science and other fields. After reading and 
 integrating this book, one can throw away all the mental garbage that prevents 
 growth, and no longer be influenced by various fallacies you constantly hear
@@ -94,8 +94,8 @@ of human existence, and remove any unnecessary guilt you have.
 <p>
 This is a field guide to cognitive Psychology. It explains how our conscious
 thoughts cause unnecessary mood swings, including depressions and euphorias.
-It also gives practical measurements to correct one's cognitive process, raise
-one's self-esteem, handle criticism, and recover from unnecessary mood swings.
+It also gives practical measurements to correct one’s cognitive process, raise
+one’s self-esteem, handle criticism, and recover from unnecessary mood swings.
 </p>
 <p>
 This book can also help people maintain a good self-esteem, and understand
@@ -113,7 +113,7 @@ read!
 <p>
 <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">This book is 
 also available online</a> on
-<a href="http://www.catb.org/~esr/">Raymond's Site</a>.
+<a href="http://www.catb.org/~esr/">Raymond’s Site</a>.
 </p>
 <p>
 This book is a set of very mind-revolving essays about the Free and Open
@@ -161,7 +161,7 @@ The book kept me entertained, and enlightened me.
                         <desc>
 
                     <p>
-                    This book, written over 20 years ago, by the project manager of IBM's OS/360
+                    This book, written over 20 years ago, by the project manager of IBM’s OS/360
                     is one of the classic texts on software engineering, and for a very good
                     reason. It still feels very fresh now, and supplies a lot of insights about
                     how to manage a software project. It will also prove of interest to managers
@@ -297,14 +297,14 @@ a very engaging way. I bought it and enjoyed it.
                     the entire Perl language as of perl-5.6.1, with any nuance and any
                     fine point being mentioned. Furthermore, it is a very entertaining read: the
                     style is lightweight and easy, and it is one of the funniest technical books
-                    I've ever read.
+                    I’ve ever read.
                     </p>
                     <p>
-                    Note that programmers who don't know how to program Perl at all yet, cannot use it 
+                    Note that programmers who don’t know how to program Perl at all yet, cannot use it 
                     in order to learn the language. Instead, it is
                     recommended, that they first learn Perl and only then 
                     read "Programming Perl". For learning Perl, see 
-                    <a href="http://perl-begin.org/">the Perl Beginners'
+                    <a href="http://perl-begin.org/">the Perl Beginners’
                         Site</a>. (Thanks to "infidel" from Freenode for
                     suggesting this.)
                     </p>
@@ -357,14 +357,13 @@ a very engaging way. I bought it and enjoyed it.
                         <desc>
                     <p>
 
-                    I really liked 
-                    <a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">the 
-                    online version of the book</a> when I read it on Joel's site, and the printed
-                    version contains several additional chapters. This book is very funny, very
-                    enlightening, with many screenshots and diagrams. It's a must for anyone
-                    doing GUI or Web design. Highly recommended.
-
-
+                    I really liked <a
+                        href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">the
+                        online version of the book</a> when I read it on Joel’s
+                    site, and the printed version contains several additional
+                    chapters. This book is very funny, very enlightening, with
+                    many screenshots and diagrams. It’s a must for anyone doing
+                    GUI or Web design. Highly recommended.
                     </p>
 
                         </desc>
@@ -398,7 +397,7 @@ a very engaging way. I bought it and enjoyed it.
 
                             <p> 
                                 The middle part of the book which is its
-                                lion's share is a catalog of various
+                                lion’s share is a catalog of various
                                 refactorings. These are things like extracting
                                 a method, creating a superclass, eliminating
                                 inheritance, or creating one. The author
@@ -432,7 +431,7 @@ a very engaging way. I bought it and enjoyed it.
                                 references of several of the so-called
                                 Design Patterns. (from the Gang of
                                 Four book and otherwise). But they
-                                don't detract much from an otherwise
+                                don’t detract much from an otherwise
                                 good book.
                             </p>
                             <p>
@@ -443,7 +442,7 @@ a very engaging way. I bought it and enjoyed it.
                                 made me more conscious of how I
                                 refactor and write code, and I try to
                                 refactor in a way that will minimize
-                                the errors caused by it. I'm also now
+                                the errors caused by it. I’m also now
                                 more aware of the "two hats", as
                                 Fowler puts it, of either refactoring
                                 code or adding new features.
@@ -451,7 +450,7 @@ a very engaging way. I bought it and enjoyed it.
                             <p>
                                 To sum, this is a very good and
                                 important book to read, especially for
-                                beginning programmers. I'm just not
+                                beginning programmers. I’m just not
                                 sure it justifies the $54.00 list
                                 price. This price is too high for
                                 a book of this scope.
@@ -486,12 +485,12 @@ a very engaging way. I bought it and enjoyed it.
                     server</a>. Introduces the fundamental concepts of the server, and then
                     instructs how to operate it, and configure other software for it. One thing
                     to note about this book is that it convinced me that I should avoid using
-                    qmail unless it's already installed and has a configuration. qmail has a very
+                    qmail unless it’s already installed and has a configuration. qmail has a very
                     problematic license, lacks most necessary features out of the box, is no
                     longer maintained, has a very problematic creator and copyright owner, etc.
                     </p>
                     <p>
-                    If you're going to install a new mail server, take a look at 
+                    If you’re going to install a new mail server, take a look at 
                     <a href="http://www.postfix.org/">Postfix</a>, 
                     <a href="http://www.exim.org/">Exim</a>, 
                     <a href="http://www.courier-mta.org/">Courier</a> or whatever. These are
@@ -531,13 +530,15 @@ a very engaging way. I bought it and enjoyed it.
                         <desc>
                     <p>
 
-                    I took a course about algorithms in <a href="http://www.technion.ac.il/">the 
-                    Technion</a> before reading this book, and yet found this book to be very
-                    interesting. This books covers a lot of different fields and topics, each one
-                    with its own algorithms and each can give you a taste of what this field
-                    does. This is one of the best books I read in the O'Reilly series of Perl
-                    books, but it's not specifically about Perl. Highly Recommended for Programmers.
-
+                    I took a course about algorithms in <a
+                        href="http://www.technion.ac.il/">the Technion</a>
+                    before reading this book, and yet found this book to be
+                    very interesting. This books covers a lot of different
+                    fields and topics, each one with its own algorithms and
+                    each can give you a taste of what this field does. This is
+                    one of the best books I read in the O’Reilly series of Perl
+                    books, but it’s not specifically about Perl. Highly
+                    Recommended for Programmers.
 
                     </p>
 
@@ -557,7 +558,7 @@ a very engaging way. I bought it and enjoyed it.
                     wondered what was the difference between them.
                     </p>
                     <p>
-                    A co-worker recommended that in order to better understand what's involved I
+                    A co-worker recommended that in order to better understand what’s involved I
                     should read this book, and so I bought it from a local Israeli book store. I
                     did not regret buying it - this book is simply superb. Some chapters (such as
                     the one about handling terminal I/O) are of little interest to most
@@ -567,7 +568,7 @@ a very engaging way. I bought it and enjoyed it.
                     <p>
                     Many Windows programmers write code and test it on their local machine, and
                     think it will be perfectly acceptable this way. But Windows is only one OS,
-                    and the x86's is only one processor architecture. In the UNIX world, there are 
+                    and the x86’s is only one processor architecture. In the UNIX world, there are 
                     plenty of other operating systems and processor architectures. Often many 
                     subtle problems can occur because of lack of knowledge of UNIX concepts.
                     </p>
@@ -637,8 +638,8 @@ a very engaging way. I bought it and enjoyed it.
 <p>
 I received this book as a token of appreciation for my contributions to
 <a href="http://perladvent.pm.org/2006/">the 2006 Perl Advent Calendar</a>.
-It's the first book I read as part of the
-<a href="http://www.oreilly.com/store/series/hacks.csp">O'Reilly Hacks' series
+It’s the first book I read as part of the
+<a href="http://www.oreilly.com/store/series/hacks.csp">O’Reilly Hacks’ series
 of books</a>, and it proved to be a light yet informative and entertaining
 read.
 </p>
@@ -646,15 +647,15 @@ read.
 <p>
 The book covers various useful "hacks" or small tricks that allow one to
 achieve a lot of cool tasks when working with Perl. These tricks are unorthodox
-and stretch the limit of one's Perl knowledge. Since they require an advanced
+and stretch the limit of one’s Perl knowledge. Since they require an advanced
 knowledge and understanding of Perl, I would recommend this book only for Perl
 experts. Some of the B:: using modules were even too high-level for me to
 understand how they worked internally. However, I understood the purpose of the
-code in all cases, even if I didn't understand the code itself.
+code in all cases, even if I didn’t understand the code itself.
 </p>
 
 <p>
-So it is a recommended read for people who've worked with Perl a lot, 
+So it is a recommended read for people who’ve worked with Perl a lot, 
 and wish to learn many new and useful tricks. Perl Hacks for Perl hackers, 
 indeed!
 </p>
@@ -683,7 +684,7 @@ more maintainable code.
 </p>
 
 <p>
-I naturally didn't fully agree with everything that was suggested there, but
+I naturally didn’t fully agree with everything that was suggested there, but
 even so found it as a good food for thought. The book is highly recommended for
 anyone to read and become a better and more self-conscious Perl programmer.
 </p>
@@ -723,7 +724,7 @@ useful in my day-to-day work as a software developer.
 </p>
 
 <p>
-I don't always fully agree with everything Joel says, but even then, he
+I don’t always fully agree with everything Joel says, but even then, he
 provides a lot of useful food for thought.
 </p>
 
@@ -740,7 +741,7 @@ provides a lot of useful food for thought.
 <p>
 I heard of this book from several sources (including 
 <a href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">the
-Joel on Software Book Recommendations' page</a>), and it was very much 
+Joel on Software Book Recommendations’ page</a>), and it was very much 
 esteemed, so I decided to buy it. After fully reading it, I daresay that
 I found it relatively disappointing and unfulfilling, especially in
 consideration of the great expectations I had from it.
@@ -769,8 +770,8 @@ to buy this book and see for myself if the fuss was justified.
 </p>
 
 <p>
-I ended up really liking this book, and it did not disappoint me. It's short,
-provides an accessible read, is written well, and it piques one's interest.
+I ended up really liking this book, and it did not disappoint me. It’s short,
+provides an accessible read, is written well, and it piques one’s interest.
 </p>
 
 <p>
@@ -788,13 +789,13 @@ book makes for a very good read. Highly recommended.
                         <creator type="author">brian d foy</creator>
                         <desc>
 <p>
-Mastering Perl is the third book in the installment of O'Reilly's three
-books which introduce Perl to people who are not familiar with. I haven't
+Mastering Perl is the third book in the installment of O’Reilly’s three
+books which introduce Perl to people who are not familiar with. I haven’t
 read "Learning Perl" and "Intermediate Perl", which are the first two
 installments of the series, because I felt that I already knew most of
 the material that they are going to cover. Now, brian has written 
 "Mastering Perl" with the help of the community, by maintaining its
-sources in a version control repository, and that's how I ended up finally
+sources in a version control repository, and that’s how I ended up finally
 reading it in 2009.
 </p>
 

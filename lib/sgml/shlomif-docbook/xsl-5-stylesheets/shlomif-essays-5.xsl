@@ -1,4 +1,5 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version='1.0'>
+<?xml version='1.0' encoding='UTF-8'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
     <xsl:param name="use.id.as.filename">1</xsl:param>
     <xsl:param name="html.stylesheet">style.css</xsl:param>
     <xsl:param name="itemizedlist.propagates.style">1</xsl:param>
@@ -70,9 +71,9 @@
     <xsl:if test="string($docmake.output.work_in_progress)">
     <div class="center warning">
         <p>
-            <b>Note:</b> This document is work-in-progress. Please don't 
+            <b>Note:</b> This document is work-in-progress. Please don’t 
             publish it on news sites, or otherwise link to it in public
-            without the author's permission. Private linking is acceptable.
+            without the author’s permission. Private linking is acceptable.
         </p>
     </div>
     </xsl:if>

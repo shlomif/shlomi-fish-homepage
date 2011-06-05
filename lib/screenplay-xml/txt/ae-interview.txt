@@ -1,4 +1,5 @@
 <s id="adrian-ettlinger-interview" title="Adrian Ettlinger Interview">
+
 [This is an interview of Adrian Ettlinger by Shlomi Fish that was conducted in
 August 21, 2003 over the IRC. It was later edited by both parties for content
 and correctness.]
@@ -19,7 +20,7 @@ S.F.: In what corporations did you work at the time?
 
 A.E.: I was with the CBS Television Network. I had a penchant for logical design,
 i.e. in those days consisting usually of relay contact networks. That led
-to specializing in "control circuits" and got me into a pioneering
+to specializing in “control circuits” and got me into a pioneering
 computer application.
 
 S.F.: So this is how you got introduced to programming?
@@ -42,7 +43,7 @@ A.E.: I should describe further that the application was to automate the switchi
 S.F.: You mean a computer which ran a fixed program every time?
 (instead of one that loaded it to memory)
 
-A.E.: As to "fixed program", no. The data was fed into the computer. Now I’m trying to remember on that first system how the data was entered.
+A.E.: As to “fixed program”, no. The data was fed into the computer. Now I’m trying to remember on that first system how the data was entered.
 
 S.F.: Punch cards? Magnetic tape?
 
@@ -54,7 +55,7 @@ A.E.: Well, yes, about 15 years to be exact. (time interval since graduation)
 
 S.F.: Where did you work afterwards?
 
-A.E.: Before we leave that first system, I should reflect on how slow and cumbersome the computer was. It was a magnetic drum memory, no core. Each instruction took a minimum of 220 microseconds, when "optimized" and some instructions took a whole drum revolution or 1/60 of a second. It was quite a trick to program it to keep up with one-second switching interval.
+A.E.: Before we leave that first system, I should reflect on how slow and cumbersome the computer was. It was a magnetic drum memory, no core. Each instruction took a minimum of 220 microseconds, when “optimized” and some instructions took a whole drum revolution or 1/60 of a second. It was quite a trick to program it to keep up with one-second switching interval.
 
 S.F.: Yow karamba!
 
@@ -66,7 +67,7 @@ A.E.: That question I hadn’t seen. The first was the TRW machine (two versions
 
 S.F.: PDP-8 was a 16-bit computer, right?
 
-A.E.: No, as a matter of fact, it was 12-bit. Consequently, it could address directly only 4096 words in memory. By "field shifting" another four bits of addressing could added, so that the maximum RAM (then actually core) that could be addressed was 64K.
+A.E.: No, as a matter of fact, it was 12-bit. Consequently, it could address directly only 4096 words in memory. By “field shifting” another four bits of addressing could added, so that the maximum RAM (then actually core) that could be addressed was 64K.
 
 S.F.: Did the PDP-8 ran any operating system?
 
@@ -84,7 +85,7 @@ S.F.: What was Z-80 like? On what computers did it ran? Or at least you worked w
 
 +++: By Googling I see it is a processor.
 
-A.E.: You’d asked about the Z-80. Trying to remember what company made it. It was intended to be a super-8080 processor chip. That’s what it was, a processor chip intended for dedicated applications. A few companies made mainframes, i. e. "minicomputer" size system using it.
+A.E.: You’d asked about the Z-80. Trying to remember what company made it. It was intended to be a super-8080 processor chip. That’s what it was, a processor chip intended for dedicated applications. A few companies made mainframes, i. e. “minicomputer” size system using it.
 
 +++: But mainly it was intended for engineers to use in designing dedicated real-time systems.
 
@@ -95,7 +96,7 @@ A.E.: That’s it, you found it. Zilog
 
 S.F.: When did you work with it?
 
-A.E.: Hmmm. I think sometime in the early 80’s I started to work with it. This was a somewhat complicated story. I adopted it for the theatrical lighting control system -- now it’s coming back to me. There was a bus system called the "STD" bus. A Company (don’t recall if this was Zilog or another) manufactured a product line of frames and cards from which dedicated systems could be assembled.
+A.E.: Hmmm. I think sometime in the early 80’s I started to work with it. This was a somewhat complicated story. I adopted it for the theatrical lighting control system -- now it’s coming back to me. There was a bus system called the “STD” bus. A Company (don’t recall if this was Zilog or another) manufactured a product line of frames and cards from which dedicated systems could be assembled.
 
 S.F.: When did you start working on Personal Computers?
 
@@ -135,7 +136,7 @@ S.F.: Did you meet them in real life?
 
 A.E.: I’ve met Mike in person (later) but never Wilson. Come to think of it,
 Wilson lives here on Cape Cod, but some distance from where I’m at.
-After "refreshing my recollection", I met Wilson first and through him met
+After “refreshing my recollection”, I met Wilson first and through him met
 Mike. Wilson was maintaining a website which I believe was the first site for
 Freecell enthusiasts, started by Dave Ring, who organized the first project to
 recruit volunteer solvers to manually solve all 32,000 original M/S Freecell
@@ -145,13 +146,13 @@ him as a result.
 
 S.F.: OK.
 
-A.E.: Mike as you may know is a "gamesman". I. e., he lives, eats and breathes
+A.E.: Mike as you may know is a “gamesman”. I. e., he lives, eats and breathes
 games, all kinds of them. When I visited his house, it was like one huge
 warehouse of games.
 
 S.F.: Laughing out loud.
 
-A.E.: Anyway, Mike on his website had a list of "hard hands", i. e. games reported by others as being very difficult to solve. I took this as a challenge and started, as a sideline, looking for solutions of "hard hands".
+A.E.: Anyway, Mike on his website had a list of “hard hands”, i. e. games reported by others as being very difficult to solve. I took this as a challenge and started, as a sideline, looking for solutions of “hard hands”.
 
 +++: I think we have (or had) a description on Mike’s website, or in the Help of FC-Pro, how it started. To recap. When one solves a hand using M/S standard freecell, it’s often a problem remembering the path and recording it as to how one reached the solution.
 
@@ -193,11 +194,11 @@ A.E.: Don was free in giving out his source. Wilson undertook the task of integr
 
 S.F.: Was there any other major developments in Freecell Pro?
 
-A.E.: Yes, we can continue that narrative. I then took over after Wilson had done the initial adaptation of the Woods solver and began tinkering with it in different directions. I think the first thing I tried was permutations in column order. Frequently, on "long hands", i. e. hands which ran very long with no verdict, a permutation of column order would yield a very fast verdict (usually a solution, of course)
+A.E.: Yes, we can continue that narrative. I then took over after Wilson had done the initial adaptation of the Woods solver and began tinkering with it in different directions. I think the first thing I tried was permutations in column order. Frequently, on “long hands”, i. e. hands which ran very long with no verdict, a permutation of column order would yield a very fast verdict (usually a solution, of course)
 
 +++: Then next I think I tried variations in the sequence in which various types of moves were tried. That also could on occasion produce a much faster solution or verdict.
 
-+++: Then, one day, I mentioned what I was working on to a friend who is a real professional software guy (as is evident from my background, I’m just a self-taught semi-pro), and he told me about "Hashing".
++++: Then, one day, I mentioned what I was working on to a friend who is a real professional software guy (as is evident from my background, I’m just a self-taught semi-pro), and he told me about “Hashing”.
 
 +++: So I undertook the introduction of a hash technique to the storage and lookup aspects of the Woods solver, and that gave us a substantial improvement in speed.
 
@@ -207,7 +208,7 @@ A.E.: Yes, we can continue that narrative. I then took over after Wilson had don
 
 S.F.: What was your greatest surprise during your life as a developer?
 
-A.E.: Hmm, that’s hard to answer. Question of what realms we’re talking about. Those very weird "impossible" bugs you hit now and then are one thing.
+A.E.: Hmm, that’s hard to answer. Question of what realms we’re talking about. Those very weird “impossible” bugs you hit now and then are one thing.
 
 S.F.: Can you recall a single event that involved some other person?
 
@@ -223,14 +224,14 @@ A.E.: Involving another person. While I was at CBS, there were a few encounter w
 
 S.F.: What was your greatest surprise when working on Freecell Pro?
 
-A.E.: One interesting milestone in my "career" was working with Wilson. For my entire career, I’d been a "lone wolf", with no one else knowing anything about my code, or ever looking at it. With Wilson was my first, and still only, experience actually collaborating with someone else on a body of code.
+A.E.: One interesting milestone in my “career” was working with Wilson. For my entire career, I’d been a “lone wolf”, with no one else knowing anything about my code, or ever looking at it. With Wilson was my first, and still only, experience actually collaborating with someone else on a body of code.
 
 +++: I think on FC-Pro, my greatest surprise was being able to successfully
 implement the hash system and seeing how well it worked. I suppose it was also
 a surprise when I discovered the percentage of solvable hands with less that
 four freecells. Another point I might mention - an insight which came to me as
 a surprise, and which I had to instantly agree with. Mike Keller once said to
-me that in his opinion, Freecell is not a "game", but rather a "puzzle". And I
+me that in his opinion, Freecell is not a “game”, but rather a “puzzle”. And I
 had to agree. Any solvable Freecell hand is really no more or less than a
 logic puzzle.
 
@@ -240,16 +241,16 @@ A.E.: I’m doing now mainly some things related to railroad history. The mainte
 
 S.F.: FC-Pro was released as free software about a year ago. What convinced you to release it as free software?
 
-A.E.: I think the main reason for that is something we didn’t get into yet. The incorporation of your solver and Tom Holroyd’s into the "Solver Evaluation" version of FcPro. It was necessary to make it open source for that purpose.
+A.E.: I think the main reason for that is something we didn’t get into yet. The incorporation of your solver and Tom Holroyd’s into the “Solver Evaluation” version of FcPro. It was necessary to make it open source for that purpose.
 
-+++: However, note that FcPro was always "Free" as regards the application itself. What was new recently was making it open source.
++++: However, note that FcPro was always “Free” as regards the application itself. What was new recently was making it open source.
 
 S.F.: Actually, Free software is a synonym for Open Source Software.
 
 A.E.: Oh, OK. Then is there any term for software that’s closed source, but the application is given away for free?
 
 S.F.: Free as in Free Speech and not as in Free Beer. The correct term
-for such software is "Freeware".
+for such software is “Freeware”.
 
 A.E.: Ah, OK
 
@@ -263,7 +264,7 @@ A.E.: I didn’t really have much patience for studying the nuances of various l
 
 S.F.: What features would you like to see added to Freecell Pro in the future?
 
-A.E.: Well, I have to say that I may now be permanently "burned out" on FcPro. I wish someone would pick it up and take over, but there don’t seem to be any people out there so motivated. Everyone wants to write his own code.
+A.E.: Well, I have to say that I may now be permanently “burned out” on FcPro. I wish someone would pick it up and take over, but there don’t seem to be any people out there so motivated. Everyone wants to write his own code.
 
 S.F.: Whatever happened to Wilson Callan? Did you keep in touch with him?
 
@@ -278,10 +279,10 @@ A.E.: What? 99% of programmers are that arrogant? I have to differ from Linus. I
 
 S.F.: I think he was exaggerating on purpose.
 
-A.E.: No doubt. I think I’m pretty good as regards "native ability" but because of my lack of formal training, I’d be nowhere near the top 1% overall. I have excelled in the past in writing tight code that would run very fast in memory-poor and speed-limited environments. But even in that specialty, don’t think I’d claim top 1%. Maybe top 5%,
+A.E.: No doubt. I think I’m pretty good as regards “native ability” but because of my lack of formal training, I’d be nowhere near the top 1% overall. I have excelled in the past in writing tight code that would run very fast in memory-poor and speed-limited environments. But even in that specialty, don’t think I’d claim top 1%. Maybe top 5%,
 
-+++: I’m reminded of a book which came out a few decades ago entitled "The
-Mythical Man Month". It was a very well-written description of what the world
++++: I’m reminded of a book which came out a few decades ago entitled “The
+Mythical Man Month”. It was a very well-written description of what the world
 of software, in its most professional sense, is all about. It describes the
 ideal programming environment as one in which all code is reviewed by other
 people, and a genuine team approach is taken. It’s very convincing that for a
@@ -300,7 +301,7 @@ of your age over younger programmers?
 
 A.E.: I don’t think there are very many active programmers my age. We could probably start with programmer as young as 20 years my junior.
 
-+++: I’m not sure what advantage a more experienced programmer has. Sometimes I feel the rigorous methods taught to younger programmers are in the long run slower than a "seat of the pants" approach, but it depends so much on the skill of the programmer. Maybe what I’m saying is that it probably just wouldn’t be valid to try to generalize on that question.
++++: I’m not sure what advantage a more experienced programmer has. Sometimes I feel the rigorous methods taught to younger programmers are in the long run slower than a “seat of the pants” approach, but it depends so much on the skill of the programmer. Maybe what I’m saying is that it probably just wouldn’t be valid to try to generalize on that question.
 
 S.F.: What are your favourite Solitaire variants aside from Freecell?
 
@@ -314,21 +315,21 @@ S.F.: Are there any other computer games you like?
 
 A.E.: I don’t like to advertise this particularly, but I’ve been playing the Windows XP pinball. I used to play computer golf, and thinking I might like to buy a new version. I’ve also dabbled with Flight Simulator. I also had a period when I spent a lot of time playing Tetris and a variation called Super-Tetris
 
-S.F.: If you like Pinball, there’s a retail "Microsoft Pinball" version which is very nice.
+S.F.: If you like Pinball, there’s a retail “Microsoft Pinball” version which is very nice.
 
 A.E.: Might consider that.
 
 S.F.: Do you have any unanswered questions about Freecell you’d like to know the answer to?
 
-A.E.: Well, yes, about the solvers. There seems still to be certain deals that are "intractable" by any of the three solvers. I’d like to see more investigation of that. I think solvers is still a territory on which much more development could be done.
+A.E.: Well, yes, about the solvers. There seems still to be certain deals that are “intractable” by any of the three solvers. I’d like to see more investigation of that. I think solvers is still a territory on which much more development could be done.
 
 S.F.: Give one of your favourite quotes.
 
-A.E.: "Those who do not study history are condemned not to know what has happened".
+A.E.: “Those who do not study history are condemned not to know what has happened”.
 
 S.F.: Nice.
 
-A.E.: No. 2 What is the definition of "time"? Time is nature’s way of preventing everything from happening all at once.
+A.E.: No. 2 What is the definition of “time”? Time is nature’s way of preventing everything from happening all at once.
 
 S.F.: Nice as well.
 

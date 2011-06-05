@@ -52,6 +52,7 @@ my @matches =
     "let's",
     "she'll",
     "she's",
+    "shouldn't",
     "that's",
     "there's",
     "they'll",

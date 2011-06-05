@@ -42,7 +42,7 @@ from the Debian servers)</a> . What it does, so far is:
 Fix a data corruption bug with the search function.
 </li>
 <li>
-Fix the "Find again" functionality.
+Fix the “Find again” functionality.
 </li>
 <li>
 Eliminate many compilation warnings caused due to a confusion between signed
@@ -56,7 +56,7 @@ Integrate patch from wwp that:<br />
 Fixes proto for find() in src/grg_entries_vis.h.
 </li>
 <li>
-Fixes compilation on FC3 (missing #include's to "stdio.h")
+Fixes compilation on FC3 (missing #include’s to “stdio.h”)
 </li>
 <li>
 Adds sensitivity to HTAB environment variable to change the horizontal tab 

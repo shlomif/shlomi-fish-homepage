@@ -6,12 +6,13 @@ temp_filter()
 {
     grep -vP '(humour/human-hacking/hebrew-v2|humour/humanity/buy-the-fish-in-hebrew|humour/humanity/ongoing-text-hebrew\.html|humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text)' |
     grep -vP '^(dest/t2-homepage/index\.html)' |
+    grep -vP '^(dest/t2-homepage/old-news\.html)' |
     grep -vP '^(dest/t2-homepage/lecture/)'
 }
 
 temp_only_from_reached()
 {
-    perl -lne 'print if /MathVentures/..1'
+    perl -lne 'print if m{t2-homepage/open-source}..1'
 }
 
 find dest/t2-homepage/ -regextype posix-extended -regex '.*x?html' -print | 

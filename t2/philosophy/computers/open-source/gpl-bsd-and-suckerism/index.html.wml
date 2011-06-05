@@ -6,7 +6,7 @@
 
 <p>
 I wrote this essay as a way to clarify my position on the choice of a licence 
-for one's open-source project and how it relates to being a sucker.
+for one’s open-source project and how it relates to being a sucker.
 </p>
 
 <h2>Dates</h2>
@@ -27,21 +27,21 @@ At <a href="http://linmagazine.co.il/node/view/11659">this (Hebrew)
 discussion in Linmagazine.co.il</a>, a claim was made that people who 
 distribute code that they wrote under BSD-style licences are suckers, while 
 people who distribute their code under <a href="http://www.gnu.org/licenses/gpl-faq.html">the GPL (GNU General Public Licence)</a> 
-are not, since they make sure no one will make a proprietary use of their code. In this essay, I'd like to reply to this in
+are not, since they make sure no one will make a proprietary use of their code. In this essay, I’d like to reply to this in
 a rational manner. (As opposed to the flamefest in the original discussion).
 </p>
 
 <p>
-First, let's understand when a person is a "sucker". If I went to the mall
-and bought peanuts for 20 dollars per 100 grams, then I'm a sucker. That's
+First, let’s understand when a person is a “sucker”. If I went to the mall
+and bought peanuts for 20 dollars per 100 grams, then I’m a sucker. That’s
 because peanuts should be considerably cheaper. But if I went with my friend
-to a mall, and he didn't have money and I bought him food, then was I a sucker?
+to a mall, and he didn’t have money and I bought him food, then was I a sucker?
 </p>
 
 <p>
-The answer is an absolute "No". Helping your neighbour does not count as being 
-a sucker. I'm the last person that will claim that a person is obliged to 
-help his friend, the poor, or in general sacrifice something for a "noble" 
+The answer is an absolute “No”. Helping your neighbour does not count as being 
+a sucker. I’m the last person that will claim that a person is obliged to 
+help his friend, the poor, or in general sacrifice something for a “noble” 
 cause. (see 
 <a href="http://en.wikipedia.org/wiki/Objectivist_philosophy">Objectivism</a>).
 But if a person donates (time, money, property, etc.) to someone else he knows
@@ -52,7 +52,7 @@ free will, does this makes him a sucker?
 <p>
 Hell no! It is obvious that an activity such as this is welcome. You always
 feel good when you help another, and it is always nice to receive 
-something when the receiver has a need. I wouldn't want to live in a society
+something when the receiver has a need. I wouldn’t want to live in a society
 where everyone is selfish and is unwilling to help others at times of need.
 (And those who know me can testify that I have helped others a lot in the past
 and still am helping others when they need help.)
@@ -62,20 +62,20 @@ and still am helping others when they need help.)
 <p>
 How does it relate to the GPL and the BSD? It is obvious that a person who 
 releases code under an open-source licence is contributing for the common good.
-(albeit he may sometimes have an Egoistical Interest to do it). If you're 
-really selfish, (or at least not in an Altruistic mood) then you'll probably 
+(albeit he may sometimes have an Egoistical Interest to do it). If you’re 
+really selfish, (or at least not in an Altruistic mood) then you’ll probably 
 want to sell a software that you have written, albeit you may want to make 
 sure the source code is viewable. Now, would using an LGPL licence (that 
 allows linking to proprietary code) be a Suckerish act?
 </p>
 
 <p>
-It isn't that either. It's possible that the originator has an interest or a
+It isn’t that either. It’s possible that the originator has an interest or a
 desire that people will do a commercial use of his code. Whether it’s
 integration into proprietary code (without non-trivial changes), or even
 distributing code based on these changes. Why? If I wrote a library or a
-module, then it is possible that I'll want that it people will make the 
-largest possible use of it. That's because when I wrote the library, I meant to
+module, then it is possible that I’ll want that it people will make the 
+largest possible use of it. That’s because when I wrote the library, I meant to
 solve a certain problem and I don’t have interest that people will write their
 own code that solves this problem times and again, only because they desire or
 need to distribute it as part of a non-open-source software.
@@ -85,52 +85,52 @@ need to distribute it as part of a non-open-source software.
 Very well, so programmers of GPLed or LGPLed code are not suckers. But are
 programmers of software under BSD-style licences so? Again, they are not.
 First of all, they helped their neighbour (which naturally also includes
-commercial companies) and not just did a "suckery" act. Secondly, it is
+commercial companies) and not just did a “suckery” act. Secondly, it is
 possible that they want people to integrate and modify this code. Perhaps
 because they want it to be part of an embedded software. Perhaps they want to
 have proprietary derived products that they can draw ideas and inspiration
 from. And perhaps they (and I included) just don’t want to worry what possible
 illegal use people make of their code. If you release a code under the Public
-Domain, then there's a very small chance that someone will violate its licence.
+Domain, then there’s a very small chance that someone will violate its licence.
 If you release it under the GPL, then <a 
 href="http://gpl-violations.org/">there can be</a>. I have enough worries as
-it is, and I don’t need more worries of what "malicious" use people are doing
+it is, and I don’t need more worries of what “malicious” use people are doing
 with my software. (Not to mention that I feel good if something like that
 happens because imitation is the sincerest form of flattery.).  
 </p>
 
 <p>
 Thus, releasing a code under a non-GPLed licence does not make one a sucker. 
-I'm not saying that people who release GPLed code are hypocrites or bastards
+I’m not saying that people who release GPLed code are hypocrites or bastards
 (or just plain selfish). There are occasions, that the GPL is much
 more suitable than a different licence, and there are opposite occasions.
 Determining which licence is suitable when, is a completely different issue,
-which won't be covered here.
+which won’t be covered here.
 </p>
 <p>
 For further reading see:
 </p>
 <ol>
 <li>
-<a href="http://ken.coar.org/musings/free-source.html">Ken's Musings about 
+<a href="http://ken.coar.org/musings/free-source.html">Ken’s Musings about 
 Free Software and Open Source</a> - an essay of Ken Coar, one of the core
 members of <a href="http://www.apache.org/">the Apache project</a>. Towards
 the end he explains why he prefers BSD-like licences.
 </li>
 <li>
 <a href="http://people.freebsd.org/~phk/">The homepage of Poul-Henning Kamp</a>
-where he discusses his BSD-like "Beerware" licence.
+where he discusses his BSD-like “Beerware” licence.
 </li>
 <li>
 <a href="http://groups.yahoo.com/group/hackers-il/message/2809">The Well and 
 the Wall</a> - an essay I wrote as a result of reading
-<a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">the "Cathedral 
-and the Bazaar"</a> on a pet project of mine, and why it turned out that the
+<a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">the <i>Cathedral 
+and the Bazaar</i></a> on a pet project of mine, and why it turned out that the
 Public Domain licensing I chose for it, was ideal in this circumstance.
 </li>
 <li>
 <a href="http://www.advogato.org/person/bagder/diary.html?start=188">An
-entry in Daniel Stenberg's diary</a> echoing his sentiments with the release
+entry in Daniel Stenberg’s diary</a> echoing his sentiments with the release
 of a new version of cURL and libcurl, that are distributed under a BSD-style
 licence.
 </li>
@@ -144,7 +144,7 @@ deal faster. So until then, hack on!
 </p>
 
 <p>
-I'd like to thank Omer Zak and Dotan Kamber who read early drafts of this
+I’d like to thank Omer Zak and Dotan Kamber who read early drafts of this
 essay and gave some useful commentary.
 </p>
 

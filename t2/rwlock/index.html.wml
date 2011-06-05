@@ -102,12 +102,12 @@ obtain the lock indefinetly (which in any case should not happen in a
 well-designed system).
 </p>
 
-<h3>How does it make sure that's what going to happen?</h3>
+<h3>How does it make sure that’s what going to happen?</h3>
 
 <p>
 By using a queue in which each element controls a pending thread. A detailed
 description of the algorithm can be found <a href="Scheme.txt">here</a> and
-naturally, there are also the comments in the code. If there's anything you
+naturally, there are also the comments in the code. If there’s anything you
 don’t understand, don’t hesitate to 
 <a href="$(ROOT)/me/contact-me/">contact me</a> 
 and ask.

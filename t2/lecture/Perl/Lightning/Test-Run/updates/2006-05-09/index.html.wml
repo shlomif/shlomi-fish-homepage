@@ -14,7 +14,7 @@ They now allow configuring the colour in which the summary would be displayed.
 <h2>To Percent or not to Percent?</h2>
 
 <p>
-On 22 April <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05711.html">Andy Lester (Test::Harness' maintainer) announced</a>:
+On 22 April <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05711.html">Andy Lester (Test::Harness’ maintainer) announced</a>:
 </p>
 
 <blockquote>
@@ -22,10 +22,10 @@ On 22 April <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05711.htm
 Test me please: P/PE/PETDANCE/Test-Harness-2.57_06.tar.gz
 </p>
 <p>
-I'm approaching the end of this release cycle. I really want to get this released. 
+I’m approaching the end of this release cycle. I really want to get this released. 
 </p>
 <p>
-I've removed the meaningless percentages of tests that have failed. If you 
+I’ve removed the meaningless percentages of tests that have failed. If you 
 rely on the output at the end, it’s different now.
 </p>
 </blockquote>
@@ -36,14 +36,14 @@ But <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05714.html">not e
 
 <blockquote>
 <p>
-I don’t like the change myself. I'm bright enough to figure out that anything less than 100% pass is bad when developing. 
+I don’t like the change myself. I’m bright enough to figure out that anything less than 100% pass is bad when developing. 
 </p>
 
 <p>
 When using other peoples test suites seeing, for example, 99% ok tells me
 something very different from seeing 3% ok. For me the difference between
-"nearly there apart form this bit of functionality that I don’t care about" and
-"completely f**ked" is useful. Yes I can figure it out from the test/pass
+“nearly there apart form this bit of functionality that I don’t care about” and
+“completely f**ked” is useful. Yes I can figure it out from the test/pass
 numbers - but the percentage gives me a handy overview. Math is hard! :-)
 </p>
 </blockquote>
@@ -68,7 +68,7 @@ In the same discussion, people said they could really use a TAP parser/event
 handler to process the tests and write custom event handlers using it. 
 </p>
 
-<h2>"prove" &rarr; "runprove" with Test::Run::CmdLine::Prove</h2>
+<h2>“prove” &rarr; “runprove” with Test::Run::CmdLine::Prove</h2>
 
 <p>
 The prove testing command line utility was re-implemented for Test::Run as 
@@ -99,7 +99,7 @@ A Persistent Test Harness.
 Integration into ExtUtils::MakeMaker, and Module::Build.
 </li>
 <li>
-Colour the individual files' status reports.
+Colour the individual files’ status reports.
 </li>
 </ul>
 

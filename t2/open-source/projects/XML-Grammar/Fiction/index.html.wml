@@ -69,11 +69,18 @@ License</a>, a permissive, public-domain-like licence.
 
 <h3 id="fiction_examples">Fiction-Text Examples</h3>
 
+<define-tag url_to_data_examples whitespace="delete">
+<preserve base />
+<set-var %attributes />
+http://svn.berlios.de/viewvc/web-cpan/XML-Grammar-Fiction/trunk/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text/
+<restore base />
+</define-tag>
+
 <ul>
 
 <li>
 <p>
-<b>Distributed Examples</b> - there are some short examples under 
+<a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under 
 <tt>t/fiction/data/</tt> in the distribution (mostly in English).
 </p>
 </li>
@@ -109,8 +116,9 @@ Fiction-Text.
 
 <li>
 <p>
-Some short and silly examples can be found in the <tt>t/screenplay/data</tt>
-directory in the distribution.
+<a href="<url_to_data_examples base="screenplay" />"><b>Distributed
+Examples</b></a>- there are some short and silly examples
+in the <tt>t/screenplay/data</tt> directory in the distribution.
 </p>
 </li>
 

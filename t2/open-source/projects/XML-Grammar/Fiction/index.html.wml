@@ -317,7 +317,31 @@ Then after converting it to XML and then to XHTML we get this:
 </p>
 
 <div class="fiction_xml">
-#include "docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml"
+<:{
+sub _xml_fiction_slurp
+{
+    my $filename = shift;
+
+    open my $in, "<", $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    binmode $in, ":utf8";
+
+    local $/;
+    my $contents = <$in>;
+
+    close($in);
+
+    return $contents;
+};
+binmode STDOUT, ":utf8";
+my $text = _xml_fiction_slurp("../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml");
+
+$text =~ s{\bindex\b}{fiction_text_index}g;
+
+print $text;
+}:>
+
 </div>
 
 <h3 id="demo-screenplay1">Screenplay Demo 1</h3>
@@ -334,7 +358,13 @@ If we have this sample screenplay:
 Then after converting it to XML and then to XHTML we get this:
 </p>
 
-#include "screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html"
+<:{
+my $text = _xml_fiction_slurp("../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html");
+
+$text =~ s{\bindex\b}{screenplay_text_index}g;
+
+print $text;
+}:>
 
 <h2 id="similar">Similar Projects</h2>
 

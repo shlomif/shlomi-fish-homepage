@@ -88,6 +88,9 @@ clean:
 	rm -fr $(T2_DEST)/*
 	rm -fr $(VIPE_DEST)/*
 
+upload_hostgator: upload_deps
+	( cd $(T2_DEST) && $(RSYNC) -a * 'hostgator:public_html/' )
+
 t2/SFresume.html.wml : lib/SFresume_base.wml
 	touch $@
 

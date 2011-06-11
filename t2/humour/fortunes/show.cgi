@@ -1,5 +1,11 @@
 #!/usr/bin/perl
 
+BEGIN {
+    my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' : 
+        ( getpwuid($>) )[7] . '/perl/');
+    unshift @INC, map { $base_module_dir . $_ } @INC;
+}
+
 use strict;
 use warnings;
 

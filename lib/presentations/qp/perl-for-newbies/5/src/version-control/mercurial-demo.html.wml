@@ -361,3 +361,35 @@ Files=1, Tests=3,  0 wallclock secs ( 0.04 usr  0.00 sys +  0.02 cusr  0.00 csys
 Result: PASS
 $ 
 </quadpres_code_block>
+
+<p>
+Now that it's working we can perform more changes, and continue to commit them.
+We can see the log of all our changes:
+</p>
+
+<quadpres_code_block>
+$ hg up
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+$ hg log
+changeset:   3:a7599e97a8d8
+tag:         tip
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Sat Jan 15 10:46:24 2011 +0200
+summary:     Fixed a bug - we did x+y*2 instead of x+y
+
+changeset:   2:ebc249691c24
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:20:29 2011 +0200
+summary:     Add another assertion
+
+changeset:   1:e2b34f948dcd
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:14:05 2011 +0200
+summary:     Added mytest.t.
+
+changeset:   0:7dec17ed3e88
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:07:32 2011 +0200
+summary:     Added MyModule.pm
+</quadpres_code_block>
+

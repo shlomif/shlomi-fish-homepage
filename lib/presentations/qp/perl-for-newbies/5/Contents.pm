@@ -44,21 +44,6 @@ my $contents =
                     url => "mocking.html",
                     title => "Mocking",
                 },
-                {
-                    url => "data-driven",
-                    title => "Data-Driven Testing",
-                    subs =>
-                    [
-                        {
-                            url => "fit.html",
-                            title => "FIT",
-                        },
-                        {
-                            url => "Test-Base.html",
-                            title => "Test-Base",
-                        },
-                    ],
-                },
             ],
         },
 

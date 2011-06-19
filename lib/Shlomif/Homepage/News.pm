@@ -226,6 +226,15 @@ sub _init
     return 0;
 }
 
+sub _wmlize
+{
+    my $s = shift;
+
+    $s =~ s{^#}{\\#}gms;
+
+    return $s;
+}
+
 sub get_item_html
 {
     my $self = shift;
@@ -235,7 +244,7 @@ sub get_item_html
     return qq{<div class="news_item"><h3 class="newsitem">} . $item->{'date'}
         . (defined($title) ? ": $title" : "")
         . "</h3>\n\n"
-        . $item->{'body'}
+        . _wmlize($item->{'body'})
         . qq{\n</div>\n}
         ;
 }

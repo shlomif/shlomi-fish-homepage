@@ -30,10 +30,12 @@ writing your own accessor methods by hand, like we did in the example.
 <h2 id="Moose"><a href="http://moose.perl.org/">Moose</a></h2>
 
 <p>
-While Moose provides one with accessors, that is just the tip of its iceberg.
-Moose is in fact a post-modern object system for Perl 5 that provides a
-type system, delegators, meta-classes, wrapping routines, and many other
-advanced features. As <a href="http://osdir.com/ml/lang.perl.moose/2008-05/msg00003.html">I once said</a>:
+While Moose provides accessors, they are only the tip of its 
+iceberg. Moose is in fact a “post-modern” object system for Perl 5 that
+provides a type system, delegators, meta-classes, wrapping routines, and many
+other advanced features. As <a
+href="http://osdir.com/ml/lang.perl.moose/2008-05/msg00003.html">I once
+said</a>:
 </p>
 
 <blockquote>
@@ -46,6 +48,6 @@ informally-specified, bug-ridden, slow implementation of half of Moose.
 <p>
 If you're looking to take your object oriented programming in Perl 5 
 to new levels - look no further than that. One should be warned that as of
-this writing (August, 2009) Moose may have had a relatively long startup time,
+this writing (August, 2009), Moose may have a relatively long startup time,
 although the situation has been improved and is expected to improve further.
 </p>

@@ -35,7 +35,7 @@ its commenting system to post comments to its entries.
 homepage</a> at Berlios where I hope other people would be able to
 contribute to it more efficiently than before. 
 <a href="http://gimp-test.berlios.de/">The Gimp Automated Testing 
-Framework</a> is a new project of mine. Check it out if you're interested.
+Framework</a> is a new project of mine. Check it out if you’re interested.
 </p>
 EOF
     },
@@ -43,8 +43,8 @@ EOF
         'date' => "19-May-2005",
         'body' => <<"EOF",
 <p class="newsitem">
-The full but incomplete text of <a href="humour/human-hacking/">"The Human 
-Hacking Field Guide"</a> is now available online for your reading pleasure.
+The full but incomplete text of <a href="humour/human-hacking/"><i>The Human 
+Hacking Field Guide</i></a> is now available online for your reading pleasure.
 </p>
 EOF
     },
@@ -52,7 +52,7 @@ EOF
         'date' => "22-May-2005",
         'body' => <<"EOF",
 <p class="newsitem">
-I now have <a href="./me/personal-ad.html">a personal ad</a>. I'm
+I now have <a href="./me/personal-ad.html">a personal ad</a>. I’m
 looking for a girlfriend who lives in Central Israel.
 </p>
 EOF
@@ -64,10 +64,10 @@ EOF
 Several new additions were added to the site. The <a href="./art/">art
 section</a> now contains two new pieces. I also added 
 <a href="./open-source/bits.html#old_pmwiki_revert">a new script</a>
-to the "Open Source Bits and Bobs section". Several new programs were
+to the Open Source Bits and Bobs section. Several new programs were
 added to <a href="./open-source/favourite/">my favourite
 free software</a>. Some new languages were added to
-<a href="./humour/ways_to_do_it.html">the "Ways to do it" according
+<a href="./humour/ways_to_do_it.html">the “Ways to do it” according
 to the programming languages of the World</a> page. 
 </p>
 
@@ -84,8 +84,8 @@ EOF
         'date' => "5-Oct-2005",
         'body' => <<"EOF",
 <p class="newsitem">
-Added <a href="./philosophy/computers/when-c-is-best/">the "When C is the
-Best" essay</a>. Also now that the software patents threat in Europe has
+Added <a href="./philosophy/computers/when-c-is-best/">the “When C is the
+Best” essay</a>. Also now that the software patents threat in Europe has
 been eliminated, I have removed the notice box, and replaced my top-left
 icon with <a href="./images/shlomif-homepage-logo.png">a personal
 logo</a> based on <a href="http://ars.userfriendly.org/cartoons/?id=20030803&amp;mode=classic">EvilPHish 
@@ -134,8 +134,8 @@ The <a href="./links.html">Links Page</a> was updated.
 Several new essays and articles are now part of 
 the <a href="./philosophy/">Philosophy
 section</a>. Especially note 
-<a href="./philosophy/computers/when-c-is-best/">the "When C is the
-Best" essay</a> which started 
+<a href="./philosophy/computers/when-c-is-best/">the “When C is the
+Best” essay</a> which started 
 <a href="http://osnews.com/comment.php?news_id=12189">an active discussion 
 in OSNews</a>.
 </li>
@@ -146,7 +146,7 @@ books</a>.
 </ol>
 
 <p class="newsitem">
-There's still some more ground to cover on my part, but the homepage should
+There’s still some more ground to cover on my part, but the homepage should
 still be much better than it was 10 days ago.
 </p>
 EOF

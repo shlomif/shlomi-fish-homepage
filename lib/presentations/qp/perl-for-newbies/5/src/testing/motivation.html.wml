@@ -2,18 +2,18 @@
 
 <p>
 So why do we want to perform automated software testing? The
-first is to prevent bugs. By writing tests before we write the code itself
-(so-called <b>Test-First Development</b>) we ascertain that the code behave
-according to the specification given in the tests. That way, bugs that could
-occur if the code was deployed right away or tested immediately would be
-prevented.
+first is to prevent bugs. By writing tests before we write the production
+code itself (so-called <b>Test-First Development</b>) we ascertain that the 
+production code behaves according to the specification given in the tests.
+That way, bugs that could occur, if the code was deployed right away, or
+tested only manually, would be prevented.
 </p>
 
 <p>
-Another reason is to make sure bugs and regressions do not occur again. Say we
-have a bug, and we write a meaningful test that fails when the bug is still
-in the code, and only then fix the bug. In that case, we can re-use the test
-in the future to make sure the bug is not present in the current version
+Another reason is to make sure that bugs and regressions do not occur again.
+Say we have a bug, and we write a meaningful test that fails when the bug is 
+still in the code, and only then fix the bug. In that case, we can re-use the
+test in the future to make sure the bug is not present in the current version
 of the code. If the bug re-surfaces in a certain variation, then it will
 likely be caught by the test.
 </p>

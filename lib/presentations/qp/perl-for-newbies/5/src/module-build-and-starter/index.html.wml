@@ -4,15 +4,15 @@
 Now let's tie everything together. When you download a Perl package from
 CPAN, there's a standard way to build and install it - 
 <tt>perl Makefile.PL</tt>, <tt>make</tt>, <tt>make test</tt> and 
-<tt>make install</tt> or the same with <tt>perl Build.PL</tt> and
-<tt>./Build</tt>. 
+<tt>make install</tt> (or alternatively a similar process with 
+<tt>perl Build.PL</tt> and <tt>./Build</tt> ).
 </p>
 
 <p>
 When creating packages of Perl code, it is preferable to
 make them capable of being built this way, even if they are intended for
 internal use. That is because packaging them this way gives you many
-advantages, among them the ability to specify CPAN (and in-house) 
+advantages, among them the ability to specify CPAN (and in-house)
 dependencies, integrity tests, configurability in building and installation,
 and simplification of the preparation of system packages (such as
 <tt>.rpm</tt>s or <tt>.deb</tt>s).

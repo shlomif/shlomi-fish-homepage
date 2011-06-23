@@ -95,6 +95,11 @@ my $software_tree_contents =
                     title => "Perform operations on a number of Perl modules by handling their different stringification formats.",
                 },
                 {
+                    text => "Convert From Test.pm",
+                    url => "open-source/projects/Test.pm-Converter/",
+                    title => "Script to partially convert Perl test programs that use Test.pm to Test::More.",
+                },
+                {
                     text => "The XML-Grammar Project",
                     url => "open-source/projects/XML-Grammar/",
                     title => "Provides specialised XML grammars, with processors and converters for various tasks",

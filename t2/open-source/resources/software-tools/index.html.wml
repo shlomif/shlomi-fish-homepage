@@ -14,14 +14,14 @@
 
 <ul>
 <li>
-<a href="http://www.gnu.org/software/make/">GNU Make</a> - the best make in 
-town! An implementation of make with many enhancements and some 
-parallelization. There’s a drop-in replacement for it written in Perl called 
+<a href="http://www.gnu.org/software/make/">GNU Make</a> - the best make in
+town! An implementation of make with many enhancements and some
+parallelization. There’s a drop-in replacement for it written in Perl called
 <a href="http://makepp.sourceforge.net/">Makepp</a>.
 </li>
 
 <li>
-<a href="http://www.canb.auug.org.au/~millerp/cook/cook.html">Cook</a> - 
+<a href="http://www.canb.auug.org.au/~millerp/cook/cook.html">Cook</a> -
 a make replacement with variables, user-defined functions, parallelisation,
 file checksums, and other powerful features.
 </li>
@@ -43,7 +43,7 @@ written in Java that uses an XML description language.
 
 <ul>
 <li>
-<a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">Google’s 
+<a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">Google’s
 Web Directory for Make Tools</a> - contains other useful links.
 </li>
 
@@ -59,7 +59,7 @@ contains a list of alternatives.
 
 <li>
 <a href="http://spreadsheets.google.com/pub?key=prEdSidtHryEXastzzgO5DQ">A
-Google Spreadsheet with a Comparison of various Alternatives</a> 
+Google Spreadsheet with a Comparison of various Alternatives</a>
 </li>
 
 </ul>
@@ -74,7 +74,7 @@ GNU <a href="http://www.gnu.org/software/autoconf/autoconf.html">Autoconf</a>,
 and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
 a trio of programs to portably build applications across multiple UNIX
 platforms. The de-facto standard in the open-source world, but very kludgy
-and causes many problems. See my 
+and causes many problems. See my
 <a href="$(ROOT)/open-source/anti/autohell/">“Escape
 from GNU Autohell!”</a> page.
 </li>
@@ -92,7 +92,7 @@ other projects.
 </li>
 
 <li>
-<a href="http://www.cleanscape.net/stdprod/qef/qef.html">QEF</a> - a 
+<a href="http://www.cleanscape.net/stdprod/qef/qef.html">QEF</a> - a
 high-level software construction system. Operates consistently across UNIX
 and Windows NT platforms. Proprietary.
 </li>
@@ -106,7 +106,7 @@ between the configuration phase and the build phase and tends to be slow.
 
 <li>
 <a href="http://code.google.com/p/waf/">Waf</a> - an open-source (modified
-BSD) tool based on SCons, CMake and other tools and also written in Python.
+BSD) tool based on SCons, CMake and other tools, and also written in Python.
 Created for KDE 4 as an enhanced version of SCons, but they eventually decided
 to use CMake instead.
 </li>
@@ -119,22 +119,22 @@ to use CMake instead.
 
 <li>
 <a href="http://www.rpm.org/">RPM</a> - a package management system used on
-RedHat Linux and other RPM-based distributions. Also look at 
-<a href="http://urpmi.org/">urpmi</a>, 
+RedHat Linux and other RPM-based distributions. Also look at
+<a href="http://urpmi.org/">urpmi</a>,
 <a href="http://linux.duke.edu/projects/yum/">yum</a>,
-and <a href="http://apt-rpm.tuxfamily.org/">apt-rpm</a>, 
+and <a href="http://apt-rpm.tuxfamily.org/">apt-rpm</a>,
 which install packages and resolve dependencies.
 </li>
 
 <li>
 <a href="http://freshmeat.net/projects/dpkg/">dpkg</a> - The Debian Package
 Manager, which is also used on similar distributions. Also look at
-<a href="http://www.debian.org/doc/manuals/apt-howto/index.en.html">Apt</a> 
+<a href="http://www.debian.org/doc/manuals/apt-howto/index.en.html">Apt</a>
 which automatically installs packages and resolves dependencies.
 </li>
 
 <li>
-<a href="http://www.gentoo.org/">Portage - The Gentoo Package Manager</a> - 
+<a href="http://www.gentoo.org/">Portage - The Gentoo Package Manager</a> -
 a package management system for Gentoo Linux. Akin to the BSD ports but
 based on Python.
 </li>
@@ -152,7 +152,7 @@ software packaging system.
 
 <li>
 <a href="http://www.cvshome.org/">CVS</a> - the old standard of
-open-source source control systems. Functional and stable, but limited in 
+open-source source control systems. Functional and stable, but limited in
 many ways. (GPLed).
 </li>
 
@@ -179,17 +179,17 @@ documentation.
 <li>
 <a href="http://better-scm.berlios.de/">The Better-SCM Site</a> - a site for
 comparison and advocacy of Version Control Systems. (Maintained by Shlomi
-Fish, who also originated this page and site.) Contains <a 
+Fish, who also originated this page and site.) Contains <a
 href="http://better-scm.berlios.de/comparison/">a comparison</a>.
 </li>
 
 <li>
-<a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Wikipedia 
+<a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Wikipedia
 Comparison of Revision Control Systems</a>
 </li>
 
 <li>
-<a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/">Dmoz.org’s 
+<a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/">Dmoz.org’s
 Category for Version Control Systems</a> - contains links to many
 other implementations and resources. <a href="http://dir.google.com/Top/Computers/Software/Configuration_Management/Tools/">The Google Directory’s equivalent
 directory may also prove helpful.</a>.
@@ -201,15 +201,15 @@ directory may also prove helpful.</a>.
 
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
-to very prominent open-source ones, and to directories where comprehensive 
+to very prominent open-source ones, and to directories where comprehensive
 lists can be found.
 </p>
 
 <ul>
 <li>
 <a href="http://www.mozilla.org/projects/bugzilla/">Bugzilla</a> - a
-WWW-based bug management system written as part of the Mozilla project with 
-many advanced features. 
+WWW-based bug management system written as part of the Mozilla project with
+many advanced features.
 </li>
 
 <li>
@@ -221,27 +221,32 @@ has several front-ends.
 <li>
 <a href="http://gforge.org/">GForge</a> - The open-source derivative of
 the original VA SourceForge codebase contains a rudimentary bug-tracking
-system as part of the many web-based collaborative services it offers for 
+system as part of the many web-based collaborative services it offers for
 developers.
 </li>
 
 <li>
-<a href="http://mantisbt.sourceforge.net/">Mantis</a> - An open-source 
+<a href="http://mantisbt.sourceforge.net/">Mantis</a> - An open-source
 PHP/MySQL web-based bug tracking system.
 </li>
 
 <li>
-<a href="http://www.edgewall.com/trac/">Trac</a> - a wiki and issue tracking 
-system for software development projects. Written in Python and based on 
-Subversion.
+<a href="http://www.edgewall.com/trac/">Trac</a> - a wiki, issue tracking
+and interface to one's version control system, for software development
+projects. Written in Python and based on SQLite, with backends for
+Subversion, Git, Mercurial, Bazaar, Perforce and Darcs.
 </li>
 
 <li>
-<a href="http://www.bestpractical.com/rt/">Request Tracker</a> - <q>“RT is an 
-enterprise-grade ticketing system which enables a group of people to 
-intelligently and efficiently manage tasks, issues, and requests submitted 
-by a community of users.”</q>. Among else, it is used for 
+<a href="http://www.bestpractical.com/rt/">Request Tracker</a> - <q>“RT is an
+enterprise-grade ticketing system which enables a group of people to
+intelligently and efficiently manage tasks, issues, and requests submitted
+by a community of users.”</q>. Among else, it is used for
 <a href="http://rt.cpan.org/">tracking CPAN issues</a>.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems">Wikipedia's comparison of issue-tracking systems</a>.
 </li>
 
 <li>
@@ -276,11 +281,17 @@ testing framework by the Open Group.
 </li>
 
 <li>
-<a href="http://testanything.org/wiki/index.php/Main_Page">The “Test 
+<a href="http://testanything.org/wiki/index.php/Main_Page">The “Test
 Anything Protocol” (TAP)</a> - a protocol for test scripts to communicate
 the results of their tests to the harness/consumer. Allows for
-heterogeneous test suites written in several languages. 
+heterogeneous test suites written in several languages.
 </li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/FitNesse">FitNesse</a> - a framework
+for acceptance testing (system tests etc.).
+</li>
+
 </ul>
 
 </div>
@@ -291,7 +302,7 @@ heterogeneous test suites written in several languages.
 
 <!-- To add:
 
-Configuration: the SC entries, 
+Configuration: the SC entries,
 SCMs: BitKeeper.
 Testing: Expect.
 

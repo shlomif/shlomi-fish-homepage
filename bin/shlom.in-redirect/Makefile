@@ -1,5 +1,4 @@
 all:
 
 upload:
-	rsync -a -v --progress "shlom.in-refer.pl" rag:shlom.in/public_html/
-
+	rsync -a -v --progress "shlom.in-refer.pl" hostgator:shlom.in/public_html/

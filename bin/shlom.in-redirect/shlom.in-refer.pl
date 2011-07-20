@@ -15,7 +15,7 @@ sub debug
 
 # debug();
 my $cgi = CGI->new();
-my $path = $ENV{'REDIRECT_SCRIPT_URL'};
+my $path = $ENV{'REDIRECT_URL'};
 
 if (!defined($path) and !exists($ENV{APACHE_REDIRECT_URL}))
 {

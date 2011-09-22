@@ -8,6 +8,20 @@
 <set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
+<:{
+    use utf8;
+
+    sub _wrap_as_utf8 {
+        my ($cb) = @_;
+
+        binmode STDOUT, ":utf8";
+        
+        $cb->();
+
+        binmode STDOUT, ":raw";
+    }
+
+}:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{
     use utf8;
@@ -27,17 +41,6 @@
             "\"$title_attr>" .
             $component->label() . "</a>";
     };
-
-    sub _wrap_as_utf8 {
-        my ($cb) = @_;
-
-        binmode STDOUT, ":utf8";
-        
-        $cb->();
-
-        binmode STDOUT, ":raw";
-    }
-
     {
         _wrap_as_utf8( sub {
             print join(" → ",

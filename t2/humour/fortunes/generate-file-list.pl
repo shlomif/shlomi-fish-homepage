@@ -53,7 +53,7 @@ $out->print(
         io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in)\z} })->all_files()),
         "fortunes-shlomif-all.atom",
         "fortunes-shlomif-all.rss",
-        "Makefile", "ver.txt", "show.cgi.txt",
+        "Makefile", "ver.txt", "show-cgi.txt",
     )
 );
 

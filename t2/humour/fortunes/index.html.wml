@@ -74,7 +74,7 @@ foreach my $r (@{Shlomif::Homepage::FortuneCollections->get_fortune_records()})
     my $id = $r->id;
     my $desc = $r->desc;
 
-    binmode STDOUT, ":utf8";
+    _wrap_as_utf8(sub {
     print <<"EOF";
 <li>
 <p>
@@ -84,7 +84,9 @@ $desc
 </p>
 </li>
 EOF
+    });
 }
+    
 }:>
 </ul>
 </li>

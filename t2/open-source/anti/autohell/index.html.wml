@@ -51,7 +51,7 @@ Autotools cause the archive size to increase dramatically due to their
 extra 
 <tt>configure.ac</tt> / <tt>configure</tt> / 
 <tt>Makefile.in</tt> / <tt>libtool</tt>/etc. overhead.
-The Autotools-based <a href="http://fc-solve.berlios.de/">Freecell Solver</a>
+The Autotools-based <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
 version 2.8.14 gzipped tarball (tar.gz) took 562,301 bytes. After it was
 converted to CMake in version 2.12.0, the tar.gz fell down to 217,307, less
 than half of that, and between the versions a small amount of
@@ -118,7 +118,7 @@ a static library in CMake</h3>
 
 <p>
 As a matter of fact, it is possible. Some code to do exactly that is present 
-<a href="http://svn.berlios.de/viewcvs/fc-solve/trunk/fc-solve/source/CMakeLists.txt?view=log">in 
+<a href="http://code.google.com/p/fc-solve/source/browse/fc-solve/trunk/fc-solve/source/CMakeLists.txt">in 
 the Freecell Solver CMakeLists.txt file</a>, based on an insight by
 Risko Gergely, who is its current Debian package maintainer. One disadvantage
 to that is that the objects of the libraries need to be compiled twice, but

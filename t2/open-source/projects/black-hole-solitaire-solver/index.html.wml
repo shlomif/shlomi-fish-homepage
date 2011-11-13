@@ -15,12 +15,12 @@ the cards to move to the “black hole” (the foundation).
 <set-var ver="0.2.0" />
 <set-var arc="black_hole_solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
-<set-var sqlite_dump_url="http://prdownload.berlios.de/fc-solve/<get-var sqlite_dump_arc />" />
+<set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
 
 <ul>
 
 <li>
-<a href="http://prdownload.berlios.de/fc-solve/<get-var arc />"><get-var arc /></a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
+<a href="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var arc />"><get-var arc /></a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
 </li>
 
 <li>
@@ -43,7 +43,7 @@ of an <a href="http://www.sqlite.org/">SQLite</a> database.
 We’ve ran the solver on the first 1 million 
 <a href="http://pysolfc.sourceforge.net/">PySolFC</a> Black Hole Solitaire
 deals and one can 
-<a href="http://prdownload.berlios.de/fc-solve/black_hole_solver.dump.xz"><b>download</b>
+<a href="http://fc-solve.shlomifish.org/downloads/fc-solve/black_hole_solver.dump.xz"><b>download</b>
 the data from that</a> as a compressed textual dump of an
 <a href="http://www.sqlite.org/">SQLite database</a>.
 </p>
@@ -98,7 +98,7 @@ the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
 the corresponding moved cards after calculating 
 <tt>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</tt> where the suits
 are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s 
-<a href="http://svn.berlios.de/svnroot/repos/fc-solve/black-hole-solitaire/trunk/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
+<a href="http://fc-solve.googlecode.com/svn/black-hole-solitaire/trunk/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
 </li>
 
@@ -114,7 +114,7 @@ that was used to generate them from the more verbose solution files</a>.
 <ul>
 
 <li>
-<a href="http://svn.berlios.de/svnroot/repos/fc-solve/black-hole-solitaire/">Subversion
+<a href="http://bitbucket.org/shlomif/black-hole-solitaire">Bitbucket.org
 repository</a>
 </li>
 
@@ -139,8 +139,8 @@ Record</a>
 <ul>
 
 <li>
-<a href="http://fc-solve.berlios.de/">Freecell Solver</a> and
-<a href="http://fc-solve.berlios.de/links.html#other_solvers">other Solitaire
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> and
+<a href="http://fc-solve.shlomifish.org/links.html#other_solvers">other Solitaire
 solvers</a>.
 </li>
 </ul>

@@ -31,10 +31,10 @@ its commenting system to post comments to its entries.
 </p>
 
 <p class="newsitem">
-<a href="http://jmikmod.berlios.de/">MikMod for Java has moved to a new 
+<a href="http://jmikmod.shlomifish.org/">MikMod for Java has moved to a new 
 homepage</a> at Berlios where I hope other people would be able to
 contribute to it more efficiently than before. 
-<a href="http://gimp-test.berlios.de/">The Gimp Automated Testing 
+<a href="http://www.shlomifish.org/gimp-test/">The Gimp Automated Testing 
 Framework</a> is a new project of mine. Check it out if you’re interested.
 </p>
 EOF

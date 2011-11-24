@@ -4486,5 +4486,140 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-negative-lookbehinds">
+        <meta>
+            <title>Negative Lookbehinds</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="GordonFreeman">hi</saying>
+<saying who="rindolf">Hi GordonFreeman </saying>
+<saying who="GordonFreeman">grep -Po &#39;(?&lt;=&lt;a )(?&lt;! href=)(?&lt;= href=[&quot;]*)[^&quot;&gt;]+&#39; &lt;&lt;&lt; &#39;&lt;a gfasg href=asdf&gt;&#39;</saying>
+<saying who="GordonFreeman">grep: lookbehind assertion is not fixed length</saying>
+<saying who="rindolf">GordonFreeman: grep is PCRE - it&#39;s not Perl.</saying>
+<saying who="rindolf">perlbot: pcre</saying>
+<saying who="Altreus">GordonFreeman: don&#39;t use regex for HTML</saying>
+<saying who="perlbot">rindolf: PCRE is not Perl.  It lacks several features of Perl regexes.  Don&#39;t bother asking for help with a PCRE pattern in a Perl channel as the answers will not be relevant.  Try #regex, or the channel for your language.  See also http://en.wikipedia.org/wiki/PCRE#Differences_from_Perl and LPBD.</saying>
+<saying who="GordonFreeman">but this should work i think.</saying>
+<saying who="mauke">no, it shouldn&#39;t</saying>
+<saying who="GordonFreeman">though it fails at the second lookbehind ...</saying>
+<saying who="mauke">no, it doesn&#39;t</saying>
+<saying who="GordonFreeman">and fails at &quot;* too</saying>
+<saying who="GordonFreeman">(grep -Po &#39;&lt;a +.* +href=&quot;*[^&quot; &gt;]+&#39; | grep -Po &#39;(?=&lt;a ).*&#39; | grep -Po &#39;(?&lt;= href=)[&quot;]*[^&quot; &gt;]+&#39;) &lt;&lt;&lt; &#39;&lt;a gfasg href=asdf&gt;&lt;a fgfgg=&quot;hi&gt; &quot; href=&quot;link&quot; &gt;&#39;</saying>
+<saying who="GordonFreeman">this works.</saying>
+<saying who="mauke">GordonFreeman: dude.</saying>
+<saying who="anno">don&#39;t paste!</saying>
+<saying who="GordonFreeman">hi mauke</saying>
+<saying who="apeiron">where&#39;s mauke&#39;s car?</saying>
+<saying who="rindolf">apeiron: :-)</saying>
+<saying who="mauke">it&#39;s a cdr</saying>
+<saying who="Altreus">I watched that the other day</saying>
+<saying who="rindolf">pkrumins: what&#39;s up?</saying>
+<saying who="Altreus">I don&#39;t really know why</saying>
+<saying who="mauke">GordonFreeman: go to a channel where that is on-topic</saying>
+<saying who="GordonFreeman">mauke&lt;&lt; like?</saying>
+<saying who="mauke">no idea</saying>
+<saying who="Altreus">where on earth is parsing HTML with regexes on topic?</saying>
+<saying who="GordonFreeman">aham ok</saying>
+<saying who="Altreus">except ##php lolol</saying>
+<saying who="GordonFreeman">well i think one can see its logical and it works like this</saying>
+<saying who="rindolf">GordonFreeman: http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454</saying>
+<saying who="shorten">rindolf&#39;s url is at http://xrl.us/bf4jh6</saying>
+<saying who="apeiron">GordonFreeman, also, -P isn&#39;t perl.</saying>
+<saying who="thrig">Altreus: some special level of hell, between the angry ghosts and the hungry ghosts</saying>
+<saying who="rindolf">perlbot: html</saying>
+<saying who="apeiron">the grep docs lie to you.</saying>
+<saying who="perlbot">rindolf: Don&#39;t parse or modify html with regular expressions! See one of HTML::Parser&#39;s subclasses: HTML::TokeParser, HTML::TokeParser::Simple, HTML::TreeBuilder(::Xpath)?, HTML::TableExtract etc. If your response begins &quot;that&#39;s overkill. i only want to...&quot; you are wrong. http://en.wikipedia.org/wiki/Chomsky_hierarchy and http://xrl.us/bf4jh6 for why not to use regex on HTML</saying>
+<saying who="LeoNerd">Altreus: Why, surely in #html-parsing-by-regexp</saying>
+<saying who="Altreus">if you want perl regex use ack</saying>
+<saying who="Altreus">surely</saying>
+<saying who="rindolf">LeoNerd: sounds like programmers&#39; hell.</saying>
+<saying who="anno">perl regex doesn&#39;t support variable-length lookbehind either</saying>
+<saying who="Altreus">apeiron: actually it says it&#39;s highly experimental and hence not working</saying>
+<saying who="Altreus">it could well be Perl and not PCRE when finished :)</saying>
+<saying who="Altreus">not that &quot;perl regex&quot; is a defined term, the speed Perl is moving</saying>
+<saying who="yrlnry">That&#39;s why you should never use Perl&#39;s builtin regexes.  Just write your own package, it&#39;s sure to be more reliable.</saying>
+<saying who="rindolf">yrlnry: :-)</saying>
+<saying who="talexb">Heh.</saying>
+<saying who="LeoNerd">use re::engine::vim;</saying>
+<saying who="rindolf">yrlnry++</saying>
+<saying who="Altreus">LeoNerd: is it core?</saying>
+<saying who="yrlnry">HOP has a nice implementation.  It works by generating a list of every string matched by the regex, and looking to see if your target string is in the list.</saying>
+<saying who="LeoNerd">I can&#39;t help thinking that may not be optimal in terms of CPU or memory usage</saying>
+<saying who="talexb">yrlnry, no doubt they have a Cray working on generating the list ..</saying>
+<saying who="yrlnry">LeoNerd:  Depends; unlike Perl regexes, it has no trouble handling languages higher up the Chomsky hierarchy</saying>
+<saying who="yrlnry">It is guaranteed to return the right answer for any recursive language, and guaranteed to return correct &#39;matched&#39; answers for any recursively enumerable language.</saying>
+<saying who="LeoNerd">Ohsure...</saying>
+<saying who="LeoNerd">In terms of CS guarantees it&#39;s very nice</saying>
+<saying who="yrlnry">So if you are in a big hurry to get the wrong answer...</saying>
+<saying who="LeoNerd">But I live in the practical pragmatic world</saying>
+<saying who="LeoNerd">E.g. Parser::MGC is horribly slow at backtracking and whatnot, but I write parsers in it because those are still fast for &quot;reasonably&quot; sized inputs, parsers are fast to write, and I like having lots of side-effects and dynamic logic -in- Perl</saying>
+<saying who="Altreus">Unfortunately my universe doesn&#39;t have infinite processing speeds and data storage</saying>
+<saying who="anno">a universe with infinite processing speed would have processed you by now</saying>
+<saying who="Altreus">and</saying>
+<saying who="Altreus">would have processed my grandchildren too</saying>
+<saying who="yrlnry">This algorithm doesn&#39; t need infinite speed or storage.</saying>
+<saying who="yrlnry">It works slowly, but finitely.</saying>
+<saying who="Altreus">what</saying>
+<saying who="yrlnry">The infinite list is lazily generated and you never have more than one of its elements in memory at any time.</saying>
+<saying who="rindolf">yrlnry: is it sorted by length?</saying>
+<saying who="yrlnry">You will learn this sort of technique after you have been programming in Perl for eight months or so.</saying>
+<saying who="Altreus">how do you know when it doesn&#39;t match</saying>
+<saying who="Altreus">yrlnry: :D</saying>
+<saying who="yrlnry">rindolf:  it is sorted by length, and lexicographically among strings of the same length.</saying>
+<saying who="rindolf">yrlnry: ah.</saying>
+<saying who="yrlnry">Of course, you cannot do the length-sorting thing for arbitrary languages, but for regex languages there is no trouble.</saying>
+<saying who="yrlnry">http://hop.perl.plover.com/book/pdf/06InfiniteStreams.pdf</saying>
+<saying who="LeoNerd">Eh..</saying>
+<saying who="LeoNerd">I dunno. I just dislike purely RE-based parsing</saying>
+<saying who="LeoNerd">I much prefer code doing it</saying>
+<saying who="GordonFreeman">why can&#39;t perl regexp do variable length lookbehind matching?</saying>
+<saying who="Altreus">See originally I ignored you because it sounded like you were talking shit</saying>
+<saying who="LeoNerd">Limit of the implementation</saying>
+<saying who="Altreus">mainly because it is possible to construct a regex with an infinite range that nevertheless won&#39;t match a particular string</saying>
+<saying who="anno">GordonFreeman: who knows? looks like it&#39;s hard to implement with the given engine</saying>
+<saying who="mauke">GordonFreeman: unclear semantics and no one&#39;s bothered to write the code</saying>
+<saying who="GordonFreeman">i see</saying>
+<saying who="Altreus">Plus, there&#39;s a fucking lot of unicode to create strings out of</saying>
+<saying who="LeoNerd">It&#39;s not &quot;hard&quot; to implement. It&#39;s impossible given the algorithm being used</saying>
+<saying who="mauke">LeoNerd: why impossible?</saying>
+<saying who="yrlnry">LeoNerd:  I don&#39;t think that&#39;s true.  It could be done using a recursive call to the regex engine now that that is possible.</saying>
+<saying who="GordonFreeman">but lookbehind is cool</saying>
+<saying who="LeoNerd">Oooh.. yes.. I suppose it could do that now</saying>
+<saying who="GordonFreeman">its like a reverse regexp that can be excluded</saying>
+<saying who="anno">vim re&#39;s do it</saying>
+<saying who="LeoNerd">vim uses a different type of engine</saying>
+<saying who="anno">right</saying>
+<saying who="yrlnry">Altreus:  I was talking shit.  After eight months you get a license to do that.</saying>
+<saying who="mauke">really?</saying>
+<saying who="Altreus">yrlnry: but there&#39;s a pdf</saying>
+<saying who="yrlnry">where&#39;s a PDF?</saying>
+<saying who="Altreus">17:10 &lt; yrlnry&gt; http://hop.perl.plover.com/book/pdf/06InfiniteStreams.pdf</saying>
+<saying who="yrlnry">Yes.</saying>
+<saying who="Altreus">I didn&#39;t open it or anything</saying>
+<saying who="mauke">no one opens pdfs</saying>
+<saying who="yrlnry">PDFs are for cowards and Slavs.</saying>
+<saying who="Altreus">but it lent enough credence to your words that I decided to believe your spurious claims</saying>
+<saying who="Altreus">Actually someone did a test the other day</saying>
+<saying who="yrlnry">Oh, does &quot;talking shit&quot; mean &quot;making up nonsense&quot;?  Then I was not talking shit.</saying>
+<saying who="Altreus">He linked someone to articles supporting his viewpoint and they changed their mind</saying>
+<saying who="yrlnry">It is in section 6.5, &quot;regex string generation&quot;.</saying>
+<saying who="Altreus">but one of the articles was an argument against himself</saying>
+<saying who="Altreus">Showing that it is enough to cite your sources to be believed; not many people will actually bother to check them</saying>
+<saying who="Altreus">yrlnry: what do you normally think &quot;talking shit&quot; means?</saying>
+<saying who="Altreus">are you confusing it with shooting the shit</saying>
+<saying who="yrlnry">I&#39;m not sure.</saying>
+<saying who="Altreus">are you foreign</saying>
+<saying who="yrlnry">Yes.</saying>
+<saying who="Altreus">ok then</saying>
+<saying who="mauke">hahaha</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Negative Lookbehind Regexes for matching HTML</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

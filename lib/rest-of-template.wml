@@ -29,18 +29,32 @@ pw_d.projectwonderful_background_color = "";
 </define-tag>
 
 <define-tag project_wonderful_top_proto>
+<!-- Project Wonderful Ad Box Loader -->
+<script type="text/javascript">
+   (function(){function pw_load(){
+      if(arguments.callee.z)return;else arguments.callee.z=true;
+      var d=document;var s=d.createElement('script');
+      var x=d.getElementsByTagName('script')[0];
+      s.type='text/javascript';s.async=true;
+      s.src='//www.projectwonderful.com/pwa.js';
+      x.parentNode.insertBefore(s,x);}
+   if (window.attachEvent){
+    window.attachEvent('DOMContentLoaded',pw_load);
+    window.attachEvent('onload',pw_load);}
+   else{
+    window.addEventListener('DOMContentLoaded',pw_load,false);
+    window.addEventListener('load',pw_load,false);}})();
+</script>
+<!-- End Project Wonderful Ad Box Loader -->
 ;;; Removed because it interferes with the other ads:
 ;;; <ad_brite_top_proto />
-<!-- Beginning of Project Wonderful ad code: -->
-<!-- Ad box ID: 42457 -->
-<script type="text/javascript">
-<!--
-var pw_d=document;
-pw_d.projectwonderful_adbox_id = "42457";
-pw_d.projectwonderful_adbox_type = "1";
-pw_d.projectwonderful_foreground_color = "";
-pw_d.projectwonderful_background_color = "";
-//-->
+<!-- Project Wonderful Ad Box Code -->
+<div id="pw_adbox_42457_1_0"></div>
+<script type="text/javascript"></script>
+<noscript><map name="admap42457" id="admap42457"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=42457&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" /></map>
+<table cellpadding="0" border="0" cellspacing="0" width="468" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=42457&type=1" width="468" height="60" usemap="#admap42457" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=42457&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0.02</a></center></td></tr><tr><td colspan="1" valign="top" width="468" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
+</noscript>
+<!-- End Project Wonderful Ad Box Code -->
 </script>
 <script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
 <!-- End of Project Wonderful ad code. -->
@@ -72,19 +86,15 @@ pw_d.projectwonderful_background_color = "";
 ;;; </define-tag>
 
 <define-tag project_wonderful_code_side_proto>
-<!-- Beginning of Project Wonderful ad code: -->
-<!-- Ad box ID: 42545 -->
-<script type="text/javascript">
-<!--
-var pw_d=document;
-pw_d.projectwonderful_adbox_id = "42545";
-pw_d.projectwonderful_adbox_type = "3";
-pw_d.projectwonderful_foreground_color = "";
-pw_d.projectwonderful_background_color = "";
-//-->
-</script>
-<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
-<!-- End of Project Wonderful ad code. -->
+
+<!-- Project Wonderful Ad Box Code -->
+<div id="pw_adbox_42457_1_0"></div>
+<script type="text/javascript"></script>
+<noscript><map name="admap42457" id="admap42457"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=42457&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" /></map>
+<table cellpadding="0" border="0" cellspacing="0" width="468" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=42457&type=1" width="468" height="60" usemap="#admap42457" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=42457&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0.02</a></center></td></tr><tr><td colspan="1" valign="top" width="468" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
+</noscript>
+<!-- End Project Wonderful Ad Box Code -->
+
 </define-tag>
 
 <define-tag shlomif_web_ads_code_side>

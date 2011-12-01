@@ -142,6 +142,16 @@ trustworthy, predictable and reliable. The fact that it isn’t “standard” d
 not make it bad.
 </p>
 
+<h3 id="list-of-parameters">There is no way to get a list of parameters to the
+build in CMake as “cmake --help” does not work.</h3>
+
+<p>
+“cmake --help” indeed gives you CMake's global help screen instead of the 
+list of parameters to the build, but there is a way to get them even from
+the command-line without resorting to ccmake or cmake-gui. Just type
+“cmake -LA” or “cmake -LAH” to get them.
+</p>
+
 <h2 id="links">Links</h2>
 
 <ul>

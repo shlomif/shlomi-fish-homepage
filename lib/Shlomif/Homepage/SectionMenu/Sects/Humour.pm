@@ -306,6 +306,10 @@ my $humour_tree_contents =
             subs =>
             [
                 {
+                    text => "English is a Crazy Language",
+                    url => "humour/by-others/English-is-a-Crazy-Language.html",
+                },
+                {
                     text => "GNU Visual Basic",
                     url => "humour/GNU-Visual-Basic/GNU-Visual-Basic.html",
                     title => "Richard Stallman Switches to Basic",

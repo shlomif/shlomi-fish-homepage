@@ -4659,5 +4659,59 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-brogramming">
+        <meta>
+            <title>Brogramming</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="jozefk">anybody with suggestion how can I clean up the code in the way as this tool is doing it temporarily in browser? http://www.howtogeek.com/howto/7188/clean-up-webpages-for-note-taking-or-printing-the-easy-way/</saying>
+<saying who="rindolf">jozefk: you can define a print stylesheet.</saying>
+<saying who="jozefk">I want to clean the page from everything. not only to see it like that on screen but to really modify the code</saying>
+<saying who="rindolf">jozefk: well, you can read what the bookmarklet is doing and emulate it.</saying>
+<saying who="jozefk">I see the javascript code from bookmarklet but I think I can&#39;t modify real files on hard disk with javacript codes</saying>
+<saying who="jozefk">and the code is more than 300 lines :)</saying>
+<saying who="tm604">sure you can, js runs serverside happily enough, but it&#39;d be just as easy to convert the JS logic to perl.</saying>
+<saying who="jozefk">that sounds like programing. I thought there is some tool like that bookmarklet which I can use to modify files on HDD</saying>
+<saying who="Altreus">tm604: except the JS runs on a DOM in a browser, with a browser context</saying>
+<saying who="tm604">yes, it does sound a bit like programming, doesn&#39;t it? good thing this is a programming channel, so it&#39;s hopefully still on-topic.</saying>
+<saying who="Altreus">I don&#39;t think there&#39;s a node module that will load an HTML file and create a browser context in which to then run JS on that HTML&#39;s DOM and output the result</saying>
+<saying who="jozefk">:)</saying>
+<saying who="jozefk">DOM is not so important here I think. because JS is removing everything from code and just applying another CSS</saying>
+<saying who="jozefk">so the page looks different</saying>
+<saying who="tm604">huh, thought there was. the script itself should be trivial to convert to perl either way.</saying>
+<saying who="Altreus">probably a better idea :)</saying>
+<saying who="jozefk">yeah, better. one day when I become a programmer :) I will do it.</saying>
+<saying who="pkrumins">I want to become a brogrammer</saying>
+<saying who="jozefk">why?</saying>
+<saying who="Altreus">taking pictures of bros</saying>
+<saying who="pkrumins">So I can do some awesome brogramming, jozefk!</saying>
+<saying who="jozefk">:))</saying>
+<saying who="rindolf">pkrumins: yo bro! I hurd you like brogramming so we put your bro in your brogram so you can brogram while you bro!</saying>
+<saying who="nate_h">rofl</saying>
+<saying who="rindolf">nate_h: :-)</saying>
+<saying who="nate_h">should it be brozefk ?</saying>
+<saying who="rindolf">rinbrolf</saying>
+<saying who="rindolf">pk-bro-mins</saying>
+<saying who="pkrumins">rindolf: i put a browser in your browser</saying>
+<saying who="pkrumins">rindolf: so you can browse while yo browse</saying>
+<saying who="rindolf">pkrumins: bro, a browser is so 90s.</saying>
+<saying who="fizztpok">broser?</saying>
+<saying who="PerlJam">bowser</saying>
+<saying who="nate_h">mushroom?</saying>
+<saying who="rindolf">pkrumins: KDE-4.8.x-beta-something is coming to Mageia Linux 2/Cauldron. \o/</saying>
+<saying who="fizztpok">I search on duckduckbro!</saying>
+<saying who="nate_h">co-co-coommmboo breaker</saying>
+<saying who="rindolf">pkrumins: I&#39;ll see how much it fixes and how much it breaks.</saying>
+<saying who="rindolf">pkrumins: and fix what it breaks and break what it fixes.</saying>
+<saying who="rindolf">To preserve the balance in the force.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>I want to become a brogrammer.</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

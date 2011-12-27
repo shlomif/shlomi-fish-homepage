@@ -50,10 +50,11 @@ A port of the well-known MOD player <a href="http://www.mikmod.org/">MikMod</a>
 
 <p>
 A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
-and to scripting interfaces.
+and to scripting interfaces. A newer version of this patch has been integrated
+into GIMP 2.2.x and above and is built-in there.
 </p>
 
-<h2 id="rwlock"><a href="<rellink url="rwlock/" />">A First-Come First-Served
+<h2 id="rwlock"><a href="$(ROOT)/rwlock/">A First-Come First-Served
 Readers/Writers Lock</a></h2>
 
 <p>
@@ -61,7 +62,7 @@ An implementation of it for POSIX Threads, which can also be used as a
 reference implementation. 
 </p>
 
-<h2 id="lm-solve"><a href="<rellink url="lm-solve/" />">LM-Solve</a></h2>
+<h2 id="lm-solve"><a href="$(ROOT)/lm-solve/">LM-Solve</a></h2>
 
 <p>
 An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a> 
@@ -75,11 +76,65 @@ This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.i
 Mozilla-based browsers.
 </p>
 
+<h2 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h2>
+
+<p>
+Dumps a directory structure (without the file contents themselves) into a
+serialised file format, to allow for restoring and comparing.
+</p>
+
+<h2 id="black-hole-solitaire-solver">“Black Hole” Solitaire Solver</h2>
+
+<p>
+A solver for
+<a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">Black Hole
+Solitaire</a>, which is a variant of Patience.
+</p>
+
+<h2 id="japanese-puzzle-games"><a href="japanese-puzzle-games/">Solvers and
+Generators for Japanese Puzzle Games</a></h2>
+
+<p>
+Japanese puzzle games such as 
+<a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>
+and <a href="http://en.wikipedia.org/wiki/Kakuro">Kakuro</a> have gained
+popularity recently, and I've became a fan of many variants as well. I've
+started working on some solvers and generators for such games, and some of
+them are in a usable condition.
+</p>
+
+<h2 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h2>
+
+<p>
+A directory traverser for Perl, that provides an object-oriented interface,
+that can be instantiated, and that can be suspended and resumed. (Originally by
+Nanardon.)
+</p>
+
+<h2 id="Module-Format"><a href="Module-Format/">Module-Format</a></h2>
+
+<p>
+A CPAN module to convert between the various popular ways to notate
+Perl modules and distributions. Allow all of them to be used in input to
+command-line tools.
+</p>
+
+<h2 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
+Kernel Configuration Search Enhancement</a></h2>
+
+<p>
+A patch that enhances the Linux kernel configuration search by adding keywords
+search and regular expression search.
+</p>
+
 <h2 id="web-cpan"><a href="http://web-cpan.shlomifish.org/">Web-CPAN</a></h2>
 
 <p>
 A collection of web-related Perl CPAN modules.
 </p>
+
+
+
 
 <h2 id="cpan-modules"><a href="http://search.cpan.org/~shlomif/">My CPAN Modules</a></h2>
 
@@ -93,6 +148,21 @@ Comprehensive Perl Archive Network.
 <p>
 A script to convert the old Perl Test.pm-based test programs to the
 more modern Test::More.
+</p>
+
+<h2 id="docmake"><a href="docmake/">docmake</a></h2>
+
+<p>
+A tool to convert DocBook/XML to its final formats. Was written as a saner
+alternative to <tt>xmlto</tt>.
+</p>
+
+<h2 id="libtap"><a href="libtap/">libtap Maintenance</a></h2>
+
+<p>
+libtap is a C library for writing automated tests that output the
+<a href="http://testanything.org/">Test Anything Protocol (TAP)</a>, which
+allows for heterogeneous test suites. I adopted libtap and maintain it.
 </p>
 
 <h2 id="bits"><a href="$(ROOT)/open-source/bits.html">Bits and Bobs</a></h2>

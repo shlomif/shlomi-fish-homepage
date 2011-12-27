@@ -4713,5 +4713,81 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-count-von-counter">
+        <meta>
+            <title>Count von Counter</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="ncow">rindolf: is not   { my $c=0; sub getNext { $c++ } }   a perfectly good way to do a closure on a variable (that should not be seen by anything other than that sub, sort of like that PHP example with the &quot;static&quot; var &lt;http://www.phpsadness.com/sad/18&gt; and I think similar to static vars in C++ and Java) ?</saying>
+<saying who="rindolf">ncow: yes, it is.</saying>
+<saying who="uri">ncow: you can use state vars in recent perls too</saying>
+<saying who="ncow">but I keep thinking there was a way of doing it with outer and inner subs too, or no</saying>
+<saying who="rindolf">ncow: thing is in sub outer { my $c = 0 ; .... } the $c is temporary.</saying>
+<saying who="ncow">uri: yeah I just saw that in perlfaq7 just before you said that, thanks though :)</saying>
+<saying who="rindolf">ncow: which causes weird side-effects with a package-scope inner sub.</saying>
+<saying who="ncow">rindolf: but shouldn&#39;t the inner sub have a closure over $c though?</saying>
+<saying who="rindolf">ncow: it will.</saying>
+<saying who="rindolf">ncow: but every time you call outer() you get a different $c.</saying>
+<saying who="apeiron">Windows also accepts a sledgehammer to the harddrive.</saying>
+<saying who="ncow">rindolf: I&#39;m talking about calling the inner one</saying>
+<saying who="ncow">rindolf: could be interesting to call the outter one to re-prime or something (just kind of thinking aloud, I could be completely wrong)</saying>
+<saying who="ncow">(please let me know if I am)</saying>
+<saying who="cj">Botje: that&#39;s not the point.  Some systems don&#39;t :)</saying>
+<saying who="rindolf">apeiron: Windows requiring doing a SOAP request to a .NET service (that is very picky about its scope) to call an OLE component for writing an Excel macro to do that.</saying>
+<saying who="apeiron">And for those we have File::Spec.</saying>
+<saying who="rindolf">apeiron: it&#39;s not as straightforward as in UNIX.</saying>
+<saying who="ncow">I think I found a mis-type in perlfaq7 &lt;http://perldoc.perl.org/perlfaq7.html#How-do-I-create-a-static-variable%3f&gt;, under &quot;How do I create a static variable?&quot;</saying>
+<saying who="ncow">It says: sub counter { state $count = 1; $counter++ }</saying>
+<saying who="ncow">I think that should be $count++ not $counter++</saying>
+<saying who="rindolf">apeiron: http://www.shlomifish.org/humour/fortunes/show.cgi?id=joel-forum-unix-shooting-in-the-foot</saying>
+<saying who="rindolf">ncow: yes, it should.</saying>
+<saying who="rindolf">ncow: or &quot;$state $counter = 1;&quot;.</saying>
+<saying who="ncow">rindolf: oh shit, that is so true. I hate ActiveX like the mf-ing plauge</saying>
+<saying who="ncow">rindolf: yes, though counter is the sub&#39;s name, I think the var was meant to be called $count</saying>
+<saying who="ncow">as in the count that the counter counts :)</saying>
+<saying who="rindolf">ncow++</saying>
+<saying who="rindolf">ncow: it still exists in my github fork of the perl-doc-cats repo.</saying>
+<saying who="ncow">a counter doesn&#39;t counter counters unless it is in fact a counter counter :)</saying>
+<saying who="uri">ncow: go back to sesame street!</saying>
+<saying who="ncow">lol</saying>
+<saying who="uri">it seems to be where you learned your perl!</saying>
+<saying who="uri">use Big::Bird;</saying>
+<saying who="ncow">but does a counter counter count it self as a counter counter?</saying>
+<saying who="uri">that is counterproductive thinking</saying>
+<saying who="ncow">(or does it just consider itself a cunt and thus only count it self as a cunt counter since it only counts cunts?)</saying>
+<saying who="ncow">ok I think I&#39;m done with that one...</saying>
+<saying who="ncow">sorry, when ever someone mentions ActiveX it makes me all twichy, and if there is no one around to choke into submition, I tend to write odd things, like a ram memory discharge</saying>
+<saying who="Khisanth">a CounterCounterFactoryCounter</saying>
+<saying who="szr">ActiveX will do that</saying>
+<saying who="rindolf">ncow: heh.</saying>
+<saying who="rindolf">ncow++</saying>
+<saying who="ncow">ooooh now we&#39;re talking</saying>
+<saying who="rindolf">ncow: anyway, how do you want to be credited  in the commit log?</saying>
+<saying who="uri">rindolf: call him the miscount</saying>
+<saying who="rindolf">uri: heh.</saying>
+<saying who="ncow">you don&#39;t have to do that, but if you really want to, ncow is fine. Necrocow may be me old moniker (and freenode account name) but ncow is what I&#39;ve been going by for quite a while now</saying>
+<saying who="rindolf">uri: Count von Counter</saying>
+<saying who="ncow">so I&#39;m the count of miscountistu?</saying>
+<saying who="rindolf">ncow: pushed.</saying>
+<saying who="ncow">cool</saying>
+<saying who="ncow">glad I could help.</saying>
+<saying who="rindolf">ncow: you&#39;re welcome.</saying>
+<saying who="rindolf">“One Perl One-Liner, Two Perl One-Liners, Three Perl One-Liners. &lt;Thunder and Lightning&gt; Ha ha ha ha ha ha.”</saying>
+<saying who="rindolf">-- Count von Counter</saying>
+<saying who="ncow">rindolf: haha</saying>
+<saying who="ncow">rindolf: god I still remember that from when I was a kid watching PBS</saying>
+<saying who="rindolf">ncow: I remember it from the Israeli Sesame Street.</saying>
+<saying who="ncow">Israeli? didn&#39;t know they had their own version</saying>
+<saying who="rindolf">ncow: they call him there &quot;Mar Soffer.&quot; - &quot;Mr. Counting&quot;</saying>
+<saying who="rindolf">ncow: we actually had two at two different times.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>How many counts will a counter count if a counter could count counts?</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

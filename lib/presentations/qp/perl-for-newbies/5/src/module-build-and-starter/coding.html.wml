@@ -51,3 +51,37 @@ that:
 <quadpres_include_colorized_file filename="src/module-build-and-starter/MyMath-Ops-with-MyMath-Ops-Add-pm/lib/MyMath/Ops/Add.pm" filetype="perl" />
 </quadpres_code_block>
 
+<p>
+And now let's run "./Build test" again:
+</p>
+
+<quadpres_code_block>
+$ ./Build test
+t/00-load.t ....... 1/5 # Testing MyMath::Ops 0.01, Perl 5.014002, /usr/bin/perl5.14.2
+t/00-load.t ....... ok   
+t/add.t ........... ok   
+t/boilerplate.t ... ok   
+t/pod-coverage.t .. ok   
+t/pod.t ........... ok   
+All tests successful.
+</quadpres_code_block>
+
+<p>
+Since all tests are successful, we can commit it to the repository.
+</p>
+
+<h3>Moving on</h3>
+
+<p>
+Now we can continue to add more tests, and then fix the failing ones. If the
+code becomes too convulted, due to modifications, we can 
+<a href="http://en.wikipedia.org/wiki/Code_refactoring">refactor it</a> and
+improve its modularity. Running the existing automated tests after such a
+change will better make sure that we didn't break something. 
+</p>
+
+<p>
+This "write more tests", "get tests to pass", "refactor" is the cycle of
+development and maintenance and Perl tools such as <tt>Module-Build</tt>
+facilitate it.
+</p>

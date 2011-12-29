@@ -1,0 +1,75 @@
+#include 'template.wml'
+
+<p>
+Here are some additional resources regarding managing a CPAN-like distribution.
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="http://search.cpan.org/dist/ExtUtils-MakeMaker/"><b>ExtUtils-MakeMaker</b></a>
+is Perl's older and now largely unloved distribution manager, which relies on
+generating 
+<a href="http://en.wikipedia.org/wiki/Make_%28software%29">makefiles</a>. It was
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2008/09/msg140206.html">described 
+by chromatic</a> as <q>a jumble of Perl which 
+writes cross platform shell scripts to install Perl code, and you customize 
+that by writing a superclass from which platform-specific modules inherit 
+pseudo-methods which use regular expressions to search and replace 
+cross-platform cross-shell code, with all of the cross-platform and 
+cross-shell quoting issues that entails</q> .
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://search.cpan.org/dist/Module-Install/"><b>Module-Install</b></a> is
+a more modern and succinct wrapper around ExtUtils-MakeMaker that has gained
+some popularity. It ships its code (and the code of its extensions) under an 
+<tt>./inc</tt> directory in the distribution, which has known to cause some
+bootstrapping issues for co-developers who would like to collaborate on the
+code from its version control repository. Nevertheless, it may be worth taking a
+look.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.apress.com/open-source/programming/9781590590188"><b><i>Writing
+Perl Modules for CPAN</i></b></a> is a book by Sam Tregar, which has a free
+PDF download. It is somewhat out-of-date (only covering ExtUtils-MakeMaker), 
+but may still be enlightening.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://dzil.org/"><b>Dist::Zilla</b></a> is a high-level distribution
+generator, with many available plugins, that abstracts away a lot of the 
+duplication within a module and across modules. It generates fully-functional
+distributions that can be shipped to CPAN and used normally. As with
+Module-Install, it may pose a problem to your contributors, especially if they
+have out-of-date versions of its CPAN modules installed, but it is a useful
+tool.
+</p>
+</li>
+
+<li>
+<p>
+A Perlmonks.org post titled 
+<a href="http://www.perlmonks.org/?node_id=879515"><b>“RFC: How to Release
+Modules on CPAN in 2011”</b></a> goes to more coverage about the issues covered
+in this section.
+</p>
+</li>
+
+<li>
+<p>
+Jeffrey Thalhammer has prepared a talk titled
+<a href="http://www.slideshare.net/thaljef/cpan-for-private-code">“CPAN for Private Code”</a> which gives the motivation for packaging Perl code in CPAN-like
+distributions, even if it is not indended for CPAN.
+</p>
+</li>
+
+</ol>

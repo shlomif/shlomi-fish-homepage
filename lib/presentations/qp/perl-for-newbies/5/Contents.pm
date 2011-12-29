@@ -153,6 +153,10 @@ my $contents =
                     url => "boilerplate.html",
                     title => "Getting rid of the boilerplate",
                 },
+                {
+                    url => "additional-resources.html",
+                    title => "Additional Resources",
+                },
             ],
         },
     ],

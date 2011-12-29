@@ -159,6 +159,21 @@ my $contents =
                 },
             ],
         },
+        {
+            url => "conclusion",
+            title => "Conclusion",
+            subs =>
+            [
+                {
+                    url => "links.html",
+                    title => "Links",
+                },
+                {
+                    url => "thanks.html",
+                    title => "Thanks",
+                },
+            ],
+        },
     ],
     'images' =>
     [

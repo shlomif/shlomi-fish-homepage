@@ -8,7 +8,7 @@ This section will demonstrate basic version control usage using the
 <p>
 <b>Please note:</b> by choosing Mercurial I do
 not mean to imply that it is the best VCS out there or that you should
-necessary use it. By all means, it is likely that there are other VCSes
+necessarily use it. By all means, it is likely that there are other VCSes
 which are better in many respects. However, I'm familiar with Mercurial, and I 
 think it is suitable for the demonstration here.
 </p>
@@ -40,12 +40,12 @@ Wikipedia list of version control systems</a>
 
 <p>
 First of all, install Mercurial using your operating system's package
-management, or by downloading an installer from the 
+manager, or by downloading an installer from the 
 <a href="http://mercurial.selenic.com/">Mercurial site</a>. 
 </p>
 
 <p>
-The create a new empty directory and run <tt>hg init .</tt>:
+Then create a new empty directory and run <tt>hg init .</tt>:
 </p>
 
 <quadpres_code_block>
@@ -53,8 +53,8 @@ $p4n/5/merc-test$ hg init .
 </quadpres_code_block>
 
 <p>
-Now let's add some files, run your favourite text editor and create this file
-in MyModule.pm:
+Now let's add some files. Start your favourite text editor and put these
+contents in the file <tt>MyModule.pm</tt>:
 </p>
 
 <quadpres_code_block>
@@ -88,7 +88,7 @@ $p4n/5/merc-test/MyModule$
 </quadpres_code_block>
 
 <p>
-Now the file is scheduled to be commited (see the <tt>A</tt>). Let's 
+Now the file is scheduled to be commited (note the <tt>A</tt>). Let's 
 commit it:
 </p>
 
@@ -99,7 +99,8 @@ $p4n/5/merc-test/MyModule$
 </quadpres_code_block>
 
 <p>
-We can see it in the output of the version control log <tt>hg log</tt>:
+We can see it in the output of the version control command <tt>hg log</tt>,
+which, as it name implies, gives a log of what has been done in the past:
 </p>
 
 <quadpres_code_block>
@@ -178,7 +179,7 @@ Result: PASS
 </quadpres_code_block>
 
 <p>
-But before we commit let's see which changes have been made:
+However, before we commit let's see which changes have been made:
 </p>
 
 <quadpres_code_block>

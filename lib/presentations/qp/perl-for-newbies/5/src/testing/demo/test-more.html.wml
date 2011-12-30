@@ -1,10 +1,11 @@
 #include 'template.wml'
 
 <p>
-Perl ships with a module called 
-<a href="http://search.cpan.org/dist/Test-Simple/">Test::More</a> (with more 
-up-to-date versions available on CPAN), that allows one to write and run
-tests using convenient functions. Here's an example for a test script:
+Perl ships with a module called Test::More (which is part of the
+<a href="http://search.cpan.org/dist/Test-Simple/">Test-Simple CPAN
+distribution</a>, which may be more up-to-date there), that allows one
+to write and run tests using convenient functions. Here's an example
+for a test script:
 </p>
 
 <quadpres_code_block>
@@ -12,9 +13,9 @@ tests using convenient functions. Here's an example for a test script:
 </quadpres_code_block>
 
 <p>
-<tt>is()</tt> a Test-More built-in that compares a received result ("have") to
-an expected result ("want") for exact equivalence. There are also
-<tt>ok()</tt> which just tests for truthhood, <tt>is_deeply()</tt> which
+<tt>is()</tt> is a Test-More built-in that compares a received result ("have")
+to an expected result ("want") for exact equivalence. There are also
+<tt>ok()</tt>, which just tests for truthhood, <tt>is_deeply()</tt> which
 performs a deep comparison of nested data structures, and others.
 </p>
 

@@ -36,11 +36,11 @@ is the best choice. </p>
 
 <p> A simple problem and a perl solution: remove all matches to <tt>id=<i>some integer value</i></tt> (at the end of a string) from a list, also stripping off <tt>id=<i>value</i></tt> from the other strings. (Admittedly this seems a little contrived but it was actually needed by somebody at some point.) </p>
 
-<pre>@array = grep { s/id=(\d+)$// ? $1 != $value : 1 } @array;</pre>
+<pre style="white-space:pre-wrap;">@array = grep { s/id=(\d+)$// ? $1 != $value : 1 } @array;</pre>
 
 <p> [2005-02-04] Finally there’s a PHP equivalent from Jason Sweat, after almost 2 years: </p>
 
-<pre>$array = array_filter($array, create_function('$v','return !preg_match(\'/id=\d+$|id='.$value.'$/\',$v);'));</pre>
+<pre style="white-space:pre-wrap;">$array = array_filter($array, create_function('$v','return !preg_match(\'/id=\d+$|id='.$value.'$/\',$v);'));</pre>
 
 <p> At least it’s possible, but note the following two things: it has to parse code at runtime (think <tt>eval STRING</tt>),
 and that it makes use of perl regular expression matching (beats

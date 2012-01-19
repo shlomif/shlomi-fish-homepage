@@ -3,6 +3,8 @@ package Shlomif::Homepage::Amazon;
 use strict;
 use warnings;
 
+
+
 sub import
 {
     my ($module, $args) = @_; 
@@ -12,6 +14,8 @@ sub import
 package Shlomif::Homepage::Amazon::Obj;
 
 use Moose;
+
+use JSON qw(decode_json);
 
 use XML::Grammar::ProductsSyndication;
 use XML::LibXML::XPathContext;
@@ -37,9 +41,28 @@ sub BUILD
 
 }
 
+sub _utf8_slurp
+{
+    my $filename = shift;
+
+    open my $in, '<', $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    binmode $in, ':encoding(utf8)';
+
+    local $/;
+    my $contents = <$in>;
+
+    close($in);
+
+    return $contents;
+}
+
 sub process
 {
     my ($self) = @_;
+
+    my $config = decode_json(_utf8_slurp($ENV{HOME}.'/.shlomifish-amazon-sak.json'));
 
     if (!$self->ps->is_valid())
     {
@@ -67,7 +90,7 @@ sub process
             },
             'amazon_token' => "0VRRHTFJECHSKYNYD282",
             'amazon_associate' => "shlomifishhom-20",
-            'amazon_sak' => read_password('Secret Access Key: '),
+            'amazon_sak' => $config->{'amazon_sak'},
         }
     );
 

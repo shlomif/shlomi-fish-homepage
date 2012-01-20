@@ -4952,5 +4952,59 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-negative-numbers">
+        <meta>
+            <title>Negative Numbers</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="tziOm">what is the most efficient way to do: floor($foo/600)*600</saying>
+<saying who="ChibaPet">um</saying>
+<saying who="Altreus">floor $foo</saying>
+<saying who="Altreus">:P</saying>
+<saying who="DrForr">Premature microoptimization detected at line 0.</saying>
+<saying who="Altreus">I think that /is/ the most efficient way to do it</saying>
+<saying who="ChibaPet">what about int $foo?</saying>
+<saying who="ChibaPet">or is floor more efficient?</saying>
+<saying who="Altreus">I think this is rounding to the nearest 600</saying>
+<saying who="Altreus">er, the lowest 600</saying>
+<saying who="Altreus">int truncates towards 0</saying>
+<saying who="ChibaPet">doesn&#39;t floor do that as well?</saying>
+<saying who="DrForr">You&#39;re looking at microoptimization in *math*. Surely there are bigger fish to fry?</saying>
+<saying who="Altreus">ChibaPet: consider negatives</saying>
+<saying who="ChibaPet">Oh! Negatives. Slipped right by me. Thanks.</saying>
+<saying who="Altreus">the difference in most operations is evident in negatives, except the various rounding techniques</saying>
+<saying who="fizzie">Negative numbers, brr, they&#39;re just not natural.</saying>
+<saying who="Altreus">:)</saying>
+<saying who="rindolf">fizzie: :-)</saying>
+<saying who="rindolf">fizzie: but they are real.</saying>
+<saying who="rindolf">fizzie: and they aren&#39;t imaginary or complex.</saying>
+<saying who="Altreus">they&#39;re not /that/ real</saying>
+<saying who="rindolf">fizzie: though they can be irrational.</saying>
+<saying who="rindolf">Heh.</saying>
+<saying who="DrForr">-5 ∈ ℝ</saying>
+<saying who="antox">I think tziOm wanted to round down to 10 minutes. Maybe s/.:..$/0:00/ is an option? :D</saying>
+<me_is who="Altreus">smacks antox with a bin</me_is>
+<me_is who="rindolf">smacks antox with a larger bin.</me_is>
+<saying who="Altreus">this one http://www.suasnews.com/wp-content/uploads/2010/12/dusty1.gif</saying>
+<me_is who="ChibaPet">hands antox a fish.</me_is>
+<saying who="shorten">Altreus&#39;s url is at http://xrl.us/bmpbt6</saying>
+<saying who="rindolf">My bin is bigger than Altreus&#39;.</saying>
+<saying who="DrForr">Rainbow trout all &#39;round!</saying>
+<saying who="Altreus">was that a pun</saying>
+<saying who="antox">Anyway guys, I haven&#39;t got if I should be proud of getting smacked by a bin.</saying>
+<saying who="Altreus">no</saying>
+<saying who="Altreus">it&#39;s pain-based learning</saying>
+<saying who="rindolf">antox: you were smacked by two bins - one smaller, one larger.</saying>
+<saying who="Cipher-0">You made a mistake???!one!!! Clean out your desk at once!!!!!!eleven!!!!!</saying>
+<saying who="antox">And no supper today!</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Don't be so negative.</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

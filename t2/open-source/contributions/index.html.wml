@@ -54,21 +54,41 @@ Patch, was applied by Peter N. Lundblad.
 <p>
 I contributed some patches to 
 <a href="http://www.perldoc.com/perl5.8.4/pod.html">the perl 5 core 
-documentation</a> to make it clearer and easier to understand.
+documentation</a> to make it clearer and easier to understand. Later on, I
+improved the default perl debugger (what gets invoked with 
+“perl -d myprog.pl”) by adding new features, adding new automated test code,
+and by refactoring and clean ups.
 </p>
 
-<h2 id="mandriva"><a href="http://www.mandriva.com/">Mandriva</a></h2>
+<h2 id="kde"><a href="http://www.kde.org/">KDE</a> - a desktop environment 
+and a software platform</h2>
+
+<p>
+I've been an active reporter of bugs for KDE, and also have been 
+helping in triaging and reproducing some bugs, and contributed some fixes.
+</p>
+
+<p>
+For more information, consult a <a href="https://bugs.kde.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailcc1=1&amp;emaillongdesc1=1&amp;emailtype1=exact&amp;email1=shlomif%40shlomifish.org&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">KDE bug tracker search on my name</a>.
+</p>
+
+<h2 id="mandriva"><a href="http://www.mandriva.com/">Mandriva</a> →
+<a href="http://www.mageia.org/">Mageia</a> - Linux distributions.</h2>
 
 <p>
 Mandriva is an open-source, desktop-oriented, distribution of the Linux
-operating system (sometimes known as “GNU/Linux”). I have been using Mandriva
+operating system (sometimes known as “GNU/Linux”). I have used Mandriva
 since Mandrake (Mandriva’s previous name) 7.1 and have been enjoying it.
+Mandriva was forked by the community into Mageia Linux, and I've switched
+my local installations to use it.
 </p>
 
 <p>
-For a few years now, I’ve been using 
-<a href="http://wiki.mandriva.com/en/Cooker">Mandriva Cooker</a>, which is
-the Mandriva bleeding edge distribution and have been reporting,
+For a few years now, I’ve been using first
+<a href="http://wiki.mandriva.com/en/Cooker">Mandriva Cooker</a>
+and later on <a href="https://wiki.mageia.org/en/Cauldron">Mageia
+Cauldron</a>, which are
+their bleeding edge distribution and have been reporting,
 triaging, fixing bugs or providing workarounds for them 
 as I encounter them. I am the user 
 “shlomif@iglu.org.il” on 
@@ -221,5 +241,3 @@ a port of File-Find-Rule to File-Find-Object. This in turn provides
 a convenient, declarative interface to File-Find-Object overcoming the
 philosophical limitations of File::Find.
 </p>
-
-

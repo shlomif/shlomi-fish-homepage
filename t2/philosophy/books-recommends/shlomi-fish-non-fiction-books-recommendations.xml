@@ -825,6 +825,59 @@ has its merit as it is good for all Perl programmers.
 </p>
                         </desc>
                     </prod>
+                    <prod id="tdd_by_example">
+                        <title>Test Driven Development by Example</title>
+                        <isbn>0321146530</isbn>
+                        <creator type="author">Kent Beck</creator>
+                        <desc>
+                            <p>
+                                I was disappointed after I started reading an earlier book about 
+                                <a href="http://en.wikipedia.org/wiki/Test-driven_development">“Test 
+                                    Driven Development” (TDD)</a> 
+                                that I have bought (here's 
+<a href="http://mail.perl.org.il/pipermail/perl/2010-April/010909.html">my
+earlier review and a recommendation against it</a>)
+but I decided
+to give the TDD sub-series of the Extreme Programming books another chance with
+the more elementary book in question. This time, the book met my expectations
+and I can recommend it.
+</p>
+
+<p>
+First of all, Beck's book is relatively short and small, as opposed to the
+<i>xUnit Test Patterns</i> book. It is also interesting, entertaining and full
+of insights. It is divided into three sections:
+</p>
+
+<ul>
+    <li>
+        <p>
+            In the first: a sample financial TDD project is developed in Java, with
+instructions on how to proceed every way. The standard “add-failing-test; get
+it to pass; refactor;” cycle is described there with a TODO list as a tool.
+This was the best section, in my opinion.
+</p>
+</li>
+<li>
+    <p>In the second section, Beck bootstraps an xUnit framework in Python
+        starting from nothing (and compares it to doing brain surgery on yourself.).</p>
+</li>
+
+<li>
+    <p>
+In the third section, he briefly discusses various TDD patterns. I admit I
+did not pay enough attention there because I read the book before going to
+sleep when I was tired, and want to go over it again.
+</p>
+</li>
+</ul>
+<p>
+So I can recommend this book for all people who want to learn how to do TDD
+better. Mr. Beck kinda aims for the high ideal of TDD and I often deviate from
+it, which I think is OK.
+</p>
+                        </desc>
+                    </prod>
                 </cat>
             </cat>
         </cat>

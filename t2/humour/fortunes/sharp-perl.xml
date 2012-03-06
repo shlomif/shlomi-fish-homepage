@@ -5036,5 +5036,43 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-math-complex">
+        <meta>
+            <title>Complex Math</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="Teratogen">eval: 1+1</saying>
+<saying who="perlbot">Teratogen: 2</saying>
+<saying who="Teratogen">it works!</saying>
+<saying who="Teratogen">eval: e**(pi*i)</saying>
+<saying who="perlbot">Teratogen: 1</saying>
+<saying who="Teratogen">oh dear =(</saying>
+<saying who="vreg">eval: 1/0</saying>
+<saying who="perlbot">vreg: ERROR: Illegal division by zero at (eval 1702) line 1.</saying>
+<saying who="Teratogen">eval: sqrt(-1)</saying>
+<saying who="perlbot">Teratogen: ERROR: Can&#39;t take sqrt of -1 at (eval 1702) line 1.</saying>
+<saying who="Teratogen">what the</saying>
+<saying who="tm604">http://search.cpan.org/perldoc?Math::Complex</saying>
+<saying who="vreg">eval: use Math::Complex; sqrt(-1)</saying>
+<saying who="perlbot">vreg: ERROR: Can&#39;t locate Math/Complex.pm in @INC (@INC contains:) at (eval 1702) line 1. BEGIN failed--compilation aborted at (eval 1702) line 1.</saying>
+<saying who="LeoNerd">Math::Complex? Why not Math::Simple?</saying>
+<saying who="rindolf">LeoNerd: heh.</saying>
+<saying who="rindolf">Simple Numbers.</saying>
+<saying who="rindolf">Math::Tiny</saying>
+<saying who="rindolf">Math::Tiny::ButMaintained</saying>
+<saying who="LeoNerd">Hehe.. Math::Tiny. Only copes with the range [0,1)</saying>
+<saying who="rindolf">LeoNerd: sounds more like fuzzy logic.</saying>
+<saying who="rindolf">LeoNerd: this [0,1) thing reminds me of this joke of mine - http://www.shlomifish.org/humour/fortunes/show.cgi?id=jewish-deduction</saying>
+<saying who="LeoNerd">Hehe</saying>
+<saying who="rindolf">Math::Jewish.</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Making Complex Math Simple</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

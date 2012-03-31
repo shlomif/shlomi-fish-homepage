@@ -1117,5 +1117,46 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-sharp-programming-dev-null-is-webscale">
+        <meta>
+            <title>/dev/null is webscale.</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="oilio">so what the point of hashes, can&#39;t we just use void pointers to key/val ?</saying>
+<saying who="rindolf">oilio: hashes as in hash tables?</saying>
+<saying who="oilio">yes</saying>
+<saying who="rindolf">oilio: OK.</saying>
+<saying who="rindolf">oilio: they are one way to efficiently implement the dictionary Abstract Data Type (ADT).</saying>
+<saying who="rindolf">oilio: a hash table can store more than one key , value pair.</saying>
+<saying who="oilio">yeah, I read about it in the wikipedia</saying>
+<saying who="rindolf">oilio: and you can lookup a value based on a key efficiently.</saying>
+<saying who="arubin">Linear search is good enough for everyone.</saying>
+<saying who="oilio">indolf: what if the hole table wont fit in the memory?</saying>
+<saying who="oilio">RAM</saying>
+<saying who="arubin">Swap.</saying>
+<saying who="arubin">Amazon S3.</saying>
+<saying who="imlearningyacc">well if no ram and no swap no allocation</saying>
+<saying who="arubin">We have the whole Internet for our tables.</saying>
+<saying who="imlearningyacc">well</saying>
+<saying who="diminoten">ask reddit how that worked out</saying>
+<saying who="arubin">And remember, /dev/null is web-scale.</saying>
+<saying who="imlearningyacc">yea, I store all my data in /dev/null</saying>
+<saying who="rindolf">oilio: then you&#39;ll need to use a more sophisticated (and slower) data structure that can offload to disk.</saying>
+<saying who="arubin">It is really fast.</saying>
+<saying who="arubin">I use the Boost libraries for /dev/null too.</saying>
+<saying who="arubin">And I use async writes to /dev/null.</saying>
+<saying who="rindolf">arubin: heh.</saying>
+<saying who="diminoten">don&#39;t want to get into resource contention when using /dev/null</saying>
+<me_is who="rindolf">uses /dev/null for backups.</me_is>
+<saying who="diminoten">only so much null to go around</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>/dev/null - the ultra-fast solution for all your storage needs.</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

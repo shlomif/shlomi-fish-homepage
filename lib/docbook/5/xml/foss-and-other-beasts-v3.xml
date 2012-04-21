@@ -191,11 +191,12 @@ usually is no point in attempting to mandate a charge for selling it.
 Another common misconception is that it sometimes cannot be modified or
 customised for internal use. In fact, all free software (but not <emphasis>all</emphasis>
 open source software), can. Only when you wish to distribute it (free of
-charge or commercially), you may have to distribute your changes.
-(depending on the licence) The use of open source software to process
-proprietary content or be processed by non-free programs is also, always
-available. Thus, an open-source C compiler can be used to compile the code
-of proprietary programs like the Oracle Database Server.
+charge or commercially), you may have to distribute your changes
+(depending on the licence - not all open-source licences require that). The
+use of open source software to process proprietary content or be processed by
+non-open-source programs is also, always available. Thus, an open-source C
+compiler can be used to compile the code of proprietary programs, such as the
+Oracle database server.
 </para>
 
 </section>
@@ -292,7 +293,7 @@ themselves. Even cooperation between two different vendors was not allowed.
 Gradually, vendors licensed the System V source code and ported it to their
 own architectures. This caused an explosion of proprietary UNIX systems.
 Sun Microsystems and other vendors took the BSD source code,
-diverge from it and distributed it without full access to the code to
+diverged from it and distributed it without full access to the code to
 all customers. A similar thing happened with
 other software distributed under similar licences.
 </para>
@@ -389,12 +390,12 @@ BSD licence.
 
 <para>
 However, AT&amp;T did not stand by, and pressed charges against UCB and some
-other companies, for claiming they actually own parts of the BSD operating
+other organisations, for claiming they actually own parts of the BSD operating
 system. This brought uncertainty into the BSD world, which would not be
 resolved until the 1990s, when the law-suit was decided mostly in favour
-of UCB. As a result of this uncertainty, some spin-offs of BSD (such as
-<link xlink:href="http://en.wikipedia.org/wiki/386BSD">386BSD</link>, and
-its derived operating systems such as FreeBSD or NetBSD status was in a
+of UCB. As a result of this uncertainty, the status of some spin-offs of BSD
+(such as <link xlink:href="http://en.wikipedia.org/wiki/386BSD">386BSD</link>,
+and its derived operating systems such as FreeBSD or NetBSD) was in a
 legal limbo.
 </para>
 </section>
@@ -416,7 +417,7 @@ scratch.
 From an early stage, this entire system was dubbed “Linux” as well.
 Richard Stallman instead has advocated the name <link xlink:href="http://www.gnu.org/gnu/linux-and-gnu.html">“GNU/Linux”</link> (pronounced
 “ggnoo-Linux”) which acknowledges the fact that the GNU project
-contributed the lion’s share of the system. (as well as some pre-requisites
+contributed the lion’s share of the system (including some pre-requisites
 of the Linux kernel itself).  Most people haven’t consistently followed this
 piece of advice.
 </para>
@@ -426,14 +427,14 @@ The importance of the Linux kernel was that it was the last brick in
 materialising a fully GNU system. Since GNU tools tend to be more complete,
 feature-rich and generally superior to tools of other systems, this has
 made Linux one of the most powerful UNIX systems available. Nowadays,
-most UNIX servers out there and almost all UNIX workstations (and many embedded
+most UNIX servers out there, many UNIX workstations, (and many embedded
 devices) run the GNU/Linux system. Linux was, thus, the spearhead that guided 
 the acceptance of free software into the mainstream.
 </para>
 
 <para>
 <link xlink:href="http://www.debian.org/">Debian GNU/Linux</link> was a Linux distribution that was eventually endorsed
-by the GNU project. One of the things that made it unique was the fact it
+by the GNU project. One of the aspects that made it unique was the fact it
 distinguished between “free” and “non-free” packages as far as the
 user is concerned. The 
 <link xlink:href="http://www.debian.org/social_contract.html">guidelines 
@@ -442,9 +443,9 @@ for determining which software is
 </para>
 
 <para>
-Note that they deviate from the Free Software Definition (which was published
-later on) and include some licences that are not free. I.e: “Debian Free” is a 
-superset of free software according to the Stallman definition.
+Note that they deviate from the Free Software Definition (which was only
+published later on) and include some licences that are not free. I.e: “Debian
+Free” is a superset of free software according to the Stallman definition.
 </para>
 
 <para>
@@ -491,8 +492,8 @@ hackers.
 In February 3, 1998, in Palo Alto Califronia, a brainstorming session
 which Raymond attended, coined the term “open source” as an alternative
 for “free software”. Their incentive was that when talking to a
-businessman, either free software will be understood as software that costs
-nothing, or it will be associated with the relatively anti-Capitalistic views
+businessman, either free software will be understood as gratis software, or it
+will be associated with the relatively anti-Capitalistic views
 held by Richard Stallman (who claims non-free software is immoral).
 They decided that the term “open source” would be a better candidate for
 acceptance in the corporate world.
@@ -587,10 +588,10 @@ open-source BSD clones and other UNIXes can run there as well.
 <para>
 The recent recession in the information technology market, did not seem to
 slow down the development of open source software.
-<link xlink:href="http://freshmeat.net/">Freshmeat</link> is still busy
-as ever with releases of new software, and since the recession started,
-many important new releases were done for a lot of major applications and
-even many more less important ones.
+<link xlink:href="http://freecode.com/">Freecode (formerly Freshmeat)</link>
+is still busy as ever with releases of new software, and since the recession
+started, many important new releases were done for a lot of major applications
+and even many more less important ones.
 </para>
 
 </section>
@@ -799,7 +800,7 @@ The most prominent figure who holds this view is Linus Torvalds, but there
 are many others, some of them quite prominent. Such figures, however, tend
 to be less loud than the “religious” advocates of the other two views,
 and thus it may seem that they are at a minority. Part of the reason is
-that many of them inherently tend to value productive code and decisions
+that many of them inherently tend to value productive coding and decision-making
 over advocacy.
 </para>
 
@@ -829,7 +830,7 @@ software that is given free of charge. (the standard
 both the Free
 Software Foundation, and the people associated with the Open Source
 Institute are on friendly terms with each other and answer questions, give
-feedback, accept contributions, etc. from each other or from people that do
+feedback, and accept contributions, from each other or from people that do
 not belong to either camp.
 </para>
 
@@ -861,9 +862,10 @@ choose from. Check <link xlink:href="http://www.gnu.org/philosophy/license-list.
 <para>
 Making a program free is not necessarily enough to make it compatible with
 the GNU GPL licence. The GPL makes some restrictions regarding which
-licences it can link against, and some perfectly good free software does
-not qualify to it. (examples are the Mozilla Public License, the Qt Public
-License, and even the original BSD licence). It is advisable that, whenever
+licences it can link against, and some otherwise free software is not
+compatible with them. Examples for incompatible licences are the Mozilla
+Public License, the Qt Public License, and even the original BSD licence. It
+is advisable that, whenever
 possible, a developer or vendor <link xlink:href="http://www.dwheeler.com/essays/gpl-compatible.html">should choose a licence that is compatible with the
 GPL</link>, because otherwise there may be problems integrating his code 
 with GPLed one or using both a GPL and a non-GPL compatible library. (I am 
@@ -941,14 +943,14 @@ Examples for such cases are:
 
 <listitem>
 <para>
-1. The Microsoft Visual C++ Run-Time Library and the Microsoft Foundation
+The Microsoft Visual C++ Run-Time Library and the Microsoft Foundation
 Classes (MFC), that are accompanied with their source.
 </para>
 </listitem>
 
 <listitem>
 <para>
-2. <link xlink:href="http://www.trilon.com/xv/">xv</link> - a popular 
+<link xlink:href="http://www.trilon.com/xv/">xv</link> - a popular 
 shareware image viewer and manipulator for X-Windows that has been 
 distributed with its source code. <emphasis role="bold">Note:</emphasis> it is 
 no longer actively maintained, and its developer can no longer be actively 
@@ -958,7 +960,7 @@ reached, and so its use is no longer recommended.
 
 <listitem>
 <para>
-3. <link xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">qmail</link> - a popular mail server
+<link xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">qmail</link> - a popular mail server
 whose source code was available and can be deployed free of charge, but its
 licensing terms specified that it is illegal to distribute modified binaries 
 or sources (at least outside the organization) This is enough to make it 

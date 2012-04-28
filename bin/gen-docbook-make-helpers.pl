@@ -23,6 +23,12 @@ my @documents =
         db_ver => 5,
     },
     {
+        id => "case-for-drug-legalisation-v3",
+        path => "philosophy/politics/drug-legalisation",
+        base => "case-for-drug-legalisation-v3",
+        db_ver => 5,
+    },
+    {
         id => "case-for-file-swapping-rev3",
         path => "philosophy/case-for-file-swapping/revision-3",
         base => "case-for-file-swapping-rev3",

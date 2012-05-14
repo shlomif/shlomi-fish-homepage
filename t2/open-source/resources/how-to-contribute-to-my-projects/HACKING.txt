@@ -253,3 +253,27 @@ int my_func(int arg)
 }
 ----------------
 
+Comments should have an empty space after the comment leader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Comments in Perl, C, Python, Ruby, and other languages should have an
+empty space after the comment leader.
+
+Bad:
+
+----------------
+#Print a value.
+print "Hello\n";
+/*Print a value.*/
+printf("%s\n", "Hello");
+----------------
+
+Better:
+
+----------------
+# Print a value.
+print "Hello\n";
+/* Print a value. */
+printf("%s\n", "Hello");
+----------------
+

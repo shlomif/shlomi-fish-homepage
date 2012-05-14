@@ -44,6 +44,22 @@ Avoid until and unless
 "until" and "unless" should be spelled using "if !" or "while !" or
 alternatively "if not" or "while not".
 
+Make sure you update the "MANIFEST" file with any new source files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All the new source files should be places in the "MANIFEST" file in the core
+distribution. Note that I am considering to make use of "MANIFEST.SKIP"
+instead, which would not necessitate that in general.
+
+Make sure to update the "Changes" (or equivalently named) file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A patch should also patch the "Changes" file (whose name may vary) with the
+explanation of the change. A Changes file should not be automatically
+generated. Note that due to historical reasons, the exact format of the Changes
+varies between different projects of mine and you should try to emulate the
+style and format of the one of the CPAN distribution in question.
+
 Other elements to avoid
 ~~~~~~~~~~~~~~~~~~~~~~~
 

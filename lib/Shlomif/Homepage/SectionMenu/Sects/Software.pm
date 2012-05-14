@@ -239,6 +239,10 @@ my $software_tree_contents =
                     text => "Numerical Software",
                 },
                 {
+                    url => "open-source/resources/how-to-contribute-to-my-projects/",
+                    text => "How to Contribute to My Projects",
+                },
+                {
                     url => "rindolf/",
                     text => "Rindolf - a Dialect of Perl based on Perl 5",
                 },

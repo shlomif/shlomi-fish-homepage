@@ -41,12 +41,13 @@ if ($cond)
 Avoid until and unless
 ~~~~~~~~~~~~~~~~~~~~~~
 
-"until" and "unless" should be spelled using "if !" or "while !".
+"until" and "unless" should be spelled using "if !" or "while !" or
+alternatively "if not" or "while not".
 
 Other elements to avoid
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-See http://perl-begin.org/tutorials/bad-elements/
+See http://perl-begin.org/tutorials/bad-elements/ .
 
 C Style Guidelines
 ------------------
@@ -162,26 +163,20 @@ case sensitive.
 
 2. Note, however, that comments should be phrased in proper English, with
 proper Capitalization and distinction between uppercase and lowercase
-letters. So should the rest of the Freecell Solver internal and external
-documentation.
+letters. So should the rest of the internal and external documentation.
 
 3. Some commonly used abbreviations:
 
 ----------------
 max - maximum
 num - numbers
-cols - columns
 dest - destination
 src - source
-ds - dest stack
-stack - usually the source stack
 ptr - pointer
 val - value
-c - the card index/position within the column
-befs - Best First Search (one of the types of searches used by Freecell Solver)
-a_star - also refers to "befs" from historical reasons (should be converted
-to "befs" in the non-external interface.)
-dfs - Depth-First Search (one of the types of searches used by Freecell Solver)
+iter - iterator
+idx - index
+i, j - indexes
 ----------------
 
 Don't comment-out - use #if 0 to temporarily remove code
@@ -209,3 +204,36 @@ No declarations after statements
 One should make sure there are no declarations after statements in the ANSI
 C code. If you're using gcc, you can make sure this is the case by adding
 the flags "-Wdeclaration-after-statement -Werror" to "CCFLAGS" in the makefile.
+
+Bad:
+
+----------------
+int my_func(int arg)
+{
+    int var;
+
+    printf("%s\n", "Foo");
+
+    /* Declaration after statement. */
+    int other_var = var;
+
+    return;
+}
+----------------
+
+Better:
+
+----------------
+int my_func(int arg)
+{
+    int var;
+    int other_var;
+
+    printf("%s\n", "Foo");
+
+    other_var = var;
+
+    return;
+}
+----------------
+

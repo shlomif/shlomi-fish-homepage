@@ -270,6 +270,11 @@ my $humour_tree_contents =
                     url => "humour/bits/Copying-Ubuntu-Bug-No-1/",
                 },
                 {
+                    text => "It’s not a Fooware - It’s an Operating System",
+                    url => "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
+                    title => "Software Applications that Transcend Their Original Purpose",
+                },
+                {
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
                     title => "Collection of funny facts about various people an things",

@@ -2,15 +2,15 @@
 
 <p>
 Standard CPAN and CPAN-like Perl packages contain their tests as a group
-of <tt>*.t</tt> under the sub-directory <tt>t/</tt> and allow running them
+of <tt>*.t</tt> under the sub-directory <tt>t/</tt>, and allow running them
 by invoking the <tt>make test</tt> or <tt>./Build test</tt> commands.
 </p>
 
 <p>
 Using the CPAN package
 <a href="http://search.cpan.org/dist/Module-Starter/">Module-Starter</a>
-one can generate a skeleton for one’s own CPAN-like package, that
-can have tests to afterwards. Keeping your code organised in such packages,
+one can generate a skeleton for one’s own CPAN-like package, which
+can also afterwards contain tests. Keeping your code organised in such packages,
 allows one to make use of a convenient build-system
 such as <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a>.
 It also allows one to package it as operating-system-wide packages, which can 

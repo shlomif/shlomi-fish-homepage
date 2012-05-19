@@ -12,7 +12,7 @@ are several reasons for that:
 <p>
 Writing the property names directly each time is prone to mis-spellings
 and errors, because they are strings. On the other hand, the existence of
-a particular name of methods are validated at run-time and will throw an
+a particular name of methods are validated at run-time, and will throw an
 exception if they are not present.
 </p>
 </li>
@@ -20,7 +20,7 @@ exception if they are not present.
 <li>
 <p>
 If a property needs to be converted from a first-order property to a
-calculated value, then one can still use the existing method based interface
+calculated value, then one can still use the existing method-based interface
 to access it, just by changing the implementation of the methods. On the
 other, this is much more difficult to change with a direct-field access.
 </p>

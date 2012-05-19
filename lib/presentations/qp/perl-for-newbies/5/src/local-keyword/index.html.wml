@@ -7,8 +7,8 @@ temporarily "localise" the values of variables (or parts there of) in Perl.
 </p>
 
 <p>
-As opposed to <tt>my</tt> which is lexically scoped, <tt>local</tt> is
-<a href="http://en.wikipedia.org/wiki/Scope_%28programming%29#Dynamic_scoping">dynamically scoped</a>. What happens when one do a 
+As opposed to <tt>my</tt>, which is lexically scoped, <tt>local</tt> is
+<a href="http://en.wikipedia.org/wiki/Scope_%28programming%29#Dynamic_scoping">dynamically scoped</a>. What happens when one writes a 
 <tt>local $myvar = NEW_VALUE_EXPR();</tt> (which will work only for package 
 variables) is that perl will store the previous value of the variable somewhere
 safe, allow the programmer to temper with it as it pleases, and restore its

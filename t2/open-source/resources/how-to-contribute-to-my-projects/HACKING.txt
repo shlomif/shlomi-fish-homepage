@@ -277,3 +277,40 @@ print "Hello\n";
 printf("%s\n", "Hello");
 ----------------
 
+sizeof(var) is preferable to sizeof(mytype_t)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given the choice between +sizeof(var)+ as well as +sizeof(*var)+
+and +sizeof(mytype_t)+ where +mytype_t+ is a type, the former should be
+prfereable. This way, if the type of the variable changes, one does not
+need to fix the +sizeof(…)+.
+
+sizeof() must always be enclosed in parentheses
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Do not write +sizeof int+, +sizeof mystruct_t+ etc. Instead write
++sizeof(int)+, +sizeof(mystruct_t)+ .
+
+Types should end in “_t” ; Raw struct definitions in “_struct”
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+New typedefs should call their types in names that end with a “_t”:
+
+----------------
+typedef int myint_t;
+typedef struct
+{
+    .
+    .
+    .
+} mystruct_t
+----------------
+
+Prefer doing +typedef struct { ... } mystruct_t+ to declaring a struct
+separately. If a struct declartion is still needed (e.g: if it contains
+a pointer to itself) it should:
+
+1. Have an identifier that ends with “_struct”.
+
+2. Be typedefed into a type (that ends with “_t”):
++typedef struct my_struct_struct my_struct_t;+.

@@ -22,8 +22,8 @@ performs a deep comparison of nested data structures, and others.
 <p>
 You may also notice the <tt># TEST</tt> comments - these are 
 <a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> annotations
-that allow us to keep track of the number of tests we've ran and update
-it. (So we'll know exactly how many tests we want.)
+that allow us to keep track of the number of test assertions that we have
+declared and update it.
 </p>
 
 <p>
@@ -43,9 +43,10 @@ ok 7 - 3.5+3.5 == 7
 
 <p>
 This is in an output format called <a href="http://testanything.org/">TAP - The
-Test Anything Protocol</a>. There are several TAP parsers that analyse the
-tests and present the result. For example, we can run the test script using 
-the <tt>prove</tt> command-line utility that ships with perl 5:
+Test Anything Protocol</a>. There are several TAP parsers, which analyse the
+output and present a human-friendly summary. For example, we can run the test
+script above using the <tt>prove</tt> command-line utility that ships with
+perl 5:
 </p>
 
 <quadpres_code_block>

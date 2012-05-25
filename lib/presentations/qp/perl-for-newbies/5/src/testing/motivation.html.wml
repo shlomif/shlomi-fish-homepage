@@ -10,12 +10,12 @@ tested only manually, would be prevented.
 </p>
 
 <p>
-Another reason is to make sure that bugs and regressions do not occur again.
-Say we have a bug, and we write a meaningful test that fails when the bug is 
-still in the code, and only then fix the bug. In that case, we can re-use the
-test in the future to make sure the bug is not present in the current version
-of the code. If the bug re-surfaces in a certain variation, then it will
-likely be caught by the test.
+Another reason is to make sure that bugs and regressions are not
+reintroduced in the code-base.  Say we have a bug, and we write a meaningful
+test that fails when the bug is still in the code, and only then fix the bug.
+In that case, we can re-use the test in the future to make sure the bug is not
+present in the current version of the code. If the bug re-surfaces in a certain
+variation, then it will likely be caught by the test.
 </p>
 
 <p>

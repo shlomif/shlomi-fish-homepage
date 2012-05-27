@@ -25,7 +25,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/motivation.html 
 3. על ידי כתיבת בדיקות, אנו מספקים מפרט לקוד, ואפילו סוג מסוים של תיעוד
 ממשק המתכנת (API), וכן דוגמאות למה שאנו רוצים שהקוד ישיג.
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/ :
 
 אנו רוצים לבדוק פונקציה שמחברת שני מספרים.
 
@@ -42,7 +42,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/
 והתסריט המתאים מצליח.
 
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/test-more.html
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/test-more.html :
 
 המודול Test::More כלול בפרל, שמאפשר לכתוב ולהריץ בדיקות אוטומטיות באמצעות שגרות שהשימוש בהן
 הוא נוח. הנה דוגמה לתסריט בדיקות.
@@ -60,7 +60,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/test-more.h
 ומציגים את התוצאה. למשל נוכל להריץ את תסריט הבדיקה באמצעות התוכנית prove שמופצת
 כחלק מפרל:
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/types.html
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/types.html :
 
 ישנם מספר סוגי בדיקות: בדיקות יחידה, בדיקות מערכת, ובדיקות אינטגרציה.
 
@@ -77,13 +77,13 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/types.html
 
 ניתן לעשות שימוש במשפחת המודולים Inline כדי להתממשק לקוד בשפות אחרות ישירות.
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/mocking.html
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/mocking.html :
 
 חיקוי: כאשר בודקים חלקים מסוימים במערכת לפעמים זה רצוי להחליף חלקים אחרים
 שבהם נעשה שימוש בחלקים משלנו המתנהגים כמותם לצרכי הבדיקות. לדוגמה כאשר בודקים
 תסריט של שרת ווב, ייתכן שנרצה לחקות את השרת.
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/ :
 
 מערכות ניהול גרסאות נחשבות חלק "ממערכות בקרת תצורה" (SCM). הן מאפשרות לשמור
 גרסאות הסטוריות של הקוד, לגשת אליהן בקלות, ולבצע פעולות נוספות כמו ניהול
@@ -92,7 +92,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/
 חלק זה בהרצאה יתן את המוטיבציה לשימוש בניהול גרסאות ויערוך הדגמה קצרה
 באמצעות מערכת ניהול הגרסאות מרקוריאל.
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/motivation.html
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/motivation.html :
 
 היתרונות של שימוש במערכת ניהול גרסאות:
 
@@ -110,7 +110,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/motivati
 יותר נוח ועמיד מאשר שימוש בקבצי ארכיון וטלאים. יש מספר רב של מערכות ניהול גרסאות
 פתוחות-קוד וחינמיות שאיכותן טובה וקרוב לודאי שתמצאו אחת שתאהבו.
 
-http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/mercurial-demo.html
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/mercurial-demo.html :
 
 הדגמה.
 

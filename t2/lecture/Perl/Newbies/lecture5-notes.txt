@@ -189,4 +189,60 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/local-keyword/use-and-ab
 ראו את הקישורים.
 
 
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/ :
+
+שימו ב-POD עבור תיעוד
+
+פוד (POD) הוא קיצור ל-"Plain Old Documentation" והינו שפה קלילה לכתיבת תיעוד
+עבור תוכניות פרל, מודולי פרל, ופרל עצמה.
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/demo.html :
+
+הדגמה של פוד.
+
+כיצד לכתוב: חלקי טקסט של פוד מתחילים בהוראת פוד יחידה, בשורה חדשה וממשיכות 
+עד להוראה ‪"=cut"‬ שהיא גם בשורה משלה. מספר הוראות פוד:
+
+כותרות. ככל שמספר ההוראה קטן יותר כך היא ראשית יותר
+
+טקסט רגיל בא בפסקאות בלי סימונים מיוחדים.
+
+בלוקים של קוד: ניתן להוסיף אותם על ידי הזחה. בבלוקים כאלה, לא מתעלמים
+משורות חדשות.
+
+קודים של עיצוב:
+
+I<text> - לטקסט בגופן נטוי
+B<text> - לטקסט מעובה.
+C<text> - לטקסט בגופן בגודל קבוע.
+L<text> - לקישורים.
+E<lt>, E<gt>, etc. are escapes.
+
+רשימות בפוד - ‪=over 4‬ ואחריהם ‪=item‬ וחזרה: כוכביות/בולטים, מספרים, ורשימות
+של הגדרה.
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/pod-testing.html :
+
+המודול Test-Pod מאפשר לבדוק את תקינות התחביר של POD.
+
+המודול Test-Pod-Coverage מנסה לבדוק שכל ממשק המשתמש הפומבי מתועד באמצעות פוד.
+
+בד"כ Module-Starter ומודולים דומים יחוללו תסריטי בדיקה שלהם כחלק מהשלד של
+ההפצה תואמת ה-CPAN שלכם.
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/literate-programming.html :
+
+”תכנות משכיל“
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/extensions.html :
+
+הרחבות לפוד.
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter/ :
+
+מבוא ל-Module-Build ו-Module-Starter.
+
+להפצות סיפאן יש דרך סטנדרטית לבנייה. אנו נלמד כיצד ליצור הפצות כאלה, כולל לצרכים
+שלנו.
+
 

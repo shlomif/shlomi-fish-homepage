@@ -11,9 +11,9 @@ are several reasons for that:
 <li>
 <p>
 Writing the property names directly each time is prone to mis-spellings
-and errors, because they are strings. On the other hand, the existence of
-a particular name of methods are validated at run-time, and will throw an
-exception if they are not present.
+and errors, because they are strings. On the other hand, with method calls,
+the existence of a particular one is validated at run-time, and will
+throw an exception if a method was misspelled into a name that is not present.
 </p>
 </li>
 

@@ -3,7 +3,7 @@
 <p>
 If we look at the code of the <tt>lib/…*.pm</tt> file, we'll see that there's
 practically nothing there. So now it's time that we add some meaningful
-code to the scripts. But first we need to add some tests. Let's add this
+code to the modulesmodules. But first we need to add some tests. Let's add this
 test script under <tt>t/add.t</tt>
 </p>
 
@@ -67,14 +67,14 @@ All tests successful.
 </quadpres_code_block>
 
 <p>
-Since all tests are successful, we can commit it to the repository.
+Since all tests are successful, we can commit the changes to the repository.
 </p>
 
 <h3>Moving on</h3>
 
 <p>
 Now we can continue to add more tests, and then fix the failing ones. If the
-code becomes too convulted, due to modifications, we can 
+code becomes too convoluted, due to modifications, we can 
 <a href="http://en.wikipedia.org/wiki/Code_refactoring">refactor it</a> and
 improve its modularity. Running the existing automated tests after such a
 change will better make sure that we didn't break something. 
@@ -82,6 +82,6 @@ change will better make sure that we didn't break something.
 
 <p>
 This "write more tests", "get tests to pass", "refactor" is the cycle of
-development and maintenance and Perl tools such as <tt>Module-Build</tt>
+development and maintenance, and Perl tools such as <tt>Module-Build</tt>
 facilitate it.
 </p>

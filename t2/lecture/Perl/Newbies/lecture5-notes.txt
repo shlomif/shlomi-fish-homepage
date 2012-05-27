@@ -159,5 +159,25 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/accessors/cpan-modules.h
 
 3. מערכת האובייקטים Moose ־ מקיף מאוד ומספק דברים רבים מלבד אקססורים.
 
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/new-features/ :
+
+תכונות שימושיות בגרסאות מאוחרות יותר של פרל.
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/new-features/use-base.html :
+
+זוהי דרך להגדיר את המחלקות מהן יורשים (במקום ‪@ISA‬). ב-Moose עושים שימוש
+ב-extends ֹויש גם את "use parent".
+
+http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/new-features/lexical-filehandles.html :
+
+ידיות קובץ לקסיקליות.
+
+רצוי להשתמש במשתנים לקסיקליים (שמצהירים עליהם באמצעות my) בתור ידיות של קבצים
+או מדריכים (directories), משום שהטווח (scope) אחריו הם נסגרים הוא קטן יותר.
+
+המחלקות של IO::Handle - מספקות אבסטרקציות לקסיקליות ומונחות עצמים לידיות של
+קלט/פלט.
+
+
 
 

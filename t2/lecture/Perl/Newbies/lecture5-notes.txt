@@ -48,9 +48,9 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/demo/test-more.h
 המודול Test::More, הכלול בפרל, מאפשר לכתוב ולהריץ בדיקות אוטומטיות 
 באמצעות שגרות שהשימוש בהן הוא נוח. הנה דוגמה לתסריט בדיקות.
 
-השגרה is() משווה את התוצאה שהתקבלה לתוצאה שאנו מצפים לה (באמצעות eq). יש גם
-את ok() שרק בודקת את אמיתות הערך, is_deeply() שמבצעת השוואה עמוקה של מבני
-נתונים מקוננים, ושגרות אחרות.
+השגרה ‪is()‬ משווה את התוצאה שהתקבלה לתוצאה שאנו מצפים לה (באמצעות eq). יש גם
+את ‪ok()‬ שרק בודקת את אמיתות הערך, ‪is_deeply() שמבצעת השוואה עמוקה ‬ 
+של מבני נתונים מקוננים, ושגרות אחרות.
 
 ייתכן שגם שמתם לב להערות הסולמית-TEST. אלה הינן הערות צד של ‎Test::Count שמאפשרות
 לנו לעקוב אחרי מספר הצהרות הבדיקה שהגדרנו ולעדכן אותו בראש הקובץ.
@@ -72,7 +72,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/types.html :
 
 ניתן לעשות בה שימוש:
 
-ראה את הדרכים השונות כדי להריץ תוכניות שורות פקודה ואת יכולות הסוקטים והרישות שלה.
+ראו את הדרכים השונות כדי להריץ תוכניות שורות פקודה ואת יכולות הסוקטים והרישות שלה.
 
 לבדיקת ממשק משתמש גרפי, ראו את Win32-GuiTest ו-X11-GUITest
 
@@ -112,7 +112,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/motivati
 פתוחות-קוד וחינמיות שאיכותן טובה וקרוב לודאי שתמצאו אחת שתאהבו.
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/version-control/mercurial-demo.html :
-st
+
 הדגמה.
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/accessors/ :
@@ -152,8 +152,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/accessors/cpan-modules.h
 שניתן להתגבר על כך על-ידי שימוש במשחקי מרחבי-שמות, ישנם מודולים רבים
 שעושים את זה בשבילך ובקלות:
 
-1. המודול Class-Accessor - אחד הראשונים ועדיין פופולרי. כתוב בפרל טהור
-ואין לו תלויות.
+1. המודול Class-Accessor - אחד הראשונים ועדיין פופולרי. כתוב בפרל טהורה ואין לו תלויות חיצוניות.
 
 2. המודול Class-XSAccessor - כתוב חלקית בסי וב-XS והוא מהיר מאוד. השיטות
 שהוא מייצר יותר מהירות מכתיבת אקססורים ביד כפי שהראנו.
@@ -192,7 +191,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/local-keyword/use-and-ab
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/ :
 
-שימו ב-POD עבור תיעוד
+שימוש ב-POD עבור תיעוד
 
 פוד (POD) הוא קיצור ל-"Plain Old Documentation" והינו שפה קלילה לכתיבת תיעוד
 עבור תוכניות פרל, מודולי פרל, ופרל עצמה.
@@ -201,8 +200,8 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/demo.h
 
 הדגמה של פוד.
 
-כיצד לכתוב: חלקי טקסט של פוד מתחילים בהוראת פוד יחידה, בשורה חדשה וממשיכות 
-עד להוראה ‪"=cut"‬ שהיא גם בשורה משלה. מספר הוראות פוד:
+כיצד לכתוב: חלקי טקסט של פוד מתחילים בהוראת פוד יחידה, בשורה חדשה
+ וממשיכים עד להוראה ‪"=cut"‬ שהיא גם בשורה משלה. מספר הוראות פוד:
 
 כותרות. ככל שמספר ההוראה קטן יותר כך היא ראשית יותר
 
@@ -213,11 +212,15 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/pod-documentation/demo.h
 
 קודים של עיצוב:
 
-I<text> - לטקסט בגופן נטוי
-B<text> - לטקסט מעובה.
-C<text> - לטקסט בגופן בגודל קבוע.
-L<text> - לקישורים.
-E<lt>, E<gt>, etc. are escapes.
+‪I<text>‬ - לטקסט בגופן נטוי
+
+‪B<text>‬ - לטקסט מעובה.
+
+‪C<text>‬ - לטקסט בגופן בגודל קבוע.
+
+‪L<text>‬ - לקישורים.
+
+‪E<lt>, E<gt>, etc. are escapes.‬
 
 רשימות בפוד - ‪=over 4‬ ואחריהם ‪=item‬ וחזרה: כוכביות/בולטים, מספרים, ורשימות
 של הגדרה.
@@ -248,8 +251,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter/invocation.html :
 
-כיצד להריץ את Module-Starter. ניתן לכתוב ‪--help‬ כדי לקבל עזרה. להלן הרצה
- לדוגמה.
+כיצד להריץ את Module-Starter. ניתן לכתוב ‪--help‬‪‬ כדי לקבל עזרה. להלן הרצה לדוגמה.
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter/commands.html :
 
@@ -266,10 +268,10 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter
 הללו. זה מאפשר לנו להריץ בדיקות (אוטומטיות או ידניות) כנגד הקוד שנבנה
 על-ידי שימוש במודול blib.
 
-אחרי שהרצנו ‪./Build‬, הרצנו ‪./Build test‬ שמריץ את הבדיקות האוטומטיות
+אחרי שהרצנו ‪./Build‬, נריץ ‪./Build test‬ שמריץ את הבדיקות האוטומטיות
 ש-Module-Starter חולל עבורנו. כפי שניתן לראות השורה אומרת שכל הבדיקות
 עברו בהצלחה. במקרה שהן לא, אנו צריכים לתקן, או את הקוד, או את הבדיקות (בהתאם
-למה מהם ששגוי).
+למה מהם שאינו נכון).
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter/coding.html :
 
@@ -291,7 +293,7 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter
 כדי לשפר את המודולריות שלו. הרצת הבדיקות האוטומטיות הקיימות לאחר שינוי כזה,
 יעוזר לוודא של שברנו משהו.
 
-ה"כתוב בדיקות חדשות", "גרום להן לעבור", "שפץ קוד", הם המחזור של הפיתוח והתחזוקה,
+ה"כתבו בדיקות חדשות", "גרמו להן לעבור", "שפצו את הקוד", הם המחזור של הפיתוח והתחזוקה,
 וכלים של פרל כמו Module-Build מקלים על המלאכה.
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter/boilerplate.html :
@@ -306,16 +308,16 @@ http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/module-build-and-starter
 שלהן בד"כ. כדי להסיר סטאטוס זה פתח את ‪t/boilerplate.t‬ בעורך הטקסט שלך
 והסר או בטל את השורה הבאה בהערה.
 
-לאחר שבצענו את זה, אנו מקבלים כשלונות של הבדיקות כאשר אנו מריצים
+לאחר שביצענו את זה, אנו מקבלים כשלונות של הבדיקות כאשר אנו מריצים
 את ‪./Build test‬
 
 http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/conclusion/ :
 
 המטרה של ההרצאה הזאת הייתה לדאוג שקוד הפרל שלכם (והקוד בשפות אחרות) יהיה עם 
-פחות שגיאות, קל יותר להבנה, וקל יותר לשינוי. לא הצגתי כיסוי מקיף של
+קוד עם פחות שגיאות, קל יותר להבנה, וקל יותר לשינוי. לא הצגתי כיסוי מקיף של
 איכות חיצונית של הקוד (שהיא מה שהמשתמש מרגיש או שם לב אליה), או של האיכות
 הפנימית (שהיא מה שמשפיע על המפתחים, בנוסף לאיכות החיצונית). לכיסוי מקיף
-יותר אתם מופנים ל:
+יותר אתם מוזמנים לגשת ל:
 
 1. המסה שלי ”מה הופך תוכנה לאיכותית?“.
 

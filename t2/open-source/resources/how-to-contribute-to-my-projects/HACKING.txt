@@ -60,6 +60,21 @@ generated. Note that due to historical reasons, the exact format of the Changes
 varies between different projects of mine and you should try to emulate the
 style and format of the one of the CPAN distribution in question.
 
+Test programs should not connect to Internet resources
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As a general rule, test programs should not connect to Internet resources
+(such as global web-sites) using LWP or WWW::Mechanize or whatever, and
+should rely only on local resources. The reasons for that are that relying
+on such Internet resources:
+
+* May fail if the machine does not have a fully open Internet connection.
+
+* Will add load to the hosts in question.
+
+* Such Internet resources can fluctuate in their content and behaviour,
+which may break the tests.
+
 Other elements to avoid
 ~~~~~~~~~~~~~~~~~~~~~~~
 

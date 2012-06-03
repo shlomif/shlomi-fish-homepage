@@ -443,7 +443,7 @@ $(T2_DEST)/philosophy/perl-newcomers/v1/index.html: $(DOCBOOK5_RENDERED_DIR)/usa
 
 $(T2_DEST)/philosophy/case-for-file-swapping/revision-3/index.html: $(DOCBOOK4_RENDERED_DIR)/case-for-file-swapping-rev3.html
 
-$(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-rev2.xhtml
+$(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-v3.xhtml
 
 $(T2_DEST)/philosophy/computers/open-source/foss-licences-wars/index.html : $(DOCBOOK4_RENDERED_DIR)/foss-licences-wars.html
 

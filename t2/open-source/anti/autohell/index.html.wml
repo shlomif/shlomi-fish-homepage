@@ -118,7 +118,7 @@ a static library in CMake</h3>
 
 <p>
 As a matter of fact, it is possible. Some code to do exactly that is present 
-<a href="http://code.google.com/p/fc-solve/source/browse/fc-solve/trunk/fc-solve/source/CMakeLists.txt">in 
+<a href="http://github.com/shlomif/fc-solve/blob/master/fc-solve/source/CMakeLists.txt">in 
 the Freecell Solver CMakeLists.txt file</a>, based on an insight by
 Risko Gergely, who is its current Debian package maintainer. One disadvantage
 to that is that the objects of the libraries need to be compiled twice, but

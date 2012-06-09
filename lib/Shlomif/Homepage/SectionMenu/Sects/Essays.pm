@@ -412,6 +412,11 @@ my $essays_tree_contents =
                     url => "philosophy/by-others/mashhoor--10-reasons--hebrew.html",
                     title => "10 Reasons for Companies to Consider Web Standards - Hebrew Translation",
                 },
+                {
+                    text => "Transcript of the Perlcast Interview with Tom Limoncelli",
+                    url => "philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/",
+                    title => "Transcript of the Perlcast Interview with Tom Limoncelli",
+                },
             ],
         },
     ],

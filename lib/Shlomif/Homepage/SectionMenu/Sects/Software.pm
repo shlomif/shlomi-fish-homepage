@@ -35,9 +35,17 @@ my $software_tree_contents =
                     title => "A Content Management System for Static HTML",
                 },
                 {
-                    text => "MikMod for Java",
-                    url => "jmikmod/",
-                    title => "MOD Music Files Player for Java",
+                    text => "MikMod",
+                    url => "open-source/projects/mikmod/",
+                    title => "A library and player for playing music module files",
+                    subs =>
+                    [
+                        {
+                            text => "MikMod for Java",
+                            url => "jmikmod/",
+                            title => "MOD Music Files Player for Java",
+                        },
+                    ],
                 },
                 {
                     text => "Gradient-Fu Patch",

@@ -1,15 +1,17 @@
 Follow the following steps to build the homesite:
 
-1. Install Subversion.
+1. Install Subversion - http://subversion.apache.org/ .
+
+2. Install Mercurial - http://mercurial.selenic.com/ .
 
 2. Install perl 5.8.x (or later) in case it's not already installed. You
 should have a package for for your system.
 
 3. Install Website Meta Language (version 2.0.12 or later):
 
-http://developer.berlios.de/projects/thewml/
+https://bitbucket.org/shlomif/website-meta-language/downloads
 
-4. Run and configure CPAN (see - http://sial.org/howto/perl/life-with-cpan/ )
+4. Run and configure CPAN (see - http://perl-begin.org/topics/cpan/ )
 and type:
 
     $ export PERL_MM_USE_DEFAULT=1
@@ -22,7 +24,7 @@ Or if you have CPANPLUS installed:
 
 5. Install Latemp:
 
-    $ svn co http://svn.berlios.de/svnroot/repos/web-cpan/latemp/trunk/
+    $ hg clone https://bitbucket.org/shlomif/latemp
     $ cd trunk/installer
     $ mkdir -p "$HOME/apps/latemp"
     $ scons PREFIX="$HOME/apps/latemp/" install
@@ -35,7 +37,7 @@ Or if you have CPANPLUS installed:
 
 7. Install the latest version of Quad-Pres from:
 
-    $ svn co http://svn.berlios.de/svnroot/repos/quad-pres/quad-pres/trunk/installer
+    $ hg clone https://bitbucket.org/shlomif/quad-pres
     $ cd installer
 
 See its INSTALL file. Put a working quadp executable in your shell's PATH.
@@ -66,9 +68,7 @@ the path.
 
 14. Do the following to build the site, after all dependencies were installed:
 
-    $ svn co https://seed1.projectlocker.com/shlomif/svn/homepage/trunk
-        - Username: svn@shlomifish.org 
-        - Password: 123456
+    $ hg clone https://bitbucket.org/shlomif/shlomi-fish-homepage trunk
     $ cd trunk
     $ ./gen-helpers.pl
         ( Ignore the make warning. )

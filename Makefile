@@ -82,6 +82,11 @@ upload_remote_only_without_deps:
 upload_adbrite_only: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/adbrite-ie8-breakage/ )
 
+upload_var: upload_deps upload_var_without_deps
+
+upload_var_without_deps:
+	( cd $(T2_DEST) && $(RSYNC) -a --inplace . /var/www/html/shlomif/homepage-local/ )
+
 upload_beta: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor/ )
 clean:

@@ -12,25 +12,36 @@
 A program and a library written in ANSI C that automatically solves games of
 Freecell and similar Solitaire variants.
 </p>
+<h2 id="website-meta-lang"><a href="website-meta-language/">Website META Language</a></h2>
 
-<h2 id="latemp"><a href="<rellink url="open-source/projects/latemp/" />">Latemp - a Content 
-Management System for Static HTML Page</a></h2>
+<p>
+An offline preprocessor for HTML and XHTML sites, originated by Ralf S.
+Engelschall and later maintained by Denis Barbier. I am the current maintainer.
+</p>
+
+<div class="indent">
+
+<h3 id="latemp"><a href="<rellink url="open-source/projects/latemp/" />">Latemp - a Content 
+Management System for Static HTML Page</a></h3>
 
 <p>
 Latemp is a content management system for generatic sophisticated static HTML
-sites. It is based on the excellent <a href="http://thewml.org/">Website Meta
+sites. It is based on the excellent <a href="website-meta-language/">Website 
+Meta
 Language</a> by Ralf S. Engelschall and Denis Barbier. This site 
 <a href="http://web-cpan.shlomifish.org/latemp/examples/">and others</a> are
 generated using Latemp.
 </p>
 
-<h2 id="quad-pres"><a href="<rellink url="open-source/projects/quad-pres/" />">Quad-Pres</a></h2>
+<h3 id="quad-pres"><a href="<rellink url="open-source/projects/quad-pres/" />">Quad-Pres</a></h3>
 
 <p>
 Short for Quick-and-Dirty Presentations, this is a tool written in Perl for
 preparing HTML presentations. Based on 
-<a href="http://thewml.org/">WebMetaLanguage</a>.
+<a href="website-meta-language">Website META Language</a>.
 </p>
+
+</div>
 
 <h2 id="ip-noise"><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
 
@@ -39,12 +50,24 @@ A simulator for IP-Noise for Linux systems based on the Linux Kernel version
 2.4.x or above.
 </p>
 
-<h2 id="jmikmod"><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h2>
+<h2 id="mikmod"><a href="mikmod/">MikMod - a module files’ player</a></h2>
 
 <p>
-A port of the well-known MOD player <a href="http://www.mikmod.org/">MikMod</a>
+An open-source player for music module files, written in portable C. Adopted
+from a series of maintainers.
+</p>
+
+<div class="indent">
+
+<h3 id="jmikmod"><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h3>
+
+<p>
+A port of the well-known MOD player
+<a href="http://mikmod.raphnet.net/">MikMod</a>
 (that was originally written in ANSI C) to Java.
 </p>
+
+</div>
 
 <h2 id="gradient-fu"><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h2>
 

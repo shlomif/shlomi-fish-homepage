@@ -48,6 +48,11 @@ my $software_tree_contents =
                     ],
                 },
                 {
+                    text => "Website META Language",
+                    url => "open-source/projects/website-meta-language/",
+                    title => "A Preprocessor for HTML",
+                },
+                {
                     text => "Gradient-Fu Patch",
                     url => "grad-fu/",
                     title => "Gradient-Fu Patch for GIMP",

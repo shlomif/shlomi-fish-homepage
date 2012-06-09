@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use autodie;
 
 use XML::LibXML;
 use XML::LibXML::XPathContext;

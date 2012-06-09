@@ -18,7 +18,8 @@ XML::Grammar::Fortune
     ->run({input => $abs_xml_fn, output => $abs_out_fn})
     ;
 
-open my $text_fh, "<", $abs_out_fn;
+open my $text_fh, "<", $abs_out_fn
+    or die "Cannot open '$abs_out_fn' for reading - $!";
 binmode ($text_fh, ":utf8");
 my $contents;
 {
@@ -32,7 +33,9 @@ $contents =~ s{</body>(.*?)\z}{}ms;
 
 $contents =~ s{<h3( id="[^>]+>[^<]+)</h3>}{<fortune_h3$1</fortune_h3>}g;
 
-open my $xhtml_raw_out, ">", "${abs_out_fn}-for-input";
+my $fn = "${abs_out_fn}-for-input";
+open my $xhtml_raw_out, ">", $fn
+    or die "Cannot open '$fn' for writing - $!";
 binmode ($xhtml_raw_out, ":utf8");
 print {$xhtml_raw_out} $contents;
 close($xhtml_raw_out);

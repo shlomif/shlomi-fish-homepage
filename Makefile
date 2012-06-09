@@ -520,6 +520,7 @@ install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
 # working.
 
 $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
+	mkdir -p $@
 	rsync -r -v $< $@
 	find $@ -name '.svn' -print0 | xargs -0 rm -fr
 

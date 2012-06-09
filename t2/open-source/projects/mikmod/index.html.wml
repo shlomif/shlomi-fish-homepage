@@ -1,0 +1,18 @@
+#include '../template.wml'
+<latemp_subject "MikMod - playback library and player for module files." />
+
+<p>
+I adopted the 
+<a href="http://mikmod.raphnet.net/"><b>libmikmod and mikmod</b>
+project</a> from
+its previous maintainer, Raphaël Assénat, who passed the baton to me.
+MikMod is a player for
+<a href="http://en.wikipedia.org/wiki/Module_file">module files</a>, which
+are a group of several related formats of music files.
+</p>
+
+<p>
+Previously, I had written <a href="$(ROOT)/jmikmod/">MikMod for Java</a>,
+which is a port of an old version of MikMod to the Java programming language
+and the JVM.
+</p>

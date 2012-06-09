@@ -266,9 +266,17 @@ my $tree_contents =
                             url => "open-source/projects/freecell-solver/",
                         },
                         {
-                            text => "MikMod for Java",
-                            title => "A Player for MOD Files (a type of Music Files) for the Java Environment",
-                            url => "jmikmod/",
+                            text => "MikMod",
+                            url => "open-source/projects/mikmod/",
+                            title => "A library and player for playing music module files",
+                            subs =>
+                            [
+                                {
+                                    text => "For Java",
+                                    title => "A Player for MOD Files (a type of Music Files) for the Java Environment",
+                                    url => "jmikmod/",
+                                },
+                            ],
                         },
                         {
                             text => "FCFS RWLock",

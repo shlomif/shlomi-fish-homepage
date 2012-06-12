@@ -1,17 +1,17 @@
 Follow the following steps to build the homesite:
 
-1. Install Subversion - http://subversion.apache.org/ .
+#. Install Subversion - http://subversion.apache.org/ .
 
-2. Install Mercurial - http://mercurial.selenic.com/ .
+#. Install Mercurial - http://mercurial.selenic.com/ .
 
-2. Install perl 5.8.x (or later) in case it's not already installed. You
+#. Install perl 5.8.x (or later) in case it's not already installed. You
 should have a package for for your system.
 
-3. Install Website Meta Language (version 2.0.12 or later):
+#. Install Website Meta Language (version 2.0.12 or later):
 
 https://bitbucket.org/shlomif/website-meta-language/downloads
 
-4. Run and configure CPAN (see - http://perl-begin.org/topics/cpan/ )
+#. Run and configure CPAN (see - http://perl-begin.org/topics/cpan/ )
 and type:
 
     $ export PERL_MM_USE_DEFAULT=1
@@ -22,7 +22,7 @@ Or if you have CPANPLUS installed:
     $ export PERL_MM_USE_DEFAULT=1
     $ perl -MCPANPLUS -e 'install Task::Sites::ShlomiFish'
 
-5. Install Latemp:
+#. Install Latemp:
 
     $ hg clone https://bitbucket.org/shlomif/latemp
     $ cd trunk/installer
@@ -31,42 +31,42 @@ Or if you have CPANPLUS installed:
     $ cd ../support-headers
     $ perl install.pl
 
-6. Add Latemp to the beginning of your path:
+#. Add Latemp to the beginning of your path:
 
     $ PATH="$HOME/apps/latemp/bin:$PATH"
 
-7. Install the latest version of Quad-Pres from:
+#. Install the latest version of Quad-Pres from:
 
     $ hg clone https://bitbucket.org/shlomif/quad-pres
     $ cd installer
 
 See its INSTALL file. Put a working quadp executable in your shell's PATH.
 
-8. 
+#. 
     $ svn co https://seed1.projectlocker.com/shlomif/svn/wml-affiliations/trunk/
         - Username: svn@shlomifish.org 
         - Password: 123456
     $ cd trunk/wml
     $ bash Install.bash
 
-9.
+#.
     $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
     $ cd trunk/xhtml/1.x/
     $ bash Install.bash
 
-10. Install inkscape ( http://inkscape.org/ ) and put its executable in 
+#. Install inkscape ( http://inkscape.org/ ) and put its executable in 
 the path.
 
-11. Install jing and put it in the path:
+#. Install jing and put it in the path:
     - http://www.thaiopensource.com/relaxng/jing.html
 
-12. Install Apache FOP and put it in the path:
+#. Install Apache FOP and put it in the path:
     - http://xmlgraphics.apache.org/fop/
 
-13. Install pngcrush and put it in the path:
+#. Install pngcrush and put it in the path:
     - http://pmt.sourceforge.net/pngcrush/
 
-14. Do the following to build the site, after all dependencies were installed:
+#. Do the following to build the site, after all dependencies were installed:
 
     $ hg clone https://bitbucket.org/shlomif/shlomi-fish-homepage trunk
     $ cd trunk

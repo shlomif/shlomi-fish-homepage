@@ -10,7 +10,7 @@ sub serve
 {
     my (%args) = (@_);
     my $dir_to_serve = $args{'dir_to_serve'};
-    
+
     my $cgi = CGI->new();
     my $mimetypes = MIME::Types->new();
     my $path = $cgi->path_info();
@@ -36,11 +36,11 @@ sub serve
             closedir(D);
             print $cgi->header();
             my $title = "Listing for " . CGI::escapeHTML($path);
-            my $files_string = join("", 
-                map { 
-                    my $fn = CGI::escapeHTML($_) . 
+            my $files_string = join("",
+                map {
+                    my $fn = CGI::escapeHTML($_) .
                         ((-d $dir_to_serve.$path."/".$_)?"/":"");
-                    qq{<li><a href=\"$fn\">$fn</a></li>\n} 
+                    qq{<li><a href=\"$fn\">$fn</a></li>\n}
                 } @files);
             $files_string = @files ? "<ol>\n$files_string\n</ol>" : "";
             print <<"EOF";

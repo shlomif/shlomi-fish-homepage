@@ -33,7 +33,7 @@ sub stringify
 {
     my $list = shift;
 
-    return 
+    return
     [
         map { (ref($_) eq "") ? XML::LibXML::Text->new($_) : $_ } @$list
     ];
@@ -79,7 +79,7 @@ sub is_empty_or_comment
     {
         return 1;
     }
-    
+
     if ($node->nodeType() == XML_TEXT_NODE)
     {
         if ($node->data() !~ /\S/)
@@ -124,7 +124,7 @@ remove($toc);
         {
             $start = $start->nextSibling();
         }
-        
+
         my $to_del = $start;
         my $next_to_del;
         while ($to_del)
@@ -167,7 +167,7 @@ foreach my $a_el ($xc->findnodes("//xhtml:p/xhtml:a[\@id]"))
     my $p = $a_el->parentNode();
 
     my $h_tag = $p->nextSibling();
-    
+
     while(   $h_tag->nodeType() != XML_ELEMENT_NODE
           || $h_tag->nodeName() !~ m{\Ah}
       )

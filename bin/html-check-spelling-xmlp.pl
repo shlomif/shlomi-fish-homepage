@@ -35,9 +35,9 @@ foreach my $filename (@ARGV)
 
                     my $mark_word = sub {
                         my ($word) = @_;
-                        
+
                         my $verdict = !($speller->check($word));
-                        
+
                         $mispelling_found ||= $verdict;
 
                         return $verdict ? "«$word»" : $word;
@@ -53,9 +53,9 @@ foreach my $filename (@ARGV)
                     {
                         printf {*STDOUT}
                         (
-                            "%s:%d:%s\n", 
-                                $filename, 
-                                $idx+$expat->current_line(), 
+                            "%s:%d:%s\n",
+                                $filename,
+                                $idx+$expat->current_line(),
                                 $l
                         );
                     }

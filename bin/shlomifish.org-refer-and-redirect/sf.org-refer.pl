@@ -34,7 +34,7 @@ print <<"EOF";
 
 <p>
 This domain is kept empty in order to not fragment the links and page rank of
-Shlomi Fish' site. Please don't use it. See 
+Shlomi Fish' site. Please don't use it. See
 <a href="$link_esc">$link_esc</a> for the page on the
 site.
 </p>

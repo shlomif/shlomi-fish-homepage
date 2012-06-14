@@ -11,7 +11,7 @@ use Cwd qw(getcwd);
     my $orig_dir = getcwd();
 
     chdir("t2/humour/fortunes");
-    system("make", "dist"); 
+    system("make", "dist");
     system("make", "list_files");
 
     chdir($orig_dir);

@@ -10,7 +10,7 @@ my $ff = File::Find::Object->new({}, "t2");
 my @deps;
 while (defined(my $result = $ff->next_obj()))
 {
-    if (   $result->is_dir() 
+    if (   $result->is_dir()
         && @{$result->dir_components()}
         && $result->dir_components()->[-1] eq ".svn"
        )
@@ -42,8 +42,8 @@ foreach my $dep (@deps)
     my $depends_on = $dep->{'dep'};
     $file =~ s{\At2/}{};
     $file =~ s{\.wml\z}{};
-    
-    print {$deps_mak} qq{\$(T2_DEST)/$file :  lib/$depends_on\n\n}, 
+
+    print {$deps_mak} qq{\$(T2_DEST)/$file :  lib/$depends_on\n\n},
 }
 close($deps_mak);
 

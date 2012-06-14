@@ -8,12 +8,12 @@ $position = 0;
 while ($position < length($string))
 {
     $char = lc(substr($string, $position, 1));
-    
+
     if ($char ne "a")
     {
         last;
     }
-    
+
     # Increment the position
     $position++;
 }
@@ -26,6 +26,6 @@ if ($position == length($string))
 }
 else
 {
-    print "At least one of the characters in the string " . 
+    print "At least one of the characters in the string " .
         "you entered is not \"A\".\n";
 }

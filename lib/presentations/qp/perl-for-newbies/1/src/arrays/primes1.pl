@@ -6,7 +6,7 @@ $num_primes = 0;
 $primes[$num_primes] = 2;
 $num_primes++;
 
-MAIN_LOOP: 
+MAIN_LOOP:
 for $number_to_check (3 .. 200)
 {
     for $p (0 .. ($num_primes-1))

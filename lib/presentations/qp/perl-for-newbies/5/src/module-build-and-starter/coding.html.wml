@@ -18,19 +18,19 @@ to see the tests fail:
 </p>
 
 <quadpres_code_block>
-$ perl Build.PL 
+$ perl Build.PL
 Creating new 'MYMETA.yml' with configuration results
 Creating new 'Build' script for 'MyMath-Ops' version '0.01'
 $ ./Build test
 t/00-load.t ....... 1/5 # Testing MyMath::Ops 0.01, Perl 5.012003, /usr/bin/perl5.12.3
-t/00-load.t ....... ok   
+t/00-load.t ....... ok
 t/add.t ........... Can't locate object method "new" via package "MyMath::Ops::Add" at t/add.t line 11.
 \# Looks like your test exited with 255 before it could output anything.
 t/add.t ........... Dubious, test returned 255 (wstat 65280, 0xff00)
-Failed 2/2 subtests 
-t/boilerplate.t ... ok   
-t/pod-coverage.t .. ok   
-t/pod.t ........... ok   
+Failed 2/2 subtests
+t/boilerplate.t ... ok
+t/pod-coverage.t .. ok
+t/pod.t ........... ok
 
 Test Summary Report
 -------------------
@@ -58,11 +58,11 @@ And now let's run "./Build test" again:
 <quadpres_code_block>
 $ ./Build test
 t/00-load.t ....... 1/5 # Testing MyMath::Ops 0.01, Perl 5.014002, /usr/bin/perl5.14.2
-t/00-load.t ....... ok   
-t/add.t ........... ok   
-t/boilerplate.t ... ok   
-t/pod-coverage.t .. ok   
-t/pod.t ........... ok   
+t/00-load.t ....... ok
+t/add.t ........... ok
+t/boilerplate.t ... ok
+t/pod-coverage.t .. ok
+t/pod.t ........... ok
 All tests successful.
 </quadpres_code_block>
 
@@ -74,10 +74,10 @@ Since all tests are successful, we can commit the changes to the repository.
 
 <p>
 Now we can continue to add more tests, and then fix the failing ones. If the
-code becomes too convoluted, due to modifications, we can 
+code becomes too convoluted, due to modifications, we can
 <a href="http://en.wikipedia.org/wiki/Code_refactoring">refactor it</a> and
 improve its modularity. Running the existing automated tests after such a
-change will better make sure that we didn't break something. 
+change will better make sure that we didn't break something.
 </p>
 
 <p>

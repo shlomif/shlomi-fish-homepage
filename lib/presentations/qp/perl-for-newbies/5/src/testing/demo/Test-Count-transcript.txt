@@ -1,65 +1,65 @@
-shlomi:~/TEMP$ ls   
-shlomi:~/TEMP$ mv ~/Test-Count-0.0500.tar.gz .                                  
-shlomi:~/TEMP$ ls                                                               
-Test-Count-0.0500.tar.gz                                                        
-shlomi:~/TEMP$ ls -l                                                            
-total 16                                                                        
--rw-r--r-- 1 shlomi shlomi 12933 2009-08-02 20:52 Test-Count-0.0500.tar.gz      
-shlomi:~/TEMP$ tar -xvf Test-Count-0.0500.tar.gz                                
-Test-Count-0.0500                                                               
-Test-Count-0.0500/Changes                                                       
-Test-Count-0.0500/MANIFEST                                                      
-Test-Count-0.0500/META.yml                                                      
-Test-Count-0.0500/Build.PL                                                      
-Test-Count-0.0500/Makefile.PL                                                   
-Test-Count-0.0500/README                                                        
-Test-Count-0.0500/t                                                             
-Test-Count-0.0500/t/boilerplate.t                                               
-Test-Count-0.0500/t/03-filter.t                                                 
-Test-Count-0.0500/t/01-parser.t                                                 
-Test-Count-0.0500/t/pod-coverage.t                                              
-Test-Count-0.0500/t/02-main.t                                                   
-Test-Count-0.0500/t/00-load.t                                                   
-Test-Count-0.0500/t/pod.t                                                       
-Test-Count-0.0500/t/sample-data                                                 
-Test-Count-0.0500/t/sample-data/test-scripts                                    
-Test-Count-0.0500/t/sample-data/test-scripts/arithmetics.t                      
-Test-Count-0.0500/t/sample-data/test-scripts/01-parser.t                        
-Test-Count-0.0500/t/sample-data/test-scripts/basic.arc                          
-Test-Count-0.0500/examples                                                      
-Test-Count-0.0500/examples/perl-test-manage-helper.pl                           
-Test-Count-0.0500/examples/perl-test-manage.vim                                 
-Test-Count-0.0500/lib                                                           
-Test-Count-0.0500/lib/Test                                                      
-Test-Count-0.0500/lib/Test/Count.pm                                             
-Test-Count-0.0500/lib/Test/Count                                                
-Test-Count-0.0500/lib/Test/Count/Base.pm                                        
-Test-Count-0.0500/lib/Test/Count/Parser.pm                                      
-Test-Count-0.0500/lib/Test/Count/Filter.pm                                      
-Test-Count-0.0500/lib/Test/Count/Filter                                         
-Test-Count-0.0500/lib/Test/Count/Filter/ByFileType                              
-Test-Count-0.0500/lib/Test/Count/Filter/ByFileType/App.pm                       
-Test-Count-0.0500/inc                                                           
-Test-Count-0.0500/inc/Test                                                      
-Test-Count-0.0500/inc/Test/Run                                                  
-Test-Count-0.0500/inc/Test/Run/Builder.pm                                       
-shlomi:~/TEMP$ cd Test                                                          
-Test-Count-0.0500/        Test-Count-0.0500.tar.gz                              
-shlomi:~/TEMP$ cd Test-Count-0.0500                                             
-shlomi:~/TEMP/Test-Count-0.0500$ ls                                             
-Build.PL  examples  lib          MANIFEST  README                               
-Changes   inc       Makefile.PL  META.yml  t                                    
-shlomi:~/TEMP/Test-Count-0.0500$ perl Build.PL                                  
-Checking whether your kit is complete...                                        
-Looks good                                                                      
+shlomi:~/TEMP$ ls
+shlomi:~/TEMP$ mv ~/Test-Count-0.0500.tar.gz .
+shlomi:~/TEMP$ ls
+Test-Count-0.0500.tar.gz
+shlomi:~/TEMP$ ls -l
+total 16
+-rw-r--r-- 1 shlomi shlomi 12933 2009-08-02 20:52 Test-Count-0.0500.tar.gz
+shlomi:~/TEMP$ tar -xvf Test-Count-0.0500.tar.gz
+Test-Count-0.0500
+Test-Count-0.0500/Changes
+Test-Count-0.0500/MANIFEST
+Test-Count-0.0500/META.yml
+Test-Count-0.0500/Build.PL
+Test-Count-0.0500/Makefile.PL
+Test-Count-0.0500/README
+Test-Count-0.0500/t
+Test-Count-0.0500/t/boilerplate.t
+Test-Count-0.0500/t/03-filter.t
+Test-Count-0.0500/t/01-parser.t
+Test-Count-0.0500/t/pod-coverage.t
+Test-Count-0.0500/t/02-main.t
+Test-Count-0.0500/t/00-load.t
+Test-Count-0.0500/t/pod.t
+Test-Count-0.0500/t/sample-data
+Test-Count-0.0500/t/sample-data/test-scripts
+Test-Count-0.0500/t/sample-data/test-scripts/arithmetics.t
+Test-Count-0.0500/t/sample-data/test-scripts/01-parser.t
+Test-Count-0.0500/t/sample-data/test-scripts/basic.arc
+Test-Count-0.0500/examples
+Test-Count-0.0500/examples/perl-test-manage-helper.pl
+Test-Count-0.0500/examples/perl-test-manage.vim
+Test-Count-0.0500/lib
+Test-Count-0.0500/lib/Test
+Test-Count-0.0500/lib/Test/Count.pm
+Test-Count-0.0500/lib/Test/Count
+Test-Count-0.0500/lib/Test/Count/Base.pm
+Test-Count-0.0500/lib/Test/Count/Parser.pm
+Test-Count-0.0500/lib/Test/Count/Filter.pm
+Test-Count-0.0500/lib/Test/Count/Filter
+Test-Count-0.0500/lib/Test/Count/Filter/ByFileType
+Test-Count-0.0500/lib/Test/Count/Filter/ByFileType/App.pm
+Test-Count-0.0500/inc
+Test-Count-0.0500/inc/Test
+Test-Count-0.0500/inc/Test/Run
+Test-Count-0.0500/inc/Test/Run/Builder.pm
+shlomi:~/TEMP$ cd Test
+Test-Count-0.0500/        Test-Count-0.0500.tar.gz
+shlomi:~/TEMP$ cd Test-Count-0.0500
+shlomi:~/TEMP/Test-Count-0.0500$ ls
+Build.PL  examples  lib          MANIFEST  README
+Changes   inc       Makefile.PL  META.yml  t
+shlomi:~/TEMP/Test-Count-0.0500$ perl Build.PL
+Checking whether your kit is complete...
+Looks good
 
 Checking prerequisites...
-Looks good               
+Looks good
 
 Creating new 'Build' script for 'Test-Count' version '0.0500'
-shlomi:~/TEMP/Test-Count-0.0500$ ./Build                     
-Copying lib/Test/Count/Filter/ByFileType/App.pm -> blib/lib/Test/Count/Filter/ByFileType/App.pm                                                                 
-Copying lib/Test/Count/Base.pm -> blib/lib/Test/Count/Base.pm                   
+shlomi:~/TEMP/Test-Count-0.0500$ ./Build
+Copying lib/Test/Count/Filter/ByFileType/App.pm -> blib/lib/Test/Count/Filter/ByFileType/App.pm
+Copying lib/Test/Count/Base.pm -> blib/lib/Test/Count/Base.pm
 Copying lib/Test/Count/Filter.pm -> blib/lib/Test/Count/Filter.pm
 Copying lib/Test/Count/Parser.pm -> blib/lib/Test/Count/Parser.pm
 Copying lib/Test/Count.pm -> blib/lib/Test/Count.pm

@@ -37,16 +37,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 	<dc:rights><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:rights>
 	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
 		</Work>
-		<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->                
+		<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
             </para>
         </legalnotice>
         <abstract>
             <para>
                 This document will discuss what makes an open source program
                 (and by induction other programs) high-quality. It will cover
-                the parameters that make software applications high-quality 
+                the parameters that make software applications high-quality
                 and ways to achieve them.
-            </para> 
+            </para>
         </abstract>
 
         <revhistory>
@@ -55,7 +55,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <date>02 April 2007</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
-                    Forked the template from a previous work and working on 
+                    Forked the template from a previous work and working on
                     it.
                 </revremark>
             </revision>
@@ -116,7 +116,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
     <para>
         How did I think about it? I am active in the
-        <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss 
+        <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss
             mailing list</ulink>,
         which is dedicated to computerised techniques for solving
         <ulink url="http://www.freecell.org/">the Freecell solitaire card
@@ -149,9 +149,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             usually result in order to get at what's really required to solve a
             given layout. If someone wants a solution that can be understood,
             they want one that is under 100 steps.  This is a major
-            contribution and it should be stated. There are a lot of 
+            contribution and it should be stated. There are a lot of
             <emphasis role="bold">"toy"</emphasis>
-            solvers and only a very few of <emphasis role="bold">"industrial strength."</emphasis> 
+            solvers and only a very few of <emphasis role="bold">"industrial strength."</emphasis>
             One of the
             latter is the solver by Danny Jones. I don't see that on your list.
             The results he has gotten from his solver pretty much put your
@@ -193,8 +193,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
             <para>
                 I would certainly prefer the other alternative. That's because
-                I know I can always refactor that codebase, either by 
-                <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">large 
+                I know I can always refactor that codebase, either by
+                <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">large
                     scale refactoring</ulink> or by continuous refactoring
                 or even "Just-in-Time" refactoring, only to add a new feature.
             </para>
@@ -241,8 +241,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             basic but adequate functionality, and then release it so people
             can play with it, and learn about it. Most successful projects that
             were open-source from the start have started this way: the Linux
-            kernel, gcc, vim, perl, CPython. If you look at the earliest 
-            versions of them all, you'll find they were very limited if not 
+            kernel, gcc, vim, perl, CPython. If you look at the earliest
+            versions of them all, you'll find they were very limited if not
             downright hideous, but now they are often among the best of breed.
         </para>
     </section>
@@ -251,26 +251,26 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Which version of your software are you using? How can you tell?
             It's not unusual to come to a page where the link to the archive
-            does not contain a version number, nor is it clearly indicated 
+            does not contain a version number, nor is it clearly indicated
             anywhere. What happens if this number was bumped to indicate a
             bug fix. How do you indicate it then?
         </para>
         <para>
             A good software always indicates its version number in the
-            archive file name, the opening directory file name, has a 
-            <literal>--version</literal> command-line flag, 
+            archive file name, the opening directory file name, has a
+            <literal>--version</literal> command-line flag,
             and the version mentioned in the about dialogue if there is
             one.
         </para>
     </section>
     <section id="source_is_available">
-        <title>The Source is Available, Preferably under a Usable 
+        <title>The Source is Available, Preferably under a Usable
             Licence</title>
         <para>
-            Public availability of the source is a great advantage for a 
+            Public availability of the source is a great advantage for a
             program to have. Many people will usually not take a look at it
             otherwise, for many reasons, some ideological but some also
-            practical. (Assuming there was ever a true ideology that was 
+            practical. (Assuming there was ever a true ideology that was
             not also practical.) Without the source, and without it being
             under a proper licence, the software will not become part of
             most distributions of Linux, the BSD operating systems, etc.
@@ -286,7 +286,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             or cares to understand.
         </para>
         <para>
-            As a result, many people will find a program with a licence that 
+            As a result, many people will find a program with a licence that
             is not 100%
             <ulink url="http://www.gnu.org/philosophy/free-sw.html">Free
                 and Open Source Software</ulink> - unacceptable. To be truly
@@ -298,16 +298,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     Using a pure-public-domain Licence for your software is
                     problematic because not all countries have a concept of
-                    "public-domain", similar to that of the United States, 
+                    "public-domain", similar to that of the United States,
                     because many people mis-interpret it, and because
                     it is not clear whether software can be licensed under
                     the public-domain to begin with. (And other such issues).
                 </para>
                 <para>
                     While <ulink url="http://freshmeat.net/browse/197/">quite
-                        a lot of important programs has been released under 
+                        a lot of important programs has been released under
                         the public domain</ulink>, and they are doing quite
-                    fine, they may have some problematic legal implications. 
+                    fine, they may have some problematic legal implications.
                 </para>
                 <para>
                     For these reasons, I now prefer the MIT X11 Licence for
@@ -319,7 +319,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Public License (LGPL) are somewhere in between.
         </para>
         <para>
-            While some software on Linux has become popular despite being 
+            While some software on Linux has become popular despite being
             under non-optimal licences, many Linux distributions pride
             themselves that the core system consists of "100% free software".
             Most software that became non-open-source, was eventually forked
@@ -355,7 +355,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
             <listitem>
                 <para>
-                    It has most of the <emphasis role="bold">features people 
+                    It has most of the <emphasis role="bold">features people
                         want</emphasis> and does not lack essential ones. For
                     example, GNU Arch, an old and now mostly unused
                     version control program, did not work on Windows 32-bit,
@@ -376,12 +376,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
             <listitem id="good_usability">
                 <para>
-                    A "just works" software also has <emphasis role="bold">good 
+                    A "just works" software also has <emphasis role="bold">good
                         usability</emphasis>. What it means is that it behaves
                     like people expect it to. The Emacs-based editors, which
                     are an alternative to Vim do not invoke the menus upon
                     pressing "Alt+F", "Alt+E", etc. which is the Windows
-                    convention to them. 
+                    convention to them.
                 </para>
                 <para>
                     Furthermore, when putting a single-line prompt, the prompt
@@ -389,10 +389,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     Vim, both keys dismiss the prompt. The key combination to
                     dismiss it is not written anywhere on the screen and I
                     won't tell you what it is. According to
-                    <ulink url="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User 
+                    <ulink url="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User
                         Interface Design for Programmers</ulink>, <quote>A
                         user-interface is well-designed when the program
-                        behaves exactly how the user thought it would</quote>. 
+                        behaves exactly how the user thought it would</quote>.
                 </para>
                 <para>
                     While some people may be led to believe this is not
@@ -414,7 +414,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Most software of high-quality has a homepage which introduces
             the software, has download information, links, etc. And no - a
-            /project/myprogram/ page on 
+            /project/myprogram/ page on
             <ulink url="http://sourceforge.net/">Source Forge</ulink> or
             whatever is much more sub-optimal than that, and leaves a bad
             impression.
@@ -427,23 +427,23 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             It builds out of the box with minimal hassles. There are several
             common standard building procedures for such software:
         </para>
-        
+
         <orderedlist>
             <listitem>
                 <para>
                     The common standard building procedure using the
-                    <ulink url="http://sourceware.org/autobook/">GNU 
-                        Autotools</ulink> is 
-                    <literal>./configure --prefix=$PREFIX ; 
+                    <ulink url="http://sourceware.org/autobook/">GNU
+                        Autotools</ulink> is
+                    <literal>./configure --prefix=$PREFIX ;
                         make ; make install</literal>.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    There are now 
-                    <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">some 
-                        more modern alternatives to the GNU Autotools</ulink>, 
-                    which may also prove useful. 
+                    There are now
+                    <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">some
+                        more modern alternatives to the GNU Autotools</ulink>,
+                    which may also prove useful.
                 </para>
             </listitem>
             <listitem>
@@ -452,7 +452,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     Perl distributions have a similar <literal>perl
                         Makefile.PL</literal> procedure or more recently
                     also one using <literal>perl
-                        Build.PL</literal> which tends to be less quirky 
+                        Build.PL</literal> which tends to be less quirky
                     (see <ulink url="http://cpan.uwinnipeg.ca/dist/Module-Build">Module-Build</ulink> ).
                 </para>
                 <para>
@@ -481,7 +481,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             However, it's not uncommon to find software that fails to
             build even on GNU/Linux on an x86 computer, which is the most
-            common platform for development. Or the case of 
+            common platform for development. Or the case of
             <ulink url="http://www.shlomifish.org/open-source/anti/qmail/">the
                 qmail email server</ulink>, which has a long and quirky
             build process. It reportedly fails to compile on modern
@@ -495,9 +495,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             If we take <ulink url="http://plagger.org/">Plagger</ulink>,
-            a web-feed mix-and-match framework in Perl (not unlike 
+            a web-feed mix-and-match framework in Perl (not unlike
             <ulink url="http://pipes.yahoo.com/">Yahoo Pipes</ulink>, but
-            predates it), then its <ulink url="http://search.cpan.org/dist/Plagger/">Plagger 
+            predates it), then its <ulink url="http://search.cpan.org/dist/Plagger/">Plagger
                 distribution on CPAN</ulink> contains all of its plug-ins
             inside, and as a result requires "half of CPAN" including such
             obscure modules, as those for handling Chinese and Japanese dates.
@@ -507,7 +507,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             very few dependencies and
             they are normally included in the package, if necessary to build
             the system. They are all written in very portable ANSI C and POSIX
-            and have been successfully deployed on all modern UNIX-flavours, on 
+            and have been successfully deployed on all modern UNIX-flavours, on
             Microsoft Windows and on many other more obscure systems.
         </para>
         <para>
@@ -517,7 +517,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             of dependencies, but it's still a good idea to keep it to a
             minimum.
         </para>
-        
+
     </section>
     <section id="has_packages">
         <title>The Software Has Packages for Most Common Distributions</title>
@@ -550,14 +550,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="documentation">
         <title>The Software Has Good, Extensive and Usable Documentation</title>
         <para>
-            If your GUI program is simple and well-designed, then you normally 
+            If your GUI program is simple and well-designed, then you normally
             don't need good documentation. However, a command line program,
             a library, etc. does need one, or else the user won't know
             what to do.
         </para>
         <para>
-            There are many types of documentation: the 
-            <ulink url="http://freshmeat.net/articles/view/519/">--help 
+            There are many types of documentation: the
+            <ulink url="http://freshmeat.net/articles/view/519/">--help
                 flag</ulink>, the man page, the README/USAGE/INSTALL files,
             full-fledged in-depth guides, documents about the philosophy,
             wikis, etc. If the program is well-designed, then the user should
@@ -566,9 +566,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             programs, or CADs, that require some learning.
         </para>
         <para>
-            If we take Subversion as an example, then it has a 
-            <ulink url="http://svnbook.red-bean.com/">full Book 
-                online</ulink>, several tutorials, an <literal>svn 
+            If we take Subversion as an example, then it has a
+            <ulink url="http://svnbook.red-bean.com/">full Book
+                online</ulink>, several tutorials, an <literal>svn
                 help</literal> command which provides help to all the
             other commands, and a lot of help can be found using a
             Google search. GNU Arch, on the other hand, only had one wordy
@@ -587,7 +587,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Emacs' help on the other hand is confusing, dis-organised, lacking
             in explanation and idiosyncratic. It doesn't get invoked when
-            pressing "F1", is not directed to when the program starts, and 
+            pressing "F1", is not directed to when the program starts, and
             most people cannot make heads nor tails of it. There is a short
             Emacs tutorial, but it isn't as extensive as Vim's. Nor does it
             explain how to configure Emacs to behave in a better way than its
@@ -602,14 +602,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             It is tempting to believe that by writing a program for one
             platform, you can gain most of your market-share. However, people
             are using many platforms on many different CPU architectures:
-            Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux 
+            Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux
             on a multitude of platform; BSD systems (NetBSD, FreeBSD, OpenBSD
-            and others) on many architectures as well; Mac OS X; Sun 
-            Solaris (now also OpenSolaris), and more obscure (but still 
-            popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64 
-            (formerly Digital Unix), etc. And to say nothing of more exotic, 
+            and others) on many architectures as well; Mac OS X; Sun
+            Solaris (now also OpenSolaris), and more obscure (but still
+            popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64
+            (formerly Digital Unix), etc. And to say nothing of more exotic,
             non-UNIX, non-Microsoft operating systems like Novell Netware,
-            Digital Corp.s's VMS or OpenVMS, IBM's VM/CMS or OS/390 (MVS), 
+            Digital Corp.s's VMS or OpenVMS, IBM's VM/CMS or OS/390 (MVS),
             BeOS, AmigaOS, Mac OS 9 or earlier, PalmOS, VxWorks, etc. etc.
         </para>
         <para>
@@ -630,7 +630,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     dead, and no CPU architecture developer in their right
                     mind would want to create a CPU that won't be able to
                     run C and C-based UNIX-based or UNIX-like operating
-                    systems such as Linux. (Unless it's probably a relatively 
+                    systems such as Linux. (Unless it's probably a relatively
                     niche micro-processor for embedded systems).
                 </para>
                 <para>
@@ -644,24 +644,24 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             For example, Subversion has made it a high priority to work
-            properly on Windows. On the other hand many of its early 
+            properly on Windows. On the other hand many of its early
             alternatives, especially GNU Arch, could not work there due to
             their architectures. As a result, many mixed shops, Windows-only
             shops, or companies where some developers wanted to use Windows
-            as their desktop OS, could not use Arch. So Arch has seen a very 
+            as their desktop OS, could not use Arch. So Arch has seen a very
             small penetration.
         </para>
         <para>
             The bootstrapping ANSI C compiler of gcc for example, is written in
-            very portable 
-            <ulink url="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R 
+            very portable
+            <ulink url="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R
                 C</ulink>, so it can be compiled by any C compiler. Later
             on, this compiler can be used to compile most of the rest of the
             GCC compilers.
         </para>
         <para>
             Compare that to many compilers for other languages that are
-            written in the same language. For example, 
+            written in the same language. For example,
             <ulink url="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
                 Compiler</ulink> is written in itself, and requires a modern
             enough version of itself to compile itself. So you need to
@@ -681,14 +681,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             For example, once I was talking with a certain UNIX expert, and
             he argued that the Win32 <ulink url="http://msdn2.microsoft.com/en-us/library/ms682425.aspx">CreateProcess() system call</ulink> was
             superior to the UNIX combination of
-            <ulink url="http://en.wikipedia.org/wiki/Fork-exec">Fork() 
+            <ulink url="http://en.wikipedia.org/wiki/Fork-exec">Fork()
                 and Exec()</ulink>, just because it made some bugs harder
             to code.  However, some multitasking paradigms are not possible,
             without the fork() system call, which is not present in the Win32
             API at all, and needs to be emulated (at a high run-time cost) or
             replaced with thread-based multitasking, which is not identical.
-            Finally, it is still possible to get fork()+exec() right, and 
-            there's a spawn() abstraction on many modern UNIXes. 
+            Finally, it is still possible to get fork()+exec() right, and
+            there's a spawn() abstraction on many modern UNIXes.
         </para>
 
         <para>
@@ -711,7 +711,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             their programs to just continue to work.
         </para>
         <para>
-            A bad example for software that does not maintain backwards 
+            A bad example for software that does not maintain backwards
             compatibility is <ulink url="http://www.php.net/">PHP</ulink>,
             where every primary digit breaks the compatibility with the older
             one: PHP 4 was not compatible with PHP 3 and PHP 5 was not
@@ -734,7 +734,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <section id="good_ways_to_provide_support">
         <title>Good Ways to Provide Support</title>
         <para>
-            A high-quality software has good ways for its users to 
+            A high-quality software has good ways for its users to
             receive support. Some examples for ways to do that are:
         </para>
         <orderedlist>
@@ -745,7 +745,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC (Internet Relay Chats)</ulink> 
+                    <ulink url="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC (Internet Relay Chats)</ulink>
                     Channels.
                 </para>
             </listitem>
@@ -786,7 +786,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             If a program is too slow, or generates sub-optimal results, most
             people will be reluctant to use it and find using it daunting.
             They will either give up waiting for it to finish, or get
-            distracted. If the output results of the program are too 
+            distracted. If the output results of the program are too
             sub-optimal (assuming there's a scale to their optimality), then
             they will probably look for different alternatives.
         </para>
@@ -798,8 +798,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             A good example for how such optimisations can make such a huge
-            difference are the 
-            <ulink url="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and 
+            difference are the
+            <ulink url="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and
                 Firefox 3</ulink>, which greatly improved its
             performance, memory consumption, and reduced the
             number of memory leaks. It should be noted that often,
@@ -839,11 +839,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Different types of applications, and those running
             on different platforms, have different conventions for what
-            is considered aesthetic. In 
-            <ulink url="http://catb.org/~esr/writings/taoup/">The 
+            is considered aesthetic. In
+            <ulink url="http://catb.org/~esr/writings/taoup/">The
                 Art of UNIX Programming</ulink>, Eric Raymond <ulink url="http://catb.org/~esr/writings/taoup/html/ch11s09.html">makes the case for
-                the "Silence is Golden" principle of designing UNIX 
-                command-line interfaces</ulink>. 
+                the "Silence is Golden" principle of designing UNIX
+                command-line interfaces</ulink>.
             Basically, a command line program should output as little as
             possible. Now observe the behaviour of aptitude (a unified
             interface for package management) on Ubuntu Gutsy Gibbon, when
@@ -868,7 +868,7 @@ Building dependency tree
 Reading state information... Done
 Reading extended state information
 Initializing package states... Done
-Building tag database... Done          
+Building tag database... Done
             ]]>
         </programlisting>
 
@@ -878,7 +878,7 @@ Building tag database... Done
             of mine, especially given the fact that they are all given
             in the same monotonous default colour.
         </para>
-        
+
         <para>
             On the other hand, here's what urpmi (a similar package
             management interface for Mandriva) says on Mandriva Cooker:
@@ -912,8 +912,8 @@ No package named this-does-not-exist
             to manage, because their licence is less problematic than the
             GPL, etc. However, they forget that Linux has some
             advantages like being more popular (and so one can get support
-            more easily), or like the fact that its kernel supports much 
-            more hardware, or that it has better vendor acceptance, and 
+            more easily), or like the fact that its kernel supports much
+            more hardware, or that it has better vendor acceptance, and
             because more software is guaranteed to run with less problems
             on Linux than on the BSDs.
             <footnote id="software-only-on-linux" label="linux-bsd-soft">
@@ -930,7 +930,7 @@ No package named this-does-not-exist
             </footnote>
         </para>
         <para>
-            I'm not saying the BSDs are completely inferior to Linux, just 
+            I'm not saying the BSDs are completely inferior to Linux, just
             that Linux still has some cultural and technical advantages.
             Quality in software is not a linear metric, because it is affected
             by many parameters. If you're a software developer, you should
@@ -941,7 +941,7 @@ No package named this-does-not-exist
 <section id="ways-to-achieve-quality">
     <title>Ways to Achieve Quality</title>
     <para>
-        Now that we've covered the elements that make programs high-quality 
+        Now that we've covered the elements that make programs high-quality
         here's a non-exhaustive list of ways to actually achieve it. None of
         them are absolutely necessary for achieving the quality, but they
         certainly help a lot.
@@ -955,7 +955,7 @@ No package named this-does-not-exist
     </para>
     <para>
         The aim of this section is to briefly cover as many measures for
-        achieving good quality as possible. 
+        achieving good quality as possible.
     </para>
     <section id="modular-code">
         <title>Having Modular, Well-Written Code</title>
@@ -983,8 +983,8 @@ No package named this-does-not-exist
             <literal>add(i, j)</literal> that aims to add two integers
             then we should check that <literal>add(2, 3) == 5</literal>,
             that <literal>add(2, 0) == 2</literal>, that
-            <literal>add(0, 2) == 2</literal>, that 
-            <literal>add(5, -2) == 3</literal>, that 
+            <literal>add(0, 2) == 2</literal>, that
+            <literal>add(5, -2) == 3</literal>, that
             <literal>add(10, -24) == -14</literal>, etc.
         </para>
         <para>
@@ -1030,7 +1030,7 @@ No package named this-does-not-exist
     <section id="good-software-management">
         <title>Good Software Management</title>
         <para>
-            There are several sources online and offline explaining good 
+            There are several sources online and offline explaining good
             software management for "shrinkwrap" software (open-source,
             commercial or other distributed) and for other types of software
             development (embedded, in-house, etc.), from which good advice
@@ -1049,7 +1049,7 @@ No package named this-does-not-exist
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.joelonsoftware.com/">The "Joel 
+                    <ulink url="http://www.joelonsoftware.com/">The "Joel
                         on Software" site</ulink>
                 </para>
             </listitem>
@@ -1078,10 +1078,10 @@ No package named this-does-not-exist
             and using the program more fun and less frustrating.
         </para>
         <para>
-            Often, social engineering should be made part of the design of the 
-            software, or the web-sites dedicated to it. For example, it took 
-            me several iterations of having to fill the same project form in 
-            <ulink url="http://savannah.gnu.org/">the 
+            Often, social engineering should be made part of the design of the
+            software, or the web-sites dedicated to it. For example, it took
+            me several iterations of having to fill the same project form in
+            <ulink url="http://savannah.gnu.org/">the
                 GNU Savannah software-hub</ulink>, only for it to be
             rejected, and me having to follow the process again. Despite
             the fact the admins were polite, it still was annoying.
@@ -1128,7 +1128,7 @@ No package named this-does-not-exist
             communication skills: very good English; pleasantness and tact;
             good phrasing, proper
             grammar, syntax, phrasing and capitalisation; clear writing;
-            patience and tolerance; etc. If he doesn't, then the project may 
+            patience and tolerance; etc. If he doesn't, then the project may
             encounter problems as people will find the project's developers
             hard to understand or tolerate, and, thus, hard to work with.
         </para>
@@ -1167,14 +1167,14 @@ No package named this-does-not-exist
             is still heavily actively used and has many fans.
         </para>
         <para>
-            Similar criticism has been voiced against 
+            Similar criticism has been voiced against
             <ulink url="http://subversion.tigris.org/">the
                 Subversion version control system</ulink>,
             Linux, etc. One thing one can notice about such highly-criticised
             projects is that they tend not to be bothered by it too much.
             Rather, what they say is that "If you want to use a competing
             project, I won't stop you. It probably is good. It may be
-            better in some respects. I like my own project and that's 
+            better in some respects. I like my own project and that's
             what I'm used to using and use."
         </para>
         <para>
@@ -1211,7 +1211,7 @@ No package named this-does-not-exist
         <para>
             On the other hand, the competing project "Subversion"
             has a much better name, since it has nothing to do with CVS,
-            or Windows NT, and since it is an English word and 
+            or Windows NT, and since it is an English word and
             sounds cool.
         </para>
         <para>
@@ -1220,7 +1220,7 @@ No package named this-does-not-exist
             helps a lot.
         </para>
         <para>
-            Also consider what <ulink url="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus 
+            Also consider what <ulink url="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus
                 Torvalds said about Linux and 386BSD</ulink> (half jokingly):
         </para>
         <blockquote>
@@ -1273,18 +1273,18 @@ No package named this-does-not-exist
     <section id="freecell-solvers-quality--analysis">
         <title>The Analysis Itself</title>
         <para id="quality-analysis--availability">
-            As is not uncommon in many software niches, some Freecell 
-            solvers are <emphasis role="bold">not commonly 
-                available</emphasis> for downloading or even for 
+            As is not uncommon in many software niches, some Freecell
+            solvers are <emphasis role="bold">not commonly
+                available</emphasis> for downloading or even for
             buying. For
-            example, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill 
+            example, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill
                 Raymond's solver</ulink> (named "Cat in the Sack") which he
-            has been talking about extensively, has not been released yet, 
-            under any licensing terms. Similarly, Danny A. Jones has kept his 
-            solver (mentioned in <link linkend="introduction">the 
-                introduction</link>) for himself, and has not released it 
+            has been talking about extensively, has not been released yet,
+            under any licensing terms. Similarly, Danny A. Jones has kept his
+            solver (mentioned in <link linkend="introduction">the
+                introduction</link>) for himself, and has not released it
             to the wild in either source
-            or binary forms. 
+            or binary forms.
         </para>
         <para>
             As such, the utility of such solvers is heavily reduced. For once,
@@ -1295,14 +1295,14 @@ No package named this-does-not-exist
             to inspect the source code.
         </para>
         <para>
-            <ulink url="http://fc-solve.shlomifish.org/links.html#other_solvers">Most 
+            <ulink url="http://fc-solve.shlomifish.org/links.html#other_solvers">Most
                 other solvers</ulink>
-            are <emphasis role="bold">available for free 
+            are <emphasis role="bold">available for free
                 download</emphasis>, and many are accompanied
             with the source, most probably under an open-source licence.
         </para>
         <para id="quality-analysis--prog-lang">
-            <ulink url="http://www.numin8r.us/programs/">Gary 
+            <ulink url="http://www.numin8r.us/programs/">Gary
                 Campbell's Solver</ulink> is written in 8086 Assembly, with
             some 32-bit extensions, and only runs on DOS and DOS-compatible
             platforms. The assembly is compiled using a self-hosting
@@ -1328,7 +1328,7 @@ No package named this-does-not-exist
             So they would be preferable.
         </para>
         <para>
-            Similarly, when writing <emphasis role="bold">portable 
+            Similarly, when writing <emphasis role="bold">portable
                 programs</emphasis> for
             <ulink url="http://en.wikipedia.org/wiki/Unix">the various
                 Unix flavours</ulink> and other POSIX-capable or
@@ -1336,8 +1336,8 @@ No package named this-does-not-exist
             in x86 Assembly exclusively will make it a non-starter.
             <footnote id="portions-in-assembly" label="Portions of Assembly">
                 <para>
-                    In some cases, the developers of portable software 
-                    maintain versions of parts of the code in Assembly of 
+                    In some cases, the developers of portable software
+                    maintain versions of parts of the code in Assembly of
                     selected architectures, while keeping more portable
                     versions written in C or C++. This is done to optimise
                     some parts for common CPU architectures.
@@ -1345,8 +1345,8 @@ No package named this-does-not-exist
         </footnote>
         </para>
         <para id="quality-analysis--build-system">
-            Some Freecell solvers also 
-            <link linkend="easy_to_compile_and_install">don't build 
+            Some Freecell solvers also
+            <link linkend="easy_to_compile_and_install">don't build
                 out of the box</link>. For example, typing
             <literal>make</literal> inside the patsolve distribution yields
             the following output:
@@ -1362,22 +1362,22 @@ touch .depend
 param.py param.dat
 make: param.py: Command not found
 make: *** [param.h] Error 127
-            ]]>            
+            ]]>
         </programlisting>
 
         <para>
             This is relatively easy to fix, but still frustrating. Freecell
             Solver on the other hand, has been fully converted to the
-            GNU Autotools, and can be built as a static and shared library 
+            GNU Autotools, and can be built as a static and shared library
             (a.k.a DLL), as well as several proof-of-concept, but still
             usable, command line utilities that link against it.
         </para>
         <para id="quality-analysis--usability">
             Freecell Solver has very good <emphasis role="bold">usability</emphasis>: it mostly respects
-            <ulink url="http://www.catb.org/~esr/writings/taoup/">the 
+            <ulink url="http://www.catb.org/~esr/writings/taoup/">the
                 Unix conventions and best practices</ulink>,
-            it can start solving from any arbitrary Solitaire board position 
-            given to it as input, and has kept command line interface 
+            it can start solving from any arbitrary Solitaire board position
+            given to it as input, and has kept command line interface
             usability in mind. Campbell's solver on the other hand, as of this
             writing, does not
             operate on a standard input/standard output manner, is poorly
@@ -1395,7 +1395,7 @@ make: *** [param.h] Error 127
             the other hand, Patsolve is nothing but a link in
             <ulink url="http://members.tripod.com/professor_tom/archives/">Tom
                 Holroyd's software archive</ulink>, which
-            can easily be missed. Gary Campbell's <ulink url="http://www.numin8r.us/programs/">homepage 
+            can easily be missed. Gary Campbell's <ulink url="http://www.numin8r.us/programs/">homepage
                 for his solver</ulink> has a Baroque design
             and quite a lot of marketing-speak. And it's only one page with no
             anchors or a navigation menu, and very few links.
@@ -1429,8 +1429,8 @@ make: *** [param.h] Error 127
             </footnote> On the other hand, Patsolve is
             distributed
             under the
-            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL 
-                licence</ulink> which while usable is 
+            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL
+                licence</ulink> which while usable is
             considerably more restrictive than Public Domain, or BSD-style
             licences. This is also the case for
             <ulink url="http://kevin.atkinson.dhs.org/freecell/">this
@@ -1442,7 +1442,7 @@ make: *** [param.h] Error 127
             or risking "copyrights" and source availability problems.
         </para>
         <para id="quality-analysis--documentation">
-            Freecell Solver (FCS) is extensively documented, and even its 
+            Freecell Solver (FCS) is extensively documented, and even its
             <ulink url="http://freshmeat.net/articles/view/519/">online
                 help is helpful and usable by itself</ulink>. The other solvers
             are much less documented, but arguably they also have much
@@ -1454,8 +1454,8 @@ make: *** [param.h] Error 127
                 list of features</ulink>, and I'm not aware of any
             solver with so many of them. Especially of note is that it
             can solve many other Solitaire variants, including
-            <ulink 
-                url="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple 
+            <ulink
+                url="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple
                 Simon</ulink>, of which FCS is probably the only solver
             capable of solving.
         </para>
@@ -1485,7 +1485,7 @@ make: *** [param.h] Error 127
                 on Freshmeat.net</ulink>, that I received a lot of input
             from my users and co-developers, that I was determined to
             constantly improve it and work on it, and that I worked on
-            creating and maintaining a good web-site and documentation. 
+            creating and maintaining a good web-site and documentation.
         </para>
         <para>
             While most of the contributions of code I received were limited,
@@ -1510,7 +1510,7 @@ make: *** [param.h] Error 127
         <title>Copyrights</title>
         <para>
         This work is licensed under the
-        <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative 
+        <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
             Commons Attribution 2.5 License</ulink> (or at your option a
         greater version of it). The CC-Attribution is almost
         Public Domain except for a requirement to make an attribution to the
@@ -1530,7 +1530,7 @@ make: *** [param.h] Error 127
             this area has been <ulink url="http://fc-solve.shlomifish.org/">Freecell
                 Solver</ulink>, a Public Domain Library for solving games
             of Freecell and other types of Solitaire. However, he also
-            <ulink url="http://www.shlomifish.org/open-source/projects/">initiated 
+            <ulink url="http://www.shlomifish.org/open-source/projects/">initiated
                 several other projects</ulink> and
             <ulink url="http://www.shlomifish.org/open-source/contributions/">made
                 important contributions to projects he did not initiate</ulink>
@@ -1542,7 +1542,7 @@ make: *** [param.h] Error 127
         <para>
             Fish's work on Freecell Solver and other open source projects,
             and the fact he is interested in many software management
-            techniques has led him to write <ulink url="http://www.shlomifish.org/philosophy/">a 
+            techniques has led him to write <ulink url="http://www.shlomifish.org/philosophy/">a
                 large number of articles</ulink>, and weblog entries which
             describe his unique views as a developer of mostly
             portable software.
@@ -1551,11 +1551,11 @@ make: *** [param.h] Error 127
     <section id="about_acknowledgements">
         <title>Acknowledgements</title>
         <para>
-            Thanks to Mr. Gary Campbell, the author of "FCELL.COM" whose 
+            Thanks to Mr. Gary Campbell, the author of "FCELL.COM" whose
             original message provided the inspiration for this article. Thanks
             to <ulink url="http://www.zak.co.il/">Omer Zak</ulink>, who
             went over an early draft of this article and supplied many
-            useful comments. Thanks to many people on the IRC 
+            useful comments. Thanks to many people on the IRC
             (= Internet Relay Chat) who have read the article and comments,
             and chose not to be explicitly credited.
         </para>

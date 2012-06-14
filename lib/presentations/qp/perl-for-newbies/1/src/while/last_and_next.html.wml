@@ -3,21 +3,21 @@
 
 
 <p>
-Within the <tt>while</tt> and <tt>for</tt> loops one can use two special 
-commands, called <tt>last</tt> and <tt>next</tt>. <tt>last</tt> terminates a 
-loop  prematurely while <tt>next</tt> skips the rest of the remaining loop 
+Within the <tt>while</tt> and <tt>for</tt> loops one can use two special
+commands, called <tt>last</tt> and <tt>next</tt>. <tt>last</tt> terminates a
+loop  prematurely while <tt>next</tt> skips the rest of the remaining loop
 body, skips to the loop condition and if it is met, executes the loop again.
 </p>
 
 <p>
 By default, <tt>last</tt> and <tt>next</tt> operate on the most innermost loop.
-However, the loop to which they relate can be controlled by labeling 
+However, the loop to which they relate can be controlled by labeling
 the requested loop and specifying this label as a parameter to <tt>last</tt>
 or <tt>next</tt>.
 </p>
 
 <p>
-The following example is a rewrite of the "All A's" program using 
+The following example is a rewrite of the "All A's" program using
 <tt>last</tt>:
 </p>
 
@@ -34,10 +34,10 @@ The following example is a rewrite of the "All A's" program using
 </quadpres_code_block>
 
 <p>
-"ROW_LOOP" is the label for the outer loop, and it can be seen that 
-<tt>next</tt> uses it as a parameter. All in all, <tt>next</tt> and 
-<tt>last</tt> are sometimes very convenient (but don't tell it to 
-<a href="http://en.wikipedia.org/wiki/Edsger_Dijkstra">Edsger W. 
+"ROW_LOOP" is the label for the outer loop, and it can be seen that
+<tt>next</tt> uses it as a parameter. All in all, <tt>next</tt> and
+<tt>last</tt> are sometimes very convenient (but don't tell it to
+<a href="http://en.wikipedia.org/wiki/Edsger_Dijkstra">Edsger W.
 Dijkstra</a>'s face!), so you will see them being used often.
 </p>
 

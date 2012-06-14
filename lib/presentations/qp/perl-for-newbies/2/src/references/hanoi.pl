@@ -4,7 +4,7 @@ use warnings;
 my $num_disks = shift || 9;
 
 my @towers = (
-    [ reverse(1 .. $num_disks) ],  # A [ ... ] is a dynamic reference to 
+    [ reverse(1 .. $num_disks) ],  # A [ ... ] is a dynamic reference to
     [ ],                           # an array
     [ ]
     );
@@ -30,7 +30,7 @@ sub move_column
     {
         return;
     }
-    # Find the third column 
+    # Find the third column
     my $intermediate = 0+1+2-$source-$dest;
     move_column($source, $intermediate, $how_many-1);
     # Print the current state

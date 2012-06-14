@@ -7,8 +7,8 @@ my $input_string = shift || $default_input_string;
 
 # RLE stands for Run-Length Encoding
 my @rle_components = split(/,/, $input_string);
-my @expanded_sequence = (map 
-    { 
+my @expanded_sequence = (map
+    {
         my ($what, $times) = split(/-/, $_);
         (($what) x $times);
     }

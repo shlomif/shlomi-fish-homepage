@@ -1,9 +1,9 @@
 #include 'template.wml'
 
 <p>
-One can use the cluster grouping notation (<tt>(?: ... )</tt>) or the 
+One can use the cluster grouping notation (<tt>(?: ... )</tt>) or the
 capture grouping notation (<tt>( ... )</tt>) to group several characters so
-the entire group can be repeated with <tt>+</tt>, <tt>*</tt> or <tt>?</tt>. 
+the entire group can be repeated with <tt>+</tt>, <tt>*</tt> or <tt>?</tt>.
 </p>
 
 <p>
@@ -15,7 +15,7 @@ is faster and less intrusive.
 
 <p>
 For example, the following perl program accepts a string as an argument, and
-checks if it is an entire sentence that starts with "the" and ends with 
+checks if it is an entire sentence that starts with "the" and ends with
 "there":
 </p>
 
@@ -25,7 +25,7 @@ checks if it is an entire sentence that starts with "the" and ends with
 
 <p>
 It is possible to nest groupings, so for example the following matches a
-square brackets-enclosed semicolon separated list of curly braces-enclosed 
+square brackets-enclosed semicolon separated list of curly braces-enclosed
 comma-separated lists of numbers:
 </p>
 

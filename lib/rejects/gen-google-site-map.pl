@@ -16,7 +16,7 @@ sub get_params
     my $filename = $args{'fn'};
     my $host = $args{'host'};
 
-    my $base_url; 
+    my $base_url;
     if ($host eq "vipe")
     {
         $base_url = "http://vipe.technion.ac.il/~shlomif/";

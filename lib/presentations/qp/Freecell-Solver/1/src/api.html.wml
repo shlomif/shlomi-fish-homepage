@@ -9,8 +9,8 @@ for integration into a larger software needing solving capabilities.
 </li>
 
 <li>
-When Stephan Kulow integrated Freecell Solver into kpat (a solitaire suite 
-for KDE), he did not use it, because it did not give him everything he 
+When Stephan Kulow integrated Freecell Solver into kpat (a solitaire suite
+for KDE), he did not use it, because it did not give him everything he
 needed. Instead, he used the more basic internal functions.
 </li>
 
@@ -21,18 +21,18 @@ me the patch. He did.
 </li>
 
 <li>
-Markus Oberhumer (of PySol fame), created a Python interface for the 
+Markus Oberhumer (of PySol fame), created a Python interface for the
 library, and again sent me some functions he wrote.
 </li>
 
 <li>
 Eventually, I converted the command line executable itself to use
-fcs_user (while adding a lot of functions in the process) to make sure I 
+fcs_user (while adding a lot of functions in the process) to make sure I
 give the embedding application all of the functionality that I use.
 </li>
 
 <li>
-I also ended up creating an API to analyze a command line and configure a 
+I also ended up creating an API to analyze a command line and configure a
 solver instance accordingly.
 </li>
 

@@ -3,7 +3,7 @@
 <points>
 <li>
 Meta-Data Database Access (or MDDA for short) is a name which I gave to a
-methodology that facilitates the maintaince of code that interacts with 
+methodology that facilitates the maintaince of code that interacts with
 databases.
 </li>
 <li>
@@ -11,7 +11,7 @@ With MDDA, one enumerates the fields inside the database with an array
 of Perl 5 data-structures that describes them.
 </li>
 <li>
-That way adding or modifying the fields of a table will many times involve 
+That way adding or modifying the fields of a table will many times involve
 only one or two modification to the code, instead of completely going all
 over it.
 </li>

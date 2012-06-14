@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Shlomif::Homepage::Amazon 
+use Shlomif::Homepage::Amazon
 {
     wml_dir => "t2/humour/recommendations/films",
     lib_dir => "lib/prod-synd/films",

@@ -109,7 +109,7 @@ my $contents =
                 },
                 {
                     'url' => "binding.html",
-                    'title' => 
+                    'title' =>
                         "Binding to the Beginning or the End of a String",
                 },
                 {
@@ -152,7 +152,7 @@ my $contents =
             [
                 {
                     'url' => "split.html",
-                    'title' => "split", 
+                    'title' => "split",
                 },
                 {
                     'url' => "map.html",
@@ -166,13 +166,13 @@ my $contents =
                         {
                             'url' => "cmp.html",
                             'title' => "&lt;=&gt; and cmp",
-                        },                        
+                        },
                     ],
                 },
                 {
                     'url' => "grep.html",
                     'title' => "grep",
-                },                
+                },
             ],
         },
         {
@@ -199,7 +199,7 @@ my $contents =
                 {
                     'url' => "arrow.html",
                     'title' => "The Arrow Operators",
-                },                
+                },
                 {
                     'url' => "dereferencing.html",
                     'title' => "Dereferencing",
@@ -234,8 +234,8 @@ my $contents =
             'title' => "Finale",
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'somerights20.gif',
         'style.css',
         qw(

@@ -34,7 +34,7 @@ sub _slurp
 foreach my $filename (@files)
 {
     open my $out, ">", "$filename.wml";
-    
+
     print {$out} "#include 'template.wml'\n\n";
     my $text = _slurp($filename);
 
@@ -42,8 +42,8 @@ foreach my $filename (@files)
     $text =~ s/<!--+ *& *begin_header *-->.*?<!--+ *& *end_header *--+>//s;
     $text =~ s/<!--+ *& *begin_contents *-->.*?<!--+ *& *end_contents *--+>/<qpcontents \/>/gs;
     $text =~ s/<!--+ *& *begin_menupath *-->(.*?)<!--+ *& *end_menupath *--+>/<menupath>$1<\/menupath>/gs;
-    
+
     print {$out} $text;
     close($out);
-    
+
 }

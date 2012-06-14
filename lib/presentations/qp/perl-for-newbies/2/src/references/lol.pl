@@ -48,8 +48,8 @@ my $contents =
             'title' => "The \@ARGV array",
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         {
             'url' => 'style.css',
             'type' => 'text/css',

@@ -1,8 +1,8 @@
 [% PROCESS "shlomif/navbar.ttml" %]
-.navbar 
+.navbar
 {
     /* derived from moccasin, but less intrusive, as a background.*/
-    background-color: #FFEED3; 
+    background-color: #FFEED3;
 }
 .navbar ul
 {
@@ -13,7 +13,7 @@
 [% PROCESS "newsitem.css.ttml" %]
 [% PROCESS "shlomif/common_defs.ttml" %]
 
-.main 
+.main
 {
     padding-left : 1em;
     margin-left : 25%;

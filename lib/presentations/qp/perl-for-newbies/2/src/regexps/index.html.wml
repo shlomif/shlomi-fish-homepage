@@ -2,20 +2,20 @@
 
 <p>
 Regular expressions are one of the most powerful features of Perl, but are
-also one of those that beginners find most difficult to understand. Don't let 
+also one of those that beginners find most difficult to understand. Don't let
 that fact discourage you: they are definitely worth your time.
 </p>
 
 <p>
 Basically, a regular expression tells the interpreter to search a string
 for a pattern. The pattern can be a simple one like the word "hello" or a
-complex one, such as the word "hello" followed by any number of instances of 
-the word "one", followed by the word "triple". The latter will be 
+complex one, such as the word "hello" followed by any number of instances of
+the word "one", followed by the word "triple". The latter will be
 written as <tt>hello(?:one)*triple</tt> inside a regular expression.
 </p>
 
 <p>
-The perl operators allow you to do three things with a regular expression: 
+The perl operators allow you to do three things with a regular expression:
 </p>
 
 <ol>

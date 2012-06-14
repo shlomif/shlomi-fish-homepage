@@ -49,7 +49,7 @@ my $contents =
             [
                 {
                     'url' => "opening.html",
-                    'title' => "Opening a Console Window",                    
+                    'title' => "Opening a Console Window",
                 },
                 {
                     'url' => "exiting.html",
@@ -160,8 +160,8 @@ my $contents =
             'title' => "Links and References",
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
     ],
 };

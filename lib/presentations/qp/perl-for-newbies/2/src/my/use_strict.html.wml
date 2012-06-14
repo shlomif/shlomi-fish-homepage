@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-Perl has a pragma (= an interpreter-related directive) known as 
+Perl has a pragma (= an interpreter-related directive) known as
 <tt>use strict;</tt>, which among other things, makes sure all the variables
 you use will be declared with <tt>my</tt>. If you reference a variable
 that was not declared with <tt>my</tt> it will generate an error.
@@ -9,7 +9,7 @@ that was not declared with <tt>my</tt> it will generate an error.
 
 <p>
 Using <tt>use strict</tt> is in most cases a good idea, because it minimises
-the number of errors because of typos. Just type <tt>use strict;</tt> at the 
+the number of errors because of typos. Just type <tt>use strict;</tt> at the
 beginning of your program and you can sleep better at nights.
 </p>
 
@@ -22,7 +22,7 @@ As an example, here is the primes program, <tt>use strict</tt>-ed:
 </quadpres_code_block>
 
 <p>
-Notice the use of <tt>my</tt> in the declaration of the <tt>foreach</tt> loop. 
+Notice the use of <tt>my</tt> in the declaration of the <tt>foreach</tt> loop.
 Such just-in-time declarations, inspired by C++, are possible in perl.
 </p>
 

@@ -6,5 +6,5 @@ while ($power_of_2 < $number)
 {
     $power_of_2 *= 2;
 }
-print ("The first power of 2 that is " .  
+print ("The first power of 2 that is " .
     "greater than this number is " , $power_of_2, "\n");

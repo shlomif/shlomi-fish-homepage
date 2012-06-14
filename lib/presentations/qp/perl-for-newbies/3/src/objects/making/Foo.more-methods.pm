@@ -2,7 +2,7 @@ sub get_name
 {
     # This step is necessary so it will be treated as a method
     my $self = shift;
-    
+
     return $self->{'name'};
 }
 

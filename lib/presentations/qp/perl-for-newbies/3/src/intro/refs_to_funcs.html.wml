@@ -16,16 +16,16 @@ function can invoke several helper functions which it will treat the same.
 <h2>Closures</h2>
 
 <p>
-In perl it is possible to define dynamic subroutines, inside the code of 
-the current scope. That scope can be a function or even another dynamic 
+In perl it is possible to define dynamic subroutines, inside the code of
+the current scope. That scope can be a function or even another dynamic
 subroutine. These subroutines, which are sometimes refered to as closures,
 can see all the variables of the scope in which they were declared, even
 after the function that created them stopped running.
 </p>
 
 <p>
-Closures enable the program to pass state information into callbacks that 
-do not accept state information, and are generally a very convenient 
+Closures enable the program to pass state information into callbacks that
+do not accept state information, and are generally a very convenient
 mechanism.
 </p>
 

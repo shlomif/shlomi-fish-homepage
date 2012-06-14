@@ -2,7 +2,7 @@
 
 <points>
 <li>
-Freecell Solver can move any number of cards as a sequence, and moves 
+Freecell Solver can move any number of cards as a sequence, and moves
 cards to the foundations when it sees fit.
 </li>
 <li>
@@ -10,7 +10,7 @@ Freecell Pro tries to emulate Microsoft Freecell in its behaviour. Namely:
 <br />
 <ol>
 <li>
-Column-to-column moves were identified only by source and destination 
+Column-to-column moves were identified only by source and destination
 columns. (not the number of cards.)
 </li>
 <li>
@@ -24,7 +24,7 @@ This behaviour is even present in the internals of Freecell Pro, which
 made adapting FC-Pro to use FCS even more difficult.
 </li>
 <li>
-This brought the 
+This brought the
 <a href="http://groups.yahoo.com/group/fc-solve-discuss/message/198">following
 active discussion in the mailing-list</a>.
 </li>

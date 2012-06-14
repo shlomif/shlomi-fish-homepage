@@ -2,8 +2,8 @@
 
 <points>
 <li>
-<a href="http://www.paulgraham.com/">Paul Graham</a> wrote in his 
-<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb FAQ</a>, 
+<a href="http://www.paulgraham.com/">Paul Graham</a> wrote in his
+<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb FAQ</a>,
 that he did not use a database for ViaWeb (now Yahoo Store):
 </li>
 <li>
@@ -25,19 +25,19 @@ software does.
 I disagree with this statement.
 </li>
 <li>
-Desktop apps don't always use databases, because they can afford to load the 
-data on start-up, store it internally in memory using efficient 
-data-structures, and then saving the data to disk serialized, at an Exit or a 
-Save command. 
+Desktop apps don't always use databases, because they can afford to load the
+data on start-up, store it internally in memory using efficient
+data-structures, and then saving the data to disk serialized, at an Exit or a
+Save command.
 </li>
 <li>
-Web-based programs, on the other hand, cannot afford to load and store the 
-serialized data during every web-request done, and cannot maintain a state 
+Web-based programs, on the other hand, cannot afford to load and store the
+serialized data during every web-request done, and cannot maintain a state
 in memory because the HTTP protocol is stateless.
 </li>
 <li>
 A database system allows them to manipulate efficient and complex data
-structures without having to constantly serialize and de-serialize them. 
+structures without having to constantly serialize and de-serialize them.
 </li>
 <li>
 It is also probable that when working against the raw file-system, one will
@@ -45,8 +45,8 @@ implement a lot of database functionality using the file-system primitives,
 which may be a lot of extra work.
 </li>
 <li>
-See for instance 
-<a href="http://svn.haxx.se/dev/archive-2004-04/1479.shtml">Subversion's 
+See for instance
+<a href="http://svn.haxx.se/dev/archive-2004-04/1479.shtml">Subversion's
 libsvn_fs_fs</a>
 </li>
 </points>

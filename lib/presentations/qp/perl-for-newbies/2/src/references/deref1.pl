@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-my $ds1 = 
-{ 
-    'h' => [5,6,7], 
+my $ds1 =
+{
+    'h' => [5,6,7],
     'y' => { 't' => 'u', 'o' => 'p' },
     'hello' => 'up',
 };
@@ -36,5 +36,5 @@ print "\n\n\$\$b:\n";
 print ${$b}, "\n";
 
 
-        
-    
+
+

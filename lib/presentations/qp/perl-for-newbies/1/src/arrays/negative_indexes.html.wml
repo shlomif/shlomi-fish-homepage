@@ -1,17 +1,17 @@
 #include 'template.wml'
 
 <p>
-The expression <tt>$myarray[-$n]</tt> is equivalent to 
-<tt>$myarray[scalar(@myarray)-$n]</tt>. I.e: subscripts with negative indexes 
-return  the <tt>$n</tt>'th element from the end of the array. So to get the 
-value of the last element you can write <tt>$myarray[-1]</tt> and for the 
-second last <tt>$myarray[-2]</tt>, 
+The expression <tt>$myarray[-$n]</tt> is equivalent to
+<tt>$myarray[scalar(@myarray)-$n]</tt>. I.e: subscripts with negative indexes
+return  the <tt>$n</tt>'th element from the end of the array. So to get the
+value of the last element you can write <tt>$myarray[-1]</tt> and for the
+second last <tt>$myarray[-2]</tt>,
 etc.
 </p>
 
 <p>
 Note that one should also make sure that array subscripts that are continuously
-decremented will not underflow below 0, or else one will start getting the 
+decremented will not underflow below 0, or else one will start getting the
 elements from the end of the array.
 </p>
 

@@ -16,33 +16,33 @@
 
 <table style="border-width : thin ; border-color : black">
 <flag f="-ansi">
-This flag tells the compiler to enforce ANSI C standards 
+This flag tells the compiler to enforce ANSI C standards
 </flag>
 <flag f="-pedantic">
-More pedantic ansi, warnings for stuff you probably didn't mean. 
+More pedantic ansi, warnings for stuff you probably didn't mean.
 </flag>
 <flag f="-Wall">
 Show all reasonable warnings (there are more).
 </flag>
 <flag f="-g">
-Produce debug information, necessary for debugging. 
+Produce debug information, necessary for debugging.
 </flag>
 <flag f="-l<span style="color : red">library</span>">
 Links to a standard library. Use <tt>-l<span style="color : red">m</span></tt>
 to load the standard math library.
 </flag>
 <flag f="-c">
-Compile or assemble the source files, but do not link. The compiler output is object files corresponding to each source file. 
+Compile or assemble the source files, but do not link. The compiler output is object files corresponding to each source file.
 </flag>
 <flag f="-S">
 Compile only; output assembly code.
 </flag>
 <flag f="-E">
-Pre-process only. Output pre-processed code. 
+Pre-process only. Output pre-processed code.
 </flag>
 <flag f="-D<span style="color : red">macro</span>">
-Define a macro, one can also use <tt>-D<span style="color : red">macro</span>=<span style="color :red">val</span></tt> in order to assign a value 
-for the macro. This will be used for preprocessing all files. 
+Define a macro, one can also use <tt>-D<span style="color : red">macro</span>=<span style="color :red">val</span></tt> in order to assign a value
+for the macro. This will be used for preprocessing all files.
 </flag>
 </table>
 

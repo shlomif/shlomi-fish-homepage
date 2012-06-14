@@ -1,14 +1,14 @@
 #include 'template.wml'
 
 <p>
-Functions can call other functions. In fact, a function can call itself, 
+Functions can call other functions. In fact, a function can call itself,
 either directly or indirectly. When a function calls itself it is known as
-<b>recursion</b>, a Computer Science methodology which can be implemented 
+<b>recursion</b>, a Computer Science methodology which can be implemented
 with or without functions.
 </p>
 
 <p>
-Here's an example where recursion is used to find all the permutations of 
+Here's an example where recursion is used to find all the permutations of
 splitting 10 among three numbers:
 </p>
 
@@ -17,23 +17,23 @@ splitting 10 among three numbers:
 </quadpres_code_block>
 
 <p>
-A couple of notes are in place. First of all, perl does not handle tail 
-recursion very well, at least not in the current incarnation of the compiler. 
+A couple of notes are in place. First of all, perl does not handle tail
+recursion very well, at least not in the current incarnation of the compiler.
 If your recursion can be done using a simple loop, do it with it.
 </p>
 
 <p>
-Secondly, some systems (such as Microsft Windows) limit an executable to a 
-certain amount of stack, as far as such langauges as Assembler or C are 
-concerned. This should not be of any concern to perl hackers, because the 
-perl interpreter does not translate a perl function call into a C function 
-call. (not to mention that the perl interpreter on those systems is compiled 
+Secondly, some systems (such as Microsft Windows) limit an executable to a
+certain amount of stack, as far as such langauges as Assembler or C are
+concerned. This should not be of any concern to perl hackers, because the
+perl interpreter does not translate a perl function call into a C function
+call. (not to mention that the perl interpreter on those systems is compiled
 with enough stack for itself).
 </p>
 
 <p>
 Sometimes, recursion is helpful, but if you see that your recursion is getting
-too deep, you should consider using your own dedicated stack (which can be 
+too deep, you should consider using your own dedicated stack (which can be
 implemented as an array) instead. It's a good programming practice.
 </p>
 

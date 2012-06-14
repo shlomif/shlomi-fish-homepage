@@ -11,15 +11,15 @@ How many characters are in the perl motto? Perl can tell that right away:
 <p>
 <tt>length()</tt> is a built-in function that tells how many characters are in
 a string. A function is a named sub-routine that accepts several arguments
-and returns a value that can be further evaluated as part of a greater 
+and returns a value that can be further evaluated as part of a greater
 expression, or used directly.
 </p>
 
 <p>
-To help us understand functions further, let's inspect the perl function 
+To help us understand functions further, let's inspect the perl function
 <tt>substr</tt> (short for "substring"). <tt>substr</tt> retrieves sub-strings
 of a given string. The first argument to it is a string, the second is the
-offset from which to take the substring, and the third is the length of the 
+offset from which to take the substring, and the third is the length of the
 substring to be taken. The third one is optional and if unspecified, returns
 the substring till the end of the string.
 </p>
@@ -44,7 +44,7 @@ The output of this program is:
 
 <p>
 The commas are used to separate the arguments to the function and they
-are  mandatory in perl. The parenthesis that enclose them are optional, 
+are  mandatory in perl. The parenthesis that enclose them are optional,
 though. The above program could have been re-written as:
 </p>
 
@@ -53,10 +53,10 @@ though. The above program could have been re-written as:
 </quadpres_code_block>
 
 <p>
-We need an extra set of parenthesis so <tt>print</tt> (which is also a function) 
-would not be confused and consider only the result of the <tt>substr</tt> 
-operation as its argument. If it makes no sense, then it shouldn't; however, 
-remember that a set of parenthesis, that wraps up the argument list 
+We need an extra set of parenthesis so <tt>print</tt> (which is also a function)
+would not be confused and consider only the result of the <tt>substr</tt>
+operation as its argument. If it makes no sense, then it shouldn't; however,
+remember that a set of parenthesis, that wraps up the argument list
 of a function, can do you no harm.
 </p>
 

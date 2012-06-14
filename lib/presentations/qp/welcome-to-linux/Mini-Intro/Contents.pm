@@ -92,7 +92,7 @@ my $contents =
                     'title' => "משחקים",
                 },
             ],
-            'images' => [ "firefox-1.png", "firefox-1-thumb.png", 
+            'images' => [ "firefox-1.png", "firefox-1-thumb.png",
                 "mdk91-scr7-s.jpg", "konq_navigate-thumb.png",
                 "gimp-screenshot-thumb.png", "gimp-screenshot.png",
                 "kmail_main-thumb.png", "thunderbird-thumb.png",

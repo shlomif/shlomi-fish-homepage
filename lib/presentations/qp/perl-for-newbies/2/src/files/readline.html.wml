@@ -1,9 +1,9 @@
 #include 'template.wml'
 
 <p>
-Just like <tt>print</tt> can be generalised to files, so can the 
-<tt>&lt;&gt;</tt> which we encountered before. If you place the name of the 
-filehandle inside the operator, it will read a line from the file opened by 
+Just like <tt>print</tt> can be generalised to files, so can the
+<tt>&lt;&gt;</tt> which we encountered before. If you place the name of the
+filehandle inside the operator, it will read a line from the file opened by
 that filehandle.
 </p>
 
@@ -16,7 +16,7 @@ Here's an example, let's append the line numbers to a given file:
 </quadpres_code_block>
 
 <p>
-And the following example counts the number of lines in a file that start with 
+And the following example counts the number of lines in a file that start with
 the letter "A" (case-insensitive).
 </p>
 

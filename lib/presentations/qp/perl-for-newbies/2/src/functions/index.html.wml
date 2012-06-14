@@ -2,15 +2,15 @@
 
 <p>
 We already encountered some of Perl's built-in functions. Perl enables us to
-define our own functions using Perl code. Whenever you use a piece of code 
-more than once in a program, it is a good idea to make it into a function. 
+define our own functions using Perl code. Whenever you use a piece of code
+more than once in a program, it is a good idea to make it into a function.
 That way, you won't have to change it in more than one place.
 </p>
 
 <p>
 In Perl, every function accepts an array of arguments and returns an array of
 return values. The arguments (also known as "parameters") can be found in the
-<tt>@_</tt> variable. This variable is magical and need not and should not be 
+<tt>@_</tt> variable. This variable is magical and need not and should not be
 declared with <tt>my</tt>. In order to return values from a function, one can
 use the <tt>return</tt> keyword.
 </p>
@@ -21,7 +21,7 @@ and a <tt>}</tt> at the end. Everything in between, is the function body.
 </p>
 
 <p>
-Here's an example, for a function that returns the maximum and the 
+Here's an example, for a function that returns the maximum and the
 minimum of an array of numbers.
 </p>
 

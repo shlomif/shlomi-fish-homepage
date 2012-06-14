@@ -3,8 +3,8 @@
 
 
 <p>
-In Perl the backslash (<tt>\</tt>) is an operator that returns the 
-reference to an existing variable. It can also return a dynamic reference 
+In Perl the backslash (<tt>\</tt>) is an operator that returns the
+reference to an existing variable. It can also return a dynamic reference
 to a constant.
 </p>
 
@@ -17,7 +17,7 @@ Here is an example that uses a reference to update a sum:
 </quadpres_code_block>
 
 <p>
-As can be seen, because the reference to <tt>$sum</tt> was used, its value 
+As can be seen, because the reference to <tt>$sum</tt> was used, its value
 changes throughout the program.
 </p>
 

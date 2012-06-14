@@ -1,11 +1,11 @@
 #include 'template.wml'
 
 <p>
-Object accessors are a way to abstract access to an object's member variables 
+Object accessors are a way to abstract access to an object's member variables
 (also known as “properties”, “attributes”, “fields”, “slots”, etc.) behind
 method
 calls. For example we can use <tt>$person-&gt;age()</tt> to get the age
-of <tt>$person</tt> and <tt>$person-&gt;age(21)</tt> or 
+of <tt>$person</tt> and <tt>$person-&gt;age(21)</tt> or
 <tt>$person-&gt;set_age(21)</tt> to set their age to 21.
 </p>
 

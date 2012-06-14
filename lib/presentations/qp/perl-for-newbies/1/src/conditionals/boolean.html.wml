@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-Sometimes it is useful to check for the validation of more than one condition. 
-For doing this, Perl supplies boolean operators. 
+Sometimes it is useful to check for the validation of more than one condition.
+For doing this, Perl supplies boolean operators.
 </p>
 
 <table border="1">
@@ -11,7 +11,7 @@ For doing this, Perl supplies boolean operators.
 <h2>&amp;&amp;</h2>
 
 <p>
-<tt>$a &amp;&amp; $b</tt> evaluates to true if both <tt>$a</tt> and <tt>$b</tt> are true. 
+<tt>$a &amp;&amp; $b</tt> evaluates to true if both <tt>$a</tt> and <tt>$b</tt> are true.
 It is called the logical and of the two operands <tt>$a</tt> and <tt>$b</tt>.
 </p>
 
@@ -22,7 +22,7 @@ It is called the logical and of the two operands <tt>$a</tt> and <tt>$b</tt>.
 <h2>||</h2>
 
 <p>
-<tt>$a || $b</tt> (called the logical or of <tt>$a</tt> and <tt>$b</tt>) is 
+<tt>$a || $b</tt> (called the logical or of <tt>$a</tt> and <tt>$b</tt>) is
 evaluated to true if one or both of its operands are true.
 </p>
 
@@ -34,7 +34,7 @@ evaluated to true if one or both of its operands are true.
 <h2>!</h2>
 
 <p>
-<tt>! $a</tt> (pronounced "not <tt>$a</tt>") evaluates to true 
+<tt>! $a</tt> (pronounced "not <tt>$a</tt>") evaluates to true
 if <tt>$a</tt> is false.
 </p>
 

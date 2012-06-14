@@ -2,12 +2,12 @@
 
 <p>
 A perl program can naturally include more than one command. To do so, you
-need to place a semicolon at the end of each command or otherwise the 
-interpreter will be confused. 
+need to place a semicolon at the end of each command or otherwise the
+interpreter will be confused.
 </p>
 
 <p>
-It is not enough to put each command on a separate line. In fact it's not 
+It is not enough to put each command on a separate line. In fact it's not
 even necessary. The following two programs are equivalent:
 </p>
 
@@ -24,8 +24,8 @@ and
 </quadpres_code_block>
 
 <p>
-However, for readability and easy debugging it is recommended that each 
-statement will be on a separate line. And sometimes it's helpful to span 
+However, for readability and easy debugging it is recommended that each
+statement will be on a separate line. And sometimes it's helpful to span
 one on more than one line.
 </p>
 

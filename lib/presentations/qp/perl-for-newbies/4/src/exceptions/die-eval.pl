@@ -22,14 +22,14 @@ sub write_text
     open O, ">$filename"
         or die "Could not open $filename for writing";
     print O $text;
-    close(O);    
+    close(O);
 }
 
 sub read_and_write
 {
     my $text = read_text();
-    
-    write_text($text);    
+
+    write_text($text);
 }
 
 sub perform_transaction

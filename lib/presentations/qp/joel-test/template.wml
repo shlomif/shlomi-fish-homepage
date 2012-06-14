@@ -11,7 +11,7 @@ if (1)
 {
 $translate_control_text = sub {
     my $title = shift;
-    my %translations = 
+    my %translations =
         (
             "Next" => "הבא",
             "Prev" => "הקודם",
@@ -27,7 +27,7 @@ $translate_control_text = sub {
 #include "quadpres_main.wml"
 
 <qp:more_head_elems>
-<script src="<qp:contentsurl />slidy.js" 
+<script src="<qp:contentsurl />slidy.js"
    type="text/javascript"></script>
 </qp:more_head_elems>
 

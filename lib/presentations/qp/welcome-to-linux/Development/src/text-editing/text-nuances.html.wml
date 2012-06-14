@@ -8,8 +8,8 @@ There is a special character called "Tab" whose ASCII value is 9. It is
 usually displayed as several adjacent whitespace characters.
 </li>
 <li>
-In some file-types (most notably Makefiles) tabs have a special meaning and 
-cannot be substituted with their equivalent whitespaces. 
+In some file-types (most notably Makefiles) tabs have a special meaning and
+cannot be substituted with their equivalent whitespaces.
 </li>
 <li>
 They would even reject a whitespace before the tab. (which often looks
@@ -25,14 +25,14 @@ tabs at such files.
 
 <points>
 <li>
-On Linux and other UNIX systems, the lines of text files are terminate with 
-a single character called 
-<a href="http://en.wikipedia.org/wiki/Line_feed">"Newline" or 
+On Linux and other UNIX systems, the lines of text files are terminate with
+a single character called
+<a href="http://en.wikipedia.org/wiki/Line_feed">"Newline" or
 "Linefeed"</a>.
 </li>
 <li>
 In DOS, and Windows, the Linefeed character is preceded by another character
-called <a href="http://en.wikipedia.org/wiki/Carriage_return">Carriage 
+called <a href="http://en.wikipedia.org/wiki/Carriage_return">Carriage
 Return</a>.
 </li>
 <li>

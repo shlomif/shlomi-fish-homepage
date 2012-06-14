@@ -2,15 +2,15 @@
 
 <p>
 The expression <tt>(@array) x $num_times</tt> returns an array that is composed
-of <tt>$num_times</tt> copies of <tt>@array</tt> one after the other. The 
-expression <tt>$scalar x $num_times</tt>, on the other hand, returns 
-a string containing <tt>$num_times</tt> copies of <tt>$scalar</tt> 
+of <tt>$num_times</tt> copies of <tt>@array</tt> one after the other. The
+expression <tt>$scalar x $num_times</tt>, on the other hand, returns
+a string containing <tt>$num_times</tt> copies of <tt>$scalar</tt>
 concatenated together string-wise.
 </p>
 
 <p>
-Therefore it is important whether the left operand is wrapped in parenthesis 
-or not. It is usually a good idea to assign the left part to a variable 
+Therefore it is important whether the left operand is wrapped in parenthesis
+or not. It is usually a good idea to assign the left part to a variable
 before using x so you'll have the final expression ready.
 </p>
 

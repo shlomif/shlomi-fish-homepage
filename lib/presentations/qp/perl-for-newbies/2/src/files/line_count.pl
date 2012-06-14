@@ -16,6 +16,6 @@ while ($line = <$in>)
 }
 close($in);
 
-print "In " , $filename, " there are ", 
+print "In " , $filename, " there are ",
     $lines_num, " lines that start with \"A\".\n";
 

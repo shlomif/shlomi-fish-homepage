@@ -1,12 +1,12 @@
 ################################################################################
 # Spork Configuration File.
-# 
+#
 # Please read this file over and set the values to your own.
 #
 # If you want global settings for all your slideshows, copy this file to
 # ~/.sporkrc/config.yaml. Any settings in this local file will override
 # the global value of that setting.
-# 
+#
 # See C<perldoc Spork::Config> for details on settings.
 ################################################################################
 author_name: Shlomi Fish and Sagiv Barhoom
@@ -24,7 +24,7 @@ file_base: /lecture/Perl/Too-Many-Ways/
 
 slides_file: Spork.slides
 template_directory: template/tt2
-template_path: 
+template_path:
 - ./template/tt2
 slides_directory: slides
 download_method: wget

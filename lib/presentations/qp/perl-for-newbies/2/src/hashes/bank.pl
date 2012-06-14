@@ -14,7 +14,7 @@ while (1)
 
         $function = <>;
         chomp($function);
-    
+
         if (exists($ops{$function}))
         {
             last;
@@ -26,16 +26,16 @@ while (1)
     {
         last;
     }
-    
+
     print "Enter the name of the account:\n";
     $account = <>;
-    chomp($account);    
+    chomp($account);
     if ($function eq "create")
     {
         if (! exists($bank_accounts{$account}))
         {
             $bank_accounts{$account} = 0;
-        }       
+        }
     }
     elsif ($function eq "status")
     {
@@ -45,7 +45,7 @@ while (1)
         }
         else
         {
-            print "There are " . $bank_accounts{$account} . 
+            print "There are " . $bank_accounts{$account} .
                 " NIS in the account.\n";
         }
     }
@@ -54,7 +54,7 @@ while (1)
         if (exists($bank_accounts{$account}) )
         {
             print "How much do you wish to deposit?\n";
-            $how_much = <>; 
+            $how_much = <>;
             chomp($how_much);
             $bank_accounts{$account} += $how_much;
         }

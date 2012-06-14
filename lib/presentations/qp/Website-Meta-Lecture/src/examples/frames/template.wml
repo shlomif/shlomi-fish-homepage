@@ -17,15 +17,15 @@
 <td class="navbar">
 
 <define-tag navbarlink>
-<if 
+<if
     ;;; Determine if %0 matches this document
-    <ifeq "$(FILENAME)" "%0" 
-        "1" 
-        <ifeq "$(FILENAME)" "%0index.html" 
-            "1" 
-            "" 
+    <ifeq "$(FILENAME)" "%0"
+        "1"
+        <ifeq "$(FILENAME)" "%0index.html"
+            "1"
+            ""
         />
-            
+
     />
     ;;; If so - bolds the text
     "<b>%1</b>"

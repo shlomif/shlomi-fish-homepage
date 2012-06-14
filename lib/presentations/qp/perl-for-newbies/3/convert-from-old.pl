@@ -38,14 +38,14 @@ foreach my $filename (@files)
 
     open my $out, ">", "$filename.wml"
         or die "Could not open '$filename.wml' - $!";
-    
+
     print {$out} "#include 'template.wml'\n\n";
 
     $text =~ s/<!--+ *& *begin_footer *-->.*?<!--+ *& *end_footer *--+>//s;
     $text =~ s/<!--+ *& *begin_header *-->.*?<!--+ *& *end_header *--+>//s;
     $text =~ s/<!--+ *& *begin_contents *-->.*?<!--+ *& *end_contents *--+>/<qpcontents \/>/gs;
     $text =~ s/<!--+ *& *begin_menupath *-->(.*?)<!--+ *& *end_menupath *--+>/<menupath>$1<\/menupath>/gs;
-    
+
     print {$out} $text;
 
     close($out);

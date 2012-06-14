@@ -7,7 +7,7 @@ Here are some perl operators of interest.
 <h2>+ , - , * , /</h2>
 
 <p>
-Respectively adds, subtracts, multiplies and divides two floating point 
+Respectively adds, subtracts, multiplies and divides two floating point
 numbers.
 </p>
 
@@ -20,9 +20,9 @@ Raises "a" to the power of "b". Works on floating point numbers too.
 <h2>a . b</h2>
 
 <p>
-Concatenates two strings. The comma (<tt>,</tt>) as used by print does not 
+Concatenates two strings. The comma (<tt>,</tt>) as used by print does not
 really concatenates two strings, but rather prints them one after the other.
-(There's a subtle difference in functionality of the print command too, but we 
+(There's a subtle difference in functionality of the print command too, but we
 won't get into that, now).
 </p>
 
@@ -47,9 +47,9 @@ Makes sure that <tt>sub-expr</tt> is evaluated as a separate sub-expression
 <hr />
 
 <p>
-There are many more, but they will be covered later. For a complete list and 
-more detailed information about the various perl operators consult the 
-<a href="http://perldoc.perl.org/perlop.html">"perlop" document</a> 
+There are many more, but they will be covered later. For a complete list and
+more detailed information about the various perl operators consult the
+<a href="http://perldoc.perl.org/perlop.html">"perlop" document</a>
 on your system.
 </p>
 

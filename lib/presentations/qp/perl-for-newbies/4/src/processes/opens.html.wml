@@ -6,7 +6,7 @@ the filename with a pipe (<tt>|</tt>), the rest of it is interpreted
 as a command invocation, which accepts standard input by printing to the
 filehandle, and is executed after the filehandle is closed. If the last
 character is a pipe, then the command is executed and its standard output
-is fed into the filehandle where it can be read using Perl's file input 
+is fed into the filehandle where it can be read using Perl's file input
 mechanisms.
 </p>
 
@@ -51,11 +51,11 @@ while (my $line = &lt;$read_from_process&gt;)
 </quadpres_code_block>
 
 <p>
-Doing something like 
+Doing something like
 <tt>open my $print_to_process, "|-", "sendmail", $to_address;</tt>
 is safer than doing:
 <tt>open my $print_to_process, "|-", "sendmail $to_address";</tt>
-Because a malicious person may put some offending shell characters in 
+Because a malicious person may put some offending shell characters in
 <tt>$to_address</tt> and end up with something like:
 </p>
 

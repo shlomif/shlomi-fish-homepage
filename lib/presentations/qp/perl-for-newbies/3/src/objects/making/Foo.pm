@@ -16,17 +16,17 @@ sub new
     # $self is the the object. Let's initialize it to an empty hash
     # reference.
     my $self = {};
-    
+
     # Associate $self with the class $class. This is probably the most
     # important step.
     bless $self, $class;
 
-    # Now we can retrieve the other arguments passed to the 
+    # Now we can retrieve the other arguments passed to the
     # constructor.
-    
+
     my $name = shift || "Fooish";
     my $number = shift || 5;
-    
+
     # Put these arguments inside class members
     $self->{'name'} = $name;
     $self->{'number'} = $number;
@@ -39,7 +39,7 @@ sub get_name
 {
     # This step is necessary so it will be treated as a method
     my $self = shift;
-    
+
     return $self->{'name'};
 }
 

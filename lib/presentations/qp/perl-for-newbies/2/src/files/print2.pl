@@ -9,7 +9,7 @@ for($a=0;$a<100;$a++)
     print {$seq1} $a, "\n";
     print {$seq2} $a, "\n";
     print {$seq1} ($a+0.1);
-    print {$seq2} ($a+0.5);    
+    print {$seq2} ($a+0.5);
     print {$seq1} "\n";
     print {$seq2} "\n";
 }

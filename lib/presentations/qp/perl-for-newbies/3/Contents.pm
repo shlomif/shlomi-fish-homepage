@@ -50,7 +50,7 @@ my $contents =
                     [
                         {
                             'title' => "Behaviour of Functions inside Functions",
-                            'url' => "behaviour.html",                            
+                            'url' => "behaviour.html",
                         },
                         {
                             'title' => "Demo: A Dispatch Function",
@@ -80,7 +80,7 @@ my $contents =
                         },
                     ],
                 },
-                {              
+                {
                     'url' => "loading",
                     'title' => "Loading Modules and Importing their Functions",
                     # Tell about use My::Module;
@@ -97,7 +97,7 @@ my $contents =
                         {
                             'url' => "variables.html",
                             'title' => "Using Variables from a Different Namespace",
-                        },                        
+                        },
                     ],
                 },
                 {
@@ -182,8 +182,8 @@ my $contents =
             ],
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
         'somerights20.gif',
         qw(

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-# This is a value that can be inputted or outputted by the 
+# This is a value that can be inputted or outputted by the
 # mini-interpreter.
 my $a_value;
 
@@ -15,7 +15,7 @@ sub do_print
         return;
     }
 
-    print "\$a_value is " . $a_value . "\n";    
+    print "\$a_value is " . $a_value . "\n";
 }
 
 sub do_input
@@ -33,7 +33,7 @@ sub do_exit
     $quit_program = 1;
 }
 
-my %operations = 
+my %operations =
     (
         'print' => \&do_print,
         'input' => \&do_input,
@@ -45,7 +45,7 @@ sub get_operation
     my $op = "";
     my $line;
     while (1)
-    {  
+    {
         print "Please enter the operation (print, input, exit):\n";
         $line = <>;
         chomp($line);

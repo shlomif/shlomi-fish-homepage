@@ -106,7 +106,7 @@ my $contents =
                         {
                             'url' => "apache.html",
                             'title' => "Apache : Cost Sharing",
-                        },                            
+                        },
                         {
                             'url' => "zope.html",
                             'title' => "Zope : Give Away a Recipe, Open a Restaurant",

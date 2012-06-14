@@ -17,13 +17,13 @@ or not, then the answer is: "usually".
 
 <points>
 <li>
-As far as we are concerned a hash is an array of <b>buckets</b>. The index 
+As far as we are concerned a hash is an array of <b>buckets</b>. The index
 of the bucket into which a given state goes is determined according to a
 deterministic hash function.
 </li>
 
 <li>
-A hash function is highly magical and should make sure similar records 
+A hash function is highly magical and should make sure similar records
 have very distinct hash values, and all hash values are generated
 in roughly equal frequency.
 </li>

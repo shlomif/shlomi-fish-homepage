@@ -14,7 +14,7 @@ while ($line = <$in>)
     {
         print $user_name . "'s user ID is " . $parts[2] . "\n";
         exit(0);
-    }    
+    }
 }
 close($in);
 

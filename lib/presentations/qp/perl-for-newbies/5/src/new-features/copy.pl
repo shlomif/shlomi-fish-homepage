@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 
 # This is just for demonstration. A better way would be to use File::Copy :
 #

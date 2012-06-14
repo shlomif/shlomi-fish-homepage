@@ -142,7 +142,7 @@ my $contents =
                         {
                             'url' => "for_and_dotdot.html",
                             'title' => "The for keyword and the .. operator",
-                        },                        
+                        },
                     ],
                 },
                 {
@@ -156,8 +156,8 @@ my $contents =
             ],
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'somerights20.gif',
         'style.css',
         qw(

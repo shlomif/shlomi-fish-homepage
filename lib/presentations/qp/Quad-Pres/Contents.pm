@@ -39,7 +39,7 @@ my $contents =
                 {
                     'url' => "images.html",
                     'title' => "Including Images",
-                },                
+                },
             ],
             'images' => [ 'logo-wml.png' ],
         },
@@ -74,8 +74,8 @@ my $contents =
             ],
         }
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
     ],
 };

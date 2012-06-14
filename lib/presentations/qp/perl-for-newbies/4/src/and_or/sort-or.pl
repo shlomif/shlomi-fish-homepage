@@ -4,9 +4,9 @@ use strict;
 use warnings;
 
 
-my @array = 
+my @array =
 (
-    { 'first' => "Amanda", 'last' => "Smith", },    
+    { 'first' => "Amanda", 'last' => "Smith", },
     { 'first' => "Jane", 'last' => "Arden",},
     { 'first' => "Tony", 'last' => "Hoffer", },
     { 'first' => "Shlomi", 'last' => "Fish", },
@@ -17,12 +17,12 @@ my @array =
     { 'first' => "Ben", 'last' => "Smith", },
 );
 
-my @sorted_array = 
-    (sort 
-        { 
-            ($a->{'last'} cmp $b->{'last'}) || 
-            ($a->{'first'} cmp $b->{'first'}) 
-        } 
+my @sorted_array =
+    (sort
+        {
+            ($a->{'last'} cmp $b->{'last'}) ||
+            ($a->{'first'} cmp $b->{'first'})
+        }
         @array
     );
 

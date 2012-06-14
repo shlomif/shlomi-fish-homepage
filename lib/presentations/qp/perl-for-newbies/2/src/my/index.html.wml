@@ -4,7 +4,7 @@
 
 <p>
 Variables can be made local to their own scope by declaring them
-using a keyword called <tt>my</tt>. When the interpreter leaves the 
+using a keyword called <tt>my</tt>. When the interpreter leaves the
 scope, the variable will be restored to its original value.
 </p>
 
@@ -19,7 +19,7 @@ Here's an example:
 
 <p>
 If you wish to declare more than one variable as local you should use
-a set of parenthesis surrounding the variable list. For example: 
+a set of parenthesis surrounding the variable list. For example:
 <tt>my (@array, $scalar1, %hash, $scalar2);</tt>. If you want to declare only
 one variable, then they are optional.
 </p>

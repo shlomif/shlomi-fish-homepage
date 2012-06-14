@@ -11,7 +11,7 @@ Gimp-Perl scripts are technically plug-ins, which are written in Perl.
 </li>
 
 <li>
-Inside such a plug-in one can do everything that can be done in Perl - e.g: 
+Inside such a plug-in one can do everything that can be done in Perl - e.g:
 opening files, sockets, fork()ing and executing other programs and GUI code.
 </li>
 
@@ -22,7 +22,7 @@ has a more picky installation process.
 
 <li>
 Gimp-Perl has an extension called Gimp::Pixel that enables to write plug-ins
-using the <a href="http://pdl.perl.org/">Perl Data Language</a> (=PDL). 
+using the <a href="http://pdl.perl.org/">Perl Data Language</a> (=PDL).
 This is, in fact, the GIMP's answer to the Image Toolbox of Matlab.
 </li>
 </points>

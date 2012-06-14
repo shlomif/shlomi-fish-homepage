@@ -9,7 +9,7 @@ will be one of a range of several possible characters.
 
 <p>
 By putting a <tt>.</tt> character inside a regular expression, it means
-that it can match any character, excluding a newline. For example, 
+that it can match any character, excluding a newline. For example,
 the following snippet matches 5 letter words that start with 'l' and end with
 'x':
 </p>
@@ -21,7 +21,7 @@ the following snippet matches 5 letter words that start with 'l' and end with
 <h2>The [ ... ] specifies more than one option for a character</h2>
 
 <p>
-When square brackets appear, one can specify more than one character inside 
+When square brackets appear, one can specify more than one character inside
 them as option for matching. If the first character is <tt>^</tt> then they
 will match everything that is <b>not</b> one of the characters.
 </p>
@@ -32,7 +32,7 @@ One can specify a range of characters with the hyphen. For example the pattern
 </p>
 
 <p>
-Here's an example that checks if a valid identifier for a perl variable is 
+Here's an example that checks if a valid identifier for a perl variable is
 present in the string:
 </p>
 

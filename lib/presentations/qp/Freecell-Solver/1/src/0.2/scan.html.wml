@@ -23,7 +23,7 @@ Freecell-Solver(init_state)
         print "State was solved"
         while (state &lt;- Pop(ret))
             print state
-    else        
+    else
         print "I could not solve this board";
 
 </pre>

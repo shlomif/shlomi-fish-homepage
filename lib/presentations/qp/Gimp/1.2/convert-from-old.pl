@@ -20,7 +20,7 @@ foreach my $filename (@files)
 {
     open I, "<$filename";
     open O, ">$filename.wml";
-    
+
     print O "#include 'template.wml'\n\n";
     my $text = join("", <I>);
 
@@ -28,9 +28,9 @@ foreach my $filename (@files)
     $text =~ s/<!--+ *& *begin_header *-->.*?<!--+ *& *end_header *--+>//s;
     $text =~ s/<!--+ *& *begin_contents *-->.*?<!--+ *& *end_contents *--+>/<qpcontents \/>/gs;
     $text =~ s/<!--+ *& *begin_menupath *-->(.*?)<!--+ *& *end_menupath *--+>/<menupath>$1<\/menupath>/gs;
-    
+
     print O $text;
     close(I);
     close(O);
-    
+
 }

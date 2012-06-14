@@ -28,10 +28,19 @@ my $contents;
 }
 close($text_fh);
 
+$contents =~ s/[ \t]+$//gms;
+
+open my $back_fh, '>', $abs_out_fn
+    or die "Cannot open '$abs_out_fn' for writing - $!";
+binmode ($back_fh, ":utf8");
+print {$back_fh} $contents;
+close($back_fh);
+
 $contents =~ s{\A(.*?)<body>}{}ms;
 $contents =~ s{</body>(.*?)\z}{}ms;
 
 $contents =~ s{<h3( id="[^>]+>[^<]+)</h3>}{<fortune_h3$1</fortune_h3>}g;
+
 
 my $fn = "${abs_out_fn}-for-input";
 open my $xhtml_raw_out, ">", $fn

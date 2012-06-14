@@ -2,7 +2,7 @@
 
 <p>
 The statement <tt>die</tt> throws an exception which can be any Perl
-scalar. The statement <tt>eval { ... }</tt> catches an excpetion that was 
+scalar. The statement <tt>eval { ... }</tt> catches an excpetion that was
 given inside it, and after it sets the special variable <tt>$@</tt>
 to be the value of the exception or undef if none was caught.
 </p>

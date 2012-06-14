@@ -4,7 +4,7 @@
 # what might confuse the interpreter
 @primes = (2);
 
-MAIN_LOOP: 
+MAIN_LOOP:
 for $number_to_check (3 .. 200)
 {
     foreach $p (@primes)

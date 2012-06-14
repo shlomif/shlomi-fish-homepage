@@ -11,11 +11,11 @@
 
     sub get_everything
     {
-    
+
         my $contents = Contents::get_contents();
-        
+
         my $document_name = "intro.html" ;
-        
+
         $document_name =~ s/^\.//;
         $document_name =~ s!\.wml$!!;
         $document_name =~ s/index\.html//;
@@ -25,7 +25,7 @@
 
         $qp = Quad::Pres->new($contents, $document_name, $render_type);
 
-        $text = $qp->get_navigation_bar();    
+        $text = $qp->get_navigation_bar();
 
         $subject = $qp->get_subject();
 
@@ -55,7 +55,7 @@
 <body>
 <:{
     if (!defined($text))
-    {    
+    {
         get_everything();
     }
 :}><table>
@@ -77,7 +77,7 @@
 <hr />
 <:{
     if (!defined($text))
-    {    
+    {
         get_everything();
     }
 :}><table>
@@ -107,7 +107,7 @@
 
 <ul class="point">
 <li>
-<a href="http://vipe.technion.ac.il/~shlomif/quadpres/">QuaD-Pres</a> is short 
+<a href="http://vipe.technion.ac.il/~shlomif/quadpres/">QuaD-Pres</a> is short
 for Quick and Dirty Presentations.
 </li>
 <li>

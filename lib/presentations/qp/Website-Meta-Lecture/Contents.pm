@@ -110,7 +110,7 @@ my $contents =
             [
                 {
                     'url' => "questions.html",
-                    'title' => "questions.wml - the data",                    
+                    'title' => "questions.wml - the data",
                 },
                 {
                     'url' => "api.html",
@@ -143,8 +143,8 @@ my $contents =
             ],
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
         qw(
         examples/APIs/grid/index.html.wml

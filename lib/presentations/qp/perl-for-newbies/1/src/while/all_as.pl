@@ -11,12 +11,12 @@ $position = 0;
 while ($all_as && ($position < length($string)))
 {
     $char = lc(substr($string, $position, 1));
-    
+
     if ($char ne "a")
     {
         $all_as = 0;
     }
-    
+
     # Increment the position
     $position++;
 }
@@ -27,6 +27,6 @@ if ($all_as)
 }
 else
 {
-    print "At least one of the characters in the string " . 
+    print "At least one of the characters in the string " .
         "you entered is not \"A\".\n";
 }

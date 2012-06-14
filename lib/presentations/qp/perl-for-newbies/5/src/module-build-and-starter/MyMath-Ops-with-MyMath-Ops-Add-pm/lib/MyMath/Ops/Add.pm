@@ -66,7 +66,7 @@ Adds two numbers.
 sub add
 {
     my $self = shift;
-    
+
     my ($x, $y) = @_;
     return $x+$y;
 }

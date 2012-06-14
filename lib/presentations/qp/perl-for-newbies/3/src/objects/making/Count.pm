@@ -12,7 +12,7 @@ use Bar2;
 sub DESTROY
 {
     my $self = shift;
-    
+
     print "My name was assigned " . $self->get_num_times_assigned() . " times.\n";
 }
 

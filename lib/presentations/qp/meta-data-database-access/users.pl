@@ -17,19 +17,19 @@
             'name' => 'Username',
             'type' => "varchar",
             'type_params' => { 'len' => 30 },
-            'input_params' => 
+            'input_params' =>
             [
-                { 
+                {
                     'type' => 'unique',
-                }, 
-                { 
+                },
+                {
                     'type' => "not_match",
-                    'regex' => '^new$', 
+                    'regex' => '^new$',
                     'comment' => "new is a reserved word and cannot be assigned as a username",
                 },
                 {
                     'type' => 'match',
-                    'regex' => '^[a-zA-Z]\w*$' ,  
+                    'regex' => '^[a-zA-Z]\w*$' ,
                     'comment' => "The username must start with a letter and extend with letters, digits and underscores",
                 },
 
@@ -45,7 +45,7 @@
         {
             'name' => "Password",
             'type' => "varchar",
-            'type_params' => { 'len' => 255 }, 
+            'type_params' => { 'len' => 255 },
             'display' => {'type' => "password" },
         },
         {
@@ -56,7 +56,7 @@
         },
     ],
     'derived-tables' => [ "permissions" ],
-    'triggers' => 
+    'triggers' =>
     {
         'add' =>
         [
@@ -67,4 +67,4 @@
             "DELETE FROM permissions WHERE User_ID = \$F{User_ID}",
         ],
     },
-} 
+}

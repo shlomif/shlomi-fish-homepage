@@ -11,19 +11,19 @@ Many ADSL and Cable
 providers require their users to connect to them using a VPN.
 </li>
 <li>
-In order to create a VPN, it is common to tunnel a whole network protocol 
-stack, down to and including the data link layer, as an application layer 
+In order to create a VPN, it is common to tunnel a whole network protocol
+stack, down to and including the data link layer, as an application layer
 (layer 7) connection.
 </li>
 <li>
 Few common implementations of such VPN is <b>PPTP</b> (Point-to-Point
-Tunneling Protocol), <b>L2TP</b> (Layer 2 Tunneling Protocol) and 
+Tunneling Protocol), <b>L2TP</b> (Layer 2 Tunneling Protocol) and
 <b>PPPoE</b> (PPP
-over Ethernet). 
+over Ethernet).
 </li>
 <li>
 Out of these, the Linux "back-end"
 support for PPTP and PPPoE is good, while L2TP is still under
-development. 
+development.
 </li>
 </points>

@@ -1,6 +1,6 @@
 LATEMP_WML_FLAGS := $(shell latemp-config --wml-flags)
 
-COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib 
+COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
 	-DROOT~. -DLATEMP_THEME=better-scm \
@@ -21,7 +21,7 @@ include lib/make/gmsl/gmsl
 include include.mak
 include rules.mak
 
-make-dirs: $(T2_DIRS_DEST) 
+make-dirs: $(T2_DIRS_DEST)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
@@ -61,6 +61,12 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	chmod -x $@
 
 copy_fortunes: $(T2_DEST_FORTUNES)
+
+test: all
+	prove Tests/*.t
+
+runtest: all
+	runprove Tests/*.t
 
 upload_deps: all
 
@@ -121,7 +127,7 @@ VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST
 T2_PHILOSOPHY_DOCS = \
 	$(filter $(T2_DEST)/philosophy/%,$(T2_DOCS_DEST)) \
 	$(filter $(T2_DEST)/prog-evolution/%,$(T2_DOCS_DEST)) \
-	$(filter $(T2_DEST)/DeCSS/%,$(T2_DOCS_DEST)) 
+	$(filter $(T2_DEST)/DeCSS/%,$(T2_DOCS_DEST))
 
 $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 
@@ -166,7 +172,7 @@ T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
-VIPE_HUMOUR_DOCS_SRC = 
+VIPE_HUMOUR_DOCS_SRC =
 
 $(VIPE_HUMOUR_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
 	touch $@
@@ -335,7 +341,7 @@ HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postp
 
 FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST)
 
-$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml 
+$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
 	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
 	if test -e "$$xslt" ; then \
@@ -382,7 +388,7 @@ HHGG_CONVERT_SCRIPT_DEST = $(T2_DEST)/humour/by-others/$(HHGG_CONVERT_SCRIPT_FN)
 
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 	cp -f $< $@
-	
+
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
@@ -429,7 +435,7 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(SCREENPLAY_XML
 $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt
 $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml
 
-# Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are 
+# Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are
 # modified.
 
 $(T2_DEST)/philosophy/computers/high-quality-software/rev2/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality-rev2.html
@@ -439,7 +445,7 @@ $(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DO
 
 $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml : $(DOCBOOK4_RENDERED_DIR)/perfect-it-workplace.html
 
-# Rebuild the embedded docbook5 pages in the $(T2_DEST) after they are 
+# Rebuild the embedded docbook5 pages in the $(T2_DEST) after they are
 # modified.
 
 $(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
@@ -794,7 +800,7 @@ css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 SASS_STYLE = compressed
 SASS_CMD = sass --style $(SASS_STYLE)
 
-$(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass 
+$(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass
 	$(SASS_CMD) $< $@
 
 $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass
@@ -813,10 +819,10 @@ $(T2_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/for
 
 # $(T2_CSS_TARGETS) : $(T2_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
-# 
+#
 # $(VIPE_CSS_TARGETS) : $(VIPE_DEST)/% : lib/%.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(VIPE_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
-# 
+#
 # $(T2_DEST)/screenplay.css: lib/screenplay-xml/css/screenplay.css.ttml $(CSS_TARGETS_COMMON_DEPS)
 # 	perl $(CSS_GEN_SCRIPT) -o $@ $(T2_TTML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.ttml,%,$@)) $<
 #
@@ -828,7 +834,7 @@ $(T2_DEST)/work/hire-me/index.html $(T2_DEST)/work/hire-me/hebrew.html: lib/page
 docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \
 	install_docbook4_pdfs install_docbook4_rtfs \
-	install_docbook5_pdfs install_docbook5_rtfs 
+	install_docbook5_pdfs install_docbook5_rtfs
 
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 

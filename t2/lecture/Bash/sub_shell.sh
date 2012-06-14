@@ -1,4 +1,4 @@
-find . -name '*.c' | 
+find . -name '*.c' |
 (
 	while read T ; do
 		A=`echo $T | sed 's/\\.c\$//'`

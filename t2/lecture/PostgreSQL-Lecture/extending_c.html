@@ -30,7 +30,7 @@ extern int double_me(int a)
 {
     return a*2;
 }
-postgres:/home/postgres/lib# gcc -shared -Wl,-soname,libpgdouble.so.1 \ 
+postgres:/home/postgres/lib# gcc -shared -Wl,-soname,libpgdouble.so.1 \
 &gt;                                  -o libpgdouble.so double.c
 postgres:/home/postgres/lib# psql test
 Welcome to the POSTGRESQL interactive sql monitor:
@@ -42,9 +42,9 @@ Welcome to the POSTGRESQL interactive sql monitor:
    type \g or terminate with semicolon to execute query
  You are currently connected to the database: test
 
-test=&gt; CREATE FUNCTION double_me(int4) 
+test=&gt; CREATE FUNCTION double_me(int4)
 test-&gt; RETURNS int4
-test-&gt; AS '/home/postgres/lib/libpgdouble.so' 
+test-&gt; AS '/home/postgres/lib/libpgdouble.so'
 test-&gt; LANGUAGE 'c' \g
 CREATE
 test=&gt; SELECT double_me(5) \g

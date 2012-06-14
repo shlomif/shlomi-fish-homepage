@@ -34,7 +34,7 @@ get '/:foo' => sub {
 shagadelic;
 -----------------------
 
-More complex example, written by me for Insurgent Software and 
+More complex example, written by me for Insurgent Software and
 http://github.com/insurgentsoftware/socialmap/tree/master/dev/mojo-user-auth/[available on github] under a yet undecided open-source licence:
 
 -----------------------
@@ -94,7 +94,7 @@ my %actions_params =
         ['/login/' , "login",],
         ['/account' , "account_page",],
         ['/confirm-register' , "confirm_register",],
-        ['/password-reset' , "password_reset",], 
+        ['/password-reset' , "password_reset",],
         ['/handle-password-reset' , "handle_password_reset",],
     ],
     'post' =>
@@ -116,7 +116,7 @@ while (my ($verb, $actions) = each(%actions_params))
         __PACKAGE__->can($verb)->(
             $url => sub {
                 my $controller = shift;
-                return $app->with_mojo($controller, $action_name); 
+                return $app->with_mojo($controller, $action_name);
             } => $action_name
         );
     }
@@ -269,7 +269,7 @@ Verdict
 * Mojolicious seems like a nice try, and I'm happy to get paid writing
 Mojolicious code, but it's still not my pot at the end of the rainbow.
 
-* Some friends told me that http://search.cpan.org/dist/Dancer/[Dancer] is 
+* Some friends told me that http://search.cpan.org/dist/Dancer/[Dancer] is
 nice, and it relies on premade CPAN modules.
 ** No first-hand experience with it.
 

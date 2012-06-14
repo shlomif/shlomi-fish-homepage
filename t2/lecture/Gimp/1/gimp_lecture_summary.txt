@@ -12,30 +12,30 @@ Features: (with demos):
     - Can convert between them, but converting a gray-scaled image to
     RGB will not add colours to it.
 
-    - Demonstrate converting lena_color.jpg to grayscale and back 
+    - Demonstrate converting lena_color.jpg to grayscale and back
     to colour. (<Image> -> Image -> Mode)
 
     - Note: The <Image> menu is accessible by clicking the right mouse button
     or the arrow in the upper-left corner of the image.
 
-    - Some effects are not avialable in all modes.    
+    - Some effects are not avialable in all modes.
 
 * Supports 8-bit per color value RGB and Grayscale image
-    
+
     - Demonstrate with the colour picker.
 
-    - There's a patch available at http://film.gimp.org that adds 16-bit 
-    precision to it. It will be integrated into the main source tree in 
+    - There's a patch available at http://film.gimp.org that adds 16-bit
+    precision to it. It will be integrated into the main source tree in
     Gimp 2.0.
-    
+
 * Supports RGB and HSV modes.
 
     - Demonstrate with the colour selector of the active colour.
 
     - Some explanation about what RGB and HSV is.
-        
+
         - RGB: Red-Green-Black: Additive Colour components added to the graph.
-        
+
         - HSV: Hue (A unit that specifies the "colour" of the colour),
         Saturation which specifies how much black, white or gray is mixed with
         it, and Value which corresponds to its brightness.
@@ -44,11 +44,11 @@ Features: (with demos):
     at the moment.
 
         - CMYK stands for Cyan, Magenta, Yellow and blacK and is a
-          substractive method for specifying colours which in a similar 
+          substractive method for specifying colours which in a similar
           manner to mixing paint colours.
 
 * Several Basic effects can be performed using the Toolbox.
-    
+
     Demonstrate:
 
     1. Create a new image (<Toolbox> -> File -> "New ...")
@@ -59,8 +59,8 @@ Features: (with demos):
 
 * Effects and filters are implemented using Plug-ins. Plug-ins are separate
 programs that communicate with the main program using pipes. Plug-ins use
-libgimp to interact with the GIMP, and since libgimp is LGPLed, they can be 
-properietary. 
+libgimp to interact with the GIMP, and since libgimp is LGPLed, they can be
+properietary.
 
 There are also Script-Fu (= Scheme), Perl and Python extensions to the GIMP
 which enables one to write filters and scripts in those languages.
@@ -73,10 +73,10 @@ Selection and its usage:
 (Demonstrate on tiger_sitting.jpg)
 
 We can normally paint everywhere in the image but if we do a selection with
-any one of the selection tools, we can only operate there. In a similar way, 
+any one of the selection tools, we can only operate there. In a similar way,
 filters only operate on the current selection.
 
-Gimp Selections can be any subset of pixels. One can use the selection tools 
+Gimp Selections can be any subset of pixels. One can use the selection tools
 in combination with the Ctrl, Shift and Alt keys to shape them.
 
 Furthermore, by pressing the Red-Square Button at the bottom one can use
@@ -107,11 +107,11 @@ Paths..."). These layers can be duplicated, deleted, moved, etc.
 
         Demonstration:
         --------------
-        
+
         1. Generate an image with:
-        
+
         <Toolbox> -> Xtns -> Script-Fu -> Patterns -> "3D Truchet"
-        
+
         2. Duplicate the layer using <Layers> -> Duplicate Layer
 
         3. Render a nice gradient on the lower layer.
@@ -143,7 +143,7 @@ effects.
         5. Switch the colours to white as foreground and black as background.
 
         6. Draw a foreground to background RGB gradient around lena's face.
-        
+
             Note:
             -----
 
@@ -160,7 +160,7 @@ first (<Layers> -> "Merge Visible Layers..." or <Layers> -> "Flatten Image")
     ------------
 
     Layers can be merged using other methods beside their Alpha. These are
-    available in the "Mode" combo-box of the layers dialog. 
+    available in the "Mode" combo-box of the layers dialog.
 
         Demonstration:
         --------------
@@ -216,9 +216,9 @@ Brightness and Contrast:
 
     3. Close the histogram.
 
-    4. Access the Brightness and Contrast dialog 
+    4. Access the Brightness and Contrast dialog
         (<Image> -> Image -> Colors -> "Brightness-Contrast...")
-    
+
     5. Modify the Brightness and Contrast in some way.
 
         Note: the entire modified image is displayed in real-time because
@@ -228,18 +228,18 @@ Brightness and Contrast:
 
     7. Repeat if needed.
 
-Gamma Correction: 
+Gamma Correction:
 -----------------
 
-Q: How can we brighten or darken an image causing colour values 
+Q: How can we brighten or darken an image causing colour values
     to overflow?
 
     Concept:
     --------
-    
-    If we assume that the maximal colour value is 1 and the minimal is 0, 
-    then by applying a function of x ** (1/gamma) to every pixel we will 
-    modify the histogram while not overflowing from the image boundaries 
+
+    If we assume that the maximal colour value is 1 and the minimal is 0,
+    then by applying a function of x ** (1/gamma) to every pixel we will
+    modify the histogram while not overflowing from the image boundaries
     (which cannot be said on brightness and contrast manipulations).
 
     The more positive the gamme is the brighter the resultant image will be.
@@ -252,11 +252,11 @@ Q: How can we brighten or darken an image causing colour values
     1. Open the "A-Little-Exercise-3.jpg" image.
 
     2. Run <Image> -> Image -> Colors -> "Levels...".
-    
+
     3. Raise the value of the middle input box of "Input", and show the
     difference.
 
-    4. Try to set the brightness/contrast on the original image and see 
+    4. Try to set the brightness/contrast on the original image and see
     that it doesn't work well.
 
 Equalize:
@@ -266,7 +266,7 @@ The "Equalize" operation constructs an appopriate Look-Up Table so that
 the histogram of the resultant image will be more or less a constant
 function.
 
-Low colour values will remain lower than higher ones, but the spread of 
+Low colour values will remain lower than higher ones, but the spread of
 them will change.
 
     Demonstrate:
@@ -291,7 +291,7 @@ us to swap a range of colours in other colours in the Hue spectrum.
 
     Demonstrate: (on tiger_sitting.jpg)
     ------------
-    
+
     1. <Image> -> Image -> Colors -> "Colormap Rotation..."
 
     2. Replace the shades of brown and yellow with purple.
@@ -300,14 +300,14 @@ us to swap a range of colours in other colours in the Hue spectrum.
 
     4. Undo.
 
-    5. Convert the shades of green to browns and we get a tiger in the 
+    5. Convert the shades of green to browns and we get a tiger in the
     desert.
-    
+
 Color Balance:
 --------------
 
 Another Useful LUT is the Color Balance. It enables one to increase or
-decrease the individual components of Red, Green and Blue for either 
+decrease the individual components of Red, Green and Blue for either
 shadows, midtones or highlights.
 
     Demonstration:
@@ -315,14 +315,14 @@ shadows, midtones or highlights.
 
     1. Open lena_color.jpg
 
-    2. Invoke the colour balance dialog by selecting 
+    2. Invoke the colour balance dialog by selecting
     <Image> -> Image -> Colors -> "Color Balance..."
 
     3. Play with the settings while trying to cancel the over-colouring
     of the picture as much as possible.
 
 Note: there are more LUTs present in the GIMP. And if that's not enough
-you may wish to play with the Gimp::Pixel PDL bindings. (which is the 
+you may wish to play with the Gimp::Pixel PDL bindings. (which is the
 GIMP's answer to the Image Toolbox of Matlab).
 
 Basic Areal Effects:
@@ -335,17 +335,17 @@ Q: How can one Blur?
 
     Demonstrate a simple Blur:
     --------------------------
-    
+
     1. Open lena.png.
-    
+
     2. <Image> -> Filters -> Generic -> "Convolution Matrix..."
 
     3. Set the 9 middle squares to 1 and the rest to 0 and the divisor to 9.
 
     4. Press the OK Button.
 
-    5. Repeat several times with Alt+F 
-        (or <Image> -> Filters -> "Repeat Last") 
+    5. Repeat several times with Alt+F
+        (or <Image> -> Filters -> "Repeat Last")
         to strengthen the effect.
 
 Gaussian blur is a blur with a two-dimensional Gaussian kernel as the kernel.
@@ -356,12 +356,12 @@ more-or-less identical results but each one could be faster in some cases.
     (Show the Guassian Kernel on board)
 
     - RLE G. B. : I think it stands for Run-Length Encoding, but there's only
-        a hint to it in the source code. This blur operates best on 
-        computer-generated images or those with large areas of constant 
+        a hint to it in the source code. This blur operates best on
+        computer-generated images or those with large areas of constant
         intensity.
 
-    - IIR G. B. : I think it stands for Infinite Impulse Responce (which is 
-        one of the methods to construct a digital filter), but again there's 
+    - IIR G. B. : I think it stands for Infinite Impulse Responce (which is
+        one of the methods to construct a digital filter), but again there's
         nothing in the documentation or the code to explain the initials. This
         blurring works best for large radius values and for images which are
         not computer generated.
@@ -378,10 +378,10 @@ more-or-less identical results but each one could be faster in some cases.
     4. Apply.
 
     5. Optionally select different images or radiuses and play with it.
-    
+
     Demo 2:
     -------
-    
+
     1. Create a blank white image.
 
     2. Place a black text caption on it using the text tool.
@@ -390,7 +390,7 @@ more-or-less identical results but each one could be faster in some cases.
 
 Sharpen:
 --------
-    
+
 Q: How do we sharpen?
 
     Demo:
@@ -430,7 +430,7 @@ Scaling an Image:
 
 - Demo on tiger_sitting.jpg
 
-- When enlarging a picture, Gimp interpolates between the pixels (Q: How?) 
+- When enlarging a picture, Gimp interpolates between the pixels (Q: How?)
 so the picture does not look blocky, but not as good as the original either.
 
 The Rotate/Scale/Perspective Tool:
@@ -442,14 +442,14 @@ in several different ways.
     Demo:
     -----
 
-    1. Do it on a real-life image and on a one containing a 
+    1. Do it on a real-life image and on a one containing a
         simple text message.
 
     2. Double Click the Transform tool to specify what kind of transformation
         you want.
 
     3. Use the mouse to control the transformation.
-    
+
 Some Cool Effects:
 ==================
 
@@ -470,9 +470,9 @@ brightness.
 
     3. Select <Image> -> Filters -> Colors -> Map -> Gradient Map
         (That's the GIMP's record for menu depth)
-    
+
     4. Undo
-    
+
     5. Go to the Gradient Editor, create a copy of German Flag, and flip it.
 
     6. Select this copy.
@@ -503,8 +503,8 @@ fractals.
     -----
 
     1. Create an empty image.
-    
-    2. Invoke the Fractal Explorer with 
+
+    2. Invoke the Fractal Explorer with
         <Image> -> Filters -> Render -> Pattern -> "Fractal Explorer..."
 
     3. Play with it. (the upper-left preview is zoomable)
@@ -566,17 +566,17 @@ contain alphanumeric characters as well as underscores (which are translated
 to minus signs in Scheme). The list is flat so care must be taken to maintain
 namespace integrity.
 
-One can see the current list of available procedures by accessing 
+One can see the current list of available procedures by accessing
 <Toolbox> -> Xtns -> "DB Browser...". As is apparent by browsing it there are
 several classes of functions:
 
 1. Those that are implmented internally inside the GIMP.
 
 2. Those that were registered by the plug-ins and implemented by them. By
-writing your own plug-ins (in C) you can create such functions 
+writing your own plug-ins (in C) you can create such functions
 of your own.
 
-3. Those that are written in Scheme (begin with script-fu). 
+3. Those that are written in Scheme (begin with script-fu).
 
 4. Those that are written in Perl (those can possibly be unavailable).
 
@@ -600,8 +600,8 @@ by selecting <Toolbox> -> Xtns -> Script-Fu -> Console.
 
     3. Create a new image with the background as its filling.
 
-    4. At the commmand prompt of the console, type (gimp-image-list) and 
-        press enter and record the index of the image. (It's inside 
+    4. At the commmand prompt of the console, type (gimp-image-list) and
+        press enter and record the index of the image. (It's inside
         the inner parenthesis).
 
     5. Type (gimp-image-active-drawable $image) and record the drawable number.
@@ -620,29 +620,29 @@ Now let's see some of the Scheme scripts in action:
 
 1. Select <Toolbox> -> Xtns -> Script-Fu -> Logos -> "Bovination..."
 
-2. Press the button next to "Font:" in the dialog that appears and select a 
+2. Press the button next to "Font:" in the dialog that appears and select a
 nice scalable font.
 
 3. Press OK.
 
 4. And you have a full-fledged logo.
 
-One can see the source code for this script in 
+One can see the source code for this script in
 /usr/share/gimp/1.2/scripts/bovinated-logo.scm (replace /usr with your
 GIMP installation path and 1.2 with your gimp's major version). You can view
 it with gvim or something similar to display it nicely.
 
 * As can be seen the script is mostly linear and it performs
-    various operations one after the other. Don't ask me what's going on 
-    there and how the effect is made exactly (I didn't write that script), 
-    but if one is experienced enough he or she should be able to create 
+    various operations one after the other. Don't ask me what's going on
+    there and how the effect is made exactly (I didn't write that script),
+    but if one is experienced enough he or she should be able to create
     similar effects and place them inside such scripts.
 
 You can play with the other scripts in the Xtns -> Script-Fu -> Logos menu
 and view their source code. (my personal favourite is Frosty, which is quite
 heavy on CPU and time).
 
-An important problem with Script-Fu is debugging. While one can write and 
+An important problem with Script-Fu is debugging. While one can write and
 execute entire scripts as a whole, and execute individual commands on the
 command-line, there isn't an interactive debugger for Script-Fu. Also,
 Script-Fu uses a reduced version of SIOD as its Scheme back-end, which makes
@@ -664,20 +664,20 @@ available for Win32.
 
 Gimp-Perl scripts are similar in spirit to their Scheme equivalents except for
 the standard nuances of the different syntax. (note that where one would write
-"(gimp-foo-function myvar othervar)" in Script-Fu, he should 
+"(gimp-foo-function myvar othervar)" in Script-Fu, he should
 write "gimp_foo_function($myvar, $othervar);" in perl.)
 
-Gimp-Perl has an optional extension called Gimp::Pixel that enables to pass 
-data to and from PDL. PDL stands for the Perl Data Language and is a 
-Matlab-like extension to perl. By using PDL one can manipulate GIMP 
-images using mathematical tools in a manner that is usually much faster 
-to write than C, and equally as fast to execute. 
+Gimp-Perl has an optional extension called Gimp::Pixel that enables to pass
+data to and from PDL. PDL stands for the Perl Data Language and is a
+Matlab-like extension to perl. By using PDL one can manipulate GIMP
+images using mathematical tools in a manner that is usually much faster
+to write than C, and equally as fast to execute.
 
 Furthermore, because Gimp-Perl uses Perl/Gtk+ those scripts can present
 interactive GUI dialogs to the user.
 
 Note that not all Gimp installations support Perl/Gtk+ in order to not make
-it dependant on Perl and Perl/Gtk+. Thus, it is possible that you'll need to 
+it dependant on Perl and Perl/Gtk+. Thus, it is possible that you'll need to
 recompile the GIMP to enable it.
 
     Demo (?)
@@ -690,10 +690,10 @@ documentation on the web for it:
 
 http://gimp-plug-ins.sourceforge.net/
 
-Because Plug-Ins are given access to the GIMP's PDB, Plug-ins can invoke 
+Because Plug-Ins are given access to the GIMP's PDB, Plug-ins can invoke
 other plug-ins, so don't worry about modularity.
 
-Except for that, it seems that there is also Gimp-Python, Gimp-Guile and 
+Except for that, it seems that there is also Gimp-Python, Gimp-Guile and
 Gimp-Tcl.
 None of them seems too much alive, but one can try using them at his own
 risk.
@@ -702,7 +702,7 @@ Finale:
 =======
 
 This lecture only covered the tip of the iceberg of what can be done with the
-GIMP. To see more, you'll need to consult the resources I linked to, or 
+GIMP. To see more, you'll need to consult the resources I linked to, or
 experience on your own with the GIMP.
 
 I hope you enjoyed the lecture. If you have any other questions or comments

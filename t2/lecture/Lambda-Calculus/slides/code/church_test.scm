@@ -4,10 +4,10 @@
 	((church (lambda (a) (+ a 1))) 0)
 )
 
-(define succ 
-(lambda (n) 
-	(lambda (f) 
-		(lambda (x) 
+(define succ
+(lambda (n)
+	(lambda (f)
+		(lambda (x)
 			(f ((n f) x))
 		)
 	)
@@ -24,7 +24,7 @@
 (lambda (n)
 	(lambda (m)
 		((n succ) m)
-	)	
+	)
 ))
 
 (define mult
@@ -84,8 +84,8 @@
 
 (define pred
 (lambda (n)
-	(lc_car 
-		((n pred_next_tuple) 
+	(lc_car
+		((n pred_next_tuple)
 			((lc_cons zero) zero)
 		)
 	)

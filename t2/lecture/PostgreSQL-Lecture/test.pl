@@ -24,8 +24,8 @@ while (@row = $query->fetchrow_array())
 {
     ($first_name, $last_name, $hired_at) = @row;
 
-    print sprintf("%-40s%-20s", $first_name . " " . $last_name, $hired_at), 
-        "\n";    
+    print sprintf("%-40s%-20s", $first_name . " " . $last_name, $hired_at),
+        "\n";
 }
 
 undef($query);

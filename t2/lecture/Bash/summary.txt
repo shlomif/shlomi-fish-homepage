@@ -14,7 +14,7 @@ Motivation:
 * "./configure" scripts are written in Bourne shell, and knowledge of it
 is required to effectively use GNU autoconf.
 
-* /bin/sh is expected to be available on any UNIX system by virtue of POSIX. 
+* /bin/sh is expected to be available on any UNIX system by virtue of POSIX.
 
 * "Csh Programming Considered Harmful" by Tom Christiansen:
 
@@ -24,19 +24,19 @@ Basic Usage:
 ------------
 
 - Executing simple commands: command name followed by parameters
-    Examples: 
+    Examples:
         ls
         ls -l
         cp test.pl old_test.pl
 
 - Filename Matching mechanisms:
-    * 
+    *
     []
     ?
     Examples:
         ls -l *.c
         cp *.c ./bak_dir
-        
+
 - Pipeline: explain a little about standard input/standard output, then show
     the following redirection mechanisms:
     |
@@ -47,11 +47,11 @@ Basic Usage:
         cat *.c *h | wc -l
         ls -l | grep ^d | wc -l
 
-- The ";" - executing more than one statements in the same batch. A 
+- The ";" - executing more than one statements in the same batch. A
     synchronous executions.
     Examples:
         cd ./test_dir ; tar -czvf ../test_dir.tar.gz *
-    
+
 - The "(" .. ")" - grouping statements inside a _subshell_ (separate process).
     Examples:
         ( cd ./bin ; ls d* ) > files_in_bin_that_start_with_a_d.txt
@@ -70,7 +70,7 @@ Basic Usage:
 
 - Introducing comments with "#". They start with a # and extend to the end of
   the line.
-  
+
 Variables:
 ----------
 
@@ -91,10 +91,10 @@ and after the "=" symbol.)
         - A=Y
           Y=80
           echo ${$A}
-          
+
 - A little about interpolation: A dollar can appear anywhere. If the shell
   encounters a $ which is not followed by curly brackets ("{" .. "}") it will
-  try to interpolate its name from as many characters as it find, even if 
+  try to interpolate its name from as many characters as it find, even if
   a variable by that name does not exist. Thus, when in doubt, use the
   "${NAME}" form.
 
@@ -102,19 +102,19 @@ and after the "=" symbol.)
         - A=hello
           echo $Aworld
           # does not print helloworld
-    
 
-- The "${parameter:-defaultvalue}" form enables you to give the expression a 
+
+- The "${parameter:-defaultvalue}" form enables you to give the expression a
   default value in case the variable is not assigned.
     Examples:
         -
             #!/bin/bash
-            
-            ; 
+
+            ;
             ; Possibly set A
             B=${A:-not_set}
             ; Check if B is equal to not_set and accordingly do something.
-            
+
 - To unset a variable use the "unset" command:
     Examples:
         -
@@ -135,14 +135,14 @@ and after the "=" symbol.)
         unset A E
         set | grep '^[A-F]='
 
-- The "read VARNAME" command reads a line from the standard output and puts 
-  it inside the variable "VARNAME". 
+- The "read VARNAME" command reads a line from the standard output and puts
+  it inside the variable "VARNAME".
     Examples:
         echo "Please enter your name:"
         read NAME
         echo Hello $NAME
-       
-  
+
+
     - Note: Be careful not to use "read $VARNAME" when it's not appropriate.
         For example:
             #!/bin/sh
@@ -158,11 +158,11 @@ Quoting, Backslashing and other animals
 - A backslash before a character denotes an "actual" character. Hence means,
   it cannot be processed by the shell.
     Examples:
-        - 
+        -
         echo Hello\ \ \ \ \ World        # vs.
         echo Hello     World
         -
-        echo good ; echo you        
+        echo good ; echo you
         echo good \; echo you                    # vs.
         -
         echo \\ - This is a backslash
@@ -178,7 +178,7 @@ Quoting, Backslashing and other animals
         #!/bin/sh
         A=Hello
         echo "$A    world!"
-        
+
 - Use the single quotes to group strings which include whitespace, dollars
   and backslashes without doing variable interpolation:
     Examples:
@@ -212,7 +212,7 @@ Conditionals, Loops and Program Return Codes
 
     As long as there are semi-colons the commands need not be on separate
     lines. Examples:
-    
+
     -
         #!/bin/sh
         if test -e hello.txt ; then
@@ -220,17 +220,17 @@ Conditionals, Loops and Program Return Codes
         else
             echo "hello.txt does not exist"
         fi
-   
+
    Or the same on the same line:
-        
+
         if test -e hello.txt ; then echo "hello.txt exists" ; else echo \
             "hello.txt does not exist" ; fi
 
    The latter syntax is useful for on-the-prompt scripting.
-   
+
    -
         read A
-        if expr $A \< 100 > /dev/null ; then   
+        if expr $A \< 100 > /dev/null ; then
             echo "$A is less than 100"
         fi
 
@@ -245,7 +245,7 @@ Conditionals, Loops and Program Return Codes
     done
 
     Examples:
-    - 
+    -
         #!/bin/sh
         A=0
         while expr $A \< 100 > /dev/null ; do
@@ -254,12 +254,12 @@ Conditionals, Loops and Program Return Codes
                                # of the command.
                                # More on that later.
         done
-    
+
         This program prints the numbers from 0 to 99.
 
-    - 
+    -
         #!/bin/sh
-        find . -name '*.c' | 
+        find . -name '*.c' |
         (while read T ; do
             cp $T $T.bak ;
         done)
@@ -271,25 +271,25 @@ Conditionals, Loops and Program Return Codes
     for VARNAME in value1 value2 value3 ... ; do
         <For Block where you can use $VARNAME>
     done
-    
+
     Examples:
-    -    
-        for I in *.c *.h ; do 
+    -
+        for I in *.c *.h ; do
             cp $I $I.bak
         done
 
-- As far as "if" and "while" are concerned a statement is considered true if 
-    its return code is 0, and false otherwise. The return code of a program is 
+- As far as "if" and "while" are concerned a statement is considered true if
+    its return code is 0, and false otherwise. The return code of a program is
     the return code of its main() function, or what was passed as a parameter
     to exit().
 
-- The statement "true" always returns 0 and the statement "false" always 
+- The statement "true" always returns 0 and the statement "false" always
     returns 1.
 
-- You can find the return code of the last program ran by using the "$?" 
+- You can find the return code of the last program ran by using the "$?"
     variable.
 
-- <Statement 1> && <Statement 2> will execute Statement 2 iff Statement 1 
+- <Statement 1> && <Statement 2> will execute Statement 2 iff Statement 1
     returns a true value.
 
   <Statement 1> || <Statement 2> will execute Statement 2 iff Statement 1
@@ -298,12 +298,12 @@ Conditionals, Loops and Program Return Codes
   For example:
 
     (cd hello/ && ls) > hello.files.txt
-    
+
     test -e hello.xcf || {
         echo "hello.xcf does not exist";
         exit
         }
- 
+
 - Functions: syntax:
     function hello() {
         ## Body Of Function ##
@@ -311,7 +311,7 @@ Conditionals, Loops and Program Return Codes
 
     Functions are used as simple commands and with the same calling syntax.
 
-    
+
 
 Trapping Command Output
 -----------------------
@@ -319,39 +319,39 @@ Trapping Command Output
 - Use the $( ... ) and ` ... ` constructs to trap the output of commands. The
     difference between the two is that `` acts very simliarly to the ""
     quotes, in the fact that it expands variables and so forth. $( ... ) on
-    the other hand, acts much like a sub-shell while differing only in the 
+    the other hand, acts much like a sub-shell while differing only in the
     fact that the output of the command is trapped.
 
     Examples:
-        
+
         A=$(cat hello.txt | grep mystring | head -1)
-        
+
         A=`cat hello.txt | grep mystring | head -1`
 
         C=`expr $A + $B` # Adds A and B and put the result in C
 
     Note: The $( ... ) notation was borrowed from the Korn Shell. It is
-    supported by bash, zsh and ash, but not by /bin/sh's of properitary 
+    supported by bash, zsh and ash, but not by /bin/sh's of properitary
     System V UNIXes. (at least not that of Solaris). Thus, if you care
     about portability you cannot use it. Instead, construct a command inside
     one variable (e.g: A="ls -l | grep ^\$A | wc -l") and then execute this
     single variable (`$A`).
 
 - Another option is to pipe the command output to a sub-shell or sub-script:
-    
+
     Examples:
-    
-    - find . -name '*.[ch]' -print | 
+
+    - find . -name '*.[ch]' -print |
         (
-        while read T ; 
+        while read T ;
             do cp $T $T.bak
         done
         )
 
-    - cat hello.txt | head -3 | { read A ; read B ; read C} # Put the 
+    - cat hello.txt | head -3 | { read A ; read B ; read C} # Put the
                             # first three lines of hello.txt in A, B and C.
 
-    
+
 - You can redirect the standard error to the standard output using the "2>&1"
   consturct. If you wish to put it in a separate file, use "2>". The same can
   be done with other file descriptors assuming they are used by your program.
@@ -362,11 +362,11 @@ Trapping Command Output
 
   Note: a shorthand for "make > hello.txt 2>&1" is "make &> hello.txt".
 
-- 
-  
+-
+
 References and Links:
 ---------------------
 
 * Advanced Bash Programming from the LDP.
 
-    
+

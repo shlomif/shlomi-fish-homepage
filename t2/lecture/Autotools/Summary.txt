@@ -16,7 +16,7 @@ Autoconf/Automake/Libtool Lecture Summary:
     Autoconf 2.5 the file configure.ac) and generates the ./configure script
     out of it.
     - ./configure, when ran by the user generates the normal "Makefile"
-    out of "Makefile.in" and optionally processes other files (such as 
+    out of "Makefile.in" and optionally processes other files (such as
     config.h.in -> config.h, an optional RPM Spec, Makefiles in other
     directories, etc)
 

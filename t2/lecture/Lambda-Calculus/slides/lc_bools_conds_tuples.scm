@@ -14,10 +14,10 @@
 ((mycond a) b)
 
 ; Therefore, we can define if as:
-(define lc_if 
-    (lambda (mycond) 
-        (lambda (if-true) 
-            (lambda (if-false) 
+(define lc_if
+    (lambda (mycond)
+        (lambda (if-true)
+            (lambda (if-false)
                 ((mycond if-true) if-false)
             )
         )
@@ -31,8 +31,8 @@
 ; Representing Tuples
 ; -------------------
 
-; We can represent tuple as an if-expression. If the conditional is passed 
-; the value lc_true then we will return the tuple's car. If the if is passed 
+; We can represent tuple as an if-expression. If the conditional is passed
+; the value lc_true then we will return the tuple's car. If the if is passed
 ; the value lc_false then we will return the tuple's cdr.
 
 (define lc_cons

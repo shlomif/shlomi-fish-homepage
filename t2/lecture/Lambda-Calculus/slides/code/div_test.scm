@@ -14,7 +14,7 @@
 			(lambda (div_by)
 				(((((greater-or-equal div) div_by)
 					(lambda (no_use)
-						(f ((lc_cons 
+						(f ((lc_cons
 							((subtract div) div_by))
 							div_by))
 					))
@@ -63,15 +63,15 @@
 ;(define (div_get_number tuple) (lc_car (lc_cdr tuple)))
 ;(define (div_get_div_by tuple) (lc_car (lc_cdr (lc_cdr tuple))))
 
-(define divide_helper 
+(define divide_helper
 (Y (lambda (f)
 	(lambda (x)
 		(((lambda (div)
 			(lambda (div_by)
 				(((((greater-or-equal div) div_by)
 					(lambda (no_use)
-						(succ (f ((lc_cons 
-							((subtract div) div_by)) 
+						(succ (f ((lc_cons
+							((subtract div) div_by))
 							div_by)))
 					))
 					(lambda (no_use)
@@ -96,7 +96,7 @@
     (lambda (div_by)
         ((Y (lambda (f)
             (lambda (x)
-                (((((greater-or-equal x) div_by)  
+                (((((greater-or-equal x) div_by)
                     (lambda (no_use)
                         (succ (f ((subtract x) div_by)))
                     ))

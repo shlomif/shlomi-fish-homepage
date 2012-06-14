@@ -21,7 +21,7 @@
 ))
 
 (define (_cond x) (if (> x 5) lc_false lc_true))
-(define (_oper x) 
+(define (_oper x)
 	(display x)
 	(newline)
 	(+ x 1)

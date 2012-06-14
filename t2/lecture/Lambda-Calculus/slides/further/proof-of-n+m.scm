@@ -6,10 +6,10 @@ add2 == (lambda (n) (lambda (m) ((n f) ((m f) x))))
 ; We have to prove that "add" and "add2" produce the same results
 ; for every Church Numeral value of the "n" and "m" parameters.
 
-; Proof by Induction. 
+; Proof by Induction.
 ; Step 1 : Base
 ; Let's prove it for n == lc_zero
-add == (lambda (n) 
+add == (lambda (n)
          (lambda (m)
             ((n succ) m)
          )
@@ -51,9 +51,9 @@ add == (lambda (n*)
 add == (lambda (n*)
          (lambda (m)
            (((
-            (lambda (t) 
-              (lambda (f) 
-                (lambda (x) 
+            (lambda (t)
+              (lambda (f)
+                (lambda (x)
                   (f ((t f) x))
                   )))
             n) succ) m)))
@@ -70,9 +70,9 @@ add == (lambda (n*)
 
 add == (lambda (n*)
          (lambda (m)
-           ((lambda (t) 
-              (lambda (f) 
-                (lambda (x) 
+           ((lambda (t)
+              (lambda (f)
+                (lambda (x)
                   (f ((t f) x))
                   )))
            ((n succ) m)
@@ -90,7 +90,7 @@ add == (lambda (n*)
            )
          )
 
-; ((((n succ) m) f) x) is ((n f) ((m f) x)) according to the induction 
+; ((((n succ) m) f) x) is ((n f) ((m f) x)) according to the induction
 ; hypothesis
 
 add == (lambda (n*)

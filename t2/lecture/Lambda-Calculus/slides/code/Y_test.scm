@@ -31,7 +31,7 @@
 (display "The solution is: ")
 (display (result solution))
 (newline)
-	
+
 (define (top x) (lc_car x))
 (define (var x) (lc_car (lc_cdr x)))
 (define (result x) (lc_car (lc_cdr (lc_cdr x))))
@@ -50,24 +50,24 @@
 	(lambda (x)
 		(((((less-or-equal (var x)) (top x))     ; If var x < top x
 			(lambda (no_use)
-			(f 
-				(((make-mysum-list 
-					(top x)) 
-					(succ (var x))) 
+			(f
+				(((make-mysum-list
+					(top x))
+					(succ (var x)))
 					((add (result x)) (var x)))
 			)
 			))
 			(lambda (no_use)
 				x
-			)) 
+			))
 				zero ;  Pass zero as argument to no_use
 			)
 		)
 	)
 ))
 
-(define solution (mysum 
-	(((make-mysum-list 
+(define solution (mysum
+	(((make-mysum-list
 		(int->church 10))
 		(int->church 5))
 		(int->church 0))

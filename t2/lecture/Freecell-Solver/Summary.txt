@@ -9,7 +9,7 @@ The faces of all the cards are visible at the beginning of play.
 
 * A freecell can hold one _single_ card.
 
-* The foundations are built from ace to king and the object of the 
+* The foundations are built from ace to king and the object of the
 game is to move all the cards to the foundations.
 
 * A card can be placed on top of a card that is of the opposite colour,
@@ -21,7 +21,7 @@ stack.
 * An atomic move consists of:
     - moving a card from a stack to a freecell.
     - moving a card from a freecell to a parent card on a stack.
-    - moving a card from the top of a stack on top of a parent card on a 
+    - moving a card from the top of a stack on top of a parent card on a
       different stack
     - moving a card from the top of a stack or from a freecell to the
       foundation.
@@ -35,7 +35,7 @@ stack.
 
     * Sometimes, it is useful to move cards to the freecells, so the card
       below them can serve as a basis for a sequence.
-      
+
 The Freecell Solver 0.2 Architecture:
 -------------------------------------
 
@@ -68,7 +68,7 @@ Freecell-Solver(init_state)
 
 * Several tests to get to subsequent moves - give some examples:
     I called them "multi-move" to indicate they may include one or more
-    moves or "supermoves". By coding them I tried to emulate the kind of 
+    moves or "supermoves". By coding them I tried to emulate the kind of
     moves a human player would try to do.
 
     Examples:
@@ -86,18 +86,18 @@ Freecell-Solver(init_state)
 
     Due to their multi-moves heuristic nature, it is possible that some boards
     are solveable, yet cannot be solved by FCS.
-    
-* Once the program finds a solution it outputs the intermediate boards to 
+
+* Once the program finds a solution it outputs the intermediate boards to
     the screen.
 
 * Each state was represented as a relatively large data structure containing
-other data structures. 
+other data structures.
     - A card was { short, short}
     - A stack was { int, card[] },
     - A state was { stack[] }.
 
-* The State collection was implemented as a sorted vector of whole state data 
-    structures. 
+* The State collection was implemented as a sorted vector of whole state data
+    structures.
     - It had a sort margin, so not every new element would require moving
         many states aside.
     - After several elements were collected the array and its sort margin
@@ -112,7 +112,7 @@ The State Collection Representation Improvements:
     * The sort margin is kept outside the main array.
 
     * It is added to the main array by using a binary search-based merge.
-    
+
         - The reason why it was preferred over a normal linear merge
           was because there are usually much more elements in the main
           array so a lot of time would be spent on comparisons.
@@ -141,7 +141,7 @@ The State Collection Representation Improvements:
       3. glib - contains an implementation of a balanced binary tree.
 
       There are others, but I decided to stick to those three.
-    
+
     * By using a balanced binary tree I managed to increase the brute speed
       by %33. (and the net speed times 2 or so).
 
@@ -150,29 +150,29 @@ The State Collection Representation Improvements:
 
         Description: What is a Hash Table?
         ----------------------------------
-        
+
         * A hash table is a vector of linked lists. Each linked list contains
           a set of keys (or key-value pairs).
 
         * The index of the list in which the key is placed is determined by
           a hash function. Usually, the hash function generates an integer
-          in a very large range, and the index is its modulo with the number 
+          in a very large range, and the index is its modulo with the number
           of elements in the hash table.
 
             Rehashing:
             ----------
-            
+
             Sometimes, when a hash becomes two crowded, the number of elements
             in it is increased and all of its existing elements are placed in
             their new place.
-    
-    
-    * I first tried using glib's hash implementation with a 4-byte wide XOR as 
+
+
+    * I first tried using glib's hash implementation with a 4-byte wide XOR as
       the hash function. This generated very awful results.
-      
+
     * Then I tried using the MD5 hash function, and got excellent results
       similar to what I encountered when using a balanced binary tree.
-    
+
     * I coded my own stripped-down hash implementation in my attempt to figure
       out what went wrong with using a hash. It turned out to be a bit faster
       than glib's hash.
@@ -201,20 +201,20 @@ The State Representation:
       reduce the size. I made a card as a char whose first 4 bits were the
       rank and the two more upper bits the rank.
 
-    * Surprisingly, this made the game even faster. 
-    
-    * I consulted a mailing list of mine with this anomaly and reached the 
-      conclusion that it happened because there were fewer cache misses 
+    * Surprisingly, this made the game even faster.
+
+    * I consulted a mailing list of mine with this anomaly and reached the
+      conclusion that it happened because there were fewer cache misses
       this way.
 
     Pointers to stacks instead of a vector of stacks:
     -------------------------------------------------
-    
-    * I later encountered two variants of Freecell (dubbed Der Katzenschwanz 
-      and Die Schlange) whose stacks could be extremely long (roughly as 
-      long as the number of cards in two decks). 
-    
-    * This made representing the states as a direct vector of constant-sized 
+
+    * I later encountered two variants of Freecell (dubbed Der Katzenschwanz
+      and Die Schlange) whose stacks could be extremely long (roughly as
+      long as the number of cards in two decks).
+
+    * This made representing the states as a direct vector of constant-sized
       stacks very wasteful.
 
     * What I did was store pointers for the stacks in each state, and store
@@ -242,8 +242,8 @@ The State Representation:
       comparison, it would have costed dearly, because every insert requires
       more than one comparison.
 
-    * The solution: "Indexes out of Bounds of Main Data Structure"<tm> - 
-      anti-patent pending technology. 
+    * The solution: "Indexes out of Bounds of Main Data Structure"<tm> -
+      anti-patent pending technology.
 
     * The original indexes of the stacks and freecells are kept outside the
       main data structure:
@@ -278,7 +278,7 @@ Scans:
 Move Stacks:
 ------------
 
-* In the beginning, the user had to deduce what had happened between two 
+* In the beginning, the user had to deduce what had happened between two
 subsequent states.
 
 * That was:
@@ -288,6 +288,6 @@ subsequent states.
 * I created the concept of move stacks, which each test loaded with the moves
 that were it performed.
 
-* Those stacks were later collected into one stack, to get the total move 
+* Those stacks were later collected into one stack, to get the total move
 stack from the initial board to the final solution.
 

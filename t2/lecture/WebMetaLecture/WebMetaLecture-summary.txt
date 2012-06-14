@@ -21,7 +21,7 @@ The WML Methodology:
 Example 1: A Common Look and Feel <common_look>
 ----------------------------------
 
-1. Prepare a template file: template.wml 
+1. Prepare a template file: template.wml
 
 <<< Insert code >>>
 
@@ -44,7 +44,7 @@ Voila! A fully functional site.
 
     $(ROOT) is a preprocessor variable that is defined in the makefile
     and is expanded whenever it appears. (Note: it will stick to the current
-    directory regardless of the directory of the filename, by virtue of 
+    directory regardless of the directory of the filename, by virtue of
     being defined with ~ instead of =)
 
     {#NAME#:TEXT:##} assigns TEXT to the diversion NAME
@@ -64,14 +64,14 @@ linked to:
     Explanation:
     ------------
 
-    <ifneq ...> compares its first two arguments - if they are not equal, 
+    <ifneq ...> compares its first two arguments - if they are not equal,
     it expands to its third argumnent, else it expands to its fourth. There's
     also <ifeq ... >
 
 Example 3: Creating a Meta-Tag
 ------------------------------
 
-The previous example contained a lot of duplicate functionality. Let's 
+The previous example contained a lot of duplicate functionality. Let's
 abstract it in a meta-tag.
 
     Explanation:
@@ -104,7 +104,7 @@ Body of answer
 
 </question>
 
-This tag will expand to the title with the body if a global variable is set 
+This tag will expand to the title with the body if a global variable is set
 to a non-empty string, and to the hyperlinked title if it is empty.
 
 We'll also create two meta tags <promote /> and <demote /> which will enable

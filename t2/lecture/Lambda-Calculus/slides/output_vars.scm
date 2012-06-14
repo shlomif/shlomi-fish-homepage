@@ -1,7 +1,7 @@
 ; Welcome to Scheme!
-; In Scheme function calls (or other constructs) start with a "(" 
+; In Scheme function calls (or other constructs) start with a "("
 ; and end with a ")". The arguments are separated by whitespaces.
-; 
+;
 ; The first argument is the function name and the rest are arguments.
 ;
 ; Examples:

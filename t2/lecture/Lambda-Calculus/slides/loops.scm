@@ -6,13 +6,13 @@
 
 (define a 1)
 
-(define iter1 
+(define iter1
     (lambda ()
         (display a)
         (newline)
         (set! a (+ a 1))
         (if (<= a 100)
-            (iter1)    
+            (iter1)
         )
     )
 )

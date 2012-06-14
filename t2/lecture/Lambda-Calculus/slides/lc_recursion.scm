@@ -11,7 +11,7 @@
 ; Let's demonstrate it in Scheme:
 
 (define (recurser f p)
-    (if (= p 0) 
+    (if (= p 0)
         1
         (* 2 (f f (- p 1)))
     )
@@ -30,7 +30,7 @@
     ((lambda (f)
         ((f f) p)
     )
-    
+
         ; This is the recursive function itself
         (lambda (f)
             (lambda (p)

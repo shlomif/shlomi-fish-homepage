@@ -24,7 +24,7 @@ int main()
     pgport = NULL;
     pgoptions = NULL;
     pgtty = NULL;
-    
+
     dbName = "test";
 
     conn = PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);
@@ -46,7 +46,7 @@ int main()
     }
     PQclear(res);
 
-    res = PQexec(conn, 
+    res = PQexec(conn,
         "SELECT first_name, last_name, hired_at"
         " FROM employees"
         " ORDER BY last_name, first_name"

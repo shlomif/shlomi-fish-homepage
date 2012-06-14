@@ -30,7 +30,7 @@ shift(@lines);
 
 my @fortunes = (map { /([\w\-_]+)/ ; $1 } @lines);
 
-my @cmd_line = 
+my @cmd_line =
 (
     $^X,
     "-MXML::Grammar::Fortune::Synd::App",

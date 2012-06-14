@@ -24,15 +24,15 @@ some conversion errors, or not-entirely-semantic-markup.
 <h2 id="web-feed">Web Feeds</h2>
 
 <ul>
-<li><a href="fortunes-shlomif-all.rss"><b>RSS 2.0 feed</b></a></li> 
+<li><a href="fortunes-shlomif-all.rss"><b>RSS 2.0 feed</b></a></li>
 <li><a href="fortunes-shlomif-all.atom"><b>Atom feed</b> for
 these fortunes</a> (does not validate)</li>
 </ul>
 
 <p>
-Keep track of the newest ones added using 
+Keep track of the newest ones added using
 <a href="http://en.wikipedia.org/wiki/Aggregator">a Web-Feed
-Reader/Aggregator</a> (see <a 
+Reader/Aggregator</a> (see <a
 href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikipedia</a>).
 </p>
 
@@ -78,7 +78,7 @@ foreach my $r (@{Shlomif::Homepage::FortuneCollections->get_fortune_records()})
     print <<"EOF";
 <li>
 <p>
-<a href="$id.html"><b>$id</b></a> 
+<a href="$id.html"><b>$id</b></a>
 (<a href="$id.xml">XML</a>, <a href="$id">Plaintext</a>) -
 $desc
 </p>
@@ -86,7 +86,7 @@ $desc
 EOF
     });
 }
-    
+
 }:>
 </ul>
 </li>
@@ -96,7 +96,7 @@ EOF
 <h2 id="disclaimer">Commentary and Disclaimer</h2>
 
 <p>
-Please report any typos or inaccuracies to me by 
+Please report any typos or inaccuracies to me by
 <a href="mailto:<main_email />">E-mail</a>. The quotations
 here are owned by their respective copyright holders, and come with
 no warranty of any kind.
@@ -106,19 +106,19 @@ no warranty of any kind.
 
 <p>
 As far as Shlomi Fish, who is collecting and maintaining these quotes, is
-concerned, this collection of fortune cookies is licensed under the 
+concerned, this collection of fortune cookies is licensed under the
 <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">Creative
 Commons Attribution-ShareAlike License 3.0 (CC-by-sa) Unported (or at
-your option any later version of that licence)</a>. However, as noted earlier, 
-these fortune cookies were collected from various sources, many of them are 
-not original or under incompatible or “All Rights Reserved” licences, and some 
+your option any later version of that licence)</a>. However, as noted earlier,
+these fortune cookies were collected from various sources, many of them are
+not original or under incompatible or “All Rights Reserved” licences, and some
 of them (like the many IRC conversations there) contain text by many authors.
 So one should take care.
 </p>
 
 <p>
 If you feel any of these quotes is doing you damage, and you wish it to be
-removed or modified, then <a href="$(ROOT)/me/contact-me/">contact 
+removed or modified, then <a href="$(ROOT)/me/contact-me/">contact
 Shlomi Fish</a> and he’ll see what he can do.
 </p>
 
@@ -163,16 +163,16 @@ Microsoft jokes, and some portions of their articles.
 Volovic Flames Collection</a> - Another Linux-IL folklore...
 </li>
 <li>
-<a href="http://www.datawar.net/technology/fortunes-random.html">Fortunes-random</a> 
+<a href="http://www.datawar.net/technology/fortunes-random.html">Fortunes-random</a>
 - a collection of random fortune cookies.
 </li>
 <li>
-<a href="http://kernelnewbies.org/kernelnewbies-fortunes.tar.gz">The 
-\#kernelnewbies fortune file</a> - a collection of funny or amusing Linux 
+<a href="http://kernelnewbies.org/kernelnewbies-fortunes.tar.gz">The
+\#kernelnewbies fortune file</a> - a collection of funny or amusing Linux
 kernel development related quotes.
 </li>
 <li>
-<a href="http://www.katspace.net/quotes/">KatSpace Quotes in 
+<a href="http://www.katspace.net/quotes/">KatSpace Quotes in
 Fortune Format</a>.
 </li>
 <li>

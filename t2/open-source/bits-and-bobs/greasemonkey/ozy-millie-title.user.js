@@ -145,11 +145,11 @@ document.getElementsByTagName('head')[0].appendChild(GM_JQ);
 // Check if jQuery's loaded
 function GM_wait() {
     if(typeof unsafeWindow.jQuery == 'undefined') {
-        window.setTimeout(GM_wait,100); 
+        window.setTimeout(GM_wait,100);
     }
-    else { 
+    else {
         $ = unsafeWindow.jQuery;
-        letsJQuery(); 
+        letsJQuery();
     }
 }
 GM_wait();
@@ -178,6 +178,6 @@ function letsJQuery()
 
     var total_text = "=== [" + loc + " " + formatted_date + " - " + title + "] ===";
 
-    $("center > h3").after("<b>MediaWiki Title:</b> <input name=\"mw_title\" id=\"mw_title\" value=\"" + myesc(total_text) + "\">\n<br>\n<br>\n<br>\n"); 
+    $("center > h3").after("<b>MediaWiki Title:</b> <input name=\"mw_title\" id=\"mw_title\" value=\"" + myesc(total_text) + "\">\n<br>\n<br>\n<br>\n");
 }
 

@@ -54,8 +54,8 @@ void putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
     }
 #endif
 
-/* 
- * Linus Torvalds would kill me if he saw this, but who is John Galt? 
+/*
+ * Linus Torvalds would kill me if he saw this, but who is John Galt?
  * (at least not Linus, I hope)
  * */
 #define min(a,b) (((a)<(b))?(a):(b))
@@ -96,9 +96,9 @@ int main(int argc, char * argv[])
     int y_acc_degree, y_x_acc_degree;
     int prev_y_acc_degree, prev_y_x_acc_degree;
     int y_acc_y_pos, y_acc_x_pos;
-    
+
     Uint8 fill_color, pen_color;
-    
+
     SDL_Surface *screen;
     SDL_Rect * rects;
     SDL_Rect * the_rect;
@@ -125,7 +125,7 @@ int main(int argc, char * argv[])
     signal(SIGQUIT, my_stop_program);
     signal(SIGINT, my_stop_program);
 #endif
-    
+
     /*
      * Initialize the display in a 640x480 8-bit palettized mode,
      * requesting a software surface
@@ -211,16 +211,16 @@ int main(int argc, char * argv[])
                 the_rect++;
 
                 /* I don't need to lock the screen, so I'm omitting it */
-                
+
                 putpixel(
-                    screen, 
+                    screen,
                     x_pos,
                     prev_y_height,
                     fill_color
                     );
 
                 putpixel(
-                    screen, 
+                    screen,
                     x_pos,
                     this_y_height,
                     pen_color
@@ -249,7 +249,7 @@ int main(int argc, char * argv[])
                 case SDL_QUIT:
                     mycont = 0;
                     break;
-                    
+
             }
         }
     }

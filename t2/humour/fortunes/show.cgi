@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 BEGIN {
-    my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' : 
+    my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' :
         ( getpwuid($>) )[7] . '/perl/');
     unshift @INC, map { $base_module_dir . $_ } @INC;
 }
@@ -112,13 +112,13 @@ sub _invalid_mode
 
     my $mode_esc = $cgi->htmlize($mode);
 
-    _emit_error({ 
+    _emit_error({
             title => qq{Error! Invalid mode "$mode_esc"},
             body => <<"END_OF_BODY", });
 <h1>Error! Invalid mode "$mode_esc".</h1>
 
 <p>
-Only valid modes are <tt>random</tt> and <tt>str_id</tt> 
+Only valid modes are <tt>random</tt> and <tt>str_id</tt>
 (where <tt>str_id</tt> is the default).
 </p>
 END_OF_BODY
@@ -133,7 +133,7 @@ sub _pick_random
 
     if (! $max_id)
     {
-        _emit_error({ 
+        _emit_error({
                 title => "Query failed",
                 body => <<"END_OF_BODY", });
 <h1>Query failed</h1>

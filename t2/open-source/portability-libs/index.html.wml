@@ -6,17 +6,17 @@
 
 <p>
 Programming an application that can run both on UNIX and on Windows 32-bit
-(and optionally other platforms) can be very hard because of the fact that 
-the APIs of those platforms are substantially different. Luckily, 
-there are abstraction libraries with which a programmer can maintain a 
+(and optionally other platforms) can be very hard because of the fact that
+the APIs of those platforms are substantially different. Luckily,
+there are abstraction libraries with which a programmer can maintain a
 very similar code, while focusing on writing the application itself.
 </p>
 
 <p>
 I will focus here on such libraries for C and C++. Higher level languages
-such as <a href="http://www.perl.org/">Perl</a>, 
-<a href="http://www.python.org/">Python</a> or 
-<a href="http://www.ruby-lang.org/en/">Ruby</a> usually provide an abstraction 
+such as <a href="http://www.perl.org/">Perl</a>,
+<a href="http://www.python.org/">Python</a> or
+<a href="http://www.ruby-lang.org/en/">Ruby</a> usually provide an abstraction
 for such things within the language.
 </p>
 
@@ -29,7 +29,7 @@ or a commercial licence.
 
 <li>
 <p>
-<a href="http://doc.trolltech.com/4.1/qtcore.html">QtCore</a> - 
+<a href="http://doc.trolltech.com/4.1/qtcore.html">QtCore</a> -
 part of <a href="#lib_qt">Qt</a> that provides data structures and system
 services (and not GUI). <licence_qt />
 </p>
@@ -104,8 +104,8 @@ threads. Open-source, Apache Group License.
 
 <li>
 <p>
-<a href="http://www.cs.wustl.edu/~schmidt/ACE.html">ACE - The Adaptive 
-Communication Environment</a> - a very comprehensive C++ library that provides 
+<a href="http://www.cs.wustl.edu/~schmidt/ACE.html">ACE - The Adaptive
+Communication Environment</a> - a very comprehensive C++ library that provides
 portable abstractions for almost anything a system gives you except GUI.
 Runs on UNIX, Win32 and many embedded operating-systems.
 </p>
@@ -128,15 +128,15 @@ LGPL.
 
 <li>
 <p>
-<a href="http://www.roguewave.com/products/sourcepro/core/">RogueWave’s 
-SourcePro Core</a> - a commercial library that supplies C++ abstractions 
+<a href="http://www.roguewave.com/products/sourcepro/core/">RogueWave’s
+SourcePro Core</a> - a commercial library that supplies C++ abstractions
 for many system services.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.wxWidgets.org/">wxBase</a> - a subset of the 
+<a href="http://www.wxWidgets.org/">wxBase</a> - a subset of the
 <a href="lib_wx">wxWidgets</a>
 library that can be used for multi-threading and the such. C++ and LGPLed.
 </p>
@@ -146,7 +146,7 @@ library that can be used for multi-threading and the such. C++ and LGPLed.
 <p>
 <a href="http://www.mozilla.org/projects/nspr/">The Netscape Portable
 Runtime (NSPR)</a> - an ANSI C library that abstracts Threads, sockets,
-files, data structures and many other goodies. Licensed under a 
+files, data structures and many other goodies. Licensed under a
 triple GPL, LGPL and MPL licensing.
 </p>
 </li>
@@ -154,7 +154,7 @@ triple GPL, LGPL and MPL licensing.
 <li>
 <p>
 <a href="http://www.boost.org/">Boost</a> - a free portable collection of
-C++ libraries that work well with the C++ Standard Library. Contains 
+C++ libraries that work well with the C++ Standard Library. Contains
 abstractions for data-structures and algorithms, parsing and I/O
 and sockets.
 </p>
@@ -163,9 +163,9 @@ and sockets.
 <li>
 <p>
 <a href="http://appinf.com/poco/info/index.html">C++ Portable Components</a> -
-cover functionality like threads, thread synchronisation, filesystem access, 
-streams, shared libraries and class loading, sockets and network protocols 
-(HTTP, FTP, SMTP, etc.), including an HTTP server, as well as an XML parser 
+cover functionality like threads, thread synchronisation, filesystem access,
+streams, shared libraries and class loading, sockets and network protocols
+(HTTP, FTP, SMTP, etc.), including an HTTP server, as well as an XML parser
 with SAX2 and DOM interfaces.
 </p>
 </li>
@@ -180,8 +180,8 @@ with SAX2 and DOM interfaces.
 
 <li id="lib_wx">
 <p>
-<a href="http://www.wxwidgets.org/">wxWidgets</a> (formerly wxWindows) - 
-a C++ cross-platform GUI library with Win32 , X-Windows and Mac OS X 
+<a href="http://www.wxwidgets.org/">wxWidgets</a> (formerly wxWindows) -
+a C++ cross-platform GUI library with Win32 , X-Windows and Mac OS X
 back-ends. LGPLed.
 </p>
 </li>
@@ -189,7 +189,7 @@ back-ends. LGPLed.
 <li id="lib_qt">
 <p>
 <a href="http://www.trolltech.com/">Qt</a> -  a C++ cross-platform GUI
-library with Win32, X-Windows and Mac OS X backends. A very encompassing API. 
+library with Win32, X-Windows and Mac OS X backends. A very encompassing API.
 <licence_qt />
 </p>
 </li>
@@ -204,7 +204,7 @@ under the MPL, LGPL and GPL.
 
 <li>
 <p>
-<a href="http://www.bms-austria.com/projects/paragui/">ParaGUI</a> - a 
+<a href="http://www.bms-austria.com/projects/paragui/">ParaGUI</a> - a
 GUI library based on the <a href="http://www.libsdl.org/">SDL</a> framework.
 LGPLed.
 </p>
@@ -214,7 +214,7 @@ LGPLed.
 <p>
 <a href="http://www.borland.com/">Borland’s VCL</a> - The GUI library behind
 Delphi and C++ Builder. Proprietary License, which is free for use for
-developing Open-Source Programs. <b>Note:</b> Linux version no longer 
+developing Open-Source Programs. <b>Note:</b> Linux version no longer
 up-to-date or supported.
 </p>
 </li>
@@ -223,15 +223,15 @@ up-to-date or supported.
 <p>
 <a href="http://www.fox-toolkit.org/">The FOX Toolkit</a> - a C++ toolkit
 that runs on UNIX, Windows and MacOS X. Renders its own controls, so does
-not have the system-wide native look and feel, but OTOH has a consistent 
+not have the system-wide native look and feel, but OTOH has a consistent
 one across all platforms.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.free-soft.org/guitool/">A 
-comprehensive list of GUI libraries for X-Windows (and perhaps 
+<a href="http://www.free-soft.org/guitool/">A
+comprehensive list of GUI libraries for X-Windows (and perhaps
 other systems)</a>
 </p>
 </li>
@@ -243,7 +243,7 @@ other systems)</a>
 <li>
 <p>
 <a href="http://www.libsdl.org/">SDL - The Simple DirectMedia Layer</a> -
-a comprehensive library that runs on Win32, BeOS and MacOS and several 
+a comprehensive library that runs on Win32, BeOS and MacOS and several
 flavours of UNIX. Has bindings to many other languages
 </p>
 </li>
@@ -251,15 +251,15 @@ flavours of UNIX. Has bindings to many other languages
 <li>
 <p>
 <a href="http://www.opengl.org/">OpenGL</a> - a portable library for
-3-D and 2-D graphics, that provides many graphics primitives. Has an 
-open-source LGPLed implementation titled 
+3-D and 2-D graphics, that provides many graphics primitives. Has an
+open-source LGPLed implementation titled
 <a href="http://www.mesa3d.org/">Mesa</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://crystal.sourceforge.net/">Crystal Space</a> - a portable 
+<a href="http://crystal.sourceforge.net/">Crystal Space</a> - a portable
 library for managing a large number of objects in a three-dimensional world.
 </p>
 </li>
@@ -299,7 +299,7 @@ SDK. LGPLed.
 <ul>
 <li>
 <p>
-<a href="http://www.microsoft.com/data/odbc/default.htm">ODBC</a>, 
+<a href="http://www.microsoft.com/data/odbc/default.htm">ODBC</a>,
 and <a href="http://www.unixodbc.org/">unixODBC</a> - a portable, but
 rather heavyweight database abstraction layer for C.
 </p>

@@ -1,7 +1,7 @@
 #include '../template.wml'
 #include "vim_include_code.wml"
 
-<set-var cpan_dist="XML-Grammar-Fiction" /> 
+<set-var cpan_dist="XML-Grammar-Fiction" />
 
 <latemp_subject "<get-var cpan_dist /> - Markup Languages for Writing Prose" />
 
@@ -10,11 +10,11 @@
 </page_extra_head_elements>
 
 <p>
-<get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight 
-plaintext-based markup language, which can be used to write such fiction as 
-stories, novellas, or possibly even novels. Fiction-Text is in turn converted 
-to <b>Fiction-XML</b>, which is an XML-based grammar (which can be used 
-directly). Fiction-XML, in turn, is translated to such formats as 
+<get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight
+plaintext-based markup language, which can be used to write such fiction as
+stories, novellas, or possibly even novels. Fiction-Text is in turn converted
+to <b>Fiction-XML</b>, which is an XML-based grammar (which can be used
+directly). Fiction-XML, in turn, is translated to such formats as
 <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> and
 <a href="http://www.docbook.org/">DocBook/XML</a>, for rendering by
 web-browsers, and for conversions to different formats, including PDF.
@@ -22,7 +22,7 @@ web-browsers, and for conversions to different formats, including PDF.
 
 <p>
 Also provided is <b>Screenplay-Text</b> and <b>Screenplay-XML</b> which are
-used for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays 
+used for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays
 (or scripts)</a>, and can be translated to XHTML or
 to <a href="http://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI-XML (Text
 Encoding Initivate)</a>
@@ -51,7 +51,7 @@ on kobesearch</a>
 </li>
 
 <li>
-<a href="http://freshmeat.net/projects/xml-grammar-fiction/">Freshmeat.net 
+<a href="http://freshmeat.net/projects/xml-grammar-fiction/">Freshmeat.net
 Record</a>
 </li>
 
@@ -61,7 +61,7 @@ Record</a>
 
 <p>
 <get-var cpan_dist /> is free and open-source software (FOSS) distributed
-under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/X11 
+under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/X11
 License</a>, a permissive, public-domain-like licence.
 </p>
 
@@ -80,14 +80,14 @@ https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t
 
 <li>
 <p>
-<a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under 
+<a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under
 <tt>t/fiction/data/</tt> in the distribution (mostly in English).
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Pope/"><i>The 
+<a href="http://www.shlomifish.org/humour/Pope/"><i>The
 Pope Died on Sunday</i></a> - a story in Hebrew under CC-by-sa.
 </p>
 </li>
@@ -102,7 +102,7 @@ is written in Fiction-Text.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/human-hacking/"><i>The 
+<a href="http://www.shlomifish.org/humour/human-hacking/"><i>The
 Human Hacking Field Guide</i></a> - the Hebrew translation was written using
 Fiction-Text.
 </p>
@@ -124,15 +124,15 @@ in the <tt>t/screenplay/data</tt> directory in the distribution.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/TOWTF/">The One with the 
-Fountainhead</a> - original text, but fan fiction of the T.V. show 
+<a href="http://www.shlomifish.org/humour/TOWTF/">The One with the
+Fountainhead</a> - original text, but fan fiction of the T.V. show
 <i>Friends</i>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/humanity/">Humanity - The 
+<a href="http://www.shlomifish.org/humour/humanity/">Humanity - The
 Movie</a> - all original text and concept. Under the CC-by-sa license.
 </p>
 </li>
@@ -148,7 +148,7 @@ Star Trek.
 <li>
 <p>
 <a href="http://www.shlomifish.org/open-source/interviews/">Interviews with
-Open Source People</a> - several interviews whose original hacky 
+Open Source People</a> - several interviews whose original hacky
 like-XML-but-not-quite source was converted to ScreenplayText and then
 rendered into XML and XHTML.
 </p>
@@ -156,9 +156,9 @@ rendered into XML and XHTML.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html"><i>The 
+<a href="http://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html"><i>The
 Hitchhiker’s Guide to Star Trek - The Next Generation</i></a> - David T. Lu’s
-and Mickey McCarter’s old parodical screenplay crosses <i>The 
+and Mickey McCarter’s old parodical screenplay crosses <i>The
 Hitchhiker’s Guide to the Galaxy</i> and <i>Star Trek: The Next Generation</i>.
 It was converted into Screenplay-Text format using a crude perl-5.10.x script
 and from that translated into XHTML.
@@ -167,7 +167,7 @@ and from that translated into XHTML.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Selena-Mandrake/"><i>Selena Mandrake 
+<a href="http://www.shlomifish.org/humour/Selena-Mandrake/"><i>Selena Mandrake
 - The Slayer</i></a> - screenplay for a film in English. Original text, but
 fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture.
 </p>
@@ -180,7 +180,7 @@ fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture
 out</h3>
 
 <p>
-There are many improvements in this release. Since the last news item here, 
+There are many improvements in this release. Since the last news item here,
 there were:
 </p>
 
@@ -227,14 +227,14 @@ Add support for numeric entities such as <tt>&amp;#91;</tt>.
 out</h3>
 
 <p>
-This release has many small bug-fixes and improvements: 
+This release has many small bug-fixes and improvements:
 </p>
 
 <ol>
 
 <li>
 <p>
-The handling of a colon (“:”) inside a top-level description in 
+The handling of a colon (“:”) inside a top-level description in
 XML-Grammar-Screenplay was fixed.
 </p>
 </li>
@@ -263,13 +263,13 @@ released</h3>
 
 <p>
 <get-var cpan_dist /> was released today, and should be available on CPAN
-mirrors. This release features several improvements to the code’s 
+mirrors. This release features several improvements to the code’s
 internals and automated tests suites. The external behaviour of the code
 should remain the same, but the code is now much more malleable for future
 improvements, and there may have been a few accidental fixes.
 </p>
 
-<h3 id="news-2009-11-05">2009-11-05: <get-var cpan_dist /> version 0.0.1 was 
+<h3 id="news-2009-11-05">2009-11-05: <get-var cpan_dist /> version 0.0.1 was
 released</h3>
 
 <p>
@@ -380,7 +380,7 @@ many artsy texts such as works of fiction, poems and scripts/screenplays).
 
 <li>
 <p>
-<a href="http://celtx.com/">Celtx</a> - an open-source application that 
+<a href="http://celtx.com/">Celtx</a> - an open-source application that
 allows one to edit screenplays, novels, and other media pre-production
 resources. Uses well-formed HTML 4 for its data files, packaged in a
 .zip with many resources, so it may be less ideal than XML. It is also a GUI

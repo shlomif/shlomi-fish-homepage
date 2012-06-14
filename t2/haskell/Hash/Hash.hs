@@ -2,7 +2,7 @@ module Hash where
 
 import Array
 
-data Hash hash_function compare_function size table num_elems = 
+data Hash hash_function compare_function size table num_elems =
     MyHash hash_function compare_function size table num_elems
 
 get_hash_function (MyHash hash_function compare_function size table num_elems) = hash_function
@@ -23,28 +23,28 @@ type StringToString = (String,String)
 
 type StringToStringHash = Hash (StringToString -> Int) (StringToString -> StringToString -> Int) Int (Array Int [(Int,StringToString)]) Int
 
-exists (MyHash hash_function compare_function size table num_elems) myelem = 
-    ((length 
-    (filter 
+exists (MyHash hash_function compare_function size table num_elems) myelem =
+    ((length
+    (filter
         cmp_element
         (table!index)
     )) > 0) where
         hash_value = (hash_function myelem)
         index = (hash_value `mod` size)
         cmp_element x = (
-                (hash_value == (fst x)) && 
+                (hash_value == (fst x)) &&
                 ((compare_function myelem (snd x)) == 0)
             )
 
 
-insert (MyHash hash_function compare_function size table num_elems) myelem = 
-    (if (exists (MyHash hash_function compare_function size table num_elems) myelem) 
+insert (MyHash hash_function compare_function size table num_elems) myelem =
+    (if (exists (MyHash hash_function compare_function size table num_elems) myelem)
     then (MyHash hash_function compare_function size table num_elems)
-    else 
-    (MyHash 
-        hash_function 
-        compare_function 
-        size 
+    else
+    (MyHash
+        hash_function
+        compare_function
+        size
         (table // [(index , new_list)])
         (num_elems+1)
     )) where
@@ -58,8 +58,8 @@ remove (MyHash hash_function compare_function size table num_elems) myelem =
         compare_function
         size
         (table // [(index, new_list)])
-        (if orig_len == length(new_list) 
-         then num_elems 
+        (if orig_len == length(new_list)
+         then num_elems
          else (num_elems-1)
         )
     ) where
@@ -67,12 +67,12 @@ remove (MyHash hash_function compare_function size table num_elems) myelem =
         index = (hash_value `mod` size)
         orig_len = length(table!index)
         cmp_element x = (
-                (hash_value == (fst x)) && 
+                (hash_value == (fst x)) &&
                 ((compare_function myelem (snd x)) == 0)
-            )        
-        new_list = 
-            (filter 
-                (\x -> (not(cmp_element x))) 
+            )
+        new_list =
+            (filter
+                (\x -> (not(cmp_element x)))
                 (table!index)
             )
 
@@ -81,7 +81,7 @@ get_value (MyHash hash_function compare_function size table num_elems) myelem =
         hash_value = (hash_function myelem)
         index = (hash_value `mod` size)
         cmp_element x = (
-                (hash_value == (fst x)) && 
+                (hash_value == (fst x)) &&
                 ((compare_function myelem (snd x)) == 0)
             )
         item_list =
@@ -93,8 +93,8 @@ replace_or_add (MyHash hash_function compare_function size table num_elems) myel
         compare_function
         size
         (table // [(index, new_list)])
-        (if orig_len == length(new_list) 
-         then num_elems 
+        (if orig_len == length(new_list)
+         then num_elems
          else (num_elems-1)
         )
     ) where
@@ -102,13 +102,13 @@ replace_or_add (MyHash hash_function compare_function size table num_elems) myel
         index = (hash_value `mod` size)
         orig_len = length(table!index)
         cmp_element x = (
-                (hash_value == (fst x)) && 
+                (hash_value == (fst x)) &&
                 ((compare_function myelem (snd x)) == 0)
             )
         new_list = (myreplace (table!index)) where
             myreplace :: [(Int,StringToString)] -> [(Int,StringToString)]
             myreplace [] = [(hash_value,myelem)]
-            myreplace (a:as) = 
+            myreplace (a:as) =
                 (if (cmp_element a)
                  then ((hash_value,myelem):as)
                  else (a:myreplace(as)))
@@ -124,18 +124,18 @@ rehash (MyHash hash_function compare_function size table num_elems) new_size =
         new_table
         num_elems
     ) where
-        new_table = (accumArray 
+        new_table = (accumArray
             (\present -> \new_elem -> (new_elem:present))
             ]
             (0,(new_size-1))
-            [   (hash_value `mod` new_size, (hash_value,elem)) | 
-                i <- [ 0 .. (size-1) ], 
-                (hash_value,elem) <- table!i 
+            [   (hash_value `mod` new_size, (hash_value,elem)) |
+                i <- [ 0 .. (size-1) ],
+                (hash_value,elem) <- table!i
             ]
         )
-            
-            
-    
+
+
+
 
 -- This doesn't work. If you can get it to, Please let me know.
 
@@ -146,6 +146,6 @@ rehash (MyHash hash_function compare_function size table num_elems) new_size =
 --            iterate index = myaccumolate (table!index) ++ (iterate (index+1)) where
 --                myaccumolate [] = "\n"
 --                myaccumolate (a:as) = (show (snd a)) ++ (myaccumolate as)
-        
+
 
 

@@ -25,13 +25,13 @@ copyright law, and links to more.
 </li>
 
 <li>
-This article in part may be considered a critique of Joel’s article. As such, 
+This article in part may be considered a critique of Joel’s article. As such,
 one can say that “fair use” law allows me to quote substantial parts of it.
 </li>
 
 <li>
 I’d rather build on an existing effort, than write my own incoherent article
-from scratch. Joel should take it as a compliment because “Copying is the 
+from scratch. Joel should take it as a compliment because “Copying is the
 sincerest form of flattery”.
 </li>
 </ol>
@@ -50,7 +50,7 @@ respect them, even if they exist.
 <h2 id="intro">Introduction</h2>
 
 <p>
-This essay gives my thoughts about Joel on Software’s 
+This essay gives my thoughts about Joel on Software’s
 <a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">
 Building
 Communities with Software</a>. The full original article was sent to the Joel
@@ -71,7 +71,7 @@ content. I will respond only to the public web version.
 
 <p>
 Joel Spolsky wrote
-<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an 
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an
 essay titled “Building Communities with Software”</a> back in March, 2003.
 He explained there the motivation behind his web forum and why it is so good.
 </p>
@@ -96,8 +96,8 @@ nicknames.
 
 <p>
 This is true for some IRC networks (especially EF-Net) but is not true for many
-others. In some IRC networks (such as 
-<a href="http://www.freenode.net/">Freenode</a>) one can register one’s 
+others. In some IRC networks (such as
+<a href="http://www.freenode.net/">Freenode</a>) one can register one’s
 nickname using a service named NickServ, and one’s channels using a
 service named ChanServ. This eliminates most of the bot wars that plague other
 IRC networks.
@@ -113,7 +113,7 @@ have had very few problems there.
 
 <blockquote>
 <p>
-Could you make a feature where I check a box that says 
+Could you make a feature where I check a box that says
 “email me if somebody replies to my post?”
 </p>
 <p>
@@ -135,16 +135,16 @@ things.
 <p>
 For forums that aim to give help with a technology, such a feature is a must,
 because a person should be notified when something happen, instead of having
-to visit the forum times and again. (As someone on 
+to visit the forum times and again. (As someone on
 <a href="http://discuss.joelonsoftware.com/?joel">the Joel on Software forum</a>
 noted.) But even for community software it is a good idea. I know of several
 flourishing forums that have this feature.
 </p>
 
 <p>
-The problem with Joel’s argument is that people cannot monitor O(N) 
+The problem with Joel’s argument is that people cannot monitor O(N)
 communities, i.e in proportion to as many as they like. Instead, it is much
-more scalable to monitor a constant amount of resources - normally your 
+more scalable to monitor a constant amount of resources - normally your
 E-mail inbox and RSS feeds. Recently I started to rule out various forums
 because they don’t provide RSS feeds or have an email feature, and I believe
 most people do too.
@@ -157,7 +157,7 @@ most people do too.
 Q. OK, but can’t you at least have branching? If someone gets off on a tangent, that should be its own branch which you can follow or go back to the main branch.
 </p>
 <p>
-A. Branching is very logical to a programmer’s mind but it doesn’t correspond to the way conversations take place in the real world. Branched discussions are disjointed to follow and distracting. 
+A. Branching is very logical to a programmer’s mind but it doesn’t correspond to the way conversations take place in the real world. Branched discussions are disjointed to follow and distracting.
 </p>
 </blockquote>
 
@@ -239,7 +239,7 @@ hairpins.
 </blockquote>
 
 <p>
-I disagree here, especially when the forum is using markup. (see below). 
+I disagree here, especially when the forum is using markup. (see below).
 Previewing the post allows one to check if the URLs are OK, and not too long
 or that they have dangling characters, and to review the post. A good posting
 mechanism should have an optional preview feature.
@@ -262,7 +262,7 @@ Link the following words to a URL. (at least not without giving any option of
 the “&lt;a” tag).
 </li>
 <li>
-Line breaks (<tt>\n</tt> characters) cause a new line to start at the post. 
+Line breaks (<tt>\n</tt> characters) cause a new line to start at the post.
 (very annoying!)
 </li>
 <li>
@@ -285,7 +285,7 @@ annoyed if they can’t post it as is.
 <p>
 Make sure the forum works, that each topic has a permanent page, and that
 the preview and all functions work. There are many off-the-wall forums that
-tend to not function correctly in various browsers, and have many 
+tend to not function correctly in various browsers, and have many
 idiosyncrasies. It is a good idea to use a stock forum like PHP-BB, YaBB, etc.
 that are well tested and extensively used.
 </p>
@@ -301,7 +301,7 @@ sections.
 <h4 id="spam_measurements">Spam Measurements</h4>
 
 <p>
-Make sure your forum has measurements against spam. Bayesian filtering or a 
+Make sure your forum has measurements against spam. Bayesian filtering or a
 different spam filter is a good idea. A must is the
 <a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html"><tt>rel="nofollow"</tt>
 attribute</a> which will render comment spam useless.
@@ -310,9 +310,9 @@ attribute</a> which will render comment spam useless.
 <h4 id="cryptic">Don’t be Cryptic</h4>
 
 <p>
-Once a comment I posted to a Movable Type-powered weblog was rejected, 
+Once a comment I posted to a Movable Type-powered weblog was rejected,
 without giving me any idea what was wrong with it. I had to use my intuition
-to understand that the reason was the shortened URL I placed there instead of 
+to understand that the reason was the shortened URL I placed there instead of
 my long URL which I was afraid would cause a horizontal scroll bar. This was
 indeed the case, and after I replaced the shortened URL with the full one
 , my comment was accepted.
@@ -344,14 +344,14 @@ discussion was last visited by that specific reader.
 <p>
 Accepting good posts is a must for a forum. Furthermore, giving the poster
 a proper feedback for why his post was rejected, or what he can do to remedy
-it is also necessary. I almost gave up on publicising my posts in 
+it is also necessary. I almost gave up on publicising my posts in
 <a href="http://slashdot.org/">Slashdot</a> because they routinely rejected
 many posts to my essays that I consider to be very good, while accepting
 some incredibly weird, rehearsed or low-quality news items.
 </p>
 
 <p>
-Now, in Slashdot, the post notice just say “rejected”, without any reason 
+Now, in Slashdot, the post notice just say “rejected”, without any reason
 why. So I don’t know how to better improve. An editor I contacted about it
 commented that they don’t want to do it because people then will ask questions
 about it which will start a dialogue. However, this causes the most avid
@@ -363,7 +363,7 @@ And the dialogue is extremely important. You can always block or ban people
 who keep bothering you with extremely low-quality articles, but you shouldn’t
 let the ambitious contributor be left with a simple “rejected”. They want to
 improve and they want to know why you didn’t like their post. So this is not
-a feature - it’s a bug. Several communities - notably 
+a feature - it’s a bug. Several communities - notably
 <a href="http://www.advogato.org/">Advogato</a> and the Joel-on-Software
 forum, accept almost all posts by default. This can be often very nice.
 </p>
@@ -385,13 +385,13 @@ of the users because they felt that:
 <li>
 The paragraph in which I described myself
 was too long (while being intended for the regular article, and still being a
-small amount of the article) - a 
-<a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style 
+small amount of the article) - a
+<a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style
 over substance fallacy</a>.
 </li>
 <li>
 That I was not eligible to post such an article because I had not been very
-active in the site before - an 
+active in the site before - an
 <a href="http://en.wikipedia.org/wiki/Ad-hominem">Ad-hominem fallacy</a>.
 </li>
 </ol>

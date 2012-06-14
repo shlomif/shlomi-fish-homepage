@@ -20,11 +20,11 @@ document.getElementsByTagName('head')[0].appendChild(GM_JQ);
 // Check if jQuery's loaded
 function GM_wait() {
     if(typeof unsafeWindow.jQuery == 'undefined') {
-        window.setTimeout(GM_wait,100); 
+        window.setTimeout(GM_wait,100);
     }
-    else { 
+    else {
         $ = unsafeWindow.jQuery;
-        letsJQuery(); 
+        letsJQuery();
     }
 }
 GM_wait();

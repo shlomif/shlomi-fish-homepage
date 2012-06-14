@@ -170,7 +170,7 @@ function! MoveTagLeft()
 				let u = strpart(s, et)		" after tag
 				call setline(n, u)
 				let s = getline(n-1)
-				call setline(n-1, s.t) 
+				call setline(n-1, s.t)
 				call cursor(n-1, strlen(s)+c-st+sw)
 			else
 				echo "No words to left of tag"
@@ -213,7 +213,7 @@ function! MoveTagRight()
 				let u = strpart(s, st)		" tag
 				call setline(n, t)
 				let s = getline(n+1)
-				call setline(n+1, u.s) 
+				call setline(n+1, u.s)
 				call cursor(n+1, c-st)
 			else
 				echo "No words to right of tag"

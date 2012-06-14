@@ -24,9 +24,9 @@ configuration-and-build system.
 
 <li>
 <p>
-The CMake files are written in a consistent high-level language, whose 
-interpreter is written in C++. This is instead of Autoconf’s 
-m4-generating-Bourne-shell setup, where both m4 and /bin/sh are quirky and 
+The CMake files are written in a consistent high-level language, whose
+interpreter is written in C++. This is instead of Autoconf’s
+m4-generating-Bourne-shell setup, where both m4 and /bin/sh are quirky and
 get broken very easily.
 </p>
 </li>
@@ -41,15 +41,15 @@ Microsoft Windows, where cygwin is very slow at doing multi-processing.
 <li>
 <p>
 Compilation is much faster with CMake because it doesn’t use GNU’s thousands’
-lines long libtool shell script, which incurs a lot of overhead. 
+lines long libtool shell script, which incurs a lot of overhead.
 </p>
 </li>
 
 <li>
 <p>
 Autotools cause the archive size to increase dramatically due to their
-extra 
-<tt>configure.ac</tt> / <tt>configure</tt> / 
+extra
+<tt>configure.ac</tt> / <tt>configure</tt> /
 <tt>Makefile.in</tt> / <tt>libtool</tt>/etc. overhead.
 The Autotools-based <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
 version 2.8.14 gzipped tarball (tar.gz) took 562,301 bytes. After it was
@@ -62,15 +62,15 @@ extra functionality has been added.
 Freecell Solver in its CMake-driven form has evolved and expanded since then,
 but as of version 2.40.0 its tar.gz now takes 408,076 bytes, which is less
 than its original Autotools size. Moreover, we can now easily ship it as
-the more compact tar.bz2 (which takes 291,531 bytes) and a tar.xz (which takes 
+the more compact tar.bz2 (which takes 291,531 bytes) and a tar.xz (which takes
 242,164 bytes) which CMake gives us for free.
 </p>
 </li>
 
 <li>
 <p>
-GNU Autohell has a huge problem with backwards compatibility, forward 
-compatibility and other regressions. It requires constant maintenance, while 
+GNU Autohell has a huge problem with backwards compatibility, forward
+compatibility and other regressions. It requires constant maintenance, while
 CMake tends to keep very good backwards compatibility.
 </p>
 </li>
@@ -85,7 +85,7 @@ Development Environment (such as Microsoft Developer Studio).
 
 <li>
 <p>
-CMake uses <a href="http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22.29">the 
+CMake uses <a href="http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22.29">the
 modified BSD license</a> (which is GPL-compatible and allows virtually any
 use), instead of GNU Autotools’ GNU General Public License (GPL) which is
 much more restrictive.
@@ -117,28 +117,28 @@ and confusing.
 a static library in CMake</h3>
 
 <p>
-As a matter of fact, it is possible. Some code to do exactly that is present 
-<a href="http://github.com/shlomif/fc-solve/blob/master/fc-solve/source/CMakeLists.txt">in 
+As a matter of fact, it is possible. Some code to do exactly that is present
+<a href="http://github.com/shlomif/fc-solve/blob/master/fc-solve/source/CMakeLists.txt">in
 the Freecell Solver CMakeLists.txt file</a>, based on an insight by
 Risko Gergely, who is its current Debian package maintainer. One disadvantage
 to that is that the objects of the libraries need to be compiled twice, but
-it can be mitigated during the active development stage of the package where 
+it can be mitigated during the active development stage of the package where
 only one version of the library is needed.
 </p>
 
-<h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to 
+<h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to
 Autoconf’s sh+m4</h3>
 
 <p>
-While Bourne Shell (“sh”) and m4 have POSIX standards behind them, they are 
+While Bourne Shell (“sh”) and m4 have POSIX standards behind them, they are
 very awful and vile. Moreover, Autoconf mandates on using GNU m4, which isn’t
 standard. Writing Autoconf macros or customising the Autoconf code is
-hard and the results tend to be very easy to break. 
+hard and the results tend to be very easy to break.
 </p>
 
 <p>
-CMake, on the other hand uses a custom syntax, which is consistent, 
-trustworthy, predictable and reliable. The fact that it isn’t “standard” does 
+CMake, on the other hand uses a custom syntax, which is consistent,
+trustworthy, predictable and reliable. The fact that it isn’t “standard” does
 not make it bad.
 </p>
 
@@ -146,7 +146,7 @@ not make it bad.
 build in CMake as “cmake --help” does not work.</h3>
 
 <p>
-“cmake --help” indeed gives you CMake's global help screen instead of the 
+“cmake --help” indeed gives you CMake's global help screen instead of the
 list of parameters to the build, but there is a way to get them even from
 the command-line without resorting to ccmake or cmake-gui. Just type
 “cmake -LA” or “cmake -LAH” to get them.

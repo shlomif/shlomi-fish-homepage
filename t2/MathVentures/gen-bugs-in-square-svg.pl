@@ -24,7 +24,7 @@ my $svg = SVG->new(width=>$width, height=>$height,);
 foreach my $depth (0 .. ($max_depth-1))
 {
     my $tag = $svg->rectangle(
-        x => -$half_width, y => -$half_height, 
+        x => -$half_width, y => -$half_height,
         width => $width, height => $height,
         id => "rect_$depth",
         transform => "translate($half_width,$half_height) rotate(" . ($angle*$depth) .") scale(" . join(",", ($size_ratio**$depth)x2) . ")",

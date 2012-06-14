@@ -37,7 +37,7 @@ foreach my $p (@paras)
 {
     my $p_elem = XML::LibXML::Element->new("p");
     $p_elem->appendChild(XML::LibXML::Text->new($p));
-    
+
     $new_body->appendChild($p_elem);
 }
 $new_quote->appendChild($new_body);

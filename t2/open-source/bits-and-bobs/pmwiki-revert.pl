@@ -45,7 +45,7 @@ foreach my $file (@files)
             }
         }
     }
-    
+
     my $line;
     LINES_LOOP: while($line = <I>)
     {

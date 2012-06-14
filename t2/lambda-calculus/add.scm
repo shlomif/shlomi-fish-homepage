@@ -1,6 +1,6 @@
 (load "lc_prelude.scm")
 
-(define lc-bit->church 
+(define lc-bit->church
     (lambda (bit)
         ((bit one) zero)
     )
@@ -21,9 +21,9 @@
     (lambda (x)
         (lambda (y)
             ; If x then:
-            ((x 
+            ((x
                 ; If-part
-                ((y lc_false) lc_true)) 
+                ((y lc_false) lc_true))
                 ; Else-part
                 ((y lc_true) lc_false)
             )
@@ -50,9 +50,9 @@
                         ((greater-or-equal num-bits) two)
                     )
                 )
-                    ((add 
-                        ((add 
-                            (lc-bit->church bit1)) 
+                    ((add
+                        ((add
+                            (lc-bit->church bit1))
                             (lc-bit->church bit2)
                         ))
                         (lc-bit->church carry)
@@ -79,19 +79,19 @@
                     (next-log2 (-1+ num-bits-log2))
                     (exp2 (expt 2 (expt 2 next-log2)))
                 )
-                ((lc_cons 
+                ((lc_cons
                     (myconvert (remainder num exp2) next-log2))
                     (myconvert (quotient num exp2) next-log2)
                     )
             )
         )
     )
-    (let* 
+    (let*
         (
             (num-bits (get-num-bits num 0))
             (num-bits-log2 (get-num-bits num-bits 0))
         )
-        
+
         (list (myconvert num num-bits-log2) num-bits-log2)
     )
 )
@@ -101,9 +101,9 @@
         ; Get the numerical value of the bit
         ((vec 1) 0)
         ; int = int(car(vec)) | int(car(vec)) << (2**depth)
-        (+ 
+        (+
             (bit-vector->int (lc_car vec) (- depth 1))
-            (* 
+            (*
                 (expt 2 (expt 2 (- depth 1)))
                 (bit-vector->int (lc_cdr vec) (- depth 1))
             )
@@ -114,7 +114,7 @@
 (define (bit-vector-lc->scheme vec depth)
     (if (= depth 0)
         ((vec 1) 0)
-        (cons 
+        (cons
             (bit-vector-lc->scheme (lc_car vec) (-1+ depth))
             (bit-vector-lc->scheme (lc_cdr vec) (-1+ depth))
         )
@@ -122,7 +122,7 @@
 )
 
 (define (full-adder-ret->scheme fa-ret)
-    (list 
+    (list
         (((lc_car fa-ret) 1) 0)
         (((lc_cdr fa-ret) 1) 0)
     )
@@ -144,7 +144,7 @@
 
 (define r-c-carry
     (lambda (r-c)
-        (lc_cdr r-c)    
+        (lc_cdr r-c)
     )
 )
 
@@ -183,7 +183,7 @@
         (lc_cdr (lc_cdr lbva))
     )
 )
-    
+
 
 (define lc-bit-vector-add
     (lambda (depth)
@@ -196,10 +196,10 @@
                                 ;(display "depth = ")
                                 ;(display (church->int (lbva-depth x)))
                                 ;(newline)
-                            
+
                             ((((is-zero? (lbva-depth x))
                                 (lambda (no_use)
-                                    (((lc-full-adder 
+                                    (((lc-full-adder
                                         (lbva-vec1 x))
                                         (lbva-vec2 x))
                                         (lbva-carry x)
@@ -214,14 +214,14 @@
                                                 ;(display second-part-sum)
                                                 ;(newline)
                                             ((make-result-and-carry
-                                                ((lc_cons 
+                                                ((lc_cons
                                                     (r-c-result first-part-sum))
                                                     (r-c-result second-part-sum)))
                                                 (r-c-carry second-part-sum)
                                             )
                                             )
                                         )
-                                        
+
                                             (f ((((make-lbva
                                                 (pred (lbva-depth x)))
                                                 (lc_cdr (lbva-vec1 x)))
@@ -230,11 +230,11 @@
                                             ))
                                         )
                                    )
-                                        (f 
-                                            ((((make-lbva 
-                                                (pred (lbva-depth x))) 
-                                                (lc_car (lbva-vec1 x))) 
-                                                (lc_car (lbva-vec2 x))) 
+                                        (f
+                                            ((((make-lbva
+                                                (pred (lbva-depth x)))
+                                                (lc_car (lbva-vec1 x)))
+                                                (lc_car (lbva-vec2 x)))
                                                 (lbva-carry x)
                                             )
                                         )
@@ -245,7 +245,7 @@
                             ))
                         )
                     )
-                ) 
+                )
                 ; This is the bootstrap for the Y combinator
                 ((((make-lbva depth) vec1) vec2) lc_false)
                 )
@@ -267,7 +267,7 @@
 (define bools-list (list #f #t))
 
 (define (test-full-adder)
-    (for-each 
+    (for-each
         (lambda (bit1)
             (for-each
                 (lambda (bit2)
@@ -279,7 +279,7 @@
                             (newline)
                         )
                         bools-list
-                    )               
+                    )
                 )
                 bools-list
             )

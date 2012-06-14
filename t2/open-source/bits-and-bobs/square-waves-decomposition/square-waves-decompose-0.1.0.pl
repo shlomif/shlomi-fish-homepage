@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 #
 # square-waves-decompose.pl : compose a sine wave out of square waves.
 #
@@ -10,7 +10,7 @@
 #
 # Licensed under the MIT X11 license:
 # http://www.opensource.org/licenses/mit-license.php )
-# 
+#
 # Requires:
 # * perl-5.8.x (may work with older versions)
 # * The List::Util module.

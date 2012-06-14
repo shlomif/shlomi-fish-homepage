@@ -13,7 +13,7 @@ it is Turing-complete. Here is an explanation of it.
 <p>
 Lotg is defined on a memory in which there is a cell associated with every
 integral number (positive, negative and zero), and every cell can contain
-one integral value. The cells will be marked as <tt>m[i]</tt> where 
+one integral value. The cells will be marked as <tt>m[i]</tt> where
 <tt>i</tt> is the index of teh cell. There are two registers - “pointer” and
 “register” which will be marked as <tt>r</tt> and <tt>p</tt>.
 </p>
@@ -28,7 +28,7 @@ The following instructions are defined:
 is the only instruction that accepts an arbitrary parameter.
 </li>
 <li>
-<tt>r &larr; r+p</tt> 
+<tt>r &larr; r+p</tt>
 </li>
 <li>
 <tt>p &larr; m[p]</tt>
@@ -38,7 +38,7 @@ is the only instruction that accepts an arbitrary parameter.
 two instructions one after the other.
 </li>
 <li>
-<tt>if r&gt;0 jump to p</tt> (If <tt>r</tt> is greater than 0 jump to the 
+<tt>if r&gt;0 jump to p</tt> (If <tt>r</tt> is greater than 0 jump to the
 instruction whose index is <tt>p</tt>).
 </li>
 </ol>

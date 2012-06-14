@@ -21,11 +21,11 @@ document.getElementsByTagName('head')[0].appendChild(GM_JQ);
 // Check if jQuery's loaded
 function GM_wait() {
     if(typeof unsafeWindow.jQuery == 'undefined') {
-        window.setTimeout(GM_wait,100); 
+        window.setTimeout(GM_wait,100);
     }
-    else { 
+    else {
         $ = unsafeWindow.jQuery;
-        letsJQuery(); 
+        letsJQuery();
     }
 }
 GM_wait();
@@ -38,7 +38,7 @@ function myesc(s)
 var svn_hosts =
 [
     {
-        "host_re" : /^svn\.berlios\.de$/, 
+        "host_re" : /^svn\.berlios\.de$/,
         "path_remove" : /^.*?viewcvs\//,
         "items" :
         [
@@ -53,19 +53,19 @@ var svn_hosts =
         ]
     },
     {
-        "host_re" : /^([^\.])+\.svn\.sourceforge\.net$/, 
+        "host_re" : /^([^\.])+\.svn\.sourceforge\.net$/,
         "path_remove" : /^.*?viewvc\//,
         "items" :
         [
             {
-                "prefix" : (function (p) { 
-                        return "http://" + p["host"] + "/svnroot/"; 
+                "prefix" : (function (p) {
+                        return "http://" + p["host"] + "/svnroot/";
                         }),
                 "label" : "Read-only URL"
             },
             {
-                "prefix" : (function (p) { 
-                        return "https://" + p["host"] + "/svnroot/"; 
+                "prefix" : (function (p) {
+                        return "https://" + p["host"] + "/svnroot/";
                         }),
                 "label" : "Read-write (HTTPS)"
             }
@@ -77,7 +77,7 @@ var svn_hosts =
 function letsJQuery() {
     var path = location.pathname;
     var host = location.host;
-    
+
     var h;
     for ( h_idx in svn_hosts)
     {

@@ -43,13 +43,13 @@ Last Updated:
 “Java and/or .NET are better than C in every way.”.
 </li>
 <li>
-“Perl/Python/PHP/Ruby/Tcl are better than C.” 
+“Perl/Python/PHP/Ruby/Tcl are better than C.”
 </li>
 <li>
 <a href="http://www.paulgraham.com/avg.html">“LISP is better than C”</a>.
 </li>
 <li>
-“If you need speed, use O’Caml or Haskell - don’t bother with C.” 
+“If you need speed, use O’Caml or Haskell - don’t bother with C.”
 </li>
 <li>
 “C is for kernels.”
@@ -58,9 +58,9 @@ Last Updated:
 
 <p>
 We hear these things all the time and still people insist on using C for some
-tasks. OK, these sentences are not entirely false. Most of the time (I don’t 
-know if it’s 90%, 80% or slightly above 60%, 
-<a href="http://www.amazon.com/exec/obidos/ASIN/0809058405/qid=1116707804/sr=2-1/ref=pd_bbs_b_2_1/102-7111030-9246531">I 
+tasks. OK, these sentences are not entirely false. Most of the time (I don’t
+know if it’s 90%, 80% or slightly above 60%,
+<a href="http://www.amazon.com/exec/obidos/ASIN/0809058405/qid=1116707804/sr=2-1/ref=pd_bbs_b_2_1/102-7111030-9246531">I
 didn’t count</a>), it is preferable to use something else. But what about the
 minority of these cases?
 </p>
@@ -107,7 +107,7 @@ every struct is a reference. You cannot work with interrupts, DMAs, and other
 hardware elements. It’s much harder to write your own custom fine-grained
 memory-management routines.
 </p>
- 
+
 <p>
 Many problem domains call for ANSI C.
 </p>
@@ -159,15 +159,15 @@ programs, etc.
 <p>
 <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is an ANSI C library
 that can be used to solve games of the Solitaire Card Game
-<a href="http://www.solitairelaboratory.com/fcfaq.html">Freecell</a>, and 
+<a href="http://www.solitairelaboratory.com/fcfaq.html">Freecell</a>, and
 similar Solitaire variants. Started as a way for me to see if a theory I had
 about how a computer can solve Freecell would work in practice, it ended up as a
 highly-customizable, very feature-rich and pretty fast program. It is the
 only one with a high quality web-site dedicated to it, has been integrated
-into at least three GUI games so far, and is the only program of its kind with 
+into at least three GUI games so far, and is the only program of its kind with
 binaries and source packages distributed for common distributions. I am pretty
 confident in saying it has become the
-<a href="http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s08.html">“category 
+<a href="http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s08.html">“category
 killer”</a> of its kind.
 </p>
 
@@ -192,7 +192,7 @@ good quality and maintainable. So don’t believe
 </p>
 
 <p>
-Luckily, I have written 
+Luckily, I have written
 <a href="http://fc-solve.shlomifish.org/arch_doc/">an architecture document</a>
 that covers the main data structures and algorithms used.
 </p>
@@ -250,8 +250,8 @@ not have a preprocessor, and therefore one will need to either:
 Replace them with methods. This would mean lower speed.
 </li>
 <li>
-Use a preprocessor (such as 
-<a href="http://www.cabaret.demon.co.uk/filepp/">filepp</a>) to process the 
+Use a preprocessor (such as
+<a href="http://www.cabaret.demon.co.uk/filepp/">filepp</a>) to process the
 code. This would mean that problems would be harder to track, line numbers may
 be skewed, and the development environment may not necessarily support it.
 </li>
@@ -281,7 +281,7 @@ sense all of the time.
 </p>
 
 <p>
-To sum up, while one can write a program that will be compatible in its 
+To sum up, while one can write a program that will be compatible in its
 output to Freecell Solver in Java, it will feel less native there, and will
 probably be much slower and more memory hungry. All of these things add up
 to a lot. C is the best language for writing a Freecell solver in.

@@ -85,11 +85,11 @@ Now, to find the length an infinitesimal bug will travel, we just limit p to 0:
 
 
 <pre>
-                                                       
-        p*a1             
-lim ---------------   =  
-p-&gt;0   ____________   
-    1-V 2*p^2-2*p+1      
+
+        p*a1
+lim ---------------   =
+p-&gt;0   ____________
+    1-V 2*p^2-2*p+1
 
 
                             _____________
@@ -97,33 +97,33 @@ p-&gt;0   ____________
 lim  ----------------  * -----------------   =
 p-&gt;0    ____________        _____________
      1-V 2*p^2-2*p+1     1+V 2*p^2-2*p+1
- 
 
- 
-                ____________     
-        a1*p*(1+V 2*p^2-2*p+1)    
-lim     ---------------------  =  
-p-&gt;0                        
+
+
+                ____________
+        a1*p*(1+V 2*p^2-2*p+1)
+lim     ---------------------  =
+p-&gt;0
          1 - 2*p^2 + 2*p - 1
 
 
                _____________
         a1 * (1+V 2*p^2-2*p+1 )
-lim     ----------------------  = 
+lim     ----------------------  =
 p-&gt;0       2 - 2*p
 
 
                  _____________
-        a1 * (1+V 2*0-2*0+1  )   
-lim     ---------------------  = 
-p-&gt;0      2 - 2*0           
+        a1 * (1+V 2*0-2*0+1  )
+lim     ---------------------  =
+p-&gt;0      2 - 2*0
 
 
 
-   a1 * (1+1)  
+   a1 * (1+1)
  ------------- = a1
-      2        
-          
+      2
+
 
 </pre>
 
@@ -136,8 +136,8 @@ the corner of a 1*1 meter square to meet is 1/1 = 1 second.
 
 <p>
 Here’s <a href="bugs.scm">a script</a>
-for <a href="http://www.gimp.org/">Gimp</a> version 1.2 
-that generates a series of squares inside squares, and optionally marks the 
+for <a href="http://www.gimp.org/">Gimp</a> version 1.2
+that generates a series of squares inside squares, and optionally marks the
 path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
 script for Gimp version 2.2</a>.
 </p>

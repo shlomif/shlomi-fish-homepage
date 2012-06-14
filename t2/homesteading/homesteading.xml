@@ -9,7 +9,7 @@
   <surname>Raymond</surname>
   <affiliation>
     <orgname><ulink url="http://www.tuxedo.org/~esr/">
-    Thyrsus Enterprises</ulink></orgname> 
+    Thyrsus Enterprises</ulink></orgname>
     <address>
     <email>esr@thyrsus.com</email>
     </address>
@@ -19,7 +19,7 @@
 <releaseinfo>This is version 3.0</releaseinfo>
 <copyright>
   <year>2000</year>
-  <holder role="mailto:esr@thyrsus.com">Eric S. Raymond</holder> 
+  <holder role="mailto:esr@thyrsus.com">Eric S. Raymond</holder>
 </copyright>
 <legalnotice>
   <title>Copyright</title>
@@ -151,8 +151,8 @@
 <!-- %%END ENDNOTES%% -->
 
 <abstract>
-<para>After observing a contradiction between the official ideology 
-defined by open-source licenses and the actual behavior of hackers, 
+<para>After observing a contradiction between the official ideology
+defined by open-source licenses and the actual behavior of hackers,
 I examine the actual customs that regulate the ownership and control
 of open-source software.  I show that they imply an underlying
 theory of property rights homologous to the Lockean theory of land
@@ -233,7 +233,7 @@ behaviors.</para>
 
 <para>Historically, the most visible and best-organized part of the hacker
 culture has been both very zealous and very anticommercial.  The Free
-Software Foundation founded by Richard M. Stallman (RMS) supported 
+Software Foundation founded by Richard M. Stallman (RMS) supported
 a great deal of open-source development from the early 1980s forward,
 including tools like Emacs and GCC which are still basic to the Internet
 open-source world, and seem likely to remain so for the forseeable
@@ -393,7 +393,7 @@ redistribute modified versions back to the community.</para>
 it will be useful later on if we summarize some important ones here:</para>
 
 <itemizedlist>
-<listitem><para> 
+<listitem><para>
 There is strong social pressure against forking projects.  It does
 not happen except under plea of dire necessity, with much public
 self-justification, and requires a renaming.</para></listitem>
@@ -415,7 +415,7 @@ incentive structures of the open-source community.</para>
 </sect1>
 <sect1><title>Ownership and Open Source</title>
 
-<para>What does `ownership' mean when property is infinitely reduplicable, 
+<para>What does `ownership' mean when property is infinitely reduplicable,
 highly malleable, and the surrounding culture has neither coercive
 power relationships nor material scarcity economics?</para>
 
@@ -710,7 +710,7 @@ model, however, that is radically different from either and not
 generally recognized except by anthropologists; the <emphasis>gift
 culture</emphasis>.</para>
 
-<para>Gift cultures are adaptations not to scarcity but to abundance.  
+<para>Gift cultures are adaptations not to scarcity but to abundance.
 They arise in populations that do not have significant
 material-scarcity problems with survival goods.  We can observe
 gift cultures in action among aboriginal cultures living in
@@ -770,7 +770,7 @@ which the pure joy of craftsmanship is the primary motivation.
 This `craftsmanship' model would have to explain hacker custom as a way
 of maximizing both the opportunities for craftsmanship and the quality
 of the results.  Does this conflict with or suggest different results
-than the reputation game model?</para>  
+than the reputation game model?</para>
 
 <para>Not really.  In examining the craftsmanship model, we come back
 to the same problems that constrain hackerdom to operate like a gift
@@ -790,7 +790,7 @@ contradiction we began this essay with.</para>
 psychologically as far removed from the reputation game as we might
 like to assume.  Imagine your beautiful program locked up in a drawer
 and never used again.  Now imagine it being used effectively and with
-pleasure by many people.  Which dream gives you satisfaction?</para> 
+pleasure by many people.  Which dream gives you satisfaction?</para>
 
 <para>Nevertheless, we'll keep an eye on the craftsmanship model.  It is
 intuitively appealing to many hackers, and explains some aspects of
@@ -888,7 +888,7 @@ to the same behavior practiced against themselves.)</para>
 Forking projects is bad because it exposes pre-fork contributors to
 a reputation risk they can only control by being active in both
 child projects simultaneously after the fork.  (This would generally
-be too confusing or difficult to be practical.)</para></listitem> 
+be too confusing or difficult to be practical.)</para></listitem>
 <listitem><para>
 Distributing rogue patches (or, much worse, rogue binaries) exposes
 the owners to an unfair reputation risk.  Even if the official code
@@ -925,7 +925,7 @@ future. They may also observe that forking tends to split the
 co-developer community, leaving both child projects with fewer brains
 to use than the parent.</para>
 
-<para>A respondent has pointed out that it is unusual for more than one 
+<para>A respondent has pointed out that it is unusual for more than one
 offspring of a fork to survive with significant `market share' into
 the long term.  This strengthens the incentives for all parties to
 cooperate and avoid forking, because it's hard to know in advance
@@ -939,7 +939,7 @@ that is necessary for each individual contributor to reach his or her
 goals.</para>
 
 <para>Dislike of rogue patches is often explained by the objection
-that they can create compatibility problems between the daughter 
+that they can create compatibility problems between the daughter
 versions, complicate bug-tracking enormously, and inflict work on
 maintainers who have quite enough to do catching their
 <emphasis>own</emphasis> mistakes.</para>
@@ -1159,11 +1159,11 @@ ecological niche for a fully-programmable editor so completely that
 no competitor has gotten much beyond the one-man project stage
 since the early 1980s.  Instead, people write Emacs modes.</para>
 
-<para>Globally, these two tendencies (gap-filling and category-killers) 
+<para>Globally, these two tendencies (gap-filling and category-killers)
 have driven a broadly predictable trend in project starts over time.
 In the 1970s most of the open source that existed was toys and demos.
 In the 1980s the push was in development and Internet tools.  In
-the 1990s the action shifted to operating systems.  In each case, 
+the 1990s the action shifted to operating systems.  In each case,
 a new and more difficult level of problems was attacked when the
 possibilities of the previous one had been nearly exhausted.</para>
 
@@ -1298,7 +1298,7 @@ than low-level patches and debugging.</para></blockquote>
 <para>The way this seems to work is that on a one-shot basis, adding a
 feature is likely to get more reward than fixing a bug&mdash;unless
 the bug is exceptionally nasty or obscure, such that nailing it is
-itself a demonstration of unusual skill and cleverness.  But when these 
+itself a demonstration of unusual skill and cleverness.  But when these
 behaviors are extended over time, a person with a long history of
 paying attention to and nailing even ordinary bugs may well out-rank
 someone who has spent a similar amount of effort adding easy features.</para>
@@ -1509,7 +1509,7 @@ develop two tiers of contributors; ordinary contributors and
 co-developers.  A typical path to becoming a co-developer is taking
 responsibility for a major subsystem of the project.  Another is to
 take the role of `lord high fixer', characterizing and fixing many
-bugs.  In this way or others, co-developers are the contributors who 
+bugs.  In this way or others, co-developers are the contributors who
 make a substantial and continuing investment of time in the project.</para>
 
 <para>The subsystem-owner role is particularly important for our analysis
@@ -1639,7 +1639,7 @@ learned it in a culturally sanctioned way.</para>
 clues or tests.  We can see this process operating at at least three
 levels:</para>
 
-<itemizedlist> 
+<itemizedlist>
 <listitem><para>
 Password-like specific mysteries. As one example, there is a Usenet
 newsgroup called alt.sysadmin.recovery that has a very explicit such
@@ -1895,7 +1895,7 @@ that the term is now primarily associated.</para>
 
 <para><anchor id="DF"/><emphasis>[DF]</emphasis>
 David Friedman, one of the most lucid and accessible thinkers in
-contemporary economics, has written an excellent 
+contemporary economics, has written an excellent
 <ulink url="http://www.best.com/~ddfr/Academic/Course_Pages/L_and_E_LS_98/Why_Is_Law/Why_Is_Law_Chapter_11.html">outline</ulink>
 of the
 history and logic of intellectual-property law.  I recommend it as a
@@ -1917,7 +1917,7 @@ height of the entry barriers to its political process.  His analysis
 is worth quoting here:</para>
 
 <blockquote>
-<para>One major strength of a relatively open democracy is that most potential 
+<para>One major strength of a relatively open democracy is that most potential
 revolutionaries find it easier to make progress toward their objectives by
 working via the system rather by attacking it.  This strength is easily
 undermined if established parties act together to `raise the bar', making
@@ -1928,7 +1928,7 @@ made toward their goals.</para>
 strongest competition, and generally the best and cheapest products.
 Because of this, it's very much in the best interests of established
 companies to make market entry more difficult&mdash;for example, by
-convincing governments to require elaborate RFI testing on computers, or  
+convincing governments to require elaborate RFI testing on computers, or
 by creating `consensus' standards which are so complex that they cannot be
 implemented effectively from scratch without large resources.  The markets
 with the strongest entry barriers are the ones that come under the
@@ -1975,7 +1975,7 @@ evidence for this view may be provided by a precedent-breaking July
 They have released their `Back Orifice 2000' for breaking Microsoft
 Windows security tools under the GPL.</para>
 
-<para><anchor id="HT"/><emphasis>[HT]</emphasis> 
+<para><anchor id="HT"/><emphasis>[HT]</emphasis>
 In evolutionary terms, the craftsman's urge itself may (like
 internalized ethics) be a result of the high risk and cost of
 deception.  Evolutionary psychologists have collected experimental
@@ -2045,7 +2045,7 @@ debugging and assisting with successful projects.  An earlier version
 of this paper asked ``Is this a rational valuation of comparative
 effort, or is it a second-order effect of the unconscious territorial
 model we have adduced here?''  Several respondents suggested persuasive
-and essentially equivalent theories.  The following analysis by 
+and essentially equivalent theories.  The following analysis by
 Ryan Waldron <email>rew@erebor.com</email> puts the case well:</para>
 
 <blockquote>
@@ -2120,7 +2120,7 @@ that both requires great dedication and confers a kind of
 power.</para>
 
 <para><anchor id="GNU"/><emphasis>[GNU]</emphasis>
-The Free Software Foundation's main website carries 
+The Free Software Foundation's main website carries
 <ulink url="http://www.gnu.org/philosophy/motivation.html">an
 article</ulink> that summarizes the results of many of these studies.  The
 quotes in this essay are excerpted from there.</para>

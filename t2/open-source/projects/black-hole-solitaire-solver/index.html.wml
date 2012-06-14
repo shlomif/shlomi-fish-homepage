@@ -6,7 +6,7 @@
 This is a solver, written in C, to solve
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
 Solitaire variant called “Black Hole”</a>. It provides a portable C library,
-and a command line application that after being fed with a layout will emit 
+and a command line application that after being fed with a layout will emit
 the cards to move to the “black hole” (the foundation).
 </p>
 
@@ -32,7 +32,7 @@ is much slower and consumes more memory.
 <li>
 <a href="<get-var sqlite_dump_url />"><get-var sqlite_dump_arc /></a> - results
 from running the solver on the first 1 million PySolFC deals - inside the dump
-of an <a href="http://www.sqlite.org/">SQLite</a> database. 
+of an <a href="http://www.sqlite.org/">SQLite</a> database.
 </li>
 
 </ul>
@@ -40,9 +40,9 @@ of an <a href="http://www.sqlite.org/">SQLite</a> database.
 <h3 id="download-solving-data">Solving Data</h3>
 
 <p>
-We’ve ran the solver on the first 1 million 
+We’ve ran the solver on the first 1 million
 <a href="http://pysolfc.sourceforge.net/">PySolFC</a> Black Hole Solitaire
-deals and one can 
+deals and one can
 <a href="http://fc-solve.shlomifish.org/downloads/fc-solve/black_hole_solver.dump.xz"><b>download</b>
 the data from that</a> as a compressed textual dump of an
 <a href="http://www.sqlite.org/">SQLite database</a>.
@@ -56,7 +56,7 @@ Here’s a description of the tables of the database:
 
 <li>
 <p>
-<b>bhs_runs</b> - this table contains the results and statistics of running 
+<b>bhs_runs</b> - this table contains the results and statistics of running
 the solver on the boards. Its columns are:
 </p>
 <ol>
@@ -95,9 +95,9 @@ solved boards. Its columns are:
 <li>
 <b>solution</b> - this is the compacted solution. The 0,2,4 etc. characters are
 the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
-the corresponding moved cards after calculating 
+the corresponding moved cards after calculating
 <tt>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</tt> where the suits
-are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s 
+are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s
 <a href="http://fc-solve.googlecode.com/svn/black-hole-solitaire/trunk/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
 </li>

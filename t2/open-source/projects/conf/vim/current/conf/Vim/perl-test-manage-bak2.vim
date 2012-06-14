@@ -8,7 +8,7 @@
 "
 " at the beginning of the test file. Then you need to make sure, every test
 " has a corresponding '# TEST' comment. If you run several tests in a loop,
-" you can append asterisks plus number to the comment. So for example the 
+" you can append asterisks plus number to the comment. So for example the
 " comment:
 "
 "     # TEST*3*5
@@ -25,7 +25,7 @@
 " Author: Shlomi Fish
 " Date: 02 December 2004
 " License: MIT X11
-" 
+"
 
 " TODO: Change Get_product to s:get_product().
 

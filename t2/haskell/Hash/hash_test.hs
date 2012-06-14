@@ -5,20 +5,20 @@ import Array
 
 
 myhash :: StringToStringHash
-myhash = (MyHash 
-            (\s -> 
+myhash = (MyHash
+            (\s ->
                 let x = fst(s) in (ord(x!!0)+256*(ord(x!!1)+256*(ord(x!!2))))
             )
-            (\s1 -> \s2 -> 
-                (let x = fst(s1) 
-                     y = fst(s2) in 
+            (\s1 -> \s2 ->
+                (let x = fst(s1)
+                     y = fst(s2) in
                      (if x < y then -1 else if x > y then 1 else 0)
                 )
-            ) 
-            100 
+            )
+            100
             (array (0,99) [ (i,[]) | i <- [0 .. 99]])
             0
-         ) 
+         )
 --            myarrray :: Array Int [(Int,Int)]
 --            myarray = (array (0,99) [ (i,[]) | i <- [0 .. 99]])
 

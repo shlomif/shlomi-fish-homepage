@@ -9,7 +9,7 @@
 
 <p>
 When I told some people on <a href="irc://irc.freenode.net/#perl">Freenode’s
-\#perl</a> that I had an idea for a 
+\#perl</a> that I had an idea for a
 <a href="http://www.paulgraham.com/web20.html">Web 2.0</a> site, someone
 told me: “write it down, and then burn it”. But I still think it’s a good
 idea. So here goes.
@@ -28,7 +28,7 @@ them, rate and comment on them, etc.
 
 <p>
 There are <a href="http://www.google.com/Top/Reference/Quotations/">many
-quotations sites online</a>, but most of them are not user editable. Now, 
+quotations sites online</a>, but most of them are not user editable. Now,
 <a href="http://www.wikiquote.org/">The wikiquotes</a> are the most prominent
 user-editable quotations wikis I know. However, being wikis they suffer from
 being free-form and the fact one has to parse the pages to effectively
@@ -39,7 +39,7 @@ few are categorised into the topics’ pages.
 </p>
 
 <p>
-<a href="http://www.bash.org/">The Quote Database</a> is a collection of 
+<a href="http://www.bash.org/">The Quote Database</a> is a collection of
 user-submitted IRC conversations. The problem with it is that the quotes
 still have to be accepted by the editors, and reportedly they have a huge
 backlog. The quotes are not categorised in any way, and they are all plain
@@ -52,28 +52,28 @@ text.
 The site will allow users to register an account, and start publishing
 fortunes. The fortunes can be categorised into several categories and
 sub-categories, as well as tagged. There will be streams of fortunes (with
-the appropriate RSS/Atom feeds) that can be controlled and/or moderated 
+the appropriate RSS/Atom feeds) that can be controlled and/or moderated
 by groups of editors (using the site’s permission system).
 </p>
 
 <h3 id="formats">The Formats</h3>
 
 <p>
-Clearly the traditional text format of the 
-<a href="http://en.wikipedia.org/wiki/Fortune_(program)">UNIX fortune</a> 
+Clearly the traditional text format of the
+<a href="http://en.wikipedia.org/wiki/Fortune_(program)">UNIX fortune</a>
 program is no longer satisfactory. By all means, fortunes should also contain
 styling, hyperlinks, various media, etc. One can think of several export
-formats: <a href="http://www.dpawson.co.uk/docbook/">DocBook/XML</a>, plain 
-text, HTML, the various Wiki formats etc. One can also think of several 
-import formats: plain text, IRC conversations (whose logs have variable 
+formats: <a href="http://www.dpawson.co.uk/docbook/">DocBook/XML</a>, plain
+text, HTML, the various Wiki formats etc. One can also think of several
+import formats: plain text, IRC conversations (whose logs have variable
 formats), HTML snippets, the various Wiki formats, etc.
 </p>
 
 <p>
 Thus, it makes sense to define an intermediate format (defined by an XML
-grammar) for the exchange of fortunes. The “Fortunes Mania” system will allow 
+grammar) for the exchange of fortunes. The “Fortunes Mania” system will allow
 input in any of the input formats, will convert each one to the intermediate
-format (while possibly keeping the original) and will export it to the final 
+format (while possibly keeping the original) and will export it to the final
 formats on demand. I also believe this format needs to have structured markup.
 </p>
 
@@ -86,7 +86,7 @@ command line, GUI, Mozilla XUL, etc.
 </p>
 
 <p>
-By defining an API, one can expect a culture of open-source and 
+By defining an API, one can expect a culture of open-source and
 non-open-source clients to emerge eventually.
 </p>
 
@@ -94,7 +94,7 @@ non-open-source clients to emerge eventually.
 
 <p>
 The site should supply a way to export to and from Wikiquote and other such
-quotes sites. For more information refer to Joel on Software’s 
+quotes sites. For more information refer to Joel on Software’s
 <a href="http://www.joelonsoftware.com/articles/fog0000000052.html">“Let me
 go Back” essay</a>.
 </p>

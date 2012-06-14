@@ -5,15 +5,15 @@
 Access Keys</a></h2>
 
 <p>
-What this script does is remove access keys from all the elements of the 
-page. This is relevant to sites such as 
+What this script does is remove access keys from all the elements of the
+page. This is relevant to sites such as
 <a href="http://www.wikipedia.org/">the Wikipedia</a> that trap many commonly
 used shortcuts (like Alt+F, Alt+E).
 </p>
 
 <p>
-Note that because of 
-<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290801">a 
+Note that because of
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290801">a
 bug in Mozilla</a> it cannot cancel accesskeys assigned to &lt;input /&gt;
 boxes. It would be able to do so once the bug is fixed.
 </p>
@@ -45,10 +45,10 @@ but support for more can be added.
 of “from=rss” in the URL</a></h2>
 
 <p>
-I am always annoyed that when I follow links in the RSS feeds of 
+I am always annoyed that when I follow links in the RSS feeds of
 <a href="http://slashdot.org/">Slashdot</a> or other Slash-based sites,
-I’m getting a “?from=rss” or “&amp;from=rss” CGI parameter at the URL. 
-This later implies more work for me when I want to link to them. 
+I’m getting a “?from=rss” or “&amp;from=rss” CGI parameter at the URL.
+This later implies more work for me when I want to link to them.
 </p>
 
 <p>
@@ -56,25 +56,25 @@ So what this incredibly silly script does is redirect to a new page without
 this suffix.
 </p>
 
-<h2 id="qa-mandriva-fix-anchor"><a 
-href="qa.mandriva.com-fix-reply-to-anchor.user.js">Fix the qa.mandriva.com 
+<h2 id="qa-mandriva-fix-anchor"><a
+href="qa.mandriva.com-fix-reply-to-anchor.user.js">Fix the qa.mandriva.com
 reply-to-comment anchor</a></h2>
 
 <p>
 As of this writing, <a href="http://qa.mandriva.com/">the Mandriva Bugzilla
 (qa.mandriva.com)</a> has a bug where replying to a comment jumps to the first
-comment instead of the reply-to-box. (See 
-<a href="https://qa.mandriva.com/show_bug.cgi?id=50116">this 
+comment instead of the reply-to-box. (See
+<a href="https://qa.mandriva.com/show_bug.cgi?id=50116">this
 bug report about it</a>). This greasemonkey script fixes this problem.
 </p>
 
-<h2 id="freshmeat-expand-desc"><a 
+<h2 id="freshmeat-expand-desc"><a
 href="freshmeat-expand-descriptions.user.js">Expand the Freshmeat.net Descriptions</a></h2>
 
 <p>
-This script is meant to expand the descriptions of 
+This script is meant to expand the descriptions of
 <a href="http://freshmeat.net/">Freshmeat.net</a> which are truncated by
-default. It was written by inspiration from 
+default. It was written by inspiration from
 <a href="http://userscripts.org/scripts/show/51522">this script</a>, but
 actually works, because the latter does not work due to what appears to be
 bad timing in the JS application.
@@ -86,8 +86,8 @@ Title Generator</a></h2>
 <p>
 This script is intended for a specialised purpose, and doesn’t add to the
 user experience, so I didn’t put it on userscripts.org. What this script does
-is generate an entry with basic information that can be used for my 
-MediaWiki-based transcription of the 
+is generate an entry with basic information that can be used for my
+MediaWiki-based transcription of the
 <a href="http://www.ozyandmillie.org/">Ozy and Millie</a> cartoons on each
 page of the cartoon. That way one can copy and paste it instead of entering
 it manually.
@@ -110,12 +110,12 @@ common characters based on their first letters.
 
 <p>
 So, for example “*Oz” Becomes “* '''Ozy''': ”, and “**Ms” becomes
-“** '''Ms. Mudd'''”. There’s a complete list of mappings in the 
+“** '''Ms. Mudd'''”. There’s a complete list of mappings in the
 “var ids_to_fullnames” mapping in the file.
 </p>
 
 <p>
-Since this script is also intended for a specialised purpose, I haven’t 
+Since this script is also intended for a specialised purpose, I haven’t
 uploaded it to userscripts.org either.
 </p>
 

@@ -8,15 +8,15 @@
 
 <p>
 The traditional <a href="http://en.wikipedia.org/wiki/Unix">Unix</a> help
-command is the ubiquitous 
+command is the ubiquitous
 <a href="http://www.primate.wisc.edu/computer/man.html">man command</a>, which
-displays a page using a pager (such as 
+displays a page using a pager (such as
 <a href="http://www.gnu.org/software/less/less.html">GNU less</a>), and lets
 you read it forward and backward and search for patterns there. Obviously this
 solution is inadequate, and several better solutions evolved. The purpose
 of <i>Unixdoc</i> (a pun on the Perl
 <a href="http://perldoc.perl.org/perldoc.html">Perldoc command</a>) is to
-create one <strong>fully-featured and integrated</strong> system for 
+create one <strong>fully-featured and integrated</strong> system for
 <strong>offline and online technical documentation</strong>.
 </p>
 
@@ -26,9 +26,9 @@ create one <strong>fully-featured and integrated</strong> system for
 The following figure shows the Unixdoc workflow:
 </p>
 
-<p><img 
-    src="unixdoc1-32.png" 
-    alt="Many Format into Unixdoc and many presentations out of it" 
+<p><img
+    src="unixdoc1-32.png"
+    alt="Many Format into Unixdoc and many presentations out of it"
     style="margin: 1em;"
     /></p>
 
@@ -41,7 +41,7 @@ Essentially it receives inputs in most popular formats:
 Man page (formatted using nroff macros)
 </li>
 <li>
-<a href="http://perldoc.perl.org/perlpod.html">perl 
+<a href="http://perldoc.perl.org/perlpod.html">perl
 POD</a>
 </li>
 <li>
@@ -76,21 +76,21 @@ Applying visual and logical style to the document.
 Annotating using keywords.
 </li>
 <li>
-Searching using keywords, phrases, words in the internal hyperlinks that point 
-to the document (a la <a href="http://en.wikipedia.org/wiki/PageRank">Google’s 
+Searching using keywords, phrases, words in the internal hyperlinks that point
+to the document (a la <a href="http://en.wikipedia.org/wiki/PageRank">Google’s
 PageRank algorith</a> ).
 </li>
 <li>
-Including and embedding rich media such as images, videos, sounds, 
+Including and embedding rich media such as images, videos, sounds,
 mathematical equations and line drawings.
 </li>
 </ol>
 
 <p>
-Eric Raymond <a href="http://www.faqs.org/docs/artu/ch18s04.html">talks 
+Eric Raymond <a href="http://www.faqs.org/docs/artu/ch18s04.html">talks
 about “the present chaos (of Unix documentation) and a Possible Way Out”</a>
-in his book <a href="http://www.faqs.org/docs/artu/"><i>The Art of Unix 
+in his book <a href="http://www.faqs.org/docs/artu/"><i>The Art of Unix
 Programming</i></a>. He gives DocBook/XML as the possible solution, and this
-may actually be a good final format for Unixdoc. 
+may actually be a good final format for Unixdoc.
 </p>
 

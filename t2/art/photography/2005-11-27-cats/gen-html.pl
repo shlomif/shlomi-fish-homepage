@@ -17,11 +17,11 @@ my %images =
     {
         'd' => "Shot of the entrance to the park",
     },
-    5 => 
+    5 =>
     {
         'd' => "Black and white kitten",
     },
-    6 => 
+    6 =>
     {
         'd' => "Striped grey kitten",
     },
@@ -35,7 +35,7 @@ my %images =
     17 => { d => "Striped grey cat on a stone wall with his eyes closed",},
     18 => { d => "Close up on the same cat, with his eyes open", },
     19 => { d => "Grey cat on the bench",},
-    20 => { d => "Close up on that grey cat",},    
+    20 => { d => "Close up on that grey cat",},
 );
 
 sub get_record
@@ -66,10 +66,10 @@ foreach my $dir ($target_dir, $photos_dir, $thumbs_dir)
     $dir->mkpath();
 }
 
-#my @filenames = (map { $_->filename() } 
-#    (grep 
-#        { $_->is_file() && $_->filename() =~ (/^img_\d{4}\.jpg$/) 
-#        } 
+#my @filenames = (map { $_->filename() }
+#    (grep
+#        { $_->is_file() && $_->filename() =~ (/^img_\d{4}\.jpg$/)
+#        }
 #        @{$dir}
 #    ));
 
@@ -88,7 +88,7 @@ foreach my $file (@files_records)
     my $desc = CGI::escapeHTML($file->{d});
     my $link = qq{<a href="photos/$fn" title="$desc">};
     $html .= qq{<tr>\n<td>$link<img src="thumbnails/$fn.png" alt="Thumbnail for &quot;$fn&quot;" /></a></td>\n<td>$link$desc</a></td>\n</tr>\n};
-    
+
     # Now copy the file.
     io->catfile($dir, $fn) > io->catfile($photos_dir, $fn);
     # Now copy the thumbnail

@@ -4,8 +4,8 @@ no-accesskey - remove Access Keys.
 Changelog:
 * 2005-04-28 - First version.
 
-* 2006-01-12 - 
-    1. Converted elems[i].accessKey = "" to 
+* 2006-01-12 -
+    1. Converted elems[i].accessKey = "" to
     elems[i].setAttribute('accesskey', '').
     2. Calling the function directly instead of using window.onload.
 */

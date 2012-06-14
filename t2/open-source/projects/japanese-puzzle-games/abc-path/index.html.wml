@@ -9,8 +9,8 @@
 <set-var gen_sco_mod="http://search.cpan.org/dist/<get-var gen_modname />/" />
 
 <p>
-The 
-<a href="<get-var sco_mod />"><get-var modname /></a> Perl 5 CPAN distribution implements a solver for 
+The
+<a href="<get-var sco_mod />"><get-var modname /></a> Perl 5 CPAN distribution implements a solver for
 <a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
 brainbashers.com. It provides a standalone command-line “abc-path-solver”
 program and an Application Programmer Interface (API).
@@ -18,10 +18,10 @@ program and an Application Programmer Interface (API).
 
 <p>
 The
-<a href="<get-var gen_sco_mod />"><get-var gen_modname /></a> Perl 5 CPAN 
-distribution implements a generator for ABC Path layouts based on a random 
+<a href="<get-var gen_sco_mod />"><get-var gen_modname /></a> Perl 5 CPAN
+distribution implements a generator for ABC Path layouts based on a random
 number seed. What it does is first generate a random path through the 5*5
-board, and then assigns the hints randomly. Sometimes the process takes a 
+board, and then assigns the hints randomly. Sometimes the process takes a
 relatively long time to complete.
 </p>
 
@@ -68,7 +68,7 @@ on search.cpan.org</a>.
 <ul>
 
 <li>
-<a href="http://metacpan.org/release/<get-var gen_modname />">The 
+<a href="http://metacpan.org/release/<get-var gen_modname />">The
 ABC Path Generator on metacpan.org</a> - download and more information.
 </li>
 
@@ -115,7 +115,7 @@ is in German).
 <h2 id="licence">Licence</h2>
 
 <p>
-<get-var modname /> is licensed under the 
+<get-var modname /> is licensed under the
 <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>.
 </p>
 

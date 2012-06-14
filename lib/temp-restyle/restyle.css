@@ -1,45 +1,45 @@
 body {
-    background: white; 
+    background: white;
 }
 .master {
     padding-right:1em;
 /* display: table; */
 }
-.wrapper { 
+.wrapper {
     display: table-row;
-} 
-.nav_menu { 
+}
+.nav_menu {
     display: table-cell;
     padding-left: 1em;
     padding-right: 1em;
     background-color: #dff0f8;
-} 
+}
 .wrapper {
     padding-right: 10em;
 }
 .about_site {
     display: table-cell;
 }
-.main { 
-    display: table-cell; 
+.main {
+    display: table-cell;
     padding-right: 1em;
     background-color: #e0ebef;
     padding-left: 1em;
     margin-left: 1em;
-} 
+}
 .footer
-{ 
-} 
+{
+}
 /* h1, h2 { background:#008800; color:#ffffff; } */
 h1, h2
-{ 
+{
     font-family:arial;
-} 
+}
 
 .content h1
 {
     font-size: x-large;
-} 
+}
 
 .about_site
 {
@@ -63,5 +63,5 @@ h1, h2
 {
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-    border-radius: 20px;    
+    border-radius: 20px;
 }

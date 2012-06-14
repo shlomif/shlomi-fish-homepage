@@ -121,7 +121,7 @@ my $puzzles_tree_contents =
         },
         {
             text => "Computer Science",
-            url => "puzzles/cs/",            
+            url => "puzzles/cs/",
             subs =>
             [
                 {
@@ -136,7 +136,7 @@ my $puzzles_tree_contents =
 
 sub get_params
 {
-    return 
+    return
         (
             hosts => MyNavData::get_hosts(),
             tree_contents => $puzzles_tree_contents,

@@ -35,7 +35,7 @@ my $essays_tree_contents =
             text => "Software Management",
             url => "lecture/cat/software-management/",
             title => "Presentation about Software Management",
-            subs => 
+            subs =>
             [
                 {
                     text => "CatB",
@@ -63,7 +63,7 @@ my $essays_tree_contents =
                     title => "The Haskell Programming Language for Perl Programmers",
                 },
             ],
-        },            
+        },
         {
             text => "Tools",
             url => "lecture/cat/various-tools/",
@@ -238,7 +238,7 @@ my $essays_tree_contents =
 
 sub get_params
 {
-    return 
+    return
         (
             hosts => MyNavData::get_hosts(),
             tree_contents => $essays_tree_contents,

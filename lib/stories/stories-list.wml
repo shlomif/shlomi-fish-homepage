@@ -34,11 +34,11 @@ encounters.
 <define-tag humour_link>$(ROOT)/humour/%0</define-tag>
 
 <define-tag humour_story endtag="required">
-<preserve id humour_href text tag /> 
+<preserve id humour_href text tag />
 <set-var %attributes />
 <div class="story">
-<<get-var tag /> id="<get-var id />"><a 
-href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var 
+<<get-var tag /> id="<get-var id />"><a
+href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var
 tag />>
 %body
 </div>
@@ -47,7 +47,7 @@ tag />>
 
 <define-tag humour_stories_list_text>
 
-<humour_story tag="h3" id="enemy-how-i-helped" humour_href="TheEnemy/" 
+<humour_story tag="h3" id="enemy-how-i-helped" humour_href="TheEnemy/"
 text="The Enemy and How I Helped to Fight it">
 
 <p>
@@ -78,7 +78,7 @@ text="The Human Hacking Field Guide">
 A story about teenagers in Los Angeles, California, around 2005, who are
 dealing extensively with open-source development. An unlikely female
 <a href="http://catb.org/~esr/faqs/hacker-howto.html">software hacker</a>
-(not a computer intruder) wannabe is getting tutored by an even more 
+(not a computer intruder) wannabe is getting tutored by an even more
 unlikely, but much more experienced, female software hacker.
 </p>
 
@@ -88,7 +88,7 @@ unlikely, but much more experienced, female software hacker.
 text="Star Trek: We the Living Dead">
 
 <p>
-My own invented episode of the new crop of Star Trek series. 
+My own invented episode of the new crop of Star Trek series.
 <we_the_living_dead_abstract />
 </p>
 
@@ -102,8 +102,8 @@ text="Selena Mandrake - The Slayer">
 </p>
 
 <p>
-This screenplay, a parody and reflection on 
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the 
+This screenplay, a parody and reflection on
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
 Vampire Slayer</a> (both the movie and the show) and inspired by many
 other sources, is work-in-progress.
 </p>
@@ -114,7 +114,7 @@ other sources, is work-in-progress.
 text="The Pope Died on Sunday">
 
 <p>
-A description of an insane week in the life of a female American 
+A description of an insane week in the life of a female American
 graphic artist. A typical Hollywoodian story with not so Holywoodian elements.
 Work in progress, and available only in Hebrew for the time being.
 </p>
@@ -134,10 +134,10 @@ a day in the life of a Semitic city circa 500 B.C. Work in progress.
 text="The Blue Rabbit Log">
 
 <p>
-Screenplays for a series of crazy comedy films parodying 
-<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy 
+Screenplays for a series of crazy comedy films parodying
+<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
 Role-Playing Games</a>. Join the band of Player Characters called “The
-Blue Rabbit Adventuring Company”, as they journey in the imaginary 
+Blue Rabbit Adventuring Company”, as they journey in the imaginary
 world that was invented by the game master, and their struggles and
 encounters with monsters, the non-player characters, their players,
 and... the Game Master! (Muahahahahaha).
@@ -153,11 +153,11 @@ Work in progress.
 
 <define-tag rejects_road_to_heaven>
 
-<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/" 
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/"
 text="The Road to Heaven is Paved with Bad Intentions">
 
 <p>
-The sequel to <i>The Enemy</i>. The protagonist travels back in time and tries 
+The sequel to <i>The Enemy</i>. The protagonist travels back in time and tries
 to prevent World War II.
 </p>
 

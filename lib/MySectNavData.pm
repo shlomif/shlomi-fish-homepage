@@ -5,7 +5,7 @@ use warnings;
 
 use Shlomif::Homepage::SectionMenu;
 
-my @sections = 
+my @sections =
 (
     {
         'id' => "essays",
@@ -37,7 +37,6 @@ my @sections =
         'class' => "Humour",
         'title' => "Humour Section Menu",
     },
-    
 );
 
 sub get_nav_menu

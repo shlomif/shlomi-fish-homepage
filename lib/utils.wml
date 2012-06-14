@@ -11,7 +11,7 @@
 <set-var %attributes />
 <set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
 <if <match "<get-var url />" "^http://" action="report" />
-    "<get-var url />" 
+    "<get-var url />"
     <ifeq "$(LATEMP_SERVER)" "<get-var host />"
         "$(ROOT)/<get-var url />"
         <ifeq "<get-var host />" "t2"
@@ -57,7 +57,7 @@
 
 <p>
 This page is temporary, under construction and should not be publicised or
-publicly linked to. Please send comments to 
+publicly linked to. Please send comments to
 <a href="$(ROOT)/me/contact-me/">the author</a> in private.
 </p>
 
@@ -70,22 +70,22 @@ publicly linked to. Please send comments to
 <set-var %attributes />
 
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img 
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img
 alt="Creative Commons License" class="bless"
 src="$(ROOT)/images/somerights20.png"
 /></a></p>
 
 <p>
-This document is Copyright by Shlomi Fish, <get-var year />, and is available 
+This document is Copyright by Shlomi Fish, <get-var year />, and is available
 under the
-terms of <a rel="license" 
-href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons 
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
 Attribution License 3.0 Unported</a> (or at your option any
 later version of that licence).
 </p>
 
 <p>
-For securing additional rights, please contact 
+For securing additional rights, please contact
 <a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
@@ -100,16 +100,16 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <set-var %attributes />
 
 <p>
-This document is Copyright by Shlomi Fish, <get-var year />, and is available 
+This document is Copyright by Shlomi Fish, <get-var year />, and is available
 under the
-terms of <a rel="license" 
-href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons 
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
 Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
 later version).
 </p>
 
 <p>
-For securing additional rights, please contact 
+For securing additional rights, please contact
 <a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
@@ -124,7 +124,7 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <preserve year head_tag />
 
 <set-var %attributes />
-<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h3" />" 
+<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h3" />"
     />
 
 <<get-var head_tag /> id="license">Copyright and Licence</<get-var head_tag />>
@@ -141,14 +141,14 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <set-var %attributes />
 
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img 
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img
 alt="Creative Commons License" class="bless"
 src="$(ROOT)/images/somerights20.png"
 /></a></p>
 
 <p>
 זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת <get-var year/>,
-תחת תנאי 
+תחת תנאי
 <a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he">הרשיון
 ייחוס 2.5 לא מותאם של קריאייטיב קומונס Creative Commons)</a>
 (או לשיקלוכם כל גרסה מאוחרת יותר של אותו הרשיון.)

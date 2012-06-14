@@ -3,28 +3,28 @@ body
     font-family: Arial, Sans-Serif;
 }
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
-{ 
+{
     background-color : #90EE90; /* LightGreen */
 }
 [% SET navbar_width = "20%" %]
 
-.navbar 
-{ 
+.navbar
+{
     float : left;
     width : [% navbar_width %];
-    padding-left : 0.5em;    
+    padding-left : 0.5em;
     padding-right : 0.5em;
     padding-top : 1.5em;
     padding-bottom: 2em;
 }
 ul.navbarmain
-{ 
+{
     padding-left: 0;
     margin-left : 0.3em;
 }
 ul.navbarnested
 {
-    padding-left : 0em; 
+    padding-left : 0em;
     margin-left : 1.5em;
 }
 
@@ -72,7 +72,7 @@ ul.nospace
     margin-right : 30px;
     padding-top: 0.5em;
 }
-/* Workaround to get the <hr /> element at the bottom to properly display 
+/* Workaround to get the <hr /> element at the bottom to properly display
    with Konqueror 3.3.x
    */
 .footer hr
@@ -113,7 +113,7 @@ ul.nospace
     padding-right: 0.5em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
-    margin-left: 0.5em;    
+    margin-left: 0.5em;
     margin-right: 0.5em;
     margin-top: 0.7em;
     margin-bottom: 0.7em;
@@ -150,7 +150,7 @@ ul.nospace
 {
    padding-left:10pt;
 }
-/* 
+/*
 This is to make sure the visited links look clear in Konqueror or other
 browsers where they are magenta by default.
 */
@@ -210,7 +210,7 @@ button[% sect_m %]
    font-size: medium;
    padding-top:0;
    margin-top:0;
-   margin-bottom:0;  
+   margin-bottom:0;
 }
 .hide
 {
@@ -242,7 +242,7 @@ button[% sect_m %]
     text-align:right;
     padding-right: 0.75cm;
 [%# Commenting out because we want Arial also for Hebrew.
-    
+
     font-family: "David CLM", David, Serif;
 %]
 }

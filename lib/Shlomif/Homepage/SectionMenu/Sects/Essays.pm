@@ -234,7 +234,7 @@ my $essays_tree_contents =
                         {
                             text => "Pre-Elpas",
                             url => "prog-evolution/pre-elpas.html",
-                            title => ("Memoirs as a Programmer from" 
+                            title => ("Memoirs as a Programmer from"
                                 . " Elementary School, High School, etc."),
                         },
                         {
@@ -306,7 +306,7 @@ my $essays_tree_contents =
                 {
                     text => "Define “Zionism”!",
                     url => "philosophy/politics/define-zionism/",
-                    title => ("What is “Zionism” really? What " . 
+                    title => ("What is “Zionism” really? What " .
                         "does anti-Israel, anti-Zionist, etc. mean?"),
                     subs =>
                     [
@@ -424,7 +424,7 @@ my $essays_tree_contents =
 
 sub get_params
 {
-    return 
+    return
         (
             hosts => MyNavData::get_hosts(),
             tree_contents => $essays_tree_contents,

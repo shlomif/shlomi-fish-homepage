@@ -19,7 +19,7 @@ sub nav_record
     my ($self) = @_;
 
     return
-    { 
+    {
         text => scalar($self->text()),
         url => sprintf(
             "humour/fortunes/%s.html",
@@ -97,7 +97,7 @@ EOF
         id => "osp_rules",
         desc => <<"EOF",
 “The Rules of Open-Source Programming”.
-Also check a <a href="http://www.advogato.org/article/395.html">discussion of it</a> on 
+Also check a <a href="http://www.advogato.org/article/395.html">discussion of it</a> on
 <a href="http://www.advogato.org/">Advogato</a>.
 EOF
         text => "osp_rules",
@@ -115,7 +115,7 @@ EOF
     {
         id => "subversion",
         desc => <<"EOF",
-Excerpts from the online 
+Excerpts from the online
 <a href="http://subversion.tigris.org/">Subversion</a> folklore.
 EOF
         text => "subversion",
@@ -158,7 +158,7 @@ sub get_fortune_records
 
 sub sorted_fortunes
 {
-    return 
+    return
     [
         sort { $a->id() cmp $b->id() }
         @{get_fortune_records()}

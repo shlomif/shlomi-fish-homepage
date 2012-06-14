@@ -8,7 +8,7 @@
 "
 " at the beginning of the test file. Then you need to make sure, every test
 " has a corresponding '# TEST' comment. If you run several tests in a loop,
-" you can append asterisks plus number to the comment. So for example the 
+" you can append asterisks plus number to the comment. So for example the
 " comment:
 "
 "     # TEST*3*5
@@ -25,7 +25,7 @@
 " Author: Shlomi Fish
 " Date: 02 December 2004
 " License: MIT X11
-" 
+"
 
 function! Perl_Tests_Count()
     " Position the cursor at the beginning of the file
@@ -43,7 +43,7 @@ function! Perl_Tests_Count()
             let num_tests_to_add = num_tests_to_add * mult
             let star_m = matchstr(multipliers, "^\\*\\d\\+")
         endwhile
-        
+
         let mycount = mycount + num_tests_to_add
     endwhile
     call cursor(1,1)

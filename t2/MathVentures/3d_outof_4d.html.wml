@@ -164,7 +164,7 @@ mathematically, I’ll use the standard formulas and eventually get to:
 </pre>
 
 <p>
-If we substract 6^4 and those 5 sums from the total sum that was acquired in 
+If we substract 6^4 and those 5 sums from the total sum that was acquired in
 the previous stage, we’d get to the new total with the two least dice
 removed on each throw. Divide it by the number of throws - 6^4 - and we get
 the new average. The grand formula, then, is:
@@ -172,10 +172,10 @@ the new average. The grand formula, then, is:
 
 <pre>
           6            6
-6^4*14 - SIGMA(i^4) - SIGMA [(6-i+1)^4 + ( (6-i+1)^3 * (i-1)) * 4 ] 
+6^4*14 - SIGMA(i^4) - SIGMA [(6-i+1)^4 + ( (6-i+1)^3 * (i-1)) * 4 ]
          i=1          i=1
 -----------------------------------------------------------------------
-                    6^4              
+                    6^4
 </pre>
 
 
@@ -185,7 +185,7 @@ because we have to consider 3 different cases for every point we
 substract, 4 cases for the fourth die, and so on. If anyone has an idea
 on how to improve this method, or can suggest an alternative method
 which is simpler as more and more dice are removed by order, please let
-me know and I’ll post it here. 
+me know and I’ll post it here.
 </p>
 
 <p>
@@ -196,10 +196,10 @@ Theory of Probability.
 
 <p>
 A final note: you can find a C program, not unlike the one my friend used,
-that calculates the average of such throws 
+that calculates the average of such throws
 <a href="calc_dice_average.c">here</a>. It can do that for any number of
 dice with any number of sides, and while eliminating any number of minimal
-dice. 
+dice.
 </p>
 
 <p>

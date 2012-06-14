@@ -39,7 +39,7 @@ foreach my $fort (@fortunes)
     my $xml_fn = "$id.fortune.xml";
 
 
-    my ($raw) = $fort->findnodes("raw"); 
+    my ($raw) = $fort->findnodes("raw");
 
     my $convert_to_xml = sub {
         my ($text) = $raw->findnodes("descendant::text");
@@ -95,7 +95,7 @@ foreach my $fort (@fortunes)
     my $scp_elem = XML::LibXML::Element->new("screenplay");
     my $body = XML::LibXML::Element->new("body");
     $scp_elem->appendChild($body);
-    
+
     foreach my $node ($scene_elem->childNodes())
     {
         $body->appendChild($node);

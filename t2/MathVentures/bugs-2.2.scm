@@ -6,7 +6,7 @@
 ;
 ; Copyright (C) 1999 Shlomi Fish
 ;
-; This file can be freely used, modified and distributed under the terms of 
+; This file can be freely used, modified and distributed under the terms of
 ; the MIT X11 license.
 ;
 ;
@@ -64,15 +64,15 @@
          (path-x 10)
          (path-y 10)
     )
-         
+
          (gimp-image-add-layer img bg-layer 1)
-     
+
          (gimp-context-set-background '(255 255 255))
          ;(gimp-edit-fill img bg-layer)
          (gimp-edit-fill bg-layer BG-IMAGE-FILL)
          (gimp-context-set-background old-bg)
-         
-        
+
+
          ; Set the ratio to a value between 0 and 1
          (if (< ratio 0)
              (set! ratio (* ratio -1))
@@ -83,7 +83,7 @@
          (if (or (= ratio 0) (= ratio 1))
              (set! ratio 0.1)
          )
-         
+
 
          (regular-brush)
 
@@ -97,7 +97,7 @@
             (*
                 (- (nth 3 coords) (nth 1 coords))
                 (- (nth 3 coords) (nth 1 coords))
-            )) 
+            ))
             3
          )
 
@@ -121,7 +121,7 @@
          )
 
          (gimp-context-set-brush old-brush)
-         
+
          (gimp-display-new img)
     )
 )
@@ -139,4 +139,4 @@
                     SF-TOGGLE "Mark Path?" TRUE
                     SF-VALUE "Ratio" "0.1"
                     )
-                    
+

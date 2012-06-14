@@ -40,7 +40,7 @@ my $collections_aref = Shlomif::Homepage::FortuneCollections->sorted_fortunes();
 
 {
     my $col_insert_sth = $dbh->prepare(<<'EOF');
-INSERT INTO fortune_collections (str_id, title, tooltip, desc) 
+INSERT INTO fortune_collections (str_id, title, tooltip, desc)
 VALUES(?, ?, ?, ?)
 EOF
 
@@ -61,7 +61,7 @@ my $collection_query_id_sth = $dbh->prepare(
     q{SELECT id FROM fortune_collections WHERE str_id = ?}
 );
 
-# We split the work to 50-items batches per the advice on 
+# We split the work to 50-items batches per the advice on
 # Freenode's #perl by tm604 and jql.
 $dbh->begin_work;
 
@@ -77,7 +77,7 @@ foreach my $basename (@file_bases)
     {
         die "Cannot find for '$basename'!";
     }
-    
+
     my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
 
     my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});

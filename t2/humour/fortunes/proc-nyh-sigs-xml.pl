@@ -26,7 +26,7 @@ while (<>)
             $text =~ m{<!\[CDATA\[([^\n]*)$}ms;
             my $sig = $1;
             my @words = split(/\s+/, $sig);
-            my @fmt_words = 
+            my @fmt_words =
                 (
                     map { lc($_) }
                     grep { length($_) }
@@ -34,7 +34,7 @@ while (<>)
                     { my $s = $_; $s =~ s{\W}{}g; $s; }
                     @words
                 );
-            
+
             my $id = "nyh-sig--" . join("-" , @fmt_words[0 .. min(2,$#fmt_words)]);
             $text =~ s{(<fortune id=")[^"]+(">)}{$1$id$2};
 

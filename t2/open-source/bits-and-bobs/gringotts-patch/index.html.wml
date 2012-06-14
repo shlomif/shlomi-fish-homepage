@@ -29,11 +29,11 @@ gringotts-shlomif-patch-0.4.4.diff
 </define-tag>
 
 <p>
-This is <link_to_patch>a patch</link_to_patch> for 
-<a href="http://devel.pluto.linux.it/projects/Gringotts/">the Gringotts 
-encrypted note manager</a> for Linux, by Germano Rizzo. It should be applied 
-against 
-<a href="ftp://ftp.debian.org/debian/pool/main/g/gringotts/gringotts_1.2.8+1.2.9pre1.orig.tar.gz">version 1.2.9pre1 (available 
+This is <link_to_patch>a patch</link_to_patch> for
+<a href="http://devel.pluto.linux.it/projects/Gringotts/">the Gringotts
+encrypted note manager</a> for Linux, by Germano Rizzo. It should be applied
+against
+<a href="ftp://ftp.debian.org/debian/pool/main/g/gringotts/gringotts_1.2.8+1.2.9pre1.orig.tar.gz">version 1.2.9pre1 (available
 from the Debian servers)</a> . What it does, so far is:
 </p>
 
@@ -59,7 +59,7 @@ Fixes proto for find() in src/grg_entries_vis.h.
 Fixes compilation on FC3 (missing #include’s to “stdio.h”)
 </li>
 <li>
-Adds sensitivity to HTAB environment variable to change the horizontal tab 
+Adds sensitivity to HTAB environment variable to change the horizontal tab
 value in the main editing widget (default: 8)
 </li>
 </ul>
@@ -74,17 +74,17 @@ Fixed a crash in the preferences dialog caused by a previous modification.
 </ol>
 
 <p>
-An older version of the patch which has already been integrated into version 
+An older version of the patch which has already been integrated into version
 1.2.9pre1 made the following changes:
 </p>
 
 <ol>
 <li>
-Allow it to compile against recent versions of the Gtk+ library. (tested 
+Allow it to compile against recent versions of the Gtk+ library. (tested
 against Gtk+ 2.4.9). This is done by porting the API calls to the new ones.
 </li>
 <li>
-Allow it to compile with stricter gcc flags. 
+Allow it to compile with stricter gcc flags.
 (<tt>-Wall -Wstrict-prototypes -Werror-implicit-function-declaration</tt>)
 </li>
 <li>

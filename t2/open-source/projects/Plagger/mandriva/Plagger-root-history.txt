@@ -9,9 +9,9 @@
  4605  cd fc6-yum/pub.woremacx.com/worepo/fc6/i386/
  4606  sl
  4607  ls
- 4608  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm 
- 4609  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm perl-Text-CSV_PP-1.01-0.1.fc6worepo.noarch.rpm 
- 4610  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm perl-Text-CSV_PP-1.01-0.1.fc6worepo.noarch.rpm perl-KinoSearch-0.15-0.1.fc6worepo.i386.rpm 
+ 4608  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm
+ 4609  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm perl-Text-CSV_PP-1.01-0.1.fc6worepo.noarch.rpm
+ 4610  urpmi perl-Plagger-0.7.16-rel.0.1.fc6worepo.noarch.rpm perl-Text-CSV_PP-1.01-0.1.fc6worepo.noarch.rpm perl-KinoSearch-0.15-0.1.fc6worepo.i386.rpm
  4611  urpmi.addmedia "Plagger from FC6" file://`pwd`/
  4612  urpmi.addmedia "Plagger from FC6" file://`pwd`
  4613  cd ..
@@ -30,17 +30,17 @@
  4626  cd
  4627  ovid POE::Component::Client::HTTP
  4628  urpmi /usr/src/rpm/RPMS/i586/perl-POE-Component-Client-HTTP-0.81-1.i586.rpm
- 4629  urpmi /usr/src/rpm/RPMS/i586/perl-POE-Component-Client-HTTP-0.81-1.i586.rpm /usr/src/rpm/RPMS/i586/perl-POE-Component-Client-Keepalive-0.0901-1.i586.rpm 
+ 4629  urpmi /usr/src/rpm/RPMS/i586/perl-POE-Component-Client-HTTP-0.81-1.i586.rpm /usr/src/rpm/RPMS/i586/perl-POE-Component-Client-Keepalive-0.0901-1.i586.rpm
  4630  urpmi perl-Plagger
  4631  ovid Datetime::Format::iCal
  4632  ovid DateTime::Format::iCal
  4633  ovid DateTime::Format::ICal
  4634  urpmi /usr/src/rpm/SRPMS/perl-DateTime-Format-ICal-0.08-1.src.rpm
- 4635  urpmi /usr/src/rpm/RPMS/i586/perl-DateTime-Format-ICal-0.08-1.i586.rpm 
+ 4635  urpmi /usr/src/rpm/RPMS/i586/perl-DateTime-Format-ICal-0.08-1.i586.rpm
  4636  urpmi perl-Plagger
  4637  ovid DateTime::Span
  4638  urpmi /usr/src/rpm/RPMS/i586/perl-DateTime-Set-0.25-1.i586.rpm
- 4639  urpmi /usr/src/rpm/RPMS/i586/perl-DateTime-Set-0.25-1.i586.rpm /usr/src/rpm/RPMS/i586/perl-Set-Infinite-0.61-1.i586.rpm 
+ 4639  urpmi /usr/src/rpm/RPMS/i586/perl-DateTime-Set-0.25-1.i586.rpm /usr/src/rpm/RPMS/i586/perl-Set-Infinite-0.61-1.i586.rpm
  4640  history
  4641  history > ~/Plagger-install-hist.txt
  4642  urpmi perl-Plagger
@@ -66,12 +66,12 @@
  4662  ls
  4663  cd /usr/src/rpm/RPMS/i586/
  4664  urpmi perl-DateTime-Format-Japanese-0.03-1.i586.rpm
- 4665  urpmi perl-DateTime-Format-Japanese-0.03-1.i586.rpm perl-DateTime-Format-Builder-0.7807-1.i586.rpm 
+ 4665  urpmi perl-DateTime-Format-Japanese-0.03-1.i586.rpm perl-DateTime-Format-Builder-0.7807-1.i586.rpm
  4666  urpmi perl-Plagger
  4667  urpmi libtidy
  4668  urpmi libtidy0.99
  4669  urpmi perl-Plagger
- 4670  cd 
+ 4670  cd
  4671  ls
  4672  ovid HTML::Tidy
  4673  urpmi libtidy0.99-devel
@@ -124,9 +124,9 @@
  4720  cd /etc/X11/
  4721  ls
  4722  ls -l xorg.conf*
- 4723  diff -u xorg.conf xorg.conf.nv-driver 
+ 4723  diff -u xorg.conf xorg.conf.nv-driver
  4724  ls -l xorg.conf.no*
- 4725  diff -u xorg.conf xorg.conf.nouveau4 
+ 4725  diff -u xorg.conf xorg.conf.nouveau4
  4726  cp xorg.conf xorg.conf.nouveau5
  4727  ls
  4728  vim xorg.conf
@@ -146,10 +146,10 @@
  4742  bash Install-Plagger-Packages.bash
  4743  urpmi perl-POE-Component-Client-HTTP
  4744  perl -MPOE::Component::Client::HTTP
- 4745  perl -MPOE::Component::Client::HTTP -MData::Dumper -e 'print Dumper(\%INC)'                                              
+ 4745  perl -MPOE::Component::Client::HTTP -MData::Dumper -e 'print Dumper(\%INC)'
  4746  perl -MPOE::Component::Client::HTTP -MData::Dumper -e 'print Dumper(\%INC)'                                               | less
  4747  rpm -qilf /usr/lib/perl5/site_perl/5.8.8/POE/
- 4748  rpm -qilf /usr/lib/perl5/site_perl/5.8.8/POE/Component/Client/HTTP.pm 
+ 4748  rpm -qilf /usr/lib/perl5/site_perl/5.8.8/POE/Component/Client/HTTP.pm
  4749  urpmi perl-POE-Component-Client-HTTP
  4750  bash Install-Plagger-Packages.bash
  4751  rpm -q perl-JSON
@@ -159,7 +159,7 @@
  4755  rpm -q perl-Date-Parse
  4756  perl -MDate::Parser
  4757  perl -MDate::Parse
- 4758  perl -MDate::Parse -MData::Dumper -e 'print Dumper(\%INC)'                                              
+ 4758  perl -MDate::Parse -MData::Dumper -e 'print Dumper(\%INC)'
  4759  rpm -qilf /usr/lib/perl5/vendor_perl/5.8.8/Date/Parse.pm
  4760  bash Install-Plagger-Packages.bash
  4761  perl -MXMLRPC::Lite
@@ -185,7 +185,7 @@
  4781  urpmi perl-HTML-Format
  4782  bash Install-Plagger-Packages.bash
  4783  rpm -q perl-POE-Component-IKC-Client
- 4784  perl -MPOE::Component::IKC::Client -MData::Dumper -e 'print Dumper(\%INC)'                                              
+ 4784  perl -MPOE::Component::IKC::Client -MData::Dumper -e 'print Dumper(\%INC)'
  4785  perl -MPOE::Component::IKC::Client -MData::Dumper -e 'print Dumper(\%INC)'
  4786  perl -MPOE::Component::IKC::Client -MData::Dumper -e 'print Dumper(\%INC)' | grep IKC
  4787  rpm -qilf /usr/lib/perl5/site_perl/5.8.8/POE/Component/IKC/Client.pm
@@ -202,7 +202,7 @@
  4798  y
  4799  bash Install-Plagger-Packages.bash
  4800  bash Install-Plagger-Packages.bash > ~/Install-Plagger-urpmi.bash
- 4801  vim /root/Install-Plagger-urpmi.bash 
+ 4801  vim /root/Install-Plagger-urpmi.bash
  4802  bash /root/Install-Plagger-urpmi.bash
  4803  yes | bash /root/Install-Plagger-urpmi.bash
  4804  y
@@ -226,9 +226,9 @@
  4822  ls
  4823  cd i386/
  4824  ls
- 4825  rpm -Uvh perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm 
+ 4825  rpm -Uvh perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm
  4826  urpmi perl-URI-Fetch
- 4827  rpm -Uvh perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm 
- 4828  rpm -Uvh --nodeps perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm 
+ 4827  rpm -Uvh perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm
+ 4828  rpm -Uvh --nodeps perl-Plagger-0.7.17-svn.1911.0.1.fc6worepo.noarch.rpm
  4829  ls
  4830  perl -MPlagger

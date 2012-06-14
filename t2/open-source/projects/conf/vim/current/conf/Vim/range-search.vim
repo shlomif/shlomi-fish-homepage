@@ -2,7 +2,7 @@
 " Date: 10 February 2005
 " License: MIT X11
 "
-" To use: source this file from your .vimrc file, and then type 
+" To use: source this file from your .vimrc file, and then type
 " <<<
 "   :'a,'eRs mypat
 " >>>

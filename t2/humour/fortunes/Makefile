@@ -37,7 +37,7 @@ $(DATS):: %.dat : %
 
 test: $(DATS)
 	@fortune -e $(FILES)
-	
+
 dist: $(PACKAGE_BASE) list_files gen_sources_list
 
 html: $(INDEX_FILE)
@@ -65,7 +65,7 @@ $(INDEX_FILE): fortunes-index.html $(PACKAGE_BASE)
 	cat $< | sed '/%%PACKAGE_BASE%%/ s/href=".*"/href="$(PACKAGE_BASE)"/' > $@
 
 upload: dist
-	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) $(INDEX_FILE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/" 
+	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) $(INDEX_FILE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/"
 
 print_package_base:
 	@echo $(PACKAGE_BASE)
@@ -84,7 +84,7 @@ $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 
 gen_sources_list: $(SOURCE_FILES_LIST)
 
-$(SOURCE_FILES_LIST): generate-file-list.pl $(ARCS_LIST_INCLUDE) 
+$(SOURCE_FILES_LIST): generate-file-list.pl $(ARCS_LIST_INCLUDE)
 	perl $<
 
 $(RPM_SPEC): $(RPM_SPEC_IN) $(VERSION_FILE)

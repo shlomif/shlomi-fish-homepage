@@ -20,9 +20,9 @@ while (<>)
             push @this_fort, $_;
         }
         push @this_fort, $_;
-        
+
         my $entire_fort = join("", @this_fort);
-        
+
         if (! (($entire_fort =~ m{<channel>\#\#programming</channel>})
             &&
             ($entire_fort =~ m{<network>Freenode</network>}i)

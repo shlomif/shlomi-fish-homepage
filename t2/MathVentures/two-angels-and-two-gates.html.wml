@@ -9,9 +9,9 @@ There’s a famous riddle that goes like this:
 <blockquote>
 
 <p>
-You are standing in front of two gates (a left one and a right one) - one 
+You are standing in front of two gates (a left one and a right one) - one
 leads to paradise and the other leads to hell. You don’t know which gate
-leads where. Beside the gates, there are two angels: one of them always tells 
+leads where. Beside the gates, there are two angels: one of them always tells
 the truth and the other always lies, but you also don’t know which one
 is which.
 </p>
@@ -31,7 +31,7 @@ consider only after you found the solution to the original:
 <blockquote>
 
 <p>
-You are standing in front of two gates (a left one and a right one) - one 
+You are standing in front of two gates (a left one and a right one) - one
 leads to paradise and the other leads to hell. Beside the gates, there are
 two angels, each one of them can either tell the truth all the time, or
 constantly lie. Every angel knows where each door leads to, and the other
@@ -69,8 +69,8 @@ ask one of the angels:
 <blockquote>
 
 <p>
-“If I asked the other angel what you would answer, if I asked you what 
-he would answer if I asked him if the left gate leads to paradise - what would 
+“If I asked the other angel what you would answer, if I asked you what
+he would answer if I asked him if the left gate leads to paradise - what would
 he answer?”
 </p>
 
@@ -78,7 +78,7 @@ he answer?”
 
 <p>
 The answer will evaluate to a true one, so if it’s “yes” - go to the left gate,
-and if it’s “no” - go to the right. 
+and if it’s “no” - go to the right.
 </p>
 
 <p>
@@ -95,11 +95,11 @@ logical evaluation of the question I constructed looks like so:
 </p>
 
 <p>
-As you can see, the angel values “L” (Left) and “R” right are XNORed exactly 
-twice in the way to the solution. Since XNOR is <a 
-href="http://en.wikipedia.org/wiki/Commutative">Commutative</a> and 
+As you can see, the angel values “L” (Left) and “R” right are XNORed exactly
+twice in the way to the solution. Since XNOR is <a
+href="http://en.wikipedia.org/wiki/Commutative">Commutative</a> and
 <a href="http://en.wikipedia.org/wiki/Distributivity">Distributive</a>, we
-get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Since for every boolean 
+get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Since for every boolean
 “X XNOR X” is true, we get “Truth XNOR T XNOR T” which is the “Truth”.
 </p>
 
@@ -107,7 +107,7 @@ get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Since for every boolean
 I originally published this riddle on
 <a href="http://groups.google.com/group/rec.puzzles/msg/4e05d7f0912f3944">on
 rec.puzzles on Usenet</a>. Someone emailed me back and suggested that
-I could simply ask an angel “If I asked you which gate leads to paradise - what 
+I could simply ask an angel “If I asked you which gate leads to paradise - what
 would you say?” and he’d give the right answer. However, this leads
 to interesting philosophical problems.
 </p>

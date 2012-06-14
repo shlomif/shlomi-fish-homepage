@@ -62,8 +62,8 @@ namespace-->
             <xsl:when test="screenplay">
                 <xsl:apply-templates select="screenplay" mode="screenplay_wrapper"/>
             </xsl:when>
-            
-        </xsl:choose> 
+
+        </xsl:choose>
     </div>
 </xsl:template>
 
@@ -87,9 +87,9 @@ namespace-->
                 <xsl:when test="name(.) = 'leaves'">
                     <xsl:text>←</xsl:text>
                 </xsl:when>
-            </xsl:choose> 
+            </xsl:choose>
             <xsl:value-of select="@who" />
-        </td>        
+        </td>
         <td class="text">
             <xsl:value-of select="." />
         </td>
@@ -193,7 +193,7 @@ namespace-->
                     <xsl:otherwise>
                         <xsl:value-of select="name(.)" />
                     </xsl:otherwise>
-                </xsl:choose> 
+                </xsl:choose>
             </b>
         </td>
         <td class="value">
@@ -227,7 +227,7 @@ namespace-->
 <xsl:template match="para" mode="screenplay">
     <p>
         <xsl:if test="local-name(..) = 'saying'">
-            <strong class="sayer"><xsl:value-of select="../@character" />:</strong> 
+            <strong class="sayer"><xsl:value-of select="../@character" />:</strong>
             <xsl:text> </xsl:text>
         </xsl:if>
         <xsl:if test="local-name(..) = 'description' and ../child::para[position()=1] = .">

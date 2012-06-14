@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-# convert-kabc-dist-lists.pl - Port the Distribution Lists from 
-# KAddressbook's older format (in the $HOME/.kde/share/apps/kabc/distlist 
+# convert-kabc-dist-lists.pl - Port the Distribution Lists from
+# KAddressbook's older format (in the $HOME/.kde/share/apps/kabc/distlist
 # file) to the format used by the KAddressbook in kdepim-3.5.4.
 #
 # Requires the IO::All module from CPAN.

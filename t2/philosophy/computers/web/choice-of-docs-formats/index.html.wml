@@ -66,57 +66,57 @@ out there to convert the POD source to PDF etc.
 </blockquote>
 
 <p>
-I think <a href="http://www.kwiki.org/">Kwiki</a> has a 
+I think <a href="http://www.kwiki.org/">Kwiki</a> has a
 plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl’s so-called
 “Plain, Old, Documentation”)</a>.
 </p>
 
 <p>
-Just a note about POD: POD is incredibly limited. Some things that you may 
-want to try to do with it are not possible. It is not the only generic format 
-available, however. One option is naturally 
-<a href="http://www.docbook.xml.org/">DocBook/XML</a>, which can be 
-translated into HTML as well as PDF, Microsoft Word, LaTeX and other 
+Just a note about POD: POD is incredibly limited. Some things that you may
+want to try to do with it are not possible. It is not the only generic format
+available, however. One option is naturally
+<a href="http://www.docbook.xml.org/">DocBook/XML</a>, which can be
+translated into HTML as well as PDF, Microsoft Word, LaTeX and other
 formats. It cannot be directly translated to plain text, but can through
-an intermediate format. POD can be translated into DocBook/XML using 
+an intermediate format. POD can be translated into DocBook/XML using
 <a href="http://search.cpan.org/~nandu/Pod-DocBook-1.2/">Pod-DocBook-1.2</a>.
 </p>
 
 <p>
-Don’t use the original module by Alligator Descartes which is the still the 
-default on <a href="http://www.cpan.org/">CPAN</a> out of being 
+Don’t use the original module by Alligator Descartes which is the still the
+default on <a href="http://www.cpan.org/">CPAN</a> out of being
 <a href="http://www.mail-archive.com/module-authors%40perl.org/msg00793.html">a
 Dead Camel</a>. It is old and broken and has been unmaintained for a long time.
 </p>
 
 <p>
-Note that the DocBook generated may not be perfectly semantically-correct due 
+Note that the DocBook generated may not be perfectly semantically-correct due
 to the fact DocBook is richer than POD.
 </p>
 
 <p>
 Other alternatives for such markups that are somewhat
 text-with-brief-style-specifiers can be found in
-<a href="http://zgp.org/pipermail/linux-elitists/2005-August/thread.html#11265">this 
+<a href="http://zgp.org/pipermail/linux-elitists/2005-August/thread.html#11265">this
 Linux-elitists thread called “mini-markup language?”</a>. Prominent examples
 include <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> which can
-be converted to HTML, XHTML and DocBook/XML, and 
+be converted to HTML, XHTML and DocBook/XML, and
 <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> which can only
 be converted to XHTML.
 </p>
 
 <p>
-They all can be converted to HTML and some of them to DocBook too. One Wiki or 
-another is also an option, but note that they tend to have incompatible 
-formats, and some may not have an ability to export as DocBook. I like the 
-<a href="http://www.mediawiki.org/">MediaWiki</a> format which is an 
-extension of that of 
-<a href="http://www.usemod.com/cgi-bin/wiki.pl">UseModWiki</a> (and its 
-<a href="http://www.oddmuse.org/">Oddmuse Wiki fork</a>, which should be 
-better.), but I think that DokuWiki’s format is 
+They all can be converted to HTML and some of them to DocBook too. One Wiki or
+another is also an option, but note that they tend to have incompatible
+formats, and some may not have an ability to export as DocBook. I like the
+<a href="http://www.mediawiki.org/">MediaWiki</a> format which is an
+extension of that of
+<a href="http://www.usemod.com/cgi-bin/wiki.pl">UseModWiki</a> (and its
+<a href="http://www.oddmuse.org/">Oddmuse Wiki fork</a>, which should be
+better.), but I think that DokuWiki’s format is
 also quite good. I really dislike the default Kwiki format, and despite all
-the flood of Kwiki plugins, no-one has written a 
-UseModWiki/Oddmuse/MediaWiki-subset format for it yet. I keep intendening to 
+the flood of Kwiki plugins, no-one has written a
+UseModWiki/Oddmuse/MediaWiki-subset format for it yet. I keep intendening to
 do that, but I have not find the time for this yet.
 </p>
 
@@ -126,22 +126,22 @@ as a good generic markup.
 </p>
 
 <p>
-All that put aside, I should note that if you are thinking about using TeX or 
-LaTeX, please re-consider. Tex/LaTeX are very convenient for generating 
+All that put aside, I should note that if you are thinking about using TeX or
+LaTeX, please re-consider. Tex/LaTeX are very convenient for generating
 PostScript or PDF but:
 </p>
 
 <ol>
 <li>
-<q>The only thing that can understand TeX is tex</q>. I believe it was said 
-much earlier than when Tom Christiansen ported it to the Perl world. It is in 
+<q>The only thing that can understand TeX is tex</q>. I believe it was said
+much earlier than when Tom Christiansen ported it to the Perl world. It is in
 fact much more true for TeX than it is for Perl.
 </li>
 
 <li>
-Conversion of LaTeX to DocBook or HTML often doesn’t work quite well. 
-Often, the tools are outdated and generate old or invalid HTML, and often 
-they break on more than complex LaTeX. TeX and LaTeX are Turing-complete, and 
+Conversion of LaTeX to DocBook or HTML often doesn’t work quite well.
+Often, the tools are outdated and generate old or invalid HTML, and often
+they break on more than complex LaTeX. TeX and LaTeX are Turing-complete, and
 the syntax is incredibly problematic.
 </li>
 
@@ -150,31 +150,31 @@ LaTeX has poor support for hypertext, and other PDF niceties.
 </li>
 
 <li>
-PDF and PostScript, which are the default-and-least-error-prone TeX 
-formats, have relatively poor accessibility and internationlisation. For 
-example, from my understanding Bi-directional text (mixed Arabic-English 
+PDF and PostScript, which are the default-and-least-error-prone TeX
+formats, have relatively poor accessibility and internationlisation. For
+example, from my understanding Bi-directional text (mixed Arabic-English
 text, etc.) is rendered visually.
 </li>
 
 <li>
-It is easier to convert semantic XHTML or DocBook/XML to LaTeX than the 
+It is easier to convert semantic XHTML or DocBook/XML to LaTeX than the
 other way around.
 </li>
 </ol>
 
 <p>
-LaTeX is much less verbose than DocBook/XML, but I think you can find a less 
-problematic format. It is is still excellent for writing texts with lots of 
-mathematical formulae, but still a very problematic format. When working with 
-LaTeX I often get obscure TeX errors that I can’t tell immediately what 
-exactly went wrong. In DocBook/XML it just reports that one tag is missing, or 
+LaTeX is much less verbose than DocBook/XML, but I think you can find a less
+problematic format. It is is still excellent for writing texts with lots of
+mathematical formulae, but still a very problematic format. When working with
+LaTeX I often get obscure TeX errors that I can’t tell immediately what
+exactly went wrong. In DocBook/XML it just reports that one tag is missing, or
 that the order of tags are incorrect, which takes me much less time to solve.
 </p>
 
 <hr />
 
 <p>
-Going full circle now - POD is a good option if it does what you need. The 
+Going full circle now - POD is a good option if it does what you need. The
 Camel Book and other perl books were written in POD. I wrote some
 documentation for Perl and non-Perl projects in POD. I also write all my man
 pages in POD because nroff scares me.
@@ -186,7 +186,7 @@ But if you feel that you want something better, you have many options.
 
 <p>
 One final note is that DocBook/XML was problematic for using in bi-directional
-texts because of implementation or standard problems, last time I checked. 
+texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
 

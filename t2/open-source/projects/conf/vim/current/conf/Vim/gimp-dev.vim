@@ -11,7 +11,7 @@
 set expandtab
 
 " Tab key moves 8 spaces
-set tabstop=8 
+set tabstop=8
 
 " '>>' moves 4 spaces
 set shiftwidth=4
@@ -48,7 +48,7 @@ set cindent
 "   c=comment lines from opener,
 "   (=unclosed parens (0 means match),
 "   u=same as ( but for second set of parens
-"   
+"
 "   Try :help cinoptions-values
 set cinoptions=>1s,e0,n-2,f0,{.5s,}0,^-.5s,=.5s,t0,+1s,c3,(0,u0,\:2
 

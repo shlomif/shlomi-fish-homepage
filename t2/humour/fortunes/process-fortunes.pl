@@ -153,7 +153,7 @@ sub _calc_default_title
 {
     my ($self, $title) = @_;
 
-    return 
+    return
         (defined($title)
             ? $title
             : "QUACKPROLOKOG==UNKNOWN-TITLE"
@@ -188,7 +188,7 @@ sub _process_single_fortune
         {
             $title = $self->_calc_irc_title(
                 {
-                    lines_ref => $lines, 
+                    lines_ref => $lines,
                     last_word => $1
                 }
             );
@@ -249,7 +249,7 @@ sub _process_single_fortune
         }
 
         $start_new_elem->("dont_care");
-        
+
         $writer->endTag("body");
 
         $writer->startTag("info");

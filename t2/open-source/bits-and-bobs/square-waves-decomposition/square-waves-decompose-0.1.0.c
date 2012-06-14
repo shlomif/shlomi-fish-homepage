@@ -35,7 +35,7 @@ typedef struct wave_struct wave_t;
 #define CALC_SQUARE_WAVE(len,height,x) \
     ((((int)floor((x) * (len)))%2 == 0) ? (height) : (-(height)))
 
-void square_wave(const value_t len, const value_t height, 
+void square_wave(const value_t len, const value_t height,
         const int num_points, const value_t const * x_s, value_t * y_s
         )
 {
@@ -85,7 +85,7 @@ int main(int argc, char * argv[])
 
     waves = malloc(sizeof(waves[0]) * max_num_waves);
 
-    /* 
+    /*
      * Initialize points to -num ... num
      * Initialise good to the sinousidial wave.
      * */
@@ -133,7 +133,7 @@ int main(int argc, char * argv[])
         printf("%f\n", energy);
         len++;
     }
-    
+
     free(base);
 
     plot_fh = fopen("gnuplot.dat", "wt");
@@ -161,12 +161,12 @@ int main(int argc, char * argv[])
         for(x_int=-x_num;x_int<=x_num;x_int++)
         {
             value_t x = ((value_t)x_int) / x_num;
-            
+
             fprintf(sin_fh, "%.10f %.10f\n", x, sin(x*M_PI));
         }
         fclose(sin_fh);
     }
-  
+
     free(points);
     free(good);
     free(waves);

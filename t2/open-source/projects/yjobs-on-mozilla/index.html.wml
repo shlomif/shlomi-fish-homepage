@@ -3,7 +3,7 @@
 
 <p>
 This is a local HTTP proxy to make
-<a href="http://www.yjobs.co.il/">http://www.yjobs.co.il/, an Israeli job 
+<a href="http://www.yjobs.co.il/">http://www.yjobs.co.il/, an Israeli job
 board</a> work with Mozilla-based browsers (such as <a href="http://en.www.mozilla.com/en/firefox/">Firefox</a>). yjobs.co.il is by default
 incompatible with such browsers. It may be able to work against other
 alternative browsers such as Konqueror, Safari or Opera, but is not guaranteed
@@ -11,15 +11,15 @@ to do so.
 </p>
 
 <p>
-It is written in <a href="http://www.perl.org/">Perl</a> and uses the 
-<a href="http://search.cpan.org/dist/HTTP-Proxy/">CPAN HTTP-Proxy 
-module</a> which needs to be installed prior to running the proxy. More 
+It is written in <a href="http://www.perl.org/">Perl</a> and uses the
+<a href="http://search.cpan.org/dist/HTTP-Proxy/">CPAN HTTP-Proxy
+module</a> which needs to be installed prior to running the proxy. More
 instructions for deploying it are provided in a comment at the beginning
 of the file.
 </p>
 
 <p>
-Please report any problems with it to <a href="mailto:<main_email />">my 
+Please report any problems with it to <a href="mailto:<main_email />">my
 email</a>.
 </p>
 
@@ -41,7 +41,7 @@ yjobs-proxy-0.1.0.pl.gz</a> (Uncompress with gunzip)
 <p>
 The program includes some JavaScript code that was copied from the
 yjobs.co.il site and modified. The rest of the it is subject to
-the terms of the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 
+the terms of the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11
 licence</a>, which is a Public Domain-like open-source licence.
 </p>
 
@@ -61,7 +61,7 @@ nor requires it.
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/HTTP-Proxy/">HTTP-Proxy</a> - an 
+<a href="http://search.cpan.org/dist/HTTP-Proxy/">HTTP-Proxy</a> - an
 excellent CPAN module for building your own HTTP proxies in Perl.
 </li>
 
@@ -71,7 +71,7 @@ Mozilla incompatibilities in the JavaScript code of yjobs.
 </li>
 
 <li>
-<a href="http://www.mozilla.org/projects/venkman/">The Venkman 
+<a href="http://www.mozilla.org/projects/venkman/">The Venkman
 JavaScript debugger</a> - also helped in debugging the yjobs code.
 </li>
 

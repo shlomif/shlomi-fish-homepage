@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         self-links-for-headers-with-ids
 // @version      0.0.1
-// @description  provide self links for headers (h1, h2, etc.) with id=""'s. 
+// @description  provide self links for headers (h1, h2, etc.) with id=""'s.
 // @author       Shlomi Fish ( http://www.shlomifish.org/ )
 // @include      *
 // ==/UserScript==
@@ -20,11 +20,11 @@ document.getElementsByTagName('head')[0].appendChild(GM_JQ);
 // Check if jQuery's loaded
 function GM_wait() {
     if(typeof unsafeWindow.jQuery == 'undefined') {
-        window.setTimeout(GM_wait,100); 
+        window.setTimeout(GM_wait,100);
     }
-    else { 
+    else {
         $ = unsafeWindow.jQuery;
-        letsJQuery(); 
+        letsJQuery();
     }
 }
 GM_wait();

@@ -7,7 +7,7 @@
 </p>
 
 <p>
-You should stop using, learning and teaching 
+You should stop using, learning and teaching
 <a href="http://en.wikipedia.org/wiki/C_shell">C-Shell</a> and its
 extended <a href="http://en.wikipedia.org/wiki/Tcsh">Tcsh</a>
 implementation, because of their horrible, inconsistent syntax, lack
@@ -19,11 +19,11 @@ are:
 
 <li>
 <p>
-Tom Christiansen (of Perl fame) wrote 
-<a href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/">Csh 
+Tom Christiansen (of Perl fame) wrote
+<a href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/">Csh
 Considered Harmful</a>, which gives many good arguments for csh’s
-inadequacy as a shell scripting language. 
-<a href="http://www.grymoire.com/Unix/CshTop10.txt">Bruce Barnett’s 
+inadequacy as a shell scripting language.
+<a href="http://www.grymoire.com/Unix/CshTop10.txt">Bruce Barnett’s
 “Top Ten Reasons not to use the C shell”</a> gives more convincing arguments,
 and illustrates how awful csh is.
 </p>
@@ -39,10 +39,10 @@ well as aliases) instead of just aliases, which are easy to break.
 <li>
 <p>
 Bash has proper quoting. Handling whitespace in csh is painful. I once
-witnessed a pair of <a href="http://www.technion.ac.il/">Technion</a> 
+witnessed a pair of <a href="http://www.technion.ac.il/">Technion</a>
 students get bogged down writing the solution for
 a homework exercise, because they wanted their C-Shell script to handle
-whitespaces properly. I later tried the same with bash, and it was trivial to 
+whitespaces properly. I later tried the same with bash, and it was trivial to
 do.
 </p>
 </li>
@@ -51,13 +51,13 @@ do.
 
 <ol>
 <li>
-Bash is the default scripting and login shell on Linux. 
+Bash is the default scripting and login shell on Linux.
 </li>
 
 <li>
-<a href="http://www.kornshell.com/">ksh - the Korn Shell</a>, a Bourne-shell 
-derivative, is the default login and scripting shell on 
-non-GNU System V systems. 
+<a href="http://www.kornshell.com/">ksh - the Korn Shell</a>, a Bourne-shell
+derivative, is the default login and scripting shell on
+non-GNU System V systems.
 </li>
 
 <li>
@@ -71,7 +71,7 @@ shell.
 </li>
 
 <li>
-On cygwin the default shell is bash. <a href="http://www.zsh.org/">zsh</a> is 
+On cygwin the default shell is bash. <a href="http://www.zsh.org/">zsh</a> is
 available for either cygwin or for non-cygwinned win32.
 </li>
 
@@ -133,7 +133,7 @@ Instead you should use, learn and teach one of the following shells:
 <ol>
 
 <li>
-<a href="http://www.gnu.org/software/bash/">GNU Bash - the 
+<a href="http://www.gnu.org/software/bash/">GNU Bash - the
 Bourne-Again-Shell</a> - an extended Bourne-shell-compatible shell, with
 good usability. Great for both interactive use and scripting. The default
 shell on many systems.
@@ -168,7 +168,7 @@ Linux-IL thread with many comments</a>
 </li>
 
 <li>
-<a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A 
+<a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A
 thread in the Haifa Linux Club mailing list with some comments</a>
 </li>
 

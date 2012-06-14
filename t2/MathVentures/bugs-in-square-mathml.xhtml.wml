@@ -1,13 +1,13 @@
 #include "prelude.wml"
 <define-tag latemp_html_doctype>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
-"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" > 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" >
 </define-tag>
 
 #include "driver.wml"
 
 <page_extra_head_elements>
-<link rel="stylesheet" type="text/css" href="bugs-in-square.css" /> 
+<link rel="stylesheet" type="text/css" href="bugs-in-square.css" />
 </page_extra_head_elements>
 
 <latemp_subject "Bugs in a Square (MathML Enabled Version)" />
@@ -57,319 +57,319 @@ and so forth. The bugs move toward their initial position until they reach a pos
 the initial distance between them. Then they move again, towards a position which is in proportion p to their
 distance, and so forth.
 </p><!--l. 22--><p class="noindent">Thus they form an in&#xFB01;nite series of squares inside each other. You can see an illustration of this scheme to the right of this text
-for the proportion <!--l. 24--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->p</mi> <mo 
-class="MathClass-rel">=</mo> <mn>0</mn><mo 
+for the proportion <!--l. 24--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><mi
+>p</mi> <mo
+class="MathClass-rel">=</mo> <mn>0</mn><mo
 class="MathClass-punc">.</mo><mn>1</mn><mn>0</mn></math>.
-</p><!--l. 26--><p class="noindent">Now, if the length of a given square is <!--l. 26--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
+</p><!--l. 26--><p class="noindent">Now, if the length of a given square is <!--l. 26--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><mi
 >a</mi></math>,
 then the length of the square inside it is (according to pythgoras theorem):
 </p><!--l. 29--><p class="noindent">
-<!--tex4ht:inline--></p><!--l. 29--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
+<!--tex4ht:inline--></p><!--l. 29--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
 display="block" >
-<mtable 
+<mtable
 class="eqnarray-star" columnalign="right center left" >
-<mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <msqrt><mrow><msup><mrow 
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <msqrt><mrow><msup><mrow
 >
-<mfenced separators="" 
-open="("  close=")" ><mrow><mi 
->p</mi> <mo 
-class="MathClass-bin">&#x2217;</mo> <mi 
->a</mi></mrow></mfenced></mrow><mrow 
-><mn>2</mn></mrow></msup 
-> <mo 
-class="MathClass-bin">+</mo><msup><mrow 
-> <mfenced separators="" 
-open="("  close=")" ><mrow><mfenced separators="" 
-open="("  close=")" ><mrow><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo> <mi 
->p</mi></mrow></mfenced> <mo 
-class="MathClass-bin">&#x2217;</mo> <mi 
->a</mi></mrow></mfenced></mrow><mrow 
-><mn>2</mn></mrow></msup 
-></mrow></msqrt> <mo 
-class="MathClass-rel">=</mo> <mi 
->a</mi><msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mtd><mtd 
+<mfenced separators=""
+open="("  close=")" ><mrow><mi
+>p</mi> <mo
+class="MathClass-bin">&#x2217;</mo> <mi
+>a</mi></mrow></mfenced></mrow><mrow
+><mn>2</mn></mrow></msup
+> <mo
+class="MathClass-bin">+</mo><msup><mrow
+> <mfenced separators=""
+open="("  close=")" ><mrow><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mi
+>p</mi></mrow></mfenced> <mo
+class="MathClass-bin">&#x2217;</mo> <mi
+>a</mi></mrow></mfenced></mrow><mrow
+><mn>2</mn></mrow></msup
+></mrow></msqrt> <mo
+class="MathClass-rel">=</mo> <mi
+>a</mi><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                             </mtr></mtable>
 </math>
 <!--l. 32--><p class="nopar">
 The lengths of the squares form a decreasing geometrical series, with that proportion. Thus the length of the
 path a bug travel until they meet is:
 </p><!--l. 37--><p class="noindent">
-<!--tex4ht:inline--></p><!--l. 37--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
+<!--tex4ht:inline--></p><!--l. 37--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
 display="block" >
-<mtable 
+<mtable
 class="eqnarray-star" columnalign="right center left" >
-<mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">        <mfrac><mrow 
-><mi 
->p</mi> <mo 
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">        <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
 ></mrow>
-<mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac></mtd><mtd 
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac></mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                                </mtr></mtable>
 </math>
 
 <!--l. 39--><p class="nopar">
 </p><!--l. 41--><p class="noindent">This is according to the formula that the sum of an in&#xFB01;nite decresing geometric series is
-<!--l. 42--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mfrac><mrow> <msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
+<!--l. 42--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><mfrac><mrow> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
 ></mrow>
-<mrow><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo> <mi 
+<mrow><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mi
 >q</mi></mrow></mfrac></math> where
-<!--l. 42--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
+<!--l. 42--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
 ></math> is the value of its
-&#xFB01;rst item and <!--l. 43--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
+&#xFB01;rst item and <!--l. 43--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><mi
 >q</mi></math>
 is the proportion between two consecutive items.
 </p><!--l. 45--><p class="noindent">Now, to &#xFB01;nd the length an in&#xFB01;nitesimal bug will travel, we just limit
-<!--l. 45--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
+<!--l. 45--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
+display="inline" ><mi
 >p</mi></math> to
 0:
 </p><!--l. 48--><p class="noindent">
-<!--tex4ht:inline--></p><!--l. 48--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
+<!--tex4ht:inline--></p><!--l. 48--><math
+ xmlns="http://www.w3.org/1998/Math/MathML"
 display="block" >
-<mtable 
+<mtable
 class="eqnarray-star" columnalign="right center left" >
-<mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <munder class="msub"><mrow 
-><mo class="qopname">lim</mo></mrow><mrow 
-><mi 
->p</mi><mo 
-class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder 
->           <mfrac><mrow 
-><mi 
->p</mi> <mo 
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow> 
-<mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo 
-class="MathClass-rel">=</mo>                  </mtd><mtd 
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+>           <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-rel">=</mo>                  </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
-</mtr><mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <munder class="msub"><mrow 
-><mo class="qopname">lim</mo></mrow><mrow 
-><mi 
->p</mi><mo 
-class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder 
->           <mfrac><mrow 
-><mi 
->p</mi> <mo 
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow> 
-<mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo 
-class="MathClass-punc">&#x22C5;</mo><mfrac><mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow> 
-<mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo 
-class="MathClass-rel">=</mo> </mtd><mtd 
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+>           <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-punc">&#x22C5;</mo><mfrac><mrow
+><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-rel">=</mo> </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
-</mtr><mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <munder class="msub"><mrow 
-><mo class="qopname">lim</mo></mrow><mrow 
-><mi 
->p</mi><mo 
-class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder 
-><mfrac><mrow 
-><msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-punc">&#x22C5;</mo> <mi 
->p</mi> <mo 
-class="MathClass-punc">&#x22C5;</mo><mfenced separators="" 
-open="("  close=")" ><mrow><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow> 
-       <mrow 
-><mn>1</mn> <mo 
-class="MathClass-bin">&#x2212;</mo> <msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn></mrow></msup 
-> <mo 
-class="MathClass-bin">+</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>1</mn></mrow></mfrac>        <mo 
-class="MathClass-rel">=</mo>           </mtd><mtd 
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-punc">&#x22C5;</mo> <mi
+>p</mi> <mo
+class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+       <mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn></mrow></msup
+> <mo
+class="MathClass-bin">+</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>1</mn></mrow></mfrac>        <mo
+class="MathClass-rel">=</mo>           </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
-</mtr><mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <munder class="msub"><mrow 
-><mo class="qopname">lim</mo></mrow><mrow 
-><mi 
->p</mi><mo 
-class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder 
-><mfrac><mrow 
-><msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-punc">&#x22C5;</mo><mfenced separators="" 
-open="("  close=")" ><mrow><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow 
-><mi 
->p</mi></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow> 
-           <mrow 
-><mn>2</mn> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
->p</mi></mrow></mfrac>           <mo 
-class="MathClass-rel">=</mo>              </mtd><mtd 
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+           <mrow
+><mn>2</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi></mrow></mfrac>           <mo
+class="MathClass-rel">=</mo>              </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
-</mtr><mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <munder class="msub"><mrow 
-><mo class="qopname">lim</mo></mrow><mrow 
-><mi 
->p</mi><mo 
-class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder 
-><mfrac><mrow 
-><msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-punc">&#x22C5;</mo><mfenced separators="" 
-open="("  close=")" ><mrow><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn> <mo 
-class="MathClass-punc">&#x22C5;</mo> <msup><mrow 
-><mn>0</mn></mrow><mrow 
-><mn>2</mn> </mrow> </msup 
-> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo 
-class="MathClass-punc">&#x22C5;</mo> <mn>0</mn> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow> 
-            <mrow 
-><mn>2</mn> <mo 
-class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo 
-class="MathClass-punc">&#x22C5;</mo> <mn>0</mn></mrow></mfrac>             <mo 
-class="MathClass-rel">=</mo>           </mtd><mtd 
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn> <mo
+class="MathClass-punc">&#x22C5;</mo> <msup><mrow
+><mn>0</mn></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
+class="MathClass-punc">&#x22C5;</mo> <mn>0</mn> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+            <mrow
+><mn>2</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
+class="MathClass-punc">&#x22C5;</mo> <mn>0</mn></mrow></mfrac>             <mo
+class="MathClass-rel">=</mo>           </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
-</mtr><mtr><mtd 
-class="eqnarray-1"> </mtd><mtd 
-class="eqnarray-2">   </mtd><mtd 
-class="eqnarray-3">   <mfrac><mrow 
-><msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-punc">&#x22C5;</mo> <mrow><mo 
-class="MathClass-open">(</mo><mrow><mn>1</mn> <mo 
-class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo 
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-punc">&#x22C5;</mo> <mrow><mo
+class="MathClass-open">(</mo><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo
 class="MathClass-close">)</mo></mrow></mrow>
-      <mrow 
-><mn>2</mn></mrow></mfrac>     <mo 
-class="MathClass-rel">=</mo> <msub><mrow 
-><mi 
->a</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
->                            </mtd><mtd 
+      <mrow
+><mn>2</mn></mrow></mfrac>     <mo
+class="MathClass-rel">=</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+>                            </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                      </mtr></mtable>
 </math>
 <!--l. 56--><p class="nopar">
@@ -382,14 +382,14 @@ second.
 
 <p>
 Here’s <a href="bugs.scm">a script</a>
-for <a href="http://www.gimp.org/">Gimp</a> version 1.2 
-that generates a series of squares inside squares, and optionally marks the 
+for <a href="http://www.gimp.org/">Gimp</a> version 1.2
+that generates a series of squares inside squares, and optionally marks the
 path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
 script for Gimp version 2.2</a>.
 </p>
 
 <p>
-Here’s <a href="gen-bugs-in-square-svg.pl">a Perl script</a> to generate an 
+Here’s <a href="gen-bugs-in-square-svg.pl">a Perl script</a> to generate an
 <a href="http://www.w3.org/Graphics/SVG/">SVG</a> image of the squares inside
 each other (that was displayed above).
 </p>

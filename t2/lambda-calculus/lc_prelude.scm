@@ -85,13 +85,13 @@
 )
 
 
-; Note, as opposed to the && and || operators in C or the "and" and "or" 
+; Note, as opposed to the && and || operators in C or the "and" and "or"
 ; statements in Scheme, those ands and ors always evaluate both expressions.
 
 ; Church Numerals
 ; ---------------
 
-; But how to represent numbers in lambda calculus? Alonso Church, the 
+; But how to represent numbers in lambda calculus? Alonso Church, the
 ; logician who invented lambda calculus suggested the following method:
 (define zero (lambda (f) (lambda (x) x)))
 (define one  (lambda (f) (lambda (x) (f x))))
@@ -104,19 +104,19 @@
 
 (define (church->int church)
 	(
-        (church 
+        (church
             (lambda (a) (+ a 1))
-        ) 
+        )
             0
     )
 )
 
 ; Finding the successor to a Church numeral:
 ; Let's take f and execute it on n one more time:
-(define succ 
-    (lambda (n) 
-	    (lambda (f) 
-    		(lambda (x) 
+(define succ
+    (lambda (n)
+	    (lambda (f)
+    		(lambda (x)
     			(f ((n f) x))
     		)
     	)
@@ -146,7 +146,7 @@
         (lambda (n)
             (lambda (f)
                 (lambda (x)
-                    ((m f) 
+                    ((m f)
                         ((n f) x)
                     )
                 )
@@ -193,14 +193,14 @@
 ; Predecessor
 ; -----------
 
-; Getting the predecessor in Church numerals is quite tricky. 
+; Getting the predecessor in Church numerals is quite tricky.
 ; Let's consider the following method:
 ;
 ; Create a pair [0,0] and convert it into the pair [0,1]. (what
 ; we do is take the cdr and put it in the car and set the cdr to it plus
 ; 1).
-; 
-; Then into [1,2], [2,3], etc. Repeat this process N times and 
+;
+; Then into [1,2], [2,3], etc. Repeat this process N times and
 ; we'll get [N-1, N].
 ;
 ; Then we can return the first element of the final pair which is N-1.
@@ -208,7 +208,7 @@
 (define pred_next_tuple
     (lambda (tuple)
         ((lc_cons
-            (lc_cdr tuple))       
+            (lc_cdr tuple))
             (succ (lc_cdr tuple)))
     )
 )
@@ -216,8 +216,8 @@
 
 (define pred
     (lambda (n)
-        (lc_car 
-            ((n pred_next_tuple) 
+        (lc_car
+            ((n pred_next_tuple)
                 ; A tuple with two zeros.
                 ((lc_cons zero) zero)
             )
@@ -239,7 +239,7 @@
 
 
 ; Now, how do we compare two Church numerals? We can subtract the
-; first one from the second one. If the result is equal to zero, then the 
+; first one from the second one. If the result is equal to zero, then the
 ; second one is greater or equal to the first.
 
 (define is-zero?
@@ -256,7 +256,7 @@
     )
 )
 
-; In a similiar way and by using not we can define all other comparison 
+; In a similiar way and by using not we can define all other comparison
 ; operators.
 
 
@@ -276,7 +276,7 @@
     (lambda (n)
         (lambda (m)
             ((n succ) m)
-        )    
+        )
     )
 )
 
@@ -286,7 +286,7 @@
         (lambda (n)
             (lambda (f)
                 (lambda (x)
-                    ((m f) 
+                    ((m f)
                         ((n f) x)
                     )
                 )
@@ -333,14 +333,14 @@
 ; Predecessor
 ; -----------
 
-; Getting the predecessor in Church numerals is quite tricky. 
+; Getting the predecessor in Church numerals is quite tricky.
 ; Let's consider the following method:
 ;
 ; Create a pair [0,0] and convert it into the pair [0,1]. (what
 ; we do is take the cdr and put it in the car and set the cdr to it plus
 ; 1).
-; 
-; Then into [1,2], [2,3], etc. Repeat this process N times and 
+;
+; Then into [1,2], [2,3], etc. Repeat this process N times and
 ; we'll get [N-1, N].
 ;
 ; Then we can return the first element of the final pair which is N-1.
@@ -348,7 +348,7 @@
 (define pred_next_tuple
     (lambda (tuple)
         ((lc_cons
-            (lc_cdr tuple))       
+            (lc_cdr tuple))
             (succ (lc_cdr tuple)))
     )
 )
@@ -356,8 +356,8 @@
 
 (define pred
     (lambda (n)
-        (lc_car 
-            ((n pred_next_tuple) 
+        (lc_car
+            ((n pred_next_tuple)
                 ; A tuple with two zeros.
                 ((lc_cons zero) zero)
             )
@@ -379,7 +379,7 @@
 
 
 ; Now, how do we compare two Church numerals? We can subtract the
-; first one from the second one. If the result is equal to zero, then the 
+; first one from the second one. If the result is equal to zero, then the
 ; second one is greater or equal to the first.
 
 (define is-zero?
@@ -396,7 +396,7 @@
     )
 )
 
-; In a similiar way and by using not we can define all other comparison 
+; In a similiar way and by using not we can define all other comparison
 ; operators.
 
 

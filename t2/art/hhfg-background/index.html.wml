@@ -7,22 +7,22 @@
 <b>Written at</b>: 02-Jun-2005
 </p>
 
-<img src="corner.png" 
+<img src="corner.png"
 alt="Corner of the HHFG Background Image"
 style="margin-bottom : 1.5em" />
 
 <p>
 After I finished writing my story, <a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking Field Guide</i></a>, I was looking for a page layout to make it more interesting. Browsing <a href="http://www.oswd.org/">Open Source Web
-Design</a> yielded the 
+Design</a> yielded the
 <a href="http://www.oswd.org/viewdesign.phtml?id=1959&amp;referer=%2Fsearch.php%3Fsearchstring%3Dtwin%2Btriangles%26tab%3Ddescription">Twin
-Triangles</a> theme which I liked. However, it included other elements to 
-the page that I did not need, and I wanted to have a simple rounded 
+Triangles</a> theme which I liked. However, it included other elements to
+the page that I did not need, and I wanted to have a simple rounded
 rectangular frame, without all the other decorations above and below.
 </p>
 
 <p>
-After trying to create the missing elements on my own using 
-<a href="http://www.gimp.org/">The GIMP</a>, I decided to create my own 
+After trying to create the missing elements on my own using
+<a href="http://www.gimp.org/">The GIMP</a>, I decided to create my own
 equivalent from scratch.
 </p>
 
@@ -36,12 +36,12 @@ Create a 800*600 image in the GIMP.
 </li>
 <li>
 <p>Create a suitable gradient using the GIMP’s gradient editor</p>
-<img src="gradient.png" 
+<img src="gradient.png"
 alt="The Gradient as edited by the GIMP Gradient Editor"
 style="margin-bottom: 1em;" />
 <p>
 The gradient was created based on colours picked from the original image using
-the GIMP colour picker. Here is <a href="Twin-Triangles.ggr">the final 
+the GIMP colour picker. Here is <a href="Twin-Triangles.ggr">the final
 gradient file for download</a>.
 </p>
 </li>
@@ -49,26 +49,26 @@ gradient file for download</a>.
 Select a large rectangular frame in the middle.
 </li>
 <li>
-Invoke the GIMP round corners script. 
+Invoke the GIMP round corners script.
 (“&lt;Image&gt; → Select → Round”)
 </li>
 <li>
 Fill the rounded frame with the colour black.
 </li>
 <li>
-Apply the “Gaussian Blur” effect with a large radius (identical in X and in Y) 
+Apply the “Gaussian Blur” effect with a large radius (identical in X and in Y)
 to the Image. This gives a nice rounded-rectangle black-to-white gradient.
 </li>
 <li>
-Invoke the GIMP Gradient Map 
+Invoke the GIMP Gradient Map
 (“&lt;Image&gt; → Filters → Colors → Map → Gradient Map”).
 This gives <a href="final-image.png">the final image</a>.
 </li>
 <li>
-Afterwards, all that is left to do is to slice and dice the image 
+Afterwards, all that is left to do is to slice and dice the image
 appropriately. A horizontal strip from the middle which was a few pixels high
-was ideal as a background for most of the page. Then, I took the upper and 
-lower parts (until the width of the inner frame stabilizes), and created 
+was ideal as a background for most of the page. Then, I took the upper and
+lower parts (until the width of the inner frame stabilizes), and created
 separate images out of them.
 </li>
 </ol>

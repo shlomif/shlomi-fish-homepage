@@ -19,19 +19,19 @@ Newsgroups:   rec.puzzles
 href="http://x10.dejanews.com/getdoc.xp?recnum=9104260&amp;server=db96q2&amp;CONTEXT=882122683.1218314336&amp;hitnum=2&amp;AH=1">[More Headers]</a>
 </b>
 
-I’ve got a question in combinatorics. Let’s suppose that there is a 
-transmitor that trasmits a code repeatedly. Once it reaches the end of 
-the code it immidiately starts broadcasting it again. For example, if 
+I’ve got a question in combinatorics. Let’s suppose that there is a
+transmitor that trasmits a code repeatedly. Once it reaches the end of
+the code it immidiately starts broadcasting it again. For example, if
 the code is 1101 then it will broadast:
 
 11011101110111011101....
 
-There is no way to determine where the code starts, therefore some codes 
-with the same length are equivalent. E.g., 1011 or 1110 are considered 
+There is no way to determine where the code starts, therefore some codes
+with the same length are equivalent. E.g., 1011 or 1110 are considered
 identical to 1101.
 
-Keeping that in mind: suppose the code can have n different symbols or 
-digits and is of length l, what is the number of different codes 
+Keeping that in mind: suppose the code can have n different symbols or
+digits and is of length l, what is the number of different codes
 possible?
 
         Shlomi Fish
@@ -102,7 +102,7 @@ Now, the easiest case is the case for prime numbers. A prime number is
 only divisible by 1 therefore the only possible codes with a lesser
 frequency are 111111... and 00000... . That leaves 2^n-2
 position-sensitive permutations. Every code has n such permutations
-which gives us (2^n-2)/n such codes. 
+which gives us (2^n-2)/n such codes.
 
 Therefore the total number of codes for a prime number is:
        2 + (2^n - 2) / n.
@@ -114,7 +114,7 @@ T(n) = 2^n - 2.
 Now let’s suppose there is a number n = p*q where p, q are primes.
 This number will inherit 2 codes from 1 (11111.... and 0000....),
 T(p)/p codes from p, and T(q)/q codes from q. Therefore the original
-permutations are 
+permutations are
 2^(p*q) - 2 - T(p) - T(q) = T(pq) - ( T(p)+T(q) )
 All in all it has:
         2 + T(p)/p + T(q)/q + [ T(pq) - (T(p)+T(q)) ] / (pq)

@@ -12,15 +12,15 @@
 <h2 id="gnupg_sign_verify">GnuPG Insta-Party Signature List Verification Script</h2>
 
 <p>
-Some key-signing parties are conducted in a way that the 
+Some key-signing parties are conducted in a way that the
 a file containing the fingerprints is distributed to everybody, and is then
-verified to be correct by its SHA1 hash. Then, the keyring is made available 
-to the public. Now the question is whether the signatures in the keyring are 
+verified to be correct by its SHA1 hash. Then, the keyring is made available
+to the public. Now the question is whether the signatures in the keyring are
 the same as those in the file.
 </p>
 
 <p>
-To resolve it, I wrote <a href="<bit_link "gpg-verify.pl" />">a script</a> 
+To resolve it, I wrote <a href="<bit_link "gpg-verify.pl" />">a script</a>
 that checks the signatures in the file and verifies that they are the same
 as those reported by GPG in the key-ring. You can freely use it under
 the terms of the MIT X11 license.
@@ -37,14 +37,14 @@ times.
 
 <p>
 This is <a href="<bit_link "shlomif-twiki-installation-automation-2004-09-10.tar.gz" />">a collection of bash scripts I wrote</a> to automate the installation
-of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation. 
+of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation.
 </p>
 
-<h2 id="open_inventor_bsd_daemon"><a href="<bit_link "open-inventor-bsd-daemon/" />">Open Inventor 
+<h2 id="open_inventor_bsd_daemon"><a href="<bit_link "open-inventor-bsd-daemon/" />">Open Inventor
 3-D BSD Daemon</a></h2>
 
 <p>
-An OpenInventor-based three-dimensional model of Beastie the BSD Daemon, 
+An OpenInventor-based three-dimensional model of Beastie the BSD Daemon,
 created as a Technion project in the Computer Graphics course.
 </p>
 
@@ -59,22 +59,22 @@ allows it to compile with the latest Gtk+, and fixes some other annoyances.
 <h2 id="xchat_xmms_nowplay"><a href="<bit_link "nowplay-xchat.pl" />">X-Chat /nowplay command using XMMS</a></h2>
 
 <p>
-What this little Perl script does is register an 
+What this little Perl script does is register an
 <a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
 that whenever invoked displays a message of “/me is listening to My Artist -
-My Song” in the current channel. Feel free to make any use of it whatsoever 
-under the terms of the MIT X11 license. It queries either 
+My Song” in the current channel. Feel free to make any use of it whatsoever
+under the terms of the MIT X11 license. It queries either
 <a href="http://amarok.kde.org/">Amarok</a> or <a href="http://www.xmms.org/">XMMS 1.x</a>.
 </p>
 
 <p>
 You need to install the
 <a href="http://search.cpan.org/dist/Xmms-Perl/">Xmms-Perl distribution</a>
-and have the X-Chat Perl interface. To use, make it executable and put it 
+and have the X-Chat Perl interface. To use, make it executable and put it
 under your <tt>$HOME/.xchat2</tt> directory.
 </p>
 
-<h2 id="old_pmwiki_revert"><a href="<bit_link "pmwiki-revert.pl" />">Revert 
+<h2 id="old_pmwiki_revert"><a href="<bit_link "pmwiki-revert.pl" />">Revert
 an (old-versioned) PMWiki Wiki to a previous state</a></h2>
 
 <p>
@@ -84,7 +84,7 @@ that the format of the PMWiki pages has changed since the version for which
 this script was intended.
 </p>
 
-<h2 id="greasemonkey"><a href="<bit_link "greasemonkey/grease.html" />">Greasemonkey 
+<h2 id="greasemonkey"><a href="<bit_link "greasemonkey/grease.html" />">Greasemonkey
 Scripts</a></h2>
 
 <p>
@@ -95,8 +95,8 @@ Scripts for <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a>.
 
 <p>
 Click on the Link to download or install the
-<a href="http://linkvisitor.mozdev.org/">LinkVisitor extension</a> for Firefox 
-2.0.x and below. Here’s 
+<a href="http://linkvisitor.mozdev.org/">LinkVisitor extension</a> for Firefox
+2.0.x and below. Here’s
 <a href="<bit_link "linkvisitor-firefox-2.0-patch.diff" />">the patch</a>
 against the CVS source.
 </p>
@@ -109,7 +109,7 @@ against the CVS source.
 
 <p>
 The format used for the distribution lists has changed from earlier versions
-of KDE’s 
+of KDE’s
 <a href="http://pim.kde.org/components/kaddressbook.php">KAddressBook</a> to
 the one supplied by kdepim-3.5.4. This Perl script can be used to do the porting
 automatically. Read the instructions at its top. Note that it will skip
@@ -122,7 +122,7 @@ script is available under the MIT X11 licence, with absolutely no warranty.
 <p>
 <a href="http://amarok.kde.org/">Amarok</a> is a powerful and easy to use
 music player for the <a href="http://www.kde.org/">KDE Desktop Environment</a>.
-Amarok supports 
+Amarok supports
 <a href="http://amarok.kde.org/wiki/Script-Writing_HowTo">scripts</a> which
 allow one to customise the player using practically any language.
 </p>
@@ -136,10 +136,10 @@ Here are links to the Amarok scripts I wrote:
 <a href="http://www.kde-apps.org/content/show.php?content=49151">Per-Song
 Volume Script for Amarok 1.x</a>,
 <a href="http://www.kde-apps.org/content/show.php?content=105869">Per-Song
-Volume Script for Amarok 2.x</a> - This script maintains a per-song volume 
-information. What it means is that a volume is associated with each song, 
-which is recorded whenever the volume changes, and is restored to its last 
-value when the song is played again. This is useful if you have several songs 
+Volume Script for Amarok 2.x</a> - This script maintains a per-song volume
+information. What it means is that a volume is associated with each song,
+which is recorded whenever the volume changes, and is restored to its last
+value when the song is played again. This is useful if you have several songs
 which sound louder or softer than the rest.
 </li>
 </ul>
@@ -152,7 +152,7 @@ to interface ClamAV scanning from within dot-qmail files. This is a version of
 it that was improved by me to some extent.
 </p>
 
-<h2 id="fluttering_flag"><a href="<bit_link "sdl-flag-0.2.0.c" />">SDL 
+<h2 id="fluttering_flag"><a href="<bit_link "sdl-flag-0.2.0.c" />">SDL
 Fluttering Flag</a></h2>
 
 <p>
@@ -168,12 +168,12 @@ See <a href="$(ROOT)/prog-evolution/pre-elpas.html">this page</a> for the
 story of how I originally recreated the fluttering flag effect.
 </p>
 
-<h2 id="slidy_shlomif"><a href="<bit_link "slidy-shlomif-0.2.0.js" />">JavaScript 
+<h2 id="slidy_shlomif"><a href="<bit_link "slidy-shlomif-0.2.0.js" />">JavaScript
 Presentation Helper</a></h2>
 
 <p>
-This is a JavaScript script based on 
-<a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily 
+This is a JavaScript script based on
+<a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily
 reduced and evolved. It supplies use of the left and right arrow keys for
 moving between slides (<tt>&lt;li&gt;</tt> elements
 somewhere inside an element with a class named “<tt>point</tt>”). It also
@@ -199,7 +199,7 @@ This is a program I wrote, after someone asked if it’s possible to decompose a
 sine wave using square waves.
 </p>
 
-<h2 id="du-output-analyser"><a href="https://bitbucket.org/shlomif/du-output-analyser/overview">du 
+<h2 id="du-output-analyser"><a href="https://bitbucket.org/shlomif/du-output-analyser/overview">du
 Output Analyser</a></h2>
 
 <p>
@@ -210,22 +210,22 @@ to analyse the file by filtering the sub-directories of a certain depth (and
 under a certain sub-directory). (Licensed under the MIT/X11 License).
 </p>
 
-<h2 id="set_xfce_workspaces"><a 
+<h2 id="set_xfce_workspaces"><a
 href="<bit_link "xfce-set-virtual-workspaces.rb" />">Set the
 Xfce Virtual Workspaces Number and Names</a></h2>
 
 <p>
-This command line Ruby script sets the names (and number) of the 
-Xfce desktop’s <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual 
+This command line Ruby script sets the names (and number) of the
+Xfce desktop’s <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual
 workspaces (also known as virtual desktop</a>. You can simply pass the names
 as arguments in the command line (possibly inside qoutes).
 </p>
 
 <p>
-This is useful to restore them in case they were reset. Use this script while 
-Xfce is running. (See 
+This is useful to restore them in case they were reset. Use this script while
+Xfce is running. (See
 <a href="http://foo-projects.org/pipermail/xfce/2009-December/026469.html">a
-discussion on the Xfce mailing list</a> for more information.) Licensed 
+discussion on the Xfce mailing list</a> for more information.) Licensed
 under the MIT/X11 License.
 </p>
 

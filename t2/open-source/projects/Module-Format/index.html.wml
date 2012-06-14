@@ -6,7 +6,7 @@
 
 <p>
 <get-var modname /> aims to simplify installing a large number of Perl modules
-(or their associated CPAN distributions) which are often stringified into 
+(or their associated CPAN distributions) which are often stringified into
 various different formats in the Perl world. It can handle all of these
 format, including input from heterogeneous formats.
 </p>
@@ -79,15 +79,15 @@ up()
 
 <p>
 Then you can type invocations like
-<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the 
-parameters.) to install Perl modules. 
+<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the
+parameters.) to install Perl modules.
 </p>
 
 <h3 id="urpmi">urpmi</h3>
 
 <p>
-To install a group of modules using 
-<a href="http://wiki.mandriva.com/en/Tools/urpmi">urpmi</a> on 
+To install a group of modules using
+<a href="http://wiki.mandriva.com/en/Tools/urpmi">urpmi</a> on
 <a href="http://www2.mandriva.com/">Mandriva Linux</a>, define the following
 shell function.
 </p>
@@ -101,8 +101,8 @@ up()
 
 <p>
 Then you can type invocations like
-<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the 
-parameters.) to install Perl modules. 
+<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the
+parameters.) to install Perl modules.
 </p>
 
 <h2 id="links">Project Links</h2>
@@ -136,7 +136,7 @@ source code, and other resources.
 <h2 id="licence">Licence</h2>
 
 <p>
-Module-Format is licensed under the 
+Module-Format is licensed under the
 <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>
 </p>
 
@@ -148,7 +148,7 @@ Module-Format is licensed under the
 
 <li>
 <p>
-<a href="http://community.livejournal.com/shlomif_tech/54725.html">“Introducing 
+<a href="http://community.livejournal.com/shlomif_tech/54725.html">“Introducing
 Module-Format”</a> - on Shlomi Fish’s Technical Blog.
 </p>
 </li>

@@ -72,7 +72,7 @@ function! MapTagKey(key, snewline, enewline, tag, stagx)
 			let ncmd = ncmd . "<up>"
 		endif
 	endif
-	
+
 	execute icmd
 	execute ncmd
 
@@ -97,7 +97,7 @@ function! MapTagKey(key, snewline, enewline, tag, stagx)
 	execute "nmap " . s:ChangeTagKey . a:key . " :call ChangeTag(\"" . stag . "\", \"" . etag "\")" . cr
 
 endfunction
- 
+
 
 " *********************************************************
 " Create mapping for symbol.
@@ -108,7 +108,7 @@ function! MapSymbolKey(key, sym)
 	execute "nmap " . s:InsertSymbolKey . a:key . " a" . a:sym
 
 endfunction
- 
+
 
 " *********************************************************
 " Create mapping for foreign characater.

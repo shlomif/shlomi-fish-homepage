@@ -1,10 +1,10 @@
 //
 // Fake DeCSS for JavaScript - A hack of Hackers-IL
 // version 0.2.2
-// 
+//
 // This code descrypts according to Julius Caesar's method of adding 3
 // to the character code.
-// 
+//
 
 
 //
@@ -15,13 +15,13 @@ function CSSdescramble(sec, key)
     var a;
     var ret = "";
     var c_code
-    
+
     for (a = 0; a < sec.length ; a++)
     {
     	c_code = sec.charCodeAt(a);
     	ret += String.fromCharCode((c_code-3)%256);
     }
-    
+
     return ret;
 }
 
@@ -31,7 +31,7 @@ function encode_string_with_escape_sequences(str, on_one_line)
     var len = str.length;
     var ret = "";
     var c, c_code;
-   
+
     for( a = 0; a < len ; a++ )
     {
         c = str.charAt(a);
@@ -81,7 +81,7 @@ function encode_string_with_escape_sequences(str, on_one_line)
                 ret += c;
             }
         }
-        
+
         if (! on_one_line)
         {
             // Add a newline every 20 characters
@@ -119,7 +119,7 @@ function decode_a_string_with_escape_sequences(str)
 
         if (c != "\\")
         {
-            ret += c;        
+            ret += c;
         }
         else
         {

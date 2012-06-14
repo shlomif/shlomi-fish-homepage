@@ -4,7 +4,7 @@ use strict;
 
 my $fingerprints_fn = shift;
 
-(open I, "gpg --list-keys --fingerprint|") || 
+(open I, "gpg --list-keys --fingerprint|") ||
     die "Could not pipe from GnuPG";
 my $key = "";
 my %gpg_keys; # Fingerprint keys.
@@ -52,7 +52,7 @@ while (<I>)
             }
         }
         $key = "";
-    }    
+    }
 }
 close(I);
 

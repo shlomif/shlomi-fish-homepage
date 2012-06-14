@@ -7,7 +7,7 @@
 <p>
 This essay was written by inspiration from the Joel on Software essay
 <a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">
-Building Communities with Software</a>. Comments on 
+Building Communities with Software</a>. Comments on
 <a href="index-old.html">the original incarnation of it</a> led me to write
 this version, which hopefully would be better.
 </p>
@@ -27,32 +27,32 @@ this version, which hopefully would be better.
 
 <p>
 Joel Spolsky wrote
-<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an 
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an
 essay titled “Building Communities with Software”</a> back in March, 2003.
-He explained there the motivation behind his web forum and why he believed it 
+He explained there the motivation behind his web forum and why he believed it
 was so good.
 </p>
 
 <p>
 It has been over two years since the article was published. Before and since,
-I had a lot of experience with various online communities: 
-<a href="http://en.wikipedia.org/wiki/Internet_forum">web-based forums</a>, 
-<a href="http://www.irchelp.org/">IRC channels</a> on various networks, 
-electronic 
-<a href="http://en.wikipedia.org/wiki/Electronic_mailing_list">mailing 
-lists</a>, 
+I had a lot of experience with various online communities:
+<a href="http://en.wikipedia.org/wiki/Internet_forum">web-based forums</a>,
+<a href="http://www.irchelp.org/">IRC channels</a> on various networks,
+electronic
+<a href="http://en.wikipedia.org/wiki/Electronic_mailing_list">mailing
+lists</a>,
 <a href="http://en.wikipedia.org/wiki/Instant_messaging">Instant Messaging</a>
-chats, 
-<a href="http://en.wikipedia.org/wiki/Blog">Weblogs</a> and their comments, 
-<a href="http://en.wikipedia.org/wiki/Wiki">Wikis</a>,  and to some extent 
-other types of online communities. In here, I will try to 
+chats,
+<a href="http://en.wikipedia.org/wiki/Blog">Weblogs</a> and their comments,
+<a href="http://en.wikipedia.org/wiki/Wiki">Wikis</a>,  and to some extent
+other types of online communities. In here, I will try to
 summarise what I consider the essence of what makes each one of them succesful
 or unsuccessful (or some of both).
 </p>
 
 <p>
 While I agree with Spolsky on several points he made, there are some points
-I disagree on, or at least believe that people who set-up or design can make a 
+I disagree on, or at least believe that people who set-up or design can make a
 choice between the two. Both will be acceptable, but they will also influence
 the nature and atmosphere of the forum.
 </p>
@@ -65,10 +65,10 @@ the nature and atmosphere of the forum.
 
 <p>
 One of the issues that face any starting forum is how to gather an active
-community. Being an editor of <a href="http://dmoz.org/">the Open Directory 
+community. Being an editor of <a href="http://dmoz.org/">the Open Directory
 Project’s</a> “Linux User Groups” category, I’ve been submitted countless
-of “User Groups” that are essentially half-dead PHP-BB or PHP-Nuke/PostNuke 
-sites, where there’s very little activity. 
+of “User Groups” that are essentially half-dead PHP-BB or PHP-Nuke/PostNuke
+sites, where there’s very little activity.
 </p>
 
 <p>
@@ -83,10 +83,10 @@ well, in order to make the parent forum obsolete.
 <h4 id="growing__email">E-mail Policy</h4>
 
 <p>
-E-mailing a person upon a comment to his post, or to a comment he made, 
-can actually (despite what Joel says)  make your web forum more popular. This 
+E-mailing a person upon a comment to his post, or to a comment he made,
+can actually (despite what Joel says)  make your web forum more popular. This
 is due to the fact that this motivates him to visit the forum again, respond to
-the comment, and also possibly look at neighbouring comments or other 
+the comment, and also possibly look at neighbouring comments or other
 discussions. On the page that the E-mail refers to, one can advertise (in a
 non-intrusive way), “hot” discussions, etc.
 </p>
@@ -103,13 +103,13 @@ his thread for responses time and again.
 ;;;    - It is probably a good idea not to have it.
 ;;; * A must for the IRC.
 ;;; * Cryptologically-secure methods for doing that are probably an overkill
-;;;     - use plaintext passwords. 
+;;;     - use plaintext passwords.
 
 <h3 id="dealing_with_spam">Dealing with Spam</h3>
 
 ;;; rel=“nofollow”.
 ;;; Bayesian spam-filtering.
-;;;     - Spam filters - mostly have been for E-mail until now, but 
+;;;     - Spam filters - mostly have been for E-mail until now, but
 ;;;       some may be adapted or written for spam in the near future.
 ;;; Registration.
 ;;;     - a E-mail handshake.
@@ -121,7 +121,7 @@ his thread for responses time and again.
 ;;; - Filtering content based on keywords - not a good idea
 ;;;     - “one grown” vs. negro.
 ;;;     - woman’s last name that contained “dick”
-;;; 
+;;;
 ;;; #debian on Freenode:
 ;;;     - one person there who constantly flame newbies.
 ;;;     - #debian redirects to #knoppix - even if it’s a debian problem.
@@ -160,7 +160,7 @@ consider it to have a low signal-to-noise ratio.
 ;;;
 ;;; * Reply-To:
 ;;;     - sometimes good, sometimes bad.
-;;;     - Point to “Reply-to considered harmful” and 
+;;;     - Point to “Reply-to considered harmful” and
 ;;;       “Reply-to considered harmful considered harmful”.
 ;;; * Promoting Active Discussions to the top.
 ;;;     - a very bad idea.
@@ -170,7 +170,7 @@ consider it to have a low signal-to-noise ratio.
 
 <h3 id="markup">The Markup</h3>
 
-;;; * Support as broad a subset of HTML as possible. 
+;;; * Support as broad a subset of HTML as possible.
 ;;;     - Convert unacceptable Markup to proper markup.
 ;;; * Have an option to use HTML or some subset of it.
 ;;;     - Tapuz/etc.
@@ -195,7 +195,7 @@ Link the following words to a URL. (at least not without giving any option of
 the “&lt;a” tag).
 </li>
 <li>
-Line breaks (<tt>\n</tt> characters) cause a new line to start at the post. 
+Line breaks (<tt>\n</tt> characters) cause a new line to start at the post.
 (very annoying!)
 </li>
 <li>
@@ -209,7 +209,7 @@ Weird tags like square brackets instead of angles.
 
 <p>
 HTML is very easy to learn and one can get the hang of it pretty quickly. Many
-times, people post markup from web pages they created with HTML, and they’ll 
+times, people post markup from web pages they created with HTML, and they’ll
 be annoyed if they can’t post it as is.
 </p>
 

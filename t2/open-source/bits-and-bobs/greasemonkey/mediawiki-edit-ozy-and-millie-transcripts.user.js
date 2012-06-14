@@ -20,12 +20,12 @@ document.getElementsByTagName('head')[0].appendChild(GM_JQ);
 // Check if jQuery's loaded
 function GM_wait() {
     if(typeof unsafeWindow.jQuery == 'undefined') {
-        window.setTimeout(GM_wait,100); 
+        window.setTimeout(GM_wait,100);
     }
-    else { 
+    else {
         $ = unsafeWindow.jQuery;
         jQuery = unsafeWindow.jQuery;
-        letsJQuery(); 
+        letsJQuery();
     }
 }
 GM_wait();
@@ -93,7 +93,7 @@ function autocomplete_box(not1, not2)
         if (ids_to_fullnames[id])
         {
             elem.value = elem.value.substring(0, line_start) + bullets + " " + "'''" + ids_to_fullnames[id] + "''': " + elem.value.substring(line_end);
-        }       
+        }
     }
 
     return;

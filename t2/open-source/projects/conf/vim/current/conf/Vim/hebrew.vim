@@ -28,8 +28,8 @@ imap <F10> <C-_>
 
 "toggle comand line language
 cmap  <S-F9>  <C-_>
-  
-" toggle language and add at EOL 
+
+" toggle language and add at EOL
 map <C-F9>   :set invrl<CR>:set invhk<CR>
 " do it when in insert mode as well (and return to insert mode)
 imap <C-F9> <Esc>:set invrl<CR>:set invhk<CR>A
@@ -51,7 +51,7 @@ map <C-B><C-l> <F9>
 
 "toggle comand line language
 cmap  <S-F9>  <C-_>
-" toggle language and add at EOL 
+" toggle language and add at EOL
 map <C-F9>   :set invrl<CR>:set invhk<CR>
 " do it when in insert mode as well (and return to insert mode)
 imap <C-F9> <Esc>:set invrl<CR>:set invhk<CR>A
@@ -64,7 +64,7 @@ vmenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	<ESC>:set invrightleft<CR><ESC>:set hkm
 imenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	<C-O>:set invrightleft<CR><C-O>:set hkmap<CR>
 cmenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	<C-C>:set invrightleft<CR><C-C>:set hkmap<CR>
 omenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	<ESC>:set invrightleft<CR><ESC>:set hkmap<CR>
-tmenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	Switch between english mode and hebrew mode 
+tmenu Heb&rew.&Toggle\ Heb<->Eng\ \(F9\)	Switch between english mode and hebrew mode
 nmenu Heb&rew.Toggle\ &Visual\ \(F10\)		:set invrevins<CR>:set invhk<CR>
 imenu Heb&rew.Toggle\ &Visual\ \(F10\)		<C-_>
 amenu Heb&rew.-sep1-				<nul>
@@ -76,14 +76,14 @@ amenu Heb&rew.RTL\ Display			:set rightleft<CR>
 amenu Heb&rew.LTR\ Display			:set norightleft<CR>
 amenu Heb&rew.Toggle\ RTL-LTR\ &Display		:set invrightleft<CR>
 amenu Heb&rew.-sep2-				<nul>
-" note that "hk" can be a shorthand for "hkmap" 
+" note that "hk" can be a shorthand for "hkmap"
 amenu Heb&rew.Hebrew\ Keyboard			:set hkmap<CR>
 amenu Heb&rew.English\ Keyboard			:set nohkmap<CR>
 amenu Heb&rew.Toggle\ &Keyboard			:set invhkmap<CR>
 amenu Heb&rew.-sep3-                      	<nul>
 " useful for editing visual-hebrew texts:
 " note that "ri" can be a shorthand for "revins"
-amenu Heb&rew.Inverted\ Keyboard 		:set revins<CR> 
+amenu Heb&rew.Inverted\ Keyboard 		:set revins<CR>
 amenu Heb&rew.Normal\ Keyboard	 		:set norevins<CR>
 amenu Heb&rew.Toggle\ &Inverted\ Keyboard	:set invrevins<CR>
 amenu Heb&rew.-sep4-				<nul>
@@ -93,7 +93,7 @@ amenu Heb&rew.Disable\ ^-_			:set noallowrevins<CR>
 amenu Heb&rew.Toggle\ ^-_			:set invallowrevins<CR>
 
 
-" I'm not sure that the following is needed(or maybe only leave the 
+" I'm not sure that the following is needed(or maybe only leave the
 " "toggle" button), and if it is there bound to be a way to make it more
 " elegant. Anyway - I have not bothered to create icons yet...
 
@@ -120,7 +120,7 @@ vmenu 1.1020 ToolBar.Hebrew	<Esc>:set rightleft<CR><Esc>:set hkmap<CR>
 imenu 1.1020 ToolBar.Hebrew	<C-O>:set rightleft<CR><C-O>:set hkmap<CR>
 cmenu 1.1020 ToolBar.Hebrew	<C-C>:set rightleft<CR><C-C>:set hkmap<CR>
 omenu 1.1020 ToolBar.Hebrew	<Esc>:set rightleft<CR><Esc>:set hkmap<CR><Esc>
-tmenu ToolBar.Hebrew		Switch to Hebrew 
+tmenu ToolBar.Hebrew		Switch to Hebrew
 
 " add a hebrew help item (:help hebrew) to the help menu
 amenu 9999.25 &Help.He&brew		:help hebrew<CR>

@@ -87,7 +87,7 @@ my $contents =
         {
             'title' => "What's on the server?",
             'url' => "server-technologies",
-            'subs' => 
+            'subs' =>
             [
                 {
                     'title' => "How much Generated Content do you Need?",
@@ -156,7 +156,7 @@ my $contents =
         {
             'title' => "Content Management Systems",
             'url' => "cms",
-            'subs' => 
+            'subs' =>
             [
                 {
                     'title' => "Examples of Server-Installed CMSes",

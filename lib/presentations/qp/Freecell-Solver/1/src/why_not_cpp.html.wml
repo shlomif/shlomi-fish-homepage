@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-<a href="http://www.oberhumer.com/mfx/">Markus Oberhumer</a> 
-(of <a href="http://www.oberhumer.com/opensource/pysol/">PySol</a> 
+<a href="http://www.oberhumer.com/mfx/">Markus Oberhumer</a>
+(of <a href="http://www.oberhumer.com/opensource/pysol/">PySol</a>
 fame) asked if I thought about converting Freecell Solver to C++. (I suppose
 he meant with STL, templates and all). Here is a full answer why I'm
 not going to do it:
@@ -35,8 +35,8 @@ than C++.
 </ol>
 
 <p>
-I'm more willing to integrate C++-derived features there into the 
-ANSI C code. Things like namespaces, (non-inherited) classes, or inline 
+I'm more willing to integrate C++-derived features there into the
+ANSI C code. Things like namespaces, (non-inherited) classes, or inline
 functions. However, for the time being, I'd like to maintain the code as
 pure ANSI C.
 </p>

@@ -11,13 +11,13 @@ backup of the file specified as its argument:
 </quadpres_code_block>
 
 <p>
-Using the command-line for specifying parameters to the program is usually 
+Using the command-line for specifying parameters to the program is usually
 more handy than using files, or modifying the script each time.
 </p>
 
 <p>
 Note that it is often convenient to use <tt>shift</tt> to draw arguments
-out of <tt>@ARGV</tt> one at a time. When used without parameters outside of 
+out of <tt>@ARGV</tt> one at a time. When used without parameters outside of
 functions, shift extract arguments out of <tt>@ARGV</tt>.
 </p>
 

@@ -4,22 +4,22 @@
 
 <p>
 So far we have learned about three different kinds of for loops, so
-you are probably wondering when to use each one. 
+you are probably wondering when to use each one.
 </p>
 
 <p>
-A subtantial difference between the notation 
-<tt>for($a=0 ; $a&lt;$b ; $a++)</tt> and between 
-<tt>for $a (0 .. ($b-1))</tt> is that the first accommodates 
+A subtantial difference between the notation
+<tt>for($a=0 ; $a&lt;$b ; $a++)</tt> and between
+<tt>for $a (0 .. ($b-1))</tt> is that the first accommodates
 itself to changes in <tt>$b</tt>, while the second will iterate for a
-constant number of times. Of course, you can make the first one 
+constant number of times. Of course, you can make the first one
 similar to the second by assigning the value of <tt>$b</tt> to a third
 variable that will remain constant. Still, the second notation is
 usually safer from that sense.
 </p>
 
 <p>
-The <tt>foreach $item (@array) </tt> loop is quite handy, but sometimes 
+The <tt>foreach $item (@array) </tt> loop is quite handy, but sometimes
 when iterating over an array of items the index of the item is of importance.
 In that case, one may prefer to use a normal <tt>for</tt> loop.
 </p>

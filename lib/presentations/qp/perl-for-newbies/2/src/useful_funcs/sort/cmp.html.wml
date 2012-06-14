@@ -2,13 +2,13 @@
 
 <p>
 Perl has two operators <tt>&lt;=&gt;</tt> and <tt>cmp</tt>, which are very
-useful when wishing to sort arrays. <tt>$a &lt;=&gt; $b</tt> returns -1 if 
+useful when wishing to sort arrays. <tt>$a &lt;=&gt; $b</tt> returns -1 if
 <tt>$a</tt> is numerically lesser than <tt>$b</tt>, 1 if it's greater, and
 zero if they are equal.
 </p>
 
 <p>
-<tt>cmp</tt> does the same for string comparison. For instance the previous 
+<tt>cmp</tt> does the same for string comparison. For instance the previous
 example could be re-written as:
 </p>
 

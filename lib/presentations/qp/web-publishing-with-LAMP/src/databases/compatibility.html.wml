@@ -6,15 +6,15 @@ The variants of SQL used by different database implementations are very
 different.
 </li>
 <li>
-The SQL standards define a very low common denominator, and even most 
+The SQL standards define a very low common denominator, and even most
 SQL functions have different names and semantics in different implementations.
 </li>
 <li>
-If you wish to support more than one implementation, you'll probably need 
+If you wish to support more than one implementation, you'll probably need
 more than one codebase.
 </li>
 <li>
-It is a good idea to think what features you would need (at present and in 
+It is a good idea to think what features you would need (at present and in
 the future) and choose one database that supports all of them.
 </li>
 </points>

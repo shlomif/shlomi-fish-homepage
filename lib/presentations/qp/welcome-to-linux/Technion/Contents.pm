@@ -48,7 +48,7 @@ my $contents =
         {
             'url' => "emacs",
             'title' => "The Almighty Emacs",
-            'subs' => 
+            'subs' =>
             [
                 {
                     'url' => "more.html",

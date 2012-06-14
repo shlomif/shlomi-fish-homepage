@@ -3,7 +3,7 @@ package Bar;
 use strict;
 use warnings;
 
-# @ISA is not lexically scoped so it has to be declared with 
+# @ISA is not lexically scoped so it has to be declared with
 # use vars.
 #
 # qw(My Constant String) is equivalent to split(/\s+/, "My Constant String")
@@ -20,7 +20,7 @@ sub assign_name_ext
     my $self = shift;
 
     my $name = shift;
-    
+
     # Call the method of the base class
     my $ret = $self->assign_name($name);
     if (! $ret)
@@ -35,9 +35,9 @@ sub get_num_times_assigned
 {
     my $self = shift;
 
-    return 
-        (exists($self->{'num_times'}) ? 
-            $self->{'num_times'} : 
+    return
+        (exists($self->{'num_times'}) ?
+            $self->{'num_times'} :
             0
         );
 }

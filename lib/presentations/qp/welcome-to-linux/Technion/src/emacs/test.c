@@ -9,7 +9,7 @@ char *get_sum_mem(int i)
 int main()
 {
   char *a=get_sum_mem(10);
-  
+
   a[20]='c';
   printf("%c\n",a[1]);
   a="Where"

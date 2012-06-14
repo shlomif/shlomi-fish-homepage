@@ -14,7 +14,7 @@ sub assign_name
     my $self = shift;
 
     my $name = shift;
-    
+
     # Call the method of the base class
     my $ret = $self->SUPER::assign_name($name);
     if (! $ret)
@@ -29,9 +29,9 @@ sub get_num_times_assigned
 {
     my $self = shift;
 
-    return 
-        (exists($self->{'num_times'}) ? 
-            $self->{'num_times'} : 
+    return
+        (exists($self->{'num_times'}) ?
+            $self->{'num_times'} :
             0
         );
 }

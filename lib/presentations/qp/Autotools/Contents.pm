@@ -135,8 +135,8 @@ my $contents =
             'title' => "Links and References",
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'acconfig.h/acconfig.h',
         'changequote/configure.in',
         'common_macros/AC_ARG_ENABLE/configure.in',

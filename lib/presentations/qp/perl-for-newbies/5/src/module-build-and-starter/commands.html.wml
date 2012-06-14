@@ -27,10 +27,10 @@ Now let's run <tt>./Build</tt> and <tt>./Build test</tt>.
 
 <p>
 What happens is that <tt>./Build</tt> copies the files under <tt>blib/</tt>
-, builds the documentation, and in case we had 
-<a href="http://en.wikipedia.org/wiki/XS_%28Perl%29">XS (= "External Subroutine" - perl routines written in a low-level language)</a> it 
+, builds the documentation, and in case we had
+<a href="http://en.wikipedia.org/wiki/XS_%28Perl%29">XS (= "External Subroutine" - perl routines written in a low-level language)</a> it
 would also build the extensions. This allows us to run tests against the
-built code, either automated or manual by using the 
+built code, either automated or manual by using the
 <a href="http://perldoc.perl.org/blib.html">blib module</a>.
 </p>
 
@@ -38,7 +38,7 @@ built code, either automated or manual by using the
 After we had ran <tt>./Build</tt>, we ran <tt>./Build test</tt> to run the
 automated tests that Module-Starter generated for us. As you can see
 the line says that all tests successful. If they were not, we should fix
-either the code or the tests, depending on what is wrong. 
+either the code or the tests, depending on what is wrong.
 </p>
 
 <p>

@@ -8,7 +8,7 @@ Indirect stacks were originally individually malloced.
 This consumed a lot of overhead memory.
 </li>
 <li>
-In recent versions, they were compactly allocated, contiguously, out of a 
+In recent versions, they were compactly allocated, contiguously, out of a
 memory pool.
 </li>
 </points>

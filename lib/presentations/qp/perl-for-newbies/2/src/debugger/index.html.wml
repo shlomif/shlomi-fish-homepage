@@ -2,7 +2,7 @@
 
 <p>
 Even if your perl code compiles and runs, it doesn't mean it is error free.
-Very often you will write programs that when given specific input, will behave 
+Very often you will write programs that when given specific input, will behave
 very differently from their intended behaviour. Perl supplies the user with a
 debugger that can help in trapping such bugs in the program.
 </p>
@@ -11,7 +11,7 @@ debugger that can help in trapping such bugs in the program.
 The debugger is invoked simply by appending a "-d" switch before the script
 name. E.g: <tt>perl -d hello.pl</tt>. After typing "Return" at the shell command
 line, you will have an interactive debugging session at your disposal. At this
-session, you can control the execution of your program as well as enter any 
+session, you can control the execution of your program as well as enter any
 Perl command you like.
 </p>
 

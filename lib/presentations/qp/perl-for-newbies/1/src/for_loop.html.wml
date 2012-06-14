@@ -22,15 +22,15 @@ Some explanations about the syntax:
 <ol>
 
 <li>
-<tt>$i</tt> is the iteration variable. It receives the value 1, then the 
-value 2, then 3 and so forth until it is equal to 100, afterwards the 
+<tt>$i</tt> is the iteration variable. It receives the value 1, then the
+value 2, then 3 and so forth until it is equal to 100, afterwards the
 loop terminates.
 </li>
 
 <li>
-The curly brackets (<tt>{ ... }</tt>) encapsulate the loop block. The loop 
-block is executed once for each value <tt>$i</tt> accepts. Within that 
-block, called the loop body, you can use <tt>$i</tt> and you'll get its 
+The curly brackets (<tt>{ ... }</tt>) encapsulate the loop block. The loop
+block is executed once for each value <tt>$i</tt> accepts. Within that
+block, called the loop body, you can use <tt>$i</tt> and you'll get its
 current value.
 </li>
 
@@ -47,9 +47,9 @@ multiplication board:
 </quadpres_code_block>
 
 <p>
-You may have noticed the program's comments. In perl comments start with the 
-sharp sign (<tt>#</tt>) and extend to the end of the line. Writing the 
-multiplication boards with the labels that indicate which numbers are being 
+You may have noticed the program's comments. In perl comments start with the
+sharp sign (<tt>#</tt>) and extend to the end of the line. Writing the
+multiplication boards with the labels that indicate which numbers are being
 multiplied is left as an exercise to the reader.
 </p>
 

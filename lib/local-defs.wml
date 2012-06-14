@@ -15,7 +15,7 @@
         my ($cb) = @_;
 
         binmode STDOUT, ":utf8";
-        
+
         $cb->();
 
         binmode STDOUT, ":raw";
@@ -54,11 +54,11 @@
 </define-tag>
 
 <define-tag latemp_get_nav_menu_html>
-<:{ 
+<:{
 
 {
     _wrap_as_utf8( sub {
-        print join("\n", @$nav_html); 
+        print join("\n", @$nav_html);
     });
 }
 

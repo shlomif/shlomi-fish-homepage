@@ -1,9 +1,9 @@
 #include 'template.wml'
 
 <p>
-To compile a CPAN distribution manually, you first need to download it. You 
-can start by browsing your nearest CPAN module and downloading from there. On 
-UNIX the following command, will download version 2.31 of the XML::Parser 
+To compile a CPAN distribution manually, you first need to download it. You
+can start by browsing your nearest CPAN module and downloading from there. On
+UNIX the following command, will download version 2.31 of the XML::Parser
 module.
 </p>
 
@@ -20,7 +20,7 @@ $ tar -xvf XML-Parser-2.31.tar.gz
 </quadpres_code_block>
 
 <p>
-(if you don't have GNU tar use "gunzip" and then "tar -xvf" instead. On 
+(if you don't have GNU tar use "gunzip" and then "tar -xvf" instead. On
 Windows you can use WinZip.)
 </p>
 
@@ -74,7 +74,7 @@ Password:
 <h2 id="module-build">Module-Build</h2>
 
 <p>
-Note that some distributions are now using 
+Note that some distributions are now using
 <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a>. If
 your distribution contains a <tt>Build.PL</tt> file, you should run
 the following commands instead:

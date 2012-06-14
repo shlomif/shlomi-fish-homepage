@@ -8,15 +8,15 @@ body { background-color : #FFFFFF }
 a.contents:active { color: red }
 table.mycode { border-style : solid ; border-width : thin }
 td.mycode { width : 60em }
-.code_block 
-{ 
-    border-style : solid; 
+.code_block
+{
+    border-style : solid;
     border-width : thin;
     padding-left: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
-    
+
 table.mydemo { border-style : solid ; border-width : thin }
 td.mydemo { width : 60em }
 table.note { border-style : double ; border-width : 3em}
@@ -33,16 +33,16 @@ ul.point { font-size : large }
 ol.point { font-size : large }
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
-table.border1 
+table.border1
 {
-    border-style: solid; 
-    border-width: 1px; 
+    border-style: solid;
+    border-width: 1px;
     border-color: #eeeeee gray gray #eeeeee;
 }
-table.border1 > tbody > tr > th, table.border1 > tbody > tr > td 
+table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
 {
-    border-style : solid; 
-    border-width: 1px; 
+    border-style : solid;
+    border-width: 1px;
     border-color: gray #eeeeee #eeeeee gray;
 }
 table.bordered { border-style : solid ; border-width : thin }

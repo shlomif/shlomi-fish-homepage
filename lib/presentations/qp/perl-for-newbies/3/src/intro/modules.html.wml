@@ -1,19 +1,19 @@
 #include 'template.wml'
 
-<p> 
+<p>
 <b>Packages</b> are the perl terminology for <b>namespaces</b>. Namespaces
 enable the programmer to declare several functions or variables with the same
 name, and use all of them in the same code, as long as each one was declared in
 a different namespace. By using namespaces wisely, a programmer can be more
-certain his code will not clash with code from another developer. Moreover, 
-packages are the basis for Perl's objects system. 
+certain his code will not clash with code from another developer. Moreover,
+packages are the basis for Perl's objects system.
 </p>
 
 <p>
-<b>Modules</b> are files containing Perl code which can be loaded by programs 
-or other modules. They allow the programmer to declare various functions in 
-various packages (usually below the namespace that corresponds to the package 
-name). Modules facilitate code reuse as the same module can be used by several 
-modules and by several distinct programs. 
+<b>Modules</b> are files containing Perl code which can be loaded by programs
+or other modules. They allow the programmer to declare various functions in
+various packages (usually below the namespace that corresponds to the package
+name). Modules facilitate code reuse as the same module can be used by several
+modules and by several distinct programs.
 </p>
 

@@ -10,13 +10,13 @@ avoid writing POD with errors.
 <p>
 The CPAN module
 <a href="http://search.cpan.org/dist/Test-Pod-Coverage/"><b>Test-Pod-Coverage</b></a>
-tries to make sure that all the public API functions in one's Perl modules 
+tries to make sure that all the public API functions in one's Perl modules
 have  corresponding POD documentation. Its use is also recommended.
 </p>
 
 <p>
-Generally, 
-<a href="http://search.cpan.org/dist/Module-Starter/">Module-Starter</a> 
+Generally,
+<a href="http://search.cpan.org/dist/Module-Starter/">Module-Starter</a>
 and similar modules will generate such tests for you automatically as part
 of the skeleton of your CPAN distribution.
 </p>

@@ -2,16 +2,16 @@
 
 <points>
 <li>
-I thought of the following greedy, (but not optimal) algorithm to create a 
+I thought of the following greedy, (but not optimal) algorithm to create a
 pseudo-optimal prelude:
 </li>
 <li>
-First we record the number of iterations (= states scanned) it took the scans' 
+First we record the number of iterations (= states scanned) it took the scans'
 to solve a given board for each of a large set of boards. (in our case the
 Microsoft 32,000).
 </li>
 <li>
-Then, we allocate a certain number of iterations, and assign this quota to 
+Then, we allocate a certain number of iterations, and assign this quota to
 the scan that solves the most boards within this quota.
 </li>
 <li>

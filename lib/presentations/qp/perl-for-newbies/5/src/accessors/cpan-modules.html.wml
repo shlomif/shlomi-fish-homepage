@@ -3,7 +3,7 @@
 <p>
 As you may have noticed from our example, writing accessors by hand
 involves a lot of duplicate code, and can get tedious. One way to overcome
-it is by using namespace games 
+it is by using namespace games
 (e.g: <tt>*Person::${field} = sub { .... }</tt>), but there are many modules
 on CPAN that do it all for you. Here's an overview of some of the most
 prominent ones:
@@ -30,7 +30,7 @@ writing your own accessor methods by hand, like we did in the example.
 <h2 id="Moose"><a href="http://moose.perl.org/">Moose</a></h2>
 
 <p>
-While Moose provides accessors, they are only the tip of its 
+While Moose provides accessors, they are only the tip of its
 iceberg. Moose is in fact a “post-modern” object system for Perl 5 that
 provides a type system, delegators, meta-classes, wrapping routines, and many
 other advanced features. As <a
@@ -46,7 +46,7 @@ informally-specified, bug-ridden, slow implementation of half of Moose.
 </blockquote>
 
 <p>
-If you're looking to take your object oriented programming in Perl 5 
+If you're looking to take your object oriented programming in Perl 5
 to new levels - look no further than that. One should be warned that as of
 this writing (August, 2009), Moose may have a relatively long startup time,
 although the situation has been improved and is expected to improve further.

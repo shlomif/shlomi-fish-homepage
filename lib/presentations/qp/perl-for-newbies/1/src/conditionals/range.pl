@@ -20,5 +20,5 @@ else
     else
     {
         print "The number is not in the range!\n";
-    }    
+    }
 }

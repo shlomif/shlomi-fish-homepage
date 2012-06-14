@@ -8,11 +8,11 @@ and intermediate targets used in the build process.
 <li>
 In a makefile, the target is followed by a colon (:), which is then
 followed by a list of its dependent targets or files (commonly referred to
-as dependencies). 
+as dependencies).
 </li>
 <li>
-Afterwards in a new line, there should be a tab character (and not any other 
-whitespace before or afterwards), followed by the command used to generate the 
+Afterwards in a new line, there should be a tab character (and not any other
+whitespace before or afterwards), followed by the command used to generate the
 target from the dependencies.
 </li>
 </points>

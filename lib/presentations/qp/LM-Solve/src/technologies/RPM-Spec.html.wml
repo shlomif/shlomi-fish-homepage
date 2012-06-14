@@ -2,12 +2,12 @@
 
 <points>
 <li>
-I wanted LM-Solve to be installable by RPM, and so had to write an 
+I wanted LM-Solve to be installable by RPM, and so had to write an
 RPM Spec.
 </li>
 <li>
 After some experiments, I realized that a good way to generate the RPM
-Spec based on the current version is to put the generation routine in 
+Spec based on the current version is to put the generation routine in
 Makefile.PL.
 </li>
 <li>

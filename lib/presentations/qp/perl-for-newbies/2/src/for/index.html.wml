@@ -4,21 +4,21 @@
 
 <p>
 The <tt>for</tt> loop has another syntax which can be used to encapsulate
-<tt>while</tt>-like loops in a more compact way, which also has some 
+<tt>while</tt>-like loops in a more compact way, which also has some
 advantages.
 </p>
 
 <p>
-The syntax for this <tt>for</tt> loop is 
+The syntax for this <tt>for</tt> loop is
 <tt>for({Initial Statements} ; {Condition} ; {Iteration Commands}) { ... }</tt>,
-where {Condition} is a boolean condition expression, and 
-{Initial Statements} and {Iteration Commands} may contain one or more 
+where {Condition} is a boolean condition expression, and
+{Initial Statements} and {Iteration Commands} may contain one or more
 commands separated by commas.
 </p>
 
 <p>
-When The interpreter encounters a <tt>for</tt> loop it executes its initial 
-statements, and then executes the commands within its block for as long 
+When The interpreter encounters a <tt>for</tt> loop it executes its initial
+statements, and then executes the commands within its block for as long
 as the condition is met. {Iteration Commands} are executed at the end
 of each iteration.
 </p>

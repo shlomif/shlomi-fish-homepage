@@ -4,7 +4,7 @@
 Software design methodologists distinguish between several types of
 automated tests. First of all, <b>unit tests</b> (also see
 <a href="http://en.wikipedia.org/wiki/Unit_testing">the Wikipedia article</a>)
-test only a single "unit" of the code (say a module or a class), to 
+test only a single "unit" of the code (say a module or a class), to
 see if it behaves as expected. They generaly make sure that the behaviour
 of the module is sane and desirable, while not trying to see if it works
 as part of the larger scheme.
@@ -49,14 +49,14 @@ You can use Perl to test software written in many other programming languages:
 <li>
 <p>
 If you want to perform system tests of foreign applications, you can look at
-the various way for Perl to 
-<a href="http://perl-begin.org/uses/multitasking/">invoke 
+the various way for Perl to
+<a href="http://perl-begin.org/uses/multitasking/">invoke
 other command-line programs</a>, and for its sockets and networking
 capabilities.
 </p>
 
 <p>
-For GUI (= Graphical User-Interface) tests, you can look at 
+For GUI (= Graphical User-Interface) tests, you can look at
 <a href="http://search.cpan.org/dist/Win32-GuiTest/">Win32-GuiTest</a> and
 <a href="http://search.cpan.org/dist/X11-GUITest/">X11-GUITest</a>.
 </p>
@@ -66,7 +66,7 @@ For GUI (= Graphical User-Interface) tests, you can look at
 <li>
 <p>
 If you want to write unit-tests for these applications in Perl, you should
-look at the 
+look at the
 <a href="http://search.cpan.org/search?query=inline&amp;mode=all">“Inline”
 family of modules</a> that allow you to write native subroutines in Perl.
 </p>

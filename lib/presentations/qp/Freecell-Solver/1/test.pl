@@ -13,8 +13,8 @@ my $contents = Contents::get_contents();
 my $document_name = "finale/book.html";
 
 my $qp = Shlomif::Quad::Pres->new(
-            $contents, 
-            'doc_id' => $document_name, 
+            $contents,
+            'doc_id' => $document_name,
             'mode' => "server",
             );
 
@@ -27,7 +27,7 @@ my $contents_tree = $qp->get_contents();
 my $title = $qp->get_title();
 
 
-my @controls = 
+my @controls =
         (
             { 'title' => "Contents", 'link' => "top", 'func' => "get_contents_url"},
             { 'title' => "Up", 'link' => "up", 'func' => "get_up_url"},
@@ -36,7 +36,7 @@ my @controls =
             { 'title' => "First", 'link' => "first", 'func' => "get_contents_url", 'hide' => 1, },
             { 'title' => "Last", 'link' => "last", 'func' => "get_last_url", 'hide' => 1, },
         );
-   
+
 
    foreach my $c (@controls)
    {

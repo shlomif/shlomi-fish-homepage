@@ -20,7 +20,7 @@ sub vector_sum
         push @ret, ($v1[$i] + $v2[$i]);
     }
 
-    return [ @ret ];    
+    return [ @ret ];
 }
 
 my $ret = vector_sum(

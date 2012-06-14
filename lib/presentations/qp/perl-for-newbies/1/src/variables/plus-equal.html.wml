@@ -10,9 +10,9 @@ Perl provides a shortcut for writing "$myvar = $myvar + $value", or
 </quadpres_code_block>
 
 <p>
-Since the operations <tt>$a += 1</tt> and <tt>$a -= 1</tt> are so commonly used, 
-they were also assigned a separate operator. One can use <tt>$a++</tt> and 
-<tt>$a--</tt> to perform them. For example, the above program could have 
+Since the operations <tt>$a += 1</tt> and <tt>$a -= 1</tt> are so commonly used,
+they were also assigned a separate operator. One can use <tt>$a++</tt> and
+<tt>$a--</tt> to perform them. For example, the above program could have
 been written as:
 </p>
 

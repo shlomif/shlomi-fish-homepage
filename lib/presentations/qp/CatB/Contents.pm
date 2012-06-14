@@ -2,7 +2,7 @@ package Contents;
 
 use strict;
 
-my $contents = 
+my $contents =
 {
     'title' => "The Cathedral and the Bazaar Series",
     'subs' =>

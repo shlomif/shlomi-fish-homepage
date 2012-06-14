@@ -13,7 +13,7 @@ process when errors are detected, and let you debug the place of the
 error.
 </li>
 <li>
-Valgrind is good only for x86s running some non-ancient Linux - this 
+Valgrind is good only for x86s running some non-ancient Linux - this
 shouldn't be much of a problem.
 </li>
 <li>
@@ -38,7 +38,7 @@ Passing system call paramters with inadequate read/write permissions.
 </li>
 <li>
 Valgrind will tell you, when possible, where in your code the relevant memory
-blocks were allocated/freed. 
+blocks were allocated/freed.
 </li>
 <li>
 Valgrind is most probably not installed on the Linux box you are working on,

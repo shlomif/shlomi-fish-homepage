@@ -5,7 +5,7 @@ my $string = lc(shift(@ARGV));
 
 if ($string =~ /the(?: +[a-z]+)* +there/)
 {
-    print "True\n";  
+    print "True\n";
 }
 else
 {

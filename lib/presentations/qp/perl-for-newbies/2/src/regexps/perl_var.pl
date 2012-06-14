@@ -5,7 +5,7 @@ my $string = lc(shift(@ARGV));
 
 if ($string =~ /\$[A-Za-z_]/)
 {
-    print "True\n";  
+    print "True\n";
 }
 else
 {

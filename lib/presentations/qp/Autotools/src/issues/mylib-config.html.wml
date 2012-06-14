@@ -7,13 +7,13 @@ To have a mylibrary-config script, you need to put it in <tt>AC_OUTPUT</tt>.
 </li>
 
 <li>
-<tt>configure</tt> would expect a <tt>mylibrary-config.in</tt> file to be 
+<tt>configure</tt> would expect a <tt>mylibrary-config.in</tt> file to be
 present, so you'll need to write a template for it there.
 </li>
 
 <li>
-You can look at pre-existing packages such as 
-<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> or 
+You can look at pre-existing packages such as
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> or
 <a href="http://www.gtk.org/">GLib</a> for reference.
 </li>
 </points>

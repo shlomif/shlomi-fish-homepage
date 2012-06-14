@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index"
     xmlns:xlink="http://www.w3.org/1999/xlink">
-    
+
     <info>
         <title>“Usability” of the Perl Online World for Newcomers</title>
 
@@ -26,8 +26,8 @@
         <legalnotice xml:id="main_legal_notice">
             <para>
                 This document is copyrighted by Shlomi Fish under the terms
-                of the Open Publication License version 2.0 or greater, or 
-                alternatively under the 
+                of the Open Publication License version 2.0 or greater, or
+                alternatively under the
                 <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution Unported License version 3.0</link> (or at your option any greater version of it).
             </para>
         </legalnotice>
@@ -46,7 +46,7 @@
                 <date>2003-04-16</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
-                    Made the criticism against the inavailability of the 
+                    Made the criticism against the inavailability of the
                     O’Reilly core Perl documentation less blunt, and added
                     a suggestion for the www.perl.com site. Fixed some
                     typos.
@@ -67,55 +67,55 @@
         <info><title>Me as a Perl Newbie</title></info>
 
         <para>
-            “Shlomi, it takes 10 years to learn UNIX. I want you to learn it 
-            in a month”. My future supervisor in a web publishing house I 
-            switched jobs to, told me that and It’ll be a cold day in hell 
+            “Shlomi, it takes 10 years to learn UNIX. I want you to learn it
+            in a month”. My future supervisor in a web publishing house I
+            switched jobs to, told me that and It’ll be a cold day in hell
             before I forget this quote. He also showed me Perl, telling me I
             can write a TCP/IP client in 5 lines and a TCP server in 10, which
-            sounded very impressive and intriguing. So I set out to learn 
+            sounded very impressive and intriguing. So I set out to learn
             UNIX and Perl.
         </para>
 
         <para>
             When I got to work I did not know UNIX as much as he could hope for,
             but with some help from the people around there I managed to get by.
-            The year was 1996, it was the start of the Internet Boom and 
+            The year was 1996, it was the start of the Internet Boom and
             everybody and his mother wanted a web-site. Perl 5 was there, and
-            it was practically the only thing you could use on UNIX to write 
+            it was practically the only thing you could use on UNIX to write
             CGI scripts, without completely losing your mind.
         </para>
 
         <para>
             I only had a Windows 3.11 at home, and so started learning Perl
             from all the POD documents cramped into one Acrobat Reader file.
-            “On dry”, as they say in Israel, without actually running it. I 
-            understood some of it as it reminded me of C and BASIC which I knew 
+            “On dry”, as they say in Israel, without actually running it. I
+            understood some of it as it reminded me of C and BASIC which I knew
             quite well. But still there were all these references to sed, awk,
-            UNIX shells, and other things I did not know. Generally, they 
+            UNIX shells, and other things I did not know. Generally, they
             assumed you knew what they were talking about.
         </para>
         <para>
-            I started working there, and was able to get by with my little 
-            knowledge of Perl and UNIX which accumulated quite quickly. I 
-            remember asking my supervisor what regular expressions where all 
-            about and he told me: “they are a mechanism to find patterns in 
+            I started working there, and was able to get by with my little
+            knowledge of Perl and UNIX which accumulated quite quickly. I
+            remember asking my supervisor what regular expressions where all
+            about and he told me: “they are a mechanism to find patterns in
             text”. That was the enlightenment that made me able to use them
             on a regular basis.
         </para>
         <para>
-            I fell in love with both UNIX and Perl. I was not much of a UNIX 
+            I fell in love with both UNIX and Perl. I was not much of a UNIX
             guru and wrote what I now write in shell in Perl, and simply kept
             asking my supervisor (who was then a true UNIX guru even in today’s
             standards), questions about how to do things. But I got by.
         </para>
         <para>
-            Since then, with some breaks, I extended my knowledge of both Perl 
-            and UNIX. (I was thrilled to find ActivePerl and use Perl 
-            effectively on Win32 as well). Gradually, I learned about Modules 
+            Since then, with some breaks, I extended my knowledge of both Perl
+            and UNIX. (I was thrilled to find ActivePerl and use Perl
+            effectively on Win32 as well). Gradually, I learned about Modules
             and Objects in Perl and then a lot of tips and shortcuts, and now
-            use it very often. Even in the Technion, where I now study 
+            use it very often. Even in the Technion, where I now study
             Electrical Engineering, Perl proved to be a life saver. It is my
-            favourite language by far, and would not replace it with anything 
+            favourite language by far, and would not replace it with anything
             else.
         </para>
         <para>
@@ -130,15 +130,15 @@
         <para>
             Before I start let me say that I am indebted to Larry Wall, Tom
             Christiansen and all the other people who contributed to Perl
-            and brought Perl so far. I did not come to bury Perl or the Perl 
+            and brought Perl so far. I did not come to bury Perl or the Perl
             world in this article. I simply came to pass some constructive
-            criticism and suggestions to further aid its public acceptance. 
+            criticism and suggestions to further aid its public acceptance.
             Perl is the nicest language I’ve seen so far, and I would highly
             recommend anyone to learn it.
         </para>
         <para>
             (I am also grateful to the Python, Ruby, Tcl, PHP, etc. crew for
-            working on languages which can provide a viable alternative to 
+            working on languages which can provide a viable alternative to
             Perl in some cases and by some people. By all means, Perl is not
             suitable for anyone and for any purpose and I always appreciate a
             healthy competition.)
@@ -146,7 +146,7 @@
     </section>
     <section xml:id="story_of_mel">
         <info><title>The Story of Mel</title></info>
-        
+
         <para>
             Who is Mel? She may be an experienced C programmer, or has some
             working knowledge with Visual Basic, JavaScript or ASP. In any
@@ -156,31 +156,31 @@
             Bio-informatics engineer, hardware designer, QA engineer or
             whatever. She wishes to do something that seems awfully hard with
             what she already knows, asks around and receive a simple answer
-            “Perl would be perfect for it. And it is spelled P.E.R.L” 
+            “Perl would be perfect for it. And it is spelled P.E.R.L”
         </para>
         <para>
-            So Mel goes on looking for this strange and perfect language 
+            So Mel goes on looking for this strange and perfect language
             called “perl” (without the ‘a’). Where does she go first?
-            <link xlink:href="http://www.google.com/">Google</link>? Most probably. 
-            What does she discover? www.perl.com is the first hit. An 
+            <link xlink:href="http://www.google.com/">Google</link>? Most probably.
+            What does she discover? www.perl.com is the first hit. An
             overcrowded site with a lot of O’Reillyisms with several articles
             that are way over her head. Perl Mongers is the second hit. She
-            reads on - groups of Perl users - goodie. Now if she knows how to 
-            use E-mail (she may or may not have such a good net-wisdom), she 
-            may have hit the jackpot, because most Perl monger groups are very 
-            friendly to newbies. Then she discovers CPAN (Mel 
-            says: “What is it and why do I need it?”). ActiveState (a 
-            commercial site which may or may not scare her) and Use Perl, which 
-            is a nice site for Perl News, but she is naturally interested in 
+            reads on - groups of Perl users - goodie. Now if she knows how to
+            use E-mail (she may or may not have such a good net-wisdom), she
+            may have hit the jackpot, because most Perl monger groups are very
+            friendly to newbies. Then she discovers CPAN (Mel
+            says: “What is it and why do I need it?”). ActiveState (a
+            commercial site which may or may not scare her) and Use Perl, which
+            is a nice site for Perl News, but she is naturally interested in
             the Perl’s status quo.
         </para>
         <para>
             She refines her query: “learn perl”, “begin perl”, “perl newbie”
             or “perl beginners”. The concentrated site for perl beginners is
-            <link xlink:href="http://learn.perl.org/">learn.perl.org</link>. It 
+            <link xlink:href="http://learn.perl.org/">learn.perl.org</link>. It
             contains some reviews of books (which Mel may not have time to
-            read), a free online book (again, same issue) and no links to 
-            tutorials whatsoever. IMHO, the site’s visual side is also very 
+            read), a free online book (again, same issue) and no links to
+            tutorials whatsoever. IMHO, the site’s visual side is also very
             lacking and she may come to believe it is a sub-standard site as
             a result.
         </para>
@@ -197,7 +197,7 @@
     </section>
     <section xml:id="the_situation_today">
         <info><title>The Situation Today</title></info>
-        
+
         <para>
             When Larry Wall and others started hacking on Perl 5 (which was a
             complete rewrite and complete re-design of the defunct perl4), they
@@ -223,7 +223,7 @@
         <para>
             They are still often referred to as “scripting languages”, but this
             term can no longer accurately describe them. While a Java-obsessed
-            friend of mine asked me to give him an example for a proprietary 
+            friend of mine asked me to give him an example for a proprietary
             application of a large codebase that is written in Perl, and I
             could only think of open-source ones, it is definitely enterprise
             ready, and not a toy language for hackers anymore.
@@ -246,16 +246,16 @@
         </para>
         <section xml:id="concentration_of_effort">
             <info><title>Concentration of Effort and Elitism</title></info>
-            
+
             <para>
-                I did my best to help newbies welcome in Perl. I actually like 
+                I did my best to help newbies welcome in Perl. I actually like
                 beginners, and have a lot of patience to them, because I know
-                no one is born with an innate knowledge of Perl, UNIX or 
-                whatever. I often work in the Technion farms and whenever 
-                I overhear that someone has a problem my ears become pointed, 
-                and I cry “do you need help?” And then show him how to do 
-                something that for me may be perfectly obvious. Seriously. I 
-                simply enjoy doing that. 
+                no one is born with an innate knowledge of Perl, UNIX or
+                whatever. I often work in the Technion farms and whenever
+                I overhear that someone has a problem my ears become pointed,
+                and I cry “do you need help?” And then show him how to do
+                something that for me may be perfectly obvious. Seriously. I
+                simply enjoy doing that.
             </para>
             <para>
                 I also took some proactive effort in the direction. I wrote the
@@ -265,19 +265,19 @@
                 with absolute beginners in mind, and decided to teach a very
                 small subset of Perl step by step, with assumption that people
                 will read the man pages afterwards. (and be able to understand
-                them better then).                
+                them better then).
             </para>
             <para>
                 Lately, out of frustration with the learn.perl.org site, I started
-                working on <link xlink:href="http://perl-begin.org/">my 
+                working on <link xlink:href="http://perl-begin.org/">my
                     own version of a Perl beginners site</link>. Now here is where
                 things went a bit wrong in my opinion. However, I don’t want
-                to defame anyone so I’ll summarize. Both the 
-                <link xlink:href="http://use.perl.org/">use.perl.org</link>’s editor 
+                to defame anyone so I’ll summarize. Both the
+                <link xlink:href="http://use.perl.org/">use.perl.org</link>’s editor
                 and a very prominent Perl figure that stumbled upon the site,
                 believed that I should merge my work with learn.perl.org. At
-                first, I thought it was a good idea, but then discover I 
-                am unable to contact the learn.perl.org workers and that 
+                first, I thought it was a good idea, but then discover I
+                am unable to contact the learn.perl.org workers and that
                 their mailing lists was closed for subcription.
             </para>
             <para>
@@ -304,15 +304,15 @@
                 <orderedlist inheritnum="ignore" continuation="restarts">
                     <listitem>
                         <para>
-                        People are not going to read the title. In a user 
-                        interface, you are lucky if people read anything at 
-                        all. (including: “Delete and Expunge ‘My most 
+                        People are not going to read the title. In a user
+                        interface, you are lucky if people read anything at
+                        all. (including: “Delete and Expunge ‘My most
                         important work’?”)
                     </para>
                     </listitem>
                     <listitem>
                         <para>
-                        Newbies by nature will try #perl if they log into a 
+                        Newbies by nature will try #perl if they log into a
                         random IRC server. And they don’t want to get flamed
                         for being off-topic there.
                     </para>
@@ -321,7 +321,7 @@
             </para>
             <para>
                 In short, this is a bad UI design. If the Perl gurus so desire
-                not to be disturbed by newbie questions, they should move to 
+                not to be disturbed by newbie questions, they should move to
                 #perlgurus or #perlelite or #perlcafe or whatever. But they
                 should not make claim for #perl.
             </para>
@@ -331,7 +331,7 @@
                 pattern bot there). Some other time, I was kicked out of
                 #perlhelp, because I said the built-in function hex() converts
                 numbers from hexadecimal to decimal, while a moderator believed
-                it converts them <emphasis>to</emphasis> hexadecimal. 
+                it converts them <emphasis>to</emphasis> hexadecimal.
                 Naturally I was right (Run
                 perldoc -f hex), but still instead of arguing with me, he
                 kicked me out. Why should a bit of disinformation hurt if there
@@ -341,49 +341,49 @@
         </section>
         <section xml:id="lack_of_adequate_resources">
             <info><title>Lack of Adequate Online Resources</title></info>
-            
+
             <para>
                 Let’s face it: at the moment, there aren’t too many good Perl
                 tutorials online. Many people who ask trivial questions are
-                being conveyed something like “Read the Llama Book, the Camel 
-                Book, the Black Panther book, the Perl Cookbook, and then 
-                you’ll know how to convert a file to lowercase.” Maybe I’m 
+                being conveyed something like “Read the Llama Book, the Camel
+                Book, the Black Panther book, the Perl Cookbook, and then
+                you’ll know how to convert a file to lowercase.” Maybe I’m
                 exagerrating a little, but it seems people are so content with
-                the books that they don’t seem to think people who don’t want 
+                the books that they don’t seem to think people who don’t want
                 them, cannot afford to buy them, or don’t have time for them,
                 are worthy of learning Perl.
             </para>
             <para>
-                I don’t have anything against people trying to make money off 
-                Perl by selling books. But these people are the same people 
-                who are the Perl project leaders, and so are responsible to 
+                I don’t have anything against people trying to make money off
+                Perl by selling books. But these people are the same people
+                who are the Perl project leaders, and so are responsible to
                 make sure Perl is well-documented. If people get frustrated
                 learning Perl, and become unhappy with it, they will criticize
                 “Perl”. Not the Perl documentation. Not the Perl community.
                 Not even the Perl leaders. <emphasis>“Perl”</emphasis>.
                 If Larry Wall et al. care enough about Perl, they should make
-                sure it has good online documentation. They don’t have to do 
+                sure it has good online documentation. They don’t have to do
                 it themselves, as a simple call for action by a very prominent
-                Perl figure will do. (in accordance to Eric Raymond’s 
+                Perl figure will do. (in accordance to Eric Raymond’s
                 <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">“The Cathedral and the Bazaar”</link>)
             </para>
             <para>
-                If we take a look at Python or PHP for instance, then they 
-                have excellent online documentation, which is very useful for 
-                most if not all newbies. No need to read a book or take a 
+                If we take a look at Python or PHP for instance, then they
+                have excellent online documentation, which is very useful for
+                most if not all newbies. No need to read a book or take a
                 course. Just surf the Internet on your ADSL connection, install
-                a few things on your Windows machine, and presto! You know PHP 
-                or Python or Ruby. I seriously doubt if it can be done with 
+                a few things on your Windows machine, and presto! You know PHP
+                or Python or Ruby. I seriously doubt if it can be done with
                 Perl with the same ease.
             </para>
             <para>
-                I am grateful for Simon Cozens for making his 
+                I am grateful for Simon Cozens for making his
                 <emphasis>Beginning Perl</emphasis>
-                book online for free. I did not take a thorough look at the 
-                book, but it is more encompassing than anything I’ve seen. But 
-                even one book is not enough. People still want step by step 
-                tutorials and things they can cut and paste code out of and 
-                tinker it to do something. 
+                book online for free. I did not take a thorough look at the
+                book, but it is more encompassing than anything I’ve seen. But
+                even one book is not enough. People still want step by step
+                tutorials and things they can cut and paste code out of and
+                tinker it to do something.
             </para>
             <para>
                 When are books that cover a Technology something that I find
@@ -412,19 +412,19 @@
             </para>
             <section xml:id="lack_of_adequate_mailing_lists">
                 <info><title>Lack of Adequate Mailing Lists</title></info>
-                
+
             <para>
-                Then there are the mailing lists. I think (but am not sure) 
-                that most Perl Mongers mailing lists will gladly accept 
+                Then there are the mailing lists. I think (but am not sure)
+                that most Perl Mongers mailing lists will gladly accept
                 questions from newbies and answer them kindly. I know this is
-                the case for <link xlink:href="http://www.perl.org.il/">Israel.PM</link>. 
+                the case for <link xlink:href="http://www.perl.org.il/">Israel.PM</link>.
                 As a general rule
-                Perl Mongers should make sure that the newbies mailing list 
-                would be the first list they see on the site, or try to 
+                Perl Mongers should make sure that the newbies mailing list
+                would be the first list they see on the site, or try to
                 subscribe to. Again, good user-interface design.
             </para>
             <para>
-                The Perl Beginners list In my opinion is a bit useless. It is 
+                The Perl Beginners list In my opinion is a bit useless. It is
                 very high volume, and usually whenever one considers
                 replying to a question, it receives three replies by the time
                 he finished composing it. I was also subscribed and it was
@@ -451,14 +451,14 @@
         </section>
         <section xml:id="substandard_standard_doc">
             <info><title>Substandard Standard Documentation</title></info>
-            
+
             <para>
-                Let’s face it, the man pages (or perl*.pod), which are the 
-                definitive resource on the exact behaviour of Perl are very 
-                bad. Maybe they were OK for expert Perl 4 or Tcl hackers, or 
-                those that knew UNIX shells, sed and awk well. But nowadays 
-                we can expect people to come even without knowledge of the 
-                DOS or Windows command line, much less UNIX wizardry. 
+                Let’s face it, the man pages (or perl*.pod), which are the
+                definitive resource on the exact behaviour of Perl are very
+                bad. Maybe they were OK for expert Perl 4 or Tcl hackers, or
+                those that knew UNIX shells, sed and awk well. But nowadays
+                we can expect people to come even without knowledge of the
+                DOS or Windows command line, much less UNIX wizardry.
             </para>
             <para>
                 Perl is not and cannot be a “point-and-click-no-think”
@@ -468,23 +468,23 @@
                 needs to get a web-site or whatever working. Perl is much too
                 powerful, to be something like ASP, where you can write wizards
                 to perform most common tasks. In Perl, you can in one script,
-                write a full application. This is something that while perhaps 
+                write a full application. This is something that while perhaps
                 possible in ASP, it was not intended to do.
             </para>
             <para>
-                Still, the fear of writing code and thinking in terms of 
+                Still, the fear of writing code and thinking in terms of
                 variables, functions, objects, modules and other abstractions
-                is not something that for people above a certain age is easy 
+                is not something that for people above a certain age is easy
                 to overcome. Visual Basic for Applications is one of the things
                 I like most in Excel, but most people don’t know it, and most
-                books don’t teach it. Why? Because it involves actual coding 
+                books don’t teach it. Why? Because it involves actual coding
                 and people don’t like that. Ironically, it’s very useful, too.
             </para>
             <para>
                 Now, a documentation should guide a newbie step by step
-                and explains: what is a variable? what is a scalar? what is a 
-                number? what is a string? how they convert into each other? 
-                What is an array and what it is good for? Same for hash, 
+                and explains: what is a variable? what is a scalar? what is a
+                number? what is a string? how they convert into each other?
+                What is an array and what it is good for? Same for hash,
                 object, etc. All these things may have different semantics
                 in Perl than in most other languages. And all these things
                 need to be explained clearly and reasonably, without depending
@@ -506,10 +506,10 @@
         </section>
         <section xml:id="too_much_hubris">
             <info><title>Too Much Hubris</title></info>
-            
+
             <para>
                 Hubris is one of the three great virtues of the programmer
-                according to Larry Wall. But he <link xlink:href="http://www.oreilly.com/catalog/opensources/book/larry.html">also noted in 
+                according to Larry Wall. But he <link xlink:href="http://www.oreilly.com/catalog/opensources/book/larry.html">also noted in
                     “Open Sources”</link>
                 that humility was a good quality as well. Don’t get me wrong
                 some projects have much more hubris than Perl: Python and Linux
@@ -523,12 +523,12 @@
                 strucutres support. It is object-oriented, supports functional
                 programming and any other programming paradigm very well. It’s
                 perfect for almost any task, from powering web-sites to writing
-                GUI to writing games. It’s practically LISP with in-fix 
-                notation, and runs on almost any platform imaginable...” 
+                GUI to writing games. It’s practically LISP with in-fix
+                notation, and runs on almost any platform imaginable...”
             </para>
             <para>
                 You get the drift? Why I think it’s bad? Because most
-                people don’t like communities with this sales pitch. When 
+                people don’t like communities with this sales pitch. When
                 recommending Perl to someone, you should discuss one advantage
                 at a time, not overload him with a lot of information. When
                 people see a lot of information they think there’s something
@@ -536,10 +536,10 @@
             </para>
             <para>
                 Let’s take a look at a language with just the right amount of
-                hubris: Visual Basic. Right, a language that Microsoft has 
-                released several versions of, each adding major things, but 
-                is still inferior to perl 5.000. A language whose code can 
-                only be deployed on Windows. A language that is many times 
+                hubris: Visual Basic. Right, a language that Microsoft has
+                released several versions of, each adding major things, but
+                is still inferior to perl 5.000. A language whose code can
+                only be deployed on Windows. A language that is many times
                 useless without a whole slew of OCX or OLE components that
                 are freely available at best. Still, Microsoft and the other
                 VB community do not claim it’s the greatest language on earth.
@@ -553,21 +553,21 @@
     </section>
     <section xml:id="the_threat">
         <info><title>What’s the threat?</title></info>
-        
+
         <para>
             You can often hear opinions or wonderings in the vein of: will PHP
             kill Perl? Will Python kill Perl? Will Java kill Perl? Will FooLang
-            kill Perl? I don’t think anyone of them can hope to. I don’t think 
-            Perl will completely eliminate any of them either, but I think 
+            kill Perl? I don’t think anyone of them can hope to. I don’t think
+            Perl will completely eliminate any of them either, but I think
             Perl’s status is secured.
         </para>
         <para>
-            Perl is too syntactically and semantically rich a language to be 
+            Perl is too syntactically and semantically rich a language to be
             abandoned by all its loving users in such a haste. CPAN is also
             a big plus for Perl, which while being a purely technical mechanism
-            makes Perl more suitable for some tasks than most of its other 
-            competitors. I hope to see equivalents in other languages, but it 
-            will take some time and a lot of work from some very determined 
+            makes Perl more suitable for some tasks than most of its other
+            competitors. I hope to see equivalents in other languages, but it
+            will take some time and a lot of work from some very determined
             individuals to get it up.
         </para>
         <para>
@@ -576,8 +576,8 @@
             interesting Perl personalities. The Perl community is alive and
             kicking and proud of being such. While some people abandon it for
             Python, Ruby or whatever, most of them still think Perl is a nice
-            language, and don’t abandon it or completely or completely 
-            antagonize it. The beauty of the Perl culture is that it’s about 
+            language, and don’t abandon it or completely or completely
+            antagonize it. The beauty of the Perl culture is that it’s about
             using the right tool for the job whether in Perl or not.
         </para>
         <para>
@@ -596,15 +596,15 @@
             The problem is that Mel is not concerned with any of it. She just
             wants to write a program. This program may just as effectively be
             written with Python or Ruby or PHP. And we should be concerned with
-            her writing it in Perl, because otherwise, it will take her more 
+            her writing it in Perl, because otherwise, it will take her more
             time to get to learn Perl. As much as I care about the quality of
-            Perl programmers (which is actually quite good) I also think we 
-            should evangelize it to many people who’ll find it useful. 
+            Perl programmers (which is actually quite good) I also think we
+            should evangelize it to many people who’ll find it useful.
         </para>
         <para>
             Moreover, I don’t like Mel becoming one of those characters who say:
-            “Perl? This horrible language? I’m using PHP/Python/Ruby/Java. It’s 
-            much better than Perl.” I don’t think there’s a way to exactly 
+            “Perl? This horrible language? I’m using PHP/Python/Ruby/Java. It’s
+            much better than Perl.” I don’t think there’s a way to exactly
             measure which language is “better”. Some languages are better in
             some regards and for some purposes than others. But Perl is much
             more than a language. It’s a culture and a philosophy.
@@ -619,16 +619,16 @@
             secretary, to sort all the files into several directories a week
             from now, which can otherwise be done with a 10-liner Perl script.
             This will leave Robert enough time to answer phone calls and play
-            <link xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link> 
-            (which is written in Perl) in between: things that Perl or any 
+            <link xlink:href="http://www.frozen-bubble.org/">Frozen Bubble</link>
+            (which is written in Perl) in between: things that Perl or any
             other software cannot do for him.
         </para>
         <para>
-            Perl should be everywhere. Let’s not ruin the day for Mel, Joanna 
+            Perl should be everywhere. Let’s not ruin the day for Mel, Joanna
             or Robert by a bad attitude. Remember that at a time, we were not
             much more educated than them. Not even old time UNIX gurus like
-            Ken Thompson or Larry Wall can claim that, because UNIX and Perl 
-            developed based on input by many people and everyone was always 
+            Ken Thompson or Larry Wall can claim that, because UNIX and Perl
+            developed based on input by many people and everyone was always
             surprised by new developments. While the effort was concentrated,
             the ideas flowed from everywhere.
         </para>
@@ -656,7 +656,7 @@
     </section>
     <section xml:id="what_should_be_done">
         <info><title>What we should do about it?</title></info>
-        
+
         <para>
             Until now it has been a long rant with some sprinkled advice in
             between. Now let’s get to the real action. Here is what I think
@@ -664,9 +664,9 @@
         </para>
         <section xml:id="what_should_establish_something">
             <info><title>Independant Activitity</title></info>
-            
+
             <para>
-                Establish your own Perl beginners site/portal/mailing 
+                Establish your own Perl beginners site/portal/mailing
                 list/web forum/etc. learn.perl.org is not enough and
                 neither is what I’m going to do. We need more and as
                 many as possible.
@@ -681,33 +681,33 @@
         </section>
         <section xml:id="what_should_perl_guru">
             <info><title>Become your biggest Perl Guru</title></info>
-            
+
             <para>
-                Remember that the biggest Perl guru is 
+                Remember that the biggest Perl guru is
                 <emphasis>you</emphasis>. Not Larry Wall or Tom
-                Christiansen or Damian Conway or whoever. That’s 
+                Christiansen or Damian Conway or whoever. That’s
                 because none of them can dictate to you how to work
-                with Perl, solve problems with it or with something 
+                with Perl, solve problems with it or with something
                 else, etc. As much as I appreciate their efforts at
-                making Perl better and more usable, I don’t think 
-                they have or should have a monopoly on where Perl is 
+                making Perl better and more usable, I don’t think
+                they have or should have a monopoly on where Perl is
                 going to. The world is your oyster.
             </para>
         </section>
         <section xml:id="what_should_help_newbies">
             <info><title>Treat Beginners Nicely and Help Them</title></info>
-            
+
             <para>
-                Be kind to newbies, answer them accurately, don’t 
+                Be kind to newbies, answer them accurately, don’t
                 confuse them and try to use Perl that is as simple
-                and non-idiomatic as possible (e.g: for the file’s 
+                and non-idiomatic as possible (e.g: for the file’s
                 lowercasing example, don’t use Tie::File, and prefer
                 lc() over tr///).
             </para>
             <para>
                 If you don’t have the time to write the entire code
                 for the beginner - politely tell him you can’t
-                help him at this point or whenever. Else, try to 
+                help him at this point or whenever. Else, try to
                 actually write some code which would be as clear
                 and commented as possible. Don’t expect beginners
                 to like Perl Golf snippets. They may mistake them
@@ -716,53 +716,53 @@
             </section>
             <section xml:id="what_should_ui_design">
                 <info><title>Think about Usability Issues</title></info>
-                
+
                     <para>
-                        Think about the User-Interface Design of the System. 
+                        Think about the User-Interface Design of the System.
                         What will the user assume? What would be the first
                         thing he’ll do? What is he going to notice? What
                         is he going to ignore? What is he going to do
                         mechanically? These are all questions that
-                        are as pertinent to IRC networks, programming 
+                        are as pertinent to IRC networks, programming
                         languages or web-sites as they are to Microsoft Word.
                     </para>
                     <para>
                         I gave the IRC channels examples of bad UI design. OK,
-                        gurus, once upon a time there weren’t too many newbies 
+                        gurus, once upon a time there weren’t too many newbies
                         around. But if you don’t want to completely reject them,
                         it is a better idea to move to a different channel.
                     </para>
                     <para>
-                        I believe the Perl Monks site also suffers from such a 
-                        lacking design. First of all - its name. Do you 
+                        I believe the Perl Monks site also suffers from such a
+                        lacking design. First of all - its name. Do you
                         honestly expect someone to be a Perl “monk” and live
-                        in a Perl “monastry”? (I’m Jewish, an Atheist, and 
+                        in a Perl “monastry”? (I’m Jewish, an Atheist, and
                         very sexually liberated for God’s sake!) Secondly,
-                        the site’s design is unattrative, overcrowded and 
-                        confusing. I remember I was reluctant from 
+                        the site’s design is unattrative, overcrowded and
+                        confusing. I remember I was reluctant from
                         participating there, and had troubles understaning
                         what it was all about.
                     </para>
                     <para>
-                        Web forums should involve no registration whatsoever 
-                        (just fill in the name and E-mail), and not use too 
-                        fancy a markup syntax, at least not by default. I 
-                        actually saw a forum (not particularily Perl-related) 
-                        where markups were placed in brackets, and I wanted to 
-                        paste some Haskell code... I could not understand how 
+                        Web forums should involve no registration whatsoever
+                        (just fill in the name and E-mail), and not use too
+                        fancy a markup syntax, at least not by default. I
+                        actually saw a forum (not particularily Perl-related)
+                        where markups were placed in brackets, and I wanted to
+                        paste some Haskell code... I could not understand how
                         to do it, no matter what I tried .
                     </para>
                 </section>
 
                 <section xml:id="what_should_create_resources">
                     <info><title>Create Archives of Perl Code and Documentation</title></info>
-                        
+
 
                     <para>
-                        Publish some of your Perl code online. Establish a 
+                        Publish some of your Perl code online. Establish a
                         Wiki. Don’t ask anybody for permission - just do it.
-                        There will be chaos first, but order will emerge out 
-                        of it eventually. And if not, Google and friends will 
+                        There will be chaos first, but order will emerge out
+                        of it eventually. And if not, Google and friends will
                         like us better. ;-)
                     </para>
                     <para>
@@ -780,50 +780,50 @@
                 </section>
                 <section xml:id="what_should_charge_money_say_no">
                     <info><title>Don’t be afraid to charge money or say no</title></info>
-                    
+
                     <para>
                         Let’s suppose that despite all the positive changes and
                         having a book nearby, Mel feels she needs a face to face
                         guidance. She asks around her workplace, and discovers
                         a fellow worker, by the name of Rachel Southern (
-                        actually a character in a story I’m writing who fits 
+                        actually a character in a story I’m writing who fits
                         perfectly here) is a first-class perl guru. Rachel has
                         been programming since she was 14, knows UNIX, Perl
-                        and many other languages well, and is a very nice, 
+                        and many other languages well, and is a very nice,
                         sociable person. So Mel asks Rachel if she can tutor
                         her in Perl.
                     </para>
                     <para>
                         Rachel, however, being the expert that she is, is busy
                         with work, and prefers to spend her weekends relaxing,
-                        socializing (online and in real life), and hacking on 
+                        socializing (online and in real life), and hacking on
                         open-source projects. Moreover, she lives very far
-                        from Mel’s apartment. So she tells Mel that if she 
-                        wishes to go to Mel’s apartment on a Saturday or a 
+                        from Mel’s apartment. So she tells Mel that if she
+                        wishes to go to Mel’s apartment on a Saturday or a
                         Sunday, and tutor her with Perl (or UNIX in general),
                         Mel would have to pay her a substantial amount of money
-                        per hour. Mel accepts, as she realizes the help she’ll 
+                        per hour. Mel accepts, as she realizes the help she’ll
                         get out of Rachel, will help her in her work, which in
                         turn will be very well worth the money.
                     </para>
                     <para>
-                        Was Rachel “greedy” or “unfriendly” in asking for 
+                        Was Rachel “greedy” or “unfriendly” in asking for
                         money? No. I was told a technician in Israel
-                        charges $50 an hour. Many lawyers and other 
-                        professionals will charge much 
-                        more. The time of compotent persons is 
-                        the most precious resource on our planet (except 
+                        charges $50 an hour. Many lawyers and other
+                        professionals will charge much
+                        more. The time of compotent persons is
+                        the most precious resource on our planet (except
                         perhaps for human rationality), and Rachel has no
                         selfish interest to spend so much time helping Melissa.
                     </para>
                     <para>
                         I was criticizing the fact that books costed money and
                         were not available online only because the reproduction
-                        of books in Electronic form is zero. But a time a 
+                        of books in Electronic form is zero. But a time a
                         person spends helping another one is priceless. Now,
                         if Mel lived in the same block as Rachel, or otherwise
-                        they were very good friends, then Rachel could have 
-                        chosen to reject the payment. (My friend and I lost 
+                        they were very good friends, then Rachel could have
+                        chosen to reject the payment. (My friend and I lost
                         track of how even we are regarding the pizzas we ate
                         and we could not care less about this fact).
                     </para>
@@ -843,14 +843,14 @@
                         “Advocacy is everything I do”.
                     </para>
                     <para>
-                        Most of us, however, are trying to make the best use 
-                        of our time, including getting the bills payed or 
+                        Most of us, however, are trying to make the best use
+                        of our time, including getting the bills payed or
                         contributing to free software. As such, our time is
                         precious enough so a substantial amount of it that is
-                        used to help a less capable peer will cost money. It 
-                        does not mean that spending some time for writing a 
-                        straightforward ten-liner for someone should, though. 
-                        (in that case, there’s usually no way to acquire the 
+                        used to help a less capable peer will cost money. It
+                        does not mean that spending some time for writing a
+                        straightforward ten-liner for someone should, though.
+                        (in that case, there’s usually no way to acquire the
                         money in the first place)
                     </para>
                     <para>
@@ -861,96 +861,96 @@
                         I told him I did not want to convert it, as I had
                         no selfish interest in getting it ported. I suggested
                         him to learn Perl and do the porting himself. He
-                        understood. I’m not sure the bot was ever ported, but 
+                        understood. I’m not sure the bot was ever ported, but
                         the Gods help only those that help themselves.
                     </para>
 
                 </section>
                 <section xml:id="what_should_revamp_of_existing">
                     <info><title>Revamp of the existing resources</title></info>
-                    
+
                     <para>
                         Like I noted earlier, I believe many of the existing
                         resources, while being perfectly fine for veterans
                         may scare away newbies. www.perl.com is crowded with
-                        too many links, too much content, and too much 
+                        too many links, too much content, and too much
                         oreillynetism. Since it is the first hit on Google, it
                         should be a decent page where newbies can easily find
-                        their way in. Something like 
-                        <link xlink:href="http://www.python.org/">the Python 
-                            Homepage</link> or 
+                        their way in. Something like
+                        <link xlink:href="http://www.python.org/">the Python
+                            Homepage</link> or
                         <link xlink:href="http://www.php.net/">PHP’s</link>. Plain,
                         simple and effective. (note that I don’t have a problem
-                        with the O’Reilly Net format as a general rule, it’s 
+                        with the O’Reilly Net format as a general rule, it’s
                         just not suitable for newbies who may have never heard
                         of O’Reilly or do not have the time to put up with it.)
-                        The Python.org site, for instance, contains just the 
+                        The Python.org site, for instance, contains just the
                         right links for a newbies and nothing more. It has
-                        a rather cheesy site, but it is much more usable than 
-                        www.perl.com. The latter has links to a host of 
+                        a rather cheesy site, but it is much more usable than
+                        www.perl.com. The latter has links to a host of
                         other O’Reilly sites (what for), some articles that are
                         way over Melissa’s head, no explanation of what Perl is
-                        all about, links to many O’Reilly books (again: why?), 
+                        all about, links to many O’Reilly books (again: why?),
                         and is generally overcrowded with information. This is
-                        not a community site. It is practically a blunt 
+                        not a community site. It is practically a blunt
                         promotion of everything O’Reilly!
                     </para>
                     <para>
-                        www.perl.com as it is can be renamed as 
+                        www.perl.com as it is can be renamed as
                         perl.oreilly.com or whatever. But otherwise, O’Reilly
                         should not make a claim for the homesite of the Perl
                         language and Perl community as they are not the only
                         player in the game.
                     </para>
                     <para>
-                        Also, I kindly ask the authors and publishers of the 
+                        Also, I kindly ask the authors and publishers of the
                         core Perl books to place them online. If a
                         book teaches you advanced things that you can learn on
-                        your own, that do not absolutely require a book (like 
+                        your own, that do not absolutely require a book (like
                         Damian Conway’s “Object Oriented Perl”), then putting
-                        it online would not be necessary, but still a nice 
-                        gesture. However, it cannot be said on <emphasis>Programming 
-                            Perl </emphasis>(the Camel Book), 
-                        <emphasis>Learning Perl</emphasis> (the 
+                        it online would not be necessary, but still a nice
+                        gesture. However, it cannot be said on <emphasis>Programming
+                            Perl </emphasis>(the Camel Book),
+                        <emphasis>Learning Perl</emphasis> (the
                         Llama Book), the <emphasis>Perl Cookbook</emphasis>,
-                        or <emphasis>Advanced Perl.</emphasis> 
-                        I could not care less however, for <emphasis>Perl for 
-                            Oracle DBAs</emphasis>, because it’s highly 
-                        specialized and of no 
+                        or <emphasis>Advanced Perl.</emphasis>
+                        I could not care less however, for <emphasis>Perl for
+                            Oracle DBAs</emphasis>, because it’s highly
+                        specialized and of no
                         interest to Melissa or Robert. Rachel can easily learn
-                        it on her own should the need arise, and Joanna’s 
-                        knowledge of Perl should not extend to this 
+                        it on her own should the need arise, and Joanna’s
+                        knowledge of Perl should not extend to this
                         speciality.
                     </para>
                     <para>
-                        There are other popular sites or resources, that 
+                        There are other popular sites or resources, that
                         may seem quite hostile to newbies. Perl Monks is one.
-                        use.perl.org should actually be quite good. Its 
-                        standard Slashdot-like seemingly-underground look can 
+                        use.perl.org should actually be quite good. Its
+                        standard Slashdot-like seemingly-underground look can
                         actually appeal to newbies who wish to keep up to date
-                        with Perl news. What the editors should do is answer 
+                        with Perl news. What the editors should do is answer
                         newbie submissions themselves should there be such,
                         and <emphasis>only then</emphasis> tell them that it’s
-                        the wrong place to ask. Remember, people don’t read 
-                        Submission Guidelines or whatever, and even I act 
+                        the wrong place to ask. Remember, people don’t read
+                        Submission Guidelines or whatever, and even I act
                         mechanically on many web-sites. (don’t you?)
                     </para>
                     <para>
                         Generally, if one of the new resources would be better
-                        than the existing ones, then it would eventually 
-                        supercede it. Yahoo and AltaVista were superceded to 
-                        most extents by the much superior and more 
-                        user and community friendly Google and Mozilla 
-                        Directory, and we should not fear a healthy 
-                        competition either. We should not concentrate our 
-                        efforts, because we will also reduce the number of 
-                        people doing them in the first place. And as Eric 
-                        Raymond noted in <emphasis>The Cathedral and the Bazaar</emphasis>, in a 
-                        distributed Bazaar model, the output grows linearily 
+                        than the existing ones, then it would eventually
+                        supercede it. Yahoo and AltaVista were superceded to
+                        most extents by the much superior and more
+                        user and community friendly Google and Mozilla
+                        Directory, and we should not fear a healthy
+                        competition either. We should not concentrate our
+                        efforts, because we will also reduce the number of
+                        people doing them in the first place. And as Eric
+                        Raymond noted in <emphasis>The Cathedral and the Bazaar</emphasis>, in a
+                        distributed Bazaar model, the output grows linearily
                         to the number of people involved.
                     </para>
                     <para>
-                        While the Perl’s source code was maintained in a very 
+                        While the Perl’s source code was maintained in a very
                         much Bazaar-like way, the Perl Community has been
                         relatively Cathedral like looking for a selected small
                         number of shrines. Let’s change that.
@@ -959,19 +959,19 @@
             </section>
             <section xml:id="conclusion">
                 <info><title>Conclusion</title></info>
-                
+
                 <para>
-                    Perl is going strong and will continue to grow in the 
+                    Perl is going strong and will continue to grow in the
                     nearby future. However, many beginners are deterred from
                     becoming part of the Perl world, or understanding it,
                     out of several defects in the online Perl community and
                     resources.
                 </para>
                 <para>
-                    Perl proves to be a gateway to UNIX for many people. Many 
-                    people who start to use a UNIX-compatible system (like 
+                    Perl proves to be a gateway to UNIX for many people. Many
+                    people who start to use a UNIX-compatible system (like
                     Linux or Solaris) write their shell-scripts in Perl, and
-                    later on actually learn shell programming. Many Windows 
+                    later on actually learn shell programming. Many Windows
                     people who used Perl for Win32, find the UNIX concept much
                     more desirable afterwards. Perl is a reflection of UNIX in
                     all so many ways, and I’d hate for someone to get scared
@@ -979,8 +979,8 @@
                 </para>
                 <para>
                     You often hear people complaining at Perl’s briefness,
-                    TIMTOWDIness, difficulty to learn, “inconsistency”, 
-                    “ugly syntax”, complexity, in-fix notation, size, dollar 
+                    TIMTOWDIness, difficulty to learn, “inconsistency”,
+                    “ugly syntax”, complexity, in-fix notation, size, dollar
                     signs,
                     insuitability for large codebases, etc. All these “issues”
                     are very much marginal if not completely false in getting
@@ -990,12 +990,12 @@
                     issues as choice of programming language.
                 </para>
                 <para>
-                    However, what can deter someone from learning Perl is 
+                    However, what can deter someone from learning Perl is
                     a lack of good support and aid from an online community,
                     which may be the only connection he has to this virtual
                     world called “Perl”. Let’s change it. Let’s make sure
                     Melissa will be practically sucked into the Perl world,
-                    as any community happy to receive a shining, new, 
+                    as any community happy to receive a shining, new,
                     interesting member.
                 </para>
             </section>

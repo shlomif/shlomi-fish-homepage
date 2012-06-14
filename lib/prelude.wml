@@ -1,9 +1,9 @@
 # This file should be the first thing to be included by template.wml
 # or a page that tries to over-ride stuff here. By itself it does not render
 # anything, and that is delegated to the "driver.wml".
-# 
-# After including this file and before including "driver.wml", one can 
-# over-ride stuff that driver.wml will later use. 
+#
+# After including this file and before including "driver.wml", one can
+# over-ride stuff that driver.wml will later use.
 
 <define-tag body endtag="required">
 <body*{#BODY_PARAMS#}>

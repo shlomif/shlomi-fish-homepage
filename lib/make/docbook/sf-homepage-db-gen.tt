@@ -17,10 +17,10 @@ QUADPRES_EXE = quadp
 $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% END %]
 
-[% db_macro_prefix %]_DOCS = [% FOREACH d = docs %][% d.base %] [% END %]
+[% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
 
 [% FOREACH fmt = fmts %]
-[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S = [% FOREACH d = docs %]$(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %] [% END %]
+[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %][% END %]
 
 [% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
 
@@ -56,6 +56,7 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 [% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
 [% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml-1_1 $< \
 [% "\t" %]&& touch $@
+[% "\t" %]perl -lpi -e 's/[ \t]+\z//' $$(ls $@/* | grep -P '\.x?html$$')
 
 [% END %]
 
@@ -90,7 +91,7 @@ $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix
 [% END %]
 
 [% pres_targets.push(l) %]
-	
+
 $([% v %]_DEST_INDEX): $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml
 [%- INCLUDE cmd %]
 

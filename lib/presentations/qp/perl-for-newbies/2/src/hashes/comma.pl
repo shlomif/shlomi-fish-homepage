@@ -4,7 +4,7 @@
     "guy" => "keren"
     );
 
-%hash2 = (    
+%hash2 = (
     "george" => "washington",
     "jules" => "verne",
     "isaac" => "newton"

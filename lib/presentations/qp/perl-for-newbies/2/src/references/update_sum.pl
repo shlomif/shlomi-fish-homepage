@@ -8,7 +8,7 @@ sub update_sum
     my $ref_to_sum = shift;
     foreach my $item (@_)
     {
-        # The ${ ... } dereferences the variable 
+        # The ${ ... } dereferences the variable
         ${$ref_to_sum} += $item;
     }
 }

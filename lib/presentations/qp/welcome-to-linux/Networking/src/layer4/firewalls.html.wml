@@ -2,7 +2,7 @@
 
 <points>
 <li>
-The transport layer is the main layer for firewalls to operate in. 
+The transport layer is the main layer for firewalls to operate in.
 </li>
 <li>The main function
 of firewalls is to filter the packets transferred on the network, so
@@ -14,14 +14,14 @@ There are two types of firewalls: stateful and stateless.
 <li>
 The Linux
 Kernel has a built-in stateful firewall module, called "iptables"
-or "netfilter". 
+or "netfilter".
 </li>
 <li>More details about configuring firewall
-in Linux can be found here: 
+in Linux can be found here:
 <a href="http://www.netfilter.org/documentation/index.html#HOWTO">http://www.netfilter.org/documentation/index.html#HOWTO</a>
 </li>
 <li>
-Eli Billauer has given <a href="http://www.haifux.org/lectures/70/">a lecture 
+Eli Billauer has given <a href="http://www.haifux.org/lectures/70/">a lecture
 about iptables</a>.
 </li>
 </points>

@@ -2,21 +2,21 @@
 
 <p>
 When the user places a breakpoint on a certain line in a program, they
-insruct the debugger to stop the execution of the program when this line is 
+insruct the debugger to stop the execution of the program when this line is
 reached. Then, one can cause the program to run freely using the continue
 command, and have it stop only at this line.
 </p>
 
 <p>
-Breakpoints generally save a lot of stepping. To set a breakpoint type 
+Breakpoints generally save a lot of stepping. To set a breakpoint type
 <tt>b $line_number</tt> or <tt>b $function_name</tt> where $line_number is the
 line number and $function_name is the function name. A breakpoint on a function
 will stop the execution of the program as soon as the function is entered.
 </p>
 
 <p>
-To continue the execution of the program until a breakpoint is reached (or 
-until the program terminates) type <tt>c</tt>. Here is an example session with 
+To continue the execution of the program until a breakpoint is reached (or
+until the program terminates) type <tt>c</tt>. Here is an example session with
 the same program:
 </p>
 
@@ -33,13 +33,13 @@ main::(add_cr.pl:5):	my ($contents);
   DB&lt;1&gt; b 11
   DB&lt;2&gt; c
 main::(add_cr.pl:11):	    open my $in, "&lt;", $file;
-  DB&lt;2&gt; 
+  DB&lt;2&gt;
 </quadpres_code_block>
 
 <p>
-One can set a conditional breakpoint by typing 
+One can set a conditional breakpoint by typing
 <tt>b [line] [perl expression]</tt>. A conditional expression is one
-that stops the execution of the program only if the perl expression 
+that stops the execution of the program only if the perl expression
 evaluates to true. The perl expression can be as complex as you like
 and may include whitespace.
 </p>

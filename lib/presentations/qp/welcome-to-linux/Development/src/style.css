@@ -24,16 +24,16 @@ ul.point { font-size : large }
 ol.point { font-size : large }
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
-table.border1 
+table.border1
 {
-    border-style: solid; 
-    border-width: 1px; 
+    border-style: solid;
+    border-width: 1px;
     border-color: #eeeeee gray gray #eeeeee;
 }
-table.border1 > tbody > tr > th, table.border1 > tbody > tr > td 
+table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
 {
-    border-style: solid; 
-    border-width: 1px; 
+    border-style: solid;
+    border-width: 1px;
     border-color: gray #eeeeee #eeeeee gray;
 }
 table.info, table.info td
@@ -58,16 +58,16 @@ table.info td
 .PreProc { color: #a020f0; }
 .Type { color: #2e8b57; font-weight: bold; }
 table.gdb
-{ 
+{
     border-width : thin;
     border-color : black;
     border-style : solid;
 }
-.gdb td 
-{ 
-    vertical-align : top ; 
-    border-width : thin ; 
-    border-color : black ; 
+.gdb td
+{
+    vertical-align : top ;
+    border-width : thin ;
+    border-color : black ;
     border-style : solid;
     padding: 2pt 4pt 2pt 4pt;
 }

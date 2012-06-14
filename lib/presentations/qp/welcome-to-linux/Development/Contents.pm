@@ -96,7 +96,7 @@ my $contents =
                     'title' => "More Valgrind",
                 },
             ],
-        },        
+        },
         {
             'url' => "IDEs",
             'title' => "Integrated Development Environments",

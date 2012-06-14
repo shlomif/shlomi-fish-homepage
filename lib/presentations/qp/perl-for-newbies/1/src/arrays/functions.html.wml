@@ -12,8 +12,8 @@ end of an array variable. The syntax is <tt>push @array_to_append_to, @array_to_
 </quadpres_code_block>
 
 <p>
-Notice that <tt>push</tt> is equivalent to typing 
-<tt>@array = (@array, $extra_elem)</tt>, but it is recommended 
+Notice that <tt>push</tt> is equivalent to typing
+<tt>@array = (@array, $extra_elem)</tt>, but it is recommended
 to use it, because it minimises error and it executes faster.
 </p>
 
@@ -32,7 +32,7 @@ short example to demonstrate it:
 
 <p>
 <tt>shift</tt> extracts the <b>first</b> element of an array and returns it. The
-array will be changed to contain only the elements that were present there 
+array will be changed to contain only the elements that were present there
 previously, with the 1 to <tt>scalar(@array)-1</tt> indexes.
 </p>
 
@@ -47,7 +47,7 @@ Here's the above example, while using <tt>shift</tt> instead of <tt>pop</tt>:
 <h2>join</h2>
 
 <p>
-The syntax is <tt>join($separator, @array)</tt> and what it does is 
+The syntax is <tt>join($separator, @array)</tt> and what it does is
 concatenates the elements of <tt>@array</tt> while putting <tt>$seperator</tt> in
 between. Here's an example:
 </p>
@@ -70,8 +70,8 @@ of the array passed to it as argument in reverse. Here's an example:
 
 
 <p>
-Note that by typing <tt>scalar(reverse($scalar))</tt> you get the string that 
-contains the characters of <tt>$scalar</tt> in reverse. 
+Note that by typing <tt>scalar(reverse($scalar))</tt> you get the string that
+contains the characters of <tt>$scalar</tt> in reverse.
 <tt>scalar(reverse(@array))</tt> concatenates the array into one string and then
 reverses its characters.
 </p>

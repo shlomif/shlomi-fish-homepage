@@ -14,11 +14,11 @@ sub mysplit
 
         return;
     }
-        
+
     for(my $a=0;$a<=$total;$a++)
     {
         @new_accum = (@accum, $a);
-        mysplit($total-$a, $num_elems-1, @new_accum);        
+        mysplit($total-$a, $num_elems-1, @new_accum);
     }
 }
 

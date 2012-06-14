@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-Arrays are a sequence of variables, whose members can be retrieved and 
+Arrays are a sequence of variables, whose members can be retrieved and
 assigned to by using their indices. An index passed to an array may well be,
 and usually is, another variable.
 </p>
@@ -13,7 +13,7 @@ value can be retrieved, with the same notation.
 </p>
 
 <p>
-Array indices are whole numbers and the first index is 0. As in the 
+Array indices are whole numbers and the first index is 0. As in the
 length of a string, the number of elements in an array is bounded only by
 the amount of available memory the computer has.
 </p>
@@ -29,7 +29,7 @@ The following program prints the primes up to 200:
 <p>
 The notation <tt>scalar(@myarray)</tt> can be used to refer to the number
 of elements in an array. This number is equal to the maximal index which
-was assigned in the array plus one. You will also see the notation 
+was assigned in the array plus one. You will also see the notation
 <tt>$#myarray</tt> which is equal to the maximal index itself (or -1 if the
 array is empty).
 </p>

@@ -3,23 +3,23 @@
 <p>
 By now you are probably wondering how perl can be used to interact with
 the external world, and this is where <b>File Input/Output</b> enters the
-frame. 
+frame.
 </p>
 
 <p>
 In Perl, file I/O is handled by using sessions: you are opening a file for
-reading or writing (or both), do with it what you want, and then close it. 
-In Perl, filehandles implemented as the so-called <tt>globs</tt> are placed on 
-a separate namespace than that of the  variables. It is generally marked with 
-a starting asterik (<tt>*</tt>), which can be omitted if the first letter is a 
+reading or writing (or both), do with it what you want, and then close it.
+In Perl, filehandles implemented as the so-called <tt>globs</tt> are placed on
+a separate namespace than that of the  variables. It is generally marked with
+a starting asterik (<tt>*</tt>), which can be omitted if the first letter is a
 capital one.
 </p>
 
 <p>
-To open a file use the <tt>open my $my_file_handle, $mode, $file_path;</tt> 
-notation, and to close a file use the <tt>close($my_file_handle);</tt> 
-notation. The <tt>$mode</tt> determines whether the file will be 
-open for reading, writing, appending or some of them. The following table 
+To open a file use the <tt>open my $my_file_handle, $mode, $file_path;</tt>
+notation, and to close a file use the <tt>close($my_file_handle);</tt>
+notation. The <tt>$mode</tt> determines whether the file will be
+open for reading, writing, appending or some of them. The following table
 should give  you a quick reference:
 </p>
 
@@ -71,7 +71,7 @@ Read-write, or just write without truncating.
 <p>
 <tt>$file_path</tt> is the pathname of the file to open relative
 to the script current working directory (<b>CWD</b>). For instance, the
-command <tt>open I, "&lt;", "../hello.txt";</tt> opens the file "hello.txt" 
+command <tt>open I, "&lt;", "../hello.txt";</tt> opens the file "hello.txt"
 found a directory above the current directory for reading.
 </p>
 

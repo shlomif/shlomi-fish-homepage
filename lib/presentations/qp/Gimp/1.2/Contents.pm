@@ -36,7 +36,7 @@ my $contents =
                     'title' => "Colour Modes",
                 },
                 {
-                    'url' => "8bit.html",                    
+                    'url' => "8bit.html",
                     'title' => "8 bits per colour value",
                 },
                 {
@@ -319,7 +319,7 @@ my $contents =
                 {
                     'url' => "pdb.html",
                     'title' => "The Procedural Database",
-                },   
+                },
                 {
                     'url' => "script-fu",
                     'title' => "Script-Fu Scripting",
@@ -332,7 +332,7 @@ my $contents =
                         {
                             'url' => "generating_logo.html",
                             'title' => "Generating a Logo",
-                        },                           
+                        },
                     ],
                 },
                 {
@@ -361,8 +361,8 @@ my $contents =
             ],
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
     ],
 };

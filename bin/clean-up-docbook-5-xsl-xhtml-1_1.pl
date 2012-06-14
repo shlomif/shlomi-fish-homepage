@@ -52,6 +52,7 @@ sub _slurp
     # Fixed in Perl 6...
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;
 
+    $s =~ s/[ \t]+$//gms;
     open my $out, ">", $out_fn;
     binmode $out, ":utf8";
     print {$out} $s;

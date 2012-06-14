@@ -15,7 +15,7 @@ my @documents =
         id => "case-for-drug-legalisation",
         path => "philosophy/politics/drug-legalisation",
         base => "case-for-drug-legalisation",
-    },    
+    },
     {
         id => "case-for-drug-legalisation-rev2",
         path => "philosophy/politics/drug-legalisation",
@@ -34,15 +34,15 @@ my @documents =
         base => "case-for-file-swapping-rev3",
     },
     {
-        id => "dealing-with-hypomanias", 
-        path => "philosophy/psychology/hypomanias/", 
+        id => "dealing-with-hypomanias",
+        path => "philosophy/psychology/hypomanias/",
         base => "dealing-with-hypomanias",
         work_in_progress => 1,
         db_ver => 5,
     },
     {
-        id => "end-of-it-slavery", 
-        path => "philosophy/computers/software-management/end-of-it-slavery", 
+        id => "end-of-it-slavery",
+        path => "philosophy/computers/software-management/end-of-it-slavery",
         base => "end-of-it-slavery",
     },
     {
@@ -50,19 +50,19 @@ my @documents =
         path => "philosophy/foss-other-beasts/revision-2",
         base => "foss-and-other-beasts",
     },
-    
+
     {
-        id => "introductory-language", 
-        path => "philosophy/computers/education/introductory-language", 
+        id => "introductory-language",
+        path => "philosophy/computers/education/introductory-language",
         base => "introductory-language",
     },
-    
+
     {
-        id => "isr-pales-conflict-solution", 
-        path => "philosophy/israel-pales", 
+        id => "isr-pales-conflict-solution",
+        path => "philosophy/israel-pales",
         base => "isr-pales-conflict-solution",
     },
-    
+
     {
         id => "objectivism-and-open-source",
         path => "philosophy/obj-oss",
@@ -75,62 +75,62 @@ my @documents =
         base => "objectivism-and-open-source",
         db_ver => 5,
     },
- 
+
     {
         id => "rindolf-spec",
         path => "rindolf",
         base => "rindolf-spec",
     },
-    
+
     {
         id => "the-eternal-jew",
         path => "philosophy/the-eternal-jew",
         base => "the-eternal-jew",
     },
-    
+
     {
-        id => "what-makes-software-high-quality", 
-        path => "philosophy/computers/high-quality-software", 
+        id => "what-makes-software-high-quality",
+        path => "philosophy/computers/high-quality-software",
         base => "what-makes-software-high-quality",
     },
-    
+
     {
-        id => "what-makes-software-high-quality-rev2", 
-        path => "philosophy/computers/high-quality-software/rev2", 
+        id => "what-makes-software-high-quality-rev2",
+        path => "philosophy/computers/high-quality-software/rev2",
         base => "what-makes-software-high-quality-rev2",
     },
     {
-        id => "perfect-it-workplace", 
-        path => "philosophy/computers/software-management/perfect-workplace", 
+        id => "perfect-it-workplace",
+        path => "philosophy/computers/software-management/perfect-workplace",
         base => "perfect-it-workplace",
     },
     {
-        id => "Spark-Pre-Birth-of-a-Modern-Lisp", 
-        path => "open-source/projects/Spark/mission", 
+        id => "Spark-Pre-Birth-of-a-Modern-Lisp",
+        path => "open-source/projects/Spark/mission",
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",
     },
     {
-        id => "human-hacking-field-guide", 
+        id => "human-hacking-field-guide",
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide",
         custom_css => 1,
-    },   
+    },
     {
-        id => "human-hacking-field-guide-v2-arabic", 
+        id => "human-hacking-field-guide-v2-arabic",
         path =>  "humour/human-hacking/arabic-v2",
         base => "human-hacking-field-guide-v2-arabic",
-    },   
+    },
     {
-        id => "perfect-it-workplace-v2", 
+        id => "perfect-it-workplace-v2",
         path =>  "philosophy/computers/software-management/perfect-workplace/v2",
         base => "perfect-it-workplace-v2",
         db_ver => 5,
         work_in_progress => 1,
     },
-    
+
     {
-        id => "foss-licences-wars", 
-        path => "philosophy/computers/open-source/foss-licences-wars", 
+        id => "foss-licences-wars",
+        path => "philosophy/computers/open-source/foss-licences-wars",
         base => "foss-licences-wars",
     },
 
@@ -142,7 +142,7 @@ my @documents =
         db_ver => 5,
     },
     {
-        id => "human-hacking-field-guide-v2", 
+        id => "human-hacking-field-guide-v2",
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide-v2",
         custom_css => 1,
@@ -174,8 +174,8 @@ my @documents =
 =begin foo
     # Removed due to it already being in FICTION_DOCS in Makefile.
     {
-        id => "The-Pope-Died-on-Sunday-hebrew", 
-        path => "humour/Pope/", 
+        id => "The-Pope-Died-on-Sunday-hebrew",
+        path => "humour/Pope/",
         base => "The-Pope-Died-on-Sunday-hebrew",
         work_in_progress => 1,
         db_ver => 5,
@@ -220,7 +220,7 @@ sub process_simple_end_format
     return \%f;
 }
 
-my @end_formats = 
+my @end_formats =
 (
     (
         map { process_simple_end_format($_) }
@@ -279,12 +279,12 @@ sub get_quad_pres_files
     [
         'src_dir' => $dir,
         'src_files' =>
-        [ 
+        [
             sort { $a cmp $b }
             grep { $include_cb->($_) }
             # Filtering out explicitly because it has its own separate
             # dependency.
-            grep { $_ ne "index.html" } 
+            grep { $_ ne "index.html" }
             @files
         ],
     ];
@@ -297,7 +297,7 @@ sub get_p4n_files
     return get_quad_pres_files("lib/presentations/qp/perl-for-newbies/$n");
 }
 
-$tt->process($template_fh, 
+$tt->process($template_fh,
     {
         docs_4 => [ grep { $_->{db_ver} != 5 } @documents],
         docs_5 => [ grep { $_->{db_ver} == 5 } @documents],
@@ -307,10 +307,10 @@ $tt->process($template_fh,
 EOF
         quadp_presentations =>
         {
-            (map 
+            (map
                 {
                     (
-                        "p4n$_" => 
+                        "p4n$_" =>
                         {
                             dest_dir => "lecture/Perl/Newbies/lecture$_",
                             @{get_p4n_files($_)},

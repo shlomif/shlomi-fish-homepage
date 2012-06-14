@@ -7,15 +7,15 @@ use warnings;
 sub get_dir_files
 {
     my $dir_path = shift;
-    
-    opendir D, $dir_path 
+
+    opendir D, $dir_path
         or die "Cannot open the directory $dir_path";
 
     my @entries;
     @entries = readdir(D);
     closedir(D);
 
-    return \@entries;    
+    return \@entries;
 }
 
 my $dir_path = shift || ".";

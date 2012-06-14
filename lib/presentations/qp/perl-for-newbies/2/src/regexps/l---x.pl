@@ -5,7 +5,7 @@ my $string = lc(shift(@ARGV));
 
 if ($string =~ /l...x/)
 {
-    print "True\n";  
+    print "True\n";
 }
 else
 {

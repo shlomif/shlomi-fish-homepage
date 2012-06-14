@@ -11,12 +11,12 @@ expression which are as complex as perl supports.
 
 <p>
 The alternation operator will try to match as much of the expression as it can,
-so it is recommended to use grouping to bound it. 
+so it is recommended to use grouping to bound it.
 (e.g: <tt>(?:dog|cat|mouse)</tt>)
 </p>
 
 <p>
-The following pattern matches a sequence of whitespace-delimited "words" 
+The following pattern matches a sequence of whitespace-delimited "words"
 that each may contain either a set of letters or a set of digits (= a
 positive integer):
 </p>

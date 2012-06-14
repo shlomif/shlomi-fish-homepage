@@ -3,7 +3,7 @@
 <h2>delete</h2>
 
 <p>
-delete can be used to remove a key or a set of keys out of a hash. 
+delete can be used to remove a key or a set of keys out of a hash.
 For example:
 </p>
 
@@ -16,7 +16,7 @@ For example:
 <p>
 The comma can be used to combine two arrays into one larger one. Given the
 fact that a mini-hash with one key and one value can be specified using the
-<tt>$key =&gt; $value</tt> notation (which is essentially equivalent to 
+<tt>$key =&gt; $value</tt> notation (which is essentially equivalent to
 <tt>$key, $value</tt>) a hash can be initialized in one statement.</p>
 
 <p>

@@ -13,13 +13,13 @@ one can generate a skeleton for one’s own CPAN-like package, which
 can also afterwards contain tests. Keeping your code organised in such packages,
 allows one to make use of a convenient build-system
 such as <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a>.
-It also allows one to package it as operating-system-wide packages, which can 
+It also allows one to package it as operating-system-wide packages, which can
 be removed easily using the system's package manager. Finally, these packages
 can later be uploaded to CPAN for sharing with other users and developers.
 </p>
 
 <p>
-Here’s an example of testing a CPAN distribution from CPAN using 
+Here’s an example of testing a CPAN distribution from CPAN using
 <tt>./Build test</tt>:
 </p>
 

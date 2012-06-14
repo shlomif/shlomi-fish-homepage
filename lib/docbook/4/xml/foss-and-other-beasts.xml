@@ -35,15 +35,15 @@
     <!-- Ci vis pacem -->
     <para>
     <!-- belum. ;-) -->
-        This document is copyrighted by Shlomi Fish under the 
+        This document is copyrighted by Shlomi Fish under the
         <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
-        Commons Attribution License version 2.5</ulink> (or at 
+        Commons Attribution License version 2.5</ulink> (or at
         your option a greater version).
     </para>
 </legalnotice>
 <abstract>
 <para>
-The purpose of this document is to introduce the Open Source Software and 
+The purpose of this document is to introduce the Open Source Software and
 Free Software world to people who are not familiar with it. It covers the
 semantics of the terms, the history of this world, philosophical differences,
 various criteria of open source software, and other issues.
@@ -108,8 +108,8 @@ Proprietary software, i.e: such whose use, modification or distribution is
 encumbered, was a relatively new phenomenon if you take a look at the old
 history of computing. It actually started even before the time when
 Microsoft, then a very small company wrote Altair Basic, and Bill Gates
-published the famous (or possibly infamous) <ulink url="http://www.blinkenlights.com/classiccmp/gateswhine.html">"Open Letter to Altair Hobbyists"</ulink>. 
-In fact, IBM and other companies distributed proprietary software for 
+published the famous (or possibly infamous) <ulink url="http://www.blinkenlights.com/classiccmp/gateswhine.html">"Open Letter to Altair Hobbyists"</ulink>.
+In fact, IBM and other companies distributed proprietary software for
 mainframe systems, a long time before the Personal Computer revolution.
 </para>
 
@@ -129,8 +129,8 @@ The Linux Operating System with its various components (most of which are
 available to other systems as well, and are not affiliated with the Linux
 kernel in particular) is the most visible showcase to this phenomena. By
 installing Linux it is possible to turn an everyday personal computer into
-a full fledged UNIX-based workstation or server, which is a 100% powerful GNU 
-system. This can cost little if any money, and the various components of the 
+a full fledged UNIX-based workstation or server, which is a 100% powerful GNU
+system. This can cost little if any money, and the various components of the
 operating system are all freely modifiable and can be re-distributed in their
 modified form.
 </para>
@@ -179,13 +179,13 @@ The freedom to redistribute copies so you can help your neighbour
 <para>
 The freedom to improve the program, and release your improvements to the
 public, so that the whole community benefits . Access to the source code is
-a precondition for this. 
+a precondition for this.
 </para>
 
 </listitem></orderedlist>
 
 <para>
-    The <ulink url="http://www.opensource.org/docs/definition_plain.php">Open Source definition</ulink> is similar, but some licences can qualify as 
+    The <ulink url="http://www.opensource.org/docs/definition_plain.php">Open Source definition</ulink> is similar, but some licences can qualify as
     open-source and not as free
 software. This is usually not an issue, because the majority of open source
 software out there is free as well.
@@ -233,7 +233,7 @@ common terms.
 The free software movement (before it was called this way) started
 organically from individuals who distributed code they wrote under the
 Public Domain or what would now be considered open source or semi-open
-source licences. 
+source licences.
 </para>
 
 <para>
@@ -248,18 +248,18 @@ UNIX sources included a C compiler that was itself written in C. Around the
 early 70's the only computers capable of running UNIX were main-frames and
 the so-called "mini-computers" so there initially weren't as many
 installations as only large organizations could support buying computers to
-deploy UNIX on. 
+deploy UNIX on.
 </para>
 
 <para>
 That changed as integrated circuits, and computers became cheaper and more
 powerful. Very soon, cheap UNIX-based servers and workstations became
-commonplace and the number of UNIX installations exploded. 
+commonplace and the number of UNIX installations exploded.
 <footnote id="present_day_unixes">
     <para>
-    At present day, UNIX clones such as Linux or the BSDs can run on regular 
+    At present day, UNIX clones such as Linux or the BSDs can run on regular
     Pentium-based computers that can be bought from PC shops. Most PC computers
-    nowadays can out-compete the UNIX workstations of a few generations back. 
+    nowadays can out-compete the UNIX workstations of a few generations back.
     This allow assembling a UNIX server which is much more powerful and much
     less costy than the past ones, and that suffices for most needs.
 </para>
@@ -275,7 +275,7 @@ commonplace and the number of UNIX installations exploded.
 The Berkeley University forked its own version of AT&amp;T UNIX and started
 re-writing parts of the code, and incorporating many changes of its own.
 The original parts were licensed under the BSD license which is a copyright
-licence that is almost entirely Public Domain. The BSD system became very 
+licence that is almost entirely Public Domain. The BSD system became very
 popular (perhaps even more than the AT&amp;T one).
 </para>
 
@@ -283,7 +283,7 @@ popular (perhaps even more than the AT&amp;T one).
 When Arpanet, the predecessor to the Internet was disbanded due to inadequacy,
 the Internet converted to running on top of 32-bit UNIX boxes such as
 the <ulink url="http://en.wikipedia.org/wiki/VAX">VAX architecture by Digital
-Equipment Corporation</ulink> (now part of Hewlett-Packard). This caused a 
+Equipment Corporation</ulink> (now part of Hewlett-Packard). This caused a
 merging of the UNIX culture with the Arpanet enthusiasts who exchanged code
 on the Arpanet, and UNIX programmers started sharing code for various
 components and add-ons of UNIX on the Internet.
@@ -321,14 +321,14 @@ one dynamic personality: Richard M. Stallman.
 </para>
 
 <para>
-Richard Stallman (aka RMS) published 
-<ulink url="http://www.gnu.org/gnu/manifesto.html">the 
+Richard Stallman (aka RMS) published
+<ulink url="http://www.gnu.org/gnu/manifesto.html">the
 GNU Manifesto</ulink> in 1984, which
 coined the term "free software", and explained the rationale behind it.
 The Manifesto was also a creed for the the GNU project which aimed to be a
 complete UNIX-compatible replacement for UNIX systems, while being
 completely original work. The software of the GNU project was released as
-free software, under the terms of the <ulink url="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</ulink> (or GPL for short). 
+free software, under the terms of the <ulink url="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</ulink> (or GPL for short).
 </para>
 
 <para>
@@ -356,7 +356,7 @@ modifications done for internal or private use.
 <para>
 Restrictive Integration by Other Code bases - GPL code can only be linked
 against code with free software licences that match some criteria. This
-property has been recently referred to as "viral". 
+property has been recently referred to as "viral".
 </para>
 </listitem>
 </orderedlist>
@@ -407,15 +407,15 @@ software into the mainstream.
 <ulink url="http://www.debian.org/">Debian GNU/Linux</ulink> was a Linux distribution that was eventually endorsed
 by the GNU project. One of the things that made it unique was the fact it
 distinguished between "free" and "non-free" packages as far as the
-user is concerned. The 
-<ulink url="http://www.debian.org/social_contract.html">guidelines 
+user is concerned. The
+<ulink url="http://www.debian.org/social_contract.html">guidelines
 for determining which software is
 "free" in the Debian sense</ulink> were phrased by Bruce Perens.
 </para>
 
 <para>
 Note that they deviate from the free software definition (which was phrased
-later on) and include some licences that are not free. I.e: "Debian Free" is a 
+later on) and include some licences that are not free. I.e: "Debian Free" is a
 superset of free software according to the Stallman definition.
 </para>
 
@@ -432,7 +432,7 @@ Guidelines formed the basis for the open-source definition.
 
 
 <para>
-Eric Steven Raymond (now also known as ESR) wrote 
+Eric Steven Raymond (now also known as ESR) wrote
 <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">an essay titled
 "The Cathedral and the Bazaar"</ulink> and
 presented it to the Linux Kongress at 21 May 1997. This contrasted the Bazaar
@@ -444,7 +444,7 @@ free ones.
 <para>
 "Bazaar" projects are characterised by frequent and incremental release
 schedules, treating the users as co-developers, and generally getting a lot
-of peer review, ideas, input and cooperation. Despite a common misconception, 
+of peer review, ideas, input and cooperation. Despite a common misconception,
 the core group of the project contributors still usually remains relatively
 small except for very large projects.
 </para>
@@ -486,7 +486,7 @@ reject it on the premise that the freedom of software is more important than
 the "openness" of its code. While he does not oppose the openness of the
 code, and acknowledges the fact that free software is open source as well,
 its freedom remained more important. For more information read the document
-<ulink url="http://www.gnu.org/philosophy/free-software-for-freedom.html">"Free 
+<ulink url="http://www.gnu.org/philosophy/free-software-for-freedom.html">"Free
     Software for Freedom"</ulink> on the GNU web-site.
 </para>
 
@@ -496,7 +496,7 @@ few others converted to using "open source" entirely, most knowledgeable
 people don't completely reject either term, and use each one whenever they
 see fit. Nevertheless, the term "open source" is more commonly used by both
 open source developers and even more so by non open source developers. See
-<ulink url="http://catb.org/~esr/writings/terminology/">Eric Raymond's 
+<ulink url="http://catb.org/~esr/writings/terminology/">Eric Raymond's
 "Terminology Wars"</ulink> for more details.
 </para>
 
@@ -511,7 +511,7 @@ Since 1997, Linux and other open-source systems have become more and more
 popular. Linux saw a lot of success in the server market, where cheap PCs
 that can be bought in stores can serve as an almost full replacement for
 more costy UNIX servers by installing Linux. Even if the latter are used,
-they very often run open source servers and other open source 
+they very often run open source servers and other open source
 programs, utilities and frameworks.
 </para>
 
@@ -550,7 +550,7 @@ Apple's MacOS X was released and is based on Darwin, which is an
 open-source BSD-derived system. MacOS X can run UNIX applications natively,
 and supports the X-Windows system, which is the de-facto GUI framework for
 UNIXes (including Linux). It is therefore a popular UNIX choice for
-PowerMac computers (and more recently for Macintosh computer based on 
+PowerMac computers (and more recently for Macintosh computer based on
 Intel-based chips), albeit not the only one since Linux, and various
 open-source BSD clones and other UNIXes can run there as well.
 </para>
@@ -570,18 +570,18 @@ even many more less important ones.
 <title>Open Source and Open Content Become Mainstream</title>
 
 <para>
-While open source software has existed for DOS and Microsoft Windows 
+While open source software has existed for DOS and Microsoft Windows
 practically since the beginning, and some of it was relatively popular among
 people, most of the software available for these platforms has been
 non-open-source binary-only software, a lot of it from Microsoft.
 </para>
 
 <para>
-This has started to change recently. The 
+This has started to change recently. The
 <ulink url="http://www.mozilla.com/firefox/">Firefox
 browser</ulink> from the home of the Mozilla Foundation (and now also the
 Mozilla Corporation), is an open-source,  modern and sophisticated browser,
-that has been virally publicised by various means such as 
+that has been virally publicised by various means such as
 <ulink url="http://www.spreadfirefox.com/">the various
 "Spread Firefox" campaigns</ulink>. It has become popular and as of July
 2006 has passed the 10% usage in web site hits according to some firms,
@@ -602,21 +602,21 @@ modifiable alternatives to traditional binary-only software.
 </para>
 
 <para>
-In 2003, a study was published that estimated that <ulink url="http://discuss.fogcreek.com/joelonsoftware3/default.asp?cmd=show&amp;ixPost=98232&amp;ixReplies=39">by 2004, 
+In 2003, a study was published that estimated that <ulink url="http://discuss.fogcreek.com/joelonsoftware3/default.asp?cmd=show&amp;ixPost=98232&amp;ixReplies=39">by 2004,
 more developers will work on Linux than on Windows</ulink>. While it definitely
 does not mean that more people will use Linux at home, it is still a good
 indication for its general mainstream acceptance and usefulness.
 </para>
 
 <para>
-Another important recent trend was <emphasis role="bold">the rise 
-of open content</emphasis>. 
-<ulink url="http://fc-solve.shlomifish.org/oss-fs/docbook/">The 
-first edition of this article</ulink>, included 
-<ulink url="http://fc-solve.shlomifish.org/oss-fs/docbook/oss-fs/x181.html">a 
+Another important recent trend was <emphasis role="bold">the rise
+of open content</emphasis>.
+<ulink url="http://fc-solve.shlomifish.org/oss-fs/docbook/">The
+first edition of this article</ulink>, included
+<ulink url="http://fc-solve.shlomifish.org/oss-fs/docbook/oss-fs/x181.html">a
 small section about "open content"</ulink>, where I concluded by saying that
-"Only time can tell whether other elements of open source besides its freely 
-distributable nature will have an impact in other areas of creative arts 
+"Only time can tell whether other elements of open source besides its freely
+distributable nature will have an impact in other areas of creative arts
 besides software.". Now, about 3 years later, I can say that by all means
 open content has already proven to be a great success.
 </para>
@@ -630,14 +630,14 @@ Among the landmarks of open or semi-open content are:
 <listitem>
 <para>
 <ulink url="http://creativecommons.org/">The Creative Commons project</ulink>
-that specifies licences for open content, semi-open content or just freely 
-redistributable artworks for individuals and organisations to use in 
+that specifies licences for open content, semi-open content or just freely
+redistributable artworks for individuals and organisations to use in
 their artwork, as well as supplying several resources for facilitating their
 publishing and use.
 </para>
 
 <para>
-Creative Commons' licences have proven to be very popular among many web 
+Creative Commons' licences have proven to be very popular among many web
 publishers for use in their works.
 </para>
 </listitem>
@@ -646,8 +646,8 @@ publishers for use in their works.
 <para>
 <ulink url="http://wikimedia.org/">The Wikimedia Foundation</ulink>
 publishes several online multi-lingual Wikis - web sites that are
-editable by the surfers - all under an open content licence. The most 
-famous and important one are <ulink url="http://www.wikipedia.org/">the 
+editable by the surfers - all under an open content licence. The most
+famous and important one are <ulink url="http://www.wikipedia.org/">the
 Wikipedias</ulink>, which are free, online encyclopedias. The English
 wikipedia (which is still the largest) is larger than Encyclopedia Britannica
 and Microsoft Encarta combined and is growing rapidly.
@@ -657,16 +657,16 @@ and Microsoft Encarta combined and is growing rapidly.
 <listitem>
 <para>
 There are many sites for independent musicians, such as
-<ulink url="http://www.garageband.com/">GarageBand.com</ulink>, 
+<ulink url="http://www.garageband.com/">GarageBand.com</ulink>,
 <ulink url="http://ccmixter.org/">ccMixter</ulink>, and
-<ulink url="http://magnatune.com/">Magnatune</ulink> (a record label that 
+<ulink url="http://magnatune.com/">Magnatune</ulink> (a record label that
 publishes artists whose songs are under a freely redistributable licence).
 </para>
 </listitem>
 
 <listitem>
 <para>
-From weblogs and weblog comments, to wikis, to podcasts or video-blogs - 
+From weblogs and weblog comments, to wikis, to podcasts or video-blogs -
 open or semi-open content is everywhere.
 </para>
 </listitem>
@@ -681,18 +681,18 @@ open or semi-open content is everywhere.
 <title>Difference between "Open Source" and "Free Software".</title>
 
 
-<para> 
+<para>
 The term "free software" was coined by Richard Stallman, and is
 associated with the <ulink url="http://www.fsf.org/">Free Software
 Foundation</ulink>.  The term "open source" was coined by Eric Raymond and is
-advocated by him and other people at the 
-<ulink url="http://www.opensource.org/">Open Source Initiative</ulink>. 
-Nevertheless, those who consider themselves in either camp, much less those 
-who use either or both terms, do not necessarily hold the opinions of these 
-figures. Therefore I will not globally associate them with the "free software 
-movement" or the "open source movement" because both include many users and 
-developers with heterogeneous opinions on the subject. Moreover, they are 
-pretty much one and the same.  
+advocated by him and other people at the
+<ulink url="http://www.opensource.org/">Open Source Initiative</ulink>.
+Nevertheless, those who consider themselves in either camp, much less those
+who use either or both terms, do not necessarily hold the opinions of these
+figures. Therefore I will not globally associate them with the "free software
+movement" or the "open source movement" because both include many users and
+developers with heterogeneous opinions on the subject. Moreover, they are
+pretty much one and the same.
 </para>
 
 <para>
@@ -718,7 +718,7 @@ own needs makes them feel helpless, and at the mercy of external software.
 Free software, on the other hand, is the natural conclusion derived from
 the basic facts of information, computing and software, and is highly
 moral. People, companies and other organizations can modify it,
-customise it and distribute it for their own use should the need arise, and 
+customise it and distribute it for their own use should the need arise, and
 so it actually benefits them.
 </para>
 
@@ -812,8 +812,8 @@ there (and most software generally started by individuals) is free as well.
 <para>
 It is advisable not to use a custom licence anyhow, as this tends to
 confuse users and fellow developers. There are many common licences to
-choose from. Check <ulink url="http://www.gnu.org/philosophy/license-list.html">the GNU licences list</ulink> and 
-<ulink url="http://www.opensource.org/licenses/">the list of open source licences</ulink> for such lists. 
+choose from. Check <ulink url="http://www.gnu.org/philosophy/license-list.html">the GNU licences list</ulink> and
+<ulink url="http://www.opensource.org/licenses/">the list of open source licences</ulink> for such lists.
 </para>
 </footnote>
 </para>
@@ -839,8 +839,8 @@ licences it can link against, and some perfectly good free software does
 not qualify to it. (examples are the Mozilla Public License, the Qt Public
 License, and even the original BSD licence). It is advisable that whenever
 possible a developer or vendor <ulink url="http://www.dwheeler.com/essays/gpl-compatible.html">should choose a licence that is compatible with the
-GPL</ulink>, because otherwise there may be problems integrating his code 
-with GPLed one or using both a GPL and a non-GPL compatible library. (I am 
+GPL</ulink>, because otherwise there may be problems integrating his code
+with GPLed one or using both a GPL and a non-GPL compatible library. (I am
 not a lawyer, so I cannot conclusively say when it is legal or not).
 </para>
 
@@ -852,11 +852,11 @@ non-GPL compatible licence, and recently adopted a triple licence of the
 Mozilla Public License, the GNU General Public License, and the GNU Lesser
 General Public License in order to make it compatible with the GPL and to
 standardise its integrability. The Qt library whose commercial vendor and
-originator is <ulink url="http://www.trolltech.com/">Troll Tech Inc.</ulink>, 
+originator is <ulink url="http://www.trolltech.com/">Troll Tech Inc.</ulink>,
 also adopted the GPL as well as its own QPL, to
-relieve the various legal problems that 
+relieve the various legal problems that
 <ulink url="http://www.kde.org/">KDE</ulink> (a desktop system for UNIXes which
-is based on it) faced when using GPL code. 
+is based on it) faced when using GPL code.
 
 </para>
 
@@ -881,7 +881,7 @@ QPL, etc.
 
 <para>
 Many licences are not Copyleft - most notably the BSD and MIT/X11 licences.
-Software released under such licences can be derived into a proprietary 
+Software released under such licences can be derived into a proprietary
 software product by a third party, and often have been.
 </para>
 
@@ -909,8 +909,8 @@ Classes, that are accompanied with their source.
 </para>
 
 <para>
-2. <ulink url="http://www.trilon.com/xv/">xv</ulink> - a very popular 
-shareware image viewer and manipulator for X-Windows that has been 
+2. <ulink url="http://www.trilon.com/xv/">xv</ulink> - a very popular
+shareware image viewer and manipulator for X-Windows that has been
 distributed with its source code.
 </para>
 
@@ -925,15 +925,15 @@ still a very popular program.
 <para>
 None of these packages qualify as free software, but they are all
 accompanied with the source. There are many others around. A quick search
-on <ulink url="http://freshmeat.net/">Freshmeat</ulink> will find many such 
+on <ulink url="http://freshmeat.net/">Freshmeat</ulink> will find many such
 packages.
 </para>
 
 <para>
 In order for a program to be open-source it needs to be free of various
-restrictions as specified in the 
+restrictions as specified in the
 <ulink url="http://www.opensource.org/docs/definition.php">open-source definition</ulink>. To be free software as well,
-it must be also free of some other restrictions. 
+it must be also free of some other restrictions.
 <footnote id="idf_official_query">
 <para>
 In a recent query given to an Israeli Defense Force Official by an Israeli
@@ -959,7 +959,7 @@ terms will have to do.
 <section id="myths_and_issues">
 
     <title>Myths about Open Source and Other Issues</title>
-    
+
 <section id="sharing_and_communism">
 
 <title>Sharing software huh? Isn't it a bit like Communism?</title>
@@ -997,10 +997,10 @@ work at all, and not be out-competed by something better.
 This analogy was rejected and treated in a semi-jokily manner by most people
 who did not oppose Capitalism as a whole. A true understanding of why
 open-source does not contradict the liberal ideals of Capitalism and
-Individualism originated from Eric Raymond's 
+Individualism originated from Eric Raymond's
 <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">"Homesteading the Noosphere"</ulink>
-and 
-<ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink>, 
+and
+<ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink>,
 which are a very good read anyway you look at it.
 </para>
 
@@ -1025,7 +1025,7 @@ proprietary software.
 
 <para>
 It is unlikely that assuming Open Source software becomes the dominant
-software, it will imply that programmers will "starve to death". As 
+software, it will imply that programmers will "starve to death". As
 <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/ar01s03.html">Eric
 Raymond notes in the Magic Cauldron</ulink>, the vast majority of software
 out there is software without a sale value: be it software that large
@@ -1075,7 +1075,7 @@ Examples include:
 
 <para>
 1. Open source software is less secure than software whose source code is
-not revealed, because people can find bugs at it by looking at the code. 
+not revealed, because people can find bugs at it by looking at the code.
 </para>
 
 <para>
@@ -1097,15 +1097,15 @@ more people can review the code and discover bugs in it.
 
 <para>
 And many others. The <ulink url="http://www.linuxmafia.com/~rick/myths.html">
-    Linux Myth Dispeller</ulink> attempted to answer some of these, with a 
+    Linux Myth Dispeller</ulink> attempted to answer some of these, with a
 focus on negative myths. Myth
 #1 is completely false as bugs can still be found by analyzing the
 disassembly of the machine code. Also often such bugs are found by accident
-due to a certain valid use of the software) There were many closed-source 
-packages out there in which many bugs have already been discovered. (like 
-Microsoft Outlook, Microsoft IIS or 
-<ulink url="http://www.shlomifish.org/no-ie/">Microsoft 
-Internet Explorer</ulink>). Some of these already became widely exploited a 
+due to a certain valid use of the software) There were many closed-source
+packages out there in which many bugs have already been discovered. (like
+Microsoft Outlook, Microsoft IIS or
+<ulink url="http://www.shlomifish.org/no-ie/">Microsoft
+Internet Explorer</ulink>). Some of these already became widely exploited a
 long time before a vendor patch was made available.
 </para>
 
@@ -1166,7 +1166,7 @@ Raymond said in the "Cathedral and the Bazaar" series, part of which is
 that proprietary software is problematic. However, I think that a world
 dominated by free software (which I hope to see soon) can inhibit some
 proprietary software without it having a generally harmful effect on the
-computer world at large. 
+computer world at large.
 </para>
 
 <para>
@@ -1226,7 +1226,7 @@ use the term a "GNU system" even more.
 The fact I don't stick to either open-source or free software, stems from
 the fact that I respect both the Free Software Foundation, and the Open
 Source Institute, and believe that the free software movement and the open
-source movement is pretty much one and the same. I also like both terms. 
+source movement is pretty much one and the same. I also like both terms.
 </para>
 
 <para>
@@ -1266,7 +1266,7 @@ variations of the BSD licence or the MIT/X11 licence) for software I
 produce. I don't mind people making a derived code proprietary much less
 integrating it inside proprietary products. If the original code, which I
 modify or derive from, is distributed under a different licence, I respect
-the original licence, whatever it may be. 
+the original licence, whatever it may be.
 </para>
 
 <para>
@@ -1299,7 +1299,7 @@ notion, in my opinion.
     </section>
     <section id="ref_resources_esr">
         <title><ulink url="http://www.catb.org/~esr/writings/">Eric S. Raymond's Writings</ulink></title>
-        
+
         <para>
             Contains many interesting articles and writing about Open Source,
             from one of its most prominent figures, including the immortal
@@ -1314,7 +1314,7 @@ notion, in my opinion.
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">Homesteading the Noosphere</ulink> - an analysis of the 
+                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">Homesteading the Noosphere</ulink> - an analysis of the
                     "ownership" customs of the open-source developers community
                     and their culture in general.
                 </para>
@@ -1327,14 +1327,14 @@ notion, in my opinion.
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become a Hacker</ulink> - a how-to document explaining how to become 
+                    <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become a Hacker</ulink> - a how-to document explaining how to become
                     a "hacker", an expert and enthusiastic computer developer.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.tldp.org/HOWTO/Software-Release-Practice-HOWTO/">Software Release Practice HOWTO</ulink> - 
-                    explains good conventions in the management and release of 
+                    <ulink url="http://www.tldp.org/HOWTO/Software-Release-Practice-HOWTO/">Software Release Practice HOWTO</ulink> -
+                    explains good conventions in the management and release of
                     an open source software package.
                 </para>
             </listitem>
@@ -1346,13 +1346,13 @@ notion, in my opinion.
             Joel Spolsky is a veteran software engineer that conveys his
             sometimes unusual views on software management and design in his
             site. Please don't take them too seriously, because he obviously
-            doesn't either. Not all of his articles are relevant to the topic 
-            hand and here is a selected few which are.  
+            doesn't either. Not all of his articles are relevant to the topic
+            hand and here is a selected few which are.
         </para>
         <itemizedlist>
             <listitem>
                 <para>
-                    <ulink url="http://www.joelonsoftware.com/articles/StrategyLetterV.html">Strategy Letter V</ulink> - 
+                    <ulink url="http://www.joelonsoftware.com/articles/StrategyLetterV.html">Strategy Letter V</ulink> -
                     explains why big companies support open source and what's
                     in it for them.
                 </para>
@@ -1392,7 +1392,7 @@ notion, in my opinion.
     <section id="ref_resources_david_wheeler">
         <title><ulink url="http://www.dwheeler.com/">David A. Wheeler's Site</ulink></title>
         <para>
-            A free software consultant and analyst which has many interesting 
+            A free software consultant and analyst which has many interesting
             pieces of research on his site.
         </para>
     </section>
@@ -1404,12 +1404,12 @@ notion, in my opinion.
     <itemizedlist>
         <listitem>
             <para>
-                <ulink url="http://www.aw.com/catalog/academic/product/1,4096,0201835959,00.html">The Mythical Man-Month : Essays on Software Engineering</ulink> 
-                by <emphasis>Fredrick P. Brooks, Jr.</emphasis> - 
+                <ulink url="http://www.aw.com/catalog/academic/product/1,4096,0201835959,00.html">The Mythical Man-Month : Essays on Software Engineering</ulink>
+                by <emphasis>Fredrick P. Brooks, Jr.</emphasis> -
                 one of the first books on software management by the team leader
                 of the OS/360 IBM Mainframe operating system. Despite the fact
-                that it was originally written in 1975 , it still contains 
-                many useful insights on software engineering. 
+                that it was originally written in 1975 , it still contains
+                many useful insights on software engineering.
             </para>
             <para>
                 The Cathedral and the Bazaar aims to explain how the problems
@@ -1422,7 +1422,7 @@ notion, in my opinion.
             </para>
             <para>
                 This book is available online and gives the opinions of many of
-                the most prominent leaders of the Free Software and Open 
+                the most prominent leaders of the Free Software and Open
                 Source world.
             </para>
         </listitem>
@@ -1451,7 +1451,7 @@ Shlomi Fish, <ulink url="http://www.shlomifish.org/">http://www.shlomifish.org/<
 <para>
 Thanks to Chen Shapira for taking the time to read several early drafts of
 this document and provide useful comments. Thanks to Nadav Har’El for
-summarising the early history of UNIX and the BSDs for me. 
+summarising the early history of UNIX and the BSDs for me.
 </para>
 
 <para>
@@ -1482,7 +1482,7 @@ Mention some other projects othre than Linux and other operating systems. (?)
 
 <para>
 This document is copyrighted by Shlomi Fish under <ulink url="http://creativecommons.org/licenses/by/2.5/">the Creative Commons
-Attribution licence version 2.5</ulink> or at your option a greater version. 
+Attribution licence version 2.5</ulink> or at your option a greater version.
 </para>
 
 </section>

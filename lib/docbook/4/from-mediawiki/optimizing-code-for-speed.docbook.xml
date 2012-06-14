@@ -89,7 +89,7 @@ The speed of GMP is achieved by using fullwords as the basic arithmetic type, by
 
 </para>
 <para>
-Also consider that short functions and methods are considered preferable over longer methods, to allow for greater code re-use, testing, and self-documentation. (See the <ulink url="http://c2.com/cgi/wiki?ExtractMethod"><citetitle>"Extract Method" refactoring pattern</citetitle></ulink>). However, function or method calls are considered a relatively costly operation, and so this extra code-quality, will probably make the program slower. 
+Also consider that short functions and methods are considered preferable over longer methods, to allow for greater code re-use, testing, and self-documentation. (See the <ulink url="http://c2.com/cgi/wiki?ExtractMethod"><citetitle>"Extract Method" refactoring pattern</citetitle></ulink>). However, function or method calls are considered a relatively costly operation, and so this extra code-quality, will probably make the program slower.
 </para>
 <para>
 Therefore, it's not hard to imagine that a developer who wishes to save some extra cycles will merge a function that gets used only once or a few times into its caller code (or incorporating its code using a macro, or a preprocessing stage if possible), and therefore making the code less modular.
@@ -114,7 +114,7 @@ The first thing you need to do before optimizing is make sure that your code has
 The next thing you need to do is to make sure your code is modular. Duplicate code and other properties that make a code non-modular can prevent a clear analysis of the code's bottlenecks by profiling it.
 </para>
 <para>
-Afterwards, it is important to profile your code using a good software profiler. Profiling will help show which code does not take a lot of time to run and therefore it would be best not to invest a lot of optimization effort in it. One should start by optimizing the most time-consuming tasks first. 
+Afterwards, it is important to profile your code using a good software profiler. Profiling will help show which code does not take a lot of time to run and therefore it would be best not to invest a lot of optimization effort in it. One should start by optimizing the most time-consuming tasks first.
 </para>
 <para>
 It takes some expertise to knowing how to properly analyze the results given by the profiler, and seeing what needs to be optimized. For example, some IO-intensive routines may appear to consume a lot of time, while in fact that time cannot be effectively eliminated because the amount of IO is minimal (while still being relatively time consuming). I feel that discussing this aspect of profiling further is orthogonal to the mission of this article, so I'm not going to cover it here.
@@ -130,7 +130,7 @@ Finally, it is a good idea that someone will review the code and and give genera
 Generally, an algorithm has an asymptotic comptutational complexity. Assuming the input is of size N, we can say that the algorithm will finish at O(N), O(N^2), O(N^3), O(N*log(N)) etc. This means that it is a certain mathematical expression of the size of the input, and the algorithm finishes between two factors of it.
 </para>
 <para>
-Generally, the smaller the order of complexity of the program's underlying algorithm, the faster the it will run and the better it will scale as the input gets larger. Thus, we should often seek more efficient algorithms in order to reduce the order of complexity. 
+Generally, the smaller the order of complexity of the program's underlying algorithm, the faster the it will run and the better it will scale as the input gets larger. Thus, we should often seek more efficient algorithms in order to reduce the order of complexity.
 </para>
 
 </section>
@@ -150,7 +150,7 @@ A better idea would be to use a more efficient lookup. For example, a Binary sea
 <ulink url="http://fc-solve.shlomifish.org/"><citetitle>Freecell Solver</citetitle></ulink> is a library written in ANSI C that solves deals of FreeCell and similar "full-knowledge" Solitaire games. Freecell Solver used traditional Game artificial intelligence heuristics from the beginning such as Depth First Search and Best First Search. As a result, there was a need to maintain a collection of the previously encountered board positions (or "states") so they won't be checked twice.
 </para>
 <para>
-The very first version of the solver (written in Perl) used a linear search over an array. That proved to be too slow to be effective to solve even the most elementary deals. Afterwards, the program was re-implemented in C, and used a sorted array, with a "sort margin" that was sorted using ANSI C's <ulink url="http://www.cplusplus.com/reference/clibrary/cstdlib/qsort.html"><citetitle>qsort's function</citetitle></ulink>, which performs the Quick Sort algorithm at an average complexity of O(N*log(N)), giving the program an average lookup of O(log(N)) and an accumulated addition of between O(N*log(N)) and O(N^2). 
+The very first version of the solver (written in Perl) used a linear search over an array. That proved to be too slow to be effective to solve even the most elementary deals. Afterwards, the program was re-implemented in C, and used a sorted array, with a "sort margin" that was sorted using ANSI C's <ulink url="http://www.cplusplus.com/reference/clibrary/cstdlib/qsort.html"><citetitle>qsort's function</citetitle></ulink>, which performs the Quick Sort algorithm at an average complexity of O(N*log(N)), giving the program an average lookup of O(log(N)) and an accumulated addition of between O(N*log(N)) and O(N^2).
 </para>
 <para>
 Later versions made optional use of two Balanced Binary Trees libraries: <ulink url="http://www.stanford.edu/~blp/avl/"><citetitle>libavl</citetitle></ulink> and <ulink url="http://libredblack.sourceforge.net/"><citetitle>libredblack</citetitle></ulink>, which have a maximal O(log(N)) lookup and insertion and an accumulative O(N*log(N)) run-time. Sometimes later, a custom hash table was coded, whose run-time was even somewhat faster than the balanced binary trees, and had an <emphasis role="bold">average</emphasis> run-time of O(N). This hash was later further optimized using micro-optimizations.
@@ -176,7 +176,7 @@ On the other hand, sometimes using Insertion Sort is preferable over Merge Sort 
 In his <ulink url="http://www.joelonsoftware.com/articles/fog0000000319.html"><citetitle>article "Back to Basics"</citetitle></ulink>, Joel Spolsky illustrates a common (and unnecessary) pattern that increases the complexity of programs. Essentially, when one does in C:<programlisting>  char string[1000];</programlisting><programlisting>  strcpy (string, "One ");</programlisting><programlisting>  strcat (string, "Two ");</programlisting><programlisting>  strcat (string, "Three ");</programlisting><programlisting>  strcat (string, "Four ");</programlisting><programlisting>  .</programlisting><programlisting>  .</programlisting><programlisting>  .</programlisting>
 </para>
 <para>
-And so forth, then the strcat calls will keep starting from the beginning of the string and seek the (increasing) end times and again. As a result, the complexity of appending N strings each with a limited length, becomes O(N^2) instead of O(N). 
+And so forth, then the strcat calls will keep starting from the beginning of the string and seek the (increasing) end times and again. As a result, the complexity of appending N strings each with a limited length, becomes O(N^2) instead of O(N).
 </para>
 <para>
 Eliminating such problematic mis-implementations in the code can yield a substantial speed-increase.
@@ -291,7 +291,7 @@ As <ulink url="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg07076.html"
 </para>
 <section><title>Note about the Memory-Speed Tradeoff</title>
 <para>
-After reading what was written here, you may think this contradicts the common Memory-Speed Trade-off "truism". The Memory/Speed Trade-off has its origins in theoretical computer science, where it is shown that for certain tasks, one can reduce the run-time's asymptotic complexity by increasing the asymptotic amount of memory used (and vice versa). For example, we can sometimes reduce the asymptotic run-time from O(N^2) to O(N) by increasing the memory from O(1) to O(N). 
+After reading what was written here, you may think this contradicts the common Memory-Speed Trade-off "truism". The Memory/Speed Trade-off has its origins in theoretical computer science, where it is shown that for certain tasks, one can reduce the run-time's asymptotic complexity by increasing the asymptotic amount of memory used (and vice versa). For example, we can sometimes reduce the asymptotic run-time from O(N^2) to O(N) by increasing the memory from O(1) to O(N).
 </para>
 <para>
 This is all nice and true, but it doesn't contradict the fact that given the architecture of contemporary computer hardware and operating systems, the less memory a program uses (while the logic of the algorithm remains the same) - the faster it will probably run. It's not an asymptotic trade-off, but rather a gain-gain situation.
@@ -356,7 +356,7 @@ If you are unsure whether inlining a certain function has a positive or negative
 The Schwartzian transform is a way to optimize certain kinds of comparison-based sort operations. If the keys of the function that we want to compare take a lot of time to calculate (such as if they require access to the hard-disk), then we can first prepare an equivalent array with pairs of the inputs and their keys, then sort the pairs based on the keys, and finally filter only the original inputs from the pairs.
 </para>
 <para>
-It should be noted that the Schwartzian transform actually reduced the order of complexity of the number of times the keys are calculated from O(N*log(N)) to O(N). However, the overall order of complexity of the sort remains O(N*log(N)). 
+It should be noted that the Schwartzian transform actually reduced the order of complexity of the number of times the keys are calculated from O(N*log(N)) to O(N). However, the overall order of complexity of the sort remains O(N*log(N)).
 </para>
 
 </section>
@@ -414,7 +414,7 @@ When I mentioned this article to some people on IRC (while it was still incomple
 Speed and optimizing other resources are one important factor <ulink url="http://www.shlomifish.org/philosophy/computers/high-quality-software/"><citetitle>in the general, abstract quality of programs</citetitle></ulink>. If your program is slow, it is likely going to make your users frustrated and unhappy, which will be a failure in your mission as a software developer. So it is important that your program is fast enough, if not very much so.
 </para>
 <para>
-My aim in this document was to explain the "why"'s, "what"'s and to a lesser extent "how"'s of optimization. I hope I was successful, and that people who read it will be more willing to optimize their software and more clueful in how to do so. 
+My aim in this document was to explain the "why"'s, "what"'s and to a lesser extent "how"'s of optimization. I hope I was successful, and that people who read it will be more willing to optimize their software and more clueful in how to do so.
 </para>
 
 </section>

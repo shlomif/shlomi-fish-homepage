@@ -13,7 +13,7 @@ use vars qw(@ISA @EXPORT);
 
 @EXPORT=("gcd");
 
-# This function calculates the greatest common divisor of two integers 
+# This function calculates the greatest common divisor of two integers
 sub gcd
 {
     my $m = shift;
@@ -23,7 +23,7 @@ sub gcd
     {
         ($m, $n) = ($n , $m);
     }
-    
+
     while ($m % $n > 0)
     {
         ($m, $n) = ($n, $m % $n);

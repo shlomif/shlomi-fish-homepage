@@ -2,7 +2,7 @@
 
 <points>
 <li>
-When Freecell Solver started it represented each card and stack length 
+When Freecell Solver started it represented each card and stack length
 specifier as a 32-bit quantity.
 </li>
 
@@ -24,7 +24,7 @@ queried</a> the Linux-IL mailing-list about it and received some answers.
 </li>
 
 <li>
-The most probable reasons: less memory -&gt; less cache misses, and handling 
+The most probable reasons: less memory -&gt; less cache misses, and handling
 bytes is just as fast as handling ints.
 </li>
 

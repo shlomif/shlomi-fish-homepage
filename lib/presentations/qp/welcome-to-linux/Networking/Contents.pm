@@ -41,7 +41,7 @@ my $contents =
         {
             'url' => "layer2",
             'title' => "Layer II - the Data Link Layer",
-            'subs' => 
+            'subs' =>
             [
                 {
                     'url' => "ppp.html",
@@ -50,7 +50,7 @@ my $contents =
                 {
                     'url' => "pptp-pppoe",
                     'title' => "VPN - PPTP, PPPoE and L2TP",
-                    'subs' => 
+                    'subs' =>
                     [
                         {
                             'url' => "adsl.html",
@@ -117,7 +117,7 @@ my $contents =
     ],
     'images' =>
     [
-        'style.css', 
+        'style.css',
         '7layer.gif',
     ],
 };

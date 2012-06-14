@@ -2,7 +2,7 @@
 
 <points>
 <li>
-The command line processing used to occupy a large part of the <tt>main()</tt> 
+The command line processing used to occupy a large part of the <tt>main()</tt>
 function of Freecell Solver.
 </li>
 <li>
@@ -15,8 +15,8 @@ This enabled writing other programs which configure themselves according to
 this scheme. (as all they needed to do was call this function)
 </li>
 <li>
-It also allows for programs that use FCS and for its language bindings, to 
-configure themselves using this one textual interface, instead of a multitude 
+It also allows for programs that use FCS and for its language bindings, to
+configure themselves using this one textual interface, instead of a multitude
 of separate configuration functions.
 </li>
 </points>

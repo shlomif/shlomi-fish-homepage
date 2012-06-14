@@ -63,7 +63,7 @@ my $contents =
         {
             'url' => "arrays",
             'title' => "Arrays",
-            'subs' => 
+            'subs' =>
             [
                 {
                     'url' => "histogram.html",

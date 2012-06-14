@@ -73,7 +73,7 @@ DOCMAKE_WITH_PARAMS = $(DOCMAKE) $(DOCMAKE_PARAMS)
 # Define upload-related macros
 
 UPLOAD_DEPS ?= html-xsl pdf rtf
-FILES_TO_UPLOAD ?= $(HTML_XSL_TARGET) $(PDF_DOC) $(RTF_DOC) $(ALL_SOURCES)  
+FILES_TO_UPLOAD ?= $(HTML_XSL_TARGET) $(PDF_DOC) $(RTF_DOC) $(ALL_SOURCES)
 
 
 MAKEFILE_SOURCE ?= Makefile
@@ -110,7 +110,6 @@ SRC_ARCHIVE = $(DOC)-docbook-source.zip
 
 
 arc : $(SRC_ARCHIVE)
-	
 
 # Define some shorthand targets
 

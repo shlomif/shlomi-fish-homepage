@@ -9,11 +9,11 @@ To resolve this and allow for a more modular command line, a meta command
 line argument was created <tt>--read-from-file [SKIP],[FILENAME]</tt>.
 </li>
 <li>
-This allowed reading arguments from a text file with a format similar to 
+This allowed reading arguments from a text file with a format similar to
 a Bourne Shell command.
 </li>
 <li>
-(The code that tokenizes this file resides in <tt>cl_chop.c</tt> and 
+(The code that tokenizes this file resides in <tt>cl_chop.c</tt> and
 is quite hideous. Still it works and doesn't interfere with the rest of the
 program so I just keep it as it is.)
 </li>

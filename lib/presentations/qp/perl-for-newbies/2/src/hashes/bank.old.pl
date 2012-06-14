@@ -13,12 +13,12 @@ while (1)
     }
     print "Enter the name of the account:\n";
     $account = <>;
-    chomp($account);    
+    chomp($account);
     if ($function eq "create")
     {
         if (exists($bank_accounts{$account}))
         {
-            print "Error! The account already exists!\n";        
+            print "Error! The account already exists!\n";
         }
         else
         {
@@ -34,7 +34,7 @@ while (1)
         }
         else
         {
-            print "There are " . $bank_accounts{$account} . 
+            print "There are " . $bank_accounts{$account} .
                 " NIS in the account.\n";
         }
     }
@@ -47,7 +47,7 @@ while (1)
         else
         {
             print "How much do you wish to deposit?\n";
-            $how_much = <>; 
+            $how_much = <>;
             chomp($how_much);
             if ($how_much < 0)
             {
@@ -69,7 +69,7 @@ while (1)
         else
         {
             print "How much do you wish to retrieve?\n";
-            $how_much = <>; 
+            $how_much = <>;
             chomp($how_much);
             if ($how_much < 0)
             {
@@ -80,11 +80,11 @@ while (1)
                 print "Error! There isn't enough money in the account.\n";
             }
             else
-            {                
+            {
                 $bank_accounts{$account} -= $how_much;
                 print "The amount was retrieved from the account.";
             }
-        
+
         }
     }
     else

@@ -7,15 +7,15 @@ a list of all the keys present in the hash.
 </p>
 
 <p>
-To assign or retrieve the value of the key <tt>$mykey</tt> in the hash 
+To assign or retrieve the value of the key <tt>$mykey</tt> in the hash
 <tt>$myhash</tt> one uses the <tt>$myhash{$mykey}</tt> convention. To check if a
-key exists in a hash one should type <tt>exists($myhash{$mykey})</tt> 
+key exists in a hash one should type <tt>exists($myhash{$mykey})</tt>
 which in turn returns a boolean value that corresponds to its existence.
 </p>
 
 <p>
-An array whose elements are the keys present in the hash can be retrieved 
-by typing <tt>keys(%myhash)</tt>. Here's a short example, that runs a simple 
+An array whose elements are the keys present in the hash can be retrieved
+by typing <tt>keys(%myhash)</tt>. Here's a short example, that runs a simple
 bank, that will illustrate this functionality:
 </p>
 

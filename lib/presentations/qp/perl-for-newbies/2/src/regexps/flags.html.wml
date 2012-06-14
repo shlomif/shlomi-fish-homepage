@@ -13,9 +13,9 @@ retain their original case.
 </p>
 
 <p>
-A <tt>g</tt> causes the match or substitution to match <b>all</b> occurences, 
-not just one. If used with a match in an array context 
-(e.g: <tt>@occurences = ($string =~ /$regexp/g);</tt>) it retrieves all 
+A <tt>g</tt> causes the match or substitution to match <b>all</b> occurences,
+not just one. If used with a match in an array context
+(e.g: <tt>@occurences = ($string =~ /$regexp/g);</tt>) it retrieves all
 the matches and if used with a substitution it substitutes all the
 occurences with the string.
 </p>

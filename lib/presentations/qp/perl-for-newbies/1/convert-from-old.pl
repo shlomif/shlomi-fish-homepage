@@ -22,7 +22,7 @@ foreach my $filename (@files)
         or die "Cannot open input file - $filename - $!";
     open my $out, ">", "$filename.wml"
         or die "Cannot open output file - $filename - $!";
-    
+
     print {$out} "#include 'template.wml'\n\n";
     my $text = join("", <$in>);
 
@@ -30,9 +30,9 @@ foreach my $filename (@files)
     $text =~ s/<!--+ *& *begin_header *-->.*?<!--+ *& *end_header *--+>//s;
     $text =~ s/<!--+ *& *begin_contents *-->.*?<!--+ *& *end_contents *--+>/<qpcontents \/>/gs;
     $text =~ s/<!--+ *& *begin_menupath *-->(.*?)<!--+ *& *end_menupath *--+>/<menupath>$1<\/menupath>/gs;
-    
+
     print {$out} $text;
     close($in);
     close($out);
-    
+
 }

@@ -2,7 +2,7 @@
 
 <points>
 <li>
-For ADSL in Israel, PPTP or PPPoE is used for the connection. 
+For ADSL in Israel, PPTP or PPPoE is used for the connection.
 </li>
 <li>Both are supported under Linux.
 </li>
@@ -13,11 +13,11 @@ the distribution has a wizard which will help setting up the link.
 <li>
 The relevant package is called rp-pppoe and includes a script
 "adsl-setup" to configure your connection and
-"adsl-start" to initiate a connection after setup. 
+"adsl-start" to initiate a connection after setup.
 </li>
 <li>
-The PPTP protocol support is a bit more problematic to set up, but yet 
-possible, and works well. 
+The PPTP protocol support is a bit more problematic to set up, but yet
+possible, and works well.
 </li>
 <li>
 A HOWTO about connecting to ADSL in Israel using PPTP
@@ -25,7 +25,7 @@ A HOWTO about connecting to ADSL in Israel using PPTP
 <a href="http://www.mulix.org/adsl.html">http://www.mulix.org/adsl.html</a>
 </li>
 <li>
-The cable TV Internet access providers sometime provide a direct Ethernet connection, using DHCP to assign IP address and to inform the computer about the network details it need to know, without any need for a tunnel. 
+The cable TV Internet access providers sometime provide a direct Ethernet connection, using DHCP to assign IP address and to inform the computer about the network details it need to know, without any need for a tunnel.
 </li>
 </points>
 

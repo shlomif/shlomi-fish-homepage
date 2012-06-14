@@ -103,14 +103,14 @@ pw_d.projectwonderful_background_color = "";
 
 <define-tag w2l_notice>
 <a href="http://welcome.linux.org.il/2007/" title="ברוכים הבאים ללינוקס 2007 - הכירו את הסביבה היציבה, החזקה והמגוונת"><img
-     src="$(ROOT)/images/welcome-to-linux-2004-banner-256.png" 
+     src="$(ROOT)/images/welcome-to-linux-2004-banner-256.png"
      style="border-width:0" alt="Welcome to Linux 2007 in Israel"
      /></a>
 </define-tag>
 
 <define-tag ap5_notice>
 <a href="http://ap5.israel.net/" title="August Penguin 5 - The Annual Israeli Community Conference for Free and Open Source Software"><img
-     src="$(ROOT)/images/ap5-banner.png" class="bless" 
+     src="$(ROOT)/images/ap5-banner.png" class="bless"
      alt="August Penguin 5 - Israeli Community FOSS Con" /></a>
 </define-tag>
 
@@ -136,11 +136,11 @@ pw_d.projectwonderful_background_color = "";
 
 <latemp_top_left_corner_logo>
 <div class="center">
-<a href="<rellink url="" host="t2" />" 
-    title="Shlomi Fish’s Homepage"><img 
-    src="$(ROOT)/images/evilphish.png" 
-    alt="EvilPHish by Illiad" class="highlight" 
-    style="border:0;margin-bottom:0.5em;" 
+<a href="<rellink url="" host="t2" />"
+    title="Shlomi Fish’s Homepage"><img
+    src="$(ROOT)/images/evilphish.png"
+    alt="EvilPHish by Illiad" class="highlight"
+    style="border:0;margin-bottom:0.5em;"
     /></a>
 </div>
 </latemp_top_left_corner_logo>
@@ -153,7 +153,7 @@ pw_d.projectwonderful_background_color = "";
 <div class="search">
 <input type="hidden" name="ie" value="UTF-8" />
 <input type="hidden" name="oe" value="UTF-8" />
-<input type="text" name="q" size="15" maxlength="255" alt="Search Query" 
+<input type="text" name="q" size="15" maxlength="255" alt="Search Query"
 value="" />
 <input type="hidden" name="domains" value="www.shlomifish.org" />
 <br />
@@ -189,9 +189,9 @@ shlomifish.org
 <define-tag affil_valid_xhtml11>
 <p>
 <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!"
-class="bless"><img 
+class="bless"><img
     class="highlight bless"
-    src="$(ROOT)/images/xh11-btn.png" 
+    src="$(ROOT)/images/xh11-btn.png"
     alt="Valid XHTML 1.1!"
     /></a>
 </p>
@@ -199,9 +199,9 @@ class="bless"><img
 <define-tag affil_valid_css>
 <p>
 <a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
-class="bless"><img 
+class="bless"><img
     class="highlight bless"
-    src="$(ROOT)/images/css-btn.png" 
+    src="$(ROOT)/images/css-btn.png"
     alt="Valid CSS!" /></a>
 </p>
 </define-tag>
@@ -240,15 +240,15 @@ in general.
 {#PAGE_EXTRA_AFFIL#}
 
 <p>
-<a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img 
+<a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img
     src="$(ROOT)/images/rss-feed-sticker.png"
     alt="RSS Feed" title="RSS Feed for Easy Notification on Update"
     class="bless"
     /></a>
 </p>
 <p>
-<a href="http://www.livejournal.com/community/shlomif_hsite/data/atom" 
-    class="bless"><img 
+<a href="http://www.livejournal.com/community/shlomif_hsite/data/atom"
+    class="bless"><img
     src="$(ROOT)/images/atom-feed-sticker.png"
     alt="Atom Feed" title="Atom Feed for Easy Notification on Update"
     class="bless"
@@ -257,8 +257,8 @@ in general.
 
 
 <div id="noie">
-<no_ie_link><img src="$(ROOT)/images/noIE.png" 
-class="highlight" style="border:0" 
+<no_ie_link><img src="$(ROOT)/images/noIE.png"
+class="highlight" style="border:0"
 alt="Stop Using Internet Explorer!" /></no_ie_link><br />
 <no_ie_link>Stop Using Internet Explorer!</no_ie_link>
 </div>
@@ -285,9 +285,9 @@ by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin<
 </p>
 <p>
 <a href="$(ROOT)/meta/FAQ/#evilphish-emblem">Fish emblem</a>
-taken from the 
+taken from the
 <a href="http://ars.userfriendly.org/cartoons/?id=20030803">“Anatomy
-of an EvilPHish”</a> cartoon of 
+of an EvilPHish”</a> cartoon of
 <a href="http://www.userfriendly.org/">UserFriendly.org</a>.
 </p>
 <script type="text/javascript" src="$(ROOT)/js/selfl.js"></script>
@@ -295,7 +295,7 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag hosting_link>
 <div class="rightalign">
-<a href="$(ROOT)/meta/hosting/#eonspace"><img src="images/eonspace1.png" 
+<a href="$(ROOT)/meta/hosting/#eonspace"><img src="images/eonspace1.png"
    alt="Hosted at Eonspace" class="highlight" style="border : 0"
    title="Hosted at Eonspace" /></a>
 </div>
@@ -310,14 +310,14 @@ of an EvilPHish”</a> cartoon of
 ;;; If it is the t2 index than display the <hosting_link> macro
 ;;; Else - display the back to my homepage image
 <latemp_foot_image>
-<if <ifeq "$(LATEMP_FILENAME)" "index.html" 
-        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" /> 
+<if <ifeq "$(LATEMP_FILENAME)" "index.html"
+        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" />
     <hosting_link />
     <backtomyhp />
     />
 </latemp_foot_image>
 
-<define-tag section_nav_menu_elements endtag="required" whitespace="delete"> 
+<define-tag section_nav_menu_elements endtag="required" whitespace="delete">
 {#SECTION_NAV_MENU_ELEMS#:%body:##}
 </define-tag>
 
@@ -353,7 +353,7 @@ EOF_ADS_CODE
         # Adding to disable the google ads since they're not
         # operational.
         $ads_side = "";
-    
+
         if (defined($section_nav_menu))
         {
             return;
@@ -407,7 +407,7 @@ td { vertical-align : top; }
 </style>
 </define-tag>
 <latemp_extra_head_elements>
-<if "$(PRINTABLE)" 
+<if "$(PRINTABLE)"
     "<my_printable_head_elements />"
     "<my_extra_head_elements />"
     />

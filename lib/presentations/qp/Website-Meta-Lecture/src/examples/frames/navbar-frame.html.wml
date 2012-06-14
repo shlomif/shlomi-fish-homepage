@@ -11,9 +11,9 @@
 <body>
 <define-tag navbarlink>
 # Check if we are an index page and define suffix accordingly
-<if <match "%0" "(/$)|(^$)" action="report" /> 
-    <set-var suffix="index.html" /> 
-    <set-var suffix="" /> 
+<if <match "%0" "(/$)|(^$)" action="report" />
+    <set-var suffix="index.html" />
+    <set-var suffix="" />
     />
 <a href="%0<get-var suffix />.frames.html">%1</a>
 <br />

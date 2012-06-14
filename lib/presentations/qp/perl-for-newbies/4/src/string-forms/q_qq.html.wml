@@ -135,13 +135,13 @@ No
 </table>
 
 <p>
-What it means, is that you can write an interpolated string as <tt>qq</tt> 
-followed by a matching wrapping character, inside which the string can 
+What it means, is that you can write an interpolated string as <tt>qq</tt>
+followed by a matching wrapping character, inside which the string can
 be placed. And likewise for the other strings. Here are some examples:
 </p>
 
 <quadpres_code_block>
-<quadpres_include_colorized_file 
+<quadpres_include_colorized_file
 filename="src/string-forms/q_qq-examples.pl" />
 </quadpres_code_block>
 
@@ -158,7 +158,7 @@ Hi There Hello There Hello There Router
 </quadpres_code_block>
 
 <p>
-As one can see, the wrapping characters should match assuming they are a 
+As one can see, the wrapping characters should match assuming they are a
 left/right pair (<tt>{</tt> to <tt>}</tt> etc.).
 </p>
 

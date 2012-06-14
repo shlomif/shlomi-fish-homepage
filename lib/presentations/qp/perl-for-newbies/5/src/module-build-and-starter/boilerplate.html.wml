@@ -9,7 +9,7 @@ the distribution.
 
 <p>
 Luckily, it also generates a script on <tt>t/boilerplate.t</tt> that checks
-for that boilerplate and reports it. However, the tests there are marked as 
+for that boilerplate and reports it. However, the tests there are marked as
 TODO tests, whose failure status is ignored by default. To turn off their
 TODO status, open <tt>t/boilerplate.t</tt> in your text editor and remove
 or comment-out the following line
@@ -26,9 +26,9 @@ After we do that, we get some test failures when running <tt>./Build test</tt>:
 <quadpres_code_block>
 $ ./Build test
 t/00-load.t ....... 1/5 # Testing MyMath::Ops 0.01, Perl 5.014002, /usr/bin/perl5.14.2
-t/00-load.t ....... ok   
-t/add.t ........... ok   
-t/boilerplate.t ... 1/7 
+t/00-load.t ....... ok
+t/add.t ........... ok
+t/boilerplate.t ... 1/7
 \#   Failed test 'README contains boilerplate text'
 \#   at t/boilerplate.t line 23.
 \# The README is used... appears on lines 3
@@ -69,9 +69,9 @@ t/boilerplate.t ... 1/7
 \# the great new $MODULENAME appears on lines 8
 \# Looks like you failed 7 tests of 7.
 t/boilerplate.t ... Dubious, test returned 7 (wstat 1792, 0x700)
-Failed 7/7 subtests 
-t/pod-coverage.t .. ok   
-t/pod.t ........... ok   
+Failed 7/7 subtests
+t/pod-coverage.t .. ok
+t/pod.t ........... ok
 
 Test Summary Report
 -------------------

@@ -60,7 +60,7 @@
                     text for completeness.
                 </revremark>
             </revision>
-            
+
             <revision>
                 <revnumber>1740</revnumber>
                 <date>1 May 2007</date>
@@ -75,7 +75,7 @@
                 <date>17 April 2007</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
-                    Forked the template from a previous work and working on 
+                    Forked the template from a previous work and working on
                     it.
                 </revremark>
             </revision>
@@ -87,13 +87,13 @@
     <section id="introduction">
         <title>Introduction</title>
         <para>
-            This is the year 2007. This is Shlomi Fish, <emphasis role="bold">a good hacker</emphasis>, 
+            This is the year 2007. This is Shlomi Fish, <emphasis role="bold">a good hacker</emphasis>,
             where hacker
             is a good enthusiastic programmer, not necessarily a computer
             intruder. And I have an announcement to make: <emphasis role="bold">I refuse to be an IT
-                slave</emphasis>. Moreover: if you want to employ people like me (and you 
+                slave</emphasis>. Moreover: if you want to employ people like me (and you
             do), you should not give us only good conditions - <emphasis role="bold">you should give us
-                exceptional ones</emphasis>. Otherwise, we’ll probably leave, or be 
+                exceptional ones</emphasis>. Otherwise, we’ll probably leave, or be
             fired, much to your misfortune.
         </para>
     </section>
@@ -105,13 +105,13 @@
             Do you honestly believe that if you employ someone for 9 hours,
             you’ll get an average of close to 9 hours worth of code writing
             a day? Probably not. Programmers tend to get distracted. They
-            find it hard to start coding. They need to think about what 
+            find it hard to start coding. They need to think about what
             they do. They need to take breaks for various things (like
             drinking, eating, talking with their co-workers, etc.).
         </para>
 
         <para>
-            Furthermore, actual <emphasis role="bold">code writing is not the 
+            Furthermore, actual <emphasis role="bold">code writing is not the
                 most productive activity</emphasis>, as surprising as it
             sounds. That’s because if one writes code exclusively for too
             long, his mind will run in circles and he’ll lose his edge. And
@@ -120,15 +120,15 @@
         </para>
 
         <para>
-            That thing is <emphasis role="bold">revolutionary 
+            That thing is <emphasis role="bold">revolutionary
                 decisions</emphasis>. Decisions that make
             one more productive in the future, restructure one’s code (or one’s
-            text or whatever) in completely better ways, or allow the worker 
+            text or whatever) in completely better ways, or allow the worker
             to do something in a better way. The more such decisions he reaches,
             the more productive he is, and the more value he is to his company.
             He’s no longer just a code monkey - he’s
             <ulink url="http://www.joelonsoftware.com/items/2004/12/06.html">a
-                “Rosh Gadol” and innovative programmer</ulink>, who is of much 
+                “Rosh Gadol” and innovative programmer</ulink>, who is of much
             more value to the company than just someone who writes the code
             that other people told him how it should behave.
         </para>
@@ -144,15 +144,15 @@
             </para>
 
             <para>
-                Paul Graham called these developers 
-                <ulink url="http://www.paulgraham.com/gh.html">“Great 
+                Paul Graham called these developers
+                <ulink url="http://www.paulgraham.com/gh.html">“Great
                     Hackers” in an essay he wrote</ulink>. As I said before,
                 I can testify I’m a good (or “above-average”) programmer (and
-                <ulink url="http://www.shlomifish.org/">other 
+                <ulink url="http://www.shlomifish.org/">other
                     things</ulink>), but not that I’m a great one. That’s
                 because the baker cannot testify for the quality of his
                 dough. However, I know some people whom I can tell are great
-                hackers. 
+                hackers.
             </para>
 
             <para>
@@ -160,7 +160,7 @@
                 ideas. Who are interested in many things inside or outside
                 computers. They often can write a lot of good code, but often
                 their code is wonderfully ugly, but still very functional,
-                mostly bug-free, feature-rich and efficient. 
+                mostly bug-free, feature-rich and efficient.
             </para>
 
             <section id="reuse">
@@ -168,8 +168,8 @@
                 <para>
                     Another important factor, that is not always present in
                     nascent programmers, is their desire or even necessity to
-                    re-use code, however ugly it may seem. Eric Raymond 
-                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html">wrote 
+                    re-use code, however ugly it may seem. Eric Raymond
+                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html">wrote
                         about it in “the Cathedral and the Bazaar”</ulink>:
                 </para>
 
@@ -179,9 +179,9 @@
                         up a brand-new POP3 client to compete with the existing
                         ones? Not on your life! I looked carefully at the POP
                         utilities I had in hand, asking myself “Which one is
-                        closest to what I want?” Because: 
+                        closest to what I want?” Because:
                     </para>
-                    
+
                     <para>
                         2. Good programmers know
                         what to write. Great ones know what to rewrite (and reuse).
@@ -194,27 +194,27 @@
                         effort but for results, and that it’s almost always easier
                         to start from a good partial solution than from nothing at
                         all.
-                    </para> 
+                    </para>
                 </blockquote>
 
                 <para>
-                    Later on Joel Spolsky expanded on it in <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things You Should Never 
+                    Later on Joel Spolsky expanded on it in <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things You Should Never
                         Do, Part I”</ulink>, and
                     <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">“Rub
-                        a dub dub”</ulink>, and it’s also been extensively 
+                        a dub dub”</ulink>, and it’s also been extensively
                     documented elsewhere.
                 </para>
 
                 <para>
                     If your programmer is keen on labelling a code as “ugly”,
-                    “unusable” or “I’d like completely rewrite it from 
+                    “unusable” or “I’d like completely rewrite it from
                     scratch”, then he’ll waste your time and be unhappy and
                     under-productive.
                 </para>
 
                 <para>
                     Instead he should say: “give me some time to whip this
-                    code back into shape, by refactoring it [= cleaning it up]”. 
+                    code back into shape, by refactoring it [= cleaning it up]”.
                     Believe it or not, but refactoring actually saves time, as
                     Joel demonstrates in “Rub-a-dub-dub” and Martin Fowler in
                     his “Refactoring” book.
@@ -222,8 +222,8 @@
 
                 <para>
                     So if you hire a beginning programmer with a good potential
-                    who’s full of this (bad) attitude, give him or her this 
-                    reading list. It will be faster and more fun to improve the 
+                    who’s full of this (bad) attitude, give him or her this
+                    reading list. It will be faster and more fun to improve the
                     quality of the code, rather than to rewrite it from scratch.
                 </para>
             </section>
@@ -237,13 +237,13 @@
 
         <para>
             How many times have you heard this phrase? I’ll tell you why you can’t
-            find them. It’s because you treat them like dirt. 
+            find them. It’s because you treat them like dirt.
             <ulink url="http://www.paulgraham.com/gh.html">Great Hackers</ulink> are
             exceptional people: they won’t work for you, unless they’re completely
             happy. Some people who read the original article by Paul Graham,
-            thought that they won’t fix bugs or do routine tasks. That’s not 
+            thought that they won’t fix bugs or do routine tasks. That’s not
             true - they will and often stay up late to do that. But they refuse
-            to take abuse. 
+            to take abuse.
         </para>
 
         <para>
@@ -265,9 +265,9 @@
                 of nature do things God did not intend them to do. No, most great
                 developers don’t intrude into other people’s computers. And most
                 of the so-called “script kiddies” (at least those who are computer
-                intruders) while usually being perfectly nice people, are not great 
-                developers - at least not yet. Great developers instead spend hours 
-                on end improving the quality of existing code by simple, mechanical 
+                intruders) while usually being perfectly nice people, are not great
+                developers - at least not yet. Great developers instead spend hours
+                on end improving the quality of existing code by simple, mechanical
                 actions. They love learning new languages. They chat endlessly with
                 people from all over the world. They read a lot of things online
                 and offline.
@@ -275,10 +275,10 @@
 
             <para>
                 Most importantly, great developers in this day and age work on
-                <ulink url="http://en.wikipedia.org/wiki/Open_source">open-source 
+                <ulink url="http://en.wikipedia.org/wiki/Open_source">open-source
                     projects</ulink>. While open-source became popular with software,
-                it later expanded to many other fields: there’s now 
-                open-content/free-content texts, pictures and photographs, music, 
+                it later expanded to many other fields: there’s now
+                open-content/free-content texts, pictures and photographs, music,
                 videos, and anything else. There are open patents, open science,
                 open access, etc. But let’s focus on open-source code.
             </para>
@@ -286,17 +286,17 @@
             <para>
                 If you want to hire a great developer you can bet your life, that
                 he’ll contribute for an open-source project. Why? Can you imagine
-                him starting his own shareware project? Shareware is practically 
+                him starting his own shareware project? Shareware is practically
                 dead on Linux and other UNIXes, which are the development environment
-                of choice for most people. And shareware doesn’t pay: you work on 
+                of choice for most people. And shareware doesn’t pay: you work on
                 a shareware program a lot, then you release it for a pay, receive
                 pay from at most 10 people (if you’re lucky), and no-one can or is
                 willing to contribute back. On the other hand, if your program is
-                open-source, and you publicise it on 
+                open-source, and you publicise it on
                 <ulink url="http://freshmeat.net/">freshmeat.net</ulink> or a similar site,
-                some people will gladly take a look, some of them will try it 
+                some people will gladly take a look, some of them will try it
                 (instead of immediately ignoring it for being non-open-source), some
-                of them will send you a good input, and some will even become 
+                of them will send you a good input, and some will even become
                 contributors.
             </para>
 
@@ -305,7 +305,7 @@
                 most shareware programs have died along the way too. If you have a
                 good discipline and want your program to succeed, nowadays open-source
                 is what all the cool kids are doing, and practically no one will
-                respect you if you’re just a non-open-source shareware (or even just 
+                respect you if you’re just a non-open-source shareware (or even just
                 non-open-source “freeware”) developer.
             </para>
 
@@ -325,12 +325,12 @@
                 It is known that great programmers almost consistently have very
                 good lingual skills. All of the great programmers I know have a very
                 good level of English. The
-                <ulink url="http://en.wikipedia.org/wiki/Edsger_Dijkstra">famous 
+                <ulink url="http://en.wikipedia.org/wiki/Edsger_Dijkstra">famous
                     computer scientist Edsger Dijkstra</ulink> once commented that he
                 preferred to hire English majors over Computer Science majors because
                 the former made better programmers. If you see someone with an
                 obviously broken English - don’t hire him! (I’m not talking about a few
-                problems - these are common and people with an audible 
+                problems - these are common and people with an audible
                 cognition are more susceptible to them. )
             </para>
         </section>
@@ -342,7 +342,7 @@
                 talking about the standard ivory-tower philosophy, which is mostly
                 either useless or completely harmful, but rather of the process of
                 “loving-the-wisdom” and seeking wisdom. Nowadays, most of the
-                greatest philosophers don’t write books. Instead they write essays and 
+                greatest philosophers don’t write books. Instead they write essays and
                 articles online, emails, weblog entries or comments, or even cartoon
                 strips or other art forms. The great philosophers of today are
                 bloggers.
@@ -350,7 +350,7 @@
 
             <para>
                 Some great programmers I know purposely maintain a low profile and
-                don’t comment on everything. I can respect that. Others (including the 
+                don’t comment on everything. I can respect that. Others (including the
                 writer of these lines) are completely sincere and always express their
                 mind.
             </para>
@@ -366,7 +366,7 @@
             </para>
 
             <para>
-                When asked why he changed his opinion from the day before, 
+                When asked why he changed his opinion from the day before,
                 Mahatma Gandhi replied: “Yesterday I was more stupid.”. And indeed,
                 you’ll see that the really good programmers may eventually change
                 their opinions.
@@ -380,17 +380,17 @@
         <para>
             So you want to hire a great hacker. That’s great!
             What should you do? Great hackers, are not too concerned with getting
-            <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">an 
+            <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">an
                 exceptional salary</ulink>. They probably won’t work for free, but they
             will often prefer a better job with a smaller pay than an abusive
             job with a higher pay. But what do they like?
         </para>
 
         <para>
-            Great Developers like to <emphasis role="bold">work on stable, well-proven platforms</emphasis> 
-            that are preferably open-source. In today’s world it means either 
-            C or C++ using gcc and g++; Perl, Python, Ruby and to a lesser extent 
-            PHP; Java and possibly also .NET on Windows 2003 or the open-source and 
+            Great Developers like to <emphasis role="bold">work on stable, well-proven platforms</emphasis>
+            that are preferably open-source. In today’s world it means either
+            C or C++ using gcc and g++; Perl, Python, Ruby and to a lesser extent
+            PHP; Java and possibly also .NET on Windows 2003 or the open-source and
             cross-platform <ulink url="http://www.mono-project.com/">Mono</ulink>. If
             your platform doesn’t work, has bugs that delving into the source
             won’t reveal (if the source can be read at all) - they’re not going
@@ -405,10 +405,10 @@
             never so unproductive. After answering the wrong question in an
             interrogation, I was fired, and was heavily relieved.  Such
             applications should not be tested - they should be rewritten using
-            a more modern and less quirky technology. 
+            a more modern and less quirky technology.
         </para>
 
-        <para> 
+        <para>
             Another thing great developers hate is to <emphasis
                 role="bold">forced to be consumed by their work</emphasis>. In
             Israel, some workplaces require at least 9 hours of daily work. How
@@ -426,13 +426,13 @@
         </para>
 
         <para>
-            Here’s another thing: in Israel the law mandates at least 
+            Here’s another thing: in Israel the law mandates at least
             12 paid vacation days per year. At my previous workplace, I received
             14 paid vacation days? Thank you, Workplace!!
         </para>
 
         <para>
-            But guess what? <ulink url="http://www.fogcreek.com/">Fog Creek 
+            But guess what? <ulink url="http://www.fogcreek.com/">Fog Creek
                 software</ulink>, best known as the company co-owned by
             <ulink url="http://www.joelonsoftware.com/">Joel Spolsky from the
                 “Joel on Software” site</ulink> gives people 6 weeks of paid vacation
@@ -445,26 +445,26 @@
             <title>The Best Equipment Money can Buy</title>
 
             <para>
-                The 
+                The
                 <ulink url="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel
-                    Test</ulink> specifically says that you should give your 
-                developers the best tools and equipment money can buy - from 
-                hardware to software, to office conditions, to food, to 
-                location, to everything else. Many workplaces don’t understand 
+                    Test</ulink> specifically says that you should give your
+                developers the best tools and equipment money can buy - from
+                hardware to software, to office conditions, to food, to
+                location, to everything else. Many workplaces don’t understand
                 that.
             </para>
 
             <para>
-                In a previous workplace of mine, I was given a recycled 
-                computer - it was still fast but its hard-disk was 
-                only 40 GB. It was a pain to get some Windows XP virtual 
+                In a previous workplace of mine, I was given a recycled
+                computer - it was still fast but its hard-disk was
+                only 40 GB. It was a pain to get some Windows XP virtual
                 machines running there. Another computer we
-                developed on still had a 40 GB hard disk too. We ran out 
+                developed on still had a 40 GB hard disk too. We ran out
                 of space there because we had a huge checkout of the
-                <ulink url="http://subversion.tigris.org/">Subversion 
-                    version control system</ulink> there. And the only 
-                hard-disks that our lab had were whopping 80 GB ones, bought 
-                because they were the cheapest ones, which probably wouldn’t 
+                <ulink url="http://subversion.tigris.org/">Subversion
+                    version control system</ulink> there. And the only
+                hard-disks that our lab had were whopping 80 GB ones, bought
+                because they were the cheapest ones, which probably wouldn’t
                 have been sufficient for too long, either.
             </para>
 
@@ -473,7 +473,7 @@
                 was just a CD drive - no CD writing, no DVD reading or writing
                 - a CD drive. It gave me a lot of grief. I had to copy a few
                 DVDs I burned at home on my supervisor’s computer, and copy
-                them over the network, and could not install a Linux 
+                them over the network, and could not install a Linux
                 distribution from its installation DVD even if I wanted
                 to.
             </para>
@@ -498,14 +498,14 @@
         <section id="leave-your-developers-alone">
             <title>Leave Your Developers Alone</title>
 
-            <para> 
+            <para>
                 At a previous workplace of mine, my bosses <emphasis
                     role="bold">did not like the fact that I sometimes
                     played</emphasis> card solitaire games or Sokoban. I’m not
                 much of a gamer and don’t spend hours on end playing high-end
                 games. But they didn’t like that people who passed by <emphasis
                     role="bold">saw me not working at that very
-                    moment</emphasis>.  
+                    moment</emphasis>.
             </para>
 
             <para> I needed these games to bring my mind back into cycle. I was
@@ -518,10 +518,10 @@
                 looking through the window do not make you less productive. If
                 you’re just writing code for the same codebase all the time,
                 your mind will soon run in circles, and you won’t be
-                productive.  
+                productive.
             </para>
 
-            <para> 
+            <para>
                 <ulink
                     url="http://tech.groups.yahoo.com/group/hackers-il/message/4784">In
                     a mission statement to an innovative software
@@ -538,27 +538,27 @@
                 <listitem>
                     <para>
                         Since so little is expected of them, they will feel
-                        willing to work more than that. (Assuming they are 
+                        willing to work more than that. (Assuming they are
                         indeed great developers with a wonderful character).
                     </para>
                 </listitem>
                 <listitem>
                     <para>
-                        The things they’ll do in the rest of the time will 
+                        The things they’ll do in the rest of the time will
                         inspire them and allow them to be more productive.
                     </para>
                 </listitem>
             </orderedlist>
 
             <para>
-                Another issue are <emphasis role="bold">the 
-                    working hours</emphasis>. 
-                Make sure your developers can normally come to the office when 
-                they want and go when they want. If you sometimes need more 
-                time or better attendance, then great 
-                developers will be happy to comply - temporarily. But 
+                Another issue are <emphasis role="bold">the
+                    working hours</emphasis>.
+                Make sure your developers can normally come to the office when
+                they want and go when they want. If you sometimes need more
+                time or better attendance, then great
+                developers will be happy to comply - temporarily. But
                 <ulink url="http://www.igda.org/articles/erobinsonncrunch.php">crunch
-                    mode is a recipe for disaster</ulink> - your developers 
+                    mode is a recipe for disaster</ulink> - your developers
                 will be over-worked, under-productive, and unhappy. And if
                 they’re smart, they will soon quit.
             </para>
@@ -566,7 +566,7 @@
             <para>
                 And here’s another anecdote: at a previous workplace, I was
                 instructed to fullfill my hours quota at least precisely,
-                so they can get enough benefits from the Israeli Chief 
+                so they can get enough benefits from the Israeli Chief
                 Scientist. But what is more beneficial for them: a happy,
                 productive developer who does very good work, or a few
                 extra shekels? I can never understand this skewed logic.
@@ -579,7 +579,7 @@
 
             <para>
                 The first thing about being honest with your developers is
-                <emphasis role="bold">telling them exactly why they weren’t 
+                <emphasis role="bold">telling them exactly why they weren’t
                     hired</emphasis> if this was indeed
                 the case. Most companies I’ve been to, either rejected me
                 after an otherwise seemingly successful interview, or even
@@ -589,10 +589,10 @@
             </para>
 
             <para>
-                As an employer, you should have the 
+                As an employer, you should have the
                 <emphasis role="bold">minimal decency to inform the star
-                    developers what they did wrong</emphasis> and how to 
-                further improve. Otherwise, you’re not being fair with them, 
+                    developers what they did wrong</emphasis> and how to
+                further improve. Otherwise, you’re not being fair with them,
                 and they
                 also may tell all their friends how pointless it was to try
                 to apply for you. (Or tell their friends how good a different
@@ -600,7 +600,7 @@
             </para>
 
             <para>
-                Honesty is also <emphasis role="bold">telling your 
+                Honesty is also <emphasis role="bold">telling your
                     developers when they did something
                 right</emphasis>, like finding bugs, fixing bugs, having
                 good ideas, implementing something on schedule, handling a
@@ -609,19 +609,19 @@
                 should be honest enough to evaluate their total performance so
                 far and not just their isolated mistake. A great developer
                 who’s worked for you for a few months, made a mistake recently
-                learned from it, and is determined not to repeat it, 
-                <emphasis role="bold">is a better asset than a 
+                learned from it, and is determined not to repeat it,
+                <emphasis role="bold">is a better asset than a
                     new developer</emphasis> who still has a lot to learn
                 at the company.
             </para>
 
             <para>
-                Obviously, <emphasis role="bold">honesty goes in 
-                    both ways</emphasis>. Great developers should 
-                be honest enough to tell their future employers, present 
+                Obviously, <emphasis role="bold">honesty goes in
+                    both ways</emphasis>. Great developers should
+                be honest enough to tell their future employers, present
                 employers, and co-workers what they think about them, or
-                if they believe themselves or the latter are doing something 
-                wrong or exceptionally well. Honesty is both liberating, and 
+                if they believe themselves or the latter are doing something
+                wrong or exceptionally well. Honesty is both liberating, and
                 makes sure one avoids problems and problematic patterns.
             </para>
 
@@ -632,50 +632,50 @@
             <para>
                 Here’s another insight: let your developers grow. If you
                 know they have potential, then hire them regardless if they
-                have the appropriate experience you’re looking for. 
-                <emphasis role="bold">No-one is born</emphasis> a kernel 
+                have the appropriate experience you’re looking for.
+                <emphasis role="bold">No-one is born</emphasis> a kernel
                 developer, an experienced mod_perl developer, a Java developer
                 with 5 years of experience, or a C/C++ systems
                 programmer. But many people who are <emphasis role="bold">fresh out of college or
-                    even high school</emphasis>, and who like to program for 
-                fun, are capable of becoming that by being given an 
+                    even high school</emphasis>, and who like to program for
+                fun, are capable of becoming that by being given an
                 appropriate chance.
             </para>
 
             <para>
-                On the IRC, I’ve been talking to someone who graduated in 
+                On the IRC, I’ve been talking to someone who graduated in
                 Electrical Engineering from a British university. Since he
                 doesn’t want to work for the defense industry, he became
                 a system administrator at a high school. Now he knows Perl
                 and uses it extensively, but he doesn’t think he can get
                 a more lucrative job as a Perl programmer (of which there’s
-                a lot of demand for in England) because he doesn’t have a lot 
+                a lot of demand for in England) because he doesn’t have a lot
                 of mod_perl experience.
             </para>
 
             <para>
-                The reason people want experience is 
-                <ulink url="http://www.joelonsoftware.com/articles/LordPalmerston.html">not 
+                The reason people want experience is
+                <ulink url="http://www.joelonsoftware.com/articles/LordPalmerston.html">not
                     because the people with experience are more productive, but
                     because they know how to handle problems they encounter
                     better</ulink>. I don’t claim experience is not important.
                 However, if you’re using a platform which is both reliable and
-                predictable (<quote>it just works</quote>), give your 
+                predictable (<quote>it just works</quote>), give your
                 programmers access to the Internet (with the Web,
                 search engines, and IRC), to good searchable books, and to
                 fellow developers who are more experienced than them in that
-                platform, you can make sure they overcome such problems 
+                platform, you can make sure they overcome such problems
                 easily.
             </para>
 
             <para>
-                A different programmer, also from the UK, 
-                <ulink url="http://www.perl.org.il/pipermail/perl/2006-June/007956.html">testified 
+                A different programmer, also from the UK,
+                <ulink url="http://www.perl.org.il/pipermail/perl/2006-June/007956.html">testified
                     that while
                     he started working with Perl and liked it and was good,
-                    no one was willing to give him a chance to grow</ulink>. 
+                    no one was willing to give him a chance to grow</ulink>.
                 What is important about great hackers is not their knowledge
-                or experience but their potential, attitude and 
+                or experience but their potential, attitude and
                 auto-didactness. Given proper conditions they will accumulate
                 a lot of knowledge, and surpass “medium-level” techs with
                 a small amount of experience.
@@ -683,9 +683,9 @@
 
             <para>
                 So when hiring, don’t ask them highly specialised questions.
-                Otherwise, not only you won’t find too many “experienced 
+                Otherwise, not only you won’t find too many “experienced
                 developers”, but you will also reject many great developers,
-                who will be excellent for what you do. Training a great 
+                who will be excellent for what you do. Training a great
                 hacker is cheap. But hiring an experienced mediocre
                 programmer, is a bad idea.
             </para>
@@ -704,7 +704,7 @@
                 <listitem>
                     <para>
                         <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric S. Raymond’s <emphasis>The Cathedral and the Bazaar</emphasis> series</ulink>.
-                        Also see his <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">“How 
+                        Also see his <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">“How
                             to Become a Hacker” document</ulink>. Concentrates
                         on open-source hacking.
                     </para>
@@ -712,7 +712,7 @@
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.joelonsoftware.com/"><emphasis>Joel on 
+                        <ulink url="http://www.joelonsoftware.com/"><emphasis>Joel on
                             Software</emphasis></ulink> - a collection of articles and
                         essays and a weblog by Joel Spolsky. Concentrates on
                         writing commercial, marketplace software.
@@ -721,17 +721,17 @@
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.paulgraham.com/">Paul 
+                        <ulink url="http://www.paulgraham.com/">Paul
                             Graham</ulink> - many essays on different topics
                         including Lisp, language design, dynamic languages,
                         startups, and general philosophy.
                     </para>
                 </listitem>
-                
+
                 <listitem>
                     <para>
                         <ulink url="http://www.extremeprogramming.org/">Extreme
-                            Programming</ulink> - a software management 
+                            Programming</ulink> - a software management
                         methodology intended primarily for developing in-house
                         software, but with some good, general ideas.
                     </para>
@@ -751,7 +751,7 @@
 
             <para>
                 The final advice I can give you is to respect and cherish
-                your developers. If you <emphasis role="bold">lose one great 
+                your developers. If you <emphasis role="bold">lose one great
                     developer</emphasis>, you’ll have
                 a very hard time finding an adequate replacement for him,
                 if you ever can. So <emphasis role="bold">listen carefully to
@@ -762,10 +762,10 @@
             </para>
 
             <para>
-                Don’t over-work them, give them the proper tools and 
-                equipment, treat them like they were kings (rather than 
-                slaves), and make sure they are happy working for you. While 
-                it does not guarantee that they won’t leave you, it will 
+                Don’t over-work them, give them the proper tools and
+                equipment, treat them like they were kings (rather than
+                slaves), and make sure they are happy working for you. While
+                it does not guarantee that they won’t leave you, it will
                 probably prevent most premature quitting or getting fired.
             </para>
 
@@ -784,8 +784,8 @@
             </para>
 
             <para>
-                If the marketing department had understood what PHP, Perl and 
-                ASP were all about, then they would have known that writing it 
+                If the marketing department had understood what PHP, Perl and
+                ASP were all about, then they would have known that writing it
                 in PHP was enough. But there wasn’t a feedback from the
                 developers back to the marketing department.
             </para>

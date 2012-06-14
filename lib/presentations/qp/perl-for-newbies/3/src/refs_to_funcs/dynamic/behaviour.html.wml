@@ -2,8 +2,8 @@
 
 <p>
 One can define such a reference to a function within another function. It
-is possible that this reference will be made accessible to the outside world 
-after the outer function has terminated. In that case, the the inner function 
+is possible that this reference will be made accessible to the outside world
+after the outer function has terminated. In that case, the the inner function
 (which is called a <b>closure</b>) will remember all the relevant variables
 of the outer function.
 </p>

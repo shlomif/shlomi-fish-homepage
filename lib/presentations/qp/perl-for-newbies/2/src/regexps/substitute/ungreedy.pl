@@ -9,7 +9,7 @@ $greedy =~ s/<html>.*<\/html>/REPLACED/;
 my $ungreedy = $string;
 $ungreedy =~ s/<html>.*?<\/html>/REPLACED/;
 
-print $string, "\n", 
-    $greedy, "\n", 
+print $string, "\n",
+    $greedy, "\n",
     $ungreedy, "\n";
 

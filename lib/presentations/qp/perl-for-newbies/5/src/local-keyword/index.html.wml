@@ -1,15 +1,15 @@
 #include 'template.wml'
 
 <p>
-Before Perl 5 came out and Perl got lexical scoping and the <tt>my</tt> 
-keyword, an older <tt>local</tt> keyword was made available for programmers to 
-temporarily "localise" the values of variables (or parts there of) in Perl. 
+Before Perl 5 came out and Perl got lexical scoping and the <tt>my</tt>
+keyword, an older <tt>local</tt> keyword was made available for programmers to
+temporarily "localise" the values of variables (or parts there of) in Perl.
 </p>
 
 <p>
 As opposed to <tt>my</tt>, which is lexically scoped, <tt>local</tt> is
-<a href="http://en.wikipedia.org/wiki/Scope_%28programming%29#Dynamic_scoping">dynamically scoped</a>. What happens when one writes a 
-<tt>local $myvar = NEW_VALUE_EXPR();</tt> (which will work only for package 
+<a href="http://en.wikipedia.org/wiki/Scope_%28programming%29#Dynamic_scoping">dynamically scoped</a>. What happens when one writes a
+<tt>local $myvar = NEW_VALUE_EXPR();</tt> (which will work only for package
 variables) is that perl will store the previous value of the variable somewhere
 safe, allow the programmer to temper with it as it pleases, and restore its
 value to its previous, saved state, when the block exits. As opposed to

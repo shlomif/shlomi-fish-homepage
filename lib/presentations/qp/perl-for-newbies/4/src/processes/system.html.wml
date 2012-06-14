@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-The <tt>system()</tt> function executes a shell command, while maintaining 
-the same standard input, standard output and environment of the invoking 
+The <tt>system()</tt> function executes a shell command, while maintaining
+the same standard input, standard output and environment of the invoking
 script. If called with one argument, it passes this argument as is to the
 shell, which in turn will process it for special characters. If passed an
 array, it will call the command in the first member with the rest of the
@@ -12,7 +12,7 @@ array as command line arguments.
 <p>
 If you receive an arbitrary array and you fear it may contain only
 one argument, you can use the <tt>system { $cmd_line[0] } @cmd_line</tt>
-notation (similar to <tt>print()</tt>'s ). 
+notation (similar to <tt>print()</tt>'s ).
 </p>
 
 <p>

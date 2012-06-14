@@ -13,19 +13,19 @@
 <table class="layout">
 <tr>
 <td class="navbar">
-<ifneq "$(FILENAME)" "index.html" 
-    "<a href="$(ROOT)/">Main</a>" 
-    "<b>Main</b>" 
+<ifneq "$(FILENAME)" "index.html"
+    "<a href="$(ROOT)/">Main</a>"
+    "<b>Main</b>"
     />
 <br />
-<ifneq "$(FILENAME)" "download.html" 
-    "<a href="$(ROOT)/download.html">Download</a>" 
-    "<b>Download</b>" 
+<ifneq "$(FILENAME)" "download.html"
+    "<a href="$(ROOT)/download.html">Download</a>"
+    "<b>Download</b>"
     />
 <br />
-<ifneq "$(FILENAME)" "links.html" 
-    "<a href="$(ROOT)/links.html">Links</a>" 
-    "<b>Links</b>" 
+<ifneq "$(FILENAME)" "links.html"
+    "<a href="$(ROOT)/links.html">Links</a>"
+    "<b>Links</b>"
     />
 <br />
 

@@ -114,7 +114,7 @@ my $contents =
                 {
                     'url' => "non-solvable-deals.html",
                     'title' => "Non-Solvable Deals",
-                },               
+                },
             ],
         },
         {
@@ -176,7 +176,7 @@ my $contents =
         },
         {
             'url' => "flame_war.html",
-            'title' => "The fc-solve-discuss flame-war",            
+            'title' => "The fc-solve-discuss flame-war",
         },
         {
             'url' => "api.html",
@@ -210,8 +210,8 @@ my $contents =
             ],
         },
     ],
-    'images' => 
-    [ 
+    'images' =>
+    [
         'style.css',
     ],
 };

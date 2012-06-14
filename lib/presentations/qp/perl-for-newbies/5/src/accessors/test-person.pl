@@ -1,11 +1,11 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 
 use strict;
 use warnings;
 
 use Person;
 
-my $shlomif = 
+my $shlomif =
     Person->new(
         {
             first_name => "Shlomi",
@@ -29,7 +29,7 @@ my $newton =
     );
 
 $newton->greet();
-print "Newton would have been ", $newton->get_age(), 
+print "Newton would have been ", $newton->get_age(),
     " years old today if he had been alive.\n"
     ;
 

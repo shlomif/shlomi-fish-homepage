@@ -2,15 +2,15 @@
 
 <p>
 In a similar way to the square brackets, putting a hash inside a pair
-of curly braces (<tt>{ ... }</tt>) will make it into a reference to a 
+of curly braces (<tt>{ ... }</tt>) will make it into a reference to a
 hash. Like an array reference, this reference is a scalar and can be
-used as an array element or a hash value. Plus, its own values can be 
+used as an array element or a hash value. Plus, its own values can be
 references to other arrays or hashes.
 </p>
 
 <p>
-To demonstrate this let's see the code of part of the contents table of 
-this very lecture, to demonstrate the multi-level data structure 
+To demonstrate this let's see the code of part of the contents table of
+this very lecture, to demonstrate the multi-level data structure
 capabilities of perl:
 </p>
 

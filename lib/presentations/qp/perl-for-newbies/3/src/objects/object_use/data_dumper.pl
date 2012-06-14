@@ -7,12 +7,12 @@ use warnings;
 use Data::Dumper;
 
 # Define a sample data structure
-my $data = 
-{ 
-    "a" => [ 5, 100, 3 ], 
+my $data =
+{
+    "a" => [ 5, 100, 3 ],
     "hello" =>
-    { 
-        "yes" => "no", 
+    {
+        "yes" => "no",
         "r" => "l",
     },
 };

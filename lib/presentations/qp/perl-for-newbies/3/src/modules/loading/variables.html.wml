@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-It is also possible to use the global variables of different 
-packages. However, such variables need to be declared using the 
+It is also possible to use the global variables of different
+packages. However, such variables need to be declared using the
 <tt>use vars qw($myvar1 @myvar2)</tt> construct.
 </p>
 

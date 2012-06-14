@@ -17,8 +17,8 @@ which will make the shell delete our entire home directory.
 </p>
 
 <p>
-To overcome such problems, one should make use of 
-<a href="http://search.cpan.org/dist/String-ShellQuote/">the 
+To overcome such problems, one should make use of
+<a href="http://search.cpan.org/dist/String-ShellQuote/">the
 String-ShellQuote module</a> which provides functions for safely
 preventing shell-code injection.
 </p>

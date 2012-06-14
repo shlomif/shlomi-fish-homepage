@@ -28,9 +28,9 @@ my $group = $cfg->get_setgid_group();
 
 my $render_all = 0;
 
-my $quadpres_obj = 
+my $quadpres_obj =
     Shlomif::Quad::Pres->new(
-        $contents, 
+        $contents,
         'doc_id' => "/",
         'mode' => "server",
     );
@@ -77,7 +77,7 @@ sub calc_page_id
 sub render_to_all_in_one
 {
     my (%arguments) = (@_);
-    
+
     my $path_ref = $arguments{'path'};
     my $branch = $arguments{'branch'};
 
@@ -154,7 +154,7 @@ sub render_to_all_in_one
                         pop(@link_path);
                         $is_current_dir = 1;
                     }
-                    
+
                     push @link_path, $component;
                 }
             }
@@ -172,7 +172,7 @@ sub render_to_all_in_one
         my $div_tag =
             qq{<div class="page" id="} . calc_page_id(\@path) .qq{">\n}
             ;
-        
+
         if ($text !~ s{(<body[^>]*>)}{$1$div_tag}ms)
         {
             $text = $div_tag . $text;
@@ -187,7 +187,7 @@ sub render_to_all_in_one
         {
             my $src_filename = $dest_dir . "/" . $p . "/" . $image ;
             my $dest_filename = $all_in_one_dir . "/" . $p . "/" . $image ;
-            
+
             my $src_mtime = _get_file_mtime(undef, $src_filename);
             my $dest_mtime = _get_file_mtime(undef, $dest_filename);
 
@@ -199,7 +199,7 @@ sub render_to_all_in_one
             }
         }
     }
-    
+
 }
 
 $quadpres_obj->traverse_tree(\&render_to_all_in_one);

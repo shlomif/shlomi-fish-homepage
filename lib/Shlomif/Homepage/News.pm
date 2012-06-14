@@ -16,7 +16,7 @@ __PACKAGE__->mk_accessors(qw(
     num_on_front
     ));
 
-my @old_news_items = 
+my @old_news_items =
 (
     {
         'date' => "22-Mar-2005",
@@ -24,17 +24,17 @@ my @old_news_items =
 <p class="newsitem">
 I added a <a href="links.html#pictures">section to my links collection with
 links to my favourite collections of pictures and wallpapers</a>. Otherwise,
-I now <a href="http://www.livejournal.com/users/shlomif/">cross-post my 
-weblog</a> in 
+I now <a href="http://www.livejournal.com/users/shlomif/">cross-post my
+weblog</a> in
 <a href="http://www.livejournal.com/">LiveJournal.com</a> and you can use
-its commenting system to post comments to its entries. 
+its commenting system to post comments to its entries.
 </p>
 
 <p class="newsitem">
-<a href="http://jmikmod.shlomifish.org/">MikMod for Java has moved to a new 
+<a href="http://jmikmod.shlomifish.org/">MikMod for Java has moved to a new
 homepage</a> at Berlios where I hope other people would be able to
-contribute to it more efficiently than before. 
-<a href="http://www.shlomifish.org/gimp-test/">The Gimp Automated Testing 
+contribute to it more efficiently than before.
+<a href="http://www.shlomifish.org/gimp-test/">The Gimp Automated Testing
 Framework</a> is a new project of mine. Check it out if you’re interested.
 </p>
 EOF
@@ -43,7 +43,7 @@ EOF
         'date' => "19-May-2005",
         'body' => <<"EOF",
 <p class="newsitem">
-The full but incomplete text of <a href="humour/human-hacking/"><i>The Human 
+The full but incomplete text of <a href="humour/human-hacking/"><i>The Human
 Hacking Field Guide</i></a> is now available online for your reading pleasure.
 </p>
 EOF
@@ -62,19 +62,19 @@ EOF
         'body' => <<"EOF",
 <p class="newsitem">
 Several new additions were added to the site. The <a href="./art/">art
-section</a> now contains two new pieces. I also added 
+section</a> now contains two new pieces. I also added
 <a href="./open-source/bits.html#old_pmwiki_revert">a new script</a>
 to the Open Source Bits and Bobs section. Several new programs were
 added to <a href="./open-source/favourite/">my favourite
 free software</a>. Some new languages were added to
 <a href="./humour/ways_to_do_it.html">the “Ways to do it” according
-to the programming languages of the World</a> page. 
+to the programming languages of the World</a> page.
 </p>
 
 <p class="newsitem">
 Some of my newer projects are now mentioned in my resumés. I added
-a link to <a href="./lecture/LAMP/slides/">a presentation about Web 
-Publishing using LAMP</a>. Finally, 
+a link to <a href="./lecture/LAMP/slides/">a presentation about Web
+Publishing using LAMP</a>. Finally,
 <a href="./philosophy/obj-oss/">the Objectivism and Open Source</a>
 essay was expanded with two new chapters.
 </p>
@@ -88,7 +88,7 @@ Added <a href="./philosophy/computers/when-c-is-best/">the “When C is the
 Best” essay</a>. Also now that the software patents threat in Europe has
 been eliminated, I have removed the notice box, and replaced my top-left
 icon with <a href="./images/shlomif-homepage-logo.png">a personal
-logo</a> based on <a href="http://ars.userfriendly.org/cartoons/?id=20030803&amp;mode=classic">EvilPHish 
+logo</a> based on <a href="http://ars.userfriendly.org/cartoons/?id=20030803&amp;mode=classic">EvilPHish
 from UserFriendly</a>.
 </p>
 
@@ -117,7 +117,7 @@ A computer music file that I created when I was in high school, with my
 friend, was added to the <a href="./art/">art section</a>.
 </li>
 <li>
-New section navigation menus were added to 
+New section navigation menus were added to
 <a href="./philosophy/">the Essays
 and Articles section</a>, <a href="./open-source/">the Software
 section</a>, and <a href="http://www.shlomifish.org/lecture/">the
@@ -131,17 +131,17 @@ Many typos were corrected in <a href="./DeCSS/">the DeCSS page</a>.
 The <a href="./links.html">Links Page</a> was updated.
 </li>
 <li>
-Several new essays and articles are now part of 
+Several new essays and articles are now part of
 the <a href="./philosophy/">Philosophy
-section</a>. Especially note 
+section</a>. Especially note
 <a href="./philosophy/computers/when-c-is-best/">the “When C is the
-Best” essay</a> which started 
-<a href="http://osnews.com/comment.php?news_id=12189">an active discussion 
+Best” essay</a> which started
+<a href="http://osnews.com/comment.php?news_id=12189">an active discussion
 in OSNews</a>.
 </li>
 <li>
 I now have <a href="./philosophy/books-recommends/">a list of recommended
-books</a>. 
+books</a>.
 </li>
 </ol>
 

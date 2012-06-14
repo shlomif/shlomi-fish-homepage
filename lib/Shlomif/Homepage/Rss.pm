@@ -14,7 +14,7 @@ use Encode (qw(decode));
 __PACKAGE__->mk_accessors(qw(
     feed
 ));
-    
+
 sub _init
 {
     my $self = shift;

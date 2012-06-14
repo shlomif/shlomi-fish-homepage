@@ -3,7 +3,7 @@
 <set-var %attributes />
 <if "<get-var level />" "" "<set-var level=2 />" />
 
-# Append a / if the directory's not empty. 
+# Append a / if the directory's not empty.
 <set-var dir="<ifeq "<get-var dir />" "" "" "<get-var dir />/" />" />
 
 <h<get-var level /> id="<get-var doc />-formats">Formats</h<get-var level />>

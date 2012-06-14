@@ -7,7 +7,7 @@ use utf8;
 
 my $hosts =
 {
-    t2 => 
+    t2 =>
     {
         base_url => "http://www.shlomifish.org/",
     },
@@ -40,7 +40,7 @@ my $tree_contents =
             text => "About Myself",
             url => "me/",
             @personal_expand,
-            subs => 
+            subs =>
             [
                 {
                     text => "Bio",
@@ -101,14 +101,14 @@ my $tree_contents =
                     url => "me/interviews/",
                     title => "Interviews that were conducted with me",
                 },
-            ],               
+            ],
         },
         {
-            text => "Humour", 
+            text => "Humour",
             url => "humour/",
             expand => { @humour_expand },
             title => "My Humorous Creations",
-            subs => 
+            subs =>
             [
                 {
                     text => "Stories",
@@ -118,7 +118,7 @@ my $tree_contents =
                     subs =>
                     [
                         {
-                            text => "The Enemy", 
+                            text => "The Enemy",
                             url => "humour/TheEnemy/",
                             title => "The Enemy and How I Helped to Fight It",
                         },
@@ -156,7 +156,7 @@ my $tree_contents =
                     [
                         {
                             text => "My Quotes Collection",
-                            title => ("Collection of Funny or Insightful " . 
+                            title => ("Collection of Funny or Insightful " .
                                 "Quotes or Aphorisms I came up with"),
                             url => "humour.html",
                         },
@@ -253,7 +253,7 @@ my $tree_contents =
             url => "open-source/",
             expand => { re => "^open-source/", },
             title => "Pages related to Software (mostly Open-Source)",
-            subs => 
+            subs =>
             [
                 {
                     text => "Projects",
@@ -293,7 +293,7 @@ my $tree_contents =
                             title => "Gradient-Fu Patch for the GIMP",
                             url => "grad-fu/",
                             hide => 1,
-                        },                
+                        },
                         {
                             text => "Bits and Bobs",
                             title => "Various Small-Scale Open-Source Works",
@@ -321,7 +321,7 @@ my $tree_contents =
                     title => "Against Commonly Used but Bad Software",
                     url => "open-source/anti/",
                     expand => { re => "^(?:no-ie|open-source/anti)/", },
-                },                
+                },
                 {
                     text => "Portability Libraries",
                     title => "Cross-Platform Abstraction Libraries",
@@ -334,7 +334,7 @@ my $tree_contents =
                     url => "open-source/resources/software-tools/",
                     hide => 1,
                 },
-                
+
             ],
         },
         {
@@ -342,7 +342,7 @@ my $tree_contents =
             url => "lecture/",
             expand => { re => "^lecture/", },
             title => "Presentations I Wrote (Mostly Technical)",
-            subs => 
+            subs =>
             [
                 {
                     text => "Perl for Newbies",
@@ -392,7 +392,6 @@ my $tree_contents =
             title => "Various Essays and Articles about Technology and Philosophy in General",
             subs =>
             [
-            
                 {
                     text => "Index to Essays",
                     url => "philosophy/Index/",
@@ -435,7 +434,7 @@ my $tree_contents =
                 {
                     text => "Political Essays",
                     url => "philosophy/politics/",
-                    title => "Essays about Politics and" . 
+                    title => "Essays about Politics and" .
                         "Philosophical Politics",
                     expand => { re => "^philosophy/politics/", },
                 },
@@ -522,7 +521,7 @@ my $tree_contents =
                     url => "meta/how-to-help/",
                     text => "How to Help",
                     title => "How you can help promote this site",
-                    subs =>                     
+                    subs =>
                     [
                         {
                             url => "meta/donate/",
@@ -542,7 +541,7 @@ my $tree_contents =
 
 sub get_params
 {
-    return 
+    return
         (
             hosts => $hosts,
             tree_contents => $tree_contents,

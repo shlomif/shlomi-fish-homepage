@@ -66,7 +66,7 @@ sub _init
             'path_info' => $self->path_info(),
             current_host => $self->current_host(),
             (eval "${class}::get_params()"),
-            'ul_classes' => 
+            'ul_classes' =>
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
             'no_leading_dot' => 1,
             );
@@ -97,7 +97,7 @@ sub get_html
     }
     else
     {
-        return 
+        return
             qq{<div class="menu_floaty">} .
             qq{<div class="sub_menu">\n} .
             qq{<h2>} . $self->title() . qq{</h2>\n} .
@@ -130,9 +130,9 @@ sub total_leading_path
         use Data::Dumper;
 
         # warn Dumper([\@main_leading_path, \@local_path, ]);
-        while ( @local_path && 
+        while ( @local_path &&
                 (
-                    $local_path[0]->direct_url() ne 
+                    $local_path[0]->direct_url() ne
                     $main_leading_path[-1]->direct_url()
                 )
             )

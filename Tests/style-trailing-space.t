@@ -10,10 +10,17 @@ use Test::More tests => 1;
         or die "Cannot open ack for input - $!";
 
     my $count_lines = 0;
+    ACK_OUTPUT:
     while (my $l = <$ack_fh>)
     {
+        chomp($l);
+
+        if ($l =~ m{\A(?:dest/t2-homepage|t2)/(?:lecture/CMake|(?:humour/fortunes/fortunes-shlomif-ids-data\.yaml\z))})
+        {
+            next ACK_OUTPUT;
+        }
         $count_lines++;
-        diag($l);
+        diag("$l\n");
     }
 
     # TEST

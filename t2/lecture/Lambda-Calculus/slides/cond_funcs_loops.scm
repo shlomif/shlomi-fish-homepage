@@ -13,7 +13,7 @@
 )
 
 ; Note: there can only be _one_ statement in the if conditionals. If you want
-; to execute more than one statement use the "begin" construct. "begin" packs a ; few statements into one statement (and returns the value of the 
+; to execute more than one statement use the "begin" construct. "begin" packs a ; few statements into one statement (and returns the value of the
 ; last statement.
 
 (if (< a b)

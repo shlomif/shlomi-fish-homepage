@@ -3,11 +3,11 @@
 
 ; use the "lambda" keyword to define an anonymous function.
 
-(define pythagoras 
+(define pythagoras
     (lambda (a b)
-        (sqrt 
-            (+ 
-                (* a a) 
+        (sqrt
+            (+
+                (* a a)
                 (* b b)
             )
         )
@@ -25,7 +25,7 @@
 
 ; A function executes all the statements inside it and returns the last statement.
 
-(define myfunc 
+(define myfunc
     (lambda (a b)
         (display a)
         (display "+")
@@ -44,7 +44,7 @@
 ; ------------------------------
 
 ; A define inside a function will only be visible inside that function.
-; Assuming a variable of the same name was defined in the outside, it will 
+; Assuming a variable of the same name was defined in the outside, it will
 ; be restored to the same value as soon as the function terminates.
 
 (define a 500)
@@ -63,7 +63,7 @@
 
 ; A function can see all the variables that were defined on the outside.
 
-; set! sets the variable that is most closest to the current scope. (hence 
+; set! sets the variable that is most closest to the current scope. (hence
 ; is in the inner-most scope).
 
 (define a "a_old_value")
@@ -93,9 +93,9 @@
 ; variables of the outer functions even after those functions terminated.
 ; This behaviour is called lexical scoping.
 
-(define display_sums 
+(define display_sums
     (lambda (a b c d e f)
-        (define display_sum 
+        (define display_sum
             (lambda (one two)
                 (display one)
                 (display "+")

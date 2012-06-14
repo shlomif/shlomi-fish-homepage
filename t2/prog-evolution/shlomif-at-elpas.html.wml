@@ -35,9 +35,9 @@ Last Updated:
 
 <p>
 I started working in <a href="http://www.elpas.com/">Elpas</a> after I
-graduated from high school, back in 1996, and had some time left until I was 
-supposed to join the Israeli Defense Force (which I didn’t eventually, as you 
-will see). So I started working there to kill the time, because I was very 
+graduated from high school, back in 1996, and had some time left until I was
+supposed to join the Israeli Defense Force (which I didn’t eventually, as you
+will see). So I started working there to kill the time, because I was very
 bored.
 </p>
 
@@ -45,37 +45,37 @@ bored.
 Elpas worked on several Infra-Red-related technologies. What I worked on was
 eventually called EIRIS - Elpas Infra-Red Identification System. This was a
 network of Infra-Red Readers that was installed in rooms in a room complex,
-that received signals from tags. That way, the network could determine in 
+that received signals from tags. That way, the network could determine in
 which room every tag is located in real time. This was suitable
-for hospitals, which want to know in real time where every Doctor, Nurse or 
+for hospitals, which want to know in real time where every Doctor, Nurse or
 piece of equipment is located, as well as organisations with similar needs.
 </p>
 
 <p>
-At first I started writing some simulations for this that ran on 
-<a href="http://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11 or 
+At first I started writing some simulations for this that ran on
+<a href="http://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11 or
 “Windows for Workgroups”</a>. Eventually I was also assigned to work on the
 software that concentrated the data from the EIRIS network and presented it
-to the user. 
+to the user.
 </p>
 
 <p>
 I was given some code written by our partner in the U.S. which was a phone
-company that implemented a similar product using their PBX, a server that ran 
-on SCO UNIX, and Windows 3.11 client that communicated with it using serial 
+company that implemented a similar product using their PBX, a server that ran
+on SCO UNIX, and Windows 3.11 client that communicated with it using serial
 lines. What we did at first was to eliminate the PBX and to convert everything
-to use the <a href="http://www.echelon.com/">Echelon</a>-based network that 
-Elpas developed. Next, we wanted to eliminate the dependence on the SCO UNIX 
+to use the <a href="http://www.echelon.com/">Echelon</a>-based network that
+Elpas developed. Next, we wanted to eliminate the dependence on the SCO UNIX
 system.
 </p>
 
 <h2 id="start">Let’s start coding!</h2>
 
 <p>
-I had a rough idea of what was required. So what I did was to gradually 
-eliminate the <a href="http://www.birdstep.com/">Raima database</a> that was 
-managed on  the UNIX, and to implement it internally in our program. I 
-started to do it using arrays of structs, which I binary searched to find a 
+I had a rough idea of what was required. So what I did was to gradually
+eliminate the <a href="http://www.birdstep.com/">Raima database</a> that was
+managed on  the UNIX, and to implement it internally in our program. I
+started to do it using arrays of structs, which I binary searched to find a
 record, and then sorted using <code>qsort()</code> to add a new record. At that
 time, I was told this was called vectors, which now I know is just a fancy
 name for an array in which all elements are placed one after the other.
@@ -94,7 +94,7 @@ that so they told me to start with Microsoft Access.
 Access... we had Access 2.0, and I had to find a way to work against it from
 our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning SQL from the
 Access docs, started converting our application to store the data on Access,
-and access it using DDE. It was a lot of work as the application was written 
+and access it using DDE. It was a lot of work as the application was written
 in C.
 </p>
 
@@ -102,13 +102,13 @@ in C.
 What can I tell you? It was slow, it kept crashing, and it didn’t work too
 well. Eventually we got a consultant. He said he thinks Borland Delphi would
 be the perfect platform for what we needed to do, but also told us they were
-working with ODBC (“Open Data-Base Connectivity”) to access the data from 
+working with ODBC (“Open Data-Base Connectivity”) to access the data from
 Windows.
 </p>
 
 <p>
 So we bought a yearly MSDN subscription and started working with ODBC against
-the Microsoft Jet database (which is also used in Access). It took me some 
+the Microsoft Jet database (which is also used in Access). It took me some
 time to get it to work cleanly with Borland C++ 4.52 which we had, but I
 eventually did it. So I converted the code to use ODBC.
 </p>
@@ -119,7 +119,7 @@ crashed a lot. We thought that we might need a better database but then we got
 a few other consultants who brought us to a realisation: since we needed to
 query the database in real time, we couldn’t afford to construct SQL queries
 send them to an SQL server that will parse them, process them relatively
-inefficiently, and then return the results over a stream which will need to 
+inefficiently, and then return the results over a stream which will need to
 be processed and parsed (to say nothing of API overhead). We needed something
 much faster, and my original vector-based database was as good as any.
 </p>
@@ -137,7 +137,7 @@ I implemented everything using ANSI C arrays of C structs, a different
 one for each table. As a result there was a lot of duplicate code there.
 </li>
 <li>
-Retrospectively, I understand that I could have implemented it with 
+Retrospectively, I understand that I could have implemented it with
 faster insertions using a balanced binary tree.
 </li>
 <li>
@@ -149,7 +149,7 @@ to O(N**2).
 </ol>
 
 <p>
-I finished the work some time before the date most of the other people at my 
+I finished the work some time before the date most of the other people at my
 office went to the CeBIT conference to present our products. I didn’t travel
 to Germany for it, and during the conference, I still came to work, to
 continue working on many of my priorities. My father and I still said to
@@ -170,8 +170,8 @@ products, and many of them were very impressed.
 For a long time I worked for minimal wage at Elpas. This was a bit before
 the Bubble and there was a lack of programmers in Israel. When I told it to
 my friend he said that one can get jobs giving away sheets of paper for over
-twice what I was earning as a programmer. My friend said beginning 
-programmers earned even twice as that. 
+twice what I was earning as a programmer. My friend said beginning
+programmers earned even twice as that.
 </p>
 
 <p>
@@ -184,7 +184,7 @@ my job in Elpas, after they hired a newer, more experienced programmer.
 </p>
 
 <p>
-As it turned out Cortext paid a global monthly wage for people who worked 
+As it turned out Cortext paid a global monthly wage for people who worked
 there full time, which was what I intended to do and was also close to minimal
 wage. Nevertheless, I was out of Elpas for good.
 </p>

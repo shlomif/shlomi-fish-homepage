@@ -2,7 +2,7 @@
 ; ---------------------------------------------
 
 
-; As you have seen an if-statement should be wrapped in lambdas while 
+; As you have seen an if-statement should be wrapped in lambdas while
 ; passing zero or other meaningless value as the argument to them. The
 ; reason for that is that otherwise both clauses will always be evaluated.
 ; (and we don't want that, do we?)
@@ -32,7 +32,7 @@
 
 ; Scheme Example for the while loop:
 (define (_cond x) (if (> x 5) lc_false lc_true))
-(define (_oper x) 
+(define (_oper x)
 	(display x)
 	(newline)
 	(+ x 1)
@@ -62,7 +62,7 @@
 ; Creating a sequnce of operations
 ; --------------------------------
 
-; Since functions are executed in order we can do operations according 
+; Since functions are executed in order we can do operations according
 ; to the call order.
 
 (define (f1 x) (display 5) 0)

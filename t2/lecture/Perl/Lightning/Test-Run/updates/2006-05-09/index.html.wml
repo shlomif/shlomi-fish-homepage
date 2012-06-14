@@ -5,7 +5,7 @@
 <h2>*::Plugin::ColorSummary on CPAN</h2>
 
 <p>
-The colour-summaries lines were released on CPAN as 
+The colour-summaries lines were released on CPAN as
 <a href="http://search.cpan.org/dist/Test-Run-Plugin-ColorSummary/">Test-Run-Plugin-ColorSummary</a> and
 <a href="http://search.cpan.org/dist/Test-Run-CmdLine-Plugin-ColorSummary/">Test-Run-CmdLine-Plugin-ColorSummary</a>.
 They now allow configuring the colour in which the summary would be displayed.
@@ -22,10 +22,10 @@ On 22 April <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05711.htm
 Test me please: P/PE/PETDANCE/Test-Harness-2.57_06.tar.gz
 </p>
 <p>
-I’m approaching the end of this release cycle. I really want to get this released. 
+I’m approaching the end of this release cycle. I really want to get this released.
 </p>
 <p>
-I’ve removed the meaningless percentages of tests that have failed. If you 
+I’ve removed the meaningless percentages of tests that have failed. If you
 rely on the output at the end, it’s different now.
 </p>
 </blockquote>
@@ -36,7 +36,7 @@ But <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05714.html">not e
 
 <blockquote>
 <p>
-I don’t like the change myself. I’m bright enough to figure out that anything less than 100% pass is bad when developing. 
+I don’t like the change myself. I’m bright enough to figure out that anything less than 100% pass is bad when developing.
 </p>
 
 <p>
@@ -49,14 +49,14 @@ numbers - but the percentage gives me a handy overview. Math is hard! :-)
 </blockquote>
 
 <p>
-So <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05722.html">I 
+So <a href="http://www.mail-archive.com/perl-qa%40perl.org/msg05722.html">I
 said</a>:
 </p>
 
 <blockquote>
 <p>
-This debate demonstrates why a plugin system is necessary for a test harness. 
-If it has it, then one can write a plugin to control whether or not 
+This debate demonstrates why a plugin system is necessary for a test harness.
+If it has it, then one can write a plugin to control whether or not
 percentages are displayed.
 </p>
 </blockquote>
@@ -65,13 +65,13 @@ percentages are displayed.
 
 <p>
 In the same discussion, people said they could really use a TAP parser/event
-handler to process the tests and write custom event handlers using it. 
+handler to process the tests and write custom event handlers using it.
 </p>
 
 <h2>“prove” &rarr; “runprove” with Test::Run::CmdLine::Prove</h2>
 
 <p>
-The prove testing command line utility was re-implemented for Test::Run as 
+The prove testing command line utility was re-implemented for Test::Run as
 runprove. Most of the functionality is found in the Test::Run::CmdLine::Prove
 module which has a good test coverage.
 </p>

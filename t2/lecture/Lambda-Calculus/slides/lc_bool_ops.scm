@@ -55,5 +55,5 @@
 )
 
 
-; Note, as opposed to the && and || operators in C or the "and" and "or" 
+; Note, as opposed to the && and || operators in C or the "and" and "or"
 ; statements in Scheme, those ands and ors always evaluate both expressions.

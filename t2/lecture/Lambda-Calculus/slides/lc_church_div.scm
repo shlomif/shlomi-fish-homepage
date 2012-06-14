@@ -40,10 +40,10 @@
         (lambda (div_by)
             ((Y (lambda (f)
                 (lambda (x)
-                    (((((greater-or-equal x) div_by)  
+                    (((((greater-or-equal x) div_by)
                         (lambda (no_use)
                             ; Add one to the result of (x-div_by)/div_by
-                            (succ (f ((subtract x) div_by)))  
+                            (succ (f ((subtract x) div_by)))
                         ))
                         (lambda (no_use)
                             zero
@@ -62,8 +62,8 @@
 (newline)
 
 ; Note that the version of divide does not use tail-recursion.
-; Thus, it will consume a memory of O(div/div_by). Nevertheless, 
-; a tail recursion version can be written using a tuple of 
+; Thus, it will consume a memory of O(div/div_by). Nevertheless,
+; a tail recursion version can be written using a tuple of
 ; (div, accumlator).
 
 

@@ -1,10 +1,10 @@
 The RWLock will use a queue. Each element of the queue will contain
 a condition variable and a flag that indicates if it contains a reader
-or a writer pending. 
+or a writer pending.
 
-The RWLock will contain a counter that tells it how many readers are using 
-it at the moment (num_readers), and a flag that specifies if there's a 
-writer using the lock (is_writer). It also uses a common internal mutex 
+The RWLock will contain a counter that tells it how many readers are using
+it at the moment (num_readers), and a flag that specifies if there's a
+writer using the lock (is_writer). It also uses a common internal mutex
 to protect against mutual exclusion (mymutex)
 
 Algorithm:
@@ -12,13 +12,13 @@ Algorithm:
 accept_pending_items:
 ---------------------
 
-Extracts the first element out of the queue. 
+Extracts the first element out of the queue.
 
-If it is a writer, it sets is_writer to 1, and signals the condition 
+If it is a writer, it sets is_writer to 1, and signals the condition
 variable of the element.
 
-If it is a reader, it sets is_writer to 0, and polls+extracts 
-all the other items out of the head of the queue that are readers 
+If it is a reader, it sets is_writer to 0, and polls+extracts
+all the other items out of the head of the queue that are readers
 (i.e it stops at the first writer or at the end of the queue).
 
 get_write_access:
@@ -26,7 +26,7 @@ get_write_access:
 
 locks mymutex.
 
-Checks if is_writer is set or num_readers is greater than 0. If so, 
+Checks if is_writer is set or num_readers is greater than 0. If so,
 it enqueues itself. (the mutex of the condition variable is mymutex)
 
 If not it sets is_writer to 1.

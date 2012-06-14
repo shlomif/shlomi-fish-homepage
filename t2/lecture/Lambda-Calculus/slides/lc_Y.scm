@@ -17,7 +17,7 @@
 )
 
 ; It has the property that (Y f) is equivalent to (f (Y f)) (and so to
-; infinity. One can use the Y combinator to implement recursion in 
+; infinity. One can use the Y combinator to implement recursion in
 ; lambda calculus.
 
 ; Let's see an example in Scheme on how to use the Y combinator:
@@ -27,18 +27,18 @@
 (define (result x) (caddr x))
 
 ; This function calculates the sum of integers from (var x) to (top x).
-; Note that we can only pass one argument to the Y's function so a 
+; Note that we can only pass one argument to the Y's function so a
 ; list is used to pass multiple arguments.
 (define mysum
     (Y (lambda (f)
         (lambda (x)
             (if (<= (var x) (top x))
                 ; If part
-                    ; The Y combinator enables us to use f to call 
+                    ; The Y combinator enables us to use f to call
                     ; itself recursively.
-                (f (list 
-                    (top x) 
-                    (+ (var x) 1) 
+                (f (list
+                    (top x)
+                    (+ (var x) 1)
                     (+ (result x) (var x))
                 ))
                 ; Else part
@@ -78,10 +78,10 @@
             (((((less-or-equal (var x)) (top x)) ; If var x < top x
                 ; If part
                 (lambda (no_use)
-                    (f 
-                        (((make-mysum-list 
-                            (top x)) 
-                            (succ (var x))) 
+                    (f
+                        (((make-mysum-list
+                            (top x))
+                            (succ (var x)))
                             ((add (result x)) (var x))
                         )
                     )
@@ -89,15 +89,15 @@
                 ; Else part
                 (lambda (no_use)
                     x
-                )) 
+                ))
                     zero ;  Pass zero as argument to no_use
             )
         )
     ))
 )
 
-(define solution (mysum 
-    (((make-mysum-list 
+(define solution (mysum
+    (((make-mysum-list
         (int->church 10))
         (int->church 5))
         (int->church 0))

@@ -28,16 +28,16 @@
 ; Currying:
 ; ---------
 ;
-; We can create functions of more than one argument in Lambda Calculus 
+; We can create functions of more than one argument in Lambda Calculus
 ; using a technique called Currying. What it means is that instead of having
-; one function that accepts several arguments, we have several nested 
+; one function that accepts several arguments, we have several nested
 ; lambdas.
 ;
 ; Here's an example:
 ;
 ; Instead of writing:
-(define my-func 
-    (lambda (x y) 
+(define my-func
+    (lambda (x y)
         (+ (* 2 x) (* 3 y))
     )
 )

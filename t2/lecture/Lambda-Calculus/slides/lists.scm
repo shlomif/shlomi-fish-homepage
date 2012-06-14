@@ -5,7 +5,7 @@
 ; that contains two elements. The first is called the car, the second is called
 ; the cdr. The car and the cdr may both be other tuples. (or the same tuple !)
 
-; (Note in Mathematics, tuples are an ordered group of elements which have a 
+; (Note in Mathematics, tuples are an ordered group of elements which have a
 ; finite number of elements, which is not necessarily two. I will use the terms
 ; "tuple" and "pair" interchangebly because Scheme does not have an internal
 ; support for tuples of greater sizes)
@@ -64,7 +64,7 @@
 ; Nested Lists
 ; ------------
 
-; One can nest lists by passing the return value of list as 
+; One can nest lists by passing the return value of list as
 ; one of the arguments to list
 
 (define towers-of-hanoi (list (list 5 4 3 2 1) '() '()))
@@ -76,7 +76,7 @@
 ; Shorthand for nestes lists of constants: (quote) or '
 (define students '((shlomi fish) (orr dunkleman) (tzafrir cohen)))
 
-; Note: inside the list there are now symbols not strings. You can 
+; Note: inside the list there are now symbols not strings. You can
 ; convert strings and symbols to each other using:
 (symbol->string 'hello)
 (string->symbol "mystring")

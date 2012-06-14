@@ -2,11 +2,11 @@ Part 1: The Basics
 ------------------
 
 Intro
-    Capabilities of the language: Regexs, OOP, FP, unlimited data structures, 
+    Capabilities of the language: Regexs, OOP, FP, unlimited data structures,
     The perl cycle - write -> run -> debug -> correct -> run
     "There is no king's road to mathematics", Euclid
 Output
-    The print command. 
+    The print command.
     Note about semi-colons
 Expressions
     Basic operators : +, -, /, *, ( ... ), ., %, **
@@ -46,7 +46,7 @@ Condition Expressions:
     The && and || operators
 The While Loop
     Explanation
-    Examples:    
+    Examples:
         ##################################
         print "Input a number:\n";
         $number=<>;
@@ -55,7 +55,7 @@ The While Loop
         {
             $power_of_2 = ($power_of_2*$power_of_2);
         }
-        print ("The first power of 2 that is " .  
+        print ("The first power of 2 that is " .
             "greater than this number is " , $power_of_2, "\n");
         ##################################
 Arrays:
@@ -63,7 +63,7 @@ Arrays:
     The , operator.
     foreach
         Note about the fact that the for and foreach keywords are equivalent
-        Note about the .. operator (without too much explanation)    
+        Note about the .. operator (without too much explanation)
     Examples:
 
 Part 2: More Advanced Topics
@@ -104,7 +104,7 @@ Regexps:
     $
     s///;
     *? +?
-    
+
     Flags:
         g
         i
@@ -115,7 +115,7 @@ Useful functions:
         Example:
             Finding the user-id of the user "shlomif".
     join()
-    map 
+    map
         Intro to the defualt variable $_
     sort
         <=> and cmp
@@ -183,22 +183,22 @@ Objects
         When a method name is called with $obj->method() it is searched
             for starting at a module class.
         Note: in perl, passing the reference to the object is done
-            explicitily and it is the first argument of a method. 
+            explicitily and it is the first argument of a method.
     Object use: (demonstrate on Data::Dumper, CGI)
         Initializing a new object
         Accessing class members using $obj->{'member'}
         Calling methods of an object using $obj->method( @args)
     Making your own objects:
         The constructor:
-#############        
-        sub new 
+#############
+        sub new
         {
             my $class = shift;
             my $self = {};
             bless $self, $class;
-            
+
             $self->initialize();
-            
+
             return $self;
         }
 ############
@@ -206,7 +206,7 @@ Objects
                 Since calling is CGI->new() then CGI is the first argument to
                     to function
                 bless
-                After the blessing is done one can call methods on it.    
+                After the blessing is done one can call methods on it.
             Note: its name need not be "new"
         Methods:
 ##############
@@ -237,7 +237,7 @@ Part 4: CPAN, sprintf, system functions, excpetions
 ---------------------------------------------------
 
 * Installing and Using CPAN Modules
-* sprintf 
+* sprintf
 * Alternate forms for writing strings.
     - q{} qq{}, etc.
     - Here Documents - <<EOF.
@@ -250,7 +250,7 @@ Part 4: CPAN, sprintf, system functions, excpetions
     - For sort: $a->{'name'} cmp $b->{'name'} || $a->{'address'} cmp $b->{'address'}
     - The "and" and "or" operators
 * Exceptions:
-    - die 
+    - die
     - eval
     - The Carp module (carp, croak)
     - The Error.pm module on CPAN
@@ -290,7 +290,7 @@ Part 5: Good Programming Practices:
         - Maintain several simultaneous lines of your code.
         - More convenient than patches+tarballs.
     - Demonstrate Subversion a bit and refer to a good tutorial (perhaps
-    "Bottom-Up Subversion")    
+    "Bottom-Up Subversion")
 * Class Accessors
     - Motivation
         - So you can later have control on setting and accessing a property.
@@ -311,7 +311,7 @@ Part 5: Good Programming Practices:
     - NEXT -> MRO::Compat/mro.
 * Some Niceties in Advanced versions of Perl:
     - use base instead of @ISA
-    - Lexical Filehandles. 
+    - Lexical Filehandles.
 * local
     - Its judicious use and abuse.
     - Refer to "Coping with Scoping", MJD's Local article,

@@ -7,16 +7,16 @@ use HTML::Latemp::GenMakeHelpers;
 use File::Find::Object::Rule;
 use IO::All;
 
-my $generator = 
+my $generator =
     HTML::Latemp::GenMakeHelpers->new(
         'hosts' =>
-        [ map { 
+        [ map {
             +{ 'id' => $_, 'source_dir' => $_,
-                'dest_dir' => "\$(ALL_DEST_BASE)/$_-homepage" 
-            } 
+                'dest_dir' => "\$(ALL_DEST_BASE)/$_-homepage"
+            }
         } (qw(common t2 vipe)) ],
     );
-    
+
 $generator->process_all();
 
 

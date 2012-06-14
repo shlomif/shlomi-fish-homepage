@@ -7,8 +7,8 @@ cmake_minimum_required(VERSION 2.6)
 
 
 add_definitions(-DDEFINE=123) # like set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DDEFINE=123")
-add_definitions(-g) 
-add_definitions(-g -DDEFINE2=123) 
+add_definitions(-g)
+add_definitions(-g -DDEFINE2=123)
 
 add_subdirectory(sub)
 

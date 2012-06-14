@@ -1,7 +1,7 @@
 ; Church Numerals
 ; ---------------
 
-; But how to represent numbers in lambda calculus? Alonso Church, the 
+; But how to represent numbers in lambda calculus? Alonso Church, the
 ; logician who invented lambda calculus suggested the following method:
 (define zero (lambda (f) (lambda (x) x)))
 (define one  (lambda (f) (lambda (x) (f x))))
@@ -14,19 +14,19 @@
 
 (define (church->int church)
 	(
-        (church 
+        (church
             (lambda (a) (+ a 1))
-        ) 
+        )
             0
     )
 )
 
 ; Finding the successor to a Church numeral:
 ; Let's take f and execute it on n one more time:
-(define succ 
-    (lambda (n) 
-	    (lambda (f) 
-    		(lambda (x) 
+(define succ
+    (lambda (n)
+	    (lambda (f)
+    		(lambda (x)
     			(f ((n f) x))
     		)
     	)

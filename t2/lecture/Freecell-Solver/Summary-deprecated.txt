@@ -1,7 +1,7 @@
 >From version 0.0 to 0.2
 -----------------------
 
-* Algorithm: 
+* Algorithm:
 
 Solve-State(state, prev_states, ret)
     if (state == empty_state)
@@ -42,7 +42,7 @@ Basically a DFS scan.
    C.
 
 ** Running the program from the command-line gave it a very slow output.
-  
+
 ** Conclusion: perl is slow, if you want your application to be as fast
     as possible, code it in C from the first stage.
 
@@ -63,8 +63,8 @@ Basically a DFS scan.
 
 ** For getting the state information I wrote some macros:
     stack_card_card_num, stack_card_deck() etc.
-    I figured out that they will be used a lot in solve_for_state 
-    so writing them as functions will consume a lot of CPU. 
+    I figured out that they will be used a lot in solve_for_state
+    so writing them as functions will consume a lot of CPU.
     Thus, they were written as macros.
 
 ** In order to avoid a case where two states which differ only with their
@@ -74,39 +74,39 @@ Basically a DFS scan.
     - The freecells were qsorted according to their card.
 
     That way, the possibility is avoided.
-    
+
     - Downside: the order of the stacks and freecells is not preserved.
 
     Show the code of canonize_state, card_compare, stack_compare
 
-** The prev_states were stored in a sorted array, with an unsorted 
-   sort-margin. 
-    - bsearch() was used to search for the current state inside 
+** The prev_states were stored in a sorted array, with an unsorted
+   sort-margin.
+    - bsearch() was used to search for the current state inside
         the sorted array.
     - lfind() was used to search for it inside the sort margin.
-    - A state which had not been previously encountered was placed at 
+    - A state which had not been previously encountered was placed at
         the end of the sort margin.
-    - Once the sort margin grew beyond PREV_STATES_SORT_MARGIN the 
+    - Once the sort margin grew beyond PREV_STATES_SORT_MARGIN the
         array was qsorted(), and the length of the sort margin was
         set to 0.
-    - When the array exceeds its allocated size it is 
+    - When the array exceeds its allocated size it is
         realloc()ed.
 
-    - PREV_STATES_GROW_BY was defined as 256 while 
-        PREV_STATES_SORT_MARGIN was defined as 16. Both could be 
+    - PREV_STATES_GROW_BY was defined as 256 while
+        PREV_STATES_SORT_MARGIN was defined as 16. Both could be
         defined to a different value by the user.
-    
 
-** The various tests conducted: 
+
+** The various tests conducted:
     (Enumerate the tests)
 
-** Two tests are special: moving a freecell or stack card to the foundations. 
+** Two tests are special: moving a freecell or stack card to the foundations.
     Moving a card to the founds where both of the founds of the other colour
     are higher than its card number plus 2. In that case if the child-state is
     not solveable neither is the original state.
 
 ** Note that the entire checking and adding code for new states was
-implemented inside the tests code. (not in a separate function). 
+implemented inside the tests code. (not in a separate function).
     - Show the code of freecell.c
 
 * Testing the final code:
@@ -115,9 +115,9 @@ implemented inside the tests code. (not in a separate function).
 and ran the function of them.
 
 ** Most of the boards ran fine. Some took too long to solve (several dozen of
-minutes). 
+minutes).
 
-** Out of which, some were terminated in the middle. 
+** Out of which, some were terminated in the middle.
 
 ** Some boards were reported by the program as unsolveable. (as I discovered
 later, they were all solveable).
@@ -132,8 +132,8 @@ announcement for it on Freshmeat.
 
 ** The states are quite large in memory size. Reduce their size by using bytes
     for their representation.
-    
-** Put the "check and add state" code in a separate function, so duplicate code 
+
+** Put the "check and add state" code in a separate function, so duplicate code
 will be avoided.
 
 * Implementing COMPACT_STATES:
@@ -147,14 +147,14 @@ will be avoided.
    able to rewrite the macros as COMPACT_STATES ones and have most of the work
    done for me.
 
-** I decided to include a compile-time directive to choose between the 
-    COMPACT_STATES and the FAST_STATES. 
+** I decided to include a compile-time directive to choose between the
+    COMPACT_STATES and the FAST_STATES.
 
 ** state_as_string required a thorough modification because it did not use the
     macros in the first place.
 
 ** I noticed that COMPACT_STATES were much faster than the so called
-    FAST_STATES. As some of you remember I posted a message to linux-il 
+    FAST_STATES. As some of you remember I posted a message to linux-il
     asking why.
 
     http://plasma-gate.weizmann.ac.il/Linux/maillists/00/04/msg00356.html
@@ -170,21 +170,21 @@ will be avoided.
 
 ** Thus, I decided to rename FAST_STATES as DEBUG_STATES because
     they are easier to debug using gdb and friends.
-    
-** Conclusion: use as little bit-space as you need, and use a lot of 
+
+** Conclusion: use as little bit-space as you need, and use a lot of
     typedefs and macros to manage them.
 
 * Implementing check_and_add_state as a separate function:
 
 ** I took a look at the code and realized that the two distinct tests are
-    going to cause me problems. 
+    going to cause me problems.
 
 ** I implemented the function check_and_add_state(), which:
     1. Accepts a pointer to the new state.
     2. Checks if it is already present in prev_states.
     3. If so, returns STATE_ALREADY_EXISTS
     4. If not, calls solve_for_state on it.
-    5. If the inner solve_for_state succeeeds returns STATE_WAS_SOLVED 
+    5. If the inner solve_for_state succeeeds returns STATE_WAS_SOLVED
         to  solve_for_state.
     6. If it didn't return STATE_IS_NOT_SOLVEABLE to solve_for_state.
 
@@ -214,8 +214,8 @@ will be avoided.
 * Switching from qsort to merge:
 
 ** In my "Introduction to Data Structures and Algorithms" class I learned
-    that Quick Sort has a minimal complexity of n*log(n) and a maximal 
-    complexity of n^2. Plus, when the array is sorted maximal complexity 
+    that Quick Sort has a minimal complexity of n*log(n) and a maximal
+    complexity of n^2. Plus, when the array is sorted maximal complexity
     is achieved.
 
     In FCS, the array of prev_states is mostly sorted, except for the sort
@@ -232,7 +232,7 @@ will be avoided.
     main prev_states array. That way, I can allocate an extra place at the
     end of the main array for the merging.
 
-** By performing the merge from the end I was able to merge without allocating 
+** By performing the merge from the end I was able to merge without allocating
     a new array and then copying it to the original one.
 
 ** I figured that since the main array will usually be considerably larger
@@ -241,18 +241,18 @@ will be avoided.
 
 ** The bsearch() function was inadequate because it doesn't the place
     in which an unfound item should be inserted. Thus, I had to write one of
-    my own. 
+    my own.
     - show the code of SFO_bsearch
 
 ** Based on SFO_bsearch I wrote SFO_merge_large_and_small_sorted_arrays.
     - Show the code.
 
 ** SFO_bsearch and SFO_merge_large_and_small_sorted_arrays were originally
-    written in perl, and then translated to C. This time, writing them in perl 
+    written in perl, and then translated to C. This time, writing them in perl
     first was a good idea, because it reduced the development time. Remember
     that the running time for the testing was not that critical.
 
-** SFO_bsearch also allowed me to add a new state at the appropriate place in 
+** SFO_bsearch also allowed me to add a new state at the appropriate place in
     the sort margin.
 
 ** I rewrote check_and_add_state to use the merge.
@@ -263,15 +263,15 @@ will be avoided.
     - FCS 0.2 takes 1 minute and 11 seconds to solve them.
     - FCS 0.4.1 takes 14 seconds
     A factor of 5 improvement.
-    
+
 
 
 * Implementing INDIRECT_STATE_STORAGE
 
 ** Motivation: I noticed that when I ran FCS on Windows NT 4.0 Workstation,
-    with DEBUG_STATES, I ran out of stack space. The reason: solve_for_state 
+    with DEBUG_STATES, I ran out of stack space. The reason: solve_for_state
     accepts the entire state data structure as a function argument, and the
-    DFS depth of that board was considerable. 
+    DFS depth of that board was considerable.
 
     Therefore, I decided to implement a scheme in which only pointers to the
     states will be passed to solve_for_state.
@@ -282,13 +282,13 @@ will be avoided.
 ** Because of the algorithm, only the last allocated state needs to be
     released.
 
-** At first, I tried to implement the actual states, to which the 
-    pointers will point as a stack, that will be realloced. Then I realized, 
+** At first, I tried to implement the actual states, to which the
+    pointers will point as a stack, that will be realloced. Then I realized,
     that because of the realloc() call, the physical location of the states
     will change.
 
 ** In Linux, at least on the kernel level, the memory is allocated in
-    powers of 2. Thus, it would be a waste if every state were allocated 
+    powers of 2. Thus, it would be a waste if every state were allocated
     separately. I decided to allocate the states in chunks that fit a 64KB
     boundary. I called these chunks packs.
 
@@ -298,10 +298,10 @@ will be avoided.
 ** Note that there is a compile-time option to compile with either the
     DIRECT_STATES_STORAGE mechanism or the INDIRECT_STATE_STORAGE.
 
-** check_and_add_state and the sfs_check_state_ macros were adapted to 
+** check_and_add_state and the sfs_check_state_ macros were adapted to
     allocate the states indirectly.
 
-** Some macros make sure that "state", "ptr_state", "new_state" and 
+** Some macros make sure that "state", "ptr_state", "new_state" and
     "ptr_new_state" are all available in the code scope.
 
 ** Benchmarks:
@@ -318,7 +318,7 @@ will be avoided.
 ** Conclusions:
     - When passing structs as arguments to functions always do that by a
         a pointer.
-    - Never sort, search in, etc with a direct vector of structs. Instead 
+    - Never sort, search in, etc with a direct vector of structs. Instead
         use an array of pointers.
 
 * Usability features:
@@ -332,10 +332,10 @@ will be avoided.
     - Possibly show the source, although it's just an ugly C parsing
         code.
 
-** Wrote a function check_state_validity that checks that all cards are 
+** Wrote a function check_state_validity that checks that all cards are
     present in an initial board once and only once.
 
-    - When I used the program I noticed that I had many mistakes when 
+    - When I used the program I noticed that I had many mistakes when
         trying to manually input boards.
 
 * I placed Freecell Solver 0.4 on its web-site and posted an announcement
@@ -354,7 +354,7 @@ will be avoided.
 * Moving the global variables to an instance strucutre.
 
 ** FCS made extensive use of global variables. But I wanted it also to be
-available as a library sooner or later. Now, if only one instance of the 
+available as a library sooner or later. Now, if only one instance of the
 library can be run we are set. But what about multi-threaded applications?
 
 ** I decided to create an instance structure that will be passed as the first
@@ -394,12 +394,12 @@ functions to instantize it.
     2. Contain 8 integers that specify the order of the stacks.
     3. Contain 4 integers that specify the order of the freecells.
 
-** I had to modify canonize_state() that it will swap the order specifiers 
-    as well as the stacks or freecells themselves. I could not do that 
-    with C's qsort() so I wrote my own insertion-sort routine. (Show the 
+** I had to modify canonize_state() that it will swap the order specifiers
+    as well as the stacks or freecells themselves. I could not do that
+    with C's qsort() so I wrote my own insertion-sort routine. (Show the
     code of canonize_state() in state.h)
 
-** I also had to modify the code itself to access the s element of the 
+** I also had to modify the code itself to access the s element of the
     state_with_locations stucture. I did some of it using macros.
 
 ** I also had to modify the state_ia routines to manage state_with_locations
@@ -416,12 +416,12 @@ functions to instantize it.
 * Adding the fcs_ prefix.
 
 ** Despite moving the global variables to the instance struct, FCS still
-    have a lot of functions. But names like state_as_string may might 
-    as well be names of user's routines. Thus, FCS may interfere with the 
+    have a lot of functions. But names like state_as_string may might
+    as well be names of user's routines. Thus, FCS may interfere with the
     main program of the user.
 
-** Solution: Add a "fcs_" or "freecell_solver" prefixes to the names of 
-    the global functions. That way, they won't collide with names of 
+** Solution: Add a "fcs_" or "freecell_solver" prefixes to the names of
+    the global functions. That way, they won't collide with names of
     other functions, in case Freecell Solver is compiled as a library.
 
 ** Conclusion: Avoid namespace collision. In C++ use the namespaces facility,
@@ -444,7 +444,7 @@ functions to instantize it.
 ** Solution: Let the user specify a test order from the command line.
 
 ** Implementation: The code of solve_for_state was splitted into 10 test
-    functions and one main function. Each test function implemented one of 
+    functions and one main function. Each test function implemented one of
     the tests and called check_and_add_state().
 
 ** The solve_for_state() function holds ten pointers to test functions, and
@@ -456,7 +456,7 @@ functions to instantize it.
 
 ** Results:
     - For every board there's usually a test order that can solve it very
-        fast. For other orders it usually get stuck and doesn't finish 
+        fast. For other orders it usually get stuck and doesn't finish
         very quickly.
 
     - For example, running FCS 0.6.2 with a limit of 150000 boards with the
@@ -480,7 +480,7 @@ functions to instantize it.
 
         Duration: 2:50 minutes
         Number of unsolved boards: 5 (some of them after a complete scan)
-            
+
 
 ** Conclusion: If several things can be done with any given order, make sure
     they are implemented as separate routines. You may wish to play with the
@@ -489,7 +489,7 @@ functions to instantize it.
 
 * Interface separation and code cleaning.
 
-** Like I said, I wanted FCS to be also available as a library. 
+** Like I said, I wanted FCS to be also available as a library.
 
 ** I placed the initialization, solution and de-allocation routines in their
     own functions, instead of inside main.
@@ -499,4 +499,4 @@ functions to instantize it.
     - freecell_solver_free_instance
     - freecell_solver_init_instance
     - freecell_solver_free_instance
-    
+

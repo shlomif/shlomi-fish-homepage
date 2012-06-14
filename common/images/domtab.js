@@ -2,7 +2,7 @@
 	DOMtab Version 3.1415927
 	Updated March the First 2006
 	written by Christian Heilmann
-	check blog for updates: http://www.wait-till-i.com	
+	check blog for updates: http://www.wait-till-i.com
 	free to use, not free to resell
 */
 
@@ -23,7 +23,7 @@ domtab={
 	init:function(){
 		var temp;
 		if(!document.getElementById || !document.createTextNode){return;}
-		var tempelm=document.getElementsByTagName('div');		
+		var tempelm=document.getElementsByTagName('div');
 		for(var i=0;i<tempelm.length;i++){
 			if(!domtab.cssjs('check',tempelm[i],domtab.tabClass)){continue;}
 			domtab.initTabMenu(tempelm[i]);
@@ -33,7 +33,7 @@ domtab={
 			}
 			domtab.checkURL();
 		}
-		if(document.getElementById(domtab.printID) 
+		if(document.getElementById(domtab.printID)
 		   && !document.getElementById(domtab.printID).getElementsByTagName('a')[0]){
 			var newlink=document.createElement('a');
 			newlink.setAttribute('href','#');
@@ -72,7 +72,7 @@ domtab={
 	},
 	showAll:function(e){
 		document.getElementById(domtab.printID).parentNode.removeChild(document.getElementById(domtab.printID));
-		var tempelm=document.getElementsByTagName('div');		
+		var tempelm=document.getElementsByTagName('div');
 		for(var i=0;i<tempelm.length;i++){
 			if(!domtab.cssjs('check',tempelm[i],domtab.tabClass)){continue;}
 			var sec=tempelm[i].getElementsByTagName(domtab.contentElements);
@@ -80,7 +80,7 @@ domtab={
 				sec[j].style.display='block';
 			}
 		}
-		var tempelm=document.getElementsByTagName('ul');		
+		var tempelm=document.getElementsByTagName('ul');
 		for(i=0;i<tempelm.length;i++){
 			if(!domtab.cssjs('check',tempelm[i],domtab.prevNextClass)){continue;}
 			tempelm[i].parentNode.removeChild(tempelm[i]);
@@ -218,7 +218,7 @@ domtab={
 		}
 	},
 	addEvent: function(elm, evType, fn, useCapture){
-		if (elm.addEventListener) 
+		if (elm.addEventListener)
 		{
 			elm.addEventListener(evType, fn, useCapture);
 			return true;
@@ -253,4 +253,4 @@ domtab={
 	}
 }
 domtab.addEvent(window, 'load', domtab.init, false);
-	
+

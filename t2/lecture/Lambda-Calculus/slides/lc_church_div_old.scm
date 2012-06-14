@@ -17,7 +17,7 @@
 			(lambda (div_by)
 				(((((greater-or-equal div) div_by)
 					(lambda (no_use)
-						(f ((lc_cons 
+						(f ((lc_cons
 							((subtract div) div_by))
 							div_by))
 					))
@@ -41,15 +41,15 @@
 (display (church->int ((reminder (int->church 100)) (int->church 9))))
 (newline)
 
-(define divide_helper 
+(define divide_helper
 (Y (lambda (f)
 	(lambda (x)
 		(((lambda (div)
 			(lambda (div_by)
 				(((((greater-or-equal div) div_by)
 					(lambda (no_use)
-						(succ (f ((lc_cons 
-							((subtract div) div_by)) 
+						(succ (f ((lc_cons
+							((subtract div) div_by))
 							div_by)))
 					))
 					(lambda (no_use)
@@ -75,5 +75,5 @@
 
 ; Note that the version of divide does not use tail-recursion.
 ; Thus, it will consume a memory of O(div/div_by). Still, a tail
-; recursion version can be written using a three-elements 
-;( div, div_by, accumlator) list. 
+; recursion version can be written using a three-elements
+;( div, div_by, accumlator) list.

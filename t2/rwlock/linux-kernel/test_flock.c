@@ -19,9 +19,9 @@ void myloop(int idx, int is_writer)
 {
     int lock;
     srand(seeds[is_writer * 1000 + idx]);
-    
+
     lock = open("mylockfile", O_RDONLY);
-    
+
     while (1)
     {
         dprint("Want Lock");
@@ -75,12 +75,12 @@ int main(int argc, char * argv[])
             myloop(a,0);
         }
     }
-    
+
     while(1)
     {
         sleep(1);
     }
-    
-    return 0;    
+
+    return 0;
 }
 

@@ -24,7 +24,7 @@ test=&gt; BEGIN \g
 BEGIN
 test=&gt; UPDATE employees SET first_name = 'Nahum' WHERE employee_id = 3 \g
 UPDATE 1
-test=&gt; INSERT INTO employees (employee_id, first_name, last_name) 
+test=&gt; INSERT INTO employees (employee_id, first_name, last_name)
 test=&gt; VALUES (500, 'Linus', 'Torvalds' ) \g
 INSERT 18680 1
 test=&gt; DELETE FROM employees WHERE employee_id = 54 \g

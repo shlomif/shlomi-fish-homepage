@@ -11,7 +11,7 @@
 
 <define-tag devel_version>
 # Removed until I have a new development version
-	
+
 <p>
 <a href="pthread_rwlock_fcfs-0.3.5.tar.gz">Development version</a>
 </p>
@@ -98,7 +98,7 @@ competing readers.
 A First-Come First-Served (FCFS) RWLock solves this problem by making sure
 that the pending threads are served at the same order as the time of their
 arrival. Thus, starvation is eliminated assuming that a thread does not
-obtain the lock indefinetly (which in any case should not happen in a 
+obtain the lock indefinetly (which in any case should not happen in a
 well-designed system).
 </p>
 
@@ -108,15 +108,15 @@ well-designed system).
 By using a queue in which each element controls a pending thread. A detailed
 description of the algorithm can be found <a href="Scheme.txt">here</a> and
 naturally, there are also the comments in the code. If there’s anything you
-don’t understand, don’t hesitate to 
-<a href="$(ROOT)/me/contact-me/">contact me</a> 
+don’t understand, don’t hesitate to
+<a href="$(ROOT)/me/contact-me/">contact me</a>
 and ask.
 </p>
 
 <p>
 Recently, the algorithm was modified to pack several readers or several
 writers on the same queue element, which results in saving of condition
-variables. The new scheme for it (which is a bit more complex) can be found 
+variables. The new scheme for it (which is a bit more complex) can be found
 <a href="Scheme_RLE.txt">here</a>.
 </p>
 

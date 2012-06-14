@@ -18,7 +18,7 @@ sub _map_wmls_to_deps
             $s =~ s{\.wml\z}{};
             $s =~ s{\A(?:\./)?t2/}{\$(T2_DEST)/};
             $s;
-        } 
+        }
         @$files
     ];
 }
@@ -38,7 +38,7 @@ sub _map_wmls_to_deps
                 re => qr{^\#include *"\Q$_\E\.wml"}ms,
                 files => [],
             },
-        } 
+        }
         qw(
             amazon
             dbook
@@ -62,21 +62,21 @@ sub _map_wmls_to_deps
         {
             if ($contents =~ $files_containing_headers{$header}{re})
             {
-                push @{ $files_containing_headers{$header}{files} }, 
+                push @{ $files_containing_headers{$header}{files} },
                     $fn;
             }
         }
     }
-    
+
     my $deps_text = "";
 
     foreach my $header (sort { $a cmp $b } keys(%files_containing_headers))
     {
-        $deps_text .= 
-            join(' ', 
+        $deps_text .=
+            join(' ',
                 @{ _map_wmls_to_deps(
                         $files_containing_headers{$header}{files}
-                    ) 
+                    )
                 }
             );
 

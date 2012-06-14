@@ -24,9 +24,9 @@ foreach my $filename (@ARGV)
                     {
                         printf {*STDOUT}
                         (
-                            "%s:%d:%s\n", 
-                                $filename, 
-                                $idx+$expat->current_line(), 
+                            "%s:%d:%s\n",
+                                $filename,
+                                $idx+$expat->current_line(),
                                 $l
                         );
                     }

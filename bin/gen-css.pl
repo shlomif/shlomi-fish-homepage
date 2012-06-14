@@ -20,7 +20,7 @@ __PACKAGE__->mk_accessors(qw(
 
 =head1 NAME
 
-Template::Preprocessor::TTML - Preprocess files using the Template Toolkit 
+Template::Preprocessor::TTML - Preprocess files using the Template Toolkit
 from the command line.
 
 =cut
@@ -33,7 +33,7 @@ our $VERSION = '0.0101';
 
     my $obj = Template::Preprocessor::TTML->new(argv => [@ARGV]);
     $obj->run()
-    
+
     ...
 
 =head1 FUNCTIONS
@@ -79,7 +79,7 @@ sub _mode_version
 {
     print <<"EOF";
 This is TTML version $VERSION
-TTML is a Command Line Preprocessor based on the Template Toolkit 
+TTML is a Command Line Preprocessor based on the Template Toolkit
 (http://www.template-toolkit.org/)
 
 More information about TTML can be found at:
@@ -108,7 +108,7 @@ EOF
 sub _mode_help
 {
     my $self = shift;
-    
+
     print $self->_get_help_text();
 
     return 0;
@@ -147,7 +147,7 @@ sub _mode_regular
     }
 }
 
-1; 
+1;
 
 package main;
 

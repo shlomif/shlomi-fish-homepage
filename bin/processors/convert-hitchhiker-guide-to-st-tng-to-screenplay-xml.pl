@@ -55,12 +55,12 @@ sub process_scene
 
 my $END = '* * *      T  h  e      E  n  d      * * *';
 $text =~ s{\A(.*?)^(SCENE 1:)}{wrap_as_desc($1) . $2}ems;
-$text =~ 
+$text =~
 s{^(?<start_line>(?:SCENE (?<id>\d+)|EPILOGUE):[^\n]*\n(?: +[^\n]*\n)*)(?<body>.*?)(?=^(?:(?:SCENE|EPILOGUE)|(?:\s*\Q$END\E)))}
 [
     my ($start_line, $id, $body) = @+{qw(start_line id body)};
 
-    my $s_line = 
+    my $s_line =
         defined($id)
         ? qq{\n\n<s id="scene_$id" title="Scene $id">\n\n}
         : qq{\n\n<s id="epilogue" title="Epilogue">\n\n}

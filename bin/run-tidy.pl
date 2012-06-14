@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -10,7 +10,7 @@ my $finder = File::Find::Object->new({}, "dest");
 my $before_size = 0;
 my $after_size = 0;
 
-my %skip = 
+my %skip =
 (
     map { $_ => 1 }
     (
@@ -41,7 +41,7 @@ while (my $r = $finder->next())
         $before_size += (-s $r);
         if (system(qw(tidy -utf8 -q -config lib/tidy.rc -m), $r))
         {
-            system("gvim", "-p", 
+            system("gvim", "-p",
                 ((-e "t2/$base.wml") ? "t2/$base.wml" : "t2/$base"),
                 $r,
             );

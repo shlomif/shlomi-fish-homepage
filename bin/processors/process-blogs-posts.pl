@@ -12,12 +12,12 @@ foreach my $fn (@ARGV)
         my $out_fn = "lib/feeds/shlomif_hsite/$date.html";
 
         my $contents = io($fn)->slurp;
-        
+
         if (not $contents =~ s{\A\s*<h2>([^<]+)</h2>\s*}{}ms)
         {
             die "Cannot match title at '$fn'!";
         }
-        
+
         my $title = $1;
 
         $contents =~ s{\s*<!--.*?-->\s*}{}gms;

@@ -22,7 +22,7 @@ sub stringify
 {
     my $list = shift;
 
-    return 
+    return
     [
         map { (ref($_) eq "") ? XML::LibXML::Text->new($_) : $_ } @$list
     ];

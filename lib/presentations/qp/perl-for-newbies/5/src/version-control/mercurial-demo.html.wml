@@ -135,7 +135,7 @@ mytest.t .. ok
 All tests successful.
 Files=1, Tests=1,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
 Result: PASS
-$p4n/5/merc-test/MyModule$ hg st
+$p4n/5/merc-test/MyModule$ hg status
 ? MyModule/mytest.t
 $p4n/5/merc-test/MyModule$ hg add mytest.t
 $p4n/5/merc-test/MyModule$
@@ -348,12 +348,12 @@ mytest.t (Wstat: 512 Tests: 3 Failed: 2)
   Non-zero exit status: 2
 Files=1, Tests=3,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
 Result: FAIL
-$ hg st .
+$ hg status .
 M MyModule.pm
 $ hg revert My
 MyModule.pm   MyModule.pm~
 $ hg revert MyModule.pm
-$ hg st .
+$ hg status .
 ? MyModule.pm.orig
 $ prove mytest.t
 mytest.t .. ok
@@ -369,7 +369,7 @@ We can see the log of all our changes:
 </p>
 
 <quadpres_code_block>
-$ hg up
+$ hg update
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
 $ hg log
 changeset:   3:a7599e97a8d8

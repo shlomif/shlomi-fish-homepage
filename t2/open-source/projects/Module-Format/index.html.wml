@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
 
 <set-var modname="Module-Format" />
 <set-var sco_mod="http://search.cpan.org/dist/<get-var modname />/" />
@@ -109,29 +110,11 @@ parameters.) to install Perl modules.
 
 <h3 id="links-module-format">For <get-var modname /></h3>
 
-<ul>
-
-<li>
-<a href="<get-var sco_mod />"><get-var modname />
-on search.cpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/<get-var modname />"><get-var modname />
-on kobesearch</a>
-</li>
-
-<li>
-<a href="http://bitbucket.org/shlomif/web-cpan">BitBucket.org Mercurial
-repository</a> - contains the history of the code, the version control
-source code, and other resources.
-</li>
-
-<li>
-<a href="http://freecode.com/projects/module-format">Freecode Record - FILL IN</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="<get-var modname />"
+    bitbucket_url="http://bitbucket.org/shlomif/web-cpan"
+    freecode_url="http://freecode.com/projects/module-format">
+</bitbucket_cpan_dist_links >
 
 <h2 id="licence">Licence</h2>
 

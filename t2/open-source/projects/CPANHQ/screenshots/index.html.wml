@@ -1,0 +1,53 @@
+#include '../template.wml'
+
+<latemp_subject "CPANHQ Screenshots" />
+
+<h3 id="screenshots-2009-06-29">29-June-2009</h3>
+
+<define-tag shot endtag="required">
+<preserve filename title />
+<set-var %attributes/>
+<h4><get-var title /></h4>
+<p>
+<a href="2009-06-29/<get-var filename />"><img
+src="2009-06-29/thumbnails/<get-var filename />"
+title="<get-var title />"
+alt="<get-var title />"
+/ ></a>
+</p>
+%body
+<restore filename title />
+</define-tag>
+
+<shot filename="cpanhq-front-page.jpg" title="The CPANHQ Front Page">
+<p>
+The front page of CPANHQ.
+</p>
+</shot>
+
+<shot filename="cpanhq-author-distributions-mschwern.jpg" title="An author distribution’s table">
+<p>
+A sample author distribution’s table.
+</p>
+</shot>
+
+<shot filename="cpanhq-author-releases-mschwern.jpg" title="An author releases list">
+<p>
+A sample author releases’ list.
+</p>
+</shot>
+
+<shot filename="cpanhq-dist-acme-cpanauthors-authors.jpg"
+title="A sample CPAN distribution">
+<p>
+A sample CPAN distributions with some keywords/tags/labels defined.
+</p>
+</shot>
+
+<shot filename="cpanhq-tag-CPAN.jpg"
+title="A sample tag">
+<p>
+A sample tag URL, pointing to the distributions that have defined it.
+</p>
+</shot>
+

@@ -1,0 +1,215 @@
+#include '../template.wml'
+
+<latemp_subject "Reflections on Online Communities" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This essay was written by inspiration from the Joel on Software essay
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">
+Building Communities with Software</a>. Comments on
+<a href="index-old.html">the original incarnation of it</a> led me to write
+this version, which hopefully would be better.
+</p>
+
+<h2 id="meta">Meta-Information</h2>
+
+<dl>
+<dt>Written By:</dt>
+<dd><a href="http://www.shlomifish.org/">Shlomi Fish</a></dd>
+<dt>Published:</dt>
+<dd>22-November-2005</dd>
+<dt>Last Modified:</dt>
+<dd>22-November-2005</dd>
+</dl>
+
+<h2 id="text">The Essay Itself</h2>
+
+<p>
+Joel Spolsky wrote
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an
+essay titled “Building Communities with Software”</a> back in March, 2003.
+He explained there the motivation behind his web forum and why he believed it
+was so good.
+</p>
+
+<p>
+It has been over two years since the article was published. Before and since,
+I had a lot of experience with various online communities:
+<a href="http://en.wikipedia.org/wiki/Internet_forum">web-based forums</a>,
+<a href="http://www.irchelp.org/">IRC channels</a> on various networks,
+electronic
+<a href="http://en.wikipedia.org/wiki/Electronic_mailing_list">mailing
+lists</a>,
+<a href="http://en.wikipedia.org/wiki/Instant_messaging">Instant Messaging</a>
+chats,
+<a href="http://en.wikipedia.org/wiki/Blog">Weblogs</a> and their comments,
+<a href="http://en.wikipedia.org/wiki/Wiki">Wikis</a>,  and to some extent
+other types of online communities. In here, I will try to
+summarise what I consider the essence of what makes each one of them succesful
+or unsuccessful (or some of both).
+</p>
+
+<p>
+While I agree with Spolsky on several points he made, there are some points
+I disagree on, or at least believe that people who set-up or design can make a
+choice between the two. Both will be acceptable, but they will also influence
+the nature and atmosphere of the forum.
+</p>
+
+<h3 id="growing_a_community">Growing a Community</h3>
+
+;;; E-mailing a person upon a comment.
+;;; RSS feeds for the discussions, and for parts of the discussion.
+;;;     - copy from old.
+
+<p>
+One of the issues that face any starting forum is how to gather an active
+community. Being an editor of <a href="http://dmoz.org/">the Open Directory
+Project’s</a> “Linux User Groups” category, I’ve been submitted countless
+of “User Groups” that are essentially half-dead PHP-BB or PHP-Nuke/PostNuke
+sites, where there’s very little activity.
+</p>
+
+<p>
+Often creating a new online community is redundant as there are more
+wide-scoped forums available where such disucssion is acceptable. Often,
+however, the originator of a forum feels he has no choice because the
+parent forum owners have declared such discussions as off-topic. Generally,
+the best strategy is to allow all the discussions in the previous forum as
+well, in order to make the parent forum obsolete.
+</p>
+
+<h4 id="growing__email">E-mail Policy</h4>
+
+<p>
+E-mailing a person upon a comment to his post, or to a comment he made,
+can actually (despite what Joel says)  make your web forum more popular. This
+is due to the fact that this motivates him to visit the forum again, respond to
+the comment, and also possibly look at neighbouring comments or other
+discussions. On the page that the E-mail refers to, one can advertise (in a
+non-intrusive way), “hot” discussions, etc.
+</p>
+
+<p>
+If no E-mail is sent, the person may forget about it, or despair from checking
+his thread for responses time and again.
+</p>
+
+<h3 id="registration_and_authentication">Registration and Authentication</h3>
+
+;;;
+;;; * Can work for the web.
+;;;    - It is probably a good idea not to have it.
+;;; * A must for the IRC.
+;;; * Cryptologically-secure methods for doing that are probably an overkill
+;;;     - use plaintext passwords.
+
+<h3 id="dealing_with_spam">Dealing with Spam</h3>
+
+;;; rel=“nofollow”.
+;;; Bayesian spam-filtering.
+;;;     - Spam filters - mostly have been for E-mail until now, but
+;;;       some may be adapted or written for spam in the near future.
+;;; Registration.
+;;;     - a E-mail handshake.
+;;;     - Captchas. (accessibility problem, and not a full solution)
+;;; URL blacklist.
+
+<h3 id="dealing_with_trolling">Dealing with Trolling and Insults</h3>
+
+;;; - Filtering content based on keywords - not a good idea
+;;;     - “one grown” vs. negro.
+;;;     - woman’s last name that contained “dick”
+;;;
+;;; #debian on Freenode:
+;;;     - one person there who constantly flame newbies.
+;;;     - #debian redirects to #knoppix - even if it’s a debian problem.
+
+<h3 id="dealing_with_low_clue">Dealing with Low-clue Posts or Remarks</h3>
+
+<h3 id="good_snr">Maintaining a good “Signal to Noise Ratio”</h3>
+
+;;; - Off-topic discussions don’t necessarily reduce the SNR.
+;;; - Discussions tend to drift off sometimes, and people dislike others
+;;;   telling them that they should stay on-topic.
+;;;     - It is however often necessary to do so.
+;;; - Discussions about Politics proper tend to make people uncomfortable.
+;;; The soc.culture.objectivism - Neo-Tech ban and my post.
+;;;     - bad example
+;;; Moderating
+;;;     - by the user
+;;;         - Slashdot. (for comments)
+;;;         - Perl Monks. (posts disappearing).
+;;;         - Kuro5hin.
+;;;     - by admins.
+;;;         - Useful for many sites.
+;;;         - Slashdot: articles hitting the entire blogosphere, but are
+;;;           absent from it.
+
+<p>
+Usually an online forum is dedicated to one central topic. This is generally
+considered a good thing, because if it hosts discussion of any topic
+whatsoever, it will: 1. Lack a certain appeal, and 2. People will eventually
+consider it to have a low signal-to-noise ratio.
+</p>
+
+<h3 id="semantics_of_operations">Semantics of Joining, Posting and Commenting</h3>
+
+;;; * Mailing lists that reject posts to other people.
+;;;
+;;; * Reply-To:
+;;;     - sometimes good, sometimes bad.
+;;;     - Point to “Reply-to considered harmful” and
+;;;       “Reply-to considered harmful considered harmful”.
+;;; * Promoting Active Discussions to the top.
+;;;     - a very bad idea.
+;;; * Explain exactly what happens.
+;;;     - “one grown” vs negro without any feedback on what’s wrong.
+;;;     - The shortened URL that caused me trouble withou any feedback.
+
+<h3 id="markup">The Markup</h3>
+
+;;; * Support as broad a subset of HTML as possible.
+;;;     - Convert unacceptable Markup to proper markup.
+;;; * Have an option to use HTML or some subset of it.
+;;;     - Tapuz/etc.
+;;;     - The Tie-the-Knot Forum with its [...] tags.
+;;; Localised Tags - in non-latin alphabet or foreign words.
+;;;     - what if you can only input Latin?
+;;;         - Mouse-driven keyboards? Give me a break!
+;;;         - Problem if a foreigner is trying to take part in a localised
+;;;           forum.
+
+
+<p>
+Some forums have no markup except perhaps for URLs being
+highlighted. I think that nevertheless, some forums should allow some markup.
+In their case, what they should have is plain and simple HTML, without any
+of the following idiosyncracies:
+</p>
+
+<ul>
+<li>
+Link the following words to a URL. (at least not without giving any option of
+the “&lt;a” tag).
+</li>
+<li>
+Line breaks (<tt>\n</tt> characters) cause a new line to start at the post.
+(very annoying!)
+</li>
+<li>
+A very limited HTML syntax. Support as broad as syntax as possible optionally
+converting tags to more sane tags, but don’t force the user not to input them.
+</li>
+<li>
+Weird tags like square brackets instead of angles.
+</li>
+</ul>
+
+<p>
+HTML is very easy to learn and one can get the hang of it pretty quickly. Many
+times, people post markup from web pages they created with HTML, and they’ll
+be annoyed if they can’t post it as is.
+</p>
+

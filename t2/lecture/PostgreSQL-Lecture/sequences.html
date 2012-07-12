@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Using Sequences</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Using Sequences</h1>
+<h3>* Sequences are a PostgreSQL extension to SQL that allows to
+generate unique number IDs in one atomic operation.<br />
+<br />
+* Example:<br />
+<br /></h3>
+<pre>
+test=&gt; CREATE SEQUENCE my_seq \g
+CREATE
+test=&gt; SELECT NEXTVAL('my_seq') \g
+nextval
+-------
+      1
+(1 row)
+
+test=&gt; SELECT NEXTVAL('my_seq') \g
+nextval
+-------
+      2
+(1 row)
+
+</pre>
+</body>
+</html>

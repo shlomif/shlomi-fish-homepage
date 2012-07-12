@@ -1,0 +1,41 @@
+Goals:
+    An ANSI C Library (and some stand alone command line programs) for
+    Solving Freecell and several similar Solitaire games.
+
+    Aims for:
+    * Modularity
+    * Speed
+    * Reduced Memory Consumption
+    * Smart Algorithms
+    (http://fc-solve.shlomifish.org/arch_doc/fcs_arch_doc/x51.html)
+
+History:
+
+    * Project was started in March 2000, as a way to see if an idea I
+    had for solving Freecell would work. Shortly after, version 0.2.0
+    was released.
+
+    * It evolved through several major versions since then, and is now
+    at stable version 2.8.6 and development version of 2.9.9.
+
+    * It was so far integrated into three Freecell implementations:
+    KDE's kpat, Freecell Pro, and Freecell 3d.
+
+Architecure:
+    * A collection of the encountered states. (= layouts of the board)
+
+    * On one such collection several DFS and Best-First Search scans operate.
+
+    * Support for Meta-moves and Atomic Moves through Test Functions.
+
+To Do's:
+    * Incorporating Patsolve's Logic.
+
+    * Thread Enabling.
+
+    * Writing an Automatic Testing Framework
+
+    * Safety from Failed Memory Allocations
+
+    Others: http://fc-solve.shlomifish.org/to-do.html
+

@@ -1,0 +1,44 @@
+#include '../template.wml'
+
+<latemp_subject "Shlomi Fish’s Art- “Made with Latemp”" />
+<latemp_meta_desc "The “Made with Latemp” logo." />
+
+<p>
+<b>Written at</b>: 02-Jun-2006
+</p>
+
+<img src="made-with-latemp-big.png"
+alt="Made with Latemp - Large Version"
+style="margin-bottom : 1.5em" />
+
+<p>
+This is a button I made for use with sites created using the
+<a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a> content-management
+system. It was created using <a href="http://www.inkscape.org/">Inkscape</a>,
+a cross-platform vector-graphics package (which I ran on Linux).
+</p>
+
+<p>
+The design is really simple - a big Latemp logo with the font Crilee, with
+a nice gradient within a white background and a text saying “Made With” of a
+Sans-Serif font on a blue background on top.
+</p>
+
+<p>
+I had to use a sans-serif font for the top inscription, because the serif
+fonts I tried did not scale well to small resolutions, which were needed by
+a decently sized button.
+</p>
+
+<p>
+One task that required some effort were the rounded corners. To have them
+I needed to merge (Inkscape’s Path Union operation) a rounded-corner
+rectangle, with a shorter (but equally as wide) rectangle positioned at the
+bottom.
+</p>
+
+<p>
+I’m pretty happy with the results, even though it did not require too much
+effort.
+</p>
+

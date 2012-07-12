@@ -1,0 +1,66 @@
+#include '../template.wml'
+
+#include "amazon.wml"
+
+<latemp_subject "I accept Donations" />
+
+<p>
+Throughout the years I have produced a lot of useful or entertaining
+content - open source code, humorous stories, essays, articles, material
+for  presentations, web-sites, riddles and puzzles, and some computer
+graphics. I have made most of it available on my site and elsewhere, under
+a <a href="http://en.wikipedia.org/wiki/Open_content">free/open content
+licence</a>.
+</p>
+
+<p>
+Working on these works required a lot of time and still requires a
+lot of time for maintenance. While working on such endeavours gives me a
+lot of pleasure, I still would like to see some financial benefit. That’s why
+I decided to ask for donations using PayPal. <b>So if what I created has
+benefited you in some way, please consider donating</b>. If you don’t want
+to make a direct monetary donation, you can also
+<a href="<amazon_wishlist_link />" rel="amazon wishlist">purchase
+items out of my <b>Amazon.com wishlist</b></a>.
+</p>
+
+<p>
+How will I spend the money? On:
+</p>
+
+<ol>
+<li>
+Financing the physical infrastructure for my works.
+</li>
+<li>
+Give it away to noble causes.
+</li>
+<li>
+Save some of it in case I’ll need it.
+</li>
+<li>
+Spend it on nice things for my friends, my family and me.
+</li>
+</ol>
+
+<define-tag non_cancelled_how_to_donate>
+<p>
+Since I was told that
+<a href="http://mail.perl.org.il/pipermail/perl/2011-December/012241.html">PayPal
+“donate” buttons were reserved for U.S. non-profits</a> (and I’m still not
+sure whether this is the case) I removed the button from here. Just for
+reference, if you’d like to contribute or send money to me, you can use my
+PayPal ID - <b><tt>shlomif@iglu.org.il</tt></b>. Sorry for the inconvenience
+until I sort this out.
+</p>
+</define-tag>
+
+<define-tag cancelled_paypal>
+<paypal_donate_code type="nolink" />
+</define-tag>
+
+<non_cancelled_how_to_donate />
+
+<p>
+<a href="<amazon_wishlist_link />" rel="amazon wishlist">Amazon.com Wishlist</a>
+</p>

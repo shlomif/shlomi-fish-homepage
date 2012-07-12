@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+
+<p>
+If an <tt>e</tt> is appended to the end of the substitution command,
+then the right side is treated as a normal Perl expression, giving you
+the ability to use operators and functions.
+</p>
+
+<p>
+The following example, replaces the first word in the sentence with its length:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/substitute/length.pl" />
+</quadpres_code_block>
+
+<p>
+And the following example, converts the first word that starts with the letter
+"S" into uppercase:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/substitute/uppercase.pl" />
+</quadpres_code_block>
+

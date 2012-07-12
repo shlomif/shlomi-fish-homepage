@@ -1,0 +1,29 @@
+<define-tag shlomif_docbook_doc_text>
+<preserve doc level dir />
+<set-var %attributes />
+<if "<get-var level />" "" "<set-var level=2 />" />
+
+# Append a / if the directory's not empty.
+<set-var dir="<ifeq "<get-var dir />" "" "" "<get-var dir />/" />" />
+
+<h<get-var level /> id="<get-var doc />-formats">Formats</h<get-var level />>
+
+<ul>
+<li><a href="<get-var dir /><get-var doc />/">HTML (read online)</a></li>
+<li><a href="<get-var dir /><get-var doc />.pdf">Acrobat Reader (PDF)</a></li>
+<li><a href="<get-var dir /><get-var doc />.rtf">MS Word RTF</a></li>
+</ul>
+
+<h<get-var level /> id="<get-var doc />-sources">DocBook/XML Sources</h<get-var level />>
+
+<ul>
+<li><a href="<get-var dir /><get-var doc />.xml">XML Source</a></li>
+<li><a href="<get-var dir />shlomif-essays.dsl">DSSSL Stylesheet</a></li>
+<li><a href="<get-var dir />jadetex.cfg">jadetex.cfg</a></li>
+<li><a href="<get-var dir />style.css">CSS Stylesheet</a></li>
+<li><a href="<get-var dir />Makefile">Makefile to Generate everything.</a></li>
+</ul>
+
+<restore doc level dir />
+</define-tag>
+

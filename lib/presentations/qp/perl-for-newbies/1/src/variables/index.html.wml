@@ -1,0 +1,59 @@
+#include 'template.wml'
+
+<p>
+Variables are named cells stored in the computer memory that can hold any
+single Perl value. One can change the value that a variable holds, and one can
+later retrieve the last value assigned as many times as wanted.
+</p>
+
+<p>Variables in Perl start with a dollar sign (<tt>$</tt>) and proceed with any
+number of letters, digits and underscores (<tt>_</tt>) as long as the first
+letter after the dollar is a letter or underscore.</p>
+
+<p>To retrieve the value of a variable one simply places the variable name
+(again including the dollar sign) inside an expression.</p>
+
+<p>To assign value to a variable, one places the full variable name (including
+the dollar sign) in front of an equal sign (<tt>=</tt>) and places the value
+to the right of the equal sign. This form is considered a statement and should
+be followed by a semicolon. The value assigned may be an expression that may
+contain other variables (including the assigned variable itself!).</p>
+
+<p>An example will illustrate it:</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/variables/var1.pl" />
+</quadpres_code_block>
+<p>
+The output of this program is:
+</p>
+
+<quadpres_code_block>
+17 * 2 = 34
+17 * 10 = 170
+17 * 75 = 1275
+17 * 24 = 408
+</quadpres_code_block>
+
+<p>
+Several things can be noticed:
+</p>
+
+<ol>
+
+<li>
+The value of <tt>$a</tt> changes throughout the program. It's perfectly fine,
+and usually even necessary to modify the value of a variable.
+</li>
+
+<li>
+By using <tt>$myvar</tt> we can ensure, that assuming we wish to change its
+value, we will only have to change it in one place, not in every place
+it appears.
+</li>
+
+</ol>
+
+
+
+

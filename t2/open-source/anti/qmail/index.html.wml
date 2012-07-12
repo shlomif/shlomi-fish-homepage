@@ -1,0 +1,140 @@
+#include '../template.wml'
+<latemp_subject "The Anti-qmail Page" />
+
+<div class="note">
+<h2 id="note">Note</h2>
+
+<p>
+Some of the issues raised by this page have become irrelevant now that
+it was announced that the <a href="http://lwn.net/Articles/260481/">original
+qmail package has been released into the public domain</a>.
+</p>
+
+</div>
+
+<p>
+<b>Last Updated:</b> 14-December-2007
+</p>
+
+<p>
+You should avoid deploying <a href="http://qmail.org/">the qmail mail
+server</a> on new installations and try to convert existing installations
+to a different MTA. That’s because:
+</p>
+
+<ol>
+<li>
+It’s not open-source, and has a very problematic licence, that does not allow
+binary packages, distributing modified sources (only patches), etc.  As such
+it is not distributed as part of distributions of operating systems, and is
+not regularly kept up-to-date. There are other open-source alternatives that
+work just as well.
+</li>
+<li>
+It is no longer actively maintained. The last version was released on 1998.
+So qmail has been abandonware for over 7 years at the time of this writing
+(November 2005). Many patches are available for it, but they may not apply
+cleanly one after the other, and are not supported by the author. It even no
+longer compiles cleanly on Linux.
+</li>
+<li>
+Because the licence effectively permits only the author
+(<a href="http://cr.yp.to/">Daniel J. Bernstein</a>)
+to maintain the software, his consistent, mulishly unpleasant and
+hostile attitude tends to become an obstacle, as it would not be if the
+software were licensed differently.
+</li>
+<li>
+It has a completely user-unfriendly build system, a long build process, and
+incredibly unreadable code. Bernstein uses a lot of one- or two-letter
+variable names, and cryptic function names.
+</li>
+<li>
+The ezmlm-idx mailing list manager, whose use with qmail is popular
+has a lot of duplication in its configuration. It hard-codes the various paths
+in many different places. It is also exclusive to qmail. (Note that one can
+use one or more different mailing list managers using qmail).
+</li>
+<li>
+Many bugs were discovered in qmail since its last release (including some
+security bugs) and were left unfixed in the vanilla version.
+</li>
+<li>
+qmail lags behind other MTAs in its feature-set.
+</li>
+</ol>
+
+<h2>Alternatives</h2>
+
+<p>
+Instead you should use one of the following MTAs:
+</p>
+
+<ol>
+<li>
+<a href="http://www.postfix.org/">Postfix</a>
+</li>
+<li>
+<a href="http://www.courier-mta.org/">Courier</a>
+</li>
+<li>
+<a href="http://www.exim.org/">Exim</a>
+</li>
+<li>
+<a href="http://freshmeat.net/browse/32/">Other SMTP Servers</a>. (Also see
+<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s comparison of
+common Mail Transport Agents</a>.)
+</li>
+</ol>
+
+<h2>Links</h2>
+
+<ul>
+<li>
+<a href="http://perl.org.il/pipermail/perl/2004-October/005989.html">Discussion
+in the Israeli Perl mailing list</a>
+</li>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.72853.10">Discussion
+in the Joel on Software forum</a>
+</li>
+<li>
+<a href="http://lwn.net/Articles/85493/">Discussion in LWN.Net</a>
+</li>
+<li>
+<a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s MTA comparison
+page</a>
+</li>
+<li>
+<a href="http://linuxmafia.com/~rick/faq/index.php?page=warez#djb">Rick Moen’s
+FAQ about Daniel J. Bernstein’s Software</a>
+</li>
+<li>
+<a href="http://linmagazine.co.il/node/view/9620">Hebrew blog entry in Aviram
+Jenik’s blog about Dan J. Bernstein not giving the money he promised for a
+remote root exploit that was found in qmail</a>
+</li>
+<li>
+<a href="http://lwn.net/Articles/257004/">Coverage of
+“Ten Years of qmail Security” on LWN.net</a> - contains many instructive comments.
+</li>
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=07/11/06/0131227">Slashdot
+discussion of “Qmail at 10 Years”</a>
+</li>
+</ul>
+
+<h2>Discussions of this Page</h2>
+
+<ul>
+<li>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg42279.html">Linux-IL
+mailing list</a></li>
+<li>
+<a href="http://zgp.org/pipermail/linux-elitists/2005-November/011333.html">Linux-elitists</a>
+</li>
+</ul>
+
+
+
+

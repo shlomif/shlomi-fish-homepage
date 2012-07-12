@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+<p>
+Perl has several escape sequences which are specific to regular expressions.
+Here is a list of some of the more useful ones:
+</p>
+
+<ul>
+
+<li>
+<tt>\w</tt> - matches a word character, equivalent to <tt>[A-Za-z_]</tt>. The
+corresponding sequence - <tt>\W</tt> matches a non-word character.
+</li>
+
+<li>
+<tt>\s</tt> - matches a whitespace character, usually space and tab. <tt>\S</tt>
+matches a non-whitespace character.
+</li>
+
+<li>
+<tt>\d</tt> - matches a digit. Equivalent to <tt>[0-9]</tt>. <tt>\D</tt> matches a
+non-digit.
+</li>
+
+<li>
+<tt>\b</tt> - matches a word boundary. This sequence in fact has a zero width
+but it is nevertheless highly useful. <tt>\B</tt> matches something that is not
+a word boundary.
+</li>
+
+</ul>

@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+In the flag <tt>mylibrary_LDFLAGS</tt> one should specify an option like that:
+<tt>-version-info [CURRENT]:[REVISION]:[AGE]</tt>.
+</li>
+
+<li>
+<tt>[CURRENT]</tt> is the most recent version of the library that the library
+supports.
+</li>
+
+<li>
+<tt>[REVISION]</tt> is the implementation number of the current interface (i.e:
+patch releases)
+</li>
+
+<li>
+<tt>[AGE]</tt> is the number of versions back that this version is still
+backwards compatible with.
+</li>
+
+</points>
+

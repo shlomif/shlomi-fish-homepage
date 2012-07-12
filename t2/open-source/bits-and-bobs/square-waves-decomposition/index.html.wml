@@ -1,0 +1,41 @@
+#include '../template.wml'
+
+<latemp_subject "Square Waves Decomposition of a Sine Wave" />
+
+<p>
+I’ve been on <a href="irc://irc.freenode.net/#math">Freenode’s #math
+channel</a> the other day when someone logged in and asked if and how a
+sine wave can be decomposed into a series of square waves (with integral
+frequencies). I wrote the following programs to investigate this.
+</p>
+
+<p>
+They use a greedy algorithm, that tries each frequency and then finds
+the amplitude of the corresponding wave that reduces the energy of the total
+wave by as much as possible.
+</p>
+
+<p>
+There’s what seems to be
+<a href="http://en.wikipedia.org/wiki/User:Kieff/Sine_from_square_waves">a
+more analytic method of doing the Sine-into-Square-Waves decomposition</a>.
+(There’s also
+<a href="http://en.wikipedia.org/wiki/User_talk:Kieff#sines">more
+about it</a>).
+</p>
+
+<h2 id="download">Downloads</h2>
+
+<ul>
+<li>
+<a href="square-waves-decompose-0.1.0.pl">Perl program version 0.1.0</a>
+</li>
+<li>
+<a href="square-waves-decompose-0.1.0.c">C program version 0.1.0</a>
+</li>
+</ul>
+
+<p>
+The C version is faster, but both produce identical results. The Perl version
+requires <a href="http://pdl.perl.org">PDL - the Perl Data Language</a>.
+</p>

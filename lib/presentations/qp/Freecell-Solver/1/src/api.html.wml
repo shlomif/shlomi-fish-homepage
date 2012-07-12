@@ -1,0 +1,49 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Starting of Freecell Solver 1.0.0, FCS had a set of functions
+entitled freecell_solver_user_ (after their prefix) which were meant
+for integration into a larger software needing solving capabilities.
+</li>
+
+<li>
+When Stephan Kulow integrated Freecell Solver into kpat (a solitaire suite
+for KDE), he did not use it, because it did not give him everything he
+needed. Instead, he used the more basic internal functions.
+</li>
+
+<li>
+I told him that I "would sleep better at night" knowing that fcs_user_ will
+be used, and asked him to implement the missing parts himself, and send
+me the patch. He did.
+</li>
+
+<li>
+Markus Oberhumer (of PySol fame), created a Python interface for the
+library, and again sent me some functions he wrote.
+</li>
+
+<li>
+Eventually, I converted the command line executable itself to use
+fcs_user (while adding a lot of functions in the process) to make sure I
+give the embedding application all of the functionality that I use.
+</li>
+
+<li>
+I also ended up creating an API to analyze a command line and configure a
+solver instance accordingly.
+</li>
+
+<li>
+Sometimes later, I found it encouraging that Dave Wilkinson, an engineer
+who worked on Freecell 3D, was able to integrate fcs_user_ without my help,
+and just informed me of its release.
+</li>
+
+<li>
+The importance of the <a href="http://www.joelonsoftware.com/articles/fog0000000012.html">"Eating your own Dog-Food"</a> concept cannot be stressed enough.
+</li>
+
+</points>

@@ -1,0 +1,603 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Why Closed Books are So 19th-Century" />
+
+<toc_div />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>
+This document will explain why it is a bad idea, in this day and age, to write
+a book that is not available online for everyone to see, link to, redistribute,
+and possibly modify.
+</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>
+Recently Ask Bjørn Hansen (of perl.org and Perl fame) has <a
+href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html">reviewed
+the book <i>JavaScript: The Good Parts</i></a> on his blog. I <a href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html#comment-2055840">wrote</a> the following
+comment:
+</p>
+
+<blockquote>
+<p>
+Hi Ask!
+</p>
+
+<p>
+Interesting. Is this book available online for free?
+</p>
+
+<p>
+Regards,
+</p>
+
+<p>
+Shlomi Fish
+</p>
+</blockquote>
+
+<p>
+To which he <a href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_good_parts.html#comment-2056988">replied</a>:
+</p>
+
+<blockquote>
+    <p>
+    Why would it be available for free?
+    </p>
+
+    <p>
+    Please support the publisher and the author by paying them the $20 (Amazon
+    US) or the £13 (Amazon UK) to buy the book.
+    </p>
+
+    <p>
+     - ask
+    </p>
+</blockquote>
+
+<p>
+This essay is my reply to that.
+</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+Since the invention of the Press, the traditional method of spreading knowledge
+was to write a book, and get a publisher to publish it. Indeed, we can recall
+many important and influential historical books. However, as computer
+networking became faster, less error-prone, and more ubiquitous - a different
+medium of communicating knowledge has emerged: the Internet. To
+<a href="http://www.boingboing.net/2004/11/06/save-canadas-interne.html">quote
+    Cory Doctorow</a>:
+</p>
+
+<define-tag book_examples>
+<a href="http://en.wikipedia.org/wiki/Philosophiæ_Naturalis_Principia_Mathematica">Isaac
+    Newton’s <i>Prinicipia</i></a>,
+<a href="http://en.wikipedia.org/wiki/The_Origin_of_Species">Charles
+    Darwin’s <i>The Origin of the Species</i></a>,
+<a href=""></a>
+</define-tag>
+
+<blockquote>
+    <p>
+    The Internet has one overarching feature that makes it superior to the
+    technologies that preceded it: it can copy arbitrary blobs of data from one
+    place to another at virtually no cost, in virtually no time, with virtually
+    no control. This is not a bug. This is what the Internet is supposed to do.
+    </p>
+</blockquote>
+
+<p>
+As a result, more and more people depend on the Internet for getting
+information, and getting more knowledge and understanding. Not only does the
+Internet allow information to be retrieved, it also allows one to publish
+information and collaborate on it. Perhaps the most prominent examples for
+that are the various <a href="http://www.wikimedia.org/">Wikimedia projects</a>
+of which <a href="http://en.wikipedia.org/">the English wikipedia is the
+largest and most popular</a>. Thousands of large-scale contributors, and
+100’s of thousands of minor ones, have individually created an
+online encyclopedia that contains mostly comprehensive information about
+practically every imaginable topic.
+</p>
+
+<p>
+And despite all that, we can often see that books are getting published
+on paper, and are either completely not available online, or their free
+re-distribution is restricted. They are often available on
+Peer-to-Peer networks or illegally, but their use is still restricted,
+and complicates things.
+</p>
+
+<p>
+In this article, I’d like to note why non-open books (or at least books that
+are not available online) are as pointless as
+<a href="$(ROOT)/philosophy/foss-other-beasts/">non-open-source
+    software</a>.
+</p>
+
+<h2 id="some-quotes">Some Quotes</h2>
+
+<p>
+In my older essay <a href="$(ROOT)/philosophy/case-for-file-swapping/">the
+    Case for File Swapping</a>, I made the claim that while copyrights are
+an important concept, the Law must not restrict non-commercial distribution
+of copyrighted works. Naturally, due to a generation gap,
+governments and copyright-owners have not yet given in to the fact that the
+Internet practically changes the ability to regulate the free distribution
+of copyrighted material. Therefore, the Law in most countries was still not
+modified accordingly.
+</p>
+
+<p>
+As producers of copyrightable works it is therefore our choice whether
+what we generate will be available online for all the public to experience
+(and possibly re-distribute and enhance) or that we’d rather make it an
+“All-Rights-Reserved” document that is only available offline or illegally.
+</p>
+
+<p>
+Here’s what Paul Graham <a href="http://www.paulgraham.com/web20.html">wrote
+about online encyclopedias</a>:
+</p>
+
+<blockquote>
+    <p>
+    The second big element of Web 2.0 is democracy. We now have several
+    examples to prove that <a
+        href="http://www.paulgraham.com/opensource.html">amateurs</a> can
+    surpass professionals, when they have
+    the right kind of system to channel their efforts. <a
+        href="http://wikipedia.org/">Wikipedia</a> may be the
+    most famous. Experts have given Wikipedia middling reviews, but they miss
+    the critical point: it’s good enough. And it’s free, which means people
+    actually read it. On the web, <b>articles you have to pay for might as well
+        not exist</b>. Even if you were willing to pay to read them yourself,
+    you can’t link to them. They’re not part of the conversation.
+    </p>
+</blockquote>
+
+<p>
+Graham continues to <a
+    href="http://www.paulgraham.com/opensource.html">say that</a>:
+</p>
+
+<blockquote>
+<p>
+One measure of the incompetence of newspapers is that <b>so many still
+make you register</b> to read stories. I have yet to find a blog that tried
+that.
+</p>
+</blockquote>
+
+<p>
+Mr. Graham is not the only or the first one to say things along this line.
+Previously, <a
+    href="http://catb.org/~esr/">Eric S. Raymond</a> had written his
+<a href="http://catb.org/~esr/faqs/hacker-howto.html">“How to Become a Hacker”</a> (= software enthusiast), and has been propagating
+    similar ideas in
+<a href="http://catb.org/~esr/writings/cathedral-bazaar/">his “The
+Cathedral and the Bazaar” series of essays</a> (an older version of which was
+also published as a paperback book). <a
+    href="http://catb.org/~esr/faqs/hacker-howto.html#believe2">Quoting</a>
+from the howto:
+</p>
+
+<blockquote>
+
+    <p> 2. <b>No problem should ever have to be solved twice.</b>  </p>
+
+    <p> Creative brains are a valuable, limited resource. They shouldn’t be
+    wasted on re-inventing the wheel when there are so many fascinating new
+    problems waiting out there.  </p>
+
+    <p> To behave like a hacker, you have to believe that the thinking time of
+    other hackers is precious — so much so that it’s almost a moral duty for
+    you to share information, solve problems and then give the solutions away
+    just so other hackers can solve new problems instead of having to
+    perpetually re-address old ones.  </p>
+
+</blockquote>
+
+<p>
+Now, if you ask me, publishing a non-open book is a classical example of
+requiring other people to solve the problem you’ve solved again, because they
+cannot share your work with other people.
+</p>
+
+<h2 id="the-problems">The Problems with Closed Books</h2>
+
+<p>
+I can think of several important problems with the fact that some books
+are closed:
+</p>
+
+<h3 id="no-linking-problem">1. Their Closed Nature Makes One
+Unable to Effectively Link to Them</h3>
+
+<p>
+If I want to point someone at a text on the wikipedia, I can give him a
+direct link to the article, or even a sub-section of it, an anchor or
+that of a previous version. On the other hand, with the online Britannica, the
+link will likely not work, because my friend won’t be registered. This is
+even worse for books that are not available online.
+</p>
+
+<p>
+In this day and age, people give links in chats (Instant Messaging, IRC, etc.),
+on web pages and other documents, in blog posts and comments, on web forums,
+in emails, and in an increasing and more diverse forms of Internet mediums.
+They are also given in many non-Internet methods: books, newspapers, scientific
+papers, notes, voice calls, SMSes, etc. People who get these links expect
+these links to just work and show them the goods - not require registration
+or payment.
+</p>
+
+<p>
+So if you’re making your web resource closed, you’re likely to alienate
+a large amount of people who will experience it, tell it to their friends,
+link to it on their blogs, etc.
+</p>
+
+<p>
+If you’re worried that without registration you won’t be able to track what
+visitors do - don’t. There are several software packages that allow you to
+track what every individual visitor did, and deploying and utilising
+them is justifiable if you want to better monitor your visitors. I personally
+don’t go to such extents, because I feel I have better ways to spend time on
+making my site more attractive, like by writing more material, or by doing
+white-hat publicity and <a
+href="http://en.wikipedia.org/wiki/Search_engine_optimization">Search
+Engine Optimisation</a>, but your kilometrage may vary depending on your
+resources and philosophy.
+</p>
+
+<h3 id="quoting-problem">2. It Makes Quoting and Re-using The Books Harder</h3>
+
+<p>
+It’s much easier to quote an online document than an offline one. Either
+by “copy-and-paste” or by inspecting the HTML markup. Compare this to a
+paperback book where you have to type the text character-by-character
+or use OCR. Or to <a href="http://safari.oreilly.com/">O’Reilly’s Safari
+service</a>, whose pages are scrambled JavaScript junk, meant as a measure
+of <a href="http://en.wikipedia.org/wiki/Digital_rights_management">Digital
+Restrictions Management (DRM)</a>. It’s nothing the “View Formatted Source”
+of some Firefox extensions cannot cope with, but it’s still annoying.
+</p>
+
+<p>
+On the other hand, a freely available document can easily be quoted,
+re-used and re-distributed. One can save it as a self-contained file and send
+it to friends. One can refute it part by part. One can quote it in the
+context of grander document (like I did earlier).
+</p>
+
+<h3 id="not-preventing-piracy-problem">3. Closing the Books Doesn’t Prevent
+Illegal Use</h3>
+
+<p>
+When J. K. Rowling released the 6th Harry Potter book, she decided not to make
+an Electronic version available, in order to prevent piracy. However, it took
+<a href="http://www.mobileread.com/forums/showthread.php?threadid=4501">less
+than 24 hours before “pirates” had made a complete
+online version available</a> for everyone to read. Now, if the publishers
+had made an electronic version available, then at least they could have
+made money by selling many electronic copies.
+</p>
+
+<p>
+It’s not hard to find books online illegitimately. There’s a
+<a href="http://www.unix.com.ua/orelly/">Ukrainian site carrying many O’Reilly
+titles online</a> (if you don’t like the link then send me a
+<a href="http://en.wikipedia.org/wiki/DMCA">DMCA takedown notice</a>), which
+is easily found using a Google search. Whenever people give a link to this site
+on Perl IRC channels or mailing lists, many Perl hackers mention that
+it is illegal and should not be used. But it’s there and accessible, and many
+people, especially young ones, won’t feel or know they’re doing something
+wrong. And if you ask me, there’s <a
+href="$(ROOT)/philosophy/case-for-file-swapping/">nothing
+wrong with non-commercial redistribution of publicly-available
+content</a>.
+</p>
+
+<p>
+There’s also the element of convenience. Some people will buy a book because
+it is a physical object. If we take Harry Potter as an example, then most people
+will not be content reading it on the computer. Moreover, Joel Spolsky
+has published <a
+href="http://www.joelonsoftware.com/">many articles on his
+<i>Joel on Software</i> site</a>, and later compiled many of them into
+<a href="http://www.amazon.com/Joel-Software-Occasionally-Developers-Designers/dp/1590593898">a book</a>.
+The latter has become a best-seller, and even I decided to buy it as a gift
+for a previous workplace, so they could read it and learn from it.
+</p>
+
+<p>
+Similarly, after reading the <a href="http://www.shlomifish.org/philosophy/books-recommends/#programming_perl">3rd
+edition of <i>Programming Perl</i></a> which I borrowed from the Israeli Perl
+Mongers library, I decided that I liked it so much, and so bought it so I can
+read it at home.
+</p>
+
+<p>
+By making your book available online, you’re giving yourself a huge publicity,
+and earning a lot of repute. You can also make some extra income from
+ads, store affiliations, and other revenue. If it’s under a strict-enough
+licence, then you can also make money by licensing it for commercial use. And
+some people will still want to buy a paperback book, an electronic copy,
+or license it on commercial book-viewing sites (such as the previously
+mentioned Safari).
+</p>
+
+<p>
+In short, keeping your work closed undermines legitimate uses, but does not
+prevent illegitimate ones. So you become bald from here and from here.
+</p>
+
+<p>
+(A correspondent to this article mentioned the book <a
+href="http://www.amazon.com/Madding-Gerund-Other-Dispatches-Language/dp/1590280555/ref=nosim/shlomifishhom-20/"><i>Far
+from the Madding Gerund</i></a>, which is a compilation of articles from
+the authors’ blog
+<a href="http://itre.cis.upenn.edu/~myl/languagelog/"><i>Language Log</i></a>
+, which has been selling very well, as another example of a book based on
+articles from a blog.)
+</p>
+
+<h3 id="critique-problem">4. Closing the Books Makes Critique and
+Commenting Harder</h3>
+
+<p>
+If you have a non-publicly-available book, and you discover an error in it,
+then you must give some convoluted instructions for finding it. This is instead
+of just linking to the relevant part, using a commenting service such as
+<a href="http://www.stumbleupon.com/">StubmleUpon</a> or
+<a href="http://digg.com/">Digg</a> or even being able to use the page’s
+inline commenting system.
+</p>
+
+<p>
+For example, I was once offered a contract by an O’Reilly editor to review the
+new edition of
+<a href="http://www.oreilly.com/catalog/9780596527327/"><i>HTML &amp; XHTML:
+The Definitive Guide</i></a>. I detected a lot of problems there (in an
+otherwise
+good book), and reported them, and eventually received the money and a
+thank-you note.
+</p>
+
+<p>
+Now I hope my commentary has been integrated into the final version, but still
+cannot be certain of it, and while I still have a copy of the drafts, I don’t
+have access to the published book. If I were going to buy the book, and wanted
+to comment on it, I wouldn’t be able to legally point my readers to the exact
+place, so they can read it themselves.
+</p>
+
+<p>
+No text is set in stone. It is likely that even if you don’t allow
+Wiki-style editing to the document, you’d like people to comment on it, and
+revise the document in the future, and allow some derivative works based
+and inspired from it.
+</p>
+
+<h3 id="admission-of-failure">5. It’s an Admission of Failure</h3>
+
+<p>
+Let’s say you’ve found that the current built-in documentation of a software
+project is inadequate and you’ve decided to write a closed book remedying
+it. What does it say? That the online documentation is bad, and that thanks
+to you, it will remain this way. So don’t do that.
+</p>
+
+<p>
+On the IRC, I discussed my frustration with the current state of
+of the documentation of
+<a href="http://git.or.cz/">git</a>, whose commands have extremely
+terse and unintelligible <tt>--help</tt> displays, and exhaustive
+and confusing man pages. Then someone told me he suggested
+<a href="http://www.stonehenge.com/merlyn/">Randal Schwartz</a> to
+write an O’Reilly book about git. Now, if this book will indeed be written
+(and not made available online for free), it <b>will not improve the bad
+documentation</b> of the current system. Instead, it will be an admission of
+failure.
+</p>
+
+<p>
+I voiced similar concerns about the Perl documentation back in my time
+in my old <a href="$(ROOT)/philosophy/perl-newcomers/">“Usability”
+of the Perl Online World for Newcomers</a> essay. Quoting from it:
+</p>
+
+<blockquote>
+
+<p>
+I don’t have anything against people trying to make money off Perl by selling
+books. But these people are the same people who are the Perl project leaders,
+and so are responsible to make sure Perl is well-documented. If people get
+frustrated learning Perl, and become unhappy with it, they will criticise
+“Perl”. Not the Perl documentation. Not the Perl community. Not even the Perl
+leaders. “Perl”. If Larry Wall et al. care enough about Perl, they should make
+sure it has good online documentation.
+</p>
+
+<p>
+…
+</p>
+
+<p>
+Such books need not be available online if their authors so much don’t desire.
+However, Perl is very hard to learn from public electronic resources alone. I
+believe there may even be a clash of interests because the core Perl people
+also write them and so may not have enough motivation to improve the online
+documentation. Making them public will resolve that.
+</p>
+
+</blockquote>
+
+<p>
+I may have been a bit too blunt there, but I think you get my point.
+</p>
+
+<p>
+Also consider <a href="http://www.ruby-doc.org/">Ruby-Doc</a>, which
+illustrates the pathetic state of the online Ruby documentation (at
+least in English). Only one available free book, and it already has two
+closed newer editions, which are more up-to-date. And it doesn’t even cover
+the so-called “Ruby-on-Rails”.
+</p>
+
+<p>
+Many newer books were published, but none of them were made available online,
+and I was told that what most Ruby newcomers do is download illegal copies of
+such books.
+</p>
+
+<p>
+If you care enough about your technology or topic, make sure to publish
+your work online too. Otherwise, you’re admitting that the current
+documentation is inadequate, that you care more for getting money than for
+making your work more popular, and that you don’t care enough about the
+legitimate uses that I mentioned.
+</p>
+
+<h3 id="does-not-hurt-sales">6. Keeping the books closed does not Encourage
+Sales</h3>
+
+<p>
+Many books (and other works) that were made available online have become
+best-sellers. <a href="http://www.nin.com/">Nine Inch Nails</a> have
+placed their <a href="http://ghosts.nin.com/">Ghosts I-IV</a> album
+online and made it legally distributable, and it turned out to be a huge
+financial success. After I downloaded the first part, I opted to pay
+5 U.S. Dollars for downloading the rest, and many people did the same.
+</p>
+
+<p>
+I also mentioned the <i>Joel on Software</i> book and also of note is
+<a href="http://paulgraham.com/hackpaint.html">Paul Graham’s Hackers
+&amp; Painters Book</a>, which contains essays he had written on his
+site or placed there since.
+</p>
+
+<p>
+There are many other examples. Generally, most closed books fail in the
+marketplace, so keeping them closed won’t likely make them more popular.
+Making your book available online can also give you free publicity, and allow
+people to experience it before buying it, which may also help your book
+succeed eventually.
+</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>
+In this day and age, you should look into online publishing as another
+way to reach your audience, and to allow them to experience what you
+had to say. As a creative person, I want the maximal possible number of people
+to experience and make use of my work, and I’m sure it’s the same for you.
+</p>
+
+<p>
+Putting legal and technical obstacles in the way of people who want to
+share, comment, expand upon and refer others to your work, is something that
+you should know better than to do.
+</p>
+
+<p>
+Optionally, you should consider applying more elements of
+<a href="http://www.gnu.org/philosophy/free-sw.html">freedom-as-in-speech</a>
+to your work’s legal status, as this will make it even more usable. Refer to
+such projects as <a href="http://creativecommons.org/">the
+Creative Commons</a> for more information.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+Thanks to <a href="http://jwn.name/">firespeaker</a> for doing some
+copy-editing of this document.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<a href="http://onlinebooks.library.upenn.edu/">The Online Books Page</a>
+- an index of over 30,000 gratis books on the Web.
+</li>
+
+<li>
+<a href="http://www.gutenberg.org/">Project Gutenberg</a> - a collection
+of free texts of books that have become Public Domain.
+</li>
+
+<li>
+<a href="http://en.wikibooks.org/">Wikibooks</a> - a wiki for collaborating
+on free (GNU FDL) online books.
+</li>
+
+<li>
+<a href="http://www.gnu.org/philosophy/free-doc.html">“Free
+Software and Free Manuals”</a> - Richard Stallman’s call-for-arms for good
+free documentation.
+</li>
+
+<li>
+<a href="http://creativecommons.org/">Creative Commons</a> - license
+works under free or semi-free licences, and search for such works.
+</li>
+
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/36730">on my use.perl.org Journal</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~chromatic/journal/36732">on chromatic’s Blog</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~gizmo_mathboy/journal/36815">on gizmo-mathboy’s
+Journal</a> (in response to what chromatic wrote.)
+</li>
+
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/36812">“Dealing with
+Approval Addiction (and Implied Stress Periods)”</a> - note on my use.perl.org
+blog in reflection to what chromatic said.
+</li>
+
+<li>
+<a href="http://www.reddit.com/info/6qr1x/comments/">On Reddit.com</a>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2008" />
+
+<h2 id="meta_info">Meta Information</h2>
+
+<dl>
+<dt>Written By:</dt>
+<dd><a href="http://www.shlomifish.org/">Shlomi Fish</a></dd>
+<dt>Publication Date:</dt>
+<dd>19-June-2008</dd>
+<dt>Last Updated:</dt>
+<dd>05-June-2011</dd>
+<dt>Licence:</dt>
+<dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</a> (or at your option, any later version).<!--/Creative Commons License--></dd>
+</dl>
+

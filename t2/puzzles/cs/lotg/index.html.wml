@@ -1,0 +1,110 @@
+#include '../template.wml'
+
+<latemp_subject "The Lotg Pseudocode" />
+
+<p>
+“Lotg” (originally standing for “Language of the Gods”) is a
+pseudocode I developed during my first year at the Technion. I wanted
+to develop such a code with a minimal set of instructions. Initially
+it had eight instructions, but I was able to reduce it to five. I believe
+it is Turing-complete. Here is an explanation of it.
+</p>
+
+<p>
+Lotg is defined on a memory in which there is a cell associated with every
+integral number (positive, negative and zero), and every cell can contain
+one integral value. The cells will be marked as <tt>m[i]</tt> where
+<tt>i</tt> is the index of teh cell. There are two registers - “pointer” and
+“register” which will be marked as <tt>r</tt> and <tt>p</tt>.
+</p>
+
+<p>
+The following instructions are defined:
+</p>
+
+<ol>
+<li>
+<tt>p &larr; i</tt>, where <tt>i</tt> is any integral parameter. This
+is the only instruction that accepts an arbitrary parameter.
+</li>
+<li>
+<tt>r &larr; r+p</tt>
+</li>
+<li>
+<tt>p &larr; m[p]</tt>
+</li>
+<li>
+<tt>m[p] &larr; r ; r &larr; 0</tt> - a composite instruction doing
+two instructions one after the other.
+</li>
+<li>
+<tt>if r&gt;0 jump to p</tt> (If <tt>r</tt> is greater than 0 jump to the
+instruction whose index is <tt>p</tt>).
+</li>
+</ol>
+
+<h2>Sample Constructs</h2>
+
+<p>
+Using these instructions one can define the following macros:
+</p>
+
+<h3>m[m[i]] = m[m[j]]</h3>
+
+<pre>
+p = -10**100   # Essentially a number that should not concern us.
+m[p] = r ; r = 0
+p = j
+p = m[p]
+p = m[p]
+r += p
+p = i
+p = m[p]
+m[p] = r ; r = 0
+</pre>
+
+<h3>m[m[i]] += m[m[j]]</h3>
+
+<pre>
+p = -10**100
+m[p] = r; r = 0
+p = j
+p = m[p]
+p = m[p]
+r += p
+p = i
+p = m[p]
+p = m[p]
+r += p
+p = i
+p = m[p]
+m[p] = r ; r = 0
+</pre>
+
+<h3>if (m[i] = j) { [BLOCK] }</h3>
+
+<pre>
+p = -10**100
+m[p] = r ; r = 0
+p = -j
+r += p
+p = i
+p = m[p]
+r += p
+p = <i>i(end)</i>
+if r &gt; 0 jump p
+p = 1
+r += p
+p = <i>i(after)</i>
+if r &gt; 0 jump p
+p = -10**100
+m[p] = r ; r = 0
+p = 1
+r += p
+p = <i>i(end)</i>
+if r &gt; 0 jump p
+<i>after</i>:
+    [BLOCK]
+<i>end</i>:
+</pre>
+

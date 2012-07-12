@@ -1,0 +1,1661 @@
+<?xml version='1.0' ?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+]>
+
+<article id="index">
+    <articleinfo>
+        <title>The Perfect IT Workplace</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                    </address>
+                </affiliation>
+            </author>
+        </authorgroup>
+        <copyright>
+            <year>2008</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+        <legalnotice id="main_legal_notice">
+            <para>
+                <!--Creative Commons License-->
+                This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option any greater version of it).
+            </para>
+        </legalnotice>
+
+        <revhistory>
+
+            <revision>
+                <revnumber>1841</revnumber>
+                <date>30 April 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the template from a previous work and working on
+                    it.
+                </revremark>
+            </revision>
+
+            <revision>
+                <revnumber>5762</revnumber>
+                <date>02 July 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    The first revision as publicised on Reddit.com, by
+                    pkrumins.
+                </revremark>
+            </revision>
+
+            <revision>
+                <revnumber>2319 (svn)</revnumber>
+                <date>27 February 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added missing id=""'s to footnotes, so they won't
+                    be randomly generated.
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+    <section id="introduction">
+        <title>Introduction</title>
+        <para>
+            I originally wrote <ulink url="http://www.shlomifish.org/philosophy/computers/software-management/end-of-it-slavery/">"The
+                End of Info-Tech Slavery"</ulink> about a year ago, shortly
+            after I was fired from a job I liked and for which I worked
+            about three months. Some people who commented on the
+            article found it of good value. However many people who commented
+            on it have voiced some criticism.
+        </para>
+        <para>
+            One of the comments I received said that I kept giving bad
+            examples for conditions I disliked from previous workplaces,
+            instead of positive elements I would have liked to see. Another
+            commentor told me in private, that he felt that the
+            "End of IT Slavery" and other essays of mine reflected the
+            fact that I had a "primadona attitude" instead of a more
+            positive "team-player" attitude.
+        </para>
+
+        <para>
+            I can see why people would think so after reading the "End of IT
+            Slavery". However, my intention in the article was to guide
+            employers (and employees) as to how to best treat their employees,
+            and give them good conditions, so they'll be happier and more
+            productive. Going over the original article, I can see that I
+            indeed had a very ranting tone, and gave bad examples for
+            what not to do exclusively.
+        </para>
+
+        <para>
+            So this time, I'm going to try again and hopefully be more
+            successful. This article aims to cover the elements that
+            <ulink url="http://www.paulgraham.com/gh.html">great
+                programmers</ulink> would love to see in a perfect workplace.
+            By implementing as many of them as possible, or at least giving
+            them a serious thought, you can make such potential employees want
+            to work for you, love to work for you, want to stay, and be
+            happy as long as they are working for you. Furthermore, you will
+            know better than to irrationaly fire perfectly good employees.
+        </para>
+
+        <para>
+            I'm not trying to be original in this article, because an essayist
+            (or any kind of artist) does not get credit for coming up with
+            perfectly original concepts or ideas (as
+            <link linkend="great-poets-steal">I note later</link> in a
+            different context). What I'm trying to do is summarise everything
+            I've learned, judged and concluded, so far, based on the many
+            sources I've read. I may be just a dwarf standing on the shoulders
+            of giant, but hopefully I'll still be able to see farther than
+            most.
+        </para>
+
+        <para>
+            There is a lot of material on good software
+            management out there, and not everybody took the time to read
+            all the important one. This material can sometimes
+            be contradictory, and sometimes false. Nevertheless, I decided to
+            integrate it here into what I've perceived and concluded to
+            be the best choices.
+        </para>
+
+        <section id="intro-sources">
+            <title>Sources from Which the Advice was Taken</title>
+
+            <para>
+                This is a non-exhaustive list of major sources of
+                influence.
+            </para>
+
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.catb.org/esr/">Eric S.
+                            Raymond's Homepage</ulink> and especially
+                        his <ulink url="http://www.catb.org/esr/writings/cathedral-bazaar/">the "Cathedral and the Bazzar" series</ulink> and his
+                        <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">"How
+                            to become a Hacker"</ulink> document.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        The
+                        <ulink url="http://www.joelonsoftware.com/">wonderful
+                        "Joel on Software" site</ulink> by Joel Spolsky.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.paulgraham.com/">Paul
+                            Graham's essays</ulink> - tend to be interesting,
+                        but often suffering from some problems.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.extremeprogramming.org/">"Extreme
+                            Programming"</ulink> - seems a bit too
+                        rigorous, but still has many good ideas.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Damian Conway's excellent book
+                        <ulink url="http://www.oreilly.com/catalog/perlbp/">Perl
+                            Best Practices</ulink>
+                    </para>
+                </listitem>
+            </orderedlist>
+        </section>
+    </section>
+    <section id="the-elements">
+        <title>The Elements of a Perfect Workplace</title>
+        <section id="hire-the-best-developers">
+            <title>Hire the Best Developers</title>
+            <para>
+                <ulink url="http://www.joelonsoftware.com/">"Joel
+                    on Software"</ulink> and others have written about
+                the importance of having very good developers. See for
+                example his
+                <ulink url="http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html">"Guerilla
+                    Guide to Interviewing"</ulink>.
+                Bad programmers will create code that's buggy, insecure,
+                hard-to-maintain, etc. The so-called "Medium-level techs"
+                will probably not, but will be heavily under-productive in
+                comparison to star programmers. (And according to
+                <ulink url="http://en.wikipedia.org/wiki/Brooks'_law">Brooks'
+                    Law</ulink>, you can't effectively replace one good
+                programer with many worse ones.)
+            </para>
+            <para>
+                As I noted <ulink url="http://discuss.joelonsoftware.com/default.asp?joel.3.197867.7">there
+                    are many aspects that qualify someone as a
+                    good programmer</ulink>. However, it does not change
+                the fact that hiring a large number of mediocre programmers
+                will never be as effective as hiring one or two good
+                or very good programmers.
+            </para>
+        </section>
+        <section id="openness">
+            <title>Openness</title>
+            <para>
+                One of the most important trends in the software world
+                recently was towards "openness": open-source, open-content,
+                open-specifications, etc. Most good programmers you can find
+                will find the open source (also known as "Free Software")
+                movement very appealing, and share some of its ideals. I
+                don't propose you should make your software open-source,
+                although, of course, this is often a good business model.
+                However, there are other aspects of openness that you should
+                follow if you want to attract and keep good programmers.
+            </para>
+
+            <para>
+                First of all, don't over protect your code. Make it
+                open-source if possible, give your contractors and consultants
+                (including outsource ones) access to it, and allow your
+                programmers to show parts of it to their online friends to get
+                some advice. You should make as much of it as possible public,
+                under
+                <ulink
+                    url="http://en.wikipedia.org/wiki/Open_source_license">open
+                    source licences</ulink> to allow it to be used more often,
+                increase its quality, and grow a culture around it. From my
+                experience, working on "shrinkwrap" software that is used by
+                end-users in the wild, and open-source software in particular,
+                is the best way to increase the <ulink
+                    url="http://www.shlomifish.org/philosophy/computers/high-quality-software/">quality
+                    of the software</ulink> as it requires the most discipline
+                to work on and support.
+            </para>
+
+            <para>
+                Openness does not end at that. Another important aspect is
+                to allow your programmers to tell their friends and family
+                about what they do. Some defense-related companies seem to
+                think keeping everything confidential is a good idea, but
+                that will cause your employees to feel unnecessarily
+                trapped and unable to get help. So if you want to attract
+                the best programmers, make sure they can tell other people
+                of what they do, and what problems they are facing. (I'm
+                not advocating complete transparency, if it's not appropriate,
+                but rather not being overly secretive. )
+            </para>
+            <para>
+                Finallly, you should avoid vendor lock-in: use standard
+                or documented protocols and specifications,
+                <ulink url="http://www.joelonsoftware.com/articles/fog0000000052.html">take
+                    Joel Spolsky's advice
+                    of letting your users go back</ulink>, and make sure
+                your users have control of their data and can access it,
+                back it up and access it.
+            </para>
+            <para>
+                A good example for this is
+                <ulink url="http://flickr.com/">the photo-sharing
+                    site Flickr</ulink>, which has
+                published full APIs for its service, and even allowed these
+                APIs to be used by competing site.
+            </para>
+        </section>
+        <section id="great-working-conditions">
+            <title>Great Working Conditions</title>
+            <para>
+                You should make sure your employees have great working
+                conditions.
+            </para>
+            <section id="conditions--kitchen">
+                <title>Kitchen</title>
+                <para>
+                    There should be a kitchen with a lot of food, hot and
+                    cold beverages, etc.
+                </para>
+            </section>
+            <section id="conditions--comfortable-offices">
+                <title>Comfortable Offices</title>
+
+                <para>
+                    I don't necessarily agree that your workers should have
+                    spacious offices with doors that close, but they should
+                    still be comfortable enough. At one of my workplace, I
+                    constantly had to move to let other people out of their
+                    seats, and this was unbearable. So don't do that.
+                </para>
+
+                <para>
+                    In one job that I fondly remember, every employee had
+                    their own spacious cube, with a desk to put a computer and
+                    a place to put a few chairs. This was much more like it.
+                </para>
+            </section>
+            <section id="conditions--best-tools">
+                <title>The Best Tools That Money Can Buy</title>
+                <para>
+                    This cannot stressed enough. As <ulink url="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Spolsky notes</ulink> (based
+                    on Steve McConnell) in item No. 9 of the Joel
+                    Test, you need to "use the best tools that money can buy".
+                </para>
+                <para>
+                    If you buy old, broken and/or barely functioning hardware,
+                    you'll spend a lot of time debugging the problems there,
+                    which will waste a lot of precious time. And you may
+                    lose a lot of reputation and customers due to down-time.
+                    <emphasis role="bold">Relying on reliable, high-end
+                        hardware</emphasis> is a much
+                    better idea.
+                </para>
+                <para>
+                    I've been to two workplaces that gave me an old
+                    computer with a 40 GB hard-disk. It wasn't enough at
+                    all. At one place, we've reached the limit of this
+                    hard-disk due to several large source code checkouts,
+                    and as a result needed a bigger hard-disk. And the
+                    only hard-disks the lab had were 80 GB ones, which were
+                    bought because they were the cheapest (per-disk, not
+                    per-capacity). Please, <emphasis role="bold">buy
+                        large enough hard-disks</emphasis>.
+                </para>
+                <para>
+                    At the same workplace, I was given a computer with a
+                    read-only CD-ROM drive. It was not even a DVD reader.
+                    I brought a DVD of audio files from home, and could not
+                    read it. In this day and age, read/write DVD drives
+                    are the standard, and are ultra-cheap.
+                </para>
+
+                <para>
+                    Sometimes you'll need <emphasis role="bold">several
+                        computers</emphasis>, or a
+                    decent <emphasis role="bold">virtual machine
+                        emulator</emphasis>, to run
+                    alternative operating systems on the same machine.
+                </para>
+
+                <para>
+                    Make sure your workers have a <emphasis role="bold">high-quality screen</emphasis>. They
+                    need to look at it most of the day, and they want it
+                    to look nice. A decent 19" LCD screen nowadays is very
+                    cheap nowadays and well worth the added productivity.
+                </para>
+
+                <para>
+                    You also need a
+                    <ulink url="http://better-scm.shlomifish.org/">state-of-the-art
+                        version control system</ulink> , of which there are
+                    currently several high-quality open-source alternatives.
+                    Some very costy version control systems have a bad
+                    reputation for being extreme troublemakers, while the
+                    modern open-source alternatives "just work".
+                </para>
+
+                <para>
+                    If there's a good commercial software that your employees
+                    like to use and can recommend, don't hesitate to buy it.
+                    You'll also find <ulink url="http://safari.oreilly.com/">O'Reilly
+                        Safari</ulink> Licences to be a good idea so your
+                    employees can easily look up and read information in many
+                    books online.
+                </para>
+            </section>
+            <section id="conditions--sane-working-hours">
+                <title>Sane Working Hours</title>
+
+                <para>
+                    Give your employees <ulink
+                        url="http://www.igda.org/articles/erobinson_crunch.php">sane
+                        working hours</ulink> - 40 hours work-weeks or less.
+                    While sometimes asking them to stay late to finish a
+                    deadline is acceptable, the so-called "crunch mode" is
+                    under-effective and a recipe for disaster.
+                </para>
+            </section>
+
+            <section id="conditions--location">
+                <title>Location, Location, Location</title>
+
+                <para>
+                    Find a good place which is close enough for most people
+                    to get to. Make sure your programmers can commute to you
+                    easily. Even pay for taxi-cabs out of your own expense,
+                    or ask other employees to give them a ride, if
+                    there isn't good public transportation. The money you spend
+                    on the cabs is very small compared to the one you would
+                    lose by lost productivity, and by frustrations of
+                    travelling.
+                </para>
+
+            </section>
+
+            <section id="conditions--payed-vacation">
+
+                <title>A Lot of Paid Vacation</title>
+
+                <para>
+                    Give your workers a lot of paid vacation. Humans are not
+                    machines - they need rest and relaxation. The 14 annual
+                    vacation days mandated by the Israeli government are a
+                    joke. You should give them much more than that.  Joel
+                    Spolsky's Fog Creek software gives 6 weeks of paid
+                    vacation, which is much more reasonable.
+                </para>
+
+            </section>
+
+            <section id="conditions--strict-firewalls">
+
+                <title>Avoid Over-Strict Firewalls</title>
+
+                <para>
+                    Some organisations put their intranets below firewalls
+                    that block access to almost all services. It is not
+                    uncommon to see only the HTTP and HTTPS ports open for
+                    free access.
+                </para>
+
+                <para>
+                    However, there are many other Internet services that star
+                    programmers need in order to be productive. Among them are:
+                </para>
+
+                <orderedlist>
+
+                    <listitem>
+
+                        <para>
+                            <ulink url="http://en.wikipedia.org/wiki/Internet_Relay_Chat">Internet
+                                Relay Chat</ulink> and other forms
+                            of <ulink url="http://en.wikipedia.org/wiki/Instant_messaging">Instant
+                                Messaging</ulink>. This allows star programmers
+                            to discuss problems and share solutions
+                            interactively with their peers, or just to
+                            take a break from work and chat.
+                        </para>
+
+                    </listitem>
+
+                    <listitem>
+
+                        <para>
+                            <ulink url="http://www.openssh.org/">SSH - Secure
+                                Shell</ulink> - allows access to remote
+                            computers over the network.
+                        </para>
+
+                    </listitem>
+
+                    <listitem>
+
+                        <para>
+                            <ulink url="http://en.wikipedia.org/wiki/BitTorrent_(protocol)">BitTorrent</ulink> -
+                            allows downloading some content that is otherwise
+                            not available on the Web.
+                        </para>
+
+                    </listitem>
+
+                </orderedlist>
+
+                <para>
+                    And naturally, malware can easily propagate and
+                    survive using HTTP and HTTPS alone, and there are ways
+                    that clueful workers can overcome such restrictions.
+                </para>
+
+                <para>
+                    At one of my workplaces, I was able to chat on the IRC,
+                    connect using IM, ssh to everywhere I wanted, etc.
+                    without any restriction. It was a liberating feeling
+                    and I felt at home there. At a more recent one,
+                    I needed to connect to a remote host, and invoke
+                    port forwarding in order to talk on the IRC which was
+                    annoying and error prone.
+                </para>
+
+                <para>
+                    So make sure your firewall is not over-zealous and
+                    does not prevent legitimate uses.
+                </para>
+
+            </section>
+
+            <section id="conditions--salary">
+                <title>About the Salary</title>
+
+                <para>
+                    Competitive Salary? Yes, it's important, but not
+                    absolutely everything. Great programmers won't work
+                    for you for free, but they'll find many other
+                    conditions much more tempting than an over-blown
+                    salary. See what <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">Eric Raymond
+                        wrote about it
+                        in "Homesteading the Noosphere"</ulink>, quoting
+                    many studies:
+                </para>
+                <blockquote>
+
+                    <para>
+                        Psychologist Theresa Amabile of Brandeis
+                        University, cautiously summarizing the results of a
+                        1984 study of motivation and reward, observed ``It
+                        may be that commissioned work will, in general, be
+                        less creative than work that is done out of pure
+                        interest.''. Amabile goes on to observe that ``The
+                        more complex the activity, the more it's hurt by
+                        extrinsic reward.'' Interestingly, the studies
+                        suggest that flat salaries don't demotivate, but
+                        piecework rates and bonuses do.
+                    </para>
+
+                    <para>
+                        Thus, it may be economically smart to give
+                        performance bonuses to people who flip burgers or
+                        dug ditches, but it's probably smarter to decouple
+                        salary from performance in a programming shop and
+                        let people choose their own projects (both trends
+                        that the open-source world takes to their logical
+                        conclusions).  Indeed, these results suggest that
+                        the only time it is a good idea to reward
+                        performance in programming is when the programmer
+                        is so motivated that he or she would have worked
+                        without the reward!
+                    </para>
+                </blockquote>
+
+           </section>
+
+           <section id="conditions--conclusion">
+               <title>Conditions: Conclusion</title>
+
+               <para>
+                   One final note: you might thing to yourself: <emphasis role="bold">"how can I
+                   afford all that?"</emphasis>. Well, the answer is that the cost of all
+                   these advantages is very small in comparison to your general
+                   operation. And they will pay themselves much more as time
+                   goes by in the happiness, productivity and loyalty of your
+                   workers.
+               </para>
+
+               <para>
+                   The last thing you want is to lose a competent developer.
+                   And all these things will better make sure that
+                   he or she will stay with you.
+               </para>
+           </section>
+
+        </section>
+
+        <section id="pair-programming">
+            <title>Pair Programming</title>
+            <para>
+                When doing
+                <ulink url="http://en.wikipedia.org/wiki/Pair_programming">Pair
+                    programming</ulink>, there are two programmers
+                sitting next to a single computer screen and keyboard, with
+                one of them actually writing the code, and the other one
+                observing and helping. At first glance, it seems like it's
+                a waste of resources: won't they be under-productive? The
+                answer is a "no".
+            </para>
+            <para>
+                First of all, pair programming increases run-time code
+                review, as the "passive" programmer observes what the
+                active programmer writes, gives him advice and answers
+                his question. Code-review is always a good thing.
+                <footnote id="pair-programming-and-code-review"
+                    label="Code Review">
+                    <para>
+                        Pair programming is still not a substitute for
+                        code reviews by people who didn't directly
+                        write the code. It was noted at a blog entry
+                        I recall reading somewhere but can no longer find.
+                        <emphasis role="bold">TODO: Write more.</emphasis>
+                    </para>
+                </footnote>
+            </para>
+            <para>
+                Secondly, pair programming causes both programmers to have
+                more discipline, and they are less likely to procrastinate
+                as the active programmer will bore the watching one.
+            </para>
+            <para>
+                Pair programming is also more fun, because people feel more
+                comfortable working in pairs than alone.
+            </para>
+            <para>
+                Finally, pair programming is more productive, because it was
+                shown that it yields more output than two individual
+                programmers.
+            </para>
+            <para>
+                I had had a very good experience working in pairs back when
+                I was an undergraduate student at
+                <ulink url="http://www.technion.ac.il/">the
+                    Technion</ulink> and can highly recommend it.
+            </para>
+        </section>
+        <section id="give-employees-freedom">
+            <title>Give Your Employees the Freedom to Do What They Want</title>
+            <para>
+                If your employee is responsible, he'll care about his job
+                to be productive, even if you don't watch him. If he isn't,
+                then no amount of watching will make him responsible.
+            </para>
+            <para>
+                You shouldn't constantly monitor your employees. Instead,
+                give them time to clear their mind and do non-coding-related
+                activities such as:
+            </para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        Play computer games.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Browse the web.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Watch videos or listen to netcasts.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Read articles or books.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Work on open-soure software or their own personal
+                        projects.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Chat with their co-workers or online peers.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Take walks in the neighbourhood, do sports, go to
+                        clubs and other activities.
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                These tasks and others don't interfere with the work much,
+                and actually contribute to productivity. And along with
+                <link linkend="pair-programming">pair programming</link>, you can be more certain your programmers
+                will work. Don't judge your employees by how they spend their
+                time at work - instead judge them by the overall progress
+                they do in the long run.
+            </para>
+            <para>
+                Moreover, some tasks that your employees do at their
+                free time, may eventually bring your company publicity
+                and esteem. Part of the reason Joel Spolsky's
+                <ulink url="http://www.fogcreek.com/">"Fog Creek
+                    Software" company</ulink> is so well-known is because
+                of the
+                <ulink url="http://www.joelonsoftware.com/">Joel
+                    on Software</ulink> blog, which is one of the
+                most-read weblogs about software management. This in turn
+                resulted in a lot of publicity to the Fog Creek products.
+            </para>
+            <para>
+                If your employees are productive, you should not really be
+                concerned what they are doing on their work time.<footnote id="eric-sink-scrabble" label="EricSink">
+                    <para>
+                        Eric Sink wrote <ulink url="http://www.ericsink.com/entries/scrabble_1994.html">a
+                            wonderful entry about the tolerance of
+                            his former boss</ulink> on his weblog. (Here's
+                        <ulink url="http://www.ericsink.com/entries/ethics.html">an update</ulink>.)
+                    </para>
+                </footnote>
+                Google allows its employees work on non-work-related-tasks
+                20% of the time (while Google still owns the intellectual
+                rights to their creations). I would go a step further by
+                saying you simply should allow your employees to do as
+                much non-work-related leisure as they feel they need to
+                on their working hours. Tell them you expect long-term
+                results, not 100% productivity-of-time.
+            </para>
+        </section>
+        <section id="job-ads">
+            <title>Phrase Your Job Ads in a Unique and Smart Way</title>
+            <para>
+                "3 Years Experience in Perl - Must", "20 Years Experience in
+                PHP - Advantage", "Team Player", "Independent Thinker".
+                <emphasis role="bold">Boring</emphasis>.
+            </para>
+            <para>
+                Your job ad need to stand out. Take <ulink
+                    url="http://groups.google.com/group/israelrb/browse_frm/thread/bb11cf1c3ed8e221">this job ad that was posted to the Israeli Ruby mailing
+                    list</ulink> for an excellent example:
+            </para>
+            <blockquote>
+                <para>
+                    We are looking for a developer who:
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Want a full time, salaried position.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Want to work in a fun, young workplace.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Want to work in an environment that allows them to
+                            use (just about) whatever tools they wish to get
+                            the job done.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Knows and love Ruby.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Ideally have experience with PHP and Python.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Want to work on large scale Rails/Merb projects
+                            that have nothing to do with "the Social Web".
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Want to drown a puppy every time they hear
+                            phrases like "the Social Web".
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </blockquote>
+            <para>
+                See? I also want to write sites that are not necessarily
+                "Social Web", and I also got tired of the "Social Web" and
+                its association with Ruby and other similar technologies.
+                So this ad has caught my attention.
+            </para>
+            <para>
+                As <ulink url="http://www.joelonsoftware.com/articles/LordPalmerston.html">Joel
+                    on Software notes about experience</ulink>, the reason
+                companies want people with a lot of experience in a certain
+                niche, is because they tend to overcome problems they
+                encounter more easily and so can help themselves and their
+                co-workers with their problem more easily.<footnote id="linux-systems" label="Linux Systems Programming">
+
+                    <para>
+                        For example, I have a lot of experience working on Linux
+                    and developing for it, with Perl and doing mostly
+                    Algorithms and Text Processing in C. Recently, however I
+                    got a job as a developer for a Linux Server-side C/C++
+                    application. (dealing with sockets, processes, threads,
+                    Unicode and other such advanced problems). While I made a
+                    lot of progress, I noticed that I often got stuck on many
+                    problems, for which I had no idea how to easily resolve. In
+                    this case, my co-worker who had more experience than
+                    me in this area, could often help me more.
+            </para>
+        </footnote>
+        </para>
+
+            <para>
+                However, as long as you have someone with enough experience,
+                then bright people without a lot of experience can still
+                prove to be useful and very productive. So don't demand too
+                much from them. As of 2008, there aren't enough clueful
+                developers in Israel for all the workplaces (and I think
+                that's also the case in most other places), and you can't
+                afford to be too picky.
+            </para>
+            <para>
+                Another tip I can offer to look for employees is to use
+                specialised job boards like the <ulink url="http://jobs.joelonsoftware.com/">the
+                    Joel on Software job-board</ulink>,
+                and <ulink url="http://jobs.perl.org/">jobs.perl.org</ulink>,
+                <ulink url="http://jobs.thedailywtf.com/1001/browse.aspx">the
+                    DailyWTF "Non-WTF" board</ulink> which highly-qualified and
+                niche people follow. Just make sure
+                to phrase your ad in a non-boring way, as I noted earlier.
+            </para>
+        </section>
+        <section id="read-software-management-material">
+            <title>Read a Lot of Software Management Material</title>
+            <para>
+                It's impossible to put all the good advice I found regarding
+                software management and software engineering online
+                and offline, in one document. So I argue you as a manager
+                or an employee to read as much different material
+                you can find. There's a lot of good advice out there.
+                Socrates said: "I know that I do not know.", and he
+                was right.
+            </para>
+            <para>
+                While it's easy to dismiss other people as "idiots"
+                or what they say as being "stupid", one should realise that
+                even incorrect conclusions or reasoning can bring useful
+                insights, and give some food for thought. Sometimes, I find
+                some useful insights in rehearsed things or short blog
+                entries.
+            </para>
+            <para>
+                If you're a manager or team-leader, you should make sure
+                that you're not much more clue-less than your programmers
+                are, but that has often been the case for me and others.
+            </para>
+        </section>
+        <section id="listen-to-your-devs">
+            <title>Listen to Your Developers</title>
+            <para>
+                Which brings us to this: you obviously cannot get every
+                aspect of software management right at first. Your programmers
+                may eventually become unhappy, and you should make sure they
+                can tell you how they feel, and to take note of what they
+                say. Otherwise, you're risking underproductivity or downright
+                <ulink url="http://en.wikipedia.org/wiki/Clinical_depression">clinical
+                depression</ulink>.
+            </para>
+        </section>
+        <section id="software-engineering">
+            <title>Software Engineering Best Practices</title>
+            <section id="functional-specs">
+                <title>Functional Specs</title>
+
+                <para>
+                    The first advice I can give is to <ulink url="http://www.joelonsoftware.com/articles/fog0000000036.html"><emphasis role="bold">write
+                        functional specs</emphasis></ulink>. In the link, Joel Spolsky
+                    explains the motivation and method of writing functional
+                    spec. A functional spec describes how the end-user will
+                    use and interact with the program. It is not a technical
+                    spec which explains how the inner software will work.
+                </para>
+                <para>
+                    From my experience, functional specs are fun to write,
+                    reveal many problems in the initial design, and make you
+                    think how the software will work on the inside.
+                </para>
+                <para>
+                    Here are three examples for functional specs I wrote:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <ulink url="http://svn.berlios.de/svnroot/repos/web-cpan/App-Freelancers-Board-Yonathan/trunk/docs/functional-spec/App-Freelancer-Board-Yonathan-functional-spec.txt">Functional
+                                Spec for a Freelancers Board</ulink> (with a
+                            Biblical theme).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <ulink url="http://svn.berlios.de/svnroot/repos/web-cpan/CPAN-Module-Classification/trunk/docs/functional-spec-for-CPAN-Classification-Proposal.txt">Functional
+                                Spec for a better classification of CPAN
+                                Modules</ulink> (with a theme of FOSS world
+                            celebrities).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <ulink url="http://svn.berlios.de/svnroot/repos/winapt/winapt/trunk/docs/design/functional-spec.txt">Functional Spec
+                                for a Windows package management system.</ulink>
+                            (featuring characters from <ulink url="http://www.ozyandmillie.org/">Ozy and Millie</ulink>).
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </section>
+            <section id="automated-tests">
+                <title>Automated Tests</title>
+                <para>
+                    You should write automated tests such as unit tests,
+                    integration tests, system tests, that will run
+                    automatically on the code and yield an answer if all
+                    of them are successful, or if any of them fail.
+                </para>
+                <para>
+                    There are many good practices for automated testing such
+                    as having daily builds or reaching a 100% test
+                    coverage. Here are some resources to get you started:
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            <ulink url="http://qa.perl.org/">The Perl
+                                Quality Assurance project</ulink>, also
+                            see their wiki.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <ulink url="http://en.wikipedia.org/wiki/Software_testing">The Wikipedia
+                                page about Software Testing.</ulink>
+
+                        </para>
+                    </listitem>
+                </itemizedlist>
+                <para>
+                    Note that having automated tests is not a substitute for
+                    having <ulink url="http://www.joelonsoftware.com/articles/fog0000000067.html">dedicated
+                        software testers</ulink> (and vice versa). By
+                    all means, they are both necessary for any serious
+                    operation.
+                </para>
+            </section>
+            <section id="design-and-planning">
+                <title>Design and Planning</title>
+                <para>
+                    Most people agree that designing a software, planning
+                    it and thinking about it is a good idea. Extreme
+                    Programming  suggests to have one design meeting every
+                    day. I personally feel that too much design like that is
+                    equivalent to very little of it, but still design and
+                    planning should be done
+                </para>
+            </section>
+            <section id="refactoring">
+                <title>Refactoring</title>
+                <para>
+                    <ulink url="http://www.refactoring.com/">Refactoring</ulink>
+                    is the process of improving the internal quality of
+                    the code (from "a big mess" to "squeaky-clean and modular
+                    code"), while not changing its external behaviour. This
+                    is done for mostly functional and bug-free, but
+                    sub-optimally-written, code so it can be better managed.
+                </para>
+                <para>
+                    "Joel on Software" features two excellent article about
+                    the motivation for refactoring: <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things You Should Never Do,
+                        Part I (why rewriting functional code from
+                        scratch is a bad idea)"</ulink>, and <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub
+                        a dub dub" (how and why to do refactoring).</ulink>.
+                </para>
+                <para>
+                    There are many other resources for that online, along with
+                    many refactoring patterns.
+                </para>
+                <para>
+                    There are many types of refactoring: grand refactoring
+                    sessions (= what Joel describes), continuous refactoring
+                    (refactoring as you go), "just-in-time refactoring"
+                    (refactoring enough to achieve a certain task), etc.
+                </para>
+                <para>
+                    But refactoring is important, makes development faster
+                    in the long run (and even in the short-run), and can
+                    prevent the code from deteriorating into an ugly,
+                    non-functional mess that would be hard to salvage.
+                </para>
+            </section>
+            <section id="soft-eng-methods-to-avoid">
+                <title>Software Engineering Methods to Avoid</title>
+                <para>
+                    There are few software engineering methods that I find
+                    pointless, so I'd like to briefly point them out.
+                </para>
+                <para>
+                    The first is the
+                    <emphasis role="bold">"Huge-design-up-front"</emphasis>,
+                    where an "architect" or even the entire team spends
+                    a very long time writing an extremely comprehensive
+                    and detailed technical document that specifies
+                    in detail how the software will work.
+                </para>
+                <para>
+                    The problem with this approach is that it is a huge
+                    waste of time and also it is impossible to design
+                    a large project top-down like that. A better way is to
+                    involve the entire team in a good design session (a week
+                    long at first) while writing some functional specs,
+                    diagrams and some other documents, and then to write
+                    it incrementally.
+                </para>
+                <para>
+                    A similar fallacy is the <emphasis role="bold">"Mountains
+                        of documentation fallacy"</emphasis> of having superflous
+                    commenting, Literate programming, etc. The problem with
+                    this approach is that the extra documentation is often
+                    redundant if the code is well written and factored out
+                    <footnote id="extract-method" label="Extract Method">
+                        <para>
+                            A good example is that instead of having the
+                            following pseudo-code:
+                        </para>
+                        <programlisting>
+                            <![CDATA[
+function create_employee(params)
+{
+    my emp = emp.new();
+
+    emp.set_birth_year(params[year]);
+
+    emp.set_experience_years(param[exp_amount]);
+
+    emp.set_education(params[education]);
+
+    ### Calculate the salary:
+    emp.set_salary(emp.calc_education_factor(emp.get_education()) * emp.set_experience_years());
+
+    ### More stuff snipped.
+
+    return emp;
+}
+]]>
+                        </programlisting>
+                        <para>
+                        Then it would be a good idea to extract the
+                        complex <literal>emp.set_salary()</literal> call to
+                        a simple <literal>emp.calculate_salary()</literal>
+                        method. This
+                        <ulink
+                        url="http://c2.com/cgi/wiki?ExtractMethod">method
+                        extraction</ulink> will make the intention of
+                        the code self-documenting (as the method will have
+                        a meaningful name) and much more robust for future
+                        changes than adding a comment.
+                        </para>
+                        <para>
+                        And this is just a small example.
+                        </para>
+                    </footnote>
+                </para>
+                <para>
+                Some documentation (especially API documentation such as
+                <ulink url="http://en.wikipedia.org/wiki/Plain_Old_Documentation">Perl's POD</ulink> or <ulink url="http://www.doxygen.org/">Doxygen</ulink>)
+                is good, and you shouldn't feel too guilty about writing a
+                comment for an interesting trick, but too much documentation
+                slows things down, and doesn't help with the design process,
+                and eventually may turn out to be misleading or harmful.
+                </para>
+                <para>
+                    Something else I consider a bad idea is
+                    <ulink url="http://en.wikipedia.org/wiki/You_Ain't_Gonna_Need_It">Overengineering
+                    or YAGNI ("You Ain't Gonna Need It")</ulink>. The basic
+                    idea is not to implement too many features at once, or
+                    over-complicate the design of the code, and instead focus
+                    on getting the necessary functionality working.
+                </para>
+                <para>
+                    YAGNI, put aside, I still believe that some
+                    forward-planning is good.
+                </para>
+            </section>
+            <section id="maintaining-two-codebases">
+                <title>Maintaining Two Codebases</title>
+                <para>
+                    The code-with-accompanied-documentation is somewhat
+                    a sub-case of a more general fallacy: the belief that
+                    a company can simultaneously maintain two different
+                    codebases (say two codebases implementing the
+                    same functionality in two different languages), while
+                    keeping them both synchronised.
+                </para>
+                <para>
+                    The Extreme Programming experts have been warning against
+                    it, and it also makes sense that it is hard to do given
+                    that programmers, by nature, lack the appropriate
+                    discipline to keep maintaining two or more codebases at
+                    once.
+                </para>
+                <para>
+                    One possible solution to this problem
+                    <ulink url="http://www.joelonsoftware.com/articles/FogBugzIII.html">has been
+                        illustrated by Fog Creek software</ulink>. What
+                    they did was implement a compiler from a common language,
+                    to several target languages. Naturally, this compiler also
+                    needs to be maintained and extended, but it is less work
+                    and less error-prone than maintaining several different
+                    codebases.
+                </para>
+            </section>
+        </section>
+        <section id="specialisation">
+            <title>Don't Over-Specialise</title>
+            <para>
+                Many workplaces seem to think that it is a good idea
+                to make sure every developer is limited to a certain aspect
+                of the development process, and will specialise exclusively
+                in it. Taken to extreme, however, such a trend is very
+                dangerous.
+            </para>
+            <para>
+                Programmers need to have a solid understanding of the entire
+                product stack in their head. Good programmers can also
+                benefit from a change of scenery. And naturally, <ulink
+                    url="http://en.wikipedia.org/wiki/Code_review">reviewing
+                    someone else's code</ulink>, and criticising it, is also
+                always beneficial.
+            </para>
+            <para>
+                Therefore, you should make sure that your workers don't
+                over-specialise. Let them dedicate some time to work on
+                what they find interesting, and let them review and
+                criticise other people's work.
+            </para>
+            <para>
+                Once, before I started my undergraduate studies, I worked
+                for a developer of a software-based modem (so-called
+                "Winmodems"). I was impressed from the atmosphere there,
+                and how professional and clueful the managers were. One of
+                the things I liked about the job was that while I was
+                initially hired as a tester, I eventually was appreciated
+                for my eclectic knowledge of different aspects of
+                sound, games, modems, Internet, and other fields. So, I was
+                given more diverse things to do there, involving many
+                aspects of our operation.
+            </para>
+            <para>
+                You should follow suit and involve your star developers in
+                as many aspects of your development.
+            </para>
+        </section>
+        <section id="listen-to-your-customers">
+            <title>Listen to Your Customers or Users</title>
+            <para>
+                Joel on Software gives <ulink url="http://www.joelonsoftware.com/articles/customerservice.html">a lot of good advice on having
+                    a good customer service</ulink>. You should listen to
+                what your customers (or users) say. Don't dismiss them.
+                Don't give them annoying canned responses. Open your
+                bug-tracker to the world as a web-service. There are many
+                web-based, and gratis bug-trackers, such as
+                <ulink url="http://www.bugzilla.org/">Bugzilla</ulink>,
+                and you should use one of them for better interaction with
+                your customers.
+            </para>
+            <para>
+                As Joel indicates, a bug report, email, or query usually
+                indicates a problem in the software: a bug, a missing feature,
+                or something that's not clear enough. Such problems need to
+                be fixed in the code.
+            </para>
+            <para>
+                Furthermore, if one or more of your customers are requesting a
+                feature, and it seems to be important enough, give a priority
+                to implementing it. As a Mercury Interactive (Now part of HP)
+                developer
+                <ulink url="http://tech.groups.yahoo.com/group/hackers-il/message/2751">noted</ulink>
+                usually the features requested by the customers, are the
+                ones that will yield the most newer customers,
+                not-to-mention will allow keeping customers, if they are
+                paying for upgrades or as a "software-as-a-service" model.
+            </para>
+            <para>
+                Joel Spolsky <ulink url="http://www.inc.com/magazine/20080401/how-hard-could-it-be-fire-and-motion.html?partner=fogcreek">also
+                    notes that good customer service is part of the key
+                to a small ISV's success</ulink>.
+            </para>
+        </section>
+        <section id="great-poets-steal">
+            <title>"Good Poets Borrow. Great Poets Steal."</title>
+            <para>
+                Originality and "innovation" is not as important as people
+                think it is. It is perfectly OK to create a product in
+                <ulink url="http://www.joelonsoftware.com/articles/fog0000000056.html">a
+                    niche which has a lot of existing competition</ulink>,
+                it's OK to build on other people's efforts, and it's OK to
+                "borrow" or "steal" (see the quote at the top) ideas from
+                your users, competitors and friends.
+            </para>
+            <para>
+                You're not getting credit for originality - you're getting
+                credit for high-quality products (software, services, support,
+                etc. - whatever you do) and especially for revenue and
+                profits. See <ulink url="http://www.joelonsoftware.com/articles/fog0000000074.html">"Converting Capital into Software That Works" for
+                more information</ulink>
+            </para>
+
+            <para>
+                Another common fallacy is that ideas are the hardest part of
+                the production process. However, ideas are very cheap, and
+                creative people have far too many good ideas. It's actually
+                harder to develop the idea into a product, to mass-produce it,
+                and then to mass-distribute it. Edison was not the first to
+                come up with the Electrical Lightbulb, or to develop a working
+                prototype, but he was the one to have put up all the effort in
+                making it so popular and prevalent. Therefore, he is rightly
+                credited as its inventor.
+            </para>
+
+            <para>
+                Similar in software, you can often see competing products
+                displacing more established competition, or sometimes
+                a market where there isn't a clear winner (e.g:
+                <ulink url="http://xwinman.org/">window
+                    managers and desktop environments for Unix</ulink>,
+                Bug trackers, text editors, etc.)
+            </para>
+
+            <para>
+                Even making rounder wheels is a good way to earn
+                a living and to get respect.<footnote id="ideas-at-the-same-time" label="Ideas at Same Time">
+                    <para>
+                        I once saw a quote that said:
+                    </para>
+                    <blockquote>
+                        <para>
+                            If you have the same ideas two weeks before
+                            everybody else - you'll be considered a visionary.
+                            If you have them two years before everybody else,
+                            you'll be considered a lunatic.
+                        </para>
+                    </blockquote>
+                    <para>
+                        This illustrates that as technology progresses, people
+                        tend to get the same ideas at roughly the same time,
+                        when they are mature and the natural logical step
+                        forward. It's unlikely you can avoid it.
+                    </para>
+                </footnote>
+            </para>
+        </section>
+        <section id="study-psychology">
+            <title>Study Psychology</title>
+            <para>
+                Your co-workers are people. As such they have thoughts,
+                feelings, emotions, and desires, which guide them and affect
+                them. Learning how people's psychology works, and how to
+                motivate people and help them if they are feeling de-motivated
+                - will help an employer be more effective, and make his
+                employees more productive.
+            </para>
+            <para>
+                This is also the case for your customers, users, associates
+                and friends, who you will surely have to interact with
+                , make sure they are happy most of the time, and deal
+                with their problems effectively.
+            </para>
+            <para>
+                Here are a few good resources on Psychology:
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.amazon.com/exec/obidos/ASIN/0380810336/ref=nosim/shlomifishhom-20/">"Feeling Good: The New Mood
+                            Therapy"</ulink> -
+                        the best book I've read about Psychology. A self-help
+                        book of <ulink url="http://en.wikipedia.org/wiki/Cognitive_behavioral_therapy">Cognitive-behavioural
+                            therapy</ulink>, this books explains what
+                        causes Clinical depressions, and other negative
+                        mood swings, and why people behave the way they do.
+                    </para>
+                    <para>
+                        It is a stark anti-thesis to Freudian psychology,
+                        which makes little sense and is completely not
+                        helpful.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.shlomifish.org/philosophy/philosophy/guide-to-neo-tech/">"The
+                            Neo-Tech Discovery"</ulink> - an off-shoot of
+                        Ayn Rand' Objectivism, Neo-Tech is the best idea-system
+                        I've encountered yet. Note that it is easy to both
+                        dismiss Neo-Tech as a stupid cult, or to hugely
+                        mis-understand it at first. So when reading Neo-Tech
+                        go over the material (preferably without skipping, but
+                        possibly while taking breaks), and then let it sink
+                        for a while.
+                    </para>
+                    <para>
+                        Note that as of May 2008, the old hyperlinks to
+                        the Neo-Tech site lead to redirects or PHP errors.
+                        You can still find the old pages
+                        on <ulink url="http://www.archive.org/">the web
+                            archive</ulink>, and I hope they'll get fixed.
+                        In any case, it may be a good idea to order
+                        "The Neo-Tech Discovery" book. (It is not available
+                        in book stores).
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.amazon.com/exec/obidos/ASIN/0465067107/ref=nosim/shlomifishhom-20/">"The
+                            Design of Everyday Things"</ulink> - this
+                        book is a must read to everyone doing user-interface
+                        design. It explains how frustrating it is to use many
+                        everyday  objects (and, by inflection, software and
+                        software devices), and how to design them right.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.amazon.com/exec/obidos/ASIN/071672328X/ref=nosim/shlomifishhom-20/">"Helplessness:
+                            On Depression, Development and Death"</ulink> -
+                        I haven't read this book yet, but it was recommended
+                        on <ulink url="http://www.joelonsoftware.com/navLinks/fog0000000262.html">the
+                            "Joel on Software" book reviews</ulink>,
+                        which I found to be of value. It is
+                        also written from the Cognitive-Behavioural Psychology
+                        viewpoint.
+                    </para>
+                </listitem>
+            </itemizedlist>
+            <para>
+                Naturally, becoming a more psychologically-capable
+                person is a process. No one is fully friendly, tactful,
+                helpful, and considerate at all times. But one must always
+                aspire to be more.
+            </para>
+            <para>
+                For example, at one of the workplaces I had, whenever I told
+                my boss that I didn't finish what he asked for, but instead
+                found out something else of importance or made some other
+                progress he said "So what you're saying is that you didn't
+                achieve anything.". This is a classical case of the
+                <emphasis role="bold">"All or Nothing Thinking"</emphasis>
+                cognitive error, which is given in "Feeling Good" as a
+                possible primary cause of depression.
+            </para>
+            <para>
+                This attitude caused me to think and feel that nothing I
+                could do, would possibly please him, and that he was
+                demotivating on purpose. This was one of the reasons
+                that caused me to assume a
+                <ulink url="http://en.wikipedia.org/wiki/Hypomania">variation
+                    of a clinical depression called "Hypomania"</ulink>,
+                which in turn made me under-productive.
+            </para>
+        </section>
+        <section id="success-and-failure-stories">
+            <title>Read Success and Failure Stories</title>
+            <para>
+                One of the many quotes featured at the signature
+                of a friend of mine is <quote>Learn from mistakes of others;
+                    you won't live long enough to make them all
+                    yourself</quote>. It is important to
+                read success and failure stories of what people did,
+                what mistakes they performed and what are their conclusions.
+            </para>
+            <para>
+                I believe we can learn more from the failures of ourselves
+                and others, than we can learn from successes. That's because
+                in a success, almost every aspect was done right, while in
+                a failure one can look back and say where things went wrong.
+            </para>
+            <para>
+                You can find many such stories on the Internet, and sometimes
+                you'll hear about them in news sites, blogs, and various
+                forums.
+            </para>
+        </section>
+        <section id="knowledge-in-the-ether">
+            <title>Avoiding "Knowledge in the Ether"</title>
+            <para>
+                One of the anti-patterns I encountered in previous workplaces
+                and one especially is that of <ulink
+                    url="http://use.perl.org/~Shlomi+Fish/journal/33013">the
+                    "Knowledge in the Ether"</ulink>. Quoting from my
+                original post:
+            </para>
+            <blockquote>
+                <para>
+                    One anti-pattern I noted in a previous workplace was what I
+                    called "Knowledge in the Ether": most of the instructions
+                    for getting the application up and running, and a lot of
+                    the collective knowledge were not written down in a
+                    collective place. TDDPirate said he was familiar with it
+                    and called it the <ulink
+                        url="http://en.wikipedia.org/wiki/Oral_Torah">"Oral
+                        Torah"</ulink> syndrome.
+                </para>
+                <para>
+                    The solution for this is simple: set up a wiki for the
+                    company, and instruct people to write a note there whenever
+                    they need to explain to someone how to do it (or give a
+                    link to a previous note), <emphasis role="bold">instead
+                        of</emphasis> guiding him how to do
+                    it. While this requires some discipline and getting used
+                    to, it can also be done after the fact.
+                </para>
+                <para>
+                    Obviously the amount of knowledge in people's head and in
+                    the Ether can never be completely eliminated. But it should
+                    be kept down to a minimum.
+                </para>
+            </blockquote>
+
+            <para>
+                There was also a comment that said one should write a script
+                to do that. And it's a good idea to keep good README files,
+                comments, etc. and to use a standard building procedure,
+                or prepare distribution-level packages for the software.
+            </para>
+
+            <para>
+                Nevertheless, a workplace enoucrage its employees to note
+                down every useful knowledge and procedure. My friend once
+                told me that in his previous workplace they kept a
+                knowledge-base as a group of Microsoft Word documents stored
+                inside Visual SourceSafe. As a result, people felt it was
+                too much bother to update and maintain them. Eventually,
+                he set up an instance of <ulink
+                    url="http://www.mediawiki.org/">MediaWiki</ulink>
+                there, which proved to be much more convenient, accessible
+                and quick.
+            </para>
+
+        </section>
+        <section id="which-technology">
+            <title>Choose Your Technology Carefully</title>
+            <para>
+                So which technology should you choose? I'm not giving
+                to give a direct answer, and often there are many factors
+                that make one more appropriate in certain cases than others.
+                Joel Spolsky <ulink url="http://www.joelonsoftware.com/items/2006/09/01.html">attempted
+                    to answer this question</ulink>, but ended up falling into
+                many common miconceptions and prejudices (while still making
+                a few good points). He was also focusing exclusively on
+                web-development.
+            </para>
+            <para>
+                I won't repeat this mistake here, but instead give some
+                general guidelines.
+            </para>
+            <section id="tech-foss-and-portability">
+                <title>Is it Open-source and/or Portable?</title>
+                <para>
+                    One huge advantage to a technology is that it will be
+                    open-source and available on several operating
+                    systems, including most Unixes and Windows
+                    32-bit, and on many CPU architectures. While, often
+                    you'll encounter many platform-specific bugs or
+                    libraries or programs that work properly only on
+                    certain configurations (which is expected), you should
+                    still have the choice of being able to rely on the
+                    technology being present.
+                </para>
+                <para>
+                    For example, Microsoft's <ulink url="http://en.wikipedia.org/wiki/Visual_Basic">Visual
+                        Basic</ulink> was a closed-source and Windows 32-bit
+                    and x86 specific programming language, which had
+                    proven to be very popular. However, Microsoft decided
+                    to discontinue it completely, and as a result, many
+                    of the applications developed for it can no longer
+                    be maintained into the future, and important bugs in
+                    Visual Basic will not get fixed.
+                </para>
+            </section>
+            <section id="tech-expect-unexpected">
+                <title>Expect some Unexpected Problems</title>
+                <para>
+                    <ulink url="http://www.faqs.org/docs/artu/ch16s01.html">Eric
+                        Raymond's "Tale of J. Random Newbie"</ulink> is
+                    illustrative of the many problems programmers encounter
+                    in highly-prorietary environments. Generally however,
+                    even if you're using proven, mature,
+                    well-documented and functional technology, you are
+                    likely to encounter bugs.
+                </para>
+                <para>
+                    I like Perl a lot, and have recently found some bugs
+                    or even crashes in Perl code, which I've been trying to
+                    isolate and report. Perl is otherwise very good and
+                    reliable, but advanced users, or even intermediate
+                    ones are likely to discover many edge cases.
+                </para>
+                <para>
+                    You should make sure you have the capability to isolate,
+                    report and possibly send a fix to such a technological
+                    problem, and get a prompt fix. This often depends on
+                    having good support from the technology vendor or
+                    developer.
+                </para>
+            </section>
+            <section id="tech-power">
+                <title>The Technology's Power</title>
+                <para>
+                    Various technologies and
+                    <ulink url="http://www.joelonsoftware.com/articles/Platforms.html">development
+                        platforms</ulink>, vary in their power and cost. As
+                    opposed to the possible mis-conception of "If you want
+                    something good, you'll have to pay more.", often cheaper,
+                    or even gratis (or open-source) solutions are more
+                    powerful (not to mention more reliable and faster) than
+                    their more costy counterparts.
+                </para>
+                <para>
+                    Often, however, the really good solutions will be an
+                    overkill. Most experts I've talked with agreed that
+                    the <ulink url="http://www.oracle.com/database/index.html">
+                        Oracle Database</ulink> is the most powerful on the
+                    market and "years ahead of anything else out there".
+                    However, most run-of-the-mill web applications won't
+                    make use of even a small percentage of its advanced
+                    features, enough to justify using it instead of, say,
+                    the open-source and gratis
+                    <ulink url="http://www.postgresql.org/">PostgreSQL</ulink>.
+                </para>
+                <para>
+                    For many problem domains, Oracle would make the most
+                    sense, but it's still not very useful in the general
+                    case.
+                </para>
+            </section>
+            <section id="tech-habits">
+                <title>Habits</title>
+                <para>
+                    It makes sense to
+                    <ulink url="http://www.joelonsoftware.com/articles/LordPalmerston.html">choose
+                        a technology which you know very well</ulink>, so
+                    you can overcome problems more quickly. However, smart
+                    programmers can learn different technologies very quickly.
+                    As Spolsky <ulink url="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">notes</ulink>:
+                </para>
+                <blockquote>
+                    <para>
+                        The recruiters-who-use-grep, by the way, are ridiculed
+                        here, and for good reason. I have never met anyone who
+                        can do Scheme, Haskell, and C pointers who can't pick
+                        up Java in two days, and create better Java code than
+                        people with five years of experience in Java, but try
+                        explaining that to the average HR drone.
+                    </para>
+                </blockquote>
+                <para>
+                    If you expect that you
+                    <link linkend="hire-the-best-developers">will
+                        hire the best developers, as I pointed
+                        earlier</link>, then they should probably be
+                    able to pick up something new fairly quickly. If, on
+                    the other hand, you're going to hire bad programmers,
+                    then you're likely to be screwed - even if they have
+                    extensive experience with their native technology.
+                </para>
+                <para>
+                    So you should choose the best technology - not the one
+                    for which you expect to find the most "experts".
+                </para>
+            </section>
+            <section id="tech-reliability-and-reputation">
+                <title>Reliability and Reputation</title>
+                <para>
+                    Often a technology will get a bad reputation as being
+                    "quirky", "hard-to-get-right", "buggy", "unreliable",
+                    etc. This for example, has been the case <ulink
+                        url="http://www.shlomifish.org/open-source/anti/mysql/">against
+                        MySQL</ulink>,
+                    <ulink url="http://www.google.com/search?q=php%20sucks">against
+                        PHP</ulink>,
+                    against Sendmail,
+                    and against other technologies. From my experience, such
+                    common criticisms often have a lot of substance for them
+                    and should be evaluated, especially if there are
+                    equally affordable technologies, but such of a better
+                    reputation.
+                </para>
+            </section>
+            <section id="tech-case-study">
+                <title>Case Study</title>
+                <para>
+                    I once been to a job interview in downtown Tel-Aviv,
+                    which went very well. Then I received a phone call from
+                    them that they want me to come and install Fedora Linux
+                    on the computer. I did that, and next thing I knew, I was
+                    given other tasks.
+                </para>
+                <para>
+                    I was instructed to write a mail-processing framework
+                    in PHP. Now since I know and love Perl, I know there
+                    are many fine modules for doing that on <ulink url="http://sial.org/howto/perl/life-with-cpan/">CPAN (= The
+                        Comprensive Perl Archive Network)</ulink>, but there
+                    was little of subtantial quality for PHP. At a certain
+                    time I needed to register at a site, to download the
+                    latest version of a PHP library, that was free software,
+                    because the download required authentication. There didn't
+                    seem to be anything better.
+                </para>
+                <para>
+                    I was told that they would prefer to write everything
+                    in PHP, because they expected to hire only PHP programmers,
+                    possibly without any Perl experience.
+                </para>
+                <para>
+                    That wasn't all. They also decided against using <ulink
+                        url="http://www.postfix.org/">Postfix</ulink>,
+                    which is a modern, high-performance and open-source
+                    SMTP server, and instead prefered the old
+                    Sendmail SMTP server which has a far worse reputation,
+                    and an arcane configuration system.
+                </para>
+                <para>
+                    Furthermore, they also decided to use MySQL instead of
+                    PostgreSQL, and we ran into a PHP misbehaviour (which
+                    was fixable given a lot of PHP know-how) that made us have
+                    to restart the connection to the server after every
+                    request. Both MySQL and Sendmail were chosen from
+                    political reasons.
+                </para>
+                <para>
+                    With my PHP code barely working and prune to many errors,
+                    I decided to quit after about a month, out of being
+                    appaled by the bad code craftmanship I could do there.
+                    Make sure you don't repeat such a mistake.
+                </para>
+            </section>
+        </section>
+    </section>
+    <section id="conclusion">
+        <title>Conclusion</title>
+        <para>
+            Not all the possible advice for how to manage a workplace was
+            covered here. I refer you to the links at the beginning and
+            inside the document for more reading. You should read them and
+            be enlightened.
+        </para>
+        <para>
+            The workplace I'm talking about is a workplace that aims to
+            employ great programmers to work on great projects, which
+            your developers will love to do. It's not meant for a sweat-shop
+            or one of those companies working on all these low-quality
+            applications for internal-use, especially those that are
+            developed by or for large organisations.
+        </para>
+        <para>
+            If you want to hire the top developers, you should aim for
+            a top environment and very good conditions.
+        </para>
+        <para>
+            I don't intend this document to be dogma, but rather to provoke
+            clear thinking of the matter. A lot of bright programmers I've
+            talked with about the vision of a perfect workplace, have claimed
+            that this is an non-achievable fantasy, and that all
+            employers are much more clueless than that. However, while
+            perfection can never be achieved, I've seen my share of good
+            workplaces, and benevolent and clueful employers, and I think many
+            of them are enlightened enough to improve according to my
+            suggestions.
+        </para>
+        <para>
+            It's not necessary for a programmer to be a wage slave - they need
+            to be treated much better than that, if their employer
+            wants them to be productive and happy. I hope this essay
+            explained how.
+        </para>
+    </section>
+    <section id="thanks">
+
+        <title>Thanks</title>
+
+        <para>
+            Thanks to
+            <ulink url="http://jnw.name/">firespeaker</ulink> for going over
+            an early version of this article and providing some corrections.
+        </para>
+
+    </section>
+</article>    <!-- End of the article -->

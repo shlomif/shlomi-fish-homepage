@@ -1,0 +1,115 @@
+Introduction:
+    WebMetaLanguage - a tool for generating static HTML files out of templates.
+
+    Orignally written by Ralf S. Engelschall and now maintained by
+    Denis Barbier
+
+The WML Methodology:
+    - WML processes the input files through 9 passes:
+    1. Include Preprocessor (similar to the C preprocessor)
+    2. Macro Preprocessor for HTML documents (custom tags, simple
+        conditionals, etc.)
+    3. Embedded Perl 5 Language
+    4. A GNU m4 pass.
+    5. Diversion - places text in different places.
+    6. Area Substitution - substitutes patterns within areas with something
+    else (a la Perl 5 s/// and tr///)
+    7. HTML Fixing.
+    8. Stripping Redundant HTML code.
+    9. Slicing - Outputs different code with different options.
+
+Example 1: A Common Look and Feel <common_look>
+----------------------------------
+
+1. Prepare a template file: template.wml
+
+<<< Insert code >>>
+
+2. Prepare three pages : index.html.wml, download.html.wml, and links.html.wml
+
+3. Prepare a Makefile:
+
+<<< Insert code >>>
+
+Render!
+
+Voila! A fully functional site.
+
+    Explanation:
+    ------------
+
+    #include 'myfile.wml' - includes a files from the current directory.
+
+    {#NAME#} - puts the text defined by NAME in its place.
+
+    $(ROOT) is a preprocessor variable that is defined in the makefile
+    and is expanded whenever it appears. (Note: it will stick to the current
+    directory regardless of the directory of the filename, by virtue of
+    being defined with ~ instead of =)
+
+    {#NAME#:TEXT:##} assigns TEXT to the diversion NAME
+
+    <define-tag> defines a custom tag. %0 is its first parameter. (%1 is the
+    second, etc.)
+
+
+Example 2: Bolding the existing page
+-------------------------------------
+
+Let's cancel the link and bold their text when we are present in the page
+linked to:
+
+<<< Show the modified template >>>
+
+    Explanation:
+    ------------
+
+    <ifneq ...> compares its first two arguments - if they are not equal,
+    it expands to its third argumnent, else it expands to its fourth. There's
+    also <ifeq ... >
+
+Example 3: Creating a Meta-Tag
+------------------------------
+
+The previous example contained a lot of duplicate functionality. Let's
+abstract it in a meta-tag.
+
+    Explanation:
+
+    <if ... /> is a conditional
+
+    %0 and %1 are the arguments to the tag.
+
+Example 4: Frames-Enabled and Non-Frames Version of the Same Site:
+------------------------------------------------------------------
+
+[SLICE: Put text here :] denotes a slice, that takes effect only if the
+slice SLICE was defined. In this example we use it to generate a frames
+and non-frames enabled version of the same site.
+
+<<< Show code >>>
+
+Example 5: A FAQ List with a Table of Contents
+----------------------------------------------
+
+We have learned enough about creating a site layout. Now let's do something
+different for a change: create a list of frequently asked questions, with
+a separate page that contains a brief table of contents.
+
+To do so we'll create a meta-tag:
+
+<question "Anchor" "My Title">
+
+Body of answer
+
+</question>
+
+This tag will expand to the title with the body if a global variable is set
+to a non-empty string, and to the hyperlinked title if it is empty.
+
+We'll also create two meta tags <promote /> and <demote /> which will enable
+creating sections and sub-sections.
+
+For the sake of keeping our sanity - we will program some of the tags
+in Perl.
+

@@ -1,0 +1,46 @@
+#include 'template.wml'
+
+<p>
+The first thing we should do is change the directory to the directory that
+Module-Starter created and run <tt>perl Build.PL</tt>. We get some
+output like the following:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/module-build-and-starter/perl-Build-PL-1-output.txt" />
+</quadpres_code_block>
+
+<p>
+What the <tt>perl Build.PL</tt> command does is generate the <tt>Build</tt>
+script in the current directory that can be used to perform such operations
+as building, testing, packaging, and installing of the distribution. Sometimes
+we need to re-run <tt>perl Build.PL</tt> if we modified the configuration.
+</p>
+
+<p>
+Now let's run <tt>./Build</tt> and <tt>./Build test</tt>.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/module-build-and-starter/perl-Build-and-Build-test-1.txt" />
+</quadpres_code_block>
+
+<p>
+What happens is that <tt>./Build</tt> copies the files under <tt>blib/</tt>
+, builds the documentation, and in case we had
+<a href="http://en.wikipedia.org/wiki/XS_%28Perl%29">XS (= "External Subroutine" - perl routines written in a low-level language)</a> it
+would also build the extensions. This allows us to run tests against the
+built code, either automated or manual by using the
+<a href="http://perldoc.perl.org/blib.html">blib module</a>.
+</p>
+
+<p>
+After we had ran <tt>./Build</tt>, we ran <tt>./Build test</tt> to run the
+automated tests that Module-Starter generated for us. As you can see
+the line says that all tests successful. If they were not, we should fix
+either the code or the tests, depending on what is wrong.
+</p>
+
+<p>
+Now let's move on.
+</p>

@@ -1,0 +1,21 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Subversion Fortune Cookies" />
+
+<h2*>About</h2*>
+
+<p>
+These are fortune cookies related to the
+<a href="http://subversion.tigris.org/">Subversion version control system</a>.
+</p>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/subversion.xhtml-for-input"
+</div>
+
+
+

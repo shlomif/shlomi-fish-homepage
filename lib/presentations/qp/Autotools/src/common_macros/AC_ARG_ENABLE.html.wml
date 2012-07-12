@@ -1,0 +1,38 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>AC_ARG_ENABLE</tt> allows you to define another command line option.
+</li>
+
+<li>
+It accepts three arguments:<br />
+<ol>
+
+<li>
+The flag base: the flag would be
+<tt>--enable-[option base]</tt>
+</li>
+
+<li>
+The help for this option
+</li>
+
+<li>
+The code to execute when the <tt>configure</tt> script is invoked with this
+option. In it the command line variable <tt>enableval</tt> would be set to
+the argument
+</li>
+
+</ol>
+</li>
+
+<li>
+Examples:
+</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/common_macros/AC_ARG_ENABLE/configure.in" />
+</quadpres_code_block>
+

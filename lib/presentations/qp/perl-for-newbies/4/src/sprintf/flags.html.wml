@@ -1,0 +1,40 @@
+#include 'template.wml'
+
+<p>
+One can put various flags between the percent sign and before the
+conversion character, which alter the output. Here is a list of them:
+</p>
+
+<define-tag flag endtag="required">
+<tr>
+<td>
+<tt>%0</tt>
+</td>
+<td>
+%body
+</td>
+</tr>
+</define-tag>
+
+<table class="bordered">
+<flag "space">Prefix positive number with a space</flag>
+<flag "+">Prefix positive number with a + sign</flag>
+<flag "-">Left justify the output within the specified field</flag>
+<flag "0">Use zeros, not spaces to right justify.</flag>
+<flag "#">Prefix non-zero octal with 0, non-zero hex with "0x", and non-zero
+binary with "0b"</flag>
+</table>
+
+<p>
+For example (taken from <tt>perldoc -f sprintf</tt>):
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/sprintf/flags-examples.pl" />
+</quadpres_code_block>
+
+<p>
+Note that <tt>printf</tt> formats its arguments using <tt>sprintf</tt> and
+then prints them using <tt>print</tt>.
+</p>
+

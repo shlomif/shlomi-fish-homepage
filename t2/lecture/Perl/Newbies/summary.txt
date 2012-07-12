@@ -1,0 +1,257 @@
+Intro
+    Capabilities of the language: Regexs, OOP, FP, unlimited data structures,
+    The perl cycle - write -> run -> debug -> correct -> run
+    "There is no king's road to mathematics", Euclid
+Output
+    The print command.
+    Note about semi-colons
+Expressions
+    Basic operators : +, -, /, *, ( ... ), ., %, **
+    Note about using parenthesis with the print function
+Strings ( " ... " )
+    Basic Escape Sequences - \$ \" \\ \n
+    The length() function
+    The substr() function
+    The int() function
+    Note about converting numbers to strings and vice versa (you don't need to!)
+Variables
+    Introduction to the concept of variables
+    A scalar variable can hold anything
+    Assigning a value to a variable
+        Note about the "+=", "*=", "++" operators
+    Getting the value of a variable.
+    Note: the dollars are used both for lvalues and rvalues.
+    Simple Examples: $a = "Hello world!\n"; print $a,$a,$a;
+Input
+    The <> operator.
+    Examples:
+        print "Please enter your name:\n";
+        $name = <>;
+        print ("Hello " . $name . "!\n");
+The For Loop
+    The for loop: for $i (1..100)
+    Examples:
+        Renaming h00.jpg to h000.jpg h01.jpg to h001.jpg etc.
+        Printing the multiplication board.
+Conditionals:
+    if .. elsif .. elsif .. else
+    Examples:
+        Testing if an inputted name starts with a.
+Condition Expressions:
+    The numeric comparison operators
+    The string comparison operators
+    The && and || operators
+The While Loop
+    Explanation
+    Examples:
+        ##################################
+        print "Input a number:\n";
+        $number=<>;
+        my $power_of_2 = 1;
+        while ($power_of_2 < $number)
+        {
+            $power_of_2 = ($power_of_2*$power_of_2);
+        }
+        print ("The first power of 2 that is " .
+            "greater than this number is " , $power_of_2, "\n");
+        ##################################
+Arrays:
+    Syntax: @array, $array[$index], scalar(@array).
+    The , operator.
+    foreach
+        Note about the fact that the for and foreach keywords are equivalent
+        Note about the .. operator (without too much explanation)
+    Examples:
+
+End of lecture 1 ( or 2 )
+
+The for( .. ; .. ; ..) loop
+    Note: next behaviour in it.
+Hashes
+    Intro: what is a dictionary.
+    Uses.
+    Examples:
+Functions
+    Intro: uses
+    Syntax:
+    Examples:
+Declaring local variables with my
+    the "use strict" pragma
+Files:
+    open
+    <FILEHANDLE>
+        A note about newlines
+    print FILEHANDLE
+    close
+    join("",<FILEHANDLE>);
+    chomp
+    Examples:
+Regexps:
+    Introduction: what they are good for.
+    The // syntax.
+    .
+    *
+    ?
+    +
+    ( ... )
+    |
+    [ ... ]
+    ^
+    $
+    s///;
+    *? +?
+
+    Flags:
+        g
+        i
+        e
+    Examples:
+Useful functions:
+    split()
+        Example:
+            Finding the user-id of the user "shlomif".
+    join()
+    map
+        Intro to the defualt variable $_
+    sort
+        <=> and cmp
+    grep
+References:
+    Introduction: what they are, use and abuse.
+    Example: the towers of hanoi.
+    Some syntax:
+        \ - takes a reference to an existing variable or a scalar value
+        [ ] - a dynamic refernece to an array.
+            Note about copying an array reference with [ @_ ];
+        { } - a dynamic reference to a hash.
+        The de-referencing schem @{$ref}, ${$ref}, %{$ref}
+        The various arrow operators: $ref->[$index], $ref->{$key}
+    Examples:
+    Dangers in using references.
+
+Using the perl debugger.
+    Introduction - the purpose of debugging
+    Invoking the debugger
+    Stepping (n) and stepping in (n)
+    setting breakpoints (b)
+    continuing (c)
+    Executing perl commands inside the debugger
+    The x command.
+    RTFM - the perldebug man page, the h command.
+
+End of lecture
+
+Introduction
+    Modular Perl Programming
+        What are References to Functions and why they are important.
+            Closures and their usefulness
+        Modules and their importance
+        Objects and their importance
+    A note about the fact that there is more than one file
+References to functions
+    Taking the reference of a function - \&mysub
+    Calling a function from its reference - &{$ref}(...) or $ref->( ... )
+    Dynamic References to functions - sub { ... }
+    Behaviour of functions inside functions (lexical scoping)
+        Demonstrate the dispatch function
+Modules
+    Specifying a namespace with the package directive
+        The :: as a namespace separator
+        Where to find a module
+    importing modules - use My::Module;
+    Accessing functions from a different module - My::Module::func().
+    Exporting Variables
+        use Exporter;
+        @EXPORT
+        @EXPORT_OK
+    Importing variables - use vars qw(...); and $My::Module::var.
+        Why "my" won't work.
+    BEGIN and END - global constructor and destructor for the package.
+    Note: The main namespace.
+Objects
+    Intro: what are objects and how they are used
+    Intro 2: how it works behind the scenes
+        The object is a reference to a hash
+        Its members are the hash elements
+        The reference is "blessed" to be associated with a module
+        That module contain the methods of the object's class
+        When a method name is called with $obj->method() it is searched
+            for starting at a module class.
+        Note: in perl, passing the reference to the object is done
+            explicitily and it is the first argument of a method.
+    Object use: (demonstrate on Data::Dumper, CGI)
+        Initializing a new object
+        Accessing class members using $obj->{'member'}
+        Calling methods of an object using $obj->method( @args)
+    Making your own objects:
+        The constructor:
+#############
+        sub new
+        {
+            my $class = shift;
+            my $self = {};
+            bless $self, $class;
+
+            $self->initialize();
+
+            return $self;
+        }
+############
+            Explanation
+                Since calling is CGI->new() then CGI is the first argument to
+                    to function
+                bless
+                After the blessing is done one can call methods on it.
+            Note: its name need not be "new"
+        Methods:
+##############
+            sub add_elems
+            {
+                my $self = shift;
+
+                foreach my $elem (@_)
+                {
+                    $self->{'sum'} += $elem;
+                    $self->{'sum_squares'} += $elem**2;
+                    $self->{'N'}++;
+                }
+            }
+###############
+    Object Inheritance:
+        The use vars qw(@ISA); @ISA=qw(My::Class Parent); scheme
+        Calling methods from base classes
+        	The SUPER directive ($self->SUPER::hello());
+    Destructors
+        The DESTROY method
+    isa() and can()
+End of lecture
+
+<TODO: add Exceptions: die and eval { }>
+
+Lecture No. 4:
+
+* Installing and Using CPAN Modules
+* sprintf
+* Alternate forms for writing strings.
+    - q{} qq{}, etc.
+    - Here Documents - <<EOF.
+* Executing Other Processes:
+    - system
+    - `command`
+    - open "|hello";
+    - open "cat hello | "
+* More about behaviour of || and &&
+    - For sort: $a->{'name'} cmp $b->{'name'} || $a->{'address'} cmp $b->{'address'}
+    - The "and" and "or" operators
+* Exceptions:
+    - die
+    - eval
+    - The Carp module (carp, croak)
+    - The Error.pm module on CPAN
+* Some more system functions
+    - opendir/readdir and friends
+    - seek/tell
+    - -X (-e, -f and friends)
+    - chdir
+    - mkdir
+    - stat

@@ -1,0 +1,130 @@
+#include '../template.wml'
+<latemp_subject "PHP Sucks (originally by czth)" />
+
+<h2 id="note">Note</h2>
+
+<p>
+This is a copy of a page that went offline from czth.net. I’ll add links to
+it below.
+</p>
+
+<p> <a href="http://www.php.net/">PHP</a> Sucks.
+
+<i>“PHP is an abomination.” - David Robins, December 17, 2002.</i> </p>
+
+<ul>
+    <li> <a href="http://nuclight.ipfw.ru/vadim/ProgLanguageComparison/PHP%20Annoyances.html">PHP annoyances</a>
+    <li> <a href="http://use.perl.org/articles/02/09/06/2043234.shtml?tid=9">Some comments from use Perl;</a> </li>
+    <li> <a href="http://www.ukuug.org/events/linux2002/papers/html/php/">Experiences of Using PHP in Large Websites</a> </li>
+    <li> <a href="http://www.nntp.perl.org/group/perl.advocacy/2001/08/msg1458.html">Nathan Torkington’s list of PHP’s shortcomings</a> </li>
+    <li> <a href="http://www.gnu-friends.org/story/2002/5/29/113829/681">GNU-Friends article by lupo</a> (broken link - parked domain)</li>
+    <li> <a href="http://www.tnx.nl/php.html">PHP in contrast to perl</a> systematically points out PHP inconsistencies </li>
+    <li> <a href="http://www.joelonsoftware.com/items/2003/10/10.html">Joel on Software</a> mentions PHP’s willful ignorance of character encodings[1] </li>
+    <li> The <a href="http://search.cpan.org/%7Espoon/PHP-Strings/Strings.pm">PHP::Strings</a> perl module will provide much enlightenment </li>
+</ul>
+
+<p> [1] character encodings are a pain in the neck, but they <i>are</i> necessary </p>
+
+<p> Some points of my own: </p>
+
+<p> Of course you can write complex scripts in PHP - it’s Turing complete. It’s just painful. (See Paul Graham’s <a href="http://www.paulgraham.com/power.html">Succinctness is Power</a>
+article.) You can write complex scripts in assembler; it’s also
+painful. But assembler has a niche, a place where it shines: when you
+need to hand-optimize something or write low-level code (think kernels,
+trampolines, compiler magic). PHP doesn’t. There’s nothing for which it
+is the best choice. </p>
+
+<p> A simple problem and a perl solution: remove all matches to <tt>id=<i>some integer value</i></tt> (at the end of a string) from a list, also stripping off <tt>id=<i>value</i></tt> from the other strings. (Admittedly this seems a little contrived but it was actually needed by somebody at some point.) </p>
+
+<pre style="white-space:pre-wrap;">@array = grep { s/id=(\d+)$// ? $1 != $value : 1 } @array;</pre>
+
+<p> [2005-02-04] Finally there’s a PHP equivalent from Jason Sweat, after almost 2 years: </p>
+
+<pre style="white-space:pre-wrap;">$array = array_filter($array, create_function('$v','return !preg_match(\'/id=\d+$|id='.$value.'$/\',$v);'));</pre>
+
+<p> At least it’s possible, but note the following two things: it has to parse code at runtime (think <tt>eval STRING</tt>),
+and that it makes use of perl regular expression matching (beats
+reinventing the wheel I guess). It just doesn’t have the elegance of
+the perl (IMO). </p>
+
+<h2 id="more-links">More Links (by Shlomi Fish)</h2>
+
+<ul>
+<li>
+<a href="http://www.php-security.org/">“The Month of PHP Bugs”</a>
+</li>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.383234.18">“PHP
+more maintainable than Perl, also Pepsi way better than Coke”</a> - post
+to the Joel-on-Software board.
+</li>
+<li>
+<a href="http://www.codinghorror.com/blog/archives/001119.html">Coding Horror:
+“PHP Sucks, But it Doesn’t Matter”</a>
+</li>
+<li>
+<a href="http://www.bitstorm.org/edwin/en/php/">“What I don’t like about
+PHP”</a> -by <a href="http://www.bitstorm.org/edwin/en/">Edwin Martin</a>.
+</li>
+<li>
+<a href="http://books.slashdot.org/article.pl?sid=09/03/02/1410215">Slashdot.org
+Review of the book <i>Securing PHP Web Applications</i></a>
+</li>
+<li>
+<a href="http://perlbuzz.com/2009/06/phps-overly-compliant-subclassing.html">Perlbuzz: “PHP’s overly compliant subclassing”</a>
+</li>
+<li>
+<a href="http://developers.slashdot.org/story/10/06/04/1540241/Month-of-PHP-Security-Finds-60-Bug">Slashdot.org:
+‘Month of PHP Security’ Finds 60 Bugs</a>
+</li>
+<li>
+<a href="http://stackoverflow.com/questions/309300/defend-php-convince-me-it-isnt-horrible">Stackoverflow.com:
+“Defend PHP: Convince me it isn’t horrible”</a>
+</li>
+
+<li>
+<a href="http://maurus.net/resources/programming-languages/php/">Jonas Maurus:
+“I’m sorry, but PHP sucks!”</a>
+</li>
+
+<li>
+<a href="http://lwn.net/Articles/472673/">Comments on LWN.net about the “Cracks in the Foundation” post</a>
+</li>
+
+<li>
+<a href="http://ask.slashdot.org/story/12/01/03/148209/ask-slashdot-which-web-platform-would-you-use">Ask Slashdot: “Which Web Platform Would You Use?” [instead of PHP]</a>
+</li>
+
+<li>
+<a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">fuzzy
+notepad: “PHP: a fractal of bad design”</a> - a comprehensive post.<br />
+<ul>
+<li>
+<a href="http://news.ycombinator.com/item?id=3820431">Coverage on Hacker News</a>
+</li>
+<li>
+<a href="http://lwn.net/Articles/492714/">Coverage on LWN.net</a>
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://phpsadness.com/">PHP Sadness</a> - “These are things in PHP
+which make me sad. They are real, objective issues which I have personally
+encountered in my normal day-to-day activites.”
+</li>
+
+</ul>
+
+<h2 id="jokes">Jokes</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://twitter.com/#!/TomNomNom/status/195304317601849344/photo/1">I
+wrote a book about PHP</a> - photo by Tom Hudson. (<a
+href="php-the-good-parts.jpeg">Local mirror</a>.)
+</p>
+</li>
+</ul>

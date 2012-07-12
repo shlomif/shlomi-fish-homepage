@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<points>
+<li>
+Freecell Solver first implemented only a regular Depth-First Search
+scan using procedural recursion.
+</li>
+
+<li>
+The scan performed all the types of meta-moves in one static order.
+</li>
+
+<li>
+As time progressed, I found it desirable to make the scans more flexible.
+</li>
+
+</points>
+
+<qpcontents />

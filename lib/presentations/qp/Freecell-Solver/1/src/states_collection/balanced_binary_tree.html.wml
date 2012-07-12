@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+A balanced binary tree is a a tree that is explicitly kept balanced.
+</li>
+
+<li>
+It has a lookup and insertion complexity of O(log(n)), and an accumulative
+complexity of O(n*log(n)). All of them worst case!
+</li>
+
+<li>
+I only had a general idea how to implement them, but I was able to find
+predefined open-source APIs on the web that could do the job for me:
+<a href="http://www.stanford.edu/~blp/avl/">libavl</a>,
+<a href="http://libredblack.sourceforge.net/">libredblack</a>,
+<a href="http://library.gnome.org/devel/glib/stable/glib-Balanced-Binary-Trees.html#glib-Balanced-Binary-Trees.synopsis">GLib's Balanced Binary Tree</a>.
+</li>
+
+<li>
+It turned out to be faster than the sorted array, by about a factor of 2.
+</li>
+</points>

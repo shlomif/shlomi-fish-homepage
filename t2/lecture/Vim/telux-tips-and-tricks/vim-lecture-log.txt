@@ -1,0 +1,118 @@
+Now, let's start.
+
+You see it? Right.
+
+This - { and this } jump paragraphs.
+
+Shall I go over my .vimrc?
+
+Hello this is a long line and you don't want to keep it this way. Seriusly, are you crazy, it's very long. WTF?
+Mapping
+Too
+World
+
+gqip / yip / dip
+
+The ip selects the entire paragraph inside anything inside it.
+
+Hello this is a long line and you don't want to keep it this way. Seriusly, are
+you crazy, it's very long. WTF?  Mapping Too World
+
+    Now we've pressed gqip here^^^^
+
+
+
+«:set shiftwidth=4» controls the ">>" and "<<" and ">" and "<", etc.
+which shifts the document.
+
+You enter the guillemens using Ctrl+K-<-< or ->->.
+
+Hello
+        Yes
+World
+    Done
+Begin
+	Hello
+End
+
+
+Are you familiar with tags?
+
+These are tags ^^^.
+
+You can jump to the definition of an identifier in a hypertext-like manner.
+
+Ctrl+] jumps to the tag. Ctrl+t is back.
+
+<a( - de-indents the (....) block.
+
+OK.  I asked about BiDi editing in vim.
+If it does not exist now, it should be hacked.
+I thought about somehow invoking fribidi from vim and doing something to
+cursor.
+
+Well, in Vim, either the Latin is reversed or the Hebrew/Arabic/etc.
+It can reverse the direction of the entire text. For writing Bidi texts, I
+tend to use other editors: kedit, latest KDE's kate, or I was told Katoob is
+also good.
+
+Yuk.
+
+Yes, kedit is pretty hideous. I saw that there are problems in Notepad++
+in Windows too.
+
+gedit Hello
+
+I use gedit for this purpose and gedit is actually rather decent, and even can be extended with Python scripts.
+But I prefer to hack emacs and now maybe vim.
+
+Well, last time I checked gedit didn't have a logical cursor.
+
+gedit rulz!!!1111111 VIM is 4 g33x!!!!!!1111
+
+GEdit is the Fakatza's Editor!
+
+sub baba(
+	Hello
+	Thger
+)
+
+Yes, we do.
+
+Behdad and his friend said they were interested in a truly-BiDi
+-enabled Vim.
+
+Does anyone know a programmer of Apache internals (MPM, filters, buckets/
+brigades, etc.) - please call Eli - 050-5237338 eli-at-netmask.it
+THANKS!
+
+thanks.
+
+If I press 0 - it goes to the first column of the text.
+If I press ^ - it goes to the first non-whitespace character of the line.
+
+			Hello askjdla s jckandkcas
+
+The \< is start word in /-searches. The \> is end-word
+Like \b in Perl.
+
+Hlelo
+
+fortunately for the poor, they have food.
+
+A (capital "A") appends to the end of the line.
+
+I (capital "I") inserts at the start of the line.
+
+	Torrents .asdasd A line.Hello
+
+"c" changes (equivalent to d+i).
+
+B, W, w , b - jumps words or WORDS.
+
+Ctrl+R+w - insert the word under the cursor in the command line editing
+mode.
+
+Ctrl+R+% - the current filename.
+
+Now we are going to the coffee shop.

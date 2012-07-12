@@ -1,0 +1,40 @@
+#include 'template.wml'
+
+<p>
+Perl allows one to refer to the location of a certain variable in memory. An
+expression that holds such a location is called a <b>reference</b>. Those that
+are familiar with C's or Pascal's pointers may think of references as
+pointers. There are however, two fundamental differences:
+</p>
+
+<ol>
+<li>
+There is no reference arithmetics in perl. If for example, a reference points
+to the fifth element of an array, then adding 1 to it will not refer you to the
+sixth element. In fact, adding or substracting integers from references is
+possible but quite meaningless.
+</li>
+
+<li>
+A reference is guaranteed to remain the same even if an array or a string are
+resized. In C, <tt>realloc</tt>ing an array yields a completely different
+pointer.
+</li>
+</ol>
+
+<p>
+Perl distinguishes between an array or a hash and a reference of it.
+The reference of any array may be taken, and a reference to an array
+may always be converted to its elements, but there is still a difference
+in functionality.
+</p>
+
+<p>
+The best way to change a variable in a different scope
+(such as inside a different function) is to pass its reference to the
+function. The called function can then dereference the variable to access
+or modify its value.
+</p>
+
+
+

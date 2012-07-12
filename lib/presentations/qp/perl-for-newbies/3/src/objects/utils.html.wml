@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+
+
+<p>
+<tt>isa()</tt> is a special method that is accasible in every object. When
+invoked with the name of a package as an argument, it returns whether
+or not this object inherits from this package (directly or indirectly).
+</p>
+
+<p>
+<tt>can()</tt> is a method that determines if an object can execute the method
+by the name given to it as argument.
+</p>
+
+
+

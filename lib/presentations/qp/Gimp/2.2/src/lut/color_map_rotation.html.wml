@@ -1,0 +1,48 @@
+#include 'template.wml'
+
+<p>
+So far we have seen LUTs from the V value to the V value. But there can also
+be RGB to RGB LUTs. An example of it is the Color Map Rotation which enables
+us to swap a range of colours with other colours in the Hue spectrum.
+</p>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open <tt>tiger_sitting.jpg</tt>.
+</li>
+
+<li>
+<menupath>&lt;Image&gt; -&gt; Filters -&gt; Colors -&gt; Map -&gt; "Colormap Rotation..."</menupath>
+</li>
+
+<li>
+Replace the shades of brown and yellow with purple.
+</li>
+
+<li>
+Et voila: The Pink Panther.
+</li>
+
+<li>
+Undo.
+</li>
+
+<li>
+Convert the shades of green to browns and we get a tiger in the
+desert.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+

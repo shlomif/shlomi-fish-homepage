@@ -1,0 +1,74 @@
+#include 'template.wml'
+
+<p>
+Sometimes it is useful to check for the validation of more than one condition.
+For doing this, Perl supplies boolean operators.
+</p>
+
+<table border="1">
+<tr>
+<td>
+<h2>&amp;&amp;</h2>
+
+<p>
+<tt>$a &amp;&amp; $b</tt> evaluates to true if both <tt>$a</tt> and <tt>$b</tt> are true.
+It is called the logical and of the two operands <tt>$a</tt> and <tt>$b</tt>.
+</p>
+
+</td>
+</tr>
+<tr>
+<td>
+<h2>||</h2>
+
+<p>
+<tt>$a || $b</tt> (called the logical or of <tt>$a</tt> and <tt>$b</tt>) is
+evaluated to true if one or both of its operands are true.
+</p>
+
+</td>
+</tr>
+<tr>
+<td>
+
+<h2>!</h2>
+
+<p>
+<tt>! $a</tt> (pronounced "not <tt>$a</tt>") evaluates to true
+if <tt>$a</tt> is false.
+</p>
+
+</td>
+</tr>
+</table>
+
+<p>
+Note that if the first operand is evaluated to false in an
+<tt>&amp;&amp;</tt> operation, the second operand will not be evaluated at
+all. Similarly, if the first operand of <tt>||</tt> was found to be true,
+the second one will not be evaluated either.
+</p>
+
+<p>
+If you wish both operands to be evaluated at all times you need to assign
+them to variables first.
+</p>
+
+<p>Here are some examples:</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/range.pl" />
+</quadpres_code_block>
+
+<hr />
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/name_abc.pl" />
+</quadpres_code_block>
+
+<p>
+Note: The function <tt>lc()</tt> converts a string to lowercase.
+</p>
+
+
+

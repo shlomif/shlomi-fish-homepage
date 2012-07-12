@@ -1,0 +1,12 @@
+#include 'template.wml'
+
+<points>
+<li>
+Web-server extensions (such as Apache modules) are compiled native-code
+bindings, that are written in C/C++.
+</li>
+<li>
+The fastest solution, but potentially insecure because it runs in the
+same process-space as the server.
+</li>
+</points>

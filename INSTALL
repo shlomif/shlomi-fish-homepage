@@ -1,0 +1,75 @@
+Follow the following steps to build the homesite:
+
+#. Install Subversion - http://subversion.apache.org/ .
+
+#. Install Mercurial - http://mercurial.selenic.com/ .
+
+#. Install perl 5.8.x (or later) in case it's not already installed. You
+should have a package for for your system.
+
+#. Install Website Meta Language (version 2.0.12 or later):
+
+https://bitbucket.org/shlomif/website-meta-language/downloads
+
+#. Run and configure CPAN (see - http://perl-begin.org/topics/cpan/ )
+and type:
+
+    $ export PERL_MM_USE_DEFAULT=1
+    $ perl -MCPAN -e 'install Task::Sites::ShlomiFish'
+
+Or if you have CPANPLUS installed:
+
+    $ export PERL_MM_USE_DEFAULT=1
+    $ perl -MCPANPLUS -e 'install Task::Sites::ShlomiFish'
+
+#. Install Latemp:
+
+    $ hg clone https://bitbucket.org/shlomif/latemp
+    $ cd trunk/installer
+    $ mkdir -p "$HOME/apps/latemp"
+    $ scons PREFIX="$HOME/apps/latemp/" install
+    $ cd ../support-headers
+    $ perl install.pl
+
+#. Add Latemp to the beginning of your path:
+
+    $ PATH="$HOME/apps/latemp/bin:$PATH"
+
+#. Install the latest version of Quad-Pres from:
+
+    $ hg clone https://bitbucket.org/shlomif/quad-pres
+    $ cd installer
+
+See its INSTALL file. Put a working quadp executable in your shell's PATH.
+
+#. 
+    $ svn co https://seed1.projectlocker.com/shlomif/svn/wml-affiliations/trunk/
+        - Username: svn@shlomifish.org 
+        - Password: 123456
+    $ cd trunk/wml
+    $ bash Install.bash
+
+#.
+    $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
+    $ cd trunk/xhtml/1.x/
+    $ bash Install.bash
+
+#. Install inkscape ( http://inkscape.org/ ) and put its executable in 
+the path.
+
+#. Install jing and put it in the path:
+    - http://www.thaiopensource.com/relaxng/jing.html
+
+#. Install Apache FOP and put it in the path:
+    - http://xmlgraphics.apache.org/fop/
+
+#. Install pngcrush and put it in the path:
+    - http://pmt.sourceforge.net/pngcrush/
+
+#. Do the following to build the site, after all dependencies were installed:
+
+    $ hg clone https://bitbucket.org/shlomif/shlomi-fish-homepage trunk
+    $ cd trunk
+    $ ./gen-helpers.pl
+        ( Ignore the make warning. )
+    $ make

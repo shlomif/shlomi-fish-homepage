@@ -1,0 +1,72 @@
+#include 'template.wml'
+
+<p>
+The debugger displays the perl statement that is about to be executed in
+its display window, and below it the command prompt. It looks something like
+this:
+</p>
+
+<quadpres_code_block>
+shlomi:~/bin# perl -d add_cr.pl
+Default die handler restored.
+
+Loading DB routines from perl5db.pl version 1.07
+Editor support available.
+
+Enter h or `h h' for help, or `man perldebug' for more help.
+
+main::(add_cr.pl:5):	my ($contents);
+  DB&lt;1&gt;
+</quadpres_code_block>
+
+<p>
+The most commonly used command in the debugger is to have it execute one
+(and only one) perl statement. This is called stepping and there are two types
+of it: stepping over and stepping in.
+</p>
+
+<p>
+The difference is that stepping over does not enter the perl functions
+that were called in the expression that was evaluated. Stepping in, on
+the other hand, does enter such functions.
+</p>
+
+<p>
+To step over type <tt>n</tt> (short for "next") followed by enter
+, and you'll see the next perl command displayed. To step in type
+<tt>s</tt> (short for "step").
+</p>
+
+<p>
+And here's how the screen will look after a few step overs:
+</p>
+
+<quadpres_code_block>
+shlomi:~/bin# perl -d add_cr.pl test.txt
+Default die handler restored.
+
+Loading DB routines from perl5db.pl version 1.07
+Editor support available.
+
+Enter h or `h h' for help, or `man perldebug' for more help.
+
+main::(add_cr.pl:5):	my ($contents);
+  DB&lt;1&gt; n
+main::(add_cr.pl:7):	foreach my $file (@ARGV)
+main::(add_cr.pl:8):	{
+  DB&lt;1&gt; n
+main::(add_cr.pl:9):	    $contents = "";
+  DB&lt;1&gt; n
+main::(add_cr.pl:11):	    open my $in, "&lt;", $file;
+  DB&lt;1&gt;
+</quadpres_code_block>
+
+<p>
+Note that sometimes an expression will take more than one step over to
+pass. Operations such as <tt>map</tt>, <tt>sort</tt> and friends are especially
+notorious for that. Breakpoints that will be covered in the next slide
+offer a solution to this problem.
+</p>
+
+
+

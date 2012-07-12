@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Creating a View</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Creating a View</h1>
+<ul>
+<li>A view is a stored query that acts as a virtual table.</li>
+<li>Construct a view with the "CREATE VIEW" SQL command:</li>
+</ul>
+
+<pre>
+test=&gt; CREATE VIEW emp_F AS SELECT employee_id AS id,
+first_name AS private_name, last_name AS family_name FROM employees
+WHERE last_name LIKE 'F%' \g<br />
+CREATE<br />
+test=&gt;<br />
+test=&gt; SELECT * FROM emp_F \g<br />
+id|private_name|family_name<br />
+--+------------+-----------<br />
+&nbsp;1|Shlomi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Fish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
+23|Sarah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Ferguson&nbsp;&nbsp;&nbsp;<br />
+
+26|Falk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Fish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
+24|Michael&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Faraday&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
+71|Tamar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Fish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
+(5 rows)<br />
+</pre>
+
+<ul>
+<li>Note: At the moment, PostgreSQL views are read-only.</li>
+</ul>
+</body>
+</html>

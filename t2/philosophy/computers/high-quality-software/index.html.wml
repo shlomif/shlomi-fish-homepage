@@ -1,0 +1,92 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "What Makes Software High-Quality?" />
+
+<note>
+<h2 id="note">Note (24-May-2008)</h2>
+
+<p>
+There’s now <a href="rev2/">a second revision to this article</a>,
+with many corrections and additions, which is more recommended. Please don’t
+report any problems with the first revision.
+</p>
+
+</note>
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+Which parameters make software applications high-quality? And which parameters
+or methods, while desirable, are not directly “quality”? This article,
+inspired by a post of someone else on a mailing list I started for one of my
+projects aims to answer this question.
+</p>
+
+<toc_div />
+
+<h3 id="itself">The Article Itself</h3>
+
+#include "docbook/4/rendered/what-makes-software-high-quality.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="what-makes-software-high-quality.pdf">Acrobat Reader (PDF) Format</a>.
+</li>
+<li>
+<a href="what-makes-software-high-quality.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<h3 id="coverage-1st">1st Edition</h3>
+
+<ul>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.627380.26">The
+<i>Joel on Software</i> Forum</a>
+</li>
+<li>
+<a href="http://osnews.com/story/19717/What_Makes_Software_High-Quality_">OSNews.com</a>
+</li>
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/36336">Shlomi Fish’s use.perl.org journal</a>
+</li>
+<li>
+<a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6044">Whatsup.org.il (in Hebrew)</a>
+</li>
+<li>
+<a href="http://digg.com/programming/What_is_Software_Quality">Digg.com</a>
+</li>
+<li>
+<a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/820">The
+fc-solve-discuss mailing list</a>.
+</li>
+<li>
+<a href="http://arclanguage.org/item?id=6583">The Arc Language Forum</a>
+</li>
+</ul>
+
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+<p>
+
+Time for revise your <a href="http://www.certkiller.com/exam-640-802.htm">ccna
+640-802</a> concept with icnd 1 <a
+href="http://www.certkiller.com/exam-640-822.htm">640-822</a> topics. Get 100%
+on your <a href="http://www.certkiller.com/exam-640-863.htm">640-863</a> exam
+with Certkiller Questions.
+
+</p>
+
+</define-tag>
+
+<camila_ron />
+

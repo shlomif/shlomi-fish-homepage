@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Using Transactions</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Using Transactions</h1>
+<h3>* A transaction is a batch of statements that is executed at
+once or can be cancelled altogether.<br />
+<br />
+* Use "BEGIN" to start a transaction. After the transaction is done
+use "COMMIT" to execute it, or "ROLLBACK" to cancel it.<br />
+<br />
+* Example:<br />
+<br /></h3>
+<pre>
+test=&gt; BEGIN \g
+BEGIN
+test=&gt; UPDATE employees SET first_name = 'Nahum' WHERE employee_id = 3 \g
+UPDATE 1
+test=&gt; INSERT INTO employees (employee_id, first_name, last_name)
+test=&gt; VALUES (500, 'Linus', 'Torvalds' ) \g
+INSERT 18680 1
+test=&gt; DELETE FROM employees WHERE employee_id = 54 \g
+DELETE 1
+test=&gt; COMMIT \g
+END
+
+
+</pre>
+<h3>* Changes that are made during the transaction are visible to
+queries within the transaction. Yet, they only become visible to
+the outside world, after the transaction was commited.<br /></h3>
+</body>
+</html>

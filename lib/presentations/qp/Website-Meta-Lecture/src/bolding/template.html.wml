@@ -1,0 +1,15 @@
+#include 'template.wml'
+
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/bolding/template.wml" />
+</quadpres_code_block>
+
+<h2>Explanation</h2>
+
+<p>
+<tt>&lt;ifneq ...&gt;</tt> compares its first two arguments - if they are
+not equal, it expands to its third argument, else it expands to its fourth.
+There's also <tt>&lt;ifeq ... &gt;</tt>.
+</p>

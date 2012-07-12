@@ -1,0 +1,56 @@
+#include 'template.wml'
+
+<p>
+We can also use gradients as layer masks to create all kinds of
+fading effects.
+</p>
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+<li>
+Open <tt>lena.png</tt>.
+</li>
+<li>
+Create a new layer and make it black (using the new button)
+</li>
+<li>
+Place it below the lena image.
+</li>
+<li>
+Add a layer mask.
+</li>
+<li>
+Switch the colours to white as foreground and black as background.
+</li>
+<li>
+Draw a foreground to background RGB gradient around Lena's face.
+</li>
+</ol>
+</td>
+</tr>
+</table>
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Note</h3>
+
+<p>
+My partner for "Image Processing and Analysis" and I worked
+for quite some time to create a similar effect in Matlab.
+</p>
+
+<p>
+<tt>(X .^ 2 + Y .^ 2) .^ (2.5)</tt> anyone?
+</p>
+
+</td>
+</tr>
+</table>
+

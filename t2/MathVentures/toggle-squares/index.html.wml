@@ -1,0 +1,75 @@
+#include '../template.wml'
+
+<page_extra_head_elements>
+<style type="text/css">
+.game, .game td, .game tr, .game img
+{
+    border-collapse: collapse;
+    border-width: 0;
+    border: none;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+.game img
+{
+    display: block;
+}
+</style>
+</page_extra_head_elements>
+
+<latemp_more_keywords "toggle, squares, javascript, game, online game, javascript game" />
+
+<script type="text/javascript" src="toggle-squares.js"></script>
+<script type="text/javascript" src="ts-2.js"></script>
+
+<latemp_subject "Toggle Squares Game" />
+
+<p>
+This game originated from a Java game by Dr. Ken Housley, whose personal
+site has since gone offline. This implementation is JavaScript-based.
+</p>
+
+<h2 id="rules">Rules</h2>
+
+<p>
+You are presented with a board of squares that can be either of two
+colours. The objective is to convert all squares to the same colour.
+</p>
+
+<p>
+By clicking on a square, you toggle the colour of the square as well as that
+of all the neighbouring squares (without wrapping and including the diagonal
+ones). As a result, clicking on side or corner squares will toggle
+only 6 or 4 squares.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li>
+<a href="$(ROOT)/MathVentures/toggle_squares.html">Mathematical Analysis of
+the game</a> - also describes an efficient algorithm that can be done by
+a human without extra aids.
+</li>
+<li>
+<a href="http://www.logicgamesonline.com/lightsout/">A similar game called
+“LightsOut”</a> - this time without toggling the diagonals.
+</li>
+</ul>
+
+<h2 id="game">The Game</h2>
+
+<form action="" method="post">
+<p>
+Num Squares: <input name="num_squares" value="5" id="num_squares" />
+</p>
+
+<p>
+<input type="button" name="generate" value="Generate" onclick="generate_board()" />
+</p>
+
+</form>
+
+<div id="board">
+</div>

@@ -1,0 +1,141 @@
+#include '../template.wml'
+<latemp_subject "A First-Come First-Served Readers/Writers Lock" />
+
+<p>
+<a href="pthread_rwlock_fcfs-0.8.0.tar.bz2"><b>Download the latest (0.8.0) stable version source code.</b></a>
+</p>
+
+<p>
+<a href="linux-kernel/">FCFS flock for the Linux Kernel</a>
+</p>
+
+<define-tag devel_version>
+# Removed until I have a new development version
+
+<p>
+<a href="pthread_rwlock_fcfs-0.3.5.tar.gz">Development version</a>
+</p>
+</define-tag>
+
+<p>
+This is a working implementation of a First-Come First-Served
+Readers/Writers lock for POSIX threads. It is well commented and documented
+so I believe it can also serve as a reference implementation for those
+who wish to implement such a mechanism for other platforms.
+</p>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+You may use this code under your choice of:
+</p>
+
+<ul>
+<li>
+<p>
+  <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;">
+    <img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" border="0" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law, <a href="http://www.shlomifish.org/" rel="dct:publisher"><span>Shlomi Fish</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span>First-Come First-Served Readers/Writers Lock</span>.
+This work is published from
+<span>Israel</span>.
+</p>
+</li>
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/MIT_License">The MIT/X11 Licence</a>
+</p>
+</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<a href="http://freshmeat.net/projects/fcfs-rwlock/">Freshmeat.net Record</a>
+</li>
+
+<li>
+<a href="http://bitbucket.org/shlomif/fcfs-rwlock">Mercurial
+(Version control) Repository</a>
+</li>
+
+</ul>
+
+<h2>Todo List</h2>
+
+<ul>
+<li>Make an RPM SPEC/Debian Package etc.</li>
+<li>Port to Win32, ZThreads, etc.</li>
+</ul>
+
+<h2 id="q_and_a">Questions and Answers</h2>
+
+<h3>What is a Readers/Writers Lock?</h3>
+
+<p>
+A Readers/Writers Lock (or RWLock for short) is a mechanism that allows an
+arbitrary number of readers or alternatively one writer to access a
+resource at any given time. It is useful in case writing may temporarily harm
+the integrity of the resource.
+</p>
+
+<h3>What is a First-Come First-Served RWLock?</h3>
+
+<p>
+Many RWLock implementations arbitrate the various readers and writers in a
+manner that may cause starvation of either readers or writers. For instance,
+a readers/writers lock that prefers readers may cause a writer to starve
+(i.e: wait for a very long time or indefinetly) if there are two and more
+competing readers.
+</p>
+
+<p>
+A First-Come First-Served (FCFS) RWLock solves this problem by making sure
+that the pending threads are served at the same order as the time of their
+arrival. Thus, starvation is eliminated assuming that a thread does not
+obtain the lock indefinetly (which in any case should not happen in a
+well-designed system).
+</p>
+
+<h3>How does it make sure that’s what going to happen?</h3>
+
+<p>
+By using a queue in which each element controls a pending thread. A detailed
+description of the algorithm can be found <a href="Scheme.txt">here</a> and
+naturally, there are also the comments in the code. If there’s anything you
+don’t understand, don’t hesitate to
+<a href="$(ROOT)/me/contact-me/">contact me</a>
+and ask.
+</p>
+
+<p>
+Recently, the algorithm was modified to pack several readers or several
+writers on the same queue element, which results in saving of condition
+variables. The new scheme for it (which is a bit more complex) can be found
+<a href="Scheme_RLE.txt">here</a>.
+</p>
+
+<h2>Older Versions</h2>
+
+<ul>
+
+<li>
+<a href="pthread_rwlock_fcfs-0.6.0.tar.bz2">Version 0.6.0</a>
+</li>
+
+<li>
+<a href="pthread_rwlock_fcfs-0.4.0.tar.gz">Version 0.4.0</a>
+</li>
+
+<li>
+<a href="pthread_rwlock_fcfs-0.2.0.tar.gz">Version 0.2.0</a>
+</li>
+
+</ul>
+
+

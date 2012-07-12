@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+<points>
+<li>
+One can write standards-compliant sites that are full of Javascript games,
+Dynamic HTML, and other monsters like that. It is usually a bad idea.
+</li>
+<li>
+Getting Javascript code to work properly on all browsers is more difficult
+than getting a static HTML to do so. (or at least it can never be easier).
+</li>
+<li>
+Most Javascript code is unnecessary. It adds more gizmos to the site, but
+not more functionality.
+</li>
+<li>
+By adding unnecessary embellishments to the site, you make them more prone
+to browser bugs, and mis-features; you make the site harder (and more
+costy) to maintain and you usually don't add much to the user experience
+to be worth it.
+</li>
+<li>
+An extreme example of this are pages that use HTML 4.x markup without any
+CSS or other visual embelishments. If you do this, I guarantee you that your
+portability problems are over.
+</li>
+<li>
+( I wouldn't recommend this extreme, because
+it will make your pages quite boring, but it still illustrates a point. )
+</li>
+</points>
+

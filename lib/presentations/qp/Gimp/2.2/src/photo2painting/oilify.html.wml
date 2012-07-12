@@ -1,0 +1,55 @@
+#include 'template.wml'
+
+<points>
+<li>
+The "Oilify" tool enables one to turn a photograph (or something similar)
+into an oil painting-like image.
+</li>
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open g_anwar1.jpg
+</li>
+
+<li>
+Select
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; Artistic -&gt; "Oilify..."
+</tt>
+</menupath>
+</li>
+
+<li>
+Selct a mask size and press the OK Button.
+</li>
+
+<li>
+Undo and Play with the various settings.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+<points>
+<li>
+Oilify works by replacing the pixel at (x,y) with the value that occurs
+most often in its N x N neighbourhood.
+</li>
+<li>
+It does so separately for each RGB Channel.
+</li>
+</points>
+

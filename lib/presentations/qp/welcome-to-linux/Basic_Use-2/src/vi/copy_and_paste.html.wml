@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<points>
+<li>
+To copy text, one has to be in command mode.
+</li>
+<li>
+Set a mark at the end of the text to be copied using the sequence <tt>ma</tt>
+(where <tt>a</tt> can be any letter).
+</li>
+<li>
+Go to the beginning of the text to be copied and type <tt>y`a</tt> (where
+<tt>`</tt> is a back-quote and <tt>a</tt> is the same letter that was marked
+with)
+</li>
+<li>
+To paste your text, move to the position at the beginning where it should be
+pasted and type <tt>p</tt>.
+</li>
+<li>
+One can cut text in the same way using <tt>d`a</tt>.
+</li>
+</points>
+

@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<points>
+<li>
+I kept a sorted array of states.
+</li>
+
+<li>
+New states were added to the end of the array, which was kept momentarily
+unsorted.
+</li>
+
+<li>
+After a few of them were collected, they were added to the main array using
+qsort.
+</li>
+
+<li>
+O(log(n)) lookup and O(n*log(n)) - O(n<sup><small>2</small></sup>) addition.
+</li>
+
+<li>
+Reasonable performance for most boards.
+</li>
+</points>
+

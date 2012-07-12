@@ -1,0 +1,81 @@
+#include 'template.wml'
+
+<p>
+Software design methodologists distinguish between several types of
+automated tests. First of all, <b>unit tests</b> (also see
+<a href="http://en.wikipedia.org/wiki/Unit_testing">the Wikipedia article</a>)
+test only a single "unit" of the code (say a module or a class), to
+see if it behaves as expected. They generaly make sure that the behaviour
+of the module is sane and desirable, while not trying to see if it works
+as part of the larger scheme.
+</p>
+
+<p>
+On the other hand, <b>system tests</b> test the entire system. For example,
+if we're writing code to generate a web-site, we could test that the various
+pages of the resultant site contain some of the qualities that we expect.
+System tests tests the system as a whole, to see if there'e a bug somewhere.
+</p>
+
+<p>
+Between unit tests and system tests there could be several intermediate layers
+of tests, normally called <b>integration tests</b> .
+</p>
+
+<p>
+You can write all these tests using TAP, Test::More and other testing
+modules on the CPAN, but it's important to be aware of the distinction.
+</p>
+
+<h2 id="smoke_tests">Smoke Tests</h2>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Smoke_testing">“Smoke tests”</a> is a
+term referring to a subset of the tests used to see if the software application
+performs its very basic operation well enough to give way for further testing.
+It is akin to plugging in an Electronics device and making sure it doesn't
+raise smoke from mis-operation. As a result, if the entire tests suite is time
+consuming, the smoke testing should take a short time to perform.
+</p>
+
+<h2 id="testing_other_languages">Using Perl for Testing Code in Other Programming Languages</h2>
+
+<p>
+You can use Perl to test software written in many other programming languages:
+</p>
+
+<ul>
+
+<li>
+<p>
+If you want to perform system tests of foreign applications, you can look at
+the various way for Perl to
+<a href="http://perl-begin.org/uses/multitasking/">invoke
+other command-line programs</a>, and for its sockets and networking
+capabilities.
+</p>
+
+<p>
+For GUI (= Graphical User-Interface) tests, you can look at
+<a href="http://search.cpan.org/dist/Win32-GuiTest/">Win32-GuiTest</a> and
+<a href="http://search.cpan.org/dist/X11-GUITest/">X11-GUITest</a>.
+</p>
+
+</li>
+
+<li>
+<p>
+If you want to write unit-tests for these applications in Perl, you should
+look at the
+<a href="http://search.cpan.org/search?query=inline&amp;mode=all">“Inline”
+family of modules</a> that allow you to write native subroutines in Perl.
+</p>
+
+<p>
+Also of interest is the <a href="http://gitorious.org/perl-ctypes">Ctypes for
+Perl</a> project (which is currently under development.).
+</p>
+
+</li>
+
+</ul>

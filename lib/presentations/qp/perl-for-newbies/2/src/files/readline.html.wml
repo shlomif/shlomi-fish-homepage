@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<p>
+Just like <tt>print</tt> can be generalised to files, so can the
+<tt>&lt;&gt;</tt> which we encountered before. If you place the name of the
+filehandle inside the operator, it will read a line from the file opened by
+that filehandle.
+</p>
+
+<p>
+Here's an example, let's append the line numbers to a given file:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/files/line_numbers.pl" />
+</quadpres_code_block>
+
+<p>
+And the following example counts the number of lines in a file that start with
+the letter "A" (case-insensitive).
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/files/line_count.pl" />
+</quadpres_code_block>
+
+<p>
+The <tt>join("", &lt;FILEHANDLE&gt;)</tt> command returns the entire contents
+of the file from the current position onwards, and may prove to be useful.
+Examples for it will be given in the next section where regular expressions
+will be taught.
+</p>
+
+
+
+

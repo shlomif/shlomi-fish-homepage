@@ -1,0 +1,138 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<!--
+TODO:
+* Add cups/glasses with identifying marks.
+* Add "Have a Life" Scholarships.
+-->
+
+<latemp_subject "Shlomi Fish’s Random Ideas" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+Ideas are the lowest level of value-production and comprise of 1/1111 of the
+effort it takes to materialise a tangible value. Nevertheless, I have a lot
+of them, which I cannot or don’t have the time to realize right now, so I
+decided to put them here for all people who wish to be inspired.
+</p>
+
+<p>
+I don’t put here things that are sort of pipe-dreams (solve any NP-complete
+problem at polynomial time; prove Goldbach’s Theorem), but rather think that
+can be materialized given enough time and effort. If you do materialize
+them (or know of someone who did), write me a note and I’ll mention you
+on this site.
+</p>
+
+<h2 id="non_computer">Non-computer related</h2>
+
+<h3 id="private_school_network">An Affordable Private School Network</h3>
+
+<p>
+Objectivists can tell you only too much about the evils of public education.
+They are right. But being a bit proactive, I think the solution is to create
+a network of private schools that will compete (and eventually out-compete)
+with the public schools. As opposed to traditional private schools, they
+should aim to be affordable.
+</p>
+
+<p>
+With enough schools like that, that would still offer a superior education,
+the need for public schools would be very much decreased and eventually
+completely eliminated.
+</p>
+
+<h3 id="discotheques">Discotheques Playing Music at a Decent Volume</h3>
+
+<p>
+I hate going to discotheque because the music is so loud and I don’t like
+to ruin my ears. (which happen for discotheques patrons all the time). I
+believe a discotheque that would make it its policy not to play music too
+loudly can actually make a lot of money from people like me.
+</p>
+
+<h3 id="stand_up_philosophy">Stand-up Philosophy</h3>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Ludwig_Wittgenstein">Ludwig
+Wittgenstein</a> said once that <q>A serious and good philosophical work
+could be written that would consist entirely of jokes</q>. Well, stand-up
+philosophy is based on the opposite conjecture: that philosophy is good
+enough to be funny or at least entertaining.
+</p>
+
+<h2 id="computer">Computer Related</h2>
+
+<h3 id="computer_games_with_sensible_budget">Computer Games with a Sensible Budget</h3>
+
+<p>
+It is well known that to accomodate with today gaming “standards”, computer
+games became more and more pricy to produce. However, while having better
+graphics and special effects, they are by no means better. Hell, they are
+all <a href="http://www.logicmazes.com/video.html">pretty much the same</a>.
+</p>
+
+<p>
+Instead of producing one $2,000,000 game, isn’t it possible to produce 5
+$400,000 with lesser graphics, audio and effects, but better playability?
+I think it is possible and that this course of action would be better in
+the long run. Think about it.
+</p>
+
+<h3 id="fortunes_mania"><a href="fortunes-mania/">Fortunes Mania</a></h3>
+
+<p>
+An idea for a community site for the collection of fortune cookies.
+</p>
+
+<h3 id="tucan">Tucan - Interfacing High-level Languages</h3>
+
+<p>
+From a conversation I had with
+<a href="http://tddpirate.livejournal.com/">TDDPirate</a> on IRC, we came
+to the conclusion that it would be desirable to have a framework that will
+enable code written in a certain high level language (say Perl) to make
+use of code written in a different high level language (say Python) and that
+from every high-level language to every other high-level language.
+</p>
+
+<p>
+Currently there are:
+</p>
+
+<ol>
+<li>
+<a href="http://www.swig.org/">SWIG</a> - enables writing one interface that
+will eventually generate bindings to a C library for any high-level language.
+However, it cannot interface a pure-Perl code into a pure-Perl code.
+</li>
+<li>
+<a href="http://www.parrotcode.org/">Parrot</a> - a virtual machine for
+dynamic languages. Its main problem is that it requires all such languages
+to implement compilers for its bytecode (along with any bindings they have
+to C).
+</li>
+<li>
+The <a href="http://www.gimp.org/">GIMP</a> contains a procedural database
+that allows registering functions in any language and calling them from
+any other language. However, this is limited to the GIMP and uses custom
+GIMP datatypes.
+</li>
+</ol>
+
+<p>
+It may be a good idea to use <a href="http://www.yaml.org/">YAML</a> and/or
+<a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a> to implement
+Tucan.
+</p>
+
+<h3 id="unixdoc"><a href="unixdoc/">Unixdoc</a></h3>
+
+<p>
+An integrated documentation framework for UNIX-like systems.
+</p>
+

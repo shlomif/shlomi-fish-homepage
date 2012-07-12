@@ -1,0 +1,573 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "Favourite Free Software of Mine" />
+
+<p>
+This page documents my favourite pieces of
+<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
+and open source software (FOSS)</a>. You are welcome to check these packages
+out, and see if they are useful to you as well.
+</p>
+
+<toc_div />
+
+<h2 id="linux"><a href="http://www.linux.org/">Linux</a></h2>
+
+<p>
+Linux is a UNIX clone for many platforms including regular PCs. It is fast,
+stable, powerful and very cool.
+</p>
+
+<h3 id="mandriva"><a href="http://www.mandriva.com/">Mandriva Linux</a></h3>
+
+<p>
+Mandriva is my Linux distribution of choice. In the Linux world, distributions
+are a collection of the Linux kernel and user-land utilities and libraries
+in a nice packaging. Mandriva is an open-source distribution with good ties
+into the community. It is especially suitable for use on the desktop, but is
+also suitable for running Internet and Intranet servers.
+</p>
+
+<p>
+While not as hyped as other distributions are, Mandriva is very decent, and
+is suitable for both beginner and advanced users.
+</p>
+
+<h3 id="user_mode_linux"><a href="http://user-mode-linux.sourceforge.net/">User-mode
+Linux</a></h3>
+
+<p>
+User-mode Linux is a port of the Linux kernel to run as a process on top of a
+normal operating system. This is very useful for virtualisation, security,
+and kernel development. It is now an integral part of the Linux kernel.
+There’s <a href="http://umlwin32.sourceforge.net/">a port to Windows 32-bit</a>
+available as well.
+</p>
+
+<h3 id="virtualbox"><a href="http://www.virtualbox.org/">VirtualBox</a></h3>
+
+<p>
+A great cross-platform x86 virtual machine emulator that allows one to run
+virtual machines of operating systems, with graphics, networking and
+everything else. A complete life-saver, and it’s free and open-source.
+</p>
+
+<h2 id="desktop_apps">Desktop Applications</h2>
+
+<h3 id="kde"><a href="http://www.kde.org/">KDE - The K Desktop Environment</a></h3>
+
+<p>
+KDE is an attractive and powerful desktop environment for UNIXes.
+</p>
+
+<h3 id="firefox"><a href="http://www.mozilla.com/firefox/">Firefox</a></h3>
+
+<p>
+Firefox is a cross-platform web-browser which is standards-compliant and
+has many powerful features.
+</p>
+
+<h4 id="firefox_plugins">Plug-ins for Firefox</h4>
+
+<ul>
+<li>
+<a href="http://www.chrispederick.com/work/firefox/webdeveloper/">Web Developer Extension</a>
+</li>
+<li>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/1949">Site Navigation (Links) Bar</a> - Up/Prev/Next/etc. navigation aids and other rel/rev links.
+Supercedes the unmaintained <a href="http://cdn.mozdev.org/linkToolbar/"
+rel="nofollow">Link Toolbar</a>.
+</li>
+<li>
+<a href="http://linkvisitor.mozdev.org/">LinkVisitor</a> - mark links as
+visited or unvisited.
+</li>
+<li>
+<a href="http://googlebar.mozdev.org/">Googlebar</a>
+</li>
+<li>
+<a href="http://adblock.mozdev.org/">Adblock</a>
+</li>
+<li>
+<a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> - allows one to
+attach JavaScript snippets to pages altering their behaviour.
+</li>
+<li>
+<a href="http://flashblock.mozdev.org/">Flashblock</a> - disables all Flash
+applets until you explicitly click on them. Useful for getting rid of the
+annoying animated Flash advertisements and promos.
+</li>
+<li>
+<a href="http://www.hacksrus.com/~ginda/venkman/">Venkman - the Mozilla
+JavaScript debugger</a> - incredibly useful for debugging browser JavaScript
+and Mozilla chrome JavaScript.
+</li>
+<li>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/4287">Split
+Browser</a> - allows the window to be splitted into several panes, similar
+to <a href="#konqueror">Konqueror</a>. Spotted on
+<a href="http://www.linux.com/article.pl?sid=07/05/10/1334231">Linux.com</a>.
+</li>
+<li>
+<a href="http://www.getfirebug.com/">Firebug</a> - a great
+development tool, that allows to edit, debug and monitor the various aspects
+of web-design.
+</li>
+<li>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/869">Uppity</a> -
+Provides an Up button which moves to upper levels in the sites’ URL.
+</li>
+<li>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/1122">Tab Mix
+Plus</a> - enhances the Firefox tabs experience. Allows to duplicate tab,
+a per-tab progress bar, etc.
+</li>
+<li>
+<a href="http://noscript.net/">NoScript</a> - an extension that prevents
+running unauthorised JavaScript, Flash, Java, etc. except from white-listed
+sources.
+</li>
+</ul>
+
+<h3 id="konqueror"><a href="http://www.konqueror.org/">Konqueror</a></h3>
+
+<p>
+Konqueror is a nice web-browser and file manager for the KDE environment.
+</p>
+
+<h3 id="xchat"><a href="http://www.xchat.org/">XChat</a></h3>
+
+<p>
+A nice IRC client for X-Windows.
+</p>
+
+<h3 id="icewm"><a href="http://www.icewm.org/">IceWM</a></h3>
+
+<p>
+IceWM is a lightweight but functional window manager for X-Windows. It has been
+undermaintained for many years now, though.
+</p>
+
+<h3 id="xfce"><a href="http://www.xfce.org/">Xfce</a></h3>
+
+<p>
+A lightweight desktop environment for X.
+</p>
+
+<h3 id="pidgin"><a href="http://www.pidgin.im/">Pidgin</a></h3>
+
+<p>
+A nice and convenient multi-protocol instant messaging client for
+Linux and other platforms. Lately, I’ve been preferring to use
+<a href="http://kopete.kde.org/">the KDE-based Kopete</a>.
+</p>
+
+<h2 id="development">Development</h2>
+
+<h3 id="perl"><a href="http://www.perl.org/">Perl</a></h3>
+
+<p>
+My favourite language by far. Perl is a high-level language with many
+powerful features and a very rapid development time. It has a very rich
+and comprehensive culture around it, and is good for use in many diverse
+areas.
+</p>
+
+<h3 id="gcc"><a href="http://gcc.gnu.org/">GCC - the GNU Compiler Collection</a></h3>
+
+<p>
+A powerful, portable and reliable C/C++/other languages compiler. A must
+for any programmer on a UNIX system.
+</p>
+
+<h3 id="vim"><a href="http://www.vim.org/">Vim - VI Improved</a></h3>
+
+<p>
+A powerful, portable editor which is very lightweight and nice.
+</p>
+
+<h3 id="subversion"><a href="http://subversion.tigris.org/">Subversion</a></h3>
+
+<p>
+This is a version-control system with style. Runs on UNIXes and Windows.
+</p>
+
+<h3 id="gdb"><a href="http://www.gnu.org/software/gdb/">GDB</a></h3>
+
+<p>
+A powerful, cross-platform, scriptable, and open-source command-line
+debugger for binary programs (C, C++, Assembly, etc.). Made debugging and
+fixing many hard-to-catch bugs in my C/C++ programs much easier.
+</p>
+
+<h3 id="ack"><a href="http://betterthangrep.com/">Ack - “Better than Grep”</a></h3>
+
+<p>
+A nifty command-line utility for quickly searching source trees
+for information. Complements the ubiquitous
+<a href="http://en.wikipedia.org/wiki/Grep">grep</a> utility.
+</p>
+
+<h3 id="cmake"><a href="http://www.cmake.org/">CMake</a></h3>
+
+<p>
+A very good build-system for cross-platform builds, that generates makefiles
+or IDE project files, and allows one to compile complex projects on Windows,
+Mac OS X and many flavours of UNIX. Also see
+<a href="$(ROOT)/open-source/anti/autohell/">my page about “GNU Autohell”
+(= the GNU Autotools)</a> and why you should use CMake instead.
+</p>
+
+<h3 id="web_devel">Web Development</h3>
+
+<h4 id="apache"><a href="http://httpd.apache.org/">The Apache Web-server</a></h4>
+
+<p>
+A powerful, secure and reliable web-server for many platforms including UNIX
+and Win32.
+</p>
+
+<h4 id="mod_perl"><a href="http://perl.apache.org/">mod_perl</a></h4>
+
+<p>
+A Perl subsystem for Apache, that greatly accelerates it and provides other
+capabilities.
+</p>
+
+<h4 id="website_meta_lang"><a href="http://thewml.org/">Website Meta Language</a></h4>
+
+<p>
+WML is a powerful generator for offline HTML content. I now use it for most
+of my sites, including this one.
+</p>
+
+<h4 id="libwww_perl"><a href="http://www.linpro.no/lwp/">Libwww-perl (LWP)</a></h4>
+
+<p>
+LWP is a very powerful Perl framework for retrieving documents from the
+World Wide Web. It’s a must if you want to automate web processes in
+Perl.
+</p>
+
+<h3 id="cygwin"><a href="http://www.cygwin.com/">cygwin</a></h3>
+
+<p>
+cygwin is an open-source Linux-like environment for Windows, that enables
+one to run many UNIX programs and libraries on top of Windows. Make using
+Windows much more bearable.
+</p>
+
+<h3 id="windows-console"><a href="http://sourceforge.net/projects/console">Improved
+Windows Console</a></h3>
+
+<p>
+The so-called “Console” is a great replacement for the dysfunctional
+Microsoft Windows’ console window (so-called “DOS Box”) that has tabs, allows
+one to have presets for several different shells and programs, is very
+customisable and is great for all those people who are using the
+command-line on windows.
+</p>
+
+<p>
+And naturally, it’s also free and open-source.
+</p>
+
+<h2 id="multimedia">Multimedia</h2>
+
+<h3 id="gimp"><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation
+Program</a></h3>
+
+<p>
+A powerful image-processing application.
+</p>
+
+<h3 id="xmms"><a href="http://www.xmms.org/">XMMS - The X Multimedia System</a></h3>
+
+<p>
+A WinAmp clone for X-Windows, that is better than the original. <b>Note:</b>
+I’ve lately switched to <a href="#amarok">Amarok</a>. XMMS is still useful
+on underpowered machines or outside KDE.
+</p>
+
+<h3 id="mplayer"><a href="http://www.mplayerhq.hu/homepage/">MPlayer</a></h3>
+
+<p>
+A capable multimedia player that can play any video format under the sun.
+</p>
+
+<h3 id="mikmod"><a href="http://mikmod.raphnet.net/">MikMod</a></h3>
+
+<p>
+A great player for many popular variants of MOD files with excellent quality,
+wonderful portability, and very good performance.
+</p>
+
+<h3 id="inkscape"><a href="http://www.inkscape.org/">Inkscape</a></h3>
+
+<p>
+A very nice cross-platform vector graphics program.
+</p>
+
+<h3 id="ogg_for_wmp"><a href="http://www.illiminable.com/ogg/">Illiminable Ogg Directshow
+Filters for Free Codecs for Windows Media Player (WMP), etc.</a></h3>
+
+<p>
+These are filters to enable playing of <a href="http://www.vorbis.com/">the Ogg
+Vorbis file formats</a> and other open codecs in Microsoft’s Windows Media
+Player. All the other filters I found were out-of-date, required hackish
+tweaks, and even did not play the files well or supported visualization.
+Illiminable’s on the other hand works well out of the box.
+</p>
+
+<h3 id="youtube-dl"><a href="http://www.arrakis.es/~rggi3/youtube-dl/">youtube-dl</a></h3>
+
+<p>
+I often get reffered to or find videos on
+<a href="http://www.youtube.com/">YouTube</a>, but they are relatively
+inaccessible, because of my Linux configuration. But using youtube-dl, I can
+easily download the video files to my home computer, where I can conveniently
+play them using <a href="#mplayer">MPlayer</a>, and also keep them on my hard
+disk for posterity. Highly recommended.
+</p>
+
+<h3 id="amarok"><a href="http://amarok.kde.org/">Amarok</a></h3>
+
+<p>
+Amarok is a superb music player for <a href="#kde">the KDE desktop
+environment</a>. It’s the best music player I’ve encountered so far with many
+nice features, and very good customisability. Also see
+<a href="http://shlomif.livejournal.com/9563.html">what I wrote about it on
+my blog</a>.
+</p>
+
+<h3 id="kflickr"><a href="http://kflickr.sourceforge.net/">Kflickr</a></h3>
+
+<p>
+A wonderful program for KDE for uploading photos to
+<a href="http://flickr.com/">Flickr</a>. Best I’ve seen and it actually works
+flawlessly.
+</p>
+
+<h2 id="office">Office</h2>
+
+<h3 id="latex"><a href="http://www.latex-project.org/">LaTeX</a></h3>
+
+<p>
+A high-quality type-setting system.
+</p>
+
+<h3 id="docbook"><a href="http://www.docbook.org/">DocBook</a></h3>
+
+<p>
+A document preparation system that can create HTML, PDF, Word RTF - all
+from the same source.
+</p>
+
+<h3 id="openoffice"><a href="http://www.openoffice.org/">OpenOffice.org</a></h3>
+
+<p>
+A feature-rich cross-platform office suite.
+</p>
+
+<h2 id="games">Games</h2>
+
+<h3 id="pysol"><a href="http://pysolfc.sourceforge.net/">PySol Fan Club Edition (PySolFC)</a></h3>
+
+<p>
+A comprehensive, and feature-rich collection of Solitaire games. It’s
+written in Python and so is cross-platform.
+</p>
+
+<h3 id="hex-a-hop"><a href="http://libregamewiki.org/Hex-a-hop">Hex-a-hop</a></h3>
+
+<p>
+An open-source puzzle game based on hexagonal tiles. Great graphics and
+great playability.
+</p>
+
+<h2 id="networking">Networking</h2>
+
+<h3 id="kmail"><a href="http://kmail.kde.org/">KMail</a></h3>
+
+<p>
+A powerful and easy-to-use mail client for the KDE environment. Has excellent
+internationalization.
+</p>
+
+<h3 id="spamassassin"><a href="http://spamassassin.org/">SpamAssassin</a></h3>
+
+<p>
+A very nice Junk E-mail filtering mechanism that makes reading the inbox
+much more enjoyable.
+</p>
+
+<h3 id="wget"><a href="http://www.gnu.org/software/wget/wget.html">wget</a></h3>
+
+<p>
+A command-line utility for fetching URLs and documents from the Internet
+through various protocols. Very powerful and feature-rich.
+</p>
+
+<h3 id="curl"><a href="http://curl.haxx.se/">cURL</a></h3>
+
+<p>
+Another command-line URL fetcher which has proven useful. Also a library
+for use within your C programs.
+</p>
+
+<h3 id="perl_mail_box"><a href="http://perl.overmeer.net/mailbox/">Mail::Box</a></h3>
+
+<p>
+A set of Perl modules that enables one to manage the E-mail folders, prune
+old messages, etc. Very very nice, but kinda slow.
+</p>
+
+<h3 id="procmail"><a href="http://www.procmail.org/">procmail</a></h3>
+
+<p>
+A useful UNIX utility that can be used to sort and process incoming E-mail
+messages.
+</p>
+
+<h3 id="rsync"><a href="http://samba.org/rsync/">rsync</a></h3>
+
+<p>
+A feature-rich tool for incremental remote transfer of files.
+</p>
+
+<h3 id="wireshark"><a href="http://www.wireshark.org/">Wireshark</a></h3>
+
+<p>
+A graphical tool for recording, analyzing and displaying network
+conversations. Very useful for debugging networking protocols and
+for other purposes.
+</p>
+
+<h3 id="clamav"><a href="http://www.clamav.net/">Clam AntiVirus
+(ClamAV)</a></h3>
+
+<p>
+ClamAV is an open source anti-virus that can help filter out email messages
+containing viruses that are sent to you. It is regularly updated.
+</p>
+
+<h3 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h3>
+
+<p>
+If you’re <a href="$(ROOT)/open-source/anti/qmail/">unfortunate enough
+to use qmail</a> for some of your mail accounts, and still wish to filter
+out all the viruses that arrivate at your account, then Qclam may be the
+right solution for you. QClam is a program that feeds the message to ClamAV,
+and reports the verdict in a way that dot-qmail files can understand.
+</p>
+
+<h3 id="openssh"><a href="http://www.openssh.com/">OpenSSH</a></h3>
+
+<p>
+OpenSSH, which is a free implementation of the SSH protocol, allows one to
+establish secure and authenticated connections to a different computer
+over the network. It allows one to login and execute remote commands, and
+transfer files from one host to another.
+</p>
+
+<h3 id="vnc"><a href="http://www.tightvnc.com/">TightVNC</a></h3>
+
+<p>
+VNC is a cross-platform remote desktop utility that enables viewing a desktop
+on a different machine from a different networked computer. It is very
+easy to set up. TightVNC is a popular open-source implementation of it. Also
+of interest is <a href="http://www.uvnc.com/index.html">UltraVNC</a>.
+</p>
+
+<h3 id="rdesktop"><a href="http://www.rdesktop.org/">rdesktop</a></h3>
+
+<p>
+A Windows’ remote desktop protocol client for UNIXes that enables one to work
+on a remote Windows computer from them.
+</p>
+
+<h2 id="system">System</h2>
+
+<h3 id="tmux"><a href="http://tmux.sourceforge.net/">tmux</a></h3>
+
+<p>
+A terminal multiplexer for UNIX. I use it to run shell processes in the
+background where they won’t be interrupted, but it allows for much more.
+</p>
+
+<h3 id="htop"><a href="http://htop.sourceforge.net/">htop</a></h3>
+
+<p>
+An improved top-like process viewer for Linux with better usability.
+</p>
+
+<h2 id="security">Security</h2>
+
+<h3 id="gringotts"><a href="http://gringotts.shlomifish.org/">Gringotts</a></h3>
+
+<p>
+Gringotts allows one to keep password and other sensitive information
+encrypted. It has a Gtk+ interface. Note: while it was originated by Germano
+Rizzo, I am Gringotts’ current maintainer.
+</p>
+
+<h2 id="other_lists">Other Lists</h2>
+
+<p>
+Here are some other high-quality lists of open-source software on the Web:
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.opensourcewindows.org/">Open Source Windows</a> - a simple
+list of the most prominent choices, which isn’t very detailed, but very
+attractive.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/List_of_free_and_open_source_software_packages">Wikipedia’s List of free and open source software packages</a> -
+a very comprehensive list - for all platforms (including non-portable software).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://help.ubuntu.com/community/ListOfOpenSourcePrograms">List of
+Open Source Programs (for Windows) - LOOP</a> - a comprehensive wiki page
+(world editable) that lists the programs with their possibly more familiar
+proprietary alternatives.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://tipsfor.us/2008/04/07/21-awesome-but-lesser-known-open-source-applications-for-windows/">“21
+Awesome (But Lesser-Known) Open-Source Applications for Windows”</a> - on
+<a href="http://tipsfor.us/">the “Tips For Us” site</a>.
+</p>
+</li>
+
+</ul>
+
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+<p>
+Sign up for <a href="http://www.testking.eu/exam/350-001.htm">testking
+350-001</a> course to pass real exam. Get guaranteed success in real exam using
+self study <a href="http://www.testking.eu/exam/640-802.htm">testking
+640-802</a> guide and <a
+href="http://www.testking.eu/exam/VCP-410.htm">testking VCP-410</a> practice
+exam.
+</p>
+</define-tag>
+
+<camila_ron />
+

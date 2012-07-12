@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+
+
+<p>
+It is possible to explicitly call the method of a base class even if it
+was over-riden by another method in the derived class. To do that use
+the <tt>SUPER::</tt> prefix before the method name.
+</p>
+
+<p>
+Here is a rewrite of the <tt>Bar</tt> class, this time with
+<tt>assign_name</tt> retaining its name.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/objects/making/inheritance/Bar2.pm" />
+</quadpres_code_block>
+

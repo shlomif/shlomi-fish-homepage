@@ -1,0 +1,1838 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+
+<article id="index">
+    <articleinfo>
+        <title>What Makes Software High-Quality?</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2008</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice id="main_legal_notice">
+            <para>
+<!--Creative Commons License-->
+This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option a greater version of it).
+		<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+	<dc:title>The Case for File Swapping</dc:title>
+	<dc:date>2005</dc:date>
+	<dc:description>An essay that explains why Internet File Swapping (using Peer-to-Peer networks, etc.) is not only moral and ethical, but also should be legal, and cannot be banned. Discusses other issues.</dc:description>
+	<dc:creator><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:creator>
+	<dc:rights><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:rights>
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+		</Work>
+		<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+            </para>
+        </legalnotice>
+        <abstract>
+            <para>
+                This document will discuss what makes an open source program
+                (and by induction other programs) high-quality. It will cover
+                the parameters that make software applications high-quality
+                and ways to achieve them.
+            </para>
+        </abstract>
+
+        <revhistory>
+            <revision>
+                <revnumber>1675</revnumber>
+                <date>02 April 2007</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the template from a previous work and working on
+                    it.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1871</revnumber>
+                <date>04 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Finalised the first draft. About to receive feedback.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1872</revnumber>
+                <date>04 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed many spelling/grammar/etc. problems, trailing
+                    whitespace, etc.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1882</revnumber>
+                <date>06 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed many spelling, grammar and syntax problems (thanks
+                    in part to Omer Zak). Added some bolds, and id=“”s, added
+                    the about section, reorganised the text a bit,
+                    and added the note about responsiveness and startup time.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1884</revnumber>
+                <date>06 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Changed “a software” to something more idiomatic,
+                    and fixed a mis-phrasing towards the beginning.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>5218</revnumber>
+                <date>15 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the document from the first revision, and
+                    converted to DocBook-4.5.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>5329</revnumber>
+                <date>24 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the suggestion of speaking about “Why software
+                    quality is important”, and the note about popularity to the
+                    introduction. Placed the Intro FCS story in the
+                    “Motivation” section. Added the “organisation” sub-section
+                    to the Intro.  Added the note about the generic “weight
+                    function”.  Aded a link to “The Stanford Checker”.
+                    Corrected many “a software” instances. Added the note about
+                    how Linux and Windows looked to the Aesthetics.  Added the
+                    note about low-quality code and organisational quality to
+                    the “good code” section.  Added the footnote about a
+                    comprehensive comparison of Freecell solvers. Added the
+                    note about solution length and “other advantages” of
+                    fc-solve.  Updated the “Thanks” section.  Made many other
+                    corrections.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>5492</revnumber>
+                <date>09 June 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed “manifest” to “is manifested”.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>4859</revnumber>
+                <date>05 June 2011</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Convert to Unicode single-quotes and double-quotes.
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+<section id="introduction">
+    <title>Introduction</title>
+
+    <para>
+        Why is high quality in software important? Low-quality software
+        applications will require the users or end-developers to work
+        around their bugs and limitations, write a lot of extra functionality
+        themselves, and as a result, duplicate a lot of effort and
+        cause a lot of frustration and unhappiness. This is assuming
+        they don’t give up on it soon or right away, and end up looking
+        for something else.
+    </para>
+
+    <para>
+        But what makes a popular software application “high-quality”?
+        A high-quality program or library can be defined as one that
+        is usable as is, that causes very few frustrations, and that
+        requires little if any modifications or workarounds to get
+        it up-to-speed.
+    </para>
+
+    <para>
+        I’m not talking about the application that’s the most hyped, or the
+        fastest, most featureful, or best. Sometimes you can often hear
+        endless rants
+        and <ulink
+            url="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
+            Uncertainty and Doubt (FUD)</ulink> attacks about it. Often, it has
+        competing programs that are superior in many respects.
+    </para>
+
+    <para>
+        In this essay we’ll look at what quality metrics apply to software.
+    </para>
+
+    <section id="motivation">
+        <title>Motivation</title>
+
+        <para>
+            How did it occur to me to ponder this question? I am active in the
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss
+                mailing list</ulink>,
+            which is dedicated to computerised techniques for solving
+            <ulink url="http://www.freecell.org/">the Freecell solitaire card
+                game</ulink>, and for discussing other automated solving
+            and research of Solitaire games. This mailing list was started after
+            I wrote
+            <ulink url="http://fc-solve.shlomifish.org/">Freecell Solver</ulink> (with
+            a lowercase “c” and an uppercase “S”), an open-source solver,
+            which has proven to be quite popular. However, the mailing list
+            was not restricted to discussing it exclusively, and was joined
+            by many other Freecell solving experts, researchers and enthusiasts.
+        </para>
+        <para>
+            Recently, Gary Campbell wrote
+            <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this
+                message</ulink> reading:
+        </para>
+        <blockquote>
+            <para>
+                I think the solver discussion in the Wikipedia should mention that
+                the FCPro solvers give quite lengthy and virtually unusable
+                solutions. No human wants to follow the several hundred steps that
+                usually result in order to get at what’s really required to solve a
+                given layout. If someone wants a solution that can be understood,
+                they want one that is under 100 steps.  This is a major
+                contribution and it should be stated. There are a lot of
+                <emphasis role="bold">“toy”</emphasis>
+                solvers and only a very few of <emphasis role="bold">“industrial strength.”</emphasis>
+                One of the
+                latter is the solver by Danny Jones. I don’t see that on your list.
+                The results he has gotten from his solver pretty much put your
+                solver to shame. The more you hype Freecell Solver, the more
+                criticism you open yourself up to.
+            </para>
+        </blockquote>
+        <para>
+            Unfortunately, it’s hard for me to determine what “industrial
+            strength”, “enterprise grade” and other such buzzwords are. But I’ll
+            try to define high quality here, and try to show when a program
+            is high quality.
+        </para>
+    </section>
+    <section id="organisation">
+        <title>Organisation of this Document</title>
+
+        <para>
+            I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
+            that I considered to be of exceptional high-quality, but I decided
+            against it.
+        </para>
+
+        <para>
+            That’s because their exceptional quality is a matter of taste, and
+            it may provoke too much criticism against this essay as a whole.
+            Thus, I’ll just give some examples, possibly accompanied by
+            screenshots, of places where one program does something
+            better than a different program. I won’t even going to imply
+            that the latter is in fact lower-quality in all
+            possible respects.
+        </para>
+
+        <para>
+            This article is written from my point-of-view as a developer
+            of <ulink url="http://en.wikipedia.org/wiki/Free_and_open_source_software">“Free
+                and Open Source Software”</ulink>, and will focus on
+            open-source and pseudo-open-source software. However, a lot of
+            what I say is more universal.
+        </para>
+    </section>
+</section>
+<section id="parameters-of-quality">
+    <title>Parameters of Quality</title>
+    <para>
+        This section will cover the parameters that make software high
+        quality. However, it will not cover the means to make it so. These
+        include such non-essential things as having good, modular code
+        <footnote id="good_code" label="having_good_code">
+            <para>
+                What? Shouldn’t high quality software have a good codebase.
+                Surprisingly no. What would you prefer: having a very modular
+                codebase that does something pretty useless like outputting
+                the string “Hello World” <emphasis role="bold">or</emphasis>
+                having a large codebase of relatively low quality with a
+                large amount of useful functionality and relatively few bugs?
+            </para>
+            <para>
+                I would certainly prefer the other alternative. That’s because
+                I know I can always refactor that codebase, either by
+                <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">large
+                    scale refactoring</ulink> or by continuous refactoring
+                or even “Just-in-Time” refactoring, only to add a new feature.
+            </para>
+        </footnote>
+        good marketing, or having good automated tests. These things are
+        definitely important, but will be covered only later, and a lot
+        of popular, high-quality software lacks some of them, while its
+        competition may do better in this respect.
+    </para>
+    <para>
+        One note that is in order is that these are <emphasis
+            role="bold">many parameters in a generic
+            “weight function”</emphasis>, and not a list of requirements which
+        must all be satisfied. <footnote id="parameters-not-foss"
+            label="Licence">
+            <para>
+                For example, I mention later that the more liberal the
+                source licence of a program, the higher quality it is.
+                Obviously, a lot of <ulink
+                    url="http://en.wikipedia.org/wiki/FOSS">non-
+                    “Free and Open Source Software”</ulink> or even binary-only
+                applications are high-quality too. But, the use of such
+                software is still more limited than an open-source one, so it
+                would be of lesser quality than an identical software that is
+                open-source.
+            </para>
+            <para>
+                Similarly, libraries or programs that are distributed
+                under the relatively restrictive <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU
+                    General Public Licence (GPL)</ulink> (and which are
+                considered open-source and usable by most Linux distributions)
+                cannot be used in many common situations,
+                and so would be of lesser quality than programs under a more
+                permissive licence.
+            </para>
+        </footnote>
+    </para>
+    <section id="software_is_available">
+        <title>The Program is Available for Downloading or Buying</title>
+        <para>
+            That may seem like a silly thing to say, but you’ll be surprised
+            how many times people get it wrong. How many times have you seen
+            web-sites of software that claim that the new version of the
+            program (or even the first) is currently under work, will change
+            the world, but is not available yet? How many times have you heard
+            of web-sites that are not live yet, and refuse to tell people
+            exactly what they are about?
+        </para>
+
+        <para>
+            Alternatively, in the case of
+            <ulink url="http://en.wikipedia.org/wiki/Coverity">the
+                “Stanford checker”</ulink>, which is
+            a sophisticated tool for static code analysis, it is not available
+            for download, but instead is a service provided by its parent
+            company.
+        </para>
+
+        <para>
+            A program should be available in the wild somehow (for downloading
+            or at least buying) so people can use it, play with it, become
+            impressed or unimpressed, report bugs, and ask for new features.
+            Otherwise it’s just in-house software or at most a service, that
+            is not adequate for most needs.
+        </para>
+        <para>
+            In the “Cathedral and the Bazaar”, Eric Raymond recommends
+            <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html">to
+                “release early and release often”</ulink>. Make frequent,
+            incremental releases, so your project won’t stagnate. If you
+            take your project and work on it yourself for too long, people
+            will give up.
+        </para>
+        <para>
+            If you have a new idea for a program, make sure you implement some
+            basic but adequate functionality, and then release it so people
+            can play with it, and learn about it. Most successful open-source
+            projects, that have been open-source since their inception, have
+            started this way: the Linux kernel, gcc, vim, perl, CPython. If
+            you look at the earliest versions of all of them, you’ll find that
+            they were very limited if not downright hideous, but now they are
+            often among the best of breed.
+        </para>
+    </section>
+    <section id="version_number_indicated">
+        <title>The Version Number is Clearly Indicated</title>
+        <para>
+            Which version of your software are you using? How can you tell?
+            It’s not unusual to come to a page where the link to the archive
+            does not contain a version number, nor is it clearly indicated
+            anywhere. What happens if this number was bumped to indicate a
+            bug fix. How do you indicate it then?
+        </para>
+        <para>
+            A good software always indicates its version number in the
+            archive file name, the opening directory file name, has a
+            <literal>--version</literal> command-line flag,
+            and the version mentioned in the about dialogue if there is
+            one.
+        </para>
+    </section>
+    <section id="source_is_available">
+        <title>The Source is Available, Preferably under a Usable
+            Licence</title>
+        <para>
+            Public availability of the source is a great advantage for a
+            program to have. Many people will usually not take a look at it
+            otherwise, for many reasons, some ideological but some also
+            practical. <footnote id="ideology" label="Ideology">
+                <para>Assuming there was ever a true ideology
+                    that was not also practical. </para>
+                <para>
+                    The way I see it, an ideology (and ethics in general)
+                    are a strategy that aims to make a person lead a better,
+                    happier life. If it isn’t, then it’s just a destructive
+                    dogma, or just plain stubbornness.
+                </para>
+            </footnote>
+            Without the source, and without it being
+            under a proper licence, the software will not become part of
+            most distributions of Linux, the BSD operating systems, etc.
+        </para>
+        <para>
+            If you just say that your software
+            “is copyright by John Doe. All Rights Reserved”, then it may
+            arguably induce an inability
+            to study its internals (including to fix bugs or add features)
+            without being restricted by a non-compete clause, or even that
+            its use or re-distribution is restricted. Some software ship
+            with extremely long, complicated (and often not entirely
+            enforceable) End-User-Licence-Agreements (EULAs) that no-one reads
+            or cares to understand.
+        </para>
+        <para>
+            As a result, many people will find a program with a licence that
+            is not 100%
+            <ulink url="http://www.gnu.org/philosophy/free-sw.html">Free
+                and Open Source Software</ulink> - unacceptable. To be truly
+            useful the application also needs be
+            <ulink url="http://www.dwheeler.com/essays/gpl-compatible.html">GPL
+                compatible</ulink>, and naturally usable public-domain licences
+            such as the modified BSD licence, the MIT X11 licence, or even
+            pure Public Domain source code<footnote id="public-domain-source" label="public-domain">
+
+                <para>
+                    Using a pure-public-domain licensing terms for your
+                    software is problematic because not all countries have a
+                    concept of “public-domain”, similar to that of the United
+                    States, because many people mis-interpret it, and because
+                    it is not clear whether software can be licensed under the
+                    public-domain to begin with. (And other such issues).
+                </para>
+
+                <para>
+                    While <ulink url="http://freshmeat.net/browse/197/">quite
+                        a lot of important programs has been released under
+                        the public domain</ulink>, and they are doing quite
+                    fine, they may have some problematic legal implications.
+                </para>
+                <para>
+                    For these reasons, I now prefer the MIT X11 Licence for
+                    software that I originated instead of the “public domain”.
+                </para>
+            </footnote>, are even better for their
+            ability to be sub-licensed and re-used. This is while licenses that
+            allow incorporation but not sub-licensing, like the Lesser General
+            Public License (LGPL) are somewhere in between.
+        </para>
+        <para>
+            While some programs on Linux have become popular despite being
+            under non-optimal licences, many Linux distributions pride
+            themselves that the core system consists of “100% free software”.
+            Most software that became non-open-source, was eventually forked
+            or got into disuse, or else suffered from a lot of bad publicity.
+        </para>
+        <para>
+            As a result, a high-quality software has a licence that is the
+            most usable in the context of its common use cases. These
+            licences are doubly-important for freely-distributed UNIX software.
+        </para>
+    </section>
+    <section id="just_works">
+        <title>It “Just Works”</title>
+        <para>
+            This is a meta-parameter for quality. When people say that
+            something “just works”, they mean that you don’t have to be
+            concerned about getting it up and running, not spend too much
+            time to learn it, not worry about it destroying data, or have to
+            wonder how to troubleshoot problems with it.
+        </para>
+        <para>
+            A program that just works is the holy grail of high-quality
+            software. In practice this means several things:
+        </para>
+        <orderedlist>
+            <listitem id="no_showstopping_bugs">
+                <para>
+                    A “just works” software also doesn’t have
+                    <emphasis role="bold">any show-stopping
+                        bugs</emphasis>. While it may still have some bugs, it
+                    should mostly function correctly.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    It has most of the <emphasis role="bold">features people
+                        want</emphasis> and does not lack essential ones. For
+                    example, GNU Arch, an old and now mostly unused
+                    version control program, did not work on Windows 32-bit,
+                    while Subversion, a different and popular alternative,
+                    has a native port. Moreover, Mercurial,
+                    a different alternative, cannot keep
+                    empty directories (or trees of directories not containing
+                    files) in the repository. This may make both
+                    Mercurial and GNU Arch a no-starter for many uses.
+                </para>
+                <para>
+                    <ulink url="http://www.tendra.org/">Tendra</ulink> is the
+                    most prominent alternative C and C++ compiler to GCC, but
+                    it’s hardly as advanced as GCC is, does not have
+                    all of GCC’s features and extensions, and is not usable
+                    as a replacement for GCC for most needs. As such, it is
+                    hardly ever used.
+                </para>
+            </listitem>
+            <listitem id="good_usability">
+                <para>
+                    A “just works” software also has <emphasis role="bold">good
+                        usability</emphasis>. What it means is that it behaves
+                    like people expect it to. The Emacs-based editors, which
+                    are an alternative to Vim, do not invoke the menus upon
+                    pressing “Alt+F”, “Alt+E”, etc. which is the Windows
+                    convention to them.
+                </para>
+                <para>
+                    Furthermore, when putting a single-line prompt, the prompt
+                    cannot be dismissed with either Ctrl+C or ESC, while in
+                    Vim, both keys dismiss the prompt. The key combination to
+                    dismiss it is not written anywhere on the screen and I
+                    won’t tell you what it is. According to
+                    <ulink url="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User
+                        Interface Design for Programmers</ulink>, <quote>A
+                        user-interface is well-designed when the program
+                        behaves exactly how the user thought it would</quote>.
+                </para>
+                <para>
+                    While some people may be led to believe this is not
+                    applicable to terminal applications, TTY applications,
+                    command line applications, or even Application
+                    Programming Interfaces (APIs) - it still holds there. One
+                    thing that made me like gvim (the Graphical front-end to
+                    vim) was that it could be configured to behave much like
+                    a Windows editor. I gradually learnt more and more
+                    vim paradigms, but found the intuitive usability
+                    a great advantage. But I could never quite get used to
+                    Emacs.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section id="homepage">
+        <title>The Program has a Homepage</title>
+        <para>
+            Most software applications and libraries of high-quality have a
+            homepage which introduces them, has download information, gives
+            links, and provides a starting point to receive more information.
+            And no - a <literal>/project/myprogram/</literal> page on
+            <ulink url="http://sourceforge.net/">Source Forge</ulink> or
+            a different software hub - is much more sub-optimal than that, and
+            leaves a bad impression.
+        </para>
+    </section>
+    <section id="easy_to_compile_and_install">
+        <title>The Program is Easy to Compile, Deploy and Install</title>
+        <para>
+            A high-quality program is easy to compile, deploy and install.
+            It builds out of the box with minimal hassles. There are several
+            common standard building procedures for such software:
+        </para>
+
+        <orderedlist>
+            <listitem>
+                <para>
+                    The common standard building procedure using the
+                    <ulink url="http://sourceware.org/autobook/">GNU
+                        Autotools</ulink> is
+                    <literal>./configure --prefix=$PREFIX ;
+                        make ; make install</literal>.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    There are now
+                    <ulink url="http://www.shlomifish.org/open-source/resources/software-tools/">some
+                        more modern alternatives to the GNU Autotools</ulink>,
+                    which may also prove useful.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.cpan.org/">CPAN</ulink>
+                    Perl distributions have a similar <literal>perl
+                        Makefile.PL</literal> procedure or more recently
+                    also one using <literal>perl
+                        Build.PL</literal> which tends to be less quirky
+                    (see <ulink url="http://cpan.uwinnipeg.ca/dist/Module-Build">Module-Build</ulink> ).
+                </para>
+                <para>
+                    Generally, one usually installs them using the CPAN.pm
+                    or CPANPLUS.pm interfaces to CPAN, or preferably
+                    using a wrapper that converts every CPAN distribution
+                    to a native (or otherwise easy to remove) native system
+                    package.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.python.org/">Python</ulink>
+                    packages have the standard <literal>setup.py</literal>
+                    procedure which can also generate Linux RPMs and other
+                    native packages.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    There are similar building procedures for most other
+                    technologies out there.
+                </para>
+            </listitem>
+        </orderedlist>
+
+        <para>
+            However, it’s not uncommon to find a program that fails to
+            build even on GNU/Linux on an x86 computer, which is the most
+            common platform for development. Or the case of
+            <ulink url="http://www.shlomifish.org/open-source/anti/qmail/">the
+                qmail email server</ulink>, which has a long and quirky
+            build process. It reportedly fails to compile on modern
+            Linuxes, and someone I know who tried to build it said that
+            it did not work after following all the steps.
+        </para>
+
+        <para>
+            One thing that detracts from a piece of software being
+            high-quality is a large amount of dependencies.
+        </para>
+
+        <para>
+            If we take <ulink url="http://plagger.org/">Plagger</ulink>,
+            a web-feed mix-and-match framework in Perl (not unlike
+            <ulink url="http://pipes.yahoo.com/">Yahoo Pipes</ulink>, but
+            predates it), then its <ulink url="http://search.cpan.org/dist/Plagger/">Plagger
+                distribution on CPAN</ulink> contains all of its plug-ins
+            inside, and as a result requires “half of CPAN” including such
+            obscure modules, as those for handling Chinese and Japanese dates.
+        </para>
+        <para>
+            Popular programs like GCC, perl 5, Vim, Subversion and Emacs have
+            very few dependencies and
+            they are normally included in the package, if necessary to build
+            the system. They are all written in very portable ANSI C and POSIX
+            and have been successfully deployed on all modern UNIX-flavours,
+            on Microsoft Windows and on many other more obscure systems.
+        </para>
+        <para>
+            While reducing the number of dependencies often means re-inventing
+            wheels, it still increases the quality of your software. I’m not
+            saying a program cannot be high-quality if it has a large amount
+            of dependencies, but it’s still a good idea to keep it to a
+            minimum.
+        </para>
+
+    </section>
+    <section id="has_packages">
+        <title>The Program Has Packages for Most Common Distributions</title>
+        <para>
+            A good program has packages for most common distributions, or such
+            packages can be easily prepared.
+        </para>
+        <para>
+            Lack of such packages will require installing it from source,
+            using generic binary packages, or other workarounds that are
+            harder than a simple command to install the package from the
+            package manager, and may prevent it from being maintained into
+            the future.
+        </para>
+        <para>
+            A good example for how this can become wrong is the
+            <ulink url="http://www.shlomifish.org/open-source/anti/qmail/">qmail
+                SMTP server</ulink>, before it became public-domain. The qmail
+            copyright terms prevented distributing modified sources, or binary
+            packages. As a result, the distributions that supported
+            it packaged it as a source package, with an irregular
+            build-process. Since the qmail package had its own unconventional
+            idea of directory structure, some of the distributions had to
+            extensively patch it. This in turn prevented more mainstream
+            patches from being applied correctly to correct the many
+            limitations that qmail had, or accumulated over the years due
+            to its lack of maintenance.
+        </para>
+    </section>
+    <section id="documentation">
+        <title>The Program Has Good, Extensive and Usable Documentation</title>
+        <para>
+            If your GUI program is simple and well-designed, then you normally
+            don’t need good documentation. However, a command line program,
+            a library, etc. does need one, or else the user won’t know
+            what to do.
+        </para>
+        <para>
+            There are many types of documentation: the
+            <ulink url="http://freshmeat.net/articles/view/519/">--help
+                flag</ulink>, the man page, the README/USAGE/INSTALL files,
+            full-fledged in-depth guides, documents about the philosophy,
+            wikis, etc. If the program is well-designed, then the user should
+            be able to get up and running quickly. An exception to this are
+            various highly specialised programs, such as 3-D graphics
+            programs, or CAD programs, that require some extensive learning.
+        </para>
+        <para>
+            If we take Subversion as an example, then it has a
+            <ulink url="http://svnbook.red-bean.com/">full Book
+                online</ulink>, several tutorials, an <literal>svn
+                help</literal> command which provides help to all the
+            other commands, and a lot of help can be found using a
+            Google search. GNU Arch, on the other hand, only had one wordy
+            tutorial, that I didn’t want to read. Most of the other tutorials
+            people wrote, became misleading or non-functional as the program
+            broke backwards compatibility.
+        </para>
+        <para>
+            Vim has an excellent internal documentation system. It’s the first
+            thing you are directed see when invoking it. It has a comprehensive
+            tutorial, a full manual, and the ability to search for many
+            keywords, with a lot of redundancy. As a result, one can easily
+            become better and better with vim or gvim, albeit many people can
+            happily use it with only the bare essentials.
+        </para>
+        <para>
+            Emacs’ help on the other hand is confusing, dis-organised, lacking
+            in explanation and idiosyncratic. It doesn’t get invoked when
+            pressing “F1”, is not directed to when the program starts, and
+            most people cannot make heads nor tails of it. There is a short
+            Emacs tutorial, but it isn’t as extensive as Vim’s. Nor does it
+            explain how to configure Emacs to behave in a better way than its
+            default, in which it behaves completely differently to what
+            people who are used to Windows-like conventions or vim-like
+            conventions expect.
+        </para>
+    </section>
+    <section id="portability">
+        <title>Portability</title>
+        <para>
+            It is tempting to believe that by writing a program for one
+            platform, you can gain most of your market-share. However, people
+            are using many platforms on many different CPU architectures:
+            Windows 32-bit/64-bit on Intel machines, Itanium, or x86-64; Linux
+            on a multitude of platforms; BSD systems (NetBSD, FreeBSD, OpenBSD
+            and others) on many architectures as well; Mac OS X; Sun
+            Solaris (now also OpenSolaris), and more obscure (but still
+            popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64
+            (formerly Digital Unix), etc. And to say nothing of more exotic,
+            non-UNIX, non-Microsoft operating systems like Novell Netware,
+            Digital Corp.s’s VMS or OpenVMS, IBM’s VM/CMS or OS/390 (MVS),
+            BeOS, AmigaOS, Mac OS 9 or earlier, PalmOS, VxWorks, etc. etc.
+        </para>
+        <para>
+            As a general rule, the only thing that runs on top of all of
+            these systems (in the modern “All the world is a VAX.” world)
+            is a C-based program or something that is C-hosted.
+            <footnote id="non-vax-archs" label="non-vax-like">
+                <para>
+                    I’m fully aware that before C-based UNIX and UNIX-like
+                    systems became dominant there were some more exotic
+                    architectures that could not run C comfortably. Prime
+                    examples for them are the
+                    <ulink url="http://en.wikipedia.org/wiki/PDP-10">PDP-10</ulink>
+                    and the <ulink url="http://en.wikipedia.org/wiki/Lisp_machine">Lisp machines</ulink>.
+                </para>
+                <para>
+                    However, such more “unconventional” architectures are now
+                    dead, and no CPU architecture developer in their right
+                    mind would want to create a CPU that won’t be able to
+                    run C and C-based UNIX-based or UNIX-like operating
+                    systems such as Linux. (Unless it’s probably a relatively
+                    niche micro-processor for embedded systems).
+                </para>
+                <para>
+                    Lisp, and similar higher-level languages, run on modern
+                    UNIX-based OSes very well, so there’s not a big problem
+                    there.
+                </para>
+            </footnote>Most good
+            programs are portable to at least Windows and most UNIXes and
+            potentially portable to other platforms.
+        </para>
+        <para>
+            For example, Subversion has made it a high priority to work
+            properly on Windows. On the other hand many of its early
+            alternatives, especially GNU Arch, could not work there due to
+            their architectures. As a result, many mixed shops, Windows-only
+            shops, or companies where some developers wanted to use Windows
+            as their desktop OS, could not use Arch. So Arch has seen a very
+            small penetration.
+        </para>
+        <para>
+            The bootstrapping ANSI C compiler of gcc for example, is written in
+            very portable
+            <ulink url="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R
+                C</ulink>, so it can be compiled by any C compiler. Later
+            on, this compiler can be used to compile most of the rest of the
+            GCC compilers.
+        </para>
+        <para>
+            Compare that to many compilers for other languages that are
+            written in the same language. For example,
+            <ulink url="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
+                Compiler</ulink> is written in itself, and requires a
+            relatively recent version of itself to compile itself. So you need
+            to bootstrap several intermediate compilers to build it.
+        </para>
+    </section>
+    <section id="security">
+        <title>Security</title>
+        <para>
+            A high-quality program is secure. It has a relatively small
+            number of security issues, and bugs are fixed there as soon as
+            possible.
+        </para>
+        <para>
+            Some people believe that security is the most important aspect
+            of software, but it’s only one factor that affects its quality.
+            For example, once I was talking with a certain UNIX expert, and
+            he argued that the Win32 <ulink url="http://msdn2.microsoft.com/en-us/library/ms682425.aspx">CreateProcess() system call</ulink> was
+            superior to the UNIX combination of
+            <ulink url="http://en.wikipedia.org/wiki/Fork-exec">Fork()
+                and Exec()</ulink>, just because it made some bugs harder
+            to code.  However, some multitasking paradigms are not possible,
+            without the fork() system call, which is not present in the Win32
+            API at all, and needs to be emulated (at a high run-time cost) or
+            replaced with thread-based multitasking, which is not identical.
+            Finally, it is still possible to get fork()+exec() right, and
+            there’s a spawn() abstraction on many modern UNIXes.
+        </para>
+
+        <para>
+            While I don’t mean you shouldn’t pay attention to security, or
+            keep good security practices in mind when coding, I’m saying that
+            it shouldn’t slow down the process by much, or prevent too many
+            exciting features from being added, or cause the development
+            to stagnate.
+        </para>
+    </section>
+    <section id="backwards_compatiblity">
+        <title>Backwards Compatibility</title>
+        <para>
+            A high-quality program maintains as much <ulink url="http://en.wikipedia.org/wiki/Backward_compatibility">backward
+                compatibility</ulink>
+            with its older versions as possible. Some backward compatibility,
+            like relying on bugs or other misbehaviours
+            (“bug-to-bug compatibility”), is probably too extreme to consider.
+            But users would like to upgrade the software and expect all of
+            their programs to just continue to work.
+        </para>
+        <para>
+            A bad example for software that does not maintain backwards
+            compatibility is <ulink url="http://www.php.net/">PHP</ulink>,
+            where every primary digit breaks the compatibility with the older
+            one: PHP 4 was not compatible with PHP 3 and PHP 5 was not
+            compatible with PHP 4. Furthermore, sometimes existing user-land
+            code was broken in minor-digit releases. As such, maintaining
+            PHP code into the future is a very costy process, especially if
+            you want it to work with a range of versions.
+        </para>
+
+        <para>
+            On the other hand, the perl5 developers have been maintaining
+            backwards compatibility between 5.000, 5.001, 5.002 up to 5.6.x,
+            5.8.x and now 5.10.x. Therefore, one can normally expect older
+            scripts to just work. perl5 can also run a lot of Perl 4 code and
+            below, and Perl 4 code can be ported to modern versions of perl5
+            with relative ease. While sometimes scripts, programs or modules
+            were broken (due to lack of “bug-to-bug compatibility”), or became
+            slower, upgrading to a new version of Perl is normally
+            straightforward.
+        </para>
+
+    </section>
+    <section id="good_ways_to_provide_support">
+        <title>Good Ways to Provide Support</title>
+        <para>
+            A piece of high-quality software has good ways for its users to
+            receive support. Some examples for ways to do that are:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    A Mailing List.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC (Internet Relay Chats)</ulink>
+                    Channels.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    An email address for questions.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Web Forums.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Wikis.
+                </para>
+            </listitem>
+        </orderedlist>
+        <para>
+            Without good ways to receive support, users will be unnecessarily
+            frustrated when they encounter a problem, which cannot be answered
+            by the documentation. Refer to <ulink url="http://www.joelonsoftware.com/articles/customerservice.html">Joel Spolsky’s
+                “Seven Steps to Remarkable Customer Service”</ulink> for more information on
+            how to give good support.
+        </para>
+    </section>
+    <section id="speed-and-good-performance">
+        <title>Speed and High Performance</title>
+        <para>
+            The reason I mentioned this quality parameter so late is because it
+            was what Mr. Campbell stressed in his argument about
+            “Industrial Strength” Freecell solvers. So I wanted to show that
+            there
+            are other important parameters beside it. However, raw performance
+            is important, too.
+        </para>
+        <para>
+            If a program is too slow, or generates sub-optimal results, most
+            people will be reluctant to use it and find using it daunting.
+            They will either give up waiting for it to finish, or get
+            distracted. If the output results of the program are too
+            sub-optimal (assuming there’s a scale to their optimality), then
+            they will probably look for different alternatives.
+        </para>
+        <para>
+            As a result, it is important that your software will run quickly,
+            and will yield good results. There are many ways to make
+            code write faster, and covering them here is out of the scope
+            of this article.
+        </para>
+        <para>
+            A good example for how such optimisations can make such a huge
+            difference are the
+            <ulink url="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and
+                Firefox 3</ulink>, which greatly improved its
+            performance, memory consumption, and reduced the
+            number of memory leaks. It should be noted that often,
+            reducing memory consumption can yield better performance because
+            of a smaller number of cache misses, process memory swapping,
+            and other such factors.
+        </para>
+        <para>
+            There are several related aspects of performance, that also
+            affect the general quality and usability of a program. One of them
+            is responsiveness, which is often manifested when people complain
+            that the program is “sluggish”. Java programs are especially
+            notorious for being such, for some reason, while programs written
+            in <ulink url="http://www.perl.org/">Perl</ulink> and
+            <ulink url="http://www.python.org/">Python</ulink> are more
+            responsive and feel snappy, despite the fact that their backends
+            are generally slower than the Java virtual machine.
+        </para>
+        <para>
+            A tangential aspect is that of startup time. Many programs
+            require or have required a long time to start, which also
+            makes using them frustrating, even if they are later responsive
+            and quick.
+        </para>
+    </section>
+    <section id="aesthetics">
+        <title>Aesthetics</title>
+        <para>
+            A good program (or web site) or other resource is aesthetically
+            pleasing. Aesthetics in this context, does not necessarily mean
+            very “artsy” or having a breath-taking style. But we may have
+            run into software (usually one for internal use or one
+            of those very costy, bad-quality, niche, software) that seemed
+            very ugly and badly designed, with a horrible user-interface,
+            etc.
+        </para>
+        <para>
+            Different types of applications, and those running
+            on different platforms, have different conventions for what
+            is considered aesthetic. In
+            <ulink url="http://catb.org/~esr/writings/taoup/">The
+                Art of UNIX Programming</ulink>, Eric Raymond <ulink url="http://catb.org/~esr/writings/taoup/html/ch11s09.html">makes the case for
+                the “Silence is Golden” principle of designing UNIX
+                command-line interfaces</ulink>.
+            Basically, a command line program should output as little as
+            possible. Now observe the behaviour of aptitude (a unified
+            interface for package management) on Ubuntu Gutsy Gibbon, when
+            trying to install a non-existing package name:
+        </para>
+        <programlisting>
+            <![CDATA[
+root@shlomif-desktop:/home/shlomif# aptitude install this-does-not-exist
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Reading extended state information
+Initializing package states... Done
+Building tag database... Done
+Couldn’t find any package whose name or description matched "this-does-not-exist"
+The following packages have been kept back:
+  firefox firefox-gnome-support
+0 packages upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 0B of archives. After unpacking 0B will be used.
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Reading extended state information
+Initializing package states... Done
+Building tag database... Done
+            ]]>
+        </programlisting>
+
+        <para>
+            15 lines of output, and only one of them in the middle is
+            the informative one. Why is all this information a concern
+            of mine, especially given the fact that they are all given
+            in the same monotonous default colour.
+        </para>
+
+        <para>
+            On the other hand, here’s what urpmi (a similar package
+            management interface for Mandriva) says on Mandriva Cooker:
+        </para>
+        <programlisting>
+            <![CDATA[
+[root@telaviv1 ~]# urpmi this-does-not-exist
+No package named this-does-not-exist
+[root@telaviv1 ~]#
+            ]]>
+        </programlisting>
+
+        <para>
+            Exactly one line and it’s informative. While aptitude certainly
+            has its merits, its verbosity still makes it much more painful
+            to use than urpmi, when I have to work on Ubuntu.
+        </para>
+        <para>
+            Back to more visual aesthics, one of the reasons that made me
+            want to use Linux more than Windows 95’ or 98’ was the fact that
+            its desktops were truly themable and could be made to look much
+            better without effort. If I got tired of the same look, I could
+            easily switch. While Windows XP shipped with a more attractive
+            theme, and also had some proprietary and non-gratis theming
+            software, Linux supplied all of that out-of-the-box and with
+            a more attractive theme. The
+            <ulink url="http://youtube.com/watch?v=xC5uEe5OzNQ">effects
+                supplied by the Linux 3-D desktops</ulink>, which
+            have put the 9-milliard Dollar effects of Vista to shame,
+            have convinced some people to install Linux on their comptuer
+            aftern seeing them.
+        </para>
+    </section>
+    <section id="quality-parameters-conclusion">
+        <title>Conclusion</title>
+        <para>
+            There are probably several parameters for software quality
+            that I’m missing. However, the point is that one should evaluate
+            the general quality of the software based on many parameters
+            and not exclusively “security” or “speed” or whatever.
+        </para>
+        <para>
+            For example, many proponents of BSD operating systems claim that
+            the various BSDs are superior to Linux because they are more
+            secure, or because they are (supposedly) faster or are easier
+            to manage, because their licence is less problematic than the
+            GPL, etc. However, they forget that Linux has some
+            advantages like being more popular (and so one can get support
+            more easily), or like the fact that its kernel supports much
+            more hardware, or that it has better vendor acceptance, and
+            because more software is guaranteed to run with less problems
+            on Linux than on the BSDs.
+            <footnote id="software-only-on-linux" label="linux-bsd-soft">
+                <para>
+                    Naturally, this is a problem with the fact that most
+                    developers are developing on Linux (mostly x86), don’t
+                    test it on other Unix flavours, and are too careless
+                    or unaware to write their programs portably enough.
+                </para>
+                <para>
+                    However, it’s still a quality parameter, because it still
+                    affects the way you’re using the operating system.
+                </para>
+            </footnote>
+        </para>
+        <para>
+            I’m not saying the BSDs are completely inferior to Linux, just
+            that Linux still has some cultural and technical advantages.
+            Quality in software is not a linear metric, because it is affected
+            by many parameters. If you’re a software developer, you should
+            aim to get as many of the parameters I mentioned right.
+        </para>
+    </section>
+</section>
+<section id="ways-to-achieve-quality">
+    <title>Ways to Achieve Quality</title>
+    <para>
+        Now that we’ve covered the elements that make programs high-quality
+        here’s a non-exhaustive list of ways to actually achieve it. None of
+        them are absolutely necessary for achieving the quality, but they
+        certainly help a lot.
+    </para>
+    <para>
+        Many people often confuse them with quality. “This software has
+        God-damn awful code, so it’s a pile-of-crap.” Well, what do the users
+        care how bad the code is, as long as it is functional, has all the
+        necessary features, and is (mostly) bug-free? It’s important not
+        to confuse quality with the ways to achieve it.
+    </para>
+    <para>
+        The aim of this section is to briefly cover as many measures for
+        achieving good quality as possible.
+    </para>
+    <section id="modular-code">
+        <title>Having Modular, Well-Written Code</title>
+        <para>
+            The more modular a project’s code is, the easier it is to
+            change it, understand it and extend it, and the faster development
+            will take.
+            <ulink url="http://www.refactoring.com/">Refactoring</ulink> is
+            the name given to the process used to transform code from
+            sub-optimal and “ugly”, but still mostly functional and bug-free
+            code, to a code that is equally functional but more modular
+            and clean. See
+            <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">the
+                <emphasis>Joel on Software</emphasis> excellent article
+                “Rub a dub dub”</ulink>
+            for some of the motivation and practices of good refactoring
+            instead of throwing away the code and restarting from scratch.
+        </para>
+        <para>
+            A reviewer of an early version of this article told me about
+            an early and relatively large PHP code of her that was badly
+            written, relatively buggy and yet proved to be popular among
+            some of her clients, who have deployed it on many hosts and won’t
+            effectively upgrade it. So she still has to maintain it, even
+            though she’d rather not recommend it. She claimed that this is
+            an indication that such low-quality in code, is a criterion of
+            low-quality.
+        </para>
+        <para>
+            She has a point in the fact that usually badly-written or
+            non-modular code results in more external low-quality factors
+            such as bugs, security problems and lack of extensibility.
+            However, even if the code was extremely well-written it is likely
+            that it would need to be maintained, extended, and corrected.
+            And if the clients in question don’t have or don’t want a good way
+            to pull changes from a central place, or install updates properly,
+            it’s a procedural and organisational problem.
+        </para>
+        <para>
+            Organisational quality deserves its own separate article (or
+            arguably book, web-site, or even more than one book), but
+            external software quality (much less internal one), is not a
+            substitute for it. Please refer to <ulink url="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
+                partial list I prepared on a different article</ulink>,
+            and my <ulink url="http://www.shlomifish.org/links.html#software_gurus">software
+                “gurus” links</ulink> on my home-site’s links’ list.
+        </para>
+    </section>
+    <section id="automated-tests">
+        <title>Automated Tests</title>
+        <para>
+            Automated tests aim to test the behaviour of code
+            automatically, instead of manual testing. The classical example
+            for them is that if we wish to write a function called
+            <literal>add(i, j)</literal> that aims to add two integers
+            then we should check that <literal>add(2, 3) == 5</literal>,
+            that <literal>add(2, 0) == 2</literal>, that
+            <literal>add(0, 2) == 2</literal>, that
+            <literal>add(5, -2) == 3</literal>, that
+            <literal>add(10, -24) == -14</literal>, etc.
+        </para>
+        <para>
+            Then we can run all the tests and if any of them failed, we
+            can fix them. Then after we write or modify the code, we can
+            test using them again to see if there are any regressions.
+        </para>
+        <para>
+            Writing automated tests before we write the actual code,
+            or before we fix a bug, and accumulating such tests
+            (the so-called <ulink url="http://en.wikipedia.org/wiki/Test-driven_development">“Test-driven development”</ulink>
+            paradigm), is a good practice which helps maintain
+            high-quality code, and facilitates refactoring
+            and makes it safer.
+        </para>
+    </section>
+    <section id="beta-testers">
+        <title>Beta Testers</title>
+        <para>
+            If you have beta testers for the code, or publish development
+            versions frequently, you can get a lot of feedback for various
+            different platforms and configurations your code is running
+            on. These beta-testers can run the automated tests and also
+            use the beta-code for their own testing or even production.
+        </para>
+    </section>
+    <section id="frequent-releases">
+        <title>Frequency of Releases</title>
+        <para>
+            The more frequent your releases are, the more people can test your
+            code, and the more they can upgrade to the latest version,
+            and the quicker bugs that disturb your users are fixed, etc.
+        </para>
+        <para>
+            Naturally, there are advantages for slower release cycles, or
+            for predictable release cycles like
+            <ulink url="http://www.gnome.org/">GNOME 2.x</ulink>
+            has. I won’t voice a definite opinion for which is the best
+            methodology, but such a decision should be taken into
+            consideration.
+        </para>
+    </section>
+    <section id="good-software-management">
+        <title>Good Software Management</title>
+        <para>
+            There are several sources, online and offline, explaining good
+            software management for “shrinkwrap” software (open-source,
+            commercial or other distributed) and for other types of software
+            development (embedded, in-house, etc.), from which good advice
+            can be taken for how to best run a software project. While
+            they are sometimes contradictory, and often false, they still make
+            a good read and are thought-provoking.
+        </para>
+        <para>
+            Here are some links:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric Raymond’s
+                       “The Cathedral and the Bazaar” series</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.joelonsoftware.com/">The <emphasis>Joel
+                        on Software</emphasis> site</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.paulgraham.com/">Paul Graham’s
+                    Essays</ulink> (on various topics)
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.extremeprogramming.org/">Extreme
+                    Programming</ulink>
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section id="tactfullness">
+        <title>Good Social Engineering Skills</title>
+        <para>
+            It certainly helps for the project’s communities to have good
+            social engineering skills. From tactfulness, to humour, to
+            controlling one’s temper, to saying “Thanks” and congratulating
+            people for their contribution, to timely applying patches and
+            fixing bugs - all of these makes contributing to a project
+            and using the program more fun and less frustrating.
+        </para>
+        <para>
+            Often, social engineering should be made part of the design of the
+            software, or the web-sites dedicated to it. For example, it took
+            me several iterations of having to fill the same project form in
+            <ulink url="http://savannah.gnu.org/">the
+                GNU Savannah software-hub</ulink>, only for it to be
+            rejected, and me having to follow the process again. Despite
+            the fact the admins were polite, it still was annoying.
+        </para>
+        <para>
+            Eventually, they implemented a way to save previous project
+            submissions and to re-send them, so future users won’t become
+            as frustrated as I did.
+        </para>
+        <para>
+            Again, some projects have succeeded despite the fact they
+            had, or even still have, bad social engineering. But adopting a
+            good software engineering policy can certainly help a lot.
+        </para>
+    </section>
+
+    <section id="bad-politics">
+        <title>No Bad Politics</title>
+
+        <para>
+            Bad politics in a software project is a lot like
+            subjectivity,
+            <ulink url="http://shlomif.livejournal.com/52439.html">it
+                can never be fully eliminated, but we should still strive
+                to reduce it to the minimum.</ulink>. If bad political
+            processes become common in a project, then important features are
+            dropped, bugs are left unfixed, patches are stalled, external
+            projects gets stalled or are killed, people become frustrated or
+            angry and possibly leave the project - and the project may
+            risk forking.
+        </para>
+
+        <para>
+            So it’s a good idea to keep bad politics at bay and to a minimum.
+            How to do that is out of the scope of the document, but it’s
+            usually up to the leaders to keep it so and maintain a
+            good policy that will make as few people as possible frustrated
+            and will not flabbergast external contributors. And naturally,
+            for open-source and similar projects, a fork is often an option
+            in this case, or in other similar cases.
+        </para>
+
+    </section>
+
+    <section id="good-communication-skills">
+        <title>Good Communication Skills</title>
+        <para>
+            A project leader and other participants should have good
+            communication skills: very good English; pleasantness and tact;
+            good phrasing, proper
+            grammar, syntax, phrasing and capitalisation; clear writing;
+            patience and tolerance; etc. If they don’t, then the project may
+            encounter problems as people will find the project’s developers
+            hard to understand or tolerate, and, thus, hard to work with.
+        </para>
+    </section>
+
+    <section id="hype">
+        <title>Hype</title>
+        <para>
+            Despite common belief I believe that the less hype and general
+            noise there is regarding a software project, the better off
+            it is. For example, as <ulink
+                url="http://www.paulgraham.com/javacover.html">Paul
+                Graham notes regarding Java</ulink>:
+        </para>
+        <blockquote>
+            <para>
+                [Java] has been so energetically hyped. Real standards don’t
+                have to be promoted. No one had to promote C, or Unix, or HTML.
+                A real standard tends to be already established by the time
+                most people hear about it. On the hacker radar screen, Perl is
+                as big as Java, or bigger, just on the strength of its own
+                merits.
+            </para>
+        </blockquote>
+        <para>
+            In fact, I can argue that if your project receives a lot
+            of negative hype, then it is an indication that it is successful.
+            Perl, for example, <ulink url="http://perl-begin.org/learn/myth-dispelling/">has
+                received (and still receives) a lot of criticism</ulink>,
+            and Perl aficionados often get tired of constantly hearing or
+            seeing the same repetitive and tired arguments by its
+            opponents. However, the perl 5 interpreter is in good shape,
+            it has many automated tests (much more than most other competing
+            dynamic languages), an active community, many modules on CPAN (
+            the Comprehensive Perl Archive Network) with a lot of third-party
+            , open-source functionality, and relatively few critical bugs. It
+            is still heavily actively used and has many fans.
+        </para>
+        <para>
+            Similar criticism has been voiced against
+            <ulink url="http://subversion.tigris.org/">the
+                Subversion version control system</ulink>,
+            Linux, etc. One thing one can notice about such highly-criticised
+            projects is that they tend not to be bothered by it too much.
+            Rather, what they say is that “If you want to use a competing
+            project, I won’t stop you. It probably is good. It may be
+            better in some respects. I like my own project and that’s
+            what I’m used to using and use.”
+        </para>
+        <para>
+            This is by all means the right policy of “hyping” to adopt, if
+            you want your project to be successful based on its own
+            merits. Some projects compete for the same niche, without
+            voicing too much hype against each other or for them, and this
+            is a better indication that they are all healthy.
+        </para>
+    </section>
+    <section id="good-name">
+        <title>A Good Name</title>
+        <para>
+            Finally, a project should have a good name. One example for
+            a project with an awful name is
+            <ulink url="http://www.march-hare.com/cvspro/">CVSNT</ulink>.
+            There are two problems with the name:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    It is based on CVS, which most people have ran
+                    into its limitations, is considered passé and unloved,
+                    and people would rather avoid.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    The “NT” part implies it only runs on Windows-NT, which
+                    is both misleading and undesirable.
+                </para>
+            </listitem>
+        </orderedlist>
+        <para>
+            On the other hand, the competing project “Subversion”
+            has a much better name, since it has nothing to do with CVS,
+            or Windows NT, and since it is an English word and
+            sounds cool.
+        </para>
+        <para>
+            Some projects are successful despite being badly named, while
+            some have a very cool name, but languish. Still, a good name
+            helps a lot.
+        </para>
+        <para>
+            Also consider what <ulink url="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus
+                Torvalds said about Linux and 386BSD</ulink> (half jokingly):
+        </para>
+        <blockquote>
+            <para>
+                No.  That’s it.  The cool name, that is.  We worked very hard
+                on creating a name that would appeal to the majority of people,
+                and it certainly paid off: thousands of people are using linux
+                just to be able to say “OS/2? Hah.  I’ve got Linux.  What a
+                cool name”.  386BSD made the mistake of putting a lot of
+                numbers and weird abbreviations into the name, and is scaring
+                away a lot of people just because it sounds too technical.
+            </para>
+        </blockquote>
+    </section>
+    <section id="measures-conclusion">
+        <title>Conclusion</title>
+        <para>
+            Entire books (and web-sites) were filled with the various
+            measures to achieve software quality, and what I described
+            here was just a sample of it. The point is that these are
+            not aspects of quality by themselves, but rather measures that
+            help. None of them is a required or adequate condition for
+            the success of a project, but the more are implemented the easier,
+            faster, and more enjoying working on the project will be.
+        </para>
+    </section>
+</section>
+<section id="freecell-solvers-quality">
+    <title>Analysis of the Quality of the Various Freecell Solvers</title>
+    <section id="freecell-solvers-quality--intro">
+        <title>Introduction</title>
+        <para>
+            As you recall, Gary Campbell’s comment provided the motivation for
+            my investigation into what makes a project high-quality and which
+            quality-increasing-measures are not elements of quality by
+            themselves. And since
+            <ulink url="http://fc-solve.shlomifish.org/">Freecell Solver</ulink>
+            has been my pet project, and as I’m still interested in
+            techniques for solving Solitaire, I’d like to conclude this essay
+            by analysing the various solvers according to the parameters I
+            described. The natural caveat is that I may be somewhat biased
+            due to the fact that I authored a solver of my own.
+        </para>
+        <para>
+            I was not so sure including this section is a good idea, but I
+            feel the article is incomplete without it. Feel free to skip it,
+            in case you are not that interested in it.
+            <footnote id="freecell-solvers-comparison" label="FC-S-Comp">
+                <para>
+                    This section is not meant as a comprehensive comparison
+                    of the Freecell solvers. The latter has yet to be written
+                    and would be much more difficult than what I’m doing
+                    here. It would be complicated by factors such as:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            Some solvers are binary-only and only run on
+                            DOS or Windows. Open-source commandline ones
+                            may probably perform better on Linux or other Unix
+                            systems.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Some of them are not publicly available in
+                            any form.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Some of them can only solve Freecell, while
+                            others are more generic and can solve other
+                            Solitaire variants. (which in turn may hurt
+                            their performance.)
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            They differ in their solving algorithms. For
+                            example, some use atomic (= one-card) moves, some
+                            move entire sequences at a time, and some are
+                            based on meta-moves.
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </footnote>
+        </para>
+    </section>
+    <section id="freecell-solvers-quality--analysis">
+        <title>The Analysis Itself</title>
+        <para id="quality-analysis--availability">
+            As is not uncommon in many software niches, some Freecell
+            solvers are <emphasis role="bold">not commonly
+                available</emphasis> for downloading or even for
+            buying. For
+            example, <ulink url="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill
+                Raymond’s solver</ulink> (named “Cat in the Sack”) which he
+            has been talking about extensively, has not been released yet,
+            under any licensing terms. Similarly, Danny A. Jones has kept his
+            solver (mentioned in <link linkend="introduction">the
+                introduction</link>) for himself, and has not released it
+            to the wild in either source or binary forms.
+        </para>
+        <para>
+            As such, the utility of such solvers is heavily reduced. For once,
+            they cannot be used as integrated solvers of Solitaire apps,
+            because no one is going to wait for an email to the author to be
+            sent, and the author to reply with the solution. Also, many
+            researchers won’t trust solutions given by them without the ability
+            to inspect the source code.
+        </para>
+        <para>
+            <ulink url="http://fc-solve.shlomifish.org/links.html#other_solvers">Most
+                other solvers</ulink>
+            are <emphasis role="bold">available for free
+                download</emphasis>, and many are accompanied
+            with the source, most probably under an open-source licence.
+        </para>
+        <para id="quality-analysis--prog-lang">
+            <ulink url="http://www.numin8r.us/programs/">Gary
+                Campbell’s Solver</ulink> is written in 8086 Assembly, with
+            some 32-bit extensions, and only runs on DOS and DOS-compatible
+            platforms. The assembly is compiled using a self-hosting
+            macro assembler written by Campbell. The Assembly source code
+            of the solver or the assembler are not available. As such modifying
+            the code of the executable may prove to be problematic.
+        </para>
+        <para>
+            It is tempting to think that x86 and DOS are a very low common
+            denominator, but that is not always the case. Imagine that you
+            are writing a Freecell game for an embedded device running a
+            non-x86 architecture such as
+            <ulink url="http://en.wikipedia.org/wiki/ARM_architecture">ARM</ulink>
+            or
+            <ulink url="http://en.wikipedia.org/wiki/PowerPC">PowerPC</ulink>.
+            In that case, in order to run Campbell’s solver, you’ll need to
+            embed an x86-and-DOS emulator (such as
+            <ulink url="http://www.dosbox.com/">DOSBox</ulink>) inside the
+            device, which will complicate things, consume a lot of memory,
+            and slow things down. On the other, an ANSI C-based solver,
+            such as Freecell Solver, or Tom Holroyd’s Patsolve, can be easily
+            made to compile and run there with few if any modifications.
+            So they would be preferable.
+        </para>
+        <para>
+            Similarly, when writing <emphasis role="bold">portable
+                programs</emphasis> for
+            <ulink url="http://en.wikipedia.org/wiki/Unix">the various
+                Unix flavours</ulink> and other POSIX-capable or
+            ANSI C-capable operating-systems, then writing code
+            in x86 Assembly exclusively will make it a non-starter.
+            <footnote id="portions-in-assembly" label="Portions of Assembly">
+                <para>
+                    In some cases, the developers of portable software
+                    maintain versions of parts of the code in Assembly of
+                    selected architectures, while keeping more portable
+                    versions written in C or C++. This is done to optimise
+                    some parts for common CPU architectures.
+            </para>
+        </footnote>
+        </para>
+        <para id="quality-analysis--build-system">
+            Some Freecell solvers also
+            <link linkend="easy_to_compile_and_install">don’t build
+                out of the box</link>. For example, typing
+            <literal>make</literal> inside the patsolve distribution yields
+            the following output:
+        </para>
+        <programlisting>
+            <![CDATA[
+shlomi:~/patsolve-3.0$ make
+make clean
+make[1]: Entering directory `/home/shlomi/patsolve-3.0'
+rm -f patsolve *.o param.c param.h core win .depend
+make[1]: Leaving directory `/home/shlomi/patsolve-3.0'
+touch .depend
+param.py param.dat
+make: param.py: Command not found
+make: *** [param.h] Error 127
+            ]]>
+        </programlisting>
+
+        <para>
+            This is relatively easy to fix, but still frustrating. Freecell
+            Solver on the other hand, has been fully converted to the
+            GNU Autotools, and can be built as a static and shared library
+            (a.k.a DLL). It also has some built-in proof-of-concept, but still
+            usable, command line utilities that link against it.
+        </para>
+        <para id="quality-analysis--usability">
+            Freecell Solver has very good
+            <emphasis role="bold">usability</emphasis>: it mostly respects
+            <ulink url="http://www.catb.org/~esr/writings/taoup/">the
+                Unix conventions and best practices</ulink>,
+            it can start solving from any arbitrary Solitaire board position
+            given to it as input, and has kept command line interface
+            usability in mind. Campbell’s solver on the other hand, as of this
+            writing, does not
+            operate on a standard input/standard output manner, is poorly
+            documented, and is counter-intuitive for someone who is used to
+            Unix conventions (and most DOS conventions). I’m not even
+            sure it can accept any arbitrary board as input, but I may be
+            wrong.
+        </para>
+        <para id="quality-analysis--homepage">
+            Regarding <emphasis role="bold">the homepage</emphasis> of
+            the solver:
+            the <ulink url="http://fc-solve.shlomifish.org/">Freecell
+                Solver homepage</ulink> has many pages, a navigation
+            menu, a common look-and-feel and many links and information. On
+            the other hand, Patsolve’s homepage is nothing but a link in
+            <ulink url="http://members.tripod.com/professor_tom/archives/">Tom
+                Holroyd’s software archive</ulink>, which
+            can easily be missed. Gary Campbell’s
+            <ulink url="http://www.numin8r.us/programs/">homepage
+                for his solver</ulink> has a Baroque design
+            and quite a lot of marketing-speak. And it’s only one page with no
+            anchors or a navigation menu, and very few links.
+            Most other solvers don’t fare better than that, and certainly
+            worse than my own.
+        </para>
+        <para id="quality-analysis--licensing">
+            <emphasis role="bold">Licensing</emphasis>, a necessary, but
+            important, evil. The Freecell Solver’s ANSI C source is
+            distributed under the Public Domain licence, which allows
+            virtually any use, including linking, modifying and
+            sublicensing under any different
+            licence by a third party.<footnote id="fcs-pd" label="PD-LICENSE">
+                <para>
+                    As noted earlier, a Public Domain non-licence has some
+                    problems, which may make the software problematic for
+                    many corporations and in some jurisdictions. However,
+                    I don’t have problem in exempting the licence of the
+                    Freecell Solver code (at least not the Public Domain
+                    code that I fully originated), from the Public Domain,
+                    including under the MIT X11 Licence, assuming this
+                    is necessary.
+                </para>
+                <para>
+                    I’m also considering relicensing Freecell Solver and
+                    other older software of mine under the MIT X11 licence,
+                    or possibly having a dual-Public Domain and MIT X11
+                    licensing terms (which seems somewhat silly, but
+                    may be a good idea.)
+                </para>
+            </footnote> On the other hand, Patsolve is
+            distributed
+            under the
+            <ulink url="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL
+                licence</ulink> which while usable is
+            considerably more restrictive than Public Domain, or BSD-style
+            licences. This is also the case for
+            <ulink url="http://kevin.atkinson.dhs.org/freecell/">this
+                Common Lisp solver</ulink> by Kevin Atkinson and Shari
+            Holstege. Many other solvers, including
+            Campbell’s are binary-only, “All Rights Reserved”, which makes
+            them a complete no-starter for most open-source applications
+            out there. Furthermore, many non-open-source applications will
+            prefer to use a Public Domain solver, rather than paying royalties
+            or risking “copyrights” and source availability problems.
+        </para>
+
+        <para id="quality-analysis--documentation">
+            Freecell Solver (FCS) is extensively documented, and even its
+            <ulink url="http://freshmeat.net/articles/view/519/">online
+                help is helpful and usable by itself</ulink>. The other solvers
+            are much less documented, but arguably they also have much
+            fewer options and features than Freecell Solver does.
+        </para>
+
+        <para id="quality-analysis--features">
+            Which brings us to the features - Freecell Solver has
+            <ulink url="http://fc-solve.shlomifish.org/features.html">a long
+                list of features</ulink>, and I’m not aware of any
+            other solver with so many. Especially of note is that it
+            can solve many other Solitaire variants, including
+            <ulink
+                url="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple
+                Simon</ulink>, of which FCS is probably the only solver
+            capable of solving.
+        </para>
+
+        <para id="quality-analysis--speed">
+            Most of the solvers out there are fast, but some are more than
+            others. Normally, for solving an individual game on the
+            command-line, almost any solver will do, and the only
+            cases where such speed matters more is for Solitaire research,
+            and for analysing large sets of different games. (see the
+            <ulink url="http://www.solitairelaboratory.com/fcfaq.html">Freecell
+            FAQ</ulink> for more information).
+        </para>
+
+        <para id="quality-analysis--solution-length">
+            In his original message, Mr. Campbell claimed that the
+            <ulink url="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell
+                Pro</ulink> solvers (Freecell Solver, Patsolve and the solver
+            that originated from Don Woods) generated long and unusable
+            solutions. That has not been my experience with Freecell Solver
+            in some of its (practically infinite) configurations. Using
+            the so-called “good-intentions” configuration I typically get
+            solutions that are less than 200 moves. It is highly possible
+            this is not the default in Freecell Pro. But like I said, there
+            are many different parameters for quality than just speed
+            and solution-length. Another fact worth of noting is that a
+            beta-tester who tried out some of the Freecell Solver solutions
+            in Freecell Pro, said that he found them to be very “creative”
+            and interesting.
+        </para>
+
+        <para id="quality-analysis--other-advantages">
+            Freecell Solver has some other advantages: it is capable
+            of being fully instantiated, as it stores everything in an
+            “instance” C-struct, while using global variables only for
+            constants (and not using static variables). This makes doing
+            parallelised testing using mutli-threading much easier. It also
+            has namespace-purity in the sense that all variables start
+            with the <literal>freecell_solver_</literal> prefix. Moreover,
+            FCS has a well-defined and stable API, which is not
+            well-documented, but should be easy-to-use.
+        </para>
+
+        <para>
+            Part of the API is a parser for a list of command-line-like
+            strings, which allow for configuring without making many standalone
+            function calls.
+        </para>
+
+    </section>
+    <section id="freecell-solvers-quality--conclusion">
+        <title>Conclusion</title>
+        <para>
+            All things considered, I still feel that Freecell Solver is
+            probably the best quality Solitaire solver out there. While
+            <ulink url="http://fc-solve.shlomifish.org/to-do.html">it still
+                has a lot of room for improvement</ulink>, the rest of
+            its competition have much bigger issues, or have not been
+            made available (yet or ever).
+        </para>
+        <para>
+            Several factors contributed for its success: the fact that
+            I announced <ulink url="http://freshmeat.net/">many releases
+                on Freshmeat.net</ulink>, that I received a lot of input
+            from my users and co-developers, that I was determined to
+            constantly improve it and work on it, and that I worked on
+            creating and maintaining a good web-site and documentation.
+        </para>
+        <para>
+            While most of the contributions of code I received were limited,
+            the input from the users of the software proved to be crucial
+            for its prosperity. Like I noted earlier, I lost interest in
+            working on it (at least temporarily), but still maintain it,
+            and feel that it is good enough as it is.
+        </para>
+        <para>
+            I hope this document, and similar resources it referenced will
+            help you in working on your software, and improving its quality
+            for the benefit of your users and you.
+        </para>
+        <para>
+            Happy Hacking!
+        </para>
+    </section>
+</section>
+<section id="about">
+    <title>About This Document</title>
+    <section id="about_copyrights">
+        <title>Copyrights</title>
+        <para>
+        This work is licensed under the
+        <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
+            Commons Attribution 2.5 License</ulink> (or at your option a
+        greater version of it). The CC-Attribution is almost
+        Public Domain except for a requirement to make an attribution to the
+        original author.
+        </para>
+        <para>
+            It was written by <ulink url="http://www.shlomifish.org/">Shlomi
+                Fish</ulink> who also holds the copyrights.
+        </para>
+    </section>
+    <section id="about_author">
+        <title>About the Author</title>
+        <para>
+            Shlomi Fish was born in Israel in 1977, and has lived there most of
+            his life. He is a user, developer, advocate and activist of
+            Open Source Software. His single greatest contribution so far in
+            this area has been <ulink url="http://fc-solve.shlomifish.org/">Freecell
+                Solver</ulink>, a Public Domain Library for solving games
+            of Freecell and other types of Solitaire. However, he also
+            <ulink url="http://www.shlomifish.org/open-source/projects/">initiated
+               some other projects</ulink> and
+            <ulink url="http://www.shlomifish.org/open-source/contributions/">made
+                important contributions to projects he did not initiate</ulink>
+            some of them very large scale. Recently, most of his contribution
+            were
+            <ulink url="http://cpan.uwinnipeg.ca/~shlomif">perl distributions
+                he uploaded to CPAN</ulink> under his username.
+        </para>
+        <para>
+            Fish’s work on Freecell Solver and other open source projects,
+            and the fact he is interested in many software management
+            techniques has led him to write <ulink url="http://www.shlomifish.org/philosophy/">a
+                large number of articles</ulink>, and weblog entries which
+            describe his unique views as a developer of mostly
+            portable software.
+        </para>
+    </section>
+    <section id="about_acknowledgements">
+        <title>Acknowledgements</title>
+        <para>
+            Thanks to Mr. Gary Campbell, the author of “FCELL.COM” whose
+            original message provided the inspiration for this article. Thanks
+            to <ulink url="http://www.zak.co.il/">Omer Zak</ulink>, who
+            went over an early draft of this article and supplied many
+            useful comments. Thanks to Jacinta Richardson of
+            <ulink url="http://perltraining.com.au/">Perl Training Australia</ulink>,
+            who gave some very useful comments on the first and second
+            revisions, and to “Limbic_Region”, for noting an
+            ommission from it. Thanks to many people on the IRC
+            (= Internet Relay Chat) who have read the article and commented,
+            and chose not to be explicitly credited.
+        </para>
+        <para>
+            Finally, thanks to all the past and present people who helped
+            me with Freecell Solver, and with the rest of my Free and
+            Open Source Software (FOSS) endeavours.
+        </para>
+    </section>
+</section>
+</article>    <!-- End of the article -->

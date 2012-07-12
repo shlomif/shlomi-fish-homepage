@@ -1,0 +1,84 @@
+* Fortunes Atom Feed:
+    - Make it validate
+    - Syndicate it into the rest.
+    - fix the formatting of the fortunes (especially IRC fortunes) in 
+    Akregator.
+
+* Removed dest/t2-homepage/philosophy/books-recommends/old-index.html
+from the laptop.
+
+* Add some references to general Objectivism stuff on humour/TOWTF.
+
+* Add Term::ReadPassword to Task-Sites-ShlomiFish .
+
+* Update the instructions for how to build the homepage:
+    - projectlocker.
+
+* Integrate building the lectures/presentations into the homepage.
+
+* Ask people about the name of the meta-scan algorithm in:
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/
+
+* Convert "The Enemy and How I Helped to Fight It" Hebrew/English to unicode 
+punctuation.
+
+* Add a test suite:
+    - HTML/XHTML validation.
+    - English spelling.
+    - Hebrew spelling.
+
+Minor Problems:
+---------------
+
+* Fix the fact that the "Private Tutor HTML Ad" goes beyond the right 
+margins.
+
+* Go over the pages of the individual presentations and add meaningful 
+descriptions.
+    - link to the new presentation in "Linux for the Technion student".
+
+* Add to the external FOSS contributions:
+    - MikMod
+    - Adopted CPAN Modules
+    - Wikipedia and related sites.
+
+* Investigate the following subversion scenario:
+    - svn rm myfile.
+    - svn cp ../../IP/myfile myfile.
+    - svn revert -R .
+    - change myfile.
+    - commit.
+
+Long Term:
+----------
+
+* Add more software packages to the numerical software page.
+
+* Add more essays I wrote to the Essays Index.
+
+* Revamp the Math-Ventures site and re-write the formulae in TeX, MathML 
+etc.
+
+* Put more meaningful descriptions in the place holders for all the
+presentations.
+
+* Style the .prod_set's on the CD recommendations page.
+
+* Style the section navigation menus better.
+
+* Generate the DocBook/XML makefile rules using a Perl script.
+    - Check for more possible stuff.
+
+* Link the Hebrew Errors Page to the main one.
+
+* Add Recommendations:
+    - Movies
+    - Fiction Books
+
+* Add <rellink's (relevant links) to:
+    - Book recommendations.
+    - Music recommendations.
+
+* Distribute the links under t2/links.html into relevant pages on the site,
+possibly using lib/article-index/article-index.xsl.

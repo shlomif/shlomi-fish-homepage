@@ -1,0 +1,39 @@
+#include '../template.wml'
+
+<latemp_subject "About this Site’s Hosting" />
+
+<h2 id="heptagon">Heptagon</h2>
+
+<p>
+This site is hosted at <a href="http://heptagon.co.il/"><b>Heptagon
+Software</b></a> (formerly known as Eonspace).
+There’s some information on the web-page, but Heptahon is an Israeli
+operation of a few people, which finds most of its customers using
+word-of-mouth.
+</p>
+
+<p>
+As a general rule, I’m happy with the hosting. While there had been
+a few outages (possibly because of the ISP’s fault), one of the advantages
+is that I can always reach my hostmaster by phone when I encounter a problem.
+I’m getting shell access with Perl, PHP, and most other services, and pay a
+relatively low yearly fee. At the moment, most of my site is just plain-HTML.
+</p>
+
+<p>
+If you’re interested to be hosted in Heptagon,
+<a href="$(ROOT)/me/contact-me/">drop me a line</a>, and I’ll give you my
+hostmaster’s contact information.
+</p>
+
+;;; Due for removal at 2011-05-20
+<define-tag whs_notice>
+<p>
+If you need something more specific - like <a
+href="http://www.webhostingsearch.com/dedicated-server.php">dedicated
+server hosting</a> for example - then have a look at our long term buddies:
+the Web Hosting Search.
+</p>
+</define-tag>
+
+<whs_notice />

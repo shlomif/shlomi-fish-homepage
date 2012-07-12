@@ -1,0 +1,40 @@
+#include 'template.wml'
+
+<points>
+<li>
+GIMP supports two implementations of Gaussian Blur: IIR G.B. and RLE G.B.
+</li>
+<li>
+They both produce the same results, but each one can be faster in some cases.
+</li>
+</points>
+
+<h2>RLE Gaussian Blur</h2>
+
+<points>
+<li>
+RLE stands for run-length encoding
+</li>
+<li>
+RLE Gaussian Blur is best used on computer-generated images or those with
+large areas of constant intensity.
+</li>
+</points>
+
+<h2>IIR Gaussian Blur</h2>
+
+<points>
+<li>
+IIR stands for "Infinite Impulse Response".
+</li>
+<li>
+This blur works best for large radius values and for images which are not
+computer generated.
+</li>
+
+</points>
+
+
+
+
+

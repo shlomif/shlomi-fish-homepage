@@ -1,0 +1,69 @@
+#include '../template.wml'
+<latemp_subject "Presentations Category - Various Tools" />
+
+<p>
+These are presentations by Shlomi Fish about various tools.
+</p>
+
+<dl>
+
+<dt><a href="$(ROOT)/lecture/Gimp/">GIMP - The GNU Image Manipulation Program</a></dt>
+<dd>
+A presentation about <a href="http://www.gimp.org/">the GIMP</a> - a powerful
+and capable image manipulation program for UNIX, Windows and Mac OS X.
+</dd>
+
+<dt><a href="$(ROOT)/lecture/PostgreSQL/">The PostgresSQL Database
+Server</a></dt>
+<dd>
+An old presentation about the PostgreSQL database server.
+</dd>
+<dt><a href="$(ROOT)/lecture/Sys-Call-Track/Lex-Yacc/">Lex and Yacc</a></dt>
+<dd>
+A presentation about Lex - an embeddable tokenizer, and Yacc (“Yet Another
+Compiler’s Compiler”) - a useful parser generator. Demonstrated using the
+Perl ports of these tools.
+</dd>
+
+<dt><a href="$(ROOT)/lecture/Autotools/">The GNU Autotools - Autoconf,
+Automake and Libtool</a></dt>
+<dd>
+A presentation about the GNU Autotools - tools for portablly building a
+program across UNIX systems and Microsoft Windows.
+</dd>
+
+<dt><a href="$(ROOT)/lecture/WebMetaLecture/">Web Meta Lecture - a Presentation
+about Website Meta Language</a></dt>
+<dd>
+<a href="http://thewml.org/">Website Meta Language</a> is a powerful framework for
+HTML generation.
+</dd>
+
+<dt>
+<a href="<rellink url="lecture/Vim/beginners/" host="t2" />">The Vim
+Editor for Beginners</a>
+</dt>
+<dd>
+<a href="http://www.vim.org/">Vim</a> stands for Vi-Improved and is a
+powerful, advanced, customisable, programmable and convenient editor for
+many systems (including UNIX, Windows, DOS and Mac OS). This presentation
+introduces it for beginners.
+</dd>
+
+<dt>
+<a href="<rellink url="lecture/Vim/telux-tips-and-tricks/" host="t2" />">Vim
+Tips and Tricks Session</a>
+</dt>
+<dd>
+A session of tips and tricks held on <a
+href="http://www.cs.tau.ac.il/telux/">the Tel Aviv Linux Club</a>.
+</dd>
+
+</dl>
+
+<h2><a href="$(ROOT)/lecture/cat/pres-tools/">Tools for Preparing Slides for
+Presentations</a></h2>
+
+<p>
+Some meta-presentations about presentation tools.
+</p>

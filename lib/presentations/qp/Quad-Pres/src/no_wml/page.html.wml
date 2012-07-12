@@ -1,0 +1,67 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+A QuaD-Pres sans WML page is a valid HTML page, with some meta-
+sections defined betweeen &lt;-- &amp; ... &gt; comments.
+</li>
+<li>
+Here is an example:
+</li>
+</ul>
+
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_header --</font><font color="#0000ff">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font><font color="#ff00ff"><b>Do it with the GIMP</b></font><font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>bgcolor</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;#FFFFFF&quot;</font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font><font color="#ff00ff"><b>Do it with the GIMP</b></font><font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font>
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_header --</font><font color="#0000ff">&gt;</font>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>h3</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>class</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;notbold&quot;</font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>ul</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>li</b></font><font color="#008b8b">&gt;</font>
+<font color="#ff00ff"><b>As opposed to Look-Up Tables, areal filters may take into account the values</b></font>
+<font color="#ff00ff"><b>of the neighbouring pixels and use them to calculate the value of the resultant</b></font>
+<font color="#ff00ff"><b>pixel.</b></font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>li</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>ul</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>h3</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_contents --</font><font color="#0000ff">&gt;</font>
+
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_contents --</font><font color="#0000ff">&gt;</font>
+
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_footer --</font><font color="#0000ff">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b">&gt;</font>
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
+<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_footer --</font><font color="#0000ff">&gt;</font>
+
+
+</pre>
+</td>
+</tr>
+</table>
+
+<ul class="point">
+<li>
+<tt>begin_header</tt> to <tt>end_header</tt> denote the header, and it will be
+replaced by the file's header. Whatever comes between it is ignored.
+</li>
+<li>
+Similarly <tt>begin_footer</tt> and <tt>end_footer</tt> denote the footer.
+</li>
+<li>
+<tt>begin_contents</tt> and <tt>end_contents</tt> insert a table of contents
+into the text
+</li>
+</ul>

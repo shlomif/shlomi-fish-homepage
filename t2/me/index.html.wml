@@ -1,0 +1,66 @@
+#include '../template.wml'
+<latemp_subject "About Myself" />
+
+<h2 id="bio"><a href="$(ROOT)/personal.html">My Bio</a></h2>
+
+<p>
+A page with a photograph of me, and some history and background. What I did,
+and when.
+</p>
+
+<h2 id="contact"><a href="contact-me/">How to Contact Me</a></h2>
+
+<p>
+Information on how to reach me in any conceivable means.
+</p>
+
+<h2 id="resumes"><a href="resumes/">Resumés (in various versions)</a></h2>
+
+<p>
+Resumés (also known as Curriculum Vitae or C.V.) in various languages
+and formats.
+</p>
+
+<h2 id="personal-ad"><a href="personal-ad.html">Personal Ad</a></h2>
+
+<p>
+I’m looking for a girlfriend. If you are a girl and are available, please read
+<a href="personal-ad.html">this personal Ad and see if you’re interested</a>.
+</p>
+
+<h2 id="blogs"><a href="blogs/">Online Weblogs</a></h2>
+
+<p>
+These are my online weblogs, which you can read online or subscribe to by
+using RSS or a similar technology.
+</p>
+
+<h2 id="interviews"><a href="interviews/">Interviews with Me</a></h2>
+
+<p>
+Links to interviews with me.
+</p>
+
+<h2 id="faq"><a href="$(ROOT)/meta/FAQ/">Frequently Asked Questions
+(F.A.Q.) List</a></h2>
+
+<p>
+A list of frequently asked questions about me and this site.
+</p>
+
+<h2 id="gpg-key"><a href="crypto/pgp/shlomif-public-key.txt">My GnuPG Public Key</a></h2>
+
+<p>
+This is my public key, which you can use to send me encrypted E-mail or verify
+signed E-mails that I sent. There’s more information about it in
+<a href="http://www.gnupg.org/">the GnuPG (GNU Privacy Guard) homepage</a>.
+</p>
+
+<h2 id="ssh-key"><a href="crypto/ssh/id_rsa.pub">My SSH Public Key</a></h2>
+
+<p>
+A Public Key which you can assign to your
+<a href="http://www.openssh.com/">OpenSSH</a> daemon to enable me to login.
+</p>
+
+

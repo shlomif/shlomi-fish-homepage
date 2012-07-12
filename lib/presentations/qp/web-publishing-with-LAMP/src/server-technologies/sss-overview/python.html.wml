@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<points>
+<li>
+<a href="http://www.python.org/">Python</a> is an interpreted language, that
+competes for the same niche as Perl and has similar capabilities.
+</li>
+<li>
+However, it has a completely different philosophy with different syntax and
+conventions.
+</li>
+<li>
+It has a "There's one way to do it" Philosophy which enables people to
+understand and modify each other's code. (contrast to Perl's "There's more than
+one way to do it.")
+</li>
+<li>
+Uses whitespace for indentation, which makes embedding it inside text
+templates more difficult.
+</li>
+<li>
+Somewhat slower than Perl in most cases, but still quite fast enough
+for most needs.
+</li>
+</points>
+

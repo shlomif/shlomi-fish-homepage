@@ -1,0 +1,56 @@
+#include 'template.wml'
+
+<h2>Why Static HTML?</h2>
+
+<p>
+Server-side-generated HTML is:
+</p>
+
+<ol>
+<li>
+Necessarily slower than static HTML.
+</li>
+<li>
+Prune to bugs, security holes and security breaches. (<tt>eval($q-&gt;param("code"))</tt> anyone?)
+</li>
+<li>
+For many sites, whose content does not change very often, it is completely
+unnecessary.
+</li>
+</ol>
+
+<h2>Static HTML Done Right</h2>
+
+<p>
+Maintaining static HTML by hand is painful. Usually it creates crammy sites,
+which either don't have a navigation bar or have one that has to be maintained
+across all pages. Some sites put all the pages into one directory to simplify
+cross-referencing them. Cascading Style Sheets can help a bit here, but they
+are not a panacea.
+</p>
+
+<p>
+Another option is to use WYSIWYG Content-Management Systems such as Microsoft
+FrontPage. This is known to create bloated or browser-dependant HTML, and you
+are often limited by the functionality that was built into the CMS.
+</p>
+
+<p>
+Yet another option is to create your own ad-hoc content mangament system. (e.g:
+a perl script that will render your pages) However, this will have to be
+extended in time, and you'll probably invent something that <b>is not as</b>
+good as WebMetaLanguage which is already very mature and complete. I remember
+writing something like that myself in PHP for an older incarnation of the
+IGLU site, and know other people who created similar solutions for their own
+need. None of them was as good or as versatile as WebMetaLanguage.
+</p>
+
+<p>
+Finaly, WebMetaLanguage and pre-rendered XSL stylesheets give you fine control
+on the HTML generated while allowing you to do anything Turing Complete.
+WebMetaLanguage has been around longer than XSL. By virtue of integrating Perl
+it can do anything Perl does, while XSL is a virtual machine without much
+capabilities of interaction with the outside world. I also think WML has
+a better human-factors engineering, but that's a matter of state.
+</p>
+

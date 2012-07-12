@@ -1,0 +1,95 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "What Makes Software High-Quality? (Revision 2)" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+Which parameters make software applications high-quality? And which parameters
+or methods, while desirable, are not directly “quality”? This article,
+inspired by a post of someone else on a mailing list I started for one of my
+projects aims to answer this question.
+</p>
+
+<p>
+This is the second revision of <a href="../">the original article</a>
+with many corrections and additions.
+</p>
+
+<toc_div />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "docbook/4/rendered/what-makes-software-high-quality-rev2.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="what-makes-software-high-quality-rev2.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+</li>
+<li>
+<a href="what-makes-software-high-quality-rev2.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<h3 id="coverage-1st">1st Edition</h3>
+
+<ul>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.627380.26">The
+<i>Joel on Software</i> Forum</a>
+</li>
+<li>
+<a href="http://osnews.com/story/19717/What_Makes_Software_High-Quality_">OSNews.com</a>
+</li>
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/36336">Shlomi Fish’s use.perl.org journal</a>
+</li>
+<li>
+<a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6044">Whatsup.org.il (in Hebrew)</a>
+</li>
+<li>
+<a href="http://digg.com/programming/What_is_Software_Quality">Digg.com</a>
+</li>
+<li>
+<a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/820">The
+fc-solve-discuss mailing list</a>.
+</li>
+<li>
+<a href="http://arclanguage.org/item?id=6583">The Arc Language Forum</a>
+</li>
+</ul>
+
+<h3 id="coverage-2nd">2nd Edition</h3>
+
+<ul>
+
+<li>
+<a href="http://lxer.com/module/newswire/view/103806/index.html">LXer</a>
+</li>
+
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+<p>
+
+Guaranteed certification in all cisco exams like <a
+href="http://www.certkiller.com/exam-642-446.htm">642-446</a> and CRMC <a
+href="http://www.certkiller.com/exam-642-481.htm">642-481</a> and win a free
+voucher for <a href="http://www.certkiller.com/exam-642-456.htm">642-456</a>
+exam to write.
+
+</p>
+
+</define-tag>
+
+<camila_ron />
+

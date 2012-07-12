@@ -1,0 +1,531 @@
+#include '../template.wml'
+
+<latemp_subject "Mathematical Analysis of the Toggle Squares Game" />
+<latemp_more_keywords "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" />
+
+<p>
+Dr. Ken Housley,
+</p>
+
+<p>Most of this page is in ASCII, because I sent it to myself from
+home as an email message and some diagrams are less complicated to
+write in ASCII than in HTML. However, I will try to emphasize some
+stuff in the text with HTML formatting.</p>
+<p>I hope everything is clear to you. If you want clarification on
+something, send a message to
+<mailto_link_to_self email="<main_email />" /> and I’ll place
+the clarification on this page.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Shlomi Fish</p>
+
+<p><b>Recent Note:</b> I managed to prove that the two-way
+algorithm works for 3k and 3k+1 square boards. It was added as
+theorems 4 and 5.</p>
+
+<p><b>More Recent Note:</b> Added section about the
+dimension of solutions space in 3k+2 boards and a note about the
+efficiency of the algorithms.
+</p>
+
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<a href="#One_Dimensional_Board">Analysis of a 1-D Toggle-board</a><br />
+<ul>
+<li>
+<a href="#lemma1">Lemma 1: 1D is always solveable if vector 100..00 can be
+formed.</a>
+</li>
+<li>
+<a href="#lemma2">Lemma 2: 1D is always solveable only for N=3k and
+3k+1</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Two-Dimensional-Board">Main (2-D) Theorems</a><br />
+<ul>
+<li><a href="#theorem1">Theorem 1:
+(3k+2)^2 boards are not solveable for every state.</a>
+</li>
+<li>
+<a href="#theorem2">Theorem 2: 3k and 3k+1 2-D boards are solveable
+for every state.</a>
+</li>
+<li>
+<a href="#theorem3">Theorem 3: Solveable 3k+2 boards can be solved
+by the one way algorithm.</a>
+</li>
+<li>
+<a href="#theorem4">Theorem 4: Solving 3k boards.</a>
+</li>
+<li>
+<a href="#theorem5">Theorem 5: Solving 3k+1 boards.</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#dim_press_span">The Dimension of the Presses Span of 3k+2
+boards</a>
+</li>
+<li>
+<a href="#efficiency">A Note about Efficiency</a><br />
+</li>
+</ul>
+
+<h2 id="One_Dimensional_Board">Analysis of a 1-D Toggle-board</h2>
+<pre>
+First, I’ll prove some analogous statements about a one-dimensional
+toggle-squares board, i.e: conjectures that apply to the set of rows of size
+1*n and in which the presses are:
+110000 ,
+111000 ,
+011100 ,
+001110 ,
+000111 ,
+000011 (n=6 was given as an example).
+
+Mathematically, it can be treated as vectors that belong to the linear
+space (or vector field) {0,1}^n where the operations in the set {0,1} are
+XOR for ‘+’ and AND for ‘*’.
+
+</pre>
+
+<h3 id="lemma1">Lemma 1</h3>
+
+<p>
+A 1-D toggle field is solveable for every state if (and only if)
+the vector 100...000 can be formed as combination of the
+presses.
+</p>
+
+<pre>
+Proof:
+If 1000000 can be solved then along with the press 110000...00 than
+010000000 can be solved too. Furthermore:
+100000...00   + (xor)
+010000...00   +
+111000...00 =
+-------------
+001000...00
+and from here it can be proved inductively that the vectors with all 0s
+and one 1, are solveable. Since this is a basis of {1,0}^N then every state
+is solveable. (i.e contained in Sp{Presses} )
+
+</pre>
+
+<h3 id="lemma2">Lemma 2</h3>
+
+<p>
+A 1-D toggle field of size N is solveable for every state if N = 3k
+or N = 3k+1 and isn’t if N = 3k+2 for some non-negative integer
+k.
+</p>
+
+<pre>
+Proof:
+One way to show it is by inspecting the matrixes of the presses set:
+1
+,
+11
+11
+,
+110
+111
+011
+,
+1100
+1110
+0111
+0011
+
+and calculate their determinants (according to the boolean operations).
+After calculating the determinants of the first three by hand: 1, 0 and 1
+respectively, we can show that the determinant of every matrix where N &gt; 3 is:
+
+based on the first row: det (Presses Matrix (N-1)) XOR - det(Matrix that
+contains 1 at the top-left cell and below a Presses Matrix of size N-2) =
+det (PM(N-1)) XOR det(1 * PM(N-2)) = det(PM(N-1)) XOR det(PM(N-2)).
+
+Hence, it’s a XOR of the detereminants of the two previous matrixes. (A
+boolean Fibonnaci series :-) )
+
+Recursively, we get a repeating sequence of
+N    | 1 2 3 4 5 6 7 8 9 ...
+det  | 1 0 1 1 0 1 1 0 1 ...
+
+Matrixes with a zero determinant cannot form every vector, and vice versa.
+
+It can also be proved (at least for the solveable cases) using Lemma 1.
+For N=3k 1000....000 can be formed by:
+1110000...0000         XOR
+0001110...0000         XOR
+.
+.
+0000000...0111  =
+---------------
+1111111...11111111     XOR
+0000000...00000011     XOR
+0000000...00011100     XOR
+0000000...11100000     XOR
+011100000000000000     =     (3k = 2 + (k-1)*3 + 1)
+------------------
+100000000000000000    (Q.E.D)
+
+and likewise for 3k+1. For 3k+2, we can show that the vector 11111...111 can
+be formed in two different ways:
+11000000...000000    XOR
+00111000...000000    XOR
+00000111...000000    XOR
+.
+.
+00000000...000111   =
+-----------------
+11111111111111111
+
+and
+
+11100000...000000 XOR
+00011100...000000 XOR
+.
+.
+00000000...011100 XOR
+00000000...000011 =
+-----------------
+11111111111111111
+
+and thus the dimension of the span is less than n, and so not every state is
+included in it, and is solveable.
+
+
+
+</pre>
+<h2 id="Two-Dimensional-Board">Analysis of 2-D Boards</h2>
+
+<p>
+Now for the actual proofs:
+</p>
+
+<h3 id="theorem1">Theorem 1</h3>
+<p>
+2-D (3k+2) * (3k+2) boards are not solveable for every state.
+</p>
+
+<pre>
+Proof:
+If we take a look at the topmost row - it is affected only by the presses
+on the two topmost rows. The effective portions of all the presses on that
+row is the set:
+11000..00
+11100..00
+.
+.
+00000.111
+00000.011
+
+and Lemma 2 proved that for N=3k+2 it has unsolveable states. If some
+formations of the first row cannot be solved by any combination of the
+presses on the block, much less the entire board can be solved for every
+state.
+
+</pre>
+
+<h3 id="theorem2">Theorem 2</h3>
+
+<p>
+2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solveable for
+every state.
+</p>
+
+<pre>
+Proof:
+If we restrict ourselves to the presses on cells of one column, then we get
+an array of rectangular vectors with a fixed horizontal postion and width
+and a y-dimensions that resemble the 1-D toggle-squares vector set. e.g:
+110000
+110000
+000000
+000000
+000000
+000000  ,
+
+110000
+110000
+110000
+000000
+000000
+000000  ,
+
+000000
+110000
+110000
+110000
+000000
+000000  ,
+.
+.
+According to Lemma 2, with 1-D presses sets with size 3k and 3k+1 every
+vector can be formed. Thus we can achieve the following rectangles, with
+the presses of one column:
+110000
+000000
+000000
+000000
+000000
+000000
+
+000000
+110000
+000000
+000000
+000000
+000000
+
+000000
+000000
+110000
+000000
+000000
+000000
+
+.
+.
+000000
+000000
+000000
+000000
+000000
+110000
+
+and the same for every other column. Now, if we look on any row of cells,
+we will see that the “sticks” that were generated from the various columns
+in that row are also the 1-D TogSqrs sequence. Because N=3k,3k+1 again,
+every row is solveable for all states, and therefore, the entire board is
+solveable for all states.
+
+Diagram:
+110000 , 111000 , 011100 , 001110 , 000111 , 000011
+000000   .        .        .        .        .
+.        .        .        .        .        .
+</pre>
+
+<h3 id="theorem3">Theorem 3</h3>
+<p>
+Solveable states of 3k+2 boards can be solved by the one-way
+algorithm.
+</p>
+
+<pre>
+The one way algorithm is described as follows:
+Scan every row from top to bottom. For every row, scan every cell from right
+to left, and for every filled cell, click the cell to the bottom-left of it.
+
+Proof:
+Every row can be cleared by pressing a cell to the left or the bottom-left
+of every filled cell, because that way one consistently regress the
+right-most filled cell. Moreover, it’s impossible that only the left-most
+cell will be filled in a solved state (Lemma 1).
+By going down, we ensure that no new cells will be filled instead of the
+new one, and we can clear that way the first N-1 rows. After the iteration
+when the first N-1 rows are cleared, the last row cannot be partially
+filled because it’s a column-wise contradiction of Lemma 1. Therefore, it
+will also be cleared.
+
+</pre>
+
+<h3 id="theorem4">Theorem 4:</h3>
+
+<p>
+A 2-D board of size (3k) * (3k) can be solved by using the two-way
+- two-way algorithm.
+</p>
+
+<pre>
+
+The two way algorithm is described as follows:
+Scan the rows from top to bottom. For every row, scan the cells from right
+to left, and for every filled cell click the cell to the bottom-left of it.
+Then scan the cells in that row, from right to left and for every filled
+cell click the cell to the bottom-right of it.
+After you reached the bottom, do the same thing from bottom to top, but with
+pressing the cell to the top-right or top-left instead.
+
+Proof:
+One can show that the two-way algorithm works for N=3k in a one-dimensional
+board. Even if there is a state of 100...000000000 ,  by pressing to the
+right of the filled squares one eventually gets to a 000...000000011 state
+which is soon cleared to 000...000000000.
+
+This provides us with a method to clear rows by pressing cells in the row
+beneath them, and we can use it to clear all rows except the bottom one.
+Now, let’s take a look at a situation in which there is a partially filled
+row, and above it, at least two empty ones. I will prove that clearing it
+by pressing the cells in the row above it, will make the two rows above it
+a duplicate of its original state. For example if the status was:
+
+000000
+000000       &lt;- I am pressing this row
+011010
+
+then it will turn into
+
+011010
+011010
+000000
+
+The proof is quite simple. If we take a look at one of a cells above an
+initially filled cell, then the cells that affect it and the bottom cell
+were pressed an uneven number of times, during the clearing process. (or else
+the state of the bottom cell would have remained filled).
+
+Thus, it will also change its state and become filled. Likewise, a cell above
+an unfilled cell in the bottom row, was switched an even number of times and
+will be unchanged at the end.
+
+With the same deduction it can be shown that two duplicate rows once cleared
+will fill the row above them in the same formation (provided it was initially
+blank). E.g:
+
+000000
+110011
+110011
+
+will become
+
+110011
+000000
+000000
+
+Since N is equal to 3k, then after the bottom-to-top iteration we will end up
+with the two topmost rows filled in the same formation. Then, the topmost
+row will be cleared along with the lower one.
+
+
+Now, for the remaining modules:
+In a 1-D board where N=3k+1 the two-way method as is, will ping the
+possible remaining 1 back and forth between the two edges. Therefore if
+there is a state of 1000...0 than one should use the leftmost press to
+change it into 0100...000. Then, by repeatetive pressing to the right
+of the leftmost filled square, one gets to the 0...11 state, which is
+afterwards cleared.
+
+</pre>
+
+<h3 id="theorem5">Theorem 5:</h3>
+
+<p>
+A 2-D board of size (3k+1)*(3k+1) can be cleared by an
+down-(edge)-up iteration of left-(edge)-right row clearing
+scheme.
+</p>
+
+<pre>
+
+This algorithm is similiar to the two-way algorithm, except that if a at the
+end of the left iteration, there is a single filled cell, one has to press
+on its lower or upper cell, before moving on. Likewise, if at the end of the
+down scanning, you have filled cells in bottom row, you have to clear them
+by pressing cells of the bottom row.
+
+Proof:
+Very similiar to Theorem 4 except those notes:
+
+1. In N=3k+1 the two-way method as is, will ping the possible remaining
+1 back and forth between the two edges. Therefore if there is a state
+of 1000...0 than one should use the leftmost press to change it into
+0100...000. Then, by repeatetive pressing to the right of the leftmost
+filled square, one gets to the 0...11 state, which is afterwards
+cleared.
+
+To clear the rows in a 3k+1 board one should use this method.
+
+2. The bottom row (if still partially filled) should be moved to the
+row above it, by clearing it by presses of cells of the bottom row.
+Then it can be transposed in the same manner described in Theorem 4 to
+the the two topmost rows and then cleared.
+
+For example, if the status is
+0000000
+0000000
+0110110
+  | |
+press those cells and it will be be moved to
+
+0000000
+0110110
+0000000
+
+
+
+</pre>
+
+<h2 id="dim_press_span">The Dimension of the Presses Span in 3k+2 boards</h2>
+
+<pre>
+(3k+2)*(3k+2) boards are not solveable for every state. The solveable
+states form a vector field which is formed by the spanning all the
+presses. Since, in this case it does not include all the states, I
+wondered if we can calculate its dimension or characterize it somehow.
+I think I know the answer.
+
+First in 1-D: the presses of {0,1}*(3k+2) span a field of size 3k+1
+because it takes only one extra vector - 100...000, so they will form
+every possible state (Lemma 1).
+
+Since the 1-D clearing mechanism for 3k+2 uses only the leftmost 3k+1
+cells to clear every solveable state (part of Theorem 3), then
+their presses are a valid basis for this linear space.
+
+The one-way - one-way clearing algorithm which was proved in Theorem 3,
+uses only a (3k+1)*(3k+1) square of presses to solve the entire board.
+Ergo, the dimension is (3k+1)^2 or less. I believe it _is_ (3k+1)^2 and
+I think I can prove it by showing that the presses of a corner
+(3k+1)*(3k+1) are linearily independant. In the boolean field the
+meaning is that any number of them other than zero XORed together will
+not generate the clear state.
+
+I’ll demonstrate on a 5*5 board:
+
+    |  |
+  - 00000
+    00000
+    00000
+  - 00000
+    00000
+
+The ‘-’s and ‘|’s mark the relevant presses. Let’s assume that a
+certain number of presses in the square can form the clear state. If
+so, then Pr(4,4) cannot be one of them because it is the only press
+that can affect square (5,5). Moreover, Pr(3,4) and Pr(4,3) cannot be
+included either, becuase, once Pr(4,4) is eliminated they are the only
+ones that can affect (4,5) and (5,4) respectively. And so forth,
+proving that that all the presses of cells (1,4)-(4,4) and (4,1)-(4,4)
+cannot be part of the zero sum.
+
+The same can be deduced for the next layer starting from Pr(3,3), which
+is the only vector left that can affect square (4,4). And so-on for the
+other layers, proving that they are a linearily independant set of
+vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
+span the space of the solveable states of (3k+2) boards.
+
+</pre>
+
+<h2 id="efficiency">A Note about Efficiency</h2>
+
+<pre>
+I believe the previous section showed that the 1w-1w algorithm for
+clearing (3k+2) boards is as efficient as it could be, i.e. requires
+the minimal number of presses.
+
+As for boards of other sizes: the 2w-2w algorithm is not the most
+efficient one in relevance to the number of presses it takes to solve
+the board. I noticed that when I solved a couple of boards and realized
+that the number of moves it took me with it was greater than the number
+which was returned from my matrix-canonization program.
+
+However, I believe it is agreeable that it is the simplest algorithm
+(yet) regarding “CPU” requirement and growing complexity, and has the
+advantage that it can be utilized without the aid of a computer.
+
+</pre>
+

@@ -1,0 +1,47 @@
+#include 'template.wml'
+
+<h2>Tabs and Whitespace</h2>
+
+<points>
+<li>
+There is a special character called "Tab" whose ASCII value is 9. It is
+usually displayed as several adjacent whitespace characters.
+</li>
+<li>
+In some file-types (most notably Makefiles) tabs have a special meaning and
+cannot be substituted with their equivalent whitespaces.
+</li>
+<li>
+They would even reject a whitespace before the tab. (which often looks
+identical to a tab).
+</li>
+<li>
+Thus it is important to make sure your editor is configured so it inputs
+tabs at such files.
+</li>
+</points>
+
+<h2>Carriage Returns</h2>
+
+<points>
+<li>
+On Linux and other UNIX systems, the lines of text files are terminate with
+a single character called
+<a href="http://en.wikipedia.org/wiki/Line_feed">"Newline" or
+"Linefeed"</a>.
+</li>
+<li>
+In DOS, and Windows, the Linefeed character is preceded by another character
+called <a href="http://en.wikipedia.org/wiki/Carriage_return">Carriage
+Return</a>.
+</li>
+<li>
+The problem is that some Linux tools will not tolerate CRs at the end
+of lines, so they have to be removed somehow.
+</li>
+<li>
+You can use the following command: <tt>perl -pi -e 's/\r$//' [files]</tt>
+to convert files from DOS-style to Windows-style.
+</li>
+</points>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Extending the Database: C Functions</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Extending the Database: C Functions</h1>
+<h3>* You have to be a database superuser to insert C functions
+into the database.<br />
+<br />
+* C functions are written in C and compiled into a shared
+library.<br />
+<br />
+* You can use the Server Programming Interface (SPI) to access
+database data from within those routines.<br />
+<br />
+* Example:<br />
+<br /></h3>
+<pre>
+postgres:/home/postgres/lib# cat double.c
+#include &lt;stdio.h&gt;
+
+extern int double_me(int a)
+{
+    return a*2;
+}
+postgres:/home/postgres/lib# gcc -shared -Wl,-soname,libpgdouble.so.1 \
+&gt;                                  -o libpgdouble.so double.c
+postgres:/home/postgres/lib# psql test
+Welcome to the POSTGRESQL interactive sql monitor:
+  Please read the file COPYRIGHT for copyright terms of POSTGRESQL
+[PostgreSQL 6.5.2 on i686-pc-linux-gnu, compiled by gcc egcs-2.91.66]
+
+   type \? for help on slash commands
+   type \q to quit
+   type \g or terminate with semicolon to execute query
+ You are currently connected to the database: test
+
+test=&gt; CREATE FUNCTION double_me(int4)
+test-&gt; RETURNS int4
+test-&gt; AS '/home/postgres/lib/libpgdouble.so'
+test-&gt; LANGUAGE 'c' \g
+CREATE
+test=&gt; SELECT double_me(5) \g
+double_me
+---------
+       10
+(1 row)
+
+test=&gt;
+</pre>
+</body>
+</html>

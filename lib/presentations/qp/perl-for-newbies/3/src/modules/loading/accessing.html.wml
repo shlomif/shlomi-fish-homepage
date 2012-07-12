@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<p>
+As could be seen from the last example, once the module has been
+<tt>use</tt>'d, its functions can be invoked by typing the
+full path of the package followed by <tt>::</tt> and followed by
+the function name.
+</p>
+
+<p>
+Note that if you are in package <tt>Foo</tt> and you are trying to access
+functions from package <tt>Foo::Bar</tt>, then typing <tt>Bar::my_func()</tt>
+will not do. You have to type the full path of the module.
+(<tt>Foo::Bar::my_func()</tt> in our case)
+</p>
+
+
+

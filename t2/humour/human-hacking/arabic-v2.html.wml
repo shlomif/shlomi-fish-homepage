@@ -1,0 +1,25 @@
+<set-var rtl_layout=1 />
+#include "multi-lang.wml"
+<set-var shlomif_lang="he" />
+
+#include '../template.wml'
+
+<latemp_subject "The Human Hacking Field Guide - Version 2 - Arabic Translation" />
+
+<div class="english">
+
+<p><b>By:</b> Shlomi Fish</p>
+
+<p><b>Translated into Arabic by:</b> Vieq</p>
+
+</div>
+
+<h2 id="text">The Text</h2>
+
+<div class="story">
+
+<h3 id="the-story">The Story</h3>
+#include "docbook/4/rendered/human-hacking-field-guide-v2-arabic.html"
+
+</div>
+

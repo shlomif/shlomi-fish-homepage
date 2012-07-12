@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+I wanted to add support for such games as Der Katzenschwanz and Die Schlange
+in which stacks could be initialized to several dozens of cards.
+</li>
+
+<li>
+That made stacks way too long and caused every board to consume a lot of
+memory.
+</li>
+
+<li>
+Solution: keep one copy of each stack once in a dynamically allocated memory.
+</li>
+
+<li>
+Each state contains an array of pointers to each of its stacks.
+</li>
+
+<li>
+That made it possible to scale up to a million states and more.
+</li>
+
+</points>

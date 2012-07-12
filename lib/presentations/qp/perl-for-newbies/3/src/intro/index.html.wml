@@ -1,0 +1,30 @@
+#include 'template.wml'
+
+
+
+<p>
+The two previous lectures supplied you with enough knowledge to know
+how to program most perl scripts. That is, with some help from the perl
+man pages, especially the
+<a href="http://perldoc.perl.org/perlfunc.html">perlfunc</a> one.
+</p>
+
+<p>
+If however, you wish to maintain a more complex perl program, you will
+probably outgrow the functionality that was covered so far. However, perl has
+certain mechanisms that make it to easier to write code that is
+more scalable, more modular and more re-usable.
+</p>
+
+<p>
+The purpose of a modular code is to make sure there isn't any duplicate code,
+and that parts of the code can later be used by others, with as little modification
+as possible. Perl, as most other languages, does not force writing modular code
+upon the programmer, but it does provide some language mechanisms that help do
+that.
+</p>
+
+<qpcontents />
+
+
+

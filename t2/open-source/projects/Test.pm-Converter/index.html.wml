@@ -1,0 +1,85 @@
+#include '../template.wml'
+
+<latemp_subject "Test.pm to Test::More Partial Conversion" />
+
+<p>
+Previously Perl test-programs used the built-in <b>Test.pm</b> module, but it
+has many limitations.
+<a href="http://beta.metacpan.org/module/Test::More">Test::More</a> is much
+better, but its <tt>ok()</tt> method is incompatible with Test.pm. As a result,
+I'm providing this script to do a partial machine conversion of Test.pm-based
+legacy scripts to Test::More. It makes use of
+<a href="http://beta.metacpan.org/release/PPI">PPI</a> - The Perl
+Parsing Interface
+</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+
+<li>
+<a href="Test.pm-to-Test-More.pl-v0.2.0.xz">Version 0.2.0</a> (<b>Latest</b>)
+</li>
+
+</ul>
+
+<h2 id="limitations">Limitations</h2>
+
+<ul>
+
+<li>
+<p>
+Does not translate the “use Test;” to “use Test::More” or convert the
+plan.
+</p>
+</li>
+
+<li>
+<p>
+No option to avoid adding the
+<a href="http://beta.metacpan.org/release/Test-Count">Test-Count</a> annotations.
+</p>
+</li>
+
+<li>
+<p>
+Can mess up single-parameter <tt>ok()</tt> tests with low-precedence operators
+such as <tt>not</tt>
+</p>
+</li>
+
+<li>
+<p>
+Does not handle counts of tests inside loops.
+</p>
+</li>
+
+<li>
+<p>
+No correctness tests.
+</p>
+</li>
+
+<li>
+<p>
+Not packaged as a CPAN distribution.
+</p>
+</li>
+
+</ul>
+
+<p>
+Patches for some of these would be welcome.
+</p>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+Test.pm-to-Test-More.pl is licensed under the
+<a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>
+</p>
+
+<h2 id="news">News</h2>
+
+<h2 id="blog-posts">Blog Posts</h2>
+

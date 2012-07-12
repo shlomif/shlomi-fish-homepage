@@ -1,0 +1,216 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "Fortune Cookie Files" />
+
+<latemp_more_keywords "fortune,unix,cookies,fortunes,xml,grammar,perl,freenode,iglu,linux,linux-il,paul graham,joel on software,quotes,quotations" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+These are some fortune cookie files I created that can be used with the UNIX
+fortune program. Most of the quotes here are funny, and the rest are such
+that I found especially enlightening or could not find in the other fortune
+collections.
+</p>
+
+<p>
+They have been converted to a custom XML grammar, but they may still contain
+some conversion errors, or not-entirely-semantic-markup.
+</p>
+
+<h2 id="web-feed">Web Feeds</h2>
+
+<ul>
+<li><a href="fortunes-shlomif-all.rss"><b>RSS 2.0 feed</b></a></li>
+<li><a href="fortunes-shlomif-all.atom"><b>Atom feed</b> for
+these fortunes</a> (does not validate)</li>
+</ul>
+
+<p>
+Keep track of the newest ones added using
+<a href="http://en.wikipedia.org/wiki/Aggregator">a Web-Feed
+Reader/Aggregator</a> (see <a
+href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikipedia</a>).
+</p>
+
+<h2 id="view">View and Download</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(PACKAGE_BASE)"><b>These fortunes in a tar.gz file</b></a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="source-files-list.html">The Sources Files List</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="show.cgi?mode=random"><b>Random fortune</b></a>
+</p>
+</li>
+
+<li>
+
+<p>
+Individual HTML pages for the fortune collection:
+</p>
+
+<ul>
+<:{
+
+use Shlomif::Homepage::FortuneCollections;
+
+foreach my $r (@{Shlomif::Homepage::FortuneCollections->get_fortune_records()})
+{
+    my $id = $r->id;
+    my $desc = $r->desc;
+
+    _wrap_as_utf8(sub {
+    print <<"EOF";
+<li>
+<p>
+<a href="$id.html"><b>$id</b></a>
+(<a href="$id.xml">XML</a>, <a href="$id">Plaintext</a>) -
+$desc
+</p>
+</li>
+EOF
+    });
+}
+
+}:>
+</ul>
+</li>
+
+</ul>
+
+<h2 id="disclaimer">Commentary and Disclaimer</h2>
+
+<p>
+Please report any typos or inaccuracies to me by
+<a href="mailto:<main_email />">E-mail</a>. The quotations
+here are owned by their respective copyright holders, and come with
+no warranty of any kind.
+</p>
+
+<h3 id="licence">Licence</h3>
+
+<p>
+As far as Shlomi Fish, who is collecting and maintaining these quotes, is
+concerned, this collection of fortune cookies is licensed under the
+<a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">Creative
+Commons Attribution-ShareAlike License 3.0 (CC-by-sa) Unported (or at
+your option any later version of that licence)</a>. However, as noted earlier,
+these fortune cookies were collected from various sources, many of them are
+not original or under incompatible or “All Rights Reserved” licences, and some
+of them (like the many IRC conversations there) contain text by many authors.
+So one should take care.
+</p>
+
+<p>
+If you feel any of these quotes is doing you damage, and you wish it to be
+removed or modified, then <a href="$(ROOT)/me/contact-me/">contact
+Shlomi Fish</a> and he’ll see what he can do.
+</p>
+
+<h2 id="links">Links</h2>
+
+<h3 id="technical_links">Technical Links</h3>
+
+<ul>
+<li>
+<p>
+<a href="http://web-cpan.shlomifish.org/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> -
+Perl 5/CPAN and XSLT code to convert the XML to XHTML and to plaintext.
+</p>
+</li>
+
+</ul>
+<h3 id="other_collections">Other Fortune Cookies Collections</h3>
+
+<ul>
+<li>
+<a
+href="http://www.splitbrain.org/index.php?x=.%2FFortunes">splitbrain.org’s
+Fortunes</a> - contains fortunes from the X Files, Disc World, Forrest Gump,
+Star Wars, The Simpsons, and the Hitchhiker’s guide to the galaxy.
+</li>
+<li>
+<a href="http://www.catb.org/~esr/fortunes/">Eric S. Raymond’s
+Fortunes</a> - quotes about individual rights, and some from the comedian
+Stephen Wright.
+</li>
+<li>
+<a href="http://cx.capsi.com/code-jargonfortunes.html">Fortunes from
+the Hackers’ Jargon File</a>
+</li>
+<li>
+<a href="http://humorix.org/downloads/#Fortunes">Humorix’s Fortunes</a>
+- including Linux slogans, quotes from Linus Torvalds and others, brief
+Microsoft jokes, and some portions of their articles.
+</li>
+<li>
+<a href="http://adi.stav.org.il/mav-flame.tar.gz">The Complete Marc A.
+Volovic Flames Collection</a> - Another Linux-IL folklore...
+</li>
+<li>
+<a href="http://www.datawar.net/technology/fortunes-random.html">Fortunes-random</a>
+- a collection of random fortune cookies.
+</li>
+<li>
+<a href="http://kernelnewbies.org/kernelnewbies-fortunes.tar.gz">The
+\#kernelnewbies fortune file</a> - a collection of funny or amusing Linux
+kernel development related quotes.
+</li>
+<li>
+<a href="http://www.katspace.net/quotes/">KatSpace Quotes in
+Fortune Format</a>.
+</li>
+<li>
+<a href="http://nanardon.homelinux.org/">Collection of French Fortunes</a>
+- a collection of fortunes in french by Nanardon.
+</li>
+<li>
+<a href="http://www.infodrom.org/Infodrom/fortunes/">Infodrom Fortune
+Cookies</a> - <q>On Infodrom we collect a bunch of fortune cookies which we
+extract from real live conversation, usenet postings (mail and news) and IRC
+channels. We don’t believe they are funny, others do. However, some of them may
+be funny.</q>
+</li>
+<li>
+<a href="http://search.cpan.org/src/COSIMO/Acme-24-0.01/fortune/jackbauer">Fortune
+file with Jack Bauer facts</a>
+</li>
+<li>
+<a href="http://queen.borg.ch/irc/">IRC Excerpts from queen.borg.ch</a>
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+<p>
+
+Join <a href="http://www.testking.eu/exam/640-863.htm">testking 640-863</a>
+training program to prepare for real exam. Guaranteed pass real exam using <a
+href="http://www.testking.eu/exam/642-436.htm">testking 642-436</a> practice
+questions and <a href="http://www.testking.eu/exam/220-702.htm">testking
+220-702</a> practice test.
+
+</p>
+</define-tag>
+
+<camila_ron />
+
+
+

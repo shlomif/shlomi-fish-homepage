@@ -1,0 +1,3390 @@
+<?xml version='1.0' ?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+]>
+<!-- -->
+<!-- $Id$ -->
+<!-- -->
+<!-- $Log$ -->
+<!-- -->
+<!-- General reminders: -->
+
+<article id="index">
+    <articleinfo>
+        <title>The Human Hacking Field Guide</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2004</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice>
+            <!-- Ci vis pacem -->
+            <para>
+                <!-- belum. ;-) -->
+                This document is copyrighted by Shlomi Fish
+                under the
+                <ulink url="http://creativecommons.org/licenses/by-sa/2.0/">Creative
+                    Commons Attribution Share-Alike License version 2.0</ulink>
+                (or at your option a greater version).
+            </para>
+        </legalnotice>
+        <revhistory>
+            <revision>
+                <revnumber>1134</revnumber>
+                <date>20 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Started working on this document after forking the template
+                    of an older one.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1143</revnumber>
+                <date>21 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added up to the middle of the "Are you done insulting me?"
+                    chapter.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1152</revnumber>
+                <date>22 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "I'm just a geek".
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1158</revnumber>
+                <date>22 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of the first IRC conversation ("BETH!").
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1168</revnumber>
+                <date>24 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "She still is…"
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1168</revnumber>
+                <date>27 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "Evil HTML E-mail"
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1194</revnumber>
+                <date>27 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "TRIZ"
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1203</revnumber>
+                <date>30 August 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "Divine's Good"
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1266</revnumber>
+                <date>30 September 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the end of "'Abandoning' Debian" and fixed
+                    many typos and incorrections.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1280</revnumber>
+                <date>2 October 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed many typos, many of which were discovered by
+                    Andrew Dexter.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1284</revnumber>
+                <date>5 October 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the End of "RMS is Coming to Town".
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1287</revnumber>
+                <date>7 October 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added to the End of "God Works in Mysterious Ways".
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1289</revnumber>
+                <date>9 October 2004</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed many typos reported by Uri Bruck.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1369</revnumber>
+                <date>20 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some typos.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1373</revnumber>
+                <date>27 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Finished the document, and spell-checked it.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1379</revnumber>
+                <date>28 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Changed "FreeNode" to "Freenode". Also fixed two minor
+                    but important typos and mis-punctuations.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1380</revnumber>
+                <date>28 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some missing quotes, courtesy of Freenode's
+                    <ulink url="http://rob.axpr.net/">AthlonRob</ulink>.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1382</revnumber>
+                <date>28 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Read the story cover to cover, and fixed many typos
+                    I discovered.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1384</revnumber>
+                <date>30 May 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed some problems courtesy of Steve Harris.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1389</revnumber>
+                <date>1 June 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added another joke to the last chapter.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1414</revnumber>
+                <date>14 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Revamped a part in "Divine's Good". Also fixed a lot of
+                    other bad phrasing, punctuation, etc.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1418</revnumber>
+                <date>17 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Made the "radius" detail much more realistic. (10 km
+                    instead of 40 km)
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1443</revnumber>
+                <date>05 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed the major/minor mix-ups in "God Works in Mysterious
+                    Ways".
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1443</revnumber>
+                <date>05 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Corrected a typo.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1559</revnumber>
+                <date>05 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Corrected a typo and changed a word to a variant with
+                    more character.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1685</revnumber>
+                <date>09 April 2007</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Corrected a few errors in "Search of Lost Time"
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1752</revnumber>
+                <date>09 May 2007</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Revamped the beginning (discussion of how to get
+                    into a better college) to make it more believable.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1841</revnumber>
+                <date>15 July 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Revamped the start of the beach scene.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>2710</revnumber>
+                <date>07 September 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Revamped the
+                    "Committing Adultery in Your Heart is…" part, a little.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>2768</revnumber>
+                <date>14 September 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Made various corrections and enhancements.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>3001</revnumber>
+                <date>06 October 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Some grammar, and formatting corrections. Changed
+                    dot-dot-dots to Unicode ellipses ("…"). Converted
+                    a quote to a blockquote.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>3135</revnumber>
+                <date>06 November 2009</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Converted the spelling of "Maths" to the commonwealth
+                    spelling (which is the standard spelling used for my
+                    English stories).
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+<section id="things_you_do_to_get_to_univ">
+    <title>The Things you do to Get to University</title>
+    <para>
+        My name is Jennifer. Jennifer Susan Raymond, to be exact.
+        I live in Los-Angeles, in one of those nice neigbourhoods that they
+        always show in movies. I am in my high-school senior year now.
+    </para>
+    <para>
+        Let me tell you some things about myself. The first thing is that
+        I'm a honour student. I especially like Maths. Its high school
+        exercises are easy and fun and the difficult ones, which can be
+        found in puzzle books and Maths competitions, are very challenging.
+        I'm also good in other subjects, but Maths is really my passion.
+        Other than that I'm blonde, have a cute face (I don't really consider
+        myself beautiful, but guys seem to think so) and try to
+        dress very elegantly. As a Maths geek, I sure have a social life.
+        Everybody around me seems to like me.
+    </para>
+    <para>
+        Finally, I should tell about Taylor, Taylor Lawrence. He's my best
+        friend. We became friends when we were in the fourth
+        grade and were both grounded for 4 weeks. We instantly became friends.
+        When we were 12 and we started having, eh, sexual sensations, we
+        started dating each other. Then we both had a crush on different
+        people, and we were relieved when we found out. We decided exploring
+        our feelings would not be a worthwhile goal, and we dated other
+        people since.
+    </para>
+    <para>
+        Taylor is probably even more popular than I am. Even though he wears
+        prescription glasses, he looks great, and girls almost always agree
+        to go with him on dates. (And sometimes ask him themselves.) One thing
+        he seems to like and I don't is computers. He spends hours on end
+        tampering with his computer at home. Mine, on the other hand, is
+        almost always turned off. I have good hand writing, thank you, so I
+        don't need a word processor. I turn it on only to listen to audio
+        files, do some random browsing in the Internet (either for research,
+        or to kill time or whatever) or play Freecell or Tetris. I think
+        computers are impersonal and boring.
+    </para>
+    <para>
+        It all started one day when I was attending class, paying attention
+        to the teacher, when suddenly it hit me: I don't have either any
+        special skills and have never really been involved in the community.
+        So, no prestigious college will prefer me over someone else. This has
+        worried me so much that for the rest of the day, I just wrote down
+        what the teacher said in my notebook thoughtlessly, and kept worrying
+        about this issue.
+    </para>
+    <para>
+        I really want to graduate from somewhere nice where I can be proud
+        of myself, and have the entire world at my disposal. But my entire
+        life I've been concerned only about myself and my friends, trying to
+        become happy, (and having a pretty good success at it), and just doing
+        what school required me to do. I've never really been involved in
+        anything for the community. And I never found it necessary to get
+        any special skills, unless you call hitting the gym twice a week
+        (with Taylor), jogging and biking special.
+    </para>
+    <para>
+        So I was relieved when I met Taylor that day, when we both finished
+        school.
+    </para>
+    <para>
+        "Taylor, I'm worried about college." I told him.
+    </para>
+    <para>
+        "Why?" he said.
+    </para>
+    <para>
+        "I don't have any special skills and no community involvement."
+    </para>
+    <para>
+        "Jenn, you're sweet, intelligent and the kindest person I know. Every
+        college will be glad to have you."
+    </para>
+    <para>
+        "So are most of the other candidates they get, but as opposed to
+        me they do have some special skills and show some community
+        involvement. How am I going to get it by the end of this year?"
+    </para>
+    <para>
+        "Well, you might as well try."
+    </para>
+    <para>
+        "Try what?"
+    </para>
+    <para>
+        "Learning a special skill", he said.
+    </para>
+    <para>
+        "A special skill? Like what?"
+    </para>
+    <para>
+        "You could study Sumerian!"
+    </para>
+    <para>
+        "Sumerian? What on Earth would I do with Sumerian?", I said, unamused.
+    </para>
+    <para>
+        "Talk to native speakers of Sumerian, of course."
+    </para>
+    <para>
+        Now I was angry. "They're all dead!"
+    </para>
+    <para>
+        "OK, ok. How about Latin or Hebrew or Greek?"
+    </para>
+    <para>
+        "I have enough problems with Spanish, thank you."
+    </para>
+    <para>
+        "Si, comprendo." Taylor said. "OK, OK", he continued. "I know -
+        why don't you help the poor or whatever. Tutor kids with
+        difficulties."
+    </para>
+    <para>
+        "Well…", I thought for a moment, "Taylor, you're just making up
+        random suggestions."
+    </para>
+    <para>
+        Taylor thought for a moment.
+    </para>
+    <para>
+        "How about if you do something I can help you with and you can relate
+        to and will also be knowledgable. Jenn, what do you say about becoming
+        an open-source hacker?"
+    </para>
+    <para>
+        From talking to Taylor, I already knew that hacker did not
+        necessarily mean a computer intruder, but rather someone who
+        accomplished things very enthusiastically. So I told him:
+    </para>
+    <para>
+        "Open-source hacker? You know perfectly well that I'm a
+        computer-phobic."
+    </para>
+    <para>
+        "Jennifer, you're a computer phobic now, but you can grow to
+        like computers. I mean what are your options? Become an Electronics
+        hacker like Jonathan is?"
+    </para>
+    <para>
+        Jonathan is my boyfriend, and has been since the start of the
+        eleventh grade. He's the best boyfriend I ever had. He also likes to
+        build machines with wires, batteries, and many other components I can't
+        remember now. He and Taylor have become good friends.
+    </para>
+    <para>
+        "Electronics? You know I have two left hands, with these kind of
+        things."
+    </para>
+    <para>
+        "Jenn, but you're left-handed!"
+    </para>
+    <para>
+        "So I have two right-hands! Taylor, are we going to argue
+        about semantics now?"
+    </para>
+    <para>
+        "OK, but Jenn,", and he held my hands, "I want you to better relate to
+        what I'm doing".
+    </para>
+    <para>
+        "Hmmm…." I said. I started feeling guilt and confusion and lots
+        of other feelings. "Alright. ", I said, "I'll be an open-source
+        hacker. Or at least try to. So… are you going to give me private
+        lessons and stuff?"
+    </para>
+    <para>
+        "Sure, why not. " he said, "Wait a second! Hold that thought - I think
+        I have a better idea. Come with me." he said, and he went down the
+        hall.
+    </para>
+    <para>
+        I followed him for a few hallways and then entered with him into a
+        computer lab. There he walked to some figure (looked like a girl) with
+        purple (!) hair.
+    </para>
+    <para>
+        "Hi!" he said.
+    </para>
+    <para>
+        "Hiiiii…" I heard an enthusiastic female voice. "Whatcha doing here?"
+    </para>
+    <para>
+        "Jenn, please come here. Jenn I'd like you to meet Eve Siegel, who
+        likes to be called 'Erisa'. Erisa, I told you about Jenn."
+    </para>
+    <para>
+        I looked at this Erisa character. Her hair was dyed purple, her face
+        had too much makeup, and her facial expression was horrid. Remember
+        that episode in "Sabrina - The Teenage Witch" where Sabrina transforms
+        herself into a punk? She looked only a bit better than that.
+    </para>
+    <para>
+        "Hi" I said reluctantly.
+    </para>
+    <para>
+        "Hmmm… " said Erisa, "a bit too elegant for this school, aren't we.
+        I know your type of girls. Let me guess: you are a honour student,
+        right?"
+    </para>
+    <para>
+        "Yes," I told her.
+    </para>
+    <para>
+        "You exercise a lot".
+    </para>
+    <para>
+        I was becoming worried, "yeah".
+    </para>
+    <para>
+        "You listen to these girlie bands like NSync, All Saints, Backstreet
+        Boys, Britney Spears and…"
+    </para>
+    <para>
+        "Well,", I wanted to say that I did not like NSync much.
+    </para>
+    <para>
+        "Yes, Atomic Kitten! These babes are the worst."
+    </para>
+    <para>
+        <emphasis>How does she know that I have all their CDs?</emphasis>
+    </para>
+    <para>
+        "Furthermore, you're a goody two shoes, never violated any rules,
+        your parents are proud of you, you watch shows like 'Friends' and
+        'Seinfeld' and 'Sabrina'. Eukh… I hate Melissa Joan Hart so much…"
+    </para>
+    <para>
+        I could not take it anymore. She seemed to know everything about me,
+        I started crying and left the room to the hallway. I hardly even
+        noticed that everyone in the lab was looking at me.
+    </para>
+    <para>
+        Taylor went out and came to me. He hugged me and calmed me down.
+    </para>
+    <para>
+        "Am I as superficial as she describes?" I asked after I stopped
+        crying.
+    </para>
+    <para>
+        "Jenn, don't take Erisa so seriously. She's a bit of a punk, and seem
+        to have a grudge against the world at large and pop culture in
+        particular."
+    </para>
+    <para>
+        "Why do you want her to tutor me in hacking?"
+    </para>
+    <para>
+        "Because she is a girl, so you won't have prejudice."
+    </para>
+    <para>
+        "She might be a girl, but she doesn't seem like a human being."
+    </para>
+    <para>
+        "Trust me, she is once you get to know her better. And she gets
+        to know you."
+    </para>
+    <para>
+        "Can't you find another girl hacker to tutor me?"
+    </para>
+    <para>
+        "Jennifer… she's the best girl hacker in a 10-kilometer radius
+        and one of the best hackers I know, female or male. She's the
+        best person I can think of."
+    </para>
+    <para>
+        "Fine," I told him, "I'll give it a shot.". The things you do to
+        get into university.
+    </para>
+    <para>
+        We entered the room again, and Taylor and I approached Erisa.
+    </para>
+    <para>
+        "Erisa, Jennifer here would like to become an open-source hacker."
+    </para>
+    <para>
+        "She?" she made a fake laugh, "what for?"
+    </para>
+    <para>
+        "To get into a better college.", I said.
+    </para>
+    <para>
+        "You want to engage in a purely altruistic activity for a selfish
+        cause? Well, I won't be the judge of that."
+    </para>
+    <para>
+        "Hmmpff," I said.
+    </para>
+    <para>
+        "Anyway, if you want me to tutor you, it will cost you. My software is
+        free, girlfriend, but my time isn't. 20 bucks an hour. And trust me,
+        I'm almost never this cheap. I'm just doing it as a favour to Taylor
+        here."
+    </para>
+    <para>
+        "20 dollars is fine, I guess." I told her.
+    </para>
+    <para>
+        She opened her bag, took out the school's students list, said
+        "Jennifer?", (I said "Raymond"), and checked my address. "Heh", she
+        said, "a couple of blocks from my house." She took note of my name in
+        her PDA that lay on the computer's table.
+    </para>
+    <para>
+        "Now for some homework. Go to the Internet and read 'How to become
+        a Hacker' by Eric S. Raymond. I'll drop by in two days, and guide
+        you through the installation process of 'Mandrake Linux'. Chicks
+        dig Mandrake, and while I'm using Debian, it'd probably be the best
+        for you."
+    </para>
+    <para>
+        "Thanks, I said." I took a mental note of the resource, shook Erisa's
+        hand, and left the lab.
+    </para>
+</section>
+<section id="are_you_done_insulting_me">
+    <title>Are You Done Insulting Me?</title>
+    <para>
+        The next day, I approached Taylor in one of the breaks carrying a
+        printout of this "How to become a Hacker" essay. I was quite vexed,
+        and wanted to consult him regarding it.
+    </para>
+    <para>
+        "Taylor," I said without saying hello, "what the hell does this Eric
+        Raymond character want from me?".
+    </para>
+    <para>
+        "What did you find wrong with it?"
+    </para>
+    <para>
+        "Let's see: role playing games - you know I hate them."
+    </para>
+    <para>
+        "You don't need to like RPG's to be a hacker."
+    </para>
+    <para>
+        "Or Science Fiction. I prefer humourous writings and Realism."
+    </para>
+    <para>
+        "It won't make you any less of a computer geek."
+    </para>
+    <para>
+        "Here's another thing:", I said as I went over the document, "'Zen or
+        Martial Arts'. You know the mere thought of hurting someone else
+        freaks me out and that I hit like a girl.".
+    </para>
+    <para>
+        "Hit like a girl?", Taylor said, "Tell you what - here's my open
+        hand. Hit it as hard as you can with your fist? Let's check your
+        claim."
+    </para>
+    <para>
+        "Really," I said looking at his open hand?
+    </para>
+    <para>
+        "Yeah sure. I'm ready."
+    </para>
+    <para>
+        I backed up my right hand, and hit his fist as hard as I could.
+        Taylor cried "ow", and rubbed his left hand with his right. Then
+        he said out of quite a pain, "You forgot that we go to the gym twice
+        a week."
+    </para>
+    <para>
+        "Oh, right… weight-training… among else. Are you alright?"
+    </para>
+    <para>
+        "I'll be OK.", he said as he released his left hand. "But I don't
+        think you hit like a girl. Keep that in mind in case you get into a
+        chick fight one day."
+    </para>
+    <para>
+        "Heh", I smiled, "So I'm a bit strong. So what? I still don't want
+        to learn Martial Arts." I said. "And what kind of language is 'Python'
+        . Who would name a language after a snake."
+    </para>
+    <para>
+        "Well, as far as I know Erisa, she'll probably teach you Perl instead."
+    </para>
+    <para>
+        "But Raymond says…"
+    </para>
+    <para>
+        "ESR (that's how we refer to Eric S. Raymond), is a very nice guy, but
+        he has several faults. One of them is being a Pythoneer who bashes Perl
+        quite irrationally. Erisa has learned Perl as the first of her
+        so-called 'scripting languages', and she still prefers it to Python.
+        She also told me that someone once told her that he'd rather teach
+        people Perl at start, because it's a language they can express
+        themselves in."
+    </para>
+    <para>
+        "Well, I also recall Pascal from my days,", I said, "so I guess I'll be
+        alright."
+    </para>
+    <para>
+        "Jenn, " he told me as he held my hands, "I'm sure you will.".
+    </para>
+    <section id="are_you_done_part2">
+        <title>Are you Done - Part 2</title>
+        <para>
+            Erisa dropped by my house on Saturday. My brother answered the
+            door, and was shocked, and a bit scared of the way she looked.
+            After consulting me, I told him it was alright, and let her
+            into my room.
+        </para>
+        <para>
+            Erisa brought the CDs of the Linux distribution (they were burned),
+            and said I could keep them. "Before we start, let me start
+            Windows and check for configuration and stuff," she said.
+        </para>
+        <para>
+            "Wow!" she said later, "65 Gigs free out of 80? You obviously
+            don't make too much use of this machine. Well, that'll give us
+            enough space for installing Linux."
+        </para>
+        <para>
+            "OK, ", she said, "now you sit at the computer and go through
+            the installation, read the instructions and let me know what you
+            think. I'll let you know what you should do next."
+        </para>
+        <para>
+            "OK, " I said, as we switched places.
+        </para>
+        <para>
+            Well, except for the part about re-partitioning which confused
+            me a bit, everything was reasonably understood. Then Erisa
+            instructed me to reboot the computer.
+        </para>
+        <para>
+            When it started, it displayed a nice graphical menu which said
+            if I would like to start Linux or Windows. I chose Linux naturally.
+            Then a large number of messages appeared (Erisa said even she
+            didn't understand them all), and then I got the so-called "login"
+            prompt, that asked me for a username.
+        </para>
+        <para>
+            "OK, " said Erisa, "we took note of your username and password, and
+            of your root password. The root user can do anything, so it is
+            considered a bad idea to use it all the time. When I started like
+            you, I worked all the time as root, but you shouldn't duplicate
+            my mistakes."
+        </para>
+        <para>
+            "Heh heh", I giggled. "OK, I'll just enter 'jennray' here, and
+            'schrodinger6590' here. OK?
+        </para>
+        <para>
+            "Yes."
+        </para>
+        <para>
+            After that, this thing called KDE loaded ("KDE is the number one
+            desktop for chicks"), displaying a nice bootscreen. And afterwards,
+            I saw the work screen.
+        </para>
+        <para>
+            "Wow!" I said, "this is beautiful.". And indeed it was: the icons
+            were smooth and attractive, the windows had very nice decorations,
+            it just invited people to play with it. I figured out the menu
+            with the star was equivalent to Windows "Start" thingy, and started
+            browsing the menus and starting applications.
+        </para>
+        <para>
+            "Hold it right there, girlfriend!" Erisa barfed at me, "You ain't
+            paying me to play with Linux on my time. Now let me show you a
+            couple of things…"
+        </para>
+        <para>
+            She showed me how to access the two control centers. (one for the
+            desktop, and one for the entire system.) How to browse and manage
+            files using the file-manager. (it had a cute Home icon), and
+            explained about the kate text editor and why text editors
+            in general are useful in UNIX. ("Linux belongs to a large family
+            of operating systems, past and present, called UNIXes, which share
+            a lot in common. So if you hear the term 'UNIX', don't freak out.")
+        </para>
+        <para>
+            She ended up with searching Google and the Web for some good
+            resources for editing HTML. She bookmarked all of them in the
+            web browser, and then said:
+        </para>
+        <para>
+            "Now, your homework for the next week is to prepare a homepage for
+            yourself, after you've read everything I bookmarked you. (Possibly
+            , along with reading it). Because you're such an uninteresting girl,
+            you'll probably want to fill it with things you like, useless links,
+            and raves about the Power Puff Girls. But I won't judge you. Just
+            make sure it has a lot of content in it."
+        </para>
+        <para>
+            "Are you done insulting me?" I answered.
+        </para>
+        <para>
+            "For now", and she grinned, "see you next weekend."
+        </para>
+        <para>
+            "Bye, I said! " and I paid her for her time.
+        </para>
+        <para>
+            She sure seemed to know her stuff, but had a strange way of
+            conveying it to me.
+        </para>
+    </section>
+</section>
+<section id="just_a_geek">
+    <title>I'm just a Geek…</title>
+    <para>
+        "I hate her, I positively and completely hate her." I said to Jonathan.
+        (Who, like I said, was my boyfriend)
+    </para>
+    <para>
+        We were sitting in a nice restaurant having a romantic dinner. Yet,
+        I could think of nothing more pleasant to bring than Erisa and her
+        idiosyncrasies.
+    </para>
+    <para>
+        "Jenn, Taylor seems to be fond of her, so she cannot be all bad. Maybe
+        she just sees you as a stereotype."
+    </para>
+    <para>
+        "Well," I told him, "I'm not going to stop liking Atomic Kitten, just
+        because she thinks they are a girly band. And I am a girl, damn it!"
+    </para>
+    <para>
+        "I have a better idea: why don't you prove to her that you're competent
+        as a programmer? She seems to like Taylor, even though we both know
+        that he likes Atomic Kitten and all the other girly bands as much as
+        you."
+    </para>
+    <para>
+        "Well, maybe you're right. I still have time on this weekend, I could
+        try learning HTML and getting most of my homepage done. I think the
+        next week won't be so busy and so I can tweak it even more."
+    </para>
+    <para>
+        "Right, maybe that way you'll earn her respect."
+    </para>
+    <para>
+        And so I did. I studied HTML (Hyper Text Markup
+        Language) and its CSS (Cascading Style Sheets) thing. I created a
+        homepage with:
+    </para>
+    <orderedlist>
+        <listitem>
+            <para>
+                Some information about myself. My bio, my C.V.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Pictures of myself and my family.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Some jokes and quotations I was fond of.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Links to books that I liked.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Links to my friends' web-pages.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Some rants and raves about movies I've been to.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Some pages about the Power Puff Girls, Atomic Kitten and
+                Britney Spears. (I added them to tease Erisa)
+            </para>
+        </listitem>
+    </orderedlist>
+    <para>
+        All of this with a nice style. (I played with the colors endlessly
+        to get them right), and everything. It was actually quite fun, and
+        I found myself doing it when I got too tired of doing homework.
+    </para>
+    <para>
+        Eventually, I had a lot to show for. When Saturday came, I showed it
+        to Erisa.
+    </para>
+    <para>
+        "Not bad." she said, "Not bad at all. Good content, nice style; nice
+        , portable markup. You have validated everything right?"
+    </para>
+    <para>
+        "Yes."
+    </para>
+    <para>
+        "Good. Now let's upload it. I happen to have my own private place
+        at the Internet, for which I'm paying good money. I'll give you
+        an account there, if you promise not to abuse it. Wait a sec! Thinking
+        of it, there's no way someone like you will know how to abuse it."
+    </para>
+    <para>
+        "Hmmpppfff…" I said.
+    </para>
+    <para>
+        "In any case, let me sit in front of the computer for a second."
+    </para>
+    <para>
+        We switched places, she opened up this weird window full of monospaced
+        text, typed a few obscure commands, and after about 10 minutes, she
+        said: "here you go. Your username is 'jennray' and your password is
+        the same as one on this computer. Now, I'll write a script that will
+        upload it to the server, if you just type the password. Meanwhile,
+        just take it for granted. Later on, I'll explain what it does, but
+        we still have a lot of ground to cover beforehand."
+    </para>
+    <para>
+        I was beginning to like her.
+    </para>
+    <para>
+        "Another thing - our Linux User Group (or LUG for short) gathers
+        around every first and third Wednesday of the month at 17:00 at the
+        local university. You should come and get to know Linux better by
+        listening to the presentations that people give there."
+    </para>
+    <para>
+        Wow! These Linux guys have nothing to do twice a month, than
+        attend a presentation about it. But, then I thought about graduating
+        from somewhere nice like Harvard or Berkeley and I said, "OK, I'll
+        come."
+    </para>
+    <para>
+        "Heh, the other girls there are more similar to you than
+        to me."
+    </para>
+    <para>
+        "Man, I am relieved."
+    </para>
+    <para>
+        "You should be, girlfriend!"
+    </para>
+    <para>
+        "My name's Jennifer."
+    </para>
+    <para>
+        "Listen, Blondie, I couldn't care less about you or the whole culture
+        and values you represent. I'm just a geek who is trying to make the
+        world a better place. What have you done for the world recently?"
+    </para>
+    <para>
+        "Heh", I snapped at her, "at least I care about myself enough to
+        dress properly, and to look my best, and to care about other people.
+        You, on the other hand, make me miserable, so I would not call it
+        making the world a better place."
+    </para>
+    <para>
+        "Tough luck, Blondie. Your feelings are not facts, and you cannot
+        sue me for making you miserable. I have plenty of friends whom I
+        seem to bring a lot of joy to."
+    </para>
+    <para>
+        "Who, like your boyfriend?"
+    </para>
+    <para>
+        "I don't have a boyfriend and haven't had one for a long time. I'm
+        still dating guys, though."
+    </para>
+    <para>
+        "Do they call you back?"
+    </para>
+    <para>
+        "Not usually, and that's because I ask them not to."
+    </para>
+    <para>
+        "You're pathetic."
+    </para>
+    <para>
+        "At least I don't need your help in learning how to hack."
+    </para>
+    <para>
+        "Which reminds me," she added, "if you want to get your money worth,
+        you'd better want us to continue instead of ping-ponging accusations
+        between ourselves. Shall we go on?"
+    </para>
+    <para>
+        I stopped liking her after this twist of the conversation.
+    </para>
+</section> <!-- End of "I'm just a geek…" -->
+<section id="hardware_hackers">
+    <title>Hardware Hackers are…</title>
+    <para>
+        I decided to attend these LUG meetings, from then on. So on the next
+        Wednesday, Taylor and I took the bus to the local university, and
+        went into the room. Immediately after we entered, some guy wearing
+        a T-shirt with a Penguin on it and some shorts said, "Hey Taylor" and
+        as we got closer he said, "Who's the fox?"
+    </para>
+    <para>
+        I blushed, and then reached my hand and said "Jennifer Raymond".
+        He shook my hand and said "Jeff Burtkowsky."
+    </para>
+    <para>
+        "Are you new here?" Jeff asked.
+    </para>
+    <para>
+        "Yes, I said. I'm Taylor's friend and Erisa's pupil."
+    </para>
+    <para>
+        "Nice. Erisa is a first-class hacker (whatever her other faults are).
+        Just note that you shouldn't be offended if some guys here hit on
+        you. Most of them are heterosexual and most of the viable girls in
+        this club are already taken."
+    </para>
+    <para>
+        "That's quite alright. I'm used to guys hitting on me. I guess Linux
+        guys are not different. But I have a very sweet and caring boyfriend,
+        so I kindly interrupt these passes."
+    </para>
+    <para>
+        "What does he do?"
+    </para>
+    <para>
+        "He's in high school too. Heavily into Electronics."
+    </para>
+    <para>
+        "Electronics? Wow, that's impressive. Hardware hackers are a whole
+        class above software hackers. I mean we software hackers write code,
+        and it can run everywhere there's a gcc-backend on. It just works,
+        and if it doesn't, it is almost certainly the fault of what's above
+        the hardware. Hardware hackers… now they deal with the physical
+        world, where one wrong wiring can make a world of damage. Now, if we
+        are cool, they are above-cool."
+    </para>
+    <para>
+        "What's 'gcc' and what are its backends?."
+    </para>
+    <para>
+        "Well," Taylor interrupted, "gcc is a compiler that is not very fast,
+        does not produce spectacular code, but is one of the seven wonders
+        of the modern world."
+    </para>
+    <para>
+        "How's that?" I asked.
+    </para>
+    <para>
+        "Well, it can run everywhere and compile code for almost every
+        architecture and has tons of useful extensions, and can
+        compile many languages, and can cross-compile and it's open-source.
+        The Linux Kernel, for example, can only be compiled using gcc."
+    </para>
+    <para>
+        "I understand you're not a programmer," Jeff said.
+    </para>
+    <para>
+        "Well, I studied Pascal for two years in high school. Could not get
+        myself to really become enthusiastic about it. And I had better things
+        to learn at school."
+    </para>
+    <para>
+        "Well, Pascal is a sexless language, if you ask me. And, plus, I think
+        programming is not something you can be taught in school. Some people
+        are better programmers after 1 year, than many are with 10 years
+        of experience. It vastly depends on your attitude."
+    </para>
+    <para>
+        "Hmmmm….", I answered, "I confess that the only reason I want to
+        become a hacker now, is because I want to have something good to show
+        off to get to a good college. But I admit that creating a homepage
+        for myself turned out to be fun."
+    </para>
+    <para>
+        "In that case, you might grow to like hacking. If you don't - I suggest
+        you find something else to do, that you happen to like. People who
+        are not enthusiastic about their work, are almost never good hackers."
+    </para>
+    <para>
+        It made me a bit worried, so I just said "Yes, naturally.".
+    </para>
+    <para>
+        At that moment, Erisa entered the room. She looked around, and
+        eventually fixed her gaze upon me. "Jenn, you came!". (Could you
+        believe it - she called me "Jenn"!). "Yep, " I told her, "I had a
+        very nice conversation with Taylor and Jeff over here."
+    </para>
+    <para>
+        "Hi guys!" Erisa said, as she approached us.
+    </para>
+    <para>
+        "Jenn here is quite clueless about Linux, but she is actually quite
+        persistent, so she may become a really leet haxor, sooner or later."
+    </para>
+    <para>
+        I did not understand what a "leet haxor" is, but I figured it was
+        probably something good. The other guys laughed.
+    </para>
+    <para>
+        The presentation was way over my head, but Taylor, whom I sat next
+        to, was kind enough to explain some things. I eventually understood
+        or thought I understood most of what was going on there.
+    </para>
+    <para>
+        At the break, I noticed that some other guy was typing
+        enthusiastically on his laptop's keyboard and constantly using the
+        mouse. I approached him. I saw a huge black window saying "XChat"
+        in the title bar, and lots of weird text looking like a conversation.
+    </para>
+    <para>
+        "Are you talking with someone?" I asked him.
+    </para>
+    <para>
+        "As a matter of fact, yes. It's called IRC - Internet Relay Chat. It's
+        actually quite useful for resolving random problems, but it can also
+        become very addictive."
+    </para>
+    <para>
+        "Can you show me how to use it?"
+    </para>
+    <para>
+        "I guess."
+    </para>
+    <para>
+        Apparently you connect to a server, and then join various "channels",
+        where "channel" is a fancy name for a chat-room, where you talk by
+        entering text in a small text entry. You can also initiate a private
+        conversation and do other stuff. I found the idea intriguing.
+    </para>
+    <para>
+        "And the people you talk to, can be from the other side of the
+        world. " He said. "And I recommend Freenode for most purposes. It's a
+        really nice network. Here, let me E-mail it to you.
+    </para>
+    <para>
+        Taylor, Erisa and I took the bus home. On the way, Taylor and Erisa
+        spent their time talking about computers and computing news, while
+        I was too afraid to interrupt their conversation and ask what they
+        were talking about.
+    </para>
+</section> <!-- End of Hardware Hackers are… -->
+<section id="beth">
+    <title>BETH!</title>
+    <para>
+        The next time we met, Erisa came to me, she showed me some Perl
+        tutorials (Taylor was right!) and started instructing me on how to
+        program. As homework she gave me a pageful of exercises.
+    </para>
+    <para>
+        One exercise, that involved a lot of text-processing and the
+        so called "regular expressions", turned out to have a bug, but I could
+        not find it. I thought about calling Taylor, but then thought that
+        maybe the IRC would be helpful.
+    </para>
+    <para>
+        So I logged on to Freenode, and joined the #perl channel. Here's what
+        happened:
+    </para>
+    <programlisting>
+        <![CDATA[
+                -->  You are now talking on #perl
+                ---  Topic for #perl is Welcome to #perl :: Do not flood, use
+                     http://sial.org/pbot/perl/ to show us code.  This is a
+                     Perl help channel, please ask your question. :: Latest
+                     perl golf can be found at http://terje2.perlgolf.org ::
+                     Latest perl is 5.8.5
+                ---  Topic for #perl set by qualoo
+          <jennray>  Hi all!
+          <rindolf>  So like I was saying, I did not had a serious experience
+                     with the BSDs, so I could not say.
+          <rindolf>  jennray: hi!
+          <jennray>  Can you help me with debugging some code? I'm trying
+                     to learn Perl.
+          <rindolf>  Sure. Just don't paste it here. Use the pastebot.
+          <rindolf>  perlbot: nopaste
+          <perlbot>  Paste your code here and #perl will be able to view it:
+                     http://sial.org/pbot/perl
+          <jennray>  Okey dokey.
+          <rindolf>  jennray: I see on your /whois that your name is "Jennifer
+                     Raymond".
+          <rindolf>  So you're a girl?
+          <jennray>  Yes, I am.
+          <rindolf>  jennray: nice. We could always use more girl perlers.
+          <rindolf>  We have another female regular here called "beth". She,
+                     on the other hand, knows her stuff pretty well.
+          <jennray>  :-)
+          <rindolf>  Also, guys flirt with her all the time here. (and she
+                     flirts back).
+          <jennray>  Well, I have a boyfriend.
+          <rindolf>  So does beth.
+                -->  beth has joined #perl
+          <rindolf>  jennray: talk about the devil!
+          <rindolf>  BETH!
+             <beth>  RINDOLF! HOW ARE YOU?
+          <rindolf>  jennray: something you need to know about beth is that
+                     you must always greet her with ALL-CAPS.
+          <jennray>  Heh heh.
+          <rindolf>  beth: jennray is trying to learn Perl and she has a
+                     problematic code. jennray: will you please post it to the
+                     pastebot now?
+          <jennray>  Yeah, OK.
+        <pasteling>  "jennray" at 127.0.0.1 pasted "Problematic Code"
+                     (16 lines) at http://sial.org/pbot/3326
+             <beth>  hmmm… jennray, are you sure you want to use a '*' in the
+                     regex on the last character and not on the whole string?
+          <jennray>  Oh! It affects just the last character?
+          <rindolf>  Yes. You need to cluster it by using (?:mystring) or
+                     capture it using (mystring).
+          <jennray>  Trying…
+          <jennray>  It works!
+          <jennray>  Thanks beth and rindolf!
+             <beth>  no problem. i'm here to serve.
+          <rindolf>  beth++
+          <rindolf>  jennray: whenever someone helps you you must increase
+                     their karma by plus-plusing them.
+          <jennray>  rindolf: ah, OK.
+          <jennray>  beth++
+                  *  beth hugs jennray
+        ]]>
+    </programlisting>
+</section> <!-- End of Section "BETH!" -->
+<section id="she_still_is">
+    <title>"She still is…"</title>
+    <para>
+    Erisa continued to tutor me, and I continued to learn new things. Perl
+    is positively huge and has many nuances. Eventually, Erisa told me that I
+    was good enough to start contributing to open-source projects. She
+    recommended looking for interesting CPAN (= Comprehensive Perl Archive
+    Network) modules, adding automated tests, doing bug-squashing, and maybe
+    even adding a feature or two.
+    </para>
+    <para>
+    That's what I did, and found myself contributing to various modules. Then,
+    one day, Erisa approached me as I was taking things out of my locker.
+    "Jenn, ", she said, "I told my Mom about you, and now she bugs me about
+    inviting you to dinner at my place. Would you like to come?"
+    </para>
+    <para>
+    "Sure! I'd love to come." I told her.
+    </para>
+    <para>
+    "Good, it will give you a chance to see my computer and I'll show you
+    what a working environment of real men and real women is. Not the sissy
+    environment that I recommended you to start with."
+    </para>
+    <para>
+    "Heh." I said and smiled.
+    </para>
+    <para>
+    We scheduled for the next day at 19:00. So, the next day, I wore some of
+    my best clothes, and prepared myself for two hours. As I looked on my final
+    form in the mirror, I said to myself, that I probably would have looked
+    better than Erisa with much less effort. And so I walked to Erisa's home.
+    </para>
+    <para>
+    She answered the door. Looking at her, I noticed I was probably right - she
+    did look awful. "Hey Jenn,", she said, "please come in.".
+    </para>
+    <para>
+    "Now I can warn you that my family likes to call me 'Eve'. I don't mind it
+    too much, but to avoid bad habits, you should refer to me as 'Erisa'."
+    </para>
+    <para>
+    "OK. Why did you change your name in the first place?"
+    </para>
+    <para>
+    "Well, every person should have a right to choose his own name. My parents
+    called me 'Eve' because they wanted a nice Hebrew name. I, on the other
+    hand, am trying to be unique and individualistic, so I renamed myself."
+    </para>
+    <para>
+    "I'm never going to change my name. I like it a lot."
+    </para>
+    <para>
+    "Girlfriend, it's you who succumbs to society, not me."
+    </para>
+    <para>
+    Then I noticed a young boy (dressed perfectly normally) descending down
+    the stairs, he looked at me, and said, "'Eve', is this Jennifer?".
+    </para>
+    <para>
+    "Righto.", Erisa said.
+    </para>
+    <para>
+    I approached him and said "Jennifer Raymond! Nice to meet you. Are you
+    Erisa's brother?".
+    </para>
+    <para>
+    "Yeah, ", he answered, "my name is Daniel Siegel."
+    </para>
+    <para>
+    "Nice to meet you, Daniel."
+    </para>
+    <para>
+    "Nice to meet you, too, Miss Raymond."
+    </para>
+    <para>
+    "Hey, you can call me Jennifer."
+    </para>
+    <para>
+    He looked a bit puzzled, and after a few seconds said "Whatever." and ran
+    to a different room.
+    </para>
+    <para>
+        "Well, as a good hostess, let me tell you what there's to do here."
+        Erisa addressed me. "In the living room we have video games, a DVD
+        player, and a VHS player. My family has bought a large selection of
+        movies and video games. I have, for a long time, frowned upon this
+        practice, as it pumps money into the content industry's lawsuit
+        machine. Nevertheless, I still don't mind using them once they
+        are purchased."
+    </para>
+    <para>
+        "My personal computer is in my room up-stairs.", she added, "There
+        are a couple of things I like to show you there."
+    </para>
+    <para>
+        "I'd love to see your room. And to meet your parents." I told her.
+    </para>
+    <para>
+        "Well, let's go to my room now, OK? And then we can find other
+        entertainment for you until the food is ready."
+    </para>
+    <para>
+        And so I followed her up the stairs. Erisa's room reflected upon
+        her personality. While the walls were white (luckily) it was filled
+        with posters of Heavy Metal bands, with activism posters, with
+        a large amount of books (some of them were covered in Hebrew
+        writing). It also had a lot of disorder. In one corner, stood a desk
+        with a nice PC computer beneath it, a flat screen on top, and a
+        keyboard.
+    </para>
+    <para>
+        Erisa took the seat next to the screen and hinted that I should take
+        the seat next to her.
+    </para>
+    <para>
+        "See, this is Debian - a distribution that real men and real women
+        (trademark) use. It is maintained by a group of packagers worldwide,
+        is controlled by an organization instead of one of those companies
+        that don't really care about their users."
+    </para>
+    <para>
+        "The first thing you should notice is that I login with a text mode.
+        Newbies dig an X-login, but it causes many problems. After you are in
+        a virtual console, you can start X-Windows [= the Linux windowing
+        system] using 'startx'."
+    </para>
+    <para>
+        "And here's IceWM - a usable window manager that actually does not
+        eat your computer's resources like KDE or GNOME do. Other people
+        use fluxbox or whatever, but Ice works for me."
+    </para>
+    <para>
+        "Cool, I said. I suppose I can give it a try. It does not seem to
+        have as much eye candy as KDE does."
+    </para>
+    <para>
+        "Eye candy in - memory and speed out."
+    </para>
+    <para>
+        "Heeee", I giggled. "Anything else you want to show me?"
+    </para>
+    <para>
+        "Well, can't think of anything now. Why don't you go downstairs and
+        meet my family. The food should be ready soon."
+    </para>
+    <para>
+        I went downstairs. Daniel was watching a film I really liked so
+        I joined him in watching it. Eventually, Erisa's mother called
+        everybody to say that the food was ready.
+    </para>
+    <para>
+        Erisa's family talked a lot during the meal, and I joined them
+        whenever I could. I noticed that they called Erisa "Eve" (as
+        she had previously noted). The food was delicious.
+    </para>
+    <para>
+        After the meal, Erisa's father and older brother had volunteered to
+        clear the table, and her mother asked me if I'd like to look at
+        Erisa's photo albums. "I'd love to," I said.
+    </para>
+    <para>
+        As a girl, Erisa was super-cute. "Us being Jews, she grew among lots
+        of Jewish and Israeli kids, and she learned Hebrew very quickly. She
+        also eventually learned how to read it, even without diacritics.
+        Some of our Israeli friends and relatives were amazed at her mastery
+        of the language, and said her accent hardly revealed her true
+        birthplace."
+    </para>
+    <para>
+        "She was so proud of her Jewish heritage and culture. Here are some
+        pictures of her during her Bat-Mitzvah."
+    </para>
+    <para>
+        I looked at them with interest. "So when did she become such a…"
+    </para>
+    <para>
+        "Punk? ", Erisa interrupted me, "That's alright - I fully acknowledge
+        this fact."
+    </para>
+    <para>
+        "Well, ", said her mother, "around the age of 14. She started
+        staying away from her usual friends, dressing weirdly, colouring her
+        hair in flashy colours. We don't believe in dictating our children
+        how to lead their life, so we just let her be."
+    </para>
+    <para>
+        "Was it because of her interest in computers?"
+    </para>
+    <para>
+        "Oh no,", she said, "she's been tempering with computers since she
+        was a little girl. She used to invite her friends, both girls and boys,
+        home and show them how to play games and program. It was all very
+        social. We don't know what happened. She was always so caring for
+        other people."
+    </para>
+    <para>
+        "She still is…", I said.
+    </para>
+    <para>
+        Erisa smiled and then went back to reading her book. After a short
+        while, she said, "You know, I'm not exactly Miss Altruism here. As
+        much as I think commercialization is evil, and Big Business is
+        aiming to ruin our country and the world at large, I still think
+        tangible goods and especially people's time is something that does
+        not have to be given away."
+    </para>
+    <para>
+        "Fair enough," I replied, "I can agree with that. So?"
+    </para>
+    <para>
+        "Well, just, for your information, by charging people from my time
+        alone, I now have over 20 thousand bucks in the bank."
+    </para>
+    <para>
+        "You're kidding?" I asked surprisingly.
+    </para>
+    <para>
+        "She isn't. " Erisa's mother replied.
+    </para>
+    <para>
+        "How did you earn all of that?"
+    </para>
+    <para>
+        "Well, Mom and Dad finance my food, my clothing, and school, so I
+        don't have to worry about that. I used to work during the Summers for
+        software shops, and I also give lessons (as is the case with you),
+        work as a freelancer and have other gigs."
+    </para>
+    <para>
+        "I'll give you an extreme example: one day, in the very beginning of
+        the Internet craze, this old man sent a mail to a mailing list I was
+        a member of asking for help trying to form a web-site of his own (with
+        pictures of his grand-children, and stuff like that). I told him,
+        that it won't be scalable to create and maintain the site for him,
+        and that he should learn HTML. It turned out he was living in the
+        other side of L.A., so I said that I will be willing to teach him
+        that, if he pays me for my entire time, including the long rides."
+    </para>
+    <para>
+        "So he agreed and I actually taught him. Took a long time. You know,
+        people his age can sometimes type very slowly, and he was not
+        exceptional. After that, when he learned HTML, I told him that I'll
+        be willing to host it on my server for a uniform monthly fees. He
+        agreed."
+    </para>
+    <para>
+        "So I got a lot of money teaching him and now I get a constant
+        stream of cash from him. He and his wife actually now totally dig
+        having a web-site, and they fill it in with reviews and recommendations
+        of their favourite movies, recipes, bio's, memorial pages, and stuff
+        like that."
+    </para>
+    <para>
+        I shed a few tears and wiped them with my elbow. "Erisa, " I told her,
+        "that is one of the sweetest stories I've ever heard. You must be the
+        most compassionate girl in the world, and…"
+    </para>
+    <para>
+        "'Compassionate' my ass!", Erisa interrupted me, "I'm charging this
+        poor old man instead of just hosting him on my server, free of
+        charge."
+    </para>
+    <para>
+        "I still think it's very sweet of you."
+    </para>
+    <para>
+        "Well, Blondie, sweet or not, my time and my resources are not
+        distributed freely. It's a tough world and if you want to make
+        it a better place, you should not give away your time, because
+        it's too precious to be costless."
+    </para>
+    <para>
+        "Blondie, again?"
+    </para>
+    <para>
+        Erisa grinned. "Jennifer, the only reason I call you Blondie is
+        because I'm a sweet compassionate girl who totally digs your hair
+        colour."
+    </para>
+    <para>
+        I reached to hug her. "No hug!" she snapped at me, as I stopped,
+        and retreated, while she returned to her book.
+    </para>
+</section>    <!-- End of Section "She still is…" -->
+<section id="mime_poe_xul_other_beasts">
+    <title>MIME, POE, XUL and other Beasts</title>
+    <para>
+        I continued to learn new things everyday. With the help of Erisa,
+        I learned about C, (which is much sexier than Pascal), Internet
+        Network programming, writing web applications, some GUI programming
+        (very hard to get exactly right, but still fun), working with
+        databases, and more. Erisa gave me problems like "fix at least three
+        of the bugs in the bug-tracker of project foo", or "add a new feature
+        to project bar".
+    </para>
+    <para>
+        One thing I discovered was that reading code and understanding it
+        was difficult. Much more than writing it. But after I understood how
+        it worked, I could implement the fix or the new feature reasonably
+        easily.
+    </para>
+    <para>
+        The IRC was also a great help. Whenver I encountered a problem,
+        I could join the appropriate IRC channel, and ask about it. If that
+        did not work, I usually tried searching the web, or posting to the
+        local Linux User Group's mailing list, or to web-forums. IRC was a
+        very nice experience: I met many people from all over the world,
+        and chatted with them endlessly. Many of the chats were fun, but
+        quite redundant, but a lot of them provided new insights or gave
+        me useful new knowledge. There was only one thing that bothered me.
+    </para>
+    <para>
+        When working on my homepage, I could very easily express myself. I
+        was able to put pictures, sounds, hyperlinks, styled text, and files
+        there. This was much more difficult in the IRC that was text only,
+        with a few pretty useless embellishments, URLs that had to be copy
+        and pasted, and all kind of other limitations. I wanted more.
+    </para>
+    <para>
+        In one of the LUG meetings, Jeff, some other guy called Ervin, and I
+        chatted between ourselves before the presentation, and somehow we ended
+        up discussing the IRC. So I brought this along.
+    </para>
+    <para>
+        "So, maybe, " said Jeff, "we need to create a new IRC protocol, that
+        will allow such media. God knows I heard some people say they also
+        want to be able to use Mathematical notation. Ever been to a Maths
+        channel before? The expressions there are not a pretty sight."
+    </para>
+    <para>
+        Ervin and I laughed, and Jeff joined us.
+    </para>
+    <para>
+        "So we need a new protocol? What are we going to base it on?" I
+        asked.
+    </para>
+    <para>
+        "Well, on MIME probably.", Jeff said. MIME is a standard for sending
+        and receiving data and sub-data, identifying its type, etc.
+    </para>
+    <para>
+        "Tell you what?" he said, "we can write a prototype for a server in
+        Perl or Python using POE or Twisted." I was surprised to realise
+        that I knew what it meant.
+    </para>
+    <para>
+        "Yeah, " I said, "and let's write the client in Mozilla's XUL. That
+        will give us all the media handling for free."
+    </para>
+    <para>
+        "Nice thinking, Jenn, " Jeff said, and we gave each other a high five.
+    </para>
+    <para>
+        "But then we have lots of potential security issues, which we would
+        like to avoid, and we need to think of a robust protocol." I added.
+    </para>
+    <para>
+        "So let's go to the black-board and start designing everything." Jeff
+        said.
+    </para>
+    <para>
+        We scribbled a lot of boxes, arrows, buzzwords, state machines and
+        all other kinds of things. It was Erisa's turn to give a
+        presentation and when she saw everybody next to the blackboard, being
+        involved in the design, she was immediately puzzled.
+    </para>
+    <para>
+        "What are you doing?" she asked.
+    </para>
+    <para>
+        "Hi Erisa! We're designing the next generation IRC protocol, with
+        many improvements over vanilla IRC."
+    </para>
+    <para>
+        "Yeah, like Media support, styles, Maths, a more robust and
+        powerful protocol and more features, etc. It was Jenn's idea."
+    </para>
+    <para>
+        "Interesting", Erisa said, "since you all seem to be so much involved
+        in it, I say that we delay my presentation in an hour. Jenn, I'm
+        running out of things I really need to teach you, and you may wish to
+        embark on this project, just to try and get closer to a demi-god
+        status for yourself."
+    </para>
+    <para>
+        I blushed. "Sure, Erisa. It sounds very exciting. I don't know how
+        good a coder I am. Can anyone here become my partner for pair
+        programming?"
+    </para>
+    <para>
+        Lots of people volunteered. "Jeff,", I addressed him, "Will you be
+        my partner?" I felt I could trust him.
+    </para>
+    <para>
+        "Sure, why not. If only to make my girlfriend jealous. OK, Jenn
+        and I will write a spec [= specification] together and send it
+        to you. Jenn do you know DocBook?"
+    </para>
+    <para>
+        "Heard about it, but no."
+    </para>
+    <para>
+        "Then I guess I'll have to teach it to you. It's not that hard."
+    </para>
+    <para>
+        "Cool. ", I said, "Now back to designing this baby…"
+    </para>
+</section>
+<section id="evil_html_email">
+    <title>"That would be as Evil as HTML E-mail is…"</title>
+    <para>
+        Jeff dropped by a few days later. I offered him a drink and we
+        chatted about the latest Linux developments, then we went to my room.
+    </para>
+    <para>
+        Jeff instructed me to checkout a certain initial working environment
+        he prepared for working on DocBook documents in advance, from its
+        version control repository. We then started to work on the
+        specification.
+    </para>
+    <para>
+        DocBook is very verbose in comparison to HTML or any other
+        document format I knew until then. Here's a small glimpse of it:
+    </para>
+    <programlisting>
+        <![CDATA[
+<orderedlist>
+    <listitem>
+        <para>
+            First Item.
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            Second Item.
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            Fourth Item. Just kidding! It's the third.
+        </para>
+    </listitem>
+</orderedlist>
+        ]]>
+    </programlisting>
+    <para>
+        But with a lot of fast typing and copy and pasting, it was pretty
+        much OK. DocBook can be translated into a great deal of other formats:
+        HTML, Acrobat Reader PDF, Microsoft Word, and even UNIX man pages. We
+        routinely did the conversion only to HTML, but occasionally converted
+        it into PDF as well.
+    </para>
+    <para>
+        We made a lot of progress that day, despite the fact that Jeff or I
+        initiated some breaks sometimes. It's really good to work in pairs
+        like that. At the end of the day, we checked in the most recent
+        version into the version control repository, uploaded the specification
+        in its various final formats to a pre-designated web-site, and sent
+        a link to what we had so far to the Linux User Group's mailing list.
+    </para>
+    <para>
+        The next day, when I checked my E-mail, I saw several messages about
+        it. It also caused a flame-war. ("Media-enabled IRC? That would be
+        as Evil as HTML E-mail is."). Anyway, some of the input was useful,
+        and some people even said they may be able to donate some time and
+        help us out.
+    </para>
+    <para>
+        Jeff and I finished the specification after two more meetings like
+        that. We submitted it as a "Request for Comments" document, and
+        started working on the client and the server.
+    </para>
+    <para>
+        This took a while as we both had to learn Mozilla XUL, but we were
+        able to get a working version in a relatively short time, that
+        implemented a subset of the functionality. It was pretty neat talking
+        with it, even though we were only two people there. So we set up a
+        testing server for it, packaged the client and the server as
+        media-irc-client and media-irc-server-perl (versions 0.2.0 for both)
+        placed them online on a web-site, and announced it on Freshmeat. (the
+        uneducated reader should know that freshmeat.net is a site that
+        categorises software for Linux and displays news of their recent
+        releases.)
+    </para>
+    <para>
+        It was a project of mostly just our LUG for a time being. Erisa decided
+        it was a cool thing, and kept using the bleeding-edge of the
+        software and talked with it. She also contributed some very nice
+        patches (= changes that are both human readable and easy to apply) to
+        it. Taylor got very enthusiastic about it ("You're a first-class
+        hacker now, Jenn!") and kept suggesting ideas for the code, and doing
+        clean-ups. Even Jeff's girlfriend, Amanda, who wasn't particularly
+        technologically-inclined (well to be honest, she wasn't a computer-
+        phobic, either) used it to talk from work and home, and reported bugs
+        and stuff.
+    </para>
+    <para>
+        We opened a channel for this on the old-fashioned IRC, where we could
+        coordinate the efforts if the server broke down, or if we needed
+        something simple. Eventually, we also started a mailing list for the
+        developers. Other of the user-group's members gave a hand or lurked
+        on the mailing list. It was all a lot of fun.
+    </para>
+</section>
+<section id="triz">
+    <title>TRIZ</title>
+    <para>
+        At one of our semi-weekly gym sessions, Taylor and I discussed
+        the latest happenings and traded gossip. Somehow the conversation
+        got to Taylor's current girlfriend, Rebecca, and then Taylor said:
+    </para>
+    <para>
+        "Becky broke up with me."
+    </para>
+    <para>
+        "Really?" I said. "I'm shocked. I actually kinda liked her, and
+        you two seemed so happy together."
+    </para>
+    <para>
+        "I know, I liked her too."
+    </para>
+    <para>
+        "Are you OK?"
+    </para>
+    <para>
+        "Yes, I'm fine. In any case - I have a great idea for a very nice
+        girl I'd like to ask out, and wanted to for a long time."
+    </para>
+    <para>
+        "Really? Who?"
+    </para>
+    <para>
+        "Oh, I want it to be a surprise."
+    </para>
+    <para>
+        "Fair enough", I said and we decided to go back to exercising.
+    </para>
+    <para>
+        The next LUG meeting, I arrived relatively late, only to see
+        Erisa standing with her back against the wall, next to a guy
+        standing facing her with his hand on the wall. They were talking
+        happily and Erisa laughed a lot. It was obvious from Erisa's movements
+        that she was feeling flirtatious.
+    </para>
+    <para>
+        "Another one bites the dust." I thought to myself and decided to
+        approach her. "Hi Erisa!" I said.
+    </para>
+    <para>
+        "Hey Jenn, what's up?" Erisa said and then the guy next to her turned
+        around to see me and said "Jennifer, hi what's up?". It was Taylor.
+    </para>
+    <para>
+        "Taylor!" I said surprisingly, "… hmmmm, can you and I talk outside
+        for a moment? Out… side…?"
+    </para>
+    <para>
+        "Sure. Erisa, can you excuse us?" he said.
+    </para>
+    <para>
+        "No problem.", she said.
+    </para>
+    <para>
+        After we went out and got farther away from the room I said, "so it's
+        Erisa, isn't it?"
+    </para>
+    <para>
+        "You mean the girl I'm asking out? Yes."
+    </para>
+    <para>
+        "Are you out of your mind? Don't you know how she treats her dates?
+        She usually asks them not to call her back!"
+    </para>
+    <para>
+        "Yeah, I know. Not always, though. And I feel that she became
+        a lot more solid since she started tutoring you."
+    </para>
+    <para>
+        "Possibly. But she's still full of it."
+    </para>
+    <para>
+        "Jenn, don't worry too much. We'll go on a couple of dates and if she
+        won't be interested, I promise to you that I'm not going to get
+        hurt. But it's worth giving it a shot."
+    </para>
+    <para>
+        "OK, " I said, "so when's your first date?"
+    </para>
+    <para>
+        "Friday's night."
+    </para>
+    <para>
+        "OK", I wasn't particularly happy about that. I cared too much
+        about both of them.
+    </para>
+    <para>
+        When I returned home this night, I started talking on the #perl
+        channel again, my mind still occupied by this.
+    </para>
+    <programlisting>
+        <![CDATA[
+          <jennray>  Hi all, I'm back.
+          <rindolf>  jennray: hi!
+             <beth>  hi jennray!
+          <jennray>  Hey beth, rindolf.
+                -->  perlygatekeeper has joined #perl
+  <perlygatekeeper>  Good morning, #perl!
+             <beth>  good morning, perly!
+          <rindolf>  Hi perly!
+          <jennray>  Hi perly.
+          <jennray>  Can I consult you guys on a personal matter?
+          <rindolf>  jennray: shoot.
+          <jennray>  OK, here goes: my best friend (a boy) has started dating
+                     a good friend of mine, who treats her dates awfully,
+                     and looks positively awful (purple hair, too much and
+                     inconsistent makeup, and general neglect).
+          <jennray>  She's not really what was his type of girls so far, so
+                     I'm afraid he's going to get hurt. What should I do?
+          <rindolf>  jennray: TRIZ!
+          <jennray>  rindolf: what's TRIZ?
+          <rindolf>  TRIZ == Theory of Inventive Problem Solving.
+                  *  jennray is puzzled
+          <jennray>  That should be TIPS.
+          <rindolf>  jennray: well, these are the initials in Russian.
+          <jennray>  rindolf: ah OK.
+  <perlygatekeeper>  jennray: why don't you just perform a makeover on this
+                     girl and get her to at least look better.
+          <jennray>  But what about her attitude?
+  <perlygatekeeper>  Well, one bird in the hand is better than two in the
+                     bush.
+          <jennray>  perly: you might be right.
+                  *  rindolf gives perlygatekeeper the international TRIZ
+                     medal.
+          <jennray>  perlygatekeeper++
+        ]]>
+    </programlisting>
+    <para>
+        After this, I picked up the phone and called Jeff. "Jeff, you know
+        Erisa, right?"
+    </para>
+    <para>
+        "Yep. " he said.
+    </para>
+    <para>
+        "She doesn't look too athletic, but does she pump iron or practice
+        martial arts?"
+    </para>
+    <para>
+        "Oh no - she hates exercise. She says she'd rather exercise her
+        mind than her body. Why?"
+    </para>
+    <para>
+        "I have this wicked idea…"
+    </para>
+</section>
+<section id="divine_is_good">
+    <title>"Divine"'s Good</title>
+    <para>
+        That Friday's afternoon, Jonathan, Jeff, Amanda (who is Jeff's
+        girlfriend as you may remember), and I arrived at Erisa's home
+        carrying a lot of makeup and female care accessories. We ringed the
+        doorbell, and Erisa's mother answered.
+    </para>
+    <para>
+        "Hi Jennifer, " she said.
+    </para>
+    <para>
+        "Hi Mrs. Siegel!" I said.
+    </para>
+    <para>
+        "You guys are doing what carrying all these things?"
+    </para>
+    <para>
+        "We are planning to give Erisa's a thorough makeover. 'Clueless'-
+        style."
+    </para>
+    <para>
+        "It's high time someone did, if you ask me. Did she agree to it?"
+    </para>
+    <para>
+        "Not yet, but we brought ropes just in case."
+    </para>
+    <para>
+        "Lovely. OK, come in."
+    </para>
+    <para>
+        We entered the house, climbed the stairs and knocked on the door to
+        Erisa's room. "Come in" we heard her say within a large amount of
+        heavy metal noise.
+    </para>
+    <para>
+        We opened the door. Erisa was sitting next to the computer, doing
+        something and as we entered she turned to face us. "Hi guys!" she
+        said, "Whow, what are all these things?"
+    </para>
+    <para>
+        "We are making you ready for the date tonight." I said.
+    </para>
+    <para>
+        "What? You mean a makeover? No way I'm letting you…"
+    </para>
+    <para>
+        "Yes way, and we can do it the easy way or the hard way."
+    </para>
+    <para>
+        Erisa rose up from her chair, "The hard way", she said as she
+        positioned herself in a defensive position, with her fists clenched,
+        "you'll have to get me first.".
+    </para>
+    <para>
+        "Let me take care of this", Jeff said, "I have a black belt in Karate."
+    </para>
+    <para>
+        "I'll take care of it.", I said. I approached Erisa, quickly grabbed
+        her hands, pushed her against the wall, and spread her hands across.
+        She kicked my feet with hers - it hurt a bit but was nothing I couldn't
+        handle. "I go to the gym twice a week with Taylor. Weight training,
+        among other things.", I told her.
+    </para>
+    <para>
+        "I can see that, Ms. America…" she barked at me, "OK, OK, I'll let
+        you get on with this makeover thing."
+    </para>
+    <para>
+        I let her go. "Do you promise?"
+    </para>
+    <para>
+        "I swear by Life, Liberty and Tux the Penguin that I will let you do
+        the makeover, while being fully cooperative."
+    </para>
+    <para>
+        "Are you doing it for Taylor's sake?" I asked her.
+    </para>
+    <para>
+        "No, I'm just doing it so I could move my fscking limbs, damn it!"
+    </para>
+    <para>
+        "Well that's good, too." Amanda said, "Now do you boys want to stay
+        here for the beauty care session?"
+    </para>
+    <para>
+        "It depends:", Jeff said, "will we get to see Erisa naked?"
+    </para>
+    <para>
+        Erisa picked up a random object off her desk and threw it at Jeff.
+    </para>
+    <para>
+        "Just kidding! No, we'll go downstairs. Have fun here."
+    </para>
+    <para>
+        "Ta ta.", Erisa said.
+    </para>
+    <para>
+        Jeff and Jonathan left the room, while Amanda and I stayed to improve
+        Erisa's look. The first thing we did was to take off her hair dye. Then
+        we instructed her to bathe and wash her hair. We washed all her makeup,
+        and showed her how to apply a new one in a better way. We then arranged
+        her hair, and asked her to choose her favourite evening dress.
+    </para>
+    <para>
+        She was ready shortly before Taylor arrived. We let her look at
+        herself at the mirror to see the improvement.
+    </para>
+    <para>
+        Erisa looked at herself at the mirror smiling. "Wow!" she said,
+        "I look… I look… nah! I'm not going to say it - it's too corny."
+    </para>
+    <para>
+        "Suit yourself", I said. "I think we're done with you."
+    </para>
+    <para>
+        "Super. Well, transformed or not, I still have my responsibilities as
+        a computer hacker. I left a few people in limbo when you arrived, and
+        hopefully can catch up with them."
+    </para>
+    <para>
+        "Sure, " I said, "just don't overwork or anything. I'm going
+        downstairs."
+    </para>
+    <para>
+        "I'll join you, " Amanda said.
+    </para>
+    <para>
+        Downstairs, Jeff was playing video games with Daniel, while Jonathan
+        was eating a fruit salad. "She's ready" I said.
+    </para>
+    <para>
+        "Excellent." Jeff and Jonathan said simultaneously.
+    </para>
+    <para>
+        We then heard a ring in the door. Erisa's mother went to answer it. It
+        was Taylor. He was wearing some jeans and a T-shirt. He looked OK, but
+        not much more than OK. He had a very nice flowers' bouquet in his
+        right hand, though.
+    </para>
+    <para>
+        "Hi Taylor!" we said one after the other.
+    </para>
+    <para>
+        "Hey guys, " he said, "what are you guys doing here?"
+    </para>
+    <para>
+        "Helping Erisa get ready for her date." I said.
+    </para>
+    <para>
+        "I'll get her." Amanda said, and went up the stairs.
+    </para>
+    <para>
+        "Don't you think you look a bit plain for the date?" I asked.
+    </para>
+    <para>
+        "Well, it's only a movie and a pizza. Plus, there's no way on earth
+        Erisa is going to look better than I am."
+    </para>
+    <para>
+        "Holy virgin mother of god!" exclaimed Jeff. He was looking at the
+        staircase where Erisa stood, descending it slowly. Her jet-black hair
+        was arranged in a ball and a pony tail, shining from the light.
+        Her dark purple dress made her look especially beautiful, and
+        complemented her body. She looked wonderful.
+    </para>
+    <para>
+        "So, " she said after she reached the ground floor, shaking her body
+        and extending her hands, "how do I look?"
+    </para>
+    <para>
+        "You look… " Taylor said, "… divine!"
+    </para>
+    <para>
+        Erisa thought for a moment and then said: "'Divine's good."
+    </para>
+    <para>
+        "Here, Erisa…"
+    </para>
+    <para>
+        "Hey Erisa was the old (and temporary) me. Call me Eve now."
+    </para>
+    <para>
+        "…Eve! Here - I brought you flowers." and he handed her the
+        flowers he had.
+    </para>
+    <para>
+        Eve (!) smelled them, and said, "they smell nice. Mom, can you put
+        them in a vase with some water?"
+    </para>
+    <para>
+        "Ahhmm… Eve, can we stop by my house and give me a chance to pick
+        up some better clothes?"
+    </para>
+    <para>
+        "Why?", Erisa said, "we're going to miss the movie."
+    </para>
+    <para>
+        "Well, people will look at the two of us and say: 'she is
+        <emphasis role="bold">way</emphasis> out of his league.!'"
+    </para>
+    <para>
+        Eve approached Taylor. "Well, to quote Richard P. Feynman, " she
+        said as she tied her arms around his neck "'What do you care what
+        other people think?' We both know you're a great guy and I'm so
+        lucky to go on a date with you. Mwaaa" and she kissed him on the
+        cheek.
+    </para>
+    <para>
+        "Well, " he said, "I guess we'd better get going. Bye all!"
+    </para>
+    <para>
+        "Bye!" we all said. Eve and Taylor left and Taylor gave us a thumb's
+        up as he left, and we gave him back.
+    </para>
+    <para>
+        "So, would you guys want to stay for dinner?" Eve's mom asked us.
+    </para>
+    <para>
+        "I'd love to, Mrs. Siegel.", I said. "Yeah, me too" everybody said.
+    </para>
+</section>
+<section id="commiting_adultery">
+    <title>Committing Adultery in Your Heart is…</title>
+    <para>
+        We did not stay late enough to see Eve return from her date. The next
+        Monday, I arrived at school in time only to discover my first lesson
+        was canceled. So I went to the computer lab.
+    </para>
+    <para>
+        As I was pounding on the computer, I heard a "Hey Jenn!". It was Eve.
+        She was wearing some Jeans and a T-shirt with the Linux penguin and
+        some inscriptions on. Her hair was flowing in all directions and she
+        was wearing good makeup. She looked great.
+    </para>
+    <para>
+        "Hi Eve! So how was your date?"
+    </para>
+    <para>
+        "Heh, Jenn, I'm gonna get you for this… one day… I swear."
+    </para>
+    <para>
+        "What's wrong?"
+    </para>
+    <para>
+        "Well, Taylor could not help staring at me the whole time. When we
+        got to the cinema and the movie started he actually hugged me with his
+        arms."
+    </para>
+    <para>
+        "Using the stretching trick?"
+    </para>
+    <para>
+        "No."
+    </para>
+    <para>
+        "So what did you do?"
+    </para>
+    <para>
+        "I sort of cuddled into him. Then he smelled my hair. So I asked him
+        'How did it smell?' and he said 'It smels lovely.'. Is he British?"
+    </para>
+    <para>
+        "No, he's not.", I said.
+    </para>
+    <para>
+        "That wasn't the worst part. After the movie was over, he told me that
+        I was too good for a Pizza, and instead took me to Loro's."
+    </para>
+    <para>
+        "Loro's a very nice restaurant. Not too expensive but very nice."
+    </para>
+    <para>
+        "I know!", she exclaimed, "and we were chatting all this time. And when
+        the meal ended, he insisted on paying for my part of the dinner. You
+        know I have my financial resources."
+    </para>
+    <para>
+        "Yes, I do."
+    </para>
+    <para>
+        "Then he escorted me home, and we arrived there, he asked if I wanted
+        a good night kiss. I said 'OK', and we kissed. Well, it turned out to
+        be more than a kiss - we were totally making out."
+    </para>
+    <para>
+        "And…", I said eagerly.
+    </para>
+    <para>
+        "I stopped him, said 'Good night, bye, see you at school.' and went
+        inside. Didn't want to push it too far."
+    </para>
+    <para>
+        "So you're not going to see him again?", I asked her, puzzled.
+    </para>
+    <para>
+        "Are you kidding? That was my best date of all time. I'll better set
+        up another one."
+    </para>
+    <para>
+        "Nice, " I said. "It's really nice seeing you two together."
+    </para>
+    <para>
+        "OK," she said, "I'll better get going. Oh wait… can you come with
+        me, two days from now, and help me shop for new clothes and for things
+        to decorate my room with?"
+    </para>
+    <para>
+        "Sure,", I said, "why not?"
+    </para>
+    <para>
+        "Super. And do you mind if I join you and Taylor in your gym workout.
+        'Sound mind in a sound body'?"
+    </para>
+    <para>
+        "No problem here. And I think Taylor would love to see you more
+        often."
+    </para>
+    <para>
+        "Judging by yesterday, I think he actually may. Ta ta!"
+    </para>
+    <para>
+        "Bye!".
+    </para>
+    <para>
+        Taylor entered the same room after about 20 minutes. "Hi!", I told
+        him, "How was your date last Friday?".
+    </para>
+    <para>
+        "It went pretty well."
+    </para>
+    <para>
+        "That's it?"
+    </para>
+    <para>
+        "I guess…" he said hesitantly.
+    </para>
+    <para>
+        I was shocked. "Man, you guys make awful gossipers."
+    </para>
+    <para>
+        "Oh… Eve was here, wasn't she? And she told you all about it."
+    </para>
+    <para>
+        "Yep. You smelled her hair and said it smelled lovely…. You bought
+        her dinner at a rather fancy restaurant."
+    </para>
+    <para>
+        "Yes, it was a wonderful date, I guess. Eve was so great the
+        other night."
+    </para>
+    <para>
+        "Yeah, she was."
+    </para>
+    <para>
+        "Thanks for… you know… transforming her and all."
+    </para>
+    <para>
+        "You're welcome."
+    </para>
+    <para>
+        When Eve and I got together to go shopping, we went to a clothes
+        shop. "You know, my newfound powers are intoxicating. Three guys
+        hit on me at school since the weekend, including this really cute
+        Football player." she said.
+    </para>
+    <para>
+        "Hmmm… ", I said.
+    </para>
+    <para>
+        "Are you ladies alright?", the shop's clerk (Tim, a young
+        and handsome man) approached us.
+    </para>
+    <para>
+        "Hey Tim! ", I said, "I don't believe you know my friend Eve here."
+    </para>
+    <para>
+        "Eve Siegel!" she said and extended her hand.
+    </para>
+    <para>
+        "Tim O'Brian." he said and they shook hands. "OK, I'll be there if
+        you need me…"
+    </para>
+    <para>
+        Eve followed him with her gaze for a few seconds and then smiled
+        and went back to looking at the clothes.
+    </para>
+    <para>
+        "Will you stop that?" I whispered to her.
+    </para>
+    <para>
+        "Stop what?" she said.
+    </para>
+    <para>
+        "You're totally into him."
+    </para>
+    <para>
+        "So I'm lusting him a little bit, so what. 'But I say unto you, that
+        whosoever looketh on a woman to lust after her, hath committed
+        adultery with her already in his heart.'"
+    </para>
+    <para>
+        "Well, girlfriend, committing adultery in your heart is perfectly
+        harmless and quite rewarding. And I'm not really raping anyone. I'm
+        tenderly making love to them."
+    </para>
+    <para>
+        "Listen,", I snapped at her, "Taylor is my best friend, and I swear
+        that if you…"
+    </para>
+    <para>
+        "I'm crazy about Taylor." she interrupted me.
+    </para>
+    <para>
+        "What?" I said.
+    </para>
+    <para>
+        She changed her pose. "I'm crazy about Taylor. Always have been. I
+        promise I wouldn't do anything to hurt him."
+    </para>
+    <para>
+        "You always have been crazy about Taylor? Why didn't you tell him
+        that?"
+    </para>
+    <para>
+        "Come on, have you looked at me then? I wasn't his type. He always
+        dated these well-groomed girls, who had some sense not to rebel like
+        I did. Hell, he also dated this incredibly dumb cheerleader once."
+    </para>
+    <para>
+        "Stacie wasn't dumb!"
+    </para>
+    <para>
+        "I was being sarcastic! My point is that he was way out of my league."
+    </para>
+    <para>
+        "Oh", I said and tried to hug her.
+    </para>
+    <para>
+        "No hug!", she said. "In any case, I'll do my best to make
+        things work between Taylor and I. And even if they don't, we'll
+        remain good friends. The kind of friends who go to movies together,
+        or socialise at LUG meetings, fix dates for each other, etc."
+    </para>
+    <para>
+        "Good, I'm glad to hear that. Now where were we?"
+    </para>
+    <para>
+        "Picking clothes." she said, and after a while added. "You know,
+        we should drop by Radio Shack and get some dolls of Tux and Beastie
+        the BSD Daemon. I totally dig these guys. Oh! And a nice Looney Toons
+        poster. I'd hate to pump money into the MPAA's lawsuit machine, but
+        I really like Marvin the Martian."
+    </para>
+    <para>
+        "Who are you and what have you done to Erisa?"
+    </para>
+    <para>
+        "Hey, the makeover was your idea, Jennifer. What have
+        <emphasis role="bold">you</emphasis> done to Erisa?" and we
+        both laughed.
+    </para>
+</section>
+<section id="so_exciting">
+    <title>Man, it was so exciting!</title>
+    <para>
+        Eve has certainly changed. Taylor, Eve and I socialised a lot in
+        School, and spent a lot of time discussing our Media-IRC project,
+        and just exchanging news or gossip. I also saw Eve hanging around
+        Israeli or Jewish kids speaking in Hebrew. Asking her about it in
+        one of our mutual gym sessions, she said that she secretly still
+        read the Hebrew books she owned, so she won't forget the language.
+    </para>
+    <para>
+        One day, I was standing across the hallway from Taylor's locker, and
+        saw Eve and Taylor kissing each other passionately. I wondered if
+        it was a pleasant or revolting sight, but then realised I had to talk
+        to both of them.
+    </para>
+    <para>
+        "Hi!" I said as I approached them.
+    </para>
+    <para>
+        "Hi Jenn!" Eve said, as she let go of Taylor. "Hi Jennifer!" Taylor
+        added.
+    </para>
+    <para>
+        "Listen, regarding M-IRC, I've been thinking that maybe we should
+        start converting the server to C. The Perl version probably won't scale
+        too much beyond what we have now, and we are probably getting more
+        and more users."
+    </para>
+    <para>
+        "Right, ", Eve said, "the Perl version was only a prototype, anyhow."
+    </para>
+    <para>
+        "Now regarding making it multi-processed or multi-threaded, that's
+        something I could use some guidance with, as I've never really done
+        it."
+    </para>
+    <para>
+        "Hmmm… " Taylor said, "kernel-assisted multi-tasking is a can of
+        worms. Especially multi-threading. But I don't suppose it's
+        substantially different than what other plain-IRC servers are
+        doing."
+    </para>
+    <para>
+        "So you mean I should just read their code and see?"
+    </para>
+    <para>
+        "I guess. Cannot really hurt."
+    </para>
+    <para>
+        "OK. " I said.
+    </para>
+    <para>
+        A few days later, I was sitting next to the computer, and checked the
+        E-mail. Then I noticed one E-mail to the Media-IRC mailing list that
+        said "[PATCH] Client - Implement Logging." from someone called
+        "Jean-Pierre Gordo" from .fr (France). This was our first contribution
+        from outside the user-group! I was so-excited, that I decided to call
+        Taylor on his cell-phone.
+    </para>
+    <para>
+        It took some time to answer, and then Taylor said, "Hi Jenn! What's
+        up?"
+    </para>
+    <para>
+        "Hi Taylor! Guess what? We received a patch from some French guy!"
+    </para>
+    <para>
+        "Eve, " I heard him saying on the other end of the line, "we received
+        a patch from someone outside the LUG."; "Aaaa!", I heard Eve shouting
+        happily. "OK, Jenn, we're coming right now. Meanwhile, review the
+        patch."
+    </para>
+    <para>
+        They arrived shortly afterwards, "So, you two were together. " I asked
+        "What were you doing?"
+    </para>
+    <para>
+        "We were watching a movie." Taylor said decisively. I took a closer
+        look at them. Taylor had lipstick smeared on his cheeks, and smelled
+        like women's perfume (Eve's). Eve's hair was a bit disorganised. But I
+        decided not to comment about this.
+    </para>
+    <para>
+        "OK. Well, the patch looks fine from what I saw. It's pretty long,
+        though."
+    </para>
+    <para>
+        "Maybe we should take a look as well." So together we went over all
+        the code, and reviewed it. Took us some time, but we were finally
+        convinced that it worked well. Then we applied it on our local copy,
+        and tested that it does what it should do. After we were happy with
+        the results, we committed it into the version control system. (while
+        acknowledging Jean-Pierre), and sent him a "thank you, your
+        contribution has been reviewed and applied" E-mail.
+    </para>
+    <para>
+        Man, it was so exciting!
+    </para>
+</section>
+<section id="raesha">
+    <title>"Raesha - meh ho owmer?"</title>
+    <para>
+        Eve dropped by the computer lab some time later. "Listen, my extended
+        family is holding a Passover Seder at our house next Saturday's night.
+        Normally, what I would have done then, is go out of the house to avoid
+        it. But this year, I decided to stay."
+    </para>
+    <para>
+        "OK, " I said, "So?"
+    </para>
+    <para>
+        "Well, I was wondering if you'd like to join us?"
+    </para>
+    <para>
+        "Sure, " I said, "I've got nothing better to do at that time."
+    </para>
+    <para>
+        "Great." Eve said. "I'll see you then."
+    </para>
+    <para>
+        So the next Saturday, I took some time to prepare. I recalled that
+        some observant Jews frowned upon females wearing pants and stuff like
+        that, so I wore a nice dress. And so I walked to Eve's house.
+    </para>
+    <para>
+        Eve answered the door. "Hi Jennifer!" she said. She was also wearing
+        a nice dress with flowers and all. There was a lot of commotion in the
+        house, and many voices, both of grown-ups and children were heard.
+        "Please come in, make yourself at home. Here, let me introduce you
+        to my family."
+    </para>
+    <para>
+        And so, I met with Eve's uncles, aunts, cousins, and grand-parents.
+        After we finished meeting all of them we went to the living room,
+        where Daniel and his cousin Deborah were busy playing a video game.
+        "You suck at this. " Daniel announced, as he won another round.
+    </para>
+    <para>
+        "Well, you have this game at your house, while I don't, so you can
+        get much more practice." his cousin responded.
+    </para>
+    <para>
+        "Would you two like a round?" Daniel asked Eve and I, "this game is
+        stupid anyhow."
+    </para>
+    <para>
+        "OK.", "Sure." we said.
+    </para>
+    <para>
+        Deborah looked a bit at us as she released her game-pad. "Say, you
+        two have such wonderful hair. Can I play with it?"
+    </para>
+    <para>
+        "Hey, I want to play with it, too!" Daniel said.
+    </para>
+    <para>
+        "Sure!" I said as I grabbed the game-pad.
+    </para>
+    <para>
+        "No problem here, either. Just don't… don't mix the strands of two
+        different people." Eve said.
+    </para>
+    <para>
+        "Here, we'll sit apart." I said as I took a little distance from
+        Eve.
+    </para>
+    <para>
+        "So what does every button do?" I said.
+    </para>
+    <para>
+        Eve explained as best as she could, and we started to play. I was not
+        particularly good at it, but Eve seemed to suck even more.
+    </para>
+    <para>
+        "Daniel's right. This game is stupid." she said. "You know, some of
+        the old DOS games were much more intelligent. Lots of puzzle games,
+        Adventure games, and things you need to think to progress in. I
+        still like to play them using a Linux-based DOS emulator."
+    </para>
+    <para>
+        "Well, I've never been a big computer games fan. " I said, "Freecell
+        is almost the only game I play. Of course, I find playing it with
+        PySol on Linux much nicer than with the Windows-shipped one."
+    </para>
+    <para>
+        "Heh. Microsoft Freecell is absolute crap." she said, as her
+        character successfully hit mine.
+    </para>
+    <para>
+        She added: "You know, I actually read a review for a recent game that
+        came out - a first-person shoot-them-up. The review said it had good
+        graphics and all, but otherwise you had an infinite amount of
+        ammunition, and you just had to kill an infinite amount of monsters
+        coming at you. Pretty dull. Still it concluded by saying it may be
+        good for the hot summer, instead of saying it sucked completely."
+    </para>
+    <para>
+        "You're doing it all wrong! " Deborah said to Daniel, "Here let me
+        show you how to arrange a girl's hair."
+    </para>
+    <para>
+        "Heh. " I said, and we continued playing for a several minutes.
+    </para>
+    <para>
+        "Everybody, we're getting started!" Eve's mother cried, and we gathered
+        to the dining table. Eve and I rose up, and walked towards the table.
+        As we passed by, Mrs. Siegel said, "Eve, Jennifer, what happened to
+        your hair?"
+    </para>
+    <para>
+        Eve and I looked at each other, then burst out laughing simultaneously.
+        "Heh, never mind." Eve said, "we'll fix it later."
+    </para>
+    <para>
+        Eve and a few other relatives who knew how to read Hebrew, started
+        reading the Passover Hagaddah (= Ceremonial Transcript) in turn,
+        translating it to English on the fly, each time instructing us what
+        to do. When we reached the part with the four sons that the Jewish
+        Law spoke against, and the Evil one, Eve said:
+    </para>
+    <para>
+        "For this part, I have prepared in advance a Goyah…" and she pointed
+        at me.
+    </para>
+    <para>
+        "Heh, a Shiksa."
+    </para>
+    <para>
+        "OK, I'll read it with your help." I said.
+    </para>
+    <para>
+        "OK: 'Rasha - mah hu omer?'"
+    </para>
+    <para>
+        "Raesha - meh ho owmer?"
+    </para>
+    <para>
+        "Close enough!", and so we continued.
+    </para>
+    <para>
+        After a while the food came, and after a meal some people continued
+        reading the Hagaddah, while most of the others packed everything
+        or simply talked or played around. It was a lot of fun.
+    </para>
+    <para>
+        After the ceremony, Eve and I fixed the strands of each other's hair.
+        "You know, Daniel and Deb may have a hidden talent as hair stylists."
+        Eve said.
+    </para>
+    <para>
+        "You think so?" I said, as we switched places, "Your hair is a bit
+        inconsistent. If they do have a talent, then I guess it is indeed
+        very well hidden."
+    </para>
+</section>
+<section id="debian">
+    <title>"Abandoning" Debian</title>
+    <programlisting>
+        <![CDATA[
+From: Eve Siegel <eve@eve-siegel.eu.org>
+To: Debian Devel <debian-devel@lists.debian.org>
+Subject: "Abandoning" Debian
+
+Hi all!
+
+Debian has been my distribution of choice for 3 years now. I can testify that
+I have been quite happy with it, and as you may have noticed also contributed
+by being a packager. Recently, however, I noticed several trends
+in the community and attitude of Debian that induced me into abandoning it.
+Part of the reason for this was a personal transformation of mine, (a very
+good one in fact) that made me realise that Debian was not the distribution to
+which I belong.
+
+The reasons I dislike Debian now are:
+
+1. The community consists of many people who are loud, smug, feel a sense
+of superiority in their distribution, and denounce all other distributions.
+
+While I don't accuse any of the Debian Leaders of this, it seems we all have
+done too little to make clear this behavior was unacceptable.
+
+Debian has or had some advantages over other distributions. It also had or
+even still has some drawbacks. However, telling the world and his mother, how
+much we are better than the rest (if we are indeed better) is not going to
+help us making it better. And workers of other distros are less boastful,
+and invest time in filling in the gaps.
+
+2. Trying to apply the Debian Free Software Guidelines to things that are
+not software, will bring no good. Software is something that should abide
+by the free software ideology. Documentation, fonts, graphics, music and
+other types of content, play by different rules and warrant different
+guidelines for inclusion in the distribution, than these applied to software.
+
+The last thing I need is documentation disappearing into the oblivion of
+the non-free repository, fonts rejected for being non-modifiable, and other
+annoyances like that.
+
+As an extreme example, are we going to remove all the packages license
+files, because their text is not free-as-in-speech?
+
+3. The arrangement of Debian as an online democratic country, is heavily
+causing a lot of bad side-effects. People are simply not accepted because
+there's too much red-tape. There are plenty of procedures. Many things
+are decided according to a vote instead of what is better to do.
+
+Re-structuring Debian as an anarchy controlled by a loose leadership will
+do it very good. Otherwise, it seems things are progressing too slowly:
+
+Debian used to have a very poor installer until not long ago, and even
+now it is not a graphical one but a character based one. Furthermore, the
+Debian release cycle is too long to be effective for most users. (and we
+should remember that using the bleeding edge distribution is not an option
+for many users, who cannot excessively download packages from the Internet).
+Furthermore, Debian still lacks many of the graphical configuration tools
+that are common in other distributions. That's not good.
+
+------------
+
+It is beyond my power to fix all these problems on my own. So I looked for
+an alternative distribution. I bought a new hard-disk which I'm dedicating
+to distribution experimentation. For a long time I recommended using Mandrake
+for many newcomers I've introduced Linux to. So I decided to give it a try.
+
+Mandrake is very nice, and I'm happily using it. I have one partition with
+Mandrake Cooker (the bleeding edge distribution) and one partition with the
+stable one. There is a lot of glue and integration in the distribution and
+everything is made to work together. The distribution is kept up-to-date and
+the releases are more frequent than Debian.
+
+Granted, there are more bugs than in Debian, especially in the Mandrake
+Cooker. But they are nothing I cannot handle, and so I'm just trying to
+fix what I find. I already contributed some bug-reports, and even fixes
+there, and also submitted several new packages.
+
+Note that I can still use and work on Debian, either by booting to it,
+or running it on a PC emulator. I will continue to maintain my packages in
+Debian at least until someone else volunteers to take over them. But I'm
+officially no longer a Debianist.
+
+Sincerely yours,
+
+    Eve Siegel ("Erisa").
+        ]]>
+    </programlisting>
+    <para>
+        Eve has sent me a copy of this message. It started an entire
+        active discussion at the mailing list to which it was sent.
+    </para>
+</section>
+<section id="rms">
+    <title>RMS is Coming to Town</title>
+    <para>
+        One day when Jonathan, Taylor and I were having a conversation
+        in one of our school hallways, we saw Eve approaching us, carrying
+        a piece of paper, and looking very anxious to see us.
+    </para>
+    <para>
+        "Hi Eve, what's up?" Jonathan said.
+    </para>
+    <para>
+        "Hey guys - I have very exciting news: " she said as she approached
+        us and then kissed Taylor briefly. "RMS is coming to town!" and she
+        let us see her sheet.
+    </para>
+    <para>
+        In case you don't know, RMS is Richard M. Stallman. RMS was originally
+        one of the original MIT Artificial Intelligence Laboratory hackers.
+        He coined the term "Free Software" ("Free" as in "Free Speech"), which
+        is more or less the same as "Open Source Software", except for some
+        semantic and historical differences. He then went on to create the
+        GNU Project, which has created a great deal of open-source software
+        which consists of a large part of modern-day Linuxes now. (but is also
+        available for other operating systems)
+    </para>
+    <para>
+        "Great!" Taylor said looking at the paper. "Jenn, would you like
+        to meet him?"
+    </para>
+    <para>
+        "I suppose." I said, "I'd rather not miss on this opportunity. Albeit
+        he does have a reputation for being very stubborn. How is he in
+        real-life?"
+    </para>
+    <para>
+        "Well, Taylor and I met him last time he's been here." Eve said,
+        "We also signed each other's keys. He's very nice in real-life:
+        intelligent, funny, and a very nice hippy-like person. I'm sure you'll
+        like him."
+    </para>
+    <para>
+        "Well, there's a key-signing party there too. Hmmm… it's a bit far
+        from here. I think the four of us should borrow a car. Jonathan,
+        are you coming, too?"
+    </para>
+    <para>
+        "Sure, why not? What's a key-signing party?"
+    </para>
+    <para>
+        Eve replied: "A key-signing is something you do with your
+        cryptographical public-key and private key pair. You sign a person's
+        key and thus acknowledge you have verified that the key belongs to
+        this actual person."
+    </para>
+    <para>
+        "Key-signing parties are fun, but if you ask me, the chance of someone
+        performing a man-in-the-middle attack over the Internet is god-damn
+        small. Heck, I bet even the NSA cannot do that."
+    </para>
+    <para>
+        "Hmmm… ", I said, "I don't have a GPG [= GNU Privacy Guard] key-pair
+        yet. I guess I'll generate one for the occasion. Is there a howto
+        document or something like this?"
+    </para>
+    <para>
+        "Yep, " Taylor said, "the Key-Signing Party Howto. Using GPG is
+        not exactly rocket science."
+    </para>
+    <para>
+        "Cool!", I said. And then we discussed the arrangements for picking
+        everyone up.
+    </para>
+    <para>
+        The day of the meeting, I placed everything I needed in a backpack,
+        and went to Taylor's house for the ride. Eve was already there and
+        we waited for Jonathan, who arrived shortly afterwards. So, we all
+        entered the car, and drove there.
+    </para>
+    <para>
+        The hallroom in which Stallman's presentation and get-together took
+        place was quite crowded, which was expected. We spotted Mr. Stallman
+        there, but decided to approach him only at the general get-together
+        afterwards.
+    </para>
+    <para>
+        RMS gave a very entertaining presentation about the history of
+        free software movement, what it meant to him, and how can we help. He
+        told the shop-worn story of his life at the MIT Artificial Intelligence
+        Lab, the incident with the printer, and what he has done to remedy
+        the situation. He also gave the standard preaching about why it
+        was important to say "Free Software" instead of "Open-Source"
+        and "GNU/Linux" instead of just "Linux". Throughout the talk, he told
+        a great deal of jokes, which caused the audience to burst into
+        laughter. It was great.
+    </para>
+    <para>
+        Then he gave some time for questions from the audience. They were
+        also answered assertively and sometimes funnily. Then started the
+        key-signing party.
+    </para>
+    <para>
+        We decided that Stallman will sign keys with each and every
+        local separately and then the locals can sign their keys. I stood
+        in a long line, showed Mr. Stallman some pictorial IDs and vice
+        versa. Eve and Taylor did not take part in it, because they had
+        already signed his key. Instead they spent some time talking between
+        themselves. Eventually, RMS was free, and we continued the
+        key-signing between ourselves. Then came time for some socialising:
+        Stallman brought some books and other gifts that he sold to gather
+        money for the Free Software Foundation. (while autographing them)
+    </para>
+    <para>
+        After a while, Eve approached him. "Hi Mr. Stallman!" she said,
+        "I'm Eve Siegel. I've seen you in L.A. a couple of years ago. You
+        may remember me as Erisa. We talked on E-mail later on - about the
+        evils of big business, free software ideology and stuff like that."
+    </para>
+    <para>
+        "'Erisa', yes, I remember you. Didn't you have… ahmmm… green hair
+        back then?"
+    </para>
+    <para>
+        "Yes, as a matter of fact. Since then it became purple, but now I'm
+        au natural."
+    </para>
+    <para>
+        "You look nice." Stallman said.
+    </para>
+    <para>
+        "Thanks. You too. So what are you doing now?"
+    </para>
+    <para>
+        "Oh the usual, advocating free software, trying to convert the world
+        to the free software ideology."
+    </para>
+    <para>
+        "Good, someone ought to do it. Are you seeing anyone by any chance?"
+    </para>
+    <para>
+        "No, I don't at the moment",
+    </para>
+    <para>
+        "Oh well. In any case, please meet my friend and
+        protégé for hacking - Jennifer Raymond. Jennifer,
+        Mr. Stallman and vice versa.".
+    </para>
+    <para>
+        "Nice to meet you, Mr. Stallman." I said. "I've heard so much about
+        you."
+    </para>
+    <para>
+        "Well, everything positive you've heard about me is true, but also
+        some of the negative things."
+    </para>
+    <para>
+        Eve and I laughed, and RMS quickly joined us. But then some other
+        attendee wanted to talk to Stallman, and we let them converse.
+    </para>
+    <para>
+        We arrived at Taylor's house, and Eve and I walked home together
+        from there. On the way, I said to Eve, "There's something I don't get."
+    </para>
+    <para>
+        "What?"
+    </para>
+    <para>
+        "RMS is like this really funny and intelligent guy, and he's a really
+        cute hippy, and he had his share of life achievements and stuff…"
+    </para>
+    <para>
+        "Right."
+    </para>
+    <para>
+        "And he's in his fifties now, and you know that girls dig older man.
+        So how come when you asked him if he's seeing anyone, he said he
+        doesn't? Why does he have a problem finding a suitable life-partner?"
+    </para>
+    <para>
+        "Oh Jennifer, Jennifer… you are so naïve. Why don't I drop by
+        your house and show you some stuff he wrote on his homepage."
+    </para>
+    <para>
+        "OK." I said puzzled.
+    </para>
+    <para>
+        Richard Stallman's homepage greeted the random web-surfer with some
+        political action items. It was hardly a pleasant way to be introduced
+        to a web-page, and not my idea of a page I'd like to visit often. Then
+        Eve showed me his former personal ad. It reads, and I quote:
+    </para>
+    <blockquote>
+        <para>
+            I'm a single atheist white man, 50, reputedly intelligent, with
+            unusual interests in politics, science, music and dance.
+        </para>
+        <para>
+            I'd like to meet a woman with varied
+            interests, curious about the world, comfortable expressing her
+            likes and dislikes (I hate struggling to guess), delighting in her
+            ability to fascinate a man and in being loved tenderly, who values
+            joy, truth, beauty and justice more than "success"--so we can share
+            bouts of intense, passionately kind awareness of each other,
+            alternating with tolerant warmth while we're absorbed in other
+            aspects of life.
+        </para>
+        <para>
+            My 19-year-old child, the Free Software Movement, occupies most of
+            my life, leaving no room for more children, but I still have room
+            to love a sweetheart. I spend a lot of my time traveling to give
+            speeches, often to Europe, Asia and Latin America; it would be
+            nice if you were free to travel with me some of the time.
+        </para>
+    </blockquote>
+    <para>
+        "Oh, my God!" I said after I read it.
+    </para>
+    <para>
+        "Do you wonder why now?"
+    </para>
+    <para>
+        "Not any more. Any half-normal girl would be scared off by the
+        message he's trying to give."
+    </para>
+    <para>
+        "Yeah, I always thought so too." Eve noted.
+    </para>
+    <para>
+        "But I might put him in the list of the 5 celebrities I'm allowed
+        to have sex with." I said.
+    </para>
+    <para>
+        "Hmmm… cool! He's incredibly sexy. But I can warn you that
+        I don't think he's much of a casual sex guy, now. You can always
+        ask him that on E-mail."
+    </para>
+</section>
+<section id="homecoming_queen">
+    <title>"Who will Take a Second Look at it, unless…"</title>
+    <para>
+        I don't remember whose idea it was, but we ended up enrolling Eve
+        into the Homecoming Queen contest. When Eve discovered she was
+        on the nominees list, she was a bit upset.
+    </para>
+    <para>
+        "Homecoming Queen? Me? Why would I ever want to be a homecoming
+        queen?"
+    </para>
+    <para>
+        "Eve, we thought you could see how beautiful you are, and how much
+        people could like you if they got to know you." I answered her.
+    </para>
+    <para>
+        "Hah! Well… oh heck, I don't have a ready reply. But I'm going
+        to get you guys for this. I truly am." and she started to walk
+        from there. "You'll see."
+    </para>
+    <para>
+        Eve showed up to the homecoming queen nominees roundup wearing one
+        of her best dresses. When her turn came she took the stage, and began
+        her speech:
+    </para>
+    <para>
+        "Ladies and Gentlemen. I don't know how many of you know me, but
+        my name is Eve Siegel. I urge you to vote for me for homecoming queen
+        not for your sake, but for mine. I really need you to vote for me,
+        because my entire future depends on it. Seriously."
+    </para>
+    <para>
+        "Take a look at my Resumé, for example. 'Experienced in
+        computers and programming since 1994.' ; 'Experienced in Linux and
+        UNIX technologies since 1998' ; '2000-2005 - Debian Packager',
+        '2005-Present - Mandrake Packager', and more of this vain. Tell me,
+        who will take a second look at this C.V. if it did not say,
+        '2005 - Elected as a homecoming queen.'?"
+    </para>
+    <para>
+        "Now for what I'm going to do if I'm elected. I'm going
+        to erect a gigantic statue of Tux the Penguin, this guy [picture
+        showing on the screen], and also one for Beastie the BSD Daemon,
+        [picture showing] for good measure. I'm going to fight against abusive
+        behaviour toward nerds and geeks, for computer literacy, and…
+        for world peace. What the heck."
+    </para>
+    <para>
+        "But all these philantropical causes are secondary to my egoistical
+        motives of having to win this title for my own good. Thank you!"
+    </para>
+    <para>
+        She practically brought down the house with this speech. Even Taylor,
+        and I could not resist a maniacal laughter. She ended up being one
+        of the five finalists. As the elections were on, Eve started her
+        own campaign sloganed "Don't vote for Eve!" and gave away pamphlets
+        with nothing but raves about the other four contestants. This also
+        increased her karma considerably.
+    </para>
+    <para>
+        She wore the same dress during the homecoming queen ceremony,
+        as the pre-election. As the runner-ups were announced, she was
+        given warm hugs from all-of-them. She ended up being the first
+        runner-up with a margin of only 5 votes to the real winner. She ended
+        up saying she was glad she did not take the title, but I never saw
+        her happier than on that day.
+    </para>
+    <para>
+        She did not put it in her resumé.
+    </para>
+</section>
+<section id="god_works">
+    <title>God Works in Mysterious Ways</title>
+    <para>
+        Taylor, Eve, Jonathan and I gathered at the living room in my
+        house, together with our college acceptance letters, and each
+        having his university acceptance summary. We had previously decided
+        that we will go to the same university together, and we needed to
+        find the most suitable one to which we were all accepted.
+    </para>
+    <para>
+        "OK, before we start - let me make one thing clear: I absolutely
+        refuse to study in the East Coast." Eve said.
+    </para>
+    <para>
+        "Why? " I asked.
+    </para>
+    <para>
+        "Well, my parents moved there once when I was in the 5th grade. To
+        Boston. I completely hated the cold, the rain, the snow, getting wet.
+        I guess I'm a California girl."
+    </para>
+    <para>
+        "Very well. So we're going to pick a college in California. All for
+        one and one for all." Taylor said, and kissed Eve on the lips.
+    </para>
+    <para>
+        "Besides - I did not get into M.I.T. and I guess no-one here did
+        either." she added.
+    </para>
+    <para>
+        "Ahem." I said.
+    </para>
+    <para>
+        "Yes, Jenn?" she said as she looked at me.
+    </para>
+    <para>
+        "I got into M.I.T.."
+    </para>
+    <para>
+        "Well, I'll be damned. I guess the interviewer was flabbergasted by
+        my then Purple hair. " Eve said, "Oh well, California colleges. I got
+        into Berkeley! Everybody else did?".
+    </para>
+    <para>
+        "I got into Berkeley, too." Taylor said.
+    </para>
+    <para>
+        "Ahem." I said, "I was rejected from U.C. Berkeley."
+    </para>
+    <para>
+        "You were?" Eve said, "God Works in Mysterious Ways."
+    </para>
+    <para>
+        Taylor sighed, "Guess we're not going to Berkeley. All for one and
+        one for all. How about UCLA?"
+    </para>
+    <para>
+        "Well, while we're setting our preferences" I said, "I'd rather not
+        study somewhere close. I'd like to be a bit away from my parents."
+    </para>
+    <para>
+        "No problem. " Jonathan said, "We'll be together away from our
+        parents." and he kissed me on the lips. "OK, ", he added, "I've
+        got San-Diego University, University of Sacramento… hey, I
+        got into Stanford!"
+    </para>
+    <para>
+        "Me too", Eve said.
+    </para>
+    <para>
+        "Likewise", Taylor added.
+    </para>
+    <para>
+        I checked my notes, "I got into Stanford, too. That's great - we're
+        all going to Stanford."
+    </para>
+    <para>
+        "All for one and all in Stanford.", Eve said. There was a long period
+        when we were just digesting the news, and just being plain joyful about
+        it. After a while Eve said: "OK, we said we'll all major in Computer
+        Engineering, but have different minors. My minor is going to be
+        Linguistics. Since I already know English, Hebrew and Spanish, I might
+        as well get the hang of other languages."
+    </para>
+    <para>
+        "I'm going to minor in Ancient History and Languages of the Near East."
+        Taylor said, "I'd like to learn more about Eve's background."
+    </para>
+    <para>
+        Eve smiled. Jonathan said, "I think I'll be a philosophy minor. I
+        think I'm a philosopher at heart. At least during the times I'm not
+        an Electrician by heart."
+    </para>
+    <para>
+        "Well, as for me, I'm going to minor in fine arts." I said. "Maybe I
+        have a hidden talent for painting or something like that, and if not,
+        at least I'll find out."
+    </para>
+    <para>
+        "Very well, so, we're all sending the acceptance letters to Stanford,
+        each with his selected Minor." Taylor said. "OK, now, if you'll excuse
+        me, I think we still have some homework to do… high school one."
+    </para>
+</section>
+<section id="search_of_lost_time">
+    <title>I can write my own replacement for 'In Search of Lost Time'</title>
+    <para>
+        After the summer vacation arrived, and we had some time before our
+        Sophomore year at the university, Eve said that she'd rather not work
+        this year, and instead have a lot of "clean fun with my friends.". We
+        decided to restrict ourselves to California and vicinity in our
+        touring.
+    </para>
+    <para>
+        Using our car, we drove everywhere. We went everywhere we could think
+        of. We hiked in Yosemite, been to Disneyland, visited the San-Diego
+        Zoo. We went to a lot of Linux-related conferences that took place in
+        the summer, and met a great deal of fellow enthusiasts. Eve decided
+        we should take the tour through Berkeley University, and after the
+        tour, she went to see the rooms where BSD (= an early and pioneering
+        version of UNIX) was developed, and where the GIMP (an image
+        manipulation program) was developed. I think it was her idea of
+        heaven.
+    </para>
+    <para>
+        When Eve wasn't driving, she spent a lot of time writing things on her
+        PDA. She said she worked on a lot of articles, and Wikipedia entries.
+        Eventually, at the first Saturday before the last, we took a quiet day
+        and went to a beach north of Los-Angeles. As the boys went swimming
+        again, Amanda, Eve and I sat on some chairs on the seashore. Eve sat
+        on her chair wearing her bikini, I sat next to her with a shirt over
+        my bathing suit, and Amanda sat beside me with Eve's laptop. The
+        laptop had speakers connected to it which we used to play music.
+    </para>
+    <para>
+        We were finishing to hear an interesting punk song that Eve was fond
+        of, and has sort of grown on Amanda and me. In fact, it was Amanda
+        who picked it up this time. After the song ended, Eve said:
+    </para>
+    <para>
+        "Yeah, Baby, yeah! I really like the guitar-and-drums solos in this
+        song. This guy has an excellent voice. His technique is usually
+        not too good but here he does pretty well."
+    </para>
+    <para>
+        Amanda said: "Eve, are you sure you shouldn't become a music
+        critique?"
+    </para>
+    <para>
+        "Nah", Eve said, "I'm a woman of many talents, but I need to
+        work at what I'm likely to earn some money from."
+    </para>
+    <para>
+        Amanda giggled, "OK. OK.". "So what song would you like to hear
+        next?" she asked.
+    </para>
+    <para>
+        "I'd like to hear 'I'm not a Girl, not yet a Woman' by Britney Spears",
+        Eve said.
+    </para>
+    <para>
+        "Britney Spears? I thought you hated her." I said.
+    </para>
+    <para>
+        "Yeah", Amanda said, "I'm surprised you even have this song on
+        your laptop."
+    </para>
+    <para>
+        "Oh, give the poor girl a break. Some of her songs are pretty decent."
+        Eve said to us.
+    </para>
+    <para>
+        "One Britney coming up." Amanda said.
+    </para>
+    <para>
+        "You know, " Eve said, "I think I'd like to be an
+        Objectivist-slash-Libertarian. I mean, they rebel against the system,
+        which works for me. But they are also pro-Capitalistic and everything,
+        as long as it's uncontrolled Capitalism, which is also something the
+        new and improved me, really believes in, instead of the
+        'Anti-Big-Business' crap."
+    </para>
+    <para>
+        "Eve," I said, "you'll be a wonderful Objectivist-slash-Libertarian."
+    </para>
+    <para>
+        "Yep.", she said, "Man, I'm going to miss my punky anti-Capitalistic
+        self…"
+    </para>
+    <para>
+        "No feelings of yearning here." Amanda said.
+    </para>
+    <para>
+        "None here either." I added.
+    </para>
+    <para>
+        Eve said, "Hmmm… you're right, there's nothing to miss really. Man,
+        to think of how I wasted all this time being what I was. I can write my
+        own replacement for 'In Search of Lost Time', and publish it, and it
+        would be better than the original, and I will win the Pulitzer Prize
+        for it and be on shows like Oprah…"
+    </para>
+    <para>
+        I stopped reading my book and placed it on my lap. Then I said: "Oh
+        Eve, come on, look at you! You're a beautiful person: you're smart,
+        cool, talented, likable, … you look great…" Eve smiled, "and
+        you're my best female friend and you're dating my best male friend."
+    </para>
+    <para>
+        "I'm sorry, but I don't think you've wasted any time."
+    </para>
+    <para>
+        Eve rose up, and I quickly followed her. She approached me and
+        before I knew it, she hugged me and I hugged her back. "I love you.",
+        she said. "I love you, too.", I said to her. We remained hugging each
+        other for some time and then went back to our seats.
+    </para>
+    <para>
+        Then the guys returned. "Hey did we miss anything?" Taylor said.
+    </para>
+    <para>
+        "Yep, " Eve said as she rose and tied her hands around his neck. "I
+        am a beautiful person…"
+    </para>
+    <para>
+        "I can see that", Taylor said.
+    </para>
+    <para>
+        "…and Jennifer and I love each other dearly. We're seriously
+        considering dumping you guys, living together, eloping, et cetera".
+    </para>
+    <para>
+        "But luckily for you, we may wish to have some babies, so…"
+    </para>
+    <para>
+        You can always count on Eve to convey the serious things in a
+        completely non-serious way…
+    </para>
+</section>
+<section id="most_of_our_graduates">
+    <title>Most of our Electrical Engineering graduates cannot…</title>
+    <para>
+        "Man, this is so exciting" Eve said as the four of us were entering the
+        hall in which the beginning ceremony of the new Stanford
+        scholastic year for Computer Science students took place.
+    </para>
+    <para>
+        "I mean", she continued, "come on, this is Stanford. Tons of great
+        names, lots of other departments, lots of interesting classes we could
+        take, many extra-curricular activities."
+    </para>
+    <para>
+        "And we're in the middle of Silicon Valley - we can attend
+        conferences of all these companies, big and small; we can visit
+        IBM or Google…"
+    </para>
+    <para>
+        "And we're studying Comp. Eng.. One day we'll be more than
+        just creators of bit buckets, but people who can actually wire
+        transistors and stuff like that."
+    </para>
+    <para>
+        "Of course, once we start having homework and we're going to
+        have bad teachers, we'll curse this place to death, and continually
+        bitch about it, but right now - I'm so excited."
+    </para>
+    <para>
+        "And the best thing about it", she said as she started kissing Taylor,
+        "is that I'm doing it with my best friends."
+    </para>
+    <para>
+        "I hope I'm more than just your friend." Taylor said. "Oh you are" she
+        replied and they started seriously making out.
+    </para>
+    <para>
+        "I could not help overhearing what you were saying", said a man in his
+        fifties or sixties who approached Jonathan and me. "For your
+        information, most of our Electrical Engineering Graduates, cannot
+        even replace a light bulb."
+    </para>
+    <para>
+        "Hmmm… makes sense.", Jonathan said.
+    </para>
+    <para>
+        "Yes, they are practically specialised mathematicians."
+    </para>
+    <para>
+        "What's up with them?" He asked, pointing at Taylor and Eve.
+    </para>
+    <para>
+        "Well," I said, "it's a combination of raging hormones and what we
+        really hope is a match made in heaven."
+    </para>
+    <para>
+        "Wait a sec… we haven't introduced ourselves! I'm Jennifer Raymond
+        and this is my boyfriend Jonathan Demarco."
+    </para>
+    <para>
+        "Nice to meet you. I'm Professor Emeritus Don Knuth [Kanooth]."
+    </para>
+    <para>
+        "Knuth," Eve said as she let herself out of Taylor, "What about
+        Knuth?"
+    </para>
+    <para>
+        "Nice to meet you Miss, I'm Don Knuth." said the professor
+        as he extended his hand.
+    </para>
+    <para>
+        "Oh my god," Eve got excited as she shook his hand, "Don Knuth,
+        the TeX [Tekh] guy."
+    </para>
+    <para>
+        Knuth nodded an said, "Yes, TeX".
+    </para>
+    <para>
+        "Hi!", Eve continued, "I'm a… I'm a great, I'm a great adm…
+        ehhhh…," and she fainted into Taylor's arms.
+    </para>
+    <section id="hex_dollar">
+        <title>Hexadecimal Dollar</title>
+        <para>
+            We were in a relatively quiet side room. Prof. Knuth was there
+            and also the four of us, (with Eve still unconscious) and a
+            doctor. Eventually, Eve woke up.
+        </para>
+        <para>
+            "Oh my God," she said, "…Taylor, Jennifer, Jonathan…" she
+            looked around.
+        </para>
+        <para>
+            "Professor Knuth! Oh I'm so sorry."
+        </para>
+        <para>
+            "Nah! That's OK.", he said.
+        </para>
+        <para>
+            "Ah, OK. Just understand that meeting you is sort of like meeting
+            God."
+        </para>
+        <para>
+            "I'm not God. " he said, "Hell, last time I tried, it took me
+            two days to build the Roman Empire." Some people laughed or
+            giggled. "Here, ", he continued. "I made something for you." and
+            he gave her a check.
+        </para>
+        <para>
+            "2.56 dollars," she turned the check, "To my great adm." she said,
+            "Wow! One Knuthian Hexadecimal Dollar just for me."
+        </para>
+        <para>
+            "Are you going to cash it in?" Jonathan asked whimsically.
+        </para>
+        <para>
+            "Are you kidding? This stuff sells on eBay for at least a hundred
+            bucks…"
+        </para>
+        <para>
+            I burst into laughter.
+        </para>
+        <para>
+            "I'm just kidding", Eve said, "I'm going to cherish it.".
+        </para>
+        <para>
+            I admit that I did not entirely understand everything that
+            happened right away. But when I returned to my dorm room, I
+            spent some time browsing the web looking for answers. I still
+            have a lot to learn, but I'm getting there. I guess I'm just a
+            geek who's trying to make the world a better place.
+        </para>
+    </section>
+</section>
+</article>    <!-- End of the article -->
+

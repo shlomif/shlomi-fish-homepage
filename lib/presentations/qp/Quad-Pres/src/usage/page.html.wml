@@ -1,0 +1,34 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+After you run <tt>Render_all_contents.pl</tt> initial templates for all
+the individual pages will be generated for you in their place under the
+<tt>src</tt> sub-directory.
+</li>
+<li>
+Afterwards you can use whatever HTML and WebMetaLanguage code to fill its contents.
+</li>
+<li>
+The meta-tag <tt>&lt;qpcontents /&gt;</tt> evaluates to a table of contents of
+the current node and inwards.
+</li>
+<li>Example:</li>
+</ul>
+
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre>
+
+<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>p</b></font><font color="#008b8b">&gt;</font>
+This section will cover some commonly used Autoconf Macros.
+<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>p</b></font><font color="#008b8b">&gt;</font>
+
+<font color="#008b8b">&lt;</font>qpcontents /<font color="#008b8b">&gt;</font>
+</pre>
+</td>
+</tr>
+</table>

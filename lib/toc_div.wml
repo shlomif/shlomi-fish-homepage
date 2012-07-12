@@ -1,0 +1,23 @@
+#include "xhtml/1.x/std/toc.wml"
+
+<define-tag toc_div>
+
+<preserve head_tag lang />
+
+<set-var %attributes />
+
+<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h2" />" />
+<set-var lang="<latemp_default_val "<get-var lang />" "en" />" />
+
+<ifeq "<get-var lang />" "en" "<set-var title="Table of Contents" />" />
+<ifeq "<get-var lang />" "he" "<set-var title="תוכן העניינים" />" />
+
+<div class="page_toc">
+<<get-var head_tag />* id="toc"><get-var title /></<get-var head_tag />*>
+
+<toc />
+</div>
+
+<restore head_tag lang />
+
+</define-tag>

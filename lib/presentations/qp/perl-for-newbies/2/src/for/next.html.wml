@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<p>
+An important difference between the <tt>for</tt> loop and the <tt>while</tt>
+loop is the behaviour of <tt>next</tt> inside it. In a <tt>for</tt> loop,
+<tt>next</tt> skips the rest of the iteration but still executes the
+iteration commands which were passed to the loop as arguments.
+</p>
+
+<p>
+For example, the following program prints the first 200 primes:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/for/primes.pl" />
+</quadpres_code_block>
+
+<p>
+Now, the equivalent program using a while loop:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/for/primes_while.pl" />
+</quadpres_code_block>
+
+<p>
+gets stuck. (<b>why?</b>)
+</p>
+

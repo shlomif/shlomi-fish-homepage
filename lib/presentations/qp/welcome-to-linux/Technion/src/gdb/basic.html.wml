@@ -1,0 +1,55 @@
+#include 'template.wml'
+
+<define-tag cmd endtag="required">
+<preserve c />
+<set-var %attributes />
+<tr>
+<td>
+<tt><get-var c /></tt>
+</td>
+<td>
+%body
+</td>
+</tr>
+<restore c />
+</define-tag>
+
+<table class="gdb">
+<cmd c="run">
+Executes the program from the beginning. You can use:
+<tt>run &lt; file_in &gt; file_out</tt> to redirect I/O for the program
+being executed.
+</cmd>
+<cmd c="break">
+Used to set breakpoints. Can be used in many ways:<br />
+<tt>break line_number</tt><br />
+<tt>break function_name</tt><br />
+<tt>break file_name:line_number</tt><br />
+<tt>break class::method</tt>
+</cmd>
+<cmd c="next">
+Proceed one command line while not entering function calls.
+</cmd>
+<cmd c="step">
+Proceeed one command line, step into function calls if necessary.
+</cmd>
+<cmd c="cont">
+Continue until next breakpoint.
+</cmd>
+<cmd c="where">
+Display call stack.
+</cmd>
+<cmd c="print">
+Print a variable or an expression. Used <tt>print expression</tt>
+</cmd>
+<cmd c="up/down">
+Move up and down in the call stack. Allows you to examine local variables
+of previous functions.
+</cmd>
+</table>
+
+<points>
+<li>
+And many more (see the help).
+</li>
+</points>

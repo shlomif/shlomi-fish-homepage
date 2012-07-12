@@ -1,0 +1,525 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+;;; Placed on 14-July-2010
+;;; Remove after a year - 14-July-2011
+<shlomif_sponsored_ad>
+<p>
+Enroll at the <a href="http://phoenix.19gi.com/state/Arizona/">University
+of Phoenix Arizona</a> and earn your degree in approximately two years.
+</p>
+</shlomif_sponsored_ad>
+
+<latemp_subject "My Opinion on Electrical Engineering Studies in the Technion" />
+<latemp_meta_desc "Shlomi Fish opinion on studying Electrical Engineering in
+the Technion (and by implication
+other Universities) after Graduating from There." />
+<latemp_more_keywords "Shlomi Fish, Shlomi, Fish, Technion, univeristy, college, Israel,EE,Electrical Engineering,studies" />
+
+<h2 id="about">About this Document</h2>
+
+<p>
+This is a reworked version of
+<a href="http://tech.groups.yahoo.com/group/hackers-il/message/3480">a post</a> I wrote to
+a mailing list about what I think of <a href="http://www.technion.ac.il/">the
+Technion</a> close and after graduation. Some of it may be applicable to other high education
+institutes.
+</p>
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+First version (published in
+<a href="http://www.hackers.org.il/">Hackers-IL</a>):
+</dt>
+<dd>
+<a href="http://tech.groups.yahoo.com/group/hackers-il/message/3480">http://tech.groups.yahoo.com/group/hackers-il/message/3480</a> (published in 31 October, 2003).
+</dd>
+<dt>
+Web page version:
+</dt>
+<dd>
+2007-March-31
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+2007-March-31
+</dd>
+</dl>
+
+<h3 id="licence">Licence</h3>
+
+<cc_by_british_blurb year="2007" />
+
+<h2>The Article Itself</h2>
+
+<h3 id="intro">Introduction</h3>
+
+<p>
+We’ve discussed the Technion before on Hackers-IL and I don’t see why we
+should not again. Here is my up-to-date impression from it. I don’t know
+how much it applies to other universities.
+</p>
+
+<p>
+I’ll divide this opinion into pieces:
+</p>
+
+<h3 id="quality_of_material">1. Quality of the material covered</h3>
+
+<p>
+The quality of the material is very good, in my opinion. It is quite up to date and relevant to
+what we have to learn, with a few exceptions (like the infamous teaching of
+<a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg44728.html">C-Shell</a>
+programming in Matam and Mamat). But as a general rule, there aren’t many
+complaints here.
+</p>
+
+<p>
+The material seems to cover basics and foundations instead of cutting-edge
+technologies, which is a good thing, in my opinion, because a university’s
+purpose is to teach just that. The latter is best taught by experiencing.
+</p>
+
+<h3 id="the_faculty">2. The Faculty</h3>
+
+<p>
+The lecturers seem to know what they are teaching well. Whether they are
+able to convey it well, varies from lecturer to lecturer (and in large
+part from student to student). As for conveying it in an interesting
+manner - that’s probably even rarer, but still at an OK level. I don’t
+think other universities differ much in this respect.
+</p>
+
+<p>
+The T.A.s (Teaching Assistants) are usually better than the lecturers at conveying the
+material, but I encountered a few really bad T.A.s.
+</p>
+
+<p>
+An interesting thing to note would be how much the members of the Faculty
+were enlightened in the sense that they were familiar with cutting edge
+developments, open-minded, etc. This came as a disappointment to me a bit
+as from my impression most of them were not interested or knowledgable in
+anything beyond their particular field of expertise. It was much more
+evident due to the fact that some of the hackers I know and many of my
+fellow students were such enlightened people.
+</p>
+
+<p>
+One possible explanation is that the things I found enlightening (such as
+computer science, open source, Perl and other dynamic languages, etc.) were
+not mature enough or completely irrelevant when the lecturers learned them,
+and that there’s now a generation gap with the more computer science-inclined
+students. I also suppose it’s impossible to know everything there is to
+know about Electrical Engineering and Computer Science.
+</p>
+
+<h3 id="workload">3. The Workload</h3>
+
+<p>
+The workload was very high most of the time. In some courses, my partners
+and I spent days on end on preparing the assignments. (and I’m a
+relatively bright person). Luckily, in Electrical Engineering most of the
+assignments are pair-wise, which is a great system, as both students can
+help each other and there’s a more discipline to get the work going. (see
+for instance <a href="http://en.wikipedia.org/wiki/Pair_programming">the Pair
+Programming practice</a>).
+</p>
+
+<p>
+This is not the case in the Mathematics Department, for example. In the
+course “Set Theory” my partner and I prepared several exercises together
+(which were extremely long, even for both of us) and each received half the
+credit for them.
+</p>
+
+<p>
+Generally, I think that there should be a decent amount of workload as it
+forces one to know the material better.
+</p>
+
+<h4 id="why_pair_wise">Why work pair-wise?</h4>
+
+<p>
+<a href="http://nadav.harel.org.il/homepage/musing/educooperation">Nadav
+Har’El ranted</a> that pair-wise programming encourages slacking or uneven
+distribution of work. However, I disagree with him in his complaint, and would
+like to explain why the Mathematics department is wrong here.
+</p>
+
+<ol>
+
+<li>
+<ol>
+<li>
+<p>
+First of all let’s see what is the worst case scenario. One partner does
+all the work. The other one slacks. Then the exam day comes. The one partner
+passes (hopefully with blazing colours), and the other one gets 0. Test is at
+least 60% of the grade. So the other student fail.
+</p>
+</li>
+<li>
+<p>
+The slacker prepares for the exam intensively close to the end of the
+semester, while not learning before that. So he passes. Does he deserve the
+grade? I suppose - as he still knows the material and worked hard.
+</p>
+</li>
+<li>
+<p>
+So if someone slacks he still fails the course. (Factors and other
+monsters non withstanding.)
+</p>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+Should the Technion do anything that it can to prevent students from not
+doing their homework properly? After all, they can just copy from references.
+At a course I did - “Image Analysis and Processing”, my partner and I sat for
+days on end solving each of the four exercises. Since we didn’t do some things
+properly (or not according to what the one who graded the test
+expected) we were graded below 94 and above 80. But there were many 100s in
+the grades list. So my guess was that they copied it from a reference.
+</p>
+
+<p>
+I don’t think a university should be concerned with that, because there are
+many ways to cheat, and the time of the graders is precious.
+</p>
+</li>
+
+<li>
+<p>
+When the two partners are competent and they both sit
+down to solve it, there can be wonderful synergy. I’ve experienced it first
+hand many times. Often I was more successful at getting the exercises right
+and often the opposite (varying from course to course and from exercise to
+exercise) but we both had an easier time, and we both learned a lot from each
+other.
+</p>
+</li>
+
+<li>
+<p>
+And it’s more fun, than solving it all alone. Man is a social animal.
+One is solitude, two is a company. Psychology matters.
+</p>
+</li>
+
+<li>
+<p>
+I’m not implying something stupid like it will prepare people for pair
+programming in their work (which may or may not happen). People can get used
+to pair programming or pair solving very quickly because it’s natural.
+</p>
+</li>
+
+<li>
+<p>
+As an analogy, most scientific articles have more than one writer.
+</p>
+</li>
+
+<li>
+<p>
+I believe people will have enough chance to “work on their own” during
+their studies, as you say. There are many such courses, and some students
+solve each their own version and then compare it, for peer review and
+criticism. (There’s a documented teamwork “pattern” for this too.)
+</p>
+</li>
+</ol>
+
+<h3 id="the_tests">4. The Tests</h3>
+
+<p>
+By all means, tests should be easy in
+comparison to the handed-in assignments, so those who have learned well
+throughout the semester will score highly (while those who don’t won’t
+succeed too much).
+courses.
+</p>
+
+<p>
+Note that I’m not saying that tests should be too easy. However,
+students who slacked off in the semester will not be able to succeed in even
+relatively easy tests with good coverage of the material in the homework
+assignments. I once talked with one of our department’s engineers about it
+and he mentioned that when he was in the U.S.A. he was impressed from a
+certain university (I believe it was <a href="http://www.unc.edu/">UNC</a>)
+where the students take about 4 courses each year, each with a high homework
+load, where they have to dedicate a lot of time for this. Then the tests are
+very easy in comparison to the homework, so people who worked hard on the
+homework can easily pass, while the slacking students are still not better
+off.
+</p>
+
+<p>
+In the Technion, this system is not present in most courses. Some of the
+tests were OK, others were extremely out of context with the material that was
+learned. This is one point that makes me extremely unhappy about the Technion.
+After a while, I decided that taking courses that renewed a lot to me was
+risky, as I risked a bad test, and so took a lot of courses in whose material I
+was very knowledgable in. That way, I can pass the test even if the test is out
+of proprtion to the material that was conveyed. It is sad that the Technion
+causes people to take this path, as obviously one of the objectives of the
+higher education is to teach people things they don’t know.
+</p>
+
+<p>
+Some of the tests were simply downright too long. Or a test in the
+“Internet: Architecture and Protocols” course that expected the student to
+prepare a trace of the TCP protocol by hand (without having covered this
+material in home assignments).
+</p>
+
+<h3 id="students_body">5. The Students’ Body</h3>
+
+<p>
+I was very impressed with the quality of my fellow students (at least
+those that I came in contact with). Most of them were hard-working,
+intelligent people who were also honest and trustworthy.
+</p>
+
+<p>
+My friend (and fellow student) told me that when his brother started
+learning Medicine in the Technion, he complained about the fact that while
+he had been the smartest kid in his high school class, some of his fellow
+students at the Technion were smarter than him. This was not really the
+case for me. From my impression, some of the fellow students were more or
+less in my level, while other were inferior in many ways, intellectually.
+Still, even the inferior ones were honest and hard-working and so I won’t
+dare label them as “bad” in any way.
+</p>
+
+<h3 id="conclusion">6. Conclusion</h3>
+
+<p>
+I’m not sure if studying in the Technion was a wise decision on my part.
+By all means, it took a very long time (11 semesters and two
+vacation semesters, as well as two summers that were spent doing
+projects). While it taught me many things, I also felt that I was learning
+new things during the time I was working (before I joined the Technion),
+and was also learning new things by experiencing on my own, and from
+various resources on the Internet.
+</p>
+
+<p>
+I don’t believe I would have able to study the more Electrical
+Engineering-parts of my study, on my own. This is one reason that I don’t
+regret having studied Electrical Engineering, instead of Computer Science,
+which I’m almost certain would have been easier for me as I am a
+programmer by trade and an able mathematician. I have a knack for computer
+science, while I don’t for many of the less mathematical or less CS-ish
+courses I’ve had to learn.
+</p>
+
+<p>
+Maybe I just happen to be a bright student who cannot handle high loads
+too well. Maybe I just hate to spent my entire timeframe on studies and
+also like to have other interests like working on
+<a href="$(ROOT)/open-source/">open source projects</a>, or
+corresponding with my friends. But I don’t think there’s anything wrong
+with any of these two facts, and it’s a shame the Technion could not have
+made it easier on me. If I could study hard the entire semester and then
+be sure I will score high on my tests, it would have made the work
+worthwhile, and me less frustrated as a result. But as it is, it’s not the
+case.
+</p>
+
+<p>
+Right now, my general impression of the Technion is more or less positive.
+But I’m still not sure it was worth my time.
+</p>
+
+<h3 id="workplaces_and_the_diploma">7. How Workplaces Treat the Diploma</h3>
+
+<p>
+Here I have a lot to complain. It is unfortunate that some workplaces
+treat university diplomas as a necessary pre-condition for getting into
+some positions. Due to the recent recession, some workplaces have gone far
+enough into demanding to accept only cum-laude students or those with a
+high degree.
+</p>
+
+<p>
+Let’s face it: many university graduates write damn right hideous code.
+And many of them are honour students. Also, many people with very little
+qualifications can write very good code and have a very good output. I
+don’t think people with diplomas necessarily make better engineers, or
+better team-heads, or better managers.
+</p>
+
+<p>
+During the recession, I was rejected from a workplace because my grades were
+too low. When I wrote the original version of this article, I had an average
+of %82, which was not bad at all for a Technion student. (I graduated with an
+average of 84.6% which is even nicer, and technically makes me a cum-laude
+student). However, I:
+</p>
+
+<ol>
+<li>
+Didn’t take the second date exams if I succeeded in the first date,
+even with a very low score. Likewise, I never took a course a second time to
+improve the grade. I figured that the extra points were not worth the extra
+aggravation.
+</li>
+
+<li>
+I didn’t dedicate 100% of my time to studying. I also spend a lot of
+time doing other things, most of which increase my knowledge and
+competancy as an engineer. I simply _cannot_ do that, because I know my
+grades will have only a marginal effect on my proficiency.
+</li>
+
+</ol>
+
+<p>
+So, despite the fact I wrote several open source projects, and am a
+more able engineer than many perpetually honour students I know, I was
+rejected upfront, without even a calling to a job interview. Not all
+workplaces are like that, naturally, but it was still frustrating.
+</p>
+
+<p>
+A person can get a good mastery of computer science from online
+resources and books alone. But unfortunately workplaces don’t seem to
+share this view from some reason, which is unfortunate, as they are losing
+a great deal of good candidates. (and accepting some very bad ones).
+</p>
+
+<p>
+<b>Recent Note:</b> it seems that lately, the Israeli (and international)
+market began to recover from the recession, and there is now
+a genuine shortage of IT workers. As a result many employers have become
+less picky in such superficial candidate parameters as grades’ average,
+and are looking for actual coding abilities and compotency.
+</p>
+
+<h3 id="whether_to_study">8. Should I study or not? And what?</h3>
+
+<p>
+I don’t regret studying Electrical Engineering instead of Computer Science.
+Yes, it was harder for me, and took longer, and was more frustrating, and my
+grade as a CS student was probably much lower. However, I learned more than I
+could in CS, and it was more challenging. I preferred to be a tail of the lions
+than the head of the jackals. I have a natural knack for computer science, and
+to a slightly lesser extent - mathematics. On the other hand, I didn’t have one
+for many of the courses I studied. It should be noted that even someone who
+graduates from the Technion with a passing average, is way above the average
+intelligence.
+</p>
+
+<p>
+Paul Graham <a href="http://www.paulgraham.com/college.html">muses</a> that
+there are departments, where students find it too hard to learn so they
+switch to a similar and less demanding department. An example he gives is
+Mathematics majors switching to Computer Science. (Ironically, he studied
+Philosophy, which is considered one of the least demanding department). I
+didn’t know anyone who switched to Electrical Engineering from a different
+department. EE is widely considered, perhaps by myth, one of the two toughest
+departments in the Technion Prime (where the Technion Prime is everything
+excluding Medicine).
+</p>
+
+<p>
+What I have second thoughts about is having studied in the first place. I’ve
+learned a lot during the years I studied, but a lot of it was from
+experimentation. In fact, I clearly recalled liking to work better than I
+liked to study, and that I felt I learned more <b>practical</b> things.
+However, before the Technion, a lot of the solutions I implemented at programs
+were much more superficial than afterwards.
+</p>
+
+<p>
+I suppose I could have gained the same software engineering knowledge by
+reading many books or by reading enough source code.  However, I’m not sure
+books give you as much exercise and hands-on experience as the curriculums of
+studies give. At least not unless you’re both extremely disciplined and very
+auto-didactic.
+</p>
+
+<p>
+One note that is in order, is that Electrical Engineering studies vary from
+university to university. In many places, there isn’t even a proper logic
+design course, or the students are given very little choice beside courses
+in programming proper. So I believe that you need to choose your college
+carefully if you want to have a degree more oriented towards computer science,
+computer engineering and software engineering.
+</p>
+
+<p>
+So <b>should you go to university</b>? And if so what should you study?
+Unfortunately, I cannot answer this question. I do suggest, however, <b>not
+to study directly</b> after high school (or in some cases, the community or
+Military service). Take the time to work either voluntarily or for pay. As a
+software developer, I have found my experience working on open source software
+highly instructive. Many open source projects are run in a way that puts most
+software development shops to shame.
+</p>
+
+<p>
+Furthermore, even when studying, <b>don’t dedicate your life to studies</b>,
+make sure to <b>expand your horizons</b> in other matters. People who dedicate
+their life to studies are closed-minded. By all means, you should follow
+current trends; contribute open-source software; “blog” - maintain a weblog, a
+web site, and write articles and essays; hang out with your friends and fellow
+students; or just have plain old fun or get rest.
+</p>
+
+<p>
+Finally, don’t expect the university to make you a good programmer - it won’t.
+Don’t even expect it to teach you programming, if you don’t already know it.
+If you want to become a better programmer
+<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">read
+my “Advice for the Young”</a> essay, and also see
+<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/#other_sources">the
+other links there</a>.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+Thanks to Nadav Har’El, Adir Abraham, Omer Zak, Elizabeth Sterling, guy
+keren, Ido Kanner and other people from
+<a href="http://www.hackers.org.il/">Hackers-IL</a> and
+<a href="http://www.perl.org.il/">the Israeli Perl Mongers</a> for
+commenting on early drafts of this article.
+</p>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+<p>
+
+Want to become IT expert?  Download the <a
+href="http://www.testking.eu/certification/CISSP.htm">testking CISSP</a> dumps
+and <a href="http://www.testking.eu/exam/70-649.htm">testking 70-649</a>
+practice exam to competently prepare for real exam and improve your test score
+using <a href="http://www.testking.eu/exam/220-701.htm">testking 220-701</a>
+resources.
+
+</p>
+</define-tag>
+
+<camila_ron />
+

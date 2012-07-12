@@ -1,0 +1,36 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "The Perfect IT Workplace - Revision 1" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is the text of first revision of the my essay “The Perfect IT Workplace”.
+This page got <a
+href="http://www.reddit.com/r/programming/info/6p9rd/comments/">posted
+to reddit</a> by a fellow software enthusiast whom I referred to it and
+which he liked. I did not intend to publicse this particular draft, but
+I’m OK with it publicisied as is and would just work on the second revision
+now which will be better publicised.
+</p>
+
+<toc_div />
+
+
+<h3 id="itself">The Article Itself</h3>
+
+#include "docbook/4/rendered/perfect-it-workplace.html"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="perfect-it-workplace.pdf">Acrobat Reader (PDF) Format</a>.
+</li>
+<li>
+<a href="perfect-it-workplace.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+

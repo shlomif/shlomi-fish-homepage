@@ -1,0 +1,53 @@
+#include 'template.wml'
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+<h3>Demo</h3>
+<ol>
+<li>
+Open g_anwar1.jpg
+</li>
+<li>
+Select the "German flag smooth" gradient
+</li>
+
+<li>
+Select
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; Colors -&gt; Map -&gt; Gradient Map
+</tt>
+</menupath>
+.<br />
+
+(That's the GIMP's record for menu depth)
+</li>
+
+<li>
+Undo.
+</li>
+
+<li>
+Duplicate the gradient, and flip it.
+</li>
+
+<li>
+Select this copy.
+</li>
+
+<li>
+Apply a Gradient Map again.
+</li>
+
+<li>
+Experience with other gradients.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+

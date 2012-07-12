@@ -1,0 +1,164 @@
+#include '../template.wml'
+
+<latemp_subject "Shlomi Fish’s Homepage Old News Items" />
+
+<:{
+use Shlomif::Homepage::News;
+
+binmode STDOUT, ":utf8";
+my $news = Shlomif::Homepage::News->new();
+print $news->render_old();
+}:>
+
+
+<h3 class="newsitem">30-Oct-2004</h3>
+
+<p class="newsitem">
+Added the <a href="$(ROOT)/open-source/bits.html">Open-Source Bits and
+Bobs page</a>. Added the
+<a href="$(ROOT)/work/academic/Thermo/Material-Summary/">material summary
+for the Thermodynamics course I took in the Technion</a>.
+</p>
+
+<h3 class="newsitem">12-Oct-2004</h3>
+
+<p class="newsitem">
+The site has a new URL, which should cause less name-service resolution
+problems. The new domain is
+<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>. The
+old domain will redirect to the new one.
+</p>
+
+<h3 class="newsitem">23-Sep-2004</h3>
+
+<p class="newsitem">
+The site has seen a major revamp in the last couple of days. Here is a list
+of the most important changes and news:
+</p>
+
+<ol class="newsitem">
+<li>
+I added the <a href="http://swpat.ffii.org/">“Stop Software Patents!”</a> nag
+image to all my pages and a top frame to the front page.
+</li>
+<li>
+There’s a new code for the navigation menu. The old code was an unholy mess,
+and the new code is a pure Perl one, which makes the nav-menu much easier
+to maintain.
+</li>
+<li>
+Thanks to the new navigation menu code, there are now Mozilla/Firefox
+navigation links, that allow traversing the site page by page. For those who
+are unfortunate enough not to use these browsers, some rudimentary arrows were
+added above the navigation menu.
+</li>
+<li>
+I now have an Uber-kitchy leading path of the page sections and sub-sections at
+the top.
+</li>
+<li>
+I’m now <a href="work/private-lessons/">giving private lessons</a> in
+high-school subjects and computer-related topics.
+</li>
+</ol>
+
+<h3 class="newsitem">10-Aug-2004</h3>
+
+<p class="newsitem">
+My <a href="http://www.advogato.org/person/shlomif/">Advogato Diary</a>
+is back online, with several new entries posted since Advogato was restored.
+I also conducted <a href="open-source/interviews/sussman.html">an
+interview with Ben Collins-Sussman</a>.
+</p>
+
+<h3 class="newsitem">17-Feb-2004</h3>
+
+<p class="newsitem">
+The URL of my homepage has changed. The new URL is <a href="http://shlomi.il.eu.org/">http://shlomif.il.eu.org/</a>. The old URLs will work for the near
+future, but not permanently. <a href="shlomif.il.eu.org-questions.html">Read
+more about it</a>.
+</p>
+
+<h3 class="newsitem">26-Jun-2003</h3>
+
+<p class="newsitem">
+Added my favourite online comic strips to the <a href="links.html">links
+section</a>.
+</p>
+
+<h3 class="newsitem">19-Jun-2003</h3>
+
+<p class="newsitem">
+Added the <a href="open-source/favourite/">favourite open source
+software list</a>. Added the
+<a href="<rellink url="lecture/mini/mdda/" host="vipe" />">Meta-Data
+Database Access lecture</a> to the <a href="<rellink url="lecture/" host="vipe" />">lectures collection</a>.
+</p>
+
+<h3 class="newsitem">26-Oct-2002</h3>
+
+<p class="newsitem">
+Added the <a href="open-source/resources/software-tools/">software
+tools directory</a>.
+</p>
+
+<h3 class="newsitem">7-Aug-2002</h3>
+
+<p class="newsitem">
+Added <a href="humour/ways_to_do_it.html">Ways to do it according
+to the Programming Languages of the World</a> to the Humour section. Enjoy!
+</p>
+
+<h3 class="newsitem">18-May-2002</h3>
+
+<p class="newsitem">
+I have placed the fortune files I am maintaining online
+<a href="humour/fortunes/">here</a>.
+</p>
+
+<h3 class="newsitem">26-Jun-2003</h3>
+
+<p class="newsitem">
+Added my favourite online comic strips to the <a href="links.html">links
+section</a>.
+</p>
+
+<h3 class="newsitem">19-Jun-2003</h3>
+
+<p class="newsitem">
+Added the <a href="open-source/favourite/">favourite open source
+software list</a>. Added the
+<a href="<rellink url="lecture/mini/mdda/" host="vipe" />">Meta-Data
+Database Access lecture</a> to the <a href="<rellink url="lecture/" host="vipe" />">lectures collection</a>.
+</p>
+
+<h3 class="newsitem">26-Oct-2002</h3>
+
+<p class="newsitem">
+Added the <a href="open-source/resources/software-tools/">software
+tools directory</a>.
+</p>
+
+<h3 class="newsitem">7-Aug-2002</h3>
+
+<p class="newsitem">
+Added <a href="humour/ways_to_do_it.html">Ways to do it according
+to the Programming Languages of the World</a> to the Humour section. Enjoy!
+</p>
+
+<h3 class="newsitem">18-May-2002</h3>
+
+<p class="newsitem">
+I have placed the fortune files I am maintaining online
+<a href="humour/fortunes/">here</a>.
+</p>
+
+<h3 class="newsitem">15-May-2002</h3>
+
+<p class="newsitem">
+I set up a
+<a href="http://groups.yahoo.com/group/shlomif-stories/">mailing-list</a> for
+discussing my stories on Yahoo-Groups. Feel free to join it or post messages
+there. (one does not need to be a subscriber to post).
+</p>
+

@@ -1,0 +1,44 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+Right click with mouse to the left of code to add/remove breakpoints.
+</li>
+
+<li>
+All gdb commands work from gdb window at bottom of screen.
+</li>
+
+<li>
+When program crashes, first look at stack back-trace,by choosing
+<tt>&lt;menu&gt; &rarr; Status &rarr; Backtrace</tt>.
+</li>
+
+<li>
+To display data structures use display section, right-click on a
+variable and choose display.
+</li>
+
+<li>
+In display section, double click on a pointer to dereference it.
+</li>
+
+<li>
+To have DDD detect the same object is being referenced from two places,
+type Alt-a. Or <tt>&lt;menu&gt; &rarr; Data &rarr; Detect Aliases</tt>. In
+latest version this is default behavior.
+</li>
+
+<li>
+When debugging C++, to avoid stepping into STL functions, one
+should normally use <tt>Next</tt>; use <tt>Step</tt> when you specifically want
+to step into a function.
+</li>
+
+<li>
+Place mouse over a variable to see its value.
+</li>
+
+</points>
+

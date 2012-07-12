@@ -1,0 +1,49 @@
+<set-var disable_comments="1" />
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "“Usability” of the Perl Online World for Newcomers - Version 1" />
+
+<p class="hilight">
+[ <a href="#itself"><b>Skip to the main content</b></a> ]
+</p>
+
+<h2 id="main">Usability of the Perl Online World for Newcomers</h2>
+
+<h3 id="main_intro">Introduction</h3>
+
+<p>
+This is an essay I’ve written and published (on a different place) that
+discussed the suitability of the Perl online world for newcomers. It had
+received a lot of commentary, both supporting, and criticising.
+</p>
+
+<toc_div />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "docbook/5/rendered/usability-of-perl-world-for-newcomers.xhtml"
+
+<h2 id="other_formats">Other Formats</h2>
+
+
+<set-var db5_base="usability-of-perl-world-for-newcomers" />
+<ul>
+<li>
+<a href="<get-var db5_base />.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+</li>
+<li>
+<a href="<get-var db5_base />.xml">Original DocBook/XML</a>.
+</li>
+<li>
+<a href="<get-var db5_base />.rtf">Word RTF</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+<b>TODO :</b> fill in.
+</p>
+

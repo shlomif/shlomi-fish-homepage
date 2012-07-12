@@ -1,0 +1,123 @@
+#include '../template.wml'
+
+<latemp_subject "Solver and Generator for ABC Path" />
+
+<set-var modname="Games-ABC_Path-Solver" />
+<set-var sco_mod="http://search.cpan.org/dist/<get-var modname />/" />
+
+<set-var gen_modname="Games-ABC_Path-Generator" />
+<set-var gen_sco_mod="http://search.cpan.org/dist/<get-var gen_modname />/" />
+
+<p>
+The
+<a href="<get-var sco_mod />"><get-var modname /></a> Perl 5 CPAN distribution implements a solver for
+<a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
+brainbashers.com. It provides a standalone command-line “abc-path-solver”
+program and an Application Programmer Interface (API).
+</p>
+
+<p>
+The
+<a href="<get-var gen_sco_mod />"><get-var gen_modname /></a> Perl 5 CPAN
+distribution implements a generator for ABC Path layouts based on a random
+number seed. What it does is first generate a random path through the 5*5
+board, and then assigns the hints randomly. Sometimes the process takes a
+relatively long time to complete.
+</p>
+
+<p>
+The BitBucket.org repository also contains a port of the code of the solver
+and generator to JavaScript, which will hopefully allow it to be usable as
+an in-browser game in the future.
+</p>
+
+<p>
+Currently, documentation is a little lacking.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-abc-path-solver">For the ABC Path Solver</h3>
+
+<ul>
+
+<li>
+<a href="http://metacpan.org/release/<get-var modname />">The ABC Path Solver
+on metacpan.org</a> - download and more information.
+</li>
+
+<li>
+<a href="<get-var sco_mod />">The ABC Path Solver
+on search.cpan.org</a>.
+</li>
+
+<li>
+<p>
+<a href="https://bitbucket.org/shlomif/abc-path">BitBucket Repository</a>
+</p>
+</li>
+
+<li>
+<a href="http://freshmeat.net/projects/abc-path-solver">Freshmeat.net Record</a>
+</li>
+
+</ul>
+
+<h3 id="links-abc-path-gen">For the ABC Path Generator</h3>
+
+<ul>
+
+<li>
+<a href="http://metacpan.org/release/<get-var gen_modname />">The
+ABC Path Generator on metacpan.org</a> - download and more information.
+</li>
+
+<li>
+<a href="<get-var gen_sco_mod />">The ABC Path Generator
+on search.cpan.org</a>
+</li>
+
+<li>
+<p>
+<a href="https://bitbucket.org/shlomif/abc-path">BitBucket Repository</a>
+</p>
+</li>
+
+<li>
+<a href="http://freshmeat.net/projects/abc-path-generator">Freshmeat.net Record</a>
+</li>
+
+</ul>
+
+<h3 id="general-links">General ABC-Path Links</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.brainbashers.com/abcpath.asp">BrainBashers.com’s Daily
+ABC Path</a> - play ABC Path online. Furthermore, it is where I was introduced
+to the game.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.janko.at/">Otto Janko’s Homepage</a> - the inventor of
+ABC Path whose web-site contains many other puzzles (though most of the text
+is in German).
+</p>
+</li>
+
+</ul>
+
+
+<h2 id="licence">Licence</h2>
+
+<p>
+<get-var modname /> is licensed under the
+<a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>.
+</p>
+
+<h2 id="news">News</h2>
+

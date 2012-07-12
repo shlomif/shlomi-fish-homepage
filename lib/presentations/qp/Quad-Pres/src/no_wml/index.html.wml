@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+Using QuaD-Pres without WML is quite similar to using it with it.
+</li>
+<li>
+Again, start from a ready made presentation like the one I gave
+about <a href="http://www.gimp.org/">The GIMP</a>.
+</li>
+<li>
+<tt>Contents.pm</tt> behaves the same way as it does with WML. What
+is different is the format and behaviour of the individual pages.
+</li>
+</ul>
+
+<qpcontents />

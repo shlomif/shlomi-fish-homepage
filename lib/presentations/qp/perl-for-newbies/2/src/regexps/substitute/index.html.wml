@@ -1,0 +1,54 @@
+#include 'template.wml'
+
+
+
+<p>
+One can use regular expression to substitute an occurence
+of a regular expression found inside a string to something else. The operator
+used for this is <tt>s/$exp_to_search/$exp_to_subs_for/</tt>. The following
+simple program replaces a number with the string "Some Number":
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/substitute/number.pl" />
+</quadpres_code_block>
+
+<p>
+Notice that in this case, only the first occurence of the string will be
+substituted. The <tt>g</tt> switch which will be covered soon, enables us to
+substitute <b>all</b> of the occurences.
+</p>
+
+<p>
+One can include the captures that are matched in the expression as part of
+the substitution string. The first capture is <tt>$1</tt>, the
+second <tt>$2</tt> etc.
+</p>
+
+<p>
+Here's an example which reverses the order of two words at the beginning of a
+sentence:
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/substitute/reverse_words.pl" />
+</quadpres_code_block>
+
+
+<table class="note">
+<tr class="note">
+<td class="note">
+
+<h3 class="note">Note</h3>
+
+<p>
+The <tt>$1</tt>, <tt>$2</tt> variables are also available after the regular
+expression match or substitution is performed, and can be used inside
+your perl code.
+</p>
+
+</td>
+</tr>
+</table>
+

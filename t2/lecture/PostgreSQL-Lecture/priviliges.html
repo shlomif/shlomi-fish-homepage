@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Database Priviliges</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Database Priviliges</h1>
+<h3>* PostgreSQL users can grant and revoke permissions to use or
+modify their database data from other users.<br />
+<br />
+* The SQL commands GRANT and REVOKE are used for this
+purpose.<br />
+<br />
+* For example:<br />
+<br />
+As user postgres:<br /></h3>
+<pre>
+test=&gt; REVOKE INSERT ON employees FROM shlomi \g
+CHANGE
+test=&gt; REVOKE DELETE ON employees FROM shlomi \g
+CHANGE
+test=&gt; REVOKE UPDATE ON employees FROM shlomi \g
+CHANGE
+</pre>
+<h3><br />
+Those commands made the table employees read-only for the user
+shlomi.<br />
+<br />
+Now:</h3>
+<pre>
+test=&gt; GRANT INSERT ON employees TO shlomi \g
+CHANGE
+</pre>
+<h3><br />
+has given shlomi the permission to insert records into this table.
+(but not modify its existing contents or delete records).</h3>
+</body>
+</html>

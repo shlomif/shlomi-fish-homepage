@@ -1,0 +1,43 @@
+#include 'template.wml'
+
+<p>
+So why should we use accessors instead of doing a direct
+<tt>$person-&gt;{'age'}</tt> access to the object's property? There
+are several reasons for that:
+</p>
+
+<ol>
+
+<li>
+<p>
+Writing the property names directly each time is prone to mis-spellings
+and errors, because they are strings. On the other hand, with method calls,
+the existence of a particular one is validated at run-time, and will
+throw an exception if a method was misspelled into a name that is not present.
+</p>
+</li>
+
+<li>
+<p>
+If a property needs to be converted from a first-order property to a
+calculated value, then one can still use the existing method-based interface
+to access it, just by changing the implementation of the methods. On the
+other, this is much more difficult to change with a direct-field access.
+</p>
+</li>
+
+<li>
+<p>
+The external interface provided by methods is cleaner and easier to
+maintain compatibility with, than a direct class access.
+</p>
+</li>
+
+<li>
+<p>
+There may be other reasons, like better concurrency, persistence, etc.
+</p>
+</li>
+
+</ol>
+

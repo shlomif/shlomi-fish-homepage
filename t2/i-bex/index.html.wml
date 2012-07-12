@@ -1,0 +1,46 @@
+#include '../template.wml'
+
+<latemp_subject "“I, Bex!” - A StoneAge Clone for Perl/SDL" />
+
+<p>
+<a href="i-bex-0.1.13.tar.gz"><b>Download I-Bex Version 0.1.13</b></a>
+</p>
+
+<p>
+I-Bex is a clone of the old DOS Game StoneAge for <a
+href="http://sdlperl.org/">Perl/SDL</a>. It requires
+<a href="http://www.libsdl.org/">SDL</a>, <a
+href="http://www.perl.com/">Perl</a>, and Perl/SDL installed.
+</p>
+
+<p>
+To run it type <tt>perl i-bex [board name]</tt> on the command line at
+the code sub-directory. Currently, there are three boards available:
+<tt>board.txt</tt>, <tt>board2.txt</tt> and <tt>board3.txt</tt>.
+If you prepare more, please send them to me.
+</p>
+
+<p>
+I-Bex is distributed under the MIT/X11 license.
+</p>
+
+<h2>To Do List</h2>
+
+<ul>
+<li>
+Better Graphics
+</li>
+<li>
+Animation
+</li>
+<li>
+Themes and skins
+</li>
+<li>
+Startup menus
+</li>
+<li>
+More Levels. (very important!)
+</li>
+</ul>
+

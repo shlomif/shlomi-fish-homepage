@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<p>
+Perl has a module called CPAN with which one can install CPAN modules along
+with all of the modules they depend on. To invoke it type <tt>perl -MCPAN -e
+shell</tt> at the command line while being a super-user, and follow the
+instructions it gives you. The <tt>install</tt> command can be used to
+automatically install modules. For example: to install the XML::XSLT module,
+the following can be done from the CPAN prompt:
+</p>
+
+<quadpres_code_block>
+cpan&gt; install XML::XSLT
+</quadpres_code_block>
+
+<p>
+This will in turn install "XML::Parser" and other modules it needs.
+</p>
+
+<h2 id="cpanplus">CPANPLUS.pm</h2>
+
+<p>
+CPANPLUS.pm is a more modern, modular, and enhanced alternative to
+CPAN.pm. It is part of perl-5.10.x and above, but can be installed separately.
+As such, its use is more recommended.
+</p>
+
+<h2 id="distro-specific">Operating System/Distribution - Specific Ways</h2>
+
+<p>
+Normally, you should look for a suitable native package of the CPAN module
+for your operating system or
+<a href="http://en.wikipedia.org/wiki/Linux_distribution">distribution</a>. If
+that fails, you should consider building your own package. Consult your
+distribution's help channels for more information.
+</p>

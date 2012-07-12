@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<p>
+The <a href="http://search.cpan.org/dist/Error/">Error.pm</a>
+module, which is available from CPAN, supplies object oriented
+exception handling. Namely, one can catch exceptions of a certian class
+explicitly, and differentiate between several types of exceptions.
+</p>
+
+<p>
+Error.pm provides a lot of syntactic sugar that tends to break easily.
+As such, its use is not too recommended.
+</p>
+
+<p>
+On the other side, there's the
+<a href="http://search.cpan.org/dist/Exception-Class/">Exception-Class
+module</a> which provides object-oriented exceptions with no special
+syntactic sugar, and which works very well. Its use is highly recommended.
+</p>
+
+<p>
+Throwing objects which are associated with classes is a good way to be able
+to handle one's exceptions programatically .
+</p>

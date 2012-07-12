@@ -1,0 +1,103 @@
+[%- USE String -%]
+[% top_header %]
+
+QUADPRES_EXE = quadp
+
+[% FOREACH db_ver = [4,5] %]
+[% IF db_ver == '5' %]
+[% xslt_ss = '$(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET)' %]
+[% ELSE %]
+[% xslt_ss = '$(XHTML_XSLT_SS)' %]
+[% END %]
+[% docs = ((db_ver == 4) ? docs_4 : docs_5) %]
+[% db_ver_path = ( db_ver _ "/" ) %]
+[% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
+
+[% FOREACH d = docs %]
+$(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
+[% END %]
+
+[% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
+
+[% FOREACH fmt = fmts %]
+[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %][% END %]
+
+[% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
+
+[% END %]
+
+# The individual docs.
+[% FOREACH d = docs %]
+
+$(T2_DEST)/[% d. path %]/[% d.base %].pdf: $([% db_macro_prefix %]_PDF_DIR)/[% d.base %].pdf
+[% "\t" %]cp -f $< $@
+
+$(T2_DEST)/[% d. path %]/[% d.base %].xml: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml
+[% "\t" %]cp -f $< $@
+
+$(T2_DEST)/[% d. path %]/[% d.base %].rtf: $([% db_macro_prefix %]_RTF_DIR)/[% d.base %].rtf
+[% "\t" %]cp -f $< $@
+
+[% SET rm_line = "" %]
+[% IF d.custom_css %]
+[% SET rm_line = "\trm -f \$\@/style.css\n" %]
+[% END %]
+
+$(T2_DEST)/[% d.path %]/[% d.base %]: $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]
+[% "\t" %]rsync -r -v $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+[% rm_line %]
+
+$([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
+[% "\t" %]$(DOCMAKE_WITH_PARAMS) \
+[% "\t\t" %]--stringparam "docmake.output.format=xhtml" \
+[% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \
+[%- SET v = d.work_in_progress ? "1" : "" %]
+[% "\t\t" %]--stringparam "docmake.output.work_in_progress=[% v %]" \
+[% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
+[% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml-1_1 $< \
+[% "\t" %]&& touch $@
+[% "\t" %]perl -lpi -e 's/[ \t]+\z//' $$(ls $@/* | grep -P '\.x?html$$')
+
+[% END %]
+
+[% END # db_ver loop.
+%]
+
+[% SET pres_targets = [] %]
+
+[% # The Perl-for-Newbies files handling.
+%]
+
+[% FOREACH l_base = quadp_presentations.keys.sort %]
+
+[% SET l = "pres_" _ l_base %]
+[% SET v = String.new(l).upper() %]
+[% SET val = quadp_presentations.$l_base %]
+[% SET files = val.src_files %]
+
+[% v %]_BASE = [% val.src_dir %]
+
+[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
+[% v %]_DEST = $(T2_DEST)/[% val.dest_dir %]
+[% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
+[% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,[% files.join(" ") %])
+
+[% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
+
+[% # TODO : change from qp to "quadp".
+%]
+[% BLOCK cmd %]
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" WMLOPTS="--passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/presentations/qp/common/')"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
+[% END %]
+
+[% pres_targets.push(l) %]
+
+$([% v %]_DEST_INDEX): $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml
+[%- INCLUDE cmd %]
+
+$([% v %]_DEST_FILES): $([% v %]_DEST)/%: $([% v %]_BASE)/src/%.wml
+[%- INCLUDE cmd %]
+
+[% END %]
+
+presentations_targets: [% pres_targets.join(" ") %]

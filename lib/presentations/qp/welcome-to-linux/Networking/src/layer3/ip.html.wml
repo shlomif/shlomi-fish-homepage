@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<points>
+<li>
+The most common protocol in this
+layer is IPv4.
+</li>
+<li>
+Another protocol which is commonly used is ICMP
+(Internet Control Message Protocol), which is used for various
+network control tasks.
+<ul>
+<li>
+The <a href="http://techpubs.sgi.com/library/tpl/cgi-bin/getdoc.cgi?coll=linux&amp;db=man&amp;fname=/usr/share/catman/man8/ping.8.html&amp;srch=ping"><tt>ping</tt></a> command is the most common use of ICMP.
+</li>
+</ul>
+</li>
+<li>
+Other protocols exist in this layer, and most of them are supported by
+the Linux kernel, but they are only rarely used.
+</li>
+</points>

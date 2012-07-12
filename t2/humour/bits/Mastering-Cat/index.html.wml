@@ -1,0 +1,218 @@
+#include '../template.wml'
+
+<latemp_subject "Interview with the author of “Mastering cat”" />
+
+<div style="float:right; border: green solid thin; padding: 0.5em; margin-left: 0.5em;">
+<a href="mastering-cat-cover.jpg"
+    title="Mastering cat - a new book from O’Reilly"><img
+    src="small-cover.png" alt="Mastering cat Cover" style="border:0" /></a>
+</div>
+
+<p>
+<b>Published on:</b> 1-April-2009
+</p>
+
+<p>
+Shlomi Fish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>
+has taken the time to sit down with us for an interview on his latest
+book, <i>Mastering cat</i>. In this 344 pages-long book, Fish details
+everything  you wanted to know about the UNIX <tt>cat</tt> command. We
+decided to  have an interview with him to find out more about the
+book’s motivation, content, and philosophy.
+</p>
+
+<p>
+<b>O’Reilly Net</b>: Hi Shlomi!
+</p>
+
+<p>
+<b>Shlomi Fish</b>: Hi!
+</p>
+
+<p>
+<b>O’Reilly Net</b>: So, what has motivated you to write the book?
+</p>
+
+<p>
+<b>Shlomi Fish</b>: Well, I realised people use <tt>cat</tt> so often
+that they don’t take the time to fully investigate it and learn it.
+For example, many people I worked with believed that <tt>cat</tt> can
+only be used to output one file at a  time. So to output several files
+they used something like:
+</p>
+
+<pre>
+(cat file1.txt ; cat file2.txt ; cat file3.txt) | command
+</pre>
+
+<p>
+The horror! cat accepts several files as arguments. So you can write
+it as:
+</p>
+
+<pre>
+cat file1.txt file2.txt file3.txt | command
+</pre>
+
+<p>
+This has motivated me to write the book, to make people fully
+understand the command.
+</p>
+
+<p>
+<b>O’Reilly Net</b>: Isn’t mastering <tt>cat</tt> supposed to be quite
+easy? Does it really necessitates its own book?
+</p>
+
+<p>
+<b>Shlomi Fish</b>: Hell no! Mastering <tt>cat</tt> is not easy at all.
+In fact, mastering <tt>cat</tt> is almost as difficult as herding cats.
+</p>
+
+<p>
+For example, one case where I found that people truly
+underestimate the power of cat is in the prefixing a line example. You
+can do that with:
+</p>
+
+<pre>
+echo "This would be the first line" | cat - myfile.txt &gt; myfile.txt.new
+mv -f myfile.txt.new myfile.txt
+</pre>
+
+<p>
+But people do not realize that and instead opted to use sed, awk, or
+even perl (!). It can be taken further, of course. If the prefix is
+already in its own file, you can simply use <tt>cat prefix.txt
+    myfile.txt</tt>
+</p>
+
+<p>
+Of course, if you want to append the same text to both the start and
+the end of a file, you can’t do that with <tt>cat - myfile.txt -</tt>.
+It simply doesn’t work that way. So, I end up explaining a lot about
+UNIX pipeline concepts in the book.
+</p>
+
+<p>
+<b>O’Reilly Net</b>: So what else does your book cover?
+</p>
+
+<p>
+Well, I cover many things there. Among them are:
+</p>
+
+<ol>
+
+<li>
+History of the <tt>cat</tt> command.
+</li>
+
+<li>
+Differences between the various <tt>cat</tt> implementations. (GNU,
+the BSDs, System V, etc.)
+</li>
+
+<li>
+<tt>cat</tt> equivalents in other operating systems (DOS, Win32,
+VMS, OS/390, etc.)
+</li>
+
+<li>
+Overview of the GNU cat codebase (for programmers).
+</li>
+
+</ol>
+
+<p>
+I’m also focusing on the various <tt>cat</tt> flags, which aid in its
+interactive use. For example, the <tt>-E</tt>/<tt>--show-ends</tt>
+flag, that places dollar signs at the end of the lines.
+</p>
+
+<p>
+Aside from all that, I’m also covering
+<a href="http://jl.photodex.com/dog/">dog</a> which is a program
+that provides a superset of the <tt>cat</tt> program. I should also
+mention <tt>mouse</tt> which aimed to provide an even greater
+superset, and was never released. Rumors say some parts of it are
+based on code of the leaked Windows 2000 sources.
+</p>
+
+<p>
+<b>O’Reilly Net</b>: Your book seems bound to be popular (for some
+values of popularity). What can we expect from you next?
+</p>
+
+<p>
+<b>Shlomi Fish</b>: Well, I hope many people will buy the book, or
+read it online so they’ll be educated about <tt>cat</tt>. If you like
+<i>Mastering cat</i>, look forward to my next book - <i>Mastering echo</i>. I
+expect it to be published next fall.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+Thanks to Drew Dexter, <a href="http://elcuco.blogli.co.il/">Diego
+Iastrubni</a>, <a href="http://www.zak.co.il/">Omer Zak</a>,
+<a href="http://www.wgz.org/chromatic/">chromatic</a> and others for
+reviewing this item and giving some useful advice - some of which
+was incorporated into the final version.
+</p>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+
+<li>
+<a href="http://linux.slashdot.org/article.pl?sid=09/04/01/1211240">On
+Slashdot.org</a> - with many comments.
+</li>
+
+<li>
+<a href="http://broadcast.oreilly.com/2009/04/mastering-cat-the-newest-oreil.html">“‘Mastering cat’, the newest O’Reilly title” - by James Turner on
+O’Reilly Broadcast</a>
+</li>
+
+<li>
+<a href="http://tech.groups.yahoo.com/group/hackers-il/message/5033">On the
+Hackers-IL mailing list</a> (with some replies)
+</li>
+
+<li>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg54899.html">On
+the Linux-IL mailing list</a> (with some replies)
+</li>
+
+<li>
+<a href="http://sdteffen.blogspot.com/2009/04/mastering-cat.html">On Steffen
+Macke’s blog</a>
+</li>
+
+<li>
+<a href="http://scalability.org/?p=1327">On scalability.org</a>
+</li>
+
+</ul>
+
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2009" />
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-09-22
+
+<hr />
+
+<p>
+Pass <a href="http://www.testking.com/MCP-certification-training.htm">mcp</a>
+and <a href="http://www.testking.com/VCP-410.htm">VCP-410</a> exam and get
+certified. The best <a href="http://www.testking.com/CISSP.htm">cissp</a>
+certification are at your pace now!
+</p>
+
+</define-tag>
+
+<camila_ron />

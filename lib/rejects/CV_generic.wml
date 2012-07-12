@@ -1,0 +1,343 @@
+#include '../template.wml'
+
+<subject "Shlomi Fish' Resume" />
+
+<br />
+<br />
+
+Shlomi Fish<br />
+4 Hakim Eliyaho St.<br />
+Tel Aviv, 69120<br />
+Phone Number: 03-6424668<br />
+Cell Phone: 051-541831<br />
+Fax Number: 03-6414319<br />
+E-mail Address: shlomif@vipe.technion.ac.il<br />
+Home Page: http://t2.technion.ac.il/~shlomif/<br />
+<br />
+<br />
+<br />
+
+<table cellspacing="0" cellpadding="7" border="0" width="650">
+
+<tr>
+<td colspan="2">
+<h2>Education</h2>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+Winter 1997 - Present<br />
+</td>
+<td valign="top">
+The Technion<br />
+Electrical Engineering Studies<br />
+Electrical Engineering (Proper)<br />
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+1991-1995
+</td>
+<td>
+Gymnasia Ivrit "Herzlia"<br />
+Major Subjects: Mathematics, English, Physics and Arabic<br />
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Experience</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Programming</h3>
+</td>
+</tr>
+
+<tr>
+    <td valign="top">
+        2001-Present
+    </td>
+    <td>
+        <p>
+        An Administrator for the <a href="http://www.iglu.org.il/">iglu.org.il</a>
+        site.
+        </p>
+
+        <p>
+        Maintaining several online services supported by the main server of
+        the Israeli Group of Linux Users (IGLU). Experience with Apache, Zope,
+        Perl, rsync, qmail and other programs. Created several online content
+        using these tools.
+        </p>
+    </td>
+</tr>
+<tr>
+    <td valign="top">
+        1999-Present
+    </td>
+    <td valign="top">
+        <p>
+        Maintaining a private Linux workstation
+        </p>
+        <p>
+        Maintained several home systems and one at the Computer Networks
+        Laboratory of the EE Department of the Technion. Experience with package
+        maintainance, system configuration, installing software, fixing
+        glitches, and daily use. Used RedHat Linux (version 5.x, 6.x) and
+        Mandrake Linux (version 7.1, 7.2, 8.0, 8.1, 8.2 and 9.0).
+        </p>
+    </td>
+</tr>
+<tr>
+<td valign="top">
+2000
+</td>
+<td valign="top">
+    <a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/">Freecell Solver</a> (an independent project)<br />
+Main Programmer<br />
+<br />
+<p>
+Started a C project to automatically solved games of Freecell. Continued in
+adding more features, optimizations, and clean-ups. Experienced with ANSI C
+Programming, writing portable code, Autoconf/Automake/Libtool, GNU Make,
+Writing RPM Specs, maintaining a web-site and interacting with users and co-developers over the
+Internet.
+</p>
+
+<p>
+Freecell Solver is distributed under the public domain, and has been integrated
+into three Freecell implementations so far.
+</p>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top">
+1997
+</td>
+<td valign="top">
+MikMod for Java (an independent project)<br />
+Programmer<br />
+<br />
+Converting a program from ANSI C to Java<br />
+<br />
+Mod Files are music files whose instruments are given as samples, and are
+played at different notes and effects to create the melody. The conversion
+was done by converting to C++, and then several steps of Javaization. The
+resultant code was working and produced good output, but was not very conformant
+to the Java style.
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+January 1997 - October 1997
+</td>
+<td valign="top">
+Smart Link Ltd.<br />
+Programmer and Tester<br />
+<br />
+Testing a software-based modem (Modio), Windows 95 Programming<br />
+<br />
+<p>
+I began working at Smart-Link as a tester for their software-based modem
+which was based on a soundcare and implemented the connection logic and the DSP
+in software. I worked with Windows 95 and Windows 95 OSR2. When Smart-Link hired
+a dedicated and more experienced Q&amp;A Engineer, I became a part-time tester/
+high-level programmer/general jack-of-all-trades.
+</p>
+
+<p>
+I worked with the Windows Drivers, MFC, Perl for Win32, DJGPP, Cygwin, a myriad
+of games and modem-related software, as well as Microsoft IIS.
+</p>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+April 1996 - October 1996
+</td>
+<td valign="top">
+Cortext Inc.<br />
+Programmer, WWW Site Maintainer, Limited UNIX Maintainance<br />
+<br />
+HTML composition, CGI programming, TCP/IP client/server programs<br />
+<br />
+
+<p>
+I worked in Cortext as a web-designer and CGI programmer. I worked with HTML,
+Apache, Perl, various UNIX flavours (FreeBSD, SunOS 4.1.3, IRIX) and Windows
+95 Workstations. Built several sites there, while still using almost exclusively
+Perl due to my limited knowledge (at that point) of UNIX.
+</p>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+June 1995 - March 1996
+</td>
+<td valign="top">
+Elpas Electro-optic Systems, Ltd.<br />
+Chief Programmer of EIRIS (Elpas Infra-Red Identification System)<br />
+<br />
+Databases, client/server programs (with NetDDE), English/Hebrew
+MS-Windows GUI<br />
+<br />
+<p>
+Elpas manufactured a network of sensors that was installed in each room
+of a building (say a hospital), received input from infra-red badges, that made
+it possible to determine where each person or piece of equipment was located. I
+maintained the software that run on a centralized computer, received the raw
+input from the sensors and processed it. My main issue was to replace an SCO
+UNIX server software with something internal of out own. We inspected working
+with Microsoft Access and ODBC, and eventually realized our own in-memory data
+managing was the most suitable solution due to the real-time nature of the application.
+</p>
+<p>
+Specialized in Windows (16-bit) Programming, SQL, ODBC, ANSI C and C++. Worked
+primarily with Borland C++ 4.5 and the Microsoft Developer Network CD.
+</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Mathematics</h3>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+1994
+</td>
+<td valign="top">
+1st place, first Annual Israel's Mathematics Contest for School Teams<br />
+Along with: Kobi Karlibakh, Or Tsok and Amit Zinger<br />
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Creative Writing</h3>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+1998
+</td>
+<td valign="top">
+The One with The Fountainhead<br />
+<br />
+A parody on "The Fountainhead" (by Ayn Rand) modelled on an episode of
+"Friends"<br />
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+1996-1997
+</td>
+<td valign="top">
+The Enemy and How I Helped to Fight it<br />
+<br />
+A satire about the situation in the Israeli-Lebanese border<br />
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>References</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Will be supplied upon request
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Fields of Expertise</h2>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Programming Languages:</b>
+</td>
+<td valign="top">
+C/C++, Perl, Basic, Java, JavaScript,
+Object Pascal, Bourne Shell, Scheme, Haskell,
+Matlab
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Operating Systems:</b>
+</td>
+<td valign="top">
+UNIX (Linux, FreeBSD, others), Windows 95/98, Windows 3.11, DOS
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Databases:</b>
+</td>
+<td valign="top">
+SQL, Delphi, ODBC, MS-Access, miniSQL/MySQL, PostgreSQL
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Internet Related:</b>
+</td>
+<td valign="top">
+HTML, CGI programming, JavaScript, TCP/IP Sockets, WebMetaLanguage
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Various Programs:</b>
+</td>
+<td valign="top">
+Word, Excel, WordPerfect, Corel-Draw, The GIMP, LaTeX, DocBook/XML
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<b>Development Tools:</b>
+</td>
+<td valign="top">
+Autoconf/Automake/Libtool, CVS, Subversion, BitKeeper
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Personal</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Born May 5, 1977<br />
+Single<br />
+</td>
+</tr>
+
+</table>

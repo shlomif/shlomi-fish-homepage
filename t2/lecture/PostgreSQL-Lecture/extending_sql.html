@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Extending the Database: SQL Functions</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Extending the Database: SQL Functions</h1>
+
+<ul>
+<li>
+SQL functions are group of SQL statements which return the
+last statement, which should be a SELECT one.
+</li>
+<li>
+Example:
+</li>
+</ul>
+
+<pre>
+test=&gt; CREATE FUNCTION name_len(employees)
+test-&gt; RETURNS int4
+test-&gt; AS
+test-&gt; 'SELECT
+test'&gt; CASE WHEN $1.last_name = null THEN 0 ELSE
+char_length($1.last_name) END
+test'&gt; + 1 +
+test'&gt; CASE WHEN $1.last_name = null THEN 0 ELSE
+char_length($1.last_name) END
+test'&gt; AS name_length'
+test-&gt; LANGUAGE 'sql' \g
+CREATE
+</pre>
+
+<ul>
+<li>
+Now you can use this function inside your queries:
+</li>
+</ul>
+<pre>
+test=&gt; SELECT name_len(employees)
+test-&gt; FROM employees \g
+</pre>
+
+</body>
+</html>

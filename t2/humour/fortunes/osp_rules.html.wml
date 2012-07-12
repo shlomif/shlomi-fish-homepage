@@ -1,0 +1,16 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Rules of Open Source Programming Fortunes" />
+
+<h2*>The Rules of Open Source Programming Fortunes Collection</h2*>
+
+<h3*>Table of Contents</h3*>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/osp_rules.xhtml-for-input"
+</div>
+

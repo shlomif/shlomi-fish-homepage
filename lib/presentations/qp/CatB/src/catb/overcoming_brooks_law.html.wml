@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+The Book "The Mythical Man-Month" by Fred Brooks was written in 1974 and
+a second edition was released in 1995, which included four new chapters.
+</li>
+<li>
+The Book is considered a seminal work in the field of software engineering
+and team management.
+</li>
+<li>
+It is basically a long list of problems a software project may encounter
+with solutions proposed for them. (some good, some partial)
+</li>
+<li>
+<b>Brooks' Law:</b> adding more developers to a project increases the number
+of interactions that have to exist between them, and so the output does
+not increase linearily.
+</li>
+<li>
+As ESR notes, Gerald Weiberg observed that in shops where developers were not
+territorial about their code, and encouraged others to look for bugs and
+correct them, output was drastically better.
+</li>
+<li>
+That's why an open-source Bazaar-style project which is open for public
+scrutiny can advance much faster than a completely closed Cathedral-style
+project.
+</li>
+</ul>
+

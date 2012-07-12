@@ -1,0 +1,50 @@
+#include 'template.wml'
+
+<points>
+<li>
+I needed a flexible command line processing, so I looked at Getopt::Long.
+</li>
+<li>
+Here's my code snippet:
+</li>
+</points>
+
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+    <span class="Comment"># This is a flag that specifies whether to present the moves in Run-Length</span>
+    <span class="Comment"># Encoding.</span>
+    <span class="Statement">my</span> <span class="Identifier">$to_rle</span> = <span class="Constant">1</span>;
+    <span class="Statement">my</span> <span class="Identifier">$output_states</span> = <span class="Constant">0</span>;
+    <span class="Statement">my</span> <span class="Identifier">$scan</span> = <span class="Constant">&quot;</span><span class="Constant">brfs</span><span class="Constant">&quot;</span>;
+    <span class="Statement">my</span> <span class="Identifier">$run_time_states_display</span> = <span class="Constant">0</span>;
+
+    <span class="Comment">#my $p = Getopt::Long::Parser-&gt;new();</span>
+    <span class="Statement">if</span> (! GetOptions(<span class="Constant">'</span><span class="Constant">rle!</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$to_rle</span>,
+        <span class="Constant">'</span><span class="Constant">output-states!</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$output_states</span>,
+        <span class="Constant">'</span><span class="Constant">method=s</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$scan</span>,
+        <span class="Constant">'</span><span class="Constant">rtd!</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$run_time_states_display</span>,
+        ))
+    {
+        <span class="Statement">die</span> <span class="Constant">&quot;</span><span class="Constant">Incorrect options passed!</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+    }
+</pre>
+</td>
+</tr>
+</table>
+
+<points>
+<li>
+<tt>!</tt> options are boolean. (specified with <tt>--rle</tt> and
+<tt>--norle</tt>)
+</li>
+<li>
+<tt>=s</tt> options accept a string argument.
+</li>
+<li>
+<tt>pass_throw</tt> configuration option - process the known arguments
+and leave the others alone - used for determining the game variant.
+</li>
+</points>

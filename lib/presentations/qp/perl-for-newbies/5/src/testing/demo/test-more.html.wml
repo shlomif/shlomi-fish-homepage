@@ -1,0 +1,91 @@
+#include 'template.wml'
+
+<p>
+Perl ships with a module called Test::More (which is part of the
+<a href="http://search.cpan.org/dist/Test-Simple/">Test-Simple CPAN
+distribution</a>, which may be more up-to-date there), that allows one
+to write and run tests using convenient functions. Here's an example
+for a test script:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/testing/demo/Test-More-1.t" />
+</quadpres_code_block>
+
+<p>
+<tt>is()</tt> is a Test-More built-in that compares a received result ("have")
+to an expected result ("want") for exact equivalence. There are also
+<tt>ok()</tt>, which just tests for truthhood, <tt>is_deeply()</tt> which
+performs a deep comparison of nested data structures, and others.
+</p>
+
+<p>
+You may also notice the <tt># TEST</tt> comments - these are
+<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> annotations
+that allow us to keep track of the number of test assertions that we have
+declared and update it.
+</p>
+
+<p>
+Now, the output of this would be:
+</p>
+
+<quadpres_code_block>
+1..7
+ok 1 - 0+0 == 0
+ok 2 - 2+2 == 4
+ok 3 - 4+20 == 24
+ok 4 - 20+4 == 24
+ok 5 - (-2)+8 == 6
+ok 6 - 4+3.5 == 7.5
+ok 7 - 3.5+3.5 == 7
+</quadpres_code_block>
+
+<p>
+This is in an output format called <a href="http://testanything.org/">TAP - The
+Test Anything Protocol</a>. There are several TAP parsers, which analyse the
+output and present a human-friendly summary. For example, we can run the test
+script above using the <tt>prove</tt> command-line utility that ships with
+perl 5:
+</p>
+
+<quadpres_code_block>
+$ prove Test-More-1.t
+Test-More-1.t .. ok
+All tests successful.
+Files=1, Tests=7,  0 wallclock secs ( 0.06 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.14 CPU)
+Result: PASS
+</quadpres_code_block>
+
+<p>
+For more information refer to the following sources:
+</p>
+
+<ol>
+
+<li>
+<a href="http://search.cpan.org/perldoc?Test%3A%3ATutorial">Test::Tutorial on the
+CPAN</a>
+</li>
+
+<li>
+<a href="http://szabgab.com/talks/perl_in_testing/">"Testing with Perl" by
+Gabor Szabo</a> - comprehensive material of a talk about Perl and testing.
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> - allows
+one to keep track of the number of assertions in the test file.
+</li>
+
+<li>
+<a href="http://web-cpan.shlomifish.org/modules/Test-Run/">Test-Run</a> - an
+alternative test harness under development (with output in colour and other
+enhancements).
+</li>
+
+<li>
+<a href="http://qa.perl.org/">The Perl Quality Assurance (QA) Project</a>.
+</li>
+
+</ol>

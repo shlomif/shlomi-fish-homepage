@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+
+
+<p>
+The print command which we encountered before can also be used to send output
+to files. In fact, the screen itself is a special filehandle, whose name is
+<tt>STDOUT</tt>, but since its use is so common, perl allows it to be omitted.
+</p>
+
+<p>
+The syntax of printing to a file is
+<tt>print File $string1, $string2, ... </tt>. Here's a short example that
+prepares a file with a pyramid in it:
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/files/print.pl" />
+</quadpres_code_block>
+
+<p>
+In order to print to more than one file at once, one needs to use two
+separate print statements. Here's an example, that prints to one file the
+sequnce 1, 1.1, 2, 2.1, 3, 3.1... and to the other the sequence 1, 1.5, 2, 2.5
+, 3, 3.5...
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/files/print2.pl" />
+</quadpres_code_block>
+

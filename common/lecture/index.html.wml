@@ -1,0 +1,168 @@
+#include '../template.wml'
+#include "xhtml/1.x/std/toc.wml"
+
+<latemp_subject "Lectures given by Shlomi Fish" />
+
+<h2*>Table of Contents</h2*>
+
+<toc />
+
+<h2 id="perl-for-newbies"><a href="./Perl/Newbies/">Perl
+for Perl Newbies</a></h2>
+
+<p>
+A series of lectures that teach Perl for Perl beginners. No knowledge of
+any other programming language is required, but it will be helpful.
+</p>
+
+<h2 id="web-publishing-using-lamp"><a href="<rellink url="lecture/LAMP/" host="t2" />">Web Publishing
+Using LAMP</a></h2>
+
+<p>
+A presentation about web publishing using the popular LAMP - Linux, Apache
+, MySQL and Perl/PHP/Python platform.
+</p>
+
+<h2 id="programming-languages">Programming Languages</h2>
+
+<h3 id="scheme-and-lc"><a href="./Lambda-Calculus/">Scheme and Lambda Calculus</a></h3>
+
+<p>
+A presentation that briefly covers the Scheme programming language and
+then use it to present the Lambda Calculus: a model for programming,
+which is a full-fledge programming language with just two primitives.
+</p>
+
+<h3 id="haskell-for-perlers"><a href="./Perl/Haskell/">Haskell for Perl Programmers</a></h3>
+
+<p>
+A Haskell for Perl Programmers introduction. (part of the Israeli Perl
+Mongers, Foreign Language Introductions). Perl-specific knowledge is not
+required and can be substituted by knowledge of a similar programming
+language.
+</p>
+
+<h2 id="various-tools">Various Tools</h2>
+
+<dl>
+<dt>
+<a href="./Gimp/">Do it with the GIMP</a>
+</dt>
+<dd>
+a lecture about the <a href="http://www.gimp.org/">GNU Image
+Manipulation Program</a>, a free Photoshop-like alternative with many
+powerful features.
+</dd>
+<dt>
+<a href="./PostgreSQL-Lecture/">The PostgreSQL Database Server</a>
+</dt>
+<dd>
+A lecture about the Postgres database server, a free and powerful SQL
+server for UNIX systems.
+</dd>
+<dt>
+<a href="./Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a>
+</dt>
+<dd>
+A tool about these two tools for helping to write compilers and interpreters.
+</dd>
+<dt>
+<a href="./Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a>
+</dt>
+<dd>
+A trio of tools that make writing programs that compile on various UNIX
+(and Win32) platforms easier.
+</dd>
+<dt>
+<a href="./WebMetaLecture/">Web Meta Lecture - a lecture about the
+Website Meta Language</a> (upcoming lecture)
+</dt>
+<dd>
+A tool for helping generate sophisticated static HTML web-sites.
+</dd>
+<dt>
+<a href="<rellink url="lecture/Vim/beginners/" host="t2" />">The Vim
+Editor for Beginners</a>
+</dt>
+<dd>
+<a href="http://www.vim.org/">Vim</a> stands for Vi-Improved and is a
+powerful, advanced, customisable, programmable and convenient editor for
+many systems (including UNIX, Windows, DOS and Mac OS). This presentation
+introduces it for beginners.
+</dd>
+</dl>
+
+# <a href="./Bash/">Bash Shell Usage and Programming</a><br />
+# <br />
+
+<hr />
+
+<h2 id="welcome-to-linux"><a href="./W2L/">"Welcome to Linux" Lectures</a></h2>
+
+<div class="indent">
+<p>
+Presentation Material that was prepared as part of the
+<a href="http://welcome.linux.org.il/">Israeli Welcome to Linux series</a>.
+Aims to introduce the Linux operating system to beginners.
+</p>
+</div>
+
+<h2 id="software-projects">Presentations about my software Projects</h2>
+
+<div class="indent">
+<h3 id="freecell-solver"><a href="./Freecell-Solver/">Freecell Solver - Evolution of a C Program</a></h3>
+
+<p>
+The history of my pet project, Freecell Solver.
+</p>
+
+<div class="indent">
+<h4 id="fcs-the-next-pres"><a href="./Freecell-Solver/The-Next-Pres/">Freecell Solver - The Next Presentation</a></h4>
+
+<p>
+More recent history and development of the project.
+</p>
+
+<h4 id="fcs-project-intro"><a href="./Freecell-Solver/project-intro/">Freecell Solver: Project Introduction</a></h4>
+
+<p>
+An introduction of the project for people who are interested to contribute.
+</p>
+</div>
+
+<h3 id="lm-solve"><a href="./LM-Solve/">LM-Solve</a></h3>
+
+<p>
+A presentation about <a href="../lm-solve/">LM-Solve</a>, a Logic Mazes Solver.
+Covers history, technologies, architecture and exotic bugs.
+</p>
+</div>
+
+<h2 id="catb"><a href="./CatB/">The Cathedral and the Bazaar - an Overview</a></h2>
+
+<div class="indent">
+<p>
+An overview of Eric Raymond's "The Cathedral and the Bazaar" series which
+is considered one of the most important works on the Open Source world.
+</p>
+</div>
+
+<h2 id="pres-tools">Presentation Tools</h2>
+
+<ul>
+<li>
+<a href="./Quad-Pres/">QuaD-Pres</a>
+</li>
+<li>
+<a href="./Pres-Tools/Perl-Point/">PerlPoint</a>
+</li>
+</ul>
+
+<h2 id="lightning-talks"><a href="./cat/lightning-talks/">Mini Presentations ("Lightning
+Talks")</a></h2>
+
+<div class="indent">
+<p>
+Short presentations on various topics.
+</p>
+</div>

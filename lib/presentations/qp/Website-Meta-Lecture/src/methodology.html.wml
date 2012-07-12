@@ -1,0 +1,38 @@
+#include 'template.wml'
+
+<points>
+<li>
+WML makes 9 passes at the input file:
+</li>
+</points>
+
+<ol>
+<li>
+Source Reading and Include File Expansion (ipp)
+</li>
+<li>
+HTML Macro Construct Expansion (mp4h) (Meta-tags, conditionals, etc)
+</li>
+<li>
+Perl 5 Programming Construct Expansion (eperl)
+</li>
+<li>
+M4 Macro Construct Expansion (gm4)
+</li>
+<li>
+Diversion Filter (divert) - diverting text to different locations
+</li>
+<li>
+Character and String Substitution (asubst)
+</li>
+<li>
+HTML Fixup (htmlfix)
+</li>
+<li>
+Line Stripping and Output Fixup (htmlstrip)
+</li>
+<li>
+Output Splitting and Final Writing (slice)
+</li>
+</ol>
+

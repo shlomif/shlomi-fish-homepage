@@ -1,0 +1,396 @@
+#include 'template.wml'
+
+<p>
+This section will demonstrate basic version control usage using the
+<a href="http://mercurial.selenic.com/">Mercurial version control system</a>.
+</p>
+
+<p>
+<b>Please note:</b> by choosing Mercurial I do
+not mean to imply that it is the best VCS out there or that you should
+necessarily use it. By all means, it is likely that there are other VCSes
+which are better in many respects. However, I'm familiar with Mercurial, and I
+think it is suitable for the demonstration here.
+</p>
+
+<p>
+If you're interested in choosing a version control system, you can refer to
+these resources:
+</p>
+
+<ul>
+
+<li>
+<a href="http://better-scm.shlomifish.org/">The Better SCM Site</a>
+</li>
+
+<li>
+<a href="http://producingoss.com/en/vc-systems.html">The Free Version Control
+Systems appendix</a> of “Producing Open Source Software” by Karl Fogel.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/List_of_revision_control_software">The
+Wikipedia list of version control systems</a>
+</li>
+
+</ul>
+
+<h2 id="demo">The Demo</h2>
+
+<p>
+First of all, install Mercurial using your operating system's package
+manager, or by downloading an installer from the
+<a href="http://mercurial.selenic.com/">Mercurial site</a>.
+</p>
+
+<p>
+Then create a new empty directory and run <tt>hg init .</tt>:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test$ hg init .
+</quadpres_code_block>
+
+<p>
+Now let's add some files. Start your favourite text editor and put these
+contents in the file <tt>MyModule.pm</tt>:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/version-control/MyModule.pm" />
+</quadpres_code_block>
+
+<p>
+Now let's put it under version control:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test$ mkdir MyModule
+$p4n/5/merc-test$ cd MyModule/
+$p4n/5/merc-test/MyModule$ gvim MyModule.pm # Edit it.
+$p4n/5/merc-test/MyModule$ ls
+MyModule.pm
+$p4n/5/merc-test/MyModule$ hg status
+? MyModule/MyModule.pm
+</quadpres_code_block>
+
+<p>
+As we can see from the output of <tt>hg status</tt>, the file is not
+tracked. Let's add it:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg add MyModule.pm
+$p4n/5/merc-test/MyModule$ hg status
+A MyModule/MyModule.pm
+$p4n/5/merc-test/MyModule$
+</quadpres_code_block>
+
+<p>
+Now the file is scheduled to be commited (note the <tt>A</tt>). Let's
+commit it:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg commit -m "Added MyModule.pm"
+$p4n/5/merc-test/MyModule$ hg status
+$p4n/5/merc-test/MyModule$
+</quadpres_code_block>
+
+<p>
+We can see it in the output of the version control command <tt>hg log</tt>,
+which, as it name implies, gives a log of what has been done in the past:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg log
+changeset:   0:7dec17ed3e88
+tag:         tip
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:07:32 2011 +0200
+summary:     Added MyModule.pm
+</quadpres_code_block>
+
+<p>
+Now let's add a test:
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ gvim mytest.t # Test
+$p4n/5/merc-test/MyModule$ cat mytest.t
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Test::More tests =&gt; 1;
+
+use MyModule;
+
+# TEST
+is (MyModule::add(0, 0), 0, "0+0 is 0.");
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ prove mytest.t
+mytest.t .. ok
+All tests successful.
+Files=1, Tests=1,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
+Result: PASS
+$p4n/5/merc-test/MyModule$ hg st
+? MyModule/mytest.t
+$p4n/5/merc-test/MyModule$ hg add mytest.t
+$p4n/5/merc-test/MyModule$
+</quadpres_code_block>
+
+<p>
+And let's commit it as well by using <tt>hg commit</tt>.
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg commit -m "Added the test."
+</quadpres_code_block>
+
+<p>
+Now let's add another test assertion:
+</p>
+
+<quadpres_code_block>
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ cat mytest.t
+\#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Test::More tests =&gt; 2;
+
+use MyModule;
+
+\# TEST
+is (MyModule::add(0, 0), 0, "0+0 is 0.");
+
+\# TEST
+is (MyModule::add(2, 0), 2, "2+0 is 2.");
+
+
+$p4n/5/merc-test/MyModule$ prove mytest.t
+mytest.t .. ok
+All tests successful.
+Files=1, Tests=2,  0 wallclock secs ( 0.03 usr  0.00 sys +  0.02 cusr  0.00 csys =  0.05 CPU)
+Result: PASS
+</quadpres_code_block>
+
+<p>
+However, before we commit let's see which changes have been made:
+</p>
+
+<quadpres_code_block>
+shlomif[homepage]:$p4n/5/merc-test/MyModule$ hg diff
+diff -r e2b34f948dcd MyModule/mytest.t
+--- a/MyModule/mytest.t Fri Jan 14 18:14:05 2011 +0200
++++ b/MyModule/mytest.t Fri Jan 14 18:18:57 2011 +0200
+@@ -3,9 +3,13 @@
+ use strict;
+ use warnings;
+
+-use Test::More tests =&gt; 1;
++use Test::More tests =&gt; 2;
+
+ use MyModule;
+
+ \# TEST
+ is (MyModule::add(0, 0), 0, "0+0 is 0.");
++
++# TEST
++is (MyModule::add(2, 0), 2, "2+0 is 2.");
++
+</quadpres_code_block>
+
+<p>
+This displays the differences from the working copy to the pristine
+version in the repository.
+</p>
+
+<quadpres_code_block>
+$p4n/5/merc-test/MyModule$ hg status
+M MyModule/mytest.t
+$p4n/5/merc-test/MyModule$ hg commit -m "Add another assertion"
+$p4n/5/merc-test/MyModule$ hg status
+</quadpres_code_block>
+
+<p>
+And it's commited.
+</p>
+
+<p>
+We can now continue doing commits, adding more tests and fixing bugs
+as we go. For example, let's add another test:
+</p>
+
+<quadpres_code_block>
+$ gvim mytest.t # Edit
+$ hg diff
+@@ -3,7 +3,7 @@
+ use strict;
+ use warnings;
+
+-use Test::More tests =&gt; 2;
++use Test::More tests =&gt; 3;
+
+ use MyModule;
+
+@@ -13,3 +13,6 @@
+ \# TEST
+ is (MyModule::add(2, 0), 2, "2+0 is 2.");
+
++# TEST
++is (MyModule::add(1, 1), 2, "1+1 is 2.");
++
+$ prove mytest.t
+mytest.t .. 1/3
+#   Failed test '1+1 is 2.'
+#   at mytest.t line 17.
+#          got: '3'
+#     expected: '2'
+# Looks like you failed 1 test of 3.
+mytest.t .. Dubious, test returned 1 (wstat 256, 0x100)
+Failed 1/3 subtests
+
+Test Summary Report
+-------------------
+mytest.t (Wstat: 256 Tests: 3 Failed: 1)
+  Failed test:  3
+  Non-zero exit status: 1
+Files=1, Tests=3,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.03 cusr  0.00 csys =  0.07 CPU)
+Result: FAIL
+
+</quadpres_code_block>
+
+<p>
+Oops! The test has failed, now we need to fix a bug. With every commit, it
+is important that all tests will pass (unless perhaps we are working on a
+branch.). Let's correct it:
+</p>
+
+<quadpres_code_block>
+$ gvim MyModule.pm
+$ hg diff MyModule.pm
+diff -r ebc249691c24 MyModule/MyModule.pm
+--- a/MyModule/MyModule.pm      Fri Jan 14 18:20:29 2011 +0200
++++ b/MyModule/MyModule.pm      Sat Jan 15 10:43:16 2011 +0200
+@@ -8,7 +8,7 @@
+ {
+     my ($x, $y) = @_;
+
+-    return $x+$y*2;
++    return $x+$y;
+ }
+
+ 1;
+</quadpres_code_block>
+
+<p>
+Corrected, and now the test passes. Let's see which files changed:
+</p>
+
+<quadpres_code_block>
+$ hg status .
+M MyModule.pm
+M mytest.t
+</quadpres_code_block>
+
+<p>
+Two files are changed  in the working copy. We can now put them in the
+repository using <tt>hg commit</tt>:
+</p>
+
+<quadpres_code_block>
+$ hg commit -m "Fixed a bug - we did x+y*2 instead of x+y"
+</quadpres_code_block>
+
+<p>
+Now let's suppose we broke something and the change is too big to fix, and we
+wish to revert to the pristine version. Our version control system allows us
+to do that:
+</p>
+
+<quadpres_code_block>
+$ hg diff
+diff -r a7599e97a8d8 MyModule/MyModule.pm
+--- a/MyModule/MyModule.pm      Sat Jan 15 10:46:24 2011 +0200
++++ b/MyModule/MyModule.pm      Sat Jan 15 10:48:04 2011 +0200
+@@ -8,7 +8,7 @@
+ {
+     my ($x, $y) = @_;
+
+-    return $x+$y;
++    return $x*100+$y;
+ }
+
+ 1;
+$ prove mytest.t
+mytest.t .. 1/3
+\#   Failed test '2+0 is 2.'
+\#   at mytest.t line 14.
+\#          got: '200'
+\#     expected: '2'
+
+\#   Failed test '1+1 is 2.'
+\#   at mytest.t line 17.
+\#          got: '101'
+\#     expected: '2'
+\# Looks like you failed 2 tests of 3.
+mytest.t .. Dubious, test returned 2 (wstat 512, 0x200)
+Failed 2/3 subtests
+
+Test Summary Report
+-------------------
+mytest.t (Wstat: 512 Tests: 3 Failed: 2)
+  Failed tests:  2-3
+  Non-zero exit status: 2
+Files=1, Tests=3,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
+Result: FAIL
+$ hg st .
+M MyModule.pm
+$ hg revert My
+MyModule.pm   MyModule.pm~
+$ hg revert MyModule.pm
+$ hg st .
+? MyModule.pm.orig
+$ prove mytest.t
+mytest.t .. ok
+All tests successful.
+Files=1, Tests=3,  0 wallclock secs ( 0.04 usr  0.00 sys +  0.02 cusr  0.00 csys =  0.06 CPU)
+Result: PASS
+$
+</quadpres_code_block>
+
+<p>
+Now that it's working we can perform more changes, and continue to commit them.
+We can see the log of all our changes:
+</p>
+
+<quadpres_code_block>
+$ hg up
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+$ hg log
+changeset:   3:a7599e97a8d8
+tag:         tip
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Sat Jan 15 10:46:24 2011 +0200
+summary:     Fixed a bug - we did x+y*2 instead of x+y
+
+changeset:   2:ebc249691c24
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:20:29 2011 +0200
+summary:     Add another assertion
+
+changeset:   1:e2b34f948dcd
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:14:05 2011 +0200
+summary:     Added mytest.t.
+
+changeset:   0:7dec17ed3e88
+user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+date:        Fri Jan 14 18:07:32 2011 +0200
+summary:     Added MyModule.pm
+</quadpres_code_block>
+

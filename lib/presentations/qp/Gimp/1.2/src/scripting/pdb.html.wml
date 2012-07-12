@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+Gimp contains a database of named procedures.
+</li>
+
+<li>
+This database is flat, so care must be taken to maintain namespace
+integrity
+</li>
+
+<li>
+Scripting extensions can interact with the GIMP by accessing the
+functions through their names in the database.
+</li>
+
+<li>
+This list can be viewed by accessing:
+
+
+<menupath>
+&lt;Toolbox&gt; -&gt; Xtns -&gt; "DB Browser..."
+</menupath>
+</li>
+
+<li>
+It is evident that there are several classes of functions which are
+distinguished by their prefix.
+</li>
+</points>

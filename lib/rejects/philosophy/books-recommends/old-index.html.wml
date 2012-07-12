@@ -1,0 +1,370 @@
+#include '../template.wml'
+
+#include "amazon.wml"
+
+;;; To add:
+
+;;; Not to add:
+;;; * Writing Perl Modules for CPAN
+
+<latemp_subject "Shlomi Fish's Book Recommendations" />
+
+<h2>Introduction</h2>
+
+<p>
+This is a list of books I have read and can recommend. At the moment, it is
+focused on non-fiction, but I hope to add fiction later on in a different
+section.
+</p>
+
+<p>
+So if you're looking for a good book to read, and are desperate enough to
+take my advice (☺), look no further than here. Happy reading!
+</p>
+
+<ul>
+<li>
+<a href="#most_influential_non_fiction">My Most Influential
+Non-fiction Books</a>
+</li>
+<li>
+<a href="#other_non_fiction">Other Good Non-Fiction Books</a><br />
+<ul>
+<li>
+<a href="#non_technical_books">Non-technical Books</a><br />
+</li>
+<li>
+<a href="#technical_books">Technical Books</a><br />
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>The List Itself</h2>
+
+<h3 id="most_influential_non_fiction">My Most Influential Books (in Chronological Order)</h3>
+
+<p>
+This is a list of the four or so books that I found the most influential
+on my thinking. It is given here in the chronological order in which I
+read them.
+</p>
+
+<dl class="books">
+
+<dt id="innumeracy"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0809058405&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Innumeracy - Mathematical Illiteracy and its Consequences</a> by John Allen Paulus
+</dt>
+<dd>
+<p>
+This is a great book about how the fact that people don’t understand
+Mathematics or don’t apply it well leads to various side-effects, such as
+believing in superstition, irrational fears, or mis-approximations.
+</p>
+</dd>
+
+<dt id="neo_tech_discovery">The Neo-Tech Discovery by Frank R. Wallace and others</dt>
+<dd>
+<p>
+This book is not available in book stores, but I believe it may be ordered by
+mail order by requesting a catalog
+<a href="http://www.neo-tech.com/">from the Neo-Tech site</a>. It is also
+available online as <a href="http://www.neo-tech.com/neotech/advantages/">the
+Neo-Tech Advantages</a> and the
+<a href="http://www.neo-tech.com/neotech/discovery/">the Selected Portions
+from the Neo-Tech Discovery</a>.
+</p>
+<p>
+This is the most influential book I ever read. Neo-Tech is an extension and
+re-organization of
+<a href="http://en.wikipedia.org/wiki/Objectivist_philosophy">Ayn
+Rand's Objectivism</a>, that also integrates
+Psychology, Business Practices, Science and other fields. After reading and
+integrating this book, one can throw away all the mental garbage that prevents
+growth, and no longer be influenced by various fallacies you constantly hear
+and believe in.
+</p>
+<p>
+Reading this document will make your mind think more clearly about the facts
+of human existence, and remove any unnecessary guilt you have.
+</p>
+</dd>
+
+<dt id="feeling_good"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0380810336&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Feeling Good: The New Mood Therapy</a> by David D. Burns</dt>
+<dd>
+<p>
+This is a field guide to cognitive Psychology. It explains how our conscious
+thoughts cause unnecessary mood swings, including depressions and euphorias.
+It also gives practical measurements to correct one's cognitive process, raise
+one's self-esteem, handle criticism, and recover from unnecessary mood swings.
+</p>
+<p>
+This book can also help people maintain a good self-esteem, and understand
+why people have mood swings. It is a very good anti-thesis to the traditional
+Freudian or similar psychology that is very misleading. A highly recommended
+read!
+</p>
+</dd>
+
+<dt id="cathedral_bazaar"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0596001088&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The Cathedral &amp; The Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary</a> by Eric S. Raymond</dt>
+<dd>
+<p>
+<a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">This book is
+also available online</a> on
+<a href="http://www.catb.org/~esr/">Raymond's Site</a>.
+</p>
+<p>
+This book is a set of very mind-revolving essays about the Free and Open
+Source Software world - their culture, conventions, customs; organizational,
+cultural and economical conventions - and by inflection on Free/Open Culture
+in general. It is a must read for every person living in the 21st century.
+</p>
+</dd>
+</dl>
+
+<h3 id="other_non_fiction">Other Very Good Books</h3>
+
+<p>
+These are other very good books that I can recommend. (in no particular
+order).
+</p>
+
+<h4 id="non_technical_books">Non-Technical Books</h4>
+
+<dl class="books">
+<dt id="bicameral_mind"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0618057072&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The
+Origin of Consciousness in the Breakdown of the Bicameral Mind</a> by
+Julian Jaynes</dt>
+<dd>
+<p>
+This book presents a theory on the evolution of human consciousness that sounds
+fantastic at first, but that the author backs with a lot of evidence.
+Essentially, consciousness (or rather "sentience") is a learned layer that is
+not necessary for normal operation. Furthermore, all humans up to around
+1300 BC were completely void of consciousness, when they developed it out
+of necessity, starting at the Near East.
+</p>
+<p>
+The book kept me entertained, and enlightened me.
+</p>
+</dd>
+
+<dt id="mythical_man_month"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0201835959&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The
+Mythical Man-Month: Essays on Software Engineering</a> by Frederick P.
+Brooks</dt>
+<dd>
+<p>
+This book, written over 20 years ago, by the project manager of IBM's OS/360
+is one of the classic texts on software engineering, and for a very good
+reason. It still feels very fresh now, and supplies a lot of insights about
+how to manage a software project. It will also prove of interest to managers
+of other teams (that do not necessarily work on software).
+</p>
+<p>
+The 20th anniversary edition, contains some later essays and conclusions by
+the same author.
+</p>
+</dd>
+
+<dt id="design_of_everyday_things"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0465067107&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The
+Design of Everyday Things</a> by Donald A. Norman</dt>
+<dd>
+A great book about designing for usability. Instead of covering software, it
+covers everyday things like doors, taps or phones , and why or why not they
+make sense. This book is amusing, insightful and makes a very good read.
+</dd>
+
+<dt id="guns_germs_and_steel"><a href="<affil_link id="0393061310" />">Guns,
+Germs and Steel: The Fates of Human Societies</a> by Jared Diamond</dt>
+<dd>
+This books tries to answer the question of why did different human societies
+evolve differently. It demonstrates that geography and bio-geography played
+a big role in shaping the destinies of people in different places on our
+planet. This book contains many interesting ancedotes, a wonderful theme, and
+is a pleasure to read. Highly recommended.
+</dd>
+
+
+</dl>
+
+
+<h4 id="technical_books">Technical Books</h4>
+
+<dl class="books">
+<dt id="programming_perl"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0596000278&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Programming Perl</a> by Larry Wall et al</dt>
+<dd>
+<p>
+This is the canonical reference to the <a href="http://www.perl.org/">Perl
+programming language</a> by some of its best and best-known experts. It covers
+the entire Perl language as of perl-5.6.1, with any nuance and any
+fine point being mentioned. Furthermore, it is a very entertaining read: the
+style is lightweight and easy, and it is one of the funniest technical books
+I've ever read.
+</p>
+<p>
+Note that programmers who don’t know how to program Perl at all yet, cannot use it
+in order to learn the language. Instead, it is
+recommended, that they first learn Perl and only then read "Programming Perl".
+</p>
+</dd>
+
+<dt id="computation_structures"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0262231395&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Computation
+Structures</a> - by Stephen A. Ward &amp; Robert H. Halstead</dt>
+<dd>
+A great book about logic design and how to construct a computer from very
+basic elements. Also covers some layers above the digital circuits level,
+but this material did not particularly interest me. I studied using this
+book in two of my <a href="http://www.technion.ac.il/">Technion</a> courses,
+and can highly recommend it.
+</dd>
+
+<dt id="sicp"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0262011530&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Structure
+and Interpretation of Computer Programs</a> by Harold Abelson &amp; Gerald Jay
+Sussman</dt>
+<dd>
+<p>
+An excellent book that teaches the basics of good software design using the
+Scheme programming language. Introduces very interesting techniques, and
+demonstrates how they can be useful for real-life tasks. I took two courses
+in the Technion based on this book, and they also were very enlightening.
+</p>
+<p>
+The text of this book and other related resources
+<a href="http://mitpress.mit.edu/sicp/">are available online on its site</a>.
+</p>
+</dd>
+
+<dt id="ui_design_for_programmers"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/1893115941&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">User
+Interface Design for Programmers</a> by Joel Spolsky</dt>
+<dd>
+I really liked
+<a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">the
+online version of the book</a> when I read it on Joel's site, and the printed
+version contains several additional chapters. This book is very funny, very
+englightening, with many screenshots and diagrams. It's a must for anyone
+doing GUI or Web design. Highly recommended.
+</dd>
+
+<dt id="art_of_unix_programming"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/0131429019&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The
+Art of UNIX Programming</a> by Eric S. Raymond</dt>
+<dd>
+A very nice book about the elements and know-how of planning and implementing
+UNIX software. You can read
+<a href="http://wiki.perl.org.il/index.php/Book_Review_-_The_Art_of_Unix_Programming_-_reviewed_by_Shlomi_Fish">a
+more detailed review and critique</a> of this book by me, and also <a href="http://www.catb.org/~esr/writings/taoup/">read it online</a>.
+</dd>
+
+<dt id="qmail_handbook"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/1893115402&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">The qmail Handbook</a> by Dave
+Sill</dt>
+<dd>
+<p>
+A very good book about the <a href="http://qmail.org/">qmail mail
+server</a>. Introduces the fundamental concepts of the server, and then
+instructs how to operate it, and configure other software for it. One thing
+to note about this book is that it convinced me that I should avoid using
+qmail unless it’s already installed and has a configuration. qmail has a very
+problematic license, lacks most necessary features out of the box, is no
+longer maintained, has a very problematic creator and copyright owner, etc.
+</p>
+<p>
+If you're going to install a new mail server, take a look at
+<a href="http://www.postfix.org/">Postfix</a>,
+<a href="http://www.exim.org/">Exim</a>,
+<a href="http://www.courier-mta.org/">Courier</a> or whatever. These are
+open-source, are actively developed, and lack all of the aforementioned
+problems. "The qmail Handbook", however, is useful for those who need to
+administer existing qmail configurations, or migrate them to a different
+implementation. You can also take a look at
+<a href="http://www.lifewithqmail.org/">Life with qmail</a> which is a guide
+to qmail, by the same author.
+</p>
+</dd>
+
+<dt id="svg_programming"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/1590590198&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">SVG
+Programming - The Graphical Web</a> by Kurt Cagle</dt>
+<dd>
+A great book about <a href="http://www.w3.org/Graphics/SVG/">SVG</a>
+(= Scalable Vector Graphics), the emerging standard for vector graphics,
+animation and interactive applets on the web. It explains the standard step
+by step, with many nuances covered. The final chapters cover some advanced
+techniques. Highly recommended.
+</dd>
+
+<dt id="mastering_algos_with_perl"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/1565923987&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Mastering
+Algorithms with Perl</a> by John Macdonald, Jon Orwant and Jarkko
+Hietaniemi</dt>
+<dd>
+I took a course about algorithms in <a href="http://www.technion.ac.il/">the
+Technion</a> before reading this book, and yet found this book to be very
+interesting. This books covers a lot of different fields and topics, each one
+with its own algorithms and each can give you a taste of what this field
+does. This is one of the best books I read in the O'Reilly series of Perl
+books, but it’s not specifically about Perl. Highly Recommended for Programmers.
+</dd>
+
+<dt id="porting_unix_software"><a href="http://www.amazon.com/exec/obidos/redirect?path=ASIN/1565921267&amp;link_code=as2&amp;camp=1789&amp;tag=shlomifishhom-20&amp;creative=9325">Porting UNIX Software</a> by Greg Lehey</dt>
+<dd>
+<p>
+When I started working in a Web Design company, UNIX systems were all we had
+and the only thing we liked in order to give our clients a presence on the
+Internet. However, we used a plenthora of UNIXes: IRIX, SunOS 4.1.3, FreeBSD,
+Linux, and there are many more flavours of UNIX out there. So I naturally
+wondered what was the difference between them.
+</p>
+<p>
+A co-worker recommended that in order to better understand what's involved I
+should read this book, and so I bought it from a local Israeli book store. I
+did not regret buying it - this book is simply superb. Some chapters (such as
+the one about handling terminal I/O) are of little interest to most
+programmers, but as a general rule this book gives a lot of essential
+information about how to write portable software.
+</p>
+<p>
+Many Windows programmers write code and test it on their local machine, and
+think it will be perfectly acceptable this way. But Windows is only one OS,
+and the x86's is only one processor architecture. In the UNIX world, there are
+plenty of other operating systems and processor architectures. Often many
+subtle problems can occur because of lack of knowledge of UNIX concepts.
+</p>
+</dd>
+
+<dt id="perl_journal_vol_1"><a href="<affil_link id="0596003102" />">Computer
+Science &amp; Perl Programming: Best of The Perl Journal</a></dt>
+
+<dd>
+The first installment in the series of three books containing a collection of
+articles from "the Perl Journal". Very nice book, with interesting articles.
+You can <a href="http://www.perl.org.il/books/0596003102.html">read my review
+of it</a> to the Perl mongers.
+</dd>
+
+<dt id="perl_journal_vol_3"><a href="<affil_link id="0596003129" />">Games,
+Diversions &amp; Perl Culture: Best of the Perl Journal</a></dt>
+
+<dd>
+The third installment in the series of three books containing a collection of
+articles from "the Perl Journal". As a whole it is very entertaining and
+enlightening. You can <a href="http://www.perl.org.il/books/0596003129.html">read my review of it</a> to the Perl mongers.
+</dd>
+
+<dt id="higher_order_perl"><a href="<affil_link id="1558607013" />">Higher
+Order Perl: Transforming Programs with Programs</a></dt>
+
+<dd>
+<p>
+"Higher Order Perl" is both enjoyable and accessible. Mark Jason Dominus
+demonstrates some techniques that originated from the LISP world and shows how
+to implement them in Perl, and how they can be put into good use. I learend a
+lot from this book: how currying, iterators and streams can be useful, how a
+recursive descent parser can be implemented, and many other things.
+</p>
+<p>
+Also see <a href="http://www.perl.org.il/books/1558607013.html">my review on
+the Israeli Perl Mongers site</a>.
+</p>
+</dd>
+
+<!-- End of Technical Books -->
+
+</dl>
+
+

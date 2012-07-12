@@ -1,0 +1,96 @@
+#include '../template.wml'
+
+<latemp_subject "MikMod for Java" />
+
+<h2>Important Note!</h2>
+
+<p>
+There is now a <a href="http://jmikmod.shlomifish.org/">new homepage for MikMod
+for Java</a>. There
+is a mailing list, a version control repository and all, which I hope will
+encourage further development of the codebase.
+</p>
+
+<p>
+Please update your bookmarks and hyperlinks.
+</p>
+
+<h2>Original Page</h2>
+
+<p>
+Well, here it is: the long awaited (yeah right) Java port of MikMod.
+You can download it <a href="jmm-24.04.98.zip">here</a>.
+</p>
+
+<p>
+Right now, the archive contains a JDK 1.0.2 code, which can still
+compile on versions 1.1.x of the JDK, with some compiler warnings.
+The “native” sound driver source inside will only compile and work on
+Linux and v. 1.0.2 of the JDK.
+</p>
+
+<p>
+You can find more information about MikMod for Java in the
+<a href="README.java.txt">readme file</a>.
+</p>
+
+<p>
+Like I say there, I would be happy to let another person
+coordinate and maintain this project instead of me. One thing one should do
+is port it to Java 2 and to its audio playback subsystem. Maybe one day it
+would be able to run as an applet without messing with the Java Virtual
+Macgine, but so far it can only run from the command-line.
+</p>
+
+<p>
+The main MikMod page is <a href="http://mikmod.raphnet.net/">The
+MikMod and libmikmod Homepage</a>
+</p>
+
+<p>
+Some older pages which may still be of interest are:
+</p>
+
+<ul>
+
+<li>
+<a href="http://www.stack.nl/~mikmak/mikmod.htm">The Original MikMod Home Page
+by Jean-Paul Mikkers</a>
+</li>
+
+<li>
+<a href="http://www.chiark.greenend.org.uk/~stevem/mikmod/">Steve’s MikMod Page</a>
+</li>
+
+<li>
+<a href="http://www.freenet.tlh.fl.us/~amstpi/mikmod.html">MikMod for UNIX</a><br />
+</li>
+
+</ul>
+
+<p>
+You can E-mail me at <mailto_link_to_self email="<main_email />" />
+for extra questions or comments.
+</p>
+
+<p>
+Enjoy!
+</p>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+<p>
+
+Join <a href="http://www.testking.eu/exam/70-291.htm">testking 70-291</a>
+online training program to become IT expert. Download <a
+href="http://www.testking.eu/exam/640-721.htm">testking 640-721</a> dumps and
+<a href="http://www.testking.eu/exam/642-524.htm">testking 642-524</a> practice
+exam to pass real exam easily and fast.
+
+</p>
+</define-tag>
+
+<camila_ron />
+

@@ -1,0 +1,20 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+To enter editing mode, use the arrow keys to move the cursor to the location
+in which you wish to enter text, and press "<tt>i</tt>".
+</li>
+<li>
+You can now enter text freely, and delete the text that was just
+entered by pressing the backspace key.
+</li>
+<li>
+When you are done entering text, press <tt>ESC</tt> to return back to
+command mode.
+</li>
+<li>
+Note: Pressing <tt>ESC</tt> twice will always put you back in command mode.
+</li>
+</points>

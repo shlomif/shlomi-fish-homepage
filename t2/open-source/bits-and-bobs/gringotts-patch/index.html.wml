@@ -1,0 +1,134 @@
+#include '../template.wml'
+<latemp_subject "The gringotts-shlomif Patch" />
+
+<p>
+<b>Last Updated:</b> 21-September-2008.
+</p>
+
+<note>
+<h2 id="note">Note (21-September-2008)</h2>
+
+<p>
+This page is no longer relevant because development on gringotts
+has resumed <a href="http://gringotts.shlomifish.org/">elsewhere</a>, and this
+patch and others have been incorporated into gringotts version 1.2.9.
+</p>
+
+<p>
+This page is kept here for historical reasons only.
+</p>
+
+</note>
+
+<define-tag patch_fn whitespace="delete">
+gringotts-shlomif-patch-0.4.4.diff
+</define-tag>
+
+<define-tag link_to_patch endtag="required" whitespace="delete">
+<a href="<patch_fn />">%body</a>
+</define-tag>
+
+<p>
+This is <link_to_patch>a patch</link_to_patch> for
+<a href="http://devel.pluto.linux.it/projects/Gringotts/">the Gringotts
+encrypted note manager</a> for Linux, by Germano Rizzo. It should be applied
+against
+<a href="ftp://ftp.debian.org/debian/pool/main/g/gringotts/gringotts_1.2.8+1.2.9pre1.orig.tar.gz">version 1.2.9pre1 (available
+from the Debian servers)</a> . What it does, so far is:
+</p>
+
+<ol>
+<li>
+Fix a data corruption bug with the search function.
+</li>
+<li>
+Fix the “Find again” functionality.
+</li>
+<li>
+Eliminate many compilation warnings caused due to a confusion between signed
+and unsigned char strings.
+</li>
+<li>
+Integrate patch from wwp that:<br />
+
+<ul>
+<li>
+Fixes proto for find() in src/grg_entries_vis.h.
+</li>
+<li>
+Fixes compilation on FC3 (missing #include’s to “stdio.h”)
+</li>
+<li>
+Adds sensitivity to HTAB environment variable to change the horizontal tab
+value in the main editing widget (default: 8)
+</li>
+</ul>
+
+</li>
+<li>
+Fix a data corruption problem caused by the previous data corruption fix.
+</li>
+<li>
+Fixed a crash in the preferences dialog caused by a previous modification.
+</li>
+</ol>
+
+<p>
+An older version of the patch which has already been integrated into version
+1.2.9pre1 made the following changes:
+</p>
+
+<ol>
+<li>
+Allow it to compile against recent versions of the Gtk+ library. (tested
+against Gtk+ 2.4.9). This is done by porting the API calls to the new ones.
+</li>
+<li>
+Allow it to compile with stricter gcc flags.
+(<tt>-Wall -Wstrict-prototypes -Werror-implicit-function-declaration</tt>)
+</li>
+<li>
+Add keyboard shortcuts to the menus, so you can press Alt+F+S to save a file,
+or Alt+E+C to copy.
+</li>
+<li>
+Add a rudimentary autogen.sh file.
+</li>
+<li>
+Make sure that when searching, the text view scrolls to view the found pattern.
+</li>
+<li>
+Document another minor issue in the <tt>BUGS</tt> file.
+</li>
+</ol>
+
+<p>
+Gringotts is distributed under the GPL, so this patch is GPLed too. Note that
+I disclaim any explicit ownership of the changes, and the original author can
+relicense the patch along with the rest of Gringotts if he sees fit.
+</p>
+
+<h2>Older Versions</h2>
+
+<ul>
+<li>
+<a href="gringotts-shlomif-patch-rev2.diff">Revision 2</a>
+</li>
+<li>
+<a href="gringotts-shlomif-patch-rev3.diff">Revision 3</a>
+</li>
+<li>
+<a href="gringotts-shlomif-patch-0.4.0.diff">Version 0.4.0</a>
+</li>
+<li>
+<a href="gringotts-shlomif-patch-0.4.1.diff">Version 0.4.1</a>
+</li>
+<li>
+<a href="gringotts-shlomif-patch-0.4.2.diff">Version 0.4.2</a>
+</li>
+<li>
+<a href="gringotts-shlomif-patch-0.4.3.diff">Version 0.4.3</a>
+</li>
+</ul>
+
+

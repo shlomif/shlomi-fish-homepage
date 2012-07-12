@@ -1,0 +1,220 @@
+----
+presentation_topic: PDL
+presentation_title: Optimising Multitasking in PDL
+presentation_place: Netanya, Israel
+presentation_date: FILL IN
+----
+== The Problem
+
++* [Freecell Solver http://fc-solve.shlomifish.org/] had several scans for finding solutions to Freecell deals.
++* Usually, one can find a scan that will perform well for a given deal.
++* But each scan will perform poorly trying to solve all the boards.
++* We want to multi-task these scans, so the combined meta-scan will perform better on average.
+----
+== The Plan
+
++* We can let each scan run for a given number of iterations, and then switch to a different scan.
++* If we return to a scan that ran beforehand, it will continue to run from where it stopped.
++* We can time the scans to see when they solve each board in a random sample of the boards.
++* We can use these statistics to construct a suitable meta-scan.
++* Can you think of a good algorithm for doing that?
+----
+== The Algorithm
+
++* 1. Allocate a quota of iterations.
++* 2. Chose the scan that solves the largest number of boards.
++* 3. If no boards could be solved with any of the scans, increase the quota by another quota.
++* 4. Repeat steps 1-3 as long as there are unsolved boards.
+----
+== How to implement?
+
++* In order to construct a good meta-scan, we want to use a large number of deals.
++* Implementing the algorithm in pure Perl will probably make it slow.
++* Implementing it in C will make the program unflexible.
++* Is there a better way?
++* Yes! [PDL - The Perl Data Language http://pdl.perl.org/].
+----
+== The Implementation Plan.
+
++* Keep all the statistics in a scans * boards matrix.
++* Find the optimal scan by doing a column-wise summation of the solved boards.
++* Maintain the current state, by substracting the iterations of the current scan from the non-solved boards.
++* Solved boards will be removed from the matrix.
++* Keep track of the total iterations by summing the iterations of all the solved boards, plus the quota times the number of non-solved ones.
+
+----
+== Let's start with the code.
+
+    sub calc_meta_scan
+    {
+        my $self = shift;
+
+        $self->chosen_scans([]);
+
+        $self->total_boards_solved(0);
+        $self->total_iters(0);
+
+        $self->status("iterating");
+        my $quotas = [ @{$self->get_quotas()} ];
+        # $self->inspect_quota() throws ::Error::OutOfQuotas if
+        # it does not have any available quotas.
+        try
+        {
+            while ($self->status() eq "iterating")
+            {
+                $self->inspect_quota($quotas);
+            }
+        }
+        catch Shlomif::FCS::CalcMetaScan::Error::OutOfQuotas with
+        {
+        }
+    }
+----
+== $self->inspect_quota()
+
+    sub inspect_quota
+    {
+        my ($self, $quotas) = @_;
+
+        my $state = $self->get_selected_scan($quotas);
+
+        $state->register_params();
+
+        $state->update_total_iters();
+        
+        if ($self->total_boards_solved() == $self->num_boards())
+        {
+            $self->status("solved_all");
+        }
+        else
+        {
+            $state->update_idx_slice();
+        }
+
+        $state->detach();
+    }
+----
+== $self->get_selected_scan()
+
+    # If no boards were solved, then try with a larger quota
+    while ($num_solved_in_iter == 0)
+    {
+        my $q_more = shift(@$quotas);
+        if (!defined($q_more))
+        {
+            throw Shlomif::FCS::CalcMetaScan::Error::OutOfQuotas;
+        }
+
+        $iters_quota += $q_more;
+
+        (undef, $num_solved_in_iter, undef, $selected_scan_idx) =
+            PDL::minmaximum(
+                PDL::sumover(
+                    ($self->scans_data() <= $iters_quota) & 
+                    ($self->scans_data() > 0)
+                )
+              );
+    }
+    return
+        (
+            quota => $iters_quota,
+            num_solved => $num_solved_in_iter,
+            scan_idx => $selected_scan_idx,
+        );
+
++* PDL::sumover() sums the numbers column-wise.
++* PDL::minmaximum() finds the maximal scan and its index.
++* The boolean expression given to sumover as argument actually operates on the entire tensor.
+----
+== What's now?
+
+        my $state = $self->get_selected_scan($quotas);
+
+        $state->register_params();
+
+        $state->update_total_iters();
+
+----
+== register_params()
+
+    sub register_params
+    {
+        my $state = shift;
+
+        $state->add_chosen();
+            push @{$state->main()->chosen_scans()}, $state->get_chosen_struct();
++        $state->mark_as_used();
+            $state->main()->selected_scans()->[$state->scan_idx()]->mark_as_used();
++        $state->update_total_boards_solved();
+            $state->main()->add('total_boards_solved', $state->num_solved());
++        $state->trace_wrapper();
+    }
+
++* Not particularly interesting - just register a few parameters.
+----
+== update_total_iters()
+
+    sub update_total_iters
+    {
+        my $state = shift;
+
+        # $r is the result of this scan.
+        my $r = $state->idx_slice();
+            # return $self->main()->scans_data()->slice(":,".$self->scan_idx())
+        
+        # Add the total iterations for all the states that were solved by
+        # this scan.
+        $state->main()->add('total_iters',
+            PDL::sum((($r <= $state->quota()) & ($r > 0)) * $r)
+        );
+        
+        # Find all the states that weren't solved.
+        my $indexes = PDL::which(($r > $state->quota()) | ($r < 0));
+        
+        # Add the iterations for all the states that have not been solved
+        # yet.
+        $state->main()->add('total_iters', ($indexes->nelem() * $state->quota()));
+        
+        # Keep only the states that have not been solved yet.
+        $state->main()->scans_data(
+            $state->main()->scans_data()->dice($indexes, "X")->copy()
+        );
+    }
+----
+== update_idx_slice()
+
+* Back in inspect_quota():
+
+    $state->update_total_iters();
+    
+    if ($self->total_boards_solved() == $self->num_boards())
+    {
+        $self->status("solved_all");
+    }
+    else
+    {
+        $state->update_idx_slice();
+    }
+
++    sub update_idx_slice
+    {
+        my $state = shift;
+        my $r = $state->idx_slice()->copy();
+        # $r cannot be 0, because the ones that were 0, were already solved
+        # in $state->update_total_iters().
+        $state->idx_slice() .= 
+            (($r > 0) * ($r - $state->quota())) + 
+            (($r < 0) * ($r                  ));
+    }
+
+* |.=| is in-place assignment to a tensor's elements in PDL.
+----
+== Summary
+
+* Using PDL, we created a fast and efficient implementation of the algorithm.
++* The configurations generated by this algorithm yield very good performance.
++* We can also easily play with the quotas and tweak the algorithm further, because it's written in Perl.
+----
+== Thank you!
+
+

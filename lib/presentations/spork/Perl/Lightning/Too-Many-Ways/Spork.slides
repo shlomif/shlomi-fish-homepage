@@ -1,0 +1,264 @@
+----
+presentation_topic: TATMWTDI
+presentation_title: There are too many ways to do it
+presentation_place: Netanya, Israel
+presentation_date: FILL IN
+----
+== There are too many ways to do it
+
+/Although the Perl Slogan is There's More Than One Way to Do It, I hesitate 
+to make 10 ways to do something. :-)/
+
+- Larry Wall in http://xrl.us/i6d2
+
+{image: http://localhost/shlomi/coachella-crowd.jpg}
+
+----
+== The problem
+
+    <sniperd> looking to write a regex that strips out all periods, except for 
+    the last one. ie, i have a string named perl.is.the.best.txt and I just 
+    want perlisthebest.txt
+
+- Freenode's #perl.
+
++* s/regex/function/
+
+----
+== The Issue
+
++* How many solutions can you find?
+
++* Perl quiz to find as many solutions as possible.
+
+----
+== What do we do first?
+
++* Write tests!
+
+{image: http://localhost/images/presentations/TestBeforeYouTouchCARD.jpg}
+
+----
+== The tests
+
+    is( $ref->("hello.world.txt"), "helloworld.txt", "$f - simple" );           # 1
+    is( $ref->("hello-there"),     "hello-there",    "$f - zero periods" );     # 2
+    is( $ref->("hello..too.pl"),   "hellotoo.pl",    "$f - double" );           # 3
+    is( $ref->("magna..carta"),    "magna.carta",    "$f - double at end" );    # 4
+    is( $ref->("the-more-the-merrier.jpg"),
+        "the-more-the-merrier.jpg", 
+        "$f - one period" );                                                    # 5
+    is( $ref->("hello."),    "hello.",   "$f - one period at end" );            # 6
+    is( $ref->("perl.txt."), "perltxt.", "$f - period at end" );                # 7
+    is( $ref->(".yes"),      ".yes",     "$f - one period at start" );          # 8
+    is( $ref->(".yes.txt"),  "yes.txt",  "$f - period at start" );              # 9
+
+----
+== Solution #1 - Via Split
+
+    sub via_split
+    {
+        my $s = shift;
+        my @components = split(/\./, $s, -1);
+        if (@components == 1)
+        {
+            return $s;
+        }
+        my $last = pop(@components);
+        return join("", @components) . "." . $last;
+    }
+----
+== Solution #2 - Sexeger
+
+    sub sexeger
+    {
+        my $s = shift;
+        $s=reverse($s);
+        my $c = 0;
+        $s=~s!\.!($c++)?"":"."!ge;
+        return reverse($s);
+    }
+----
+== Solution #3 - Two Parts
+    sub two_parts
+    {
+        my $s = shift;
+        if ($s =~ /^(.*)\.([^\.]*)$/)
+        {
+            my ($l, $r) = ($1, $2);
+            $l =~ tr/.//d;
+            return "$l.$r";
+        }
+        else
+        {
+            return $s;
+        }
+    }
+----
+== Solution #4 - With Look Ahead
+
+    sub look_ahead
+    {
+        my $s = shift;
+        $s =~ s/\.(?=.*\.)//g;
+        return $s;
+    }
+----
+== Solution #5 - Count and Replace
+
+    sub count_and_replace
+    {
+        my $s = shift;
+        my $count = (my @a = ($s =~ /\./g));
+        $s =~ s/\./(--$count)?"":"."/ge;
+        return $s;
+    }
+----
+== Solution #6 - Eliminate the Last
+
+    sub elim_last
+    {
+        my $s = shift;
+        my $non_occur = "\x{1}" . ("\0" x length($s)) . "\x{1}";
+        $s =~ s/\.([^\.]*)$/$non_occur$1/;
+        $s =~ tr/.//d;
+        $s =~ s!$non_occur!.!;
+        return $s;
+    }
+----
+== Solution #7 - rindex
+    sub rindex
+    {
+        my $s = shift;
+        substr($s, 0, rindex($s, ".")) =~ tr/.//d;
+        return $s;
+    }
+----
+== Solution #8 - Recursive
+
+    sub recursive_perl
+    {
+        my $string = shift;
+
+        my $recurse;
+
+        my @chars = split(//, $string);
+
+        $recurse = sub {
+            my ($arg) = (@_);
+            my ($rest_of_chars) = [ @$arg];
+            if (@$rest_of_chars == 0)
+            {
+                return ("", 0);
+            }
+            my $head = shift(@$rest_of_chars);
+            my $tail = $rest_of_chars;
+            my ($processed_string, $was_period_found) = $recurse->($tail);
+            if ($was_period_found)
+            {
+                return ((($head eq "." ? "" : $head) . $processed_string), 1);
+            }
+            else
+            {
+                return ($head . $processed_string, ($head eq "."));
+            }
+        };
+
+        return +($recurse->([@chars]))[0];
+    }
+----
+== Note
+
++* All of these are mine...
+----
+== Solution #9 - Forever Minus a Day
+
+{image: http://www.unc.edu/~unclng/bono.jpg}
+
+    sub delpoint1 ($) {
+        local $_ = shift;
+
+        my $old = $_;
+        while (/\./) {
+            $old = $_;
+            s/\.//;
+        }
+
+        return $old;
+    }
+----
+== Solution #10 - While #2
+    sub delpoint2 ($) {
+        local $_ = shift;
+
+        while (s/\.(.*\.)/$1/) {}
+
+        return $_;
+    }
+----
+== TATMWTDI
+
+* There are too many ways to do it!
++* But there are more.
+
+----
+== Funky Solution with a Hash
+    sub delpoint8 ($) {
+        local $_ = shift;
+
+        my @parts = split /(\.)/;
+        my %hash;
+        for my $i (0..$#parts) {
+            push @{ $hash{$parts[$i]} }, $i;
+        }
+
+        if (exists $hash{'.'}) {
+            $hash{'.'} = [ @{ $hash{'.'} }[-1] ];
+        }
+
+        my %sort;
+        for my $key (%hash) {
+            for my $number (@{$hash{$key}}) {
+                $sort{$number} = $key;
+            }
+        }
+
+        $_ = '';
+        for my $number (sort {$a <=> $b} keys %sort) {
+            $_ .= $sort{$number};
+        }
+
+
+        return $_;
+    }
+----
+== pack()
+
+    sub pack01 {
+      @c = unpack('c*',$_[0]);
+      @p = grep($c[$_] == 46, 0..$#c);
+      pop @p;
+      while (defined($c = pop @p)) {
+        splice(@c,$c,1,);
+      }
+      pack('c*',@c);
+    }
+----
+== And more...
+
+* http://thread.gmane.org/gmane.comp.lang.perl.qotw.discuss/2460
+
+----
+== Limitation
+
+* Some of these solutions will not work if:
+00 The string is empty. 
+00 It contains newlines.
+----
+== Thank You
+
+Thank you!
+
+Shlomi Fish
+http://www.shlomifish.org/
+

@@ -1,0 +1,21 @@
+#include '../template.wml'
+
+<latemp_subject "Linux Kernel FCFS fcntl/flock Locks" />
+
+<h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>
+
+<p>
+I wrote this patch (it’s actually very short) with a lot of help from
+Matthew Wilcox, who is the current maintainer of the filesystem locks
+logic in the Linux Kernel. It is made against linux-2.5.30 but should
+work with more recent or later versions.
+</p>
+
+<p>
+Without this patch, the Linux kernel discriminates against writers,
+and accepts readers into a lock in readers state even if there are
+pending writers. The <a href="test_flock.c">following
+test program</a> can demonstrate the two behaviours (try running it as
+<tt>test_flock 20 2</tt>).
+</p>
+

@@ -1,0 +1,235 @@
+#include '../template.wml'
+
+<latemp_subject "Between the Screws - A Logic Puzzle" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<h2>Introduction</h2>
+
+<p>
+I originally wrote this puzzle for the magazine of a local Role-Playing
+Games’ club, back in high school. It was originally written in Hebrew, but
+is presented here in its English translation.
+</p>
+
+<h2>The Puzzle Itself</h2>
+
+<p>
+When Nom the gnome went to build his new airplane “Little Wing”, he
+ran into a funny situation when he wanted to attach the wing to the body
+of the plane.
+</p>
+
+<p>
+To do that, he had to use four screws in a particular order, using four
+screwdrivers of four different colours - one of them green. Furthermore, each
+screw had a different shape and a different length.
+</p>
+
+<p>
+Your mission is to find out the order in which the screws were attached,
+their lengths, shapes, and the colour of the screwdriver used for each
+screw.
+</p>
+
+<ol>
+<li>
+The screw that the gnome used the last was longer than the screw that needed
+the blue screwdriver, but was less than twice its length. (Albeit there is
+a screw that is twice as long than the one needing the blue screwdriver.)
+</li>
+<li>
+The diamond-shaped screw was screwed after the screw with the blue screwdriver,
+but before the 6cm-long screw.
+</li>
+<li>
+Only once was a shorter screw used right after a longer one.
+</li>
+<li>
+The screw needing the red screwdriver, which isn’t the hexagonal one, was the
+last. The diamond-shaped screw did not come immediately before it.
+</li>
+<li>
+The triangular screw came before the 2cm-long screw.
+</li>
+<li>
+The screw needing the purple screwdriver is 8 cm long, did not
+follow the 2cm long screw.
+</li>
+<li>
+The 4cm long screw was not the square-shaped one.
+</li>
+</ol>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Position in Time</th>
+<th>Screw Length</th>
+<th>Screwdriver Colour</th>
+<th>Screw Shape</th>
+</tr>
+
+<tr>
+<td>1st</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>2nd</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>3rd</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>4th (Last)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+<p>
+The solution can be found below.
+</p>
+
+<h2 style="margin-top: 50em">Solution</h2>
+
+<p>
+From the puzzle the following data can be directly gathered:
+</p>
+
+<ul>
+<li><b>Screw lengths:</b> 2cm, 4cm, 6cm and 8cm.</li>
+<li><b>Screwdriver colours:</b> green, blue, red and purple.</li>
+<li><b>Screw shapes:</b> square, diamond, hexagonal, and triangular.</li>
+</ul>
+
+<p>
+Based on hint #1, we can tell that the scren needing the blue screwdriver and
+the final screw were either 4cm and 6cm long respectivly or 6cm and 8cm
+respectively, as no other allocations fullfill the hint. According to hint #2
+we know that the 6cm long screw was either 3rd or 4th. If the 6cm screw was 4rd
+then, then the 4th screw  must be 8cm (in accordance to hint #1).  However,
+then the 3rd screw must be the one needing the blue screwdriver which is
+impossible according to hint #2, which means it must be at 1st or 2nd.
+Therefore, the 6cm screw was the 4th screw and the blue screwdriver was used
+for the 4cm screw. So far we have:
+</p>
+
+<ul>
+<li>1st or 2nd - 4cm - Blue</li>
+<li>2nd or 3rd - Diamond</li>
+<li>4th - 6cm</li>
+</ul>
+
+<p>
+All mutually exclusive.
+</p>
+
+<p>
+According to hint #4 we know that the 4th screw needed the red screw driver
+and that it wasn’t the hexagonal one. Therefore, we know that
+<b>«4th - 6cm - red - Not Hex»</b>. Hint #4 also tells us that the diamond
+shaped screw did not come immediately before it. Thus the diamond shaped screw
+must have been the 2nd one, and the 4cm screw must have been the 1st. So
+what we have so far is this:
+</p>
+
+<ul>
+<li>1st - 4cm - Blue</li>
+<li>2nd - Diamond</li>
+<li>4th - 6cm - Red - Not Hexagonal</li>
+</ul>
+
+<p>
+Now according to hint #3 we know that the order cannot be
+<b>4cm&rarr;2cm&rarr;8cm&rarr;6cm</b> because that would mean two shorter
+screws have followed two longer ones. So we have:
+</p>
+
+<ul>
+<li>1st - 4cm - Blue</li>
+<li>2nd - 8cm - Diamond</li>
+<li>3rd - 2cm</li>
+<li>4th - 6cm - Red - Not Hexagonal</li>
+</ul>
+
+<p>
+According to hint #5 the triangular screw preceded the 2cm screw, so it must
+have been the 1st screw. Since the 4th screw is not hexagonal screw, the
+hexagonal one must therfore be the 3rd screw, and the 4th screw must be the
+square screw. Thus, we have:
+</p>
+
+<ul>
+<li>1st - 4cm - Blue - Triangle</li>
+<li>2nd - 8cm - Diamond</li>
+<li>3rd - 2cm - Hexagonal</li>
+<li>4th - 6cm - Red - Square</li>
+</ul>
+
+<p>
+Now all we have left to determine are the colours of the 2nd and 3rd
+screwdrivers. According to hint #6 we know that the 8cm screw was used with
+the purple screwdriver, so the 2nd screwdriver must have been purple and the
+3rd screwdriver was green.
+</p>
+
+<p>
+Our final results are:
+</p>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Position in Time</th>
+<th>Screw Length</th>
+<th>Screwdriver Colour</th>
+<th>Screw Shape</th>
+</tr>
+
+<tr>
+<td>1st</td>
+<td>4 cm</td>
+<td>Blue</td>
+<td>Triangle</td>
+</tr>
+
+<tr>
+<td>2nd</td>
+<td>8 cm</td>
+<td>Purple</td>
+<td>Diamond</td>
+</tr>
+
+<tr>
+<td>3rd</td>
+<td>2 cm</td>
+<td>Green</td>
+<td>Hexagon</td>
+</tr>
+
+<tr>
+<td>4th (Last)</td>
+<td>6 cm</td>
+<td>Red</td>
+<td>Square</td>
+</tr>
+
+</table>
+

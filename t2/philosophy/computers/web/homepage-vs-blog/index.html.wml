@@ -1,0 +1,138 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Homepage vs. Blog" />
+<latemp_meta_desc "Explains the distinction between a homepage (or homesite) and a blog, and why this site is not a blog" />
+<latemp_more_keywords "HTML, Homesite, Homepage, Home, Blog, Weblog, Tags, Categories, RSS" />
+
+<h2 id="about">About this Document</h2>
+
+<p>
+This documents explains the distinction between a homepage (or homesite) and
+a blog and why <a href="$(ROOT)">this site</a> is not a blog. It is adapted
+from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011919.html">this
+post to the Linux-Elitists mailing list</a>.
+</p>
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+28-April-2007
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+28-April-2007
+</dd>
+</dl>
+
+<h3 id="licence">Licence</h3>
+
+<cc_by_british_blurb year="2007" />
+
+<h2 id="itself">The Article Itself</h2>
+
+<p>
+As you may know since the Internet boom circa 1996, many people started their
+own personal web sites. These sites  were called “homepages”, or later-on
+“homesites” (which is the word that I prefer because homepage is just one
+page).
+</p>
+
+<p>
+Now, <a href="http://en.wikipedia.org/wiki/Blog">blogs</a> were a later
+phenomenon. What a blog (also known as “public  journal”, “weblog”, etc) is
+is:
+</p>
+
+<ol>
+
+<li>
+A stream of posts on various topics, ordered by date.
+</li>
+
+<li>
+Usually has <a href="http://en.wikipedia.org/wiki/Web_feed">a web feed</a>.
+</li>
+
+<li>
+Should have comments. I
+<a href="http://shlomif.livejournal.com/11085.html">left
+Advogato</a> due to this reason among others.
+</li>
+
+<li>
+Normally either personal, random or dedicated to a certain topic.
+</li>
+
+<li>
+Usually flat and non-hierarchical. At most has tags.
+</li>
+
+</ol>
+
+<p>
+Now my homesite on the other hand, and several other homesites as well is:
+</p>
+
+<ol>
+
+<li>
+Organised in a tree (“About myself”, “Humour”, “Puzzles”, “Computer Art”,
+“Software”, etc.). The categories contain many resources not commonly present
+in a blog, and there for people to browse and see.
+</li>
+
+<li>
+Has a centreal navigation menu and sub-navigation menus. Most blogs are flat
+or at most have tags which are completely different.
+</li>
+
+<li>
+Has many resources that are not normally present in blogs. How many times
+have you seen a full 10,000-words-long story posted to a blog? Or pages that
+only contain links.
+</li>
+
+<li>
+Many of the pages there are constantly updated. A blog entry normally
+remains mostly static after a while, while the pages of my homesite are
+very dynamic.
+</li>
+
+<li>
+There are no comments in any of the pages. It’s a static HTML site. Had it
+been a blog, I would have made sure to give a nested comments facility. I
+admit that I often post a notice about them to mailing lists, news sites, web
+forums, etc. But they are not blog entries.
+</li>
+
+</ol>
+
+<p>
+Now, I do have <a href="$(ROOT)/me/blogs/">some weblogs</a> and write in
+them often. But my home site is a completely different and much more impressive
+beast.
+</p>
+
+<p>
+I realise there has lately been an inflation of those practically-all-blog
+home sites using Movable Type, WordPress, or their likes. Normally, the blogger
+maintains the front page of the site as a blog, and adds a page or two about
+other things. I personally always look down on such sites.
+</p>
+

@@ -1,0 +1,48 @@
+#include 'template.wml'
+
+<p>
+POD has some extended dialects with more features and options:
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://search.cpan.org/dist/Pod-PseudoPod/">PseudoPod</a> -
+</p>
+<blockquote>
+<p>
+PseudoPod is an extended set of Pod tags used for book manuscripts. Standard
+Pod doesn't have all the markup options you need to mark up files for
+publishing production. PseudoPod adds a few extra tags for footnotes, tables,
+sidebars, etc.
+</p>
+</blockquote>
+</li>
+
+<li>
+<p>
+<a href="http://hop.perl.plover.com/book/#MOD">MJD's POD variant called MOD</a>
+- this was used to write the book "Higher Order Perl", and one can download
+the markup for the book and for source code for the MOD package from the
+<a href="http://hop.perl.plover.com/book/#MOD">book's site</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://search.cpan.org/dist/Perldoc/">Perldoc.pm</a> was an attempt
+to modernise POD by
+<a href="http://search.cpan.org/~ingy/">Ingy döt Net</a>, and incoroporating
+some markup from his Kwiki wiki engine.
+</p>
+</li>
+
+</ul>
+
+<p>
+Aside from that, Wikipedia has a
+<a href="http://en.wikipedia.org/wiki/Category:Lightweight_markup_languages">list
+of other Lightweight markup languages</a>, and some of them also have
+implementations in Perl.
+</p>

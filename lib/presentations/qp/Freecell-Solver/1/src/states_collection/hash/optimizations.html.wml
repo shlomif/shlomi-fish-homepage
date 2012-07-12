@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<points>
+<li>
+Storing the (non-moduloed) hash values along with the keys. That way, the
+hash values can be compared first before comparing the entire keys.
+</li>
+
+<li>
+Moving elements that were successfully hit to the start of their chains.
+</li>
+
+<li>
+When rehashing (= extending the hash to a greater number of buckets),
+use the same malloc'ed elements, only re-link them to their new
+followers.
+</li>
+</points>

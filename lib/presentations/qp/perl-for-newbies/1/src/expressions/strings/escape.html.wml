@@ -1,0 +1,65 @@
+#include 'template.wml'
+
+
+
+<p>
+We have already encountered the <tt>\n</tt> "escape sequence" which can come
+inside strings and designates a newline character. There are many others in
+perl. Here is a list of the most important ones:
+</p>
+
+<ul>
+<li>
+<tt>\\</tt> - designates an actual backslash (<tt>\</tt>)
+</li>
+
+<li>
+<tt>\"</tt> - designates an actual double-quote character (<tt>"</tt>)
+</li>
+
+<li>
+<tt>\$</tt> - an actual dollar sign (a real <tt>$</tt> does something else)
+</li>
+
+<li>
+<tt>\@</tt> - an actual at-sign (a non-escaped <tt>@</tt> does something else)
+</li>
+
+<li>
+<tt>\n</tt> - a newline character
+</li>
+
+<li>
+<tt>\r</tt> - a carriage return sign
+</li>
+
+<li>
+<tt>\t</tt> - a tab character
+</li>
+
+<li>
+<tt>\xDD</tt> - where "DD" are two hexadecimal digits - gives the character
+whose ASCII code is "DD".
+</li>
+
+</ul>
+
+<p>
+Here's an example to illustrate some of them:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/expressions/strings/escape.pl" />
+</quadpres_code_block>
+
+<p>
+whose output is:
+</p>
+
+<quadpres_code_block>
+I said "hi!" to myself, and received no reply.
+This program will cost you $100 dollars.
+The KDE\GNOME holy war makes life in the Linux world more interesting.
+</quadpres_code_block>
+
+

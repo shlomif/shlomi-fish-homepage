@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
 
 <latemp_subject "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
 
@@ -42,47 +43,26 @@ of File::Find.
 
 <h3 id="links-file-find-object">For File-Find-Object</h3>
 
-<ul>
-
-<li>
-<a href="http://search.cpan.org/dist/File-Find-Object/">File-Find-Object
-on search.cpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/File-Find-Object">File-Find-Object
-on kobesearch</a>
-</li>
-
-<li>
-<a href="http://freshmeat.net/projects/file-find-object/">Freshmeat.net
-Record</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="File-Find-Object"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object"
+    freecode_url="http://freecode.com/projects/file-find-object/">
+</bitbucket_cpan_dist_links >
 
 <h3 id="links-file-find-object-rule">File-Find-Object-Rule</h3>
 
-<ul>
+<bitbucket_cpan_dist_links
+    dist="File-Find-Object-Rule"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object-rule">
+</bitbucket_cpan_dist_links >
 
+<define-tag freecode_removed>
 <li>
-<a href="http://search.cpan.org/dist/File-Find-Object-Rule/">File-Find-Object-Rule
-on search.cpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/File-Find-Object-Rule">File-Find-Object-Rule
-on kobesearch</a>
-</li>
-
-<define-tag freshmeat_removed>
-<li>
-<a href="http://freshmeat.net/projects/file-find-object/">Freshmeat.net
+<a href="http://freecode.com/projects/file-find-object/">Freecode
 Record</a>
 </li>
 </define-tag>
 
-</ul>
 
 <h2 id="licence">Licence</h2>
 

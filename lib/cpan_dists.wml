@@ -1,0 +1,32 @@
+<define-tag bitbucket_cpan_dist_links endtag="required">
+
+<preserve bitbucket_url dist freecode_url />
+
+<set-var %attributes />
+
+<ul>
+
+<li>
+<a href="<get-var bitbucket_url />">BitBucket.org
+Repository</a> - contains version control and other resources.
+</li>
+
+<li>
+<a href="http://metacpan.org/release/<get-var dist />">File-Find-Object
+on MetaCPAN</a> - download, documentation, browsing and information.
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/<get-var dist />/">File-Find-Object
+on search.cpan.org</a>.
+</li>
+
+<if "<get-var freecode_url />" "<li><a href="<get-var freecode_url />">Freecode Record</a></li>" />
+
+%body
+
+</ul>
+
+<restore bitbucket_url dist freecode_url />
+
+</define-tag>

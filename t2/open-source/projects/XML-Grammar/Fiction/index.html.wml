@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "vim_include_code.wml"
+#include "cpan_dists.wml"
 
 <set-var cpan_dist="XML-Grammar-Fiction" />
 
@@ -38,24 +39,11 @@ for various tasks.
 
 <h3 id="links-xml-grammar-fiction">For <get-var cpan_dist /></h3>
 
-<ul>
-
-<li>
-<a href="http://search.cpan.org/dist/<get-var cpan_dist />/"><get-var cpan_dist />
-on search.cpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/<get-var cpan_dist />"><get-var cpan_dist />
-on kobesearch</a>
-</li>
-
-<li>
-<a href="http://freshmeat.net/projects/xml-grammar-fiction/">Freshmeat.net
-Record</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="<get-var cpan_dist />"
+    freecode_url="http://freecode.com/projects/xml-grammar-fiction/"
+    bitbucket_url="https://bitbucket.org/shlomif/fiction-xml">
+</bitbucket_cpan_dist_links>
 
 <h2 id="licence">Licence</h2>
 

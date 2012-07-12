@@ -823,7 +823,7 @@ $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
 $(T2_DEST)/humour.html $(T2_DEST)/humour-heb.html: lib/pages/t2/humour.wml
 $(T2_DEST)/work/hire-me/index.html $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.wml
 
-$(T2_DEST)/open-source/projects/Module-Format/index.html $(T2_DEST)/open-source/projects/File-Find-Object/index.html $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html: lib/cpan_dists.wml
+$(T2_DEST)/open-source/projects/Module-Format/index.html $(T2_DEST)/open-source/projects/File-Find-Object/index.html $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html : lib/cpan_dists.wml
 
 docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \

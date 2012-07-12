@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
 
 <latemp_subject "Black Hole Solitaire Solver" />
 
@@ -24,7 +25,7 @@ the cards to move to the “black hole” (the foundation).
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">The Games-Solitaire-BlackHole-Solver CPAN Distribution</a> - an older version of the
+<a href="http://metacpan.org/release/Games-Solitaire-BlackHole-Solver">The Games-Solitaire-BlackHole-Solver CPAN Distribution</a> - an older version of the
 solver written as a proof-of-concept, which produces identical results, but
 is much slower and consumes more memory.
 </li>
@@ -111,28 +112,11 @@ that was used to generate them from the more verbose solution files</a>.
 
 <h2 id="project-links">Project Links</h2>
 
-<ul>
-
-<li>
-<a href="http://bitbucket.org/shlomif/black-hole-solitaire">Bitbucket.org
-repository</a>
-</li>
-
-<li>
-<a href="http://search.cpan.org/dist/Games-Solitaire-BlackHole-Solver/">search.cpan.org
-Record</a>
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/Games-Solitaire-BlackHole-Solver">kobesearch Record</a>
-</li>
-
-<li>
-<a href="http://freshmeat.net/projects/black-hole-solitaire-solver">Freshmeat.net
-Record</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="Games-Solitaire-BlackHole-Solver"
+    bitbucket_url="http://bitbucket.org/shlomif/black-hole-solitaire"
+    freecode_url="http://freecode.com/projects/black-hole-solitaire-solver">
+</bitbucket_cpan_dist_links >
 
 <h2 id="similar-projects">Similar Projects</h2>
 

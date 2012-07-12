@@ -16,7 +16,16 @@ kernel C configuration API.
 <ul>
 
 <li>
-<a href="xconfig-search-patch-take3-14-for-3.2.0.diff"><b>take4-14 - Latest Version</b> for kernel 3.2.0</a> - applies and compiles cleanly on linux-3.2.0 (and
+<a href="xconfig-search-patch-take4-1-for-3.5.diff"><b>take4-1 - Latest
+Version</b> for kernel 3.5.x</a> - applies and compiles cleanly on linux-3.5.x
+(and possibly above). Now it's maintained in <a
+href="https://github.com/shlomif/linux/tree/enhance-xconfig-search">a Git
+branch</a> and passes checkpatch.pl, except for some warnings about declaring
+typedefs.
+</li>
+
+<li>
+<a href="xconfig-search-patch-take3-14-for-3.2.0.diff"><b>take3-14 - Latest Version</b> for kernel 3.2.0</a> - applies and compiles cleanly on linux-3.2.0 (and
 possibly above).
 </li>
 
@@ -50,7 +59,7 @@ the X11 Licence.
 <h2 id="links">Links</h2>
 
 <ul>
-<li><a href="http://freshmeat.net/projects/linux-make-xconfig-patch/">Project
-Record on Freshmeat.net</a></li>
+<li><a href="http://freecode.com/projects/linux-make-xconfig-patch/">Project
+Record on Freecode</a></li>
 </ul>
 

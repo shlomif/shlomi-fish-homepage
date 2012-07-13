@@ -12,8 +12,8 @@ my $y = qq($h $h $h $t);
 $y =~ s!Hello!Hi!;
 print qq#$y\n#;
 
-my @a = qw{one two three};
+my @arr = qw{one two three};
 for my $i (0 .. $#a)
 {
-    print "$i: $a[$i]\n";
+    print "$i: $arr[$i]\n";
 }

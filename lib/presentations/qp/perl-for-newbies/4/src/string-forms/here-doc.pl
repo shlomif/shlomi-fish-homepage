@@ -4,12 +4,12 @@ use strict;
 use warnings;
 
 
-my $a = "Hello";
+my $x = "Hello";
 my $str = "There you go.";
 my $true = "False";
 
 print <<"END";
-The value of \$a is: "$a"
+The value of \$x is: "$x"
 The value of \$str is: "$str"
 The value of true is: "$true"
 

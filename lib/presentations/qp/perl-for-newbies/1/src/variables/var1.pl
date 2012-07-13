@@ -1,9 +1,9 @@
 $myvar = 17;
-$a = 2;
-print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
-$a = 10;
-print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
-$a = 75;
-print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
-$a = 24;
-print $myvar, " * ", $a, " = " , ($myvar*$a), "\n";
+$x = 2;
+print $myvar, " * ", $x, " = " , ($myvar*$x), "\n";
+$x = 10;
+print $myvar, " * ", $x, " = " , ($myvar*$x), "\n";
+$x = 75;
+print $myvar, " * ", $x, " = " , ($myvar*$x), "\n";
+$x = 24;
+print $myvar, " * ", $x, " = " , ($myvar*$x), "\n";

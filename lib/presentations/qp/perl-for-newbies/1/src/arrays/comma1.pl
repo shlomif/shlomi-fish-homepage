@@ -1,6 +1,6 @@
 @lines = ("One fish", "Two fish", "Red fish", "Blue fish");
 
-for $a (0 .. $#lines)
+for $idx (0 .. $#lines)
 {
-    print $lines[$a], "\n";
+    print $lines[$idx], "\n";
 }

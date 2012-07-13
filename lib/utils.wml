@@ -135,7 +135,6 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 
 </define-tag>
 
-
 <define-tag cc_by_hebrew_blurb>
 <preserve year />
 <set-var %attributes />
@@ -166,7 +165,21 @@ src="$(ROOT)/images/somerights20.png"
 
 </define-tag>
 
+<define-tag x11_licence>
 
+<preserve name plural />
+
+<h2 id="licence">Licence</h2>
+
+<p>
+<get-var name /> <if "<get-var plural />" "are" "is" /> free and open-source software (FOSS) distributed
+under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/X11
+License</a>, a permissive, public-domain-like, software licence.
+</p>
+
+<restore name plural />
+
+</define-tag>
 
 <define-tag main_email whitespace="delete">
 shlomif@shlomifish.org

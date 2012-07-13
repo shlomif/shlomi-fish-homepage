@@ -11,55 +11,55 @@ for the comparison of two numbers. They are:
 
 <tr>
 <td>
-<tt>$a == $b</tt>
+<tt>$x == $y</tt>
 </td>
 <td>
-<tt>$a</tt> and <tt>$b</tt> are equal.
-</td>
-</tr>
-
-<tr>
-<td>
-<tt>$a &gt; $b</tt>
-</td>
-<td>
-<tt>$a</tt> is greater than <tt>$b</tt>
+<tt>$x</tt> and <tt>$y</tt> are equal.
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>$a &lt; $b</tt>
+<tt>$x &gt; $y</tt>
 </td>
 <td>
-<tt>$a</tt> is lesser than <tt>$b</tt>
-</td>
-</tr>
-
-<tr>
-<td>
-<tt>$a &gt;= $b</tt>
-</td>
-<td>
-<tt>$a</tt> is greater or equal to <tt>$b</tt>
+<tt>$x</tt> is greater than <tt>$y</tt>
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>$a &lt;= $b</tt>
+<tt>$x &lt; $y</tt>
 </td>
 <td>
-<tt>$a</tt> is lesser or equal to <tt>$b</tt>
+<tt>$x</tt> is lesser than <tt>$y</tt>
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>$a != $b</tt>
+<tt>$x &gt;= $y</tt>
 </td>
 <td>
-<tt>$a</tt> is not equal to <tt>$b</tt>
+<tt>$x</tt> is greater or equal to <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x &lt;= $y</tt>
+</td>
+<td>
+<tt>$x</tt> is lesser or equal to <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x != $y</tt>
+</td>
+<td>
+<tt>$x</tt> is not equal to <tt>$y</tt>
 </td>
 </tr>
 

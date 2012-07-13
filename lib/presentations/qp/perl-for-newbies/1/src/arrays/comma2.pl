@@ -3,7 +3,7 @@
 @primes = (@primes1,@primes2,17);
 @primes = (@primes,19);
 
-for $a (0 .. $#primes)
+for $idx (0 .. $#primes)
 {
-	print $primes[$a], "\n";
+	print $primes[$idx], "\n";
 }

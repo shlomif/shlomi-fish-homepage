@@ -11,8 +11,8 @@ For doing this, Perl supplies boolean operators.
 <h2>&amp;&amp;</h2>
 
 <p>
-<tt>$a &amp;&amp; $b</tt> evaluates to true if both <tt>$a</tt> and <tt>$b</tt> are true.
-It is called the logical and of the two operands <tt>$a</tt> and <tt>$b</tt>.
+<tt>$x &amp;&amp; $y</tt> evaluates to true if both <tt>$x</tt> and <tt>$y</tt> are true.
+It is called the “logical and” of the two operands <tt>$x</tt> and <tt>$y</tt>.
 </p>
 
 </td>
@@ -22,7 +22,7 @@ It is called the logical and of the two operands <tt>$a</tt> and <tt>$b</tt>.
 <h2>||</h2>
 
 <p>
-<tt>$a || $b</tt> (called the logical or of <tt>$a</tt> and <tt>$b</tt>) is
+<tt>$x || $y</tt> (called the “logical or” of <tt>$x</tt> and <tt>$y</tt>) is
 evaluated to true if one or both of its operands are true.
 </p>
 
@@ -34,8 +34,8 @@ evaluated to true if one or both of its operands are true.
 <h2>!</h2>
 
 <p>
-<tt>! $a</tt> (pronounced "not <tt>$a</tt>") evaluates to true
-if <tt>$a</tt> is false.
+<tt>! $x</tt> (pronounced “not <tt>$x</tt>”) evaluates to true
+if <tt>$x</tt> is false.
 </p>
 
 </td>

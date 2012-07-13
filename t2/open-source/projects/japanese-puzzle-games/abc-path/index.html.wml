@@ -1,16 +1,15 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
 
 <latemp_subject "Solver and Generator for ABC Path" />
 
 <set-var modname="Games-ABC_Path-Solver" />
-<set-var sco_mod="http://search.cpan.org/dist/<get-var modname />/" />
 
 <set-var gen_modname="Games-ABC_Path-Generator" />
-<set-var gen_sco_mod="http://search.cpan.org/dist/<get-var gen_modname />/" />
 
 <p>
-The
-<a href="<get-var sco_mod />"><get-var modname /></a> Perl 5 CPAN distribution implements a solver for
+<get-var modname /> is a Perl 5 CPAN distribution which implements a solver
+for
 <a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
 brainbashers.com. It provides a standalone command-line “abc-path-solver”
 program and an Application Programmer Interface (API).
@@ -18,7 +17,7 @@ program and an Application Programmer Interface (API).
 
 <p>
 The
-<a href="<get-var gen_sco_mod />"><get-var gen_modname /></a> Perl 5 CPAN
+<get-var gen_modname /> Perl 5 CPAN
 distribution implements a generator for ABC Path layouts based on a random
 number seed. What it does is first generate a random path through the 5*5
 board, and then assigns the hints randomly. Sometimes the process takes a
@@ -39,55 +38,19 @@ Currently, documentation is a little lacking.
 
 <h3 id="links-abc-path-solver">For the ABC Path Solver</h3>
 
-<ul>
-
-<li>
-<a href="http://metacpan.org/release/<get-var modname />">The ABC Path Solver
-on metacpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="<get-var sco_mod />">The ABC Path Solver
-on search.cpan.org</a>.
-</li>
-
-<li>
-<p>
-<a href="https://bitbucket.org/shlomif/abc-path">BitBucket Repository</a>
-</p>
-</li>
-
-<li>
-<a href="http://freecode.com/projects/abc-path-solver">Freecode Record</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="<get-var modname />"
+    freecode_url="http://freecode.com/projects/abc-path-solver"
+    bitbucket_url="https://bitbucket.org/shlomif/abc-path">
+</bitbucket_cpan_dist_links>
 
 <h3 id="links-abc-path-gen">For the ABC Path Generator</h3>
 
-<ul>
-
-<li>
-<a href="http://metacpan.org/release/<get-var gen_modname />">The
-ABC Path Generator on metacpan.org</a> - download and more information.
-</li>
-
-<li>
-<a href="<get-var gen_sco_mod />">The ABC Path Generator
-on search.cpan.org</a>
-</li>
-
-<li>
-<p>
-<a href="https://bitbucket.org/shlomif/abc-path">BitBucket Repository</a>
-</p>
-</li>
-
-<li>
-<a href="http://freecode.com/projects/abc-path-generator">Freecode Record</a>
-</li>
-
-</ul>
+<bitbucket_cpan_dist_links
+    dist="<get-var gen_modname />"
+    freecode_url="http://freecode.com/projects/abc-path-generator"
+    bitbucket_url="https://bitbucket.org/shlomif/abc-path">
+</bitbucket_cpan_dist_links>
 
 <h3 id="general-links">General ABC-Path Links</h3>
 
@@ -115,7 +78,7 @@ is in German).
 <h2 id="licence">Licence</h2>
 
 <p>
-<get-var modname /> is licensed under the
+<get-var modname /> and <get-var gen_modname /> are licensed under the
 <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>.
 </p>
 

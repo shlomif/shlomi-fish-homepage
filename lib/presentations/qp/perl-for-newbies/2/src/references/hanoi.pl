@@ -11,10 +11,10 @@ my @towers = (
 
 sub print_towers
 {
-    for(my $a=0;$a<3;$a++)
+    for(my $i=0 ; $i < 3 ; $i++)
     {
         print ": ";
-        print join(" ", @{$towers[$a]}); # We de-reference the tower
+        print join(" ", @{$towers[$i]}); # We de-reference the tower
         print "\n";
     }
     print "\n\n";

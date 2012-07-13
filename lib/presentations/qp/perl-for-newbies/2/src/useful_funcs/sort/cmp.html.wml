@@ -2,8 +2,8 @@
 
 <p>
 Perl has two operators <tt>&lt;=&gt;</tt> and <tt>cmp</tt>, which are very
-useful when wishing to sort arrays. <tt>$a &lt;=&gt; $b</tt> returns -1 if
-<tt>$a</tt> is numerically lesser than <tt>$b</tt>, 1 if it's greater, and
+useful when wishing to sort arrays. <tt>$x &lt;=&gt; $y</tt> returns -1 if
+<tt>$x</tt> is numerically lesser than <tt>$y</tt>, 1 if it's greater, and
 zero if they are equal.
 </p>
 

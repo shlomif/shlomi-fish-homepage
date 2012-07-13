@@ -4,12 +4,12 @@ use warnings;
 open my $seq1, ">", "seq1.txt";
 open my $seq2, ">", "seq2.txt";
 
-for($a=0;$a<100;$a++)
+for (my $x=0 ; $x < 100 ; $x++)
 {
-    print {$seq1} $a, "\n";
-    print {$seq2} $a, "\n";
-    print {$seq1} ($a+0.1);
-    print {$seq2} ($a+0.5);
+    print {$seq1} $x, "\n";
+    print {$seq2} $x, "\n";
+    print {$seq1} ($x+0.1);
+    print {$seq2} ($x+0.5);
     print {$seq1} "\n";
     print {$seq2} "\n";
 }

@@ -6,9 +6,9 @@ use warnings;
 my $pyramid_side = 20;
 
 open my $out, ">", "pyramid.txt";
-for($a=1 ; $a <= $pyramid_side ; $a++)
+for ($l=1 ; $l <= $pyramid_side ; $l++)
 {
-    print {$out} "X" x $a;
+    print {$out} "X" x $l;
     print {$out} "\n";
 }
 close($out);

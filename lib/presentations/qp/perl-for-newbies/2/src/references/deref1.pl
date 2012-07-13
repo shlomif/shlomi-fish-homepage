@@ -9,8 +9,8 @@ my $ds1 =
 };
 
 my $array_ref = [5, 6, 7, 10, 24, 90, 14];
-my $a = "Hello World!";
-my $b = \$a;
+my $x = "Hello World!";
+my $y = \$x;
 
 print "\$array_ref:\n";
 
@@ -31,10 +31,7 @@ foreach my $k (keys(%hash))
 }
 
 
-print "\n\n\$\$b:\n";
+print "\n\n\$\$y:\n";
 
-print ${$b}, "\n";
-
-
-
+print ${$y}, "\n";
 

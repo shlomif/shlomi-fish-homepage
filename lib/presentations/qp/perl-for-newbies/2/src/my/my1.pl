@@ -1,13 +1,13 @@
 
-$a = 5;
-$b = 1000;
+$x = 5;
+$y = 1000;
 {
-    my ($b);
-    for($b=0;$b<10;$b++)
+    my ($y);
+    for($y=0;$y<10;$y++)
     {
-        print $a, "*", $b, " = ", ($a*$b), "\n";
+        print $x, "*", $y, " = ", ($x*$y), "\n";
     }
 }
 
-print "Now, \$b is ", $b, "\n";
+print "Now, \$y is ", $y, "\n";
 

@@ -182,7 +182,7 @@ with SAX2 and DOM interfaces.
 <p>
 <a href="http://www.wxwidgets.org/">wxWidgets</a> (formerly wxWindows) -
 a C++ cross-platform GUI library with Win32 , X-Windows and Mac OS X
-back-ends. LGPLed.
+back-ends. Native look-and-feel. LGPLed.
 </p>
 </li>
 
@@ -194,11 +194,26 @@ library with Win32, X-Windows and Mac OS X backends. A very encompassing API.
 </p>
 </li>
 
+<li id="lib_gtk">
+<p>
+<a href="http://www.gtk.org/">GTK+</a> - a multi-platform GUI toolkit
+for C, with bindings to many other languages. LGPLed. May look ugly with the
+default theme, but other themes are available.
+</p>
+</li>
+
 <li>
 <p>
 <a href="http://www.xulplanet.com/">Mozilla’s XUL</a> - a C++ cross-platform
 GUI library for X-Windows, Win32 and MacOS based on XML. Triply Licensed
 under the MPL, LGPL and GPL.
+</p>
+</li>
+
+<li id="lib_fltk">
+<p>
+<a href="http://www.fltk.org/">FLTK</a> - short for “Fast Light Toolkit”,
+FLTK is a lightweight cross-platform GUI toolkit. LGPLed.
 </p>
 </li>
 

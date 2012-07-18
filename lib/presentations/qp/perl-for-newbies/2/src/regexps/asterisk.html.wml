@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-In order to repeat a character more than one time several repetition
+In order to repeat a character more than one time, several repetition
 paterns can be used. The asterisk (<tt>*</tt>) can be used to indicate that
 the character should repeat zero or more times. The plus sign (<tt>+</tt>)
 can be used to indicate that the character should repeat one or more
@@ -10,10 +10,10 @@ zero or one time.
 </p>
 
 <p>
-The following pattern <tt>/ab*c/</tt> matches "a" followed by as many
-times of b as we like and then c. The pattern <tt>/you k?now/</tt> matches
-both "you know" and "you now". The pattern <tt>/hello +world/</tt> matches
-the word "hello" followed by the word "world". (with some whitespace in
-between).
+The following pattern <tt>/ab*c/</tt> matches "a", followed by as many
+times of b as we like (including zero), and then c. The pattern
+<tt>/you k?now/</tt> matches both "you know" and "you now".
+The pattern <tt>/hello +world/</tt> matches the word "hello" followed by the
+word "world". (with some whitespace in between).
 </p>
 

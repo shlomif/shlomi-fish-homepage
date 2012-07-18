@@ -59,7 +59,7 @@
 (display (church->int a))
 (newline)
 
-; Creating a sequnce of operations
+; Creating a sequence of operations
 ; --------------------------------
 
 ; Since functions are executed in order we can do operations according

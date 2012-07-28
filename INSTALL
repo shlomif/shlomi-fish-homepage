@@ -43,14 +43,12 @@ Or if you have CPANPLUS installed:
 See its INSTALL file. Put a working quadp executable in your shell's PATH.
 
 #. 
-    $ svn co https://seed1.projectlocker.com/shlomif/svn/wml-affiliations/trunk/
-        - Username: svn@shlomifish.org 
-        - Password: 123456
+    $ hg clone https://shlomif@bitbucket.org/shlomif/wml-affiliations trunk
     $ cd trunk/wml
     $ bash Install.bash
 
 #.
-    $ svn co http://svn.berlios.de/svnroot/repos/thewml/extended-apis/trunk/
+    $ hg clone https://shlomif@bitbucket.org/shlomif/wml-extended-apis trunk
     $ cd trunk/xhtml/1.x/
     $ bash Install.bash
 

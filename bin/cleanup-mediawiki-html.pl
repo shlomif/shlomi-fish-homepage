@@ -68,7 +68,7 @@ sub xhtml_con
 }
 
 my $doc = $parser->parse_file(
-    "./lib/htmls/from-mediawiki/orig/Optimizing_Code_for_Speed-rev1.html"
+    shift(@ARGV)
 );
 
 sub is_empty_or_comment

@@ -24,24 +24,27 @@ configuration-and-build system.
 
 <li>
 <p>
-The CMake files are written in a consistent high-level language, whose
-interpreter is written in C++. This is instead of Autoconf’s
-m4-generating-Bourne-shell setup, where both m4 and /bin/sh are quirky and
-get broken very easily.
+Autoconf uses an m4-generating-Bourne-shell setup, where both m4 and /bin/sh
+are quirky and get broken very easily, which results in a syntax soup.
+As opposed to that, the CMake configuration files are written in a consistent
+high-level language, whose interpreter is written in C++.
 </p>
 </li>
 
 <li>
 <p>
-Configuration is much faster on CMake, and this is especially noticable on
-Microsoft Windows, where cygwin is very slow at doing multi-processing.
+Configuration takes much longer with ./configure, and this is especially
+noticable on Microsoft Windows, where cygwin is very slow at doing
+multi-processing. Often, one needs to run the “autoconf” and/or
+“automake” programs before that (sometimes using the all-in-one wrappers
+of “autoreconf” or “./autogen.sh”) which is even more time-consuming.
 </p>
 </li>
 
 <li>
 <p>
 Compilation is much faster with CMake because it doesn’t use GNU’s thousands’
-lines long libtool shell script, which incurs a lot of overhead.
+lines long “libtool” shell script, which incurs a lot of overhead.
 </p>
 </li>
 
@@ -50,11 +53,11 @@ lines long libtool shell script, which incurs a lot of overhead.
 Autotools cause the archive size to increase dramatically due to their
 extra
 <tt>configure.ac</tt> / <tt>configure</tt> /
-<tt>Makefile.in</tt> / <tt>libtool</tt>/etc. overhead.
+<tt>Makefile.in</tt> / <tt>libtool</tt> / etc. overhead.
 The Autotools-based <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
 version 2.8.14 gzipped tarball (tar.gz) took 562,301 bytes. After it was
 converted to CMake in version 2.12.0, the tar.gz fell down to 217,307, less
-than half of that, and between the versions a small amount of
+than half of that, and between these two versions a small amount of
 extra functionality has been added.
 </p>
 
@@ -92,6 +95,14 @@ much more restrictive.
 </p>
 </li>
 
+<li>
+<p>
+CMake is much easier to learn than GNU Autotools. It took me less time
+to convert the Freecell Solver distribution to CMake (without having known
+CMake first) than it did to add Autotools support for it in the first place,
+and someone I chatted with on IRC testified the same.
+</p>
+</li>
 </ol>
 
 <p>

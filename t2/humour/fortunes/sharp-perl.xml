@@ -5214,5 +5214,118 @@
             </info>
         </quote>
     </fortune>
+    <fortune id="sharp-perl-which-version-of-perl">
+        <meta>
+            <title>Which version of Perl are we at, today?</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="Botje">crane_work: 5.6 is ancient.</saying>
+<saying who="pink_mist">crane_work: use perlbrew</saying>
+<saying who="mauke">do you mean 5.6?</saying>
+<saying who="Botje">crane_work: even 5.10 is end of line.</saying>
+<saying who="mauke">then you need to install 5.6</saying>
+<saying who="mauke">also, uninstall 5.6 and 5.10 and install 5.16</saying>
+<saying who="DrForr">crane_work: Then install v5.6 with perlbrew. And pad your keyboard for the inevitable &lt;headdesk/&gt;s.</saying>
+<saying who="DrForr">And holy god why do you *need* something last bugfixed in the last *century*.</saying>
+<saying who="Botje">or, you know, use a version of perl developed *after* 9/11.</saying>
+<saying who="lesshaste">mauke: would you be able to share the code with me?</saying>
+<saying who="crane_work">lol ^^</saying>
+<saying who="mauke">lesshaste: http://paste.scsys.co.uk/204936</saying>
+<saying who="lesshaste">thanks!</saying>
+<saying who="Botje">if necessary, tell your boss perl 5.16 has been terrorism-proofed.</saying>
+<saying who="DrForr">crane_work: Ha ha only *serious*. 5.6 is almost unrecognizable under the cobwebs.</saying>
+<saying who="crane_work">i guess this would be a pro argument...</saying>
+<saying who="pink_mist">crane_work: as we&#39;ve said a few times: perlbrew</saying>
+<saying who="lesshaste">mauke: I get that&#39;s fast!</saying>
+<saying who="lesshaste">I bet</saying>
+<saying who="mauke">lesshaste: I doubt it</saying>
+<saying who="lesshaste">we need someone to work on pyperl :)</saying>
+<saying who="mauke">it seeks all over the place</saying>
+<saying who="lesshaste">mauke: why?</saying>
+<saying who="lesshaste">ah ok</saying>
+<saying who="huf">c code with perl reindenting is ... strange</saying>
+<saying who="mauke">but that&#39;s why I wanted to test it on a nontrivial data set :-)</saying>
+<saying who="DrForr">Why would compiling to a different VM do any good?...</saying>
+<saying who="DrForr">Oh, because it&#39;s python, therefore better. Silly me.</saying>
+<saying who="huf">it&#39;d force people to understand (and fix) the darkest corners of the perl grammar? *shrug* dunno</saying>
+<saying who="mauke">grammar and semantics</saying>
+<saying who="huf">that too. the vote on how to interpolate $length[1234] into regexes doesnt make me feel good...</saying>
+<saying who="lesshaste">DrForr: it&#39;s not really python</saying>
+<saying who="lesshaste">DrForr: In fact, it&#39;s not python :)</saying>
+<saying who="lesshaste">DrForr: they just did the same thing for PHP</saying>
+<saying who="lesshaste">DrForr: and was some project for prolog etc in the past</saying>
+<saying who="crane_work">maybe this question would be stupid but... why if use v5.06 is stupid is it possible to tell perl to use a version?</saying>
+<saying who="mauke">crane_work: what?</saying>
+<saying who="huf">use v5.6 isnt stupid, it just does something other than what you wanted.</saying>
+<saying who="lesshaste">DrForr: the idea is simply that it would be *faster*</saying>
+<saying who="crane_work">huf: in which cases will i need it=?</saying>
+<saying who="rindolf">lesshaste: isn&#39;t pyperl this - http://wiki.python.org/moin/PyPerl ?</saying>
+<saying who="mauke">when your code doesn&#39;t run on 5.005 and earlier</saying>
+<saying who="huf">crane_work: use VERSION means your script requires at least that version of perl. if an older one tries to load it, it&#39;ll tell you to fuck off and get a newer perl. it will not turn your new perl into an old one however.</saying>
+<saying who="lesshaste">rindolf: that has the same name :) I mean using pypy to make a jit for perl as in http://pypy.org/</saying>
+<saying who="rindolf">lesshaste: OK, there&#39;s perlito.</saying>
+<saying who="mst">crane_work: if you want to check for things</saying>
+<saying who="mst">crane_work: Perl::MinimumVersion exists IIRC</saying>
+<saying who="rindolf">perlbot: perlito</saying>
+<saying who="perlbot">rindolf: No factoid found. Did you mean one of these: [#perl topic] [perl topic] [perl tutorials] [perl5004delta] [perl5005delta] [perl561delta] [perl56delta] [perl570delta] [perl6 Test.pm] [perldata]</saying>
+<saying who="lesshaste">rindolf: is that a static compiler or a jit?</saying>
+<saying who="DrForr">crane_work: Then start with 5.16 and don&#39;t worry about earlier versions.</saying>
+<saying who="rindolf">perlbot: perlito is http://perlito.org/ - a Perl 5 / Perl 6 compiler written in Perl 5 / Perl 6.</saying>
+<saying who="perlbot">rindolf: Stored perlito is http://perlito.org/ - a Perl 5 / Perl 6 compiler written in Perl 5 / Perl 6.</saying>
+<saying who="rmah">people should just call it perl 16</saying>
+<saying who="huf">but it isn&#39;t.</saying>
+<saying who="mst">I have a tendency to say /usr/bin/perl version 16</saying>
+<saying who="mst">since -V says &#39;perl revision 5 version 16&#39;;</saying>
+<saying who="mst">so it *is* &quot;version 16&quot;</saying>
+<saying who="rmah">they called java 1.4 &quot;java 4&quot;</saying>
+<saying who="rmah">it&#39;s just marketing man!</saying>
+<saying who="GlitchMr">Perl 16 would be too confusing with Perl 6</saying>
+<saying who="mst">perl6 is a separate language</saying>
+<saying who="rmah">GlitchMr: we&#39;ll soon have Perl 18, so it&#39;s all good</saying>
+<saying who="GlitchMr">Perl 5.006 is definitely not Perl 6</saying>
+<saying who="mst">this is perl5 version 16</saying>
+<saying who="michael_campbell">They called java 1.4, &quot;java 1.4&quot;.  java moved names at java 5.</saying>
+<saying who="michael_campbell">but point stands.</saying>
+<saying who="huf">did it help? i know it generated years of confusion :D</saying>
+<saying who="huf">is that good?</saying>
+<saying who="mauke">GlitchMr: but I call it perl6, not perl 6</saying>
+<saying who="mst">GlitchMr: yeah, &quot;Perl 6&quot; is an error, since the 6 is part of the name</saying>
+<saying who="Su-Shee">I call Java &quot;Anne-Mary Lousia&quot; and Python &quot;Charles Phillip Arthur George&quot; (bonus points for recognizing this one ;)</saying>
+<saying who="mst">GlitchMr: people misparse it as &quot;perl version 6&quot;</saying>
+<saying who="rmah">how much of an improvement is perl 16 over perl 14 and 12?</saying>
+<saying who="Botje">Su-Shee: do you also put them like that on your CV? :)</saying>
+<saying who="rindolf">http://en.wikipedia.org/wiki/Systemd is at version 187 - eat your heart out, Emacs!</saying>
+<saying who="rmah">wondering if I should go through the hassle of upgrading</saying>
+<saying who="Botje">rmah: five percent.</saying>
+<saying who="DrForr">Su-Shee: Vaguely.</saying>
+<saying who="mst">Su-Shee: python&#39;s ears aren&#39;t nearly big enough for that</saying>
+<saying who="pink_mist">rmah: read the perldoc perldeltas</saying>
+<saying who="rmah">Botje: hmm, ok</saying>
+<saying who="mst">rmah: s//r in 14 is my favourite thing ever</saying>
+<saying who="rmah">pink_mist: that would take actual work!  &lt;gasp!&gt;</saying>
+<saying who="mst">rmah: also &#39;package Name VERSION {&#39;</saying>
+<saying who="Su-Shee">mst: *bow* nice. :)</saying>
+<saying who="GlitchMr">s///r is just nice syntactic sugar</saying>
+<saying who="rmah">mst: thanks for the info</saying>
+<saying who="mst">GlitchMr: given a turing machine, all new syntax is sugar</saying>
+<saying who="rmah">I like sugar</saying>
+<saying who="GlitchMr">Hmmm... yeah</saying>
+<saying who="GlitchMr">We all could write without pointers in C</saying>
+<saying who="mauke">could we?</saying>
+<saying who="GlitchMr">Brainfuck to C compiler doesn&#39;t use pointers</saying>
+<saying who="GlitchMr">... or perhaps it does...</saying>
+<saying who="GlitchMr">Would int array[3000]; count as pointer?</saying>
+<saying who="mst">without the ability to point, what would you do before you laugh?</saying>
+<saying who="Altreus">mst: you should tweet that profundity</saying>
+<saying who="Altreus">might not be banal enough for twitter mind you</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>A critique of pure revision.</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

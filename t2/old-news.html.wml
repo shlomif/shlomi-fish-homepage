@@ -5,9 +5,11 @@
 <:{
 use Shlomif::Homepage::News;
 
-binmode STDOUT, ":utf8";
+_wrap_as_utf8( sub {
 my $news = Shlomif::Homepage::News->new();
 print $news->render_old();
+    }
+);
 }:>
 
 

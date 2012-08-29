@@ -5335,5 +5335,80 @@ Weird…
                 </info>
             </quote>
         </fortune>
+        <fortune id="why-Debian-may-have-an-older-version-of-a-package">
+            <meta>
+                <title>Why Debian May Have an Older Version of a Package</title>
+            </meta>
+            <quote>
+                <body>
+                    <p> There are a ton of reasons why Debian may have an
+                        older version of an upstream release. For example, and
+                        I hasten to point out that the following list is by no
+                        means exhaustive, and not all of the possibilities are
+                        common: </p>
+
+                    <ul>
+
+                        <li> The Debian package maintainer is dead, but nobody
+                            noticed it yet, and nobody has wanted an update
+                            badly enough to do an NMU or to adopt the package.
+                        </li>
+
+                        <li> The upstream release is actually a fake. It's a
+                            trojan, which was put there by the NSA in order to
+                            infiltrate the CIA mainframe. The Debian package
+                            maintainer noticed this and uploaded that version
+                            of the package to non-free instead of main, since
+                            the trojan code does not come with proper source.
+                        </li>
+
+                        <li> Upstream has moved the RSS feed for new releases
+                            without notifying the old feed of the move, so the
+                            Debian package maintainer missed that, and doesn't
+                            actually know about the new release. Due to a
+                            complicated series of happenstance involving
+                            rainbows, midget unicorns, and the ongoing rewrite
+                            of the Netsurf web browser, the Debian package
+                            maintainer is not able to find the new feed because
+                            it would require doing a web search and their
+                            browser doesn't have working form support now. No
+                            other browser is available on the Amiga they're
+                            using as their only computer, either.  </li>
+
+                        <li> The new release is requested by insistent Hurd
+                            porters, and the Debian package maintainer
+                            absolutely loathes the Hurd, and will refuse to
+                            upload any packages that work on the Hurd.  </li>
+
+                        <li> The Debian package maintainer suffers from mental
+                            problems cause by reading debian-devel too much,
+                            and now has a nervous breakdown every time they
+                            recognize a name as someone whom they've seen on
+                            the list.  </li>
+
+                        <li> The Debian development process is being sabotaged
+                            by Microsoft sending people to the developers'
+                            houses pretending to be TV license checkers or
+                            Jehova's witnesses every time they detect, using
+                            the hardware wireless keylogger embedded in every
+                            PC, that the developer is trying to run any Debian
+                            packaging command.  </li>
+
+                        <li> Apple is also sabotaging Debian by paying me to
+                            write snarky e-mails on Debian mailing lists to
+                            distract everyone from working on the actual
+                            release, so that we can get past the freeze and
+                            start uploading things again without having to
+                            worry that it breaks things in ways that makes the
+                            freeze longer.  </li>
+
+                    </ul>
+                </body>
+                <info>
+                    <author>Lars Wirzenius</author>
+                    <work href="http://lwn.net/Articles/509254/">Post to debian-devel</work>
+                </info>
+            </quote>
+        </fortune>
     </list>
 </collection>

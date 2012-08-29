@@ -37,6 +37,8 @@ FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
 
+all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml
+
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
@@ -477,6 +479,8 @@ $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae
 $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 	cp -f $< $@
 
+$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
+	cp -f $< $@
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
 

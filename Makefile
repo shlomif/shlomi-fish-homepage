@@ -464,6 +464,8 @@ $(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.ht
 
 $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/v2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-v2.xhtml
 
+$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(T2_DEST)/humour/by-others/division-two/index.html: lib/div2mag.wml
+
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-Part-1.txt
 	cp -f $< $@
 
@@ -777,6 +779,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 		shspork -make && \
 		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; perl -lpi -e 's/[\t ]+\z//' "$$I" ; done)) \
 	)
+	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | perl -pe 's!^\+!!' > $@

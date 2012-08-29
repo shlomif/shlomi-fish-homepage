@@ -105,6 +105,11 @@ my @documents =
         base => "perfect-it-workplace",
     },
     {
+        id => "park-lisp-informal-spec",
+        path => "open-source/projects/Park-Lisp",
+        base => "park-lisp-informal-spec",
+    },
+    {
         id => "Spark-Pre-Birth-of-a-Modern-Lisp",
         path => "open-source/projects/Spark/mission",
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",

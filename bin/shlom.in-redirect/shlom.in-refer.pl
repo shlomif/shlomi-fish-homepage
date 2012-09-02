@@ -129,6 +129,11 @@ my @urls =
         url => "http://www.shlomifish.org/open-source/portability-libs/",
         desc => qq{List of Cross-Platform, Abstraction, Portability Libraries},
     },
+    {
+        id => "IDEs",
+        url => "http://www.shlomifish.org/open-source/resources/editors-and-IDEs/",
+        desc => qq{List of Text Editors and IDEs},
+    },
 );
 
 my %urls_by_id;

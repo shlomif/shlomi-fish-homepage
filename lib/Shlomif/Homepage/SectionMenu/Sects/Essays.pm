@@ -61,6 +61,13 @@ my $essays_tree_contents =
                             text => "How to Contribute to Open Source",
                             url => "philosophy/computers/open-source/how-to-start-contributing/",
                             title => "How can one start contributing to free and open-source software (FOSS)",
+                            subs =>
+                            [
+                                {
+                                    text => "Mirror of Longer Document",
+                                    url => "philosophy/computers/open-source/how-to-start-contributing/tos-document.html",
+                                },
+                            ],
                         },
                         {
                             text => "GPL, BSD and Suckerism",

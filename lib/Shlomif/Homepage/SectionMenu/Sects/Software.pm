@@ -252,6 +252,10 @@ my $software_tree_contents =
                     text => "Numerical Software",
                 },
                 {
+                    url => "open-source/resources/text-processing-tools/",
+                    text => "Text Processing Tools",
+                },
+                {
                     url => "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

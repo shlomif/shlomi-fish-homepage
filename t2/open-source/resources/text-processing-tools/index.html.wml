@@ -104,11 +104,36 @@ other CPAN template systems popular in the Perl world. Open Source.
 
 <h2 id="parser_generators">Parser Generators</h2>
 
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Yacc">Yacc</a> - a LALR parser generator
+standard, with popular implementations as
+<a href="http://invisible-island.net/byacc/byacc.html">Berkeley
+Yacc (byacc)</a> (Open source, public domain) and
+<a href="http://www.gnu.org/software/bison/">GNU Bison</a> (Open source,
+GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/release/Parse-RecDescent">Parse-RecDescent</a>
+- a parser-generator for Perl 5. Open source (same terms as Perl).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.jeffreykegler.com/marpa">Marpa</a> - a parser than aims
+to be able to parse everything in BNF. Open source (LPGL-version-3-or-later).
+</p>
+</li>
+
+</ul>
 <!--
 Mention:
-* yacc / GNU bison .
-* Marpa .
-* Parse-RecDescent .
 * ANTLR .
 * https://metacpan.org/release/Regexp-Grammars
 * https://metacpan.org/module/Parser::MGC

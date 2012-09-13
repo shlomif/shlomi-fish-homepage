@@ -66,13 +66,13 @@ foreach my $filename (@ARGV)
             my $mark_word = sub {
                 my ($word) = @_;
 
-                $word =~ s{’(ve|s|m|d|t)\z}{'$1};
+                $word =~ s{’(ve|s|m|d|t|ll)\z}{'$1};
 
                 my $verdict =
                 (
                     (!exists($whitelist{$word}))
                         &&
-                    (!$word =~ m#\A\p{Hebrew}+\z#)
+                    ($word !~ m#\A\p{Hebrew}+\z#)
                         &&
                     (!($speller->check($word)))
                 );

@@ -88,7 +88,7 @@ sub Graham
         return ($n, [$n]);
     }
 
-    # Cheating: 
+    # Cheating:
     # Check if between n and n+largest_factor we can fit
     # a square of SqFact{n*(n+largest_factor)}. If so, return
     # n+largest_factor.
@@ -102,7 +102,7 @@ sub Graham
         my $largest_factor = $n_sq_factors->[$#$n_sq_factors];
 
         my ($lower_bound, $lb_sq_factors);
-        
+
         $lower_bound = $n + $largest_factor;
         while (1)
         {
@@ -114,7 +114,7 @@ sub Graham
             $lower_bound += $largest_factor;
         }
 
-        my $n_times_lb = 
+        my $n_times_lb =
             multiply_squaring_factors($n_sq_factors, $lb_sq_factors);
 
         my $rest_of_factors_product = 1;
@@ -126,7 +126,7 @@ sub Graham
 
         my $low_square_val = int(sqrt($n/$rest_of_factors_product));
         my $high_square_val = int(sqrt($lower_bound/$rest_of_factors_product));
-        
+
         if ($low_square_val != $high_square_val)
         {
             return ($lower_bound, [$n, ($low_square_val+1)*($low_square_val+1)*$rest_of_factors_product,$lower_bound]);
@@ -137,7 +137,7 @@ sub Graham
     my (%primes_to_ids_map);
     my $next_id = 0;
 
-    # @base is an array that for each ID of a prime number holds the 
+    # @base is an array that for each ID of a prime number holds the
     # controlling vector for this number.
     #
     # This is in fact a matrix that is kept stair-shaped and canonized.
@@ -152,7 +152,7 @@ sub Graham
         $primes_to_ids_map{$p} = ($next_id++);
     }
 
-    # $n_vec is used to determine if $n can be composed out of the base's 
+    # $n_vec is used to determine if $n can be composed out of the base's
     # vectors.
     my $n_vec = $n_sq_factors;
 

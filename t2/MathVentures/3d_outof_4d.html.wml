@@ -14,9 +14,9 @@ numbers are considerably less frequent then mid-range ones.
 
 <p>
 Yet, this method, which is highly random, often results that the scores are
-insuitable for what the player planned the character to be or simply too
+unsuitable for what the player planned the character to be or simply too
 low. Therefore, there are several alternative methods to generate scores
-which are better as far as the player is concerened. One of the common ones,
+which are better as far as the player is concerned. One of the common ones,
 which is described in the game’s manual goes like that: instead of three
 dice, four dice are rolled. Then, the three highest die-scores are summed
 and together add up to the ability number.
@@ -35,14 +35,14 @@ members of the new team he was going to lead to use that method.
 Anyway, he still wondered if anyone could think of a mathematical way to calculate
 it. I didn’t know or heard of any at that time so I told him that I didn’t
 know. He also said that he asked another acquaintant of us, who already
-began his math studies at the university if he could tell him, but he didn’t
+began his maths studies at the university if he could tell him, but he didn’t
 know either.
 </p>
 
 <p>
 In any case, I thought about it for a while and after a month or so came to a
 solution. I presented this problem to other people who seemed interested at
-solving math riddles at various times since. Some of them managed to solve
+solving maths riddles at various times since. Some of them managed to solve
 it, but I didn’t find a more elegant way than what I thought of.
 </p>
 
@@ -54,21 +54,21 @@ figure it yourself, before looking at my solution:
 <table border="1">
 <tr><td>
 <p>
-<b>1.</b> Throw 4 dice, sum the numbers they generated and substract the
+<b>1.</b> Throw 4 dice, sum the numbers they generated and subtract the
 lowest value from the sum. (if there is more than one die with the lowest
-value, substract it only once). What is the average number of such throws?
+value, subtract it only once). What is the average number of such throws?
 </p>
 
 <p>
 More generally, one can ask:
 <b>2.</b> Throw n dice, each evenly generating values in the range 1 .. m,
-sum them, and substract the number of the lowest die. What is the average of
+sum them, and subtract the number of the lowest die. What is the average of
 the solutions of this throw? (the expression is dependant on n and m.)
 </p>
 
 <p>
 And yet more generally:
-<b>3.</b> Throw n dice each in the range 1..m, sum them and substract the p
+<b>3.</b> Throw n dice each in the range 1..m, sum them and subtract the p
 lowest dice (p &lt; n). What is the average outcome of this throw?
 </p>
 
@@ -90,18 +90,18 @@ question this way:
 </p>
 
 <p>
-In each throw the numbers 1..6 can be substracted. I first realized that I
-could immediately substract 1 from all 6^4 of the possible throws, because
-one always substract <b>at least</b> 1. Furthermore, when is another 1 point
-substracted from the final sum? Obviously this is the case when 2 or more
-points are substracted. When does it happen? It happens when all the dice
-are bigger than 1. (or else 1 would have been substracted.) Since all the
+In each throw the numbers 1..6 can be subtracted. I first realized that I
+could immediately subtract 1 from all 6^4 of the possible throws, because
+one always subtract <b>at least</b> 1. Furthermore, when is another 1 point
+subtracted from the final sum? Obviously this is the case when 2 or more
+points are subtracted. When does it happen? It happens when all the dice
+are bigger than 1. (or else 1 would have been subtracted.) Since all the
 dice are in the range 2-6 there are 5^4 different possibilities for this
 case.
 </p>
 
 <p>
-The next point is substracted when all the dice are in the range 3-6, hence
+The next point is subtracted when all the dice are in the range 3-6, hence
 4^4 possibilities and so on. Now, to calculate the total, let’s start from
 the sum of all possible throws of 4 dice, without the minimal die removed.
 This sum is equal to 6^4 * 14 = 18144. Then, let’s remove 6^4 = 1296 because
@@ -164,7 +164,7 @@ mathematically, I’ll use the standard formulas and eventually get to:
 </pre>
 
 <p>
-If we substract 6^4 and those 5 sums from the total sum that was acquired in
+If we subtract 6^4 and those 5 sums from the total sum that was acquired in
 the previous stage, we’d get to the new total with the two least dice
 removed on each throw. Divide it by the number of throws - 6^4 - and we get
 the new average. The grand formula, then, is:
@@ -182,7 +182,7 @@ the new average. The grand formula, then, is:
 <p>
 From the 3rd least dice onward, this method gets more and more complicated
 because we have to consider 3 different cases for every point we
-substract, 4 cases for the fourth die, and so on. If anyone has an idea
+subtract, 4 cases for the fourth die, and so on. If anyone has an idea
 on how to improve this method, or can suggest an alternative method
 which is simpler as more and more dice are removed by order, please let
 me know and I’ll post it here.
@@ -190,7 +190,7 @@ me know and I’ll post it here.
 
 <p>
 I, for my part, am no longer interested in this problem, and do not deal
-with it, at least not until I extend my knowldege in Combinatorics and the
+with it, at least not until I extend my knowledge in Combinatorics and the
 Theory of Probability.
 </p>
 

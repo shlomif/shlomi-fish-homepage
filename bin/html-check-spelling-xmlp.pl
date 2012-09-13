@@ -36,7 +36,33 @@ sub _slurp_utf8_array
     return \@ret;
 }
 
-my %whitelist = (map { $_ => 1 } @{_slurp_utf8_array('lib/hunspell/whitelist1.txt')});
+my %general_whitelist;
+my %per_filename_whitelists;
+
+{
+    my @current_whitelists_list = \%general_whitelist;
+    open my $fh, '<', 'lib/hunspell/whitelist1.txt';
+    while (my $l = <$fh>)
+    {
+        chomp($l);
+        if ($l =~ /\A====(.*)/)
+        {
+            @current_whitelists_list =
+            (
+                map { $per_filename_whitelists{$_} ||= +{} }
+                split /,/, $1
+            );
+        }
+        else
+        {
+            foreach my $w (@current_whitelists_list)
+            {
+                $w->{$l} = 1;
+            }
+        }
+    }
+    close ($fh);
+}
 
 my %inside;
 
@@ -70,7 +96,9 @@ foreach my $filename (@ARGV)
 
                 my $verdict =
                 (
-                    (!exists($whitelist{$word}))
+                    (!exists($general_whitelist{$word}))
+                        &&
+                    (!exists($per_filename_whitelists{$filename}{$word}))
                         &&
                     ($word !~ m#\A\p{Hebrew}+\z#)
                         &&

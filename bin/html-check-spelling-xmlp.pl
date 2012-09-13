@@ -3,9 +3,11 @@
 use strict;
 use warnings;
 
+use autodie;
+
 use utf8;
 
-use XML::Parser;
+use HTML::Parser 3.00 ();
 use Text::Hunspell;
 use List::MoreUtils qw(any);
 
@@ -18,60 +20,72 @@ die unless $speller;
 
 binmode STDOUT, ":encoding(utf8)";
 
+
+my %inside;
+
+sub tag
+{
+   my($tag, $num) = @_;
+   $inside{$tag} += $num;
+   print " ";  # not for all tags
+}
+
+
 foreach my $filename (@ARGV)
 {
-    my $parser = XML::Parser->new(
-        Handlers => {
-            Char => sub {
-                my ($expat, $string) = @_;
+    my $process_text = sub
+    {
+        return if $inside{script} || $inside{style};
 
-                my @lines = split /\n/, $string, -1;
+        my $text = shift;
 
-                foreach my $idx (0 .. $#lines)
-                {
-                    my $l = $lines[$idx];
+        my @lines = split /\n/, $text, -1;
 
-                    my $mispelling_found = 0;
+        foreach my $l (@lines)
+        {
 
-                    my $mark_word = sub {
-                        my ($word) = @_;
+            my $mispelling_found = 0;
 
-                        my $verdict = !($speller->check($word));
+            my $mark_word = sub {
+                my ($word) = @_;
 
-                        $mispelling_found ||= $verdict;
+                $word =~ s{’(ve|s|m)\z}{'$1};
 
-                        return $verdict ? "«$word»" : $word;
-                    };
+                my $verdict = !($speller->check($word));
 
-                    $l =~ s/
-                        # Not sure this regex to match a word is fully
-                        # idiot-proof, but we can amend it later.
-                        ([\w'’-]+)
-                        /$mark_word->($1)/egx;
+                $mispelling_found ||= $verdict;
 
-                    if ($mispelling_found)
-                    {
-                        printf {*STDOUT}
-                        (
-                            "%s:%d:%s\n",
-                                $filename,
-                                $idx+$expat->current_line(),
-                                $l
-                        );
-                    }
-                }
+                return $verdict ? "«$word»" : $word;
+            };
 
-                return;
-            },
-        },
-    );
+            $l =~ s/
+            # Not sure this regex to match a word is fully
+            # idiot-proof, but we can amend it later.
+            ([\w'’-]+)
+            /$mark_word->($1)/egx;
 
-    eval {
-        $parser->parsefile($filename);
+            if ($mispelling_found)
+            {
+                printf {*STDOUT}
+                (
+                    "%s:%d:%s\n",
+                    $filename,
+                    1,
+                    $l
+                );
+            }
+        }
     };
 
-    if (my $err = $@)
-    {
-        die "Error '$err' at filename '$filename'";
-    }
+    open(my $fh, "<:utf8", $filename);
+
+    HTML::Parser->new(api_version => 3,
+        handlers    => [start => [\&tag, "tagname, '+1'"],
+            end   => [\&tag, "tagname, '-1'"],
+            text  => [$process_text, "dtext"],
+        ],
+        marked_sections => 1,
+    )->parse_file($fh);
+
+    close ($fh);
 }

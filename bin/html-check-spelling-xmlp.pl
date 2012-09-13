@@ -20,32 +20,21 @@ die unless $speller;
 
 binmode STDOUT, ":encoding(utf8)";
 
-sub _slurp_utf8_array
-{
-    my $filename = shift;
-
-    open my $in, '<:encoding(utf8)', $filename
-        or die "Cannot open '$filename' for slurping - $!";
-
-    my @ret = <$in>;
-
-    close($in);
-
-    chomp(@ret);
-
-    return \@ret;
-}
-
 my %general_whitelist;
 my %per_filename_whitelists;
 
 {
     my @current_whitelists_list = \%general_whitelist;
-    open my $fh, '<', 'lib/hunspell/whitelist1.txt';
+    open my $fh, '<:encoding(utf8)', 'lib/hunspell/whitelist1.txt';
     while (my $l = <$fh>)
     {
         chomp($l);
-        if ($l =~ /\A====(.*)/)
+        # Whitespace or comment - skip.
+        if ($l !~ /\S/ or ($l =~ /\A\s*#/))
+        {
+            # Do nothing.
+        }
+        elsif ($l =~ /\A====(.*)/)
         {
             @current_whitelists_list =
             (

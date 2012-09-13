@@ -20,6 +20,23 @@ die unless $speller;
 
 binmode STDOUT, ":encoding(utf8)";
 
+sub _slurp_utf8_array
+{
+    my $filename = shift;
+
+    open my $in, '<:encoding(utf8)', $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    my @ret = <$in>;
+
+    close($in);
+
+    chomp(@ret);
+
+    return \@ret;
+}
+
+my %whitelist = (map { $_ => 1 } @{_slurp_utf8_array('lib/hunspell/whitelist1.txt')});
 
 my %inside;
 
@@ -49,9 +66,14 @@ foreach my $filename (@ARGV)
             my $mark_word = sub {
                 my ($word) = @_;
 
-                $word =~ s{’(ve|s|m)\z}{'$1};
+                $word =~ s{’(ve|s|m|d)\z}{'$1};
 
-                my $verdict = !($speller->check($word));
+                my $verdict =
+                (
+                    (!exists($whitelist{$word}))
+                        &&
+                    (!($speller->check($word)))
+                );
 
                 $mispelling_found ||= $verdict;
 
@@ -89,3 +111,5 @@ foreach my $filename (@ARGV)
 
     close ($fh);
 }
+
+print "\n";

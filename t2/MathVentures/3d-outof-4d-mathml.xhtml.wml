@@ -19,9 +19,9 @@ numbers are considerably less frequent then mid-range ones.
 
 <p>
 Yet, this method, which is highly random, often results that the scores are
-insuitable for what the player planned the character to be or simply too
+unsuitable for what the player planned the character to be or simply too
 low. Therefore, there are several alternative methods to generate scores
-which are better as far as the player is concerened. One of the common ones,
+which are better as far as the player is concerned. One of the common ones,
 which is described in the game’s manual goes like that: instead of three
 dice, four dice are rolled. Then, the three highest die-scores are summed
 and together add up to the ability number.
@@ -39,15 +39,15 @@ members of the new team he was going to lead to use that method.
 <p>
 Anyway, he still wondered if anyone could think of a mathematical way to calculate
 it. I didn’t know or heard of any at that time so I told him that I didn’t
-know. He also said that he asked another acquaintant of us, who already
-began his math studies at the university if he could tell him, but he didn’t
+know. He also said that he asked another acquaintance of us, who had already
+began his maths studies at the university if he could tell him, but he didn’t
 know either.
 </p>
 
 <p>
 In any case, I thought about it for a while and after a month or so came to a
 solution. I presented this problem to other people who seemed interested at
-solving math riddles at various times since. Some of them managed to solve
+solving maths riddles at various times since. Some of them managed to solve
 it, but I didn’t find a more elegant way than what I thought of.
 </p>
 
@@ -59,21 +59,21 @@ figure it yourself, before looking at my solution:
 <table border="1">
 <tr><td>
 <p>
-<b>1.</b> Throw 4 dice, sum the numbers they generated and substract the
+<b>1.</b> Throw 4 dice, sum the numbers they generated and subtract the
 lowest value from the sum. (if there is more than one die with the lowest
-value, substract it only once). What is the average number of such throws?
+value, subtract it only once). What is the average number of such throws?
 </p>
 
 <p>
 More generally, one can ask:
 <b>2.</b> Throw n dice, each evenly generating values in the range 1 .. m,
-sum them, and substract the number of the lowest die. What is the average of
+sum them, and subtract the number of the lowest die. What is the average of
 the solutions of this throw? (the expression is dependant on n and m.)
 </p>
 
 <p>
 And yet more generally:
-<b>3.</b> Throw n dice each in the range 1..m, sum them and substract the p
+<b>3.</b> Throw n dice each in the range 1..m, sum them and subtract the p
 lowest dice (p &lt; n). What is the average outcome of this throw?
 </p>
 
@@ -88,59 +88,54 @@ The solution can be found some space below:
 
 <h2>Solution:</h2>
 
-<!--l. 15--><p class="noindent">Like I said, it did not come to me right away and I had to think about it for a while. I pondered various
+
+<!--l. 15--><p class="noindent" >Like I said, it did not come to me right away and I had to think about it for a while. I pondered various
 methods, and then came to think about the question this way:
-</p><!--l. 19--><p class="noindent">In each throw the numbers 1..6 can be substracted. I &#xFB01;rst realized that I could immediately substract 1 from all
+</p><!--l. 19--><p class="noindent" >In each throw the numbers 1..6 can be subtracted. I first realized that I could immediately subtract 1 from all
 <!--l. 20--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math> of the
-possible throws, because one always substracts <b>at least</b> 1. Furthermore, when is another 1 point substracted from
-the &#xFB01;nal sum? Obviously this is the case when 2 or more points are substracted. When does it happen? It happens
-when all the dice are bigger than 1. (or else 1 would have been substracted.) Since all the dice are in the range 2-6
-there are <!--l. 25--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+possible throws, because one always subtract <span
+class="cmbx-10">at least </span>1. Furthermore, when is another 1 point subtracted from the
+final sum? Obviously this is the case when 2 or more points are subtracted. When does it happen? It happens when
+all the dice are bigger than 1. (or else 1 would have been subtracted.) Since all the dice are in the range 2-6 there are
+<!--l. 25--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>5</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math>
-di&#xFB00;erent possibilities for this case.
-</p><!--l. 28--><p class="noindent">The next point is substracted when all the dice are in the range 3-6, hence
+different possibilities for this case.
+</p><!--l. 28--><p class="noindent" >The next point is subtracted when all the dice are in the range 3-6, hence
 <!--l. 29--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>4</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math>
 possibilities and so on. Now, to calculate the total, let&#x2019;s start from the sum of all
 possible throws of 4 dice, without the minimal die removed. This sum is equal to
 <!--l. 31--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 > <mo
-class="MathClass-punc">&#x22C5;</mo> <mn>1</mn><mn>4</mn> <mo
+class="MathClass-bin">&#x22C5;</mo> <mn>1</mn><mn>4</mn> <mo
 class="MathClass-rel">=</mo> <mn>1</mn><mn>8</mn><mn>1</mn><mn>4</mn><mn>4</mn></math>. Then, let&#x2019;s remove
 <!--l. 31--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 > <mo
-class="MathClass-rel">=</mo> <mn>1</mn><mn>2</mn><mn>9</mn><mn>6</mn></math> because of the &#xFB01;rst
+class="MathClass-rel">=</mo> <mn>1</mn><mn>2</mn><mn>9</mn><mn>6</mn></math> because of the first
 point removed, <!--l. 32--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>5</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math>
 because of the second point etc. Eventually we get:
-</p><!--l. 35--><p class="noindent"><!--l. 35--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+</p><!--l. 35--><p class="noindent" ><!--l. 35--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 > <mo
@@ -170,16 +165,14 @@ class="MathClass-bin">&#x2212;</mo> <msup><mrow
 ><mn>4</mn></mrow></msup
 > <mo
 class="MathClass-rel">=</mo> <mn>1</mn><mn>5</mn><mn>8</mn><mn>6</mn><mn>9</mn></math>
-</p><!--l. 37--><p class="noindent">To &#xFB01;nd the average, all one has to do is divide it by
+</p><!--l. 37--><p class="noindent" >To find the average, all one has to do is divide it by
 <!--l. 37--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math>, which is the number
 of individual throws. <!--l. 38--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow
 ><mn>1</mn><mn>5</mn><mn>8</mn><mn>6</mn><mn>9</mn></mrow>
   <mrow
 ><msup><mrow
@@ -189,33 +182,27 @@ display="inline" ><mfrac><mrow
 class="MathClass-rel">=</mo> <mn>1</mn><mn>2</mn><mo
 class="MathClass-punc">.</mo><mn>2</mn><mn>4</mn></math>,
 which is also the number that my friend&#x2019;s program returned.
-</p><!--l. 41--><p class="noindent">To generalise it for n dice each having the numbers 1..m on its side (AD&#x0026;D) also involves
+</p><!--l. 41--><p class="noindent" >To generalise it for n dice each having the numbers 1..m on its side (AD&#x0026;D) also involves
 using dice with 4, 8, 10,12, 20 and sometimes 100 sides. :-)) all one has to do is replace
 <!--l. 43--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mn>6</mn></math> with
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>6</mn></math> with
 <!--l. 43--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >n</mi></math> and
 <!--l. 43--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mn>4</mn></math> with
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>4</mn></math> with
 <!--l. 43--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >m</mi></math>
 where appropriate. One should remember that the average throw for an individual die of 1..m is
 <!--l. 45--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow><mn>1</mn> <mo
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <mi
 >m</mi></mrow>
   <mrow><mi
 >m</mi></mrow></mfrac>  </math> and for
 n such dice <!--l. 46--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow><mi
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow><mi
 >n</mi> <mfenced separators=""
 open="("  close=")" ><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <mi
@@ -223,9 +210,8 @@ class="MathClass-bin">+</mo> <mi
    <mrow><mi
 >m</mi></mrow></mfrac>    </math>.
 We eventually get to:
-</p><!--l. 48--><p class="noindent"><!--l. 48--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow
+</p><!--l. 48--><p class="noindent" ><!--l. 48--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow
 ><mfenced separators=""
 open="("  close=")" ><mrow><mfrac><mrow
 ><msup><mrow
@@ -234,9 +220,9 @@ open="("  close=")" ><mrow><mfrac><mrow
 ><mi
 >n</mi></mrow></msup
 ><mo
-class="MathClass-punc">&#x22C5;</mo><mi
+class="MathClass-bin">&#x22C5;</mo><mi
 >n</mi><mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mn>1</mn><mo
 class="MathClass-bin">+</mo><mi
 >m</mi></mrow></mfenced></mrow>
@@ -289,40 +275,37 @@ class="MathClass-bin">&#x2212;</mo><msup><mrow
 ><mi
 >n</mi></mrow></msup
 ></mrow></mfrac>                </math>
-</p><!--l. 53--><p class="noindent">Eliminating the next smallest die, and the other dice in order, is a bit more tricky. As a matter of fact, it took
-me two more years to &#xFB01;nally come up with a solution. (not that I spent all my time thinking about
+</p><!--l. 53--><p class="noindent" >Eliminating the next smallest die, and the other dice in order, is a bit more tricky. As a matter of fact, it took
+me two more years to finally come up with a solution. (not that I spent all my time thinking about
 it)
-</p><!--l. 57--><p class="noindent">The basic idea is this: regarding the &#xFB01;rst point of the second least die, it&#x2019;s obvious that we still have to remove
+</p><!--l. 57--><p class="noindent" >The basic idea is this: regarding the first point of the second least die, it&#x2019;s obvious that we still have to remove
 <!--l. 58--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math> from
 the total. About the second point: it is removed only if all the dice, except maybe one has a face value of 2 or
-more. Phrased in a di&#xFB00;erent way it is removed:
+more. Phrased in a different way it is removed:
      </p><ol  class="enumerate1" >
-     <li class="enumerate"
-><a
- id="x1-3x1"></a>If there are 4 dice in the range 2..6.<b>Or</b>:
+     <li
+  class="enumerate" id="x1-3x1">If there are 4 dice in the range 2..6. <span
+class="cmbx-10">Or</span>:
      </li>
-     <li class="enumerate"
-><a
- id="x1-5x2"></a>If there are 3 dice in the range 2..6 and one die whose value is 1.</li></ol>
-<!--l. 67--><p class="noindent">The conditions for the other 4 cases are similiar: if the additional point is the Kth than there could be either 4
+     <li
+  class="enumerate" id="x1-5x2">If there are 3 dice in the range 2..6 and one die whose value is 1.</li></ol>
+<!--l. 67--><p class="noindent" >The conditions for the other 4 cases are similar: if the additional point is the Kth than there could be either 4
 dice in the range K..6 or 3 dice in the range K..6 and one die in the range 1..(K-1). To evaluate it
 mathematically, I&#x2019;ll use the standard formulas and eventually get to:
 
-</p><!--l. 72--><p class="noindent"><!--l. 72--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+</p><!--l. 72--><p class="noindent" ><!--l. 72--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 > <mfenced separators=""
 open="("  close=")" ><mrow><mn>6</mn> <mo
 class="MathClass-bin">&#x2212;</mo> <mi
 >K</mi> <mo
 class="MathClass-bin">+</mo> <mn>1</mn></mrow></mfenced></mrow><mrow
 ><mn>4</mn></mrow></msup
-><mo
+> <mo
 class="MathClass-bin">+</mo> <mfenced separators=""
 open="("  close=")" ><mrow><msup><mrow
 ><mfenced separators=""
@@ -332,34 +315,31 @@ class="MathClass-bin">&#x2212;</mo> <mi
 class="MathClass-bin">+</mo> <mn>1</mn></mrow></mfenced></mrow><mrow
 ><mn>3</mn></mrow></msup
 > <mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mi
 >K</mi> <mo
 class="MathClass-bin">&#x2212;</mo> <mn>1</mn></mrow></mfenced></mrow></mfenced> <mo
-class="MathClass-punc">&#x22C5;</mo> <mn>4</mn></math>
-</p><!--l. 75--><p class="noindent">If we substract <!--l. 75--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+class="MathClass-bin">&#x22C5;</mo> <mn>4</mn></math>
+</p><!--l. 75--><p class="noindent" >If we subtract <!--l. 75--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math>
 and those 5 sums from the total sum that was acquired in the previous stage, we&#x2019;d get to the
 new total with the two least dice removed on each throw. Divide it by the number of throws -
 <!--l. 77--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msup><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></math> - and
 we get the new average. The grand formula, then, is:
-</p><!--l. 80--><p class="noindent"><!--l. 80--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow
+</p><!--l. 80--><p class="noindent" ><!--l. 80--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow
 ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ><mo
-class="MathClass-punc">&#x22C5;</mo><mn>1</mn><mn>4</mn><mo
+class="MathClass-bin">&#x22C5;</mo><mn>1</mn><mn>4</mn><mo
 class="MathClass-bin">&#x2212;</mo><munderover accentunder="false" accent="false"><mrow
 ><mo
 class="MathClass-op">&#x2211;</mo></mrow><mrow
@@ -400,34 +380,35 @@ class="MathClass-bin">&#x2212;</mo><mi
 class="MathClass-bin">+</mo><mn>1</mn></mrow></mfenced></mrow><mrow
 ><mn>3</mn></mrow></msup
 ><mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mi
 >i</mi><mo
 class="MathClass-bin">&#x2212;</mo><mn>1</mn></mrow></mfenced></mrow></mfenced><mo
-class="MathClass-punc">&#x22C5;</mo><mn>4</mn></mrow></mfenced></mrow>
+class="MathClass-bin">&#x22C5;</mo><mn>4</mn></mrow></mfenced></mrow>
 
                                  <mrow
 ><msup><mrow
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></mrow></mfrac>                 </math>
-</p><!--l. 86--><p class="noindent">From the 3rd least dice onward, this method gets more and more complicated because we have to consider 3
-di&#xFB00;erent cases for every point we substract, 4 cases for the fourth die, and so on. If anyone has an idea on how
-to improve this method, or can suggest an alternative method which is simpler as more and more dice are
-removed by order, please let me know and I&#x2019;ll post it here.
-</p><!--l. 93--><p class="noindent">I, for my part, am no longer interested in this problem, and do not deal with it, at least not until I extend my
-knowldege in Combinatorics and the Theory of Probability.
-</p><!--l. 97--><p class="noindent">A final note: you can find a <a href="calc_dice_average.c">C program</a>, not unlike the one my friend used, that
-calculates the average of such throws . It can do that for any number of dice
-with any number of sides, and while eliminating any number of minimal
-dice.
-</p><!--l. 104--><p class="noindent">The program is quite stupid and merely iterates over all the di&#xFB00;erent throws, and adds the sum of
-every throw to the total. It becomes less e&#xFB03;cient as the number of sides and/or the number of dice
+</p><!--l. 86--><p class="noindent" >From the 3rd least dice onward, this method gets more and more complicated because we have to consider 3
+different cases for every point we subtract, 4 cases for the fourth die, and so on. If anyone has an idea on how to
+improve this method, or can suggest an alternative method which is simpler as more and more dice are removed
+by order, please let me know and I&#x2019;ll post it here.
+</p><!--l. 93--><p class="noindent" >I, for my part, am no longer interested in this problem, and do not deal with it, at least not until I extend my
+knowledge in Combinatorics and the Theory of Probability.
+</p><!--l. 97--><p class="noindent" >A final note: you can find a C program, not unlike the one my friend used, that calculates the average of such
+throws <span
+class="cmbx-10">TODO Link me here</span>. It can do that for any number of dice with any number of sides, and while
+eliminating any number of minimal dice. &#x00A1;/p&#x00BF;
+</p><!--l. 104--><p class="noindent" >The program is quite stupid and merely iterates over all the different throws, and adds the sum of
+every throw to the total. It becomes less efficient as the number of sides and/or the number of dice
 increases.
-</p><!--l. 109--><p class="noindent">Writing a program that implements my method <span
+</p><!--l. 109--><p class="noindent" >Writing a program that implements my method <span
 class="cmbx-10">for any number of removed dice </span>is a bit complicated
 because the formula itself gets more and more complicated. Maybe I&#x2019;ll get to it one day.
 </p>
+
 
 <h2>Links</h2>
 

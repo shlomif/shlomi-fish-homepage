@@ -41,6 +41,9 @@ sub run
     foreach my $entry ($self->feed()->entries())
     {
         my $text = $self->_calc_entry_body($entry) . "\n\n" . "<p><a href=\"" . CGI::escapeHTML($entry->link()) . "\">See comments and comment on this.</a></p>\n";
+
+        $text =~ s{[ \t]+$}{}gms;
+
         my $issued = $entry->issued();
         my $filename = "lib/feeds/shlomif_hsite/" . $issued->ymd() . ".html";
         open O, ">", $filename;

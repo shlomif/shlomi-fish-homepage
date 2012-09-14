@@ -37,6 +37,12 @@ my @sections =
         'class' => "Humour",
         'title' => "Humour Section Menu",
     },
+    {
+        'id' => "meta",
+        'regex' => "^/meta/",
+        'class' => "Meta",
+        'title' => "Site Meta Information Section Menu",
+    },
 );
 
 sub get_nav_menu

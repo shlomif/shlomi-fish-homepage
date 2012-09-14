@@ -70,6 +70,9 @@ test: all
 runtest: all
 	runprove Tests/*.t
 
+spell: all
+	./bin/spell-checker-iface.sh
+
 upload_deps: all
 
 upload_local: upload_deps

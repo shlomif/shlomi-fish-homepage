@@ -81,7 +81,7 @@ foreach my $filename (@ARGV)
             my $mark_word = sub {
                 my ($word) = @_;
 
-                $word =~ s{’(ve|s|m|d|t|ll)\z}{'$1};
+                $word =~ s{’(ve|s|m|d|t|ll|re)\z}{'$1};
 
                 my $verdict =
                 (

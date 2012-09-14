@@ -256,7 +256,7 @@
     )
 )
 
-; In a similiar way and by using not we can define all other comparison
+; In a similar way and by using not we can define all other comparison
 ; operators.
 
 
@@ -396,7 +396,7 @@
     )
 )
 
-; In a similiar way and by using not we can define all other comparison
+; In a similar way and by using not we can define all other comparison
 ; operators.
 
 

@@ -421,14 +421,14 @@ scheme.
 
 <pre>
 
-This algorithm is similiar to the two-way algorithm, except that if a at the
+This algorithm is similar to the two-way algorithm, except that if a at the
 end of the left iteration, there is a single filled cell, one has to press
 on its lower or upper cell, before moving on. Likewise, if at the end of the
 down scanning, you have filled cells in bottom row, you have to clear them
 by pressing cells of the bottom row.
 
 Proof:
-Very similiar to Theorem 4 except those notes:
+Very similar to Theorem 4 except those notes:
 
 1. In N=3k+1 the two-way method as is, will ping the possible remaining
 1 back and forth between the two edges. Therefore if there is a state

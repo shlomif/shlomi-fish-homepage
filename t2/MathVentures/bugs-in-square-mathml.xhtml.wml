@@ -33,7 +33,7 @@ bug which was initially at the position clockwise from it.
 
 <p>
 Assuming the square is 1 meter long, and the bugs are moving in the velocity of
-1 meter per second, how will it take for the bugs to meet in the center of the
+1 meter per second, how will it take for the bugs to meet in the centre of the
 square?
 </p>
 </blockquote>
@@ -51,27 +51,24 @@ The solution can be found some space below:
 <p>Bugs Path Illustration</p>
 </object>
 
-<!--l. 15--><p class="noindent">I&#x2019;ll use the following model to simplify the problem: suppose the bugs don&#x2019;t move towards each other
-in&#xFB01;nitesimly, but rather move in a straight line, and then stop, and then move again toward their new positions,
-and so forth. The bugs move toward their initial position until they reach a position which is in proportion p to
-the initial distance between them. Then they move again, towards a position which is in proportion p to their
-distance, and so forth.
-</p><!--l. 22--><p class="noindent">Thus they form an in&#xFB01;nite series of squares inside each other. You can see an illustration of this scheme to the right of this text
+<!--l. 15--><p class="noindent" >I&#x2019;ll use the following model to simplify the problem: suppose the bugs don&#x2019;t move towards each other
+infinitesimally, but rather move in a straight line, and then stop, and then move again toward their new
+positions, and so forth. The bugs move toward their initial position until they reach a position which is in
+proportion p to the initial distance between them. Then they move again, towards a position which is in
+proportion p to their distance, and so forth.
+</p><!--l. 22--><p class="noindent" >Thus they form an infinite series of squares inside each other. You can see an illustration of this scheme to the right of this text
 for the proportion <!--l. 24--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >p</mi> <mo
 class="MathClass-rel">=</mo> <mn>0</mn><mo
-class="MathClass-punc">.</mo><mn>1</mn><mn>0</mn></math>.
-</p><!--l. 26--><p class="noindent">Now, if the length of a given square is <!--l. 26--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+class="MathClass-punc">.</mo><mn>1</mn><mn>5</mn></math>.
+</p><!--l. 26--><p class="noindent" >Now, if the length of a given square is <!--l. 26--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >a</mi></math>,
-then the length of the square inside it is (according to pythgoras theorem):
-</p><!--l. 29--><p class="noindent">
+then the length of the square inside it is (according to Pythagoras theorem):
+</p><!--l. 29--><p class="noindent" >
 <!--tex4ht:inline--></p><!--l. 29--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="block" >
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
 <mtable
 class="eqnarray-star" columnalign="right center left" >
 <mtr><mtd
@@ -107,13 +104,12 @@ class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
 class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                             </mtr></mtable>
 </math>
-<!--l. 32--><p class="nopar">
+<!--l. 32--><p class="nopar" >
 The lengths of the squares form a decreasing geometrical series, with that proportion. Thus the length of the
 path a bug travel until they meet is:
-</p><!--l. 37--><p class="noindent">
+</p><!--l. 37--><p class="noindent" >
 <!--tex4ht:inline--></p><!--l. 37--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="block" >
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
 <mtable
 class="eqnarray-star" columnalign="right center left" >
 <mtr><mtd
@@ -122,7 +118,7 @@ class="eqnarray-2">   </mtd><mtd
 class="eqnarray-3">        <mfrac><mrow
 ><mi
 >p</mi> <mo
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
 ><mi
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
@@ -140,11 +136,10 @@ class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac></mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                                </mtr></mtable>
 </math>
 
-<!--l. 39--><p class="nopar">
-</p><!--l. 41--><p class="noindent">This is according to the formula that the sum of an in&#xFB01;nite decresing geometric series is
+<!--l. 39--><p class="nopar" >
+</p><!--l. 41--><p class="noindent" >This is according to the formula that the sum of an infinite decreasing geometric series is
 <!--l. 42--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mfrac><mrow> <msub><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow> <msub><mrow
 ><mi
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
@@ -153,27 +148,23 @@ display="inline" ><mfrac><mrow> <msub><mrow
 class="MathClass-bin">&#x2212;</mo> <mi
 >q</mi></mrow></mfrac></math> where
 <!--l. 42--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><msub><mrow
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow
 ><mi
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
 ></math> is the value of its
-&#xFB01;rst item and <!--l. 43--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+first item and <!--l. 43--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >q</mi></math>
 is the proportion between two consecutive items.
-</p><!--l. 45--><p class="noindent">Now, to &#xFB01;nd the length an in&#xFB01;nitesimal bug will travel, we just limit
+</p><!--l. 45--><p class="noindent" >Now, to find the length an infinitesimal bug will travel, we just limit
 <!--l. 45--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="inline" ><mi
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
 >p</mi></math> to
 0:
-</p><!--l. 48--><p class="noindent">
+</p><!--l. 48--><p class="noindent" >
 <!--tex4ht:inline--></p><!--l. 48--><math
- xmlns="http://www.w3.org/1998/Math/MathML"
-display="block" >
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
 <mtable
 class="eqnarray-star" columnalign="right center left" >
 <mtr><mtd
@@ -187,7 +178,7 @@ class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
 >           <mfrac><mrow
 ><mi
 >p</mi> <mo
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
 ><mi
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
@@ -215,7 +206,7 @@ class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
 >           <mfrac><mrow
 ><mi
 >p</mi> <mo
-class="MathClass-punc">&#x22C5;</mo> <msub><mrow
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
 ><mi
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
@@ -230,7 +221,7 @@ class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
 class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
 >p</mi> <mo
 class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
-class="MathClass-punc">&#x22C5;</mo><mfrac><mrow
+class="MathClass-bin">&#x22C5;</mo><mfrac><mrow
 ><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
 ><mi
@@ -266,9 +257,9 @@ class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
 > <mo
-class="MathClass-punc">&#x22C5;</mo> <mi
+class="MathClass-bin">&#x22C5;</mo> <mi
 >p</mi> <mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
 ><mi
@@ -304,7 +295,7 @@ class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
 > <mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
 ><mi
@@ -334,20 +325,20 @@ class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
 > <mo
-class="MathClass-punc">&#x22C5;</mo><mfenced separators=""
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
 open="("  close=")" ><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn> <mo
-class="MathClass-punc">&#x22C5;</mo> <msup><mrow
+class="MathClass-bin">&#x22C5;</mo> <msup><mrow
 ><mn>0</mn></mrow><mrow
 ><mn>2</mn> </mrow> </msup
 > <mo
 class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
-class="MathClass-punc">&#x22C5;</mo> <mn>0</mn> <mo
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn> <mo
 class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
             <mrow
 ><mn>2</mn> <mo
 class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
-class="MathClass-punc">&#x22C5;</mo> <mn>0</mn></mrow></mfrac>             <mo
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn></mrow></mfrac>             <mo
 class="MathClass-rel">=</mo>           </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
 </mtr><mtr><mtd
@@ -359,7 +350,7 @@ class="eqnarray-3">   <mfrac><mrow
 >a</mi></mrow><mrow
 ><mn>1</mn></mrow></msub
 > <mo
-class="MathClass-punc">&#x22C5;</mo> <mrow><mo
+class="MathClass-bin">&#x22C5;</mo> <mrow ><mo
 class="MathClass-open">(</mo><mrow><mn>1</mn> <mo
 class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo
 class="MathClass-close">)</mo></mrow></mrow>
@@ -372,8 +363,8 @@ class="MathClass-rel">=</mo> <msub><mrow
 >                            </mtd><mtd
 class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                      </mtr></mtable>
 </math>
-<!--l. 56--><p class="nopar">
-</p><!--l. 58--><p class="noindent">Therefore, the length of a bug&#x2019;s path is equal to the length of the original square&#x2019;s side. The time it will take a
+<!--l. 56--><p class="nopar" >
+</p><!--l. 58--><p class="noindent" >Therefore, the length of a bug&#x2019;s path is equal to the length of the original square&#x2019;s side. The time it will take a
 1 meter per second fast bugs who stand at the corner of a 1*1 meter square to meet is 1/1 = 1
 second.
 </p>

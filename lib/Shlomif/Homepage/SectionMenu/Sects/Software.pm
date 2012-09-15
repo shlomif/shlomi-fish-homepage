@@ -81,7 +81,7 @@ my $software_tree_contents =
                     title => "Solve layouts of the patience card game 'Black Hole'",
                 },
                 {
-                    text => "Japanase Puzzle Games",
+                    text => "Japanese Puzzle Games",
                     url => "open-source/projects/japanese-puzzle-games/",
                     subs =>
                     [

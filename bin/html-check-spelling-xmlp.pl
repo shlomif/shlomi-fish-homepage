@@ -89,7 +89,7 @@ foreach my $filename (@ARGV)
                         &&
                     (!exists($per_filename_whitelists{$filename}{$word}))
                         &&
-                    ($word !~ m#\A\p{Hebrew}+\z#)
+                    ($word !~ m#\A[\p{Hebrew}\-'’]+\z#)
                         &&
                     (!($speller->check($word)))
                 );

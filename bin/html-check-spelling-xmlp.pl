@@ -82,6 +82,7 @@ foreach my $filename (@ARGV)
                 my ($word) = @_;
 
                 $word =~ s{’(ve|s|m|d|t|ll|re)\z}{'$1};
+                $word =~ s{[’']\z}{};
                 if ($word =~ /[A-Za-z]/)
                 {
                     $word =~ s{\A(?:(?:ֹו?(?:ש|ל|מ|ב|כש|לכש|מה|שה|לכשה|ב-))|ו)-?}{};

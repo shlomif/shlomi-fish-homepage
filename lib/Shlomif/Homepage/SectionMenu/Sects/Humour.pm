@@ -275,6 +275,11 @@ my $humour_tree_contents =
                     title => "Software Applications that Transcend Their Original Purpose",
                 },
                 {
+                    text => "I’m The Real Tim Toady",
+                    url => "humour/bits/Im-The-Real-Tim-Toady/",
+                    title => "Incomplete Perl Geek Song",
+                },
+                {
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
                     title => "Collection of funny facts about various people an things",

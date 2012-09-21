@@ -160,6 +160,11 @@ my $essays_tree_contents =
                     url => "lecture/W2L/Why_Linux/",
                     title => "What Linux is to me.",
                 },
+                {
+                    text => "Command Line (Notes)",
+                    url => "lecture/Command-Line/",
+                    title => "Topics for the Command Line Lecture for Newbies",
+                },
             ],
         },
         {

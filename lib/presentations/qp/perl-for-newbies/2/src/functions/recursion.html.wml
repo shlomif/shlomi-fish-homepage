@@ -23,8 +23,8 @@ If your recursion can be done using a simple loop, do it with it.
 </p>
 
 <p>
-Secondly, some systems (such as Microsft Windows) limit an executable to a
-certain amount of stack, as far as such langauges as Assembler or C are
+Secondly, some systems (such as Microsoft Windows) limit an executable to a
+certain amount of stack, as far as such languages as Assembler or C are
 concerned. This should not be of any concern to perl hackers, because the
 perl interpreter does not translate a perl function call into a C function
 call. (not to mention that the perl interpreter on those systems is compiled

@@ -13,16 +13,16 @@ retain their original case.
 </p>
 
 <p>
-A <tt>g</tt> causes the match or substitution to match <b>all</b> occurences,
+A <tt>g</tt> causes the match or substitution to match <b>all</b> occurrences,
 not just one. If used with a match in an array context
-(e.g: <tt>@occurences = ($string =~ /$regexp/g);</tt>) it retrieves all
+(e.g: <tt>@occurrences = ($string =~ /$regexp/g);</tt>) it retrieves all
 the matches and if used with a substitution it substitutes all the
-occurences with the string.
+occurrences with the string.
 </p>
 
 <p>
-This example replaces all the occurences of the word "hello" by the index of
-their occurence:
+This example replaces all the occurrences of the word "hello" by the index of
+their occurrence:
 </p>
 
 <quadpres_code_block>

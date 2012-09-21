@@ -358,7 +358,7 @@ available as a library sooner or later. Now, if only one instance of the
 library can be run we are set. But what about multi-threaded applications?
 
 ** I decided to create an instance structure that will be passed as the first
-    paramters to solve_for_state() and check_and_add_state(). That way, more
+    parameters to solve_for_state() and check_and_add_state(). That way, more
     than one simultaenous instances can be run at any given time.
 
 ** I moved prev_states, indirect_prev_states, num_prev_states, etc. to the

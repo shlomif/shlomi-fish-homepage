@@ -154,7 +154,7 @@ my $contents =
                             [
                                 {
                                     'url' => "super.html",
-                                    'title' => "Calling Overriden Methods of Base Classes",
+                                    'title' => "Calling Overridden Methods of Base Classes",
                                 },
                             ],
                         },

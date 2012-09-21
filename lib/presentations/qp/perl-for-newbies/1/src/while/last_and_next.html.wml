@@ -11,7 +11,7 @@ body, skips to the loop condition and if it is met, executes the loop again.
 
 <p>
 By default, <tt>last</tt> and <tt>next</tt> operate on the most innermost loop.
-However, the loop to which they relate can be controlled by labeling
+However, the loop to which they relate can be controlled by labelling
 the requested loop and specifying this label as a parameter to <tt>last</tt>
 or <tt>next</tt>.
 </p>

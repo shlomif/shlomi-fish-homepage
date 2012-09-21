@@ -480,7 +480,7 @@ The one-way - one-way clearing algorithm which was proved in Theorem 3,
 uses only a (3k+1)*(3k+1) square of presses to solve the entire board.
 Ergo, the dimension is (3k+1)^2 or less. I believe it _is_ (3k+1)^2 and
 I think I can prove it by showing that the presses of a corner
-(3k+1)*(3k+1) are linearily independant. In the boolean field the
+(3k+1)*(3k+1) are linearly independant. In the boolean field the
 meaning is that any number of them other than zero XORed together will
 not generate the clear state.
 
@@ -504,7 +504,7 @@ cannot be part of the zero sum.
 
 The same can be deduced for the next layer starting from Pr(3,3), which
 is the only vector left that can affect square (4,4). And so-on for the
-other layers, proving that they are a linearily independant set of
+other layers, proving that they are a linearly independant set of
 vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
 span the space of the solveable states of (3k+2) boards.
 

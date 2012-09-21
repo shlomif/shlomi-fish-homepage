@@ -153,7 +153,7 @@ effects.
             (X .^ 2 + Y .^ 2) .^ (2.5) anyone?
 
 Most filters affect only the active layer, so if you wish them to have
-a commulative effect on a combination of layers you'll need to merge them
+a cumulative effect on a combination of layers you'll need to merge them
 first (<Layers> -> "Merge Visible Layers..." or <Layers> -> "Flatten Image")
 
     Layer Modes:
@@ -242,7 +242,7 @@ Q: How can we brighten or darken an image causing colour values
     modify the histogram while not overflowing from the image boundaries
     (which cannot be said on brightness and contrast manipulations).
 
-    The more positive the gamme is the brighter the resultant image will be.
+    The more positive the Gamma is the brighter the resultant image will be.
 
     - Show the graphs on the board.
 
@@ -262,7 +262,7 @@ Q: How can we brighten or darken an image causing colour values
 Equalize:
 ---------
 
-The "Equalize" operation constructs an appopriate Look-Up Table so that
+The "Equalize" operation constructs an appropriate Look-Up Table so that
 the histogram of the resultant image will be more or less a constant
 function.
 
@@ -360,7 +360,7 @@ more-or-less identical results but each one could be faster in some cases.
         computer-generated images or those with large areas of constant
         intensity.
 
-    - IIR G. B. : I think it stands for Infinite Impulse Responce (which is
+    - IIR G. B. : I think it stands for Infinite Impulse Response (which is
         one of the methods to construct a digital filter), but again there's
         nothing in the documentation or the code to explain the initials. This
         blurring works best for large radius values and for images which are
@@ -377,7 +377,7 @@ more-or-less identical results but each one could be faster in some cases.
 
     4. Apply.
 
-    5. Optionally select different images or radiuses and play with it.
+    5. Optionally select different images or radii and play with it.
 
     Demo 2:
     -------
@@ -708,7 +708,7 @@ experience on your own with the GIMP.
 I hope you enjoyed the lecture. If you have any other questions or comments
 , then please address me in person or send a message to the Club's mailing list.
 
-Happy Gimping and may the Wilber (that's the GIMP's maskot) be with you!
+Happy Gimping and may the Wilber (that's the GIMP's mascot) be with you!
 
 References and Links:
 =====================

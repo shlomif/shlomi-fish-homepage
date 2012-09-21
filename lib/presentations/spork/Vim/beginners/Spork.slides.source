@@ -170,13 +170,13 @@ then.
 ----
 == Parameterised Movements:
 
-* |/[Regexp]| - Go to the next occurence of the (Vim) regular expression [Regexp]
-+* |?[Regexp]| - Previous occurence of regexp.
+* |/[Regexp]| - Go to the next occurrence of the (Vim) regular expression [Regexp]
++* |?[Regexp]| - Previous occurrence of regexp.
 +** Use |n| and |N| to move to the next or previous matches.
 
-+* |f[Char]| - the next occurence of |[Char]| on the current line.
-+* |F[Char]| - previous occurence
-+* |t[Char]| - one character before the next occurence
++* |f[Char]| - the next occurrence of |[Char]| on the current line.
++* |F[Char]| - previous occurrence
++* |t[Char]| - one character before the next occurrence
 +* |T[Char]| - previous one character.
 ----
 == Ranges

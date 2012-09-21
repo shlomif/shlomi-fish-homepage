@@ -11,7 +11,7 @@ In Perl, file I/O is handled by using sessions: you are opening a file for
 reading or writing (or both), do with it what you want, and then close it.
 In Perl, filehandles implemented as the so-called <tt>globs</tt> are placed on
 a separate namespace than that of the  variables. It is generally marked with
-a starting asterik (<tt>*</tt>), which can be omitted if the first letter is a
+a starting asterisk (<tt>*</tt>), which can be omitted if the first letter is a
 capital one.
 </p>
 
@@ -52,7 +52,7 @@ Reading
 </td>
 <td>
 Appending (the file pointer will start at the end and the file will not be
-overriden)
+overridden)
 </td>
 </tr>
 

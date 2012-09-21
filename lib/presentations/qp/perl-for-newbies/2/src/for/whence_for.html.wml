@@ -8,7 +8,7 @@ you are probably wondering when to use each one.
 </p>
 
 <p>
-A subtantial difference between the notation
+A substantial difference between the notation
 <tt>for($i=0 ; $i&lt;$limit ; $i++)</tt> and between
 <tt>for $i (0 .. ($limit-1))</tt> is that the first accommodates
 itself to changes in <tt>$limit</tt>, while the second will iterate for a

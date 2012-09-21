@@ -35,7 +35,7 @@ sub move_column
     move_column($source, $intermediate, $how_many-1);
     # Print the current state
     print_towers();
-    # Move one disk. Notice the dereferncing of the arrays
+    # Move one disk. Notice the dereferencing of the arrays
     # using @{$ref}.
     push @{$towers[$dest]}, pop(@{$towers[$source]});
     move_column($intermediate, $dest, $how_many-1);

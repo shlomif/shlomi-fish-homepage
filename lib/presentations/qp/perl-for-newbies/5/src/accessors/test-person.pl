@@ -17,7 +17,7 @@ my $shlomif =
 $shlomif->greet();
 $shlomif->increment_age();
 
-print "Happy Birhday, Shlomi, your age is now ", $shlomif->get_age(), ".\n";
+print "Happy Birthday, Shlomi, your age is now ", $shlomif->get_age(), ".\n";
 
 my $newton =
     Person->new(

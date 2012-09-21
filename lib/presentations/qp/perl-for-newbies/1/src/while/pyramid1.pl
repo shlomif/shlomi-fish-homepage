@@ -1,4 +1,4 @@
-print "Please enter the length of the pyramide:\n";
+print "Please enter the length of the pyramid:\n";
 $size = <>;
 chomp($size);
 

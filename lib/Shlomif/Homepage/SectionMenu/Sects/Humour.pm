@@ -365,6 +365,10 @@ my $humour_tree_contents =
                     title => "A conspiracy theory set in the Star Wars World. Via “Debunking 911” via “Websurdity”",
                 },
                 {
+                    text => "Graduate Student Humour",
+                    url => "humour/by-others/grad-student-jokes-from-jnoakes/",
+                },
+                {
                     text => "Division Two Magazine",
                     url => "humour/by-others/division-two/",
                     title => "A mirror of a hilarious parodical site that went offline",

@@ -11,7 +11,7 @@ pointers. There are however, two fundamental differences:
 <li>
 There is no reference arithmetics in perl. If for example, a reference points
 to the fifth element of an array, then adding 1 to it will not refer you to the
-sixth element. In fact, adding or substracting integers from references is
+sixth element. In fact, adding or subtracting integers from references is
 possible but quite meaningless.
 </li>
 

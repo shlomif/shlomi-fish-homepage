@@ -38,7 +38,7 @@ presentation_date: FILL IN
 
 +* Keep all the statistics in a scans * boards matrix.
 +* Find the optimal scan by doing a column-wise summation of the solved boards.
-+* Maintain the current state, by substracting the iterations of the current scan from the non-solved boards.
++* Maintain the current state, by subtracting the iterations of the current scan from the non-solved boards.
 +* Solved boards will be removed from the matrix.
 +* Keep track of the total iterations by summing the iterations of all the solved boards, plus the quota times the number of non-solved ones.
 

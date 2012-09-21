@@ -1,7 +1,7 @@
 ; Boolean constants in lambda calculus.
 ; -------------------------------------
 
-; Traditonally true and false are:
+; Traditionally true and false are:
 (define lc_true  (lambda (x) (lambda (y) x)))
 (define lc_false (lambda (x) (lambda (y) y)))
 

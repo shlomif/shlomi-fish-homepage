@@ -76,4 +76,4 @@
 ; Note that the version of divide does not use tail-recursion.
 ; Thus, it will consume a memory of O(div/div_by). Still, a tail
 ; recursion version can be written using a three-elements
-;( div, div_by, accumlator) list.
+;( div, div_by, accumulator) list.

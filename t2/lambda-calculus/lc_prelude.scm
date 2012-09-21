@@ -1,7 +1,7 @@
 ; Boolean constants in lambda calculus.
 ; -------------------------------------
 
-; Traditonally true and false are:
+; Traditionally true and false are:
 (define lc_true  (lambda (x) (lambda (y) x)))
 (define lc_false (lambda (x) (lambda (y) y)))
 
@@ -135,7 +135,7 @@
 ; -------------------------------
 
 ; We already saw how to get the number that follows a given number. Now
-; how to do addition, substraction, multiplication, etc.
+; how to do addition, subtraction, multiplication, etc.
 
 ; Addition:
 ; We can repeat succ on m for n times in order to add n to m:
@@ -267,7 +267,7 @@
 ; -------------------------------
 
 ; We already saw how to get the number that follows a given number. Now
-; how to do addition, substraction, multiplication, etc.
+; how to do addition, subtraction, multiplication, etc.
 
 ; Addition:
 ; We can repeat succ on m for n times in order to add n to m:

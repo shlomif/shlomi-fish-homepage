@@ -148,7 +148,7 @@ contains 1 at the top-left cell and below a Presses Matrix of size N-2) =
 det (PM(N-1)) XOR det(1 * PM(N-2)) = det(PM(N-1)) XOR det(PM(N-2)).
 
 Hence, it’s a XOR of the detereminants of the two previous matrixes. (A
-boolean Fibonnaci series :-) )
+boolean Fibonacci series :-) )
 
 Recursively, we get a repeating sequence of
 N    | 1 2 3 4 5 6 7 8 9 ...

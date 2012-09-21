@@ -33,7 +33,7 @@ my $contents =
             [
                 {
                     'url' => "fibonnaci.html",
-                    'title' => "Fibonnaci with Lists",
+                    'title' => "Fibonacci with Lists",
                 },
                 {
                     'url' => "primes1.html",

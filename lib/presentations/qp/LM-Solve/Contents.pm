@@ -68,7 +68,7 @@ my $contents =
             [
                 {
                     'url' => "base-derived.html",
-                    'title' => "Multiple Solvers Implmentation",
+                    'title' => "Multiple Solvers Implementation",
                 },
                 {
                     'url' => "registry.html",

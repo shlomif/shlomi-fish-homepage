@@ -6,7 +6,7 @@ dnl of the source files
 AC_INIT(rwlock.c)
 
 dnl Initialize Automake
-dnl The first paramater is the project name
+dnl The first parameter is the project name
 dnl The second is the version
 AM_INIT_AUTOMAKE(pthread_rwlock_fcfs, 0.4.0)
 

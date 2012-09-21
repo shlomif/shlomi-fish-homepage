@@ -16,12 +16,12 @@ Add <tt>mypackage.spec</tt> to <tt>AC_OUTPUT</tt>.
 </li>
 
 <li>
-And add both <tt>mypackage.spec</tt> and <tt>mypackae.spec.in</tt> to the
+And add both <tt>mypackage.spec</tt> and <tt>mypackage.spec.in</tt> to the
 <tt>EXTRA_DIST</tt> of <tt>Makefile.am</tt>.
 </li>
 
 <li>
-Now, invoking <tt>rpm -tb</tt> with the archive name as a paramater would
+Now, invoking <tt>rpm -tb</tt> with the archive name as a parameter would
 build an RPM out of it.
 </li>
 

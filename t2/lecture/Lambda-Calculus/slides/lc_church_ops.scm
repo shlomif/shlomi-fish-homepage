@@ -2,7 +2,7 @@
 ; -------------------------------
 
 ; We already saw how to get the number that follows a given number. Now
-; how to do addition, substraction, multiplication, etc.
+; how to do addition, subtraction, multiplication, etc.
 
 ; Addition:
 ; We can repeat succ on m for n times in order to add n to m:

@@ -27,12 +27,12 @@
 ; a binary tree complex of pairs whose leaves are the array's values.
 
 ; 3. Church Numerals are base-1 numbers so they are not very efficient. If
-; you strive for calculatation efficiency in lambda calculus you may wish
+; you strive for calculation efficiency in lambda calculus you may wish
 ; to represent numbers as vectors of digits, and define calculations on them
 ; using Al-Khwarizmi's algorithms.
 
 ; 4. In order to do things like write to the screen, to files, or etc. You
-; need to suply the lambda calculus program with stubs. That way, everything
+; need to supply the lambda calculus program with stubs. That way, everything
 ; can be done in LC.
 
 ; 5. It was proved that every recursive function can be implemented in

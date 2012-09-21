@@ -7,7 +7,7 @@
 
 ; (Note in Mathematics, tuples are an ordered group of elements which have a
 ; finite number of elements, which is not necessarily two. I will use the terms
-; "tuple" and "pair" interchangebly because Scheme does not have an internal
+; "tuple" and "pair" interchangeably because Scheme does not have an internal
 ; support for tuples of greater sizes)
 
 ; Construct a tuple using cons
@@ -35,7 +35,7 @@
 ; Note: that statement is shorthand for:
 (define mylist (cons 5 (cons 500 (cons "Hello" (cons 4 (cons 4.3 '()))))))
 
-; The folllowing code prints this list:
+; The following code prints this list:
 
 (define (print-list a-list)
     (define (myprint rest-of-list element-num)
@@ -73,8 +73,8 @@
 (newline)
 ;((5 4 3 2 1) () ())
 
-; Shorthand for nestes lists of constants: (quote) or '
-(define students '((shlomi fish) (orr dunkleman) (tzafrir cohen)))
+; Shorthand for nested lists of constants: (quote) or '
+(define students '((shlomi fish) (orr dunkelman) (tzafrir cohen)))
 
 ; Note: inside the list there are now symbols not strings. You can
 ; convert strings and symbols to each other using:

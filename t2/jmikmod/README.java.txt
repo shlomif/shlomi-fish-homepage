@@ -150,7 +150,7 @@ doesn't look like there's much interest in it anyway.
 
 http://www.chiark.greenend.org.uk/~stevem/mikmod/mikmod-devel.html
 
-       The MikMod Developement Homepage - contains latest sources to
+       The MikMod Development Homepage - contains latest sources to
 the UNIX version, info on several mailing lists and links to other
 MikMod related places.
 

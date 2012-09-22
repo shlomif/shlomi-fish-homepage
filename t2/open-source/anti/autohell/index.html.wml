@@ -34,7 +34,7 @@ high-level language, whose interpreter is written in C++.
 <li>
 <p>
 Configuration takes much longer with ./configure, and this is especially
-noticable on Microsoft Windows, where cygwin is very slow at doing
+noticeable on Microsoft Windows, where cygwin is very slow at doing
 multi-processing. Often, one needs to run the “autoconf” and/or
 “automake” programs before that (sometimes using the all-in-one wrappers
 of “autoreconf” or “./autogen.sh”) which is even more time-consuming.

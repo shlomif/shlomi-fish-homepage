@@ -4,7 +4,7 @@ use strict;
 
 my $contents =
 {
-    'title' => "WebMetaLecture - a lecture about WebMetaLanguage",
+    'title' => "WebMetaLecture - a lecture about Website Meta Language",
     'subs' =>
     [
         {

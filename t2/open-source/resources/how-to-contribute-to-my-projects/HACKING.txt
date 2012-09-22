@@ -297,7 +297,7 @@ sizeof(var) is preferable to sizeof(mytype_t)
 
 Given the choice between +sizeof(var)+ as well as +sizeof(*var)+
 and +sizeof(mytype_t)+ where +mytype_t+ is a type, the former should be
-prfereable. This way, if the type of the variable changes, one does not
+preferable. This way, if the type of the variable changes, one does not
 need to fix the +sizeof(…)+.
 
 sizeof() must always be enclosed in parentheses
@@ -322,7 +322,7 @@ typedef struct
 ----------------
 
 Prefer doing +typedef struct { ... } mystruct_t+ to declaring a struct
-separately. If a struct declartion is still needed (e.g: if it contains
+separately. If a struct’s declaration is still needed (e.g: if it contains
 a pointer to itself) it should:
 
 1. Have an identifier that ends with “_struct”.

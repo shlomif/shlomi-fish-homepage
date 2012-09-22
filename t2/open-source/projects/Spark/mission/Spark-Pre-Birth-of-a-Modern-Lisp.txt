@@ -73,7 +73,7 @@ framework for C, C++ and other languages, and is a crucial piece of the
 open-source UNIX-like operating systems infrastructure).
 
 For an “in your face” anti-thesis to the aversion to call languages scripting
-languages see Larry Wall’s “Progrmaming is Hard. Let’s Go Scripting”:
+languages see Larry Wall’s “Programming is Hard. Let’s Go Scripting”:
 
 http://www.perl.com/pub/a/2007/12/06/soto-11.html
 
@@ -283,7 +283,7 @@ $ spark -ne '(say "${^LINENUM} ${^LINE}")'
 ------------------------------------------------
 
 Here we can see the string interpolation of variables in action.
-+${....}+ intepolates a single variable, while +$()+ is an
++${....}+ interpolates a single variable, while +$()+ is an
 S-expression. Aside from that spark will also have sprintf,
 http://search.cpan.org/dist/Text-Sprintf-Named/[sprintf with named
 conversions similar to Python] and something as similar as possible to
@@ -349,7 +349,7 @@ We encourage Perl, Ruby and other dynamic languages with rich command line
 interfaces, to steal the +--dump-code+ idea. Maybe one day someone will become
 a multi-millionaire from selling a 300K Lines program that evolved from a
 simple +spark/perl/ruby --dump-code=code.... -e '....'+ invocation (after
-a succesful plain +-e+ invocation).
+a successful plain +-e+ invocation).
 
 Spark will have nested namespaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -368,7 +368,7 @@ about it. +:-)+ .
 Like Perl 5 one will be able to import symbols at run-time.
 
 As opposed to Perl 5, classes won’t be automatically associated with
-namespaces, and a namspace may contain one or more classes (or none).
+namespaces, and a namespace may contain one or more classes (or none).
 Like CPAN and unlike Java (+org.apache.jakarta...+), we will not enforce
 namespace purity, but hopefully there will be a better mechanism than the
 current CPAN and PAUSE (Perl Authors Upload Server) to be able to fork,
@@ -427,12 +427,12 @@ And as you see we will try very hard that every sane expression can become an
 lvalue.
 
 And in case, you’re worried there will be a “\+\+” and “--” operators too,
-with post-increment/post-decrement and pre-incremenet/pre-decrement variations.
+with post-increment/post-decrement and pre-increment/pre-decrement variations.
 
 Finally, by inspiration from Arc, we decided to do something about excessive
 parens. So we will have a +(with (k1 v1 k2 v2 k3 v3) .... )+ scoping instead
-of the unweildy Scheme +(let*)+ and +(letrec)+ (both will be easily
-replaceble
+of the unwieldy Scheme +(let*)+ and +(letrec)+ (both will be easily
+replaceable
 by +(with...)++ with some macro or VM trickery.). And we’ll have a C-style
 for-loop instead of the obscure +(do...)++ and a while loop, and a
 Perl 5/Perl 6-style foreach loop, and maybe other loops too. And you can
@@ -442,8 +442,8 @@ However we’re not going down the Arc route of assigning extremely short,
 and hard to pronounce and grep for identifiers. +(fn)+ How do you pronounce
 it? fnn.... There’s no such sound in Hebrew, so it’s verboten by your
 Hebrew-speaking overlords. We like +(fun...)+ because it puts the fun back
-in function (“Functional!! Parallelism!!!!” - oh wait! Wrong langauge.), and we
-like +(sub ...)+ becaues it puts the “sub” back in subroutine. And all Hebrew
+in function (“Functional!! Parallelism!!!!” - oh wait! Wrong language.), and we
+like +(sub ...)+ because it puts the “sub” back in subroutine. And all Hebrew
 speakers will rejoice because they can pronounce +“cat”+ exactly like +“cut”+
 and Perl like Pérl and Lisp like Leesp, and they can pronounce TeX and
 LaTeX with a honest-to-god http://en.wikipedia.org/wiki/Kaph[khaph] (or a
@@ -452,7 +452,7 @@ and the God of the Israelite Programmers saw there were only 5 and a half
 vowels and he was pleased.
 
 Seriously now, I don’t like (fn) because it’s hard to pronounce, doesn’t sound
-right when you read it to your mind’s ear, and is abnoxious. While being
+right when you read it to your mind’s ear, and is obnoxious. While being
 succinct is a noble goal, picking psychologically-sound and intuitive
 conventions is also important. I recall searching the Arc tutorial and
 documentation for a +(not)+ function only to found it was spelled +(no)+:
@@ -595,7 +595,7 @@ Kurila may be considered a a language in the Perl family, it is not Perl 5
 any more than Perl 4 , Perl 6 , http://sleep.dashnine.org/[Sleep] or whatever
 are. So Perl 5 has still not become a family of incompatible implementations.
 
-Another factor that will disaude people from creating multiple implementations
+Another factor that will dissuade people from creating multiple implementations
 of Spark is that as opposed to Scheme, creating a Spark implementation from
 scratch is not going to be trivial. It’s not that Spark will be needlessly
 complixified, but that it would be needfully complex to implement to be an
@@ -684,7 +684,7 @@ macros & functions", it could become:
 ----------------------
 
 Which as Dominus notes is a little over 2.5 over the length of the awk program.
-(but still required these macros). Naturally noone will opt to write it
+(but still required these macros). Naturally no one will opt to write it
 instead. So the problems with Common Lisp is ground-up verbosity, lack of
 common idioms for commonly performed tasks, and lack of motivation to use
 it for common, everyday (sometimes even throwaway code).
@@ -738,7 +738,7 @@ Spark Licensing
 
 Since we’re building on Parrot, the licence of the non-original code will be
 the Artistic License 2.0, which is free, open-source, GPL-compatible and
-somwhere between a weak copyleft licence (e.g: the LGPL) and a permissive
+somewhere between a weak copyleft licence (e.g: the LGPL) and a permissive
 licence (e.g: the 2-clause or 3-clause BSD licences). The original code
 will be written under the MIT/X11 licence, which is a very permissive
 BSD-style licence that specifically allows sub-licensing. To avoid legal

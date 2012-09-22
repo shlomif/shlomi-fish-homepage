@@ -80,7 +80,7 @@
     I disagree with Graham about some of his language design elements. A few
     days ago I came with a revelation that it was hopeless waiting for
     Mr. Graham to actually release either a final spec to the public of Arc
-    or a actual working code. Arc <ulink url="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at Novemeber 2001</ulink>. It's
+    or a actual working code. Arc <ulink url="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</ulink>. It's
     been almost 5 years from now, and there's still not a working code or a
     coherent spec. Furthermore, Graham stopped adding the ideas people sent
     him to the <ulink url="http://www.archub.org/arcsug.txt">emails collection
@@ -139,7 +139,7 @@
     <ulink url="http://www.shlomifish.org/">Shlomi Fish</ulink> and I'm a
     software enthusiast and a writer. I am not the ideal person to design
     Park, but I believe and hope that I have the right attitude. If you happen
-    to know better about somethings, please post your corrections to the
+    to know better about some things, please post your corrections to the
     mailing lists to the mailing list. Corrections in the form of patches
     against the Docbook/XML source are preferable. Several of them or even
     just one that is accepted will get you a Subversion commit access. And
@@ -233,7 +233,7 @@
     <title>What Park is based on</title>
 
     <para>
-    The following languages have influcened Park:
+    The following languages have influenced Park:
     </para>
 
     <para>
@@ -297,7 +297,7 @@
 
         <para>
         Well, maybe it's because I'm younger, but having worked with Perl 5
-        extensively, I've used its oject system (and some OO-support modules)
+        extensively, I've used its object system (and some OO-support modules)
         a lot. While I have inherited some classes in Perl 5, I also often
         use an object just to make sure it can be instantiated.
         </para>
@@ -566,7 +566,7 @@
             <para>
             I encountered some Scheme implementations in which identifiers
             were case-sensitive, and some in which they were case-insensitive.
-            To match what is the norm nowadays, and becase I like it better,
+            To match what is the norm nowadays, and because I like it better,
             Park requires case-sensitive identifiers.
             </para>
 
@@ -624,7 +624,7 @@
                     determining the end of the interpolated expression, which
                     can be any arbitrary Perl expression. Perl 6 goes one
                     step further and parses the string and translates it into
-                    Perl 6 code, so one can safely include arbitrarliy complex
+                    Perl 6 code, so one can safely include arbitrarily complex
                     code there. (In a similar fashion to the Korn shell
                     "$(...)" construct).
                 </para>

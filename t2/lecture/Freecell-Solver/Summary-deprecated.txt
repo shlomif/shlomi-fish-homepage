@@ -443,7 +443,7 @@ functions to instantize it.
 
 ** Solution: Let the user specify a test order from the command line.
 
-** Implementation: The code of solve_for_state was splitted into 10 test
+** Implementation: The code of solve_for_state was split into 10 test
     functions and one main function. Each test function implemented one of
     the tests and called check_and_add_state().
 

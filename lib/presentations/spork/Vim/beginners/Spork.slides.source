@@ -6,9 +6,9 @@ presentation_date: FILL IN
 ----
 == Vim - Introduction
 
-* Short for Vi IMproved. 
+* Short for Vi IMproved.
 * An enhanced vi clone (which is not fully compatible with the original UNIX vi)
-* Developed by Bram Moolenaar and others. 
+* Developed by Bram Moolenaar and others.
 * It is open source (and GPL-compatible since version 6.1.)
 * Serves as charityware for [ICCF Holland http://iccf-holland.org/]
 
@@ -16,7 +16,7 @@ presentation_date: FILL IN
 
 == History of Vi
 
-    
+
 * The standard UNIX editor "ed" existed on UNIX systems practically since its inception:
 ** http://www.faqs.org/docs/artu/ch13s02.html#id2963445
 
@@ -31,7 +31,7 @@ presentation_date: FILL IN
 ----
 == History of Vim
 
-* Vim started when Bram Mooleenaar had to work on an Amiga system and was used to Vi. 
+* Vim started when Bram Moolenaar had to work on an Amiga system and was used to Vi.
 
 * He took a nearly-vi clone, started improving it and adding extra features.
 
@@ -41,7 +41,7 @@ presentation_date: FILL IN
 
 * 1996 May 29 - Vim 4.0 - Graphical User Interface
 
-* 1998 Feb 19 - Vim 5.0 - Syntax Coloring/Highlighting
+* 1998 Feb 19 - Vim 5.0 - Syntax Colouring/Highlighting
 
 * 2000 Jul 09 - Vim 6.0a - Folding (and more)
 
@@ -51,13 +51,13 @@ presentation_date: FILL IN
 
 * Vim is indeed a very portable editor - runs on most UNIX flavours as well as:
 +** Windows
-+** MacOS
++** Mac OS
 +** DOS
-+** VMS 
++** VMS
 +** and many others OSes.
 
 +* Several front-ends exist:
-+** console 
++** console
 +** Gtk+
 +** Motif
 +** KDE
@@ -73,7 +73,7 @@ presentation_date: FILL IN
 
 +* Very easy to use for simple scripting, programming and file editing.
 
-+* Once you have learned the basic usage, you will find a whole variety of suprising uses for this editor.
++* Once you have learned the basic usage, you will find a whole variety of surprising uses for this editor.
 
 +* It is very well documented
 
@@ -100,21 +100,21 @@ presentation_date: FILL IN
 ----
 == Normal Mode and Editing Mode
 
-* By default Vim starts in the so called normal mode - one cannot enter text 
+* By default Vim starts in the so called normal mode - one cannot enter text
 then.
 +* To begin entering text type one of the following commands:
-+** "i" or <Insert> - to insert text before the cursor. 
-+** "a" - to append text after the cursor. 
++** "i" or <Insert> - to insert text before the cursor.
++** "a" - to append text after the cursor.
 *** (useful at the end of the lines.)
 +** "I" - insert text before first character in the line.
 +** "A" - append after last char in the line.
 
 +* To switch back into normal mode, press the <Esc> key.
 
-+* Using |:source $VIMRUNTIME/mswin.vim| will make the insert mode more Windows-like and functional. 
++* Using |:source $VIMRUNTIME/mswin.vim| will make the insert mode more Windows-like and functional.
 +* Note:
 +** If you do not know what is $VIMRUNTIME - find it using:
-    :echo $VIMRUNTIME 
+    :echo $VIMRUNTIME
 +** Hard core vi users avoid it.
 +** Shlomi Fish Uses it.
 ----
@@ -128,13 +128,13 @@ then.
 +=== Command-line mode:
 
 * ":"
-+** Once ":" is pressed in normal mode, one can enter the so-called "ex" commands at the command-line. 
++** Once ":" is pressed in normal mode, one can enter the so-called "ex" commands at the command-line.
 +** This allows saving the file "w", quitting "q" or "q!", substituting text "s///", etc.
 +** Some of these commands will be covered in more detail later on.
 ----
 == Moving around
 
-* Vim (and vi in general) has many commands for moving around. 
+* Vim (and vi in general) has many commands for moving around.
 +* A complete listing of them can be found in [:help motion.txt http://vimdoc.sourceforge.net/htmldoc/motion.html].
 +* Examples:
 +** |h|{{/}}|<Left>|{{/}}|<Backspace>|{{/}}|CTRL-H| - Left
@@ -151,7 +151,7 @@ then.
 +** |(|{{/}}|)| - previous/next sentence
 +** |{|{{/}}|}| - previous/next paragraphs
 
-+* Some of these commands can be preceded by a number which repeat them several times. 
++* Some of these commands can be preceded by a number which repeat them several times.
 +** For instance |5h| moves 5 character to the left
 +** And |100gg| moves to line number 100.
 ----
@@ -212,7 +212,7 @@ then.
 ----
 == ctags
 
-* "ctags" allows to cross-reference the code and browse to the definition of identifiers in a hypertext-like manner. 
+* "ctags" allows to cross-reference the code and browse to the definition of identifiers in a hypertext-like manner.
 
 +* To use it first execute:
 
@@ -220,17 +220,17 @@ then.
 
 * In the command line, in the top-directory you wish to create.
 
-+* Then you can type |Ctrl+]| to jump to the definition of an identfier, and |Ctrl+T| to return to the previous position.
++* Then you can type |Ctrl+]| to jump to the definition of an identifier, and |Ctrl+T| to return to the previous position.
 
 ----
 == Demo 3: Second Code Demo
 
 Using Demo_File_2.txt
 
-* Insert Mode 
+* Insert Mode
 * Auto-completion |Ctrl+P/N|
 * delete word/line |dw|/|dd|
-* switching to visual mode 
+* switching to visual mode
 * Copy Paste using yank
 * Copy part of table using yank
 * Advance Copy using ["X]yank
@@ -240,7 +240,7 @@ Using Demo_File_2.txt
 
 * [:help compl-generic http://vimdoc.sourceforge.net/htmldoc/insert.html#compl-generic]
 
-+* Ctrl+P finds a previous match for a word that was started to be inputted in the file. 
++* Ctrl+P finds a previous match for a word that was started to be input in the file.
 +** Press it more times for more alternatives.
 
 +* Ctrl+N is the same for words after the cursor.
@@ -250,16 +250,16 @@ Using Demo_File_2.txt
 == Registers
 
 +* A yank (copy) or delete (cut) can copy the text into a specified register.
-+* A register is specified with a double-quotes (|"|) followed by the register name which precedes the y or d command. 
++* A register is specified with a double-quotes (|"|) followed by the register name which precedes the y or d command.
 +* There are several registers available:
 +00 The default, unnamed register |""|
 +00 Standard named register |"A|-|"Z| or |"a|-|"z| (case insensitive)
-+00 The clipboard register |"+|. 
++00 The clipboard register |"+|.
 +*** (available in GUI Vims, and defaults to the unnamed register on console Vims)
 +00 Registers |1|-|9| which provide history of the copied texts.
 +00 Other special registers. (check [:help registers http://vimdoc.sourceforge.net/htmldoc/change.html#registers])
 
-+* To paste a text from a register use the |"{reg}p| command. 
++* To paste a text from a register use the |"{reg}p| command.
 
 +=== Examples
 
@@ -268,7 +268,7 @@ Using Demo_File_2.txt
 ----
 == Operators accepting movements
 
-+* Except for moving around, one can use the movement commands as input to various operators that precede them. 
++* Except for moving around, one can use the movement commands as input to various operators that precede them.
 
 +* Here are some:
 +** |d| - "cut" the text moved over into a register
@@ -300,8 +300,8 @@ Using Demo_File_2.txt
 ----
 == Marks
 
-* You can set marks in the file and later move straight to them with one movement command. 
-+** |m{a-zA-Z}| sets a mark. 
+* You can set marks in the file and later move straight to them with one movement command.
++** |m{a-zA-Z}| sets a mark.
 +*** The a-z marks are local to the file, and the A-Z marks are global in all buffers.
 +*** Jumping to the mark is done with |`{A-Za-z}|.
 +* A jump to a mark can be given to a movement operator. For instance:
@@ -364,11 +364,11 @@ Using Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
 
 * [:help 2html http://vimdoc.sourceforge.net/htmldoc/syntax.html#2html.vim]
 
-+* One can use gvim to convert syntax highlighted files, to HTML files that contain their text coloured in their highlighted colours. 
++* One can use gvim to convert syntax highlighted files, to HTML files that contain their text coloured in their highlighted colours.
 
 +* To do that one can invoke the command |:TOhtml|, and get a resultant file in a new buffer and window.
 
-+* Use |:let html_use_css = 1| to make sure the HTML is outputted using CSS styles instead of font tags and other old HTMLisms. 
++* Use |:let html_use_css = 1| to make sure the HTML is outputted using CSS styles instead of font tags and other old HTMLisms.
 ----
 == Scripting and Automation
 
@@ -376,9 +376,9 @@ Using Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
 ----
 == Register Repeats
 
-* The registers can be used to record macros. 
-+* To record a macro type |q{reg}|, and type the keystrokes you wish to record and then type |q|. 
-+* To execute a macro type |@{reg}|. 
+* The registers can be used to record macros.
++* To record a macro type |q{reg}|, and type the keystrokes you wish to record and then type |q|.
++* To execute a macro type |@{reg}|.
 +** You can use the |{integer}@{reg}| to execute it a number of times.
 +* For example:
 
@@ -389,7 +389,7 @@ Using Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
     sub hello
     {
         my ($x,$y) = @_;
-        print (($x+$y,"\n");    
+        print (($x+$y,"\n");
     }
 
 +** to transform to:
@@ -415,7 +415,7 @@ Using Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
 ----
 == Key Mapping
 
-* You can assign a set of commands to a single key or key sequence. 
+* You can assign a set of commands to a single key or key sequence.
 +* This is done using the :map and friends commands:
 
     :map         Normal, Visual and Operator-pending
@@ -481,13 +481,13 @@ Using a perl empty file.
 
 * Installing perl-support.vim .
 * Showing of using GUI .
-* Showing of using keybord .
+* Showing of using keyboard .
 
 ----
 == Customising Vim - Modelines
 
 * One can customise the behaviour of vim for specific files using modelines.
-+* Modelines are included at the beginning or the end of the file and invoke "setlocal" on the vim variables. 
++* Modelines are included at the beginning or the end of the file and invoke "setlocal" on the vim variables.
 +* This is useful for setting options like the behaviour of tabs, the file mode , etc.
 +* For example, putting
 
@@ -497,12 +497,12 @@ Using a perl empty file.
 ----
 == .vimrc
 
-* The dot-vimrc file is the central configuration file for vim, which a user can use to configure vim and gvim to his liking. 
+* The dot-vimrc file is the central configuration file for vim, which a user can use to configure vim and gvim to his liking.
 +* It is written in vimscript, and one can put there normal commands that one normally puts in command line-mode.
 
 +=== Location based commands
 
-* One can define commands to be executed for certain files (with certain prefixes, under certain locations, etc.) using the autocmd feature. 
+* One can define commands to be executed for certain files (with certain prefixes, under certain locations, etc.) using the autocmd feature.
 +* For example:
 
     autocmd BufNewFile,BufRead ~/Download/unpack/graphics/*.pdb set filetype=perl

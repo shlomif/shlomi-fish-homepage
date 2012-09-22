@@ -103,7 +103,7 @@ my $contents =
         },
         {
             'url' => "config",
-            'title' => "Configration Tools",
+            'title' => "Configuration Tools",
             'subs' =>
             [
                 {

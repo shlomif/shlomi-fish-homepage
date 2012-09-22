@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-# This is a value that can be inputted or outputted by the
+# This is a value that can be input or output by the
 # mini-interpreter.
 my $a_value;
 

@@ -45,7 +45,7 @@ my $contents =
         },
         {
             'url' => "no_wml",
-            'title' => "Using QuaD-Pres without WebMetaLanguage",
+            'title' => "Using QuaD-Pres without Website Meta Language",
             'subs' =>
             [
                 {

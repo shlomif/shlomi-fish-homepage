@@ -39,16 +39,16 @@ are often limited by the functionality that was built into the CMS.
 Yet another option is to create your own ad-hoc content mangament system. (e.g:
 a perl script that will render your pages) However, this will have to be
 extended in time, and you'll probably invent something that <b>is not as</b>
-good as WebMetaLanguage which is already very mature and complete. I remember
+good as Website Meta Language which is already very mature and complete. I remember
 writing something like that myself in PHP for an older incarnation of the
 IGLU site, and know other people who created similar solutions for their own
-need. None of them was as good or as versatile as WebMetaLanguage.
+need. None of them was as good or as versatile as Website Meta Language.
 </p>
 
 <p>
-Finaly, WebMetaLanguage and pre-rendered XSL stylesheets give you fine control
+Finaly, Website Meta Language and pre-rendered XSL stylesheets give you fine control
 on the HTML generated while allowing you to do anything Turing Complete.
-WebMetaLanguage has been around longer than XSL. By virtue of integrating Perl
+Website Meta Language has been around longer than XSL. By virtue of integrating Perl
 it can do anything Perl does, while XSL is a virtual machine without much
 capabilities of interaction with the outside world. I also think WML has
 a better human-factors engineering, but that's a matter of state.

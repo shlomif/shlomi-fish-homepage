@@ -64,11 +64,13 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 
-test: all
-	prove Tests/*.t
+test: runtest
 
 runtest: all
 	runprove Tests/*.t
+
+ptest: all
+	prove Tests/*.t
 
 spell: all
 	./bin/spell-checker-iface.sh

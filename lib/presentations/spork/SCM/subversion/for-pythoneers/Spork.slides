@@ -10,7 +10,7 @@ presentation_date: 21-March-2006
 +* Primarily aimed to solve the shortcomings of CVS:
 +** Directories, renames, and file meta-data are versioned.
 +** Commits are atomic.
-+** Client/server protocl sends diffs in both directions.
++** Client/server protocol sends diffs in both directions.
 +** Costs are proportional to change size, not data size.
 +** Efficient handling of binary files.
 +** Portable - clients and services run on UNIX and Win32.

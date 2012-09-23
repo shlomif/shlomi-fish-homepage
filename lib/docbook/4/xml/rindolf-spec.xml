@@ -183,7 +183,7 @@ to see if it corresponds with the philosophy.
     </para>
 
     <para>
-        Rindolf maintains backwards-compatiblity because Perl 5 is good
+        Rindolf maintains backwards-compatibility because Perl 5 is good
         enough as a basis for a language. More importantly, it is a language
         that is in wide use today, and people depend on.
     </para>
@@ -228,7 +228,7 @@ to see if it corresponds with the philosophy.
         Functional Programming, Exceptions, text-processing, garbage collection,
         nested data structures, arbitrarily-sized data, etc. I'm not saying
         it's a perfect language, but inventing something entirely different,
-        just to solve its defincies is sure to make many users (if not most)
+        just to solve its deficiencies is sure to make many users (if not most)
         unhappy.
     </para>
     <para>
@@ -270,7 +270,7 @@ to see if it corresponds with the philosophy.
     </para>
     <para>
         Rindolf will still essentially be Perl 5-like with a Perl 5 feel
-        and behaviour. Moreoever, C++ has proved of some use to many projects,
+        and behaviour. Moreover, C++ has proved of some use to many projects,
         and is still commonly used. As much as there is a hype about Java and
         .NET, they are not compatible with ANSI C, and so aren't actually
         a replacement for C++.
@@ -298,7 +298,7 @@ to see if it corresponds with the philosophy.
         it is a good thing, but also to try not to lose ground. Many times
         two competitors each gain new users. Many times users are gained by
         one on the expense of the other. At the moment, Perl faces competition
-        from Python, Ruby, Tcl, O'Caml and some other minor players. Our most
+        from Python, Ruby, Tcl, OCaml and some other minor players. Our most
         serious competitor is Python.
     </para>
     <para>
@@ -339,7 +339,7 @@ to see if it corresponds with the philosophy.
         supposed advantages of its language, how maintainable the code can
         become, and how everyone is capable of understanding it. While Python
         has many features Perl does not yet have, it also does not have many
-        others (here documents, labeled loops with breaking and continuing, a
+        others (here documents, labelled loops with breaking and continuing, a
         continue block, the use strict pragma and so forth). It also overloads
         every operator to many things: + can be used for both adding numbers,
         concatenating strings and concatenating arrays, three uses that are
@@ -357,8 +357,8 @@ to see if it corresponds with the philosophy.
         afterwards become familiar with other languages that are of lesser
         significance to the world). I would recommend someone to start with
         Perl instead, but this is a difference of opinions between me and
-        Raymond, which is not productive to delve on. (he took the time to
-        write the HOWTO and so he gets to endorse his paritcular favourite)
+        Raymond, which is not productive to delve on. (He took the time to
+        write the HOWTO and so he gets to endorse his own favourite)
     </para>
     <para>
         My point in making Rindolf is to make sure it has most of the important
@@ -375,7 +375,7 @@ to see if it corresponds with the philosophy.
         The Perl niche is high-level languages
         optimized for writing a lot of code quickly, commonly referred to as
         "scripting languages". These are the languages that most people like
-        for their day to day hacking, that can be used as subtitute for shell
+        for their day to day hacking, that can be used as substitute for shell
         scripts (like I did when I first worked as a web-technician on UNIX),
         and can be used for GUI programming, numerical programming (with some
         extensions), simple games, text processing (naturally), web scripting,
@@ -423,7 +423,7 @@ Hello::another_func();
 </screen>
         </para>
         <para>
-            This should make it more convenient that specificying
+            This should make it more convenient that specifying
             <literal>package Hello;</literal> and
             <literal>package Hello::Good;</literal> and so forth.
         </para>
@@ -602,9 +602,9 @@ $person->msg("Time to track system calls!");
         </para>
         <para>
             This filesystem will have support for most basic facilities (File
-            I/O, sockets, pipes, ioctl's and fcntl's, asyncrounous I/O, etc)
+            I/O, sockets, pipes, ioctl's and fcntl's, asynchronous I/O, etc)
             and should be flexible enough. Typeglobs will use it, as will all
-            other modules (directly or indiretly) and it will behave in a
+            other modules (directly or indirectly) and it will behave in a
             completely Perl 5-ish manner.
         </para>
     </section>
@@ -629,7 +629,7 @@ $person->msg("Time to track system calls!");
         </para>
         <para>
             The new statement <literal>line_pt_return</literal> will always be
-            non-proper tail recursive. A pragrma
+            non-proper tail recursive. A pragma
             <literal>use Recursion</literal> will exist that will enable to
             decide how a plain <literal>pt_return</literal> will behave, and
             should be very flexible in doing that.
@@ -727,7 +727,7 @@ my $string = "[(5,6), (7,3), (8,9)], [(5,7), (2,10)], [(100,92),(14,8)]";
 
 # Define a pattern for (x,y)
 my $pt_pattern = "\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)\s*";
-# Define a patern for an array of points [pt1,pt2,pt3,pt4]
+# Define a pattern for an array of points [pt1,pt2,pt3,pt4]
 my $array_pattern = "\[(?:${pt_pattern}\s*,)*${pt_pattern}\]";
 # Define a pattern for an array of arrays of points arr1,arr2,arr3
 my $whole_pattern = "(?:${array_pattern}\s*,)*${array_pattern}"

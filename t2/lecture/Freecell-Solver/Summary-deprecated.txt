@@ -103,7 +103,7 @@ Basically a DFS scan.
 ** Two tests are special: moving a freecell or stack card to the foundations.
     Moving a card to the founds where both of the founds of the other colour
     are higher than its card number plus 2. In that case if the child-state is
-    not solveable neither is the original state.
+    not solvable neither is the original state.
 
 ** Note that the entire checking and adding code for new states was
 implemented inside the tests code. (not in a separate function).
@@ -119,8 +119,8 @@ minutes).
 
 ** Out of which, some were terminated in the middle.
 
-** Some boards were reported by the program as unsolveable. (as I discovered
-later, they were all solveable).
+** Some boards were reported by the program as unsolvable. (as I discovered
+later, they were all solvable).
 
 ** I placed Freecell Solver version 0.2 on a web-site, and posted an
 announcement for it on Freshmeat.
@@ -196,7 +196,7 @@ will be avoided.
     3. sfs_check_state_begin
     4. sfs_check_state_end
 
-    All the tests excepts the two NSFOS (not solveable for original state)
+    All the tests excepts the two NSFOS (not solvable for original state)
     used sfs_check_state_begin and sfs_check_state_end.
 
     The two NSFOS states used just sfs_check_state_init and

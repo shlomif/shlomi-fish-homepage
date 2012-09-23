@@ -434,7 +434,7 @@ my $tree_contents =
                 {
                     text => "Political Essays",
                     url => "philosophy/politics/",
-                    title => "Essays about Politics and" .
+                    title => "Essays about Politics and " .
                         "Philosophical Politics",
                     expand => { re => "^philosophy/politics/", },
                 },

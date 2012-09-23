@@ -120,7 +120,7 @@ my $contents =
                                     'url' => "ruby.html",
                                 },
                                 {
-                                    'title' => "O'Caml",
+                                    'title' => "OCaml",
                                     'url' => "ocaml.html",
                                 },
                                 {

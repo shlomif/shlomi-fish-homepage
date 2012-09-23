@@ -75,6 +75,20 @@ on such Internet resources:
 * Such Internet resources can fluctuate in their content and behaviour,
 which may break the tests.
 
+Bug fixes and new features should be accompanied by new automated tests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+One should add new assertions to t/*.t to provide regression tests for
+bug fixes and new features. These tests should fail before the core code
+is modified and succeed after it. Needless to say, the previously
+existing test assertions should all pass as well.
+
+For more information, see:
+
+* http://www.shlomifish.org/lecture/Perl/Newbies/lecture5/testing/
+
+* http://en.wikipedia.org/wiki/Test_automation
+
 Other elements to avoid
 ~~~~~~~~~~~~~~~~~~~~~~~
 

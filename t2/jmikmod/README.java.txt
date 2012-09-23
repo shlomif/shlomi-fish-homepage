@@ -43,7 +43,7 @@ this document before you try to use it.
 
 This package was developed on the JDK v. 1.0.2 on an i386-Linux. I
 tested it and it compiled on JDK 1.1.x, but with many warnings about
-"depracated" API functions.
+"deprecated" API functions.
 
 To play sound through the audio driver, one needs to write a native
 Java extension in C. The archive contains the code for a Linux

@@ -1,7 +1,7 @@
 #!/bin/bash
 find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
     ( LC_ALL=C sort  ) |
-    perl -lne 'print if 1..m#^\Qdest/t2-homepage/philosophy/obj-oss/rev2/objectivism-and-open-source/why_dichotomy.html\E#' |
+    perl -lne 'print if 1..m#\A\Qdest/t2-homepage/philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers/what_should_be_done.html#' |
     grep -vP 'dest/t2-homepage/philosophy/obj-oss/objectivism-and-open-source/' |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' |
     grep -vP 'guide2ee/undergrad' |

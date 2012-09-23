@@ -90,7 +90,7 @@ the integrity of the resource.
 Many RWLock implementations arbitrate the various readers and writers in a
 manner that may cause starvation of either readers or writers. For instance,
 a readers/writers lock that prefers readers may cause a writer to starve
-(i.e: wait for a very long time or indefinetly) if there are two and more
+(i.e: wait for a very long time or indefinitely) if there are two and more
 competing readers.
 </p>
 
@@ -98,7 +98,7 @@ competing readers.
 A First-Come First-Served (FCFS) RWLock solves this problem by making sure
 that the pending threads are served at the same order as the time of their
 arrival. Thus, starvation is eliminated assuming that a thread does not
-obtain the lock indefinetly (which in any case should not happen in a
+obtain the lock indefinitely (which in any case should not happen in a
 well-designed system).
 </p>
 

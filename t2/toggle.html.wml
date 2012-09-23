@@ -33,11 +33,11 @@ efficiency of the algorithms.
 <a href="#One_Dimensional_Board">Analysis of a 1-D Toggle-board</a><br />
 <ul>
 <li>
-<a href="#lemma1">Lemma 1: 1D is always solveable if vector 100..00 can be
+<a href="#lemma1">Lemma 1: 1D is always solvable if vector 100..00 can be
 formed.</a>
 </li>
 <li>
-<a href="#lemma2">Lemma 2: 1D is always solveable only for N=3k and
+<a href="#lemma2">Lemma 2: 1D is always solvable only for N=3k and
 3k+1</a>
 </li>
 </ul>
@@ -46,14 +46,14 @@ formed.</a>
 <a href="#Two-Dimensional-Board">Main (2-D) Theorems</a><br />
 <ul>
 <li><a href="#theorem1">Theorem 1:
-(3k+2)^2 boards are not solveable for every state.</a>
+(3k+2)^2 boards are not solvable for every state.</a>
 </li>
 <li>
-<a href="#theorem2">Theorem 2: 3k and 3k+1 2-D boards are solveable
+<a href="#theorem2">Theorem 2: 3k and 3k+1 2-D boards are solvable
 for every state.</a>
 </li>
 <li>
-<a href="#theorem3">Theorem 3: Solveable 3k+2 boards can be solved
+<a href="#theorem3">Theorem 3: Solvable 3k+2 boards can be solved
 by the one way algorithm.</a>
 </li>
 <li>
@@ -94,7 +94,7 @@ XOR for ‘+’ and AND for ‘*’.
 <h3 id="lemma1">Lemma 1</h3>
 
 <p>
-A 1-D toggle field is solveable for every state if (and only if)
+A 1-D toggle field is solvable for every state if (and only if)
 the vector 100...000 can be formed as combination of the
 presses.
 </p>
@@ -109,15 +109,15 @@ If 1000000 can be solved then along with the press 110000...00 than
 -------------
 001000...00
 and from here it can be proved inductively that the vectors with all 0s
-and one 1, are solveable. Since this is a basis of {1,0}^N then every state
-is solveable. (i.e contained in Sp{Presses} )
+and one 1, are solvable. Since this is a basis of {1,0}^N then every state
+is solvable. (i.e contained in Sp{Presses} )
 
 </pre>
 
 <h3 id="lemma2">Lemma 2</h3>
 
 <p>
-A 1-D toggle field of size N is solveable for every state if N = 3k
+A 1-D toggle field of size N is solvable for every state if N = 3k
 or N = 3k+1 and isn’t if N = 3k+2 for some non-negative integer
 k.
 </p>
@@ -147,7 +147,7 @@ based on the first row: det (Presses Matrix (N-1)) XOR - det(Matrix that
 contains 1 at the top-left cell and below a Presses Matrix of size N-2) =
 det (PM(N-1)) XOR det(1 * PM(N-2)) = det(PM(N-1)) XOR det(PM(N-2)).
 
-Hence, it’s a XOR of the detereminants of the two previous matrixes. (A
+Hence, it’s a XOR of the determinants of the two previous matrixes. (A
 boolean Fibonacci series :-) )
 
 Recursively, we get a repeating sequence of
@@ -156,7 +156,7 @@ det  | 1 0 1 1 0 1 1 0 1 ...
 
 Matrixes with a zero determinant cannot form every vector, and vice versa.
 
-It can also be proved (at least for the solveable cases) using Lemma 1.
+It can also be proved (at least for the solvable cases) using Lemma 1.
 For N=3k 1000....000 can be formed by:
 1110000...0000         XOR
 0001110...0000         XOR
@@ -195,7 +195,7 @@ and
 11111111111111111
 
 and thus the dimension of the span is less than n, and so not every state is
-included in it, and is solveable.
+included in it, and is solvable.
 
 
 
@@ -208,7 +208,7 @@ Now for the actual proofs:
 
 <h3 id="theorem1">Theorem 1</h3>
 <p>
-2-D (3k+2) * (3k+2) boards are not solveable for every state.
+2-D (3k+2) * (3k+2) boards are not solvable for every state.
 </p>
 
 <pre>
@@ -223,7 +223,7 @@ row is the set:
 00000.111
 00000.011
 
-and Lemma 2 proved that for N=3k+2 it has unsolveable states. If some
+and Lemma 2 proved that for N=3k+2 it has unsolvable states. If some
 formations of the first row cannot be solved by any combination of the
 presses on the block, much less the entire board can be solved for every
 state.
@@ -233,15 +233,15 @@ state.
 <h3 id="theorem2">Theorem 2</h3>
 
 <p>
-2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solveable for
+2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solvable for
 every state.
 </p>
 
 <pre>
 Proof:
 If we restrict ourselves to the presses on cells of one column, then we get
-an array of rectangular vectors with a fixed horizontal postion and width
-and a y-dimensions that resemble the 1-D toggle-squares vector set. e.g:
+an array of rectangular vectors with a fixed horizontal position and width
+and some y-dimensions that resemble the 1-D toggle-squares vector set. e.g:
 110000
 110000
 000000
@@ -300,8 +300,8 @@ the presses of one column:
 and the same for every other column. Now, if we look on any row of cells,
 we will see that the “sticks” that were generated from the various columns
 in that row are also the 1-D TogSqrs sequence. Because N=3k,3k+1 again,
-every row is solveable for all states, and therefore, the entire board is
-solveable for all states.
+every row is solvable for all states, and therefore, the entire board is
+solvable for all states.
 
 Diagram:
 110000 , 111000 , 011100 , 001110 , 000111 , 000011
@@ -311,7 +311,7 @@ Diagram:
 
 <h3 id="theorem3">Theorem 3</h3>
 <p>
-Solveable states of 3k+2 boards can be solved by the one-way
+Solvable states of 3k+2 boards can be solved by the one-way
 algorithm.
 </p>
 
@@ -405,7 +405,7 @@ Now, for the remaining modules:
 In a 1-D board where N=3k+1 the two-way method as is, will ping the
 possible remaining 1 back and forth between the two edges. Therefore if
 there is a state of 1000...0 than one should use the leftmost press to
-change it into 0100...000. Then, by repeatetive pressing to the right
+change it into 0100...000. Then, by repetitive pressing to the right
 of the leftmost filled square, one gets to the 0...11 state, which is
 afterwards cleared.
 
@@ -433,7 +433,7 @@ Very similar to Theorem 4 except those notes:
 1. In N=3k+1 the two-way method as is, will ping the possible remaining
 1 back and forth between the two edges. Therefore if there is a state
 of 1000...0 than one should use the leftmost press to change it into
-0100...000. Then, by repeatetive pressing to the right of the leftmost
+0100...000. Then, by repetitive pressing to the right of the leftmost
 filled square, one gets to the 0...11 state, which is afterwards
 cleared.
 
@@ -462,7 +462,7 @@ press those cells and it will be be moved to
 <h2 id="dim_press_span">The Dimension of the Presses Span in 3k+2 boards</h2>
 
 <pre>
-(3k+2)*(3k+2) boards are not solveable for every state. The solveable
+(3k+2)*(3k+2) boards are not solvable for every state. The solvable
 states form a vector field which is formed by the spanning all the
 presses. Since, in this case it does not include all the states, I
 wondered if we can calculate its dimension or characterize it somehow.
@@ -473,14 +473,14 @@ because it takes only one extra vector - 100...000, so they will form
 every possible state (Lemma 1).
 
 Since the 1-D clearing mechanism for 3k+2 uses only the leftmost 3k+1
-cells to clear every solveable state (part of Theorem 3), then
+cells to clear every solvable state (part of Theorem 3), then
 their presses are a valid basis for this linear space.
 
 The one-way - one-way clearing algorithm which was proved in Theorem 3,
 uses only a (3k+1)*(3k+1) square of presses to solve the entire board.
 Ergo, the dimension is (3k+1)^2 or less. I believe it _is_ (3k+1)^2 and
 I think I can prove it by showing that the presses of a corner
-(3k+1)*(3k+1) are linearly independant. In the boolean field the
+(3k+1)*(3k+1) are linearly independent. In the boolean field the
 meaning is that any number of them other than zero XORed together will
 not generate the clear state.
 
@@ -497,16 +497,16 @@ The ‘-’s and ‘|’s mark the relevant presses. Let’s assume that a
 certain number of presses in the square can form the clear state. If
 so, then Pr(4,4) cannot be one of them because it is the only press
 that can affect square (5,5). Moreover, Pr(3,4) and Pr(4,3) cannot be
-included either, becuase, once Pr(4,4) is eliminated they are the only
+included either, because, once Pr(4,4) is eliminated they are the only
 ones that can affect (4,5) and (5,4) respectively. And so forth,
 proving that that all the presses of cells (1,4)-(4,4) and (4,1)-(4,4)
 cannot be part of the zero sum.
 
 The same can be deduced for the next layer starting from Pr(3,3), which
 is the only vector left that can affect square (4,4). And so-on for the
-other layers, proving that they are a linearly independant set of
+other layers, proving that they are a linearly independent set of
 vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
-span the space of the solveable states of (3k+2) boards.
+span the space of the solvable states of (3k+2) boards.
 
 </pre>
 

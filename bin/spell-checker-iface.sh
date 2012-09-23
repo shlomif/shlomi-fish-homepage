@@ -1,7 +1,7 @@
 #!/bin/bash
 find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
     ( LC_ALL=C sort  ) |
-    perl -lne 'print if 1..m#\A\Qdest/t2-homepage/prog-evolution/shlomif-at-elpas.html\E#' |
+    perl -lne 'print if 1..m#\A\Qdest/t2-homepage/puzzles/situation/index.html\E#' |
     grep -vP 'dest/t2-homepage/philosophy/obj-oss/objectivism-and-open-source/' |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' |
     grep -vP 'guide2ee/undergrad' |

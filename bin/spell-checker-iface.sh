@@ -1,7 +1,7 @@
 #!/bin/bash
 find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
     ( LC_ALL=C sort  ) |
-    perl -lne 'print if 1..m#dest/t2-homepage/philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3/where_i_stand#' |
+    perl -lne 'print if 1..m#^\Qdest/t2-homepage/philosophy/ideas/unixdoc/index.html\E#' |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' |
     grep -vP 'guide2ee/undergrad' |
     grep -vP '(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))' |

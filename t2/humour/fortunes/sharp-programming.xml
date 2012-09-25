@@ -1278,5 +1278,49 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-sharp-programming-gcc-warning-flags">
+        <meta>
+            <title>gcc warning flags</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="doomrobo">rindolf, I got redirected to your gcc important flags page today and I think you may be missing a few things</saying>
+<saying who="rindolf">doomrobo: do you mean the one in the talk?</saying>
+<saying who="rindolf">doomrobo: which page are you referring to?</saying>
+<saying who="doomrobo">rindolf, lemme see</saying>
+<saying who="rindolf">http://www.shlomifish.org/lecture/W2L/Development/slides/gcc/flags.html  - heh, first Google hit for &quot;gcc important flags&quot;</saying>
+<saying who="rindolf">At least for me.</saying>
+<saying who="doomrobo">yeah</saying>
+<saying who="rindolf">doomrobo: OK, I did not originate that page originally.</saying>
+<saying who="doomrobo">ok</saying>
+<saying who="rindolf">doomrobo: and it served a certain purpose as material for slides to the Haifa Linux Club&#39;s Welcome to Linux series.</saying>
+<saying who="doomrobo">nice</saying>
+<me_is who="jrslepak">always found it funny that -Wall doesn&#39;t turn on all of the warnings</me_is>
+<saying who="jrslepak">. o O ( gcc -Wno-really-I-mean-all ... )</saying>
+<saying who="rindolf">-Wevery-warning-under-the-sun-and-then-some</saying>
+<saying who="rindolf">-W42</saying>
+<saying who="rindolf">-Wchuck-norris</saying>
+<saying who="doomrobo">-Wextra</saying>
+<saying who="doomrobo">-whipped-cream</saying>
+<saying who="jrslepak">and of course -WTF</saying>
+<saying who="rindolf">jrslepak: :-)</saying>
+<saying who="rindolf">-Worse</saying>
+<saying who="rindolf">-Worse-is-better</saying>
+<saying who="jrslepak">-Wat</saying>
+<saying who="rindolf">-Whoops</saying>
+<saying who="doomrobo">-S -Illy -Wabbit</saying>
+<saying who="rindolf">Heh.</saying>
+<saying who="jrslepak">-Wascally-wabbit</saying>
+<saying who="jrslepak">(which really needs to be the name of a future Ubuntu release)</saying>
+<saying who="doomrobo">people reading this are probably just shaking their heads</saying>
+<saying who="jrslepak">hey, at least it&#39;s not -fallow-undecidable-instances ¬_¬</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>gcc -Whatever</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

@@ -302,14 +302,43 @@ my $tree_contents =
                     ],
                 },
                 {
-                    text => "Favourite OSS",
-                    title => "Favourite Open-Source Software",
-                    url => "open-source/favourite/",
-                },
-                {
-                    text => "Interviews",
-                    title => "Interviews with Open-Source People",
-                    url => "open-source/interviews/",
+                    text => "Resources Pages",
+                    title => "Various Software Resources Pages",
+                    url => "open-source/resources/",
+                    expand => { re => "^open-source/(?:resources/|favourite|interviews/|portability-libs/)", },
+                    subs =>
+                    [
+                        {
+                            text => "Favourite OSS",
+                            title => "Favourite Open-Source Software",
+                            url => "open-source/favourite/",
+                        },
+                        {
+                            text => "Interviews",
+                            title => "Interviews with Open-Source People",
+                            url => "open-source/interviews/",
+                        },
+                        {
+                            text => "Portability Libraries",
+                            title => "Cross-Platform Abstraction Libraries",
+                            url => "open-source/portability-libs/",
+                        },
+                        {
+                            text => "Text Editors and IDEs",
+                            title => "List of Text Editors and Integrated Development Environments (IDEs)",
+                            url => "open-source/resources/editors-and-IDEs/",
+                        },
+                        {
+                            text => "Software Management Tools",
+                            title => "Software Constructions and Management Tools",
+                            url => "open-source/resources/software-tools/",
+                        },
+                        {
+                            text => "Israel-Related",
+                            title => "Israel-Related FOSS Resources",
+                            url => "open-source/resources/israel/",
+                        },
+                    ],
                 },
                 {
                     text => "Contributions",
@@ -322,19 +351,6 @@ my $tree_contents =
                     url => "open-source/anti/",
                     expand => { re => "^(?:no-ie|open-source/anti)/", },
                 },
-                {
-                    text => "Portability Libraries",
-                    title => "Cross-Platform Abstraction Libraries",
-                    url => "open-source/portability-libs/",
-                    hide => 1,
-                },
-                {
-                    text => "Software Tools",
-                    title => "Software Constructions and Management Tools",
-                    url => "open-source/resources/software-tools/",
-                    hide => 1,
-                },
-
             ],
         },
         {

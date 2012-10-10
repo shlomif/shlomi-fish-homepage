@@ -6,7 +6,7 @@ presentation_date: FILL IN
 ----
 == There are too many ways to do it
 
-/Although the Perl Slogan is There's More Than One Way to Do It, I hesitate 
+/Although the Perl Slogan is There's More Than One Way to Do It, I hesitate
 to make 10 ways to do something. :-)/
 
 - Larry Wall in http://xrl.us/i6d2
@@ -16,8 +16,8 @@ to make 10 ways to do something. :-)/
 ----
 == The problem
 
-    <sniperd> looking to write a regex that strips out all periods, except for 
-    the last one. ie, i have a string named perl.is.the.best.txt and I just 
+    <sniperd> looking to write a regex that strips out all periods, except for
+    the last one. ie, i have a string named perl.is.the.best.txt and I just
     want perlisthebest.txt
 
 - Freenode's #perl.
@@ -46,7 +46,7 @@ to make 10 ways to do something. :-)/
     is( $ref->("hello..too.pl"),   "hellotoo.pl",    "$f - double" );           # 3
     is( $ref->("magna..carta"),    "magna.carta",    "$f - double at end" );    # 4
     is( $ref->("the-more-the-merrier.jpg"),
-        "the-more-the-merrier.jpg", 
+        "the-more-the-merrier.jpg",
         "$f - one period" );                                                    # 5
     is( $ref->("hello."),    "hello.",   "$f - one period at end" );            # 6
     is( $ref->("perl.txt."), "perltxt.", "$f - period at end" );                # 7
@@ -252,7 +252,7 @@ to make 10 ways to do something. :-)/
 == Limitation
 
 * Some of these solutions will not work if:
-00 The string is empty. 
+00 The string is empty.
 00 It contains newlines.
 ----
 == Thank You

@@ -256,6 +256,11 @@ my $software_tree_contents =
                     text => "Text Processing Tools",
                 },
                 {
+                    url => "open-source/resources/networking-clients/",
+                    text => "Networking Clients",
+                    title => "Web browsers, FTP clients, Instant Messaging (IM) clients, File sharing applications and more",
+                },
+                {
                     url => "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

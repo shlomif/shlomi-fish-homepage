@@ -77,6 +77,19 @@ Comparison of instant messaging clients</a>
 </p>
 </li>
 
+<li>
+<p>
+<a href="http://www.centerim.org/">CenterIM</a> - a text-mode multi-protocol
+Instant Messaging client for Linux, the BSDs and other UNIXes. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.bitlbee.org/">BitlBee</a> - an IRC to other chat
+networks gateway.
+</p>
+</li>
 </ul>
 
 <h2 id="ftp-clients">FTP Clients</h2>
@@ -141,7 +154,7 @@ for Linux and Windows. (GPLed).
 <li>
 <p>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/chatzilla/">ChatZilla</a> -
-an open-source IRC client implemented as a Firefox plugin. (MPL).
+an open-source IRC client implemented as a Firefox plug-in. (MPL).
 </p>
 </li>
 
@@ -234,6 +247,22 @@ on Mac OS X.
 
 <li>
 <p>
+<a href="http://uzbl.org/">uzbl</a> - a browser that follows
+the UNIX philosophy (“Write programs to do one thing and do it well”/etc.).
+</p>
+</li>
+
+<li>
+<p>
+<b>KDE’s Konqueror</b> can also be used as a web browser, however note that
+its engine (KHTML) has been under-maintained, and now fails to display many
+web pages correctly. A more usable fork of it is WebKit, which is used in
+Google Chromium, Safari and in other browsers.
+</p>
+</li>
+
+<li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Comparison_of_web_browsers">Wikipedia’s
 Comparison of Web Browsers</a>
 </p>
@@ -274,6 +303,13 @@ cross-platform feed reader written in Java.
 </p>
 </li>
 
+<li>
+<p>
+<a href="http://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> -
+an open-source and cross-platform E-mail application that also handles calendar
+and RSS feeds.
+</p>
+</li>
 </ul>
 
 <h2 id="micro-blogging">Microblogging Clients</h2>
@@ -283,7 +319,7 @@ cross-platform feed reader written in Java.
 <li>
 <p>
 <a href="http://hotot.org/">Hotot</a> - an open-source, cross-platform
-Microblogging client writtne in Python.
+Microblogging client written in Python.
 </p>
 </li>
 
@@ -343,6 +379,27 @@ Microsoft Windows, Mac OS X and Linux.
 </p>
 </li>
 
+<li>
+<p>
+<a href="http://www.transmissionbt.com/">Transmission</a> - an
+open source BitTorrent client with native Mac OS X, Gtk+ and Qt
+GUI clients, and that can be controlled by web and terminal clients.
+</p>
+</li>
+</ul>
+
+<h2 id="misc">Miscellaneous</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Rsync">rsync</a> - a
+software application and protocol for incremental synchronisation of
+files and directories.
+</p>
+</li>
+
 </ul>
 
 <h2 id="links">Links</h2>
@@ -371,28 +428,17 @@ on a
 
 <cc_by_british_blurb year="2012" />
 
-<h2>Todo</h2>
+<h2>To-do list</h2>
 
 <pre>
-* TODO:
-- For IM clients:
-    - http://www.centerim.org/
-    - http://www.bitlbee.org/ - IRC to other chat networks gateway.
-- Add rsync.
 - Add download managers:
-     - http://sourceforge.net/projects/prozilla/
-     - http://dfast.sourceforge.net/index.html
-     - http://www.kde.org/applications/internet/kget/
-- Web browsers:
-    - uzbl.
-    - Konqueror.
-        - with a caveat about its engine being outdated.
-- BitTorrent: http://www.transmissionbt.com/
-- Thunderbird for RSS Feed.
+     - Prozilla
+     - wxDownload Fast
+     - KGet
 - Email clients (MUAs):
     - Thunderbird
     - Claws-Mail
-    - Microsoft OutLook
+    - Microsoft Outlook
     - KMail
     - GNOME Evolution
     - Apple Mail

@@ -436,6 +436,12 @@ td { vertical-align : top; }
 <br />
 </define-tag>
 
+<set-var global_disqus_enabled_var="" />
+<define-tag should_display_disqus whitespace="delete">
+<if "<get-var global_disqus_enabled_var />"
+    "<latemp_mynot "<get-var disable_disqus />" />" />
+</define-tag>
+
 <latemp_before_main_title>
 
 ;;; For the Hebrew layout.
@@ -443,13 +449,13 @@ td { vertical-align : top; }
 </latemp_before_main_title>
 
 <latemp_after_body>
-# <if "<get-var disable_disqus />" "" "<disqus_thread />" />
+<if "<should_display_disqus />" "<disqus_thread />" />
 <share_this_button />
 # <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}
-# <if "<latemp_mynot "<get-var disable_disqus />" />" "<disqus_javascript />" />
+<if "<should_display_disqus />" "<disqus_javascript />" />
 </latemp_after_body>
 
 

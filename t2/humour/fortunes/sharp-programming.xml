@@ -1322,5 +1322,36 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-sharp-programming-ultra-compression">
+        <meta>
+            <title>Ultra Compression</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="tnzr">does anyone happen to know what std::allocator.allocate() does when you try to allocate 0 bytes?  I get a pointer back but I can&#39;t tell what it&#39;s pointing at and I can&#39;t seem to find anything on the web that gives a difinitive answer</saying>
+<saying who="GeDaMo">Why are you allocating zero bytes?</saying>
+<saying who="Billiard">tnzr: the same thing it always returns</saying>
+<saying who="tnzr">GeDaMo: we are implementing our own allocator for an assignment, and when asked what we should do if the user tries to allocate 0 bytes, the prof said to find out what std::allocator does and mimic that</saying>
+<saying who="GeDaMo">http://stackoverflow.com/questions/6065814/standard-compliant-custom-allocator</saying>
+<saying who="tnzr">oh snap, thanks GeDaMo</saying>
+<saying who="GeDaMo">:)</saying>
+<saying who="rindolf">GeDaMo: zero bytes are enough to hold the Complete Works of Shakespeare.</saying>
+<saying who="GeDaMo">Depends on how many monkeys you have to decompress it :P</saying>
+<saying who="rindolf">GeDaMo: heh.</saying>
+<saying who="rindolf">Of course, I defined a custom decompressor that emits the complete works of Shakespeare on empty input and uses gzip compression otherwise.</saying>
+<saying who="rindolf">It&#39;s pretty large  though.</saying>
+<saying who="Billiard">redeemed: compress the decompressor using the same algo</saying>
+<saying who="Billiard">errr rindolf</saying>
+<saying who="rindolf">Billiard: OK.</saying>
+<saying who="rindolf">Billiard: heh.</saying>
+<saying who="Billiard">0 bytes = a decompressor for the entire works of shakespeare</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Shakespeare, compressed</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

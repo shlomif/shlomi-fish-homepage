@@ -1,0 +1,155 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Networking Applications" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various networking applications.
+The focus is on GUI client applications.
+</p>
+
+<h2 id="instant-messaging">Instant Messaging Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.pidgin.im/">Pidgin</a> - a universal, multi-protocol,
+chat client for
+Windows, Linux and other UNIX systems and Mac OS X. Supports voice on Linux
+alone. Has a console-based client called Finch. Open Source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.miranda-im.org/">Miranda IM</a> - an open, multi-protocol,
+instant messaging client for Microsoft Windows. GPLed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://adium.im/">Adium</a> - an open source IM application for
+Mac OS X that supports many protocols. GPLed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.trillian.im/">Trillian</a> - a proprietary IM client
+for Windows, Mac OS X and some smartphone platforms, that supports many
+protocols.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.beejive.com/">Beejive</a> - an instant messaging client
+for Android, the iPhone, the iPad and for BlackBerry. Proprietary and
+freeware.
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/text-related-tools.html">Text Related Tools in the book “GNU/Linux Tools Summary”</a> -
+from the Linux Documentation Project.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Lightweight_markup_language">“Lightweight
+markup language” article on the wikipedia</a> - also contains a comparison.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/computers/web/which-wiki/">“Which Open Source
+Wiki Works for You?”</a> - an article I wrote about wikis (also see the
+update).
+</p>
+
+<ul>
+<li>
+<a href="http://www.wikimatrix.org/">WikiMatrix</a> - compare all the wiki engines.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_wiki_software">Wikipedia
+comparison of wiki software</a>
+</li>
+
+<li>
+<a href="http://ikiwiki.info/">ikiwiki</a> - an open-source wiki engine that
+stores pages and history in a version control system.
+</li>
+</ul>
+</li>
+
+<li>
+<p>
+<a href="http://perl-begin.org/uses/text-parsing/">“Text
+Parsing in Perl”</a> and
+<a href="http://perl-begin.org/uses/text-generation/">“Text Generation in
+Perl”</a> pages on the <a href="http://perl-begin.org/">Perl
+Beginners’ Site</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.codinghorror.com/blog/2009/11/parsing-html-the-cthulhu-way.html">Parsing HTML The Cthulhu Way</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="ftp-clients">FTP Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://lftp.yar.ru/">lftp</a> - a sophisticated command-line FTP
+and HTTP client. Open Source (GPLed).
+</p>
+</li>
+
+</ul>
+
+<h3 id="fun-links">Fun Links</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">Stackoverflow
+comment on parsing HTML using regular expressions.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT Facts</a> (on this site).
+</p>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2012" />
+

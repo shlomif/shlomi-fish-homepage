@@ -32,7 +32,7 @@ my $contents =
             'subs' =>
             [
                 {
-                    'url' => "fibonnaci.html",
+                    'url' => "fibonacci.html",
                     'title' => "Fibonacci with Lists",
                 },
                 {

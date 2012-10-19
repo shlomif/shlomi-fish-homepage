@@ -10,14 +10,9 @@
 
 * Add Term::ReadPassword to Task-Sites-ShlomiFish .
 
-* Integrate building the lectures/presentations into the homepage.
-
 * Ask people about the name of the meta-scan algorithm in:
 
 http://www.shlomifish.org/lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/
-
-* Convert "The Enemy and How I Helped to Fight It" Hebrew/English to unicode
-punctuation.
 
 * Add a test suite:
     - HTML/XHTML validation.
@@ -26,9 +21,6 @@ punctuation.
 
 Minor Problems:
 ---------------
-
-* Fix the fact that the "Private Tutor HTML Ad" goes beyond the right
-margins.
 
 * Go over the pages of the individual presentations and add meaningful
 descriptions.
@@ -39,15 +31,7 @@ descriptions.
     - Adopted CPAN Modules
     - Wikipedia and related sites.
 
-* Investigate the following subversion scenario:
-    - svn rm myfile.
-    - svn cp ../../IP/myfile myfile.
-    - svn revert -R .
-    - change myfile.
-    - commit.
-
-* Fix the URLs that are spelt "fibonnaci" instead of "fibonacci".
-    - spelt "priviliges" instead of "privileges".
+* Fix the URLs that are spelt "priviliges" instead of "privileges".
 
 Long Term:
 ----------

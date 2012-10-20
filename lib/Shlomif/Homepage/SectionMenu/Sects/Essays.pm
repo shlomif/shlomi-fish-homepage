@@ -25,9 +25,9 @@ my $essays_tree_contents =
             title => "Index to Essays and Articles I wrote.",
         },
         {
-            text => "Recommended Books",
+            text => "Book Reviews",
             url => "philosophy/books-recommends/",
-            title => "Recommendations of Good Books I read and was Enlightened by.",
+            title => "Reviews of Books I read.",
         },
         {
             text => "Computing",

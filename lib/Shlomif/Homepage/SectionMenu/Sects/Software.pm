@@ -261,6 +261,10 @@ my $software_tree_contents =
                     title => "Web browsers, FTP clients, Instant Messaging (IM) clients, File sharing applications and more",
                 },
                 {
+                    url => "open-source/resources/multimedia-programs/",
+                    text => "List of Multimedia Applications",
+                },
+                {
                     url => "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

@@ -134,6 +134,16 @@ my @urls =
         url => "http://www.shlomifish.org/open-source/resources/editors-and-IDEs/",
         desc => qq{List of Text Editors and IDEs},
     },
+    {
+        id => "text-proc",
+        url => "http://www.shlomifish.org/open-source/resources/text-processing-tools/",
+        desc => qq{List of Text Processing Tools},
+    },
+    {
+        id => "net-clients",
+        url => "http://www.shlomifish.org/open-source/resources/networking-clients/",
+        desc => qq{List of Networking Clients},
+    },
 );
 
 my %urls_by_id;

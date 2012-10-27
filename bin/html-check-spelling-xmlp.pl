@@ -12,8 +12,8 @@ use Text::Hunspell;
 use List::MoreUtils qw(any);
 
 my $speller = Text::Hunspell->new(
-    '/usr/share/hunspell/en_GH.aff',
-    '/usr/share/hunspell/en_GH.dic',
+    '/usr/share/hunspell/en_GB.aff',
+    '/usr/share/hunspell/en_GB.dic',
 );
 
 die unless $speller;

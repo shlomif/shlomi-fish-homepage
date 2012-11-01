@@ -853,7 +853,7 @@ docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS)
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
-	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls
+	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
 
@@ -862,5 +862,25 @@ docbook5_targets: $(DOCBOOK5_TARGETS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS) $(DOCBOOK5_A
 $(T2_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(T2_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
 
 $(T2_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.html: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
+
+HTML_TUT_BASE = lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
+
+HTML_TUT_HEB_DIR = $(HTML_TUT_BASE)/hebrew-html-tutorial
+HTML_TUT_HEB_HTML = $(HTML_TUT_HEB_DIR)/index.html
+HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
+DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
+DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
+
+html_tutorial: $(DEST_HTML_TUT)
+
+$(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
+	mkdir -p $(DEST_HTML_TUT_BASE)
+	rsync -r $(HTML_TUT_HEB_DIR)/ $(DEST_HTML_TUT_BASE)
+
+$(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
+	cd $(HTML_TUT_BASE) && make
+
+$(HTML_TUT_HEB_TT):
+	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
 
 include deps.mak

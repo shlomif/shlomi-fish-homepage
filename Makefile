@@ -883,4 +883,9 @@ $(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
 
+update_html_tut: update_html_tut_hg html_tutorial
+
+update_html_tut_hg:
+	cd $(HTML_TUT_BASE) && (hg pull ; hg update)
+
 include deps.mak

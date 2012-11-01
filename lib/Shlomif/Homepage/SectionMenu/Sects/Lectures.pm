@@ -26,6 +26,11 @@ my $essays_tree_contents =
             title => "Perl for Perl Newbies - Introducing Perl for Beginners",
         },
         {
+            text => "HTML Tutorial",
+            url => "lecture/HTML-Tutorial/",
+            title => "The Hebrew Tutorial for Standard HTML",
+        },
+        {
             text => "Web Publishing with LAMP",
             url => "lecture/LAMP/",
             title => "Web Publishing using Linux/Apache/MySQL/Perl/PHP/Python",

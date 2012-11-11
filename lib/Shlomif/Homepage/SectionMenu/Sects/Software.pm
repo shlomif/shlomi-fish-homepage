@@ -91,6 +91,11 @@ my $software_tree_contents =
                             title => "Solver for ABC Path as featured on BrainBashers.com",
                         },
                         {
+                            text => "Binary Puzzle Solver",
+                            url => "open-source/projects/japanese-puzzle-games/binary-puzzle/",
+                            title => "Solver for logic puzzles as featured on www.binarypuzzle.com",
+                        },
+                        {
                             text => "Kakurasu Solver",
                             url => "open-source/projects/japanese-puzzle-games/kakurasu/",
                             title => "Automatically Solve the Kakurasu Puzzle Game",

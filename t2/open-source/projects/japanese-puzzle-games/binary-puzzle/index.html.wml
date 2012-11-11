@@ -1,0 +1,57 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "Solver for binarypuzzle.com" />
+
+<p>
+This is an incomplete solver for the so-called
+<a href="http://www.binarypuzzle.com/">“Binary Puzzles”</a> as
+featured on binarypuzzle.com.
+
+<h2 id="project-links">Project Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://rubygems.org/gems/binary_puzzle_solver">binary_puzzle_solver
+Ruby gem</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://github.com/shlomif/binary-puzzle-garden">GitHub Project
+page</a> - contains a git repository, an issue tracker, a wiki resources,
+some graphs, and other resources.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://github.com/shlomif/binary-puzzle-garden/tree/master/tybalt-perl">Tybalt’s Binary Puzzle solver in Perl</a> - can solve all the games
+using backtracking, but does not display the reasoning.
+</p>
+</li>
+
+</ul>
+
+<h2 id="publicity">Publicity</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://groups.google.com/forum/?fromgroups=#!topic/israelrb/C3xFWPRJMls">“My First Ruby Gem -
+https://rubygems.org/gems/binary_puzzle_solver”</a> - post to the Israeli Rubyist
+mailing list about it.
+</p>
+</li>
+
+</ul>
+
+
+<x11_licence name="Binary Puzzle Solver" />
+
+<h2 id="news">News</h2>
+

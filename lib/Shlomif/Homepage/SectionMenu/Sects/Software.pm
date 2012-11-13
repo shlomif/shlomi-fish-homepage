@@ -151,6 +151,11 @@ my $software_tree_contents =
                     title => "Write test programs in C that output to the Test Anything Protocol (TAP)",
                 },
                 {
+                    text => "countdown",
+                    url => "open-source/projects/countdown/",
+                    title => "Delay for a certain seconds, while displaying the remaining time",
+                },
+                {
                     text => "Spark - A Lisp Dialect",
                     url => "open-source/projects/Spark/",
                     subs =>

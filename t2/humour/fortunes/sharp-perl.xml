@@ -5610,5 +5610,52 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-identically-named-variables">
+        <meta>
+            <title>Identically named variables</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="WeThePeople">do % define the @ ?</saying>
+<saying who="WeThePeople">huf, do hashes define the array</saying>
+<saying who="rindolf">WeThePeople: %foo and @foo are completely different.</saying>
+<saying who="rindolf">WeThePeople: note that @foo{@slice_by_me} is part of %foo</saying>
+<saying who="wlan">% - hash yet</saying>
+<saying who="wlan">@ array</saying>
+<saying who="rindolf">WeThePeople: I&#39;m now working on refactoring the perl debugger, which uses many identical names for $, @, and % variables - how irritating.</saying>
+<saying who="rindolf">And in part these are package-scope variables so they are part of the interface and I cannot change them.</saying>
+<saying who="WeThePeople">rindolf, so you are refactoring to use $@% only ??</saying>
+<saying who="rindolf">WeThePeople: no.</saying>
+<saying who="rindolf">WeThePeople: I mean I have something like $sub , @sub and %sub - all at once.</saying>
+<saying who="rindolf">WeThePeople: and I dislike it.</saying>
+<saying who="rindolf">Well, there was also a &quot;sub sub { ... }&quot; (oh the humanity).</saying>
+<saying who="cfedde">add &amp;sub and sub sub {...}</saying>
+<saying who="cfedde">hheh</saying>
+<saying who="cfedde">I&#39;m too slow.</saying>
+<saying who="rindolf">cfedde: we still love you. :-)</saying>
+<saying who="huf">oh the possibilities, $sub[$sub], @sub{@sub}, ....</saying>
+<saying who="rindolf">WITH GREAT HUGE LOVE.</saying>
+<saying who="wlan">sub sub { &amp;sub }</saying>
+<me_is who="rindolf">hugs cfedde</me_is>
+<saying who="cfedde">rindolf: me too.</saying>
+<saying who="Yaakov">&amp;$$sub</saying>
+<saying who="rindolf">huf: heh.</saying>
+<saying who="rindolf">sub-par.</saying>
+<saying who="cfedde">here we find ourselves well on the way to another Acme:: module</saying>
+<saying who="rindolf">cfedde: heh.</saying>
+<saying who="rindolf">cfedde: this time it&#39;s part of the perl core.</saying>
+<saying who="cfedde">No just mix in all the case permutations and we&#39;ve got a winner.</saying>
+<saying who="rindolf">cfedde: there&#39;s a limit to how much I can refactor the debugger without breaking the &quot;external&quot; API.</saying>
+<saying who="apeiron">sub sandwich;</saying>
+<saying who="rindolf">cfedde: when I started with it, it was truly vile code.</saying>
+<saying who="Yaakov">use sub_localize qw/grinder hoagie poboy hero/;</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>sub sub{}-standard</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

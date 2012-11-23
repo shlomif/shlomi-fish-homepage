@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions
 
 include lib/make/gmsl/gmsl
 
@@ -902,3 +902,12 @@ $(MATHJAX_DEST_DIR)/README.md : lib/MathJax/README.md
 	cd lib && rsync -r -v --progress MathJax/ ../$(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
+
+SCRIPTS_WITH_OFFENDING_EXTENSIONS = t2/MathVentures/gen-bugs-in-square-svg.pl
+
+SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst $(T2_SRC_DIR)/%.pl,$(T2_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
+
+plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
+
+$(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(T2_SRC_DIR)/%.pl
+	cp -f $< $@

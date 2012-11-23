@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest
 
 include lib/make/gmsl/gmsl
 
@@ -889,3 +889,16 @@ update_html_tut_hg:
 	cd $(HTML_TUT_BASE) && (hg pull ; hg update)
 
 include deps.mak
+
+lib/MathJax/README.md :
+	cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && \
+		cd MathJax && git checkout v2.1-latest
+
+MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
+
+mathjax_dest: $(MATHJAX_DEST_DIR)/README.md
+
+$(MATHJAX_DEST_DIR)/README.md : lib/MathJax/README.md
+	cd lib && rsync -r -v --progress MathJax/ ../$(T2_DEST)/js/MathJax/
+	rm -fr $(MATHJAX_DEST_DIR)/.git
+	rm -fr $(MATHJAX_DEST_DIR)/.gitignore

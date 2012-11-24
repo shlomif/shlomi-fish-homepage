@@ -350,6 +350,11 @@ my $software_tree_contents =
                     url => "open-source/anti/javascript/",
                     title => "Why JavaScript Should not be Used Outside Web Browser Scripting",
                 },
+                {
+                    text => "Links against Java",
+                    url => "open-source/anti/java/",
+                    title => "Some links against Java",
+                },
             ],
         },
         {

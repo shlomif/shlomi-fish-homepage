@@ -369,6 +369,11 @@ my $humour_tree_contents =
                     url => "humour/by-others/grad-student-jokes-from-jnoakes/",
                 },
                 {
+                    text => "The Fountainhead - Starring Skull Force",
+                    url => "humour/by-others/the-fountainhead-starring-skull-force/",
+                    title => "A short parody of Ayn Rand’s novel The Fountainhead",
+                },
+                {
                     text => "Division Two Magazine",
                     url => "humour/by-others/division-two/",
                     title => "A mirror of a hilarious parodical site that went offline",

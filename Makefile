@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images
 
 include lib/make/gmsl/gmsl
 
@@ -911,3 +911,20 @@ plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS
 
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(T2_SRC_DIR)/%.pl
 	cp -f $< $@
+
+SVG_NAV_IMAGES = \
+	$(T2_DEST)/images/sect-arr-left-disabled.svg \
+	$(T2_DEST)/images/sect-arr-left-pressed.svg \
+	$(T2_DEST)/images/sect-arr-left.svg \
+	$(T2_DEST)/images/sect-arr-right-disabled.svg \
+	$(T2_DEST)/images/sect-arr-right-pressed.svg \
+	$(T2_DEST)/images/sect-arr-right.svg \
+	$(T2_DEST)/images/sect-arr-up-disabled.svg \
+	$(T2_DEST)/images/sect-arr-up-pressed.svg \
+	$(T2_DEST)/images/sect-arr-up.svg
+
+
+svg_nav_images: $(SVG_NAV_IMAGES)
+
+$(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
+	perl $<

@@ -9,7 +9,7 @@ use base 'HTML::Latemp::NavLinks::GenHtml::ArrowImages';
 
 sub get_image_base
 {
-    return 'sect-arrow-';
+    return 'sect-arr-';
 }
 
 package Shlomif::Homepage::SectionMenu;
@@ -82,6 +82,7 @@ sub get_nav_links
     my $self = shift;
 
     return Shlomif::Homepage::SectionMenu::NavLinks->new(
+        ext => '.svg',
         nav_links => $self->results()->{nav_links},
         nav_links_obj => $self->results()->{nav_links_obj},
         root => $self->root(),

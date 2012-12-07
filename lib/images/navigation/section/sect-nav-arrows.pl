@@ -54,11 +54,19 @@ foreach my $button_style (
     {
         my $basename = $rotation->{basename};
 
+        my $half_width = $width / 2;
+        my $half_height = $height / 2;
+        my $halves = "$half_width,$half_height";
+        my $minus_halves = "-$half_width,-$half_height";
         my $svg = SVG->new(width => $width, height => $height);
         my $group1 = $svg->group(
             id=>'group1',
             style => {stroke => 'black', fill => 'black',},
-            exists($rotation->{rot}) ? (transform => "rotate($rotation->{rot} @{[$width/2]} @{[$height/2]})") : (),
+            transform => sprintf("%s %s",
+                "translate($halves) scale(0.8) translate($minus_halves)",
+                (exists($rotation->{rot})
+                    ? "rotate($rotation->{rot},$halves)" : ''),
+            ),
         );
 
         my $xs = [0, $width, $width];

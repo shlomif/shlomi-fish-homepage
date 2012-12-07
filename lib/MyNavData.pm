@@ -5,6 +5,8 @@ use warnings;
 
 use utf8;
 
+use Shlomif::Homepage::SectionMenu;
+
 my $hosts =
 {
     t2 =>
@@ -103,6 +105,117 @@ my $tree_contents =
                 },
             ],
         },
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Humour'),
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Puzzles'),
+        {
+            text => "Computer Art",
+            url => "art/",
+            expand => { re => "^art/", },
+            title => "Computer art I created while explaining how.",
+            subs =>
+            [
+                {
+                    text => "Back to my Homepage",
+                    url => "art/bk2hp/",
+                    title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
+                },
+                {
+                    text => "Linux Banner",
+                    url => "art/linux_banner/",
+                    title => "Linux - Because Software Problems should not Cost Money",
+                },
+                {
+                    text => "Made with Latemp",
+                    url => "art/made-with-latemp/",
+                    title => "“Made with Latemp” Button",
+                },
+                {
+                    text => "HHFG Background",
+                    url => "art/hhfg-background/",
+                    title => "Background Image for the “Human Hacking Field Guide” Story",
+                },
+                {
+                    text => "Better SCM Logo",
+                    url => "art/better-scm/",
+                    title => "Logo for the “Better SCM” Site",
+                },
+                {
+                    text => "Slogans’ Designs",
+                    url => "art/slogans/",
+                    title => "The design of my aphorism - useful for T-shirts and other merchandise",
+                },
+            ],
+        },
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Software'),
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Lectures'),
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Essays'),
+        {
+            text => "Work",
+            url => "work/",
+            expand => { re => "", capt => 0,},
+            title => "Work-Related Pages",
+            subs =>
+            [
+                {
+                    text => "Hire Me!",
+                    url => "work/hire-me/",
+                    title => "I’m a Geek for Hire",
+                    expand => { re => "work/", },
+                    subs =>
+                    [
+                        {
+                            text => "Private Lessons",
+                            url => "work/private-lessons/",
+                            title => "I’m Giving Private Lessons for High School Subjects and Computing.",
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            separator => 1,
+            skip => 1,
+        },
+        {
+            text => "Cool Links",
+            url => "links.html",
+            title => "An incomplete list of links I find cool and/or useful.",
+        },
+        {
+            text => "Recommendations",
+            url => "recommendations/",
+            title => "Recommendations of Books, Compact Discs, Movies, etc.",
+        },
+        {
+            separator => 1,
+            skip => 1,
+        },
+        {
+            url => "site-map/",
+            text => "Site Map",
+            title => "A site map showing all of the main pages.",
+        },
+        {
+            separator => 1,
+            skip => 1,
+        },
+        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Meta'),
+    ],
+};
+
+sub get_params
+{
+    return
+        (
+            hosts => $hosts,
+            tree_contents => $tree_contents,
+        );
+}
+
+1;
+
+=begin removed
+
         {
             text => "Humour",
             url => "humour/",
@@ -206,45 +319,6 @@ my $tree_contents =
                     text => "Logic Puzzles",
                     url => "puzzles/logic/",
                     expand => { re => "^puzzles/logic/", },
-                },
-            ],
-        },
-        {
-            text => "Computer Art",
-            url => "art/",
-            expand => { re => "^art/", },
-            title => "Computer art I created while explaining how.",
-            subs =>
-            [
-                {
-                    text => "Back to my Homepage",
-                    url => "art/bk2hp/",
-                    title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
-                },
-                {
-                    text => "Linux Banner",
-                    url => "art/linux_banner/",
-                    title => "Linux - Because Software Problems should not Cost Money",
-                },
-                {
-                    text => "Made with Latemp",
-                    url => "art/made-with-latemp/",
-                    title => "“Made with Latemp” Button",
-                },
-                {
-                    text => "HHFG Background",
-                    url => "art/hhfg-background/",
-                    title => "Background Image for the “Human Hacking Field Guide” Story",
-                },
-                {
-                    text => "Better SCM Logo",
-                    url => "art/better-scm/",
-                    title => "Logo for the “Better SCM” Site",
-                },
-                {
-                    text => "Slogans’ Designs",
-                    url => "art/slogans/",
-                    title => "The design of my aphorism - useful for T-shirts and other merchandise",
                 },
             ],
         },
@@ -462,56 +536,6 @@ my $tree_contents =
             ],
         },
         {
-            text => "Work",
-            url => "work/",
-            expand => { re => "", capt => 0,},
-            title => "Work-Related Pages",
-            subs =>
-            [
-                {
-                    text => "Hire Me!",
-                    url => "work/hire-me/",
-                    title => "I’m a Geek for Hire",
-                    expand => { re => "work/", },
-                    subs =>
-                    [
-                        {
-                            text => "Private Lessons",
-                            url => "work/private-lessons/",
-                            title => "I’m Giving Private Lessons for High School Subjects and Computing.",
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        {
-            text => "Cool Links",
-            url => "links.html",
-            title => "An incomplete list of links I find cool and/or useful.",
-        },
-        {
-            text => "Recommendations",
-            url => "recommendations/",
-            title => "Recommendations of Books, Compact Discs, Movies, etc.",
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        {
-            url => "site-map/",
-            text => "Site Map",
-            title => "A site map showing all of the main pages.",
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        {
             expand_re => "^meta/",
             url => "meta/",
             text => "Meta Info",
@@ -552,16 +576,6 @@ my $tree_contents =
                 },
             ],
         },
-    ],
-};
+=end removed
 
-sub get_params
-{
-    return
-        (
-            hosts => $hosts,
-            tree_contents => $tree_contents,
-        );
-}
-
-1;
+=cut

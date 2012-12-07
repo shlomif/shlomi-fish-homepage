@@ -32,6 +32,32 @@ __PACKAGE__->mk_accessors(qw(
     title
 ));
 
+sub get_section_nav_menu_params
+{
+    my $self = shift;
+    my $class_id = shift;
+    my $class = "Shlomif::Homepage::SectionMenu::Sects::$class_id";
+    eval "require $class";
+
+    return eval "${class}::get_params()";
+}
+
+sub get_modified_sub_tree
+{
+    my ($self, $class) = @_;
+
+    my %params = $self->get_section_nav_menu_params($class);
+
+    my $tree = $params{tree_contents};
+
+    my $subs = $tree->{subs};
+    return
+        {
+            %{ $subs->[0] },
+            subs => [ @{ $subs }[1 .. $#$subs ] ],
+        };
+}
+
 sub _init
 {
     my $self = shift;
@@ -60,12 +86,10 @@ sub _init
     else
     {
         my $class_id= $current_sect->{'class'};
-        my $class = "Shlomif::Homepage::SectionMenu::Sects::$class_id";
-        eval "require $class";
         my $nav_menu = HTML::Widgets::NavMenu->new(
             'path_info' => $self->path_info(),
             current_host => $self->current_host(),
-            (eval "${class}::get_params()"),
+            $self->get_section_nav_menu_params($class_id),
             'ul_classes' =>
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
             'no_leading_dot' => 1,

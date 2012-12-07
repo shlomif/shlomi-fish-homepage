@@ -18,7 +18,7 @@ my $humour_tree_contents =
     subs =>
     [
         {
-            text => "Stories and Aphorisms",
+            text => "Humour",
             url => "humour/",
         },
         {

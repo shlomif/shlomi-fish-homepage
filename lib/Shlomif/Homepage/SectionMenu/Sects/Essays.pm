@@ -223,7 +223,7 @@ my $essays_tree_contents =
                         {
                             text => "EE in the Technion",
                             url => "philosophy/computers/education/opinion-on-the-technion/",
-                            title => "My Opinion on Electrical Engineering Stuies in the Technion",
+                            title => "My Opinion on Electrical Engineering Studies in the Technion",
                         },
                         {
                             text => "Best Introductory Language",
@@ -357,7 +357,7 @@ my $essays_tree_contents =
                 {
                     text => "Why Closed Books are So 19th Century",
                     url => "philosophy/philosophy/closed-books-are-so-19th-century/",
-                    title => "Why authors of books should make sure they are publically available online.",
+                    title => "Why authors of books should make sure they are publicly available online.",
                 },
             ],
         },

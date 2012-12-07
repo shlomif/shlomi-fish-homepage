@@ -82,7 +82,7 @@ my $puzzles_tree_contents =
                 {
                     text => "Between the Screws",
                     url => "puzzles/logic/between-the-screws/",
-                    title => "Which are the 4 different Screws Used to build an Airplane?",
+                    title => "Which are the 4 different Screws Used to build an Aeroplane?",
                 },
                 {
                     text => "Ravensborg’s Guild",

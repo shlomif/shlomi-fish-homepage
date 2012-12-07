@@ -15,7 +15,9 @@ use Test::More tests => 1;
     {
         chomp($l);
 
-        if ($l =~ m{\A(?:dest/t2-homepage|t2)/(?:lecture/CMake|(?:humour/fortunes/fortunes-shlomif-ids-data\.yaml\z))})
+        if ($l =~ m{\A(?:dest/t2-homepage|t2)/(?:lecture/CMake|(?:humour/fortunes/fortunes-shlomif-ids-data\.yaml|(?:js/MathJax.*?)\z))}
+                or ($l =~ m{\Alib/MathJax})
+        )
         {
             next ACK_OUTPUT;
         }

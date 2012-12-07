@@ -90,6 +90,6 @@ foreach my $button_style (
                 %{$button_style->{style}},
             },
         );
-        io->file("./dest/t2-homepage/images/sect-arr-$basename$button_basename.svg")->print($svg->xmlify());
+        io->file("./dest/t2-homepage/images/sect-arr-$basename$button_basename.svg")->print(scalar($svg->xmlify()) =~ s/<!--.*?-->//gmrs =~ s/[ \t]+$//gmrs );
     }
 }

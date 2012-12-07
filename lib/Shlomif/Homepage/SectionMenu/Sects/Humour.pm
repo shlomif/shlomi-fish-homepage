@@ -280,6 +280,11 @@ my $humour_tree_contents =
                     title => "Incomplete Perl Geek Song",
                 },
                 {
+                    text => "Can I SCO Now?",
+                    url => "humour/bits/Can-I-SCO-Now/",
+                    title => "Another Incomplete Geek Song",
+                },
+                {
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
                     title => "Collection of funny facts about various people an things",

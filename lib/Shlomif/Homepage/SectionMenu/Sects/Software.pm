@@ -138,7 +138,7 @@ my $software_tree_contents =
                 {
                     text => "Quad-Pres",
                     url => "open-source/projects/quad-pres/",
-                    title => "A Tool for Generating HTML Presenttions",
+                    title => "A Tool for Generating HTML Presentations",
                 },
                 {
                     text => "yjobs.co.il on Firefox/Mozilla",

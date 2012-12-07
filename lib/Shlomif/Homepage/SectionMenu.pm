@@ -127,8 +127,8 @@ sub get_html
             qq{<div class="sub_menu">\n} .
             qq{<h2>} . $self->title() . qq{</h2>\n} .
             $self->get_nav_links() .
-            qq{<button id="toggle_sect_menu" onclick="javascript:toggle_sect_menu()" class="toggle_sect_menu off" title="Show or Hide the Section Navigation Menu">Show</button>\n} .
-            qq{<div id="sect_menu_wrapper">\n} .
+            qq{<button id="toggle_sect_menu" onclick="javascript:toggle_sect_menu()" class="toggle_sect_menu off" title="Show or Hide the Section Navigation Menu">Hide</button>\n} .
+            qq{<div id="sect_menu_wrapper" class="novis">\n} .
             join("\n", @{$self->results()->{html}}) .
             qq{\n</div>\n} .
             qq{\n</div>\n} .

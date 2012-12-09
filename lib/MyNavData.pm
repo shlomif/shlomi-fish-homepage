@@ -27,6 +27,378 @@ sub get_hosts
 my @personal_expand = (expand => { bool => 1, capt => 0,},);
 my @humour_expand = (re => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
 
+my %reduced_sub_trees =
+(
+    'Humour' =>
+    {
+        text => "Humour",
+        url => "humour/",
+        expand => { @humour_expand },
+        title => "My Humorous Creations",
+        subs =>
+        [
+            {
+                text => "Stories",
+                url => "humour/stories/",
+                title => "Large-Scale Stories I Wrote",
+                expand => { @humour_expand, capt => 0,},
+                subs =>
+                [
+                    {
+                        text => "The Enemy",
+                        url => "humour/TheEnemy/",
+                        title => "The Enemy and How I Helped to Fight It",
+                    },
+                    {
+                        text => "TOW The Fountainhead",
+                        url => "humour/TOWTF/",
+                        title => "The One with the Fountainhead",
+                    },
+                    {
+                        text => "Human Hacking Field Guide",
+                        url => "humour/human-hacking/",
+                        title => "The Human Hacking Field Guide",
+                    },
+                    {
+                        text => "We, the Living Dead",
+                        url => "humour/Star-Trek/We-the-Living-Dead/",
+                    },
+                    {
+                        text => "Humanity - The Movie",
+                        url => "humour/humanity/",
+                        title => "Parody of Humanity and Modern Life in Particular",
+                    },
+                    {
+                        text => "The Pope",
+                        url => "humour/Pope/",
+                        title => "The Pope Died on Sunday",
+                    },
+                ],
+            },
+            {
+                text => "Aphorisms and Quotes",
+                url => "humour/aphorisms/",
+                expand => { @humour_expand, capt => 0,},
+                subs =>
+                [
+                    {
+                        text => "My Quotes Collection",
+                        title => ("Collection of Funny or Insightful " .
+                            "Quotes or Aphorisms I came up with"),
+                        url => "humour.html",
+                    },
+                    {
+                        text => "Fortune Cookies Collection",
+                        title => "Collection of Files for Input to the UNIX ‘fortune’ Program",
+                        url => "humour/fortunes/",
+                    },
+                ],
+            },
+            {
+                text => "Small Scale",
+                url => "humour/bits/",
+                expand => { re => "^humour/bits/", },
+                title => "Small Scale Funny Works of Mine",
+                subs =>
+                [
+                    {
+                        text => "Factoids",
+                        title => "“Facts” about Chuck Norris and other things",
+                        url => "humour/bits/facts/",
+                    },
+                ],
+            },
+            {
+                text => "By Others",
+                url => "humour/by-others/",
+                expand => { re => "^humour/(?:by-others|GNU-Visual-Basic)/", },
+                title => "Humorous Works by Other People",
+            },
+        ],
+    },
+    'Puzzles' =>
+    {
+        text => "Puzzles",
+        url => "puzzles/",
+        expand => { re => q{^(?:MathVentures/|puzzles/|toggle\.html)}, },
+        title => "Puzzles, Riddles and Brain-teasers",
+        subs =>
+        [
+            {
+                text => "Math-Ventures",
+                url => "MathVentures/",
+                expand => { re => "^MathVentures/", },
+                title => "Mathematical Riddles and their Solutions",
+            },
+            {
+                text => "Logic Puzzles",
+                url => "puzzles/logic/",
+                expand => { re => "^puzzles/logic/", },
+            },
+        ],
+    },
+
+    'Software' =>
+    {
+        text => "Software",
+        url => "open-source/",
+        expand => { re => "^open-source/", },
+        title => "Pages related to Software (mostly Open-Source)",
+        subs =>
+        [
+            {
+                text => "Projects",
+                url => "open-source/projects/",
+                expand => { re => "^(?:open-source/projects|jmikmod|rwlock|grad-fu)/", },
+                subs =>
+                [
+                    {
+                        text => "Freecell Solver",
+                        url => "open-source/projects/freecell-solver/",
+                    },
+                    {
+                        text => "MikMod",
+                        url => "open-source/projects/mikmod/",
+                        title => "A library and player for playing music module files",
+                        subs =>
+                        [
+                            {
+                                text => "For Java",
+                                title => "A Player for MOD Files (a type of Music Files) for the Java Environment",
+                                url => "jmikmod/",
+                            },
+                        ],
+                    },
+                    {
+                        text => "FCFS RWLock",
+                        title => "A First-Come First-Served Readers/Writers Lock",
+                        url => "rwlock/",
+                    },
+                    {
+                        text => "Quad-Pres",
+                        title => "A Tool for Creating HTML Presentations",
+                        url => "open-source/projects/quad-pres/",
+                    },
+                    {
+                        text => "Gradient-Fu",
+                        title => "Gradient-Fu Patch for the GIMP",
+                        url => "grad-fu/",
+                        hide => 1,
+                    },
+                    {
+                        text => "Bits and Bobs",
+                        title => "Various Small-Scale Open-Source Works",
+                        url => "open-source/bits.html",
+                    },
+                ],
+            },
+            {
+                text => "Resources Pages",
+                title => "Various Software Resources Pages",
+                url => "open-source/resources/",
+                expand => { re => "^open-source/(?:resources/|favourite|interviews/|portability-libs/)", },
+                subs =>
+                [
+                    {
+                        text => "Favourite OSS",
+                        title => "Favourite Open-Source Software",
+                        url => "open-source/favourite/",
+                    },
+                    {
+                        text => "Interviews",
+                        title => "Interviews with Open-Source People",
+                        url => "open-source/interviews/",
+                    },
+                    {
+                        text => "Portability Libraries",
+                        title => "Cross-Platform Abstraction Libraries",
+                        url => "open-source/portability-libs/",
+                    },
+                    {
+                        text => "Text Editors and IDEs",
+                        title => "List of Text Editors and Integrated Development Environments (IDEs)",
+                        url => "open-source/resources/editors-and-IDEs/",
+                    },
+                    {
+                        text => "Software Management Tools",
+                        title => "Software Constructions and Management Tools",
+                        url => "open-source/resources/software-tools/",
+                    },
+                    {
+                        text => "Israel-Related",
+                        title => "Israel-Related FOSS Resources",
+                        url => "open-source/resources/israel/",
+                    },
+                ],
+            },
+            {
+                text => "Contributions",
+                title => "Contributions to Other Projects, that I did not Start",
+                url => "open-source/contributions/",
+            },
+            {
+                text => "Anti Pages",
+                title => "Against Commonly Used but Bad Software",
+                url => "open-source/anti/",
+                expand => { re => "^(?:no-ie|open-source/anti)/", },
+            },
+        ],
+    },
+    'Lectures' =>
+    {
+        text => "Lectures",
+        url => "lecture/",
+        expand => { re => "^lecture/", },
+        title => "Presentations I Wrote (Mostly Technical)",
+        subs =>
+        [
+            {
+                text => "Perl for Newbies",
+                url => "lecture/Perl/Newbies/",
+            },
+            {
+                text => "Web Publishing using LAMP",
+                url => "lecture/LAMP/",
+                host => "t2",
+                title => "Web Publishing using Linux, Apache, MySQL, and Perl/PHP/Python (or equivalents)",
+            },
+            {
+                text => "The Cathedral and the Bazaar",
+                url => "lecture/CatB/",
+            },
+            {
+                text => "Prog. Languages",
+                url => "lecture/cat/programming-languages/",
+                title => "Presentations about Programming Languages",
+            },
+            {
+                text => "Various Tools",
+                url => "lecture/cat/various-tools/",
+                title => "Presentations about Various Tools",
+            },
+            {
+                text => "Welcome to Linux",
+                url => "lecture/W2L/",
+                title => "Presentations for the Israeli series for Linux Newcomers",
+            },
+            {
+                text => "About My Projects",
+                url => "lecture/cat/projects/",
+                title => "Presentations about my Open Source Projects",
+            },
+            {
+                text => "Lightning Talks",
+                url => "lecture/cat/lightning-talks/",
+                title => "Short (5-15 minutes) Presentations",
+            },
+        ],
+    },
+
+    'Essays' =>
+    {
+        text => "Essays",
+        url => "philosophy/",
+        expand => { re => "^(?:philosophy|prog-evolution|DeCSS)/", },
+        title => "Various Essays and Articles about Technology and Philosophy in General",
+        subs =>
+        [
+            {
+                text => "Index to Essays",
+                url => "philosophy/Index/",
+                title => "Index to Essays and Articles I wrote.",
+            },
+            {
+                text => "Computing",
+                url => "philosophy/computers/",
+                title => "Computing-related Essays and Articles",
+                expand => { re => "^(?:philosophy/computers/|prog-evolution)", },
+                subs =>
+                [
+                    {
+                        text => "Open Source",
+                        url => "philosophy/computers/open-source/",
+                        title => "Essays about Free and Open Source Software (FOSS)",
+                    },
+                    {
+                        text => "Software Management",
+                        url => "philosophy/computers/software-management/",
+                        title => "Essays about how to manage software workplaces, projects and teams",
+                    },
+                    {
+                        text => "Perl",
+                        url => "philosophy/computers/perl/",
+                        title => "Essays about the Perl programming language",
+                    },
+                    {
+                        text => "The Web (WWW)",
+                        url => "philosophy/computers/web/",
+                        title => "About the World-Wide-Web",
+                    },
+                    {
+                        text => "Education",
+                        url => "philosophy/computers/education/",
+                        title => "About Computer and Technical Education",
+                    },
+                ],
+            },
+            {
+                text => "Political Essays",
+                url => "philosophy/politics/",
+                title => "Essays about Politics and " .
+                "Philosophical Politics",
+                expand => { re => "^philosophy/politics/", },
+            },
+            {
+                text => "General Philosophy",
+                url => "philosophy/philosophy/",
+                expand => { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
+            },
+        ],
+    },
+    'Meta' =>
+    {
+        expand_re => "^meta/",
+        url => "meta/",
+        text => "Meta Info",
+        title => "Information about this Site",
+        show_always => 1,
+        subs =>
+        [
+            {
+                url => "meta/FAQ/",
+                text => "FAQ",
+                title => "Frequently Asked Questions and Answers List (FAQ)",
+            },
+            {
+                url => "meta/privacy-policy/",
+                text => "Privacy Policy",
+            },
+            {
+                url => "meta/site-source/",
+                text => "Site’s Source",
+                title => "The source code used to generate this site",
+            },
+            {
+                url => "meta/how-to-help/",
+                text => "How to Help",
+                title => "How you can help promote this site",
+                subs =>
+                [
+                    {
+                        url => "meta/donate/",
+                        text => "Please Donate",
+                    },
+                ],
+            },
+            {
+                url => "meta/hosting/",
+                text => "Hosting",
+                title => "About this site’s hosting provider.",
+            },
+        ],
+    },
+);
+
 sub get_params
 {
     my $tree_contents =
@@ -213,369 +585,3 @@ sub get_params
 }
 
 1;
-
-=begin removed
-
-        {
-            text => "Humour",
-            url => "humour/",
-            expand => { @humour_expand },
-            title => "My Humorous Creations",
-            subs =>
-            [
-                {
-                    text => "Stories",
-                    url => "humour/stories/",
-                    title => "Large-Scale Stories I Wrote",
-                    expand => { @humour_expand, capt => 0,},
-                    subs =>
-                    [
-                        {
-                            text => "The Enemy",
-                            url => "humour/TheEnemy/",
-                            title => "The Enemy and How I Helped to Fight It",
-                        },
-                        {
-                            text => "TOW The Fountainhead",
-                            url => "humour/TOWTF/",
-                            title => "The One with the Fountainhead",
-                        },
-                        {
-                            text => "Human Hacking Field Guide",
-                            url => "humour/human-hacking/",
-                            title => "The Human Hacking Field Guide",
-                        },
-                        {
-                            text => "We, the Living Dead",
-                            url => "humour/Star-Trek/We-the-Living-Dead/",
-                        },
-                        {
-                            text => "Humanity - The Movie",
-                            url => "humour/humanity/",
-                            title => "Parody of Humanity and Modern Life in Particular",
-                        },
-                        {
-                            text => "The Pope",
-                            url => "humour/Pope/",
-                            title => "The Pope Died on Sunday",
-                        },
-                    ],
-                },
-                {
-                    text => "Aphorisms and Quotes",
-                    url => "humour/aphorisms/",
-                    expand => { @humour_expand, capt => 0,},
-                    subs =>
-                    [
-                        {
-                            text => "My Quotes Collection",
-                            title => ("Collection of Funny or Insightful " .
-                                "Quotes or Aphorisms I came up with"),
-                            url => "humour.html",
-                        },
-                        {
-                            text => "Fortune Cookies Collection",
-                            title => "Collection of Files for Input to the UNIX ‘fortune’ Program",
-                            url => "humour/fortunes/",
-                        },
-                    ],
-                },
-                {
-                    text => "Small Scale",
-                    url => "humour/bits/",
-                    expand => { re => "^humour/bits/", },
-                    title => "Small Scale Funny Works of Mine",
-                    subs =>
-                    [
-                        {
-                            text => "Factoids",
-                            title => "“Facts” about Chuck Norris and other things",
-                            url => "humour/bits/facts/",
-                        },
-                    ],
-                },
-                {
-                    text => "By Others",
-                    url => "humour/by-others/",
-                    expand => { re => "^humour/(?:by-others|GNU-Visual-Basic)/", },
-                    title => "Humorous Works by Other People",
-                },
-            ],
-        },
-        {
-            text => "Puzzles",
-            url => "puzzles/",
-            expand => { re => q{^(?:MathVentures/|puzzles/|toggle\.html)}, },
-            title => "Puzzles, Riddles and Brain-teasers",
-            subs =>
-            [
-                {
-                    text => "Math-Ventures",
-                    url => "MathVentures/",
-                    expand => { re => "^MathVentures/", },
-                    title => "Mathematical Riddles and their Solutions",
-                },
-                {
-                    text => "Logic Puzzles",
-                    url => "puzzles/logic/",
-                    expand => { re => "^puzzles/logic/", },
-                },
-            ],
-        },
-        {
-            text => "Software",
-            url => "open-source/",
-            expand => { re => "^open-source/", },
-            title => "Pages related to Software (mostly Open-Source)",
-            subs =>
-            [
-                {
-                    text => "Projects",
-                    url => "open-source/projects/",
-                    expand => { re => "^(?:open-source/projects|jmikmod|rwlock|grad-fu)/", },
-                    subs =>
-                    [
-                        {
-                            text => "Freecell Solver",
-                            url => "open-source/projects/freecell-solver/",
-                        },
-                        {
-                            text => "MikMod",
-                            url => "open-source/projects/mikmod/",
-                            title => "A library and player for playing music module files",
-                            subs =>
-                            [
-                                {
-                                    text => "For Java",
-                                    title => "A Player for MOD Files (a type of Music Files) for the Java Environment",
-                                    url => "jmikmod/",
-                                },
-                            ],
-                        },
-                        {
-                            text => "FCFS RWLock",
-                            title => "A First-Come First-Served Readers/Writers Lock",
-                            url => "rwlock/",
-                        },
-                        {
-                            text => "Quad-Pres",
-                            title => "A Tool for Creating HTML Presentations",
-                            url => "open-source/projects/quad-pres/",
-                        },
-                        {
-                            text => "Gradient-Fu",
-                            title => "Gradient-Fu Patch for the GIMP",
-                            url => "grad-fu/",
-                            hide => 1,
-                        },
-                        {
-                            text => "Bits and Bobs",
-                            title => "Various Small-Scale Open-Source Works",
-                            url => "open-source/bits.html",
-                        },
-                    ],
-                },
-                {
-                    text => "Resources Pages",
-                    title => "Various Software Resources Pages",
-                    url => "open-source/resources/",
-                    expand => { re => "^open-source/(?:resources/|favourite|interviews/|portability-libs/)", },
-                    subs =>
-                    [
-                        {
-                            text => "Favourite OSS",
-                            title => "Favourite Open-Source Software",
-                            url => "open-source/favourite/",
-                        },
-                        {
-                            text => "Interviews",
-                            title => "Interviews with Open-Source People",
-                            url => "open-source/interviews/",
-                        },
-                        {
-                            text => "Portability Libraries",
-                            title => "Cross-Platform Abstraction Libraries",
-                            url => "open-source/portability-libs/",
-                        },
-                        {
-                            text => "Text Editors and IDEs",
-                            title => "List of Text Editors and Integrated Development Environments (IDEs)",
-                            url => "open-source/resources/editors-and-IDEs/",
-                        },
-                        {
-                            text => "Software Management Tools",
-                            title => "Software Constructions and Management Tools",
-                            url => "open-source/resources/software-tools/",
-                        },
-                        {
-                            text => "Israel-Related",
-                            title => "Israel-Related FOSS Resources",
-                            url => "open-source/resources/israel/",
-                        },
-                    ],
-                },
-                {
-                    text => "Contributions",
-                    title => "Contributions to Other Projects, that I did not Start",
-                    url => "open-source/contributions/",
-                },
-                {
-                    text => "Anti Pages",
-                    title => "Against Commonly Used but Bad Software",
-                    url => "open-source/anti/",
-                    expand => { re => "^(?:no-ie|open-source/anti)/", },
-                },
-            ],
-        },
-        {
-            text => "Lectures",
-            url => "lecture/",
-            expand => { re => "^lecture/", },
-            title => "Presentations I Wrote (Mostly Technical)",
-            subs =>
-            [
-                {
-                    text => "Perl for Newbies",
-                    url => "lecture/Perl/Newbies/",
-                },
-                {
-                    text => "Web Publishing using LAMP",
-                    url => "lecture/LAMP/",
-                    host => "t2",
-                    title => "Web Publishing using Linux, Apache, MySQL, and Perl/PHP/Python (or equivalents)",
-                },
-                {
-                    text => "The Cathedral and the Bazaar",
-                    url => "lecture/CatB/",
-                },
-                {
-                    text => "Prog. Languages",
-                    url => "lecture/cat/programming-languages/",
-                    title => "Presentations about Programming Languages",
-                },
-                {
-                    text => "Various Tools",
-                    url => "lecture/cat/various-tools/",
-                    title => "Presentations about Various Tools",
-                },
-                {
-                    text => "Welcome to Linux",
-                    url => "lecture/W2L/",
-                    title => "Presentations for the Israeli series for Linux Newcomers",
-                },
-                {
-                    text => "About My Projects",
-                    url => "lecture/cat/projects/",
-                    title => "Presentations about my Open Source Projects",
-                },
-                {
-                    text => "Lightning Talks",
-                    url => "lecture/cat/lightning-talks/",
-                    title => "Short (5-15 minutes) Presentations",
-                },
-            ],
-        },
-        {
-            text => "Essays",
-            url => "philosophy/",
-            expand => { re => "^(?:philosophy|prog-evolution|DeCSS)/", },
-            title => "Various Essays and Articles about Technology and Philosophy in General",
-            subs =>
-            [
-                {
-                    text => "Index to Essays",
-                    url => "philosophy/Index/",
-                    title => "Index to Essays and Articles I wrote.",
-                },
-                {
-                    text => "Computing",
-                    url => "philosophy/computers/",
-                    title => "Computing-related Essays and Articles",
-                    expand => { re => "^(?:philosophy/computers/|prog-evolution)", },
-                    subs =>
-                    [
-                        {
-                            text => "Open Source",
-                            url => "philosophy/computers/open-source/",
-                            title => "Essays about Free and Open Source Software (FOSS)",
-                        },
-                        {
-                            text => "Software Management",
-                            url => "philosophy/computers/software-management/",
-                            title => "Essays about how to manage software workplaces, projects and teams",
-                        },
-                        {
-                            text => "Perl",
-                            url => "philosophy/computers/perl/",
-                            title => "Essays about the Perl programming language",
-                        },
-                        {
-                            text => "The Web (WWW)",
-                            url => "philosophy/computers/web/",
-                            title => "About the World-Wide-Web",
-                        },
-                        {
-                            text => "Education",
-                            url => "philosophy/computers/education/",
-                            title => "About Computer and Technical Education",
-                        },
-                    ],
-                },
-                {
-                    text => "Political Essays",
-                    url => "philosophy/politics/",
-                    title => "Essays about Politics and " .
-                        "Philosophical Politics",
-                    expand => { re => "^philosophy/politics/", },
-                },
-                {
-                    text => "General Philosophy",
-                    url => "philosophy/philosophy/",
-                    expand => { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
-                },
-            ],
-        },
-        {
-            expand_re => "^meta/",
-            url => "meta/",
-            text => "Meta Info",
-            title => "Information about this Site",
-            show_always => 1,
-            subs =>
-            [
-                {
-                    url => "meta/FAQ/",
-                    text => "FAQ",
-                    title => "Frequently Asked Questions and Answers List (FAQ)",
-                },
-                {
-                    url => "meta/privacy-policy/",
-                    text => "Privacy Policy",
-                },
-                {
-                    url => "meta/site-source/",
-                    text => "Site’s Source",
-                    title => "The source code used to generate this site",
-                },
-                {
-                    url => "meta/how-to-help/",
-                    text => "How to Help",
-                    title => "How you can help promote this site",
-                    subs =>
-                    [
-                        {
-                            url => "meta/donate/",
-                            text => "Please Donate",
-                        },
-                    ],
-                },
-                {
-                    url => "meta/hosting/",
-                    text => "Hosting",
-                    title => "About this site’s hosting provider.",
-                },
-            ],
-        },
-=end removed
-
-=cut

@@ -355,6 +355,11 @@ my $software_tree_contents =
                     url => "open-source/anti/java/",
                     title => "Some links against Java",
                 },
+                {
+                    text => "Links against SOAP",
+                    url => "open-source/anti/SOAP/",
+                    title => "Some links against SOAP (the so-called “Simple Object Access Protocol”)",
+                },
             ],
         },
         {

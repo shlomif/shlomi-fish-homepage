@@ -27,184 +27,184 @@ sub get_hosts
 my @personal_expand = (expand => { bool => 1, capt => 0,},);
 my @humour_expand = (re => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
 
-my $tree_contents =
-{
-    host => "t2",
-    text => "Shlomi Fish",
-    title => "Shlomi Fish’s Homepage",
-    subs =>
-    [
-        {
-            text => "Shlomi Fish’s Homepage",
-            url => "",
-        },
-        {
-            text => "About Myself",
-            url => "me/",
-            @personal_expand,
-            subs =>
-            [
-                {
-                    text => "Bio",
-                    url => "personal.html",
-                    title => "A Short Biography of Myself",
-                    expand => { re => "^(?:me|personal/)", },
-                    subs =>
-                    [
-                        {
-                            text => "Intros",
-                            url => "me/intros/",
-                            title => "Introductions of Me to Various Forums",
-                            subs =>
-                            [
-                                {
-                                    text => "MIT Writers",
-                                    url => "me/intros/writers/",
-                                    title => "My Intro to the MIT Writers Mailing List",
-                                },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    text => "Contact Me",
-                    url => "me/contact-me/",
-                    title=> "How to Contact Me",
-                },
-                {
-                    text => "My Resumés",
-                    url => "me/resumes/",
-                    subs =>
-                    [
-                        {
-                            text => "English Resumé",
-                            url => "SFresume.html",
-                            skip => 1,
-                        },
-                        {
-                            text => "Detailed English Resumé",
-                            url => "SFresume_detailed.html",
-                            skip => 1,
-                        },
-                    ],
-                },
-                {
-                    text => "Personal Ad",
-                    url => "me/personal-ad.html",
-                    title => "My Personal Ad: what I’m looking for in a prospective girlfriend and what I can add to the relationship.",
-                },
-                {
-                    text => "My Weblogs",
-                    url => "me/blogs/",
-                    title => "Links to my online journals.",
-                },
-                {
-                    text => "Interviews",
-                    url => "me/interviews/",
-                    title => "Interviews that were conducted with me",
-                },
-            ],
-        },
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Humour'),
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Puzzles'),
-        {
-            text => "Computer Art",
-            url => "art/",
-            expand => { re => "^art/", },
-            title => "Computer art I created while explaining how.",
-            subs =>
-            [
-                {
-                    text => "Back to my Homepage",
-                    url => "art/bk2hp/",
-                    title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
-                },
-                {
-                    text => "Linux Banner",
-                    url => "art/linux_banner/",
-                    title => "Linux - Because Software Problems should not Cost Money",
-                },
-                {
-                    text => "Made with Latemp",
-                    url => "art/made-with-latemp/",
-                    title => "“Made with Latemp” Button",
-                },
-                {
-                    text => "HHFG Background",
-                    url => "art/hhfg-background/",
-                    title => "Background Image for the “Human Hacking Field Guide” Story",
-                },
-                {
-                    text => "Better SCM Logo",
-                    url => "art/better-scm/",
-                    title => "Logo for the “Better SCM” Site",
-                },
-                {
-                    text => "Slogans’ Designs",
-                    url => "art/slogans/",
-                    title => "The design of my aphorism - useful for T-shirts and other merchandise",
-                },
-            ],
-        },
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Software'),
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Lectures'),
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Essays'),
-        {
-            text => "Work",
-            url => "work/",
-            expand => { re => "", capt => 0,},
-            title => "Work-Related Pages",
-            subs =>
-            [
-                {
-                    text => "Hire Me!",
-                    url => "work/hire-me/",
-                    title => "I’m a Geek for Hire",
-                    expand => { re => "work/", },
-                    subs =>
-                    [
-                        {
-                            text => "Private Lessons",
-                            url => "work/private-lessons/",
-                            title => "I’m Giving Private Lessons for High School Subjects and Computing.",
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        {
-            text => "Cool Links",
-            url => "links.html",
-            title => "An incomplete list of links I find cool and/or useful.",
-        },
-        {
-            text => "Recommendations",
-            url => "recommendations/",
-            title => "Recommendations of Books, Compact Discs, Movies, etc.",
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        {
-            url => "site-map/",
-            text => "Site Map",
-            title => "A site map showing all of the main pages.",
-        },
-        {
-            separator => 1,
-            skip => 1,
-        },
-        Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Meta'),
-    ],
-};
-
 sub get_params
 {
+    my $tree_contents =
+    {
+        host => "t2",
+        text => "Shlomi Fish",
+        title => "Shlomi Fish’s Homepage",
+        subs =>
+        [
+            {
+                text => "Shlomi Fish’s Homepage",
+                url => "",
+            },
+            {
+                text => "About Myself",
+                url => "me/",
+                @personal_expand,
+                subs =>
+                [
+                    {
+                        text => "Bio",
+                        url => "personal.html",
+                        title => "A Short Biography of Myself",
+                        expand => { re => "^(?:me|personal/)", },
+                        subs =>
+                        [
+                            {
+                                text => "Intros",
+                                url => "me/intros/",
+                                title => "Introductions of Me to Various Forums",
+                                subs =>
+                                [
+                                    {
+                                        text => "MIT Writers",
+                                        url => "me/intros/writers/",
+                                        title => "My Intro to the MIT Writers Mailing List",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        text => "Contact Me",
+                        url => "me/contact-me/",
+                        title=> "How to Contact Me",
+                    },
+                    {
+                        text => "My Resumés",
+                        url => "me/resumes/",
+                        subs =>
+                        [
+                            {
+                                text => "English Resumé",
+                                url => "SFresume.html",
+                                skip => 1,
+                            },
+                            {
+                                text => "Detailed English Resumé",
+                                url => "SFresume_detailed.html",
+                                skip => 1,
+                            },
+                        ],
+                    },
+                    {
+                        text => "Personal Ad",
+                        url => "me/personal-ad.html",
+                        title => "My Personal Ad: what I’m looking for in a prospective girlfriend and what I can add to the relationship.",
+                    },
+                    {
+                        text => "My Weblogs",
+                        url => "me/blogs/",
+                        title => "Links to my online journals.",
+                    },
+                    {
+                        text => "Interviews",
+                        url => "me/interviews/",
+                        title => "Interviews that were conducted with me",
+                    },
+                ],
+            },
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Humour'),
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Puzzles'),
+            {
+                text => "Computer Art",
+                url => "art/",
+                expand => { re => "^art/", },
+                title => "Computer art I created while explaining how.",
+                subs =>
+                [
+                    {
+                        text => "Back to my Homepage",
+                        url => "art/bk2hp/",
+                        title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
+                    },
+                    {
+                        text => "Linux Banner",
+                        url => "art/linux_banner/",
+                        title => "Linux - Because Software Problems should not Cost Money",
+                    },
+                    {
+                        text => "Made with Latemp",
+                        url => "art/made-with-latemp/",
+                        title => "“Made with Latemp” Button",
+                    },
+                    {
+                        text => "HHFG Background",
+                        url => "art/hhfg-background/",
+                        title => "Background Image for the “Human Hacking Field Guide” Story",
+                    },
+                    {
+                        text => "Better SCM Logo",
+                        url => "art/better-scm/",
+                        title => "Logo for the “Better SCM” Site",
+                    },
+                    {
+                        text => "Slogans’ Designs",
+                        url => "art/slogans/",
+                        title => "The design of my aphorism - useful for T-shirts and other merchandise",
+                    },
+                ],
+            },
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Software'),
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Lectures'),
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Essays'),
+            {
+                text => "Work",
+                url => "work/",
+                expand => { re => "", capt => 0,},
+                title => "Work-Related Pages",
+                subs =>
+                [
+                    {
+                        text => "Hire Me!",
+                        url => "work/hire-me/",
+                        title => "I’m a Geek for Hire",
+                        expand => { re => "work/", },
+                        subs =>
+                        [
+                            {
+                                text => "Private Lessons",
+                                url => "work/private-lessons/",
+                                title => "I’m Giving Private Lessons for High School Subjects and Computing.",
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                separator => 1,
+                skip => 1,
+            },
+            {
+                text => "Cool Links",
+                url => "links.html",
+                title => "An incomplete list of links I find cool and/or useful.",
+            },
+            {
+                text => "Recommendations",
+                url => "recommendations/",
+                title => "Recommendations of Books, Compact Discs, Movies, etc.",
+            },
+            {
+                separator => 1,
+                skip => 1,
+            },
+            {
+                url => "site-map/",
+                text => "Site Map",
+                title => "A site map showing all of the main pages.",
+            },
+            {
+                separator => 1,
+                skip => 1,
+            },
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Meta'),
+        ],
+    };
+
     return
         (
             hosts => $hosts,

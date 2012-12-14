@@ -5711,5 +5711,30 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-dot-star">
+        <meta>
+            <title>Dot Star</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="theseb">i have a regex that finds stuff in parentheses... &quot;\(.*\)&quot; ...how make it NOT be &quot;greedy&quot;?</saying>
+<saying who="theseb">i.e. if it sees &quot;(aaa)bbb)&quot; I want it to grab (aaa) instead of the entire string</saying>
+<saying who="theseb">(aaa)bbb)</saying>
+<saying who="Kyshtynbai">/\ba\b|(\b.*a[^b]+\b)/ &lt;-- this works for my proble, at least at that tests that i run for it. Regexp&#39; theme is really an effort as it seems to me...</saying>
+<saying who="Su-Shee">theseb: you know there is a module to matched paired things like parentheses.. Text::Balanced?</saying>
+<saying who="Su-Shee">theseb: extract_bracketed</saying>
+<saying who="DrForr">Text::Balanced, yes. Doing ab-type balanced strings in REs is a pain.</saying>
+<saying who="theseb">Su-Shee: thanks...i actually have the same problem with brackets []</saying>
+<saying who="Su-Shee">theseb: extract_bracketed ;)</saying>
+<saying who="LeoNerd">Or Parser::MGC :)</saying>
+<saying who="Su-Shee">theseb: also, .* is the most unspecific regex you can use, it&#39;s like saying oh well match something of anything or nothing and please, a lot of it ;)</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>.* described</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

@@ -11,10 +11,12 @@ WML_FLAGS += $(COMMON_PREPROC_FLAGS)
 
 ALL_DEST_BASE = dest
 
+NAV_DATA_DEP = lib/MyNavData.pm
+NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 
-DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
+DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json
 
 include lib/make/gmsl/gmsl
 
@@ -930,3 +932,13 @@ svg_nav_images: $(SVG_NAV_IMAGES)
 
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
 	perl $<
+
+NAV_DATA_AS_JSON = $(T2_DEST)/_data/nav.json
+
+generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
+
+$(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN)
+	./$(NAV_DATA_AS_JSON_BIN) -o $@
+
+generate_nav_data_as_json:
+

@@ -5,6 +5,8 @@ use warnings;
 
 use utf8;
 
+use JSON qw(encode_json);
+
 use Shlomif::Homepage::SectionMenu;
 
 my $hosts =
@@ -608,6 +610,20 @@ sub get_params
             fully_expanded => 1,
         }
     );
+}
+
+sub output_fully_expanded_as_json
+{
+    my $class = shift;
+
+    my %params =
+    $class->generic_get_params(
+        {
+            fully_expanded => 1,
+        },
+    );
+
+    return encode_json($params{tree_contents});
 }
 
 1;

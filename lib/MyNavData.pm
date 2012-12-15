@@ -5,6 +5,8 @@ use warnings;
 
 use utf8;
 
+use JSON qw(encode_json);
+
 use Shlomif::Homepage::SectionMenu;
 
 my $hosts =
@@ -399,8 +401,25 @@ my %reduced_sub_trees =
     },
 );
 
-sub get_params
+sub generic_get_params
 {
+    my ($class, $args) = @_;
+
+    my $is_fully_expanded = (
+        exists($args->{fully_expanded})
+        ? $args->{fully_expanded}
+        : 1
+    );
+
+    my $get_sub_tree = sub {
+        my ($sect_name) = @_;
+
+        return $is_fully_expanded
+            ? Shlomif::Homepage::SectionMenu->get_modified_sub_tree($sect_name)
+            : $reduced_sub_trees{$sect_name}
+            ;
+    };
+
     my $tree_contents =
     {
         host => "t2",
@@ -479,8 +498,8 @@ sub get_params
                     },
                 ],
             },
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Humour'),
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Puzzles'),
+            $get_sub_tree->('Humour'),
+            $get_sub_tree->('Puzzles'),
             {
                 text => "Computer Art",
                 url => "art/",
@@ -520,9 +539,9 @@ sub get_params
                     },
                 ],
             },
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Software'),
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Lectures'),
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Essays'),
+            $get_sub_tree->('Software'),
+            $get_sub_tree->('Lectures'),
+            $get_sub_tree->('Essays'),
             {
                 text => "Work",
                 url => "work/",
@@ -573,7 +592,7 @@ sub get_params
                 separator => 1,
                 skip => 1,
             },
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree('Meta'),
+            $get_sub_tree->('Meta'),
         ],
     };
 
@@ -582,6 +601,29 @@ sub get_params
             hosts => $hosts,
             tree_contents => $tree_contents,
         );
+}
+
+sub get_params
+{
+    return __PACKAGE__->generic_get_params(
+        {
+            fully_expanded => 1,
+        }
+    );
+}
+
+sub output_fully_expanded_as_json
+{
+    my $class = shift;
+
+    my %params =
+    $class->generic_get_params(
+        {
+            fully_expanded => 1,
+        },
+    );
+
+    return encode_json($params{tree_contents});
 }
 
 1;

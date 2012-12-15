@@ -1,0 +1,19 @@
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "en-GB" />
+<default-var "qp_charset" "utf-8" />
+
+<set-var display_ads="1" />
+
+
+
+#include "quadpres_main.wml"
+
+
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+

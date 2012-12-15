@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<p>
+One can execute perl commands inside the debugger. For example, typing
+<tt>print $x</tt> at the debugger prompt will print the value of the
+<tt>$x</tt> variable. You can also modify the values of variables in this
+way, or run functions, etc.
+</p>
+
+<p>
+One special command that is also useful is <tt>x</tt>. <tt>x $var</tt>
+displays <tt>$var</tt> in a hierarchical manner, which is very useful for
+lists of lists etc. The <b>Data::Dumper</b> module which is available from
+<a href="http://www.cpan.org/">CPAN</a> offers a similar functionality, from
+within your perl programs.
+</p>
+

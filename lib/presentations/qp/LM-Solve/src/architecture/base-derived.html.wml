@@ -1,0 +1,12 @@
+#include 'template.wml'
+
+<points>
+<li>
+A base class (<tt>Games::LMSolve::Base</tt>) that handles the scanning logic,
+without knowledge of the rules of the game.
+</li>
+<li>
+Several derived classes (one for each game variant) that supply it with
+the game-specific logic.
+</li>
+</points>

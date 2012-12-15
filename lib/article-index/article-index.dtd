@@ -1,0 +1,10 @@
+<!ELEMENT index (meta,contents)>
+<!ELEMENT meta EMPTY>
+<!ELEMENT contents (section)+>
+<!ELEMENT section (section|entry)*>
+<!ELEMENT entry (p)+>
+<!ELEMENT p (#PCDATA|a)*>
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST section id ID #REQUIRED title CDATA #REQUIRED>
+<!ATTLIST entry id ID #REQUIRED title CDATA #REQUIRED url CDATA #REQUIRED>
+<!ATTLIST a href CDATA #REQUIRED>

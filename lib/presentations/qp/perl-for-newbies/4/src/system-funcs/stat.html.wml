@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<p>
+The <tt>stat</tt> function can be used to retrieve a 13-element array
+that gives status information for a given file or filehandle.
+</p>
+
+<p>
+The syntax is:
+</p>
+
+<quadpres_code_block>
+($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+    $atime,$mtime,$ctime,$blksize,$blocks)
+        = stat($filename);
+</quadpres_code_block>
+
+<p>
+Here, <tt>$mode</tt> is the file mode, <tt>$size</tt> is the size of the
+file, <tt>$atime</tt> is the last access time (in seconds since the epoch),
+<tt>$mtime</tt> is the last modification time.
+</p>
+
+<p>
+For more information about <tt>stat</tt> consult <tt>perldoc -f stat</tt>
+or its entry in <tt>perlfunc</tt>.
+</p>
+

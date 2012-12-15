@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<p>
+There are two special code blocks for perl modules - <tt>BEGIN</tt> and
+<tt>END</tt>. These blocks are executed when a module is first loaded,
+and when the perl interpreter is about to unload it, respectively.
+</p>
+
+<p>
+Here's an example for a logging module that makes use of this facility:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/MyLog.pm" />
+</quadpres_code_block>
+

@@ -1,0 +1,27 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "countdown - Delay, while Displaying the remaining time" />
+
+<p>
+This is a Perl CPAN distribution that implements a command line application,
+which delays for a given number of seconds (similar to the UNIX sleep command),
+but while displaying the remaining time in seconds.
+</p>
+
+<h2 id="download">Download</h2>
+
+<p>
+<a href="http://metacpan.org/release/App-Countdown">Download
+countdown from the CPAN</a>
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<bitbucket_cpan_dist_links
+    dist="App-Countdown"
+    bitbucket_url="http://bitbucket.org/shlomif/perl-app-countdown"
+    freecode_url="http://freecode.com/projects/app-countdown">
+</bitbucket_cpan_dist_links >
+
+<x11_licence name="countdown" />

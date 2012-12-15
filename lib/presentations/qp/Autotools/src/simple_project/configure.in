@@ -1,0 +1,50 @@
+dnl Process this file with autoconf to produce a configure script.
+
+dnl AC_INIT is the first macro that should be called in an Autoconf
+dnl script. It should be called with one argument that exhibits one
+dnl of the source files
+AC_INIT(rwlock.c)
+
+dnl Initialize Automake
+dnl The first parameter is the project name
+dnl The second is the version
+AM_INIT_AUTOMAKE(pthread_rwlock_fcfs, 0.4.0)
+
+dnl Initialize libtool
+AM_PROG_LIBTOOL
+
+dnl Checks for programs.
+AC_PROG_CC
+
+
+dnl Checks for libraries.
+AC_CHECK_LIB(pthread, pthread_create)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(sys/time.h unistd.h)
+
+dnl Set the debug flag to no by default
+debug_rwlock=no
+
+dnl Set a command line option to set it otherwise
+AC_ARG_ENABLE(debug-rwlock,
+ [  --enable-debug-rwlock  Enable an RWLock that prints debug notices on the screen. This is a debugging feature which should not be usually enabled],
+ [ debug_rwlock=yes
+ ])
+
+dnl If debug_rwlock is set
+if test "x$debug_rwlock" = "xyes" ; then
+    dnl Define the macro PTHREAD_RWLOCK_FCFS_DEBUG
+    AC_DEFINE(PTHREAD_RWLOCK_FCFS_DEBUG)
+fi
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_HEADER_TIME
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS(gettimeofday)
+
+dnl Output the files
+AC_OUTPUT([Makefile man/Makefile])

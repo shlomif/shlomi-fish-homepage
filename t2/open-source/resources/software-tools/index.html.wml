@@ -1,0 +1,343 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "Software Construction and Management Tools" />
+<page_extra_head_elements>
+<link rel="stylesheet" href="sb.css" type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+
+<toc_div />
+
+<div class="software_build">
+<h2 id="build">Software Building</h2>
+
+<ul>
+<li>
+<a href="http://www.gnu.org/software/make/">GNU Make</a> - the best make in
+town! An implementation of make with many enhancements and some
+parallelisation. There’s a drop-in replacement for it written in Perl called
+<a href="http://makepp.sourceforge.net/">Makepp</a>.
+</li>
+
+<li>
+<a href="http://www.canb.auug.org.au/~millerp/cook/cook.html">Cook</a> -
+a make replacement with variables, user-defined functions, parallelisation,
+file checksums, and other powerful features.
+</li>
+
+<li>
+<a href="http://www.dsmit.com/cons/">CONS</a> - a make replacement written
+in Perl with file checksums and other features.
+<a href="http://www.scons.org/">SCons</a> is a Python version, that has been
+more actively maintained recently.
+</li>
+
+<li>
+<a href="http://jakarta.apache.org/ant/">Ant</a> - a make replacement
+written in Java that uses an XML description language.
+</li>
+
+<li>
+<a href="http://martine.github.com/ninja/">Ninja</a> - a small build system
+with a focus on speed, with build files that are “human-readable but not
+especially convenient to write by hand”. Has some issues in displaying ongoing
+output of commands, which is critical by the equivalent of “make test”
+or “make check”.
+</li>
+
+</ul>
+
+<h3 id="build_links">Links to Lists, Comparisons and Other Resources</h3>
+
+<ul>
+<li>
+<a href="http://directory.google.com/Top/Computers/Software/Build_Management/Make_Tools/">Google’s
+Web Directory for Make Tools</a> - contains other useful links.
+</li>
+
+<li>
+<a href="http://www.a-a-p.org/tools_build.html">A-A-P Build Tools List</a> -
+A very comprehensive list of build tools.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Make">The Wikipedia Entry for Make</a> -
+contains a list of alternatives.
+</li>
+
+<li>
+<a href="http://spreadsheets.google.com/pub?key=prEdSidtHryEXastzzgO5DQ">A
+Google Spreadsheet with a Comparison of various Alternatives</a>
+</li>
+
+</ul>
+
+<h2 id="configure">Software Pre-building Configuration</h2>
+
+<ul>
+
+<li>
+GNU <a href="http://www.gnu.org/software/autoconf/autoconf.html">Autoconf</a>,
+<a href="http://www.gnu.org/software/automake/automake.html">Automake</a>,
+and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
+a trio of programs to portably build applications across multiple UNIX
+platforms. The de-facto standard in the open-source world, but very kludgy
+and causes many problems. See my
+<a href="$(ROOT)/open-source/anti/autohell/">“Escape
+from GNU Autohell!”</a> page.
+</li>
+
+<li>
+<a href="http://www.dubois.ws/software/imake-stuff/">Imake</a> - a
+portability tool that ships with X11. Old and deprecated.
+</li>
+
+<li>
+<a href="http://www.cmake.org/">CMake</a> - a cross-platform generator for
+makefiles, not unlike Autoconf, but works much better. Actively used by
+<a href="http://www.kde.org/">KDE</a> starting from version 4 and by many
+other projects.
+</li>
+
+<li>
+<a href="http://www.cleanscape.net/stdprod/qef/qef.html">QEF</a> - a
+high-level software construction system. Operates consistently across UNIX
+and Windows NT platforms. Proprietary.
+</li>
+
+<li>
+<a href="http://www.scons.org/">SCons</a> can be used for writing such
+configuration tasks as well. It’s written in Python, does not distinguish
+between the configuration phase and the build phase and tends to be slow.
+(open source, MIT/X11 License).
+</li>
+
+<li>
+<a href="http://code.google.com/p/waf/">Waf</a> - an open-source (modified
+BSD) tool based on SCons, CMake and other tools, and also written in Python.
+Created for KDE 4 as an enhanced version of SCons, but they eventually decided
+to use CMake instead.
+</li>
+
+</ul>
+
+<h2 id="package">Software Packaging</h2>
+
+<ul>
+
+<li>
+<a href="http://www.rpm.org/">RPM</a> - a package management system used on
+RedHat Linux and other RPM-based distributions. Also look at
+<a href="http://urpmi.org/">urpmi</a>,
+<a href="http://linux.duke.edu/projects/yum/">yum</a>,
+and <a href="http://apt-rpm.tuxfamily.org/">apt-rpm</a>,
+which install packages and resolve dependencies.
+</li>
+
+<li>
+<a href="http://freecode.com/projects/dpkg/">dpkg</a> - The Debian Package
+Manager, which is also used on similar distributions. Also look at
+<a href="http://www.debian.org/doc/manuals/apt-howto/index.en.html">Apt</a>
+which automatically installs packages and resolves dependencies.
+</li>
+
+<li>
+<a href="http://www.gentoo.org/">Portage - The Gentoo Package Manager</a> -
+a package management system for Gentoo Linux. Akin to the BSD ports but
+based on Python.
+</li>
+
+<li>
+<a href="http://www.openpkg.org/">OpenPKG</a> - a cross-platform UNIX
+software packaging system.
+</li>
+
+<li>
+<a href="http://win-get.sourceforge.net/">win-get</a> - package manager for
+Microsoft Windows.
+</li>
+
+<li>
+<a href="http://chocolatey.org/">chocolatey</a> - “Chocolatey NuGet is a
+Machine Package Manager, somewhat like apt-get, but built with Windows in
+mind”.
+</li>
+
+<li>
+<a href="http://mxcl.github.com/homebrew/">Homebrew</a> - “The missing
+package manager for OS X”. Open Source.
+</li>
+
+<li>
+<a href="http://www.macports.org/">MacPorts</a> - “an open-source community
+initiative to design an easy-to-use system for compiling, installing,
+and upgrading either command-line, X11 or Aqua based open-source software
+on the Mac OS X operating system”.
+</li>
+
+
+</ul>
+
+<h2 id="scm">Version Control Systems</h2>
+
+<ul>
+
+<li>
+<a href="http://www.cvshome.org/">CVS</a> - the old standard of
+open-source source control systems. Functional and stable, but limited in
+many ways. (GPLed).
+</li>
+
+<li>
+<a href="http://subversion.tigris.org/">Subversion</a> - a CVS replacement
+with atomic commits, networking over HTTP, efficient handling of binary file
+and other features. Still mostly a client/server, centralised protocol,
+but much more reliable than CVS and works better. (Apache/BSD Licence).
+</li>
+
+<li>
+<a href="http://git.or.cz/">Git</a> - a version control system originally
+designed for the Linux kernel. Very fast and 100% distributed, but has some
+user-interface idiosyncrasies, a complex command-set, and lacks good
+documentation.
+</li>
+
+</ul>
+
+<h3 id="scm_links">Links to Lists, Comparisons and Other Resources</h3>
+
+<ul>
+
+<li>
+<a href="http://better-scm.shlomifish.org/">The Better-SCM Site</a> - a site for
+comparison and advocacy of Version Control Systems. (Maintained by Shlomi
+Fish, who also originated this page and site.) Contains <a
+href="http://better-scm.shlomifish.org/comparison/">a comparison</a>.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Wikipedia
+Comparison of Revision Control Systems</a>
+</li>
+
+<li>
+<a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/">Dmoz.org’s
+Category for Version Control Systems</a> - contains links to many
+other implementations and resources. <a href="http://dir.google.com/Top/Computers/Software/Configuration_Management/Tools/">The Google Directory’s equivalent
+directory may also prove helpful.</a>.
+</li>
+
+</ul>
+
+<h2 id="bug_tracking">Bug Tracking</h2>
+
+<p>
+<b>Note:</b> Due to the large number of such systems, I decided to link only
+to very prominent open-source ones, and to directories where comprehensive
+lists can be found.
+</p>
+
+<ul>
+<li>
+<a href="http://www.mozilla.org/projects/bugzilla/">Bugzilla</a> - a
+WWW-based bug management system written as part of the Mozilla project with
+many advanced features.
+</li>
+
+<li>
+<a href="http://www.gnu.org/software/gnats/">GNATS</a> - The GNU Bug
+Tracking System, which uses Plaintext files to store its information and
+has several front-ends.
+</li>
+
+<li>
+<a href="http://gforge.org/">GForge</a> - The open-source derivative of
+the original VA SourceForge codebase contains a rudimentary bug-tracking
+system as part of the many web-based collaborative services it offers for
+developers.
+</li>
+
+<li>
+<a href="http://mantisbt.sourceforge.net/">Mantis</a> - An open-source
+PHP/MySQL web-based bug tracking system.
+</li>
+
+<li>
+<a href="http://www.edgewall.com/trac/">Trac</a> - a wiki, issue tracking
+and interface to one's version control system, for software development
+projects. Written in Python and based on SQLite, with backends for
+Subversion, Git, Mercurial, Bazaar, Perforce and Darcs.
+</li>
+
+<li>
+<a href="http://www.bestpractical.com/rt/">Request Tracker</a> - <q>“RT is an
+enterprise-grade ticketing system which enables a group of people to
+intelligently and efficiently manage tasks, issues, and requests submitted
+by a community of users.”</q>. Among else, it is used for
+<a href="http://rt.cpan.org/">tracking CPAN issues</a>.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems">Wikipedia's comparison of issue-tracking systems</a>.
+</li>
+
+<li>
+<a href="http://directory.google.com/Top/Computers/Software/Configuration_Management/Bug_Tracking/">
+Google’s Web Directory Bug Tracking Category</a> - contains links to many
+other implementations.
+</li>
+
+<li>
+<a href="http://dmoz.org/Computers/Software/Configuration_Management/Bug_Tracking/">DMoz Bug Tracking</a> - a perhaps more updated version of the same resource,
+with slower access times, and lack of Google’s PageRank integration.
+</li>
+
+</ul>
+
+<h2 id="testing">Testing Frameworks</h2>
+
+<ul>
+<li>
+<a href="http://www.gnu.org/software/dejagnu/dejagnu.html">DejaGNU</a> -
+a testing framework by the GNU project based on Tcl and Expect.
+</li>
+
+<li>
+<a href="http://www.xprogramming.com/software.htm">XUnit</a> - A testing
+framework that was suggested by Extreme Programming.
+</li>
+
+<li>
+<a href="http://tetworks.opengroup.org/">TET</a> - A cross-platform
+testing framework by the Open Group.
+</li>
+
+<li>
+<a href="http://testanything.org/wiki/index.php/Main_Page">The “Test
+Anything Protocol” (TAP)</a> - a protocol for test scripts to communicate
+the results of their tests to the harness/consumer. Allows for
+heterogeneous test suites written in several languages.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/FitNesse">FitNesse</a> - a framework
+for acceptance testing (system tests etc.).
+</li>
+
+</ul>
+
+</div>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2011" />
+
+<!-- To add:
+
+Configuration: the SC entries,
+SCMs: BitKeeper.
+Testing: Expect.
+
+-->
+

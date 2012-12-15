@@ -1,0 +1,17 @@
+<set-var rtl_layout=1 />
+#include "multi-lang.wml"
+<set-var shlomif_lang="he" />
+
+#include '../template.wml'
+
+<latemp_subject "האויב ואיך עזרתי להילחם בו (גרסה 7)" />
+
+<p><b>מאת:</b> שלומי פיש </p>
+
+<h2 id="text">הטקסט של הסיפור</h2>
+#include "docbook/5/rendered/The-Enemy-Hebrew-v7.xhtml"
+
+<div class="english">
+<cc_by_sa_license_british year="1997" head_tag="h2" />
+</div>
+

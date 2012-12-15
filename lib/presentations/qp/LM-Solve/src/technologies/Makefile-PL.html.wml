@@ -1,0 +1,40 @@
+#include 'template.wml'
+
+<points>
+<li>
+I wanted the project to be easily installable so I had to learn how to
+use Makefile.PL effectively.
+</li>
+<li>
+It took quite a bit.
+</li>
+<li>
+Recipe:<br/>
+Put something like this in your Makefile.PL file:<br />
+</li>
+</points>
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<span class="Statement">use </span>ExtUtils::MakeMaker;
+
+WriteMakefile(
+    <span class="Constant">'</span><span class="Constant">NAME</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">Games::LMSolve</span><span class="Constant">'</span>,
+    <span class="Constant">'</span><span class="Constant">DISTNAME</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">Games-LMSolve</span><span class="Constant">'</span>,
+    <span class="Constant">'</span><span class="Constant">EXE_FILES</span><span class="Constant">'</span> =&gt; [<span class="Constant">&quot;</span><span class="Constant">lm-solve</span><span class="Constant">&quot;</span>],
+    <span class="Constant">'</span><span class="Constant">VERSION_FROM</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">lib/Games/LMSolve/Base.pm</span><span class="Constant">'</span>,
+    );
+
+</pre>
+</td>
+</tr>
+</table>
+
+<points>
+<li>
+Prepare a MANIFEST files containing all the files in your distribution,
+one per line.
+</li>
+</points>

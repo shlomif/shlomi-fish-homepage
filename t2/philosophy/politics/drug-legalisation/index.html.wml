@@ -1,0 +1,51 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "The Case for Drug Legalisation" />
+<latemp_more_keywords "drugs, drug, legalisation, legalization, legalise, legalize, narcotics, illegal, prohibition, prohibition on drugs" />
+<latemp_meta_desc "Why illegal drugs should be legalised, and why the prohibition on drugs and the “war on drugs” are the real drug problem." />
+
+#include "pages/t2/philosophy/drug-legalisation.wml"
+
+<div class="main_text">
+
+<p class="hilight">
+[ <a href="#itself"><b>Skip to the main content</b></a> ]
+</p>
+
+<toc_div />
+
+<h2 id="itself">The Article Itself</h2>
+
+<h3 id="body">Body</h3>
+
+#include "docbook/5/rendered/case-for-drug-legalisation-v3.xhtml"
+
+<h2 id="other_formats">Other Formats</h2>
+
+<h3>3rd Version</h3>
+
+<ul>
+<li>
+<a href="case-for-drug-legalisation-v3.xml">Original DocBook/XML</a>
+</li>
+</ul>
+
+<h3>2nd Revision</h3>
+
+<ul>
+<li>
+<a href="case-for-drug-legalisation-rev2.xml">Original DocBook/XML</a>
+</li>
+</ul>
+
+<h3>1st Revision</h3>
+
+<ul>
+<li>
+<a href="case-for-drug-legalisation.xml">Original DocBook/XML</a>
+</li>
+</ul>
+
+</div> ;;; main_text

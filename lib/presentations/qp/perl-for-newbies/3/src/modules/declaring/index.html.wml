@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+<p>
+In order to designate that a code belongs to a different namespace
+you should use the <tt>package</tt> directive. For instance, if you want
+your module name to be "MyModule" your file should look something like
+this:
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/declaring/MyModule.pm" />
+</quadpres_code_block>
+
+<p>
+Note that a module has to return a true value to the perl interpreter, which
+explains the use of "1;".
+</p>
+
+<p>
+A namespace may contain sub-namespaces. To separate namespace components,
+use the <tt>::</tt> separator. For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/declaring/Hoola/Hoop.pm" />
+</quadpres_code_block>

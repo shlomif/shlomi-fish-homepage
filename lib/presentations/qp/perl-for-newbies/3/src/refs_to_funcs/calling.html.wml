@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<p>
+Assuming the reference of a function is stored in the variable <tt>$myref</tt>,
+there are two methods to call the function from it:
+</p>
+
+<ol>
+<li>
+<tt>&amp;{$myref}(@args)</tt>
+</li>
+<li>
+<tt>$myref-&gt;(@args)</tt>
+</li>
+</ol>
+
+<p>
+<tt>$myref</tt> can be as complex an expression as you would like,
+but you'll usually need parenthesis in the second notation.
+</p>
+
+<p>
+Here's an example to illustrate it:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/refs_to_funcs/calling1.pl" />
+</quadpres_code_block>
+

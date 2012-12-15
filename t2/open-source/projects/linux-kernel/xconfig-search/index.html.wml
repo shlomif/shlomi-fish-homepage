@@ -1,0 +1,65 @@
+#include '../template.wml'
+
+<latemp_subject "Linux Kernel Patch: “make xconfig” Search Enhancement" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a patch to <a href="http://www.kernel.org/">the Linux kernel</a>
+that enhances the search dialog of “make xconfig”. According to the input
+of the kernel developers, it was done in a modular way by enhancing the
+kernel C configuration API.
+</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+
+<li>
+<a href="xconfig-search-patch-take4-1-for-3.5.diff"><b>take4-1 - Latest
+Version</b> for kernel 3.5.x</a> - applies and compiles cleanly on linux-3.5.x
+(and possibly above). Now it's maintained in <a
+href="https://github.com/shlomif/linux/tree/enhance-xconfig-search">a Git
+branch</a> and passes checkpatch.pl, except for some warnings about declaring
+typedefs.
+</li>
+
+<li>
+<a href="xconfig-search-patch-take3-14-for-3.2.0.diff"><b>take3-14 - Latest Version</b> for kernel 3.2.0</a> - applies and compiles cleanly on linux-3.2.0 (and
+possibly above).
+</li>
+
+<li>
+<a href="xconfig-search-patch-take3-13-for-3.0.4.diff"><b>take3-13</b> for kernel 3.0.4</a> - applies and compiles cleanly on linux-3.0.4 (and
+possibly above).
+</li>
+
+<li>
+<a href="xconfig-search-patch-take3-12-for-2.6.37.diff"><b>take3-12</b>
+for kernels 2.6.37 and above</a> - applies and compiles cleanly on linux-2.6.37
+and above.
+</li>
+
+<li>
+<a href="xconfig-search-patch-take3-11.diff"><b>take3-11</b></a> -
+applies and compiles cleanly on linux-2.6.27-rc2, some earlier kernels and
+probably later ones up to and including 2.6.27.
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+I hereby disclaim any explicit or implicit claims to copyrights of the
+GPLed code that I modified. I added some new files and they are under
+the X11 Licence.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li><a href="http://freecode.com/projects/linux-make-xconfig-patch/">Project
+Record on Freecode</a></li>
+</ul>
+

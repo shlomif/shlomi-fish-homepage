@@ -1,0 +1,54 @@
+#include 'template.wml'
+
+
+
+<points>
+
+
+<li>
+Sharpen is in effect the reverse of blurring.
+</li>
+
+<li>
+We sharpen by negating some of the energy of the surrounding pixels
+from the pixel at the processed position.
+</li>
+
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open lena.png
+</li>
+
+<li>
+Invoke the "Convolution Matrix" dialog.
+</li>
+
+<li>
+Type 12 in the middle square and -1 in the 8 surrounding squares.
+</li>
+
+<li>
+Type 4 as a divisor (12 + 8 * (-1) == 4).
+</li>
+
+<li>
+Apply.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+

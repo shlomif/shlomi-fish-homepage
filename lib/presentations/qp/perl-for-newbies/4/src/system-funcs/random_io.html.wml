@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+<p>
+Perl provides mechanisms for moving to certain positions in files, and
+reading blocks of a certain size.
+</p>
+
+<p>
+<tt>seek FILEHANDLE, POSITION, WHENCE</tt> sets the filehandle position
+within the file in bytes. If you specify <tt>use Fcntl;</tt> at
+the beginning of your program, then WHENCE can be <tt>SEEK_SET</tt> for
+start of file, <tt>SEEK_CUR</tt> for the current position and
+<tt>SEEK_END</tt> for the end of file.
+</p>
+
+<p>
+<tt>tell FILEHANDLE</tt> returns the position of the current file cursor
+in bytes from the beginning of the file.
+</p>
+
+<p>
+<tt>read FILEHANDLE, SCALAR, LENGTH</tt> reads <tt>LENGTH</tt> characters
+from <tt>FILEHANDLE</tt> into the <tt>SCALAR</tt> variable.
+</p>
+
+<p>
+Here's an example that replaces bytes 64-127 in a file with their rot13
+equivalent:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/system-funcs/r.pl" />
+</quadpres_code_block>

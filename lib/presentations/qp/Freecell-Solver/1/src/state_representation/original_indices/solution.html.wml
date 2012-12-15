@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Keep the indices of the stacks and freecells outside the main state
+data-structure and sort the two arrays together. (i.e: in a struct that
+contains the stacks-and-freecells struct as its first member)
+</li>
+
+<li>
+The collection considers only the first sizeof(internal) bytes when
+comparing two states.
+</li>
+
+<li>
+I later used this external information place to store other information like
+depth in the search tree, the parent state, etc.
+</li>
+
+</points>

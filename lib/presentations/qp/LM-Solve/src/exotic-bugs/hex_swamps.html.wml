@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<points>
+<li>
+When implementing the Hex planks in the swamp game, I encountered a situation
+where the first game I tried to solve was unsolvable by the solver.
+</li>
+<li>
+To solve it, I programmed a proto-game, that let me play the puzzle, and
+check each state I reached, whether it was also reached by the solver.
+</li>
+<li>
+I then discovered the problem (a moved plank was blocked by its origin state).
+</li>
+<li>
+Here's a screenshot of the game:
+</li>
+</points>
+
+<p>
+<img src="hex_swamps_proto_game.png" alt="Hex Swamps Proto-Game Screenshot" />
+</p>

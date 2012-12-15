@@ -1,0 +1,295 @@
+#!/usr/bin/perl
+
+BEGIN {
+    my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' :
+        ( getpwuid($>) )[7] . '/perl/');
+    unshift @INC, map { $base_module_dir . $_ } @INC;
+}
+
+use strict;
+use warnings;
+
+use CGI::Minimal;
+use DBI;
+use Encode qw(decode);
+
+use File::Spec::Functions qw( catpath splitpath rel2abs );
+
+binmode STDOUT, ':encoding(utf8)';
+
+# We're using rand() later.
+srand();
+
+# The Directory containing the script.
+my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
+
+my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
+
+my $full_db_path = "$script_dir/$db_base_name";
+
+my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
+
+my $select_sth = $dbh->prepare(<<'EOF');
+SELECT f.text, f.title, c.str_id, c.title
+FROM fortune_cookies AS f, fortune_collections AS c
+WHERE ((f.str_id = ?) AND (f.collection_id = c.id))
+EOF
+
+my $select_max_id = $dbh->prepare(
+    q{SELECT MAX(id) FROM fortune_cookies}
+);
+
+my $lookup_str_id_from_id = $dbh->prepare(
+    q{SELECT str_id FROM fortune_cookies WHERE id = ?}
+);
+
+my $cgi = CGI::Minimal->new;
+
+my $NL = "\015\012";
+
+sub _header
+{
+    print "Content-Type: text/html; charset=utf-8$NL$NL";
+
+    return;
+}
+
+sub _emit_error
+{
+    my ($args) = @_;
+
+    print "Status: 404 Not Found$NL";
+    _header();
+
+    _wrap_error_html($args);
+
+    return;
+}
+
+sub _wrap_error_html
+{
+    my ($args) = @_;
+
+    my $title = $args->{title};
+    my $body = $args->{body};
+
+    print <<"ERROR_HTML";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>$title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+$body
+</body>
+</html>
+ERROR_HTML
+}
+
+my $mode = ($cgi->param('mode') || 'str_id');
+
+if ($mode eq "random")
+{
+    _pick_random();
+}
+elsif ($mode eq "str_id")
+{
+    my $str_id = $cgi->param('id');
+    _show_by_str_id($str_id);
+}
+else
+{
+    _invalid_mode($mode);
+}
+
+sub _invalid_mode
+{
+    my ($mode) = @_;
+
+    my $mode_esc = $cgi->htmlize($mode);
+
+    _emit_error({
+            title => qq{Error! Invalid mode "$mode_esc"},
+            body => <<"END_OF_BODY", });
+<h1>Error! Invalid mode "$mode_esc".</h1>
+
+<p>
+Only valid modes are <tt>random</tt> and <tt>str_id</tt>
+(where <tt>str_id</tt> is the default).
+</p>
+END_OF_BODY
+    return;
+}
+
+sub _pick_random
+{
+    my $rv = $select_max_id->execute();
+
+    my ($max_id) = $select_max_id->fetchrow_array;
+
+    if (! $max_id)
+    {
+        _emit_error({
+                title => "Query failed",
+                body => <<"END_OF_BODY", });
+<h1>Query failed</h1>
+
+<p>
+Report this problem to the webmaster.
+</p>
+END_OF_BODY
+        return;
+    }
+
+    $rv = $lookup_str_id_from_id->execute(
+        int(rand() * ($max_id)) + 1
+    );
+
+    my ($str_id) = $lookup_str_id_from_id->fetchrow_array();
+
+    if (! $str_id)
+    {
+        _emit_error({ title => q{Unknown fortune ID},
+                body => <<'EOF'});
+<h1>lookup_str_id_from_id query failed</h1>
+
+<p>
+Report this problem to the webmaster.
+</p>
+EOF
+        return;
+    }
+
+    # str_id must not contain any strange HTML/URI/etc. characters
+    # If it does - then we suck.
+    print "Location: ./show.cgi?id=$str_id$NL$NL";
+
+    return;
+}
+
+sub _display_fortune_from_data
+{
+    my ($str_id, $html_text, $html_title, $col_str_id, $col_title) = @_;
+
+    $html_text = decode('utf-8', $html_text);
+
+    my $title_esc =
+        $cgi->htmlize(decode('utf-8', $html_title)) . " - Fortune"
+        ;
+
+    _header();
+
+    my $base_dir = '../..';
+
+    print <<"FORTUNE";
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>$title_esc</title>
+<link rel="stylesheet" href="$base_dir/fort_total.css" media="screen, projection" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<ul id="nav">
+<li><a href="/">Shlomi Fish's Homepage</a></li>
+<li><a href="./">Fortune Cookies Page</a></li>
+<li><a href="${col_str_id}.html">@{[$cgi->htmlize($col_title)]}</a></li>
+<li><a href="${col_str_id}.html#${str_id}">Fortune Cookie</a></li>
+</ul>
+<ul id="random">
+<li><a href="show.cgi?mode=random">Random Fortune</a></li>
+</ul>
+<h1>$title_esc</h1>
+<div class="fortunes_list">
+$html_text
+</div>
+</body>
+</html>
+FORTUNE
+
+    return;
+}
+
+sub _show_by_str_id
+{
+    my ($str_id) = @_;
+
+    if (! $str_id)
+    {
+        _emit_error({ title => q{ID parameter not specified},
+                body => <<'END_OF_BODY'});
+<h1>Error! Must specify ID parameter</h1>
+
+<p>
+The ID parameter must be specified.
+</p>
+END_OF_BODY
+        return;
+    }
+
+    my $rv = $select_sth->execute($str_id);
+
+    if (my @data = $select_sth->fetchrow_array)
+    {
+        return _display_fortune_from_data($str_id, @data);
+    }
+    else
+    {
+        _emit_error({ title => q{URL not found},
+                body => <<"END_OF_BODY"});
+<h1>URL not found</h1>
+
+<p>
+The fortune ID @{[$cgi->htmlize($str_id)]} is not recognised.
+If you've reached this URL and think it should
+be defined please contact <a href="mailto:shlomif\@shlomifish.org">Shlomi
+Fish (the Webmaster)</a> and let him know of this problem.
+</p>
+END_OF_BODY
+        return;
+    }
+}
+
+__END__
+
+=head1 NAME
+
+fortune_show.cgi - a Perl 5 , CGI.pm and L<DBD::SQLite> script to display
+a fortune cookie.
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2011 by Shlomi Fish.
+
+This program is distributed under the MIT (X11) License:
+L<http://www.opensource.org/licenses/mit-license.php>
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+=cut

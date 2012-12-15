@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<p>
+In Perl we use the <tt>print</tt> command to echo strings and expressions
+to the screen.
+</p>
+
+<p>
+The neophyte "Hello World!" program can be written in perl as follows:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/output/hello.pl" />
+</quadpres_code_block>
+
+<p>Now here's some explanation (in case you need any):</p>
+
+<ol>
+<li>
+The string is enclosed in double-quotes(<tt>" ... "</tt>) because that's how
+string constants are represented in perl.
+</li>
+
+<li>
+<tt>\n</tt> is a special character that is called "newline". When you print a
+newline you will see that your output started on a new line.
+</li>
+
+<li>
+The semi-colon (<tt>;</tt>) at the end indicates that this is the end of
+a perl command. Every perl command should be terminated with a semicolon.
+</li>
+</ol>
+
+
+

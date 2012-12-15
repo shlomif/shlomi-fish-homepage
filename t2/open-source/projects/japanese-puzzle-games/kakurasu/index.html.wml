@@ -1,0 +1,69 @@
+#include '../template.wml'
+
+<latemp_subject "Kakurasu Solver" />
+
+<p>
+This is a solver for
+<a href="http://www.brainbashers.com/kakurasu.asp">Kakurasu</a>, written in
+Python using its interface to
+<a href="http://lpsolve.sourceforge.net/">lp_solve, an open-source
+mixed-integer linear programming solver</a>. It is also open-source, and can
+be freely re-used under the terms of the
+<a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11 licence</a>.
+</p>
+
+<h2 id="download">Download</h2>
+
+<set-var ver="0.2.0" />
+<set-var arc="kakurasu_solver-<get-var ver />.tar.gz" />
+
+<ul>
+
+<li>
+<a href="http://bitbucket.org/shlomif/lp-based-puzzle-solvers/downloads/<get-var arc />"><get-var arc /></a> - requires python-lp_solve to run.
+</li>
+
+<li>
+<a href="<get-var arc />"><get-var arc /> - Locally mirrored copy</a>.
+</li>
+
+</ul>
+
+<h2 id="project-links">Project Links</h2>
+
+<ul>
+
+<li>
+<a href="https://bitbucket.org/shlomif/lp-based-puzzle-solvers/overview">BitBucket Page</a> - contains the Mercurial repository with the history of the source
+code, a web-interface to it, an issue tracker and some downloads.
+</li>
+
+<!--
+
+TO ADD : Freecode record.
+
+<li>
+<a href="http://freecode.com/projects/black-hole-solitaire-solver">Freecode
+Record</a>
+</li>
+-->
+
+</ul>
+
+<h2 id="similar-projects">Similar Projects</h2>
+
+<ul>
+
+<li>
+<a href="http://www.google.com/search?q=sudoku%20solver">Search for
+Sudoku Solvers</a> (there are a lot of them).
+</li>
+
+<li>
+<a href="http://www.chiark.greenend.org.uk/~sgtatham/puzzles/">Simon
+Tatham’s Portable Puzzle Collection</a> - contains generators and solvers
+for many puzzles.
+</li>
+</ul>
+
+<x11_licence name="The Kakurasu Solver" />

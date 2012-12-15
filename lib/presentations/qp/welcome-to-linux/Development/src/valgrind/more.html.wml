@@ -1,0 +1,55 @@
+#include 'template.wml'
+
+<points>
+<li>
+Valgrind does not require special compilation. You simply execute it like
+so: <tt>valgrind --num-callers=15 progname</tt>. It will run the program
+<tt>progname</tt> and intercept calls to malloc/free/new/delete and
+monitor all memory uses.
+</li>
+<li>
+Another useful flag is <tt>--gdb-attach=yes</tt> that invokes gdb on the
+process when errors are detected, and let you debug the place of the
+error.
+</li>
+<li>
+Valgrind is works only on x86s running a modern Linux version.
+</li>
+<li>
+Valgrind will report several types of errors:<br />
+<ul>
+<li>
+Illegal read / illegal write errors.
+</li>
+<li>
+Use of uninitialized values.
+</li>
+<li>
+Illegal frees.
+</li>
+<li>
+Inappropriate deallocation function.
+</li>
+<li>
+Passing system call parameters with inadequate read/write permissions.
+</li>
+</ul>
+</li>
+<li>
+Valgrind will tell you, when possible, where in your code the relevant memory
+blocks were allocated/freed.
+</li>
+<li>
+Valgrind is most probably not installed on the Linux box you are working on,
+however installation is trivial and fairly quick: download, unpack and then
+run one after another:<br />
+<tt>./configure</tt><br />
+<tt>make</tt><br />
+<tt>make install</tt><br />
+</li>
+<li>
+Valgrind's manual is available in the directory of its unpacked distribution
+under <tt>docs/index.html</tt>.
+</li>
+</points>
+

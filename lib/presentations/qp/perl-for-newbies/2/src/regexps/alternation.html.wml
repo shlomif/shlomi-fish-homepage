@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+
+<p>
+One can specify several possible matching for an expression to match with
+<tt>|</tt>.  For instance, <tt>dog|cat|mouse</tt> will match either "dog" or
+"cat" or "mouse".  But naturally the options can themselves be regular
+expression which are as complex as perl supports.
+</p>
+
+<p>
+The alternation operator will try to match as much of the expression as it can,
+so it is recommended to use grouping to bound it.
+(e.g: <tt>(?:dog|cat|mouse)</tt>)
+</p>
+
+<p>
+The following pattern matches a sequence of whitespace-delimited "words"
+that each may contain either a set of letters or a set of digits (= a
+positive integer):
+</p>
+
+<quadpres_code_block>
+(?:[a-zA-Z]+|[0-9]+)(?: +(?:[a-zA-Z]+|[0-9]+))*
+</quadpres_code_block>
+

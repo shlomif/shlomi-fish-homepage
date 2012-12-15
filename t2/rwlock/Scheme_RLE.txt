@@ -1,0 +1,92 @@
+Data Structures:
+================
+
+The RWLock will use a queue. Each element of the queue will contain:
+1. a condition variable
+2. a flag that indicates if it contains readers or writers pending.
+3. num_threads - an integer specifiying how many threads are waiting on it.
+4. was_first_thr_accepted - a flag that indicates if the first thread has
+already been accepted from it. (used only for a writers' pack).
+
+The RWLock will contain a counter that tells it how many readers are using
+it at the moment (num_readers), and a flag that specifies if there's a
+writer using the lock (is_writer). It also uses a common internal mutex
+to protect against mutual exclusion (mymutex)
+
+Algorithm:
+==========
+
+accept_pending_items:
+---------------------
+
+Peek the first element out of the queue.
+
+If it is a writers' pack, it decrements the number of threads by one,
+and signals the condition variable, and sets was_first_thr_accepted to 1.
+Afterwards, if (elem.num_threads == 0) it extracts and destroys the item.
+
+If it is a readers' pack, it broadcasts the condition variable. Then it
+extracts and destroys the item.
+
+get_write_access:
+-----------------
+
+locks mymutex.
+
+Checks if is_writer is set or num_readers is greater than 0. If so,
+it enqueues itself. (the mutex of the condition variable is mymutex)
+
+If not it sets is_writer to 1.
+
+    Enqueuing:
+
+    peek the tail of the queue. If it is a writers' pack and
+    its was_first_thr_accepted is false, increase the number of threads
+    there by 1 and wait on its condition variable. If not, enqueue a new
+    writer's pack with a threads_num set to 1 and a new condition variable.
+
+
+Unlocks the mutex.
+
+
+get_read_access:
+----------------
+
+locks mymutex.
+
+If the queue is empty and is_writer is false it increments num_readers
+and unlocks mutex.
+
+Else it enqueues itself, while using mymutex for waiting on the
+condition variable. When the condition variable is signalled,
+num_readers is incremented by 1.
+
+    Enqueueing:
+
+    peek the tail of the queue. If it is a readers' pack,
+    increase the number of threads there by 1 and wait on its
+    condition variable. If not, add a new readers pack with threads_num
+    set to 1 and a new condition variable, which it will wait upon.
+
+Unlocks mutex.
+
+
+
+release_write_access:
+---------------------
+
+locks mutex
+
+Sets is_writer to false. Then calls accept_pending_items.
+
+unlocks mutex
+
+release_read_access:
+--------------------
+
+locks mutex
+
+Decrements num_readers. If num_readers == 0 it calls accept_pending_items.
+
+unlocks mutex
+

@@ -1,0 +1,29 @@
+#include '../template.wml'
+#include "dbook.wml"
+
+<latemp_subject "Documentation for the Park Lisp Dialect" />
+
+<h2 id="about">About</h2>
+
+<p>
+Park is an unimplemented (or so-called <b>vapourware</b>) dialect of the
+Lisp programming language inspired
+by <a href=“http://www.paulgraham.com/arc.html”>Paul Graham’s Arc</a>. I
+started the Park effort out of frustration of waiting for Arc to be released,
+but after a while was happy when it came out. So you can find the
+incomplete documentation here, and some of the <b>good ideas may eventually
+be integrated</b> in some ways into “Anarki Arc”, or spawn a different
+language. (As from my impression Arc still leaves a lot to be desired.)
+</p>
+
+<ul>
+
+<li>
+<a href="park-lisp-informal-spec/">HTML</a>
+</li>
+
+<li>
+<a href="park-lisp-informal-spec.xml">DocBook 4/XML</a>
+</li>
+
+</ul>

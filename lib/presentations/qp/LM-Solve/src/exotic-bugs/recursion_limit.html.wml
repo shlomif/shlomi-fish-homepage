@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+<points>
+<li>
+When first using the procedurally-recursive version, warnings were given for
+deep recursion.
+</li>
+<li>
+<tt>Deep recursion on subroutine "main::sum" at recurse.pl line 17.</tt>
+</li>
+<li>
+To resolve it one can specify <tt>no warnings "recursion"</tt>.
+</li>
+<li>
+However, the perl debugger still warns about "100 levels deep in subroutine calls!".
+</li>
+<li>
+To resolve this set the <tt>$DB::deep</tt> to a large enough value from
+within the perl debugger.
+</li>
+</points>

@@ -1,0 +1,35 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "Spark - Pre-Birth of a Modern Lisp" />
+
+<toc_div />
+
+<h2 id="itself">The Article Itself</h2>
+
+<h3 id="body">Body</h3>
+
+#include "docbook/4/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.html"
+
+<h2 id="formats">Other Formats</h2>
+
+<ul>
+
+<li>
+<a href="Spark-Pre-Birth-of-a-Modern-Lisp.txt">AsciiDoc source
+(plaintext)</a> - requires
+<a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> to be converted
+to HTML or DocBook/XML.
+</li>
+
+<li>
+<a href="Spark-Pre-Birth-of-a-Modern-Lisp.pdf">PDF (Adobe Acrobat)</a> -
+please don’t print, though.
+</li>
+
+<li>
+<a href="Spark-Pre-Birth-of-a-Modern-Lisp.xml">DocBook/XML</a>
+</li>
+
+</ul>

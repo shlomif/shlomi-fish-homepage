@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<points>
+<li>
+This layer is responsible for multiplexing a
+number of connections over a single link, splits the data into small
+packets, make sure that the data is received in the order in which it
+was sent, and perform error correction and retransmit the data in
+case of error.
+</li>
+<li>
+Two common protocols used in this layer are TCP (which
+provides all of these services, but incurs a small bandwidth and CPU
+overhead), and UDP, which only supplies multiplexing services, but
+has much smaller overhead.
+</li>
+</points>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>{#SUBJECT_LOC#}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
+</head>
+<body>
+
+<table class="layout">
+<tr>
+<td class="navbar">
+
+<define-tag navbarlink>
+<if
+    ;;; Determine if %0 matches this document
+    <ifeq "$(FILENAME)" "%0"
+        "1"
+        <ifeq "$(FILENAME)" "%0index.html"
+            "1"
+            ""
+        />
+
+    />
+    ;;; If so - bolds the text
+    "<b>%1</b>"
+    ;;; If not - makes a hyperlink
+    "<a href="$(ROOT)/%0">%1</a>"
+/><br />
+</define-tag>
+
+<navbarlink "" "Main" />
+<navbarlink "download.html" "Downloads" />
+<navbarlink "links.html" "Links" />
+
+<br />
+
+<a href="mailto:webmaster@mysite.org">Webmaster</a><br />
+</td>
+<td class="main">
+<h1>{#SUBJECT_LOC#}</h1>
+{#BODY#}
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<define-tag subject>
+{#SUBJECT_LOC#:%0:##}
+</define-tag>
+
+#   per default we are in body
+{#BODY#:
+

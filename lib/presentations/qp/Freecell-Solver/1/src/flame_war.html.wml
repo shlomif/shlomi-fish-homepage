@@ -1,0 +1,47 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Recent versions of Freecell Solver pass the moves from the initial position
+to the final solution to the layer above them.
+</li>
+
+<li>
+The stack -&gt; stack moves are being outputted with the number of cards
+that are moved.
+</li>
+
+<li>
+Freecell Pro, on the other hand, used to ignore the number of cards and
+expected such moves to comply with what the original Microsoft Freecell
+would do in that case.
+</li>
+
+<li>
+This caused problems in playback of a large percentage of the games in
+its integration with Freecell Solver.
+</li>
+
+<li>
+<a href="http://groups.yahoo.com/group/fc-solve-discuss/message/197">A post</a> I made to the mailing list about it sparked a very big flame war that diverted
+to cover related topics.
+</li>
+
+<li>
+<a href="http://groups.yahoo.com/group/fc-solve-discuss/message/219">
+I was actually happy</a> that there was some action there.
+</li>
+
+<li>
+Usually the only things that happen there is that I announce new releases or
+ask the members questions and no-one or few people reply.
+</li>
+
+<li>
+Eventually, Adrian Ettlinger (an FC-Pro hacker) have extended Freecell Pro
+to make use of an optional number of cards to move argument. This made
+playback of Freecell Solver solutions perfectly smooth.
+</li>
+
+</points>

@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+
+
+<p>
+Conditionals enable us to execute a group of statements if a
+certain condition is met. For example the following program, reports to the
+user whether or not his name starts with the letter "A":
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/letter_a.pl" />
+</quadpres_code_block>
+
+<p>
+The code <tt>substr($name,0,1) eq "A"</tt> is a condition expression which uses
+the perl <tt>eq</tt> operator, which returns true if and only if the strings
+are the same. There are more such operators and they will be explained shortly.
+</p>
+
+<p>
+Inside the curly brackets following the <tt>if</tt> there is the code to
+be executed by the conditional. That code can be as long as you like. The else
+part is executed assuming the conditional was found to be false, and is
+optional.
+</p>
+
+
+

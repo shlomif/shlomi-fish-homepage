@@ -1,0 +1,39 @@
+#include '../template.wml'
+
+<latemp_subject "Rindolf Specification" />
+
+<p>
+This is the DocBook/XML for <b>“Rindolf”</b>, a dialect of the Perl
+programming language, based on Perl 5, which was originally intended
+as an anti-thesis to the direction Perl 6 is going. Since then, I’ve
+neglected working on materialising Rindolf, and also discovered that
+many features I thought of were already present in Perl 5.
+</p>
+
+<p>
+This SPEC, however, is kept here for posterity.
+</p>
+
+<ul>
+<li>
+<a href="rindolf-spec/">HTML (viewable online)</a>
+</li>
+<li>
+<a href="rindolf-spec.pdf">Acrobat Reader (PDF)</a>
+</li>
+<li>
+<a href="rindolf-spec.xml">The DocBook/XML Source</a>
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

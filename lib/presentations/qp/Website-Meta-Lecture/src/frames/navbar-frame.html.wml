@@ -1,0 +1,13 @@
+#include 'template.wml'
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/frames/navbar-frame.html.wml" />
+</quadpres_code_block>
+
+<h2>Explanation</h2>
+
+<p>
+One can see her use of variables - <tt>&lt;set-var ... &gt;</tt> and
+<tt>&lt;get-var ... &gt;</tt>.
+</p>
+

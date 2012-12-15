@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<points>
+<li>
+In later versions of Freecell Solver, each state contains a pointer to
+its "parent state" - the first state from which it was discovered.
+</li>
+<li>
+I eventually realized I could add a move stack of moves that lead from
+the parent to it, thus enabling FCS to trace the solution of a state
+by collecting all the moves to the initial state.
+</li>
+<li>
+This resulted in shorter solutions, making the optimization scan almost
+completely unnecessary.
+</li>
+</points>

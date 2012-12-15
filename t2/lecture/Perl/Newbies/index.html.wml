@@ -1,0 +1,141 @@
+#include '../template.wml'
+<latemp_subject "Perl for Perl Newbies" />
+
+<p>
+<a href="http://perl-begin.org/">Perl</a> is a useful language for working on
+Linux and other flavours of UNIX as well as on many other platforms where it
+is available. Perl is useful for text processing and generation, GUI
+programming, system administration, programming for the Web, working with
+databases, and most other things which are not very time sensitive.
+</p>
+
+<p>
+The material of these talks (also useful as normal web-based tutorials) aims
+to give a good introduction to the basic and most important elements of Perl
+programming. Knowledge of another programming language is recommended, but is
+not necessary.
+</p>
+
+<p>
+If you have any other questions or comments regarding this series, then
+<a href="$(ROOT)/me/contact-me/">contact me about them</a>.
+</p>
+
+<h2 id="material">Available Material</h2>
+
+<table class="visible">
+<thead>
+<tr>
+<th>View Online</th>
+<th><a href="http://www.shlomifish.org/quad-pres/">Quad-Pres</a> Source</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td id="part1"><a href="lecture1/"><b>Part 1</b> - the basics</a></td>
+<td><a href="lecture1/src.tar.gz">Source</a></td>
+</tr>
+
+<tr>
+<td id="part2"><a href="lecture2/"><b>Part 2</b> - more advanced topics</a></td>
+<td><a href="lecture2/src.tar.gz">Source</a></td>
+</tr>
+
+<tr>
+<td id="part3"><a href="lecture3/"><b>Part 3</b> - modules and objects</a></td>
+<td><a href="lecture3/src.tar.gz">Source</a></td>
+</tr>
+
+<tr>
+<td id="part4"><a href="lecture4/"><b>Part 4</b> - CPAN, sprintf,
+system functions, exceptions.</a></td>
+<td><a href="lecture4/src.tar.gz">Source</a></td>
+</tr>
+
+<tr>
+<td id="part5"><a href="lecture5/"><b>Part 5</b> - good programming practices</a></td>
+<td><a href="lecture5/src.tar.gz">Source</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<ul>
+<li id="summary">
+<a href="Perl-for-Newbies-summary.txt">Summary of the lectures</a>
+</li>
+<li id="heb-glossary">
+<a href="http://perl-begin.org/Heb-Glossary/">Hebrew Glossary for
+these lectures</a>
+</li>
+<li id="heb-notes">
+<a href="lecture5-notes.txt">Notes for Lecture 5 in Hebrew</a> - prepared for
+giving the talk - they are just a translation of a summary of the English
+material on the slides. (<a href="lecture5-heb-notes.html">HTML format</a>.)
+</li>
+</ul>
+
+<h3 id="external-material">From External Sources</h3>
+
+<ul>
+<li>
+<a href="vhll-slides.pdf">“The Taming of the Camel” by Larry Wall</a>
+</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li>
+<a href="http://perl-begin.org/">The Perl Beginners’ Site</a> - a
+useful portal for beginners.
+</li>
+<li>
+<a href="http://www.haifux.org/">The Haifa Linux Club</a> - where these
+talks were originally given.
+</li>
+<li>
+<a href="http://www.perl.org/">The Perl Homepage</a>
+</li>
+<li>
+<a href="http://www.perl.com/">Perl.com</a> - an O’Reilly site with articles
+and resources about Perl.
+</li>
+<li>
+<a href="http://www.perl.org.il/">Perl in Israel</a> - a useful Perl portal by
+the Israeli Perl Mongers.
+</li>
+<li>
+<a href="http://perlbuzz.com/">Perl Buzz</a> - the newest and best of
+the Perl world.
+</li>
+</ul>
+
+<h2 id="other-tuts">Other Introductory Perl Tutorials</h2>
+
+<ul>
+<li>
+<a href="http://learn.perl.org/library/beginning_perl/">Beginning
+Perl by Simon Cozens</a> - a complete online version of the book.
+</li>
+<li>
+<a href="http://www.perl.com/pub/2001/01/begperl6.html">Beginner’s
+Introduction to Perl</a> - a Perl.com resource.
+</li>
+<li>
+<a href="http://www.shmuelfomberg.com/perlhebtut/">A Perl Tutorial in Hebrew</a>
+(by Shmuel Fomberg).
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<points>
+<li>
+DHCP stands for Dynamic Host Configuration Protocol.
+</li>
+<li>
+It is a layer III protocol used to assign IP addresses to computers which
+connect to the net.
+</li>
+<li>
+Additionally, DHCP is used to inform the computer about other details of the network, such as the DNS and gateway IPs.
+</li>
+<li>
+More details about DHCP in Linux are available in the <a href="http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/DHCP.html">DHCP HOWTO</a>.
+</li>
+<li>
+DHCP-configured connections will usually "just work" if you will select
+"automatically configure" in your distro network setup.
+</li>
+</points>
+

@@ -1,0 +1,54 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Once upon a time, Freecell Solver was distributed only with a makefile
+for GNU make, and everyone were happy.
+</li>
+
+<li>
+When Stephan Kulow embedded its code into kpat, he adapted the makefile
+to use the standard KDE Autoconf-based build process.
+</li>
+
+<li>
+Somewhat afterwards, I decided that I want the build process to be more
+portable and modular, and to give users the ability to build a shared
+library.
+</li>
+
+<li>
+The solution - converting to Autoconf, Automake and Libtool.
+</li>
+
+<li>
+How to do that exactly is out of the scope of this lecture. I can just say
+that it is not very straightforward, and that it required a lot of tweaking
+and trial and error.
+</li>
+
+<li>
+I then decided that having an RPM of Freecell Solver would be nice. So I created
+an RPM spec for it.
+</li>
+
+<li>
+Again, it required quite a lot of tweaking and experimenting.
+(<a href="http://www.haifux.org/lectures/31/">Tzafrir Cohen's Lecture</a>
+and various web-resources were a great help)
+</li>
+
+<li>
+I eventually integrated generating an up-to-date RPM SPEC into the Autoconf
+process, and thus, was able to build an RPM by issuing a constant sequence of
+commands.
+</li>
+
+<li>
+A corresponding Debian package has been initially created by Yotam Rubin and
+is now maintained by Risko Gergely, who also uploads it to the Debian pool
+of packages.
+</li>
+
+</points>

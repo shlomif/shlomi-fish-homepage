@@ -1,0 +1,77 @@
+#include 'template.wml'
+
+
+
+<p>
+Perl supplies the user with 6 numerical comparison operators which test
+for the comparison of two numbers. They are:
+</p>
+
+<table border="1">
+
+<tr>
+<td>
+<tt>$x == $y</tt>
+</td>
+<td>
+<tt>$x</tt> and <tt>$y</tt> are equal.
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x &gt; $y</tt>
+</td>
+<td>
+<tt>$x</tt> is greater than <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x &lt; $y</tt>
+</td>
+<td>
+<tt>$x</tt> is lesser than <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x &gt;= $y</tt>
+</td>
+<td>
+<tt>$x</tt> is greater or equal to <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x &lt;= $y</tt>
+</td>
+<td>
+<tt>$x</tt> is lesser or equal to <tt>$y</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>$x != $y</tt>
+</td>
+<td>
+<tt>$x</tt> is not equal to <tt>$y</tt>
+</td>
+</tr>
+
+</table>
+
+<p>
+Those operators can be used inside conditionals and also outside,
+as part of a normal expression. The following program prints all the numbers
+between 1 and 100 that are not divisible by 3:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/non_div3_numbers.pl" />
+</quadpres_code_block>
+

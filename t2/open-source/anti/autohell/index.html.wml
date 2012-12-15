@@ -1,0 +1,192 @@
+#include '../template.wml'
+<latemp_subject "Escape from GNU Autohell!" />
+
+<p>
+<b>Last Updated:</b> 28-January-2010
+</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+Almost all GNU packages and most other free and open-source UNIX software
+packages are using the <a
+href="http://en.wikipedia.org/wiki/GNU_build_system">GNU Autotools suite</a>
+(Autoconf, Automake, Libtool, etc.) for configuration and building. Due to its
+many inherent problems, many people have started referring to it as <b>GNU
+Autohell</b>, and this page will explain why this is the case and why you
+should use <a href="http://www.cmake.org/">CMake</a> or a different
+configuration-and-build system.
+</p>
+
+<h2 id="disadvantages">Disadvantages of GNU Autotools</h2>
+
+<ol>
+
+<li>
+<p>
+Autoconf uses an m4-generating-Bourne-shell setup, where both m4 and /bin/sh
+are quirky and get broken very easily, which results in a syntax soup.
+As opposed to that, the CMake configuration files are written in a consistent
+high-level language, whose interpreter is written in C++.
+</p>
+</li>
+
+<li>
+<p>
+Configuration takes much longer with ./configure, and this is especially
+noticeable on Microsoft Windows, where cygwin is very slow at doing
+multi-processing. Often, one needs to run the “autoconf” and/or
+“automake” programs before that (sometimes using the all-in-one wrappers
+of “autoreconf” or “./autogen.sh”) which is even more time-consuming.
+</p>
+</li>
+
+<li>
+<p>
+Compilation is much faster with CMake because it doesn’t use GNU’s thousands’
+lines long “libtool” shell script, which incurs a lot of overhead.
+</p>
+</li>
+
+<li>
+<p>
+Autotools cause the archive size to increase dramatically due to their
+extra
+<tt>configure.ac</tt> / <tt>configure</tt> /
+<tt>Makefile.in</tt> / <tt>libtool</tt> / etc. overhead.
+The Autotools-based <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
+version 2.8.14 gzipped tarball (tar.gz) took 562,301 bytes. After it was
+converted to CMake in version 2.12.0, the tar.gz fell down to 217,307, less
+than half of that, and between these two versions a small amount of
+extra functionality has been added.
+</p>
+
+<p>
+Freecell Solver in its CMake-driven form has evolved and expanded since then,
+but as of version 2.40.0 its tar.gz now takes 408,076 bytes, which is less
+than its original Autotools size. Moreover, we can now easily ship it as
+the more compact tar.bz2 (which takes 291,531 bytes) and a tar.xz (which takes
+242,164 bytes) which CMake gives us for free.
+</p>
+</li>
+
+<li>
+<p>
+GNU Autohell has a huge problem with backwards compatibility, forward
+compatibility and other regressions. It requires constant maintenance, while
+CMake tends to keep very good backwards compatibility.
+</p>
+</li>
+
+<li>
+<p>
+As opposed to GNU Autotools, CMake runs natively on Win32 and generates
+native Win32 makefiles, and project configurations for many common Integrated
+Development Environment (such as Microsoft Developer Studio).
+</p>
+</li>
+
+<li>
+<p>
+CMake uses <a href="http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22.29">the
+modified BSD license</a> (which is GPL-compatible and allows virtually any
+use), instead of GNU Autotools’ GNU General Public License (GPL) which is
+much more restrictive.
+</p>
+</li>
+
+<li>
+<p>
+CMake is much easier to learn than GNU Autotools. It took me less time
+to convert the Freecell Solver distribution to CMake (without having known
+CMake first) than it did to add Autotools support for it in the first place,
+and someone I chatted with on IRC testified the same.
+</p>
+</li>
+</ol>
+
+<p>
+Save the developers! Save on carbon emission (from bandwidth and compile times)!
+Escape from GNU Autohell!
+</p>
+
+<h2 id="refute-arguments">Refuting Common Arguments Against CMake</h2>
+
+<h3 id="poor-docs">CMake is Poorly Documented</h3>
+
+<p>
+CMake has a tutorial and a reference document as a large
+page on <a href="http://www.cmake.org/">the CMake site</a>,
+<a href="http://www.cmake.org/Wiki/CMake">a helpful wiki</a>, and web
+searches can also prove of help. It also has a mailing list and an IRC
+channel where one can get help. I find it much better than Autoconf and
+friend’s documentation, which tends to be incomplete, verbose, split
+and confusing.
+</p>
+
+<h3 id="shared-and-static-libs">One cannot build both a shared library and
+a static library in CMake</h3>
+
+<p>
+As a matter of fact, it is possible. Some code to do exactly that is present
+<a href="http://github.com/shlomif/fc-solve/blob/master/fc-solve/source/CMakeLists.txt">in
+the Freecell Solver CMakeLists.txt file</a>, based on an insight by
+Risko Gergely, who is its current Debian package maintainer. One disadvantage
+to that is that the objects of the libraries need to be compiled twice, but
+it can be mitigated during the active development stage of the package where
+only one version of the library is needed.
+</p>
+
+<h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to
+Autoconf’s sh+m4</h3>
+
+<p>
+While Bourne Shell (“sh”) and m4 have POSIX standards behind them, they are
+very awful and vile. Moreover, Autoconf mandates on using GNU m4, which isn’t
+standard. Writing Autoconf macros or customising the Autoconf code is
+hard and the results tend to be very easy to break.
+</p>
+
+<p>
+CMake, on the other hand uses a custom syntax, which is consistent,
+trustworthy, predictable and reliable. The fact that it isn’t “standard” does
+not make it bad.
+</p>
+
+<h3 id="list-of-parameters">There is no way to get a list of parameters to the
+build in CMake as “cmake --help” does not work.</h3>
+
+<p>
+“cmake --help” indeed gives you CMake's global help screen instead of the
+list of parameters to the build, but there is a way to get them even from
+the command-line without resorting to ccmake or cmake-gui. Just type
+“cmake -LA” or “cmake -LAH” to get them.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<a href="http://lucidfox.org/posts/view/556">“Dear GNU Autohell…”</a> - on
+<a href="http://lucidfox.org/">Maia’s Eclectic Ministry of Introspection</a>.
+</li>
+
+<li>
+<a href="http://freecode.com/articles/view/889/">Freshmeat Editorial - “Stop
+the Autoconf Insanity”</a>.
+</li>
+
+<li>
+<a href="http://lwn.net/Articles/188693/">“Why the KDE project switched to
+CMake - and how”</a> (on LWN.net).
+</li>
+
+<li>
+<a href="http://www.youtube.com/watch?v=8Ut9o4OdSC0">Google Tech Talk:
+“CMake/CPack/CTest/CDash Open Source Tools to Build Test and Deploy C++
+Software”</a>
+</li>
+
+</ul>
+

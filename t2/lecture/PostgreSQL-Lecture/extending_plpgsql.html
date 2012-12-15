@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Extending the Database: PL/pgSQL</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Extending the Database: PL/pgSQL</h1>
+<h3>* PostgreSQL offers two interpreted languages in which one can
+write SQL functions: PL/pgSQL and PL/tcl. More can be added by the
+user by coding the appropriate stub.<br />
+<br />
+* PL/pgSQL Example:<br />
+<br />
+As user postgres:<br /></h3>
+<pre>
+test=&gt; CREATE FUNCTION plpgsql_call_handler ()
+test-&gt; RETURNS OPAQUE
+test-&gt; AS '/usr/lib/pgsql/plpgsql.so'
+test-&gt; LANGUAGE 'c' \g
+CREATE
+test=&gt;
+test=&gt; CREATE TRUSTED PROCEDURAL LANGUAGE 'plpgsql'
+test-&gt; HANDLER plpgsql_call_handler
+test-&gt; LANCOMPILER 'PL/pgSQL' \g
+CREATE
+</pre>
+<h3>As user shlomi:<br /></h3>
+<pre>
+test=&gt; CREATE FUNCTION num_descendants (int4)
+test-&gt; RETURNS int4 AS
+test-&gt; '
+test'&gt;     DECLARE
+test'&gt;         key ALIAS for $1;
+test'&gt;         num int4;
+test'&gt;         child RECORD;
+test'&gt;     BEGIN
+test'&gt;         num := 0;
+test'&gt;         FOR child IN SELECT c FROM par_kids WHERE p = key LOOP
+test'&gt;             num := num + 1 + num_descendants(child.c);
+test'&gt;         END LOOP;
+test'&gt;         RETURN num;
+test'&gt;     END;
+test'&gt; '
+test-&gt; LANGUAGE 'plpgsql' \g
+CREATE
+test=&gt; SELECT num_descendants(1) \g
+num_descendants
+---------------
+              9
+(1 row)
+</pre>
+</body>
+</html>

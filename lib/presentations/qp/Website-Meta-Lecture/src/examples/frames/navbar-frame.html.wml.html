@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Docs/homepage/homepage/trunk/lib/presentations/qp/Website-Meta-Lecture/src/examples/frames/navbar-frame.html.wml.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Error { color: #ffffff; background-color: #ff0000; }
+.Comment { color: #0000ff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Identifier { color: #008b8b; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Constant { color: #ff00ff; }
+.Statement { color: #a52a2a; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Identifier">&lt;?xml </span><span class="Type">version</span><span class="Identifier">=</span><span class="Constant">&quot;1.0&quot;</span><span class="Identifier"> encoding=</span><span class="Constant">&quot;utf-8&quot;</span><span class="Identifier">?&gt;</span>
+<span class="Identifier">&lt;!DOCTYPE</span>
+<span class="Identifier">    html PUBLIC </span><span class="Constant">&quot;-//W3C//DTD XHTML 1.1//EN&quot;</span>
+<span class="Identifier">    </span><span class="Constant">&quot;<a href="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd</a>&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">html</span><span class="Identifier"> xmlns=</span><span class="Constant">&quot;<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot;</span><span class="Identifier"> xml:</span><span class="Type">lang</span><span class="Identifier">=</span><span class="Constant">&quot;en-US&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">title</span><span class="Identifier">&gt;</span>Navigation Bar<span class="Identifier">&lt;/</span><span class="Statement">title</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">meta</span><span class="Identifier"> </span><span class="Type">http-equiv</span><span class="Identifier">=</span><span class="Constant">&quot;Content-Type&quot;</span><span class="Identifier"> </span><span class="Type">content</span><span class="Identifier">=</span><span class="Constant">&quot;text/html; charset=utf-8&quot;</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">link</span><span class="Identifier"> </span><span class="Type">rel</span><span class="Identifier">=</span><span class="Constant">&quot;StyleSheet&quot;</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;$(ROOT)/style.css&quot;</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;text/css&quot;</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> navbarlink&gt;</span>
+<span class="Comment"># Check if we are an index page and define suffix accordingly</span>
+<span class="Identifier">&lt;</span>if<span class="Identifier"> </span><span class="Error">&lt;</span><span class="Identifier">match </span><span class="Constant">&quot;%0&quot;</span><span class="Identifier"> </span><span class="Constant">&quot;(/$)|(^$)&quot;</span><span class="Identifier"> </span><span class="Type">action</span><span class="Identifier">=</span><span class="Constant">&quot;report&quot;</span><span class="Identifier"> /&gt;</span>
+    <span class="Identifier">&lt;</span>set-<span class="Statement">var</span><span class="Identifier"> suffix=</span><span class="Constant">&quot;index.html&quot;</span><span class="Identifier"> /&gt;</span>
+    <span class="Identifier">&lt;</span>set-<span class="Statement">var</span><span class="Identifier"> suffix=</span><span class="Constant">&quot;&quot;</span><span class="Identifier"> /&gt;</span>
+    /<span class="Error">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;%0&lt;get-var suffix /&gt;.frames.html&quot;</span><span class="Identifier">&gt;</span>%1<span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier">&gt;</span>
+<span class="Comment">#include 'navbar.wml'</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;$(ROOT)&quot;</span><span class="Identifier">&gt;</span>No Frames Version<span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span><span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span>
+</pre>
+</body>
+</html>

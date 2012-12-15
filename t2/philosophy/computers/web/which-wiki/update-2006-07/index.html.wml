@@ -1,0 +1,205 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "July 2006 Update to “Which Wiki”" />
+
+<h2 id="about">About this Document</h2>
+
+<p>
+Since I wrote the <a href="../">previous article</a>, I learned a lot more
+about wikis. Furthermore wiki spam has become much more of a problem, and
+I’d like to detail some ways of fighting it. Without further ado: here it is.
+</p>
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+29-July-2006
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+29-July-2006
+</dd>
+</dl>
+
+<h3 id="licence">Licence</h3>
+
+<cc_by_british_blurb year="2006" />
+
+<h2 id="body">The Article Itself</h2>
+
+<h3 id="implementations">Updates for the Implementations</h3>
+
+<h4 id="usemodwiki">UseModWiki</h4>
+<p>
+One should note that UseModWiki has been unmaintained for a long time. However,
+it has been forked into <a href="http://www.oddmuse.org/">Oddmuse</a>, which
+was then heavily extended and improved. I didn’t try it yet, but according to
+all reports, it should be better that UseModWiki. One should note that the
+MediaWiki syntax is backwards compatible with the UseModWiki one.
+</p>
+
+<h4 id="pmwiki">PmWiki</h4>
+<p>
+As I discovered after the <a href="http://perl-begin.org/">Perl-Begin</a>
+PmWiki was spammed was that even the navigation, etc. parts of its layout
+can be overrided by the user using wiki-syntax. While this is a nice feature,
+if spammed, it may make the wiki temporary unusable. Furthermore, I was able
+to write
+<a href="http://www.shlomifish.org/open-source/bits.html#old_pmwiki_revert">a
+Perl script</a> to revert the old format of PmWiki to a previous state, in
+case of excessive spamming.
+</p>
+
+<h4 id="mediawiki">MediaWiki</h4>
+
+<p>
+I was told that in order to facilitate maintaining several instances of
+MediaWiki on the same host (under different URLs or domains) one can re-use
+the same <tt>LocalSettings.php</tt> file, only with a dispatch of some
+sort to the host and URL. I was able to achieve it pretty easily on the
+iglu.org.il host, and upgrading the MediaWiki is thus much easier.
+</p>
+
+<h4 id="twiki">TWiki</h4>
+
+<p>
+<a href="http://twiki.org/">TWiki</a> had a 4.0.0 release (breaking the
+annoying flow of date-based releases) and is now at version 4.0.4. I still
+don’t know whether its installation is still as long as it was or not. The
+TWiki code quality is reportedly very bad, but that can be improved with some
+concentrated amount of refactoring.
+</p>
+
+<h4 id="moinmoin">MoinMoin</h4>
+
+<p>
+As some people noted to me, it is possible that I misrepresented MoinMoin
+there and that it does have some advantages over other wikis. One advantage I
+noted was the ability to have a few versions of the same page in different
+human languages (as opposed to MediaWiki which generally assumes one will
+install a different MediaWiki instance for this).
+</p>
+
+<p>
+One problem I see with MoinMoin is that it looks cheesy (at least to me). I
+believe the MoinMoin hackers should work on a better look for it.
+</p>
+
+<h3 id="fighting_wiki_spam">Fighting Wiki Spam</h3>
+
+<p>
+<a href="http://software.newsforge.com/software/05/06/21/1641223.shtml?tid=74&amp;tid=48">An
+article on Newsforge.com covered ways to deal with wiki spam</a> back on June,
+2005. While the article was pretty good, it had a few omissions. One of them
+was that a wiki administrator should better watch its RSS or Atom feeds for
+any activity, so in case a wiki is spammed it would be detected immediately.
+</p>
+
+<p>
+From my experiences with spam-protecting MediaWikis, the following techniques
+are effective:
+</p>
+
+<ol>
+<li>
+<p>
+Monitoring the <b>RSS/Atom Feeds</b>.
+</p>
+</li>
+<li>
+<p>
+Installing and enabling the <a href="http://meta.wikimedia.org/wiki/SpamBlacklist_extension">MediaWiki
+SpamBlacklist extension</a>, and making sure the master list is updated (using
+a small cron job). Afterwards, I found it necessary to also maintain my own
+private blacklist, with URLs that I’ve been spammed with (to prevent them from
+re-appearing). That’s because the wikimedia blacklist has some latency.
+</p>
+</li>
+<li>
+<p>
+MediaWiki ships with a <b>spam cleanup script</b> that cleans all spam from a certain
+(exact) hostname. It is useful for reverting such changes.
+</p>
+</li>
+<li>
+<p>
+I noticed that <b>requiring users to login</b> helps reduce the spam a lot. Some
+spammers don’t bother to login, and we also had the case of a broken spamming
+script that kept spamming us with strings of digits, instead of URLs.
+</p>
+</li>
+<li>
+<p>
+<b>Captchas</b> (= garbled images with text) are useful for reducing the amount of
+spam considerably but pose a large accessibility and usability problem, as
+sight-impaired people cannot see them, and other people end up finding them
+very annoying.
+</p>
+<p>
+There are also ways to overcome Captchas, either by employing programs that
+white-hat researchers wrote that can read and analyse them, or by spammers who
+create sites that require these Captchas upon entrance. So far I heard of them
+doing it only to register email accounts on free email providers en-masse and
+not to spam wikis, but who knows.
+</p>
+</li>
+<li>
+<p>
+Another thing that can reduce spam a lot is requiring an <b>email confirmation</b>
+after the creation of the wiki account, and before one can edit pages.
+MediaWiki does not support it out of the box, but I was told it is easy to do,
+as it already has the ability to do such email confirmation.
+</p>
+<p>
+An email handshake is not an accessibility problem, but it still may be
+annoying.
+</p>
+</li>
+</ol>
+
+<h3 id="docbook_and_html_to_wikis">DocBook and HTML to Wiki Format and Back
+Again</h3>
+
+<p>
+The CPAN Module
+<a href="http://search.cpan.org/dist/HTML-WikiConverter/">HTML-WikiConverter</a>
+allows one to convert HTML to the formats of most popular Wikis. DocBook/XML
+and POD can generate HTML, which means they can be fed to it in turn.
+</p>
+
+<p>
+MediaWiki has a
+<a href="http://svn.wikimedia.org/viewvc/mediawiki/trunk/wiki2xml/">set of
+scripts named wiki2xml</a>, which converts the MediaWiki format to XML
+and from that to DocBook and many other formats. Finally there’s
+<a href="http://fedoraproject.org/wiki/SummerOfCode/2006/MikkoVirkkilä">a Google
+Summer of Code project</a> for working on a MoinMoin to-and-from DocBook/XML
+conversion.
+</p>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-09-22
+
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />

@@ -1,0 +1,149 @@
+#include '../template.wml'
+
+#include "mathjax.wml"
+
+<latemp_subject "What’s the Volume of a Dodecahedron?" />
+
+<latemp_more_keywords "volume, dodecahedron, pythagoran solid, solid, pythagoran, perfect, pentagons, 12, 5, geometry, mathematics, maths, math, spatial geometry" />
+
+<img src="dodeca.gif" alt="A Dodecahedron" /> <br />
+
+<p>
+The picture above shows a dodecahedron. It’s a solid body which has
+12 perfect pentagons of the same size as its sides. I wondered what
+is the volume of such a body.
+</p>
+
+<table border="1">
+<tr>
+<td>What is the volume of a dodecahedron with an edge-length of
+a?</td>
+</tr>
+</table>
+
+<br />
+<p>
+ The solution can be found some space below:
+</p>
+
+<longblank />
+
+<h2>Solution:</h2>
+
+<p>
+Since a dodecahedron is a perfect solid with 12 identical sides at
+the same distance from its centre, we can divide it into twelve
+identical pyramids. The corner of each pyramid is found at the
+dodecahedron’s centre, and the base is one of the sides.
+</p>
+
+<p>The volume of a pyramid is the area of the base multiplied by
+its height divided by 3. We can calculate the height by the angle
+between the base and one of the surface sides. Since two pyramids
+are adjacent at every edge of the dodecahedron, we can find it by
+taking the angle between two adjacent sides of the dodecahedron and
+dividing it by 2.</p>
+
+<p>To find that, let’s take a corner of the dodecahedron, and form
+a triangle at the points which are at a certain distance along the
+edges. We get the following picture:</p>
+
+<p><img src="dodeca_corner.gif"
+alt="Corner of a dodecahedron from two different views" /><br />
+From point C, which is found somewhere along the edge, let’s lower
+two perpendiculars to the edge, down to the edges of the base
+triangle. We get the triangle CAB. Now since the surface sides of
+this pyramid are isosceles triangles, and the angle of a perfect
+pentagon is equal to:
+</p>
+
+<p>
+$$ \frac{180&deg; \cdot 3}{5} = 108&deg; $$
+</p>
+
+<p>
+Then the angle CDA
+is equal to:
+</p>
+
+<p>
+$$ \frac{180&deg;-108&deg;}{2}=36&deg; $$
+</p>
+
+<p>
+Since angle ACD is a right angle, we find that CA (and CB) is
+equal to AD * sin(36&deg;), and since the base triangle is perfect,
+AB is equal to AD. Thus, we know that:
+</p>
+
+<p>
+\[
+
+\frac{AE}{CA} = \frac{\frac{AB}{CA}}{2} = \frac{\frac{AD}{CA}}{2} =
+\frac{\frac{1}{\frac{CA}{AD}}}{2} =
+\frac{1}{2\sin{36&deg;}}
+\]
+</p>
+
+<p>
+Thus, the angle ACE, which is half the angle between two sides of the
+dodecahedron and the angle we seek, is equal to:
+</p>
+
+<p>
+$$ \arcsin{\frac{1}{2 \sin{36&deg;}}} $$
+</p>
+
+<p>Approximately 58.28&deg;.</p>
+
+<p>Now, let’s take the look at a side pyramid of a dodecahedron and
+calculate its volume:</p>
+
+<p><img src="dodeca_side_pyramid.gif"
+alt="A Dodecahedron Side Pyramid" /><br />
+Since the angle of a perfect pentagon is equal to 108&deg;, angle
+OBA which is half of it is equal to 54&deg;. Since AB is
+<b>a</b>/2, OA is equal to tan(54&deg;)*<b>a</b>/2. Now, the base
+of the pyramid is made of 5 equal triangles each of which has a
+base of length <b>a</b> and a height of OA. Thus, the area of the
+base is 5*(OA*<b>a</b>/2) = 5*tan(54&deg;)*<b>a</b>/2*<b>a</b>/2 =
+5/4*tan(54&deg;)*<b>a</b>^2.</p>
+
+<p>In the previous section we found out that the angle OAD is equal
+to arcsin(1/(2*sin(36&deg;))), and therefore:
+</p>
+
+<set-var mytan="\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36&deg;}}\\right)}\\right]}" />
+<p>
+\[
+OD = OA \cdot <get-var mytan />
+= \frac{1}{2} \tan{54&deg;} <get-var mytan /> \cdot
+{\bf a}
+\]
+</p>
+
+<p>
+The volume of the
+pyramid is the area of its base multiplied by its height (OD)
+divided by 3 and so it is equal to:
+</p>
+
+
+<p>
+\[
+\frac{5}{4} \cdot \tan{54&deg;} \cdot {\bf a}^2 \cdot \\*
+\frac{1}{2} \cdot tan{54&deg;} \cdot <get-var mytan /> \cdot {\bf a} \cdot \frac{1}{3} = \\*
+\frac{5}{24} \cdot \tan^2{54&deg;} \cdot <get-var mytan />  \cdot {\bf a}^3
+\]
+</p>
+
+<p>Since there are 12 such pyramids in a dodecahedron, its volume
+is equal to this volume multiplied by 12. Thus, we get that the
+volume of a dodecahedron is:</p>
+
+<p>
+\[
+\frac{5}{2} \cdot \tan{54&deg;}^2 \cdot <get-var mytan /> \cdot
+{\bf a}^3 = ~7.66 * {\bf a}^3.
+\]
+</p>

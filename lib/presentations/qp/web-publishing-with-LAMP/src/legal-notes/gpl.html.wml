@@ -1,0 +1,65 @@
+#include 'template.wml'
+
+<points>
+<li>
+The <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a> stands for the
+"GNU General Public License", and is a commonly
+used open-source license.
+</li>
+<li>
+There are other open-source licenses that are similar to it.
+</li>
+<li>
+You may have heard about its <b>"viral"</b> nature, that forces code that uses
+GPLed code to be open-source as well. Should you worry about it?
+</li>
+<li>
+Usually there's nothing to be fear. The GPL (and all other
+<a href="http://www.gnu.org/philosophy/free-sw.html">free software
+licenses</a>) explicitly allow making use (and even modifying) the software
+for internal use.
+</li>
+<li>
+Software that operates web-sites is considered software for internal use, as
+it is not distributed to the outside.
+</li>
+</points>
+
+<h2>Amazon.com as an Example</h2>
+
+<points>
+<li>
+If we take Amazon.com for example, then they may make use of GPLed code for
+their web-site.
+</li>
+<li>
+If, however, they decide to distribute the code as a framework that allows
+setting up similar sites (say Amazonware), then they'll have to either comply
+by the terms of the GPL, and distribute it under a compatible free software
+license, or alternatively eliminate the use of the GPLed software.
+</li>
+<li>
+(Or if the option permits, get the copyright owner of the GPLed software to
+exempt them from the GPL somehow.)
+</li>
+</points>
+
+<h2>Conclusion</h2>
+
+<points>
+<li>
+This presentation was directed primarily at people who manage or wish
+to set up web-sites.
+</li>
+<li>
+If you want to sell a framework that will facilitate setting up web-sites
+using LAMP, I wish you the best of luck, but you'll
+have to handle the legal problems involved in making use of open-source
+(and proprietary) software available on your own.
+</li>
+<li>
+Generally note that the distribution terms of proprietary software may give
+you even more trouble, as far as basing a web-site on them is concerned.
+</li>
+</points>
+

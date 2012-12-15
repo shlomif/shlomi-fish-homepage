@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+<tt>AC_CHECK_LIB</tt> checks for a presence of a symbol inside a library.
+</li>
+
+<li>
+It can run optional shell codes, (accepted as the third and fourth arguments)
+if it succeeds or fails.
+</li>
+
+<li>
+If it succeeds it will prepend <tt>-l[library]</tt> to compiler flags,
+and define the preprocessor macro <tt>HAVE_LIB[library]</tt>.
+</li>
+
+<li>
+Examples:
+</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/common_macros/AC_CHECK_LIB/configure.in" />
+</quadpres_code_block>
+

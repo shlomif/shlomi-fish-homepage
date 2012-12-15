@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<p>
+In order to have access to a module from within your script (or from
+within another module) you can use the <tt>use</tt> directive followed
+by the name of the module as it is deduced from its path. Here's
+an example: assume that the file "MyModule.pm" is this:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/loading/MyModule.pm" />
+</quadpres_code_block>
+
+<p>
+And this is your script:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/loading/test.pl" />
+</quadpres_code_block>
+
+<p>
+That way, the program will print "Hello, World!" on the screen.
+</p>

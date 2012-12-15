@@ -1,0 +1,169 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "Shlomi Fish’s Art" />
+<latemp_meta_desc "Various artwork by Shlomi Fish: computer graphics, some photographs, and some music" />
+
+<p>
+I dedicate this section to the various pieces of computer graphics I designed
+, photographs I took and published here, and computerised music which I
+created. I will explain how I created the graphic art, so you can
+shamelessly duplicate my efforts and create similar art.
+</p>
+
+<toc_div />
+
+<div class="graphic_designs">
+
+<h2 id="graphics">Graphics</h2>
+
+<define-tag my_image endtag="required">
+<preserve id url thumb_url thumb_alt title />
+<set-var %attributes />
+
+<div class="design">
+<h3 id="<get-var id />"><a href="<get-var url />"><get-var title /></a></h3>
+
+<a href="<get-var url />"><img
+    src="<get-var thumb_url />" alt="<get-var thumb_alt />"
+    /></a>
+
+%body
+</div>
+<restore id url thumb_url thumb_alt title />
+</define-tag>
+
+<my_image id="back-to-my-homepage"
+    url="bk2hp/"
+    thumb_url="$(ROOT)/images/bk2hp.png"
+    thumb_alt="Back to my Homepage (Like Back to the Future)"
+    title="Back to my Homepage">
+
+<p>
+A “Back to my Homepage” image, many of them were common in ye olde web, but
+this time modelled like the logo of the movie <i>Back to the Future</i>.
+</p>
+
+</my_image>
+
+<my_image id="linux-slogan"
+    url="linux_banner/"
+    thumb_url="images/linux1-scaled.png"
+    thumb_alt="Linux - Because software problems should not cost money"
+    title="Linux Slogan">
+
+<p>
+A funny Linux Slogan -
+<q>Linux - Because software problems should not cost money.</q> rendered
+into a nice design.
+</p>
+
+</my_image>
+
+<my_image id="made-with-latemp"
+    url="made-with-latemp/"
+    thumb_url="made-with-latemp/made-with-latemp-big.png"
+    thumb_alt="Made with Latemp"
+    title="Made with Latemp">
+
+<p>
+A design reading “Made With Latemp” for providing a button for the
+<a href="http://web-cpan.shlomifish.org/latemp/">Latemp Offline Content Management
+System</a>.
+</p>
+
+</my_image>
+
+<my_image id="hhfg-background"
+    url="hhfg-background/"
+    thumb_url="hhfg-background/corner.png"
+    thumb_alt="“Human Hacking Field Guide” Background Image"
+    title="Background for the “Human Hacking Field Guide Story”">
+
+<p>
+After I wrote <a href="$(ROOT)/humour/human-hacking/">the story <i>Human Hacking
+Field Guide</i></a> I was looking for a nice design for its online chapters.
+I found a design I liked, but its images were not suitable, so I duplicated
+the effect using <a href="http://www.gimp.org/">the GIMP</a>.
+</p>
+
+</my_image>
+
+<my_image id="better-scm"
+    url="better-scm/"
+    thumb_url="better-scm/better-scm-logo.png"
+    thumb_alt="“Better SCM” Site Logo"
+    title="Better SCM Logo">
+
+<p>
+The Logo for <a href="http://better-scm.shlomifish.org/">Better-SCM web-site</a>.
+</p>
+
+</my_image>
+
+</div>
+
+<h2 id="slogans"><a href="slogans/">Slogans</a></h2>
+
+<p>
+Some slogans I came up with (<a href="$(ROOT)/humour.html">see my collection
+of aphorisms</a>) - converted to designs.
+</p>
+
+<h2 id="photography">Photography</h2>
+
+<p>
+I’m not much of a photographer, but I still enjoy taking photographs using
+my digital camera, and putting them online under a permissive licence to
+enrich the commons. Most of the photos I took are now
+<a href="http://flickr.com/photos/shlomif/">on my <b>Flickr account</b></a>.
+</p>
+
+<ul>
+<li>
+<a href="photography/2005-11-27-cats/">Photographs of Cats from 27
+November, 2005</a>
+</li>
+</ul>
+
+<h2 id="music">Music</h2>
+
+<ul>
+<li>
+<a href="http://modarchive.org/index.php?request=view_by_moduleid&amp;query=62919">“Yonathan
+Haqatan” - .mod version</a> - this is a Dance arrangement of a popular Israeli
+children’s song titled “Yonathan Haqatan” (= “Little Jonathan”) that my friend
+and I prepared.<br />
+<ul>
+<li>
+<a href="music/mods/yonqatan.wav.mp3">MP3 Version of the Song</a> (for
+MOD-challenged people)
+</li>
+<li>
+<a href="music/mods/yonqatan.mod.zip">Local Mirror of the MOD file</a> (inside
+a .zip file).
+</li>
+</ul>
+</li>
+</ul>
+
+<h2 id="recommendations">Recommendations</h2>
+
+<ul>
+<li><a href="recommendations/music/">Music (Albums and Collections)
+Recommendations</a> - a list of albums that I enjoy listening to and can
+recommend.
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

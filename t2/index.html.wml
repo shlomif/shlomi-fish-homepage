@@ -1,0 +1,155 @@
+#include '../template.wml'
+<latemp_subject "Shlomi Fish’s Homepage" />
+
+<page_extra_head_elements>
+;;; OpenID-enabling http://www.shlomifish.org/ - see:
+;;; http://blog.woobling.org/2009/05/your-openid-sucks.html
+<set-var openid="http://shlomif.livejournal.com/">
+<meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
+<link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
+<link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
+<link rel="openid.delegate" href="<get-var openid />" />
+<link rel="openid2.local_id" href="<get-var openid />" />
+</page_extra_head_elements>
+
+<div class="about_site">
+
+<h2 id="about_site">About this Site</h2>
+
+<p>
+Hi all, and welcome to the personal website of
+<a href="personal.html"><b>Shlomi Fish</b></a>. I
+am an Israeli software developer, and writer of stories, articles, essays and
+presentations.
+</p>
+
+<p>
+You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
+to the
+left.  Alternatively, you can traverse it page-by-page using the <b>arrows at
+the top</b>. There’s also <a href="#news">a <b>news feed</b></a> for what is
+new on the site, which is updated periodically.
+</p>
+
+<p>
+Here are some of the things you can find here:
+</p>
+
+<h3 id="humour"><a href="humour/">Humour</a></h3>
+
+<p>
+You can read <a href="$(ROOT)/humour/stories">large-scope humorous
+stories</a> (novellas), which I have written. The first (and still
+my favourite) one is
+<a href="$(ROOT)/humour/TheEnemy/"><i>The Enemy
+and How I Helped to Fight It</i></a>, which is a political
+satire, inspired by mid-eastern politics, but with a more universal
+message. I also wrote <a href="$(ROOT)/humour/TOWTF/"><i>The One with the
+Fountainhead</i></a>, an episode of the television show <i>Friends</i>
+which parodies the book The Fountainhead by Ayn Rand. I consider it my
+funniest piece yet. You can also read
+<a href="$(ROOT)/humour/human-hacking/"><i>The Human
+Hacking Field Guide</i></a>, which is a not-so-realistic realism about
+teenagers who are open-source enthusiasts, but with many jokes.
+</p>
+
+<p>
+I have some other unfinished stories.
+</p>
+
+<p>
+You can also read many <a href="$(ROOT)/humour/bits/">shorter bits</a>,
+including
+some <a href="$(ROOT)/humour/bits/facts/">factoids</a> about people
+and things (Chuck Norris/etc.), a
+<a href="$(ROOT)/humour.html">collection of original aphorisms
+and quotes</a> and
+<a href="$(ROOT)/humour/fortunes/">a large collection of fortune cookies</a> by
+myself and others.
+</p>
+
+<h3 id="philosophy"><a href="philosophy/">Articles and Essays</a></h3>
+
+<p>
+You can read various essays and articles I wrote about politics, software
+development and software management, the Internet, psychology, and ideology.
+</p>
+
+<define-tag old_essays_description>
+<p>
+I am <a href="philosophy/politics/define-zionism/">a Jew and an Israeli</a>
+by nationality, an agnostic by faith (or lack of it), and <a
+href="philosophy/philosophy/guide-to-neo-tech/">a “Neo-Tech”
+Objectivist</a> by ideology. (Objectivism
+<a href="$(ROOT)/humour/fortunes/shlomif-fav.html#neo-tech-selfishness">does
+not imply selfishness</a>, by the way, but rather rational self-growth.)
+My expertise as a software developer (in many fields), and my interest
+in philosophy, history, software management, and other fields also provide
+fodder for my essays and articles.
+</p>
+</define-tag>
+
+<h3 id="open-source"><a href="open-source/">Open Source Software</a></h3>
+
+<p>
+Links to software I wrote, and some resources with links to other software.
+Knock yourself out!
+</p>
+
+<h3 id="presentations"><a href="lecture/">Presentations</a></h3>
+
+<p>
+You can find several technical presentations I have written or maintain
+here. Especially recommended is the
+<a href="lecture/Perl/Newbies/"><i>Perl for Newbies</i> series</a>
+introducing <a href="http://perl-begin.org/">the Perl programming
+language</a> to absolute beginners.
+</p>
+
+<h3 id="puzzles"><a href="puzzles/">Puzzles and Riddles</a></h3>
+
+<p>
+Some pages with <a href="MathVentures/">Mathematical problems</a>,
+with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles. Some
+of these pages require a <a href="http://www.w3.org/Math/">MathML</a>-enabled
+browser.
+</p>
+
+<h3 id="computer_art"><a href="art/">Computer Art</a></h3>
+
+<p>
+You can find my lame attempts for art which I prepared, in
+<a href="art/">the art section</a> which includes graphic designs, photographs,
+and one piece of music.
+</p>
+
+<h3 id="links"><a href="links.html">Links</a></h3>
+
+<p>
+There are many links on the site, but I also concentrated many of them in
+one place. Who doesn’t like links?
+</p>
+
+<h3>Enjoy!</h3>
+
+<p>
+I hope you enjoy my web-site. If you do, please
+<a href="$(ROOT)/meta/how-to-help/">link here</a>, recommend
+it to your friends, and <a href="$(ROOT)/me/contact-me/">drop me a line</a>
+that you enjoyed it.
+</p>
+
+</div>
+
+<h2 id="news">News</h2>
+
+<:{
+use Shlomif::Homepage::News;
+
+binmode STDOUT, ":utf8";
+my $news = Shlomif::Homepage::News->new();
+print $news->render_front_page();
+}:>
+
+<h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
+

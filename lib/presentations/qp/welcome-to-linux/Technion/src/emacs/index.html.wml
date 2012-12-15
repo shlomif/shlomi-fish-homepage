@@ -1,0 +1,82 @@
+#include 'template.wml'
+
+<points>
+<li>
+Emacs is my recommended editor. There are some who prefer VI.
+IMHO they tend to be masochistic.
+</li>
+<li>
+First of all, Emacs like everything under linux has good documentation.
+When you run <tt>emacs</tt> type <tt>C-h t</tt> (that is <tt>Control+h</tt>
+and then <tt>t</tt>),
+and you will get to an emacs tutorial (that can also be found in the
+help menu)
+</li>
+<li>
+emacs usually allows moving around using the arrow keys and
+page_up/down keys but it always allows another better way which does not
+involve moving your fingers from the normal typing position. It will take
+getting use to but eventually will work much faster.
+</li>
+<li>
+Basic movement with the arrow keys can be replaced with:
+</li>
+</points>
+
+<table class="center">
+<tr>
+<td colspan="2">
+</td>
+<td>
+Previous Line: <tt>C-p</tt>
+</td>
+<td colspan="2">
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+<td>
+::
+</td>
+<td colspan="2">
+</td>
+</tr>
+<tr>
+<td>
+Backward: <tt>C-b</tt>
+</td>
+<td>
+...
+</td>
+<td>
+Current Cursor Position
+</td>
+<td>
+...
+</td>
+<td>
+Forward: <tt>C-f</tt>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+<td>
+::
+</td>
+<td colspan="2">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+</td>
+<td>
+Next Line: <tt>C-n</tt>
+</td>
+<td colspan="2">
+</td>
+</tr>
+</table>
+

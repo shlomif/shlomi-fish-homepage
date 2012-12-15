@@ -1,0 +1,43 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>Pod::Usage</tt> is a module that displays the POD page associated
+with the program.
+</li>
+<li>
+The following snippet invokes it:
+</li>
+</points>
+
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+    <span class="Statement">my</span> <span class="Identifier">$variant</span> = <span class="Identifier">$self</span>-&gt;{<span class="Constant">'</span><span class="Constant">default_variant</span><span class="Constant">'</span>};
+    <span class="Statement">my</span> <span class="Identifier">$help</span> = <span class="Constant">0</span>;
+    <span class="Statement">my</span> <span class="Identifier">$man</span> = <span class="Constant">0</span>;
+
+    Getopt::Long::Configure(<span class="Constant">'</span><span class="Constant">pass_through</span><span class="Constant">'</span>);
+    GetOptions(
+        <span class="Constant">&quot;</span><span class="Constant">g|game=s</span><span class="Constant">&quot;</span> =&gt; <span class="Identifier">\$variant</span>,
+        <span class="Constant">'</span><span class="Constant">help|h|?</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$help</span>,
+        <span class="Constant">'</span><span class="Constant">man</span><span class="Constant">'</span> =&gt; <span class="Identifier">\$man</span>
+        ) <span class="Statement">or</span> pod2usage(<span class="Constant">2</span>);
+
+    pod2usage(<span class="Constant">1</span>) <span class="Statement">if</span> <span class="Identifier">$help</span>;
+    pod2usage(-<span class="Constant">exitstatus </span>=&gt; <span class="Constant">0</span>, -<span class="Constant">verbose </span>=&gt; <span class="Constant">2</span>) <span class="Statement">if</span> <span class="Identifier">$man</span>;
+</pre>
+</td>
+</tr>
+</table>
+
+<points>
+<li>
+Read the
+<a href="http://www.perldoc.com/perl5.8.0/pod/perlpod.html">perlpod man
+page</a> for learning how to write POD. POD is easy and fun, and can
+be converted to many formats. It is especially useful for writing man pages.
+</li>
+</points>

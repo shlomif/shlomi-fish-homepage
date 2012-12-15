@@ -1,0 +1,80 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "Solver and Generator for ABC Path" />
+
+<set-var modname="Games-ABC_Path-Solver" />
+
+<set-var gen_modname="Games-ABC_Path-Generator" />
+
+<p>
+<get-var modname /> is a Perl 5 CPAN distribution which implements a solver
+for
+<a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
+brainbashers.com. It provides a standalone command-line “abc-path-solver”
+program and an Application Programmer Interface (API).
+</p>
+
+<p>
+The
+<get-var gen_modname /> Perl 5 CPAN
+distribution implements a generator for ABC Path layouts based on a random
+number seed. What it does is first generate a random path through the 5*5
+board, and then assigns the hints randomly. Sometimes the process takes a
+relatively long time to complete.
+</p>
+
+<p>
+The BitBucket.org repository also contains a port of the code of the solver
+and generator to JavaScript, which will hopefully allow it to be usable as
+an in-browser game in the future.
+</p>
+
+<p>
+Currently, documentation is a little lacking.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-abc-path-solver">For the ABC Path Solver</h3>
+
+<bitbucket_cpan_dist_links
+    dist="<get-var modname />"
+    freecode_url="http://freecode.com/projects/abc-path-solver"
+    bitbucket_url="https://bitbucket.org/shlomif/abc-path">
+</bitbucket_cpan_dist_links>
+
+<h3 id="links-abc-path-gen">For the ABC Path Generator</h3>
+
+<bitbucket_cpan_dist_links
+    dist="<get-var gen_modname />"
+    freecode_url="http://freecode.com/projects/abc-path-generator"
+    bitbucket_url="https://bitbucket.org/shlomif/abc-path">
+</bitbucket_cpan_dist_links>
+
+<h3 id="general-links">General ABC-Path Links</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.brainbashers.com/abcpath.asp">BrainBashers.com’s Daily
+ABC Path</a> - play ABC Path online. Furthermore, it is where I was introduced
+to the game.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.janko.at/">Otto Janko’s Homepage</a> - the inventor of
+ABC Path whose web-site contains many other puzzles (though most of the text
+is in German).
+</p>
+</li>
+
+</ul>
+
+<x11_licence name="<get-var modname /> and <get-var gen_modname />" plural="1" />
+
+<h2 id="news">News</h2>
+

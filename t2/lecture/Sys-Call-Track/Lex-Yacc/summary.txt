@@ -1,0 +1,100 @@
+Lex & Yacc Mini-Lecture and Demo Summary:
+-----------------------------------------
+
+1. Generators:
+--------------
+
+Lex and Yacc are _generators_, i.e: program that generate
+code of other programs. Each one has a different, important
+function in constructing compilers or interpreters, and can
+many times save a lot of programming hassle.
+
+2. Lex:
+-------
+
+* Unless we program in vi macros, we are usually interested, not
+in a character-by-character analysis of a stream of data, but
+rather in a token-by-token one. A token is a logical unit of the
+data stream. For example, the C expression:
+
+a = hello(5+6, "you");
+
+contains the following tokens:
+"a", "=", "hello", "(", "5", "+", "6", ",", "\"you\"", ")", ";"
+
+* A lexical analyzer (a.k.a: lexer or tokeniser) transform the data
+stream into a stream of tokens.
+
+3. How to use Lex:
+------------------
+
+* Lex works by identifying a regular expressions with each type of token,
+and then returning both the type and the text.
+
+* Lex will first attempt to find matches that match the most text, and then
+such that have earlier definitions. (the Perl version ignores the length of
+the matches and arbitrates based on definition place alone)
+
+* Show example of the lexer:
+
+4. Yacc:
+--------
+
+* Yacc is a parser (a.k.a syntax analyzer) generator. A parser takes a
+stream of tokens, and performs operations on it based on the precedence
+of the operators, their layout, and other grammatical rules.
+
+* Yacc automatically generates a parser based on a grammar specification
+that is very similar to the formal languages known from Computer Science.
+
+5. Formal Languages:
+--------------------
+
+* A formal language is a set of rules, each one may have several alternatives.
+
+* In each alternative a transformation from an upper construct to a sequence
+of other constructs is specified.
+
+* The parser tries to analyze whether the stream of tokens can be expanded to
+match the top-most construct.
+
+* Example: (constructs are in uppercase, atoms are in lowercase)
+
+The grammar S -> aSb | [empty string] matches all the strings of
+"", "ab", "aabb", "aaabbb", "aaaabbbb" etc.
+
+The grammar S -> S+S | S*S | N ; N -> [number]
+matches all mathematical expressions that contain only addition and
+multiplication.
+
+The grammar S -> S+S | S*S | (S) | N ; N -> [number]
+does the same only this time parenthesis are added.
+
+6. Precedence and Direction:
+-----------------------------
+
+The precedence and direction of processing of the operators can be
+specified in the beginning of the file.
+
+7. Yacc Example:
+----------------
+
+* Yacc accepts as input a formal language specification and some precedence
+and direction rules and generates an efficient LALR parser for the grammar.
+
+<<< Show the example in the text >>>
+
+8. Links and References:
+------------------------
+
+* The Parse::YYLex module.
+
+* The perl-byacc compiler.
+
+* The GNU Bison Info page
+
+* The GNU Flex man page
+
+* "Compilers - Theory, Techniques and Tools" by Alfred V. Aho, Ravi Sethi,
+and Jeffrey D. Ullman (a.k.a the "Dragon Book")
+

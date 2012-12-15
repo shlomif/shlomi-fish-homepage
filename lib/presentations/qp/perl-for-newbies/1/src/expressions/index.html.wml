@@ -1,0 +1,41 @@
+#include 'template.wml'
+
+<p>
+Perl supports such mathematical operators as <tt>+</tt>, <tt>-</tt>,
+<tt>*</tt> (multiplication), and parenthesis (<tt>( ... )</tt>). An example
+is worth a thousand words:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/expressions/operators.pl" />
+</quadpres_code_block>
+
+<p>
+The output of this program is:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/expressions/operators.out.txt" />
+</quadpres_code_block>
+
+<p>
+The operators have the same precedence as their mathematical equivalents. The
+parenthesis are useful for making sure a sub-expression will be evaluated
+before all others do.
+</p>
+
+<table border="1">
+<tr>
+<td>
+<h3>Note:</h3>
+
+You can use commas to print more than one expression at once. It beats
+writing a separate <tt>print</tt> command for every expression you wish to
+output. However, for better readability, it is recommended that you will
+separate your expressions among several prints.
+</td>
+</tr>
+</table>
+
+
+

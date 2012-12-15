@@ -1,0 +1,57 @@
+#include 'template.wml'
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Literate_programming">Literate
+Programming</a> is a method of writing code that allows one to
+intermingle code with documentation, re-order the sections of the code
+in relevance to their intention, and create an entire document typeset
+that is explaining the code, with full cross-references and interlinks.
+As Mark Jason Dominus explains
+<a href="http://www.perl.com/pub/a/tchrist/litprog.html">POD is <b>not</b>
+Literate Programming</a>.
+</p>
+
+<p>
+Traditionally, Literate Programming systems have generated
+<a href="http://en.wikipedia.org/wiki/LaTeX">TeX/LaTeX</a> output,
+but more recently there have been ones that could output
+<a href="http://en.wikipedia.org/wiki/DocBook">DocBook/XML</a>.
+</p>
+
+<p>
+I am personally not writing my code in a Literate Programming style, because
+I feel that:
+</p>
+
+<ol>
+
+<li>
+<p>
+It will require much more effort to create code that will only be marginally
+easier to understand.
+</p>
+</li>
+
+<li>
+<p>
+The documentation will need to be maintained along with the code and may
+become out-of-date. Even inline comments suffer from this symptom, and
+external documentation much more so.
+</p>
+</li>
+
+<li>
+<p>
+The code should be structured to be as self-documenting as possible.
+For example, instead of documenting what a block of code is doing, one
+should extract a subroutine with a name that conveys the intention.
+</p>
+</li>
+
+</ol>
+
+<p>
+However, I'm mentioning Literate Programming here for completeness sake,
+should you choose to follow this route.
+</p>
+

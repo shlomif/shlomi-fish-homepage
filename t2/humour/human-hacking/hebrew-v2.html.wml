@@ -1,0 +1,22 @@
+<set-var rtl_layout=1 />
+#include "multi-lang.wml"
+<set-var shlomif_lang="he" />
+
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "מדריך השדה לשפצור אנשים" />
+
+<toc_div lang="he" />
+
+<p><b>מאת:</b> שלומי פיש </p>
+
+<h2 id="text">הטקסט</h2>
+
+<div class="story">
+
+<h3 id="the-story">הטקסט</h3>
+#include "docbook/5/rendered/human-hacking-field-guide-hebrew-v2.xhtml"
+
+</div>
+

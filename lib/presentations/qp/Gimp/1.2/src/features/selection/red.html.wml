@@ -1,0 +1,68 @@
+#include 'template.wml'
+
+
+
+
+<points>
+
+
+<li>
+An image has a mode that enables you to "paint" the selection using existing
+tools.
+</li>
+
+<li>
+In this mode colouring with black adds pixels to the selection.
+</li>
+
+<li>
+And colouring with white excludes them.
+</li>
+
+<li>
+To access this mode press the button with the Red frame in the lower-left
+corner of the image.
+</li>
+
+<li>
+Note: this mode has a meta-selection, but there aren't any meta<sup>N</sup>-selections.
+</li>
+
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Create a new image
+</li>
+
+<li>
+Select some region in it.
+</li>
+
+<li>
+Press the red button
+</li>
+
+<li>
+Switch colours from black to white and paint the selection.
+</li>
+
+<li>
+Switch back to Selection Mode
+</li>
+</ol>
+
+</td>
+</tr>
+</table>
+
+
+

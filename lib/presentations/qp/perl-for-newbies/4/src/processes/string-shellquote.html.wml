@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<p>
+When invoking raw shell commands (instead of passing a list of command
+line arguments) one can easily cause a situation where an interpolated
+string given as argument will place arbitrary code in the shell. If
+for example we have the following qx call:
+</p>
+
+<quadpres_code_block>
+my $ls_output = qx/ls '$dir'/;
+</quadpres_code_block>
+
+<p>
+Then <tt>$dir</tt> may be set to "<tt>' ; rm -fr ~ ; '</tt>",
+which will make the shell delete our entire home directory.
+</p>
+
+<p>
+To overcome such problems, one should make use of
+<a href="http://search.cpan.org/dist/String-ShellQuote/">the
+String-ShellQuote module</a> which provides functions for safely
+preventing shell-code injection.
+</p>
+

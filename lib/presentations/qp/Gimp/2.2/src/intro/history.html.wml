@@ -1,0 +1,48 @@
+#include 'template.wml'
+
+<points>
+<li>
+<p>
+A document that details the GIMP's history can be found here:
+</p>
+
+<p>
+<a href="http://docs.gimp.org/en/ch01s03.html">http://docs.gimp.org/en/ch01s03.html</a>
+</p>
+</li>
+
+<li>
+GIMP was started as a project by two Berkeley students called Spencer
+Kimball and Peter Mattis. It was first meant as a university project that
+they received credit for.
+</li>
+
+<li>
+GIMP used Motif at first but Kimball and Mattis later developed
+<a href="http://www.gtk.org/">Gtk+</a>, so it can be used as its underlying
+GUI library instead. Since then, Gtk+ has become the basis for many other
+projects including GNOME.
+</li>
+
+<li>
+GIMP 1.0 was released several years after the switch to Gtk+, and GIMP 1.2
+(which already used Gtk+ 1.2) was released three years afterwards.
+</li>
+
+<li>
+Since then, the GIMP has acclaimed many fans and it is considered the most
+complete and active image manipulation programs for UNIXes to-date.
+</li>
+
+<li>
+GIMP 2.0.0 was released in April 2004, featuring a port to Gtk+ 2.0, an
+improved user-interface, a general code cleanup and modularization and
+many other improvements.
+</li>
+
+<li>
+GIMP 2.2.0 was released in December 2004. It is backwards compatible
+to GIMP 2.0.x, and featured various improvements, additions and cleanups.
+</li>
+</points>
+

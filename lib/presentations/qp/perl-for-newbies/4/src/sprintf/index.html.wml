@@ -1,0 +1,35 @@
+#include 'template.wml'
+
+<p>
+The <tt>sprintf</tt> built-in function can be used to translate a format
+string with some conversions embedded inside, and some parameters into a
+formatted string. Each conversion is specified by the starting character of the
+percent sign (<tt>%</tt>), and can have a type and several parameters that will
+dictate how it will be formatted in the output string. The output string is
+returned by <tt>sprintf</tt>.
+</p>
+
+<p>
+Here's an example that illustrates its use:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/sprintf/sprintf1.pl" />
+</quadpres_code_block>
+
+<p>
+The output is:
+</p>
+
+<quadpres_code_block>
+Hello "Nathan"! Your lucky number is 65.
+</quadpres_code_block>
+
+<p>
+As you can see, the first conversion is taken from the first argument, and the
+second one from the second argument. That's how sprintf works: processing
+the conversions from the arguments in order.
+</p>
+
+<qpcontents />
+

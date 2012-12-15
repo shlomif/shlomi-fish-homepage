@@ -1,0 +1,21 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Quotes from Friends - (Fortunes Cookies) - Shlomi Fish’s Collection" />
+
+<h2*>About</h2*>
+
+<p>
+A collection of excerpts from the Television show
+<a href="http://en.wikipedia.org/wiki/Friends">Friends</a> in
+XML-Grammar-Fortune format, as collected
+by Shlomi Fish. If you enjoy this, you may enjoy <a href="$(ROOT)/humour/TOWTF">“The One with the Fountainhead”</a>.
+</p>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/friends.xhtml-for-input"
+</div>
+

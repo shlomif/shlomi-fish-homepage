@@ -1,0 +1,58 @@
+#include 'template.wml'
+
+<points>
+<li>
+There are 8 stacks of cards, 4 freecells, and 4 foundations.
+The game is played with one deck.
+</li>
+
+<li>
+At the beginning of play, the cards are dealt to the stacks
+(4*7+4*6). The faces of all the cards are visible at the beginning
+of play.
+</li>
+
+<li>
+A freecell can hold one <b>single</b> card.
+</li>
+
+<li>
+The foundations are built from ace to king and the object of the
+game is to move all the cards to the foundations.
+</li>
+
+<li>
+A card can be placed on top of a card that is of the opposite
+colour, and is higher in rank by 1, assuming the latter is at
+the top of a stack.
+</li>
+
+<li>
+An empty stack may be filled with any card.
+</li>
+
+<li>
+An atomic move consists of:<br />
+<ul>
+   <li>
+   Moving a card from a stack to a vacant freecell.
+   </li>
+
+   <li>
+   Moving a card from a freecell to a parent card on a stack.
+   </li>
+
+   <li>
+   Moving a card from the top of a stack, on top of a parent
+   card on a different stack.
+   </li>
+
+   <li>
+   Moving a card from the top of a stack or from a freecell to the
+   foundations.
+   </li>
+</ul>
+</li>
+
+
+</points>

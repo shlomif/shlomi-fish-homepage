@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<points>
+<li>
+The OSI is a model defined by ISO, which splits the network to 7 layers.
+</li>
+<li>
+Each of the layers should need to communicate only with
+the layer above it and the layer below it, through well defined
+interfaces
+</li>
+<li>
+That way it should be possible to replace each layer
+implementation with a different implementation, with no need to
+modify any additional network component
+</li>
+<li>
+The OSI model defines only
+the role each layer should perform in the network.
+</li>
+<li>
+Here is a diagram of the OSI model:
+</li>
+</points>
+
+<p>
+<img src="7layer.gif" alt="OSI 7 Layers Model" />
+</p>

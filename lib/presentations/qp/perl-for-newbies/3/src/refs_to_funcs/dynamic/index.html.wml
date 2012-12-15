@@ -1,0 +1,13 @@
+#include 'template.wml'
+
+<p>
+It is possible to define a dynamic reference to a function. The code of
+its function is written as part of the assignment expression and can see
+all the variables in the scope in which it was defined. Here's an
+example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/refs_to_funcs/dynamic/dynamic.pl" />
+</quadpres_code_block>
+

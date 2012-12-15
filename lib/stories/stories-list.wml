@@ -1,0 +1,166 @@
+<define-tag the_enemy_summary>
+
+<p>
+A member of the terrorist organisation “The Organisation” gets
+up in the morning, goes to his post, and quits. But before he
+leaves, he makes a suggestion that makes his former comrades
+fight each other to death. Join the now ex‐Member of the
+Organisation as he embarks on an ego trip, where he tries to
+prove that A can in fact be not‐A, whether or not Aristotle
+would agree.
+</p>
+
+</define-tag>
+
+<define-tag we_the_living_dead_abstract>
+
+In this episode we discover the true essence of the Q Continuum, and some
+“Living Dead”: conscious beings (including humans) who reportedly died, but
+actually were saved and still live a prosperous life elsewhere.
+
+</define-tag>
+
+<define-tag selena_mandrake_abstract>
+
+An Anglo-American geeky girl in her high school senior year in 2011
+California, ends up finding out that she is none other than <b>The</b> Slayer,
+a legendary heroine who is destined to slay many notable vampires and demons,
+culminating in none other than The Master. See how she manages to do so,
+despite being completely non-violent, and even supportive of the demons she
+encounters.
+
+</define-tag>
+
+<define-tag humour_link>$(ROOT)/humour/%0</define-tag>
+
+<define-tag humour_story endtag="required">
+<preserve id humour_href text tag />
+<set-var %attributes />
+<div class="story">
+<<get-var tag /> id="<get-var id />"><a
+href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var
+tag />>
+%body
+</div>
+<restore id humour_href text tag />
+</define-tag>
+
+<define-tag humour_stories_list_text>
+
+<humour_story tag="h3" id="enemy-how-i-helped" humour_href="TheEnemy/"
+text="The Enemy and How I Helped to Fight it">
+
+<p>
+A political satire about the situation that prevailed in the Israeli-Lebanese
+border. Lots of exits about mathematical logic, and a general critique of the
+irrationality guiding political bodies.
+</p>
+
+<the_enemy_summary />
+
+</humour_story>
+
+<humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
+text="The One with the Fountainhead">
+
+<p>
+A two-part episode of Friends that parodies the book <i>The Fountainhead</i> by
+Ayn Rand. Note that I received input from one person who is not familiar with
+the show, yet enjoyed this work very much.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
+text="The Human Hacking Field Guide">
+
+<p>
+A story about teenagers in Los Angeles, California, around 2005, who are
+dealing extensively with open-source development. An unlikely female
+<a href="http://catb.org/~esr/faqs/hacker-howto.html">software hacker</a>
+(not a computer intruder) wannabe is getting tutored by an even more
+unlikely, but much more experienced, female software hacker.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
+text="Star Trek: We the Living Dead">
+
+<p>
+My own invented episode of the new crop of Star Trek series.
+<we_the_living_dead_abstract />
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="selena-mandrake" humour_href="Selena-Mandrake/"
+text="Selena Mandrake - The Slayer">
+
+<p>
+<selena_mandrake_abstract />
+</p>
+
+<p>
+This screenplay, a parody and reflection on
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
+Vampire Slayer</a> (both the movie and the show) and inspired by many
+other sources, is work-in-progress.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="pope-died-on-sunday" humour_href="Pope"
+text="The Pope Died on Sunday">
+
+<p>
+A description of an insane week in the life of a female American
+graphic artist. A typical Hollywoodian story with not so Hollywoodian elements.
+Work in progress, and available only in Hebrew for the time being.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="humanity" humour_href="humanity/" text="Humanity">
+
+<p>
+A parody about humanity and modern life in particular. Humanity describes
+a day in the life of a Semitic city circa 500 B.C. Work in progress.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="blue-rabbit" humour_href="Blue-Rabbit-Log/"
+text="The Blue Rabbit Log">
+
+<p>
+Screenplays for a series of crazy comedy films parodying
+<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
+Role-Playing Games</a>. Join the band of Player Characters called “The
+Blue Rabbit Adventuring Company”, as they journey in the imaginary
+world that was invented by the game master, and their struggles and
+encounters with monsters, the non-player characters, their players,
+and... the Game Master! (Muahahahahaha).
+</p>
+
+<p>
+Work in progress.
+</p>
+
+</humour_story>
+
+</define-tag>
+
+<define-tag rejects_road_to_heaven>
+
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/"
+text="The Road to Heaven is Paved with Bad Intentions">
+
+<p>
+The sequel to <i>The Enemy</i>. The protagonist travels back in time and tries
+to prevent World War II.
+</p>
+
+</humour_story>
+
+</define-tag>

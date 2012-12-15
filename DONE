@@ -1,0 +1,116 @@
+* Make the site OpenID-loginable.
+
+* Add XML-Grammar-Fiction to the Task-Sites-ShlomiFish.
+
+* Add perl-Spork-Shlomify-0.0200-1 to the Task-Sites-ShlomiFish.
+
+* Add Text/VimColor.pm to the Task-Sites-ShlomiFish.
+
+* Remove WWW::Google::SiteMap from Task-Sites-ShlomiFish.
+
+* Add quad-pres to the installation instructions.
+
+* Add the "Escape from GNU Autohell" page.
+
+* Add the "Editors and IDEs" software resources page.
+
+* Add the "Don't abuse JavaScript" page:
+    - Hall of Shame:
+        - Amarok 2.x
+        - GNOME 3.0.
+    - "JavaScript: The Good Parts" Google Tech Talk video.
+        - more accurately "JS: The Bad Parts"
+    - JS has no sprintf.
+    - JS has no date formatting.
+    - JS has no sort.
+    - "var" is optional.
+    - line breaks imply new expressions - forces the "if (COND()) {" style.
+    - the new JavaScript standard presentation on Google Tech Talk.
+        - many JS shortcoming.
+    - JS's foreach loop loops over indices instead of the array's contents.
+    - http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html
+    - function() function() to start a closure.
+
+* Convert the gvimisation of the source code in the quad-pres presentations
+to the Lambda Calculus lecture's CPAN module.
+
+* Put the Template-Toolkit presentation slides on the site.
+
+* Convert the CSS away from TTML and into a script that will process
+them using an explicit call to Template Toolkit.
+
+* Upload the non-Quad-Pres presentations sources.
+
+* Fix the 404 page on sub-directories:
+    - http://www.shlomifish.org/open-source/projects/Module-Format/foo.html
+    - $(ROOT) is wrong.
+
+* Add the anti-spam policy.
+
+* Include a clear warning next to the @gmail.com address that
+shlomif@iglu.org.il is preferable.
+
+* Add inkscape to the pre-requisites.
+
+* Add jing to to the pre-requisites.
+
+* Add Apache fop to the pre-requisities.
+
+* Add pngcrush to the pre-requisites.
+
+* humour/fortunes' show.cgi:
+    - Add the title of the fortune (inside the h3) in a new text field - 
+    - Add the fortunes collection to which the fortune belongs in a separate
+    column.
+        - link to that page.
+    - add the CSS of the screenplays.
+    display it.
+
+* Put t2/t/hilazon.doc t2/t/oded-c/bla_bla.doc.gz t2/t/oded-c/No_name.doc.gz
+under t2/humour/by-others/ .
+
+* Fix the breadcrumbs trail in http://www.shlomifish.org/toggle.html .
+
+* Fortunes pages: link to the XML and plain-text files.
+
+* Make sure that expanded items in the navigation menus don't close the
+previously expanded items (which is annoying and causes them to jump).
+
+* Typos:
+    - "proportionm".
+        - Index: t2/humour/recommendations/films/shlomi-fish-films-recommendations.xml
+        - search for similar.
+    - fix the broken Unicode on t2/humour/Selena-Mandrake/index.html.wml .
+    - fix the broken Unicode on t2/humour/Pope/index.html.wml .
+
+* Add Objectivist C to the anti-apple page's jokes.
+
+* Add Objectivist C to the "One with the fountainhead" page.
+
+* Add the ABC Path Generator to the abc-path section.
+    - add the JS versions of the solver and generator.
+
+* Fix the formatting/CSS-style on http://www.shlomifish.org/SFresume.html .
+
+* Add these questions to the FAQ:
+    - Which programming languages do you know?
+    - Which programming languages did you start with?
+    - Is “Shlomi Fish” your real name?
+
+* Add a section navigation menu to t2/meta/ .
+
+* Update the instructions for how to build the homepage:
+
+* Create a block to license a project under t2/open-source/projects/ under
+the X11 licence.
+
+* Integrate building the lectures/presentations into the homepage.
+
+* Convert "The Enemy and How I Helped to Fight It" Hebrew/English to unicode
+punctuation.
+    - WONTFIX
+
+* Fix the fact that the "Private Tutor HTML Ad" goes beyond the right
+margins.
+
+* Fix the URLs that are spelt "fibonnaci" instead of "fibonacci".

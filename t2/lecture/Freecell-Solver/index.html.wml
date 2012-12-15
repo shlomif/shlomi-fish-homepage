@@ -1,0 +1,46 @@
+#include '../template.wml'
+
+<latemp_subject "Freecell Solver - Evolution of a C Program" />
+
+<p>
+This presentation covers the evolution of
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>, an
+ANSI C library for solving some types of Solitaire games. It explains the
+algorithms, data structures and decisions that were implemented there.
+</p>
+
+<ul>
+
+<li>
+<a href="slides/"><b>The Slides</b></a>
+</li>
+
+<li>
+<a href="fcs-lecture-points-take3.txt">Summary of the lecture</a>
+</li>
+
+<li>
+<a href="slides/src.tar.gz">Quad-Pres Source of the Slides</a>
+</li>
+
+<li>
+<a href="http://fc-solve.shlomifish.org/download.html">The various versions of
+the program for download.</a>
+</li>
+
+<li>
+<a href="Summary-deprecated.txt">Deprecated summary of the lecture</a>
+</li>
+
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

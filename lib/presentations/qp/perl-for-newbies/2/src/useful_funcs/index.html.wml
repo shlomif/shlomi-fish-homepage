@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+
+
+<p>
+Perl has many functions that allow batch operations on entire arrays. Those
+functions are not only convenient, but are also faster than unrolling them
+into <tt>for</tt> and <tt>foreach</tt> loops.
+</p>
+
+<p>
+This behaviour is sometimes referred to as the <b>perl pipeline</b> because
+it resembles the pipeline used by the UNIX shells.
+</p>
+
+<qpcontents />
+
+
+

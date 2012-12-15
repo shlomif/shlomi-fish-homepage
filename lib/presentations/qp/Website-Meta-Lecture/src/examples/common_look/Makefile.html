@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Docs/homepage/homepage/trunk/lib/presentations/qp/Website-Meta-Lecture/src/examples/common_look/Makefile.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Comment { color: #0000ff; }
+.Constant { color: #ff00ff; }
+.Statement { color: #a52a2a; font-weight: bold; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Identifier { color: #008b8b; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Identifier">D </span>= dest
+
+<span class="Identifier">TARGETS </span>= <span class="Identifier">$(D)</span>/index.html <span class="Identifier">$(D)</span>/links.html <span class="Identifier">$(D)</span>/download.html
+<span class="Identifier">IMAGES </span>= <span class="Identifier">$(D)</span>/style.css
+
+<span class="Identifier">all:</span> <span class="Identifier">$(TARGETS)</span> <span class="Identifier">$(IMAGES)</span>
+
+<span class="Comment"># This flag makes sure WML generates XHTML output</span>
+<span class="Identifier">WML_FLAGS </span>= --passoption=2,-X
+
+<span class="Comment"># This flag sets ROOT to be the current directory</span>
+<span class="Identifier">WML_FLAGS </span>+= -D ROOT~.
+
+<span class="Identifier">$(TARGETS) ::</span> <span class="Identifier">$(D)</span>/<span class="Identifier">%</span> : <span class="Identifier">%</span>.wml template.wml
+<span class="Constant">    wml </span><span class="Identifier">$(WML_FLAGS)</span><span class="Constant"> -DFILENAME=</span><span class="Constant">&quot;</span><span class="Identifier">$(</span><span class="Statement">notdir</span><span class="Identifier"> $@)</span><span class="Constant">&quot;</span><span class="Constant"> </span><span class="Identifier">$&lt;</span><span class="Constant"> &gt; </span><span class="Identifier">$@</span>
+
+<span class="Identifier">$(IMAGES) ::</span> <span class="Identifier">$(D)</span>/<span class="Identifier">%</span> : <span class="Identifier">%</span>
+<span class="Constant">    cp -f </span><span class="Identifier">$&lt;</span><span class="Constant"> </span><span class="Identifier">$@</span>
+
+</pre>
+</body>
+</html>

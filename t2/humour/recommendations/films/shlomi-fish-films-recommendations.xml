@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE comparison SYSTEM "product-syndication.dtd">
+<!--
+;;; To add:
+* Disney's Aladdin
+* "Speed"
+* As Good as It Gets:
+    - http://en.wikipedia.org/wiki/As_Good_as_It_Gets
+* Robin Hood - Men in Tights.
+* Robin Hood - Prince of Thieves.
+* Hot Shots I + II
+* Stand by Me.
+* Spy Hard
+* The Flying Bed
+* The Remains of the Day
+* A Perfect World
+* Green Card
+* http://en.wikipedia.org/wiki/My_Father_the_Hero_%281991_film%29
+* Blazing Saddles
+* The one with John Candy and Hemingway.
+* Cool Runnings.
+* Nothing but Trouble.
+* The Great Dinosaur Robbery
+* Monty Python and the Holy Grail.
+* Monty Python - Life of Brian.
+* Gladiator
+* Labyrinth
+* Clueless
+* Sense and Sensibility
+* The Importance of Being Earnst
+* A Good Woman
+* Indiana Jones I-III
+* Reality Bites.
+* Renaissance Man (Danny DeVito): http://www.imdb.com/title/tt0110971/
+* "Twins" - http://www.imdb.com/title/tt0096320/
+* Get Shorty.
+* Junior - http://www.imdb.com/title/tt0110216/
+* Beauty and the Beast.
+* The Quick and the Dead.
+* http://en.wikipedia.org/wiki/Punchline_(film)
+* http://www.imdb.com/title/tt0190521/ - Kiss My Act
+* The Cutting Edge
+* Enemy Mine.
+* Airborne
+* http://en.wikipedia.org/wiki/Witness_(1985_film)
+* http://en.wikipedia.org/wiki/The_Client_(Grisham film).
+* Charlie's Angels
+* Honeymoon in Vegas (?)
+* Who Framed Roger Rabbit
+* Just go with it.
+    - http://shlomif.livejournal.com/64707.html
+
+Done:
+=====
+* Amelie
+* Spaceballs.
+* http://www.imdb.com/title/tt0095304/ - High Spirits
+* The Neverending Story (I).
+* Eight days a week.
+* The Naked Gun, 1, 2 and 3.
+* Jerry Maguire.
+* The Emperor's New Groove
+* Star Wars IV-VI.
+* Bring it On (I)
+* The Lion King
+* Mary Poppins.
+* Willo and the Princess.
+* http://www.imdb.com/title/tt0060640/ - Dick-van-Dyke Lt. Robin Crusoe, U.S.N.
+* Back to the Future I, II, and III.
+
+-->
+
+<product-syndication>
+    <data>
+        <cat id="films">
+            <title>Shlomi Fish’s Films’ Recommendations</title>
+            <desc appendtoc="1">
+<p>
+    This is a list of films I have watched and can recommend. <a
+        href="shlomi-fish-films-recommendations.xml">The source</a> used
+    to generate this page can be rendered using the
+    <a href="http://search.cpan.org/dist/XML-Grammar-ProductsSyndication/">XML-Grammar-ProductsSyndication</a> CPAN module.
+</p>
+
+            </desc>
+            <cat id="favourite-films">
+                <title>My Favourite Films</title>
+                <desc>
+                    <p>
+                        This is a list of my favourite films.
+                    </p>
+                </desc>
+                <prod id="princess-bride">
+                    <title>The Princess Bride</title>
+                    <isbn>B00005LOKQ</isbn>
+                    <creator type="director">Rob Reiner</creator>
+                    <rellink href="http://www.imdb.com/title/tt0093779/"
+                        text="IMDB"
+                        />
+                    <rellink href="http://en.wikipedia.org/wiki/The_Princess_Bride_(film)"
+                        text="Wikipedia"
+                        />
+
+                    <desc>
+
+<p>
+This is my favourite movie, and the favourite of a lot of others from
+my generation. It has an excellent dialogue, with many power sentences. The
+acting is excellent, and the film is very enjoyable.
+</p>
+
+<p>
+The Princess Bride has the format of a classic fairy tale, but with a few
+interesting and non-ordinary twists. It is funny, engaging and highly
+recommended.
+</p>
+
+                    </desc>
+                </prod>
+                <prod id="spaceballs">
+                    <title>Spaceballs</title>
+                    <isbn>0792844890</isbn>
+                    <creator type="director">Mel Brooks</creator>
+                    <rellink href="http://www.imdb.com/title/tt0094012/"
+                        text="IMDB"
+                        />
+                    <rellink href="http://en.wikipedia.org/wiki/Spaceballs"
+                        text="Wikipedia"
+                        />
+                    <desc>
+<p>
+    Spaceballs is one of the funniest movies I have ever seen. Essentially a
+    parody of Star Wars and other Science-Fiction films, this films features
+    Druish Princesses, mercenaries who “don’t do it for money”, but rather
+    for “a shitload of money”, and an old small alien guru who claims that you
+    should “never underestimate the power of the Schwartz”.
+</p>
+
+<p>
+    I’ve seen this movie several times, and have either enjoyed it, or found
+    it disappointing alternately. But the first time is a blast.
+</p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="comedies">
+                <title>Comedies</title>
+                <desc>
+                    <p>
+                        I always like a good laugh. This is a list of comedies
+                        that I enjoyed.
+                    </p>
+                </desc>
+                <prod id="mary-poppins">
+                    <title>Mary Poppins</title>
+                    <isbn>B0002VEPRQ</isbn>
+                    <creator type="director">Robert Stevenson</creator>
+                    <rellink href="http://www.imdb.com/title/tt0058331/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Mary_Poppins_(film)"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            This is one of my favourite live-actors
+                            Disney movies. It’s funny, fun, with a lot
+                            of great songs and other music, with many jokes
+                            and anecdotes, and with a great plot.
+                        </p>
+                        <p>
+                            I’ve seen it several times and always enjoyed
+                            it. I’ve also read the first two books in the
+                            series, and they are very nice, but very different
+                            from the film.
+                        </p>
+                    </desc>
+                </prod>
+                <prod id="amelie">
+                    <title>Amélie</title>
+                    <isbn>B0000640VO</isbn>
+                    <creator type="director">Jean-Pierre Jeunet</creator>
+                    <rellink href="http://www.imdb.com/title/tt0211915/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Am%C3%A9lie"
+                        text="Wikipedia" />
+                    <desc>
+<p>
+A wonderful French bittersweet comedy that takes place in early-2000
+France. Amélie is a young woman who was raised in solitude, and is
+starting to familiarise herself with the outside world. She tries to do
+good deeds to her loved ones, and avenge a man she hates.
+</p>
+
+<p>
+Funny, exciting, and engaging - Amélie is a wonderful movie.
+</p>
+                    </desc>
+                </prod>
+                <prod id="high-spirits">
+                    <title>High Spirits</title>
+                    <isbn>B000063JDK</isbn>
+                    <creator type="director">Neil Jordan</creator>
+                    <rellink href="http://www.imdb.com/title/tt0095304/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/High_Spirits_%28film%29"
+                        text="Wikipedia" />
+                    <desc>
+<p>
+I saw this movie several times on television, and liked what I saw. An
+Irishman decides to popularise his Bed and Breakfast hotel by pretending
+it is a ghost castle and inviting several American guests to stay there.
+But much to everyone’s surprise, real actual ghosts appear and start
+haunting the living.
+</p>
+
+<p>
+My favourite quote from the movie is:
+</p>
+
+<blockquote>
+<p>
+Oh my God, What have I done? Oh my God! What have I done? Oh my God! What
+a woman!
+</p>
+</blockquote>
+                    </desc>
+                </prod>
+                <set id="naked-guns">
+                    <title>The Naked Guns</title>
+                    <prod id="the-naked-gun">
+                        <title>The Naked Gun: From the Files of Police Squad</title>
+                        <isbn>0792166469</isbn>
+                        <creator type="director">David Zucker</creator>
+                        <rellink href="http://www.imdb.com/title/tt0095705/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/The_Naked_Gun:_From_the_Files_of_Police_Squad!"
+                            text="Wikipedia" />
+                    </prod>
+                    <prod id="naked-gun-2">
+                        <title>The Naked Gun 2½ - The Smell of Fear</title>
+                        <isbn>0792166493</isbn>
+                        <creator type="director">David Zucker</creator>
+                        <rellink href="http://www.imdb.com/title/tt0102510/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/The_Naked_Gun_2½:_The_Smell_of_Fear"
+                            text="Wikipedia" />
+
+                    </prod>
+                    <prod id="naked-gun-3">
+                        <title>The Naked Gun 33⅓ - The Final Insult</title>
+                        <isbn>0792166523</isbn>
+                        <creator type="director">Peter Segal</creator>
+                        <rellink href="http://www.imdb.com/title/tt0110622/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Naked_Gun_33⅓:_The_Final_Insult"
+                            text="Wikipedia" />
+                    </prod>
+                    <desc>
+                        <p>
+                            The Naked Guns are among the funniest movies
+                            I’ve ever seen. I’ve watched them many times
+                            on T.V. (and watched the third one originally
+                            in the cinema), and enjoy them almost every time
+                            I watch them.
+                        </p>
+                        <p>
+                            <a href="http://en.wikipedia.org/wiki/Leslie_Nielsen">Leslie
+                                Nielsen</a> portrays a tactless, clumsy,
+                            and naïve (but lovable) policeman, who manages to
+                            save the day despite everything, with the help
+                            of his friends. The movies have a lot of jokes,
+                            from slapstic, to funny dialogues, to punch lines,
+                            to absurd situations.
+                        </p>
+                    </desc>
+                </set>
+                <prod id="eight-days-a-week">
+                    <title>Eight Days a Week</title>
+                    <isbn>B000EMI6J6</isbn>
+                    <creator type="director">Michael Davis</creator>
+                    <rellink href="http://www.imdb.com/title/tt0119054/"
+                        text="IMDB" />
+
+                    <rellink href="http://en.wikipedia.org/wiki/Eight_Days_a_Week_(film)"
+                        text="Wikipedia"
+                        />
+                    <desc>
+                        <p>
+                            A high school graduate is in love with his
+                            female neighbour
+                            (played by
+                            <a href="http://en.wikipedia.org/wiki/Keri_Russell">Keri
+                                Russell</a>) and taking advice from his
+                            grandfather, decides to stay at her lawn until
+                            he wins her heart. In the mean-time there are
+                            some funny incidents from both families and
+                            from the neighbours.
+                        </p>
+                        <p>
+                            Here’s <a
+                                href="http://www.advogato.org/person/shlomif/diary/240.html">my
+                                review of the movie</a> upon first seeing it.
+                        </p>
+                    </desc>
+                </prod>
+                <prod id="what-about-bob">
+                    <title>What about Bob?</title>
+                    <isbn>B00004RJ73</isbn>
+                    <creator type="director">Frank Oz</creator>
+                    <rellink href="http://www.imdb.com/title/tt0103241/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/What_About_Bob%3F"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            I originally saw this comedy on Video, and
+                            really liked it. It is one of the only movies with
+                            both
+                            <a href="http://en.wikipedia.org/wiki/Bill_Murray">Bill
+                                Murray</a> and
+                            <a href="http://en.wikipedia.org/wiki/Richard_Dreyfuss">Richard
+                                Dreyfus</a>, who are two of my favourite
+                            actors and comedians, and they are both wonderful
+                            in this movie.
+                        </p>
+                        <p>
+                            It tells the story of a lovable, but multi-phobic
+                            psychiatric patient, who at his mature age has
+                            already accumulated a lot of psychiatric
+                            pseudo-knowledge. He follows his recent successful
+                            psychiatrist on his vacation, and slowly drives
+                            him mad. This setting enables many jokes, gags,
+                            and positively great humour.
+                        </p>
+                    </desc>
+                </prod>
+                <prod id="bring-it-on">
+                    <title>Bring it On</title>
+                    <isbn>B00003CXMP</isbn>
+                    <creator type="director">Peyton Reed</creator>
+                    <rellink href="http://www.imdb.com/title/tt0204946/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Bring_It_On_(film)"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            This is a sports comedy about an award-winning
+                            San-Diego-based cheerleading squad that discovers
+                            that its departing Captain stole their moves from
+                            a different squad from a run-down part of Los
+                            Angeles. As the Toros struggle to get their
+                            act together, there’s a lot of fun to be seen.
+                        </p>
+                        <p>
+                            It’s hard for me to know what I exactly like
+                            about this movie, but there are probably many
+                            things to like. Kirsten Dunst acts great as
+                            usual and I always adore her facial expressions.
+                            Eliza Dushku and Gabrielle Union are also good.
+                            It’s a fun movie, which I enjoyed watching several
+                            times, and it’s still fun.
+                        </p>
+                    </desc>
+                </prod>
+                <set id="back-to-the-future">
+                    <title>Back to the Future</title>
+                    <prod id="back-to-the-future-1">
+                        <title>Back to the Future (I)</title>
+                        <isbn>B00006AL1E</isbn>
+                        <creator type="director">Robert Zemeckis</creator>
+                        <rellink href="http://www.imdb.com/title/tt0088763/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Back_to_the_Future"
+                            text="Wikipedia" />
+                    </prod>
+                    <prod id="back-to-the-future-2">
+                        <title>Back to the Future Part II</title>
+                        <isbn>B00006AL1E</isbn>
+                        <creator type="director">Robert Zemeckis</creator>
+                        <rellink href="http://www.imdb.com/title/tt0096874/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+                            text="Wikipedia" />
+                    </prod>
+                    <prod id="back-to-the-future-3">
+                        <title>Back to the Future Part III</title>
+                        <isbn>B00006AL1E</isbn>
+                        <creator type="director">Robert Zemeckis</creator>
+                        <rellink href="http://www.imdb.com/title/tt0099088/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+                            text="IMDB" />
+                    </prod>
+                    <desc>
+
+                        <p>
+                            This series of movies takes on the decades-old
+                            fascination of science-fiction writers with
+                            time travel, and combines it with a lot of zany
+                            humour, high-paced action, a great plot, wonderful
+                            acting, and a superb setting.
+                        </p>
+
+                        <p>
+                            Michael J. Fox plays Marty McFly, a hip kid
+                            who is friends with Dr. Emmett Brown (the excellent
+                            Christopher Lloyd), a Mad Scientist who invents
+                            a time machine that causes a mess-up in Marty’s
+                            past, future, and present, and a wacky
+                            attempt to restore it.
+                        </p>
+
+                        <p>
+                            The two first parts of the trilogy are really
+                            fun, with the second being more wacky and
+                            high-paced. The third part is not as good,
+                            but still worth the watch, if only for closure.
+                        </p>
+
+                    </desc>
+                </set>
+                <prod id="monty-python-and-the-holy-grail">
+                    <title>Monty Python and the Holy Grail</title>
+                    <isbn>B00005O3VC</isbn>
+                    <creator type="director">Terry Gilliam and Terry Jones</creator>
+                    <rellink href="http://www.imdb.com/title/tt0071853/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            Monty Python and the Holy Grail is a hilarious
+                            and very memorable comedy. King Arthur and his
+                            brave knights of the round table are commanded
+                            out by God to seek out the holy grail, with a
+                            lot of fun along the way.
+                        </p>
+                        <p>
+                            This film has many memorable quotes and sketches,
+                            and has provided a lot of fodder for popular
+                            culture and geek culture.
+                        </p>
+                    </desc>
+                </prod>
+                <prod id="lt-robin-crusoe-usn">
+                    <title>Lt. Robin Crusoe, U.S.N.</title>
+                    <isbn>B00077BPFU</isbn>
+                    <creator type="director">Byron Paul</creator>
+                    <rellink href="http://www.imdb.com/title/tt0060640/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Lt._Robin_Crusoe,_U.S.N."
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            This is a Walt Disney parody/tribute to the
+                            classic
+                            <a href="http://en.wikipedia.org/wiki/Robinson_Crusoe"><i>Robinson Crusoe</i></a> novel.
+                            A U.S. Navy pilot by the name of Robin Crusoe
+                            (played by
+                            <a href="http://en.wikipedia.org/wiki/Dick_Van_Dyke">Dick Van Dyke</a>),
+                            finds himself stranded on a deserted island in
+                            the Pacific Ocean, where he finds an abandoned
+                            Japanese submarine, an astronaut Chimpanze,
+                            and finally, a female native which he calls
+                            Wednesday. He is trying to survive the perils of
+                            the island until being rescued.
+                        </p>
+                        <p>
+                            The film is funny, entertaining, and highly
+                            recommended.
+                        </p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="sci-fi">
+                <title>Science Fiction</title>
+                <set id="star-wars-original">
+                    <title>Star Wars IV-VI (The Original Series)</title>
+                    <prod id="star-wars-iv">
+                        <title>Star Wars IV: A New Hope</title>
+                        <isbn>B000FQJAIW</isbn>
+                        <creator type="director">George Lucas</creator>
+                        <rellink href="http://www.imdb.com/title/tt0076759/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_IV:_A_New_Hope"
+                            text="Wikipedia" />
+                    </prod>
+                    <prod id="empire-strikes-back">
+                        <title>Star Wars V: The Empire Strikes Back</title>
+                        <isbn>B000FQJAJG</isbn>
+                        <creator type="director">Irvin Kershner</creator>
+                        <rellink href="http://www.imdb.com/title/tt0080684/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_V:_The_Empire_Strikes_Back"
+                            text="Wikipedia" />
+                    </prod>
+                    <prod id="return-of-the-jedi">
+                        <title>Star Wars VI: The Return of the Jedi</title>
+                        <isbn>B000FQVX78</isbn>
+                        <creator type="director">Richard Marquand</creator>
+                        <rellink href="http://www.imdb.com/title/tt0086190/"
+                            text="IMDB" />
+                        <rellink href="http://en.wikipedia.org/wiki/Star_Wars_Episode_VI:_Return_of_the_Jedi"
+                            text="Wikipedia" />
+                    </prod>
+                    <desc>
+                        <p>
+                            I guess you’ve already heard of
+                            <a href="http://en.wikipedia.org/wiki/Star_Wars">Star
+                                Wars</a>. I watched these movies on video
+                            as a child, and recall liking them a lot. Star
+                            Wars is a mixture of Science Fiction, Fantasy,
+                            and Adventure, with a lot of vivid imagination,
+                            wonderful special effects (especially for
+                            its time) and an engaging plot.
+                        </p>
+                    </desc>
+                </set>
+                <prod id="enemy-mine">
+                    <title>Enemy Mine</title>
+                    <isbn>B000059HAC</isbn>
+                    <creator type="director">Wolfgang Petersen</creator>
+                    <rellink href="http://www.imdb.com/title/tt0089092/"
+                        text="IMDB"
+                        />
+                    <rellink href="http://en.wikipedia.org/wiki/Enemy_Mine_%28film%29"
+                        text="Wikipedia"
+                        />
+
+                    <desc>
+<p>
+This is a relatively obscure, but positively beautiful and touching science
+fiction film. A human pilot ends up stranded on a strange planet, beside a
+reptilian humanoid-like alien, who belongs to a race, which the humans are at
+war with. While initially being enemies, they learn to cooperate with each
+other, speak each other’s language, and eventually even love and care for
+each other.
+</p>
+
+<p>
+There are some twists to the plot after that, and the movie kept me captivated.
+Unfortunately, the movie budget’s had gone out of proportion, in part due
+to a change of director, and it was not successful commercially. But watching
+it on the Television proved to be an engaging experience for me when I was
+younger.
+</p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="fantasy">
+                <title>Fantasy</title>
+                <prod id="neverending-story-I">
+                    <title>The Neverending Story</title>
+                    <isbn>B00005LKHZ</isbn>
+
+                    <creator type="director">Wolfgang Petersen</creator>
+                    <rellink href="http://www.imdb.com/title/tt0088323/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)"
+                        text="Wikipedia" />
+                    <desc>
+<p>
+An adaptation to film of the first part of <a
+href="http://en.wikipedia.org/wiki/The_Neverending_Story">the
+Novel <i>The Neverending Story</i> by Michael Ende</a> (which I’ve read later
+and can also recommend). The film is aesthetically pleasing, with wonderful
+special effects, exotic fantastical creatures, great acting, and wonderful
+and atmospheric music.
+</p>
+
+<p>
+This is one of the finest fantasy movies I’ve ever seen, and I highly
+recommend it.
+</p>
+                    </desc>
+
+                </prod>
+                <prod id="willow">
+                    <title>Willow</title>
+                    <isbn>B00003CXDD</isbn>
+                    <creator type="director">Ron Howard</creator>
+                    <rellink href="http://www.imdb.com/title/tt0096446/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Willow_(film)"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            A fantasy film based on a story by George
+                            Lucas. An evil queen-sorceress is told that
+                            a newborn baby-girl will end up killing her, and
+                            orders her to be killed. The girl’s mother
+                            puts her cradle on the river, where it ends
+                            up being found by Willow, a member of a
+                            village of a Hobbit-like race of men.
+                        </p>
+                        <p>
+                            In order to save the village, Willow must travel
+                            along with the baby, and find the destiny of
+                            the baby, himself, and Madmartigen
+                            (<a href="http://en.wikipedia.org/wiki/Val_Kilmer">Val
+                                Kilmer</a>), a gifted but non-trustworthy
+                            warrior.
+                        </p>
+                        <p>
+                            I really enjoyed this film.
+                        </p>
+                    </desc>
+
+                </prod>
+
+            </cat>
+            <cat id="animated">
+                <title>Animated Films</title>
+                <prod id="lion-king">
+                    <title>The Lion King</title>
+                    <isbn>B00003CXB4</isbn>
+                    <creator type="director">Roger Allers and Rob Minkoff</creator>
+                    <rellink href="http://www.imdb.com/title/tt0110357/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/The_Lion_King"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            This is my favourite of the new crop of Disney
+                            animated films. Inspired by African legends,
+                            the Lion King tells the story of a lion cub,
+                            who learns about the place of his kind in Nature.
+                        </p>
+                        <p>
+                            A few people told me that they heard people
+                            claim this movie was <a
+                                href="http://en.wikipedia.org/wiki/Fascism">pro-Fascist</a>,
+                            but there are some obvious anti-Fascist elements
+                            in it, and I didn’t find it so.
+                        </p>
+                        <p>
+                            This film has great visual side, very nice
+                            songs and music, great dialogues, a lot of
+                            funny bits, and an engaging plot. Highly
+                            recommended.
+                        </p>
+                    </desc>
+                </prod>
+                <prod id="emperors-new-groove">
+                    <title>The Emperor’s New Groove</title>
+                    <isbn>B00005AR3G</isbn>
+                    <creator type="director">Mark Dindal</creator>
+                    <rellink href="http://www.imdb.com/title/tt0120917/"
+                        text="IMDB" />
+                    <rellink href="http://en.wikipedia.org/wiki/Emperor's_New_Groove"
+                        text="Wikipedia" />
+                    <desc>
+                        <p>
+                            This is probably the funniest Disney animated
+                            picture. An emperor of a pseudo-South American
+                            empire (voiced by <a href="http://en.wikipedia.org/wiki/David_Spade">David Spade</a>)
+                            is being conspired by his advisor, and is turned
+                            into a
+                            <a href="http://en.wikipedia.org/wiki/Llama">Llama</a>.
+                            Now he’s trying to become a human again, with lots
+                            of fun for the viewers in the process.
+                        </p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="drama">
+                <title>Dramas</title>
+                <prod id="jerry-maguire">
+                    <title>Jerry Maguire</title>
+                    <isbn>0800141741</isbn>
+                    <creator type="director">Cameron Crowe</creator>
+                    <rellink href="http://www.imdb.com/title/tt0116695/"
+                        text="IMDB"
+                        />
+                    <rellink href="http://en.wikipedia.org/wiki/Jerry_Maguire"
+                        text="Wikipedia"
+                        />
+                    <desc>
+                        <p>
+                            A positively touching, funny and beautiful film
+                            about a sports agent who decides to change the way
+                            he and his peers treat their clients. Wonderful
+                            camera-work, great
+                            acting, and <a
+                                href="http://en.wikiquote.org/wiki/Jerry_Maguire">some
+                                very memorable quotes</a> make for a movie
+                            I could not forget.
+                        </p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="action">
+                <title>Action Films</title>
+                <prod id="the-quick-and-the-dead">
+                    <title>The Quick and the Dead</title>
+                    <isbn>0767817710</isbn>
+                    <creator type="director">Sam Raimi</creator>
+                    <rellink href="http://www.imdb.com/title/tt0114214/"
+                        text="IMDB"
+                        />
+                    <rellink href="http://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)"
+                        text="Wikipedia"
+                        />
+                    <desc>
+                        <p>
+                            A modern Western movie (sort-of), this film is
+                            half-action, and half-drama. It features several
+                            good actors, breathtaking camera work, and
+                            an engaging plot.
+                        </p>
+                        <p>
+                            Sharon Stone plays a gun-woman, who is
+                            trying to avenge the death of her father by
+                            challenging the responsible villain (Gene
+                            Hackman), who is hosting an elimination
+                            tournament in a town he rules in the wild west.
+                        </p>
+                        <p>
+                            We meet the people who take part in the contest,
+                            and learn on what they are trying to prove by it.
+                        </p>
+                        <p>
+                            Highly engaging, spiritually involving, and
+                            otherwise lots of fun, this is a movie I still
+                            fondly remember.
+                        </p>
+                    </desc>
+                </prod>
+            </cat>
+        </cat>
+    </data>
+</product-syndication>

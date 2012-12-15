@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -rf `cat tmp.files`
+cmake .

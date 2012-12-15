@@ -1,0 +1,84 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "Shlomi Fish’s Writings about Computing" />
+
+<p>
+Being a software developer, that is also very interested in computers and like
+to program for fun, I started conveying some of my thoughts about computing
+and this field’s social aspect in various essays I wrote. I hope to concentrate
+all of them under this section of the homepage.
+</p>
+
+<p>
+Some of these essays will require some technical knowledge, but most of them
+can be read by anyone with a pseudo-technical background.
+</p>
+
+<toc_div />
+
+<h2 id="articles-and-essays">The Articles and Essays</h2>
+
+<h3 id="open-source"><a href="open-source/">Articles about Open Source Software</a></h3>
+
+<p class="indent">
+These are essays about <a href="http://en.wikipedia.org/wiki/Open_source">Free
+and Open Source Software</a>, which is software that is available along
+with the original source code, and can be freely distributed and modified.
+</p>
+
+<h3 id="web"><a href="web/">Articles about the World-Wide Web (WWW)</a></h3>
+
+<p class="indent">
+Articles about the Web, or the Internet in general.
+</p>
+
+<h3 id="software-management"><a href="software-management/">Articles about
+Software Management</a></h3>
+
+<p class="indent">
+Software management: leading a team, designing software, working on software,
+hiring employees, growing a user base, software engineering, etc.
+</p>
+
+<h3 id="high-quality-soft"><a href="high-quality-software/">“What Makes
+Software High-Quality?”</a></h3>
+
+<p class="indent">
+An overview of the parameters that make software high-quality, with a focus
+on open-source software, and the various methods that can be used to
+maintain good quality and increase it.
+</p>
+
+<h3 id="perl"><a href="perl/">Articles about Perl</a></h3>
+
+<p class="indent">
+Articles about <a href="http://perl-begin.org/">the Perl programming
+language</a>.
+</p>
+
+<h2 id="misc">Miscellaneous Articles</h2>
+
+<div class="indent">
+
+<h3 id="when-c-is-best"><a href="$(ROOT)/philosophy/computers/when-c-is-best/">When C is the Best? (Tool for the Job)</a></h3>
+
+<div class="indent">
+<p>
+An essay that explains the times when the C programming language is the best
+language to use to write an application in, and why it’s still used very often.
+</p>
+</div>
+
+</div>
+
+<h2 id="memoirs"><a href="$(ROOT)/prog-evolution/">My Memoirs as a
+Programmer</a></h2>
+
+<div class="indent">
+<p>
+My memoirs from the years I worked in various places as a programmer, from
+the times before I kept <a href="$(ROOT)/me/blogs/">a blog</a>.
+</p>
+</div>
+

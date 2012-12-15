@@ -1,0 +1,206 @@
+#include '../template.wml'
+<latemp_subject "Don’t Abuse JavaScript!" />
+
+<p>
+<b>Last Updated:</b> 28-January-2010
+</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+JavaScript has become popular due to being useful for scripting browsers,
+which is acceptable due to being the only commonly-acceptable portable
+choice for that. However, lately, it has been utilised as a host language
+for many other realms where there are far saner and superior alternatives.
+</p>
+
+<p>
+This page aims to explain why JavaScript should not be abused for such stuff.
+</p>
+
+<h2 id="shortcomings">JavaScript Shortcomings</h2>
+
+<h3 id="sprintf">No sprintf</h3>
+
+<p>
+JavaScript has no <a href="http://en.wikipedia.org/wiki/Printf">sprintf-like
+function</a> for formatting strings.
+</p>
+
+<h3 id="date-formatting">No date-formatting routines</h3>
+
+<p>
+In addition to that, JavaScript does not have a date formatting function.
+</p>
+
+<define-tag sort_rejects>
+<h3 id="sort">No sorting routines</h3>
+
+<p>
+JavaScript has no built-in routines for sorting lists or arrays.
+</p>
+</define-tag>
+
+<h3 id="implicit-scoping">Implicit scoping - var is optional</h3>
+
+<p>
+In JavaScript, variables can spring into existence with the <tt>var</tt>
+keyword being optional.
+</p>
+
+<h3 id="line-break">Line breaks terminate expressions</h3>
+
+<p>
+Line breaks (in addition to “;”) terminate expressions. This can cause
+many subtle errors.
+</p>
+
+<h3 id="closures">Starting a closure is not convenient</h3>
+
+<p>
+One needs to type “(function () { function() { ... } })” to start a closure.
+</p>
+
+<h3 id="foreach">Foreach Loop</h3>
+
+<p>
+JavaScript’s foreach loop loops on the indices of the list
+instead of its values.
+</p>
+
+<h3 id="swap">Swap Two Variables</h3>
+
+<p>
+JavaScript has
+<a href="http://stackoverflow.com/questions/872310/javascript-swap-array-elements">no
+easy way to swap two variables</a>.
+</p>
+
+<h3 id="size_of_assoc_array">Size of Associative Array</h3>
+
+<p>
+JavaScript's objects when used as associative arrays have
+<a href="http://stackoverflow.com/questions/5223/length-of-javascript-associative-array">no
+easy way to get the number of elements contained inside them</a>.
+</p>
+
+<h3 id="filter_map_forEach">Filter, map and forEach</h3>
+
+<p>
+Until recently, JavaScript had no built-in
+<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter">filter</a>,
+<tt>map</tt> and <tt>forEach</tt> methods for arrays and they are only supported in
+MSIE starting from version 9.
+</p>
+
+<h3 id="ranges">Lack of Numeric Ranges</h3>
+
+<p>
+JavaScript lacks <a href="http://yesudeep.wordpress.com/2009/07/25/implementing-a-pythonic-range-function-in-javascript-2/">numeric ranges</a>.
+</p>
+
+<h3 id="this_var">The ‘this’ variable behaves erratically</h3>
+
+<p>
+The <a href="http://stackoverflow.com/questions/80084/in-javascript-why-is-the-this-operator-inconsistent">‘this’ variable behaves erratically in JavaScript</a>
+and cannot easily be relied upon.
+</p>
+
+<h3 id="repeat_string">No built-in way to repeat a string</h3>
+
+<p>
+JavaScript has no
+<a href="http://stackoverflow.com/questions/202605/repeat-string-javascript">built-in
+way to repeat the concatenation of a string or an array several times</a>.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<a href="http://www.youtube.com/watch?v=hQVTIJBZook"> “JavaScript: The Good Parts” Tech Talk</a> -
+should be called “JavaScript: The Bad Parts”.
+</li>
+
+<li>
+<a href="http://weblogs.mozillazine.org/roadmap/archives/2008/04/popularity.html">“Popularity”</a> (via
+<a href="http://www.oreillynet.com/onlamp/blog/2008/04/a_short_history_of_the_develop.html">chromatic’s
+“A Short History of the Development of JavaScript”</a>):<br />
+
+<ul>
+
+<li>
+<blockquote>
+<p>
+Whether any existing language could be used, instead of inventing a new one,
+was also not something I decided. The diktat from upper engineering management
+was that the language must “look like Java”. That ruled out Perl, Python, and
+Tcl, along with Scheme. Later, in 1996, John Ousterhout came by to pitch Tk and
+lament the missed opportunity for Tcl.
+</p>
+</blockquote>
+</li>
+
+<li>
+<blockquote>
+<p>
+Ok, back to JavaScript popularity. We know certain Ajax libraries are popular.
+Is JavaScript popular? It’s hard to say. Some Ajax developers profess (and
+demonstrate) love for it. Yet many curse it, including me. I still think of it
+as a quickie love-child of C and Self. Dr. Johnson’s words come to mind:
+“the part that is good is not original, and the part that is original is not
+good.”
+</p>
+</blockquote>
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<a href="http://www.youtube.com/watch?v=-yDS1eGfuWQ">
+“Upcoming Changes to the JavaScript Language”</a> - about ECMAScript 4.0, while detailing many
+of the current shortcomings of JavaScript.
+</li>
+
+<li>
+<a href="http://blogs.perl.org/users/jhannah_mutation_grid/2010/11/javascript-scoping-perls.html">Jay @ Mutation Grid:
+“JavaScript’s scoping != Perl’s”</a> (4-November-2010)
+</li>
+
+<li>
+<a href="http://www.jwz.org/blog/2010/10/every-day-i-learn-something-new-and-stupid/">jwz:
+“Everyday I learn something new… and stupid”</a> - about JavaScript’s
+numbers and integers.
+</li>
+
+</ul>
+
+<h2 id="hall_of_shame">Hall of Shame</h2>
+
+<ul>
+
+<li>
+<a href="http://amarok.kde.org/wiki/Development/Scripting_HowTo_2.0">Amarok 2.0
+Scripting</a> (dropping backwards compatibility with older scripts).
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/GNOME_Shell">GNOME Shell</a>
+</li>
+
+</ul>
+
+<h2 id="jokes">Jokes</h2>
+
+<ul>
+
+<li>
+<a href="http://img.anongallery.org/img/2/0/javascript-the-good-parts-the-definitive-guide.jpg"><i>JavaScript the Good Parts</i> side-by-side-to
+<i>JavaScript: The Definitive Guide</i></a>
+(<a href="javascript-the-good-parts-the-definitive-guide.jpg">local
+mirror of the photograph</a>).
+</li>
+</ul>

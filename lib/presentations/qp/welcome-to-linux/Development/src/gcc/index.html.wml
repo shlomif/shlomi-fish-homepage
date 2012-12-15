@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+<points>
+<li>
+gcc is the "GNU Compiler Collection", originally called the "GNU C compiler".
+</li>
+<li>
+gcc is commonly invoked  from the command line, like so:<br />
+<tt class="cmd">gcc [ option | filename ]... </tt><br />
+</li>
+
+<li>
+<p>
+One would normally use gcc like so:
+</p>
+<p>
+<tt class="cmd">gcc [flags] file1 [file2 [file3 ...]] [-o output_file]  </tt>
+</p>
+<p>
+Where <tt>file1</tt> <tt>file2</tt> etc. are input files, either C source
+files or pre-compiled object files.
+</p>
+</li>
+<li>
+Example: <tt>gcc foo1.c foo2.c -o foo</tt>
+</li>
+<li>
+The default executable output filename is <tt>a.out</tt>. When producing
+object files, the default output for each input file has the suffix
+<tt>.o</tt> .
+</li>
+</points>

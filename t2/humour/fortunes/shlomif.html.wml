@@ -1,0 +1,20 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Shlomi Fish's Quotes as Fortunes Cookies" />
+
+<h2*>About</h2*>
+
+<p>
+A collection of fortune cookies, mostly created by
+<a href="$(ROOT)/personal.html">Shlomi Fish</a>, close friends, or IRC
+conversations he took part it.
+</p>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/shlomif.xhtml-for-input"
+</div>
+

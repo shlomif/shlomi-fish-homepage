@@ -1,0 +1,8 @@
+AC_DEFINE(HELLO)
+
+AC_DEFINE(VERSION, "5.6")
+
+myvar="foo"
+othervar="bar"
+AC_DEFINE_UNQUOTED(TEST, "${myvar}${othervar}")
+

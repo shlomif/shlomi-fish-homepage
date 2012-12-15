@@ -1,0 +1,535 @@
+#include '../template.wml'
+
+<latemp_subject "On the Tip of the Sword - A Logic Puzzle" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+type="text/css" media="screen, projection" title="Normal" />
+</page_extra_head_elements>
+
+<div class="logic">
+<h2>Introduction</h2>
+
+<p>
+I originally wrote this puzzle for the magazine of a local Role-Playing
+Games’ club, back in high school. I later on slightly de-RPGed and sent it
+to <a href="http://www.dellmagazines.com/">Dell Magazines</a> for
+publication. I received no reply.
+</p>
+
+<h2>Note (2006-December-28)</h2>
+
+<p>
+I traced the solution and fixed the hints of the puzzle.
+</p>
+
+<h2>The Puzzle Itself</h2>
+
+<p>
+When Pierre de Fermat, the famous French mathematician, was just a
+student, he had to visit the most obscure places for his studies. One
+evening he was a guest at the house of an old French hero - the Marquis
+François de Fougéres - who told him many tall tales about his adventurous
+life.
+</p>
+
+<p>
+At the beginning of the narrative, the old swashbuckler told him that during
+his adventures he managed to collect a set of five luxurious swords: two
+plain-tipped, two silver tipped and a very precious golden sword. One sword
+was given to him as a gift by the king Henry the IV, and he found
+the rest (at least as he told) in a dragon’s lair, in a pirate’s ship,
+in an ancient tomb, and inside a treasure box. Each sword is of a different
+type: a khopesh (an Egyptian sword), a long sword, a short sword, a rapier
+(the sword of swashbucklers), and a scimitar (an Arabian sword). The warrior,
+who was very proud of his collection, put it on his room’s wall, in a
+horizontal row.
+</p>
+
+<p>
+Once he heard that, Fermat’s interest was aroused and during the narrative
+of de Fougéres he tried to find every detail given about the swords. He also
+noted a couple of notes on a piece of paper which he held in his hands.
+</p>
+
+<p>
+After the marquis had finished his story, Fermat could tell him the order
+in which he had arranged his swords. Can you discover, according to the
+following excerpts from the marquis’ story, what is the tip colour, the type
+and the origin of the swords in every place, as well?
+</p>
+
+<ol>
+
+<li>
+<p>
+“The first sword I found was the golden sword, which I found a month after I
+had started adventuring. I put it to the left of both of the plain-tipped
+swords,
+so its appearance won’t be diminished. Still, it isn’t on one of the edges, so
+it will stand out. In addition, I didn’t place the silvered swords adjacent to
+each other.”
+</p>
+</li>
+
+<li>
+<p>
+“Three years after the death of my comrade Damian, I have found the long sword
+in the dragon’s lair. I didn’t put it in the rightmost position.”
+</p>
+</li>
+
+<li>
+
+<p>
+“There is a sword, which I found in the ship of the pirate Draco ‘the Dumb’ and
+which isn’t short as the pirate custom for such swords is. I placed it to
+the left of another extraordinary sword. The latter was given to me as a
+present by our noble king for killing Draco. Unfortunately, it wasn’t
+silvered.”
+</p>
+
+<p>
+“Left to the sword which I found in the pirate’s ship, is the scimitar, which
+wasn’t found in the ancient tomb, and which has a plain tip.”
+</p>
+
+</li>
+
+<li>
+<p>
+“Now let’s return to my collection: I have placed one of the simple swords,
+the rapier, and the khopesh - in that order - one beside the other. They make
+a wonderful combination!! The khopesh is also right to the short sword.”
+</p>
+</li>
+
+</ol>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Place</th>
+<th>Leftmost</th>
+<th>Middle-Left</th>
+<th>Centre</th>
+<th>Middle-Right</th>
+<th>Rightmost</th>
+</tr>
+
+<tr>
+<td><b>Tip</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><b>Type</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><b>Origin</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+<p>
+The solution can be found below.
+</p>
+
+<h2 style="margin-top: 50em">Solution</h2>
+
+<p>
+According to hint #1, we can tell that the golden sword is in either the
+mid-left or middle positions, and that the plain-tipped swords are to its
+right. Now, if it were in the middle position, then the plain-tipped swords
+would have to be in the mid-right and rightmost positions, and as a result,
+the silver tipped swords would have to be in the mid-left and leftmost
+positions. However, also according to hint #1, the silvered swords are not
+adjacent to each other. Thus, the Golden sword is in the mid-left
+position and one of the silvered swords is in the leftmost position.
+</p>
+
+<p>
+So far we have:
+</p>
+
+<ul>
+<li>Leftmost - Silvered</li>
+<li>Mid-left - Golden</li>
+</ul>
+
+<p>
+The golden sword was the first sword De Fougéres found and he found it
+a month after adventuring. So according to hint #2, it couldn’t have been
+the long sword which was found in the dragon’s lair. Furthermore, according
+to hint #3, it isn’t the sword that was given to him as a present by the king.
+</p>
+
+<p>
+Now, since the sword given as a present by the king was not silvered, and
+cannot be the golden sword, it must be ordinary. So, so far we have:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Plain-tipped - Present from the King - Not Scimitar</li>
+<li>Pirate Ship - Not short - Not scimitar - Mid-Left, Centre or Mid-Right</li>
+<li>Scimitar - Leftmost, Mid-Left or Centre - Not found in the pirate’s ship,
+Not given by the king - Not found in a dragon’s lair - Not found in the
+ancient tomb - Not silvered.</li>
+</ul>
+
+<p>
+The scimitar has been excluded from four different origins, so it must have
+been found in remaining one which is inside the treasure box. Furthermore, it is
+not silvered, so it cannot be the leftmost sword, and the sword found in the
+pirate’s ship should be to its right, and the sword that was given as a
+present by the king to its right. Thus, we have the following associations:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Plain-tipped - Present from the King - Not Scimitar - Mid-right or
+Rightmost</li>
+<li>Pirate Ship - Not short - Not scimitar - Centre or Mid-Right</li>
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+</ul>
+
+<p>
+And integrating hint #2 into the associations:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Plain-tipped - Present from the King - Not Scimitar - Not long sword -
+Mid-right or Rightmost</li>
+<li>Pirate Ship - Not short - Not long - Not scimitar - Centre or Mid-Right</li>
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in Dragon’s Lair - Not Rightmost</li>
+</ul>
+
+<p>
+And the fact that the Khopesh is right to the short sword
+(according to hint #4):
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+Not Khopesh</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Plain-tipped - Present from the King - Not Scimitar - Not long sword -
+Mid-right or Rightmost</li>
+<li>Pirate Ship - Not short - Not long - Not scimitar - Centre or Mid-Right</li>
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in dragon’s lair - Not Rightmost</li>
+<li>Short sword - not rightmost - Not found in pirate’s ship</li>
+<li>Rightmost - Not scimitar - Not long sword - Not short sword - Not found in
+pirate’s ship - Not found in treasure’s box - Not found in Dragon’s Lair -
+Not golden</li>
+</ul>
+
+<p>
+Now let’s assume that the sword given as a present by the king is in the
+mid-right position. In this case, the sword found in the pirate ship must be
+in the centre position, and the scimitar will be in the mid-left position. So
+we get:
+</p>
+
+<ul class="branch">
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+Not Khopesh</li>
+<li>Mid-Left - Golden - Scimitar - Found in treasure box</li>
+<li>Centre - Pirate Ship - Not long sword - Not short sword - Not scimitar</li>
+<li>Mid-Right - Plain-tipped - Present from the King - Not Scimitar -
+Not long sword</li>
+<li>Long sword - Found in dragon’s lair - Not Rightmost</li>
+<li>Short sword - not rightmost - Not found in pirate’s ship</li>
+<li>Rightmost - Not scimitar - Not long sword - Not short sword - Not found in
+pirate’s ship - Not found in treasure’s box - Not found in Dragon’s Lair -
+Not golden</li>
+</ul>
+
+<p>
+The long sword must be in he leftmost position, because it cannot be
+anywhere else:
+</p>
+
+<ul class="branch">
+<li>Leftmost - Silvered - Long sword - Found in Dragon’s Lair</li>
+<li>Mid-Left - Golden - Scimitar - Found in treasure box</li>
+<li>Centre - Pirate Ship - Not long sword - Not short sword - Not scimitar</li>
+<li>Mid-Right - Plain-tipped - Present from the King - Not Scimitar -
+Not long sword</li>
+<li>Short sword - not rightmost - Not found in pirate’s ship</li>
+<li>Rightmost - Not scimitar - Not long sword - Not short sword - Not found in
+pirate’s ship - Not found in treasure’s box - Not found in Dragon’s Lair -
+Not golden</li>
+</ul>
+
+<p>
+And the short sword must be in the mid-right position:
+</p>
+
+<ul class="branch">
+<li>Leftmost - Silvered - Long sword - Found in Dragon’s Lair</li>
+<li>Mid-Left - Golden - Scimitar - Found in treasure box</li>
+<li>Centre - Pirate Ship - Not long sword - Not short sword - Not scimitar</li>
+<li>Mid-Right - Plain-tipped - Short Sword - Present from the King</li>
+<li>Rightmost - Not scimitar - Not long sword - Not short sword - Not found in
+pirate’s ship - Not found in treasure’s box - Not found in Dragon’s Lair -
+Not golden</li>
+</ul>
+
+<p>
+Since the khopesh must be right to the short sword it is in the rightmost
+position, and the rapier is in the centre position:
+</p>
+
+<ul class="branch">
+<li>Leftmost - Silvered - Long sword - Found in Dragon’s Lair</li>
+<li>Mid-Left - Golden - Scimitar - Found in treasure box</li>
+<li>Centre - Rapier - Found in Pirate Ship</li>
+<li>Mid-Right - Plain-tipped - Short Sword - Given by the King</li>
+<li>Rightmost - Khopesh - Found in Ancient Tomb</li>
+</ul>
+
+<p>
+However, then the the Rapier and the Khopesh won’t be adjacent in accordance
+to hint #4. So we now know that the sword given by the king is not in the
+mid-right position, and must be in the rightmost one:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+Not Khopesh</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Rightmost - Plain tipped - Given by the King - Khopesh or Rapier</li>
+<li>Pirate Ship - Not short - Not long - Not scimitar - Centre or Mid-Right</li>
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in Dragon’s Lair - Not Rightmost</li>
+<li>Short sword - not rightmost - Not found in pirate’s ship</li>
+</ul>
+
+<p>
+Since the rightmost sword is a Rapier or a Khopesh then according to hint #4,
+it cannot be the Rapier because the Rapier is in the middle of a three-swords
+sequence. So it must be the Khopesh, and the sword to its immediate right
+(mid-right position) is a Rapier, and the sword to the latter’s left, must be
+a plain tipped sword. So we get the following associations:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Not given by the king - Not
+found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+Not Khopesh</li>
+<li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+dragon’s lair</li>
+<li>Centre -Plain Tipped</li>
+<li>Mid-right - Rapier</li>
+<li>Rightmost - Plain tipped - Given by the King - Khopesh</li>
+<li>Pirate Ship - Rapier or Khopesh - Centre or Mid-Right</li>
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in Dragon’s Lair - Not Rightmost</li>
+<li>Short sword - not rightmost - Not found in pirate’s ship</li>
+</ul>
+
+<p>
+The sword found in the pirate’s ship must be the rapier because the khopesh
+was given by the king. Furthermore, it is silver-tipped as mid-right is the
+only place left for the second silver-tipped sword:
+</p>
+
+<ul>
+
+<li>Leftmost - Silvered - Not found in a Pirate’s ship - Not found in a
+treasure box - Long sword or short sword</li>
+<li>Mid-Left - Golden - Short sword or Scimitar- Not found in
+dragon’s lair</li>
+<li>Centre - Plain Tipped</li>
+<li>Mid-right - Silver tipped - Found in pirate ship - Rapier</li>
+<li>Rightmost - Plain tipped - Given by the King - Khopesh</li>
+
+
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in Dragon’s Lair</li>
+<li>Short sword - Leftmost or Mid-Left</li>
+
+</ul>
+
+<p>
+The only origin left for the short sword is the ancient tomb:
+</p>
+
+<ul>
+
+<li>Leftmost - Silvered - Not found in a Pirate’s ship - Not found in a
+treasure box - Long sword or short sword</li>
+<li>Mid-Left - Golden - Short sword or Scimitar- Not found in
+dragon’s lair</li>
+<li>Centre - Plain Tipped</li>
+<li>Mid-right - Silver tipped - Found in pirate ship - Rapier</li>
+<li>Rightmost - Plain tipped - Given by the King - Khopesh</li>
+
+
+<li>Scimitar - Found in treasure box - Mid-Left or Centre - Not silvered</li>
+<li>Long sword - Found in Dragon’s Lair</li>
+<li>Short sword - Found in the Ancient Tomb - Leftmost or Mid-Left</li>
+
+</ul>
+
+<p>
+The scimitar has a plain tip (according to hint #3) so it cannot be positioned
+in the mid-left. So it must be in the centre. So the mid-left sword
+must be the short sword, and the leftmost one the long sword:
+</p>
+
+<ul>
+<li>Leftmost - Silvered - Long Sword - Found in Dragon’s Lair</li>
+<li>Mid-Left - Golden - Short Sword - Found in an ancient tomb</li>
+<li>Centre - Plain tipped - Scimitar - Found in treasure box</li>
+<li>Mid-Right - Silvered - Found in Pirate Ship - Rapier</li>
+<li>Rightmost - Plain tipped - Present from the king - Khopesh</li>
+</ul>
+
+<p>
+So, to summarise the results, the solution is:
+</p>
+
+<table class="logic_sayings">
+
+<tr>
+<th>Place</th>
+<th>Leftmost</th>
+<th>Middle-Left</th>
+<th>Centre</th>
+<th>Middle-Right</th>
+<th>Rightmost</th>
+</tr>
+
+<tr>
+<td><b>Tip</b></td>
+<td>Silver</td>
+<td>Golden</td>
+<td>Plain</td>
+<td>Silver</td>
+<td>Plain</td>
+</tr>
+
+<tr>
+<td><b>Type</b></td>
+<td>Long Sword</td>
+<td>Short Sword</td>
+<td>Scimitar</td>
+<td>Rapier</td>
+<td>Khopesh</td>
+</tr>
+
+<tr>
+<td><b>Origin</b></td>
+<td>Dragon’s Lair</td>
+<td>Ancient Tomb</td>
+<td>Treasure Box</td>
+<td>Pirate Ship</td>
+<td>Present from the King</td>
+</tr>
+
+</table>
+
+
+#if 0
+# <p>
+# ===============================================================
+# </p>
+#
+# <p>
+# Now let’s assume that the scimitar is in the centre position. This way, the
+# sword found in the pirate ship must be in the mid-right position, and the
+# sword that was given as a present by the king must be in the rightmost
+# position. So we get:
+# </p>
+#
+# <ul style="border: 1pt dashed black;">
+# <li>Leftmost - Silvered - Not given by the king - Not
+# found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+# Not Khopesh</li>
+# <li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+# dragon’s lair</li>
+# <li>Centre - Scimitar - Found in treasure box - Not silvered</li>
+# <li>Mid-Right - Pirate Ship - Not short - Not long - Not scimitar</li>
+# <li>Rightmost - Plain-tipped - Present by the king - Not scimitar -
+# Not long sword - Not short sword</li>
+# </ul>
+#
+# <p>
+# So the Mid-right sword is the only one that is left to be the second silvered
+# sword:
+# </p>
+#
+# <ul style="border: 1pt dashed black;">
+# <li>Leftmost - Silvered - Not given by the king - Not
+# found in a Pirate’s ship - Not found in a treasure box - Not scimitar -
+# Not Khopesh</li>
+# <li>Mid-Left - Golden - Not given by the king - Not long sword - Not found in
+# dragon’s lair</li>
+# <li>Centre - Scimitar - Found in treasure box  - Plain tipped</li>
+# <li>Mid-Right - Pirate Ship - Silvered - Rapier or Khopesh</li>
+# <li>Rightmost - Plain-tipped - Present by the king - Rapier or Khopesh</li>
+# </ul>
+#
+# <p>
+# And the Leftmost sword must be the long sword and the mid-left one must be the
+# short sword:
+# </p>
+#
+# <ul style="border: 1pt dashed black;">
+# <li>Leftmost - Silvered - Long Sword - Not given by the king - Not
+# found in a pirate’s ship - Not found in a treasure box</li>
+# <li>Mid-Left - Golden - Short Sword - Not given by the king - Not found in
+# dragon’s lair</li>
+# <li>Centre - Scimitar - Found in treasure box  - Plain tipped</li>
+# <li>Mid-Right - Pirate Ship - Silvered - Rapier or Khopesh</li>
+# <li>Rightmost - Plain-tipped - Present by the king - Rapier or Khopesh</li>
+# </ul>
+#
+# <p>
+# And we can fill in more details:
+# </p>
+#
+# <ul style="border: 1pt dashed black;">
+# <li>Leftmost - Silvered - Long Sword - Found in dragon’s Lair</li>
+# <li>Mid-Left - Golden - Short Sword - Found in an ancient tomb</li>
+# <li>Centre - Plain tipped - Scimitar - Found in treasure box</li>
+# <li>Mid-Right - Silvered - Found in Pirate Ship - - Rapier or Khopesh</li>
+# <li>Rightmost - Plain tipped - Present by the king - Rapier or Khopesh</li>
+# </ul>
+#endif
+
+</div>

@@ -1,0 +1,243 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Contributions Made to External Open-Source Projects" />
+
+<p>
+<b>Last Updated:</b> 21-November-2009.
+</p>
+
+<toc_div />
+
+<h2 id="gimp"><a href="http://www.gimp.org/">GIMP - The GNU Image
+Manipulation Program</a></h2>
+
+<p>
+I wrote the so-called gradient-fu patch, which adds Procedural Database (or
+PDB) handlers to manipulate gradients. This patch was written and re-written
+for several versions of the GIMP, and was finally integrated in the 2.1.x
+branch (which has lead to GIMP 2.2.0), with some help by Michael Natterer.
+</p>
+
+<p>
+Afterwards, I added a rudimentary PDB entry to gimpressionist. Seeing its
+code could use a lot of refactoring, I started a heavy refactoring of the
+gimpressionist code, and am now its maintainer. This was followed by a small
+amount of bug squashing and cleanups.
+</p>
+
+<h2 id="subversion"><a href="http://subversion.tigris.org/">Subversion - A Compelling Version
+Control System</a></h2>
+
+<p>
+I started out by bug-squashing some bugs I found in the
+<a href="http://subversion.tigris.org/project_issues.html">Issue Tracker</a>.
+The largest contribution I did was adding a <tt>--config-dir</tt> directive
+to the Subversion clients, to specify a different directory where the
+configuration files reside. The original motive for this, was to fix the
+test suite when ran using a configuration that breaks it.
+</p>
+
+<p>
+After some break, I
+<a href="http://subversion.tigris.org/issues/show_bug.cgi?id=1846">worked
+on the get_locations() patch</a> which enabled tracing the past locations
+of nodes in the Subversion repository. (which is useful for performing some
+operations). This patch took a lot of research, a lot work, and I received a
+lot of help from different people. Eventually, a reworked version of the
+Patch, was applied by Peter N. Lundblad.
+</p>
+
+<h2 id="perl5"><a href="http://www.perl.org/">Perl 5 Core</a></h2>
+
+<p>
+I contributed some patches to
+<a href="http://www.perldoc.com/perl5.8.4/pod.html">the perl 5 core
+documentation</a> to make it clearer and easier to understand. Later on, I
+improved the default perl debugger (what gets invoked with
+“perl -d myprog.pl”) by adding new features, adding new automated test code,
+and by refactoring and clean ups.
+</p>
+
+<h2 id="kde"><a href="http://www.kde.org/">KDE</a> - a desktop environment
+and a software platform</h2>
+
+<p>
+I've been an active reporter of bugs for KDE, and also have been
+helping in triaging and reproducing some bugs, and contributed some fixes.
+</p>
+
+<p>
+For more information, consult a <a href="https://bugs.kde.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailcc1=1&amp;emaillongdesc1=1&amp;emailtype1=exact&amp;email1=shlomif%40shlomifish.org&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">KDE bug tracker search on my name</a>.
+</p>
+
+<h2 id="mandriva"><a href="http://www.mandriva.com/">Mandriva</a> →
+<a href="http://www.mageia.org/">Mageia</a> - Linux distributions.</h2>
+
+<p>
+Mandriva is an open-source, desktop-oriented, distribution of the Linux
+operating system (sometimes known as “GNU/Linux”). I have used Mandriva
+since Mandrake (Mandriva’s previous name) 7.1 and have been enjoying it.
+Mandriva was forked by the community into Mageia Linux, and I've switched
+my local installations to use it.
+</p>
+
+<p>
+For a few years now, I’ve been using first
+<a href="http://wiki.mandriva.com/en/Cooker">Mandriva Cooker</a>
+and later on <a href="https://wiki.mageia.org/en/Cauldron">Mageia
+Cauldron</a>, which are
+their bleeding edge distribution and have been reporting,
+triaging, fixing bugs or providing workarounds for them
+as I encounter them. I am the user
+“shlomif@iglu.org.il” on
+<a href="https://qa.mandriva.com/">the Mandriva bugzilla</a> (here’s
+<a href="https://qa.mandriva.com/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=RESOLVED&amp;bug_status=REOPENED&amp;bug_status=VERIFIED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailqa_contact1=1&amp;emailcc1=1&amp;emaillongdesc1=1&amp;emailtype1=exact&amp;email1=shlomif%40iglu.org.il&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailqa_contact2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">a
+search for my user-ID there</a>). I know my way around building
+<a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">RPM</a>
+packages for Mandriva, and am an active Mandriva contributor and helper.
+</p>
+
+<h2 id="syscalltrack"><a href="http://syscalltrack.sourceforge.net/">Syscalltrack - A Framework
+for Tracking System Calls</a></h2>
+
+<p>
+I contributed many cleanups and refactorings to a Perl 5 script that generated
+code out of system calls definitions. As an appreciation of my work, I and
+all the other contributors got a T-shirt with the Syscalltrack logo.
+</p>
+
+<p>
+Later on, I did some work on the project’s web-site.
+</p>
+
+<h2 id="www-form"><a href="http://web-cpan.shlomifish.org/modules/WWW-Form/">WWW::Form - a Perl Module
+for Web Forms Management</a></h2>
+
+<p>
+I encountered WWW::Form because I looked for an easy way to handle Web forms
+in Perl. After experimenting with it a bit I discovered that there were more
+stuff there that I needed (and added it to my copy), so I contacted the author,
+<a href="http://www.benschmaus.com/">Benjamin Schmaus</a> and he was quite
+cooperative. Eventually, I also discovered some
+<a href="http://www.securiteam.com/unixfocus/5IP0L2KBPM.html">Cross Site
+Scripting bugs</a> there, which were also fixed. Other than that, the module
+was extended, improved, and a rudimentary test suite was written for it.
+</p>
+
+<p>
+Ben and I have since been chatting using Instant Messaging.
+</p>
+
+<h2 id="freecell-pro"><a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell
+Pro</a></h2>
+
+<p>
+Freecell Pro is a feature-ful implementation of the solitaire card game
+<a href="http://en.wikipedia.org/wiki/Freecell">Freecell</a> for Win32. Being
+the author of
+<a href="http://fc-solve.shlomifish.org/">Freecell
+Solver</a>, I wanted to integrate it into Freecell Pro. Thus, I reached
+one of the Freecell Pro core developers and current maintainer,
+<a href="$(ROOT)/open-source/interviews/adrian-ettlinger.html">Adrian
+Ettlinger</a>. Adrian was eager to incorporate my solver as well, and we
+cooperated on incorporating it.
+</p>
+
+<p>
+The two programs had some incompatibility problems, which had to be
+resolved by Adrian and me. Eventually, however, the integration was performed
+successfully. Adrian and I became friends, and we have been talking by
+E-mail since then.
+</p>
+
+<h2 id="error.pm"><a href="http://search.cpan.org/dist/Error/">The
+Error.pm CPAN distribution</a></h2>
+
+<p>
+After a long time of neglect by its contemporary maintainer, I adopted this
+module, and fixed the pending bugs in it. After the originator (Graham Barr)
+made me a CPAN maintainer, I uploaded several corrected versions to CPAN.
+Further work and maintenance of this module was performed by
+<a href="http://www.leonerd.org.uk/">Paul Evans</a> .
+</p>
+
+<p>
+Also see:
+</p>
+
+<ul>
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/29151">“Maintenance of
+Error.pm”</a> - the blog entry that started it all.
+</li>
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/29210">
+“Error.pm - the Conclusion”</a> - what happened afterwards.
+</li>
+</ul>
+
+<h2 id="xml-rss"><a href="http://search.cpan.org/dist/XML-RSS/">XML::RSS - a
+CPAN Module for Processing RSS</a></h2>
+
+<p>
+After running into an XML::RSS bug, I submitted a patch for it, which was
+eventually integrated. I noticed the module had many open tickets, so I
+submitted patches to fix bugs (while adding regression tests to make sure
+they wouldn’t be re-introduced). When I started contributing, the module in
+general suffered from poor code quality and a low test coverage. Together
+with the maintainer, I have gradually remedied the issues from which the
+module suffered.
+</p>
+
+<p>
+In 4 January 2007, I received
+<a href="http://news.perl-foundation.org/2007/01/grants_awards.html">a
+grant from The Perl Foundation to continue working on XML::RSS</a>. In
+accordance with the grant, I increased the test coverage of XML::RSS to 100%
+and then heavily refactored and cleaned up the module’s code. As a result, the
+code quality of the module has heavily increased and it was made safer and more
+amenable for future changes.
+</p>
+
+<p>
+<a href="http://news.perlfoundation.org/2007/05/xmlrss_cleanup_grant_completed.html">The
+final report of the grant</a> provides a summary and some links for what
+has been accomplished before and during the grant.
+</p>
+
+<h2 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h2>
+
+<p>
+QClam is a simple program to use ClamAV in dot-qmail files. I performed some
+bug-fixing to it and made the code more secure, and converted the code from
+C++ to C, so it will have less dependencies. My changes were incorporated into
+version 0.6.
+</p>
+
+<h2 id="loggedfs"><a href="http://loggedfs.sourceforge.net/">LoggedFS - Filesystem Monitoring with Fuse</a></h2>
+
+<p>
+I fixed some incompatibilities that made loggedfs unusable to wrap
+the KDE configuration directory, and ported it to the new version of FUSE. My
+changes were incorporated into version 0.4 of LoggedFS.
+</p>
+
+<h2 id="file-find-object"><a href="$(ROOT)/open-source/projects/File-Find-Object/">File-Find-Object</a></h2>
+
+<p>
+File-Find-Object is a CPAN module, originally created by
+<a href="http://search.cpan.org/~nanardon/">Olivier Thauvin (Nanardon)</a>,
+which allows one to traverse a directory tree, and solves some inherent
+limitations in the perl 5 core File::Find module. I started contributing
+to this module after its 0.0.2 release, and did most of the work on it
+since, including a lot of refactoring, bug fixing, and feature addition.
+</p>
+
+<p>
+More recently, I worked on File-Find-Object-Rule, which is
+a port of File-Find-Rule to File-Find-Object. This in turn provides
+a convenient, declarative interface to File-Find-Object, while overcoming the
+philosophical limitations of File::Find.
+</p>

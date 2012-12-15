@@ -1,0 +1,115 @@
+#include '../template.wml'
+
+<latemp_subject "The “Use qmail instead!” Syndrome" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+I originally wrote this essay
+<a href="http://shlomif.livejournal.com/33935.html">on my LiveJournal</a>,
+but decided to also put it here for posterity.
+</p>
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+26-February-2006
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+10-April-2011
+</dd>
+</dl>
+
+<h2 id="body">The Essay Itself</h2>
+
+<p>
+A few years ago, I’ve noticed a pattern in
+<a href="http://www.iglu.org.il/mailing-lists/linux-il.html">the Linux-IL
+mailing list</a>. Often, when someone asked for help with a
+<a href="http://en.wikipedia.org/wiki/Sendmail">Sendmail</a> problem, some
+people said something similar to: “Sendmail sucks! Use
+<a href="$(ROOT)/open-source/anti/qmail/">qmail</a> instead.”.
+</p>
+
+<p>
+I originally documented this pattern in
+<a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg18053.html">a
+“Threads suck! You’d better use processes” discussion there</a>. However, it
+seems that post was too obscure to be noticed by the entire Internet community.
+</p>
+
+<p>
+A few days ago I joined <a href="irc://irc.freenode.net/#mandriva/">#mandriva on
+Freenode</a> trying to get to the bottom of a problem I have with
+<a href="http://kontact.kde.org/kmail/">KMail</a> at work, where I cannot
+start KAddressBook from inside it. I asked my question, and soon afterwards
+received:
+</p>
+
+<ul>
+<li>
+One <a href="http://www.mozilla.com/en-US/thunderbird/">Thunderbird</a>
+recommendation.
+</li>
+<li>
+Two <a href="http://www.gnome.org/projects/evolution/">Evolution</a>
+recommendations.
+</li>
+<li>
+One <a href="http://www.claws-mail.org/">Sylpheed Claws</a> recommendation.
+</li>
+<li>
+One <a href="http://gmail.com/">GMail</a> recommendation.
+</li>
+</ul>
+
+<p>
+The problem is that I wasn’t interested to learn about alternative E-mail
+clients, and just wanted to get my problem solved. And in the case of GMail
+it was completely out of the question due to my work’s constraints.
+</p>
+
+<p>
+Moreover, the same symptom was not present on my home
+<a href="http://www.mandriva.com/">Mandriva</a> 2007 installation, nor is it
+present now that I’ve upgraded it to Mandriva Cooker (which will become 2007.1).
+</p>
+
+<p>
+When someone asks for help with a problem with technology “A”, and you happen
+to be a fan of its alternative “B”, then recommending him to use “B” is not
+very helpful. If someone says: “I hate A’s guts! What can you recommend
+instead?” then you can recommend “B”. But if you don’t know the answer
+to the problem with “A”, then just don’t say anything.
+</p>
+
+<p>
+I hope it makes sense.
+</p>
+
+<p>
+<b>April 2011 Update:</b> after discussing this article with some people, I
+was made to understand that sometimes recommending the user to use an
+alternative technology is a good idea, in case the technology he is currently
+using is unmaintained or of extremely bad quality. So one needs to use
+one’s reason (as always) and the recommendation to avoid the
+“use qmail instead” syndrome is just a general guideline.
+</p>
+
+<h3 id="licence">licence</h3>
+
+<cc_by_british_blurb year="2006" />
+

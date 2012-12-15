@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<points>
+<li>
+This layer is mostly theoretical.
+</li>
+<li>
+It is supposed to provide synchronization services and to keep track of
+users through different transport connections.
+</li>
+<li>
+RPC and Named network pipes can be considered to be part of this layer.
+</li>
+</points>

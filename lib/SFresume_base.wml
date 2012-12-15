@@ -1,0 +1,805 @@
+#include '../template.wml'
+
+<define-tag detailed endtag="required">
+<if "<get-var is:detailed />" "%body" "" />
+</define-tag>
+
+<define-tag undetailed endtag="required">
+<if "<get-var is:detailed />" "" "%body" />
+</define-tag>
+
+<latemp_subject "Shlomi Fish’s Resume" />
+
+<p>
+Shlomi Fish<br />
+4 Hakim Eliyahu St.<br />
+Tel Aviv, 69120<br />
+Phone Number: 03-6424668<br />
+Cell Phone: 054-6232377<br />
+Fax Number: 03-6414319<br />
+E-mail Address: <mailto_link_to_self email="<main_email />" /><br />
+Home Page: http://www.shlomifish.org/<br />
+Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ; MSN - shlomif@iglu.org.il ;
+ICQ - #207733823; AIM - ShlomiFish<br />
+</p>
+
+<table cellspacing="0" cellpadding="7" class="cv" summary="main C.V. table. Left Column contains the dates. Right Column contains the entries">
+
+<tr>
+<td colspan="2">
+<h2>Education</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+1997 - 2004<br />
+</td>
+<td>
+The Technion<br />
+B.Sc. in Electrical Engineering (Proper)<br />
+Average: 84.6% (Cum Laude)<br />
+</td>
+</tr>
+
+<tr>
+<td>
+1991-1995
+</td>
+<td>
+Gymnasia Ivrit “Herzlia”<br />
+Major Subjects: Mathematics, English, Physics and Arabic<br />
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Experience</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Programming - at Workplaces</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+December 2011 - June 2012
+</p>
+</td>
+<td>
+<p>
+Ron Soferman Image Processing<br />
+Software Developer
+</p>
+<p>
+Development using Python, Linux, Windows, OpenCV, and Amazon Web Services.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+July 2010 - January 2011
+</p>
+</td>
+<td>
+<p>
+Reask.com<br />
+“Enlightened Perl” Developer
+</p>
+<p>
+Development of a web application based on Perl 5 , Catalyst, DBIx-Class
+and similar technologies. Wrote automated tests, implemented features and
+fixed bugs. Team work using Internet communication.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+2008 (for 4 months)
+</p>
+</td>
+<td>
+<p>
+Emoze.com (Part of Emblaze)<br />
+Linux C++/Server Developer
+</p>
+<p>
+Porting a C++ server application from Win32 to Linux.
+</p>
+
+<p>
+Worked on a server for push-E-mail (to cellphones), which needed porting
+from Win32 to Linux. Technologies used were: gcc/g++, vim, libcurl, GNU make,
+Ubuntu Linux, Perl and others.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+2007 (for 3 months)
+</p>
+</td>
+<td>
+<p>
+Tehuti Networks<br />
+Linux Kernel Developer and Tester
+</p>
+<p>
+Linux kernel development and QA engineering for a 10 Gbps Ethernet
+card that Tehuti develops. Specialised in testing the card under VMware ESX
+and Xen Enterprise. Coded using Perl and ANSI C.
+</p>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+January 1997 - October 1997
+</p>
+</td>
+<td>
+<p>
+Smart Link Ltd.<br />
+Programmer and Tester
+</p>
+<p>
+Testing a software-based modem (Modio), Windows 95 Programming. Manual testing
+of a soft-modem. Writing test procedures.  Programming various utilities in
+Visual C++, MFC, and Perl.
+</p>
+
+<detailed>
+<p>
+I began working at SmartLink as a tester for their software-based modem
+which was based on a soundcard and implemented the connection logic and the DSP
+in software. I worked with Windows 95 and Windows 95 OSR2. When Smart-Link hired
+a dedicated and more experienced Q&amp;A Engineer, I became a part-time tester/
+high-level programmer/general jack-of-all-trades.
+</p>
+<p>
+I worked with the Windows Drivers, MFC, Perl for Win32, DJGPP, Cygwin, a myriad
+of games and modem-related software, as well as Microsoft IIS.
+</p>
+</detailed>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+April 1996 - October 1996
+</p>
+</td>
+<td>
+<p>
+Cortext Inc.<br />
+Programmer, WWW Site Maintainer, Limited UNIX Maintenance
+</p>
+<p>
+HTML composition, CGI programming, TCP/IP client/server programs.
+</p>
+<undetailed>
+<p>
+Worked with Perl 5, various UNIX flavours (FreeBSD, IRIX, SunOS 4.1.3),
+and several Windows 95 workstations. Did web development using HTML, Perl
+and UNIX.
+</p>
+</undetailed>
+<detailed>
+<p>
+I worked at Cortext as a web-designer and CGI programmer. I worked with HTML,
+Apache, Perl, various UNIX flavours (FreeBSD, SunOS 4.1.3, IRIX) and Windows
+95 Workstations. Built several sites there, while still using almost exclusively
+Perl due to my limited knowledge (at that point) of UNIX.
+</p>
+</detailed>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+June 1995 - March 1996
+</p>
+</td>
+<td>
+<p>
+Elpas Electro-optic Systems, Ltd.<br />
+Chief Programmer of EIRIS (Elpas Infra-Red Identification System)
+</p>
+<p>
+Databases, client/server programs (with NetDDE), English/Hebrew
+MS-Windows GUI
+</p>
+
+<undetailed>
+<p>
+Programmed using C and C++ on Windows 3.11. Experienced with networking,
+SQL, databases, ODBC, NetDDE, Borland C++ 4.5 and MSDN.
+</p>
+</undetailed>
+
+<detailed>
+
+<p>
+Elpas developed a network of sensors that was installed in each room of a
+building (say a hospital), and received input from infra-red badges.  That made
+it possible to determine where each person or piece of equipment was located. I
+maintained the software that ran on a centralised computer, received the raw
+input from the sensors and processed it. My main issue was to replace an SCO
+UNIX server software with something internal of our own. We inspected working
+with Microsoft Access and ODBC, and eventually realised our own in-memory data
+managing was the most suitable solution due to the real-time nature of the
+application.
+</p>
+
+<p>
+Specialised in Windows (16-bit) Programming, SQL, ODBC, ANSI C and C++. Worked
+primarily with Borland C++ 4.5 and the Microsoft Developer Network.
+</p>
+</detailed>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Fields of Expertise</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Programming Languages:</b>
+</td>
+<td>
+C (since 1992, active use and good knowledge), Perl (since 1996, active use
+and excellent knowledge), C++ (since 1992, a lot of experience but
+incomplete knowledge), Bourne Shell/Bash (since 1996, good knowledge
+and good mastery), Python (since about 2002 - good knowledge but
+incomplete experience), JavaScript (since 1996 - not a lot of experience)<br />
+<b>Studied out of interest:</b> Basic, Object Pascal, Scheme, Matlab,
+Common Lips, Haskell, Prolog<br />
+<b>Functional Knowledge:</b> Java, Ruby, Lua, PHP.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Operating Systems:</b>
+</td>
+<td>
+UNIX (Linux, FreeBSD, others), Windows 95/98, Windows 3.11, DOS,
+Windows XP.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Databases:</b>
+</td>
+<td>
+SQL, Delphi, ODBC, MS-Access, MySQL, PostgreSQL, SQLite.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Internet Related:</b>
+</td>
+<td>
+HTML, XHTML, CGI programming, JavaScript, TCP/IP Sockets, Website Meta Language,
+Apache, CGI::Application, Catalyst (Web-development framework for Perl), jQuery.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>XML Technologies:</b>
+</td>
+<td>
+XML, DTD, RELAX NG, XPath, DOM, XSLT.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Various Programs:</b>
+</td>
+<td>
+Word, Excel, WordPerfect, Corel-Draw, The GIMP, LaTeX, DocBook/XML,
+OpenOffice.org, Inkscape.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Development Tools:</b>
+</td>
+<td>
+Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Programming - Open Source Projects</h3>
+</td>
+</tr>
+
+<tr>
+    <td>
+    2007
+    </td>
+    <td>
+    XML::RSS
+    </td>
+</tr>
+<tr>
+<td></td>
+<td>
+Work on the CPAN Perl Module for processing RSS: bug fixing (while adding
+regression tests), increasing test coverage, and refactoring. Some of it
+was done as part of a grant from The Perl Foundation.
+</td>
+</tr>
+
+
+<tr>
+    <td>
+    2004
+    </td>
+    <td>
+    HTML-Widgets-NavMenu
+    </td>
+</tr>
+<tr>
+<td></td>
+<td>A Perl Module for maintaining HTML navigation menus and site flow.</td>
+</tr>
+
+<tr>
+    <td>
+    2003
+    </td>
+    <td>
+    The Better SCM Site - http://better-scm.shlomifish.org/
+    </td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td>
+    A web-site for information and advocacy of version control systems and
+    Source Configuration Management (SCM).
+    Includes articles, links and a multiple-item multiple-system
+    comparison of 16 different implementations.
+    </td>
+</tr>
+
+<tr>
+<td>
+2002-Present
+</td>
+<td>
+Contribution to large-scale open source projects (GIMP, Subversion, KDE and
+perl).
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+Code contribution to the Subversion version control system; large-scale code
+contribution to the GIMP image manipulation program; contribution of
+documentation and external modules to the Perl programming language.
+</td>
+</tr>
+
+
+<tr>
+    <td>
+    2001 - Present
+    </td>
+    <td>
+    Latemp - a Content Management System for Static HTML Sites.
+    </td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td>
+    A content management system based on Website Meta Language and many Perl
+    CPAN modules, intended primarily for constructing static HTML pages.
+    </td>
+</tr>
+<tr>
+<td>
+<p>
+2000
+</p>
+</td>
+<td>
+<p>
+Freecell Solver<br />
+Main Programmer
+</p>
+<p>
+A C program that automatically solves games of Freecell and similar variants
+of card solitaire.
+</p>
+<detailed>
+<p>
+Started a C project to automatically solve games of Freecell. Continued in
+adding more features, optimisations, and clean-ups. Experienced with ANSI C
+Programming, writing portable code, Autoconf/Automake/Libtool, GNU Make,
+Writing RPM Specs, maintaining a web-site and interacting with users and
+co-developers over the Internet.
+</p>
+<p>
+Freecell Solver is distributed under the MIT/X11 licence, and has been
+integrated into at least three Freecell implementations so far.
+</p>
+</detailed>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+1997
+</p>
+</td>
+<td>
+<p>
+MikMod for Java<br />
+Programmer
+</p>
+<p>
+Converting a program from ANSI C to Java
+</p>
+<detailed>
+<p>
+Mod Files are music files whose instruments are given as samples, and are
+played at different notes and effects to create the melody. The conversion
+was done by converting to C++, and then several steps of Javaisation. The
+resultant code was working and produced good output, but was not very conformant
+to the Java style.
+</p>
+</detailed>
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2">
+<h3>Communal and Personal</h3>
+</td>
+</tr>
+
+<tr>
+    <td>
+    2001 - Present
+    </td>
+    <td>
+<undetailed>
+<p>
+The Israeli Group of Linux Users Server<br />
+Co-Administrator
+</p>
+<p>
+Administrating a 100% uptime server carrying FTP, SMTP and numerous
+WWW-services.
+</p>
+</undetailed>
+<detailed>
+<p>
+An Administrator for the
+<a href="http://www.iglu.org.il/">iglu.org.il</a> site.
+</p>
+<p>
+Maintaining several online services supported by the main server of
+the Israeli Group of Linux Users (IGLU). Experience with Apache,
+Perl, rsync, qmail and other programs. Created several online pieces
+of content using these tools.
+</p>
+</detailed>
+    </td>
+</tr>
+<detailed>
+<tr>
+    <td>
+        1999-Present
+    </td>
+    <td>
+        <p>
+        Maintaining a private Linux workstation
+        </p>
+        <p>
+        Maintained several home systems and one at the Computer Networks
+        Laboratory of the EE Department of the Technion. Experience with
+        package maintenance, system configuration, installing software,
+        fixing glitches, and daily use. Used Red Hat Linux (versions 5.x, 6.x),
+        Mandrake/Mandriva Linux (versions 7.x and above) and
+        Mageia Linux (versions 1 and above).
+        </p>
+    </td>
+</tr>
+</detailed>
+
+<tr>
+<td colspan="2">
+<h3>Mathematics</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+1994
+</td>
+<td>
+1st place, first Annual Israel’s Mathematics Contest for School Teams<br />
+Along with: Kobi Karlibakh, Or Tsok and Amit Zinger<br />
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Technical Articles</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+2005
+</td>
+<td>
+Building Navigation Menus
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+An article that discusses web-site navigation and site flow patterns
+in general, and then explains how to implement them using the
+HTML-Widgets-NavMenu module.
+</td>
+</tr>
+
+
+
+
+<tr>
+<td>
+2004
+</td>
+<td>
+Which Open Source Wiki works for you?
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+An article overviewing and comparing several popular and open source wiki
+engines. Published at O’Reilly-Net.
+</td>
+</tr>
+
+<tr>
+<td>
+2004
+</td>
+<td>
+The New Breed of Version Control Systems
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+A comparison of the version control systems that aim to be successors to the
+CVS version control system. Published at O’Reilly-Net.
+</td>
+</tr>
+
+<tr>
+<td>
+2001
+</td>
+<td>
+Perl for Perl Newbies
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+A series of presentations (along with detailed slides and many examples) that
+aim to introduce the Perl programming language for beginners.
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td colspan="2">
+<h3>Creative Writing</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+2004-2005
+</p>
+</td>
+<td>
+<p>
+The Human Hacking Field Guide
+</p>
+<p>
+A humorous realistic story about high school teens in mid-2000’s Los Angeles,
+who deal in programming extensively.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+1998
+</p>
+</td>
+<td>
+<p>
+The One with The Fountainhead
+</p>
+<p>
+A parody on <i>The Fountainhead</i> (by Ayn Rand) modelled on an episode of
+the T.V. show <i>Friends</i>.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>
+1996-1997
+</p>
+</td>
+<td>
+<p>
+The Enemy and How I Helped to Fight it
+</p>
+<p>
+A satire about the situation in the Israeli-Lebanese border.
+</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h3>Essays</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+2009
+</td>
+<td>
+Optimizing Code for Speed
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+When and why optimizing programs to run faster is important, and some of
+the general methods to do that.
+</td>
+</tr>
+
+<tr>
+<td>
+2003
+</td>
+<td>
+Open Source, Free Software and Other Beasts
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+An essay explaining what Open Source Software, and Free Software is all
+about, the difference of terms and philosophies, and the various other terms
+one should know about.
+</td>
+</tr>
+
+<tr>
+<td>
+2004
+</td>
+<td>
+The Joy of Perl
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+An essay explaining why I like Perl so much.
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>References</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Will be supplied upon request
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Languages</h2>
+</td>
+</tr>
+
+<tr>
+<td>Hebrew</td>
+<td>Speaking, Reading and Writing - Mother Tongue.</td>
+</tr>
+
+<tr>
+<td>English</td>
+<td>Speaking, Reading and Writing - Very Good.</td>
+</tr>
+
+<tr>
+<td>Arabic</td>
+<td>Reading and Writing - extremely basic (and rusty) command.</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<h2>Personal</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Born 5 May, 1977<br />
+Single<br />
+</td>
+</tr>
+
+</table>

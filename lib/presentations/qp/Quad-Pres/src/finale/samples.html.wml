@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<h2>Presentations Using Website Meta Language</h2>
+
+<define-tag linktolectproto endtag="required">
+<li><a href="http://www.shlomifish.org/lecture/%0/">%body</a></li>
+</define-tag>
+<define-tag linktolect endtag="required">
+<linktolectproto "%0/slides">%body</linktolectproto>
+</define-tag>
+<ol class="point">
+<linktolect "W2L/Basic_Use">The Haifux' Welcome to Linux Basic Use Lecture</linktolect>
+<linktolect "Freecell-Solver">Freecell Solver - Evolution of a C Program</linktolect>
+<linktolect "Autotools">The GNU Autotools</linktolect>
+<linktolect "WebMetaLecture">WebMetaLecture - a lecture about Website Meta Language</linktolect>
+<linktolect "Quad-Pres">This lecture!</linktolect>
+</ol>
+
+<h2>Presentations done without WML</h2>
+
+<ol class="point">
+<linktolectproto "Perl/Newbies">Perl for Perl Newbies Series</linktolectproto>
+<linktolectproto "Gimp/1">Do it with the GIMP</linktolectproto>
+
+</ol>
+

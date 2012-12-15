@@ -1,0 +1,41 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+כדי להשתמש במעטפת, הקלד פקודה ולחץ על Enter.
+</li>
+<li>
+אחרי שהפקודה גמרה לרוץ, שורת הפקודה תחזור,
+ובשלב זה ניתן להקליד פקודה נוספת.
+</li>
+<li>
+הנה הפעלה לדוגמא:
+</li>
+</points>
+
+<table border="1" summary="Example Session" dir="ltr">
+<tr>
+<td>
+<pre>
+shlomi:~$ ls
+apps      cddb        Download      mail       nsmail          smart-link.txt~
+Arcs      CD-Writing  GNUstep       Mail       progs           tmp
+autosave  conf        index.html    Music      Projects        To_Send
+Backup    Desktop     ip-noise.fig  Nautilus   Rpms            Xrootenv.0
+bin       Docs        links         nohup.out  smart-link.txt
+shlomi:~$ pwd
+/home/shlomi
+shlomi:~$ cd Download/
+shlomi:~/Download$ ls
+Arcs  Docs  From_Win  Images  unpack
+shlomi:~/Download$ echo Something
+Something
+shlomi:~/Download$ cd ..
+shlomi:~$ exit
+</pre>
+</td>
+</tr>
+</table>
+
+

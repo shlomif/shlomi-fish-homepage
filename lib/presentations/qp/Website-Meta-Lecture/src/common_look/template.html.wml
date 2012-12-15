@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/common_look/template.wml" />
+</quadpres_code_block>
+
+<points>
+<li>
+&#123;# ... #&#125; are the mechanisms used to define and place diverted texts.
+</li>
+<li>
+%0 is the first parameter given to the <tt>subject</tt> meta-tag.
+</li>
+<li>
+&#036;(ROOT) is an ipp variable used to define the path to the base directory
+of the site.
+</li>
+</points>

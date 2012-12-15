@@ -1,0 +1,23 @@
+#include 'template.wml'
+
+<points>
+<li>
+The command line processing used to occupy a large part of the <tt>main()</tt>
+function of Freecell Solver.
+</li>
+<li>
+Instead, recent versions of Freecell Solver designated a special function (
+in the <tt>cmd_line.c</tt> module) to configure an instance according to the
+command line arguments that are passed to it.
+</li>
+<li>
+This enabled writing other programs which configure themselves according to
+this scheme. (as all they needed to do was call this function)
+</li>
+<li>
+It also allows for programs that use FCS and for its language bindings, to
+configure themselves using this one textual interface, instead of a multitude
+of separate configuration functions.
+</li>
+</points>
+

@@ -399,9 +399,9 @@ my %reduced_sub_trees =
     },
 );
 
-sub get_params
+sub generic_get_params
 {
-    my ($args) = @_;
+    my ($class, $args) = @_;
 
     my $is_fully_expanded = (
         exists($args->{fully_expanded})
@@ -599,6 +599,15 @@ sub get_params
             hosts => $hosts,
             tree_contents => $tree_contents,
         );
+}
+
+sub get_params
+{
+    return __PACKAGE__->generic_get_params(
+        {
+            fully_expanded => 1,
+        }
+    );
 }
 
 1;

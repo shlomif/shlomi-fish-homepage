@@ -397,10 +397,14 @@ return;
 <define-tag my_extra_head_elements>
 <link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen, projection" title="Old 2008 Style" />
 <link rel="stylesheet" type="text/css" href="$(ROOT)/js/treeview/jquery.treeview.css" />
+<link rel="stylesheet" href="$(ROOT)/jqtree.css" type="text/css" media="screen, projection" title="Normal" />
 <script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/main_nav_menu.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/jquery.treeview.min.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
+<script src="$(ROOT)/js/tree.jquery.js" type="text/javascript"></script>
+<script src="$(ROOT)/js/to-jqtree.js" type="text/javascript"></script>
+<script src="$(ROOT)/js/to-jqtree-2.js" type="text/javascript"></script>
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
 {#PAGE_EXTRA_HEAD_ELEMENTS#}
@@ -455,6 +459,12 @@ td { vertical-align : top; }
 </latemp_before_main_title>
 
 <latemp_after_body>
+# For loading the jqTree contents from dest/t2-homepage/_data/nav.json
+# using AJAX and processing it into something acceptable by it and replacing
+# the existing tree.
+<script type="text/javascript">
+shlomif_load_nav("<: print get_page_path(); :>");
+</script>
 <if "<should_display_disqus />" "<disqus_thread />" />
 <share_this_button />
 # <google_adsense_code_after_text />

@@ -64,6 +64,16 @@ function get_relative_path (args) {
     return get_base_relative_path(args) + args.to;
 }
 
+// Taken from http://stackoverflow.com/questions/24816/escaping-html-strings-with-jquery
+function escape_html (str) {
+    // No jQuery, so use string replace.
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/>/g, '&gt;')
+        .replace(/</g, '&lt;')
+        .replace(/"/g, '&quot;');
+}
+
 function calc_jqtree_data_from_html_w_nav_menu_json (args) {
     var base = args.base;
     var current = args.current;
@@ -93,7 +103,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
         }
         var ret = {
             label: ("<a href=\"" +
-                _get_rel(sub_tree['url']) + "\"" + title_attr +
+                escape_html(_get_rel(sub_tree['url'])) + "\"" + title_attr +
                 ">" + sub_tree['text'] + "</a>"
                 ),
         };

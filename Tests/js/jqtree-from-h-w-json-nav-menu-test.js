@@ -86,9 +86,16 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
             return sub_tree.map(_recurse);
         }
 
+        var title_attr = '';
+
+        if ('title' in sub_tree) {
+            title_attr = ' title="' + sub_tree['title'] + '"'
+        }
         var ret = {
             label: ("<a href=\"" +
-                _get_rel(sub_tree['url']) + "\">" + sub_tree['text'] + "</a>"),
+                _get_rel(sub_tree['url']) + "\"" + title_attr +
+                ">" + sub_tree['text'] + "</a>"
+                ),
         };
 
         if ('subs' in sub_tree) {
@@ -208,6 +215,7 @@ function test_nav_menu_generation()
                     },
                     {
                         "text": "Humour",
+                        "title": "Stories and Aphorisms I wrote",
                         "url": "humour/"
                     }
                 ]
@@ -223,7 +231,7 @@ function test_nav_menu_generation()
                     label: '<a href="./../me/">About Myself</a>'
                 },
                 {
-                    label: '<a href="./../humour/">Humour</a>'
+                    label: '<a href="./../humour/" title="Stories and Aphorisms I wrote">Humour</a>'
                 }
                 ],
             },

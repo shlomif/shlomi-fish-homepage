@@ -43,7 +43,7 @@ function test_nav_menu_generation()
     module("NavMenu.Main.ToJQTree");
 
     test("NavMenu main test", function () {
-        expect(6);
+        expect(7);
 
         // TEST
         ok (true, "True is, well, true.");
@@ -102,6 +102,18 @@ function test_nav_menu_generation()
                 {
                     base: 'http://www.shlomifish.org/',
                     current: 'http://www.shlomifish.org/humour/',
+                    to: 'me/intros/writers/'
+                }
+            ),
+            './../me/intros/writers/'
+        );
+
+        // TEST
+        equal (
+            get_relative_path(
+                {
+                    base: 'http://www.shlomifish.org/',
+                    current: 'http://www.shlomifish.org/humour/foo.html',
                     to: 'me/intros/writers/'
                 }
             ),

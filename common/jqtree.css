@@ -1,18 +1,18 @@
-/* From jqTree-0.14. */
+/* From jqTree-0.14. Modified by Shlomi Fish */
 ul.jqtree-tree {
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 ul.jqtree-tree,
 ul.jqtree-tree ul.jqtree_common {
-    list-style: none outside;
+    list-style: square outside none;
     margin-bottom: 0;
     padding: 0;
 }
 
 ul.jqtree-tree ul.jqtree_common {
     display: block;
-    margin-left: 12px;
+    margin-left: 10px;
     margin-right: 0;
 }
 ul.jqtree-tree li.jqtree-closed > ul.jqtree_common {
@@ -28,8 +28,8 @@ ul.jqtree-tree .jqtree-toggler {
     left: -1.5em;
     top: 30%;
     *top: 0;  /* fix for ie7 */
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 10px;
+    line-height: 10px;
     font-family: arial;  /* fix for ie9 */
     border-bottom: none;
     color: #333;

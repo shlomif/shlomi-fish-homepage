@@ -16,7 +16,7 @@ NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 
 DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json
+all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts
 
 include lib/make/gmsl/gmsl
 
@@ -942,3 +942,14 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN)
 
 generate_nav_data_as_json:
 
+JSMIN = bin/jsmin
+$(JSMIN): lib/jsmin/jsmin.c
+	gcc -o $@ -O2 -Wall $<
+
+JQTREE_SRC = common/js/tree.jquery.js
+JQTREE_MIN_DEST = dest/t2-homepage/js/tree.jq.js
+
+$(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
+	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)
+
+minified_javascripts: $(JQTREE_MIN_DEST)

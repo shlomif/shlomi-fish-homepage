@@ -10,14 +10,14 @@ function shlomif_load_nav (page_path) {
         function(json_input) {
             $('#nav_menu').tree({
                 autoEscape: false,
-                autoOpen: 0,
-                data: [ calc_jqtree_data_from_html_w_nav_menu_json(
+                autoOpen: 1,
+                data: calc_jqtree_data_from_html_w_nav_menu_json(
                     {
                         input: json_input,
                 base: b,
                 current: b + page_path
                     }
-                ) ]
+                )
             });
         }
     );

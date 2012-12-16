@@ -34,12 +34,16 @@ function get_base_relative_path (args) {
     return ('./' + ('../'.repeat(count)));
 }
 
+function get_relative_path (args) {
+    return get_base_relative_path(args) + args.to;
+}
+
 function test_nav_menu_generation()
 {
     module("NavMenu.Main.ToJQTree");
 
     test("NavMenu main test", function () {
-        expect(5);
+        expect(6);
 
         // TEST
         ok (true, "True is, well, true.");
@@ -90,6 +94,18 @@ function test_nav_menu_generation()
             ),
             './../../',
             "relative path with trailing .html page"
+        );
+
+        // TEST
+        equal (
+            get_relative_path(
+                {
+                    base: 'http://www.shlomifish.org/',
+                    current: 'http://www.shlomifish.org/humour/',
+                    to: 'me/intros/writers/'
+                }
+            ),
+            './../me/intros/writers/'
         );
     });
 }

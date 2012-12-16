@@ -39,7 +39,7 @@ function test_nav_menu_generation()
     module("NavMenu.Main.ToJQTree");
 
     test("NavMenu main test", function () {
-        expect(3);
+        expect(4);
 
         // TEST
         ok (true, "True is, well, true.");
@@ -68,5 +68,16 @@ function test_nav_menu_generation()
             "relative path 2"
         );
 
+        // TEST
+        equal (
+            get_base_relative_path(
+                {
+                    base: 'http://www.shlomifish.org/',
+                    current: 'http://www.shlomifish.org/sod/foobar/',
+                }
+            ),
+            './../../',
+            "relative path 3"
+        );
     });
 }

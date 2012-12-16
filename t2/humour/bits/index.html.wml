@@ -6,26 +6,11 @@
 <link rel="stylesheet" href="$(ROOT)/jqtree.css" type="text/css" media="screen, projection" title="Normal" />
 <script src="$(ROOT)/js/tree.jquery.js" type="text/javascript"></script>
 <script src="$(ROOT)/js/to-jqtree.js" type="text/javascript"></script>
+<script src="$(ROOT)/js/to-jqtree-2.js" type="text/javascript"></script>
 </page_extra_head_elements>
 
 <script type="text/javascript">
-$.getJSON(
-    '/_data/nav.json',
-    function(json_input) {
-        var b = 'http://www.shlomifish.org/';
-        $('#nav_menu').tree({
-            autoEscape: false,
-            autoOpen: true,
-            data: [ calc_jqtree_data_from_html_w_nav_menu_json(
-                {
-                    input: json_input,
-                    base: b,
-                    current: b + "<: print get_page_path(); :>"
-                }
-            ) ]
-        });
-    }
-);
+shlomif_load_nav("<: print get_page_path(); :>");
 </script>
 
 <p>

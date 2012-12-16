@@ -43,7 +43,7 @@ function test_nav_menu_generation()
     module("NavMenu.Main.ToJQTree");
 
     test("NavMenu main test", function () {
-        expect(7);
+        expect(8);
 
         // TEST
         ok (true, "True is, well, true.");
@@ -118,6 +118,18 @@ function test_nav_menu_generation()
                 }
             ),
             './../me/intros/writers/'
+        );
+
+        // TEST
+        equal (
+            get_relative_path(
+                {
+                    base: 'http://www.shlomifish.org/',
+                    current: 'http://www.shlomifish.org/me/intros/',
+                    to: 'humour/TheEnemy/te-heb.html'
+                }
+            ),
+            './../../humour/TheEnemy/te-heb.html'
         );
     });
 }

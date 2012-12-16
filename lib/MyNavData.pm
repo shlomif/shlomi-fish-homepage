@@ -623,7 +623,27 @@ sub output_fully_expanded_as_json
         },
     );
 
-    return encode_json($params{tree_contents});
+    my $filter_out_seperators;
+
+    $filter_out_seperators = sub {
+        my ($sub_tree) = @_;
+
+        my @keys = (grep { $_ ne 'subs' } keys %{$sub_tree});
+
+        my $has_subs = exists($sub_tree->{subs});
+
+        return {
+            (map { $_ => $sub_tree->{$_} } @keys),
+            $has_subs
+            ?  (subs => [ map { $filter_out_seperators->($_) }
+                    grep { ! exists($_->{separator}) }
+                    @{$sub_tree->{subs}}
+                ])
+            : (),
+        },
+    };
+
+    return encode_json($filter_out_seperators->($params{tree_contents}));
 }
 
 1;

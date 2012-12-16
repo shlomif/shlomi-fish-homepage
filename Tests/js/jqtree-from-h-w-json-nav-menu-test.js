@@ -25,6 +25,11 @@ function get_base_relative_path (args) {
 
     var count = (rel_path.match(/\//g)||[]).length;
 
+    if (rel_path.match(/[^\/]$/))
+    {
+        count++;
+    }
+
     return '../'.repeat(count);
 }
 
@@ -33,7 +38,7 @@ function test_nav_menu_generation()
     module("NavMenu.Main.ToJQTree");
 
     test("NavMenu main test", function () {
-        expect(2);
+        expect(3);
 
         // TEST
         ok (true, "True is, well, true.");
@@ -48,6 +53,18 @@ function test_nav_menu_generation()
             ),
             '../',
             "relative path 1"
+        );
+
+        // TEST
+        equal (
+            get_base_relative_path(
+                {
+                    base: 'http://www.shlomifish.org/',
+                    current: 'http://www.shlomifish.org/humour.html',
+                }
+            ),
+            '../',
+            "relative path 2"
         );
     });
 }

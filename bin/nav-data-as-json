@@ -9,7 +9,7 @@ use Getopt::Long qw(GetOptions);
 
 use IO::All;
 
-use MyNavData;
+use Shlomif::Homepage::NavData::JSON;
 
 my $output_fn;
 
@@ -19,5 +19,5 @@ GetOptions(
 or die "Wrong options - $!";
 
 io->file($output_fn)->println(
-    MyNavData->output_fully_expanded_as_json()
+    Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json()
 );

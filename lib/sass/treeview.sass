@@ -14,21 +14,17 @@
         margin-left: -16px
         float: left
         cursor: pointer
-    li
-        margin: 0
-        padding: 3px 0pt 3px 16px
     a.selected
         background-color: #eee
     .hover
         color: red
         cursor: pointer
     li
+        margin: 0
+        padding: 3px 0pt 3px 16px
         background: url(js/treeview/images/treeview-default-line.gif) 0 0 no-repeat
         &.collapsable, &.expandable
             background-position: 0 -176px
-    .expandable-hitarea
-        background-position: -80px -3px
-    li
         &.last
             background-position: 0 -1766px
         &.lastCollapsable, &.lastExpandable
@@ -37,6 +33,8 @@
             background-position: 0 -111px
         &.lastExpandable
             background-position: -32px -67px
+    .expandable-hitarea
+        background-position: -80px -3px
     div
         &.lastCollapsable-hitarea, &.lastExpandable-hitarea
             background-position: 0

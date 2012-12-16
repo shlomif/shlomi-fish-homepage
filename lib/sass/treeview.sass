@@ -29,21 +29,23 @@
         //    background-position: 0 -176px
         &:last-child
             background-position: 0 -1766px
-        &.lastCollapsable, &.lastExpandable
-            background-image: url(js/treeview/images/treeview-default.gif)
         &.lastCollapsable
+            background-image: url(js/treeview/images/treeview-default.gif)
             background-position: 0 -111px
         &.lastExpandable
+            background-image: url(js/treeview/images/treeview-default.gif)
             background-position: -32px -67px
+        &.jqtree-closed
+            background-position: -80px -3px
+            &:last-child
+                background-position: -32px -67px
+                background-image: url(js/treeview/images/treeview-default.gif)
+                > div > a.jqtree-toggler
+                    background-position: 0
+            > .jqtree_common
+                display: none
     //.expandable-hitarea
     //     background-position: -80px -3px
-    div
-        &.lastCollapsable-hitarea, &.lastExpandable-hitarea
-            background-position: 0
-    .jqtree-closed
-        background-position: -80px -3px
-        > .jqtree_common
-            display: none
 
 /* fix for IE6
 

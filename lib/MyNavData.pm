@@ -607,7 +607,7 @@ sub get_params
 {
     return __PACKAGE__->generic_get_params(
         {
-            fully_expanded => 1,
+            fully_expanded => 0,
         }
     );
 }

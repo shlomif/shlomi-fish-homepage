@@ -1,9 +1,13 @@
 "use strict";
 function shlomif_load_nav (page_path) {
+    var b = 'http://www.shlomifish.org/';
     $.getJSON(
-        '/_data/nav.json',
+        get_relative_path({
+            base: b,
+            current: b + page_path,
+            to: '_data/nav.json',
+        }),
         function(json_input) {
-            var b = 'http://www.shlomifish.org/';
             $('#nav_menu').tree({
                 autoEscape: false,
                 autoOpen: true,

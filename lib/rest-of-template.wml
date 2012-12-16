@@ -342,6 +342,14 @@ of an EvilPHish”</a> cartoon of
         # binmode STDOUT, ":encoding(utf-8)";
     }
 
+    sub get_page_path
+    {
+        my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
+        $filename =~ s{index\.html$}{};
+
+        return $filename;
+    }
+
     use vars (qw($section_nav_menu));
 
     sub init_section_nav_menu
@@ -358,9 +366,7 @@ EOF_ADS_CODE
         {
             return;
         }
-    my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
-    $filename =~ s{index\.html$}{};
-    $filename = "/$filename";
+    $filename = "/" . get_page_path();
 
     $section_nav_menu = MySectNavData::get_nav_menu(
         'path_info' => $filename,

@@ -924,7 +924,7 @@ NAV_DATA_AS_JSON = $(T2_DEST)/_data/nav.json
 
 generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 
-$(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN)
+$(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepage/NavData/JSON.pm
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
 generate_nav_data_as_json:

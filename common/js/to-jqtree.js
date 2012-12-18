@@ -45,10 +45,9 @@ if (!Array.prototype.map)
 }
 
 function get_base_relative_path (args) {
-    var base = args.base;
-    var current = args.current;
+    var rel_path = args.rel_path;
 
-    var rel_path = current.substring(base.length);
+    //var rel_path = current.substring(base.length);
 
     var count = (rel_path.match(/\//g)||[]).length;
 
@@ -76,14 +75,12 @@ function escape_html (str) {
 }
 
 function calc_jqtree_data_from_html_w_nav_menu_json (args) {
-    var base = args.base;
-    var current = args.current;
+    var rel_path = args.rel_path;
 
     var _get_rel = function (href) {
         return get_relative_path(
             {
-                base: base,
-                current: current,
+                rel_path: rel_path,
                 to: href,
             }
         );

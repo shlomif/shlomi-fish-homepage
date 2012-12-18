@@ -91,6 +91,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
 
     // TODO : XSS - cross site scripting.
     var _recurse;
+    var _next_id = 0;
 
     _recurse = function(sub_tree) {
         if ($.isArray(sub_tree)) {
@@ -107,6 +108,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
                 escape_html(_get_rel(sub_tree['url'])) + "\"" + title_attr +
                 ">" + sub_tree['text'] + "</a>"
                 ),
+            id: (++_next_id),
         };
 
         if ('subs' in sub_tree) {

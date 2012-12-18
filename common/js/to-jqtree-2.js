@@ -11,6 +11,7 @@ function shlomif_load_nav (page_path) {
             $('#nav_menu').tree({
                 autoEscape: false,
                 autoOpen: false,
+                saveState: true,
                 data: calc_jqtree_data_from_html_w_nav_menu_json(
                     {
                         input: json_input,

@@ -18,8 +18,7 @@ function test_nav_menu_generation()
         equal (
             get_base_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/humour/',
+                    rel_path: 'humour/',
                 }
             ),
             './../',
@@ -30,8 +29,7 @@ function test_nav_menu_generation()
         equal (
             get_base_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/humour.html',
+                    rel_path: 'humour.html',
                 }
             ),
             './',
@@ -42,8 +40,7 @@ function test_nav_menu_generation()
         equal (
             get_base_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/sod/foobar/',
+                    rel_path: 'sod/foobar/',
                 }
             ),
             './../../',
@@ -54,8 +51,7 @@ function test_nav_menu_generation()
         equal (
             get_base_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/sod/foobar/l.html',
+                    rel_path: 'sod/foobar/l.html',
                 }
             ),
             './../../',
@@ -66,8 +62,7 @@ function test_nav_menu_generation()
         equal (
             get_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/humour/',
+                    rel_path: 'humour/',
                     to: 'me/intros/writers/'
                 }
             ),
@@ -78,8 +73,7 @@ function test_nav_menu_generation()
         equal (
             get_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/humour/foo.html',
+                    rel_path: 'humour/foo.html',
                     to: 'me/intros/writers/'
                 }
             ),
@@ -90,8 +84,7 @@ function test_nav_menu_generation()
         equal (
             get_relative_path(
                 {
-                    base: 'http://www.shlomifish.org/',
-                    current: 'http://www.shlomifish.org/me/intros/',
+                    rel_path: 'me/intros/',
                     to: 'humour/TheEnemy/te-heb.html'
                 }
             ),
@@ -120,12 +113,15 @@ function test_nav_menu_generation()
             // TEST
             var expected = [
             {
+                id: 1,
                 label: '<a href="./../">Shlomi Fish</a>',
                 children: [
                 {
+                    id: 2,
                     label: '<a href="./../me/">About Myself</a>'
                 },
                 {
+                    id: 3,
                     label: '<a href="./../humour/" title="Stories and Aphorisms I wrote">Humour</a>'
                 }
                 ],
@@ -136,8 +132,7 @@ function test_nav_menu_generation()
                 calc_jqtree_data_from_html_w_nav_menu_json(
                     {
                         input: input,
-                        base: 'http://www.shlomifish.org/',
-                        current: 'http://www.shlomifish.org/humour/'
+                        rel_path: 'humour/',
                     }
                 ),
                 expected,
@@ -185,21 +180,27 @@ function test_nav_menu_generation()
             // TEST
             var expected = [
             {
+                id: 1,
                 label: '<a href="./../../">Shlomi Fish</a>',
                 children: [
                 {
+                    id: 2,
                     label: '<a href="./../../me/">About Myself</a>'
                 },
                 {
+                    id: 3,
                     label: '<a href="./../../humour/" title="Stories and Aphorisms I wrote">Humour</a>',
                     children: [
                         {
+                            id: 4,
                             label: '<a href="./../../humour/TOWTF/" title="Parody of The Fountainhead">The One With The Fountainhead</a>',
                         },
                         {
+                            id: 5,
                             label: '<a href="./../../humour/human-hacking/" title="The Human Hacking Field Guide">HHFG</a>',
                             children: [
                                 {
+                                    id: 6,
                                     label: '<a href="./../../humour/human-hacking/heb.html">Hebrew Translation</a>'
                                 }
                             ]
@@ -214,8 +215,7 @@ function test_nav_menu_generation()
                 calc_jqtree_data_from_html_w_nav_menu_json(
                     {
                         input: input,
-                        base: 'http://www.shlomifish.org/',
-                        current: 'http://www.shlomifish.org/art/slogans/'
+                        rel_path: 'art/solgans/',
                     }
                 ),
                 expected,

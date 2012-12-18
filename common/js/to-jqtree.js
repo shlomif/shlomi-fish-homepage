@@ -64,6 +64,13 @@ function get_relative_path (args) {
     return get_base_relative_path(args) + args.to;
 }
 
+function shlomif_get_relative_path_callback(rel_path) {
+    var prefix = get_base_relative_path({ rel_path: rel_path });
+    return function (to) {
+        return prefix + to;
+    };
+}
+
 // Taken from http://stackoverflow.com/questions/24816/escaping-html-strings-with-jquery
 function escape_html (str) {
     // No jQuery, so use string replace.
@@ -77,14 +84,7 @@ function escape_html (str) {
 function calc_jqtree_data_from_html_w_nav_menu_json (args) {
     var rel_path = args.rel_path;
 
-    var _get_rel = function (href) {
-        return get_relative_path(
-            {
-                rel_path: rel_path,
-                to: href,
-            }
-        );
-    };
+    var _get_rel = shlomif_get_relative_path_callback(rel_path);
 
     // TODO : XSS - cross site scripting.
     var _recurse;

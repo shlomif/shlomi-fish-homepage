@@ -11,8 +11,13 @@ use Cwd qw(getcwd);
     my $orig_dir = getcwd();
 
     chdir("t2/humour/fortunes");
-    system("make", "dist");
-    system("make", "list_files");
+
+    if (-e 'friends')
+    {
+        system("make", "dist");
+    }
+
+    system("make", "-q", "list_files");
 
     chdir($orig_dir);
 }

@@ -26,9 +26,24 @@ $text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;
 $text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;
 io("include.mak")->print($text);
 
-system("./bin/gen-docbook-make-helpers.pl");
-system("./bin/gen-fortunes.pl");
-system("./bin/gen-deps-mak.pl");
+sub _my_system
+{
+    my $cmd = shift;
+
+    print join(' ', @$cmd), "\n";
+    if (system { $cmd->[0] } (@$cmd)) {
+        die "<<@$cmd>> failed.";
+    }
+}
+
+foreach my $cmd (
+    [ "./bin/gen-docbook-make-helpers.pl" ],
+    [ "./bin/gen-fortunes.pl" ],
+    [ "./bin/gen-deps-mak.pl" ],
+)
+{
+    _my_system($cmd);
+}
 
 1;
 

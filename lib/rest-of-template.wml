@@ -396,13 +396,13 @@ return;
 
 <define-tag remove_extra_head_elements>
 <link rel="stylesheet" href="$(ROOT)/jqtree.css" type="text/css" media="screen, projection" title="Normal" />
+<script type="text/javascript" src="$(ROOT)/js/main_nav_menu.js"></script>
 </define-tag>
 
 <define-tag my_extra_head_elements>
 <link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen, projection" title="Old 2008 Style" />
 <link rel="stylesheet" type="text/css" href="$(ROOT)/js/treeview/jquery.treeview.css" />
 <script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
-<script type="text/javascript" src="$(ROOT)/js/main_nav_menu.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/jquery.treeview.min.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
 <script src="$(ROOT)/js/tree.jq.js" type="text/javascript"></script>

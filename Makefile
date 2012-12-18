@@ -811,7 +811,9 @@ CSS_TARGETS_COMMON_DEPS = $(COMMON_CSS_TARGET_DEPS)
 
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
-SASS_STYLE = compressed
+# TODO : Restore later
+# SASS_STYLE = compressed
+SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
 $(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass

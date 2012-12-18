@@ -127,3 +127,23 @@ margins.
     take less place.
         - DONE.
 
+    * Make the navigation menu preserve its expansion across pages/sessions.
+        - DONE.
+
+    * Tweak the CSS to make it nicer.
+        - Make the expand +'s a +s instead of minuses if the <ul> is collapsed.
+            - DONE by NO LONGER WORKS except for the last expandable.
+            - DONE properly again.
+        - Make the lines continuous in the left pane nav menu.
+            - They are mostly continuous now.
+        - RESOLVED / REVERTED / WONT_FIX_FOR_NOW
+        * Make sure that when the + button (the expander of the navigation sub-menus)
+        is pressed, it does not jump to the bottom.
+            - Moreover, the + button is located too much to the top of the text.
+                - Not aligned properly.
+
+* Make the main navigation menu not expand everything by default.
+    - DONE.
+
+
+

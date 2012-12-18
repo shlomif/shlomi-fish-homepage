@@ -1,25 +1,14 @@
 Pressing:
 ---------
 
-* Make the navigation menu preserve its expansion across pages/sessions.
-
-* Tweak the CSS to make it nicer.
-    - Make the expand +'s a +s instead of minuses if the <ul> is collapsed.
-        - DONE by NO LONGER WORKS except for the last expandable.
-        - DONE properly again.
-    - Make the lines continuous in the left pane nav menu.
-        - They are mostly continuous now.
-
-* Make the main navigation menu not expand everything by default.
-    - DONE.
-
-* Make sure that when the + button (the expander of the navigation sub-menus)
-is pressed, it does not jump to the bottom.
-    - Moreover, the + button is located too much to the top of the text.
-        - Not aligned properly.
-
 Not so pressing:
 ----------------
+
+* jqTree
+    - Expand some of the categories by deafult.
+    - change to s smaller font.
+    - Implement a more permaent (and lib/MyNavData.pm-side ID-generation scheme
+    for the saveState).
 
 * Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml from more places.
 

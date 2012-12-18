@@ -94,14 +94,17 @@ function test_nav_menu_generation()
         {
             var input = [
             {
+                id: 1,
                 "text": 'Shlomi Fish',
                 "url": "",
                 "subs": [
                     {
+                        id: 2,
                         "text": "About Myself",
                         "url": "me/"
                     },
                     {
+                        id: 3,
                         "text": "Humour",
                         "title": "Stories and Aphorisms I wrote",
                         "url": "humour/"
@@ -143,29 +146,35 @@ function test_nav_menu_generation()
         {
             var input = [
             {
+                id: 1,
                 "text": 'Shlomi Fish',
                 "url": "",
                 "subs": [
                     {
+                        id: 2,
                         "text": "About Myself",
                         "url": "me/"
                     },
                     {
+                        id: 3,
                         "text": "Humour",
                         "title": "Stories and Aphorisms I wrote",
                         "url": "humour/",
                         "subs": [
                             {
+                                id: 4,
                                 "text": "The One With The Fountainhead",
                                 "title": "Parody of The Fountainhead",
                                 "url": "humour/TOWTF/"
                             },
                             {
+                                id: 5,
                                 "text": "HHFG",
                                 "title": "The Human Hacking Field Guide",
                                 "url": "humour/human-hacking/",
                                 "subs": [
                                     {
+                                        id: 6,
                                         "text": "Hebrew Translation",
                                         "url": "humour/human-hacking/heb.html"
                                     }

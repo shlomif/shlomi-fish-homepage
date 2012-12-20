@@ -1,21 +1,19 @@
 var toggle_sect_key = "shlomifish.org_section_navigation_menu_shown";
 
-function has_ls() {
-    return (typeof localStorage !== "undefined" && localStorage !== null);
-}
+var has_ls = (typeof localStorage !== "undefined" && localStorage !== null);
 
 function toggle_sect_menu() {
     var elem = $("#toggle_sect_menu");
 
     if (elem.hasClass("off")) {
         elem.text("Hide");
-        if (has_ls()) {
+        if (has_ls) {
             localStorage.setItem(toggle_sect_key, "1");
         }
     }
     else {
         elem.text("Show");
-        if (has_ls()) {
+        if (has_ls) {
             localStorage.removeItem(toggle_sect_key);
         }
     }
@@ -31,7 +29,7 @@ $(document).ready(function(){
 		unique: false
 	});
 
-    if (has_ls()) {
+    if (has_ls) {
         var in_storage = localStorage.getItem(toggle_sect_key);
         var in_elem = $("#toggle_sect_menu").hasClass("on");
 

@@ -147,4 +147,10 @@ margins.
     - change to s smaller font.
 
 
+* Make the Show/Hide button for the section navigation menus persisent.
+    - Look at how jqTree is doing it.
+        - Maybe there's a ready widget for jQuery somewhere.
 
+* jqTree
+    - Implement a more permanent (and lib/MyNavData.pm-side) ID-generation
+    scheme for the saveState).

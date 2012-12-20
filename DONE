@@ -154,3 +154,8 @@ margins.
 * jqTree
     - Implement a more permanent (and lib/MyNavData.pm-side) ID-generation
     scheme for the saveState).
+
+* jqTree
+    - convert the JS wrapper functions from using a full path to using a
+    relative path.
+        - cut the middle man.

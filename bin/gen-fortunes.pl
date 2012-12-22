@@ -17,7 +17,7 @@ use Cwd qw(getcwd);
         system("make", "dist");
     }
 
-    system("make", "-q", "list_files");
+    system("make", "-s", "list_files");
 
     chdir($orig_dir);
 }

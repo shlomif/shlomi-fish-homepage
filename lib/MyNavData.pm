@@ -463,17 +463,17 @@ sub generic_get_params
                         title=> "How to Contact Me",
                     },
                     {
-                        text => "My Resumés",
+                        text => "My Résumés",
                         url => "me/resumes/",
                         subs =>
                         [
                             {
-                                text => "English Resumé",
+                                text => "English Résumé",
                                 url => "SFresume.html",
                                 skip => 1,
                             },
                             {
-                                text => "Detailed English Resumé",
+                                text => "Detailed English Résumé",
                                 url => "SFresume_detailed.html",
                                 skip => 1,
                             },

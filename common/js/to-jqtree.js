@@ -86,7 +86,6 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
 
     var _get_rel = shlomif_get_relative_path_callback(rel_path);
 
-    // TODO : XSS - cross site scripting.
     var _recurse;
 
     _recurse = function(sub_tree) {

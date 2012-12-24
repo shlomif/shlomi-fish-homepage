@@ -30,7 +30,7 @@ XHTMLS = $(patsubst %.xml,%.xhtml,$(XMLS))
 
 .PHONY: all test html distdir upload list_files
 
-all: dist test
+all: dist test gen_htaccess
 
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile $<
@@ -93,4 +93,7 @@ $(RPM_SPEC): $(RPM_SPEC_IN) $(VERSION_FILE)
 %.show:
 	@echo "$* = $($*)"
 
+gen_htaccess: my_htaccess.conf
 
+my_htaccess.conf: gen-htaccess.pl fortunes-list.mak
+	perl $< -o $@ $(FILES)

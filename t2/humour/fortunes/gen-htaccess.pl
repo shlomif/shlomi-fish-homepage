@@ -28,7 +28,7 @@ foreach my $base (@basenames)
     {
     $o->print(<<"EOF");
 <Files "$base$ext">
-        Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; rel=\"canonical\""
+        Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; rel=\\"canonical\\""
 </Files>
 EOF
     }

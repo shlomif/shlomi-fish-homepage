@@ -125,7 +125,7 @@ function test_nav_menu_generation()
                 },
                 {
                     id: 3,
-                    label: '<a href="./../humour/" title="Stories and Aphorisms I wrote">Humour</a>'
+                    label: '<b>Humour</b>'
                 }
                 ],
             },

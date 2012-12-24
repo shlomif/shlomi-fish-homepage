@@ -99,12 +99,17 @@ function calc_jqtree_data_from_html_w_nav_menu_json (args) {
         if ('title' in sub_tree) {
             title_attr = ' title="' + sub_tree['title'] + '"'
         }
-        var ret = {
-            id: parseInt(sub_tree['id']),
-            label: ("<a href=\"" +
+
+        var label = (sub_tree['url'] == rel_path)
+            ? "<b>" + sub_tree['text'] + "</b>"
+            : ("<a href=\"" +
                 escape_html(_get_rel(sub_tree['url'])) + "\"" + title_attr +
                 ">" + sub_tree['text'] + "</a>"
-                )
+                );
+
+        var ret = {
+            id: parseInt(sub_tree['id']),
+            label: label
         };
 
         if ('subs' in sub_tree) {

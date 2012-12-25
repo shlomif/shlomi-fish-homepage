@@ -26,7 +26,7 @@ It does not have an iterative interface.
 
 <p>
 File-Find-Object is a CPAN module, which was originally created by
-<a href="http://search.cpan.org/~nanardon/">Olivier Thauvin</a> and
+<a href="<cpan_homepage who="nanardon" />">Olivier Thauvin</a> and
 now mostly maintained by me (= Shlomi Fish) that aims to address these
 limitations and more, and provide Perl programmers with a robust,
 object-oriented and usable alternative.
@@ -91,9 +91,10 @@ File-Find-Object to scan the tree incrementally, instead of building a long
 list of results in memory, and then iterating over it.
 </p>
 
+<set-var xsac="<cpan_self_dist d="Class-XSAccessor" />" />
 <p>
 Other, more minor, improvements included a cleanup of the code to use
-<a href="http://search.cpan.org/dist/Class-XSAccessor/">Class-XSAccessor</a>
+<get-var xsac />
 , POD tests and full POD coverage, update of the documentation for
 File-Find-Object-Rule (instead of the original File-Find-Rule) and more links
 and keywords as META.yml meta-data.
@@ -114,10 +115,10 @@ shortly.
 
 <p>
 One thing to note is that we are now using
-<a href="http://search.cpan.org/dist/Class-XSAccessor/">Class-XSAccessor</a>
+<get-var xsac />
 instead of
-<a href="http://search.cpan.org/dist/Class-Accessor/">Class-Accessor</a>,
-because converting to the former yielded a substantial increase in speed. More
+<cpan_self_dist d="Class-Accessor" />,
+because the conversion yielded a substantial increase in speed. More
 information can be found in the Changes file in the distribution.
 </p>
 

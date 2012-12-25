@@ -1,5 +1,7 @@
 #include '../template.wml'
 
+#include "cpan_dists.wml"
+
 <latemp_subject "Docmake - a Perl-based tool to Render DocBook/XML" />
 
 <p>
@@ -33,14 +35,7 @@ more low-level tools. It aims to be a replacement for
 <ul>
 
 <li>
-<a href="http://search.cpan.org/dist/App-XML-DocBook-Builder/">On
-search.cpan.org</a>
-
-</li>
-
-<li>
-<a href="http://cpan.uwinnipeg.ca/dist/App-XML-DocBook-Builder">docmake
-on kobesearch</a>
+<cpan_dist d="App-XML-DocBook-Builder">On search.cpan.org</cpan_dist>
 </li>
 
 <li>

@@ -2,7 +2,6 @@
 #include "cpan_dists.wml"
 
 <set-var modname="Module-Format" />
-<set-var sco_mod="http://search.cpan.org/dist/<get-var modname />/" />
 <latemp_subject "<get-var modname /> - perform bulk operations on Perl modules" />
 
 <p>

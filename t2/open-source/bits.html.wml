@@ -1,5 +1,7 @@
 #include '../template.wml'
+
 #include "toc_div.wml"
+#include "cpan_dists.wml"
 
 <latemp_subject "Open Source Bits and Bobs" />
 
@@ -69,7 +71,7 @@ under the terms of the MIT X11 license. It queries either
 
 <p>
 You need to install the
-<a href="http://search.cpan.org/dist/Xmms-Perl/">Xmms-Perl distribution</a>
+<cpan_dist d="Xmms-Perl">Xmms-Perl distribution</cpan_dist>
 and have the X-Chat Perl interface. To use, make it executable and put it
 under your <tt>$HOME/.xchat2</tt> directory.
 </p>

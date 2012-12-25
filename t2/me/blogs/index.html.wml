@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "toc_div.wml"
+#include "cpan_dists.wml"
 
 <latemp_subject "My Weblogs" />
 
@@ -154,7 +155,7 @@ If you’re interested in different ways to mix-and-match such feeds look at:
 <ol>
 
 <li>
-<a href="http://search.cpan.org/dist/XML-Feed/">XML-Feed</a> - a Perl-based
+<cpan_self_dist d="XML-Feed" /> - a Perl-based
 CPAN module to mix, match and manipulate feeds of various formats.
 </li>
 

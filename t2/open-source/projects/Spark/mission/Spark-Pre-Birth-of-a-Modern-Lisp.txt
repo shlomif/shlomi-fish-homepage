@@ -285,7 +285,7 @@ $ spark -ne '(say "${^LINENUM} ${^LINE}")'
 Here we can see the string interpolation of variables in action.
 +${....}+ interpolates a single variable, while +$()+ is an
 S-expression. Aside from that spark will also have sprintf,
-http://search.cpan.org/dist/Text-Sprintf-Named/[sprintf with named
+http://metacpan.org/release/Text-Sprintf-Named[sprintf with named
 conversions similar to Python] and something as similar as possible to
 Perl’s Template Toolkit (while still being Sparky). I find Common
 Lisp’s +format+ to be hard to understand and much less flexible than
@@ -356,7 +356,7 @@ Spark will have nested namespaces
 
 Spark will have a similar namespace system to Perl 5, with nested namespaces,
 and the ability to selectively import symbols from namespaces at run-time.
-Similarly to http://search.cpan.org/dist/Sub-Exporter/ and as opposed to
+Similarly to http://metacpan.org/release/Sub-Exporter and as opposed to
 C++ where importing symbols from namespaces is an all-or-nothing operation,
 and so mostly unusable.
 
@@ -589,7 +589,7 @@ If someone changes Spark in incompatible ways, it may either die, or forked
 into a new language. This language will also be Lisp and may be Spark-like
 but it won’t be Spark. Perl 5 which only has one major implementation
 (+perl5+ - currently at +perl-5.10.0+), recently span off
-http://search.cpan.org/dist/kurila/[kurila] which is fork of perl 5 that is
+http://metacpan.org/release/kurila[kurila] which is fork of perl 5 that is
 incompatible with it and with Perl 5, on purpose. Nevertheless, while
 Kurila may be considered a a language in the Perl family, it is not Perl 5
 any more than Perl 4 , Perl 6 , http://sleep.dashnine.org/[Sleep] or whatever

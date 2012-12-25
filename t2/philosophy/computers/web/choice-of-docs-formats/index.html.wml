@@ -1,6 +1,7 @@
 #include '../template.wml'
 
 #include "toc_div.wml"
+#include "cpan_dists.wml"
 
 <latemp_subject "Choice of Document Formats" />
 <latemp_meta_desc "Choice of Document Formats" />
@@ -79,7 +80,8 @@ available, however. One option is naturally
 translated into HTML as well as PDF, Microsoft Word, LaTeX and other
 formats. It cannot be directly translated to plain text, but can through
 an intermediate format. POD can be translated into DocBook/XML using
-<a href="http://search.cpan.org/~nandu/Pod-DocBook-1.2/">Pod-DocBook-1.2</a>.
+<cpan_self_dist d="Pod-DocBook" />. (<b>Recent Update</b>:
+<cpan_self_mod m="Pod::PseudoPod::DocBook" /> may be a better choice.).
 </p>
 
 <p>

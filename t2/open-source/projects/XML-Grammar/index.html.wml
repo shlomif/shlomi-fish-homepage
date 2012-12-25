@@ -1,5 +1,7 @@
 #include '../template.wml'
 
+#include "cpan_dists.wml"
+
 <latemp_subject "The XML-Grammar Meta-Project" />
 
 <p>
@@ -59,7 +61,7 @@ plain-text from them.
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/XML-Grammar-ProductsSyndication/">XML-Grammar-ProductsSyndication</a> -
+<cpan_self_dist d="XML-Grammar-ProductsSyndication" /> -
 an XML grammar for creating lists of products. See
 <a href="$(ROOT)/recommendations/">my recommendations page</a> for examples.
 </li>

@@ -1,11 +1,13 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
+
 <latemp_subject "PerlPoint Lecture" />
 
 <p>
 This is a presentation about the PerlPoint slide-show tool. Note that PerlPoint
 is old and old-fashioned, and generates invalid HTML code. If you’re
 interested in a similar but more modern tool look at
-<a href="http://search.cpan.org/dist/Spork/">Ingy’s Spork</a>.
+<cpan_dist d="Spork">Ingy’s Spork</cpan_dist>.
 </p>
 
 <ul>

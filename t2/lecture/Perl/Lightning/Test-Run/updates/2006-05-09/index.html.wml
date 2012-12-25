@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "cpan_dists.wml"
 
 <latemp_subject "Test::Run - Update for 9-May-2006" />
 
@@ -6,8 +7,9 @@
 
 <p>
 The colour-summaries lines were released on CPAN as
-<a href="http://search.cpan.org/dist/Test-Run-Plugin-ColorSummary/">Test-Run-Plugin-ColorSummary</a> and
-<a href="http://search.cpan.org/dist/Test-Run-CmdLine-Plugin-ColorSummary/">Test-Run-CmdLine-Plugin-ColorSummary</a>.
+<cpan_self_dist d="Test-Run-Plugin-ColorSummary" />
+and
+<cpan_self_dist d="Test-Run-CmdLine-Plugin-ColorSummary" />.
 They now allow configuring the colour in which the summary would be displayed.
 </p>
 
@@ -79,7 +81,7 @@ module which has a good test coverage.
 <h2>Test-Run-TAP-Model</h2>
 
 <p>
-The <a href="http://search.cpan.org/dist/Test-TAP-Model/">Test-TAP-Model</a>
+The <cpan_self_dist d="Test-Tap-Model" />
 was adapted to Test::Run, after a talk with one of its developers.
 </p>
 

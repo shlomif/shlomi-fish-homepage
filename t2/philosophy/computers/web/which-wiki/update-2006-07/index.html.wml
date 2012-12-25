@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "toc_div.wml"
+#include "cpan_dists.wml"
 
 <latemp_subject "July 2006 Update to “Which Wiki”" />
 
@@ -177,7 +178,7 @@ Again</h3>
 
 <p>
 The CPAN Module
-<a href="http://search.cpan.org/dist/HTML-WikiConverter/">HTML-WikiConverter</a>
+<cpan_self_dist d="HTML-WikiConverter" />
 allows one to convert HTML to the formats of most popular Wikis. DocBook/XML
 and POD can generate HTML, which means they can be fed to it in turn.
 </p>

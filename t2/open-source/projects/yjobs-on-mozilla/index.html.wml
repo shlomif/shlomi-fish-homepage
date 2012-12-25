@@ -1,4 +1,7 @@
 #include '../template.wml'
+
+#include "cpan_dists.wml"
+
 <latemp_subject "Make www.yjobs.co.il Work with Mozilla-based Browsers" />
 
 <p>
@@ -12,8 +15,8 @@ to do so.
 
 <p>
 It is written in <a href="http://www.perl.org/">Perl</a> and uses the
-<a href="http://search.cpan.org/dist/HTTP-Proxy/">CPAN HTTP-Proxy
-module</a> which needs to be installed prior to running the proxy. More
+<cpan_dist d="HTTP-Proxy">CPAN HTTP-Proxy module</cpan_dist> which needs to be
+installed prior to running the proxy. More
 instructions for deploying it are provided in a comment at the beginning
 of the file.
 </p>
@@ -61,7 +64,7 @@ nor requires it.
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/HTTP-Proxy/">HTTP-Proxy</a> - an
+<cpan_self_dist d="HTTP-Proxy" /> - an
 excellent CPAN module for building your own HTTP proxies in Perl.
 </li>
 

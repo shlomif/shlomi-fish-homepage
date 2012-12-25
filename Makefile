@@ -57,7 +57,7 @@ $(T2_FORTUNES_DIR_HTACCESS): $(T2_FORTUNES_DIR)/my_htaccess.conf
 
 # t2 macros
 
-RSYNC = rsync --progress --verbose --rsh=ssh
+RSYNC = rsync --progress --verbose --rsh=ssh --exclude='*.d' --exclude='**/*.d'
 
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 

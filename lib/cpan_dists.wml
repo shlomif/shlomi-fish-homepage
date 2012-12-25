@@ -30,3 +30,15 @@ on search.cpan.org</a>.
 <restore bitbucket_url dist freecode_url />
 
 </define-tag>
+
+<define-tag cpan_homepage whitespace="delete">
+<preserve who />
+<set-var %attributes />
+http://metacpan.org/author/<upcase "<get-var who/>" />
+<restore who />
+</define-tag>
+
+<define-tag shlomif_cpan whitespace="delete">
+<cpan_homepage who="shlomif" />
+</define-tag>
+

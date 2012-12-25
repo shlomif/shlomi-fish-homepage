@@ -1,6 +1,7 @@
 #include '../template.wml'
 
 #include "toc_div.wml"
+#include "cpan_dists.wml"
 
 <latemp_subject "Contributions Made to External Open-Source Projects" />
 
@@ -228,7 +229,7 @@ changes were incorporated into version 0.4 of LoggedFS.
 
 <p>
 File-Find-Object is a CPAN module, originally created by
-<a href="http://search.cpan.org/~nanardon/">Olivier Thauvin (Nanardon)</a>,
+<a href="<cpan_homepage who="nanardon" />">Olivier Thauvin (Nanardon)</a>,
 which allows one to traverse a directory tree, and solves some inherent
 limitations in the perl 5 core File::Find module. I started contributing
 to this module after its 0.0.2 release, and did most of the work on it

@@ -813,9 +813,8 @@ CSS_GEN_SCRIPT = bin/gen-css.pl
 
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
-# TODO : Restore later
-# SASS_STYLE = compressed
-SASS_STYLE = expanded
+SASS_STYLE = compressed
+# SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
 $(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass

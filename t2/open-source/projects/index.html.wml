@@ -1,10 +1,15 @@
 #include '../template.wml'
 
 #include "toc_div.wml"
+#include "software.wml"
 
 <latemp_subject "Shlomi Fish’s Open Source Projects" />
 
 <toc_div />
+
+<h2 id="forges_home_pages">My home pages on Various Software Development Hubs (Forges)</h2>
+
+<home_pages_on_forges />
 
 <h2 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h2>
 

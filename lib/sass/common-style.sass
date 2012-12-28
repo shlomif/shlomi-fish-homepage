@@ -32,8 +32,11 @@ ul
 
 /* h3.newsitem { text-indent: 3em }
 
-.news_item, div.indent, p.indent
+=indent
     margin-left: 3em
+
+.news_item, .indent
+    +indent
 
 div.rightalign
     text-align: right
@@ -520,6 +523,9 @@ table.visible
 .aphorisms
     blockquote
         margin-left: 3em
+
+.sub_section
+    +indent
 
 @import "lang_switch"
 @import "code_block"

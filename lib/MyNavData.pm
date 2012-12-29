@@ -535,6 +535,18 @@ sub generic_get_params
                         url => "art/slogans/",
                         title => "The design of my aphorism - useful for T-shirts and other merchandise",
                     },
+                    {
+                        text => "By others",
+                        url => "art/by-others/",
+                        subs =>
+                        [
+                            {
+                                text => "Yachar’s Music",
+                                url => "art/by-others/Yachar/",
+                                title => "Fresh Neoclassical Music",
+                            },
+                        ],
+                    },
                 ],
             },
             $get_sub_tree->('Software'),

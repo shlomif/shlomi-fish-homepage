@@ -112,6 +112,76 @@ alternative to <tt>xmlto</tt>.
 ;;; End of text-authoring / web related.
 </div>
 
+<h2 id="system-tools">System Tools</h2>
+
+<div class="sub_section">
+
+<h3 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h3>
+
+<p>
+Dumps a directory structure (without the file contents themselves) into a
+serialised file format, to allow for restoring and comparing.
+</p>
+
+
+<h3 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h3>
+
+<p>
+A directory traverser for Perl, that provides an object-oriented interface,
+that can be instantiated, and that can be suspended and resumed. (Originally by
+Nanardon.)
+</p>
+
+<h3 id="Module-Format"><a href="Module-Format/">Module-Format</a></h3>
+
+<p>
+A CPAN module to convert between the various popular ways to notate
+Perl modules and distributions. Allows all of them to be used in input to
+command-line tools.
+</p>
+
+<h3 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
+Kernel Configuration Search Enhancement</a></h3>
+
+<p>
+A patch that enhances the Linux kernel configuration search by adding keywords
+search and regular expression search.
+</p>
+
+<h3 id="countdown"><a href="countdown/">countdown</a></h3>
+
+<p>
+Delay for a certain number of seconds while displaying the amount of remaining
+time. Similar to the UNIX sleep command, only less frustrating for interactive
+use.
+</p>
+
+</div>
+
+<h2 id="qa">Testing and QA</h2>
+
+<div class="testing">
+
+<h3 id="test.pm-converter"><a href="Test.pm-Converter/">Convert from Test.pm</a></h3>
+
+<p>
+A script to convert the old Perl Test.pm-based test programs to the
+more modern Test::More.
+</p>
+
+
+<h3 id="libtap"><a href="libtap/">libtap Maintenance</a></h3>
+
+<p>
+libtap is a C library for writing automated tests that output the
+<a href="http://testanything.org/">Test Anything Protocol (TAP)</a>, which
+allows for heterogeneous test suites. I adopted libtap and maintain it.
+</p>
+
+;;; End of testing/QA
+
+</div>
+
 <h2 id="ip-noise"><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
 
 <p>
@@ -145,72 +215,6 @@ Readers/Writers Lock</a></h2>
 <p>
 An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
-</p>
-
-<h2 id="sys-admin">System Administration Related</h2>
-
-<div class="sub_section">
-
-<h3 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h3>
-
-<p>
-Dumps a directory structure (without the file contents themselves) into a
-serialised file format, to allow for restoring and comparing.
-</p>
-
-
-<h3 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h3>
-
-<p>
-A directory traverser for Perl, that provides an object-oriented interface,
-that can be instantiated, and that can be suspended and resumed. (Originally by
-Nanardon.)
-</p>
-
-<h3 id="Module-Format"><a href="Module-Format/">Module-Format</a></h3>
-
-<p>
-A CPAN module to convert between the various popular ways to notate
-Perl modules and distributions. Allows all of them to be used in input to
-command-line tools.
-</p>
-
-</div>
-
-<h2 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
-Kernel Configuration Search Enhancement</a></h2>
-
-<p>
-A patch that enhances the Linux kernel configuration search by adding keywords
-search and regular expression search.
-</p>
-<h2 id="test.pm-converter"><a href="Test.pm-Converter/">Convert from Test.pm</a></h2>
-
-<p>
-A script to convert the old Perl Test.pm-based test programs to the
-more modern Test::More.
-</p>
-<h2 id="countdown"><a href="countdown/">countdown</a></h2>
-
-<p>
-Delay for a certain number of seconds while displaying the amount of remaining
-time. Similar to the UNIX sleep command, only less frustrating for interactive
-use.
-</p>
-
-<h2 id="libtap"><a href="libtap/">libtap Maintenance</a></h2>
-
-<p>
-libtap is a C library for writing automated tests that output the
-<a href="http://testanything.org/">Test Anything Protocol (TAP)</a>, which
-allows for heterogeneous test suites. I adopted libtap and maintain it.
-</p>
-
-<h2 id="bits"><a href="$(ROOT)/open-source/bits.html">Bits and Bobs</a></h2>
-
-<p>
-A random collection of small programs I created, and are made available to
-the public.
 </p>
 
 <h2 id="conf"><a href="conf/">Personal Configuration Files</a></h2>

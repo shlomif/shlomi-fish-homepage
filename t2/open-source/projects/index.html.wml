@@ -110,13 +110,6 @@ A port of the well-known MOD player
 
 </div>
 
-<h2 id="gradient-fu"><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h2>
-
-<p>
-A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
-and to scripting interfaces. A newer version of this patch has been integrated
-into GIMP 2.2.x and above and is built-in there.
-</p>
 
 <h2 id="rwlock"><a href="$(ROOT)/rwlock/">A First-Come First-Served
 Readers/Writers Lock</a></h2>
@@ -124,13 +117,6 @@ Readers/Writers Lock</a></h2>
 <p>
 An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
-</p>
-
-<h2 id="yjobs-on-mozilla"><a href="<rellink url="open-source/projects/yjobs-on-mozilla/" />">Workaround to Get yjobs.co.il Working with Firefox</a></h2>
-
-<p>
-This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.il/">the yjobs.co.il Israeli job-board</a> using Firefox, and other
-Mozilla-based browsers.
 </p>
 
 <h2 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h2>
@@ -214,3 +200,25 @@ the public.
 These are configuration files of various programs I’m using on my home
 machines.
 </p>
+
+<h2 id="no-longer-of-interest">Projects that are no longer of interest</h2>
+
+<div class="sub_section">
+
+<h3 id="yjobs-on-mozilla"><a href="<rellink url="open-source/projects/yjobs-on-mozilla/" />">Workaround to Get yjobs.co.il Working with Firefox</a></h3>
+
+<p>
+This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.il/">the yjobs.co.il Israeli job-board</a> using Firefox, and other
+Mozilla-based browsers. No longer of interest because yjobs.co.il now works
+fine in Firefox and other standards-compliant browsers without it.
+</p>
+
+<h3 id="gradient-fu"><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h3>
+
+<p>
+A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
+and to scripting interfaces. A newer version of this patch has been integrated
+into GIMP 2.2.x and above and is built-in there.
+</p>
+
+</div>

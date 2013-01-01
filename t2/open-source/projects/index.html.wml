@@ -34,7 +34,7 @@ started working on some solvers and generators for such games, and some of
 them are in a usable condition.
 </p>
 
-<h2 id="black-hole-solitaire-solver">“Black Hole” Solitaire Solver</h2>
+<h3 id="black-hole-solitaire-solver">“Black Hole” Solitaire Solver</h3>
 
 <p>
 Solvers for
@@ -42,6 +42,13 @@ Solvers for
 Solitaire</a>, and
 <a href="https://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">All
 in a Row Solitaire</a>, which are variants of Patience.
+</p>
+
+<h3 id="lm-solve"><a href="$(ROOT)/lm-solve/">LM-Solve</a></h3>
+
+<p>
+An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a>
+written in Perl.
 </p>
 
 </div>
@@ -118,14 +125,6 @@ Readers/Writers Lock</a></h2>
 An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
 </p>
-
-<h2 id="lm-solve"><a href="$(ROOT)/lm-solve/">LM-Solve</a></h2>
-
-<p>
-An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a>
-written in Perl.
-</p>
-
 <h2 id="yjobs-on-mozilla"><a href="<rellink url="open-source/projects/yjobs-on-mozilla/" />">Workaround to Get yjobs.co.il Working with Firefox</a></h2>
 
 <p>

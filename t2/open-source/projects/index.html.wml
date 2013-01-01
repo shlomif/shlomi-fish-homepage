@@ -11,12 +11,41 @@
 
 <home_pages_on_forges />
 
-<h2 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h2>
+<h2 id="games-related">Games Related</h2>
+
+<div class="sub_section">
+
+<h3 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h3>
 
 <p>
 A program and a library written in ANSI C that automatically solves games of
 Freecell and similar Solitaire variants.
 </p>
+
+<h3 id="japanese-puzzle-games"><a href="japanese-puzzle-games/">Solvers and
+Generators for Japanese Puzzle Games</a></h3>
+
+<p>
+Japanese puzzle games such as
+<a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>
+and <a href="http://en.wikipedia.org/wiki/Kakuro">Kakuro</a> have gained
+popularity recently, and I've became a fan of many variants as well. I've
+started working on some solvers and generators for such games, and some of
+them are in a usable condition.
+</p>
+
+<h2 id="black-hole-solitaire-solver">“Black Hole” Solitaire Solver</h2>
+
+<p>
+Solvers for
+<a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">Black Hole
+Solitaire</a>, and
+<a href="https://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">All
+in a Row Solitaire</a>, which are variants of Patience.
+</p>
+
+</div>
+
 <h2 id="website-meta-lang"><a href="website-meta-language/">Website META Language</a></h2>
 
 <p>
@@ -111,25 +140,6 @@ Dumps a directory structure (without the file contents themselves) into a
 serialised file format, to allow for restoring and comparing.
 </p>
 
-<h2 id="black-hole-solitaire-solver">“Black Hole” Solitaire Solver</h2>
-
-<p>
-A solver for
-<a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">Black Hole
-Solitaire</a>, which is a variant of Patience.
-</p>
-
-<h2 id="japanese-puzzle-games"><a href="japanese-puzzle-games/">Solvers and
-Generators for Japanese Puzzle Games</a></h2>
-
-<p>
-Japanese puzzle games such as
-<a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>
-and <a href="http://en.wikipedia.org/wiki/Kakuro">Kakuro</a> have gained
-popularity recently, and I've became a fan of many variants as well. I've
-started working on some solvers and generators for such games, and some of
-them are in a usable condition.
-</p>
 
 <h2 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h2>
 
@@ -159,16 +169,6 @@ search and regular expression search.
 
 <p>
 A collection of web-related Perl CPAN modules.
-</p>
-
-
-
-
-<h2 id="cpan-modules"><a href="http://metacpan.org/author/SHLOMIF">My CPAN Modules</a></h2>
-
-<p>
-I wrote several modules for <a href="http://www.cpan.org/">CPAN</a> - the
-Comprehensive Perl Archive Network.
 </p>
 
 <h2 id="test.pm-converter"><a href="Test.pm-Converter/">Convert from Test.pm</a></h2>

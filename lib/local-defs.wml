@@ -98,3 +98,57 @@ foreach my $key (@keys)
 }:>
 <restore with_accesskey />
 </define-tag>
+<define-tag latemp_get_html_body_nav_links_helper>
+<preserve with_accesskey />
+<set-var %attributes />
+<preserve object_class />
+<set-var object_class="<latemp_default_val "<get-var latemp_navmenu_object_class />" "HTML::Widgets::NavMenu" />" />
+<:{
+use strict;
+use warnings;
+
+use MyNavData;
+use <get-var object_class />;
+use CGI qw();
+use MyNavLinks;
+
+my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
+$filename =~ s!index\.html$!!;
+$filename = "/$filename";
+
+my $expanded_nav_bar = <get-var object_class />->new(
+    'path_info' => $filename,
+    'current_host' => "<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />",
+    MyNavData->generic_get_params({ fully_expanded => 1}),
+    'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
+    'no_leading_dot' => 1,
+    );
+
+my $rendered_results = $expanded_nav_bar->render();
+
+# use Data::Dumper; die Dumper($rendered_results);
+my $shlomif_nav_links = $rendered_results->{nav_links};
+
+my $shlomif_nav_links_obj = $rendered_results->{nav_links_obj};
+
+use vars qw($shlomif_nav_links_renderer);
+
+$shlomif_nav_links_renderer = MyNavLinks->new(
+        'nav_links' => $shlomif_nav_links,
+        'nav_links_obj' => $shlomif_nav_links_obj,
+        'root' => "$(ROOT)",
+        );
+
+}:>
+<:{
+    my $with_accesskey = "<get-var with_accesskey />";
+    my @params;
+    if ($with_accesskey ne "")
+    {
+        push @params, ('with_accesskey' => $with_accesskey);
+    }
+    print $shlomif_nav_links_renderer->get_total_html(@params);
+}:>
+<restore with_accesskey />
+<restore object_class />
+</define-tag>

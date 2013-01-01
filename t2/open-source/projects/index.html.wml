@@ -147,7 +147,11 @@ An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
 </p>
 
-<h2 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h2>
+<h2 id="sys-admin">System Administration Related</h2>
+
+<div class="sub_section">
+
+<h3 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h3>
 
 <p>
 Dumps a directory structure (without the file contents themselves) into a
@@ -155,7 +159,7 @@ serialised file format, to allow for restoring and comparing.
 </p>
 
 
-<h2 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h2>
+<h3 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h3>
 
 <p>
 A directory traverser for Perl, that provides an object-oriented interface,
@@ -163,13 +167,15 @@ that can be instantiated, and that can be suspended and resumed. (Originally by
 Nanardon.)
 </p>
 
-<h2 id="Module-Format"><a href="Module-Format/">Module-Format</a></h2>
+<h3 id="Module-Format"><a href="Module-Format/">Module-Format</a></h3>
 
 <p>
 A CPAN module to convert between the various popular ways to notate
-Perl modules and distributions. Allow all of them to be used in input to
+Perl modules and distributions. Allows all of them to be used in input to
 command-line tools.
 </p>
+
+</div>
 
 <h2 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
 Kernel Configuration Search Enhancement</a></h2>

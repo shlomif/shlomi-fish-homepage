@@ -43,7 +43,7 @@
                 </para>
 
                 <para>
-                    התרגום, כמו הסיפור זמין תחת רשיון <link
+                    התרגום, כמו הסיפור, זמין תחת רשיון <link
                         xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">רשיון
                         הייחוס-שיתוף-זהה 3.0 (Unported) של קריאטיב קומונס
                         (CC-by-sa)</link> או לשיקולכם כל גרסה מאוחרת יותר.

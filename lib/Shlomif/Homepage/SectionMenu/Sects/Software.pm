@@ -128,6 +128,11 @@ my $software_tree_contents =
                             url => "open-source/projects/XML-Grammar/Fiction/",
                             title => "A lightweight markup language and an XML grammar for writing Prose.",
                         },
+                        {
+                            text => "XML-GrammarBase",
+                            url => "open-source/projects/XML-Grammar/Base/",
+                            title => "Base classes and roles for XML grammar processors",
+                        },
                     ],
                 },
                 {

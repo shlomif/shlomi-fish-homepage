@@ -32,6 +32,8 @@ sub _calc_entry_body
 
     $body =~ s{<a name="cut[^"]*"></a>}{}g;
 
+    $body =~ s{ rel="nofllow"}{}g;
+
     return "<!-- TITLE=" . CGI::escapeHTML(decode('utf-8', $entry->title())) . "-->\n" . $body;
 }
 

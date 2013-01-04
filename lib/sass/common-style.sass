@@ -188,8 +188,9 @@ button.toggle_sect_menu
 
 /* Style for the google search box
 
+$navbar_margin: 0.5em
+
 =navbar_box
-    padding: 0.5em
     border: 1.5pt solid #207020
     margin-bottom: 0.5cm
     margin-left: auto
@@ -201,6 +202,8 @@ button.toggle_sect_menu
         margin-left: auto
         margin-right: auto
         text-align: center
+    p
+        margin: $navbar_margin
 
 .search
     +navbar_box
@@ -208,6 +211,14 @@ button.toggle_sect_menu
 .about_author
     margin-top: 1em
     +navbar_box
+
+    img
+        margin-top: $navbar_margin
+
+    p.sep
+        border-top: 1.5pt solid #207020
+        margin: 0
+        padding: $navbar_margin
 
 .hebrew
     direction: rtl

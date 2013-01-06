@@ -285,6 +285,10 @@ my $humour_tree_contents =
                     title => "Another Incomplete Geek Song",
                 },
                 {
+                    text => "Freecell Solver™ Goes Webscale",
+                    url => "humour/bits/Freecell-Solver-Goes-Webscale/",
+                },
+                {
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
                     title => "Collection of funny facts about various people an things",

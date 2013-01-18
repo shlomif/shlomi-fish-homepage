@@ -291,7 +291,7 @@ my $humour_tree_contents =
                 {
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
-                    title => "Collection of funny facts about various people an things",
+                    title => "Collection of funny facts about various people and things",
                     subs =>
                     [
                         {

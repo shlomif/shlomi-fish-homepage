@@ -35,7 +35,7 @@ my @cmd_line =
     $^X,
     "-MXML::Grammar::Fortune::Synd::App",
     "-e",
-    "run()",
+    "run(); exit(0);",
     "--",
     "--dir" => $abs_dir,
     (map { ("--xml-file" , "$_.xml") } (@fortunes)),

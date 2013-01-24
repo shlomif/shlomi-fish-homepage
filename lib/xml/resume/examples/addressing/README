@@ -1,0 +1,10 @@
+This directory contains a set of minimal documents for testing the
+address handling code.  Each test can be built by passing the RESUME
+variable to make, for example:
+
+make RESUME=italy
+
+will build italy.html, italy.txt and italy.pdf from the source file italy.xml.
+
+If you add additional XML test files to this directory, please be sure to
+set the <filename>_format variable in the Makefile accordingly.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Sample Norwegian address.  Uses 'european' format. Correct formatting is:
+
+  Henrik Ibsen
+  POB 1181 Sentrum
+  0107 Oslo
+  Norway
+
+$Id: norway.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>Henrik</firstname>
+      <surname>Ibsen</surname>
+    </name>
+    <address>
+      <street>POB 1181 Sentrum</street>
+      <city>Oslo</city>
+      <postalCode>0107</postalCode>
+      <country>Norway</country>
+    </address>
+  </header>
+</resume>

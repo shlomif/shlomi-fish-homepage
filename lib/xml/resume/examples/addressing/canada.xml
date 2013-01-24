@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Sample Canadian address.  Uses 'standard' format. Correct formatting is:
+
+  M.J. Arthur
+  1156 Rue McLean
+  Suite 1500
+  Kamloops, BC V2B 5S8
+  Canada
+
+$Id: canada.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>M.J.</firstname>
+      <surname>Arthur</surname>
+    </name>
+    <address>
+      <street>1165 Rue McLean</street>
+      <street2>Suite 1500</street2>
+      <city>Kamloops</city>
+      <province>BC</province>
+      <postalCode>V2B 5S8</postalCode>
+      <country>Canada</country>
+    </address>
+  </header>
+</resume>

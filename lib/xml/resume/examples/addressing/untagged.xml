@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Sample untagged address; should be displayed exactly as entered,
+with line breaks preserved.
+
+  Stewart Evans
+  PO Box 1273
+  Santa Cruz, CA 
+  95061
+
+$Id: untagged.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>Stewart</firstname>
+      <surname>Evans</surname>
+    </name>
+    <address>PO Box 1273
+Santa Cruz, CA
+95061
+</address>
+  </header>
+</resume>

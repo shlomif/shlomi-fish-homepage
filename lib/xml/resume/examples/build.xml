@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="all" name="Resume">
+<!-- ====================================================================
+ build.xml: A "Makefile" for the Ant build tool.
+
+USAGE:
+ To create example1.html, example1.txt, example1.fo, and example1.pdf 
+ from example1.xml, with Italian localization and a4 paper size, use 
+ this command:
+       ant -Dresume=example1 -Dcountry=it -Dpapersize=a4
+ To generate just the html version of cv.xml with UK localization, use 
+ this command:
+       ant html -Dresume=cv -Dcountry=uk
+ To remove all generated files, use this command:
+       ant clean
+ To generate a filtered example resume targeted at the foodservice and
+ construction industries, use these commands:
+	ant filter -Dresume=example2 -Dfilter_targets="foodservice carpentry"
+
+==================================================================== -->
+<!-- 
+================================================================
+     General Options
+================================================================ -->
+<!-- The name and extension of the XML file containing your resume -->
+  <property name="resume" value="resume"/>
+  <property name="resume.extension" value="xml"/>
+<!-- Options: br de fr it nl uk us es -->
+  <property name="country" value="us"/>
+<!-- Options: letter for country=us, a4 for others -->
+  <property name="papersize" value="letter"/>
+  <property name="xsl.base" value="http://xmlresume.sourceforge.net/xsl"/>
+<!--  <property name="xsl.base" value="../xsl"/> -->
+<!--  <property name="xsl.base" value="../src/www/xsl"/> -->
+<!-- 
+================================================================
+     Processing Software:
+================================================================ -->
+  <property name="xsl.processor" value="org.apache.xalan.xslt.Process"/>
+  <property name="pdf.processor" value="org.apache.fop.apps.Fop"/>
+<!-- 
+RTF generation currently requires you download a separate, 
+closed-source jar file and add it to your java classpath: 
+http://www.xmlmind.com/foconverter/downloadperso.shtml -->
+  <property name="rtf.processor" value="com.xmlmind.fo.converter.Driver"/>
+<!-- You may have some luck with JFOR, an open source FO to RTF Converter: -->
+<!--  <property name="rtf.processor" value="ch.codeconsult.jfor.main.CmdLineConverter"/> -->
+<!-- Targeting Options:
+
+ Element filtering allows you to create targeted resumes.
+ You can create your own targets; just specify them in your resume.xml
+ file with the "targets" attribute.  In this example, the foodservice
+ AND carpentry elements will be included in the output, but not the
+ elements targeted to other jobs.  Untargeted elements (those with no
+ "targets" attribute) are always included.
+ Take a look at example2.xml and try changing the filter targets to get a
+ feel for how the filter works. -->
+  <property name="filter.processor" value="net.sourceforge.xmlresume.filter.Filter"/>
+  <property name="filter.targets" value="foodservice carpentry"/>
+  <property name="filter.extension" value="-filtered"/>
+<!--
+================================================================
+     Stylesheets:
+================================================================ -->
+  <property name="html_style" value="${xsl.base}/output/${country}-html.xsl"/>
+  <property name="text_style" value="${xsl.base}/output/${country}-text.xsl"/>
+  <property name="fo_style" value="${xsl.base}/output/${country}-${papersize}.xsl"/>
+<!--
+================================================================
+     END OF USER-CONFIGURABLE PARAMETERS
+================================================================ -->
+<!--		Target Text 		-->
+  <target name="txt" description="Makes a plain-text version of the resume.">
+    <java classname="${xsl.processor}">
+      <arg value="-in"/>
+      <arg value="${resume}.${resume.extension}"/>
+      <arg value="-xsl"/>
+      <arg value="${text_style}"/>
+      <arg value="-out"/>
+      <arg value="${resume}.txt"/>
+    </java>
+  </target>
+<!--		Target HTML 		-->
+  <target name="html" description="Makes an HTML version of the resume.">
+    <java classname="${xsl.processor}">
+      <arg value="-in"/>
+      <arg value="${resume}.${resume.extension}"/>
+      <arg value="-xsl"/>
+      <arg value="${html_style}"/>
+      <arg value="-out"/>
+      <arg value="${resume}.html"/>
+    </java>
+  </target>
+<!--		Target FO 		-->
+  <target name="fo" description="Makes an XML FO version of the resume.">
+    <java classname="${xsl.processor}">
+      <arg value="-in"/>
+      <arg value="${resume}.${resume.extension}"/>
+      <arg value="-xsl"/>
+      <arg value="${fo_style}"/>
+      <arg value="-out"/>
+      <arg value="${resume}.fo"/>
+    </java>
+  </target>
+<!-- 		Target PDF 		-->
+  <target depends="fo" name="pdf" description="Makes a PDF version of the resume.">
+    <java classname="${pdf.processor}">
+      <arg value="-fo"/>
+      <arg value="${resume}.fo"/>
+      <arg value="-pdf"/>
+      <arg value="${resume}.pdf"/>
+    </java>
+  </target>
+<!-- 		Target filter 		-->
+  <target name="filter" description="Makes a filtered version of a resume.">
+    <echo message="Writing filtered resume to ${resume}${filter.extension}"/>
+    <java classname="${filter.processor}">
+      <arg value="-in"/>
+      <arg value="${resume}.${resume.extension}"/>
+      <arg value="-out"/>
+      <arg value="${resume}${filter.extension}.${resume.extension}"/>
+      <arg value="${filter.targets}"/>
+    </java>
+  </target>
+<!-- 		Target All 		-->
+  <target depends="txt,html,fo,pdf" name="all" 
+	description="Makes all known formats of the resume.">
+	<echo message="XXX resume = ${resume}"/>
+  </target>
+<!-- 		Target clean 		-->
+  <target description="Clean all build products." name="clean">
+    <delete file="${resume}.txt"/>
+    <delete file="${resume}.html"/>
+    <delete file="${resume}.fo"/>
+    <delete file="${resume}.pdf"/>
+    <delete file="${resume}${filter.extension}.txt"/>
+    <delete file="${resume}${filter.extension}.html"/>
+    <delete file="${resume}${filter.extension}.fo"/>
+    <delete file="${resume}${filter.extension}.pdf"/>
+    <delete file="${resume}${filter.extension}.${resume.extension}"/>
+  </target>
+</project>

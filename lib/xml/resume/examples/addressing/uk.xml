@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Sample UK address.  Uses 'standard' format. Correct formatting is:
+
+  A.J. Smith
+  3 High Street
+  Otterly
+  Southampton, Hants SO31 4NG
+  UK
+
+  Note that county is no longer a required field for UK addresses, but 
+  it is in fairly common usage.
+
+$Id: uk.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>A.J.</firstname>
+      <surname>Smith</surname>
+    </name>
+    <address>
+      <street>3 High Street</street>
+      <street2>Otterly</street2>
+      <city>Southampton</city>
+      <county>Hants</county>
+      <postalCode>SO31 4NG</postalCode>
+      <country>UK</country>
+    </address>
+  </header>
+</resume>

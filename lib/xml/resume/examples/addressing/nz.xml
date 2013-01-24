@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Sample New Zealand address.  Use 'standard' format. Correct formatting is:
+
+  John Brown
+  236 Majoribanks Street
+  Mount Victoria
+  Wellington 6001
+  New Zealand
+
+$Id: nz.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>John</firstname>
+      <surname>Brown</surname>
+    </name>
+    <address>
+      <street>236 Majoribanks Street</street>
+      <suburb>Mount Victoria</suburb>
+      <city>Wellington</city>
+      <postalCode>6001</postalCode>
+      <country>New Zealand</country>
+    </address>
+  </header>
+</resume>

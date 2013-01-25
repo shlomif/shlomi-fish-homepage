@@ -166,6 +166,17 @@ shlomifish.org
 </form>
 </define-tag>
 
+<define-tag duck_duck_go_search>
+
+<h2 id="site-ddg-search">Duck Duck Go Search</h2>
+
+<div class="search">
+<!-- DuckDuckGo Search -->
+<object data="http://duckduckgo.com/search.html?width=100&amp;site=shlomifish.org&amp;prefill=Search%20DuckDuckGo" type="text/html" style="overflow:hidden;margin:0;padding:0;width:160px;height:40px;"></object>
+</div>
+
+</define-tag>
+
 <define-tag wikia_wiki_link>
 <ul class="relevant_links">
 <li>
@@ -238,6 +249,7 @@ It is easy to reach Shlomi using a large number of
 <shlomif_sponsored_ad_text />
 
 <google_search />
+<duck_duck_go_search />
 
 <wikia_wiki_link />
 

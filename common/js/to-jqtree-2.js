@@ -21,7 +21,7 @@ function shlomif_load_nav (page_path) {
             });
             var about_myself_node_id = "2";
             var meta_node_id = "311";
-            [about_myself_node_id, meta_node_id].forEach(function (node_id) {
+            [meta_node_id].forEach(function (node_id) {
                 var node = nav_menu.tree('getNodeById', node_id);
                 nav_menu.tree('openNode', node, false);
             });

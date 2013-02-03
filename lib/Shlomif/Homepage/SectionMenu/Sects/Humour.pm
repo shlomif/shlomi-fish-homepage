@@ -128,13 +128,13 @@ my $humour_tree_contents =
                     ],
                 },
                 {
-                    text => "Selena Mandrake - The Slayer",
-                    url => "humour/Selena-Mandrake/",
+                    text => "Selina Mandrake - The Slayer",
+                    url => "humour/Selina-Mandrake/",
                     subs =>
                     [
                         {
                             text => "Ongoing Text",
-                            url => "humour/Selena-Mandrake/ongoing-text.html",
+                            url => "humour/Selina-Mandrake/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
                     ],

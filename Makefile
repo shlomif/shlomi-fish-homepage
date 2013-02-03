@@ -263,7 +263,7 @@ SCREENPLAY_DOCS = \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 	star-trek--we-the-living-dead \
-	selena-mandrake-the-slayer \
+	selina-mandrake-the-slayer \
 	sussman-interview \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2
@@ -360,7 +360,7 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	-o $@ $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
-SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selena-Mandrake/selena-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
+SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selena-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
 HHFG_DIR = $(T2_DEST)/humour/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -438,7 +438,7 @@ $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-
 $(T2_DEST)/humour/Blue-Rabbit-Log/part-1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Blue-Rabbit-Log-Part-1.html
 $(T2_DEST)/humour/humanity/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie.html
 $(T2_DEST)/humour/humanity/ongoing-text-hebrew.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie-hebrew.html
-$(T2_DEST)/humour/Selena-Mandrake/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/selena-mandrake-the-slayer.html
+$(T2_DEST)/humour/Selena-Mandrake/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/selina-mandrake-the-slayer.html
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/star-trek--we-the-living-dead.html
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/TOW_Fountainhead_1.html
 $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html
@@ -497,7 +497,7 @@ $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_T
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/star-trek--we-the-living-dead.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/Selena-Mandrake/selena-mandrake-the-slayer.txt: $(SCREENPLAY_XML_TXT_DIR)/selena-mandrake-the-slayer.txt
+$(T2_DEST)/humour/Selena-Mandrake/selina-mandrake-the-slayer.txt: $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
 	cp -f $< $@
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt

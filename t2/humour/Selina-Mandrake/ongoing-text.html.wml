@@ -1,5 +1,12 @@
 #include '../template.wml'
-<latemp_subject "Selena Mandrake - The Slayer" />
+#include "stories/stories-list.wml"
+<latemp_subject "Selina Mandrake - The Slayer" />
+
+<h2 id="tagline">Caught between Post-modernism and the New Age</h2>
+
+<p>
+<selina_mandrake_abstract />
+</p>
 
 <page_extra_head_elements>
 <link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />

@@ -850,7 +850,6 @@ docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS)
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
 	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial
@@ -871,7 +870,13 @@ HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
+SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = lib/screenplay-xml/from-vcs/Selina-Mandrake/
+
 html_tutorial: $(DEST_HTML_TUT)
+
+selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
+
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 
 $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(DEST_HTML_TUT_BASE)
@@ -882,6 +887,9 @@ $(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
 
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
+
+$(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
+	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Selina-Mandrake.git
 
 update_html_tut: update_html_tut_hg html_tutorial
 

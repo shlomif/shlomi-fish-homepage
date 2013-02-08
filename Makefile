@@ -497,7 +497,7 @@ $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_T
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/star-trek--we-the-living-dead.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/Selena-Mandrake/selina-mandrake-the-slayer.txt: $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
+$(T2_DEST)/humour/Selena-Mandrake/selina-mandrake-the-slayer.txt: $(SELINA_MANDRAKE_TXT_FROM_VCS)
 	cp -f $< $@
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
@@ -870,11 +870,16 @@ HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
-SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = lib/screenplay-xml/from-vcs/Selina-Mandrake/
+SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
+
+SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
+
+$(SELINA_MANDRAKE_TXT_FROM_VCS): $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
+	cp -f $< $@
 
 html_tutorial: $(DEST_HTML_TUT)
 
-selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
+selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS)
 
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 

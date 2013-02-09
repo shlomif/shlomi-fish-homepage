@@ -1,0 +1,24 @@
+@import "common-style"
+
+.ui-helper-clearfix:after
+    clear: none
+
+.ui-widget
+    font-size: 1em
+    +default_font_family
+
+.ui-widget-content
+    color: black
+
+.tabs .first
+    margin-top: 1em
+
+// Why do I have to do that?
+.tabs a
+    color: blue
+
+    &:visited
+        color: purple
+
+    &:hover
+        color: red

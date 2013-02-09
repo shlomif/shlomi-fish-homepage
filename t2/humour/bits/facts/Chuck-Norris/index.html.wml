@@ -2,6 +2,13 @@
 
 <latemp_subject "Chuck Norris Facts" />
 
+<page_extra_head_elements>
+<script type="text/javascript" src="$(ROOT)/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="$(ROOT)/js/jquery.querystring.js"></script>
+<link rel="stylesheet" type="text/css" href="$(ROOT)/css/redmond/jquery-ui-1.9.2.custom.min.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="$(ROOT)/jqui-override.css" media="screen, projection" />
+</page_extra_head_elements>
+
 <p>
 These are additions to <a href="http://www.chucknorrisfacts.com/">the
 Chuck Norris facts</a> by my Internet friends and by me. Most of them are kinda
@@ -10,6 +17,20 @@ geeky (or even computer geeky), but some are more generic.
 
 <h2 id="facts">Chuck Norris Facts</h2>
 
+<script type="text/javascript">
+$(function() {
+    $(".tabs").tabs();
+});
+</script>
+
+<div class="tabs">
+
+<ul>
+<li><a href="#chuck_facts_en">English</a></li>
+<li><a href="#chuck_facts_he">עברית</a></li>
+</ul>
+
+<div id="chuck_facts_en">
 <ul>
 
 <li>
@@ -255,6 +276,13 @@ and all the servers hosting en.wiktionary.org, to teach you a lesson.
 </li>
 
 </ul>
+
+</div>
+
+<div id="chuck_facts_he" class="heb">
+</div>
+
+</div>
 
 <h2 id="license">Copyright and Licence</h2>
 

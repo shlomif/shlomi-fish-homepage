@@ -1,14 +1,8 @@
 #include '../template.wml'
 #include "stories/stories-list.wml"
-<latemp_subject "Selina Mandrake - The Slayer" />
+<latemp_subject "Selina Mandrake - The Slayer - Ongoing Text" />
 
-<h2 id="tagline">Caught between Post-modernism and the New Age</h2>
-
-<selina_mandrake_logo />
-
-<p>
-<selina_mandrake_abstract />
-</p>
+<selina_mandrake_common_top_elems />
 
 <page_extra_head_elements>
 <link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />

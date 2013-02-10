@@ -360,7 +360,7 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	-o $@ $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
-SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
+SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(T2_DEST)/humour/Selina-Mandrake/ideas.txt
 
 HHFG_DIR = $(T2_DEST)/humour/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -406,7 +406,10 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
-SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
+SELINA_MANDRAKE__VCS_DIR = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/
+
+SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
+SELINA_MANDRAKE_IDEAS__FROM_VCS = $(SELINA_MANDRAKE__VCS_DIR)/ideas/ideas.txt
 
 SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
 
@@ -503,6 +506,9 @@ $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt
 
 
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(SELINA_MANDRAKE_TXT_FROM_VCS)
+	cp -f $< $@
+
+$(T2_DEST)/humour/Selina-Mandrake/ideas.txt: $(SELINA_MANDRAKE_IDEAS__FROM_VCS)
 	cp -f $< $@
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt

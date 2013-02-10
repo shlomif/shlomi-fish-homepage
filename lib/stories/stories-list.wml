@@ -35,6 +35,20 @@ encounters.
 <img src="images/Green-d10-dice.png" alt="1d10 die" class="selina_die" />
 </define-tag>
 
+<define-tag selina_mandrake_common_top_elems>
+
+<h2 id="tagline">Caught between Post-modernism and the New Age</h2>
+
+<selina_mandrake_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>
+<selina_mandrake_abstract />
+</p>
+
+</define-tag>
+
 <define-tag humour_link>$(ROOT)/humour/%0</define-tag>
 
 <define-tag humour_story endtag="required">

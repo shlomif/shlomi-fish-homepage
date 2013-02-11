@@ -70,6 +70,11 @@ my @urls =
         desc => qq{Star Trek: "We, the Living Dead"},
     },
     {
+        id => "selina",
+        url => "http://www.shlomifish.org/humour/Selina-Mandrake/",
+        desc => qq{Selina Mandrake - The Slayer},
+    },
+    {
         id => "file-swap",
         url => "http://www.shlomifish.org/philosophy/case-for-file-swapping/",
         desc => qq{The Case for File Swapping},

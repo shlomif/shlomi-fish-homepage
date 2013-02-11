@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "jqui_tabs.wml"
 
 <latemp_subject "XSLT Facts" />
 
@@ -14,6 +15,15 @@ These facts illustrate how <b>evil XSLT is</b>.
 </p>
 
 <h2 id="facts">XSLT Facts</h2>
+
+<div class="tabs">
+
+<ul>
+<li><a href="#xslt_facts_en">English</a></li>
+<li><a href="#xslt_facts_he">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="xslt_facts_en">
 
 <ul>
 
@@ -103,6 +113,29 @@ the first nine circles were too mild for them.
 </li>
 
 </ul>
+
+</div>
+
+<div id="xslt_facts_he" class="hebrew">
+
+<ul>
+
+<li>
+XSLT הוא הדבר הגרוע ביותר מאז הלחם שלא נפרס מראש.
+</li>
+
+<li>
+אמהות נהגו לספר לילדיהן סיפורים על אודות XSLT כדי להפחיד אותם.
+</li>
+
+<li>
+XSLT הוא הגורם מספר אחת להתאבדויות של מתכנתים מאז ויז'ואל בייסיק 1.0.
+</li>
+
+</ul>
+</div>
+
+</div> ;;; end of .tabs
 
 <h2 id="license">Copyright and Licence</h2>
 

@@ -98,3 +98,19 @@ of resources which I update and can be commented on">My Blogs</a>
 </div>
 </define-tag>
 
+;;; The "Stop Using Microsoft Internet Explorer" has been the focus of
+;;; too much attention from random visitors, and so we are going to remove
+;;; it so people will focus on the important stuff. Furthermore, Internet
+;;; Explorer has been improving a lot lately (though only for recent MS
+;;; stuff), and moreover, it has been superseded in importance by some better
+;;; browsers.
+
+<define-tag noie_sidebar_link_removed>
+<div id="noie">
+<no_ie_link><img src="$(ROOT)/images/noIE.png"
+class="highlight" style="border:0"
+alt="Stop Using Internet Explorer!" /></no_ie_link><br />
+<no_ie_link>Stop Using Internet Explorer!</no_ie_link>
+</div>
+</define-tag>
+

@@ -523,6 +523,8 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/T
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
 
+$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-english.xhtml
+
 $(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-hebrew-v2.xhtml
 
 $(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml

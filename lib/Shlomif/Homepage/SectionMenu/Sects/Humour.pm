@@ -70,6 +70,10 @@ my $humour_tree_contents =
                             text => "Hebrew Text",
                             url => "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
                         },
+                        {
+                            text => "English Text",
+                            url => "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
+                        },
                     ],
                 },
                 {

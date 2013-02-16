@@ -113,7 +113,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
       <xsl:value-of select="$text"/>
     </fo:block>
   </xsl:template>
-  
+
   <!-- Header information -->
   <xsl:template match="r:header" mode="standard">
     <fo:block space-after="{$para.break.space}">
@@ -588,8 +588,8 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
         <xsl:value-of select="$subjects.result.start"/>
         <xsl:value-of select="normalize-space(r:result)"/>
         <xsl:value-of select="$subjects.result.end"/>
-      </xsl:if>   
-    </xsl:if>   
+      </xsl:if>
+    </xsl:if>
     <xsl:if test="following-sibling::*">
       <xsl:value-of select="$subjects.separator"/>
     </xsl:if>
@@ -749,7 +749,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
       <xsl:apply-templates select="r:pub"/>
     </fo:list-block>
   </xsl:template>
-  
+
   <!-- Format a single publication -->
   <xsl:template match="r:pub">
     <fo:list-item>
@@ -844,7 +844,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
 
   <!-- Format an interest description -->
   <xsl:template match="r:interest/r:description">
-    <xsl:choose>  
+    <xsl:choose>
 
       <xsl:when test="$interest.description.format = 'single-line'">
         <xsl:for-each select="r:para">
@@ -865,7 +865,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
 
     </xsl:choose>
   </xsl:template>
-  
+
   <!-- Format security clearance section. -->
   <xsl:template match="r:clearances">
     <!-- Heading -->
@@ -876,7 +876,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
         </xsl:call-template>
       </xsl:with-param>
     </xsl:call-template>
- 
+
     <!-- Clearances -->
     <fo:list-block
         space-after="{$para.break.space}"
@@ -1076,7 +1076,7 @@ $Id: fo.xsl,v 1.15 2002/11/10 20:48:58 brandondoyle Exp $
     </xsl:choose>
   </xsl:template>
 
-  <!-- Format a referee with the name, title, organiation in the 
+  <!-- Format a referee with the name, title, organiation in the
        left column and the address in the right column -->
   <xsl:template match="r:referee" mode="compact">
     <fo:table-row>

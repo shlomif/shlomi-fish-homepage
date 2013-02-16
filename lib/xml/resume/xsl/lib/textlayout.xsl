@@ -49,7 +49,7 @@ $Id: textlayout.xsl,v 1.3 2002/11/25 02:35:22 brandondoyle Exp $
   <xsl:template name="NewLine">
     <xsl:text>&#xA;</xsl:text>
   </xsl:template>
-  
+
   <!-- Create a heading. -->
   <xsl:template name="Heading">
     <xsl:param name="Text"/>
@@ -60,7 +60,7 @@ $Id: textlayout.xsl,v 1.3 2002/11/25 02:35:22 brandondoyle Exp $
     <xsl:call-template name="NewLine"/>
     <xsl:call-template name="NewLine"/>
   </xsl:template>
-  
+
   <xsl:template name="NSpace">
     <xsl:param name="n" select="0"/>
     <xsl:if test="$n &gt; 0">
@@ -97,7 +97,7 @@ $Id: textlayout.xsl,v 1.3 2002/11/25 02:35:22 brandondoyle Exp $
 
     <!-- Continue with the rest -->
   </xsl:template>
-  
+
   <!-- Center a multi-line block of text -->
   <xsl:template name="CenterBlock">
     <xsl:param name="Width" select="$text.width"/>
@@ -163,7 +163,7 @@ $Id: textlayout.xsl,v 1.3 2002/11/25 02:35:22 brandondoyle Exp $
   <!-- Wraps $Text to $Width characters(*). Whitespace in input text is
   normalized before processing, with the exception of newlines if $KeepNewlines
   is true.
-  
+
   The first line outputted will be indented $FirstIndent spaces (Default:
   $Indent.)
 

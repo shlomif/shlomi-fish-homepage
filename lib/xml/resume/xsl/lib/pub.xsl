@@ -125,7 +125,7 @@ $Id: pub.xsl,v 1.1 2002/05/26 03:45:51 bruckie Exp $
     <xsl:apply-templates/>
     <xsl:value-of select="$pub.item.separator"/>
   </xsl:template>
-  
+
   <!-- Format a URL -->
   <xsl:template match="r:pub/r:url">
     <xsl:call-template name="FormatUrl"/>

@@ -4,7 +4,7 @@
      CHARSET
          BASESET
              "ISO Registration Number 176//CHARSET
-             ISO/IEC 10646-1:1993 UCS-4 with implementation 
+             ISO/IEC 10646-1:1993 UCS-4 with implementation
              level 3//ESC 2/5 2/15 4/6"
          DESCSET
                 0       9       UNUSED
@@ -18,7 +18,7 @@
              -- use this instead of the official declaration because SP only
                 supports 16-bit characters --
                 160     65374   160
-                65534   2       UNUSED 
+                65534   2       UNUSED
              -- 55296   2048    UNUSED
                 57344   8190    57344
                 65534   2       UNUSED
@@ -30,7 +30,7 @@
      SYNTAX
          SHUNCHAR NONE
          BASESET "ISO Registration Number 176//CHARSET
-                 ISO/IEC 10646-1:1993 UCS-4 with implementation 
+                 ISO/IEC 10646-1:1993 UCS-4 with implementation
                  level 3//ESC 2/5 2/15 4/6"
          DESCSET
              0 1114112 0
@@ -143,10 +143,10 @@
              SHORTTAG
                  STARTTAG
                      EMPTY NO
-                     UNCLOSED NO 
+                     UNCLOSED NO
                      NETENABL IMMEDNET
                  ENDTAG
-                     EMPTY NO 
+                     EMPTY NO
                      UNCLOSED NO
                  ATTRIB
                      DEFAULT YES

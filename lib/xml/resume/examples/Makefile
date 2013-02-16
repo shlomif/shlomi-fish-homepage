@@ -4,18 +4,18 @@
 #
 # Copyright (c) 2002 Bruce Christensen
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
-# 
+#
 # 1. Redistributions of source code must retain the above copyright
 #    notice, this list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
 #    documentation and/or other materials provided with the
 #    distribution.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
 # ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -78,19 +78,19 @@ xsl_proc = java org.apache.xalan.xslt.Process $(xsl_flags) -in $(in) -xsl $(xsl)
 pdf_proc = java org.apache.fop.apps.Fop -fo $(fo_flags) $(in) -pdf $(out)
 #pdf_proc = ~/bin/xep/run.sh $(fo_flags) $(in) $(out)
 
-# RTF generation currently requires you download a separate, closed source jar 
-# file and add it to your java classpath: 	
+# RTF generation currently requires you download a separate, closed source jar
+# file and add it to your java classpath:
 # http://www.xmlmind.com/foconverter/downloadperso.shtml
 rtf_proc = java com.xmlmind.fo.converter.Driver $(in) $(out)
 #rtf_proc = java ch.codeconsult.jfor.main.CmdLineConverter $(in) $(out)
 
-# Element filtering allows you to create targeted resumes.  
-# You can create your own targets; just specify them in your resume.xml 
+# Element filtering allows you to create targeted resumes.
+# You can create your own targets; just specify them in your resume.xml
 # file with the "targets" attribute.  In this example, the foodservice
-# AND carpentry elements will be included in the output, but not the 
-# elements targeted to other jobs.  Untargeted elements (those with no 
-# "targets" attribute) are always included.  
-# Take a look at example2.xml and try changing the filter targets to get a 
+# AND carpentry elements will be included in the output, but not the
+# elements targeted to other jobs.  Untargeted elements (those with no
+# "targets" attribute) are always included.
+# Take a look at example2.xml and try changing the filter targets to get a
 # feel for how the filter works.
 filter_targets = foodservice carpentry
 filter_proc = java net.sourceforge.xmlresume.filter.Filter -in $(in) -out $(out) $(filter_targets)

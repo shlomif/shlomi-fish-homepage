@@ -51,7 +51,7 @@ $Id: br.xsl,v 1.4 2002/11/26 18:39:27 brandondoyle Exp $
   <xsl:param name="miscellany.word">Diversos</xsl:param>
   <!-- Word to use for "in", as in "bachelor degree *in* political science" -->
   <xsl:param name="in.word">em</xsl:param>
-  <!-- Word to use for "and", as in "Minors in political science, 
+  <!-- Word to use for "and", as in "Minors in political science,
 	English, *and* business" -->
   <xsl:param name="and.word">e</xsl:param>
   <!-- Word to use for "Copyright (c)" -->

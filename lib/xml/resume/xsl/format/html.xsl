@@ -31,13 +31,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 $Id: html.xsl,v 1.17 2002/11/10 20:48:58 brandondoyle Exp $
 -->
-<xsl:stylesheet xmlns:r="http://xmlresume.sourceforge.net/resume/0.0" 
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.0" 
+<xsl:stylesheet xmlns:r="http://xmlresume.sourceforge.net/resume/0.0"
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.0"
  exclude-result-prefixes="r">
-  <xsl:output method="html" omit-xml-declaration="yes" indent="no" encoding="UTF-8" 
-   doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" 
+  <xsl:output method="html" omit-xml-declaration="yes" indent="no" encoding="UTF-8"
+   doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
    doctype-system="http://www.w3.org/TR/xhtml1/DTD/strict.dtd"/>
-   
+
   <xsl:strip-space elements="*"/>
   <xsl:include href="../params.xsl"/>
   <xsl:include href="../lib/common.xsl"/>
@@ -135,9 +135,9 @@ $Id: html.xsl,v 1.17 2002/11/10 20:48:58 brandondoyle Exp $
     </p>
   </xsl:template>
   <xsl:template match="r:contact/r:phone">
-    <xsl:call-template name="PhoneLocation">	
+    <xsl:call-template name="PhoneLocation">
       <xsl:with-param name="Location" select="@location"/>
-    </xsl:call-template>    
+    </xsl:call-template>
     <xsl:text>: </xsl:text>
     <xsl:apply-templates/>
     <br/>
@@ -382,7 +382,7 @@ $Id: html.xsl,v 1.17 2002/11/10 20:48:58 brandondoyle Exp $
   	    <xsl:value-of select="$title.separator"/>
           </span>
 	</xsl:if>
-        <xsl:apply-templates/>	
+        <xsl:apply-templates/>
       </li>
   </xsl:template>
 

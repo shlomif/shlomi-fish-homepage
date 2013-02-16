@@ -108,7 +108,7 @@ In general, each block is responsible for outputting a newline after itself.
     </xsl:call-template>
 
     <xsl:apply-templates select="r:name"/><xsl:call-template name="NewLine"/>
-    <xsl:apply-templates select="r:address"/> 
+    <xsl:apply-templates select="r:address"/>
 
     <xsl:call-template name="NewLine"/>
 
@@ -210,7 +210,7 @@ In general, each block is responsible for outputting a newline after itself.
     <xsl:if test="string-length($PostCode) &gt; 0">
       <xsl:text> </xsl:text>
       <xsl:value-of select="$PostCode"/>
-    </xsl:if> 
+    </xsl:if>
     <xsl:call-template name="NewLine"/>
     <xsl:if test="r:country">
       <xsl:value-of select="normalize-space(r:country)"/>
@@ -414,7 +414,7 @@ In general, each block is responsible for outputting a newline after itself.
 
     <xsl:call-template name="NewLine"/>
   </xsl:template>
-                
+
   <xsl:template match="r:period">
     <xsl:apply-templates select="r:from"/>-<xsl:apply-templates select="r:to"/>
     <xsl:if test="parent::r:job">
@@ -479,7 +479,7 @@ In general, each block is responsible for outputting a newline after itself.
           <xsl:apply-templates select="r:major"/>
         </xsl:if>
         <xsl:apply-templates select="r:minor"/>
-        <xsl:if test="r:date|r:period">     
+        <xsl:if test="r:date|r:period">
           <xsl:text>, </xsl:text>
           <xsl:apply-templates select="r:date|r:period"/>
         </xsl:if>
@@ -578,8 +578,8 @@ In general, each block is responsible for outputting a newline after itself.
         <xsl:value-of select="$subjects.result.start"/>
         <xsl:value-of select="normalize-space(r:result)"/>
         <xsl:value-of select="$subjects.result.end"/>
-      </xsl:if>   
-    </xsl:if>   
+      </xsl:if>
+    </xsl:if>
     <xsl:if test="following-sibling::*">
       <xsl:value-of select="$subjects.separator"/>
     </xsl:if>
@@ -776,7 +776,7 @@ In general, each block is responsible for outputting a newline after itself.
   </xsl:template>
 
   <xsl:template match="r:pub">
-    <xsl:variable name="Text">   
+    <xsl:variable name="Text">
       <xsl:call-template name="FormatPub"/>
     </xsl:variable>
 
@@ -855,7 +855,7 @@ In general, each block is responsible for outputting a newline after itself.
       <xsl:call-template name="NewLine"/>
       <xsl:call-template name="NewLine"/>
     </xsl:if>
-      
+
   </xsl:template>
 
   <!-- Format interests section. -->
@@ -950,7 +950,7 @@ In general, each block is responsible for outputting a newline after itself.
     </xsl:call-template>
     <xsl:call-template name="NewLine"/>
   </xsl:template>
-  
+
   <!-- Format awards section. -->
   <xsl:template match="r:awards">
     <xsl:call-template name="Heading">
@@ -967,7 +967,7 @@ In general, each block is responsible for outputting a newline after itself.
     </xsl:call-template>
   </xsl:template>
 
-  
+
   <!-- Format a single award. -->
   <xsl:template match="r:award">
     <xsl:call-template name="FormatBulletListItem">
@@ -1065,7 +1065,7 @@ In general, each block is responsible for outputting a newline after itself.
   <!-- emphasis -> strong -->
   <xsl:template match="r:emphasis">
     <xsl:value-of select="$text.emphasis.start"/>
-    <xsl:value-of select="."/> 
+    <xsl:value-of select="."/>
     <xsl:value-of select="$text.emphasis.end"/>
   </xsl:template>
 

@@ -2,7 +2,7 @@
 
 <!--
 common.xsl
-Defines some common templates shared by all the stylesheets. 
+Defines some common templates shared by all the stylesheets.
 
 Copyright (c) 2002 Sean Kelley and contributors
 All rights reserved.
@@ -230,7 +230,7 @@ $Id: common.xsl,v 1.8 2002/11/05 08:51:53 brandondoyle Exp $
   <!-- SKILLS ============================================================= -->
   <!-- Normalize space in skills, but preserve descendant elements. This
   replaced the following code in the r:skill template:
-  
+
   <xsl:variable name="Text">
     <xsl:apply-templates/>
   </xsl:variable>

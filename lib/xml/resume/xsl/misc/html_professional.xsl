@@ -60,7 +60,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 					<!--<link rel="stylesheet" type="text/css">
 					<xsl:attribute name="href"><xsl:value-of select="$css.href"/></xsl:attribute>
 					</link>-->
-				
+
 				<xsl:apply-templates select="resume/keywords" mode="header"/>
 			</head>
 			<body class="resume">
@@ -106,7 +106,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 										</xsl:attribute>
 									<xsl:value-of select="contact/url"/>
 								</a>
-								</xsl:if> 
+								</xsl:if>
 							</p>	-->
 					</td>
 					<td style="address2cell">
@@ -342,7 +342,7 @@ solid windowtext .75pt;padding:0in 0pt 0pt 0in">
 	</xsl:template>
 	<xsl:template match="degrees">
 		<p class="degrees">
-			<xsl:apply-templates select="degree"/> 
+			<xsl:apply-templates select="degree"/>
 		</p>
 		<xsl:apply-templates select="note"/>
 	</xsl:template>
@@ -419,7 +419,7 @@ solid windowtext .75pt;padding:0in 0pt 0pt 0in">
 			<xsl:apply-templates select="citystate"/>
 		</div>
 		</xsl:if>
-		<div class="jobtitle"> 
+		<div class="jobtitle">
 			<xsl:value-of select="jobtitle"/>
 		</div>
 

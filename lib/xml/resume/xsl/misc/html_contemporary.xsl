@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-NOTE: Usage of this file is or should be 
+NOTE: Usage of this file is or should be
 deprecated.  We suggest using CSS instead.
 - brandondoyle 10/29/02
 
@@ -60,7 +60,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 					<!--<link rel="stylesheet" type="text/css">
 					<xsl:attribute name="href"><xsl:value-of select="$css.href"/></xsl:attribute>
 					</link>-->
-				
+
 				<xsl:apply-templates select="resume/keywords" mode="header"/>
 			</head>
 			<body class="resume">
@@ -106,7 +106,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 										</xsl:attribute>
 									<xsl:value-of select="contact/url"/>
 								</a>
-								</xsl:if> 
+								</xsl:if>
 							</p>	-->
 					</td>
 					<td class="address2cell">
@@ -348,7 +348,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	</xsl:template>
 	<xsl:template match="degrees">
 		<p>
-			<xsl:apply-templates select="degree"/> 
+			<xsl:apply-templates select="degree"/>
 		</p>
 		<xsl:apply-templates select="note"/>
 	</xsl:template>
@@ -365,12 +365,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 				<xsl:apply-templates select="date/year"/>
 				<xsl:text> </xsl:text>
 			</xsl:if>
-		</div>	
+		</div>
 		<div class="institution">
 			<xsl:value-of select="institution"/>
 		</div>
 		<br/>
-		<div class="skill" style="font-size:10.0pt">	
+		<div class="skill" style="font-size:10.0pt">
 					§</div>
 		<div class="achievement">
 					<acronym class="level">
@@ -421,9 +421,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<div class="citystate">
 			<xsl:apply-templates select="citystate"/>
 		</div>
-		
+
 		</xsl:if>
-		<div class="jobtitle"> 
+		<div class="jobtitle">
 			<xsl:value-of select="jobtitle"/>
 		</div>
 

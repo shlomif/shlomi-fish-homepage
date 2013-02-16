@@ -4,11 +4,11 @@
  build.xml: A "Makefile" for the Ant build tool.
 
 USAGE:
- To create example1.html, example1.txt, example1.fo, and example1.pdf 
- from example1.xml, with Italian localization and a4 paper size, use 
+ To create example1.html, example1.txt, example1.fo, and example1.pdf
+ from example1.xml, with Italian localization and a4 paper size, use
  this command:
        ant -Dresume=example1 -Dcountry=it -Dpapersize=a4
- To generate just the html version of cv.xml with UK localization, use 
+ To generate just the html version of cv.xml with UK localization, use
  this command:
        ant html -Dresume=cv -Dcountry=uk
  To remove all generated files, use this command:
@@ -18,7 +18,7 @@ USAGE:
 	ant filter -Dresume=example2 -Dfilter_targets="foodservice carpentry"
 
 ==================================================================== -->
-<!-- 
+<!--
 ================================================================
      General Options
 ================================================================ -->
@@ -32,15 +32,15 @@ USAGE:
   <property name="xsl.base" value="http://xmlresume.sourceforge.net/xsl"/>
 <!--  <property name="xsl.base" value="../xsl"/> -->
 <!--  <property name="xsl.base" value="../src/www/xsl"/> -->
-<!-- 
+<!--
 ================================================================
      Processing Software:
 ================================================================ -->
   <property name="xsl.processor" value="org.apache.xalan.xslt.Process"/>
   <property name="pdf.processor" value="org.apache.fop.apps.Fop"/>
-<!-- 
-RTF generation currently requires you download a separate, 
-closed-source jar file and add it to your java classpath: 
+<!--
+RTF generation currently requires you download a separate,
+closed-source jar file and add it to your java classpath:
 http://www.xmlmind.com/foconverter/downloadperso.shtml -->
   <property name="rtf.processor" value="com.xmlmind.fo.converter.Driver"/>
 <!-- You may have some luck with JFOR, an open source FO to RTF Converter: -->
@@ -123,7 +123,7 @@ http://www.xmlmind.com/foconverter/downloadperso.shtml -->
     </java>
   </target>
 <!-- 		Target All 		-->
-  <target depends="txt,html,fo,pdf" name="all" 
+  <target depends="txt,html,fo,pdf" name="all"
 	description="Makes all known formats of the resume.">
 	<echo message="XXX resume = ${resume}"/>
   </target>

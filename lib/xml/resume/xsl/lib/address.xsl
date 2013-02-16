@@ -2,8 +2,8 @@
 
 <!--
 address.xsl
-Defines some common templates for address processing that are 
-shared by all the stylesheets. 
+Defines some common templates for address processing that are
+shared by all the stylesheets.
 
 Copyright (c) 2000-2001 Sean Kelly, Bruce Christensen
 All rights reserved.
@@ -38,7 +38,7 @@ $Id: address.xsl,v 1.1 2002/05/26 03:45:51 bruckie Exp $
   xmlns:r="http://xmlresume.sourceforge.net/resume/0.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!-- It would be nice if XSLT allowed variable reference in mode --> 
+  <!-- It would be nice if XSLT allowed variable reference in mode -->
   <!-- selection; then instead of the ugly template below, we'd have -->
   <!-- '<xsl:apply-templates select="r:address" mode="$address.format"/>'-->
   <!-- But it doesn't, so we need this. -->

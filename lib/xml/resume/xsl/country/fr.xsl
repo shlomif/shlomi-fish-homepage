@@ -36,7 +36,7 @@ $Id: fr.xsl,v 1.5 2002/11/18 21:04:25 brandondoyle Exp $
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- French language notes (correct us if we're wrong:
- * Not all the words are capitalized in titles, only the first one. 
+ * Not all the words are capitalized in titles, only the first one.
  * It's Téléphone privé, not privé Téléphone
 -->
 
@@ -55,7 +55,7 @@ $Id: fr.xsl,v 1.5 2002/11/18 21:04:25 brandondoyle Exp $
 
   <xsl:param name="phone.word">T&#x00e9;l&#x00e9;phone</xsl:param>
   <xsl:param name="fax.word">Facsimile</xsl:param>
-  <xsl:param name="phone.mobile.phrase">GSM</xsl:param> 
+  <xsl:param name="phone.mobile.phrase">GSM</xsl:param>
   <xsl:param name="phone.home.phrase"><xsl:value-of select="$phone.word"/> priv&#x00e9;</xsl:param>
   <xsl:param name="fax.home.phrase"><xsl:value-of select="$fax.word"/> priv&#x00e9;</xsl:param>
 

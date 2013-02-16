@@ -269,7 +269,7 @@ chance to remove it from their resumes. It was deprecated in version 1.4.0. -->
 <!ELEMENT present EMPTY>
 <!ELEMENT title (#PCDATA)>
 
-<!-- The following adds the special attribute "targets" to each and 
+<!-- The following adds the special attribute "targets" to each and
      every element of the DTD.  It is best to regenerate it with the
      command:
 grep '<\!ELEMENT ' resume.dtd | \

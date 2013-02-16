@@ -6,6 +6,7 @@ find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
     grep -vP 'guide2ee/undergrad' |
     grep -vP '(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))' |
     grep -vP '(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force))' |
+    grep -vP 'humour/bits/facts/(?:Chuck-Norris|XSLT)' |
     grep -vP 'humour/fortunes' |
     grep -vP 'humour/human-hacking/.*arabic' |
     grep -vP 'humour/human-hacking/human-hacking-field-guide/' |

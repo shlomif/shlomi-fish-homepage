@@ -415,6 +415,12 @@ SELINA_MANDRAKE_IDEAS__FROM_VCS = $(SELINA_MANDRAKE__VCS_DIR)/ideas/ideas.txt
 
 SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
 
+POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
+POPE_ENG_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-english.fiction-text.txt
+POPE_HEB_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-hebrew.fiction-text.txt
+POPE_ENG_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-english.txt
+POPE_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-hebrew.txt
+
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
@@ -873,7 +879,8 @@ docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
-	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial
+	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial \
+	pope_fiction
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
 
@@ -894,9 +901,17 @@ DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 $(SELINA_MANDRAKE_TXT_FROM_VCS): $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 	cp -f $< $@
 
+$(POPE_ENG_FICTION_TXT_FROM_VCS): $(POPE_ENG_FICTION_XML_SOURCE)
+	cp -f $< $@
+
+$(POPE_HEB_FICTION_TXT_FROM_VCS): $(POPE_HEB_FICTION_XML_SOURCE)
+	cp -f $< $@
+
 html_tutorial: $(DEST_HTML_TUT)
 
 selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS)
+
+pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 
@@ -912,6 +927,9 @@ $(HTML_TUT_HEB_TT):
 
 $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
 	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Selina-Mandrake.git
+
+$(POPE_ENG_FICTION_XML_SOURCE):
+	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
 
 update_html_tut: update_html_tut_hg html_tutorial
 

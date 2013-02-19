@@ -413,6 +413,10 @@ SELINA_MANDRAKE__VCS_DIR = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-ma
 SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
 SELINA_MANDRAKE_IDEAS__FROM_VCS = $(SELINA_MANDRAKE__VCS_DIR)/ideas/ideas.txt
 
+FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
+SELINA_MANDRAKE_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
+
 SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
 
 POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
@@ -526,6 +530,9 @@ $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(SELINA_MANDR
 	cp -f $< $@
 
 $(T2_DEST)/humour/Selina-Mandrake/ideas.txt: $(SELINA_MANDRAKE_IDEAS__FROM_VCS)
+	cp -f $< $@
+
+$(SELINA_MANDRAKE_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_FRON_IMAGE__SOURCE)
 	cp -f $< $@
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
@@ -886,7 +893,7 @@ docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
 	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial \
-	pope_fiction
+	pope_fiction selina_mandrake hhfg_fiction
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
 
@@ -921,7 +928,7 @@ $(HHFG_HEB_FICTION_TXT_FROM_VCS): $(HHFG_HEB_FICTION_XML_SOURCE)
 
 html_tutorial: $(DEST_HTML_TUT)
 
-selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS)
+selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS) $(SELINA_MANDRAKE_FRON_IMAGE__DEST)
 
 pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 

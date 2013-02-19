@@ -421,6 +421,12 @@ POPE_HEB_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday
 POPE_ENG_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-english.txt
 POPE_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-hebrew.txt
 
+HHFG__VCS_DIR = lib/fiction-xml/from-vcs/Human-Hacking-Field-Guide
+HHFG_ENG_DOCBOOK5_SOURCE = $(HHFG__VCS_DIR)/HHFG/text/human-hacking-field-guide--english.db5.xml
+HHFG_HEB_FICTION_XML_SOURCE = $(HHFG__VCS_DIR)/HHFG/text/human-hacking-field-guide--hebrew.fiction-text.txt
+HHFG_ENG_DOCBOOK5_FROM_VCS = lib/docbook/5/xml/human-hacking-field-guide-v2.xml
+HHFG_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/human-hacking-field-guide-hebrew-v2.txt
+
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
@@ -907,11 +913,19 @@ $(POPE_ENG_FICTION_TXT_FROM_VCS): $(POPE_ENG_FICTION_XML_SOURCE)
 $(POPE_HEB_FICTION_TXT_FROM_VCS): $(POPE_HEB_FICTION_XML_SOURCE)
 	cp -f $< $@
 
+$(HHFG_ENG_DOCBOOK5_FROM_VCS): $(HHFG_ENG_DOCBOOK5_SOURCE)
+	cp -f $< $@
+
+$(HHFG_HEB_FICTION_TXT_FROM_VCS): $(HHFG_HEB_FICTION_XML_SOURCE)
+	cp -f $< $@
+
 html_tutorial: $(DEST_HTML_TUT)
 
 selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS)
 
 pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
+
+hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 
@@ -930,6 +944,9 @@ $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
 
 $(POPE_ENG_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
+
+$(HHFG_ENG_DOCBOOK5_SOURCE):
+	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/Human-Hacking-Field-Guide
 
 update_html_tut: update_html_tut_hg html_tutorial
 

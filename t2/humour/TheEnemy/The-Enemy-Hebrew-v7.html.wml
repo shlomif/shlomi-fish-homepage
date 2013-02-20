@@ -4,11 +4,16 @@
 
 #include '../template.wml'
 
+#include "stories/stories-list.wml"
+
 <latemp_subject "האויב ואיך עזרתי להילחם בו (גרסה 7)" />
 
 <p><b>מאת:</b> שלומי פיש </p>
 
 <h2 id="text">הטקסט של הסיפור</h2>
+
+<the_enemy_logo />
+
 #include "docbook/5/rendered/The-Enemy-Hebrew-v7.xhtml"
 
 <div class="english">

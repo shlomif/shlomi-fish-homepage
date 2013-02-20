@@ -868,7 +868,7 @@ $(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass
 FORT_SASS_DEPS = lib/sass/fortunes.sass
 COMMON_SASS_DEPS = lib/sass/common-body.sass
 
-$(T2_DEST)/style.css $(T2_DEST)/style-2008.css : lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass
+$(T2_DEST)/style.css $(T2_DEST)/style-2008.css : lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass
 
 
 $(T2_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass

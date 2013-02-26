@@ -134,12 +134,18 @@ my $humour_tree_contents =
                 {
                     text => "Selina Mandrake - The Slayer",
                     url => "humour/Selina-Mandrake/",
+                    title => "Parody and Reflection of Buffy the Vampire Slayer along with other sources of inspiration.",
                     subs =>
                     [
                         {
                             text => "Ongoing Text",
                             url => "humour/Selina-Mandrake/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
+                        },
+                        {
+                            text => "Cast",
+                            url => "humour/Selina-Mandrake/cast.html",
+                            title => "Who I want to play each character?",
                         },
                     ],
                 },

@@ -1,0 +1,20 @@
+#include '../template.wml'
+
+<latemp_subject "Putting all the Cards on the Table (2013)" />
+
+<:{
+
+use strict;
+use warnings;
+
+use IO::All;
+
+my $s = io("../lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml")->slurp();
+
+$s =~ s{\A.*<body>}{};
+$s =~ s{</body>.*}{};
+$s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;
+
+print $s;
+
+}:>

@@ -5,5 +5,5 @@
 <link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
 </page_extra_head_elements>
 
-#include "screenplay-xml/rendered-html/star-trek--we-the-living-dead.html"
+<include file="../lib/screenplay-xml/rendered-html/star-trek--we-the-living-dead.html" verbatim=true />
 

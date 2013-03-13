@@ -359,6 +359,11 @@ my $essays_tree_contents =
                     url => "philosophy/philosophy/closed-books-are-so-19th-century/",
                     title => "Why authors of books should make sure they are publicly available online.",
                 },
+                {
+                    text => "Putting all the Cards on the Table (2013)",
+                    url => "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
+                    title => "Stopping to speak in riddles and be brutally honest, open, and sincere",
+                }
             ],
         },
         {

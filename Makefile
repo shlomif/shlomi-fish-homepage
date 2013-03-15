@@ -386,10 +386,12 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 			-o $@ $< ; \
 	fi
+	perl -i -lape 's/\s+$$//' $@
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	perl -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
 	-o $@ $<
+	perl -i -lape 's/\s+$$//' $@
 
 
 $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html

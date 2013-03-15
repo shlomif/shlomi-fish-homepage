@@ -5,6 +5,8 @@ use warnings;
 
 use utf8;
 
+use Carp;
+
 use Shlomif::Homepage::SectionMenu;
 
 my $hosts =
@@ -29,6 +31,43 @@ my @humour_expand = (re => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
 
 my %reduced_sub_trees =
 (
+    'Art' =>
+    {
+        text => "Art",
+        url => "art/",
+        expand => { re => "^art/", },
+        title => "Computer art I created while explaining how.",
+        subs =>
+        [
+            {
+                text => "Original Graphics",
+                url => "art/original-graphics/",
+            },
+            {
+                text => "By others",
+                url => "art/by-others/",
+            },
+            {
+                text => "Recommendations",
+                url => "art/recommendations/",
+                subs =>
+                [
+                    {
+                        text => "Music",
+                        url => "art/recommendations/music/",
+                        subs =>
+                        [
+                            {
+                                text => "Online Artists",
+                                url => "art/recommendations/music/online-artists/",
+                                title => "Some of my favourite online musicians",
+                            },
+                        ],
+                    },
+                ],
+            },
+        ],
+    },
     'Humour' =>
     {
         text => "Humour",
@@ -412,10 +451,22 @@ sub generic_get_params
     my $get_sub_tree = sub {
         my ($sect_name) = @_;
 
-        return $is_fully_expanded
-            ? Shlomif::Homepage::SectionMenu->get_modified_sub_tree($sect_name)
-            : $reduced_sub_trees{$sect_name}
-            ;
+        if ( $is_fully_expanded )
+        {
+            return
+                Shlomif::Homepage::SectionMenu
+                ->get_modified_sub_tree($sect_name);
+        }
+        else
+        {
+            my $sect_to_ret = $reduced_sub_trees{$sect_name} ;
+
+            if (!defined ($sect_to_ret))
+            {
+                Carp::confess("No section '$sect_name' to return.");
+            }
+            return $sect_to_ret;
+        }
     };
 
     my $tree_contents =
@@ -498,57 +549,7 @@ sub generic_get_params
             },
             $get_sub_tree->('Humour'),
             $get_sub_tree->('Puzzles'),
-            {
-                text => "Computer Art",
-                url => "art/",
-                expand => { re => "^art/", },
-                title => "Computer art I created while explaining how.",
-                subs =>
-                [
-                    {
-                        text => "Back to my Homepage",
-                        url => "art/bk2hp/",
-                        title => "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
-                    },
-                    {
-                        text => "Linux Banner",
-                        url => "art/linux_banner/",
-                        title => "Linux - Because Software Problems should not Cost Money",
-                    },
-                    {
-                        text => "Made with Latemp",
-                        url => "art/made-with-latemp/",
-                        title => "“Made with Latemp” Button",
-                    },
-                    {
-                        text => "HHFG Background",
-                        url => "art/hhfg-background/",
-                        title => "Background Image for the “Human Hacking Field Guide” Story",
-                    },
-                    {
-                        text => "Better SCM Logo",
-                        url => "art/better-scm/",
-                        title => "Logo for the “Better SCM” Site",
-                    },
-                    {
-                        text => "Slogans’ Designs",
-                        url => "art/slogans/",
-                        title => "The design of my aphorism - useful for T-shirts and other merchandise",
-                    },
-                    {
-                        text => "By others",
-                        url => "art/by-others/",
-                        subs =>
-                        [
-                            {
-                                text => "Yachar’s Music",
-                                url => "art/by-others/Yachar/",
-                                title => "Fresh Neoclassical Music",
-                            },
-                        ],
-                    },
-                ],
-            },
+            $get_sub_tree->('Art'),
             $get_sub_tree->('Software'),
             $get_sub_tree->('Lectures'),
             $get_sub_tree->('Essays'),
@@ -607,10 +608,10 @@ sub generic_get_params
     };
 
     return
-        (
-            hosts => $hosts,
-            tree_contents => $tree_contents,
-        );
+    (
+        hosts => $hosts,
+        tree_contents => $tree_contents,
+    );
 }
 
 sub get_params

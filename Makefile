@@ -483,7 +483,16 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(DOCBOOK5_RENDE
 
 $(T2_DEST)/philosophy/computers/high-quality-software/rev2/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality-rev2.html
 $(T2_DEST)/philosophy/computers/high-quality-software/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality.html
-$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
+
+PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
+PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2003.xhtml
+
+all: $(PUT_CARDS_2013_DEST)
+
+$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML)
+
+$(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
+	cp -f $< $@
 
 $(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DOCBOOK4_RENDERED_DIR)/introductory-language.html
 

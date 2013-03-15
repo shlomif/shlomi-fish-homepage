@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "toc_div.wml"
+#include "common_art.wml"
 
 <latemp_subject "Shlomi Fish’s Art" />
 <latemp_meta_desc "Various artwork by Shlomi Fish: computer graphics, some photographs, and some music" />
@@ -13,95 +14,7 @@ shamelessly duplicate my efforts and create similar art.
 
 <toc_div />
 
-<div class="graphic_designs">
-
-<h2 id="graphics">Graphics</h2>
-
-<define-tag my_image endtag="required">
-<preserve id url thumb_url thumb_alt title />
-<set-var %attributes />
-
-<div class="design">
-<h3 id="<get-var id />"><a href="<get-var url />"><get-var title /></a></h3>
-
-<a href="<get-var url />"><img
-    src="<get-var thumb_url />" alt="<get-var thumb_alt />"
-    /></a>
-
-%body
-</div>
-<restore id url thumb_url thumb_alt title />
-</define-tag>
-
-<my_image id="back-to-my-homepage"
-    url="bk2hp/"
-    thumb_url="$(ROOT)/images/bk2hp.png"
-    thumb_alt="Back to my Homepage (Like Back to the Future)"
-    title="Back to my Homepage">
-
-<p>
-A “Back to my Homepage” image, many of them were common in ye olde web, but
-this time modelled like the logo of the movie <i>Back to the Future</i>.
-</p>
-
-</my_image>
-
-<my_image id="linux-slogan"
-    url="linux_banner/"
-    thumb_url="images/linux1-scaled.png"
-    thumb_alt="Linux - Because software problems should not cost money"
-    title="Linux Slogan">
-
-<p>
-A funny Linux Slogan -
-<q>Linux - Because software problems should not cost money.</q> rendered
-into a nice design.
-</p>
-
-</my_image>
-
-<my_image id="made-with-latemp"
-    url="made-with-latemp/"
-    thumb_url="made-with-latemp/made-with-latemp-big.png"
-    thumb_alt="Made with Latemp"
-    title="Made with Latemp">
-
-<p>
-A design reading “Made With Latemp” for providing a button for the
-<a href="http://web-cpan.shlomifish.org/latemp/">Latemp Offline Content Management
-System</a>.
-</p>
-
-</my_image>
-
-<my_image id="hhfg-background"
-    url="hhfg-background/"
-    thumb_url="hhfg-background/corner.png"
-    thumb_alt="“Human Hacking Field Guide” Background Image"
-    title="Background for the “Human Hacking Field Guide Story”">
-
-<p>
-After I wrote <a href="$(ROOT)/humour/human-hacking/">the story <i>Human Hacking
-Field Guide</i></a> I was looking for a nice design for its online chapters.
-I found a design I liked, but its images were not suitable, so I duplicated
-the effect using <a href="http://www.gimp.org/">the GIMP</a>.
-</p>
-
-</my_image>
-
-<my_image id="better-scm"
-    url="better-scm/"
-    thumb_url="better-scm/better-scm-logo.png"
-    thumb_alt="“Better SCM” Site Logo"
-    title="Better SCM Logo">
-
-<p>
-The Logo for <a href="http://better-scm.shlomifish.org/">Better-SCM web-site</a>.
-</p>
-
-</my_image>
-
-</div>
+<common_art__graphics_design />
 
 <h2 id="slogans"><a href="slogans/">Slogans</a></h2>
 

@@ -8,6 +8,12 @@ use Shlomif::Homepage::SectionMenu;
 my @sections =
 (
     {
+        'id' => "art",
+        'regex' => "^/art/",
+        'class' => "Art",
+        'title' => "Art Section Menu",
+    },
+    {
         'id' => "essays",
         'regex' => "^/(?:philosophy|prog-evolution|DeCSS)/",
         'class' => "Essays",

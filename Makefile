@@ -411,6 +411,11 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
+HUMANITY__VCS_DIR = lib/screenplay-xml/from-vcs/Humanity-the-Movie/humanity/
+
+HUMANITY_ENG_SCREENPLAY_XML_SOURCE = $(HUMANITY__VCS_DIR)/screenplay/Humanity-Movie.screenplay-text.txt
+HUMANITY_HEB_SCREENPLAY_XML_SOURCE = $(HUMANITY__VCS_DIR)/screenplay/Humanity-Movie-hebrew.screenplay-text.txt
+
 SELINA_MANDRAKE__VCS_DIR = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/
 
 SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
@@ -421,6 +426,8 @@ SELINA_MANDRAKE_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$
 SELINA_MANDRAKE_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
 
 SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
+HUMANITY_ENG_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
+HUMANITY_HEB_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
 
 POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
 POPE_ENG_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-english.fiction-text.txt
@@ -927,6 +934,12 @@ DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 $(SELINA_MANDRAKE_TXT_FROM_VCS): $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
 	cp -f $< $@
 
+$(HUMANITY_ENG_TXT_FROM_VCS): $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE)
+	cp -f $< $@
+
+$(HUMANITY_HEB_TXT_FROM_VCS): $(HUMANITY_HEB_SCREENPLAY_XML_SOURCE)
+	cp -f $< $@
+
 $(POPE_ENG_FICTION_TXT_FROM_VCS): $(POPE_ENG_FICTION_XML_SOURCE)
 	cp -f $< $@
 
@@ -961,6 +974,9 @@ $(HTML_TUT_HEB_TT):
 
 $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
 	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Selina-Mandrake.git
+
+$(HUMANITY_HEB_SCREENPLAY_XML_SOURCE) $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE):
+	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Humanity-the-Movie.git
 
 $(POPE_ENG_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday

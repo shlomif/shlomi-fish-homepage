@@ -276,6 +276,8 @@ It is easy to reach Shlomi using a large number of
 <div class="center">
 <shlomif_web_ads_code_side />
 </div>
+
+{#PAGE_BLOG_ROLL#}
 </latemp_affiliations_buttons>
 
 #include "footer.wml"
@@ -330,6 +332,10 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag section_nav_menu_elements endtag="required" whitespace="delete">
 {#SECTION_NAV_MENU_ELEMS#:%body:##}
+</define-tag>
+
+<define-tag page_blog_roll endtag="required" whitespace="delete">
+{#PAGE_BLOG_ROLL#:%body:##}
 </define-tag>
 
 <define-tag stop_censorship_link>

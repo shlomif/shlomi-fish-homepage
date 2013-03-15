@@ -141,15 +141,76 @@ that you enjoyed it.
 
 </div>
 
+
+<page_blog_roll>
+
+<div class="blog_roll">
+
+<h2 id="shlomif_blog_roll">Links to Other Home Sites and Blogs</h2>
+
+<ul>
+
+<li>
+<a href="http://szabgab.com/">Gabor Szabo</a>
+- Perl Trainer and developer (szabgab)
+</li>
+
+<li>
+<a href="http://blogs.perl.org/users/sawyer_x/">Sawyer X’s blog about Perl</a>
+</li>
+
+<li>
+<a href="http://idkn.wordpress.com/">Ido Kanner’s
+“Seeing Differently” Blog</a> (mostly in Hebrew.)
+</li>
+
+<li>
+<a href="http://actionflickchick.com/superaction/">Action Flick Chick</a>
+</li>
+
+<li>
+<a href="http://perl5maven.com/">Perl 5 Maven</a> - “for people who want
+to get the most out of programming in Perl”
+</li>
+
+<li>
+<a href="http://ozyandmillie.org/">Ozy and Millie</a> - an excellent
+cartoon strip about the trials and tribulations of several furry elementary
+school children, their parents and other grown ups.
+</li>
+
+<li>
+<a href="http://xkcd.com/">xkcd</a> - a web comic strip by a computer geek
+and for computer geeks.
+</li>
+
+<li>
+<a href="http://www.userfriendly.org/">User Friendly</a> - a geeky comic strip
+about a neurotic ISP.
+</li>
+
+<li>
+<a href="http://stexpanded.wikia.com/">Star Trek Expanded Universe Wiki (fan-made Star Trek projects)</a> - about fan fiction, fan films, role-playing games, etc.
+</li>
+
+</ul>
+
+</div>
+
+</page_blog_roll>
+
 <h2 id="news">News</h2>
 
 <:{
 use Shlomif::Homepage::News;
 
-binmode STDOUT, ":utf8";
-my $news = Shlomif::Homepage::News->new();
-print $news->render_front_page();
+_wrap_as_utf8(
+    sub {
+    my $news = Shlomif::Homepage::News->new();
+    print $news->render_front_page();
+    }
+);
+
 }:>
 
 <h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
-

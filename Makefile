@@ -994,6 +994,9 @@ $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
 $(HUMANITY_HEB_SCREENPLAY_XML_SOURCE) $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE):
 	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Humanity-the-Movie.git
 
+$(STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE) $(STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE):
+	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Star-Trek--We-the-Living-Dead.git
+
 $(POPE_ENG_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
 

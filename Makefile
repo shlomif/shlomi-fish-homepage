@@ -413,6 +413,12 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
+TOWTF__VCS_DIR = lib/screenplay-xml/from-vcs/TOW-Fountainhead/TOW_Fountainhead/
+
+TOWTF_1_SCREENPLAY_XML_SOURCE = $(TOWTF__VCS_DIR)/screenplay/TOW_Fountainhead_1.screenplay-text.txt
+TOWTF_2_SCREENPLAY_XML_SOURCE = $(TOWTF__VCS_DIR)/screenplay/TOW_Fountainhead_2.screenplay-text.txt
+
+
 STAR_TREK_WTLD__VCS_DIR = lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/
 
 STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE = $(STAR_TREK_WTLD__VCS_DIR)/screenplay/Star-Trek--We-the-Living-Dead.screenplay-text.txt
@@ -438,6 +444,8 @@ HUMANITY_ENG_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
 HUMANITY_HEB_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
 STAR_TREK_WTLD_ENG_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/star-trek--we-the-living-dead.txt
 STAR_TREK_WTLD_HEB_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead-hebrew.txt
+TOWTF_1_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_1.txt
+TOWTF_2_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_2.txt
 
 POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
 POPE_ENG_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-english.fiction-text.txt
@@ -950,6 +958,12 @@ $(STAR_TREK_WTLD_ENG_TXT_FROM_VCS): $(STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE)
 $(STAR_TREK_WTLD_HEB_TXT_FROM_VCS): $(STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE)
 	cp -f $< $@
 
+$(TOWTF_1_TXT_FROM_VCS): $(TOWTF_1_SCREENPLAY_XML_SOURCE)
+	cp -f $< $@
+
+$(TOWTF_2_TXT_FROM_VCS): $(TOWTF_2_SCREENPLAY_XML_SOURCE)
+	cp -f $< $@
+
 $(HUMANITY_ENG_TXT_FROM_VCS): $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE)
 	cp -f $< $@
 
@@ -996,6 +1010,9 @@ $(HUMANITY_HEB_SCREENPLAY_XML_SOURCE) $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE):
 
 $(STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE) $(STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE):
 	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Star-Trek--We-the-Living-Dead.git
+
+$(TOWTF_1_SCREENPLAY_XML_SOURCE) $(TOWTF_2_SCREENPLAY_XML_SOURCE):
+	cd lib/screenplay-xml/from-vcs && git clone git@github.com:shlomif/TOW-Fountainhead.git
 
 $(POPE_ENG_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday

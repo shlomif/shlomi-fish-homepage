@@ -5,6 +5,8 @@ use warnings;
 
 use Template;
 
+use IO::All;
+
 use File::Find::Object::Rule;
 
 use List::MoreUtils qw(any);
@@ -255,6 +257,91 @@ my @end_formats =
         )
     )
 );
+
+{
+    my $screenplays_data =
+    [
+        {
+            base => "TOWTF",
+            github_repo => "TOW-Fountainhead",
+            subdir => "TOW_Fountainhead",
+            docs =>
+            [
+                { base => "TOW_Fountainhead_1", suffix => "1", },
+                { base => "TOW_Fountainhead_2", suffix => "2", },
+            ],
+        },
+        {
+            base => "STAR_TREK_WTLD",
+            github_repo => "Star-Trek--We-the-Living-Dead",
+            subdir => "star-trek--we-the-living-dead",
+            docs =>
+            [
+                { base => "Star-Trek--We-the-Living-Dead", suffix => "ENG", },
+                { base => "Star-Trek--We-the-Living-Dead-hebrew", suffix => "HEB", },
+            ],
+        },
+        {
+            base => "HUMANITY",
+            github_repo => "Humanity-the-Movie",
+            subdir => "humanity",
+            docs =>
+            [
+                { base => "Humanity-Movie", suffix => "ENG", },
+                { base => "Humanity-Movie-hebrew", suffix => "HEB", },
+            ],
+        },
+        {
+            base => "SELINA_MANDRAKE",
+            github_repo => "Selina-Mandrake",
+            subdir => "selina-mandrake",
+            docs =>
+            [
+                { base => "selina-mandrake-the-slayer", suffix => "ENG", },
+            ],
+        },
+    ];
+
+    io->file("lib/make/docbook/sf-screenplays.mak")->print(
+        map {
+            my $d = $_;
+
+            my $b = $d->{base};
+            my $github_repo = $d->{github_repo};
+            my $subdir = $d->{subdir};
+            my $docs = $d->{docs};
+
+            my $vcs_dir_var = "${b}__VCS_DIR";
+
+            my $str1 = "$vcs_dir_var = lib/screenplay-xml/from-vcs/$github_repo/$subdir\n";
+            my @src_vars;
+            my $docs_ret_str = join("",
+                map
+                {
+                    my $doc = $_;
+
+                    my $doc_base = $doc->{base};
+                    my $suf = $doc->{suffix};
+
+                    my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
+                    push @src_vars , $src_varname;
+                    my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
+                        "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n"
+                    . "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n"
+                    . "\$($dest_varname): \$($src_varname)\n"
+                    . "\t" . q/cp -f $< $@/ . "\n"
+                        ;
+                }
+                @$docs
+            );
+
+            my $str2 = join(' ', map { '$(' . $_ . ')' } @src_vars) . ":\n"
+                . "\tcd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/${github_repo}.git\n";
+
+            $str1 . $docs_ret_str . $str2 . "\n\n";
+        } @$screenplays_data,
+    );
+}
 
 my $tt = Template->new({});
 

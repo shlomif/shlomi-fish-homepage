@@ -309,6 +309,11 @@ my $humour_tree_contents =
                             text => "Chuck Norris",
                         },
                         {
+                            url => "humour/bits/facts/Buffy/",
+                            text => "Buffy",
+                            title => "Facts about Buffy Summers from the Television show, Buffy the Vampire Slayer",
+                        },
+                        {
                             url => "humour/bits/facts/Knuth/",
                             text => "Knuth",
                         },

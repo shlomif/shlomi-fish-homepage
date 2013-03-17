@@ -300,6 +300,15 @@ my @end_formats =
                 { base => "selina-mandrake-the-slayer", suffix => "ENG", },
             ],
         },
+        {
+            base => "BLUE_RABBIT_LOG",
+            github_repo => "Blue-Rabbit-Log",
+            subdir => "Blue-Rabbit-Log",
+            docs =>
+            [
+                { base => "Blue-Rabbit-Log-Part-1", suffix => "1", },
+            ],
+        },
     ];
 
     io->file("lib/make/docbook/sf-screenplays.mak")->print(

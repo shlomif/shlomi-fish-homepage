@@ -263,7 +263,7 @@ SCREENPLAY_DOCS = \
 	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
-	star-trek--we-the-living-dead \
+	Star-Trek--We-the-Living-Dead \
 	selina-mandrake-the-slayer \
 	sussman-interview \
 	TOW_Fountainhead_1  \
@@ -349,6 +349,8 @@ SCREENPLAY_XML_FOR_OOO_XHTMLS = $(patsubst %,$(SCREENPLAY_XML_FOR_OOO_XHTML_DIR)
 
 all: $(SCREENPLAY_RENDERED_HTMLS)
 
+include lib/make/docbook/sf-screenplays.mak
+
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
 	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
 	-o $@ $<
@@ -413,39 +415,7 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
-TOWTF__VCS_DIR = lib/screenplay-xml/from-vcs/TOW-Fountainhead/TOW_Fountainhead/
-
-TOWTF_1_SCREENPLAY_XML_SOURCE = $(TOWTF__VCS_DIR)/screenplay/TOW_Fountainhead_1.screenplay-text.txt
-TOWTF_2_SCREENPLAY_XML_SOURCE = $(TOWTF__VCS_DIR)/screenplay/TOW_Fountainhead_2.screenplay-text.txt
-
-
-STAR_TREK_WTLD__VCS_DIR = lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/
-
-STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE = $(STAR_TREK_WTLD__VCS_DIR)/screenplay/Star-Trek--We-the-Living-Dead.screenplay-text.txt
-STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE = $(STAR_TREK_WTLD__VCS_DIR)/screenplay/Star-Trek--We-the-Living-Dead-hebrew.screenplay-text.txt
-
-
-HUMANITY__VCS_DIR = lib/screenplay-xml/from-vcs/Humanity-the-Movie/humanity/
-
-HUMANITY_ENG_SCREENPLAY_XML_SOURCE = $(HUMANITY__VCS_DIR)/screenplay/Humanity-Movie.screenplay-text.txt
-HUMANITY_HEB_SCREENPLAY_XML_SOURCE = $(HUMANITY__VCS_DIR)/screenplay/Humanity-Movie-hebrew.screenplay-text.txt
-
-SELINA_MANDRAKE__VCS_DIR = lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/
-
-SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/screenplay/selina-mandrake-the-slayer.screenplay-text.txt
-SELINA_MANDRAKE_IDEAS__FROM_VCS = $(SELINA_MANDRAKE__VCS_DIR)/ideas/ideas.txt
-
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
-SELINA_MANDRAKE_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
-SELINA_MANDRAKE_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
-
-SELINA_MANDRAKE_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/selina-mandrake-the-slayer.txt
-HUMANITY_ENG_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
-HUMANITY_HEB_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
-STAR_TREK_WTLD_ENG_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/star-trek--we-the-living-dead.txt
-STAR_TREK_WTLD_HEB_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead-hebrew.txt
-TOWTF_1_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_1.txt
-TOWTF_2_TXT_FROM_VCS = $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_2.txt
 
 POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
 POPE_ENG_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-english.fiction-text.txt
@@ -462,13 +432,7 @@ HHFG_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/human-hacking-field-guide-he
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt: $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_1.txt
-	cp -f $< $@
-
 $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt: $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
-	cp -f $< $@
-
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(SCREENPLAY_XML_TXT_DIR)/TOW_Fountainhead_2.txt
 	cp -f $< $@
 
 $(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
@@ -560,17 +524,7 @@ $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-persona
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-Part-1.txt
 	cp -f $< $@
 
-$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/star-trek--we-the-living-dead.txt
-	cp -f $< $@
-
-
-$(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(SELINA_MANDRAKE_TXT_FROM_VCS)
-	cp -f $< $@
-
-$(T2_DEST)/humour/Selina-Mandrake/ideas.txt: $(SELINA_MANDRAKE_IDEAS__FROM_VCS)
-	cp -f $< $@
-
-$(SELINA_MANDRAKE_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_FRON_IMAGE__SOURCE)
+$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
 	cp -f $< $@
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
@@ -949,27 +903,6 @@ HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
-$(SELINA_MANDRAKE_TXT_FROM_VCS): $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(STAR_TREK_WTLD_ENG_TXT_FROM_VCS): $(STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(STAR_TREK_WTLD_HEB_TXT_FROM_VCS): $(STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(TOWTF_1_TXT_FROM_VCS): $(TOWTF_1_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(TOWTF_2_TXT_FROM_VCS): $(TOWTF_2_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(HUMANITY_ENG_TXT_FROM_VCS): $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
-$(HUMANITY_HEB_TXT_FROM_VCS): $(HUMANITY_HEB_SCREENPLAY_XML_SOURCE)
-	cp -f $< $@
-
 $(POPE_ENG_FICTION_TXT_FROM_VCS): $(POPE_ENG_FICTION_XML_SOURCE)
 	cp -f $< $@
 
@@ -984,13 +917,13 @@ $(HHFG_HEB_FICTION_TXT_FROM_VCS): $(HHFG_HEB_FICTION_XML_SOURCE)
 
 html_tutorial: $(DEST_HTML_TUT)
 
-selina_mandrake: $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_TXT_FROM_VCS) $(SELINA_MANDRAKE_FRON_IMAGE__DEST)
+selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST)
 
 pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 
 hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE)
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE)
 
 $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(DEST_HTML_TUT_BASE)
@@ -1001,18 +934,6 @@ $(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
 
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
-
-$(SELINA_MANDRAKE_SCREENPLAY_XML_SOURCE):
-	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Selina-Mandrake.git
-
-$(HUMANITY_HEB_SCREENPLAY_XML_SOURCE) $(HUMANITY_ENG_SCREENPLAY_XML_SOURCE):
-	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Humanity-the-Movie.git
-
-$(STAR_TREK_WTLD_HEB_SCREENPLAY_XML_SOURCE) $(STAR_TREK_WTLD_ENG_SCREENPLAY_XML_SOURCE):
-	cd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/Star-Trek--We-the-Living-Dead.git
-
-$(TOWTF_1_SCREENPLAY_XML_SOURCE) $(TOWTF_2_SCREENPLAY_XML_SOURCE):
-	cd lib/screenplay-xml/from-vcs && git clone git@github.com:shlomif/TOW-Fountainhead.git
 
 $(POPE_ENG_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday

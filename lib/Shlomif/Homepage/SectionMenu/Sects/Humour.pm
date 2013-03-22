@@ -132,7 +132,7 @@ my $humour_tree_contents =
                     ],
                 },
                 {
-                    text => "Selina Mandrake - The Slayer",
+                    text => "Selina Mandrake - The Slayer (Buffy Parody)",
                     url => "humour/Selina-Mandrake/",
                     title => "Parody and Reflection of Buffy the Vampire Slayer along with other sources of inspiration.",
                     subs =>

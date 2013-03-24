@@ -205,6 +205,44 @@ my $humour_tree_contents =
                     title => "Collection of Quotes by Me and Others in the UNIX Fortune Format",
                     subs => Shlomif::Homepage::FortuneCollections->nav_data(),
                 },
+                {
+                    text => "Collections of Facts",
+                    url => "humour/bits/facts/",
+                    title => "Collections of funny factoids about various people and things",
+                    subs =>
+                    [
+                        {
+                            url => "humour/bits/facts/Chuck-Norris/",
+                            text => "Chuck Norris",
+                        },
+                        {
+                            url => "humour/bits/facts/Buffy/",
+                            text => "Buffy",
+                            title => "Facts about Buffy Summers from the Television show, Buffy the Vampire Slayer",
+                        },
+                        {
+                            url => "humour/bits/facts/Knuth/",
+                            text => "Knuth",
+                        },
+                        {
+                            url => "humour/bits/facts/Larry-Wall/",
+                            text => "Larry Wall",
+                        },
+                        {
+                            url => "humour/bits/facts/NSA/",
+                            text => "NSA",
+                        },
+                        {
+                            url => "humour/bits/facts/Xena/",
+                            text => "Xena",
+                            title => "Factoids about Xena, the Warrior Princess",
+                        },
+                        {
+                            url => "humour/bits/facts/XSLT/",
+                            text => "XSLT",
+                        },
+                    ],
+                },
            ],
         },
         {
@@ -298,44 +336,6 @@ my $humour_tree_contents =
                     text => "Freecell Solver™ Goes Webscale",
                     url => "humour/bits/Freecell-Solver-Goes-Webscale/",
                 },
-                {
-                    text => "Collections of Facts",
-                    url => "humour/bits/facts/",
-                    title => "Collection of funny facts about various people and things",
-                    subs =>
-                    [
-                        {
-                            url => "humour/bits/facts/Chuck-Norris/",
-                            text => "Chuck Norris",
-                        },
-                        {
-                            url => "humour/bits/facts/Buffy/",
-                            text => "Buffy",
-                            title => "Facts about Buffy Summers from the Television show, Buffy the Vampire Slayer",
-                        },
-                        {
-                            url => "humour/bits/facts/Knuth/",
-                            text => "Knuth",
-                        },
-                        {
-                            url => "humour/bits/facts/Larry-Wall/",
-                            text => "Larry Wall",
-                        },
-                        {
-                            url => "humour/bits/facts/NSA/",
-                            text => "NSA",
-                        },
-                        {
-                            url => "humour/bits/facts/Xena/",
-                            text => "Xena",
-                            title => "Factoids about Xena, the Warrior Princess",
-                        },
-                        {
-                            url => "humour/bits/facts/XSLT/",
-                            text => "XSLT",
-                        },
-                    ],
-                }
             ],
         },
         {

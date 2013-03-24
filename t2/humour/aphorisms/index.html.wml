@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "stories/bits.wml"
 
 <latemp_subject "Shlomi Fish’s Aphorisms and Quotes" />
 <latemp_meta_desc "Directory for Aphorisms and Quotes by Shlomi Fish" />
@@ -17,9 +18,4 @@ These are various quotes I like or came up with, in the UNIX fortune format.
 Also regularly updated.
 </p>
 
-<h2><a href="$(ROOT)/humour/bits/facts/">Collections of Factoids</a></h2>
-
-<p>
-Collections of “facts” about people and things.
-</p>
-
+<factoids_frame />

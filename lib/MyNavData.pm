@@ -28,6 +28,7 @@ sub get_hosts
 
 my @personal_expand = (expand => { bool => 1, capt => 0,},);
 my @humour_expand = (re => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
+my @humour_aphorisms_expand = (re => q{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour).html)});
 
 my %reduced_sub_trees =
 (
@@ -117,7 +118,7 @@ my %reduced_sub_trees =
             {
                 text => "Aphorisms and Quotes",
                 url => "humour/aphorisms/",
-                expand => { @humour_expand, capt => 0,},
+                expand => { @humour_aphorisms_expand, capt => 0,},
                 subs =>
                 [
                     {
@@ -131,21 +132,19 @@ my %reduced_sub_trees =
                         title => "Collection of Files for Input to the UNIX ‘fortune’ Program",
                         url => "humour/fortunes/",
                     },
+                    {
+                        text => "Factoids",
+                        title => "“Facts” about Chuck Norris and other things",
+                        url => "humour/bits/facts/",
+                        expand => { re => "^humour/bits/facts/", },
+                    },
                 ],
             },
             {
                 text => "Small Scale",
                 url => "humour/bits/",
-                expand => { re => "^humour/bits/", },
+                expand => { re => "^humour/bits/(?!facts/)", },
                 title => "Small Scale Funny Works of Mine",
-                subs =>
-                [
-                    {
-                        text => "Factoids",
-                        title => "“Facts” about Chuck Norris and other things",
-                        url => "humour/bits/facts/",
-                    },
-                ],
             },
             {
                 text => "By Others",

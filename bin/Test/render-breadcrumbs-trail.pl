@@ -7,7 +7,8 @@ use HTML::Widgets::NavMenu;
 use CGI qw();
 use MyNavLinks;
 
-my $my_THE_filename = "puzzles/situation/book-under-rock.html";
+# my $my_THE_filename = "puzzles/situation/book-under-rock.html";
+my $my_THE_filename = "humour/bits/facts/Buffy/index.html";
 {
 my $filename = $my_THE_filename;
 $filename =~ s{index\.html$}{};
@@ -110,3 +111,5 @@ return;
         { $render_leading_path_component->($_) }
         @$total_leading_path
         ));
+
+    print "\n";

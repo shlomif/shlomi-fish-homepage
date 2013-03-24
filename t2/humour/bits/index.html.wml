@@ -1,11 +1,13 @@
 #include '../template.wml'
-
+#include "stories/bits.wml"
 
 <latemp_subject "Shlomi Fish’s Funny Bits" />
 
 <p>
 Funny short scale stories I wrote - often just a pageful or two.
 </p>
+
+<factoids_frame />
 
 <h3 id="ways_to_do_it"><a href="../ways_to_do_it.html">Ways to Do It According to the Programming Languages of the World</a></h3>
 
@@ -119,11 +121,3 @@ Solver™ Goes Webscale</a></h3>
 <p>
 Another great innovation from Freecell Solver Enterprises™.
 </p>
-
-<h2 id="facts"><a href="facts/">Collections of Facts</a></h2>
-
-<p>
-Starting from the meme of <a href="facts/Chuck-Norris/">Chuck Norris facts</a>
-and continuing to other people or things.
-</p>
-

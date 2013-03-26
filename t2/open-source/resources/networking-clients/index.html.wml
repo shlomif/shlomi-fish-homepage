@@ -1,0 +1,587 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Networking Clients" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various networking applications.
+The focus is on GUI client applications.
+</p>
+
+<h2 id="instant-messaging">Instant Messaging Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.pidgin.im/">Pidgin</a> - a universal, multi-protocol,
+chat client for
+Windows, Linux and other UNIX systems and Mac OS X. Supports voice on Linux
+alone. Has a console-based client called Finch. Open Source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://jitsi.org/">Jitsi</a> - an open source and cross-platform
+audio/video and chat communicator that supports multiple protocols (LGPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.miranda-im.org/">Miranda IM</a> - an open source,
+multi-protocol, instant messaging client for Microsoft Windows. GPLed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://adium.im/">Adium</a> - an open source IM application for
+Mac OS X that supports many protocols. GPLed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.trillian.im/">Trillian</a> - a proprietary IM client
+for Windows, Mac OS X and some smartphone platforms, that supports many
+protocols.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.beejive.com/">Beejive</a> - an instant messaging client
+for Android, the iPhone, the iPad and for BlackBerry. Proprietary and
+freeware.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Empathy_%28software%29">Empathy</a> - an
+open source (GPLed) client for the GNOME environment, which was created as
+an alternative to Pidgin. UNIXes-only.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://kopete.kde.org/">Kopete</a> - an instant messaging
+client for the KDE desktop environment. Open Source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_instant_messaging_clients">Wikipedia’s
+Comparison of instant messaging clients</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.centerim.org/">CenterIM</a> - a text-mode multi-protocol
+Instant Messaging client for Linux, the BSDs and other UNIXes. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.bitlbee.org/">BitlBee</a> - an IRC to other chat
+networks gateway.
+</p>
+</li>
+</ul>
+
+<h2 id="ftp-clients">FTP Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://lftp.yar.ru/">lftp</a> - a sophisticated command-line FTP
+and HTTP client. Open Source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://filezilla-project.org/">FileZilla</a> - a cross-platform
+open-source FTP GUI client (and an open-source FTP server for Windows). GPLed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/fireftp/">FireFTP</a> -
+an FTP/SFTP client for Mozilla Firefox.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.konqueror.org/">Konqueror</a> - provides access to FTP,
+SFTP and other remote access mechanisms using KDE’s KIO-Slaves framework.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/WS_FTP">WS_FTP</a> - a proprietary
+and shareware FTP client for Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software">Wikipedia’s
+Comparison of FTP client software</a>
+</p>
+</li>
+</ul>
+
+<h2 id="irc-clients">Dedicated IRC (Internet Relay Chat) Clients</h2>
+
+<p>
+Note: some multi-protocol
+<a href="#instant-messaging">instant messaging clients</a> support
+IRC as well.
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://xchat.org/">XChat</a> and
+<a href="http://www.hexchat.org/">HexChat</a> - open source IRC clients
+for Linux and Windows. (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/chatzilla/">ChatZilla</a> -
+an open-source IRC client implemented as a Firefox plug-in. (MPL).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/MIRC">mIRC</a> - a popular
+shareware and proprietary IRC client for Microsoft Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.irssi.org/">irssi</a> - a cross-platform
+and open-source console client with good extensibility. (GPLed)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/BitchX">BitchX</a>
+and <a href="http://www.epicsol.org/">EPIC</a> - two open-source IRC clients
+based on the original ircII.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://konversation.kde.org/">Konversation</a> - an IRC client for
+the KDE desktop environment. Open source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://quassel-irc.org/">Quassel IRC</a> - a cross-platform, Qt
+based IRC client, that allows one to attach and detach to and from a common
+core. Open source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients">Wikipedia’s Comparison of Internet Relay Chat clients</a>
+</p>
+</li>
+
+
+</ul>
+
+<h2 id="web-browsers">Web Browsers</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> -
+an open-source (Triple GPL/LGPL/MPL licence) and cross-platform web-browser,
+with many extensions and add-ons.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.chromium.org/">Google Chromium</a> (open source
+codebase) and
+<a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a>
+(not open source) - a browser from Google. <b>Note:</b> by default, it
+sends a lot of data back to Google.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.seamonkey-project.org/">SeaMonkey</a> - an all-in-one
+Internet Application Suite based on the Mozilla codebase.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Opera_%28web_browser%29">Opera</a> -
+a proprietary but mostly cross-platform browser and Internet suite
+by Opera Software.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Internet_Explorer">Internet
+Explorer</a> (a.k.a Microsoft Internet Explorer, MSIE, or IE) - a
+series of Windows-specific web-browsers by Microsoft. Incomplete
+and lagging support for web-standards, and recent versions only run
+on more and more recent versions of Windows. Received a lot of criticism
+- see my <a href="http://www.shlomifish.org/no-ie/">“Stop Using
+Internet Explorer!”</a> page.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Safari_%28web_browser%29">Safari</a> -
+a proprietary web browser from Apple, that is the default web-browser
+on Mac OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://uzbl.org/">uzbl</a> - a browser that follows
+the UNIX philosophy (“Write programs to do one thing and do it well”/etc.).
+</p>
+</li>
+
+<li>
+<p>
+<b>KDE’s Konqueror</b> can also be used as a web browser, however note that
+its engine (KHTML) has been under-maintained, and now fails to display many
+web pages correctly. A more usable fork of it is WebKit, which is used in
+Google Chromium, Safari and in other browsers.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_web_browsers">Wikipedia’s
+Comparison of Web Browsers</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="rss-aggregators">RSS Feed Aggregators</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://liferea.sourceforge.net/">Liferea</a> -
+an open-source news aggregator for Linux and UNIX.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://userbase.kde.org/Akregator">Akregator</a> - an
+open-source aggregator for KDE.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://addons.mozilla.org/en-us/firefox/addon/sage/">Sage</a> -
+“a lightweight RSS and Atom feed aggregator extension for Mozilla Firefox”.
+Open Source (MPL).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.rssowl.org/">RSSOwl</a> - an open-source and
+cross-platform feed reader written in Java.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> -
+an open-source and cross-platform E-mail application that also handles calendar
+and RSS feeds.
+</p>
+</li>
+</ul>
+
+<h2 id="micro-blogging">Microblogging Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://hotot.org/">Hotot</a> - an open-source, cross-platform
+Microblogging client written in Python.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://gwibber.com/">Gwibber</a> - an open-source microblogging client
+for Linux based on the Gtk+ toolkit.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://choqok.gnufolks.org/">Choqok</a> - an open-source microblogging
+client for the K Desktop environment.
+</p>
+</li>
+
+</ul>
+
+<h2 id="email-clients">Email Clients (Mail User Agents / MUAs)</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.mozilla.org/en-US/thunderbird/">Mozilla
+Thunderbird</a> - an open source and cross-platform E-mail application.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.claws-mail.org/">Claws-Mail</a> - an open source
+and cross-platform E-mail client (and news reader) based on Gtk+. (GPLed)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.kde.org/applications/internet/kmail/">KMail</a> - the
+KDE E-mail client. Open source (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://projects.gnome.org/evolution/">GNOME Evolution</a> -
+“integrated mail, address-book and calendering functionality to users of
+the GNOME desktop”. Open Source (GPLed).
+</p>
+</li>
+
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Microsoft_Outlook">Microsoft
+Outlook</a> - a proprietary personal information manager from Microsoft
+available for Windows and Macintosh.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Alpine_%28email_client%29">Alpine</a> -
+an open source terminal-based E-mail client. (Under the Apache licence).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.mutt.org/">Mutt</a> - an open-source terminal-based
+E-mail client. (GPLed)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.zimbra.com/">Zimbra</a> - open source email calendar
+and collaboration solution with a web-based interface.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.seamonkey-project.org/">SeaMonkey</a> - offers an E-mail
+client as well as a browser.
+</p>
+</li>
+
+</ul>
+
+<h2 id="p2p-clients">Peer-to-Peer File Sharing Clients</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://mldonkey.sourceforge.net/">MLDonkey</a> - a cross-platform
+and open-source multi-protocol Peer-to-Peer client.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.emule-project.net/">eMule</a> - an open-source P2P
+file sharing application for Microsoft Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.bittornado.com/">BitTornado</a> - an enhanced
+BitTorrent client.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://ktorrent.org/">KTorrent</a> - a GUI BitTorrent client
+for KDE.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/%CE%9CTorrent">µTorrent</a> -
+a freeware, ad-supported and proprietary BitTorrent client available for
+Microsoft Windows, Mac OS X and Linux.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.transmissionbt.com/">Transmission</a> - an
+open source BitTorrent client with native Mac OS X, Gtk+ and Qt
+GUI clients, and that can be controlled by web and terminal clients.
+</p>
+</li>
+</ul>
+
+<h2 id="download-managers">Download Managers</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://dfast.sourceforge.net/">wxDownload Fast</a> - an open source
+and cross-platform GUI download manager.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://sourceforge.net/projects/prozilla/">Prozilla</a> - console-based
+download accelerator. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.kde.org/applications/internet/kget/">KGet</a> - download
+manager for the KDE desktop environment. Open source.
+</p>
+</li>
+
+</ul>
+
+<h2 id="nntp-readers">NNTP (Net News / Usenet) Readers</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Pan_%28newsreader%29">Pan</a> - an
+open-source and cross-platform GUI newsreader. (GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<b>Claws-Mail</b>
+</p>
+</li>
+
+
+<li>
+<p>
+<b>Mozilla Thunderbird</b>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.tin.org/">TIN</a> - an open-source (BSD-licensed)
+console-based news reader.
+</p>
+</li>
+
+</ul>
+
+<h2 id="misc">Miscellaneous</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Rsync">rsync</a> - a
+software application and protocol for incremental synchronisation of
+files and directories.
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<h3 id="fun-links">Fun Links</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.perlmonks.org/?node_id=415203">A Fully
+functional P2P client in 625 characters of Perl</a>, based
+on a
+<a href="http://developers.slashdot.org/story/04/12/15/1953227/p2p-in-15-lines-of-code">a
+15 line P2P program in Python</a>.
+</p>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2012" />
+

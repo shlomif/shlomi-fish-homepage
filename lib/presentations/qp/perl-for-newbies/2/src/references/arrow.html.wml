@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<p>
+An arrow (<tt>-&gt;</tt>) followed by a square or curly brackets can be used
+to directly access the elements of an array or a hash referenced by a certain
+hash. For instance: <tt>$array_ref-&gt;[5]</tt> will retrieve the 5th element
+of the array pointed to by <tt>$array_ref</tt>.
+</p>
+
+<p>
+As an example let's print a tree of the contents of the part of the lecture
+that was presented in the previous slide:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/references/print_contents.pl" />
+</quadpres_code_block>
+
+<p>
+Note that the arrows following the first arrow are optional as perl sees
+that the programmer wishes to access the subseqeunt sub-items. However, the
+first one is mandatory because the expression <tt>$array_ref{'elem'}</tt> looks
+for the hash <tt>%array_ref</tt>.
+</p>
+

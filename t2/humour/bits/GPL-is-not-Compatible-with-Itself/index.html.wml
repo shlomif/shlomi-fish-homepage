@@ -1,0 +1,70 @@
+#include '../template.wml'
+
+<latemp_subject "“The GPL is Not Compatible with Itself”" />
+
+<p>
+A recent press conference of the <a href="http://www.fsf.org/">Free Software
+Foundation</a> confirmed the rumours that the
+<a
+href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> was
+found to be incompatible with itself. This newly discovered fact may
+cause a lot of disorder in the free software world, in which most
+programs and libraries are licensed under this license.
+</p>
+
+<p>
+Richard Stallman, chairman of the FSF, called upon developers to
+immediately exempt GPL-licensed software from the GPL, as far as linking
+them with GPL programs is concerned. “We have already made sure all GNU
+software and every other software that is licensed to the Free Software
+Foundation would be ad-hoc compatible with itself. However we need other
+developers to do the same for their software”, Stallman said.
+</p>
+
+<p>
+Eben Moglen, the FSF’s attorney outlined the subsequent steps that
+his organization will take to overcome this crisis. The first step would be
+releasing a Modified General Public License (or MGPL for short) that will
+be compatible with the GPL and with itself as well as with all other
+licenses that the GPL is already compatible with. It will be labelled the
+GPL version 2.1, thus allowing developers to convert their software to it.
+He noted that care would be taken to make sure the upcoming GPL version 3.0
+will be compatible with itself, as well as the MGPL.
+</p>
+
+<p>
+For the time being, though, there is an explosion of commentary, confusion
+and otherwise bad temper about the newly formed situation. Eric S. Raymond,
+the famous Open Source Guru notes: “This is one of the greatest
+blows to the Open Source world, I have yet encountered. I have already
+exempted all of my own software from the GPL in this regard, but there is a
+lot of other GPLed packages out there, and many of its authors are not very
+communicative.”
+</p>
+
+<p>
+Bill Gates, Microsoft’s co-founder, on the other hand, seems to find the
+situation very amusing: “I said times and again, that viral licenses
+such as  the GPL are a bad idea, and many open-source advocates disagreed.
+Now they  see that even making sure one’s license is compatible with
+itself, is hard  to do when you open that can of worms.”
+</p>
+
+<p>
+The integrity of many software projects whose license is the GPL and yet
+contain works licensed by several developers is in jeopardy. The Linux kernel
+is a prominent example of such a case. In a post to its  mailing list, Linus
+Torvalds commented that, in their case, it was  not an issue.  “My
+interpretation of the GPL is already quite unusual,  so I’ll simply rule
+that I also interpret the GPL as compatible with itself.”
+</p>
+
+<h2 id="about">About</h2>
+
+<p>
+This bit was originally published on 1 April, 2002, on the iglu.org.il site.
+</p>
+
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2002" />

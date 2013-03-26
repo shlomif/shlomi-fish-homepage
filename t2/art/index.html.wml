@@ -1,0 +1,88 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include "common_art.wml"
+
+<latemp_subject "Shlomi Fish’s Art" />
+<latemp_meta_desc "Various artwork by Shlomi Fish: computer graphics, some photographs, and some music" />
+
+<p>
+I dedicate this section to the various pieces of computer graphics I designed
+, photographs I took and published here, and computerised music which I
+created. I will explain how I created the graphic art, so you can
+shamelessly duplicate my efforts and create similar art.
+</p>
+
+<toc_div />
+
+<common_art__graphics_design />
+
+<h2 id="slogans"><a href="slogans/">Slogans</a></h2>
+
+<p>
+Some slogans I came up with (<a href="$(ROOT)/humour.html">see my collection
+of aphorisms</a>) - converted to designs.
+</p>
+
+<h2 id="photography">Photography</h2>
+
+<p>
+I’m not much of a photographer, but I still enjoy taking photographs using
+my digital camera, and putting them online under a permissive licence to
+enrich the commons. Most of the photos I took are now
+<a href="http://flickr.com/photos/shlomif/">on my <b>Flickr account</b></a>.
+</p>
+
+<ul>
+<li>
+<a href="photography/2005-11-27-cats/">Photographs of Cats from 27
+November, 2005</a>
+</li>
+</ul>
+
+<h2 id="music">Music</h2>
+
+<ul>
+<li>
+<a href="http://modarchive.org/index.php?request=view_by_moduleid&amp;query=62919">“Yonathan
+Haqatan” - .mod version</a> - this is a Dance arrangement of a popular Israeli
+children’s song titled “Yonathan Haqatan” (= “Little Jonathan”) that my friend
+and I prepared.<br />
+<ul>
+<li>
+<a href="music/mods/yonqatan.wav.mp3">MP3 Version of the Song</a> (for
+MOD-challenged people)
+</li>
+<li>
+<a href="music/mods/yonqatan.mod.zip">Local Mirror of the MOD file</a> (inside
+a .zip file).
+</li>
+</ul>
+</li>
+</ul>
+
+<h2 id="by_others"><a href="by-others/">By Others</a></h2>
+
+<p>
+Mirrors or restorations of artworks by other people.
+</p>
+
+<h2 id="recommendations">Recommendations</h2>
+
+<ul>
+<li><a href="recommendations/music/">Music (Albums and Collections)
+Recommendations</a> - a list of albums that I enjoy listening to and can
+recommend.
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

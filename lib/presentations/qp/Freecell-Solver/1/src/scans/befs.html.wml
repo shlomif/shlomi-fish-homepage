@@ -1,0 +1,30 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Best-First Search is a type of scan that:
+<ol>
+<li>
+Gives priority to each state based on some weight function.
+</li>
+
+<li>
+Determines which state to go to next, according to their highest
+priority.
+</li>
+</ol>
+</li>
+
+<li>
+I implemented Best-First Search whose weight function was a linear
+combination of several weighting functions I thought about.
+</li>
+
+<li>
+It turned out that for most boards, I could find some relative
+weights that could solve it very quickly, but no configuration
+was good for any board.
+</li>
+
+</points>

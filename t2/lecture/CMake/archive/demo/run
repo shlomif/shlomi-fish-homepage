@@ -1,0 +1,11 @@
+#!/bin/sh -x
+
+rm -rf `cat tmp.files`
+
+cmake .
+make clean 
+make
+
+./demo
+
+# VERBOSE=1  \make

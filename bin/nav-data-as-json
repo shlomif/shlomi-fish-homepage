@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use lib './lib';
+
+use Getopt::Long qw(GetOptions);
+
+use IO::All;
+
+use Shlomif::Homepage::NavData::JSON;
+
+my $output_fn;
+
+GetOptions(
+    'output|o=s' => \$output_fn,
+)
+or die "Wrong options - $!";
+
+io->file($output_fn)->println(
+    Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json()
+);

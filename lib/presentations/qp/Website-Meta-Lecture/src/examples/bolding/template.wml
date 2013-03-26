@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>{#SUBJECT_LOC#}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
+</head>
+<body>
+
+<table class="layout">
+<tr>
+<td class="navbar">
+<ifneq "$(FILENAME)" "index.html"
+    "<a href="$(ROOT)/">Main</a>"
+    "<b>Main</b>"
+    />
+<br />
+<ifneq "$(FILENAME)" "download.html"
+    "<a href="$(ROOT)/download.html">Download</a>"
+    "<b>Download</b>"
+    />
+<br />
+<ifneq "$(FILENAME)" "links.html"
+    "<a href="$(ROOT)/links.html">Links</a>"
+    "<b>Links</b>"
+    />
+<br />
+
+<br />
+
+<a href="mailto:webmaster@mysite.org">Webmaster</a><br />
+</td>
+<td class="main">
+<h1>{#SUBJECT_LOC#}</h1>
+{#BODY#}
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<define-tag subject>
+{#SUBJECT_LOC#:%0:##}
+</define-tag>
+
+#   per default we are in body
+{#BODY#:
+

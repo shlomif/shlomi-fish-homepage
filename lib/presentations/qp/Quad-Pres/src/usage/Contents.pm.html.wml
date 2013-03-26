@@ -1,0 +1,127 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+The file <tt>Contents.pm</tt> in the top directory contains the layout
+of the presentation into sections and sub-sections.
+</li>
+<li>
+It is a Perl Module which contains a data-structure with a specific syntax.
+</li>
+<li>
+Every hash reference is a node and contains two fields: <tt>url</tt> which
+is the URL relative to the upper node, and <tt>title</tt> which is the title
+of the node.
+</li>
+<li>
+It may optionally contain a <tt>subs</tt> field that has a reference to an
+array of sub-nodes as a value. If it does it will be treated as a directory; else as a normal HTML
+file.
+</li>
+<li>
+The <tt>images</tt> field may be specified to refer to an array of files to be
+copied to the destination directory as is, without being processed.
+</li>
+<li>
+An example is worth a thousand words! Here is the <tt>Contents.pm</tt> file
+of this very lecture.
+</li>
+</ul>
+
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<font color="#a52a2a"><b>package</b></font><font color="#2e8b57"><b> Contents;</b></font>
+
+<font color="#a52a2a"><b>use strict</b></font>;
+
+<font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$contents</font> =
+{
+    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">QuaD-Pres - A Perl-based Tool for Presentation</font><font color="#ff00ff">&quot;</font>,
+    <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+    [
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">intro.html</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Introduction</font><font color="#ff00ff">&quot;</font>,
+        },
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">history.html</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The History of QuaD-Pres</font><font color="#ff00ff">&quot;</font>,
+        },
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">features.html</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Quad-Pres Features</font><font color="#ff00ff">&quot;</font>,
+        },
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">usage</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Usage</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            [
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">setting-up.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Setting Up</font><font color="#ff00ff">&quot;</font>,
+                },
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Contents.pm.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The Contents.pm File</font><font color="#ff00ff">&quot;</font>,
+                },
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">page.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">An Individual Page</font><font color="#ff00ff">&quot;</font>,
+                },
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">images.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Including Images</font><font color="#ff00ff">&quot;</font>,
+                },
+            ],
+            <font color="#ff00ff">'</font><font color="#ff00ff">images</font><font color="#ff00ff">'</font> =&gt; [ <font color="#ff00ff">'</font><font color="#ff00ff">logo-wml.png</font><font color="#ff00ff">'</font> ],
+        },
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">no_wml</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Using QuaD-Pres without Website Meta Language</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            [
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">page.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">An Individual Page</font><font color="#ff00ff">&quot;</font>,
+                },
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">render-modes.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The Render Modes</font><font color="#ff00ff">&quot;</font>,
+                },
+            ],
+        },
+        {
+            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">finale</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Finale</font><font color="#ff00ff">&quot;</font>,
+            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            [
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">samples.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Sample Presentations</font><font color="#ff00ff">&quot;</font>,
+                },
+                {
+                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">links.html</font><font color="#ff00ff">&quot;</font>,
+                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Links</font><font color="#ff00ff">&quot;</font>,
+                },
+            ],
+        }
+    ],
+    <font color="#ff00ff">'</font><font color="#ff00ff">images</font><font color="#ff00ff">'</font> =&gt;
+    [
+        <font color="#ff00ff">'</font><font color="#ff00ff">style.css</font><font color="#ff00ff">'</font>,
+    ],
+};
+
+<font color="#a52a2a"><b>sub</b></font><font color="#008b8b"> </font><font color="#008b8b">get_contents</font>
+{
+    <font color="#a52a2a"><b>return</b></font> <font color="#008b8b">$contents</font>;
+}
+</pre>
+</td>
+</tr>
+</table>
+

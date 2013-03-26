@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+דף "Man" הוא מדריך המכסה פקודה מסוימת בלינוקס.
+</li>
+<li>
+כדי להציג רשימה של דפי "man", פתח דפדפן ב-KDE והקלד
+<a href="man:/"><tt dir="ltr">man:/</tt></a>
+בתיבת המיקום.
+</li>
+<li>
+עבור פקודות לינוקס, תתעניין ב-"Section 1".
+</li>
+<li>
+כדי לגשת לדף "man" של פקודה מסוימת הקלד
+<span dir="ltr">"man:/[Command Name]"</span>
+בתיבת המיקום.
+</li>
+<li>
+כדי לגשת לדף "man" משורת הפקודה הקלד
+<tt dir="ltr">man [command name]</tt>.
+</li>
+</points>

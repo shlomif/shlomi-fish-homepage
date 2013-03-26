@@ -1,0 +1,35 @@
+#include 'template.wml'
+
+
+<ol class="point">
+<li>
+Can work with <a href="http://thewml.org/">Website Meta Language</a> or without
+it.
+</li>
+<li>
+Organises the lecture into a hierarchy of sections and subsections.
+</li>
+<li>
+Generates tables of contents, and navigation links.
+</li>
+<li>
+Links to a common <a href="http://www.w3.org/Style/CSS/">CSS</a> StyleSheet.
+</li>
+<li>
+A common HTML header and footer.
+</li>
+<li>
+Non-WML input is a perfectly valid HTML.
+</li>
+<li>
+Non-WML slides can be rendered onto a web-server directory,
+a hard-disk directory or viewed by a dedicated CGI script. WML supports
+only the first option.
+</li>
+<li>
+Written in pure Perl and so is very portable.
+</li>
+<li>
+The generated code is compliant to XHTML 1.0 Strict.
+</li>
+</ol>

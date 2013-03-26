@@ -1,0 +1,47 @@
+#include '../template.wml'
+<latemp_subject "libtap Maintenance" />
+
+<p>
+libtap is a library to implement <a href="http://testanything.org/">the
+Test Anything Protocol</a> for C originally created by Nik Clayton. This is a
+maintenance branch by me (= Shlomi Fish).
+</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+<li>
+<a href="http://web-cpan.shlomifish.org/downloads/tap-1.03.tar.gz">Download
+tap-1.03</a>
+</li>
+</ul>
+
+<h2 id="vcs">Version Control Repository</h2>
+
+<ul>
+
+<li>
+<a href="http://bitbucket.org/shlomif/libtap/overview">The libtap
+Bitbucket.org repository</a>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+The program is licensed under
+<a href="http://en.wikipedia.org/wiki/BSD_licenses">the modified BSD
+licence</a>, as copyright by Nik Clayton, 2004.
+</p>
+
+<h2 id="news">News</h2>
+
+<h3 id="news_2010_08_16">16-August-2010</h3>
+
+<p>
+libtap-1.03 was released. This release contains a NEWS file as well as some
+fixes from the CCAN (= Comprehensive C Archive Network) version of libtap.
+However, some of the changes in CCAN made the libtap API incompatible with
+that of the original libtap-1.01 so they were rejected.
+</p>

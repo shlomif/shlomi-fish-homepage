@@ -1,0 +1,20 @@
+#include 'template.wml'
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/frames/template.wml" />
+</quadpres_code_block>
+
+<h2>Explanation</h2>
+
+<ul>
+<li>
+<tt>&#091;SLICE:Text of Slice:&#093;</tt> denotes a text that appears only if
+the slice <tt>SLICE</tt> is defined.
+</li>
+<li>
+It is possible to do such stuff on slices' union, intersection, etc. Consult
+the man page of <tt>wml_p9_slice</tt> for more information.
+</li>
+</ul>
+
+

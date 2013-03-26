@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+<p>
+The rule of the thumb is that for general scoping, <tt>local</tt> should not
+be used instead of <tt>my</tt>, which is safer and better. You may still
+encounter some code using local in the wild, but assuming you need to maintain
+it, this code should be revamped to use <tt>my</tt> instead.
+</p>
+
+<p>
+For more information refer to:
+</p>
+
+<ul>
+
+<li>
+<a href="http://perl.plover.com/FAQs/Namespaces.html">Mark Jason Dominus'
+"Coping With Scoping"</a> - a general and comprehensive discussion.
+</li>
+
+<li>
+<a href="http://perl.plover.com/local.html">"Seven Useful Uses of
+<tt>local</tt>"</a> - also by Mark Jason Dominus.
+</li>
+
+<li>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg33714.html">A
+Linux-IL post explaining the difference between
+<tt>my</tt> and <tt>local</tt></a> - by Shlomi Fish.
+</li>
+
+</ul>
+

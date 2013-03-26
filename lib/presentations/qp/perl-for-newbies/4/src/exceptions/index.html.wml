@@ -1,0 +1,15 @@
+#include 'template.wml'
+
+<p>
+Exceptions are a mechanism to raise an error in a program which will propagate
+to outside blocks, until it is caught by an explicit catching block, or
+it terminates the program. It is a convenient way to manage errors.
+</p>
+
+<p>
+In Perl, there is a statement that throws an exception, and one that catches
+it. The exception may escape out of function calls as well.
+</p>
+
+<qpcontents />
+

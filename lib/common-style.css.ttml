@@ -1,0 +1,562 @@
+body
+{
+    font-family: Arial, Sans-Serif;
+}
+:link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
+{
+    background-color : #90EE90; /* LightGreen */
+}
+[% SET navbar_width = "20%" %]
+
+.navbar
+{
+    float : left;
+    width : [% navbar_width %];
+    padding-left : 0.5em;
+    padding-right : 0.5em;
+    padding-top : 1.5em;
+    padding-bottom: 2em;
+}
+ul.navbarmain
+{
+    padding-left: 0;
+    margin-left : 0.3em;
+}
+ul.navbarnested
+{
+    padding-left : 0em;
+    margin-left : 1.5em;
+}
+
+[% INCLUDE "nav_links.ttml" %]
+[% PROCESS "newsitem.css.ttml" %]
+div.indent { margin-left : 3em }
+p.indent { margin-left : 3em  }
+div.rightalign { text-align : right }
+/*
+    Make sure the links inside the navigation bar are highlited
+    with a different colour. That's CSS 2.
+    http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
+*/
+
+.main img
+{
+     margin-right: 1em;
+}
+
+ul.noindent { margin-left : 0em }
+.center { text-align: center }
+#noie
+{
+    text-align: center;
+    margin-bottom:1.5em;
+}
+table.center { margin-left : auto ; margin-right : auto }
+table.cv { width : 100% ; border : none ; }
+table.cv td { vertical-align : top; }
+ul.nospace
+{
+    margin-top : 0em;
+    margin-bottom : 0em;
+}
+[% SET note_background_color = "#DFD" %]
+[% PROCESS "shlomif/note.ttml" %]
+
+/* Border-less */
+.bless
+{
+    border : none;
+}
+.footer {
+    clear : both;
+    margin-right : 30px;
+    padding-top: 0.5em;
+}
+/* Workaround to get the <hr /> element at the bottom to properly display
+   with Konqueror 3.3.x
+   */
+.footer hr
+{
+    width:100%;
+    clear:both;
+}
+.banner
+{
+    margin-bottom: 4pt;
+}
+.banner img, .banner div, .banner iframe
+{
+    vertical-align: middle;
+}
+.books
+{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-image: url("./images/grsites-beige049-modified.png");
+    border: 4pt double #E02030;
+}
+.books dt
+{
+    border: 1.5pt solid #FFA500;
+    padding-top: 0.2em;
+    padding-bottom: 0.25em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    background-color: #FFFFBB;
+}
+.books dd
+{
+    background-color: #E0FFE0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    border: 1pt solid black;
+}
+.books dd p
+{
+    margin-top: 3pt;
+    margin-bottom: 7pt;
+}
+.menu_floaty
+{
+    float: right;
+    width:25%;
+    min-width:275px;
+    margin-left: 7pt;
+    margin-right: 10pt;
+}
+[% SET with_sub_menu = 0 %]
+[% # disabling the sub_menu style.
+%]
+[% IF (with_sub_menu) %]
+.sub_menu ul
+{
+    list-style-type:disc;
+    list-style-position:inside;
+    margin-top:0;
+    margin-bottom:0;
+    padding-left:3pt;
+    font-family:sans-serif;
+    margin-left:0;
+}
+.sub_menu ul.nm_nested
+{
+   padding-left:10pt;
+}
+/*
+This is to make sure the visited links look clear in Konqueror or other
+browsers where they are magenta by default.
+*/
+.sub_menu :visited
+{
+    color: #800080; /* Purple */
+}
+[% END %]
+
+/* Start of the .toggle_sect_menu */
+#sect_menu_wrapper.novis
+{
+    display: none;
+}
+[% SET sect_m = ".toggle_sect_menu" %]
+.sub_menu [% sect_m %]
+{
+   float:right;
+}
+[% BLOCK set_radius %]
+
+[% FOREACH prop IN ["-moz-border-radius", "-webkit-border-radius", "border-radius"] %]
+[% prop _ ":" _ border_radius _ ";" %]
+[% END %]
+
+[% END %]
+
+[% sect_m _ ", " _ sect_m _ ":hover" %]
+{
+    padding: 0.2em 0.5em;
+    [% SET border_radius = "5px" %]
+    [% INCLUDE set_radius %]
+    border: 2pt solid black;
+}
+
+button[% sect_m %]
+{
+    color: black;
+    text-decoration: none;
+}
+[% sect_m %]
+{
+    border-color: black;
+    background-color: PaleGoldenRod;
+}
+[% sect_m _ ":hover" %]
+{
+    cursor: pointer;
+    border-color: red;
+    background-color: yellow;
+}
+/* End of toggle sect menu. */
+[% # commenting out the sub_menu style.
+%]
+.sub_menu h2
+{
+   font-size: medium;
+   padding-top:0;
+   margin-top:0;
+   margin-bottom:0;
+}
+.hide
+{
+    display:none;
+}
+/* Style for the google search box */
+.search
+{
+    padding: 3pt;
+    border: 1.5pt solid #207020;
+    margin-bottom: 0.5cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search h2
+{
+    font-size: large;
+    font-weight: bold;
+}
+.search img
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.hebrew
+{
+    direction:rtl;
+    text-align:right;
+    padding-right: 0.75cm;
+[%# Commenting out because we want Arial also for Hebrew.
+
+    font-family: "David CLM", David, Serif;
+%]
+}
+.english
+{
+    direction:ltr;
+    text-align:left;
+    font-family: Helvetica, sans-serif;
+}
+.hilight dt
+{
+    font-size: x-large;
+}
+p.hilight
+{
+    font-size: x-large;
+}
+table.thumbs
+{
+    border: none;
+}
+.thumbs td
+{
+    vertical-align: middle;
+}
+.thumbs img
+{
+    border:0;
+}
+[% PROCESS "shlomif/common_defs.ttml" %]
+.about_site
+{
+[% IF 0 %]
+    width: 35%;
+    float: right;
+[% END %]
+    margin-left: 1em;
+    margin-right: 10pt;
+    [% SET about_color = "#008000" %]
+    [% SET vert_style = about_color _ " solid 1pt" %]
+    [% SET horiz_style = about_color _  " solid 3pt" %]
+    border-left: [% vert_style %];
+    border-right: [% vert_style %];
+    border-bottom: [% horiz_style %];
+    /* padding: 5pt; */
+}
+.about_site h2
+{
+    margin-top: 0em;
+    background-color: [% about_color %];
+    color: white;
+    padding: 3pt;
+}
+.about_site p, .about_site h3
+{
+    margin-top:0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.revhistory th, .revhistory td
+{
+    vertical-align:top;
+    text-align: left;
+}
+.revhistory
+{
+    border-collapse: collapse;
+    overflow: hidden;
+}
+.revhistory td, .revhistory th
+{
+    border: 1.5pt black solid;
+    padding: 2pt;
+}
+.self_picture
+{
+    margin : 2em;
+}
+.self_picture.heb
+{
+    float : left;
+}
+.self_picture.eng
+{
+    float : right;
+}
+table.visible
+{
+    border: #286 medium solid;
+}
+.visible td, .visible th
+{
+    vertical-align: top;
+    padding: 0.2em 0.2em 1em 0.2em;
+    border: #689 thin solid;
+}
+.visible th
+{
+    font-weight: bold;
+}
+[% PROCESS "shlomif/products-syndication.ttml" %]
+.ads_side, .ads_top_wide
+{
+    overflow: hidden;
+}
+.ads_side
+{
+    width:120px;
+    height:600px;
+}
+.ads_top_wide
+{
+    width:500px;
+    height:70px;
+}
+.article h4, .article h5, .article h6
+{
+     margin-top:8pt;
+     margin-bottom: 0.7cm;
+}
+.article h2 { font-size: 150%; text-decoration:underline; }
+.article h3 { font-size: 140%; text-decoration:underline; }
+.article h4 { font-size: 130%; }
+.article h5 { font-size: 120%; }
+.article h6 { font-size: 110%; }
+
+.sub_menu .nav_links li
+{
+    display: inline;
+    margin:0;
+    padding:0;
+}
+
+.sub_menu .nav_links img
+{
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+
+.spons.ad
+{
+     border: solid 1.5pt [% sponsored_ad_border %];
+     margin-bottom: 1em;
+     padding: 0;
+     background-color: white;
+}
+
+.spons.ad h2
+{
+    font-size: medium;
+    padding-top: 1pt;
+    padding-bottom: 1pt;
+    display: block;
+    background-color: [% sponsored_ad_border %];
+    color: white !important;
+    margin-top: 0;
+}
+
+.spons.ad .in
+{
+    margin: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.vercon
+{
+    color: #8A2BE2; /* BlueViolet */
+}
+
+[% INCLUDE "fortunes.css.ttml" %]
+
+/* For Adbrite */
+.adHeadline {font: bold 10pt Arial; text-decoration: underline; color: #0000FF;}
+.adText {font: normal 10pt Arial; text-decoration: none; color: #000000;}
+/* End of Adbrite */
+
+.wishlist_notice
+{
+    border: thin solid #006400 /* darkgreen */;
+    padding: 0.3em;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+}
+
+.wishlist_notice p
+{
+    padding: 0;
+    margin: 0;
+}
+
+.news_buttons
+{
+    float: right;
+}
+.main li
+{
+    margin-top:    0.25em;
+    margin-bottom: 0.25em;
+}
+[% IF (with_sub_menu) %]
+.sub_menu li
+{
+    margin-bottom:0;
+    font-size: 90%;
+}
+[% END %]
+
+.designs th, .designs td
+{
+    vertical-align:top;
+    text-align: left;
+}
+.designs
+{
+    border-collapse: collapse;
+    overflow: hidden;
+}
+.designs td, .designs th
+{
+    border: 1.5pt black solid;
+    padding: 2pt;
+}
+
+.designs img
+{
+    background-color: white;
+    padding: 5pt;
+    border: none;
+    margin: 10pt;
+}
+
+.designs blockquote
+{
+    border: grey thin solid;
+    padding: 0.5em;
+    font-style: italic;
+    margin-left: 0.5em;
+}
+.designs blockquote p:first-child:before
+{
+    content: "‶";
+}
+.designs blockquote p:first-child
+{
+    padding-top:0;
+    margin-top:0;
+}
+.designs blockquote .last:after
+{
+    content: "″";
+}
+.designs blockquote .last:after
+{
+    margin-bottom:0;
+    padding-top:0;
+}
+.article p, .article li, .article pre
+{
+    margin-left: 40px;
+    margin-right: 40px;
+    line-height: 1.3;
+}
+#disqus_thread
+{
+    clear: right;
+}
+
+/* Right floaty */
+.rfloaty
+{
+    float: right;
+    margin: 1em;
+}
+
+[% INCLUDE "screenplay-xml/css/screenplay.css.ttml" %]
+
+/* Graphic Designs on /art/ */
+[% SET g = ".graphic_designs .design" %]
+
+[% g %]
+{
+    border: 2pt solid black;
+    padding: 1em;
+    margin-bottom: 1em;
+    [% SET border_radius = "5px" %]
+    [% INCLUDE set_radius %]
+}
+
+[% g %]:hover
+{
+    border-color: grey;
+}
+
+.thumb
+{
+    border: 3pt double black;
+    margin-left: 3em;
+    margin-right: 3em;
+    text-align: center;
+    padding: 0.3em;
+    padding-top: 1em;
+    overflow: hidden;
+}
+.main .hebrew li
+{
+    overflow: hidden;
+    list-style-position: inside;
+}
+.main .hebrew ul li
+{
+    list-style-type: disc;
+}
+[% INCLUDE "lang_switch.css.ttml" %]

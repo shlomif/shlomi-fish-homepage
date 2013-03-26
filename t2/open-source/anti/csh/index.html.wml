@@ -1,0 +1,191 @@
+#include '../template.wml'
+
+<latemp_subject "Stop Using (and Teaching) C-Shell and Tcsh" />
+
+<p>
+<b>Last Updated:</b> 01-October-2007
+</p>
+
+<p>
+You should stop using, learning and teaching
+<a href="http://en.wikipedia.org/wiki/C_shell">C-Shell</a> and its
+extended <a href="http://en.wikipedia.org/wiki/Tcsh">Tcsh</a>
+implementation, because of their horrible, inconsistent syntax, lack
+of usability and the fact that they induce bad habits. The reasons for that
+are:
+</p>
+
+<ol>
+
+<li>
+<p>
+Tom Christiansen (of Perl fame) wrote
+<a href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/">Csh
+Considered Harmful</a>, which gives many good arguments for csh’s
+inadequacy as a shell scripting language.
+<a href="http://www.grymoire.com/Unix/CshTop10.txt">Bruce Barnett’s
+“Top Ten Reasons not to use the C shell”</a> gives more convincing arguments,
+and illustrates how awful csh is.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.gnu.org/software/bash/">Bash</a> has real functions (as
+well as aliases) instead of just aliases, which are easy to break.
+</p>
+</li>
+
+<li>
+<p>
+Bash has proper quoting. Handling whitespace in csh is painful. I once
+witnessed a pair of <a href="http://www.technion.ac.il/">Technion</a>
+students get bogged down writing the solution for
+a homework exercise, because they wanted their C-Shell script to handle
+whitespaces properly. I later tried the same with bash, and it was trivial to
+do.
+</p>
+</li>
+
+<li>
+
+<ol>
+<li>
+Bash is the default scripting and login shell on Linux.
+</li>
+
+<li>
+<a href="http://www.kornshell.com/">ksh - the Korn Shell</a>, a Bourne-shell
+derivative, is the default login and scripting shell on
+non-GNU System V systems.
+</li>
+
+<li>
+On recent version of Mac OS X, bash is the default scripting and login shell.
+</li>
+
+<li>
+Only on the Open Source BSD variants, ash (a slightly enhanced Bourne
+shell implementation) is the scripting shell and tcsh is the default login
+shell.
+</li>
+
+<li>
+On cygwin the default shell is bash. <a href="http://www.zsh.org/">zsh</a> is
+available for either cygwin or for non-cygwinned win32.
+</li>
+
+</ol>
+
+<p>
+In all cases, C-Shell is not used for scripting at all, only perhaps for
+interactive use. And Bash/ksh/zsh is now often used for both.
+</p>
+
+</li>
+
+<li>
+<p>
+Entire Bash mini-programs can be written, tested and debugged in one line.
+This is impossible to do in csh which forces loops to be on separate lines.
+</p>
+</li>
+
+<li>
+<p>
+Sub-shells and capture-subshells (<tt>$(...)</tt>) actually work in Bourne
+Shell. And Bash actually <b>has</b> capture-subshells which are much safer
+than back-ticks (<tt>`...`</tt>).
+</p>
+</li>
+
+<li>
+<p>
+The students tend to conclude that C-shell is “The UNIX Shell”. Seeing how
+lame C-shell is they tend to believe that the UNIX shell sucks. Which is not
+the case for Bash and friends which are beautiful and a joy to work with.
+</p>
+</li>
+
+<li>
+<p>
+The wrong legacy reasons: many institutions once thought they had to make a
+choice between the Bourne shell, sh, which had a sane syntax and
+programmability but bad for interactive use, and tcsh which had bad
+programmability but with good interactive capabilities.
+</p>
+
+<p>
+For this generation the choice is clear: bash or zsh that combine both good
+programmability and good interactive use. There’s no reason to keep using
+tcsh forever.
+</p>
+
+</li>
+</ol>
+
+<h2 id="alternatives">Alternatives</h2>
+
+<p>
+Instead you should use, learn and teach one of the following shells:
+</p>
+
+<ol>
+
+<li>
+<a href="http://www.gnu.org/software/bash/">GNU Bash - the
+Bourne-Again-Shell</a> - an extended Bourne-shell-compatible shell, with
+good usability. Great for both interactive use and scripting. The default
+shell on many systems.
+</li>
+
+<li>
+<a href="http://www.zsh.org/">Zsh - the Z-shell</a> - the Emacs of shells:
+a shell that has everything, including the kitchen sink. Also Bourne-shell
+derived.
+</li>
+
+</ol>
+
+<p>
+There’s also <a href="http://www.kornshell.com/">The Korn Shell</a> which
+has lately been open-sourced, but I have never really tried it. It should
+be a very decent shell, though.
+</p>
+
+<p>
+For academic teaching I suggest teaching the common base of these shells,
+possibly with some bash extensions.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg44679.html">A
+Linux-IL thread with many comments</a>
+</li>
+
+<li>
+<a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A
+thread in the Haifa Linux Club mailing list with some comments</a>
+</li>
+
+</ul>
+
+<h2 id="license">Licence</h2>
+
+<cc_by_british_blurb year="2007" />
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

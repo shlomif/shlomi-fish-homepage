@@ -1,0 +1,32 @@
+#include '../template.wml'
+
+<latemp_subject "Lex and Yacc Mini-Demo" />
+
+<h2>Downloads</h2>
+
+<p>
+<a href="Perl-lex-and-yacc-calc-0.2.1.tar.gz">
+Example Source Code in Perl
+</a>
+</p>
+
+<p>
+<a href="summary.txt">
+Summary of the Lecture
+</a>
+</p>
+
+<h2>About</h2>
+
+<p>
+Lex is a tokeniser - a program that takes a character stream and outputs
+a stream of tokens. Yacc “parses” this stream of tokens and converts it into
+a meaningful grammar. Lex and Yacc are useful for the construction of
+interpreters, compilers and other processors of semi-natural languages.
+</p>
+
+<p>
+This presentation will introduce both of these tools using their
+<a href="http://www.perl.org/">Perl</a> implementations.
+</p>
+

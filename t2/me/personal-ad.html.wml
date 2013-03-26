@@ -1,0 +1,57 @@
+#include '../template.wml'
+
+<latemp_subject "Shlomi Fish’s Personal Ad" />
+
+<:{
+use DateTime;
+
+my $birth = DateTime->new(year => 1977, month => 5, day => 5);
+
+my $now = DateTime->now();
+
+our $age = $now - $birth;
+}:>
+
+<div style="text-align: right; direction: rtl;">
+<p>
+מפתח תוכנה מנוסה, בוגר טכניון בהנדסת חשמל, מחפש בחורה
+מהמרכז - אינטליגנטית, נאה, כיפית, נחמדה ולא מעשנת שאוהבת חרות,
+הומור, ולעבוד מתוך הנאה.
+</p>
+<p>
+אני בן <:{ print $age->years(); }:>, שיער שחור ומתולתל, גר בתל-אביב. אני עובד על פרוייקטי תוכנה ותיעוד
+ותורם לקהילת התוכנה והאינטרנט העולמית והישראלית. מלבד זאת, אני אדם ישר,
+אידיאליסט, בעל חוש הומור טוב, אכפתי, גאה (אך משתדל לא להיות גאוותן) ויצרני
+מאוד.
+</p>
+<p>
+יש לי
+<a href="http://www.shlomifish.org/">דף בית</a>
+ עם הרבה דברים שיצרתי וקישורים, וגם כתבתי מספר
+<a href="http://www.shlomifish.org/humour/">סיפורים ואמרות שפר מצחיקים</a>.
+ניתן
+<a href="http://www.shlomifish.org/me/contact-me/">ליצור
+איתי קשר בדרכים
+רבות</a>.
+</p>
+</div>
+
+<p>
+An experienced software developer, who is a Technion Graduate in Electrical Engineering, is looking for a girl from the centre - intelligent, attractive, fun, nice, and non-smoking that likes liberty, humour and working on things for
+pleasure.
+</p>
+<p>
+I’m <:{ print $age->years(); }:>, black curly hair, and live in Tel Aviv. At the moment, I’m working on
+Software and Documentation Projects and contributes to the Israeli and
+International software and Internet community. Aside from that, I’m honest,
+idealistic, with a good sense of humour, proud (but tries not to be boastful)
+and very productive.
+</p>
+<p>
+I have <a href="http://www.shlomifish.org/">a homepage</a> with lots of
+stuff I created, and <a href="http://www.shlomifish.org/humour/">wrote
+several funny stories and aphorisms</a>. One
+<a href="http://www.shlomifish.org/me/contact-me/">can reach me in
+many ways</a>.
+</p>
+

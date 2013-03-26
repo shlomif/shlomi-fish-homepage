@@ -1,0 +1,188 @@
+<define-tag url_body_link>
+<preserve href />
+<set-var <attributes-extract href %attributes> />
+<a <attributes-quote <attributes-remove "/" %attributes> > ><get-var href /></a>
+<restore href />
+</define-tag>
+
+<define-tag rellink whitespace="delete">
+<preserve url />
+<preserve host />
+<set-var %attributes />
+<set-var host=<if "<get-var host />" "<get-var host />" "t2" /> />
+<if <match "<get-var url />" "^http://" action="report" />
+    "<get-var url />"
+    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
+        "$(ROOT)/<get-var url />"
+        <ifeq "<get-var host />" "t2"
+            "http://www.shlomifish.org/<get-var url />"
+            "http://www.shlomifish.org/Vipe/<get-var url />"
+            />
+    />
+/>
+<restore host />
+<restore url /></define-tag>
+
+<define-tag vipe:url>http://vipe.technion.ac.il/~shlomif/%0</define-tag>
+
+<define-tag longblank>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</define-tag>
+
+<define-tag email:link>
+<a href="mailto:%0">%0</a>
+</define-tag>
+
+<define-tag mailto_link_to_self>
+<preserve email />
+<set-var %attributes />
+<a href="mailto:<get-var email />"><get-var email /></a>
+<restore email />
+</define-tag>
+
+<define-tag note endtag="required">
+<div class="note">
+%body
+</div>
+</define-tag>
+
+<define-tag under_construction_note>
+
+<note>
+
+<h2 id="under-construction-note">Note</h2>
+
+<p>
+This page is temporary, under construction and should not be publicised or
+publicly linked to. Please send comments to
+<a href="$(ROOT)/me/contact-me/">the author</a> in private.
+</p>
+
+</note>
+
+</define-tag>
+
+<define-tag cc_by_british_blurb>
+<preserve year />
+<set-var %attributes />
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img
+alt="Creative Commons License" class="bless"
+src="$(ROOT)/images/somerights20.png"
+/></a></p>
+
+<p>
+This document is Copyright by Shlomi Fish, <get-var year />, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
+Attribution License 3.0 Unported</a> (or at your option any
+later version of that licence).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+<restore year />
+
+</define-tag>
+
+<define-tag cc_by_sa_british_blurb>
+<preserve year />
+<set-var %attributes />
+
+<p>
+This document is Copyright by Shlomi Fish, <get-var year />, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
+Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+<restore year />
+
+</define-tag>
+
+<define-tag cc_by_sa_license_british>
+
+<preserve year head_tag />
+
+<set-var %attributes />
+<set-var head_tag="<latemp_default_val "<get-var head_tag />" "h3" />"
+    />
+
+<<get-var head_tag /> id="license">Copyright and Licence</<get-var head_tag />>
+
+<cc_by_sa_british_blurb year="<get-var year />" />
+
+<restore year head_tag />
+
+</define-tag>
+
+<define-tag cc_by_hebrew_blurb>
+<preserve year />
+<set-var %attributes />
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img
+alt="Creative Commons License" class="bless"
+src="$(ROOT)/images/somerights20.png"
+/></a></p>
+
+<p>
+זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת <get-var year/>,
+תחת תנאי
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he">הרשיון
+ייחוס 2.5 לא מותאם של קריאייטיב קומונס Creative Commons)</a>
+(או לשיקלוכם כל גרסה מאוחרת יותר של אותו הרשיון.)
+</p>
+
+<p>
+בשביל לרכוש זכויות נוספות, אנא צרו קשר עם
+<a href="http://www.shlomifish.org/me/contact-me/">שלומי פיש</a>
+ושימו לב
+<a href="http://www.shlomifish.org/meta/copyrights/">לדרישות המפורשות</a>
+שהוא דורש כדי לעמוד בתנאי הרשיון הזה.
+</p>
+
+<restore year />
+
+</define-tag>
+
+<define-tag x11_licence>
+
+<preserve name plural />
+<set-var %attributes />
+
+<h2 id="licence">Licence</h2>
+
+<p>
+<get-var name /> <if "<get-var plural />" "are" "is" /> free and open-source software (FOSS) distributed
+under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/X11
+License</a>, a permissive, public-domain-like, software licence.
+</p>
+
+<restore name plural />
+
+</define-tag>
+
+<define-tag main_email whitespace="delete">
+shlomif@shlomifish.org
+</define-tag>
+

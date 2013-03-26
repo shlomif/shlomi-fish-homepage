@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+<p>
+A perl program can naturally include more than one command. To do so, you
+need to place a semicolon at the end of each command or otherwise the
+interpreter will be confused.
+</p>
+
+<p>
+It is not enough to put each command on a separate line. In fact it's not
+even necessary. The following two programs are equivalent:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/output/oftf1.pl" />
+</quadpres_code_block>
+
+<p>
+and
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/output/oftf2.pl" />
+</quadpres_code_block>
+
+<p>
+However, for readability and easy debugging it is recommended that each
+statement will be on a separate line. And sometimes it's helpful to span
+one on more than one line.
+</p>
+
+
+

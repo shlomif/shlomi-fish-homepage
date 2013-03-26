@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<h2>Pseudo-Code</h2>
+
+<pre>
+Solve-State(state, prev_states, ret)
+    if (state == empty_state)
+        Push(ret, state)
+        return SOLVED
+    for each move possible on state
+        new_state &lt;- apply(state, move)
+        if (new_state in prev_states)
+            ; Do nothing
+        else
+            add new_state to prev_states
+            if (Solve-State(new_state, prev_states, ret) == SOLVED)
+                Push(ret, state)
+                return SOLVED
+    return UNSOLVED
+
+Freecell-Solver(init_state)
+    if (Solve-State(init_state, Null, ret) == SOLVED)
+        print "State was solved"
+        while (state &lt;- Pop(ret))
+            print state
+    else
+        print "I could not solve this board";
+
+</pre>
+
+<points>
+<li>
+It's actually a Depth-First Search (DFS) scan.
+</li>
+</points>
+

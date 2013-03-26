@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<p>
+Every layer contains a special layer called the "alpha layer" that
+specifies its opacity. This layer is treated as a black and white bitmap
+that can be manipulated with all the normal tools, and in which black is
+considered full transparency (zero opacity) and white is full opacity
+between this layer and the layer below it.
+</p>
+
+<p>
+The Resultant pixel of the two layers is calculated using the formula:
+</p>
+
+<p>
+Result = (1-alpha) * Pixel<sub>Below</sub> + alpha * Pixel<sub>Above</sub>
+</p>
+

@@ -1,0 +1,67 @@
+Autoconf/Automake/Libtool Lecture Summary:
+------------------------------------------
+
+* Introduction:
+
+    - The de-facto standard for portably building C and C++ applications.
+    - Supports all UNIX platforms as well as Microsoft Win32.
+    - As far as the installer is concerned depends on nothing but
+    a Bourne shell, a C compiler, and a standard "make" program.
+    - The developer requires other tools such as the Autoconf package
+    , Perl, the automake package and m4.
+
+* How it all fits together:
+    - Automake takes as input Makefile.am and produces Makefile.in
+    - The "autoconf" program takes as input the file configure.in (or in
+    Autoconf 2.5 the file configure.ac) and generates the ./configure script
+    out of it.
+    - ./configure, when ran by the user generates the normal "Makefile"
+    out of "Makefile.in" and optionally processes other files (such as
+    config.h.in -> config.h, an optional RPM Spec, Makefiles in other
+    directories, etc)
+
+* A simple project:
+    - Show the pthread_rwlock and explain it
+
+* Commonly used configure.in macros:
+    AC_DEFINE / AC_DEFINE_UNQUOTED
+    AC_CHECK_LIB
+    AC_ARG_ENABLE
+    AC_OUTPUT
+    AC_CHECK_FUNCS
+    AC_CHECK_HEADERS
+
+* configure.in : changequote(, ) and changequote([, ])
+
+* Commonly used configure.in variables:
+    CFLAGS
+
+* Format of Makefile.am
+    - bin_PROGRAMS
+    - bin_SCRIPTS
+    - prog_SOURCES
+    - prog_LDADD
+    - EXTRA_DIST
+    - man_MANS
+    - lib_LTLIBRARIES
+    - prog_la_LDFLAGS
+    - proginclude_HEADERS
+    - Vanilla targets
+
+* Format of config.h.in
+
+Issues:
+-------
+
+* Creating a sub-directory with a different configuration:
+    - SUBDIRS variable in automake
+    - (cd $mydir && ./configure --prefix="$prefix")
+
+* Creating a mylibrary-config program
+
+* Creating an RPM Spec
+
+
+
+
+

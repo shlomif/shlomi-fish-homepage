@@ -1,0 +1,35 @@
+#include 'template.wml'
+
+<points>
+<li>
+Basic search in emacs is done with <tt>C-s</tt>.
+</li>
+<li>
+Search and replace is done with <tt>M-%</tt>.
+</li>
+<li>
+Emacs does syntax highlighting. You can easily enable this by selecting
+it in the Options menu.
+</li>
+<li>
+Emacs will align your source code automatically. You can use the tab key
+to re-align a specific line. Always re-align from top to bottom.
+</li>
+<li>
+You can recompile your code while inside Emacs. Type <tt>M-x compile</tt>.
+A new buffer will open and it will display compilation results. You can
+go through them easily while having your cursor jump to where the errors
+are using <tt>C-x `</tt>. (backquote).
+</li>
+<li>
+To maximize the current buffer to cover all of the Emacs window use
+<tt>C-x 1</tt>, (<tt>C-x 2</tt> will split the buffer)
+</li>
+<li>
+We will look at a little example program that we will edit &amp; compile
+with Emacs: <a href="test.c">test.c</a>.
+</li>
+<li>
+A useful time saver: expand abbreviations with <tt>M-/</tt>.
+</li>
+</points>

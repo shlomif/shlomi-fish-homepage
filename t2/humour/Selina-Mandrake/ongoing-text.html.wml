@@ -1,0 +1,12 @@
+#include '../template.wml'
+#include "stories/stories-list.wml"
+<latemp_subject "Selina Mandrake - The Slayer - Ongoing Text" />
+
+<selina_mandrake_common_top_elems />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
+
+#include "screenplay-xml/rendered-html/selina-mandrake-the-slayer.html"
+

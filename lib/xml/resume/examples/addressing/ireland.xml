@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Sample Ireland address.  Uses 'standard' format. Correct formatting is:
+
+  William Clifton
+  1 O'Leary Place
+  Cobh, Co. Cork
+  Ireland
+
+$Id: ireland.xml,v 1.1 2001/12/15 06:02:05 stewarte Exp $
+-->
+
+<?xml-stylesheet href="html.xsl" type="text/xsl"?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.2.2//EN" "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>William</firstname>
+      <surname>Clifton</surname>
+    </name>
+    <address>
+      <street>1 O'Leary Place</street>
+      <city>Coby</city>
+      <county>Co. Cork</county>
+      <country>Ireland</country>
+    </address>
+  </header>
+</resume>

@@ -1,0 +1,20 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "'There is no IGLU Cabal' Fortunes " />
+
+<h2*>About</h2*>
+
+<p>
+The ultimate collection of reasons why there is no IGLU Cabal.
+</p>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/tinic.xhtml-for-input"
+</div>
+
+
+

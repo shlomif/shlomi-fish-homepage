@@ -1,0 +1,71 @@
+#include "wml_helpers.wml"
+
+
+<default-var "qp_lang" "he-IL" />
+<default-var "qp_charset" "utf-8" />
+<default-var "qp_body_dir" "rtl" />
+
+<:{
+use utf8;
+
+if (1)
+{
+$translate_control_text = sub {
+    my $title = shift;
+    my %translations =
+        (
+            "Next" => "הבא",
+            "Prev" => "הקודם",
+            "Up" => "למעלה",
+            "Contents" => "תוכן",
+        );
+   return $translations{$title};
+};
+}
+
+}:>
+
+<define-tag link_to_screenshot endtag="required">
+<preserve href title filename />
+<set-var %attributes />
+<:{
+my $url = "<get-var href />";
+my $title = "<get-var title />";
+my $filename = "<get-var filename />";
+$url =~ m{^(.*)/([^/]+)$};
+my ($base, $last_component) = ($1,$2);
+$filename ||= $last_component;
+if ($ENV{LOCAL_SHOTS})
+{
+    print <<"EOFUGAFBVEBNASFASVBDSF";
+<a href="$filename" title="$title">%body</a>
+EOFUGAFBVEBNASFASVBDSF
+    open O, ">>Quad-Pres-Screenshots-Urls.txt";
+    print O "wget -O $filename $url\n";
+    close O;
+}
+else
+{
+    print <<"EOFJHKDKFGKDFKGKDFGK"
+<a href="$url" title="$title">%body</a>
+EOFJHKDKFGKDFKGKDFGK
+}
+}:>
+<restore href title filename />
+</define-tag>
+
+#include "quadpres_main.wml"
+
+<qp:more_head_elems>
+<script src="<qp:contentsurl />slidy.js"
+   type="text/javascript"></script>
+</qp:more_head_elems>
+
+<script type="text/javascript">rtl_keys = true;</script>
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+

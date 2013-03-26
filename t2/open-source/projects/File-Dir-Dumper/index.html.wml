@@ -1,0 +1,44 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" />
+
+<p>
+This is a Perl CPAN distribution to dump the meta data (file sizes,
+permissions, filenames, etc.) of a directory structure to a stream. It uses
+a stream of <a href="http://www.json.org/">JSON</a>-dumped data structures,
+as its representation.
+</p>
+
+<h2 id="download">Download</h2>
+
+<p>
+<cpan_dist d="File-Dir-Dumper" />Download File-Dir-Dumper from the
+CPAN</cpan_dist>
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<bitbucket_cpan_dist_links
+    dist="File-Dir-Dumper"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-file-dir-dumper"
+    freecode_url="http://freecode.com/projects/file-dir-dumper/">
+</bitbucket_cpan_dist_links >
+
+<h2 id="similar-projects">Similar Projects</h2>
+
+<ul>
+
+<li>
+<a href="http://code.google.com/p/xml-dir-listing/">xml-dir-listing</a> -
+based on Java and XML.
+</li>
+
+<li>
+<a href="http://dir2xml.sourceforge.net/">dir2xml</a> - also based on
+Java and XML.
+</li>
+
+</ul>
+
+<x11_licence name="File-Dir-Dumper" />

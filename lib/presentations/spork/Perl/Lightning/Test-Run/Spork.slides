@@ -1,0 +1,162 @@
+----
+presentation_topic: Test::Run
+presentation_title: Test::Run - a New and Improved Test Harness
+presentation_place: Netanya, Israel
+presentation_date: FILL IN
+----
+== How it all Started
+
+* I attended a presentation about [TestOOB http://testoob.sourceforge.net/] and saw that it provided colours.
++* {image: http://testoob.sourceforge.net/images/screenshot02.png}
++* I decided that I wanted to colour the summary line in Perl.
+----
+== How Perl Testing Works
+
+* The Perl scripts output the results of the individual tests in [the TAP Format http://perldoc.perl.org/Test/Harness/TAP.html]:
++* Like:
+
+    1..N
+    ok 1 Description # Directive
+    # Diagnostic
+    ....
+    ok 47 Description
+    ok 48 Description
+    more tests....
++* The Test::Harness module runs the scripts and analyses their TAP instructions, and produces a report.
+----
+== Hacking Test::Harness
+
+* So we need to change Test::Harness.
++* Now where's the summary line?
++
+    sub _show_results {
+        my($tot, $failedtests) = @_;
+
+        my $pct;
+        my $bonusmsg = _bonusmsg($tot);
+
+        if (_all_ok($tot)) {
+            print "All tests successful$bonusmsg.\n"; # <--- here
+        }
+        elsif (!$tot->{tests}){
+            die "FAILED--no tests were run for some reason.\n";
+        }
+        elsif (!$tot->{max}) {
+            my $blurb = $tot->{tests}==1 ? "script" : "scripts";
+            die "FAILED--$tot->{tests} test $blurb could be run, ".
+                "alas--no output ever seen\n";
+        }
+        else {
+            $pct = sprintf("%.2f", $tot->{good} / $tot->{tests} * 100);
+            my $percent_ok = 100*$tot->{ok}/$tot->{max};
+            my $subpct = sprintf " %d/%d subtests failed, %.2f%% okay.",
+                                  $tot->{max} - $tot->{ok}, $tot->{max}, 
+                                  $percent_ok;
+
+            my($fmt_top, $fmt) = _create_fmts($failedtests);
+
+            # Now write to formats
+            for my $script (sort keys %$failedtests) {
+              $Curtest = $failedtests->{$script};
+              write;
+            }
+            if ($tot->{bad}) {
+                $bonusmsg =~ s/^,\s*//;
+                print "$bonusmsg.\n" if $bonusmsg;
+                die "Failed $tot->{bad}/$tot->{tests} test scripts, $pct% okay.".
+                    "$subpct\n";
+            }
+        }
+
+        printf("Files=%d, Tests=%d, %s\n",
+               $tot->{files}, $tot->{max}, timestr($tot->{bench}, 'nop'));
+    }
+
++=== Problems
+
++* A monolithic function with just one line to change.
++* There isn't an object instance for easy inheritance and over-riding.
++* A lot of similar issues in the rest of the code.
+----
+== Solution
+
+* Let's create a better test harness, based on Test::Harness, but more:
++00 Modular.
++00 Object-oriented.
++00 Extensible.
+----
+== Let's start... coding!
+
+* The code of Test-Harness was forked.
++* It was converted to have an object interface. 
++** All functions were converted to accept the |$self| object reference as a first argument.
++* Large functions were broken into smaller ones.
++* Hashes were converted into objects.
++* Arguments passed from function to function were converted into object variables.
++* Object variables became handled using Class::Accessor accessors.
++* Several new classes were created.
+----
+== Front-end and Back-end
+
+* Test::Run is the back-end that does all the testing.
++* Test::Run::CmdLine processes environment variables, and feeds them into Test::Run as constructor arguments.
++* Test::Harness accepts several environment variables and package variables as parameters.
++** They were all converted to object variables with accessors in Test::Run.
+----
+== Plugins
+
+* One can specify plug-ins to Test::Run::CmdLine from the environment variable.
++* They in turn can specify plug-ins to the Test::Run back-end.
+----
+== Back to Colouring...
+
+* Now we can write this plugin:
+
+    package Test::Run::Plugin::ColorSummary;
+
+    use warnings;
+    use strict;
+
+    use NEXT;
+    use Term::ANSIColor;
+
+    sub _report_success
+    {
+        my $self = shift;
+        print color("bold blue");
+        $self->NEXT::_report_success();
+        print color("reset");
+    }
+
+    sub _handle_runtests_error
+    {
+        my $self = shift;
+        my (%args) = @_;
+        my $error = $args{'error'};
+
+        print STDERR color("bold red");
+        print STDERR $error;
+        print STDERR color("reset");
+        # Workaround to make sure color("reset") is accepted and a red cursor
+        # is not displayed.
+        print STDERR "\n";
+    }
+
+    1;
+----
+== Back to Colouring (2)...
+
+* And get:
+
++* {image: http://www.shlomifish.org/Files/files/images/Computer/Screenshots/Test-Run-Plugin-ColorSummary.png}
+----
+== Where to find everything.
+
+* The most up to date versions of the modules are in the Subversion repository:
+
+* https://bitbucket.org/shlomif/perl-test-run
+
+* Also on CPAN - http://search.cpan.org/search?mode=dist&query=Test%3A%3ARun.
+----
+== Thank you!
+

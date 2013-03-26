@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<p>
+Perl supports inserting variables into string constants simply by
+placing their name along with the dollars inside them. Here's an example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/interpolate1.pl" />
+</quadpres_code_block>
+
+<p>
+Note that once perl encounters a <tt>$</tt>-sign, it will try to use as
+many characters as possible from the string as the variable name,
+even if a variable by that name does not exist. Therefore, if you write
+<tt>$xy</tt> inside a string, it will not take the value of <tt>$x</tt> and
+append the string "y" to it! To overcome this limitation, you can limit the
+variable name using curly braces:
+<tt>"Hello ${boy}and${girl}"</tt>.
+</p>
+
+<p>
+In any case, interpolation is especially useful for building regular
+expressions, since the string may contain control characters.
+</p>
+

@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<points>
+<li>
+ניתן להפעיל את <a href="http://www.x.org/">X-Windows</a> ממסוף
+כניסה על ידי הקשת <tt>startx</tt> בשורת הפקודה.
+</li>
+<li>
+זאת במידה שאין לך כניסה גרפית למערכת. אחרת X-Windows יעלה אוטומטית
+ותצטרך רק להכניס שם משתמש וסיסמה.
+</li>
+<li>
+<a href="http://www.kde.org/">KDE</a> הינה סביבת שולחן עבודה שבנויה
+מעל X-Windows, שמספקת למשתמש מראה ותחושה יותר מודרנים.
+</li>
+<li>
+קיימות סביבות עבודה אחרות כמו
+<a href="http://www.gnome.org/">GNOME</a>
+וכן מנהלי חלונות מינימליסטיים יותר. (כמו
+<a href="http://www.windowmaker.org/">Window Maker</a>,
+<a href="http://www.icewm.org/">IceWM</a>,
+<a href="http://fluxbox.sourceforge.net/">fluxbox</a>,
+ו-<a href="http://sawmill.sourceforge.net/">sawfish</a>)
+</li>
+<li>
+ניתן להריץ יישומים של KDE מעל GNOME ולהפך או מעל כל אחד ממנהלי החלונות
+האחרים.
+</li>
+</points>

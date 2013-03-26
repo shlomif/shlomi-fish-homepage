@@ -1,0 +1,12 @@
+#!/bin/sh
+
+rm -rf `cat tmp.files`
+
+( cd hello ; ./run ) 
+( cd lib ; ./run ) 
+( cd app ; ./run )
+( cd cross ; ./run ) 
+( cd basic ; ./run ) 
+( cd advanced ; ./run ) 
+
+#cmake .

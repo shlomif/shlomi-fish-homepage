@@ -1,0 +1,13 @@
+#include 'template.wml'
+
+<points>
+<li>
+A gradient map maps each pixel to an RGB triad found in the active gradient
+in proportion to its brightness level.
+</li>
+<li>
+It is in fact a V &rarr; RGB LUT in which the resultant colors are chosen arbitrarily
+according to the gradient.
+</li>
+</points>
+

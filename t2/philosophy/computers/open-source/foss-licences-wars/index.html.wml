@@ -1,0 +1,88 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+
+<latemp_subject "FOSS Licences Wars" />
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+This article gives an overview of the various options in picking up a licence
+for one’s Free and Open Source Software (FOSS) project, and tries to give
+some guidelines for choosing one.
+</p>
+
+<toc_div />
+
+<h3 id="itself">The Article Itself - 2nd Revision</h3>
+
+#include "docbook/4/rendered/foss-licences-wars.html"
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+I’d like to thank <a href="http://nadav.harel.org.il/">Nadav Har’El</a> ,
+Amit Aronovich, <a href="http://www.zak.co.il/">Omer Zak</a>, and
+<a href="http://dazjorz.com/">dazjorz</a> and probably some other people
+I’ve forgotten for reviewing early drafts of this essay and providing useful
+commentary.
+</p>
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<a href="foss-licences-wars.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+</li>
+<li>
+<a href="foss-licences-wars.xml">Original DocBook/XML</a>.
+</li>
+</ul>
+
+<h2 id="coverage">Coverage and Comments</h2>
+
+<ul>
+
+<li>
+<a href="http://www.advogato.org/article/1016.html">On Advogato</a>.
+</li>
+
+<li>
+<a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6473">On Whatsup.org.il</a> (in Hebrew)
+</li>
+
+<li>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg56270.html">On
+the Linux-IL mailing list</a>.
+</li>
+
+<li>
+<a href="http://hamakor.org.il/pipermail/discussions/2009-August/thread.html#608">On the
+Hamakor Discussions mailing list</a>
+</li>
+
+<li>
+<a href="http://community.livejournal.com/shlomif_tech/31708.html">On my
+technical blog (shlomif-tech)</a>
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/story/09/08/25/1356213/Getting-Through-the-FOSS-License-Minefield">On Slashdot - “Getting Through the FOSS
+License Minefield”</a> - thanks to
+<a href="http://dotancohen.com/">Dotan Cohen</a> for submitting it there.
+</li>
+
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

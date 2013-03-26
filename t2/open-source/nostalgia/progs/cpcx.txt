@@ -1,0 +1,201 @@
+Introduction
+
+I have long wondered how can I show PCX graphics files in my C programs.
+Recently, I managed to write this header and library files to achieve this
+task and I decided to distribute it so fellow programmers won't face the same
+problem.
+Included in the archive is a a document PCX.DOC, which explains the structure
+of the PCX format and how to program it. By reading this document, you can
+program your own routines to decrypt or encrypt PCX files. I have an
+important remark about the document: In the monochrome, CGA and EGA mode the
+first pixels inside the byte are given by the highest bytes, and the last by
+the lowest. Also, in EGA the file has four planes each contains one bit of
+the half-byte specifying the EGA color.
+This text files explains how to use the library. Please read it thoroughly.
+I hope you will make the most out of this library.
+
+									Shlomi Fish
+
+Contents:
+I. Pre-decrypting Initialization
+	1) The global variables EGA_RGB_CON & VGA_RGB_CON
+	2) The User-Defined Display macros
+II. The Decrypting Process
+	1) Preparing the file stream
+	2) The PCX_ReadHeader() function
+	3) The PCX_FILE structure contents
+	4) The PCX_GetImage() function
+III. Using the Assistant Functions
+
+							 I. Pre-decrypting Initialization
+
+1) The global variables EGA_RGB_CON & VGA_RGB_CON
+
+These global variables control how will the function PCX_ReadHeader() process
+the RGB palette info of the EGA and VGA files.
+You can use RGB_CON_TYPE to set those global variables:
+- Use G_EGA_Reg_CON for EGA_RGB_CON if you have an EGA-compatible graphics
+driver and you want to set the colors in the regular 2 bit per element
+(64 colors) mode.
+- Use G_Borland_CON for either variable if you want to use 4 bit values
+for each element. (It is sometimes used in the function setrgbpalette() in
+Borland C++).
+- Use G_BIOS_CON for either variable if you want to use 6 bit values (the BIOS
+256 VGA default) for every element. You will probably use it to show an EGA or
+VGA bitmap in a 256-color VGA driver.
+- Use G_TrueColor_CON for either if you want to use 8 bit values for
+every element. It will be probably used to display an EGA or VGA bitmap on a
+XGA or 24-bit driver.
+
+2) The user-defined display macros
+The macros G_PIXEL_2(x, y, col), G_PIXEL_4(x, y, col), G_PIXEL_16(x, y, col),
+G_PIXEL_256(x, y, col), G_PIXEL_24Bit(x,y,r,g,b) are used by the function
+PCX_GetImage() to put a pixel on the screen. (If you chose to display the
+bitmap on screen while reading the file.) The user has to define them using
+apropriate functions. (They were defined since graphical display functions
+differ considerably between compilers and you might use an add-on library to
+control your display.)
+Each macro has affects only one type of image : G_PIXEL_2 displays a pixel
+for monochrome bitmaps, G_PIXEL_4 is used for CGA bitmaps, G_PIXEL_16 for
+EGA pictures, G_PIXEL_256 for VGA 256-color ones and G_PIXEL_24Bit for 24-bit
+images.
+Parameters 'x' and 'y' specify the horizontal and vertical coordinates of the
+pixel respectively. Parameter 'col' specifies the color number, and parameters
+'r', 'g' and 'b' specify the red, green and blue values for 24-Bit images.
+
+								  II. The Decrypting Process
+
+1) Preparing the file stream
+
+The first thing you have to do is to open a file stream for the desired PCX
+file. Declare a FILE * pointer and open it using the fopen() function. You should
+open it as a read-only binary file.
+
+2) The PCX_ReadHeader() function
+
+After opening the file stream you have to use the function PCX_ReadHeader().
+Its declaration is:
+	struct PCX_FILE PCX_ReadHeader (FILE * f, unsigned char * palette)
+
+The parameter 'f' is the file stream you opened.
+The parameter 'pallete' is a pointer to the place in memory where the pallete
+information will be saved. The size and contents of the pallete varry
+according to the bitmap mode:
+- In CGA - The first byte will state the mode, and the second will state the
+  background color.
+- In EGA - For every color out of the 16 there will be three bytes with its
+  red, green and blue values (48 bytes total). The data will be arranged
+  according to the colors numerical order.
+- In VGA - Same as EGA except there will be values for all 256 colors (768
+  bytes total).
+( In both EGA and VGA modes the RGB values will be processed according to the
+global variables EGA_RGB_CON and VGA_RGB_CON. See I.1 for more information)
+
+The function returns a PCX_FILE structure. The structure will be used next
+in the decrypting process.
+
+3) The PCX_FILE structure contents
+
+This structure is declared as follows:
+struct PCX_FILE
+{
+	FILE * file_ptr;
+	int Type;
+	unsigned Xlen, Ylen, BytesPerLine;
+	unsigned char * palette;
+};
+
+'file_ptr' is a pointer to the file stream (which you opened previously).
+'Type' contains the type of the image :
+	0 - Monochrome.
+	1 - 4-colors CGA.
+	2 - 16-colors EGA.
+	3 - 256-colors VGA.
+	4 - 24-Bit Image.
+	100 - Unknown image type.
+	200 - An error occured in function ReadHeader().
+(You can use the enumeration Graphics_File_Type for reading information from
+'Type').
+
+'Xlen' and 'Ylen' are respectively the width and height of the image in
+pixels.
+'BytesPerLine' - Contains how many bytes are in one line of information.
+Note: This refers to the PCX file, not the information in memory. The item is
+mainly for internal use.
+'pallete' - Contains a pointer for the pallete information.
+
+4) The PCX_GetImage() function
+
+Before you call this function make sure that the palette was set using the
+palette information. The function has the following declaration:
+	int PCX_GetImage(struct PCX_FILE pcx, int xpos, int ypos, unsigned char * buf, int target)
+
+The various parameters:
+'pcx' - the PCX_FILE structure obtained using ReadHeader().
+'xpos', 'ypos' - The horizontal and vertical coordinated of the picture upper-
+left corner.
+'buf' - a buffer pointer for putting the decrypted image information or for
+temporary function use.
+'target' - Its value specifies whether the bitmap should be presented on
+screen, written to memory or Both. G_Screen for presenting the bitmap on
+screen only, G_Buffer for only writing the bitmap to memory, and G_Both for
+both.
+
+Return Value:
+	On Succes - 0;
+	On failure - 1;
+
+This function reads the bitmap information of the PCX file. It either decrypts
+the information into a memory buffer, or present it on screen in the specified
+location, or do both at once. Even if you specify that it won't store the
+image in memory, you should make at least pcx.BytesPerLine bytes available at
+the buffer 'buf'.
+When stored in memory every monochrome pixel will be given by one bit, every
+CGA pixel by two bits,  every EGA pixel by four bits, every VGA pixel by
+one byte and every 24-Bit pixel by 3 bytes. Every horizontal line will be
+rounded to the next byte. Here how to calculat the line lengthes of every
+mode:
+	Monochrome - Xlen/8 + (Xlen%8!=0)
+	CGA -        Xlen/4 + (Xlen%4!=0)
+	EGA -        Xlen/2 + Xlen%2
+	VGA -        Xlen
+	24 Bit -     Xlen*3
+
+Note that inside every byte in the black&white, CGA or EGA modes, the earliest
+(leftmost) pixels are given in the high bytes and the rightmost pixels at the
+low bytes. Here are sample procedures to get the (x,y) pixel from the bitmap
+stored in memory:
+	Monochrome - bread(buf[y*(Xlen/8 + (Xlen%8!=0)) + x/8], 7-x%8)
+	CGA -        qread(buf[y*(Xlen/4 + (Xlen%4!=0)) + x/4], 3-x%4)
+	EGA -        buf[y*(Xlen/2 + Xlen%2) + x/2]&(x?0xf:0xf0)
+	VGA -        buf[y*Xlen + x];
+	24 Bit -     (buf[(y*Xlen + x)*3], buf[(y*Xlen + x)*3+1], buf[(y*Xlen + x)*3+2]) (for every element seperately)
+
+See also 'Using the Assistant Functions' at the next section.
+
+						  III. Using the Assistant Functions
+
+There are four assistant functions included in the header and the are:
+
+void bwrite(unsigned char * c, unsigned place, unsigned value)
+unsigned int bread(unsigned char c, unsigned int place)
+
+void qwrite(unsigned char * c, unsigned place, unsigned value)
+unsigned int qread(unsigned char c, unsigned int place)
+
+They are used to input or output bits and byte-quarters (2 bit chunks).
+Here is a short explanation on every function.
+
+bwrite - Changes the bit number 'place' in byte '*c' to 'value'.
+bread - Returns the bit value of bit number 'place' in byte 'c'.
+qwrite - Changes the quarter number 'place' in byte '*c' to 'value'.
+qread - Returns the quarter value of quarter number 'place' in byte 'c'.
+
+Here is a diagram of a byte to help you understand:
+
+bits -     ษอออหอออหอออหอออหอออหอออหอออหอออป
+			  บ 0 บ 1 บ 2 บ 3 บ 4 บ 5 บ 6 บ 7 บ
+quarters - ฬอออสอออฮอออสอออฮอออสอออฮอออสอออน
+			  บ   0   บ   1   บ   2   บ   3   บ
+			  ศอออออออสอออออออสอออออออสอออออออผ
+

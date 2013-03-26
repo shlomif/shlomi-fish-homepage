@@ -1,0 +1,428 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+#include <utils.wml>
+
+<latemp_subject "Reflections on Online Communities" />
+
+<note>
+<h2 id="note">Note</h2>
+
+<p>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">On
+this discussion</a> Michael H. Pryor notes that I’m violating the
+<a href="http://www.joelonsoftware.com/linking.html">Joel on Software
+quoting policy</a>. However, I believe that:
+</p>
+
+<ol>
+<li>
+Both Joel and the Law Professor he is quoting are wrong on ethical grounds.
+See my essay <a href="$(ROOT)/philosophy/case-for-file-swapping/">“The Case
+for File Swapping”</a> for some things that are wrong with the current
+copyright law, and links to more.
+</li>
+
+<li>
+This article in part may be considered a critique of Joel’s article. As such,
+one can say that “fair use” law allows me to quote substantial parts of it.
+</li>
+
+<li>
+I’d rather build on an existing effort, than write my own incoherent article
+from scratch. Joel should take it as a compliment because “Copying is the
+sincerest form of flattery”.
+</li>
+</ol>
+
+<p>
+I realise that “A man’s will is his honour.”. However, sometimes people wish
+for very irrational things. Many of the clauses in the EULAs of software
+products are not enforceable or unethical, and I don’t feel that I need to
+respect them, even if they exist.
+</p>
+
+</note>
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This essay gives my thoughts about Joel on Software’s
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">
+Building
+Communities with Software</a>. The full original article was sent to the Joel
+on Software subscribers by E-mail, while the public web version had less
+content. I will respond only to the public web version.
+</p>
+
+<h2 id="dates">Dates</h2>
+
+<dl>
+<dt>Published:</dt>
+<dd>12-November-2005</dd>
+<dt>Last Modified:</dt>
+<dd>18-April-2007</dd>
+</dl>
+
+<h2 id="text">The Essay Itself</h2>
+
+<p>
+Joel Spolsky wrote
+<a href="http://www.joelonsoftware.com/articles/BuildingCommunitieswithSo.html">an
+essay titled “Building Communities with Software”</a> back in March, 2003.
+He explained there the motivation behind his web forum and why it is so good.
+</p>
+
+<p>
+In this text, I’d like to comment on some of the claims that Spolsky made
+in the essay. First you’ll have to make sure that you’ve read it.
+</p>
+
+<h3 id="existing_online_forums">Comments on the Review of the Existing Online Forums</h3>
+
+<blockquote>
+<p>
+On IRC, you can’t own your nickname and you can’t own a channel -- once the
+last person leaves a room, anyone can take it over. That’s the way the software
+works. The social result was that it was often impossible to find your friends
+when you came back the next day, because someone else might have locked you out
+of your chat room and your friends might have been forced to choose different
+nicknames.
+</p>
+</blockquote>
+
+<p>
+This is true for some IRC networks (especially EF-Net) but is not true for many
+others. In some IRC networks (such as
+<a href="http://www.freenode.net/">Freenode</a>) one can register one’s
+nickname using a service named NickServ, and one’s channels using a
+service named ChanServ. This eliminates most of the bot wars that plague other
+IRC networks.
+</p>
+
+<p>
+I’ve been chatting on Freenode for many months now, and the presence of these
+services, and its general atmosphere, make talking there an absolute joy. I
+have had very few problems there.
+</p>
+
+<h3 id="email">E-mail</h3>
+
+<blockquote>
+<p>
+Could you make a feature where I check a box that says
+“email me if somebody replies to my post?”
+</p>
+<p>
+A. This one feature, so easy to implement and thus so tempting to programmers,
+is the best way to kill dead any young forum. Implement this feature and you
+may never get to critical mass. Philip Greenspun’s LUSENET has this feature and
+you can watch it sapping the life out of young discussion groups
+</p>
+</blockquote>
+
+<p>
+Despite what Joel said being able to monitor the replies to one’s thread by
+E-mail is a very useful feature that should be enabled by default. Otherwise,
+people may forget to check what they posted. Also, his argument is weak,
+because once someone visits the page to see the reply, he can also do other
+things.
+</p>
+
+<p>
+For forums that aim to give help with a technology, such a feature is a must,
+because a person should be notified when something happen, instead of having
+to visit the forum times and again. (As someone on
+<a href="http://discuss.joelonsoftware.com/?joel">the Joel on Software forum</a>
+noted.) But even for community software it is a good idea. I know of several
+flourishing forums that have this feature.
+</p>
+
+<p>
+The problem with Joel’s argument is that people cannot monitor O(N)
+communities, i.e in proportion to as many as they like. Instead, it is much
+more scalable to monitor a constant amount of resources - normally your
+E-mail inbox and RSS feeds. Recently I started to rule out various forums
+because they don’t provide RSS feeds or have an email feature, and I believe
+most people do too.
+</p>
+
+<h3 id="branching">Branching</h3>
+
+<blockquote>
+<p>
+Q. OK, but can’t you at least have branching? If someone gets off on a tangent, that should be its own branch which you can follow or go back to the main branch.
+</p>
+<p>
+A. Branching is very logical to a programmer’s mind but it doesn’t correspond to the way conversations take place in the real world. Branched discussions are disjointed to follow and distracting.
+</p>
+</blockquote>
+
+<p>
+Some forums I frequent have a lot of branching and they are very nice. That
+way, replies to posts are answered as branched posts, instead of as replies
+to the topic that come after many other replies.
+</p>
+
+<h3 id="most_recent_reply_first">Promote
+Topics with the Most Recent Replies</h3>
+
+<blockquote>
+<p>
+Q. Your list of topics is sorted wrong. It should put the topic with the most
+recent reply first, rather than listing them based on the time of the original
+post.
+</p>
+
+<p>
+A. It could do that; that’s what many web-based forums do. But when you do that
+certain topics tend to float near the top forever, because people will be
+willing to argue about H1B visas, or what’s wrong with Computer Science in
+college, until the end of the universe. Every day 100 new people arrive in the
+forum for the first time, and they start at the top of the list, and they dive
+into that topic with gusto.
+</p>
+
+<p>
+The way I do it has two advantages. One, topics rapidly go away, so
+conversation remains relatively interesting. Eventually people have to just
+stop arguing about a given point.
+</p>
+
+<p>
+Two, the order of topics on the home page is stable, so it’s easier to find a
+topic again that you were interested in because it stays in the same place
+relative to its neighbours.
+</p>
+</blockquote>
+
+<p>
+I wholeheartedly agree. Forums that promote topics with the most recent reply
+to the top, are incredibly annoying, and I usually stop frequenting them after
+a short while. Usually, my conversations there disappear to oblivion.
+</p>
+
+<h3 id="confirmation">About Posts Confirmation</h3>
+
+<blockquote>
+<p>
+Q. Why don’t you show people their posts to confirm them before you post them?
+Then people wouldn’t make mistakes and typos.
+</p>
+
+<p>
+A. Empirically, that is not true. Not only is it not true, it’s the opposite of
+true.
+</p>
+
+<p>
+Part one: when you have a confirmation step, most people just click past it.
+Very few people reread their post carefully. If they wanted to reread their
+post carefully, they could have done it while they were editing it, but they
+are bored by their post already, it’s yesterday’s newspaper, they are ready to
+move on.
+</p>
+
+<p>
+Part two: the lack of the confirmation step actually makes people more
+cautious. It’s like those studies they did that showed that it’s safer, on
+twisty mountain roads, to remove the crash barrier, because it makes people
+scared and so they drive more carefully, and any way, that little flimsy
+aluminium crash barrier ain’t gonna stop a 2 ton SUV moving at 50 mph from
+flying off the cliff. You’re better off, statistically, just scaring the
+bejesus out of drivers so they creep along at 2 miles per hour around the
+hairpins.
+</p>
+</blockquote>
+
+<p>
+I disagree here, especially when the forum is using markup. (see below).
+Previewing the post allows one to check if the URLs are OK, and not too long
+or that they have dangling characters, and to review the post. A good posting
+mechanism should have an optional preview feature.
+</p>
+
+<h3 id="other_comments">Other Comments</h3>
+
+<h4 id="markup">Markup</h4>
+
+<p>
+The Joel on Software forum has absolutely no markup except for URLs being
+highlighted. I think that nevertheless, some forums should allow some markup.
+In their case, what they should have is plain and simple HTML, without any
+of the following idiosyncrasies:
+</p>
+
+<ul>
+<li>
+Link the following words to a URL. (at least not without giving any option of
+the “&lt;a” tag).
+</li>
+<li>
+Line breaks (<tt>\n</tt> characters) cause a new line to start at the post.
+(very annoying!)
+</li>
+<li>
+A very limited HTML syntax. Support as broad as syntax as possible optionally
+converting tags to more sane tags, but don’t force the user not to input them.
+</li>
+<li>
+Weird tags like square brackets instead of angles.
+</li>
+</ul>
+
+<p>
+HTML is very easy to learn and one can get the hang of it pretty quickly. Many
+times, people post markup from web pages they created with HTML, and they’ll be
+annoyed if they can’t post it as is.
+</p>
+
+<h4 id="operation">Forum Operation</h4>
+
+<p>
+Make sure the forum works, that each topic has a permanent page, and that
+the preview and all functions work. There are many off-the-wall forums that
+tend to not function correctly in various browsers, and have many
+idiosyncrasies. It is a good idea to use a stock forum like PHP-BB, YaBB, etc.
+that are well tested and extensively used.
+</p>
+
+<h4 id="horizontal_scrollbar">Avoid a Horizontal Scroll Bar</h4>
+
+<p>
+Avoid horizontal scroll bars. Trim long URLs in your posts, and make sure that
+people don’t overflow with large codes in “<tt>&lt;pre&gt;…&lt;/pre&gt;</tt>”
+sections.
+</p>
+
+<h4 id="spam_measurements">Spam Measurements</h4>
+
+<p>
+Make sure your forum has measurements against spam. Bayesian filtering or a
+different spam filter is a good idea. A must is the
+<a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html"><tt>rel="nofollow"</tt>
+attribute</a> which will render comment spam useless.
+</p>
+
+<h4 id="cryptic">Don’t be Cryptic</h4>
+
+<p>
+Once a comment I posted to a Movable Type-powered weblog was rejected,
+without giving me any idea what was wrong with it. I had to use my intuition
+to understand that the reason was the shortened URL I placed there instead of
+my long URL which I was afraid would cause a horizontal scroll bar. This was
+indeed the case, and after I replaced the shortened URL with the full one
+, my comment was accepted.
+</p>
+
+<p>
+But why wasn’t the reason for the rejection of the post given? That’s a bug!
+So don’t be cryptic - if something is wrong let the user know exactly what
+that is.
+</p>
+
+<h4 id="permanent_urls">Permanent URLs</h4>
+
+<p>
+One thing I dislike about the <i>Joel on Software</i> forum is that the URLs
+don’t
+remain the same. Instead it seems tha the number of posts is appended to them.
+That way, one often finds that threads he has already read are marked as
+unread again. This is annoying.
+</p>
+
+<p>
+A better solution would be to display the number of comments added since the
+discussion was last visited by that specific reader.
+</p>
+
+<h4 id="acceptance">Acceptance of Posts</h4>
+
+<p>
+Accepting good posts is a must for a forum. Furthermore, giving the poster
+a proper feedback for why his post was rejected, or what he can do to remedy
+it is also necessary. I almost gave up on publicising my posts in
+<a href="http://slashdot.org/">Slashdot</a> because they routinely rejected
+many posts to my essays that I consider to be very good, while accepting
+some incredibly weird, rehearsed or low-quality news items.
+</p>
+
+<p>
+Now, in Slashdot, the post notice just say “rejected”, without any reason
+why. So I don’t know how to better improve. An editor I contacted about it
+commented that they don’t want to do it because people then will ask questions
+about it which will start a dialogue. However, this causes the most avid
+contributors to give up on Slashdot, and move to greener pastures.
+</p>
+
+<p>
+And the dialogue is extremely important. You can always block or ban people
+who keep bothering you with extremely low-quality articles, but you shouldn’t
+let the ambitious contributor be left with a simple “rejected”. They want to
+improve and they want to know why you didn’t like their post. So this is not
+a feature - it’s a bug. Several communities - notably
+<a href="http://www.advogato.org/">Advogato</a> and the Joel-on-Software
+forum, accept almost all posts by default. This can be often very nice.
+</p>
+
+<p>
+A different thing happened to me with
+<a href="http://www.kuro5hin.org/">kuro5hin</a>. For once the moderators
+there reject posts that are just links to existing articles on the site. This
+makes it necessary to format the existing essay in the subset of HTML accepted
+by kuro5hin, to forget about getting traffic to your site - a lot of hassle.
+</p>
+
+<p>
+However, even after I did all that, my article was rejected by the moderation
+of the users because they felt that:
+</p>
+
+<ol>
+<li>
+The paragraph in which I described myself
+was too long (while being intended for the regular article, and still being a
+small amount of the article) - a
+<a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style
+over substance fallacy</a>.
+</li>
+<li>
+That I was not eligible to post such an article because I had not been very
+active in the site before - an
+<a href="http://en.wikipedia.org/wiki/Ad-hominem">Ad-hominem fallacy</a>.
+</li>
+</ol>
+
+<p>
+As a result most of them decided that they wanted to reject my post on the
+grounds that it was low-quality. I completely gave up on kuro5hin from then
+on.
+</p>
+
+<h4 id="the_people">The People</h4>
+
+<p>
+Which brings us to another important part: the people who are present and
+make up the community.
+</p>
+
+<h3 id="finale">Finale</h3>
+
+<p>
+During my time, I had and still have to deal with a lot of idiosyncratic
+forums. I hope what Spolsky wrote and what I wrote here will help people
+build nicer, better and less dysfunctional online forums.
+</p>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">The
+Joel on Software forum</a>.
+</li>
+</ul>
+

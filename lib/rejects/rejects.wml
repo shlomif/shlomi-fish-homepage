@@ -1,0 +1,116 @@
+<define-tag software_patents_notice>
+<div class="colored_frame">
+<h2>Stop Software Patents in Europe!</h2>
+
+<p>
+The European Parliament is going to vote on software patents soon. Already,
+many harmful and/or trivial patents were accepted in Europe, which are just
+waiting for a proper legal status to become enforceable.
+</p>
+
+<p>
+While it is not necessary that all software patents are invalid, obviously
+most of them are, and so the best thing to do is to prevent them from becoming
+legally enforceable. Stop software patents now!
+</p>
+
+<a href="http://swpat.ffii.org/">Refer to the FFII Page about this for more
+information</a>.
+</div>
+</define-tag>
+
+<if "<software_patents />" "<software_patents_notice />" "" />
+
+<define-tag osdc_notice>
+<a href="http://www.osdc.org.il/" title="Open Source Developers' Conference, Israel, 2006"><img
+     src="$(ROOT)/images/osdc-2006.png" style="border-width:0"
+     alt="Open Source Developers' Conference, Israel, 2006" /></a>
+</define-tag>
+
+<define-tag dont_send_we_are_looking_for_a_programmer>
+
+<li>
+
+<p>
+<b>Don't send me "We're looking for a programmer - can you help us?"</b>
+requests. I'm not interested in your job, and have my ways of learning
+about jobs, assuming I am. Please send them to
+<a href="http://www.hamakor.org.il/mailing-lists/">an appropriate mailing
+list or  two</a>, or to a job board. And also be aware that as of April
+2007, many people are looking for clueful workers.
+</p>
+
+<p>
+One thing you should do to distinguish yourself from the competing employers
+is to offer your workers outstanding conditions: a large amount of yearly
+vacation (6 weeks or so); top-of-the-line tools and equipment; a bug-free
+development platform; lots of weekly time to work on things they want to do;
+using a language that is most suitable for the job, not the one that's most
+hyped on the market; good working hours (at most 8 hours per day); enough
+trust that they know what they are doing and are working instead of pretending
+to work, and anything else
+<a href="http://www.paulgraham.com/">Paul Graham</a>,
+<a href="http://www.joelonsoftware.com/">"Joel on Software"</a>, and
+<a href="http://www.catb.org/~esr/writings/">Eric S. Raymond</a> have been
+talking about. This also includes paying an exceptional salary, options, etc.
+The days a <a href="http://www.paulgraham.com/gh.html">great hacker</a> was
+willing to be an IT slave are long over. And often he or she will be unhappy
+even with a slight bother and leave. If you find a brilliant hacker - do
+anything you can (within reason) to keep him happy.
+</p>
+
+</li>
+
+</define-tag>
+
+<define-tag front_page_linux_chix_button>
+<page_extra_affil>
+<a href="http://www.linuxchix.org/?ref=banner60x30"
+    title="LinuxChix - a community for promoting Open Source Software"><img
+    src="$(ROOT)/images/linuxchix60x30.png"
+    alt="LinuxChix button" /></a>
+</page_extra_affil>
+</define-tag>
+
+<define-tag wikiplanet_wiki>
+<li>
+<a href="http://shlomif.wikiplanet.com/" title="Wiki for discussing
+these pages or collaboration">Wiki</a>
+</li>
+</define-tag>
+
+<define-tag external_resources_in_rest_of_template>
+<div class="search">
+<h2>External resources</h2>
+
+<ul class="navbarmain">
+<li>
+<a href="$(ROOT)/me/blogs/" title="Weblogs (or Blogs) or other streams
+of resources which I update and can be commented on">My Blogs</a>
+</li>
+</ul>
+</div>
+</define-tag>
+
+<define-tag like_this_site_please_help>
+<div class=search">
+<a href="<rellink host="t2" url="meta/how-to-help/" />">Like this site? Please Help</a>
+</div>
+</define-tag>
+
+;;; The "Stop Using Microsoft Internet Explorer" has been the focus of
+;;; too much attention from random visitors, and so we are going to remove
+;;; it so people will focus on the important stuff. Furthermore, Internet
+;;; Explorer has been improving a lot lately (though only for recent MS
+;;; stuff), and moreover, it has been superseded in importance by some better
+;;; browsers.
+
+<define-tag noie_sidebar_link_removed>
+<div id="noie">
+<no_ie_link><img src="$(ROOT)/images/noIE.png"
+class="highlight" style="border:0"
+alt="Stop Using Internet Explorer!" /></no_ie_link><br />
+<no_ie_link>Stop Using Internet Explorer!</no_ie_link>
+</div>
+</define-tag>
+

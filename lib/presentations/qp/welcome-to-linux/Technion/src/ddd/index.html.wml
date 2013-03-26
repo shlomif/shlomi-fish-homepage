@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<points>
+<li>
+DDD is a powerful tool which is a graphical interface for an inferior
+debugger (usually gdb). DDD can do everything your favourite debugger can
+and much more.
+</li>
+<li>You can watch the code and execute it line by line
+and examine data.
+</li>
+<li>
+The speciality of DDD as its name might suggest is its ability to
+display your programs data graphically in a very comfortable manner.
+</li>
+<li>
+DDD will allow you to display structures and dereference pointers to create
+a visualization of a linked-list or a tree. DDD can also create graphs out
+of arrays.
+</li>
+<li>
+DDD has a gdb command line, so anyone who can use gdb can use DDD and
+gradually learn its special features.
+</li>
+<li>
+A little test program: <a href="testddd.c">testddd.c</a>.
+</li>
+</points>
+

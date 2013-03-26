@@ -1,0 +1,80 @@
+#include 'template.wml'
+
+<h2>push</h2>
+
+<p>
+The <tt>push</tt> function appends an element or an entire array to the
+end of an array variable. The syntax is <tt>push @array_to_append_to, @array_to_append</tt> or <tt>push @array, $elem1</tt>. For example, the primes program from earlier could be written as:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/push.pl" />
+</quadpres_code_block>
+
+<p>
+Notice that <tt>push</tt> is equivalent to typing
+<tt>@array = (@array, $extra_elem)</tt>, but it is recommended
+to use it, because it minimises error and it executes faster.
+</p>
+
+<h2>pop</h2>
+
+<p>
+<tt>pop</tt> extracts the last element from an array and returns it. Here's a
+short example to demonstrate it:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/pop.pl" />
+</quadpres_code_block>
+
+<h2>shift</h2>
+
+<p>
+<tt>shift</tt> extracts the <b>first</b> element of an array and returns it. The
+array will be changed to contain only the elements that were present there
+previously, with the 1 to <tt>scalar(@array)-1</tt> indexes.
+</p>
+
+<p>
+Here's the above example, while using <tt>shift</tt> instead of <tt>pop</tt>:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/shift.pl" />
+</quadpres_code_block>
+
+<h2>join</h2>
+
+<p>
+The syntax is <tt>join($separator, @array)</tt> and what it does is
+concatenates the elements of <tt>@array</tt> while putting <tt>$separator</tt> in
+between. Here's an example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/join.pl" />
+</quadpres_code_block>
+
+
+<h2>reverse</h2>
+
+<p>
+The <tt>reverse</tt> function returns the array which contains the elements
+of the array passed to it as argument in reverse. Here's an example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/reverse.pl" />
+</quadpres_code_block>
+
+
+<p>
+Note that by typing <tt>scalar(reverse($scalar))</tt> you get the string that
+contains the characters of <tt>$scalar</tt> in reverse.
+<tt>scalar(reverse(@array))</tt> concatenates the array into one string and then
+reverses its characters.
+</p>
+
+
+

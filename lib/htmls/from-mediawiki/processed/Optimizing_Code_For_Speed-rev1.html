@@ -1,0 +1,188 @@
+			<div class="note">
+<p>This work is licensed under the:</p>
+<ol>
+<li><a href="http://creativecommons.org/licenses/by/2.5/">The Creative Commons' Attribution License version 2.5</a> - or at your option any higher version.</li>
+<li><a href="http://www.gnu.org/copyleft/fdl.html">The GNU Free Documentation License</a> version 1.2 - or at your option any higher version.</li>
+</ol>
+<p>Please keep it this way. If you don't like either or both licenses - feel free to fork it and have a different derived license. (While properly accepting the terms of either license as starting points).</p>
+<p>Authors: <a href="http://en.wikibooks.org/wiki/User:Shlomif">User:Shlomif</a>.</p>
+</div>
+
+<h2 id="Other_Resources">Other Resources</h2>
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Outline">Optimizing Code for Speed/Outline</a></li>
+</ul>
+
+<h2 id="Introduction">Introduction</h2>
+<p>Optimization of code is the term that was applied to a process in which a code is tuned to be better in some respects: either speed, memory consumption, Input/Output (disk read and writes or network reads and writes), etc. In Mathematics, Optimization means a process in which one finds the values with the best performance. In Computing where programs are very complex, usually optimizing for speed in the mathematical sense is impossible. Instead the term has come to mean just advancing in the direction of better performance in one or more respects.</p>
+<p>This document will focus on optimizing code to run faster. However, as you will see later, doing this may involve having to optimize the code in a different aspect. Furthermore, often when programmers are trying to optimize one aspect of a program, they are doing so in order to increase speed.</p>
+
+<h3 id="In_which_programs_is_optimization_required.3F">In which programs is optimization required?</h3>
+<p>There are several type of programs in which optimization is required. One type of them is <a href="http://en.wikipedia.org/wiki/Real-time_computing">real time programs</a>. Despite common misconception, these are not necessarily programs that need to be very fast. Instead real time programs are programs that must respond to certain events within a certain time limit that was dedicated to the event. So for example, if the user presses a keyboard key while inside a word processor window, it should display the character relatively promptly. A 5 seconds delay will be unacceptable and as such a word processor is a kind of application that has some real-time constraints.</p>
+<p>Some parts of real-time systems may need optimization. However, once the time falls below the required delay, no other optimization is necessary. (At least not until testing proves it is again exceeding the limit.)</p>
+<p>Other programs that require optimization are programs that cannot be fast enough. Examples for such programs are Artificial Intelligence programs, games, multimedia programs, virtual machines and interpreters for programming languages, or any type of publicly available library or module whose use "in the wild" may necessitate it to be very fast.</p>
+<p>And naturally another type of programs are programs that are too slow or perceived to be too slow. While programs of some problem domains are very slow due to the complexity of the calculations involved, that is usually not the case, and nothing prevents a program from being fast. Such programs that are considered too slow should be optimized to make them run faster.</p>
+
+<h3 id="When_to_optimize.3F">When to optimize?</h3>
+<p>The rule of the thumb is that one should optimize if the program is not fast enough compared to the desired speed. A common misconception is that if a program is not fast enough now, it will run faster as hardware gets faster. However that is not always the case.</p>
+<p>If your program is slow, it is usually because the code is not optimized (such as due to the fact it uses sub-optimal algorithms). While better hardware will usually improve performance, it does not guarantee a noticeable speed increase. Furthermore the progress in hardware speed has allowed programmers to write more wasteful code (see <a href="http://www.paulgraham.com/hundred.html">Paul Graham's "The Hundred Years Language" essay</a>), but some programs are still excessively slow.</p>
+<p>When writing a program on a modern hardware, one should make it fast enough already. Some people have claimed that we have already reached the end of <a href="http://en.wikipedia.org/wiki/Moore%27s_law">Moore's First Law</a> in regards to uni-core processors, and we cannot expect single-processed single-threaded program to run faster. In any case, even if the program runs well on a high-end platform, it may still need to run on older hardware.</p>
+<p>We've all seen the fact that while computers got faster, software has often become slower to run unless the hardware is upgraded. <a href="http://en.wikipedia.org/wiki/Gates%27_Law">The so-called "Gates' Law"</a> claims that commercial programs decrease in speed by half every 18 months, due to various reasons. It is well known that the various versions of the <a href="http://en.wikipedia.org/wiki/DOS">DOS</a> operating system ran adequately on a PC XT's and 286's and that a Intel 386 was a "lean and mean DOS machine" as a certain journalist claimed back then. On the other hand, Microsoft Windows 3.0 and Microsoft Windows 3.1 already required a fast 486 computer to be ran comfortably, while Windows 95 was barely usable there and needed a Pentium computer. Windows XP already ran slowly on a Pentium machine and required a high end Pentium III or Pentium 4 computer. <a href="http://en.wikipedia.org/wiki/Windows_Vista">Windows Vista</a> requires even more hardware resources than Windows XP, up to the point that many computers in use today cannot run it comfortably.</p>
+<p>Now, while software simulations that run directly against the CPU and memory (and possibly hard-disk) are still running much faster than before, the responsiveness of the system itself does not seem to improve much.</p>
+
+<h3 id="When_not_to_optimize.3F">When not to optimize?</h3>
+<p>One should not optimize when the program in question runs fast enough. However, if it also has to run adequately on slower hardware, handle a greater load, or work well with fewer resources at its disposal, then the program might need to be optimized further based on such requirements.</p>
+
+<h4 id="Optimization_vs._Modularity_and_Readability">Optimization vs. Modularity and Readability</h4>
+<p>Optimization may have a bad influence on such code-quality factors as modularity and readability. Consider for example, what the developers of <a href="http://gmplib.org/">GMP (GNU Multi-precision)</a>, wrote in <a href="http://gmplib.org/manual/Introduction-to-GMP.html#Introduction-to-GMP">their manual</a>:</p>
+<blockquote>
+<p>The speed of GMP is achieved by using fullwords as the basic arithmetic type, by using sophisticated algorithms, by including carefully optimized assembly code for the most common inner loops for many different CPUs, and <b>by a general emphasis on speed (as opposed to simplicity or elegance</b>).</p>
+</blockquote>
+<p>Also consider that short <a href="http://en.wikipedia.org/wiki/Subroutine">functions</a> and <a href="http://en.wikipedia.org/wiki/Method_(computer_science)">methods</a> are considered preferable over longer methods, to allow for greater code re-use, testing, and self-documentation. (See the <a href="http://c2.com/cgi/wiki?ExtractMethod">"Extract Method" refactoring pattern</a>). However, function or method calls are considered a relatively costly operation, and so this extra code-quality, will probably make the program slower.</p>
+<p>Therefore, it's not hard to imagine that a developer who wishes to save some extra cycles will merge a function that gets used only once or a few times into its caller code (or incorporating its code using a <a href="http://en.wikipedia.org/wiki/Macro_(computerscience)">macro</a>, or a preprocessing stage if possible), and therefore making the code less modular.</p>
+<p>Similarly, highly optimized code may also become much more unreadable. For example, the C Preprocessor's macros are notorious for making code that uses them unreadable. I heard <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg15826.html">some complaints</a> that mentioned that <a href="http://en.wikipedia.org/wiki/OpenSSL">OpenSSL</a>'s code, which is based on the preprocessor macros, identically named static functions and lots of code-generation is very hard to understand and follow due to these facts.</p>
+<p>Similar complaints are constantly voiced against <a href="http://en.wikipedia.org/wiki/XS_(Perl)">perl5's XS</a>, its interface for creating subroutines in ANSI C and other lower-level languages. The API was designed to be as efficient and fast as possible and, as a result, is hard to learn, understand and follow.</p>
+
+<h2 id="Strategy_for_Optimization">Strategy for Optimization</h2>
+<p>The first thing you need to do before optimizing is make sure that your code has many automated tests with a good test coverage. Optimizing the code (or any other kind of modification) may break something, and the automated tests will catch that.</p>
+<p>The next thing you need to do is to make sure your code is modular. Duplicate code and other properties that make a code non-modular can prevent a clear analysis of the code's bottlenecks by profiling it.</p>
+<p>Afterwards, it is important to <a href="http://en.wikipedia.org/wiki/Performance_analysis">profile your code using a good software profiler</a>. Profiling will help show which code does not take a lot of time to run and therefore it would be best not to invest a lot of optimization effort in it. One should start by optimizing the most time-consuming tasks first.</p>
+<p>It takes some expertise to knowing how to properly analyze the results given by the profiler, and seeing what needs to be optimized. For example, some IO-intensive routines may appear to consume a lot of time, while in fact that time cannot be effectively eliminated because the amount of IO is minimal (while still being relatively time consuming). I feel that discussing this aspect of profiling further is orthogonal to the mission of this article, so I'm not going to cover it here.</p>
+<p>Finally, it is a good idea that someone will review the code and and give general remarks on speed bottlenecks found there. To quote Eric Raymond from <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">"The Cathedral and the Bazaar"</a> "Given enough eyeballs, all bugs become shallow".</p>
+
+<h2 id="Order_of_Complexity_Optimizations">Order of Complexity Optimizations</h2>
+
+<h3 id="What_is_order_of_complexity.3F">What is order of complexity?</h3>
+<p>Generally, an algorithm has an <a href="http://en.wikipedia.org/wiki/Computational_complexitytheory">asymptotic computational complexity</a>. Assuming the input is of size N, we can say that the algorithm will finish at O(N), O(N^2), O(N^3), O(N*log(N)) etc. This means that it is a certain mathematical expression of the size of the input, and the algorithm finishes between two factors of it.</p>
+<p>Generally, the smaller the order of complexity of the program's underlying algorithm, the faster it will run and the better it will scale as the input gets larger. Thus, we should often seek more efficient algorithms in order to reduce the order of complexity.</p>
+
+<h3 id="Some_examples_for_reducing_Order_of_Complexity">Some examples for reducing Order of Complexity</h3>
+
+<h4 id="Lookup">Lookup</h4>
+<p>Let's suppose we're looking for a certain item in a collection of <b>N</b> items. A na&#xEF;ve algorithm for looking for such an item would be to go over all the items one after the other, and see if they match this item. Then we can stop when we found this item, or declare that it wasn't found if we did not find it.</p>
+<p>This is called a <a href="http://en.wikipedia.org/wiki/Linear_search">linear search</a>, and has an average (and worst-case) complexity of O(N). Now, if we're going to do such a na&#xEF;ve lookup many times, then it will cost us O(N) every time. And this is usually unacceptable.</p>
+<p>A better idea would be to use a more efficient lookup. For example, a <a href="http://en.wikipedia.org/wiki/Binary_search">Binary search</a> is O(log(N)). It assumes we keep the existing items in a sorted array, or in a balanced tree. A <a href="http://en.wikipedia.org/wiki/Hash_table">Hash table</a> is a heuristic that with a good design of its underlying parameters provides an <b>average</b> O(1) lookup, but often O(log(N)) is good enough.</p>
+
+<h5 id="Case_study_for_Lookup_-_the_Freecell_Solver_States_Collection">Case study for Lookup - the Freecell Solver States Collection</h5>
+<p><a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is a library written in <a href="http://en.wikipedia.org/wiki/ANSI_C">ANSI C</a> that solves deals of <a href="http://en.wikipedia.org/wiki/FreeCell">FreeCell</a> and similar "full-knowledge" Solitaire games. Freecell Solver used traditional <a href="http://en.wikipedia.org/wiki/Game_artificial_intelligence">Game artificial intelligence</a> heuristics from the beginning such as <a href="http://en.wikipedia.org/wiki/Depth_First_Search">Depth First Search</a> and <a href="http://en.wikipedia.org/wiki/Best_First_Search">Best First Search</a>. As a result, there was a need to maintain a collection of the previously encountered board positions (or "states") so they won't be checked twice.</p>
+<p>The very first version of the solver (written in <a href="http://en.wikipedia.org/wiki/Perl">Perl</a>) used a linear search over an array. That proved to be too slow to be effective to solve even the most elementary deals. Afterwards, the program was re-implemented in C, and used a sorted array, with a "sort margin" that was sorted using ANSI C's <a href="http://www.cplusplus.com/reference/clibrary/cstdlib/qsort.html">qsort's function</a>, which performs the <a href="http://en.wikipedia.org/wiki/Quick_Sort">Quick Sort</a> algorithm at an average complexity of O(N*log(N)), giving the program an average lookup of O(log(N)) and an accumulated addition of between O(N*log(N)) and O(N^2).</p>
+<p>Later versions made optional use of two <a href="http://en.wikipedia.org/wiki/Balanced_Binary_Tree">Balanced Binary Trees</a> libraries: <a href="http://www.stanford.edu/~blp/avl/">libavl</a> and <a href="http://libredblack.sourceforge.net/">libredblack</a>, which have a maximal O(log(N)) lookup and insertion and an accumulative O(N*log(N)) run-time. Sometimes later, a custom hash table was coded, whose run-time was even somewhat faster than the balanced binary trees, and had an <b>average</b> run-time of O(N). This hash was later further optimized using micro-optimizations.</p>
+
+<h4 id="Counting_Sort_instead_of_Comparison-Based_Sort">Counting Sort instead of Comparison-Based Sort</h4>
+<p>Normal comparison-based sort algorithms such as <a href="http://en.wikipedia.org/wiki/Quick_Sort">Quick Sort</a>, <a href="http://en.wikipedia.org/wiki/Merge_Sort">Merge Sort</a> or <a href="http://en.wikipedia.org/wiki/Heap_Sort">Heap Sort</a> run at O(N*log(N)). This is much better than na&#xEF;ve comparison-based algorithms such as "Insertion Sort", or "Bubble Sort" which run at O(N^2). However, we can improve upon O(N*log(N)) too, in some cases.</p>
+<p>One of them is if the keys in question are, or can be mapped to integers in a certain range. In this case, we can use an algorithm such as <a href="http://en.wikipedia.org/wiki/Counting_sort">"Counting Sort"</a>, to sort at a time of roughly O(N). We can also try using <a href="http://en.wikipedia.org/wiki/Radix_sort">"Radix sort"</a> along with counting sort, if we have more than one such "digit" in the radix (as long as their number remain constant).</p>
+<p>On the other hand, sometimes using Insertion Sort is preferable over Merge Sort or Quick Sort, if the number of elements being sorted is very small, as the latter algorithms have a lot of overhead.</p>
+
+<h4 id="Joel_Spolsky.27s_Schlemiel_the_Painter.27s_Syndrome">Joel Spolsky's Schlemiel the Painter's Syndrome</h4>
+<p>In his <a href="http://www.joelonsoftware.com/articles/fog0000000319.html">article "Back to Basics"</a>, Joel Spolsky illustrates a common (and unnecessary) pattern that increases the complexity of programs. Essentially, when one does in C:</p>
+<pre>
+  char string[1000];
+  strcpy (string, "One ");
+  strcat (string, "Two ");
+  strcat (string, "Three ");
+  strcat (string, "Four ");
+  .
+  .
+  .
+</pre>
+<p>And so forth, then the strcat calls will keep starting from the beginning of the string and seek the (increasing) end times and again. As a result, the complexity of appending N strings each with a limited length, becomes O(N^2) instead of O(N).</p>
+<p>Eliminating such problematic misimplementations in the code can yield a substantial speed-increase.</p>
+
+<h3 id="Note_about_Order-of-Complexity_Reduction">Note about Order-of-Complexity Reduction</h3>
+<p>It should be noted that some algorithms with a proven lower Big-O notation than equivalent ones, are either too complicated to be effectively implemented or have a huge runtime factor that will make them impractical for most reasonable data-sets, or both. For example, there's an algorithm for finding the Median (= middle element) of an array in linear (O(N)) time, that was discovered in the nineties, but it's very complex and is a very "big" linear time (with a huge factor), that an efficient O(N*Log(N)) sorting would normally be more efficient. That and we are very often interested in the Median for optimizing sorting, and so it would make sense not to use this algorithm in the first place.</p>
+
+<h2 id="Factor_Optimizations">Factor Optimizations</h2>
+
+<h3 id="What_are_Factor_Optimizations.3F">What are Factor Optimizations?</h3>
+<p>Factor Optimizations are the opposite of order of complexity optimizations: they don't change the overall complexity of the algorithm, but rather make it run faster by a certain factor. As an extreme (but not so unrealistic) example, I may increase the formula for calculating the time that my program runs from 5 seconds times N^2 (where N is the length of the input) to 1 second times N^2. One can see that we increase the optimization by a certain factor, and still don't handle potential scalability problems.</p>
+
+<h3 id="The_Motivation_for_Factor_Optimizations">The Motivation for Factor Optimizations</h3>
+<p>Are factor optimizations worth-your-time? Some people don't seem to think so. For example Eric Raymond has <a href="http://catb.org/esr/writings/taoup/html/ch12s01.html">this to say in "The Art of Unix Programming"</a>:</p>
+<blockquote>
+<p>One is the exponential effect of Moore's Law &#x2014; the smartest, cheapest, and often fastest way to collect performance gains is to wait a few months for your target hardware to become more capable. Given the cost ratio between hardware and programmer time, there are almost always better things to do with your time than to optimize a working system.</p>
+<p>We can get mathematically specific about this. It is almost never worth doing optimizations that reduce resource use by merely a constant factor; it's smarter to concentrate effort on cases in which you can reduce average-case running time or space use from O(n^2) to O(n) or O(n log n),[112] or similarly reduce from a higher order. Linear performance gains tend to be rapidly swamped by Moore's Law.[113]</p>
+</blockquote>
+<p>Randall Hyde presents an opposing view in <a href="http://www.onlamp.com/pub/a/onlamp/2004/05/06/writegreatcode.html">his OnLAMP.com feature, "Why Learning Assembly Language is Still a Good Idea"</a>:</p>
+<blockquote>
+<p>Most of the time you can achieve very good performance boosts by simply improving the implementation of an existing algorithm. A computer scientist may argue that a constant improvement in performance isn't as good as, say, going from an algorithm with O(n^2) performance to one with O(n lg n) performance, but the truth is that most of the time a constant factor of two or three times improvement, applied throughout a piece of software, can make the difference between a practical application and one that is simply too slow to comfortably use. And it is exactly this type of optimization with which most modern programmers have little experience.</p>
+</blockquote>
+<p>So which viewpoint is correct? I tend to think that Raymond is wrong, while Hyde is correct. The factors in which your program is running are still important, and can make a world of difference. Some factor optimizations may yield huge benefits and will make you and your users happier.</p>
+<p>Raymond is also misled because one cannot expect their end-users to upgrade their machines. Furthermore, it seems that we've <a href="http://www.gotw.ca/publications/concurrency-ddj.htm">hit the end of the linear CPU speed increase</a> for Semiconductor-based CPUs, and that we cannot expect a linear code to become faster with new hardware. Highly parallelized code may become faster, but parallelization is not always possible, or desirable.</p>
+<p><a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg27751.html">Another illustrative story</a> about why it's not a good idea to depend on Moore's law to speed up your code was posted by Gilboa Davara to the Linux-IL mailing list. Quoting from there while editing for coherency:</p>
+<blockquote>
+<p>A couple of years ago I worked for a medical software development company. I was working on the database development side. (We had our own proprietary object oriented database)</p>
+<p>Our database was pretty cool; it could handle an hospital level load on a dual Pentium Pro machine. (Which was a far cry from most big iron machines that were used back then.)</p>
+<p>Our medical software side used PowerBuilder (and later VB) to develop the medical applications. To put it mildly, the medical application itself, was by far, slower and heavier then the medical database that it was built upon. While 50 clients could run easily on a Pentium I 90 MHz with 32MB of RAM , the medical application ran like shit on a Pentium I 166 MHz with 64MB of RAM machine!</p>
+<p>And every-time we pointed this anomaly to the med team, they claimed that "new machines are bound, new CPUs; by the time we are out, CPU power won't be an issue."</p>
+<p>You know what, that med software now runs slower than a dead dog on a top-level Pentium 3 / Pentium 4 / Athlon machine&#x2026; nothing has changed.</p>
+</blockquote>
+
+<h3 id="Examples_for_Factor_Optimizations">Examples for Factor Optimizations</h3>
+
+<h4 id="Managing_Pointers_to_Structs_Instead_of_the_Structs_Themselves">Managing Pointers to Structs Instead of the Structs Themselves</h4>
+<p>If we have a collection of many C/C++-structs (structures that contain an adjacent number of elements of possibly different data types), then swapping two such structs (say for re-ordering or sorting) will require a lot of memory access. On the other hand if we manage pointers to such structures, with permanent addresses, then swapping two 32-bit or 64-bit pointers will be relatively cheap.</p>
+<p>The first ANSI C release (0.2.0) of Freecell Solver allocated a direct array of large C-structs, and then sorted them and binary searched them. In the 0.4.0 release, an array of pointers to individually-malloc()-ed structs was implemented instead, which resulted in a huge boost of speed. This taught me a valuable lesson on how to make a smart use of pointers as an optimization tool.</p>
+
+<h4 id="Reducing_Memory_Consumption">Reducing Memory Consumption</h4>
+<p>The more memory an application, or its individual elements consumes, the more cache misses it has, the more page swapping it requires, and it becomes more probable for data to require more than one cache line. As a result, reducing the size of a program can often lead to speed benefits.</p>
+<p>As <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg07076.html">documented in a post to Linux-IL</a>, when Freecell Solver was converted from representing cards as 32-bit values, and converted to representing them using 8-bit octets, it became much faster. This is likely due to less swapping, due to less cache misses, and because more cards could fit in the Pentium's 32-byte cache row.</p>
+<p><a href="http://lwn.net/Articles/82495/">The "Cost of Inline Functions" LWN.net story</a> is also illustrative. When one function in the Linux kernel was un-inlined, it made the kernel somewhat faster. The reason was that all of the inlined instances of it occupied a (relatively) large amount of memory per-instance, and as a result, the kernel was larger, and there were more cache misses.</p>
+
+<h5 id="Note_about_the_Memory-Speed_Tradeoff">Note about the Memory-Speed Tradeoff</h5>
+<p>After reading what was written here, you may think this contradicts the common Memory-Speed Trade-off "truism". The Memory/Speed Trade-off has its origins in theoretical computer science, where it is shown that for certain tasks, one can reduce the run-time's asymptotic complexity by increasing the asymptotic amount of memory used (and vice versa). For example, we can sometimes reduce the asymptotic run-time from O(N^2) to O(N) by increasing the memory from O(1) to O(N).</p>
+<p>This is all nice and true, but it doesn't contradict the fact that given the architecture of contemporary computer hardware and operating systems, the less memory a program uses (while the logic of the algorithm remains the same) - the faster it will probably run. It's not an asymptotic trade-off, but rather a gain-gain situation.</p>
+
+<h4 id="Parallelization">Parallelization</h4>
+<p>By <a href="http://en.wikipedia.org/wiki/Parallel_computing">parallelizing</a> a task, one can split it into several lines-of-executions (processes, threads, tasks on different computers in the cluster, etc.) that each will run in parallel. As a result, the complete task itself will hopefully finish faster. A good example for parallelization is performing the same time-consuming operation on a lot of inputs. If we assign different processes subsets of the inputs, then they will likely finish it faster.</p>
+<p>Lately, parallelization has become especially attractive for making code run faster due to the advancement of multi-core CPUs. However, it should be noted that parallelization is still limited by some factors such as locking, serialization and de-serialization of the inter-process data, context-switching, CPU and operating system-constraints, and the fact that often the number of tasks will exceed the number of available processors. Most importantly, <a href="http://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl's law</a> rules that the serial part of the task (by definition) cannot be parallelized, and so limits the amount of gain from the parallelization.</p>
+
+<h4 id="Putting_the_Most_Important_struct_Members_First">Putting the Most Important struct Members First</h4>
+<p>In the Linux kernel the order of the struct members is ordered so the most important members fit within the Pentium architecture's 32-byte cache line size. This way, access to the struct in general is sped up because all of its members remain in the cache line most of the time and can be accessed more quickly.</p>
+
+<h4 id="Copy-on-write">Copy-on-write</h4>
+<p>Another useful optimization is known as <a href="http://en.wikipedia.org/wiki/Copy-on-write">copy-on-write</a>. A good example for this is when implementing a virtual machine for a programming language, and where we assign a variable to another one. While we can duplicate the contents of the variable each time, it would be cheaper to just increase the reference count, and wait for one of the variables to change before they are separated.</p>
+<p>If the contents of the copies are significant, then copy-on-write can yield significant savings in time.</p>
+
+<h4 id="Caching">Caching</h4>
+<p>If we perform many costly queries, then caching commonly-issued queries along with the results we got in memory is likely to increase the overall performance of the program. Caching is implemented in all kinds of software - from operating system kernels that hold recently-accessed file-system entries in cache, to database servers that keep caches of the various stages of the queries given to them.</p>
+<p>There's a variation on caching called <a href="http://en.wikipedia.org/wiki/Memoization">Memoization</a>, in which we never relieve of our results. It can be demonstrated that by memoizing the na&#xEF;ve (tree-recursive) Fibonacci-number calculation, one can actually reduce its complexity from an exponential one to a linear one.</p>
+<p>One should note that caching or memoization cannot be done in many cases, for example, if the queries have most kinds of side-effects.</p>
+
+<h4 id="Avoiding_Copying_Altogether">Avoiding Copying Altogether</h4>
+<p><a href="http://tech.groups.yahoo.com/group/hackers-il/message/2517">This Hackers-IL Post</a> gave the case for avoiding unnecessary copying of objects in order to increase performance. Calling copy constructors excessively can have a negative impact on performance, and reducing the number of calls to a minimum can improve performance. Just copying a large contiguous area in memory, several times, may have a negative effect on performance and eliminating it, may also turn out to be beneficial.</p>
+
+<h4 id="Inline_Functions">Inline Functions</h4>
+<p>Despite what was said earlier, in the context of reducing memory consumption, inlining functions in languages such as C or C++ can often have a positive effect on performance. Function calls are costly operations, and have a lot of overhead, and avoiding the function call by inserting the code in-place whenever the function is used, can increase performance. Inline functions become more and more beneficial the shorter they are, and if the memory occupied by the in-place calls is smaller than the memory used without inlining.</p>
+<p>If you are unsure whether inlining a certain function has a positive or negative effect, then benchmark and see.</p>
+
+<h4 id="The_Schwartzian_Transform">The Schwartzian Transform</h4>
+<p>The <a href="http://en.wikipedia.org/wiki/Schwartzian_transform">Schwartzian transform</a> is a way to optimize certain kinds of comparison-based sort operations. If the keys of the function that we want to compare take a lot of time to calculate (such as if they require access to the hard-disk), then we can first prepare an equivalent array with pairs of the inputs and their keys, then sort the pairs based on the keys, and finally filter only the original inputs from the pairs.</p>
+<p>It should be noted that the Schwartzian transform actually reduced the order of complexity of the number of times the keys are calculated from O(N*log(N)) to O(N). However, the overall order of complexity of the sort remains O(N*log(N)).</p>
+
+<h3 id="Call_for_a_Catalog_of_Optimizations">Call for a Catalog of Optimizations</h3>
+<p>I believe it would be a good idea to concentrate all the known optimizations in one place, in a similar fashion to the <a href="http://www.refactoring.com/catalog/">Catalog of Refactorings</a> and the <a href="http://en.wikipedia.org/wiki/Portland_Pattern_Repository">Portland Pattern Repository</a>. This would be a list that people can read for completeness, and to realize where their code can be improved, and for general inspiration, and to facilitate communication.</p>
+<p>I'm not aware of a similar effort as of the time of this writing, and it will be useful. This section only covered a very small subset of the possible optimization strategies, just to give a taste of them, and did not aim to be comprehensive.</p>
+
+<h2 id="Optimization_by_Changing_the_Dependencies">Optimization by Changing the Dependencies</h2>
+<p>Often the original choice of programming languages, or libraries can affect the execution speed, because they are not very optimized, too bloated, or otherwise too slow. Moving to a different programming language or library, including possibly replacing third-party code with your own, may have a positive effect on one's program's speed.</p>
+<p>For example, if you're doing a lot of number-crunching code in dynamic, P-code languages such as Perl, Python or Ruby (at least without utilizing such APIs as <a href="http://pdl.perl.org/">PDL</a> or <a href="http://www.scipy.org/">SciPy</a>) or otherwise your code involves many loops and conditionals, then you can expect it to run slower than if it was written in C or Assembler.</p>
+<p>Similarly, I found that <a href="http://en.wikipedia.org/wiki/GLib">GLib</a>'s balanced binary trees performed more poorly than those of libavl and libredblack, and that its hash performed more poorly than my own custom hash (which was since then optimized further). As a result, eliminating a dependency on GLib's data structures may improve the performance of the program.</p>
+
+<h2 id="Optimizing_by_Reducing_Feature-Set">Optimizing by Reducing Feature-Set</h2>
+<p>"There ain't no such thing as a free lunch". The more features your program has, the more code is required to implement them, which in turn consumes more memory, and slows things down. Furthermore, it requires more conditionals and often even loops, which also require extra processing. Thus, by removing features from one's application, one can have faster code.</p>
+<p>For example, in <a href="http://www.joelonsoftware.com/articles/APIWar.html">"How Microsoft Lost the API War"</a>, Joel Spolsky tells that Microsoft has gone to great lengths to maintain bug-to-bug (binary) backward compatibility for their Windows-line of operating system. As a result, buggy software that relied on API quirks that got changed, often could still work in later versions of Windows, because Microsoft made sure that Windows supplied them with a similar environment. As a result of maintaining all of this backward compatibility, there was more code in Microsoft's products, which may have contributed to the common and notorious perception that they became slower with each release.</p>
+
+<h3 id="Optimizing_by_Compromising_on_Security">Optimizing by Compromising on Security</h3>
+<p>I can go further than that, and claim that one can often optimize one's code by compromising on its security. The less sanity checks, input checks, etc. a code has - the faster it will run. For example, a code that does not have a lot of checking for the failure (and graceful handling) of dynamic memory allocation calls (in languages such as C without managed programming) such as <tt>malloc()</tt>, will run faster. (Until and if it runs out of memory and then crashes.)</p>
+<p>I read somewhere that <a href="http://tech.groups.yahoo.com/group/hackers-il/message/1688">programmers complained that checking and handling errors in their programs made them have to write about 4 times more code</a>, which makes sense. All this code slows the program down when everything runs as expected.</p>
+<p>Note that "Here be dragons". It's probably never a good idea to compromise on security in order to increase speed. But I've mentioned it here for completeness sake.</p>
+
+<h2 id="Conclusion">Conclusion</h2>
+<p>When I mentioned this article to some people on IRC (while it was still incomplete), someone said that "The first rule of optimization is 'Don't!'". I think such attitude is harmful. While I agree that "premature optimization is the root of all evil", sometimes one's code is just too slow and needs to be optimized. And if your code is what <a href="http://www.joelonsoftware.com/articles/FiveWorlds.html">Joel Spolsky calls "Shrinkwrap"</a> (i.e: code that is sold or otherwise distributed and made available for public consumption) then you can often not make assumptions on how fast it needs to be, and the faster it is - the better.</p>
+<p>Speed and optimizing other resources are one important factor <a href="http://www.shlomifish.org/philosophy/computers/high-quality-software/">in the general, abstract quality of programs</a>. If your program is slow, it is likely going to make your users frustrated and unhappy, which will be a failure in your mission as a software developer. So it is important that your program is fast enough, if not very much so.</p>
+<p>My aim in this document was to explain the "why"'s, "what"'s and to a lesser extent "how"'s of optimization. I hope I was successful, and that people who read it will be more willing to optimize their software and more clueful in how to do so.</p>
+
+<h2 id="Thanks">Thanks</h2>
+<p>I'd like to thank Daan for expressing a lot of interest in this article, and for his constant encouragement and input. Limbic_Region has given me some useful input for this article by email. Several people have made some contributions to this article: <a href="http://en.wikibooks.org/wiki/User:Jguk">Jguk</a>, <a href="http://en.wikibooks.org/w/index.php?title=User:Dallas1278&amp;action=edit&amp;redlink=1">Dallas1278</a> and the IPs 84.27.42.81, 85.146.243.13, 203.196.46.108, 70.176.53.73, and 213.129.10.120 . I'd also like to thank all the originators of the sources that I quoted or referenced in the article.
+</p>
+

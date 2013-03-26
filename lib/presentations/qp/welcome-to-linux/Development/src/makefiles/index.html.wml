@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<points>
+<li>
+Makefiles are a way to define how your project is to be built.
+</li>
+<li>
+The make tool reads this file and compiles your project properly
+and efficiently, recompiling files that were changed and files which
+depend on them using the correct compile command at each stage.
+</li>
+<li>
+For large projects this is a must, and in many cases it is convenient
+also for small projects with only half a dozen source files.
+</li>
+</points>

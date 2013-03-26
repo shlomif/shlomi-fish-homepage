@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+
+
+<p>
+In Perl every expression is considered true except for the following three
+cases:
+</p>
+
+<ol>
+<li>
+The number <tt>0</tt>.
+</li>
+<li>
+The empty string (<tt>""</tt>).
+</li>
+<li>
+A special value called <tt>undef</tt>. This is the default value of every
+variable that was not initialized before it was accessed.
+</li>
+</ol>
+
+<p>
+One of the most convenient ways of cancelling code is to wrap it in an
+<tt>if (0) { ... }</tt> block. It usually is faster than adding comments to
+the beginning of each line. Of course, you should not distribute code that
+way, but it is useful for testing conjectures.
+</p>
+

@@ -1,0 +1,34 @@
+#include 'template.wml'
+
+<points>
+<li>
+Adrian modified FC-Pro to accept sequence moves with a specified number
+of cards for moves to empty stacks only. (where the number of cards cannot
+be deduced from the destination.)
+</li>
+<li>
+I wrote an interface to process the Freecell Solver solution, and to generate
+moves
+that were acceptable to Freecell Pro.
+</li>
+<li>
+This involved playing the entire solution move by move, transferring cards to
+the foundations, and keeping track of such cards.
+</li>
+<li>
+This took about a 100 more E-mails between Adrian and I.
+</li>
+</points>
+
+<h2>End Result</h2>
+
+<points>
+<li>
+Integration of Freecell Solver with Freecell Pro is now working, and the
+"Solver Evaluation Edition" of FC-Pro was released.
+</li>
+<li>
+All's well that ends well!
+</li>
+</points>
+

@@ -1,0 +1,164 @@
+#include 'template.wml'
+
+<table class="bordered">
+<tr>
+<th>
+<b>Customary</b>
+</th>
+<th>
+<b>Generic</b>
+</th>
+<th>
+<b>Meaning</b>
+</th>
+<th>
+<b>Interpolates</b>
+</th>
+</tr>
+<tr>
+<td>
+''
+</td>
+<td>
+q{}
+</td>
+<td>
+Literal
+</td>
+<td>
+No.
+</td>
+</tr>
+<tr>
+<td>
+""
+</td>
+<td>
+qq{}
+</td>
+<td>
+Literal
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr>
+<td>
+``
+</td>
+<td>
+qx{}
+</td>
+<td>
+Command
+</td>
+<td>
+Yes (unless the delimiter is '')
+</td>
+</tr>
+
+<tr>
+<td>
+(none)
+</td>
+<td>
+qw{}
+</td>
+<td>
+Word List
+</td>
+<td>
+No
+</td>
+</tr>
+
+<tr>
+<td>
+//
+</td>
+<td>
+m{}
+</td>
+<td>
+Pattern Match
+</td>
+<td>
+Yes (unless the delimiter is '')
+</td>
+</tr>
+
+<tr>
+<td>
+(none)
+</td>
+<td>
+qr{}
+</td>
+<td>
+Declaration of a Regex Pattern
+</td>
+<td>
+Yes (unless the delimiter is '')
+</td>
+</tr>
+
+<tr>
+<td>
+(none)
+</td>
+<td>
+s{}{}
+</td>
+<td>
+Substitution
+</td>
+<td>
+Yes (unless the delimiter is '')
+</td>
+</tr>
+
+<tr>
+<td>
+(none)
+</td>
+<td>
+tr{}{}
+</td>
+<td>
+Transliteration
+</td>
+<td>
+No
+</td>
+</tr>
+</table>
+
+<p>
+What it means, is that you can write an interpolated string as <tt>qq</tt>
+followed by a matching wrapping character, inside which the string can
+be placed. And likewise for the other strings. Here are some examples:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file
+filename="src/string-forms/q_qq-examples.pl" />
+</quadpres_code_block>
+
+<p>
+The output of this is:
+</p>
+
+<quadpres_code_block>
+Hello There, world!
+Hi There Hello There Hello There Router
+0: one
+1: two
+2: three
+</quadpres_code_block>
+
+<p>
+As one can see, the wrapping characters should match assuming they are a
+left/right pair (<tt>{</tt> to <tt>}</tt> etc.).
+</p>
+

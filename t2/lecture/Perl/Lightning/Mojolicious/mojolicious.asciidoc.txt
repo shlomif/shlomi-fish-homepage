@@ -1,0 +1,275 @@
+The Mojolicious Web Framework
+=============================
+
+Introduction
+------------
+
+* Mojolicious - "the Web in a Box!" - http://mojolicious.org
+
+* On CPAN: http://metacpan.org/release/Mojolicious .
+
+* A self-contained web-development framework that only depends on perl 5 and
+its core modules.
+
+* As a result: implements a lot of functionality that exists in many other
+CPAN distributions in slightly different ways.
+
+* Licence: http://opensource.org/licenses/artistic-license-2.0.php[Artistic 2.0]
+(open-source, mostly BSD-style).
+
+Code Examples
+-------------
+
+-----------------------
+# Using Mojolicious::Lite will enable "strict" and "warnings"
+use Mojolicious::Lite;
+
+# Route with placeholder
+get '/:foo' => sub {
+    my $self = shift;
+    $self->render_text('Yea baby!');
+};
+
+# Start the Mojolicious command system
+shagadelic;
+-----------------------
+
+More complex example, written by me for Insurgent Software and
+http://github.com/insurgentsoftware/socialmap/tree/master/dev/mojo-user-auth/[available on github] under a yet undecided open-source licence:
+
+-----------------------
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use InsurgentSoftware::UserAuth::User;
+use InsurgentSoftware::UserAuth::App;
+
+use Mojolicious::Lite;
+use MojoX::Session::Cookie;
+
+use CGI qw();
+
+use KiokuDB;
+
+# Silence
+app->log->level('error');
+
+my $dir = KiokuDB->connect(
+    "dbi:SQLite:dbname=./insurgent-auth.sqlite",
+    create => 1,
+    columns =>
+    [
+        email =>
+        {
+            data_type => "varchar",
+            is_nullable => 1,
+        },
+    ],
+);
+
+
+get '/' => sub {
+    my $self = shift;
+
+    return $self->render(
+        template => "index",
+        layout => 'insurgent',
+        title => "Main",
+    );
+} => "index";
+
+my $app = InsurgentSoftware::UserAuth::App->new(
+    {
+        dir => $dir,
+    }
+);
+
+my %actions_params =
+(
+    'get' =>
+    [
+        ['/register/', "register",],
+        ['/login/' , "login",],
+        ['/account' , "account_page",],
+        ['/confirm-register' , "confirm_register",],
+        ['/password-reset' , "password_reset",],
+        ['/handle-password-reset' , "handle_password_reset",],
+    ],
+    'post' =>
+    [
+        ['/register-submit/', "register_submit",],
+        ['/login-submit/' , "login_submit",],
+        ['/account/change-info' , "change_user_info_submit",],
+        ['/password-reset-submit' , "password_reset_submit",],
+        ['/handle-password-reset-submit' , "handle_password_reset_submit",],
+    ],
+);
+
+while (my ($verb, $actions) = each(%actions_params))
+{
+    foreach my $action (@$actions)
+    {
+        my ($url, $action_name) = @$action;
+
+        __PACKAGE__->can($verb)->(
+            $url => sub {
+                my $controller = shift;
+                return $app->with_mojo($controller, $action_name);
+            } => $action_name
+        );
+    }
+}
+
+sub logout
+{
+    my $self = shift;
+
+    delete($self->session->{'login'});
+
+    $self->render_text(
+        "<h1>You are now logged-out</h1>\n",
+        layout => 'insurgent',
+        title => "You are now logged-out",
+    );
+
+    return;
+}
+
+get '/logout' => (\&logout) => "logout";
+
+shagadelic;
+
+=head1 TODO
+
+* Make sure that there are limits to the properties of a user (maximal length
+of E-mail, password, etc.).
+
+* Add a confirmation reminder feature to re-send the confirmation E-mail.
+
+* Add a way to cancel a registration using the E-mail (in case it's an unwanted
+registration.)
+
+=cut
+
+__DATA__
+
+@@ index.html.ep
+% layout 'insurgent';
+<h1>Insurgent Software's User Management Application</h1>
+
+<ul>
+% if ($self->session->{'login'}) {
+<li><a href="<%= url_for('account_page') %>">Go to Your Account</a></li>
+% } else {
+<li><a href="<%= url_for('login') %>">Login to an existing account</a></li>
+<li><a href="<%= url_for('register') %>">Register a new account</a></li>
+% }
+</ul>
+
+@@ register.html.ep
+% layout 'insurgent';
+<h1>Register an account</h1>
+<%== $register_form %>
+
+@@ login.html.ep
+% layout 'insurgent';
+<h1>Login form</h1>
+<%== $login_form %>
+
+@@ account.html.ep
+% layout 'insurgent';
+<h1>Account page for <%= $email %></h1>
+
+<h2 id="change_info">Change User Information</h2>
+
+<%== $change_user_info_form %>
+
+@@ password_reset.html.ep
+% layout 'insurgent';
+<h1>Reset Your Password</h1>
+
+<p>
+The form below allows you to reset your password. Please enter the E-mail
+with which you registered.
+</p>
+
+<%== $password_reset_form %>
+
+@@ handle_password_reset.html.ep
+% layout 'insurgent';
+<h1>Reset Your Password</h1>
+
+<p>
+The form below allows you to reset your password. Please enter your new
+password.
+</p>
+
+<%== $handle_password_reset_form %>
+
+
+@@ layouts/insurgent.html.ep
+<!doctype html><html>
+    <head>
+    <title><%= $title %> - Insurgent-Auth</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen, projection" title="Normal" />
+    </head>
+    <body>
+    <div id="status">
+    <ul>
+% if ($self->session->{'login'}) {
+    <li><b>Logged in as <%= $self->session->{'login'} %></b></li>
+    <li><a href="<%= url_for('account_page') %>">Account</a></li>
+    <li><a href="<%= url_for('logout') %>">Logout</a></li>
+% } else {
+    <li><b>Not logged in.</b></li>
+    <li><a href="<%= url_for('login') %>/">Login</a></li>
+    <li><a href="<%= url_for('register') %>">Register</a></li>
+% }
+    <li><a href="<%= url_for('password_reset') %>">Password Reset</a></li>
+    </ul>
+    </div>
+    <%== content %>
+    </body>
+</html>
+
+-----------------------
+
+What I like about it
+--------------------
+
+* Easy to install (due to the lack of dependencies).
+
+* Mostly bug-free.
+** The code appears to be of good quality.
+
+* Results in brief, yet easy to understand code.
+
+What I don't like about it
+--------------------------
+
+* Too many reinvented wheels to the ones on CPAN.
+** Possibly rounder but still different.
+
+* Slightly inconsistent API with many "Don't-do-exactly-what-I-meanerism."
+
+* I found the documentation lacking, and often had to resort to reading
+or debugging the source.
+
+* "I just work here." - I got paid for doing a Mojolicious::Lite project
+and was instructed to use Mojolicious which I did.
+** I got paid to work with much worse technologies, though.
+
+Verdict
+-------
+
+* The reinvented wheels is a deal breaker for me.
+
+* Mojolicious seems like a nice try, and I'm happy to get paid writing
+Mojolicious code, but it's still not my pot at the end of the rainbow.
+
+* Some friends told me that http://metacpan.org/release/Dancer[Dancer] is
+nice, and it relies on premade CPAN modules.
+** No first-hand experience with it.
+

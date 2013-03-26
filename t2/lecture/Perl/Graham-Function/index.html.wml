@@ -1,0 +1,45 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "Graham’s Function Lecture" />
+
+<p>
+A presentation about finding the Graham’s function using Perl code, as a
+conclusion to a <a href="http://perl.plover.com/qotw/">Perl
+Quiz-of-the-Week</a> that was done about it.
+</p>
+
+<ul>
+<li>
+<a href="slides/"><b>The slides</b></a>
+</li>
+<li>
+<a href="g8-pl.txt">The original source</a>, that is discussed in the presentation.
+</li>
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/32132">A blog entry</a> I
+wrote about
+<cpan_self_dist d="Math-GrahamFunction" />,
+which is a CPAN module, that is derived from the original code.
+</li>
+</ul>
+
+<h2>The Code in Other Languages</h2>
+
+<ul>
+
+<li>
+<a href="http://opensvn.csie.org/shlomif/programs/lisp/graham-function/trunk/">Graham
+function calculation in Common Lisp</a>
+</li>
+
+<li>
+<a href="http://svn.pugscode.org/pugs/examples/qotw/008e/graham.pl">Port of the
+original code to Perl 6</a>
+</li>
+
+<li>
+<a href="graham.ml">Port of the original code to O’Caml</a>
+</li>
+
+</ul>

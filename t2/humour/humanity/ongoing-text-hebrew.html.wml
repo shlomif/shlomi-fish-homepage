@@ -1,0 +1,20 @@
+<set-var rtl_layout=1 />
+#include "multi-lang.wml"
+<set-var shlomif_lang="he" />
+
+#include '../template.wml'
+#include "stories/blurbs.wml"
+
+<latemp_subject "”אנושות“ - הסרט - תרגום לעברית" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
+
+<h2 id="text">הטקסט של התסריט</h2>
+
+#include "screenplay-xml/rendered-html/Humanity-Movie-hebrew.html"
+
+<div class="english">
+<humanity_licensing />
+</div>

@@ -1,0 +1,278 @@
+#include '../template.wml'
+<latemp_subject "Links against MySQL" />
+
+<p>
+<b>Last Updated:</b> 7-December-2010
+</p>
+
+<ol>
+
+<li>
+<a href="http://sql-info.de/mysql/gotchas.html">MySQL Gotchas</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~merlyn/journal/11202">Randal Schwartz -
+“PostgreSQL and MySQL - better explained”</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~merlyn/journal/30002">Randal Schwartz -
+“Misquoting JWZ about databases”</a> - also see the commentary.
+</li>
+
+<li>
+
+Bagel Belly Blog:<br />
+
+<ol>
+<li>
+<a href="http://www.andrewsavory.com/blog/archives/000266.html">MySQL sucks</a>
+</li>
+<li>
+<a href="http://www.andrewsavory.com/blog/archives/000559.html">“MySQL makes
+me sick”</a>
+</li>
+<li>
+<a href="http://www.andrewsavory.com/blog/archives/000942.html">MySQL is a
+PITA</a>
+</li>
+<li>
+<a href="http://www.andrewsavory.com/blog/archives/000967.html">Die,
+MySQL, die!</a>
+</li>
+</ol>
+
+</li>
+
+<li>
+<a href="http://use.perl.org/~Smylers/journal/34246">Smylers - When
+MySQL Bites: Quirks to Watch Out For</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/34631">Ovid: MySQL Bug of the Day:
+Right Joins</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/35752">Ovid: MySQL Pain of the
+Day</a> - subqueries.
+</li>
+
+<li>
+<a href="http://idkn.blogli.co.il/archives/209">Ido Kanner - “The Cry of the
+Dolphins”</a> - about incompatibility between the various MySQL storage backends.
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/35786">Ovid: MySQL Bug of the
+Day</a> - AUTO_INCREMENT keys lock the entire table.
+</li>
+
+<li>
+<a href="http://forge.mysql.com/wiki/BitKeeper">MySQL and BitKeeper</a> -
+MySQL uses <a href="http://better-scm.shlomifish.org/bk/">BitKeeper, which is
+a proprietary version control system controlled by an abusive company</a>.
+</li>
+
+<li>
+<a href="http://digg.com/programming/Sometimes_MySQL_Sucks_So_Much_that_You_Need_PostgreSQL">“Sometimes MySQL Sucks so much that You Need PostgreSQL”</a>
+</li>
+
+<li>
+<a href="http://drbrain.livejournal.com/61705.html">drbrian: MySQL Sucks</a>
+- some “lovely gems from the MySQL reference manual”.
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=08/07/23/1234203">“Slashdot:
+Slimmed Down MySQL Offshoot Drizzle is Built for the Web”</a> - the
+thread contains many insightful comments.
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/37398">“Pulling the MySQL Triggers”
+by Ovid</a>.
+</li>
+
+<li>
+<a href="http://art-blog.no-ip.info/newpress/blog/post/174">“An Unpleasant
+Surprise from MySQL” by Artyom Tonkikh</a> (in Hebrew) (19-September-2008)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=08/10/08/2230221">“David
+Axmark Resigns From Sun”</a> (08-October-2008)
+</li>
+
+<li>
+<a href="http://www.wikivs.com/wiki/MySQL_vs_PostgreSQL">MySQL vs. PostgreSQL on WikiVS</a><br />
+<ul>
+<li>
+<a href="http://idkn.wordpress.com/2008/10/16/mysql-vs-postgresql/">Coverage
+on Ido Kanner’s blog</a> (in Hebrew).
+</li>
+</ul>
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/37686">Ovid - The Daily MySQL
+Hate - TRUNCATE should not be DELETE</a>
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/37817">Ovid - “Tests I should
+Not Have to Write (for MySQL)”</a>
+</li>
+
+<li>
+<a href="http://lwn.net/Articles/308991/">Monty on MySQL 5.1</a> (01-December-2008)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=08/12/01/1627257">“MySQL
+5.1 Released, Not Quite Up To Par”</a> (01-December-2008)
+</li>
+
+<li>
+<a href="https://fossbazaar.org/content/josh-berkus-two-great-open-source-databases-comparison-2008-06-26">“Josh Berkus: Two Great Open Source Databases Comparison”</a>
+</li>
+
+<li>
+<a href="http://lwn.net/Articles/309243/">“MySQL 5.1 and Development
+Models”</a> (03-December-2008)
+</li>
+
+<li>
+<a href="http://use.perl.org/~jdavidb/journal/38019">“What do you think
+about case-sensitive databases?”</a> - by jdavidb on use.perl.org
+(04-December-2008)
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/38546">“Today’s
+Database Nightmare”</a> by Ovid on use.perl.org (24-February-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~davorg/journal/38549">“MySQL Stupidity” on
+davorg’s use.perl.org blog</a> (25-February-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/38563">Ovid: “Throwing Away
+All of My Trigger Work”</a> (27-February-2009)
+</li>
+
+<li>
+<a href="http://use.perl.org/~Ovid/journal/38578">Ovid: “Trigger and SUPER
+and Ovid’s *LIES*!”</a> (02-March-2009)
+</li>
+
+<li>
+<a href="http://idkn.wordpress.com/2009/03/02/mysql-again/">Ido Kanner:
+“Problems with MySQL Again”</a> (in Hebrew) (02-March-2009)
+</li>
+
+<li>
+<a href="http://blog.some-abstract-type.com/2009/03/mysql-51-mysqlhotcopy-and-log-tables.html">Some
+Abstract Type! - “MySQL 5.1 mysqlhotcopy and log tables: check your backup
+scripts!”</a> (12-March-2009)
+</li>
+
+<li>
+<a href="http://idkn.wordpress.com/2009/03/15/why-i-find-mysql-to-be-so-bad/">Ido
+Kanner: “Why I find MySQL to be so bad”</a> (15-March-2009)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=09/03/30/228214">Slashdot:
+“Locating the Real MySQL”</a> (30-March-2009)
+</li>
+
+<li>
+<a href="http://blogs.computerworld.com/which_sql_is_mysql">Steven J.
+Vaughan-Nichols: “Which SQL is MySQL?”</a> (31-March-2009)
+</li>
+
+<li>
+<a href="http://lwn.net/Articles/329626/">LWN.net: “A Look at the MySQL
+Forks”</a> (22-April-2009)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=09/04/23/134208">“Sun
+Announces New MySQL, Michael Widenius Forks”</a> - on Slashdot (23-April-2009)
+</li>
+
+<li>
+<a href="http://www.linuxjournal.com/content/who-owns-commercial-open-source-%E2%80%93-and-can-forks-work">“Who
+Owns Commercial Open Source – and Can Forks Work?”</a> - by Glyn Moody,
+on LinuxJournal (23-April-2009)
+</li>
+
+<li>
+<a href="http://www.osnews.com/story/21535/MySQL_Forked_Beyond_Repair_">“MySQL:
+Forked Beyond Repair?”</a> - on OSNews.com (21-May-2009)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/article.pl?sid=09/05/21/2040220">“Has
+MySQL Forked Beyond Repair?”</a> - on Slashdot (21-May-2009)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/story/09/12/13/1530211/Widenius-Warns-Against-MySQL-Falling-Into-Oracles-Hands">“Widenius Warns Against MySQL Falling Into Oracle’s Hands”</a> - on Slashdot (13-December-2009)
+</li>
+
+<li>
+<a href="http://developers.slashdot.org/story/10/09/20/2219254/PostgreSQL-90-Released">“PostgreSQL
+9.0 Released”</a> - on Slashdot (20-September-2010).
+</li>
+
+<li>
+<a href="http://art-blog.no-ip.info/newpress/blog/post/270">Artyom Tonkikh:
+“MySQL is indeed a toy -
+or rollback mysteriously does not work with InnoDB”</a> - in Hebrew.
+(27-November-2010)
+</li>
+
+<li>
+<a href="http://blogs.perl.org/users/ovid/2012/09/my-top-mysql-gripes.html">Ovid:
+“My Top MySQL Gripes”</a> - on blogs.perl.org (5-September-2012).
+</li>
+
+</ol>
+
+<h2 id="humour">Humour</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://use.perl.org/~grantm/journal/35855">A Postgres Song by
+Grant McLean</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://sqlanywhere.blogspot.com/2008/03/unpublished-mysql-faq.html">“SQL
+Anywhere: Unpublished MySQL FAQ”</a>
+</p>
+</li>
+
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-10-24
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

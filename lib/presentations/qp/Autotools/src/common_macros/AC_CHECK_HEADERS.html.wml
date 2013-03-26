@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>AC_CHECK_HEADERS</tt> check for the existence of the header files
+specified as the first argument.
+</li>
+
+<li>
+If they are found the preprocessor macro <tt>HAVE_[header]</tt> (in all caps)
+is defined.
+</li>
+</points>
+

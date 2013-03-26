@@ -1,0 +1,73 @@
+References to functions
+    Taking the reference of a function - \&mysub
+    Calling a function from its reference - &{$ref}(...) or $ref->( ... )
+    Dynamic References to functions - sub { ... }
+    Behaviour of functions inside functions (lexical scoping)
+        Demonstrate the dispatch function
+Modules
+    Specifying a namespace with the package directive
+        The :: as a namespace separator
+        Where to find a module
+    importing modules - use My::Module;
+    Accessing functions from a different module - My::Module::func().
+    Exporting Variables
+        use Exporter;
+        @EXPORT
+        @EXPORT_OK
+    Importing variables - use vars qw(...); and $My::Module::var.
+        Why "my" won't work.
+    BEGIN and END - global constructor and destructor for the package.
+Objects
+    Intro: what are objects and how they are used
+    Intro 2: how it works behind the scenes
+        The object is a reference to a hash
+        Its members are the hash elements
+        The reference is "blessed" to be associated with a module
+        That module contain the methods of the object's class
+        When a method name is called with $obj->method() it is searched
+            for starting at a module class.
+        Note: in perl, passing the reference to the object is done
+            explicitily and it is the first argument of a method.
+    Object use: (demonstrate on Data::Dumper, CGI)
+        Initializing a new object
+        Accessing class members using $obj->{'member'}
+        Calling methods of an object using $obj->method( @args)
+    Making your own objects:
+        The constructor:
+#############
+        sub new
+        {
+            my $class = shift;
+            my $self = {};
+            bless $self, $class;
+
+            $self->initialize();
+
+            return $self;
+        }
+############
+            Explanation
+                Since calling is CGI->new() then CGI is the first argument to
+                    to function
+                bless
+                After the blessing is done one can call methods on it.
+            Note: its name need not be "new"
+        Methods:
+##############
+            sub add_elems
+            {
+                my $self = shift;
+
+                foreach my $elem (@_)
+                {
+                    $self->{'sum'} += $elem;
+                    $self->{'sum_squares'} += $elem**2;
+                    $self->{'N'}++;
+                }
+            }
+###############
+    Object Inheritance:
+        The use vars qw(@ISA); @ISA=qw(My::Class Parent); scheme
+    Destructors
+        The DESTROY method
+    isa() and can()

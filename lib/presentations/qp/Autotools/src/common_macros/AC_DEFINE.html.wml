@@ -1,0 +1,27 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+The macro <tt>AC_DEFINE</tt> can be used anywhere in the script, to define
+a C preprocessor macro.
+</li>
+
+<li>
+It accepts an optional argument indicating the value of the macro.
+</li>
+
+<li>
+If you want to do shell expansion for the value,
+use <tt>AC_DEFINE_UNQUOTED</tt> instead.
+</li>
+
+<li>
+Some Examples:
+</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/common_macros/AC_DEFINE/configure.in" />
+</quadpres_code_block>
+

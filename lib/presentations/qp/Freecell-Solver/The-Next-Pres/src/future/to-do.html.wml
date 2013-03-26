@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<points>
+<li>
+Incorporating
+<a href="http://members.tripod.com/professor_tom/archives/">Patsolve</a>'s
+logic.
+</li>
+<li>
+Thread-enabling (true system threads that can make use of SMP capabilities).
+</li>
+<li>
+Writing an automatic testing framework.
+</li>
+<li>
+Safety from failed memory allocations. Currently if a malloc/realloc call
+fails, it can crash the program.
+</li>
+<li>
+Converting to Java.
+</li>
+<li>
+Others:
+<a href="http://fc-solve.shlomifish.org/to-do.html">http://fc-solve.shlomifish.org/to-do.html</a>
+</li>
+</points>

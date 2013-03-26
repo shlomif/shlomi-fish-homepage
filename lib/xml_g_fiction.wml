@@ -1,0 +1,22 @@
+;;; This header contains macros related to XML-Grammar-Fiction ,
+;;; XML-Grammar-Screenplay , Fiction-Text , Fiction-XML, Screenplay-Text
+;;; and Screenplay-XML .
+
+<define-tag link_to_fiction_text>
+<preserve base desc />
+<set-var %attributes />
+<a href="<get-var base />.txt"><get-var desc />Source in text format</a>
+(requires
+<a href="$(ROOT)/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction’s</a> Fiction-Text processing, in order to render)
+<restore base desc />
+</define-tag>
+
+<define-tag link_to_screenplay>
+<preserve base desc />
+<set-var %attributes />
+<a href="<get-var base />.txt"><get-var desc />Source in text format</a>
+(requires
+<a href="$(ROOT)/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction’s</a> Screenplay-Text processing, in order to render)
+<restore base desc />
+</define-tag>
+

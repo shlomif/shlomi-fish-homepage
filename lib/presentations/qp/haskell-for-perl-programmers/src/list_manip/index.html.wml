@@ -1,0 +1,84 @@
+#include 'template.wml'
+
+<points>
+<li>
+In Haskell, strings are represented and treated as linked lists of characters.
+Thus, all the functions that operate on lists, operate on strings as well.
+</li>
+<li>
+Here are some common routines:
+</li>
+</points>
+
+<table class="border1" summary="first column is the function name; second is its description">
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><tt>head</tt></td>
+<td>The first element in the list</td>
+</tr>
+<tr>
+<td><tt>tail</tt></td>
+<td>The list containing the second to the other elements</td>
+</tr>
+<tr>
+<td>
+<tt>length</tt>
+</td>
+<td>
+The length of the list.
+</td>
+</tr>
+<tr>
+<td>
+<tt>reverse</tt>
+</td>
+<td>
+A list whose elements are reversed.
+</td>
+</tr>
+<tr>
+<td>
+<tt>take num_elems list</tt>
+</td>
+<td>
+Extracts a list with the first <tt>num_elems</tt> from <tt>list</tt>.
+</td>
+</tr>
+<tr>
+<td>
+<tt>drop num_elems list</tt>
+</td>
+<td>
+Extracts the list starting with the num_elems+1's element.
+</td>
+</tr>
+<tr>
+<td>
+<tt>filter callback list</tt>
+</td>
+<td>
+Extracts the list of elements that match a certain callback. A kin to
+<tt>grep</tt> in Perl.
+</td>
+</tr>
+<tr>
+<td>
+<tt>map callback list</tt>
+</td>
+<td>
+transforms each element in the list according to the callback
+</td>
+</tr>
+<tr>
+<td>
+<tt>a ++ b</tt>
+</td>
+<td>
+Concatenates the lists a and b
+</td>
+</tr>
+</table>
+

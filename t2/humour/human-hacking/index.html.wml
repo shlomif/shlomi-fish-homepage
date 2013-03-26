@@ -1,0 +1,305 @@
+#include '../template.wml'
+#include "stories/stories-list.wml"
+#include "xml_g_fiction.wml"
+
+<latemp_subject "The Human Hacking Field Guide" />
+<latemp_more_keywords "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" />
+
+<h2 id="tagline">Who said girls can’t code?</h2>
+
+<hhfg_logo />
+
+<p>
+Jennifer is a trendy and popular high school senior who is living and
+studying in the vicinity of Los Angeles. Her best friend, Taylor, convinces her
+to try to become a developer of open source software. He puts her
+under the tutorship of a different friend of his, the female open source
+contributor Eve, who prefers to be called “Erisa”, and who is a self-conscious
+and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
+determined to learn how to become an open source developer from Erisa, but
+there are some surprises along the road.
+</p>
+
+<define-tag old_desc>
+<p>
+An unlikely female computer <a
+href="http://www.catb.org/~esr/faqs/hacker-howto.html">hacker</a> (=
+software enthusiast, not a computer intruder)-wannabe is getting taught by an
+even more unlikely female computer hacker. It takes place in Los Angeles,
+California and is written in English.
+</p>
+</define-tag>
+
+<p>
+The story (a <a href="http://en.wikipedia.org/wiki/Novella">novella</a>)
+is original and complete, and is made available, along with its
+source code, under
+<a href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative
+Commons Attribution ShareAlike License (Unported)</a>, either version 3.0,
+or at your option, any later version. Share, build upon, even sell,
+and Enjoy! (As long as you keep the derivatives under the same licence.)
+</p>
+
+<p>
+<b>Update:</b> (12 April, 2011) there’s now a new
+<a href="#version_2">version 2</a> of the story with some improvements to
+the plot and style, and it’s now written using version 5 of DocBook/XML. I’m
+planning some smaller future improvements, but the story should be OK as it is.
+</p>
+
+<h2 id="text">The Text</h2>
+
+<h3 id="version_2">Version 2 (Most recent)</h3>
+
+<ul>
+
+<li>
+<a href="human-hacking-field-guide-v2/"><b>HTML to read online</b></a>
+</li>
+
+<li>
+<a href="human-hacking-field-guide-v2.xml">DocBook 5/XML source</a>
+</li>
+
+<li>
+<a href="human-hacking-field-guide-v2.pdf">Adobe PDF</a> (intended as a
+self-contained document - please don’t print it.).
+</li>
+
+</ul>
+
+<h4 id="version_2_hebrew">Hebrew Translation</h4>
+
+<ul>
+
+<li>
+<a href="hebrew-v2.html">Translation to Hebrew</a> - by the author.
+</li>
+
+<li>
+Sources:<br />
+
+<ul>
+
+<li>
+<link_to_fiction_text base="human-hacking-field-guide-hebrew-v2" />
+</li>
+
+<li>
+<a href="human-hacking-field-guide-hebrew-v2.db-postproc.xslt">XSLT
+stylesheet</a> to post-process the resultant DocBook 5/XML source.
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+<h4 id="version_2_arabic">Arabic Translation</h4>
+
+<ul>
+
+<li>
+<a href="arabic-v2.html">Translation to Literary Arabic</a> - by Vieq.
+</li>
+
+<li>
+<a href="hhfg-v2-arabic.odt">OpenDocument Text Source</a>
+</li>
+
+</ul>
+
+<h2 id="source_repo">Source Repository</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://github.com/shlomif/Human-Hacking-Field-Guide">Source Repository on GitHub</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://bitbucket.org/shlomif/human-hacking-field-guide-graphics">Graphics Repository on BitBucket.org</a> - contains an ad, etc.
+</p>
+</li>
+
+</ul>
+
+<h2 id="see_also">See Also</h2>
+
+<ol>
+
+<li>
+<p>
+<a href="http://teachingopensource.org/index.php/How_to_start_contributing_to_or_using_Open_Source_Software">How
+to start contributing to or using Open Source Software</a> -a tutorial by
+me and some other people introducing people to the open source world. (Part of
+the <a href="http://teachingopensource.org/">Teaching Open Source</a>
+initiative).
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+“We, the Living Dead”</a> - a screenplay for an original
+<i>Star Trek: Deep Space Nine</i> episode, which also predominantly features
+software hackerdom and female geeks.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">The <i>Buffy the Vampire Slayer</i> television series</a> - I believe the
+characters of Jennifer and Erisa in <i>The Human Hacking Field Guide</i>
+were heavily inspired by those of
+<a href="http://en.wikipedia.org/wiki/Buffy_Summers">Buffy</a>
+and <a href="http://en.wikipedia.org/wiki/Faith_%28Buffy_the_Vampire_Slayer%29">Faith</a> from the television show, respectively.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.catb.org/esr/faqs/hacker-howto.html">“How To Become
+A Hacker” by Eric Steven Raymond</a> - an insightful document, although
+somewhat too elitist and patronising, which is featured, and criticised,
+in my story, and provided some inspiration for it. There is a lot of
+other very good documents on
+<a href="http://www.catb.org/esr/">Mr. Raymond’s site</a>, and (if you have
+the stomach to tolerate it) on <a href="http://esr.ibiblio.org/">his “Armed
+and Dangerous” blog</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://htmldog.com/">“HTML Dog: HTML and CSS Tutorials”</a> -
+some very good HTML and CSS tutorials.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create
+a Great Personal Home Site”</a> - my essay about creating a personal web site.
+</p>
+</li>
+
+
+<li>
+<p>
+<a href="http://freenode.net/">Freenode</a> - an IRC network dedicated for
+discussing Free and Open Source Software projects, and other collaborative
+projects, that is featured in the story. <b>Warning:</b> IRC is addictive.
+</p>
+</li>
+
+</ol>
+
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>
+The stylesheet and images used for the background of the text are based
+on the
+<a href="http://www.oswd.org/viewdesign.phtml?id=1959&amp;referer=%2Fsearch.php%3Fsearchstring%3Dtwin%2Btriangles%26tab%3Ddescription">Twin
+Triangles</a> style from <a href="http://www.oswd.org/">Open Source Web
+Design</a>.
+</p>
+
+<p>
+Thanks go to Uri Bruck, Gai Borshack, Omer Zak, Drew Dexter and others who
+have read and reviewed early, incomplete, drafts of this story.
+</p>
+
+<h2 id="conclusions"><a href="conclusions/">Conclusions and Reviews</a></h2>
+
+<p>
+Read these only <b>after</b> you have finished reading the story.
+</p>
+
+<h2 id="spin-offs">Spin-offs and Derivative Works</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://hhfg.wikia.com/"><b>The <i>Human Hacking Field Guide</i>
+Wikia</b></a>
+- a community attempt to improve the original story, under the CC-by-sa.
+</p>
+
+<p>
+For context see
+<a href="http://community.livejournal.com/linux/1860210.html">the
+discussion</a> when I mentioned the story on the LiveJournal.com Linux
+community and <a href="http://community.livejournal.com/linux/1860830.html">the
+post</a> about “Remixing The Human Hacking Field Guide”. I’m not sure I liked
+the direction this spin-off / remix had initially taken but you may still like
+it.
+</p>
+</li>
+
+<li>
+<p>
+<a href="#version_2_arabic"><b>Arabic translation</b></a> by Vieq.
+</p>
+</li>
+
+</ul>
+
+<p>
+If you enjoyed the story, but still think you can do better, I would love to
+see more spin-offs, from making the story a little different, to writing
+sequels, prequels, etc. to video or audio versions of it. If you find
+the CC-by-sa too permissive or too restrictive to license the derivative
+work under, then <a href="$(ROOT)/me/contact-me/">drop me
+a line</a> and we may be able to negotiate a better, commercial, licence.
+</p>
+
+<h2 id="old_versions">Old Versions</h2>
+
+<h3 id="version_1">Version 1 (Old)</h3>
+
+<ul>
+<li>
+<a href="human-hacking-field-guide/">HTML to read online</a>
+</li>
+<li>
+<a href="human-hacking-field-guide.xml">DocBook/XML source</a>
+</li>
+</ul>
+
+<h2 id="ads">Ads</h2>
+
+<table class="visible">
+<tr>
+<th>Image</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>
+<img src="images/hhfg-ad.svg.png" alt="skyscraper ad for HHFG" />
+</td>
+<td>
+<p>
+Skyscraper (160 * 600 pixels) ad reading “The Human Hacking Field Guide ;
+Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logos.
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://bitbucket.org/shlomif/human-hacking-field-guide-graphics">Source</a> - in the <tt>hhfg-ad.svg</tt> file.
+</p>
+</li>
+
+</ul>
+</td>
+</tr>
+</table>

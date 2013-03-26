@@ -1,0 +1,143 @@
+#include '../template.wml'
+
+<latemp_subject "Bugs in a Square" />
+
+<p>
+I first encountered this problem in the science journal of a laboratory
+building I used to study physics in. It is rather well known, and I found
+some other solutions to it. One used differential equations which is rather
+high stuff. The other is “intuitive”, and so lacks enough support, so it
+didn’t satisfy me either. Anyway, I devised my own solution beforehand.
+</p>
+
+<p>
+Here’s the riddle:
+</p>
+
+<table border="1">
+<tr><td>
+
+<p>
+Four bugs are standing at the corners of a square. At time 0 a bell rings and
+they start moving towards each other. Each bug advances in the direction of the
+bug which was initially at the position clockwise from it.
+</p>
+
+<p>
+Assuming the square is 1 meter long, and the bugs are moving in the velocity of
+1 meter per second, how long will it take for the bugs to meet in the centre
+of the square?
+</p>
+
+</td></tr>
+</table>
+
+The solution can be found some space below:
+<longblank />
+
+
+<h2>Solution:</h2>
+
+<img src="bugs.gif" alt="Bugs Path Illustration" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; " />
+
+<p>
+I’ll use the following model to simplify the problem: suppose the bugs don’t
+move towards each other infinitesimally, but rather move in a straight line, and
+then stop, and then move again toward their new positions, and so forth. The bugs
+move toward their initial position until they reach a position which is in proportion
+p to the initial distance between them. Then they move again, towards a position which
+is in proportion p to their distance, and so forth.
+</p>
+
+
+<p>
+Thus they form an infinite series of squares inside each other. You can see an
+illustration of this scheme to the right of this text for the proportion p=0.15.
+</p>
+
+
+
+
+
+<p>
+Now, if the length of a given square is a, then the length of the square inside it is
+(according to Pythagoras theorem): square-root((p*a)^2+((1-p)*a)^2) =
+a*square-root(2*p^2-2*p+1). The lengths of the squares form a decreasing geometrical
+series, with that proportion. Thus the length of the path a bug travel until they meet is:
+</p>
+
+
+<p>
+p * a1 / [ 1 - square-root(2*p^2-2*p+1) ]
+</p>
+
+
+<p>
+This is according to the formula that the sum of an infinite decreasing geometric series is
+a1 / (1-q) where a1 is the value of its first item and q is the proportion between
+two consecutive items.
+</p>
+
+
+<p>
+Now, to find the length an infinitesimal bug will travel, we just limit p to 0:
+</p>
+
+
+<pre>
+
+        p*a1
+lim ---------------   =
+p-&gt;0   ____________
+    1-V 2*p^2-2*p+1
+
+
+                            _____________
+          p*a1           1+V 2*p^2-2*p+1
+lim  ----------------  * -----------------   =
+p-&gt;0    ____________        _____________
+     1-V 2*p^2-2*p+1     1+V 2*p^2-2*p+1
+
+
+
+                ____________
+        a1*p*(1+V 2*p^2-2*p+1)
+lim     ---------------------  =
+p-&gt;0
+         1 - 2*p^2 + 2*p - 1
+
+
+               _____________
+        a1 * (1+V 2*p^2-2*p+1 )
+lim     ----------------------  =
+p-&gt;0       2 - 2*p
+
+
+                 _____________
+        a1 * (1+V 2*0-2*0+1  )
+lim     ---------------------  =
+p-&gt;0      2 - 2*0
+
+
+
+   a1 * (1+1)
+ ------------- = a1
+      2
+
+
+</pre>
+
+<p>
+Therefore, the length of a bug’s path is equal to the length of the original
+square’s side. The time it will take a 1 meter per second fast bugs who stand at
+the corner of a 1*1 meter square to meet is 1/1 = 1 second.
+</p>
+
+
+<p>
+Here’s <a href="bugs.scm">a script</a>
+for <a href="http://www.gimp.org/">Gimp</a> version 1.2
+that generates a series of squares inside squares, and optionally marks the
+path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
+script for Gimp version 2.2</a>.
+</p>

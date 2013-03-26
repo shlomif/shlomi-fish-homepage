@@ -1,0 +1,79 @@
+<define-tag bitbucket_cpan_dist_links endtag="required">
+
+<preserve bitbucket_url dist freecode_url />
+
+<set-var %attributes />
+
+<ul>
+
+<li>
+<a href="<get-var bitbucket_url />">BitBucket.org
+Repository</a> - contains version control and other resources.
+</li>
+
+<li>
+<a href="http://metacpan.org/release/<get-var dist />"><get-var dist />
+on MetaCPAN</a> - download, documentation, browsing and information.
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/<get-var dist />/"><get-var dist />
+on search.cpan.org</a>.
+</li>
+
+<if "<get-var freecode_url />" "<li><a href="<get-var freecode_url />">Freecode Record</a></li>" />
+
+%body
+
+</ul>
+
+<restore bitbucket_url dist freecode_url />
+
+</define-tag>
+
+<define-tag cpan_mod whitespace="delete" endtag="required">
+<preserve m />
+<set-var %attributes />
+<a href="http://metacpan.org/module/<get-var m />">%body</a>
+<restore m />
+</define-tag>
+
+<define-tag cpan_self_mod whitespace="delete">
+<preserve m />
+<set-var %attributes />
+<cpan_mod m="<get-var m />"><get-var m /></cpan_mod>
+<restore m />
+</define-tag>
+
+<define-tag cpan_dist whitespace="delete" endtag="required">
+<preserve d />
+<set-var %attributes />
+<a href="http://metacpan.org/release/<get-var d />">%body</a>
+<restore d />
+</define-tag>
+
+<define-tag cpan_self_dist whitespace="delete">
+<preserve d />
+<set-var %attributes />
+<cpan_dist d="<get-var d />"><get-var d /></cpan_dist>
+<restore d />
+</define-tag>
+
+<define-tag cpan_b_self_dist whitespace="delete">
+<preserve d />
+<set-var %attributes />
+<cpan_dist d="<get-var d />"><b><get-var d /></b></cpan_dist>
+<restore d />
+</define-tag>
+
+<define-tag cpan_homepage whitespace="delete">
+<preserve who />
+<set-var %attributes />
+http://metacpan.org/author/<upcase "<get-var who/>" />
+<restore who />
+</define-tag>
+
+<define-tag shlomif_cpan whitespace="delete">
+<cpan_homepage who="shlomif" />
+</define-tag>
+

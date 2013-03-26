@@ -1,0 +1,103 @@
+#include '../template.wml'
+
+#include "cpan_dists.wml"
+
+<latemp_subject "Make www.yjobs.co.il Work with Mozilla-based Browsers" />
+
+<p>
+This is a local HTTP proxy to make
+<a href="http://www.yjobs.co.il/">http://www.yjobs.co.il/, an Israeli job
+board</a> work with Mozilla-based browsers (such as <a href="http://en.www.mozilla.com/en/firefox/">Firefox</a>). yjobs.co.il is by default
+incompatible with such browsers. It may be able to work against other
+alternative browsers such as Konqueror, Safari or Opera, but is not guaranteed
+to do so.
+</p>
+
+<p>
+It is written in <a href="http://www.perl.org/">Perl</a> and uses the
+<cpan_dist d="HTTP-Proxy">CPAN HTTP-Proxy module</cpan_dist> which needs to be
+installed prior to running the proxy. More
+instructions for deploying it are provided in a comment at the beginning
+of the file.
+</p>
+
+<p>
+Please report any problems with it to <a href="mailto:<main_email />">my
+email</a>.
+</p>
+
+<p>
+Happy job hunting!
+</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+<li>
+<a href="downloads/yjobs-proxy-0.1.0.pl.gz">Download
+yjobs-proxy-0.1.0.pl.gz</a> (Uncompress with gunzip)
+</li>
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p>
+The program includes some JavaScript code that was copied from the
+yjobs.co.il site and modified. The rest of the it is subject to
+the terms of the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11
+licence</a>, which is a Public Domain-like open-source licence.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+The following projects helped in creating this script:
+</p>
+
+<ul>
+
+<li>
+<a href="http://www.greasespot.net/">Greasemonkey</a> - I initially thought
+I could correct yjobs.co.il using Greasemonkey, but that turned to be a
+dead-end, and the correct version of the fix is neither based on Greasemonkey
+nor requires it.
+</li>
+
+<li>
+<cpan_self_dist d="HTTP-Proxy" /> - an
+excellent CPAN module for building your own HTTP proxies in Perl.
+</li>
+
+<li>
+<a href="http://www.getfirebug.com/">Firebug</a> - helped in tracing some
+Mozilla incompatibilities in the JavaScript code of yjobs.
+</li>
+
+<li>
+<a href="http://www.mozilla.org/projects/venkman/">The Venkman
+JavaScript debugger</a> - also helped in debugging the yjobs code.
+</li>
+
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+
+<li>
+<a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=5962">Initial announcement in Whatsup.org.il</a> (in Hebrew).
+</li>
+
+<li>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg50555.html">Initial
+announcement in the Linux-IL mailing list</a> (in English).
+</li>
+
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/35179">“Making Websites
+Behave using Perl - The yjobs-proxy Story”</a> - a use.perl.org blog post in
+English about how the initial version of the script was developed.
+</li>
+
+</ul>
+

@@ -1,0 +1,76 @@
+#include '../template.wml'
+
+#include "cpan_dists.wml"
+
+<latemp_subject "The XML-Grammar Meta-Project" />
+
+<p>
+The XML-Grammar project aims to define several XML grammars for specialised
+tasks, with schemas, converters and processors. We use the <a
+href="http://web-cpan.shlomifish.org/">Web-CPAN meta-project</a>
+for version control and other services. Our preferences are to write the
+code in Perl,
+<a href="http://en.wikipedia.org/wiki/XSL_Transformations">XSL Transformations
+(XSLT)</a>,
+and <a href="http://www.relaxng.org/">RELAX NG</a> for the schema.
+</p>
+
+<p>
+We try to write XML-Grammar in a test-driven-development (TDD) fashion, where
+we write tests before implementing new features or fixing bugs.
+</p>
+
+<p>
+Sometimes, we define simpler and less verbose <b>text-based
+markup languages</b> that are in turn converted to the XML.
+</p>
+
+<h2 id="list-of-projects">List of Modules</h2>
+
+<ol>
+
+<li>
+<a href="Base/">XML-GrammarBase</a> - base classes and roles/traits, for
+processing XML grammars.
+</li>
+
+<li>
+
+<a href="http://web-cpan.shlomifish.org/modules/XML-CompareML/">XML-CompareML</a>
+- an XML grammar for managing multi-system and multi-item comparisons. (Not
+in the XML-Grammar namespace for historical reasons.)
+</li>
+
+<li>
+<a href="Fiction/">XML-Grammar-Fiction</a> - for authoring prose (such as
+stories, novellas or novels). Includes a convenient well-formed text format.
+<br />
+
+<ul>
+
+<li>
+<b>XML-Grammar-Screenplay</b> -
+for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
+and other scripts (for plays, T.V. shows, etc.). Includes a convenient
+proto-text format.
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<a href="http://web-cpan.shlomifish.org/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> -
+allows one to collect quotes (or Unix-like fortune cookies) using
+an XML grammar, with a lot of rich meta-data, and to produce XHTML and
+plain-text from them.
+</li>
+
+<li>
+<cpan_self_dist d="XML-Grammar-ProductsSyndication" /> -
+an XML grammar for creating lists of products. See
+<a href="$(ROOT)/recommendations/">my recommendations page</a> for examples.
+</li>
+</ol>
+
+

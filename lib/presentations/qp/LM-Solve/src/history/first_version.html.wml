@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<points>
+<li>
+I converted the design to an object oriented one that allowed
+solving both Minotaur and Alice Mazes as well as the Number Mazes
+that were also featured on the site.
+</li>
+<li>
+Meanwhile, I switched to using <a href="http://www.bitkeeper.com/">BitKeeper</a>
+to manage my code, because I wanted a version control system that allowed
+copying and moving files.
+</li>
+<li>
+I released LM-Solve 0.2.0 which could solve Alice Mazes, Theseus and the
+Minotaur Mazes, and Number Mazes, with either Depth-First Search or
+Breadth-First Search.
+</li>
+</points>

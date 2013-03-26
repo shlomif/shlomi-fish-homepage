@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+/*
+ * original.css -- The first stylesheet.  From the author: "This is a
+ * sample only, and probably is quite offensive in terms of taste and
+ * style."  Background: off-white, fonts: Georgia, Trebuchet
+ *
+ * Contributed 2001 by Sean Kelly
+ * http://xmlresume.sourceforge.net
+ */
+
+// This dummy style must be here because the xml tags above cause some
+// browsers (Konqueror, Mozilla) to ignore the first style
+.dummy { background-color: white }
+
+body {
+	font-family:		Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	margin:			30px 30px 30px 30px
+	color:			black;
+	background:		#fffff3;
+}
+
+pre, code {
+	font-family:		'Monotype.com', Courier New, monospace;
+}
+
+ol li {
+	list-style-type:	decimal;
+}
+
+ol ol li {
+	list-style-type:	lower-alpha;
+}
+
+ol ol ol li {
+	list-style-type:	lower-roman;
+}
+
+h1 {
+	font-family:		Trebuchet MS, Verdana, Myriad Web, Syntax, sans-serif;
+	font-weight:		bold;
+}
+
+h2 {
+	font-family:		Trebuchet MS, Verdana, Myriad Web, Syntax, sans-serif;
+	font-size:		1.75em;
+	font-weight:		bold;
+}
+
+.bookTitle {
+	font-style:		italic;
+}
+
+.citation {
+	font-style:		italic;
+}
+
+.objectiveHeading {
+	color:			red;
+}
+
+.contactHeading {
+	color:			orange;
+}
+
+.skillareaHeading {
+	color:			#00bb00;
+}
+
+.historyHeading {
+	color:			violet;
+}
+
+.membershipsHeading {
+	color:			magenta;
+}
+
+.organization {
+	font-style:		italic;
+}
+
+.urlA {
+	font-family:		'Monotype.com', Courier New, monospace;
+	border-width:		1px;
+	border-style:		solid solid solid solid;
+	border-color:		blue;
+}
+.clearanceLevel { font-weight: bold }
+
+table.referees { width: 80% ; }
+
+</xsl:stylesheet>

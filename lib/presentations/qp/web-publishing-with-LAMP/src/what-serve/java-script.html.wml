@@ -1,0 +1,45 @@
+#include 'template.wml'
+
+<points>
+<li>
+JavaScript (now standardised as
+<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript</a>) can be used to script the contents of pages,
+change their appearance, or control their various on-place widgets.
+</li>
+<li>
+The implementation of JavaScript varies from browser to browser and sometimes
+has many bugs. Use with care.
+</li>
+<li>
+A general rule of the thumb is that your site should not depend on JavaScript.
+</li>
+<li>
+Do not use JavaScript for linking to another page, changing the appearance of
+a link on hover, generating HTML, or other things for which plain HTML
+would do.
+</li>
+</points>
+
+<h2>Examples for good uses of JavaScript</h2>
+
+<points>
+<li>
+Form Validation and Automation at the browser's side. (which does not
+preclude you from having sanity checks at the server).
+</li>
+<li>
+Games. :-)
+</li>
+<li>
+Navigation Menus. (again - the site should not depend on them).
+</li>
+</points>
+
+<h2>More about it</h2>
+
+<points>
+<li>
+I prepared a <a href="http://perl.org.il/pipermail/perl/2004-February/004178.html">discussion</a> of the pros and cons of using JavaScript in pages
+one writes.
+</li>
+</points>

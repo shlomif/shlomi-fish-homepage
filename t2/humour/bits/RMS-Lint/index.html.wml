@@ -1,0 +1,137 @@
+#include '../template.wml'
+
+<latemp_subject "Introducing RMS-Lint" />
+
+<h2>The Article Itself</h2>
+
+<h3>Introduction</h3>
+
+<p>
+A new tool aims to revolutionise the way people communicate with
+the famous free software evangelist Richard M. Stallman, (also
+known by his initials - “RMS”). Its project leader Shlomi Fish has
+more to say of it:
+</p>
+
+<blockquote>
+<p>
+<b>RMS-Lint</b> is called RMS-Lint because like most lints it warns
+on many things that are obviously not errors, because there’s a chance
+that they are. RMS-Lint is an interactive speller that runs over the
+document word by word with a sophisticated look-ahead and look-behind
+and warns the user over any word or combination of words that may
+irritate Stallman, or otherwise will be frowned upon by him.
+</p>
+</blockquote>
+
+<h3>RMS-Lint’s Rules</h3>
+
+<p>
+In accordance to the Free Software Foundation‘s
+<a href="http://www.gnu.org/philosophy/words-to-avoid.html">list of
+    words to avoid</a> and other documents available on the
+<a href="http://www.fsf.org/">FSF Site</a>, the following rules are
+recognized by RMS-Lint:
+</p>
+
+<ul>
+    <li>
+    <p>
+    Warns on every use of the term “Linux” not preceded by
+    “GNU/”. This is due to the fact that Stallman advocates using
+    “GNU/Linux” instead of just “Linux” to refer to the entire operating
+    system. It especially warns on “the Linux kernel” (because the
+    kernel part is redundant as Linux is just the kernel).
+    </p>
+    <p>
+    Legitimate use of the term “Linux” to refer to just the kernel
+    are also warned about, but can be overridden.
+    </p>
+    </li>
+    <li>
+    <p>
+    Warns on every use of the term “open source” and even the word
+    “open”. Replacements are “free software”, “free”, “revealed”,
+    “viewable”, and the boatload of synonyms from the
+    <a href="http://www.m-w.com/cgi-bin/thesaurus?book=Thesaurus&amp;va=open">the
+        Merriam-Webster Online Dictionary</a>. Also warns on the
+    terms “closed-source” or “closed”.
+    </p>
+    </li>
+    <li>
+    <p>
+    Warns on every use of the term “free” for fear it may be used
+    to imply costlessness. As for legitimate uses of the term (“free
+    as in free speech”), it should be noted that being a lint,
+    RMS-Lint attempts to cover every possible error, not just
+    the ones that actually are such. Replacements are “liberal”,
+    “libre”, “costless”, “gratis”, and you also have an option to
+    ignore it.
+    </p>
+    </li>
+    <li>
+    <p>
+    Warns on every use of the term “pirate” or “piracy”. It is our
+    belief that when talking to Dr. Stallman, people won’t usually
+    wish to talk about the sea-faring robbers, but instead on
+    illegitimate copying of one form of media or another. Thus,
+    RMS-Lint warns on every such use and suggests the
+    alternatives of “illegal copier/copying”, or “buccaneer”.
+    </p>
+    </li>
+    <li>
+    <p>
+    Warns on every use of “Intellectual Property” or “IP” (a common
+    short form of it). The developers of RMS-Lint realize that IP
+    can also mean the “Internet Protocol” (as in “IP address”, “my
+    IP is ‘192.168.1.1’”), but we believe that when corresponding to
+    RMS, such use will be relatively uncommon, and does not justify
+    risking mentioning “intellectual property” to him.
+    </p>
+    </li>
+    <li>
+    And much, much more…
+    </li>
+</ul>
+
+<h3>Response to RMS-Lint</h3>
+
+<p>
+<a href="http://www.catb.org/~esr/">Eric S. Raymond</a>, a long time
+friend of Stallman, and the chief leader of the open source movement,
+expressed a great deal of content from the availability of this tool.
+“I’ve been waiting for such a thing all my life. Communicating with
+Richard has become more and more difficult, and RMS-Lint can easily
+make it much better.”
+</p>
+<p>
+Raymond’s long time collaborator <a href="http://perens.com/">Bruce
+    Perens</a> also expressed
+happiness that RMS-Lint has become available. “Modern-day open source
+enthusiasts find it more and more difficult to communicate with Richard
+Stallman due to his terminological whims. RMS-Lint is just the tool
+that can help them validate their E-mails for RMS’ correctness.”
+</p>
+<p>
+Meanwhile, Richard Stallman himself expressed dismay from this
+project: “RMS-Lint is an unsatisfying symptomatic cure for
+a big problem. People can use this stupid tool to try and communicate
+with me effectively, instead of correcting their speech and their
+thought patterns, which is the best thing in the long run. I am
+appalled by the fact that people even think a machine can correct
+what a person should work on himself to do. This makes me so angry!”
+</p>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+
+<li>
+<a href="http://slashdot.org/story/04/04/01/1344214/Introducing-RMS-Lint">On Slashdot.org</a>
+</li>
+
+</ul>
+
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2004" />

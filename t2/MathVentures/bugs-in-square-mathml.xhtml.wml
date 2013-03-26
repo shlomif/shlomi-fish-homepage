@@ -1,0 +1,389 @@
+#include "prelude.wml"
+<define-tag latemp_html_doctype>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" >
+</define-tag>
+
+#include "driver.wml"
+
+<page_extra_head_elements>
+<link rel="stylesheet" type="text/css" href="bugs-in-square.css" />
+</page_extra_head_elements>
+
+<latemp_subject "Bugs in a Square (MathML Enabled Version)" />
+
+#include "mathjax.wml"
+
+<p>
+I first encountered this problem in the science journal of a laboratory
+building where I used to study physics. It is rather well known, and I found
+some other solutions to it. One used differential equations which is rather
+high stuff. The other is “intuitive”, and so lacks enough support, so it
+didn’t satisfy me either. Anyway, I devised my own solution beforehand.
+</p>
+
+<p>
+Here’s the riddle:
+</p>
+
+<blockquote>
+<p>
+Four bugs are standing at the corners of a square. At time 0 a bell rings and
+they start moving towards each other. Each bug advances in the direction of the
+bug which was initially at the position clockwise from it.
+</p>
+
+<p>
+Assuming the square is 1 meter long, and the bugs are moving in the velocity of
+1 meter per second, how long will it take for the bugs to meet in the centre
+of the square?
+</p>
+
+</blockquote>
+
+<p>
+The solution can be found some space below:
+</p>
+
+<longblank />
+
+<h2>Solution:</h2>
+<object data="bugs-in-square.svg" type="image/svg+xml"
+        width="300" height="300" style=" float : right ; margin-left : 0.5em ; margin-bottom : 0.5em ; "
+        >
+<p>Bugs Path Illustration</p>
+</object>
+
+<!--l. 15--><p class="noindent" >I&#x2019;ll use the following model to simplify the problem: suppose the bugs don&#x2019;t move towards each other
+infinitesimally, but rather move in a straight line, and then stop, and then move again toward their new
+positions, and so forth. The bugs move toward their initial position until they reach a position which is in
+proportion p to the initial distance between them. Then they move again, towards a position which is in
+proportion p to their distance, and so forth.
+</p><!--l. 22--><p class="noindent" >Thus they form an infinite series of squares inside each other. You can see an illustration of this scheme to the right of this text
+for the proportion <!--l. 24--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
+>p</mi> <mo
+class="MathClass-rel">=</mo> <mn>0</mn><mo
+class="MathClass-punc">.</mo><mn>1</mn><mn>5</mn></math>.
+</p><!--l. 26--><p class="noindent" >Now, if the length of a given square is <!--l. 26--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
+>a</mi></math>,
+then the length of the square inside it is (according to Pythagoras theorem):
+</p><!--l. 29--><p class="noindent" >
+<!--tex4ht:inline--></p><!--l. 29--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
+<mtable
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <msqrt><mrow><msup><mrow
+>
+<mfenced separators=""
+open="("  close=")" ><mrow><mi
+>p</mi> <mo
+class="MathClass-bin">&#x2217;</mo> <mi
+>a</mi></mrow></mfenced></mrow><mrow
+><mn>2</mn></mrow></msup
+> <mo
+class="MathClass-bin">+</mo><msup><mrow
+> <mfenced separators=""
+open="("  close=")" ><mrow><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mi
+>p</mi></mrow></mfenced> <mo
+class="MathClass-bin">&#x2217;</mo> <mi
+>a</mi></mrow></mfenced></mrow><mrow
+><mn>2</mn></mrow></msup
+></mrow></msqrt> <mo
+class="MathClass-rel">=</mo> <mi
+>a</mi><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                             </mtr></mtable>
+</math>
+<!--l. 32--><p class="nopar" >
+The lengths of the squares form a decreasing geometrical series, with that proportion. Thus the length of the
+path a bug travel until they meet is:
+</p><!--l. 37--><p class="noindent" >
+<!--tex4ht:inline--></p><!--l. 37--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
+<mtable
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">        <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac></mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                                </mtr></mtable>
+</math>
+
+<!--l. 39--><p class="nopar" >
+</p><!--l. 41--><p class="noindent" >This is according to the formula that the sum of an infinite decreasing geometric series is
+<!--l. 42--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mi
+>q</mi></mrow></mfrac></math> where
+<!--l. 42--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></math> is the value of its
+first item and <!--l. 43--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
+>q</mi></math>
+is the proportion between two consecutive items.
+</p><!--l. 45--><p class="noindent" >Now, to find the length an infinitesimal bug will travel, we just limit
+<!--l. 45--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi
+>p</mi></math> to
+0:
+</p><!--l. 48--><p class="noindent" >
+<!--tex4ht:inline--></p><!--l. 48--><math
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" >
+<mtable
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+>           <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-rel">=</mo>                  </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+>           <mfrac><mrow
+><mi
+>p</mi> <mo
+class="MathClass-bin">&#x22C5;</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo><msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-bin">&#x22C5;</mo><mfrac><mrow
+><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow>
+<mrow
+><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfrac> <mo
+class="MathClass-rel">=</mo> </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-bin">&#x22C5;</mo> <mi
+>p</mi> <mo
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+       <mrow
+><mn>1</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn></mrow></msup
+> <mo
+class="MathClass-bin">+</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>1</mn></mrow></mfrac>        <mo
+class="MathClass-rel">=</mo>           </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn><msup><mrow
+><mi
+>p</mi></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+           <mrow
+><mn>2</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi
+>p</mi></mrow></mfrac>           <mo
+class="MathClass-rel">=</mo>              </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <munder class="msub"><mrow
+><mo class="qopname">lim</mo></mrow><mrow
+><mi
+>p</mi><mo
+class="MathClass-rel">&#x2192;</mo><mn>0</mn></mrow></munder
+><mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-bin">&#x22C5;</mo><mfenced separators=""
+open="("  close=")" ><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <msqrt><mrow><mn>2</mn> <mo
+class="MathClass-bin">&#x22C5;</mo> <msup><mrow
+><mn>0</mn></mrow><mrow
+><mn>2</mn> </mrow> </msup
+> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow></msqrt></mrow></mfenced></mrow>
+            <mrow
+><mn>2</mn> <mo
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn></mrow></mfrac>             <mo
+class="MathClass-rel">=</mo>           </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd
+class="eqnarray-1"> </mtd><mtd
+class="eqnarray-2">   </mtd><mtd
+class="eqnarray-3">   <mfrac><mrow
+><msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+> <mo
+class="MathClass-bin">&#x22C5;</mo> <mrow ><mo
+class="MathClass-open">(</mo><mrow><mn>1</mn> <mo
+class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo
+class="MathClass-close">)</mo></mrow></mrow>
+      <mrow
+><mn>2</mn></mrow></mfrac>     <mo
+class="MathClass-rel">=</mo> <msub><mrow
+><mi
+>a</mi></mrow><mrow
+><mn>1</mn></mrow></msub
+>                            </mtd><mtd
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                      </mtr></mtable>
+</math>
+<!--l. 56--><p class="nopar" >
+</p><!--l. 58--><p class="noindent" >Therefore, the length of a bug&#x2019;s path is equal to the length of the original square&#x2019;s side. The time it will take a
+1 meter per second fast bugs who stand at the corner of a 1*1 meter square to meet is 1/1 = 1
+second.
+</p>
+
+<h2>Scripts and Visualisations</h2>
+
+<p>
+Here’s <a href="bugs.scm">a script</a>
+for <a href="http://www.gimp.org/">Gimp</a> version 1.2
+that generates a series of squares inside squares, and optionally marks the
+path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
+script for Gimp version 2.2</a>.
+</p>
+
+<p>
+Here’s <a href="gen-bugs-in-square-svg-pl.txt">a Perl script</a> to generate an
+<a href="http://www.w3.org/Graphics/SVG/">SVG</a> image of the squares inside
+each other (that was displayed above).
+</p>

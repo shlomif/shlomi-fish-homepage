@@ -1,0 +1,353 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Shlomi Fish’s Advice for the Young" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+There used to be a common meme to offer advice to high school and college
+students. Here is my advice, based on what I know, and practice:
+</p>
+
+<h2 id="live_and_learn">“Live like you were going to die tomorrow; Learn
+like you were going to live forever”</h2>
+
+<p>
+This is the single best piece of advice one could give, but you’d amazed how
+many people defy it. (It’s attributed to
+<a href="http://en.wikipedia.org/wiki/Mahatma_Gandhi">Mahatma
+Gandhi</a>.) Most people I know
+don’t seem to have time for anything. They are crowded with responsibilities.
+“We’re too busy”, they say.
+</p>
+
+<p>
+I’m not too busy, and never will be. When I worked or studied I also was never
+too busy to talk to people I liked or met at that time; to work on open source
+software and web sites; to relax; to help people with their computer problems.
+I became relatively popular. More people knew me by name than I could recall
+them. (including some very pretty girls, albeit with them I usually recalled
+their names eventually). Everyone knew I was one of the resident UNIX gurus. It
+was fun.
+</p>
+
+<p>
+I treasure the few people who always answer my E-mails on time, always have
+time to chat on the phone, unless they have a previous engagement. Know well
+enough that one doesn’t become productive by
+<a href="http://www.igda.org/articles/erobinson_crunch.php">working more than
+40 hours a week</a>, and always say “I’ll do it when I have some spare cycles” instead of “I don’t have time to do it.”
+</p>
+
+<p>
+You must be able to dedicate some time for your top priorities because you are
+going to die tomorrow.
+</p>
+
+<p>
+And there are people who refuse to learn anything. They don’t have time and
+think that by not learning and acquiring new skills, they’ll still be
+successful. Java people think Java is the best thing since sliced bread and
+don’t learn Perl, Python or Ruby. C++ people don’t know how straightforward
+and painless Object-Oriented programming is in high-level languages.
+Programmers who are used to Perl 4 writing Perl 5 scripts the Perl 4 way,
+despite knowing Perl 5 pretty well. The list goes on.
+</p>
+
+<p>
+Such persons are the worst. They may be pretty good at what they do, but
+they’ll never get better, and will maintain their code in a language that will
+become deprecated and then have to learn something new after not practising
+their learning skills for a long time.
+</p>
+
+<h2 id="recommended_writings">Writings to Learn and Integrate</h2>
+
+<p>
+Learn and Integrate the following things. By integrate, I meat take the time
+to digest and don’t reject as absurd on the spot. Note that you have to <b>read
+them from cover to cover</b> and not to skip in between, otherwise you’ll
+get a lot of false impressions.
+</p>
+
+<ul>
+<li>
+Eric S. Raymond’s
+<a href="http://www.catb.org/~esr/faqs/hacker-howto.html">How
+to Become a Hacker</a> and
+<a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">the Cathedral
+and the Bazaar series</a>
+</li>
+<li>
+<a href="http://www.shlomifish.org/philosophy/philosophy/guide-to-neo-tech/">The
+Online Neo-Tech resources</a>.
+</li>
+<li>
+<a href="http://www.shlomifish.org/philosophy/books-recommends/#feeling_good">Feeling
+Good by David A. Burns</a>
+</li>
+<li>
+<a href="http://www.joelonsoftware.com/">Joel on Software</a> - most articles
+are recommended.
+</li>
+<li>
+<a href="http://www.extremeprogramming.com/">Extreme Programming</a>
+</li>
+<li>
+<a href="http://www.paulgraham.com/">Paul Graham’s Essays</a>
+</li>
+</ul>
+
+<h2 id="windows_is_dead">Windows will be dead; Microsoft may or may not Die with it.</h2>
+
+<p>
+I put my money that practically the majority of people would switch to
+UNIX-based OSes (most notably the various distributions of Linux and Mac
+OS X) a few years from now. Linux nay-sayers are having less and less good
+arguments to support Linux that “just works”, is easier to use, requires less
+constant maintenance, and have so many technical advantages over Windows that
+enumerating all of them here would be not possible.
+</p>
+
+<p>
+Just search for <a href="http://www.google.com/search?q=%22linux%20vs.%20windows%22">“Linux vs. Windows”</a> or
+“Open Source vs. Windows.”. Windows is trying
+to catch up but usually gives solutions that are either buggy at first or
+not as integrated, or not as good or worse, or simply too little too
+late. In Microsoft conferences, the Microsofties are notorious for getting
+excited about new Windows features that Linux and other UNIXes has had for
+years. The Win32 API is horrible and very programmer unfriendly, while the
+various Unix APIs are in very good shape.
+</p>
+
+<p>
+Windows Vista will come without any of the features that were most
+publicized. Development on Windows is slowing to a halt. Meanwhile development
+on the various components that make a Linux system is progressing at a greater
+and greater speed. There seems to be a huge shortage in clueful Linux workers
+at least here in Israel. No-one can find any. Linux is hot.
+</p>
+
+<p>
+Microsoft will probably survive. It has .NET which is very portable. (either
+the proprietary version by Microsoft which runs fine on FreeBSD, or the
+open-source Mono.) It also has many other good products and some decent APIs
+that can be ported to Linux. And as
+<a href="http://www.joelonsoftware.com/articles/APIWar.html">Joel Spolsky
+notes</a> it still has a lot of space to manuever, having a lot of money
+in the bank and being very profitable, and can still end up re-inventing
+itself into something else.
+</p>
+
+<p>
+But Windows is dead. It does not mean it will not be used for years to come
+in various forms (just like Novell NetWare, DOS, Mac OS Classic, and other
+dead OSes can still be encountered in various places), but it will still
+be dead.
+</p>
+
+<p>
+I’m not as
+<a href="http://lxer.com/module/newswire/view/16376/index.html">paranoid as
+ESR is</a> about what Microsoft will do next. I think they
+will simply embrace Linux, and port their software to run on it.
+</p>
+
+<p>
+Why is all that important? Because you’d better learn Unix now rather than
+later, knowing that it is going to be the future of computing.
+</p>
+
+<h2 id="technologies_to_learn">Learn Many Different and Orthogonal
+Technologies</h2>
+
+<p>
+You should learn the following languages and technologies:
+</p>
+
+<ul>
+<li>
+<a href="http://www.w3.org/MarkUp/">HTML</a> and XHTML.
+</li>
+<li>
+<a href="http://perl-begin.org/">Perl</a>
+</li>
+<li>
+<a href="http://en.wikipedia.org/wiki/C_programming_language">The C Programming
+Language</a>
+</li>
+<li>
+<a href="http://www.gnu.org/software/bash/bash.html">Bash</a> or
+<a href="http://www.zsh.org/">Zsh</a>.
+</li>
+<li>
+<a href="http://www.python.org/">Python</a>
+</li>
+<li>
+<a href="http://java.sun.com/">Java</a>
+</li>
+<li>
+The Assembly of one or more architectures.
+</li>
+<li>
+<a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a> and
+<a href="http://www.schemers.org/">Scheme</a>
+</li>
+<li>
+<a href="http://xml.com/">XML</a> and related technologies (but not all).
+</li>
+<li>
+<a href="http://www.haskell.org/">Haskell</a> and
+<a href="http://caml.inria.fr/">O’Caml</a>
+</li>
+<li>
+Matlab or a similar tool for bulk operations on tensors, like Perl’s
+<a href="http://pdl.perl.org/">PDL</a> or Python’s SciPy.
+</li>
+</ul>
+
+<p>
+These are languages I recommend you to learn. They were the languages that
+provided me with the most inspiration and insights. I don’t like all of them
+as much as I do others, but they are nonetheless truly enlightening. I believe
+Perl or Python (etc.) are the most useful of them, and also the most suitable
+for learning as a first programming language.
+</p>
+
+<p>
+Another point is to learn about the design of digital circuits (out of logical
+gates and Flip-flops, not the transistor composition of them) and about
+computer architectures. Too many programmers don’t have a good understanding
+of a how a computer really works, which ends up showing in sub-optimal code.
+</p>
+
+<h2 id="growth_death">Always reverse your growth death.</h2>
+
+<p>
+Growth death means you’ve stopped to grow, and become more cynical as time
+goes by and less capable. It is unnecessary because some people have never
+had growth death in their entire life time, while one of my friends already
+had it in his mid-to-late twenties. I never experienced growth death, and
+still grow in my skills, capability and productivity. You should too.
+</p>
+
+<p>
+There are no caveats. Either you grow or you don’t. And nothing necessitates
+that you don’t grow. People in concentration camps sometimes never stopped
+growing, and often experienced spiritual or intellectual enlightenments.
+</p>
+
+<p>
+It doesn’t matter how many responsibilities you have, you never have to stop
+growing. I have been corresponding with a man in his late 70’s , who is still
+programming, travels a lot, is very active, and is otherwise very enthusiastic
+about life. So he also still has a living growth.
+</p>
+
+<h2 id="proper_language">Speak and Write Properly in English and in your Mother Tongue</h2>
+
+<p>
+This is something that Eric S. Raymond suggests in “How to become a Hacker”, but many people still ignore. Speaking in a language with
+many mistakes, will cause people to look down on you, and they’ll
+immediately notice the problems in what you speak. Whenever I write something
+in either English or Hebrew, I make sure to phrase myself properly. Whenever
+I learn of a new Hebrew common mistake, I immediately register it, and notice
+it from then onward. I never consciously write it, and try to correct myself
+if I utter it improperly. Other people whom I constantly remark on improper
+language, still make these mistakes, and I wonder how much conscious effort
+they put into their writing.
+</p>
+
+<p>
+Note that all-lowercase writing, while acceptable on the IRC (albeit I
+do not write this way either) is completely frowned upon in E-mails, and
+leaves an impression of lack of professionalism, no time and care to press the
+shift key, and general disinterest. Don’t do it. Putting such improperly-written
+language on the Web is even more harmful. (And often mailing lists
+are archived on the Web for posterity).
+</p>
+
+<h2 id="history">Learn History in General and the History of Computing in
+Particular</h2>
+
+<p>
+Paul Graham <a href="http://www.paulgraham.com/essay.html">recommends that
+people learn History but not so much political
+history, but cultural, technological and artistic history</a>. He’s right in a
+way. Knowing who conquered who at what time is quite useless. Knowing how
+things developed and how people thought or behaved at the time, or what
+happened is actually useful and enlightening.
+</p>
+
+<p>
+Many people graduate from Computer Science degrees, hardly knowing anything
+about Computer history. They are familiar with Knuth, Dijkstra and other great
+names, only throughout the algorithms they have formulated, and are not familiar
+with when things came to being, or why they are this way at all. There are many
+good resources for learning about computer history on the Net, and you should
+probably read them. Chatting on the IRC in the appropriate channels can also
+help you learn more about it.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+Thanks to the <a href="http://www.freenode.net/">Freenode</a> people Darien,
+crimson_penguin, GXTi and quamaretto for commenting on earlier drafts of this
+essay.
+</p>
+
+<h2 id="other_sources">Other Good Sources of Advice</h2>
+
+<ol>
+<li>
+Eric Raymond’s <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">How
+to Become a Hacker</a> - an excellent document about the hacker’s way of life,
+attitude and practices.
+</li>
+<li>
+<a href="http://www.paulgraham.com/hs.html">What You’ll Wish You’d Known
+- Paul Graham’s Advice for High School Students</a>
+</li>
+<li>
+<a href="http://www.paulgraham.com/college.html">Paul Graham’s Advice
+for Undergraduate College Students</a>
+</li>
+<li>
+<a href="http://www.joelonsoftware.com/articles/CollegeAdvice.html">Joel
+Spolsky’s Advice for Computer Science College Students</a>
+</li>
+<li>
+<a href="http://dotnetjunkies.com/WebLog/sriram/archive/2005/01/03/41183.aspx">Sriram
+Krishnan’s response to Spolsky’s advice</a>
+</li>
+<li>
+<a href="http://www.adamandtiffy.com/blog/if-by-rudyard-kipling">“If”
+by Rudyard Kipling</a>
+</li>
+<li>
+<a href="http://www.generationterrorists.com/quotes/sunscreen.html">Everybody’s
+Free (to Wear Sunscreen)</a>. Just don’t take it too seriously…
+</li>
+</ol>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2005" />
+
+<h2 id="meta_info">Meta Information</h2>
+
+<dl>
+<dt>Written By:</dt>
+<dd><a href="http://www.shlomifish.org/">Shlomi Fish</a></dd>
+<dt>Publication Date:</dt>
+<dd>17-December-2005</dd>
+<dt>Last Updated:</dt>
+<dd>17-February-2009</dd>
+<dt>License:</dt>
+<dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>.<!--/Creative Commons License--></dd>
+</dl>

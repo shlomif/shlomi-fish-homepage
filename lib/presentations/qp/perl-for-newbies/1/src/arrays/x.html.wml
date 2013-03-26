@@ -1,0 +1,49 @@
+#include 'template.wml'
+
+<p>
+The expression <tt>(@array) x $num_times</tt> returns an array that is composed
+of <tt>$num_times</tt> copies of <tt>@array</tt> one after the other. The
+expression <tt>$scalar x $num_times</tt>, on the other hand, returns
+a string containing <tt>$num_times</tt> copies of <tt>$scalar</tt>
+concatenated together string-wise.
+</p>
+
+<p>
+Therefore it is important whether the left operand is wrapped in parenthesis
+or not. It is usually a good idea to assign the left part to a variable
+before using x so you'll have the final expression ready.
+</p>
+
+<p>Here's an example to illustrate the use:</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/arrays/x.pl" />
+</quadpres_code_block>
+
+<p>
+Can you guess what the output of this program will be?
+</p>
+
+<p>Here's a spoiler</p>
+
+<quadpres_code_block>
+Test 1:
+Hello, World, Hello, World, Hello, World, Hello, World, Hello, World
+
+Test 2:
+22222
+
+Test 3:
+oncatconcatconcatconcatconcatconcatc
+
+Test 4:
+hello
+hello
+hello
+hello
+hello
+
+Test 5:
+hellohellohellohellohello
+</quadpres_code_block>
+

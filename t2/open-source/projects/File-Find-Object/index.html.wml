@@ -1,0 +1,164 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
+
+<p>
+The perl 5 distribution ships with the File::Find module, which can be used
+to traverse directory trees. However, it has some serious limitations:
+</p>
+
+<ol>
+
+<li>
+It cannot be instantiated, and also makes use of some global variables.
+</li>
+
+<li>
+It cannot be easily interrupted in the middle.
+</li>
+
+<li>
+It does not have an iterative interface.
+</li>
+
+</ol>
+
+<p>
+File-Find-Object is a CPAN module, which was originally created by
+<a href="<cpan_homepage who="nanardon" />">Olivier Thauvin</a> and
+now mostly maintained by me (= Shlomi Fish) that aims to address these
+limitations and more, and provide Perl programmers with a robust,
+object-oriented and usable alternative.
+</p>
+
+<p>
+Also available is <b>File-Find-Object-Rule</b>, which is a port of
+File-Find-Rule to File-Find-Object. This gives Perl programmers a convenient,
+declarative interface for File-Find-Object, while overcoming the limitations
+of File::Find.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-file-find-object">For File-Find-Object</h3>
+
+<bitbucket_cpan_dist_links
+    dist="File-Find-Object"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object"
+    freecode_url="http://freecode.com/projects/file-find-object/">
+</bitbucket_cpan_dist_links >
+
+<h3 id="links-file-find-object-rule">File-Find-Object-Rule</h3>
+
+<bitbucket_cpan_dist_links
+    dist="File-Find-Object-Rule"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object-rule">
+</bitbucket_cpan_dist_links >
+
+<define-tag freecode_removed>
+<li>
+<a href="http://freecode.com/projects/file-find-object/">Freecode
+Record</a>
+</li>
+</define-tag>
+
+
+<h2 id="licence">Licence</h2>
+
+<p>
+File-Find-Object is multi-licensed under the GNU General Public Licence (GPL)
+version 2 or later, and the
+<a href="http://en.wikipedia.org/wiki/Artistic_License">Artistic
+Licence version 2.0 or later</a>.
+</p>
+
+<p>
+File-Find-Object-Rule is derived from the original File-Find-Rule, and
+is distributed under its same terms with all subsequent copyright claims
+to the modifications disclaimed.
+</p>
+
+<h2 id="news">News</h2>
+
+<h3 id="news-2009-06-26">2009-06-26: File-Find-Object-Rule Version 0.0300</h3>
+
+<p>
+Version 0.0300 of File-Find-Object-Rule was released yesterday. The main
+highlight of this release is that the iterative <tt>-&gt;start()</tt>
+and <tt>-&gt;match()</tt> methods are now truly iterative and use
+File-Find-Object to scan the tree incrementally, instead of building a long
+list of results in memory, and then iterating over it.
+</p>
+
+<set-var xsac="<cpan_self_dist d="Class-XSAccessor" />" />
+<p>
+Other, more minor, improvements included a cleanup of the code to use
+<get-var xsac />
+, POD tests and full POD coverage, update of the documentation for
+File-Find-Object-Rule (instead of the original File-Find-Rule) and more links
+and keywords as META.yml meta-data.
+</p>
+
+<h3 id="news-2009-01-09">2009-01-09: File-Find-Object 0.1.6 Was Released With
+a Huge Speed Boost</h3>
+
+<p>
+Recently, File-Find-Object was benchmarked using a test program that
+traversed a directory and printed the result. It turned out to run at
+2 minutes (120 seconds) while File-Find did it at 4-5 seconds. As a result,
+we spent a lot of time in optimising File-Find-Object, and now it does
+the scan at about 30 seconds. These optimisations were integrated into
+version 0.1.6 which was uploaded to CPAN today and will be available
+shortly.
+</p>
+
+<p>
+One thing to note is that we are now using
+<get-var xsac />
+instead of
+<cpan_self_dist d="Class-Accessor" />,
+because the conversion yielded a substantial increase in speed. More
+information can be found in the Changes file in the distribution.
+</p>
+
+<h2 id="coverage">Coverage of File-Find-Object</h2>
+
+<h3 id="coverage-shlomif">Coverage in Shlomi Fish’s Blogs</h3>
+
+<ul>
+
+<li>
+<a href="http://use.perl.org/~Shlomi+Fish/journal/37750">File-Find-Object
+Refactoring</a>
+</li>
+
+<li>
+<a href="http://community.livejournal.com/shlomif_tech/20200.html">“Shavin’
+Another Second”</a>
+</li>
+
+<li>
+<a href="http://community.livejournal.com/shlomif_tech/22145.html">“Should
+We Include a Better Alternative to Fild-Find in the perl5 Core?”</a>
+(16-February-2009)
+</li>
+
+<li>
+<a href="http://community.livejournal.com/shlomif_tech/29315.html">“What
+you can do with File-Find-Object (that you can’t with File::Find)”</a>
+</li>
+
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-09-22
+
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />

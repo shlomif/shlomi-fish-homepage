@@ -1,0 +1,637 @@
+#include '../template.wml'
+
+<page_extra_head_elements>
+<style type="text/css">
+.question { color: green }
+.question b, .answer b { color : black }
+.meta { font-style : italic ; color : blue }
+.box { border: 1pt black solid; padding: 0.3em; }
+</style>
+</page_extra_head_elements>
+
+<latemp_subject "Interview with Adrian Ettlinger" />
+
+<p class="meta">
+This is an interview of Adrian Ettlinger by Shlomi Fish that was conducted in
+August 21, 2003 over the IRC. It was later edited by both parties for content
+and correctness.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK, let's start?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Here I am. Shoot
+</p>
+<p class="question">
+<b>S.F.:</b>
+Tell us a bit about yourself.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+My education was in electrical engineering, BSEE Purdue, '44. Worked in the television broadcasting industry initially.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK. Was it fun?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Oh, yes, it was most interesting participating in the growth of a new industry. Wish I'd kept a journal of everything that happened.
+</p>
+<p class="question">
+<b>S.F.:</b>
+In what corporations did you work at the time?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I was with the CBS Television Network. I had a penchant for logical design,
+i.e. in those days consisting usually of relay contact networks. That led
+to specializing in "control circuits" and got me into a pioneering
+computer application.
+</p>
+<p class="question">
+<b>S.F.:</b>
+So this is how you got introduced to programming?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Yes, we farmed out the first project to the company that was then the main
+supplier of industrial control computers, TRW. They did the basic programming,
+but I was curious as to what it looked like, so I had them send me the source
+to use as a learning tool. As a sidelight, that had a salutary effect, because
+a couple of my questions revealed bugs that were caught before the code was
+ever even run.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Cool!
+</p>
+<p class="question">
+When was it exactly?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I should describe further that the application was to automate the switching of station-break intervals for a TV station, and that the first time in the industry that function was done using a stored-program computer.
+</p>
+<p class="answer">
+As to when, the project started in 1959 and the system went on the air on the last day of the year 1960.
+</p>
+<p class="question">
+<b>S.F.:</b>
+You mean a computer which ran a fixed program every time?
+(instead of one that loaded it to memory)
+</p>
+<p class="answer">
+<b>A.E.:</b>
+As to "fixed program", no. The data was fed into the computer. Now I'm trying to remember on that first system how the data was entered.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Punch cards? Magnetic tape?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Now that I think about it, I think the data was manually keyed in by the operators. For a second generation system installed five years later for the network operation, punch paper tape was used.
+</p>
+<p class="question">
+<b>S.F.:</b>
+So it was a relatively long time after your graduation?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Well, yes, about 15 years to be exact. (time interval since graduation)
+</p>
+<p class="question">
+<b>S.F.:</b>
+Where did you work afterwards?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Before we leave that first system, I should reflect on how slow and cumbersome the computer was. It was a magnetic drum memory, no core. Each instruction took a minimum of 220 microseconds, when "optimized" and some instructions took a whole drum revolution or 1/60 of a second. It was quite a trick to program it to keep up with one-second switching interval.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Yow karamba!
+</p>
+<p class="answer">
+<b>A.E.:</b>
+You said it. On to the next question. While still at CBS, I also developed systems for two other applications, one for video tape editing and the other for stage lighting control. Then I left CBS as an employee in 1970 for independent consulting.
+</p>
+<p class="question">
+<b>S.F.:</b>
+On what computer systems did you work as a programmer?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+That question I hadn't seen. The first was the TRW machine (two versions) which was a special machine language only for those machines, unrelated to any standard language. The next language I got into was DEC PDP-8 assembly language.
+</p>
+<p class="question">
+<b>S.F.:</b>
+PDP-8 was a 16-bit computer, right?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+No, as a matter of fact, it was 12-bit. Consequently, it could address directly only 4096 words in memory. By "field shifting" another four bits of addressing could added, so that the maximum RAM (then actually core) that could be addressed was 64K.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Did the PDP-8 ran any operating system?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+No, not really. Very primitive by today's standards.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK. On what systems did you work afterwards?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Now I'm a little cloudy as to the sequence. I did some consulting for both PBS and NBC. For PBS I took a step backward and did some programming for the Intel 4004, the first chip ever made to behave like a CPU. For an NBC project, I had to learn some other oddball language for some system they had. But I never in that era got into any languages such as most of the industry was using, like Fortran or Cobol.
+</p>
+<p class="meta box">
+<b>Note:</b> In later conversation with Mr. Ettlinger, upon
+refreshing his recollection, he believes the reference to the 4004 was a
+misstatement, and he should have said 8008.
+</p>
+<p class="question">
+<b>S.F.:</b>
+It was all in Assembly?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Yes, never anything higher than assembly language through that entire period. The next language that I got into heavily for my own work was Z-80.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What was Z-80 like? On what computers did it ran? Or at least you worked with it on.
+</p>
+<p class="question">
+By Googling I see it is a processor.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+You'd asked about the Z-80. Trying to remember what company made it. It was intended to be a super-8080 processor chip. That's what it was, a processor chip intended for dedicated applications. A few companies made mainframes, i. e. "minicomputer" size system using it.
+</p>
+<p class="answer">
+But mainly it was intended for engineers to use in designing dedicated real-time systems.
+</p>
+<p class="question">
+<b>S.F.:</b>
+According to <a href="http://www.geocities.com/SiliconValley/Peaks/3938/z80_home.htm">http://www.geocities.com/SiliconValley/Peaks/3938/z80_home.htm</a> it's
+a property of Zilog.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+That's it, you found it. Zilog
+</p>
+<p class="question">
+<b>S.F.:</b>
+When did you work with it?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Hmmm. I think sometime in the early 80's I started to work with it. This was a somewhat complicated story. I adopted it for the theatrical lighting control system -- now it's coming back to me. There was a bus system called the "STD" bus. A Company (don't recall if this was Zilog or another) manufactured a product line of frames and cards from which dedicated systems could be assembled.
+</p>
+<p class="question">
+<b>S.F.:</b>
+When did you start working on Personal Computers?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Let's see now, that's a good question. We're moving into the 1980's. My last big endeavor was with a startup company based in LA which manufactured a system for editing video tape which was intended to be operated by editors who normally worked with film. This used the Z-80 processor. Sometime around 1982 +/- a couple of years, I bought one of the early, heavyweight laptops. You know, I can't recall just why I bought it.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What OS did it ran? CP/M?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+That rings a bell. Yes, CP/M. Amazing what you forget when you don't think about it for a long time.
+</p>
+<p class="answer">
+I guess CP/M was the first operating system I ever got acquainted with.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What kind of projects did you do for PCs?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Well, let's see. I think initially I may have just used PC's as programming platforms to write C code. As to writing C code to actually run on a PC, again I'm hazy on this, but it might have been Freecell-related. But I'm not sure about that.
+</p>
+<p class="answer">
+No, Freecell came later. I remember now. The first project was AniMap.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What was AniMap about?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Thought you'd ask. I'd always had an interest in historical geography. A colleague at the startup happened to show me Windows Paintbrush, and I thought it was marvelous how one could draw on a computer screen. Immediately I saw a possibility for realizing a long-held dream. I like historical atlases that show sequences of maps of how things change through time (like political boundaries). I often had used to wish that I could look at a page and see a map change before my eyes. And now there was a way to do this on a computer screen. So my hobby became developing software, initially, to show an animated presentation of the territorial growth of the US.
+</p>
+<p class="question">
+<b>S.F.:</b>
+And how did it continue from there?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+After doing the US, another interest had been how each US state developed in terms of the growth of its county boundaries. So I thought I'd try Virginia, the most interesting state in that regard, did it, then did all 47 others of the contiguous states.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Nice.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+At first this was just for my own amusement, then I started looking around to see if there might be a market. I stumbled across a fellow who had been marketing to genealogists paper copies of historic maps. I see you interjected a comment that you realize this is the genealogy product.
+</p>
+<p class="answer">
+He and I got together and made a commercial product out of it which he sells. It's not a very high volume business; we've only sold about 4,000 copies over, let's see, about 8 years now.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK. Now how did you get involved in Freecell Pro?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I had started playing Freecell myself, aiming to solve all 31,999 solvable games. Out of general interest, I met two people, Mike Keller and Wilson Callan.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Did you meet them in real life?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I've met Mike in person (later) but never Wilson. Come to think of it,
+Wilson lives here on Cape Cod, but some distance from where I'm at.
+After "refreshing my recollection", I met Wilson first and through him met
+Mike. Wilson was maintaining a website which I believe was the first site for
+Freecell enthusiasts, started by Dave Ring, who organized the first project to
+recruit volunteer solvers to manually solve all 32,000 original M/S Freecell
+hands. Wilson had taken over the maintenance of the site from Dave Ring. Mike
+had been one of Dave's volunteer solvers, and Wilson had been acquainted with
+him as a result.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Mike as you may know is a "gamesman". I. e., he lives, eats and breathes
+games, all kinds of them. When I visited his house, it was like one huge
+warehouse of games.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Laughing out loud.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Anyway, Mike on his website had a list of "hard hands", i. e. games reported by others as being very difficult to solve. I took this as a challenge and started, as a sideline, looking for solutions of "hard hands".
+</p>
+<p class="answer">
+I think we have (or had) a description on Mike's website, or in the Help of FC-Pro, how it started. To recap. When one solves a hand using M/S standard freecell, it's often a problem remembering the path and recording it as to how one reached the solution.
+</p>
+<p class="answer">
+So between Wilson and I, we started working on a scheme to monitor M/S Freecell to record moves. That was a nut we just couldn't crack. I decided the best way to be able to record moves would be just to write a program that one could use to play Freecell. That was the beginning of FC-Pro.
+</p>
+<p class="answer">
+Initially, I made the display just alphanumeric. Didn't feel like figuring out how to display cards. That was more up Wilson's
+alley, and he figure out how to do that part, so he and I worked in collaboration.
+</p>
+<p class="question">
+<b>S.F.:</b>
+When was that roughly?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Good question as to when. I might have to dig into some real old laptop (I never throw away a laptop or its hard drive contents) It was certainly before Window 95 came out. I believe I was using Windows 3.1 when I started on FC-Pro.
+</p>
+<p class="question">
+<b>S.F.:</b>
+So you collaborated over the Internet?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Yes, exclusively. I still know Wilson only through Internet.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What landmarks took place in the development of FC-Pro since then?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I'd say the next major landmark was when Wilson and I got into solvers.
+There was a website which described how solvers got started. The very first
+effort was by someone who wrote a dedicated program solely to prove that - oh,
+oh, I used to know the number by heart, is it 12692 -- the one unsolvable hand
+that was really unsolvable. In those days I think that code had to run for 24
+hours to finish the job.
+</p>
+<p class="question">
+<b>S.F.:</b>
+It's 11982.
+</p>
+<p class="question">
+Wow! 24 hours is a long time.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Right, how could I forget that? I usually pride myself in never forgetting a number.
+</p>
+<p class="answer">
+Then somewhere we heard about the Don Woods solver. His was the first general-purpose solver. Written in C to run under DOS.
+</p>
+<p class="question">
+<b>S.F.:</b>
+I think he wrote it on UNIX originally.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Don was free in giving out his source. Wilson undertook the task of integrating it into FC-Pro. OK, UNIX, you may well know more of that history than I do. In order to integrate it, Wilson had to take some liberties to extract the move-by-move solution. We still really don't know if the liberties Wilson took destroyed the integrity of the solver algorithm itself. The problem is there are so very few unsolvable 4-freecell hands, and the Woods original DOS solver is very sensitive to the hand content, and effectively cannot reach a verdict on many hands, i. e., it bogs down to such a slow pace that you just can't wait for it to finish.
+</p>
+<p class="answer">
+So we discovered on rare occasions we could get a false negative.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Was there any other major developments in Freecell Pro?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Yes, we can continue that narrative. I then took over after Wilson had done the initial adaptation of the Woods solver and began tinkering with it in different directions. I think the first thing I tried was permutations in column order. Frequently, on "long hands", i. e. hands which ran very long with no verdict, a permutation of column order would yield a very fast verdict (usually a solution, of course)
+</p>
+<p class="answer">
+Then next I think I tried variations in the sequence in which various typed of moves were tried. That also could on occasion produce a much faster solution or verdict.
+</p>
+<p class="answer">
+Then, one day, I mentioned what I was working on to a friend who is a real professional software guy (as is evident from my background, I'm just a self-taught semi-pro), and he told me about "Hashing".
+</p>
+<p class="answer">
+So I undertook the introduction of a hash technique to the storage and lookup aspects of the Woods solver, and that gave us a substantial improvement in speed.
+</p>
+<p class="answer">
+I'd say that pretty much summarizes the major milestones.
+</p>
+<p class="answer">
+I should have mentioned that somewhere along the way we adapted it to solve with other than four freecells. Initially only downward to zero. Then, later, upward, first to 7 then later to 9.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What was your greatest surprise during your life as a developer?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Hmm, that's hard to answer. Question of what realms we're talking about. Those very weird "impossible" bugs you hit now and then are one thing.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Can you recall a single event that involved some other person?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+The funniest thing that ever happened was some kind of bug in a PDP-8 program. It caused the display to show rapidly changing garbage at a slower and slower pace, filling up gradually less and less of the screen at a slower and slower pace, and then at the end before it crashed, it rang the teletype bell. Very comical.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Laughing
+</p>
+<p class="question">
+What was the problem?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Involving another person. While I was at CBS, there were a few encounter with management people who couldn't understand and refused to try to understand the nature of programming.
+</p>
+<p class="answer">
+The problem on that bug was never really identified. No doubt just a maverick instruction somewhere address memory in the code area, no doubt.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What was your greatest surprise when working on Freecell Pro?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+One interesting milestone in my "career" was working with Wilson. For my entire career, I'd been a "lone wolf", with no one else knowing anything about my code, or ever looking at it. With Wilson was my first, and still only, experience actually collaborating with someone else on a body of code.
+</p>
+<p class="answer">
+I think on FC-Pro, my greatest surprise was being able to successfully
+implement the hash system and seeing how well it worked. I suppose it was also
+a surprise when I discovered the percentage of solvable hands with less than
+four freecells. Another point I might mention - an insight which came to me as
+a surprise, and which I had to instantly agree with. Mike Keller once said to
+me that in his opinion, Freecell is not a "game", but rather a "puzzle". And I
+had to agree. Any solvable Freecell hand is really no more or less than a
+logic puzzle.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What projects are you maintaining or involved in now?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I'm doing now mainly some things related to railroad history. The maintenance work on AniMap has now become very light.
+</p>
+<p class="question">
+<b>S.F.:</b>
+FC-Pro was released as free software about a year ago. What convinced you to release it as free software?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I think the main reason for that is something we didn't get into yet. The incorporation of your solver and Tom Holroyd's into the "Solver Evaluation" version of FcPro. It was necessary to make it open source for that purpose.
+</p>
+<p class="answer">
+However, note that FcPro was always "Free" as regards the application itself. What was new recently was making it open source.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Actually, Free software is a synonym for Open Source Software.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Oh, OK. Then is there any term for software that's closed source, but the application is given away for free?
+</p>
+<p class="question">
+<b>S.F.:</b>
+Free as in Free Speech and not as in Free Beer. The correct term
+for such software is "Freeware".
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Ah, OK
+</p>
+<p class="question">
+<b>S.F.:</b>
+Anyway, my solver is public domain and so does not require its embedding application to be open source as well. And Tom Holroyd agreed to exempt FC-Pro from the GPL restrictions.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I didn't think Tom had done that. Doesn't really matter, I'd say we're OK now.
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK. Why have you chosen the GNU General Public License (GPL) for it?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I didn't really have much patience for studying the nuances of various licenses. I think that was the first one I learned about. Either from Tom or from you. I guess Tom.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What features would you like to see added to Freecell Pro in the future?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Well, I have to say that I may now be permanently "burned out" on FcPro. I wish someone would pick it up and take over, but there don't seem to be any people out there so motivated. Everyone wants to write his own code.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Whatever happened to Wilson Callan? Did you keep in touch with him?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I haven't had any contact with Wilson in quite a while. Maybe a year or two. He's a young guy, so I assume he must still be around. Shall we try to make contact with him?
+</p>
+<p class="question">
+<b>S.F.:</b>
+OK. CC me on the message.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Linus Torvalds once said that 99% of the programmers consider themselves
+in the top 1%. Where do you consider yourself?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+What? 99% of programmers are that arrogant? I have to differ from Linus. I think he probably said that with tongue in cheek.
+</p>
+<p class="question">
+<b>S.F.:</b>
+I think he was exaggerating on purpose.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+No doubt. I think I'm pretty good as regards "native ability" but because of my lack of formal training, I'd be nowhere near the top 1% overall. I have excelled in the past in writing tight code that would run very fast in memory-poor and speed-limited environments. But even in that specialty, don't think I'd claim top 1%. Maybe top 5%,
+</p>
+<p class="answer">
+I'm reminded of a book which came out a few decades ago entitled "The
+Mythical Man Month". It was a very well-written description of what the world
+of software, in its most professional sense, is all about. It describes the
+ideal programming environment as one in which all code is reviewed by other
+people, and a genuine team approach is taken. It's very convincing that for a
+mass-marketed software product, this approach is absolutely essential. But
+I've never worked in such an environment, and my documentation habits are very
+poor. So by some people's standards, I'd rank in the lowest 5% of programmers.
+</p>
+<p class="question">
+<b>S.F.:</b>
+ Is there any particular process you follow when you code?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Well, yes, and this might be controversial. I prefer an iterative approach, i. e., write a very minimal amount then see it work. Some people say one should specify a project down to the last detail and then program it all at once. Everything I've worked on has been of a nature that you had to see part of it working before you could spec the rest of it.
+</p>
+<p class="answer">
+I think that's because I've always done things no one else did before, so couldn't anticipate what the final product should look like until I saw it begin to work.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Considering your age, do you believe there are any advantages to programmers
+of your age over younger programmers?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I don't think there are very many active programmers my age. We could probably start with programmer as young as 20 years my junior.
+</p>
+<p class="answer">
+I'm not sure what advantage a more experienced programmer has. Sometimes I feel the rigorous methods taught to younger programmers are in the long run slower than a "seat of the pants" approach, but it depends so much on the skill of the programmer. Maybe what I'm saying is that it probably just wouldn't be valid to try to generalize on that question.
+</p>
+<p class="question">
+<b>S.F.:</b>
+What are your favourite Solitaire variants besides Freecell?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I hate to admit it, but I've moved to playing Hearts competitively with the M/S game. I track how often I finish 1st to 4th, and more or less consistently can play better than the computer.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Well, hearts is not exactly a Solitaire game. It's a multi-player game. Are you familiar with any other Solitaire games?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+That's true. I make a solitaire game out it by competing with the computer. As for your question, except for the classical Klondike, not much. I have played briefly with some others, but don't recall their names.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Are there any other computer games you like?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I don't like to advertise this particularly, but I've been playing the Windows XP pinball. I used to play computer golf, and thinking I might like to buy a new version. I've also dabbled with Flight Simulator. I also had a period when I spent a lot of time playing Tetris and a variation called Super-Tetris
+</p>
+<p class="question">
+<b>S.F.:</b>
+If you like Pinball, there's a retail "Microsoft Pinball" version which is very nice.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Might consider that.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Do you have any unanswered questions about Freecell you'd like to know the answer to?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Well, yes, about the solvers. There seems still to be certain deals that are "intractable" by any of the three solvers. I'd like to see more investigation of that. I think solvers is still a territory on which much more development could be done.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Give one of your favourite quotes.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+"Those who do not study history are condemned not to know what has happened".
+</p>
+<p class="question">
+<b>S.F.:</b>
+Nice.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+No. 2 What is the definition of "time"? Time is nature's way of preventing everything from happening all at once.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Nice as well.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Freecell Pro is a Windows program and the originators of the solvers it uses (Don Woods, Tom Holroyd and I) came from the UNIX world. Was there any kind of culture clash?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+I suppose I really don't have that much of a feel for what the UNIX culture really is to be able to make a judgment. Sorry.
+</p>
+<p class="question">
+<b>S.F.:</b>
+Have you ever tried Linux? If not, would you like to give it a try?
+</p>
+<p class="answer">
+<b>A.E.:</b>
+Never tried it. As to whether I'll ever find the motivation too, very hard to say. I'd only try it if it appeared to be the best means to an end that meant a lot to me.
+</p>
+<p class="question">
+<b>S.F.:</b>
+These were all my questions.
+</p>
+<p class="answer">
+<b>A.E.:</b>
+OK, so long for now.
+</p>

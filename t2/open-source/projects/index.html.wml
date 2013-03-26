@@ -1,0 +1,247 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+#include "software.wml"
+
+<latemp_subject "Shlomi Fish’s Open Source Projects" />
+
+<toc_div />
+
+<h2 id="forges_home_pages">My home pages on Various Software Development Hubs (Forges)</h2>
+
+<home_pages_on_forges />
+
+<h2 id="games-related">Games Related</h2>
+
+<div class="sub_section">
+
+<h3 id="freecell-solver"><a href="<rellink url="open-source/projects/freecell-solver/" />">Freecell Solver</a></h3>
+
+<p>
+A program and a library written in ANSI C that automatically solves games of
+Freecell and similar Solitaire variants.
+</p>
+
+<h3 id="japanese-puzzle-games"><a href="japanese-puzzle-games/">Solvers and
+Generators for Japanese Puzzle Games</a></h3>
+
+<p>
+Japanese puzzle games such as
+<a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>
+and <a href="http://en.wikipedia.org/wiki/Kakuro">Kakuro</a> have gained
+popularity recently, and I've became a fan of many variants as well. I've
+started working on some solvers and generators for such games, and some of
+them are in a usable condition.
+</p>
+
+<h3 id="black-hole-solitaire-solver"><a href="black-hole-solitaire-solver/">“Black Hole” Solitaire Solver</a></h3>
+
+<p>
+Solvers for
+<a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">Black Hole
+Solitaire</a>, and
+<a href="https://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">All
+in a Row Solitaire</a>, which are variants of Patience.
+</p>
+
+<h3 id="lm-solve"><a href="$(ROOT)/lm-solve/">LM-Solve</a></h3>
+
+<p>
+An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a>
+written in Perl.
+</p>
+
+</div>
+
+<h2 id="text-authoring">Web-Related and Text Authoring/Processing</h2>
+
+<div class="sub_section">
+
+<h3 id="website-meta-lang"><a href="website-meta-language/">Website META Language</a></h3>
+
+<p>
+An offline preprocessor for HTML and XHTML sites, originated by Ralf S.
+Engelschall and later maintained by Denis Barbier. I am the current maintainer.
+</p>
+
+<div class="sub_section">
+
+<h4 id="latemp"><a href="<rellink url="open-source/projects/latemp/" />">Latemp - a Content
+Management System for Static HTML Page</a></h4>
+
+<p>
+Latemp is an offline content management system for generating sophisticated
+static HTML (or semi-static HTML) sites. It is based on the excellent
+<a href="website-meta-language/">Website Meta
+Language</a> by Ralf S. Engelschall and Denis Barbier. This site
+<a href="http://web-cpan.shlomifish.org/latemp/examples/">and others</a> are
+generated using Latemp.
+</p>
+
+<h4 id="quad-pres"><a href="<rellink url="open-source/projects/quad-pres/" />">Quad-Pres</a></h4>
+
+<p>
+Short for Quick-and-Dirty Presentations, this is a tool written in Perl for
+preparing HTML presentations. Based on
+<a href="website-meta-language">Website META Language</a>.
+</p>
+
+</div>
+
+<h3 id="xml-grammar"><a href="XML-Grammar/">The XML-Grammar Meta-Project</a></h3>
+
+<p>
+A project that maintains several XML grammars for various tasks, including
+translators to HTML or other formats, plaintext formats that translate into
+them, etc.
+</p>
+
+<h3 id="web-cpan"><a href="http://web-cpan.shlomifish.org/">Web-CPAN</a></h3>
+
+<p>
+A collection of web-related Perl CPAN modules.
+</p>
+
+<h3 id="docmake"><a href="docmake/">docmake</a></h3>
+
+<p>
+A tool to convert DocBook/XML to its final formats. Was written as a saner
+alternative to <tt>xmlto</tt>.
+</p>
+
+;;; End of text-authoring / web related.
+</div>
+
+<h2 id="system-tools">System Tools</h2>
+
+<div class="sub_section">
+
+<h3 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h3>
+
+<p>
+Dumps a directory structure (without the file contents themselves) into a
+serialised file format, to allow for restoring and comparing.
+</p>
+
+
+<h3 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h3>
+
+<p>
+A directory traverser for Perl, that provides an object-oriented interface,
+that can be instantiated, and that can be suspended and resumed. (Originally by
+Nanardon.)
+</p>
+
+<h3 id="Module-Format"><a href="Module-Format/">Module-Format</a></h3>
+
+<p>
+A CPAN module to convert between the various popular ways to notate
+Perl modules and distributions. Allows all of them to be used in input to
+command-line tools.
+</p>
+
+<h3 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
+Kernel Configuration Search Enhancement</a></h3>
+
+<p>
+A patch that enhances the Linux kernel configuration search by adding keywords
+search and regular expression search.
+</p>
+
+<h3 id="countdown"><a href="countdown/">countdown</a></h3>
+
+<p>
+Delay for a certain number of seconds while displaying the amount of remaining
+time. Similar to the UNIX sleep command, only less frustrating for interactive
+use.
+</p>
+
+</div>
+
+<h2 id="qa">Testing and QA</h2>
+
+<div class="sub_section">
+
+<h3 id="test.pm-converter"><a href="Test.pm-Converter/">Convert from Test.pm</a></h3>
+
+<p>
+A script to convert the old Perl Test.pm-based test programs to the
+more modern Test::More.
+</p>
+
+
+<h3 id="libtap"><a href="libtap/">libtap Maintenance</a></h3>
+
+<p>
+libtap is a C library for writing automated tests that output the
+<a href="http://testanything.org/">Test Anything Protocol (TAP)</a>, which
+allows for heterogeneous test suites. I adopted libtap and maintain it.
+</p>
+
+;;; End of testing/QA
+
+</div>
+
+<h2 id="ip-noise"><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
+
+<p>
+A simulator for IP-Noise for Linux systems based on the Linux Kernel version
+2.4.x or above.
+</p>
+
+<h2 id="mikmod"><a href="mikmod/">MikMod - a module files’ player</a></h2>
+
+<p>
+An open-source player for music module files, written in portable C. Adopted
+from a series of maintainers.
+</p>
+
+<div class="sub_section">
+
+<h3 id="jmikmod"><a href="$(ROOT)/jmikmod/">MikMod for Java</a></h3>
+
+<p>
+A port of the well-known MOD player
+<a href="http://mikmod.raphnet.net/">MikMod</a>
+(that was originally written in ANSI C) to Java.
+</p>
+
+</div>
+
+
+<h2 id="rwlock"><a href="$(ROOT)/rwlock/">A First-Come First-Served
+Readers/Writers Lock</a></h2>
+
+<p>
+An implementation of it for POSIX Threads, which can also be used as a
+reference implementation.
+</p>
+
+<h2 id="conf"><a href="conf/">Personal Configuration Files</a></h2>
+
+<p>
+These are configuration files of various programs I’m using on my home
+machines.
+</p>
+
+<h2 id="no-longer-of-interest">Projects that are no longer of interest</h2>
+
+<div class="sub_section">
+
+<h3 id="yjobs-on-mozilla"><a href="<rellink url="open-source/projects/yjobs-on-mozilla/" />">Workaround to Get yjobs.co.il Working with Firefox</a></h3>
+
+<p>
+This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.il/">the yjobs.co.il Israeli job-board</a> using Firefox, and other
+Mozilla-based browsers. No longer of interest because yjobs.co.il now works
+fine in Firefox and other standards-compliant browsers without it.
+</p>
+
+<h3 id="gradient-fu"><a href="$(ROOT)/grad-fu/">Gradient-Fu Patch for the GIMP</a></h3>
+
+<p>
+A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
+and to scripting interfaces. A newer version of this patch has been integrated
+into GIMP 2.2.x and above and is built-in there.
+</p>
+
+</div>

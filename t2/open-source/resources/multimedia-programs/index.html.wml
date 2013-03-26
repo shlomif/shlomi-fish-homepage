@@ -1,0 +1,214 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Multimedia Applications" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various multimedia-related
+applications.
+</p>
+
+<h2 id="media-players">All-in-one Media Players</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.videolan.org/vlc/">VLC</a> - an open-source, cross-platform
+multimedia player which plays most media files and has a friendly
+user-interface.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.mplayerhq.hu/">mplayer</a> - a primarily command-line
+media player which supports many formats. Has a Spartan interface, but ships
+with some GUIs. Open source (GPLed) and cross-platform.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Windows_Media_Player">Windows
+Media Player</a> - a proprietary, Windows-only media player from
+Microsoft.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://gstreamer.freedesktop.org/">GStreamer</a> - an open-source
+multimedia framework. LGPLed. Is supported by many players, including
+<a href="http://space.twc.de/~stefan/gst123.php">gst123</a> .
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Xine">xine</a> - a multimedia playback
+library, along with some standalone players for UNIX-like operating systems.
+Open source (GPLed). Its popularity appears to have waned considerably lately.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_video_player_software">Wikipedia’s
+Comparison of Video Player Software</a>.
+</p>
+</li>
+
+
+</ul>
+
+<h2 id="dedicated-music-players">Dedicated Music Players</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://amarok.kde.org/">Amarok</a> - a powerful music player
+with many features and extensions for Linux, UNIX and Windows. Open source
+(GPL).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.clementine-player.org/">Clementine Music Player</a> - a
+multi-platform music player based on Amarok 1.4, ported to Qt 4. Open source
+(GPL).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://banshee.fm/">Banshee</a> - an open-source music and video
+player based on C#/.NET, gtk#, and Mono on Linux and Mac OS X. Cross-platform.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://projects.gnome.org/rhythmbox/">Rhythmbox</a> - “an integrated
+music management application” for GNOME.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://xmms2.org/">XMMS2</a> - an open-source and
+cross-platform multi-format music player based on the client/server model.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.exaile.org/">Exaile</a> - a Gtk+ based music manager
+and player, inspired by Amarok, that is available for UNIX-like operating
+systems and Windows. (Open source - GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Winamp">Winamp</a> - a media player
+for Windows-based PCs and Android devices. Proprietary and
+freeware/shareware.
+Used to be popular in the late nineties, but its popularity waned.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Foobar2000">foobar2000</a> - a
+freeware audio player. Aims for simplicity. Proprietary and Windows-only.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_audio_player_software">Wikipedia’s
+Comparison of Audio Player Software</a>.
+</p>
+</li>
+
+</ul>
+
+<h2 id="video-downloaders">Video Downloaders</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://rg3.github.com/youtube-dl/">youtube-dl</a> - a cross-platform
+command line program, written in Python 2.x to download videos from
+YouTube.com, metacafe, Google Video, Photobucket videos, Yahoo! video,
+Dailymotion, DepositFiles, blip.tv, vimeo, myvideo.de and others.
+Open source (public domain).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/">Video
+DownloadHelper</a> - an extension for Firefox that downloads videos from
+“hundreds of YouTube-like sites”. Custom, mostly all-rights-reserved licence.
+</p>
+</li>
+
+</ul>
+
+<h2 id="waveform-editors">Waveform Editors</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://audacity.sourceforge.net/">Audacity</a> - an open source,
+cross-platform program for recording and editing sounds. Seems to be
+the best-of-breed among open-source waveform editors.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Adobe_Audition">Adobe Audition</a> -
+a proprietary, commercial, application from Adobe (formerly known as
+<b>Cool Edit</b>) that runs on latest versions of Microsoft Windows and Mac
+OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_multitrack_recording_software">Wikipedia Comparison of multi-track recording software</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://linux-sound.org/">Sound &amp; MIDI Software For Linux</a>
+- a comprehensive directory.
+</p>
+</li>
+</ul>
+
+
+<h3 id="fun-links">Fun Links</h3>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2012" />
+

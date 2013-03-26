@@ -1,0 +1,22 @@
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Paul Graham Fortune Cookies" />
+
+<h2*>About</h2*>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul
+Graham</a> is a software developer and essayist who maintains
+<a href="http://www.paulgraham.com/">a web site with essays</a>. This is a
+collection of memorable quotes from there.
+</p>
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/paul-graham.xhtml-for-input"
+</div>
+
+

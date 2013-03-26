@@ -1,0 +1,67 @@
+#include '../template.wml'
+#include "stories/blurbs.wml"
+#include "xml_g_fiction.wml"
+
+<latemp_subject "Humanity - The Movie" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+Humanity is a screenplay for a movie
+that aims to be a parody about humanity and modern life in particular. It
+tells the story of a day in the life of a Semitic city circa the year
+500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
+(OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
+</p>
+
+<h2 id="read_online">The Text</h2>
+
+<ul>
+
+<li>
+<a href="ongoing-text.html">The Ongoing Text - <b>Read Online</b></a>
+</li>
+
+<li>
+<link_to_screenplay base="Humanity-Movie" />
+</li>
+
+</ul>
+
+<h3 id="hebrew_translation">Hebrew Translation</h3>
+
+<ul>
+
+<li>
+<a href="ongoing-text-hebrew.html">Ongoing Text in Hebrew - Read Online</a>
+</li>
+
+<li>
+<link_to_screenplay base="Humanity-Movie-hebrew" />
+</li>
+
+</ul>
+
+
+<humanity_licensing />
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li>
+<a href="http://humanity.shlomifish.org/">Old Homepage (transferred from
+Berlios.de)</a>
+</li>
+</ul>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-09-22
+
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />

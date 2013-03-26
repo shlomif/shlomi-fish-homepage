@@ -1,0 +1,20 @@
+#include 'template.wml'
+
+<points>
+<li>
+A collection of the encountered states. (= layouts of the board)
+</li>
+<li>
+On one such collection several DFS and Best-First Search scans operate.
+</li>
+<li>
+Support for Meta-moves and atomic moves through test functions.
+</li>
+<li>
+Several layers (card handling, state handling, scans, instance, front-end).
+</li>
+<li>
+A built-in parser for command line arguments that can be used to configure
+the front-end.
+</li>
+</points>

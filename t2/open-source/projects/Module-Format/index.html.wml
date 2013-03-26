@@ -1,0 +1,133 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<set-var modname="Module-Format" />
+<latemp_subject "<get-var modname /> - perform bulk operations on Perl modules" />
+
+<p>
+<get-var modname /> aims to simplify installing a large number of Perl modules
+(or their associated CPAN distributions) which are often stringified into
+various different formats in the Perl world. It can handle all of these
+format, including input from heterogeneous formats.
+</p>
+
+<p>
+The strings of Perl 5 modules are often gives in various formats. One can
+see things like:
+</p>
+
+<ul>
+
+<li>
+<p>
+Foo::Bar::Baz
+</p>
+</li>
+
+<li>
+<p>
+Foo-Bar-Baz
+</p>
+</li>
+
+<li>
+<p>
+perl(Foo::Bar::Baz)
+</p>
+</li>
+
+<li>
+<p>
+perl-Foo-Bar-Baz
+</p>
+</li>
+
+<li>
+<p>
+Foo/Bar/Baz.pm
+</p>
+</li>
+
+<li>
+<p>
+libfoo-bar-baz-perl
+</p>
+</li>
+
+</ul>
+
+<p>
+<get-var modname /> can input from most of them and output to all of them.
+</p>
+
+<h2 id="use-cases">Use Cases</h2>
+
+<h3 id="apt-get">apt-get</h3>
+
+<p>
+To install a group of modules using
+<a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool">apt-get</a>
+on Debian, Ubuntu, etc. define the following shell function:
+</p>
+
+<pre>
+up()
+{
+    apt-get -y install $(perlmf as_deb "$@")
+}
+</pre>
+
+<p>
+Then you can type invocations like
+<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the
+parameters.) to install Perl modules.
+</p>
+
+<h3 id="urpmi">urpmi</h3>
+
+<p>
+To install a group of modules using
+<a href="http://wiki.mandriva.com/en/Tools/urpmi">urpmi</a> on
+<a href="http://www2.mandriva.com/">Mandriva Linux</a>, define the following
+shell function.
+</p>
+
+<pre>
+up()
+{
+    urpmi --auto $(perlmf as_rpm_colon "$@")
+}
+</pre>
+
+<p>
+Then you can type invocations like
+<tt>up XML::RSS XML-LibXML DBIx/Class.pm</tt> (note the inconsistency in the
+parameters.) to install Perl modules.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-module-format">For <get-var modname /></h3>
+
+<bitbucket_cpan_dist_links
+    dist="<get-var modname />"
+    bitbucket_url="http://bitbucket.org/shlomif/web-cpan"
+    freecode_url="http://freecode.com/projects/module-format">
+</bitbucket_cpan_dist_links >
+
+<x11_licence name="Module-Format" />
+
+<h2 id="news">News</h2>
+
+<h2 id="blog-posts">Blog Posts About <get-var modname /></h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://community.livejournal.com/shlomif_tech/54725.html">“Introducing
+Module-Format”</a> - on Shlomi Fish’s Technical Blog.
+</p>
+</li>
+
+</ul>

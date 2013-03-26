@@ -1,0 +1,317 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "When C is the Best (Tool for the Job)" />
+<latemp_meta_desc "Gives some reasons why the C language still has its place and explains when it should be used instead of other alternatives" />
+<latemp_more_keywords "C,best,tool for the job,java,perl,ANSI C,C++,high level,low level,programming,languages" />
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Version Control ID
+</dt>
+<dd>
+<tt>$Id: when-c-is-the-best.html.wml 308 2007-02-17 11:58:20Z  $</tt>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+17-October-2005
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+23-September-2012
+</dd>
+</dl>
+
+<h2 id="intro">Introduction</h2>
+
+<ul>
+<li>
+“Java and/or .NET are better than C in every way.”.
+</li>
+<li>
+“Perl/Python/PHP/Ruby/Tcl are better than C.”
+</li>
+<li>
+<a href="http://www.paulgraham.com/avg.html">“LISP is better than C”</a>.
+</li>
+<li>
+“If you need speed, use O’Caml or Haskell - don’t bother with C.”
+</li>
+<li>
+“C is for kernels.”
+</li>
+</ul>
+
+<p>
+We hear these things all the time and still people insist on using C for some
+tasks. OK, these sentences are not entirely false. Most of the time (I don’t
+know if it’s 90%, 80% or slightly above 60%,
+<a href="http://www.amazon.com/exec/obidos/ASIN/0809058405/qid=1116707804/sr=2-1/ref=pd_bbs_b_2_1/102-7111030-9246531">I
+didn’t count</a>), it is preferable to use something else. But what about the
+minority of these cases?
+</p>
+
+<p>
+The purpose of this article is to point to the cases where C really shines and
+is the best tool for the job. At first I’ll enumerate some of the strengths of
+C,  and then I’ll give a case study which illustrates some of these points.
+</p>
+
+<p>
+Before that - a note. By “C” I mean either ANSI C (with most common and portable
+extensions) or C99 or C++ with many C primitives used. The so-called Standard
+C++ is entirely different.
+</p>
+
+<h2 id="reasons">Reasons for Wanting to Prefer C</h2>
+
+<h3 id="portability">Portability</h3>
+
+<p>
+ANSI C is portable for every architecture there’s a gcc backend or any other
+compiler for. With Java you rely on Sun’s whims. Open-source high level
+languages are better (especially if they can be compiled using gcc or supply
+a gcc back-end), but nonetheless, C is still more portable than anything
+written using it.
+</p>
+
+<h3 id="open_source">Open-Source Considerations</h3>
+
+<p>
+<a href="http://gcc.gnu.org/">gcc</a> is a full-featured and robust compiler
+for ANSI C, and it’s open-source. Sun’s Java distribution has a very
+problematic license. It’s not distributed as part of most Linux distributions
+due to this.
+</p>
+
+<h3 id="low_level">Low-levelness</h3>
+
+<p>
+You cannot effectively duplicate a struct containing other structs in Java or
+in Perl as you can in C. This is due to the fact that in these languages
+every struct is a reference. You cannot work with interrupts, DMAs, and other
+hardware elements. It’s much harder to write your own custom fine-grained
+memory-management routines.
+</p>
+
+<p>
+Many problem domains call for ANSI C.
+</p>
+
+<h3 id="self_contained">Writing self-contained code</h3>
+
+<p>
+You can compile a C library and distribute it as is. With Java or Perl one
+often needs a substantial run-time.
+</p>
+
+<h3 id="unixisms">Making use of UNIXisms</h3>
+
+<p>
+There’s no fork() in Java, and not many other UNIX system calls. You need to
+create bindings for them (which require JNI) or work around them. Perl and
+other languages, usually don’t have this limitation.
+</p>
+
+<p>
+To some extent, this is also true when working on Microsoft Windows, where
+some of the system calls and APIs are not available in the Java distribution
+by Sun.
+</p>
+
+<h3 id="integrability">Integrability</h3>
+
+<p>
+A C library can be used by Perl code, Python code, Tcl code, Ruby code, to a
+lesser extent Java code, etc. Code written in a high-level language is mostly
+usable only in that language.
+</p>
+
+<h3 id="speed_and_memory">Speed and Memory Consumption</h3>
+
+<p>
+And naturally there’s speed and memory consumption. Often when speed or low
+memory consumption is the issue, one cannot use a high-level language,
+because it may have a lot of overhead in one area or both. Many real-time
+applications (i.e: applications that should respond to events within a given
+time) must be written in a low-level language for that reason. Other
+applications like that are applications that simply can never be fast enough:
+various APIs, virtual machines, simulations, graphics, audio, video and 3-D
+programs, etc.
+</p>
+
+<h2 id="case_study_fcs">Case Study: Freecell Solver</h2>
+
+<p>
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is an ANSI C library
+that can be used to solve games of the Solitaire Card Game
+<a href="http://www.solitairelaboratory.com/fcfaq.html">Freecell</a>, and
+similar Solitaire variants. Started as a way for me to see if a theory I had
+about how a computer can solve Freecell would work in practice, it ended up as a
+highly-customizable, very feature-rich and pretty fast program. It is the
+only one with a high quality web-site dedicated to it, has been integrated
+into at least three GUI games so far, and is the only program of its kind with
+binaries and source packages distributed for common distributions. I am pretty
+confident in saying it has become the
+<a href="http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s08.html">“category
+killer”</a> of its kind.
+</p>
+
+<p>
+Freecell Solver (also FCS from now on) is written in ANSI C - mostly C89 but
+with some necessary extensions that are common in most modern ANSI C compilers.
+It’s been successfully compiled with gcc, Visual C++, and the Intel C Compiler
+. The code of Freecell Solver is very “funky”: hard to understand, uses
+preprocessor macros all over the place (inline and gcc’s statement
+expressions are not portable enough unfortunately) with many tricks to the
+untrained eye.
+</p>
+
+<p>
+There are some comments, but many of them may be out of date. I happen
+to agree with the Extreme Programming camp that it is really better to refactor
+and make the code easier to understand than to comment redundantly. But since
+it was essential that it would run as fast as possible, I could not structure
+it appropriately. However, I can assure you that the code is modular, and of
+good quality and maintainable. So don’t believe
+<a href="http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&amp;ixPost=110136&amp;ixReplies=71">those who claim it’s bad</a>.
+</p>
+
+<p>
+Luckily, I have written
+<a href="http://fc-solve.shlomifish.org/arch_doc/">an architecture document</a>
+that covers the main data structures and algorithms used.
+</p>
+
+<h3 id="why_fcs_in_c">Why Freecell Solver should be written in C?</h3>
+
+<p>
+The best way to realize why C is the ideal language for Freecell Solver is
+to think how to port it to Java, which a high-level language that is
+similar to C. Freecell Solver represents the states of the board as an array
+of pointers to columns, where each column is an array of bytes, where each
+byte represents a single card. The states themselves are allocated from blocks
+of contiguous memory. The blocks themselves are not <tt>realloc</tt>ed, and
+thus remain in the same memory address. If more states need to be allocated,
+then more blocks are created. This is all done to reduce the amount of
+allocated memory, as individually allocating the states may incur a lot of
+overhead.
+</p>
+
+<p>
+A similar technique is used for the columns themselves. This time they are
+allocated, out of also contiguous blocks of memory, but this time they are not
+of fixed size. Each column follows the other one. The columns themselves are
+placed in a hash, to make sure duplicate columns are eliminated.
+</p>
+
+<p>
+Now, how do we do it in Java? In Java every reference to a structure or an
+array is allocated and manipulated individually. We cannot have them chained
+one by one in memory. This (together with the fact that the garbage collection
+also incurs some memory overhead), will cause them to occupy more memory. And
+more memory means more cache misses, potentially more swapping and less speed.
+</p>
+
+<p>
+One way I can think of overriding it is allocating a very large array, and then
+giving an index. But that would be slower than a simple C pointer.
+</p>
+
+<p>
+That’s not all there is to it. The Freecell Solver hash implementation itself
+is very optimized. The chains of the hashes themselves are compactly allocated
+and from then on re-used in the manner described above. This too is very hard
+to achieve in Java.
+</p>
+
+<p>
+In order to efficiently process and manipulate the states and the individual
+cards, Freecell Solver contains a great deal of preprocessor macros. Java does
+not have a preprocessor, and therefore one will need to either:
+</p>
+
+<ol>
+<li>
+Replace them with methods. This would mean lower speed.
+</li>
+<li>
+Use a preprocessor (such as
+<a href="http://www.cabaret.demon.co.uk/filepp/">filepp</a>) to process the
+code. This would mean that problems would be harder to track, line numbers may
+be skewed, and the development environment may not necessarily support it.
+</li>
+<li>
+Use the expressions encapsulated by the macros verbatim in the code. This would
+make it less modular.
+</li>
+</ol>
+
+<p>
+Another fact that may incur a lot of overhead in Java is the fact that
+in some functions Freecell Solver uses a great deal of nested loops and
+conditionals to search for suitable moves. A loop in Java has more
+speed overhead than its C equivalent, and together it will probably add up.
+</p>
+
+<p>
+Potentially, also all the arrays that are extensively used by Freecell Solver
+may incur speed overheads due to the fact Java also does bounds checking.
+</p>
+
+<p>
+Finally, Freecell Solver uses a lot of C-isms. It compares structs using
+<tt>memcmp()</tt>, copies adjacent regions of memory using <tt>memcpy()</tt>,
+etc. These have a more limited support in Java, and may not necessarily make
+sense all of the time.
+</p>
+
+<p>
+To sum up, while one can write a program that will be compatible in its
+output to Freecell Solver in Java, it will feel less native there, and will
+probably be much slower and more memory hungry. All of these things add up
+to a lot. C is the best language for writing a Freecell solver in.
+</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>
+Despite the fact that computers have become much faster, and that there are now
+high level languages whose run-time speed is very adequate, C still has its
+uses. Whether you want your code to be self-contained (and not contain a huge
+run-time), or you want to have a fine-grained memory allocation, or you want
+to interoperate with your system’s native built-ins, C may be the best
+choice. It is insightful to know, and often proves very useful. And it still
+has its place.
+</p>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2007"/>
+
+<hr />
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

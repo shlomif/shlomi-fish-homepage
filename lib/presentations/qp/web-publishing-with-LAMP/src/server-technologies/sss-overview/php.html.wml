@@ -1,0 +1,38 @@
+#include 'template.wml'
+
+<points>
+<li>
+<a href="http://www.php.net/">PHP</a> is a cross-platform scripting language
+intended specifically for the Web.
+</li>
+<li>
+PHP was thought to be faster than Perl, but it is less powerful and
+flexible (no modules, no namespaces, objects proper only in PHP 5,
+no closures, limited anonymous functions capability), and sports an easy to
+learn core language.
+</li>
+<li>
+(A <a href="http://public.yahoo.com/~radwin/talks/yahoo-phpcon2002.htm">recent
+study by Yahoo</a>, however, claimed mod_perl had better performance than
+mod_php.)
+</li>
+<li>
+PHP, as a language, has several potential security issues, which causes
+sloppy code to become vulnerable more easily.
+</li>
+<li>
+Secure code can still be written, but it takes more discipline.
+</li>
+<li>
+The PHP back-end itself has had a relatively poor security record, with many
+vulnerabilities discovered in it.
+</li>
+<li>
+PHP has many configuration options, which affect its run-time behaviour.
+</li>
+<li>
+This makes writing code that can be deployed on different systems with
+different configurations more difficult.
+</li>
+</points>
+

@@ -1,0 +1,161 @@
+#include '../template.wml'
+
+<latemp_subject "On and on it seems to go…" />
+
+A while ago, I was introduced to a couple of questions about
+digital codes being broadcast. This made me think of a new code
+problem. I thought about it a bit, and saw that I couldn’t figure
+out the answer. So, I decided to post it to the Usenet newsgroup
+rec.puzzles which is dedicated to riddles and puzzles of all sorts.
+<p>The original message from Deja-News follows:</p>
+
+<pre>
+<b>Subject:      <span style=" color : #C60012 ; font-size : large ">Repeating Code Possibilities</span>
+From:         Shlomi Fish &lt;shlomi@medusa.cortext.co.il&gt;
+Date:         1996/06/10
+Message-ID:   &lt;31BC1616.34C6@medusa.cortext.co.il&gt;
+Newsgroups:   rec.puzzles
+<a
+href="http://x10.dejanews.com/getdoc.xp?recnum=9104260&amp;server=db96q2&amp;CONTEXT=882122683.1218314336&amp;hitnum=2&amp;AH=1">[More Headers]</a>
+</b>
+
+I’ve got a question in combinatorics. Let’s suppose that there is a
+transmiter that transmits a code repeatedly. Once it reaches the end of
+the code it immediately starts broadcasting it again. For example, if
+the code is 1101 then it will broadcast:
+
+11011101110111011101....
+
+There is no way to determine where the code starts, therefore some codes
+with the same length are equivalent. E.g., 1011 or 1110 are considered
+identical to 1101.
+
+Keeping that in mind: suppose the code can have n different symbols or
+digits and is of length l, what is the number of different codes
+possible?
+
+        Shlomi Fish
+</pre>
+
+A final note about this problem: if a code has an effective
+repetition that is some integer division of l, it’s still of length
+l. E.g: the code 10101010... is still considered the 4-bits code
+1010 (or 0101). The continuation which includes the answer can be
+found a couple of pages below. <br />
+
+
+<longblank />
+ Well, the rec.puzzles guys did not know how to solve it either,
+and someone suggested that I should post it to sci.math instead.
+<p>Eventually, I had an idea. Like I said, some codes have an
+effective repetition that is some integer division of the given
+code-length. Normal codes have l permutations. For example the code
+‘1100’ can also be written as ‘0110’, ‘0011’ and ‘1001’. However,
+codes of one of l’s dividers have less permutations. ‘1010’ only
+has two permutations: ‘1010’ and ‘0101’.</p>
+
+<p>So, I posted the following message to rec.puzzles a couple of
+months after my original posting. The solution presented there is
+not entirely correct, so read my notes below.</p>
+
+<pre>
+<b>Subject:      <span style=" color : #C60012 ; font-size : large ">Repeating Code Riddle (+ Spoiler)</span>
+From:         ffish@euronet.co.il (Shlomi Fish)
+Date:         1996/08/16
+Message-ID:   &lt;4v1nm5$583@shelly.inter.net.il&gt;
+Newsgroups:   rec.puzzles
+<a
+href="http://x10.dejanews.com/getdoc.xp?recnum=7500598&amp;server=db96q3&amp;CONTEXT=882122683.1218314336&amp;hitnum=1&amp;AH=1">[More Headers]</a>
+</b>
+
+I posted this puzzle here some time ago because I didn’t know the
+answer. Yet, I managed to figure it out by myself after all so here’s
+the spoiler. First, here’s the puzzle again:
+
+Let’s suppose a transmitter broadcasts a digital code over and over
+without a pause between the end of the code to the beginning of the
+next. Therefore, if the code is 0100 then it will broadcast:
+0100010001000100010001000100010001000100...
+
+Since there is now way to determine where the code begins 0100 is
+equivalent to 1000, 0010 &amp; 0001. Now, let’s suppose we broadcast a
+code of length n using b digits, how many different codes can be
+broadcast using this method?
+
+     Shlomi Fish
+
+(The spoiler is found below)
+
+[Snipped space]
+
+SPOILER:
+
+In this solution I’ll focus on the sub-case in which the code is
+binary. I’ll later replace all the relevant 2’s for b’s.
+
+The basis for this solution is the fact that if a sequence has a
+repeating frequency of n then it may have a smaller repeating
+frequency of m only if n is equally divisible by m. (m may be equal to
+1).
+
+Now, the easiest case is the case for prime numbers. A prime number is
+only divisible by 1 therefore the only possible codes with a lesser
+frequency are 111111... and 00000... . That leaves 2^n-2
+position-sensitive permutations. Every code has n such permutations
+which gives us (2^n-2)/n such codes.
+
+Therefore the total number of codes for a prime number is:
+       2 + (2^n - 2) / n.
+
+The expression 2^n - 2 will prove very useful later on so let’s define
+
+T(n) = 2^n - 2.
+
+Now let’s suppose there is a number n = p*q where p, q are primes.
+This number will inherit 2 codes from 1 (11111.... and 0000....),
+T(p)/p codes from p, and T(q)/q codes from q. Therefore the original
+permutations are
+2^(p*q) - 2 - T(p) - T(q) = T(pq) - ( T(p)+T(q) )
+All in all it has:
+        2 + T(p)/p + T(q)/q + [ T(pq) - (T(p)+T(q)) ] / (pq)
+different codes.
+
+Here’s another simple example n = p^2 where p is a prime. This number
+will inherit 2 codes from 1, and T(p)/p codes from p. Therefore it
+will have:
+        2 + T(p)/p + [ T(p^2) - T(p) ] / (p^2)
+
+By now a pattern seems to be emerging so here’s the solution. Given a
+certain number n then q1, q2, q3....qt will symbolize the numbers
+which equally divide it (excluding 1 and n). Now, let’s define O(n)
+as:
+
+       O(n) = [ T(n) - (T(q1) + T(q2) + T(q3) ... + T(qt) ) ] / n
+       ( O(1) = 2)
+
+O(n) denotes the number of codes which are “original” to n and weren’t
+inherited from any smaller number.
+
+Now if q1, q2...qt will again stand for the dividers of n then the
+total number of codes n have are:
+
+       A(n) = O(1) + O(q1) + O(q2) + O(q3) + .. + O(qt) + O(n)
+
+
+      Shlomi Fish
+</pre>
+
+Well, I didn’t take in mind that a number can indirectly receive
+codes from a divider by two or more other dividers (like 12 that
+gets codes from 2 through both 4 and 6). Thus, O(n) the function
+that denotes the number of “original” codes of n should be
+recursive and defined as following:
+<p><b>O(1) = 2</b><br />
+<b>O(n) = T(n)/n</b> for every prime number n<br />
+<b>O(n) = [ T(n) - (O(q1)*q1 + O(q2)*q2 + .. O(qt)*qt ) ] / n</b>
+for all other numbers<br />
+</p>
+
+<p>Otherwise the solution is fine. You can view a C program that
+calculates the number of such codes for all numbers up to 24 <a
+href="check_codes.c">here</a>.</p>

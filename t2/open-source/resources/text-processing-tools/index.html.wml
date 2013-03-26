@@ -1,0 +1,485 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Text Processing Tools" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of automated text processing tools.
+You may also be interested in <a href="../editors-and-IDEs/">my list of
+text editors and IDEs</a>.
+</p>
+
+<h2 id="general_preprocessors">General-Purpose Preprocessors</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/M4_%28language%29">m4</a> - a macro
+language with some open-source implementations, including GNU m4. (I personally
+find it very vile.)
+</p>
+</li>
+
+
+<li>
+<p>
+<a href="http://en.nothingisreal.com/wiki/GPP">GPP</a> - a general-purpose
+preprocessor. Supports several alternative syntax modes. Open source (GPL).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.cabaret.demon.co.uk/filepp/">filepp</a> - an adaptation
+and extension of the C preprocessor for general-purpose use. Written in Perl.
+Open source (GPL-2-or-later).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.complang.tuwien.ac.at/schani/chpp/">chpp (Chakotay
+Preprocessor)</a> - a powerful preprocessor that aims to be non-intrusive,
+and which can be considered a full-fledged programming system. Has been
+unmaintained since 1999. Open source (GPLv2).
+</p>
+</li>
+
+</ul>
+
+<h2 id="general_template_systems">General-purpose Template Systems</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://template-toolkit.org/">Template Toolkit</a> - a flexible
+and highly extensible template processing system for Perl. Open source
+(same terms as Perl).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.clearsilver.net/">ClearSilver</a> - a language-agnostic
+and fast templating system written in C.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.cheetahtemplate.org/">Cheetah</a> - a Python-Powered
+Template Engine. “Fast, Flexible, Powerful”. Open Source
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.kuwata-lab.com/tenjin/">Tenjin</a> - “the fastest
+template engine in the world” - available for several dynamic languages.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.smarty.net/">Smarty</a> - a PHP Template Engine. Open
+Source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/release/HTML-Template">HTML-Template</a> and
+<a href="https://metacpan.org/release/Text-Template">Text-Template</a> - two
+other CPAN template systems popular in the Perl world. Open Source.
+</p>
+</li>
+
+</ul>
+
+<h2 id="parser_generators">Parser Generators</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Yacc">Yacc</a> - a LALR parser generator
+standard, with popular implementations as
+<a href="http://invisible-island.net/byacc/byacc.html">Berkeley
+Yacc (byacc)</a> (Open source, public domain) and
+<a href="http://www.gnu.org/software/bison/">GNU Bison</a> (Open source,
+GPLed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.antlr.org/">ANTLR</a> - “ANTLR, ANother Tool for Language
+Recognition, is a language tool that provides a framework for constructing
+recognizers, interpreters, compilers, and translators from grammatical
+descriptions containing actions in a variety of target languages.” Open Source
+(3-clause BSD licence).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/release/Parse-RecDescent">Parse-RecDescent</a>
+- a parser-generator for Perl 5. Open source (same terms as Perl).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.jeffreykegler.com/marpa">Marpa</a> - a parser than aims
+to be able to parse everything in BNF. Open source (LPGL-version-3-or-later).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://strategoxt.org/Sdf/SGLR">SGLR, the
+Scannerless Generalized LR Parser</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/module/Regexp::Grammars">Regexp::Grammars</a> -
+“Add grammatical parsing features to Perl 5.10 regexes”.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/module/Parser::MGC">Parser::MGC</a> - build
+simple Recursive-Descent parsers in Perl.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Lemon_Parser_Generator">Lemon Parser
+Generator</a> - an LALR parser generator for C that is maintained as part of
+the SQLite project. Open source (public domain).
+</p>
+</li>
+
+</ul>
+
+<h2 id="regex_libs">Regular Expression Libraries</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines">Wikipedia’s
+comparison of regular expression engines</a>.
+</p>
+</li>
+</ul>
+
+<h2 id="diff_and_patch">Diffing and Patching Tools</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.gnu.org/software/diffutils/">GNU Diffutils</a> - an open
+source (GPLv3+) package which provides <tt>diff</tt> and other programs.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://savannah.gnu.org/projects/patch/">GNU patch</a> - apply
+a patch/diff file. Open source (GPLv3+).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://cyberelk.net/tim/software/patchutils/">patchutils</a> -
+<q>Patchutils is a small collection of programs that operate on
+patch files</q>. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Comm">comm</a> - a UNIX command
+used to compare two files for common and distinct lines.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://meldmerge.org/">Meld</a> - a GUI diff/merge tool for
+gtk+. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://kdiff3.sourceforge.net/">KDiff3</a> - a GUI diff/merge tool
+for KDE. Open source.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.gnu.org/software/wdiff/">GNU wdiff</a> - a front-end
+to GNU diff for comparing files on a word-per-word basis.
+</p>
+</li>
+
+</ul>
+
+<h2 id="specialised_processors">Specialised Processors</h2>
+
+<h3 id="xml_processors">XML Processors</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://xmlsoft.org/XSLT/">libxslt</a> ,
+<a href="http://xalan.apache.org/">Apache Xalan</a> ,
+and <a href="http://saxon.sourceforge.net/">SAXON</a> -
+open-source processors for <a href="http://en.wikipedia.org/wiki/XSLT">XSLT</a>
+(Extensible Stylesheet Language Transformations) language.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XQuery">XQuery</a> - a language
+designed to query collections of XML data.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XML_transformation_language">XML
+transformation languages</a> - a Wikipedia page containing more alternatives.
+</p>
+</li>
+
+</ul>
+
+<h2 id="unix_text_processing_tools">Standard UNIX Text Processing Tools</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Echo_%28command%29">echo</a> - output
+strings (with some possible transformations).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Cat_%28Unix%29">cat</a> - output or
+concatenate files.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Cut_%28Unix%29">cut</a> - extract
+sections from each line of output.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Head_%28Unix%29">head</a> - start
+of stream.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Tail_%28Unix%29">tail</a> - end
+of stream.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Paste_%28Unix%29">paste</a> - join
+multiple files horizontally.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Sort_%28Unix%29">sort</a> - sorts
+input.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Csplit">csplit</a> - split files based
+on context lines.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Join_%28Unix%29">join</a> - merges
+lines of two files based on commonalities.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Uniq">uniq</a> - collapses adjacent
+lines, and makes the output unique.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Grep">grep</a> - search for lines
+matching regular expressions.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Sed">sed</a> - stream editor - a
+mini programming language for text processing, based on the
+<a href="http://en.wikipedia.org/wiki/Ed_%28text_editor%29">ed
+text editor</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/AWK">AWK</a> - an even more full-fledged
+programming language for text processing in UNIX (with some quirks, and
+idiosyncrasies).
+</p>
+</li>
+</ul>
+
+<h2 id="prog_langs_with_text_proc_support">Some General-Purpose
+Programming Languages with Good Text Processing Support</h2>
+
+<ul>
+<li>
+<a href="http://www.perl.org/">Perl</a> (also see the
+<a href="http://perl-begin.org/">Perl Beginners’ Site</a>).
+</li>
+
+<li>
+<a href="http://www.python.org/">Python</a>
+</li>
+
+<li>
+<a href="http://www.ruby-lang.org/en/">Ruby</a>
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Lua_%28programming_language%29">Lua</a>
+</li>
+
+<li>
+<a href="http://perl6.org/">Perl 6</a> - a different language from Perl 5,
+with many powerful features. Also see <a href="http://perl6maven.com/">Perl
+6 Maven</a>.
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/text-related-tools.html">Text Related Tools in the book “GNU/Linux Tools Summary”</a> -
+from the Linux Documentation Project.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Lightweight_markup_language">“Lightweight
+markup language” article on the wikipedia</a> - also contains a comparison.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/computers/web/which-wiki/">“Which Open Source
+Wiki Works for You?”</a> - an article I wrote about wikis (also see the
+update).
+</p>
+
+<ul>
+<li>
+<a href="http://www.wikimatrix.org/">WikiMatrix</a> - compare all the wiki engines.
+</li>
+
+<li>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_wiki_software">Wikipedia
+comparison of wiki software</a>
+</li>
+
+<li>
+<a href="http://ikiwiki.info/">ikiwiki</a> - an open-source wiki engine that
+stores pages and history in a version control system.
+</li>
+</ul>
+</li>
+
+<li>
+<p>
+<a href="http://perl-begin.org/uses/text-parsing/">“Text
+Parsing in Perl”</a> and
+<a href="http://perl-begin.org/uses/text-generation/">“Text Generation in
+Perl”</a> pages on the <a href="http://perl-begin.org/">Perl
+Beginners’ Site</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.codinghorror.com/blog/2009/11/parsing-html-the-cthulhu-way.html">Parsing HTML The Cthulhu Way</a>
+</p>
+</li>
+
+</ul>
+
+<h3 id="fun-links">Fun Links</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">Stackoverflow
+comment on parsing HTML using regular expressions.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT Facts</a> (on this site).
+</p>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2012" />
+

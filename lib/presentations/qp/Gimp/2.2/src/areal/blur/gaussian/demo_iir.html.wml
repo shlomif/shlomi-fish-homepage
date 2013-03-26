@@ -1,0 +1,49 @@
+#include 'template.wml'
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open lena.png.
+</li>
+
+<li>
+Select
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; Blur -&gt; "Gaussian Blur..."
+</tt>
+</menupath>
+
+</li>
+
+<li>
+Select radii of x = 5 and y = 5.
+</li>
+
+<li>
+Select "IIR" for the Blur Method.
+</li>
+
+<li>
+Press the "OK" Button.
+</li>
+
+<li>
+Optionally select different images or radii and play with it.
+</li>
+</ol>
+
+</td>
+</tr>
+</table>
+
+
+
+

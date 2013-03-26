@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<p>
+The <a href="http://perldoc.perl.org/base.html">use base</a> pragma allows
+one to conveniently set the base packages of an object, while loading their
+corresponding modules at the same time. Using it is preferable to
+fiddling with <tt>@ISA</tt> directly.
+</p>
+
+<p>
+Note that if you are using Moose, you should use the <tt>extends()</tt>
+function instead of <tt>use base</tt>.
+</p>
+
+<p>
+<a href="http://search.cpan.org/dist/parent/">The parent pragma</a>
+forked from base.pm to "remove the cruft that accumulated there". It may
+be preferable.
+</p>

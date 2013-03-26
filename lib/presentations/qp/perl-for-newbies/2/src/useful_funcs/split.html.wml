@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<p>
+The <tt>split</tt> function can be used to split a string according to
+a regular expression. The syntax of the split function is as follows:
+</p>
+
+<p>
+<tt>@components = split(/$regexp/, $string);</tt>
+</p>
+
+<p>
+Here's a simple example that retrieves the user-id of a given
+username:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/uid.pl" />
+</quadpres_code_block>
+
+<p>
+The following code splits a sentence into words and prints them:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/words.pl" />
+</quadpres_code_block>
+

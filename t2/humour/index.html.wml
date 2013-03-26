@@ -1,0 +1,101 @@
+#include '../template.wml'
+#include "stories/stories-list.wml"
+
+<latemp_subject "Shlomi Fish’s Humorous Creations" />
+
+;;; Renewed monthly.
+<define-tag online_casinos_ad>
+<div style="border: double black 3pt; padding: 0.5em; margin: 0.3em; float: right; width: 30%;">
+<p>
+For some users, there is no better entertainment than playing
+<a href="http://www.onlinecasinobluebook.com/" rel="nofollow">online
+casino sites</a>.
+</p>
+</div>
+</define-tag>
+
+<p>
+You can read the humorous works that I have placed here, including
+<a href="#quotes">short aphorisms, and quotes</a>,
+<a href="#small-scale">Small-scale creations</a> (such as bits, parodical songs,
+lists), <a href="bits/facts/">Factoids about people and things</a>
+(Chuck Norris/etc., and finally <a href="#large-scale">large scale stories</a>
+(novellas and screenplays), that I prepared and placed, usually
+under
+<a href="http://en.wikipedia.org/wiki/Creative_Commons">Creative Commons</a>
+licences.
+</p>
+<online_casinos_ad />
+
+<h2 id="large-scale">Large-scale Creations</h2>
+
+<div class="sub_section">
+
+<humour_stories_list_text />
+
+</div>
+
+<h2 id="quotes">Aphorisms &amp; Quotes</h2>
+
+<div class="sub_section">
+
+<h3 id="quotes-collection"><a href="../humour.html">Collection of My Quotes and Aphorisms</a></h3>
+
+<p>
+A collection of funny or insightful bits and pieces I wrote and collected
+throughout the years.
+</p>
+
+<h3 id="fortunes"><a href="$(ROOT)/humour/fortunes/">Fortune Cookies Collection</a></h3>
+
+<p>
+A collection of files for the UNIX fortune program (that can also be read with
+a naked eye) that consist of several collections of funny or enlightening
+quotes.
+</p>
+
+</div>
+
+<h2 id="small-scale"><a href="$(ROOT)/humour/bits/">Small-scale Creations</a></h2>
+
+<div class="sub_section">
+Small scale creations - often just a pageful or two.
+<a href="$(ROOT)/humour/ways_to_do_it.html">Extrapolate “There’s More
+Than One Way to Do It”</a> to other programming languages,
+<a href="$(ROOT)/humour/bits/Spam-for-Everyone/">fight for accessible
+spam E-mail</a>, and lots of other stuff.
+</div>
+
+<h2 id="by-others"><a href="by-others/">By Others</a></h2>
+
+<div class="sub_section">
+
+<p>
+Humorous creations by other people that are kept here for posterity.
+(Probably because they disappeared from the Internet).
+</p>
+
+</div>
+
+<h2 id="recommendations"><a href="recommendations/">Media Recommendations</a></h2>
+
+<div class="sub_section">
+
+<p>
+Media Recommendations of films, fiction books, etc.
+</p>
+
+</div>
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+<hr />
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+

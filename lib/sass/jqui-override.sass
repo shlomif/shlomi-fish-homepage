@@ -1,0 +1,30 @@
+@import "common-style"
+
+.ui-helper-clearfix:after
+    clear: none
+
+.ui-widget
+    font-size: 1em
+    +default_font_family
+
+.ui-widget-content
+    color: black
+
+// Why do I have to do that?
+.tabs
+    overflow: hidden
+    .first
+        margin-top: 1em
+
+    a
+        color: blue
+
+        &:visited
+            color: purple
+
+        &:hover
+            color: red
+
+    > div > ul
+        clear: left
+        margin-top: 3em

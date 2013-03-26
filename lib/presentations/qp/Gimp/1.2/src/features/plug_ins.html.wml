@@ -1,0 +1,60 @@
+#include 'template.wml'
+
+
+
+
+<points>
+<li>
+In the GIMP, effects and filters are implemented using plug-ins.
+</li>
+
+<li>
+Plug-ins are separate programs that communicate with the main GIMP program
+using pipes.
+</li>
+
+<li>
+Most of the plug-ins that are distributed with the GIMP are GPLed, but
+it is legal and possible to write proprietary plugins.
+</li>
+
+<li>
+Aside from plug-ins written in C, GIMP ships with Scheme and Perl Extensions,
+that enable writing filters and scripts in these languages.
+</li>
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Create an image with a text caption.
+</li>
+
+<li>
+Invoke
+
+<menupath>
+&lt;Image&gt; -&gt; Filters -&gt; Blur -&gt; "Blur..."
+</menupath>
+</li>
+
+<li>
+You can temper with the settings and then press OK.
+</li>
+
+<li>
+The image is now blurred.
+</li>
+</ol>
+
+</td>
+</tr>
+</table>
+

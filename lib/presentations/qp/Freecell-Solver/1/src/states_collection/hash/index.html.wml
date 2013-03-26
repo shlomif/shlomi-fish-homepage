@@ -1,0 +1,30 @@
+#include 'template.wml'
+
+<h2>Can we do better than O(n*log(n))?</h2>
+
+<points>
+<li>
+If we want to keep the states sorted - no.
+</li>
+
+<li>
+If, however, we just want to determine if a given state is present
+or not, then the answer is: "usually".
+</li>
+</points>
+
+<h2>What is a hash?</h2>
+
+<points>
+<li>
+As far as we are concerned a hash is an array of <b>buckets</b>. The index
+of the bucket into which a given state goes is determined according to a
+deterministic hash function.
+</li>
+
+<li>
+A hash function is highly magical and should make sure similar records
+have very distinct hash values, and all hash values are generated
+in roughly equal frequency.
+</li>
+</points>

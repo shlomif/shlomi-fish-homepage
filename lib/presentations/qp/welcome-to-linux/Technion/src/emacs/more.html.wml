@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+<points>
+<li>
+One could also use <tt>M-f</tt> and <tt>M-b</tt> to move one word at a time
+instead of one character at a time.
+</li>
+<li>
+M is short for the Meta key, on your keyboard it will probably be Alt.
+</li>
+<li>
+Page up is <tt>M-v</tt>. Page Down is <tt>C-v</tt>.
+</li>
+<li>
+End of Line is <tt>C-e</tt>. Beginning of the Line is <tt>C-a</tt>.
+</li>
+<li>
+So much for moving around.
+</li>
+<li>
+The most common method of copy&amp;paste is by cutting out using <tt>C-k</tt>.
+C-k cuts until the end of line, typing <tt>C-k</tt> many times will cut
+many lines. If you cut a few lines then move around and cut more lines.
+The first lines would be lost this way (not including possible undo).
+</li>
+<li>
+In order to paste we will yank the text out of the buffer using <tt>C-y</tt>
+you can yank(paste) out however many times you want wherever you want.
+</li>
+</points>
+

@@ -1,0 +1,989 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+#include "cpan_dists.wml"
+
+<latemp_subject "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
+<latemp_meta_desc "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
+
+<p>
+This document is a list of questions and answers to common questions I have
+been asked or have found myself answering or telling about. I don’t mind being
+asked the same question more than once (even by the same person) because I
+still enjoy answering it. (See also
+<a href="http://wilwheaton.net/faq.php">what Wil Wheaton says about it at the
+beginning of his FAQ</a>
+</p>
+
+<p>
+But this document is here just in case, you have a question, or at least so
+I can link to it.
+</p>
+
+<toc_div />
+
+<h2 id="about">About Shlomi Fish and this Site</h2>
+
+<h3 id="who_are_you">Who are you?</h3>
+
+<p>
+I am <a href="$(ROOT)/personal.html">Shlomi Fish</a>, a professional Israeli
+software developer, and author of articles, essays, presentations, and funny
+stories, aphorisms and bits. I have a Bachelor of Sciences (B.Sc.) from
+the Technion in Electrical Engineering, but it would be a stretch to call
+me an Electrical Engineer, at least with my current level of expertise in
+the field. I’m actually more of a programmer and a specialised mathematician.
+</p>
+
+<p>
+At the moment, I’m a computer geek (person who is enthusiastic about
+computers), and a nerd (a person without a social life). I’m interested in
+many other fields, including linguistics, history, writing, children and
+non-children literature, and T.V. and movies.
+</p>
+
+<p>
+I should note that I am only <b>one</b> person, and in fact am unaware of
+any other “Shlomi Fish”’es or “shlomif”’s of significance (at least not
+according to Internet searches).
+</p>
+
+<h3 id="guy_or_girl">Are you a Guy or a Girl?</h3>
+
+<p>
+I am very much a guy, despite what my first name’s suffix (the “i” of
+“Shlom<b>i</b>”) may imply to English speakers. I am also heterosexual,
+and while hating being a macho in real-life, and having some other somewhat
+feminine qualities, do not think I’m a woman born in a man’s body. (Or a
+lesbian born in a man’s body, for that matter.)
+</p>
+
+<p>
+Many Israeli masculine names end with an “i”: Avi, Ari, Meni, Beni, Ori, Uri,
+Udi, Eli, etc. An “i” suffix means “of me” or “mine” in Hebrew, or
+“having the property-of” (like “-ful” in English). There are also
+many Israeli Hebrew feminine names that end with “i”. One reason I’m using
+“Shlomi” instead of “Shlomy” is because “Shlomy” might be pronounced to rhyme
+with the word “my”.
+</p>
+
+<h3 id="your_name">What can you Say about your Name?</h3>
+
+<p>
+Well, “Shlomi” or “שלומי” in Hebrew (see its <a
+href="http://en.wikipedia.org/wiki/Shlomi_%28Hebrew_name%29">wikipedia
+entry</a>) means “my Shalom” in Hebrew, or perhaps “Shalom-ful” or “the
+Shalom of Jehuvah”. “Shalom” in Hebrew means “well-being”, “welfare”, “peace”,
+“harmony”, etc. and is derived from
+<a href="http://en.wiktionary.org/wiki/Appendix:Proto-Semitic/%C5%A1al%C4%81m-">proto-Semitic
+origins</a>. See also <a href="http://shlomif.livejournal.com/42172.html">what
+I wrote about it on my blog</a> (and some of the comments I received).
+</p>
+
+<p>
+Now, most Israelis pronounce this name with the stress on the “lo”. I, however
+prefer it to be pronounced with the stress on the “mi”, albeit I also answer
+to people who pronounce it the other way around. My version is the correct
+Biblical pronunciation. You can hear me pronounce it in
+<b>Hebrew</b>
+(<a href="sounds/How-I-pronounce-Shlomi-Fish-Hebrew.ogg">Ogg</a>,
+<a href="sounds/How-I-pronounce-Shlomi-Fish-Hebrew.mp3">mp3</a>)
+and in <b>English</b>
+(<a href="sounds/How-I-pronounce-Shlomi-Fish-English.ogg">Ogg</a>,
+<a href="sounds/How-I-pronounce-Shlomi-Fish-English.mp3">mp3</a>).
+</p>
+
+<p>
+Please spell the name as starting with “Sh”, similar to the common spelling
+in English — not with “Sch” (the German spelling).
+</p>
+
+<p>
+My last name - Fish - naturally means
+<a href="http://en.wikipedia.org/wiki/Fish">the aquatic creatures</a> in
+English or (with a different spelling) in German. It was the last name of my
+late grandfather who was a Polish-born Jew, and I’m still carrying it.
+</p>
+
+<p>
+“Fish” is an uncommon name in Israel, but there are also some variations
+such as “Fisher”, “Fishman”, “Fischer”, “Fishlov”, “Fishelson”, etc.
+</p>
+
+<h4 id="is_shlomi_fish_your_real_name">Is Shlomi Fish Your Real Name?</h4>
+
+<p>
+Despite what the name may imply to non-Israeli people, Shlomi Fish is my
+real, and legal, name. See <a href="#your_name">the question above</a>
+for more information about its etymology.
+</p>
+
+<h3 id="shlomifish_org_domain">Why did you get the
+www.shlomifish.org domain?</h3>
+
+<p>
+Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
+DNS service, but it had a lot of DNS problems. Thus, I set up
+<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>. I didn’t
+take shlomifish.org.il because .il domains used to cost a lot of money, and
+also required co-ordination by a fax message (how low-tech) upon every
+change. I also didn’t want a .com domain because I feel I’m a private individual
+rather than a company.
+</p>
+
+<p>
+http://shlomifish.org/ used to be a parked hostname of my DNS registrar, but
+now I redirected it to a different site, which just contains a link to
+the appropriate page on www.shlomifish.org. I’m not making it an alias
+so the links and page rank won’t be fragmented.
+</p>
+
+<h3 id="website_in_english">Why is this website in English? Why not
+Hebrew?</h3>
+
+<p>
+For several reasons:
+</p>
+
+<ol>
+<li>
+There are many more English speakers (either as their mother tongue or as
+a secondary language) than Hebrew speakers. So I’m reaching a bigger target
+audience by writing in English.
+</li>
+<li>
+Most native Hebrew speakers (i.e: Israelis) can read English well enough to
+understand my English writing. So most of the target audience for writing stuff
+in Hebrew will benefit from it very little.
+</li>
+<li>
+I find it more comfortable and faster to type in English and express myself in
+writing using English for most types of writing (some
+<a href="$(ROOT)/humour/">stories I’m writing</a> being an exception).
+</li>
+<li>
+I often use a lot of tech jargon or slang, which is more difficult to
+translate to Hebrew.
+</li>
+</ol>
+
+<p>
+That put aside, if you wish to translate a piece I wrote to any other
+language (including Hebrew), feel free to do so. I contributed some
+Hebrew translations to some English articles that other people originated,
+and also translated some things I wrote in Hebrew to English.
+</p>
+
+<p>
+Note that <b>I’m using Commonwealth English</b> on this site. Partly because
+I think that’s what Israelis are supposed to use, partly because I have been
+somewhat British-oriented, and partly because it feels nicer to use an
+uncommon spelling. I am still using US English spelling for source
+code and for technical documents, though.
+</p>
+
+<p>
+My thoughts are that both the British spelling and the American spelling (and
+their common subset), are inconsistent and confusing, but I have to make
+a choice of some sort.
+</p>
+
+<h3 id="nicknames">How else are you known?</h3>
+
+<p>
+I’m also known as “shlomif” or on the IRC as “rindolf”.
+</p>
+
+<h4 id="origin_of_rindolf">What is the origin of your “rindolf” IRC nickname?</h4>
+
+<p>
+Rindolf “Woman-hands” [Forgot the last name] was a Dwarven warrior I
+played on a series of
+<a href="http://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons#Advanced_Dungeons_.26_Dragons_2nd_edition">AD&amp;D 2nd edition</a> sessions,
+and one of my favourite tabletop Role Playing Games characters of at all times.
+I probably picked up the name by analogy with such Germanic-originated names
+as <a href="http://en.wikipedia.org/wiki/Randolph_%28given_name%29">Randolph</a>
+or <a href="http://en.wikipedia.org/wiki/Rudolph_%28name%29">Rudolph</a>.
+I'm not sure if "Rin" or "Rind" means anything in Germanic languages, but it
+has a nice ring.
+</p>
+
+<p>
+The first IRC nickname I used was “dori” after one of the dwarves in
+Tolkien’s <a href="http://en.wikipedia.org/wiki/The_Hobbit">the Hobbit</a>,
+and later on decided it was a common name, so I switched to “gloin”, the name
+of a different dwarf. Then I wanted something more original, so I picked up
+“rindolf” and the name stuck.
+</p>
+
+<p>
+If I were able to change it again, I would have picked “shlomif” for my IRC
+career, because it is my handle almost everywhere else, but now everyone
+on IRC know me as “rindolf” so I feel it's too late (not to mention that,
+in my impression, it is common and accepted to use a pseudonym on IRC, to
+show some creativity).
+</p>
+
+<p>
+The running joke we have on IRC, is that Rindolf is the evil twin brother
+of Santa Claus’s goody-two-shoes reindeer, Rudolph and Randolph, who are
+among his arch-enemies. Rindolf is also one of the cornerstones of the
+Evil Reindeer Evil World Domination Evil Conspiracy, with the evil aim to the
+spread the Reindeer Evil all over the world. You can find some of the
+manifestations of this joke in
+<a href="$(ROOT)/humour/fortunes/">the IRC conversations quoted on my fortune
+cookies</a>.
+</p>
+
+<h3 id="refer_or_address">How should I address you or refer to you?</h3>
+
+<p>
+When writing a letter to me you can start it with
+“Hi Shlomi!”, “Dear Shlomi,”, “Hello Shlomi,” etc. or with “Hi Mr. Fish”,
+“Dear Mr. Fish”, etc. Not “Hello Fish” please... I hate when people call
+me “Fish” to my face, albeit “Mr. Fish” is OK.
+</p>
+
+<p>
+Some letters begin with “Shlomi,” in a separate paragraph. I personally
+feel that the person is always trying to preach to me in this case, but
+I was told it is not considered bad form in English-speaking countries,
+so it may just be a culture gap.
+</p>
+
+<p>
+If you wish to refer to me in third person, you should start with
+“Shlomi Fish” and continue with “Shlomi”, “Fish”, “Mr. Fish”, etc.
+Alternatively you can start with “Shlomif” or “shlomif”, which are my
+common Internet handles which I use everywhere I can. I also seem to be
+virtually
+<a href="http://www.google.com/search?q=shlomif&amp;ie=UTF-8&amp;oe=UTF-8">the
+only “shlomif” on the Internet</a>.
+</p>
+
+<p>
+On the IRC, I generally use <a href="#origin_of_rindolf">the nickname “<tt>rindolf</tt>”</a>.
+</p>
+
+<h3 id="spent_on_the_site">How much Time Do you Spend on this Site?</h3>
+
+<p>
+Too much. I spent several hundreds of hours on the site, possibly several
+thousands. While the pages of this site were originally just a collection of
+hand-maintained HTML pages, they were then converted to use
+<a href="http://thewml.org/">Website Meta Language</a>, and converted to have a
+common look and feel, a style that’s hopefully semantic, converted to use
+<a href="http://www.w3.org/MarkUp/">valid XHTML markup</a>
+(XHTML 1.1 for the while); some navigation aids were added, etc.
+</p>
+
+<p>
+All of the source code for the site is available online in various places. I’ve
+prepared <a href="$(ROOT)/meta/site-source/">a top-to-bottom
+document</a> on how to compile the site from
+scratch). Some of the hand-crafted code was released as
+<a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
+System</a> or various <a href="<shlomif_cpan />">assisting
+CPAN modules</a> under an open-source license.
+</p>
+
+<p>
+I am still working on the site, both by adding new content and attractions,
+by revising or correcting existing ones, by making it more usable, or by
+trying to publicise new attractions in various online resources.
+</p>
+
+<h3 id="site_history">What can you tell me about this site’s history?</h3>
+
+<p>
+Well, a journey of a thousand miles begins with one small step and continues
+with many subsequent small steps.
+</p>
+
+<p>
+My homesite started from a small number of static HTML pages kept on the
+server of my workplace back then (<a href="http://www.smlink.com/">Smart
+Link</a>). It had the address http://www.smlink.com/~shlomif/, now inactive,
+where shlomif was my username on ibm.net back then (which ended up becoming
+my general unofficial ID). We hosted the server behind our Point-to-Point
+connection (not such a smart idea retrospectively) and we had to create the
+alias in IIS specifically for me to put stuff there.
+</p>
+
+<p>
+I recall that I had <a href="$(ROOT)/humour.html">the Humour collection</a>
+with a few jokes I originated, as well as <a href="http://www.shlomifish.org/toggle.html">the report about the algorithmic solution to the Toggle Squares
+puzzle</a> I sent to its originator (with whom I was corresponding at
+the time). And it also had a rudimentary pageful of links and a bio.
+</p>
+
+<p>
+When I became a student in the Technion, I moved my site to its undergraduate
+server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
+and more resources to the site. I had a limited quota there, and when I got
+an account on “vipe”, a server managed by the students, I hosted part of
+my home site there as well, as http://vipe.technion.ac.il/~shlomif/ . The
+two parts of the site had cross-links to one another.
+</p>
+
+<p>
+Eventually, I was about to graduate and so moved the t2.technion.ac.il part
+of my homesite, first to shlomif.il.eu.org (a free hostname, which ended up
+causing too many DNS problems), and then to www.shlomifish.org which is
+where it residing now. In the process, I converted all of the main pages to
+use <a href="http://thewml.org/">Website Meta Language</a> and what would
+eventually become <a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a>.
+This has enabled the site to have a common look and feel, a nice CSS
+stylesheet, a navigation menu and other navigation aids and other nice
+features.
+</p>
+
+<p>
+Eventually I realised that the vipe server has too much down time (due
+to problems at the Technion’s network) and moved all of its content over
+to the www.shlomifish.org domain.
+</p>
+
+<p>
+Throughout all this time, many resources were added to the homesite: software,
+essays, stories, artwork, presentations, puzzles, and more information about
+myself. I also now maintain a large number of
+<a href="$(ROOT)/me/blogs/">blogs</a> and sites for my projects, as well as
+sites I volunteered to maintain. I really like the way the web allows me to
+express myself, and to communicate using text, hypertext, and other types of
+media.
+</p>
+
+<p>
+In case you’re interested in setting up a personal web site of your own, I
+wrote
+<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/">an
+article about it</a>, which you can read.
+</p>
+
+<h3 id="idf_service">Did you serve in the Israeli Military (the IDF)?</h3>
+
+<p>
+No, I did not. I’m exempt from service, due to the various
+<a href="http://en.wikipedia.org/wiki/Clinical_depression">depressions</a>
+I got into during High School. Please don’t accuse me of being a “Mishtamet”
+(“משתמט”), who is a person who purposely avoided a military service, while
+being fully capable of it. That’s not the case for me, as back in the time,
+I wanted to join the army.
+</p>
+
+<p>
+That put aside, I
+<a href="http://groups.yahoo.com/group/philosophy-il/message/25">oppose the
+draft</a> in Israel or wherever.
+</p>
+
+<h3 id="favourite_music">What kind of Music do you like Listening to?</h3>
+
+<p>
+I mostly listen to Rock and Pop, but have some favourite songs of many genres
+including Dance, Rap/Hip Hop, Soft Music, Classical Music (especially
+Crossover Classic, which I find very fun), Instrumental Music, Country, Rhythm
+and Blues and Soul, Ethnic Rock, etc.
+</p>
+
+<p>
+My favourite Israeli artist is
+<a href="http://en.wikipedia.org/wiki/Yehuda_Poliker">Yehuda Poliker</a>,
+and my favourite International artist are
+<a href="http://en.wikipedia.org/wiki/The_Beatles">the Beatles</a>. My
+favourite Israeli song is “Shlal Sharav” (or “Heat Booty” in English); it is
+sang by Gidi Gov, but it was composed by Poliker with words written by Meir
+Ariel. My favourite song in English is “You Gotta Be” by
+<a href="http://en.wikipedia.org/wiki/Des'ree">Des’ree</a>.
+</p>
+
+<h3 id="should_i_email">May I email you about X?</h3>
+
+<p>
+While the amount of emails that I receive is not overwhelming (yet), I still
+find that people are sending me a lot of annoying emails. Here are a few
+ground rules for when <b>not to</b> send me emails:
+</p>
+
+<ul>
+
+<li id="reply_to_list">
+
+<p>
+If the email to which you are replying was sent by me to a mailing list,
+<b>please reply to the list</b>. I loath such emails sent in private to mailing
+list posts. They tend to be preachy, annoying, and worthless.
+</p>
+
+<p>
+One person, who sent me a lot of emails like that, and whom I talked to about
+it on IM and told him how I felt, claimed that he sent such emails when what
+he had to say was not well-thought enough. Well, my reply now is that if you
+want to send me a non-well-thought email - don’t. Please respect me enough
+to make sure it is a mature idea or else don’t send it at all.
+</p>
+
+<p>
+Feel free to criticise me in public, as long as you do it with decency,
+respect, and while avoiding common logical fallacies.
+</p>
+
+<p>
+If you do want to send me a private E-mail to a mailing list post, please
+explicitly say that the E-mail is sent in private, and detail the reason for
+it. Else, I am likely to throw away your E-mail.
+</p>
+
+</li>
+
+<li>
+<p>
+Please don’t send me a <b>“Can you teach me how to become a hacker?”</b>
+emails. See my
+<a href="$(ROOT)/philosophy/computers/open-source/how-to-start-contributing/">How
+Can I Start Contributing to Free and Open Source Software (FOSS)</a> essay
+instead. If you’re living in Tel Aviv and vicinity and are
+willing to pay for me giving you private lessons, then this is an option.
+</p>
+</li>
+
+<li>
+<p>
+Please don’t send me emails, trying to interest me in contributing to an
+open-source project <b>for free</b>, a pro-bono commission, or anything else
+that doesn’t involve payment. I follow my own interests and
+<a href="http://shlomif.livejournal.com/39551.html?thread=32127#t32127">don’t
+work for free</a>.
+</p>
+<p>
+If you have an online or offline publication, and can pay me for the trouble
+of writing an article, then feel free to inform me about it. Other possible
+commissions such as book reviews  are also appropriate.
+</p>
+</li>
+
+<li>
+<p>
+Please don’t send me emails with <b>technical questions</b> about open source
+projects. These better belong in an IRC channel, in your local Linux User
+Group mailing list or web forum, in the local Perl mongers mailing list, and
+so forth. An exception may be projects that I personally created or maintain.
+</p>
+</li>
+</ul>
+
+<h3 id="diet">What can you tell about your diet?</h3>
+
+<p>
+I don’t drink alcoholic beverages, don’t consume caffeinated beverages, don’t
+smoke, don’t do drugs, and try to avoid consuming sugary foods. I find that
+this way I’m less tired, more energetic, and less moody. I don’t need such
+negative bio-physical aphrodisiacs to be happy, and neither do you.
+</p>
+
+<p>
+Most of the people I talk with on the IRC who consume caffeine have become
+dependent on it and cannot function without their
+morning/mid-morning/midday/etc. coffee. On the other hand, I’m energetic
+from the time I wake up until I go to sleep. As for alcohol, it has negative
+short-term and long-term effects. And I also don’t want to become drunk
+because it will cause me to lose control of myself, and do silly things and
+say silly stuff.
+</p>
+
+<p>
+I have never smoked or taken drugs, and never intend to do so. People with a
+drug dependency reduce their happiness and self-esteem like this, and damage
+their health.
+</p>
+
+<p>
+All that put aside, I still believe
+<a href="$(ROOT)/philosophy/politics/drug-legalisation/">all these substances
+should be legal</a>, and should not be regulated in any way.
+</p>
+
+<h3 id="mental_illness">Do you have any mental illnesses?</h3>
+
+<p>
+As a matter of fact, I do. I used to get into
+<a href="http://en.wikipedia.org/wiki/Clinical_depression">Clinical
+depressions</a>,
+<a href="http://en.wikipedia.org/wiki/Clinical_depression#Anxiety">anxieties</a>
+and
+<a href="http://en.wikipedia.org/wiki/Clinical_depression#Hypomania">Hypomanias</a>
+and even a few <a href="http://en.wikipedia.org/wiki/Mania">Manias</a>. The
+presence of the latter may indicate I have
+<a href="http://en.wikipedia.org/wiki/Bipolar_disorder">Bipolar Disorder</a>
+(or “Mania-Depressia”).
+</p>
+
+<p>
+I’m no longer getting into depressions or anxieties, which is good because
+when I’m in them, I feel that I am a bad person, think the whole world is bad
+and cannot concentrate on doing anything. I’m still getting some hypomanias, in
+which I feel quite elevated, while in fact knowing that I feel bad, and where I
+can still function, and still know that I’m a good person. Most of the time, I
+am OK.
+</p>
+
+<p>
+Note that the opinions I express and what I say are not a consequence of my
+mental status, but rather of the
+<a href="$(ROOT)/philosophy/books-recommends/">many
+philosophical influences</a>, I’ve been exposed to, which I feel made my
+thinking process straighter and more logical. Some people take many common
+“truisms” for granted, but I can demonstrate they are wrong.
+</p>
+
+<p>
+Here are a few jokes about it:
+</p>
+
+<blockquote>
+
+<p>
+Shlomi Fish once defined himself as a “Programmer, Writer, Amateur
+Mathematician, Wannabe Philosopher, and someone who studied in the Technion in
+the vain hope of becoming an Electrical Engineer”. He does not consider himself
+a sane person, but is quite certain that only makes him more interesting.
+</p>
+
+</blockquote>
+
+<p>
+And:
+</p>
+
+<pre>
+  &lt;tyler-&gt;  rindolf: you are seriously the craziest fucker I know
+  &lt;tyler-&gt;  and I know some crazy ass people
+  &lt;mofino&gt;  haha
+ &lt;rindolf&gt;  tyler-: I am crazy. And proud of it.
+  &lt;tyler-&gt;  rindolf: you should be
+  &lt;mofino&gt;  haha
+  &lt;mofino&gt;  Ahh man
+ &lt;rindolf&gt;  tyler-: being crazy is hard work. I worked all my life to be
+            crazy.
+  &lt;mofino&gt;  Normal people aren’t fun.
+ &lt;rindolf&gt;  tyler-: “Craziness is not an action. It’s a process.”
+  &lt;mofino&gt;  heh
+  &lt;tyler-&gt;  rindolf: I see
+ &lt;rindolf&gt;  You need to tend to your insanity.
+ &lt;rindolf&gt;  tyler-: do you want to be crazy?
+  &lt;tyler-&gt;  rindolf: that’s why I feed my leprechaun at least once a
+            day.
+ &lt;rindolf&gt;  tyler-: I can teach you everything I know.
+</pre>
+
+<p>
+(and “Ask not what your insanity can do for you - ask what you can do for
+your insanity.”)
+</p>
+
+<p>
+My opinions are subject to change - they have changed in the past, and it’s
+likely they will change again. Furthermore, reality is dynamic, and
+Ethics, philosophy and opinions change with time, as technology, culture
+and education progresses.
+</p>
+
+<h3 id="irc_part_message">What is the origin of your IRC part
+message (“Yay! I’m a Llama again!”)?</h3>
+
+<p>
+It’s a quote from the Disney Animated film
+<a href="http://en.wikipedia.org/wiki/The_Emperor's_New_Groove"><i>The
+Emperor’s New Groove</i></a>, which is otherwise highly recommended. Here is
+<a href="http://www.youtube.com/watch?v=W5GjhMMPM00">the clip on YouTube</a>.
+</p>
+
+<h3 id="obscure_email_addr">Why don’t you obscure/hide your email address?
+People can spam you.</h3>
+
+<p>
+First of all, in this day and age, it’s unlikely that the spammers <b>will
+not find</b> my email address. That’s because they also install a lot of
+malware on vulnerable computers to harvest email addresses from. Since I can’t
+refrain from sending email to Windows users, and would rather not, I can never
+prevent spam entirely.
+</p>
+
+<p>
+I deal with spam by filtering it on the client side. I’m using
+<a href="$(ROOT)/open-source/favourite/#spamassassin">SpamAssassin</a>
+to filter my email and so far it’s doing a very good job. Some spam still
+arrives at my inbox, but otherwise very little. There are
+<a href="http://freecode.com/articles/view/964/">several other open-source
+spam filters</a> (and some non-open-source solutions), which you may wish
+to look at. <a href="http://gmail.com/">GMail</a> and other webmail
+services also do a good job in filtering spam (regardless of
+<a href="http://shlomif.livejournal.com/46955.html">their other faults</a>).
+</p>
+
+<p>
+All of that put aside, I think that having a convenient “mailto:” link
+is recommended because people don’t need to go through inconvenient
+hoops to send you an email. I love receiving (good) email about my site,
+and I’d rather not throw the baby along with the water, just because spammers
+may have an easier time harvesting my already public email address.
+</p>
+
+<p>
+For more information, see
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.717364.8">my
+post to the “Joel on Software” forum</a> about
+“Email at the bottom of every page”.
+</p>
+
+<h3 id="xhtml_11">Why are you using XHTML 1.1 for many pages on your site
+while serving them as “text/html”?</h3>
+
+<p>
+I feel that validating against an XHTML schema makes my code cleaner and less
+buggy, because I need to have closing tags, as well as use a trailing “/” for
+standalone tags, etc. I also find the additional XHTML 1.1 restrictions
+to be a good idea.
+</p>
+
+<p>
+Therefore I decided to make XHTML 1.1 the default doctype for the pages
+on my site. The reason I’m serving them as <tt>text/html</tt> is because
+<a href="$(ROOT)/no-ie/">Microsoft Internet Explorer</a> does not handle
+<tt>application/xml+xhtml</tt> properly, and I’d rather not needlessly
+discriminate against people who still use it (possibly against their
+will).
+</p>
+
+<p>
+I realise that it stands against the XHTML standard, but I’m not a standards
+purist, and want to be a bit pragmatic in still supporting Explorer.
+Note that some pages in the <a href="$(ROOT)/MathVentures/">Math-Ventures
+section</a> end with the <tt>.xhtml</tt> suffix and are served as XHTML
+because they contain <a href="http://www.w3.org/Math/">MathML</a>.
+</p>
+
+<h3 id="evilphish-emblem">What can you tell about the Fish Emblem on the top-left corner?</h3>
+
+<p>
+This is <a href="http://ars.userfriendly.org/cartoons/?id=20030803">EvilPHish</a>
+from
+<a href="http://userfriendly.org/">the comics’ strip UserFriendly.org by
+Iliad</a>. I was a big fan of UserFriendly.org when EvilPHish was featured
+there, and it was so me, so I decided to make it my emblem. After downloading
+the big version of the comic, and tempering with it a little with
+<a href="http://www.gimp.org/">GIMP (= the GNU Image Manipulation
+Program)</a>, I was able to produce a transparent PNG file that I could use.
+</p>
+
+<p>
+After a while, I realised that most people recognised this emblem and
+associated it with me (in part because my last name is Fish) and decided
+to standardise on it everywhere, and so I did. Note that the image is still
+copyrighted by Mr. Iliad, but I hope its use is OK.
+</p>
+
+<p>
+As a child and a teenager, I’ve been a bit frustrated by my last
+name being Fish, and was often teased for it. But I feel OK about it now,
+and it’s good that people can associate my last name with something
+they are familiar with, and with a memorable emblem such as EvilPHish.
+</p>
+
+<h3 id="computers-specs">What are your Computers’ Specifications?</h3>
+
+<p>
+My primary machine is a desktop machine with a:
+</p>
+
+<ul>
+
+<li>
+An Intel Core i3 CPU (x86-64).
+</li>
+
+<li>
+8 GB of RAM.
+</li>
+
+<li>
+Intel Corporation Sandy Bridge Integrated Graphics Controller (rev 09)
+</li>
+
+<li>
+A 2 TB hard-disk.
+</li>
+
+<li>
+A 19״ LCD Screen by ViewSonic.
+</li>
+
+<li>
+Intel Corporation Cougar Point High Definition Audio Controller.
+</li>
+
+<li>
+Intel Corporation 82579V Gigabit Network Connection.
+</li>
+
+</ul>
+
+<p>
+I’m running <a href="http://www.mageia.org/">Mageia Linux</a> on it. This
+desktop computer replaced my older computer which was a:
+</p>
+
+<ul>
+
+<li>
+Pentium 4, 2.4 GHz CPU.
+</li>
+
+<li>
+2.5 GB of RAM.
+</li>
+
+<li>
+An ATI Radeon HD 2600 card.
+</li>
+
+<li>
+One 160 GB Hard-disk and two smaller ones of 80 GB or so.
+</li>
+
+<li>
+A 19״ LCD Screen by ViewSonic.
+</li>
+
+<li>
+A standard built-in AC’97 sound-card.
+</li>
+</ul>
+
+<p>
+I’m using mostly
+<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
+and Open Source Software</a> (FOSS) on it, and try not to depend on
+non-FOSS software. I explained
+<a href="http://shlomif-tech.livejournal.com/65226.html">the reason
+I no longer trust non-FOSS software</a> on my technical weblog.
+</p>
+
+<p>
+I also have an Acer Aspire 5738DZG laptop with the following specs:
+</p>
+
+<ul>
+
+<li>
+Intel Pentium(R) Dual-Core CPU       T4300  @ 2.10GHz. (x86-64).
+</li>
+
+<li>
+ATI Mobility Radeon™ HD 4570 (r700)
+</li>
+
+<li>
+15.6״ 3D HD LCD Screen.
+</li>
+
+<li>
+3 GB Memory
+</li>
+
+<li>
+320 GB Hard Disk Drive.
+</li>
+
+<li>
+“DVD Super Multi DL drive”
+</li>
+
+<li>
+Acer Nplify™ 802.11b/g/n.
+</li>
+
+</ul>
+
+<p>
+This dual-boots between Windows 7 Home something and Mageia Linux
+(which is what I’m using most of the time.).
+</p>
+
+<h3 id="programming_languages">Which Programming Language did you start with? Which programming languages do you know now?</h3>
+
+<p>
+When I was in the 4th grade (back around 1987), my father bought my family
+a PC XT machine, with 640 KB of memory, and a colour CGA screen. Using this, my
+friends and I started learning how to program, first using the BASIC
+interpreter that was installed on the BIOS and was invoked if you didn’t put a
+diskette inside, and then using some of the BASIC variants that ran on DOS such
+as BASIC.COM, GWBASIC and BASICA. So for better or for worse, BASIC was my
+first language.
+</p>
+
+<p>
+I’ve neglected programming for a long while and just played games on the
+computer, and possibly did some work on it. However, I returned to programming
+when I was in the 9th grade, this time on a 386 SX with
+<a href="http://en.wikipedia.org/wiki/QBasic">QBasic</a> which came with
+some later versions of DOS, and later on with
+<a href="http://en.wikipedia.org/wiki/Turbo_C%2B%2B">Borland Turbo C++</a>
+3.0 (which sported a much more primitive variant of C++ compared to today’s
+flavours). Despite knowing C and C/C++, I still found QBasic of use, due to
+my ability to rapidly develop code in it (what Larry Wall later called
+“whipuptitude” in some of his talks.). I also may have dabbled with Excel’s
+<a href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
+Basic for Applications (VBA)</a> before I graduated from high school, and
+during my 10th grade, I learned some Pascal using Microsoft QuickPascal on
+DOS.
+</p>
+
+<p>
+After I graduated from high school, I worked at three firms. In some of them
+I've done C or C++ development on Windows, but I also studied some SQL, and
+became familiar with some
+<a href="http://en.wikipedia.org/wiki/Unix">UNIX</a> flavours
+and with <a href="http://perl-begin.org/">Perl 5</a> and the UNIX shells. UNIX
+has been an epiphany for me: until then I used DOS and Windows, and considered
+them bad, but did not know what a good system is. UNIX was the first genuinely
+good system that I have encountered. I also fell in love with Perl, and it
+became my favourite language.
+</p>
+
+<p>
+By the time I started studying the Technion, I had a relatively early
+distribution of
+<a href="http://en.wikipedia.org/wiki/Linux">Linux</a> installed on my
+computer, and started playing with various languages available there.
+</p>
+
+<p>
+You can find a list of languages that I currently know on
+<a href="$(ROOT)/SFresume.html">my résumé</a>.
+</p>
+
+<h3 id="homesite_or_blog">Is www.shlomifish.org a blog?</h3>
+
+<p>
+The short answer is that www.shlomifish.org is a good, old-fashioned,
+Web 1.0-style home site - not a weblog/blog/online journal. Despite all that,
+my web site is fairly modern in its client-side technology and its
+look-and-feel should be usable and attractive enough. I have
+<a href="$(ROOT)/me/blogs/">several blogs</a> and am not opposed to the
+concept, but a classic web site has many advantages. For more information,
+see:
+</p>
+
+<ul>
+
+<li>
+
+<p>
+<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create a Great Personal Home Site”</a>
+</p>
+
+</li>
+
+<li>
+
+<p>
+<a href="$(ROOT)/philosophy/computers/web/homepage-vs-blog/">“Homepage vs. Blog”</a>
+</p>
+
+</li>
+
+</ul>
+
+<h2 id="foss">About Free and Open Source Software (FOSS)</h2>
+
+<h3 id="how_to_become_hacker">How can I become an open-source contributor?</h3>
+
+<p>
+See
+<a href="$(ROOT)/philosophy/computers/open-source/how-to-start-contributing/">what I wrote</a> about it on my homepage. I’m giving instructions there.
+You may also wish to read my
+<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">“Advice
+for the Young”</a> essay.
+</p>
+
+<h2 id="political_correctness">Political Correctness (or Lack of it)</h2>
+
+<h3 id="pc_rating">What is the Approximate Maturity Rating of this Site?</h3>
+
+<p>
+Most of it should be either U (Universal) or PG-Something (Parent Guidance).
+I’m not a blatantly pornographic person.
+</p>
+
+<h3 id="pc_girl">Why are you using the terms “girl”, “chick”, etc.?</h3>
+
+<p>
+I’m using the term “girl” for lack of a better term for “a female guy”. I was
+told that some feminazis consider it derogatory, but until a better word
+emerges, that’s what I’m going to use. (And I don’t find it particularly
+derogatory).
+</p>
+
+<h3 id="pc_nazi">Why are you using the term “nazi” to refer to people
+who are “needlessly strict”?</h3>
+
+<p>
+Because it is an acceptable use for such a word. You can find the
+fallout from one of my uses of it
+<a href="http://linmagazine.co.il/node/view/9351">on
+this linmagazine.co.il page (in Hebrew)</a>
+(“And what does it have to do with anything? Did Hitler use Linux?”). I
+didn’t stop using the word “nazi” afterwards, and also see
+<a href="http://shlomif.livejournal.com/53966.html">the post
+“The Grammar Nazis Conspiracy”</a> on my personal/philosophical blog.
+</p>
+
+<p>
+Many people treat the Nazis/Hitler/Holocaust/World War II issue
+with too much “holiness”.
+</p>
+
+<h4 id="pc_nazi_writings">Why do you mention Hitler, Nazis, etc. in some of
+Your Writings?</h4>
+
+<p>
+I found it suitable to use it for them, so I did. For the record, my
+grandfather lost most of his family during the Holocaust, and so I cannot
+be accused of misusing such facts. Steven Spielberg whose parents
+are Jewish Holocaust survivors, also featured the Nazis or Hitler in many
+films (notably the Indiana Jones trilogy), so if a fire has caught the
+Firs…
+</p>
+
+<h3 id="pc_porn">What do you think about Porn?</h3>
+
+<p>
+Every person has an inalienable right to expose his or her body in private,
+and to allow people to photograph it, paint it, describe it, etc. Sexual
+activity is also similarly acceptable. Claiming that porn should be illegal
+or illegitimate undermines both the right of free speech, and the right of
+a man or a woman to their body.
+</p>
+
+<p>
+Furthermore, the artwork that a person decides to enjoy in his free time, is of
+no concern to the Peace and Justice in a Liberal country, and should not be
+enforced. Only when a person is influenced from such artwork in his everyday
+actions, then he may be prosecuted.
+</p>
+
+<p>
+Nevertheless, I find most porn disgusting and disturbing, but still think
+one should be allowed to produce it, distribute it, and experience it. Some
+of the greatest artists in history produced pornographic or erotic artworks.
+</p>
+
+<h4 id="pc_porn_links">Are there any Links to Porn on your Site?</h4>
+
+<p>
+There may be some links to soft porn, etc. Or to individual pornographic
+pages that illustrate a certain point.
+</p>
+

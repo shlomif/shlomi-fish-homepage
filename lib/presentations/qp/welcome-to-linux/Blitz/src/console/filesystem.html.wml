@@ -1,0 +1,61 @@
+#include 'template.wml'
+
+<points>
+<li>
+לינוקס מארגנת את הקבצים שלה ב-<b>מדריכים</b> (<b>directories</b>), כאשר כל
+מדריך יכול להכיל קבצים או מדריכים אחרים.
+</li>
+<li>
+קיים מדריך עליון שנקרא מדריך השורש
+<span dir="ltr">(root directory)</span>
+והוא מסומן כ-<tt>/</tt>.
+</li>
+<li>
+המדריך "<tt>.</tt>" מסמן את המדריך הנוכחי. "<tt>..</tt>" הינו
+המדריך מעליו.
+</li>
+<li>
+אם לפני הכל בא <tt>/</tt> אז המסלול יהיה אבסולוטי יחסית
+לשורש.
+</li>
+<li>
+הפקודה <tt>cd</tt> משנה את מדריך העבודה הנוכחי למדריך אחר.
+הפקודה <tt>pwd</tt> מדפיסה את המסלול של מדריך העבודה הנוכחי.
+</li>
+<li>
+הנה הפעלה לדוגמא של שורת הפקודה:
+</li>
+</points>
+
+<table border="1" summary="Example session demonstrating directories" dir="ltr" style="float:left;margin-bottom:1em;">
+<tr>
+<td>
+<pre>
+shlomi:~$ cd /usr
+shlomi:/usr$ pwd
+/usr
+shlomi:/usr$ cd local/bin
+shlomi:/usr/local/bin$ pwd
+/usr/local/bin
+shlomi:/usr/local/bin$ cd ../../share
+shlomi:/usr/share$ pwd
+/usr/share
+shlomi:/usr/share$ cd /usr/share/doc/
+shlomi:/usr/share/doc$ pwd
+/usr/share/doc
+shlomi:/usr/share/doc$ cd ./vim-X11-6.1/
+shlomi:/usr/share/doc/vim-X11-6.1$ pwd
+/usr/share/doc/vim-X11-6.1
+shlomi:/usr/share/doc/vim-X11-6.1$ cd ..
+shlomi:/usr/share/doc$ cd rsync-2.5.6/
+shlomi:/usr/share/doc/rsync-2.5.6$ pwd
+/usr/share/doc/rsync-2.5.6
+shlomi:/usr/share/doc/rsync-2.5.6$
+</pre>
+</td>
+</tr>
+</table>
+
+<p style="clear : both;">
+</p>
+

@@ -1,0 +1,60 @@
+#include '../template.wml'
+<latemp_subject "Vim Tips and Tricks Session at the Tel Aviv Linux Club" />
+
+<p>
+On 15-June-2008, the <a href="http://www.cs.tau.ac.il/telux/">Tel Aviv
+Linux Club</a> met to hold a session of sharing tips and tricks for
+the <a href="http://www.vim.org/">Vim</a> editor.
+</p>
+
+<h2 id="material">The Material from the Presentation</h2>
+
+<ul>
+<li>
+<a href="vim-lecture-log.txt">Log of the Meeting</a>
+</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li>
+<a href="http://shlomif.livejournal.com/tag/vim">More Vim Tips on my
+LiveJournal blog</a> and <a href="http://community.livejournal.com/shlomif_tech/tag/vim">continued on my Technical blog</a>.
+</li>
+<li>
+<a href="http://vim.wikia.com/wiki/Main_Page">Vim Tips Wiki</a>
+</li>
+<li>
+<a href="$(ROOT)/open-source/projects/conf/vim/">Shlomi Fish’s Vim
+Configuration Files</a>
+</li>
+<li>
+<a href="http://ik.homelinux.org/index.rhtml/linux/vim/configuration">Ido
+Kanner’s Vim Configurations</a>
+</li>
+<li>
+<a href="http://webdragon.net/htmlcss.php#vim">WebDragon’s Vim
+configuration</a>
+</li>
+</ul>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+<li id="firefox-keywords">
+<p>
+<b>Assigning Konqueror-like Firefox Shortcuts</b> - these are called keywords
+in Firefox terminology. Start firefox, go to a page with a search box
+(say <a href="http://vim.wikia.com/wiki/Main_Page">the Vim wikia</a>),
+press the right-mouse button, and select “Add a Keyword for this Search”. Then
+select a name for the bookmark, and a keyword (say “vim” for our example) and
+where to put it. Then you can type “vim unicode” at the address bar
+(accessible using Alt+D) to search using this keyword.
+</p>
+<p>
+See <a href="http://www.mozilla.org/products/firefox/smart-keywords.html">this
+page in www.mozilla.org about “smart keywords”</a> for more information.
+</p>
+</li>
+</ul>

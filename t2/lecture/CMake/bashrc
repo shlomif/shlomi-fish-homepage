@@ -1,0 +1,24 @@
+#!/bin/sh
+
+xmlformat()
+{
+	while test -n "$1"; do
+	echo xmlformat $1
+	xmllint --format  $1  --output $1
+	shift
+	done
+}
+
+odp2xml() # odp -> xml
+{
+	mkdir cmake_intro-2.odp.d
+	unzip -o cmake_intro-2.odp -d cmake_intro-2.odp.d 
+	xmlformat cmake_intro-2.odp.d/content.xml  cmake_intro-2.odp.d/meta.xml  cmake_intro-2.odp.d/settings.xml  cmake_intro-2.odp.d/styles.xml
+}
+
+xml2odp() # xml -> odp
+{
+	mv cmake_intro-2.odp cmake_intro-2.odp.save
+	( cd cmake_intro-2.odp.d; zip -r ../cmake_intro-2.odp . -x *.svn-base -x ".svn/*" -x "*/.svn/*" -x "*/*/.svn/*" )
+  	unzip -t cmake_intro-2.odp
+}

@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+<a href="http://www.itm.mu-luebeck.de/~coolo/">Stephan Kulow</a>
+(of KDE fame) complained that Freecell Solver generated some extremely
+long solutions, which just moved sequences from one stack to the the other.
+</li>
+
+<li>
+I suggested to use a Breadth-First Search scan restricted to the states
+that were found in the solution path to try to eliminate redundant moves.
+</li>
+
+<li>
+This turned out to be quite beneficial in most cases.
+</li>
+
+<li>
+I later on implemented a scheme in which each state stored a pointer
+to its "parent" state (the state from which it was initially discovered).
+and used back-tracking to trace the solution down there.
+</li>
+
+<li>
+This turned out to optimize solutions as well, but the BrFS optimization
+improved it a bit too sometimes.
+</li>
+
+</points>

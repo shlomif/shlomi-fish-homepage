@@ -1,0 +1,52 @@
+.lang_switch
+{
+    direction: ltr;
+    text-align: left;
+    border: black double medium;
+    overflow: hidden;
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 1em;
+}
+.lang_switch ul
+{
+    margin : 0;
+    padding : 0;
+}
+.lang_switch li
+{
+    display : block;
+    float :left;
+    padding : 0;
+    margin : 0;
+}
+.lang_switch li a , .lang_switch li b
+{
+    display : block;
+    padding-top : 3pt;
+    padding-bottom : 3pt;
+    padding-left : 0.5em;
+    padding-right : 0.5em;
+}
+.lang_switch li.lang
+{
+    background-color : #8e8;
+}
+.lang_switch li a
+{
+    text-decoration : none;
+}
+.lang_switch li.title
+{
+    display : block;
+    background-color : #3b3b3b;
+    color : white;
+}
+.lang_switch li.lang:hover, .lang_switch li.lang:hover a
+{
+    background-color : #beb;
+}
+.main_text
+{
+    clear : left;
+}

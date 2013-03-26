@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<points>
+<li>
+In Freecell Solver 2.8.0, a presets feature was introduced.
+</li>
+<li>
+It records certain command lines in central configuration files, and
+allows the user to retrieve them by saying <tt>-l [PRESET]</tt>.
+</li>
+<li>
+This way, <tt>fc-solve -l cool-jives</tt> is a configuration that is usually
+very fast, and stands for a 1,171 characters command line.
+</li>
+</points>
+

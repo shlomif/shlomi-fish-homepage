@@ -1,0 +1,153 @@
+#include '../template.wml'
+
+<latemp_subject "Topics for the Command Line Lecture for Newbies" />
+
+<h2>Part 1: Command Line</h2>
+
+<ol>
+<li>Opening a terminal. (The Terminal Icon on KDE)</li>
+
+<li>Exiting from a terminal. (exit or the X button)</li>
+
+<li>The Command Loop</li>
+
+<li>cd</li>
+
+<li>pwd</li>
+
+<li>ls<br />
+<ul>
+<li>
+Flags: -l -a -R
+</li>
+</ul>
+</li>
+
+<li>mkdir</li>
+
+<li>cp<br />
+<ul>
+<li>Flags: -r -i -f</li>
+</ul>
+</li>
+
+<li>mv<br />
+<ul>
+<li>Flags: -i -f</li>
+</ul>
+</li>
+
+<li>rm<br />
+<ul>
+<li>Flags: -r -i -f</li>
+</ul>
+</li>
+
+<li>wildcards and their use (*, ?, [ ])</li>
+
+<li>less/more<br />
+<ol>
+<li>Quitting with q</li>
+<li>Next Page with space/Page-Down</li>
+<li>Previous Page with b/Page-Up</li>
+<li>To the end with &gt;</li>
+<li>To the beginning with &lt;</li>
+<li>One line down with Down-Arrow/j</li>
+<li>One line up with Up-Arrow/k</li>
+<li>Moving Sideways: Right-Arrow/Left-Arrow</li>
+<li>Searching with / (forward) and ? (backward)</li>
+</ol>
+</li>
+
+<li>kdehelp</li>
+
+<li>man</li>
+
+<li>makewhatis + apropos</li>
+
+<li>The “--help” and “-h” switches.</li>
+
+<li>find<br />
+<ul>
+<li>Flags: -name</li>
+</ul>
+</li>
+
+<li>Piping:<br />
+<ul>
+<li>&gt;</li>
+<li> |, </li>
+<li>2&gt;&amp;1</li>
+</ul>
+</li>
+
+<li> Shell Goodies:<br />
+<ul>
+<li>The command history (up and down arrows)</li>
+<li>TAB filename completion</li>
+<li>Ctrl+A, Ctrl+E, ALT-F, ALT-B</li>
+</ul>
+</li>
+</ol>
+
+<h2>Part 2: Job Control / Interaction With X</h2>
+
+<ol>
+<li>Ctrl+Z</li>
+<li>Ctrl+C</li>
+<li>&amp;</li>
+<li>bg</li>
+</ol>
+
+<h2>Part 3: vi</h2>
+
+<ol>
+<li>Invoking vi (vi/vim/gvim)</li>
+
+<li>Exiting (:q and :q!)</li>
+
+<li>Saving the file (:w)</li>
+
+<li>Moving around:
+<ul>
+<li>The Arrow Keys + h-j-k-l</li>
+</ul>
+</li>
+<li>Adding text (i/a) and getting back to command mode (ESC)</li>
+
+<li>Deleting text:<br />
+<ul>
+<li>x/DEL</li>
+<li>dd</li>
+</ul>
+</li>
+<li> Advanced movement commands:
+<ul>
+<li>0 and $</li>
+<li>gg and G</li>
+<li>digits + movement</li>
+</ul>
+</li>
+<li> Getting help: (:help)</li>
+
+</ol>
+
+<h2>References and Links</h2>
+
+<ul>
+<li>
+<a href="http://www.linux.org.il/LDP/LDP/gs/gs.html">http://www.linux.org.il/LDP/LDP/gs/gs.html</a> - <br />
+<b>The Linux Installation and Getting Started Guide</b>
+</li>
+
+<li>
+<a href="http://www.linux.org.il/LDP/docs.html#guide">http://www.linux.org.il/LDP/docs.html#guide</a> - <br />
+<b>The Linux User’s Guide</b>
+</li>
+
+<li>
+<a href="http://unixhelp.ed.ac.uk/">http://unixhelp.ed.ac.uk/</a> - <br />
+<b>UNIX Help For Users</b>
+</li>
+</ul>
+

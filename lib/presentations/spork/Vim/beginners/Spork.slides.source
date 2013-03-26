@@ -1,0 +1,511 @@
+----
+presentation_topic: Vim
+presentation_title: The Vim Editor for Beginners
+presentation_place: Tel Aviv Linux Club
+presentation_date: FILL IN
+----
+== Vim - Introduction
+
+* Short for Vi IMproved.
+* An enhanced vi clone (which is not fully compatible with the original UNIX vi)
+* Developed by Bram Moolenaar and others.
+* It is open source (and GPL-compatible since version 6.1.)
+* Serves as charityware for [ICCF Holland http://iccf-holland.org/]
+
+----
+
+== History of Vi
+
+
+* The standard UNIX editor "ed" existed on UNIX systems practically since its inception:
+** http://www.faqs.org/docs/artu/ch13s02.html#id2963445
+
++* For a time "ex", an extension of ed was created to support some features:
+** http://en.wikipedia.org/wiki/Ex_(editor)
+
++* When visual text terminals (like VT-100) started to appear, Bill Joy created the "vi" editor as an extension to ex:
+** http://en.wikipedia.org/wiki/Vi
+** vi had relocatable cursor and one could edit text relatively conveniently with it.
++** It supported all the QWERTY keys as well as ESC.
+*** Possibly because these were the greatest common denominator of the keys on the keyboards that appeared then.
+----
+== History of Vim
+
+* Vim started when Bram Moolenaar had to work on an Amiga system and was used to Vi.
+
+* He took a nearly-vi clone, started improving it and adding extra features.
+
+* In 1992 he ported it to UNIX and by popular demand to other platforms as well.
+
+* 1994 Aug 12 - Vim 3.0 - Support for multiple buffers and windows.
+
+* 1996 May 29 - Vim 4.0 - Graphical User Interface
+
+* 1998 Feb 19 - Vim 5.0 - Syntax Colouring/Highlighting
+
+* 2000 Jul 09 - Vim 6.0a - Folding (and more)
+
+* 200x - Vim 7.0
+----
+== Where, When and Why to use Vim - Where
+
+* Vim is indeed a very portable editor - runs on most UNIX flavours as well as:
++** Windows
++** Mac OS
++** DOS
++** VMS
++** and many others OSes.
+
++* Several front-ends exist:
++** console
++** Gtk+
++** Motif
++** KDE
++** Windows GUI
++** Many Others: Check http://www.vim.org/6kbyte.php .
+
+----
+== Where, When and Why to use Vim - Why
+
++* Vim Supports vi-like macros, its own scripting language and several common scripting languages (Perl, Python, Tcl, Ruby).
+
++* It has great syntax highlighting for hundreds of file formats.
+
++* Very easy to use for simple scripting, programming and file editing.
+
++* Once you have learned the basic usage, you will find a whole variety of surprising uses for this editor.
+
++* It is very well documented
+
+----
+== When shouldn't I use this editor?
+
+* Although Vim supports UTF-8 and has partial support for BIDI there are much better editors for simple Hebrew editing.
+----
+== I want to know more
+
+* Extensive Online Help:
+** http://www.vim.org/
+** IRC: [Freenode #vim irc://irc.freenode.net/vim]
+** Hebrew Guide: http://www.penguin.org.il/guides/vim-intro/
+----
+== Demo 1: Basic Text Demo
+
+* Opening the Demo_File_1.txt.
+* Command/Insert/Visual Mode
+* Simple movement
+* Help
+* Saving file
+* Quitting vim
+----
+== Normal Mode and Editing Mode
+
+* By default Vim starts in the so called normal mode - one cannot enter text
+then.
++* To begin entering text type one of the following commands:
++** "i" or <Insert> - to insert text before the cursor.
++** "a" - to append text after the cursor.
+*** (useful at the end of the lines.)
++** "I" - insert text before first character in the line.
++** "A" - append after last char in the line.
+
++* To switch back into normal mode, press the <Esc> key.
+
++* Using |:source $VIMRUNTIME/mswin.vim| will make the insert mode more Windows-like and functional.
++* Note:
++** If you do not know what is $VIMRUNTIME - find it using:
+    :echo $VIMRUNTIME
++** Hard core vi users avoid it.
++** Shlomi Fish Uses it.
+----
+== Normal Mode:
+
+* In normal mode one can use the regular qwerty-keys to perform common commands:
++** Move around
++** Cut or copy text to the registers
++** Manipulate text programmatically
+
++=== Command-line mode:
+
+* ":"
++** Once ":" is pressed in normal mode, one can enter the so-called "ex" commands at the command-line.
++** This allows saving the file "w", quitting "q" or "q!", substituting text "s///", etc.
++** Some of these commands will be covered in more detail later on.
+----
+== Moving around
+
+* Vim (and vi in general) has many commands for moving around.
++* A complete listing of them can be found in [:help motion.txt http://vimdoc.sourceforge.net/htmldoc/motion.html].
++* Examples:
++** |h|{{/}}|<Left>|{{/}}|<Backspace>|{{/}}|CTRL-H| - Left
++** |l|{{/}}|<Right>|{{/}}|<Space>| - Right
++** |k|{{/}}|<Up>|{{/}}|CTRL-P| - Up
++** |j|{{/}}|<Down>|{{/}}|CTRL-J|{{/}}|CTRL-N| - Down
++**
++** |0| - To the beginning of the line
++** |$| - To the end of the line
++** |^| - To the first non-blank character in the line
++** |%| - To a matching parens (a favourite of mine)
++** |gg| - To the beginning of the file
++** |G| - To the end of the file
++** |(|{{/}}|)| - previous/next sentence
++** |{|{{/}}|}| - previous/next paragraphs
+
++* Some of these commands can be preceded by a number which repeat them several times.
++** For instance |5h| moves 5 character to the left
++** And |100gg| moves to line number 100.
+----
+== Demo 2: First Code Demo
+
+* Moving fast and easy : |gg|, |%|
+* Finding error by line number: |set nu| , |:24|
+* Finding word + highlight: |/|, |?|
+* |!ctags|
+* |:%s/XXX/YYY/g|
+**  |:%s/XXX/YYY/c|
+**  |:3,5s/XXX/YYY/g|
+**  |:%s/^$//g| (removing empty lines)
+* |/REGEXP|
+
+----
+== Parameterised Movements:
+
+* |/[Regexp]| - Go to the next occurrence of the (Vim) regular expression [Regexp]
++* |?[Regexp]| - Previous occurrence of regexp.
++** Use |n| and |N| to move to the next or previous matches.
+
++* |f[Char]| - the next occurrence of |[Char]| on the current line.
++* |F[Char]| - previous occurrence
++* |t[Char]| - one character before the next occurrence
++* |T[Char]| - previous one character.
+----
+== Ranges
+
+* In Vim, one can execute several commands on ranges ([:help range http://vimdoc.sourceforge.net/htmldoc/cmdline.html#cmdline-ranges]).
+
++* Ranges are:
+** |[Start],[End]|
+
++* Or alternatively
+
++** |%|
+** for the entire file.
+
++* Or an empty range-specifier for context-specific default (such as the current line or the entire file)
+
++* |[Start]| and |[End]| can be:
+
++** |[Digits]| - an absolute line number
++** |.| - the current line
++** |$| - last line in a file.
++** |'t| or |'T| - the position of mark t.
++** |/{pattern}[/]| - next line where {pattern} matches.
++** |?{pattern[?]| - previous line
++** |\/| - the next line where the previously used search pattern matches.
++** |\?| - the previous line
+
++* For example if you've set marks "a" and "e", then you can say:
+
+** |:'a,'es/^/# /|
+
+** To comment out the text.
+----
+== ctags
+
+* "ctags" allows to cross-reference the code and browse to the definition of identifiers in a hypertext-like manner.
+
++* To use it first execute:
+
+    $ ctags -R
+
+* In the command line, in the top-directory you wish to create.
+
++* Then you can type |Ctrl+]| to jump to the definition of an identifier, and |Ctrl+T| to return to the previous position.
+
+----
+== Demo 3: Second Code Demo
+
+Using Demo_File_2.txt
+
+* Insert Mode
+* Auto-completion |Ctrl+P/N|
+* delete word/line |dw|/|dd|
+* switching to visual mode
+* Copy Paste using yank
+* Copy part of table using yank
+* Advance Copy using ["X]yank
+* Shifting text on visual mode
+----
+== Auto-completion
+
+* [:help compl-generic http://vimdoc.sourceforge.net/htmldoc/insert.html#compl-generic]
+
++* Ctrl+P finds a previous match for a word that was started to be input in the file.
++** Press it more times for more alternatives.
+
++* Ctrl+N is the same for words after the cursor.
+
++* This allows entering long identifiers in code, etc. more quickly.
+----
+== Registers
+
++* A yank (copy) or delete (cut) can copy the text into a specified register.
++* A register is specified with a double-quotes (|"|) followed by the register name which precedes the y or d command.
++* There are several registers available:
++00 The default, unnamed register |""|
++00 Standard named register |"A|-|"Z| or |"a|-|"z| (case insensitive)
++00 The clipboard register |"+|.
++*** (available in GUI Vims, and defaults to the unnamed register on console Vims)
++00 Registers |1|-|9| which provide history of the copied texts.
++00 Other special registers. (check [:help registers http://vimdoc.sourceforge.net/htmldoc/change.html#registers])
+
++* To paste a text from a register use the |"{reg}p| command.
+
++=== Examples
+
++* |"sy$| - yanks the text until the end of the line into register 's'.
++* |gg"+yG| - copies the entire file to the clipboard.
+----
+== Operators accepting movements
+
++* Except for moving around, one can use the movement commands as input to various operators that precede them.
+
++* Here are some:
++** |d| - "cut" the text moved over into a register
++** |y| - copy the text moved over into a register.
++** |!| - filter through an external program
++** |>| - indent to the right
++** |<| - unindent
++** |zf| - define a fold.
++** |c| - "cut" the text into the register and start editing.
++*** For example If you have the string "Hello Good People!" and you want it replaced by something else, you can do the following:
++0000 |f"| - to move to the first quotation mark.
++0000 |l| or |<Right>| - to move one character to the right.
++0000 |ct"| - to delete the text up to the |"| and start typing new text instead.
+
++* All of them are listed in [:help motion.txt http://vimdoc.sourceforge.net/htmldoc/motion.html] and more can be defined by the user.
+----
+== Visual Mode
+
+* If the text you wish to select is irregular, you can use Vim's visual mode:
++00 Press |v| when in normal mode.
++00 Move around using the standard Vi commands (but the arrow keys require holding shift when ":source mswin.vim").
++00 Once you have the text selected, press the operator you want to perform it on.
+
++=== Example
+
+* |vj$hhhy| will copy all the text from the cursor to the next line excluding its last three characters.
+
++* For more information consult [:help Visual http://vimdoc.sourceforge.net/htmldoc/visual.html#Visual]
+----
+== Marks
+
+* You can set marks in the file and later move straight to them with one movement command.
++** |m{a-zA-Z}| sets a mark.
++*** The a-z marks are local to the file, and the A-Z marks are global in all buffers.
++*** Jumping to the mark is done with |`{A-Za-z}|.
++* A jump to a mark can be given to a movement operator. For instance:
++** |d`e| deletes all text up to the mark "e".
++* Vim has other mark-related command which can also be found in [:help motion.txt http://vimdoc.sourceforge.net/htmldoc/motion.html]
++* Using |'| instead of |`| jumps to the first non-blank character in the line.
+----
+== Demo 4: Editing More than One File at Once
+
+Using Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
+
+* $ gvim Demo_File_1.pl Demo_File_2.pl Demo_File_3.pl
+* |:bn| , |:bp|
+* |:buffers|
+* |:ball|
+* |:bd|
+*  $ gvim Demo_File_1.pl
+* |:sp| , |:sp Demo_File_2.pl|
+* |<Ctrl>+w| arrows to move around
+* |:vs|
+----
+== Buffers
+
++* Vim can edit several files at once. Each edited file is called a "buffer" in Vim terminology.
+
++* One can open a new file using the |:e [filename]| command.
+
++* One can switch to a different buffer using |:bn| (buffer-next), |:bp| (buffer-previous) and other commands.
+
++* |:bd| closes the file.
+
++* |:ball| - switches to split-screen for all buffers.
+
++* |:buffers| - displays the current list of buffers.
+----
+== Demo 5: Quick Code Reading
+
+* |set nu|
+* |zf%|
+* |:[Range]fo|
+* |zo|
+* and of course ctags...
+* $ gvim -f +"syn on" +"run! syntax/2html.vim" +"wq" +"q" "$FILE";
+* |:[range]TOhtml|
+
+----
+== Folds
+
+* Folds allow one to hide away parts of the code, so they won't interfere with the code flow.
++* One can set up a fold using |zf[movement]|.
++* One can open a fold using |zo|.
++** |zc| closes a fold again.
++** |zO| opens all folds and sub-folds recursively.
++* The |:[Range]fold| (or |:[Range]fo|) acts like |zf|.
++* |zE| eliminates all folds in the window.
++* |zi| toggles folding on and off.
++* For more information see [:h fold.txt http://vimdoc.sourceforge.net/htmldoc/fold.html]
+----
+== Syntax Highlighting into HTML
+
+* [:help 2html http://vimdoc.sourceforge.net/htmldoc/syntax.html#2html.vim]
+
++* One can use gvim to convert syntax highlighted files, to HTML files that contain their text coloured in their highlighted colours.
+
++* To do that one can invoke the command |:TOhtml|, and get a resultant file in a new buffer and window.
+
++* Use |:let html_use_css = 1| to make sure the HTML is outputted using CSS styles instead of font tags and other old HTMLisms.
+----
+== Scripting and Automation
+
+* The rest of the presentation will cover ways to automate vim, starting from the most basic to the most sophisticated.
+----
+== Register Repeats
+
+* The registers can be used to record macros.
++* To record a macro type |q{reg}|, and type the keystrokes you wish to record and then type |q|.
++* To execute a macro type |@{reg}|.
++** You can use the |{integer}@{reg}| to execute it a number of times.
++* For example:
+
+    qm/^sub<CR>4ly$/^{<CR>oprint "Entering <ESC>pa";<CR><ESC>q
+
++** Then typing |@m| will cause:
+
+    sub hello
+    {
+        my ($x,$y) = @_;
+        print (($x+$y,"\n");
+    }
+
++** to transform to:
+
+    sub hello
+    {
+        print "Entering hello\n";
+        my ($x,$y) = @_;
+        print (($x+$y,"\n");
+    }
+
++** You can also type |1000@m| and it will cause all the functions to be transformed.
+----
+== Creating a title
+
++* Suppose you have a text document where you want to create ASCII-art titles. This can be done like so:
+
++** Write the line which you want to title.
++** Type |yy|. (to copy the line)
++** Type |p| (to paste it).
++** Move down one line - |j| or |<Down>|
++** Type: |:s!.!-!g|
+----
+== Key Mapping
+
+* You can assign a set of commands to a single key or key sequence.
++* This is done using the :map and friends commands:
+
+    :map         Normal, Visual and Operator-pending
+    :vmap        Visual
+    :nmap        Normal
+    :omap        Operator-pending
+    :map!        Insert and Command-line
+    :imap        Insert
+    :cmap        Command-line
+
++* For example, to assign <F2> as copy everything to the clipboard do:
+
+    :map <F2> gg"+yG
+
++* Another example, taken from the Vim User Manual is:
+
+    :map <F2> GoDate: <Esc>:read !date<CR>kJ
+
++* This one goes to the end of the file (|G|) inserts "Date:" there (|oDate:|), inserts the contents of the date command and join the lines together. (|kJ|)
+----
+== Vim Script
+
+* Vim contains its own declarative scripting language, that can be used to extend it in style.
++* One can put such code in the .vimrc, or in |:source|'ed files or (with a lesser convenience) write it in command-line mode.
++* Here is an example for a function and some bindings that use it that play an MP3 using XMMS:
+
+    function Xmms_Play_Mp3(xmms_opts)
+        let line = getline(".")
+        let repl = substitute(line, "'", "'\\\\''", "ge")
+        let repl = substitute(repl, "!", "\\\\!", "g")
+        execute "silent !xmms " . a:xmms_opts . " '" . repl . "'"
+    endfunction
+
+    map <F3> :call Xmms_Play_Mp3("-e")<CR>
+    map <S-F3> :call Xmms_Play_Mp3("")<CR>
+----
+== Vim Script with Ranges
+
+* Range search:
+
+    function! Range_Search(mypat, start_line, end_line)
+        let full_pat = '\%>' . a:start_line . "l" . '\%<' . a:end_line . "l" . a:mypat
+        exe '/' . full_pat
+        let @/ = full_pat
+        norm n
+    endfunction
+
+    command -range -nargs=1 Rs call Range_Search(<f-args>,<line1>,<line2>)
+----
+== Vim Scripts
+
+=== Where do I get them?
+
++* http://www.vim.org/
+
++=== Why should I bother?
+
++* They make life easier.
+----
+== Demo 6: perl-support.vim
+
+Using a perl empty file.
+
+* Installing perl-support.vim .
+* Showing of using GUI .
+* Showing of using keyboard .
+
+----
+== Customising Vim - Modelines
+
+* One can customise the behaviour of vim for specific files using modelines.
++* Modelines are included at the beginning or the end of the file and invoke "setlocal" on the vim variables.
++* This is useful for setting options like the behaviour of tabs, the file mode , etc.
++* For example, putting
+
+    vi:tabstop=4:expandtab
+
+* Will configure vim to use 4-characters-wide tabs and expand tabs into whitespace.
+----
+== .vimrc
+
+* The dot-vimrc file is the central configuration file for vim, which a user can use to configure vim and gvim to his liking.
++* It is written in vimscript, and one can put there normal commands that one normally puts in command line-mode.
+
++=== Location based commands
+
+* One can define commands to be executed for certain files (with certain prefixes, under certain locations, etc.) using the autocmd feature.
++* For example:
+
+    autocmd BufNewFile,BufRead ~/Download/unpack/graphics/*.pdb set filetype=perl
+
+Will set the file type of all the files under |~/Download/unpack/graphics| whose extension is ".pdb" to perl.
+

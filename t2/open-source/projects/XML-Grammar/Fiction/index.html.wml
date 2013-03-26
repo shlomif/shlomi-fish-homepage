@@ -1,0 +1,407 @@
+#include '../template.wml'
+#include "vim_include_code.wml"
+#include "cpan_dists.wml"
+
+<set-var cpan_dist="XML-Grammar-Fiction" />
+
+<latemp_subject "<get-var cpan_dist /> - Markup Languages for Writing Prose" />
+
+<page_extra_head_elements>
+<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
+</page_extra_head_elements>
+
+<p>
+<get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight
+plaintext-based markup language, which can be used to write such fiction as
+stories, novellas, or possibly even novels. Fiction-Text is in turn converted
+to <b>Fiction-XML</b>, which is an XML-based grammar (which can be used
+directly). Fiction-XML, in turn, is translated to such formats as
+<a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> and
+<a href="http://www.docbook.org/">DocBook/XML</a>, for rendering by
+web-browsers, and for conversions to different formats, including PDF.
+</p>
+
+<p>
+Also provided are <b>Screenplay-Text</b> and <b>Screenplay-XML</b> which are
+used for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays
+(or scripts)</a>, and can be translated to XHTML or
+to <a href="http://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI-XML (Text
+Encoding Initiative)</a>
+</p>
+
+<p>
+<get-var cpan_dist /> is part of the <a href="../">Web-CPAN XML-Grammar
+project</a> that provides several specialised processors for XML grammars
+for various tasks.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-xml-grammar-fiction">For <get-var cpan_dist /></h3>
+
+<bitbucket_cpan_dist_links
+    dist="<get-var cpan_dist />"
+    freecode_url="http://freecode.com/projects/xml-grammar-fiction/"
+    bitbucket_url="https://bitbucket.org/shlomif/fiction-xml">
+</bitbucket_cpan_dist_links>
+
+<x11_licence name="<get-var cpan_dist />" />
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="fiction_examples">Fiction-Text Examples</h3>
+
+<define-tag url_to_data_examples whitespace="delete">
+<preserve base />
+<set-var %attributes />
+https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text/
+<restore base />
+</define-tag>
+
+<ul>
+
+<li>
+<p>
+<a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under
+<tt>t/fiction/data/</tt> in the distribution (mostly in English).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/Pope/"><i>The
+Pope Died on Sunday</i></a> - a story in Hebrew under CC-by-sa.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/TheEnemy/"><i>The Enemy
+and How I Helped to Fight it</i></a> - the Hebrew version of this story
+is written in Fiction-Text.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/human-hacking/"><i>The
+Human Hacking Field Guide</i></a> - the Hebrew translation was written using
+Fiction-Text.
+</p>
+</li>
+
+</ul>
+
+<h3 id="screenplay_examples">Screenplay-Text Examples</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="<url_to_data_examples base="screenplay" />"><b>Distributed
+Examples</b></a>- there are some short and silly examples
+in the <tt>t/screenplay/data</tt> directory in the distribution.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/TOWTF/">The One with the
+Fountainhead</a> - original text, but fan fiction of the T.V. show
+<i>Friends</i>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/humanity/">Humanity - The
+Movie</a> - all original text and concept. Under the CC-by-sa license.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+Trek - “We The Living Dead”</a> - all original text, but fan fiction of
+Star Trek.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/open-source/interviews/">Interviews with
+Open Source People</a> - several interviews whose original hacky
+like-XML-but-not-quite source was converted to ScreenplayText and then
+rendered into XML and XHTML.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html"><i>The
+Hitchhiker’s Guide to Star Trek - The Next Generation</i></a> - David T. Lu’s
+and Mickey McCarter’s old parodical screenplay crosses <i>The
+Hitchhiker’s Guide to the Galaxy</i> and <i>Star Trek: The Next Generation</i>.
+It was converted into Screenplay-Text format using a crude perl-5.10.x script
+and from that translated into XHTML.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.shlomifish.org/humour/Selena-Mandrake/"><i>Selena Mandrake
+- The Slayer</i></a> - screenplay for a film in English. Original text, but
+fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture.
+</p>
+</li>
+</ul>
+
+<h2 id="news">News</h2>
+
+<h3 id="news-2011-05-22">2011-05-22: <get-var cpan_dist /> version 0.5.1 is
+out</h3>
+
+<p>
+There are many improvements in this release. Since the last news item here,
+there were:
+</p>
+
+<ol>
+
+<li>
+<p>
+New tags - <tt>&lt;ol&gt;</tt>, <tt>&lt;ul&gt;</tt>, <tt>&lt;li&gt;</tt>,
+<tt>&lt;programlisting&gt;</tt> and <tt>&lt;a href=&gt;</tt> (the
+latter for for hypertext.)
+</p>
+</li>
+
+<li>
+<p>
+Documentation improvement.
+</p>
+</li>
+
+<li>
+<p>
+An XSLT stylesheet to convert Screenplay-Text to
+<a href="#similar_proj_tei">TEI</a> .
+</p>
+</li>
+
+<li>
+<p>
+Got rid of the <tt>&lt;!DOCTYPE…</tt> declaration in the Screenplay-XML
+output. It made debugging difficult and was not necessary.
+</p>
+</li>
+
+<li>
+<p>
+Add support for numeric entities such as <tt>&amp;#91;</tt>.
+</p>
+</li>
+
+</ol>
+
+
+<h3 id="news-2011-04-05">2011-04-05: <get-var cpan_dist /> version 0.1.5 is
+out</h3>
+
+<p>
+This release has many small bug-fixes and improvements:
+</p>
+
+<ol>
+
+<li>
+<p>
+The handling of a colon (“:”) inside a top-level description in
+XML-Grammar-Screenplay was fixed.
+</p>
+</li>
+
+<li>
+<p>
+Fixed the handling of an innerdesc on the start of a line in the middle of a
+paragraph.
+</p>
+</li>
+
+<li>
+<p>
+Add support for &lt;i&gt; tags in XML-Grammar-Screenplay.
+</p>
+</li>
+
+</ol>
+
+<p>
+Everyone are recommended to upgrade.
+</p>
+
+<h3 id="news-2009-11-25">2009-11-25: <get-var cpan_dist /> version 0.0.2 was
+released</h3>
+
+<p>
+<get-var cpan_dist /> was released today, and should be available on CPAN
+mirrors. This release features several improvements to the code’s
+internals and automated tests suites. The external behaviour of the code
+should remain the same, but the code is now much more malleable for future
+improvements, and there may have been a few accidental fixes.
+</p>
+
+<h3 id="news-2009-11-05">2009-11-05: <get-var cpan_dist /> version 0.0.1 was
+released</h3>
+
+<p>
+The first version of <get-var cpan_dist /> (v0.0.1) was unleashed onto the
+world today. It was written for my own personal use as a writer of Hebrew
+stories, but I naturally decided to release it as open-source software.
+As first versions go, this version is rough on the edges, and has hairy
+internals, and other warts, but still should be usable enough for people
+who are clueful enough.
+</p>
+
+<p>
+Happy <a href="http://www.nanowrimo.org/">NaNoWriMo (National Novel
+Writing Month)</a> and hopefully <get-var cpan_dist /> will prove of assistance
+to you for this NaNoWriMo or future ones.
+</p>
+
+<h2 id="coverage">Coverage of <get-var cpan_dist /></h2>
+
+<h3 id="coverage-shlomif">Coverage in Shlomi Fish’s Blogs</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://community.livejournal.com/shlomif_tech/36515.html">
+“New CPAN Package: XML-Grammar-Fiction”</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://blogs.perl.org/users/shlomi_fish/2013/03/screenplay-text-alternative.html">“XML-Grammar-Screenplay: Alternative Format for Hollywood Screenplays”</a>
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.reddit.com/r/perl/comments/1awj86/xmlgrammarscreenplay_alternative_format_for/">Coverage on the Perl subrredit</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.reddit.com/r/writing/comments/1awhir/screenplaytext_proposed_alternative_format_for/">On
+/r/writing</a>
+</p>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+<h2 id="demos">Demos</h2>
+
+<h3 id="demo-fiction1">Fiction Demo 1</h3>
+
+<p>
+If we have this sample Fiction-Text document:
+</p>
+
+<shlomif_code_block>
+<shlomif_include_colorized_file filename="../lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt" />
+</shlomif_code_block>
+
+<p>
+Then after converting it to XML and then to XHTML we get this:
+</p>
+
+<div class="fiction_xml">
+<:{
+sub _xml_fiction_slurp
+{
+    my $filename = shift;
+
+    open my $in, "<", $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    binmode $in, ":utf8";
+
+    local $/;
+    my $contents = <$in>;
+
+    close($in);
+
+    return $contents;
+};
+binmode STDOUT, ":utf8";
+my $text = _xml_fiction_slurp("../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml");
+
+$text =~ s{\bindex\b}{fiction_text_index}g;
+
+print $text;
+}:>
+
+</div>
+
+<h3 id="demo-screenplay1">Screenplay Demo 1</h3>
+
+<p>
+If we have this sample screenplay:
+</p>
+
+<shlomif_code_block>
+<shlomif_include_colorized_file filename="../lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt" />
+</shlomif_code_block>
+
+<p>
+Then after converting it to XML and then to XHTML we get this:
+</p>
+
+<:{
+my $text = _xml_fiction_slurp("../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html");
+
+$text =~ s{\bindex\b}{screenplay_text_index}g;
+
+print $text;
+}:>
+
+<h2 id="similar">Similar Projects</h2>
+
+<ul>
+
+<li id="similar_proj_tei">
+<p>
+<a href="http://www.tei-c.org/">TEI: Text Encoding Initiative</a> - provides
+an XML grammar and related tools for encoding texts in digital form (including
+many artsy texts such as works of fiction, poems and scripts/screenplays).
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://celtx.com/">Celtx</a> - an open-source application that
+allows one to edit screenplays, novels, and other media pre-production
+resources. Uses well-formed HTML 4 for its data files, packaged in a
+.zip with many resources, so it may be less ideal than XML. It is also a GUI
+program that was quite sluggish from my experience.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> - a very rich
+and open-source markup language that can be used for notating text and can
+be converted into DocBook 4, directly into HTML, and to several other formats.
+</p>
+</li>
+
+</ul>

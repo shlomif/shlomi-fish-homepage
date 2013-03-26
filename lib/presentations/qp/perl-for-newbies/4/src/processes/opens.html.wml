@@ -1,0 +1,65 @@
+#include 'template.wml'
+
+<p>
+The <tt>open</tt> command can be used for command execution. By prefixing
+the filename with a pipe (<tt>|</tt>), the rest of it is interpreted
+as a command invocation, which accepts standard input by printing to the
+filehandle, and is executed after the filehandle is closed. If the last
+character is a pipe, then the command is executed and its standard output
+is fed into the filehandle where it can be read using Perl's file input
+mechanisms.
+</p>
+
+<p>
+Here are some examples:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/processes/open1.pl" />
+</quadpres_code_block>
+
+<hr />
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/processes/open2.pl" />
+</quadpres_code_block>
+
+<h2 id="open-pipe-list">Pipe to @args</h2>
+
+<p>
+Recent versions of Perl also have a syntax that allows opening a process
+for input or output using its command line arguments. These are:
+</p>
+
+<quadpres_code_block>
+open my $print_to_process, "|-", $cmd, @args;
+print {$print_to_process} ...;
+</quadpres_code_block>
+
+<p>
+and:
+</p>
+
+<quadpres_code_block>
+open my $read_from_process, "-|", $cmd, @args;
+while (my $line = &lt;$read_from_process&gt;)
+{
+.
+.
+.
+}
+</quadpres_code_block>
+
+<p>
+Doing something like
+<tt>open my $print_to_process, "|-", "sendmail", $to_address;</tt>
+is safer than doing:
+<tt>open my $print_to_process, "|-", "sendmail $to_address";</tt>
+Because a malicious person may put some offending shell characters in
+<tt>$to_address</tt> and end up with something like:
+</p>
+
+<quadpres_code_block>
+sendmail ; rm -fr $HOME
+</quadpres_code_block>
+

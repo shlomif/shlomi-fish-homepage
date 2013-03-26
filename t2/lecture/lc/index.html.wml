@@ -1,0 +1,13 @@
+#include '../template.wml'
+
+<latemp_subject "Lecture about Scheme and Lambda Calculus" />
+
+<p>
+<a href="$(ROOT)/lecture/Lambda-Calculus/">These slides</a> introduce the
+reader to the <a href="http://www.schemers.org/">Scheme programming
+language</a>, which is a relatively minimalistic dialect of LISP. It then
+uses it to teach about Lambda Calculus, which is a minimalistic
+Turing-complete environment with only two primitives, but one that is still
+quite usable.
+</p>
+

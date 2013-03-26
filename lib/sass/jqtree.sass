@@ -1,0 +1,79 @@
+body
+    font-family: calibri, arial, helvetica, "helvetica neue", sans-serif
+    margin: 0
+    padding: 0
+
+.jqtree-tree
+    font-family: calibri, arial, helvetica, "helvetica neue", sans-serif
+    line-height: 1
+    position: relative
+    font-size: 12px
+    font-weight: normal
+    // Commented out because it appears to make things worse.
+    // width: 355px
+    background-color: transparent
+    background-image: url(images/rows-20px.png)
+
+.jqtree-tree .jqtree-title
+    display: block
+    overflow: hidden
+    text-overflow: ellipsis
+    margin: 0 0 0 0
+    a, b
+        display: block
+        color: #000
+        text-decoration: none
+        height: 20px
+        line-height: 1.8
+
+ul
+    &.jqtree-tree
+        padding: 0 0 0 0
+    &.jqtree_common
+        margin: 0
+        padding: 0 0 0 0
+    li.jqtree_common
+        padding: 0 0 0 20px
+        margin: 0 0 0 5px
+        min-height: 19px
+        text-overflow: ellipsis
+        list-style-type: none
+        background-image: url(images/treeview-default-line.png)
+        background-repeat: no-repeat
+        background-position: 0 0
+        position: relative
+
+span.jqtree_common
+    display: block
+
+ul
+    &.jqtree_common
+        li ul.jqtree_common li:last-child, > li:last-child
+            background-position: 0 -1766px
+    &.jqtree-tree > li:last-child
+        background-position: 0 -1766px
+
+.jqtree-tree *:focus
+    outline: 1px dotted #ccc
+
+ul.jqtree_common .jqtree-toggler
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    background-image: url(images/minusplus.png)
+    background-repeat: no-repeat
+    background-position: 50% 0
+    text-indent: 100px
+    overflow: hidden
+    cursor: pointer
+
+.jqtree .jqtree_common.jqtree-title
+    display: block
+
+ul.jqtree_common .jqtree-toggler.jqtree-closed
+    background-position: 50% 100%
+
+.jqtree-closed ul
+    display: none

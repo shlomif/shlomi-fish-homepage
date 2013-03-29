@@ -301,6 +301,15 @@ my @end_formats =
             ],
         },
         {
+            base => "SUMMERSCHOOL_AT_THE_NSA",
+            github_repo => "Summerschool-at-the-NSA",
+            subdir => "summerschool-at-the-nsa",
+            docs =>
+            [
+                { base => "Summerschool-at-the-NSA", suffix => "ENG", },
+            ],
+        },
+        {
             base => "BLUE_RABBIT_LOG",
             github_repo => "Blue-Rabbit-Log",
             subdir => "Blue-Rabbit-Log",

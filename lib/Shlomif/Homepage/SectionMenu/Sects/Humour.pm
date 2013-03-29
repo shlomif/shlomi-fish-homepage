@@ -150,6 +150,19 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "Summerschool at the NSA",
+                    url => "humour/Summerschool-at-the-NSA/",
+                    title => "Sarah Michelle Gellar and Summer Glau conspire to take the the NSA out of the equation",
+                    subs =>
+                    [
+                        {
+                            text => "Ongoing Text",
+                            url => "humour/Summerschool-at-the-NSA/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
                     text => "The Blue Rabbit’s Log",
                     url => "humour/Blue-Rabbit-Log/",
                     title => "Movies that Parody Role-Playing Games",

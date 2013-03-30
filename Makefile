@@ -264,6 +264,7 @@ SCREENPLAY_DOCS = \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 	Star-Trek--We-the-Living-Dead \
+	Summerschool-at-the-NSA \
 	selina-mandrake-the-slayer \
 	sussman-interview \
 	TOW_Fountainhead_1  \

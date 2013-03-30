@@ -996,6 +996,8 @@ generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepage/NavData/JSON.pm $(ALL_SUBSECTS_DEPS)
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
+$(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
+
 generate_nav_data_as_json:
 
 JSMIN = bin/jsmin

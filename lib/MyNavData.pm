@@ -544,6 +544,11 @@ sub generic_get_params
                         url => "me/interviews/",
                         title => "Interviews that were conducted with me",
                     },
+                    {
+                        text => "“Rindolf” - my nickname",
+                        url => "me/rindolf/",
+                        title => "The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
+                    },
                 ],
             },
             $get_sub_tree->('Humour'),

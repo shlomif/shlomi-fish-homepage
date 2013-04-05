@@ -234,6 +234,11 @@ my $humour_tree_contents =
                             title => "Facts about Buffy Summers from the Television show, Buffy the Vampire Slayer",
                         },
                         {
+                            url => "humour/bits/facts/Clarissa/",
+                            text => "Clarissa",
+                            title => "Facts about Clarissa Darling from the Television show, Clarissa Explains It All",
+                        },
+                        {
                             url => "humour/bits/facts/Knuth/",
                             text => "Knuth",
                         },

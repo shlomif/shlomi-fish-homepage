@@ -1,12 +1,9 @@
 #include '../template.wml'
+#include "stories/facts.wml"
 
 <latemp_subject "Larry Wall Facts" />
 
-<p>
-<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
-creator of the Perl programming language, and the inventor of the
-<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>.
-</p>
+<facts__lwall />
 
 <h2 id="facts">Larry Wall Facts</h2>
 

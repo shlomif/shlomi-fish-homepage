@@ -1,22 +1,10 @@
 #include '../template.wml'
+#include "stories/facts.wml"
 #include "jqui_tabs.wml"
 
 <latemp_subject "XSLT Facts" />
 
-<p>
-<a href="http://en.wikipedia.org/wiki/XSL_Transformations">XSLT</a> is
-short for Extensible Stylesheet Language (XSL) Transformations and is
-an XML-based language for transforming XML documents into other XML
-documents.
-</p>
-
-<p>
-These facts illustrate how <b>evil</b> XSLT (supposedly) is. I think XSLT
-has many legitimate uses and can be pretty sweet, but
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-why-XSLT-is-so-evil">an
-IRC conversation we had on ##programming</a> started this meme and it
-seems cool.
-</p>
+<facts__xslt />
 
 <h2 id="facts">XSLT Facts</h2>
 

@@ -16,19 +16,12 @@ CURRENT TASKS:
         * Added [Sat 2013-04-06]
 
 LONG TERM:
-    - Pack the other stories as separate DVCS repositories.
-
     - Resumes / Résumés :
         - make the URLs into hyperlinks.
         - add an opening paragraph with who I am, what I specialise in, and some
         things I believe in about software development and its craft.
 
     - Add a page about https://metacpan.org/module/XML::GrammarBase .
-
-    - jqTree
-        - Expand some of the categories by default.
-            - Make sure the browser remembers when categories were collapsed
-            using a localStorage hack.
 
     - Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml from more
       places.
@@ -82,6 +75,10 @@ LONG TERM:
     - Add more software packages to the numerical software page.
 
     - Add more essays I wrote to the Essays Index.
+        * About Female Action Heroes
+        * We are the Qs of the Q Continuum.
+        * Dealing with Internet Trolls
+        * http://shlomifish.livejournal.com/2615.html - Publish or Perish.
 
     - Math-Ventures: re-write the formulae in TeX, MathML etc.
         * General revamp.
@@ -114,5 +111,10 @@ COMPLETED TASKS:
     - Apply the corrections to Selina Mandrake
         * based on what the correspondent from @GMail.com said.
         * Added [Sun 2013-03-17]
+    - jqTree
+        - Expand some of the categories by default.
+            - Make sure the browser remembers when categories were collapsed
+            using a localStorage hack.
+    - Pack the other stories as separate DVCS repositories.
 
 # vim:ft=quicktask:sw=4:ts=4

@@ -1,14 +1,9 @@
 #include '../template.wml'
+#include "stories/facts.wml"
 
 <latemp_subject "Knuth Facts" />
 
-<p>
-<a href="http://www-cs-staff.stanford.edu/~uno/">Don Knuth</a> is a professor
-Emeritus of Computer Science at Stanford University, and is the creator
-of <a href="http://en.wikipedia.org/wiki/TeX">TeX</a>, inventor of several
-important algorithms and author of
-<a href="http://en.wikipedia.org/wiki/The_Art_of_Computer_Programming"><i>The Art of Computer Programming</i></a>.
-</p>
+<facts__knuth />
 
 <h2 id="knuth-is-not-god">Why Knuth is Not God</h2>
 

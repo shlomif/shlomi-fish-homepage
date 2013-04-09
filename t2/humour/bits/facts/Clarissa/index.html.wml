@@ -1,16 +1,10 @@
 #include '../template.wml'
 #include "jqui_tabs.wml"
+#include "stories/facts.wml"
 
 <latemp_subject "Clarissa Darling Facts (from Clarissa Explains it All)" />
 
-<p>
-Facts about Clarissa Darling, the protagonist of the show
-<a href="http://en.wikipedia.org/wiki/Clarissa_Explains_It_All"><i>Clarissa
-Explains It All</i></a>, as created by
-<a href="http://en.wikipedia.org/wiki/Mitchell_Kriegman">Mitchell Kriegman</a>
-and played by
-<a href="http://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a>.
-</p>
+<facts__clarissa />
 
 <h2 id="facts">Clarissa Darling Facts</h2>
 

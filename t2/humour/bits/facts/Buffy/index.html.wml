@@ -1,18 +1,10 @@
 #include '../template.wml'
 #include "jqui_tabs.wml"
+#include "stories/facts.wml"
 
 <latemp_subject "Buffy Facts" />
 
-<p>
-Facts about
-<a href="http://buffy.wikia.com/wiki/Buffy_Summers">Buffy Summers</a>,
-the main protagonist of the television show
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29"><i>Buffy
-the Vampire Slayer</i></a>, as created by
-<a href="http://en.wikipedia.org/wiki/Joss_Whedon">Joss
-Whedon</a> and portrayed by
-<a href="http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>.
-</p>
+<facts__buffy />
 
 <h2 id="facts">Buffy Facts</h2>
 

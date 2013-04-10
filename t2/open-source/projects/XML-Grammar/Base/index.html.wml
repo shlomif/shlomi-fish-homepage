@@ -6,9 +6,7 @@
 
 <latemp_subject "<get-var cpan_dist /> - wrappers for writing your own XML grammar modules" />
 
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
-</page_extra_head_elements>
+<apply_screenplay_style />
 
 <p>
 <get-var cpan_dist /> provides some roles (known as traits in other languages)

@@ -3,9 +3,7 @@
 
 <latemp_subject "Humanity - The Movie" />
 
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
-</page_extra_head_elements>
+<apply_screenplay_style />
 
 #include "screenplay-xml/rendered-html/Humanity-Movie.html"
 

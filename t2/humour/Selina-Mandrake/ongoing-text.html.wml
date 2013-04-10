@@ -4,9 +4,7 @@
 
 <selina_mandrake_common_top_elems />
 
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
-</page_extra_head_elements>
+<apply_screenplay_style />
 
 #include "screenplay-xml/rendered-html/selina-mandrake-the-slayer.html"
 

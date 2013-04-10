@@ -2,9 +2,7 @@
 
 <latemp_subject "The Hitchhiker’s Guide to Star Trek - The Next Generation - As HTML" />
 
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen, projection" />
-</page_extra_head_elements>
+<apply_screenplay_style />
 
 #include "screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html"
 

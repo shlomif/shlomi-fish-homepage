@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Summerschool at the NSA - A Screenplay" />
 
@@ -45,6 +46,8 @@ format</a>
 </li>
 
 </ul>
+
+<toc_div />
 
 <h2 id="licensing">Licensing</h2>
 

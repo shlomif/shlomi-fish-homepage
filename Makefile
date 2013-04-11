@@ -483,6 +483,9 @@ PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2003.xhtml
 
 all: $(PUT_CARDS_2013_DEST)
 
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(T2_DEST)/humour/TOWTF/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
+	cp -f $< $@
+
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML)
 
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)

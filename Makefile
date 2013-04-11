@@ -767,7 +767,9 @@ ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS)
+THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
+
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png="$(patsubst %.png,%.temp.png,$@)" $<
@@ -778,6 +780,10 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $(patsubst %.png,%.temp.png,$@)
 	pngcrush $(patsubst %.png,%.temp.png,$@) $@
 	rm -f $(patsubst %.png,%.temp.png,$@)
+
+$(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
+	inkscape --export-width=200 --export-png="$@" --export-id="main_text" --export-id-only $<
+	optipng -o7 $@
 
 LC_PRES_PATH = lecture/Lambda-Calculus/slides
 

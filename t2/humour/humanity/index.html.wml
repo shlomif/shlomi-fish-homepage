@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "stories/blurbs.wml"
+#include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
 
 <latemp_subject "Humanity - The Movie" />
@@ -20,6 +21,11 @@ tells the story of a day in the life of a Semitic city circa the year
 
 <li>
 <a href="ongoing-text.html">The Ongoing Text - <b>Read Online</b></a>
+</li>
+
+<li>
+<screenplay_github_repo
+    url="https://github.com/shlomif/Humanity-the-Movie" />
 </li>
 
 <li>

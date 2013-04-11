@@ -243,3 +243,14 @@ to prevent World War II.
 </humour_story>
 
 </define-tag>
+
+<define-tag screenplay_github_repo>
+<preserve url />
+<set-var %attributes />
+
+<a href="<get-var url />">Version control <b>repository</b> for the
+screenplay’s source</a> on GitHub. It is useful for cloning, sending pull
+requests, and filing bugs/issues in the bug tracker
+
+<restore url />
+</define-tag>

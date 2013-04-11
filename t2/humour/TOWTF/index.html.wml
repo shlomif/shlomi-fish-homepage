@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "xml_g_fiction.wml"
+#include "stories/stories-list.wml"
 
 <latemp_subject "The One with the Fountainhead" />
 
@@ -36,8 +37,8 @@ I consider this piece my funniest yet.
 <ul>
 
 <li>
-<a href="http://github.com/shlomif/TOW-Fountainhead">Source
-repository for the screenplay on GitHub</a>.
+<screenplay_github_repo
+    url="http://github.com/shlomif/TOW-Fountainhead" />
 </li>
 
 <li>

@@ -1,4 +1,6 @@
 #include '../template.wml'
+#include "jqui_tabs.wml"
+
 #include "stories/stories-list.wml"
 
 <latemp_subject "The Enemy and How I Helped to Fight it" />
@@ -196,8 +198,20 @@ entry in my weblog</a> about the history and motivation of this story.
 </li>
 </ul>
 
+<script type="text/javascript">
+$(function() {
+    $("#previous_vers_accordion").accordion({
+        collapsible: true,
+        active: false
+    });
+});
+</script>
+
+<div id="previous_vers_accordion">
+
 <h2 id="previous-vers">Previous Versions</h2>
 
+<div>
 <h3 id="previous-rev6">Revision 6</h3>
 
 <ul>
@@ -235,6 +249,10 @@ etc.)
 </li>
 
 </ul>
+
+</div> ;;; End accordion div.
+
+</div>
 
 <h2 id="see_also">See Also</h2>
 

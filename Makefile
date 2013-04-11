@@ -957,7 +957,7 @@ $(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
 
-$(POPE_ENG_FICTION_XML_SOURCE):
+$(POPE_ENG_FICTION_XML_SOURCE) $(POPE_HEB_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
 
 $(HHFG_ENG_DOCBOOK5_SOURCE):

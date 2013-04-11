@@ -768,8 +768,9 @@ ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
 THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
+HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png="$(patsubst %.png,%.temp.png,$@)" $<
@@ -783,6 +784,10 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 
 $(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
 	inkscape --export-width=200 --export-png="$@" --export-id="main_text" --export-id-only $<
+	optipng -o7 $@
+
+$(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
+	convert -resize '50%' $< $@
 	optipng -o7 $@
 
 LC_PRES_PATH = lecture/Lambda-Calculus/slides

@@ -960,7 +960,7 @@ $(HTML_TUT_HEB_TT):
 $(POPE_ENG_FICTION_XML_SOURCE) $(POPE_HEB_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
 
-$(HHFG_ENG_DOCBOOK5_SOURCE):
+$(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE):
 	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/Human-Hacking-Field-Guide
 
 update_html_tut: update_html_tut_hg html_tutorial

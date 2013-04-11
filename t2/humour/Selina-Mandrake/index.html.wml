@@ -1,4 +1,6 @@
 #include '../template.wml'
+#include "jqui_tabs.wml"
+
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
 
@@ -63,8 +65,20 @@ The Ebooks are made available under the same CC-by-sa licence as the source,
 and can be built from the repository with some technological know how.
 </p>
 
+<script type="text/javascript">
+$(function() {
+    $(".accordion").accordion({
+        collapsible: true,
+        active: false
+    });
+});
+</script>
+
+<div class="accordion">
+
 <h2 id="audio">Audio (= Dramatic Reading of the Screenplay)</h2>
 
+<div>
 <p>
 You can find audio files of some work-in-progress
 <a href="http://soundcloud.com/shlomif/selina-mandrake-the-slayer"><strong>dramatic
@@ -75,6 +89,9 @@ and has a heavy Hebrew Israeli accent and diction. They are recorded using
 Their licence is also the Creative Commons Attribution ShareAlike licence
 (CC-by-sa). Share, remix and enjoy!
 </p>
+</div>
+
+</div> ;;; /class=accordion
 
 <h2 id="coverage">Coverage</h2>
 

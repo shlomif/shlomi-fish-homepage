@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
 
 <latemp_subject "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" />
@@ -15,15 +16,23 @@ some disorganised ideas for the continuation.
 <h2 id="read_online">The Text</h2>
 
 <ul>
+
 <li>
 <a href="part-1.html">Part I - The Ongoing Text - <b>Read Online</b></a>
 </li>
+
+<li>
+<screenplay_github_repo url="http://github.com/shlomif/Blue-Rabbit-Log" />
+</li>
+
 <li>
 <link_to_screenplay base="Blue-Rabbit-Log-Part-1" />
 </li>
+
 <li>
 <a href="ideas.xhtml">Random Ideas, in HTML format (read online)</a>
 </li>
+
 </ul>
 
 <h2 id="licence">Licence</h2>

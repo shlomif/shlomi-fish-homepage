@@ -25,7 +25,7 @@ include lib/make/gmsl/gmsl
 include include.mak
 include rules.mak
 
-make-dirs: $(T2_DIRS_DEST)
+make-dirs: $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
@@ -966,10 +966,11 @@ update_html_tut_hg:
 include deps.mak
 
 MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
+MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 
-mathjax_dest: $(MATHJAX_DEST_DIR)/README.md
+mathjax_dest: $(MATHJAX_DEST_README)
 
-$(MATHJAX_DEST_DIR)/README.md : $(MATHJAX_SOURCE_README) make-dirs
+$(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README) make-dirs
 	rsync -r -v --progress lib/MathJax/ $(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore

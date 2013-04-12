@@ -965,10 +965,6 @@ update_html_tut_hg:
 
 include deps.mak
 
-$(MATHJAX_SOURCE_README):
-	cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && \
-		cd MathJax && git checkout v2.1-latest
-
 MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
 
 mathjax_dest: $(MATHJAX_DEST_DIR)/README.md

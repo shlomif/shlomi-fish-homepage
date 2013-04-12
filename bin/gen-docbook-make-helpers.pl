@@ -11,6 +11,20 @@ use File::Find::Object::Rule;
 
 use List::MoreUtils qw(any);
 
+use Parallel::ForkManager;
+
+my $pm = Parallel::ForkManager->new(20);
+
+if (not -e 'lib/MathJax/README.md')
+{
+    my $pid;
+    if (! ($pid = $pm->start))
+    {
+        system('cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout v2.1-latest');
+        $pm->finish;
+    }
+}
+
 my @documents =
 (
     {
@@ -369,7 +383,13 @@ my @end_formats =
 
         if (not -e $full)
         {
-            system("cd $screenplay_vcs_base_dir && git clone https://github.com/shlomif/$r.git");
+            my $pid;
+            if (! ($pid = $pm->start))
+            {
+                chdir($screenplay_vcs_base_dir);
+                system('git', 'clone', "https://github.com/shlomif/$r.git");
+                $pm->finish;
+            }
         }
     }
 }
@@ -426,7 +446,13 @@ my @end_formats =
 
             if (not -e $full)
             {
-                system("cd $vcs_base_dir && git clone https://github.com/shlomif/$r.git");
+                my $pid;
+                if (! ($pid = $pm->start))
+                {
+                    chdir($vcs_base_dir);
+                    system('git', 'clone', "https://github.com/shlomif/$r.git");
+                    $pm->finish;
+                }
             }
         }
     }

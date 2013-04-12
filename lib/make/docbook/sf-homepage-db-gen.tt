@@ -20,7 +20,7 @@ $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
 
 [% FOREACH fmt = fmts %]
-[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.ext %][% END %]
+[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.installed_ext ? fmt.installed_ext : fmt.ext %][% END %]
 
 [% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
 
@@ -38,16 +38,20 @@ $(T2_DEST)/[% d. path %]/[% d.base %].xml: $([% db_macro_prefix %]_XML_DIR)/[% d
 $(T2_DEST)/[% d. path %]/[% d.base %].rtf: $([% db_macro_prefix %]_RTF_DIR)/[% d.base %].rtf
 [% "\t" %]cp -f $< $@
 
+
+[%- SET foo_dest = '$(T2_DEST)/' _ d.path _ '/' _ d.base -%]
+[%- SET foo_src = '$(' _ db_macro_prefix _ '_INDIVIDUAL_XHTML_DIR)/' _ d.base %]
+
 [% SET rm_line = "" %]
 [% IF d.custom_css %]
-[% SET rm_line = "\trm -f \$\@/style.css\n" %]
+[% SET rm_line = "\trm -f " _ foo_dest _ "/style.css\n" %]
 [% END %]
 
-$(T2_DEST)/[% d.path %]/[% d.base %]: $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]
-[% "\t" %]rsync -r -v $([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/$(notdir $@) $(dir $@)
+[% foo_dest %]/index.html: [% foo_src %]/index.html
+[% "\t" %]rsync -r -v [% foo_src %]/ [% foo_dest %]/
 [% rm_line %]
 
-$([% db_macro_prefix %]_INDIVIDUAL_XHTML_DIR)/[% d.base %]: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
+[% foo_src %]/index.html: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
 [% "\t" %]$(DOCMAKE_WITH_PARAMS) \
 [% "\t\t" %]--stringparam "docmake.output.format=xhtml" \
 [% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \

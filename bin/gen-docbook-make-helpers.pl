@@ -252,6 +252,7 @@ my @end_formats =
         {
             var => "INDIVIDUAL_XHTML",
             ext => "",
+            installed_ext => '/index.html',
             dir => "indiv-nodes",
         },
         )

@@ -684,7 +684,7 @@ HHFG_V2_IMAGES_DEST = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR)/%,$(DOCBOOK4_HHFG_
 
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST)
 
-$(DOCBOOK4_HHFG_IMAGES_DEST): $(DOCBOOK4_HHFG_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/%
+$(DOCBOOK4_HHFG_IMAGES_DEST): $(DOCBOOK4_HHFG_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(DOCBOOK4_HHFG_DEST_DIR)/index.html
 	cp -f $< $@
 
 $(HHFG_V2_IMAGES_DEST): $(HHFG_V2_IMAGES_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/%
@@ -955,12 +955,6 @@ $(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
 
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
-
-$(POPE_ENG_FICTION_XML_SOURCE) $(POPE_HEB_FICTION_XML_SOURCE):
-	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/The-Pope-Died-on-Sunday
-
-$(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE):
-	cd lib/fiction-xml/from-vcs && git clone https://github.com/shlomif/Human-Hacking-Field-Guide
 
 update_html_tut: update_html_tut_hg html_tutorial
 

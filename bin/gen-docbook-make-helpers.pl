@@ -320,6 +320,8 @@ my @end_formats =
         },
     ];
 
+    my @git_checkouts;
+
     io->file("lib/make/docbook/sf-screenplays.mak")->print(
         map {
             my $d = $_;
@@ -353,13 +355,28 @@ my @end_formats =
                 @$docs
             );
 
-            my $str2 = join(' ', map { '$(' . $_ . ')' } @src_vars) . ":\n"
-                . "\tcd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/${github_repo}.git\n";
+            # my $str2 = join(' ', map { '$(' . $_ . ')' } @src_vars) . ":\n"
+            #     . "\tcd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/${github_repo}.git\n";
 
-            $str1 . $docs_ret_str . $str2 . "\n\n";
+            push @git_checkouts, { github_repo => $github_repo, };
+
+            $str1 . $docs_ret_str . "\n\n";
         } @$screenplays_data,
     );
+
+    foreach my $github_repo (@git_checkouts)
+    {
+        my $r = $github_repo->{github_repo};
+        my $base = 'lib/screenplay-xml/from-vcs';
+        my $full = "$base/$r";
+
+        if (not -e $full)
+        {
+            system("cd $base && git clone https://github.com/shlomif/$r.git");
+        }
+    }
 }
+
 
 my $tt = Template->new({});
 

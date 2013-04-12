@@ -569,7 +569,7 @@ $(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7.html: $(DOCBOOK5_RENDERED_DIR)/T
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
 
 install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
 install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
@@ -968,9 +968,9 @@ include deps.mak
 MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
 MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 
-mathjax_dest: $(MATHJAX_DEST_README)
+mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
-$(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README) make-dirs
+$(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 	rsync -r -v --progress lib/MathJax/ $(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore

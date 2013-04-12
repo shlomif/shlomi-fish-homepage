@@ -680,3 +680,5 @@ EOF
 
 close ($template_fh);
 close ($make_fh);
+
+$pm->wait_all_children;

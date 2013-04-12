@@ -1,4 +1,4 @@
-POV_BASE = stone-heart.png
+POV_BASE = stone-heart
 
 PNG = $(POV_BASE).png
 

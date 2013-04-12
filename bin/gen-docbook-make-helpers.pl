@@ -322,6 +322,8 @@ my @end_formats =
 
     my @git_checkouts;
 
+    my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
+
     io->file("lib/make/docbook/sf-screenplays.mak")->print(
         map {
             my $d = $_;
@@ -333,8 +335,7 @@ my @end_formats =
 
             my $vcs_dir_var = "${b}__VCS_DIR";
 
-            my $str1 = "$vcs_dir_var = lib/screenplay-xml/from-vcs/$github_repo/$subdir\n";
-            my @src_vars;
+            my $str1 = "$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n";
             my $docs_ret_str = join("",
                 map
                 {
@@ -344,7 +345,6 @@ my @end_formats =
                     my $suf = $doc->{suffix};
 
                     my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
-                    push @src_vars , $src_varname;
                     my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
                         "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n"
                     . "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n"
@@ -355,9 +355,6 @@ my @end_formats =
                 @$docs
             );
 
-            # my $str2 = join(' ', map { '$(' . $_ . ')' } @src_vars) . ":\n"
-            #     . "\tcd lib/screenplay-xml/from-vcs && git clone https://github.com/shlomif/${github_repo}.git\n";
-
             push @git_checkouts, { github_repo => $github_repo, };
 
             $str1 . $docs_ret_str . "\n\n";
@@ -367,12 +364,69 @@ my @end_formats =
     foreach my $github_repo (@git_checkouts)
     {
         my $r = $github_repo->{github_repo};
-        my $base = 'lib/screenplay-xml/from-vcs';
-        my $full = "$base/$r";
+        my $full = "$screenplay_vcs_base_dir/$r";
 
         if (not -e $full)
         {
-            system("cd $base && git clone https://github.com/shlomif/$r.git");
+            system("cd $screenplay_vcs_base_dir && git clone https://github.com/shlomif/$r.git");
+        }
+    }
+}
+
+{
+    my $fiction_data =
+    [
+        {
+            base => "HHFG",
+            github_repo => "Human-Hacking-Field-Guide",
+            subdir => "HHFG",
+            docs =>
+            [
+                {
+                    base => "human-hacking-field-guide--english",
+                    type => "docbook5",
+                    suf => "ENG",
+                },
+                {
+                    base => "human-hacking-field-guide--hebrew",
+                    type => "fiction-text",
+                    suf => "HEB",
+                },
+            ],
+        },
+        {
+            base => "POPE",
+            github_repo => "The-Pope-Died-on-Sunday",
+            subdir => "Pope",
+            docs =>
+            [
+                {
+                    base => "The-Pope-Died-on-Sunday-english",
+                    type => "fiction-text",
+                    suf => "ENG",
+                },
+                {
+                    base => "The-Pope-Died-on-Sunday-hebrew",
+                    type => "fiction-text",
+                    suf => "HEB",
+                },
+            ],
+        },
+    ];
+
+    my $vcs_base_dir = 'lib/fiction-xml/from-vcs';
+
+    foreach my $d (@$fiction_data)
+    {
+        my $github_repo = $d->{github_repo};
+        {
+            my $r = $github_repo;
+            my $full = "$vcs_base_dir/$r";
+
+            if (not -e $full)
+            {
+                system("cd $vcs_base_dir && git clone https://github.com/shlomif/$r.git");
+            }
         }
     }
 }

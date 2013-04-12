@@ -16,7 +16,9 @@ NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 
 DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md mathjax_dest plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts
+MATHJAX_SOURCE_README = lib/MathJax/README.md
+
+all: make-dirs mathjax_dest docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts
 
 include lib/make/gmsl/gmsl
 
@@ -963,7 +965,7 @@ update_html_tut_hg:
 
 include deps.mak
 
-lib/MathJax/README.md :
+$(MATHJAX_SOURCE_README):
 	cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && \
 		cd MathJax && git checkout v2.1-latest
 
@@ -971,7 +973,7 @@ MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
 
 mathjax_dest: $(MATHJAX_DEST_DIR)/README.md
 
-$(MATHJAX_DEST_DIR)/README.md : lib/MathJax/README.md
+$(MATHJAX_DEST_DIR)/README.md : $(MATHJAX_SOURCE_README)
 	cd lib && rsync -r -v --progress MathJax/ ../$(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore

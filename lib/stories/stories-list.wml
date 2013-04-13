@@ -1,3 +1,13 @@
+<define-tag tagline>
+<preserve text />
+<set-var %attributes />
+
+<h2* id="tagline"><get-var text /></h2*>
+
+<restore text />
+
+</define-tag>
+
 <define-tag the_enemy_summary>
 
 <p>
@@ -70,7 +80,7 @@ special warfare that is completely non-violent.
 
 <define-tag selina_mandrake_common_top_elems>
 
-<h2 id="tagline">Caught between Post-modernism and the New Age</h2>
+<tagline text="Caught between Post-modernism and the New Age" />
 
 <selina_mandrake_logo />
 
@@ -84,7 +94,7 @@ special warfare that is completely non-violent.
 
 <define-tag summerschool_at_the_nsa_common_top_elems>
 
-<h2 id="tagline">As the sling shoots, grown men will cry</h2>
+<tagline text="As the sling shoots, grown men will cry" />
 
 <h2 id="abstract">Abstract</h2>
 

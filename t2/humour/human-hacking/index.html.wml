@@ -1,11 +1,12 @@
 #include '../template.wml'
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
+#include "toc_div.wml"
 
 <latemp_subject "The Human Hacking Field Guide" />
 <latemp_more_keywords "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" />
 
-<h2 id="tagline">Who said girls can’t code?</h2>
+<h2* id="tagline">Who said girls can’t code?</h2*>
 
 <hhfg_logo />
 
@@ -48,6 +49,8 @@ and Enjoy! (As long as you keep the derivatives under the same licence.)
 the plot and style, and it’s now written using version 5 of DocBook/XML. I’m
 planning some smaller future improvements, but the story should be OK as it is.
 </p>
+
+<toc_div />
 
 <h2 id="text">The Text</h2>
 

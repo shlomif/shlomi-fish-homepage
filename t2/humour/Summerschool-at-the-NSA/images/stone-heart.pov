@@ -38,11 +38,11 @@ light_source {
 
 camera {
    perspective
-   location <1.0, 5.0, 5.0>
+   location <-1.5, 3.0, 3.0>
    sky <0, 1, 0>
    direction <0, 0, 1>
    right <1.33333, 0, 0>
    up <0, 1, 0>
-   look_at <0, 0, 0>
+   look_at <0, 0, -3>
 }
 

@@ -1,6 +1,27 @@
 #include '../template.wml'
 
+#include <utils.wml>
+
 <latemp_subject "Lecture about the GNU Autotools" />
+
+<note>
+
+<h2 id="note">Note</h2>
+
+<p>
+Due to its many inherent problems, I can no longer recommend using
+GNU Autotools for new projects. See my
+<a href="$(ROOT)/open-source/anti/autohell/">“Escape from GNU Autohell!”</a>
+page for more information.
+</p>
+
+<p>
+The pages and links here may still be useful for learning GNU Autotools,
+in order to maintain existing projects, or to convert from them to a
+different system.
+</p>
+
+</note>
 
 <p>
 GNU <a href="http://www.gnu.org/software/autoconf/">Autoconf</a>,

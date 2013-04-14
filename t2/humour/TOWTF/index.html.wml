@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "xml_g_fiction.wml"
 #include "stories/stories-list.wml"
+#include "toc_div.wml"
 
 <latemp_subject "The One with the Fountainhead" />
 
@@ -31,6 +32,8 @@ I consider this piece my funniest yet.
 <a href="TOW_Fountainhead_2.html"><b>The One with the Fountainhead - Part 2</b></a>
 </li>
 </ul>
+
+<toc_div />
 
 <h2 id="sources">Sources</h2>
 

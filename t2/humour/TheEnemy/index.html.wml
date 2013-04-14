@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "jqui_tabs.wml"
+#include "toc_div.wml"
 
 #include "stories/stories-list.wml"
 
@@ -23,7 +24,7 @@ touches on many aspects of politics, logic and Objectivist philosophy.
 I originally wrote this story as a way to digest the many things I learned
 by reading the <a href="http://www.neo-tech.com/">Neo-Tech</a> material
 my father had previously bought. I believe it serves as a pseudo-mathematical
-proof  that the Hizbulla and similar organizations are as irrational as they
+proof that the Hizbullah and similar organizations are as irrational as they
 can be.
 </p>
 
@@ -32,24 +33,19 @@ Now it has a sequel in the works: <a href="../RoadToHeaven/">The Road to
 Heaven is Paved with Bad Intentions</a>.
 </p>
 
-<h2 id="text-in-heb">Hebrew Version (Original)</h2>
-
 <ul>
 
 <li>
-<a href="The-Enemy-Hebrew-v7.html">HTML (Read Online)</a>
+<a href="The-Enemy-Hebrew-v7.html"><b>Hebrew HTML</b> (Read Online)</a>
 </li>
-</ul>
-
-<h2 id="text-in-eng">English Translation</h2>
-
-<ul>
 
 <li>
-<a href="The-Enemy-English-v7.html">HTML (Read Online)</a>
+<a href="The-Enemy-English-v7.html"><b>English HTML</b> (Read Online)</a>
 </li>
 
 </ul>
+
+<toc_div />
 
 <h2 id="sources">Sources</h2>
 
@@ -61,11 +57,6 @@ Heaven is Paved with Bad Intentions</a>.
 </li>
 
 </ul>
-
-<p>
-Please send your comments to my E-mail address:
-<mailto_link_to_self email="<main_email />" />
-</p>
 
 <h2 id="licence">Licence</h2>
 

@@ -1,23 +1,71 @@
-<set-var rtl_layout=1 />
-<set-var shlomif_lang="he" />
 #include '../template.wml'
+#include "jqui_tabs.wml"
 
-<latemp_subject "תמצית הסיפור „הדרך לגן-עדן רצופה בכוונות רעות“" />
+<latemp_subject "Abstract of the Story “The Road to Heaven is Paved with Bad Intentions”" />
 
-<p>זהו סיפור ההמשך לסיפור „האויב ואיך עזרתי להילחם בו“. (או The Enemy and How I Helped to Fight it בתרגומו האנגלי). אם לא קראת את הסיפור המקורי סביר להניח שלא תבין לחלוטין את מה שנאמר כאן. גם אם כן, הרי שהקריאה עלולה לפגום בהנאה מסיפור ההמשך השלם.</p>
+<define-tag en endtag="required">
+{#EN#:%body:##}
+</define-tag>
 
+<define-tag he endtag="required">
+{#HE#:%body:##}
+</define-tag>
+
+<define-tag both endtag="required">
+<en>%body</en><he>%body</he>
+</define-tag>
+
+<en>
+<p style="margin-top: 4em">
+This is the sequel to the story “The Enemy and How I Helped to Fight it”.
+If you have not read the original story, you will probably not fully
+understand what is written here. Even if so, then reading it may ruin part
+of the fun from reading the full sequel.
+</p>
+</en>
+
+<he>
+<p style="margin-top: 4em">
+זהו סיפור ההמשך לסיפור „האויב ואיך עזרתי להילחם בו“. (או The Enemy and How I
+Helped to Fight it בתרגומו האנגלי). אם לא קראת את הסיפור המקורי סביר להניח שלא
+תבין לחלוטין את מה שנאמר כאן. גם אם כן, הרי שהקריאה עלולה לפגום בהנאה מסיפור
+ההמשך השלם.
+</p>
+
+</he>
+
+<both>
 <hr />
 
 <ol>
+</both>
 
+<en>
 <li>
 
 <p>
-החבר לשעבר נפגש עם היטלר בחלום, והם מחליטים לשים את חילוקי הדעות שלהם בצד ולשחק שח. תוך כדי השיחה אומר היטלר לחבר לשעבר שלהתעמת עימו בחלום זה דבר פשוט לכאורה, אך החוכמה היא למנוע את מלחמת העולם השנייה מראש. החבר לשעבר טוען שהוא ינסה לעשות זאת ואז מנצח את היטלר במט.
+The ex-Member meets Hitler in his dream, and they decide to put 
+their differences aside and to play Chess. While playing, Hitler
+tells the ex-Member that confronting him in his dream is an
+apparently simple thing, but the real challenge is to prevent
+World War II in the first place. The ex-Member says he will
+try to do exactly that and then checkmates Hitler.
 </p>
 
 </li>
+</en>
 
+<he>
+<li>
+
+<p>
+החבר לשעבר נפגש עם היטלר בחלום, והם מחליטים לשים את חילוקי הדעות שלהם בצד ולשחק שח. תוך כדי השיחה אומר היטלר לחבר לשעבר שלהתעמת עימו בחלום זה דבר פשוט לכאורה, אך החוכמה היא למנוע את מלחמת העולם השנייה מראש. החבר לשעבר אומר שהוא ינסה לעשות זאת ואז מנצח את היטלר במט.
+</p>
+
+</li>
+</he>
+
+<he>
 <li>
 
 <p>
@@ -98,4 +146,26 @@
 
 </li>
 
+</he>
+
+<both>
 </ol>
+</both>
+
+<div class="tabs">
+
+<ul>
+<li><a href="#road_to_heaven_en">English</a></li>
+<li><a href="#road_to_heaven_he">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="road_to_heaven_en">
+{#EN#}
+</div>
+
+<div id="road_to_heaven_he">
+{#HE#}
+</div> ;;; end of road_to_heaven_he
+
+</div> ;;; end of .tabs
+

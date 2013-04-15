@@ -67,15 +67,19 @@ special warfare that is completely non-violent.
 </define-tag>
 
 <define-tag the_enemy_logo>
-<img src="images/The-Enemy-logo-small.png" alt="A = not-A" class="enemy_logo" />
+<img src="images/The-Enemy-logo-small.png" alt="A = not-A" class="story_logo ene" />
 </define-tag>
 
 <define-tag selina_mandrake_logo>
-<img src="images/Green-d10-dice.png" alt="1d10 die" class="selina_die" />
+<img src="images/Green-d10-dice.png" alt="1d10 die" class="story_logo selina" />
 </define-tag>
 
 <define-tag hhfg_logo>
-<img src="images/hhfg-logo-small.png" alt="Human Hacking Field Guide Logo" class="hhfg_logo" />
+<img src="images/hhfg-logo-small.png" alt="Human Hacking Field Guide Logo" class="story_logo hhfg" />
+</define-tag>
+
+<define-tag summernsa_logo>
+<img src="images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" class="story_logo summernsa" />
 </define-tag>
 
 <define-tag selina_mandrake_common_top_elems>
@@ -95,6 +99,8 @@ special warfare that is completely non-violent.
 <define-tag summerschool_at_the_nsa_common_top_elems>
 
 <tagline text="As the sling shoots, grown men will cry" />
+
+<summernsa_logo />
 
 <h2 id="abstract">Abstract</h2>
 

@@ -1,0 +1,85 @@
+#include '../template.wml'
+#include "jqui_tabs.wml"
+#include "stories/facts.wml"
+
+<latemp_subject "“In Soviet Russia” Additions" />
+
+<facts__in_soviet_russia />
+
+<h2 id="facts">In Soviet Russia Facts</h2>
+
+<div class="tabs">
+
+<ul>
+<li><a href="#in_soviet_russia_facts_en">English</a></li>
+<li><a href="#in_soviet_russia_facts_he">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="in_soviet_russia_facts_en">
+
+<ul>
+
+<li>
+In Soviet Russia, cats own you. No, wait! Cats own you everywhere.
+</li>
+
+<li>
+In Soviet Russia, superstition believe in you.
+(<a href="http://mail.perl.org.il/pipermail/perl/2012-September/012757.html"><b>Sawyer X</b></a>)
+</li>
+
+<li>
+In Soviet Russia, meme is tired of you. (<b>apeiron</b>)
+</li>
+
+</ul>
+
+</div> ;;; /english
+
+<div id="in_soviet_russia_facts_he" class="hebrew">
+
+<ul>
+
+<li>
+ברוסיה הסובייטית, חתולים הם הבעלים שלך. רגע אחד! הם הבעלים שלך בכל מקום.
+</li>
+
+<li>
+ברוסיה הסובייטית, אמונה תפלה מאמינה בך. (<a href="http://mail.perl.org.il/pipermail/perl/2012-September/012757.html"><b>Sawyer X</b></a>)
+</li>
+
+<li>
+ברוסיה הסובייטית, למם נמאס ממך. (<b>apeiron</b>)
+</li>
+
+</ul>
+
+</div> ;;; /hebrew
+
+</div> ;;; /tabs
+
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2013" />
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Xena/">Xena Facts</a> -
+about another pre-Buffy heroine.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
+herself.
+</p>
+</li>
+
+</ul>
+
+

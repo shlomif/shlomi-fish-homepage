@@ -1968,11 +1968,11 @@ function create_employee(params)
                     PostgreSQL, and we ran into a PHP misbehaviour (which
                     was fixable given a lot of PHP know-how) that made us have
                     to restart the connection to the server after every
-                    request. Both MySQL and Sendmail were chosen from
+                    request. Both MySQL and Sendmail were chosen due to
                     political reasons.
                 </para>
                 <para>
-                    With my PHP code barely working and prune to many errors,
+                    With my PHP code barely working and prone to many errors,
                     I decided to quit after about a month, out of being
                     appalled by the bad code craftmanship I had achieved
                     there. Make sure you don’t repeat such a mistake.

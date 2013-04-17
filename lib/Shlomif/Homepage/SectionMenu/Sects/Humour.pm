@@ -61,22 +61,6 @@ my $humour_tree_contents =
                     ],
                 },
                 {
-                    text => "The Pope Died on Sunday",
-                    url => "humour/Pope/",
-                    title => "An Insane Week in the Life of a Female American Graphics Artist",
-                    subs =>
-                    [
-                        {
-                            text => "Hebrew Text",
-                            url => "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
-                        },
-                        {
-                            text => "English Text",
-                            url => "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
-                        },
-                    ],
-                },
-                {
                     text => "Humanity",
                     url => "humour/humanity/",
                     title => "A Parody about Humanity and Modern Life in Particular",
@@ -159,6 +143,22 @@ my $humour_tree_contents =
                             text => "Ongoing Text",
                             url => "humour/Summerschool-at-the-NSA/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
+                    text => "The Pope Died on Sunday",
+                    url => "humour/Pope/",
+                    title => "An Insane Week in the Life of a Female American Graphics Artist",
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Text",
+                            url => "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
+                        },
+                        {
+                            text => "English Text",
+                            url => "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                         },
                     ],
                 },

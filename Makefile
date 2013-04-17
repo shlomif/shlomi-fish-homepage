@@ -272,10 +272,13 @@ SCREENPLAY_DOCS = \
 FICTION_DOCS = \
     fiction-text-example-for-X-G-Fiction-demo \
 	human-hacking-field-guide-hebrew-v2 \
+	The-Earth-Angel-hebrew \
+	The-Earth-Angel-english \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7 \
 	The-Pope-Died-on-Sunday-hebrew \
-	The-Pope-Died-on-Sunday-english
+	The-Pope-Died-on-Sunday-english \
+
 
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
@@ -415,6 +418,13 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
+
+EARTH_ANGEL__VCS_DIR = lib/fiction-xml/from-vcs/The-Earth-Angel
+EARTH_ANGEL_ENG_FICTION_XML_SOURCE = $(EARTH_ANGEL__VCS_DIR)/The-Earth-Angel/text/The-Earth-Angel-english.fiction-text.txt
+EARTH_ANGEL_HEB_FICTION_XML_SOURCE = $(EARTH_ANGEL__VCS_DIR)/The-Earth-Angel/text/The-Earth-Angel-hebrew.fiction-text.txt
+EARTH_ANGEL_ENG_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Earth-Angel-english.txt
+EARTH_ANGEL_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Earth-Angel-hebrew.txt
+
 
 POPE__VCS_DIR = lib/fiction-xml/from-vcs/The-Pope-Died-on-Sunday
 POPE_ENG_FICTION_XML_SOURCE = $(POPE__VCS_DIR)/Pope/text/The-Pope-Died-on-Sunday-english.fiction-text.txt
@@ -940,6 +950,12 @@ $(HHFG_ENG_DOCBOOK5_FROM_VCS): $(HHFG_ENG_DOCBOOK5_SOURCE)
 	cp -f $< $@
 
 $(HHFG_HEB_FICTION_TXT_FROM_VCS): $(HHFG_HEB_FICTION_XML_SOURCE)
+	cp -f $< $@
+
+$(EARTH_ANGEL_ENG_FICTION_TXT_FROM_VCS): $(EARTH_ANGEL_ENG_FICTION_XML_SOURCE)
+	cp -f $< $@
+
+$(EARTH_ANGEL_HEB_FICTION_TXT_FROM_VCS): $(EARTH_ANGEL_HEB_FICTION_XML_SOURCE)
 	cp -f $< $@
 
 html_tutorial: $(DEST_HTML_TUT)

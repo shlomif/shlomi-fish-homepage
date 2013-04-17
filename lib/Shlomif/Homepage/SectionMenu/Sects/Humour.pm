@@ -147,6 +147,18 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "The Earth Angel",
+                    url => "humour/The-Earth-Angel/",
+                    title => "TODO: FILL IN",
+                    subs =>
+                    [
+                        {
+                            text => "Ongoing Text",
+                            url => "humour/The-Earth-Angel/The-Earth-Angel--English-Text.html",
+                        },
+                    ],
+                },
+                {
                     text => "The Pope Died on Sunday",
                     url => "humour/Pope/",
                     title => "An Insane Week in the Life of a Female American Graphics Artist",

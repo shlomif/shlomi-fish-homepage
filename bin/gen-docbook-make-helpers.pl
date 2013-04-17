@@ -398,6 +398,24 @@ my @end_formats =
     my $fiction_data =
     [
         {
+            base => "EARTH_ANGEL",
+            github_repo => "The-Earth-Angel",
+            subdir => "The-Earth-Angel",
+            docs =>
+            [
+                {
+                    base => "The-Earth-Angel-english",
+                    type => "fiction-text",
+                    suf => "ENG",
+                },
+                {
+                    base => "The-Earth-Angel-hebrew",
+                    type => "fiction-text",
+                    suf => "HEB",
+                },
+            ],
+        },
+        {
             base => "HHFG",
             github_repo => "Human-Hacking-Field-Guide",
             subdir => "HHFG",

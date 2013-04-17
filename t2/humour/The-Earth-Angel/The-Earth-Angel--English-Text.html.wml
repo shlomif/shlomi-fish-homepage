@@ -1,0 +1,22 @@
+#include "multi-lang.wml"
+<set-var shlomif_lang="en" />
+
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "The Earth Angel - English Text" />
+
+<toc_div />
+
+<p><b>By:</b> Shlomi Fish</p>
+
+<h2 id="text">The Text</h2>
+
+<div class="story">
+
+<h3 id="the-story">The Text</h3>
+
+#include "docbook/5/rendered/The-Earth-Angel-english.xhtml"
+
+</div>
+

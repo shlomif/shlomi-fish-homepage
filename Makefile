@@ -479,6 +479,13 @@ $(T2_DEST)/philosophy/computers/high-quality-software/index.html : $(DOCBOOK4_RE
 PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
 PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2003.xhtml
 
+PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
+
+STRIP_HTML_BIN = bin/processors/strip-html-overhead.pl
+
+$(PUT_CARDS_2013_XHTML_STRIPPED): $(PUT_CARDS_2013_XHTML) $(STRIP_HTML_BIN)
+	perl $(STRIP_HTML_BIN) < $< > $@
+
 all: $(PUT_CARDS_2013_DEST)
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(T2_DEST)/humour/TOWTF/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
@@ -487,7 +494,7 @@ $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fount
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(T2_DEST)/humour/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	cp -f $< $@
 
-$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML)
+$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 	cp -f $< $@

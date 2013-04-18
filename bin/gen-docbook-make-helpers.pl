@@ -558,31 +558,6 @@ my @end_formats =
                 push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
             }
             return @ret;
-
-            my $str1 = "$vcs_dir_var = \$($vcs_dir_var)/$subdir\n";
-
-            my $docs_ret_str = join("",
-                map
-                {
-                    my $doc = $_;
-
-                    my $doc_base = $doc->{base};
-                    my $suf = $doc->{suffix};
-
-                    my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
-                    my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
-                        "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n"
-                    . "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n"
-                    . "\$($dest_varname): \$($src_varname)\n"
-                    . "\t" . q/cp -f $< $@/ . "\n"
-                        ;
-                }
-                @$docs
-            );
-
-            # push @git_checkouts, { github_repo => $github_repo, };
-
-            $str1 . $docs_ret_str . "\n\n";
             }->();
         } @$fiction_data,
     );

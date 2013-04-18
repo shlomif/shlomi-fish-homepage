@@ -569,6 +569,8 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_REN
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-english.xhtml
 
+$(T2_DEST)/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Earth-Angel-english.xhtml
+
 $(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-hebrew-v2.xhtml
 
 $(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml

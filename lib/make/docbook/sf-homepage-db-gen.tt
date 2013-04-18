@@ -58,9 +58,9 @@ $(T2_DEST)/[% d. path %]/[% d.base %].rtf: $([% db_macro_prefix %]_RTF_DIR)/[% d
 [%- SET v = d.work_in_progress ? "1" : "" %]
 [% "\t\t" %]--stringparam "docmake.output.work_in_progress=[% v %]" \
 [% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
-[% "\t\t" %]-x [% xslt_ss %] -o $@ xhtml-1_1 $< \
+[% "\t\t" %]-x [% xslt_ss %] -o [% foo_src %] xhtml-1_1 $< \
 [% "\t" %]&& touch $@
-[% "\t" %]perl -lpi -e 's/[ \t]+\z//' $$(ls $@/* | grep -P '\.x?html$$')
+[% "\t" %]perl -lpi -e 's/[ \t]+\z//' $$(ls [% foo_src %]/* | grep -P '\.x?html$$')
 
 [% END %]
 

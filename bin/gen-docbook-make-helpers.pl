@@ -320,29 +320,34 @@ sub _calc_screenplay_doc_makefile_lines
 
     my $vcs_dir_var = "${b}__VCS_DIR";
 
-    my $str1 = "$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n";
-    my $docs_ret_str = join("",
-        map
-        {
-            my $doc = $_;
-
-            my $doc_base = $doc->{base};
-            my $suf = $doc->{suffix};
-
-            my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
-            my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
-            "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n"
-            . "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n"
-            . "\$($dest_varname): \$($src_varname)\n"
-            . "\t" . q/cp -f $< $@/ . "\n"
-            ;
-        }
-        @$docs
-    );
-
     push @screenplay_git_checkouts, { github_repo => $github_repo, };
 
-    return [$str1 . $docs_ret_str . "\n\n"];
+    my @ret;
+
+    push @ret,
+        "$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n"
+        ;
+
+    foreach my $doc (@$docs)
+    {
+        my $doc_base = $doc->{base};
+        my $suf = $doc->{suffix};
+
+        my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
+        my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
+
+        push @ret, "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n\n";
+
+        push @ret, "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n";
+
+        push @ret, (
+              "\$($dest_varname): \$($src_varname)\n"
+            . "\t" . q/cp -f $< $@/ . "\n\n"
+        );
+    }
+
+
+    return [@ret];
 }
 
 {

@@ -506,6 +506,48 @@ my @end_formats =
             }
         }
     }
+
+    io->file("lib/make/docbook/sf-fictions.mak")->print(
+        map {
+            sub {
+            my $d = $_;
+
+            my $b = $d->{base};
+            my $github_repo = $d->{github_repo};
+            my $subdir = $d->{subdir};
+            my $docs = $d->{docs};
+
+            my $vcs_dir_var = "${b}__VCS_DIR";
+
+            return "$vcs_dir_var = $vcs_base_dir/$github_repo\n\n";
+
+            my $str1 = "$vcs_dir_var = \$($vcs_dir_var)/$subdir\n";
+
+            my $docs_ret_str = join("",
+                map
+                {
+                    my $doc = $_;
+
+                    my $doc_base = $doc->{base};
+                    my $suf = $doc->{suffix};
+
+                    my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
+                    my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
+                        "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n"
+                    . "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n"
+                    . "\$($dest_varname): \$($src_varname)\n"
+                    . "\t" . q/cp -f $< $@/ . "\n"
+                        ;
+                }
+                @$docs
+            );
+
+            # push @git_checkouts, { github_repo => $github_repo, };
+
+            $str1 . $docs_ret_str . "\n\n";
+            }->();
+        } @$fiction_data,
+    );
 }
 
 

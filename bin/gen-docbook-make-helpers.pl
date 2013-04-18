@@ -533,6 +533,8 @@ my @end_formats =
                 {
                     my $src_varname = "${b}_${suf}_FICTION_XML_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
+                    my $from_vcs_varname = "${b}_${suf}_FICTION_TXT_FROM_VCS";
+                    push @ret, "$from_vcs_varname = lib/fiction-xml/txt/$doc_base.txt\n\n";
                 }
                 elsif ($type eq 'docbook5')
                 {

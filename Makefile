@@ -420,15 +420,7 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
 
-EARTH_ANGEL_ENG_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Earth-Angel-english.txt
-EARTH_ANGEL_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Earth-Angel-hebrew.txt
-
-
-POPE_ENG_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-english.txt
-POPE_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/The-Pope-Died-on-Sunday-hebrew.txt
-
 HHFG_ENG_DOCBOOK5_FROM_VCS = lib/docbook/5/xml/human-hacking-field-guide-v2.xml
-HHFG_HEB_FICTION_TXT_FROM_VCS = lib/fiction-xml/txt/human-hacking-field-guide-hebrew-v2.txt
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<

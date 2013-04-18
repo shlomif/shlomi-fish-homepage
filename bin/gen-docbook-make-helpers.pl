@@ -347,7 +347,7 @@ sub _calc_screenplay_doc_makefile_lines
     }
 
 
-    return [@ret];
+    return \@ret;
 }
 
 {

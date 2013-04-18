@@ -529,17 +529,21 @@ my @end_formats =
                 my $suf = $doc->{suf};
                 my $type = $doc->{type};
 
+                my $bsuf = "${b}_${suf}";
+
                 if ($type eq 'fiction-text')
                 {
-                    my $src_varname = "${b}_${suf}_FICTION_XML_SOURCE";
+                    my $src_varname = "${bsuf}_FICTION_XML_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
-                    my $from_vcs_varname = "${b}_${suf}_FICTION_TXT_FROM_VCS";
+                    my $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
                     push @ret, "$from_vcs_varname = lib/fiction-xml/txt/$doc_base.txt\n\n";
                 }
                 elsif ($type eq 'docbook5')
                 {
-                    my $src_varname = "${b}_${suf}_DOCBOOK5_SOURCE";
+                    my $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.db5.xml\n\n";
+                    my $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
+                    push @ret, "$from_vcs_varname = lib/docbook/5/xml/$doc_base.xml\n\n";
                 }
             }
             return @ret;

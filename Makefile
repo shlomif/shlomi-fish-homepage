@@ -420,8 +420,6 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
 
-HHFG_ENG_DOCBOOK5_FROM_VCS = lib/docbook/5/xml/human-hacking-field-guide-v2.xml
-
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 

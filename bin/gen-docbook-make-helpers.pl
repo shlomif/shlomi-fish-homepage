@@ -13,6 +13,38 @@ use List::MoreUtils qw(any);
 
 use Parallel::ForkManager;
 
+my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
+
+sub _github_clone
+{
+    my $args = shift;
+
+    my $gh_username = $args->{'username'};
+    my $repo = $args->{'repo'};
+
+    my $url;
+
+    if (($gh_username eq 'shlomif') && ($global_username eq 'shlomif'))
+    {
+        $url = "git\@github.com:${gh_username}/${repo}.git";
+    }
+    else
+    {
+         $url = "https://github.com/$gh_username/$repo.git";
+    }
+
+    system('git', 'clone', $url);
+
+    return;
+}
+
+sub _github_shlomif_clone
+{
+    my ($repo) = @_;
+
+    return _github_clone({ username => 'shlomif', repo => $repo, });
+}
+
 my $pm = Parallel::ForkManager->new(20);
 
 if (not -e 'lib/MathJax/README.md')
@@ -387,7 +419,7 @@ my @end_formats =
             if (! ($pid = $pm->start))
             {
                 chdir($screenplay_vcs_base_dir);
-                system('git', 'clone', "https://github.com/shlomif/$r.git");
+                _github_shlomif_clone($r);
                 $pm->finish;
             }
         }
@@ -468,7 +500,7 @@ my @end_formats =
                 if (! ($pid = $pm->start))
                 {
                     chdir($vcs_base_dir);
-                    system('git', 'clone', "https://github.com/shlomif/$r.git");
+                    _github_shlomif_clone($r);
                     $pm->finish;
                 }
             }

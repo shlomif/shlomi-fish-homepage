@@ -509,7 +509,6 @@ my @end_formats =
 
     io->file("lib/make/docbook/sf-fictions.mak")->print(
         map {
-            sub {
             my $d = $_;
 
             my $b = $d->{base};
@@ -557,8 +556,7 @@ my @end_formats =
 
                 push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
             }
-            return @ret;
-            }->();
+            @ret;
         } @$fiction_data,
     );
 }

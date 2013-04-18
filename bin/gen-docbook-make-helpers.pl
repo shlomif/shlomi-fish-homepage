@@ -519,7 +519,23 @@ my @end_formats =
 
             my $vcs_dir_var = "${b}__VCS_DIR";
 
-            return "$vcs_dir_var = $vcs_base_dir/$github_repo\n\n";
+            my @ret;
+
+            push @ret, "$vcs_dir_var = $vcs_base_dir/$github_repo\n\n";
+
+            foreach my $doc (@$docs)
+            {
+                my $doc_base = $doc->{base};
+                my $suf = $doc->{suf};
+                my $type = $doc->{type};
+
+                if ($type eq 'fiction-text')
+                {
+                    my $src_varname = "${b}_${suf}_FICTION_XML_SOURCE";
+                    push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
+                }
+            }
+            return @ret;
 
             my $str1 = "$vcs_dir_var = \$($vcs_dir_var)/$subdir\n";
 

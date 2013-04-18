@@ -271,7 +271,7 @@ SCREENPLAY_DOCS = \
 
 FICTION_DOCS = \
     fiction-text-example-for-X-G-Fiction-demo \
-	human-hacking-field-guide-hebrew-v2 \
+	human-hacking-field-guide-v2--hebrew \
 	The-Earth-Angel-hebrew \
 	The-Earth-Angel-english \
 	The-Enemy-Hebrew-rev6 \
@@ -438,7 +438,7 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
 	cp -f $< $@
 
-$(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide--hebrew.txt
+$(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew.txt
 	cp -f $< $@
 
 $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
@@ -553,7 +553,7 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--English-Text.html: $(DOCBOOK5_RE
 
 $(T2_DEST)/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Earth-Angel-english.xhtml
 
-$(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-hebrew-v2.xhtml
+$(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-v2--hebrew.xhtml
 
 $(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml
 

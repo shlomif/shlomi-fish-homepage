@@ -531,22 +531,29 @@ my @end_formats =
 
                 my $bsuf = "${b}_${suf}";
 
-                my ($src_varname, $from_vcs_varname);
+                my ($src_varname, $from_vcs_varname,
+                    $src_suffix, $dest_suffix, $dest_dir_var
+                );
 
                 if ($type eq 'fiction-text')
                 {
                     $src_varname = "${bsuf}_FICTION_XML_SOURCE";
-                    push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
+                    $src_suffix = 'fiction-text.txt';
                     $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
-                    push @ret, "$from_vcs_varname = \$(FICTION_XML_TXT_DIR)/$doc_base.txt\n\n";
+                    $dest_suffix = 'txt';
+                    $dest_dir_var = 'FICTION_XML_TXT_DIR';
                 }
                 elsif ($type eq 'docbook5')
                 {
                     $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
-                    push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.db5.xml\n\n";
+                    $src_suffix = 'db5.xml';
                     $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
-                    push @ret, "$from_vcs_varname = \$(DOCBOOK5_XML_DIR)/$doc_base.xml\n\n";
+                    $dest_suffix = 'xml';
+                    $dest_dir_var = 'DOCBOOK5_XML_DIR';
                 }
+
+                push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n";
+                push @ret, "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n";
 
                 push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
             }

@@ -197,7 +197,7 @@ my @documents =
     {
         id => "human-hacking-field-guide-v2",
         path =>  "humour/human-hacking",
-        base => "human-hacking-field-guide-v2",
+        base => "human-hacking-field-guide-v2--english",
         custom_css => 1,
         del_revhistory => 1,
         db_ver => 5,
@@ -454,12 +454,12 @@ my @end_formats =
             docs =>
             [
                 {
-                    base => "human-hacking-field-guide--english",
+                    base => "human-hacking-field-guide-v2--english",
                     type => "docbook5",
                     suf => "ENG",
                 },
                 {
-                    base => "human-hacking-field-guide--hebrew",
+                    base => "human-hacking-field-guide-v2--hebrew",
                     type => "fiction-text",
                     suf => "HEB",
                 },

@@ -538,14 +538,14 @@ my @end_formats =
                     $src_varname = "${bsuf}_FICTION_XML_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
                     $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
-                    push @ret, "$from_vcs_varname = lib/fiction-xml/txt/$doc_base.txt\n\n";
+                    push @ret, "$from_vcs_varname = \$(FICTION_XML_TXT_DIR)/$doc_base.txt\n\n";
                 }
                 elsif ($type eq 'docbook5')
                 {
                     $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.db5.xml\n\n";
                     $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
-                    push @ret, "$from_vcs_varname = lib/docbook/5/xml/$doc_base.xml\n\n";
+                    push @ret, "$from_vcs_varname = \$(DOCBOOK5_XML_DIR)/$doc_base.xml\n\n";
                 }
 
                 push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};

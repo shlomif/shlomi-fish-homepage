@@ -426,6 +426,61 @@ my @end_formats =
     }
 }
 
+my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
+
+sub _calc_fiction_story_makefile_lines
+{
+    my ($d) = @_;
+
+    my $b = $d->{base};
+    my $github_repo = $d->{github_repo};
+    my $subdir = $d->{subdir};
+    my $docs = $d->{docs};
+
+    my $vcs_dir_var = "${b}__VCS_DIR";
+
+    my @ret;
+
+    push @ret, "$vcs_dir_var = \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n";
+
+    foreach my $doc (@$docs)
+    {
+        my $doc_base = $doc->{base};
+        my $suf = $doc->{suf};
+        my $type = $doc->{type};
+
+        my $bsuf = "${b}_${suf}";
+
+        my ($src_varname, $from_vcs_varname,
+            $src_suffix, $dest_suffix, $dest_dir_var
+        );
+
+        if ($type eq 'fiction-text')
+        {
+            $src_varname = "${bsuf}_FICTION_XML_SOURCE";
+            $src_suffix = 'fiction-text.txt';
+            $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
+            $dest_suffix = 'txt';
+            $dest_dir_var = 'FICTION_XML_TXT_DIR';
+        }
+        elsif ($type eq 'docbook5')
+        {
+            $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
+            $src_suffix = 'db5.xml';
+            $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
+            $dest_suffix = 'xml';
+            $dest_dir_var = 'DOCBOOK5_XML_DIR';
+        }
+
+        push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n";
+        push @ret, "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n";
+
+        push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
+    }
+
+    return \@ret;
+}
+
 {
     my $fiction_data =
     [
@@ -485,21 +540,20 @@ my @end_formats =
         },
     ];
 
-    my $vcs_base_dir = 'lib/fiction-xml/from-vcs';
 
     foreach my $d (@$fiction_data)
     {
         my $github_repo = $d->{github_repo};
         {
             my $r = $github_repo;
-            my $full = "$vcs_base_dir/$r";
+            my $full = "$fiction_vcs_base_dir/$r";
 
             if (not -e $full)
             {
                 my $pid;
                 if (! ($pid = $pm->start))
                 {
-                    chdir($vcs_base_dir);
+                    chdir($fiction_vcs_base_dir);
                     _github_shlomif_clone($r);
                     $pm->finish;
                 }
@@ -508,56 +562,8 @@ my @end_formats =
     }
 
     io->file("lib/make/docbook/sf-fictions.mak")->print(
-        map {
-            my $d = $_;
-
-            my $b = $d->{base};
-            my $github_repo = $d->{github_repo};
-            my $subdir = $d->{subdir};
-            my $docs = $d->{docs};
-
-            my $vcs_dir_var = "${b}__VCS_DIR";
-
-            my @ret;
-
-            push @ret, "$vcs_dir_var = $vcs_base_dir/$github_repo\n\n";
-
-            foreach my $doc (@$docs)
-            {
-                my $doc_base = $doc->{base};
-                my $suf = $doc->{suf};
-                my $type = $doc->{type};
-
-                my $bsuf = "${b}_${suf}";
-
-                my ($src_varname, $from_vcs_varname,
-                    $src_suffix, $dest_suffix, $dest_dir_var
-                );
-
-                if ($type eq 'fiction-text')
-                {
-                    $src_varname = "${bsuf}_FICTION_XML_SOURCE";
-                    $src_suffix = 'fiction-text.txt';
-                    $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
-                    $dest_suffix = 'txt';
-                    $dest_dir_var = 'FICTION_XML_TXT_DIR';
-                }
-                elsif ($type eq 'docbook5')
-                {
-                    $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
-                    $src_suffix = 'db5.xml';
-                    $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
-                    $dest_suffix = 'xml';
-                    $dest_dir_var = 'DOCBOOK5_XML_DIR';
-                }
-
-                push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n";
-                push @ret, "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n";
-
-                push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
-            }
-            @ret;
-        } @$fiction_data,
+        "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n",
+        map { @{ _calc_fiction_story_makefile_lines($_) } } @$fiction_data,
     );
 }
 

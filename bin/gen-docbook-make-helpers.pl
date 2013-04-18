@@ -531,20 +531,24 @@ my @end_formats =
 
                 my $bsuf = "${b}_${suf}";
 
+                my ($src_varname, $from_vcs_varname);
+
                 if ($type eq 'fiction-text')
                 {
-                    my $src_varname = "${bsuf}_FICTION_XML_SOURCE";
+                    $src_varname = "${bsuf}_FICTION_XML_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.fiction-text.txt\n\n";
-                    my $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
+                    $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
                     push @ret, "$from_vcs_varname = lib/fiction-xml/txt/$doc_base.txt\n\n";
                 }
                 elsif ($type eq 'docbook5')
                 {
-                    my $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
+                    $src_varname = "${bsuf}_DOCBOOK5_SOURCE";
                     push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.db5.xml\n\n";
-                    my $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
+                    $from_vcs_varname = "${bsuf}_DOCBOOK5_FROM_VCS";
                     push @ret, "$from_vcs_varname = lib/docbook/5/xml/$doc_base.xml\n\n";
                 }
+
+                push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
             }
             return @ret;
 

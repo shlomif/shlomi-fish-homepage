@@ -371,6 +371,10 @@ my $humour_tree_contents =
                     text => "Freecell Solver™ Goes Webscale",
                     url => "humour/bits/Freecell-Solver-Goes-Webscale/",
                 },
+                {
+                    text => "Freecell Solver Enterprises™ Acquires Google Inc.",
+                    url => "humour/bits/Freecell-Solver-Enterprises-Acquires-Google-Inc/",
+                },
             ],
         },
         {

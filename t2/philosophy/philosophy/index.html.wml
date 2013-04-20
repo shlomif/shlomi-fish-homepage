@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "toc_div.wml"
 
 <latemp_subject "Shlomi Fish’s Writings about General Philosophy" />
 
@@ -7,11 +8,13 @@ These are essays I wrote about general philosophy - life, the universe and
 whatever between them.
 </p>
 
-<h2>The Articles and Essays</h2>
+<toc_div />
+
+<h2 id="list">The Articles and Essays</h2>
 
 <div class="articles_list">
 
-<h3><a href="$(ROOT)/philosophy/the-eternal-jew/">The Eternal Jew</a></h3>
+<h3 id="the_eternal_jew"><a href="$(ROOT)/philosophy/the-eternal-jew/">The Eternal Jew</a></h3>
 
 <p>
 An article that nicely summarizes the principals of my view on self and of
@@ -19,28 +22,28 @@ life. Do you think highly of yourself? Do you think highly of yourself enough?
 Do you think you can influence the world? It’s all there.
 </p>
 
-<h3><a href="guide-to-neo-tech/">Guide to Neo-Tech</a></h3>
+<h3 id="guide_to_neo_tech"><a href="guide-to-neo-tech/">Guide to Neo-Tech</a></h3>
 
 <p>
 A guide to the online Neo-Tech resources. Neo-Tech is an absolutely
 mind-blowing philosophical system.
 </p>
 
-<h3><a href="advice-for-the-young/">Advice for the Young</a></h3>
+<h3 id="advice_for_the_young"><a href="advice-for-the-young/">Advice for the Young</a></h3>
 
 <p>
 Some advice for people, especially young ones. Mostly intended for those
 who are interested in computing, but some of it is also pertinent to others.
 </p>
 
-<h3><a href="closed-books-are-so-19th-century/">Why Closed Books are So 19th Century</a></h3>
+<h3 id="closed_books"><a href="closed-books-are-so-19th-century/">Why Closed Books are So 19th Century</a></h3>
 
 <p>
 An Essay explaining why authors of books should make sure they are available
 online free-of-charge.
 </p>
 
-<h3><a href="putting-all-cards-on-the-table-2013/">Putting all the Cards on the Table (2013)</a></h3>
+<h3 id="put_cards_2013"><a href="putting-all-cards-on-the-table-2013/">Putting all the Cards on the Table (2013)</a></h3>
 
 <p>
 What is the problem with

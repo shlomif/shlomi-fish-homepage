@@ -570,6 +570,16 @@ table.visible
     .page_toc
         clear: left
 
+body.self_link
+    .selfl
+        display: none
+
+    h1, h2, h3, h4, h5, h6
+        &:hover
+            .selfl
+                display: inline
+                color: red
+
 @import "lang_switch"
 @import "code_block"
 @import "treeview"

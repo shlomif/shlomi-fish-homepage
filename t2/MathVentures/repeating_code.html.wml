@@ -1,13 +1,19 @@
 #include '../template.wml'
 
 <latemp_subject "On and on it seems to go…" />
+<latemp_meta_desc "How many different codes can be broadcast repeatedly" />
 
-A while ago, I was introduced to a couple of questions about
+<p>
+A while ago, I was introduced to some questions about
 digital codes being broadcast. This made me think of a new code
 problem. I thought about it a bit, and saw that I couldn’t figure
 out the answer. So, I decided to post it to the Usenet newsgroup
 rec.puzzles which is dedicated to riddles and puzzles of all sorts.
-<p>The original message from Deja-News follows:</p>
+</p>
+
+<p>
+The original message from Deja-News follows:
+</p>
 
 <pre>
 <b>Subject:      <span style=" color : #C60012 ; font-size : large ">Repeating Code Possibilities</span>
@@ -37,16 +43,22 @@ possible?
         Shlomi Fish
 </pre>
 
+<p>
 A final note about this problem: if a code has an effective
 repetition that is some integer division of l, it’s still of length
 l. E.g: the code 10101010... is still considered the 4-bits code
 1010 (or 0101). The continuation which includes the answer can be
-found a couple of pages below. <br />
+found a couple of pages below.
+</p>
 
 
 <longblank />
- Well, the rec.puzzles guys did not know how to solve it either,
+
+<p>
+Well, the rec.puzzles guys did not know how to solve it either,
 and someone suggested that I should post it to sci.math instead.
+</p>
+
 <p>Eventually, I had an idea. Like I said, some codes have an
 effective repetition that is some integer division of the given
 code-length. Normal codes have l permutations. For example the code
@@ -54,7 +66,7 @@ code-length. Normal codes have l permutations. For example the code
 codes of one of l’s dividers have less permutations. ‘1010’ only
 has two permutations: ‘1010’ and ‘0101’.</p>
 
-<p>So, I posted the following message to rec.puzzles a couple of
+<p>So, I posted the following message to rec.puzzles a few
 months after my original posting. The solution presented there is
 not entirely correct, so read my notes below.</p>
 
@@ -145,11 +157,14 @@ total number of codes n have are:
       Shlomi Fish
 </pre>
 
+<p>
 Well, I didn’t take in mind that a number can indirectly receive
 codes from a divider by two or more other dividers (like 12 that
 gets codes from 2 through both 4 and 6). Thus, O(n) the function
 that denotes the number of “original” codes of n should be
 recursive and defined as following:
+</p>
+
 <p><b>O(1) = 2</b><br />
 <b>O(n) = T(n)/n</b> for every prime number n<br />
 <b>O(n) = [ T(n) - (O(q1)*q1 + O(q2)*q2 + .. O(qt)*qt ) ] / n</b>

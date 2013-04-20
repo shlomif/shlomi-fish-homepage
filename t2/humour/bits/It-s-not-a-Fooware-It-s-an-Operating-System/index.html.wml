@@ -1,32 +1,59 @@
 #include '../template.wml'
 
 <latemp_subject "It’s not a Fooware - It’s an Operating System" />
+<latemp_meta_desc "A document that lists several software applications that have grown beyond their original purpose and practically became operating systems." />
 
 <h1>Introduction</h1>
 
-<p>Lots of people heard <a href="http://perl.net.au/wiki/Emacs">Emacs</a> haters complain that “Emacs is not an editor - it’s an operating system” or something along these lines. So here we’re trying to concentrate other such programs that are no longer limited only to their original purpose, but rather expanded to cover lots of other stuff. So you’ll know that Emacs is not alone.
+<p>
+Lots of people heard <a href="http://perl.net.au/wiki/Emacs">Emacs</a>
+haters complain that “Emacs is not an editor - it’s an operating system” or
+something along these lines. So here we’re trying to concentrate other such
+programs that are no longer limited only to their original purpose, but rather
+expanded to cover lots of other stuff. So you’ll know that Emacs is not alone.
 </p>
 
 <p>Are you ready? Let’s go!</p>
 
-<h1> The Fooware Programs </h1>
-<h2> It’s not a Text Editor - it's an Operating System! </h2>
-<p><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a>, <a href="http://www.gnu.org/software/emacs/">XEmacs</a>,  <a href="http://packages.debian.org/unstable/editors/emacs-snapshot-gtk">Gtk+ Emacs</a>, are editors that have everything. Besides editing files, they can send and retrieve mail, read Usenet, browse the web, run and debug code (using several debuggers), and even provide an Eliza implementation (M-x doctor).
-</p><p>Due to that Emacs has been the subject of several jokes:
+<h1>The Fooware Programs</h1>
+
+<h2>It’s not a Text Editor - it’s an Operating System!</h2>
+
+<p>
+<a href="http://www.gnu.org/software/emacs/">GNU Emacs</a>, <a
+href="http://www.gnu.org/software/emacs/">XEmacs</a>,  <a
+href="http://packages.debian.org/unstable/editors/emacs-snapshot-gtk">Gtk+
+Emacs</a>, are editors that have everything. Besides editing files, they can
+send and retrieve mail, read Usenet, browse the web, run and debug code (using
+several debuggers), and even provide an Eliza implementation (M-x doctor).
+</p>
+<p>
+Due to that Emacs has been the subject of several jokes:
 </p>
 <ul>
-<li> “Emacs is a nice operating system, that just happens to know how to edit files.”
+<li> “Emacs is a nice operating system, that just happens to know how to edit
+files.”
 </li>
-<li> “Emacs is a nice operating system, but what it lacks, in order to compete with Linux, is a good text editor.” (Albeit some people may argue that some of its vi-emulation modes may qualify.)
+<li> “Emacs is a nice operating system, but what it lacks, in order to compete
+with Linux, is a good text editor.” (Albeit some people may argue that some of
+its vi-emulation modes may qualify.)
 </li></ul>
-<p>Most people either love Emacs or hate its guts.
+
+<p>
+Most people either love Emacs or hate its guts.
 </p>
 
 <h2>It’s not a Shell - it’s an Operating System!</h2>
 
-<p><a href="http://zsh.dotsrc.org/">zsh</a> is the Emacs of shells. It has built-in support for sockets, FTP, HTTP, file completion, modules, auto-completion, <a href="http://ajgenius.us/Screenshots/ZTextEditor.png">GUI bindings for Gtk+</a>, a built-in text editor (zed) - the works.
+<p>
+<a href="http://zsh.dotsrc.org/">zsh</a> is the Emacs of shells. It has
+built-in support for sockets, FTP, HTTP, file completion, modules,
+auto-completion, <a href="http://ajgenius.us/Screenshots/ZTextEditor.png">GUI
+bindings for Gtk+</a>, a built-in text editor (zed) - the works.
 </p>
-<h3> It’s not a Shell - it's an Operating System! (Reloaded) </h3>
+
+<h3>It’s not a Shell - it’s an Operating System! (Reloaded)</h3>
+
 <p>
 Alternatively, <a href="http://www.busybox.net/">BusyBox</a> is an
 integrated collection of utilities intended for embedded systems, that combines
@@ -37,7 +64,8 @@ install only one executable - install that.
 
 <h2>It’s not an IDE - it’s an Operating System!</h2>
 
-<p><a href="http://www.eclipse.org/">Eclipse</a> is the Integrated Development
+<p>
+<a href="http://www.eclipse.org/">Eclipse</a> is the Integrated Development
 Environment that has everything: an editor, a refactoring browser, code
 completion, a file browser, interfaces to a build system. It supports many
 languages including Java (by default), <a
@@ -46,18 +74,22 @@ href="http://www-128.ibm.com/developerworks/library/os-ecxml/">XML</a>, <a
 href="http://www.phpeclipse.de/tiki-view_articles.php">PHP</a> and <a
 href="http://e-p-i-c.sourceforge.net/">Perl</a>.
 </p>
+
 <h2>It’s not a Browser - it’s an Operating System!</h2>
 
-<p>What do you need in your web browser? Surely you also need SMTP/POP/IMAP
+<p>
+What do you need in your web browser? Surely you also need SMTP/POP/IMAP
 email (not just webmail), a Newsgroup client, IRC, an HTML editor, plugins and
 extensions, themes and skins, and a kitchen sink. <a
 href="http://www.mozilla.org/projects/seamonkey/">SeaMonkey</a> (formerly the
 Mozilla Suite) has all of these and more. “All your Internet Needs in One
 Application”. Indeed.
 </p>
+
 <h2>It’s not a Virtual Machine - it’s an Operating System!</h2>
 
-<p><a href="http://www.squeak.org/">Squeak Smalltalk</a> has it all. A virtual
+<p>
+<a href="http://www.squeak.org/">Squeak Smalltalk</a> has it all. A virtual
 machine, with a built-in Graphical User-Interface, a built-in Window Manager, a
 few built-in editors, a built-in package management system, a built-in version
 control system, and a built-in refactoring browser. The additional packages
@@ -66,7 +98,8 @@ supply additional functionality.
 
 <h2>It’s not a Vi Clone - it’s an Operating System!</h2>
 
-<p><a href="http://www.vim.org/">Vim - Vi Improved</a> is the Emacs of the vi
+<p>
+<a href="http://www.vim.org/">Vim - Vi Improved</a> is the Emacs of the vi
 clones. It has syntax highlighting, tabs, tags, many extensions over vi,
 plug-ins, has embedded many popular dynamic languages besides its own scripting
 language, has several interfaces to spell-checking, and has many other
@@ -76,7 +109,8 @@ and Email, that provided news and email functionality to it.
 
 <h2>It’s not an Operating System - it’s an Operating System!</h2>
 
-<p><a href="http://www.debian.org/">Debian GNU/Linux</a> contains packages for
+<p>
+<a href="http://www.debian.org/">Debian GNU/Linux</a> contains packages for
 practically anything under the sun, including everything mentioned here. As
 opposed to Microsoft Windows, which a lot of functionality is kept out of, by
 default (due to Microsoft policy), Debian and other Linux-based distributions

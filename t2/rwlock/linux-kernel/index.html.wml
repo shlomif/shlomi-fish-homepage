@@ -1,6 +1,7 @@
 #include '../template.wml'
 
 <latemp_subject "Linux Kernel FCFS fcntl/flock Locks" />
+<latemp_meta_desc "Linux Kernel patch to implement a first-come first-served (FCFS)-locking semantics for the flock()/fcntl() system calls." />
 
 <h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>
 

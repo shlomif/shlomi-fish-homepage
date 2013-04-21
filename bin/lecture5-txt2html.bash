@@ -5,6 +5,7 @@ txt2html --xhtml --eight_bit_clean --title "Perl for Newbies Lecture 5: Hebrew N
     if echo "$l" | grep '^<meta name=' > /dev/null ; then
         cat <<'EOF'
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Perl for Newbies Lecture 5: Hebrew Notes" />
 <style type="text/css">
 body { direction: rtl; text-align: right; }
 </style>

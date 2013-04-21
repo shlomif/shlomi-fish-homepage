@@ -1,8 +1,11 @@
 #include '../template.wml'
 #include "toc_div.wml"
 
-<latemp_more_keywords "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" />
 <latemp_subject "Cross-Platform Abstraction Libraries" />
+
+<latemp_meta_desc "Cross-Platform libraries for abstracting system services and for portability." />
+
+<latemp_more_keywords "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" />
 
 <p>
 Programming an application that can run both on UNIX and on Windows 32-bit

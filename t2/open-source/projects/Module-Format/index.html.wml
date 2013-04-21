@@ -2,7 +2,10 @@
 #include "cpan_dists.wml"
 
 <set-var modname="Module-Format" />
+
 <latemp_subject "<get-var modname /> - perform bulk operations on Perl modules" />
+
+<latemp_meta_desc "<get-var modname /> - perform bulk operations on Perl modules" />
 
 <p>
 <get-var modname /> aims to simplify installing a large number of Perl modules

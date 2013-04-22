@@ -22,6 +22,7 @@ use List::MoreUtils;
         optipng
         quadp
         sass
+        shspork
         /usr/sbin/strfile
         txt2html
         xsltproc

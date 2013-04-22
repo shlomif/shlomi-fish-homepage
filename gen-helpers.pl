@@ -107,6 +107,7 @@ use List::MoreUtils;
         'XML::Grammar::Fiction::App::FromProto' => 0,
         'XML::Grammar::Screenplay::App::FromProto' => 0,
         'XML::Grammar::Screenplay::App::ToHTML' => 0,
+        'XML::Grammar::Fortune::Synd::App' => 0,
         'XML::Grammar::Fortune::ToText' => 0,
         'XML::Grammar::ProductsSyndication' => 0,
         'XML::LibXML' => 0,

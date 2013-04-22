@@ -11,18 +11,37 @@ use File::Which qw(which);
 use List::MoreUtils;
 
 {
+    my @not_found;
+
     foreach my $cmd (qw(
         asciidoc
         docmake
         inkscape
         jing
+        /usr/sbin/strfile
         xsltproc
         ))
     {
-        if (!defined(scalar(which($cmd))))
+        if (not
+            (
+                ($cmd =~ m{\A/})
+                ? (-e $cmd)
+                : (defined(scalar(which($cmd))))
+            )
+        )
         {
-            die "Cannot find '$cmd' in path. Please install it.";
+            push @not_found, $cmd;
         }
+    }
+
+    if (@not_found)
+    {
+        print "The following commands could not be found:\n\n";
+        foreach my $cmd (sort { $a cmp $b } @not_found)
+        {
+            print "$cmd\n";
+        }
+        exit(-1);
     }
 }
 

@@ -11,65 +11,9 @@ use YAML::XS (qw(LoadFile));
 
 use List::MoreUtils;
 
+if (system("make", "--silent", "-f", "lib/make/build-deps/build-deps.mak"))
 {
-    my @not_found;
-
-    foreach my $cmd (
-        io->file("./bin/needed-executables.txt")->chomp->getlines()
-    )
-    {
-        if (not
-            (
-                ($cmd =~ m{\A/})
-                ? (-e $cmd)
-                : (defined(scalar(which($cmd))))
-            )
-        )
-        {
-            push @not_found, $cmd;
-        }
-    }
-
-    if (@not_found)
-    {
-        print "The following commands could not be found:\n\n";
-        foreach my $cmd (sort { $a cmp $b } @not_found)
-        {
-            print "$cmd\n";
-        }
-        exit(-1);
-    }
-}
-
-{
-    my ($yaml_data) = LoadFile("./bin/required-modules.yml");
-
-    my $required_modules = $yaml_data->{required}->{modules};
-
-    my @not_found;
-
-    foreach my $m (sort { $a cmp $b } keys(%$required_modules))
-    {
-        my $v = $required_modules->{$m};
-        local $SIG{__WARN__} = sub {};
-        my $verdict = eval( "use $m " . ($v ||'') . ';' );
-        my $Err = $@;
-
-        if ($Err)
-        {
-            push @not_found, $m;
-        }
-    }
-
-    if (@not_found)
-    {
-        print "The following modules could not be found:\n\n";
-        foreach my $module (@not_found)
-        {
-            print "$module\n";
-        }
-        exit(-1);
-    }
+    die "build-deps failed!";
 }
 
 my $generator =

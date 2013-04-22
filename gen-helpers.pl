@@ -6,8 +6,24 @@ use warnings;
 use HTML::Latemp::GenMakeHelpers;
 use File::Find::Object::Rule;
 use IO::All;
+use File::Which qw(which);
 
 use List::MoreUtils;
+
+{
+    foreach my $cmd (qw(
+        asciidoc
+        docmake
+        inkscape
+        xsltproc
+        ))
+    {
+        if (!defined(scalar(which($cmd))))
+        {
+            die "Cannot find '$cmd' in path. Please install it.";
+        }
+    }
+}
 
 my $generator =
     HTML::Latemp::GenMakeHelpers->new(

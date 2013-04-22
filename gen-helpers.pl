@@ -15,9 +15,11 @@ use List::MoreUtils;
 
     foreach my $cmd (qw(
         asciidoc
+        convert
         docmake
         inkscape
         jing
+        optipng
         quadp
         sass
         /usr/sbin/strfile

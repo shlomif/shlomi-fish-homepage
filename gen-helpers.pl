@@ -53,6 +53,7 @@ use List::MoreUtils;
         'HTML::Latemp::GenMakeHelpers' => 0,
         'HTML::Parser' => '3.00',
         'HTML::Tidy' => 0,
+        'HTML::TokeParser::Simple' => 0,
         'HTML::TreeBuilder::LibXML' => 0,
         'HTML::Widgets::NavMenu' => 0,
         'HTML::Widgets::NavMenu::ToJSON' => 0,

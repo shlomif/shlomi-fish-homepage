@@ -13,20 +13,9 @@ use List::MoreUtils;
 {
     my @not_found;
 
-    foreach my $cmd (qw(
-        asciidoc
-        convert
-        docmake
-        inkscape
-        jing
-        optipng
-        quadp
-        sass
-        shspork
-        /usr/sbin/strfile
-        txt2html
-        xsltproc
-        ))
+    foreach my $cmd (
+        io->file("./bin/needed-executables.txt")->chomp->getlines()
+    )
     {
         if (not
             (

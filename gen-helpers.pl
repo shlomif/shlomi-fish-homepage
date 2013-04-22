@@ -18,6 +18,7 @@ use List::MoreUtils;
         docmake
         inkscape
         jing
+        sass
         /usr/sbin/strfile
         txt2html
         xsltproc

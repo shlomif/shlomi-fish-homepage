@@ -18,6 +18,7 @@ use List::MoreUtils;
         docmake
         inkscape
         jing
+        quadp
         sass
         /usr/sbin/strfile
         txt2html

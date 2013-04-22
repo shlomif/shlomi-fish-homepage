@@ -4,10 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Latemp::GenMakeHelpers;
-use File::Find::Object::Rule;
 use IO::All;
-use File::Which qw(which);
-use YAML::XS (qw(LoadFile));
 
 use List::MoreUtils;
 

@@ -19,6 +19,7 @@ use List::MoreUtils;
         inkscape
         jing
         /usr/sbin/strfile
+        txt2html
         xsltproc
         ))
     {

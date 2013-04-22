@@ -15,6 +15,7 @@ use List::MoreUtils;
         asciidoc
         docmake
         inkscape
+        jing
         xsltproc
         ))
     {

@@ -81,6 +81,33 @@ GetOptions(
     }
 }
 
+{
+    my @not_found;
+
+    foreach my $path (
+        "$ENV{HOME}/.shlomifish-amazon-sak.json",
+    )
+    {
+        if (! -e $path)
+        {
+            push @not_found, $path;
+        }
+    }
+
+    if (@not_found)
+    {
+        print "The following required files could not be found.\n";
+        print "Please set them up:\n";
+        print "\n";
+
+        foreach my $path (sort { $a cmp $b } @not_found)
+        {
+            print "$path\n";
+        }
+        exit(-1);
+    }
+}
+
 io->file($out_fn)->print("Success!");
 
 exit(0);

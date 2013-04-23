@@ -24,7 +24,9 @@ sub _github_clone
 
     my $url;
 
-    if (($gh_username eq 'shlomif') && ($global_username eq 'shlomif'))
+    if (   ($gh_username eq 'shlomif') && ($global_username eq 'shlomif')
+        && (!$ENV{SHLOMIF_ANON})
+    )
     {
         $url = "git\@github.com:${gh_username}/${repo}.git";
     }

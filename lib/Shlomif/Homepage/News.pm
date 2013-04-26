@@ -19,7 +19,7 @@ __PACKAGE__->mk_accessors(qw(
 my @old_news_items =
 (
     {
-        'date' => "22-Mar-2005",
+        'date' => DateTime->new( year => 2005, month =>  3, day => 22 ),
         'body' => <<"EOF",
 <p class="newsitem">
 I added a <a href="links.html#pictures">section to my links collection with
@@ -40,7 +40,7 @@ Framework</a> is a new project of mine. Check it out if you’re interested.
 EOF
     },
     {
-        'date' => "19-May-2005",
+        'date' => DateTime->new( year => 2005, month =>  5, day => 19 ),
         'body' => <<"EOF",
 <p class="newsitem">
 The full but incomplete text of <a href="humour/human-hacking/"><i>The Human
@@ -49,7 +49,7 @@ Hacking Field Guide</i></a> is now available online for your reading pleasure.
 EOF
     },
     {
-        'date' => "22-May-2005",
+        'date' => DateTime->new( year => 2005, month =>  5, day => 22 ),
         'body' => <<"EOF",
 <p class="newsitem">
 I now have <a href="./me/personal-ad.html">a personal ad</a>. I’m
@@ -58,7 +58,7 @@ looking for a girlfriend who lives in Central Israel.
 EOF
     },
     {
-        'date' => "26-Jun-2005",
+        'date' => DateTime->new( year => 2005, month =>  6, day => 26 ),
         'body' => <<"EOF",
 <p class="newsitem">
 Several new additions were added to the site. The <a href="./art/">art
@@ -81,7 +81,7 @@ essay was expanded with two new chapters.
 EOF
     },
     {
-        'date' => "5-Oct-2005",
+        'date' => DateTime->new( year => 2005, month => 10, day =>  5 ),
         'body' => <<"EOF",
 <p class="newsitem">
 Added <a href="./philosophy/computers/when-c-is-best/">the “When C is the
@@ -102,7 +102,7 @@ cookies collection</a> and it now also contains a collection of quotes by
 EOF
     },
     {
-        'date' => "15-Oct-2005",
+        'date' => DateTime->new( year => 2005, month => 10, day => 15 ),
         'body' => <<"EOF",
 <p class="newsitem">
 The past few days have seen the move to a new hosting provider with much
@@ -184,9 +184,10 @@ text.
     $filename =~ /^(\d{4})-(\d{2})-(\d{2})\.html$/;
     my ($y, $m, $d) = ($1, $2, $3);
     my $date = DateTime->new(year => $y, month => $m, day => $d);
+    # (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
     return
         +{
-            'date' => (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
+            'date' => $date,
             'body' => $text,
             'title' => $title,
         };
@@ -235,13 +236,21 @@ sub _wmlize
     return $s;
 }
 
+sub _format_date_human
+{
+    my ($self, $date) = @_;
+
+    return (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year());
+}
+
 sub get_item_html
 {
     my $self = shift;
     my $item = shift;
 
     my $title = $item->{title};
-    return qq{<div class="news_item"><h3 class="newsitem">} . $item->{'date'}
+    return qq{<div class="news_item"><h3 class="newsitem">}
+        . $self->_format_date_human($item->{'date'})
         . (defined($title) ? ": $title" : "")
         . "</h3>\n\n"
         . _wmlize($item->{'body'})

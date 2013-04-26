@@ -869,8 +869,6 @@ GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fo
 T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
 VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
-CSS_GEN_SCRIPT = bin/gen-css.pl
-
 css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
 SASS_STYLE = compressed

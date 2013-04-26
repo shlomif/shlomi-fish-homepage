@@ -248,9 +248,13 @@ sub get_item_html
     my $self = shift;
     my $item = shift;
 
+    my $date = $item->{date};
     my $title = $item->{title};
-    return qq{<div class="news_item"><h3 class="newsitem">}
-        . $self->_format_date_human($item->{'date'})
+
+    return q{<div class="news_item"><h3 class="newsitem" id="}
+        . $date->strftime(q{shlomifish.org_news_%Y_%m_%d})
+        . q{">}
+        . $self->_format_date_human($date)
         . (defined($title) ? ": $title" : "")
         . "</h3>\n\n"
         . _wmlize($item->{'body'})

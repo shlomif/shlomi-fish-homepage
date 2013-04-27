@@ -1,4 +1,6 @@
-#include '../template.wml'
+#include "prelude.wml"
+#include "driver.wml"
+
 #include "stories/blurbs.wml"
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
@@ -30,4 +32,35 @@ data="http://www.youtube.com/v/xvjBojyWPoE?color2=FBE9EC&amp;version=3">
 <div style="font-size: 0.8em"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></div>
 
 <humanity_licensing />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<define-tag video_tag_experiment__CANCELLING>
+<page_extra_head_elements>
+<link href="$(ROOT)/js/video-js/video-js.min.css" rel="stylesheet" />
+<script src="$(ROOT)/js/video-js/video.min.js" type="text/javascript"></script>
+<script src="$(ROOT)/js/video-js/vjs.youtube.js" type="text/javascript"></script>
+</page_extra_head_elements>
+
+<h2 id="video_tag_test">Test</h2>
+
+<video id="vid1" class="video-js vjs-default-skin" controls="controls" preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/v/Y8IeBG_SSt4" }'></video>
+
+</define-tag>
 

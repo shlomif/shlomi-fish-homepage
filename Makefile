@@ -473,7 +473,7 @@ $(T2_DEST)/philosophy/computers/high-quality-software/rev2/index.html : $(DOCBOO
 $(T2_DEST)/philosophy/computers/high-quality-software/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality.html
 
 PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
-PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2003.xhtml
+PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
 PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
 

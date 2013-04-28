@@ -51,10 +51,17 @@ for various tasks.
 
 <h3 id="fiction_examples">Fiction-Text Examples</h3>
 
-<define-tag url_to_data_examples whitespace="delete">
+<define-tag __OLD__url_to_data_examples whitespace="delete">
 <preserve base />
 <set-var %attributes />
 https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text/
+<restore base />
+</define-tag>
+
+<define-tag url_to_data_examples whitespace="delete">
+<preserve base />
+<set-var %attributes />
+https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text
 <restore base />
 </define-tag>
 

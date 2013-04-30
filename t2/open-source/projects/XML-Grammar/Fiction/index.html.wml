@@ -347,24 +347,10 @@ Then after converting it to XML and then to XHTML we get this:
 use strict;
 use warnings;
 
-sub _xml_fiction_slurp
-{
-    my $filename = shift;
+use IO::All;
 
-    open my $in, "<", $filename
-        or die "Cannot open '$filename' for slurping - $!";
-
-    binmode $in, ":utf8";
-
-    local $/;
-    my $contents = <$in>;
-
-    close($in);
-
-    return $contents;
-};
 binmode STDOUT, ":utf8";
-my $text = _xml_fiction_slurp("../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml");
+my $text = io->file("../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml")->utf8->slurp;
 
 $text =~ s{\bindex\b}{fiction_text_index}g;
 
@@ -392,7 +378,7 @@ Then after converting it to XML and then to XHTML we get this:
 use strict;
 use warnings;
 
-my $text = _xml_fiction_slurp("../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html");
+my $text = io->file("../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html")->utf8->slurp;
 
 $text =~ s{\bindex\b}{screenplay_text_index}g;
 

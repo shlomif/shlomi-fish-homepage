@@ -9,6 +9,7 @@ use MyNavData;
 use HTML::Widgets::NavMenu::JQueryTreeView;
 
 use CGI qw();
+use URI::Escape qw(uri_escape);
 use MyNavLinks;
 
 use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
@@ -100,6 +101,29 @@ sub render_html_head_nav_links
     }
 
     return;
+}
+
+sub calc_page_url
+{
+    my ($class) = @_;
+
+    return MyNavData::get_hosts()->{
+        $::nav_bar->current_host()
+    }->{'base_url'} . $::nav_bar->path_info();
+}
+
+sub calc_esc_page_url
+{
+    my ($class) = @_;
+
+    return CGI::escapeHTML(uri_escape( $class->calc_page_url() ));
+}
+
+sub print_page_url
+{
+    my ($class) = @_;
+
+    print $class->calc_esc_page_url;
 }
 
 1;

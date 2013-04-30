@@ -27,8 +27,8 @@ sub get_hosts
 }
 
 my @personal_expand = (expand => { bool => 1, capt => 0,},);
-my @humour_expand = (re => q{^(?:humour/|(?:humour|wysiwyt|wonderous).html)});
-my @humour_aphorisms_expand = (re => q{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour).html)});
+my @humour_expand = (re => q{^(?:humour/|(?:(?:humour|wysiwyt|wonderous).html$))});
+my @humour_aphorisms_expand = (re => q{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour\.html$))});
 
 my %reduced_sub_trees =
 (
@@ -158,7 +158,7 @@ my %reduced_sub_trees =
     {
         text => "Puzzles",
         url => "puzzles/",
-        expand => { re => q{^(?:MathVentures/|puzzles/|toggle\.html)}, },
+        expand => { re => q{^(?:MathVentures/|puzzles/|(?:toggle\.html$))}, },
         title => "Puzzles, Riddles and Brain-teasers",
         subs =>
         [
@@ -234,7 +234,7 @@ my %reduced_sub_trees =
                 text => "Resources Pages",
                 title => "Various Software Resources Pages",
                 url => "open-source/resources/",
-                expand => { re => "^open-source/(?:resources/|favourite|interviews/|portability-libs/)", },
+                expand => { re => "^open-source/(?:resources/|favourite/|interviews/|portability-libs/)", },
                 subs =>
                 [
                     {
@@ -349,7 +349,7 @@ my %reduced_sub_trees =
                 text => "Computing",
                 url => "philosophy/computers/",
                 title => "Computing-related Essays and Articles",
-                expand => { re => "^(?:philosophy/computers/|prog-evolution)", },
+                expand => { re => "^(?:philosophy/computers|prog-evolution)/", },
                 subs =>
                 [
                     {

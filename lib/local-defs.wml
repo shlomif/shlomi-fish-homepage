@@ -112,6 +112,9 @@ $shlomif_nav_links_renderer = $results->{nav_links_renderer};
 
 }:>
 <:{
+    use strict;
+    use warnings;
+
     my $with_accesskey = "<get-var with_accesskey />";
     my @params;
     if ($with_accesskey ne "")

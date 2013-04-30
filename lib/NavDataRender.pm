@@ -3,11 +3,15 @@ package NavDataRender;
 use strict;
 use warnings;
 
+use utf8;
+
 use MyNavData;
 use HTML::Widgets::NavMenu::JQueryTreeView;
 
 use CGI qw();
 use MyNavLinks;
+
+use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 
 sub nav_data_render
 {
@@ -46,6 +50,31 @@ sub nav_data_render
         nav_links_renderer => $shlomif_nav_links_renderer,
         shlomif_main_expanded_nav_bar => $shlomif_main_expanded_nav_bar,
     };
+}
+
+sub render_breadcrumbs_trail_unconditionally
+{
+    my ($class, $args) = @_;
+
+    my $total_leading_path = $args->{total_leading_path};
+
+    my $render_leading_path_component = sub {
+        my $component = shift;
+        my $title = $component->title();
+        my $title_attr = defined($title) ? " title=\"$title\"" : "";
+        return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+            "\"$title_attr>" .
+            $component->label() . "</a>";
+    };
+    {
+        _wrap_as_utf8( sub {
+            print join(" → ",
+                (map
+                 { $render_leading_path_component->($_) }
+                 @$total_leading_path
+                ));
+        });
+    }
 }
 
 1;

@@ -347,14 +347,14 @@ Then after converting it to XML and then to XHTML we get this:
 use strict;
 use warnings;
 
-use IO::All;
+use Shlomif::XmlFictionSlurp;
 
-binmode STDOUT, ":utf8";
-my $text = io->file("../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml")->utf8->slurp;
-
-$text =~ s{\bindex\b}{fiction_text_index}g;
-
-print $text;
+Shlomif::XmlFictionSlurp->my_slurp(
+    +{
+        fn => '../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
+        index_id => 'fiction_text_index',
+    }
+);
 }:>
 
 </div>
@@ -378,11 +378,14 @@ Then after converting it to XML and then to XHTML we get this:
 use strict;
 use warnings;
 
-my $text = io->file("../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html")->utf8->slurp;
+Shlomif::XmlFictionSlurp->my_slurp(
+    {
+    fn =>'../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html',
+    index_id => 'screenplay_text_index',
 
-$text =~ s{\bindex\b}{screenplay_text_index}g;
+    }
+);
 
-print $text;
 }:>
 
 <h2 id="similar">Similar Projects</h2>

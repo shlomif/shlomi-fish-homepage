@@ -9,18 +9,7 @@
 <set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
 <:{
-    use utf8;
-
-    sub _wrap_as_utf8 {
-        my ($cb) = @_;
-
-        binmode STDOUT, ":utf8";
-
-        $cb->();
-
-        binmode STDOUT, ":raw";
-    }
-
+    use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 }:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{

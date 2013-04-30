@@ -60,6 +60,11 @@ my $meta_tree_contents =
             text => "About our Hosting Provider",
             url => "meta/hosting/",
         },
+        {
+            text => "Old Site Snapshots (Nostalgia)",
+            url => "meta/old-site-snapshots/",
+            title => "The site as it looked like many years ago.",
+        },
     ],
 };
 

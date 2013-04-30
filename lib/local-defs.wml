@@ -13,32 +13,19 @@
 }:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{
-    use utf8;
-
     init_section_nav_menu();
-    my $total_leading_path = $section_nav_menu->total_leading_path(
+    use NavDataRender;
+
+    NavDataRender->render_breadcrumbs_trail_unconditionally(
         {
-            main_leading_path => $leading_path,
+            total_leading_path =>
+            $section_nav_menu->total_leading_path(
+                {
+                    main_leading_path => $leading_path,
+                }
+            ),
         }
     );
-
-    my $render_leading_path_component = sub {
-        my $component = shift;
-        my $title = $component->title();
-        my $title_attr = defined($title) ? " title=\"$title\"" : "";
-        return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
-            "\"$title_attr>" .
-            $component->label() . "</a>";
-    };
-    {
-        _wrap_as_utf8( sub {
-            print join(" → ",
-                (map
-                 { $render_leading_path_component->($_) }
-                 @$total_leading_path
-                ));
-        });
-    }
 }:>
 </define-tag>
 

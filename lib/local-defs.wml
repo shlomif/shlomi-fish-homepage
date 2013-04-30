@@ -13,8 +13,14 @@
 }:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{
-    init_section_nav_menu();
+    use strict;
+    use warnings;
+
     use NavDataRender;
+
+    init_section_nav_menu();
+
+    use vars qw($section_nav_menu);
 
     NavDataRender->render_breadcrumbs_trail_unconditionally(
         {
@@ -44,16 +50,12 @@
 
 <define-tag latemp_get_html_head_nav_links>
 <:{
-my @keys = (sort { $a cmp $b } keys(%$nav_links_obj));
-foreach my $key (@keys)
-{
-    my $val = $nav_links_obj->{$key};
-    my $url = CGI::escapeHTML($val->direct_url());
-    my $title = $val->title();
-    _wrap_as_utf8( sub {
-        print "<link rel=\"$key\" href=\"$url\" title=\"$title\" />\n";
-    });
-}
+    use strict;
+    use warnings;
+
+    NavDataRender->render_html_head_nav_links(
+        { nav_links_obj => $nav_links_obj}
+    );
 }:>
 </define-tag>
 

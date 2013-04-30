@@ -412,6 +412,8 @@ of an EvilPHish”</a> cartoon of
 
 <section_nav_menu_elements>
 <set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
+<set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
+
 <:{
     use strict;
     use warnings;
@@ -420,7 +422,7 @@ of an EvilPHish”</a> cartoon of
 
     sub get_page_path
     {
-        my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />";
+        my $filename = "<get-var filename />";
         $filename =~ s{index\.html$}{};
 
         return $filename;

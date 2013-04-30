@@ -39,6 +39,8 @@ use utf8;
 use Carp;
 use Data::Dumper;
 
+use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+
 sub _init_fortune
 {
     my $rec = shift;
@@ -168,6 +170,43 @@ sub sorted_fortunes
 sub nav_data
 {
     return [ map { $_->nav_record() } @{sorted_fortunes()} ] ;
+}
+
+sub print_single_fortune_record_toc_entry
+{
+    my ($class, $r) = @_;
+
+    my $id = $r->id;
+    my $desc = $r->desc;
+
+    _wrap_as_utf8(
+        sub
+        {
+            print <<"EOF";
+<li>
+<p>
+<a href="$id.html"><b>$id</b></a>
+(<a href="$id.xml">XML</a>, <a href="$id">Plaintext</a>) -
+$desc
+</p>
+</li>
+EOF
+        },
+    );
+
+    return;
+}
+
+sub print_fortune_records_toc
+{
+    my ($class) = @_;
+
+    foreach my $r (@{$class->get_fortune_records()})
+    {
+        $class->print_single_fortune_record_toc_entry($r);
+    }
+
+    return;
 }
 
 1;

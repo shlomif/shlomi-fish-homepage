@@ -395,7 +395,7 @@ my %reduced_sub_trees =
     },
     'Meta' =>
     {
-        expand_re => "^meta/",
+        expand => { re => "^meta/", },
         url => "meta/",
         text => "Meta Info",
         title => "Information about this Site",
@@ -489,7 +489,7 @@ sub generic_get_params
                         text => "Bio",
                         url => "personal.html",
                         title => "A Short Biography of Myself",
-                        expand => { re => "^(?:me|personal/)", },
+                        expand => { re => "^(?:me/|personal/)", },
                         subs =>
                         [
                             {

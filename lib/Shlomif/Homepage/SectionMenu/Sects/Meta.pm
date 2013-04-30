@@ -13,6 +13,8 @@ my $meta_tree_contents =
     text => "Site Meta Information Section Menu",
     title => "Site Meta Information Section Menu",
     show_always => 1,
+    expand => { re => "^meta/",},
+    url => "meta/",
     subs =>
     [
         {

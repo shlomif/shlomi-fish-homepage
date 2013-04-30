@@ -7,8 +7,11 @@ use HTML::Widgets::NavMenu;
 use CGI qw();
 use MyNavLinks;
 
+binmode STDOUT, ':encoding(utf8)';
 # my $my_THE_filename = "puzzles/situation/book-under-rock.html";
-my $my_THE_filename = "humour/bits/facts/Buffy/index.html";
+# my $my_THE_filename = "humour/bits/facts/Buffy/index.html";
+my $my_THE_filename = "meta/old-site-snapshots/";
+
 {
 my $filename = $my_THE_filename;
 $filename =~ s{index\.html$}{};

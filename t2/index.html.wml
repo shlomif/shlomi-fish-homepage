@@ -244,14 +244,11 @@ open source, web culture, Internet freedom, etc. from the author of
 <h2 id="news">News</h2>
 
 <:{
-use Shlomif::Homepage::News;
+use strict;
+use warnings;
 
-_wrap_as_utf8(
-    sub {
-    my $news = Shlomif::Homepage::News->new();
-    print $news->render_front_page();
-    }
-);
+use Shlomif::Homepage::News;
+Shlomif::Homepage::News->print_front_page();
 
 }:>
 

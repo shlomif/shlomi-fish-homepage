@@ -10,6 +10,8 @@ use base 'Class::Accessor';
 
 use DateTime;
 
+use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+
 __PACKAGE__->mk_accessors(qw(
     dir
     items
@@ -281,6 +283,34 @@ sub render_old
     my $self = shift;
     my @items = @{$self->items()};
     return $self->render_items([reverse(@items[0 .. (@items - $self->num_on_front())])]);
+}
+
+sub _printy
+{
+    my ($class, $meth) = @_;
+
+    _wrap_as_utf8(
+        sub {
+            my $news = $class->new();
+            print $news->$meth();
+        },
+    );
+
+    return;
+}
+
+sub print_front_page
+{
+    my ($class) = @_;
+
+    return $class->_printy('render_front_page');
+}
+
+sub print_old_news
+{
+    my ($class) = @_;
+
+    return $class->_printy('render_old');
 }
 
 1;

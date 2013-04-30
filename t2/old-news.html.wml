@@ -5,13 +5,12 @@
 <latemp_meta_desc "Shlomi Fish’s Homepage Old News Items" />
 
 <:{
+use strict;
+use warnings;
+
 use Shlomif::Homepage::News;
 
-_wrap_as_utf8( sub {
-my $news = Shlomif::Homepage::News->new();
-print $news->render_old();
-    }
-);
+Shlomif::Homepage::News->print_old_news();
 }:>
 
 

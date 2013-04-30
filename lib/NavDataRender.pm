@@ -75,6 +75,31 @@ sub render_breadcrumbs_trail_unconditionally
                 ));
         });
     }
+
+    return;
+}
+
+sub render_html_head_nav_links
+{
+    my ($class, $args) = @_;
+
+    my $nav_links_obj= $args->{nav_links_obj};
+
+    my @keys = (sort { $a cmp $b } keys(%$nav_links_obj));
+    foreach my $key (@keys)
+    {
+        my $val = $nav_links_obj->{$key};
+        my $url = CGI::escapeHTML($val->direct_url());
+        my $title = $val->title() || '';
+
+        _wrap_as_utf8(
+            sub {
+                print qq{<link rel="$key" href="$url" title="$title" />\n};
+            }
+        );
+    }
+
+    return;
 }
 
 1;

@@ -10,7 +10,8 @@ render()
     -I $HOME/conf/wml/Latemp/lib \
     -I $HOME/apps/wml \
     "$filename"
-    ) > printable/"$filename"
+    ) | grep -vP '^<\?xml ver' \
+        > printable/"$filename"
 }
 render "SFresume_detailed.html"
 render "SFresume.html"

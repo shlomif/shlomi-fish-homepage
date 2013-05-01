@@ -782,11 +782,12 @@ ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
 THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
+PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
 OPTIPNG = optipng -o7
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png=$@ $<
@@ -798,6 +799,10 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 
 $(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
 	inkscape --export-width=200 --export-png="$@" --export-id="main_text" --export-id-only $<
+	$(OPTIPNG) $@
+
+$(PRINTER_ICON_PNG): common/images/printer_icon.svg
+	inkscape --export-width=30 --export-png="$@" $<
 	$(OPTIPNG) $@
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png

@@ -540,6 +540,8 @@ shlomif_load_nav("<: print get_page_path(); :>");
 </script>
 <if "<should_display_disqus />" "<disqus_thread />" />
 <share_this_button />
+<div id="prnt_ver"></div>
+<script type="text/javascript" src="$(ROOT)/js/print-ver.js"></script>
 # <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />

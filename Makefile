@@ -783,11 +783,12 @@ ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
 THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
+TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png
 HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
 OPTIPNG = optipng -o7
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png=$@ $<
@@ -802,6 +803,10 @@ $(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Log
 	$(OPTIPNG) $@
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
+	inkscape --export-width=30 --export-png="$@" $<
+	$(OPTIPNG) $@
+
+$(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	inkscape --export-width=30 --export-png="$@" $<
 	$(OPTIPNG) $@
 

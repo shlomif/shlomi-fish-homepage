@@ -36,8 +36,8 @@ binmode ($back_fh, ":utf8");
 print {$back_fh} $contents;
 close($back_fh);
 
-$contents =~ s{\A(.*?)<body>}{}ms;
-$contents =~ s{</body>(.*?)\z}{}ms;
+$contents =~ s{\A(?:.*?)<body>}{}ms;
+$contents =~ s{</body>(?:.*?)\z}{}ms;
 
 $contents =~ s{<h3( id="[^>]+>[^<]+)</h3>}{<fortune_h3$1</fortune_h3>}g;
 

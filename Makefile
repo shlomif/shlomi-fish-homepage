@@ -29,7 +29,9 @@ make-dirs: $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
-T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/all-in-one.html.wml
+FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
+T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE).wml
+T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 
 include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
@@ -55,7 +57,7 @@ ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.h
 
 htaccesses_target: $(ALL_HTACCESSES)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(T2_FORTUNES_ALL_WML)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(T2_FORTUNES_ALL__HTML)
 
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
@@ -617,7 +619,7 @@ $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(
 
 $(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
 
-$(T2_FORTUNES_ALL_WML): $(patsubst $(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input,$(FORTUNES_WMLS_HTMLS))
+$(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL_WML) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS)
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \

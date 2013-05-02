@@ -5,6 +5,11 @@
     font-family: Arial,Sans-Serif
     font-size: 16px
 
+=rounded_corners($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    border-radius: $radius
+
 \:link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover
     background-color: #90EE90
     /* LightGreen
@@ -105,7 +110,7 @@ div.bordered
         width: 100%
         clear: both
 
-/* Workaround to get the <hr /> element at the bottom to properly display 
+/* Workaround to get the <hr /> element at the bottom to properly display
  * with Konqueror 3.3.x
 
 .banner
@@ -160,15 +165,11 @@ div.bordered
 
 .toggle_sect_menu
     padding: 0.2em 0.5em
-    -moz-border-radius: 5px
-    -webkit-border-radius: 5px
-    border-radius: 5px
+    +rounded_corners(5px)
     border: 2pt solid black
     &:hover
         padding: 0.2em 0.5em
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        border-radius: 5px
+        +rounded_corners(5px)
         border: 2pt solid black
 
 button.toggle_sect_menu
@@ -511,9 +512,7 @@ table.visible
     margin-bottom: 2em
     margin-right: 2em
     margin-left: 2em
-    -moz-border-radius: 5px
-    -webkit-border-radius: 5px
-    border-radius: 5px
+    +rounded_corners(5px)
     &:hover
         border-color: grey
 
@@ -565,6 +564,12 @@ table.visible
 .selina.abstract
     // For the die to be displayed in place.
     margin-bottom: 50px
+
+div.towtf.abstract
+    border: 2pt solid darkgreen
+    padding: 1em
+    margin-bottom: 2em
+    +rounded_corners(10px)
 
 .hebrew
     .story_logo

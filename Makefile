@@ -259,17 +259,20 @@ $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/h
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 	cp -f $< $@
 
+SCREENPLAY_DOCS_ADDITIONS = \
+	ae-interview \
+	sussman-interview \
+	humanity-excerpt-for-X-G-Screenplay-demo \
+
 SCREENPLAY_DOCS = \
-    Blue-Rabbit-Log-Part-1 \
+	$(SCREENPLAY_DOCS_ADDITIONS) \
+	Blue-Rabbit-Log-Part-1 \
 	Humanity-Movie \
 	Humanity-Movie-hebrew \
-	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
-	humanity-excerpt-for-X-G-Screenplay-demo \
 	Star-Trek--We-the-Living-Dead \
 	Summerschool-at-the-NSA \
 	selina-mandrake-the-slayer \
-	sussman-interview \
 	TOW_Fountainhead_1  \
 	TOW_Fountainhead_2
 

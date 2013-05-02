@@ -2,5 +2,7 @@
 " "f is the fortune buffer
 " h is the Hebrew mark.
 " a is the common mark.
-map <F3> 'e/<li><CR>Vap:s!<\(/\?\)li>!<\1item_en>!g<CR>gv"fd'a"fp}o<ESC>ma
-map <F4> <F3>'h/<li><CR>Vap:s!<\(/\?\)li>!<\1item_he>!g<CR>gv"fd'a"fp}o<ESC>ma
+"
+map <S-F3> 'e/<li><CR>Vap:!perl lib/factoids-refactoring.pl en<CR>gv"fd'a"fp}o<ESC>ma
+map <F3> mp<S-F3>`p
+map <F4> mp<S-F3>'h/<li><CR>Vap:!perl lib/factoids-refactoring.pl he<CR>gv"fd'a"fp}o<ESC>ma`p

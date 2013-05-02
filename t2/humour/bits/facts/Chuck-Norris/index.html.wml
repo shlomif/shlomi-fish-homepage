@@ -532,20 +532,52 @@ a very not newbie-like manner.
 </item_he>
 
 
-### End Place here.
-
 <en>
-
 <li>
-Only perl and Chuck Norris can parse Perl.<br />
+<p>
+Only perl and Chuck Norris can parse Perl.
+</p>
 <ul>
-
-<li>
+<lip>
 <tt>/usr/bin/perl</tt> consults Chuck Norris about how to parse Perl. (<a href="http://nadavvin.com/"><b>Nadav Vinik</b></a>).
-</li>
-
+</lip>
 </ul>
 </li>
+
+<he>
+<li>
+<p>
+רק פרל וצ'אק נוריס יכולים לנתח את פרל.
+</p>
+<ul>
+<lip>
+המפרש של פרל מתייעץ עם צ'אק נוריס על כיצד לפרש אותה.
+(<a href="http://nadavvin.com/"><b>נדב ויניק</b></a>).
+</lip>
+</ul>
+</li>
+</he>
+
+### End Place here.
+
+
+
+
+
+
+<define-tag non_trans_en endtag="required">
+<en>%body</en>
+</define-tag>
+
+
+<define-tag non_trans_he endtag="required">
+<he>%body</he>
+</define-tag>
+
+<non_trans_en>
+
+</en>
+
 
 <li>
 All Chuck Norris has to do is <b>look</b> at Perl code and it interprets itself
@@ -681,22 +713,9 @@ Chuck Norris is <a href="http://en.wikipedia.org/wiki/Vito_Corleone">Vito
 Corleone</a>’s godfather. (<b>ZadYree</b>)
 </li>
 
-</en>
+</non_trans_en>
 
-<he>
-
-<li>
-רק פרל וצ'אק נוריס יכולים לנתח את פרל.<br />
-<ul>
-
-<li>
-המפרש של פרל מתייעץ עם צ'אק נוריס על כיצד לפרש אותה.
-(<a href="http://nadavvin.com/"><b>נדב ויניק</b></a>).
-</li>
-
-</ul>
-
-</li>
+<non_trans_he>
 
 <li>
 כל מה שצ'אק נוריס צריך לעשות זה
@@ -794,7 +813,7 @@ A הוא A ו-A אינו לא-A — אלא אם צ'אק נוריס קובע אח
 מלאך המוות לא עומד בקצב של ההריגות של צ'אק נוריס.
 </li>
 
-</he>
+</non_trans_he>
 
 <h2 id="facts">Chuck Norris Facts</h2>
 

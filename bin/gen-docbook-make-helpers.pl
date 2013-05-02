@@ -310,6 +310,7 @@ my @end_formats =
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
 my @screenplay_git_checkouts;
+my @screenplay_docs_basenames;
 
 sub _calc_screenplay_doc_makefile_lines
 {
@@ -334,6 +335,8 @@ sub _calc_screenplay_doc_makefile_lines
     {
         my $doc_base = $doc->{base};
         my $suf = $doc->{suffix};
+
+        push @screenplay_docs_basenames, $doc_base;
 
         my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
         my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
@@ -414,10 +417,19 @@ sub _calc_screenplay_doc_makefile_lines
         },
     ];
 
-    io->file("lib/make/docbook/sf-screenplays.mak")->print(
-        map { @{ _calc_screenplay_doc_makefile_lines($_) } }
-        @$screenplays_data,
-    );
+    {
+        my @o =
+        (
+            map { @{ _calc_screenplay_doc_makefile_lines($_) } }
+            @$screenplays_data,
+        );
+        io->file("lib/make/docbook/sf-screenplays.mak")->print(
+            @o,
+            "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
+            (map { "\t$_ \\\n" } @screenplay_docs_basenames),
+            "\n\n"
+        );
+    }
 
     foreach my $github_repo (@screenplay_git_checkouts)
     {

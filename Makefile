@@ -264,17 +264,7 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	sussman-interview \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 
-SCREENPLAY_DOCS = \
-	$(SCREENPLAY_DOCS_ADDITIONS) \
-	Blue-Rabbit-Log-Part-1 \
-	Humanity-Movie \
-	Humanity-Movie-hebrew \
-	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
-	Star-Trek--We-the-Living-Dead \
-	Summerschool-at-the-NSA \
-	selina-mandrake-the-slayer \
-	TOW_Fountainhead_1  \
-	TOW_Fountainhead_2
+SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
 
 FICTION_DOCS = \
     fiction-text-example-for-X-G-Fiction-demo \

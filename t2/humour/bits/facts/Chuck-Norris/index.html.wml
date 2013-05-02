@@ -5,25 +5,45 @@
 <latemp_subject "Chuck Norris Facts" />
 <latemp_meta_desc "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris." />
 
+<define-tag en endtag="required">
+{#EN#:%body:##}
+</define-tag>
+
+<define-tag he endtag="required">
+{#HE#:%body:##}
+</define-tag>
+
+<define-tag both endtag="required">
+<en>%body</en><he>%body</he>
+</define-tag>
+
+<define-tag item_en endtag="required">
+<en>
+<li>
+<p>
+%body
+</p>
+</li>
+</en>
+</define-tag>
+
+<define-tag item_he endtag="required">
+<he>
+<li>
+<p>
+%body
+</p>
+</li>
+</he>
+</define-tag>
+
 <p>
 These are additions to <a href="http://www.chucknorrisfacts.com/">the
 Chuck Norris facts</a> by my Internet friends and by me. Most of them are kinda
 geeky (or even computer geeky), but some are more generic.
 </p>
 
-<h2 id="facts">Chuck Norris Facts</h2>
-
-<div class="tabs">
-
-<ul>
-<li><a href="#chuck_facts_en">English</a></li>
-<li><a href="#chuck_facts_he">Hebrew (עברית)</a></li>
-</ul>
-
-<div id="chuck_facts_en">
-
-<ul>
-
+<en>
 <li>
 Chuck Norris wrote a complete Perl 6 implementation in a day, but then destroyed
 all evidence with his bare hands, so no-one will know his secrets.
@@ -370,13 +390,9 @@ Chuck Norris is <a href="http://en.wikipedia.org/wiki/Vito_Corleone">Vito
 Corleone</a>’s godfather. (<b>ZadYree</b>)
 </li>
 
-</ul>
+</en>
 
-</div>
-
-<div id="chuck_facts_he" class="hebrew">
-
-<ul>
+<he>
 
 <li>
 צ'אק נוריס כתב מימוש מלא של פרל 6 ביום, אבל אז השמיד כל זכר לכך בידיו הריקות,
@@ -660,7 +676,31 @@ A הוא A ו-A אינו לא-A — אלא אם צ'אק נוריס קובע אח
 מלאך המוות לא עומד בקצב של ההריגות של צ'אק נוריס.
 </li>
 
+</he>
+
+<h2 id="facts">Chuck Norris Facts</h2>
+
+<div class="tabs">
+
+<ul>
+<li><a href="#chuck_facts_en">English</a></li>
+<li><a href="#chuck_facts_he">Hebrew (עברית)</a></li>
 </ul>
+
+<div id="chuck_facts_en">
+
+<ul>
+{#EN#}
+</ul>
+
+</div>
+
+<div id="chuck_facts_he" class="hebrew">
+
+<ul>
+{#HE#}
+</ul>
+
 </div>
 
 </div> ;;; end of .tabs

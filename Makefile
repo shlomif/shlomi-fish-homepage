@@ -596,6 +596,7 @@ FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
+FORTUNES_WMLS_HTMLS = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 FORTUNES_TEXTS = $(patsubst %.xml,%,$(FORTUNES_XMLS_SRC))
 FORTUNES_ATOM_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.atom
 FORTUNES_RSS_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.rss
@@ -609,8 +610,11 @@ FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
 
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
-	perl $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@ && \
-	touch $(patsubst %.xml,%.html.wml,$<)
+	perl $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
+
+$(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
+
+$(T2_FORTUNES_ALL_WML): $(patsubst $(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input,$(FORTUNES_WMLS_HTMLS))
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \

@@ -197,6 +197,25 @@ EOF
     return;
 }
 
+sub print_single_fortune_record_all_in_one_page_entry
+{
+    my ($class, $r) = @_;
+
+    my $id = $r->id;
+    my $desc = $r->desc;
+    my $text = $r->text;
+    my $title = $r->title;
+
+    print <<"EOF";
+<h2 id="$id">$title</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/$id.xhtml-for-input"
+</div>
+EOF
+
+    return;
+}
+
 sub print_fortune_records_toc
 {
     my ($class) = @_;
@@ -204,6 +223,29 @@ sub print_fortune_records_toc
     foreach my $r (@{$class->get_fortune_records()})
     {
         $class->print_single_fortune_record_toc_entry($r);
+    }
+
+    return;
+}
+
+sub print_fortune_all_in_one_page
+{
+    my ($class) = @_;
+
+    print <<"EOF";
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "Shlomi Fish Fortunes Collections - All in One Page" />
+<latemp_meta_desc "Shlomi Fish Fortunes Collections - All in One Page" />
+
+<toc_div head_tag="h2" />
+
+EOF
+
+    foreach my $r (@{$class->get_fortune_records()})
+    {
+        $class->print_single_fortune_record_all_in_one_page_entry($r);
     }
 
     return;

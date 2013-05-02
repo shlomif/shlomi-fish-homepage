@@ -29,6 +29,7 @@ make-dirs: $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
+T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/all-in-one.html.wml
 
 include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
@@ -54,13 +55,16 @@ ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.h
 
 htaccesses_target: $(ALL_HTACCESSES)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(T2_FORTUNES_ALL_WML)
 
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
 
 $(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(T2_SRC_DIR)/%/my_htaccess.conf
 	cp -f $< $@
+
+$(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
+	perl -Ilib $< > $@
 
 # t2 macros
 

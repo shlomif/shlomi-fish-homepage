@@ -264,15 +264,20 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	sussman-interview \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 
+
 SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
 
+FICTION_DOCS_ADDITIONS = \
+	fiction-text-example-for-X-G-Fiction-demo \
+	The-Enemy-Hebrew-rev6 \
+	The-Enemy-Hebrew-v7 \
+
+
 FICTION_DOCS = \
-    fiction-text-example-for-X-G-Fiction-demo \
+	$(FICTION_DOCS_ADDITIONS) \
 	human-hacking-field-guide-v2--hebrew \
 	The-Earth-Angel-hebrew \
 	The-Earth-Angel-english \
-	The-Enemy-Hebrew-rev6 \
-	The-Enemy-Hebrew-v7 \
 	The-Pope-Died-on-Sunday-hebrew \
 	The-Pope-Died-on-Sunday-english \
 

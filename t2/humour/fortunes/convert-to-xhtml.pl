@@ -41,6 +41,7 @@ $contents =~ s{</body>(?:.*?)\z}{}ms;
 
 $contents =~ s{<h3( id="[^>]+>[^<]+)</h3>}{<fortune_h3$1</fortune_h3>}g;
 
+$contents =~ s/^(\s*)#/${1}\\#/gms;
 
 my $fn = "${abs_out_fn}-for-input";
 open my $xhtml_raw_out, ">", $fn

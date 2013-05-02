@@ -451,6 +451,8 @@ sub _calc_screenplay_doc_makefile_lines
 
 my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
 
+my @fiction_docs_basenames;
+
 sub _calc_fiction_story_makefile_lines
 {
     my ($d) = @_;
@@ -472,6 +474,7 @@ sub _calc_fiction_story_makefile_lines
         my $suf = $doc->{suf};
         my $type = $doc->{type};
 
+
         my $bsuf = "${b}_${suf}";
 
         my ($src_varname, $from_vcs_varname,
@@ -480,6 +483,8 @@ sub _calc_fiction_story_makefile_lines
 
         if ($type eq 'fiction-text')
         {
+            push @fiction_docs_basenames, $doc_base;
+
             $src_varname = "${bsuf}_FICTION_XML_SOURCE";
             $src_suffix = 'fiction-text.txt';
             $from_vcs_varname = "${bsuf}_FICTION_TXT_FROM_VCS";
@@ -503,6 +508,7 @@ sub _calc_fiction_story_makefile_lines
 
     return \@ret;
 }
+
 
 {
     my $fiction_data =
@@ -584,9 +590,20 @@ sub _calc_fiction_story_makefile_lines
         }
     }
 
+    my @o =
+    (
+        map { @{ _calc_fiction_story_makefile_lines($_) } }
+        @$fiction_data
+    );
+
     io->file("lib/make/docbook/sf-fictions.mak")->print(
         "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n",
-        map { @{ _calc_fiction_story_makefile_lines($_) } } @$fiction_data,
+        @o,
+        (
+            "\n\nFICTION_DOCS_FROM_GEN = \\\n",
+            (map { "\t$_ \\\n" } @fiction_docs_basenames),
+            "\n\n"
+        ),
     );
 }
 

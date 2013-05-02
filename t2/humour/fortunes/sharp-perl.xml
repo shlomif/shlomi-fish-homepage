@@ -6187,5 +6187,45 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-the-new-foobar">
+        <meta>
+            <title>The New Foobar</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="Su-Shee">maukf: GOD WHAT HAPPENED TO YOU? ARE YOU INJURED?</saying>
+<saying who="huf">he&#39;s become more.</saying>
+<saying who="claes_">leveld up</saying>
+<saying who="pink_mist">new and improved?</saying>
+<saying who="Altreus">pick one</saying>
+<saying who="Altreus">can&#39;t be both</saying>
+<saying who="Altreus">(false)</saying>
+<saying who="Su-Shee">well it seems he incremented. f comes after e. soon he will be maukg.</saying>
+<saying who="wagle">how do you split a string into a list of lists?  (different delimiters)..  trying this, but it doesnt work: map {split (&quot;|&quot;)} (split(&#39;\n&#39;,$output)))</saying>
+<saying who="maukf">there is no such thing as a list of lists</saying>
+<saying who="wagle">i feared that</saying>
+<saying who="DrForr">List of arrayrefs.</saying>
+<saying who="maukf">and your regexes are wrong</saying>
+<saying who="wagle">but thought perl5 was supposed to</saying>
+<saying who="Su-Shee">wagle: see DrForr</saying>
+<saying who="DrForr">wagle: perldoc perlreftut ; perldoc perldsc</saying>
+<saying who="wagle">ok, thanks</saying>
+<me_is who="DrForr">goes back to reading about dioxygen difluoride.</me_is>
+<saying who="east">eval: [ split /\n|\|/, &quot;foo|bar\nbaz&quot; ] # wagle ?</saying>
+<saying who="perlbot">east: [&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]</saying>
+<saying who="DrForr">eval: [map {[split &#39;a&#39;]} split &#39;b&#39;, &#39;malbajessicaalba&#39;]</saying>
+<saying who="perlbot">DrForr: [[&quot;m&quot;,&quot;l&quot;],[&quot;&quot;,&quot;jessic&quot;,&quot;&quot;,&quot;l&quot;],[]]</saying>
+<saying who="DrForr">wagle: ^^^ maybe.</saying>
+<saying who="east">.oO( JessicaAlba might be the new foobar )</saying>
+<saying who="Altreus">without her consent!</saying>
+<saying who="east">think she wouldn&#39;t like it?</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>Smokin’ hawt meta-syntactic variables</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

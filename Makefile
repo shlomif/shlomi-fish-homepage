@@ -273,13 +273,7 @@ FICTION_DOCS_ADDITIONS = \
 	The-Enemy-Hebrew-v7 \
 
 
-FICTION_DOCS = \
-	$(FICTION_DOCS_ADDITIONS) \
-	human-hacking-field-guide-v2--hebrew \
-	The-Earth-Angel-hebrew \
-	The-Earth-Angel-english \
-	The-Pope-Died-on-Sunday-hebrew \
-	The-Pope-Died-on-Sunday-english \
+FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
 
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)

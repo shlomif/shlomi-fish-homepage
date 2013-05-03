@@ -43,3 +43,41 @@
 <define-tag non_trans_he endtag="required">
 <he>%body</he>
 </define-tag>
+
+<define-tag en_he_tabs>
+
+<preserve  id_base />
+
+<set-var %attributes />
+
+<set-var en_id="<get-var id_base />_en" />
+<set-var he_id="<get-var id_base />_he" />
+
+<div class="tabs">
+
+<ul>
+<li><a href="#<get-var en_id />">English</a></li>
+<li><a href="#<get-var he_id />">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="<get-var en_id />">
+
+<ul>
+{#EN#}
+</ul>
+
+</div>
+
+<div id="<get-var he_id />" class="hebrew">
+
+<ul>
+{#HE#}
+</ul>
+
+</div>
+
+</div> ;;; end of .tabs
+
+<restore id_base />
+</define-tag>
+

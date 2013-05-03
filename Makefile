@@ -1003,22 +1003,24 @@ plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(T2_SRC_DIR)/%.pl
 	cp -f $< $@
 
+T2_DEST_IMAGES_DIR = $(T2_DEST)/images
+
 SVG_NAV_IMAGES = \
-	$(T2_DEST)/images/sect-arr-left-disabled.svg \
-	$(T2_DEST)/images/sect-arr-left-pressed.svg \
-	$(T2_DEST)/images/sect-arr-left.svg \
-	$(T2_DEST)/images/sect-arr-right-disabled.svg \
-	$(T2_DEST)/images/sect-arr-right-pressed.svg \
-	$(T2_DEST)/images/sect-arr-right.svg \
-	$(T2_DEST)/images/sect-arr-up-disabled.svg \
-	$(T2_DEST)/images/sect-arr-up-pressed.svg \
-	$(T2_DEST)/images/sect-arr-up.svg
+	$(T2_DEST_IMAGES_DIR)/sect-arr-left-disabled.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-left-pressed.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-left.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-right-disabled.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-right-pressed.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-right.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-up-disabled.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-up-pressed.svg \
+	$(T2_DEST_IMAGES_DIR)/sect-arr-up.svg
 
 
 svg_nav_images: $(SVG_NAV_IMAGES)
 
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
-	perl $<
+	perl $< $(T2_DEST_IMAGES_DIR)
 
 NAV_DATA_AS_JSON = $(T2_DEST)/_data/nav.json
 
@@ -1036,7 +1038,7 @@ $(JSMIN): lib/jsmin/jsmin.c
 	gcc -o $@ -O2 -Wall $<
 
 JQTREE_SRC = common/js/tree.jquery.js
-JQTREE_MIN_DEST = dest/t2-homepage/js/tree.jq.js
+JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js
 
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
 	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)

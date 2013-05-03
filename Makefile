@@ -72,7 +72,7 @@ $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 
 # t2 macros
 
-RSYNC = rsync --progress --verbose --rsh=ssh --exclude='*.d' --exclude='**/*.d'
+RSYNC = rsync --progress --verbose --rsh=ssh --exclude='*.d' --exclude='**/*.d' --exclude='**/.*.swp'
 
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 

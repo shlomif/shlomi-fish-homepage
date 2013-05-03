@@ -3,17 +3,12 @@
 CURRENT TASKS:
 
 LONG TERM:
-    - Fortunes - all on one page.
-      @ Added [Thu 2013-05-02]
-    - Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml from more
-      places.
     - Fortunes Atom Feed:
         * Make it validate
         * Syndicate it into the rest.
         * fix the formatting of the fortunes (especially IRC fortunes)
             * in Akregator.
-    - Add a test suite:
-        * Hebrew spelling.
+    - Check for Hebrew spelling in the Hebrew test suite:
     - Prepare a new Back to the Future Logo using GIMP or whatever - as a PNG
     with anti-aliasing/etc.
         * Thanks to moofy.
@@ -32,17 +27,13 @@ LONG TERM:
         * Added [Sat 2013-03-16]
 
 MINOR PROBLEMS:
-
     - individual presentations: add meaningful descriptions.
         * link to the new presentation in "Linux for the Technion student".
-
     - Add to the external FOSS contributions:
         * MikMod
         * Adopted CPAN Modules
         * Wikipedia and related sites.
-
     - Fix the URLs that are spelt "priviliges" instead of "privileges".
-
     - HHFG: add some links and references to resources.
         * For further enlightenment.
 
@@ -136,6 +127,12 @@ COMPLETED TASKS:
     - Convert the main navigation style to a [+] / [-] tree.
         * Thanks to moofy.
         @ DONE [Wed 2013-05-01]
+    - Fortunes - all on one page.
+        @ DONE [Fri 2013-05-03]
+      @ Added [Thu 2013-05-02]
+    - Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml
+        * From more places.
+        @ DONE [Fri 2013-05-03]
 
 
 # vim:ft=quicktask:sw=4:ts=4

@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "jqui_tabs.wml"
+#include "jqui_tabs_multi_lang.wml"
 #include "stories/facts.wml"
 
 <latemp_subject "Clarissa Darling Facts (from Clarissa Explains it All)" />
@@ -7,61 +7,44 @@
 
 <facts__clarissa />
 
-<h2 id="facts">Clarissa Darling Facts</h2>
-
-<div class="tabs">
-
-<ul>
-<li><a href="#clarissa_facts_en">English</a></li>
-<li><a href="#clarissa_facts_he">Hebrew (עברית)</a></li>
-</ul>
-
-<div id="clarissa_facts_en">
-
-<ul>
-
-<li>
+<li_en>
 Clarissa Darling can start from “I think therefore I am” and prove that the
 grass is green, that there are about 365 days in a year, and that Isaac Newton
 formulated the Law of Gravitation back in 1687.
-</li>
+</li_en>
 
-<li>
-Gödel’s Incompleteness Theorem is about to be replaced by the
-Darling “Like, Totally!” Completeness Theorem.
-</li>
 
-<li>
-Clarissa Darling will win over Chuck Norris in a battle of wits.
-</li>
-
-</ul>
-
-</div> ;;; /english
-
-<div id="clarissa_facts_he" class="hebrew">
-
-<ul>
-
-<li>
+<li_he>
 קלריסה דרלינג יכולה להתחיל מ-”אני חושב משמע אני קיים“
 ולהוכיח שהדשא ירוק, שיש כ-365 ימים בשנה, ושאייזיק ניוטון
 ניסח את חוק הכבידה בשנת 1687.
-</li>
+</li_he>
 
-<li>
-משפט אי-השלמות של גדל עומד להיות מוחלף על-ידי משפט השלמות “ברצינות, חבר” של דרלינג.
-</li>
 
-<li>
+<li_en>
+Gödel’s Incompleteness Theorem is about to be replaced by the
+Darling “Like, Totally!” Completeness Theorem.
+</li_en>
+
+
+<li_he>
+משפט אי-השלמות של גדל עומד להיות מוחלף על-ידי משפט השלמות “ברצינות, חבר” של
+דרלינג.
+</li_he>
+
+
+<li_en>
+Clarissa Darling will win over Chuck Norris in a battle of wits.
+</li_en>
+
+<li_he>
 קלריסה דרלינג תנצח את צ'אק נוריס בקרב מוחות.
-</li>
+</li_he>
 
-</ul>
 
-</div> ;;; /hebrew
+<h2 id="facts">Clarissa Darling Facts</h2>
 
-</div> ;;; /tabs
+<facts__en_he_tabs id_base="clarissa_facts" />
 
 <h2 id="license">Copyright and Licence</h2>
 

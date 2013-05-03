@@ -55,7 +55,7 @@ T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
 
 T2_FORTUNES_DIR_HTACCESS = $(T2_DEST_FORTUNES_DIR)/.htaccess
 
-ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.htaccess
+ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.htaccess $(T2_DEST)/lecture/PostgreSQL-Lecture/.htaccess
 
 htaccesses_target: $(ALL_HTACCESSES)
 

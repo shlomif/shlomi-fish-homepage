@@ -46,7 +46,7 @@
 
 <define-tag en_he_tabs>
 
-<preserve  id_base />
+<preserve  id_base common_prefix common_suffix />
 
 <set-var %attributes />
 
@@ -62,22 +62,34 @@
 
 <div id="<get-var en_id />">
 
-<ul>
+<get-var common_prefix />
 {#EN#}
-</ul>
+<get-var common_suffix />
 
 </div>
 
 <div id="<get-var he_id />" class="hebrew">
 
-<ul>
+<get-var common_prefix />
 {#HE#}
-</ul>
+<get-var common_suffix />
 
 </div>
 
 </div> ;;; end of .tabs
 
-<restore id_base />
+<restore id_base common_prefix common_suffix />
+
 </define-tag>
 
+<define-tag facts__en_he_tabs>
+
+<preserve id_base />
+
+<set-var %attributes />
+
+<en_he_tabs id_base="<get-var id_base />" common_prefix="<ul>" common_suffix="</ul>" />
+
+<restore id_base />
+
+</define-tag>

@@ -1,40 +1,8 @@
 #include '../template.wml'
-#include "jqui_tabs.wml"
+#include "jqui_tabs_multi_lang.wml"
 
 <latemp_subject "Abstract of the Story “The Road to Heaven is Paved with Bad Intentions”" />
 <latemp_meta_desc "Abstract of the Story “The Road to Heaven is Paved with Bad Intentions” - a proposed sequel to “The Enemy and How I Helped to Fight it”." />
-
-<define-tag en endtag="required">
-{#EN#:%body:##}
-</define-tag>
-
-<define-tag he endtag="required">
-{#HE#:%body:##}
-</define-tag>
-
-<define-tag both endtag="required">
-<en>%body</en><he>%body</he>
-</define-tag>
-
-<define-tag item_en endtag="required">
-<en>
-<li>
-<p>
-%body
-</p>
-</li>
-</en>
-</define-tag>
-
-<define-tag item_he endtag="required">
-<he>
-<li>
-<p>
-%body
-</p>
-</li>
-</he>
-</define-tag>
 
 <en>
 <p style="margin-top: 4em">

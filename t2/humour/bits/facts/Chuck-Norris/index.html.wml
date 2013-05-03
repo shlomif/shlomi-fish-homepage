@@ -1,45 +1,9 @@
 #include '../template.wml'
-#include "jqui_tabs.wml"
 #include "stories/facts.wml"
+#include "jqui_tabs_multi_lang.wml"
 
 <latemp_subject "Chuck Norris Facts" />
 <latemp_meta_desc "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris." />
-
-<define-tag en endtag="required">
-{#EN#:%body:##}
-</define-tag>
-
-<define-tag he endtag="required">
-{#HE#:%body:##}
-</define-tag>
-
-<define-tag lip endtag="required">
-<li>
-<p>
-%body
-</p>
-</li>
-</define-tag>
-
-<define-tag both endtag="required">
-<en>%body</en><he>%body</he>
-</define-tag>
-
-<define-tag item_en endtag="required">
-<en>
-<lip>
-%body
-</lip>
-</en>
-</define-tag>
-
-<define-tag item_he endtag="required">
-<he>
-<lip>
-%body
-</lip>
-</he>
-</define-tag>
 
 <p>
 These are additions to <a href="http://www.chucknorrisfacts.com/">the
@@ -860,14 +824,6 @@ Corleone</a>’s godfather. (<b>ZadYree</b>)
 
 
 
-<define-tag non_trans_en endtag="required">
-<en>%body</en>
-</define-tag>
-
-
-<define-tag non_trans_he endtag="required">
-<he>%body</he>
-</define-tag>
 
 <h2 id="facts">Chuck Norris Facts</h2>
 

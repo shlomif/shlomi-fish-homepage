@@ -606,6 +606,7 @@ FORTUNES_TEXTS = $(patsubst %.xml,%,$(FORTUNES_XMLS_SRC))
 FORTUNES_ATOM_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.atom
 FORTUNES_RSS_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.rss
 FORTUNES_SQLITE_DB = $(T2_FORTUNES_DIR)/fortunes-shlomif-lookup.sqlite3
+T2_DEST_HTMLS_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 
 fortunes-compile-xmls: $(FORTUNES_XHTMLS) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
@@ -625,6 +626,10 @@ $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(FORTUNES_XHTMLS__FOR_IN
 
 $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML)
 	tidy -asxhtml -utf8 -o $@ $<
+	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
+		tidy -asxhtml -utf8 -o "$$f".xhtml "$$f"; \
+		mv -f "$$f.xhtml" "$$f"; \
+	done
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \

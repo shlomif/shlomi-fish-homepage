@@ -1,5 +1,5 @@
 #include '../template.wml'
-#include "jqui_tabs.wml"
+#include "jqui_tabs_multi_lang.wml"
 #include "stories/facts.wml"
 
 <latemp_subject "Buffy Facts" />
@@ -7,82 +7,68 @@
 
 <facts__buffy />
 
-<h2 id="facts">Buffy Facts</h2>
-
-<div class="tabs">
-
-<ul>
-<li><a href="#buffy_facts_en">English</a></li>
-<li><a href="#buffy_facts_he">Hebrew (עברית)</a></li>
-</ul>
-
-<div id="buffy_facts_en">
-
-<ul>
-
-<li>
+<li_en>
 Buffy will always find a wooden stake to slay vampires, even if it means
 she will have travelled 100 years back in time, to plant a tree nearby.
-</li>
+</li_en>
 
-<li>
-Buffy Summers does not really need stakes to slay vampires, because her kisses
-are deadly for them. And that includes the ones that she blows in the air.
-</li>
 
-<li>
-The Chuck Norris of the Buffyverse, has been secretly training under Buffy’s
-supervision, and so far - lost every battle with her.
-</li>
-
-<li>
-Buffy is so hot, that you would totally love to fight her. And lose.
-(<b>Dan Dascalescu</b>)
-</li>
-
-<li>
-Buffy Summers is not afraid of demons. Demons are afraid of her, and for a
-very good reason.
-(inspired by <b>Dov Levenglick</b> via me).
-</li>
-
-</ul>
-
-</div>
-
-<div id="buffy_facts_he" class="hebrew">
-
-<ul>
-
-<li>
+<li_he>
 באפי תמיד תמצא יתד מעץ כדי לקטול את הערפדים, גם אם זה כרוך
 בכך שהיא יותר מאוחר תחזור אחורה 100 שנה בזמן, כדי לנטוע עץ בקרבת
 מקום.
-</li>
+</li_he>
 
-<li>
+
+<li_en>
+Buffy Summers does not really need stakes to slay vampires, because her kisses
+are deadly for them. And that includes the ones that she blows in the air.
+</li_en>
+
+
+<li_he>
 באפי סאמרס לא ממש צריכה יתדות כדי לקטול ערפדים, מפני שהנשיקות שלה הן
 קטלניות עבורם כשלעצמן. וזה כולל את הנשיקות שהיא מפריחה באוויר.
-</li>
+</li_he>
 
-<li>
+
+<li_en>
+The Chuck Norris of the Buffyverse, has been secretly training under Buffy’s
+supervision, and so far - lost every battle with her.
+</li_en>
+
+
+<li_he>
 הצ'אק נוריס של העולם של באפי, נוהג להתאמן בסתר תחת השגחתה של באפי,
 ונכון לעכשיו - הפסיד בכל הקרבות איתה.
-</li>
+</li_he>
 
-<li>
+
+<li_en>
+Buffy is so hot, that you would totally love to fight her. And lose.
+(<b>Dan Dascalescu</b>)
+</li_en>
+
+
+<li_he>
 באפי היא כל כך שווה, שאתה בטוח תשמח להילחם בה. ולהפסיד. )מאת דן דסכלסכו.(
-</li>
+</li_he>
 
 
-<li>
+<li_en>
+Buffy Summers is not afraid of demons. Demons are afraid of her, and for a
+very good reason.
+(inspired by <b>Dov Levenglick</b> via me).
+</li_en>
+
+
+<li_he>
 באפי סאמרס לא מפחדת משדים. שדים מפחדים ממנה, ומסיבה טובה מאוד. (בהשראתו של דוב לבנג'ליק.)
-</li>
+</li_he>
 
-</ul>
-</div>
+<h2 id="facts">Buffy Facts</h2>
 
-</div> ;;; end of .tabs
+<facts__en_he_tabs id_base="buffy_facts" />
 
 <h2 id="license">Copyright and Licence</h2>
 

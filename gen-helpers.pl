@@ -18,7 +18,7 @@ my $generator =
         'hosts' =>
         [ map {
             +{ 'id' => $_, 'source_dir' => $_,
-                'dest_dir' => "\$(ALL_DEST_BASE)/$_-homepage"
+                'dest_dir' => "\$(ALL_DEST_BASE)/$_"
             }
         } (qw(common t2 vipe)) ],
     );

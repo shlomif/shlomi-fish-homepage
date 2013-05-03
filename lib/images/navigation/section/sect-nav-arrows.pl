@@ -10,6 +10,7 @@ my $dim = 30;
 my $width = $dim;
 my $height = $dim;
 
+my $dest_dir = shift(@ARGV);
 
 foreach my $button_style (
     {
@@ -90,6 +91,6 @@ foreach my $button_style (
                 %{$button_style->{style}},
             },
         );
-        io->file("./dest/t2-homepage/images/sect-arr-$basename$button_basename.svg")->print(scalar($svg->xmlify()) =~ s/<!--.*?-->//gmrs =~ s/[ \t]+$//gmrs );
+        io->file("$dest_dir/sect-arr-$basename$button_basename.svg")->print(scalar($svg->xmlify()) =~ s/<!--.*?-->//gmrs =~ s/[ \t]+$//gmrs );
     }
 }

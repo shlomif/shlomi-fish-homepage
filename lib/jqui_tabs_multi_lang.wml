@@ -87,3 +87,18 @@
 <restore id_base />
 
 </define-tag>
+
+<define-tag facts__header_tabs>
+
+<preserve id_base h />
+
+<set-var %attributes />
+
+<h2 id="facts"><get-var h /></h2>
+
+<facts__en_he_tabs id_base="<get-var id_base />" />
+
+<restore id_base h />
+
+</define-tag>
+

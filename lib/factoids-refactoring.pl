@@ -11,7 +11,7 @@ my $text = io('-')->slurp();
 
 if ($text !~ m/<ul>/)
 {
-    $text =~ s#<(/?)li>#<${1}item_$lang>#g;
+    $text =~ s#<(/?)lip?>#<${1}li_$lang>#g;
 }
 else
 {

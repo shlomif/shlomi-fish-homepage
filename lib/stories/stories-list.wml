@@ -105,22 +105,59 @@ of <a href="http://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas
 Shrugged</i></a> in 2013’s funky way.
 </define-tag>
 
-<define-tag pope_died_on_sunday_abstract>
+<define-tag pope_died_on_sunday_abstract__en>
 
 <p>
 Rachel Southern, an American graphic artist who lives and works in
 Milwaukee, did not expect the week following the death of the Roman Catholic
-Pope to be any notable, but boy was she wrong. From meeting a guy she really
-liked, to her best friend almost ruining a date with him, to her family
-coming to visit, to helping organise a “fashion-play”, to thinking about the
-answer to the question of Life, the Universe, and Everything — Rachel’s week
-is one of the most hectic in her life.
+Pope to be particularly notable for her, but boy was she wrong!
+</p>
+
+<p>
+From meeting a guy she really liked, to her best friend almost ruining a date
+with him, to her family coming to visit, to helping organise a “fashion-play”,
+to thinking about the answer to the question of Life, the Universe, and
+Everything — Rachel’s week proved to be one of the most hectic in her life.
 </p>
 
 <p>
 This story is still incomplete, and only a relatively small part of it has
 been written.
 </p>
+
+</define-tag>
+
+<define-tag pope_died_on_sunday_abstract__he>
+
+<p>
+רייצ'ל סאותרן, גרפיקאית אמריקת שגרה ועובדת במילוואקי, לא ציפתה שהשבוע
+שבא לאחר מותו של האפיפיור יהיה יוצא דופן עבורה באופן מיוחד,
+אבל היא טעתה… ובגדול!
+</p>
+
+<p>
+מלפגוש בחור שהיא מאוד חיבבה, עד לכך שהחברה הטובה ביותר שלה כמעט הרסה פגישה
+איתו, עד לכך שהמשפחה שלה באה לבקר, עד לכך שהיא עזרה לארגן ”הצגת אופנה“,
+עד למחשבה על התשובה לשאלת החיים, היקום והכל — השבוע של רייצ'ל הסתבר
+כאחד המטורללים ביותר בחייה.
+</p>
+
+<p>
+הסיפור הזה עדיין לא הושלם, ורק חלק קטן ממנו נכתב.
+</p>
+
+</define-tag>
+
+<define-tag pope_died_on_sunday_abstract>
+
+<preserve lang />
+
+<set-var %attributes />
+
+<let myabstract=pope_died_on_sunday_abstract__<get-var lang /> />
+<myabstract />
+
+<restore lang />
 
 </define-tag>
 
@@ -191,7 +228,13 @@ been written.
 
 <define-tag pope_died_on_sunday_common_top_elems>
 
-<tagline text="And so starts what appears to be an ordinary week… or not!" />
+<preserve lang />
+<set-var %attributes />
+
+<set-var tagline_he="וכך מתחיל מה שנראה כשבוע טיפוסי… או לא!" />
+<set-var tagline_en="And so starts what appears to be an ordinary week… or not!" />
+
+<tagline text="<get-var "tagline_<get-var lang />" />" />
 
 <div class="pope abstract">
 
@@ -199,9 +242,11 @@ been written.
 
 <h2 id="abstract">Abstract</h2>
 
-<pope_died_on_sunday_abstract />
+<pope_died_on_sunday_abstract lang="<get-var lang />" />
 
 </div> ;;; class="pope abstract"
+
+<restore lang />
 
 </define-tag>
 
@@ -313,7 +358,7 @@ text="The Earth Angel">
 <humour_story tag="h3" id="pope-died-on-sunday" humour_href="Pope"
 text="The Pope Died on Sunday">
 
-<pope_died_on_sunday_abstract />
+<pope_died_on_sunday_abstract lang="en" />
 
 </humour_story>
 

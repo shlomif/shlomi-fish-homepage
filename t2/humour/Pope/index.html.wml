@@ -1,23 +1,12 @@
 #include '../template.wml'
+#include "stories/stories-list.wml"
+
 #include "xml_g_fiction.wml"
 
 <latemp_subject "The Pope Died on Sunday" />
 <latemp_meta_desc "A story about a hectic week in the life of an American graphics’s artist" />
 
-<p>
-Rachel Southern, an American graphic artist who lives and works in
-Milwaukee, did not expect the week following the death of the Roman Catholic
-Pope to be any notable, but boy was she wrong. From meeting a guy she really
-liked, to her best friend almost ruining a date with him, to her family
-coming to visit, to helping organise a “fashion-play”, to thinking about the
-answer to the question of Life, the Universe, and Everything — Rachel’s week
-is one of the most hectic in her life.
-</p>
-
-<p>
-This story is work in progress, so stay tuned and I’ll write it as time goes
-by.
-</p>
+<pope_died_on_sunday_common_top_elems />
 
 <h2 id="text">Text of the Story</h2>
 

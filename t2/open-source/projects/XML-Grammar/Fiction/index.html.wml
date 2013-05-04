@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "vim_include_code.wml"
 #include "cpan_dists.wml"
+#include "toc_div.wml"
 
 <set-var cpan_dist="XML-Grammar-Fiction" />
 
@@ -34,6 +35,8 @@ Encoding Initiative)</a>
 project</a> that provides several specialised processors for XML grammars
 for various tasks.
 </p>
+
+<toc_div />
 
 <h2 id="links">Project Links</h2>
 

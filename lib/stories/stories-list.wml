@@ -236,11 +236,14 @@ been written.
 
 <tagline text="<get-var "tagline_<get-var lang />" />" />
 
+<set-var abstract_he="מבוא" />
+<set-var abstract_en="Abstract" />
+
 <div class="pope abstract">
 
 ;;; TODO : Add a logo.
 
-<h2 id="abstract">Abstract</h2>
+<h2 id="abstract"><get-var "abstract_<get-var lang />" /></h2>
 
 <pope_died_on_sunday_abstract lang="<get-var lang />" />
 

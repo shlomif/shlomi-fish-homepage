@@ -624,10 +624,12 @@ $(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS)
 
+FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
+
 $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML)
-	tidy -asxhtml -utf8 -o $@ $<
+	$(FORTUNES_TIDY) -o $@ $<
 	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
-		tidy -asxhtml -utf8 -o "$$f".xhtml "$$f"; \
+		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
 		mv -f "$$f.xhtml" "$$f"; \
 	done
 

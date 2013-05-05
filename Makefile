@@ -641,6 +641,7 @@ $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feed
 	perl $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
 
 FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
+
 $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS) $(FORTUNES_LIST_PM)
 	perl -Ilib $<
 

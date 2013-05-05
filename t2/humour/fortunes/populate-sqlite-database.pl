@@ -78,7 +78,8 @@ foreach my $basename (@file_bases)
         die "Cannot find for '$basename'!";
     }
 
-    my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
+    # my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
+    my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.compressed.xhtml");
 
     my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
 

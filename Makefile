@@ -616,7 +616,7 @@ fortunes-compile-xmls: $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTU
 FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(T2_FORTUNES_DIR)/prepare-xhtml-for-input.pl
 
-$(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml
+$(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT)
 	perl $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
 
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
@@ -632,7 +632,7 @@ FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
-$(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML)
+$(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
 	$(FORTUNES_TIDY) -o $@ $<
 	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
 		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \

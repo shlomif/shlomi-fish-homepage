@@ -7,12 +7,17 @@ use utf8;
 
 use base 'Class::Accessor';
 
-__PACKAGE__->mk_accessors(qw(
+my @req_fields = (qw(
+    about_blurb
+    desc
     id
+    meta_desc
+    page_title
     text
     title
-    desc
-    ));
+));
+
+__PACKAGE__->mk_accessors(@req_fields);
 
 sub nav_record
 {
@@ -49,7 +54,7 @@ sub _init_fortune
 {
     my $rec = shift;
 
-    foreach my $req_field (qw(id desc text title))
+    foreach my $req_field (@req_fields)
     {
         if (!exists($rec->{$req_field}))
         {

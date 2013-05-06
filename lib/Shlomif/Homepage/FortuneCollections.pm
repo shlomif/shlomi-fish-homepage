@@ -48,6 +48,8 @@ use Data::Dumper;
 
 use YAML::XS (qw(LoadFile DumpFile));
 
+use IO::All;
+
 use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 
 sub _init_fortune
@@ -172,6 +174,42 @@ EOF
     }
 
     return;
+}
+
+sub get_single_fortune_page_html_wml
+{
+    my ($class, $r) = @_;
+
+    return <<"EOF";
+#include '../template.wml'
+#include "render_fortunes_pages.wml"
+
+<latemp_subject "@{[$r->page_title()]}" />
+<latemp_meta_desc "@{[$r->meta_desc()]}" />
+
+<h2*>About</h2*>
+
+@{[$r->about_blurb()]}
+
+<toc_div head_tag="h3" />
+
+<h2 id="fortunes-list">The Fortunes Themselves</h2>
+<div class="fortunes_list">
+#include "fortunes/xhtmls/@{[$r->id()]}.xhtml-for-input"
+</div>
+EOF
+}
+
+sub print_all_fortunes_html_wmls
+{
+    my ($class) = @_;
+
+    foreach my $r (@{Shlomif::Homepage::FortuneCollections::sorted_fortunes() })
+    {
+        io->file("t2/humour/fortunes/@{[$r->id()]}.html.wml")->utf8->print(
+            $class->get_single_fortune_page_html_wml($r),
+        );
+    }
 }
 
 1;

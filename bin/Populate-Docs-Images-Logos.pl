@@ -24,8 +24,11 @@ sub _github_clone
 
     my $url;
 
+    my $cmd;
+
     if ($type eq 'github_git')
     {
+        $cmd = 'git';
         if ($ENV{GITHUB_USERS} =~ m/,\Q$gh_username\E,/)
         {
             $url = "git\@github.com:${gh_username}/${repo}.git";
@@ -37,13 +40,22 @@ sub _github_clone
     }
     elsif ($type eq 'bitbucket_hg')
     {
+        $cmd = 'hg';
+        if ($ENV{BITBUCKET_USERS} =~ m/,\Q$gh_username\E,/)
+        {
+            $url = "ssh://hg\@bitbucket.org/$gh_username/$repo"
+        }
+        else
+        {
+            $url = "https://bitbucket.org/$gh_username/$repo";
+        }
     }
     else
     {
         Carp::confess("Unknown type '$type'");
     }
 
-    system('git', 'clone', $url, (defined($target) ? ($target) : ()));
+    system($cmd, 'clone', $url, (defined($target) ? ($target) : ()));
 
     return;
 }
@@ -88,7 +100,7 @@ foreach my $l (@$logos)
     my $repo_base = $l->{repo_base}
         or die "repo_base not specified.";
     my $type = $l->{type}
-        or dei "type not specified.";
+        or die "type not specified.";
 
     my $pid;
     if (! ($pid = $pm->start))

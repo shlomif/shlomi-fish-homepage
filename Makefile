@@ -633,11 +633,11 @@ $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
 $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
-	$(FORTUNES_TIDY) -o $@ $<
 	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
 		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
 		mv -f "$$f.xhtml" "$$f"; \
 	done
+	$(FORTUNES_TIDY) -o $@ $<
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
@@ -648,12 +648,14 @@ $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feed
 
 FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
 
-$(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS) $(FORTUNES_LIST_PM)
+FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/Homepage/fortunes-meta-data.yml
+
+$(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS) $(FORTUNES_LIST__DEPS)
 	perl -Ilib $<
 
-$(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST_PM)
+$(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
-lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST_PM)
+lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
 	touch $@
 
 $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)

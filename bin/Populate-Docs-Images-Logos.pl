@@ -110,7 +110,7 @@ foreach my $l (@$logos)
         if (! -d $d)
         {
             my $d_obj = io->dir($d);
-            my $above = $d_obj->dirname;
+            my $above = $d_obj->updir();
             $above->mkpath();
 
             _github_shlomif_clone(
@@ -125,3 +125,4 @@ foreach my $l (@$logos)
     }
 }
 
+$pm->wait_all_children;

@@ -1,7 +1,7 @@
 #!/bin/bash
-find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
+find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     ( LC_ALL=C sort  ) |
-    grep -vP 'dest/t2-homepage/philosophy/obj-oss/objectivism-and-open-source/' |
+    grep -vP 'dest/t2/philosophy/obj-oss/objectivism-and-open-source/' |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' |
     grep -vP 'guide2ee/undergrad' |
     grep -vP '(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))' |
@@ -15,8 +15,8 @@ find dest/t2-homepage/ -name '*.html' -or -name '*.xhtml' |
     grep -vP 'lecture/Lambda-Calculus/slides/shriram\.scm' |
     grep -vP 'lecture/HTML-Tutorial/v1/xhtml1/hebrew' |
     grep -vP 'js/MathJax/(?:test|docs)/' |
-    grep -vP 'dest/t2-homepage/philosophy/computers/high-quality-software/what-makes-software-high-quality' |
-    grep -vP 'dest/t2-homepage/philosophy/computers/open-source/linus-torvalds-bus-factor/index' |
+    grep -vP 'dest/t2/philosophy/computers/high-quality-software/what-makes-software-high-quality' |
+    grep -vP 'dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index' |
     xargs perl bin/html-check-spelling-xmlp.pl |
     grep ':'
     # perl -lne 'print if /MathVentures\/3d.*\.xhtml/' |

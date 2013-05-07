@@ -123,23 +123,19 @@ EOF
     return;
 }
 
-sub print_single_fortune_record_all_in_one_page_entry
+sub get_single_fortune_record_all_in_one_page_entry
 {
     my ($class, $r) = @_;
 
     my $id = $r->id;
-    my $desc = $r->desc;
-    my $text = $r->text;
     my $title = $r->title;
 
-    print <<"EOF";
+    return <<"EOF";
 <h2 id="$id">$title</h2>
 <div class="fortunes_list">
 #include "fortunes/xhtmls/$id.xhtml-for-input"
 </div>
 EOF
-
-    return;
 }
 
 sub print_fortune_records_toc
@@ -154,11 +150,11 @@ sub print_fortune_records_toc
     return;
 }
 
-sub print_fortune_all_in_one_page
+sub get_fortune_all_in_one_page_html_wml
 {
     my ($class) = @_;
 
-    print <<"EOF";
+    my $ret = <<"EOF";
 #include '../template.wml'
 #include "render_fortunes_pages.wml"
 
@@ -171,8 +167,42 @@ EOF
 
     foreach my $r (@{$class->get_fortune_records()})
     {
-        $class->print_single_fortune_record_all_in_one_page_entry($r);
+        $ret .= $class->get_single_fortune_record_all_in_one_page_entry($r);
     }
+
+    return $ret;
+}
+
+my $deps_mtime_max = max(
+    map { io->file($_)->mtime() }
+    __FILE__ , $yaml_data_fn
+);
+
+sub _print_if_update_needed
+{
+    my ($class, $path, $contents_promise) = @_;
+
+    my $fh = io->file($path);
+
+    if ( (! $fh->exists()) ||  ($deps_mtime_max > $fh->mtime()) )
+    {
+        $fh->utf8->print(
+            $contents_promise->(),
+        );
+    }
+
+    return;
+}
+
+sub write_fortune_all_in_one_page_to_file
+{
+    my ($class, $filename) = @_;
+
+    $class->_print_if_update_needed($filename,
+        sub {
+            return $class->get_fortune_all_in_one_page_html_wml();
+        },
+    );
 
     return;
 }
@@ -205,21 +235,16 @@ sub print_all_fortunes_html_wmls
 {
     my ($class) = @_;
 
-    my $deps_mtime_max = max(
-        map { io->file($_)->mtime() }
-        __FILE__ , $yaml_data_fn
-    );
 
     foreach my $r (@{Shlomif::Homepage::FortuneCollections::sorted_fortunes() })
     {
         my $path = "t2/humour/fortunes/@{[$r->id()]}.html.wml";
-        my $fh = io->file($path);
-        if ( (! $fh->exists()) ||  ($deps_mtime_max > $fh->mtime()) )
-        {
-            $fh->utf8->print(
-                $class->get_single_fortune_page_html_wml($r),
-            );
-        }
+        $class->_print_if_update_needed(
+            $path,
+            sub {
+                return $class->get_single_fortune_page_html_wml($r);
+            },
+        );
     }
 }
 

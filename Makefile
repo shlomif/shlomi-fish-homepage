@@ -68,7 +68,7 @@ $(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(T2_SRC_DIR)/%/my_htaccess.conf
 	cp -f $< $@
 
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
-	perl -Ilib $< > $@
+	perl -Ilib $< $@
 
 # t2 macros
 
@@ -597,6 +597,10 @@ $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 
 FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 
+FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
+FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/Homepage/fortunes-meta-data.yml
+
+
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
@@ -649,10 +653,6 @@ $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 
 $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
 	perl $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
-
-FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
-
-FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/Homepage/fortunes-meta-data.yml
 
 $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS) $(FORTUNES_LIST__DEPS)
 	perl -Ilib $<

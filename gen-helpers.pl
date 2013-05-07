@@ -13,6 +13,15 @@ if (system("make", "--silent", "-f", "lib/make/build-deps/build-deps.mak"))
     die "build-deps failed!";
 }
 
+if (system($^X,
+        '-Ilib', '-MShlomif::Homepage::FortuneCollections',
+        '-e',
+        'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'
+    )
+)
+{
+}
+
 my $generator =
     HTML::Latemp::GenMakeHelpers->new(
         'hosts' =>

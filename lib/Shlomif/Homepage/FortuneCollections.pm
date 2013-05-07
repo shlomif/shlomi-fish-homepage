@@ -45,6 +45,7 @@ use utf8;
 
 use Carp;
 use Data::Dumper;
+use List::Util qw(max);
 
 use YAML::XS (qw(LoadFile DumpFile));
 
@@ -204,11 +205,21 @@ sub print_all_fortunes_html_wmls
 {
     my ($class) = @_;
 
+    my $deps_mtime_max = max(
+        map { io->file($_)->mtime() }
+        __FILE__ , $yaml_data_fn
+    );
+
     foreach my $r (@{Shlomif::Homepage::FortuneCollections::sorted_fortunes() })
     {
-        io->file("t2/humour/fortunes/@{[$r->id()]}.html.wml")->utf8->print(
-            $class->get_single_fortune_page_html_wml($r),
-        );
+        my $path = "t2/humour/fortunes/@{[$r->id()]}.html.wml";
+        my $fh = io->file($path);
+        if ( (! $fh->exists()) ||  ($deps_mtime_max > $fh->mtime()) )
+        {
+            $fh->utf8->print(
+                $class->get_single_fortune_page_html_wml($r),
+            );
+        }
     }
 }
 

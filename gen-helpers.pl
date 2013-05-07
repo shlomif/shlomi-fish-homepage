@@ -20,6 +20,16 @@ if (system($^X,
     )
 )
 {
+    die "print_all_fortunes_html_wmls failed!";
+}
+
+if (system($^X,
+        '-Ilib', 'bin/gen-forts-all-in-one-page.pl',
+        't2/humour/fortunes/all-in-one.uncompressed.html.wml',
+    )
+)
+{
+    die "gen-forts-all-in-one-page.pl failed!";
 }
 
 my $generator =

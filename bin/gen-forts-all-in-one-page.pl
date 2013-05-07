@@ -7,6 +7,10 @@ use Shlomif::Homepage::FortuneCollections;
 
 binmode STDOUT, ':utf8';
 
-Shlomif::Homepage::FortuneCollections->print_fortune_all_in_one_page();
+my $filename = shift(@ARGV);
+
+Shlomif::Homepage::FortuneCollections->write_fortune_all_in_one_page_to_file(
+    $filename
+);
 
 1;

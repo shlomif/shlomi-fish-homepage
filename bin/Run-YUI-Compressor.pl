@@ -26,7 +26,7 @@ foreach my $fn (@ARGV)
     $buf .= (scalar(io->file($fn)->utf8->slurp) =~ s/([^\n])\z/$1\n/mrs);
 }
 
-my ($t_fh, $t_fn) = tempfile();
+my ($t_fh, $t_fn) = tempfile( TEMPLATE => 'tempXXXXXXXXX', SUFFIX => '.js', );
 binmode ( $t_fh, ':encoding(utf8)', );
 
 $t_fh->print($buf);

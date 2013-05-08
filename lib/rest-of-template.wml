@@ -474,8 +474,7 @@ of an EvilPHish”</a> cartoon of
 <link rel="stylesheet" type="text/css" href="$(ROOT)/js/treeview/jquery.treeview.css" />
 </define-tag>
 
-<define-tag my_extra_head_elements>
-<link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen, projection" title="Old 2008 Style" />
+<define-tag main_all__js_scripts__dev>
 <script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/jquery.treeview.min.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
@@ -486,6 +485,22 @@ of an EvilPHish”</a> cartoon of
 <script type="text/javascript" src="$(ROOT)/js/selfl.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/sub_menu.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/print-ver.js"></script>
+</define-tag>
+
+<define-tag main_all__js_scripts__proudction>
+<script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
+<script type="text/javascript" src="$(ROOT)/js/main_all.js"></script>
+</define-tag>
+
+<set-var is_dev="$(LATEMP_IS_DEV_ENV)" />
+<set-var is_dev="1" />
+
+<define-tag my_extra_head_elements>
+<link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen, projection" title="Old 2008 Style" />
+<if "<get-var is_dev />"
+    "<main_all__js_scripts__dev />"
+    "<main_all__js_scripts__proudction />"
+    />
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
 {#PAGE_EXTRA_HEAD_ELEMENTS#}

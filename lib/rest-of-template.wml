@@ -475,7 +475,6 @@ of an EvilPHish”</a> cartoon of
 </define-tag>
 
 <define-tag main_all__js_scripts__dev>
-<script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/jquery.treeview.min.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/toggle_sect.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/tree.jq.js"></script>
@@ -488,7 +487,6 @@ of an EvilPHish”</a> cartoon of
 </define-tag>
 
 <define-tag main_all__js_scripts__proudction>
-<script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/main_all.js"></script>
 </define-tag>
 
@@ -497,6 +495,7 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag my_extra_head_elements>
 <link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen, projection" title="Old 2008 Style" />
+<script type="text/javascript" src="$(ROOT)/js/jq.js"></script>
 <if "<get-var is_dev />"
     "<main_all__js_scripts__dev />"
     "<main_all__js_scripts__proudction />"

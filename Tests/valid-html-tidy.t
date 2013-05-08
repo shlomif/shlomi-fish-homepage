@@ -26,7 +26,7 @@ my $error_count = 0;
 for my $fn (File::Find::Object::Rule->file()->name(qr/\.x?html\z/)->in("./dest"))
 {
     if (not ($fn =~ m{js/MathJax}
-                or $fn =~ m{\Adest/t2-homepage/MathVentures/}))
+                or $fn =~ m{\Adest/t2/MathVentures/}))
     {
         $tidy->parse( $fn, (scalar io->file($fn)->slurp()));
 

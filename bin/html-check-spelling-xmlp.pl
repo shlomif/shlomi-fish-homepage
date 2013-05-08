@@ -59,7 +59,7 @@ my %inside;
 
 sub tag
 {
-   my($tag, $num) = @_;
+   my ($tag, $num) = @_;
    $inside{$tag} += $num;
 
    return;

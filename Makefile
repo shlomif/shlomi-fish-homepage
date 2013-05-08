@@ -1049,6 +1049,7 @@ $(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
 generate_nav_data_as_json:
 
 JSMIN = bin/jsmin
+
 $(JSMIN): lib/jsmin/jsmin.c
 	gcc -o $@ -O2 -Wall $<
 
@@ -1059,3 +1060,4 @@ $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
 	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)
 
 minified_javascripts: $(JQTREE_MIN_DEST)
+

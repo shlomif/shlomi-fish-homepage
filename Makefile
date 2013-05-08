@@ -1057,7 +1057,7 @@ JQTREE_SRC = common/js/tree.jquery.js
 JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js
 MAIN_TOTAL_MIN_JS_DEST = $(T2_DEST)/js/main_all.js
 
-MULTI_YUI = ./bin/Run-YUI-Compressor.pl
+MULTI_YUI = ./bin/Run-YUI-Compressor
 
 MAIN_TOTAL_MIN_JS__SOURCES = common/js/jq.js common/js/jquery.treeview.min.js common/js/tree.jquery.js common/js/jquery.cookie.js common/js/to-jqtree.js common/js/to-jqtree-2.js common/js/print-ver.js common/js/selfl.js common/js/sub_menu.js
 

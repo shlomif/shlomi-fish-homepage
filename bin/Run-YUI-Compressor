@@ -32,7 +32,7 @@ binmode ( $t_fh, ':encoding(utf8)', );
 $t_fh->print($buf);
 $t_fh->flush();
 
-if (system("yuicompressor", "-o", $output_fn, $t_fn))
+if (system('yuicompressor', '--nomunge', '-o', $output_fn, $t_fn))
 {
     die "yuicompressor returned an error - $!";
 }

@@ -6,16 +6,14 @@
  * */
 
 // Taken from http://stackoverflow.com/questions/202605/repeat-string-javascript
-if (!String.prototype.repeat) {
-String.prototype.repeat = function(count) {
+function myrepeat(s, count) {
     if (count < 1) return '';
-    var result = '', pattern = this.valueOf();
+    var result = '', pattern = s.valueOf();
     while (count > 0) {
         if (count & 1) result += pattern;
         count >>= 1, pattern += pattern;
     };
     return result;
-};
 }
 
 if (!Array.prototype.map)
@@ -57,7 +55,7 @@ function get_base_relative_path (args) {
         count++;
     }*/
 
-    return ('./' + ('../'.repeat(count)));
+    return ('./' + (myrepeat('../', count)));
 }
 
 function get_relative_path (args) {

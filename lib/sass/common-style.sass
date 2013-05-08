@@ -579,20 +579,7 @@ div.abstract
     .page_toc
         clear: left
 
-body.self_link
-    .selfl
-        display: none
-
-    h1, h2, h3, h4, h5, h6
-        &:hover
-            .selfl
-                display: inline
-
-                a
-                    margin-left: 0.5em
-                    text-decoration: none
-                    color: black
-
+@import "self_link"
 @import "lang_switch"
 @import "code_block"
 @import "treeview"

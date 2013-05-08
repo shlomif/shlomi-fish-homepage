@@ -1055,9 +1055,16 @@ $(JSMIN): lib/jsmin/jsmin.c
 
 JQTREE_SRC = common/js/tree.jquery.js
 JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js
+MAIN_TOTAL_MIN_JS_DEST = $(T2_DEST)/js/main_all.js
+
+MULTI_YUI = ./bin/Run-YUI-Compressor.pl
+
+MAIN_TOTAL_MIN_JS__SOURCES = common/js/jq.js common/js/jquery.treeview.min.js common/js/tree.jquery.js common/js/jquery.cookie.js common/js/to-jqtree.js common/js/to-jqtree-2.js common/js/print-ver.js common/js/selfl.js common/js/sub_menu.js
 
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
 	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)
 
-minified_javascripts: $(JQTREE_MIN_DEST)
+minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
 
+$(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
+	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)

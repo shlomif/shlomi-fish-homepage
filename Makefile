@@ -1061,7 +1061,6 @@ MULTI_YUI = ./bin/Run-YUI-Compressor
 
 # Must not be sorted!
 MAIN_TOTAL_MIN_JS__SOURCES = \
-	common/js/jq.js \
 	common/js/jquery.treeview.min.js \
 	common/js/toggle_sect.js \
 	common/js/tree.jquery.js \
@@ -1071,6 +1070,11 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/selfl.js \
 	common/js/sub_menu.js \
 	common/js/print-ver.js \
+
+
+MAIN_TOTAL_MIN_JS__SOURCES____REJECTS = \
+	common/js/jq.js \
+
 
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
 	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)

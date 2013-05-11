@@ -9,7 +9,7 @@ STAMP = lib/make/build-deps/build-deps.stamp
 all: $(STAMP)
 
 $(STAMP): $(BIN) $(EXES_LIST) $(MODULES_LIST)
-	$(BIN) -o $@ --exes-conf $(EXES_LIST) --modules-conf $(MODULES_LIST)
+	perl $(BIN) -o $@ --exes-conf $(EXES_LIST) --modules-conf $(MODULES_LIST)
 
 clean:
 	rm -f $(STAMP)

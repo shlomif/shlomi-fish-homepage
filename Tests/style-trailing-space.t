@@ -15,7 +15,7 @@ use Test::More tests => 1;
     {
         chomp($l);
 
-        if ($l =~ m{\A(?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:humour/fortunes/fortunes-shlomif-ids-data\.yaml|(?:js/MathJax.*?)\z))}
+        if ($l =~ m{\A(?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))}
                 or ($l =~ m{\Alib/MathJax})
                 or ($l =~ m{\Alib/presentations/docbook/html-tutorial})
                 or ($l eq 'lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.xhtml')

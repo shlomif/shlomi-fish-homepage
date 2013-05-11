@@ -73,7 +73,7 @@ print_package_base:
 list_files: $(ARCS_LIST_INCLUDE)
 
 $(ARCS_LIST_INCLUDE): $(VERSION_FILE)
-	@perl -le 'print "FORTUNES_ARCS_LIST =" . join("", (map { " $$_" } glob("fortunes-shlomif-*.tar.gz"))hg' > $@
+	@perl -le 'print "FORTUNES_ARCS_LIST =" . join("", (map { " $$_" } glob("fortunes-shlomif-*.tar.gz")))' > $@
 
 xhtmls: $(XHTMLS)
 

@@ -62,9 +62,9 @@ sub _my_system
 }
 
 foreach my $cmd (
-    [ "./bin/gen-docbook-make-helpers.pl" ],
-    [ "./bin/gen-fortunes.pl" ],
-    [ "./bin/gen-deps-mak.pl" ],
+    [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
+    [ $^X, "./bin/gen-fortunes.pl" ],
+    [ $^X, "./bin/gen-deps-mak.pl" ],
 )
 {
     _my_system($cmd);

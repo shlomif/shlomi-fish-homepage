@@ -11,43 +11,19 @@ use XML::Writer;
 
 use List::MoreUtils (qw(any));
 
-use base 'Class::Accessor';
+use MooX (qw( late ));
 
-__PACKAGE__->mk_accessors(
-    qw(
-        _id
-        _xml_writer
-        _unix_fortune_files_paths
-    ));
-
-sub new
-{
-    my $class = shift;
-    my $self = {};
-    bless $self, $class;
-
-    $self->_init(@_);
-
-    return $self;
-}
-
-sub _init
-{
-    my $self = shift;
-    my $args = shift;
-
-    $self->_unix_fortune_files_paths($args->{unix_fortune_files_paths});
-
-    $self->_id(0);
-
-    return 0;
-}
+has '_id' => (is => 'rw', isa => 'Int', default => sub { return 0; },);
+has '_xml_writer' => (is => 'rw', isa => 'Maybe[XML::Writer]');
+has 'unix_fortune_files_paths' => (is => 'ro', isa => 'ArrayRef[Str]',
+    required => 1
+);
 
 sub process_all_input
 {
     my $self = shift;
 
-    foreach my $path (@{$self->_unix_fortune_files_paths()})
+    foreach my $path (@{$self->unix_fortune_files_paths()})
     {
         $self->_process_fortune_file($path);
     }

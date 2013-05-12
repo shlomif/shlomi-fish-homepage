@@ -21,7 +21,7 @@ my $data = LoadFile($yaml_data_fn);
 
 my @fields = ( qw(page_title meta_desc about_blurb) );
 
-foreach my $r (@{Shlomif::Homepage::FortuneCollections::sorted_fortunes() })
+foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
 {
     my $id = $r->id();
 

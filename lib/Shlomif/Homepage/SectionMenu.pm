@@ -14,23 +14,24 @@ sub get_image_base
 
 package Shlomif::Homepage::SectionMenu;
 
-use base 'HTML::Widgets::NavMenu::Object';
-use base 'Class::Accessor';
+use MooX (qw( late ));
 
 use HTML::Widgets::NavMenu;
 
-__PACKAGE__->mk_accessors(qw(
-    bottom_code
-    current_host
-    empty
-    menu
-    nav_menu
-    path_info
-    results
-    root
-    sections
-    title
-));
+has 'bottom_code' => (is => 'rw', isa => 'Maybe[Str]', required => 1,);
+has 'current_host' => (is => 'rw', isa => 'Str', required => 1,);
+has 'empty' => (is => 'rw', isa => 'Bool', default => 0,);
+has 'nav_menu' => (is => 'rw', isa => 'HTML::Widgets::NavMenu',);
+has 'path_info' => (is => 'rw', isa => 'Str', required => 1,);
+has 'results' => (is => 'ro', isa => 'HashRef', lazy => 1, default =>
+    sub { return shift->nav_menu->render(); }
+);
+has 'root' => (is => 'rw', required => 1,);
+has 'sections' => (is => 'rw', required => 1,);
+has 'title' => (is => 'rw');
+has '_current_sect' => (is => 'ro', isa => 'Maybe[HashRef]', lazy => 1,
+    default => sub { return shift->_calc_current_sect(); },
+);
 
 sub get_section_nav_menu_params
 {
@@ -58,27 +59,28 @@ sub get_modified_sub_tree
         };
 }
 
-sub _init
+sub _calc_current_sect
 {
     my $self = shift;
-    my (%args) = @_;
-    $self->sections($args{'sections'});
-    $self->path_info($args{'path_info'});
-    $self->empty(0);
-    $self->current_host($args{current_host});
-    $self->root($args{root});
-    $self->bottom_code($args{bottom_code});
 
-    my $current_sect;
-    SECTION_LOOP: foreach my $sect (@{$self->sections()})
+    foreach my $sect (@{$self->sections()})
     {
         my $regexp = $sect->{'regex'};
         if (($regexp eq "") || ($self->path_info() =~ /$regexp/))
         {
-            $current_sect = $sect;
-            last SECTION_LOOP;
+            return $sect;
         }
     }
+
+    return;
+}
+
+sub BUILD
+{
+    my $self = shift;
+
+    my $current_sect = $self->_current_sect();
+
     if (!defined($current_sect))
     {
         $self->empty(1);
@@ -94,11 +96,11 @@ sub _init
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
             'no_leading_dot' => 1,
             );
-        my $results = $nav_menu->render();
         $self->nav_menu($nav_menu);
-        $self->results($results);
         $self->title($current_sect->{'title'});
     }
+
+    return;
 }
 
 sub get_nav_links

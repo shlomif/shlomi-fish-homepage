@@ -5,9 +5,9 @@ use warnings;
 
 use utf8;
 
-use base 'Class::Accessor';
+use MooX (qw( late ));
 
-my @req_fields = (qw(
+has [qw(
     about_blurb
     desc
     id
@@ -15,9 +15,7 @@ my @req_fields = (qw(
     page_title
     text
     title
-));
-
-__PACKAGE__->mk_accessors(@req_fields);
+)] => (is => 'ro', isa => 'Str', required => 1);
 
 sub nav_record
 {
@@ -56,15 +54,6 @@ use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 sub _init_fortune
 {
     my ($class, $rec) = @_;
-
-    foreach my $req_field (@req_fields)
-    {
-        if (!exists($rec->{$req_field}))
-        {
-            Carp::confess("Field $req_field does not exist in record for "
-                . Dumper($rec) . "!");
-        }
-    }
 
     return Shlomif::Homepage::FortuneCollections::Record->new($rec);
 }

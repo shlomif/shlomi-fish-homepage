@@ -3,20 +3,23 @@
 
 <latemp_subject "Black Hole Solitaire Solver" />
 
-<latemp_meta_desc "Solver for Black Hole Solitaire as well as All in a Row Solitiare" />
+<latemp_meta_desc "Solver for Black Hole Solitaire as well as All in a Row Solitaire" />
 
 <p>
 This is a solver, written in C, to solve
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
-Solitaire variant called “Black Hole”</a>. It provides a portable C library,
+Solitaire variant called “Black Hole”</a>
+and the one called
+<a href="http://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">“All in
+a Row”</a>. It provides a portable C library,
 and a command line application that after being fed with a layout will emit
-the cards to move to the “black hole” (the foundation).
+the cards to move.
 </p>
 
 <h2 id="download">Download</h2>
 
-<set-var ver="0.2.0" />
-<set-var arc="black_hole_solver-<get-var ver />.tar.xz" />
+<set-var ver="0.4.0" />
+<set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
 
@@ -134,6 +137,26 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <h2 id="news">News</h2>
+
+<h3 id="news_version_0_4_0">Version 0.4.0</h3>
+
+<p>
+Version 0.4.0 of Black Hole Solitaire Solver was released. The highlight of
+this release is the fact that it can now also solve
+<a href="http://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">All in
+a Row solitaire</a>. As a result of this effort,
+we have run the solver on the first 1 million PySolFC deals of All in
+a Row Solitaire and have drawn some conclusions:
+</p>
+
+<ul>
+
+<li>
+<a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/1229">Statistics from the First 1,000,000 PySolFC All in A Row Deals</a>
+</li>
+
+</ul>
+
 
 <h3 id="news_version_0_2_0">Version 0.2.0</h3>
 

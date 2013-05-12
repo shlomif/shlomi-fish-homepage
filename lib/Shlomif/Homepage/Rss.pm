@@ -3,27 +3,24 @@ package Shlomif::Homepage::Rss;
 use strict;
 use warnings;
 
-use base 'HTML::Widgets::NavMenu::Object';
-use base 'Class::Accessor';
+use MooX (qw( late ));
 
 use XML::Feed;
 use CGI;
 
+use IO::All;
+
 use Encode (qw(decode));
 
-__PACKAGE__->mk_accessors(qw(
-    feed
-));
-
-sub _init
-{
-    my $self = shift;
-    my $feed = XML::Feed->parse($ENV{'SF_HSITE_FEED_FILE'} || URI->new("http://shlomif-hsite.livejournal.com/data/atom"))
-        or die XML::Feed->errstr;
-    $self->feed($feed);
-
-    return 0;
-}
+has 'feed' => (
+    is => 'rw',
+    isa => 'XML::Feed',
+    default => sub {
+        my $feed = XML::Feed->parse($ENV{'SF_HSITE_FEED_FILE'} || URI->new("http://shlomif-hsite.livejournal.com/data/atom"))
+            or die XML::Feed->errstr;
+        return $feed;
+    },
+);
 
 sub _calc_entry_body
 {
@@ -47,11 +44,9 @@ sub run
         $text =~ s{[ \t]+$}{}gms;
 
         my $issued = $entry->issued();
+
         my $filename = "lib/feeds/shlomif_hsite/" . $issued->ymd() . ".html";
-        open O, ">", $filename;
-        binmode O, ":utf8";
-        print O $text;
-        close(O);
+        io()->file($filename)->utf8->print($text);
     }
 }
 

@@ -55,7 +55,7 @@ use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 
 sub _init_fortune
 {
-    my $rec = shift;
+    my ($class, $rec) = @_;
 
     foreach my $req_field (@req_fields)
     {
@@ -76,26 +76,32 @@ my $orig_fortunes_records = LoadFile($yaml_data_fn)->{'shlomif_fortunes_collecti
 
 my @forts =
 (
-    map { _init_fortune($_) } @$orig_fortunes_records,
+    map { __PACKAGE__->_init_fortune($_) } @$orig_fortunes_records,
 );
 
 sub get_fortune_records
 {
+    my ($class) = @_;
+
     return \@forts;
 }
 
 sub sorted_fortunes
 {
+    my ($class) = @_;
+
     return
     [
         sort { $a->id() cmp $b->id() }
-        @{get_fortune_records()}
+        @{$class->get_fortune_records()}
     ];
 }
 
 sub nav_data
 {
-    return [ map { $_->nav_record() } @{sorted_fortunes()} ] ;
+    my ($class) = @_;
+
+    return [ map { $_->nav_record() } @{$class->sorted_fortunes()} ] ;
 }
 
 sub print_single_fortune_record_toc_entry
@@ -236,7 +242,7 @@ sub print_all_fortunes_html_wmls
     my ($class) = @_;
 
 
-    foreach my $r (@{Shlomif::Homepage::FortuneCollections::sorted_fortunes() })
+    foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
     {
         my $path = "t2/humour/fortunes/@{[$r->id()]}.html.wml";
         $class->_print_if_update_needed(

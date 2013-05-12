@@ -5,18 +5,24 @@ use warnings;
 
 use utf8;
 
-use base 'HTML::Widgets::NavMenu::Object';
-use base 'Class::Accessor';
+use MooX (qw( late ));
 
 use DateTime;
 
 use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
 
-__PACKAGE__->mk_accessors(qw(
-    dir
-    items
-    num_on_front
-    ));
+has 'dir' => (is => 'ro', isa => 'Str', default =>
+    sub {
+        return "../lib/feeds/shlomif_hsite";
+    }
+);
+
+has 'num_on_front' => (is => 'ro', isa => 'Int', default => sub { 7; } );
+
+has 'items' => (is => 'ro', isa => 'ArrayRef', default => sub {
+        return shift->calc_items();
+    }
+);
 
 my @old_news_items =
 (
@@ -215,18 +221,6 @@ sub calc_items
 {
     my $self = shift;
     return [@old_news_items, @{$self->calc_rss_items()}];
-}
-
-sub _init
-{
-    my $self = shift;
-
-    $self->dir("../lib/feeds/shlomif_hsite");
-    $self->num_on_front(7);
-
-    $self->items($self->calc_items());
-
-    return 0;
 }
 
 sub _wmlize

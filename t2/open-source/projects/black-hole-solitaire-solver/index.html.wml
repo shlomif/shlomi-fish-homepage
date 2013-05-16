@@ -18,7 +18,7 @@ the cards to move.
 
 <h2 id="download">Download</h2>
 
-<set-var ver="0.4.0" />
+<set-var ver="0.6.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -137,6 +137,15 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <h2 id="news">News</h2>
+
+<h3 id="news_version_0_6_0">Version 0.6.0</h3>
+
+<p>
+Version 0.6.0 of Black Hole Solitaire Solver was released. The highlights of
+this release are the inclusion of the NEWS file, the <tt>--help</tt>
+flag and most importantly the <tt>--display-boards</tt> flag that displays
+the intermediate board layouts after every move.
+</p>
 
 <h3 id="news_version_0_4_0">Version 0.4.0</h3>
 

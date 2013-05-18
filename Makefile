@@ -523,6 +523,8 @@ $(T2_DEST)/philosophy/case-for-file-swapping/revision-3/index.html: $(DOCBOOK4_R
 
 $(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-v3.xhtml
 
+$(T2_DEST)/philosophy/politics/drug-legalisation/hebrew.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation--hebrew-v3.xhtml
+
 $(T2_DEST)/philosophy/computers/open-source/foss-licences-wars/index.html : $(DOCBOOK4_RENDERED_DIR)/foss-licences-wars.html
 
 $(T2_DEST)/philosophy/obj-oss/rev2/index.html: $(DOCBOOK5_RENDERED_DIR)/objectivism-and-open-source.xhtml

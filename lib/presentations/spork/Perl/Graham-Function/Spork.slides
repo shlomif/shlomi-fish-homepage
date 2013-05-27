@@ -54,7 +54,7 @@ presentation_date: FILL IN
 
 * Keep a base of controlling vectors for each prime number.
 * Keep $n_vec - the vector starting with n[sq] that has to be composed out of the base.
-* As we encounter the next integer $i - 
+* As we encounter the next integer $i -
 00 Get its squaring factors
 00 Check if it's not square or prime (which are useless for us)
 00 Stair-shape it, by multiplying it with the controlling vectors of its factors
@@ -63,7 +63,7 @@ presentation_date: FILL IN
 * Once $n_vec becomes 0, we stop and return.
 ----
 == Optimizations
-* Memoizing the get_squaring_factors() function. 
+* Memoizing the get_squaring_factors() function.
 * The Memoize.pm module proved to be too heavy, so I used my own memoization code.
 ----
 == Largest Factor Optimization

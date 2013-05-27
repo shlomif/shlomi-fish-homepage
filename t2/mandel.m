@@ -58,7 +58,7 @@ for step=1:steps
     % 1 and 1 become two or so.
     mask = or(mask, current_mask);
     % Upgrade the points in the mask to a greater value in the returned
-    % Mandelbrot-map. 
+    % Mandelbrot-map.
     ret = ret + mask;
     % Zero the points that have overflowed, so they will not propagate
     % to infinity.

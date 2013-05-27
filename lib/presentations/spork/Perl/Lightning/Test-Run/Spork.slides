@@ -50,7 +50,7 @@ presentation_date: FILL IN
             $pct = sprintf("%.2f", $tot->{good} / $tot->{tests} * 100);
             my $percent_ok = 100*$tot->{ok}/$tot->{max};
             my $subpct = sprintf " %d/%d subtests failed, %.2f%% okay.",
-                                  $tot->{max} - $tot->{ok}, $tot->{max}, 
+                                  $tot->{max} - $tot->{ok}, $tot->{max},
                                   $percent_ok;
 
             my($fmt_top, $fmt) = _create_fmts($failedtests);
@@ -88,7 +88,7 @@ presentation_date: FILL IN
 == Let's start... coding!
 
 * The code of Test-Harness was forked.
-+* It was converted to have an object interface. 
++* It was converted to have an object interface.
 +** All functions were converted to accept the |$self| object reference as a first argument.
 +* Large functions were broken into smaller ones.
 +* Hashes were converted into objects.

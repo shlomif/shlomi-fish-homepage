@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: TT2 ( Perl Module Template-Toolkit 2.x )
-" References:   Template-Toolkit 2 
+" References:   Template-Toolkit 2
 "                   http://search.cpan.org/~abw/Template-Toolkit/
 "                   http://template-toolkit.org/
 "                   C:\> perldoc Template
@@ -115,7 +115,7 @@ syn keyword tt2_directive contained
             \ LAST NEXT BREAK STOP BLOCK
             \ IF IN UNLESS ELSIF FOR FOREACH WHILE SWITCH CASE
             \ USE PLUGIN MACRO META
-            \ TRY FINAL RETURN LAST 
+            \ TRY FINAL RETURN LAST
             \ CLEAR TO STEP AND OR NOT MOD DIV
             \ ELSE PERL RAWPERL END
 syn match   tt2_directive +|+ contained

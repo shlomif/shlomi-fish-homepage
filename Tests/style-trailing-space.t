@@ -5,31 +5,38 @@ use warnings;
 
 use Test::More tests => 1;
 
+use Test::TrailingSpace 0.0200;
+
 {
-    open my $ack_fh, '-|', 'ack', '-l', q/[ \t]+$/, '.'
-        or die "Cannot open ack for input - $!";
 
-    my $count_lines = 0;
-    ACK_OUTPUT:
-    while (my $l = <$ack_fh>)
-    {
-        chomp($l);
-
-        if ($l =~ m{\A(?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))}
-                or ($l =~ m{\Alib/MathJax})
-                or ($l =~ m{\Alib/presentations/docbook/html-tutorial})
-                or ($l eq 'lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.xhtml')
-                or ($l eq 'lib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.final.html')
-        )
+    my $finder = Test::TrailingSpace->new(
         {
-            next ACK_OUTPUT;
-        }
-        $count_lines++;
-        diag("$l\n");
-    }
+            root => '.',
+            filename_regex => qr/(?:\.(?:t|pm|pl|PL|yml|json|(?:x?html)|wml|xml))|README|Changes\z/,
+            abs_path_prune_re => qr#
+            \A(?:
+            (?:
+            (?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
+            )
+            |
+            lib/MathJax
+            |
+            lib/presentations/docbook/html-tutorial
+            |
+            (?:
+            \Qlib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.xhtml\E\z
+            )
+            (?:
+            |
+            \Qlib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.final.html\E\z
+            )
+            )
+            #msx,
+        },
+    );
 
-    # TEST
-    is ($count_lines, 0, "Count lines is 0.");
-
-    close($ack_fh);
+# TEST
+    $finder->no_trailing_space(
+        "No trailing space was found."
+    );
 }

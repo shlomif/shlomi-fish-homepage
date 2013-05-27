@@ -5,14 +5,14 @@ use warnings;
 
 use Test::More tests => 1;
 
-use Test::TrailingSpace 0.0200;
+use Test::TrailingSpace 0.0201;
 
 {
 
     my $finder = Test::TrailingSpace->new(
         {
             root => '.',
-            filename_regex => qr/(?:\.(?:t|pm|pl|PL|yml|json|(?:x?html)|wml|xml))|README|Changes\z/,
+            filename_regex => qr/(?:(?:\.(?:t|pm|pl|PL|yml|json|(?:x?html)|wml|xml|js))|README|Changes)\z/,
             abs_path_prune_re => qr#
             \A(?:
             (?:

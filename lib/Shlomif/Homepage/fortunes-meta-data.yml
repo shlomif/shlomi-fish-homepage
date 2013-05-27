@@ -1,71 +1,72 @@
 ---
 shlomif_fortunes_collections:
   fortunes:
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Quotes by <a href="$(ROOT)/personal.html">Shlomi Fish</a>, his close
       friends, or transcripts of IRC conversations in which he
       took part.
       </p>
-'
     desc: Collection of my own quotes.
     id: shlomif
     meta_desc: Shlomi Fish's Quotes as Fortunes Cookies
     page_title: Shlomi Fish's Quotes as Fortunes Cookies
     text: shlomif
     title: Quotes by Shlomi Fish
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       These are amusing or insightful fortunes I (= Shlomi Fish) collected from
       various sources. Most of them don’t appear elsewhere.
       </p>
-'
     desc: Favourite quotes from various sources.
     id: shlomif-fav
     meta_desc: Favourite Quotes
     page_title: Favourite Quotes
     text: shlomif-fav
     title: Other Favourite Quotes
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       A collection of excerpts from the Television show
       <a href="http://en.wikipedia.org/wiki/Friends">Friends</a> in
       XML-Grammar-Fortune format, as collected
       by Shlomi Fish. If you enjoy this, you may enjoy
       <a href="$(ROOT)/humour/TOWTF/">“The One with the Fountainhead”</a>.
       </p>
-'
     desc: 'Quotes from the scripts of the T.V. show Friends. They cover the first three seasons.'
     id: friends
     meta_desc: Quotes from Friends - (Fortunes Cookies)
     page_title: Quotes from Friends - (Fortunes Cookies)
     text: friends
     title: Excerpts from the T.V. Show Friends
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Quotations from or relating to the
       site <a href="http://www.joelonsoftware.com/">Joel on Software</a> by
       Joel Spolsky (see the <a href="http://en.wikipedia.org/wiki/Joel_Spolsky">wikipedia
       page about him</a>).
       </p>
-
-'
     desc: 'Quotes from the <a href="http://www.joelonsoftware.com/">Joel on Software</a> site.'
     id: 'joel-on-software'
     meta_desc: “Joel on Software” Quotes - (Fortunes Cookies) Shlomi Fish’s Collection
     page_title: “Joel on Software” Quotes - (Fortunes Cookies) Shlomi Fish’s Collection
     text: 'joel-on-software'
     title: 'Quotes from the site “Joel on Software”'
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Quotes from <a href="http://nadav.harel.org.il/">Nadav Har’El</a>’s
       signatures. They were extracted using a script.
-      </p>'
+      </p>
     desc: 'Collection of quotes found in the signatures of <a href="http://nadav.harel.org.il/">Nadav Har’El</a>, as collected using an automated script.'
     id: 'nyh-sigs'
     meta_desc: 'Collections of quotes from Nadav Har’El Signatures as Fortunes Cookies as collected by Shlomi Fish'
     page_title: 'Nadav Har’El Signatures - Fortunes Cookies - Shlomi Fish’s Collection'
     text: 'nyh-sigs'
     title: 'Nadav Har’El Signatures - Fortunes Cookies - Shlomi Fish’s Collection'
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Fortune cookies related to the Rules of Open Source Programming (see
       <a href="http://www.advogato.org/article/395.html">the Advogato feature</a>).
-      </p>'
+      </p>
     desc: '“The Rules of Open-Source Programming”.
       Also check a <a href="http://www.advogato.org/article/395.html">discussion of
       it</a> on
@@ -76,13 +77,13 @@ shlomif_fortunes_collections:
     page_title: 'Rules of Open Source Programming - Fortunes'
     text: osp_rules
     title: Rules of Open Source Programming
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       <a href="http://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul
       Graham</a> is a software developer and essayist who maintains
       <a href="http://www.paulgraham.com/">a web site with essays</a>. This is a
       collection of memorable quotes from there.
       </p>
-'
     desc: 'Quotes from the essays and writings
       of <a href="http://www.paulgraham.com/">Paul Graham</a>.'
     id: 'paul-graham'
@@ -90,10 +91,11 @@ shlomif_fortunes_collections:
     page_title: Paul Graham Fortune Cookies
     text: 'paul-graham'
     title: Paul Graham Quotes
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       These are fortune cookies related to the
       <a href="http://subversion.apache.org/">Subversion version control system</a>.
-      </p>'
+      </p>
     desc: 'Excerpts from the online <a href="http://subversion.tigris.org/">Subversion</a> folklore.'
     id: subversion
     meta_desc: Fortune Cookies and quotes related to the Subversion version control
@@ -101,9 +103,10 @@ shlomif_fortunes_collections:
     page_title: Subversion Fortune Cookies
     text: subversion
     title: Quotes from the Online Folklore of the Subversion Version Control System
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       The ultimate collection of reasons why there is no IGLU Cabal.
-      </p>'
+      </p>
     desc: 'The ultimate collection of reasons why
       “there is no IGLU cabal”, and other Israeli Linux on-line folklore.'
     id: tinic
@@ -111,11 +114,12 @@ shlomif_fortunes_collections:
     page_title: '“There is no IGLU Cabal” Quotes'
     text: tinic
     title: Quotes from the online Linux-IL Folklore
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Collection of conversations from
       <a href="http://perl-begin.org/FAQs/freenode-perl/">Freenode’s IRC
       Network #perl channel</a> and other related quotes.
-      </p>'
+      </p>
     desc: 'A collection of conversations from Freenode’s #perl .'
     id: sharp-perl
     meta_desc: 'Freenode #perl Conversations - (Fortunes Cookies) Shlomi Fish’s Collection'
@@ -135,11 +139,12 @@ shlomif_fortunes_collections:
     page_title: 'Freenode ##programming Conversations - (Fortunes Cookies) Shlomi Fish’s Collection'
     text: '##programming'
     title: 'Quotes from the Freenode ##programming channel'
-  - about_blurb: '<p>
+  - about_blurb: |
+      <p>
       Additions to <a href="http://www.shlomifish.org/humour/bits/facts/">the
       collections of Factoids about people and things (e.g: Chuck Norris)</a>
       in Unix fortune format.
-      </p>'
+      </p>
     desc: 'A collection of factoids about people and things (e.g: Chuck Norris).'
     id: shlomif-factoids
     meta_desc: 'Shlomi Fish and Friends’ Additions to the Chuck Norris/Etc. Facts'

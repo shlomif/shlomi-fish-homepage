@@ -44,7 +44,7 @@ function press_button(x, y)
     //document.mydebug.out.value += "Entering Press button (" + x + "," + y + ")\n";
 
     for(ix=min_x;ix<=max_x;ix++)
-    {        
+    {
         for(iy=min_y;iy<=max_y;iy++)
         {
             //document.mydebug.out.value += "(" + ix + "," + iy + ")\n";
@@ -61,7 +61,7 @@ function toggle_button(ix,iy)
     //document.mydebug.out.value += "SRC = " + button_handle.src + "\n";
     var old_src = button_handle.attr("src");
     //document.mydebug.out.value += "old_src_last = " + old_src_last + "\n";
-    
+
     var old_state = (old_src == "1.png")
     var new_state = !old_state;
 
@@ -72,7 +72,7 @@ function toggle_button(ix,iy)
         button_handle.attr("alt", "on");
     }
     else
-    {   
+    {
         button_handle.attr("src", "0.png");
         count_of_ons--;
         button_handle.attr("alt", "off");
@@ -88,7 +88,7 @@ function randomize_squares(new_N)
         for(y=0;y<N_squares;y++)
         {
             if (Math.random()*2 < 1)
-            {                
+            {
                 press_button(x,y);
             }
         }

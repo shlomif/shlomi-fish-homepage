@@ -81,7 +81,7 @@ presentation_date: FILL IN
         $state->register_params();
 
         $state->update_total_iters();
-        
+
         if ($self->total_boards_solved() == $self->num_boards())
         {
             $self->status("solved_all");
@@ -110,7 +110,7 @@ presentation_date: FILL IN
         (undef, $num_solved_in_iter, undef, $selected_scan_idx) =
             PDL::minmaximum(
                 PDL::sumover(
-                    ($self->scans_data() <= $iters_quota) & 
+                    ($self->scans_data() <= $iters_quota) &
                     ($self->scans_data() > 0)
                 )
               );
@@ -161,20 +161,20 @@ presentation_date: FILL IN
         # $r is the result of this scan.
         my $r = $state->idx_slice();
             # return $self->main()->scans_data()->slice(":,".$self->scan_idx())
-        
+
         # Add the total iterations for all the states that were solved by
         # this scan.
         $state->main()->add('total_iters',
             PDL::sum((($r <= $state->quota()) & ($r > 0)) * $r)
         );
-        
+
         # Find all the states that weren't solved.
         my $indexes = PDL::which(($r > $state->quota()) | ($r < 0));
-        
+
         # Add the iterations for all the states that have not been solved
         # yet.
         $state->main()->add('total_iters', ($indexes->nelem() * $state->quota()));
-        
+
         # Keep only the states that have not been solved yet.
         $state->main()->scans_data(
             $state->main()->scans_data()->dice($indexes, "X")->copy()
@@ -186,7 +186,7 @@ presentation_date: FILL IN
 * Back in inspect_quota():
 
     $state->update_total_iters();
-    
+
     if ($self->total_boards_solved() == $self->num_boards())
     {
         $self->status("solved_all");
@@ -202,8 +202,8 @@ presentation_date: FILL IN
         my $r = $state->idx_slice()->copy();
         # $r cannot be 0, because the ones that were 0, were already solved
         # in $state->update_total_iters().
-        $state->idx_slice() .= 
-            (($r > 0) * ($r - $state->quota())) + 
+        $state->idx_slice() .=
+            (($r > 0) * ($r - $state->quota())) +
             (($r < 0) * ($r                  ));
     }
 

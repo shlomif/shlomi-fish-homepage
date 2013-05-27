@@ -18,7 +18,7 @@ loop host = [myhosts]
     [host]_DEST = [DEST_BASE][[host]_DEST_DIR];
     [host]_WML_FLAGS = [WML_FLAGS] -DSERVER\=[host];
     [host]_DOCS_DEST = [patsubst [host]/%.wml [[host]_DEST]/% [[host]_DOCS]];
-    
+
     [host]_DIRS = [shell find [host] -type d | grep -v \'/\\.svn\' | grep -v \'^\\.svn\' | tail +2];
     [host]_DIRS_DEST = [patsubst [host]/% [[host]_DEST]/% [[host]_DIRS]];
     [host]_IMAGES = [shell find [host] -type f -not -name \'*.wml\' -not -name \'.*\' | grep -v \'/\\.svn\' | grep -v \'~$\'];

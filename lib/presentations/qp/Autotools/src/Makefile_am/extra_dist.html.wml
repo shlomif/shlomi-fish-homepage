@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+The <tt>EXTRA_DIST</tt> argument holds a list of all the files that are part
+of the package, but are not installed by default and were not specified
+in any other way.
+</li>
+
+<li>
+It includes such odds and ends as README files, internal headers and
+maintenance scripts.
+</li>
+
+</points>
+

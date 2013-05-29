@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+
+
+<p>
+The <tt>grep</tt> function can be used to filter items out of an array based
+on a boolean expression or a regular expression. The syntax for the block
+usage is similar to <tt>map</tt> while the syntax for the regexp usage is
+similar to <tt>split</tt>.
+</p>
+
+<p>
+Here is an example that takes a file and filters only the perl comments whose
+length is lesser than 80 characters:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/grep.pl" />
+</quadpres_code_block>
+
+<p>
+And here's how <tt>grep</tt> can help us find the first 100 primes:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/primes.pl" />
+</quadpres_code_block>
+

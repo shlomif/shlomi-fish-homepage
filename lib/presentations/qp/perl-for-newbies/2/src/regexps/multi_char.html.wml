@@ -1,0 +1,42 @@
+#include 'template.wml'
+
+<p>
+In this slide we will learn how to specify any character or that a character
+will be one of a range of several possible characters.
+</p>
+
+<h2>The "." stands for any character</h2>
+
+<p>
+By putting a <tt>.</tt> character inside a regular expression, it means
+that it can match any character, excluding a newline. For example,
+the following snippet matches 5 letter words that start with 'l' and end with
+'x':
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/l---x.pl" />
+</quadpres_code_block>
+
+<h2>The [ ... ] specifies more than one option for a character</h2>
+
+<p>
+When square brackets appear, one can specify more than one character inside
+them as option for matching. If the first character is <tt>^</tt> then they
+will match everything that is <b>not</b> one of the characters.
+</p>
+
+<p>
+One can specify a range of characters with the hyphen. For example the pattern
+<tt>[a-zA-Z0-9_]</tt> matches every alpha-numeric character.
+</p>
+
+<p>
+Here's an example that checks if a valid identifier for a perl variable is
+present in the string:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/perl_var.pl" />
+</quadpres_code_block>
+

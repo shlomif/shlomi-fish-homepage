@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+<points>
+<li>
+Automake takes as input the file <tt>Makefile.am</tt> and produces
+<tt>Makefile.in</tt>.
+</li>
+
+<li>
+The "autoconf" program takes as input the file <tt>configure.in</tt>
+(or in Autoconf 2.5 the file <tt>configure.ac</tt>) and generates the
+<tt>./configure</tt> script out of it.
+</li>
+
+<li>
+Autoheader takes as input the files <tt>acconfig.h</tt> and generates the
+<tt>config.h.in</tt> template by parsing <tt>configure.in</tt>.
+</li>
+
+<li>
+<tt>./configure</tt>, when ran by the user generates the normal
+<tt>Makefile</tt> out of <tt>Makefile.in</tt> and optionally processes other
+files (such as <tt>config.h.in</tt> -&gt; <tt>config.h</tt>, an optional
+RPM Spec, Makefiles in other directories, etc.
+</li>
+
+</points>
+
+<p>
+<img src="processing-diagram.png" alt="Processing the Files" />
+</p>
+

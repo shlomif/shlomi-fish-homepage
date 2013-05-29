@@ -1,0 +1,50 @@
+#include 'template.wml'
+
+<points>
+<li>
+The fractal explorer is a GIMP plug-in that can be used to render
+some fractals.
+</li>
+
+<li>
+It supports only a subset of all the known two-dimensional fractals, but
+it is quite powerful at rendering them.
+</li>
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Create an empty image.
+</li>
+
+<li>
+Invoke the Fractal Explorer with
+
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; Render -&gt; "Fractal Explorer..."
+</tt>
+</menupath>
+</li>
+
+<li>
+Play with it. (the upper-left preview is zoomable)
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+
+

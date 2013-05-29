@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+
+
+<p>
+In Perl, every module resides in his own file, and it is sometimes even
+necessary to put them inside a nested directory structure. (Note that it
+does not free a programmer from designating the module's name by a special
+header)
+</p>
+
+<p>
+So far all of our scripts were self-contained, but now we may have to see
+code of several files at once. To ease this transition every file will
+contain the filename in its header comment. The filename will be given in UNIX
+notation, with slashes (<i>/</i>) and all, and will be relative to
+the directory in which the script is executed.
+</p>
+
+
+

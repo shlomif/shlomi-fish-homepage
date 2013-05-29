@@ -1,0 +1,15 @@
+#include 'template.wml'
+
+<p>
+Perl provides several file tests that can be used to test a filehandle
+or filename for various conditions. <tt>-e filename</tt> determines if
+<tt>filename</tt> exists. <tt>-r</tt> determines if the file is readable,
+<tt>-w</tt> if it's writeable, <tt>-x</tt> if it is executable and so on.
+</p>
+
+<p>
+<tt>-d</tt> determines if the file is a directory, and <tt>-f</tt> if it's
+a plain file. For a list of other file tests and their use consult
+<tt>perldoc -f -X</tt>.
+</p>
+

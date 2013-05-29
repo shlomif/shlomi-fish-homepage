@@ -1,0 +1,422 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "The Linus Torvalds Bus Factor" />
+<latemp_meta_desc "The Value of Multiple Committers and of &quot;Hitting the Benevolent Dictator with a Bus&quot;" />
+
+<h2 id="about">About this Document</h2>
+
+<p>
+This is an email exchange, that was converted into a web page. While
+originally intended to start a discussion on
+<a href="http://lkml.org/">the Linux kernel mailing list</a> it is in fact
+more general, and illustrates a good point about open source software
+development.
+</p>
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+TODO : 5-April-2007
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+TODO : 8-April-2007
+</dd>
+</dl>
+
+<h3 id="licence">Licence</h3>
+
+<cc_by_british_blurb year="2006" />
+
+<h2>The Article Itself</h2>
+
+<h3 id="intro">First Email</h3>
+
+<p>
+The purpose of this email is two-fold:
+</p>
+
+<ol>
+<li>
+To make sure that Linus Torvalds hits himself with a bus. I.e.: resigns
+from his role as the benevolent dictator of the Linux kernel, at least
+temporarily.
+</li>
+
+<li>
+To advocate the enactment of a central git repository with several
+commiters.
+</li>
+</ol>
+
+<p>
+I’ll start with No. 2.
+</p>
+
+<p>
+From what I understood, at the moment, only Linus can commit or accept
+pulled changes to the repository of the vanilla tree. Other people have their
+own personal repositories as well. This system works, but I believe it is
+sub-optimal. Here are some examples why:
+</p>
+
+<ol>
+<li>
+<p>
+Subversion. 126 people with a commit bit - some of them inactive, but
+still. I recall being present at #svn or #svn-dev on Freenode and seeing the
+commits come by from the CIA bot constantly. (Some people apparently never
+sleep.)
+</p>
+</li>
+
+<li>
+<p>
+Pugs. Audrey Tang is extremely liberal about giving people commit access.
+She gives it to practically everyone who asks or who has something to
+contribute just so she or whoever, won’t be bothered with committing it
+themselves. Even I received a commit despite my notorious
+<a href="$(ROOT)/philosophy/computers/perl/perl6-critique/">perl6-critique
+essay</a>. Larry Wall has said that it makes Pugs
+<a href="http://www.perl.com/pub/a/2006/09/21/onion.html?page=3">“a
+happy hivemind. Er, I mean family”</a>.
+</p>
+<p>
+And Pugs still works pretty well, even if it is slow.
+</p>
+</li>
+
+<li>
+<p>
+KDE. KDE takes this to extreme. 100s of people with commit access - perhaps
+even 1,000s. Commits are handed out liberally. And yet KDE works very well,
+has many features, and is mostly bug free. It is so good that even the Linus
+uses it, and has advocated.
+</p>
+
+<p>
+Just for completeness sake, I should note that it also exists to some
+extent with GNOME, but I cannot testify how liberally the commits there are
+given. I have a commit bit there, too, but it took me some more time than
+with KDE, where I received it as a birthday present for my 24+57/365’s
+birthday.
+</p>
+</li>
+</ol>
+
+---------------
+
+<p>
+None of these projects are using git - they are using Subversion now, and some
+of them were using CVS to a great degree of the same effectiveness beforehand.
+And they are all doing very well, and the integrity of the code is preserved.
+</p>
+
+<p>
+Now, if we have the same for the Linux kernel (and I believe git has no problem
+allowing it), then it will simplify processses, facilitate commiting some
+simple changes, and generally make everyone happier. If Al Viro (for example)
+can commit directly to the central repository a patch that re-indents some
+code, it will be a better idea than to have him commit it to his own and then
+request Linus to pull it from there.
+</p>
+
+<p>
+Note that having many commiters does not mean anarchy. When I got a commit bit
+to the central Subversion repository, I still submitted most patches for peer
+review, because I was not confident enough to apply them myself. The same
+happened with the GIMP, where I received a full allowance to do whatever I
+pleased with the gimpressionist plug-in, but still was not confident in
+commiting my patches directly to the GIMP core without consulting anyone. So I
+sent them to peer review on the GIMP bug tracker, and after everyone were happy
+with them (which ususally involved several iterations), I was able to commit
+them.
+</p>
+
+<p>
+What the KDE people do is that they ensure the quality of the SVN snapshots
+by monitoring the commits feed, and by testing them extensively. And it works:
+KDE is relatively bug free, and works pretty well, despite the fact that
+everyone and his sister-in-law has a commit bit.
+</p>
+
+<p>
+Note that you don’t have to depend on Linus or whoever to do this. You can
+simply take the initiative and give commits to your own repository to people
+who trust. You can call it a subversive (pardon the pun with svn) movement.
+Linus may disapprove but since Linux is open source, you don’t need to ask
+him. If Linus wishes he can eventually pull the relevant changes from the
+multi-commit repository.
+</p>
+
+<p>
+Which brings us to issue No. 1:
+</p>
+
+<p>
+Ben Collins-Sussman and Brian Fitzpatrick talk in
+<a href="http://video.google.com/videoplay?docid=-4216011961522818645&amp;q=subversion+open+source">their Google Video presentation
+“How Open Source Project Survive Poisonous People (And You Can Too)”</a>
+about the “bus factor”: how many developers need to be hit by a bus so a
+project would be neutralised. This number is probably very high for the Linux
+kernel, as many people know its internals in and out.
+</p>
+
+<p>
+However, I’m worried about something slightly different. I’m worried about the
+fact that Linus Torvalds started the Linux kernel project, and is still
+heading it after 14 years, where it evolved from being a toy, to an
+“enterprise-grade, industrial strength” kernel that is used anywhere from
+8 MB embedded devices to super-computers, not to mention being the second or
+third most popular desktop system (and second on IBM PCs) and the second or
+first most popular for servers.
+</p>
+
+<p>
+I’m not saying Linus is not doing a good job - almost everyone agrees that
+he has been doing an exceptional job. However, being the benevolent dictator
+( “for life” ) has made him the bottleneck, the poster boy, the scape goat, the
+ultimate authority, and lots of other roles that he defaults to play. This is
+unhealthy for the project.
+</p>
+
+<p>
+It is known that <a href="http://en.wikipedia.org/wiki/Solon">Solon</a> said
+he was leaving Athens for a trip around the world, in the midst of his reform
+for several years. But he in fact moved to a nearby Island where he observed
+by proxy how they managed without him. Without being an insider of the Linux
+kernel mailing list, I believe Linus voluntarily leaving will have a positive
+effect.
+</p>
+
+<p>
+At the moment everyone defaults to Linus, but if he “hit himself with a bus”,
+they’ll have to manage without him. This will eventually lead to a better
+internal organisation, and a much more robust solution. There might be a
+different benevolent dictator. There might be a central git repository with
+many committers. There might be something else. But it will be better than it is
+today.
+</p>
+
+<p>
+I hate the term “benevolent dictator <b>for life</b>”, because it assumes the
+person cannot be overthrown or that there cannot be a mutiny (my term for coup)
+against him. A benevolent dictator in the free software world must not be for
+life because he may not be the best solution for ever.
+</p>
+
+<p>
+Now that I think of it, I find it sad that people think of the Linux kernel
+project as “Linus Torvalds’ baby”. Compare it to KDE which is a large amorphous
+meta-project, with no-one known in particular, to Subversion, which while
+having many prominent contributors has no poster child. And then there’s Perl,
+which while Larry Wall is its undoubted demi-god, has many other prominent
+figures.
+</p>
+
+<p>
+Of course, like I said, you can do a mutiny without asking Linus, by starting
+out a central repository for the kernel with many commiters. If this works,
+then this repository may eventually become the de-facto kernel (and Linus
+would no longer be the benevolent dictator). If it won’t work, then we’re not
+better off, but very little time was wasted.
+</p>
+
+<p>
+Linus *can* resign willingly, which may be even more desirable. However, the
+Linux kernel is a FOSS project after all, and if you don’t like something, you
+can always fork it, or at least create your own branch, patchset, etc. in the
+version control repository.
+</p>
+
+<p>
+Let the flames begin!
+</p>
+
+<h3 id="david_miller_response">David Miller’s Response</h3>
+
+<p>
+David Miller made a
+<a href="http://www.ussg.iu.edu/hypermail/linux/kernel/0703.3/1299.html">short
+response to the thread</a>:
+</p>
+
+<blockquote>
+<p>
+Please nobody reply to his posting, I’m shit-canning this thread from
+the start as it’s nothing but flame fodder.
+</p>
+</blockquote>
+
+<h3 id="my_response_to_DM">My Response to David Miller</h3>
+
+<p>
+<i>I sent the following response to David Miller after a while. It never
+arrived at LKML for some reason.</i>
+</p>
+
+<p>
+Hi Mr. Miller!
+</p>
+
+<p>
+Must resist urge.... people are human... they perform logical fallacies...
+</p>
+
+<p>
+Oh! What the heck!
+</p>
+
+<blockquote>
+<p>
+Please nobody reply to his posting.
+</p>
+</blockquote>
+
+<p>
+Fair enough.
+</p>
+
+<blockquote>
+<p>
+I’m shit-canning this thread from the start as it’s nothing but flame fodder.
+</p>
+</blockquote>
+
+<p>
+“<q>Nothing but flame fodder</q>”. How many logical fallacies are in these 4
+words:
+</p>
+
+<ol>
+
+<li>
+<p>
+Labeling. You’ve labeled my message as “flame fodder” so
+“it Must be the Truth”. But any assertion requires a burden of proof:
+</p>
+
+<p>
+Show me the Reasoning!!!
+</p>
+
+<p>
+( Who’s your m*****-f****ing Jewboy brother, David? )
+</p>
+</li>
+
+<li>
+<p>
+Lack of proof - see above.
+</p>
+</li>
+
+<li>
+<p>
+All or nothing thinking and over-generalisation. You’ve said it’s
+“nothing but flame fodder”, so you’ve told us that assuming it is indeed flame fodder
+(which may be the case) than it is *nothing but* that.
+</p>
+</li>
+
+<li>
+<p>
+Evasion - you’ve not replied to any of my suggestions or reasoning.
+Instead, you just implied “You suck”.
+</p>
+</li>
+
+</ol>
+
+<hr />
+
+<p>
+Now I’m not saying what I said is indeed a good idea. It may or may not be.
+But this is not the mature and philosophically valid way to deal with it.
+</p>
+
+<p>
+I purposely said “Let the flames begin” at the end to be whimsical and to let
+people think twice before they do it. I could consider what you wrote as
+a flame as well. (Although possibly a “fight fire with fire” one).
+</p>
+
+<p>
+For your information what I suggested has been
+<a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg16774.html">brewing
+up for a long time</a>.
+</p>
+
+<p>
+I wrote this message in the course of about two hours, and then consulted
+people on the IRC on it. I cited several URLs and references. I have made a
+lot of <a href="$(ROOT)/">contribution to free software in the past</a>, but
+even if I did not, I believe my suggestion should have been dealt with by
+explaining to me why what I suggested was a  bad idea, in your opinion.
+</p>
+
+<p>
+Best regards,
+</p>
+
+<p>
+-- Shlomi Fish (who happens to have a natural obsession with Applied Logic.
+It’s a curse, but often is also a blessing)
+</p>
+
+<h2 id="coverage">Coverage and Comments</h2>
+
+<ul>
+
+<li>
+<a href="http://shlomif.livejournal.com/41088.html">On my LiveJournal Blog</a>
+</li>
+
+<li>
+<a href="http://discuss.joelonsoftware.com/default.asp?joel.3.476011.0">On
+the Joel on Software Forum</a>
+</li>
+
+<li>
+<a href="http://zgp.org/pipermail/linux-elitists/2007-April/thread.html#11864">On
+the Linux Elitists mailing list</a>
+</li>
+
+<li>
+Someone I talked with about this incident (without showing him the actual
+letter) said that preventing flame wars by killing inflammable, but pertinent,
+topics was similar to preventing rape by killing all the women.
+</li>
+
+</ul>
+
+<hr />
+
+<define-tag camila_ron>
+;;; Sponsored by Camila Ron
+;;; Remove at 2013-06-15
+
+#include "camila_ron.wml"
+
+</define-tag>
+
+<camila_ron />
+
+
+

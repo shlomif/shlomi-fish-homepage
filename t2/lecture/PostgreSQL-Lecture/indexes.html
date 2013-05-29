@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Indexes to Tables</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Indexes to Tables</h1>
+<h3>* You can explicitly create indexes for table columns in
+PostgreSQL. Those indexes will speed up operations that look-up or
+sort according to values in those fields.<br />
+<br />
+* The "CREATE INDEX" command is used for this purpose.<br />
+<br />
+* Example:<br />
+<br />
+Create an index according to the last name:<br />
+<br /></h3>
+<pre>
+test=&gt; CREATE INDEX employees_last_name_index
+test-&gt;        ON employees
+test-&gt;        ( last_name ) \g
+CREATE
+</pre>
+<h3><br />
+Create an index on both the first name and last name:<br />
+<br /></h3>
+<pre>
+test=&gt; CREATE INDEX employees_first_and_last_name_index
+test-&gt;        ON employees
+test-&gt;        ( last_name, first_name ) \g
+CREATE
+</pre>
+<h3><br />
+* To remove an index use the "DROP INDEX" command.<br />
+<br />
+* Note: There is no "CREATE INDEX" command in the SQL 92
+standard.</h3>
+</body>
+</html>

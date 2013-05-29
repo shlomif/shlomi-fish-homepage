@@ -1,0 +1,41 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+To use the shell type a command and press enter.
+</li>
+<li>
+Once the command finished running, the shell prompt will re-appear, at which
+point you can enter another command.
+</li>
+<li>
+Here is an example session:
+</li>
+</points>
+
+<table border="1" summary="Example Session">
+<tr>
+<td>
+<pre>
+shlomi:~$ ls
+apps      cddb        Download      mail       nsmail          smart-link.txt~
+Arcs      CD-Writing  GNUstep       Mail       progs           tmp
+autosave  conf        index.html    Music      Projects        To_Send
+Backup    Desktop     ip-noise.fig  Nautilus   Rpms            Xrootenv.0
+bin       Docs        links         nohup.out  smart-link.txt
+shlomi:~$ pwd
+/home/shlomi
+shlomi:~$ cd Download/
+shlomi:~/Download$ ls
+Arcs  Docs  From_Win  Images  unpack
+shlomi:~/Download$ echo Something
+Something
+shlomi:~/Download$ cd ..
+shlomi:~$ exit
+</pre>
+</td>
+</tr>
+</table>
+
+

@@ -1,0 +1,47 @@
+#include 'template.wml'
+
+<p>
+When testing certain parts of the application, it is sometimes desirable to
+mimic the functionality of different parts, so the testing will be isolated.
+For example, if we're testing a server-side script (such as a CGI script),
+we may wish to provide a server-emulating object that's completely under
+our control and that inputs the script with our own parameters. This is
+called <b>mocking</b> (see
+<a href="http://en.wikipedia.org/wiki/Mock_object">the Wikipedia article
+about Mock objects</a>), and there are several mechanisms for doing so
+for Perl facilities:
+</p>
+
+<ul>
+
+<li>
+<a href="http://search.cpan.org/dist/Test-MockObject/">Test-MockObject</a>
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/Test-MockModule/">Test-MockModule</a>
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/DBD-Mock/">DBD-Mock</a> - mock
+databases for testing.
+</li>
+
+</ul>
+
+<p>
+With regard to mocking modules, one may opt to simulate loading a module using
+the Perl <tt>%INC</tt> variable (see
+<a href="http://perldoc.perl.org/perlvar.html">perlvar</a>) by doing
+something like:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/testing/MockModules.pm" />
+</quadpres_code_block>
+
+<p>
+After doing this, the tested code can do <tt>use CGI;</tt> and still think it
+loaded the original module, while actually it is using our own mocked
+version.
+</p>

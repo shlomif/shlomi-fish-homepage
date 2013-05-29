@@ -1,0 +1,47 @@
+#include '../template.wml'
+<latemp_subject "Gradient-Fu Patch for the GIMP" />
+<latemp_meta_desc "Patch for old versions of the GIMP to be able to perform gradient operations from within scripts and plug-ins." />
+
+<h2>Recent Note</h2>
+
+<p>
+The Gradient-Fu functionality was integrated into GIMP 2.2.0 and above. This
+page will remain here in case one is interested in versions of this patch for
+older GIMP versions.
+</p>
+
+<h2>About the Patch</h2>
+
+<p>
+This is a patch that exposes the functionality of the gradient editor to
+scripts and plug-ins by putting gradient-editing routines inside GIMP’s
+procedural database.
+</p>
+
+<h2>Download</h2>
+
+<ul>
+<li>
+<a href="gradient-fu-1.2.0.tar.gz">Patch for version 1.2.0</a>
+</li>
+<li>
+<a href="gradient-fu.tar.gz">Patch for version 1.0.4</a>
+</li>
+<li>
+<a href="gradient-fu-1.1.25.tar.gz">Patch for version 1.1.25</a>
+</li>
+<li>
+<a href="gradient-fu-1.1.28.tar.gz">Patch for version 1.1.28</a>
+</li>
+</ul>
+
+<h3><a href="1-3-x.html">Patch For Gimp 1.3.x</a></h3>
+
+<h2>Note</h2>
+
+<p>
+According to what I read in an interview with one of the GIMP’s developers,
+better gradient support is planned for GIMP 1.4 or GIMP 2.0. So I guess a
+functionality similar to what this patch offers will be available.
+</p>
+

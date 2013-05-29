@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<p>
+Let's demonstrate the object use cycle on a very useful Perl class
+called <tt>Data::Dumper</tt>. This class accepts a set of perl
+data structures, and renders them into a string which is an easy-to-read
+Perl representation of them.
+</p>
+
+<p>
+Here's a program that uses it to display a perl data structure on the
+screen:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/objects/object_use/data_dumper.pl" />
+</quadpres_code_block>
+

@@ -1,0 +1,41 @@
+#include 'template.wml'
+
+<p>
+Regular expressions are one of the most powerful features of Perl, but are
+also one of those that beginners find most difficult to understand. Don't let
+that fact discourage you: they are definitely worth your time.
+</p>
+
+<p>
+Basically, a regular expression tells the interpreter to search a string
+for a pattern. The pattern can be a simple one like the word "hello" or a
+complex one, such as the word "hello" followed by any number of instances of
+the word "one", followed by the word "triple". The latter will be
+written as <tt>hello(?:one)*triple</tt> inside a regular expression.
+</p>
+
+<p>
+The perl operators allow you to do three things with a regular expression:
+</p>
+
+<ol>
+<li>
+Check if it exists in the string at all.
+</li>
+<li>
+Retrieve various captures out of it.
+</li>
+<li>
+Retrieve all of its occurrences.
+</li>
+<li>
+Substitute the first occurrence or all of its occurrences with some other string
+or (perl) expression.
+</li>
+</ol>
+
+<p>
+Some perl functions such as <tt>split</tt> and <tt>grep</tt> (which will be
+covered later) can utilise regular expressions to do other tasks.
+</p>
+

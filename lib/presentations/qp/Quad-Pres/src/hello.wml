@@ -1,0 +1,142 @@
+#include 'template.wml'
+
+<:# line 0 "/tmp/ipp.13794.tmp":>
+<:# line 0 "intro.html.wml":>
+<:# line 0 "template.wml":>
+<:{
+
+    use Quad::Pres;
+    use Contents;
+
+
+    sub get_everything
+    {
+
+        my $contents = Contents::get_contents();
+
+        my $document_name = "intro.html" ;
+
+        $document_name =~ s/^\.//;
+        $document_name =~ s!\.wml$!!;
+        $document_name =~ s/index\.html//;
+        $document_name =~ s/^\///;
+
+        my $render_type = "server";
+
+        $qp = Quad::Pres->new($contents, $document_name, $render_type);
+
+        $text = $qp->get_navigation_bar();
+
+        $subject = $qp->get_subject();
+
+        $contents_tree = $qp->get_contents();
+
+        $title = $qp->get_title();
+   }
+
+}:>
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css"  />
+<title>{#SUBJECT_LOC#}</title>
+</head>
+<body>
+<:{
+    if (!defined($text))
+    {
+        get_everything();
+    }
+:}><table>
+<tr>
+</tr>
+</table>
+
+<h1>
+<:{
+    if (!defined($title))
+    {
+        &get_everything();
+    }
+
+    print $title;
+}:>
+</h1>
+{#BODY#}
+<hr />
+<:{
+    if (!defined($text))
+    {
+        get_everything();
+    }
+:}><table>
+<tr>
+</tr>
+</table>
+
+</body>
+</html>
+
+{#SUBJECT_LOC#:
+<:{
+    if (!defined($subject))
+    {
+        &get_everything();
+    }
+
+    print $subject;
+}:>
+:##}
+
+
+
+{#BODY#:
+
+<:# line 1 "intro.html.wml":>
+
+<ul class="point">
+<li>
+<a href="http://vipe.technion.ac.il/~shlomif/quadpres/">QuaD-Pres</a> is short
+for Quick and Dirty Presentations.
+</li>
+<li>
+It is a tool for creating HTML presentations that was created by Shlomi Fish
+to satisfy his presentation needs.
+</li>
+<li>
+This meta-presentation will cover QuaD-Pres and its use.
+</li>
+</ul>
+
+<p>
+<a href="<:{
+    print $qp->get_control_url($qp->get_next_url());
+}:>">For next</a>
+</p>
+<p>
+<a href="<:{
+    print $qp->get_control_url($qp->get_prev_url());
+}:>">For prev</a>
+</p>
+<p>
+<a href="<:{
+    print $qp->get_control_url($qp->get_contents_url());
+}:>">For contents</a>
+</p>
+<p>
+<a href="<:{
+    print $qp->get_control_url($qp->get_up_url());
+}:>">For up</a>
+</p>
+

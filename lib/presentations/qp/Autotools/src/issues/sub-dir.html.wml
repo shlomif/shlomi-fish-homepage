@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+To have a directory with its own separate <tt>configure</tt> script, first
+put it in the <tt>SUBDIRS</tt> variable of Makefile.am
+</li>
+
+<li>
+Then use the <tt>AC_CONFIG_SUBDIRS</tt> macro in <tt>configure.in</tt> to
+configure them as separate sub-directories.
+</li>
+
+<li>
+If a sub-directory inherits from the same subdirectory, then they will
+also be linked against all the shared libraries, which may not be
+desirable.
+</li>
+</points>
+

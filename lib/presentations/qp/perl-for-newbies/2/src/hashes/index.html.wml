@@ -1,0 +1,34 @@
+#include 'template.wml'
+
+<p>
+Hashes can be used to map a set of keys, each to his own value. Using a
+hash one can retrieve the value associated with each key, as well as get
+a list of all the keys present in the hash.
+</p>
+
+<p>
+To assign or retrieve the value of the key <tt>$mykey</tt> in the hash
+<tt>$myhash</tt> one uses the <tt>$myhash{$mykey}</tt> convention. To check if a
+key exists in a hash one should type <tt>exists($myhash{$mykey})</tt>
+which in turn returns a boolean value that corresponds to its existence.
+</p>
+
+<p>
+An array whose elements are the keys present in the hash can be retrieved
+by typing <tt>keys(%myhash)</tt>. Here's a short example, that runs a simple
+bank, that will illustrate this functionality:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/hashes/bank.pl" />
+</quadpres_code_block>
+
+<p>
+The following example, which is considerably shorter, uses a hash to
+find out if a list of strings contains only unique strings:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/hashes/unique.pl" />
+</quadpres_code_block>
+

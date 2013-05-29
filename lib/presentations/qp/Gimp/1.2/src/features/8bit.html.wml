@@ -1,0 +1,52 @@
+#include 'template.wml'
+
+
+
+<points>
+<li>
+The GIMP supports 8-bits per RGB colour value and 8-bit grayscale images.
+</li>
+
+<li>
+That means pixel values in the range 0 to 255.
+</li>
+</points>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo:</h3>
+
+<ol>
+<li>
+Open lena_color.jpg.
+</li>
+
+<li>
+Select the "Color Picker" tool from the toolbox.
+</li>
+
+<li>
+Click on pixels of the image (or drag while holding the mouse button) and
+see the colour values that exist there.
+</li>
+
+</ol>
+</td>
+</tr>
+</table>
+
+<points>
+<li>
+There's a patch available at
+<a href="http://film.gimp.org/">film.gimp.org</a> that adds 16-bit
+precision to the GIMP.
+</li>
+
+<li>
+It will be integrated into the main source tree in GIMP 2.0.
+</li>
+</points>
+

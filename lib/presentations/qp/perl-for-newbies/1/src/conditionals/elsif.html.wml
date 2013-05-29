@@ -1,0 +1,23 @@
+#include 'template.wml'
+
+<p>
+The full syntax of the if statement is as follows:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/elsif.pl" />
+</quadpres_code_block>
+
+<p>
+The N-th <tt>elsif</tt> block will be executed only if all the conditions
+in the previous blocks were not met <b>and</b> its own condition was met.
+</p>
+
+<p>
+You can do the same with nesting <tt>if</tt> statements inside <tt>else</tt>
+statements, but isn't it nice of perl to save you all those extra brackets
+and indentations?
+</p>
+
+
+

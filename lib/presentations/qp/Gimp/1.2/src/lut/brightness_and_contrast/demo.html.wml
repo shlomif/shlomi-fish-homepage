@@ -1,0 +1,46 @@
+#include 'template.wml'
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open <tt>lena.png</tt>.
+</li>
+
+<li>
+Show its histogram (<menupath>&lt;Image&gt; -&gt; Image -&gt; "Histogram..."</menupath>)
+</li>
+
+<li>
+Close the histogram.
+</li>
+
+<li>Access the Brightness and Contrast dialog
+(<menupath>&lt;Image&gt; - Image -&gt; Colors -&gt; "Brightness-Contrast..."</menupath>)
+</li>
+
+<li>Modify the Brightness and Contrast in some way.<br />
+<br />
+<b>Note</b>: the entire modified image is displayed in real-time because
+Brightness and Contrast changes are so easy to calculate.
+</li>
+
+<li>
+Open the Histogram dialog again to show its affects.
+</li>
+
+<li>
+Repeat if needed.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>

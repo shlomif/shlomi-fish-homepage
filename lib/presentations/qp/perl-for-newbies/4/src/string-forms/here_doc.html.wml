@@ -1,0 +1,50 @@
+#include 'template.wml'
+
+<p>
+In a here document, one specifies an ending string to end the string
+on a separate line, and between it, one can place any string he wishes.
+This is useful if your string contains a lot of irregular characters.
+</p>
+
+<p>
+The syntax for a here document is a <tt>&lt;&lt;</tt> followed by
+the string ending sequence, followed by the end of the statement. In
+the lines afterwards, one places the string itself followed by its
+ending sequence.
+</p>
+
+<p>
+Here is an example:
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/string-forms/here-doc.pl" />
+</quadpres_code_block>
+
+<p>
+Its output is:
+</p>
+
+
+<quadpres_code_block>
+The value of $x is: "Hello"
+The value of $str is: "There you go."
+The value of true is: "False"
+
+Hoola
+
+
+</quadpres_code_block>
+
+<p>
+Note that if the delimeters on the terminator after the <tt>&lt;&lt;</tt>
+are double-quotes (<tt>"..."</tt>), then the here-document will interpolate,
+and if they are single-quotes (<tt>'...'</tt>), it will not.
+</p>
+
+<p>
+An unquoted ending string causes the here-doc to interpolate, in case
+you encounter it in the wild. Note however, that in your code, you should
+always quote it, so people won't have to guess what you meant.
+</p>

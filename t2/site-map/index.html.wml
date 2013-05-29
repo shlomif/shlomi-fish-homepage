@@ -1,0 +1,16 @@
+#include '../template.wml'
+
+<latemp_subject "Site Map" />
+<latemp_meta_desc "Site map for Shlomi Fish’s web site (www.shlomifish.org)" />
+
+<div class="sitemap">
+<:{
+use strict;
+use warnings;
+
+_wrap_as_utf8 (sub {
+print (map { "$_\n" } @{$shlomif_main_expanded_nav_bar->gen_site_map()});
+});
+}:>
+</div>
+

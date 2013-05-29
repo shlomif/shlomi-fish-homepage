@@ -1,0 +1,421 @@
+<define-tag tagline>
+<preserve text />
+<set-var %attributes />
+
+<h2* id="tagline"><get-var text /></h2*>
+
+<restore text />
+
+</define-tag>
+
+<define-tag the_enemy_summary>
+
+<p>
+A member of the terrorist organisation “The Organisation” gets
+up in the morning, goes to his post, and quits. But before he
+leaves, he makes a suggestion that makes his former comrades
+fight each other to death. Join the now ex‐Member of the
+Organisation as he embarks on an ego trip, where he tries to
+prove that A can in fact be not‐A, whether or not Aristotle
+would agree.
+</p>
+
+</define-tag>
+
+<define-tag tow_the_fountainhead_abstract>
+
+<p>
+A parody of Ayn Rand’s novel,
+<a href="http://en.wikipedia.org/wiki/The_Fountainhead"><i>The
+Fountainhead</i></a>, modelled around a two part episode of
+the Television sitcom show
+<a href="http://en.wikipedia.org/wiki/Friends"><i>Friends</i></a>.
+Somewhat unhappy with the original book, the six friends in the show role-play
+their own version of <i>The Fountainhead</i>, while trying to improve upon it.
+Will they succeed?
+</p>
+
+<p>
+What was the <b>photo</b> of the Parthenon <b>replaced</b> with?<br />
+Why was <b>Chandler</b> happy to play Peter Keating?<br />
+Which element is featured in every second-rate <b>romantic novel</b>?<br />
+Which piece of advice did <b>Toohey</b> give Dominique Francon?<br />
+Why did <b>cruising</b> with Gail Wynand turn out to be a <b>bad idea</b>?<br />
+And who were the <b>bad</b> guys in the story?
+</p>
+
+<p>
+Read the screenplays to find out.
+</p>
+
+</define-tag>
+
+<define-tag we_the_living_dead_abstract>
+
+<p>
+In this fan episode of the Television show
+<a href="http://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine"><i>Star Trek: Deep Space Nine</i></a>,
+we discover the true essence of the Q Continuum, and meet
+some “living dead”: conscious beings (including humans) who reportedly died,
+but actually were saved and still live a prosperous life some place
+else in the universe, as well as “vampires”: individuals who never died and
+have instead remained alive since they were born.
+</p>
+
+<p>
+A Star Trek episode to end all Star Trek episodes, (and, more
+generally - story to end all stories).
+</p>
+
+</define-tag>
+
+<define-tag selina_mandrake_abstract>
+
+A geeky Anglo-American girl in her high school senior year in 2011
+California, finds out that she is none other than <b>The Slayer</b>,
+a legendary heroine who is destined to slay many notable vampires and demons,
+culminating in none other than The Master, the vampire with the oldest
+soul. See how she manages to do so, despite being completely non-violent, and
+even supportive of the demons she encounters.
+
+</define-tag>
+
+<define-tag summerschool_at_the_nsa_abstract>
+The Hollywood actresses
+<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah
+Michelle Gellar</a> (of
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy</a>
+fame) and
+<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> (of
+<a href="http://en.wikipedia.org/wiki/Xkcd">xkcd</a> notability)
+conspire to kick the ass of the
+<a href="https://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>
+(= the United States government’s National Security Agency), while using
+special warfare that is completely non-violent. Two attractive,
+intelligent, and resourceful women against a large, inefficient,
+federal government organisation whose estimated annual budget is
+several times their combined worth. Does the NSA actually stand
+a chance?
+</define-tag>
+
+<define-tag the_earth_angel_abstract>
+A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
+Angeles teaches a copyrights attorney all about life. My own modernisation
+of <a href="http://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas
+Shrugged</i></a> in 2013’s funky way.
+</define-tag>
+
+<define-tag pope_died_on_sunday_abstract__en>
+
+<p>
+Rachel Southern, an American graphic artist who lives and works in
+Milwaukee, did not expect the week following the death of the Roman Catholic
+Pope to be particularly notable for her, but boy was she wrong!
+</p>
+
+<p>
+From meeting a guy she really liked, to her best friend almost ruining a date
+with him, to her family coming to visit, to helping organise a “fashion-play”,
+to thinking about the answer to the question of Life, the Universe, and
+Everything — Rachel’s week proved to be one of the most hectic in her life.
+</p>
+
+<p>
+This story is still incomplete, and only a relatively small part of it has
+been written.
+</p>
+
+</define-tag>
+
+<define-tag pope_died_on_sunday_abstract__he>
+
+<p>
+רייצ'ל סאותרן, גרפיקאית אמריקת שגרה ועובדת במילוואקי, לא ציפתה שהשבוע
+שבא לאחר מותו של האפיפיור יהיה יוצא דופן עבורה באופן מיוחד,
+אבל היא טעתה… ובגדול!
+</p>
+
+<p>
+מלפגוש בחור שהיא מאוד חיבבה, עד לכך שהחברה הטובה ביותר שלה כמעט הרסה פגישה
+איתו, עד לכך שהמשפחה שלה באה לבקר, עד לכך שהיא עזרה לארגן ”הצגת אופנה“,
+עד למחשבה על התשובה לשאלת החיים, היקום והכל — השבוע של רייצ'ל הסתבר
+כאחד המטורללים ביותר בחייה.
+</p>
+
+<p>
+הסיפור הזה עדיין לא הושלם, ורק חלק קטן ממנו נכתב.
+</p>
+
+</define-tag>
+
+<define-tag pope_died_on_sunday_abstract>
+
+<preserve lang />
+
+<set-var %attributes />
+
+<let myabstract=pope_died_on_sunday_abstract__<get-var lang /> />
+<myabstract />
+
+<restore lang />
+
+</define-tag>
+
+<define-tag the_enemy_logo>
+<img src="$(ROOT)/humour/TheEnemy/images/The-Enemy-logo-small.png" alt="A = not-A" class="story_logo ene" />
+</define-tag>
+
+<define-tag tow_the_fountainhead_logo>
+<img src="$(ROOT)/humour/TOWTF/images/towtf-logo-200px.jpg" alt="The One With The Fountainhead Logo" class="story_logo towtf" />
+</define-tag>
+
+<define-tag selina_mandrake_logo>
+<img src="$(ROOT)/humour/Selina-Mandrake/images/Green-d10-dice.png" alt="1d10 die" class="story_logo selina" />
+</define-tag>
+
+<define-tag hhfg_logo>
+<img src="$(ROOT)/humour/human-hacking/images/hhfg-logo-small.png" alt="Human Hacking Field Guide Logo" class="story_logo hhfg" />
+</define-tag>
+
+<define-tag summernsa_logo>
+<img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" class="story_logo summernsa" />
+</define-tag>
+
+<define-tag selina_mandrake_common_top_elems>
+
+<tagline text="Caught between Post-modernism and the New Age" />
+
+<selina_mandrake_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<p class="selina abstract">
+<selina_mandrake_abstract />
+</p>
+
+</define-tag>
+
+<define-tag summerschool_at_the_nsa_common_top_elems>
+
+<tagline text="As the sling shoots, grown men will cry" />
+
+<summernsa_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<p class="summernsa abstract">
+<summerschool_at_the_nsa_abstract />
+</p>
+
+</define-tag>
+
+<define-tag tow_the_fountainhead_common_top_elems>
+
+<tagline text="<i>The Fountainhead</i> may have been good enough in the 60’s, but we’re in the Information Age now" />
+
+<div class="towtf abstract">
+
+<tow_the_fountainhead_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<tow_the_fountainhead_abstract />
+
+</div> ;;; class="towtf abstract"
+
+</define-tag>
+
+
+<define-tag pope_died_on_sunday_common_top_elems>
+
+<preserve lang />
+<set-var %attributes />
+
+<set-var tagline_he="וכך מתחיל מה שנראה כשבוע טיפוסי… או לא!" />
+<set-var tagline_en="And so starts what appears to be an ordinary week… or not!" />
+
+<tagline text="<get-var "tagline_<get-var lang />" />" />
+
+<set-var abstract_he="מבוא" />
+<set-var abstract_en="Abstract" />
+
+<div class="pope abstract">
+
+;;; TODO : Add a logo.
+
+<h2 id="abstract"><get-var "abstract_<get-var lang />" /></h2>
+
+<pope_died_on_sunday_abstract lang="<get-var lang />" />
+
+</div> ;;; class="pope abstract"
+
+<restore lang />
+
+</define-tag>
+
+<define-tag humour_link>$(ROOT)/humour/%0</define-tag>
+
+<define-tag humour_story endtag="required">
+<preserve id humour_href text tag />
+<set-var %attributes />
+<div class="story">
+<<get-var tag /> id="<get-var id />"><a
+href="<humour_link "<get-var humour_href />" />"><get-var text /></a></<get-var
+tag />>
+%body
+</div>
+<restore id humour_href text tag />
+</define-tag>
+
+<define-tag humour_stories_list_text>
+
+<humour_story tag="h3" id="enemy-how-i-helped" humour_href="TheEnemy/"
+text="The Enemy and How I Helped to Fight it">
+
+<the_enemy_logo />
+
+<p>
+A political satire about the situation that prevailed in the Israeli-Lebanese
+border. Lots of exits about mathematical logic, and a general critique of the
+irrationality guiding political bodies.
+</p>
+
+<the_enemy_summary />
+
+</humour_story>
+
+<humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
+text="The One with the Fountainhead">
+
+<tow_the_fountainhead_logo />
+
+<tow_the_fountainhead_abstract />
+
+</humour_story>
+
+<humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
+text="The Human Hacking Field Guide">
+
+<hhfg_logo />
+
+<p>
+A story about teenagers in Los Angeles, California, around 2005, who are
+dealing extensively with open-source development. An unlikely female
+<a href="http://catb.org/~esr/faqs/hacker-howto.html">software hacker</a>
+(not a computer intruder) wannabe is getting tutored by an even more
+unlikely, but much more experienced, female software hacker.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
+text="Star Trek: We the Living Dead">
+
+<we_the_living_dead_abstract />
+
+</humour_story>
+
+<humour_story tag="h3" id="selina-mandrake" humour_href="Selina-Mandrake/"
+text="Selina Mandrake - The Slayer (Buffy Parody)">
+
+<selina_mandrake_logo />
+
+<p>
+<selina_mandrake_abstract />
+</p>
+
+<p>
+This screenplay, a parody and reflection on
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
+Vampire Slayer</a> (both the movie and the show) and inspired by many
+other sources, is still under work, but is already in a usable state.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="summerschool-at-the-nsa" humour_href="Summerschool-at-the-NSA/"
+text="Summerschool at the NSA - A Screenplay">
+
+<summernsa_logo />
+
+<p>
+<summerschool_at_the_nsa_abstract />
+</p>
+
+<p>
+This screenplay is surrealistic realism and takes place in the spring-summer
+of 2013 - very farfetched, but could happen.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="the-earth-angel" humour_href="The-Earth-Angel/"
+text="The Earth Angel">
+
+<p>
+<the_earth_angel_abstract />
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="pope-died-on-sunday" humour_href="Pope"
+text="The Pope Died on Sunday">
+
+<pope_died_on_sunday_abstract lang="en" />
+
+</humour_story>
+
+<humour_story tag="h3" id="humanity" humour_href="humanity/" text="Humanity">
+
+<p>
+A parody about humanity and modern life in particular. Humanity describes
+a day in the life of a Semitic city circa 500 B.C.. Work in progress.
+</p>
+
+</humour_story>
+
+<humour_story tag="h3" id="blue-rabbit" humour_href="Blue-Rabbit-Log/"
+text="The Blue Rabbit Log">
+
+<p>
+Screenplays for a series of crazy comedy films parodying
+<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
+Role-Playing Games</a>. Join the band of the player characters called “The
+Blue Rabbit Adventuring Company”, as they journey in the imaginary role-playing
+world, and their struggles and
+encounters with monsters, the non-player characters, their players,
+and... the Game Master! (Muahahahahaha).
+</p>
+
+<p>
+Work in progress.
+</p>
+
+</humour_story>
+
+</define-tag> <!-- humour_stories_list_text -->
+
+<define-tag rejects_road_to_heaven>
+
+<humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/"
+text="The Road to Heaven is Paved with Bad Intentions">
+
+<p>
+The sequel to <i>The Enemy</i>. The protagonist travels back in time and tries
+to prevent World War II.
+</p>
+
+</humour_story>
+
+</define-tag>
+
+<define-tag screenplay_github_repo>
+<preserve url />
+<set-var %attributes />
+
+<a href="<get-var url />">Version control <b>repository</b> for the
+screenplay’s source</a> on GitHub. It is useful for cloning, sending pull
+requests, and filing bugs/issues in the bug tracker
+
+<restore url />
+</define-tag>

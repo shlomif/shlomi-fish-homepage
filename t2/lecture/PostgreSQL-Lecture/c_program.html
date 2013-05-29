@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang=
+"en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - C Program</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+<style type="text/css">
+<!--
+.Statement { color: #a52a2a; font-weight: bold; }
+.Special { color: #6a5acd; }
+pre { color: #000000; background-color: #ffffff; }
+body { color: #000000; background-color: #ffffff; }
+.PreProc { color: #a020f0; }
+.Constant { color: #ff00ff; }
+.Type { color: #2e8b57; font-weight: bold; }
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Same Program in C</h1>
+<pre>
+<span class="PreProc">#include </span><span class="Constant">&lt;stdio.h&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;libpq-fe.h&quot;</span>
+
+<span class="Type">void</span>
+exit_nicely(PGconn * conn)
+{
+    PQfinish(conn);
+    exit(<span class="Constant">1</span>);
+}
+
+<span class="Type">int</span> main()
+{
+    <span class="Type">char</span> * pghost, * pgport, * pgoptions, * pgtty;
+    <span class="Type">char</span> * dbName;
+
+    <span class="Type">char</span> name[<span class="Constant">256</span>];
+
+    <span class="Type">int</span> i, num_records;
+
+    PGconn * conn;
+    PGresult * res;
+
+    pghost = <span class="Constant">NULL</span>;
+    pgport = <span class="Constant">NULL</span>;
+    pgoptions = <span class="Constant">NULL</span>;
+    pgtty = <span class="Constant">NULL</span>;
+
+    dbName = <span class="Constant">&quot;test&quot;</span>;
+
+    conn = PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);
+
+    <span class="Statement">if</span> (PQstatus(conn) == CONNECTION_BAD)
+    {
+        fprintf(<span class="Constant">stderr</span>, <span class="Constant">&quot;Connection to database </span><span class="Special">\&quot;</span><span class="Special">%s</span><span class="Special">\&quot;</span><span class="Constant"> failed.</span><span class="Special">\n</span><span class="Constant">&quot;</span>, dbName);
+        fprintf(<span class="Constant">stderr</span>, <span class="Constant">&quot;</span><span class="Special">%s</span><span class="Constant">&quot;</span>, PQerrorMessage(conn));
+        exit_nicely(conn);
+    }
+
+    res = PQexec(conn, <span class="Constant">&quot;SET DateStyle = 'European'&quot;</span>);
+
+    <span class="Statement">if</span> ((!res) || (PQresultStatus(res) != PGRES_COMMAND_OK))
+    {
+        fprintf(<span class="Constant">stderr</span>, <span class="Constant">&quot;SET command failed</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+        PQclear(res);
+        exit_nicely(conn);
+    }
+    PQclear(res);
+
+    res = PQexec(conn,
+        <span class="Constant">&quot;SELECT first_name, last_name, hired_at&quot;</span>
+        <span class="Constant">&quot; FROM employees&quot;</span>
+        <span class="Constant">&quot; ORDER BY last_name, first_name&quot;</span>
+    );
+    <span class="Statement">if</span> ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK))
+    {
+        fprintf(<span class="Constant">stderr</span>, <span class="Constant">&quot;SELECT command did not return tuples properly</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+        PQclear(res);
+        exit_nicely(conn);
+    }
+
+    printf(<span class="Constant">&quot;</span><span class="Special">%-40s%-20s</span><span class="Special">\n</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;Name:&quot;</span>, <span class="Constant">&quot;Hired At:&quot;</span>);
+    <span class="Statement">for</span>(i=<span class="Constant">0</span>;i&lt;<span class="Constant">60</span>;i++)
+    {
+        printf(<span class="Constant">&quot;-&quot;</span>);
+    }
+    printf(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+
+    num_records = PQntuples(res);
+
+    <span class="Statement">for</span>(i = <span class="Constant">0</span> ; i &lt; num_records ; i++)
+    {
+        sprintf(name, <span class="Constant">&quot;</span><span class="Special">%s</span><span class="Constant"> </span><span class="Special">%s</span><span class="Constant">&quot;</span>, PQgetvalue(res, i, <span class="Constant">0</span>), PQgetvalue(res, i, <span class="Constant">1</span>));
+        printf(<span class="Constant">&quot;</span><span class="Special">%-40s%-20s</span><span class="Special">\n</span><span class="Constant">&quot;</span>, name, PQgetvalue(res, i, <span class="Constant">2</span>));
+    }
+
+    PQclear(res);
+
+    PQfinish(conn);
+
+    <span class="Statement">return</span> <span class="Constant">0</span>;
+
+}
+
+</pre>
+</body>
+</html>

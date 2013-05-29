@@ -1,0 +1,56 @@
+----
+presentation_topic: Subversion
+presentation_title: Subversion - an Introduction
+presentation_place: Aduva, Ramat-Gan, Israel
+presentation_date: 21-March-2006
+----
+== Subversion
+
++* "A compelling version control system".
++* Primarily aimed to solve the shortcomings of CVS:
++** Directories, renames, and file meta-data are versioned.
++** Commits are atomic.
++** Client/server protocol sends diffs in both directions.
++** Costs are proportional to change size, not data size.
++** Efficient handling of binary files.
++** Portable - clients and services run on UNIX and Win32.
+----
+== Other Advantages
+
++* Apache network server option, with WebDAV/DeltaV protocol.
++* Standalone server option.
++* Branching and tagging are cheap (constant time) operations.
++* Versioning of symbolic links.
+----
+== The Subversion Philosophy
+
++* Subversion - a versioned file system.
++* So the following operations work as expected:
++** svn add
++** svn mkdir
++** svn rm (or delete, remove or del)
++** svn move (or mv)
++** svn copy
+----
+== How to start using
+
++* Use "svn checkout" (or "svn co") to checkout a working copy.
++* Use "svn commit" (or "svn ci") to commit your changes.
++* Use "svn copy URL1 URL2" to branch and tag lines of development.
++* *Always put your working copy in a sub-directory of the repository* (usually named trunk), so you can branch and tag it later to a different directory.
+----
+== Demo
+
+----
+== More Resources
+
++* [The http://subversion.tigris.org/ Subversion Homepage] and [its http://subversion.tigris.org/links.html links page].
++* ["Version Control with Subversion" http://svnbook.red-bean.com/] - a comprehensive book available online.
+----
+== Thank You
+
+Thank you!
+
+Shlomi Fish
+http://www.shlomifish.org/
+

@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+
+
+<p>
+An object is basically a reference to a hash where the hash members
+are the object member variables. That reference is "blessed" to be associated
+with a module. Whenever the programmer makes a method call, the methods
+are being searched starting from that module. That module is the object's
+class.
+</p>
+
+<p>
+Method calls in perl are done using the
+<tt>$object_ref-&gt;method_name(@args)</tt> notation. Note that in Perl,
+passing the object reference is done explicitly and it is the first argument
+passed to the function.
+</p>
+
+
+

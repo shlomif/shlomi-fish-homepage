@@ -1,0 +1,117 @@
+=jqtree_list_style
+    list-style: square outside
+
+ul.jqtree-tree
+    margin-left: 12px
+    +jqtree_list_style
+    margin-bottom: 0
+    padding: 0
+    ul.jqtree_common
+        +jqtree_list_style
+        margin-bottom: 0
+        padding: 0
+        display: block
+        margin-left: 12px
+        margin-right: 0
+    li
+        &.jqtree-closed > ul.jqtree_common
+            display: none
+        &.jqtree_common
+            clear: both
+        padding-left: 1em
+        font-size: 14px
+    .jqtree-toggler
+        display: block
+        position: absolute
+        left: -1.5em
+        top: 30%
+        *top: 0
+        $toggler_height: 12px
+        /* fix for ie7
+        font-size: $toggler_height
+        line-height: $toggler_height
+        font-family: arial
+        /* fix for ie9
+        border-bottom: none
+        color: #262E7E
+        &:hover
+            color: #000
+    div
+        cursor: pointer
+        width: 100%
+        /* todo: why is this in here?
+        *width: auto
+        /* ie7 fix; issue 41
+        position: relative
+        display: inline
+
+    .jqtree-title
+        color: #1C4257
+        vertical-align: middle
+    li.jqtree-folder
+        margin-bottom: 4px
+        &.jqtree-closed
+            margin-bottom: 1px
+        .jqtree-title
+            margin-left: 0
+    .jqtree-toggler.jqtree-closed
+        background-position: 0 0
+
+span.jqtree-dragging
+    color: #fff
+    background: #000
+    opacity: 0.6
+    cursor: pointer
+    padding: 2px 8px
+
+ul.jqtree-tree
+    li.jqtree-ghost
+        position: relative
+        z-index: 10
+        margin-right: 10px
+        span
+            display: block
+            &.jqtree-circle
+                background-image: url(jqtree-circle.png)
+                background-repeat: no-repeat
+                height: 8px
+                width: 8px
+                position: absolute
+                top: -4px
+                left: 2px
+            &.jqtree-line
+                background-color: #0000ff
+                height: 2px
+                padding: 0
+                position: absolute
+                top: -1px
+                left: 10px
+                width: 100%
+        &.jqtree-inside
+            margin-left: 48px
+    span.jqtree-border
+        position: absolute
+        display: block
+        left: -2px
+        top: 0
+        border: solid 2px #0000ff
+        -webkit-border-radius: 6px
+        -moz-border-radius: 6px
+        border-radius: 6px
+        margin: 0
+    li.jqtree-selected > div
+        background-color: #97BDD6
+        background: -webkit-gradient(linear, left top, left bottom, from(#bee0f5), to(#89afca))
+        background: -moz-linear-gradient(top, #bee0f5, #89afca)
+        background: -ms-linear-gradient(top, #bee0f5, #89afca)
+        background: -o-linear-gradient(top, #bee0f5, #89afca)
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7)
+        &:hover
+            background-color: #97BDD6
+            background: -webkit-gradient(linear, left top, left bottom, from(#bee0f5), to(#89afca))
+            background: -moz-linear-gradient(top, #bee0f5, #89afca)
+            background: -ms-linear-gradient(top, #bee0f5, #89afca)
+            background: -o-linear-gradient(top, #bee0f5, #89afca)
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7)
+    .jqtree-moving > div .jqtree-title
+        outline: dashed 1px #0000ff

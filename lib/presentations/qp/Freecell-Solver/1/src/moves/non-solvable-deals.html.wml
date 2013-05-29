@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+Adrian Ettlinger sent me a few layouts he tested, with fewer Freecells
+than usual, that Freecell Solver could not solve.
+</li>
+
+<li>
+I realized that the reason Freecell Solver could not solve them was that
+a meta-move moved two cards in the opposite manner that would allow
+for a solution.
+</li>
+
+<li>
+The only way I could think of to solve this without messing my code completely
+would be to code move functions that would simply perform atomic moves.
+</li>
+
+<li>
+It was not done, yet.
+</li>
+
+</points>

@@ -1,0 +1,9 @@
+AC_CHECK_LIB(m, pow)
+
+if test "x$requires_libavl" = "xyes" ; then
+    AC_CHECK_LIB(avl, avl_create, [], [
+        echo "Error! You need to have libavl around."
+        exit -1
+        ])
+fi
+

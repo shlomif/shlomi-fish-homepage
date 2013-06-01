@@ -31,6 +31,43 @@ on search.cpan.org</a>.
 
 </define-tag>
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+<define-tag github_cpan_dist_links endtag="required">
+
+<preserve github_url dist freecode_url />
+
+<set-var %attributes />
+
+<ul>
+
+<li>
+<a href="<get-var github_url />">GitHub Repository</a> - contains version
+control and other resources.
+</li>
+
+<li>
+<a href="http://metacpan.org/release/<get-var dist />"><get-var dist />
+on MetaCPAN</a> - download, documentation, browsing and information.
+</li>
+
+<li>
+<a href="http://search.cpan.org/dist/<get-var dist />/"><get-var dist />
+on search.cpan.org</a>.
+</li>
+
+<if "<get-var freecode_url />" "<li><a href="<get-var freecode_url />">Freecode Record</a></li>" />
+
+%body
+
+</ul>
+
+<restore github_url dist freecode_url />
+
+</define-tag>
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 <define-tag cpan_mod whitespace="delete" endtag="required">
 <preserve m />
 <set-var %attributes />

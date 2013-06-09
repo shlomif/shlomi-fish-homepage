@@ -56,12 +56,26 @@ my $filename = 'lib/hunspell/whitelist1.txt';
     close ($fh);
 }
 
+sub rec_sorter
+{
+    my ($a_aref, $b_aref, $idx) = @_;
+
+    return (
+        (@$a_aref == $idx) ? -1
+        : (@$b_aref == $idx) ? 1
+        : (($a_aref->[$idx] cmp $b_aref->[$idx])
+        ||
+        rec_sorter($a_aref, $b_aref, $idx+1))
+    );
+}
+
 io($filename)->encoding('utf8')->print(
     map { "$_\n" }
     (
         @general_whitelist, '',
         (map
             { ("==== ".join(' , ', @{$_->{files}})), '', @{$_->{words}}, '' }
+            sort { rec_sorter($a->{files}, $b->{files}, 0) }
             @records
         )
     )

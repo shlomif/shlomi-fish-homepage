@@ -15,6 +15,7 @@ COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
+	--passoption=7,--skip=summary \
 	-DROOT~. -DLATEMP_THEME=better-scm \
 	-I $${HOME}/apps/wml \
 	$(DEV_WML_FLAGS)

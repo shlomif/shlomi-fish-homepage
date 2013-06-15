@@ -35,10 +35,6 @@ pw_d.projectwonderful_background_color = "";
 </noscript>
 </define-tag>
 
-<define-tag on_not_xhtml5 endtag="required">
-<if "<latemp_mynot "<latemp_is_xhtml5 />" />" "%body" />
-</define-tag>
-
 <define-tag project_wonderful_top_proto>
 <!-- Project Wonderful Ad Box Loader -->
 <script type="text/javascript">

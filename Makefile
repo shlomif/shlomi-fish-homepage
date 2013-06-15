@@ -121,7 +121,7 @@ upload_local: upload_deps
 upload_backup: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
 
-upload: upload_remote
+upload: upload_beta
 
 upload_remote: upload_local upload_remote_only
 
@@ -138,7 +138,7 @@ upload_var: upload_deps upload_var_without_deps
 upload_var_without_deps:
 	( cd $(T2_DEST) && $(RSYNC) -a --inplace . /var/www/html/shlomif/homepage-local/ )
 
-upload_beta: upload_deps
+upload_beta: upload_deps upload_local
 	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor/ )
 clean:
 	rm -fr $(T2_DEST)/*

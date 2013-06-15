@@ -7,7 +7,8 @@
 ;;; OpenID-enabling http://www.shlomifish.org/ - see:
 ;;; http://blog.woobling.org/2009/05/your-openid-sucks.html
 <set-var openid="http://shlomif.livejournal.com/">
-<meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
+<if "<latemp_mynot "<latemp_is_xhtml5 />" />"
+    "<meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />" />
 <link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
 <link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
 <link rel="openid.delegate" href="<get-var openid />" />

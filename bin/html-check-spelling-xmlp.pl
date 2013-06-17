@@ -36,12 +36,12 @@ my %per_filename_whitelists;
         {
             # Do nothing.
         }
-        elsif ($l =~ /\A====(.*)/)
+        elsif ($l =~ /\A====\s*(.*)/)
         {
             @current_whitelists_list =
             (
                 map { $per_filename_whitelists{$_} ||= +{} }
-                split /,/, $1
+                split /\s*,\s*/, $1
             );
         }
         else

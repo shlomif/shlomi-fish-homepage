@@ -651,17 +651,17 @@ $(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS)
 
-FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
+FORTUNES_TIDY = tidyp -asxhtml -utf8 -quiet
 
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
 $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
 	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
-		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
+		$(FORTUNES_TIDY) --show-warnings no -o "$$f".xhtml "$$f" || true; \
 		mv -f "$$f.xhtml" "$$f"; \
 	done
-	$(FORTUNES_TIDY) -o $@ $<
+	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
@@ -917,7 +917,7 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_S
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
 	(cd $(patsubst %/slides/start.html,%,$@) && \
 		shspork -make && \
-		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; perl -lpi -e 's/[\t ]+\z//' "$$I" ; done)) && \
+		(cd slides/ && (for I in *.html ; do tidyp -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; perl -lpi -e 's/[\t ]+\z//' "$$I" ; done)) && \
 		(find template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') \
 	)
 	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/

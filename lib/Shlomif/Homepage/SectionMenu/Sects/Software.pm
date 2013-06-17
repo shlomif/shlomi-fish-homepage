@@ -161,6 +161,11 @@ my $software_tree_contents =
                     title => "Delay for a certain seconds, while displaying the remaining time",
                 },
                 {
+                    text => "sky",
+                    url => "open-source/projects/sky/",
+                    title => "Upload a file and get a URL back.",
+                },
+                {
                     text => "Spark - A Lisp Dialect",
                     url => "open-source/projects/Spark/",
                     subs =>

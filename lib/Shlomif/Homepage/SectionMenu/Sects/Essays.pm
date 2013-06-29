@@ -233,6 +233,32 @@ my $essays_tree_contents =
                     ],
                 },
                 {
+                    text => "Netiquette",
+                    url => "philosophy/computers/netiquette/",
+                    title => "Articles and Links about Netiquette - the Internet Etiquette",
+                    subs =>
+                    [
+                        {
+                            text => "Email",
+                            url => "philosophy/computers/netiquette/email/",
+                            title => "Articles and Links about E-mail netiquette.",
+                            subs =>
+                            [
+                                {
+                                    text => "Start New Thread",
+                                    url => "philosophy/computers/netiquette/email/start-new-thread.html",
+                                    title => "How to start a new thread",
+                                },
+                                {
+                                    text => "Reply to List",
+                                    url => "philosophy/computers/netiquette/email/reply-to-list.html",
+                                    title => "Reply to List on a Mailing List Post",
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
                     text => "My Memoirs",
                     url => "prog-evolution/",
                     title => "My Memoirs as a Programmer",

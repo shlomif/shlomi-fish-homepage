@@ -1745,5 +1745,61 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="solving-the-halting-problem">
+        <meta>
+            <title>Solving the Halting Problem</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="inf-groupoid">o0elise0o: mv seems pretty clear to me</saying>
+<saying who="o0elise0o">i cant think of anything linux doesnt have aside from stability with a gui</saying>
+<saying who="inf-groupoid">o0elise0o: There are lots of obscure commands, but mv is not one of them.</saying>
+<saying who="o0elise0o">no i mean mv makes sense</saying>
+<saying who="rindolf">o0elise0o: Linux cannot solve the halting problem.</saying>
+<saying who="rindolf">o0elise0o: but neither can Windows.</saying>
+<saying who="o0elise0o">but have no cls with every other command shortened seems odd to me</saying>
+<saying who="Oxyd">Linux can solve the halting problem: kill -9 &quot;$pid&quot; &amp;&amp; echo &quot;Halts&quot;</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Cutting the Gordian Knot</tagline>
+            </info>
+        </irc>
+    </fortune>
+    <fortune id="what-to-do-about-becoming-enraged-by-Java">
+        <meta>
+            <title>What to do about Becoming Enraged By Java</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="swineflu">is there away i can basicly do if (input.equals(&quot;1&quot; || &quot;2&quot; || &quot;3&quot;)) {</saying>
+<saying who="rindolf">swineflu: if (input.equals(&quot;1&quot;) || input.equals(&quot;2&quot;).</saying>
+<saying who="rindolf">swineflu: Perl 6 has junctions for this.</saying>
+<saying who="Znoosey">swineflu: in which language?</saying>
+<saying who="swineflu">in java</saying>
+<saying who="swineflu">also thats uglyyyyyy</saying>
+<saying who="Znoosey">then rindolfs way is the way to do it</saying>
+<saying who="limbo_">swineflu: case from java 7 on, before that just use ifs</saying>
+<saying who="Znoosey">rindolf: is perl 6 out of beta yet?</saying>
+<saying who="rindolf">Znoosey: well, they released Rakudo Star, but it&#39;s not very usable.</saying>
+<saying who="Znoosey">ah</saying>
+<saying who="Znoosey">rindolf: do you know when it will be done?</saying>
+<saying who="rindolf">Znoosey: I wouldn&#39;t recommend people to use Perl 6, but its junctions are still a cool feature and there&#39;s a Perl 5 impl at https://metacpan.org/module/Perl6::Junction .</saying>
+<saying who="swineflu">java enrages me</saying>
+<saying who="Rounin">You should stop implementing the Enrageable interface, swineflu</saying>
+<saying who="Rounin">A common rookie mistake</saying>
+<saying who="swineflu">Enrageable interface = swing</saying>
+<saying who="Rounin">Instead you need a HarmoniousAndConstructiveReactionAccessorFactoryDAOInjector Object</saying>
+<saying who="Rounin">You get it by incentivizing an EJB SproinkJunk</saying>
+<saying who="Rounin">In your supplication gridwork of choice</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Programmer Programming Programmer</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

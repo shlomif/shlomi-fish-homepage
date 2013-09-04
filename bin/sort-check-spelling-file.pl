@@ -74,7 +74,7 @@ io($filename)->encoding('utf8')->print(
     (
         @general_whitelist, '',
         (map
-            { ("==== ".join(' , ', @{$_->{files}})), '', @{$_->{words}}, '' }
+            { ("==== ".join(' , ', @{$_->{files}})), '', (sort { $a cmp $b } @{$_->{words}}), '' }
             sort { rec_sorter($a->{files}, $b->{files}, 0) }
             @records
         )

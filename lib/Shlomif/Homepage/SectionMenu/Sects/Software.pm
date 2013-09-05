@@ -370,6 +370,11 @@ my $software_tree_contents =
                     url => "open-source/anti/SOAP/",
                     title => "Some links against SOAP (the so-called “Simple Object Access Protocol”)",
                 },
+                {
+                    text => "Links against TIOBE",
+                    url => "open-source/anti/TIOBE/",
+                    title => "Some links against the TIOBE index, which aims to measure programming languages’ popularity",
+                },
             ],
         },
         {

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>
+The TIOBE index is meaningless
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="/static/default.css" media="screen"/>
+<link rel="icon" type="image/png" href="/static/icon.png"/>
+</head>
+<body id="tiobe">
+<div id="wrapper">
+<div class="navigation" id="navtop">
+<div class="path">
+<a href="/">Root</a> → 
+<a href="/programming/">programming</a></div>
+<div class="dirs">
+</div>
+<div class="files">
+<ul>
+<li>
+<a href="/programming/monads-are-a-class-of-hard-drugs">Monads are a class of hard drugs</a></li>
+<li>
+<a href="/programming/serializing-universal-types-as-s-expressions-using-sexplib">Serializing universal types as S-expressions using Sexplib</a></li>
+<li>
+<span class="active">
+The TIOBE index is meaningless
+</span>
+</li>
+<li>
+<a href="/programming/transparent-performance">Transparent performance</a></li>
+</ul>
+</div>
+</div>
+<div class="logo" id="logo">
+<a href="http://lambda-diode.com/"></a></div>
+<div id="title">
+The TIOBE index is meaningless
+</div>
+<div class="abstract">
+<p>
+ 
+The 
+<a href="http://www.tiobe.com/index.htm?tiobe_index"> TIOBE index</a> 
+ranks
+ 
+programming languages.  It claims to be based "on the world-wide availability
+ 
+of skilled engineers, courses and third party vendors".  But how can they
+ 
+reliably and automatically mine such infomration using just search engine
+ 
+results?
+</p>
+</div>
+<div class="body">
+<p>
+ 
+Actually, not only is their data not very reliable, but it is also prone to
+ 
+"spamming", because search engines are!  And this is why we see a totally
+ 
+obscure experimental Forth-like language such as "Factor" get in the top 50.
+ 
+There is only one explanation: the TIOBE index is simply a combination of the
+ 
+number of results of some search queries at major search engines;  as a handful
+ 
+of persons regularly post articles about Factor at social bookmarking sites
+ 
+such as Reddit or at Wikipedia, this artificially inflates their position.
+</p>
+<p>
+ 
+The other explanation is that Factor is legitimately getting a lot of web
+ 
+attention.  But that's absurd, since it doesn't deserve any serious attention.
+ 
+I mean, it is on the same level as Brainfuck.  Brainfuck is interesting to
+ 
+programming language geeks.  Factor can be interesting to Forth geeks, or
+ 
+compilation geeks.  But that's not what TIOBE is about.
+</p>
+<p>
+ 
+In the real world, there is no Factor.  It is just a virtually unknown obscure
+ 
+experimental language with a small fandom that managed to get into a mostly
+ 
+meaningless index.  You want proof?
+</p>
+<p>
+ 
+There is not a single scholarly article about it, not a single PhD about it,
+ 
+actually not a single known application written in Factor, no single school
+ 
+giving courses in Factor; in fact, Factor isn't even in the Debian
+ 
+distribution, while Brainfuck, which is also an obscure language, is.  How many
+ 
+persons in the world are paid to write Factor code?
+</p>
+<p>
+ 
+But then it could be that Factor is the language of the future, and TIOBE is
+ 
+very good at picking languages of the future?
+</p>
+<p>
+ 
+It seems that TIOBE is just very good at picking spamming effort.  Consider the
+ 
+following important languages, which are not in the top 50.
+</p>
+<p>
+ 
+Let's show that the rankings at the TIOBE index do not map to language
+ 
+importance according to any criteria other than web hype:
+</p>
+<ul>
+<li>
+<p>
+ 
+VHDL, an industry-standard hardware description language, is not even in the
+ 
+top 50.  Verilog isn't even mentioned on the TIOBE page.
+</p>
+</li>
+<li>
+<p>
+ 
+Ocaml is a well-known, academically developed state-of-the art functional
+ 
+language that has been around for ten years (and much more if you count its
+ 
+direct ancestor Caml).  Typing 
+<tt> ocaml OR "objective caml" OR caml</tt> 
+at Google
+ 
+scholar returns about 
+<em> ten thousand</em> 
+results.  Ocaml is also used as a language
+ 
+in 173 Debian packages, of which 40 are end-user applications (i.e., not
+ 
+dependencies).  Ocaml has thousands of users, is teached at hundreds of
+ 
+schools, and has Intel, Dassault Systems and Microsoft in its consortium.  F
+ 
+#
+ 
+is an Ocaml derivative for .NET.  Yet, Ocaml is not in the top 50, while the
+ 
+obscure Factor is.   This simply means that the TIOBE metric is absolutely
+ 
+meaningless.
+</p>
+</li>
+<li>
+<p>
+ 
+Actually there is an ML at position 42, but which ML is that?  SML?  XML?
+ 
+HTML?  YaML?  But that doesn't include Ocaml, since it's mentioned elsewhere.
+</p>
+</li>
+<li>
+<p>
+ 
+Languages which legitimately have buzz around them include Scala, which is
+ 
+academically developed, and has many posts about it at Reddit.  Still not in
+ 
+top 50.
+</p>
+</li>
+</ul>
+<p>
+ 
+The other languages cited in the top 50 are usually vendor-specific languages
+ 
+of products that have some momentum; for many of those languages, knowledge of
+ 
+the language is indistinguishable from knowledge of the particular software
+ 
+product.  And what the hell is 
+<tt> PL fucking I</tt> 
+doing in a 2008 list of the top
+ 
+50 languages?
+</p>
+<p>
+ 
+So, while obscure experimental languages and vendor-specific scripting
+ 
+frameworks clutter the top 50 list, industrially and academically important
+ 
+real-world languages such as VHDL, Verilog or Ocaml are relegated to the end or
+ 
+not mentioned at all.
+</p>
+</div>
+<div id="signature">
+<ul>
+<li>
+Berke Durak
+</li>
+</ul>
+2008-02-02
+</div>
+</div>
+</body>
+</html>

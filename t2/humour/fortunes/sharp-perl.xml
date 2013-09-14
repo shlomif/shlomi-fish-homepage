@@ -6443,5 +6443,117 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-the-god-object">
+        <meta>
+            <title>The God Object</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="mst">the problem is Ovid tends to compose dozens of roles into classes for no reason I&#39;ve ever been able to work out</saying>
+<saying who="popl">maybe he&#39;s just being complete?</saying>
+<saying who="mst">no</saying>
+<saying who="mst">otherwise I wouldn&#39;t be criticising it</saying>
+<saying who="popl">ok</saying>
+<saying who="mst">he&#39;s fallen into what I refer to as the PantheonObject anti-pattern</saying>
+<saying who="mst">i.e. breaking a GodObject up into a dozen roles</saying>
+<saying who="popl">haha</saying>
+<saying who="popl">mst: when are you writing your book? :P</saying>
+<saying who="Su-Shee">if a god object is broken into a dozen roles, surely they&#39;re disciple roles...</saying>
+<saying who="popl">Su-Shee++</saying>
+<saying who="popl">Su-Shee: I think you just caused a rift in the Church.</saying>
+<saying who="Altreus">if you instantiate a God object what happens to the rest of society</saying>
+<saying who="Su-Shee">Altreus: well Luther and Calvin start refactoring...</saying>
+<saying who="anno">Luther and Hobbes</saying>
+<saying who="popl">hurr</saying>
+<saying who="popl">sometimes we are so esoteric it is actually painful :P</saying>
+<saying who="Su-Shee">well ok, first Henry VIII publishes a mean spirited book about design pattern and splits from the one true Object.</saying>
+<saying who="Su-Shee">then Calvin and Luther start refactoring.</saying>
+<saying who="thrig">popl: it&#39;s no Voynich manuscript</saying>
+<saying who="LWA">well, then the refactoring was done by wycliff, luther, calvin, zwingli?</saying>
+<saying who="Su-Shee">LWA: damn, forgot zwingli.</saying>
+<saying who="mauke">sounds chinese</saying>
+<saying who="uri_">mst: i will leave the bloviating to you! :)</saying>
+<saying who="popl">Henry VIII&#39;s patterns all involved removing encapsulation</saying>
+<saying who="anno">and hus. you need hus</saying>
+<saying who="popl">thrig: nothing ever is</saying>
+<saying who="Su-Shee">popl: mostly, he removed wives ;)</saying>
+<saying who="huf">unless you&#39;re vegetarian, in which case you dont have much use for hus</saying>
+<saying who="Su-Shee">you&#39;re confusing it with jus. ;)</saying>
+<saying who="popl">LWA: wyclef?</saying>
+<saying who="mst">zwingli sounds like it should be what the third non-alpha character on a variable should be</saying>
+<saying who="mst">$ # sigil</saying>
+<saying who="mst">$^ # twigil</saying>
+<saying who="mst">$^? # zwingli</saying>
+<saying who="Su-Shee">mst: sigil, twigil, zwingil.</saying>
+<saying who="LWA">popl: https://en.wikipedia.org/wiki/John_Wycliffe</saying>
+<saying who="huf">no not -il</saying>
+<saying who="huf">-li</saying>
+<saying who="popl">LWA: yeah I know :)</saying>
+<saying who="huf">too few words end in -li :)</saying>
+<saying who="popl">LWA: Bad joke. :(</saying>
+<saying who="Su-Shee">huf: IN YOUR LANGUAGE MAYBE</saying>
+<saying who="popl">LWA: https://en.wikipedia.org/wiki/Wyclef_Jean</saying>
+<saying who="mauke">chili</saying>
+<saying who="huf">Su-Shee: i meant in english</saying>
+<saying who="Su-Shee">huf: what the dutch have with their -je, the swiss have with -li</saying>
+<saying who="huf">Su-Shee: _i_ say google as gugli :)</saying>
+<saying who="Su-Shee">huf: english schmenglish(li)</saying>
+<saying who="popl">huf: weirdo</saying>
+<saying who="mauke">huf: that&#39;s adorabli</saying>
+<saying who="popl">mauke++</saying>
+<saying who="huf">maukele :)</saying>
+<saying who="popl">maukelele?</saying>
+<saying who="LWA">mauke: this is silli</saying>
+<saying who="huf">everyone gets mangled.</saying>
+<saying who="dispersed">silli is a fish</saying>
+<saying who="Su-Shee">huf: we&#39;ve decided last year in the office to pronounce &quot;Kindle&quot; swabian-german. it sounds so much better.</saying>
+<saying who="huf">oh yeah, kindle is definitely kindli</saying>
+<saying who="Su-Shee">hufli, maukli, popli.</saying>
+<saying who="popl">\o/</saying>
+<saying who="huf">huffancs is more common</saying>
+<saying who="dispersed">peril!</saying>
+<saying who="dispersed">... oops</saying>
+<saying who="dispersed">perli i meant</saying>
+<saying who="mauke">perl -li</saying>
+<saying who="anno">230 matches for /li$/</saying>
+<saying who="dispersed">i have noticed that saying a piece of software is a &quot;4000 line perl script&quot; with the perl sounding like &#39;peril&#39; is a really convincing argument</saying>
+<saying who="Su-Shee">send a pingli, vasily!</saying>
+<saying who="Su-Shee">gentli.</saying>
+<saying who="popl">gentlefolk, surely</saying>
+<saying who="dispersed">sureli</saying>
+<saying who="Su-Shee">popl: gentlifolk.</saying>
+<saying who="popl">dispersed: Don&#39;t call me Shirley</saying>
+<saying who="Su-Shee">great now I have swiss german in my head.</saying>
+<saying who="popl">Su-Shee: is that a cheese?</saying>
+<saying who="Su-Shee">and god do I wish anybody would understand Asterix puns because.. man Asterix in Switzerland is just amazing.</saying>
+<saying who="dispersed">u_n  o_o ... smili</saying>
+<saying who="popl">I heard in Switzerland that all the clocks are made from chocolate.</saying>
+<saying who="popl">*heard that</saying>
+<saying who="hoverboard">wut</saying>
+<saying who="Altreus">clockolate</saying>
+<saying who="popl">and the streets are made of cheese</saying>
+<saying who="hoverboard">lol @ grossly misinformed</saying>
+<saying who="anno">from cuckoos</saying>
+<saying who="Su-Shee">popl: common misunderstanding. because all swiss cheese are round, they made all clocks round too. the chocolate is actually a rebellious reaction to that because it&#39;s rectangular.</saying>
+<saying who="popl">and there are no cats in Switzerland</saying>
+<saying who="hoverboard">they just don&#39;t survive there?</saying>
+<saying who="Su-Shee">also, the swiss get very cranky when they don&#39;t get chocolate on time. that&#39;s why the swiss metro/trains etc are so famously punctual.</saying>
+<saying who="popl">cats don&#39;t eat cheese</saying>
+<saying who="Su-Shee">of course they do.</saying>
+<saying who="anno">they bait their breath with cheese</saying>
+<saying who="Su-Shee">I should get a job teaching foreign cultures.</saying>
+<saying who="popl">well, maybe you&#39;re right</saying>
+<saying who="anno">to catch mice</saying>
+<saying who="popl">by transitivity</saying>
+<saying who="popl">mice eat cheese, cats eat mice, ergo cats eat cheese</saying>
+<saying who="Su-Shee">my cat ate cheese.</saying>
+<saying who="popl">Su-Shee: your cat likes to cut out the middle-mouse</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

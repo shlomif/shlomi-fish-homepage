@@ -59,6 +59,10 @@ my $meta_tree_contents =
             url => "meta/anti-spam-policy/",
         },
         {
+            text => "In the Event of My Death",
+            url => "meta/in-the-event-of-my-death/",
+        },
+        {
             text => "About our Hosting Provider",
             url => "meta/hosting/",
         },

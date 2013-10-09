@@ -166,6 +166,11 @@ my $software_tree_contents =
                     title => "Upload a file and get a URL back.",
                 },
                 {
+                    text => "Maniac Downloader",
+                    url => "open-source/projects/maniac-downloader/",
+                    title => "A download accelerator with a key improvement.",
+                },
+                {
                     text => "Spark - A Lisp Dialect",
                     url => "open-source/projects/Spark/",
                     subs =>

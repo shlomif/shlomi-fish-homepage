@@ -162,6 +162,7 @@ SOFTWARE_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Soft
 HUMOUR_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm
 META_SUBSECT_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Meta.pm
 PUZZLES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Puzzles.pm
+ART_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Art.pm
 
 ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOUR_DEPS) $(META_SUBSECT_DEPS) $(PUZZLES_DEPS)
 
@@ -223,6 +224,10 @@ T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
 					 $(filter $(T2_DEST)/wonderous.html,$(T2_DOCS_DEST))
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
+
+T2_ART_DOCS_DEST = $(filter $(T2_DEST)/art/%,$(T2_DOCS_DEST))
+
+$(T2_ART_DOCS_DEST): $(ART_DEPS)
 
 VIPE_HUMOUR_DOCS_SRC =
 

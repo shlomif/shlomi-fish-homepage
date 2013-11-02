@@ -67,6 +67,11 @@ my $art_tree_contents =
                     url => "art/by-others/Yachar/",
                     title => "Fresh Neoclassical Music",
                 },
+                {
+                    text => "BertycoX’s Music",
+                    url => "art/by-others/BertycoX/",
+                    title => "Electronic Music (Dance/etc.)",
+                },
             ],
         },
 

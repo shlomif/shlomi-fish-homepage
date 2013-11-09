@@ -18,6 +18,7 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP 'js/MathJax/(?:test|docs)/' |
     grep -vP 'dest/t2/philosophy/computers/high-quality-software/what-makes-software-high-quality' |
     grep -vP 'dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index' |
+    grep -vP '\A\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E' |
     xargs perl bin/html-check-spelling-xmlp.pl |
     grep ':'
     # perl -lne 'print if /MathVentures\/3d.*\.xhtml/' |

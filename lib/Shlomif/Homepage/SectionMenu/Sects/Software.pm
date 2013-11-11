@@ -341,6 +341,11 @@ my $software_tree_contents =
                     title => "Against Apple, Mac OS, etc.",
                 },
                 {
+                    text => "Against Adobe Flash",
+                    url => "open-source/anti/Adobe-Flash/",
+                    title => "Against Adobe Flash",
+                },
+                {
                     text => "Against Windows Vista",
                     url => "open-source/anti/windows-vista/",
                     title => "A collection of links against Windows Vista",

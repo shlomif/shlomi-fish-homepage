@@ -8,7 +8,7 @@
 <set-var full_thumb_url="$(ROOT)/art/<get-var thumb_url />" />
 
 <div class="design">
-<h3 id="<get-var id />"><a href="<get-var full_thumb_url />"><get-var title /></a></h3>
+<h3 id="<get-var id />"><a href="<get-var full_url />"><get-var title /></a></h3>
 
 <a href="<get-var full_url />"><img
     src="<get-var full_thumb_url />" alt="<get-var thumb_alt />"

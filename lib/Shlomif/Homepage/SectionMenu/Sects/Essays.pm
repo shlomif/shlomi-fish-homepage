@@ -233,6 +233,18 @@ my $essays_tree_contents =
                     ],
                 },
                 {
+                    text => "How to Get Help Online",
+                    url => "philosophy/computers/how-to-get-help-online/",
+                    title => "Where on the Internet one can get help with their (probably technical) problems",
+                    subs =>
+                    [
+                        {
+                            text => "2013 Edition",
+                            url => "philosophy/computers/how-to-get-help-online/2013.html",
+                        },
+                    ],
+                },
+                {
                     text => "Netiquette",
                     url => "philosophy/computers/netiquette/",
                     title => "Articles and Links about Netiquette - the Internet Etiquette",

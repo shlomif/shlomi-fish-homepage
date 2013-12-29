@@ -384,6 +384,10 @@ my $humour_tree_contents =
                     text => "New Israeli Tech Usergroups",
                     url => "humour/bits/New-Israeli-Tech-Usergroups/",
                 },
+                {
+                    text => "GNU Will Integrate Guile into Coreutils",
+                    url => "humour/bits/GNU-Project-Will-Integrate-Guile-into-coreutils/",
+                },
             ],
         },
         {

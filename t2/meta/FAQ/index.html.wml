@@ -990,6 +990,40 @@ and with whom I met face to face many times), told me I most probably don’t
 have it, after I asked him whether I do.
 </p>
 
+<h3 id="text_editors">Which text editors are you using? What is your
+favourite text editor?</h3>
+
+<p>
+Well, I'm usually using gvim (the Gtk+/GUI version of
+the <a href="http://www.vim.org/">Vim</a> programmer’s editor) for coding and
+for writing purely-Latin texts. For bidirectional (mixed Hebrew+Latin / etc.)
+texts, I sometimes use
+<a href="https://en.wikipedia.org/wiki/Kate_%28text_editor%29">Kate</a>
+instead, with a fallback on
+<a href="https://en.wikipedia.org/wiki/Gedit">gedit</a>. Sometimes, I use Vim
+(the console version) for quick edits or when I cannot or would prefer not to
+use a GUI editor.
+</p>
+
+<p>
+The reason I am using gvim instead of vim, is because many terminal emulators
+on Linux (including Konsole which is my preferred one) mess up with the
+Hebrew/Latin bidirectionality too much (enough to confuse vim), because the
+syntax highlighting looks nicer there, because the mouse support is better,
+and because it does not start much slower than Vim. If the console-based
+Vim works for you, feel free to use it.
+</p>
+
+<p>
+Regarding <a href="https://en.wikipedia.org/wiki/Emacs">Emacs</a>: from what
+I know, it should be a fine text editor, but I could never get used to it,
+so that’s not what I’m using. I was told about
+<a href="http://www.emacswiki.org/emacs/Evil">the Evil mode</a> which provides
+partial Vim compatibility, but I didn’t try it, in part because I’m now using
+quite a lot of Vim extensions written in vimscript and in Vim’s extension
+languages, which are not supported by Evil.
+</p>
+
 <h2 id="foss">About Free and Open Source Software (FOSS)</h2>
 
 <h3 id="how_to_become_hacker">How can I become an open-source contributor?</h3>

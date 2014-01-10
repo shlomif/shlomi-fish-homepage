@@ -137,7 +137,7 @@ sub get_html
             qq{\n</div>\n} .
             (defined($self->bottom_code()) ? $self->bottom_code() : "") .
             qq{\n</div>\n} .
-            qq{\n<div id="aft_sub_menu" />}
+            qq{\n<div id="aft_sub_menu"></div>\n}
             ;
     }
 }

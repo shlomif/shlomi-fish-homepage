@@ -13,10 +13,17 @@ maintenance branch by me (= Shlomi Fish).
 <h2 id="download">Download</h2>
 
 <ul>
+
+<li>
+<a href="http://web-cpan.shlomifish.org/downloads/libtap-1.2.1.tar.bz2">Download
+libtap-1.2.1</a>
+</li>
+
 <li>
 <a href="http://web-cpan.shlomifish.org/downloads/tap-1.03.tar.gz">Download
 tap-1.03</a>
 </li>
+
 </ul>
 
 <h2 id="vcs">Version Control Repository</h2>
@@ -39,6 +46,15 @@ licence</a>, as copyright by Nik Clayton, 2004.
 </p>
 
 <h2 id="news">News</h2>
+
+<h3 id="news_2014_01_12">12-January-2014</h3>
+
+<p>
+libtap-1.2.1 was released. This release converts to a <a href="http://cmake.org/">CMake</a>-based build system instead of a GNU Autotools based one,
+and also generates and installs a
+<a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> file
+(<code>libtap.pc</code>).
+</p>
 
 <h3 id="news_2010_08_16">16-August-2010</h3>
 

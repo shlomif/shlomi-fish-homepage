@@ -5,11 +5,12 @@
 <latemp_more_keywords "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety,html5,javascript" />
 
 <p>
-Back when <a href="../">the original page criticisng MSIE</a> was written
+Back when <a href="../">the original page</a> criticisng
+Microsoft Internet Explorer (IE or MSIE) was written,
 circa 2004, it was
 an opinionated (but backed by facts) piece that echoed the frustration that
 people like me felt back then about the fact that supporting the contemporary
-version of Microsoft Internet Explorer (version 6 I believe) made web design
+version of Microsoft Internet Explorer (<a href="https://en.wikipedia.org/wiki/Internet_Explorer_6">version 6</a>, I believe) made web design
 much harder, and required a lot of work, and moreover, many important and/or
 niche sites did not function properly while using the so-called “alternative
 browsers” (such as Mozilla Firefox), and did not think it was important
@@ -21,7 +22,7 @@ perceive it to be now:
 
 <li>
 <p>
-Back when the page was written ( around the year 2004 ) many web developers
+Back when the page was written ( around the year 2004 ), many web developers
 wished for the old version of MSIE that were used at the time to go away, and
 many users of its alternative browsers were frustrated by various sites not
 supporting their browser well.
@@ -37,11 +38,15 @@ non-MSIE browsers.
 
 <li>
 <p>
-As a result writing HTML 4 / Web 1.0-to-2.0 code should be possible of being
-done with relatively fewer hassles as long as one is conscious of web
-standards, and
-their support by the various browsers, and makes use of some portable tried and
-tested libraries and APIs such as jQuery , and keep their site as simple as
+As a result writing HTML 4 or the so-called
+<a href="https://en.wikipedia.org/wiki/Web_1.0">Web 1.0</a> with
+a transition to
+<a href="http://www.paulgraham.com/web20.html">Web 2.0</a> code should be
+possible to do with relatively fewer hassles as long as one is conscious of
+web standards, and their support by the various browsers
+(see <a href="http://quirksmode.org/">the QuirksMode.org site
+for example</a>, and make use of some portable tried and
+tested libraries and APIs such as <a href="https://en.wikipedia.org/wiki/JQuery">jQuery</a> , and keep their site as simple as
 possible (in exchange for less features and less "wow factor", and possibly
 somewhat bigger bandwidth).
 </p>
@@ -50,27 +55,35 @@ somewhat bigger bandwidth).
 <li>
 <p>
 On the other hand, the collective ecosystem of technologies that falls
-under the umbrella of HTML 5 is constantly expanding and getting
+under the umbrella of <a href="https://en.wikipedia.org/wiki/HTML5">HTML
+5</a> is constantly expanding and getting
 more and more featureful and more complicated with many APIs, abstraction
-layers, levels of indirections, new features, and buzzwords. While using some
+layers (abstractions are often bad enough, but in the HTML 5 world they are
+also often
+<a href="http://www.joelonsoftware.com/articles/LeakyAbstractions.html">leaky</a> ones)
+levels of
+<a href="https://en.wikipedia.org/wiki/Indirection">indirections</a>,
+new features, and new buzzwords. While using some
 HTML 5 features in isolation and when the need arises, can be done relatively
-sanely, keeping up to date with all the new features (or what people call
-"neophilia") is from my impression incredibly time consuming and possibly will
+sanely, keeping up to date with all the new features and technologies (or what
+people call <a href="https://en.wikipedia.org/wiki/Neophile">“neophilia”</a>)
+is from my impression incredibly time consuming and possibly will
 expose your code to present and future incompatibilities and errors.
 </p>
 </li>
 
 <li>
 <p>
-Finally I should note that while I've been employed as a,
-mostly server-side, web programmer, and have published quite a lot of text on
+I should note that while in some of my jobs, I've been employed as a
+mostly server-side web programmer, and have published quite a lot of text on
 web sites, I cannot in a honest face call myself a professional web developer.
-Please don't assume that is the case for me, and I'm a developer of primarily
-other kinds of user-interface (including command-line applications, GUI
+Please do not assume that is the case for me, and I am a developer of primarily
+other kinds of user-interface (including <a href="https://en.wikipedia.org/wiki/Command-line_interface">command-line</a> applications,
+<a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a>
 applications, and Application programming interfaces (APIs)) as well a user
 of them, and as someone who plays other roles such as a helper or advocate.
-This is while I appreciate the utility of the World Wide Web and constantly use
-it.
+This is while I appreciate the utility of the World Wide Web, and constantly
+use it.
 </p>
 </li>
 

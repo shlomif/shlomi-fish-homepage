@@ -1,0 +1,96 @@
+#include '../template.wml'
+
+<latemp_subject "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" />
+<latemp_meta_desc "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" />
+<latemp_more_keywords "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety,html5,javascript" />
+
+<p>
+Back when <a href="../">the original page criticisng MSIE</a> was written
+circa 2004, it was
+an opinionated (but backed by facts) piece that echoed the frustration that
+people like me felt back then about the fact that supporting the contemporary
+version of Microsoft Internet Explorer (version 6 I believe) made web design
+much harder, and required a lot of work, and moreover, many important and/or
+niche sites did not function properly while using the so-called “alternative
+browsers” (such as Mozilla Firefox), and did not think it was important
+to support them. The situation has changed since then and this is how I
+perceive it to be now:
+</p>
+
+<ol>
+
+<li>
+<p>
+Back when the page was written ( around the year 2004 ) many web developers
+wished for the old version of MSIE that were used at the time to go away, and
+many users of its alternative browsers were frustrated by various sites not
+supporting their browser well.
+</p>
+
+<p>
+Today, the situation is largely better as MSIE both lost a lot of market share
+and because Microsoft started maintaining it again and recent versions have
+improved considerably, and because most sites of significance now support the
+non-MSIE browsers.
+</p>
+</li>
+
+<li>
+<p>
+As a result writing HTML 4 / Web 1.0-to-2.0 code should be possible of being
+done with relatively fewer hassles as long as one is conscious of web
+standards, and
+their support by the various browsers, and makes use of some portable tried and
+tested libraries and APIs such as jQuery , and keep their site as simple as
+possible (in exchange for less features and less "wow factor", and possibly
+somewhat bigger bandwidth).
+</p>
+</li>
+
+<li>
+<p>
+On the other hand, the collective ecosystem of technologies that falls
+under the umbrella of HTML 5 is constantly expanding and getting
+more and more featureful and more complicated with many APIs, abstraction
+layers, levels of indirections, new features, and buzzwords. While using some
+HTML 5 features in isolation and when the need arises, can be done relatively
+sanely, keeping up to date with all the new features (or what people call
+"neophilia") is from my impression incredibly time consuming and possibly will
+expose your code to present and future incompatibilities and errors.
+</p>
+</li>
+
+<li>
+<p>
+Finally I should note that while I've been employed as a,
+mostly server-side, web programmer, and have published quite a lot of text on
+web sites, I cannot in a honest face call myself a professional web developer.
+Please don't assume that is the case for me, and I'm a developer of primarily
+other kinds of user-interface (including command-line applications, GUI
+applications, and Application programming interfaces (APIs)) as well a user
+of them, and as someone who plays other roles such as a helper or advocate.
+This is while I appreciate the utility of the World Wide Web and constantly use
+it.
+</p>
+</li>
+
+<li>
+<p>
+It is possible that MSIE has improved enough to make it usable and attractive
+enough to be used. As I agreed with the E-mail correspondent who reported
+the incident, many people now have enough prejudice against Microsoft, to
+assume every product they make is inferior to some of the competition from
+hipper companies or projects, and that it lacks innovation, even if that is
+not necessarily the case.
+</p>
+
+<p>
+Nevertheless, Internet Explorer is still not open source, and upgrading to
+newer versions often require a recent major version of Microsoft Windows (e.g:
+Windows 7 or even Windows 8), and naturally will only run on Microsoft Windows
+systems. As a result, I wouldn't recommend using it by default, even if you
+want or need to use Microsoft Windows.
+</p>
+</li>
+
+</ol>

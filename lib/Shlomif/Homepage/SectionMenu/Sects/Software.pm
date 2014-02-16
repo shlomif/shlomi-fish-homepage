@@ -324,6 +324,14 @@ my $software_tree_contents =
                     text => "Internet Explorer",
                     url => "no-ie/",
                     title => "Stop Using Internet Explorer!",
+                    subs =>
+                    [
+                        {
+                            text => "Feb 2014 Update",
+                            url => "no-ie/update-2014-02/",
+                            title => "February 2014 Update for the Anti-MSIE Page",
+                        },
+                    ],
                 },
                 {
                     text => "Against qmail",

@@ -6668,5 +6668,47 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-AJAX-URLs">
+        <meta>
+            <title>AJAX URLs</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="Su-Shee">hm, do browsers treat URLs encoded/unencoded with foo/bar/baz#fumpp versus foo/bar/baz%23fumpp differently? (aka in-page links)?</saying>
+<saying who="huf">they should</saying>
+<saying who="Su-Shee">dammit.</saying>
+<saying who="huf">&#39;s the point of urlencoding</saying>
+<saying who="Su-Shee">yeah, I really wasn&#39;t sure, I haven&#39;t used in-page links for at least a decade or so.</saying>
+<saying who="Nei"># doesnt get send to the server</saying>
+<saying who="rindolf">Now there&#39;s also them AJAX URLs #!op/sub-op/foo-12353ab343</saying>
+<saying who="Nei">unless via JS</saying>
+<saying who="huf">&quot;now&quot;</saying>
+<saying who="huf">you mean years ago before js got the history api</saying>
+<saying who="rindolf">huf: maybe - I still see them sometimes.</saying>
+<saying who="huf">but yeah, lots of crap still does the #! thing</saying>
+<saying who="Nei">&quot;now&quot; everyone is using the history api to fake real looking urls that could be sent to the server right</saying>
+<saying who="rindolf">Google Groups I&#39;m looking at you.</saying>
+<saying who="huf">Nei: yeah. so great. :(</saying>
+<saying who="huf">&quot;our websites are huge and slow and clunky. i know, let&#39;s add MORE crap&quot;</saying>
+<saying who="Nei">hihihi</saying>
+<saying who="Nei">I share the room with a php dev and he loves his shit and tells me all those horror stories how they implement this caching and another caching to speed things up</saying>
+<saying who="Su-Shee">huf: no, I&#39;m really honestly using real in-page links :)</saying>
+<saying who="huf">at least this way we get to spend cpu cycles on *gasp* transitions!</saying>
+<saying who="huf">Su-Shee: yeah, those are fine and cool</saying>
+<saying who="Nei">and repllace everything with ajax and in-page div replacement so it doesnt feel sluggish</saying>
+<saying who="Su-Shee">huf: not when they get encoded apparently.. :)</saying>
+<saying who="huf">Nei: and somehow it&#39;s still not as fast as a nice clean simple website built with html4 and no css. just the content, cleanly. no crap.</saying>
+<saying who="huf">Su-Shee: write some js to decode it and ajax and ... oh god</saying>
+<saying who="Nei">at least php auto-gzips for you</saying>
+<saying who="huf">unless it segfaults :D</saying>
+<saying who="huf">(guess what we spent our time with yesterday...)</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>How have the wise men helped with their ruling?</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

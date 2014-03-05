@@ -84,6 +84,10 @@ my $essays_tree_contents =
                             url => "philosophy/computers/open-source/foss-licences-wars/",
                             title => "An overview of open-source licences and some recommendations and opinions",
                         },
+                        {
+                            text => "Why I Don’t Trust Non-FOSS",
+                            url => "philosophy/computers/open-source/trust-non-FOSS/",
+                        },
                     ],
                 },
                 {

@@ -36,17 +36,20 @@ distributed open-source systems such as
 and <a href="http://en.wikipedia.org/wiki/Mercurial">Mercurial</a>. However,
 several years ago it was used by many developers of the Linux kernel, and the
 demise of its gratis version was in fact the impetus for the creation of
-Git, and later Mercurial. Some time, before Linus Torvalds started using
-it as the version control system of the kernel,
-I ran into a limitation of CVS, an open-source version control system,
-that was then popular, and was looking for an alternative, and after reading
-an out-of-date article about BitKeeper (which said its source was available
-under a mostly open source licence), decided to use it and its bkbits.net
-service.
+Git, and later Mercurial. Several years ago, some time before Linus Torvalds
+started using it as the version control system of the kernel,
+I ran into a limitation of
+<a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>,
+a popular, but limited, open-source version control system, which I used back
+then.
+As a result, I went looking for an alternative, and after
+reading an out-of-date article about BitKeeper (which said its source
+was available under a mostly open source licence), decided to use it and its
+bkbits.net service.
 </p>
 
 <p>
-At first, I was quite happy using it for some of my projects, but then I
+At first, I was quite happy using BitKeeper for some of my projects, but then I
 posted a question to the mailing list, asking where I can find the source,
 which was implied to be available on the BitKeeper site. Larry McVoy
 (= BitKeeper’s main creator and maintainer) replying by saying that they
@@ -88,14 +91,15 @@ The end of the BitKeeper story, was that after evaluating a few open-source
 alternatives, I settled on using the open-source Subversion, and later on
 also started using Mercurial and Git. Furthermore, from then on, I often
 refused to look at and evaluate proprietary programs. Lately, many open-source
-developers have been infatuated with
+developers have become infatuated with
 <a href="https://en.wikipedia.org/wiki/Sublime_Text">Sublime Text</a>, but
 I am not willing to even try it, because it is not open-source, so I will
 never have to depend on it.
 </p>
 
 <p>
-Despite all that, I still license my original software under
+Despite all that, I still license most of my original open
+source software under
 non-<a href="http://en.wikipedia.org/wiki/Copyleft">Copyleft</a> licences,
 because the GPLv2 and the GPLv3 are incompatible, both
 with one another, and with many other open-source licences; because

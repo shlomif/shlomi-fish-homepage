@@ -106,3 +106,15 @@ drawn rectangle in Inkscape. So the lines of the perspective had to be
 drawn using the segmented-straight-lines tool with the help of the grid.
 </p>
 
+<h3 id="step__automating_using_a_script">Step 4: Automating Using a Script</h3>
+
+<p>
+I decided that I wanted to keep as much of the process as automated as
+possible, so I can later reproduce the results, or tweak them gradually
+without the need to run several error-prone commands each time.
+As a result, I wrapped everything in
+<a href="https://github.com/shlomif/Shlomi-Fish-Back-to-my-Homepage-Logo/blob/master/back-to-my-homepage-logo/scripts/shlomif_back_to_homepage_distort.py">an
+Inkscape script</a> written in Python, which produced several intermediate
+SVG files, while running subsequent scripts on them to produce other files
+(and doing some other SVG manipulation).
+</p>

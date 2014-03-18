@@ -2086,5 +2086,94 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-sharp-programming-whats-in-a-name">
+        <meta>
+            <title>What’s in a name?</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="Rad-">gcc `xml2-config --cflags` -g lib.c -o lib `xml2-config --libs`</saying>
+<saying who="rindolf">Rad-: you called your executable &quot;lib&quot;? It&#39;s a common name for directories.</saying>
+<saying who="Rad-">...yes</saying>
+<saying who="Rad-">i&#39;ll change it later i just got lazy</saying>
+<saying who="rindolf">Rad-: ah.</saying>
+<saying who="rindolf">Rad-: 1. Are you using version control? 2. Do you have automated tests?</saying>
+<saying who="Binary_Digit">This is the hardest part of programming - choosing a name for the dev directory.</saying>
+<saying who="Rad-">no, no?</saying>
+<saying who="rindolf">Rad-: well, you should on both accounts.</saying>
+<saying who="pulse">Binary_Digit++</saying>
+<saying who="pulse">i hate that part</saying>
+<saying who="Denommus">Binary_Digit: uh, src?</saying>
+<saying who="indigo">Binary_Digit: projects</saying>
+<saying who="pulse">i thought he meant the project name folder</saying>
+<saying who="Binary_Digit">src is fine if you&#39;re only ever going to write one program</saying>
+<saying who="Denommus">ah, for the directory where the projects will be!</saying>
+<saying who="Denommus">I always name it &quot;Projects&quot;</saying>
+<saying who="Binary_Digit">all your programs are called &#39;Projects&#39;?</saying>
+<saying who="they">Shouldn&#39;t you use a top-level qualifier?</saying>
+<saying who="Binary_Digit">Cool.</saying>
+<saying who="pulse">lol</saying>
+<saying who="Denommus">Binary_Digit: no, the directory where the projects are</saying>
+<saying who="they">For instance, if you&#39;re making a library called &quot;Jail&quot;, have the top-level folder named &quot;Jail&quot;? So the namespaces below would be &quot;Jail.Whatever&quot;?</saying>
+<saying who="Denommus">Binary_Digit: I always think about some name when starting a project</saying>
+<saying who="Rad-">rindolf: well i&#39;m writing the tests. my program is a proof of working functions... well it&#39;s supposed to be anyway</saying>
+<saying who="Denommus">they: yup</saying>
+<saying who="Binary_Digit">Q: How do I do &lt;foo&gt;? A: easy, just use Projects to do the first bit, then switch to Projects to do the next bit, and pipe the output through Projects</saying>
+<me_is who="jrslepak">just names a project&#39;s directory based on the name of the project</me_is>
+<saying who="Binary_Digit">jrslepak, so you still have the same problem</saying>
+<saying who="pulse">i find it hard to come up with project names that don&#39;t suck</saying>
+<saying who="Binary_Digit">Denommus solves it by calling every project &#39;Projects&#39;</saying>
+<saying who="jrslepak">Binary_Digit: what problem do I have?</saying>
+<saying who="Binary_Digit">But I prefer to find more original names</saying>
+<saying who="pulse">i&#39;m afraid i&#39;m going to pick some well-known name, then i&#39;ll get sued and will have to walk around in a barrel</saying>
+<saying who="Binary_Digit">jrslepak, the problem of picking a name for your project</saying>
+<saying who="Denommus">Binary_Digit: stop putting words on my mouth, I hate it</saying>
+<saying who="benzrf">Binary_Digit: one of the two hard things in programming</saying>
+<saying who="Binary_Digit">Denommus, oh, I think you&#39;ll survive.</saying>
+<saying who="Binary_Digit">Especially if that graph is anything to go by.</saying>
+<saying who="Binary_Digit">But all right, I apologise.</saying>
+<saying who="pulse">benzrf, the other being actually getting to work?</saying>
+<saying who="Binary_Digit">Ah, bring back florin5</saying>
+<saying who="Binary_Digit">I have a project for him</saying>
+<saying who="Binary_Digit">A project name generator!</saying>
+<saying who="Binary_Digit">Only problem is: what to call it?</saying>
+<saying who="pulse">project name namer</saying>
+<saying who="rindolf">Rad-: they do? Why?</saying>
+<saying who="rindolf">Binary_Digit: heh, it should be self-hosting.</saying>
+<saying who="benzrf">pulse: &#39;two hard things in programming</saying>
+<saying who="benzrf">cache invalidation and naming things&#39;</saying>
+<saying who="pulse">hmm</saying>
+<saying who="benzrf">or maybe it was &#39;in compsci&#39;</saying>
+<saying who="rindolf">benzrf: &#39;...and off by one errors&#39;.</saying>
+<saying who="benzrf">well known quote tho</saying>
+<saying who="benzrf">rindolf: huehuehue</saying>
+<saying who="benzrf">i saw that one</saying>
+<saying who="pulse">yeah, those are tricky</saying>
+<saying who="benzrf">christ i hate fencepost errors</saying>
+<saying who="benzrf">they get me every time -.-</saying>
+<saying who="rindolf">benzrf: I had a lot of them in a recent Project Euler problem.</saying>
+<saying who="Binary_Digit">I think I shall call my latest project Bernard. Or possibly Saskatchewan.</saying>
+<saying who="pulse">Binary_Digit, i find you could develop all sorts of names from fruit names</saying>
+<saying who="rindolf">Rad-: well, you can use them for your own personal use.</saying>
+<saying who="pulse">have a timer project? call it pineapple timer</saying>
+<saying who="benzrf">rindolf: :(</saying>
+<saying who="pulse">makes it sound fresh</saying>
+<saying who="pulse">and exciting</saying>
+<saying who="Binary_Digit">Oh yeah - Apple - or Blackberry - or Raspberry - or Apricot</saying>
+<saying who="Binary_Digit">I don&#39;t suppose any of those are taken</saying>
+<saying who="pulse">tomatomation</saying>
+<saying who="pulse">:D</saying>
+<saying who="pulse">stands for tomato automation</saying>
+<saying who="Binary_Digit">I suppose the only way out is to pick a good name *first*, and then decide what would be the best program to fit that name. eg Project Turnip could be a Turing machine for kids</saying>
+<saying who="benzrf">Binary_Digit: amazing</saying>
+<saying who="Binary_Digit">yeah, I know - I think I&#39;m too tired for IRC right now, talking nonsense</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Software naming discussions good jokes maketh</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

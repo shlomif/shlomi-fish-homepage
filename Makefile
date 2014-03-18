@@ -143,8 +143,6 @@ upload_var_without_deps:
 upload_beta: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor/ )
 clean:
-	rm -fr $(T2_DEST)/*
-	rm -fr $(VIPE_DEST)/*
 
 upload_hostgator: upload_deps
 	( cd $(T2_DEST) && $(RSYNC) -a * 'hostgator:public_html/' )

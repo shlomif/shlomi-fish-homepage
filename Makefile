@@ -115,13 +115,17 @@ ptest: all
 spell: all
 	./bin/spell-checker-iface.sh
 
+define UPLOAD
+(cd $(T2_DEST) && $(RSYNC) -a . $1 )
+endef
+
 upload_deps: all
 
 upload_local: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -a * $${HOMEPAGE_SSH_PATH}/ )
+	$(call UPLOAD,$${HOMEPAGE_SSH_PATH})
 
 upload_backup: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public )
+	$(call UPLOAD,shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public)
 
 upload: upload_remote
 
@@ -130,22 +134,23 @@ upload_remote: upload_local upload_remote_only
 upload_remote_only: upload_deps upload_remote_only_without_deps
 
 upload_remote_only_without_deps:
-	( cd $(T2_DEST) && $(RSYNC) -a * $${__HOMEPAGE_REMOTE_PATH}/ )
+	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
 
 upload_adbrite_only: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/adbrite-ie8-breakage/ )
+	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/adbrite-ie8-breakage/)
 
 upload_var: upload_deps upload_var_without_deps
 
 upload_var_without_deps:
-	( cd $(T2_DEST) && $(RSYNC) -a --inplace . /var/www/html/shlomif/homepage-local/ )
+	$(call UPLOAD,/var/www/html/shlomif/homepage-local/)
 
 upload_beta: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) --inplace -a * $${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor/ )
+	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
+
 clean:
 
 upload_hostgator: upload_deps
-	( cd $(T2_DEST) && $(RSYNC) -a * 'hostgator:public_html/' )
+	$(call UPLOAD,'hostgator:public_html/')
 
 t2/SFresume.html.wml : lib/SFresume_base.wml
 	touch $@

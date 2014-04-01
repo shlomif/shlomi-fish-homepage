@@ -388,6 +388,15 @@ my $humour_tree_contents =
                     text => "GNU Will Integrate Guile into Coreutils",
                     url => "humour/bits/GNU-Project-Will-Integrate-Guile-into-coreutils/",
                 },
+                {
+                    text => "The FSF Announces New Versions of the GPL",
+                    url => "humour/bits/New-versions-of-the-GPL/",
+                    title => "The Free Software Foundation (FSF) Announces New Versions of the GNU General Public License (GPL)",
+                },
+                {
+                    text => "Google Discontinues Services",
+                    url => "humour/bits/Google-Discontinues-Services/",
+                },
             ],
         },
         {

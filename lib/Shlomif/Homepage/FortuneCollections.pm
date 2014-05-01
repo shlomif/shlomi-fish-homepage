@@ -128,7 +128,7 @@ sub get_single_fortune_record_all_in_one_page_entry
     return <<"EOF";
 <h2 id="$id">$title</h2>
 <div class="fortunes_list">
-#include "fortunes/xhtmls/$id.xhtml-for-input"
+(((((include "fortunes/xhtmls/$id.xhtml-for-input")))))
 </div>
 EOF
 }
@@ -168,7 +168,7 @@ EOF
 
         $ret .= <<"FOO_EOF" ;
 <li><a href="#$id">$title</a><br />
-#include "fortunes/xhtmls/$id.toc-xhtml"
+(((((include "fortunes/xhtmls/$id.toc-xhtml")))))
 </li>
 FOO_EOF
 

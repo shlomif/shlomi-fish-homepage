@@ -156,11 +156,29 @@ sub get_fortune_all_in_one_page_html_wml
 <latemp_subject "Shlomi Fish Fortunes Collections - All in One Page" />
 <latemp_meta_desc "Shlomi Fish Fortunes Collections - All in One Page" />
 
-<toc_div head_tag="h2" />
-
+<div class="page_toc">
+<h2 id="toc">Table of Contents</h2>
+<ul>
 EOF
 
     foreach my $r (@{$class->get_fortune_records()})
+    {
+
+        my $id = $r->id();
+        my $title = $r->title();
+
+        $ret .= <<"FOO_EOF" ;
+<li><a href="#$id">$title</a><br />
+#include "fortunes/xhtmls/$id.toc-xhtml"
+</li>
+FOO_EOF
+
+    }
+
+    $ret .= "</ul>\n";
+    $ret .= "</div>\n";
+
+    foreach my $r (@{$class->get_fortune_records()}
     {
         $ret .= $class->get_single_fortune_record_all_in_one_page_entry($r);
     }

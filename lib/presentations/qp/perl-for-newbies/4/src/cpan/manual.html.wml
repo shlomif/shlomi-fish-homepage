@@ -1,0 +1,95 @@
+#include 'template.wml'
+
+<p>
+To compile a CPAN distribution manually, you first need to download it. You
+can start by browsing your nearest CPAN module and downloading from there. On
+UNIX the following command, will download version 2.31 of the XML::Parser
+module.
+</p>
+
+<quadpres_code_block>
+$ wget http://www.cpan.org/modules/by-module/XML/XML-Parser-2.31.tar.gz
+</quadpres_code_block>
+
+<p>
+Next unpack it using the "tar -xvf" command:
+</p>
+
+<quadpres_code_block>
+$ tar -xvf XML-Parser-2.31.tar.gz
+</quadpres_code_block>
+
+<p>
+(if you don't have GNU tar use "gunzip" and then "tar -xvf" instead. On
+Windows you can use WinZip.)
+</p>
+
+<p>
+Now cd to its directory and type "perl Makefile.PL" and "make".
+</p>
+
+<quadpres_code_block>
+$ cd XML-Parser-2.31
+$ perl Makefile.PL
+Checking if your kit is complete...
+Looks good
+Writing Makefile for XML::Parser::Expat
+Writing Makefile for XML::Parser
+$ make
+cp Parser/Encodings/x-sjis-cp932.enc blib/lib/XML/Parser/Encodings/x-sjis-cp932.enc
+cp Parser/Encodings/iso-8859-7.enc blib/lib/XML/Parser/Encodings/iso-8859-7.enc
+cp Parser/Encodings/x-euc-jp-unicode.enc blib/lib/XML/Parser/Encodings/x-euc-jp-unicode.enc
+cp Parser/Encodings/iso-8859-9.enc blib/lib/XML/Parser/Encodings/iso-8859-9.enc
+cp Parser/Encodings/README blib/lib/XML/Parser/Encodings/README
+cp Parser/Encodings/euc-kr.enc blib/lib/XML/Parser/Encodings/euc-kr.enc
+cp Parser/Encodings/big5.enc blib/lib/XML/Parser/Encodings/big5.enc
+cp Parser/Encodings/windows-1250.enc blib/lib/XML/Parser/Encodings/windows-1250.enc
+cp Parser/Encodings/Japanese_Encodings.msg blib/lib/XM
+.
+.
+.
+</quadpres_code_block>
+
+<p>
+After the wait, the module will be compiled. It is preferable to test it first, by invoking <tt>make test</tt>:
+</p>
+
+
+<quadpres_code_block>
+$ make test
+</quadpres_code_block>
+
+
+<p>
+Now you can install it, by becoming
+a super-user and typing <tt>make install</tt> at the command line.
+</p>
+
+<quadpres_code_block>
+$ su
+Password:
+\# make install
+</quadpres_code_block>
+
+<h2 id="module-build">Module-Build</h2>
+
+<p>
+Note that some distributions are now using
+<a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a>. If
+your distribution contains a <tt>Build.PL</tt> file, you should run
+the following commands instead:
+</p>
+
+<quadpres_code_block>
+perl Build.PL
+./Build
+./Build test
+./Build install
+</quadpres_code_block>
+
+<p>
+More information can be found in
+<a href="http://search.cpan.org/perldoc?Module::Build">the main Module-Build
+document</a>
+</p>
+

@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<p>
+The <tt>sort</tt> function can sort an array based on a comparison expression.
+As with the <tt>map</tt> function, this expression can be as complex as you'd
+like and may actually include a call to a dedicated function.
+</p>
+
+<p>
+Within the comparison block, the variables <tt>$a</tt> and <tt>$b</tt> indicate
+the two elements to be compared. If the expression returns a negative value
+it means that <tt>$a</tt> should precede <tt>$b</tt>. If it is positive, it
+means that <tt>$b</tt> should come before <tt>$a</tt>. If it is zero, it
+indicates that it does not matter which one will come first.
+</p>
+
+<p>
+The following example sorts an array of integers numerically:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/sort/integer_sort.pl" />
+</quadpres_code_block>
+
+
+

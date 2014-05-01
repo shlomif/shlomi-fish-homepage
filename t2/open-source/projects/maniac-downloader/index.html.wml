@@ -1,0 +1,50 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "Maniac Downloader - a download accelerator" />
+
+<latemp_meta_desc "Maniac Downloader - a download accelerator with a key improvement." />
+
+<h2 id="usage">Usage</h2>
+
+<pre>
+\# To download with 10 segments
+$ mdown -k=10 http://path.to.my.url.tld/path-to-file.txt
+</pre>
+
+<h2 id="about">About</h2>
+
+<p>
+This is Maniac Downloader, a maniac download accelerator. It is currently very
+incomplete (see the TODO.txt file), but is still somewhat usable. Maniac
+Downloader is being written out of necessity out of proving to improve the
+download speed of files here (which I suspect is caused by a misconfiguration
+of my ISP's networking), and as a result, may prove of use elsewhere.
+</p>
+
+<h3 id="secret-sauce">The Secret Sauce</h3>
+
+<p>
+The main improvement of Maniac Downloader over other downloader managers is
+that if a segment of the downloaded file finishes, then it splits the largest
+remaining segment, and starts another new download, so the slowest downloads
+won't delay the completion time by much.
+</p>
+
+<h2 id="download">Download</h2>
+
+<p>
+<a href="https://metacpan.org/release/App-ManiacDownloader">Download
+Maniac Downloader from the CPAN</a>
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<bitbucket_cpan_dist_links
+    dist="App-ManiacDownloader"
+    bitbucket_url="https://bitbucket.org/shlomif/maniac-downloader"
+    freecode_url="http://freecode.com/projects/maniac-downloader/">
+</bitbucket_cpan_dist_links >
+
+
+<x11_licence name="Maniac Downloader" />

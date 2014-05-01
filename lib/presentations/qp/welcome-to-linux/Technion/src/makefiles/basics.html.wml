@@ -1,0 +1,46 @@
+#include 'template.wml'
+
+<points>
+<li>
+A makefile is built out of a set of targets which we want to build
+and intermediate targets used in the build process.
+</li>
+<li>
+In a makefile, the target is followed by a colon (:), which is then
+followed by a list of its dependent targets or files (commonly referred to
+as dependencies). Afterwards in a new line, there
+should be a tab character (and not any other whitespace before or
+afterwards), followed by the command used to generate the target from the
+dependencies.
+</li>
+</points>
+
+<h2>Example</h2>
+
+<div class="mycode">
+<pre>
+<span class="c31">foo</span>: foo.o helper.o
+    gcc -Wall foo.o helper.o -o foo
+
+<span class="c31">bar</span>: bar.o helper.o
+    gcc -Wall bar.o helper.o -o bar
+
+<span class="c31">bar.o</span>: bar.c
+    gcc bar.c -c -o bar
+
+<span class="c31">foo.o</span>: foo.c foo.h
+    gcc -ansi -Wall -c foo.c -o foo.o
+</pre>
+</div>
+
+<points>
+<li>
+To run make one types:
+<tt>make [target_name]</tt>
+</li>
+
+<li>
+If no target is specified the first target in the makefile is used.
+</li>
+</points>
+

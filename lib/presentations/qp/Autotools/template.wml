@@ -1,0 +1,38 @@
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "en-GB" />
+<default-var "qp_charset" "utf-8" />
+
+<set-var display_ads="1" />
+
+#include "quadpres_main.wml"
+
+<:{
+require VimIface;
+}:>
+<define-tag quadpres_code_block endtag="required" whitespace="delete">
+<div class="code_block">
+<pre>
+%body
+</pre>
+</div>
+</define-tag>
+
+<define-tag quadpres_include_colorized_file whitespace="delete">
+<preserve filename />
+<set-var %attributes />
+<:{
+print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+}:>
+<restore filename />
+</define-tag>
+
+
+
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+

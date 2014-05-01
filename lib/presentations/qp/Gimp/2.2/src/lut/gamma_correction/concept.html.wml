@@ -1,0 +1,13 @@
+#include 'template.wml'
+
+<p>
+If we assume that the maximal colour value is 1 and the minimal is 0,
+then by applying a function of x ** (1/gamma) to every pixel we will
+modify the histogram while not overflowing from the image boundaries
+(which cannot be said on brightness and contrast manipulations).
+</p>
+
+<p>
+The more positive the Gamma is the brighter the resultant image will be.
+</p>
+

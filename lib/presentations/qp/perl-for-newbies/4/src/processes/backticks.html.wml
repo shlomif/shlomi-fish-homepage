@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<p>
+The backticks (or more generally <tt>qx{ ... }</tt>), can be used to trap
+the output of a shell command. It executes the command and returns
+all of its output. Interpolation is used.
+</p>
+
+<p>
+If assigned to a scalar, it returns the output as a complete string. If
+the output is assigned to an array, the array will contain the lines of
+the output.
+</p>
+
+<p>
+Here is an example for a program that counts the number of directories in
+a directory that is given as an argument:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/processes/count-dirs.pl" />
+</quadpres_code_block>

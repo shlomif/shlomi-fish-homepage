@@ -1,0 +1,293 @@
+Freecell's Rules:
+-----------------
+
+* There are 8 stacks of cards, 4 freecells, and 4 foundations. The game
+is played with one deck.
+
+* At the beginning of play, the cards are dealt to the stacks (4*7+4*6).
+The faces of all the cards are visible at the beginning of play.
+
+* A freecell can hold one _single_ card.
+
+* The foundations are built from ace to king and the object of the
+game is to move all the cards to the foundations.
+
+* A card can be placed on top of a card that is of the opposite colour,
+and is higher in rank by 1, assuming that the latter is at the top of a
+stack.
+
+* An empty stack may be filled with any card.
+
+* An atomic move consists of:
+    - moving a card from a stack to a freecell.
+    - moving a card from a freecell to a parent card on a stack.
+    - moving a card from the top of a stack on top of a parent card on a
+      different stack
+    - moving a card from the top of a stack or from a freecell to the
+      foundation.
+
+    Strategies:
+    -----------
+
+    * A sequence of more than one card can be moved by moving the top cards to
+      the freecells or to unoccupied stacks. The later is commonly called a
+      "supermove"
+
+    * Sometimes, it is useful to move cards to the freecells, so the card
+      below them can serve as a basis for a sequence.
+
+The Freecell Solver 0.2 Architecture:
+-------------------------------------
+
+* A DFS scan:
+
+Solve-State(state, prev_states, ret)
+    if (state == empty_state)
+        Push(ret, state)
+        return SOLVED
+    for each move possible on state
+        new_state <- state
+        apply(new_state, move)
+        if (new_state in prev_states)
+            ; Do nothing
+        else
+            add new_state to prev_states
+            if (Solve-State(new_state, prev_states, ret) == SOLVED)
+                Push(ret, state)
+                return SOLVED
+    return UNSOLVED
+
+Freecell-Solver(init_state)
+    if (Solve-State(init_state, Null, ret) == SOLVED)
+        print "State was solved"
+        while (state <- Pop(ret))
+            print state
+    else
+        print "I could not solve this board";
+
+
+* Several tests to get to subsequent moves - give some examples:
+    I called them "multi-move" to indicate they may include one or more
+    moves or "supermoves". By coding them I tried to emulate the kind of
+    moves a human player would try to do.
+
+    Examples:
+    ---------
+
+    * Put top stacks cards in the foundations.
+    * Put Freecell cards in the foundations.
+    * Put non-top stack cards in the foundations. (by moving cards above them
+    to freecells or vacant stacks).
+    * Move stack cards to different stacks.
+    * Move sequences of cards onto free stacks.
+    * etc.
+
+    I later improved some of these moves and added an extra one.
+
+    Due to their multi-moves heuristic nature, it is possible that some boards
+    are solvable, yet cannot be solved by FCS.
+
+* Once the program finds a solution it outputs the intermediate boards to
+    the screen.
+
+* Each state was represented as a relatively large data structure containing
+other data structures.
+    - A card was { short, short}
+    - A stack was { int, card[] },
+    - A state was { stack[] }.
+
+* The State collection was implemented as a sorted vector of whole state data
+    structures.
+    - It had a sort margin, so not every new element would require moving
+        many states aside.
+    - After several elements were collected the array and its sort margin
+        were qsort()ed.
+
+The State Collection Representation Improvements:
+-------------------------------------------------
+
+    B-search based merge to add the sort margin instead of qsort:
+    -------------------------------------------------------------
+
+    * The sort margin is kept outside the main array.
+
+    * It is added to the main array by using a binary search-based merge.
+
+        - The reason why it was preferred over a normal linear merge
+          was because there are usually much more elements in the main
+          array so a lot of time would be spent on comparisons.
+
+    * The merge was done from end to start, so there was not any need in
+      allocating an extra space.
+
+    Pointers to structs instead of a vector of whole structs:
+    ---------------------------------------------------------
+
+    * I converted the vector to be a vector of pointer to structs, instead
+      of vector of whole structs.
+
+    * There was a great speed improvements, because only pointers were
+      manipulated and not entire structs, whose movement in memory requires
+      a lot of time.
+
+    A balanced binary tree:
+    -----------------------
+
+    * I don't really know how to program my own balanced binary tree
+      implementation, but I found some on the Net:
+
+      1. libavl - contains implementations of AVL and Red-Black trees.
+      2. libredblack - contains an implementation of a Red-Black tree.
+      3. glib - contains an implementation of a balanced binary tree.
+
+      There are others, but I decided to stick to those three.
+
+    * By using a balanced binary tree I managed to increase the brute speed
+      by %33. (and the net speed times 2 or so).
+
+    A Hash Table:
+    -------------
+
+        Description: What is a Hash Table?
+        ----------------------------------
+
+        * A hash table is a vector of linked lists. Each linked list contains
+          a set of keys (or key-value pairs).
+
+        * The index of the list in which the key is placed is determined by
+          a hash function. Usually, the hash function generates an integer
+          in a very large range, and the index is its modulo with the number
+          of elements in the hash table.
+
+            Rehashing:
+            ----------
+
+            Sometimes, when a hash becomes two crowded, the number of elements
+            in it is increased and all of its existing elements are placed in
+            their new place.
+
+
+    * I first tried using glib's hash implementation with a 4-byte wide XOR as
+      the hash function. This generated very awful results.
+
+    * Then I tried using the MD5 hash function, and got excellent results
+      similar to what I encountered when using a balanced binary tree.
+
+    * I coded my own stripped-down hash implementation in my attempt to figure
+      out what went wrong with using a hash. It turned out to be a bit faster
+      than glib's hash.
+
+        Hash Optimizations:
+        -------------------
+
+        * Storing the hash values along with the keys. That way, the hash
+          values can be first compared before comparing the entire keys.
+
+        * Moving elements that were hit to the start of their chains.
+
+        * When re-hashing, using the same malloc'ed elements, only re-linking
+          them to their new siblings.
+
+The State Representation:
+-------------------------
+
+    Reducing the Data Type Width:
+    -----------------------------
+
+    * At first FCS represented cards as a struct of two shorts where one was
+      the rank and the other the suit.
+
+    * Having seen that it consumed quite a lot of memory, I decided to try to
+      reduce the size. I made a card as a char whose first 4 bits were the
+      rank and the two more upper bits the rank.
+
+    * Surprisingly, this made the game even faster.
+
+    * I consulted a mailing list of mine with this anomaly and reached the
+      conclusion that it happened because there were fewer cache misses
+      this way.
+
+    Pointers to stacks instead of a vector of stacks:
+    -------------------------------------------------
+
+    * I later encountered two variants of Freecell (dubbed Der Katzenschwanz
+      and Die Schlange) whose stacks could be extremely long (roughly as
+      long as the number of cards in two decks).
+
+    * This made representing the states as a direct vector of constant-sized
+      stacks very wasteful.
+
+    * What I did was store pointers for the stacks in each state, and store
+      the stacks in their separate cache.
+
+    * If two states had an identical stack, this stack would be stored in
+      memory only once.
+
+    * With this technique, I managed to scale the number of states on a 48 MB
+      + 1 GB swap machine to 1,000,000 and more.
+
+    Remembering the Original Stack and Freecell Locations:
+    ------------------------------------------------------
+
+    * To avoid the possibility of having two states, which differ only in
+      the order of their stacks or freecells, FCS 0.2 sorted the stacks in
+      a canonical order, after every multi-move.
+
+    * It displayed them this way, too, making the solution harder to follow.
+
+    * In order to solve this problem, I wanted to keep the original order
+      somehow.
+
+    * If I sticked to the original order and sorted the stacks before every
+      comparison, it would have costed dearly, because every insert requires
+      more than one comparison.
+
+    * The solution: "Indexes out of Bounds of Main Data Structure"<tm> -
+      anti-patent pending technology.
+
+    * The original indexes of the stacks and freecells are kept outside the
+      main data structure:
+
+      struct state
+      {
+            /* ... */
+      };
+
+      struct state_with_locations
+      {
+            struct state s;
+            int fc_locs[4];
+            int stack_locs[8];
+      };
+
+    * A comparison is made only on the first sizeof(struct state) bytes.
+
+Scans:
+------
+
+* The original Hard-DFS scan.
+
+* A*
+
+* Soft-DFS rev. 1.
+
+* Soft-DFS rev. 2.
+
+* The BFS optimization scan.
+
+Move Stacks:
+------------
+
+* In the beginning, the user had to deduce what had happened between two
+subsequent states.
+
+* That was:
+    A. Not comfortable.
+    B. Even harder for a Freecell implementation to do on its own.
+
+* I created the concept of move stacks, which each test loaded with the moves
+that were it performed.
+
+* Those stacks were later collected into one stack, to get the total move
+stack from the initial board to the final solution.
+

@@ -1,0 +1,160 @@
+# Quicktask v1.2
+
+CURRENT TASKS:
+    - Link "Google discontinues services" to the main page.
+      @ Added [Tue 2014-04-01]
+    - Link "New versions of the GPL" to the main page.
+      @ Added [Tue 2014-04-01]
+
+LONG TERM:
+    - Fortunes Atom Feed:
+        * Make it validate
+        * Syndicate it into the rest.
+        * fix the formatting of the fortunes (especially IRC fortunes)
+            * in Akregator.
+    - Check for Hebrew spelling in the Hebrew test suite:
+    - Adapt a better style which stretches the page.
+        * Maybe just make the page wider.
+        * Thanks to moofy and other people who commented on it.
+    - Add the tarball mirrors domain
+        * mirroring.shlomifish.org
+        * With scripts to mirror, tar.xz, .zip, etc.
+        * Note about APIs.
+            * Mostly valid XHTML
+                * Not terribly semantic because it’s a waste of time.
+            * Some JSON/etc.
+            * Mostly static.
+            * By a human - for humans.
+        * Added [Sat 2013-03-16]
+    - Add more essays I wrote to the Essays Index.
+        * About Female Action Heroes
+        * We are the Qs of the Q Continuum.
+        * Dealing with Internet Trolls
+        * http://shlomifish.livejournal.com/2615.html - Publish or Perish.
+    - Link the Hebrew Errors Page to the main one.
+    - Add a section to the drugs’ legalisation page about the “War on Drugs”
+        * Quote Larry Lessig’s Remix about “War on File Swapping”
+        * The Usenet quote about “Why can’t we ever attempt to solve a
+        problem in this country without having a ‘War’ on it?”
+        — Rich Thomson, talk.politics.misc
+    - Perhaps concentrate all the tech tips on one page.
+      @ Added [Tue 2013-12-31]
+    - Prepare a page about how the new bk2hp image was created.
+        @ Start [Sat 2013-11-02]
+    - MSIE Page Feb 2014 Update
+        * Add more links.
+        * Make some text bold.
+
+
+MINOR PROBLEMS:
+    - individual presentations: add meaningful descriptions.
+        * link to the new presentation in "Linux for the Technion student".
+    - Add to the external FOSS contributions:
+        * MikMod
+        * Adopted CPAN Modules
+        * Wikipedia and related sites.
+    - HHFG: add some links and references to resources.
+        * For further enlightenment.
+
+COMPLETED TASKS:
+    - Add the Buffy facts:
+        * http://www.reddit.com/r/buffy/comments/1aet33/crowdsourcing_buffy_facts_a_la_chuck/
+    - Fix the Firefox button to not read "Firefox 3"
+        * Also not to point to spreadfirefox.com.
+    - Apply the corrections to Selina Mandrake
+        * based on what the correspondent from @GMail.com said.
+        * Added [Sun 2013-03-17]
+    - jqTree
+        - Expand some of the categories by default.
+            - Make sure the browser remembers when categories were collapsed
+            using a localStorage hack.
+    - Pack the other stories as separate DVCS repositories.
+    - Make sure the jqTree work of making it more GUI-like is credited.
+        * Added [Sat 2013-04-06]
+        * DONE [Tue 2013-04-09]
+    - Add a page about https://metacpan.org/module/XML::GrammarBase .
+        @ DONE [Sun 2013-04-21]
+    - New techgroups: add date/etc.
+        @ DONE [Fri 2013-04-26]
+        @ Added [Fri 2013-04-26]
+    - Fiction examples - find a good permanent link
+        @ DONE [Sun 2013-04-28]
+      * http://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/#examples
+      * The Distributed Examples link.
+      * Thanks to Shai from Freenode.
+      @ Added [Sun 2013-04-28]
+    - Humanity: add link to the recording of the song.
+        @ DONE [Tue 2013-04-30]
+      @ Added [Fri 2013-04-26]
+    - Finish translating t2/humour/RoadToHeaven/abstract.xhtml.wml
+        @ DONE [Tue 2013-04-30]
+      * To English
+      @ Added [Mon 2013-04-15]
+    - Add a link to the old site:
+        @ DONE [Tue 2013-04-30]
+      * http://old-1998-site.shlomifish.org/
+      @ Added [Tue 2013-04-30]
+    - __Beta-kmor site should not be crawlable.
+        @ DONE [Wed 2013-05-01]
+      @ Added [Sat 2013-04-27]
+    - Add the printable hack for a JS-based print version.
+        @ DONE [Wed 2013-05-01]
+      * Just uses the print stylesheet.
+      * TODO : add a printer icon to the button.
+      @ Added [Wed 2013-05-01]
+    - Resumes / Résumés :
+        - add an opening paragraph with who I am, what I specialise in,
+        and some things I believe in about software development and its
+        craftmanship.
+        @ DONE [Wed 2013-05-01]
+    - Add some references to general Objectivism stuff on humour/TOWTF.
+        @ DONE [Wed 2013-05-01]
+    - Add logos to the "Shlomi Fish elsewhere on the web"
+        @ DONE [Wed 2013-05-01]
+      @ Added [Wed 2013-05-01]
+    - Ask people about the name of the meta-scan algorithm in:
+        * Apparently it's not known in the literature.
+        * http://www.shlomifish.org/lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/
+        @ DONE [Wed 2013-05-01]
+    - Add a test suite:
+        * HTML/XHTML validation.
+        * English spelling.
+        @ DONE [Wed 2013-05-01]
+    - Convert the main navigation style to a [+] / [-] tree.
+        * Thanks to moofy.
+        @ DONE [Wed 2013-05-01]
+    - Fortunes - all on one page.
+        @ DONE [Fri 2013-05-03]
+      @ Added [Thu 2013-05-02]
+    - Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml
+        * From more places.
+        @ DONE [Fri 2013-05-03]
+    - Fix the URLs that are spelt "priviliges" instead of "privileges".
+        @ DONE [Fri 2013-05-03]
+    - Compress the .js files and put them all in one.
+        @ DONE [Wed 2013-05-08]
+      @ Added [Wed 2013-05-08]
+    - Create a home page for App-Sky.
+        * Publish it on Freecode.com.
+        @ DONE [Fri 2013-12-13]
+    - Make the /art/bk2hp page display the old bk2hp image.
+        @ Start [Sat 2013-11-02]
+        @ DONE [Fri 2013-12-13]
+    - Remove or replace the Eonspace logo on the front page:
+        @ DONE [Fri 2014-01-10]
+      * http://www.shlomifish.org/
+      * We're no longer using Eonspace.
+      @ Added [Fri 2014-01-10]
+    - Add http://shlomif-tech.livejournal.com/67311.html
+        @ DONE [Fri 2014-01-10]
+      @ Added [Fri 2013-12-27]
+    - Add the Chuck Norris "Sent by my iPhone" parody factoid.
+        @ DONE [Fri 2014-01-10]
+      @ Added [Fri 2013-12-27]
+    - Prepare a new Back to the Future Logo using GIMP or whatever
+        * as a PNG with anti-aliasing/etc.
+        * Thanks to moofy.
+        @ DONE [Sat 2013-11-02]
+
+
+# vim:ft=quicktask:sw=4:ts=4

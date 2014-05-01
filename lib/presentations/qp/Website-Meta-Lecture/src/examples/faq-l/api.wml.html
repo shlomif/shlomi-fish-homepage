@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Docs/homepage/homepage/trunk/lib/presentations/qp/Website-Meta-Lecture/src/examples/faq-l/api.wml.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Error { color: #ffffff; background-color: #ff0000; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.Identifier { color: #008b8b; }
+.Constant { color: #ff00ff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+-->
+</style>
+</head>
+<body>
+<pre>
+&lt;:{
+<span class="Identifier">use vars qw(</span><span class="Identifier">@question_number</span>);
+
+<span class="Identifier">@question_number</span>=(<span class="Constant">0</span>);
+}:&gt;
+
+;;; Perl code here:
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> next-question&gt;</span>&lt;:{
+    <span class="Identifier">my </span><span class="Identifier">$temp</span> = <span class="Identifier">pop(</span><span class="Identifier">@question_number</span>)+<span class="Constant">1</span>;
+    <span class="Identifier">push </span><span class="Identifier">@question_number</span>, <span class="Identifier">$temp</span>;
+    <span class="Identifier">my </span><span class="Identifier">$qn_text</span> = <span class="Identifier">join(</span><span class="Constant">&quot;</span><span class="Constant">.</span><span class="Constant">&quot;</span>, <span class="Identifier">@question_number</span>);
+    <span class="Identifier">print </span><span class="Identifier">$qn_text</span>;
+}:&gt;<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+;;; Perl code here:
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> promote&gt;</span>&lt;:{
+    <span class="Identifier">push </span><span class="Identifier">@question_number</span>, <span class="Constant">0</span>;
+}:&gt;<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+;;; Perl code here:
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> demote&gt;</span>&lt;:{
+    <span class="Identifier">pop(</span><span class="Identifier">@question_number</span>);
+}:&gt;<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+
+
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> question endtag=</span><span class="Constant">&quot;required&quot;</span><span class="Identifier">&gt;</span>
+;;; Define anchor to be the first argument
+<span class="Identifier">&lt;</span>preserve<span class="Identifier"> anchor /&gt;</span>
+;;; Define title to be the second argument
+<span class="Identifier">&lt;</span>preserve<span class="Identifier"> title /&gt;</span>
+
+;;; This statement is required to actually set
+;;; anchor and title to a proper value
+<span class="Identifier">&lt;</span>set-<span class="Statement">var</span><span class="Identifier"> %attributes /&gt;</span>
+
+;;; next-question is defined above
+<span class="Identifier">&lt;</span>set-<span class="Statement">var</span><span class="Identifier"> question-number=</span><span class="Constant">&quot;&lt;next-question /&gt;&quot;</span><span class="Identifier"> /&gt;</span>
+
+<span class="Identifier">&lt;</span>if<span class="Identifier"> </span><span class="Error">&lt;</span><span class="Identifier">get-var render-body /&gt;</span>
+;;; If the question should be rendered.
+        &quot;
+        <span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;&lt;get-var anchor /&gt;&quot;</span><span class="Identifier">&gt;&lt;</span><span class="Statement">b</span><span class="Identifier">&gt;&lt;</span>get-<span class="Statement">var</span><span class="Identifier"> question-number /&gt;</span>. <span class="Identifier">&lt;</span>get-<span class="Statement">var</span><span class="Identifier"> title /&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">b</span><span class="Identifier">&gt;&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span>
+        %body
+        &quot;
+;;; If not
+    &quot;<span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;answers.html#&lt;get-var anchor /&gt;&quot;</span><span class="Identifier">&gt;&lt;</span>get-<span class="Statement">var</span><span class="Identifier"> question-number /&gt;</span>. <span class="Identifier">&lt;</span>get-<span class="Statement">var</span><span class="Identifier"> title /&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span><span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>&quot;
+    /<span class="Error">&gt;</span>
+;;; Restore their previous values
+<span class="Identifier">&lt;</span><span class="Statement">restore</span><span class="Identifier"> title /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">restore</span><span class="Identifier"> anchor /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+</pre>
+</body>
+</html>

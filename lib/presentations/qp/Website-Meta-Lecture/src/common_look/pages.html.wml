@@ -1,0 +1,32 @@
+#include 'template.wml'
+
+<h2>index.html.wml</h2>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/common_look/index.html.wml" />
+</quadpres_code_block>
+
+<h2>links.html.wml</h2>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/common_look/links.html.wml" />
+</quadpres_code_block>
+
+<h2>download.html.wml</h2>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/common_look/download.html.wml" />
+</quadpres_code_block>
+
+<h2>Explanation</h2>
+
+<points>
+<li>
+The <tt>#include 'template.wml'</tt> directive instructs ipp to
+include the template.wml file (a la C's #include directive)
+</li>
+<li>
+The <tt>&lt;subject "My Subject" /&gt;</tt> meta-tag was declared in
+the template file.
+</li>
+</points>

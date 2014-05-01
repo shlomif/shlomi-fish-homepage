@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<points>
+<li>
+Freecell Solver distinguishes between two levels of tasks:
+</li>
+<li>
+<b>1. Soft Thread</b> - a soft thread is one dedicated scan running
+on the state collection.
+</li>
+<li>
+<b>2. Hard Thread</b> - a task that should be performed by one system thread
+with all the dedicated resources that should prevent collisions with other
+hard threads as much as possible.
+</li>
+<li>
+A hard thread switches between several soft threads.
+</li>
+<li>
+At the moment, hard threads can not be multi-threaded using the system
+threads, as no locking mechanisms are in place. But the distinction still
+exists in the code.
+</li>
+</points>

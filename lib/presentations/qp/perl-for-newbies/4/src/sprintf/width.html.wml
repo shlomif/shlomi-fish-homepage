@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<p>
+One can apply an optional width and max width (or for floating point numbers
+- precision), specifier for the conversion flags. This is a number followed
+by an optional dot and another number.
+</p>
+
+<p>
+Here are some examples:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/sprintf/width.pl"/>
+</quadpres_code_block>
+

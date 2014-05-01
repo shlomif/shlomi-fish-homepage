@@ -1,0 +1,15 @@
+<define-tag ad_engage_top_proto>
+<script type="text/javascript">
+	zoneIdentifier="F93300E67D05D9D3";
+	var varCheckURL = (("https:" == document.location.protocol) ? "https://" : "http://");
+	document.write(unescape("%%3Cscript src='" + varCheckURL + "adcode.adengage.com/bootstrap/ae.js' type='text/javascript'%%3E%%3C/script%%3E"));
+</script>
+</define-tag>
+
+<define-tag google_adsense_code_top_wide>
+<if "<match "$(LATEMP_FILENAME)" "\.xhtml$" action="report" />"
+    "  <object class="ads_top_wide" data="$(ROOT)/images/ads/ads-top.html" type="text/html"></object>"
+    "<ad_engage_top_proto />"
+    />
+</define-tag>
+

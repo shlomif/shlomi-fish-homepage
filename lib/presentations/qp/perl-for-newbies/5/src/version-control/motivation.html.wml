@@ -1,0 +1,50 @@
+#include 'template.wml'
+
+<p>
+Using version control gives several important advantages over the alternative
+of not using any version control system at all:
+</p>
+
+<ul>
+
+<li>
+<p>
+You <b>won't lose</b> your code by accident. Having a version control
+system, preferably with a remote service, will mean you're going to have another
+place where your code is stored. If several developers are working on the
+code simultaneously, then each one of them will have a copy of the entire
+code (or, in some cases, even the entire history).
+</p>
+</li>
+
+<li>
+<p>
+It allows you to <b>keep historical versions</b> of the code, for easy
+reverting, comparison and investigation.
+</p>
+<p>
+Let's say you introduced a bug. With a version control system you can easily
+revert to a previous version of the code where the bug was not present
+to verify that it did not exist there. Then you can diff the results, or
+even bisect the history to find the exact check-in that introduced this bug.
+</p>
+</li>
+
+<li>
+<p>
+It allows one to maintain several simultaneous lines of code (normally
+called <b>"branches"</b>) and to easily compare between them and merge them.
+</p>
+</li>
+
+</ul>
+
+<p>
+Finally, you'll find using a modern and high-quality version control system
+a more convenient and more robust solution than using archives (such
+as <a href="http://en.wikipedia.org/wiki/ZIP_%28file_format%29">.zip
+files</a>) and patches.
+There are plenty of open-source and gratis version control systems, some
+of which are highly mature and esteemed and you shouldn't have a problem finding
+something that suits you.
+</p>

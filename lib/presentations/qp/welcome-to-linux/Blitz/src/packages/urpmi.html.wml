@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>urpmi</tt>
+הינה פקודה דומה ל-apt שנעשה בה שימוש במערכות מנדריבה.
+</li>
+<li>
+כדי להתקין חבילות (עם כל התלויות שלהן) יש להריץ את הפקודה
+<tt dir="ltr">urpmi [package names]</tt>.
+</li>
+<li>
+ממשקים גרפיים ל-urpmi ניתן למצוא במרכז הבקרה של מנדריבה תחת
+"Software Management".
+</li>
+</points>

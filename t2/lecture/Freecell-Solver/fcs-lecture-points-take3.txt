@@ -1,0 +1,370 @@
+Description of the game:
+------------------------
+
+Freecell's Rules:
+-----------------
+
+* There are 8 stacks of cards, 4 freecells, and 4 foundations. The game
+is played with one deck.
+
+* At the beginning of play, the cards are dealt to the stacks (4*7+4*6).
+The faces of all the cards are visible at the beginning of play.
+
+* A freecell can hold one _single_ card.
+
+* The foundations are built from ace to king and the object of the
+game is to move all the cards to the foundations.
+
+* A card can be placed on top of a card that is of the opposite colour,
+and is higher in rank by 1, assuming that the latter is at the top of a
+stack.
+
+* An empty stack may be filled with any card.
+
+* An atomic move consists of:
+    - moving a card from a stack to a freecell.
+    - moving a card from a freecell to a parent card on a stack.
+    - moving a card from the top of a stack on top of a parent card on a
+      different stack
+    - moving a card from the top of a stack or from a freecell to the
+      foundations.
+
+    Strategies:
+    -----------
+
+    * A sequence of more than one card can be moved by moving the top cards to
+      the freecells or to unoccupied stacks. The latter is commonly called a
+      sequence move or a "supermove" if it involves temporarily putting some
+      cards in a vacant stack.
+
+    * Sometimes, it is useful to move cards to the freecells or temporarily
+      to an empty column, so the card below them can serve as a basis for a
+      sequence.
+
+
+Pseudo-code for DFS:
+-------------------
+
+Solve-State(state, prev_states, ret)
+    if (state == empty_state)
+        Push(ret, state)
+        return SOLVED
+    for each move possible on state
+        new_state <- apply(state, move)
+        if (new_state in prev_states)
+            ; Do nothing
+        else
+            add new_state to prev_states
+            if (Solve-State(new_state, prev_states, ret) == SOLVED)
+                Push(ret, state)
+                return SOLVED
+    return UNSOLVED
+
+Freecell-Solver(init_state)
+    if (Solve-State(init_state, Null, ret) == SOLVED)
+        print "State was solved"
+        while (state <- Pop(ret))
+            print state
+    else
+        print "I could not solve this board";
+
+
+State Collection:
+-----------------
+
+1. Initial Perl Version - A list of states - O(n) lookup
+    - dirt slow.
+
+2. In C - A sorted array + a sort margin that was qsorted into the array.
+    - O(log(N) lookup and O(n^2*log(n)) (average) O(n^3) cumulative
+    complexity.
+
+3. Merging the sort margin instead of qsorting it in.
+    - O(n^2) complexity cumulative complexity.
+    - Noticeably Faster (times 3 or so)
+
+4. A balanced binary tree - O(log(N)) lookup and O(N*log(N)) cumulative
+    complexity.
+    - Twice as fast or so.
+    - I used predefined APIs in libavl, libredblack and glib. The glib
+    one was relatively slower.
+
+5. A Hash
+    5.1 - Using Glib's Hash and a 4-byte wide XOR function as a hash function
+        - dirt slow - even slower than an array.
+    5.2 - Converting to MD5 as a hash function
+        - Much better - roughly as much as a binary tree.
+        - I ended up coding and tweaking my own hash implementation in the
+            process. It turned out to be faster than glib's.
+        - Your hash is only as good as your hash function!
+    5.3 - MD5 is a cryptographically secure hash function. Its calculation is
+        still very slow. Converting to Perl's hash function, which is faster.
+    5.4 - Hash - a heuristic that gives _on average_ O(1) lookups and O(n)
+        cumulative complexity. (worst case: O(n) lookups and O(n^2)
+        cumulative)
+    - TODO: Write about Hash optimizations (?)
+
+
+Moves stuff:
+------------
+
+1. Meta-moves instead of atomic moves. I do several moves at once while
+trying to achieve a certain "desirable" end in mind.
+    - Examples: (see previous summary)
+
+    * Put top stacks cards in the foundations.
+    * Put Freecell cards in the foundations.
+    * Put non-top stack cards in the foundations. (by moving cards above them
+    to freecells or vacant stacks).
+    * Move stack cards to different stacks.
+    * Move sequences of cards onto free stacks.
+    * Etc.
+
+
+2. I generated a 1000 test boards and saw that some of them were reported
+unsolvable. After I played one I discovered it was solvable, and realized
+there was one generic type of meta-move that I missed (moving a card to a
+parent on the same stack). So I implemented it and saw that the board could
+now have been solved.
+
+3. Someone reported some of the Microsoft boards to be unsolvable by FCS.
+    - I realized some of my meta-moves were not generic enough so I
+    generalized them.
+    - Now, Freecell Solver can solve all of the Microsoft deals (except 11982
+    which was reported to be unsolvable by any human or computerized solver).
+
+4. Tom Holroyd reported a few "Seahaven Towers" boards which he generated
+to be unsolvable. Again, it inspired me to improve the solver to accommodate
+for solving them.
+
+4. Adrian Ettlinger, however, made a thorough "benchmarking" of Freecell Solver
+to test each solvability, and found several boards that could not be solved
+with a certain number of Freecells.
+    - This is a known issue, that I do not plan to take care of due to the
+    definition of the FCS strategy.
+    - I found out by tracing a solution to these boards (using Tom Holroyd's
+    patsolve) that FCS did two moves in a certain way and not in another
+    permutation of them. This caused it to be reported as unsolved
+    eventually.
+
+Scanning:
+---------
+
+* Specifying the order of the tests (possibly a subset of it) in
+the command-line.
+    - Sometimes allow solving boards very quickly.
+
+* Best-First Search is a scan that uses a priority queue to determine
+to which node in the graph to go next.
+
+* Soft-DFS -
+    - PySol game #980662 recursed into a depth of over 3000. On NT, this
+    caused a stack overflow which resulted in an ugly segfault.
+    - I decided to implement Soft-DFS which does not utilize procedural
+    recursion but rather its own dedicated state stack.
+    - This turned out to have an O(1) suspend and resume time instead
+    of O(d) for hard-DFS.
+    - (I later on discovered that a Win32 program can be compiled with more
+    stack space, but decided to continue developing Soft-DFS just for the
+    heck of it and to have a O(1) function depth).
+
+* Optimization Scan -
+    - Stephan Kulow (of KDE fame) complained that after he integrated FCS
+    into patsolve, he had several games in which the stacks were moved
+    back and forth all over the place. This is the property of DFS which
+    is not guaranteed to eliminate redundant move.
+    - I suggested to use a BrFS scan restricted to the states that were
+    found in the solution path to try to eliminate redundant moves.
+    - This turned out to be quite beneficial in most cases.
+
+    - I later on implemented a scheme in which each state stored a pointer
+    to its "parent" state (the state from which it was initially derived),
+    and used back-tracking to trace the solution down there.
+    - This turned out to have much the same effect as the optimization scan,
+    but the optimization sometimes improved it a bit.
+
+State Representation:
+---------------------
+
+* Chars and half-chars instead of longs and shorts.
+    - Less memory = less swapping.
+    - Operation on chars are just as fast as operations on dwords.
+    - Refer to the Linux-IL thread
+
+* Indirect Stack States
+    - Collect the stacks in a collection, and keep one copy of each stack.
+    - In every state, every stack would be stored as a pointer to the copy
+    in the collection.
+
+* Remembering the original location
+    - Keep the indices of the stacks or freecells outside the main
+      data-structure and sort the two arrays together.
+    - The collection considers only the first sizeof(internal) bytes
+    when comparing two states.
+    - I later used this external information place to store other
+    information like depth in the search tree, the parent state, etc.
+
+Board Auto-Generators:
+----------------------
+
+* A short time after the release of Freecell Solver 0.2.0, Eric Warmenhoven
+sent me a program he prepared to generate the initial boards of GNOME Freecell
+so they can later be input into Freecell Solver.
+
+* I thanked him for his effort and later continued the theme, by writing
+programs to generate the board layouts of GNOME AisleRiot, PySol, and the
+Microsoft Freecell/Freecell Pro deals (the latter are considered the standard
+among hard-core Freecell enthusiasts).
+
+* Some programs have integrated the Freecell Solver library, to allow for
+automatically solving a board starting at a position that the player has
+reached.
+
+* Why not C++:
+--------------
+
+Markus Oberhumer (of PySol fame) asked me if I thought about converting my
+solver to C++. (I suppose he meant with STL and all). Here is a full
+answer why I'm not going to do it:
+
+1. The solver is already working in ANSI C.
+
+2. The code is not overly OO. Whatever OO concepts exist there, fit well
+enough within what ANSI C gives me.
+
+3. C++/STL may make it slower, perhaps even considerably. I'd rather not spend
+time risking something like that, only to roll it back later.
+
+4. ANSI C compiles much faster. (at least with gcc)
+
+5. ANSI C is cleaner, more portable, and causes less unexpected problems
+than C++.
+
+I'm more willing to integrate C++-derived features there into the ANSI C code.
+Things like namespaces, (non-inherited) classes, or inline functions.
+However, for the time being I'd like to maintain the code as pure ANSI C.
+Then again, some of the gcc extensions can prove very useful too, but I cannot
+use them either.
+
+The fc-solve-discuss flame-war:
+-------------------------------
+
+* Recent versions of Freecell Solver pass the moves from the initial
+position to the final solution to the layer above.
+
+* The stack -> stack moves are being outputted with the number of
+cards that are moved.
+
+* Freecell Pro, OTOH, used to ignore the number of cards and expected such
+moves to comply with what the original Microsoft Freecell would do in that
+case.
+
+* This caused problems in playback of a large percentage of the games in
+its integration with Freecell solver.
+
+* A post I made to the mailing list about it
+(http://groups.yahoo.com/group/fc-solve-discuss/message/197) sparked a
+very big flame-war that diverted to cover other topics.
+
+* I actually was happy that there was some action there:
+(http://groups.yahoo.com/group/fc-solve-discuss/message/219)
+
+* Usually the only thing that happens is that I announce new releases or ask
+them questions and no-one or few people reply.
+
+* Eventually Adrian Ettlinger (a FC-Pro hacker) have extended Freecell Pro
+to make use of an optional number of cards to move argument. This made
+playback of Freecell Solver solutions perfectly smooth.
+
+The Story of the User API:
+--------------------------
+
+* Starting of Freecell Solver 1.0.0, FCS had a set of functions
+entitled freecell_solver_user_ (after their prefix) meant for integration into
+an existing software.
+
+* When Stephan Kulow integrated them into kpat (a solitaire suite for KDE),
+he did not use it, because it did not gave him everything he needed. Instead
+he used the more basic internal functions.
+
+* I told him that "I would sleep better at night" knowing that fcs_user_ will
+be used, and asked him to implement the missing parts himself, and send me
+the patch. He did.
+
+* Markus Oberhumer (of PySol fame), created a Python interface for the
+library, and again sent me some functions he wrote.
+
+* Eventually, I converted the executable itself to use fcs_user (while adding
+a lot of functions in the process) to make sure I give the embedding
+application all the functionality that I use.
+
+* I also ended up creating an API to analyse a command line and configure
+a solver instance accordingly. This made writing programs that behave
+in a similar manner to the fc-solve executable so much easier.
+
+* I found it encouraging that <FILL IN>, an engineer who worked on Freecell
+3D, was able to integrate fcs_user_ without my help, and just
+informed me of the release of F3D.
+
+Auto-confiscation and Friends:
+-------------------------------
+
+* Once upon a time Freecell Solver was distributed only with a makefile
+for GNU make, and everyone were happy.
+
+* When Stephan Kulow embedded its code into kpat, he adapted the makefile
+to use the standard KDE autoconf-based build process.
+
+* Somewhat afterwards, I decided that I want the build process to be more
+portable and modular, and to give me the ability to build a shared library.
+
+* The solution - Converting to Autoconf, Automake and Libtool.
+
+* How to do that is out of the scope of this article. I can just say it is
+not very straightforward, and required me a lot of tweaking and trial and
+error.
+
+* Then I decided building an RPM out of it would be nice. So I created an
+RPM spec for it.
+
+* Again, it required quite a lot of tweaking and experimenting. (Tzafrir's
+Lecture (URL) and web-resource greatly helped).
+
+* I eventually integrated generating an up-to-date RPM SPEC into the Autoconf
+process, and thus, was able to build an RPM by issuing:
+
+./configure
+make dist
+rpm -tb freecell-solver-*.tar.gz
+
+from the distro. (link to what Joel Spolsky says about building a package in
+one command).
+
+* A corresponding Debian package has been initially created by Yotam Rubin and
+is now maintained by Risko Gergely, who also uploads it to the Debian pool of
+packages.
+
+
+The Freshmeat Effect (and how to avoid it)
+------------------------------------------
+
+* When I created the first version of FCS, and gave it the final touches,
+I decided to call it "Freecell Solver" in order for it to have a descriptive
+title.
+
+* I posted announcements for the first release and subsequent (usually stable)
+releases on Freshmeat, and so made many people aware of it.
+
+* Starting at the very first days, a Google search for "freecell solver"
+yielded its homepage as the first link.
+
+* Today, the situation is much worse: now most of the Google hits have
+something to do with it.
+
+* The query "freecell solver" is generic enough that someone may wish
+to find any of the available Freecell Solvers.
+
+* Solution: do your best to give an original name for your program, so it
+won't clog up searches. Abbreviations, or acronyms or puns or just something
+meaningless which you like, work best.
+

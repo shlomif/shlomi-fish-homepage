@@ -1,0 +1,109 @@
+#include 'template.wml'
+
+<h2 id="pod-demo-how">How to write POD</h2>
+
+<p>
+POD sections start with a single POD directive on a new line and continue
+up to the next <tt>=cut</tt> directive also on a line of its own. Here are
+some POD directives:
+</p>
+
+<h3 id="pod-demo-headers">Headers</h3>
+
+<p>
+<tt>=head1</tt>, <tt>=head2</tt>, <tt>=head3</tt>, etc. - these are headers.
+The lower the header number is, the more significant it is and the bigger
+font will be used for it. Headers are followed by the text of the header.
+For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/headers.pod" />
+</quadpres_code_block>
+
+<h3 id="regular-text">Regular Text</h3>
+
+<p>
+As you can see, a regular paragraph text is a paragraph. Paragraphs are separated by
+blank lines, and newlines are ignored.
+</p>
+
+<h3 id="pod-demo-code-blocks">Code Blocks</h3>
+
+<p>
+A <b>code block</b> (or verbatim paragraph) can be added by creating a portion
+of the text that's indented by using whitespace. In code blocks, newlines are
+not ignored. For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/code-block.pod" />
+</quadpres_code_block>
+
+
+<h3 id="pod-demo-formatting-codes">Formatting Codes</h3>
+
+<p>
+One can use some formatting codes:
+</p>
+
+<ul>
+
+<li>
+<tt>I&lt;text&gt;</tt> - for italic text.
+</li>
+
+<li>
+<tt>B&lt;text&gt;</tt> - for bold text.
+</li>
+
+<li>
+<tt>C&lt;text&gt;</tt> - for code (monospace) text.
+</li>
+
+<li>
+<tt>L&lt;text&gt;</tt> - hyperlinks - see
+<a href="http://perldoc.perl.org/perlpod.html">perldoc perlpod</a> for
+more information.
+</li>
+
+<li>
+<tt>E&lt;lt&gt;</tt> , <tt>E&lt;gt&gt;</tt> , <tt>E&lt;htmlname&gt;</tt>,
+etc. are escapes.
+</li>
+</ul>
+
+<p>
+One should note that one can combine several styles at once using
+<tt>BI&lt; ... &gt;</tt> notation. Furthermore, one can enclose text with
+special characters (such as <tt>&lt;</tt> and <tt>&gt;</tt>) using
+several <tt>&lt;&lt;&lt;</tt> and trailing <tt>&gt;&gt;&gt;</tt> characters.
+</p>
+
+<h3 id="pod-demo-lists">Lists</h3>
+
+<p>
+One can use lists in POD by writing <tt>=over 4</tt> (or some other value
+of indent-level instead of "4"), and then several <tt>=item</tt>'s and
+finally <tt>=back</tt>. An item can be <tt>=item *</tt> for a bullet,
+<tt>=item 1.</tt> to produce numbered lists or <tt>=item title</tt> to
+produce a definition list.
+</p>
+
+<p>
+For example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/pod-documentation/list1.pod" />
+</quadpres_code_block>
+
+<h2 id="pod-demo-for-more-info">For More Information</h2>
+
+<p>
+POD has some other directives. For more information refer to
+<a href="http://perldoc.perl.org/perlpod.html">perldoc perlpod</a>,
+and to <a href="http://en.wikipedia.org/wiki/Plain_Old_Documentation">the
+Wikipedia page about POD</a>.
+</p>
+

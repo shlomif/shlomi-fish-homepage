@@ -1,0 +1,70 @@
+Intro
+    Capabilities of the language: Regexs, OOP, FP, unlimited data structures, 
+    The perl cycle - write -> run -> debug -> correct -> run
+    "There is no king's road to mathematics", Euclid
+Output
+    The print command. 
+    Note about semi-colons
+Expressions
+    Basic operators : +, -, /, *, ( ... ), ., %, **
+    Note about using parenthesis with the print function
+Strings ( " ... " )
+    Basic Escape Sequences - \$ \" \\ \n
+    The length() function
+    The substr() function
+    The int() function
+    Note about converting numbers to strings and vice versa (you don't need to!)
+Variables
+    Introduction to the concept of variables
+    A scalar variable can hold anything
+    Assigning a value to a variable
+        Note about the "+=", "*=", "++" operators
+    Getting the value of a variable.
+    Note: the dollars are used both for lvalues and rvalues.
+    Simple Examples: $a = "Hello world!\n"; print $a,$a,$a;
+Input
+    The <> operator.
+    Examples:
+	print "Please enter your name:\n";
+        $name = <>;
+        print ("Hello " . $name . "!\n");
+The For Loop
+    The for loop: for $i (1..100)
+    Examples:
+	Renaming h00.jpg to h000.jpg h01.jpg to h001.jpg etc.
+	Printing the multiplication board.
+Conditionals:
+    if .. elsif .. elsif .. else
+    Examples:
+        Testing if an inputted name starts with a.
+Condition Expressions:
+    The numeric comparison operators
+    The string comparison operators
+    The && and || operators
+The While Loop
+    Explanation
+    Examples:    
+        ##################################
+        print "Input a number:\n";
+        $number=<>;
+        my $power_of_2 = 1;
+        while ($power_of_2 < $number)
+        {
+            $power_of_2 = ($power_of_2*$power_of_2);
+        }
+        print ("The first power of 2 that is " .  
+            "greater than this number is " , $power_of_2, "\n");
+        ##################################
+Arrays:
+    Syntax: @array, $array[$index], scalar(@array).
+    The , operator.
+    foreach
+        Note about the fact that the for and foreach keywords are equivalent
+        Note about the .. operator (without too much explanation)    
+    Examples:
+
+End of lecture 1 ( or 2 )
+
+    
+    
+         

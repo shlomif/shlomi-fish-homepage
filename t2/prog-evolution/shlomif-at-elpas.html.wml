@@ -1,0 +1,223 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Shlomi Fish at Elpas" />
+<latemp_meta_desc "Some memoirs of Shlomi Fish when Working at Elpas" />
+<latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Elpas, Windows" />
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+17-August-2006
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+17-August-2006
+</dd>
+</dl>
+
+<h2 id="how_i_started">How I started Working in Elpas</h2>
+
+<p>
+I started working in <a href="http://www.elpas.com/">Elpas</a> after I
+graduated from high school, back in 1996, and had some time left until I was
+supposed to join the Israeli Defence Force (which I didn’t eventually, as you
+will see). So I started working there to kill the time, because I was very
+bored.
+</p>
+
+<p>
+Elpas worked on several Infra-Red-related technologies. What I worked on was
+eventually called EIRIS - Elpas Infra-Red Identification System. This was a
+network of Infra-Red Readers that was installed in rooms in a room complex,
+that received signals from tags. That way, the network could determine in
+which room every tag is located in real time. This was suitable
+for hospitals, which want to know in real time where every Doctor, Nurse or
+piece of equipment is located, as well as organisations with similar needs.
+</p>
+
+<p>
+At first I started writing some simulations for this that ran on
+<a href="http://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11 or
+“Windows for Workgroups”</a>. Eventually I was also assigned to work on the
+software that concentrated the data from the EIRIS network and presented it
+to the user.
+</p>
+
+<p>
+I was given some code written by our partner in the U.S. which was a phone
+company that implemented a similar product using their PBX, a server that ran
+on SCO UNIX, and Windows 3.11 client that communicated with it using serial
+lines. What we did at first was to eliminate the PBX and to convert everything
+to use the <a href="http://www.echelon.com/">Echelon</a>-based network that
+Elpas developed. Next, we wanted to eliminate the dependence on the SCO UNIX
+system.
+</p>
+
+<h2 id="start">Let’s start coding!</h2>
+
+<p>
+I had a rough idea of what was required. So what I did was to gradually
+eliminate the <a href="http://www.birdstep.com/">Raima database</a> that was
+managed on  the UNIX, and to implement it internally in our program. I
+started to do it using arrays of structs, which I binary searched to find a
+record, and then sorted using <code>qsort()</code> to add a new record. At that
+time, I was told this was called vectors, which now I know is just a fancy
+name for an array in which all elements are placed one after the other.
+</p>
+
+<p>
+I started doing it and made some progress. However, then I was told that
+they’d rather I didn’t use some kind of proprietary vector based lookup, but
+a “standard database” such as Informix, Oracle, etc. We didn’t have one like
+that so they told me to start with Microsoft Access.
+</p>
+
+<h2 id="access">Let’s start coding with Access</h2>
+
+<p>
+Access... we had Access 2.0, and I had to find a way to work against it from
+our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning SQL from the
+Access docs, started converting our application to store the data on Access,
+and access it using DDE. It was a lot of work as the application was written
+in C.
+</p>
+
+<p>
+What can I tell you? It was slow, it kept crashing, and it didn’t work too
+well. Eventually we got a consultant. He said he thinks Borland Delphi would
+be the perfect platform for what we needed to do, but also told us they were
+working with ODBC (“Open Data-Base Connectivity”) to access the data from
+Windows.
+</p>
+
+<p>
+So we bought a yearly MSDN subscription and started working with ODBC against
+the Microsoft Jet database (which is also used in Access). It took me some
+time to get it to work cleanly with Borland C++ 4.52 which we had, but I
+eventually did it. So I converted the code to use ODBC.
+</p>
+
+<p>
+It was a bit faster than using DDE and NetDDE, but was still slow and still
+crashed a lot. We thought that we might need a better database but then we got
+a few other consultants who brought us to a realisation: since we needed to
+query the database in real time, we couldn’t afford to construct SQL queries
+send them to an SQL server that will parse them, process them relatively
+inefficiently, and then return the results over a stream which will need to
+be processed and parsed (to say nothing of API overhead). We needed something
+much faster, and my original vector-based database was as good as any.
+</p>
+
+<h2 id="back_to_basic">Back to Basics</h2>
+
+<p>
+So I started finishing the vector-based database, which was I had started
+to write in the first place. A few notes:
+</p>
+
+<ol>
+<li>
+I implemented everything using ANSI C arrays of C structs, a different
+one for each table. As a result there was a lot of duplicate code there.
+</li>
+<li>
+Retrospectively, I understand that I could have implemented it with
+faster insertions using a balanced binary tree.
+</li>
+<li>
+I ended up implementing my own binary search function using trial and error,
+which I eventually used for inserting a new record into the struct, instead
+of Quick-Sorting it. That way an insertion was O(N) instead of O(N*log(N))
+to O(N**2).
+</li>
+</ol>
+
+<p>
+I finished the work some time before the date most of the other people at my
+office went to the CeBIT conference to present our products. I didn’t travel
+to Germany for it, and during the conference, I still came to work, to
+continue working on many of my priorities. My father and I still said to
+each other that “When the cats are away, the mice go out and play.”.
+</p>
+
+<p>
+When they returned from the conference, they said it was very successful.
+We were the most successful booth in the Israeli section, my demonstration
+computer ran flawlessly except for one time it crashed. Plus, they also
+brought many representatives from large corporations to inspect our
+products, and many of them were very impressed.
+</p>
+
+<h2 id="why_i_quit">Why I quit?</h2>
+
+<p>
+For a long time I worked for minimal wage at Elpas. This was a bit before
+the Bubble and there was a lack of programmers in Israel. When I told it to
+my friend he said that one can get jobs giving away sheets of paper for over
+twice what I was earning as a programmer. My friend said beginning
+programmers earned even twice as that.
+</p>
+
+<p>
+Eventually my pay was raised somewhat, but it was still very low. So I decided
+to look for a better job. My friend told me about Cortext, who were a
+web-site shop, and I went to a job interview of sorts in Tel Aviv University,
+where the future Cortextuals were about to graduate from TAU. There I was
+offered about 25 ILS/hour, which was still better, so I accepted, and quit
+my job in Elpas, after they hired a newer, more experienced programmer.
+</p>
+
+<p>
+As it turned out Cortext paid a global monthly wage for people who worked
+there full time, which was what I intended to do and was also close to minimal
+wage. Nevertheless, I was out of Elpas for good.
+</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>
+I really liked working at Elpas because I learned many new concepts and
+technologies there, including SQL and relational databases, Windows (16-bit)
+programming, ODBC, some aspects of Microsoft Access, and a small amount of
+UNIX. Some of these served me well later on.
+</p>
+
+<p>
+Retrospectively, I can say that we waited too long before getting the
+required tools. We started with one copy of Turbo C++ for Windows, which
+was very inadequate, and should have got an MSDN subscription. Plus, from
+my impression, our CEO was not a good manager, but that was somewhat
+augmented by the competency of the other workers. Elpas was just a startup
+at the time, but despite everything we had a good potential.
+</p>
+
+<p>
+Retrospectively I can say that we had a relatively bad software management: we
+did not use version control; we did not have automated tests; we could not
+build a release in one command; we did not have the best tools money can buy,
+and we should have got some better consultants in the start.
+</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>
+Thanks to the Freenode people Windrose and uberspaced for reviewing this
+memoir and giving some comments.
+</p>
+

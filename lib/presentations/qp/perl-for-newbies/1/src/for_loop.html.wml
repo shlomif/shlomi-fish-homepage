@@ -1,0 +1,57 @@
+#include 'template.wml'
+
+
+
+<p>
+The for loop enables us to iterate over a sequence of numbers and repeat
+the same set of operations for each number.
+</p>
+
+<p>
+For example, the following program prints all the numbers from 1 to 100:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/for_loop/1to100.pl" />
+</quadpres_code_block>
+
+<p>
+Some explanations about the syntax:
+</p>
+
+<ol>
+
+<li>
+<tt>$i</tt> is the iteration variable. It receives the value 1, then the
+value 2, then 3 and so forth until it is equal to 100, afterwards the
+loop terminates.
+</li>
+
+<li>
+The curly brackets (<tt>{ ... }</tt>) encapsulate the loop block. The loop
+block is executed once for each value <tt>$i</tt> accepts. Within that
+block, called the loop body, you can use <tt>$i</tt> and you'll get its
+current value.
+</li>
+
+</ol>
+
+
+<p>
+We can nest loops, so for example the following program prints the
+multiplication board:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/for_loop/multiplication_board.pl" />
+</quadpres_code_block>
+
+<p>
+You may have noticed the program's comments. In perl comments start with the
+sharp sign (<tt>#</tt>) and extend to the end of the line. Writing the
+multiplication boards with the labels that indicate which numbers are being
+multiplied is left as an exercise to the reader.
+</p>
+
+
+

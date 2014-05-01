@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<p>
+One can define such a reference to a function within another function. It
+is possible that this reference will be made accessible to the outside world
+after the outer function has terminated. In that case, the the inner function
+(which is called a <b>closure</b>) will remember all the relevant variables
+of the outer function.
+</p>
+
+<p>
+Note that if two calls were made to the outer function, then the two resulting
+closures are by no mean related. Thus, changes in the variables of one closure
+will not affect the other. (unless, of course, they are global to both).
+</p>
+
+<p>
+Here's an example to illustrate this:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/refs_to_funcs/dynamic/closures.pl" />
+</quadpres_code_block>
+

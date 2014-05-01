@@ -1,0 +1,52 @@
+#include 'template.wml'
+
+<points>
+<li>
+<a href="http://www.paulgraham.com/">Paul Graham</a> wrote in his
+<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb FAQ</a>,
+that he did not use a database for ViaWeb (now Yahoo Store):
+</li>
+<li>
+<blockquote>
+<p>
+We didn't use one. We just stored everything in files. The Unix file system is
+pretty good at not losing your data, especially if you put the files on a
+Netapp.
+</p>
+<p>
+It is a common mistake to think of Web-based apps as interfaces to databases.
+Desktop apps aren't just interfaces to databases; why should Web-based apps be
+any different? The hard part is not where you store the data, but what the
+software does.
+</p>
+</blockquote>
+</li>
+<li>
+I disagree with this statement.
+</li>
+<li>
+Desktop apps don't always use databases, because they can afford to load the
+data on start-up, store it internally in memory using efficient
+data-structures, and then saving the data to disk serialized, at an Exit or a
+Save command.
+</li>
+<li>
+Web-based programs, on the other hand, cannot afford to load and store the
+serialized data during every web-request done, and cannot maintain a state
+in memory because the HTTP protocol is stateless.
+</li>
+<li>
+A database system allows them to manipulate efficient and complex data
+structures without having to constantly serialize and de-serialize them.
+</li>
+<li>
+It is also probable that when working against the raw file-system, one will
+implement a lot of database functionality using the file-system primitives,
+which may be a lot of extra work.
+</li>
+<li>
+See for instance
+<a href="http://svn.haxx.se/dev/archive-2004-04/1479.shtml">Subversion's
+libsvn_fs_fs</a>
+</li>
+</points>

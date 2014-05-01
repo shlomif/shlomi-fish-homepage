@@ -1,0 +1,48 @@
+################################################################################
+# Spork Configuration File.
+#
+# Please read this file over and set the values to your own.
+#
+# If you want global settings for all your slideshows, copy this file to
+# ~/.sporkrc/config.yaml. Any settings in this local file will override
+# the global value of that setting.
+#
+# See C<perldoc Spork::Config> for details on settings.
+################################################################################
+author_name: Shlomi Fish and Sagiv Barhoom
+author_email: shlomif@shlomifish.org
+author_webpage: http://www.shlomifish.org/
+copyright_string: Copyright &copy; 2005 Shlomi Fish
+
+banner_bgcolor: #FFEED3
+show_controls: 1
+mouse_controls: 0
+image_width: 350
+auto_scrolldown: 1
+logo_image: logo.png
+file_base: /lecture/Perl/Too-Many-Ways/
+
+slides_file: Spork.slides
+template_directory: template/tt2
+template_path:
+- ./template/tt2
+slides_directory: slides
+download_method: wget
+character_encoding: utf-8
+link_previous: &larr; Previous
+link_next: Next &rarr;
+link_index: Index
+
+start_command: kfmclient openURL slides/start.html
+
+# Change core classes here:
+# formatter_class: Spork::Formatter::Kwid
+
+# Set plugin classes here:
+# plugin_classes:
+# - Spork::S5
+# - Spork::S5Theme
+# - Spork::S5ThemeFlower
+# - Spork::S5ThemeBlackday
+# - Kwiki::PerlBlocks
+

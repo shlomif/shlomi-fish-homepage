@@ -1,0 +1,23 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+מדריכי ה-"Info" הינם מדריכים מפורטים שמתארים פקודות ויישומים מסוימים.
+</li>
+<li>
+כדי לגשת אליהם, הקלד
+<a href="info:/"><tt dir="ltr">info:/[cmd name]</tt></a>
+בתיבת המיקום של דפדפן KDE.
+</li>
+<li>
+לדוגמא:
+<a href="info:/gcc"><tt>info:/gcc</tt></a>
+יציג את המדריך של "gcc".
+</li>
+<li>
+קיים גם מציג קבצי info בשם
+<tt>pinfo</tt>
+המציג אותם בתוך חלון שורת פקודה.
+</li>
+</points>

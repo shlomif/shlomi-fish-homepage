@@ -1,0 +1,80 @@
+<define-tag mytitle>
+The Pi FAQ - <if <get-var render-body /> "Answers" "Table of Contents" />
+</define-tag>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title><mytitle /></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="StyleSheet" href="$(ROOT)/style.css" type="text/css" />
+</head>
+<body>
+
+<h1><mytitle /></h1>
+
+<if "<get-var render-body />"
+    ""
+    "<p>"
+    />
+
+<question anchor="what_is" title="What is Pi?">
+
+<p>
+Pi is the sum of the infinite series 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11...
+multiplied by 4.
+</p>
+
+</question>
+
+<question anchor="how_much" title="How much is Pi, approximately?">
+<p>
+The value of Pi varies according to the radius of the circle, so it's
+hard to tell.
+</p>
+</question>
+
+<question anchor="approx" title="Approximating Pi">
+</question>
+
+<promote />
+
+<question anchor="when_zeroes"
+          title="How many digits will I have to produce to reach a state of all-zeroes?">
+
+<p>
+It was proven that after a number between 1.345698 and 1.74 times 10 ** 12
+digits, Pi is all zeros.
+</p>
+
+</question>
+
+<question anchor="complexity" title="What is the fastest algorithm for approximating Pi?">
+
+<p>
+Approximating Pi was found to be NP-Complete.
+</p>
+
+</question>
+
+<demote />
+
+<question anchor="Uses" title="What can I do with Pi?">
+
+<p>
+The most common use of Pi is to generate random sequences. A far less common
+use is for geometrical and trigonometrical calculations.
+</p>
+
+</question>
+
+<if "<get-var render-body />"
+    ""
+    "</p>"
+    />
+
+</body>
+</html>
+

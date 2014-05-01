@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<points>
+<li>
+valgrind can detect problems such as:<br />
+<ul>
+  <li>Use of uninitialized memory.</li>
+  <li>Reading/writing memory after it has been free'd.</li>
+  <li>Reading/writing off the end of malloc'd blocks.</li>
+  <li>Reading/writing  inappropriate areas on the stack.</li>
+  <li>Memory leaks -- where pointers to malloc'd  blocks are lost forever.
+  </li>
+  <li>Passing of uninitialized and/or unaddressable  memory to system calls.
+  </li>
+  <li>Mismatched use of malloc/new/new [] Vs free/delete/delete  [].</li>
+  <li>Some abuses of the POSIX pthreads API.</li>
+</ul>
+</li>
+<li>
+valgrind is very easy to use. It has many optional flags that you can learn
+about from the documentation. (<tt>valgrind -h</tt>).
+</li>
+<li>
+A useful flag is <tt>--num-callers=<span style="color:red">NNN</span></tt>
+which sets how far back to print the function call sequence when an error
+is detected, (sometimes the error actually occurs in a sequence of functions
+you didn't write). By default it is <tt>--num-callers=4</tt>.
+</li>
+</points>

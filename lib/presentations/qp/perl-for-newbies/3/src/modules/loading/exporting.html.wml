@@ -1,0 +1,38 @@
+#include 'template.wml'
+
+<p>
+It is possible to make a functions of your module automatically available
+in any other namespace or script that uses it. To do so one needs to
+type the following code fragment near the beginning of the module:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/loading/exporting_code.pl" />
+</quadpres_code_block>
+
+<p>
+What this fragment does is make the module inherit the <tt>Exporter</tt>
+module which is a special Perl module that can export symbols. Then
+it declares the special variable <tt>@EXPORT</tt> which should be filled
+with all the functions that one wishes to export.
+</p>
+
+<p>
+Here is an example which has a module called "Calc" and a script that uses it:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/loading/Calc.pm" />
+</quadpres_code_block>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/modules/loading/test_export.pl" />
+</quadpres_code_block>
+
+<p>
+As you can see, the script invokes the "gcd" function of the "Calc" module
+without having to invoke it with <tt>Calc::gcd()</tt>. Exporting functions
+like that should be used with care, as the function names may conflict with
+those of the importing namespace.
+</p>
+

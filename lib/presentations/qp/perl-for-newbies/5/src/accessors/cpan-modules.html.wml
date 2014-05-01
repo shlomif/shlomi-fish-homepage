@@ -1,0 +1,53 @@
+#include 'template.wml'
+
+<p>
+As you may have noticed from our example, writing accessors by hand
+involves a lot of duplicate code, and can get tedious. One way to overcome
+it is by using namespace games
+(e.g: <tt>*Person::${field} = sub { .... }</tt>), but there are many modules
+on CPAN that do it all for you. Here's an overview of some of the most
+prominent ones:
+</p>
+
+<h2 id="Class-Accessor"><a href="http://search.cpan.org/dist/Class-Accessor/">Class-Accessor</a></h2>
+
+<p>
+<a href="http://search.cpan.org/dist/Class-Accessor/">Class-Accessor</a>
+was one of the earliest accessor providing modules and is still pretty popular.
+It is pure Perl, has no dependencies, and works pretty well. It has many
+<a href="http://search.cpan.org/search?query=class%3A%3Aaccessor&amp;mode=all">enhancements on CPAN</a> that may work better for you.
+</p>
+
+<h2 id="Class-XSAccessor"><a href="http://search.cpan.org/dist/Class-XSAccessor/">Class-XSAccessor</a></h2>
+
+<p>
+Class-XSAccessor is an accessor generator partially written using C and Perl/XS
+which is the Perl external subroutine mechanism. As such, it provides an
+unparalleled speed among the other accessor generators, and is even faster than
+writing your own accessor methods by hand, like we did in the example.
+</p>
+
+<h2 id="Moose"><a href="http://moose.perl.org/">Moose</a></h2>
+
+<p>
+While Moose provides accessors, they are only the tip of its
+iceberg. Moose is in fact a “post-modern” object system for Perl 5 that
+provides a type system, delegators, meta-classes, wrapping routines, and many
+other advanced features. As <a
+href="http://osdir.com/ml/lang.perl.moose/2008-05/msg00003.html">I once
+said</a>:
+</p>
+
+<blockquote>
+<p>
+Every sufficiently complex Class::Accessor program contains an ad hoc,
+informally-specified, bug-ridden, slow implementation of half of Moose.
+</p>
+</blockquote>
+
+<p>
+If you're looking to take your object oriented programming in Perl 5
+to new levels - look no further than that. One should be warned that as of
+this writing (August, 2009), Moose may have a relatively long startup time,
+although the situation has been improved and is expected to improve further.
+</p>

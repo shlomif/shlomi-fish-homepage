@@ -1,0 +1,11 @@
+#include 'template.wml'
+
+<p>
+There is another pragma which is called and typed as <tt>use warnings;</tt>,
+that causes the interpreter to emit many warnings to the command window in
+case you're doing wrong things (like using <tt>undef</tt> in an expression).
+It is also very useful to declare it at the beginning of the program, in
+addition to  <tt>use strict;</tt>. So, from now on, our programs will
+include it as well.
+</p>
+

@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+A Man page is a manual that covers a certain Linux command.
+</li>
+<li>
+To access the listing of man pages, open a KDE web-browser and type
+<a href="man:/"><tt>man:/</tt></a> at the Location display.
+</li>
+<li>
+For Linux commands, you'll be interested in Section 1.
+</li>
+<li>
+To access a man page for a particular command type "man:/[Command Name]"
+at the Location display.
+</li>
+<li>
+To access a man page from the command line type <tt>man [command name]</tt>
+</li>
+</points>

@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<points>
+<li>
+To find out, I wrote a Perl script (titled <tt>mino.pl</tt>) to solve it.
+<ul>
+<li>
+The script used global variables to manage its data.
+</li>
+<li>
+It used a procedurally-recursive Depth-First Search scan to
+solve the board.
+</li>
+<li>
+<b>It worked!</b>
+</li>
+</ul>
+</li>
+<li>
+A Google search for "theseus minotaur" revealed that there was an
+entire site - <a href="http://www.logicmazes.com/">www.logicmazes.com</a>
+filled with other interesting puzzles with different rules. One of them
+that caught my attention was Alice Mazes.
+</li>
+<li>
+I took my mino.pl script and gradually converted it to solve Alice Mazes,
+this time using CVS to manage the code.
+</li>
+</points>

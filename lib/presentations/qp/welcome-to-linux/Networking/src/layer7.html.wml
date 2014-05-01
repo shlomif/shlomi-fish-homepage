@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+<points>
+<li>
+This layer is the layer in which the various
+user applications (i.e. web browsing - HTTP; e-mail -
+SMTP, POP3 and IMAP; File transfers - FTP, TFTP, SMB, KaZaA and
+SCP) are implemented.
+</li>
+<li>
+One important application layer service which
+should be noted is the DNS service, which operates on UDP port 53,
+and used to translate domain names like <a href="http://www.haifux.org/">www.haifux.org</a>
+to IP numbers like 132.69.253.254 .
+</li>
+<li>
+Sometime during the configuration
+of a connection, one will have to specify the IP of the DNS server of
+the ISP.
+</li>
+</points>

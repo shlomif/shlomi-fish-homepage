@@ -1,0 +1,49 @@
+#include 'template.wml'
+
+<points>
+<li>Gimp supports RGB, Grayscale and Indexed (= palette based) Images</li>
+
+<li>It can convert between them, but conversion from RGB to something else
+is not reversible.</li>
+</points>
+
+<div class="mydemo">
+<h2>Demo:</h2>
+
+<ol>
+<li>Open lena_color.jpg.</li>
+<li>Select
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Image -&gt; Mode -&gt; Grayscale
+</tt>
+</menupath>
+
+</li>
+
+<li>Select
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Image -&gt; Mode -&gt; RGB
+</tt>
+</menupath>
+
+</li>
+
+<li>As can be seen, the image remained in shades of gray. However, now
+colours can be added.</li>
+</ol>
+
+</div>
+
+<points>
+<li>Some effects are not available in all modes</li>
+<li>It is recommended to work in RGB or in Grayscale and convert it to
+be a palette-based one only before publishing it. (and keep a copy of the RGB
+source)
+</li>
+</points>
+
+

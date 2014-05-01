@@ -1,0 +1,73 @@
+[% PROCESS "smoked-wp-theme.css.ttml" %]
+[% SET sponsored_ad_border = "#207020" %]
+[% PROCESS "common-style.css.ttml" %]
+.sub_menu
+{
+    background-color: #C0C0C0;
+    padding-top: 20pt;
+    padding-bottom: 2em;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    margin-bottom: 1em;
+[% SET radius = "10px" %]
+    -moz-border-radius: [% radius %];
+    -webkit-border-radius: [% radius %];
+    border-radius: [% radius %];
+}
+.banner
+{
+    height: 80px;
+    background-color: white;
+}
+
+/* This is for the breadcrumbs trail (= leading path) at the top. */
+.leading_path
+{
+    color: white;
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.15em;
+    margin-right: 10pt;
+}
+.leading_path a
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.leading_path a:link
+{
+    color: white;
+}
+.leading_path a:visited
+{
+    color: #FF8800;
+}
+.leading_path a:hover
+{
+    color: #40FF40;
+    background-color: transparent;
+}
+[% SET bottom_contact_links = "#footer ul" %]
+[% bottom_contact_links %]
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1em;
+}
+[% bottom_contact_links %] li:first-child
+{
+    border-left-color: transparent;
+}
+[% bottom_contact_links %] li
+{
+    display: inline-block;
+    margin-left: 0.2em;
+    padding-left: 0.3em;
+    border-left: white solid 1px;
+}
+#footer p
+{
+    clear: left;
+}

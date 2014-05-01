@@ -1,0 +1,661 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+]>
+<!-- -->
+<!-- $Id$ -->
+<!-- -->
+<!-- $Log$ -->
+<!-- -->
+<!-- General reminders: -->
+
+<article id="index">
+    <articleinfo>
+        <title>Park - Park is, is not, is too, is not Arc</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@iglu.org.il</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2004</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice>
+            <!-- Ci vis pacem -->
+            <para>
+                <!-- belum. ;-) -->
+                This document is copyrighted by Shlomi Fish
+                under the
+                <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
+                    Commons Attribution License version 2.5</ulink>
+                (or at your option a greater version). The code samples are
+                under the Public Domain.
+            </para>
+        </legalnotice>
+        <revhistory>
+            <revision>
+                <revnumber>3</revnumber>
+                <date>21 June 2006</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Started working on this document after forking the template
+                    of an older one.
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+<section id="about_park">
+    <title>Park - Park is, is not, is too, is not Arc</title>
+
+
+    <para>
+    Park
+        <footnote id="about_the_slogan">
+
+            <para>
+            The "Park - Park is, is not, is too, is not Arc" slogan is
+            temporary. The permanent slogan so far seems like it would
+            be "Park - a LISP that starts with P".
+            </para>
+        </footnote>
+    is a new dialect of Lisp, based on
+    <ulink url="http://www.paulgraham.com/arc.html">Paul
+    Graham's Arc effort</ulink>. Park is in fact a malicious and incompatible
+    fork of Arc. A fork not of the code, which is still not available to the
+    public, but of the concept and motivation.
+    </para>
+
+    <para>
+    The origin of the name is with an initial implementation for Arc that I
+    wanted to write for Parrot, called PArc or Parc. However, then I realised
+    I disagree with Graham about some of his language design elements. A few
+    days ago I came with a revelation that it was hopeless waiting for
+    Mr. Graham to actually release either a final spec to the public of Arc
+    or a actual working code. Arc <ulink url="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</ulink>. It's
+    been almost 5 years from now, and there's still not a working code or a
+    coherent spec. Furthermore, Graham stopped adding the ideas people sent
+    him to the <ulink url="http://www.archub.org/arcsug.txt">emails collection
+    containing them</ulink> (including one that I sent a few years ago, which
+    I know he is aware of because he responded to my message).
+    </para>
+
+    <para>
+    Thus enter Park. The name stems from "Parc" but is actually an English
+    world. One can say that Park is a LISP that starts with "P", or that
+    working with it is like a stroll in the Park. Park has
+    <ulink url="http://www.paulgraham.com/popular.html">the design goals of
+    Arc</ulink> but:
+    </para>
+
+    <para>
+    <orderedlist>
+    <listitem>
+    <para>
+    Is different and incompatible.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Has a working (albeit so far informal) spec.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Encourages participation from the community (using such web resources
+    as a Subversion repository, a Wiki, etc.)
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Encourages people to create and hack on implementations for it.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Would try to get version 0.2.0 of the SPEC (the first stable version of
+    the language) out of the door as soon as possible, so people can create
+    implementations that they can rely on.
+    </para>
+    </listitem>
+
+    </orderedlist>
+    </para>
+
+    <para>
+    One note about myself. My name is
+    <ulink url="http://www.shlomifish.org/">Shlomi Fish</ulink> and I'm a
+    software enthusiast and a writer. I am not the ideal person to design
+    Park, but I believe and hope that I have the right attitude. If you happen
+    to know better about some things, please post your corrections to the
+    mailing lists to the mailing list. Corrections in the form of patches
+    against the Docbook/XML source are preferable. Several of them or even
+    just one that is accepted will get you a Subversion commit access. And
+    naturally everyone can edit the wiki.
+    </para>
+
+    <section id="why_am_i_doing_it">
+        <title>Why am I Doing it?</title>
+        <blockquote>
+            <attribution><ulink url="http://groups.google.com/group/comp.lang.perl/msg/620a1599759c9bc?hl=en">Larry Wall</ulink></attribution>
+            <para>
+            All language designers are arrogant. Comes with the territory.
+            </para>
+        </blockquote>
+        <para>
+            Why am I doing it? For several reasons:
+        </para>
+        <para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <ulink url="http://www.amazon.com/gp/product/0066620724/103-5528911-1875020">Because it's fun.</ulink> This is by itself a good
+                        reason.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Because I found that designing your own language is
+                        one of the best ways to learn more about the original
+                        languages it is based on. When I designed the
+                        <ulink url="http://www.shlomifish.org/rindolf/">Perl
+                            dialect "Rindolf"</ulink>, I learned that some
+                        features I suggested for it were already doable in
+                        Perl 5.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Because something good may eventually come out of it.
+                        The existing popular dialects of LISP are Common LISP,
+                        Scheme (which some people claim is not entirely Lispy)
+                        and some domain-specific Lisp dialects like Emacs Lisp
+                        and Autolisp, which are not useful for general
+                        programming.
+                    </para>
+
+                    <para>
+                        The Common Lisp and Scheme standards still exhibit
+                        some relics of the Lisp distant past, where it was
+                        expected to run
+                        on such now obscure systems as
+                        <ulink url="http://en.wikipedia.org/wiki/PDP-10">the
+                            PDP-10</ulink> and
+                        <ulink url="http://en.wikipedia.org/wiki/Incompatible_Timesharing_System">ITS</ulink> or the LISP Machine. They do not correspond to
+                        the modern's world "All the world is a VAX" and
+                        "Everything on top is a UNIX" reality. (Which has
+                        persisted for better or for worse).
+                    </para>
+
+                    <para>
+                        The implementations themselves do little to solve
+                        this problem, as they differ in the APIs they provide
+                        for such basic mechanisms that programmers of other
+                        dynamic languages (like Perl, Python, PHP, Ruby or
+                        Tcl) take for granted like Random File I/O, Sockets,
+                        Regular Expressions, CGI Programming and
+                        Web Automation, Graphical User-interface, Database
+                        Connectivity etc.
+                    </para>
+
+                </listitem>
+
+            </orderedlist>
+        </para>
+    </section>
+
+    <section id="why_a_new_dialect">
+        <title>Why a new Dialect?</title>
+
+        <para>
+            Paul Graham explains it very well in <ulink url="http://www.paulgraham.com/arcfaq.html">the
+                Arc FAQ</ulink>, and in
+            <ulink url="http://www.paulgraham.com/popular.html">"Being
+                Popular"</ulink>. Park is Arc done faster, and hopefully
+            also better.
+        </para>
+    </section>
+</section>
+
+<section id="what_park_is_based_on">
+    <title>What Park is based on</title>
+
+    <para>
+    The following languages have influenced Park:
+    </para>
+
+    <para>
+    <orderedlist>
+
+    <listitem>
+    <para>
+    Arc and Scheme. And to some extent Common LISP.
+    </para>
+    </listitem>
+
+
+    <listitem>
+    <para>
+    Perl 5 and Perl 6.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Python.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para>
+    Smalltalk and Ruby.
+    </para>
+    </listitem>
+
+    </orderedlist>
+    </para>
+</section>
+
+<section id="elements_of_design">
+    <title>Elements of Design</title>
+    <section id="arc_is_object_oriented">
+        <title>Arc is Object Oriented (Everything is an Object)</title>
+
+        <para>
+        Paul Graham wrote <ulink url="http://www.paulgraham.com/noop.html">Why
+        Arc isn't Especially Object-Oriented.</ulink>. His conclusion for why
+        this is the case are:
+        </para>
+
+        <blockquote>
+        <para>
+         I personally have never needed object-oriented abstractions. Common
+         Lisp has an enormously powerful object system and I've never used it
+         once. I've done a lot of things (e.g. making hash tables full of
+         closures) that would have required object-oriented techniques to do in
+         wimpier languages, but I have never had to use CLOS.
+        </para>
+        <para>
+        Maybe I'm just stupid, or have worked on some limited subset of
+        applications. There is a danger in designing a language based on one's
+        own experience of programming. But it seems more dangerous to put stuff
+        in that you've never needed because it's thought to be a good idea.
+        </para>
+        </blockquote>
+
+        <para>
+        Well, maybe it's because I'm younger, but having worked with Perl 5
+        extensively, I've used its object system (and some OO-support modules)
+        a lot. While I have inherited some classes in Perl 5, I also often
+        use an object just to make sure it can be instantiated.
+        </para>
+
+        <para>
+        Furthermore, having learned a bit about Perl 6 and Ruby, I believe that
+        making everything an object, can be advantageous because one can
+        more easily inherit from it, and add methods (and multimethods) to
+        constants or regular variables (e.g: <quote>6->my_func();</quote>),
+        or even easily override default behaviour.
+        </para>
+
+        <para>
+        So there we go. Note that Park will not be overly-Object-Oriented
+        (OOO). One would be able to declare global functions and variables,
+        and write scripts or modules without wrapping it in Objects. (Read
+        what <ulink url="http://www.builderau.com.au/program/0,39024614,39160082,00.htm">Damian
+        Conway has to say about the Hello World program in Java</ulink> for
+        why I don't like it).
+        </para>
+
+        <para>
+        Here are some features of the object system:
+        </para>
+
+        <orderedlist>
+
+            <listitem>
+            <para>
+                Supports multiple-inheritance.
+            </para>
+            </listitem>
+
+            <listitem>
+            <para>
+                Methods can be added to classes at run-time (like Smalltalk
+                or Ruby).
+            </para>
+            </listitem>
+
+            <listitem>
+            <para>
+                Supports
+                <ulink url="http://use.perl.org/~Ovid/journal/27656">traits</ulink>
+                (or as the Perl 6 people call them "Roles").
+            </para>
+            </listitem>
+
+            <listitem>
+            <para>
+                The fields of every object will be stored as an associative
+                array, accessible using a special method. (This associative
+                array will also be an object since everything is. I wonder
+                how the Python people have solved it, but it's probably
+                doable.)
+            </para>
+            </listitem>
+
+            <listitem>
+            <para>
+                The member variables of every object will be stored as an
+                associative array, accessible using a special method. (This
+                associative array will also be an object since everything is.
+                I wonder how the Python people have solved it, but it's
+                probably doable.)
+            </para>
+            </listitem>
+
+            <listitem>
+            <para>
+                Similarly to Perl5 and Python (and as opposed to Java, C++
+                or PHP) there won't be any built-in "public",
+                "protected", "private", etc. access-control for methods of
+                objects by default. Such things can probably be implemented by
+                tweaking the method class and/or the class meta-class, or in
+                different ways completely, but I don't find it appropriate
+                for Park.
+            </para>
+            </listitem>
+            <listitem>
+            <para>
+            Multi-methods will be supported. Multimethods are functions that
+            are dispatched according to more than one object based on the
+            best matching multimethod signature. The syntax for this would
+            be the mcall function (short for multi-call):
+            </para>
+<programlisting>
+(mcall my-multi-method ([ object1 object2 object3])
+    optional-param1 optional-param2 optional-param3
+)
+</programlisting>
+            <para>
+            The standard way to invoke a method is to use the
+            <literal>call</literal> function, which propagates according to
+            only a single argument:
+            </para>
+<programlisting>
+(def-method "MyClass::init"
+    ((this)
+        (set (this sum) 0)
+    )
+)
+(def-method "MyClass::add"
+    ((this n)
+        (+= (-&gt; this sum) n)
+    )
+)
+(def-method "MyClass::getsum"
+    ((this)
+        (-&gt; this sum)
+    )
+)
+(set new-summer (new MyClass))
+(call add new-summer 5)
+(call add new-summer 7)
+(call add new-summer 13)
+(print (call getsum new-summer) "\n")
+</programlisting>
+
+            <para>
+            This will print 24 and a newline.
+            </para>
+            <para>
+            Note that usually the call would be redundant, and you could
+            use a simple function call. However, such a function call would
+            be subject to other Perl 5-like calling semantics.
+            </para>
+            </listitem>
+        </orderedlist>
+
+    </section>
+
+    <section id="lexical_scoping_and_dynamic_scoping">
+        <title>Lexical Scoping and Dynamic Scoping</title>
+
+        <para>
+        Scheme and Common Lisp which are the most modern popular
+        LISP dialects use lexical scoping, and since Perl 5 adopted it,
+        it has been become very popular and mainstream, outside Lisp.
+        </para>
+
+        <para>
+        The default localization of values in Park would be lexical. However,
+        having used Perl 5's <literal>local</literal>, I am aware of
+        <ulink url="http://perl.plover.com/local.html">several good uses for
+        dynamic scoping in a mostly lexical scoping language</ulink>. So,
+        there will be a way to localise variables dynamically in Park.
+        </para>
+
+        <para>
+        One killer feature like that would be a way to do something like:
+        </para>
+<programlisting>
+(do-using-local-state
+    (
+        (set a "hello")
+        (my-func-with-side-effects)
+    )
+    (
+        # Rest of code here.
+    )
+)
+# a is no longer hello and (my-func-with-side-effects) effects' are reversed.
+</programlisting>
+
+        <para>
+        Of course, this feature is still pie-in-the-sky, and I'm waiting for
+        a good analysis of complexity and/or efficient working implementation.
+        </para>
+    </section>
+
+    <section id="full_posix_conventions">
+        <title>Park would be Fully POSIX</title>
+        <para>
+            Park will be expected to run on a Unix or a Unix-like system
+            (such as Win32) and will provide APIs for such common POSIX
+            and P-Languages operations as random file I/O, sockets, regular
+            expressions, manipulating ASCII text, Unicode and other
+            encodings. It may also have platform-specific modules for managing
+            processes, creating new processes, etc. (as is the case for
+            Perl 5, for example.)
+        </para>
+        <para>
+            All of these things will eventually be part of the Park spec,
+            and their APIs would be common to all implementations.
+        </para>
+
+        <section id="monads_for_files">
+            <title>Thoughts about using Monads for Files</title>
+            <blockquote>
+                <attribution>
+                An anonymous Perl 5 and
+                <ulink url="http://www.pugscode.org/">Pugs</ulink> hacker
+                about Haskell's Monads.
+                </attribution>
+                <para>
+                I understood Monads for exactly 5 minutes. Then the
+                understanding left my head. It was too hard for me
+                to keep there.
+                </para>
+            </blockquote>
+            <para>
+                As cool as Monads are I'm skeptical about using them in
+                files by default. I know how to use File I/O in Haskell, but
+                still don't understand when Monads are needed. My personal
+                Haskell style so far made no use of them except for file Input
+                and Output.
+            </para>
+            <para>
+                One will be able to implement Monads in Park and use them
+                for file I/O. There may even be a default Monad class. However,
+                the default file Input/Output API will either be a reflection
+                of the POSIX one, or alternatively something similar
+                in spirit to
+                <ulink url="http://search.cpan.org/search?query=perlio&amp;mode=module">PerlIO</ulink>
+                or the Python or Ruby files and sockets I/O classes.
+            </para>
+
+            <para>
+            Above this API one can build as many abstractions to his
+            liking, including Monads.
+            </para>
+        </section> <!-- /monads_for_files -->
+
+        <section id="bootstrapping_self_hosting_and_c_hosting">
+            <title>Bootstrapping, Self Hosting and C Hosting</title>
+
+            <para>
+                Bootstrapping is the process of implementing a virtual machine
+                by implementing it using an existing virtual machine. So,
+                for example perl 5, CPython, ruby, php and the Tcl interpreter
+                are all written in ANSI C. That way they can be bootstrapped
+                to run on any system for which a C compiler (such as
+                <ulink url="http://gcc.gnu.org/">the Open-Source gcc</ulink>
+                is available).
+            </para>
+            <para>
+                A related concept is Self-hosting, where a virtual machine's
+                compiler or interpreter is written in itself. So for example,
+                gcc is written in C and requires a C compiler to be built.
+            </para>
+            <para>
+                For C it is not really a problem, because one can
+                use gcc or a different C compiler to cross-compile enough
+                programs for it to run there conveniently. However,
+
+            </para>
+
+        </section> <!-- bootstrapping_self_hosting_and_c_hosting -->
+
+        <section id="constants_in_park">
+            <title>Constants in Park</title>
+
+            <blockquote>
+                <attribution>
+                    An anonymous designer of his own DOS 8086 Assembly written in
+                    itself, and used to write other programs, in which numbers
+                    that start with 0 are hexadecimal.
+                </attribution>
+
+                <para>
+                    "I am not in Rome."
+                </para>
+            </blockquote>
+
+            <para>
+            I encountered some Scheme implementations in which identifiers
+            were case-sensitive, and some in which they were case-insensitive.
+            To match what is the norm nowadays, and because I like it better,
+            Park requires case-sensitive identifiers.
+            </para>
+
+            <para>
+            Numbers in Park can be decimal, octal (if they start with "0"),
+            or hexadecimal (if they start with 0x). Following Perl's lead,
+            one will be able to use underscores (<literal>_</literal>)
+            within numbers (e.g: <literal>100_000</literal> instead of
+            <literal>100000</literal>).
+            </para>
+
+            <section id="strings_quoting_and_interpolation">
+                <title>Strings, Quoting and Interpolation</title>
+
+                <section id="string_constants">
+                    <title>String Constants</title>
+                    <para>
+                        String constants will be written in a large
+                        correspondence to the C, Perl 5 and Perl 6
+                        conventions. For example, a "\n" will designate
+                        a newline. The exact type and quoting of the string
+                        will be determined by a few optional Perl 6-like
+                        modifiers. Here are a few examples:
+                    </para>
+<programlisting>
+# The (qq ... ) is not really needed but it doesn't hurt.
+(my mystring (qq "Hello there, Hackers! Welcome to Park"))
+(print mystring "\n")
+(my regex (m :p5 "H..kers"))
+(say (=~ mystring regex)) # Prints "Hackers"
+(my conv (tr "H" "B"))
+(say (=~ mystring conv)) # Prints "Bello there, Backers!..."
+(my newstring mystring)
+(=~! newstring conv)
+# newstring is now "Bello there, Backers!..."
+# (You gotta love S-expressions.)
+</programlisting>
+                </section>
+                <section id="string_interpolation">
+                <title>String Interpolation</title>
+                <para>
+                    There was a very interesting presentation in an
+                    <ulink url="http://www.perl.org.il/">Israeli Perl Mongers
+                        meeting</ulink> about strings, quoting and
+                    interpolation in other languages and Perl. The presentation
+                    noted among else that in other languages one has to write
+                    relatively
+                    ugly code like <literal>"Hello" &amp; Name &amp; "! What's up?"</literal>
+                    rather than the Perl <literal>"Hello $Name! What's
+                        up?"</literal>.
+                </para>
+
+                <para>
+                    In Perl 5 the interpreter has some heuristics for
+                    determining the end of the interpolated expression, which
+                    can be any arbitrary Perl expression. Perl 6 goes one
+                    step further and parses the string and translates it into
+                    Perl 6 code, so one can safely include arbitrarily complex
+                    code there. (In a similar fashion to the Korn shell
+                    "$(...)" construct).
+                </para>
+
+                <para>
+                    What I plan is to have such interpolation in Park as well
+                    for some types of strings. The syntax will look something
+                    like that:
+                </para>
+
+<programlisting>
+(my i 5 j 7)
+(print "${i} + ${j} = $(+ i j)\n")
+</programlisting>
+
+                <para>
+                    As expected this prints "5 + 7 = 12" (followed by a
+                    newline).
+                </para>
+
+                <para>
+                    Another thing I'd like to have is shell or Perl 5-like
+                    here documents (<literal>&amp;&amp;"EOF" ... EOF</literal>)
+                </para>
+                </section>
+
+            </section> <!-- strings_and_interpolation -->
+
+        </section> <!-- constants in Park -->
+
+    </section> <!-- full_posix_conventions -->
+
+</section>
+</article>    <!-- End of the article -->

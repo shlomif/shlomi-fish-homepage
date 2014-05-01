@@ -178,7 +178,7 @@ FOO_EOF
     $ret .= "</ul>\n";
     $ret .= "</div>\n";
 
-    foreach my $r (@{$class->get_fortune_records()}
+    foreach my $r (@{$class->get_fortune_records()})
     {
         $ret .= $class->get_single_fortune_record_all_in_one_page_entry($r);
     }

@@ -151,7 +151,6 @@ sub get_fortune_all_in_one_page_html_wml
 
     my $ret = <<"EOF";
 #include '../template.wml'
-#include "render_fortunes_pages.wml"
 
 <latemp_subject "Shlomi Fish Fortunes Collections - All in One Page" />
 <latemp_meta_desc "Shlomi Fish Fortunes Collections - All in One Page" />

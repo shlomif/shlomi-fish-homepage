@@ -673,7 +673,7 @@ $(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS)
 
-FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
+FORTUNES_TIDY = tidyp -asxhtml -utf8 -quiet
 
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true

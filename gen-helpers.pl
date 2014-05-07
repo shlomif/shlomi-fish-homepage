@@ -3,15 +3,17 @@
 use strict;
 use warnings;
 
-use HTML::Latemp::GenMakeHelpers;
-use IO::All;
-
-use List::MoreUtils;
-
 if (system("make", "--silent", "-f", "lib/make/build-deps/build-deps.mak"))
 {
     die "build-deps failed!";
 }
+
+require HTML::Latemp::GenMakeHelpers;
+require IO::All;
+
+IO::All->import('io');
+
+require List::MoreUtils;
 
 if (system($^X,
         '-Ilib', '-MShlomif::Homepage::FortuneCollections',

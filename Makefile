@@ -72,7 +72,6 @@ ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.h
 
 htaccesses_target: $(ALL_HTACCESSES)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT)
 
 fortunes_extended: $(T2_FORTUNES_ALL__HTML)
 
@@ -635,7 +634,8 @@ FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
 FORTUNES_XHTMLS_TOCS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.toc-xhtml,$(FORTUNES_XMLS_SRC))
-FORTUNES_SOURCE_WMLS = $(patsubst %.xml,%.html.wml,$(FORTUNES_XMLS_SRC))
+FORTUNES_SOURCE_WMLS = $(patsubst %,$(T2_FORTUNES_DIR)/%.html.wml,$(FORTUNES_FILES_BASE))
+FORTUNES_DEST_HTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.html.wml,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_SOURCE_WMLS))
 FORTUNES_XHTMLS__COMPRESSED = $(patsubst %.xhtml,%.compressed.xhtml,$(FORTUNES_XHTMLS))
 FORTUNES_XHTMLS__FOR_INPUT_PORTIONS = $(patsubst %.xhtml,%.xhtml-for-input,$(FORTUNES_XHTMLS))
 FORTUNES_WMLS_HTMLS = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
@@ -698,6 +698,10 @@ $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMO
 
 FORTUNES_PROCESS_ALL_INCLUDES = bin/process-fortunes-all-includes.pl
 
+# TODO : extract a macro for this and the rule below.
+$(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.html.wml lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS) $(FORTUNES_PROCESS_ALL_INCLUDES)
+	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
+
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS) $(FORTUNES_PROCESS_ALL_INCLUDES)
 	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; WML_LATEMP_SRC_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$<')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" "$${WML_LATEMP_SRC_PATH}" ) && perl -lpi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
 
@@ -705,6 +709,8 @@ $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
 	touch $@
+
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS)
 
 $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@

@@ -223,9 +223,11 @@ sub get_single_fortune_page_html_wml
 {
     my ($class, $r) = @_;
 
+    my $id = $r->id();
+    my $title = $r->title();
+
     return <<"EOF";
 #include '../template.wml'
-#include "render_fortunes_pages.wml"
 
 <latemp_subject "@{[$r->page_title()]}" />
 <latemp_meta_desc "@{[$r->meta_desc()]}" />
@@ -234,11 +236,13 @@ sub get_single_fortune_page_html_wml
 
 @{[$r->about_blurb()]}
 
-<toc_div head_tag="h3" />
+<h3>Table of Contents</h3>
+
+(((((include "fortunes/xhtmls/$id.toc-xhtml")))))
 
 <h2 id="fortunes-list">The Fortunes Themselves</h2>
 <div class="fortunes_list">
-#include "fortunes/xhtmls/@{[$r->id()]}.xhtml-for-input"
+(((((include "fortunes/xhtmls/$id.xhtml-for-input")))))
 </div>
 EOF
 }

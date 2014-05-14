@@ -44,7 +44,7 @@ FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
-T2_FORTUNES_ALL_WML = lib/fortunes/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
+T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
 T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
@@ -703,7 +703,7 @@ $(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.htm
 	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS) $(FORTUNES_PROCESS_ALL_INCLUDES)
-	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; WML_LATEMP_SRC_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$<')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" "$${WML_LATEMP_SRC_PATH}" ) && perl -lpi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
+	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
 
 $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 

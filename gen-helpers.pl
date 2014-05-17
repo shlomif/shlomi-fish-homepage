@@ -48,7 +48,6 @@ $generator->process_all();
 
 
 my $text = io("include.mak")->slurp();
-io()->file("foo.txt")->print($text);
 $text =~ s!^(T2_DOCS = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s#\bhumour/fortunes/[a-zA-Z_\-\.]+\.html\b##gr)!ems;
 $text =~ s!^((?:T2_DOCS|T2_DIRS) = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s# +ipp\.\S*##gr)!ems;
 $text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;

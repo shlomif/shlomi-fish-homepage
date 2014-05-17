@@ -27,7 +27,7 @@ if (system($^X,
 
 if (system($^X,
         '-Ilib', 'bin/gen-forts-all-in-one-page.pl',
-        'lib/fortunes/all-in-one.uncompressed.html.wml',
+        't2/humour/fortunes/all-in-one.uncompressed.html.wml',
     )
 )
 {

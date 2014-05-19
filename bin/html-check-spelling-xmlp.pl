@@ -10,7 +10,7 @@ use utf8;
 use HTML::Parser 3.00 ();
 use Text::Hunspell;
 use List::MoreUtils qw(any);
-use JSON qw(encode_json decode_json);
+use JSON::MaybeXS qw(encode_json decode_json);
 use IO::All;
 
 my $speller = Text::Hunspell->new(

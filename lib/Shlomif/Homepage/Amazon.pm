@@ -15,7 +15,7 @@ package Shlomif::Homepage::Amazon::Obj;
 
 use Moose;
 
-use JSON qw(decode_json);
+use JSON::MaybeXS qw(decode_json);
 
 use XML::Grammar::ProductsSyndication;
 use XML::LibXML::XPathContext;

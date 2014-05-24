@@ -5922,5 +5922,65 @@ This is just the way you have to teach. Now I can remember it much more easily.
                 </info>
             </quote>
         </fortune>
+        <fortune id="tim-berners-lee-the-WWW-and-the-dexter-model">
+            <meta>
+                <title>Tim Berners-Lee, the World Wide Web, and the Dexter Model</title>
+            </meta>
+            <quote>
+                <body>
+
+                    <p> Tim Berners-Lee's abandonment of the <a
+                            href="http://ei.cs.vt.edu/~mm/pdf/dexter.pdf">Dexter
+                            Model for hypertext</a>  a hypertext model where
+                        all links must be resolvable at all times  was (IMHO)
+                        the single biggest factor in creating a successful
+                        World Wide Web.  </p>
+
+                    <p> Before the Web, hypertext systems were assumed to have
+                        all links resolvable at all times. This was not a
+                        robust design. Now, you would think this would be more
+                        robust than the Web  but it fails even for single-file
+                        hypertext systems. Early in my career, I realized that
+                        computer systems were not 100% reliable, so if wanted
+                        to create software that failed safe (or at least failed
+                        soft), you had to account for errors at every step of
+                        the way. A single-file hypertext system can still fail
+                        if access to the single file is disturbed. Across the
+                        Internet, where all computers on the Internet have not
+                        been all up at the same time since the late 1970's (and
+                        possibly not even then), you cannot build a Dexter
+                        Model hypertext system because not all of your links
+                        can be resolved all of the time.  </p>
+
+                    <p>Microsoft's Help system has become much more usable
+                        since they went to a Web (i.e. HTML) based-system.  At
+                        the risk of being redundant, even if you have a lint
+                        program to verify all hypertext links and destinations,
+                        file access errors will derail your hypertext system
+                        when you use a all-resolvable-all-the-time design (and
+                        I don't know if Microsoft had such a lint tool).</p>
+
+                    <p>It boils down to handling failures with at least a small
+                        amount of grace. Unix/Linux systems handle errors much
+                        better than Microsoft Windows 1.0-3.x systems because
+                        processes can handle out-of-bounds memory errors better
+                        (Windows NT and its descendants fall in-between
+                        Unix/Linux and 16-bit Windows). I once wrote a Perl
+                        4-based server that would run for months at a time
+                        because it could either recover gracefully from an
+                        error or stop gracefully upon an error. The Web runs as
+                        well as it does because the software systems handle
+                        link errors with a small amount of grace, rather than
+                        just throwing up their hands or dying horribly. Thank
+                        Tim Berners-Lee and his fellow designers for the
+                        reliability of the Web we have today.</p>
+
+                </body>
+                <info>
+                    <author>Mark Leighton Fisher</author>
+                    <work href="http://use.perl.org/use.perl.org/_Mark%2BLeighton%2BFisher/journal/35016.html">“Tim Berners-Lee, the World Wide Web, and the Dexter Model” blog post</work>
+                </info>
+            </quote>
+        </fortune>
     </list>
 </collection>

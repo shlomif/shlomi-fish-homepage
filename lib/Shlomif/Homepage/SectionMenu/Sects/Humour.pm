@@ -149,6 +149,10 @@ my $humour_tree_contents =
                             url => "humour/Summerschool-at-the-NSA/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
+                        {
+                            text => "Conclusions and Reflection",
+                            url => "humour/Summerschool-at-the-NSA/conclusions-and-reflection.html",
+                        },
                     ],
                 },
                 {

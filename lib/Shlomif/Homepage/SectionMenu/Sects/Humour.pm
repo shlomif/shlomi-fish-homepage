@@ -277,6 +277,10 @@ my $humour_tree_contents =
                             text => "NSA",
                         },
                         {
+                            url => "humour/bits/facts/Summer-Glau/",
+                            text => "Summer Glau",
+                        },
+                        {
                             url => "humour/bits/facts/Xena/",
                             text => "Xena",
                             title => "Factoids about Xena, the Warrior Princess",

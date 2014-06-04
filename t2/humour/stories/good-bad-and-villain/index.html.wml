@@ -1,0 +1,34 @@
+#include '../template.wml'
+
+#include "stories/stories-list.wml"
+
+<latemp_subject "The Good, the Bad, and the Villain" />
+<latemp_meta_desc "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength and beauty" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+TODO: write.
+</p>
+
+<h2 id="the-table">The Table</h2>
+
+<table class="visible">
+<tr>
+<th>Saga</th>
+<th>Good Girl/Boy</th>
+<th>“Bad” Girl/Boy</th>
+<th>Villain / Villainness</th>
+</tr>
+
+<tr>
+<td>The Three Musketeers</td>
+<td>Madame Constance Bonnacioux</td>
+<td>Milady de-Winter</td>
+<td>The Queen - Anne of Austria</td>
+</tr>
+
+</table>
+
+<humour_stories_list_text />
+

@@ -413,6 +413,15 @@ sub _calc_screenplay_doc_makefile_lines
             ],
         },
         {
+            base => "BUFFY_A_FEW_GOOD_SLAYERS",
+            github_repo => "Buffy--a-Few-Good-Slayers",
+            subdir => "buffy--a-few-good-slayers",
+            docs =>
+            [
+                { base => "Buffy--a-Few-Good-Slayers", suffix => "ENG", },
+            ],
+        },
+        {
             base => "BLUE_RABBIT_LOG",
             github_repo => "Blue-Rabbit-Log",
             subdir => "Blue-Rabbit-Log",

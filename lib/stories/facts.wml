@@ -1,3 +1,12 @@
+<define-tag __facts_space>
+<preserve n />
+<set-var <attributes-extract n %attributes> />
+<p>
+<:{print +(("<br />\n") x '<get-var n />')}:>
+</p>
+<restore n />
+</define-tag>
+
 <define-tag facts__chuck>
 
 <img src="$(ROOT)/humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia" class="story_logo chuck_norris" />

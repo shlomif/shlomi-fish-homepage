@@ -1,0 +1,20 @@
+#include '../template.wml'
+#include "jqui_tabs_multi_lang.wml"
+#include "stories/facts.wml"
+
+<latemp_subject "Summer Glau Facts" />
+<latemp_meta_desc "Factoids about Emma Watson, the British actress" />
+
+<facts__emma_watson />
+
+<li_en>
+Playing Hermione in the Harry Potter films was a dirty job, but Emma Watson
+got a shitload of money and worldwide fame to do it.
+</li_en>
+
+<facts__header_tabs id_base="emma_watson_facts" h="Emma Watson Facts" />
+
+<h2 id="license">Copyright and Licence</h2>
+
+<cc_by_sa_british_blurb year="2014" />
+

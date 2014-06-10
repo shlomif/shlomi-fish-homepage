@@ -260,6 +260,10 @@ my $humour_tree_contents =
                             title => "Facts about Clarissa Darling from the Television show, Clarissa Explains It All",
                         },
                         {
+                            url => "humour/bits/facts/Emma-Watson/",
+                            text => "Emma Watson",
+                        },
+                        {
                             url => "humour/bits/facts/Knuth/",
                             text => "Knuth",
                         },

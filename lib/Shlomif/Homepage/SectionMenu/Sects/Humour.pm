@@ -156,6 +156,19 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "Buffy: a Few Good Slayers",
+                    url => "humour/Buffy/A-Few-Good-Slayers/",
+                    title => "Everyone is happier and more powerful and empowered in a forked version of the Buffy universe, but a crisis emerges",
+                    subs =>
+                    [
+                        {
+                            text => "Ongoing Text",
+                            url => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
                     text => "The Earth Angel",
                     url => "humour/The-Earth-Angel/",
                     title => "TODO: FILL IN",

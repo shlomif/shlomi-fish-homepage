@@ -477,6 +477,7 @@ $(T2_DEST)/humour/Summerschool-at-the-NSA/ongoing-text.html: $(SCREENPLAY_XML_RE
 $(T2_DEST)/humour/Selina-Mandrake/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/selina-mandrake-the-slayer.html
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Star-Trek--We-the-Living-Dead.html
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/TOW_Fountainhead_1.html
+$(T2_DEST)/humour/bits/Emma-Watson-applying-for-a-software-dev-job/index.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Emma-Watson-applying-for-a-software-dev-job.html
 $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/TOW_Fountainhead_2.html
 $(T2_DEST)/open-source/interviews/adrian-ettlinger.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/ae-interview.html

@@ -471,6 +471,7 @@ $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-
 # Rebuild the embedded screenplays pages in the $(T2_DEST) after they are
 # modified.
 $(T2_DEST)/humour/Blue-Rabbit-Log/part-1.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Blue-Rabbit-Log-Part-1.html
+$(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Buffy--a-Few-Good-Slayers.html
 $(T2_DEST)/humour/humanity/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie.html
 $(T2_DEST)/humour/humanity/ongoing-text-hebrew.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Humanity-Movie-hebrew.html
 $(T2_DEST)/humour/Summerschool-at-the-NSA/ongoing-text.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/Summerschool-at-the-NSA.html

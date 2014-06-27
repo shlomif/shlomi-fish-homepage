@@ -73,7 +73,7 @@ ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.h
 htaccesses_target: $(ALL_HTACCESSES)
 
 
-fortunes_extended: $(T2_FORTUNES_ALL__HTML)
+fortunes-extended: $(T2_FORTUNES_ALL__HTML)
 
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)

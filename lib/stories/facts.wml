@@ -1,3 +1,5 @@
+#include "emma_watson.wml"
+
 <define-tag __facts_space>
 <preserve n />
 <set-var <attributes-extract n %attributes> />
@@ -58,16 +60,7 @@ and played by
 
 <define-tag facts__emma_watson>
 
-<!--
-Taken from: https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg
--->
-<img src="$(ROOT)/humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson from the Wikipedia" class="story_logo emma_watson" />
-
-<p>
-<a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> (born
-1990) is a British actress and model, who rose to fame after playing Hermione
-Granger in all the film adaptations of the Harry Potter films.
-</p>
+<emma_watson_intro />
 
 <__facts_space n="11" />
 

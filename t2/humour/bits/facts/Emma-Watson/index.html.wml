@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "jqui_tabs_multi_lang.wml"
 #include "stories/facts.wml"
+#include "emma_watson.wml"
 
 <latemp_subject "Emma Watson Facts" />
 <latemp_meta_desc "Factoids about Emma Watson, the British actress" />
@@ -34,6 +35,14 @@ Emma Watson is not perfect, but she's really good at hiding her imperfections.
 </li_en>
 
 <facts__header_tabs id_base="emma_watson_facts" h="Emma Watson Facts" />
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<emma_watson_common_links />
+
+</ul>
 
 <h2 id="license">Copyright and Licence</h2>
 

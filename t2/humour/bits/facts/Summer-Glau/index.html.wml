@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "jqui_tabs_multi_lang.wml"
 #include "stories/facts.wml"
+#include "summer_glau.wml"
 
 <latemp_subject "Summer Glau Facts" />
 <latemp_meta_desc "Factoids about Summer Glau, the Hollywood actress" />
@@ -42,6 +43,14 @@ Whatever Chuck Norris taketh, Summer Glau giveth back.
 </li_en>
 
 <facts__header_tabs id_base="summer_glau_facts" h="Summer Glau Facts" />
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<summer_glau_common_links />
+
+</ul>
 
 <h2 id="license">Copyright and Licence</h2>
 

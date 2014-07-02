@@ -321,6 +321,7 @@ my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
 my @screenplay_git_checkouts;
 my @screenplay_docs_basenames;
+my @screenplay_epubs;
 
 sub _calc_screenplay_doc_makefile_lines
 {
@@ -350,15 +351,28 @@ sub _calc_screenplay_doc_makefile_lines
 
         my $src_varname = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
         my $dest_varname = "${b}_${suf}_TXT_FROM_VCS";
+        my $epub_dest_varname = "${b}_${suf}_EPUB_FROM_VCS";
+        my $src_vcs_dir_var = "${b}_${suf}_SCREENPLAY_XML__SRC_DIR";
 
-        push @ret, "$src_varname = \$($vcs_dir_var)/screenplay/${doc_base}.screenplay-text.txt\n\n";
+        push @screenplay_epubs, $epub_dest_varname;
+
+        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n";
+        push @ret, "$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n";
 
         push @ret, "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n";
+
+        push @ret, "$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n";
 
         push @ret, (
               "\$($dest_varname): \$($src_varname)\n"
             . "\t" . q/cp -f $< $@/ . "\n\n"
         );
+
+        push @ret, <<"EOF";
+\$($epub_dest_varname): \$($src_varname)
+\tcd \$($src_vcs_dir_var) && make epub
+\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
+EOF
     }
 
 
@@ -385,7 +399,7 @@ sub _calc_screenplay_doc_makefile_lines
             docs =>
             [
                 { base => "Star-Trek--We-the-Living-Dead", suffix => "ENG", },
-                { base => "Star-Trek--We-the-Living-Dead-hebrew", suffix => "HEB", },
+                # { base => "Star-Trek--We-the-Living-Dead-hebrew", suffix => "HEB", },
             ],
         },
         {
@@ -446,6 +460,8 @@ sub _calc_screenplay_doc_makefile_lines
             @o,
             "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
             (map { "\t$_ \\\n" } @screenplay_docs_basenames),
+            "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
+            (map { "\t$_ \\\n" } @screenplay_epubs),
             "\n\n"
         );
     }

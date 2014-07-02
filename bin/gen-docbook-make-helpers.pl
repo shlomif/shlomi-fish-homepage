@@ -287,6 +287,10 @@ my @end_formats =
         map { process_simple_end_format($_) }
         (
         {
+            var => "EPUB",
+            ext => ".epub",
+        },
+        {
             var => "PDF",
             ext => ".pdf",
         },

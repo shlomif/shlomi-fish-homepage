@@ -471,23 +471,7 @@ $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew
 $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
 	cp -f $< $@
 
-SCREENPLAY_XML__EPUBS_DESTS = \
-	$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.epub \
-	$(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
-	$(T2_DEST)/humour/humanity/Humanity-Movie.epub \
-	$(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
-	$(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
-	$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
-	$(T2_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
-	$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
-	$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
-
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
-
-$(SCREENPLAY_XML__EPUBS_DESTS): $(SCREENPLAY_XML_EPUBS)
-	for f in $(SCREENPLAY_XML__EPUBS_DESTS) ; do \
-		cp -f $(SCREENPLAY_XML_EPUB_DIR)/"$$(basename "$$f")" "$$f" ; \
-	done
 
 # Rebuild the embedded screenplays pages in the $(T2_DEST) after they are
 # modified.

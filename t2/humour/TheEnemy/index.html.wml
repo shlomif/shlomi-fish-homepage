@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "jqui_tabs.wml"
 #include "toc_div.wml"
+#include "xml_g_fiction.wml"
 
 #include "stories/stories-list.wml"
 
@@ -46,6 +47,10 @@ Heaven is Paved with Bad Intentions</a>.
 <p>
 <a href="The-Enemy-English-v7.html"><b>English HTML</b> (Read Online)</a>
 </p>
+
+<ul>
+<link_to_epub basename="The-Enemy-English-v7.epub" />
+</ul>
 </li>
 
 </ul>

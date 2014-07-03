@@ -848,9 +848,10 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 
 EPUB_SCRIPT = $(DOCBOOK5_XSL_STYLESHEETS_PATH)/epub/bin/dbtoepub
+EPUB_XSLT = lib/sgml/shlomif-docbook/docbook-epub-preproc.xslt
 
 $(DOCBOOK5_EPUB_DIR)/%.epub: $(DOCBOOK5_XML_DIR)/%.xml
-	ruby $(EPUB_SCRIPT) -s $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) -o $@ $<
+	ruby $(EPUB_SCRIPT) -s $(EPUB_XSLT) -o $@ $<
 
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@

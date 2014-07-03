@@ -29,16 +29,12 @@ $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 # The individual docs.
 [% FOREACH d = docs %]
 
-[% FOREACH my_ext_record = [{l=> 'pdf',u => 'PDF'},{l => 'xml', u => 'XML'},{l => 'rtf', u => 'RTF',}] %]
-
-[% SET my_ext = my_ext_record.l %]
-[% SET my_ext_uc = my_ext_record.u %]
-
+[% FOREACH my_ext_record = [{l => 'epub', u => 'EPUB', }, {l=> 'pdf',u => 'PDF'},{l => 'xml', u => 'XML'},{l => 'rtf', u => 'RTF',}] %]
+[%- SET my_ext = my_ext_record.l -%]
+[%- SET my_ext_uc = my_ext_record.u -%]
 $(T2_DEST)/[% d.path %]/[% d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
-
+[% END -%]
 [% "\t" %]cp -f $< $@
-
-[% END %]
 
 [%- SET foo_dest = '$(T2_DEST)/' _ d.path _ '/' _ d.base -%]
 [%- SET foo_src = '$(' _ db_macro_prefix _ '_INDIVIDUAL_XHTML_DIR)/' _ d.base %]

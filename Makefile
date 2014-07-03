@@ -328,6 +328,7 @@ FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 DOCBOOK5_BASE_DIR = lib/docbook/5
 DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
 DOCBOOK5_SOURCES_DIR = $(DOCBOOK5_BASE_DIR)/xml
+DOCBOOK5_EPUB_DIR = $(DOCBOOK5_BASE_DIR)/epub
 DOCBOOK5_FO_DIR = $(DOCBOOK5_BASE_DIR)/fo
 DOCBOOK5_PDF_DIR = $(DOCBOOK5_BASE_DIR)/pdf
 DOCBOOK5_RTF_DIR = $(DOCBOOK5_BASE_DIR)/rtf
@@ -356,6 +357,8 @@ DOCBOOK5_XMLS = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(DOCBOOK5_DOCS))
 SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS))
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
+
+DOCBOOK5_EPUBS = $(patsubst %,$(DOCBOOK5_EPUB_DIR)/%.epub,$(DOCBOOK5_DOCS))
 
 DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
 
@@ -598,19 +601,6 @@ tidy: all
 
 .PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
 
-install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
-install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
-
-install_docbook4_xmls: make-dirs $(DOCBOOK4_INSTALLED_XMLS)
-install_docbook5_xmls: make-dirs $(DOCBOOK5_INSTALLED_XMLS)
-
-install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
-install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
-
-install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
-
-
-install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
@@ -842,6 +832,11 @@ $(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 
+EPUB_SCRIPT = $(DOCBOOK5_XSL_STYLESHEETS_PATH)/epub/bin/dbtoepub
+
+$(DOCBOOK5_EPUB_DIR)/%.epub: $(DOCBOOK5_XML_DIR)/%.xml
+	ruby $(EPUB_SCRIPT) -s $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) -o $@ $<
+
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
@@ -1009,8 +1004,11 @@ docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
-	install_docbook4_xmls install_docbook_individual_xhtmls install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls html_tutorial \
-	pope_fiction selina_mandrake hhfg_fiction
+	install_docbook5_epubs \
+	install_docbook4_xmls install_docbook_individual_xhtmls \
+	install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls \
+	html_tutorial \
+	pope_fiction selina_mandrake hhfg_fiction \
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
 
@@ -1155,3 +1153,19 @@ $(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detaile
 	cp -f printable/SFresume_detailed.html printable/Shlomi-Fish-English-Resume-Detailed.html
 
 resumes: $(PRINTABLE_RESUMES__DOCX)
+
+install_docbook5_epubs: make-dirs $(DOCBOOK5_INSTALLED_EPUBS)
+
+install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
+install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
+
+install_docbook4_xmls: make-dirs $(DOCBOOK4_INSTALLED_XMLS)
+install_docbook5_xmls: make-dirs $(DOCBOOK5_INSTALLED_XMLS)
+
+install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
+install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
+
+install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
+
+
+install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)

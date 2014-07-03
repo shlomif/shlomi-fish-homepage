@@ -456,13 +456,31 @@ EOF
             map { @{ _calc_screenplay_doc_makefile_lines($_) } }
             @$screenplays_data,
         );
+        my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
+        my $epub_dests = <<'EOF';
+$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.epub \
+$(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
+$(T2_DEST)/humour/humanity/Humanity-Movie.epub \
+$(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
+$(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
+$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
+$(T2_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
+$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
+EOF
+
+        my @_files = ($epub_dests =~ /(\$\(T2_DEST\)\S+)/g);
+
         io->file("lib/make/docbook/sf-screenplays.mak")->print(
             @o,
             "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
             (map { "\t$_ \\\n" } @screenplay_docs_basenames),
             "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
             (map { "\t$_ \\\n" } @screenplay_epubs),
-            "\n\n"
+            "\n\n",
+            "$epub_dests_varname = \\\n$epub_dests\n\n",
+            (map { [split m#/#, $_]->[-1] . ": $_\n" } @_files),
+            "\tcp -f \$< \$\@\n\n",
         );
     }
 

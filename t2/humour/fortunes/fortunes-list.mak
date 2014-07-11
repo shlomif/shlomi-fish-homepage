@@ -1,4 +1,5 @@
 FORTUNES_FILES_BASE = \
+	bbt \
 	friends \
 	joel-on-software \
 	nyh-sigs \

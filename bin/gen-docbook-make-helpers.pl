@@ -440,6 +440,15 @@ EOF
             ],
         },
         {
+            base => "Muppet-Show-TNI",
+            github_repo => "The-Muppet-Show--The-New-Incarnation",
+            subdir => "Muppet-Show-TNI",
+            docs =>
+            [
+                { base => "Muppet-Show--SGlau-and-Chuck-Norris", suffix => "SGlau-and-Chuck-Norris", },
+            ],
+        },
+        {
             base => "BLUE_RABBIT_LOG",
             github_repo => "Blue-Rabbit-Log",
             subdir => "Blue-Rabbit-Log",

@@ -173,6 +173,26 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "The Muppets Show TNI",
+                    url => "humour/Muppets-Show-TNI/",
+                    title => "The Next Incarnation of The Muppets’ Show",
+                    subs =>
+                    [
+                        {
+                            text => "Harry Potter",
+                            url => "humour/Muppets-Show-TNI/Harry-Potter.html",
+                        },
+                        {
+                            text => "Summer Glau and Chuck Norris",
+                            url => "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
+                        },
+                        {
+                            text => "Jennifer Lawrence",
+                            url => "humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
+                        },
+                    ],
+                },
+                {
                     text => "The Earth Angel",
                     url => "humour/The-Earth-Angel/",
                     title => "TODO: FILL IN",

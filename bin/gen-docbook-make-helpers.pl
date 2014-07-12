@@ -445,6 +445,7 @@ EOF
             subdir => "Muppets-Show-TNI",
             docs =>
             [
+                { base => "Muppets-Show--Harry-Potter", suffix => "Harry-Potter", },
                 { base => "Muppets-Show--Jennifer-Lawrence", suffix => "Jennifer-Lawrence", },
                 { base => "Muppets-Show--Summer-Glau-and-Chuck-Norris", suffix => "Summer-Glau-and-Chuck-Norris", },
             ],

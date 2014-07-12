@@ -1,9 +1,10 @@
 ---
 required:
     modules:
+        Carp: 0
         CGI: 0
         CGI::Minimal: 0
-        Carp: 0
+        Config::IniFiles: 0
         Cwd: 0
         DBD::SQLite: 0
         DBI: 0
@@ -24,6 +25,7 @@ required:
         Getopt::Long: 0
         HTML::Latemp::GenMakeHelpers: 0
         HTML::Latemp::NavLinks::GenHtml::ArrowImages: 0
+        HTML::Links::Localize: 0
         HTML::Parser: '3.00'
         HTML::Tidy: 0
         HTML::TokeParser::Simple: 0

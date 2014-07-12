@@ -440,7 +440,7 @@ EOF
             ],
         },
         {
-            base => "Muppet-Show-TNI",
+            base => "MUPPET_SHOW_TNI",
             github_repo => "The-Muppet-Show--The-New-Incarnation",
             subdir => "Muppet-Show-TNI",
             docs =>
@@ -488,8 +488,7 @@ EOF
             (map { "\t$_ \\\n" } @screenplay_epubs),
             "\n\n",
             "$epub_dests_varname = \\\n$epub_dests\n\n",
-            (map { [split m#/#, $_]->[-1] . ": $_\n" } @_files),
-            "\tcp -f \$< \$\@\n\n",
+            (map { "$_: \$(SCREENPLAY_XML_EPUB_DIR)/" . [split m#/#, $_]->[-1] . "\n\tcp -f \$< \$\@\n\n" } @_files),
         );
     }
 

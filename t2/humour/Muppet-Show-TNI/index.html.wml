@@ -3,18 +3,19 @@
 #include "stories/stories-list.wml"
 #include "toc_div.wml"
 
-<latemp_subject "The One with the Fountainhead" />
-<latemp_meta_desc "The six friends of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." />
+<latemp_subject "The Muppet Show - The New Incarnation" />
+<latemp_meta_desc "Ideas for the next incarnation of The Muppet Show" />
 
-<latemp_more_keywords "fountainhead,ayn rand,parody,spoof,humour,funny,screenplay,story,friends,television,tv,objectivism,randianism" />
+<latemp_more_keywords "muppet,muppets,The Muppet Show" />
 
 <tow_the_fountainhead_common_top_elems />
 
 <h2 id="read_online">Read Online</h2>
 
+<set-var epub_prefix="Muppet-Show--" />
 <ul>
-<story_episode_li base="TOW_Fountainhead_1" title="The One with the Fountainhead - Part 1" />
-<story_episode_li base="TOW_Fountainhead_2" title="The One with the Fountainhead - Part 2" />
+<story_episode_li base="Summer-Glau-and-Chuck-Norris" title="Summer Glau and Chuck Norris" />
+<story_episode_li base="Jennifer-Lawrence.html.wml" title="Jennifer Lawrence" />
 </ul>
 
 <toc_div />

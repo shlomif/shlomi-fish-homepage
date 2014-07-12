@@ -69,6 +69,12 @@ generally - story to end all stories).
 
 </define-tag>
 
+<define-tag muppets_show_tni_abstract>
+
+A new incarnation of the Muppets’ show.
+
+</define-tag>
+
 <define-tag selina_mandrake_abstract>
 
 A geeky Anglo-American girl in her high school senior year in 2011
@@ -182,6 +188,10 @@ been written.
 <img src="$(ROOT)/humour/TOWTF/images/towtf-logo-200px.jpg" alt="The One With The Fountainhead Logo" class="story_logo towtf" />
 </define-tag>
 
+<define-tag muppets_show_tni_logo>
+<img src="$(ROOT)/humour/Muppets-Show-TNI/images/muppets-tni-200px.jpg" alt="The Muppets Show TNI" class="story_logo muppets" />
+</define-tag>
+
 <define-tag selina_mandrake_logo>
 <img src="$(ROOT)/humour/Selina-Mandrake/images/Green-d10-dice.png" alt="1d10 die" class="story_logo selina" />
 </define-tag>
@@ -236,6 +246,20 @@ been written.
 
 <p class="buffy_few_good abstract">
 <buffy_a_few_good_slayers_abstract />
+</p>
+
+</define-tag>
+
+<define-tag muppets_show_tni_common_top_elems>
+
+<tagline text="Muppets!" />
+
+<muppets_show_tni_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<p class="muppets_show_tni abstract">
+<muppets_show_tni_abstract />
 </p>
 
 </define-tag>

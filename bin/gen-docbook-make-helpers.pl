@@ -441,12 +441,12 @@ EOF
         },
         {
             base => "MUPPET_SHOW_TNI",
-            github_repo => "The-Muppet-Show--The-New-Incarnation",
-            subdir => "Muppet-Show-TNI",
+            github_repo => "The-Muppets-Show--The-New-Incarnation",
+            subdir => "Muppets-Show-TNI",
             docs =>
             [
-                { base => "Muppet-Show--Jennifer-Lawrence", suffix => "Jennifer-Lawrence", },
-                { base => "Muppet-Show--Summer-Glau-and-Chuck-Norris", suffix => "Summer-Glau-and-Chuck-Norris", },
+                { base => "Muppets-Show--Jennifer-Lawrence", suffix => "Jennifer-Lawrence", },
+                { base => "Muppets-Show--Summer-Glau-and-Chuck-Norris", suffix => "Summer-Glau-and-Chuck-Norris", },
             ],
         },
         {
@@ -472,8 +472,8 @@ $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.epub \
 $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
-$(T2_DEST)/humour/Muppet-Show-TNI/Muppet-Show--Jennifer-Lawrence.epub \
-$(T2_DEST)/humour/Muppet-Show-TNI/Muppet-Show--SGlau-and-Chuck-Norris.epub   \
+$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
+$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--SGlau-and-Chuck-Norris.epub   \
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
 $(T2_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \

@@ -473,6 +473,7 @@ $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.epub \
 $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
+$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
 $(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \

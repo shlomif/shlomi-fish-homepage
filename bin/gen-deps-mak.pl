@@ -68,7 +68,7 @@ lib/xml_g_fiction.wml
         # Temporarily added for debugging:
         # ->exec(sub { print "$_[2]\n"; })
         ->name(
-            qr{\A(?:docbook|screenplay-xml|fiction-xml|presentations|MathJax)\z}
+            qr{\A(?:docbook|screenplay-xml/from-vcs|fiction-xml|presentations|MathJax)\z}
         )
         ->prune->discard
         ;
@@ -77,7 +77,7 @@ lib/xml_g_fiction.wml
         map { ($_ . '') =~ s{\Alib/}{}r }
         File::Find::Object::Rule
             ->or($discard,$rule->new())
-            ->name('*.wml')
+            ->name(qr/\.(wml|html|xhtml)\z/)
             ->in('lib');
 
     my %files_containing_headers =

@@ -456,7 +456,7 @@ EOF
             subdir => "Blue-Rabbit-Log",
             docs =>
             [
-                { base => "Blue-Rabbit-Log-Part-1", suffix => "1", },
+                { base => "Blue-Rabbit-Log-part-1", suffix => "1", },
             ],
         },
     ];
@@ -469,7 +469,7 @@ EOF
         );
         my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
         my $epub_dests = <<'EOF';
-$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-Part-1.epub \
+$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie.epub \
 $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \

@@ -456,7 +456,7 @@ EOF
             subdir => "Blue-Rabbit-Log",
             docs =>
             [
-                { base => "Blue-Rabbit-Log-part-1", suffix => "1", },
+                { base => "Blue-Rabbit-Log-part-1", suffix => "part-1", },
             ],
         },
     ];

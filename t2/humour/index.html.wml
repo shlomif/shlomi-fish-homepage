@@ -31,18 +31,6 @@ licences.
 
 <h2 id="large-scale"><a href="stories/">Large-scale Creations</a></h2>
 
-<script type="text/javascript">
-
-\$(document).ready(function() {
-
-    $("div.collapse").expander({
-        slicePoint: 200,
-        expandText: 'read more…',
-    });
-
-});
-
-</script>
 
 <div class="sub_section collapse">
 
@@ -113,3 +101,15 @@ Media Recommendations of films, fiction books, etc.
 
 </div>
 
+<script type="text/javascript">
+
+\$(document).ready(function() {
+
+    $("div.collapse").expander({
+        slicePoint: 200,
+        expandText: 'read more…',
+    });
+
+});
+
+</script>

@@ -4,6 +4,8 @@
 <latemp_subject "Shlomi Fish’s Humorous Creations" />
 <latemp_meta_desc "Aphorisms, Quotes, Factoids, bits, parodical songs, stories and screenplays by Shlomi Fish" />
 
+<script type="text/javascript" src="$(ROOT)/js/jquery.expander.min.js"></script>
+
 ;;; Renewed monthly.
 <define-tag online_casinos_ad>
 <div style="border: double black 3pt; padding: 0.5em; margin: 0.3em; float: right; width: 30%;">
@@ -29,7 +31,20 @@ licences.
 
 <h2 id="large-scale"><a href="stories/">Large-scale Creations</a></h2>
 
-<div class="sub_section">
+<script type="text/javascript">
+
+\$(document).ready(function() {
+
+    $("div.collapse").expander({
+        slicePoint: 200,
+        expandText: 'read more…',
+    });
+
+});
+
+</script>
+
+<div class="sub_section collapse">
 
 <humour_stories_list_text />
 

@@ -193,6 +193,10 @@ been written.
 <img src="$(ROOT)/humour/Muppets-Show-TNI/images/muppets-tni-200px.jpg" alt="The Muppets Show TNI" class="story_logo muppets" />
 </define-tag>
 
+<define-tag we_the_living_dead_logo>
+<img src="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png" alt="Fiery Q" class="story_logo st_wtld" />
+</define-tag>
+
 <define-tag selina_mandrake_logo>
 <img src="$(ROOT)/humour/Selina-Mandrake/images/Green-d10-dice.png" alt="1d10 die" class="story_logo selina" />
 </define-tag>
@@ -207,6 +211,18 @@ been written.
 
 <define-tag buffy_a_few_good_slayers_logo>
 <img src="$(ROOT)/humour/Buffy/A-Few-Good-Slayers/images/buffy-a-few-good-slayers-logo-small.png" alt="Buffy - a Few Good Slayers Logo" class="story_logo buffy_few_good" />
+</define-tag>
+
+<define-tag we_the_living_dead_common_top_elems>
+
+<tagline text="From perfection to imperfection; from finity to infinity" />
+
+<we_the_living_dead_logo />
+
+<h2 id="abstract">Abstract</h2>
+
+<we_the_living_dead_abstract />
+
 </define-tag>
 
 <define-tag selina_mandrake_common_top_elems>
@@ -366,6 +382,8 @@ unlikely, but much more experienced, female software hacker.
 
 <humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
 text="Star Trek: We the Living Dead">
+
+<we_the_living_dead_logo />
 
 <we_the_living_dead_abstract />
 

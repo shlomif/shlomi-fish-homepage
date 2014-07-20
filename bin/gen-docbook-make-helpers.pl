@@ -497,9 +497,9 @@ EOF
         );
     }
 
-    foreach my $github_repo (@screenplay_git_checkouts)
-    {
-        my $r = $github_repo->{github_repo};
+    my $clone_cb = sub {
+        my ($r) = @_;
+
         my $full = "$screenplay_vcs_base_dir/$r";
 
         if (not -e $full)
@@ -512,7 +512,15 @@ EOF
                 $pm->finish;
             }
         }
+
+        return;
+    };
+
+    foreach my $github_repo (@screenplay_git_checkouts)
+    {
+        $clone_cb->($github_repo->{github_repo});
     }
+    $clone_cb->('screenplays-common');
 }
 
 my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';

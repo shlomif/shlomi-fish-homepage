@@ -148,6 +148,8 @@ upload_var_without_deps:
 upload_beta: upload_deps
 	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
 
+upload_all: upload upload_var upload_local upload_beta
+
 clean:
 
 upload_hostgator: upload_deps

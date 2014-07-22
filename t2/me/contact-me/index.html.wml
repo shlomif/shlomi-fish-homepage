@@ -5,6 +5,8 @@
 
 <latemp_meta_desc "How to Reach Shlomi Fish: E-mail, IM, mobile phone, IRC and many user-generated content sites." />
 
+<script type="text/javascript" src="$(ROOT)/js/jquery.expander.min.js"></script>
+
 <h2 id="contact_me">How to contact me / How to reach me</h2>
 
 <p>
@@ -24,7 +26,7 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 <dl>
 
 <dt><a href="http://en.wikipedia.org/wiki/XMPP">Jabber/XMPP</a> (also branded as
-“Google Talk”, “Google Chat”, etc.)</dt>
+“Google Talk”, “Google Chat”, “Google Hangouts”, etc.)</dt>
 
 <dd>ShlomiFish@jabber.org / shlomif@gmail.com</dd>
 
@@ -34,8 +36,12 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 
 <dt>Cell-Phone</dt>
 <dd>+972-54-6232377 (Orange)</dd>
+</dl>
 
-<define-tag __removed_contacts>
+<h2 id="more_contact_details">More Contact Details</h2>
+
+<dl id="more_contacts_list" class="contact">
+
 <dt>IRC:</dt>
 <dd><tt>rindolf</tt> on <a href="http://www.freenode.org/">FreeNode</a>,
 <a href="http://www.efnet.org/">EF-Net</a>,
@@ -143,7 +149,17 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 </dl>
 
 </dd>
-</define-tag>
-
 </dl>
 
+<script type="text/javascript">
+
+\$(document).ready(function() {
+
+    $("#more_contacts_list").expander({
+        slicePoint: 400,
+        expandText: 'read more…',
+    });
+
+});
+
+</script>

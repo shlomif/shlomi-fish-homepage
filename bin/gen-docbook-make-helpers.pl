@@ -21,6 +21,7 @@ sub _github_clone
 
     my $gh_username = $args->{'username'};
     my $repo = $args->{'repo'};
+    my $into_dir = $args->{'into_dir'};
 
     my $url;
 
@@ -35,16 +36,22 @@ sub _github_clone
          $url = "https://github.com/$gh_username/$repo.git";
     }
 
-    system('git', 'clone', $url);
+    system('git', 'clone', $url, "$into_dir/$repo");
 
     return;
 }
 
 sub _github_shlomif_clone
 {
-    my ($repo) = @_;
+    my ($into_dir, $repo) = @_;
 
-    return _github_clone({ username => 'shlomif', repo => $repo, });
+    return _github_clone(
+        {
+            username => 'shlomif',
+            into_dir => $into_dir,
+            repo => $repo,
+        }
+    );
 }
 
 my $pm = Parallel::ForkManager->new(20);
@@ -507,8 +514,7 @@ EOF
             my $pid;
             if (! ($pid = $pm->start))
             {
-                chdir($screenplay_vcs_base_dir);
-                _github_shlomif_clone($r);
+                _github_shlomif_clone($screenplay_vcs_base_dir, $r);
                 $pm->finish;
             }
         }
@@ -656,8 +662,7 @@ sub _calc_fiction_story_makefile_lines
                 my $pid;
                 if (! ($pid = $pm->start))
                 {
-                    chdir($fiction_vcs_base_dir);
-                    _github_shlomif_clone($r);
+                    _github_shlomif_clone($fiction_vcs_base_dir, $r);
                     $pm->finish;
                 }
             }

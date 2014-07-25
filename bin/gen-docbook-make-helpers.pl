@@ -505,16 +505,28 @@ $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
 EOF
 
         my @_files = ($epub_dests =~ /(\$\(T2_DEST\)\S+)/g);
+        my @_htmls_files = map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 
+        my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
         io->file("lib/make/docbook/sf-screenplays.mak")->print(
             @o,
             "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
             (map { "\t$_ \\\n" } @screenplay_docs_basenames),
             "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
-            (map { "\t$_ \\\n" } @screenplay_epubs),
+            (map { "\t\$($_) \\\n" } @screenplay_epubs),
             "\n\n",
-            "$epub_dests_varname = \\\n$epub_dests\n\n",
+            "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
             (map { "$_: \$(SCREENPLAY_XML_EPUB_DIR)/" . [split m#/#, $_]->[-1] . "\n\tcp -f \$< \$\@\n\n" } @_files),
+            (map { "$_: \$(SCREENPLAY_XML_HTML_DIR)/" .
+                    do
+                    {
+                        my $x = [split m#/#, $_]->[-1];
+                        $x =~ s/\.raw(\.html)\z/$1/;
+                        $x;
+                    }
+                    . "\n\tcp -f \$< \$\@\n\n"
+                } @_htmls_files
+            ),
         );
     }
 

@@ -3,6 +3,10 @@
 use strict;
 use warnings;
 
+use File::Basename qw(dirname basename);
+
+use Cwd qw(getcwd);
+
 use Template;
 
 use IO::All;
@@ -14,6 +18,12 @@ use List::MoreUtils qw(any);
 use Parallel::ForkManager;
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
+
+my $cwd = getcwd();
+my $upper_dir = dirname($cwd);
+my $cwd_basename = basename($cwd);
+my $git_clones_dir = "$upper_dir/_$cwd_basename--clones";
+io->dir($git_clones_dir)->mkpath;
 
 sub _github_clone
 {
@@ -36,7 +46,11 @@ sub _github_clone
          $url = "https://github.com/$gh_username/$repo.git";
     }
 
-    system('git', 'clone', $url, "$into_dir/$repo");
+    my $clone_into = "$git_clones_dir/$repo";
+    my $link = "$into_dir/$repo";
+
+    system('git', 'clone', $url, $clone_into);
+    symlink($clone_into, $link);
 
     return;
 }

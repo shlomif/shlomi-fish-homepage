@@ -25,7 +25,13 @@
 <set-var %attributes />
 <li>
 <p>
-<a href="<get-var basename />">EPUB eBook</a> - (free download).
+<a href="<get-var basename />.epub">EPUB eBook</a> - (free download).
+</p>
+</li>
+<li>
+<p>
+<a href="<get-var basename />.raw.html">Raw HTML</a> - (view online without
+style and formatting).
 </p>
 </li>
 <restore basename />

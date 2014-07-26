@@ -518,6 +518,10 @@ sub generic_get_params
                         subs =>
                         [
                             {
+                                text => "Résumé as a Writer and Entertainer",
+                                url => "me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
+                            },
+                            {
                                 text => "English Résumé",
                                 url => "SFresume.html",
                                 skip => 1,

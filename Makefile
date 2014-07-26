@@ -73,9 +73,6 @@ ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.h
 
 htaccesses_target: $(ALL_HTACCESSES)
 
-
-fortunes-extended: $(T2_FORTUNES_ALL__HTML)
-
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
 
@@ -720,7 +717,7 @@ $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
 	touch $@
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(T2_FORTUNES_ALL__HTML)
 
 $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@

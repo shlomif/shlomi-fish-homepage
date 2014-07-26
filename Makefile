@@ -53,7 +53,6 @@ T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEM
 include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
-include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
@@ -381,6 +380,7 @@ all: splay
 
 include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak
+include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 SCREENPLAY_XML_HTMLS = $(patsubst %,$(SCREENPLAY_XML_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
@@ -1026,6 +1026,7 @@ docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
 docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
 	install_docbook5_epubs \
+	install_docbook5_htmls \
 	install_docbook4_xmls install_docbook_individual_xhtmls \
 	install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls \
 	html_tutorial \
@@ -1176,6 +1177,7 @@ $(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detaile
 resumes: $(PRINTABLE_RESUMES__DOCX)
 
 install_docbook5_epubs: make-dirs $(DOCBOOK5_INSTALLED_EPUBS)
+install_docbook5_htmls: make-dirs $(DOCBOOK5_INSTALLED_HTMLS)
 
 install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
 install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)

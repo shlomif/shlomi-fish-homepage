@@ -22,6 +22,10 @@ $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% FOREACH fmt = fmts %]
 [% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.installed_ext ? fmt.installed_ext : fmt.ext %][% END %]
 
+[% IF db_ver == '5' %]
+[% db_macro_prefix %]_INSTALLED_HTMLS =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %].raw.html[% END %]
+[% END %]
+
 [% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
 
 [% END %]
@@ -35,7 +39,13 @@ $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% SET my_ext_uc = my_ext_record.u %]
 
 $(T2_DEST)/[% d.path %]/[% d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
+[% "\t" %]cp -f $< $@
 
+[% END %]
+
+[% IF (db_macro_prefix == 'DOCBOOK5') %]
+
+$(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ONE_XHTML_DIR)/[% d.base %]/all-in-one.xhtml
 [% "\t" %]cp -f $< $@
 
 [% END %]

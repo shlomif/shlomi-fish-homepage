@@ -32,6 +32,7 @@
 #main
     .fortunes_list
         $fortune_color: #00F
+        $fort_border_color: black
         $fortune_radius: 5px
         $fortune_border: 7px solid
 
@@ -57,7 +58,7 @@
                 border-radius-top-right: $fortune_radius
                 border-radius-bottom-left: 0
                 border-radius-bottom-right: 0
-                border-bottom: $fortune_color $fortune_border
+                border-bottom: $fort_border_color $fortune_border
                 color: white
                 margin-top: 0
                 +fortune_style
@@ -74,7 +75,7 @@
                     right: 0
                     margin-top: 0
                     margin-bottom: 0
-                    border-bottom: black $fortune_border
+                    border-bottom: $fort_border_color $fortune_border
 
                     color: $fortune_color
                     text-decoration: none

@@ -447,7 +447,7 @@ my $humour_tree_contents =
                     url => "humour/bits/Google-Discontinues-Services/",
                 },
                 {
-                    text => "EmWatson Getting Interviewed for a Tech Job",
+                    text => "Emma Watson Getting Interviewed for a Tech Job",
                     url => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
                     title => "Emma Watson Getting Interviewed for a Software Developer Job",
                 },

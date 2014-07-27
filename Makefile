@@ -375,9 +375,9 @@ DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all
 
 all: splay
 
+include lib/make/docbook/sf-homepage-docbooks-generated.mak
 include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak
-include lib/make/docbook/sf-homepage-docbooks-generated.mak
 
 SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
 SCREENPLAY_XML_HTMLS = $(patsubst %,$(SCREENPLAY_XML_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))

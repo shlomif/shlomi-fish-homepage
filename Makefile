@@ -875,7 +875,7 @@ ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
 THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
-BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG = $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.png
+BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG = $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png
 HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png

@@ -346,6 +346,11 @@ my %reduced_sub_trees =
                 title => "Index to Essays and Articles I wrote.",
             },
             {
+                text => "General Philosophy",
+                url => "philosophy/philosophy/",
+                expand => { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
+            },
+            {
                 text => "Computing",
                 url => "philosophy/computers/",
                 title => "Computing-related Essays and Articles",
@@ -385,11 +390,6 @@ my %reduced_sub_trees =
                 title => "Essays about Politics and " .
                 "Philosophical Politics",
                 expand => { re => "^philosophy/politics/", },
-            },
-            {
-                text => "General Philosophy",
-                url => "philosophy/philosophy/",
-                expand => { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
             },
         ],
     },
@@ -556,11 +556,11 @@ sub generic_get_params
                 ],
             },
             $get_sub_tree->('Humour'),
+            $get_sub_tree->('Essays'),
             $get_sub_tree->('Puzzles'),
             $get_sub_tree->('Art'),
             $get_sub_tree->('Software'),
             $get_sub_tree->('Lectures'),
-            $get_sub_tree->('Essays'),
             {
                 text => "Work",
                 url => "work/",

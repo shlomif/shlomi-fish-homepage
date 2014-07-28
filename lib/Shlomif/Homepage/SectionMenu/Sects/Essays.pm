@@ -30,6 +30,141 @@ my $essays_tree_contents =
             title => "Reviews of Books I read.",
         },
         {
+            text => "Philosophy",
+            url => "philosophy/philosophy/",
+            title => "Writings about General Philosophy",
+            subs =>
+            [
+                {
+                    text => "The Eternal Jew",
+                    url => "philosophy/the-eternal-jew/",
+                    title => "The Eternal Jew - An Essay about the value of Self",
+                },
+                {
+                    text => "Guide to Neo-Tech",
+                    url => "philosophy/philosophy/guide-to-neo-tech/",
+                },
+                {
+                    text => "Advice for the Young",
+                    url => "philosophy/philosophy/advice-for-the-young/",
+                    title => "Advice for the Young (and for the not-so Young)",
+                },
+                {
+                    text => "Why Closed Books are So 19th Century",
+                    url => "philosophy/philosophy/closed-books-are-so-19th-century/",
+                    title => "Why authors of books should make sure they are publicly available online.",
+                },
+                {
+                    text => "Putting all the Cards on the Table (2013)",
+                    url => "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
+                    title => "Stopping to speak in riddles and be brutally honest, open, and sincere",
+                }
+            ],
+        },
+        {
+            text => "Psychology",
+            url => "philosophy/psychology/",
+            title => "Writings about Psychology",
+            subs =>
+            [
+                {
+                    text => "Dealing with Hypomanias",
+                    url => "philosophy/psychology/hypomanias/",
+                    title => "How I deal with the bad psychological periods that affect me",
+                },
+                {
+                    text => "The Elephant in the Circus",
+                    url => "philosophy/psychology/elephant-in-the-circus/",
+                    title => "A (non-original) story with self-growth implications",
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Translation",
+                            url => "philosophy/psychology/elephant-in-the-circus/hebrew.html",
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            text => "Political Essays",
+            url => "philosophy/politics/",
+            title => "Essays about Politics and Philosophical Politics",
+            subs =>
+            [
+                {
+                    text => "Objectivism and Open Source",
+                    url => "philosophy/obj-oss/",
+                    title => "Objectivism and Open Source",
+                    subs =>
+                    [
+                        {
+                            text => "Revision 2",
+                            url => "philosophy/obj-oss/rev2/",
+                            title => "Revision 2 of the Objectivism and Open Source Article",
+                        },
+                    ],
+                },
+                {
+                    text => "Israeli-Palestinian Conflict",
+                    url => "philosophy/israel-pales/",
+                    title => "A Solution to the Israeli Palestinian Conflict",
+                },
+                {
+                    text => "Case for File Swapping",
+                    url => "philosophy/case-for-file-swapping/",
+                    title => "Why File Swapping is Ethical and Moral and should be Legal",
+                    subs =>
+                    [
+                        {
+                            text => "Revision 3 Text",
+                            url => "philosophy/case-for-file-swapping/revision-3/",
+                            title => "Text of the Third Revision",
+                        },
+                    ],
+                },
+                {
+                    text => "Why Scientology is Bad",
+                    url => "philosophy/politics/why-scientology-is-bad/",
+                    title => "How I Concluded that Scientology is Bad",
+                },
+                {
+                    text => "Case for Drug Legalisation",
+                    url => "philosophy/politics/drug-legalisation/",
+                    title => "Why the War on Drugs is the Real Drug Problem",
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Translation",
+                            url => "philosophy/politics/drug-legalisation/hebrew.html",
+                        },
+                    ],
+                },
+                {
+                    text => "Define “Zionism”!",
+                    url => "philosophy/politics/define-zionism/",
+                    title => ("What is “Zionism” really? What " .
+                        "does anti-Israel, anti-Zionist, etc. mean?"),
+                    subs =>
+                    [
+                        {
+                            text => "Hebrew Translation",
+                            url => "philosophy/politics/define-zionism/heb/",
+                        },
+                    ],
+                },
+                {
+                    text => "Dispelling Some Myths about Israel",
+                    url => "philosophy/politics/dispelling-myths-about-israel/",
+                },
+                {
+                    text => "Opinion on DeCSS",
+                    url => "DeCSS/",
+                    title => "My Opinion on the DeCSS (= DVDs’ de-scrambling code) fiasco",
+                },
+            ],
+        },
+        {
             text => "Computing",
             url => "philosophy/computers/",
             title => "Computing-related Essays and Articles",
@@ -293,141 +428,6 @@ my $essays_tree_contents =
                                 . " Elpas, which was my first workplace as a"
                                 . " programmer"
                             ),
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            text => "Political Essays",
-            url => "philosophy/politics/",
-            title => "Essays about Politics and Philosophical Politics",
-            subs =>
-            [
-                {
-                    text => "Objectivism and Open Source",
-                    url => "philosophy/obj-oss/",
-                    title => "Objectivism and Open Source",
-                    subs =>
-                    [
-                        {
-                            text => "Revision 2",
-                            url => "philosophy/obj-oss/rev2/",
-                            title => "Revision 2 of the Objectivism and Open Source Article",
-                        },
-                    ],
-                },
-                {
-                    text => "Israeli-Palestinian Conflict",
-                    url => "philosophy/israel-pales/",
-                    title => "A Solution to the Israeli Palestinian Conflict",
-                },
-                {
-                    text => "Case for File Swapping",
-                    url => "philosophy/case-for-file-swapping/",
-                    title => "Why File Swapping is Ethical and Moral and should be Legal",
-                    subs =>
-                    [
-                        {
-                            text => "Revision 3 Text",
-                            url => "philosophy/case-for-file-swapping/revision-3/",
-                            title => "Text of the Third Revision",
-                        },
-                    ],
-                },
-                {
-                    text => "Why Scientology is Bad",
-                    url => "philosophy/politics/why-scientology-is-bad/",
-                    title => "How I Concluded that Scientology is Bad",
-                },
-                {
-                    text => "Case for Drug Legalisation",
-                    url => "philosophy/politics/drug-legalisation/",
-                    title => "Why the War on Drugs is the Real Drug Problem",
-                    subs =>
-                    [
-                        {
-                            text => "Hebrew Translation",
-                            url => "philosophy/politics/drug-legalisation/hebrew.html",
-                        },
-                    ],
-                },
-                {
-                    text => "Define “Zionism”!",
-                    url => "philosophy/politics/define-zionism/",
-                    title => ("What is “Zionism” really? What " .
-                        "does anti-Israel, anti-Zionist, etc. mean?"),
-                    subs =>
-                    [
-                        {
-                            text => "Hebrew Translation",
-                            url => "philosophy/politics/define-zionism/heb/",
-                        },
-                    ],
-                },
-                {
-                    text => "Dispelling Some Myths about Israel",
-                    url => "philosophy/politics/dispelling-myths-about-israel/",
-                },
-                {
-                    text => "Opinion on DeCSS",
-                    url => "DeCSS/",
-                    title => "My Opinion on the DeCSS (= DVDs’ de-scrambling code) fiasco",
-                },
-            ],
-        },
-        {
-            text => "Philosophy",
-            url => "philosophy/philosophy/",
-            title => "Writings about General Philosophy",
-            subs =>
-            [
-                {
-                    text => "The Eternal Jew",
-                    url => "philosophy/the-eternal-jew/",
-                    title => "The Eternal Jew - An Essay about the value of Self",
-                },
-                {
-                    text => "Guide to Neo-Tech",
-                    url => "philosophy/philosophy/guide-to-neo-tech/",
-                },
-                {
-                    text => "Advice for the Young",
-                    url => "philosophy/philosophy/advice-for-the-young/",
-                    title => "Advice for the Young (and for the not-so Young)",
-                },
-                {
-                    text => "Why Closed Books are So 19th Century",
-                    url => "philosophy/philosophy/closed-books-are-so-19th-century/",
-                    title => "Why authors of books should make sure they are publicly available online.",
-                },
-                {
-                    text => "Putting all the Cards on the Table (2013)",
-                    url => "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
-                    title => "Stopping to speak in riddles and be brutally honest, open, and sincere",
-                }
-            ],
-        },
-        {
-            text => "Psychology",
-            url => "philosophy/psychology/",
-            title => "Writings about Psychology",
-            subs =>
-            [
-                {
-                    text => "Dealing with Hypomanias",
-                    url => "philosophy/psychology/hypomanias/",
-                    title => "How I deal with the bad psychological periods that affect me",
-                },
-                {
-                    text => "The Elephant in the Circus",
-                    url => "philosophy/psychology/elephant-in-the-circus/",
-                    title => "A (non-original) story with self-growth implications",
-                    subs =>
-                    [
-                        {
-                            text => "Hebrew Translation",
-                            url => "philosophy/psychology/elephant-in-the-circus/hebrew.html",
                         },
                     ],
                 },

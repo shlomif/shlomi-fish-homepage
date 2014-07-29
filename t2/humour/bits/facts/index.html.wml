@@ -21,10 +21,14 @@ amusing. Many people I talk with don't enjoy them as much as I and some of my fr
 
 <h2 id="the-collections">The Collections</h2>
 
+<define-tag __chuck>
 <h3 id="facts-chuck"><a href="Chuck-Norris/">Chuck Norris Facts</a></h3>
 
 <facts__chuck />
+</define-tag>
 
+
+<define-tag __main>
 <h3 id="facts-buffy"><a href="Buffy/">Buffy Facts</a></h3>
 
 <facts__buffy />
@@ -61,9 +65,19 @@ amusing. Many people I talk with don't enjoy them as much as I and some of my fr
 
 <facts__xslt />
 
+</define-tag>
+
+<define-tag __soviet>
 <h3 id="facts-soviet-russia"><a href="In-Soviet-Russia/">In Soviet Russia</a></h3>
 
 <facts__in_soviet_russia />
+
+</define-tag>
+
+;;; Chuck at the beginning. In Soviet Russia at the end.
+<__chuck />
+<__main />
+<__soviet />
 
 <h2 id="thanks">Thanks</h2>
 

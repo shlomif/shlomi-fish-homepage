@@ -453,7 +453,7 @@ EOF
         },
         {
             base => "BUFFY_A_FEW_GOOD_SLAYERS",
-            github_repo => "Buffy--a-Few-Good-Slayers",
+            github_repo => "Buffy-a-Few-Good-Slayers",
             subdir => "buffy--a-few-good-slayers",
             docs =>
             [

@@ -76,13 +76,19 @@ sub _sort_words
     return [sort { $a cmp $b } @$words_aref];
 }
 
+my %_gen = map { $_ => 1 } @general_whitelist;
+
 io($filename)->encoding('utf8')->print(
     map { "$_\n" }
     (
         @{_sort_words(\@general_whitelist)}, '',
         (map
             { ("==== ".join(' , ', @{$_->{files}})), '',
-                (@{ _sort_words( $_->{words} ) }), ''
+                (@{ _sort_words(
+                            [grep { !exists($_gen{$_}) } @{$_->{words}}]
+                    )
+                  }
+                ), ''
             }
             sort { rec_sorter($a->{files}, $b->{files}, 0) }
             @records

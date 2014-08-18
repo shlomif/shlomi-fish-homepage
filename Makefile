@@ -1194,3 +1194,11 @@ install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHT
 
 
 install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
+
+PUT_CARDS_2013_DEST_INDIV = $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
+PUT_CARDS_2013_INDIV_SCRIPT = bin/split-put-cards-into-divs.pl
+
+all: $(PUT_CARDS_2013_DEST_INDIV)
+
+$(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
+	perl $(PUT_CARDS_2013_INDIV_SCRIPT)

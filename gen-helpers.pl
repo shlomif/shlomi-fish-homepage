@@ -73,6 +73,8 @@ foreach my $cmd (
     _my_system($cmd);
 }
 
+io()->file('Makefile')->print("include _Main.mak\n");
+
 =begin removed_duplicate_code
 
 my $wml_deps = io->file("deps.mak");

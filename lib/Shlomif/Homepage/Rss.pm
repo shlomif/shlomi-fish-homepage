@@ -14,7 +14,6 @@ use Encode (qw(decode));
 
 has 'feed' => (
     is => 'rw',
-    isa => 'XML::Feed',
     default => sub {
         my $feed = XML::Feed->parse($ENV{'SF_HSITE_FEED_FILE'} || URI->new("http://shlomif-hsite.livejournal.com/data/atom"))
             or die XML::Feed->errstr;

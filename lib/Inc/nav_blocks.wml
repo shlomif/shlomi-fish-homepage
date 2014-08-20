@@ -24,6 +24,21 @@
 
 </define-tag>
 
+<define-tag _lip_github_repo whitespace="delete">
+
+<preserve href />
+<set-var %attributes />
+
+<li>
+<p>
+<a href="<get-var href />">GitHub Repo</a>
+</p>
+</li>
+
+<restore href />
+
+</define-tag>
+
 <define-tag _selina_mandrake__tr>
 
 <tr>
@@ -31,28 +46,11 @@
 <td>
 
 <ul>
-<li>
-<p>
-<curr_a href="humour/Selina-Mandrake/">Front Page</curr_a>
-</p>
-</li>
-<li>
-<p>
-<curr_a href="humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</curr_a>
-</p>
-</li>
+<lip_curr_a href="humour/Selina-Mandrake/">Front Page</lip_curr_a>
+<lip_curr_a href="humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</lip_curr_a>
+<lip_curr_a href="humour/Selina-Mandrake/cast.html">Proposed Cast</lip_curr_a>
 
-<li>
-<p>
-<curr_a href="humour/Selina-Mandrake/cast.html">Proposed Cast</curr_a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://github.com/shlomif/Selina-Mandrake">GitHub Source Repo</a>
-</p>
-</li>
+<_lip_github_repo href="http://github.com/shlomif/Selina-Mandrake" />
 
 </ul>
 
@@ -68,11 +66,7 @@
 <td>
 
 <ul>
-<li>
-<p>
-<curr_a href="humour/bits/Emma-Watson-applying-for-a-software-dev-job/">Emma Watson Interviewing for a software developer job</curr_a>
-</p>
-</li>
+<lip_curr_a href="humour/bits/Emma-Watson-applying-for-a-software-dev-job/">Emma Watson Interviewing for a software developer job</lip_curr_a>
 
 </ul>
 
@@ -90,22 +84,10 @@
 <td>
 
 <ul>
-<li>
-<p>
-<curr_a href="humour/Star-Trek/We-the-Living-Dead/">Front Page</curr_a>
-</p>
-</li>
-<li>
-<p>
-<curr_a href="humour/Star-Trek/We-the-Living-Dead/ongoing-text.html">Ongoing Text</curr_a>
-</p>
-</li>
+<lip_curr_a href="humour/Star-Trek/We-the-Living-Dead/">Front Page</lip_curr_a>
+<lip_curr_a href="humour/Star-Trek/We-the-Living-Dead/ongoing-text.html">Ongoing Text</lip_curr_a>
 
-<li>
-<p>
-<a href="http://github.com/shlomif/Star-Trek--We-the-Living-Dead">GitHub Source Repo</a>
-</p>
-</li>
+<_lip_github_repo href="http://github.com/shlomif/Star-Trek--We-the-Living-Dead" />
 
 </ul>
 
@@ -125,23 +107,11 @@
 
 <ul>
 
-<li>
-<p>
-<curr_a href="humour/Buffy/A-Few-Good-Slayers/">Front Page</curr_a>
-</p>
-</li>
+<lip_curr_a href="humour/Buffy/A-Few-Good-Slayers/">Front Page</lip_curr_a>
 
-<li>
-<p>
-<curr_a href="humour/Buffy/A-Few-Good-Slayers/ongoing-text.html">Front Page</curr_a>
-</p>
-</li>
+<lip_curr_a href="humour/Buffy/A-Few-Good-Slayers/ongoing-text.html">Front Page</lip_curr_a>
 
-<li>
-<p>
-<a href="http://github.com/shlomif/Buffy-a-Few-Good-Slayers">GitHub Source Repo</a>
-</p>
-</li>
+<_lip_github_repo href="http://github.com/shlomif/Buffy-a-Few-Good-Slayers" />
 
 </ul>
 
@@ -183,10 +153,12 @@
 
 <tr>
 
-<td colspan="2"><b>Emma Watson Facts</b></td>
+<td colspan="2"><b>“Facts”</b></td>
 
 <td>
-<curr_a href="humour/bits/facts/Emma-Watson/">Ongoing Text</curr_a>
+<ul>
+<lip_curr_a href="humour/bits/facts/Emma-Watson/">Emma Watson Facts</lip_curr_a>
+</ul>
 </td>
 
 </tr>

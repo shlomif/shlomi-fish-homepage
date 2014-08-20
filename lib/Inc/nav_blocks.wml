@@ -1,5 +1,21 @@
-<define-tag _selina_mandrake__tr>
+<define-tag _subdiv_tr>
+<preserve title />
+<set-var %attributes />
+<tr class="subdiv">
+<th colspan="3"><get-var title /></th>
+</tr>
+<restore title />
+</define-tag>
 
+<define-tag _master_tr>
+<preserve title />
+<set-var %attributes />
+<tr class="main_title">
+<th colspan="3"><get-var title /></th>
+</tr>
+<restore title />
+</define-tag>
+<define-tag _selina_mandrake__tr>
 <tr>
 <td colspan="2"><b>Selina Mandrake - The Slayer</b></td>
 <td>
@@ -93,13 +109,8 @@
 
 <table>
 
-<tr>
-<th colspan="3">Star Trek Fanfiction</th>
-</tr>
-<tr>
-<th colspan="3">Screenplays</th>
-</tr>
-
+<_master_tr title="Star Trek Fanfiction" />
+<_subdiv_tr title="Screenplays" />
 <_star_trek_wtld__tr />
 <_selina_mandrake__tr />
 
@@ -115,19 +126,12 @@
 
 <table>
 
-<tr>
-<th colspan="3">Harry Potter/Emma Watson Fanfiction</th>
-</tr>
-<tr>
-<th colspan="3">Screenplays</th>
-</tr>
-
+<_master_tr title="Harry Potter/Emma Watson Fanfiction" />
+<_subdiv_tr title="Screenplays" />
 <_selina_mandrake__tr />
 <_EmWatson_tech_job__tr />
 
-<tr>
-<th colspan="3">Factoids</th>
-</tr>
+<_subdiv_tr title="Factoids" />
 
 <td colspan="2"><b>Emma Watson Facts</b></td>
 <td>

@@ -20,7 +20,7 @@ my $contents = io->file($abs_in_fn)->utf8->slurp();
 $contents =~ s{\A(?:.*?)<body>}{}ms;
 $contents =~ s{</body>(?:.*?)\z}{}ms;
 
-$contents =~ s#<h3 id="(?<id>[^"]+)"[^>]*>[^<]+</h3>\K#\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p>\n#g;
+$contents =~ s#(?<full><h3 id=\s*"(?<id>[^"]+)"[^>]*>[^<]+</h3>)#$+{full}\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p>\n#g;
 
 $contents =~ s/\n(\s*)#/${1} #/gms;
 

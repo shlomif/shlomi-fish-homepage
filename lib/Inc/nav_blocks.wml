@@ -1,19 +1,27 @@
 <define-tag _subdiv_tr>
+
 <preserve title />
 <set-var %attributes />
+
 <tr class="subdiv">
 <th colspan="3"><get-var title /></th>
 </tr>
+
 <restore title />
+
 </define-tag>
 
 <define-tag _master_tr>
+
 <preserve title />
 <set-var %attributes />
+
 <tr class="main_title">
 <th colspan="3"><get-var title /></th>
 </tr>
+
 <restore title />
+
 </define-tag>
 
 <define-tag _selina_mandrake__tr>
@@ -102,7 +110,44 @@
 </ul>
 
 </td>
+
 </tr>
+
+</define-tag>
+
+<define-tag _buffy_few_good__tr>
+
+<tr>
+
+<td colspan="2"><b>Buffy: A Few Good Slayers</b></td>
+
+<td>
+
+<ul>
+
+<li>
+<p>
+<curr_a href="humour/Buffy/A-Few-Good-Slayers/">Front Page</curr_a>
+</p>
+</li>
+
+<li>
+<p>
+<curr_a href="humour/Buffy/A-Few-Good-Slayers/ongoing-text.html">Front Page</curr_a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://github.com/shlomif/Buffy-a-Few-Good-Slayers">GitHub Source Repo</a>
+</p>
+</li>
+
+</ul>
+
+</td>
+</tr>
+
 </define-tag>
 
 <define-tag star_trek_nav_block>
@@ -131,6 +176,7 @@
 <_master_tr title="Harry Potter/Emma Watson Fanfiction" />
 <_subdiv_tr title="Screenplays" />
 <_selina_mandrake__tr />
+<_buffy_few_good__tr />
 <_EmWatson_tech_job__tr />
 
 <_subdiv_tr title="Factoids" />

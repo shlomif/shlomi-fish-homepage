@@ -1,5 +1,7 @@
 #include '../template.wml'
 #include "stories/stories-list.wml"
+#include "Inc/nav_blocks.wml"
+
 <latemp_subject "Summerschool at the NSA - Ongoing Text" />
 <latemp_meta_desc "Two Hollywood actresses conspire to kick the ass of the NSA, using special warfare that is completely non-violent, bringing an old Internet meme to life. Set in the Spring-Summer of 2013." />
 
@@ -8,4 +10,6 @@
 <apply_screenplay_style />
 
 #include "screenplay-xml/rendered-html/Summerschool-at-the-NSA.html"
+
+<xkcd_nav_block />
 

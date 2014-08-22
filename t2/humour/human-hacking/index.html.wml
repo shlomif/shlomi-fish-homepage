@@ -2,6 +2,7 @@
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
 #include "toc_div.wml"
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "The Human Hacking Field Guide" />
 <latemp_meta_desc "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." />
@@ -437,3 +438,5 @@ Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logo
 
 
 </table>
+
+<foss_nav_block />

@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "“I’m the Real Tim Toady”" />
 <latemp_meta_desc "Geek song sang to “Oops… the Real Slim Shady did it again” about the Perl world" />
@@ -48,3 +49,5 @@ Well, more than one way, anyway.
 <h2 id="license">Copyright and Licence</h2>
 
 <cc_by_sa_british_blurb year="2012" />
+
+<foss_nav_block />

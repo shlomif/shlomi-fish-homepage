@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "The GNU Project Will Integrate GNU Guile into GNU coreutils" />
 <latemp_meta_desc "The GNU Project Will Integrate GNU Guile into GNU coreutils" />
@@ -38,3 +39,5 @@ GNU Guile into the Linux kernel.
 This was originally <a href="http://shlomif-tech.livejournal.com/67311.html">a
 post</a> on one of my blogs.
 </p>
+
+<foss_nav_block />

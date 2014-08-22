@@ -34,6 +34,8 @@ use warnings;
 
 use utf8;
 
+use Carp ();
+
 use MooX (qw( late ));
 
 use CGI ();
@@ -62,6 +64,15 @@ sub render
                 ),
             ),
             $thingy->inner_html(),
+        );
+    }
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::GitHubLink'))
+    {
+        return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
+            CGI::escapeHTML(
+                $thingy->url,
+            ),
+            'GitHub Repo',
         );
     }
     else

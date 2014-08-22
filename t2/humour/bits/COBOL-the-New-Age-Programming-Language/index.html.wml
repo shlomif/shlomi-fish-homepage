@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "Inc/nav_blocks.wml"
 
 #include <utils.wml>
 
@@ -249,3 +250,5 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 </li>
 
 </ul>
+
+<foss_nav_block />

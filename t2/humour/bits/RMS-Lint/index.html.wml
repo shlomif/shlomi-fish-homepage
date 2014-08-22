@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "Introducing RMS-Lint" />
 <latemp_meta_desc "RMS-Lint - a new tool to revolutionise the way people communicate with the famous free software advocate Richard M. Stallman" />
@@ -136,3 +137,5 @@ what a person should work on himself to do. This makes me so angry!”
 <h2 id="license">Copyright and Licence</h2>
 
 <cc_by_sa_british_blurb year="2004" />
+
+<foss_nav_block />

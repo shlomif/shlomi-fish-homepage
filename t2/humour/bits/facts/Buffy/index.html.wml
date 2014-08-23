@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "jqui_tabs_multi_lang.wml"
 #include "stories/facts.wml"
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "Buffy Facts" />
 <latemp_meta_desc "Facts about Buffy Summers from Buffy the Vampire Slayer" />
@@ -161,8 +162,6 @@ Gellar theme.
 </p>
 </li>
 
-
-
 </ul>
 
-
+<buffy_nav_block />

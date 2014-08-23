@@ -90,6 +90,17 @@ sub _tr
 
     our $_selina_mandrake__tr__TEXT = $r->render($_selina_mandrake__tr);
 
+    our $_hhfg__tr =
+        _tr(
+            title => "Human Hacking Field Guide",
+            items => [
+            _l( inner_html => "Front Page", path => "humour/human-hacking/",),
+            _l( inner_html => "Conclusions and Reviews", path => "humour/human-hacking/conclusions/",),
+            _github( url => 'http://github.com/shlomif/Human-Hacking-Field-Guide',),
+            ],
+        );
+    our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
+
     our $_summer_nsa__tr =
         _tr(
             title => "Summerschool at the NSA",
@@ -143,25 +154,7 @@ sub _tr
 </define-tag>
 
 <define-tag _hhfg__tr>
-
-<tr>
-
-<td colspan="2"><b>Human Hacking Field Guide</b></td>
-
-<td>
-
-<ul>
-<lip_curr_a href="humour/human-hacking/">Front Page</lip_curr_a>
-<lip_curr_a href="humour/human-hacking/conclusions/">Conclusions and Review</lip_curr_a>
-
-<_lip_github_repo href="http://github.com/shlomif/Human-Hacking-Field-Guide" />
-
-</ul>
-
-</td>
-
-</tr>
-
+<: print $_hhfg__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _star_trek_wtld__tr>

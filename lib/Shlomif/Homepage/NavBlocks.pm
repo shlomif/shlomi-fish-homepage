@@ -14,6 +14,13 @@ has [qw(
 
 has 'title' => (is => 'ro', isa => 'Str');
 
+sub collect_local_links
+{
+    my ($self) = @_;
+
+    return [$self->path];
+}
+
 package Shlomif::Homepage::NavBlocks::GitHubLink;
 
 use strict;
@@ -27,6 +34,13 @@ has [qw(
     url
 )] => (is => 'ro', isa => 'Str', required => 1);
 
+sub collect_local_links
+{
+    my ($self) = @_;
+
+    return [];
+}
+
 package Shlomif::Homepage::NavBlocks::Tr;
 
 use strict;
@@ -38,6 +52,13 @@ use MooX (qw( late ));
 
 has 'items' => (is => 'ro', isa => 'ArrayRef', required => 1);
 has 'title' => (is => 'ro', isa => "Str", required => 1);
+
+sub collect_local_links
+{
+    my $self = shift;
+
+    return [ map { @{$_->collect_local_links} } @{$self->items}];
+}
 
 1;
 
@@ -119,6 +140,7 @@ sub render
         Carp::confess('unimplemented');
     }
 }
+
 
 1;
 

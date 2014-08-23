@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 4;
+use Test::More tests => 5;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './lib';
@@ -125,6 +125,17 @@ use IO::All;
                 title => "Selina Mandrake - The Slayer",
                 items => \@links,
             },
+        );
+
+        # TEST
+        eq_or_diff
+        (
+            $tr->collect_local_links(),
+            [
+                "humour/Selina-Mandrake/",
+                "humour/Selina-Mandrake/ongoing-text.html",
+                "humour/Selina-Mandrake/cast.html",
+            ],
         );
 
         # TEST

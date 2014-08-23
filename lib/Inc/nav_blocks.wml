@@ -178,6 +178,20 @@ sub _tr
 
     our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
 
+    our $_foss_facts__tr =
+        _tr(
+            title => "“Facts”",
+            items => [
+            _l( inner_html => "Chuck Norris Facts", path => "humour/bits/facts/Chuck-Norris/",),
+            _l( inner_html => "Larry Wall Facts", path => "humour/bits/facts/Larry-Wall/",),
+            _l( inner_html => "“Knuth is not God”", path => "humour/bits/facts/Knuth/",),
+            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/",),
+            _l( inner_html => "XSLT Facts", path => "humour/bits/facts/XSLT/",),
+            ],
+        );
+
+    our $_foss_facts__tr__TEXT = $r->render($_foss_facts__tr);
+
     our $_xkcd_facts__tr =
         _tr(
             title => "“Facts”",
@@ -213,6 +227,10 @@ sub _tr
 
 <define-tag _EmWatson_tech_job__tr>
 <: print $_EmWatson_tech_job__tr__TEXT ; :>
+</define-tag>
+
+<define-tag _foss_facts__tr>
+<: print $_foss_facts__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _hhfg__tr>
@@ -297,22 +315,7 @@ sub _tr
 <_subdiv_tr title="Screenplays" />
 <_hhfg__tr />
 <_subdiv_tr title="Factoids" />
-<tr>
-
-<td colspan="2"><b>“Facts”</b></td>
-
-<td>
-<ul>
-<lip_curr_a href="humour/bits/facts/Chuck-Norris/">Chuck Norris Facts</lip_curr_a>
-<lip_curr_a href="humour/bits/facts/Larry-Wall/">Larry Wall Facts</lip_curr_a>
-<lip_curr_a href="humour/bits/facts/Knuth/">“Knuth is not God”</lip_curr_a>
-<lip_curr_a href="humour/bits/facts/NSA/">NSA Facts</lip_curr_a>
-<lip_curr_a href="humour/bits/facts/XSLT/">XSLT Facts</lip_curr_a>
-</ul>
-</td>
-
-</tr>
-
+<_foss_facts__tr />
 <_subdiv_tr title="Bits" />
 
 <td colspan="2"><b>Ultra-short stories</b></td>

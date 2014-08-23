@@ -68,7 +68,6 @@ sub _tr
 }
 
 :>
-<define-tag _selina_mandrake__tr>
 
 <:
     our $r = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -78,7 +77,7 @@ sub _tr
         }
     );
 
-    print $r->render(
+    our $_selina_mandrake__tr =
         _tr(
             title => "Selina Mandrake - The Slayer",
             items => [
@@ -87,11 +86,13 @@ sub _tr
             _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
             _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
             ],
-        ),
-    );
+        );
 
+    our $_selina_mandrake__tr__TEXT = $r->render($_selina_mandrake__tr);
 :>
 
+<define-tag _selina_mandrake__tr>
+<: print $_selina_mandrake__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _summer_nsa__tr>

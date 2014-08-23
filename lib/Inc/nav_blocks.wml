@@ -135,6 +135,16 @@ sub _tr
         );
 
     our $_muppets_harry_potter__tr__TEXT = $r->render($_muppets_harry_potter__tr);
+
+    our $_EmWatson_tech_job__tr =
+        _tr(
+            title => "EmWatson Tech Interview",
+            items => [
+            _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",),
+            ],
+        );
+
+    our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
 :>
 
 <define-tag _selina_mandrake__tr>
@@ -150,19 +160,7 @@ sub _tr
 </define-tag>
 
 <define-tag _EmWatson_tech_job__tr>
-
-<tr>
-<td colspan="2"><b>EmWatson Tech Interview</b></td>
-<td>
-
-<ul>
-<lip_curr_a href="humour/bits/Emma-Watson-applying-for-a-software-dev-job/">Emma Watson Interviewing for a software developer job</lip_curr_a>
-
-</ul>
-
-</td>
-</tr>
-
+<: print $_EmWatson_tech_job__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _hhfg__tr>

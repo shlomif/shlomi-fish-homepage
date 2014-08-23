@@ -101,6 +101,18 @@ sub _tr
         );
     our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
 
+    our $_star_trek_wtld__tr =
+        _tr(
+            title => "Star Trek: We, the Living Dead",
+            items => [
+            _l( inner_html => "Front Page", path => "humour/Star-Trek/We-the-Living-Dead/",),
+            _l( inner_html => "Ongoing Text", path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
+            _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
+            ],
+        );
+
+    our $_star_trek_wtld__tr__TEXT = $r->render($_star_trek_wtld__tr);
+
     our $_summer_nsa__tr =
         _tr(
             title => "Summerschool at the NSA",
@@ -158,25 +170,7 @@ sub _tr
 </define-tag>
 
 <define-tag _star_trek_wtld__tr>
-
-<tr>
-
-<td colspan="2"><b>Star Trek: We, the Living Dead</b></td>
-
-<td>
-
-<ul>
-<lip_curr_a href="humour/Star-Trek/We-the-Living-Dead/">Front Page</lip_curr_a>
-<lip_curr_a href="humour/Star-Trek/We-the-Living-Dead/ongoing-text.html">Ongoing Text</lip_curr_a>
-
-<_lip_github_repo href="http://github.com/shlomif/Star-Trek--We-the-Living-Dead" />
-
-</ul>
-
-</td>
-
-</tr>
-
+<: print $_star_trek_wtld__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _buffy_few_good__tr>

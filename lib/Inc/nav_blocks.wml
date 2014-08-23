@@ -53,6 +53,11 @@ sub _l
         );
 }
 
+sub _fp
+{
+    return _l(inner_html => "Front Page", @_);
+}
+
 sub _github
 {
     return
@@ -81,7 +86,7 @@ sub _tr
         _tr(
             title => "Buffy: A Few Good Slayers",
             items => [
-            _l( inner_html => "Front Page", path => "humour/Buffy/A-Few-Good-Slayers/",),
+            _fp(path => "humour/Buffy/A-Few-Good-Slayers/",),
             _l( inner_html => "Ongoing Text", path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
             _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
             ],
@@ -93,7 +98,7 @@ sub _tr
         _tr(
             title => "Selina Mandrake - The Slayer",
             items => [
-            _l( inner_html => "Front Page", path => "humour/Selina-Mandrake/",),
+            _fp( path => "humour/Selina-Mandrake/",),
             _l( inner_html => "Ongoing Text", path => "humour/Selina-Mandrake/ongoing-text.html",),
             _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
             _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
@@ -106,7 +111,7 @@ sub _tr
         _tr(
             title => "Human Hacking Field Guide",
             items => [
-            _l( inner_html => "Front Page", path => "humour/human-hacking/",),
+            _fp( path => "humour/human-hacking/",),
             _l( inner_html => "Conclusions and Reviews", path => "humour/human-hacking/conclusions/",),
             _github( url => 'http://github.com/shlomif/Human-Hacking-Field-Guide',),
             ],
@@ -117,7 +122,7 @@ sub _tr
         _tr(
             title => "Star Trek: We, the Living Dead",
             items => [
-            _l( inner_html => "Front Page", path => "humour/Star-Trek/We-the-Living-Dead/",),
+            _fp( path => "humour/Star-Trek/We-the-Living-Dead/",),
             _l( inner_html => "Ongoing Text", path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
             _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
             ],
@@ -129,7 +134,7 @@ sub _tr
         _tr(
             title => "Summerschool at the NSA",
             items => [
-            _l( inner_html => "Front Page", path => "humour/Summerschool-at-the-NSA/",),
+            _fp( path => "humour/Summerschool-at-the-NSA/",),
             _l( inner_html => "Ongoing Text", path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
             _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
             _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
@@ -141,7 +146,7 @@ sub _tr
         _tr(
             title => "The Muppet Show - The Next Incarnation",
             items => [
-            _l( inner_html => "Front Page", path => "humour/Muppets-Show-TNI/Harry-Potter.html",),
+            _fp( path => "humour/Muppets-Show-TNI/Harry-Potter.html",),
             _github( url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',),
             ],
         );

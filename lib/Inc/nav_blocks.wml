@@ -178,6 +178,24 @@ sub _tr
 
     our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
 
+    our $_foss_bits__tr =
+        _tr(
+            title => "Ultra-short stories",
+            items => [
+            _l( inner_html => "GPL Not Compatble with Itself", path => "humour/bits/GPL-is-not-Compatible-with-Itself/",),
+            _l( inner_html => "RMS Lint", path => "humour/bits/RMS-Lint/",),
+            _l( inner_html => "Cracka’s Paradise", path => "humour/bits/Crackas-Paradise/",),
+            _l( inner_html => "“Mastering cat”", path => "humour/bits/Mastering-Cat/",),
+            _l( inner_html => "Programs Everyone Has Written", path => "humour/bits/Programs-Every-Programmer-has-Written/",),
+            _l( inner_html => "Freecell Solver™ Enterprise Edition", path => "humour/bits/Freecell-Solver-Enterprise-Edition/",),
+            _l( inner_html => "COBOL — The New Age Programming Language", path => "humour/bits/COBOL-the-New-Age-Programming-Language/",),
+            _l( inner_html => "Copying Ubuntu Bug #1", path => "humour/bits/Copying-Ubuntu-Bug-No-1/",),
+            _l( inner_html => "It’s not a Fooware - It’s an Operating System", path => "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",),
+            ],
+        );
+
+    our $_foss_bits__tr__TEXT = $r->render($_foss_bits__tr);
+
     our $_foss_facts__tr =
         _tr(
             title => "“Facts”",
@@ -227,6 +245,10 @@ sub _tr
 
 <define-tag _EmWatson_tech_job__tr>
 <: print $_EmWatson_tech_job__tr__TEXT ; :>
+</define-tag>
+
+<define-tag _foss_bits__tr>
+<: print $_foss_bits__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _foss_facts__tr>
@@ -318,21 +340,7 @@ sub _tr
 <_foss_facts__tr />
 <_subdiv_tr title="Bits" />
 
-<td colspan="2"><b>Ultra-short stories</b></td>
-
-<td>
-<ul>
-<lip_curr_a href="humour/bits/GPL-is-not-Compatible-with-Itself/">GPL Not Compatble with Itself</lip_curr_a>
-<lip_curr_a href="humour/bits/RMS-Lint/">RMS Lint</lip_curr_a>
-<lip_curr_a href="humour/bits/Crackas-Paradise/">Cracka’s Paradise</lip_curr_a>
-<lip_curr_a href="humour/bits/Mastering-Cat/">“Mastering cat”</lip_curr_a>
-<lip_curr_a href="humour/bits/Programs-Every-Programmer-has-Written/">Programs Everyone Has Written</lip_curr_a>
-<lip_curr_a href="humour/bits/Freecell-Solver-Enterprise-Edition/">Freecell Solver™ Enterprise Edition</lip_curr_a>
-<lip_curr_a href="humour/bits/COBOL-the-New-Age-Programming-Language/">COBOL — The New Age Programming Language</lip_curr_a>
-<lip_curr_a href="humour/bits/Copying-Ubuntu-Bug-No-1/">Copying Ubuntu Bug #1</lip_curr_a>
-<lip_curr_a href="humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/">It’s not a Fooware - It’s an Operating System</lip_curr_a>
-</ul>
-</td>
+<_foss_bits__tr />
 
 </table>
 

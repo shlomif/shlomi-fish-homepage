@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './lib';
@@ -57,6 +57,22 @@ use IO::All;
             $r->render($link),
             q{<li><p><a href="http://github.com/shlomif/Selina-Mandrake">GitHub Repo</a></p></li>},
             "Render GitHub Link.",
+        );
+    }
+
+    {
+        my $link = Shlomif::Homepage::NavBlocks::LocalLink->new(
+            {
+                inner_html => "The Eternal Jew",
+                path => "philosophy/the-eternal-jew/",
+            },
+        );
+
+        # TEST
+        eq_or_diff (
+            $r->render($link),
+            q{<li><p><strong class="current">The Eternal Jew</strong></p></li>},
+            "Render current link.",
         );
     }
 }

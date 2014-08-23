@@ -52,19 +52,29 @@ sub render
 
     if ($thingy->isa('Shlomif::Homepage::NavBlocks::LocalLink'))
     {
-        return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
-            CGI::escapeHTML(
-                $self->nav_menu->get_cross_host_rel_url_ref(
-                    {
-                        host => $self->host,
-                        host_url => $thingy->path,
-                        url_type => 'rel',
-                        url_is_abs => 0,
-                    },
+        if ($thingy->path eq $self->nav_menu->path_info)
+        {
+            return sprintf(
+                q#<li><p><strong class="current">%s</strong></p></li>#,
+                $thingy->inner_html(),
+            );
+        }
+        else
+        {
+            return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
+                CGI::escapeHTML(
+                    $self->nav_menu->get_cross_host_rel_url_ref(
+                        {
+                            host => $self->host,
+                            host_url => $thingy->path,
+                            url_type => 'rel',
+                            url_is_abs => 0,
+                        },
+                    ),
                 ),
-            ),
-            $thingy->inner_html(),
-        );
+                $thingy->inner_html(),
+            );
+        }
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::GitHubLink'))
     {

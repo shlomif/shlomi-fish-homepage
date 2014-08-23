@@ -39,23 +39,58 @@
 
 </define-tag>
 
+<:
+
+use Shlomif::Homepage::NavBlocks;
+
+sub _l
+{
+    return
+        Shlomif::Homepage::NavBlocks::LocalLink->new(
+            {
+            @_
+            },
+        );
+}
+
+sub _github
+{
+    return
+        Shlomif::Homepage::NavBlocks::GitHubLink->new(
+            { @_ }
+        );
+}
+sub _tr
+{
+    return Shlomif::Homepage::NavBlocks::Tr->new(
+        { @_ }
+    );
+}
+
+:>
 <define-tag _selina_mandrake__tr>
 
-<tr>
-<td colspan="2"><b>Selina Mandrake - The Slayer</b></td>
-<td>
+<:
+    our $r = Shlomif::Homepage::NavBlocks::Renderer->new(
+        {
+            host => 't2',
+            nav_menu => $::nav_bar,
+        }
+    );
 
-<ul>
-<lip_curr_a href="humour/Selina-Mandrake/">Front Page</lip_curr_a>
-<lip_curr_a href="humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</lip_curr_a>
-<lip_curr_a href="humour/Selina-Mandrake/cast.html">Proposed Cast</lip_curr_a>
+    print $r->render(
+        _tr(
+            title => "Selina Mandrake - The Slayer",
+            items => [
+            _l( inner_html => "Front Page", path => "humour/Selina-Mandrake/",),
+            _l( inner_html => "Ongoing Text", path => "humour/Selina-Mandrake/ongoing-text.html",),
+            _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
+            _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
+            ],
+        ),
+    );
 
-<_lip_github_repo href="http://github.com/shlomif/Selina-Mandrake" />
-
-</ul>
-
-</td>
-</tr>
+:>
 
 </define-tag>
 

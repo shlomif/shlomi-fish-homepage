@@ -177,6 +177,18 @@ sub _tr
         );
 
     our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
+
+    our $_xkcd_facts__tr =
+        _tr(
+            title => "“Facts”",
+            items => [
+            _l( inner_html => "Summer Glau Facts", path => "humour/bits/facts/Summer-Glau/",),
+            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/"),
+            ],
+        );
+
+    our $_xkcd_facts__tr__TEXT = $r->render($_xkcd_facts__tr);
+
 :>
 
 <define-tag _selina_mandrake__tr>
@@ -189,6 +201,10 @@ sub _tr
 
 <define-tag _muppets_harry_potter__tr>
 <: print $_muppets_harry_potter__tr__TEXT ; :>
+</define-tag>
+
+<define-tag _xkcd_facts__tr>
+<: print $_xkcd_facts__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _EmWatson_facts__tr>
@@ -263,18 +279,7 @@ sub _tr
 
 <_subdiv_tr title="Factoids" />
 
-<tr>
-
-<td colspan="2"><b>“Facts”</b></td>
-
-<td>
-<ul>
-<lip_curr_a href="humour/bits/facts/Summer-Glau/">Summer Glau Facts</lip_curr_a>
-<lip_curr_a href="humour/bits/facts/NSA/">NSA Facts</lip_curr_a>
-</ul>
-</td>
-
-</tr>
+<_xkcd_facts__tr />
 
 </table>
 

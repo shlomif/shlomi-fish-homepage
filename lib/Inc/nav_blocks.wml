@@ -77,6 +77,18 @@ sub _tr
         }
     );
 
+    our $_buffy_few_good__tr =
+        _tr(
+            title => "Buffy: A Few Good Slayers",
+            items => [
+            _l( inner_html => "Front Page", path => "humour/Buffy/A-Few-Good-Slayers/",),
+            _l( inner_html => "Ongoing Text", path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
+            _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
+            ],
+        );
+
+    our $_buffy_few_good__tr__TEXT = $r->render($_buffy_few_good__tr);
+
     our $_selina_mandrake__tr =
         _tr(
             title => "Selina Mandrake - The Slayer",
@@ -172,26 +184,7 @@ sub _tr
 </define-tag>
 
 <define-tag _buffy_few_good__tr>
-
-<tr>
-
-<td colspan="2"><b>Buffy: A Few Good Slayers</b></td>
-
-<td>
-
-<ul>
-
-<lip_curr_a href="humour/Buffy/A-Few-Good-Slayers/">Front Page</lip_curr_a>
-
-<lip_curr_a href="humour/Buffy/A-Few-Good-Slayers/ongoing-text.html">Ongoing Text</lip_curr_a>
-
-<_lip_github_repo href="http://github.com/shlomif/Buffy-a-Few-Good-Slayers" />
-
-</ul>
-
-</td>
-</tr>
-
+<: print $_buffy_few_good__tr__TEXT ; :>
 </define-tag>
 
 <define-tag star_trek_nav_block>

@@ -58,6 +58,11 @@ sub _fp
     return _l(inner_html => "Front Page", @_);
 }
 
+sub _ontext
+{
+    return _l(inner_html => "Ongoing Text", @_);
+}
+
 sub _github
 {
     return
@@ -87,7 +92,7 @@ sub _tr
             title => "Buffy: A Few Good Slayers",
             items => [
             _fp(path => "humour/Buffy/A-Few-Good-Slayers/",),
-            _l( inner_html => "Ongoing Text", path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
+            _ontext( path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
             _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
             ],
         );
@@ -99,7 +104,7 @@ sub _tr
             title => "Selina Mandrake - The Slayer",
             items => [
             _fp( path => "humour/Selina-Mandrake/",),
-            _l( inner_html => "Ongoing Text", path => "humour/Selina-Mandrake/ongoing-text.html",),
+            _ontext( path => "humour/Selina-Mandrake/ongoing-text.html",),
             _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
             _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
             ],
@@ -123,7 +128,7 @@ sub _tr
             title => "Star Trek: We, the Living Dead",
             items => [
             _fp( path => "humour/Star-Trek/We-the-Living-Dead/",),
-            _l( inner_html => "Ongoing Text", path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
+            _ontext( path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
             _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
             ],
         );
@@ -135,7 +140,7 @@ sub _tr
             title => "Summerschool at the NSA",
             items => [
             _fp( path => "humour/Summerschool-at-the-NSA/",),
-            _l( inner_html => "Ongoing Text", path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
+            _ontext( path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
             _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
             _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
             ],

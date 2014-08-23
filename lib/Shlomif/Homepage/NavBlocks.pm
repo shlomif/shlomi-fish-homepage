@@ -27,6 +27,20 @@ has [qw(
     url
 )] => (is => 'ro', isa => 'Str', required => 1);
 
+package Shlomif::Homepage::NavBlocks::Tr;
+
+use strict;
+use warnings;
+
+use utf8;
+
+use MooX (qw( late ));
+
+has 'items' => (is => 'ro', isa => 'ArrayRef', required => 1);
+has 'title' => (is => 'ro', isa => "Str", required => 1);
+
+1;
+
 package Shlomif::Homepage::NavBlocks::Renderer;
 
 use strict;
@@ -50,9 +64,24 @@ sub render
 {
     my ($self, $thingy) = @_;
 
-    if ($thingy->isa('Shlomif::Homepage::NavBlocks::LocalLink'))
+    if ($thingy->isa('Shlomif::Homepage::NavBlocks::Tr'))
     {
-        if ($thingy->path eq $self->nav_menu->path_info)
+        return join'',map { "$_\n" }
+            "<tr>",
+            sprintf(qq{<td colspan="2"><b>%s</b></td>}, $thingy->title),
+            "<td>",
+            "<ul>",
+            (map { $self->render($_) } @{$thingy->items}),
+            "</ul>",
+            "</td>",
+            "</tr>",
+            ;
+    }
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::LocalLink'))
+    {
+        my $normalize = sub {return shift =~ s#/index\.html\z#/#gr};
+
+        if ($normalize->($thingy->path) eq $normalize->($self->nav_menu->path_info))
         {
             return sprintf(
                 q#<li><p><strong class="current">%s</strong></p></li>#,
@@ -78,7 +107,7 @@ sub render
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::GitHubLink'))
     {
-        return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
+        return sprintf(q#<li><p><a class="ext github" href="%s">%s</a></p></li>#,
             CGI::escapeHTML(
                 $thingy->url,
             ),
@@ -92,5 +121,4 @@ sub render
 }
 
 1;
-
 

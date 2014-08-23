@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "stories/facts.wml"
 #include "jqui_tabs_multi_lang.wml"
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "XSLT Facts" />
 <latemp_meta_desc "Facts about XSLT, the most Evil thing in existence." />
@@ -227,3 +228,4 @@ refers to several resources.
 
 </ul>
 
+<foss_nav_block />

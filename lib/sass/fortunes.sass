@@ -35,12 +35,16 @@
         $fort_border_color: black
         $fortune_radius: 5px
         $fortune_border: 7px solid
+        $fortune_radius_hover: $fortune_radius
 
         =fortune_style
             padding: 5px
             height: 25px
             font-size: 20px
             font-family: Arial, sans-serif
+
+        =fortune_radius_hover
+            border-top-right-radius: $fortune_radius_hover
 
         .fortune
             border: $fortune_color 1pt solid
@@ -54,10 +58,10 @@
 
             h3
                 // background-color: $fortune_color
-                border-radius-top-left: $fortune_radius
-                border-radius-top-right: $fortune_radius
-                border-radius-bottom-left: 0
-                border-radius-bottom-right: 0
+                border-top-left-radius: $fortune_radius
+                border-top-right-radius: $fortune_radius
+                border-bottom-left-radius: 0
+                border-bottom-right-radius: 0
                 border-bottom: $fort_border_color $fortune_border
                 color: #000
                 margin-top: 0
@@ -68,8 +72,8 @@
                 margin: 0
 
                 > a
-                    background-color: white
-                    border-radius-top-left: $fortune_radius
+                    +fortune_radius_hover
+                    border-left: black solid 3px
                     position: absolute
                     top: 0
                     right: 0
@@ -77,12 +81,13 @@
                     margin-bottom: 0
                     border-bottom: $fort_border_color $fortune_border
 
-                    color: $fortune_color
+                    color: #48F
                     text-decoration: none
                     +fortune_style
 
                     &:hover
                         background-color: #eeb
+                        +fortune_radius_hover
 
                     /* float: right
 

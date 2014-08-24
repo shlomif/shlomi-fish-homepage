@@ -187,6 +187,12 @@ my @documents =
         base => "park-lisp-informal-spec",
     },
     {
+        id => "putting-all-cards-on-the-table-2013",
+        path => "philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5",
+        base => "putting-all-cards-on-the-table-2013",
+        db_ver => 5,
+    },
+    {
         id => "Spark-Pre-Birth-of-a-Modern-Lisp",
         path => "open-source/projects/Spark/mission",
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",

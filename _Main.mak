@@ -717,7 +717,14 @@ $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
 	touch $@
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(T2_FORTUNES_ALL__HTML)
+FORTS_EPUB_COVER = lib/fortunes/xhtmls/shlomif-fortunes.jpg
+FORTS_EPUB_SVG   = lib/fortunes/xhtmls/shlomif-fortunes.svg
+
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(T2_FORTUNES_ALL__HTML) $(FORTS_EPUB_COVER)
+
+$(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
+	inkscape --export-width=600 --export-png="$@" $< && \
+	optipng "$@"
 
 $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 	cp -f $< $@

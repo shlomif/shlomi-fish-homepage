@@ -46,6 +46,7 @@ use Data::Dumper;
 use List::Util qw(max);
 
 use YAML::XS (qw(LoadFile DumpFile));
+use JSON::MaybeXS (qw(encode_json));
 
 use IO::All;
 
@@ -262,6 +263,62 @@ sub print_all_fortunes_html_wmls
             },
         );
     }
+}
+
+sub write_epub_json
+{
+    my ($class, $fn) = @_;
+
+    io()->file($fn)->print
+    (
+        encode_json
+        (
+            +{
+                filename => $fn,
+                title => "Quotes / Fortunes Cookies by Shlomi Fish",
+                authors =>
+                [
+                    {
+                        name => "Shlomi Fish",
+                        sort => "Fish, Shlomi",
+                    }
+                ],
+                cover => "shlomif-fortunes.jpg",
+                rights => "CC-by-sa",
+                publisher => 'http://www.shlomifish.org/',
+                language => 'en',
+                subjects => ['Humor',],
+                identifier =>
+                {
+                    scheme => 'URL',
+                    value => q#http://www.shlomifish.org/humour/fortunes/#,
+                },
+                contents =>
+                [
+                    {
+                        type => 'toc',
+                        source => 'toc.html',
+                    },
+                    (
+                        map
+                        {
+                            +{ type => 'text', source => ($_->id().".xhtml"), }
+                        }
+                        @{$class->get_fortune_records()},
+                    ),
+                ],
+                toc =>
+                {
+                    depth => 2,
+                    parse => ['text'],
+                    generate =>
+                    {
+                        title => 'Index',
+                    },
+                },
+            }
+        )
+    );
 }
 
 1;

@@ -717,8 +717,20 @@ $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
 	touch $@
 
-FORTS_EPUB_COVER = lib/fortunes/xhtmls/shlomif-fortunes.jpg
-FORTS_EPUB_SVG   = lib/fortunes/xhtmls/shlomif-fortunes.svg
+FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
+FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
+
+FORTS_EPUB_BASENAME = fortunes-shlomif.epub
+FORTS_EPUB_DEST = $(T2_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
+FORTS_EPUB_SRC = $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
+
+$(FORTS_EPUB_SRC): fortunes-target
+	cd $(FORTUNES_XHTMLS_DIR) && ebookmaker --output $(FORTS_EPUB_BASENAME) book.json
+
+$(FORTS_EPUB_DEST): $(FORTS_EPUB_SRC)
+	cp -f $< $@
+
+fortunes-epub: $(FORTS_EPUB_DEST)
 
 fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(T2_FORTUNES_ALL__HTML) $(FORTS_EPUB_COVER)
 

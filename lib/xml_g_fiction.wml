@@ -20,7 +20,7 @@
 <restore base desc />
 </define-tag>
 
-<define-tag link_to_epub>
+<define-tag link_to_epub_only>
 <preserve basename />
 <set-var %attributes />
 <li>
@@ -28,6 +28,13 @@
 <a href="<get-var basename />.epub">EPUB eBook</a> - (free download).
 </p>
 </li>
+<restore basename />
+</define-tag>
+
+<define-tag link_to_epub>
+<preserve basename />
+<set-var %attributes />
+<link_to_epub_only basename="<get-var basename />" />
 <li>
 <p>
 <a href="<get-var basename />.raw.html">Raw HTML</a> - (view online without

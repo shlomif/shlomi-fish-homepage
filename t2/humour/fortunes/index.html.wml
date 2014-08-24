@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "toc_div.wml"
+#include "xml_g_fiction.wml"
 
 <latemp_subject "Fortune Cookie Files" />
 <latemp_meta_desc "Fortune Cookie Files" />
@@ -42,6 +43,8 @@ href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikip
 <h2 id="view">View and Download</h2>
 
 <ul>
+
+<link_to_epub_only basename="fortunes-shlomif" />
 
 <li>
 <p>

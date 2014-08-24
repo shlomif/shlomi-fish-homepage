@@ -390,7 +390,7 @@ sub _calc_screenplay_doc_makefile_lines
         );
 
         push @ret, <<"EOF";
-\$($epub_dest_varname): \$($src_varname)
+\$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
 \tcd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" make epub
 \tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
 EOF

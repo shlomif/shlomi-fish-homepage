@@ -179,11 +179,12 @@ sub _tr
 
     our $_EmWatson_facts__tr__TEXT = $r->render($_EmWatson_facts__tr);
 
+    my $EmWatson_tech_interview = _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",);
     our $_EmWatson_tech_job__tr =
         _tr(
             title => "EmWatson Tech Interview",
             items => [
-            _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",),
+            $EmWatson_tech_interview,
             ],
         );
 
@@ -202,6 +203,7 @@ sub _tr
             _l( inner_html => "COBOL — The New Age Programming Language", path => "humour/bits/COBOL-the-New-Age-Programming-Language/",),
             _l( inner_html => "Copying Ubuntu Bug #1", path => "humour/bits/Copying-Ubuntu-Bug-No-1/",),
             _l( inner_html => "It’s not a Fooware - It’s an Operating System", path => "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",),
+            $EmWatson_tech_interview,
             ],
         );
 

@@ -198,6 +198,12 @@ my @documents =
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",
     },
     {
+        id => "SummerNSA-2014-09-call-for-action",
+        path => "philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5",
+        base =>  "SummerNSA-2014-09-call-for-action",
+        db_ver => 5,
+    },
+    {
         id => "human-hacking-field-guide",
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide",

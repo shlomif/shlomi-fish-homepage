@@ -21,7 +21,7 @@ sub collect_local_links
     return [$self->path];
 }
 
-package Shlomif::Homepage::NavBlocks::GitHubLink;
+package Shlomif::Homepage::NavBlocks::ExternalLink;
 
 use strict;
 use warnings;
@@ -40,6 +40,18 @@ sub collect_local_links
 
     return [];
 }
+
+package Shlomif::Homepage::NavBlocks::GitHubLink;
+
+use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::ExternalLink');
+
+package Shlomif::Homepage::NavBlocks::FacebookLink;
+
+use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::ExternalLink');
 
 package Shlomif::Homepage::NavBlocks::Tr;
 
@@ -133,6 +145,15 @@ sub render
                 $thingy->url,
             ),
             'GitHub Repo',
+        );
+    }
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::FacebookLink'))
+    {
+        return sprintf(q#<li><p><a class="ext facebook" href="%s">%s</a></p></li>#,
+            CGI::escapeHTML(
+                $thingy->url,
+            ),
+            'Facebook Page',
         );
     }
     else

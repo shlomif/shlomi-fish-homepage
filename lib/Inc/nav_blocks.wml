@@ -70,6 +70,15 @@ sub _github
             { @_ }
         );
 }
+
+sub _facebook
+{
+    return
+        Shlomif::Homepage::NavBlocks::FacebookLink->new(
+            { @_ }
+        );
+}
+
 sub _tr
 {
     return Shlomif::Homepage::NavBlocks::Tr->new(
@@ -154,6 +163,7 @@ sub _tr
             _ontext( path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
             _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
             _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
+            _facebook( url => 'http://www.facebook.com/SummerNSA',),
             ],
         );
     our $_summer_nsa__tr__TEXT = $r->render($_summer_nsa__tr);

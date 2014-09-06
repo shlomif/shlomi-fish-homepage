@@ -473,6 +473,20 @@ my %table_blocks =
             ],
         },
     ),
+    'xkcd' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'xkcd_nav_block',
+            tr_s =>
+            [
+                _master_tr(title => q{Summer Glau/xkcd Fanfiction},),
+                _subdiv_tr(title => q{Screenplays},),
+                _get_tr('summer_nsa'),
+                _subdiv_tr(title => q{Factoids},),
+                _get_tr('xkcd_facts'),
+            ],
+        },
+    ),
 );
 
 sub _get_nav_block

@@ -157,26 +157,7 @@ EOF
 </define-tag>
 
 <define-tag harry_potter_nav_block>
-
-<div class="topical_nav_block" id="harry_potter_nav_block">
-
-<table>
-
-<_master_tr title="Harry Potter/Emma Watson Fanfiction" />
-<_subdiv_tr title="Screenplays" />
-<_selina_mandrake__tr />
-<_buffy_few_good__tr />
-<_muppets_harry_potter__tr />
-<_EmWatson_tech_job__tr />
-
-<_subdiv_tr title="Factoids" />
-
-<_EmWatson_facts__tr />
-
-</table>
-
-</div>
-
+<: _utf8_print _render_nav_block('harry_potter'); :>
 </define-tag>
 
 <define-tag xkcd_nav_block>

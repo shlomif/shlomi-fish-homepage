@@ -7,7 +7,6 @@ use Shlomif::Homepage::NavBlocks (qw(
     _github
     _l
     _ontext
-    _tr
 ));
 
     our $r = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -34,8 +33,6 @@ use Shlomif::Homepage::NavBlocks (qw(
     our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
 
     our $_star_trek_wtld__tr = _get_tr('star_trek_wtld');
-        ;
-
     our $_star_trek_wtld__tr__TEXT = $r->render($_star_trek_wtld__tr);
 
     our $_summer_nsa__tr = _get_tr('summer_nsa');
@@ -54,29 +51,10 @@ use Shlomif::Homepage::NavBlocks (qw(
     our $_foss_bits__tr = _get_tr('foss_bits');
     our $_foss_bits__tr__TEXT = $r->render($_foss_bits__tr);
 
-    our $_foss_facts__tr =
-        _tr(
-            title => "“Facts”",
-            items => [
-            _l( inner_html => "Chuck Norris Facts", path => "humour/bits/facts/Chuck-Norris/",),
-            _l( inner_html => "Larry Wall Facts", path => "humour/bits/facts/Larry-Wall/",),
-            _l( inner_html => "“Knuth is not God”", path => "humour/bits/facts/Knuth/",),
-            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/",),
-            _l( inner_html => "XSLT Facts", path => "humour/bits/facts/XSLT/",),
-            ],
-        );
-
+    our $_foss_facts__tr = _get_tr('foss_facts');
     our $_foss_facts__tr__TEXT = $r->render($_foss_facts__tr);
 
-    our $_xkcd_facts__tr =
-        _tr(
-            title => "“Facts”",
-            items => [
-            _l( inner_html => "Summer Glau Facts", path => "humour/bits/facts/Summer-Glau/",),
-            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/"),
-            ],
-        );
-
+    our $_xkcd_facts__tr = _get_tr('xkcd_facts');
     our $_xkcd_facts__tr__TEXT = $r->render($_xkcd_facts__tr);
 
 :>

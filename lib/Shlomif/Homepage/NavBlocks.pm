@@ -213,15 +213,19 @@ package Shlomif::Homepage::NavBlocks;
 use strict;
 use warnings;
 
+use utf8;
+
 use parent ('Exporter');
 
 our @EXPORT_OK = (qw(
     _facebook
     _fp
+    _get_tr
     _github
     _l
     _ontext
     _tr
+    $r
 ));
 
 sub _l
@@ -265,6 +269,33 @@ sub _tr
     return Shlomif::Homepage::NavBlocks::Tr->new(
         { @_ }
     );
+}
+
+my %tr_s =
+(
+    'buffy_facts' =>
+    _tr(
+        title => "“Facts”",
+        items => [
+            _l( inner_html => "Buffy Facts", path => "humour/bits/facts/Buffy/",),
+        ],
+    ),
+    'buffy_few_good' =>
+    _tr(
+        title => "Buffy: A Few Good Slayers",
+        items => [
+            _fp(path => "humour/Buffy/A-Few-Good-Slayers/",),
+            _ontext( path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
+            _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
+        ],
+    ),
+
+);
+
+sub _get_tr
+{
+    my ($id) = @_;
+    return ($tr_s{$id} // do { Carp::confess "Unknown ID $id." });
 }
 
 1;

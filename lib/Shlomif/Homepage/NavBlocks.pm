@@ -289,7 +289,34 @@ my %tr_s =
             _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
         ],
     ),
-
+    'hhfg' =>
+    _tr(
+        title => "Human Hacking Field Guide",
+        items => [
+            _fp( path => "humour/human-hacking/",),
+            _l( inner_html => "Conclusions and Reviews", path => "humour/human-hacking/conclusions/",),
+            _github( url => 'http://github.com/shlomif/Human-Hacking-Field-Guide',),
+        ],
+    ),
+    'selina_mandrake' =>
+    _tr(
+        title => "Selina Mandrake - The Slayer",
+        items => [
+            _fp( path => "humour/Selina-Mandrake/",),
+            _ontext( path => "humour/Selina-Mandrake/ongoing-text.html",),
+            _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
+            _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
+        ],
+    ),
+    'star_trek_wtld' =>
+    _tr(
+        title => "Star Trek: We, the Living Dead",
+        items => [
+            _fp( path => "humour/Star-Trek/We-the-Living-Dead/",),
+            _ontext( path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
+            _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
+        ],
+    ),
 );
 
 sub _get_tr

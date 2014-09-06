@@ -110,6 +110,27 @@ extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
 
 has 'css_class' => (is => 'ro', isa => 'Str', default => 'main_title');
 
+package Shlomif::Homepage::NavBlocks::TableBlock;
+
+use strict;
+use warnings;
+
+use utf8;
+
+use MooX (qw( late ));
+
+has 'tr_s' => (is => 'ro', isa => 'ArrayRef', required => 1);
+has 'id' => (is => 'ro', isa => "Str", required => 1);
+
+sub collect_local_links
+{
+    my $self = shift;
+
+    return [ map { @{$_->collect_local_links} } @{$self->tr_s}];
+}
+
+1;
+
 package Shlomif::Homepage::NavBlocks::Renderer;
 
 use strict;
@@ -137,7 +158,7 @@ sub render
 
     if ($thingy->isa('Shlomif::Homepage::NavBlocks::Tr'))
     {
-        return join'',map { "$_\n" }
+        return join '',map { "$_\n" }
             "<tr>",
             sprintf(qq{<td colspan="2"><b>%s</b></td>}, $thingy->title),
             "<td>",
@@ -146,6 +167,16 @@ sub render
             "</ul>",
             "</td>",
             "</tr>",
+            ;
+    }
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::TableBlock'))
+    {
+        return join '',map { "$_\n" }
+            sprintf(q{<div class="topical_nav_block" id="%s">}, $thingy->id),
+            "<table>",
+            (map { $self->render($_); } @{$thingy->tr_s}),
+            "</table>",
+            "</div>",
             ;
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Title_Tr'))
@@ -220,6 +251,7 @@ use parent ('Exporter');
 our @EXPORT_OK = (qw(
     _facebook
     _fp
+    _get_nav_block
     _get_tr
     _github
     _l
@@ -393,6 +425,38 @@ sub _get_tr
 {
     my ($id) = @_;
     return ($tr_s{$id} // do { Carp::confess "Unknown ID $id." });
+}
+
+my %table_blocks =
+(
+    'star_trek' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'star_trek_nav_block',
+            tr_s =>
+            [
+                Shlomif::Homepage::NavBlocks::Master_Tr->new(
+                    {
+                        title => q{Star Trek Fanfiction},
+                    },
+                ),
+                Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
+                    {
+                        title => q{Screenplays},
+                    },
+                ),
+                _get_tr('star_trek_wtld'),
+                _get_tr('selina_mandrake'),
+            ],
+        },
+    ),
+);
+
+sub _get_nav_block
+{
+    my ($id) = @_;
+
+    return ($table_blocks{$id} // do { Carp::confess "Unknown ID $id." });
 }
 
 1;

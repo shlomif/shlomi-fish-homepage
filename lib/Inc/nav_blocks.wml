@@ -38,6 +38,16 @@ use Shlomif::Homepage::NavBlocks (qw(
 
 :>
 
+<:
+    sub _utf8_print
+    {
+        my @text = @_;
+        _wrap_as_utf8 (sub {
+            print @text;
+        });
+    }
+:>
+
 <define-tag _master_tr>
 
 <preserve title />
@@ -49,13 +59,6 @@ use Shlomif::Homepage::NavBlocks (qw(
 EOF
     chomp($_title);
 
-    sub _utf8_print
-    {
-        my @text = @_;
-        _wrap_as_utf8 (sub {
-            print @text;
-        });
-    }
 
     _utf8_print $r->render(
         Shlomif::Homepage::NavBlocks::Master_Tr->new(

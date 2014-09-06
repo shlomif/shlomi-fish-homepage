@@ -25,39 +25,16 @@ use Shlomif::Homepage::NavBlocks (qw(
 
     our $_buffy_few_good__tr__TEXT = $r->render($_buffy_few_good__tr);
 
-    our $_selina_mandrake__tr =
-        _tr(
-            title => "Selina Mandrake - The Slayer",
-            items => [
-            _fp( path => "humour/Selina-Mandrake/",),
-            _ontext( path => "humour/Selina-Mandrake/ongoing-text.html",),
-            _l( inner_html => "Proposed Cast", path => "humour/Selina-Mandrake/cast.html",),
-            _github( url => 'http://github.com/shlomif/Selina-Mandrake',),
-            ],
-        );
+    our $_selina_mandrake__tr = _get_tr('selina_mandrake');
 
     our $_selina_mandrake__tr__TEXT = $r->render($_selina_mandrake__tr);
 
-    our $_hhfg__tr =
-        _tr(
-            title => "Human Hacking Field Guide",
-            items => [
-            _fp( path => "humour/human-hacking/",),
-            _l( inner_html => "Conclusions and Reviews", path => "humour/human-hacking/conclusions/",),
-            _github( url => 'http://github.com/shlomif/Human-Hacking-Field-Guide',),
-            ],
-        );
+    our $_hhfg__tr = _get_tr('hhfg');
+
     our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
 
-    our $_star_trek_wtld__tr =
-        _tr(
-            title => "Star Trek: We, the Living Dead",
-            items => [
-            _fp( path => "humour/Star-Trek/We-the-Living-Dead/",),
-            _ontext( path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
-            _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
-            ],
-        );
+    our $_star_trek_wtld__tr = _get_tr('star_trek_wtld');
+        ;
 
     our $_star_trek_wtld__tr__TEXT = $r->render($_star_trek_wtld__tr);
 

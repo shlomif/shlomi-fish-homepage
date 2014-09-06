@@ -443,6 +443,23 @@ sub _subdiv_tr
 
 my %table_blocks =
 (
+    'buffy' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'buffy_nav_block',
+            tr_s =>
+            [
+                _master_tr(title => q{Buffy Fanfiction},),
+                _subdiv_tr(title => q{Screenplays},),
+                _get_tr('star_trek_wtld'),
+                _get_tr('selina_mandrake'),
+                _get_tr('summer_nsa'),
+                _get_tr('buffy_few_good'),
+                _subdiv_tr(title => q{Factoids},),
+                _get_tr('buffy_facts'),
+            ],
+        },
+    ),
     'harry_potter' =>
     Shlomif::Homepage::NavBlocks::TableBlock->new(
         {

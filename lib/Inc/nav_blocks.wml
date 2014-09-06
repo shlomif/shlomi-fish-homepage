@@ -3,6 +3,7 @@
 use Shlomif::Homepage::NavBlocks (qw(
     _facebook
     _fp
+    _get_tr
     _github
     _l
     _ontext
@@ -16,26 +17,11 @@ use Shlomif::Homepage::NavBlocks (qw(
         }
     );
 
-    our $_buffy_facts__tr =
-        _tr(
-            title => "“Facts”",
-            items => [
-            _l( inner_html => "Buffy Facts", path => "humour/bits/facts/Buffy/",),
-            ],
-        );
+    our $_buffy_facts__tr = _get_tr('buffy_facts');
 
     our $_buffy_facts__tr__TEXT = $r->render($_buffy_facts__tr);
 
-
-    our $_buffy_few_good__tr =
-        _tr(
-            title => "Buffy: A Few Good Slayers",
-            items => [
-            _fp(path => "humour/Buffy/A-Few-Good-Slayers/",),
-            _ontext( path => "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",),
-            _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
-            ],
-        );
+    our $_buffy_few_good__tr = _get_tr('buffy_few_good');
 
     our $_buffy_few_good__tr__TEXT = $r->render($_buffy_few_good__tr);
 
@@ -177,7 +163,15 @@ use Shlomif::Homepage::NavBlocks (qw(
 EOF
     chomp($_title);
 
-    print $r->render(
+    sub _utf8_print
+    {
+        my @text = @_;
+        _wrap_as_utf8 (sub {
+            print @text;
+        });
+    }
+
+    _utf8_print $r->render(
         Shlomif::Homepage::NavBlocks::Master_Tr->new(
             {
                 title => $_title,
@@ -201,7 +195,7 @@ EOF
 EOF
     chomp($_title);
 
-    print $r->render(
+    _utf8_print $r->render(
         Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
             {
                 title => $_title,
@@ -215,50 +209,50 @@ EOF
 </define-tag>
 
 <define-tag _selina_mandrake__tr>
-<: print $_selina_mandrake__tr__TEXT ; :>
+<: _utf8_print $_selina_mandrake__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _summer_nsa__tr>
-<: print $_summer_nsa__tr__TEXT ; :>
+<: _utf8_print $_summer_nsa__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _muppets_harry_potter__tr>
-<: print $_muppets_harry_potter__tr__TEXT ; :>
+<: _utf8_print $_muppets_harry_potter__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _xkcd_facts__tr>
-<: print $_xkcd_facts__tr__TEXT ; :>
+<: _utf8_print $_xkcd_facts__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _EmWatson_facts__tr>
-<: print $_EmWatson_facts__tr__TEXT ; :>
+<: _utf8_print $_EmWatson_facts__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _EmWatson_tech_job__tr>
-<: print $_EmWatson_tech_job__tr__TEXT ; :>
+<: _utf8_print $_EmWatson_tech_job__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _foss_bits__tr>
-<: print $_foss_bits__tr__TEXT ; :>
+<: _utf8_print $_foss_bits__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _foss_facts__tr>
-<: print $_foss_facts__tr__TEXT ; :>
+<: _utf8_print $_foss_facts__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _hhfg__tr>
-<: print $_hhfg__tr__TEXT ; :>
+<: _utf8_print $_hhfg__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _star_trek_wtld__tr>
-<: print $_star_trek_wtld__tr__TEXT ; :>
+<: _utf8_print $_star_trek_wtld__tr__TEXT ; :>
 </define-tag>
 
 <define-tag _buffy_facts__tr>
-<: print $_buffy_facts__tr__TEXT ; :>
+<: _utf8_print $_buffy_facts__tr__TEXT ; :>
 </define-tag>
 <define-tag _buffy_few_good__tr>
-<: print $_buffy_few_good__tr__TEXT ; :>
+<: _utf8_print $_buffy_few_good__tr__TEXT ; :>
 </define-tag>
 
 <define-tag star_trek_nav_block>

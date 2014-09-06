@@ -165,24 +165,7 @@ EOF
 </define-tag>
 
 <define-tag foss_nav_block>
-
-<div class="topical_nav_block" id="foss_nav_block">
-
-<table>
-
-<_master_tr title="Open Source/Perl/etc. Fanfiction" />
-<_subdiv_tr title="Screenplays" />
-<_hhfg__tr />
-<_subdiv_tr title="Factoids" />
-<_foss_facts__tr />
-<_subdiv_tr title="Bits" />
-
-<_foss_bits__tr />
-
-</table>
-
-</div>
-
+<: _utf8_print _render_nav_block('foss'); :>
 </define-tag>
 
 <define-tag buffy_nav_block>

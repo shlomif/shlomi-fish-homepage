@@ -4,7 +4,7 @@ use Shlomif::Homepage::NavBlocks (qw(
     _get_nav_block
 ));
 
-    our $r = Shlomif::Homepage::NavBlocks::Renderer->new(
+    my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
             host => 't2',
             nav_menu => $::nav_bar,
@@ -15,7 +15,7 @@ use Shlomif::Homepage::NavBlocks (qw(
     {
         my ($id) = @_;
 
-        return $r->render(_get_nav_block($id));
+        return $nav_block_renderer->render(_get_nav_block($id));
     }
 
     sub _utf8_print

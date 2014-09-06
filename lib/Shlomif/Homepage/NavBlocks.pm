@@ -1,3 +1,28 @@
+package Shlomif::Homepage::NavBlocks::Thingy;
+
+use strict;
+use warnings;
+
+use MooX (qw( late ));
+
+has 'cache' => (is => 'rw');
+has 'is_cached' => (is => 'rw', isa => 'Bool', default => 0);
+
+sub cached_render
+{
+    my ($self, $promise_cb) = @_;
+
+    if (! $self->is_cached)
+    {
+        $self->cache(
+            scalar ( $promise_cb->() ),
+        );
+        $self->is_cached(1);
+    }
+
+    return $self->cache;
+}
+
 package Shlomif::Homepage::NavBlocks::LocalLink;
 
 use strict;
@@ -6,6 +31,8 @@ use warnings;
 use utf8;
 
 use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::Thingy');
 
 has [qw(
     inner_html
@@ -29,6 +56,8 @@ use warnings;
 use utf8;
 
 use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::Thingy');
 
 has [qw(
     url
@@ -62,6 +91,8 @@ use utf8;
 
 use MooX (qw( late ));
 
+extends ('Shlomif::Homepage::NavBlocks::Thingy');
+
 has 'items' => (is => 'ro', isa => 'ArrayRef', required => 1);
 has 'title' => (is => 'ro', isa => "Str", required => 1);
 
@@ -82,6 +113,8 @@ use warnings;
 use utf8;
 
 use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::Thingy');
 
 has 'title' => (is => 'ro', isa => "Str", required => 1);
 
@@ -119,6 +152,8 @@ use utf8;
 
 use MooX (qw( late ));
 
+extends ('Shlomif::Homepage::NavBlocks::Thingy');
+
 has 'tr_s' => (is => 'ro', isa => 'ArrayRef', required => 1);
 has 'id' => (is => 'ro', isa => "Str", required => 1);
 
@@ -153,6 +188,17 @@ has [qw(
 )] => (is => 'ro', required => 1);
 
 sub render
+{
+    my ($self, $thingy) = @_;
+
+    return $thingy->cached_render(
+        sub {
+            return $self->_non_cached_render($thingy);
+        }
+    );
+}
+
+sub _non_cached_render
 {
     my ($self, $thingy) = @_;
 

@@ -321,6 +321,17 @@ my %tr_s =
             $EmWatson_tech_interview,
         ],
     ),
+    'foss_facts' =>
+    _tr(
+        title => "“Facts”",
+        items => [
+            _l( inner_html => "Chuck Norris Facts", path => "humour/bits/facts/Chuck-Norris/",),
+            _l( inner_html => "Larry Wall Facts", path => "humour/bits/facts/Larry-Wall/",),
+            _l( inner_html => "“Knuth is not God”", path => "humour/bits/facts/Knuth/",),
+            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/",),
+            _l( inner_html => "XSLT Facts", path => "humour/bits/facts/XSLT/",),
+        ],
+    ),
     'hhfg' =>
     _tr(
         title => "Human Hacking Field Guide",
@@ -366,6 +377,14 @@ my %tr_s =
             _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
             _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
             _facebook( url => 'http://www.facebook.com/SummerNSA',),
+        ],
+    ),
+    'xkcd_facts' =>
+    _tr(
+        title => "“Facts”",
+        items => [
+            _l( inner_html => "Summer Glau Facts", path => "humour/bits/facts/Summer-Glau/",),
+            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/"),
         ],
     ),
 );

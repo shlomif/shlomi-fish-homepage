@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 7;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './lib';
@@ -155,6 +155,49 @@ use IO::All;
 </tr>
 EOF
             "Render Tr",
+        );
+    }
+}
+
+{
+    my $nav_bar = HTML::Widgets::NavMenu->new(
+        path_info => "/humour/Selina-Mandrake/",
+        current_host => 't2',
+        MyNavData::get_params(),
+        'no_leading_dot' => 1,
+    );
+
+    my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
+        {
+            host => 't2',
+            nav_menu => $nav_bar,
+        }
+    );
+
+    {
+        my $subdiv_tr = Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
+            {
+                title => "Screenplays",
+            },
+        );
+
+        # TEST
+        eq_or_diff
+        (
+            $subdiv_tr->collect_local_links(),
+            [
+            ],
+        );
+
+        # TEST
+        eq_or_diff (
+            $r->render($subdiv_tr),
+            <<'EOF',
+<tr class="subdiv">
+<th colspan="3">Screenplays</th>
+</tr>
+EOF
+            "Render Subdiv_Tr",
         );
     }
 }

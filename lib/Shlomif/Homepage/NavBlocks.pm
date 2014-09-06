@@ -94,6 +94,26 @@ sub collect_local_links
 
 1;
 
+package Shlomif::Homepage::NavBlocks::Master_Tr;
+
+use strict;
+use warnings;
+
+use utf8;
+
+use MooX (qw( late ));
+
+has 'title' => (is => 'ro', isa => "Str", required => 1);
+
+sub collect_local_links
+{
+    my $self = shift;
+
+    return [];
+}
+
+1;
+
 package Shlomif::Homepage::NavBlocks::Renderer;
 
 use strict;
@@ -129,6 +149,14 @@ sub render
             (map { $self->render($_) } @{$thingy->items}),
             "</ul>",
             "</td>",
+            "</tr>",
+            ;
+    }
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Master_Tr'))
+    {
+        return join'',map { "$_\n" }
+            q{<tr class="main_title">},
+            sprintf(qq{<th colspan="3">%s</th>}, $thingy->title),
             "</tr>",
             ;
     }

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 7;
+use Test::More tests => 9;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './lib';
@@ -198,6 +198,33 @@ EOF
 </tr>
 EOF
             "Render Subdiv_Tr",
+        );
+    }
+
+    {
+        my $master_tr = Shlomif::Homepage::NavBlocks::Master_Tr->new(
+            {
+                title => "Harry Potter/Emma Watson Fanfiction",
+            },
+        );
+
+        # TEST
+        eq_or_diff
+        (
+            $master_tr->collect_local_links(),
+            [
+            ],
+        );
+
+        # TEST
+        eq_or_diff (
+            $r->render($master_tr),
+            <<'EOF',
+<tr class="main_title">
+<th colspan="3">Harry Potter/Emma Watson Fanfiction</th>
+</tr>
+EOF
+            "Render Master_Tr",
         );
     }
 }

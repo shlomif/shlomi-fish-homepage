@@ -427,6 +427,20 @@ sub _get_tr
     return ($tr_s{$id} // do { Carp::confess "Unknown ID $id." });
 }
 
+sub _master_tr
+{
+    return Shlomif::Homepage::NavBlocks::Master_Tr->new(
+        { @_ },
+    );
+}
+
+sub _subdiv_tr
+{
+    return Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
+        { @_ },
+    );
+}
+
 my %table_blocks =
 (
     'star_trek' =>
@@ -435,16 +449,8 @@ my %table_blocks =
             id => 'star_trek_nav_block',
             tr_s =>
             [
-                Shlomif::Homepage::NavBlocks::Master_Tr->new(
-                    {
-                        title => q{Star Trek Fanfiction},
-                    },
-                ),
-                Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
-                    {
-                        title => q{Screenplays},
-                    },
-                ),
+                _master_tr(title => q{Star Trek Fanfiction},),
+                _subdiv_tr(title => q{Screenplays},),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
             ],

@@ -271,6 +271,8 @@ sub _tr
     );
 }
 
+my $EmWatson_tech_interview = _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",);
+
 my %tr_s =
 (
     'buffy_facts' =>
@@ -289,6 +291,36 @@ my %tr_s =
             _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
         ],
     ),
+    'EmWatson_facts' =>
+    _tr(
+        title => "“Facts”",
+        items => [
+            _l( inner_html => "Emma Watson Facts", path => "humour/bits/facts/Emma-Watson/",),
+        ],
+    ),
+    'EmWatson_tech_job' =>
+    _tr(
+        title => "EmWatson Tech Interview",
+        items => [
+            $EmWatson_tech_interview,
+        ],
+    ),
+    'foss_bits' =>
+    _tr(
+        title => "Ultra-short stories",
+        items => [
+            _l( inner_html => "GPL Not Compatible with Itself", path => "humour/bits/GPL-is-not-Compatible-with-Itself/",),
+            _l( inner_html => "RMS Lint", path => "humour/bits/RMS-Lint/",),
+            _l( inner_html => "Cracka’s Paradise", path => "humour/bits/Crackas-Paradise/",),
+            _l( inner_html => "“Mastering cat”", path => "humour/bits/Mastering-Cat/",),
+            _l( inner_html => "Programs Everyone Has Written", path => "humour/bits/Programs-Every-Programmer-has-Written/",),
+            _l( inner_html => "Freecell Solver™ Enterprise Edition", path => "humour/bits/Freecell-Solver-Enterprise-Edition/",),
+            _l( inner_html => "COBOL — The New Age Programming Language", path => "humour/bits/COBOL-the-New-Age-Programming-Language/",),
+            _l( inner_html => "Copying Ubuntu Bug #1", path => "humour/bits/Copying-Ubuntu-Bug-No-1/",),
+            _l( inner_html => "It’s not a Fooware - It’s an Operating System", path => "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",),
+            $EmWatson_tech_interview,
+        ],
+    ),
     'hhfg' =>
     _tr(
         title => "Human Hacking Field Guide",
@@ -296,6 +328,14 @@ my %tr_s =
             _fp( path => "humour/human-hacking/",),
             _l( inner_html => "Conclusions and Reviews", path => "humour/human-hacking/conclusions/",),
             _github( url => 'http://github.com/shlomif/Human-Hacking-Field-Guide',),
+        ],
+    ),
+    'muppets_harry_potter' =>
+    _tr(
+        title => "The Muppet Show - The Next Incarnation",
+        items => [
+            _fp( path => "humour/Muppets-Show-TNI/Harry-Potter.html",),
+            _github( url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',),
         ],
     ),
     'selina_mandrake' =>
@@ -315,6 +355,17 @@ my %tr_s =
             _fp( path => "humour/Star-Trek/We-the-Living-Dead/",),
             _ontext( path => "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",),
             _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
+        ],
+    ),
+    'summer_nsa' =>
+    _tr(
+        title => "Summerschool at the NSA",
+        items => [
+            _fp( path => "humour/Summerschool-at-the-NSA/",),
+            _ontext( path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
+            _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
+            _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
+            _facebook( url => 'http://www.facebook.com/SummerNSA',),
         ],
     ),
 );

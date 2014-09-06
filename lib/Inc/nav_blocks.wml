@@ -38,68 +38,20 @@ use Shlomif::Homepage::NavBlocks (qw(
 
     our $_star_trek_wtld__tr__TEXT = $r->render($_star_trek_wtld__tr);
 
-    our $_summer_nsa__tr =
-        _tr(
-            title => "Summerschool at the NSA",
-            items => [
-            _fp( path => "humour/Summerschool-at-the-NSA/",),
-            _ontext( path => "humour/Summerschool-at-the-NSA/ongoing-text.html",),
-            _l( inner_html => "Proposed Cast", path => "humour/Summerschool-at-the-NSA/cast.html",),
-            _github( url => 'http://github.com/shlomif/Summerschool-at-the-NSA',),
-            _facebook( url => 'http://www.facebook.com/SummerNSA',),
-            ],
-        );
+    our $_summer_nsa__tr = _get_tr('summer_nsa');
     our $_summer_nsa__tr__TEXT = $r->render($_summer_nsa__tr);
 
-    our $_muppets_harry_potter__tr =
-        _tr(
-            title => "The Muppet Show - The Next Incarnation",
-            items => [
-            _fp( path => "humour/Muppets-Show-TNI/Harry-Potter.html",),
-            _github( url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',),
-            ],
-        );
-
+    our $_muppets_harry_potter__tr = _get_tr('muppets_harry_potter');
     our $_muppets_harry_potter__tr__TEXT = $r->render($_muppets_harry_potter__tr);
 
-    our $_EmWatson_facts__tr =
-        _tr(
-            title => "“Facts”",
-            items => [
-            _l( inner_html => "Emma Watson Facts", path => "humour/bits/facts/Emma-Watson/",),
-            ],
-        );
-
+    our $_EmWatson_facts__tr = _get_tr('EmWatson_facts');
     our $_EmWatson_facts__tr__TEXT = $r->render($_EmWatson_facts__tr);
 
-    my $EmWatson_tech_interview = _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",);
-    our $_EmWatson_tech_job__tr =
-        _tr(
-            title => "EmWatson Tech Interview",
-            items => [
-            $EmWatson_tech_interview,
-            ],
-        );
+    our $_EmWatson_tech_job__tr = _get_tr('EmWatson_tech_job');
 
     our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
 
-    our $_foss_bits__tr =
-        _tr(
-            title => "Ultra-short stories",
-            items => [
-            _l( inner_html => "GPL Not Compatible with Itself", path => "humour/bits/GPL-is-not-Compatible-with-Itself/",),
-            _l( inner_html => "RMS Lint", path => "humour/bits/RMS-Lint/",),
-            _l( inner_html => "Cracka’s Paradise", path => "humour/bits/Crackas-Paradise/",),
-            _l( inner_html => "“Mastering cat”", path => "humour/bits/Mastering-Cat/",),
-            _l( inner_html => "Programs Everyone Has Written", path => "humour/bits/Programs-Every-Programmer-has-Written/",),
-            _l( inner_html => "Freecell Solver™ Enterprise Edition", path => "humour/bits/Freecell-Solver-Enterprise-Edition/",),
-            _l( inner_html => "COBOL — The New Age Programming Language", path => "humour/bits/COBOL-the-New-Age-Programming-Language/",),
-            _l( inner_html => "Copying Ubuntu Bug #1", path => "humour/bits/Copying-Ubuntu-Bug-No-1/",),
-            _l( inner_html => "It’s not a Fooware - It’s an Operating System", path => "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",),
-            $EmWatson_tech_interview,
-            ],
-        );
-
+    our $_foss_bits__tr = _get_tr('foss_bits');
     our $_foss_bits__tr__TEXT = $r->render($_foss_bits__tr);
 
     our $_foss_facts__tr =

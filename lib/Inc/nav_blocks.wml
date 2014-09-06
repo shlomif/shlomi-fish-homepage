@@ -30,55 +30,6 @@ use Shlomif::Homepage::NavBlocks (qw(
     }
 :>
 
-<define-tag _master_tr>
-
-<preserve title />
-<set-var %attributes />
-
-<:
-    my $_title = <<'EOF';
-<get-var title />
-EOF
-    chomp($_title);
-
-
-    _utf8_print $r->render(
-        Shlomif::Homepage::NavBlocks::Master_Tr->new(
-            {
-                title => $_title,
-            }
-        ),
-    );
-:>
-
-<restore title />
-
-</define-tag>
-
-<define-tag _subdiv_tr>
-
-<preserve title />
-<set-var %attributes />
-
-<:
-    my $_title = <<'EOF';
-<get-var title />
-EOF
-    chomp($_title);
-
-    _utf8_print $r->render(
-        Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
-            {
-                title => $_title,
-            }
-        ),
-    );
-:>
-
-<restore title />
-
-</define-tag>
-
 <define-tag star_trek_nav_block>
 <: _utf8_print _render_nav_block('star_trek'); :>
 </define-tag>

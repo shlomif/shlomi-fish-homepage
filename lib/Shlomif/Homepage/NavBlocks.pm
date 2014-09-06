@@ -298,34 +298,7 @@ sub _non_cached_render
 {
     my ($self, $thingy) = @_;
 
-    if ($thingy->isa('Shlomif::Homepage::NavBlocks::Tr'))
-    {
-        return $thingy->render($self);
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::TableBlock'))
-    {
-        return $thingy->render($self);
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Title_Tr'))
-    {
-        return $thingy->render($self);
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::LocalLink'))
-    {
-        return $thingy->render($self);
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::GitHubLink'))
-    {
-        return $thingy->render($self);
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::FacebookLink'))
-    {
-        return $thingy->render($self);
-    }
-    else
-    {
-        Carp::confess('unimplemented');
-    }
+    return $thingy->render($self);
 }
 
 package Shlomif::Homepage::NavBlocks;

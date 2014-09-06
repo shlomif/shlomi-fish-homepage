@@ -443,19 +443,6 @@ sub _subdiv_tr
 
 my %table_blocks =
 (
-    'star_trek' =>
-    Shlomif::Homepage::NavBlocks::TableBlock->new(
-        {
-            id => 'star_trek_nav_block',
-            tr_s =>
-            [
-                _master_tr(title => q{Star Trek Fanfiction},),
-                _subdiv_tr(title => q{Screenplays},),
-                _get_tr('star_trek_wtld'),
-                _get_tr('selina_mandrake'),
-            ],
-        },
-    ),
     'harry_potter' =>
     Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
@@ -470,6 +457,35 @@ my %table_blocks =
                 _get_tr('EmWatson_tech_job'),
                 _subdiv_tr(title => q{Factoids},),
                 _get_tr('EmWatson_facts'),
+            ],
+        },
+    ),
+    'foss' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'foss_nav_block',
+            tr_s =>
+            [
+                _master_tr(title => q{Open Source/Perl/etc. Fanfiction},),
+                _subdiv_tr(title => q{Screenplays},),
+                _get_tr('hhfg'),
+                _subdiv_tr(title => q{Factoids},),
+                _get_tr('foss_facts'),
+                _subdiv_tr(title => q{Bits},),
+                _get_tr('foss_bits'),
+            ],
+        },
+    ),
+    'star_trek' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'star_trek_nav_block',
+            tr_s =>
+            [
+                _master_tr(title => q{Star Trek Fanfiction},),
+                _subdiv_tr(title => q{Screenplays},),
+                _get_tr('star_trek_wtld'),
+                _get_tr('selina_mandrake'),
             ],
         },
     ),

@@ -17,19 +17,15 @@ use Shlomif::Homepage::NavBlocks (qw(
     );
 
     our $_buffy_facts__tr = _get_tr('buffy_facts');
-
     our $_buffy_facts__tr__TEXT = $r->render($_buffy_facts__tr);
 
     our $_buffy_few_good__tr = _get_tr('buffy_few_good');
-
     our $_buffy_few_good__tr__TEXT = $r->render($_buffy_few_good__tr);
 
     our $_selina_mandrake__tr = _get_tr('selina_mandrake');
-
     our $_selina_mandrake__tr__TEXT = $r->render($_selina_mandrake__tr);
 
     our $_hhfg__tr = _get_tr('hhfg');
-
     our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
 
     our $_star_trek_wtld__tr = _get_tr('star_trek_wtld');
@@ -45,7 +41,6 @@ use Shlomif::Homepage::NavBlocks (qw(
     our $_EmWatson_facts__tr__TEXT = $r->render($_EmWatson_facts__tr);
 
     our $_EmWatson_tech_job__tr = _get_tr('EmWatson_tech_job');
-
     our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
 
     our $_foss_bits__tr = _get_tr('foss_bits');

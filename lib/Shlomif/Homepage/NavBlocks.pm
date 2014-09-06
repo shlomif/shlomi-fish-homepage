@@ -103,6 +103,23 @@ sub collect_local_links
     return [ map { @{$_->collect_local_links} } @{$self->items}];
 }
 
+sub render
+{
+    my ($self, $r) = @_;
+
+    return join '', map { "$_\n" }
+    "<tr>",
+    sprintf(qq{<td colspan="2"><b>%s</b></td>}, $self->title),
+    "<td>",
+    "<ul>",
+    (map { $r->render($_) } @{$self->items}),
+    "</ul>",
+    "</td>",
+    "</tr>",
+    ;
+
+}
+
 1;
 
 package Shlomif::Homepage::NavBlocks::Title_Tr;
@@ -164,6 +181,19 @@ sub collect_local_links
     return [ map { @{$_->collect_local_links} } @{$self->tr_s}];
 }
 
+sub render
+{
+    my ($self, $r) = @_;
+
+    return join '', map { "$_\n" }
+    sprintf(q{<div class="topical_nav_block" id="%s">}, $self->id),
+    "<table>",
+    (map { $r->render($_); } @{$self->tr_s}),
+    "</table>",
+    "</div>",
+    ;
+}
+
 1;
 
 package Shlomif::Homepage::NavBlocks::Renderer;
@@ -204,26 +234,11 @@ sub _non_cached_render
 
     if ($thingy->isa('Shlomif::Homepage::NavBlocks::Tr'))
     {
-        return join '',map { "$_\n" }
-            "<tr>",
-            sprintf(qq{<td colspan="2"><b>%s</b></td>}, $thingy->title),
-            "<td>",
-            "<ul>",
-            (map { $self->render($_) } @{$thingy->items}),
-            "</ul>",
-            "</td>",
-            "</tr>",
-            ;
+        return $thingy->render($self);
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::TableBlock'))
     {
-        return join '',map { "$_\n" }
-            sprintf(q{<div class="topical_nav_block" id="%s">}, $thingy->id),
-            "<table>",
-            (map { $self->render($_); } @{$thingy->tr_s}),
-            "</table>",
-            "</div>",
-            ;
+        return $thingy->render($self);
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Title_Tr'))
     {

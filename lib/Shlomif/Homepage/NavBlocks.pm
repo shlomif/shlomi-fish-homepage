@@ -48,6 +48,37 @@ sub collect_local_links
     return [$self->path];
 }
 
+sub render
+{
+    my ($self, $r) = @_;
+
+    my $normalize = sub {return shift =~ s#/index\.html\z#/#gr};
+
+    if ($normalize->($self->path) eq $normalize->($r->nav_menu->path_info))
+    {
+        return sprintf(
+            q#<li><p><strong class="current">%s</strong></p></li>#,
+            $self->inner_html(),
+        );
+    }
+    else
+    {
+        return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
+            CGI::escapeHTML(
+                $r->nav_menu->get_cross_host_rel_url_ref(
+                    {
+                        host => $r->host,
+                        host_url => $self->path,
+                        url_type => 'rel',
+                        url_is_abs => 0,
+                    },
+                ),
+            ),
+            $self->inner_html(),
+        );
+    }
+}
+
 package Shlomif::Homepage::NavBlocks::ExternalLink;
 
 use strict;
@@ -140,6 +171,17 @@ sub collect_local_links
     my $self = shift;
 
     return [];
+}
+
+sub render
+{
+    my ($self,$r) = @_;
+
+    return join'', map { "$_\n" }
+    sprintf( q{<tr class="%s">}, $self->css_class),
+    sprintf(qq{<th colspan="3">%s</th>}, $self->title),
+    "</tr>",
+    ;
 }
 
 1;
@@ -242,39 +284,11 @@ sub _non_cached_render
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Title_Tr'))
     {
-        return join'',map { "$_\n" }
-            sprintf( q{<tr class="%s">}, $thingy->css_class),
-            sprintf(qq{<th colspan="3">%s</th>}, $thingy->title),
-            "</tr>",
-            ;
+        return $thingy->render($self);
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::LocalLink'))
     {
-        my $normalize = sub {return shift =~ s#/index\.html\z#/#gr};
-
-        if ($normalize->($thingy->path) eq $normalize->($self->nav_menu->path_info))
-        {
-            return sprintf(
-                q#<li><p><strong class="current">%s</strong></p></li>#,
-                $thingy->inner_html(),
-            );
-        }
-        else
-        {
-            return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
-                CGI::escapeHTML(
-                    $self->nav_menu->get_cross_host_rel_url_ref(
-                        {
-                            host => $self->host,
-                            host_url => $thingy->path,
-                            url_type => 'rel',
-                            url_is_abs => 0,
-                        },
-                    ),
-                ),
-                $thingy->inner_html(),
-            );
-        }
+        return $thingy->render($self);
     }
     elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::GitHubLink'))
     {

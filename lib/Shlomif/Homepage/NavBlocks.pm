@@ -74,7 +74,7 @@ sub collect_local_links
 
 1;
 
-package Shlomif::Homepage::NavBlocks::Subdiv_Tr;
+package Shlomif::Homepage::NavBlocks::Title_Tr;
 
 use strict;
 use warnings;
@@ -93,26 +93,22 @@ sub collect_local_links
 }
 
 1;
+
+package Shlomif::Homepage::NavBlocks::Subdiv_Tr;
+
+use MooX (qw( late ));
+
+extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
+
+has 'css_class' => (is => 'ro', isa => 'Str', default => 'subdiv');
 
 package Shlomif::Homepage::NavBlocks::Master_Tr;
 
-use strict;
-use warnings;
-
-use utf8;
-
 use MooX (qw( late ));
 
-has 'title' => (is => 'ro', isa => "Str", required => 1);
+extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
 
-sub collect_local_links
-{
-    my $self = shift;
-
-    return [];
-}
-
-1;
+has 'css_class' => (is => 'ro', isa => 'Str', default => 'main_title');
 
 package Shlomif::Homepage::NavBlocks::Renderer;
 
@@ -152,18 +148,10 @@ sub render
             "</tr>",
             ;
     }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Master_Tr'))
+    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Title_Tr'))
     {
         return join'',map { "$_\n" }
-            q{<tr class="main_title">},
-            sprintf(qq{<th colspan="3">%s</th>}, $thingy->title),
-            "</tr>",
-            ;
-    }
-    elsif ($thingy->isa('Shlomif::Homepage::NavBlocks::Subdiv_Tr'))
-    {
-        return join'',map { "$_\n" }
-            q{<tr class="subdiv">},
+            sprintf( q{<tr class="%s">}, $thingy->css_class),
             sprintf(qq{<th colspan="3">%s</th>}, $thingy->title),
             "</tr>",
             ;

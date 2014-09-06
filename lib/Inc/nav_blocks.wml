@@ -1,16 +1,3 @@
-<define-tag _master_tr>
-
-<preserve title />
-<set-var %attributes />
-
-<tr class="main_title">
-<th colspan="3"><get-var title /></th>
-</tr>
-
-<restore title />
-
-</define-tag>
-
 <define-tag _lip_github_repo whitespace="delete">
 
 <preserve href />
@@ -193,6 +180,30 @@ use Shlomif::Homepage::NavBlocks (qw(
     our $_xkcd_facts__tr__TEXT = $r->render($_xkcd_facts__tr);
 
 :>
+
+<define-tag _master_tr>
+
+<preserve title />
+<set-var %attributes />
+
+<:
+    my $_title = <<'EOF';
+<get-var title />
+EOF
+    chomp($_title);
+
+    print $r->render(
+        Shlomif::Homepage::NavBlocks::Master_Tr->new(
+            {
+                title => $_title,
+            }
+        ),
+    );
+:>
+
+<restore title />
+
+</define-tag>
 
 <define-tag _subdiv_tr>
 

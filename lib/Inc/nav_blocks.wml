@@ -18,9 +18,6 @@ use Shlomif::Homepage::NavBlocks (qw(
         return $r->render(_get_nav_block($id));
     }
 
-:>
-
-<:
     sub _utf8_print
     {
         my @text = @_;
@@ -28,25 +25,32 @@ use Shlomif::Homepage::NavBlocks (qw(
             print @text;
         });
     }
+
+    sub _print_nav_block
+    {
+        _utf8_print( _render_nav_block(@_) );
+
+        return;
+    }
 :>
 
 <define-tag star_trek_nav_block>
-<: _utf8_print _render_nav_block('star_trek'); :>
+<: _print_nav_block('star_trek'); :>
 </define-tag>
 
 <define-tag harry_potter_nav_block>
-<: _utf8_print _render_nav_block('harry_potter'); :>
+<: _print_nav_block('harry_potter'); :>
 </define-tag>
 
 <define-tag xkcd_nav_block>
-<: _utf8_print _render_nav_block('xkcd'); :>
+<: _print_nav_block('xkcd'); :>
 </define-tag>
 
 <define-tag foss_nav_block>
-<: _utf8_print _render_nav_block('foss'); :>
+<: _print_nav_block('foss'); :>
 </define-tag>
 
 <define-tag buffy_nav_block>
-<: _utf8_print _render_nav_block('buffy'); :>
+<: _print_nav_block('buffy'); :>
 </define-tag>
 

@@ -16,41 +16,25 @@ use Shlomif::Homepage::NavBlocks (qw(
         }
     );
 
-    our $_buffy_facts__tr = _get_tr('buffy_facts');
-    our $_buffy_facts__tr__TEXT = $r->render($_buffy_facts__tr);
+    sub _render_tr
+    {
+        my ($id) = @_;
 
-    our $_buffy_few_good__tr = _get_tr('buffy_few_good');
-    our $_buffy_few_good__tr__TEXT = $r->render($_buffy_few_good__tr);
+        return $r->render(_get_tr($id));
+    }
 
-    our $_selina_mandrake__tr = _get_tr('selina_mandrake');
-    our $_selina_mandrake__tr__TEXT = $r->render($_selina_mandrake__tr);
-
-    our $_hhfg__tr = _get_tr('hhfg');
-    our $_hhfg__tr__TEXT = $r->render($_hhfg__tr);
-
-    our $_star_trek_wtld__tr = _get_tr('star_trek_wtld');
-    our $_star_trek_wtld__tr__TEXT = $r->render($_star_trek_wtld__tr);
-
-    our $_summer_nsa__tr = _get_tr('summer_nsa');
-    our $_summer_nsa__tr__TEXT = $r->render($_summer_nsa__tr);
-
-    our $_muppets_harry_potter__tr = _get_tr('muppets_harry_potter');
-    our $_muppets_harry_potter__tr__TEXT = $r->render($_muppets_harry_potter__tr);
-
-    our $_EmWatson_facts__tr = _get_tr('EmWatson_facts');
-    our $_EmWatson_facts__tr__TEXT = $r->render($_EmWatson_facts__tr);
-
-    our $_EmWatson_tech_job__tr = _get_tr('EmWatson_tech_job');
-    our $_EmWatson_tech_job__tr__TEXT = $r->render($_EmWatson_tech_job__tr);
-
-    our $_foss_bits__tr = _get_tr('foss_bits');
-    our $_foss_bits__tr__TEXT = $r->render($_foss_bits__tr);
-
-    our $_foss_facts__tr = _get_tr('foss_facts');
-    our $_foss_facts__tr__TEXT = $r->render($_foss_facts__tr);
-
-    our $_xkcd_facts__tr = _get_tr('xkcd_facts');
-    our $_xkcd_facts__tr__TEXT = $r->render($_xkcd_facts__tr);
+    our $_buffy_facts__tr__TEXT = _render_tr('buffy_facts');
+    our $_buffy_few_good__tr__TEXT = _render_tr('buffy_few_good');
+    our $_selina_mandrake__tr__TEXT = _render_tr('selina_mandrake');
+    our $_hhfg__tr__TEXT = _render_tr('hhfg');
+    our $_star_trek_wtld__tr__TEXT = _render_tr('star_trek_wtld');
+    our $_summer_nsa__tr__TEXT = _render_tr('summer_nsa');
+    our $_muppets_harry_potter__tr__TEXT = _render_tr('muppets_harry_potter');
+    our $_EmWatson_facts__tr__TEXT = _render_tr('EmWatson_facts');
+    our $_EmWatson_tech_job__tr__TEXT = _render_tr('EmWatson_tech_job');
+    our $_foss_bits__tr__TEXT = _render_tr('foss_bits');
+    our $_foss_facts__tr__TEXT = _render_tr('foss_facts');
+    our $_xkcd_facts__tr__TEXT = _render_tr('xkcd_facts');
 
 :>
 
@@ -258,3 +242,4 @@ EOF
 </div>
 
 </define-tag>
+

@@ -107,6 +107,8 @@ use MooX (qw( late ));
 
 use CGI ();
 
+extends ('Exporter');
+
 has 'host' => (is => 'ro', isa => 'Str', required => 1);
 
 has [qw(
@@ -190,6 +192,64 @@ sub render
     }
 }
 
+package Shlomif::Homepage::NavBlocks;
+
+use strict;
+use warnings;
+
+use parent ('Exporter');
+
+our @EXPORT_OK = (qw(
+    _facebook
+    _fp
+    _github
+    _l
+    _ontext
+    _tr
+));
+
+sub _l
+{
+    return
+        Shlomif::Homepage::NavBlocks::LocalLink->new(
+            {
+            @_
+            },
+        );
+}
+
+sub _fp
+{
+    return _l(inner_html => "Front Page", @_);
+}
+
+sub _ontext
+{
+    return _l(inner_html => "Ongoing Text", @_);
+}
+
+sub _github
+{
+    return
+        Shlomif::Homepage::NavBlocks::GitHubLink->new(
+            { @_ }
+        );
+}
+
+sub _facebook
+{
+    return
+        Shlomif::Homepage::NavBlocks::FacebookLink->new(
+            { @_ }
+        );
+}
+
+sub _tr
+{
+    return Shlomif::Homepage::NavBlocks::Tr->new(
+        { @_ }
+    );
+}
 
 1;
 

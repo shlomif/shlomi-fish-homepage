@@ -1,13 +1,7 @@
 <:
 
 use Shlomif::Homepage::NavBlocks (qw(
-    _facebook
-    _fp
-    _get_tr
     _get_nav_block
-    _github
-    _l
-    _ontext
 ));
 
     our $r = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -17,32 +11,12 @@ use Shlomif::Homepage::NavBlocks (qw(
         }
     );
 
-    sub _render_tr
-    {
-        my ($id) = @_;
-
-        return $r->render(_get_tr($id));
-    }
-
     sub _render_nav_block
     {
         my ($id) = @_;
 
         return $r->render(_get_nav_block($id));
     }
-
-    our $_buffy_facts__tr__TEXT = _render_tr('buffy_facts');
-    our $_buffy_few_good__tr__TEXT = _render_tr('buffy_few_good');
-    our $_selina_mandrake__tr__TEXT = _render_tr('selina_mandrake');
-    our $_hhfg__tr__TEXT = _render_tr('hhfg');
-    our $_star_trek_wtld__tr__TEXT = _render_tr('star_trek_wtld');
-    our $_summer_nsa__tr__TEXT = _render_tr('summer_nsa');
-    our $_muppets_harry_potter__tr__TEXT = _render_tr('muppets_harry_potter');
-    our $_EmWatson_facts__tr__TEXT = _render_tr('EmWatson_facts');
-    our $_EmWatson_tech_job__tr__TEXT = _render_tr('EmWatson_tech_job');
-    our $_foss_bits__tr__TEXT = _render_tr('foss_bits');
-    our $_foss_facts__tr__TEXT = _render_tr('foss_facts');
-    our $_xkcd_facts__tr__TEXT = _render_tr('xkcd_facts');
 
 :>
 
@@ -103,53 +77,6 @@ EOF
 
 <restore title />
 
-</define-tag>
-
-<define-tag _selina_mandrake__tr>
-<: _utf8_print $_selina_mandrake__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _summer_nsa__tr>
-<: _utf8_print $_summer_nsa__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _muppets_harry_potter__tr>
-<: _utf8_print $_muppets_harry_potter__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _xkcd_facts__tr>
-<: _utf8_print $_xkcd_facts__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _EmWatson_facts__tr>
-<: _utf8_print $_EmWatson_facts__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _EmWatson_tech_job__tr>
-<: _utf8_print $_EmWatson_tech_job__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _foss_bits__tr>
-<: _utf8_print $_foss_bits__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _foss_facts__tr>
-<: _utf8_print $_foss_facts__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _hhfg__tr>
-<: _utf8_print $_hhfg__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _star_trek_wtld__tr>
-<: _utf8_print $_star_trek_wtld__tr__TEXT ; :>
-</define-tag>
-
-<define-tag _buffy_facts__tr>
-<: _utf8_print $_buffy_facts__tr__TEXT ; :>
-</define-tag>
-<define-tag _buffy_few_good__tr>
-<: _utf8_print $_buffy_few_good__tr__TEXT ; :>
 </define-tag>
 
 <define-tag star_trek_nav_block>

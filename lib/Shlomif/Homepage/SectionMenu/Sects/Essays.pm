@@ -93,6 +93,11 @@ my $essays_tree_contents =
             subs =>
             [
                 {
+                    text => "#SummerNSA",
+                    url => "philosophy/SummerNSA/",
+                    title => "The #SummerNSA / “Summerschool at the NSA” effort",
+                },
+                {
                     text => "Objectivism and Open Source",
                     url => "philosophy/obj-oss/",
                     title => "Objectivism and Open Source",

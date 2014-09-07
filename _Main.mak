@@ -291,7 +291,6 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	Emma-Watson-applying-for-a-software-dev-job \
 	sussman-interview \
 	humanity-excerpt-for-X-G-Screenplay-demo \
-	Muppets-with-Summer-Glau-and-Chuck-Norris
 
 
 SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)

@@ -13,7 +13,9 @@ function _get_date()
 {
     local d="$1"
     shift
-    git show $(git log --format='%H' --since="$d" | tail -1) | head -1 | perl -lapE 's/^commit //'
+    local empty=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+    local sha1="$(git rev-list --max-parents=0 --since="$d" HEAD | tail -1)"
+    echo "${sha1:-$empty}"
 }
 
 ls -d lib/fiction-xml/from-vcs/* lib/screenplay-xml/from-vcs/* |

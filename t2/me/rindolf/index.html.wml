@@ -5,6 +5,15 @@
 
 <latemp_meta_desc "About “Rindolf” - Shlomi Fish’s Nickname: Rindolf the Dwarven Warrior, the IRC nickname, Rindolf the Evil Reindeer, and “Rindolfism”" />
 
+<define-tag rindolf_floaty_img>
+<preserve href src alt title />
+<set-var %attributes />
+
+<a href="<get-var href />"><img src="<get-var src />" alt="<get-var alt />" title="<get-var title />" style="float:right;margin:0 2em;" /></a>
+
+<restore href src alt title />
+</define-tag>
+
 <toc_div />
 
 <h2 id="what">“Rindolf” - Shlomi Fish’s Nickname</h2>
@@ -109,7 +118,7 @@ and so settled on this nickname.
 
 <h4 id="the_hacker_monarch">The Hacker Monarch</h4>
 
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/"><img src="$(ROOT)/humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia" title="Summer Glau" style="float:right;margin:0 2em;" /></a>
+<rindolf_floaty_img href="$(ROOT)/humour/bits/facts/Summer-Glau/" src="$(ROOT)/humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia" title="Summer Glau" />
 
 <p>
 I concluded that
@@ -159,7 +168,7 @@ pluralism, joy and happiness.
 
 <h4 id="passing_the_baton">Passing the Baton</h4>
 
-<a href="images/brown-1d10-SGlau-LARGE.jpg"><img src="images/brown-1d10-SGlau-scaled.jpg" alt="My ten-sided-die “Schartz” ring/amulet of power" title="My ten-sided-die “Schartz” ring/amulet of power" style="float:right;margin:0 2em;" /></a>
+<rindolf_floaty_img href="images/brown-1d10-SGlau-LARGE.jpg" src="images/brown-1d10-SGlau-scaled.jpg" alt="My ten-sided-die “Schartz” ring/amulet of power" title="My ten-sided-die “Schartz” ring/amulet of power" />
 
 <p>
 I hope I can meet Summer Glau at the upcoming
@@ -197,7 +206,7 @@ motherfucker!!! Do you speak it?! And:
 
 <h4 id="update_long_live_us_hacker_monarchs">Update: Long Live, us, [no-"the"!] Hacker Monarchs!</h4>
 
-<a href="$(ROOT)/philosophy/SummerNSA/"><img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" title="Summerschool at the NSA Logo" style="float:right;margin:0 2em;"/></a>
+<rindolf_floaty_img href="$(ROOT)/philosophy/SummerNSA/" src="$(ROOT)/humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" title="Summerschool at the NSA Logo" />
 
 <p>
 (<b>2014-Sep-07</b>)

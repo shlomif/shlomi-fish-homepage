@@ -1,7 +1,7 @@
 <:
 
 use Shlomif::Homepage::NavBlocks (qw(
-    _get_nav_block
+    get_nav_block
 ));
 
     my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -15,7 +15,7 @@ use Shlomif::Homepage::NavBlocks (qw(
     {
         my ($id) = @_;
 
-        return $nav_block_renderer->render(_get_nav_block($id));
+        return $nav_block_renderer->render(get_nav_block($id));
     }
 
     sub _utf8_print

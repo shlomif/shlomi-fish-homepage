@@ -311,15 +311,7 @@ use utf8;
 use parent ('Exporter');
 
 our @EXPORT_OK = (qw(
-    _facebook
-    _fp
-    _get_nav_block
-    _get_tr
-    _github
-    _l
-    _ontext
-    _tr
-    $r
+    get_nav_block
 ));
 
 sub _l
@@ -584,7 +576,7 @@ my %table_blocks =
     ),
 );
 
-sub _get_nav_block
+sub get_nav_block
 {
     my ($id) = @_;
 

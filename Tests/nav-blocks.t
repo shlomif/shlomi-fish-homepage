@@ -10,6 +10,7 @@ use lib './lib';
 
 use NavDataRender;
 
+use Shlomif::Homepage::NavBlocks::Renderer;
 use Shlomif::Homepage::NavBlocks;
 
 use IO::All;

@@ -1,94 +1,3 @@
-package Shlomif::Homepage::NavBlocks::Subdiv_Tr;
-
-use MooX (qw( late ));
-
-extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
-
-has 'css_class' => (is => 'ro', isa => 'Str', default => 'subdiv');
-
-package Shlomif::Homepage::NavBlocks::Master_Tr;
-
-use MooX (qw( late ));
-
-extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
-
-has 'css_class' => (is => 'ro', isa => 'Str', default => 'main_title');
-
-package Shlomif::Homepage::NavBlocks::TableBlock;
-
-use strict;
-use warnings;
-
-use utf8;
-
-use MooX (qw( late ));
-
-extends ('Shlomif::Homepage::NavBlocks::Thingy');
-
-has 'tr_s' => (is => 'ro', isa => 'ArrayRef', required => 1);
-has 'id' => (is => 'ro', isa => "Str", required => 1);
-
-sub collect_local_links
-{
-    my $self = shift;
-
-    return [ map { @{$_->collect_local_links} } @{$self->tr_s}];
-}
-
-sub render
-{
-    my ($self, $r) = @_;
-
-    return join '', map { "$_\n" }
-    sprintf(q{<div class="topical_nav_block" id="%s">}, $self->id),
-    "<table>",
-    (map { $r->render($_); } @{$self->tr_s}),
-    "</table>",
-    "</div>",
-    ;
-}
-
-1;
-
-package Shlomif::Homepage::NavBlocks::Renderer;
-
-use strict;
-use warnings;
-
-use utf8;
-
-use Carp ();
-
-use MooX (qw( late ));
-
-use CGI ();
-
-extends ('Exporter');
-
-has 'host' => (is => 'ro', isa => 'Str', required => 1);
-
-has [qw(
-    nav_menu
-)] => (is => 'ro', required => 1);
-
-sub render
-{
-    my ($self, $thingy) = @_;
-
-    return $thingy->cached_render(
-        sub {
-            return $self->_non_cached_render($thingy);
-        }
-    );
-}
-
-sub _non_cached_render
-{
-    my ($self, $thingy) = @_;
-
-    return $thingy->render($self);
-}
-
 package Shlomif::Homepage::NavBlocks;
 
 use strict;
@@ -144,6 +53,9 @@ sub _facebook
 }
 
 use Shlomif::Homepage::NavBlocks::Tr;
+use Shlomif::Homepage::NavBlocks::Subdiv_Tr;
+use Shlomif::Homepage::NavBlocks::Master_Tr;
+use Shlomif::Homepage::NavBlocks::TableBlock;
 
 sub _tr
 {

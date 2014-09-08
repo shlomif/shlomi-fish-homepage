@@ -1,76 +1,3 @@
-package Shlomif::Homepage::NavBlocks::Tr;
-
-use strict;
-use warnings;
-
-use utf8;
-
-use MooX (qw( late ));
-
-extends ('Shlomif::Homepage::NavBlocks::Thingy');
-
-has 'items' => (is => 'ro', isa => 'ArrayRef', required => 1);
-has 'title' => (is => 'ro', isa => "Str", required => 1);
-
-sub collect_local_links
-{
-    my $self = shift;
-
-    return [ map { @{$_->collect_local_links} } @{$self->items}];
-}
-
-sub render
-{
-    my ($self, $r) = @_;
-
-    return join '', map { "$_\n" }
-    "<tr>",
-    sprintf(qq{<td colspan="2"><b>%s</b></td>}, $self->title),
-    "<td>",
-    "<ul>",
-    (map { $r->render($_) } @{$self->items}),
-    "</ul>",
-    "</td>",
-    "</tr>",
-    ;
-
-}
-
-1;
-
-package Shlomif::Homepage::NavBlocks::Title_Tr;
-
-use strict;
-use warnings;
-
-use utf8;
-
-use MooX (qw( late ));
-
-extends ('Shlomif::Homepage::NavBlocks::Thingy');
-
-has 'title' => (is => 'ro', isa => "Str", required => 1);
-
-sub collect_local_links
-{
-    my $self = shift;
-
-    return [];
-}
-
-sub render
-{
-    my ($self,$r) = @_;
-
-    return join'', map { "$_\n" }
-    sprintf( q{<tr class="%s">}, $self->css_class),
-    sprintf(qq{<th colspan="3">%s</th>}, $self->title),
-    "</tr>",
-    ;
-}
-
-1;
-
 package Shlomif::Homepage::NavBlocks::Subdiv_Tr;
 
 use MooX (qw( late ));
@@ -215,6 +142,8 @@ sub _facebook
             { @_ }
         );
 }
+
+use Shlomif::Homepage::NavBlocks::Tr;
 
 sub _tr
 {

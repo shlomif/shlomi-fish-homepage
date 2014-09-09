@@ -565,16 +565,18 @@ table.visible
     // For the die to be displayed in place.
     margin-bottom: 50px
 
-.screenplay.read
+=highlight_div_frame
     border: 2pt solid darkgreen
     padding: 1em
+    margin-bottom: 2em
+    +rounded_corners(10px)
+
+.screenplay.read
+    +highlight_div_frame
 
 div.abstract
     &.towtf , &.pope
-        border: 2pt solid darkgreen
-        padding: 1em
-        margin-bottom: 2em
-        +rounded_corners(10px)
+        +highlight_div_frame
 
 .hebrew
     .story_logo

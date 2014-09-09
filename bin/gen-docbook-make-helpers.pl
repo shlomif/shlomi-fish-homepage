@@ -204,6 +204,12 @@ my @documents =
         db_ver => 5,
     },
     {
+        id => "A-SummerNSA-Reading",
+        path => "philosophy/SummerNSA/A-SummerNSA-Reading/",
+        base => "A-hashtag-SummerNSA-s-Reading",
+        db_ver => 5,
+    },
+    {
         id => "human-hacking-field-guide",
         path =>  "humour/human-hacking",
         base => "human-hacking-field-guide",

@@ -17,7 +17,7 @@
 
 <div class="main_text">
 
-<define-tag picture_tag>
+<define-tag old_picture_tag>
 
 <preserve alt class title />
 <set-var %attributes />
@@ -32,12 +32,27 @@ title="<get-var title />"
 
 </define-tag>
 
+<define-tag picture_tag>
+
+<preserve alt class title />
+<set-var %attributes />
+
+<a href="https://www.flickr.com/photos/shlomif/14537790923/in/photostream/"
+title="<get-var title />"
+><img src="$(ROOT)/images/shlomif-sglau-nsa-shirt.jpg" alt="<get-var alt />"
+ class="self_picture <get-var class />"
+ /></a>
+
+<restore alt class title />
+
+</define-tag>
+
 <en>
-<picture_tag alt="Picture of Shlomi Fish" class="eng" title="Shlomi Fish sitting next to the computer - click for the image on Flickr" />
+<picture_tag alt="Picture of Shlomi Fish" class="eng" title="Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr" />
 </en>
 
 <he>
-<picture_tag alt="תמונה של שלומי פיש" class="heb" title="שלומי פיש יושב ליד המחשב - לחצו בשביל התמונה בפליקר" />
+<picture_tag alt="תמונה של שלומי פיש" class="heb" title="שלומי פיש לובש את חולצת ה-”סאמרסקול ב-NSA“ שלו - לחצו על התמונה לתמונה גדולה יותר בפליקר" />
 </he>
 
 <en>

@@ -547,6 +547,14 @@ sub generic_get_params
                         text => "Interviews",
                         url => "me/interviews/",
                         title => "Interviews that were conducted with me",
+                        subs =>
+                        [
+                            {
+                                text => "Reddit “Ask Me Anything”",
+                                url => "me/interviews/reddit-AMA/",
+                            },
+
+                        ],
                     },
                     {
                         text => "“Rindolf” - my nickname",

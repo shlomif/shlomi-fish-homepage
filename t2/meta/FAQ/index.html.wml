@@ -1180,6 +1180,55 @@ people do.
 
 </ol>
 
+<h3 id="why_not_https">Why is this site isn’t hosted using HTTPS/SSL?</h3>
+
+<p>
+From several reasons:
+</p>
+
+<ol>
+
+<li>
+<p>
+The site does not require registration and nothing here is can be modified
+using a web interface. As a result, HTTPS is unnecessary.
+</p>
+</li>
+
+<li>
+<p>
+https incurs some bandwidth and roundtrip overhead.
+</p>
+</li>
+
+<li>
+<p>
+https prevents pages from being cached.
+</p>
+</li>
+
+<li>
+<p>
+https requires a more capable hosting account than what I need or can
+afford to actively maintain.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/KISS_principle">Keep it simple</a>.
+</p>
+</li>
+
+<li>
+<p>
+You can mirror the site using <code>wget --mirror</code> if you care about
+"privacy".
+</p>
+</li>
+
+</ol>
+
 <h2 id="works_of_fiction">About my works of fiction.</h2>
 
 <h3 id="why_fan_fic">Why do you write mostly fan-fiction and crossovers?</h3>

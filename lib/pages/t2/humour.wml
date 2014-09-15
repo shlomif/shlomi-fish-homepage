@@ -2652,11 +2652,32 @@ Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe 
 
 </eng_header_joke>
 
+<define-tag github_captioned_image_joke endtag="required">
 
+<preserve alt header id img_style repo_href src />
+<set-var %attributes />
 
-<eng_header_joke id="holocaust_denial" header="Holocaust Denial">
+<eng_header_joke id="<get-var id />" header="<get-var header />">
 
-<a href="http://github.com/shlomif/Captioned-Image-Holocaust"><img src="$(ROOT)/humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”" /></a><br />
+<img src="<get-var src />" alt="<get-var alt />" <if "<get-var img_style />" "style=\"<get-var img_style />\"" /> /><br />
+
+<ul>
+<li>
+<p>
+<a href="<get-var href />">VCS Repository for the Sources</a>
+</p>
+</li>
+</ul>
+
+%body
+
+</eng_header_joke>
+
+<restore alt header id img_style repo_href src />
+
+</define-tag> ;;; github_captioned_image_joke
+
+<github_captioned_image_joke id="holocaust_denial" header="Holocaust Denial" repo_href="http://github.com/shlomif/Captioned-Image-Holocaust" src="$(ROOT)/humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”">
 
 <quote>
 <p>
@@ -2706,14 +2727,9 @@ treating the acts of the Nazis as holy. ( This may be a good thing. ) This
 image is primarily intended at Israelis and Europeans as intellectual activism.
 </p>
 
-</eng_header_joke>
+</github_captioned_image_joke>
 
-
-
-
-<eng_header_joke id="pbride_philosophers" header="Have you heard of Plato? Aristotle?">
-
-<a href="http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers"><img src="$(ROOT)/humour/images/philosophers-princess-bride.svg.jpg" alt="Princess Bride + Greek Philosophers" /></a><br />
+<github_captioned_image_joke id="pbride_philosophers" header="Have you heard of Plato? Aristotle?" repo_href="http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers" src="$(ROOT)/humour/images/philosophers-princess-bride.svg.jpg" alt="Princess Bride + Greek Philosophers">
 
 <quote>
 <p>
@@ -2729,11 +2745,9 @@ recently (as of 2014) — reality T.V. show contestants, or independent music
 some modelling even back then.
 </p>
 
-</eng_header_joke>
+</github_captioned_image_joke>
 
-<eng_header_joke id="mighty_klingon_warriors" header="Mighty Klingon Warriors">
-
-<a href="https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior"><img src="$(ROOT)/humour/images/Every-mighty-Klingon-Warrior.svg.jpg" alt="Every Mighty Klingon warrior has watched Sesame Street!" /></a><br />
+<github_captioned_image_joke id="mighty_klingon_warriors" header="Mighty Klingon Warriors" repo_href="https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior" src="$(ROOT)/humour/images/Every-mighty-Klingon-Warrior.svg.jpg" alt="Every Mighty Klingon warrior has watched Sesame Street!">
 
 <quote>
 <p>
@@ -2751,20 +2765,17 @@ The Slayer</i></a>, it stuck in my mind and grew some life of its own. Here is
 rest</a> of the explanation for the grain of truth behind it.
 </p>
 
-</eng_header_joke>
+</github_captioned_image_joke>
 
 
-
-<eng_header_joke id="evolution_of_girls_w_weapons" header="Evolution of Girls with Weapons">
-
-<a href="http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons"><img src="$(ROOT)/humour/images/evolution-of-girls-with-weapons.svg.png" alt="Evolution of Girls with Weapons" style="border: 0.2em solid black; border-radius: 0.15em;" /></a><br />
+<github_captioned_image_joke id="evolution_of_girls_w_weapons" header="Evolution of Girls with Weapons" github_href="http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons" src="$(ROOT)/humour/images/evolution-of-girls-with-weapons.svg.png" alt="Evolution of Girls with Weapons" img_style="border: 0.2em solid black; border-radius: 0.15em;">
 
 <p>
 Another captioned image / info graphics with some fun at the expense of
 actresses with their most associated weapons.
 </p>
 
-</eng_header_joke>
+</github_captioned_image_joke>
 
 </div> ;;; End of aphorisms div.
 

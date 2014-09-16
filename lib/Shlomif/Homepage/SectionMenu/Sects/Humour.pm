@@ -451,6 +451,11 @@ my $humour_tree_contents =
                     url => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
                     title => "Emma Watson Getting Interviewed for a Software Developer Job",
                 },
+                {
+                    text => "Emma Watson Visit to Israel and Gaza",
+                    url => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
+                    title => "Emma Watson visiting the Gaza envelope and the Gaza strip",
+                },
             ],
         },
         {

@@ -289,6 +289,7 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL
 SCREENPLAY_DOCS_ADDITIONS = \
 	ae-interview \
 	Emma-Watson-applying-for-a-software-dev-job \
+	Emma-Watson-visit-to-Israel-and-Gaza \
 	sussman-interview \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 

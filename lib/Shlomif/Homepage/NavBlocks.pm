@@ -65,6 +65,7 @@ sub _tr
 }
 
 my $EmWatson_tech_interview = _l( inner_html => "Emma Watson Interviewing for a software developer job", path => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",);
+my $EmWatson_visit_to_Gaza = _l( inner_html => "Emma Watson visit to Israel and Gaza", path => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",);
 
 my %tr_s =
 (
@@ -96,6 +97,13 @@ my %tr_s =
         title => "EmWatson Tech Interview",
         items => [
             $EmWatson_tech_interview,
+        ],
+    ),
+    'EmWatson_visit_to_Gaza' =>
+    _tr(
+        title => "EmWatson Visit to Israel &amp; Gaza",
+        items => [
+            $EmWatson_visit_to_Gaza,
         ],
     ),
     'foss_bits' =>
@@ -233,6 +241,7 @@ my %table_blocks =
                 _get_tr('buffy_few_good'),
                 _get_tr('muppets_harry_potter'),
                 _get_tr('EmWatson_tech_job'),
+                _get_tr('EmWatson_visit_to_Gaza'),
                 _subdiv_tr(title => q{Factoids},),
                 _get_tr('EmWatson_facts'),
             ],

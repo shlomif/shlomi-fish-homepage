@@ -2322,16 +2322,43 @@ That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/
 
 </heb_header_joke>
 
-<eng_header_joke id="yo-nsa-publish-or-perish" header="Yo NSA, Publish or Perish">
+<define-tag github_captioned_image_joke endtag="required">
 
-<img src="$(ROOT)/images/nsa-publish-or-perish.jpg" alt="Yo NSA, Publish or Perish" /><br />
+<preserve alt header id img_style repo_href src />
+<set-var %attributes />
+
+<eng_header_joke id="<get-var id />" header="<get-var header />">
+
+<img src="<get-var src />" alt="<get-var alt />" <if "<get-var img_style />" "style=\"<get-var img_style />\"" /> /><br />
+
+<ul>
+<li>
+<p>
+<a href="<get-var href />">VCS Repository for the Sources</a>
+</p>
+</li>
+</ul>
+
+%body
+
+</eng_header_joke>
+
+<restore alt header id img_style repo_href src />
+
+</define-tag> ;;; github_captioned_image_joke
+
+<github_captioned_image_joke id="yo-nsa-publish-or-perish" header="Yo NSA, Publish or Perish" repo_href="http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish" src="$(ROOT)/images/nsa-publish-or-perish.jpg" alt="Yo NSA, Publish or Perish">
+
+<p>
+Also see <a href="$(ROOT)/philosophy/SummerNSA/">the #SummerNSA initiative</a>.
+</p>
 
 <p>
 Image taken from
 <a href="http://commons.wikimedia.org/wiki/File:Vitoria-University-Library-food-science-journals-4489.jpg">Wikimedia Commons</a> under CC-by-sa/GFDL.
 </p>
 
-</eng_header_joke>
+</github_captioned_image_joke>
 
 <eng_header_joke id="initial-reaction-to-Aristotle-organon" header="Initial Reaction to Aristotle’s Organon">
 
@@ -2652,30 +2679,6 @@ Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe 
 
 </eng_header_joke>
 
-<define-tag github_captioned_image_joke endtag="required">
-
-<preserve alt header id img_style repo_href src />
-<set-var %attributes />
-
-<eng_header_joke id="<get-var id />" header="<get-var header />">
-
-<img src="<get-var src />" alt="<get-var alt />" <if "<get-var img_style />" "style=\"<get-var img_style />\"" /> /><br />
-
-<ul>
-<li>
-<p>
-<a href="<get-var href />">VCS Repository for the Sources</a>
-</p>
-</li>
-</ul>
-
-%body
-
-</eng_header_joke>
-
-<restore alt header id img_style repo_href src />
-
-</define-tag> ;;; github_captioned_image_joke
 
 <github_captioned_image_joke id="holocaust_denial" header="Holocaust Denial" repo_href="http://github.com/shlomif/Captioned-Image-Holocaust" src="$(ROOT)/humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”">
 

@@ -193,6 +193,19 @@ my $humour_tree_contents =
                     ],
                 },
                 {
+                    text => "“So, who the hell is Qoheleth?”",
+                    url => "humour/So-Who-The-Hell-Is-Qoheleth/",
+                    title => "Contemplating what happened to the author of the Scroll of Ecclesiastes shortly after he wrote it.",
+                    subs =>
+                    [
+                        {
+                            text => "Ongoing Text",
+                            url => "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
                     text => "The Pope Died on Sunday",
                     url => "humour/Pope/",
                     title => "An Insane Week in the Life of a Female American Graphics Artist",

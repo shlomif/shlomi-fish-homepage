@@ -1,0 +1,13 @@
+#include '../template.wml'
+#include "stories/stories-list.wml"
+#include "Inc/nav_blocks.wml"
+
+<latemp_subject "“So who the Hell is Qoheleth?” - Ongoing Text" />
+
+<latemp_meta_desc "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." />
+
+<who_is_qoheleth_common_top_elems />
+
+<apply_screenplay_style />
+
+#include "screenplay-xml/rendered-html/So-Who-the-Hell-is-Qoheleth.html"

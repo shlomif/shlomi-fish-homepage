@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "xhtml/1.x/std/toc.wml"
 #include "lang_switch.wml"
+#include "Inc/shlomif_head_photo_tag.wml"
 
 <en>
 <latemp_subject "About Myself" />
@@ -16,36 +17,6 @@
 <lang_switch url:eng="personal.html" url:heb="personal-heb.html" />
 
 <div class="main_text">
-
-<define-tag old_picture_tag>
-
-<preserve alt class title />
-<set-var %attributes />
-
-<a href="http://www.flickr.com/photos/shlomif/8541049401/in/photostream"
-title="<get-var title />"
-><img src="$(ROOT)/images/shlomif-sea-head-shot.jpg" alt="<get-var alt />"
- class="self_picture <get-var class />"
- /></a>
-
-<restore alt class title />
-
-</define-tag>
-
-<define-tag picture_tag>
-
-<preserve alt class title />
-<set-var %attributes />
-
-<a href="https://www.flickr.com/photos/shlomif/14537790923/in/photostream/"
-title="<get-var title />"
-><img src="$(ROOT)/images/shlomif-sglau-nsa-shirt.jpg" alt="<get-var alt />"
- class="self_picture <get-var class />"
- /></a>
-
-<restore alt class title />
-
-</define-tag>
 
 <en>
 <picture_tag alt="Picture of Shlomi Fish" class="eng" title="Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr" />

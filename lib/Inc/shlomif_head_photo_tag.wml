@@ -1,0 +1,30 @@
+
+<define-tag old_picture_tag>
+
+<preserve alt class title />
+<set-var %attributes />
+
+<a href="http://www.flickr.com/photos/shlomif/8541049401/in/photostream"
+title="<get-var title />"
+><img src="$(ROOT)/images/shlomif-sea-head-shot.jpg" alt="<get-var alt />"
+ class="self_picture <get-var class />"
+ /></a>
+
+<restore alt class title />
+
+</define-tag>
+
+<define-tag picture_tag>
+
+<preserve alt class title />
+<set-var %attributes />
+
+<a href="https://www.flickr.com/photos/shlomif/14537790923/in/photostream/"
+title="<get-var title />"
+><img src="$(ROOT)/images/shlomif-sglau-nsa-shirt.jpg" alt="<get-var alt />"
+ class="self_picture <get-var class />"
+ /></a>
+
+<restore alt class title />
+
+</define-tag>

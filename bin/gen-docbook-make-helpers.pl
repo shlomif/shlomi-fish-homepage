@@ -490,6 +490,15 @@ EOF
             ],
         },
         {
+            base => "SO_WHO_THE_HELL_IS_QOHELETH",
+            github_repo => "So-Who-the-Hell-Is-Qoheleth",
+            subdir => "so-who-the-hell-is-qoheleth",
+            docs =>
+            [
+                { base =>  "So-Who-the-Hell-is-Qoheleth", suffix => "ENG", },
+            ],
+        },
+        {
             base => "BLUE_RABBIT_LOG",
             github_repo => "Blue-Rabbit-Log",
             subdir => "Blue-Rabbit-Log",

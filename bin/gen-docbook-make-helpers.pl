@@ -526,6 +526,7 @@ $(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
+$(T2_DEST)//humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
 $(T2_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \

@@ -93,7 +93,7 @@ sub output_fully_expanded_as_json
 
     my $brief_keys_json = encode_json( $brief_keys_data );
 
-    io->file('./dest/t2/_data/n.json')->utf8->print($brief_keys_json);
+    io->file('./dest/t2/_data/n.json')->print($brief_keys_json);
 
     return $verbose_keys_json;
 }

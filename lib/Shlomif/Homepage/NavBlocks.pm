@@ -85,6 +85,13 @@ my %tr_s =
             _github( url => 'http://github.com/shlomif/Buffy-a-Few-Good-Slayers',),
         ],
     ),
+    'define_zionism' =>
+    _tr(
+        title => "Define Zionism",
+        items => [
+            _fp( path => "philosophy/politics/define-zionism/",),
+        ],
+    ),
     'EmWatson_facts' =>
     _tr(
         title => "“Facts”",
@@ -180,6 +187,15 @@ my %tr_s =
             _facebook( url => 'http://www.facebook.com/SummerNSA',),
         ],
     ),
+    'the_enemy' =>
+    _tr(
+        title => "The Enemy",
+        items => [
+            _fp( path => "humour/TheEnemy/",),
+            _ontext( path => "humour/TheEnemy/The-Enemy-English-v7.html",),
+            _github( url => 'http://bitbucket.org/shlomif/the-enemy',),
+        ],
+    ),
     'xkcd_facts' =>
     _tr(
         title => "“Facts”",
@@ -260,6 +276,21 @@ my %table_blocks =
                 _get_tr('foss_facts'),
                 _subdiv_tr(title => q{Bits},),
                 _get_tr('foss_bits'),
+            ],
+        },
+    ),
+    'politics' =>
+    Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id => 'politics_nav_block',
+            tr_s =>
+            [
+                _master_tr(title => q{Political Essays and Fiction},),
+                _subdiv_tr(title => q{Middle East Politics},),
+                _get_tr('the_enemy'),
+                _get_tr('define_zionism'),
+                _subdiv_tr(title => q{#SummerNSA}),
+                _get_tr('summer_nsa'),
             ],
         },
     ),

@@ -147,6 +147,12 @@ EOF
             logo_class => "who_is_qoheleth",
             logo_id => "who_is_qoheleth_logo",
             logo_src => "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
+            abstract => <<'EOF',
+<p class="who_is_qoheleth abstract">
+An illustrated screenplay about what happened to the author of the scroll of
+Ecclesiastes/Qoheleth shortly after writing it.
+</p>
+EOF
         },
         {
             id => 'muppets_show_tni',

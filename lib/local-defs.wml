@@ -9,7 +9,7 @@
 <set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
 <:{
-    use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+    use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 }:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <:{
@@ -38,11 +38,7 @@
 <define-tag latemp_get_nav_menu_html>
 <:{
 
-{
-    _wrap_as_utf8( sub {
-        print join("\n", @$nav_html);
-    });
-}
+_print_utf8( join("\n", @$nav_html) );
 
 }:>
 </define-tag>
@@ -70,9 +66,7 @@
     {
         push @params, ('with_accesskey' => $with_accesskey);
     }
-    _wrap_as_utf8(sub {
-        print $nav_links_renderer->get_total_html(@params);
-    });
+    _print_utf8($nav_links_renderer->get_total_html(@params));
 }:>
 <restore with_accesskey />
 </define-tag>

@@ -19,17 +19,9 @@ use Shlomif::Homepage::NavBlocks (qw(
         return $nav_block_renderer->render(get_nav_block($id));
     }
 
-    sub _utf8_print
-    {
-        my @text = @_;
-        _wrap_as_utf8 (sub {
-            print @text;
-        });
-    }
-
     sub _print_nav_block
     {
-        _utf8_print( _render_nav_block(@_) );
+        _print_utf8( _render_nav_block(@_) );
 
         return;
     }

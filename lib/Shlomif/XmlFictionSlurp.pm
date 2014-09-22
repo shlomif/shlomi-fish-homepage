@@ -5,7 +5,7 @@ use warnings;
 
 use IO::All;
 
-use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub my_slurp
 {
@@ -18,12 +18,7 @@ sub my_slurp
 
     $text =~ s{\bindex\b}{$index_id}g;
 
-    _wrap_as_utf8(
-        sub
-        {
-            print $text;
-        }
-    );
+    _print_utf8( $text );
 
     return;
 }

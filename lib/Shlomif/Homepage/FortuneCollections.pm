@@ -50,7 +50,7 @@ use JSON::MaybeXS (qw(encode_json));
 
 use IO::All;
 
-use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub _init_fortune
 {
@@ -101,10 +101,7 @@ sub print_single_fortune_record_toc_entry
     my $id = $r->id;
     my $desc = $r->desc;
 
-    _wrap_as_utf8(
-        sub
-        {
-            print <<"EOF";
+    _print_utf8( <<"EOF" );
 <li>
 <p>
 <a href="$id.html"><b>$id</b></a>
@@ -113,8 +110,6 @@ $desc
 </p>
 </li>
 EOF
-        },
-    );
 
     return;
 }

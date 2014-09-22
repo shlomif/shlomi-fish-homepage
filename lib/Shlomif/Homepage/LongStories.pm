@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use Shlomif::WrapAsUtf8 qw(_wrap_as_utf8);
+use Shlomif::WrapAsUtf8 qw(_print_utf8);
 
 use Shlomif::Homepage::LongStories::Story;
 
@@ -68,10 +68,7 @@ sub render_tagline
 {
     my ($class, $id) = @_;
 
-    _wrap_as_utf8 (sub {
-            print qq#<h2 id="tagline">@{[$class->get_tagline($id)]}</h2>\n#;
-        },
-    );
+    _print_utf8 (qq#<h2 id="tagline">@{[$class->get_tagline($id)]}</h2>\n#);
 
     return;
 }

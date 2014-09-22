@@ -5,7 +5,6 @@ use warnings;
 
 use MooX qw/late/;
 
-has 'id' => (is => 'ro', isa => 'Str', required => 1);
-has 'tagline' => (is => 'ro', isa => 'Str', required => 1);
+has ['id', 'logo_alt', 'logo_class', 'logo_id', 'logo_src', 'tagline'], => (is => 'ro', isa => 'Str', required => 1);
 
 1;

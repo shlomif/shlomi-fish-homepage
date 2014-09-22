@@ -1,3 +1,7 @@
+<:
+use Shlomif::Homepage::LongStories;
+:>
+
 <define-tag tagline>
 <preserve text />
 <set-var %attributes />
@@ -248,9 +252,12 @@ Ecclesiastes/Qoheleth shortly after writing it.
 <img id="who_is_qoheleth_logo" src="$(ROOT)/humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png" alt="“So who the Hell is Qoheleth?” Logo" class="story_logo who_is_qoheleth" />
 </define-tag>
 
+
 <define-tag we_the_living_dead_common_top_elems>
 
-<tagline text="From perfection to imperfection; from finity to infinity" />
+<:
+Shlomif::Homepage::LongStories->render_tagline('we_the_living_dead');
+:>
 
 <we_the_living_dead_logo />
 
@@ -262,7 +269,10 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag selina_mandrake_common_top_elems>
 
-<tagline text="Caught between Post-modernism and the New Age" />
+<:
+Shlomif::Homepage::LongStories->render_tagline('selina_mandrake');
+:>
+
 
 <selina_mandrake_logo />
 
@@ -276,7 +286,9 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag summerschool_at_the_nsa_common_top_elems>
 
-<tagline text="As the sling shoots, grown men will cry" />
+<:
+Shlomif::Homepage::LongStories->render_tagline('summerschool_at_the_nsa');
+:>
 
 <summernsa_logo />
 
@@ -290,7 +302,9 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag buffy_a_few_good_slayers_common_top_elems>
 
-<tagline text="I learned more from my students than I have from my teachers." />
+<:
+Shlomif::Homepage::LongStories->render_tagline('buffy_a_few_good_slayers');
+:>
 
 <buffy_a_few_good_slayers_logo />
 
@@ -304,7 +318,9 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag who_is_qoheleth_common_top_elems>
 
-<tagline text="What had been, is what will be. There is nothing new under the sun." />
+<:
+Shlomif::Homepage::LongStories->render_tagline('who_is_qoheleth');
+:>
 
 <who_is_qoheleth_logo />
 
@@ -318,7 +334,9 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag muppets_show_tni_common_top_elems>
 
-<tagline text="Muppets!" />
+<:
+Shlomif::Homepage::LongStories->render_tagline('muppets_show_tni');
+:>
 
 <muppets_show_tni_logo />
 
@@ -332,7 +350,9 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <define-tag tow_the_fountainhead_common_top_elems>
 
-<tagline text="<i>The Fountainhead</i> may have been good enough in the 60’s, but we’re in the Information Age now" />
+<:
+Shlomif::Homepage::LongStories->render_tagline('tow_the_fountainhead');
+:>
 
 <div class="towtf abstract">
 

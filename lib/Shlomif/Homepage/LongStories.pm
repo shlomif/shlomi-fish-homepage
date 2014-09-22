@@ -112,6 +112,25 @@ EOF
             logo_class => "summernsa",
             logo_id => "summernsa_logo",
             logo_src => "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
+            abstract => <<'EOF',
+<p class="summernsa abstract">
+The Hollywood actresses
+<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah
+Michelle Gellar</a> (of
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy</a>
+fame) and
+<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> (of
+<a href="http://en.wikipedia.org/wiki/Xkcd">xkcd</a> notability)
+conspire to <b>kick the ass</b> of the
+<a href="https://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>
+(= the United States government’s National Security Agency), while using
+special warfare that is completely non-violent and <b>non-destructive</b>. Two
+attractive, intelligent, and resourceful women against a large, <b>inefficient</b>,
+federal government organisation whose estimated annual budget is
+several times their combined worth. Does the NSA actually stand
+a chance?
+</p>
+EOF
         },
         {
             id => 'buffy_a_few_good_slayers',

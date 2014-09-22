@@ -35,24 +35,6 @@ ruthless Grammar Nazis.
 
 </define-tag>
 
-<define-tag summerschool_at_the_nsa_abstract>
-The Hollywood actresses
-<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah
-Michelle Gellar</a> (of
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy</a>
-fame) and
-<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> (of
-<a href="http://en.wikipedia.org/wiki/Xkcd">xkcd</a> notability)
-conspire to <b>kick the ass</b> of the
-<a href="https://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>
-(= the United States government’s National Security Agency), while using
-special warfare that is completely non-violent and <b>non-destructive</b>. Two
-attractive, intelligent, and resourceful women against a large, <b>inefficient</b>,
-federal government organisation whose estimated annual budget is
-several times their combined worth. Does the NSA actually stand
-a chance?
-</define-tag>
-
 <define-tag buffy_a_few_good_slayers_abstract>
 The Demonic underworld is held under tight control in a forked version of the
 <a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
@@ -186,9 +168,7 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <h2 id="abstract">Abstract</h2>
 
-<p class="summernsa abstract">
-<summerschool_at_the_nsa_abstract />
-</p>
+<: Shlomif::Homepage::LongStories->render_abstract('summerschool_at_the_nsa'); :>
 
 </define-tag>
 
@@ -354,9 +334,7 @@ text="Summerschool at the NSA - A Screenplay">
 
 <: Shlomif::Homepage::LongStories->render_logo('summerschool_at_the_nsa'); :>
 
-<p>
-<summerschool_at_the_nsa_abstract />
-</p>
+<: Shlomif::Homepage::LongStories->render_abstract('summerschool_at_the_nsa'); :>
 
 <p>
 This screenplay is surrealistic realism and takes place in

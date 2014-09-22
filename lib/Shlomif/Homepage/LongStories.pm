@@ -28,6 +28,31 @@ my @_Stories =
             logo_class => "towtf",
             logo_id => "tow_the_fountainhead_logo",
             logo_src => "humour/TOWTF/images/towtf-logo-200px.jpg",
+            abstract => <<'EOF',
+<p>
+A parody of Ayn Rand’s novel,
+<a href="http://en.wikipedia.org/wiki/The_Fountainhead"><i>The
+Fountainhead</i></a>, modelled around a two part episode of
+the Television sitcom show
+<a href="http://en.wikipedia.org/wiki/Friends"><i>Friends</i></a>.
+Somewhat unhappy with the original book, the six friends in the show role-play
+their own version of <i>The Fountainhead</i>, while trying to improve upon it.
+Will they succeed?
+</p>
+
+<p>
+What was the <b>photo</b> of the Parthenon <b>replaced</b> with?<br />
+Why was <b>Chandler</b> happy to play Peter Keating?<br />
+Which element is featured in every second-rate <b>romantic novel</b>?<br />
+Which piece of advice did <b>Toohey</b> give Dominique Francon?<br />
+Why did <b>cruising</b> with Gail Wynand turn out to be a <b>bad idea</b>?<br />
+And who were the <b>bad</b> guys in the story?
+</p>
+
+<p>
+Read the screenplays to find out.
+</p>
+EOF
         },
         {
             id => 'hhfg',
@@ -45,6 +70,22 @@ my @_Stories =
             logo_class => "st_wtld",
             logo_id => "we_the_living_dead_logo",
             logo_src => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
+            abstract => <<'EOF',
+<p>
+In this fan episode of the Television show
+<a href="http://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine"><i>Star Trek: Deep Space Nine</i></a>,
+we discover the true essence of the Q Continuum, and meet
+some “living dead”: conscious beings (including humans) who reportedly died,
+but actually were saved and still live a prosperous life some place
+else in the universe, as well as “vampires”: individuals who never died and
+have instead remained alive since they were born.
+</p>
+
+<p>
+A Star Trek episode to end all Star Trek episodes, (and, more
+generally - story to end all stories).
+</p>
+EOF
         },
         {
             id => 'selina_mandrake',
@@ -116,11 +157,20 @@ sub render_tagline
     return;
 }
 
+sub render_abstract
+{
+    my ($class, $id) = @_;
+
+    _print_utf8($class->_get_story($id)->abstract || die "No abstract");
+
+    return;
+}
+
 sub render_logo
 {
     my ($class, $id) = @_;
 
-    my $o = $_Stories_by_id{$id};
+    my $o = $class->_get_story($id);
 
     _print_utf8(
         sprintf(qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,

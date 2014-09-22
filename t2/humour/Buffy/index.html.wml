@@ -14,7 +14,7 @@ This page contains a list of Buffy fan‐fiction by Shlomi Fish.
 <h3 id="selina_mandrake"><a href="$(ROOT)/humour/Selina-Mandrake/"><i>Selina
 Mandrake — The Slayer</i></a></h3>
 
-<selina_mandrake_abstract />
+<: Shlomif::Homepage::LongStories->render_abstract('selina_mandrake'); :>
 
 <h3 id="a_few_good_slayers"><a href="A-Few-Good-Slayers/"><i>Buffy: a Few
 Good Slayers</i></a></h3>

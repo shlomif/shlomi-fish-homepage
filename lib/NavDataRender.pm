@@ -12,7 +12,7 @@ use CGI qw();
 use URI::Escape qw(uri_escape);
 use MyNavLinks;
 
-use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub nav_data_render
 {
@@ -68,13 +68,12 @@ sub render_breadcrumbs_trail_unconditionally
             $component->label() . "</a>";
     };
     {
-        _wrap_as_utf8( sub {
-            print join(" → ",
+        _print_utf8( join(" → ",
                 (map
-                 { $render_leading_path_component->($_) }
-                 @$total_leading_path
-                ));
-        });
+                    { $render_leading_path_component->($_) }
+                    @$total_leading_path
+                ))
+        );
     }
 
     return;
@@ -93,11 +92,7 @@ sub render_html_head_nav_links
         my $url = CGI::escapeHTML($val->direct_url());
         my $title = $val->title() || '';
 
-        _wrap_as_utf8(
-            sub {
-                print qq{<link rel="$key" href="$url" title="$title" />\n};
-            }
-        );
+        _print_utf8(qq{<link rel="$key" href="$url" title="$title" />\n});
     }
 
     return;

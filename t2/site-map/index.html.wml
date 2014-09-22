@@ -8,9 +8,7 @@
 use strict;
 use warnings;
 
-_wrap_as_utf8 (sub {
-print (map { "$_\n" } @{$shlomif_main_expanded_nav_bar->gen_site_map()});
-});
+_print_utf8( map { "$_\n" } @{$shlomif_main_expanded_nav_bar->gen_site_map()} );
 }:>
 </div>
 

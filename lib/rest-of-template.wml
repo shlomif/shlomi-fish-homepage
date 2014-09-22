@@ -471,11 +471,7 @@ for collecting money</a> for my works of fiction.</p>
 
     init_section_nav_menu();
 
-    {
-        _wrap_as_utf8 (sub {
-            print $section_nav_menu->get_html();
-        });
-    }
+    _print_utf8($section_nav_menu->get_html());
 }:>
 </section_nav_menu_elements>
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">

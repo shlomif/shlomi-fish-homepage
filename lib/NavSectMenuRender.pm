@@ -11,8 +11,6 @@ use HTML::Widgets::NavMenu::JQueryTreeView;
 use CGI qw();
 use MyNavLinks;
 
-use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
-
 use MySectNavData;
 
 use vars (qw($section_nav_menu));

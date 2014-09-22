@@ -9,7 +9,7 @@ use MooX (qw( late ));
 
 use DateTime;
 
-use Shlomif::WrapAsUtf8 (qw(_wrap_as_utf8));
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 has 'dir' => (is => 'ro', isa => 'Str', default =>
     sub {
@@ -283,12 +283,7 @@ sub _printy
 {
     my ($class, $meth) = @_;
 
-    _wrap_as_utf8(
-        sub {
-            my $news = $class->new();
-            print $news->$meth();
-        },
-    );
+    _print_utf8($class->new->$meth);
 
     return;
 }

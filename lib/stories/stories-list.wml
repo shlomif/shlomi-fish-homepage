@@ -224,35 +224,6 @@ Ecclesiastes/Qoheleth shortly after writing it.
 <img id="tow_the_fountainhead_logo" src="$(ROOT)/humour/TOWTF/images/towtf-logo-200px.jpg" alt="The One With The Fountainhead Logo" class="story_logo towtf" />
 </define-tag>
 
-<define-tag muppets_show_tni_logo>
-<img id="muppets_show_tni_logo" src="$(ROOT)/humour/Muppets-Show-TNI/images/Muppet-Show-TNI-Logo--take1.svg.png" alt="The Muppets Show TNI" class="story_logo muppets" />
-</define-tag>
-
-<define-tag we_the_living_dead_logo>
-<img id="we_the_living_dead_logo" src="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png" alt="Fiery Q" class="story_logo st_wtld" />
-</define-tag>
-
-<define-tag selina_mandrake_logo>
-<img id="selina_mandrake_logo" src="$(ROOT)/humour/Selina-Mandrake/images/Green-d10-dice.png" alt="1d10 die" class="story_logo selina" />
-</define-tag>
-
-<define-tag hhfg_logo>
-<img id="hhfg_logo" src="$(ROOT)/humour/human-hacking/images/hhfg-logo-small.png" alt="Human Hacking Field Guide Logo" class="story_logo hhfg" />
-</define-tag>
-
-<define-tag summernsa_logo>
-<img id="summernsa_logo" src="$(ROOT)/humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" class="story_logo summernsa" />
-</define-tag>
-
-<define-tag buffy_a_few_good_slayers_logo>
-<img id="buffy_a_few_good_slayers_logo" src="$(ROOT)/humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png" alt="Buffy - a Few Good Slayers Logo" class="story_logo buffy_few_good" />
-</define-tag>
-
-<define-tag who_is_qoheleth_logo>
-<img id="who_is_qoheleth_logo" src="$(ROOT)/humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png" alt="“So who the Hell is Qoheleth?” Logo" class="story_logo who_is_qoheleth" />
-</define-tag>
-
-
 <define-tag we_the_living_dead_common_top_elems>
 
 <:
@@ -422,7 +393,7 @@ text="The One with the Fountainhead">
 <humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
 text="The Human Hacking Field Guide">
 
-<hhfg_logo />
+<: Shlomif::Homepage::LongStories->render_logo('hhfg'); :>
 
 <p>
 A story about teenagers in Los Angeles, California, around 2005, who are
@@ -437,7 +408,7 @@ unlikely, but much more experienced, female software hacker.
 <humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
 text="Star Trek: We the Living Dead">
 
-<we_the_living_dead_logo />
+<: Shlomif::Homepage::LongStories->render_logo('we_the_living_dead'); :>
 
 <we_the_living_dead_abstract />
 
@@ -446,7 +417,7 @@ text="Star Trek: We the Living Dead">
 <humour_story tag="h3" id="selina-mandrake" humour_href="Selina-Mandrake/"
 text="Selina Mandrake - The Slayer (Buffy Parody)">
 
-<selina_mandrake_logo />
+<: Shlomif::Homepage::LongStories->render_logo('selina_mandrake'); :>
 
 <p>
 <selina_mandrake_abstract />
@@ -464,7 +435,7 @@ other sources, is still under work, but is already in a usable state.
 <humour_story tag="h3" id="summerschool-at-the-nsa" humour_href="Summerschool-at-the-NSA/"
 text="Summerschool at the NSA - A Screenplay">
 
-<summernsa_logo />
+<: Shlomif::Homepage::LongStories->render_logo('summerschool_at_the_nsa'); :>
 
 <p>
 <summerschool_at_the_nsa_abstract />
@@ -486,7 +457,7 @@ Shrugged</i></a>
 <humour_story tag="h3" id="buffy-few-good" humour_href="Buffy/A-Few-Good-Slayers/"
 text="Buffy: a Few Good Slayers - A Screenplay">
 
-<buffy_a_few_good_slayers_logo />
+<: Shlomif::Homepage::LongStories->render_logo('buffy_a_few_good_slayers'); :>
 
 <p>
 <buffy_a_few_good_slayers_abstract />
@@ -497,7 +468,7 @@ text="Buffy: a Few Good Slayers - A Screenplay">
 <humour_story tag="h3" id="muppets-show-TNI" humour_href="Muppets-Show-TNI/"
 text="The Muppets’ Show - The New Incarnation">
 
-<muppets_show_tni_logo />
+<: Shlomif::Homepage::LongStories->render_logo('muppets_show_tni'); :>
 
 <p>
 <muppets_show_tni_abstract />
@@ -508,7 +479,7 @@ text="The Muppets’ Show - The New Incarnation">
 <humour_story tag="h3" id="who-is-qoheleth" humour_href="So-Who-The-Hell-Is-Qoheleth"
 text="“So who the Hell is Qoheleth?”">
 
-<who_is_qoheleth_logo />
+<: Shlomif::Homepage::LongStories->render_logo('who_is_qoheleth'); :>
 
 <p>
 <who_is_qoheleth_abstract />

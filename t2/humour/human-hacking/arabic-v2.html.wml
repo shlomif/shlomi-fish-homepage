@@ -16,7 +16,7 @@
 
 </div>
 
-<hhfg_logo />
+<: Shlomif::Homepage::LongStories->render_logo('hhfg'); :>
 
 <h2 id="text">The Text</h2>
 

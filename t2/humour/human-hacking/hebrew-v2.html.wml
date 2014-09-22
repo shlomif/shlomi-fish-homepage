@@ -9,7 +9,7 @@
 <latemp_subject "מדריך השדה לשפצור אנשים" />
 <latemp_meta_desc "מדריך השדה לשפצור אנשים - סיפור על בני-נוער בלוס אנג'לס של שנת 2005 שמתעסקים הרבה בפיתוח קוד פתוח." />
 
-<hhfg_logo />
+<: Shlomif::Homepage::LongStories->render_logo('hhfg'); :>
 
 <toc_div lang="he" />
 

@@ -12,7 +12,7 @@
 Shlomif::Homepage::LongStories->render_tagline('hhfg');
 :>
 
-<hhfg_logo />
+<: Shlomif::Homepage::LongStories->render_logo('hhfg'); :>
 
 <p>
 Jennifer is a trendy and popular high school senior who is living and

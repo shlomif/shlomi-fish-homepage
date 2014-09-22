@@ -35,19 +35,6 @@ ruthless Grammar Nazis.
 
 </define-tag>
 
-<define-tag selina_mandrake_abstract>
-
-<p class="selina abstract">
-A geeky Anglo-American girl in her high school senior year in 2011
-California, finds out that she is none other than <b>The Slayer</b>,
-a legendary heroine who is destined to slay many notable vampires and demons,
-culminating in none other than The Master, the vampire with the oldest
-soul. See how she manages to do so, despite being completely non-violent, and
-even supportive of the demons she encounters.
-</p>
-
-</define-tag>
-
 <define-tag summerschool_at_the_nsa_abstract>
 The Hollywood actresses
 <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah
@@ -189,7 +176,7 @@ Ecclesiastes/Qoheleth shortly after writing it.
 
 <h2 id="abstract">Abstract</h2>
 
-<selina_mandrake_abstract />
+<: Shlomif::Homepage::LongStories->render_abstract('selina_mandrake'); :>
 
 </define-tag>
 
@@ -351,7 +338,7 @@ text="Selina Mandrake - The Slayer (Buffy Parody)">
 
 <: Shlomif::Homepage::LongStories->render_logo('selina_mandrake'); :>
 
-<selina_mandrake_abstract />
+<: Shlomif::Homepage::LongStories->render_abstract('selina_mandrake'); :>
 
 <p>
 This screenplay, a parody and reflection on

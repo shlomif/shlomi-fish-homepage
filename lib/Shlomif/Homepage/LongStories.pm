@@ -94,6 +94,16 @@ EOF
             logo_class => "selina",
             logo_id => "selina_mandrake_logo",
             logo_src => "humour/Selina-Mandrake/images/Green-d10-dice.png",
+            abstract => <<'EOF',
+<p class="selina abstract">
+A geeky Anglo-American girl in her high school senior year in 2011
+California, finds out that she is none other than <b>The Slayer</b>,
+a legendary heroine who is destined to slay many notable vampires and demons,
+culminating in none other than The Master, the vampire with the oldest
+soul. See how she manages to do so, despite being completely non-violent, and
+even supportive of the demons she encounters.
+</p>
+EOF
         },
         {
             id => 'summerschool_at_the_nsa',

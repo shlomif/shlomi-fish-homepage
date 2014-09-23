@@ -249,8 +249,7 @@ irrationality guiding political bodies.
 <humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
 text="The One with the Fountainhead">
 
-<: Shlomif::Homepage::LongStories->render_logo('tow_the_fountainhead'); :>
-<: Shlomif::Homepage::LongStories->render_abstract('tow_the_fountainhead'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('tow_the_fountainhead'); :>
 
 </humour_story>
 
@@ -272,18 +271,14 @@ unlikely, but much more experienced, female software hacker.
 <humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
 text="Star Trek: We the Living Dead">
 
-<: Shlomif::Homepage::LongStories->render_logo('we_the_living_dead'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('we_the_living_dead'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('we_the_living_dead'); :>
 
 </humour_story>
 
 <humour_story tag="h3" id="selina-mandrake" humour_href="Selina-Mandrake/"
 text="Selina Mandrake - The Slayer (Buffy Parody)">
 
-<: Shlomif::Homepage::LongStories->render_logo('selina_mandrake'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('selina_mandrake'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('selina_mandrake'); :>
 
 <p>
 This screenplay, a parody and reflection on
@@ -297,9 +292,7 @@ other sources, is still under work, but is already in a usable state.
 <humour_story tag="h3" id="summerschool-at-the-nsa" humour_href="Summerschool-at-the-NSA/"
 text="Summerschool at the NSA - A Screenplay">
 
-<: Shlomif::Homepage::LongStories->render_logo('summerschool_at_the_nsa'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('summerschool_at_the_nsa'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('summerschool_at_the_nsa'); :>
 
 <p>
 This screenplay is surrealistic realism and takes place in
@@ -317,27 +310,21 @@ Shrugged</i></a>
 <humour_story tag="h3" id="buffy-few-good" humour_href="Buffy/A-Few-Good-Slayers/"
 text="Buffy: a Few Good Slayers - A Screenplay">
 
-<: Shlomif::Homepage::LongStories->render_logo('buffy_a_few_good_slayers'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('buffy_a_few_good_slayers'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('buffy_a_few_good_slayers'); :>
 
 </humour_story>
 
 <humour_story tag="h3" id="muppets-show-TNI" humour_href="Muppets-Show-TNI/"
 text="The Muppets’ Show - The New Incarnation">
 
-<: Shlomif::Homepage::LongStories->render_logo('muppets_show_tni'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('muppets_show_tni'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('muppets_show_tni'); :>
 
 </humour_story>
 
 <humour_story tag="h3" id="who-is-qoheleth" humour_href="So-Who-The-Hell-Is-Qoheleth"
 text="“So who the Hell is Qoheleth?”">
 
-<: Shlomif::Homepage::LongStories->render_logo('who_is_qoheleth'); :>
-
-<: Shlomif::Homepage::LongStories->render_abstract('who_is_qoheleth'); :>
+<: Shlomif::Homepage::LongStories->render_list_items('who_is_qoheleth'); :>
 
 </humour_story>
 

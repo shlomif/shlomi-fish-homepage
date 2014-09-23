@@ -277,5 +277,15 @@ sub render_1
     return;
 }
 
+sub render_list_items
+{
+    my ($class, $id) = @_;
+
+    $class->render_logo($id);
+    $class->render_abstract($id);
+
+    return;
+}
+
 1;
 

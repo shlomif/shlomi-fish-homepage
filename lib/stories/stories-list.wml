@@ -172,48 +172,12 @@ irrationality guiding political bodies.
 </humour_story>
 
 <:
-Shlomif::Homepage::LongStories->render_story_entry('tow_the_fountainhead','h3',);
-Shlomif::Homepage::LongStories->render_story_entry('hhfg','h3',);
+Shlomif::Homepage::LongStories->render_story_entry('tow_the_fountainhead', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('hhfg', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('we_the_living_dead', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('selina_mandrake', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('summerschool_at_the_nsa', 'h3',);
 :>
-
-<humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
-text="Star Trek: We the Living Dead">
-
-<: Shlomif::Homepage::LongStories->render_list_items('we_the_living_dead'); :>
-
-</humour_story>
-
-<humour_story tag="h3" id="selina-mandrake" humour_href="Selina-Mandrake/"
-text="Selina Mandrake - The Slayer (Buffy Parody)">
-
-<: Shlomif::Homepage::LongStories->render_list_items('selina_mandrake'); :>
-
-<p>
-This screenplay, a parody and reflection on
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
-Vampire Slayer</a> (both the movie and the show) and inspired by many
-other sources, is still under work, but is already in a usable state.
-</p>
-
-</humour_story>
-
-<humour_story tag="h3" id="summerschool-at-the-nsa" humour_href="Summerschool-at-the-NSA/"
-text="Summerschool at the NSA - A Screenplay">
-
-<: Shlomif::Homepage::LongStories->render_list_items('summerschool_at_the_nsa'); :>
-
-<p>
-This screenplay is surrealistic realism and takes place in
-April 2013. Very farfetched, but could happen.
-</p>
-
-<p>
-I see it as a reflection and a modernisation of Ayn Rand’s novel
-<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas
-Shrugged</i></a>
-</p>
-
-</humour_story>
 
 <humour_story tag="h3" id="buffy-few-good" humour_href="Buffy/A-Few-Good-Slayers/"
 text="Buffy: a Few Good Slayers - A Screenplay">

@@ -88,6 +88,9 @@ EOF
             logo_class => "st_wtld",
             logo_id => "we_the_living_dead_logo",
             logo_src => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
+            entry_id => "we-the-living-dead",
+            entry_text => "Star Trek: We the Living Dead",
+            href => "Star-Trek/We-the-Living-Dead/",
             abstract => <<'EOF',
 <p>
 In this fan episode of the Television show
@@ -112,6 +115,11 @@ EOF
             logo_class => "selina",
             logo_id => "selina_mandrake_logo",
             logo_src => "humour/Selina-Mandrake/images/Green-d10-dice.png",
+            entry_id => "selina-mandrake",
+            entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
+            href => "Selina-Mandrake/",
+
+
             abstract => <<'EOF',
 <p class="selina abstract">
 A geeky Anglo-American girl in her high school senior year in 2011
@@ -122,6 +130,15 @@ soul. See how she manages to do so, despite being completely non-violent, and
 even supportive of the demons she encounters.
 </p>
 EOF
+            entry_extra_html => <<'EOF',
+<p>
+This screenplay, a parody and reflection on
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
+Vampire Slayer</a> (both the movie and the show) and inspired by many
+other sources, is still under work, but is already in a usable state.
+</p>
+EOF
+
         },
         {
             id => 'summerschool_at_the_nsa',
@@ -130,6 +147,11 @@ EOF
             logo_class => "summernsa",
             logo_id => "summernsa_logo",
             logo_src => "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
+            entry_id => "summerschool-at-the-nsa",
+            entry_text => "Summerschool at the NSA - A Screenplay",
+            href => "Summerschool-at-the-NSA/",
+
+
             abstract => <<'EOF',
 <p class="summernsa abstract">
 The Hollywood actresses
@@ -148,6 +170,19 @@ federal government organisation whose estimated annual budget is
 several times their combined worth. Does the NSA actually stand
 a chance?
 </p>
+EOF
+            entry_extra_html => <<'EOF',
+<p>
+This screenplay is surrealistic realism and takes place in
+April 2013. Very farfetched, but could happen.
+</p>
+
+<p>
+I see it as a reflection and a modernisation of Ayn Rand’s novel
+<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas
+Shrugged</i></a>
+</p>
+
 EOF
         },
         {
@@ -349,7 +384,10 @@ sub render_story_entry
     );
 
     $class->render_list_items($id);
-    _print_utf8(qq{</div>\n});
+    _print_utf8(
+        $o->entry_extra_html(),
+        qq{</div>\n}
+    );
 
     return;
 }

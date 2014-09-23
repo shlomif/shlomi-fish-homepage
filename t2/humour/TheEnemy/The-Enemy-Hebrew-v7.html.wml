@@ -11,9 +11,9 @@
 
 <p><b>מאת:</b> שלומי פיש </p>
 
-<h2 id="text">הטקסט של הסיפור</h2>
+<: Shlomif::Homepage::LongStories->render_common_top_elems('the_enemy'); :>
 
-<the_enemy_logo />
+<h2 id="text">הטקסט של הסיפור</h2>
 
 #include "docbook/5/rendered/The-Enemy-Hebrew-v7.xhtml"
 

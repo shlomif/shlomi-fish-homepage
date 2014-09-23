@@ -19,4 +19,4 @@ Mandrake — The Slayer</i></a></h3>
 <h3 id="a_few_good_slayers"><a href="A-Few-Good-Slayers/"><i>Buffy: a Few
 Good Slayers</i></a></h3>
 
-<buffy_a_few_good_slayers_abstract />
+<: Shlomif::Homepage::LongStories->render_abstract('buffy_a_few_good_slayers'); :>

@@ -171,14 +171,10 @@ irrationality guiding political bodies.
 
 </humour_story>
 
-<: Shlomif::Homepage::LongStories->render_story_entry('tow_the_fountainhead','h3',); :>
-
-<humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
-text="The Human Hacking Field Guide">
-
-<: Shlomif::Homepage::LongStories->render_list_items('hhfg'); :>
-
-</humour_story>
+<:
+Shlomif::Homepage::LongStories->render_story_entry('tow_the_fountainhead','h3',);
+Shlomif::Homepage::LongStories->render_story_entry('hhfg','h3',);
+:>
 
 <humour_story tag="h3" id="we-the-living-dead" humour_href="Star-Trek/We-the-Living-Dead/"
 text="Star Trek: We the Living Dead">

@@ -8,7 +8,7 @@
 
 <latemp_more_keywords "muppet,muppets,The Muppet Show" />
 
-<muppets_show_tni_common_top_elems />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('muppets_show_tni'); :>
 
 <h2 id="read_online">Read Online</h2>
 

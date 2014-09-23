@@ -9,7 +9,7 @@
 
 <latemp_meta_desc "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." />
 
-<who_is_qoheleth_common_top_elems />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('who_is_qoheleth'); :>
 
 <screenplay_read_online>
 <ul>

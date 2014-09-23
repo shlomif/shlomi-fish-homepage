@@ -5,7 +5,7 @@
 <latemp_subject "Summerschool at the NSA - Ongoing Text" />
 <latemp_meta_desc "Two Hollywood actresses conspire to kick the ass of the NSA, using special warfare that is completely non-violent, bringing an old Internet meme to life. Set in the Spring-Summer of 2013." />
 
-<summerschool_at_the_nsa_common_top_elems />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('summerschool_at_the_nsa'); :>
 
 <apply_screenplay_style />
 

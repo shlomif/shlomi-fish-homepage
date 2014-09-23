@@ -287,5 +287,22 @@ sub render_list_items
     return;
 }
 
+sub render_common_top_elems
+{
+    my ($class, $id) = @_;
+
+    $class->render_1($id);
+
+    _print_utf8(sprintf(qq#<div class="%s abstract">\n#, $class->_get_story($id)->logo_class));
+
+    _print_utf8(qq#<h2 id="abstract">Abstract</h2>\n#);
+
+    $class->render_abstract($id);
+
+    _print_utf8(qq{</div>\n});
+
+    return;
+}
+
 1;
 

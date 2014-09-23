@@ -10,7 +10,7 @@
 <latemp_subject "Selina Mandrake - The Slayer (Buffy Parody)" />
 <latemp_meta_desc "Selina Mandrake - The Slayer (Buffy Parody) - a geeky Anglo-American high school senior in 2011 California discovers she is none other than the legendary heroine “The Slayer”, who is destined to slay many notable demons." />
 
-<selina_mandrake_common_top_elems />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('selina_mandrake'); :>
 
 <p>
 This is a parody of the television series

@@ -175,6 +175,16 @@ EOF
             logo_class => "muppets",
             logo_id => "muppets_show_tni_logo",
             logo_src => "humour/Muppets-Show-TNI/images/Muppet-Show-TNI-Logo--take1.svg.png",
+            abstract => <<'EOF',
+<p class="muppets_show_tni abstract">
+A new incarnation of <a href="http://muppet.wikia.com/wiki/The_Muppet_Show"><b>The
+Muppets’ show</b></a>. Each show will cover a <b>theme</b> such
+as Harry Potter, or
+<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau</a> &amp;
+<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris</a> as
+ruthless Grammar Nazis.
+</p>
+EOF
         },
 
     )
@@ -210,7 +220,21 @@ sub render_abstract
 {
     my ($class, $id) = @_;
 
-    _print_utf8($class->_get_story($id)->abstract || die "No abstract");
+    my $abstract = $class->_get_story($id)->abstract || die "No abstract";
+
+    $abstract =~ s#"\$\(ROOT\)/([^"]+?/)"#
+                q{"}
+                . $::nav_bar->get_cross_host_rel_url_ref(
+                    {
+                        host => 't2',
+                        host_url => $1,
+                        url_type => 'rel',
+                        url_is_abs => 0,
+                    }
+                )
+                . q{"}
+        #eg;
+    _print_utf8($abstract);
 
     return;
 }

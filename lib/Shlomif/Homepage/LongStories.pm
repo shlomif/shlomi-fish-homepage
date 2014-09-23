@@ -273,6 +273,27 @@ Ecclesiastes/Qoheleth shortly after writing it.
 </p>
 EOF
         },
+        {
+            id => 'humanity',
+            tagline => "TODO FILL IN" ,
+            logo_alt => "Humanity Logo",
+            logo_class => "humanity",
+            logo_id => "humanity_logo",
+            logo_src => "humour/humanity/images/humanity-logo-small.png",
+            entry_id => "humanity",
+            entry_text => "Humanity",
+            href => "humour/humanity/",
+            abstract => <<'EOF',
+<p class="humanity abstract">
+Humanity is a screenplay for a movie
+that aims to be a parody about humanity and modern life in particular. It
+tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/Semitic">Semitic</a> city in
+<a href="http://en.wikipedia.org/wiki/Canaan">Canaan</a> circa the year
+500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
+(OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
+</p>
+EOF
+        },
 
     )
 );

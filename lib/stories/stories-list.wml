@@ -177,28 +177,10 @@ Shlomif::Homepage::LongStories->render_story_entry('hhfg', 'h3',);
 Shlomif::Homepage::LongStories->render_story_entry('we_the_living_dead', 'h3',);
 Shlomif::Homepage::LongStories->render_story_entry('selina_mandrake', 'h3',);
 Shlomif::Homepage::LongStories->render_story_entry('summerschool_at_the_nsa', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('buffy_a_few_good_slayers', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('muppets_show_tni', 'h3',);
+Shlomif::Homepage::LongStories->render_story_entry('who_is_qoheleth', 'h3',);
 :>
-
-<humour_story tag="h3" id="buffy-few-good" humour_href="Buffy/A-Few-Good-Slayers/"
-text="Buffy: a Few Good Slayers - A Screenplay">
-
-<: Shlomif::Homepage::LongStories->render_list_items('buffy_a_few_good_slayers'); :>
-
-</humour_story>
-
-<humour_story tag="h3" id="muppets-show-TNI" humour_href="Muppets-Show-TNI/"
-text="The Muppets’ Show - The New Incarnation">
-
-<: Shlomif::Homepage::LongStories->render_list_items('muppets_show_tni'); :>
-
-</humour_story>
-
-<humour_story tag="h3" id="who-is-qoheleth" humour_href="So-Who-The-Hell-Is-Qoheleth"
-text="“So who the Hell is Qoheleth?”">
-
-<: Shlomif::Homepage::LongStories->render_list_items('who_is_qoheleth'); :>
-
-</humour_story>
 
 <humour_story tag="h3" id="pope-died-on-sunday" humour_href="Pope"
 text="The Pope Died on Sunday">

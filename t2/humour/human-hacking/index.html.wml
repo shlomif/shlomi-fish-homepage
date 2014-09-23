@@ -8,20 +8,7 @@
 <latemp_meta_desc "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." />
 <latemp_more_keywords "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" />
 
-<: Shlomif::Homepage::LongStories->render_tagline('hhfg'); :>
-
-<: Shlomif::Homepage::LongStories->render_logo('hhfg'); :>
-
-<p>
-Jennifer is a trendy and popular high school senior who is living and
-studying in the vicinity of Los Angeles. Her best friend, Taylor, convinces her
-to try to become a developer of open source software. He puts her
-under the tutorship of a different friend of his, the female open source
-contributor Eve, who prefers to be called “Erisa”, and who is a self-conscious
-and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
-determined to learn how to become an open source developer from Erisa, but
-there are some surprises along the road.
-</p>
+<: Shlomif::Homepage::LongStories->render_common_top_elems('hhfg'); :>
 
 <define-tag old_desc>
 <p>

@@ -319,6 +319,32 @@ preliminary state.
 
 EOF
         },
+        {
+            id => 'blue_rabbit',
+            tagline => "TODO FILL IN" ,
+            logo_alt => "The Blue Rabbit Log Logo",
+            logo_class => "blue_rabbit",
+            logo_id => "blue_rabbit_logo",
+            logo_src => "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
+            entry_id => "blue-rabbit",
+            entry_text => "The Blue Rabbit Log",
+            href => "humour/Blue-Rabbit-Log/",
+            abstract => <<'EOF',
+<p>
+Screenplays for a series of crazy comedy films parodying
+<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
+Role-Playing Games</a>. Join the band of the player characters called “The
+Blue Rabbit Adventuring Company”, as they journey in the imaginary role-playing
+world, and their struggles and
+encounters with monsters, the non-player characters, their players,
+and... the Game Master! (Muahahahahaha).
+</p>
+
+<p>
+Work in progress.
+</p>
+EOF
+        },
 
     )
 );

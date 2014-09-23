@@ -139,6 +139,20 @@ EOF
             logo_class => "buffy_few_good",
             logo_id => "buffy_a_few_good_slayers_logo",
             logo_src => "humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png",
+            abstract => <<'EOF',
+<p class="buffy_few_good abstract">
+The Demonic underworld is held under tight control in a forked version of the
+<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
+the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
+ended up happier and more powerful, and men and women have equal opportunities
+when it comes to fighting Demons. A
+new class of tenth grade (sophomore) students start the three year demon
+fighting program in the scholastic year of 2014/2015 in Sunnydale High School,
+while the older Scooby Gang, who are their teachers and mentors, have to deal
+with the usual set of problems that come with being teachers, parents,
+spouses and adults.
+</p>
+EOF
         },
         {
             id => 'who_is_qoheleth',

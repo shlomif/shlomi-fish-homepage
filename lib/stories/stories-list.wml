@@ -35,19 +35,6 @@ ruthless Grammar Nazis.
 
 </define-tag>
 
-<define-tag buffy_a_few_good_slayers_abstract>
-The Demonic underworld is held under tight control in a forked version of the
-<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
-the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
-ended up happier and more powerful, and men and women have equal opportunities
-when it comes to fighting Demons. A
-new class of tenth grade (sophomore) students start the three year demon
-fighting program in the scholastic year of 2014/2015 in Sunnydale High School,
-while the older Scooby Gang, who are their teachers and mentors, have to deal
-with the usual set of problems that come with being teachers, parents,
-spouses and adults.
-</define-tag>
-
 <define-tag humanity_abstract>
 
 <p>
@@ -173,9 +160,7 @@ been written.
 
 <h2 id="abstract">Abstract</h2>
 
-<p class="buffy_few_good abstract">
-<buffy_a_few_good_slayers_abstract />
-</p>
+<: Shlomif::Homepage::LongStories->render_abstract('buffy_a_few_good_slayers'); :>
 
 </define-tag>
 
@@ -347,9 +332,7 @@ text="Buffy: a Few Good Slayers - A Screenplay">
 
 <: Shlomif::Homepage::LongStories->render_logo('buffy_a_few_good_slayers'); :>
 
-<p>
-<buffy_a_few_good_slayers_abstract />
-</p>
+<: Shlomif::Homepage::LongStories->render_abstract('buffy_a_few_good_slayers'); :>
 
 </humour_story>
 

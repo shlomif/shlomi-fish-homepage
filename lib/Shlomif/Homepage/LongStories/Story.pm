@@ -10,7 +10,10 @@ has [
     'tagline',
 ] => (is => 'ro', isa => 'Str', required => 1);
 
-has ['entry_id', 'entry_text', 'href'
+has ['entry_id', 'entry_text', 'href',
 ] => (is => 'ro', isa => 'Str',);
+
+has ['entry_extra_html',
+] => (is => 'ro', isa => 'Str', default => q{},);
 
 1;

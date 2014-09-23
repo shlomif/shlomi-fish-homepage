@@ -61,6 +61,18 @@ EOF
             logo_class => "hhfg",
             logo_id => "hhfg_logo",
             logo_src => "humour/human-hacking/images/hhfg-logo-small.png",
+            abstract => <<'EOF',
+<p class="hhfg abstract">
+Jennifer is a trendy and popular high school senior who is living and
+studying in the vicinity of Los Angeles. Her best friend, Taylor, convinces her
+to try to become a developer of open source software. He puts her
+under the tutorship of a different friend of his, the female open source
+contributor Eve, who prefers to be called “Erisa”, and who is a self-conscious
+and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
+determined to learn how to become an open source developer from Erisa, but
+there are some surprises along the road.
+</p>
+EOF
         },
         {
             id => 'we_the_living_dead',

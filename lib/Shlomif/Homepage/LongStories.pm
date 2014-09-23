@@ -28,6 +28,9 @@ my @_Stories =
             logo_class => "towtf",
             logo_id => "tow_the_fountainhead_logo",
             logo_src => "humour/TOWTF/images/towtf-logo-200px.jpg",
+            entry_id => "fountainhead",
+            entry_text => "The One with the Fountainhead",
+            href => "TOWTF/",
             abstract => <<'EOF',
 <p>
 A parody of Ayn Rand’s novel,
@@ -311,6 +314,38 @@ sub render_common_top_elems
 
     $class->render_abstract($id);
 
+    _print_utf8(qq{</div>\n});
+
+    return;
+}
+
+sub render_story_entry
+{
+    my ($class, $id, $tag) = @_;
+
+    my $o = $class->_get_story($id);
+
+    _print_utf8(
+        qq{<div class="story">\n},
+        sprintf(qq{<%s id="%s"><a href="%s">%s</a></%s>\n},
+            $tag,
+            ($o->entry_id || (die "Foo $id")),
+            CGI::escapeHTML(
+                $::nav_bar->get_cross_host_rel_url_ref(
+                    {
+                        host => 't2',
+                        host_url => ($o->href || die "Qlax $id"),
+                        url_type => 'rel',
+                        url_is_abs => 0,
+                    }
+                )
+            ),
+            ($o->entry_text || die "Elimbda $id"),
+            $tag,
+        )
+    );
+
+    $class->render_list_items($id);
     _print_utf8(qq{</div>\n});
 
     return;

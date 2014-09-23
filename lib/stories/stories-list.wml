@@ -171,12 +171,7 @@ irrationality guiding political bodies.
 
 </humour_story>
 
-<humour_story tag="h3" id="fountainhead" humour_href="TOWTF/"
-text="The One with the Fountainhead">
-
-<: Shlomif::Homepage::LongStories->render_list_items('tow_the_fountainhead'); :>
-
-</humour_story>
+<: Shlomif::Homepage::LongStories->render_story_entry('tow_the_fountainhead','h3',); :>
 
 <humour_story tag="h3" id="human-hacking" humour_href="human-hacking/"
 text="The Human Hacking Field Guide">

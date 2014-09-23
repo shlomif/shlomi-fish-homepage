@@ -22,6 +22,35 @@ my @_Stories =
     map { Shlomif::Homepage::LongStories::Story->new($_) }
     (
         {
+            id => 'the_enemy',
+            tagline => "I came; I saw; I left no trace",
+            logo_alt => "A = not-A",
+            logo_class => "ene",
+            logo_id => "the_enemy_logo",
+            logo_src => "humour/TheEnemy/images/The-Enemy-logo-small.png",
+            entry_id => "enemy-how-i-helped",
+            entry_text => "The Enemy and How I Helped to Fight it",
+            href => "humour/TheEnemy/",
+            abstract => <<'EOF',
+<p>
+A member of the terrorist organisation “The Organisation” gets
+up in the morning, goes to his post, and quits. But before he
+leaves, he makes a suggestion that makes his former comrades
+fight each other to death. Join the now ex‐Member of the
+Organisation as he embarks on an ego trip, where he tries to
+prove that A can in fact be not‐A, whether or not Aristotle
+would agree.
+</p>
+EOF
+            entry_extra_html => <<'EOF',
+<p>
+A political satire about the situation that prevailed in the Israeli-Lebanese
+border. Lots of exits about mathematical logic, and a general critique of the
+irrationality guiding political bodies.
+</p>
+EOF
+        },
+        {
             id => 'tow_the_fountainhead',
             tagline => "<i>The Fountainhead</i> may have been good enough in the 60’s, but we’re in the Information Age now",
             logo_alt => "The One With The Fountainhead Logo",

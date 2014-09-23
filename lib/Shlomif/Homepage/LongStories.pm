@@ -30,7 +30,7 @@ my @_Stories =
             logo_src => "humour/TOWTF/images/towtf-logo-200px.jpg",
             entry_id => "fountainhead",
             entry_text => "The One with the Fountainhead",
-            href => "TOWTF/",
+            href => "humour/TOWTF/",
             abstract => <<'EOF',
 <p>
 A parody of Ayn Rand’s novel,
@@ -66,7 +66,7 @@ EOF
             logo_src => "humour/human-hacking/images/hhfg-logo-small.png",
             entry_id => "human-hacking",
             entry_text => "The Human Hacking Field Guide",
-            href => "human-hacking/",
+            href => "humour/human-hacking/",
             abstract => <<'EOF',
 <p class="hhfg abstract">
 Jennifer is a trendy and popular high school senior who is living and
@@ -90,7 +90,7 @@ EOF
             logo_src => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
             entry_id => "we-the-living-dead",
             entry_text => "Star Trek: We the Living Dead",
-            href => "Star-Trek/We-the-Living-Dead/",
+            href => "humour/Star-Trek/We-the-Living-Dead/",
             abstract => <<'EOF',
 <p>
 In this fan episode of the Television show
@@ -117,7 +117,7 @@ EOF
             logo_src => "humour/Selina-Mandrake/images/Green-d10-dice.png",
             entry_id => "selina-mandrake",
             entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
-            href => "Selina-Mandrake/",
+            href => "humour/Selina-Mandrake/",
 
 
             abstract => <<'EOF',
@@ -149,7 +149,7 @@ EOF
             logo_src => "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
             entry_id => "summerschool-at-the-nsa",
             entry_text => "Summerschool at the NSA - A Screenplay",
-            href => "Summerschool-at-the-NSA/",
+            href => "humour/Summerschool-at-the-NSA/",
 
 
             abstract => <<'EOF',
@@ -192,6 +192,11 @@ EOF
             logo_class => "buffy_few_good",
             logo_id => "buffy_a_few_good_slayers_logo",
             logo_src => "humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png",
+            entry_id => "buffy-few-good",
+            entry_text => "Buffy: a Few Good Slayers - A Screenplay",
+            href => "humour/Buffy/A-Few-Good-Slayers/",
+
+
             abstract => <<'EOF',
 <p class="buffy_few_good abstract">
 The Demonic underworld is held under tight control in a forked version of the
@@ -208,26 +213,15 @@ spouses and adults.
 EOF
         },
         {
-            id => 'who_is_qoheleth',
-            tagline => "What had been, is what will be. There is nothing new under the sun." ,
-            logo_alt => "“So who the Hell is Qoheleth?” Logo",
-            logo_class => "who_is_qoheleth",
-            logo_id => "who_is_qoheleth_logo",
-            logo_src => "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
-            abstract => <<'EOF',
-<p class="who_is_qoheleth abstract">
-An illustrated screenplay about what happened to the author of the scroll of
-Ecclesiastes/Qoheleth shortly after writing it.
-</p>
-EOF
-        },
-        {
             id => 'muppets_show_tni',
             tagline => "Muppets!" ,
             logo_alt => "The Muppets Show TNI",
             logo_class => "muppets",
             logo_id => "muppets_show_tni_logo",
             logo_src => "humour/Muppets-Show-TNI/images/Muppet-Show-TNI-Logo--take1.svg.png",
+            entry_id => "muppets-show-TNI",
+            entry_text => "The Muppets’ Show - The New Incarnation",
+            href => "humour/Muppets-Show-TNI/",
             abstract => <<'EOF',
 <p class="muppets_show_tni abstract">
 A new incarnation of <a href="http://muppet.wikia.com/wiki/The_Muppet_Show"><b>The
@@ -236,6 +230,23 @@ as Harry Potter, or
 <a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau</a> &amp;
 <a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris</a> as
 ruthless Grammar Nazis.
+</p>
+EOF
+        },
+        {
+            id => 'who_is_qoheleth',
+            tagline => "What had been, is what will be. There is nothing new under the sun." ,
+            logo_alt => "“So who the Hell is Qoheleth?” Logo",
+            logo_class => "who_is_qoheleth",
+            logo_id => "who_is_qoheleth_logo",
+            logo_src => "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
+            entry_id => "who-is-qoheleth",
+            entry_text => "“So who the Hell is Qoheleth?”",
+            href => "humour/So-Who-The-Hell-Is-Qoheleth/",
+            abstract => <<'EOF',
+<p class="who_is_qoheleth abstract">
+An illustrated screenplay about what happened to the author of the scroll of
+Ecclesiastes/Qoheleth shortly after writing it.
 </p>
 EOF
         },

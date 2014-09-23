@@ -294,6 +294,31 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 </p>
 EOF
         },
+        {
+            id => 'the_earth_angel',
+            tagline => "TODO FILL IN" ,
+            logo_alt => "The Earth Angel Logo",
+            logo_class => "the_earth_angel",
+            logo_id => "the_earth_angel_logo",
+            logo_src => "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
+            entry_id => "the-earth-angel",
+            entry_text => "The Earth Angel",
+            href => "humour/The-Earth-Angel/",
+            abstract => <<'EOF',
+<p>
+A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
+Angeles teaches a copyrights attorney all about life.
+</p>
+
+<p>
+It seems that I found writing most of this redundant, due to
+<i>Summerschool at the NSA</i> and later <i>Buffy: A Few Good Slayers</i>,
+but I’m keeping what I have written so far of it for posterity in its
+preliminary state.
+</p>
+
+EOF
+        },
 
     )
 );

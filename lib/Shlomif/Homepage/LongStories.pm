@@ -64,6 +64,9 @@ EOF
             logo_class => "hhfg",
             logo_id => "hhfg_logo",
             logo_src => "humour/human-hacking/images/hhfg-logo-small.png",
+            entry_id => "human-hacking",
+            entry_text => "The Human Hacking Field Guide",
+            href => "human-hacking/",
             abstract => <<'EOF',
 <p class="hhfg abstract">
 Jennifer is a trendy and popular high school senior who is living and

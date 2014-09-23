@@ -118,8 +118,6 @@ EOF
             entry_id => "selina-mandrake",
             entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
             href => "humour/Selina-Mandrake/",
-
-
             abstract => <<'EOF',
 <p class="selina abstract">
 A geeky Anglo-American girl in her high school senior year in 2011
@@ -150,8 +148,6 @@ EOF
             entry_id => "summerschool-at-the-nsa",
             entry_text => "Summerschool at the NSA - A Screenplay",
             href => "humour/Summerschool-at-the-NSA/",
-
-
             abstract => <<'EOF',
 <p class="summernsa abstract">
 The Hollywood actresses
@@ -195,8 +191,6 @@ EOF
             entry_id => "buffy-few-good",
             entry_text => "Buffy: a Few Good Slayers - A Screenplay",
             href => "humour/Buffy/A-Few-Good-Slayers/",
-
-
             abstract => <<'EOF',
 <p class="buffy_few_good abstract">
 The Demonic underworld is held under tight control in a forked version of the

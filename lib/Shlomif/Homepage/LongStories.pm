@@ -397,5 +397,17 @@ sub render_story_entry
     return;
 }
 
+sub render_all_stories_entries
+{
+    my ($class, $tag) = @_;
+
+    foreach my $o (@_Stories)
+    {
+        $class->render_story_entry( $o->id(), $tag, );
+    }
+
+    return;
+}
+
 1;
 

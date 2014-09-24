@@ -248,6 +248,60 @@ EOF
             title => "Clarissa Darling Facts (from Clarissa Explains it All)",
         },
         {
+            id_base => "emma_watson_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2014" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<emma_watson_common_links />
+
+</ul>
+EOF
+            meta_desc => "Factoids about Emma Watson, the British actress",
+            nav_blocks_wml => <<'EOF',
+<harry_potter_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'emma_watson',
+            tabs_title => "Emma Watson Facts",
+            title => "Emma Watson Facts",
+        },
+        {
+            id_base => "larry_wall_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2007" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikiquote.org/wiki/Larry_Wall">Larry Wall Quotes on Wikiquote</a>
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
+            nav_blocks_wml => <<'EOF',
+<foss_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'lwall',
+            tabs_title => "Larry Wall Facts",
+            title => "Larry Wall Facts",
+        },
+        {
             id_base => "knuth_is_not_god_facts",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2002" />

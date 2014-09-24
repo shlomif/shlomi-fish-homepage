@@ -197,7 +197,93 @@ EOF
             short_id => 'chuck',
             tabs_title => "Chuck Norris Facts",
             title => "Chuck Norris Facts",
-        }
+        },
+        {
+            id_base => "clarissa_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2013" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Clarissa_Explains_It_All">Clarissa Explains It All on the English Wikipedia</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.imdb.com/title/tt0101065/">Clarissa Explains It All - IMDB Entry</a>
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
+            nav_blocks_wml => <<'EOF',
+
+EOF
+            see_also_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Xena/">Xena Facts</a> -
+about another pre-Buffy heroine.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
+herself.
+</p>
+</li>
+
+</ul>
+EOF
+            short_id => 'clarissa',
+            tabs_title => "Clarissa Darling Facts",
+            title => "Clarissa Darling Facts (from Clarissa Explains it All)",
+        },
+        {
+            id_base => "xslt_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2009" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://perl-begin.org/uses/xml/#xslt">XSLT Resources for Perl</a> -
+refers to several resources.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/anti/SOAP/">“Links against SOAP”</a>
+- links to resources about a really evil XML technology.
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "Facts about XSLT, the most Evil thing in existence.",
+            nav_blocks_wml => <<'EOF',
+<foss_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'xslt',
+            tabs_title => "XSLT Facts",
+            title => "XSLT Facts",
+        },
     ),
 );
 

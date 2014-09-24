@@ -22,24 +22,29 @@ my $dom = $p->parse_file($facts_xml_path);
 
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 {
-    my $list_id = $list_node->value;
+    foreach my $lang (qw(en-US he-IL))
+    {
+        my $list_id = $list_node->value;
 
-    my $out_xhtml =  "./lib/factoids/indiv-lists-xhtmls/$list_id.xhtml";
-    system(
-        "xsltproc", "--output", $out_xhtml,
-        "--stringparam", 'filter-facts-list.id', $list_id,
-        $xslt_path, $facts_xml_path,
-    );
+        my $basename = "$list_id--$lang";
+        my $out_xhtml =  "./lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
+        system(
+            "xsltproc", "--output", $out_xhtml,
+            "--stringparam", 'filter-facts-list.id', $list_id,
+            "--stringparam", 'filter.lang', $lang,
+            $xslt_path, $facts_xml_path,
+        );
 
-    my $indiv_dom = $p->parse_file($out_xhtml);
+        my $indiv_dom = $p->parse_file($out_xhtml);
 
-    my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
-    $xpc->registerNs('xhtml', "http://www.w3.org/1999/xhtml" );
+        my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
+        $xpc->registerNs('xhtml', "http://www.w3.org/1999/xhtml" );
 
-    my $node = $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
+        my $node = $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 
-    io->file("$out_xhtml.reduced")->utf8->print(
-        $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr
-    );
+        io->file("$out_xhtml.reduced")->utf8->print(
+            $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr
+        );
+    }
 }
 

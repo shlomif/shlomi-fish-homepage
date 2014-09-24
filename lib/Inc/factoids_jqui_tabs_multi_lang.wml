@@ -9,8 +9,11 @@
 <define-tag en endtag="required">
 </define-tag>
 
-<define-tag he endtag="required">
+<define-tag he_for_include endtag="required">
 {#HE#:%body:##}
+</define-tag>
+
+<define-tag he endtag="required">
 </define-tag>
 
 <define-tag both endtag="required">
@@ -59,7 +62,9 @@
 
 <div id="<get-var en_id />">
 
+<get-var common_prefix />
 {#EN#}
+<get-var common_suffix />
 
 </div>
 
@@ -83,7 +88,7 @@
 
 <set-var %attributes />
 
-<en_he_tabs id_base="<get-var id_base />" common_prefix="<ul>" common_suffix="</ul>" />
+<en_he_tabs id_base="<get-var id_base />" common_prefix="" common_suffix="" />
 
 <restore id_base />
 
@@ -100,8 +105,12 @@
 <facts__en_he_tabs id_base="<get-var id_base />" />
 
 <en_for_include>
-<include file="../lib/factoids/indiv-lists-xhtmls/<get-var id_base />.xhtml.reduced" />
+<include file="../lib/factoids/indiv-lists-xhtmls/<get-var id_base />--en-US.xhtml.reduced" />
 </en_for_include>
+
+<he_for_include>
+<include file="../lib/factoids/indiv-lists-xhtmls/<get-var id_base />--he-IL.xhtml.reduced" />
+</he_for_include>
 
 <restore id_base h />
 

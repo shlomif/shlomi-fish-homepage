@@ -451,6 +451,11 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
+SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
+
+$(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
+	cp -f $< $@
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<

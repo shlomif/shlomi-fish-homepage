@@ -1,17 +1,1 @@
-#include '../template.wml'
-#include "Inc/factoids_jqui_tabs_multi_lang.wml"
-#include "stories/facts.wml"
-#include "Inc/nav_blocks.wml"
-
-<latemp_subject "Knuth Facts" />
-<latemp_meta_desc "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close." />
-
-<facts__knuth />
-
-<facts__header_tabs id_base="knuth_is_not_god_facts" h="Why Knuth is Not God" />
-
-<h2 id="license">Copyright and Licence</h2>
-
-<cc_by_sa_british_blurb year="2002" />
-
-<foss_nav_block />
+#include "factoids/pages/knuth_is_not_god_facts.wml"

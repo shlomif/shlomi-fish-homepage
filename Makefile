@@ -21,7 +21,7 @@ upload_t2: $(T2_TARGETS)
 	( cd $(T2_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-t2.shlomifish.org )
 
 upload_vipe: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-vipe.shlomifish.org )
+	( cd $(VIPE_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-vipe )
 
 upload_t2_temp: $(T2_TARGETS)
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )

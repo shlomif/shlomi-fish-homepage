@@ -9,8 +9,6 @@ use Carp ();
 
 use MooX (qw( late ));
 
-use CGI ();
-
 extends ('Exporter');
 
 has 'host' => (is => 'ro', isa => 'Str', required => 1);

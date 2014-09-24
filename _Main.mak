@@ -1224,3 +1224,12 @@ all: $(PUT_CARDS_2013_DEST_INDIV)
 
 $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
 	perl $(PUT_CARDS_2013_INDIV_SCRIPT)
+
+FACTOIDS_RENDER_SCRIPT = lib/factoids/Play.pl
+FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts.xhtml.reduced
+FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
+
+$(FACTOIDS_GENERATED_FILES): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
+	perl $(FACTOIDS_RENDER_SCRIPT)
+
+$(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)

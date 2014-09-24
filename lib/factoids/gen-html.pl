@@ -339,6 +339,31 @@ EOF
             title => "Knuth Facts",
         },
         {
+            id_base => "summer_glau_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2014" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<summer_glau_common_links />
+
+</ul>
+EOF
+            meta_desc => "Factoids about Summer Glau, the Hollywood actress",
+            nav_blocks_wml => <<'EOF',
+<xkcd_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'sglau',
+            tabs_title => "Summer Glau Facts",
+            title => "Summer Glau Facts",
+        },
+        {
             id_base => "xena_facts",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />

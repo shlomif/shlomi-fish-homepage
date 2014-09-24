@@ -457,7 +457,7 @@ SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 	cp -f $< $@
 
-QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg
+QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg
 
 QOHELETH_IMAGES__SOURCE_PREFIX = $(SO_WHO_THE_HELL_IS_QOHELETH__VCS_DIR)/graphics
 QOHELETH_IMAGES__DEST_PREFIX = $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/images

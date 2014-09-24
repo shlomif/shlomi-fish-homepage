@@ -248,6 +248,95 @@ EOF
             title => "Clarissa Darling Facts (from Clarissa Explains it All)",
         },
         {
+            id_base => "knuth_is_not_god_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2002" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://www-cs-faculty.stanford.edu/~uno/">Don Knuth’s
+Homepage at Stanford University</a> - by the man himself. Contains a lot of weird and zany stuff.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.informit.com/articles/article.aspx?p=1193856">Interview
+with Knuth</a>
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
+            nav_blocks_wml => <<'EOF',
+<foss_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'knuth',
+            tabs_title => "Why Knuth is Not God",
+            title => "Knuth Facts",
+        },
+        {
+            id_base => "xena_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2009" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://unarmed.shlomifish.org/2396.html">“About
+Female Action Heroes”</a> - my post as response to <a href="http://actionflickchick.com/superaction/wired-interviews-the-action-flick-chick-geek-cultures-26-most-awesome-female-ass-kickers/">a post about an interview with
+Action Flick Chick about Geek Culture’s 26 Most Awesome
+Female Ass-Kickers</a>.
+</p>
+</li>
+</ul>
+EOF
+            meta_desc => "Factoids about Xena, the Warrior Princess",
+            nav_blocks_wml => <<'EOF',
+
+EOF
+            see_also_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Clarissa/">Clarissa Darling Facts</a> - about
+another pre-Buffy heroine.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
+herself.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Additions to
+Chuck Norris Facts</a> - more toughness.
+</p>
+</li>
+
+</ul>
+EOF
+            short_id => 'xena',
+            tabs_title => "Xena Facts",
+            title => "Xena (the Warrior Princess) Facts",
+        },
+        {
             id_base => "xslt_facts",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />

@@ -15,19 +15,19 @@ include rules.mak
 
 # t2 macros
 
-RSYNC = rsync --progress --verbose --rsh=ssh
+RSYNC = rsync --progress --verbose --rsh=ssh --inplace
 
 upload_t2: $(T2_TARGETS)
-	( cd $(T2_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-t2.shlomifish.org )
+	( cd $(T2_DEST) && $(RSYNC) -a * hostgator:domains/old-2005-site-t2.shlomifish.org )
 
 upload_vipe: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-vipe )
+	( cd $(VIPE_DEST) && $(RSYNC) -a * hostgator:domains/old-2005-site-vipe )
 
 upload_t2_temp: $(T2_TARGETS)
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )
+	( cd $(T2_DEST) && $(RSYNC) -a * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )
 
 upload_vipe_temp: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/vipe/ )
+	( cd $(VIPE_DEST) && $(RSYNC) -a * shlomif@iglu.org.il:Home-Site/__New-Site/vipe/ )
 
 # upload: upload_t2_temp upload_vipe_temp
 upload: upload_t2 upload_vipe

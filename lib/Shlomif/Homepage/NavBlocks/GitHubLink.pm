@@ -5,6 +5,8 @@ use warnings;
 
 use MooX (qw( late ));
 
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
 extends ('Shlomif::Homepage::NavBlocks::ExternalLink');
 
 sub render
@@ -12,7 +14,7 @@ sub render
     my ($self, $r) = @_;
 
     return sprintf(q#<li><p><a class="ext github" href="%s">%s</a></p></li>#,
-        CGI::escapeHTML(
+        escape_html(
             $self->url,
         ),
         'GitHub Repo',

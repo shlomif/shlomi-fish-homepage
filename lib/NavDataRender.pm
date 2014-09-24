@@ -5,10 +5,11 @@ use warnings;
 
 use utf8;
 
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
 use MyNavData;
 use HTML::Widgets::NavMenu::JQueryTreeView;
 
-use CGI qw();
 use URI::Escape qw(uri_escape);
 use MyNavLinks;
 
@@ -63,7 +64,7 @@ sub render_breadcrumbs_trail_unconditionally
         my $component = shift;
         my $title = $component->title();
         my $title_attr = defined($title) ? " title=\"$title\"" : "";
-        return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+        return "<a href=\"" . escape_html($component->direct_url()) .
             "\"$title_attr>" .
             $component->label() . "</a>";
     };
@@ -89,7 +90,7 @@ sub render_html_head_nav_links
     foreach my $key (@keys)
     {
         my $val = $nav_links_obj->{$key};
-        my $url = CGI::escapeHTML($val->direct_url());
+        my $url = escape_html($val->direct_url());
         my $title = $val->title() || '';
 
         _print_utf8(qq{<link rel="$key" href="$url" title="$title" />\n});
@@ -111,7 +112,7 @@ sub calc_esc_page_url
 {
     my ($class) = @_;
 
-    return CGI::escapeHTML(uri_escape( $class->calc_page_url() ));
+    return escape_html(uri_escape( $class->calc_page_url() ));
 }
 
 sub print_page_url

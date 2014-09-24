@@ -5,7 +5,8 @@ use warnings;
 
 use IO::All;
 use Data::Dumper;
-use CGI;
+
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 my %images =
 (
@@ -84,8 +85,8 @@ my $html;
 foreach my $file (@files_records)
 {
     # First render the HTML.
-    my $fn = CGI::escapeHTML($file->{fn});
-    my $desc = CGI::escapeHTML($file->{d});
+    my $fn = escape_html($file->{fn});
+    my $desc = escape_html($file->{d});
     my $link = qq{<a href="photos/$fn" title="$desc">};
     $html .= qq{<tr>\n<td>$link<img src="thumbnails/$fn.png" alt="Thumbnail for &quot;$fn&quot;" /></a></td>\n<td>$link$desc</a></td>\n</tr>\n};
 

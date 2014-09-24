@@ -6,7 +6,8 @@ use warnings;
 use MooX (qw( late ));
 
 use XML::Feed;
-use CGI;
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
 
 use IO::All;
 
@@ -30,7 +31,7 @@ sub _calc_entry_body
 
     $body =~ s{ rel="nofollow"}{}g;
 
-    return "<!-- TITLE=" . CGI::escapeHTML(decode('utf-8', $entry->title())) . "-->\n" . $body;
+    return "<!-- TITLE=" . escape_html(decode('utf-8', $entry->title())) . "-->\n" . $body;
 }
 
 sub run
@@ -38,7 +39,7 @@ sub run
     my $self = shift;
     foreach my $entry ($self->feed()->entries())
     {
-        my $text = $self->_calc_entry_body($entry) . "\n\n" . "<p><a href=\"" . CGI::escapeHTML($entry->link()) . "\">See comments and comment on this.</a></p>\n";
+        my $text = $self->_calc_entry_body($entry) . "\n\n" . "<p><a href=\"" . escape_html($entry->link()) . "\">See comments and comment on this.</a></p>\n";
 
         $text =~ s{[ \t]+$}{}gms;
 

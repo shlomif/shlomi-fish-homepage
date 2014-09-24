@@ -4,8 +4,7 @@ use strict;
 use warnings;
 
 use utf8;
-
-use CGI ();
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 use Shlomif::WrapAsUtf8 qw(_print_utf8);
 
@@ -407,7 +406,7 @@ sub render_logo
     _print_utf8(
         sprintf(qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,
             $o->logo_id,
-            CGI::escapeHTML(
+            escape_html(
                 $::nav_bar->get_cross_host_rel_url_ref(
                     {
                         host => 't2',
@@ -474,7 +473,7 @@ sub render_story_entry
         sprintf(qq{<%s id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
             ($o->entry_id || (die "Foo $id")),
-            CGI::escapeHTML(
+            escape_html(
                 $::nav_bar->get_cross_host_rel_url_ref(
                     {
                         host => 't2',

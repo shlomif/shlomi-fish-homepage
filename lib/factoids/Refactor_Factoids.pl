@@ -12,10 +12,10 @@ my $t = io('-')->all;
 print <<"END_OF_OUTPUT";
     id_base => @{[$t =~ m#<facts__header_tabs id_base=("[^"]+")# ? $1: (die "Bar")]},
     license_wml => <<'EOF',
-@{[$t =~ m#\Q<h2 id="license">Copyright and Licence</h2>\E\s+((?:\S[^\n]+\n)+)# ? ($1 =~ s#\s+\z##mrs) : (die "Bazooka")]}
+@{[$t =~ m#\Q<h2 id="license">Copyright and Licence</h2>\E\s+((?:\S[^\n]+\n)+)#ms ? ($1 =~ s#\s+\z##mrs) : (die "Bazooka")]}
 EOF
     links_wml => <<'EOF',
-@{[$t =~ m#\Q<h2 id="links">Links</h2>\E\n(.*?)(?:^<h2|^<\w+?_nav_block />|\z)#ms ? ($1 =~ s#\s+\z##mrs =~ s#\A\s+##mrs) : (die "Bazooka")]}
+@{[$t =~ m#\Q<h2 id="links">Links</h2>\E\n(.*?)(?:^<h2|^<\w+?_nav_block />|\z)#ms ? ($1 =~ s#\s+\z##mrs =~ s#\A\s+##mrs) : (die "Godmilla")]}
 EOF
     meta_desc => @{[$t =~ m#<latemp_meta_desc ("[^"]+")# ? $1 : (die "Lamp")]},
     nav_blocks_wml => <<'EOF',

@@ -1,42 +1,13 @@
 #include '../template.wml'
 #include "stories/facts.wml"
+#include "Inc/factoids_jqui_tabs_multi_lang.wml"
 
 <latemp_subject "Xena (the Warrior Princess) Facts" />
 <latemp_meta_desc "Factoids about Xena, the Warrior Princess" />
 
 <facts__xena />
 
-<h2 id="facts">The Facts</h2>
-
-<ul>
-
-<li>
-Xena can meet King David for breakfast and Julius Caesar for lunch. Without
-time travel.
-</li>
-
-<li>
-Xena beat a Goliath that was taller, and more agile than the one in the Bible.
-It’s not only Hollywood exaggeration.
-</li>
-
-<li>
-No one calls Xena the warrior princess “Zeena” to her face and survives.
-Luckily for you she hasn’t visited modern-day U.S. yet.
-</li>
-
-<li>
-Xena can throw a boomerang-like weapon thingy in the opposite direction and
-it will still hit the mark while neutralising 10 of her enemies.
-</li>
-
-<li>
-Xena the Warrior Princess has not met Chuck Norris yet, or otherwise he
-would have been badly and permanently injured.
-(Inspired by <a href="http://twitter.com/ZadYree">ZadYree</a>).
-</li>
-
-</ul>
+<facts__header_tabs id_base="xena_facts" h="Xena Facts" />
 
 <h2 id="license">Copyright and Licence</h2>
 

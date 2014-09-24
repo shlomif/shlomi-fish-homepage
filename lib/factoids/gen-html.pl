@@ -11,6 +11,7 @@ use XML::LibXML;
 use XML::LibXML::XPathContext;
 
 use XML::Grammar::Fortune;
+use Template;
 
 use Shlomif::Homepage::FactoidsPages::Page;
 
@@ -152,3 +153,51 @@ EOF
         },
     ),
 );
+
+foreach my $page (@pages)
+{
+    # some useful options (see below for full list)
+    my $config =
+    {
+        POST_CHOMP   => 1,               # cleanup whitespace
+        EVAL_PERL    => 1,               # evaluate Perl code blocks
+    };
+
+    # create Template object
+    my $template = Template->new($config);
+
+    my $vars =
+    {
+        p => $page,
+    };
+
+    my $tt_text = <<'END_OF_TEMPLATE';
+#include '../template.wml'
+#include "Inc/factoids_jqui_tabs_multi_lang.wml"
+#include "stories/facts.wml"
+#include "Inc/nav_blocks.wml"
+
+<latemp_subject "[% p.title() %]" />
+<latemp_meta_desc "[% p.meta_desc() %]" />
+
+<facts__[% p.short_id() %] />
+
+<facts__header_tabs id_base="[% p.id_base() %]" h="[% p.tabs_title() %]" />
+
+<h2 id="license">Copyright and Licence</h2>
+
+[% p.license_wml() %]
+
+<h2 id="links">Links</h2>
+
+[% p.links_wml() %]
+
+<h2 id="see_also">See Also</h2>
+
+[% p.see_also_wml() %]
+
+[% p.nav_blocks_wml() %]
+END_OF_TEMPLATE
+
+    $template->process(\$tt_text, $vars, "lib/factoids/pages/". $page->id_base().'.wml');
+}

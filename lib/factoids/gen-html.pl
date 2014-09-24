@@ -385,36 +385,152 @@ EOF
             title => "Knuth Facts",
         },
         {
-            id_base => "summer_glau_facts",
+            id_base => "nsa_facts",
             license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2014" />
+<cc_by_british_blurb year="2013" />
 EOF
             links_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            meta_desc => "Factoids about the NSA - the U.S. government National Security Agency",
+            nav_blocks_wml => <<'EOF',
+<xkcd_nav_block />
+<foss_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<ol>
+
+<li>
+<p>
+<a href="$(ROOT)/humour.html#yo-nsa-publish-or-perish">“Yo
+NSA, Publish or Perish!”</a> - captioned image by me.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=smg-next-film">“Sarah
+Michelle Gellar’s Next Movie”</a> - old fortune cookie.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=kilmo-about-the-NSA">“kilmo
+about the NSA”</a> - a sequel to the previous fortune cookie.
+</p>
+</li>
+
+<li>
+<p>
+<a href="smg-film/">Open Letter to Ms. Sarah Michelle Gellar regarding
+the production of the film “Summerschool at the NSA”</a> - another
+sequel - somewhat more serious.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://unarmed.shlomifish.org/2615.html">Blog Post:
+“‘Publish or Perish’ → ‘Life or Death’”</a> - discusses why keeping secrets
+to yourself is a recipe for disaster.
+</p>
+</li>
+
+<li>
+
+<p>
+<a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+at the NSA</i> - a screenplay</a>:
+</p>
+
+<blockquote>
+
+<: Shlomif::Homepage::LongStories->render_abstract('summerschool_at_the_nsa'); :>
+
+</blockquote>
+
+</li>
+
+<li_SummerNSA_hashtag />
+
+<li>
+<p>
+<a href="https://plus.google.com/+ShlomiFish/posts/gyrcAfAASev">Google+ Post:
+Why Summer Glau Will Be The Next Warrior Queen</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://plus.google.com/+ShlomiFish/posts/WM5nxzKGdqj">Google+
+Post: “Why
+paranoid security and misery causes one's downfall?”</a> - corresponding the
+Knights Templar whom Saladin fought, to today's NSA.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://plus.google.com/+ShlomiFish/posts/i5Z8XdqTdwE">“Summer Glau
+for Government! [And I'm Not Joking As the Reader Shall See]”</a> - on Google+.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/User:Shlomif/Saladin_Style">“Saladin
+Style”</a> - an executive summary — irresponsible and opinionated — about
+Saladin’s innovative approach to security, combat warfare, psychological
+warfare, and justice, that still has implications today.
+</p>
+</li>
+
+</ol>
+EOF
+short_id => 'nsa',
+tabs_title => "NSA Facts",
+title => "NSA Facts",
+},
+{
+id_base => "summer_glau_facts",
+license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2014" />
+EOF
+links_wml => <<'EOF',
 <ul>
 
 <summer_glau_common_links />
 
 </ul>
 EOF
-            meta_desc => "Factoids about Summer Glau, the Hollywood actress",
-            nav_blocks_wml => <<'EOF',
+meta_desc => "Factoids about Summer Glau, the Hollywood actress",
+nav_blocks_wml => <<'EOF',
 <xkcd_nav_block />
 EOF
-            see_also_wml => <<'EOF',
+see_also_wml => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
 EOF
-            short_id => 'sglau',
-            tabs_title => "Summer Glau Facts",
-            title => "Summer Glau Facts",
-        },
-        {
-            id_base => "xena_facts",
-            license_wml => <<'EOF',
+short_id => 'sglau',
+tabs_title => "Summer Glau Facts",
+title => "Summer Glau Facts",
+},
+{
+id_base => "xena_facts",
+license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
-            links_wml => <<'EOF',
+links_wml => <<'EOF',
 <ul>
 
 <li>
@@ -427,11 +543,11 @@ Female Ass-Kickers</a>.
 </li>
 </ul>
 EOF
-            meta_desc => "Factoids about Xena, the Warrior Princess",
-            nav_blocks_wml => <<'EOF',
+meta_desc => "Factoids about Xena, the Warrior Princess",
+nav_blocks_wml => <<'EOF',
 
 EOF
-            see_also_wml => <<'EOF',
+see_also_wml => <<'EOF',
 <ul>
 
 <li>
@@ -457,16 +573,16 @@ Chuck Norris Facts</a> - more toughness.
 
 </ul>
 EOF
-            short_id => 'xena',
-            tabs_title => "Xena Facts",
-            title => "Xena (the Warrior Princess) Facts",
-        },
-        {
-            id_base => "xslt_facts",
-            license_wml => <<'EOF',
+short_id => 'xena',
+tabs_title => "Xena Facts",
+title => "Xena (the Warrior Princess) Facts",
+},
+{
+id_base => "xslt_facts",
+license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
-            links_wml => <<'EOF',
+links_wml => <<'EOF',
 <ul>
 
 <li>
@@ -485,18 +601,18 @@ refers to several resources.
 
 </ul>
 EOF
-            meta_desc => "Facts about XSLT, the most Evil thing in existence.",
-            nav_blocks_wml => <<'EOF',
+meta_desc => "Facts about XSLT, the most Evil thing in existence.",
+nav_blocks_wml => <<'EOF',
 <foss_nav_block />
 EOF
-            see_also_wml => <<'EOF',
+see_also_wml => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
 EOF
-            short_id => 'xslt',
-            tabs_title => "XSLT Facts",
-            title => "XSLT Facts",
+short_id => 'xslt',
+tabs_title => "XSLT Facts",
+title => "XSLT Facts",
         },
     ),
 );

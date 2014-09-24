@@ -151,6 +151,53 @@ EOF
             tabs_title => 'Buffy Facts',
             title => 'Buffy Facts',
         },
+        {
+            id_base => "chuck_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2010" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://www.chucknorrisfacts.com/">Main Chuck Norris facts site</a> -
+with thousands of factoids.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.direct2tv.com/chuck-norris-turns-73.html">Chuck Norris
+Turns 73</a> (again).
+</p>
+</li>
+
+
+<li>
+<p>
+<a
+href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
+all the Cards on the Table (2013)”</a> (also by me) - mentions what is the
+second major battle that Chuck Norris lost.
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
+            nav_blocks_wml => <<'EOF',
+<foss_nav_block />
+EOF
+            see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+            short_id => 'chuck',
+            tabs_title => "Chuck Norris Facts",
+            title => "Chuck Norris Facts",
+        }
     ),
 );
 
@@ -173,9 +220,14 @@ foreach my $page (@pages)
 
     my $tt_text = <<'END_OF_TEMPLATE';
 #include '../template.wml'
+
+#include "Inc/emma_watson.wml"
 #include "Inc/factoids_jqui_tabs_multi_lang.wml"
-#include "stories/facts.wml"
 #include "Inc/nav_blocks.wml"
+#include "Inc/summer_glau.wml"
+#include "stories/facts.wml"
+#include "stories/stories-list.wml"
+#include "utils.wml"
 
 <latemp_subject "[% p.title() %]" />
 <latemp_meta_desc "[% p.meta_desc() %]" />

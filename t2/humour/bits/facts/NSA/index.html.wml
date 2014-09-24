@@ -3,6 +3,7 @@
 #include "stories/stories-list.wml"
 #include "Inc/summer_glau.wml"
 #include "Inc/nav_blocks.wml"
+#include "Inc/factoids_jqui_tabs_multi_lang.wml"
 
 #include "utils.wml"
 
@@ -11,92 +12,7 @@
 
 <facts__nsa />
 
-<h2 id="facts">NSA Facts</h2>
-
-<ul>
-
-<lip>
-The NSA don’t publish. They perish.
-</lip>
-
-<lip>
-The NSA employs the largest number of mathematicians with Ph.Ds. And the most
-stupid and incompetent ones.
-</lip>
-
-<lip>
-The NSA has a patent for an efficient process for collecting a lot of
-information and doing nothing with it.
-</lip>
-
-<lip>
-The Bajoran scholars have positively identified Benjamin Sisko as
-The Emissary. They also positively identified the NSA headquarters
-as The Dungeon.
-</lip>
-
-<lip>
-One of <i>Buffy the Vampire Slayer</i>’s episodes took place in the NSA
-headquarters, but had to be destroyed, because all of the test audience had
-uncontrollable panic attacks.
-</lip>
-
-<lip>
-The NSA knows what you did last summer. But no one, in the NSA or outside it,
-knows why they should.
-</lip>
-
-<lip>
-The more the NSA think, the less they want to be able to think.
-So they think less and less.
-</lip>
-
-<lip>
-With the NSA’s budget you would expect evil to be extinct by now. (<b>Kika</b>)
-</lip>
-
-<lip>
-Think of the most incompetent organisation possible. The NSA would be more
-even more incompetent than that.
-</lip>
-
-<lip>
-The NSA headquarters are the unhappiest place on Earth.
-</lip>
-
-<lip>
-<b>Yogurt:</b> “Never overestimate the power of the NSA.”
-</lip>
-
-<lip>
-First the NSA ignores “silly” Internet memes, then they laugh at them,
-then they are unable to fight them, and then they lose.
-</lip>
-
-<lip>
-The NSA is an intelligence agency which thinks it can use
-Artificial Ultra-Stupidity (AUS) to wade through tons of irrelevant
-information and reach genuine understanding.
-</lip>
-
-<lip>
-Your next job after one in
-<a href="http://twitter.com/NSACareers">@NSACareers</a>, will be as a dead
-corpse in a coffin, 6 feet underground, or as a patient in a psychiatric
-ward.
-</lip>
-
-<lip>
-Hackers bend the rules, so the NSA hates them. Instead, the NSA accumulates
-rules, observes them, and accepts their fate: death.
-</lip>
-
-<lip>
-No one in their right mind will want to work for the NSA. Fortunately for
-the NSA, and unfortunately for us, some people are not in their right mind.
-</lip>
-
-</ul>
+<facts__header_tabs id_base="nsa_facts" h="NSA Facts" />
 
 <h2 id="other_nsa_humour">Other NSA Humour</h2>
 

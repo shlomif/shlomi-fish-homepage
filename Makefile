@@ -9,7 +9,7 @@ ALL_DEST_BASE = dest
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
 all: latemp_targets
-	
+
 include include.mak
 include rules.mak
 
@@ -18,10 +18,10 @@ include rules.mak
 RSYNC = rsync --progress --verbose --rsh=ssh
 
 upload_t2: $(T2_TARGETS)
-	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/ )
+	( cd $(T2_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-t2.shlomifish.org )
 
 upload_vipe: $(VIPE_TARGETS)
-	( cd $(VIPE_DEST) && $(RSYNC) -r * shlomif@vipe.technion.ac.il:public_html/ )
+	( cd $(VIPE_DEST) && $(RSYNC) -r * hostgator:domains/old-2005-site-vipe.shlomifish.org )
 
 upload_t2_temp: $(T2_TARGETS)
 	( cd $(T2_DEST) && $(RSYNC) -r * shlomif@iglu.org.il:Home-Site/__New-Site/shlomif/ )

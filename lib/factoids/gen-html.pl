@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use utf8;
+
 use lib './lib';
 
 use IO::All qw/ io /;
@@ -271,6 +273,50 @@ EOF
             short_id => 'emma_watson',
             tabs_title => "Emma Watson Facts",
             title => "Emma Watson Facts",
+        },
+        {
+            id_base => "in_soviet_russia_facts",
+            license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2013" />
+EOF
+            links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Russian_reversal">Russian
+reversal (“In Soviet Russia”) on the Wikipedia</a>
+</p>
+</li>
+
+</ul>
+EOF
+            meta_desc => "In Soviet Russia, jokes laugh at you.",
+            nav_blocks_wml => <<'EOF',
+
+EOF
+            see_also_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris Facts</a> -
+another popular Internet meme.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/NSA/">NSA facts</a> - more
+anti-authoritarianism stuff.
+</p>
+</li>
+
+</ul>
+EOF
+            short_id => 'in_soviet_russia',
+            tabs_title => "“In Soviet Russia” Aphorisms",
+            title => "“In Soviet Russia” Additions",
         },
         {
             id_base => "larry_wall_facts",

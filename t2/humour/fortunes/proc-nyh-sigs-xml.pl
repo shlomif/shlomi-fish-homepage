@@ -3,7 +3,8 @@
 use strict;
 use warnings;
 
-use CGI;
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
 use List::Util qw(min);
 
 my $count = 1;
@@ -38,7 +39,7 @@ while (<>)
             my $id = "nyh-sig--" . join("-" , @fmt_words[0 .. min(2,$#fmt_words)]);
             $text =~ s{(<fortune id=")[^"]+(">)}{$1$id$2};
 
-            my $sig_esc = CGI::escapeHTML($sig);
+            my $sig_esc = escape_html($sig);
             $text =~ s{(<title>)[^<]+(</title>)}{$1$sig_esc$2};
             print $text;
             @lines = ();

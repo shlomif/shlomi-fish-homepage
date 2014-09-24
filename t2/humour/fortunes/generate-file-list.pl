@@ -3,8 +3,9 @@
 use strict;
 use warnings;
 
-use IO::All;
-use CGI;
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
+use IO::All qw/ io /;
 
 open my $arcs_list_fh, "<", "fortunes-list.mak";
 my @lines = <$arcs_list_fh>;
@@ -45,7 +46,7 @@ EOF
 
 $out->print(
     map { "$_\n" }
-    map { my $escaped = CGI::escapeHTML($_); qq{<li><a href="$escaped">$escaped</a></li>} }
+    map { my $escaped = escape_html($_); qq{<li><a href="$escaped">$escaped</a></li>} }
     sort { $a cmp $b }
     (
         (map { ( "$_.xml", $_, "$_.dat" ) } @fortunes),

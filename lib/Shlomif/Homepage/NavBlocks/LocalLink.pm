@@ -3,6 +3,8 @@ package Shlomif::Homepage::NavBlocks::LocalLink;
 use strict;
 use warnings;
 
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+
 use utf8;
 
 use MooX (qw( late ));
@@ -39,7 +41,7 @@ sub render
     else
     {
         return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
-            CGI::escapeHTML(
+            escape_html(
                 $r->nav_menu->get_cross_host_rel_url_ref(
                     {
                         host => $r->host,

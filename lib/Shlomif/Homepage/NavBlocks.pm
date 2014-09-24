@@ -289,6 +289,7 @@ my %table_blocks =
                 _subdiv_tr(title => q{Middle East Politics},),
                 _get_tr('the_enemy'),
                 _get_tr('define_zionism'),
+                _get_tr('EmWatson_visit_to_Gaza'),
                 _subdiv_tr(title => q{#SummerNSA}),
                 _get_tr('summer_nsa'),
             ],

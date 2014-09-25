@@ -1064,7 +1064,7 @@ docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
 
 
-docbook_targets: docbook4_targets screenplay_targets docbook5_targets \
+docbook_targets: docbook4_targets docbook5_targets screenplay_targets \
 	install_docbook5_epubs \
 	install_docbook5_htmls \
 	install_docbook4_xmls install_docbook_individual_xhtmls \

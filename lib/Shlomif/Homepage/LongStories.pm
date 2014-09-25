@@ -267,9 +267,29 @@ EOF
             href => "humour/So-Who-The-Hell-Is-Qoheleth/",
             abstract => <<'EOF',
 <p class="who_is_qoheleth abstract">
-An illustrated screenplay about what happened to the author of the scroll of
-Ecclesiastes/Qoheleth shortly after writing it.
+Josephus was a budding philosopher of Jewish descent in
+<a href="https://en.wikipedia.org/wiki/Damascus">Damascus</a> of
+<a href="http://en.wikipedia.org/wiki/Hellenistic_period">Helllenistic
+times</a>, when he took a bet that he could produce a decent work
+of philosophy, and wrote the Biblical scroll of
+<a href="http://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a>.
+Soon after that, he becomes the most notorious celebrity in his town,
+makes a moderate fortune from donations of enthusiastic fans of the
+scroll, and is annoyed by the fact that he has become the object of
+affection of nearly every single young female in his town.
 </p>
+<p class="who_is_qoheleth abstract">
+However, nothing could prepare Josephus to the day he ran into a trio of
+female <a href="http://en.wikipedia.org/wiki/Celts">Celtic</a> travellers,
+who provide him with many questions, including the million dollar question,
+“Who is the Qoheleth (Now)?”.
+</p>
+<p>
+This is an illustrated screenplay inspired by the
+<a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
+and set in a time of great confusion — not unlike our own.
+</p>
+
 EOF
         },
         {

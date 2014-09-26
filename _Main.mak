@@ -1250,3 +1250,12 @@ $(FACTOIDS_GENERATED_FILES): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-fact
 	perl $(FACTOIDS_RENDER_SCRIPT)
 
 $(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
+
+all: manifest_html
+
+MAN_HTML = $(T2_DEST)/MANIFEST.html
+
+manifest_html: $(MAN_HTML)
+
+$(MAN_HTML): ./bin/gen-manifest.pl
+	perl $<

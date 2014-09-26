@@ -2,15 +2,15 @@
 
 use strict;
 use warnings;
+use autodie;
 
-use IO::All;
 use File::Find::Object;
 use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
-my $manifest = io->file('./dest/t2/MANIFEST.html');
+open my $m, '>', './dest/t2/MANIFEST.html';
 
-$manifest->print(<<'EOF');
+$m->print(<<'EOF');
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
     html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -34,14 +34,16 @@ EOF
         if ($r->is_file)
         {
             my $rel_path = escape_html(join('/', @{$r->full_components()}));
-            $manifest->print(qq{<li><a href="} . uri_escape($rel_path)
-                . qq{">$rel_path</a></li>\n});
+            print {$m} qq{<li><a href="} . uri_escape($rel_path)
+                . qq{">$rel_path</a></li>\n};
         }
     }
 }
 
-$manifest->print(<<'EOF');
+$m->print(<<'EOF');
 </ul>
 </body>
 </html>
 EOF
+
+close($m);

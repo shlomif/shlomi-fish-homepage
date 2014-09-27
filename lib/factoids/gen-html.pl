@@ -667,5 +667,7 @@ foreach my $page (@pages)
 [% p.nav_blocks_wml() %]
 END_OF_TEMPLATE
 
-    $template->process(\$tt_text, $vars, "lib/factoids/pages/". $page->id_base().'.wml');
+    my $out = '';
+    $template->process(\$tt_text, $vars, \$out);
+    io->file("lib/factoids/pages/". $page->id_base().'.wml')->utf8->print($out);
 }

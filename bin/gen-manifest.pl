@@ -34,8 +34,7 @@ EOF
         if ($r->is_file)
         {
             my $rel_path = escape_html(join('/', @{$r->full_components()}));
-            print {$m} qq{<li><a href="} . uri_escape($rel_path)
-                . qq{">$rel_path</a></li>\n};
+            print {$m} qq{<li><a href="$rel_path">$rel_path</a></li>\n};
         }
     }
 }

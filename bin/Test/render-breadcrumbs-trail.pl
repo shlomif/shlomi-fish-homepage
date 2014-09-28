@@ -4,8 +4,9 @@ use strict;
 use warnings;
 use MyNavData;
 use HTML::Widgets::NavMenu;
-use CGI qw();
 use MyNavLinks;
+
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 binmode STDOUT, ':encoding(utf8)';
 # my $my_THE_filename = "puzzles/situation/book-under-rock.html";
@@ -47,7 +48,7 @@ my $render_leading_path_component = sub {
     my $component = shift;
     my $title = $component->title();
     my $title_attr = defined($title) ? " title=\"$title\"" : "";
-    return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+    return "<a href=\"" . escape_html($component->direct_url()) .
         "\"$title_attr>" .
         $component->label() . "</a>";
 };
@@ -88,6 +89,7 @@ $nav_links_renderer = MyNavLinks->new(
         'path_info' => $filename,
         'current_host' => "t2",
         'root' => "../..",
+        bottom_code => '',
         );
 
 return;
@@ -104,7 +106,7 @@ return;
         my $component = shift;
         my $title = $component->title();
         my $title_attr = defined($title) ? " title=\"$title\"" : "";
-        return "<a href=\"" . CGI::escapeHTML($component->direct_url()) .
+        return "<a href=\"" . escape_html($component->direct_url()) .
             "\"$title_attr>" .
             $component->label() . "</a>";
     };

@@ -733,8 +733,6 @@ $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FOR
 
 $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
-lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS)
-	touch $@
 
 FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
@@ -1242,7 +1240,8 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 	perl $(PUT_CARDS_2013_INDIV_SCRIPT)
 
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
-FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
+FACTOIDS_NAV_JSON = lib/Shlomif/Homepage/SectionMenu/Sects/factoids-nav.json
+FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced $(FACTOIDS_NAV_JSON)
 
 FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
 
@@ -1259,3 +1258,6 @@ manifest_html: $(MAN_HTML)
 
 $(MAN_HTML): ./bin/gen-manifest.pl
 	perl $<
+
+lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
+	touch $@

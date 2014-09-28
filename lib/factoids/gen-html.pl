@@ -82,7 +82,7 @@ my @pages =
         {
             id_base => 'buffy_facts',
             img_alt => "Photo of Buffy Summers from the show DVD via the English Wikipedia",
-            img_attribution => '',
+            img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
             img_class => "story_logo buffy",
             img_src => "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
             license_wml => <<'EOF',
@@ -179,7 +179,7 @@ EOF
         {
             id_base => "chuck_facts",
             img_alt => "Photo of Chuck Norris from the English Wikipedia",
-            img_attribution => '',
+            img_attribution => 'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
             img_class => "story_logo chuck_norris",
             img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1-150w.jpg",
             license_wml => <<'EOF',
@@ -230,7 +230,7 @@ EOF
         {
             id_base => "clarissa_facts",
             img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
-            img_attribution => '',
+            img_attribution => 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
             img_class => "story_logo clarissa",
             img_src => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
             license_wml => <<'EOF',
@@ -283,7 +283,7 @@ EOF
         {
             id_base => "emma_watson_facts",
             img_alt => "Photo of Emma Watson from the Wikipedia",
-            img_attribution => 'https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
+            img_attribution => 'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
             img_class => "story_logo emma_watson",
             img_src => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
             license_wml => <<'EOF',
@@ -583,7 +583,7 @@ EOF
         {
             id_base => "xena_facts",
             img_alt => "Photo of Xena, the Warrior Princess",
-            img_attribution => '',
+            img_attribution => 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
             img_class => "story_logo xena",
             img_src => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
             license_wml => <<'EOF',
@@ -639,7 +639,7 @@ EOF
         {
             id_base => "xslt_facts",
             img_alt => "XSLT Logo",
-            img_attribution => '',
+            img_attribution => 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
             img_class => "story_logo xslt",
             img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
             license_wml => <<'EOF',

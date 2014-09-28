@@ -21,6 +21,7 @@ has [
     'title',
 ] => (is => 'ro', isa => 'Str', required => 1);
 
+has ['abstract'] => (is => 'ro', isa => 'Str');
 =begin foo
 
 has ['entry_id', 'entry_text', 'href',

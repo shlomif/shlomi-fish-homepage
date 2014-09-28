@@ -149,6 +149,7 @@ EOF
         short_id => 'chuck',
         tabs_title => "Chuck Norris Facts",
         title => "Chuck Norris Facts",
+        url_base => "Chuck-Norris",
     },
 );
 
@@ -208,6 +209,7 @@ EOF
         short_id => 'in_soviet_russia',
         tabs_title => "“In Soviet Russia” Aphorisms",
         title => "“In Soviet Russia” Additions",
+        url_base => "In-Soviet-Russia",
     },
 );
 
@@ -323,6 +325,7 @@ EOF
         short_id => 'buffy',
         tabs_title => 'Buffy Facts',
         title => 'Buffy Facts',
+        url_base => "Buffy",
     },
     {
         abstract => <<'EOF',
@@ -388,6 +391,7 @@ EOF
         short_id => 'clarissa',
         tabs_title => "Clarissa Darling Facts",
         title => "Clarissa Darling Facts (from Clarissa Explains it All)",
+        url_base => "Clarissa",
     },
     {
         abstract => <<'EOF',
@@ -420,49 +424,7 @@ EOF
         short_id => 'emma_watson',
         tabs_title => "Emma Watson Facts",
         title => "Emma Watson Facts",
-    },
-    {
-        abstract => <<'EOF',
-<p>
-<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
-creator of the Perl programming language, and the inventor of the
-<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>.
-These facts illustrate his “hacky” (= rule bending) awesomeness.
-</p>
-
-
-EOF
-        id_base => "larry_wall_facts",
-        img_alt => "Larry Wall",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
-        img_src => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg" ,
-        img_class => "story_logo larry_wall",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2007" />
-EOF
-        links_wml => <<'EOF',
-<ul>
-
-<li>
-<p>
-<a href="http://en.wikiquote.org/wiki/Larry_Wall">Larry Wall Quotes on Wikiquote</a>
-</p>
-</li>
-
-</ul>
-EOF
-        meta_desc => "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
-        nav_blocks_wml => <<'EOF',
-<foss_nav_block />
-EOF
-        see_also_wml => <<'EOF',
-<p>
-<b>TODO</b>
-</p>
-EOF
-        short_id => 'lwall',
-        tabs_title => "Larry Wall Facts",
-        title => "Larry Wall Facts",
+        url_base => "Emma-Watson",
     },
     {
         abstract => <<'EOF',
@@ -517,6 +479,51 @@ EOF
         short_id => 'knuth',
         tabs_title => "Why Knuth is Not God",
         title => "Knuth Facts",
+        url_base => "Knuth",
+    },
+    {
+        abstract => <<'EOF',
+<p>
+<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
+creator of the Perl programming language, and the inventor of the
+<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>.
+These facts illustrate his “hacky” (= rule bending) awesomeness.
+</p>
+
+
+EOF
+        id_base => "larry_wall_facts",
+        img_alt => "Larry Wall",
+        img_attribution => 'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
+        img_src => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg" ,
+        img_class => "story_logo larry_wall",
+        license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2007" />
+EOF
+        links_wml => <<'EOF',
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikiquote.org/wiki/Larry_Wall">Larry Wall Quotes on Wikiquote</a>
+</p>
+</li>
+
+</ul>
+EOF
+        meta_desc => "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
+        nav_blocks_wml => <<'EOF',
+<foss_nav_block />
+EOF
+        see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+        short_id => 'lwall',
+        tabs_title => "Larry Wall Facts",
+        title => "Larry Wall Facts",
+        url_base => "Larry-Wall",
     },
     {
         abstract => <<'EOF',
@@ -647,6 +654,7 @@ EOF
         short_id => 'nsa',
         tabs_title => "NSA Facts",
         title => "NSA Facts",
+        url_base => "NSA",
     },
     {
         abstract => <<'EOF',
@@ -698,6 +706,7 @@ EOF
         short_id => 'sglau',
         tabs_title => "Summer Glau Facts",
         title => "Summer Glau Facts",
+        url_base => "Summer-Glau",
     },
     {
         abstract => <<'EOF',
@@ -771,6 +780,7 @@ EOF
         short_id => 'xena',
         tabs_title => "Xena Facts",
         title => "Xena (the Warrior Princess) Facts",
+        url_base => "Xena",
     },
     {
         abstract => <<'EOF',
@@ -832,6 +842,7 @@ EOF
         short_id => 'xslt',
         tabs_title => "XSLT Facts",
         title => "XSLT Facts",
+        url_base => "XSLT",
     },
 );
 
@@ -849,6 +860,16 @@ my $tags_output = <<'EOF';
 #include "Inc/emma_watson.wml"
 
 EOF
+
+my $main_page_tag_list = <<'EOF';
+<define-tag facts__list>
+EOF
+
+my $main_page_tt = <<'END_OF_TEMPLATE';
+<h3 id="facts-[% p.short_id() %]" class="facts"><a href="[% p.url_base() %]/">[% p.title() %]</a></h3>
+
+<facts__[% p.short_id() %] />
+END_OF_TEMPLATE
 
 my $img_tt_text = <<'END_OF_TEMPLATE';
 <define-tag facts__img__[% p.short_id() %]>
@@ -923,7 +944,12 @@ END_OF_TEMPLATE
     $template->process(\$tt_text, $vars, \$out);
     $template->process(\$img_tt_text, $vars, \$tags_output);
     $template->process(\$tag_tt_text, $vars, \$tags_output);
+    $template->process(\$main_page_tt, $vars, \$main_page_tag_list);
     io->file("lib/factoids/pages/". $page->id_base().'.wml')->utf8->print($out);
 }
 
-io->file("lib/factoids/common-out/tags.wml")->utf8->print($tags_output);
+io->file("lib/factoids/common-out/tags.wml")->utf8->print(
+    $tags_output,
+    $main_page_tag_list,
+    "\n</define-tag>\n",
+);

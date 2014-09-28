@@ -8,7 +8,6 @@ use utf8;
 use MyNavData;
 use HTML::Widgets::NavMenu::JQueryTreeView;
 
-use CGI qw();
 use MyNavLinks;
 
 use MySectNavData;

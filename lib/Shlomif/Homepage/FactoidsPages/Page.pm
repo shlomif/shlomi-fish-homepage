@@ -20,6 +20,7 @@ has [
     'short_id',
     'tabs_title',
     'title',
+    'url_base',
 ] => (is => 'ro', isa => 'Str', required => 1);
 
 =begin foo

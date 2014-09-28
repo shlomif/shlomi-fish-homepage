@@ -1,3 +1,4 @@
+#include "factoids/OUT_IMG_TAGS.wml"
 #include "Inc/emma_watson.wml"
 
 <define-tag __facts_space>
@@ -11,7 +12,7 @@
 
 <define-tag facts__chuck>
 
-<img src="$(ROOT)/humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia" class="story_logo chuck_norris" />
+<facts__img__chuck />
 
 <p>
 These are additions to the
@@ -41,7 +42,7 @@ and masculinity.
 
 <define-tag facts__buffy>
 
-<img src="$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg" alt="Photo of Buffy Summers from the show DVD via the English Wikipedia" class="story_logo buffy" />
+<facts__img__buffy />
 
 <p>
 Facts about
@@ -60,7 +61,7 @@ Whedon</a> and portrayed by
 
 <define-tag facts__clarissa>
 
-<img src="$(ROOT)/humour/bits/facts/images/clarissa-1.jpg" alt="Photo of the First DVD of CEIA from the Wikipedia" class="story_logo clarissa" />
+<facts__img__clarissa />
 
 <p>
 Facts about Clarissa Darling, the protagonist of the show
@@ -90,7 +91,7 @@ and played by
 Taken from: https://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg
 -->
 
-<img src="$(ROOT)/humour/bits/facts/images/knuth-small.jpg" alt="Photo of Prof. Don Knuth from Flickr via the Wikipedia" class="story_logo knuth" />
+<facts__img__knuth />
 
 <p>
 <a href="http://www-cs-staff.stanford.edu/~uno/">Don Knuth</a> is a professor
@@ -113,8 +114,7 @@ These facts explain why he isn’t God, but pretty close.
 <!--
 Taken from: http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg .
 -->
-<img src="$(ROOT)/humour/bits/facts/images/lwall-150w.jpg" alt="Larry Wall"
-title="Larry Wall Small Photo from the English Wikipedia" class="story_logo larry_wall" />
+<facts__img__lwall />
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
@@ -129,6 +129,8 @@ These facts illustrate his “hacky” (= rule bending) awesomeness.
 
 <define-tag facts__nsa>
 
+<facts__img__nsa />
+
 <p>
 The
 <a href="http://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>
@@ -141,7 +143,7 @@ why it should not be feared.
 
 <define-tag facts__sglau>
 
-<img src="$(ROOT)/humour/bits/facts/images/sglau-150w.jpg" alt="Photo of Summer Glau from the English Wikipedia" class="story_logo summer_glau" />
+<facts__img__sglau />
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> (born
@@ -170,7 +172,8 @@ which is the subject of such facts here.
 <!--
 Taken from: http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg
 -->
-<img src="$(ROOT)/humour/bits/facts/images/xena-small.jpg" alt="Photo of Xena, the Warrior Princess" class="story_logo xena" />
+
+<facts__img__xena />
 
 <p>
 After reading the
@@ -190,6 +193,8 @@ I also found the character of Xena to be more comical than strong.
 </define-tag>
 
 <define-tag facts__xslt>
+
+<facts__img__xslt />
 
 <p>
 <a href="http://en.wikipedia.org/wiki/XSL_Transformations">XSLT</a> is
@@ -213,6 +218,8 @@ seems cool.
 </define-tag>
 
 <define-tag facts__in_soviet_russia>
+
+<facts__img__in_soviet_russia />
 
 <p>
 Additions to the

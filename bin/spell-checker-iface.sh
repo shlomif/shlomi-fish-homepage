@@ -2,6 +2,7 @@
 find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     ( LC_ALL=C sort  ) |
     grep -vP 'dest/t2/philosophy/obj-oss/objectivism-and-open-source/' |
+    grep -vP '^dest/t2/MANIFEST\.html$' |
     grep -vP 'philosophy/foss-other-beasts/revision-2/' |
     grep -vP 'philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/' |
     grep -vP 'guide2ee/undergrad' |

@@ -214,6 +214,20 @@ EOF
 my @main_pages =
 (
     {
+        abstract => <<'EOF',
+<p>
+Facts about
+<a href="http://buffy.wikia.com/wiki/Buffy_Summers">Buffy Summers</a>,
+the main protagonist of the television show
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29"><i>Buffy
+the Vampire Slayer</i></a>, as created by
+<a href="http://en.wikipedia.org/wiki/Joss_Whedon">Joss
+Whedon</a> and portrayed by
+<a href="http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>.
+</p>
+
+
+EOF
         id_base => 'buffy_facts',
         img_alt => "Photo of Buffy Summers from the show DVD via the English Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
@@ -311,6 +325,18 @@ EOF
         title => 'Buffy Facts',
     },
     {
+        abstract => <<'EOF',
+<p>
+Facts about Clarissa Darling, the protagonist of the show
+<a href="http://en.wikipedia.org/wiki/Clarissa_Explains_It_All"><i>Clarissa
+Explains It All</i></a>, as created by
+<a href="http://en.wikipedia.org/wiki/Mitchell_Kriegman">Mitchell Kriegman</a>
+and played by
+<a href="http://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a>.
+</p>
+
+
+EOF
         id_base => "clarissa_facts",
         img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
@@ -364,6 +390,9 @@ EOF
         title => "Clarissa Darling Facts (from Clarissa Explains it All)",
     },
     {
+        abstract => <<'EOF',
+<emma_watson_intro_text />
+EOF
         id_base => "emma_watson_facts",
         img_alt => "Photo of Emma Watson from the Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
@@ -393,6 +422,16 @@ EOF
         title => "Emma Watson Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
+creator of the Perl programming language, and the inventor of the
+<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>.
+These facts illustrate his “hacky” (= rule bending) awesomeness.
+</p>
+
+
+EOF
         id_base => "larry_wall_facts",
         img_alt => "Larry Wall",
         img_attribution => 'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
@@ -426,6 +465,19 @@ EOF
         title => "Larry Wall Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+<a href="http://www-cs-staff.stanford.edu/~uno/">Don Knuth</a> is a professor
+Emeritus of Computer Science at Stanford University, and is the creator
+of <a href="http://en.wikipedia.org/wiki/TeX">TeX</a>, inventor of several
+important algorithms and author of
+<a href="http://en.wikipedia.org/wiki/The_Art_of_Computer_Programming"><i>The Art of Computer Programming</i></a>.
+</p>
+
+<p>
+These facts explain why he isn’t God, but pretty close.
+</p>
+EOF
         id_base => "knuth_is_not_god_facts",
         img_alt => "Photo of Prof. Don Knuth from Flickr via the Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
@@ -467,6 +519,16 @@ EOF
         title => "Knuth Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+The
+<a href="http://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>
+is the United States’ National Security Agency, a cryptologic intelligence
+agency. These facts show why the NSA is a paper tiger, and a money sink, and
+why it should not be feared.
+</p>
+
+EOF
         id_base => "nsa_facts",
         img_alt => "NSA Logo",
         img_attribution => 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
@@ -587,6 +649,28 @@ EOF
         title => "NSA Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> (born
+1981) is a Hollywood actress best known for playing
+<a href="http://firefly.wikia.com/wiki/River_Tam">River Tam</a> in
+<i>Firefly</i>
+and <a href="http://terminator.wikia.com/wiki/Cameron">Cameron</a>,
+a Terminator, in the
+Television series <i>The Sarah Connor Chronicles</i>. She
+is also notable for being featured in the online comics,
+<a href="https://en.wikipedia.org/wiki/Xkcd">xkcd</a>, and for being featured
+as a fictional version of herself in the realistic, political, fan-fiction,
+screenplay, <a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+at the NSA</i></a>.
+</p>
+
+<p>
+Glau is notable for being the first non-fictional and <b>real-life female</b>,
+which is the subject of such facts here.
+</p>
+
+EOF
         id_base => "summer_glau_facts",
         img_alt => "Photo of Summer Glau from the English Wikipedia",
         img_attribution => '',
@@ -616,6 +700,23 @@ EOF
         title => "Summer Glau Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+After reading the
+<a href="http://en.wikipedia.org/wiki/Chuck_Norris_facts">Wikipedia
+page about Chuck Norris Facts</a> (and related facts), I was saddened to learn
+that there were none about females. So, in the name of gender equality,
+a collection of facts about
+<a href="http://en.wikipedia.org/wiki/Xena">Xena, the Warrior Princess</a>
+was created.
+</p>
+
+<p>
+I recall watching the show and enjoying it, though I found it a little silly.
+I also found the character of Xena to be more comical than strong.
+</p>
+
+EOF
         id_base => "xena_facts",
         img_alt => "Photo of Xena, the Warrior Princess",
         img_attribution => 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
@@ -672,6 +773,26 @@ EOF
         title => "Xena (the Warrior Princess) Facts",
     },
     {
+        abstract => <<'EOF',
+<p>
+<a href="http://en.wikipedia.org/wiki/XSL_Transformations">XSLT</a> is
+short for Extensible Stylesheet Language (XSL) Transformations and is
+an XML-based language for transforming XML documents into other XML
+documents.
+</p>
+
+<p>
+These facts illustrate how <b>evil</b> XSLT (supposedly) is.
+</p>
+
+<p>
+I think XSLT
+has many legitimate uses and can be pretty sweet, but
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-why-XSLT-is-so-evil">an
+IRC conversation we had on ##programming</a> started this meme and it
+seems cool.
+</p>
+EOF
         id_base => "xslt_facts",
         img_alt => "XSLT Logo",
         img_attribution => 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',

@@ -52,13 +52,7 @@ Muppets Show</i> hosting Harry Potter</a>.
 
 </define-tag>
 
-<define-tag emma_watson_intro>
-
-<!--
-Taken from: https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg
--->
-
-<img src="$(ROOT)/humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson from the Wikipedia" class="story_logo emma_watson" />
+<define-tag emma_watson_intro_text>
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a>
@@ -75,6 +69,18 @@ conducted by Empire magazine. In May 2014, BuzzFeed dubbed her the “most
 <b>flawless</b> woman of the decade”.
 </p>
 </blockquote>
+
+</define-tag>
+
+<define-tag emma_watson_intro>
+
+<!--
+Taken from: https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg
+-->
+
+<img src="$(ROOT)/humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson from the Wikipedia" class="story_logo emma_watson" />
+
+<emma_watson_intro_text />
 
 </define-tag>
 

@@ -312,9 +312,9 @@ EOF
         {
             id_base => "in_soviet_russia_facts",
             img_alt => "Soviet Russia",
-            img_attribution => 'http://fill-in.tld/',
+            img_attribution => 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
             img_class => "story_logo in_soviet_russia",
-            img_src => "\$(ROOT)/humour/bits/facts/images/in-soviet-russia.png",
+            img_src => "\$(ROOT)/humour/bits/facts/images/soviet-150w.png",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -436,7 +436,7 @@ EOF
             img_alt => "NSA Logo",
             img_attribution => 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
             img_class => "story_logo nsa",
-            img_src => "\$(ROOT)/humour/bits/facts/images/nsa-logo.png",
+            img_src => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
             license_wml => <<'EOF',
 <cc_by_british_blurb year="2013" />
 EOF
@@ -641,7 +641,7 @@ EOF
             img_alt => "XSLT Logo",
             img_attribution => '',
             img_class => "story_logo xslt",
-            img_src => "\$(ROOT)/humour/bits/facts/images/xslt-logo.png",
+            img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
@@ -685,7 +685,7 @@ my $img_tags = '';
 my $img_tt_text = <<'END_OF_TEMPLATE';
 <define-tag facts__img__[% p.short_id() %]>
 
-<!-- Taken from [% p.img_attribution %] -->
+<!-- Taken from [% p.img_attribution() %] -->
 
 <img src="[% p.img_src() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
 </define-tag>

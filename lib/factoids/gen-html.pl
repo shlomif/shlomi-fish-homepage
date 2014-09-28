@@ -181,7 +181,7 @@ EOF
             img_alt => "Photo of Chuck Norris from the English Wikipedia",
             img_attribution => '',
             img_class => "story_logo chuck_norris",
-            img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1.jpg",
+            img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1-150w.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2010" />
 EOF
@@ -232,7 +232,7 @@ EOF
             img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
             img_attribution => '',
             img_class => "story_logo clarissa",
-            img_src => "\$(ROOT)/humour/bits/facts/images/clarissa-1.jpg",
+            img_src => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF

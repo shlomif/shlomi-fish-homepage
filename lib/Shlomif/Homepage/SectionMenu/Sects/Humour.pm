@@ -8,6 +8,24 @@ use utf8;
 use MyNavData;
 
 use Shlomif::Homepage::FortuneCollections;
+use JSON::MaybeXS (qw( decode_json ));
+
+my $json_data_fn = $INC{'Shlomif/Homepage/SectionMenu/Sects/Humour.pm'} =~ s#/[^/]+\z#/factoids-nav.json#r;
+
+sub _slurp
+{
+    my $filename = shift;
+
+    open my $in, '<:encoding(utf8)', $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    local $/;
+    my $contents = <$in>;
+
+    close($in);
+
+    return $contents;
+}
 
 my $humour_tree_contents =
 {
@@ -293,57 +311,7 @@ my $humour_tree_contents =
                     text => "Collections of Facts",
                     url => "humour/bits/facts/",
                     title => "Collections of funny factoids about various people and things",
-                    subs =>
-                    [
-                        {
-                            url => "humour/bits/facts/Chuck-Norris/",
-                            text => "Chuck Norris",
-                        },
-                        {
-                            url => "humour/bits/facts/Buffy/",
-                            text => "Buffy",
-                            title => "Facts about Buffy Summers from the Television show, Buffy the Vampire Slayer",
-                        },
-                        {
-                            url => "humour/bits/facts/Clarissa/",
-                            text => "Clarissa",
-                            title => "Facts about Clarissa Darling from the Television show, Clarissa Explains It All",
-                        },
-                        {
-                            url => "humour/bits/facts/Emma-Watson/",
-                            text => "Emma Watson",
-                        },
-                        {
-                            url => "humour/bits/facts/Knuth/",
-                            text => "Knuth",
-                        },
-                        {
-                            url => "humour/bits/facts/Larry-Wall/",
-                            text => "Larry Wall",
-                        },
-                        {
-                            url => "humour/bits/facts/NSA/",
-                            text => "NSA",
-                        },
-                        {
-                            url => "humour/bits/facts/Summer-Glau/",
-                            text => "Summer Glau",
-                        },
-                        {
-                            url => "humour/bits/facts/Xena/",
-                            text => "Xena",
-                            title => "Factoids about Xena, the Warrior Princess",
-                        },
-                        {
-                            url => "humour/bits/facts/XSLT/",
-                            text => "XSLT",
-                        },
-                        {
-                            url => "humour/bits/facts/In-Soviet-Russia/",
-                            text => "In Soviet Russia…",
-                            title => "Additions to “In Soviet Russia…” or Soviet reversal",
-                        },
-                    ],
+                    subs => decode_json(_slurp( $json_data_fn )),
                 },
            ],
         },

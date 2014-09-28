@@ -9,6 +9,8 @@ use lib './lib';
 
 use IO::All qw/ io /;
 
+use JSON::MaybeXS (qw( encode_json ));
+
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 
@@ -953,3 +955,20 @@ io->file("lib/factoids/common-out/tags.wml")->utf8->print(
     $main_page_tag_list,
     "\n</define-tag>\n",
 );
+
+my $new_json = encode_json([
+        map {
+            +{
+                url => "humour/bits/facts/" . $_->url_base() . "/",
+                text => $_->title(),
+            }
+        }
+        @pages
+    ]);
+
+my $json_fn = 'lib/Shlomif/Homepage/SectionMenu/Sects/factoids-nav.json';
+
+if (! -e $json_fn or $new_json ne io->file($json_fn)->utf8->all)
+{
+    io->file($json_fn)->utf8->print($new_json);
+}

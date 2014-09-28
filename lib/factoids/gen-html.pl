@@ -845,7 +845,10 @@ my @pages =
     @pages_proto
 );
 
-my $img_tags = '';
+my $img_tags = <<'EOF';
+#include "Inc/emma_watson.wml"
+
+EOF
 
 my $img_tt_text = <<'END_OF_TEMPLATE';
 <define-tag facts__img__[% p.short_id() %]>

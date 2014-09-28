@@ -1,12 +1,1 @@
 #include "factoids/OUT_IMG_TAGS.wml"
-#include "Inc/emma_watson.wml"
-
-<define-tag __facts_space>
-<preserve n />
-<set-var <attributes-extract n %attributes> />
-<p>
-<:{print +(("<br />\n") x '<get-var n />')}:>
-</p>
-<restore n />
-</define-tag>
-

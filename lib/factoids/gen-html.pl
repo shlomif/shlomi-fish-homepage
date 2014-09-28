@@ -55,13 +55,36 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
     }
 }
 
+sub _page_to_obj
+{
+    my ($hash_ref) = @_;
+
+    my $ret;
+    eval
+    {
+        $ret = Shlomif::Homepage::FactoidsPages::Page->new($_);
+    };
+
+    if ($@)
+    {
+        print "Failed at " . $hash_ref->{id_base} . "!\n";
+        die $@;
+    }
+
+    return $ret;
+}
+
 my @pages =
 (
     map
-    { Shlomif::Homepage::FactoidsPages::Page->new($_); }
+    { _page_to_obj($_); }
     (
         {
             id_base => 'buffy_facts',
+            img_alt => "Photo of Buffy Summers from the show DVD via the English Wikipedia",
+            img_attribution => '',
+            img_class => "story_logo buffy",
+            img_src => "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -155,6 +178,10 @@ EOF
         },
         {
             id_base => "chuck_facts",
+            img_alt => "Photo of Chuck Norris from the English Wikipedia",
+            img_attribution => '',
+            img_class => "story_logo chuck_norris",
+            img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2010" />
 EOF
@@ -202,6 +229,10 @@ EOF
         },
         {
             id_base => "clarissa_facts",
+            img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
+            img_attribution => '',
+            img_class => "story_logo clarissa",
+            img_src => "\$(ROOT)/humour/bits/facts/images/clarissa-1.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -251,6 +282,10 @@ EOF
         },
         {
             id_base => "emma_watson_facts",
+            img_alt => "Photo of Emma Watson from the Wikipedia",
+            img_attribution => 'https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
+            img_class => "story_logo emma_watson",
+            img_src => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2014" />
 EOF
@@ -276,6 +311,10 @@ EOF
         },
         {
             id_base => "in_soviet_russia_facts",
+            img_alt => "Soviet Russia",
+            img_attribution => 'http://fill-in.tld/',
+            img_class => "story_logo in_soviet_russia",
+            img_src => "\$(ROOT)/humour/bits/facts/images/in-soviet-russia.png",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -320,6 +359,10 @@ EOF
         },
         {
             id_base => "larry_wall_facts",
+            img_alt => "Larry Wall",
+            img_attribution => 'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
+            img_src => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg" ,
+            img_class => "story_logo larry_wall",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2007" />
 EOF
@@ -349,6 +392,10 @@ EOF
         },
         {
             id_base => "knuth_is_not_god_facts",
+            img_alt => "Photo of Prof. Don Knuth from Flickr via the Wikipedia",
+            img_attribution => 'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
+            img_class => "story_logo knuth",
+            img_src => "\$(ROOT)/humour/bits/facts/images/knuth-small.jpg",
             license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2002" />
 EOF
@@ -386,6 +433,10 @@ EOF
         },
         {
             id_base => "nsa_facts",
+            img_alt => "NSA Logo",
+            img_attribution => 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
+            img_class => "story_logo nsa",
+            img_src => "\$(ROOT)/humour/bits/facts/images/nsa-logo.png",
             license_wml => <<'EOF',
 <cc_by_british_blurb year="2013" />
 EOF
@@ -496,41 +547,49 @@ warfare, and justice, that still has implications today.
 
 </ol>
 EOF
-short_id => 'nsa',
-tabs_title => "NSA Facts",
-title => "NSA Facts",
-},
-{
-id_base => "summer_glau_facts",
-license_wml => <<'EOF',
+            short_id => 'nsa',
+            tabs_title => "NSA Facts",
+            title => "NSA Facts",
+        },
+        {
+            id_base => "summer_glau_facts",
+            img_alt => "Photo of Summer Glau from the English Wikipedia",
+            img_attribution => '',
+            img_class => "story_logo summer_glau",
+            img_src => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
+            license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2014" />
 EOF
-links_wml => <<'EOF',
+            links_wml => <<'EOF',
 <ul>
 
 <summer_glau_common_links />
 
 </ul>
 EOF
-meta_desc => "Factoids about Summer Glau, the Hollywood actress",
-nav_blocks_wml => <<'EOF',
+            meta_desc => "Factoids about Summer Glau, the Hollywood actress",
+            nav_blocks_wml => <<'EOF',
 <xkcd_nav_block />
 EOF
-see_also_wml => <<'EOF',
+            see_also_wml => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
 EOF
-short_id => 'sglau',
-tabs_title => "Summer Glau Facts",
-title => "Summer Glau Facts",
-},
-{
-id_base => "xena_facts",
-license_wml => <<'EOF',
+            short_id => 'sglau',
+            tabs_title => "Summer Glau Facts",
+            title => "Summer Glau Facts",
+        },
+        {
+            id_base => "xena_facts",
+            img_alt => "Photo of Xena, the Warrior Princess",
+            img_attribution => '',
+            img_class => "story_logo xena",
+            img_src => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
+            license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
-links_wml => <<'EOF',
+            links_wml => <<'EOF',
 <ul>
 
 <li>
@@ -543,11 +602,11 @@ Female Ass-Kickers</a>.
 </li>
 </ul>
 EOF
-meta_desc => "Factoids about Xena, the Warrior Princess",
-nav_blocks_wml => <<'EOF',
+            meta_desc => "Factoids about Xena, the Warrior Princess",
+            nav_blocks_wml => <<'EOF',
 
 EOF
-see_also_wml => <<'EOF',
+            see_also_wml => <<'EOF',
 <ul>
 
 <li>
@@ -573,16 +632,20 @@ Chuck Norris Facts</a> - more toughness.
 
 </ul>
 EOF
-short_id => 'xena',
-tabs_title => "Xena Facts",
-title => "Xena (the Warrior Princess) Facts",
-},
-{
-id_base => "xslt_facts",
-license_wml => <<'EOF',
+            short_id => 'xena',
+            tabs_title => "Xena Facts",
+            title => "Xena (the Warrior Princess) Facts",
+        },
+        {
+            id_base => "xslt_facts",
+            img_alt => "XSLT Logo",
+            img_attribution => '',
+            img_class => "story_logo xslt",
+            img_src => "\$(ROOT)/humour/bits/facts/images/xslt-logo.png",
+            license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
-links_wml => <<'EOF',
+            links_wml => <<'EOF',
 <ul>
 
 <li>
@@ -601,21 +664,32 @@ refers to several resources.
 
 </ul>
 EOF
-meta_desc => "Facts about XSLT, the most Evil thing in existence.",
-nav_blocks_wml => <<'EOF',
+            meta_desc => "Facts about XSLT, the most Evil thing in existence.",
+            nav_blocks_wml => <<'EOF',
 <foss_nav_block />
 EOF
-see_also_wml => <<'EOF',
+            see_also_wml => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
 EOF
-short_id => 'xslt',
-tabs_title => "XSLT Facts",
-title => "XSLT Facts",
+            short_id => 'xslt',
+            tabs_title => "XSLT Facts",
+            title => "XSLT Facts",
         },
     ),
 );
+
+my $img_tags = '';
+
+my $img_tt_text = <<'END_OF_TEMPLATE';
+<define-tag facts__img__[% p.short_id() %]>
+
+<!-- Taken from [% p.img_attribution %] -->
+
+<img src="[% p.img_src() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
+</define-tag>
+END_OF_TEMPLATE
 
 foreach my $page (@pages)
 {
@@ -669,5 +743,8 @@ END_OF_TEMPLATE
 
     my $out = '';
     $template->process(\$tt_text, $vars, \$out);
+    $template->process(\$img_tt_text, $vars, \$img_tags);
     io->file("lib/factoids/pages/". $page->id_base().'.wml')->utf8->print($out);
 }
+
+io->file("lib/factoids/OUT_IMG_TAGS.wml")->utf8->print($img_tags);

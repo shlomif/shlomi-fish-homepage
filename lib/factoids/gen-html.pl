@@ -845,7 +845,7 @@ my @pages =
     @pages_proto
 );
 
-my $img_tags = <<'EOF';
+my $tags_output = <<'EOF';
 #include "Inc/emma_watson.wml"
 
 EOF
@@ -893,7 +893,7 @@ foreach my $page (@pages)
 #include "Inc/factoids_jqui_tabs_multi_lang.wml"
 #include "Inc/nav_blocks.wml"
 #include "Inc/summer_glau.wml"
-#include "stories/facts.wml"
+#include "factoids/common-out/tags.wml"
 #include "stories/stories-list.wml"
 #include "utils.wml"
 
@@ -921,12 +921,9 @@ END_OF_TEMPLATE
 
     my $out = '';
     $template->process(\$tt_text, $vars, \$out);
-    $template->process(\$img_tt_text, $vars, \$img_tags);
-    if (length ( $page->abstract() ) > 0)
-    {
-        $template->process(\$tag_tt_text, $vars, \$img_tags);
-    }
+    $template->process(\$img_tt_text, $vars, \$tags_output);
+    $template->process(\$tag_tt_text, $vars, \$tags_output);
     io->file("lib/factoids/pages/". $page->id_base().'.wml')->utf8->print($out);
 }
 
-io->file("lib/factoids/OUT_IMG_TAGS.wml")->utf8->print($img_tags);
+io->file("lib/factoids/common-out/tags.wml")->utf8->print($tags_output);

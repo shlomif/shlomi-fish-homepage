@@ -966,7 +966,7 @@ my $new_json = encode_json([
         @pages
     ]);
 
-my $json_fn = 'lib/Shlomif/Homepage/SectionMenu/Sects/factoids-nav.json';
+my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
 if (! -e $json_fn or $new_json ne io->file($json_fn)->utf8->all)
 {

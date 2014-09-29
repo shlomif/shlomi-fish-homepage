@@ -649,7 +649,7 @@ $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 
 FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
-FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/Homepage/fortunes-meta-data.yml
+FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
 
 
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
@@ -1240,7 +1240,7 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 	perl $(PUT_CARDS_2013_INDIV_SCRIPT)
 
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
-FACTOIDS_NAV_JSON = lib/Shlomif/Homepage/SectionMenu/Sects/factoids-nav.json
+FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced $(FACTOIDS_NAV_JSON)
 
 FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))

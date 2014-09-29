@@ -490,7 +490,7 @@ sub render_story_entry
 
     _print_utf8(
         qq{<div class="story">\n},
-        sprintf(qq{<%s id="%s"><a href="%s">%s</a></%s>\n},
+        sprintf(qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
             ($o->entry_id || (die "Foo $id")),
             escape_html(

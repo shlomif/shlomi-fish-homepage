@@ -59,7 +59,9 @@ sub _init_fortune
     return Shlomif::Homepage::FortuneCollections::Record->new($rec);
 }
 
-my $yaml_data_fn = $INC{'Shlomif/Homepage/FortuneCollections.pm'} =~ s#/[^/]+\z#/fortunes-meta-data.yml#r;
+use Shlomif::FindLib ();
+
+my $yaml_data_fn = Shlomif::FindLib->rel_path(['Shlomif', 'fortunes-meta-data.yml']);
 my $orig_fortunes_records = LoadFile($yaml_data_fn)->{'shlomif_fortunes_collections'}->{'fortunes'};
 
 # DumpFile('./foo.yml', { shlomif_fortunes_collections => { fortunes => \@orig_fortunes_records, }, }, );

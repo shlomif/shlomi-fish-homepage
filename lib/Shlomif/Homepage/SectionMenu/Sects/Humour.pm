@@ -3,6 +3,7 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 use strict;
 use warnings;
 
+use Shlomif::FindLib ();
 use utf8;
 
 use MyNavData;
@@ -10,7 +11,7 @@ use MyNavData;
 use Shlomif::Homepage::FortuneCollections;
 use JSON::MaybeXS (qw( decode_json ));
 
-my $json_data_fn = $INC{'Shlomif/Homepage/SectionMenu/Sects/Humour.pm'} =~ s#/[^/]+\z#/factoids-nav.json#r;
+my $json_data_fn = Shlomif::FindLib->rel_path([qw(Shlomif factoids-nav.json)]);
 
 sub _slurp
 {

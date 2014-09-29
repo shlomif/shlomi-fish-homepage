@@ -240,7 +240,7 @@ EOF
             logo_alt => "The Muppets Show TNI",
             logo_class => "muppets",
             logo_id => "muppets_show_tni_logo",
-            logo_src => "humour/Muppets-Show-TNI/images/Muppet-Show-TNI-Logo--take1.svg.png",
+            logo_src => "humour/Muppets-Show-TNI/images/muppets-200w.png",
             entry_id => "muppets-show-TNI",
             entry_text => "The Muppets’ Show - The New Incarnation",
             href => "humour/Muppets-Show-TNI/",

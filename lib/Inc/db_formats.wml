@@ -41,3 +41,16 @@ page per section.
 <restore h2_id h2_text indiv_href epub_href orig_xml_href pdf_href />
 
 </define-tag>
+
+<define-tag docbook_formats_w_base>
+
+<preserve h2_id h2_text base />
+<set-var %attributes />
+
+<docbook_formats h2_id="<get-var h2_id />" h2_text="<get-var h2_text />"
+    indiv_href="<get-var base>/" epub_href="<get-var base />.epub" orig_xml_href="<get-var base />.xml" pdf_href="<get-var base />.pdf" />
+
+<restore h2_id h2_text base />
+
+</define-tag>
+

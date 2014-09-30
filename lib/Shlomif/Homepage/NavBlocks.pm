@@ -14,6 +14,7 @@ our @EXPORT_OK = (qw(
 use Shlomif::Homepage::NavBlocks::LocalLink;
 use Shlomif::Homepage::NavBlocks::GitHubLink;
 use Shlomif::Homepage::NavBlocks::FacebookLink;
+use Shlomif::Homepage::NavBlocks::ShlomifWikiLink;
 
 
 sub _l
@@ -40,6 +41,14 @@ sub _github
 {
     return
         Shlomif::Homepage::NavBlocks::GitHubLink->new(
+            { @_ }
+        );
+}
+
+sub _sf_wiki
+{
+    return
+        Shlomif::Homepage::NavBlocks::ShlomifWikiLink->new(
             { @_ }
         );
 }
@@ -176,6 +185,16 @@ my %tr_s =
             _github( url => 'http://github.com/shlomif/Star-Trek--We-the-Living-Dead',),
         ],
     ),
+    'SummerNSA_effort' =>
+    _tr(
+        title => "The “#SummerNSA” Effort",
+        items => [
+            _fp( path => "philosophy/SummerNSA/",),
+            _l( inner_html => "A #SummerNSA’s Reading", path => "philosophy/SummerNSA/A-SummerNSA-Reading/",),
+            _sf_wiki( url => 'http://shlomif.wikia.com/wiki/SummerNSA',),
+            _facebook( url => 'http://www.facebook.com/SummerNSA',),
+        ],
+    ),
     'summer_nsa' =>
     _tr(
         title => "Summerschool at the NSA",
@@ -292,6 +311,7 @@ my %table_blocks =
                 _get_tr('EmWatson_visit_to_Gaza'),
                 _subdiv_tr(title => q{#SummerNSA}),
                 _get_tr('summer_nsa'),
+                _get_tr('SummerNSA_effort'),
             ],
         },
     ),

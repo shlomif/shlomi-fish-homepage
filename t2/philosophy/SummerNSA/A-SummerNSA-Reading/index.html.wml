@@ -2,6 +2,7 @@
 
 #include "toc_div.wml"
 #include "Inc/db_formats.wml"
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "A #SummerNSA’s Reading" />
 
@@ -14,3 +15,5 @@
 <h2 id="content">Content</h2>
 
 #include "docbook/5/rendered/A-hashtag-SummerNSA-s-Reading.xhtml"
+
+<politics_nav_block />

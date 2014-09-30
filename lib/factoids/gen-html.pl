@@ -9,7 +9,7 @@ use lib './lib';
 
 use IO::All qw/ io /;
 
-use JSON::MaybeXS (qw( JSON ));
+use JSON::MaybeXS ();
 
 use XML::LibXML;
 use XML::LibXML::XPathContext;

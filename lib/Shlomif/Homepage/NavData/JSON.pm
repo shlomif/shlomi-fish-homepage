@@ -3,7 +3,7 @@ package Shlomif::Homepage::NavData::JSON;
 use strict;
 use warnings;
 
-use JSON::MaybeXS qw( decode_json encode_json );
+use JSON::MaybeXS qw( decode_json );
 
 use IO::All qw( io );
 
@@ -91,7 +91,7 @@ sub output_fully_expanded_as_json
 
     my $brief_keys_data = _map_data($verbose_keys_data);
 
-    my $brief_keys_json = encode_json( $brief_keys_data );
+    my $brief_keys_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode( $brief_keys_data );
 
     io->file('./dest/t2/_data/n.json')->print($brief_keys_json);
 

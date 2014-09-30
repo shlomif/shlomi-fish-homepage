@@ -102,7 +102,11 @@ my $essays_tree_contents =
                             text => "A #SummerNSA’s Reading",
                             url => "philosophy/SummerNSA/A-SummerNSA-Reading/",
                             title => "Summarising the #SummerNSA effort so far.",
-                        }
+                        },
+                        {
+                            text => "Sep 2014 Call for Action",
+                            url => "philosophy/philosophy/SummerNSA-2014-09-call-for-action/",
+                        },
                     ],
                 },
                 {

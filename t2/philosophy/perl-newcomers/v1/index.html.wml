@@ -2,6 +2,7 @@
 #include '../template.wml'
 #include "toc_div.wml"
 #include <utils.wml>
+#include "Inc/db_formats.wml"
 
 <latemp_subject "“Usability” of the Perl Online World for Newcomers - Version 1" />
 
@@ -27,21 +28,9 @@ received a lot of commentary, both supporting, and criticising.
 
 #include "docbook/5/rendered/usability-of-perl-world-for-newcomers.xhtml"
 
-<h2 id="other_formats">Other Formats</h2>
-
-
 <set-var db5_base="usability-of-perl-world-for-newcomers" />
-<ul>
-<li>
-<a href="<get-var db5_base />.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
-</li>
-<li>
-<a href="<get-var db5_base />.xml">Original DocBook/XML</a>.
-</li>
-<li>
-<a href="<get-var db5_base />.rtf">Word RTF</a>.
-</li>
-</ul>
+
+<docbook_formats_w_base h2_id="other_formats" h2_text="Other Formats" base="<get-var db5_base />" />
 
 <h2 id="coverage">Coverage</h2>
 

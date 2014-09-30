@@ -23,7 +23,7 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP '\A\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E' |
-    grep -vP '\A\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/SummerNSA-2014-09-call-for-action/\E' |
+    grep -vP '\A\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/\E' |
     xargs perl bin/html-check-spelling-xmlp.pl |
     grep ':'
     # perl -lne 'print if /MathVentures\/3d.*\.xhtml/' |

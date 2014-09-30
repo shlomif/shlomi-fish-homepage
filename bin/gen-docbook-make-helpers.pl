@@ -132,6 +132,7 @@ my @documents =
         id => "introductory-language",
         path => "philosophy/computers/education/introductory-language",
         base => "introductory-language",
+        db_ver => 5,
     },
 
     {

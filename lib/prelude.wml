@@ -5,6 +5,11 @@
 # After including this file and before including "driver.wml", one can
 # over-ride stuff that driver.wml will later use.
 
+<:
+use strict;
+use warnings;
+:>
+
 <define-tag body endtag="required">
 <body*{#BODY_PARAMS#}>
 %body

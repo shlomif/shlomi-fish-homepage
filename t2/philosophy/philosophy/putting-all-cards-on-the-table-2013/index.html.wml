@@ -1,6 +1,7 @@
 #include '../template.wml'
 
 #include "toc_div.wml"
+#include "Inc/db_formats.wml"
 
 <latemp_subject "Putting all the Cards on the Table (2013)" />
 
@@ -8,36 +9,7 @@
 
 <toc_div />
 
-<h2 id="formats">Formats</h2>
-
-<ul>
-
-<li>
-<p>
-<a href="DocBook5/putting-all-cards-on-the-table-2013/">Read Online</a> - one
-page per section.
-</p>
-</li>
-
-<li>
-<p>
-<a href="DocBook5/putting-all-cards-on-the-table-2013.epub">EPUB</a>.
-</p>
-</li>
-
-<li>
-<p>
-<a href="DocBook5/putting-all-cards-on-the-table-2013.xml">Original DocBook 5/XML</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="DocBook5/putting-all-cards-on-the-table-2013.pdf">PDF (Acrobat Reader)</a>
-</p>
-</li>
-
-</ul>
+<docbook_formats h2_id="formats" h2_text="Formats" indiv_href="DocBook5/putting-all-cards-on-the-table-2013/" epub_href="DocBook5/putting-all-cards-on-the-table-2013.epub" orig_xml_href="DocBook5/putting-all-cards-on-the-table-2013.xml" pdf_href="DocBook5/putting-all-cards-on-the-table-2013.pdf" />
 
 <h2 id="content">Content</h2>
 

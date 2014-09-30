@@ -46,7 +46,7 @@ use Data::Dumper;
 use List::Util qw(max);
 
 use YAML::XS (qw(LoadFile DumpFile));
-use JSON::MaybeXS (qw(encode_json));
+use JSON::MaybeXS;
 
 use IO::All;
 
@@ -268,7 +268,7 @@ sub write_epub_json
 
     io()->file($fn)->print
     (
-        encode_json
+        JSON::MaybeXS->new(utf8 =>1, canonical => 1)->encode
         (
             +{
                 filename => $fn,

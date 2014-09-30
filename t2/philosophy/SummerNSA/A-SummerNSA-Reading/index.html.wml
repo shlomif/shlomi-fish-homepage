@@ -1,6 +1,7 @@
 #include '../template.wml'
 
 #include "toc_div.wml"
+#include "Inc/db_formats.wml"
 
 <latemp_subject "A #SummerNSA’s Reading" />
 
@@ -8,36 +9,7 @@
 
 <toc_div />
 
-<h2 id="formats">Formats</h2>
-
-<ul>
-
-<li>
-<p>
-<a href="A-hashtag-SummerNSA-s-Reading">Read Online</a> - one
-page per section.
-</p>
-</li>
-
-<li>
-<p>
-<a href="A-hashtag-SummerNSA-s-Reading.epub">EPUB</a>.
-</p>
-</li>
-
-<li>
-<p>
-<a href="A-hashtag-SummerNSA-s-Reading.xml">Original DocBook 5/XML</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="A-hashtag-SummerNSA-s-Reading.pdf">PDF (Acrobat Reader)</a>
-</p>
-</li>
-
-</ul>
+<docbook_formats h2_id="formats" h2_text="Formats" indiv_href="A-hashtag-SummerNSA-s-Reading/" epub_href="A-hashtag-SummerNSA-s-Reading.epub" orig_xml_href="A-hashtag-SummerNSA-s-Reading.xml" pdf_href="A-hashtag-SummerNSA-s-Reading.pdf" />
 
 <h2 id="content">Content</h2>
 

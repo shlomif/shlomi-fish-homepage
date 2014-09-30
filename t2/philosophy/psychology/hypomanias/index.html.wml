@@ -1,6 +1,7 @@
 <set-var disable_comments="1" />
 #include '../template.wml'
 #include "toc_div.wml"
+#include "Inc/db_formats.wml"
 #include <utils.wml>
 
 <latemp_subject "Dealing with Hypomanias" />
@@ -29,19 +30,7 @@ clinical depressions, clinical anxieties and especially hypomanias (=
 
 #include "docbook/5/rendered/dealing-with-hypomanias.xhtml"
 
-<h2 id="other_formats">Other Formats</h2>
-
-<ul>
-<li>
-<a href="dealing-with-hypomanias.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
-</li>
-<li>
-<a href="dealing-with-hypomanias.xml">Original DocBook/XML</a>.
-</li>
-<li>
-<a href="dealing-with-hypomanias.rtf">Word RTF</a>.
-</li>
-</ul>
+<docbook_formats h2_id="other_formats" h2_text="Other Formats" indiv_href="dealing-with-hypomanias/" epub_href="dealing-with-hypomanias.epub" orig_xml_href="dealing-with-hypomanias.xml" pdf_href="dealing-with-hypomanias.pdf" />
 
 <h2 id="coverage">Coverage</h2>
 

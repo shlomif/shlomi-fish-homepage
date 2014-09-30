@@ -1,7 +1,7 @@
 <!-- Converted by db4-upgrade version 1.0 -->
 <article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
     <info><title>Thoughts about the Best Introductory Language</title>
-        
+
         <authorgroup>
             <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
@@ -88,7 +88,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </info>
 
 <section xml:id="introduction"><info><title>Introduction</title></info>
-    
+
     <para>
         The purpose of this essay is to contemplate what is the best
         introductory programming language to teach for beginning programmers,
@@ -124,9 +124,9 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 </section>
 <section xml:id="various_approaches"><info><title>The Various (Wrong) Approaches to Introductory
         Programming Languages</title></info>
-    
+
     <section xml:id="linda_mciver_approach"><info><title>Linda McIver’s Thesis Approach</title></info>
-        
+
         <para>
             <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.csse.monash.edu.au/~lindap/">Linda
                 McIver</link> published along with Damian Conway
@@ -183,7 +183,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </section>
     <section xml:id="sicp_approach"><info><title>The “Structure and Interpretation of Computer Programs”
             Approach</title></info>
-        
+
 
         <para>
             <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://mitpress.mit.edu/sicp/">“Structure and
@@ -241,7 +241,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="back_to_basics_approach"><info><title>The “Teach in C” Approach</title></info>
-        
+
 
         <para>
             In his <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</link>,
@@ -308,7 +308,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </section>
     <section xml:id="programming_languages_make_you_write_good_code"><info><title>The “First Programming Language Should Make Sure You
             Write Good Code” Fallacy</title></info>
-        
+
         <para>
             You many times hear people saying that beginning programmers
             should be taught using a programming language that restricts them
@@ -380,7 +380,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </itemizedlist>
     </section>
     <section xml:id="have_decent_ide"><info><title>The “It Should Have a Decent IDE” Fallacy</title></info>
-        
+
         <para>
             Many education institutions reject many languages as introductory
             languages because they don’t have a decent <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Integrated_development_environment">integrated development
@@ -409,7 +409,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </section>
 </section>
 <section xml:id="relations"><info><title>Some useful relations</title></info>
-    
+
 
     <para>
         This section will introduce some useful relations ( “Language A
@@ -419,7 +419,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </para>
 
     <section xml:id="high_level_before_C"><info><title>A High Level Language Should Come Before C</title></info>
-        
+
         <para>
         C should not be taught as a first programming language from the
         reasons I have mentioned above. By all means, one should use a more
@@ -430,7 +430,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="perl_or_python_before_php"><info><title>Perl/Python/etc. should Come before PHP</title></info>
-        
+
         <para>
         Some people believe that PHP is a suitable introductory language.
         However, PHP has several major problems: lack of good abstraction
@@ -449,7 +449,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="perl_or_python_before_shell"><info><title>Perl/Python/etc. should Come before Shell</title></info>
-        
+
         <para>
         Some people believe that the first language a UNIX user should learn
         is a good shell (such as
@@ -469,7 +469,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="C_before_assembly"><info><title>C should Precede Assembly</title></info>
-        
+
         <para>
             It is <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.onlamp.com/pub/a/onlamp/2004/05/06/writegreatcode.html">certainly
             a good idea to learn Assembly language</link>, preferably of
@@ -494,7 +494,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="first_lang_should_be_practical"><info><title>The First Language should be Practical</title></info>
-        
+
         <para>
             A good first programming language should be practical and should
             grow up with you. I can tell from my experiences with the various
@@ -539,7 +539,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="localised_languages"><info><title>Localised Programming Languages should be Avoided</title></info>
-        
+
         <para>
             The Wikipedia has an (incomplete) <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Category:Non-English-based_programming_languages">list of non-English
                 based programming languages</link>, that were created at
@@ -618,7 +618,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="java_should_be_taught_after_perl"><info><title>Java Should be Taught After Perl</title></info>
-        
+
         <para>
             Joel Spolsky wrote an essay titled
             <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">“The
@@ -693,7 +693,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 </section>
 
 <section xml:id="verdict"><info><title>My Verdict</title></info>
-    
+
 
     <para>
         According to these constraints one can conclude that one should
@@ -724,9 +724,9 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </para>
 
     <section xml:id="perl_python_or_ruby"><info><title>Perl, Python or Ruby</title></info>
-        
+
         <section xml:id="perl"><info><title>Perl</title></info>
-            
+
 
             <para>
                 The core Perl language is huge. That may be a good or a bad
@@ -804,7 +804,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </section>
 
         <section xml:id="python"><info><title>Python</title></info>
-            
+
 
             <para>
                 Python has a small core language and it tries to be elegant.
@@ -856,7 +856,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 
         </section>
         <section xml:id="ruby"><info><title>Ruby</title></info>
-            
+
 
             <para>
                 Before I discuss Ruby a word of warning: I don’t know it very
@@ -917,7 +917,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </section>
     </section>
     <section xml:id="final_verdict"><info><title>Final Verdict</title></info>
-        
+
         <para>
             All things considered, I’d say that Perl is the best choice now,
             as Python is too strict and unexpressive, and Ruby is documented
@@ -953,7 +953,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </section>
 </section>
 <section xml:id="types_of_teaching"><info><title>Some Types of Teaching</title></info>
-    
+
     <para>
         There are several different types of teaching programming to laymen.
         This section aims to cover the most important ones and what needs
@@ -1004,7 +1004,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </para>
 </section>
 <section xml:id="conclusion"><info><title>Conclusion</title></info>
-    
+
 
     <para> I talked with a few people on the IRC about it and some of them told
         me something along the lines of “What makes you think that you know
@@ -1079,13 +1079,13 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </para>
 </section>
 <section xml:id="other_good_food_for_thought"><info><title>Other Good Food for Thought about Teaching</title></info>
-    
+
     <para>
         This section will bring other good for thought about teaching.
     </para>
     <section xml:id="live_learn"><info><title>“Live as if you were to die tomorrow. Learn as if you were to
             live forever.”</title></info>
-        
+
         <para>
             This is a quote attributed to
             <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Mahatma_Gandhi">Gandhi</link>.
@@ -1111,7 +1111,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="three_levels_of_learning"><info><title>Three Levels of Learning</title></info>
-        
+
         <para>
             Rabbi Hanina used to say “I learned a lot from my teachers, and
             from my friends more than my teachers, and from my pupils the
@@ -1174,7 +1174,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="learn_many_languages"><info><title>Learn as Many Languages as Possible</title></info>
-        
+
         <para>
             Learning one computer language is not enough. Knowledge of only
             one computer language or a few cripples the mind and causes the
@@ -1200,7 +1200,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
     </section>
     <section xml:id="learning_to_read_and_enhance"><info><title>Learning How to Read Code and Enhance Existing Code</title></info>
-        
+
         <para>
             At present, universities and other spend most time teaching
             programmers how to write code. However, most of what programmers
@@ -1260,7 +1260,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     </section>
 </section>
 <section xml:id="thanks"><info><title>Thanks</title></info>
-    
+
     <para>
         Thanks to Pete_I on Freenode,
         <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.zak.co.il/">Omer Zak</link>,

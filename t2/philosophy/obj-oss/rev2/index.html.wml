@@ -2,6 +2,7 @@
 #include "toc_div.wml"
 #include <utils.wml>
 #include "dbook.wml"
+#include "Inc/db_formats.wml"
 
 <latemp_subject "Objectivism and Open Source - Revision 2 - Text" />
 
@@ -17,13 +18,7 @@
 
 #include "docbook/5/rendered/objectivism-and-open-source.xhtml"
 
-<h2 id="formats">Formats</h2>
-
-<ul>
-<li>
-<a href="objectivism-and-open-source.xml">DocBook/XML</a>
-</li>
-</ul>
+<docbook_formats h2_id="formats" h2_text="Formats" indiv_href="objectivism-and-open-source/" epub_href="objectivism-and-open-source.epub" orig_xml_href="objectivism-and-open-source.xml" pdf_href="objectivism-and-open-source.pdf" />
 
 <h2 id="coverage">Coverage</h2>
 

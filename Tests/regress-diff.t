@@ -12,7 +12,7 @@ my $good = '../GOOD-dest';
     if (-d $good)
     {
         eq_or_diff(
-            scalar(`diff -u -r $src $good | head -10`),
+            scalar(`diff -u -r $src $good | head --bytes=300`),
             '',
             "Empty diff.",
         );

@@ -1,32 +1,22 @@
-<?xml version='1.0' encoding='utf-8'?>
-<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-
-<article id="index">
-    <articleinfo>
-        <title>Thoughts about the Best Introductory Language</title>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>Thoughts about the Best Introductory Language</title>
+        
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2006</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-      <legalnotice id="main_legal_notice">
+      <legalnotice xml:id="main_legal_notice">
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option a greater version of it).
+This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
 		<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 		<Work rdf:about="">
 			<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -44,7 +34,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
             <revision>
                 <revnumber>1562</revnumber>
-                <date>04 August 2006</date>
+                <date>2006-08-04</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Forked the template from a previous work and working on
@@ -53,7 +43,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1691</revnumber>
-                <date>10 April 2007</date>
+                <date>2007-04-10</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Finished writing the document - about to release.
@@ -61,7 +51,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1837</revnumber>
-                <date>25 April 2008</date>
+                <date>2008-04-25</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Many spelling or phrasing
@@ -70,7 +60,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1838</revnumber>
-                <date>25 April 2008</date>
+                <date>2008-04-25</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected some problems in the new text. 2nd Revision.
@@ -78,7 +68,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>2319</revnumber>
-                <date>27 February 2009</date>
+                <date>2009-02-27</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added missing id’s to footnotes, so they won’t
@@ -87,7 +77,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>4855</revnumber>
-                <date>05 June 2011</date>
+                <date>2011-06-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Convert many ASCII single-quotes and double quotes to
@@ -95,10 +85,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 </revremark>
             </revision>
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="introduction">
-    <title>Introduction</title>
+<section xml:id="introduction"><info><title>Introduction</title></info>
+    
     <para>
         The purpose of this essay is to contemplate what is the best
         introductory programming language to teach for beginning programmers,
@@ -118,8 +108,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         BASIC at the age of 10 (back in 1987), and then learned C when I was
         15 years old (in 1992);
         I later learned
-        <ulink url="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
-            Basic for Applications</ulink> and when I was 19 years old I was
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
+            Basic for Applications</link> and when I was 19 years old I was
         introduced to Perl and UNIX at my workplace, which was a web site
         creation shop (back in 1996, when the Internet started to become
         popular). I have later learned other languages and
@@ -132,24 +122,24 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         otherwise.
     </para>
 </section>
-<section id="various_approaches">
-    <title>The Various (Wrong) Approaches to Introductory
-        Programming Languages</title>
-    <section id="linda_mciver_approach">
-        <title>Linda McIver’s Thesis Approach</title>
+<section xml:id="various_approaches"><info><title>The Various (Wrong) Approaches to Introductory
+        Programming Languages</title></info>
+    
+    <section xml:id="linda_mciver_approach"><info><title>Linda McIver’s Thesis Approach</title></info>
+        
         <para>
-            <ulink url="http://www.csse.monash.edu.au/~lindap/">Linda
-                McIver</ulink> published along with Damian Conway
-            a <ulink url="http://www.csse.monash.edu.au/~lindap/papers/SevenDeadlySins.pdf">paper
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.csse.monash.edu.au/~lindap/">Linda
+                McIver</link> published along with Damian Conway
+            a <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.csse.monash.edu.au/~lindap/papers/SevenDeadlySins.pdf">paper
                 titled “Seven Deadly Sins of Introductory Programming Language
-                Design”</ulink> that explains the problems they found with
+                Design”</link> that explains the problems they found with
             most popular introductory programming languages. The article makes
             a very good read.
         </para>
 
         <para>
-            Later on, <ulink url="http://www.csse.monash.edu.au/~lindap/papers/LindaMcIverThesis.pdf">her
-                Ph.D. thesis</ulink> introduced her idea of a good
+            Later on, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.csse.monash.edu.au/~lindap/papers/LindaMcIverThesis.pdf">her
+                Ph.D. thesis</link> introduced her idea of a good
             introductory programming language.
         </para>
 
@@ -191,13 +181,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             worse as both the professors and programmers will detest it.
         </para>
     </section>
-    <section id="sicp_approach">
-        <title>The “Structure and Interpretation of Computer Programs”
-            Approach</title>
+    <section xml:id="sicp_approach"><info><title>The “Structure and Interpretation of Computer Programs”
+            Approach</title></info>
+        
 
         <para>
-            <ulink url="http://mitpress.mit.edu/sicp/">“Structure and
-                Interpretation of Computer Programs”</ulink> (or SICP
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://mitpress.mit.edu/sicp/">“Structure and
+                Interpretation of Computer Programs”</link> (or SICP
             for short) is a classic text and course material on
             programming, taught at MIT and many other universities
             around the world. SICP uses Scheme (a minimalistic dialect
@@ -234,8 +224,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             demos, working with files, writing scripts and utilities,
             networking and working with the WWW, etc. In fact, the Scheme
             standards define too few useful things. Most of
-            <ulink url="http://community.schemewiki.org/?scheme-faq-standards#implementations">the
-                dazzling number of different Scheme implementations</ulink> all
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://community.schemewiki.org/?scheme-faq-standards#implementations">the
+                dazzling number of different Scheme implementations</link> all
             extend the language in several ways, but all have their own idea
             of how to do it. Compare it to Perl, Python and friends which have
             one main C-based implementation, or to C where the standard
@@ -250,11 +240,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             much-superior Perl, which I’m using today.
         </para>
     </section>
-    <section id="back_to_basics_approach">
-        <title>The “Teach in C” Approach</title>
+    <section xml:id="back_to_basics_approach"><info><title>The “Teach in C” Approach</title></info>
+        
 
         <para>
-            In his <ulink url="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</ulink>,
+            In his <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</link>,
             Joel Spolsky gave a case for teaching ANSI C as an introductory
             language instead of more high level languages. His argument is
             that programmers will end up writing sub-optimal code because
@@ -316,9 +306,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             mental leap that is large enough as it is.
         </para>
     </section>
-    <section id="programming_languages_make_you_write_good_code">
-        <title>The “First Programming Language Should Make Sure You
-            Write Good Code” Fallacy</title>
+    <section xml:id="programming_languages_make_you_write_good_code"><info><title>The “First Programming Language Should Make Sure You
+            Write Good Code” Fallacy</title></info>
+        
         <para>
             You many times hear people saying that beginning programmers
             should be taught using a programming language that restricts them
@@ -343,22 +333,21 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     It may actually make them think programming is loathsome
                     or otherwise a very strict process instead of a very
-                    creative process.<footnote id="haskell_expressive_power" label="haskell">
+                    creative process.<footnote xml:id="haskell_expressive_power" label="haskell">
                         <para>
-                            <ulink url="http://lambda-the-ultimate.org/node/2194#comment-28811">A
+                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://lambda-the-ultimate.org/node/2194#comment-28811">A
                                 comment to the first revision of this
-                                article</ulink> claimed that <quote>Some languages, like
+                                article</link> claimed that <quote>Some languages, like
                             Haskell, derive their expressive power exactly
                             because of the restrictions imposed</quote>.
                         My reply is that arguably languages like Lisp
                         have the same expressive power, but obviously a more
                         verbose syntax due to the fact they are using
-                        <ulink
-                            url="http://en.wikipedia.org/wiki/S-expression">S-expressions</ulink>
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/S-expression">S-expressions</link>
                         and that they are lacking some functions that were
                         added to Haskell, O’Caml and SML.
-                        <ulink url="http://dev.perl.org/perl6/">Perl
-                            6</ulink> aims to combine more idioms from
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://dev.perl.org/perl6/">Perl
+                            6</link> aims to combine more idioms from
                         Haskell and Lisp than Perl 5 already has, yielding
                         a language that’s generally even more succinct.
                     </para>
@@ -390,12 +379,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
         </itemizedlist>
     </section>
-    <section id="have_decent_ide">
-        <title>The “It Should Have a Decent IDE” Fallacy</title>
+    <section xml:id="have_decent_ide"><info><title>The “It Should Have a Decent IDE” Fallacy</title></info>
+        
         <para>
             Many education institutions reject many languages as introductory
-            languages because they don’t have a decent <ulink url="http://en.wikipedia.org/wiki/Integrated_development_environment">integrated development
-                environment</ulink> (or IDE for short). An IDE as useful and
+            languages because they don’t have a decent <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Integrated_development_environment">integrated development
+                environment</link> (or IDE for short). An IDE as useful and
             convenient as it is, however, is not an absolute requirement.
         </para>
         <para>
@@ -413,14 +402,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             required programming using non-graphical editors, and it was
             still adequate for most people. (To say nothing of earlier
             interfaces such as
-            <ulink url="http://en.wikipedia.org/wiki/Teletypewriter">Teleprinters (TTYs)</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Teletypewriter">Teleprinters (TTYs)</link>
             or punched cards). Plus, it is hard for a programmer
             to avoid typing code entirely.
         </para>
     </section>
 </section>
-<section id="relations">
-    <title>Some useful relations</title>
+<section xml:id="relations"><info><title>Some useful relations</title></info>
+    
 
     <para>
         This section will introduce some useful relations ( “Language A
@@ -429,8 +418,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         easily reach a final verdict.
     </para>
 
-    <section id="high_level_before_C">
-        <title>A High Level Language Should Come Before C</title>
+    <section xml:id="high_level_before_C"><info><title>A High Level Language Should Come Before C</title></info>
+        
         <para>
         C should not be taught as a first programming language from the
         reasons I have mentioned above. By all means, one should use a more
@@ -440,8 +429,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         introductory languages.
         </para>
     </section>
-    <section id="perl_or_python_before_php">
-        <title>Perl/Python/etc. should Come before PHP</title>
+    <section xml:id="perl_or_python_before_php"><info><title>Perl/Python/etc. should Come before PHP</title></info>
+        
         <para>
         Some people believe that PHP is a suitable introductory language.
         However, PHP has several major problems: lack of good abstraction
@@ -459,13 +448,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         taught first instead.
         </para>
     </section>
-    <section id="perl_or_python_before_shell">
-        <title>Perl/Python/etc. should Come before Shell</title>
+    <section xml:id="perl_or_python_before_shell"><info><title>Perl/Python/etc. should Come before Shell</title></info>
+        
         <para>
         Some people believe that the first language a UNIX user should learn
         is a good shell (such as
-        <ulink url="http://www.gnu.org/software/bash/">GNU Bash</ulink> or
-        <ulink url="http://www.zsh.org/">zsh</ulink>). However, Shell has some
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/software/bash/">GNU Bash</link> or
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.zsh.org/">zsh</link>). However, Shell has some
         issues. The first is that the mentality of the UNIX Shell
         is different from the mentality of conventional programming languages,
         and causes native shell programmers to be less capable of adapting
@@ -479,11 +468,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         before a dynamic language.
         </para>
     </section>
-    <section id="C_before_assembly">
-        <title>C should Precede Assembly</title>
+    <section xml:id="C_before_assembly"><info><title>C should Precede Assembly</title></info>
+        
         <para>
-            It is <ulink url="http://www.onlamp.com/pub/a/onlamp/2004/05/06/writegreatcode.html">certainly
-            a good idea to learn Assembly language</ulink>, preferably of
+            It is <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.onlamp.com/pub/a/onlamp/2004/05/06/writegreatcode.html">certainly
+            a good idea to learn Assembly language</link>, preferably of
             several different processor architectures. However, C should be
             learnt first.
         </para>
@@ -504,8 +493,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Assembly make better Assembly programmers.
         </para>
     </section>
-    <section id="first_lang_should_be_practical">
-        <title>The First Language should be Practical</title>
+    <section xml:id="first_lang_should_be_practical"><info><title>The First Language should be Practical</title></info>
+        
         <para>
             A good first programming language should be practical and should
             grow up with you. I can tell from my experiences with the various
@@ -527,7 +516,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             impractical. Writing quick and dirty code to do a lot of things
             in Scheme is very verbose, and plus, the core standard lacks many
             primitives for common
-            <ulink url="http://en.wikipedia.org/wiki/POSIX">POSIX</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/POSIX">POSIX</link>
             operations (like random file I/O, directories, sockets, etc.)
             much less useful APIs. While some Scheme implementations provide
             extensions to the language, they do so in different incompatible
@@ -549,11 +538,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             long.
         </para>
     </section>
-    <section id="localised_languages">
-        <title>Localised Programming Languages should be Avoided</title>
+    <section xml:id="localised_languages"><info><title>Localised Programming Languages should be Avoided</title></info>
+        
         <para>
-            The Wikipedia has an (incomplete) <ulink url="http://en.wikipedia.org/wiki/Category:Non-English-based_programming_languages">list of non-English
-                based programming languages</ulink>, that were created at
+            The Wikipedia has an (incomplete) <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Category:Non-English-based_programming_languages">list of non-English
+                based programming languages</link>, that were created at
             some time. What these languages try to do is make sure young
             children or other people who did not master the English Alphabet
             and vocabulary well can start learning programming without
@@ -590,13 +579,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             language, teach your students some basic English first. It might
             take longer, but will save more time and frustration later on. Plus,
             programming is a great way to expand one’s mastery of English,
-            especially today when the Internet is so prevalent.<footnote id="globalisation" label="globalisation">
+            especially today when the Internet is so prevalent.<footnote xml:id="globalisation" label="globalisation">
                 <para>
                     A few people who read this article claimed I was
                     advocating globalisation. However, consider what
                     Eric Raymond writes in
-                    <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">“How
-                        to Become a Hacker”</ulink>:
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://catb.org/~esr/faqs/hacker-howto.html">“How
+                        to Become a Hacker”</link>:
                 </para>
                 <blockquote>
                     <para>
@@ -616,8 +605,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     One should note that the proliferation of English today
                     is not the first time
-                    that there happened to be a <ulink url="http://en.wikipedia.org/wiki/Lingua_franca">Lingua
-                        franca</ulink>
+                    that there happened to be a <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Lingua_franca">Lingua
+                        franca</link>
                     in the world or a limited part of it. I also feel that
                     having one spoken language that everyone of importance is
                     familiar with (although possibly not so well) is better
@@ -628,12 +617,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </footnote>
         </para>
     </section>
-    <section id="java_should_be_taught_after_perl">
-        <title>Java Should be Taught After Perl</title>
+    <section xml:id="java_should_be_taught_after_perl"><info><title>Java Should be Taught After Perl</title></info>
+        
         <para>
             Joel Spolsky wrote an essay titled
-            <ulink url="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">“The
-                Perils of JavaSchools”</ulink> where he argued that teaching
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">“The
+                Perils of JavaSchools”</link> where he argued that teaching
             Java in Computer Science curricula is inferior to teaching
             ANSI C and Scheme, which was what he learned. The article is wrong
             on many points, but it highlights some of the problems with Java.
@@ -641,8 +630,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Java is too verbose. Some people may argue that this can be
             solved by using a proper IDE, but as
-            <ulink url="http://www.paulgraham.com/popular.html">Paul Graham
-                explains</ulink>, verbose code also has the “the cost of
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/popular.html">Paul Graham
+                explains</link>, verbose code also has the “the cost of
             reading it, and the cost of the space it takes up on your
             screen.”.
         </para>
@@ -651,9 +640,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Java code looks the same, and feels boring.
         </para>
         <para>
-            <ulink url="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">Steve
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">Steve
                 Yegge’s very funny article “Execution in the Kingdom of
-                Nouns”</ulink> illustrates another problem with
+                Nouns”</link> illustrates another problem with
             Java. Everything has to be a noun, with no verbs or even
             the many keywords which Perl 5 is infamous for but which
             Perl programmers love. And instead of having some Perl 5-like
@@ -676,8 +665,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
         <para>
             Paul Graham’s essay
-            <ulink url="http://www.paulgraham.com/javacover.html">Java’s
-                Cover</ulink>, which he wrote to explain why he decided not
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/javacover.html">Java’s
+                Cover</link>, which he wrote to explain why he decided not
             to learn Java is very instructive. I read Graham’s article, some
             time after it has been written and felt it reflected my
             feelings about the language. Back when Java started to become hyped
@@ -694,7 +683,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             have learned it airheads, who cannot think outside the limited
             constraints that it imposes on the programmer. Teaching an
             expressive and rich
-            <ulink url="http://en.wikipedia.org/wiki/Dynamic_programming_language">dynamic language</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Dynamic_programming_language">dynamic language</link>
             such as Perl or Ruby instead, will not exhibit this problem,
             regardless of what Joel says, as these languages constantly require
             a programmer to think outside the box, and introduce the programmer
@@ -703,8 +692,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </section>
 </section>
 
-<section id="verdict">
-    <title>My Verdict</title>
+<section xml:id="verdict"><info><title>My Verdict</title></info>
+    
 
     <para>
         According to these constraints one can conclude that one should
@@ -714,8 +703,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
     <para>
         Eric Raymond recommends this in his excellent
-        <ulink url="http://catb.org/~esr/faqs/hacker-howto.html">“How to
-            become a Hacker” document</ulink>. He suggests one should start
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://catb.org/~esr/faqs/hacker-howto.html">“How to
+            become a Hacker” document</link>. He suggests one should start
         with XHTML, which while not being a programming language but rather
         a formatting language will still introduce many programming idioms
         and disciplines as well as prove useful later on.
@@ -734,10 +723,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         versed in Python or Ruby, may wish to teach them instead.)
     </para>
 
-    <section id="perl_python_or_ruby">
-        <title>Perl, Python or Ruby</title>
-        <section id="perl">
-            <title>Perl</title>
+    <section xml:id="perl_python_or_ruby"><info><title>Perl, Python or Ruby</title></info>
+        
+        <section xml:id="perl"><info><title>Perl</title></info>
+            
 
             <para>
                 The core Perl language is huge. That may be a good or a bad
@@ -759,7 +748,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 Perl instead of C, similarly to the fact that he’d prefer
                 to teach English over Esperanto, because beginners would prefer
                 a language that allows them to express themselves.
-                <footnote id="esperanto_footnote" label="Esperanto">
+                <footnote xml:id="esperanto_footnote" label="Esperanto">
                     <para>
                         Several people contacted me saying I have
                         misrepresented
@@ -781,23 +770,23 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <para>
                 Historically, Perl had a lack of good online
                 documentation for beginners, and
-                <ulink url="http://www.shlomifish.org/philosophy/perl-newcomers/">other
-                    problems with the treatment of newcomers</ulink>, but
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/perl-newcomers/">other
+                    problems with the treatment of newcomers</link>, but
                 this has improved lately.
             </para>
             <para>
                 Perl has a rich (and so far unmatched) collection of
                 re-usable modules that provide functionality called
-                <ulink url="http://en.wikipedia.org/wiki/CPAN">CPAN -
-                    the Comprehensive Perl Archive Network</ulink>. Uploads
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/CPAN">CPAN -
+                    the Comprehensive Perl Archive Network</link>. Uploads
                 to CPAN are not moderated (on purpose) and therefore it
                 is sometimes hard to find a suitable CPAN module out of the
                 many bad or unsuitable ones (if there actually is one
-                available). <footnote id="rethinking_cpan" label="rethinking-cpan">
+                available). <footnote xml:id="rethinking_cpan" label="rethinking-cpan">
                     <para>
-                        As of April, 2008, there is <ulink url="http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html">an effort
+                        As of April, 2008, there is <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html">an effort
                             under-way to revamp
-                            the CPAN experience</ulink>. The author of these
+                            the CPAN experience</link>. The author of these
                         lines is heavily involved with it, so he may be a bit
                         biased. Plus, the effort is still in its infancy.
                 </para>
@@ -807,15 +796,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Perl has a rich and active culture surrounding it, including
             many diversions as obfuscated code,
-            <ulink url="http://perlgolf.sourceforge.net/">golf
-                challenges</ulink>,
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perlgolf.sourceforge.net/">golf
+                challenges</link>,
             riddles, many specialised mailing lists, Local
             Perl Mongers groups, and conferences.
         </para>
         </section>
 
-        <section id="python">
-            <title>Python</title>
+        <section xml:id="python"><info><title>Python</title></info>
+            
 
             <para>
                 Python has a small core language and it tries to be elegant.
@@ -866,8 +855,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
 
         </section>
-        <section id="ruby">
-            <title>Ruby</title>
+        <section xml:id="ruby"><info><title>Ruby</title></info>
+            
 
             <para>
                 Before I discuss Ruby a word of warning: I don’t know it very
@@ -894,8 +883,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <para>
                 The worst problem with Ruby, however, is the lack of good
                 documentation. Ruby has
-                <ulink url="http://www.rubycentral.com/book/">one old
-                    edition of the “Programming Ruby” book</ulink> available
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.rubycentral.com/book/">one old
+                    edition of the “Programming Ruby” book</link> available
                 online,
                 and that’s it. Furthermore, this book is intended for absolute
                 beginners and will be too slow paced for people with extensive
@@ -927,8 +916,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
         </section>
     </section>
-    <section id="final_verdict">
-        <title>Final Verdict</title>
+    <section xml:id="final_verdict"><info><title>Final Verdict</title></info>
+        
         <para>
             All things considered, I’d say that Perl is the best choice now,
             as Python is too strict and unexpressive, and Ruby is documented
@@ -939,16 +928,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Note that other than the main players in the dynamic language
             arena, there is the new crop of such languages:
-            <ulink url="http://www.lua.org/">Lua</ulink>,
-            <ulink url="http://www.iolanguage.com/">Io</ulink>,
-            <ulink url="http://www.digitalmars.com/d/">The D Programming
-                Language</ulink>, and others. These languages may be more
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.lua.org/">Lua</link>,
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.iolanguage.com/">Io</link>,
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.digitalmars.com/d/">The D Programming
+                Language</link>, and others. These languages may be more
             suitable in some respects, but on the other hand, may not yet
             have the
             brain-share, comprehensiveness (especially as far as APIs are
             concerned), usability, richness or
             “sex-appeal”
-            <footnote id="consistency_in_prog_langs_footnote" label="consistency">
+            <footnote xml:id="consistency_in_prog_langs_footnote" label="consistency">
                 <para>
                 Some people
                 assume that the more consistent a language is the better.
@@ -956,15 +945,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 natural human languages like English, many of them would prefer
                 their programming language to have some inconsistencies,
                 Do-what-I-mean-erries, gotchas, etc. In Perl 5’s case it is well
-                known that these make the language more expressive and <ulink url="http://www.paulgraham.com/power.html">succinct</ulink> in the hands of
+                known that these make the language more expressive and <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/power.html">succinct</link> in the hands of
                 a competent programmer.
                 </para>
                 </footnote>.
         </para>
     </section>
 </section>
-<section id="types_of_teaching">
-    <title>Some Types of Teaching</title>
+<section xml:id="types_of_teaching"><info><title>Some Types of Teaching</title></info>
+    
     <para>
         There are several different types of teaching programming to laymen.
         This section aims to cover the most important ones and what needs
@@ -1014,8 +1003,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         be taught and which parts of it should be taught first.
     </para>
 </section>
-<section id="conclusion">
-    <title>Conclusion</title>
+<section xml:id="conclusion"><info><title>Conclusion</title></info>
+    
 
     <para> I talked with a few people on the IRC about it and some of them told
         me something along the lines of “What makes you think that you know
@@ -1023,7 +1012,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         are now teaching Java?”. Well, this is the majority must be right
         fallacy: </para>
 
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
             <para>
                 Everybody thinks that the Earth is flat (or
@@ -1033,8 +1022,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <listitem>
             <para>
                 Everybody thinks that
-                <ulink url="http://www.shlomifish.org/philosophy/politics/drug-legalisation/">drugs
-                    should be illegal</ulink> so it must be true.
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/politics/drug-legalisation/">drugs
+                    should be illegal</link> so it must be true.
             </para>
         </listitem>
     </orderedlist>
@@ -1058,7 +1047,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         During the course of IT education, several languages need to be
         studied - at least one dynamic language such as Perl, Python or Ruby
         ; ANSI C;  an assembly language; Lisp (Scheme, Common Lisp or perhaps
-        now <ulink url="http://www.paulgraham.com/arc.html">Arc</ulink>);
+        now <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arc.html">Arc</link>);
         Haskell, O’Caml or SML; and probably some specialised languages when
         they are appropriate. But the first language need not be what is the
         most hyped language in the industry, or even what most the rest of the
@@ -1066,7 +1055,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 
     <para>
-        From my <ulink url="http://www.shlomifish.org/philosophy/computers/education/opinion-on-the-technion/">impression of the Technion</ulink>, the
+        From my <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/computers/education/opinion-on-the-technion/">impression of the Technion</link>, the
         institute as a whole believes that students can effectively write all
         their code in ANSI C. In some courses, the choice of C++ and Java are
         given, but these languages are not effectively taught. Most students,
@@ -1089,17 +1078,17 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         better programmer regardless of his initial background.
     </para>
 </section>
-<section id="other_good_food_for_thought">
-    <title>Other Good Food for Thought about Teaching</title>
+<section xml:id="other_good_food_for_thought"><info><title>Other Good Food for Thought about Teaching</title></info>
+    
     <para>
         This section will bring other good for thought about teaching.
     </para>
-    <section id="live_learn">
-        <title>“Live as if you were to die tomorrow. Learn as if you were to
-            live forever.”</title>
+    <section xml:id="live_learn"><info><title>“Live as if you were to die tomorrow. Learn as if you were to
+            live forever.”</title></info>
+        
         <para>
             This is a quote attributed to
-            <ulink url="http://en.wikipedia.org/wiki/Mahatma_Gandhi">Gandhi</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Mahatma_Gandhi">Gandhi</link>.
             The “Learn like you were going to live forever” part is not widely
             understood by many workers. Many programmers believe that their
             knowledge of a few programming languages is enough, and that it is
@@ -1121,15 +1110,15 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             different ways.
         </para>
     </section>
-    <section id="three_levels_of_learning">
-        <title>Three Levels of Learning</title>
+    <section xml:id="three_levels_of_learning"><info><title>Three Levels of Learning</title></info>
+        
         <para>
             Rabbi Hanina used to say “I learned a lot from my teachers, and
             from my friends more than my teachers, and from my pupils the
             most.” I believe this means that there are in fact
             three levels of learning:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     <emphasis role="bold">Level 1 - Learning</emphasis> -
@@ -1166,26 +1155,26 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             The old adage “He who can - does. He who cannot - teaches.” which
             was
-            <ulink url="http://en.wikiquote.org/wiki/George_Bernard_Shaw">said
-                by George Bernard Shaw</ulink> is amusing, but simply not
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikiquote.org/wiki/George_Bernard_Shaw">said
+                by George Bernard Shaw</link> is amusing, but simply not
             true, as I’ve demonstrated here. Being a great teacher is much more
             difficult than being a great doer, and is much more enlightening.
-            <footnote id="those_who_can_footnote" label="those_who_can">
+            <footnote xml:id="those_who_can_footnote" label="those_who_can">
                 <para>
                 What is true, in my opinion. is that “Those who can - do.
                 Those who can’t - complain.” However, often people who can
                 and do, still complain. I recall this quote being
                 attributed to
-                <ulink url="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus
-                    Torvalds </ulink>, but it
-                <ulink url="http://shlomif.livejournal.com/39215.html">predates
-                    him</ulink>.
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus
+                    Torvalds </link>, but it
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://shlomif.livejournal.com/39215.html">predates
+                    him</link>.
                 </para>
             </footnote>
         </para>
     </section>
-    <section id="learn_many_languages">
-        <title>Learn as Many Languages as Possible</title>
+    <section xml:id="learn_many_languages"><info><title>Learn as Many Languages as Possible</title></info>
+        
         <para>
             Learning one computer language is not enough. Knowledge of only
             one computer language or a few cripples the mind and causes the
@@ -1200,18 +1189,18 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Many people believe that their limited knowledge is adequate.
             Java programmers are especially notorious for being opposed to
             the ideas of them having to learn different languages. The
-            <ulink url="http://www.amazon.com/exec/obidos/ASIN/020161622X/ref=nosim/shlomifishhom-20">Pragmatic
-                Programmer book</ulink> says
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/exec/obidos/ASIN/020161622X/ref=nosim/shlomifishhom-20">Pragmatic
+                Programmer book</link> says
             a programmer should learn a new computer language at least
             every year, and I tend to agree with it. I compiled
-            <ulink url="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#technologies_to_learn">a
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#technologies_to_learn">a
                 tentative list of the technologies I found the most
-                enlightening</ulink>, and I recommend programmers to learn
+                enlightening</link>, and I recommend programmers to learn
             at least all of them.
         </para>
     </section>
-    <section id="learning_to_read_and_enhance">
-        <title>Learning How to Read Code and Enhance Existing Code</title>
+    <section xml:id="learning_to_read_and_enhance"><info><title>Learning How to Read Code and Enhance Existing Code</title></info>
+        
         <para>
             At present, universities and other spend most time teaching
             programmers how to write code. However, most of what programmers
@@ -1219,10 +1208,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             projects) is to read code, and to enhance existing code.
         </para>
         <para>
-            <ulink url="http://www.joelonsoftware.com/">Joel Spolsky (“Joel on
-                Software”)</ulink> gave the following
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">Joel Spolsky (“Joel on
+                Software”)</link> gave the following
             “cardinal rule of programming” in his famous
-            <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things you must never do, part I” essay</ulink>:
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things you must never do, part I” essay</link>:
         </para>
         <blockquote>
             <para>
@@ -1230,8 +1219,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </para>
         </blockquote>
         <para>
-            My friends and I later <ulink url="http://tech.groups.yahoo.com/group/hackers-il/message/3576">discussed this topic in the Hackers-IL
-                mailing list</ulink>. Even if code is given for reading in
+            My friends and I later <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/3576">discussed this topic in the Hackers-IL
+                mailing list</link>. Even if code is given for reading in
             university, it is usually extremely well-written, highly organised,
             highly legible, code, rather than the real code that
             programmers are likely to encounter in the wild.
@@ -1247,7 +1236,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             As Joel points out in the article, most programmers end up saying
             that the code they are working on is horrible and that they wish
             to completely rewrite it if they have the chance, instead of
-            <ulink url="http://www.refactoring.com/">refactoring</ulink> it
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.refactoring.com/">refactoring</link> it
             to make it better.
         </para>
         <para>
@@ -1270,15 +1259,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 </section>
-<section id="thanks">
-    <title>Thanks</title>
+<section xml:id="thanks"><info><title>Thanks</title></info>
+    
     <para>
         Thanks to Pete_I on Freenode,
-        <ulink url="http://www.zak.co.il/">Omer Zak</ulink>,
-        <ulink url="http://www.wgz.org/chromatic/">chromatic</ulink>,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.zak.co.il/">Omer Zak</link>,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.wgz.org/chromatic/">chromatic</link>,
         Jonathan Scott Duff, Sagiv Barhoom and others for reviewing
         early drafts of this essay and giving some editorial assistance.
     </para>
 </section>
-</article>    <!-- End of the article -->
-
+</article>

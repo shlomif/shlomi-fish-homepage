@@ -9,7 +9,7 @@ use lib './lib';
 
 use IO::All qw/ io /;
 
-use JSON::MaybeXS (qw( encode_json ));
+use JSON::MaybeXS (qw( JSON ));
 
 use XML::LibXML;
 use XML::LibXML::XPathContext;
@@ -141,7 +141,9 @@ second major battle that Chuck Norris lost.
 EOF
         meta_desc => "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <foss_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -187,7 +189,6 @@ reversal (“In Soviet Russia”) on the Wikipedia</a>
 EOF
         meta_desc => "In Soviet Russia, jokes laugh at you.",
         nav_blocks_wml => <<'EOF',
-
 EOF
         see_also_wml => <<'EOF',
 <ul>
@@ -269,7 +270,9 @@ tag on Twitter</a>
 EOF
         meta_desc => "Facts about Buffy Summers from Buffy the Vampire Slayer",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <buffy_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <ul>
@@ -369,7 +372,6 @@ EOF
 EOF
         meta_desc => "Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
         nav_blocks_wml => <<'EOF',
-
 EOF
         see_also_wml => <<'EOF',
 <ul>
@@ -416,7 +418,9 @@ EOF
 EOF
         meta_desc => "Factoids about Emma Watson, the British actress",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <harry_potter_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -471,7 +475,9 @@ with Knuth</a>
 EOF
         meta_desc => "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <foss_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -515,7 +521,9 @@ EOF
 EOF
         meta_desc => "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <foss_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -553,8 +561,10 @@ EOF
 EOF
         meta_desc => "Factoids about the NSA - the U.S. government National Security Agency",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <xkcd_nav_block />
 <foss_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <ol>
@@ -698,7 +708,9 @@ EOF
 EOF
         meta_desc => "Factoids about Summer Glau, the Hollywood actress",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <xkcd_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -751,7 +763,6 @@ Female Ass-Kickers</a>.
 EOF
         meta_desc => "Factoids about Xena, the Warrior Princess",
         nav_blocks_wml => <<'EOF',
-
 EOF
         see_also_wml => <<'EOF',
 <ul>
@@ -834,7 +845,9 @@ refers to several resources.
 EOF
         meta_desc => "Facts about XSLT, the most Evil thing in existence.",
         nav_blocks_wml => <<'EOF',
+<nav_blocks>
 <foss_nav_block />
+</nav_blocks>
 EOF
         see_also_wml => <<'EOF',
 <p>
@@ -956,7 +969,7 @@ io->file("lib/factoids/common-out/tags.wml")->utf8->print(
     "\n</define-tag>\n",
 );
 
-my $new_json = encode_json([
+my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
         map {
             +{
                 url => "humour/bits/facts/" . $_->url_base() . "/",

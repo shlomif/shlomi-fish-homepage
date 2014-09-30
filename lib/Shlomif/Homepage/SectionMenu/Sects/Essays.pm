@@ -96,6 +96,14 @@ my $essays_tree_contents =
                     text => "#SummerNSA",
                     url => "philosophy/SummerNSA/",
                     title => "The #SummerNSA / “Summerschool at the NSA” effort",
+                    subs =>
+                    [
+                        {
+                            text => "A #SummerNSA’s Reading",
+                            url => "philosophy/SummerNSA/A-SummerNSA-Reading/",
+                            title => "Summarising the #SummerNSA effort so far.",
+                        }
+                    ],
                 },
                 {
                     text => "Objectivism and Open Source",

@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "toc_div.wml"
 #include <utils.wml>
+#include "Inc/db_formats.wml"
 
 <latemp_subject "The Case for Drug Legalisation" />
 <latemp_more_keywords "drugs, drug, legalisation, legalization, legalise, legalize, narcotics, illegal, prohibition, prohibition on drugs" />
@@ -22,15 +23,9 @@
 
 #include "docbook/5/rendered/case-for-drug-legalisation-v3.xhtml"
 
-<h2 id="other_formats">Other Formats</h2>
+<docbook_formats_w_base h2_id="other_formats" h2_text="Other Formats" base="case-for-drug-legalisation-v3" />
 
-<h3>3rd Version</h3>
-
-<ul>
-<li>
-<a href="case-for-drug-legalisation-v3.xml">Original DocBook/XML</a>
-</li>
-</ul>
+<h2 id="prev_vers">Previous Versions</h2>
 
 <h3>2nd Revision</h3>
 

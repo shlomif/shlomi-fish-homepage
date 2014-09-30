@@ -1,5 +1,6 @@
 #include '../template.wml'
 #include "dbook.wml"
+#include "Inc/nav_blocks.wml"
 
 <latemp_subject "The #SummerNSA (Summerschool at the NSA) Effort" />
 
@@ -29,3 +30,5 @@ Shlomi Fish Wiki</a>.
 </p>
 </li>
 </ul>
+
+<politics_nav_block />

@@ -1,6 +1,7 @@
 #include '../template.wml'
 #include "toc_div.wml"
 #include <utils.wml>
+#include "Inc/db_formats.wml"
 
 <latemp_subject "Thoughts about the Best Introductory Language" />
 
@@ -28,16 +29,7 @@ gives some other good food for thought.
 
 #include "docbook/4/rendered/introductory-language.html"
 
-<h2 id="other_formats">Other Formats</h2>
-
-<ul>
-<li>
-<a href="introductory-language.pdf">Acrobat Reader (PDF) Format</a>.
-</li>
-<li>
-<a href="introductory-language.xml">Original DocBook/XML</a>.
-</li>
-</ul>
+<docbook_formats h2_id="other_formats" h2_text="Other Formats" indiv_href="introductory-language/" epub_href="introductory-language.epub" orig_xml_href="introductory-language.xml" pdf_href="introductory-language.pdf" />
 
 <h2 id="coverage">Coverage</h2>
 

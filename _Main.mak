@@ -1241,7 +1241,7 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
-FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced $(FACTOIDS_NAV_JSON)
+FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 
 FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
 

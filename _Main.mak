@@ -292,6 +292,7 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	Emma-Watson-visit-to-Israel-and-Gaza \
 	sussman-interview \
 	humanity-excerpt-for-X-G-Screenplay-demo \
+	Mighty-Boosh--Ape-of-Death--Scenes \
 
 
 SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)

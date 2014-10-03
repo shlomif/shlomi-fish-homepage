@@ -1,12 +1,11 @@
 #include '../template.wml'
 #include "stories/stories-list.wml"
-
 #include "xml_g_fiction.wml"
 
 <latemp_subject "The Pope Died on Sunday" />
 <latemp_meta_desc "A story about a hectic week in the life of an American graphics’s artist" />
 
-<pope_died_on_sunday_common_top_elems lang="en" />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('pope_died_on_sunday'); :>
 
 <h2 id="text">Text of the Story</h2>
 

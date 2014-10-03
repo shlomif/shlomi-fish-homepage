@@ -364,7 +364,37 @@ Work in progress.
 </p>
 EOF
         },
+        {
+            id => 'pope_died_on_sunday',
+            tagline => "And so starts what appears to be an ordinary week… or not!" ,
+            logo_alt => "“The Pope Died on Sunday” Logo",
+            logo_class => "pope_died_on_sunday",
+            logo_id => "pope_died_on_sunday_logo",
+            logo_src => "humour/Pope/images/who-is-qoheleth-small.png",
+            entry_id => "pope-died-on-sunday",
+            entry_text => "The Pope Died on Sunday",
+            href => "humour/Pope/",
+            abstract => <<'EOF',
+<p class="pope_died_on_sunday abstract">
+Rachel Southern, an American graphic artist who lives and works in
+<a href="https://en.wikipedia.org/wiki/Milwaukee">Milwaukee</a>, did not expect the week following the death of the Roman Catholic
+Pope to be particularly notable for her, but boy was she wrong!
+</p>
 
+<p class="pope_died_on_sunday abstract">
+From meeting a guy she really liked, to her best friend almost ruining a date
+with him, to her family coming to visit, to helping organise a “fashion-play”,
+to pondering the answer to the question of Life, the Universe, and
+Everything — Rachel’s week proved to be one of the most hectic in her life.
+</p>
+
+<p class="pope_died_on_sunday abstract">
+This story is still incomplete, and only a relatively small part of it has
+been written.
+</p>
+
+EOF
+        },
     )
 );
 

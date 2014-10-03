@@ -9,7 +9,7 @@
 <latemp_subject "האפיפיור מת ביום ראשון" />
 <latemp_meta_desc "Hebrew text for a story about a hectic week in the life of an American graphics’ artist" />
 
-<pope_died_on_sunday_common_top_elems lang="he" />
+<: Shlomif::Homepage::LongStories->render_common_top_elems('pope_died_on_sunday'); :>
 
 <toc_div lang="he" />
 

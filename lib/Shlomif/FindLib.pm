@@ -18,5 +18,6 @@ sub rel_path
 
     return join("/", $class->lib_path(), @$path);
 }
+
 1;
 

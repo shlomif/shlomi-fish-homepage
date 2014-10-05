@@ -587,6 +587,8 @@ $(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.ht
 
 $(T2_DEST)/philosophy/computers/software-management/perfect-workplace/v2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-v2.xhtml
 
+$(T2_DEST)/philosophy/philosophy/SummerNSA-2014-09-call-for-action/index.html : $(DOCBOOK5_RENDERED_DIR)/SummerNSA-2014-09-call-for-action.xhtml
+
 $(T2_DEST)/philosophy/SummerNSA/A-SummerNSA-Reading/index.html: $(DOCBOOK5_RENDERED_DIR)/A-hashtag-SummerNSA-s-Reading.xhtml
 
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(T2_DEST)/humour/by-others/division-two/index.html: lib/div2mag.wml

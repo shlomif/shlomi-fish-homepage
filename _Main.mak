@@ -518,9 +518,6 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(DOCBOOK5_RENDE
 # Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are
 # modified.
 
-$(T2_DEST)/philosophy/computers/high-quality-software/rev2/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality-rev2.html
-$(T2_DEST)/philosophy/computers/high-quality-software/index.html : $(DOCBOOK4_RENDERED_DIR)/what-makes-software-high-quality.html
-
 PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
 PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
@@ -552,31 +549,6 @@ $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html 
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 	cp -f $< $@
 
-$(T2_DEST)/philosophy/computers/education/introductory-language/index.html: $(DOCBOOK4_RENDERED_DIR)/introductory-language.html
-
-$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml : $(DOCBOOK4_RENDERED_DIR)/perfect-it-workplace.html
-
-# Rebuild the embedded docbook5 pages in the $(T2_DEST) after they are
-# modified.
-
-$(T2_DEST)/philosophy/psychology/hypomanias/index.html: $(DOCBOOK5_RENDERED_DIR)/dealing-with-hypomanias.xhtml
-
-$(T2_DEST)/philosophy/perl-newcomers/v1/index.html: $(DOCBOOK5_RENDERED_DIR)/usability-of-perl-world-for-newcomers.xhtml
-
-$(T2_DEST)/philosophy/case-for-file-swapping/revision-3/index.html: $(DOCBOOK4_RENDERED_DIR)/case-for-file-swapping-rev3.html
-
-$(T2_DEST)/philosophy/politics/drug-legalisation/index.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation-v3.xhtml
-
-$(T2_DEST)/philosophy/politics/drug-legalisation/hebrew.html: $(DOCBOOK5_RENDERED_DIR)/case-for-drug-legalisation--hebrew-v3.xhtml
-
-$(T2_DEST)/philosophy/computers/open-source/foss-licences-wars/index.html : $(DOCBOOK4_RENDERED_DIR)/foss-licences-wars.html
-
-$(T2_DEST)/philosophy/obj-oss/rev2/index.html: $(DOCBOOK5_RENDERED_DIR)/objectivism-and-open-source.xhtml
-
-$(T2_DEST)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/index.html : $(DOCBOOK4_RENDERED_DIR)/Spark-Pre-Birth-of-a-Modern-Lisp.html
-
-$(T2_DEST)/philosophy/computers/software-management/end-of-it-slavery/index.html : $(DOCBOOK4_RENDERED_DIR)/end-of-it-slavery.html
-
 
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
@@ -584,12 +556,6 @@ $(T2_DEST)/philosophy/computers/software-management/end-of-it-slavery/index.html
 $(T2_DEST)/humour/index.html $(T2_DEST)/humour/stories/index.html $(T2_DEST)/humour/stories/Star-Trek/index.html $(T2_DEST)/humour/stories/Star-Trek/We-the-Living-Dead/index.html $(T2_DEST)/humour/TheEnemy/index.html: lib/stories/stories-list.wml
 
 $(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.html $(T2_DEST)/humour/humanity/buy-the-fish-in-hebrew.html $(T2_DEST)/humour/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
-
-$(T2_DEST)/philosophy/computers/software-management/perfect-workplace/v2/content.html: $(DOCBOOK5_RENDERED_DIR)/perfect-it-workplace-v2.xhtml
-
-$(T2_DEST)/philosophy/philosophy/SummerNSA-2014-09-call-for-action/index.html : $(DOCBOOK5_RENDERED_DIR)/SummerNSA-2014-09-call-for-action.xhtml
-
-$(T2_DEST)/philosophy/SummerNSA/A-SummerNSA-Reading/index.html: $(DOCBOOK5_RENDERED_DIR)/A-hashtag-SummerNSA-s-Reading.xhtml
 
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(T2_DEST)/humour/by-others/division-two/index.html: lib/div2mag.wml
 
@@ -619,20 +585,6 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/T
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
 	cp -f $< $@
-
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-hebrew.xhtml
-
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Pope-Died-on-Sunday-english.xhtml
-
-$(T2_DEST)/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html: $(DOCBOOK5_RENDERED_DIR)/The-Earth-Angel-english.xhtml
-
-$(T2_DEST)/humour/human-hacking/hebrew-v2.html: $(DOCBOOK5_RENDERED_DIR)/human-hacking-field-guide-v2--hebrew.xhtml
-
-$(T2_DEST)/humour/TheEnemy/The-Enemy-rev6.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-rev6.xhtml
-
-$(T2_DEST)/humour/TheEnemy/The-Enemy-Hebrew-v7.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-Hebrew-v7.xhtml
-
-$(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7.html: $(DOCBOOK5_RENDERED_DIR)/The-Enemy-English-v7.xhtml
 
 %.show:
 	@echo "$* = $($*)"

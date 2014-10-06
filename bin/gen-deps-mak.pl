@@ -68,7 +68,7 @@ lib/xml_g_fiction.wml
         # Temporarily added for debugging:
         # ->exec(sub { print "$_[2]\n"; })
         ->name(
-            qr{\A(?:docbook|screenplay-xml/from-vcs|fiction-xml|presentations|MathJax)\z}
+            qr{\A(?:screenplay-xml/from-vcs|fiction-xml|presentations|MathJax)\z}
         )
         ->prune->discard
         ;

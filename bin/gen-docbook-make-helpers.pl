@@ -194,6 +194,12 @@ my @documents =
         db_ver => 5,
     },
     {
+        id => "putting-more-cards-on-the-table-2014",
+        path => "philosophy/philosophy/putting-more-cards-on-the-table-2014/DocBook5",
+        base => "putting-more-cards-on-the-table-2014",
+        db_ver => 5,
+    },
+    {
         id => "Spark-Pre-Birth-of-a-Modern-Lisp",
         path => "open-source/projects/Spark/mission",
         base => "Spark-Pre-Birth-of-a-Modern-Lisp",

@@ -258,12 +258,12 @@ EOF
         {
             id => 'who_is_qoheleth',
             tagline => "What had been, is what will be. There is nothing new under the sun." ,
-            logo_alt => "“So who the Hell is Qoheleth?” Logo",
+            logo_alt => "“So, who the Hell is Qoheleth?” Logo",
             logo_class => "who_is_qoheleth",
             logo_id => "who_is_qoheleth_logo",
             logo_src => "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
             entry_id => "who-is-qoheleth",
-            entry_text => "“So who the Hell is Qoheleth?”",
+            entry_text => "“So, who the Hell is Qoheleth?”",
             href => "humour/So-Who-The-Hell-Is-Qoheleth/",
             abstract => <<'EOF',
 <p class="who_is_qoheleth abstract">
@@ -273,9 +273,9 @@ Josephus was a budding philosopher of Jewish descent in
 times</a>, when he took a bet that he could produce a decent work
 of philosophy, and wrote the Biblical scroll of
 <a href="http://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a>.
-Soon after that, he becomes the most notorious celebrity in his town,
-makes a moderate fortune from donations of enthusiastic fans of the
-scroll, and is annoyed by the fact that he has become the object of
+Soon after that, he became the most notorious celebrity in his town,
+made a moderate fortune from donations of enthusiastic fans of the
+scroll, and became annoyed by the fact that he has become the object of
 affection of nearly every single young female in his town.
 </p>
 <p class="who_is_qoheleth abstract">

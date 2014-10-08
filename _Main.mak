@@ -1224,3 +1224,12 @@ $(MAN_HTML): ./bin/gen-manifest.pl
 
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
+
+OCT_2014_SGLAU_LET_DIR = $(T2_DEST)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/
+OCT_2014_SGLAU_LET = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
+
+
+all: $(OCT_2014_SGLAU_LET)
+
+$(OCT_2014_SGLAU_LET): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
+	export A="$$(pwd)" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"

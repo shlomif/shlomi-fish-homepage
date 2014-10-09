@@ -427,17 +427,7 @@ sub _get_tagline_tags
     ];
 }
 
-
-sub render_tagline
-{
-    my ($class, $id) = @_;
-
-    _print_utf8 (@{$class->_get_tagline_tags($id)});
-
-    return;
-}
-
-sub render_abstract
+sub _get_abstract_tags
 {
     my ($class, $id) = @_;
 
@@ -455,7 +445,15 @@ sub render_abstract
                 )
                 . q{"}
         #eg;
-    _print_utf8($abstract);
+
+    return [$abstract];
+}
+
+sub render_abstract
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(@{$class->_get_abstract_tags($id)});
 
     return;
 }
@@ -513,8 +511,8 @@ sub render_list_items
 
     _print_utf8(
         @{$class->_get_logo_tags($id)},
+        @{$class->_get_abstract_tags($id)},
     );
-    $class->render_abstract($id);
 
     return;
 }
@@ -529,7 +527,7 @@ sub render_common_top_elems
 
     _print_utf8(qq#<h2 id="abstract">Abstract</h2>\n#);
 
-    $class->render_abstract($id);
+    _print_utf8(@{$class->_get_abstract_tags($id)});
 
     _print_utf8(qq{</div>\n});
 

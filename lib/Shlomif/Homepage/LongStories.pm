@@ -415,11 +415,24 @@ sub get_tagline
     return $class->_get_story($id)->tagline;
 }
 
+sub _get_tagline_tags
+{
+    my ($class, $id) = @_;
+
+    return
+    [
+        qq#<h2 id="tagline">#,
+        $class->get_tagline($id),
+        qq#</h2>\n#,
+    ];
+}
+
+
 sub render_tagline
 {
     my ($class, $id) = @_;
 
-    _print_utf8 (qq#<h2 id="tagline">@{[$class->get_tagline($id)]}</h2>\n#);
+    _print_utf8 (@{$class->_get_tagline_tags($id)});
 
     return;
 }
@@ -447,13 +460,14 @@ sub render_abstract
     return;
 }
 
-sub render_logo
+sub _get_logo_tags
 {
     my ($class, $id) = @_;
 
     my $o = $class->_get_story($id);
 
-    _print_utf8(
+    return
+    [
         sprintf(qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,
             $o->logo_id,
             escape_html(
@@ -469,8 +483,14 @@ sub render_logo
             $o->logo_alt,
             $o->logo_class,
         ),
+    ];
+}
 
-    );
+sub render_logo
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(@{$class->_get_logo_tags($id)});
 
     return;
 }
@@ -479,8 +499,10 @@ sub render_1
 {
     my ($class, $id) = @_;
 
-    $class->render_tagline($id);
-    $class->render_logo($id);
+    _print_utf8(
+        @{$class->_get_tagline_tags($id)},
+        @{$class->_get_logo_tags($id)},
+    );
 
     return;
 }
@@ -489,7 +511,9 @@ sub render_list_items
 {
     my ($class, $id) = @_;
 
-    $class->render_logo($id);
+    _print_utf8(
+        @{$class->_get_logo_tags($id)},
+    );
     $class->render_abstract($id);
 
     return;

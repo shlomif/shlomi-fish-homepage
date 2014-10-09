@@ -449,14 +449,6 @@ sub _get_abstract_tags
     return [$abstract];
 }
 
-sub render_abstract
-{
-    my ($class, $id) = @_;
-
-    _print_utf8(@{$class->_get_abstract_tags($id)});
-
-    return;
-}
 
 sub _get_logo_tags
 {
@@ -484,55 +476,32 @@ sub _get_logo_tags
     ];
 }
 
-sub render_logo
+
+
+sub _get_list_items_tags
 {
     my ($class, $id) = @_;
 
-    _print_utf8(@{$class->_get_logo_tags($id)});
-
-    return;
-}
-
-sub render_1
-{
-    my ($class, $id) = @_;
-
-    _print_utf8(
-        @{$class->_get_tagline_tags($id)},
-        @{$class->_get_logo_tags($id)},
-    );
-
-    return;
-}
-
-sub render_list_items
-{
-    my ($class, $id) = @_;
-
-    _print_utf8(
+    return [
         @{$class->_get_logo_tags($id)},
         @{$class->_get_abstract_tags($id)},
-    );
-
-    return;
+    ];
 }
 
-sub render_common_top_elems
+sub _get_common_top_elems
 {
     my ($class, $id) = @_;
 
-    $class->render_1($id);
-
-    _print_utf8(sprintf(qq#<div class="%s abstract">\n#, $class->_get_story($id)->logo_class));
-
-    _print_utf8(qq#<h2 id="abstract">Abstract</h2>\n#);
-
-    _print_utf8(@{$class->_get_abstract_tags($id)});
-
-    _print_utf8(qq{</div>\n});
-
-    return;
+    return [
+        @{$class->_get_tagline_tags($id)},
+        @{$class->_get_logo_tags($id)},
+        sprintf(qq#<div class="%s abstract">\n#, $class->_get_story($id)->logo_class),
+        qq#<h2 id="abstract">Abstract</h2>\n#,
+        @{$class->_get_abstract_tags($id)},
+        qq{</div>\n},
+    ];
 }
+
 
 sub render_story_entry
 {
@@ -560,8 +529,8 @@ sub render_story_entry
         )
     );
 
-    $class->render_list_items($id);
     _print_utf8(
+        @{$class->_get_list_items_tags($id)},
         $o->entry_extra_html(),
         qq{</div>\n}
     );
@@ -577,6 +546,47 @@ sub render_all_stories_entries
     {
         $class->render_story_entry( $o->id(), $tag, );
     }
+
+    return;
+}
+
+sub render_abstract
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(@{$class->_get_abstract_tags($id)});
+
+    return;
+}
+
+sub render_logo
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(@{$class->_get_logo_tags($id)});
+
+    return;
+}
+
+sub render_1
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(
+        @{$class->_get_tagline_tags($id)},
+        @{$class->_get_logo_tags($id)},
+    );
+
+    return;
+}
+
+sub render_common_top_elems
+{
+    my ($class, $id) = @_;
+
+    _print_utf8(
+        @{$class->_get_common_top_elems($id)},
+    );
 
     return;
 }

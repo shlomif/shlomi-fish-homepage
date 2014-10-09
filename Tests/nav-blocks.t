@@ -3,9 +3,12 @@
 use strict;
 use warnings;
 
-use Test::More tests => 9;
+use utf8;
+
+use Test::More tests => 10;
 use Test::Differences (qw(eq_or_diff));
 
+use lib './Tests/lib';
 use lib './lib';
 
 use NavDataRender;
@@ -13,6 +16,7 @@ use NavDataRender;
 use Shlomif::Homepage::NavBlocks::Renderer;
 use Shlomif::Homepage::NavBlocks;
 
+use NavBlocks (qw( get_nav_block ));
 use IO::All;
 
 {
@@ -228,4 +232,102 @@ EOF
             "Render Master_Tr",
         );
     }
+}
+
+{
+    my $nav_bar = HTML::Widgets::NavMenu->new(
+        path_info => "/humour/Selina-Mandrake/",
+        current_host => 't2',
+        MyNavData::get_params(),
+        'no_leading_dot' => 1,
+    );
+
+    my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
+        {
+            host => 't2',
+            nav_menu => $nav_bar,
+        }
+    );
+
+    my $block = get_nav_block('buffy');
+
+    # TEST
+    eq_or_diff(
+        [$r->render($block)],
+        [<<'EOF',],
+<div class="topical_nav_block" id="buffy_nav_block">
+<table>
+<tr class="main_title">
+<th colspan="3">Buffy Fanfiction</th>
+</tr>
+
+<tr class="subdiv">
+<th colspan="3">Screenplays</th>
+</tr>
+
+<tr>
+<td colspan="2"><b>Star Trek: We, the Living Dead</b></td>
+<td>
+<ul>
+<li><p><a href="../Star-Trek/We-the-Living-Dead/">Front Page</a></p></li>
+<li><p><a href="../Star-Trek/We-the-Living-Dead/ongoing-text.html">Ongoing Text</a></p></li>
+<li><p><a class="ext github" href="http://github.com/shlomif/Star-Trek--We-the-Living-Dead">GitHub Repo</a></p></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td colspan="2"><b>Selina Mandrake - The Slayer</b></td>
+<td>
+<ul>
+<li><p><strong class="current">Front Page</strong></p></li>
+<li><p><a href="ongoing-text.html">Ongoing Text</a></p></li>
+<li><p><a href="cast.html">Proposed Cast</a></p></li>
+<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">GitHub Repo</a></p></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td colspan="2"><b>Summerschool at the NSA</b></td>
+<td>
+<ul>
+<li><p><a href="../Summerschool-at-the-NSA/">Front Page</a></p></li>
+<li><p><a href="../Summerschool-at-the-NSA/ongoing-text.html">Ongoing Text</a></p></li>
+<li><p><a href="../Summerschool-at-the-NSA/cast.html">Proposed Cast</a></p></li>
+<li><p><a class="ext github" href="http://github.com/shlomif/Summerschool-at-the-NSA">GitHub Repo</a></p></li>
+<li><p><a class="ext facebook" href="http://www.facebook.com/SummerNSA">Facebook Page</a></p></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td colspan="2"><b>Buffy: A Few Good Slayers</b></td>
+<td>
+<ul>
+<li><p><a href="../Buffy/A-Few-Good-Slayers/">Front Page</a></p></li>
+<li><p><a href="../Buffy/A-Few-Good-Slayers/ongoing-text.html">Ongoing Text</a></p></li>
+<li><p><a class="ext github" href="http://github.com/shlomif/Buffy-a-Few-Good-Slayers">GitHub Repo</a></p></li>
+</ul>
+</td>
+</tr>
+
+<tr class="subdiv">
+<th colspan="3">Factoids</th>
+</tr>
+
+<tr>
+<td colspan="2"><b>“Facts”</b></td>
+<td>
+<ul>
+<li><p><a href="../bits/facts/Buffy/">Buffy Facts</a></p></li>
+</ul>
+</td>
+</tr>
+
+</table>
+</div>
+EOF
+        "Render a block.",
+    );
 }

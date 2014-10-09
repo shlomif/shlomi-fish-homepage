@@ -503,13 +503,13 @@ sub _get_common_top_elems
 }
 
 
-sub render_story_entry
+sub _get_story_entry_tags
 {
     my ($class, $id, $tag) = @_;
 
     my $o = $class->_get_story($id);
 
-    _print_utf8(
+    return [
         qq{<div class="story">\n},
         sprintf(qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
@@ -526,29 +526,25 @@ sub render_story_entry
             ),
             ($o->entry_text || die "Elimbda $id"),
             $tag,
-        )
-    );
-
-    _print_utf8(
+        ),
         @{$class->_get_list_items_tags($id)},
         $o->entry_extra_html(),
         qq{</div>\n}
-    );
-
-    return;
+    ];
 }
 
-sub render_all_stories_entries
+sub _get_all_stories_entries_tags
 {
     my ($class, $tag) = @_;
 
-    foreach my $o (@_Stories)
-    {
-        $class->render_story_entry( $o->id(), $tag, );
-    }
-
-    return;
+    return
+    [
+        map
+        { @{ $class->_get_story_entry_tags($_->id(), $tag) } }
+        @_Stories
+    ];
 }
+
 
 sub render_abstract
 {
@@ -568,24 +564,23 @@ sub render_logo
     return;
 }
 
-sub render_1
-{
-    my ($class, $id) = @_;
-
-    _print_utf8(
-        @{$class->_get_tagline_tags($id)},
-        @{$class->_get_logo_tags($id)},
-    );
-
-    return;
-}
-
 sub render_common_top_elems
 {
     my ($class, $id) = @_;
 
     _print_utf8(
         @{$class->_get_common_top_elems($id)},
+    );
+
+    return;
+}
+
+sub render_all_stories_entries
+{
+    my ($class, $tag) = @_;
+
+    _print_utf8(
+        @{ $class->_get_all_stories_entries_tags($tag) },
     );
 
     return;

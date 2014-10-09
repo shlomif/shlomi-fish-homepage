@@ -104,6 +104,10 @@ my $essays_tree_contents =
                             title => "Summarising the #SummerNSA effort so far.",
                         },
                         {
+                            text => "Letter to Summer Glau on Oct 2014",
+                            url => "philosophy/SummerNSA/Letter-to-SGlau-2014-10/",
+                        },
+                        {
                             text => "Sep 2014 Call for Action",
                             url => "philosophy/philosophy/SummerNSA-2014-09-call-for-action/",
                         },

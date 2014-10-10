@@ -269,7 +269,7 @@ EOF
 <p class="who_is_qoheleth abstract">
 Josephus was a budding philosopher of Jewish descent in
 <a href="https://en.wikipedia.org/wiki/Damascus">Damascus</a> of
-<a href="http://en.wikipedia.org/wiki/Hellenistic_period">Helllenistic
+<a href="http://en.wikipedia.org/wiki/Hellenistic_period">Hellenistic
 times</a>, when he took a bet that he could produce a decent work
 of philosophy, and wrote the Biblical scroll of
 <a href="http://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a>.

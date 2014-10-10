@@ -1205,11 +1205,12 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
+FACTOIDS_GEN_CMD = perl $(FACTOIDS_RENDER_SCRIPT)
 
 FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
 
 $(FACTOIDS_GENERATED_FILES): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
-	perl $(FACTOIDS_RENDER_SCRIPT)
+	$(FACTOIDS_GEN_CMD)
 
 $(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
 
@@ -1221,6 +1222,9 @@ manifest_html: $(MAN_HTML)
 
 $(MAN_HTML): ./bin/gen-manifest.pl
 	perl $<
+
+$(FACTOIDS_NAV_JSON):
+	$(FACTOIDS_GEN_CMD)
 
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@

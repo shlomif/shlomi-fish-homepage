@@ -981,7 +981,7 @@ my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
 
 my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
-if (! -e $json_fn or $new_json ne io->file($json_fn)->utf8->all)
+if (! -e $json_fn or $new_json ne io->file($json_fn)->all)
 {
-    io->file($json_fn)->utf8->print($new_json);
+    io->file($json_fn)->print($new_json);
 }

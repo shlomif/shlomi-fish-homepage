@@ -17,7 +17,7 @@ sub _slurp
 {
     my $filename = shift;
 
-    open my $in, '<:encoding(utf8)', $filename
+    open my $in, '<:raw', $filename
         or die "Cannot open '$filename' for slurping - $!";
 
     local $/;

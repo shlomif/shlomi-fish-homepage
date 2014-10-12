@@ -900,13 +900,16 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $@
 	$(OPTIPNG) $@
 
-$(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
-	inkscape --export-width=200 --export-png="$@" --export-id="main_text" --export-id-only $<
-	$(OPTIPNG) $@
-
-$(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg
+define EXPORT_INKSCAPE_PNG
 	inkscape --export-width=200 --export-png="$@" $<
 	$(OPTIPNG) $@
+endef
+
+$(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
+	$(call EXPORT_INKSCAPE_PNG)
+
+$(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
 	inkscape --export-width=30 --export-png="$@" $<
@@ -917,24 +920,19 @@ $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	$(OPTIPNG) $@
 
 $(QOHELETH__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(HUMANITY__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/humanity/images/humanity-logo.svg
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(THE_EARTH_ANGEL__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/The-Earth-Angel/images/the-earth-angel-logo.svg
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(BLUE_RABBIT__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(POPE__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Pope/images/pope-logo.svg
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
+	$(call EXPORT_INKSCAPE_PNG)
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
 	convert -resize '50%' $< $@

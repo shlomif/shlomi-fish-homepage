@@ -370,7 +370,7 @@ EOF
             logo_alt => "“The Pope Died on Sunday” Logo",
             logo_class => "pope_died_on_sunday",
             logo_id => "pope_died_on_sunday_logo",
-            logo_src => "humour/Pope/images/who-is-qoheleth-small.png",
+            logo_src => "humour/Pope/images/pope-logo-small.png",
             entry_id => "pope-died-on-sunday",
             entry_text => "The Pope Died on Sunday",
             href => "humour/Pope/",

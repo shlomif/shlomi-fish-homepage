@@ -7,7 +7,7 @@ use MooX qw/late/;
 
 has [
     'abstract', 'id', 'logo_alt', 'logo_class', 'logo_id', 'logo_src',
-    'tagline',
+    'logo_svg', 'tagline',
 ] => (is => 'ro', isa => 'Str', required => 1);
 
 has ['entry_id', 'entry_text', 'href',

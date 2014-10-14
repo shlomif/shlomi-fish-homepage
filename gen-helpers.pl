@@ -16,6 +16,16 @@ IO::All->import('io');
 require List::MoreUtils;
 
 if (system($^X,
+        '-Ilib', '-MShlomif::Homepage::LongStories',
+        '-e',
+        'Shlomif::Homepage::LongStories->render_make_fragment()'
+    )
+)
+{
+    die "LongStories render_make_fragment failed!";
+}
+
+if (system($^X,
         '-Ilib', '-MShlomif::Homepage::FortuneCollections',
         '-e',
         'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'

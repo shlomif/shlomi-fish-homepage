@@ -867,20 +867,19 @@ ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
 
-THE_ENEMY_SMALL_LOGO_PNG = $(T2_DEST)/humour/TheEnemy/images/The-Enemy-logo-small.png
-BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG = $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png
-WHO_IS_QOHELETH__SMALL_LOGO_PNG = $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png
-HUMANITY__SMALL_LOGO_PNG = $(T2_DEST)/humour/humanity/images/humanity-logo-small.png
-HHFG__SMALL_LOGO_PNG = $(T2_DEST)/t2/humour/human-hacking/images/hhfg-logo-small.png
-POPE_DIED_ON_SUNDAY__SMALL_LOGO_PNG = $(T2_DEST)/humour/Pope/images/pope-logo-small.png
-BLUE_RABBIT__SMALL_LOGO_PNG = $(T2_DEST)/humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png
-THE_EARTH_ANGEL__SMALL_LOGO_PNG = $(T2_DEST)/humour/The-Earth-Angel/images/the-earth-angel-logo-small.png
+OPTIPNG = optipng -o7
+
+define EXPORT_INKSCAPE_PNG
+	inkscape --export-width=200 --export-png="$@" $<
+	$(OPTIPNG) $@
+endef
+
+include lib/make/long_sories.mak
 
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png
 HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
-OPTIPNG = optipng -o7
 
 BK2HP_NEW_PNG = common/images/bk2hp.png
 
@@ -888,10 +887,7 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	convert -matte -bordercolor none -border 5 $< $@
 	$(OPTIPNG) $@
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(WHO_IS_QOHELETH__SMALL_LOGO_PNG) $(HUMANITY__SMALL_LOGO_PNG) \
-	$(THE_EARTH_ANGEL__SMALL_LOGO_PNG) \
-	$(BLUE_RABBIT__SMALL_LOGO_PNG) \
-	$(POPE_DIED_ON_SUNDAY__SMALL_LOGO_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG)
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png=$@ $<
@@ -901,16 +897,6 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $@
 	$(OPTIPNG) $@
 
-define EXPORT_INKSCAPE_PNG
-	inkscape --export-width=200 --export-png="$@" $<
-	$(OPTIPNG) $@
-endef
-
-$(THE_ENEMY_SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/TheEnemy/images/The-Enemy--Logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg
-	$(call EXPORT_INKSCAPE_PNG)
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
 	inkscape --export-width=30 --export-png="$@" $<
@@ -919,24 +905,6 @@ $(PRINTER_ICON_PNG): common/images/printer_icon.svg
 $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	inkscape --export-width=30 --export-png="$@" $<
 	$(OPTIPNG) $@
-
-$(WHO_IS_QOHELETH__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(HHFG__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/human-hacking-field-guide-logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(HUMANITY__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/humanity/images/humanity-logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(THE_EARTH_ANGEL__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/The-Earth-Angel/images/the-earth-angel-logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(BLUE_RABBIT__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
-
-$(POPE_DIED_ON_SUNDAY__SMALL_LOGO_PNG): $(T2_SRC_DIR)/humour/Pope/images/pope-logo.svg
-	$(call EXPORT_INKSCAPE_PNG)
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
 	convert -resize '50%' $< $@

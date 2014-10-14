@@ -4,6 +4,9 @@ use strict;
 use warnings;
 
 use utf8;
+
+use IO::All qw/ io /;
+
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 use Shlomif::WrapAsUtf8 qw(_print_utf8);
@@ -597,6 +600,40 @@ sub render_all_stories_entries
     );
 
     return;
+}
+
+sub render_make_fragment
+{
+    my @var_decls;
+    my @rules;
+    my $deps = '';
+
+    foreach my $s (@_Stories)
+    {
+        my $uc_id = uc($s->id);
+        my $logo_src = $s->logo_src;
+        my $logo_svg = $s->logo_svg;
+
+        if ($logo_svg ne '//$SKIP')
+        {
+            my $m_id = "${uc_id}__SMALL_LOGO_PNG";
+
+            push @var_decls, "$m_id = \$(T2_DEST)/$logo_src\n";
+            push @rules,
+            "\$($m_id): \$(T2_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n\n",
+            ;
+
+            $deps .= " \$($m_id)";
+        }
+    }
+
+    io->file("lib/make/long_sories.mak")->utf8->print(
+        @var_decls,
+        "\n",
+        @rules,
+        "\n",
+        "art_slogans_targets: $deps\n\n",
+    );
 }
 
 1;

@@ -558,10 +558,13 @@ table.visible
 .sub_section
     +indent
 
+=logo_margin
+    margin-top: 1em
+
 =logo_image
     margin-left: 1em
     margin-bottom: 1em
-    margin-top: 1em
+    +logo_margin
 
 .story_logo, .screenplay_image
     +logo_image
@@ -573,6 +576,10 @@ table.visible
 .facts_logo
     +logo_image
     float: left
+
+.facts_wrap
+    .desc
+        padding-top: 1.5em
 
 .selina.abstract
     // For the die to be displayed in place.

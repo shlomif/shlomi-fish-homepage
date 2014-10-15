@@ -558,14 +558,21 @@ table.visible
 .sub_section
     +indent
 
-.story_logo, .screenplay_image
-    float: right
+=logo_image
     margin-left: 1em
     margin-bottom: 1em
     margin-top: 1em
 
+.story_logo, .screenplay_image
+    +logo_image
+    float: right
+
     &.enemy
         clear: right
+
+.facts_logo
+    +logo_image
+    float: left
 
 .selina.abstract
     // For the die to be displayed in place.
@@ -662,9 +669,11 @@ $ss_margin: 2em
         > p:last-child, > ul:last-child > li:last-child > p:last-child, > ol:last-child > li:last-child > p:last-child
             padding-bottom: 1em
 
-h3
-    &.facts, &.story
+h2, h3
+    &.story
         clear: right
+    &.facts, &#facts
+        clear: both
 
 @import "self_link"
 @import "lang_switch"

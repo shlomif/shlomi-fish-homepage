@@ -898,9 +898,14 @@ END_OF_TEMPLATE
 my $tag_tt_text = <<'END_OF_TEMPLATE';
 <define-tag facts__[% p.short_id() %]>
 
+<div class="facts_wrap">
 <facts__img__[% p.short_id() %] />
 
+<div class="desc">
 [% p.abstract() %]
+</div>
+
+</div>
 
 </define-tag>
 END_OF_TEMPLATE

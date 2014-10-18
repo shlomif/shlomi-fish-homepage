@@ -149,6 +149,21 @@ my @urls =
         url => "http://www.shlomifish.org/open-source/resources/networking-clients/",
         desc => qq{List of Networking Clients},
     },
+    {
+        id => "sglau-facts",
+        url => "http://www.shlomifish.org/humour/bits/facts/Summer-Glau/",
+        desc => qq{Summer Glau Facts},
+    },
+    {
+        id => "emwatson-facts",
+        url => "http://www.shlomifish.org/humour/bits/facts/Emma-Watson/",
+        desc => qq{Emma Watson Facts},
+    },
+    {
+        id => "qoheleth",
+        url => "http://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/",
+        desc => qq{“So, Who the Hell is Qoheleth?”},
+    },
 );
 
 my %urls_by_id;

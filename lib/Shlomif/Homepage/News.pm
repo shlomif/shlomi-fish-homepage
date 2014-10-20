@@ -167,8 +167,7 @@ sub file_to_news_item
     my $filename = shift;
     my $text = do {
         local $/;
-        open my $file, "<", $self->dir()."/".$filename;
-        binmode $file, ":utf8";
+        open my $file, "<:encoding(UTF-8)", $self->dir()."/".$filename;
         <$file>;
     };
     my $title;

@@ -10,7 +10,7 @@ our @EXPORT_OK = (qw(_print_utf8 _wrap_as_utf8));
 sub _wrap_as_utf8 {
     my ($cb) = @_;
 
-    binmode STDOUT, ":utf8";
+    binmode STDOUT, ":encoding(UTF-8)";
 
     $cb->();
 

@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/meta-tag/template.wml" />
+</quadpres_code_block>
+
+<h2>Explanation</h2>
+
+<ul>
+<li>
+<tt>&lt;if ... /&gt;</tt> is a conditional. It evaluates to the second
+argument if its condition is not an empty space, and to the third otherwise.
+</li>
+<li>
+<tt>%0</tt> and <tt>%1</tt> are the arguments to the tag.
+</li>
+<li>
+<tt>;&#059;;</tt> is a comment of mp4h.
+</li>
+</ul>
+

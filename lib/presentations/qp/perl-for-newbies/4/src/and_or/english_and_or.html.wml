@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<p>
+Perl supplies two operators <tt>and</tt> and <tt>or</tt> which are equivalent
+to <tt>&amp;&amp;</tt> and <tt>||</tt> except that they have a very low
+precedence. (lower than any other operator in fact). There's also <tt>not</tt>
+which is the ultra-low precedence equivalent of <tt>!</tt>.
+</p>
+
+<p>
+You can use them after a statement to write error handlers.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/and_or/open-or.pl" />
+</quadpres_code_block>

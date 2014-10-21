@@ -1,0 +1,25 @@
+[% PROCESS "shlomif/navbar.ttml" %]
+.navbar
+{
+    /* derived from moccasin, but less intrusive, as a background.*/
+    background-color: #FFEED3;
+}
+.navbar ul
+{
+    font-family: sans-serif;
+    font-size : small;
+}
+[% INCLUDE "nav_links.ttml" %]
+[% PROCESS "newsitem.css.ttml" %]
+[% PROCESS "shlomif/common_defs.ttml" %]
+
+.main
+{
+    padding-left : 1em;
+    margin-left : 25%;
+}
+.main img
+{
+     margin-right: 1em;
+}
+

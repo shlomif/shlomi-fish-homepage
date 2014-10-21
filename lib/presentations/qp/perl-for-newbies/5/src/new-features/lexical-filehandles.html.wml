@@ -1,0 +1,52 @@
+#include 'template.wml'
+
+<p>
+Traditionally Perl filehandles had been "typeglobs" - global names - normally
+starting with an uppercase letter that were not scope safe. While they could
+have been localised using "local", this was still a far cry from true
+lexical scoping. perl-5.6.x, however,
+<a href="http://perldoc.perl.org/perl56delta.html#File-and-directory-handles-can-be-autovivified">introduced</a>
+lexical filehandles for both file handles and directory handles.
+</p>
+
+<p>
+Here is an example for a program implementing a directory listing.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/new-features/ls.pl" />
+</quadpres_code_block>
+
+<p>
+And here is an example that copies a file:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/new-features/copy.pl" />
+</quadpres_code_block>
+
+<h2>IO::Handle and Friends</h2>
+
+<p>
+Perl provides a set of lexical and object-oriented abstractions for file
+handles called IO::Handle. Starting from recent versions of Perl, one can
+use them with the built-in perlfunc mechanisms. You can find more information
+about them here:
+</p>
+
+<ul>
+
+<li>
+<a href="http://perldoc.perl.org/IO/Handle.html">IO::Handle's Documentation</a>
+</li>
+
+<li>
+<a href="http://perldoc.perl.org/IO/File.html">IO::File's Documentation</a>
+</li>
+
+<li>
+<a href="http://perldoc.perl.org/IO/Socket.html">IO::Socket's Documentation</a>
+</li>
+
+</ul>
+

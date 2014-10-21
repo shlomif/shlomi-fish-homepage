@@ -1,0 +1,45 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "E-mail Netiquette: How to Start a New Thread" />
+
+<latemp_meta_desc "How to Properly Start a New Thread in E-mail, while making standard-compliant threaded mailers happy." />
+
+<toc_div />
+
+<p>
+You should not reply to an existing message in order to start a new thread,
+which will also involve changing the E-mail <tt>Subject:</tt> line and deleting
+the existing quoted body. That's because standard-compliant threaded mail
+user agents (MUAs) will respect the <b>In-Reply-To:</b> headers and display
+the message as a reply to the one to which you replied.
+</p>
+
+<p>
+The proper way to start a new thread is to:
+</p>
+
+<ol>
+
+<li>
+<p>
+Press the compose a new message button.
+</p>
+</li>
+
+<li>
+<p>
+Fill in the mailing list’s E-mail address (you should have auto-completion
+and/or an address book).
+</p>
+</li>
+
+<li>
+<p>
+Fill in the subject line and the body.
+</p>
+</li>
+
+</ol>
+

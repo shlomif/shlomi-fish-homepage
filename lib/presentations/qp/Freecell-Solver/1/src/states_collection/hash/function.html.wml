@@ -1,0 +1,30 @@
+#include 'template.wml'
+
+<points>
+<li>
+The first hash function I tried to use with GLib's hash was a function
+that did a 4-byte wide XOR checksum on the data.
+</li>
+
+<li>
+The performance of the hash was horrible, much more than anything else I tried.
+</li>
+
+<li>
+I then switched to <a href="http://userpages.umbc.edu/~mabzug1/cs/md5/md5.html">MD5</a> and so it performed much better.
+</li>
+
+<li>
+After some time, I realized MD5 was a relatively slow, cryptologically secure,
+hash function, and I could find faster functions.
+</li>
+
+<li>
+Perl's hash function performed at least equally as well.
+</li>
+
+<li>
+Your hash is only as good as your hash function!
+</li>
+
+</points>

@@ -1,0 +1,40 @@
+#include 'template.wml'
+
+<p>
+One can use the cluster grouping notation (<tt>(?: ... )</tt>) or the
+capture grouping notation (<tt>( ... )</tt>) to group several characters so
+the entire group can be repeated with <tt>+</tt>, <tt>*</tt> or <tt>?</tt>.
+</p>
+
+<p>
+The difference between clustering and capturing, is that with capturing the
+Perl interpreter also keeps track of the text matched by the captures in the
+<tt>$1</tt>, <tt>$2</tt>, <tt>$3</tt>, etc. variables. Clustering as a result
+is faster and less intrusive.
+</p>
+
+<p>
+For example, the following perl program accepts a string as an argument, and
+checks if it is an entire sentence that starts with "the" and ends with
+"there":
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/sentence.pl" />
+</quadpres_code_block>
+
+<p>
+It is possible to nest groupings, so for example the following matches a
+square brackets-enclosed semicolon separated list of curly braces-enclosed
+comma-separated lists of numbers:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/semicolons_and_commas.pl" />
+</quadpres_code_block>
+
+<p>
+So it matches strings like <tt>[{54,129};{236,78}]</tt> and
+<tt>[{54,129};{236,78};{78,100,808};{72,1009,8}]</tt>
+</p>
+

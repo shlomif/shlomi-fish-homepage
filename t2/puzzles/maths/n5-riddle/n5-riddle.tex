@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article}
+
+\usepackage[]{fullpage}
+
+\usepackage[]{amsmath}
+
+% This statement puts a one-line spacing between two adjacent paragraphs
+\setlength\parskip{\medskipamount}
+
+% This statement cancels the indentation of the paragraph's first line
+\setlength\parindent{0pt}
+
+\begin{document}
+
+{\Huge Proof of a Riddle}
+
+
+{\LARGE Written by: Shlomi Fish}
+
+
+\section{The Problem}
+
+We need to prove that for every natural number $n > 0$, there exists a
+decimal number of $n$ digits, which can be wholly divided by $5^n$, and
+all of its digits are odd.
+
+\section{Methodology}
+
+We will prove a stronger claim. We will demonstrate that if $b_n$ is the
+corresponding number for $n$, then it can serve as a suffix for $b_{n+1}$
+, by adding another most significant digit.
+
+More formally:
+
+\begin{enumerate}
+\item $b_1$ = 5.
+\item For every $n$, there exists an $a \in \{1,3,5,7,9\}$ so that
+$b_{n+1} = b_n + a \cdot 10^n$ and $b_{n+1} \mod 5^{n+1} = 0 $.
+\end{enumerate}
+
+\section{Proof}
+
+The proof would be by induction.
+
+\subsection{Induction Base}
+
+It holds for $n = 1$ as 5 is a one-digit number that is wholly divisable
+by $5^1$.
+
+\subsection{Induction Step}
+
+Let's assume it holds for $n$ and show that it also holds for $n+1$.
+
+Now:
+
+\[b_{n+1} = b_n + a \cdot 10^n \]
+
+According to the induction step $b_n$ is wholly divisable by $5^n$ and so
+is $10^n = 5^n \cdot 2^n$. So we can divide the expression by $5^n$ and
+try to find an $a$ so that the quotient is divisable by 5. We get:
+
+\[ b_{n}' + a \cdot 2^n \]
+
+$b_{n}'$ has some modulo 5, and $2^n$ has a non-zero modulo. The values that
+$a$ can assume (1,3,5,7,9) contain all the modulos of 5. Since 5 is prime
+, and its modulos are a group, we can get all modulos by multiplying a
+given non-zero modulo by the other modulos. So we can choose an $a$ so that
+the expression modulo 5 evaluates to 0. Thus we can divide this $b_{n+1}$ by
+$5^{n+1}$ as well.
+
+Q.E.D.
+
+\end{document}
+

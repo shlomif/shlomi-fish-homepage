@@ -1,0 +1,66 @@
+The RWLock will use a queue. Each element of the queue will contain
+a condition variable and a flag that indicates if it contains a reader
+or a writer pending.
+
+The RWLock will contain a counter that tells it how many readers are using
+it at the moment (num_readers), and a flag that specifies if there's a
+writer using the lock (is_writer). It also uses a common internal mutex
+to protect against mutual exclusion (mymutex)
+
+Algorithm:
+
+accept_pending_items:
+---------------------
+
+Extracts the first element out of the queue.
+
+If it is a writer, it sets is_writer to 1, and signals the condition
+variable of the element.
+
+If it is a reader, it sets is_writer to 0, and polls+extracts
+all the other items out of the head of the queue that are readers
+(i.e it stops at the first writer or at the end of the queue).
+
+get_write_access:
+-----------------
+
+locks mymutex.
+
+Checks if is_writer is set or num_readers is greater than 0. If so,
+it enqueues itself. (the mutex of the condition variable is mymutex)
+
+If not it sets is_writer to 1.
+
+Unlocks the mutex.
+
+
+
+get_read_access:
+----------------
+
+locks mymutex.
+
+If the queue is empty and is_writer is false it increments num_readers and unlock mutex.
+
+Else it enqueues itself, while using mymutex for waiting on the condition variable. When the condition variable is signalled, num_readers is incremented by 1.
+
+Unlocks mutex.
+
+release_write_access:
+---------------------
+
+locks mutex
+
+Sets is_writer to false. Then calls accept_pending_items.
+
+unlocks mutex
+
+release_read_access:
+--------------------
+
+locks mutex
+
+Decrements num_readers. If num_readers == 0 it calls accept_pending_items.
+
+unlocks mutex
+

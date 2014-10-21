@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+
+
+<p>
+You define a method for this class by defining a function in that namespace
+that accepts the object's instance as its first argument.
+</p>
+
+<p>
+Here are two example methods in the class <tt>Foo</tt>, that retrieve and set
+its name:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/objects/making/Foo.more-methods.pm" />
+</quadpres_code_block>
+
+<p>
+And here's a script that makes use of these functions. Can you guess what its
+output would be?
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/objects/making/test_methods.pl" />
+</quadpres_code_block>
+
+

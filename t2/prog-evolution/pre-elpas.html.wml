@@ -1,0 +1,445 @@
+#include '../template.wml'
+
+#include "toc_div.wml"
+
+<latemp_subject "Shlomi Fish as a Programmer - the pre-Elpas Years" />
+<latemp_meta_desc "Some memoirs of Shlomi Fish about programming when he was a teenager" />
+<latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Windows, DOS, BASIC, QBASIC, VBA, Visual Basic for Applications, Excel" />
+
+<toc_div />
+
+<h2 id="meta">Document Information</h2>
+
+<dl class="meta">
+<dt>
+Written By:
+</dt>
+<dd>
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</dd>
+<dt>
+Version Control ID
+</dt>
+<dd>
+<tt>$Id: bash-themes.html.wml 216 2005-12-16 15:10:24Z  $</tt>
+</dd>
+<dt>
+Finish Date:
+</dt>
+<dd>
+15-January-2003
+</dd>
+<dt>
+Last Updated:
+</dt>
+<dd>
+28-August-2005
+</dd>
+</dl>
+
+<h2 id="xt_basic_dos">XTs, BASICs and DOS</h2>
+
+<p>
+The first time I programmed was for an
+<a href="http://en.wikipedia.org/wiki/IBM_PC_XT">XT computer</a> my father
+bought,
+and for the
+<a href="http://en.wikipedia.org/wiki/BASIC_programming_language">BASIC</a>
+that came hard-coded in the ROM and loaded in case you
+did not insert a floppy disk in the drive. I was in my 4th grade and my two
+best friend got jealous of the computer and their parents promptly bought
+ones for them too. Together, we bought a set of booklets about teaching
+BASIC in DOS called “Mahsheveth” (or “מחשבת” in Hebrew) and helped each other
+learn the language.
+</p>
+
+<p>
+One of the property of the BIOS was that you could not save your programs.
+If the computer was rebooted (in order to load a floppy disk to play an
+old DOS game like Digger), you had to type it all over again. Luckily,
+Mahsheveth introduced DOS and using files and the native DOS basic interpreter
+in the fourth chapter and we could save our files on floppy disks instead.
+</p>
+
+<p>
+Another good property of the Mahsheveth series was that its writers were
+fully aware of
+<a href="http://en.wikipedia.org/wiki/Structured_programming">Structured
+Programming</a>, and knew that BASIC did not enforce it
+on the programmer. They taught us about GOTOs and IFs right away, but
+instructed them to use them to construct conditionals and loops instead of a
+GOTO spaghetti. (Of which I’ve seen once in an old code when I was a already
+a Technion student). Thus, the later transition to C/C++ was quite natural.
+</p>
+
+<p>
+The first programs I wrote were nearly identical to the ones that appeared in
+the answers section. The latter ones deviated very much, which made me a bit
+distressed that we made things differently. Back then, I did not hear of
+the <a href="http://www.greythumb.org/blog/index.php?/archives/7-T.M.T.O.W.T.D.I..html">“There’s more than one way to do it”</a> idiom. Eventually, I
+realised that everyone did things a little differently and that I should be
+content with it.
+</p>
+
+<p>
+My father upgraded to later DOS versions, and DOS 5.0 came with a nice BASIC
+front-end called QBASIC, which had a nice editor with menus and many editing
+commands, an online help, and produced fast code. I liked it a lot. At one
+time I tried to write a computer game with it in BASIC, and then was told that
+it no longer needed line numbers unless for explicit labels. It was a bit
+like Visual Basic in this regard.
+</p>
+
+<h2 id="learning_c">Learning C</h2>
+
+<p>
+My friend became a better DOS engineer than I was, and soon bought Microsoft
+Quick C, learned about programming hardware and over-riding the BIOS, x86
+Assembler and other things. Back then, the only languages we knew about were
+BASIC (which we knew was nice and easy but pretty lame), Pascal (compiled, and
+much better than basic), C (something that was supposed to be even more
+advanced than Pascal), and we may have heard of Prolog, LISP, Fortran.
+Awk? Perl? Tcl? SmallTalk? Matlab? We’ve never heard of them at all.
+</p>
+
+<p>
+So I instructed my father to buy me a C compiler package in one of his trips
+abroad and he bought me Borland’s Turbo C++. I learned C and C++ through its
+manual. One of the thing I did not understand was pointers, until I went to
+a hike where an army programmer explained to me that they were simply
+addresses in memory which I can put or take values from, and a bit about
+pointer arithmetics. This gave me a large momentum. I also learned about
+classes and objects and templates  which although a simple concept fascinated
+me.
+</p>
+
+<p>
+I took my liberty to write a module of components which I dubbed
+<tt>CSEE.c</tt>, for
+doing various graphical things. My friend was at first surprised at that (it
+was not a standalone program), but later on told me people distributed and
+sold such libraries and software development kits all the time. It included
+some very nifty user-land routines, but I doubt it will run on anything
+aside from an old Borland DOS Compiler.
+</p>
+
+<p>
+I then started writing <tt>CCALC.c</tt> which was a library of
+miscellaneous numerical routines that were not built in in C. It included
+rational fractions, factoring numbers, checking for primality (in several
+ways), and other stuff. The code should work on any 16-bit compiler but will
+take some tweaking to get it to be 32-bit and 64-bit ready. Note that
+everything it does can be done with GNU’s GMP, or OpenSSL, or other open-source
+components available on the Net. I can distribute it as open-source but see
+little point in doing so, because it’s pretty much useless in today’s standard,
+and a mathematically-inclined programmer can write such routines on his
+own.
+</p>
+
+<h2 id="some_basic_programs_that_saved_the_day">Some BASIC Programs that Saved the Day</h2>
+
+<p>
+When my father bought a CD-ROM drive for our computer
+(a double-speed one - !), he  brought a pack of 10 example CDs that were
+legitimate but were bought for a very small price. One of them contained
+various demos, by <a href="http://en.wikipedia.org/wiki/Future_Crew">the
+Future Crew</a>, the Electro Motive Force and others. I was very impressed by
+<a href="http://en.wikipedia.org/wiki/Unreal_(demo)">“Unreal”</a>. I remember
+the  Fluttering Flag effect they had and had an idea on how to reproduce it.
+</p>
+
+<p>
+A quick QBASIC program produced a very similar effect. I translated it to C
+and got faster animations, but even the QBASIC one was also quite fast.
+</p>
+
+<p>
+I studied Physics in a laboratory building called “Hemda”, and we had DOS
+machines for students to use. Once when I had a spare time, I reproduced the
+fluttering flag demo. The librarian (with whom I became a very good friend) was
+very impressed, and requested that I kept the program there.
+</p>
+
+<p>
+Another issue was when my friend wondered what was the average of a 4d6
+minus the least score method of generating AD&amp;D abilities was. He used a C
+(or BASIC perhaps) program with several loops to calculate. I actually tried to
+find a mathematical solution and was eventually able to. (refer to <a
+href="$(ROOT)/MathVentures/3d-outof-4d-mathml.xhtml">my “Combinatorics and the
+Art of Dungeons and Dragons” article</a> ).
+But I did check my final result (which I could calculate with a hand
+calculator) with a program I wrote to see they were identical.
+</p>
+
+<p>
+I asked the people at “Hemda” this question, and many of them, including my
+Physics teacher pondered them for a long time. I eventually showed them my way
+and took my teacher to the library to write a QBASIC program that calculated
+it both ways. Another teacher that passed by turned out to have reached a
+similar conclusion by himself. My teacher said I should keep the basic program
+there as well, as he may find a use for it.
+</p>
+
+<p>
+Note that using brute force (i.e: 4 loops) will work quickly enough in this
+case. However, as the number of dice grows the order of growth grows
+exponentially and so it is not an efficient algorithm. The method I (and later
+on other people I told them this riddle) found has a polynomial complexity,
+which is much nicer than exponential.
+</p>
+
+<h3 id="the_most_underestimated_feature_of_excel">The Most Under-estimated
+Feature of Excel</h3>
+
+<p>
+When my father bought Excel 4.0 for Windows 3.1 I realized it came with a nice
+scripting language called Visual Basic for Applications. It enabled me to write
+a factorial function, access the contents of cell, and script every aspect of
+the application. I liked it very much.
+</p>
+
+<p>
+One time my father needed to process an ASCII file and insert it into a
+spreadsheet. He is a bio-technologist and that was the output of one of his
+devices. I wrote a first version in the scripting language of Quattro-Pro
+for DOS (which I did not like), but eventually my father told me that they
+use Excel 95 for Windows 95 at work, so I can use VBA. In Visual Basic for
+Applications it was much easier, and also ran faster than the Quattro Pro
+program, and was easier to maintain. My father sent them my code and telling
+them it was quite slow but faster than inputting the data by hand (and less
+prone to errors).
+</p>
+
+<p>
+Retrospectively, I think an equivalent Perl Program (or even an Awk one) would
+have done it in a fraction of the time of the VBA one. But I don’t think my
+father could have allowed himself to install Perl on each of the computers
+at his foreign workplace, so VBA had to do. (I remember using some
+<a href="http://www.delorie.com/djgpp/">DJGPP</a>
+tools for something similar later on, and my father installed the awk.exe
+program. That was after I learned UNIX)
+</p>
+
+<h2 id="income">Positive (albeit Small)
+Income</h2>
+
+<p>
+My first gig was to translate a document from English to Hebrew. I remember my
+friend and I (still the same friend) sitting in front of the computer and
+translating the introduction together. It was great fun, and our employer
+enjoyed it.
+</p>
+
+<p>
+Then my friend decided he was too busy for it and we should split the work
+and each translate separately (a big Extreme Programming No-no). It took me
+a long time to do my translation and my father corrected my mistakes. Still,
+it was not of a very good quality and I did not spend a lot of time focusing
+on a perfectly correct translation. There were also many technical terms.
+</p>
+
+<p>
+I got my money eventually but my employer said he was willing to pay only
+because I was under age (that was my 9th grade). My friend claimed to have
+spent 4 times as much as I did and produced better results. Both my friend
+and I got 100 NIS which at that point was $50. With all the time I spent,
+I think it barely covered the computer’s electricity consumption. As a
+developer, I later on was able to earn much more for my time.
+</p>
+
+<p>
+Another gig I got was when my friend had to do a programming project for
+his school of querying the school’s global schedule. He needed something
+that would be able to translate the Civil Calendar into the Jewish Calendar
+(as many of the vacations in Israel happen on Jewish dates). I read about
+it in the Hebrew Encyclopedia, and eventually was able to come up with
+a method to do the conversion. I went to my friend house, and explained to him
+how to do it. He said: “Shlomi, if you can do it, why don’t you write it for
+us, and we’ll credit you for it”. Having a lot of time I agreed.
+</p>
+
+<p>
+Using Turbo C++, I started writing a crude, 16-bit code to convert Gregorian
+dates to Jewish dates. The Jewish calendar is not simple at all, as it
+has quite a lot of religious caveats. Nevertheless, the code was eventually
+working. I use some C++ features, but my friend later insisted on his program
+being pure ANSI C and said I should convert them all to C. A beautiful class I
+wrote and some operator overloading of it had to be sacrificed for this
+sake.</p>
+
+<p>
+My friend integrated the code with his project, and later he phoned me
+to tell that he and his partner agreed to give me 0.5% of their future
+earnings. There weren’t any, but I still enjoyed the experience.
+</p>
+
+<p>
+I later found on the Internet a beautiful 32-bit C code that supported
+conversion between these two calendars and two others. Re-inventing the wheel
+is instructive but you don’t always come up with a better wheel. At least
+I now have some knowledge of how the Jewish Calendar is calculated, but still
+don’t keep track of the Hebrew date. :-)
+</p>
+
+<p>
+At one summer I worked on the assembly line of my father’s bio-technology firm.
+I assembled various pieces of kits they shipped and sold. Others assembled
+the entire kit. It took a long time and a lot of money to develop and continue
+develop the kits. But you actually needed humans and machines doing physical
+work to mass produce them.
+</p>
+
+<p>
+I believe it gave me some perspective later as a programmer. A bit sequence
+(a computer program, an mp3, a digitized book or whatever), takes a long time
+to develop (if it is indeed worthy of something - catting /dev/urandom will
+not yield something sensible) but can be duplicated and distributed at almost
+zero cost. By working in an assembly line I understood there was not a good
+enough reason for me to charge people money for getting what I did, even if
+it took me a lot of time to develop, debug and finalize. Too bad Microsoft,
+the RIAA et al. do not understand this (or make it seem like they don’t).
+</p>
+
+<p>
+I’m not saying selling commercial digital content is immoral or illegal.
+I’m just saying that you cannot expect people to pay for it 100% of the
+time. They can copy it and they will. Your model has to be different if
+you wish to earn money. But this is out of the scope of this document.
+</p>
+
+<h2 id="israeli_edu_system">A Brief Encounter with Pascal and the Israeli
+Education System</h2>
+
+<p>
+When I joined the 10th grade, my first grade of high school, we had
+our first Computer Science lesson. Several students (including me) explained
+to the teacher (a young woman) that we already knew programming well,
+even in Pascal. I knew C which I learned over the summer. She became a bit
+distressed from our mass reaction that we wanted something more challenging
+to learn. Eventually, we reached a compromise that I cannot quite recall.
+</p>
+
+<p>
+At class, we learned about computers in general, about various programming
+languages (not Perl or LISP or something similar, as far as I recall, but
+COBOL, Prolog, C, and other relatively low-level languages), about
+how to write good pseudo-code, a run-time table of the program, and then to
+run it in a computer. I think it was not a complete waste of time, as I
+still encountered pseudo-code later, learned about Euclid’s gcd algorithm,
+etc.
+</p>
+
+<p>
+Once when we were given an assignment to check a number for primality I used
+goto in a Pascal program because I did not know the syntax for writing
+functions yet. I also remember using a sieve, while my teacher insisted that
+for every number I’ll check all the number up to its square root, individually.
+(without remembering previous numbers). I did as I was told, even though, I
+knew it was a much less effective algorithm.
+</p>
+
+<p>
+She was surprised when I told her about Fermat’s method for checking primality
+((i^p-i) mod p = 0), but naturally I eventually discovered it can have false
+positives albeit extremely rarely. (refer to Abelson and Sussman’s
+<a href="http://mitpress.mit.edu/sicp/">“Structure and Interpretation of Computer Programs”</a> for more information).
+</p>
+
+<p>
+When we had to choose our major 5 units of our matriculation subjects, I
+chose Arabic instead of Computer Science, because I discovered Computer
+Science was not important for studying math or CS at university. It was a
+specialisation in Physics that was critical for
+<a href="http://www.technion.ac.il/">the Technion</a>
+(which I eventually started learning Electrical Engineering in). So, I
+decided that since CS would not teach me much new, I’ll take Arabic, which may
+prove useful for better understanding of the Arabic Language and Arab
+culture.</p>
+
+<p>
+I don’t regret this choice. Although I mostly remember obscure grammatical
+rules, and while my vocabulary is slowly dwindling, I think that with some help
+from reference books, I can eventually be able to read Arabic texts. And I
+did learn a bit about the Arabic culture through such lessons.
+</p>
+
+<h2 id="epilogue">Epilogue</h2>
+
+<p>After I graduated from high school, I became bored, so my father
+arranged for a job interview in <a href="shlomif-at-elpas.html">Elpas</a>, a
+company ran by one of his close friends, who finished his army service as an
+engineer to start a startup Electro-optics company. I eventually got the job,
+and so started earning  a living as a programmer, while still largely
+dependant on my parents.</p>
+
+<p>
+I was eventually found unsuitable for Army service, which I actually wanted to
+serve in, but was a bit afraid of.
+</p>
+
+<p>
+The days of BASIC, C and Pascal hobbyist programmers in DOS are largely over
+now, highly superseded by Visual Basic/Delphi/Visual C++ programmers working
+for Win32, and gcc/Perl/Python/Ruby/Tcl programmers working on GNU systems
+(such as Linux). Even when I learned C I did not distinguish between the
+ANSI C functions, and those that were DOS or Borland extensions. And 16-bit
+programming was a bit painful and I had to use long for numbers that
+could get quite large.
+</p>
+
+<p>
+Software Engineering is not a label - it’s a process. I have constantly become
+and am still becoming a better software engineer. Many people are
+“ad-hoc programmers”. They know just enough programming to survive. However,
+some of them are
+<a href="http://www.catb.org/~esr/faqs/hacker-howto.html">hackers</a>. They
+are curious and delighted about programming and wish to learn more and more. I
+believe that as a child and a teenager I started as a hacker. Not a very good
+one, but still a computer enthusiast.
+</p>
+
+<p>
+My suggestion to wannabe hackers today is to start working on a Linux
+system.  A <a href="http://www.mandriva.com/">Mandriva Linux</a> system with
+KDE and everything installed and configured, is equally as usable as Windows,
+but offers much more development capabilities at the fraction of the cost. It’
+s also based on UNIX, which is an entire  software engineering culture of its
+own, which you can explore should you like to. But when I was 10 years old,
+XTs could only run DOS, and so that’s what we had to do. I still believe my
+DOS days gave me an edge on some UNIX programmers, because I am very
+comfortable at the command line and at editing text while seeing how it will
+eventually look like in my mind’s eye. I don’t want <i>“What you see is what
+you get”</i>. I want <i>“What you want is what you get ASAP”</i>.
+</p>
+
+<p>
+Today with KDE, GNOME and other graphical environments, even many children
+who are introduced to Linux, will find the command line intimidating. I don’t
+say using a GUI does not has its advantages. But you must get to like the
+command line and to see things in your mind’s eye. Programming, designing
+styled text and creating graphics happens mostly in the mind, not in your IDE
+, WYSIWYG word processor or Graphics program. One should realize that even if
+you can’t see it, the computer will still be able to create it for you.
+</p>
+
+<p>
+Programming and computing without using the mind’s eye eventually numbs out
+imagination and creativity . One is used to point-and-click and getting
+immediate results instead of thinking about them carefully and then
+implementing them. But the damage is not irreversible.
+</p>
+
+<p>
+Some software systems are so complex that working on them in an IDE
+instead of in text editors inside several console windows will give you
+little advantage. That will be the case for a very long time, because
+writing a program that can generate every algorithm for you, is not
+something I see as possible. You may choose to use a GUI for giving you
+some widgets and various bells and whistles for free. But remember that
+in order to be a great programmer and not just a good one, you have to
+<strong>think</strong>, <strong>imagine</strong> and
+<strong>analyse</strong> your code. There’s no escaping that
+and I think it applies to all other fields of science and engineering
+as well.
+</p>
+

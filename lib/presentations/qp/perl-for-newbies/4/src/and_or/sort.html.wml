@@ -1,0 +1,30 @@
+#include 'template.wml'
+
+<p>
+The <tt>||</tt> operator can be used in <tt>sort</tt>, in conjunction
+with operators such as <tt>cmp</tt> or <tt>&lt;=&gt;</tt> to sort
+according to several criteria. For example, if you wish to sort
+according to the last name and if this is equal according to the first
+name as well, you can write the following:
+</p>
+
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/and_or/sort-or.pl" />
+</quadpres_code_block>
+
+<p>
+Its output is:
+</p>
+
+<quadpres_code_block>
+Arden, Jane
+Fish, Chip
+Fish, Shlomi
+Hoffer, Michael
+Hoffer, Tony
+Smith, Amanda
+Smith, Ben
+Smith, John
+Torry, Peter
+</quadpres_code_block>

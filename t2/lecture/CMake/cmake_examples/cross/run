@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rm -f ../hello/CMakeCache.txt
+rm -rf `cat tmp.files`
+
+cmake -DCMAKE_TOOLCHAIN_FILE=arm.cmake ../hello
+
+make
+
+file hello

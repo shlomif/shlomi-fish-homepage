@@ -1,0 +1,8 @@
+#include 'template.wml'
+
+<mycode>
+<pre>
+hist            <span class="Statement">::</span> (Ix a, Integral b) <span class="Statement">=&gt;</span> (a,a) <span class="Statement">-&gt;</span> [a] <span class="Statement">-&gt;</span> Array a b
+hist bnds is    <span class="Statement">=</span>  accumArray (<span class="Statement">+</span>) <span class="Constant">0</span> bnds [(i, <span class="Constant">1</span>) <span class="Statement">|</span> i <span class="Statement">&lt;-</span> is, inRange bnds i]
+</pre>
+</mycode>

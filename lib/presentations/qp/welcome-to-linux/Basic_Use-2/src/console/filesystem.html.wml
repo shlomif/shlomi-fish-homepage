@@ -1,0 +1,55 @@
+#include 'template.wml'
+
+<points>
+<li>
+Linux organizes its file in <b>directories</b>, where each directory
+can contain files or other directories.
+</li>
+<li>
+There is one topmost directory which is called the root directory, and is
+labelled as <tt>/</tt>.
+</li>
+<li>
+The <tt>.</tt> meta directory designated the current directory.
+"<tt>..</tt>" is the directory above it. If a <tt>/</tt> is prefixed at
+the beginning than the path would be absolute.
+</li>
+<li>
+The <tt>cd</tt> command changes the current working directory to a different
+directory. The <tt>pwd</tt> command prints the path of the current working
+directory.
+</li>
+<li>
+Here's an example session at the command line:
+</li>
+</points>
+
+<table border="1" summary="Example session demonstrating directories">
+<tr>
+<td>
+<pre>
+shlomi:~$ cd /usr
+shlomi:/usr$ pwd
+/usr
+shlomi:/usr$ cd local/bin
+shlomi:/usr/local/bin$ pwd
+/usr/local/bin
+shlomi:/usr/local/bin$ cd ../../share
+shlomi:/usr/share$ pwd
+/usr/share
+shlomi:/usr/share$ cd /usr/share/doc/
+shlomi:/usr/share/doc$ pwd
+/usr/share/doc
+shlomi:/usr/share/doc$ cd ./vim-X11-6.1/
+shlomi:/usr/share/doc/vim-X11-6.1$ pwd
+/usr/share/doc/vim-X11-6.1
+shlomi:/usr/share/doc/vim-X11-6.1$ cd ..
+shlomi:/usr/share/doc$ cd rsync-2.5.6/
+shlomi:/usr/share/doc/rsync-2.5.6$ pwd
+/usr/share/doc/rsync-2.5.6
+shlomi:/usr/share/doc/rsync-2.5.6$
+</pre>
+</td>
+</tr>
+</table>
+

@@ -1,0 +1,23 @@
+#include 'template.wml'
+
+<p>
+Perl provides a shortcut for writing "$myvar = $myvar + $value", or
+"$myvar = $myvar / $value" and similar operations. Here's an example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/variables/plus-equal1.pl" />
+</quadpres_code_block>
+
+<p>
+Since the operations <tt>$x += 1</tt> and <tt>$x -= 1</tt> are so commonly used,
+they were also assigned a separate operator. One can use <tt>$x++</tt> and
+<tt>$x--</tt> to perform them. For example, the above program could have
+been written as:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/variables/plus-equal2.pl" />
+</quadpres_code_block>
+
+

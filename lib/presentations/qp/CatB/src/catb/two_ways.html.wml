@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+
+<ul class="point">
+<li>
+Raymond distinguishes between two ways of managing a software project: the
+traditional "Cathedral" way, and the novel "Bazaar" way.
+</li>
+<li>
+In the Cathedral way, the software is developed by a limited number of
+developers, released only when being very stable, and maintained without
+too much help from the outside.
+</li>
+<li>
+In the Bazaar way, the software is released very often (often in a buggy
+state), tasks are delegated and contributions from the outside are welcome
+and often.
+</li>
+<li>
+ESR attributes the "invention" of the Bazaar way to Linus Torvalds who used
+it to develop the Linux kernel, a core component of a critical system - the
+GNU/Linux operating system. (albeit acknowledges that it was used before for
+other projects)
+</li>
+<li>
+In "the Cathedral and the Bazaar" he documents his experiences in developing
+and maintaining his own project Bazaar-style: the
+<esr:homesite:link href="fetchmail/">fetchmail</esr:homesite:link>
+POP-retrieval system.
+</li>
+</ul>

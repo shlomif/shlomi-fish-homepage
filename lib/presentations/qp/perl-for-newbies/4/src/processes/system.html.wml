@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+<p>
+The <tt>system()</tt> function executes a shell command, while maintaining
+the same standard input, standard output and environment of the invoking
+script. If called with one argument, it passes this argument as is to the
+shell, which in turn will process it for special characters. If passed an
+array, it will call the command in the first member with the rest of the
+array as command line arguments.
+</p>
+
+<p>
+If you receive an arbitrary array and you fear it may contain only
+one argument, you can use the <tt>system { $cmd_line[0] } @cmd_line</tt>
+notation (similar to <tt>print()</tt>'s ).
+</p>
+
+<p>
+On success, system() returns 0 (not a true value) and one should make
+sure to throw an exception upon failure while referencing the built-in
+error variable <tt>$?</tt>.
+</p>
+
+<p>
+Here are some examples, that will only work on UNIX systems.
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/processes/system.pl" />
+</quadpres_code_block>
+

@@ -1,0 +1,59 @@
+#include "utils.wml"
+
+<define-tag latemp_theme_breadcrumbs_trail_html>
+<tr>
+<td colspan="2" class="leading_path">
+<latemp_get_breadcrumbs_trail_unconditionally />
+</td>
+</tr>
+</define-tag>
+
+<latemp_init_h_w_navmenu />
+
+<latemp_html_header />
+<latemp_html_head_tag />
+<body>
+<define-tag start_table>
+<table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
+<latemp_get_breadcrumbs_trail />
+<tr>
+<td valign="top" class="navbar" style="width:20%">
+<latemp_top_left_corner_logo_text />
+<latemp_get_html_body_nav_links place="top-left" with_accesskey="1" />
+<latemp_get_nav_menu_html />
+
+<latemp_affiliations_buttons_text />
+
+<latemp_get_html_body_nav_links place="bottom-left" with_accesskey="1" />
+
+</td>
+<td valign="top" class="main">
+</define-tag>
+
+# </define-tag>
+<if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
+
+<latemp_default_h1_tag />
+{#LATEMP_BODY#}
+
+<define-tag end_table>
+</td>
+</tr>
+</table>
+<hr />
+
+<latemp_webmaster_text />
+<latemp_timestamp_text />
+<latemp_license_text />
+<latemp_foot_image_text />
+
+</define-tag>
+
+<if <mynot "$(PRINTABLE)" /> "<end_table />" "" />
+
+</body>
+</html>
+
+#   per default we are in body
+{#LATEMP_BODY#:
+

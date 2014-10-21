@@ -1,0 +1,1399 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+]>
+<!-- -->
+<!-- $Id$ -->
+<!-- -->
+<!-- $Log$ -->
+<!-- -->
+<!-- General reminders: -->
+
+<article id="index">
+    <articleinfo>
+        <title>The Case for File Swapping</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2004</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice id="main_legal_notice">
+            <!-- Ci vis pacem -->
+            <para>
+<!--Creative Commons License-->
+This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option a greater version of it).
+		<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+	<dc:title>The Case for File Swapping</dc:title>
+	<dc:date>2005</dc:date>
+	<dc:description>An essay that explains why Internet File Swapping (using Peer-to-Peer networks, etc.) is not only moral and ethical, but also should be legal, and cannot be banned. Discusses other issues.</dc:description>
+	<dc:creator><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:creator>
+	<dc:rights><Agent><dc:title>Shlomi Fish</dc:title></Agent></dc:rights>
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+		</Work>
+		<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+            </para>
+        </legalnotice>
+
+        <revhistory>
+            <revision>
+                <revnumber>1417</revnumber>
+                <date>14 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Forked the text from a previous document, and starting to
+                    adapt it. Tagged as CC-by 2.5
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1422</revnumber>
+                <date>21 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added a rudimentary introduction and the entire terminology
+                    section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1426</revnumber>
+                <date>21 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added a “Why File Swapping should be Legal?” Section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1427</revnumber>
+                <date>21 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Wrote the ”About this Document” section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1428</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Wrote the “Refuting Common Arguments” section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1429</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added two more examples for why file-sharing does
+                    not hurt media sales.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1431</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “more legal uses” section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1432</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “Reflections on Online Stores”.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1434</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “Conclusions”.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1435</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “Other Important Copyrights Issues”.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1436</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “more links” sub-section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1438</revnumber>
+                <date>22 October 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Went over the article and corrected many problems.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1446</revnumber>
+                <date>06 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “Can File Swapping Really be Stopped?” Section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1447</revnumber>
+                <date>06 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added the “How you can Help” Section.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1452</revnumber>
+                <date>10 November 2005</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed a grammatical problem courtesy of t1ber from
+                    kuro5hin.org.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1601</revnumber>
+                <date>18 August 2006</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Added a footnote about the benevolent felons, a note
+                    about “stealing from the rich and giving to the poor”,
+                    a note about “The Golden Rule”, an entire setion about
+                    “The Internet as an Alternative Medium of Distribution”,
+                    a section about the historical perspective of copyright
+                    law, some links and some corrections. Second Revision.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1604</revnumber>
+                <date>28 August 2006</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed a typo (“who” → “which”).
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1618</revnumber>
+                <date>19 November 2006</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fixed a grammatical problem pointed by a correspondent.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>1773</revnumber>
+                <date>20 May 2007</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Corrected some errors (such as spelling, phrasing or
+                    grammatical); added more discussion of why copying an
+                    artwork is moral; added the merchandise way of making
+                    profit, the “Pirates of the Caribbean” anecdote,
+                    “Don’t Download this song”, and DRM and the Sony rootkit.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>4854</revnumber>
+                <date>05 June 2011</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Convert to Unicode-style quotes.
+                </revremark>
+            </revision>
+            <revision>
+                <revnumber>5230</revnumber>
+                <date>22 September 2012</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Fix some spelling errors.
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+
+<section id="introduction">
+    <title>Introduction</title>
+    <para>
+        The purpose of this article is to explain why Internet file
+        swapping (of media such as music files, video files, etc.) is moral,
+        ethical and should be legal. Plus, people who share files on the
+        Internet or download them, must not be prosecuted.
+    </para>
+    <!-- TODO : write more things in the introduction. (?) -->
+</section>
+
+
+<section id="misleading_terms">
+    <title>Debunking Some Misleading Terms</title>
+    <para>
+        The Human Language is primarily a tool of thought, and only afterwards
+        a tool of communication. As such, mutations in the meaning of words
+        can affect clear thinking about issues. The issue of file swapping
+        is no exception. Before we continue, allow me to explain about the
+        improper validity or application of some terms.
+    </para>
+    <section id="term_intellectual_property">
+        <title>“Intellectual Property”</title>
+        <para>
+            As noted by Richard Stallman, <ulink url="http://www.linux.com/archive/feature/39915">the term Intellectual property is a
+                seductive mirage</ulink>. Patents, Copyrights, and Trademarks
+            are not equivalent to property, not even “intellectual” one.
+            Furthermore, they shouldn’t be grouped together as they are
+            intended for different purposes and do different things. (And are
+            treated differently according to law).
+        </para>
+        <para>
+            Some people claim that since a copyrighted work is
+            “intellectual property”, then copying it is equivalent to
+            “stealing”. But that is not the case here.
+        </para>
+    </section>
+    <section id="term_stealing_theft">
+        <title>“Stealing” or “Theft”</title>
+        <para>
+            Copyright apologists like to say that copying a work that is
+            copyrighted and was published to the public, is equivalent to
+            “stealing” or “theft”. However, stealing involves taking tangible
+            property without permission, and depriving the owner of one less
+            instance of it. On the other hand, with a public work, we can
+            make an unlimited number of copies, while not harming the original,
+            and while respecting the exclusive rights of the author for his
+            work. This is because we just copy it - we don’t claim it is ours.
+        </para>
+        <para>
+            Accusing people who share or duplicate media non-commercially of
+            “stealing” obscures two other forms of media-related crimes that
+            are in fact stealing:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    If someone has somehow gained access to my private
+                    files and used it to prepare his own copies (or worse
+                    delete the originals), then he has performed stealing.
+                    Not of “Intellectual Property” but of actual property,
+                    because the files are private and I do not wish them
+                    to be inspected by someone else. And privacy must be
+                    respected.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    If someone has made an inclusive work of someone’s
+                    else’s work, and claimed it was his, then it may be
+                    called “stealing” of copyrights.
+                </para>
+            </listitem>
+        </orderedlist>
+        <para>
+            But copying a work that was released for public consumption, can
+            never be considered “stealing”. Instead it is merely “copying”,
+            “swapping”, “sharing”, etc.
+        </para>
+    </section>
+    <section id="piracy">
+        <title>“Piracy”</title>
+        <para>
+            The term “Piracy” is very common for the action of copying files,
+            either for money or free of charge. One thing that should be noted
+            about it is that the original pirates were sea-faring robbers, who
+            took hold of ships, stole the goods, killed the people who
+            were on board, and burned the ships. It would be a bit of a
+            stretch to label a 10-years-old child who duplicated a
+            CD of Music or several copyrighted files to his friend, after such
+            villains.
+        </para>
+        <para>
+            I personally believe that the term “Piracy” in its applied context
+            is quite harmless and is cognitively sound. However, I will not
+            use the term here below.
+        </para>
+    </section>
+    <section id="crime">
+        <title>“Crime”</title>
+        <para>
+            If one violates the letter of the law of my country did he commit
+            a crime? Not necessarily. A crime is an action that is globally
+            accepted to be unethical, according to well-defined, absolute
+            Ethics.
+        </para>
+        <para>
+            People who hid saved Jews during the Nazi regime, violated the
+            law that took place in their lands. But can you call them
+            “criminals” with a honest face? Not at all - they were very noble
+            people, who did something almost everyone would agree was an
+            ethical action.
+        </para>
+        <para>
+            Now, were people who bought Alcoholic beverages during
+            <ulink url="http://en.wikipedia.org/wiki/Prohibition#United_States">the
+                time the U.S.A. had alcoholic prohibition</ulink> criminals?
+            Again no. The Law at this point was completely irrational, and so
+            the American Government could not have prevented such
+            violations, and it was a regulation that the public could not
+            withstand.
+            <footnote id="benevolent_felons">
+                <para>
+                    One correspondent to this article complained that I
+                    shouldn’t have given these two examples, because one cannot
+                    compare downloading files to the highly moral acts of the
+                    people who hid Jews during the Nazi reign, and because the
+                    Prohibition on alcohol was a starting point to the
+                    American mafia.
+                </para>
+                <para>
+                    However, this is the <ulink url="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">style over substance fallacy</ulink>, where one
+                    criticises the style of a writing instead of what it says.
+                    My point was to bring two cases where people were acting
+                    illegally yet were acting either ethically or just
+                    morally, and that the Law was not on Ethics’ side in this
+                    case.
+                </para>
+            </footnote>
+        </para>
+        <para>
+            Similarly one cannot argue that people who violate laws that
+            prohibit the non-commercial duplication of digital works are
+            criminals. Just because the law is there does not necessarily
+            make it a right law or a beneficial law. One can argue that these
+            people are felons (or “Avaryanim” in Hebrew), but that’s
+            not the same thing as a criminal.
+        </para>
+        <para>
+            Many times in history, acts of civil disobedience proved to be
+            beneficial in the long run. The classical example for it is the
+            American Revolution, but there are many other examples.
+        </para>
+    </section>
+    <section id="terms_conclusion">
+        <title>Conclusion</title>
+        <para>
+            In one IRC conversation I had with supporters of actions against
+            file sharers, I realised that while I gave a lot of arguments for
+            my stance, they had nothing better to do than to repeat the same
+            mantras of: “You’re stealing someone else’s (intellectual) property
+            so you are a criminal.” or “You’re violating the law so you are
+            a criminal.”, etc. It was obvious that their cognition was
+            contaminated with the misinterpretations of these terms, which
+            caused their thoughts and speech to be mutilated as well.
+        </para>
+        <para>
+            Thus, it is high time one eliminates all the mis-applications of
+            these terms from his or her vocabulary, because they prevent
+            clear thinking and growth on the matter.
+        </para>
+    </section>
+</section>
+
+
+<section id="why_file_swapping_should_be_legal">
+    <title>Why File Swapping should be Legal?</title>
+    <para>
+        So why should file swapping be legal? Let’s examine the reasons one
+        by one.
+    </para>
+    <section id="why_should_be_legal_not_a_crime">
+        <title>It is not a Crime</title>
+        <para>
+            The primary reason why file swapping should be legal is because
+            it’s not a crime, at least not an ethical one. Sites or services
+            that point to where to download the content are just referencing
+            the presence of the information. Referencing or linking is
+            <emphasis role="bold">never</emphasis> a crime. It’s like
+            instructions on actions like how to prepare bombs, where to find
+            illegal drugs,
+            how to cheat various systems, or where to find stolen goods.
+            By itself this information is not a crime to know, because it’s
+            protected speech. So does pointing to a copyrighted resource.
+        </para>
+        <para>
+            So now we’re left with the question whether sharing a copyrighted
+            work (or downloading it) is an objectively criminal action. The
+            answer is again “no”. It’s not a crime since the originator of
+            a copyrighted work that was made public cannot prevent
+            non-commercial copies from being made and distributed. As of today,
+            many countries passed such laws, but these laws are unethical.
+            Sharing of copyrighted work is common-place, and many of the
+            people who do it (including many children) do not feel they’re
+            doing something wrong, or feel guilty about it. So it is ethical,
+            and moral and should be legal.
+        </para>
+        <para>
+            Note that selling copies commercially (as in stores of pirated
+            media), can be prohibited by the copyright holder. But
+            non-commercial copying (from friend to friend, or via
+            Peer-to-Peer services) cannot.
+        </para>
+        <para>
+            Several respondents to early versions of this article, claimed
+            that I should <emphasis role="bold">prove</emphasis> that copying
+            or receiving a copy of an artwork that was released to the public
+            is ethical and moral. Well, I’d like to ask those critics
+            “Why it is not moral?”. And they’ll probably have no answer.
+        </para>
+        <para>
+            According to <ulink url="http://www.shlomifish.org/philosophy/obj-oss/obj-oss/two_levels_of_morality.html">the definition of Ethics and Morality
+                that I accept</ulink> (presented there as
+            “Constitutionality and  Beneficiality”), then file sharing is
+            ethical, because it does
+            not involve an initiatory force, threat of force or fraud against
+            one’s property, which as I demonstrated here does not include
+            the so-called “intellectual property”. Moreover, it is also moral
+            or at least not immoral, because it does not harm or prevent the
+            filling of human biological needs.
+        </para>
+        <para>
+            Copyrights are not an absolute “nature-given” right like the rights
+            for life and freedom. Instead, they are a state-enacted monopoly
+            that is meant to protect the originators of artworks from
+            abuse by commercial distributors. However, due to the computers
+            and Internet revolutions, it makes no sense to try and prevent
+            non-commercial digital distribution of them.
+        </para>
+    </section>
+    <section id="why_should_be_legal_other_ways_to_make_money">
+        <title>There are other ways to make money</title>
+        <para>
+            There are many other ways in which originators of media can make
+            money even if they allow free distribution. First of all, they can
+            regulate the commercial use of the works. That way, commercial
+            entities (such as Music stores, online music download services,
+            D.J.’s in charge-for-entrance parties and commercial radio
+            stations) must pay them royalties.
+        </para>
+        <para>
+            Another financial option is to restrict derivation of
+            the work. That way, persons who wish to build upon the work
+            or include substantial parts of it in their own must consult the
+            originator.
+        </para>
+        <para>
+            Another option (of less substance) is to require attribution for
+            the originator. That way, people who wish to build upon a work
+            without crediting the originator must purchase permission from
+            him.
+        </para>
+        <para>
+            These three methods together give enough options for an artist
+            to make money off his art, without restricting non-commercial
+            copying.
+        </para>
+        <para>
+            This is naturally excluding live performances of artists of
+            various sorts, like Rock concerts, that are also a huge potential
+            source of revenue, as well as sales of Merchandise. <ulink
+                url="http://www.strategy-business.com/press/16635507/9095">The Grateful
+                Dead made more money on merchandise than they ever did on
+                selling records</ulink>.
+        </para>
+    </section>
+    <section id="why_should_be_legal_not_hurt_media_sales">
+        <title>File Sharing Does not Hurt Media Sales</title>
+        <para>
+            Many people erroneously believe that file sharing hurts media
+            sales. However, there is a lot of evidence to the contrary:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://it.slashdot.org/article.pl?sid=05/07/13/2317247&amp;tid=141&amp;tid=218">Legal Music Downloads Increase in 2005</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://slashdot.org/article.pl?sid=04/01/04/0049249">Slashdot Article about CD-R’s and MP3s not hurting record sales in Australia</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://195.128.176.201/Article.jpg">CD Sales in Israel went up by 15% in 2004.</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.washingtonpost.com/wp-dyn/content/article/2005/03/26/AR2005032600104.html">Success
+                        of the single “No Meaning No” by
+                        Chuck D and the Fine Arts Militia</ulink> that was
+                    released under a liberal
+                    <ulink url="http://www.creativecommons.org/">Creative
+                        Commons</ulink> license, that allows free distribution.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    The U.S. band
+                    <ulink url="http://en.wikipedia.org/wiki/Wilco">Wilco</ulink>
+                    released their album <ulink url="http://en.wikipedia.org/wiki/Yankee_Hotel_Foxtrot">“Yankee Hotel Foxtrot”</ulink> as mp3s online
+                    after their record label demanded they remix their songs.
+                    After a different record label decided to distribute their
+                    songs instead, and distributed the album, it became their
+                    best-selling album, selling over 500,000 copies.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    The Movie “Pirates of the Caribbean”
+                    <ulink url="http://opendotdotdot.blogspot.com/2006/07/pirates-redeeming-pirates.html">was
+                        heavily “pirated”</ulink>, yet also had
+                    very successful sales and was incredibly profitable.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Some new artists that published albums and singles
+                    in recent years, have proven to be very successful
+                    commercially, despite the fact that their songs are commonly
+                    available for download on the Internet, via Peer-to-Peer
+                    networks or otherwise.
+                </para>
+            </listitem>
+            <!--
+            TODO:
+                - Add Slashdot article about growth in sales of a certain
+                record label.
+            -->
+        </orderedlist>
+    </section>
+
+    <section id="why_should_be_legal_witch_hunt">
+        <title>Media Organisations hunt File Sharers and Prosecute Them</title>
+        <!--
+        TODO: Add links.
+        -->
+        <para>
+            You’ve probably all heard stories of the Media organisations’
+            witch-hunt against file sharers. From suing a female 12-years-old
+            honour student, to a grandpa in his 70’s, to a college player of
+            American Football. They also were closing many online sites.
+            In New Delhi the police gave the media companies an unlimited
+            warrant to raid the houses of people suspected of media sharing.
+        </para>
+        <para>
+            Lots and lots of “1984”-style terror. And for what? For preventing
+            the supposed loss of sales by a limited private sector of the
+            industry? For preventing a practically costless operation of
+            distributing an mp3 that can be done by the “criminals” at the
+            comfort of their homes?
+        </para>
+        <para>
+            In a presentation he gave, Richard M. Stallman (of the Free
+            Software Foundation and GNU project fame) gave another good reason
+            why it wasn’t unacceptable. He said that when he was a kid in
+            school, his teacher asked the children to share their sweets with
+            the other  children. And now, suddenly they have to tell them
+            something like “No, Tommy, don’t share your music/software/videos/etc. It’s illegal!”.
+        </para>
+        <para>
+            What’s a child to feel in this case? Sharing is a nice
+            part of living in a friendly society, and there’s no reason we
+            should prevent it, or else we ourselves will become more and more
+            selfish.
+        </para>
+    </section>
+
+
+    <section id="why_should_be_legal_put_into_perspective">
+        <title>Put it into Perspective</title>
+        <!--
+        TODO: Add links.
+        -->
+        <para>
+            Let’s put things into perspective. What the media companies do
+            is sell entertainment to people. Entertainment. They don’t save
+            lives and the economy does not depend on them, as there are
+            many other sources of entertainment a consumer can choose
+            instead that are available independently.
+        </para>
+        <para>
+            The worst case (and extremely unlikely) scenario is that no-one
+            pays for online media, and everybody just share and download music
+            from the Internet. Would that be a bad scenario? No, the world
+            will go on. Without people making money off selling media, but
+            nevertheless.
+        </para>
+    </section>
+</section>
+
+<section id="refuting_common_arguments">
+    <title>Refuting Common Arguments against File Swapping</title>
+    <para>
+        This section aims to refute some common arguments against file
+        swapping.
+    </para>
+    <section id="refuting_common_arguments_domino_effect">
+        <title>The Domino Effect</title>
+        <para>
+            Some people are using “the Domino Effect” as an argument that file
+            swapping should be stopped. What they say is that if the
+            profitability of the Music industry would be harmed, then it will
+            cause an economical chain-reaction that may devastate the rest
+            of the economy, because other dependent industries may be harmed.
+        </para>
+        <para>
+            There are two problems with this argument. The first is that there
+            is no evidence that the profitability of the music industry is
+            harmed due to file swapping, so there is little risk of this
+            happening. The other is that assuming that would happen, it won’t
+            be a bad thing. That’s because we essentially reduce the money
+            that is transferred to a heavy taxer, and make the public, as a
+            whole, richer. The public in turn, can spend this money on other
+            merchandise, and make other industries as a whole more
+            prosperous. This is similar to reducing income tax, while laying
+            off some government workers.
+        </para>
+    </section>
+
+    <section id="refuting_common_arguments_anarchy">
+        <title>Violating the Law against File Swapping will Cause
+        Anarchy</title>
+        <para>
+            Some people say that if the law of a country prohibits sharing
+            files, then this law must be obeyed, because otherwise there
+            will be anarchy. However, one must understand that if certain
+            laws are irrational, they cannot be practically expected to
+            be obeyed.
+        </para>
+        <para>
+            I also personally don’t see how assuming everyone share files
+            online, the integrity of a country will be harmed. Sharing files
+            does not involve killing people, stealing from them, nor does it
+            involve force, threat of force or fraud.
+        </para>
+        <para>
+            20% of Americans enjoy file swapping, and yet the United States
+            is functioning perfectly fine, and no anarchy is in sight.
+        </para>
+    </section>
+
+    <section id="refuting_common_arguments_disobeying_traffic_laws">
+        <title>Sharing Files is like Disobeying Traffic Laws</title>
+        <para>
+            The comparison of sharing and downloading files to disobeying
+            traffic laws seems to be quite prevalent. But naturally, copying
+            files does not endanger lives, nor is it actually a crime. The
+            worst thing that can happen if one shares works of art, is loss
+            of profit. If you disobey traffic laws, you risk the lives of
+            yourself and of other people. This makes it a difference of Heaven
+            and Earth in this analogy.
+        </para>
+    </section>
+
+    <section id="stealing_from_the_rich">
+        <title>“Stealing from the Rich and Giving to the Poor” is still
+            Stealing</title>
+        <para>
+            Some people claim that because the main entities that will
+            supposedly be harmed from making file swapping legal are media
+            conglomerates, and to a lesser extent best-selling artists
+            who are very rich, and those who would benefit are the poor
+            everyday people, then this is a case of
+            “stealing from the rich and giving to the poor.”, which is still stealing.
+        </para>
+        <para>
+            One thing that has to be understood about the Robin Hood myth
+            is that Robin Hood supposedly stole from the exploiters and
+            gave to the exploited. Secondly, it’s not really true in this
+            case.
+        </para>
+        <para>
+            Copying a copyrighted work is not stealing, because the money
+            that the author can charge for its commercial copying is due
+            to copyright law - a civil (not criminal) contract between the
+            State and the artists, in order to encourage original creation.
+            However, <link linkend="term_stealing_theft">breaking this contract
+                is not stealing</link>.
+        </para>
+        <para>
+            It should be understood that record labels and other distributors
+            of entertainment and non-technical media should either adapt to
+            the new situation where Internet users can download such files
+            for free and enjoy them, and to a greater extent contribute such
+            media on their own, without much help from them, or simply perish
+            as a no longer necessary establishment, that just gets in the way.
+        </para>
+        <para>
+            This is not about stealing from the rich and giving to the poor.
+            This is about cutting down the middle man.
+        </para>
+    </section>
+
+
+    <section id="golden_rule">
+        <title>The Golden Rule Argument</title>
+        <para>
+            A few people who criticised the article, claimed that by proposing
+            that media will be free to be non-commercially copied, I’ve been
+            violating <ulink url="http://en.wikipedia.org/wiki/Ethic_of_reciprocity">the
+                Golden Rule</ulink>
+            (“Treat others as you wish them to treat you”) as I don’t want
+            copyright to be undermined for my own
+            works.
+        </para>
+        <para>
+            However, this results from two confusions. The first is the
+            belief that I too will mind people re-distributing my work. However,
+            I don’t have problems with that: all my work is freely
+            re-distributable and a most of it is also Free Content. The second
+            confusion is that I completely reject copyrights. However
+            <link linkend="why_should_be_legal_other_ways_to_make_money">that’s
+                not the case as I still accept that some copyright principles
+                are valid.</link>
+        </para>
+        <para>
+            So I did not violate the Golden Rule in voicing this opinion.
+        </para>
+    </section>
+
+</section>
+
+<section id="legal_uses">
+    <title>Uses of File Swapping Services, which are More Legal</title>
+    <para>
+        Aside from gaining a copy of a file one didn’t buy, there are many
+        ways to use file sharing services, that are more legitimate:
+    </para>
+    <orderedlist>
+        <listitem>
+            <para>
+                Getting tracks from a misplaced CD by downloading them from
+                the Internet. Alternatively some people are too lazy to find
+                the CD in their collection, and instead download it from the
+                Internet.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Getting a digital recording of a file from a purchased audio
+                recording like an audio cassette or a Vinyl record.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Getting the video clip of a song one has bought. These are
+                usually hard to acquire separately.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Try before you buy.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Sharing songs that were declared freely-distributable by their
+                originators.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Getting singles with different variations for albums that were
+                purchased, especially a long time after the release of the
+                singles, when they are very hard to find.
+            </para>
+        </listitem>
+    </orderedlist>
+    <para>
+        Prohibiting file swapping entirely will, thus be like throwing the
+        baby along with the water. Nevertheless, all of this is secondary to
+        the fact that preventing the non-restricted non-commercial distribution
+        of artworks is bad.
+    </para>
+</section>
+
+<section id="reflection_on_online_music_stores">
+    <title>Reflections on Online Music Stores</title>
+    <para>
+        Lately we’ve been seeing online music purchasing services such as
+        <ulink url="http://www.apple.com/itunes/">iTunes</ulink>,
+        <ulink url="http://www.real.com/musicstore/">Real Music Store</ulink>,
+        etc. Such services are a good thing as they allow Media companies to
+        make money off selling music files, while allowing users to buy and
+        download their favourite songs without too much hassle.
+    </para>
+    <para>
+        Some of these stores attempt to use one of the so-called
+        “Digital Rights Management” (or “DRM”) systems, to prevent the users from
+        making use of the files as is. However, since players to play the
+        files are present on the users’ computers and these players can
+        be reverse engineered, then this offers only fig leaf protection, and
+        is just an annoyance. Online stores would do better to avoid such
+        schemes altogether and just provide the plain, non-scrambled, music
+        files.
+    </para>
+    <para>
+        While online music stores are a good thing, it still doesn’t imply
+        that file-swapping services like Peer-to-Peer network are
+        illegitimate. There is room and legitimacy for both.
+    </para>
+</section>
+
+<section id="can_it_be_stopped">
+    <title>Can File Swapping Really be Stopped?</title>
+    <para>
+        People who fight file swapping would like to believe it can be
+        stopped. But the opposite is the fact. The first part is the fact that
+        there are distributed Peer-to-Peer networks, that are not controlled
+        from a central place and in which search, uploads and downloads are
+        not centralised.
+    </para>
+    <para>
+        So they can say “that’s fine. We’ll log in with a fake client and find
+        people who upload files are prosecute them according to their IPs”.
+        Enter <ulink url="http://tor.eff.org/">Tor</ulink>, the
+        anonymous Internet communication system. Within the Tor network,
+        traffic to the actual Internet is trafficked to different nodes in
+        the network, and everything is encrypted, so one cannot determine
+        the real origin of the request. If someone uploads a file from
+        a Tor node - the file may actually reside on the host of
+        a completely different Tor user.
+    </para>
+    <para>
+        The measures that copyright conglomerates have taken to try and
+        stop file-sharing were appalling. From pulling out file sharing sites
+        and services under legal threats, to demanding ISPs to give the
+        identities of their file-sharing users (against any reasonable
+        measurement of privacy), to prosecuting and harassing file sharers.
+        All of this for fighting against a non-existent loss of profits. Will
+        you sell your soul to the Devil in order to make a profit of
+        1.2 billion dollars instead of 1 billion?
+    </para>
+</section>
+<section id="internet_as_alternative_medium">
+    <title>The Internet as an Alternative Medium of Distribution</title>
+    <para>
+        Now that the Internet is becoming more and more common and more and
+        more integral for life, artists should consider that instead or as
+        well as publishing their artworks via traditional means, they should
+        publish them online. First of all, it makes one have much better
+        chances of people noticing his creations, rather than the very slim
+        chances of having his song, book, or video distributed by traditional
+        distributors.
+    </para>
+    <para>
+        It is also often a way to eventually get published like that, after
+        being noticed by such distributors. Let’s inspect the various venues
+        for each content type.
+    </para>
+    <section id="internet_as_alternative_medium__music">
+        <title>Music</title>
+        <para>
+            There are several venues for having freely re-distributable Music
+            on the Internet:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://garageband.com/">GarageBand.com</ulink>
+                    is an online community for artists which have made some
+                    tracks available online. GarageBand allows one to download
+                    the music for free, rate it, review it, and link to it from
+                    other places on the Internet.
+                </para>
+                <para>
+                    From experience, I can say that a lot of the music that is
+                    available there is very good.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://ccmixter.org/">ccMixter</ulink> is
+                    a Creative Commons sponsored community for sampling, mixing
+                    and sharing music under licences that allow that.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.magnatune.com/">MagnaTune</ulink>
+                    is a records’ label which publishes artists whose music is
+                    licensed under freely-redistributable licences.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    One can distribute music using web sites and BitTorrent
+                    torrents.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section id="internet_as_alternative_medium__text">
+        <title>Text</title>
+        <para>
+            Most of the Web is text, and publishing text works that you
+            wrote is possible in several ways:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://en.wikipedia.org/wiki/Wiki">Wikis</ulink>
+                    such as
+                    <ulink url="http://www.wikipedia.org/">the
+                        Wikipedia</ulink> and friends.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    One can set up a web site for his textual works, or have
+                    the PDFs downloadable via BitTorrent.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Weblogs and blog comments are an increasingly popular way
+                    of publishing content online. Many blog services such as
+                    <ulink url="http://www.livejournal.com/">LiveJournal</ulink>,
+                    or
+                    <ulink url="http://www.blogger.com/start">Blogger</ulink>
+                    will publish your blogs free of charge, as will many
+                    community web sites.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Several writing or artist communities like
+                    <ulink url="http://www.myspace.com/">MySpace</ulink> and
+                    <ulink url="http://www.writing.com/">Writing.com</ulink>
+                    accept submissions to publicise one’s artwork.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+
+    <section id="internet_as_alternative_medium__images">
+        <title>Images</title>
+        <para>
+            Images are de-facto freely distributable, and to a slightly lesser
+            extent modifiable. Trying to protect the gratis use of your
+            copyrighted photograph or image is becoming more and more futile.
+        </para>
+        <para>
+            There are several images’ search engines online, and there’s also
+            photos sharing communities such as
+            <ulink url="http://www.flickr.com/">Flickr</ulink>.
+        </para>
+    </section>
+
+    <section id="internet_as_alternative_medium__video">
+        <title>Videos and Animations</title>
+        <para>
+            One can distribute videos and animations in the following means:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    Animations using the proprietary (but de-facto standard)
+                    Flash technology, or using the open
+                    <ulink url="http://www.w3.org/Graphics/SVG/">
+                        SVG (“Scalable Vector Graphics”)
+                        technology</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Web sites and torrents can be used to distribute videos.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Video sharing sites such as
+                    <ulink url="http://video.google.com/">Google
+                        Video</ulink>, and
+                    <ulink url="http://www.youtube.com/">YouTube</ulink>.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+
+    <section id="value_of_linking">
+        <title>The Value of Linking</title>
+        <para>
+            By having a legitimate link to a piece of content one can
+            immediately enjoy and experience it. For example I can say:
+            “<ulink url="http://www.garageband.com/song?|pe1|S8LTM0LdsaSkYVezYGA">Jenna
+                Drey’s single ‘That’s What They All Say’</ulink> is very nice,
+            follow the link to download it.”, or
+            “<ulink url="http://www.shlomifish.org/Files/files/music/mp3-ogg/Austin%20Acton%20-%20Two%20Point%20Six.ogg">Austin
+                Acton’s ‘Two Point Six’</ulink> is lame but still cool.”, or
+            “Pearl Jam made their new single ‘Life Wasted’ freely
+            distributable. <ulink url="http://www.legaltorrents.com/bit/pearl-jam-life-wasted-video.torrent">Here’s the torrent.</ulink>”. Etc. (These are all
+            legitimate downloads).
+        </para>
+        <para>
+            This is much better availability and accessibility than having to
+            go to the store and buy it, or even buy it from an online store. And
+            it an excellent publicity.
+        </para>
+        <para>
+            For more information consult Paul Graham’s essays
+            <ulink url="http://www.paulgraham.com/web20.html">“Web
+                2.0”</ulink> and
+            <ulink url="http://www.paulgraham.com/opensource.html">“What
+                Business can Learn from Open Source”</ulink>.
+        </para>
+    </section>
+</section>
+
+<section id="dont_download_this_song">
+    <title>Weird Al Yankovic’s “Don’t Download This Song”</title>
+    <para>
+        <ulink url="http://www.weirdal.com/">Weird Al Yankovic</ulink>,
+        the famous musical comedian, has released the track
+        <ulink url="http://music.download.com/weirdalyankovic/3600-10607_32-100948958.html">“Don’t
+            Download this Song”</ulink> out of his album <emphasis>Straight
+            outta Lynwood</emphasis>. Despite its ironic title, it is available for free download.
+    </para>
+    <para>
+        <ulink url="http://www.com-www.com/weirdal/dontdownloadthissong.html">The
+            Lyrics for the song</ulink> are illuminating the absurdity of the
+        big copyright owners’ fight against file-swapping in a funny way.
+    </para>
+</section>
+
+<section id="historical_perspective">
+    <title>A Historical Perspective</title>
+    <para>
+        This section aims to give a historical perspective to why copyrighted
+        work ought to be freely and non-commercially re-distributable.
+    </para>
+    <section id="history__ancient_times">
+        <title>Ancient Times through the Middle Ages</title>
+        <para>
+            During ancient times (before the invention of paper, and the
+            press), texts were written on stone or on animals’ hides and
+            required a lot of effort to duplicate. As such, the authors
+            encouraged people to copy, quote, and re-use their text, as long
+            as they maintained proper attribution.
+        </para>
+    </section>
+    <section id="history__after_press">
+        <title>After the Invention of the Press</title>
+        <para>
+            After the Press was invented, and became cheaper, commercial
+            books started to appear. Eventually copyright on texts emerged
+            to make sure that:
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    Artists would be protected so their works will not be
+                    re-printed by publishes and prints.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Make sure other prints won’t be able to re-print the
+                    works of other publishers.
+                </para>
+            </listitem>
+        </orderedlist>
+        <para>
+            At first it was applied exclusively to written works. Not to
+            audio or video recording, which did not exist yet, nor to to
+            melodies, pictures, videos, etc.
+        </para>
+        <para>
+            It was decided that after a limited time when the author or his
+            estate held the exclusive copyrights for the work, the work would
+            be transferred to the public domain, to make sure it can be
+            freely reused and manipulated by future generations. The first
+            such term in the USA was 14 years with a potential extension of
+            another 14 years.
+        </para>
+    </section>
+    <section id="history__analysis">
+        <title>My Analysis of This</title>
+        <para>
+            The
+            <ulink url="http://en.wikipedia.org/wiki/Copyright_Act_of_1790">Copyright
+                Act of 1790</ulink> granted the originator of a text “the
+            sole liberty of printing, reprinting, publishing and vending” of
+            a work. Note that it does not talk about mere duplication. Printing
+            and reprinting were at the time very costly operations, produced
+            works of good quality, and required a non-negligible amount of
+            money to perform. On the other hand, if a person was to copy the
+            work by hand, it would not have fallen under this law.
+        </para>
+        <para>
+            Furthermore, it makes sense that now that we have the Internet that
+            can “copy arbitrary blobs of data from one place to another at
+            virtually no cost, in virtually no time, with virtually no
+            control” (to <ulink url="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">quote Cory Doctorow</ulink>), then the copyright laws
+            will once again be amended to reflect the new technological
+            reality.
+        </para>
+        <para>
+            Trying to stop such copyright “infringement” on the Internet is
+            not going to be successful. And so far, it seems the Internet
+            helps the originators of such works, more than it harms them.
+        </para>
+    </section>
+</section>
+<section id="conclusion">
+    <title>Conclusion</title>
+    <para>
+        File swapping must be legal, because it’s ethical, moral, makes
+        economical sense, and is otherwise beneficial for artists,
+        distributors and consumers.
+    </para>
+    <para>
+        There’s a book on my bookshelf by Ashleigh Brilliant with a very good
+        title: “I Feel Much Better, Now that I’ve Given up Hope”. I think this
+        is one thing the Media companies don’t understand. If they accept
+        Internet File Sharing as a necessary “Evil”, they will be able to make
+        the best out of the new situation. Instead, they have chosen to
+        perform a large-scale witch-hunt, which does not really help prevent
+        file sharing, and just makes them look like the public enemy.
+    </para>
+    <para>
+        Once the Media companies try to fight file swapping by using lawsuits,
+        or threats, then they should be fought back in order to protect the
+        people’s ethical right to share songs. All laws that are passed to
+        prohibit non-commercial distribution of public works, are unethical,
+        and should be replaced with more reasonable laws.
+    </para>
+</section>
+
+<section id="how_you_can_help">
+    <title>How you can Help</title>
+    <para>
+        There are several ways in which you can help fight for the cause of
+        protecting file swapping:
+    </para>
+    <orderedlist>
+        <listitem>
+            <para>
+                Write. Write school reports, university theses, essays, news
+                items and articles about this cause. Feel free to use material
+                from here, or to link to it.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Publish the art you create under a freely-distributable
+                license. The <ulink url="http://creativecommons.org/">Creative
+                    Commons licenses</ulink> can give you enough protection,
+                while still retaining this right.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Link and mention this essay on your web-site, in your blog,
+                in your posts to online forums, in real-life (in chats, on
+                newspaper items), etc. Get people to know it.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Write to your representatives at the government and tell them
+                that you wish file swapping and all related issues to be
+                legal. Don’t vote for people who fight against file swapping,
+                and vote for those who do.
+            </para>
+        </listitem>
+        <listitem>
+            <para>
+                Donate money, time and other resources to support the legal
+                battle for file swapping.
+            </para>
+        </listitem>
+    </orderedlist>
+    <para>
+        Together, we can stop this insanity faster than it will be stopped
+        on its own.
+    </para>
+</section>
+
+<section id="other_important_copyrights_issues">
+    <title>Other Important Copyrights Issues</title>
+    <para>
+        This section will cover other significant copyright issues that are
+        at stake today and require a struggle.
+    </para>
+    <para>
+        The first is the lengthening of the copyright term. Recently
+        <ulink url="http://en.wikipedia.org/wiki/Copyright_Term_Extension_Act">the
+            Sonny Bono Copyright Term Extension Act</ulink> that was passed in
+        American congress extended the copyrights act by 20 years. One should
+        note that the term was already extended several times in the past,
+        since the first American copyrights law. 95 years for a copyrights
+        of works of corporations is far too long, and we also risk that
+        copyrights will be extended indefinitely this way. (“Forever minus a
+        day”)
+    </para>
+    <para>
+        A different issue is the <ulink url="http://www.anti-dmca.org/">Digital
+            Millennium Copyright Act</ulink> (or DMCA for short). This law that
+        was passed in the 90’s criminalises a lot of valid activity. It
+        prohibits the writing of “circumvention devices” to bypass copyright
+        protection (and some say every computer security measure, in general).
+        It is actively used to threaten to remove allegedly copyrighted content
+        from web sites, because they may violate it. (See
+        <ulink url="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">Cory
+            Doctorow’s excellent essay “Save Canada’s Internet
+            from WIPO”</ulink>.) It also contains a lot of other damaging
+        clauses.
+    </para>
+    <para>
+        The <ulink url="http://www.fepproject.org/">Free Expression
+            Policy Project</ulink> has an excellent
+        <ulink url="http://www.fepproject.org/policyreports/copyright2dvalves.html">report
+            on the various issues in copyrights law in the past and
+            today</ulink>. It is a very recommended read.
+    </para>
+    <para>
+        A different issue is that of the so-called <ulink url="http://en.wikipedia.org/wiki/Digital_Rights_Management">“Digital Restrictions
+            Management” measures (or DRM for short)</ulink>, which are measures
+        meant to prevent the copying or ripping of digital media. Perhaps the
+        most extreme form of this is <ulink url="http://en.wikipedia.org/wiki/2005_Sony_BMG_CD_copy_protection_scandal">The
+            “Sony Rootkit” scandal</ulink>, in which a copyright-protection
+        measure, turned out to put one’s Windows installation at risk, once the
+        CD was inserted to the computer.
+    </para>
+    <para>
+        The <ulink url="http://www.eff.org/">Electronic
+            Frontier Foundation</ulink> has many resources related to
+        activity against various harmful copyrights regulations.
+    </para>
+</section>
+
+<section id="about">
+    <title>About this document</title>
+    <section id="about_copyrights">
+        <title>Copyrights</title>
+        <para>
+        This work is licensed under the
+        <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
+            Commons Attribution 2.5 License</ulink> (or at your option a
+        greater version of it). The CC-Attribution is almost
+        Public Domain except for a requirement to make an attribution to the
+        original author.
+        </para>
+        <para>
+            It was written by <ulink url="http://www.shlomifish.org/">Shlomi
+                Fish</ulink> who also holds the copyrights.
+        </para>
+    </section>
+    <section id="about_author">
+        <title>About the Author</title>
+        <para>
+            Shlomi Fish was born in Israel in 1977, and has lived there most of
+            his life. He is a user, developer, advocate and activist of
+            Open Source Software. His greatest contribution so far in this
+            regard has been <ulink url="http://fc-solve.shlomifish.org/">Freecell
+                Solver</ulink>, a Public Domain Library for solving games
+            of Freecell and other types of Solitaire. However, he also
+            <ulink url="http://www.shlomifish.org/open-source/projects/">initiated
+                several other projects</ulink> and
+            <ulink url="http://www.shlomifish.org/open-source/contributions/">made
+                important contributions to projects he did not initiate</ulink>
+            some of them very large scale.
+        </para>
+        <para>
+            Otherwise, Fish has written <ulink url="http://www.shlomifish.org/humour/">several
+                humorous novellas, stories and aphorisms</ulink>, which he
+            has released online, under the CC-by or CC-by-sa licenses. He also
+            wrote <ulink url="http://www.shlomifish.org/philosophy/">many
+                essays and articles</ulink> as well as
+            <ulink url="http://www.shlomifish.org/lecture/">material
+                for presentations</ulink> which (unless specified otherwise)
+            were released under the CC-by license.
+        </para>
+        <para>
+            To conclude, if you think that “this guy attacks Intellectual
+            Property so he obviously doesn’t have any significant IP of his
+            own”, then this myth, in his case, cannot be farther from the
+            fact.
+        </para>
+        <para>
+            Shlomi Fish is a Jew and an Israeli by nationality, an atheist
+            by faith (or lack of it) and a
+            <ulink url="http://www.neo-tech.com/neotech/advantages/">Neo-Tech</ulink>
+            Objectivist by ideology. As such he is a firm believer in both
+            individual rights and freedoms, and freedom from oppression, as well
+            as a free economy (Laissez-Faire Capitalism) that is free of
+            government intervention. He also does his best efforts to live by
+            the values of honesty, integrity, individualism, independent
+            thought, passion, and rational self-growth.
+        </para>
+    </section>
+    <section id="about_links">
+        <title>More Links</title>
+        <para>
+            <ulink url="http://www.advogato.org/article/841.html">“Acting
+                against anti-File-Swapping Lawsuits in Israel”</ulink> was
+            an early attempt to convey this message written by me. It
+            sparked <ulink url="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39822.html">a
+                discussion at the Linux-IL mailing list</ulink> and
+            <ulink url="http://mirror.hamakor.org.il/archives/discussions/05-2005/1646.html">a
+                discussion at the Hamakor Discussions mailing
+                list</ulink>.
+        </para>
+        <para>
+            Glyn Moody maintains a blog titled
+            <ulink url="http://opendotdotdot.blogspot.com/">opendotdotdot</ulink>
+            where he talks about Open Source, Open Content, Open Access, and
+            various other Internet paradigms. It is well worth reading and
+            following.
+        </para>
+        <para>
+             Finally, Wil Wheaton has <ulink url="http://interviews.slashdot.org/article.pl?sid=05/06/27/0926218&amp;tid=97&amp;tid=129&amp;tid=192&amp;tid=214&amp;tid=11&amp;tid=10a">some interesting insights in a Slashdot interview with
+                 him</ulink>:
+         </para>
+         <blockquote>
+             <para>
+                 I’m no expert, but it seems like the MPAA would get a much
+                 bigger return on their investment if they stopped going after
+                 college students and went after the factories that turn out
+                 legitimate movies by day, and switch over to pirated material
+                 at night.
+             </para>
+         </blockquote>
+    </section>
+    <section id="about_acknowledgements">
+        <title>Acknowledgements</title>
+        <para>
+            Thanks to the members of the Linux-IL and Hamakor Discussions
+            mailing list for discussing an
+            <ulink url="http://www.advogato.org/article/841.html">early
+                incarnation of this article</ulink>.
+        </para>
+        <para>
+            Thanks to
+            <ulink url="http://www.livejournal.com/users/talash/">Talash</ulink>
+            for referencing
+            <ulink url="http://www.livejournal.com/users/talash/216391.html">the
+                local Israeli file-swapping protection activity</ulink>.
+        </para>
+        <para>
+            Thanks to <ulink url="http://lessig.org/">Lawrence Lessig</ulink>
+            for <ulink url="http://lessig.org/freeculture/">an excellent
+                related presentation called “Free Culture”</ulink> and for
+            the Wilco anecdote.
+        </para>
+    </section>
+</section>
+
+</article>    <!-- End of the article -->
+

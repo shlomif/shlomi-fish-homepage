@@ -1,0 +1,645 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
+]>
+<!-- -->
+<!-- $Id$ -->
+<!-- -->
+<!-- $Log$ -->
+<!-- -->
+<!-- General reminders: -->
+
+<article id="index">
+    <articleinfo>
+        <title>Objectivism and Open Source</title>
+        <authorgroup>
+            <author>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2003</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+      <legalnotice id="main_legal_notice">
+            <para>
+<!--Creative Commons License-->
+This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</ulink> (or at your option a greater version of it).
+            </para>
+        </legalnotice>
+
+        <revhistory>
+            <revision>
+                <revnumber>5034</revnumber>
+                <date>12 May 2008</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    Started keeping track of version. Changed the "book"
+                    schema to an "article"-based one. Changed more spelling
+                    to Commonwealth one. Changed the two-level of Ethics
+                    to "Ethical" and "Moral".
+                </revremark>
+            </revision>
+        </revhistory>
+    </articleinfo>
+<section id="introduction">
+
+<title>Introduction</title>
+
+<para>
+The "open source" movement is perhaps the most important phenomenon
+in the software world today. Thousands of developers and
+millions of users worldwide create, maintain, support and use
+high-quality software packages, that are made available for everyone
+to use, modify and distribute. Many Objectivists may reject this
+movement on the premises of it being anti-Capitalistic in nature. The
+aim of this document is to show that they need not and should not.
+</para>
+
+<para>
+This document will demonstrate that working on open source software
+is not anti-Capitalistic, and that it is also an objectively moral
+and healthy activity. It will explain why there is no dichotomy between
+the open source world and Objectivism, and why Objectivists can
+support it, without having guilt feelings of behaving un-Capitalistically.
+</para>
+
+</section>
+
+<section id="what_is_open_source">
+
+<title>What is Open Source?</title>
+
+<para>
+Open source is a relatively new name for a relatively old phenomenon that
+is also called "free software". (this term preceded "open source" but it
+too came a long time after the phenomenon emerged). I have written
+<ulink url="http://fc-solve.shlomifish.org/oss-fs/docbook/">a previous
+introduction to this phenomenon</ulink> which I advise to read if you're not
+familiar at all with the term.
+</para>
+
+<para>
+To sum up, an open source software is a software that is accompanied with
+its original source code and can be freely used, modified, and re-distributed
+without any charge. It is possible to charge money for a package that
+contains free software components, but generally it is not economical to
+base a business on it, because of the fact that it can later on be freely
+distributed.
+</para>
+
+<para>
+Some of the landmarks of the open source movement are the <ulink url="http://gcc.gnu.org/">GCC-based
+software development kit</ulink>, the
+<ulink url="http://www.apache.org/">Apache
+web-server</ulink> and other Internet servers, the
+<ulink url="http://www.mozilla.org/">cross-platform Mozilla
+web-browser</ulink>, various high-level languages such as
+<ulink url="http://www.perl.org/">Perl</ulink>,
+<ulink url="http://www.python.org/">Python</ulink>,
+<ulink url="http://www.tcl.tk/">Tcl</ulink> or
+<ulink url="http://www.ruby-lang.org/en/">Ruby</ulink>;
+the <ulink url="http://www.x.org/">X-Windows Graphics System</ulink>
+ and desktops built on top.
+There are also
+several operating systems whose every essential component is open source.
+They include the <ulink url="http://www.linux.org/">Linux (or GNU/Linux)
+Operating System</ulink>, and some of the
+<ulink url="http://www.bsd.org/">various
+BSDs</ulink>
+</para>
+
+<para>
+Open source software provides a low-cost, highly customizable, and often
+more reliable or technically superior alternative to commercial, non-free
+software. The open source world maintains an online web of mailing lists,
+web forums, IRC channels, web-sites and other resources with which
+people who are more knowledgable in some respects help their less
+experienced peers.
+</para>
+
+</section>
+
+<section id="what_is_objectivism">
+
+<title>What is Objectivism?</title>
+
+<para>
+Objectivism is a philosophy put forth by Ayn Rand, and later further
+developed by others. It has a strong emphasis on individualism, objectivity
+and Capitalism. Objectivism is based on the premise that existence exists
+and is common to all conscious individuals independtly of what anyone think
+it is. As such it rejects such notions as Subjectivism (that reality is
+subjective to any individual), and mysticism (that thoughts can alter reality).
+</para>
+
+<para>
+One of the central themes of the Objectivism is that the conscious individual
+is an end to himself, and should strive to fullfill his own happiness and
+well-being. It demonstrates that by acting out of their rational self-interest
+, individuals best benefit others as well.
+</para>
+
+<para>
+Similarly it believes that Altruism (advocating the must to contribute to an
+external cause) is a harmful notion that one has to reject from within
+and without. Objectivism does not oppose individuals voluntarily
+contributing time, effort, or other resources to further the well-being
+of others. However, it demonstrates that claiming that you are only worthy
+of living if you help an external cause (the poor, your country, your
+religion, etc) is a harmful notion that has caused a great deal of strife
+in the world.
+</para>
+
+<para>
+Objectivism Support Capitalism as the ideal way of running a country
+and vows for Laissez-Faire Capitalism, as the ultimate form of it.
+</para>
+
+<section id="about_neo_tech">
+
+<title>About Neo-Tech</title>
+
+<para>
+<ulink url="http://www.neo-tech.com/">Neo-Tech</ulink> is an idea
+system based on Objectivism that also incorporates Psychology and Business
+Management, and reaches even bolder conclusions. Summarizing Neo-Tech
+is not possible in this scope because the material put forth by it
+is huge. It's also not particularily relevant because this document is aimed
+at Objectivists (and non-Objectivists) who have not accepted Neo-Tech yet.
+</para>
+
+<para>
+However, I will borrow some concepts and text from the Neo-Tech literature
+to demonstrate my points, and hope they will be commonly accepted enough by
+everyone.
+</para>
+</section>
+</section>
+
+<section id="two_levels_of_morality">
+<title>Two Levels of Ethics and How Open Source Measures Against Them</title>
+
+<para>
+There are two levels of Ethics: Ethos and Morality.
+An ethical action is such that is allowed under objective ethics. I.e:
+if you wish to perform it, then no-one can prevent you from doing it. It may
+not necessarily be a good action to take, but it is still allowed. A
+non-ethical action is such that will harm others and so is not allowed.
+</para>
+
+<para>
+Now an ethical action is moral if it delivers genuine gain for
+you or for someone else. This distinction should be made because some
+ethical actions are very harmful (such as commiting suicide or
+consuming harmful substances).<footnote id="ammoral" label="Ammoral">
+    <para>
+        Related to moral and ethical choices are ammoral decisions. An ammoral
+        choice is a matter of taste and is neither moral nor immoral.
+        Examples are: your favourite food, your favourite Ice-cream flabour,
+        your preferences in members-of-the-appropriate-sex, what you prefer
+        to do at the moment, etc.
+    </para>
+</footnote>
+</para>
+
+
+<para>
+The aim of this section is to show that working on open source software is not
+only ethical but moral as well.
+</para>
+
+<section id="why_oss_is_ethical">
+<title>Why Open-Source is Ethical</title>
+
+<para>
+The best summary of what is ethical and what isn't can be found
+in the <ulink url="http://www.neo-tech.com/neotech/advantages/advantage83.html">
+Neo-Tech Constitution</ulink>. This document contains a preamble, followed
+by three articles, followed by 6 axioms. The articles are the most relevant
+and I'll bring them here:
+</para>
+
+<para>
+<orderedlist>
+<listitem>
+<para>
+No person, group of persons, or government may initiate force, threat of force, or fraud against the person or property of any individual.
+</para>
+</listitem>
+<listitem>
+<para>
+Force may be morally and legally used only in defence against those who violate Article 1.
+</para>
+</listitem>
+<listitem>
+<para>
+No exception shall ever exist to Articles 1 &amp; 2.
+</para>
+</listitem>
+</orderedlist>
+</para>
+
+<para>
+The validity of this definition is self-evident. Now, based on it, what
+can we say about creating open-source software? It surely does not involve
+initiatory force, coercion or fraud. Working on free software is done
+voluntarily and its distribution does not involve harming anyone.
+</para>
+<para>
+While vendors of commercial software may lose money or go out of business
+out of competition with open-source software, it does not constitute of
+force. Competition is one of the cornerstones of Capitalism. This is similar
+to selling a cheaper and/or better product at the marketplace and taking
+market share out of the competition.
+</para>
+<para>
+Thus, creating and maintaining open source software is a constitutional action.
+</para>
+</section>
+<section id="why_oss_is_beneficial">
+<title>Why Open-Source Development is Moral</title>
+
+<para>
+Naively, some Objectivists may come to believe that working on open-source
+software is, while perfectly ethical, not a good action to take.
+"You work on software that the masses could use, and instead of selling
+it and earning a honest buck, you give it away to everybody, and have
+others benefit from your efforts. What's in it for you?" But let's first
+formulate a definition of what is moral and what isn't.
+</para>
+
+<para>
+Again, I will extract a suitable definition out of the Neo-Tech text:
+</para>
+
+<para>
+"The meaning of moral in Neo-Tech is simple and direct: Whatever is
+consciously done to help fill human biological needs is good and moral
+(e.g., the productive actions of honest people). Whatever is consciously
+done to harm or prevent the filling of human biological needs is bad
+and immoral (e.g., the destructive actions of mystics and neocheaters)."
+</para>
+
+<para>
+"moral" here is "beneficial" in our terminology. The validity of this
+definition is also evident. So how Open-Source measures against it? Very
+well, actually. Open source software was so far used by millions of users
+worldwide, greatly facilitated some of the jobs they had to do with their
+computer, and generally contributed to everyone's well-being. The very
+action of creating a useful software for everyone to use is beneficial as
+it eventually can help fill human biological needs.
+</para>
+
+<para>
+Now, some hardcore Objectivists can ask "But what about your own self-
+interest?". Self-interest here is relevant, but in subversive ways.
+The open-source developer does not economically benefit from the software
+he wrote, as much as he would, had he sold it commercially (and assuming
+it would indeed become successful). However, he does benefit, from having
+more potential users and co-developers, from making sure his software or
+one of similar vestiges will remain available as time goes by, and from
+a boost of happiness knowing that people are using your software.
+</para>
+
+<para>
+Usually, getting a non-free piece of software to become successful would
+take a lot of effort on the developer's part, and you always risk a
+player with better resources competing with you. While it is itself beneficial
+as well, it may not yield the same immediate and long-term profit from
+working on an open-source package.
+</para>
+</section>
+</section>
+
+<section id="beyond_morality">
+<title>Beyond Morality: Why Open Source is Good for You</title>
+
+<para>
+The reasons that make open-source a viable choice technically,
+psychologically and economically were already given in
+<ulink url="http://www.catb.org/~esr/">Eric Raymond's</ulink>
+excellent <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/">
+"The Cathedral and the Bazaar" series</ulink>. In the first part,
+<ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">"The Cathedral and the Bazaar"</ulink>, Raymond describes the dynamics
+of a small "Bazaar-style" open-source project, and analyses why
+this system works so well for developing software.
+</para>
+
+<para>
+In the second part, <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/">Homesteading the Noosphere</ulink> Raymond analyses the
+customs of the open source community. He demonstrates that because of the
+abundance of computer resources such as computing power, network bandwidth,
+hard-disk capacity - there is no scarsity economics involved in the
+Internet world. Instead, there is a gift culture, in which people are esteemed
+according to what they give away (namely, contributions to open source
+software)
+</para>
+
+<para>
+The third part, <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink> discusses the economical aspects
+of the
+open-source world. It demonstrates why non-free commercial software is
+problematic and why open-source works so well. It gives several places in which
+companies and individuals can utilise distributing a software under an
+open-source licence for their own commercial gains. He also dispels the
+myth that programmers will be out of job because of free software by
+noting that the majority of code in the world (and what the vast majority
+of programmers are working on) is code for internal use: in-house applications,
+customizations of programs, embedded software, software that accompanies
+hardware, software that powers web-sites, etc. Such software has no sale
+value, and so its developers will not be damaged if open source takes over.
+</para>
+
+<para>
+The whole series is a very recommended read.
+</para>
+
+<para>
+<ulink url="http://www.joelonsoftware.com/">Joel Spolsky</ulink> later
+continued the Magic Cauldron theme in his essay
+<ulink url="http://www.joelonsoftware.com/articles/StrategyLetterV.html">
+Strategy Letter V</ulink>. He took the Micro-economics principle of
+complementary products, and showed why supporting open-source software
+can be a wise decision to make complementary products in greater demand. A complementary product is such that
+when its in greater abundance, demand for the complementary product will
+become higher. For example, if flights to Florida became cheaper, then
+there would be greater demand for Florida Hotel Rooms. Open source software
+can be a complementary product to hardware or services involved in supporting
+it, which explains why companies like IBM or Sun are financing it.
+</para>
+
+<para>
+Aside from all that, working on open-source software is a fun and rewarding
+experience. One becomes more experienced and learn a lot, interacts
+with users and co-developers (some of them living thousands of kilometres from
+where you are), and generally becomes happy of having done something
+useful.
+</para>
+
+<para>
+Generally, the amount of work an open source developer invests in his
+software is vastly neglible compared to the benefit he makes out of the
+work of all the other developers. As someone once noted, in the open-source
+model everyone contributes a brick and in return everyone gets a full house
+for himself. By decentralizing effort, and splitting the development into a
+large number of well-defined projects, the open source world ensures that
+development is done at a highly accelerated pace.
+</para>
+
+</section>
+
+<section id="why_dichotomy">
+
+<title>Why the Apparent Dichotomy Exists in the First Place?</title>
+
+<para>
+Finally, it's time to analyze why the apparent dichotomy between open-source
+and Objectivism exists in the first place. The most important reason is
+because some non-free software is sold, and because open source software
+is made available for everyone to freely use and distribute. So, we see the
+vendors of proprietary software as healthy Capitalists (which is true), and
+automatically deduce that open source software is anti-Capitalistic.
+</para>
+
+<para>
+However, software is different in the fact that the cost of duplicating
+it and distributing it is virtually zero. A software developer is not
+encumbered if his software has 100,000 of users instead of just 1,000.
+While developing the software is time consuming, there is no reason not
+to share it after one has invested this initial time.
+</para>
+
+<para>
+Some people may come to believe that sharing anything is bad. But as Eric
+Raymond notes in the excellent film "Revolution OS": "Open source is
+voluntary sharing. Communism puts a gun against your head and forces you
+to share.". While sharing hammers or food does not make sense economically
+because such things take a positive amount of time to manufacture every
+unit of (albeit such action is perfectly constitutional), sharing software
+is not encumbered by these real-world constraints. That put aside,
+giving away something to your friends, was not held as illogical even
+by Ayn Rand herself.
+</para>
+
+<para>
+Another thing that hinders the acceptance of Open Source software is the
+belief that "if you want something good, you have to pay for it.". This
+myth does not hold in the software world, because a software can achieve
+good quality by incremental contributions from its voluntary developers.
+When a developer works on a software, there is the pure joy of creation
+and other social rewards, and it does not matter if he makes any revenue
+off selling the software. There is a similar case when developing other
+types of artwork.
+</para>
+
+<para>
+Alternatively, the entity that pays the developer to write the software
+gains from other aspects of the software besides its sale value. (as previously
+noted).
+</para>
+
+<para>
+The facts also speak for themselves. The Linux operating system and other
+pieces of open-source software (or for that matter freeware), have millions
+of users who can testify for their superior quality and working experience.
+</para>
+
+</section>
+
+<section id="oss_and_capitalism">
+<title>Open Source and Capitalism</title>
+
+<para>
+Some may claim that the Open Source development methodology contradicts
+Capitalism: after all, a final product is produced, and given away for free.
+This is while the general theme of Capitalism is to competitively create
+values that are sold in the marketplace.
+</para>
+
+<para>
+A bit bucket once produced and finalised (a procedure that may require a lot
+of money, effort and time), can be later distributed free-of-charge by
+electronic means, without causing loss to the originator of the bit bucket.
+This is oas pposed to physical products such as food or tools, which cost money
+to produce and distribute each unit of.
+</para>
+
+<para>
+Thus, it economically makes sense to distribute software or other bit buckets
+free-of-charge. The fact that vendors of proprietary software do it for money,
+does not preclude a costless alternative by someone else. Capitalism has
+endorsed distributing cheaper alternatives to products for a long time.
+</para>
+
+<para>
+For a more thorough discussion of the economics of open source software refer
+to Eric Raymond's Essay <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/magic-cauldron/">"The Magic Cauldron"</ulink>.
+</para>
+</section>
+
+<section id="community_and_collectivism">
+
+<title>The Open Source Community and Collectivism</title>
+
+<para>
+One of the corner-stones of Objectivism is its opposition to Collectivism.
+Namely considering a collective of individuals as more important than its
+individuals, or thinking that one should sacrifice the well-being or happiness
+of individuals for the collective.
+</para>
+
+<para>
+The open-source world exhibits a very prosperous, active and often zealous
+community of users, contributors and advocates. Is this an indication of
+Collectivism?
+</para>
+
+<para>
+No, it isn't. Collectivism is not against forming collectives. Some
+collectives, like many countries, cities, and businesses, clubs and so on are
+or can be benevolent. The only problem comes when the leaders of the collective
+stress the welfare of the collective above the welfare of its individuals. This
+is generally not the case for the Open Source community.
+</para>
+
+<para>
+Moreover, the members of the Open Source community are active there at will.
+There's no force, threat of force, or fraud involved by anyone to convince
+him to become an open-source user or activist. If people just use open-source
+software because of its benefits or lower price, without contributing anything
+back, it is considered OK and fully allowed by the licences of the software.
+</para>
+
+<para>
+Thus, the open source community is not a collectivist phenomenon, and
+participating in it should not be regarded as such.
+</para>
+
+</section>
+
+<section id="doc_info">
+
+<title>Document Information</title>
+
+<section id="about_the_author">
+<title>About the Author</title>
+<para>
+My name is Shlomi Fish and I am a user, developer and advocate of
+open-source software. I also use commercial software, if I need to,
+but usually don't enjoy using it quite as much as the open-source
+equivalents. I am also a firm believer in Objectivism and Neo-Tech.
+</para>
+<para>
+You can learn more about me by visiting
+<ulink url="http://www.shlomifish.org/">my homepage</ulink>.
+</para>
+</section>
+
+<section id="why_this_doc_was_written">
+<title>Why this document was written?</title>
+
+<para>
+I once searched Google for "objectivism open source" and came upon
+an article on Open Source written by an Objectivist in a three part series
+about the Microsoft trial. However, the article proved to be inaccurate
+and showed a general misunderstanding of what open source was all about.
+</para>
+
+<para>
+This article aims to be a better attempt at the job, from someone who is
+an insider of the open source world.
+</para>
+</section>
+
+<section id="software_used_in_creation">
+<title>Software Used in the Creation of this Document</title>
+
+<para>
+This document was written (and is available) in DocBook/XML, and
+was rendered into HTML, PDF, and Word RTF using the DSSSL stylesheets,
+OpenJade, and Jadetex and TeX. The process was managed using GNU make
+and the files were uploaded using the rsync program.
+</para>
+
+<para>
+The text itself was edited using the
+<ulink url="http://www.vim.org/">Vim</ulink> text editor. This took place
+entirely on a Mandrake Linux 9.1 system. All of the above are open source
+software.
+</para>
+
+</section>
+
+<section id="copyright">
+
+<title>Copyright</title>
+
+<!-- Creative Commons License -->
+<para>
+This work is licensed under a
+<ulink url="http://creativecommons.org/licenses/by/2.0/">Creative
+    Commons License</ulink> - The Attribution License Version 2.0 or
+greater. Year of Copyright is 2003.
+</para>
+<!-- /Creative Commons License -->
+
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:title>Objectivism and Open Source</dc:title>
+   <dc:date>2003</dc:date>
+   <dc:description>An Essay that explains why the Open Source Software culture and methodology is compatible with Objectivism Philosophy and Thought.</dc:description>
+   <dc:creator><Agent>
+      <dc:title>Shlomi Fish</dc:title>
+   </Agent></dc:creator>
+   <dc:rights><Agent>
+      <dc:title>Shlomi Fish</dc:title>
+   </Agent></dc:rights>
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+</License>
+
+</rdf:RDF>
+
+-->
+
+</section>
+
+<section id="thanks">
+
+<title>Thanks</title>
+
+<para>
+Thanks should go to
+<ulink url="http://nadav.harel.org.il/">Nadav Har’El</ulink> and
+<ulink url="http://www.zak.co.il/">Omer Zak</ulink> for reviewing the early
+drafts of this document and supplying some useful corrections and
+comments. Thanks also to Einat Ya'akobovitch for inspiring some further
+additions to the document.
+</para>
+</section>
+
+</section>
+
+</article>    <!-- End of the book -->

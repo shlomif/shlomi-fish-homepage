@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+<h2>How Make Works</h2>
+
+<points>
+<li>
+Makefiles watch the time-stamps for files, if the source files time stamps
+are newer than the target, the target needs to be rebuilt and any targets
+depending on it need to be rebuilt as well.
+</li>
+</points>
+
+<h2>More Information</h2>
+
+<points>
+<li>
+More information on makefiles can be found in the info file,
+accessible via the <tt>pinfo make</tt> command, or by typing:
+<tt>info:make</tt> in the Konqueror address line.
+</li>
+</points>

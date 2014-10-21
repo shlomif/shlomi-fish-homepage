@@ -1,0 +1,29 @@
+#include 'template.wml'
+
+<p>
+In a regular expression a caret (<tt>^</tt>) at the beginning of the expression
+matches the beginning of the string and a dollar sign (<tt>$</tt>) at the
+<b>end</b> of the expression matches the end of the string.
+</p>
+
+<p>
+For example, the following program checks if a string is composed entirely of
+the letter A:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/all_as.pl" />
+</quadpres_code_block>
+
+<p>
+It's much shorter than with using a loop and also much faster.
+</p>
+
+<p>
+Here's another example. Let's check if a string ends with three periods:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/string_ends_ellip.pl" />
+</quadpres_code_block>
+

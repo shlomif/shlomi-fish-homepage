@@ -1,0 +1,62 @@
+#include 'template.wml'
+
+<points>
+<li>
+Now, let's see some Scheme Scripts in action.
+</li>
+</points>
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Select
+
+
+<menupath>
+&lt;Toolbox&gt; -&gt; Xtns -&gt; Script-Fu -&gt; Logos -&gt; "Bovination..."
+</menupath>
+</li>
+
+<li>
+Press the button next to "Font:" and select a nice scalable font.
+</li>
+
+<li>
+Press OK.
+</li>
+
+<li>
+And you have a full-fledged logo.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+
+<points>
+<li>
+The source code of this script can be seen in
+<tt>/usr/share/gimp/1.2/scripts/bovinated-logo.scm</tt>.
+</li>
+
+<li>
+You can play with the other scripts in the
+
+
+<menupath>
+Xtns -&gt; Script-Fu -&gt; Logos
+</menupath>
+
+menu  and view their source code. (my personal favourite is Frosty, which is
+quite heavy on CPU and time).
+</li>
+</points>

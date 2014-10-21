@@ -1,0 +1,42 @@
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "he-IL" />
+<default-var "qp_charset" "utf-8" />
+<default-var "qp_body_dir" "rtl" />
+
+<:{
+use utf8;
+
+if (1)
+{
+$translate_control_text = sub {
+    my $title = shift;
+    my %translations =
+        (
+            "Next" => "הבא",
+            "Prev" => "הקודם",
+            "Up" => "למעלה",
+            "Contents" => "תוכן",
+        );
+   return $translations{$title};
+};
+}
+
+}:>
+
+#include "quadpres_main.wml"
+
+<qp:more_head_elems>
+<script src="<qp:contentsurl />slidy.js"
+   type="text/javascript"></script>
+</qp:more_head_elems>
+
+<script type="text/javascript">rtl_keys = true;</script>
+
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+

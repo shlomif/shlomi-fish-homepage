@@ -1,0 +1,138 @@
+#include '../template.wml'
+
+<latemp_subject "My Aphorisms as Graphic Designs" />
+<latemp_meta_desc "Shlomi Fish’s Aphorisms as Graphic Designs" />
+
+<define-tag mydesign endtag="required">
+<preserve id img_alt img_base title />
+<set-var %attributes />
+
+<tr>
+<td colspan="2">
+<h3 id="<get-var id />"><get-var title /></h3>
+</td>
+</tr>
+<tr>
+
+<td>
+<a href="<get-var img_base />.svg"><img
+src="<get-var img_base />.thumb.png"
+alt="<get-var img_alt />"
+/></a>
+
+</td>
+<td>
+%body
+
+<ul>
+<li>
+<a href="<get-var img_base />.png">PNG File</a>
+</li>
+<li>
+<a href="<get-var img_base />.svg">Original Inkscape SVG Source</a>
+</li>
+</ul>
+</td>
+
+</tr>
+<restore id img_alt img_base title />
+</define-tag>
+
+<table class="designs">
+
+<mydesign
+    id="dont-believe-in-fairies"
+    img_base="dont-believe-in-fairies/dont-believe-in-fairies"
+    img_alt="Don’t believe in Fairies Thumbnail"
+    title="I don’t believe in fairies"
+    >
+
+<blockquote>
+<p>
+I don’t believe in fairies. Oops! A fairy died.
+</p>
+<p class="last">
+I don’t believe in fairies. Oops! Another fairy died.
+</p>
+</blockquote>
+
+</mydesign>
+
+<mydesign id="give-me-ascii"
+    img_base="give-me-ascii/give-me-ASCII-or-give-me-death"
+    img_alt="Give me ASCII or Give me Deaþ!"
+    title="Give me ASCII…"
+    >
+
+<blockquote>
+<p class="last">
+Give me ASCII or Give me Deaþ!
+</p>
+</blockquote>
+
+</mydesign>
+
+<mydesign id="wdym"
+    img_base="what-do-you-mean-by-wdym/what-do-you-mean-by-wdym"
+    img_alt="What do you mean by “WDYM”"
+    title="What do you mean by “WDYM”"
+    >
+
+<blockquote>
+<p class="last">
+What do you mean by “WDYM”?
+</p>
+</blockquote>
+</mydesign>
+
+<mydesign id="all-you-need-is-a-dollar"
+    img_base="lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar"
+    img_alt="All you need is a dollar"
+    title="The American Lottery"
+    >
+
+<blockquote>
+<p class="last">
+The American Lottery - all you need is a dollar and a dream. We will take
+the dollar, but you can keep the dream.
+</p>
+</blockquote>
+</mydesign>
+
+<mydesign id="chromaticd"
+    img_base="chromaticd/kiss-me-my-blog-post-got-chormaticd"
+    img_alt="Kiss me! My blog post got chromatic’d!"
+    title="chromatic’d!"
+    >
+<blockquote>
+<p class="last">
+Kiss me! My blog post got chromatic’d!
+</p>
+</blockquote>
+
+<p>
+Based on <a href="http://use.perl.org/~Shlomi+Fish/journal/36812">a
+true story</a>. chromatic has been criticising other people’s blog posts
+on his <a href="http://use.perl.org/~chromatic/journal/">use.perl.org
+journal</a>, and when he did it for a feature I placed on my homepage,
+I decided to prepare this design to commemorate the occasion.
+</p>
+
+</mydesign>
+
+<mydesign id="cpp-supports-oop"
+    img_base="CPP-supports-OOP/CPP-supports-OOP-as-much-as"
+    img_alt="C++ supports OOP roughly as much as COBOL supports FP"
+    title="C++ supports Object Oriented Programming…"
+    >
+
+<blockquote>
+<p class="last">
+C++ supports Object Oriented Programming roughly as much as COBOL
+supports Functional Programming.
+</p>
+</blockquote>
+</mydesign>
+
+</table>
+

@@ -1,0 +1,21 @@
+#include 'template.wml'
+
+<points>
+<li>
+This layer is mostly theoretical.
+</li>
+<li>
+This layer should handle the format of the data transferred.
+</li>
+<li>
+It is supposed to translate data from host format to a standard network
+format, in order to allow seam-less connection between different hosts.
+</li>
+<li>
+This layer is the one in which encryption should take place.
+</li>
+<li>
+In practical networks nowadays, the roles of this layer are mostly
+performed in the application layer.
+</li>
+</points>

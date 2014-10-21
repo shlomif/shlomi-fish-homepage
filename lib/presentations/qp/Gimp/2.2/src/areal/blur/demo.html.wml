@@ -1,0 +1,55 @@
+#include 'template.wml'
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open lena.png.
+</li>
+
+<li>
+Select
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; Generic -&gt; "Convolution Matrix..."
+</tt>
+</menupath>
+
+</li>
+
+<li>
+Set the 9 middle squares to 1, the other squares to 0 and the divisor to 9.<br />
+(What we are doing is replacing every pixel with the average of its 3*3
+neighbourhood.)
+</li>
+
+<li>
+Press the "OK" button.
+</li>
+
+<li>
+Repeat several times with Ctrl+F (or
+
+
+<menupath>
+<tt>
+&lt;Image&gt; -&gt; Filters -&gt; "Repeat Last"
+</tt>
+</menupath>
+
+) to strengthen the effect.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+

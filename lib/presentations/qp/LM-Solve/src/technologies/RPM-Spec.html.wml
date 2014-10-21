@@ -1,0 +1,17 @@
+#include 'template.wml'
+
+<points>
+<li>
+I wanted LM-Solve to be installable by RPM, and so had to write an
+RPM Spec.
+</li>
+<li>
+After some experiments, I realized that a good way to generate the RPM
+Spec based on the current version is to put the generation routine in
+Makefile.PL.
+</li>
+<li>
+Building a portable RPM required a bit of experimenting. I can suggest
+anyone to use my RPM Spec as a skeleton for his own module.
+</li>
+</points>

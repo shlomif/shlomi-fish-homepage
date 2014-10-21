@@ -1,0 +1,81 @@
+#include 'template.wml'
+
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+<pre class="mycode">
+<span class="Constant">'</span><span class="Constant">users</span><span class="Constant">'</span> =&gt;
+{
+    <span class="Constant">'</span><span class="Constant">fields</span><span class="Constant">'</span> =&gt;
+    [
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">User_ID</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">int32</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">input</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">auto</span><span class="Constant">&quot;</span>, <span class="Constant">'</span><span class="Constant">method</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">get-new-id</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">primary_key</span><span class="Constant">&quot;</span> =&gt; <span class="Constant">1</span>, },
+            <span class="Constant">'</span><span class="Constant">display</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">hidden</span><span class="Constant">&quot;</span> },
+        },
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">Name</span><span class="Constant">'</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">varchar</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type_params</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">len</span><span class="Constant">'</span> =&gt; <span class="Constant">255</span> },
+        },
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">Username</span><span class="Constant">'</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">varchar</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type_params</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">len</span><span class="Constant">'</span> =&gt; <span class="Constant">30</span> },
+            <span class="Constant">'</span><span class="Constant">input_params</span><span class="Constant">'</span> =&gt;
+            [
+                {
+                    <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">unique</span><span class="Constant">'</span>,
+                },
+                {
+                    <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">not_match</span><span class="Constant">&quot;</span>,
+                    <span class="Constant">'</span><span class="Constant">regex</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">^new$</span><span class="Constant">'</span>,
+                    <span class="Constant">'</span><span class="Constant">comment</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">new is a reserved word and cannot be assigned as a username</span><span class="Constant">&quot;</span>,
+                },
+                {
+                    <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">match</span><span class="Constant">'</span>,
+                    <span class="Constant">'</span><span class="Constant">regex</span><span class="Constant">'</span> =&gt; <span class="Constant">'</span><span class="Constant">^[a-zA-Z]\w*$</span><span class="Constant">'</span> ,
+                    <span class="Constant">'</span><span class="Constant">comment</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">The username must start with a letter and extend with letters, digits and underscores</span><span class="Constant">&quot;</span>,
+                },
+
+           ],
+           <span class="Constant">'</span><span class="Constant">display</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">constant</span><span class="Constant">&quot;</span> },
+        },
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">Super_Admin</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">title</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">Super Admin Flag</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">bool</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">input</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">auto</span><span class="Constant">&quot;</span>, <span class="Constant">'</span><span class="Constant">method</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">by-value</span><span class="Constant">&quot;</span>, <span class="Constant">'</span><span class="Constant">value</span><span class="Constant">'</span> =&gt; <span class="Constant">0</span>}
+        },
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">Password</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">varchar</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type_params</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">len</span><span class="Constant">'</span> =&gt; <span class="Constant">255</span> },
+            <span class="Constant">'</span><span class="Constant">display</span><span class="Constant">'</span> =&gt; {<span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">password</span><span class="Constant">&quot;</span> },
+        },
+        {
+            <span class="Constant">'</span><span class="Constant">name</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">Email</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">title</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">E-Mail</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type</span><span class="Constant">'</span> =&gt; <span class="Constant">&quot;</span><span class="Constant">email</span><span class="Constant">&quot;</span>,
+            <span class="Constant">'</span><span class="Constant">type_params</span><span class="Constant">'</span> =&gt; { <span class="Constant">'</span><span class="Constant">len</span><span class="Constant">'</span> =&gt; <span class="Constant">255</span> },
+        },
+    ],
+    <span class="Constant">'</span><span class="Constant">derived-tables</span><span class="Constant">'</span> =&gt; [ <span class="Constant">&quot;</span><span class="Constant">permissions</span><span class="Constant">&quot;</span> ],
+    <span class="Constant">'</span><span class="Constant">triggers</span><span class="Constant">'</span> =&gt;
+    {
+        <span class="Constant">'</span><span class="Constant">add</span><span class="Constant">'</span> =&gt;
+        [
+            <span class="Constant">&quot;</span><span class="Constant">INSERT INTO permissions (User_ID, Club_ID, Seminars, Subjects) SELECT </span><span class="Special">\$</span><span class="Constant">F{User_ID}, clubs.Club_ID, 0, 0 FROM clubs</span><span class="Constant">&quot;</span>,
+        ],
+        <span class="Constant">'</span><span class="Constant">delete</span><span class="Constant">'</span> =&gt;
+        [
+            <span class="Constant">&quot;</span><span class="Constant">DELETE FROM permissions WHERE User_ID = </span><span class="Special">\$</span><span class="Constant">F{User_ID}</span><span class="Constant">&quot;</span>,
+        ],
+    },
+}
+</pre>
+</td>
+</tr>
+</table>
+

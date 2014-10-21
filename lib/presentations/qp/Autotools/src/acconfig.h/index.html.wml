@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+
+<points>
+
+<li>
+<tt>acconfig.h</tt> is used to generate <tt>config.h.in</tt>, which is the
+file used to generate <tt>config.h</tt>.
+</li>
+
+<li>
+It should contain all the macro definitions needed to control the program.
+</li>
+
+<li>
+In it, a line of <tt>#undef MYMACRO</tt> specifies that the macro should
+not be defined by default. If it was defined during the run of the ./configure
+script, it would replace it as such.
+</li>
+
+<li>
+A line containing <tt>#define MYMACRO</tt> specifies that the macro would
+always be defined, but its value may vary.
+</li>
+
+<li>
+The utility <tt>autoheader</tt> can help in creating an initial
+<tt>config.h.in</tt> file.
+</li>
+</points>
+

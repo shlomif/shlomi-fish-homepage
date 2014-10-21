@@ -1,0 +1,31 @@
+#include 'template.wml'
+
+<p>
+There are other flags than <tt>e</tt> that can be appended to the end
+of the match or substitution.
+</p>
+
+<p>
+An <tt>i</tt> following the regular expression call, causes a case-insensitive
+operation on the string. Thus, for example, an "A" will match both "a" and "A".
+Note that the strings placed in <tt>$1</tt>, <tt>$2</tt> and friends will still
+retain their original case.
+</p>
+
+<p>
+A <tt>g</tt> causes the match or substitution to match <b>all</b> occurrences,
+not just one. If used with a match in an array context
+(e.g: <tt>@occurrences = ($string =~ /$regexp/g);</tt>) it retrieves all
+the matches and if used with a substitution it substitutes all the
+occurrences with the string.
+</p>
+
+<p>
+This example replaces all the occurrences of the word "hello" by the index of
+their occurrence:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/regexps/flags/index.pl" />
+</quadpres_code_block>
+

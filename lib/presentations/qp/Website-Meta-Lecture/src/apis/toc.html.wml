@@ -1,0 +1,12 @@
+#include 'template.wml'
+
+<points>
+<li>
+<tt>toc</tt> automatically creates a table of contents from the
+<tt>&lt;h1&gt;</tt>, <tt>&lt;h2&gt;</tt>, etc. headers found in the HTML.
+</li>
+</points>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/examples/APIs/toc/index.html.wml" />
+</quadpres_code_block>

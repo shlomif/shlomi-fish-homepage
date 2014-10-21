@@ -1,0 +1,19 @@
+#include 'template.wml'
+
+<points>
+<li>
+In order to search efficiently we need to keep a collection of states
+which we encountered so far.
+</li>
+
+<li>
+That is so they (and their derived states) won't be traversed to again
+and again.
+</li>
+
+<li>
+But how do we manage this collection?
+</li>
+</points>
+
+<qpcontents>

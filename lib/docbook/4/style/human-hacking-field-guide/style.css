@@ -1,0 +1,59 @@
+a:hover { background-color : palegreen; }
+body
+{
+    background:url(hhfg-bg-middle.png) #E5F0FA repeat-y top center;
+    color:black;
+    margin:0px;
+    padding:0px;
+    font-family: Sans-Serif;
+}
+.ads_top
+{
+    padding-top: 20px;
+    background: url(hhfg-bg-top.png) no-repeat center top #E5F0FA;
+    height: 180px;
+}
+.navfooter
+{
+    background: url(hhfg-bg-bottom.png) no-repeat center top #E5F0FA;
+    height: 180px;
+}
+.navheader hr
+{
+    display: none;
+}
+.itemizedlist ul.centralized
+{
+    text-align: center;
+    list-style-type : none;
+    font-size: large;
+}
+.section, .toc, .title, .author, table, p, hr, .titlepage div
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:760px;
+}
+hr
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h1, h2
+{
+    margin-bottom: 1em;
+}
+.toc dl
+{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.center
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+

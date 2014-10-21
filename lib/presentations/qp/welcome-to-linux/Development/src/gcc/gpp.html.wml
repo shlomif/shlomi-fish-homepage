@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<points>
+<li>
+g++ is actually a script which calls gcc with the appropriate options in
+order to compile C++. Standard suffixes for C++ source files are: <tt>.C</tt>,
+<tt>.cc</tt>, <tt>.cxx</tt>, <tt>.cpp</tt>, or <tt>.c++</tt>.
+</li>
+<li>
+I recommend using g++ like so:<br />
+<tt class="cmd">g++ -Wall file1 [file2 [file3...]] -o output_file</tt>
+</li>
+</points>
+

@@ -7,6 +7,8 @@
  *Author: byPrelco Web Design
  *Author URI: http://www.byprelco.com
 
+@import "charsheet-basics"
+
 html, body, div, span, applet, object, iframe, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, s, samp, small, var, fieldset, form, label, legend
     margin: 0
     padding: 0
@@ -52,7 +54,10 @@ body
     margin: 10px auto 0 auto
     height: 100%
     width: 1024px
-    background: url('images/faux-extended-1200.jpg') repeat
+    +big-screen
+        background: url('images/faux-extended-1200.jpg') repeat
+    +small-screen
+        background-color: #e0ebef
     border-radius: 10px 10px 10px
 
 #container-all
@@ -174,11 +179,12 @@ a
 
 #main
     margin: 10px auto 0 40px
-    width: 700px
-    height: auto
-    float: left
     text-align: left
-    padding-right: 0.5em
+    +big-screen
+        width: 700px
+        height: auto
+        float: left
+        padding-right: 0.5em
     .comments
         margin: 10px auto auto auto
         width: 590px

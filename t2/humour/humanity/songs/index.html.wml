@@ -1,0 +1,69 @@
+#include "prelude.wml"
+#include "driver.wml"
+
+#include "stories/blurbs.wml"
+#include "stories/stories-list.wml"
+#include "xml_g_fiction.wml"
+
+<latemp_subject "Recording of Songs from the Humanity - The Movie screenplay" />
+<latemp_meta_desc "Songs from the screenplay for a film Humanity, a parody of humanity and modern life in particular: “Buy the Fish”" />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+These are recordings of the songs from the screenplay
+<a href="../"><i>Humanity</i></a>.
+</p>
+
+<h2 id="buy_the_fish_shlomif_with_amplified_audio"><a href="http://www.youtube.com/watch?v=Y8IeBG_SSt4">“Buy the Fish” - Amplified Audio</a></h2>
+
+<object type="application/x-shockwave-flash"
+style="width:450px; height:366px;"
+data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
+        <param name="movie" value="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3" />
+        <param name="allowFullScreen" value="true" />
+        <param name="allowscriptaccess" value="always" />
+</object>
+
+<h2 id="shlomif_singing_buy_the_fish_in_english"><a href="http://www.youtube.com/watch?v=xvjBojyWPoE">Shlomi
+Fish Singing “Buy the Fish” in English</a></h2>
+
+<object type="application/x-shockwave-flash"
+style="width:450px; height:366px;"
+data="http://www.youtube.com/v/xvjBojyWPoE?color2=FBE9EC&amp;version=3">
+        <param name="movie" value="http://www.youtube.com/v/xvjBojyWPoE?color2=FBE9EC&amp;version=3" />
+        <param name="allowFullScreen" value="true" />
+        <param name="allowscriptaccess" value="always" />
+</object>
+
+<div style="font-size: 0.8em"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<define-tag video_tag_experiment__CANCELLING>
+<page_extra_head_elements>
+<link href="$(ROOT)/js/video-js/video-js.min.css" rel="stylesheet" />
+<script src="$(ROOT)/js/video-js/video.min.js" type="text/javascript"></script>
+<script src="$(ROOT)/js/video-js/vjs.youtube.js" type="text/javascript"></script>
+</page_extra_head_elements>
+
+<h2 id="video_tag_test">Test</h2>
+
+<video id="vid1" class="video-js vjs-default-skin" controls="controls" preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/v/Y8IeBG_SSt4" }'></video>
+
+</define-tag>
+

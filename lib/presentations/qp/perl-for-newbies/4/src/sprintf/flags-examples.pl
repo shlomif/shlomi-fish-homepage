@@ -1,0 +1,6 @@
+printf '<% d>', 12;   # prints "< 12>"
+printf '<%+d>', 12;   # prints "<+12>"
+printf '<%6s>', 12;   # prints "<    12>"
+printf '<%-6s>', 12;  # prints "<12    >"
+printf '<%06s>', 12;  # prints "<000012>"
+printf '<%#x>', 12;   # prints "<0xc>"

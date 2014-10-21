@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+
+
+<p>
+To call the methods of an object, one should use the
+<tt>$object_ref-&gt;method_name(@args)</tt> notation.
+</p>
+
+<p>
+Note that internally the method receives <tt>$object_ref</tt>
+as its first argument.
+</p>
+
+
+

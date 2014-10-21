@@ -1,0 +1,45 @@
+#include 'template.wml'
+
+<p>
+Layers can be merged using other methods except their Alpha.
+These are available in the "Mode" combo-box of the layers dialog.
+</p>
+
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Generate an image with <menupath>&lt;Toolbox&gt; -&gt; Xtns -&gt; Script-Fu -&gt; Patterns -&gt; "3D Truchet"</menupath>.
+</li>
+<li>
+Duplicate the layer using <menupath>&lt;Layers&gt; -&gt; Duplicate Layer</menupath>.
+</li>
+<li>
+Render a nice gradient on the lower layer.
+</li>
+<li>
+Change the mode of the upper layer to Screen.
+</li>
+<li>
+Switch the mode to Addition and then to Subtract and to other
+modes.
+</li>
+
+</ol>
+
+</td>
+</tr>
+</table>
+
+<p>
+The operations that are used to merge the various layers are
+described the in the Gimp User's Manual.
+</p>
+
+

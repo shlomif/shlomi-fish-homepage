@@ -1,0 +1,107 @@
+#include '../template.wml'
+#include "xml_g_fiction.wml"
+#include "stories/stories-list.wml"
+#include "toc_div.wml"
+
+<latemp_subject "The Muppets’ Show - The Next Incarnation" />
+<latemp_meta_desc "Ideas for the next incarnation of The Muppet Show" />
+
+<latemp_more_keywords "muppet,muppets,The Muppet Show" />
+
+<: Shlomif::Homepage::LongStories->render_common_top_elems('muppets_show_tni'); :>
+
+<h2 id="read_online">Read Online</h2>
+
+<set-var epub_prefix="Muppets-Show--" />
+<ul>
+<story_episode_li base="Harry-Potter" title="Harry Potter" />
+<story_episode_li base="Summer-Glau-and-Chuck-Norris" title="Summer Glau and Chuck Norris" />
+<story_episode_li base="Jennifer-Lawrence" title="Jennifer Lawrence" />
+</ul>
+
+<toc_div />
+
+<h2 id="sources">Sources</h2>
+
+<ul>
+
+<li>
+<screenplay_github_repo
+    url="http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation" />
+</li>
+
+</ul>
+
+<h2 id="suitability">Suitability</h2>
+
+<p>
+This work was enjoyed by people who were only familiar with either the
+Fountainhead or the Friends T.V. show.
+</p>
+
+<h2 id="licensing">Licensing</h2>
+
+<p>
+All the text is original, and as far as
+I’m concerned can be used under the terms of
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">the Creative Commons
+Attribution-Noncommercial-ShareAlike licence Unported (CC-by-sa),
+either version 4.0, or at your option any later version</a>, but
+like I said, the situation is more complicated than that.
+</p>
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
+a story about teenage open source/open content developers in 2005 Los Angeles.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+“We, the Living Dead”</a> - a Star Trek episode inspired by Objectivism.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/obj-oss/">“Objectivism and Open Source”</a> -
+why open source is compatible with Objectivism.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">Shlomi Fish’s
+Advice for the Young</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/the-eternal-jew/">“The Eternal Jew”</a> - another
+Objectivism-inspired essay.
+</p>
+</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+
+<h3 id="friends_fountain_image">Friends Fountain Image</h3>
+
+<p>
+The <i>Friends</i>’ fountain image that serves as the logo was taken
+from <a href="http://www.youtube.com/watch?v=YKYL_zcSfzc">the “Friends Opening
+(HD)”</a> video-clip on YouTube at approximate time 0m40s.
+</p>
+
+<p>
+One can find the intermediate images
+in <a href="http://github.com/shlomif/The-One-with-the-Fountainhead-Logo">a
+GitHub repository</a>.
+</p>

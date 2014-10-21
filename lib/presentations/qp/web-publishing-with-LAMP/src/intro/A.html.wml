@@ -1,0 +1,37 @@
+#include 'template.wml'
+
+<points>
+<li>
+<a href="http://httpd.apache.org/">Apache</a>.
+(The most common web-server on the Internet. Highly configurable and
+extensible.)
+</li>
+<li>
+<a href="http://www.aolserver.com/">AOLserver</a>.
+(A Tcl-enabled feature-rich web-server created by America On-Line).
+</li>
+<li>
+<a href="http://www.acme.com/software/thttpd/">thttpd</a>
+(Tiny/Turbo/Throttling HTTP Server)
+</li>
+<li>
+<a href="http://www.roxen.com/products/webserver/">Roxen</a>
+</li>
+</points>
+
+<p>
+And even:
+</p>
+
+<points>
+<li>
+Perl's HTTP::Daemon and friends in other languages.
+</li>
+<li>
+TUX (a web-server in the kernel)
+</li>
+<li>
+Microsoft's IIS.
+</li>
+</points>
+

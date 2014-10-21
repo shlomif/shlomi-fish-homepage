@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<points>
+<li>
+Indirect stacks were originally individually malloc'ed.
+</li>
+<li>
+This consumed a lot of overhead memory.
+</li>
+<li>
+In recent versions, they were compactly allocated, contiguously, out of a
+memory pool.
+</li>
+</points>

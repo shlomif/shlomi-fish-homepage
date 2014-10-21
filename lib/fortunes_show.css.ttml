@@ -1,0 +1,88 @@
+a:hover { background-color: palegreen; }
+#nav {
+    float: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0.5em;
+    list-style: none;
+    margin-bottom: 0;
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
+}
+h1 {
+    clear: left;
+}
+#random {
+    width: 100%;
+    float: right;
+    padding-left: 0.5em;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+    list-style: none;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav li:before {
+    content: "→";
+}
+
+#nav li:first-child:before {
+    content: "";
+}
+
+#random li {
+    float: right;
+}
+
+#nav li a, #random li a {
+    text-decoration: none;
+}
+
+#nav li a {
+    display: inline-block;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+    padding:1.3pt;
+}
+
+#random li a {
+    display: block;
+    /* Derived from GreenYellow (#ADFF2F) but hurts the eyes less. */
+    background-color: #cdff8f;
+    color: black;
+    padding: 2pt 3pt;
+    margin-right: 5pt;
+    border: black solid 1pt;
+    border-radius: 5px;
+}
+
+#random li a:hover {
+    background-color: #adb08f;
+}
+
+.fortunes_list {
+    border: 1pt solid darkgreen;
+    border-radius: 10px;
+    padding: 0.5em;
+    background-color: #ddf;
+}
+
+.fortunes_list:hover {
+    border-color: #787;
+}
+
+.fortunes_list h3 {
+    margin-top: 0.2em;
+}
+
+.fortunes_list a {
+    padding: 1pt;
+}

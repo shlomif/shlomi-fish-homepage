@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+
+
+<p>
+Perl is interpreted, so no compilation is needed. To use perl, one should
+create a text file that contains the Perl program. This file can be written
+using any text editor available on your system. It is recommended that
+you end the filenames of your perl scripts with ".pl" in order to designate
+them as perl scripts.
+</p>
+
+<p>
+After you are done, you should invoke the perl interpreter with the name of
+the file you created. Assuming your file is name "myscript.pl", you should
+type:
+</p>
+
+
+<quadpres_code_block>
+$ perl myscript.pl
+</quadpres_code_block>
+
+<p>
+At the command line (and press Enter). If your program contains errors or
+warnings they will be displayed. If your program does not contain errors, it
+will be executed.
+</p>
+
+<p>
+The fact that the program was executed does not mean it does what you want it
+to do. We will learn how to debug Perl programs, later on in this series.
+</p>
+
+
+

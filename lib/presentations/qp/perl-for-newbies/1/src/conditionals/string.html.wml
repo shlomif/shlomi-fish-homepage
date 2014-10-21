@@ -1,0 +1,90 @@
+#include 'template.wml'
+
+
+
+<p>
+In order to compare for string equality, or if one string is alphabetically
+bigger than another, you can use the six string comparison operators. Here
+are the string operators together with the numerical operators they correspond
+too:
+</p>
+
+<table border="1">
+<tr>
+<td>
+<b>String Operator</b>
+</td>
+<td>
+<b>Numerical Operator</b>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>eq</tt>
+</td>
+<td>
+<tt>==</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>ne</tt>
+</td>
+<td>
+<tt>!=</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>gt</tt>
+</td>
+<td>
+<tt>&gt;</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>lt</tt>
+</td>
+<td>
+<tt>&lt;</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>ge</tt>
+</td>
+<td>
+<tt>&gt;=</tt>
+</td>
+</tr>
+
+<tr>
+<td>
+<tt>le</tt>
+</td>
+<td>
+<tt>&lt;=</tt>
+</td>
+</tr>
+</table>
+
+<p>
+Notice that the string operators are built from the initials of their
+abbreviated names. (E.g: eq = equal, gt = greater than). Perl's string
+comparison is case-sensitive. If you want a case insensitive
+string comparison, use the <tt>lc</tt> function to convert the strings to
+lowercase beforehand.
+</p>
+
+<p>Example:</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/conditionals/string_compare.pl" />
+</quadpres_code_block>
+

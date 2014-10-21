@@ -1,0 +1,50 @@
+#include 'template.wml'
+
+<p>
+Here are some of the supported conversions:
+</p>
+
+<define-tag conv endtag="required">
+<tr>
+<td>
+<tt>%0</tt>
+</td>
+<td>
+%body
+</td>
+</tr>
+</define-tag>
+
+<table>
+<conv "%%">An actual percent sign</conv>
+<conv "%c">A character with the given ASCII number</conv>
+<conv "%s">A string</conv>
+<conv "%d">A signed integer, in decimal (also <tt>%i</tt>)</conv>
+<conv "%o">An integer in octal</conv>
+<conv "%x">An integer in hexadecimal. (use <tt>%X</tt> for
+uppercase hex)</conv>
+<conv "%e">A floating point number, in scientific notation.</conv>
+<conv "%f">A float in fixed decimal notation.</conv>
+<conv "%b">An integer in binary</conv>
+</table>
+
+<p>
+Here are some examples:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/sprintf/conv-examples.pl" />
+</quadpres_code_block>
+
+<p>
+And their output is:
+</p>
+
+
+<quadpres_code_block>
+There is 27% of alcohol in this beverage
+This string ends here.
+650 in hex is 0x28a
+650 in binary is 0b1010001010
+3.2 + 1.6 == 4.800000
+</quadpres_code_block>

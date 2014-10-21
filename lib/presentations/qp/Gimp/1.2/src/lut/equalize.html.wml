@@ -1,0 +1,45 @@
+#include 'template.wml'
+
+<p>
+The "Equalize" operation constructs an appropriate Look-Up Table so that
+the histogram of the resultant image will be more or less a constant
+function.
+</p>
+
+<p>
+Low colour values will remain lower than higher ones, but the spread of
+them will change.
+</p>
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+
+<li>
+Open the <tt>Fifteen-Cent-Ramen-1.jpg</tt> picture.
+</li>
+
+<li>
+Show its histogram
+</li>
+
+<li>
+Equalize it using <menupath>&lt;Image&gt; -&gt; Image -&gt; Colors -&gt; Auto -&gt; Equalize</menupath>
+</li>
+
+<li>
+Looks Better, doesn't it?
+</li>
+
+<li>
+Show its histogram.
+</li>
+</ol>
+
+</td>
+</tr>
+</table>

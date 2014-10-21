@@ -1,0 +1,26 @@
+AC_ARG_ENABLE(debug-rwlock,
+ [  --enable-debug-rwlock  Enable an RWLock that prints debug notices \
+  on the screen. This is a debugging feature which should not be \
+  usually enabled],
+ [ debug_rwlock=yes
+ ])
+
+AC_ARG_ENABLE(states-type,
+ [  --enable-states-type[=state type] Specify the states type:
+                      compact [default]: Compact States
+                      debug: Debug States (very slow)
+                      indirect: Indirect Stack States],
+ [ if   test "x$enableval" = "xcompact" ; then
+      states_type=compact
+   elif test "x$enableval" = "xdebug" ; then
+      states_type=debug
+   elif test "x$enableval" = "xindirect" ; then
+      states_type=indirect      
+   else
+      echo 
+      echo "Error!"
+      echo "Unknown states' type"
+      exit -1
+   fi
+ ])
+

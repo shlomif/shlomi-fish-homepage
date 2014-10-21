@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<points>
+<li>
+We can define variables in makefiles to make the writing shorter and
+the modifications easier.
+</li>
+<li>
+Rewriting previous makefile with variables and extra targets.
+</li>
+</points>
+
+<div class="mycode">
+<pre>
+<span class="c31">CC</span>= gcc
+<span class="c31">LD</span>= gcc
+<span class="c31">CC_FLAGS </span>= -ansi -Wall -c
+<span class="c31">LD_FLAGS </span>= -Wall
+
+<span class="c31">all</span>: foo bar
+
+<span class="c31">foo</span>: foo.o helper.o
+    <span class="c31">\$(LD)</span> <span class="c31">\$(LD_FLAGS)</span> foo.o helper.o -o foo
+<span class="c31">bar</span>: bar.o helper.o
+    <span class="c31">\$(LD)</span> <span class="c31">\$(LD_FLAGS)</span> bar.o helper.o -o bar
+
+<span class="c31">bar.o</span>: bar.c
+    <span class="c31">\$(CC)</span> <span class="c31">\$(CC_FLAGS)</span> bar.c
+<span class="c31">foo.o</span>: foo.c foo.h
+    <span class="c31">\$(CC)</span> <span class="c31">\$(CC_FLAGS)</span> foo.c
+
+<span class="c31">clean</span>:
+    rm -f *.o foo bar
+</pre>
+</div>
+

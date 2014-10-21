@@ -1,0 +1,185 @@
+Summary of Bourne Shell Lecture
+
+
+Motivation:
+
+* Bash is the de-facto shell on Linux.
+
+* One can write and debug complete scripts on one line of the command
+prompt.
+
+* Sometimes Bash Scripts are faster to write and/or easier to understand
+than the equivalent perl scripts.
+
+* "./configure" scripts are written in Bourne shell, and knowledge of it
+is required to effectively use GNU autoconf.
+
+* /bin/sh is expected to be available on any UNIX system by virtue of POSIX.
+
+* "Csh Programming Considered Harmful" by Tom Christiansen:
+
+http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/
+
+Pipeline:
+---------
+
+One can pipe the output of one command to the input of another by using
+the "|". Examples:
+
+ls -l | less
+	pages the output of ls -l
+cat *.c *.h | wc -l
+	Determines how many lines are in c and h
+ls -l | grep '^d' | wc -l
+	Counts the number of directories in the CWD. (* - what MosheZ noted)
+
+Variables:
+----------
+
+Assign by using "MYVAR=value". No spaces before or after the "=". To assign
+more than one word use something like:
+
+MYVAR="More than one word"
+
+To retrieve the value use $MYVAR or "$MYVAR" if you wish it to be considered
+as one atom. Another common syntax is ${MYVAR}.
+
+The command "read MYVAR" reads a line from the standard input and places it
+inside MYVAR.
+
+Examples:
+
+echo "Enter a number:"
+read NUM
+RESULT=`expr $NUM \* 2`
+echo "$NUM * 2 = $RESULT"
+
+If Constructs:
+--------------
+
+If the program return value is 0 it is considered true, else it is 1. Some
+programs, such as test and expr were designed so their return value can be
+used within shell scripts.
+
+* Use if .. elif .. else .. fi to have a conditional:
+
+#!/bin/sh
+echo "Please enter a number:"
+read A
+
+if expr $A \> 1000 > /dev/null ; then
+	echo "$A is greater than one thousand"
+elif expr $A \> 100 > /dev/null ; then
+	echo "$A is greater than one hundred"
+else
+	echo "$A is lesser or equal to one hundred"
+fi
+
+Note: the condition can be any program or builtin command that returns
+a status.
+
+- Notice the use of semicolons. In fact, if the echo's were terminated by
+semicolons, it was possible to write the entire expression on one line, like
+this:
+
+- The output of "expr" is redirected to /dev/null so the "0"'s and "1"'s it
+returns will not be displayed.
+
+While:
+------
+
+Use while to execute a group of statement as long as a condition is met:
+
+#!/bin/sh
+
+A=1
+while expr $A \<= 100 > /dev/null ; do
+	echo $A
+	A=`expr $A + 1`
+done
+
+One can iterate over all the lines of the standard input with "while read
+MYVAR" :
+
+#!/bin/sh
+
+find . -name '*.c' |
+(while read T ; do
+	cp $T $T.bak ;
+ done)
+
+For:
+----
+
+Use for to iterate over a group of values:
+
+for I in *.c *.h ; do
+	cp $I $I.bak
+done
+
+- Notice: If you wish to pre-specify the values you wish to iterate over in
+a statement then use for I in $MYLIST. For example:
+
+MYLIST="one two three four"
+for I in $MYLIST ; do
+	echo $I
+done
+
+- If you wish to have whitespaces inside the arguments use the following
+method:
+
+MYLIST="Hello \"My World\" You Too"
+
+eval "for I in $MYLIST ; do echo \$I ; done"
+
+
+&& and ||
+---------
+
+- <Statement 1> && <Statement 2> will execute Statement 2 iff Statement 1
+    returns a true value.
+
+  <Statement 1> || <Statement 2> will execute Statement 2 iff Statement 1
+    returns a false value.
+
+Trapping Command Output
+-----------------------
+
+Use backquotes (` `) to trap the output of a command. Example:
+
+A=5
+B=`expr $A + 1`  # Get the number following A
+echo $B
+
+Another option, which is useful if you have more than one line is to
+pipe the output to a  (while read ... ) loop, or to pipe to xargs. xargs
+is a GNU extension and is not available on all systems.
+
+Bash, zsh and ash also offer $( .... ), which does the same operation
+as the backquotes except that it behaves as a sub-shell, not as a string.
+E.g: B=$( A=5 ; echo $A ) will assign 5 to B. Again, I'm not sure if
+proprietary System V sh's offer this functionality.
+
+
+
+Sub-shells
+----------
+
+a ( ... ) wraps a sub-shell, which is a separate process that executes a
+mini-shell script. All modifications to variables inside it will not be
+apparent on the main script.
+
+find . -name '*.c' |
+(
+	while read T ; do
+		A=`echo $T | sed 's/\\.c\$//'`
+		cp $T $A.bak
+	done
+)
+
+# A or T are not set here.
+
+
+
+
+

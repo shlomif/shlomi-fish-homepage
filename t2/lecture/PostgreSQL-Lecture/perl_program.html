@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang=
+"en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Example Perl Program</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+<style type="text/css">
+<!--
+.Statement { color: #a52a2a; font-weight: bold; }
+.Identifier { color: #008b8b; }
+.Constant { color: #ff00ff; }
+.Special { color: #6a5acd; }
+pre { color: #000000; background-color: #ffffff; }
+body { color: #000000; background-color: #ffffff; }
+.PreProc { color: #a020f0; }
+-->
+</style>
+</head>
+<body>
+<h1>Example Perl Program</h1>
+
+<pre>
+<span class="PreProc">#!/usr/bin/perl</span>
+
+<span class="PreProc">use </span>DBI;
+
+<span class="PreProc">use strict</span>;
+
+<span class="Statement">my</span> <span class="Identifier">$conn</span> = DBI-&gt;<span class="Statement">connect</span>(<span class="Constant">&quot;</span><span class="Constant">dbi:Pg:dbname=test</span><span class="Constant">&quot;</span>);
+
+<span class="Statement">my</span> (<span class="Identifier">$first_name</span>, <span class="Identifier">$last_name</span>, <span class="Identifier">$hired_at</span>);
+<span class="Statement">my</span> (<span class="Identifier">@row</span>);
+
+<span class="Identifier">$conn</span><span class="Identifier">-&gt;do</span>(<span class="Constant">&quot;</span><span class="Constant">SET DateStyle = 'European'</span><span class="Constant">&quot;</span>);
+
+<span class="Statement">my</span> <span class="Identifier">$query</span> = <span class="Identifier">$conn</span><span class="Identifier">-&gt;prepare</span>(
+    <span class="Constant">&quot;</span><span class="Constant">SELECT first_name, last_name, hired_at</span><span class="Constant">&quot;</span> .
+    <span class="Constant">&quot;</span><span class="Constant"> FROM employees</span><span class="Constant">&quot;</span> .
+    <span class="Constant">&quot;</span><span class="Constant"> ORDER BY last_name, first_name</span><span class="Constant">&quot;</span>
+    );
+<span class="Identifier">$query</span><span class="Identifier">-&gt;execute</span>();
+
+<span class="Statement">print</span> <span class="Statement">sprintf</span>(<span class="Constant">&quot;</span><span class="Constant">%-40s%-20s</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">Name:</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">Hired At:</span><span class="Constant">&quot;</span>), <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+<span class="Statement">print</span> <span class="Constant">&quot;</span><span class="Constant">-</span><span class="Constant">&quot;</span> x <span class="Constant">60</span> . <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+<span class="Statement">while</span> (<span class="Identifier">@row</span> = <span class="Identifier">$query</span><span class="Identifier">-&gt;fetchrow_array</span>())
+{
+    (<span class="Identifier">$first_name</span>, <span class="Identifier">$last_name</span>, <span class="Identifier">$hired_at</span>) = <span class="Identifier">@row</span>;
+
+    <span class="Statement">print</span> <span class="Statement">sprintf</span>(<span class="Constant">&quot;</span><span class="Constant">%-40s%-20s</span><span class="Constant">&quot;</span>, <span class="Identifier">$first_name</span> . <span class="Constant">&quot;</span><span class="Constant"> </span><span class="Constant">&quot;</span> . <span class="Identifier">$last_name</span>, <span class="Identifier">$hired_at</span>),
+        <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+}
+
+<span class="Statement">undef</span>(<span class="Identifier">$query</span>);
+<span class="Identifier">$conn</span><span class="Identifier">-&gt;disconnect</span>();
+<span class="Identifier">$conn</span> = <span class="Statement">undef</span>;
+</pre>
+
+</body>
+</html>

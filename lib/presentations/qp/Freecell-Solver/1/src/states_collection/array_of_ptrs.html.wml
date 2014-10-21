@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<points>
+<li>
+Version 0.2 of Freecell Solver stored the states in a flat array of structs.
+</li>
+
+<li>
+I converted it into an array of pointers to dynamically allocated structs,
+due to the fact that I ran out of stack on Windows NT when passing
+the arrays to functions as parameters.
+</li>
+
+<li>
+This had the happy effect of making the program much faster.
+</li>
+
+<li>
+Reason: Sorting an array of pointers is much faster than sorting an array
+of structs, because a pointer is considerably smaller.
+</li>
+
+</points>
+

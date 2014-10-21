@@ -1,0 +1,23 @@
+#include 'template.wml'
+
+<points>
+<li>
+In older versions of FCS, when deriving a state, all the allocated stacks
+were first allocated to a temporary memory, then modified and then
+looked up or registered in the stack collection.
+</li>
+<li>
+Starting from version 2.6.x, a different, faster scheme was enacted:
+</li>
+<li>
+Every stack is marked with its own flag. Once modified, the stack is
+temporarily allocated and its flag set.
+</li>
+<li>
+The non-marked stacks are kept as they are, while the marked stacks
+are looked up in the stack collection.
+</li>
+<li>
+This is a variant of the Copy-on-Write (COW) technique.
+</li>
+</points>

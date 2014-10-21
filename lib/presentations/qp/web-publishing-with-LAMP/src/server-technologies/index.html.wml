@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<ol class="point">
+<li>
+Static Content - a content that is read from the hard-disk and broadcast
+to the users in a non-altered form.
+</li>
+<li>
+Server-side Generated Content - a content that invokes a
+callback on the server side, that spits out content to the user. (possibly
+based on user parameters like HTTP parameters, cookies, the URL path, etc.)
+</li>
+</ol>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+/*
+ * color.css -- A high-color stylesheet that looks great on the web.
+ * background: blue and orange-beige, primary fonts: Verdana and Trebuchet
+ *
+ * Contributed 2001 by Bruce Christensen
+ * http://xmlresume.sourceforge.net
+ */
+
+// This dummy style must be here because the xml tags above cause some
+// browsers (Konqueror, Mozilla) to ignore the first style
+.dummy { background-color: white }
+
+body {
+    font-family: verdana, arial, helvetica, sans-serif;
+    background-color: #336699;
+    margin: 20px;
+}
+.resume {
+    background-color: #ffcc99;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    padding-left: 30pt;
+    padding-right: 30pt;
+}
+.heading {
+    margin-left: -20pt;
+}
+h1, h2, h3 {
+    font-family: trebuchet ms, verdana, arial, helvetica, sans-serif;
+}
+.headingText {
+    background-color: #336699;
+    color: white;
+    padding: 2px;
+    border: 1px solid #999999;
+}
+p {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.awardTitle { font-weight: bold }
+.bookTitle { font-style: italic }
+.citation { font-style: italic }
+.clearanceLevel { font-weight: bold }
+.copyright { font-size: 75% }
+li.degree { margin-bottom: 0.5em; }
+.degreeTitle { font-weight: bold }
+.employer { font-style: italic }
+.jobTitle { font-weight: bold }
+.lastModified { font-size: 75% }
+.membershipTitle { font-weight: bold }
+div.referee { margin-bottom: 1em; }
+.refereeName { font-weight: bold }
+.skillsetTitle { font-weight: bold }
+table.referees { width: 80% ; }
+
+</xsl:stylesheet>

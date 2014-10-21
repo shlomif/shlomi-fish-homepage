@@ -1,0 +1,20 @@
+#include 'template.wml'
+
+<points>
+<li>
+<a href="http://java.sun.com/products/jsp/">Java Server
+Pages (or JSP)</a> - server-side scripts that make use of Java Objects
+(Java Beans) to perform most of the complex operations.
+</li>
+<li>
+Each <tt>.jsp</tt> script is translated to Java on the fly, and cached.
+</li>
+<li>
+Being Java it is reportedly hard to set up in Apache and
+other web-servers.
+</li>
+<li>
+Java has a non-open-source and problematic license.
+</li>
+</points>
+

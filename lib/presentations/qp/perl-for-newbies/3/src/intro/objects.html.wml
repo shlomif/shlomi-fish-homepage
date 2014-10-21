@@ -1,0 +1,22 @@
+#include 'template.wml'
+
+<p>
+An object is a set of variables and functions that are associated with
+this set. By calling these functions (commonly referred to as methods)
+one automatically has access to all the variables of the set. That
+way, it is possible to create and manage several instances of objects
+of the same class.
+</p>
+
+<p>
+In Perl, every class resides in its own namespace. Perl enables various
+associations to be performed on entire classes. For instance, one class
+can inherit one or more classes, and thus have access to all of their
+methods.
+</p>
+
+<p>
+By making a set of perl functions into a class, it is possible to make sure
+they can be instantiated and re-used. Furthermore, this class can later be
+expanded into a more powerful class, by making another class inherit it.
+</p>

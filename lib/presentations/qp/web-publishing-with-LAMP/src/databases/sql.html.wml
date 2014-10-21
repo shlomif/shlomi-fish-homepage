@@ -1,0 +1,51 @@
+#include 'template.wml'
+
+<ol class="point">
+<li>
+<a href="http://www.mysql.com/">MySQL</a><br />
+<ul class="point">
+<li>Runs on UNIXes and NTs.</li>
+<li>Very fast, especially for very small loads.</li>
+<li>Incredibly limited and not easily extensible.</li>
+<li>GPLed</li>
+<li>
+Client library used to be LGPLed, but became GPLed in version 4.x
+and above. (this was a controversial move).
+</li>
+</ul>
+</li>
+<li>
+<a href="http://www.postgresql.org/">PotgreSQL</a><br />
+<ul class="point">
+<li>Runs on UNIXes and NT.</li>
+<li>Flexible, but still has some limitations.</li>
+<li>Open-Source (BSD license)</li>
+</ul>
+</li>
+<li>
+<a href="http://firebird.sourceforge.net/">Firebird</a> - supports
+the whole SQL 92' standard. Open-Source. Not as widely accepted as
+MySQL and PostgreSQL, and not as fast.
+</li>
+<li>
+<a href="http://www.mysql.com/products/maxdb/">MaxDB</a> - another
+database made open-source (GPL with client library as GPL).
+</li>
+<li>
+<a href="http://www.oracle.com/">Oracle</a> - A commercial, proprietary
+solution that costs quite a bit, but is quite fast, and supports many features
+other databases don't.
+</li>
+<li>
+<a href="http://www.sqlite.org/">SQLite</a> - a file-based SQL database
+system. Very lightweight and fast, but non-networked. Public Domain.
+</li>
+</ol>
+
+<h2>Others</h2>
+
+<p>
+Refer <a href="http://freshmeat.net/articles/view/305/">to this Freshmeat
+Editorial about the subject</a>.
+</p>
+

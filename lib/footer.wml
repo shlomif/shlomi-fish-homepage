@@ -1,0 +1,34 @@
+#include "utils.wml"
+
+<define-tag webmaster_footer>
+
+<ul class="bt_nav">
+<li>
+<a href="$(ROOT)/">Home</a>
+</li>
+<li>
+<a href="$(ROOT)/me/">About</a>
+</li>
+<li>
+<a href="$(ROOT)/me/contact-me/">Contact Us</a>
+</li>
+<li>
+<a href="$(ROOT)/meta/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a href="$(ROOT)/meta/anti-spam-policy/">Anti-Spam Policy</a>
+</li>
+<li>
+<a href="$(ROOT)/meta/FAQ/" title="Frequently asked questions list">FAQ</a>
+</li>
+<li>
+<a href="$(ROOT)/me/blogs/">RSS/Atom Feeds</a>
+</li>
+</ul>
+
+<p>
+Written, designed and maintained by Shlomi Fish,
+<mailto_link_to_self email="<main_email />" />
+</p>
+
+</define-tag>

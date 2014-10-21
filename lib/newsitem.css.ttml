@@ -1,0 +1,12 @@
+/* h3.newsitem { text-indent: 3em } */
+[% IF 0 %]
+p.newsitem, ol.newsitem, ul.newsitem { margin-left : 3em }
+.newsitem p, .newsitem ol, .newsitem ul
+{
+    margin-left: 0.5em;
+}
+[% END -%]
+.news_item
+{
+    margin-left: 3em;
+}

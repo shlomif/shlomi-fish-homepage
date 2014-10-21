@@ -1,0 +1,1 @@
+void common_func();

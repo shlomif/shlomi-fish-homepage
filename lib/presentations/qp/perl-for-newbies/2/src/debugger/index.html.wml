@@ -1,0 +1,24 @@
+#include 'template.wml'
+
+<p>
+Even if your perl code compiles and runs, it doesn't mean it is error free.
+Very often you will write programs that when given specific input, will behave
+very differently from their intended behaviour. Perl supplies the user with a
+debugger that can help in trapping such bugs in the program.
+</p>
+
+<p>
+The debugger is invoked simply by appending a "-d" switch before the script
+name. E.g: <tt>perl -d hello.pl</tt>. After typing "Return" at the shell command
+line, you will have an interactive debugging session at your disposal. At this
+session, you can control the execution of your program as well as enter any
+Perl command you like.
+</p>
+
+<p>
+The following chapter will cover the basics of using the perl debugger, and
+will give you pointers on where to find more information.
+</p>
+
+
+

@@ -8,20 +8,28 @@ function build_toggler(args) {
     var toggled_class = args['toggled_class'];
     var hide_text = args['hide_text'];
     var show_text = args['show_text'];
+    var default_state = (('default_state' in args) ? args['default_state'] : true);
 
     var toggle_sect_menu = function() {
         var elem = $(toggler_selector);
 
-        if (elem.hasClass("off")) {
+        var is_off = elem.hasClass("off");
+        if (is_off) {
             elem.text(hide_text);
-            if (has_ls) {
-                localStorage.setItem(toggle_sect_key, "1");
-            }
         }
         else {
             elem.text(show_text);
             if (has_ls) {
                 localStorage.removeItem(toggle_sect_key);
+            }
+        }
+        if (has_ls) {
+            var is_on = !is_off;
+            if (is_on == default_state) {
+                localStorage.removeItem(toggle_sect_key);
+            }
+            else {
+                localStorage.setItem(toggle_sect_key, (is_on ? "1" : "0"));
             }
         }
         $(toggled_selector).toggleClass(toggled_class);
@@ -37,6 +45,11 @@ function build_toggler(args) {
 
         if (has_ls) {
             var in_storage = localStorage.getItem(toggle_sect_key);
+
+            if (in_storage == undefined) {
+                in_storage = default_state;
+            }
+
             var in_elem = elem.hasClass("on");
 
             if ((in_storage && (!in_elem)) || ((!in_storage) && in_elem)) {

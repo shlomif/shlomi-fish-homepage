@@ -13,9 +13,10 @@ endif
 
 COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib
 
-WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
+WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \
+	--passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
-	-DROOT~. -DLATEMP_THEME=better-scm \
+	-DROOT~. -DLATEMP_THEME=shlomifish.org-better-scm-mod \
 	-I $${HOME}/apps/wml \
 	$(DEV_WML_FLAGS)
 
@@ -1134,6 +1135,7 @@ MULTI_YUI = ./bin/Run-YUI-Compressor
 MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/jq.js \
 	common/js/jquery.treeview.min.js \
+	common/js/toggler.js \
 	common/js/toggle_sect.js \
 	common/js/tree.jquery.js \
 	common/js/jquery.cookie.js \
@@ -1239,3 +1241,6 @@ $(OCT_2014_SGLAU_LET_HTML): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/lett
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 	convert -resize '200' $< $@
+
+tags:
+	ctags -R --exclude='.hg/**' --exclude='*~' .

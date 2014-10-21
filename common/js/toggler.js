@@ -14,27 +14,18 @@ function build_toggler(args) {
         var elem = $(toggler_selector);
 
         var is_off = elem.hasClass("off");
-        if (is_off) {
-            elem.text(hide_text);
-        }
-        else {
-            elem.text(show_text);
-            if (has_ls) {
-                localStorage.removeItem(toggle_sect_key);
-            }
-        }
-        if (has_ls) {
-            var is_on = !is_off;
-            if (is_on == default_state) {
-                localStorage.removeItem(toggle_sect_key);
-            }
-            else {
-                localStorage.setItem(toggle_sect_key, (is_on ? "1" : "0"));
-            }
-        }
+        elem.text(is_off ? hide_text : show_text);
         $(toggled_selector).toggleClass(toggled_class);
         elem.toggleClass("off");
         elem.toggleClass("on");
+        if (has_ls) {
+            var is_on_now = !is_off;
+            if (is_on_now == default_state) {
+                localStorage.removeItem(toggle_sect_key);
+            } else {
+                localStorage.setItem(toggle_sect_key, (is_on_now ? "1" : "0"));
+            }
+        }
     };
 
     var elem = $(toggler_selector);
@@ -48,6 +39,8 @@ function build_toggler(args) {
 
             if (in_storage == undefined) {
                 in_storage = default_state;
+            } else {
+                in_storage = (in_storage == "1" ? true : false);
             }
 
             var in_elem = elem.hasClass("on");

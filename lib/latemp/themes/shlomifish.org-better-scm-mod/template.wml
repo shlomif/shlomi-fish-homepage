@@ -24,10 +24,10 @@
 
 <div id="navbar_wrapper">
 <div class="small_screen">
-<button id="show_navbar">Show NavBar</button>
+<button id="show_navbar" class="off">Show NavBar</button>
 </div>
 
-<div class="navbar" id="navbar">
+<div class="navbar novis" id="navbar">
 <p class="invisible">
 <a href="#nav_menu">Go to the navigation menu</a>
 </p>

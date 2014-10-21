@@ -11,6 +11,7 @@ function build_sect_nav_menu_toggler() {
         toggled_class: 'novis',
         hide_text: 'Hide',
         show_text: 'Show',
+        default_state: false,
     });
 }
 

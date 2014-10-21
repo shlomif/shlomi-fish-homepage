@@ -13,13 +13,15 @@ function build_toggler(args) {
     var toggle_sect_menu = function() {
         var elem = $(toggler_selector);
 
-        var is_off = elem.hasClass("off");
-        elem.text(is_off ? hide_text : show_text);
+        var was_off = elem.hasClass("off");
+        var was_on = !was_off;
+        var is_on_now = !was_on;
+
+        elem.text(was_off ? hide_text : show_text);
         $(toggled_selector).toggleClass(toggled_class);
         elem.toggleClass("off");
         elem.toggleClass("on");
         if (has_ls) {
-            var is_on_now = !is_off;
             if (is_on_now == default_state) {
                 localStorage.removeItem(toggle_sect_key);
             } else {

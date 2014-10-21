@@ -16,15 +16,16 @@
     /* LightGreen
 
 .navbar
-    float: left
-    width: 20%
-    padding-left: 0.5em
-    padding-right: 0.5em
-    padding-top: 1.5em
-    padding-bottom: 2em
-
+    +big-screen
+        float: left
+        width: 20%
+        padding-left: 0.5em
+        padding-right: 0.5em
+        padding-top: 1.5em
+        padding-bottom: 2em
     +small-screen
-        display: none
+        &.novis
+            display: none
 
 +big-screen
     #navbar_wrapper
@@ -166,8 +167,9 @@ div.bordered
 
 /* Start of the .toggle_sect_menu
 
-#sect_menu_wrapper.novis
-    display: none
+#sect_menu_wrapper, #navbar
+    &.novis
+        display: none
 
 .sub_menu .toggle_sect_menu
     float: right

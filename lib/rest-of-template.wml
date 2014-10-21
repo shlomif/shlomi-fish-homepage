@@ -436,12 +436,10 @@ for collecting money</a> for my works of fiction.</p>
 <section_nav_menu_elements>
 <set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
 <set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
-
+(((((include "cache/sect-navmenu/<get-var host />/<get-var filename />")))))
 <:{
     use strict;
     use warnings;
-
-    use NavSectMenuRender;
 
     sub get_page_path
     {
@@ -450,30 +448,9 @@ for collecting money</a> for my works of fiction.</p>
 
         return $filename;
     }
-
-    use vars (qw($section_nav_menu));
-
-    sub init_section_nav_menu
-    {
-        if (! defined( $section_nav_menu))
-        {
-            my $results = NavSectMenuRender->init_section_nav_menu(
-                {
-                    filename => ('/' . get_page_path()),
-                    host => "<get-var host />",
-                    'ROOT' => "$(ROOT)",
-                }
-            );
-
-            $section_nav_menu = $results->{section_nav_menu};
-        }
-    }
-
-    init_section_nav_menu();
-
-    _print_utf8($section_nav_menu->get_html());
 }:>
 </section_nav_menu_elements>
+
 <define-tag page_extra_head_elements endtag="required" whitespace="delete">
 {#PAGE_EXTRA_HEAD_ELEMENTS#:%body:##}
 </define-tag>

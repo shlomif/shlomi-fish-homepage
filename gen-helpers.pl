@@ -64,6 +64,13 @@ $text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;
 $text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;
 io("include.mak")->print($text);
 
+$text = io("rules.mak")->slurp();
+$text =~ s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call INCLUDE_WML_RENDER)#ms or die "Cannot subt";
+$text =~ s#^(\$\(VIPE_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call VIPE_INCLUDE_WML_RENDER)#ms or die "Cannot subt";
+$text =~ s#^(\$\(T2_COMMON_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_COMMON_INCLUDE_WML_RENDER)#ms or die "Cannot subt";
+$text =~ s#^(\$\(VIPE_COMMON_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call VIPE_COMMON_INCLUDE_WML_RENDER)#ms or die "Cannot subt";
+io("rules.mak")->print($text);
+
 sub _my_system
 {
     my $cmd = shift;

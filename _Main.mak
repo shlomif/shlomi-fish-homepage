@@ -34,14 +34,43 @@ DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
 MATHJAX_SOURCE_README = lib/MathJax/README.md
 
-all: make-dirs docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target
+all: make-dirs sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target
 
 include lib/make/gmsl/gmsl
 
 include include.mak
 include rules.mak
 
-make-dirs: $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
+T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
+T2_CACHE_ALL_DIRS_DEST = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_ALL_DIRS_DEST))
+
+
+PROCESS_ALL_INCLUDES = bin/process-includes.pl
+
+define INCLUDE_WML_RENDER
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+endef
+
+define VIPE_INCLUDE_WML_RENDER
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(VIPE_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(VIPE_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+endef
+
+define T2_COMMON_INCLUDE_WML_RENDER
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+endef
+
+define VIPE_COMMON_INCLUDE_WML_RENDER
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+endef
+
+make-dirs: $(T2_ALL_DIRS_DEST) $(T2_CACHE_ALL_DIRS_DEST)
+
+$(T2_CACHE_ALL_DIRS_DEST): %: unchanged
+	mkdir -p $@
+	touch $@
+
+GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
+
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
@@ -50,6 +79,14 @@ FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
 T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
 T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
+
+T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_DOCS_DEST))
+
+$(T2_CACHE_ALL_DOCS): $(GEN_SECT_NAV_MENUS)
+	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
+	touch $(T2_CACHE_ALL_DOCS)
+
+sects_cache: make-dirs $(T2_CACHE_ALL_DOCS)
 
 include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
@@ -593,7 +630,7 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
+.PHONY: make-dirs install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
 
 
 # This copies all the .pdf's at once - not ideal, but still

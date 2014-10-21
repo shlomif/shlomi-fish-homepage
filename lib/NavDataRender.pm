@@ -54,7 +54,7 @@ sub nav_data_render
     };
 }
 
-sub render_breadcrumbs_trail_unconditionally
+sub get_breadcrumbs_trail_unconditionally
 {
     my ($class, $args) = @_;
 
@@ -68,16 +68,20 @@ sub render_breadcrumbs_trail_unconditionally
             "\"$title_attr>" .
             $component->label() . "</a>";
     };
-    {
-        _print_utf8( join(" → ",
-                (map
-                    { $render_leading_path_component->($_) }
-                    @$total_leading_path
-                ))
-        );
-    }
+    return join(" → ",
+        (map
+            { $render_leading_path_component->($_) }
+            @$total_leading_path
+        ));
+}
 
-    return;
+sub render_breadcrumbs_trail_unconditionally
+{
+    my ($class, $args) = @_;
+
+    _print_utf8(
+        $class->get_breadcrumbs_trail_unconditionally($args)
+    );
 }
 
 sub render_html_head_nav_links

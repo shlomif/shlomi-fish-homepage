@@ -12,27 +12,9 @@
     use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 }:>
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
-<:{
-    use strict;
-    use warnings;
-
-    use NavDataRender;
-
-    init_section_nav_menu();
-
-    use vars qw($section_nav_menu);
-
-    NavDataRender->render_breadcrumbs_trail_unconditionally(
-        {
-            total_leading_path =>
-            $section_nav_menu->total_leading_path(
-                {
-                    main_leading_path => $leading_path,
-                }
-            ),
-        }
-    );
-}:>
+<set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
+<set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
+(((((include "cache/breadcrumbs-trail/<get-var host />/<get-var filename />")))))
 </define-tag>
 
 <define-tag latemp_get_nav_menu_html>

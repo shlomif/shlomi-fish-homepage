@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use Carp::Always;
+
 use lib './lib';
 
 use Getopt::Long qw(GetOptions);

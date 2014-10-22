@@ -35,12 +35,11 @@ has '_current_sect' => (is => 'ro', isa => 'Maybe[HashRef]', lazy => 1,
 
 sub get_section_nav_menu_params
 {
-    my $self = shift;
-    my $class_id = shift;
-    my $class = "Shlomif::Homepage::SectionMenu::Sects::$class_id";
-    eval "require $class";
+    my ($self, $class_id) = @_;
 
-    return eval "${class}::get_params()";
+    my $class = "Shlomif::Homepage::SectionMenu::Sects::$class_id";
+
+    return $class->get_params();
 }
 
 sub get_modified_sub_tree

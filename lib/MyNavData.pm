@@ -447,6 +447,11 @@ sub generic_get_params
         : 1
     );
 
+    if ($is_fully_expanded)
+    {
+        require Shlomif::Homepage::SectionMenu::AllSects;
+    }
+
     my $get_sub_tree = sub {
         my ($sect_name) = @_;
 

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# set -x
+
+src="$1"
+shift
+
+dest="$1"
+shift
+
+export WML_LATEMP_PATH="$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' "$dest")"
+export T2_SRC_DIR=t2
+export FORTUNES_DIR=humour/fortunes
+
+if (
+    cd "$T2_SRC_DIR"
+    wml -o "${WML_LATEMP_PATH}" $T2_WML_FLAGS -DLATEMP_FILENAME="$(perl -E 'print shift =~ s#\Adest/t2/##r =~ s#\.wml\z##r' "$dest")" -DPACKAGE_BASE="$(cd "$FORTUNES_DIR" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')" "${src##t2/}"
+) ; then
+    if ! perl -pi -0777 -C bin/process-includes.pl "$dest" ; then
+        rm -f "$dest";
+    fi
+fi

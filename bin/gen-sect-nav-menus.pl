@@ -44,10 +44,15 @@ sub _out
 
     my $text_ref = $text_cb->();
 
-    io->file($path)->encoding('UTF-8')->print(
-        $$text_ref,
-        ($$text_ref !~ /\n\z/ ? "\n" : ''),
-    );
+    my $text = ( $$text_ref . ($$text_ref !~ /\n\z/ ? "\n" : '') );
+
+    my $io = sub { return io->file($path)->encoding('UTF-8'); };
+
+    # Update only if necessary.
+    if ((! $io->()->exists()) or ($io->()->all() ne $text))
+    {
+        $io->()->print($text);
+    }
 
     return;
 }

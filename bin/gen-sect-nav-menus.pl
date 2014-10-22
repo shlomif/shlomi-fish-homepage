@@ -40,6 +40,8 @@ sub get_root
     return (($ret eq '') ? '.' : $ret);
 }
 
+use Shlomif::Out qw/write_on_change/;
+
 sub _out
 {
     my ($path, $text_cb) = @_;
@@ -52,13 +54,10 @@ sub _out
         . (($$text_ref !~ /\n\z/ && $$text_ref =~ /\S/) ? "\n" : '')
     );
 
-    my $io = sub { return io->file($path)->encoding('UTF-8'); };
-
-    # Update only if necessary.
-    if ((! $io->()->exists()) or ($io->()->all() ne $text))
-    {
-        $io->()->print($text);
-    }
+    write_on_change(
+        sub { return io->file($path)->encoding('UTF-8'); },
+        \$text,
+    );
 
     return;
 }

@@ -1,0 +1,14 @@
+<define-tag latemp_get_html_body_nav_links_helper>
+<preserve with_accesskey />
+<set-var %attributes />
+<:{
+    my $with_accesskey = "<get-var with_accesskey />";
+    my @params;
+    if ($with_accesskey ne "")
+    {
+        push @params, ('with_accesskey' => $with_accesskey);
+    }
+    _print_utf8($nav_links_renderer->get_total_html(@params));
+}:>
+<restore with_accesskey />
+</define-tag>

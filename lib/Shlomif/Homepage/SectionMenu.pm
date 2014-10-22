@@ -35,18 +35,17 @@ has '_current_sect' => (is => 'ro', isa => 'Maybe[HashRef]', lazy => 1,
 
 sub get_section_nav_menu_params
 {
-    my ($self, $class_id) = @_;
-
-    my $class = "Shlomif::Homepage::SectionMenu::Sects::$class_id";
-
+    my (undef, $class) = @_;
     return $class->get_params();
 }
 
 sub get_modified_sub_tree
 {
-    my ($self, $class) = @_;
+    my ($self, $class_base) = @_;
 
-    my %params = $self->get_section_nav_menu_params($class);
+    my %params = $self->get_section_nav_menu_params(
+         "Shlomif::Homepage::SectionMenu::Sects::$class_base"
+    );
 
     my $tree = $params{tree_contents};
 
@@ -86,11 +85,10 @@ sub BUILD
     }
     else
     {
-        my $class_id= $current_sect->{'class'};
         my $nav_menu = HTML::Widgets::NavMenu->new(
             'path_info' => $self->path_info(),
             current_host => $self->current_host(),
-            $self->get_section_nav_menu_params($class_id),
+            $self->get_section_nav_menu_params($current_sect->{class}),
             'ul_classes' =>
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
             'no_leading_dot' => 1,

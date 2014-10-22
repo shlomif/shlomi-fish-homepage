@@ -41,6 +41,14 @@ include lib/make/gmsl/gmsl
 include include.mak
 include rules.mak
 
+FORTUNES_DIR = humour/fortunes
+T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
+
+include $(T2_FORTUNES_DIR)/arcs-list.mak
+include $(T2_FORTUNES_DIR)/fortunes-list.mak
+
+
+
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 T2_CACHE_ALL_DIRS_DEST = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_ALL_DIRS_DEST))
 
@@ -73,8 +81,6 @@ $(T2_CACHE_ALL_DIRS_DEST): %: unchanged
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 
 
-FORTUNES_DIR = humour/fortunes
-T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
 T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
@@ -84,14 +90,10 @@ T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEM
 T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_DOCS_DEST))
 
 $(T2_CACHE_ALL_DOCS): $(GEN_SECT_NAV_MENUS)
-	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html
+	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 	touch $(T2_CACHE_ALL_DOCS)
 
 sects_cache: make-dirs $(T2_CACHE_ALL_DOCS)
-
-include $(T2_FORTUNES_DIR)/arcs-list.mak
-include $(T2_FORTUNES_DIR)/fortunes-list.mak
-
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)

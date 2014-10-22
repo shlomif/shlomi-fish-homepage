@@ -84,21 +84,31 @@ sub render_breadcrumbs_trail_unconditionally
     );
 }
 
-sub render_html_head_nav_links
+sub get_html_head_nav_links
 {
     my ($class, $args) = @_;
 
     my $nav_links_obj= $args->{nav_links_obj};
 
     my @keys = (sort { $a cmp $b } keys(%$nav_links_obj));
+    my @ret;
     foreach my $key (@keys)
     {
         my $val = $nav_links_obj->{$key};
         my $url = escape_html($val->direct_url());
         my $title = $val->title() || '';
 
-        _print_utf8(qq{<link rel="$key" href="$url" title="$title" />\n});
+        push @ret, qq{<link rel="$key" href="$url" title="$title" />\n};
     }
+
+    return join '',@ret;
+}
+
+sub render_html_head_nav_links
+{
+    my ($class, $args) = @_;
+
+    _print_utf8($class->get_html_head_nav_links);
 
     return;
 }

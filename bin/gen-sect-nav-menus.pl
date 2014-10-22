@@ -40,12 +40,12 @@ foreach my $host (qw(t2 vipe))
     )
     {
 
-        my $url = $proto_url =~ s#/index\.html\z#/#r;
+        my $url = $proto_url =~ s#(\A|/)index\.html\z#$1#r;
 
         my $filename = "/$url";
-        my $u = $url =~ s#/$#/index.html#r;
+        my $u = $url =~ s#(\A|/)$#${1}index.html#r;
 
-        my $nav_bar = HTML::Widgets::NavMenu->new(
+        my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
             'path_info' => $filename,
             'current_host' => $host,
             MyNavData::get_params(),
@@ -65,6 +65,7 @@ foreach my $host (qw(t2 vipe))
         my $rendered_results = $nav_bar->render();
 
         my $leading_path = $rendered_results->{leading_path};
+        my $nav_links_obj = $rendered_results->{nav_links_obj};
 
         {
             my $path = "lib/cache/sect-navmenu/$host/$u";
@@ -85,6 +86,22 @@ foreach my $host (qw(t2 vipe))
                             }
                         ),
                     }
+                );
+
+            if ($text !~ /\n\z/)
+            {
+                $text .= "\n";
+            }
+
+            io->file($path)->encoding('UTF-8')->print($text);
+        }
+        {
+            my $path = "lib/cache/html_head_nav_links/$host/$u";
+            io->dir(dirname($path))->mkpath;
+
+            my $text =
+                NavDataRender->get_html_head_nav_links(
+                    { nav_links_obj => $nav_links_obj}
                 );
 
             if ($text !~ /\n\z/)

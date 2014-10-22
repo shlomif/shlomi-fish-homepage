@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use Shlomif::Homepage::RelUrl qw/ _path_info _rel_url /;
 
 use utf8;
 
@@ -31,7 +32,7 @@ sub render
 
     my $normalize = sub {return shift =~ s#/index\.html\z#/#gr};
 
-    if ($normalize->($self->path) eq $normalize->($r->nav_menu->path_info))
+    if ($normalize->($self->path) eq $normalize->(_path_info()))
     {
         return sprintf(
             q#<li><p><strong class="current">%s</strong></p></li>#,
@@ -42,14 +43,7 @@ sub render
     {
         return sprintf(q#<li><p><a href="%s">%s</a></p></li>#,
             escape_html(
-                $r->nav_menu->get_cross_host_rel_url_ref(
-                    {
-                        host => $r->host,
-                        host_url => $self->path,
-                        url_type => 'rel',
-                        url_is_abs => 0,
-                    },
-                ),
+                _rel_url($self->path)
             ),
             $self->inner_html(),
         );

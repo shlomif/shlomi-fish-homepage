@@ -14,6 +14,8 @@ use NavSectMenuRender;
 use NavDataRender;
 use MyNavData;
 use MyNavLinks;
+use URI::Escape qw(uri_escape);
+use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 sub get_page_path
 {
@@ -144,6 +146,21 @@ foreach my $host (qw(t2 vipe))
                 \(NavDataRender->get_html_head_nav_links(
                         { nav_links_obj => $nav_links_obj}
                     ));
+            }
+        );
+
+        $out->(
+            'page_url',
+            sub {
+                return \(
+                    escape_html(
+                        uri_escape(
+                            MyNavData::get_hosts()->{
+                                $host
+                            }->{base_url} . $url
+                        )
+                    )
+                );
             }
         );
 

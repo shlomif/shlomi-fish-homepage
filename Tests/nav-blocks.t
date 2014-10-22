@@ -19,9 +19,21 @@ use Shlomif::Homepage::NavBlocks;
 use NavBlocks (qw( get_nav_block ));
 use IO::All;
 
+our $latemp_filename;
+
+sub _fn
 {
+    my $fn = shift;
+
+    $latemp_filename = $fn;
+
+    return "/$fn";
+}
+
+{
+
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => "/philosophy/the-eternal-jew/",
+        path_info => _fn("philosophy/the-eternal-jew/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -84,7 +96,7 @@ use IO::All;
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => "/humour/Selina-Mandrake/",
+        path_info => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -166,7 +178,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => "/humour/Selina-Mandrake/",
+        path_info => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -236,7 +248,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => "/humour/Selina-Mandrake/",
+        path_info => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,

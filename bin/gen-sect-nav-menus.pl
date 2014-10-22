@@ -83,47 +83,45 @@ foreach my $host (qw(t2 vipe))
         my $leading_path = $rendered_results->{leading_path};
         my $nav_links_obj = $rendered_results->{nav_links_obj};
 
-        {
-            my $path = "lib/cache/sect-navmenu/$host/$u";
+        my $out = sub {
+            my ($id, $cb) = @_;
 
-            _out($path,
-                sub {
-                    return \( $section_nav_menu->get_html );
-                }
-            );
-        }
-        {
-            my $path = "lib/cache/breadcrumbs-trail/$host/$u";
+            my $path = "lib/cache/$id/$host/$u";
 
-            _out($path,
-                sub {
-                    return
-                    \(
-                        NavDataRender->get_breadcrumbs_trail_unconditionally(
-                            {
-                                total_leading_path =>
-                                $section_nav_menu->total_leading_path(
-                                    {
-                                        main_leading_path => $leading_path,
-                                    }
-                                ),
-                            }
-                        )
-                    ) ;
+            return _out($path, $cb);
+        };
+
+        $out->(
+            'sect-navmenu',
+            sub {
+                return \( $section_nav_menu->get_html );
+            }
+        );
+        $out->(
+            'breadcrumbs-trail',
+            sub {
+                return
+                \(
+                    NavDataRender->get_breadcrumbs_trail_unconditionally(
+                        {
+                            total_leading_path =>
+                            $section_nav_menu->total_leading_path(
+                                {
+                                    main_leading_path => $leading_path,
+                                }
+                            ),
+                        }
+                    )
+                ) ;
             });
-        }
-        {
-            my $path = "lib/cache/html_head_nav_links/$host/$u";
-
-            _out(
-                $path,
-                sub {
-                    return
-                    \(NavDataRender->get_html_head_nav_links(
+        $out->(
+            'html_head_nav_links',
+            sub {
+                return
+                \(NavDataRender->get_html_head_nav_links(
                         { nav_links_obj => $nav_links_obj}
                     ));
-                }
-            );
-        }
+            }
+        );
     }
 }

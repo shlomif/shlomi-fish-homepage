@@ -5,6 +5,8 @@ use warnings;
 
 use CGI;
 
+=begin debug
+
 sub debug
 {
     require Data::Dumper;
@@ -13,7 +15,12 @@ sub debug
     exit(0);
 }
 
-# debug();
+debug();
+
+=end debug
+
+=cut
+
 my $cgi = CGI->new();
 my $path = $ENV{'REDIRECT_URL'};
 

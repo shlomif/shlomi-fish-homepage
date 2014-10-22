@@ -451,20 +451,14 @@ sub _get_abstract_tags
 
     $abstract =~ s#"\$\(ROOT\)/([^"]+?/)"#
                 q{"}
-                . $::nav_bar->get_cross_host_rel_url_ref(
-                    {
-                        host => 't2',
-                        host_url => $1,
-                        url_type => 'rel',
-                        url_is_abs => 0,
-                    }
-                )
+                . _rel_url($1)
                 . q{"}
         #eg;
 
     return [$abstract];
 }
 
+use Shlomif::Homepage::RelUrl qw/ _rel_url /;
 
 sub _get_logo_tags
 {
@@ -477,14 +471,7 @@ sub _get_logo_tags
         sprintf(qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,
             $o->logo_id,
             escape_html(
-                $::nav_bar->get_cross_host_rel_url_ref(
-                    {
-                        host => 't2',
-                        host_url => $o->logo_src,
-                        url_type => 'rel',
-                        url_is_abs => 0,
-                    }
-                ),
+                _rel_url($o->logo_src)
             ),
             $o->logo_alt,
             $o->logo_class,
@@ -531,14 +518,7 @@ sub _get_story_entry_tags
             $tag,
             ($o->entry_id || (die "Foo $id")),
             escape_html(
-                $::nav_bar->get_cross_host_rel_url_ref(
-                    {
-                        host => 't2',
-                        host_url => ($o->href || die "Qlax $id"),
-                        url_type => 'rel',
-                        url_is_abs => 0,
-                    }
-                )
+                _rel_url($o->href || die "Qlax $id")
             ),
             ($o->entry_text || die "Elimbda $id"),
             $tag,

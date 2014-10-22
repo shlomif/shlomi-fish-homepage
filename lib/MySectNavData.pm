@@ -5,6 +5,8 @@ use warnings;
 
 use Shlomif::Homepage::SectionMenu;
 
+use Shlomif::Homepage::SectionMenu::AllSects;
+
 my @sections =
 (
     {

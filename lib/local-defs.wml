@@ -20,11 +20,7 @@
 </define-tag>
 
 <define-tag latemp_get_nav_menu_html>
-<:{
-
-_print_utf8( join("\n", @$nav_html) );
-
-}:>
+(((((include "cache/main_nav_menu_html/<get-var host />/<get-var filename />")))))
 </define-tag>
 
 

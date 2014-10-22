@@ -5,7 +5,7 @@ use warnings;
 
 package Shlomif::Homepage::SectionMenu::NavLinks;
 
-use base 'HTML::Latemp::NavLinks::GenHtml::ArrowImages';
+use parent 'HTML::Latemp::NavLinks::GenHtml::ArrowImages';
 
 sub get_image_base
 {
@@ -43,13 +43,11 @@ sub get_modified_sub_tree
 {
     my ($self, $class_base) = @_;
 
-    my %params = $self->get_section_nav_menu_params(
+    my $subs = +{
+        $self->get_section_nav_menu_params(
          "Shlomif::Homepage::SectionMenu::Sects::$class_base"
-    );
+     ) }->{tree_contents}->{subs};
 
-    my $tree = $params{tree_contents};
-
-    my $subs = $tree->{subs};
     return
         {
             %{ $subs->[0] },
@@ -85,15 +83,16 @@ sub BUILD
     }
     else
     {
-        my $nav_menu = HTML::Widgets::NavMenu->new(
-            'path_info' => $self->path_info(),
-            current_host => $self->current_host(),
-            $self->get_section_nav_menu_params($current_sect->{class}),
-            'ul_classes' =>
+        $self->nav_menu(
+            HTML::Widgets::NavMenu->new(
+                'path_info' => $self->path_info(),
+                current_host => $self->current_host(),
+                $self->get_section_nav_menu_params($current_sect->{class}),
+                'ul_classes' =>
                 [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
-            'no_leading_dot' => 1,
-            );
-        $self->nav_menu($nav_menu);
+                'no_leading_dot' => 1,
+            )
+        );
         $self->title($current_sect->{'title'});
     }
 
@@ -148,26 +147,21 @@ sub total_leading_path
 
     if ($self->empty)
     {
-        return [ @main_leading_path ];
+        return (\@main_leading_path);
     }
     else
     {
         my @local_path = @{$self->results()->{'leading_path'}};
 
-        use Data::Dumper;
-
-        # warn Dumper([\@main_leading_path, \@local_path, ]);
+        my $url = $main_leading_path[-1]->direct_url();
         while ( @local_path &&
-                (
-                    $local_path[0]->direct_url() ne
-                    $main_leading_path[-1]->direct_url()
-                )
+                ( $local_path[0]->direct_url() ne $url )
             )
         {
             shift(@local_path);
         }
         shift(@local_path);
-        # warn "Foo foo" . Dumper([\@main_leading_path, \@local_path, ]);
+
         return [ @main_leading_path, @local_path];
     }
 }

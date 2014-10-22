@@ -32,6 +32,23 @@ sub get_root
     return (($ret eq '') ? '.' : $ret);
 }
 
+sub _out
+{
+    my ($path, $text_cb) = @_;
+
+    io->dir(dirname($path))->mkpath;
+
+    my $text = $text_cb->();
+    if ($text !~ /\n\z/)
+    {
+        $text .= "\n";
+    }
+
+    io->file($path)->encoding('UTF-8')->print($text);
+
+    return;
+}
+
 foreach my $host (qw(t2 vipe))
 {
     foreach my $proto_url (($host eq 't2')
@@ -69,15 +86,21 @@ foreach my $host (qw(t2 vipe))
 
         {
             my $path = "lib/cache/sect-navmenu/$host/$u";
-            io->dir(dirname($path))->mkpath;
-            io->file($path)->encoding('UTF-8')->print($section_nav_menu->get_html);
+
+            _out($path,
+                sub {
+                    return
+                    $section_nav_menu->get_html
+                }
+            );
         }
         {
             my $path = "lib/cache/breadcrumbs-trail/$host/$u";
-            io->dir(dirname($path))->mkpath;
 
-            my $text =
-                NavDataRender->get_breadcrumbs_trail_unconditionally(
+            _out($path,
+                sub {
+                    return
+                    NavDataRender->get_breadcrumbs_trail_unconditionally(
                     {
                         total_leading_path =>
                         $section_nav_menu->total_leading_path(
@@ -87,29 +110,20 @@ foreach my $host (qw(t2 vipe))
                         ),
                     }
                 );
-
-            if ($text !~ /\n\z/)
-            {
-                $text .= "\n";
-            }
-
-            io->file($path)->encoding('UTF-8')->print($text);
+            });
         }
         {
             my $path = "lib/cache/html_head_nav_links/$host/$u";
-            io->dir(dirname($path))->mkpath;
 
-            my $text =
-                NavDataRender->get_html_head_nav_links(
-                    { nav_links_obj => $nav_links_obj}
-                );
-
-            if ($text !~ /\n\z/)
-            {
-                $text .= "\n";
-            }
-
-            io->file($path)->encoding('UTF-8')->print($text);
+            _out(
+                $path,
+                sub {
+                    return
+                    NavDataRender->get_html_head_nav_links(
+                        { nav_links_obj => $nav_links_obj}
+                    );
+                }
+            );
         }
     }
 }

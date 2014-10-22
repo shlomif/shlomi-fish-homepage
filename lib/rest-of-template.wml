@@ -434,7 +434,9 @@ for collecting money</a> for my works of fiction.</p>
 </latemp_before_main_title>
 
 <section_nav_menu_elements>
-(((((include "cache/sect-navmenu/<get-var host />/<get-var filename />")))))
+
+<inc_cache id="sect-navmenu" />
+
 <:{
     use strict;
     use warnings;

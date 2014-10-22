@@ -1,6 +1,14 @@
 <: use Carp::Always; :>
 <set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
 <set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
+
+<define-tag inc_cache>
+<preserve id />
+<set-var %attributes />
+(((((include "cache/combined/<get-var host />/<get-var filename />/<get-var id />")))))
+<restore id />
+</define-tag>
+
 <: our $latemp_filename = qq#<get-var filename />#; :>
 <set-var latemp_navmenu_object_class="HTML::Widgets::NavMenu::JQueryTreeView" />
 <set-var latemp_with_favicon="<latemp_mynot "$(PRINTABLE)" />" />
@@ -17,16 +25,16 @@
 }:>
 
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
-(((((include "cache/breadcrumbs-trail/<get-var host />/<get-var filename />")))))
+<inc_cache id="breadcrumbs-trail" />
 </define-tag>
 
 <define-tag latemp_get_nav_menu_html>
-(((((include "cache/main_nav_menu_html/<get-var host />/<get-var filename />")))))
+<inc_cache id="main_nav_menu_html" />
 </define-tag>
 
 
 <define-tag latemp_get_html_head_nav_links>
-(((((include "cache/html_head_nav_links/<get-var host />/<get-var filename />")))))
+<inc_cache id="html_head_nav_links" />
 </define-tag>
 
 <define-tag latemp_get_html_body_nav_links_helper>
@@ -34,11 +42,13 @@
 <preserve with_accesskey />
 <set-var %attributes />
 
-(((((include "cache/shlomif_nav_links_renderer-with_accesskey=<get-var with_accesskey />/<get-var host />/<get-var filename />")))))
+<inc_cache id="shlomif_nav_links_renderer-with_accesskey=<get-var with_accesskey />" />
 
 <restore with_accesskey />
 
 </define-tag>
 
 <define-tag latemp_init_h_w_navmenu>
+# Disable the navmenu.
+# Keep this tag empty.
 </define-tag>

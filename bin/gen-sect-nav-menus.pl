@@ -115,6 +115,12 @@ foreach my $host (qw(t2 vipe))
                 ) ;
             });
         $out->(
+            'main_nav_menu_html',
+            sub {
+                return \(join ("\n", @{ $rendered_results->{html} }));
+            }
+        );
+        $out->(
             'html_head_nav_links',
             sub {
                 return

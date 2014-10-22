@@ -36,7 +36,6 @@ sub nav_data_render
 
     my $rendered_results = $shlomif_main_expanded_nav_bar->render();
 
-    # use Data::Dumper; die Dumper($rendered_results);
     my $shlomif_nav_links = $rendered_results->{nav_links};
 
     my $shlomif_nav_links_obj = $rendered_results->{nav_links_obj};

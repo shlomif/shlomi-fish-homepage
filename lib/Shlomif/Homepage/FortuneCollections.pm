@@ -10,10 +10,9 @@ use 5.014;
 use utf8;
 
 use Carp;
-use Data::Dumper;
 use List::Util qw(max);
 
-use YAML::XS (qw(LoadFile DumpFile));
+use YAML::XS (qw(LoadFile));
 use JSON::MaybeXS;
 
 use IO::All;
@@ -31,8 +30,6 @@ use Shlomif::FindLib ();
 
 my $yaml_data_fn = Shlomif::FindLib->rel_path(['Shlomif', 'fortunes-meta-data.yml']);
 my $orig_fortunes_records = LoadFile($yaml_data_fn)->{'shlomif_fortunes_collections'}->{'fortunes'};
-
-# DumpFile('./foo.yml', { shlomif_fortunes_collections => { fortunes => \@orig_fortunes_records, }, }, );
 
 my @forts =
 (

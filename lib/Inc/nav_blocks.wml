@@ -10,7 +10,6 @@ use Shlomif::Homepage::NavBlocks (qw(
     my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
             host => 't2',
-            nav_menu => $::nav_bar,
         }
     );
 

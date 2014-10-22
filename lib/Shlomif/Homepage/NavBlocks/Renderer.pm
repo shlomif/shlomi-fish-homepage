@@ -13,10 +13,6 @@ extends ('Exporter');
 
 has 'host' => (is => 'ro', isa => 'Str', required => 1);
 
-has [qw(
-    nav_menu
-)] => (is => 'ro', required => 1);
-
 sub render
 {
     my ($self, $thingy) = @_;

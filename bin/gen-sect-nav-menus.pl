@@ -72,7 +72,8 @@ foreach my $host (qw(t2 vipe))
         {
             my $path = "lib/cache/breadcrumbs-trail/$host/$u";
             io->dir(dirname($path))->mkpath;
-            io->file($path)->encoding('UTF-8')->print(
+
+            my $text =
                 NavDataRender->get_breadcrumbs_trail_unconditionally(
                     {
                         total_leading_path =>
@@ -82,8 +83,14 @@ foreach my $host (qw(t2 vipe))
                             }
                         ),
                     }
-                )
-            );
+                );
+
+            if ($text !~ /\n\z/)
+            {
+                $text .= "\n";
+            }
+
+            io->file($path)->encoding('UTF-8')->print($text);
         }
     }
 }

@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use Carp::Always;
+
 use strict;
 use warnings;
 
@@ -61,6 +63,8 @@ foreach my $host (qw(t2 vipe))
         my $filename = "/$url";
         my $u = $url =~ s#(\A|/)$#${1}index.html#r;
 
+        print "start filename=$filename\n";
+
         my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
             'path_info' => $filename,
             'current_host' => $host,
@@ -71,7 +75,7 @@ foreach my $host (qw(t2 vipe))
 
         my $results = NavSectMenuRender->init_section_nav_menu(
             {
-                filename => ('/' . $url),
+                filename => $filename,
                 host => $host,
                 'ROOT' => get_root($url),
             }
@@ -81,6 +85,19 @@ foreach my $host (qw(t2 vipe))
         my $rendered_results = $nav_bar->render();
 
         my $leading_path = $rendered_results->{leading_path};
+
+        my $nav_results = NavDataRender->nav_data_render(
+            {
+                filename => $url,
+                host => $host,
+                ROOT => get_root($url),
+            }
+        );
+
+        # warn Dumper({Results => $results,});
+
+        my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
+
         my $nav_links_obj = $rendered_results->{nav_links_obj};
 
         my $out = sub {
@@ -129,5 +146,42 @@ foreach my $host (qw(t2 vipe))
                     ));
             }
         );
+
+        foreach my $with_accesskey ('', 1)
+        {
+            $out->(
+                "shlomif_nav_links_renderer-with_accesskey=$with_accesskey",
+                sub {
+                    my @params;
+                    if ($with_accesskey ne "")
+                    {
+                        push @params, ('with_accesskey' => $with_accesskey);
+                    }
+                    return \(
+                        join('',
+                            $shlomif_nav_links_renderer
+                            ->get_total_html(@params)
+                        )
+                    );
+                },
+            );
+        }
+
+        if ($filename eq '/site-map/')
+        {
+            $out->('shlomif_main_expanded_nav_bar',
+                sub {
+                    return \(
+                        join ('',
+                            map { "$_\n" }
+                            @{ $nav_results->{shlomif_main_expanded_nav_bar}
+                                ->gen_site_map()
+                            }
+                        )
+                    );
+                },
+            );
+        }
+        print "filename=$filename\n";
     }
 }

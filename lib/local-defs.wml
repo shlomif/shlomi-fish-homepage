@@ -28,71 +28,13 @@
 (((((include "cache/html_head_nav_links/<get-var host />/<get-var filename />")))))
 </define-tag>
 
-
-<define-tag latemp_get_html_body_nav_links_helper>
-<preserve with_accesskey />
-<set-var %attributes />
-<:{
-    my $with_accesskey = "<get-var with_accesskey />";
-    my @params;
-    if ($with_accesskey ne "")
-    {
-        push @params, ('with_accesskey' => $with_accesskey);
-    }
-    _print_utf8($nav_links_renderer->get_total_html(@params));
-}:>
-<restore with_accesskey />
-</define-tag>
-
 <define-tag latemp_get_html_body_nav_links_helper>
 
 <preserve with_accesskey />
 <set-var %attributes />
 
-<preserve object_class />
+(((((include "cache/shlomif_nav_links_renderer-with_accesskey=<get-var with_accesskey />/<get-var host />/<get-var filename />")))))
 
-<set-var object_class="<latemp_default_val "<get-var latemp_navmenu_object_class />" "HTML::Widgets::NavMenu" />" />
-
-<:{
-use strict;
-use warnings;
-
-use Data::Dumper;
-
-use NavDataRender;
-
-my $results = NavDataRender->nav_data_render(
-    {
-        filename => "<get-var filename />",
-        host => "<get-var host />",
-        ROOT => "$(ROOT)",
-    }
-);
-
-# warn Dumper({Results => $results,});
-
-use vars qw($shlomif_main_expanded_nav_bar);
-$shlomif_main_expanded_nav_bar = $results->{shlomif_main_expanded_nav_bar};
-
-use vars qw($shlomif_nav_links_renderer);
-
-$shlomif_nav_links_renderer = $results->{nav_links_renderer};
-
-}:>
-<:{
-    use strict;
-    use warnings;
-
-    my $with_accesskey = "<get-var with_accesskey />";
-    my @params;
-    if ($with_accesskey ne "")
-    {
-        push @params, ('with_accesskey' => $with_accesskey);
-    }
-    print $shlomif_nav_links_renderer->get_total_html(@params);
-}:>
-
-<restore object_class />
 <restore with_accesskey />
 
 </define-tag>

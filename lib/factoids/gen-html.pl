@@ -27,8 +27,6 @@ my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 
 my $dom = $p->parse_file($facts_xml_path);
 
-# print map { $_->value , "\n" } $dom->findnodes("//list/\@xml:id");
-
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 {
     foreach my $lang (qw(en-US he-IL))
@@ -984,9 +982,11 @@ my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
         @pages
     ]);
 
+use Shlomif::Out qw/write_on_change/;
+
 my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
-if (! -e $json_fn or $new_json ne io->file($json_fn)->all)
-{
-    io->file($json_fn)->print($new_json);
-}
+write_on_change(
+    sub { return io->file($json_fn); },
+    \$new_json,
+);

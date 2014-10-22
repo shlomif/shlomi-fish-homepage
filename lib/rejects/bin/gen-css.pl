@@ -8,7 +8,7 @@ package Template::Preprocessor::TTML;
 use warnings;
 use strict;
 
-use base 'Class::Accessor';
+use parent 'Class::Accessor';
 
 use Template;
 use Template::Preprocessor::TTML::CmdLineProc;

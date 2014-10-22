@@ -48,7 +48,9 @@ sub _out
 
     my $text_ref = $text_cb->();
 
-    my $text = ( $$text_ref . ($$text_ref !~ /\n\z/ ? "\n" : '') );
+    my $text = ( $$text_ref
+        . (($$text_ref !~ /\n\z/ && $$text_ref =~ /\S/) ? "\n" : '')
+    );
 
     my $io = sub { return io->file($path)->encoding('UTF-8'); };
 

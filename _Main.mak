@@ -55,8 +55,10 @@ T2_CACHE_ALL_DIRS_DEST = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T
 
 PROCESS_ALL_INCLUDES = bin/process-includes.pl
 
+FIND_PKG_BASE = "$$(cd "$(FORTUNES_DIR)" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')"
+
 define INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define VIPE_INCLUDE_WML_RENDER
@@ -714,12 +716,12 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 	perl -Ilib $<
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
-	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
 
 FORTUNES_PROCESS_ALL_INCLUDES = bin/process-fortunes-all-includes.pl
 
 define FORTUNES_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
 endef
 
 # TODO : extract a macro for this and the rule below.

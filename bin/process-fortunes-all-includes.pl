@@ -14,3 +14,5 @@ foreach my $class (qw(info irc-conversation))
 
     eval qq{s#\\Q$table_from\\E#$table_to#g};
 }
+
+s#(</div>|</li>|</html>)\n\n#$1\n#g;

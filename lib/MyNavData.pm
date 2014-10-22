@@ -439,7 +439,7 @@ my %reduced_sub_trees =
 
 sub generic_get_params
 {
-    my ($class, $args) = @_;
+    my (undef, $args) = @_;
 
     my $is_fully_expanded = (
         exists($args->{fully_expanded})

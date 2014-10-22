@@ -11,6 +11,7 @@
 <:{
     use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 }:>
+
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
 <set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
@@ -27,14 +28,9 @@ _print_utf8( join("\n", @$nav_html) );
 
 
 <define-tag latemp_get_html_head_nav_links>
-<:{
-    use strict;
-    use warnings;
-
-    NavDataRender->render_html_head_nav_links(
-        { nav_links_obj => $nav_links_obj}
-    );
-}:>
+<set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
+<set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
+(((((include "cache/html_head_nav_links/<get-var host />/<get-var filename />")))))
 </define-tag>
 
 
@@ -52,10 +48,14 @@ _print_utf8( join("\n", @$nav_html) );
 }:>
 <restore with_accesskey />
 </define-tag>
+
 <define-tag latemp_get_html_body_nav_links_helper>
+
 <preserve with_accesskey />
 <set-var %attributes />
+
 <preserve object_class filename host />
+
 <set-var object_class="<latemp_default_val "<get-var latemp_navmenu_object_class />" "HTML::Widgets::NavMenu" />" />
 <set-var filename="<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILENAME)" />" />
 <set-var host="<latemp_default_val "<get-var latemp_server />" "$(LATEMP_SERVER)" />" />
@@ -99,6 +99,9 @@ $shlomif_nav_links_renderer = $results->{nav_links_renderer};
     }
     print $shlomif_nav_links_renderer->get_total_html(@params);
 }:>
+
 <restore object_class filename host />
 <restore with_accesskey />
+
 </define-tag>
+

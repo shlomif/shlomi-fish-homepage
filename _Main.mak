@@ -50,7 +50,6 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
-T2_CACHE_ALL_DIRS_DEST = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_ALL_DIRS_DEST))
 
 
 PROCESS_ALL_INCLUDES = perl -pi -0777 -C bin/process-fortunes-all-includes.pl
@@ -74,11 +73,7 @@ WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@'
 
 endef
 
-make-dirs: $(T2_ALL_DIRS_DEST) $(T2_CACHE_ALL_DIRS_DEST)
-
-$(T2_CACHE_ALL_DIRS_DEST): %: unchanged
-	mkdir -p $@
-	touch $@
+make-dirs: $(T2_ALL_DIRS_DEST)
 
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 
@@ -89,7 +84,7 @@ T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
 T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
-T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T2_DOCS_DEST))
+T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/combined/t2/%/sect_navmenu,$(T2_DOCS_DEST))
 
 $(T2_CACHE_ALL_DOCS): $(GEN_SECT_NAV_MENUS)
 	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))

@@ -110,7 +110,7 @@ foreach my $host (qw(t2 vipe))
         my $out = sub {
             my ($id, $cb) = @_;
 
-            my $path = "lib/cache/$id/$host/$u";
+            my $path = "lib/cache/combined/$host/$u/$id";
 
             return _out($path, $cb);
         };

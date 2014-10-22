@@ -32,11 +32,13 @@ sub get_root
 
 foreach my $host (qw(t2 vipe))
 {
-    foreach my $url (($host eq 't2')
+    foreach my $proto_url (($host eq 't2')
         ? @ARGV
         : (qw(index.html lecture/index.html))
     )
     {
+
+        my $url = $proto_url =~ s#/index\.html\z#/#r;
 
         my $filename = "/$url";
         my $u = $url =~ s#/$#/index.html#r;

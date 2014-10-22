@@ -38,13 +38,12 @@ sub _out
 
     io->dir(dirname($path))->mkpath;
 
-    my $text = $text_cb->();
-    if ($text !~ /\n\z/)
-    {
-        $text .= "\n";
-    }
+    my $text_ref = $text_cb->();
 
-    io->file($path)->encoding('UTF-8')->print($text);
+    io->file($path)->encoding('UTF-8')->print(
+        $$text_ref,
+        ($$text_ref !~ /\n\z/ ? "\n" : ''),
+    );
 
     return;
 }
@@ -89,8 +88,7 @@ foreach my $host (qw(t2 vipe))
 
             _out($path,
                 sub {
-                    return
-                    $section_nav_menu->get_html
+                    return \( $section_nav_menu->get_html );
                 }
             );
         }
@@ -100,16 +98,18 @@ foreach my $host (qw(t2 vipe))
             _out($path,
                 sub {
                     return
-                    NavDataRender->get_breadcrumbs_trail_unconditionally(
-                    {
-                        total_leading_path =>
-                        $section_nav_menu->total_leading_path(
+                    \(
+                        NavDataRender->get_breadcrumbs_trail_unconditionally(
                             {
-                                main_leading_path => $leading_path,
+                                total_leading_path =>
+                                $section_nav_menu->total_leading_path(
+                                    {
+                                        main_leading_path => $leading_path,
+                                    }
+                                ),
                             }
-                        ),
-                    }
-                );
+                        )
+                    ) ;
             });
         }
         {
@@ -119,9 +119,9 @@ foreach my $host (qw(t2 vipe))
                 $path,
                 sub {
                     return
-                    NavDataRender->get_html_head_nav_links(
+                    \(NavDataRender->get_html_head_nav_links(
                         { nav_links_obj => $nav_links_obj}
-                    );
+                    ));
                 }
             );
         }

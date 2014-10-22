@@ -27,7 +27,9 @@ sub get_root
 
     $url =~ s#\A/##;
 
-    return (("../" x ($url =~ y#/#/#)) =~ s#/\z##r);
+    my $ret = (("../" x ($url =~ y#/#/#)) =~ s#/\z##r);
+
+    return (($ret eq '') ? '.' : $ret);
 }
 
 foreach my $host (qw(t2 vipe))

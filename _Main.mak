@@ -48,19 +48,20 @@ T2_CACHE_ALL_DIRS_DEST = $(patsubst $(T2_DEST)/%,lib/cache/sect-navmenu/t2/%,$(T
 PROCESS_ALL_INCLUDES = bin/process-includes.pl
 
 define INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define VIPE_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(VIPE_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(VIPE_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(VIPE_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(VIPE_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define T2_COMMON_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define VIPE_COMMON_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -lpi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && perl -pi -0777 -C $(PROCESS_ALL_INCLUDES) '$@'
+
 endef
 
 make-dirs: $(T2_ALL_DIRS_DEST) $(T2_CACHE_ALL_DIRS_DEST)

@@ -52,7 +52,7 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 
-PROCESS_ALL_INCLUDES = perl -pi -0777 -C bin/post-incs.pl
+PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 FIND_PKG_BASE = "$$(cd "$(FORTUNES_DIR)" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')"
 

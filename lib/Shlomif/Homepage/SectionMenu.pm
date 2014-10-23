@@ -41,12 +41,11 @@ sub get_section_nav_menu_params
 
 sub get_modified_sub_tree
 {
-    my ($self, $class_base) = @_;
+    my ($self, $sect) = @_;
 
     my $subs = +{
-        $self->get_section_nav_menu_params(
-         "Shlomif::Homepage::SectionMenu::Sects::$class_base"
-     ) }->{tree_contents}->{subs};
+        $self->get_section_nav_menu_params($sect)
+     }->{tree_contents}->{subs};
 
     return
         {

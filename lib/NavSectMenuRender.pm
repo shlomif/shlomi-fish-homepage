@@ -8,7 +8,7 @@ use utf8;
 use MyNavData;
 use HTML::Widgets::NavMenu::JQueryTreeView;
 
-use MySectNavData;
+use Shlomif::Homepage::SectionMenu::Manager;
 
 use vars (qw($section_nav_menu));
 
@@ -24,7 +24,8 @@ sub init_section_nav_menu
     # operational.
     my $ads_side = '';
 
-    my $section_nav_menu = MySectNavData->get_nav_menu(
+    my $section_nav_menu =
+    Shlomif::Homepage::SectionMenu::Manager->get_nav_menu(
         {
             'path_info' => $filename,
             'current_host' => $host,

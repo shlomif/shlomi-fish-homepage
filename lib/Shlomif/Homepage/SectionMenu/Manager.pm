@@ -1,4 +1,4 @@
-package MySectNavData;
+package Shlomif::Homepage::SectionMenu::Manager;
 
 use strict;
 use warnings;

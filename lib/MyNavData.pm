@@ -32,7 +32,7 @@ my @humour_aphorisms_expand = (re => q{^(?:humour/(?:aphorisms/|fortunes/|bits/f
 
 my %reduced_sub_trees =
 (
-    'Art' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Art' =>
     {
         text => "Art",
         url => "art/",
@@ -69,7 +69,7 @@ my %reduced_sub_trees =
             },
         ],
     },
-    'Humour' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Humour' =>
     {
         text => "Humour",
         url => "humour/",
@@ -154,7 +154,7 @@ my %reduced_sub_trees =
             },
         ],
     },
-    'Puzzles' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Puzzles' =>
     {
         text => "Puzzles",
         url => "puzzles/",
@@ -176,7 +176,7 @@ my %reduced_sub_trees =
         ],
     },
 
-    'Software' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Software' =>
     {
         text => "Software",
         url => "open-source/",
@@ -282,7 +282,7 @@ my %reduced_sub_trees =
             },
         ],
     },
-    'Lectures' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Lectures' =>
     {
         text => "Lectures",
         url => "lecture/",
@@ -332,7 +332,7 @@ my %reduced_sub_trees =
         ],
     },
 
-    'Essays' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Essays' =>
     {
         text => "Essays",
         url => "philosophy/",
@@ -393,7 +393,7 @@ my %reduced_sub_trees =
             },
         ],
     },
-    'Meta' =>
+    'Shlomif::Homepage::SectionMenu::Sects::Meta' =>
     {
         expand => { re => "^meta/", },
         url => "meta/",
@@ -457,9 +457,8 @@ sub generic_get_params
 
         if ( $is_fully_expanded )
         {
-            return
-            Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
-                "Shlomif::Homepage::SectionMenu::Sects::$sect_name"
+            return Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
+                $sect_name
             );
         }
         else
@@ -569,12 +568,12 @@ sub generic_get_params
                     },
                 ],
             },
-            $get_sub_tree->('Humour'),
-            $get_sub_tree->('Essays'),
-            $get_sub_tree->('Puzzles'),
-            $get_sub_tree->('Art'),
-            $get_sub_tree->('Software'),
-            $get_sub_tree->('Lectures'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Humour'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Essays'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Puzzles'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Art'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Software'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Lectures'),
             {
                 text => "Work",
                 url => "work/",
@@ -625,7 +624,7 @@ sub generic_get_params
                 separator => 1,
                 skip => 1,
             },
-            $get_sub_tree->('Meta'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Meta'),
         ],
     };
 

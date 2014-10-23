@@ -12,51 +12,46 @@ my @sections =
     {
         'id' => "art",
         'regex' => "^/art/",
-        'class_base' => "Art",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Art",
         'title' => "Art Section Menu",
     },
     {
         'id' => "essays",
         'regex' => "^/(?:philosophy|prog-evolution|DeCSS)/",
-        'class_base' => "Essays",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Essays",
         'title' => "Essays Section Menu",
     },
     {
         'id' => "puzzles",
         'regex' => q{^/(?:(?:puzzles|MathVentures)/|toggle.html$)},
-        'class_base' => "Puzzles",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Puzzles",
         'title' => "Puzzles Section Menu",
     },
     {
         'id' => "lectures",
         'regex' => "^/lecture/",
-        'class_base' => "Lectures",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Lectures",
         'title' => "Lectures Section Menu",
     },
     {
         'id' => "software",
         'regex' => "^/(?:open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/",
-        'class_base' => "Software",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Software",
         'title' => "Software Section Menu",
     },
     {
         'id' => "humour",
         'regex' => "^/(?:humour/|(?:(?:humour(?:-heb)?|wysiwyt|wonderous)\.html))",
-        'class_base' => "Humour",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Humour",
         'title' => "Humour Section Menu",
     },
     {
         'id' => "meta",
         'regex' => "^/meta/",
-        'class_base' => "Meta",
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Meta",
         'title' => "Site Meta Information Section Menu",
     },
 );
-
-foreach my $s (@sections)
-{
-    $s->{class} = "Shlomif::Homepage::SectionMenu::Sects::$s->{class_base}";
-}
 
 sub get_nav_menu
 {

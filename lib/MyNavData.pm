@@ -458,8 +458,9 @@ sub generic_get_params
         if ( $is_fully_expanded )
         {
             return
-                Shlomif::Homepage::SectionMenu
-                ->get_modified_sub_tree($sect_name);
+            Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
+                "Shlomif::Homepage::SectionMenu::Sects::$sect_name"
+            );
         }
         else
         {

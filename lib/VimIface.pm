@@ -5,6 +5,8 @@ use warnings;
 
 use Text::VimColor;
 
+use IO::All qw/ io /;
+
 sub is_newer
 {
     my $file1 = shift;
@@ -34,20 +36,13 @@ sub get_syntax_highlighted_html_from_file
             ($args{'filetype'} ? (filetype => $args{'filetype'}) : ()),
         );
 
-        open my $out, ">", $html_filename
-            or die "Could not open HTML file '$html_filename' for output - $!";
-
-        print {$out} $syntax->html();
-        close($out);
+        io->file($html_filename)->print ( $syntax->html );
     }
 
-    open my $in, "<", $html_filename
-        or die "Could not open HTML file '$html_filename' for input - $!";
-    my $text = do { local $/; <$in> };
-    close($in);
+    my $text = io->file($html_filename)->all;
 
-    $text =~ s{^.*<pre>[\s\n\r]*}{}s;
-    $text =~ s{[\s\n\r]*</pre>.*$}{}s;
+    $text =~ s{\A.*<pre>[\s\n\r]*}{}s;
+    $text =~ s{[\s\n\r]*</pre>.*\z}{}s;
     $text =~ s{(class=")syn}{$1}g;
 
     return $text;

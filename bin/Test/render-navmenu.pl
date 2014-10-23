@@ -5,7 +5,6 @@ use warnings;
 use MyNavData;
 use Shlomif::Homepage::NavMenu::JQTreeView;
 use CGI qw();
-use MyNavLinks;
 
 binmode STDOUT, ":utf8";
 

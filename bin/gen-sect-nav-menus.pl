@@ -15,7 +15,6 @@ use List::MoreUtils qw/ natatime /;
 use NavSectMenuRender;
 use NavDataRender;
 use MyNavData;
-use MyNavLinks;
 use URI::Escape qw(uri_escape);
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use Parallel::ForkManager;

@@ -55,9 +55,11 @@ my @sections =
 
 sub get_nav_menu
 {
+    my ($self, $args) = @_;
+
     return Shlomif::Homepage::SectionMenu->new(
         'sections' => \@sections,
-        @_,
+        %$args,
     );
 }
 

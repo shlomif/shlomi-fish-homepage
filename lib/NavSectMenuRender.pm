@@ -24,11 +24,13 @@ sub init_section_nav_menu
     # operational.
     my $ads_side = '';
 
-    my $section_nav_menu = MySectNavData::get_nav_menu(
-        'path_info' => $filename,
-        'current_host' => $host,
-        'root' => "$ROOT",
-        'bottom_code' => $ads_side,
+    my $section_nav_menu = MySectNavData->get_nav_menu(
+        {
+            'path_info' => $filename,
+            'current_host' => $host,
+            'root' => "$ROOT",
+            'bottom_code' => $ads_side,
+        },
     );
 
     return

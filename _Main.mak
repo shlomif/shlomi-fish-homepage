@@ -60,8 +60,12 @@ define DEF_WML_PATH
 WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ;
 endef
 
+define GENERIC_GENERIC_WML_RENDER
+$(call DEF_WML_PATH) ( cd $2 && wml -o "$${WML_LATEMP_PATH}" $(WML_FLAGS) -DLATEMP_SERVER=$1 -DLATEMP_FILENAME=$(patsubst $3/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $2/%,%,$<) ) && $4 '$@'
+endef
+
 define GENERIC_WML_RENDER
-$(call DEF_WML_PATH) ( cd $2 && wml -o "$${WML_LATEMP_PATH}" $(WML_FLAGS) -DLATEMP_SERVER=$1 -DLATEMP_FILENAME=$(patsubst $3/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $2/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+$(call GENERIC_GENERIC_WML_RENDER,$1,$2,$3,$(PROCESS_ALL_INCLUDES))
 endef
 
 define INCLUDE_WML_RENDER
@@ -701,6 +705,7 @@ $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
 $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
+	rm -f $@
 	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
 		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
 		mv -f "$$f.xhtml" "$$f"; \
@@ -718,12 +723,12 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 	perl -Ilib $<
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
-	$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+	$(call INCLUDE_WML_RENDER)
 
 FORTUNES_PROCESS_ALL_INCLUDES = F=1 $(PROCESS_ALL_INCLUDES)
 
 define FORTUNES_WML_RENDER
-$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
+$(call GENERIC_GENERIC_WML_RENDER,t2,$(T2_SRC_DIR),$(T2_DEST),$(FORTUNES_PROCESS_ALL_INCLUDES))
 endef
 
 # TODO : extract a macro for this and the rule below.

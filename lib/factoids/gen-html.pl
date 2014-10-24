@@ -120,6 +120,12 @@ with thousands of factoids.
 
 <li>
 <p>
+<a href="http://www.neobytesolutions.com/chuck-norris-programmer-facts-part-1/">Chuck Norris Programmer Facts - part 1</a>
+</p>
+</li>
+
+<li>
+<p>
 <a href="http://www.direct2tv.com/chuck-norris-turns-73.html">Chuck Norris
 Turns 73</a> (again).
 </p>

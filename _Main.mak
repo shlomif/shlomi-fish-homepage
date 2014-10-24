@@ -56,20 +56,24 @@ PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 FIND_PKG_BASE = "$$(cd "$(FORTUNES_DIR)" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')"
 
+define DEF_WML_PATH
+WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ;
+endef
+
 define INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define VIPE_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(VIPE_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(VIPE_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+$(call DEF_WML_PATH) ( cd $(VIPE_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(VIPE_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define T2_COMMON_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+$(call DEF_WML_PATH) ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
 endef
 
 define VIPE_COMMON_INCLUDE_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+$(call DEF_WML_PATH) ( cd $(COMMON_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(VIPE_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(VIPE_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(COMMON_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
 
 endef
 
@@ -711,12 +715,12 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 	perl -Ilib $<
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
-	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
+	$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(PROCESS_ALL_INCLUDES) '$@'
 
 FORTUNES_PROCESS_ALL_INCLUDES = F=1 $(PROCESS_ALL_INCLUDES)
 
 define FORTUNES_WML_RENDER
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
+$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE=$(FIND_PKG_BASE) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $(FORTUNES_PROCESS_ALL_INCLUDES) '$@'
 endef
 
 # TODO : extract a macro for this and the rule below.

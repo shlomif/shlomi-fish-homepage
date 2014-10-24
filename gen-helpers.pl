@@ -56,9 +56,22 @@ my $generator =
 
 $generator->process_all();
 
+sub _process_T2_DOCS_files
+{
+    my ($files) = @_;
+
+    return \(join(' ', grep {
+            not
+            (
+                m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
+                && $1 ne 'index'
+            )
+        } split /\s+/, $$files
+    ));
+}
 
 my $text = io("include.mak")->slurp();
-$text =~ s!^(T2_DOCS = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s#\bhumour/fortunes/[a-zA-Z_\-\.]+\.html\b##gr)!ems;
+$text =~ s!^(T2_DOCS = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ${_process_T2_DOCS_files(\$files)}!ems;
 $text =~ s!^((?:T2_DOCS|T2_DIRS) = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s# +ipp\.\S*##gr)!ems;
 $text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;
 $text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;

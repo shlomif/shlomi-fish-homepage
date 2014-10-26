@@ -527,6 +527,10 @@ sub generic_get_params
                                 url => "me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
                             },
                             {
+                                text => "Résumé as a Software Dev",
+                                url => "me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html",
+                            },
+                            {
                                 text => "English Résumé",
                                 url => "SFresume.html",
                                 skip => 1,

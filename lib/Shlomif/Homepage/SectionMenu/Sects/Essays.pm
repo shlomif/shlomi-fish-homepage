@@ -57,7 +57,7 @@ my $essays_tree_contents =
                 {
                     text => "Putting all the Cards on the Table (2013)",
                     url => "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
-                    title => "Stopping to speak in riddles and be brutally honest, open, and sincere",
+                    title => "A snapshot of my personal philosophy as of March 2013",
                 }
             ],
         },

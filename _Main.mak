@@ -1292,3 +1292,15 @@ $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 
 tags:
 	ctags -R --exclude='.hg/**' --exclude='*~' .
+
+T2_CACHE_PREF = lib/cache/combined/t2
+
+$(T2_DOCS_DEST): $(T2_DEST)/%: \
+	$(T2_CACHE_PREF)/%/breadcrumbs-trail \
+	$(T2_CACHE_PREF)/%/html_head_nav_links \
+	$(T2_CACHE_PREF)/%/main_nav_menu_html \
+	$(T2_CACHE_PREF)/%/page_url \
+	$(T2_CACHE_PREF)/%/sect-navmenu \
+	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey= \
+	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey=1 \
+

@@ -7353,5 +7353,53 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-required-joke-about-Emacs">
+        <meta>
+            <title>“Required Joke about Emacs”</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="qizwiz">so I can&#39;t do a recursive include with PERL5LIB?</saying>
+<saying who="qizwiz">I have to defend every code change and this is really for my own use (emacs)</saying>
+<saying who="rindolf">qizwiz: you can try using File::Find or whatever.</saying>
+<saying who="huf">qizwiz: depends on how you set it</saying>
+<saying who="huf">shell has glob too :)</saying>
+<saying who="huf">or you can write a script and symlink everything together and include a single dir</saying>
+<saying who="anno">recursive?</saying>
+<saying who="mauke">use an overlay mount!</saying>
+<saying who="huf">fish bananas old pajamas butter&#39;d scones for lunch?</saying>
+<saying who="Grinnz_">qizwiz: theres no such thing as a recursive lib dir; you need a base lib dir, so that things like Some::Deep::Namespace::Module can be found at Some/Deep/Namespace/Module.pm</saying>
+<saying who="Grinnz_">it doesn&#39;t search very hard for these things, it just goes by @INC</saying>
+<me_is who="ImaginaryFriend">has quit (Quit: leaving)</me_is>
+<saying who="qizwiz">or I could just use emacs itself to build the env variable. That&#39;s probably easiest.</saying>
+<saying who="Alchemy">qizwiz, http://perldoc.perl.org/lib.html</saying>
+<saying who="Grinnz_">well, &quot;easiest&quot; would be to remake the &quot;cpan modules&quot; dir by using cpanm or something to download whatever specific versions you need ;)</saying>
+<saying who="kaitlyn">&lt;required joke about emacs here&gt;</saying>
+<saying who="Alchemy">&lt;required joke about plumbers fixing emacs problem&gt;</saying>
+<saying who="qizwiz">Grinnz: that&#39;s not an obvious solution to me. What do you mean exactly?</saying>
+<saying who="Grinnz_">qizwiz: instead of having cpan modules installed in different lib dirs, install them all to the same lib dir</saying>
+<saying who="sproingie">@INC can contain functions, but that&#39;s getting even more insane</saying>
+<saying who="Grinnz_">they are designed to coincide</saying>
+<saying who="rindolf">kaitlyn: http://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-sharp-programming-your-emacs-so-fat</saying>
+<saying who="sproingie">debugging a dynamic @INC will be hell on wheels</saying>
+<saying who="Grinnz_">qizwiz: and cpanm can be directed to install a specific version of a module with &quot;cpanm Module::Name@1.2345&quot;</saying>
+<saying who="Grinnz_">but you&#39;d have to set it up so it&#39;s installing to the right dir first</saying>
+<saying who="sproingie">carton is perfect for that</saying>
+<saying who="Grinnz_">right, or that</saying>
+<saying who="kaitlyn">rindolf: All joking aside, emacs is a great editor.  I just don&#39;t know enough LISP to properly start it.</saying>
+<saying who="sproingie">wait, emacs is also an editor?</saying>
+<saying who="kaitlyn">sproingie: I&#39;m pretty sure it&#39;s an IRC client.</saying>
+<saying who="Grinnz_">i thought it was another improved replacement for sysvinit</saying>
+<saying who="qizwiz">sproingie: Actually, not really. I can take whatever function I&#39;m runing on emacs that&#39;s going to hit @INC in some way and &#39;advise&#39; it to set the PERL5LIB variable before it&#39;s run. I can even cache it to make it more performant</saying>
+<saying who="sproingie">i&#39;m sure the next systemd will have emacs built in</saying>
+<saying who="rindolf">Grinnz_: heh.</saying>
+<saying who="Grinnz_">sproingie: not sure, i think it will be the other way around</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

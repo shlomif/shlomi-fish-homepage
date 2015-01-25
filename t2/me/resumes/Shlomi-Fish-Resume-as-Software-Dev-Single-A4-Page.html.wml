@@ -1,0 +1,180 @@
+#include "utils.wml"
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Shlomi Fish’s Résumé</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Shlomi Fish" />
+<meta name="description" content="Shlomi Fish’s Résumé." />
+<meta name="keywords" content="Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Subversion, version control, Web, Web Design, DeCSS, Software" />
+<style type="text/css">
+body
+{
+    font-size: 90%;
+}
+td
+{
+    vertical-align: top;
+    padding-bottom: 0.5em;
+}
+td > p:first-child
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Shlomi Fish’s Résumé</h1>
+
+<define-tag contact_details>
+
+<h2>Contact Details</h2>
+
+<p>
+Shlomi Fish<br />
+4 Hakim Eliyahu St.<br />
+Tel Aviv, 69120<br />
+Israel<br />
+Phone Number: 03-6424668<br />
+Cell Phone: 054-6232377<br />
+Fax Number: 03-6414319<br />
+E-mail Address: <mailto_link_to_self email="<main_email />" /><br />
+Home Page: <url_body_link href="http://www.shlomifish.org/" /><br />
+Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ; MSN - shlomif@iglu.org.il ;
+ICQ - #207733823; AIM - ShlomiFish<br />
+</p>
+</define-tag>
+
+<define-tag objective>
+
+<h2>Objective</h2>
+
+<p>
+I am a professional software developer, specialising in writing
+algorithmic code, text and XML processing, web publishing, and
+game-related code. I am a hobbyist (but not amateuristic) writer
+of essays, technical articles, fiction, and humour.
+</p>
+
+<p>
+As a software developer, I have read a lot of online and offline
+literature about <b>software design</b> methodology
+and <b>software management</b>, and try to form my
+own coherent best practices based on all that. As a programmer, I try
+to tread on the fine line between modularity (DRY) and making sure
+the code is not overly clever and hard to read (KISS).
+</p>
+
+</define-tag>
+
+<define-tag specialisations>
+
+<table>
+
+<tr>
+<td colspan="2">
+<h2>Fields of Expertise</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Programming Languages:</b>
+</td>
+<td>
+<p>
+<strong>C</strong> (since 1992, active use and good knowledge),
+<strong>Perl</strong> (since 1996, active use
+and excellent knowledge),
+<strong>C++</strong> (since 1992, a lot of experience but
+incomplete knowledge),
+<strong>Bourne Shell/Bash</strong> (since 1996, good knowledge
+and good mastery),
+<strong>Python</strong> (since about 2002 - good knowledge but
+incomplete experience),
+<strong>JavaScript</strong> (since 1996 - not a lot of experience)
+</p>
+
+<p>
+<b>Studied out of interest:</b> Basic, Object Pascal, Scheme, Matlab,
+Common Lisp, Haskell, Prolog.
+</p>
+
+<p>
+<b>Functional Knowledge:</b> Java, Ruby, Lua, PHP.
+</p>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Operating Systems:</b>
+</td>
+<td>
+UNIX (Linux, FreeBSD, others), Windows 95/98, Windows 3.11, DOS,
+Windows XP.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Databases:</b>
+</td>
+<td>
+SQL, Delphi, ODBC, MS-Access, MySQL, PostgreSQL, SQLite.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Internet Related:</b>
+</td>
+<td>
+HTML, XHTML, CGI programming, JavaScript, TCP/IP Sockets, Website Meta Language,
+Apache, CGI::Application, Catalyst (Web-development framework for Perl), jQuery.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>XML Technologies:</b>
+</td>
+<td>
+XML, DTD, RELAX NG, XPath, DOM, XSLT.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Various Programs:</b>
+</td>
+<td>
+Word, Excel, WordPerfect, Corel-Draw, The GIMP, LaTeX, DocBook/XML,
+OpenOffice.org, Inkscape.
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Development Tools:</b>
+</td>
+<td>
+Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
+</td>
+</tr>
+</table>
+
+</define-tag>
+
+<specialisations />
+<contact_details />
+
+</body>
+</html>

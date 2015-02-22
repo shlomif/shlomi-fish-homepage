@@ -20,6 +20,7 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP 'dest/t2/philosophy/computers/high-quality-software/what-makes-software-high-quality' |
     grep -vP 'dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index' |
     grep -vP '\.raw\.html$' |
+    grep -vP '\A\Qdest/t2/js/jquery-ui\E' |
     grep -vP '\A\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E' |

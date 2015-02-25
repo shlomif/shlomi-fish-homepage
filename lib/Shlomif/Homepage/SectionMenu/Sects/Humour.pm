@@ -513,6 +513,11 @@ my $humour_tree_contents =
                     url => "humour/by-others/oded-c/",
                     title => "Humorous stories by Oded C. in Hebrew",
                 },
+                {
+                    text => "Mirror of funroll-loops.info",
+                    url => "humour/by-others/funroll-loops/",
+                    title => "A mirror of a funroll-loops.info - “Gentoo is Rice”",
+                },
             ],
         },
         {

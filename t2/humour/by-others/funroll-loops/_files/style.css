@@ -1,0 +1,220 @@
+/* Title                        : Stylesheet for Joker */
+/* URI                          : /style.css */
+/* Author                       : Deirdre Saoirse Moen <deirdre@deirdre.net> */
+
+/*  ########## Colors ########## */
+
+/* If you don't like 'em,
+they're all here */
+
+body,
+.boxA a,
+.boxA span {
+    background-color            : #f0fff0;
+}
+
+q {
+    background-color            : #fff0ff;
+}
+
+.boxA div {
+    background-color            : #66CC00;
+}
+
+p {
+    color                       : #2F2F2F;
+}
+
+.boxA div {
+    color                       : #fff0ff;
+}
+
+h2,
+ #header,
+.boxA,
+q {
+    border-color                : #49166D;
+}
+
+.boxA div {
+    border-color                : #49166D;
+}
+
+#footer,
+#header {
+    background-color            : #49166D;
+}
+
+a:link {
+    color                       : #66CC00;
+}
+a:visited {
+    color                       : #6F6F6F;
+}
+a:hover {
+    color                       : #49166D;
+}
+a:active {
+    color                       : #49166D;
+}
+
+.headerText:hover,
+.headerText:active,
+.footerText:hover,
+.footerText:active,
+.headerTitle {
+    color :#fff0ff;
+}
+
+.headerStatic,
+.footerStatic {
+    color :#fff0ff;
+}
+
+strong,
+q,
+h1,
+h2,
+h3 {
+    color                       : #49166D;
+}
+
+/* ###### Browser-specific Styles (thanks haran!) ###### */
+
+/* For IE & Mozilla-based browsers  : */
+
+.boxA {
+    margin-left                 : 2.5mm;
+    float                       : left;
+    clear                       : left;
+}
+
+/* For Mozilla-based (CSS2-fully complaint) browsers only   : */
+
+[class~="boxA"] {
+    margin-left                 : 5mm;
+}
+
+
+/* ########## Body ########## */
+
+body {
+    margin                      : 0px;
+}
+
+#bodyText {
+    overflow                    : auto;
+    top                         : 4.5em;
+    bottom                      : 4.5em;
+    line-height                 : 1.25em;
+    margin                      : 3mm 0 0 14em;
+    padding                     : 0em 3em 1em 0em;
+}
+
+/* ###### Header ###### */
+
+#header {
+    height                      : 2em;
+    margin-bottom               : 0.25em;
+    padding                     : 1em 0.25em 0 0.5em;
+    border-bottom               : 2px solid;
+}
+
+
+/* ########## BoxA ########## */
+
+.boxA {
+    position                    : fixed;
+    top                         : 5.5em;
+    border-top                  : 2px solid;
+    border-bottom               : 2px solid;
+    width                       : 11em;
+}
+
+.boxA div {
+    font-weight                 : bold;
+    font-size                   : 120%;
+    border-bottom               : 2px dotted;
+    padding                     : 0.4em 0.5em 0.3em 0.5em;
+}
+
+.boxA span {
+    border-bottom               : 1px solid;
+}
+
+.boxA a,
+.boxA span {
+    text-decoration             : none;
+    line-height                 : 1.25em;
+    display                     : block;
+    padding                     : 0.5em 0.5em 0.1em 0.5em;
+}
+
+
+/* ########## Font Stuff ########## */
+
+body {
+    font-family                 : 'Arial','Verdana',sans-serif;
+}
+
+h1, h2, h3 {
+    font-family                 : 'Lucida Grande','Trebuchet MS',Tahoma,sans-serif;
+}
+
+h1 {
+    font-weight                 : bold;
+    font-size                   : 150%;
+    border-bottom               : 2px solid;
+    padding-bottom              : 0.1em;
+}
+
+h2 {
+    font-weight                 : bold;
+    font-size                   : 125%;
+    border-bottom               : 2px solid;
+    padding-bottom              : 0.1em;
+}
+
+p {
+    font-size                   : 110%;
+}
+
+/* ########## Header, Footer ########## */
+
+#footer {
+    height                      : 2.5em;
+    position                    : fixed;
+    width                       : 100%;
+    bottom                      : 0;
+    left                        : 0;
+    top                         : auto;
+}
+
+#header {
+    height                      : 2.5em;
+    position                    : fixed;
+    right                       : 0;
+    top                         : 0;
+    left                        : 0;
+    bottom                      : auto;
+}
+
+.footerText,
+.headerText,
+.headerStatic,
+.footerStatic {
+    padding-right               : 3mm;
+    padding-top                 : 2mm;
+    padding-bottom              : 2mm;
+    float                       : right;
+}
+
+.headerTitle {
+    font-size                   : 150%;
+}
+
+img {
+
+    padding                     : 20px;
+
+}

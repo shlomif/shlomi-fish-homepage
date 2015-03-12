@@ -1269,6 +1269,15 @@ $(MAN_HTML): ./bin/gen-manifest.pl
 $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
 
+LC_LECTURE_ARC_BASE = Lambda-Calculus.tar.gz
+LC_LECTURE_ARC_DIR = $(T2_DEST)/lecture
+LC_LECTURE_ARC = $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
+
+all: $(LC_LECTURE_ARC)
+
+$(LC_LECTURE_ARC):
+	(cd $(LC_LECTURE_ARC_DIR) && tar -cavf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides)
+
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
 

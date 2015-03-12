@@ -1303,6 +1303,13 @@ $(OCT_2014_SGLAU_LET_HTML): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/lett
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 	convert -resize '200' $< $@
 
+ENEMY_STYLE = dest/t2/humour/TheEnemy/The-Enemy-English-v7/style.css
+
+all: $(ENEMY_STYLE)
+
+$(ENEMY_STYLE):
+	touch $@
+
 tags:
 	ctags -R --exclude='.hg/**' --exclude='*~' .
 

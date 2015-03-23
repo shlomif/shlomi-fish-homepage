@@ -6645,5 +6645,61 @@ This is just the way you have to teach. Now I can remember it much more easily.
                 </info>
             </quote>
         </fortune>
+        <fortune id="backcompat-is-holding-us-back">
+            <meta>
+                <title>Backcompat is holding us back!</title>
+            </meta>
+            <quote>
+                <body>
+
+                    <p> “Let’s free ourselves from the shackles and do
+                        something bold!” </p>
+
+                    <p> I always cringe when I hear this battle cry. Isn’t that
+                        sentiment exactly what set the trajectory for the Perl
+                        6 effort? Maybe it’s just been so long that people have
+                        forgotten.  </p>
+
+                    <p> But that is precisely how Perl 6 became such an
+                        amazingly long trek: once you remove the constraint of
+                        staying compatible, everything is suddenly,
+                        potentially, up for reconsideration. Then when you
+                        start changing things, you discover that changes in one
+                        part of the language also affect several other, remote
+                        parts of the language. So it starts with the simple
+                        desire to fix a handful of obvious problems in obvious
+                        ways… and spirals out as you make changes, and further
+                        still as you make changes in response to your changes,
+                        ever further and further.  </p>
+
+                    <p> At that point, it is exceedingly likely that the
+                        project will fizzle out before it ever comes to any
+                        fruition. But even if you have the perseverance, you
+                        face an uphill battle: unless your project has the
+                        community’s implicit blessing as the successor (as Perl
+                        6 does, due to Larry’s presence), it is likely to
+                        simply slip into oblivion… the way Kurila did.  </p>
+
+                    <p> So yes: backcompat is holding us back… the same way
+                        that gravity is. It keeps us from floating away
+                        untethered.  </p>
+
+                    <p> Note that I’m not saying it doesn’t really hold us
+                        back. I’d love to travel to space easily, too! I still
+                        await Perl 6, as well.  </p>
+
+                    <p> But what I think, every time someone proposes to throw
+                        off the shackles of backcompat and go for it, is that
+                        we already have one Perl 6 – we don’t need another.
+                    </p>
+
+                </body>
+
+                <info>
+                    <author>Aristotle (the Perl enthusiast)</author>
+                    <work href="http://blogs.perl.org/users/aristotle/2013/06/decade-scale.html">“Backcompat is holding us back!”</work>
+                </info>
+            </quote>
+        </fortune>
     </list>
 </collection>

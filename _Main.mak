@@ -936,11 +936,17 @@ HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60
 
 BK2HP_NEW_PNG = common/images/bk2hp.png
 
+DEST_HTML_6_LOGO_PNG = $(T2_DEST)/humour/bits/HTML-6/HTML-6-logo.png
+
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	convert -matte -bordercolor none -border 5 $< $@
 	$(OPTIPNG) $@
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(DEST_HTML_6_LOGO_PNG)
+
+$(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
+	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
+	$(OPTIPNG) $@
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png=$@ $<

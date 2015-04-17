@@ -1,0 +1,59 @@
+Perl6 aims at being the ideal language for data and text processing,
+and that OSes themselves will be written with it. It is based on perl5
+with the following changes:
+
+----------
+Strong Contextualism
+
+A subroutine or a variable declared inside a context is inaccasible
+outside the context ({ .... }). FuM, if two functions are declared in a
+context than they are called in accordance to their appearance. For
+example:
+
+use strict;
+
+{
+    my ($a);
+
+    $a = 6;
+    sub hello()
+    {
+        print "Hello", $a;
+    }
+
+    hello(); # Will print Hello6
+
+    sub hello()
+    {
+        print "Goodbye";
+    }
+
+    hello(); # Will print goodbye
+}
+
+&hello(); # Will generate an error.
+$a = 3; # Will generate an error
+
+
+-------------------------
+New or modified keywords and built-in functions
+
+A static() keyword would be introduced and its meaning is much like in
+C. local() should be omitted.
+The keyword super() will temporarily return control to the process that
+spanned the current line of executiion. It may never return.
+
+
+
+----------------------------
+Data Types:
+
+Binary & other types of numbers. (0-9+ ....)
+
+Scalars (strings of unlimited size)   ('', "", etc.)
+
+Lists. (limited in length, unlimited in capacity)
+
+Hashes (lists which are treated as such)
+
+File handles (*Input, *Output)

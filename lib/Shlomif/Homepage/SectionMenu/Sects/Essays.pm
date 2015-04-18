@@ -242,7 +242,7 @@ my $essays_tree_contents =
                         },
                         {
                             text => "Why I Don’t Trust Non-FOSS",
-                            url => "philosophy/computers/open-source/trust-non-FOSS/",
+                            url => "philosophy/computers/open-source/not-trust-non-FOSS/",
                         },
                     ],
                 },

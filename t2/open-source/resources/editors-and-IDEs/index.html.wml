@@ -20,7 +20,7 @@ Development Environments), useful for programmers and other developers.
 
 <ul>
 
-<li>
+<li id="vim_and_gvim">
 <p>
 <a href="http://www.vim.org/">Vim and gvim</a> - a cross-platform vi-derivative
 editor (with many enhancements) with a Windows-conventions-emulating
@@ -31,12 +31,18 @@ GPL-compatible licence).
 </p>
 </li>
 
-<li>
+<li id="emacs">
 <p>
-<a href="http://www.xemacs.org/">XEmacs</a> - cross-platform Emacs derivative,
+<a href="http://en.wikipedia.org/wiki/GNU_Emacs">GNU Emacs</a>
+ - a cross-platform Emacs derivative,
 with console and GUI versions. Is mostly written in and extendable with the
 built-in Emacs Lisp scripting language. Very hard to get used to from my
 experience. (GPLed).
+</p>
+<p>
+There is also <a href="http://en.wikipedia.org/wiki/XEmacs">XEmacs</a>,
+which started as a fork of GNU Emacs and has become unmaintained since
+2009 as of May 2015.
 </p>
 </li>
 
@@ -290,6 +296,21 @@ for UNIX-like systems. (GPL)
 <p>
 <a href="http://hte.sourceforge.net/doc.html">HT</a> - a “file
 edtior/viewer/analyzer for executables”. (GPL)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://linuxcommand.org/man_pages/xxd1.html">xxd</a> - a utility
+that ships as part of the <a href="#vim_and_gvim">Vim text
+editor</a> distribution that allows dumping to hex display or reconstructing
+the binary, and can be used in conjunction with a text editor such as Vim.
+</p>
+</li>
+
+<li>
+<p>
+<a href="#emacs">GNU Emacs</a> has an hexedit mode.
 </p>
 </li>
 

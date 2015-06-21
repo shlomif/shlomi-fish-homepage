@@ -1,0 +1,20 @@
+PDL stands for the Perl Data Language, and is a set of Perl Extensions and
+Modules to compactly store and speedily manipulate large N-dimensional 
+tensors. Such manipulations are useful for scientific and engineering 
+calculations that involve a lot of manipulations of vectors, matrices and
+other tensors.
+
+With PDL one can create and fill in large tensors, and perform element by 
+element operations on them (product, addition, subtraction, division, taking
+the sine, cosine, logarithm etc), as well as multiply matrices, etc. The 
+routines for doing this are hard-coded in C, and so are performed very quickly.
+
+PDL aims to be a viable alternative to packages such as Matlab or Scilab 
+while giving all the power of Perl. At the moment it still lacks a lot 
+of functionality.
+
+I already used PDL once for a script I wrote to determine a close-to-optimal
+way to switch between game AI scans to solve a range of boards. With PDL
+I was able to run it quickly and still enjoy having to write and debug Perl 
+code.
+

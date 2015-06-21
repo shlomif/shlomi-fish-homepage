@@ -1,0 +1,12 @@
+I created a mailing list manager to create a concentrated set
+of HTML pages that describe the methods for subscribing, unsubcribing,
+etc. of the various Israeli Linux-related mailing lists. I wrote it in Perl 5.
+
+Each mailing list type was specified in its own class, which were in fact
+inherited. Afterwards a vector of Perl 5 hash references, that specifies the
+individual mailing list's classes and parameters is given in the main script.
+
+One time a co-worker of mine who gave me rides from home to work and back, 
+asked if I every found inheritance useful. (he worked mainly in Visual Basic).
+So I told him I used inheritance for this mailing list manager.
+

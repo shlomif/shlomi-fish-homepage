@@ -522,6 +522,10 @@ my $humour_tree_contents =
                     url => "humour/by-others/funroll-loops/",
                     title => "A mirror of a funroll-loops.info - “Gentoo is Rice”",
                 },
+                {
+                    text => "How to Make Square Corners with CSS",
+                    url => "humour/by-others/how-to-make-square-corners-with-CSS/",
+                },
             ],
         },
         {

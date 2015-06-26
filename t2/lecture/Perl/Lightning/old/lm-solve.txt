@@ -4,9 +4,9 @@ several good hours solving it. I then wrote a script to automatically solve it
 for me and it worked very nicely. A search on Google revealed there were other
 mazes of this kind, and I wrote another script for the so-called "Alice Mazes".
 
-I then integrated the functionality of the Minotaur script into the Alice 
-script by using several classes that inherit from the same base class, and 
-supply it with riddle-specific characteristics. Since then support for other 
+I then integrated the functionality of the Minotaur script into the Alice
+script by using several classes that inherit from the same base class, and
+supply it with riddle-specific characteristics. Since then support for other
 puzzle types was added, the most hard to implement being the Planks in the
 Swamp Puzzles.
 
@@ -14,8 +14,8 @@ By writing LM-Solve I became more familiar with processing command line options
 with Getopt::Long and using Pod::Usage and friends. I also used Makefile.PL and
 integrated an RPM Spec.
 
-After I ran into a few of CVS' limitations, I decided to use BitKeeper and 
+After I ran into a few of CVS' limitations, I decided to use BitKeeper and
 the bkbits.net service instead. I was very impressed and happy with it, but
-had to stop using it, after a license change was announced, that made me 
+had to stop using it, after a license change was announced, that made me
 unable to use it any longer.
 

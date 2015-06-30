@@ -7576,5 +7576,54 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-perl-booleans-in-Perl">
+        <meta>
+            <title>Booleans in Perl</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">Varsuchi: but &quot;true&quot; is not a Perl built-in.</saying>
+<saying who="Varsuchi">..........</saying>
+<saying who="Varsuchi">so 1 or 0 then</saying>
+<saying who="Varsuchi">instead of true?</saying>
+<saying who="Grinnz_">usually, yes</saying>
+<saying who="rindolf">perlbot: false</saying>
+<saying who="perlbot">rindolf: undef, 0, &quot;&quot;, &quot;0&quot;</saying>
+<saying who="rindolf">Varsuchi: just use it in boolean context.</saying>
+<saying who="Varsuchi">while x = 1 for true</saying>
+<saying who="Varsuchi">..</saying>
+<saying who="Varsuchi">sure</saying>
+<saying who="rindolf">Varsuchi: « while ($run) { ... }»</saying>
+<saying who="Grinnz_">my $run = 1; while ($run) { ... }</saying>
+<saying who="Varsuchi">diddnt know perl didnt support bools</saying>
+<saying who="Varsuchi">makes sense!</saying>
+<saying who="Grinnz_">it does, just everything is a bool</saying>
+<saying who="Altreus">it does support bools, it just doesn&#39;t select two values and name them</saying>
+<saying who="huf">because bool is a way of looking at things</saying>
+<saying who="huf">not a thing itself</saying>
+<me_is who="anno">looks at huf boolishly</me_is>
+<saying who="Altreus">Varsuchi: true is a property of a value, not a value</saying>
+<saying who="huf">anno: and i&#39;m truthy</saying>
+<saying who="anno">i see</saying>
+<saying who="pink_mist">my $huf = 0; #my huf isn&#39;t truthy :P</saying>
+<saying who="Altreus">it&#39;s truthy, it&#39;s just not truey</saying>
+<saying who="Grinnz_">our $huf = &#39;&#39;; # our huf is empty inside</saying>
+<saying who="pink_mist">our @huf = (); # it&#39;s just an empty shell</saying>
+<saying who="huf">none of those are me</saying>
+<saying who="Altreus">1 while &lt;huf&gt;</saying>
+<saying who="pink_mist">sub huf { &quot;he&#39;s also submissive&quot; }</saying>
+<me_is who="Altreus">has a handle on huf</me_is>
+<saying who="huf">HEY! i wear clothes, dont make me out to be one of those nudist handles</saying>
+<saying who="huf">pink_mist: let&#39;s go with that</saying>
+<saying who="pink_mist">it returns a true value after all :P</saying>
+<saying who="huf">but really, i&#39;m a starry eyed shepherd</saying>
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+                <tagline>The true meaning of truthfulness.</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

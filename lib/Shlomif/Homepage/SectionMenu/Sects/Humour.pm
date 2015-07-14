@@ -471,7 +471,7 @@ my $humour_tree_contents =
                 {
                     text => "Hitchhiker’s Guide to Star Trek TNG",
                     url => "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
-                    title => "A Cross of the Douglas Adams Book and the T.V. Series",
+                    title => "A Cross of the Douglas Adams’ book and the T.V. series",
                     subs =>
                     [
                         {
@@ -520,7 +520,7 @@ my $humour_tree_contents =
                 {
                     text => "Mirror of funroll-loops.info",
                     url => "humour/by-others/funroll-loops/",
-                    title => "A mirror of a funroll-loops.info - “Gentoo is Rice”",
+                    title => "A mirror of the site funroll-loops.info - “Gentoo is Rice”",
                 },
                 {
                     text => "How to Make Square Corners with CSS",

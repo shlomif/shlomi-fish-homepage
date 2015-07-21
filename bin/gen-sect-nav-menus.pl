@@ -45,7 +45,7 @@ sub _out
 {
     my ($path, $text_cb) = @_;
 
-    io->dir(dirname($path))->mkpath;
+    # io->dir(dirname($path))->mkpath;
 
     my $text_ref = $text_cb->();
 
@@ -65,6 +65,8 @@ my $pm = Parallel::ForkManager->new(4);
 
 foreach my $host (qw(t2 vipe))
 {
+    my $hostp = "lib/cache/combined/$host";
+
     my $it = natatime 8, (($host eq 't2')
         ? @ARGV
         : (qw(index.html lecture/index.html))
@@ -85,7 +87,9 @@ foreach my $host (qw(t2 vipe))
             my $url = $proto_url =~ s#(\A|/)index\.html\z#$1#r;
 
             my $filename = "/$url";
-            my $u = $url =~ s#(\A|/)$#${1}index.html#r;
+            # urlpath.
+            my $urlp = "$hostp/" . ($url =~ s#(\A|/)$#${1}index.html#r) . '/';
+            io->dir($urlp)->mkpath;
 
             print "start filename=$filename\n";
 
@@ -124,12 +128,11 @@ foreach my $host (qw(t2 vipe))
 
             my $nav_links_obj = $rendered_results->{nav_links_obj};
 
+
             my $out = sub {
                 my ($id, $cb) = @_;
 
-                my $path = "lib/cache/combined/$host/$u/$id";
-
-                return _out($path, $cb);
+                return _out($urlp.$id, $cb);
             };
 
             $out->(

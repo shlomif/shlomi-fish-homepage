@@ -97,7 +97,7 @@ T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEM
 
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
-T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/combined/t2/%/sect_navmenu,$(T2_DOCS_DEST))
+T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/combined/t2/%/sect-navmenu,$(T2_DOCS_DEST))
 
 $(T2_CACHE_ALL_DOCS): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON)
 	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))

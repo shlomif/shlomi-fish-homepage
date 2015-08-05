@@ -1713,6 +1713,27 @@ From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
 
 </ul>
 
+<h3 id="how_use_hg">You’re using Mercurial (on Bitbucket.org/etc.) for some of
+your projects. How can I learn how to use it?</h3>
+
+<p>
+There are some links to tutorials on
+<a href="http://better-scm.shlomifish.org/alternatives/mercurial/">the
+Mercurial page</a> of the Better-SCM site. More can be found in a
+<a href="https://duckduckgo.com/?q=mercurial%20tutorial">web search for
+“mercurial tutorial”</a>. Mercurial is not too hard to learn.
+</p>
+
+<h3 id="Shlomif_Common_cmake">When building some of your CMake-based
+projects, I am getting an error for a missing “Shlomif_Common.cmake” file</h3>
+
+<p>
+Yes, you can find it in
+<a href="https://bitbucket.org/shlomif/shlomif-cmake-modules/overview">this
+repository</a>. Just put it in the source directory. Such a problem should
+not be encountered when building a source release.
+</p>
+
 <h2 id="political_correctness">Political Correctness (or Lack of it)</h2>
 
 <h3 id="pc_rating">What is the Approximate Maturity Rating of this Site?</h3>

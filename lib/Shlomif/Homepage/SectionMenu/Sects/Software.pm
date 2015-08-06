@@ -290,6 +290,11 @@ my $software_tree_contents =
                     text => "List of Multimedia Applications",
                 },
                 {
+                    url => "open-source/resources/graphics-programs/",
+                    text => "List of Computer Graphics Applications",
+                    title => "Raster editors, vector editors, image viewers and organisers, 3-D applications and more",
+                },
+                {
                     url => "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

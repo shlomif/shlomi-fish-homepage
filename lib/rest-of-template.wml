@@ -425,11 +425,14 @@ of an EvilPHish”</a> cartoon of
 for collecting money</a> for my works of fiction.</p>
 </define-tag>
 
-<latemp_before_main_title>
-{#SECTION_NAV_MENU_ELEMS#}
+<define-tag if_you_like__indiegogo_campaign__wrapper>
 <div class="wishlist_notice">
 <if_you_like__indiegogo_campaign />
 </div>
+</define-tag>
+
+<latemp_before_main_title>
+{#SECTION_NAV_MENU_ELEMS#}
 <news_sites_buttons />
 </latemp_before_main_title>
 

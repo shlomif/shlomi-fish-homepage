@@ -80,7 +80,7 @@ endfunction
 
 " Clear the autocmd's from filetype.vim because it confuses t/*.t
 autocmd! filetypedetect BufNewFile,BufRead *.t
-autocmd BufNewFile,BufRead *.t call Dot_t_file_type() 
+autocmd BufNewFile,BufRead *.t call Dot_t_file_type()
 
 autocmd BufNewFile,BufRead ~/Download/unpack/graphics/*.pdb set filetype=perl
 
@@ -172,7 +172,7 @@ autocmd BufNewFile,BufRead ~/progs/prolog/*.pl set filetype=prolog
 
 autocmd BufNewFile,BufRead *.arc set filetype=arc
 
-" mapping to be able to move to the left and the right windows 
+" mapping to be able to move to the left and the right windows
 " without needing to leave the Ctrl key.
 map <C-W><C-Right> <C-W><Right>
 map <C-W><C-Left> <C-W><Left>

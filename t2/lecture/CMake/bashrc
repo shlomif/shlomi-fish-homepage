@@ -12,7 +12,7 @@ xmlformat()
 odp2xml() # odp -> xml
 {
 	mkdir cmake_intro-2.odp.d
-	unzip -o cmake_intro-2.odp -d cmake_intro-2.odp.d 
+	unzip -o cmake_intro-2.odp -d cmake_intro-2.odp.d
 	xmlformat cmake_intro-2.odp.d/content.xml  cmake_intro-2.odp.d/meta.xml  cmake_intro-2.odp.d/settings.xml  cmake_intro-2.odp.d/styles.xml
 }
 

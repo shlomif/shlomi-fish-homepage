@@ -27,6 +27,9 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E' |
     grep -vP '\A\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E' |
     grep -vP '\A\Qdest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z' |
+    grep -vP '\A\Qdest/t2/humour/by-others/how-to-make-square-corners-with-CSS/' |
+    grep -vP '\A\Qdest/t2/open-source/resources/graphics-programs/' |
+    grep -vP '\A\Qdest/t2/js/jquery-ui/' |
     xargs perl bin/html-check-spelling-xmlp.pl |
     grep ':'
     # perl -lne 'print if /MathVentures\/3d.*\.xhtml/' |

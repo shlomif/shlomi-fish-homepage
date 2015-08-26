@@ -372,6 +372,11 @@ my $essays_tree_contents =
                             url => "philosophy/computers/web/online-communities/",
                             title => "Reflections on Online Communities",
                         },
+                        {
+                            text => "Models for Web-based Commerce",
+                            url => "philosophy/computers/web/models-for-commerce/",
+                            title => "Alternative Models for Web-based Commerce that Do Not Involve Intrusive Advertising",
+                        },
                     ],
                 },
                 {

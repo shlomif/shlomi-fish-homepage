@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use IO::All;
+use IO::All qw/ io /;
 use XML::LibXML;
 
 my $dom = XML::LibXML->load_xml(

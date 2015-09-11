@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use SVG;
-use IO::All;
+use IO::All qw/ io /;
 
 my $dim = 30;
 my $width = $dim;

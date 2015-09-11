@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my $s = io->file("lib/Shlomif/Homepage/LongStories.pm")->utf8;
 

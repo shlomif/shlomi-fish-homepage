@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my $date = "2008-10-20";
 

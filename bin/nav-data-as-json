@@ -9,7 +9,7 @@ use lib './lib';
 
 use Getopt::Long qw(GetOptions);
 
-use IO::All;
+use IO::All qw/ io /;
 
 use Shlomif::Homepage::NavData::JSON;
 

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Getopt::Long;
-use IO::All;
+use IO::All qw/ io /;
 
 my $out_fn;
 

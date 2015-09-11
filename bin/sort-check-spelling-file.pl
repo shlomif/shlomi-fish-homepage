@@ -9,7 +9,7 @@ use utf8;
 
 use HTML::Parser 3.00 ();
 use List::MoreUtils qw(any);
-use IO::All;
+use IO::All qw/ io /;
 
 binmode STDOUT, ":encoding(utf8)";
 

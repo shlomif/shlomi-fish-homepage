@@ -7,7 +7,7 @@ use Carp ();
 
 use Parallel::ForkManager;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my $base_dir = "$ENV{HOME}/Docs/Images/Logos";
 

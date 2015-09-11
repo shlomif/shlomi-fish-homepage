@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my @lines = io()->file("old-index.html.temp.wml")->slurp();
 

@@ -7,7 +7,7 @@ use Test::More tests => 1;
 
 use HTML::Tidy;
 use File::Find::Object::Rule;
-use IO::All;
+use IO::All qw/ io /;
 
 local $SIG{__WARN__} = sub {
     my $w = shift;

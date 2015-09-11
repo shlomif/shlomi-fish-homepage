@@ -3,7 +3,7 @@ package Shlomif::XmlFictionSlurp;
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 use Imager;
 
 my $dir = io->dir("./2009-06-29/");

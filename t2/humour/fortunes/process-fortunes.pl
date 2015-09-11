@@ -5,8 +5,6 @@ use warnings;
 
 package XML::Grammar::Fortune::FromText;
 
-use IO::All;
-
 use XML::Writer;
 
 use List::MoreUtils (qw(any));
@@ -252,7 +250,7 @@ sub _process_single_fortune
 
 package main;
 
-use IO::All;
+use IO::All qw/ io /;
 
 sub read_fortune_files_list
 {

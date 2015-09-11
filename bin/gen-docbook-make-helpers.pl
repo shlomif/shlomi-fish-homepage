@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use autodie;
 
 use File::Basename qw(dirname basename);
 
@@ -750,7 +751,8 @@ sub _calc_fiction_story_makefile_lines
 
 my $tt = Template->new({});
 
-open my $make_fh, ">", "lib/make/docbook/sf-homepage-docbooks-generated.mak";
+my $gen_make_fn = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
+open my $make_fh, ">", $gen_make_fn;
 open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
 sub get_quad_pres_files
@@ -969,5 +971,9 @@ EOF
 
 close ($template_fh);
 close ($make_fh);
+
+# Remove multiple consecutive \ns
+my $m = io->file($gen_make_fn)->utf8();
+$m->print( $m->all() =~ s/\n\n+/\n\n/gr );
 
 $pm->wait_all_children;

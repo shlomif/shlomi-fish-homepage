@@ -5,7 +5,7 @@ use warnings;
 
 use Test::More tests => 1;
 
-use IO::All;
+use IO::All qw/ io /;
 
 {
     # TEST

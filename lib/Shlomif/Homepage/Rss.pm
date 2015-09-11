@@ -9,7 +9,7 @@ use XML::Feed;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 
-use IO::All;
+use IO::All qw/ io /;
 
 use Encode (qw(decode));
 

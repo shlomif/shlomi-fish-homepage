@@ -11,7 +11,7 @@ use HTML::Parser 3.00 ();
 use Text::Hunspell;
 use List::MoreUtils qw(any);
 use JSON::MaybeXS qw(encode_json decode_json);
-use IO::All;
+use IO::All qw/ io /;
 
 my $speller = Text::Hunspell->new(
     '/usr/share/hunspell/en_GB.aff',

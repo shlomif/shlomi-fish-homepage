@@ -15,7 +15,7 @@ use List::Util qw(max);
 use YAML::XS (qw(LoadFile));
 use JSON::MaybeXS;
 
-use IO::All;
+use IO::All qw/ io /;
 
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 

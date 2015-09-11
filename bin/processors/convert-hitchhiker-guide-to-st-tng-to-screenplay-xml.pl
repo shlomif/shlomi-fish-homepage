@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my $text =
     io->file('t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt')->slurp;

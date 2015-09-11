@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 require 5.010;
 

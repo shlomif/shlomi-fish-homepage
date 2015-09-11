@@ -5,7 +5,7 @@ use warnings;
 
 use 5.014;
 
-use IO::All;
+use IO::All qw/ io /;
 
 use List::Util qw(first);
 

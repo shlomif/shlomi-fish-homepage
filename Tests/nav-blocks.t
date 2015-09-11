@@ -17,7 +17,6 @@ use Shlomif::Homepage::NavBlocks::Renderer;
 use Shlomif::Homepage::NavBlocks;
 
 use NavBlocks (qw( get_nav_block ));
-use IO::All;
 
 our $latemp_filename;
 

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use XML::LibXML;
-use IO::All;
+use IO::All qw/ io /;
 
 my $filename = "shlomif-fav.xml";
 

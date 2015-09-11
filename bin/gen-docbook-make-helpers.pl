@@ -10,7 +10,7 @@ use Cwd qw(getcwd);
 
 use Template;
 
-use IO::All;
+use IO::All qw/ io /;
 
 use File::Find::Object::Rule;
 

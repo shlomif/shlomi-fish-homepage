@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 foreach my $ad (grep { /\.html$/ } io("Ads-for-Homepage")->all_files())
 {

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 use Data::Dumper;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);

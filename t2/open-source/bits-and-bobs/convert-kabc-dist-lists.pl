@@ -14,7 +14,7 @@
 use strict;
 use warnings;
 
-use IO::All;
+use IO::All qw/ io /;
 
 my @lines = io("distlists")->chomp->getlines;
 

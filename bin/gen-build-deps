@@ -5,7 +5,7 @@ use warnings;
 
 use Getopt::Long (qw( GetOptions ));
 
-use IO::All;
+use IO::All qw/ io /;
 use File::Which ( qw( which ) );
 use YAML::XS ( qw( LoadFile ) );
 

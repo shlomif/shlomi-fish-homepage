@@ -56,6 +56,10 @@ my $art_tree_contents =
                     title => "Logo for the “Better SCM” Site",
                 },
                 {
+                    text => "D&amp;D Cartoon: Comparing Lances",
+                    url => "art/d-and-d-cartoon--comparing-lances/",
+                },
+                {
                     text => "Slogans’ Designs",
                     url => "art/slogans/",
                     title => "The design of my aphorism - useful for T-shirts and other merchandise",

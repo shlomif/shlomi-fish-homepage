@@ -97,13 +97,15 @@ T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEM
 
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
+T2_CACHE_ALL_STAMP = lib/cache/STAMP.one
+
 T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,lib/cache/combined/t2/%/sect-navmenu,$(T2_DOCS_DEST))
 
-$(T2_CACHE_ALL_DOCS): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON)
+$(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON)
 	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
-	touch $(T2_CACHE_ALL_DOCS)
+	touch $@
 
-sects_cache: make-dirs $(T2_CACHE_ALL_DOCS)
+sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
@@ -217,7 +219,7 @@ META_SUBSECT_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/
 PUZZLES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Puzzles.pm
 ART_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Art.pm
 
-ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOUR_DEPS) $(META_SUBSECT_DEPS) $(PUZZLES_DEPS)
+ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOUR_DEPS) $(META_SUBSECT_DEPS) $(PUZZLES_DEPS) $(ART_DEPS)
 
 $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 

@@ -8,8 +8,7 @@ use warnings;
 use lib './lib';
 
 use File::Basename qw/ dirname /;
-use IO::All qw/ io /;
-
+use Path::Tiny qw/ path /;
 use List::MoreUtils qw/ natatime /;
 
 use NavSectMenuRender;
@@ -45,8 +44,6 @@ sub _out
 {
     my ($path, $text_cb) = @_;
 
-    # io->dir(dirname($path))->mkpath;
-
     my $text_ref = $text_cb->();
 
     my $text = ( $$text_ref
@@ -54,7 +51,7 @@ sub _out
     );
 
     write_on_change(
-        sub { return io->file($path)->encoding('UTF-8'); },
+        scalar( path($path) ),
         \$text,
     );
 
@@ -89,7 +86,7 @@ foreach my $host (qw(t2 vipe))
             my $filename = "/$url";
             # urlpath.
             my $urlp = "$hostp/" . ($url =~ s#(\A|/)$#${1}index.html#r) . '/';
-            io->dir($urlp)->mkpath;
+            path($urlp)->mkpath;
 
             print "start filename=$filename\n";
 

@@ -7,8 +7,7 @@ use utf8;
 
 use lib './lib';
 
-use IO::All qw/ io /;
-
+use Path::Tiny qw/ path /;
 use JSON::MaybeXS ();
 
 use XML::LibXML;
@@ -49,7 +48,7 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 
         my $node = $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 
-        io->file("$out_xhtml.reduced")->utf8->print(
+        path("$out_xhtml.reduced")->spew_utf8(
             $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr
         );
     }
@@ -969,10 +968,10 @@ END_OF_TEMPLATE
     $template->process(\$img_tt_text, $vars, \$tags_output);
     $template->process(\$tag_tt_text, $vars, \$tags_output);
     $template->process(\$main_page_tt, $vars, \$main_page_tag_list);
-    io->file("lib/factoids/pages/". $page->id_base().'.wml')->utf8->print($out);
+    path("lib/factoids/pages/". $page->id_base().'.wml')->spew_utf8($out);
 }
 
-io->file("lib/factoids/common-out/tags.wml")->utf8->print(
+path("lib/factoids/common-out/tags.wml")->spew_utf8(
     $tags_output,
     $main_page_tag_list,
     "\n</define-tag>\n",
@@ -988,11 +987,11 @@ my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
         @pages
     ]);
 
-use Shlomif::Out qw/write_on_change/;
+use Shlomif::Out qw/write_on_change_no_utf8/;
 
 my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
-write_on_change(
-    sub { return io->file($json_fn); },
+write_on_change_no_utf8(
+    scalar( path($json_fn) ),
     \$new_json,
 );

@@ -526,6 +526,10 @@ my $humour_tree_contents =
                     text => "How to Make Square Corners with CSS",
                     url => "humour/by-others/how-to-make-square-corners-with-CSS/",
                 },
+                {
+                    text => "What if People Bought Cars Like they Bought Computers?",
+                    url => "humour/by-others/if-people-bought-cars-like-computers/",
+                },
             ],
         },
         {

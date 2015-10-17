@@ -1,0 +1,144 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Databases’ Implementations" />
+
+<latemp_meta_desc "List of Databases’s Implementations: key/value stores, SQL databases, Distributed databases, etc." />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various database implementations.
+</p>
+
+<h2 id="key-val-DBs">Key/Value Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Berkeley_DB">Berkeley DB</a> - an
+open-source (formerly SleepyCat licence - now AGPLv3), strong copyleft database
+that provides a binary-string-based key/value store. Now a product of
+Oracle Corp.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/LevelDB">LevelDB</a> - an
+open-source (BSD-style), filesystem-based key/value store by Google. Reportedly
+unreliable.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tokyo_Cabinet_and_Kyoto_Cabinet">Tokyo
+Cabinet and Kyoto Cabinet</a> - open-source (LGPLed and GPLed) key/value
+stores.
+</p>
+</li>
+
+</ul>
+
+<h2 id="FS-based-SQL">Filesystem Based SQL databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/SQLite">SQLite</a> - an open-source
+(= Public Domain source code) SQL database-in-the-local-filesystem. Popular
+and widely used.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Microsoft_Jet_Database_Engine">Microsoft
+Jet Database Engine</a> - a proprietary and MS-Windows-specific SQL engine
+by Microsoft. Old and reportedly not very reliable.
+</p>
+</li>
+</ul>
+
+<!--
+
+To add:
+
+- Nosql
+
+* Networked SQL
+    - PostgreSQL
+    - MySQL / MariaDB
+    - Firebird.
+        - https://en.wikipedia.org/wiki/InterBase
+    - Oracle RDBMS.
+    - MS SQL Server
+    - Informix.
+    - IBM DB2
+    - ADABAS
+    - Sybase SQL Server.
+    - https://en.wikipedia.org/wiki/Ingres_%28database%29
+
+* XML Databases
+
+* Distributed databases.
+    - Cassandra
+         - c++ reimpl - see Nadav Har’El’s post.
+    - MongoDB
+    - CouchDB
+    - Redis
+    - Oracle’s solution.
+
+* Unified database APIs
+    - ODBC
+    - Perl’s DBI.
+-->
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/resources/text-processing-tools/">List of
+Text Processing Tools</a>.
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+The
+<a href="http://en.wikipedia.org/wiki/Raster_graphics_editor">“Raster graphics
+editor” entry</a> on the English Wikipedia - contains a list and a comparsion.
+</p>
+</li>
+
+<li>
+<p>
+The
+<a href="http://en.wikipedia.org/wiki/Vector_graphics_editor">“Vector
+graphics editor” entry</a> on the English Wikipedia - contains a list and
+a comparison.
+</p>
+</li>
+
+</ul>
+
+
+<h3 id="fun-links">Fun Links</h3>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2015" />
+

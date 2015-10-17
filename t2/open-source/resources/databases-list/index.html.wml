@@ -65,6 +65,31 @@ by Microsoft. Old and reportedly not very reliable.
 </li>
 </ul>
 
+<h2 id="networked-SQL">Networked (Client/Server) SQL Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a> - an
+open-source (permissive, GPL-compatible licence), feature-rich and
+cross-platform database
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MySQL">MySQL</a> - a GPLed client/server
+database. Has some active forks such as
+<a href="https://en.wikipedia.org/wiki/MariaDB">MariaDB</a> (which provides an
+LGPLed client libraries),
+<a href="https://en.wikipedia.org/wiki/Drizzle_%28database_server%29">Drizzle</a>
+(= a “smaller, slimmer and (hopefully) faster version of MySQL”),
+and <a href="https://en.wikipedia.org/wiki/WebScaleSQL">WebScaleSQL</a>.
+</p>
+</li>
+</ul>
+
 <!--
 
 To add:
@@ -73,10 +98,6 @@ To add:
 - https://en.wikipedia.org/wiki/SolidDB
 
 * Networked SQL
-    - PostgreSQL
-    - MySQL / MariaDB
-        - https://en.wikipedia.org/wiki/Drizzle_%28database_server%29
-        - https://en.wikipedia.org/wiki/WebScaleSQL
     - Firebird.
         - https://en.wikipedia.org/wiki/InterBase
     - Oracle RDBMS.

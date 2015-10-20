@@ -295,6 +295,10 @@ my $software_tree_contents =
                     title => "Raster editors, vector editors, image viewers and organisers, 3-D applications and more",
                 },
                 {
+                    url => "open-source/resources/databases-list/",
+                    text => "List of Database Implementations",
+                },
+                {
                     url => "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

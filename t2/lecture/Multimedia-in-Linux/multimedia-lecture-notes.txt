@@ -1,0 +1,79 @@
+Subject: Some corrections regarding the MultiMedia Lecture
+
+Hi!
+
+First I'd like to aplogize for embarassing Alon by having to say all those
+things during the meeting and not going over the slides before the
+lecture. But I still like them to be permanently available. So here goes:
+
+Slide 5 - s/Kerenel/Kernel/
+
+Slide 9 - an mp3 can be converted into a WAV using the "-w" switch of
+mpg123. It does not appear in the man page but it is mentioned in "--help"
+listing. It is usally advisable over calling sox with all the arguments,
+because mpg123 will determine the appropriate paramters for the file.
+
+Furthermore, mp3s can be encoded using the Lame encoder, whose homepage is
+http://www.sulaco.org/mp3/. LAME is GPLed, but in some countries it is
+still encoumbered by the patents issued regarding the mpeg sound
+compression. I don't think they apply in Israel, but they exist.
+
+Freshmeat can show several other tools for encoding mp3s, but most of them
+are front-ends for LAME or BladeEnc or both.
+
+Slide 11 - 1. another MOD player that is worth mentioning is gmodplay,
+which is based on the ModPlug engine. There is also ModPlug for Linux, but
+it is proprietary and thus "Moqtze mehamat hami'us". I don't think
+gmodplay supports EsounD, though, or at least did not the last time I
+checked.
+
+In any case, ModPlug Player for Windows is an excellent MOD player for
+"the OS that should not be named", and ModPlug Tracker is a superb MOD
+editor. I wish its author would create a Linux version of the Tracker too.
+
+2. "A popular consle-based mod tracker is MikMod". There is a great deal
+of inconsistency in MOD-file terminology but it is generally agreed that a
+Tracker is an editor for MOD files, while a MOD player is referred to as a
+"player". Thus s/tracker/player/.
+
+Slide 13 - I believe ALSA Player is also worth mentioning:
+http://www.alsaplayer.org/
+It has some interesting features such as variable speed (say times 1.5 the
+normal, and even negative speed). There are other GUI front-ends for the
+various sound libraries. FreeAmp comes to mind, but there are many others
+on Freshmeat.
+
+Slide 14 - I believe it is also worth mentioning "arts" which KDE directs
+as the replacement for EsounD, and "GStreamer" which is the GNOME
+interface.
+
+A hint for the Linux Standard Base Guys: make them have a unified
+interface for doing such things, or else we won't be able to hear GNOME
+sounds when using KDE and vice versa.
+
+
+General remark: ALSA - The Advanced Linux Sound Architecture
+
+http://www.alsa-project.org/
+
+ALSA aims to be a replacement for the OSS/Free subsystem, which is the
+current Linux sound subsystem. ALSA supports a large number of cards, and
+is pretty stable, but it is not part of the mainstream kernel yet. It is
+backward compatible with OSS/Free, but has some clear advantages like
+support for more than one card.
+
+Since I use Mandrake 7.2, ALSA was installed for me by default as the
+driver for my soundcard. However, I noticed distruptions when using xmms
+with EsounD or without it. When I switched to OSS/Free they were solved.
+:-(
+
+Maybe it's because of ALSA's extensive dependence on modules that it was
+not operational for me. Or maybe the OSS/Free emulation is lacking. But
+since I don't have more than one soundcard, and since I use EsounD, I
+don't really have a good incenitive to prefer ALSA.
+
+
+Best regards,
+
+	Shlomi Fish
+

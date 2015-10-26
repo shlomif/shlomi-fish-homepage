@@ -1,0 +1,180 @@
+This lecture will be a teach by example lecture rather than an all-covering
+discussion of Haskell.
+
+Some coverage of the main properties of Haskell:
+------------------------------------------------
+* Purely Functional Programming
+* Strongly Typed
+* Lazy evaluation
+* Operators are just functions that accept two arguments and have an
+infix precendence. Thus, both (+ 5 6) and (5 + 6) are legal forms.
+
+Fibonnaci Take 1: (fib1.hs)
+---------------------------
+
+fib_pair :: Integer -> (Integer,Integer)
+fib_pair 0 = (0,1)
+fib_pair n = (b,a+b) where
+    (a,b) = (fib_pair (n-1))
+
+fib :: Integer -> Integer
+fib n = (fst (fib_pair n))
+
+Explanation:
+* Pattern matching - the first pattern that matches the calling criteria
+is used.
+
+* Tuples: an ordered pair (or triple). Each element can be of different
+type.
+
+* fst (a,b) = a
+
+* where creates a closure and (a,b) is only visible to the function fib_pair
+at this particular pattern.
+
+* The :: - a type definition. -> - is a function
+
+Quicksort: (quicksort.hs)
+-------------------------
+
+quicksort  []     =  []
+quicksort (x:xs)  =  quicksort [y | y <- xs, y<x ]
+                     ++ [x]
+                     ++ quicksort [y | y <- xs, y>=x]
+
+Explanation:
+
+* Lists: contain a head and a tail where the head is an element and the
+tail another list.
+* a:as - appends a in front of as
+* ++ - concatenates two lists
+* [ y | y <- xs, y<x ] - some syntactic sugar for (filter (\y -> y<x) xs).
+
+
+
+Primes Take 1: (primes1.hs)
+---------------------------
+
+primes = sieve [2 ..] where
+    sieve (p:rest) = p:(sieve [ i | i <- rest, i `mod` p /= 0])
+
+Explanation:
+
+* Because of Lazy Evaluation lists in Haskell can be infinite. [2 .. ] is the
+[2,3,4,5,6,7,8,...] infinite list.
+
+* Notice that sieve was called recursively.
+
+
+
+Fibonnaci Take 2: (fib2.hs)
+---------------------------
+
+fib = 0 : 1: [ a+b | (a,b) <- zip fib (tail fib) ]
+
+
+Explanation:
+
+* fib is a list that uses itself to generate its next elements.
+
+* tail (x:xs) = xs
+
+* zip (x:xs) (y:ys)       = (x,y) : zip xs ys
+  zip  xs     ys          = []
+
+* The fib sequence always generate just enough elements to find out the
+next number. It calls itself lazily and recursively.
+
+
+Primes Take 2: (primes2.hs)
+---------------------------
+
+primes :: Int -> [Int]
+
+primes how_much = sieve [2..how_much] where
+         sieve (p:x) = p : (if p <= mybound
+                            then sieve (remove (p*p) x)
+                            else x) where
+             remove what (a:as) | what > how_much = (a:as)
+                                | a < what        = a:(remove what as)
+                                | a == what       = (remove (what+step) as)
+                                | a > what        = a:(remove (what+step) as)
+             remove what [] = []
+             step = (if (p == 2)
+                     then p
+                     else (2*p)
+                    )
+         sieve [] = []
+         mybound = ceiling(sqrt(fromIntegral how_much))
+
+Explanation:
+
+* if ... then .. else - a simple conditional. Since it must evaluate to
+something the else is mandatory.
+* The "|" - a sub-pattern that can can be used instead of nesting
+if statements.
+* fromIntegral - converts how_much to a floating-point number.
+* Notice the double closure. Haskell supports an arbitrary
+number of closures inside closures.
+
+* Algorithm: we maintain a list of integers from 2 to the limit and
+whenever we encounter a new prime number, we filter out all its
+multiplications (by using addition and pointer advancement alone).
+
+Multimap (multimap.hs)
+----------------------
+
+orig = [1 .. 10]
+one = [ i*2 | i <- orig ]
+two = [ i*3+1 | i <- orig ]
+three = orig
+four = [ 100-i | i <- orig ]
+
+lists = [one,two,three,four]
+
+inverse_list ([]:as) = []
+inverse_list as = [ head(i) | i <- as] : inverse_list ([ tail (i) | i <- as])
+
+multimap func list_of_lists = (map func (inverse_list list_of_lists))
+
+result = multimap sum lists
+
+Explanation:
+
+* We want to execute a function on the first item of several lists, then
+on the second, etc. and construct a list out of the results.
+
+Histogram (historgram.hs)
+-------------------------
+
+import Array
+
+hist            :: (Ix a, Integral b) => (a,a) -> [a] -> Array a b
+hist bnds is    =  accumArray (+) 0 bnds [(i, 1) | i <- is, inRange bnds i]
+
+result = hist (0,10) [
+    1,1,1,1 ,
+    2,2,2 ,
+    3,3 ,
+    4,4,4,4,4,4,4,4 ,
+    5,5,
+    6,6,6,6,6,
+    7,
+    8,8,8,8,8,
+    9,9,9,
+    10
+    ]
+
+
+Explanation:
+
+* The (Ix a, Integral b) says we need to have a type a which is a subtype
+of Ix and a type b which is a subtype of Integral (some integer type).
+
+* accumArray accumolates an array. Hence, all items in the range (0,10)
+(=bnds) are initialized to 0, and whenever an item with an index of i in
+the input list is found its value is added to the items.
+
+* inRange makes sure i is in the bounds, so a run-time error will not be
+generated.
+

@@ -159,6 +159,67 @@ available as open source software for some years.
 
 </ul>
 
+<h2 id="distributed-DBs-NoSQL">Distributed Databases (so-called “NoSQL”)</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Apache_Cassandra">Apache Cassandra</a>
+- an open-source (Apache licence) distributed database written in Java.
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.scylladb.com/">Scylla DB</a> - an AGPLv3ed rewrite
+(and drop-in replacement) of Apache Cassandra in C++ that claims to be more
+performant.
+</p>
+</li>
+</ul>
+</li>
+
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a> - an
+open-source and cross-platform distributed document-oriented database (code is
+under AGPLv3;
+drivers are Apache licensed).
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://meirkriheli.com/talks/mongodb/index.html">Meir Kriheli’s
+MongoDB talk</a>.
+</p>
+</li>
+</ul>
+
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/CouchDB">CouchDB</a> - an open source
+(Apache licensed) document-oriented database written in Erlang.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Redis">Redis</a> - a distributed,
+in-memory, open source (BSD licensed) and cross-platform, data structure
+server.
+</p>
+</li>
+
+
+</ul>
+
 <!--
 
 To add:
@@ -176,12 +237,8 @@ To add:
     - Berkeley dbxml.
 
 * Distributed databases.
-    - Cassandra
-         - c++ reimpl - see Nadav Har’El’s post.
-    - MongoDB
-    - CouchDB
-    - Redis
     - Oracle’s solution.
+    - Amazon AWS’s solution.
 
 * Unified database APIs
     - ODBC

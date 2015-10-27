@@ -1,0 +1,38 @@
+thttpd - does not support large files by default. With the
+make CCOPT="-D_..." hack, it eventually consumes a lot of memory.
+
+boa - does not support it, and does not seem to have a configuration option to.
+
+Perl's HTTP::Daemon -
+    1. Gets stuck at the end of the downloaded file (if it's big.
+    2. Does not support the Range: HTTP header.
+
+cherokee - passes both tests:
+    http://www.0x50.org/
+    http://freshmeat.net/projects/cherokee/
+
+    - Not available in the Debian packages' pool for Sarge. (Etch has it,
+    though)
+
+lighttpd - passes all tests:
+    http://www.lighttpd.net/
+
+    - Not available in any Debian pool.
+        http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=304271
+
+Thy -
+    http://bonehunter.rulez.org/software/thy/
+
+    - available in Debian
+    - cannot serve large files in Linux due to a C preprocessor-related bug:
+        -
+    - has many other bugs:
+        http://bonehunter.rulez.org/software/thy/
+
+- dhttpd and micro-httpd do not support the "Range:" header.
+
+- webfs:
+	- out of the box passes all tests.
+	- Available in the Debian Sarge pool:
+		http://packages.debian.org/stable/web/webfs
+	- Just what the doctor ordered?

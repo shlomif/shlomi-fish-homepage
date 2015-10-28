@@ -13,7 +13,7 @@
 This is a small, hand-maintained, list of various database implementations.
 </p>
 
-<h2 id="key-val-DBs">Key/Value Databases</h2>
+<h2 id="key-val-DBs">Filesystem-based Key/Value Databases</h2>
 
 <ul>
 
@@ -44,6 +44,30 @@ stores.
 
 </ul>
 
+<h2 id="other-FS-based">Other Filesystem-based Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XBase">xBase</a> - a standard
+for dBase-compatible database implementations, which store tables on the
+filesystem.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://packages.debian.org/sid/utils/nosql">“NoSQL”</a> - a
+“fast, portable, relational database management system without arbitrary
+limits, (other than memory and processor speed) that runs under, and interacts
+with, the UNIX Operating System. ”
+(Not to be confused with the so-called “NoSQL” crop of distributed databases).
+</p>
+</li>
+
+</ul>
+
 <h2 id="FS-based-SQL">Filesystem Based SQL databases</h2>
 
 <ul>
@@ -63,6 +87,14 @@ Jet Database Engine</a> - a proprietary and MS-Windows-specific SQL engine
 by Microsoft. Old and reportedly not very reliable.
 </p>
 </li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/SolidDB">solidDB</a> - a memory-based
+or filesystem-based SQL-database. Proprietary.
+</p>
+</li>
+
 </ul>
 
 <h2 id="networked-SQL">Networked (Client/Server) SQL Databases</h2>
@@ -236,11 +268,6 @@ solutions for AWS (proprietary with open source APIs).
 <!--
 
 To add:
-
-- Nosql
-- https://en.wikipedia.org/wiki/SolidDB
-
-* dBase/XBase.
 
 * Networked SQL
     - ADABAS

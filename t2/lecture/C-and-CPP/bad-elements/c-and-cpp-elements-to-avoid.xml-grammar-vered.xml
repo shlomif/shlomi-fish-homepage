@@ -319,60 +319,12 @@ So if you're posting code for public scrutiny, make sure it is written with
 English identifiers and comments.
 </p>
 </item>
-<!-- REACHED HERE -->
 <item xml:id="perlform">
 <info>
-<title>Using perlform for formatting text.</title>
+<title>“using namespace std;”</title>
 </info>
 <p>
-One should not use “perlform” for formatting text, because it makes
-use of global identifiers, and should use the
-<cpan_self_dist d="Perl6-Form" /> CPAN distribution instead. Also see
-our <a xlink:href="../../uses/text-generation/">text generation page</a> for
-more information. (Inspired by "Perl Best Practices").
-</p>
-</item>
-<item xml:id="obj_new">
-<info>
-<title>Using $obj->new for object construction.</title>
-</info>
-<p>
-Sometimes you can see class constructors such as:
-</p>
-<bad_code syntax="perl">
-sub new
-{
-    my $proto = shift;
-    my $class = ref($proto) || $proto;
-    my $self = {};
-    …
-}
-</bad_code>
-<p>
-The problem here is that this allows one to do
-<code>$my_object_instance-&gt;new</code> to create a new instance of the object,
-but many people will expect it to be invalid or to clone the object. So don't
-do that and instead write your constructors as:
-</p>
-<code_blk syntax="perl">
-# Better code:
-sub new
-{
-    my $class = shift;
-    my $self = {};
-    bless $self, $class;
-    …
-}
-</code_blk>
-<p>
-Which will disable it and will just allow
-<code>ref($my_object_instance)-&gt;new(…)</code>. If you need a clone method,
-then code one called "clone()" and don't use "new" for that.
-</p>
-<p>
-(Thanks to
-<a xlink:href="http://www.stonehenge.com/merlyn/UnixReview/col52.html">Randal L.
-Schwartz's post "Constructing Objects"</a> for providing the insight to this).
+<b>TODO : FILL IN</b>
 </p>
 </item>
 <item xml:id="law_of_demeter">
@@ -383,7 +335,7 @@ Schwartz's post "Constructing Objects"</a> for providing the insight to this).
 See the <a xlink:href="http://en.wikipedia.org/wiki/Law_of_Demeter">Wikipedia article
 about "Law of Demeter" for more information</a>. Namely, doing many nested
 method calls like
-<code>$self-&gt;get_employee('sophie')-&gt;get_address()-&gt;get_street()</code>
+<code>obj-&gt;get_employee('sophie')-&gt;get_address()-&gt;get_street()</code>
 is not advisable, and should be avoided.
 </p>
 <p>
@@ -431,48 +383,19 @@ subroutines and methods</a>. The solution to these is to extract several
 shorter methods out, with meaningful names.
 </p>
 </item>
-<item xml:id="map_instead_of_foreach">
-<info>
-<title>Using map instead of foreach for side-effects</title>
-</info>
-<p>
-You shouldn't be using <pdoc_f f="map">map</pdoc_f> to iterate on a list
-instead of foreach if you're not interested in constructing a new list and
-all you are interested in are the side-effects. For example:
-</p>
-<bad_code syntax="perl">
-use strict;
-use warnings;
-map { print "Hello $_!\n"; } @ARGV;
-</bad_code>
-<p>
-Would be better written as:
-</p>
-<code_blk syntax="perl">
-use strict;
-use warnings;
-foreach my $name (@ARGV)
-{
-    print "Hello $name!\n";
-}
-</code_blk>
-<p>
-Which better conveys one's intention and may be a bit more efficient.
-</p>
-</item>
 <item xml:id="ternary_operator_instead_of_if_else">
 <info>
 <title>Using the ternary operator for side-effects instead of if/else</title>
 </info>
 <p>
-A similar symptom to the above is people who wish to use the ternary
+People who wish to use the ternary
 inline- conditional operator (<code>? :</code>) for choosing to execute between
 two different statements with side-effects
 instead of using <code>if</code> and <code>else</code>. For example:
 </p>
-<bad_code syntax="perl">
-$cond_var ? ($hash{'if_true'} .= "Cond var is true")
-          : ($hash{'if_false'} .= "Cond var is false")
+<bad_code syntax="cpp">
+cond_var ? (hash["if_true"] += "Cond var is true")
+          : (hash["if_false"] += "Cond var is false")
 </bad_code>
 <p>
 (This is assuming the ternary operator was indeed written correctly, which
@@ -483,14 +406,14 @@ However, the ternary operator is meant to be an expression that is a choice
 between two values and should not be used for its side-effects. To do the
 latter, just use <code>if</code> and <code>else</code>:
 </p>
-<code_blk syntax="perl">
-if ($cond_var)
+<code_blk syntax="cpp">
+if (cond_var)
 {
-    $hash{'if_true'} .= "Cond var is true";
+    hash["if_true"] += "Cond var is true";
 }
 else
 {
-    $hash{'if_false'} .= "Cond var is false";
+    hash["if_false"] += "Cond var is false";
 }
 </code_blk>
 <p>
@@ -503,111 +426,6 @@ relevant thread on the Perl beginners mailing list</a> (just make sure you read
 it in its entirety).
 </p>
 </item>
-<item xml:id="nested_top_level_subroutines">
-<info>
-<title>Nested top-level subroutines</title>
-</info>
-<p>
-One should not nest an inner top-level subroutine declared using
-<code>sub inner</code> inside of an outer one, like so:
-</p>
-<bad_code syntax="perl">
-sub outer
-{
-    sub inner
-    {
-        .
-        .
-        .
-    }
-    # Use inner here
-}
-</bad_code>
-<p>
-This code will compile and run, but may break in subtle ways.
-</p>
-<p>
-The first problem with this approach is that <code>inner()</code> will still be
-visible outside <code>outer()</code>, but the more serious problem is that the
-inner subroutine will only get one copy of the lexical variables inside
-<code>outer()</code>.
-</p>
-<p>
-The proper and safer way to declare an inner subroutine is to declare
-a lexical variable and set it to an anonymous subroutine, which is
-also known as a closure:
-</p>
-<code_blk syntax="perl">
-sub outer
-{
-    my ($foo, $bar) = @_;
-    my $print_foo = sub {
-        print "Foo is '$foo'\n";
-        return;
-    };
-    $print_foo-&gt;();
-    $foo++;
-    $print_foo-&gt;();
-    return;
-}
-</code_blk>
-</item>
-<item xml:id="grep_instead_of_any">
-<info>
-<title>Using grep instead of any and friends</title>
-</info>
-<p>
-Sometimes one can see people using <pdoc_f f="grep">grep</pdoc_f> to find
-the first matching element in an array, or whether such an element exists at
-all. However, grep is intended to extract <b>all</b> matching elements out
-of a list, not just the first one, and as a result will not stop until it
-finds them all. To remedy this look at either <code>first()</code> from
-<cpan_self_mod m="List::Util" /> (to find the first match) or
-"any/all/notall/none" from <cpan_self_mod m="List::MoreUtils" /> (to find
-whether a single element exists). These better convey one's intention
-and may be more efficient because they stop on the first match.
-</p>
-<p>
-One should note that if one does such lookups often, then they should try
-to use a <a xlink:href="../../topics/hashes/">hash</a> instead.
-</p>
-</item>
-<item xml:id="FileHandle_module">
-<info>
-<title>Using the FileHandle Module</title>
-</info>
-<p>
-The FileHandle module is old and bad, and should not be used. One should
-use the <a xlink:href="http://perldoc.perl.org/IO/Handle.html">IO::Handle</a>
-family of modules instead.
-</p>
-</item>
-<item xml:id="file_includes">
-<info>
-<title>&quot;Including&quot; files instead of using Modules</title>
-</info>
-<p>
-We are often asked how one can "include" a file in a Perl program (similar
-to <a xlink:href="http://php.net/manual/en/function.include.php">PHP's include</a>
-or <a xlink:href="http://ss64.com/bash/period.html">the shell's
-"source" or "." operators</a>. The answer is that the better way is to extract
-the common functionality from all the programs into
-<a xlink:href="../../topics/modules-and-packages/">modules</a> and load them by
-using "use" or "require".
-</p>
-<p>
-Note that <pdoc_f f="do">do</pdoc_f> can be used to evaluate a file (but in
-a different scope), but it's almost always not needed.
-</p>
-<p>
-Some people are looking to supply a common configuration to their programs
-as global variables in the included files, and those people should look at
-CPAN configuration modules such as <cpan_self_dist d="Config-IniFiles" />
-or <a xlink:href="http://search.cpan.org/search?query=json&amp;mode=all">the
-various JSON modules</a> for the ability to read configuration files
-in a safer and better way.
-</p>
-</item>
 <item xml:id="global_vars_iface">
 <info>
 <title>Using Global Variables as an Interface to the Module</title>
@@ -615,10 +433,7 @@ in a safer and better way.
 <p>
 While it is possible to a large extent, one should generally not use global
 variables as an interface to a module, and should prefer having a procedural
-or an object oriented interface instead. For information about this see our
-<a xlink:href="../../topics/modules-and-packages/">page about modules and
-packages</a> and our <a xlink:href="../../topics/object-oriented/">our page
-about object oriented programming in Perl</a>.
+or an object oriented interface instead.
 </p>
 </item>
 <item xml:id="declaring_all_vars_at_top">
@@ -626,6 +441,7 @@ about object oriented programming in Perl</a>.
 <title>Declaring all variables at the top</title>
 </info>
 <p>
+<b>TODO : FILL IN</b>
 Some inexperienced Perl programmers, possibly by influence from languages
 such as C, like to declare all variables used by the program at the top of
 the program or the relevant subroutines. Like so:
@@ -644,118 +460,6 @@ my %cities;
 However, this is bad form in Perl, and the preferable way is to declare all
 the variables when they are first used, and at the innermost scope where they
 should retain their value. This will allow to keep track of them better.
-</p>
-</item>
-<item xml:id="switch_pm">
-<info>
-<title>Using Switch.pm</title>
-</info>
-<p>
-One should not use Switch.pm to implement a
-<a xlink:href="http://en.wikipedia.org/wiki/Switch_statement">switch statement</a>
-because it's a source filter, tends to break a lot of code, and causes
-unexpected problems. Instead one should either use <code>given/when</code>, which
-are only available in perl-5.10 and above, or dispatch tables, or alternatively
-plain <code>if/elsif/else</code> structures.
-</p>
-</item>
-<item xml:id="threads">
-<info>
-<title>Using threads in Perl</title>
-</info>
-<p>
-Some beginners, when thinking they need to multitask their programs start
-thinking they should use perl threads. However, as mentioned in
-<pdoc d="perlthrtut"></pdoc>, perl threads are very much unlike
-the traditional thread modules, share nothing by default and are in fact
-heavyweight processes (instead of the usual lightweight ones). See also
-<a xlink:href="http://www.perlmonks.org/index.pl?node_id=288022">Elizabeth
-Mattijsen’s write-up about perl's ithreads on perlmonks</a>.
-</p>
-<p>
-To sum up, usually threads are the wrong answer and you should be using
-forking processes or something like POE (see our
-<a xlink:href="../../uses/multitasking/">page about multitasking</a>) instead.
-</p>
-</item>
-<item xml:id="calling-the-shell-too-much">
-<info>
-<title>Calling Shell Commands Too Much</title>
-</info>
-<p>
-Some people are tempted to use shell commands for performing
-various tasks using <code>`…`</code>, <code>qx/…/</code>, <code>system()</code>,
-piped-open, etc. However, usually Perl has built-in routines or alternatively
-CPAN modules, which are more portable, and often would be faster than
-calling the shell for help, and they should be used instead.
-</p>
-<p>
-As an extreme example, the site <i>The Daily WTF</i>
-had <a xlink:href="http://thedailywtf.com/Articles/The_UNIX_Philosophy.aspx">a
-feature</a> which featured the following code to determine the file size
-in Perl:
-</p>
-<bad_code syntax="perl">
-my $filesize = `wc -c $file | cut -c0-8 | sed 's/ //g'`;
-</bad_code>
-<p>
-Reportedly, replacing this line with <code>my $filesize = -s $file</code> (which
-as noted earlier should have been called <code>$filename</code> instead), resulted
-in the program being 75 minutes faster on average (!).
-</p>
-<p>
-Normally, if you find yourself using UNIX text processing commands such as
-“sed”, “awk”, “grep”, and “cut”, you should
-implement it in pure-Perl code.
-</p>
-</item>
-<item xml:id="missing-semicolons-at-the-end-of-blocks">
-<info>
-<title>Missing Semicolons at the end of blocks</title>
-</info>
-<p>
-The perl interpreter allows one to omit the last trailing semicolon (";") in
-the containing block. Like so:
-</p>
-<bad_code syntax="perl">
-if ( COND() )
-{
-     print "Success!\n";
-     call_routine() # No semicolon here.
-}
-</bad_code>
-<p>
-However, this isn't a good idea, because it is inconsistent, and may cause
-errors (or obscure failures) if one-or-more statements are added afterwards.
-</p>
-<p>
-As a result, you should end every statement with a semicolon (";") even i
-it’s the last one. A possible exception to this may be single-line and/or
-single-statement blocks like in <pdoc_f f="map">map</pdoc_f>.
-</p>
-</item>
-<item xml:id="list-form-of-open-with-one-arg">
-<info>
-<title>List form of open with one argument.</title>
-</info>
-<p>
-Recent versions of of perl introduced the list-forms of piping to and from a
-command, such as <code>open my $fh, '-|', 'fortune', $collection</code> or
-<code>open my $printer, '|-', 'lpr', '-Plp1'</code>. However, not only they are
-not implemented on Windows and other UNIX-like systems yet, but when one passes
-only one argument to them, they pass it to the shell verbatim.
-</p>
-<p>
-As a result, if one passes an array variable to them, as in:
-</p>
-<bad_code syntax="perl">
-open my $fh, '-|', @foo
-    or die "Could not open program! - $!"
-</bad_code>
-<p>
-One can pass only a single argument to <code>@foo</code>, which would be dangerous.
-To mitigate that, one should use the <cpan_self_dist d="IPC-Run" />
-or the <cpan_self_dist d="IPC-System-Simple" /> CPAN distributions.
 </p>
 </item>
 <item xml:id="trailing-whitespace">
@@ -838,70 +542,12 @@ CPAN modules:
 </li>
 </ul>
 </item>
-<item xml:id="string-eval">
-<info>
-<title>Misusing String Eval</title>
-</info>
-<p>
-String <pdoc_f f="eval">eval</pdoc_f> allows one to compile and execute
-(possibly generated) strings as Perl expressions. While it is a powerful
-feature, there are usually better and safer ways to achieve what you want
-using string <code>eval ""</code>. So you should only use it, if you are an expert
-and really know what you are doing.
-</p>
-<p>
-Related to string eval, is using two or more <code>/e</code> flags in the
-<code>s///</code> substitution. While one /e flag is often useful (for example
-when substituting counters like in <code>s/#\./($i++)."."/ge</code>) the second
-/e flags just evaluates the generated expression again. This can easily be done
-with using string eval inside the right-hand-side, assuming it is needed which
-is normally not the case.
-</p>
-</item>
-<item xml:id="dash-starting-named-params">
-<info>
-<title>Named Parameters That Start With Dash</title>
-</info>
-<p>
-If you're defining interfaces that accept a flattened hash or a hash reference
-of named parameters, there is no need to call the parameters with keys starting
-with a dash, like so:
-</p>
-<bad_code syntax="perl">
-my $obj = MyClass-&gt;new(
-    {
-        -name =&gt; "George",
-        -occupation =&gt; "carpenter",
-        -city =&gt; "Inverness",
-    }
-);
-</bad_code>
-<p>
-The dashes are not needed because Perl can safely escape and deal with plain
-names that only contain alphanumeric characters and underscores, and they
-just add clutter to the code. Named arguments starting with dashes were
-prevalent in some early modules such as <cpan_self_dist d="Tk" /> or
-<cpan_self_dist d="Config-IniFiles" />, but they should not be used in
-more modern modules.
-</p>
-<p>
-Instead, design your interfaces with calling conventions like so:
-</p>
-<code_blk syntax="perl">
-my $obj = MyClass-&gt;new(
-    {
-        name =&gt; "George",
-        occupation =&gt; "carpenter",
-        city =&gt; "Inverness",
-    }
-);
-</code_blk>
-</item>
 <item xml:id="code_and_markup_injection">
 <info>
 <title>Code and Markup Injection</title>
 </info>
 <p>
+<b>TODO : FILL IN</b>
 Care must be taken when constructing statements that are passed to an
 interpreter, when putting arbitrary strings inside (using string interpolation
 or other methods). This is because if the strings are subject to input from
@@ -942,6 +588,7 @@ injections.
 </li>
 </ol>
 </item>
+<!-- REACHED HERE -->
 <item xml:id="init_arrays_from_arrayrefs">
 <info>
 <title>Initializing Arrays and Hashes from Anonymous References</title>

@@ -5,10 +5,13 @@
 
 <latemp_meta_desc "List of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." />
 
+;;; Removed due to a firefox bug with the CSS in the sb.css. The page
+;;; doesn't look much worse without it, anyway.
+<define-tag REMOVED_DUE_TO_FIREFOX_MISBEHAVIOR>
 <page_extra_head_elements>
 <link rel="stylesheet" href="sb.css" type="text/css" media="screen, projection" title="Normal" />
 </page_extra_head_elements>
-
+</define-tag>
 
 <toc_div />
 

@@ -8,7 +8,7 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP 'philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/' |
     grep -vP 'guide2ee/undergrad' |
     grep -vP '(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))' |
-    grep -vP '(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force))' |
+    grep -vP '(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))' |
     grep -vP 'humour/bits/facts/(?:Chuck-Norris|XSLT)' |
     grep -vP 'humour/fortunes' |
     grep -vP 'humour/human-hacking/.*arabic' |
@@ -29,6 +29,7 @@ find dest/t2/ -name '*.html' -or -name '*.xhtml' |
     grep -vP '^\Qdest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z' |
     grep -vP '^\Qdest/t2/humour/by-others/how-to-make-square-corners-with-CSS/' |
     grep -vP '^\Qdest/t2/open-source/resources/graphics-programs/' |
+    grep -vP '^\Qdest/t2/open-source/resources/databases-list/' |
     grep -vP '^\Qdest/t2/js/jquery-ui/' |
     xargs perl bin/html-check-spelling-xmlp.pl |
     grep ':'

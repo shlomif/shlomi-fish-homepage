@@ -1,0 +1,17 @@
+Since I'm the originator of this task, I'm not rating it. It's also not really a review but rather a rebuttal for all the criticism I received for putting this Task here.
+
+First of all, I should note that the source code of my site is public, and I give detailed installation instructions here:
+
+http://www.shlomifish.org/meta/site-source/
+
+One problem with that page is that the remote Subversion repository has become out-of-date because SVK refuses to propagate my local changes to it. This is a misbehaviour of SVK which I'm trying to resolve or work around, but that is besides the point. (I have provided an old snapshot of the trunk and will upload a new one).
+
+So people who are interested may wish to download the site's sources, play with them and learn from them.
+
+Furthermore, the sources of my site serve as a sophisticated example for Latemp ( http://web-cpan.berlios.de/latemp/ ), Website Meta Language ( http://thewml.org/ ) and other technologies. So there is some public motivation to make installing its CPAN dependencies as easy as possible.
+
+I'm sorry that I have not made all these facts clear in the module's documentation, but I still feel that all the heat I received was uncalled for.
+
+After I said that, let me note that it is my opinion that if we don't want to have CPAN "contaminated" with modules that are of little public use, then we should implement a secondary sources mechanism in CPANPLUS.pm which will allow configuring remote sources with their own indices, which will provide different packages to what CPAN provides. Such mechanism will also allow organisations to set up repositories for their own private use.
+
+Last time I raised the idea, someone objected and nothing was done to take it forward. I'm willing to work on implementing it myself assuming there's enough interest and that I'll know my effort will not go to waste.

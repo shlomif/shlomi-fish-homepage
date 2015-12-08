@@ -1,0 +1,65 @@
+This is a guide to the prospective web-designer on what to redesign.
+
+1. The homepage and all of its pages are in:
+
+http://www.shlomifish.org/
+
+Its proto-sources (using Latemp) are covered in:
+
+http://www.shlomifish.org/meta/site-source/
+
+
+2. At the moment the CSS is concentrated in:
+
+http://www.shlomifish.org/style.css
+
+There's also a print stylesheet at:
+
+http://www.shlomifish.org/print.css
+
+3. Elements of the site:
+
+    I) The main body of text. (<div class="main" id="main">)
+
+    II) The side bar intented for navigation and links.
+        - <div class="navbar" id="navbar">
+
+    III) The Breadcrumbs' Trail:
+        - <div class="leading_path">
+
+    IV) The top-banner/ads:
+        - <div class="banner">
+
+    V) On the front page there's the <div class="about_site"> text,
+    while in most of the sections there's a section navigation menu:
+    <div class="sub_menu">. There's a little JavaScript to hide and show
+    it.
+
+    VI) The recommendations:
+
+        - http://www.shlomifish.org/recommendations/
+
+    Contain a :hover effect on an entire entry. (Which does not work on MSIE
+    6 or below, but I don't care too much). These will have to be redesigned
+    too.
+
+    VII) The sidebar contains many elements that should be made more
+    consistent.
+
+    VIII) The following pages:
+
+        - http://www.shlomifish.org/personal.html
+        - http://www.shlomifish.org/work/hire-me/
+
+    contain a version in Hebrew and English as well as a simple navigation
+    bar to convert between the two. It will have to be redesigned too.
+
+    IX) This essay - http://xrl.us/v3do - was converted from DocBook/XML
+    and contains some effects to outline the sectioning of the document. (like
+    indentation or a frame).
+
+    X) The essays http://xrl.us/v3do , http://xrl.us/knjz , http://xrl.us/v3dt
+    contain a stylized note. At the moment, it has a bug of the frame and the
+    colour going behind the "Essays" Sub-Menu.
+
+-------------

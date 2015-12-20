@@ -171,6 +171,11 @@ my $software_tree_contents =
                     title => "A download accelerator with a key improvement.",
                 },
                 {
+                    text => "KSokoban Maintenance",
+                    url => "open-source/projects/ksokoban/",
+                    title => "A KDE implementation of Sokoban - maintenance branch",
+                },
+                {
                     text => "Spark - A Lisp Dialect",
                     url => "open-source/projects/Spark/",
                     subs =>

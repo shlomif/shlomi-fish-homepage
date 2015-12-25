@@ -588,6 +588,18 @@ injections.
 </li>
 </ol>
 </item>
+<item xml:id="decls_not_in_common_headers">
+<info>
+<title>Declarations not in common headers</title>
+</info>
+<p>
+When declaring external functions, variables, classes, etc. make sure to
+put them in a common header file, which will also be included by the .c or
+.cpp file actually defining the common resource. This way if their type
+is changed, you will get a compiler error in the module that defines it,
+and there will be more certainty that there isn’t a type mismatch.
+</p>
+</item>
 <!-- REACHED HERE -->
 <item xml:id="init_arrays_from_arrayrefs">
 <info>

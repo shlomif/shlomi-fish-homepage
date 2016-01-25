@@ -1,32 +1,63 @@
-#!/bin/bash
-find dest/t2/ -name '*.html' -or -name '*.xhtml' |
-    ( LC_ALL=C sort  ) |
-    grep -vP 'dest/t2/philosophy/obj-oss/objectivism-and-open-source/' |
-    grep -vP '^dest/t2/rindolf/intro_to_rindolf\.html$' |
-    grep -vP '^dest/t2/MANIFEST\.html$' |
-    grep -vP 'philosophy/foss-other-beasts/revision-2/' |
-    grep -vP 'philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/' |
-    grep -vP 'guide2ee/undergrad' |
-    grep -vP '(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))' |
-    grep -vP '(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))' |
-    grep -vP 'humour/bits/facts/(?:Chuck-Norris|XSLT)' |
-    grep -vP 'humour/fortunes' |
-    grep -vP 'humour/human-hacking/.*arabic' |
-    grep -vP 'humour/human-hacking/human-hacking-field-guide/' |
-    grep -vP 'humour/human-hacking/hebrew-v2' |
-    grep -vP 'humour/humanity/ongoing-text-hebrew' |
-    grep -vP 'lecture/Lambda-Calculus/slides/shriram\.scm' |
-    grep -vP 'lecture/HTML-Tutorial/v1/xhtml1/hebrew' |
-    grep -vP 'js/MathJax/(?:test|docs)/' |
-    grep -vP 'dest/t2/philosophy/computers/high-quality-software/what-makes-software-high-quality' |
-    grep -vP 'dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index' |
-    grep -vP '\.raw\.html$' |
-    grep -vP '^\Qdest/t2/js/jquery-ui\E' |
-    grep -vP '^\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E' |
-    grep -vP '^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E' |
-    grep -vP '^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E' |
-    grep -vP '^\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E' |
-    grep -vP '^\Qdest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z' |
-    grep -vP '^\Qdest/t2/humour/by-others/how-to-make-square-corners-with-CSS/' |
-    grep -vP '^\Qdest/t2/open-source/resources/graphics-programs/' |
-    grep -vP '^\Qdest/t2/js/jquery-ui/'
+#!/usr/bin/env perl
+
+
+use strict;
+use warnings;
+
+use feature qw/say/;
+
+use List::MoreUtils qw/any/;
+use File::Find::Object;
+
+my @prunes =
+(
+    qr#dest/t2/philosophy/obj-oss/objectivism-and-open-source/#,
+    qr#^dest/t2/rindolf/intro_to_rindolf\.html$#,
+    qr#^dest/t2/MANIFEST\.html$#,
+    qr#philosophy/foss-other-beasts/revision-2/#,
+    qr#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#,
+    qr#guide2ee/undergrad#,
+    qr#(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))#,
+    qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))#,
+    qr#humour/bits/facts/(?:Chuck-Norris|XSLT)#,
+    qr#humour/fortunes#,
+    qr#humour/human-hacking/.*arabic#,
+    qr#humour/human-hacking/human-hacking-field-guide/#,
+    qr#humour/human-hacking/hebrew-v2#,
+    qr#humour/humanity/ongoing-text-hebrew#,
+    qr#lecture/Lambda-Calculus/slides/shriram\.scm#,
+    qr#lecture/HTML-Tutorial/v1/xhtml1/hebrew#,
+    qr#js/MathJax/(?:test|docs)/#,
+    qr#dest/t2/philosophy/computers/high-quality-software/what-makes-software-high-quality#,
+    qr#dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index#,
+    qr#\.raw\.html$#,
+    qr#^\Qdest/t2/js/jquery-ui\E#,
+    qr#^\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E#,
+    qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E#,
+    qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E#,
+    qr#^\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E#,
+    qr#^\Qdest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z#,
+    qr#^\Qdest/t2/humour/by-others/how-to-make-square-corners-with-CSS/#,
+    qr#^\Qdest/t2/open-source/resources/graphics-programs/#,
+);
+
+my $f = File::Find::Object->new({}, 'dest/t2');
+
+my @got;
+while (my $r = $f->next_obj())
+{
+    my $path = $r->path;
+    if (any { $path =~ $_ } @prunes)
+    {
+        $f->prune;
+    }
+    elsif ($r->is_file and $r->basename =~ /\.x?html\z/)
+    {
+        push @got, $path;
+    }
+}
+use locale;
+use POSIX qw(locale_h strtod);
+setlocale(LC_COLLATE, 'C') or die "cannot set locale.";
+
+say foreach sort @got;

@@ -23,6 +23,7 @@ sub _tag
 
     return;
 }
+
 sub spell_check
 {
     my ($self, $args) = @_;

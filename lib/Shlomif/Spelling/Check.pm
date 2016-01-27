@@ -98,7 +98,10 @@ sub spell_check
 
         my $process_text = sub
         {
-            return if $self->_inside->{script} || $self->_inside->{style};
+            if (any { $self->_inside->{$_} > 0 } qw(script style))
+            {
+                return;
+            }
 
             my $text = shift;
 

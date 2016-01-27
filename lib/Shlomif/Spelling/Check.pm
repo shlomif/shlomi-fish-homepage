@@ -19,6 +19,7 @@ has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
 sub _tag
 {
     my ($self, $tag, $num) = @_;
+
     $self->_inside->{$tag} += $num;
 
     return;

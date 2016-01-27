@@ -34,7 +34,7 @@ Let's face it - we have competition. Perl, Python, Ruby, PHP and
 dynamically typed, highly flexible languages. They all allow
 doing in one line what can be done in other more mainstream
 languages in 50 lines of code, or with an ugly command filled
-with lots of overly-OO crap. Furthermore, they all scale much
+with lots of overly-object-oriented crap. Furthermore, they all scale much
 better as far as code vs. effort is concerned. (with the sole
 exception of Lisp, which loses as far as portability is concerned)
 </p>
@@ -53,7 +53,7 @@ present in Perl, at least not in a straightforward manner.
 When facing a competition, the important thing to admit is that it may
 be doing something better than you do. But it is also important to realize
 what <b>isn't</b> your competition. Java isn't. C++ isn't. Haskell and
-O'Caml aren't. Like it or not, but dynamically typed languages are here to
+OCaml aren't. Like it or not, but dynamically typed languages are here to
 stay. And I predict (while given the right to err) they are going to be the
 general purpose languages of the future.
 </p>
@@ -184,7 +184,7 @@ such user defined functions. (<b>accum</b> comes to mind).
 In order to make sure Clarissa does not run out of stack space - proper-tail
 recursion is here. The primitive <tt>pt_return</tt> will behave exactly like
 <tt>return</tt> except that it would try to make the routine properly-tail
-recursed if possible. <tt>line_return</tt> would explicitly be non tail
+recursive if possible. <tt>line_return</tt> would explicitly be non tail
 recursive.
 </p>
 
@@ -232,15 +232,15 @@ or in the environment they are expanded in.
 <h4>Re-usable Virtual Machine Instances</h4>
 
 <p>
-It would be possible to instantize the Perl interpreter, and to run several
+It would be possible to instantiate the Perl interpreter, and to run several
 Perl virtual machines at once.
 </p>
 
-<h4>Parsing and Analyzing of Rindolf Code</h4>
+<h4>Parsing and Analysing of Rindolf Code</h4>
 
 <p>
-Rindolf will have a generic parsing and analyzing class which would be very
-flexible. This class would be able to analyze Perl code, and thus serve
+Rindolf will have a generic parsing and analysing class which would be very
+flexible. This class would be able to analyse Perl code, and thus serve
 as the basis for better code writing and modifying mechanisms.
 </p>
 
@@ -272,7 +272,7 @@ Moreover, the meta-function <tt>wantwhat()</tt> can be used a definition of
 what the function is expected to return. Like <tt>wantarray</tt> on steroids.
 </p>
 
-<h3>Pragmas to Modify some of Perl 5's Idiosyncrasies</h3>
+<h3>Pragmas to Modify some of Perl 5’s Idiosyncrasies</h3>
 
 <p>
 Rindolf by default will be fully compatible to Perl 5. However, it will have

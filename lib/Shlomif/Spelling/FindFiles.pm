@@ -11,7 +11,6 @@ use HTML::Spelling::Site::Finder;
 my @prunes =
 (
     qr#dest/t2/philosophy/obj-oss/objectivism-and-open-source/#,
-    qr#^dest/t2/rindolf/intro_to_rindolf\.html$#,
     qr#^dest/t2/MANIFEST\.html$#,
     qr#philosophy/foss-other-beasts/revision-2/#,
     qr#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#,

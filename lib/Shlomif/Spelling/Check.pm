@@ -11,7 +11,7 @@ use MooX qw/late/;
 use HTML::Parser 3.00 ();
 use Text::Hunspell;
 use List::MoreUtils qw(any);
-use JSON::MaybeXS qw(encode_json decode_json);
+use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
 has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
@@ -77,9 +77,16 @@ sub spell_check
         return io->file('./Tests/data/cache/spelling-timestamp.json');
     };
 
+    my $write_cache = sub {
+        my $ref = shift;
+        $calc_cache_io->()->print(
+            JSON::MaybeXS->new(canonical => 1)->encode($ref)
+        );
+    };
+
     if (! $calc_cache_io->()->exists())
     {
-        $calc_cache_io->()->print(encode_json({}));
+        $write_cache->(+{});
     }
 
     my $timestamp_cache = decode_json(scalar($calc_cache_io->()->slurp()));
@@ -177,7 +184,7 @@ sub spell_check
         }
     }
 
-    $calc_cache_io->()->print(encode_json($timestamp_cache));
+    $write_cache->($timestamp_cache);
 
     print "\n";
 }

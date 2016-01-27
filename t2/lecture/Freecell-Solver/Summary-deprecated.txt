@@ -370,7 +370,7 @@ library can be run we are set. But what about multi-threaded applications?
 ** Conclusion: Global variables are wrong because they do not go well with
 multi-threading. In C++, use objects. In ANSI C, create an instance struct
 that will hold all the "global" variables of the function, and create
-functions to instantize it.
+functions to instantiate it.
 
 * Remembering the stack and freecell order.
 

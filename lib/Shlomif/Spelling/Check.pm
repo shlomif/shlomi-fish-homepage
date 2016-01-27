@@ -15,12 +15,49 @@ use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
 has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
+has '_general_whitelist' => (is => 'rw', default => sub { +{}; });
+has '_per_filename_whitelists' => (is => 'rw', default => sub { +{}; });
 
 sub _tag
 {
     my ($self, $tag, $num) = @_;
 
     $self->_inside->{$tag} += $num;
+
+    return;
+}
+
+sub _populate_whitelists
+{
+    my ($self) = @_;
+
+    my @current_whitelists_list = ($self->_general_whitelist);
+    open my $fh, '<:encoding(utf8)', 'lib/hunspell/whitelist1.txt';
+    while (my $l = <$fh>)
+    {
+        chomp($l);
+        # Whitespace or comment - skip.
+        if ($l !~ /\S/ or ($l =~ /\A\s*#/))
+        {
+            # Do nothing.
+        }
+        elsif ($l =~ /\A====\s*(.*)/)
+        {
+            @current_whitelists_list =
+            (
+                map { $self->_per_filename_whitelists->{$_} ||= +{} }
+                split /\s*,\s*/, $1
+            );
+        }
+        else
+        {
+            foreach my $w (@current_whitelists_list)
+            {
+                $w->{$l} = 1;
+            }
+        }
+    }
+    close ($fh);
 
     return;
 }
@@ -36,42 +73,14 @@ sub spell_check
         '/usr/share/hunspell/en_GB.dic',
     );
 
-    die unless $speller;
+    if (not $speller)
+    {
+        die "Could not initialize speller!";
+    }
+
+    $self->_populate_whitelists;
 
     binmode STDOUT, ":encoding(utf8)";
-
-    my %general_whitelist;
-    my %per_filename_whitelists;
-
-    {
-        my @current_whitelists_list = \%general_whitelist;
-        open my $fh, '<:encoding(utf8)', 'lib/hunspell/whitelist1.txt';
-        while (my $l = <$fh>)
-        {
-            chomp($l);
-            # Whitespace or comment - skip.
-            if ($l !~ /\S/ or ($l =~ /\A\s*#/))
-            {
-                # Do nothing.
-            }
-            elsif ($l =~ /\A====\s*(.*)/)
-            {
-                @current_whitelists_list =
-                (
-                    map { $per_filename_whitelists{$_} ||= +{} }
-                    split /\s*,\s*/, $1
-                );
-            }
-            else
-            {
-                foreach my $w (@current_whitelists_list)
-                {
-                    $w->{$l} = 1;
-                }
-            }
-        }
-        close ($fh);
-    }
 
     my $calc_cache_io = sub {
         return io->file('./Tests/data/cache/spelling-timestamp.json');
@@ -91,9 +100,14 @@ sub spell_check
 
     my $timestamp_cache = decode_json(scalar($calc_cache_io->()->slurp()));
 
+    my $_general_whitelist = $self->_general_whitelist;
+    my $_per_filename_whitelists = $self->_per_filename_whitelists;
+
     FILENAMES_LOOP:
     foreach my $filename (@$files)
     {
+        my $file_whitelist = $_per_filename_whitelists->{$filename} || +{};
+
         if (exists($timestamp_cache->{$filename}) and
             $timestamp_cache->{$filename} <= (io->file($filename)->mtime())
         )
@@ -132,9 +146,9 @@ sub spell_check
 
                     my $verdict =
                     (
-                        (!exists($general_whitelist{$word}))
+                        (!exists($_general_whitelist->{$word}))
                         &&
-                        (!exists($per_filename_whitelists{$filename}{$word}))
+                        (!exists($file_whitelist->{$word}))
                         &&
                         ($word !~ m#\A[\p{Hebrew}\-'’]+\z#)
                         &&
@@ -187,6 +201,8 @@ sub spell_check
     $write_cache->($timestamp_cache);
 
     print "\n";
+
+    return;
 }
 
 1;

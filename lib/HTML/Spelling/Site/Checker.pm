@@ -17,6 +17,7 @@ has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
 has '_general_whitelist' => (is => 'rw', default => sub { +{}; });
 has '_per_filename_whitelists' => (is => 'rw', default => sub { +{}; });
 has 'whitelist_fn' => (is => 'ro', isa => 'Str', required => 1);
+has 'check_word_cb' => (is => 'ro', isa => 'CodeRef', required => 1);
 
 sub _tag
 {
@@ -68,16 +69,6 @@ sub spell_check
 
     my $files = $args->{files};
 
-    my $speller = Text::Hunspell->new(
-        '/usr/share/hunspell/en_GB.aff',
-        '/usr/share/hunspell/en_GB.dic',
-    );
-
-    if (not $speller)
-    {
-        die "Could not initialize speller!";
-    }
-
     $self->_populate_whitelists;
 
     binmode STDOUT, ":encoding(utf8)";
@@ -102,6 +93,8 @@ sub spell_check
 
     my $_general_whitelist = $self->_general_whitelist;
     my $_per_filename_whitelists = $self->_per_filename_whitelists;
+
+    my $check_word = $self->check_word_cb;
 
     FILENAMES_LOOP:
     foreach my $filename (@$files)
@@ -152,7 +145,7 @@ sub spell_check
                         &&
                         ($word !~ m#\A[\p{Hebrew}\-'’]+\z#)
                         &&
-                        (!($speller->check($word)))
+                        (!($check_word->($word)))
                     );
 
                     $mispelling_found ||= $verdict;

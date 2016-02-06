@@ -81,6 +81,16 @@ if (not -e 'lib/MathJax/README.md')
     }
 }
 
+if (not -e 'lib/ebookmaker/README.md')
+{
+    my $pid;
+    if (! ($pid = $pm->start))
+    {
+        system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
+        $pm->finish;
+    }
+}
+
 my @documents =
 (
     {

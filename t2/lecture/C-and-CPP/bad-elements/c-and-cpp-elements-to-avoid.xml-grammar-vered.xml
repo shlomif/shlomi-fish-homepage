@@ -916,159 +916,8 @@ Tools” page.
 </ul>
 
 </item>
-<!-- REACHED HERE -->
-<item xml:id="unrelated_packages_inside_modules">
-<info>
-<title>Unrelated packages inside modules</title>
-</info>
-
-<p>
-If your module is <code>lib/MyModule.pm</code>, then it should only contain
-namespaces/packages under <code>MyModule::</code>. If it contains
-<code>package OtherModule;</code> then this in turn will be harder
-to find and confusing. Preferably, every package should be inside its own
-module (except for privately used ones).
-</p>
-
-</item>
-<item xml:id="non_explicitly_imported_symbols">
-<info>
-<title>Non-explicitly-imported symbols</title>
-</info>
-
-<p>
-When importing symbols from packages, it is a good idea to specify the symbols
-that are reported explicitly, so one won't have to wonder where variables are
-coming from. So:
-</p>
-
-<bad_code syntax="perl">
-use MyLib;
-
-print my_function(3,5), "\n";
-</bad_code>
-
-<p>
-Should be replaced with:
-</p>
-
-<code_blk syntax="perl">
-use MyLib qw( my_function );
-
-print my_function(3,5), "\n";
-</code_blk>
-
-</item>
-<item xml:id="excessive_calls_to_subs_in_other_packages">
-<info>
-<title>Excessive calls to subroutines in other packages</title>
-</info>
-
-<p>
-It is not a good idea to put many and excessive calls to subroutines in other
-packages (using the <code>MyModule::my_sub()</code> notation) in your code,
-because it breaks encapsulation. Instead, make the module a class, instantiate
-it as an object and call its methods.
-</p>
-
-</item>
-<item xml:id="scalar-multi-dimensional-hash-emulation">
-<info>
-<title>Using the Scalar Multidimensional Hashes Emulation</title>
-</info>
-
-<p>
-Please do not do the scalar multidimensional hashes emulation of perl:
-</p>
-
-<bad_code syntax="perl">
-$myhash{$key1,$key2} = $my_value;
-
-$value = $myhash{$key1,$key2};
-</bad_code>
-
-<p>
-This is a relic of old versions of Perl and the proper way to do it is using
-nested hashes and references, or with an explicit serialisation of the keys. It
-also can be easily confused with a hash slice -
-<code>@myhash{$key1,$key2}</code>
-</p>
-
-</item>
-<item xml:id="the-dash-w-flag">
-<info>
-<title>Using the "-w" flag.</title>
-</info>
-
-<p>
-It is important not to pass the "-w" flag in the sha-bang line of the Perl
-program, because this turns on warnings <b>globally</b> and also interferes
-with the more modern <code>use warnings;</code> statement. Unfortunately, many
-legacy tutorials and codebases still show that.
-</p>
-
-<p>
-So please rewrite this:
-</p>
-
-<bad_code syntax="perl">
-#!/usr/bin/perl -w
-
-use strict;
-</bad_code>
-
-<p>
-Into this:
-</p>
-
-<code_blk syntax="perl">
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-</code_blk>
-
-<p>
-Also see <a xlink:href="#no-strict-and-warnings">our section</a> about
-why the lack of <code>use strict;</code> and <code>use warnings;</code> is
-not recommended for more information.
-</p>
-
-</item>
-<item xml:id="use-Module-VERSION">
-<info>
-<title>“use Module qw($VERSION @IMPORTS)”</title>
-</info>
-
-<p>
-Perl will accept the following syntax for loading a particular version
-of a module along with some imports:
-</p>
-
-<bad_code syntax="perl">
-use Getopt::Long qw(2.36 GetOptionsFromArray);
-</bad_code>
-
-<p>
-However, this syntax won't necessarily load the minimal version of the
-module, and tools such as <a xlink:href="http://dzil.org/">Dist::Zilla</a>
-won’t handle it properly. The proper way to do it is with the version number
-given right after the module name, and before the imports list, delimited
-by spaces on both sides:
-</p>
-
-<code_blk syntax="perl">
-#!/usr/bin/perl
-
-use Getopt::Long 2.36 qw(GetOptionsFromArray);
-</code_blk>
-
-<p>
-This will work better.
-</p>
-
-</item>
 </section>
+<!-- REACHED HERE -->
 <section xml:id="sources_of_advice">
 <info>
 <title>Sources of This Advice</title>
@@ -1080,6 +929,14 @@ also contains material for further reading:
 </p>
 
 <ol>
+
+<li>
+<p>
+A large part of this document is derived from
+<a xlink:href="http://perl-begin.org/tutorials/bad-elements/">a similar
+document</a> written earlier for the Perl programming language.
+</p>
+</li>
 
 <li>
 <p>
@@ -1131,8 +988,15 @@ to tell if a FLOSS project is doomed to FAIL”</a>.
 
 <li>
 <p>
-Advice given by people on <a xlink:href="$(ROOT)/irc/#freenode">Freenode's #perl
+Advice given by people on
+<a xlink:href="http://perl-begin.org/irc/#freenode">Freenode's #perl
 channel</a>, on the Perl Beginners mailing list, and on other Perl forums.
+</p>
+</li>
+
+<li>
+<p>
+Advice given by people on Freenode’s ##programming channel and on other forums.
 </p>
 </li>
 

@@ -6,7 +6,7 @@ use warnings;
 use Test::More tests => 1;
 
 {
-    my $output = `./bin/spell-checker-iface.sh`;
+    my $output = `./bin/spell-checker-iface`;
     chomp($output);
 
     # TEST

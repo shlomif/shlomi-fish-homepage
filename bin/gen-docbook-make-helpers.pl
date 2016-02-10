@@ -280,6 +280,12 @@ my @documents =
         db_ver => 5,
     },
     {
+        id => "c-and-cpp-elements-to-avoid",
+        path => "lecture/C-and-CPP/bad-elements/",
+        base =>  "c-and-cpp-elements-to-avoid",
+        db_ver => 5,
+    },
+    {
         id => "The-Enemy-English-v7",
         path => "humour/TheEnemy",
         base => "The-Enemy-English-v7",

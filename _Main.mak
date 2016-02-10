@@ -896,6 +896,9 @@ $(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	$(DOCMAKE_WITH_PARAMS) --basepath $(DOCBOOK5_XSL_STYLESHEETS_PATH) -o $@ -x $(DOCBOOK5_XSL_FO_XSLT_STYLESHEET) fo $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
+$(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: t2/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+	./bin/translate-Vered-XML --output "$@" "$<"
+
 $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
 

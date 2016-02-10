@@ -18,7 +18,7 @@ people tend to use and some better practices that should be used instead.
 </p>
 <p>
 A book I read said, that as opposed to most previous idea systems, they
-were trying to <b>liquidate negatives</b> instead of to instill positives
+were trying to <b>liquidate negatives</b> instead of to instil positives
 in people. So in the spirit of liquidating negatives, this tutorial-in-reverse
 aims to show you what <b>not to do</b>.
 </p>
@@ -351,7 +351,7 @@ be to structure the code so that each object handles its own domain.
 <p>
 Sometimes we encounter a case where subroutines each pass the same parameter
 to one another in delegation, just because the innermost subroutines in the
-callstack need it.
+call-stack need it.
 </p>
 <p>
 To avoid it, create a class, and declare methods that operate on the
@@ -446,15 +446,8 @@ Some inexperienced Perl programmers, possibly by influence from languages
 such as C, like to declare all variables used by the program at the top of
 the program or the relevant subroutines. Like so:
 </p>
-<bad_code syntax="perl">
-my $first_name;
-my $last_name;
-my $address;
-my @people;
-my %cities;
-.
-.
-.
+<bad_code syntax="c">
+TODO : FILL IN
 </bad_code>
 <p>
 However, this is bad form in Perl, and the preferable way is to declare all
@@ -737,7 +730,8 @@ difference.
 </p>
 <p>
 If you do find that your program runs too slowly, refer to our
-resources about Optimising and Profiling code</a>.
+<a xlink:href="http://c-begin.wikia.com/wiki/Profiling_and_Optimizing">resources
+about Optimising and Profiling code</a>.
 </p>
 </item>
 <item xml:id="version_control">
@@ -870,7 +864,9 @@ system. There’s
 <a xlink:href="http://www.shlomifish.org/open-source/resources/software-tools/">a page listing some prominent alternatives</a>. For simple setups, a make file
 may be suitable, but more complex tasks require a configuration and build
 system such as <a xlink:href="http://en.wikipedia.org/wiki/CMake">CMake</a>.
+</p>
 </item>
+
 <item xml:id="not_using_a_bug_tracker">
 <info>
 <title>Not Using a Bug Tracker/Issue Tracker</title>

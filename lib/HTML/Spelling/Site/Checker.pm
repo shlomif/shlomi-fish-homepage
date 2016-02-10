@@ -112,7 +112,9 @@ sub spell_check
 
         my $process_text = sub
         {
-            if (any { $self->_inside->{$_} > 0 } qw(script style))
+            if (any {
+                    exists($self->_inside->{$_}) and $self->_inside->{$_} > 0
+                } qw(script style))
             {
                 return;
             }

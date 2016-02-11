@@ -54,11 +54,25 @@ lists several styles - pick one and follow it.
 </item>
 <item xml:id="no-compiler-warning-flags">
 <info>
-<title>No &quot;use strict;&quot; and &quot;use warnings;&quot;</title>
+<title>Compiling without warnings flags</title>
 </info>
+
 <p>
-<b>TODO : FILL IN</b>
+C and C++ Compilers have flags to toggle on warnings such as
+<code>-Wall</code>, <code>-Wextra</code>, or <code>-Weverything</code>.
+It is a good idea to specify as many of them as possible when compiling the
+code and to fix the warnings where appropriate.
 </p>
+
+<p>
+Someone gave me this GCC warnings’ theme:
+</p>
+
+<code_blk syntax="bash">
+#!/bin/bash
+gcc -std=c99 -Wall -W -Wformat-nonliteral -Wcast-align -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Winline -Wundef -Wnested-externs -Wcast-qual -Wshadow -Wwrite-strings -Wunused -Wfloat-equal -pedantic -ansi -Wbad-function-cast  -Wmissing-declarations -Wmissing-prototypes  -Wnested-externs  -Wold-style-definition -Wstrict-prototypes -Wdeclaration-after-statement
+</code_blk>
+
 </item>
 <item xml:id="calling-variables-file">
 <info>

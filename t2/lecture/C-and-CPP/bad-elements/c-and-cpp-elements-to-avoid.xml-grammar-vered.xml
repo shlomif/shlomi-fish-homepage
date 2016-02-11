@@ -333,14 +333,29 @@ So if you're posting code for public scrutiny, make sure it is written with
 English identifiers and comments.
 </p>
 </item>
-<item xml:id="perlform">
+
+<item xml:id="using-namespace-std">
 <info>
 <title>“using namespace std;”</title>
 </info>
+
 <p>
-<b>TODO : FILL IN</b>
+One can often see C++ code with <code>using namespace std;</code> on top, but that is
+a bad idea. The C++ standard requires that the “std” namespace contain certain
+symbols, but it doesn't prevent it from containing <b>other</b> symbols
+(presumably, stdlib implementation details). If you use <code>using namespace
+std;</code>, you never know what else you might be bringing into the global
+namespace.
 </p>
+
+<p>
+One possible alternative is to selectively do
+<code>using std::cout;</code>, <code>using std::string;</code> and so forth,
+for each symbol that you wish to use.
+</p>
+
 </item>
+
 <item xml:id="law_of_demeter">
 <info>
 <title>Law of Demeter</title>

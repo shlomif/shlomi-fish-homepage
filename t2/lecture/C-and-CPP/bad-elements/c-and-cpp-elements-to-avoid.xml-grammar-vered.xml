@@ -362,7 +362,7 @@ for each symbol that you wish to use.
 </info>
 <p>
 See the <a xlink:href="http://en.wikipedia.org/wiki/Law_of_Demeter">Wikipedia article
-about "Law of Demeter" for more information</a>. Namely, doing many nested
+about "Law of Demeter"</a> for more information. Namely, doing many nested
 method calls like
 <code>obj-&gt;get_employee('sophie')-&gt;get_address()-&gt;get_street()</code>
 is not advisable, and should be avoided.

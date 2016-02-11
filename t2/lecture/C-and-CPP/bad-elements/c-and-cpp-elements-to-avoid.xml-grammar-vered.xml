@@ -358,11 +358,11 @@ for each symbol that you wish to use.
 
 <item xml:id="law_of_demeter">
 <info>
-<title>Law of Demeter</title>
+<title>The Law of Demeter</title>
 </info>
 <p>
 See the <a xlink:href="http://en.wikipedia.org/wiki/Law_of_Demeter">Wikipedia article
-about "Law of Demeter"</a> for more information. Namely, doing many nested
+about “The Law of Demeter”</a> for more information. Namely, doing many nested
 method calls like
 <code>obj-&gt;get_employee('sophie')-&gt;get_address()-&gt;get_street()</code>
 is not advisable, and should be avoided.

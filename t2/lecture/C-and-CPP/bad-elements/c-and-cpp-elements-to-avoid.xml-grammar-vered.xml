@@ -455,6 +455,7 @@ relevant thread on the Perl beginners mailing list</a> (just make sure you read
 it in its entirety).
 </p>
 </item>
+
 <item xml:id="global_vars_iface">
 <info>
 <title>Using Global Variables as an Interface to the Module</title>
@@ -465,6 +466,17 @@ variables as an interface to a module, and should prefer having a procedural
 or an object oriented interface instead.
 </p>
 </item>
+
+<item xml:id="global_or_function_static_vars">
+<info>
+<title>Using Global Variables or Function-"static" Variables</title>
+</info>
+<p>
+<b>TODO : FILL IN</b> - bad for multi-threading, re-entrancy, instantiation,
+etc.
+</p>
+</item>
+
 <item xml:id="declaring_all_vars_at_top">
 <info>
 <title>Declaring all variables at the top</title>

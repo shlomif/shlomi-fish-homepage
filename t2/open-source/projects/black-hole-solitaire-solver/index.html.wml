@@ -104,7 +104,7 @@ the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
 the corresponding moved cards after calculating
 <tt>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</tt> where the suits
 are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s
-<a href="http://fc-solve.googlecode.com/svn/black-hole-solitaire/trunk/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
+<a href="https://github.com/shlomif/black-hole-solitaire/blob/master/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
 </li>
 
@@ -117,11 +117,11 @@ that was used to generate them from the more verbose solution files</a>.
 
 <h2 id="project-links">Project Links</h2>
 
-<bitbucket_cpan_dist_links
+<github_cpan_dist_links
     dist="Games-Solitaire-BlackHole-Solver"
-    bitbucket_url="http://bitbucket.org/shlomif/black-hole-solitaire"
+    github_url="http://github.com/shlomif/black-hole-solitaire"
     freecode_url="http://freecode.com/projects/black-hole-solitaire-solver">
-</bitbucket_cpan_dist_links >
+</github_cpan_dist_links >
 
 <h2 id="similar-projects">Similar Projects</h2>
 

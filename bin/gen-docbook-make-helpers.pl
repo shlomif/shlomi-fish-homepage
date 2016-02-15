@@ -91,6 +91,16 @@ if (not -e 'lib/ebookmaker/README.md')
     }
 }
 
+if (not -e 'lib/c-begin/README.md')
+{
+    my $pid;
+    if (! ($pid = $pm->start))
+    {
+        system('cd lib && git clone https://github.com/shlomif/c-begin.git');
+        $pm->finish;
+    }
+}
+
 my @documents =
 (
     {

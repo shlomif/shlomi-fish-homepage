@@ -3,39 +3,13 @@
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::HTML::Tidy::Recursive;
 
-use HTML::Tidy;
-use File::Find::Object::Rule;
-use IO::All qw/ io /;
-
-local $SIG{__WARN__} = sub {
-    my $w = shift;
-    if ($w !~ /\AUse of uninitialized/)
-    {
-        die $w;
-    }
-    return;
-};
-
-my $tidy = HTML::Tidy->new({ output_xhtml => 1, });
-$tidy->ignore( type => TIDY_WARNING, type => TIDY_INFO );
-
-my $error_count = 0;
-
-for my $fn (File::Find::Object::Rule->file()->name(qr/\.x?html\z/)->in("./dest"))
-{
-    if (not ($fn =~ m{js/MathJax}
-                or $fn =~ m{\Adest/t2/MathVentures/}))
-    {
-        $tidy->parse( $fn, (scalar io->file($fn)->slurp()));
-
-        for my $message ( $tidy->messages ) {
-            $error_count++;
-            diag( $message->as_string);
-        }
-    }
-}
-
-# TEST
-is ($error_count, 0, "No errors");
+Test::HTML::Tidy::Recursive->new({
+        targets => ['./dest'],
+        filename_filter => sub {
+            my $fn = shift;
+            return (not ($fn =~ m{js/MathJax}
+                        or $fn =~ m{\Adest/t2/MathVentures/}));
+        },
+    })->run;

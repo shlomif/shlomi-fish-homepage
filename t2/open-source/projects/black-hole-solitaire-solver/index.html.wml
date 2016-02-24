@@ -18,7 +18,7 @@ the cards to move.
 
 <h2 id="download">Download</h2>
 
-<set-var ver="0.12.0" />
+<set-var ver="0.14.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -137,6 +137,16 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <h2 id="news">News</h2>
+
+<h3 id="news_version_0_14_0">Version 0.14.0</h3>
+
+<p>
+Version 0.14.0 of Black Hole Solitaire Solver was released. The highlights of
+this release are setting an SOVERSION to the shared library, some bug fixes
+and moving the
+<a href="http://github.com/shlomif/black-hole-solitaire">repository</a> to
+Git and GitHub and enabling <a href="https://travis-ci.org/shlomif/black-hole-solitaire">Travis-CI</a>.
+</p>
 
 <h3 id="news_version_0_12_0">Version 0.12.0</h3>
 

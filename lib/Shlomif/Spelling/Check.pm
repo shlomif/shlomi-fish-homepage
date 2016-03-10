@@ -7,6 +7,7 @@ use utf8;
 
 use MooX qw/late/;
 
+use Shlomif::Spelling::Whitelist;
 use HTML::Spelling::Site::Checker;
 
 sub spell_check
@@ -27,7 +28,7 @@ sub spell_check
 
     return HTML::Spelling::Site::Checker->new(
         {
-            whitelist_fn => 'lib/hunspell/whitelist1.txt',
+            whitelist_parser => scalar( Shlomif::Spelling::Whitelist->new() ),
             check_word_cb => sub {
                 my ($word) = @_;
                 return $speller->check($word);

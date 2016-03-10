@@ -13,6 +13,24 @@ has '_records' => (is => 'ro', default => sub { return []; });
 has '_was_parsed' => (is => 'rw', default => '');
 has 'filename' => (is => 'ro', isa => 'Str', required => 1);
 
+sub get_general_whitelist_as_array_ref
+{
+    my ($self) = @_;
+
+    $self->parse;
+
+    return $self->_general_whitelist;
+}
+
+sub get_records_whitelists_as_array_ref_of_records
+{
+    my ($self) = @_;
+
+    $self->parse;
+
+    return $self->_records;
+}
+
 sub parse
 {
     my ($self) = @_;

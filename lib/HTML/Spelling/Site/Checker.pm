@@ -42,13 +42,24 @@ sub _populate_whitelists
         {
             # Do nothing.
         }
-        elsif ($l =~ /\A====\s*(.*)/)
+        elsif ($l =~ s/\A====\s+//)
         {
-            @current_whitelists_list =
-            (
-                map { $self->_per_filename_whitelists->{$_} ||= +{} }
-                split /\s*,\s*/, $1
-            );
+            if ($l =~ /\AIn:\s*(.*)/)
+            {
+                @current_whitelists_list =
+                (
+                    map { $self->_per_filename_whitelists->{$_} ||= +{} }
+                    split /\s*,\s*/, $1
+                );
+            }
+            elsif ($l =~ /\AGLOBAL:\s*\z/)
+            {
+                # Do nothing.
+            }
+            else
+            {
+                die "Unknown directive <<==== $l>>!";
+            }
         }
         else
         {

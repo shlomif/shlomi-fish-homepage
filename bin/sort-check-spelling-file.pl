@@ -21,6 +21,7 @@ my $filename = 'lib/hunspell/whitelist1.txt';
 {
     my $rec;
     open my $fh, '<:encoding(utf8)', $filename;
+    my $found_global = 0;
     while (my $l = <$fh>)
     {
         chomp($l);
@@ -29,16 +30,31 @@ my $filename = 'lib/hunspell/whitelist1.txt';
         {
             # Do nothing.
         }
-        elsif ($l =~ /\A====\s*(.*)/)
+        elsif ($l =~ s/\A====\s+//)
         {
-            if (defined($rec))
+            if ($l =~ /\AGLOBAL:\s*\z/)
             {
-                push @records, $rec;
+                if (defined($rec))
+                {
+                    die "GLOBAL is not the first directive.";
+                }
+                $found_global = 1;
             }
-            $rec = {
-                'files' => [ sort { $a cmp $b } split /\s*,\s*/, $1],
-                'words' => [],
-            },
+            elsif ($l =~ /\AIn:\s*(.*)/)
+            {
+                if (defined($rec))
+                {
+                    push @records, $rec;
+                }
+                $rec = {
+                    'files' => [ sort { $a cmp $b } split /\s*,\s*/, $1],
+                    'words' => [],
+                },
+            }
+            else
+            {
+                die "Unknown directive <<==== $l>>!";
+            }
         }
         else
         {
@@ -48,6 +64,10 @@ my $filename = 'lib/hunspell/whitelist1.txt';
             }
             else
             {
+                if (!$found_global)
+                {
+                    die "GLOBAL not found before first word.";
+                }
                 push @general_whitelist, $l;
             }
         }
@@ -81,9 +101,10 @@ my %_gen = map { $_ => 1 } @general_whitelist;
 io($filename)->encoding('utf8')->print(
     map { "$_\n" }
     (
+        "==== GLOBAL:",
         @{_sort_words(\@general_whitelist)}, '',
         (map
-            { ("==== ".join(' , ', @{$_->{files}})), '',
+            { ("==== In: ".join(' , ', @{$_->{files}})), '',
                 (@{ _sort_words(
                             [grep { !exists($_gen{$_}) } @{$_->{words}}]
                     )

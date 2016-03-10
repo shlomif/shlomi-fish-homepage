@@ -14,8 +14,6 @@ use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
 has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
-has '_general_whitelist' => (is => 'rw', default => sub { +{}; });
-has '_per_filename_whitelists' => (is => 'rw', default => sub { +{}; });
 has 'whitelist_parser' => (is => 'ro', required => 1);
 has 'check_word_cb' => (is => 'ro', isa => 'CodeRef', required => 1);
 
@@ -28,43 +26,14 @@ sub _tag
     return;
 }
 
-sub _populate_whitelists
-{
-    my ($self) = @_;
-
-    foreach my $w (@{$self->whitelist_parser->get_general_whitelist_as_array_ref})
-    {
-        $self->_general_whitelist->{$w} = 1;
-    }
-
-    foreach my $rec (@{$self->whitelist_parser->get_records_whitelists_as_array_ref_of_records})
-    {
-        my @lists;
-        foreach my $fn (@{$rec->{files}})
-        {
-            push @lists,
-            ($self->_per_filename_whitelists->{$fn} //= +{});
-        }
-
-        foreach my $w (@{$rec->{words}})
-        {
-            foreach my $l (@lists)
-            {
-                $l->{$w} = 1;
-            }
-        }
-    }
-
-    return;
-}
-
 sub spell_check
 {
     my ($self, $args) = @_;
 
-    my $files = $args->{files};
+    my $filenames = $args->{files};
 
-    $self->_populate_whitelists;
+    my $whitelist = $self->whitelist_parser;
+    $whitelist->parse;
 
     binmode STDOUT, ":encoding(utf8)";
 
@@ -86,16 +55,11 @@ sub spell_check
 
     my $timestamp_cache = decode_json(scalar($calc_cache_io->()->slurp()));
 
-    my $_general_whitelist = $self->_general_whitelist;
-    my $_per_filename_whitelists = $self->_per_filename_whitelists;
-
     my $check_word = $self->check_word_cb;
 
     FILENAMES_LOOP:
-    foreach my $filename (@$files)
+    foreach my $filename (@$filenames)
     {
-        my $file_whitelist = $_per_filename_whitelists->{$filename} || +{};
-
         if (exists($timestamp_cache->{$filename}) and
             $timestamp_cache->{$filename} <= (io->file($filename)->mtime())
         )
@@ -136,9 +100,7 @@ sub spell_check
 
                     my $verdict =
                     (
-                        (!exists($_general_whitelist->{$word}))
-                        &&
-                        (!exists($file_whitelist->{$word}))
+                        (! $whitelist->check_word({filename => $filename, word => $word}))
                         &&
                         ($word !~ m#\A[\p{Hebrew}\-'’]+\z#)
                         &&

@@ -16,7 +16,7 @@ use IO::All qw/ io /;
 has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
 has '_general_whitelist' => (is => 'rw', default => sub { +{}; });
 has '_per_filename_whitelists' => (is => 'rw', default => sub { +{}; });
-has 'whitelist_fn' => (is => 'ro', isa => 'Str', required => 1);
+has 'whitelist_parser' => (is => 'ro', required => 1);
 has 'check_word_cb' => (is => 'ro', isa => 'CodeRef', required => 1);
 
 sub _tag
@@ -32,44 +32,28 @@ sub _populate_whitelists
 {
     my ($self) = @_;
 
-    my @current_whitelists_list = ($self->_general_whitelist);
-    open my $fh, '<:encoding(utf8)', $self->whitelist_fn;
-    while (my $l = <$fh>)
+    foreach my $w (@{$self->whitelist_parser->get_general_whitelist_as_array_ref})
     {
-        chomp($l);
-        # Whitespace or comment - skip.
-        if ($l !~ /\S/ or ($l =~ /\A\s*#/))
+        $self->_general_whitelist->{$w} = 1;
+    }
+
+    foreach my $rec (@{$self->whitelist_parser->get_records_whitelists_as_array_ref_of_records})
+    {
+        my @lists;
+        foreach my $fn (@{$rec->{files}})
         {
-            # Do nothing.
+            push @lists,
+            ($self->_per_filename_whitelists->{$fn} //= +{});
         }
-        elsif ($l =~ s/\A====\s+//)
+
+        foreach my $w (@{$rec->{words}})
         {
-            if ($l =~ /\AIn:\s*(.*)/)
+            foreach my $l (@lists)
             {
-                @current_whitelists_list =
-                (
-                    map { $self->_per_filename_whitelists->{$_} ||= +{} }
-                    split /\s*,\s*/, $1
-                );
-            }
-            elsif ($l =~ /\AGLOBAL:\s*\z/)
-            {
-                # Do nothing.
-            }
-            else
-            {
-                die "Unknown directive <<==== $l>>!";
-            }
-        }
-        else
-        {
-            foreach my $w (@current_whitelists_list)
-            {
-                $w->{$l} = 1;
+                $l->{$w} = 1;
             }
         }
     }
-    close ($fh);
 
     return;
 }

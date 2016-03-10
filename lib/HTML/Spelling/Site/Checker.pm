@@ -16,6 +16,7 @@ use IO::All qw/ io /;
 has '_inside' => (is => 'rw', isa => 'HashRef', default => sub { return +{};});
 has 'whitelist_parser' => (is => 'ro', required => 1);
 has 'check_word_cb' => (is => 'ro', isa => 'CodeRef', required => 1);
+has 'timestamp_cache_fn' => (is => 'ro', isa => 'Str', required => 1);
 
 sub _tag
 {
@@ -38,7 +39,7 @@ sub spell_check
     binmode STDOUT, ":encoding(utf8)";
 
     my $calc_cache_io = sub {
-        return io->file('./Tests/data/cache/spelling-timestamp.json');
+        return io->file($self->timestamp_cache_fn);
     };
 
     my $write_cache = sub {

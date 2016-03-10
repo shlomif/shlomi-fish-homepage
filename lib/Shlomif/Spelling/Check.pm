@@ -28,6 +28,7 @@ sub spell_check
 
     return HTML::Spelling::Site::Checker->new(
         {
+            timestamp_cache_fn => './Tests/data/cache/spelling-timestamp.json',
             whitelist_parser => scalar( Shlomif::Spelling::Whitelist->new() ),
             check_word_cb => sub {
                 my ($word) = @_;

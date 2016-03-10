@@ -61,12 +61,24 @@ sub parse
                 }
                 elsif ($l =~ /\AIn:\s*(.*)/)
                 {
+                    my @filenames = split /\s*,\s*/, $1;
+
                     if (defined($rec))
                     {
                         push @{$self->_records}, $rec;
                     }
+
+                    my %found;
+                    foreach my $fn (@filenames)
+                    {
+                        if (exists $found{$fn})
+                        {
+                            die "Filename <<$fn>> appears twice in line <<=== In: $l>>";
+                        }
+                        $found{$fn} = 1;
+                    }
                     $rec = {
-                        'files' => [ sort { $a cmp $b } split /\s*,\s*/, $1],
+                        'files' => [ sort { $a cmp $b } @filenames],
                         'words' => [],
                     },
                 }

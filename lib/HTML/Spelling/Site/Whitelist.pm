@@ -10,6 +10,8 @@ use IO::All qw/ io /;
 
 has '_general_whitelist' => (is => 'ro', default => sub { return []; });
 has '_records' => (is => 'ro', default => sub { return []; });
+has '_general_hashref' => (is => 'ro', default => sub { return +{}; });
+has '_per_file' => (is => 'ro', default => sub { return +{}; });
 has '_was_parsed' => (is => 'rw', default => '');
 has 'filename' => (is => 'ro', isa => 'Str', required => 1);
 
@@ -29,6 +31,19 @@ sub get_records_whitelists_as_array_ref_of_records
     $self->parse;
 
     return $self->_records;
+}
+
+sub check_word
+{
+    my ($self, $args) = @_;
+
+    my $filename = $args->{filename};
+    my $word = $args->{word};
+
+    return (exists( $self->_general_hashref->{$word} )
+            or
+        exists ($self->_per_file->{$filename}->{$word})
+    );
 }
 
 sub parse
@@ -105,6 +120,29 @@ sub parse
         }
         push @{$self->_records}, $rec;
         close ($fh);
+
+        foreach my $w (@{$self->_general_whitelist})
+        {
+            $self->_general_hashref->{$w} = 1;
+        }
+
+        foreach my $rec (@{$self->_records})
+        {
+            my @lists;
+            foreach my $fn (@{$rec->{files}})
+            {
+                push @lists,
+                ($self->_per_file->{$fn} //= +{});
+            }
+
+            foreach my $w (@{$rec->{words}})
+            {
+                foreach my $l (@lists)
+                {
+                    $l->{$w} = 1;
+                }
+            }
+        }
     }
     $self->_was_parsed(1);
 

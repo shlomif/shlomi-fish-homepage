@@ -62,7 +62,7 @@ sub spell_check
     foreach my $filename (@$filenames)
     {
         if (exists($timestamp_cache->{$filename}) and
-            $timestamp_cache->{$filename} <= (io->file($filename)->mtime())
+            $timestamp_cache->{$filename} >= (io->file($filename)->mtime())
         )
         {
             next FILENAMES_LOOP;

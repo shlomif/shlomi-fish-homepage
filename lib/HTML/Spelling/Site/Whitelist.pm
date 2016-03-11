@@ -183,9 +183,10 @@ sub get_sorted_text
         "==== GLOBAL:", '',
         @{_sort_words($self->_general_whitelist)}, '',
         (map
-            { ("==== In: ".join(' , ', @{$_->{files}})), '',
+            { my %found;
+                ("==== In: ".join(' , ', @{$_->{files}})), '',
                 (@{ _sort_words(
-                            [grep { !exists($_gen{$_}) } @{$_->{words}}]
+                            [grep { !exists($_gen{$_}) and !($found{$_}++)} @{$_->{words}}]
                     )
                   }
                 ), ''

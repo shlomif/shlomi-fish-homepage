@@ -42,11 +42,23 @@ sub spell_check
         return io->file($self->timestamp_cache_fn);
     };
 
+    my $app_key = 'HTML-Spelling-Site';
+    my $data_key = 'timestamp_cache';
+
     my $write_cache = sub {
         my $ref = shift;
         $calc_cache_io->()->print(
-            JSON::MaybeXS->new(canonical => 1)->encode($ref)
+            JSON::MaybeXS->new(canonical => 1)->encode(
+                {
+                    $app_key =>
+                    {
+                        $data_key => $ref,
+                    },
+                },
+            )
         );
+
+        return;
     };
 
     if (! $calc_cache_io->()->exists())
@@ -54,7 +66,7 @@ sub spell_check
         $write_cache->(+{});
     }
 
-    my $timestamp_cache = decode_json(scalar($calc_cache_io->()->slurp()));
+    my $timestamp_cache = decode_json(scalar($calc_cache_io->()->slurp()))->{$app_key}->{$data_key};
 
     my $check_word = $self->check_word_cb;
 

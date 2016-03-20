@@ -34,7 +34,7 @@ DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
 MATHJAX_SOURCE_README = lib/MathJax/README.md
 
-all: make-dirs sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target
+all: make-dirs sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html
 
 include lib/make/gmsl/gmsl
 
@@ -1230,14 +1230,16 @@ minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
 
-PRINTABLE_RESUMES__HTML = printable/Shlomi-Fish-English-Resume-Detailed.html printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html
+PRINTABLE_RESUMES__HTML = printable/Shlomi-Fish-English-Resume-Detailed.html printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html printable/Shlomi-Fish-Resume-as-Software-Dev.html
+
+printable_resumes__html : $(PRINTABLE_RESUMES__HTML)
 
 PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
 
 $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 	libreoffice --headless -convert-to docx --outdir printable $<
 
-$(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html
+$(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
 	cat $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html  | grep -vP '^<\?xml ver' > printable/Shlomi-Fish-Heb-Resume.html
 	cp -f printable/SFresume.html printable/Shlomi-Fish-English-Resume.html

@@ -3,12 +3,11 @@
 use strict;
 use warnings;
 
+use lib './lib';
+
 use Test::More tests => 1;
 
-{
-    my $output = `./bin/spell-checker-iface 2>&1`;
-    chomp($output);
+use Shlomif::Spelling::Iface;
 
-    # TEST
-    is ($output, '', "No spelling errors.");
-}
+# TEST
+Shlomif::Spelling::Iface->new->test_spelling("No spelling errors.");

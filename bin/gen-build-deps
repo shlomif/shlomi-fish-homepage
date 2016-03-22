@@ -23,10 +23,12 @@ GetOptions(
 {
     my @not_found;
 
-    foreach my $cmd (
+    foreach my $line (
         io->file($exes_fn)->chomp->getlines()
     )
     {
+        my ($cmd) = ($line =~ m{\A(\S+)})
+            or die "Wrong line - <$line>!";
         if (not
             (
                 ($cmd =~ m{\A/})
@@ -35,7 +37,7 @@ GetOptions(
             )
         )
         {
-            push @not_found, $cmd;
+            push @not_found, $line;
         }
     }
 

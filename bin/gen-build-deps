@@ -86,8 +86,15 @@ GetOptions(
 {
     my @not_found;
 
+    my %required_files =
+    (
+        "$ENV{HOME}/.shlomifish-amazon-sak.json" => <<'EOF'
+    You can try putting the JSON string «{"amazon_sak":"invalid"}» there.
+EOF
+    );
+
     foreach my $path (
-        "$ENV{HOME}/.shlomifish-amazon-sak.json",
+        sort {$a cmp $b} keys %required_files
     )
     {
         if (! -e $path)
@@ -102,9 +109,10 @@ GetOptions(
         print "Please set them up:\n";
         print "\n";
 
-        foreach my $path (sort { $a cmp $b } @not_found)
+        foreach my $path (@not_found)
         {
             print "$path\n";
+            print $required_files{$path}, "\n";
         }
         exit(-1);
     }

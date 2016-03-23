@@ -413,7 +413,7 @@ SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS
 FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS))
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 
-DOCBOOK5_EPUBS = $(patsubst %,$(DOCBOOK5_EPUB_DIR)/%.epub,$(DOCBOOK5_DOCS))
+DOCBOOK5_EPUBS = $(patsubst %,$(DOCBOOK5_EPUB_DIR)/%.epub,$(filter-out hebrew-html-tutorial ,$(DOCBOOK5_DOCS)))
 
 DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
 
@@ -913,7 +913,7 @@ $(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
 EPUB_SCRIPT = $(DOCBOOK5_XSL_STYLESHEETS_PATH)/epub/bin/dbtoepub
 EPUB_XSLT = lib/sgml/shlomif-docbook/docbook-epub-preproc.xslt
 
-$(DOCBOOK5_EPUB_DIR)/%.epub: $(DOCBOOK5_XML_DIR)/%.xml
+$(DOCBOOK5_EPUBS): $(DOCBOOK5_EPUB_DIR)/%.epub: $(DOCBOOK5_XML_DIR)/%.xml
 	ruby $(EPUB_SCRIPT) -s $(EPUB_XSLT) -o $@ $<
 
 $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
@@ -1097,7 +1097,6 @@ docbook_targets: docbook4_targets docbook5_targets screenplay_targets \
 	install_docbook5_htmls \
 	install_docbook4_xmls install_docbook_individual_xhtmls \
 	install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls \
-	html_tutorial \
 	pope_fiction selina_mandrake hhfg_fiction \
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
@@ -1111,13 +1110,13 @@ $(T2_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/in
 HTML_TUT_BASE = lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
 
 HTML_TUT_HEB_DIR = $(HTML_TUT_BASE)/hebrew-html-tutorial
-HTML_TUT_HEB_HTML = $(HTML_TUT_HEB_DIR)/index.html
+HTML_TUT_HEB_DB = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
 HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
-
-html_tutorial: $(DEST_HTML_TUT)
+$(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
+	cp -f $< $@
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST) $(QOHELETH_IMAGES__DEST)
 
@@ -1131,8 +1130,8 @@ $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(DEST_HTML_TUT_BASE)
 	rsync -r $(HTML_TUT_HEB_DIR)/ $(DEST_HTML_TUT_BASE)
 
-$(HTML_TUT_HEB_HTML): $(HTML_TUT_HEB_TT)
-	cd $(HTML_TUT_BASE) && make
+$(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
+	cd $(HTML_TUT_BASE) && make docbook
 
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial

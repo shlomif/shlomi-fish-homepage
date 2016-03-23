@@ -95,7 +95,13 @@ if (not -e 'lib/ebookmaker/README.md')
     my $pid;
     if (! ($pid = $pm->start))
     {
-        system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
+        # Broken due to the bug in this pull-request:
+        #    - https://github.com/setanta/ebookmaker/pull/7
+        #
+        # I switched to my fork for now.
+        #
+        # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
+        system('cd lib && git clone https://github.com/shlomif/ebookmaker');
         $pm->finish;
     }
 }
@@ -452,7 +458,7 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @ret, <<"EOF";
 \$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\tcd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" make epub
+\texport EBOOKMAKER="\$\$(pwd)/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" make epub
 \tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
 EOF
     }

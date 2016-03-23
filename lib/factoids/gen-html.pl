@@ -13,7 +13,7 @@ use JSON::MaybeXS ();
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 
-use XML::Grammar::Fortune;
+use XML::Grammar::Fortune 0.0600;
 use Template;
 
 use Shlomif::Homepage::FactoidsPages::Page;

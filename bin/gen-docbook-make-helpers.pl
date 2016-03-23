@@ -50,8 +50,17 @@ sub _github_clone
     my $clone_into = "$git_clones_dir/$repo";
     my $link = "$into_dir/$repo";
 
-    system('git', 'clone', $url, $clone_into);
-    symlink($clone_into, $link);
+    my @cmd = ('git', 'clone', $url, $clone_into);
+
+    print "@cmd\n";
+    if (system (@cmd) )
+    {
+        die "git clone [@cmd] failed!";
+    }
+    if (! -e $link)
+    {
+        symlink($clone_into, $link);
+    }
 
     return;
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>PostgreSQL - Interacting with Postgres</title>
+<link rel="stylesheet" href="style.css" type="text/css" media=
+"screen, projection" title="Normal" />
+</head>
+<body>
+<h1>Interacting with Postgres</h1>
+<h3>* Type "psql [database name]" at the user prompt to enter psql,
+which is an interactive SQL client for PostgreSQL.<br />
+<br />
+* Inside psql, you can type SQL queries to be executed. Terminate
+those queries with "\g" or ";". For example:<br />
+<br /></h3>
+<pre>
+test=&gt; CREATE TABLE "employees" (
+test-&gt;         "employee_id" int4 PRIMARY KEY,
+test-&gt;         "first_name" varchar(20),
+test-&gt;         "last_name" varchar(30),
+test-&gt;         "id_number" char(9),
+test-&gt;         "hired_at" date,
+test-&gt;         "job_desc" varchar(30),
+test-&gt;         "birth_date" date,
+test-&gt;         "education" varchar(20),
+test-&gt;         "supervisor" int4,
+test-&gt;         "login" time) \g
+</pre>
+<h3>* Type "\h" or "\?" to get help.</h3>
+</body>
+</html>

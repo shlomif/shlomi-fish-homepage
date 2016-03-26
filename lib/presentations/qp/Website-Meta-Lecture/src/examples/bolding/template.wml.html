@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Docs/homepage/homepage/trunk/lib/presentations/qp/Website-Meta-Lecture/src/examples/bolding/template.wml.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Comment { color: #0000ff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Identifier { color: #008b8b; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Constant { color: #ff00ff; }
+.Statement { color: #a52a2a; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Identifier">&lt;?xml </span><span class="Type">version</span><span class="Identifier">=</span><span class="Constant">&quot;1.0&quot;</span><span class="Identifier"> encoding=</span><span class="Constant">&quot;utf-8&quot;</span><span class="Identifier">?&gt;</span>
+<span class="Identifier">&lt;!DOCTYPE</span>
+<span class="Identifier">    html PUBLIC </span><span class="Constant">&quot;-//W3C//DTD XHTML 1.1//EN&quot;</span>
+<span class="Identifier">    </span><span class="Constant">&quot;<a href="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd</a>&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">html</span><span class="Identifier"> xmlns=</span><span class="Constant">&quot;<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot;</span><span class="Identifier"> xml:</span><span class="Type">lang</span><span class="Identifier">=</span><span class="Constant">&quot;en-US&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">title</span><span class="Identifier">&gt;</span>{#SUBJECT_LOC#}<span class="Identifier">&lt;/</span><span class="Statement">title</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">meta</span><span class="Identifier"> </span><span class="Type">http-equiv</span><span class="Identifier">=</span><span class="Constant">&quot;Content-Type&quot;</span><span class="Identifier"> </span><span class="Type">content</span><span class="Identifier">=</span><span class="Constant">&quot;text/html; charset=utf-8&quot;</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">link</span><span class="Identifier"> </span><span class="Type">rel</span><span class="Identifier">=</span><span class="Constant">&quot;StyleSheet&quot;</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;$(ROOT)/style.css&quot;</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;text/css&quot;</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">table</span><span class="Identifier"> </span><span class="Type">class</span><span class="Identifier">=</span><span class="Constant">&quot;layout&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">tr</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier"> </span><span class="Type">class</span><span class="Identifier">=</span><span class="Constant">&quot;navbar&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span>ifneq<span class="Identifier"> </span><span class="Constant">&quot;$(FILENAME)&quot;</span><span class="Identifier"> </span><span class="Constant">&quot;index.html&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;a href=&quot;</span><span class="Identifier">$(ROOT)/</span><span class="Constant">&quot;&gt;Main&lt;/a&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;b&gt;Main&lt;/b&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;</span>ifneq<span class="Identifier"> </span><span class="Constant">&quot;$(FILENAME)&quot;</span><span class="Identifier"> </span><span class="Constant">&quot;download.html&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;a href=&quot;</span><span class="Identifier">$(ROOT)/download.html</span><span class="Constant">&quot;&gt;Download&lt;/a&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;b&gt;Download&lt;/b&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;</span>ifneq<span class="Identifier"> </span><span class="Constant">&quot;$(FILENAME)&quot;</span><span class="Identifier"> </span><span class="Constant">&quot;links.html&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;a href=&quot;</span><span class="Identifier">$(ROOT)/links.html</span><span class="Constant">&quot;&gt;Links&lt;/a&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    </span><span class="Constant">&quot;&lt;b&gt;Links&lt;/b&gt;&quot;</span><span class="Identifier"> </span>
+<span class="Identifier">    /&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;mailto:webmaster@mysite.org&quot;</span><span class="Identifier">&gt;</span>Webmaster<span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span><span class="Identifier">&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier"> </span><span class="Type">class</span><span class="Identifier">=</span><span class="Constant">&quot;main&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">h1</span><span class="Identifier">&gt;</span>{#SUBJECT_LOC#}<span class="Identifier">&lt;/</span><span class="Statement">h1</span><span class="Identifier">&gt;</span>
+{#BODY#}
+<span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">tr</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">table</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">define-tag</span><span class="Identifier"> subject&gt;</span>
+{#SUBJECT_LOC#:%0:##}
+<span class="Identifier">&lt;/</span><span class="Statement">define-tag</span><span class="Identifier">&gt;</span>
+
+<span class="Comment">#   per default we are in body</span>
+{#BODY#:
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<s id="ben-collins-sussman-interview" title="Interview with Ben Collins-Sussman">
+
+[This is an interview of Ben Collins-Sussman conducted by Shlomi Fish. It was
+conducted over the IRC at 23 February, 2004, and then over E-mail at
+2 August, 2004. Final editions were done by both parties.]
+
+S.F.: Shall we start with the interview?
+
+Ben C-S: Sure.
+
+S.F.: Tell us a bit about yourself.
+
+Ben C-S: Like what? I’m six feet tall, black hair, brown eyes. :-)
+
+S.F.: Who you are? What did you do? Where have you studied and what?
+And that’s 1.80 meters tall.
+
+Ben C-S: Ah, ok. Um, let’s see.
+
++++: I’m 31 years old, and have lived in Chicago all my life. I have a B.Sc. in
+Mathematics from the University of Chicago, and have been working in computers
+for about 10 years.
+
++++: By day, I work on Subversion... Collabnet hired me to help design and
+implement it in 2000. By night, I work as a composer. My collaborator and I
+write musicals and scores for theater around the country.
+<a href="http://pluess-sussman.com">http://pluess-sussman.com</a>
+
+S.F.: Have you been a computer enthusiast during your teens?
+
+Ben C-S: I did BASIC programming as a kid, between the ages of 9 and 12, then
+lost interest in computers completely.
+
++++: At the age of 17, getting ready for college, I started getting into
+fractals I was generating Julia Sets on my apple IIe, and it would take 10
+hours for each.
+
+S.F.: &lt;giggle /&gt;
+
+Ben C-S: My calculus teacher in high school said, “hey, lemme introduce you to
+this guy, he can help you.” And that’s how I met my friend Matt Braithwaite. He
+had a 286 and Turbo C. I learned C by watching him implement Mandelbrot sets.
+
+S.F.: Cool.
+
+Ben C-S: Then I went off to college, and continued to write little toy programs
+in C for fun. My summers in college, I worked for the US Dept of Energy as an
+assistant to a professor who was simulating global climate changes on
+massively parallel supercomputers. That’s how I learned Unix.
+
++++: I remember in the summer of 1991, Karl Fogel and I were temporary roommates.
+(Karl and I have been friends since I was 13)
+
++++: We both decided to install linux 0.95c on our 386 computers. :-) It barely
+worked. X windows blew out his monitor.
+
++++: Anyway, after college, I spent many years as a unix sysadmin. But I
+finally decided that coding was more fun. I also got married. :-)
+
++++: What else would you like to know?
+
+S.F.: OK, that’s fine for now. Now let’s move to some other questions.
+
++++: You maintain <a href="http://www.red-bean.com/sussman/">a homepage</a>
+with various odds and ends. How much time did you spend maintaining it? How do
+you maintain it?
+
+Ben C-S: I update the homepage about once a year, heh. My webpage is actually
+an svn working copy. My repository has a post-commit hook that updates the live
+working copy. It exists mainly for my relatives, not my friends.
+
+S.F.: OK.
+
++++: Linus Torvalds once said that 95% of programmers consider themselves in the
+top 5%. Do you consider yourself a good programmer? Do you think your
+programming skills have improved in time?
+
+Ben C-S: Ha. My programming skills aren’t very great, no. Honestly.
+
++++: My strengths lie in organizing things. Whenever there’s a hugely
+complicated topic that needs to be sorted out, everyone in the Collabnet
+Chicago office asks me to do it. For example, “go learn WebDAV/DeltaV” or
+“figure out what’s happening in that complex email thread; summarize all the
+positions” My talent is in being able to present high-level overviews of
+complex topics.
+
++++: And I guess I’m also sort of the unofficial publicity/marketing guy on the svn
+lists. I seem to be worried about svn’s image more than I should be. :-)
+
++++: Really, when I code, it’s not  code, but it’s not particularly
+clever either. But sure, everyone gets better over time. I guess that’s all I
+can say on this question.
+
+S.F.: OK. Do you ever look at your old code, and say: “who’s the idiot that wrote
+this junk?”.
+
+Ben C-S: Only my perl code. :-)
+
++++: No, seriously ,that has happened to me. If I look at the SVN code I wrote in
+2000, there’s a noticeable difference. That proves that there has been
+improvement.
+
+S.F.: How much do you think social skills are important for someone who runs
+a free software project?
+
+Ben C-S: I think they’re everything. I think the reason svn is successful as a project
+is because of Karl Fogel’s ability to be a good leader. I can point to other
+projects that have excellent technology, but failed to “coalesce” as a
+community, because of bad leadership.
+
++++: Having good technology doesn’t mean you automatically get a community. You
+need to socially manage people, not just review code patches.
+In fact, Karl is going to be writing a book about this very topic. :-)
+
+S.F.: I’ll look forward to it.
+
++++: Hackers are well known for being socially-challenged and many times even
+acknowledge this fact about themselves. Do you think a hacker can have some
+rules of thumb to help him attract contributors and users for his project?
+
+Ben C-S: 1. Don’t be a jerk.
+
++++: 2. don’t be a control freak. I belong to once open-source project where
+there’s *one* guy who is writing the next-generation 2.0 version of the
+software from scratch, and he  show the code to <b>anyone</b>.
+He refuses to put it into CVS until it’s “done”, because he doesn’t want
+anyone to comment on it.
+
++++: I guess that leads to
+
++++: 3. You are Not Your Code. Be ready to take criticism and grow from it. If you
+criticize others, do it tactfully, respectfully, and only give constructive
+criticism.
+
++++: Be willing to toss your efforts and try again. Don’t take anything personally.
+I’ve seen so many flame wars break out over this.
+
++++: 4. Set some social standards and stick to them. The svn project is an example
+of this: we expect patch submissions in a specific format, we expect people
+not to file issues without discussion first, we have a voting system.
+
++++: I guess it’s really hard to separate politics and social behaviors when
+email is your main medium of cohesion. But project leaders should lay down
+political laws (i.e “how does one become a committer? how does one vote?”),
+as well as standards of social conduct, and not be afraid to boot people out
+of the community if they ignore either set of standards.
+
++++: Eventually. you end up with a community that polices itself automatically.
+You’ve selected the community for a certain type of “plays well with others”
+kind of person, and so the group learns to automatically reject the opposite
+sort of person.
+
+S.F.: Now let’s move to some questions about Subversion.
+
++++: How did you get involved in Subversion?
+
+Ben C-S: I was hired to work on it in 2000.
+
+S.F.: Were you involved in it beforehand?
+
+Ben C-S: No, it didn’t exist beforehand. :-) Karl Fogel, Jim Blandy and I wrote the
+first design document.
+
+S.F.: What do you like the most about working for it?
+
+Ben C-S: I like the fact that it’s Free. If my company were taken over by another, or
+suddenly collapsed, the software would still have a life of its own.
+
++++: I can’t imagine pouring sweat and blood into something, and then watching it
+die simply because a company, or creditors, say so. The lifetime of a piece of
+software should depend on whether or not a community continues to exist around
+it, not if a lawyer says so.
+
++++: That’s all. :-)
+
+S.F.: You’re getting paid to work on Subversion. How is life in the
+Subversion office?
+
+Ben C-S: It’s a great office. When we’re not working on SVN, we play music on breaks. Each of us has an acoustic guitar by his desk. There’s great value in being in
+the same room with someone.
+
+S.F.: Which of the core Subversion hackers do you admire and for what?
+
+Ben C-S: What is this, a performance review? :-) I admire Jim Blandy, for designing
+the repository. That was the single most important design in all of subversion.
+
+S.F.: Long question now.
+
++++: I noticed a certain trend in OSS. If we take Perl and
+Python for example, they are two languages who compete for the same niche, yet
+are very different and incompatible. Now, we can hear a lot of Perl-bashing
+from Python people (“Here’s some working ‘ugly’ Perl code - let’s rewrite it in
+Python”, “Perl does not scale to large codebases.”, “All Perl code is ugly”,
+“Perl code is not different than line noise”, “Oh, I tweaked some Perl code - I
+feel violated”.) etc.
+
++++: On the other hand, criticism of Python among Perl hackers is much less
+covert and gentle. Most Perl people will be happy that an unhappy Perl hacker
+became a happy Python hacker. They hardly ever claim that Python is bad, just
+that they may not like it much, or that Perl works for them.
+
++++: It seems that there’s a similar situation with Subversion and Arch.
+Subversion users just confess that they like subversion and not that it’s
+superior to Arch or to anything. Arch people, OTOH, attack Subversion all the
+time on various grounds.
+
++++: It does not seem to be applicable everywhere. I didn’t notice it much with
+Linux and FreeBSD.
+
++++: What is your opinion on the Perl vs. Python, Subversion vs. Arch etc.
+phenomenon? Is it desirable? Is it inevitable? Were you guilty of it
+yourself? ;-)
+
+Ben C-S: Hoo. Here’s my analysis: basic human nature.
+
++++: If there are 2 products to fill a niche, and one of them is more popular,
+the less popular one will always being trying to “tear down” the other.
+
++++: The more popular product doesn’t fling mud, because, well, it feels secure
+in its popularity.
+
++++: But I suppose there’s a cultural aspect too. In the case of svn vs. arch,
+we see a debate older than me. Is version control about managing trees, or
+about managing patches? Subversion chose a side, but doesn’t believe it’s
+the <i>only</i> side. Honestly, Tom Lord, great guy as he is, is completely
+convinced that patch-management is the <i>only</i> answer to the problem.
+And so his position spreads through the arch community. It becomes a sort of
+evangelism: “we must make everyone see the truth!” Whereas the svn guys don’t
+think there’s a single correct approach to version control. We have nothing
+to preach.
+
++++: I guess that’s all I have to say.
+
+S.F.: OK. What is the most delicate part of Subversion and why?
+
+Ben C-S: Delicate, as in, fragile?
+
+S.F.: I suppose. delicate as in hard to tweak and get right.
+
+Ben C-S: So you’re talking, code-wise, not usage wise?
+
+S.F.: Code-wise, yes.
+
+Ben C-S: I would say for a user, the repository database is the most
+fragile thing. See the bottom of my
+<a href="http://www.red-bean.com/sussman/svn-anti-fud.html">anti-fud essay</a>
+about that.
+
++++: The hardest thing to tweak and get right (code wise) is the working-copy
+library. Versioning directories is very tricky. And doing everything via
+journaled logs is very tricky.
+
++++: Everyone criticizes the libsvn_wc code about being a mess, but really, if we
+were to take the time to rewrite it from scratch, I don’t think it would be
+any less complicated.
+
++++: It just might have fewer bugs, due to hindsight. The problem is really
+complicated, and thus the code must be too, to some degree.
+
+S.F.: <a href="http://www.joelonsoftware.com/">Joel Spolsky</a> said in his famous
+article <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things
+you Should Never Do - Part I”</a> that one should never re-write a complete
+working codebase from scratch, no matter how “bad” it seems. In the sequel
+<a href="http://www.joelonsoftware.com/articles/fog0000000348.html">“Rub a
+dub dub”</a> he demonstrated how to improve an existing codebase to increase
+its quality and maintainability. I can tell from experience that his
+recommendation works.
+
++++: Subversion was a re-write from the grounds up done by many of the original
+CVS workers. Do you think it could have been faster to replace CVS
+(or <a href="http://www.cvsnt.com/cvspro/">CVSNT</a>) component by component,
+thus yielding Subversion?
+
+Ben C-S: CVS has no “components”, that’s the problem. If we had spent 4 years
+“improving” the CVS codebase, the result would have been a nice-to-read CVS
+codebase. Something very clean and intelligible. But that was never our goal.
+
++++: It’s not like we looked at CVS and said, “this code base is unmaintainable,
+let’s start over”. What we said was, “The quality of CVS code is irrelevant;
+there’s no way we can add the features we want given CVS’s design. We need a
+new design.”. And when you’re changing the fundamental design of something, no
+amount of “cleaning up” a codebase is useful. Cleaning doesn’t change the
+underlying design. It just makes code more maintainable.
+
++++: We had a specific design that was fundamentally incompatible with CVS’s design.
+so Joel’s approach wouldn’t have helped us.
+
+S.F.: It seems that the development groups of different version control systems
+each manage to come up with their own unique and interesting architecture
+for making it happen. What do you think of the architectures of the various
+version control systems that you’ve studied? Do you think the Subversion
+architecture is the best one for its purpose?
+
+Ben C-S: I think that version control designs always involve tradeoffs. You push down
+one bump, another pops up. If you optimize the system around solving one
+problem, or making something easy, then something else becomes slightly
+harder.
+
++++: What I said about Subversion and Arch earlier applies here. Arch makes it easy
+to exchange patches, but it’s a little bit harder to produce a revision tree.
+Subversion makes it easy to walk any revision tree, but harder to produce
+patches.
+
++++: Same with Subversion’s order-1 branch/copy feature. It’s nice that branching
+is so fast compared to CVS, but the tradeoff is that it’s no longer easy to
+ask the question “ which branches does this particular version of this file
+exist in?” So my answer is: there is no single best architecture, or best
+solution to the problem. Different groups or companies need to choose a system
+that “feel best” to them, and live with the particular tradeoffs.
+
+S.F.: You happen to be a musician. Tell us about your Music experience,
+throughout the years.
+
+Ben C-S: I started learning classical piano at the age of 6, but then switched to
+jazz piano and improvisation at the age of 12. I went to college and
+ended up playing piano in an improvisational comedy troupe, as well as
+conducting a number of college musicals. At the end of college, I met
+my friend/collaborator Andre, and we wrote our first musical theater
+piece. Since then, we’ve been working in the Chicago theater
+community for 10 years, and have written 5 more musicals (and done
+over 100 sound designs). Our latest musical is going to New York for
+a festival showcase, in hopes of future productions. See
+<a href="http://www.pluess-sussman.com">http://www.pluess-sussman.com</a>.
+
++++: I’ve also -- just in the last 2 years -- started studying bluegrass
+guitar and banjo. It’s incredibly fun.
+
+S.F.: What is your favourite band?
+
+Ben C-S: Hmmmm, Led Zeppelin, probably. Hard to say. I also love Ben Folds
+quite a bit too, as well as Indigo Girls, Phish, Radiohead.
+
+S.F.: What is your favourite foreign (non English/American) band?
+
+Ben C-S: I’m pretty musically ignorant. I don’t listen to music in non-english
+languages. ;-)
+
+S.F.: Name some of your favourite songs?
+
+Ben C-S: Ummmm.... I’m not much of a music collector or listener. I spend more
+time producing music than consuming it, I think.
+
+S.F.: How musically-eclectic are you?
+
+Ben C-S: Banjo is pretty eclectic, no? I’ve started becoming a bluegrass fan
+just in the last year. It’s a whole new world to me.
+
+S.F.: You confess that your favourite UNIX flavour is FreeBSD. What do you
+like so much about it?
+
+Ben C-S: Well, I used to use FreeBSD as my main desktop OS, but a couple years
+ago I switched back to Linux. I’ve decided that FreeBSD is the best
+<b>server</b> OS out there. But it’s not as instantly easy to get going as
+a desktop workstation -- Linux is better at APM, cardbus support,
+thread support, usb HID support, wifi gui applets, instant CUPS
+support, and has tools like valgrind. All that stuff “just works”
+when you install Linux on a notebook; on FreeBSD, that stuff either
+doesn’t work, or is tricky to get going. (Granted, this is all FreeBSD 4;
+I have not tried FreeBSD 5 yet.)
+
++++: In my former life as a Unix sysadmin - I can say that FreeBSD, as an
+OS, is the “tightest” distribution out there. Linux distros feel like
+a bunch of pieces shoved together: a kernel, a toolchain, some user
+space apps, and so on. FreeBSD is  coherent system, everything
+compilable from source in a single ‘make world’. It makes the system
+much easier to manage and administer... and the networking is
+incredibly solid. It’s my first choice for a server OS, no doubt.
+
+S.F.: Did you encounter an occasion where things did not work as they should
+there
+because the developer only tested it on Linux?
+
+Ben C-S: Absolutely... most of the nice Gnome/KDE applets, for example, make
+assumptions about Linux device drivers.
+
+S.F.: At the moment, you are being forced to use Red Hat Linux, so the
+CollabNet core team’s development environments will be more homogeneous.
+(If I
+understood that correctly) Do you enjoy the experience?
+
+Ben C-S: No, I’m not forced at all. I chose to use Red Hat because it was a
+nicer desktop system, plain and simple.
+
+S.F.: Do you think the fact that most Subversion hackers are UNIX-enthusiasts, is
+causing problems with making sure it is working perfectly with Win32?
+
+Ben C-S: Not at all. I think that we have unbelievable win32 support compared
+to just about any open source project out there. Show me <b>any</b> open
+source project where the core developer group are all “win32
+enthusiasts”. It doesn’t exist.
+
++++: The real problem is simply a conflict of cultures. Unix culture
+promotes free software: the system comes with compilers and languages,
+and encourages users to tinker with everything. The line between
+“user” and “developer” is blurred. Windows is the opposite: it has
+“users” and “developers”, and the latter category is a small minority
+of people off in the corner.
+
++++: Subversion’s team isn’t the stereotypical “we’re all unix-users,
+windows sucks, go away Microsoft” sort of group. We even have team
+members who work (or worked) for Microsoft. Many of us have win32
+compilers, and a subset of us build and test on windows almost every
+day.
+
+S.F.: Tell us a bit about your family. What do they do?
+
+Ben C-S: Parents are psychologists; brother is studying to be an astrophysicist.
+A nice jewish family in the suburbs of Chicago.
+
+S.F.: How did you meet your wife?
+
+Ben C-S: At University, of course. :-)
+
+S.F.: How does she feel about the fact that you’re working on an open-source
+project for a living?
+
+Ben C-S: She thinks it’s nice, but doesn’t care about computers at all. She
+just knows that it makes me happy.
+
+S.F.: You seem to be interested in languages and linguistics (know German,
+Spanish, and started creating your own artificial language.). Can you
+tell us more about it? Do you learn any other languages? Do you wish to
+learn any others?
+
+Ben C-S: I’m interested in relationships between languages (the biological
+“tree”), and studying how languages change over time. I’m always
+excited to learn new languages... but lack the time. Probably a
+separate conversation here...
+
+S.F.: What was your single greatest surprising event in your professional
+life? ( Like something that someone did which you did not expect. )
+
+Ben C-S: Finding a paid job opportunity to work on open source. :-)
+
+S.F.: Name some of your favourite sites.
+
+Ben C-S: <a href="http://www.geocaching.com/">http://www.geocaching.com/</a><br />
+<a href="http://www.banjohangout.org/">http://www.banjohangout.org/</a> <br />
+<a href="http://www.ifarchive.org/">http://www.ifarchive.org/</a> <br />
+<a href="http://www.nascrag.org/">http://www.nascrag.org/</a>
+
+S.F.: What other open source projects have you contributed to aside from Subversion?
+
+Ben C-S: The only other one I’ve worked on is
+<a href="http://www.openrpg.com/">OpenRPG</a>.
+
+S.F.: Thank you for your time, Ben, and may you have good luck and success in
+all of your endeavours.
+
+
+</s>

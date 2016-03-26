@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<p>
+The entire scalar or data structure pointed to by the reference can be
+retrieved by dereferencing. Dereferencing is done by using a <tt>$</tt>,
+a <tt>@</tt> or a <tt>%</tt> (depending if the reference refers to a scalar
+, array or a hash respectively), and then the reference inside curly braces.
+</p>
+
+<p>
+Here are some simple examples:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/references/deref1.pl" />
+</quadpres_code_block>
+
+<p>
+If the expression that yields the reference is a simple one than the curly
+brackets can be omitted (e.g: <tt>@$array_ref</tt> or <tt>$$ref</tt>).
+However, assuming you use curly brackets - the expression surrounded
+inside them can be as complex as you would like.
+</p>
+
+
+

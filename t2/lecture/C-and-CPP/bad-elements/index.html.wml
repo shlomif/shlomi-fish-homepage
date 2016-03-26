@@ -1,0 +1,20 @@
+#include '../template.wml'
+#include "toc_div.wml"
+#include <utils.wml>
+#include "dbook.wml"
+#include "Inc/db_formats.wml"
+
+<latemp_subject "C and C++ Elements to Avoid" />
+
+<latemp_meta_desc "Coding Elements and anti-patterns that should be avoided in C and C++" />
+
+<toc_div />
+
+<docbook_formats_w_base h2_id="formats" h2_text="Formats" base="c-and-cpp-bad-elements" />
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+<b>TODO:</b> fill in.
+</p>
+

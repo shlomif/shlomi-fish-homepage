@@ -1,0 +1,63 @@
+=head1 All you wanted to know about animals.
+
+=head2 Introduction
+
+This document aims to explain about animals.
+
+=head2 Mammals.
+
+=head3 Cats
+
+Cats are awesome. They are useful for keeping the rats' population at
+bay.
+
+=head3 Dogs
+
+Dogs have been called Man's best friend.
+
+Here is an example program to name your dog:
+
+    #!/usr/bin/perl
+
+    use strict;
+    use warnings;
+
+    my @dog_names = (qw(Rex George Beethoven Max Rocky Lucky Cody));
+
+    print "Name your dog " . $dog_names[rand(@dog_names)] . "!\n";
+
+Put it in a file and run it. This program will generate one of the following
+names:
+
+=over 4
+
+=item * Rex
+
+Rex like the dinosaur.
+
+=item * George
+
+Like George Washington.
+
+=item * Beethoven
+
+Last name of the famous composer.
+
+=item * Max
+
+Short for Maximilian.
+
+=item * Rocky
+
+Like the film.
+
+=item * Lucky
+
+A lucky dog.
+
+=item * Cody
+
+For good coding.
+
+=back
+

@@ -1,0 +1,39 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use XML::Grammar::Vered;
+
+use Getopt::Long qw/GetOptions/;
+
+my $output_fn;
+
+GetOptions(
+    'o|output=s' => \$output_fn,
+) or die "No options. $!";
+
+my $input_fn = shift(@ARGV);
+
+if (!defined $output_fn)
+{
+    die "output filename is not specified.";
+}
+
+if (!defined $input_fn)
+{
+    die "No input filename.";
+}
+
+my $xslt = XML::Grammar::Vered->new;
+
+$xslt->rng_validate_file($input_fn);
+
+# Throws an exception on failure.
+$xslt->perform_xslt_translation(
+    {
+        output_format => 'docbook',
+        source => {file => $input_fn, },
+        output => { file => $output_fn, },
+    }
+);

@@ -1,0 +1,15 @@
+#include 'template.wml'
+
+<points>
+<li>
+As you may recall, stacks were allocated in pointers to a common stack
+collection, instead of the entire contents one after the other.
+</li>
+<li>
+This scheme is called indirect stack states.
+</li>
+<li>
+In recent versions, it was optimized.
+</li>
+</points>
+<qpcontents />

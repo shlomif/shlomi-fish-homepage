@@ -1,0 +1,245 @@
+Introduction
+
+VIM:
+Short for Vi IMproved. An enhanced vi clone (which is not fully compatible
+with the original UNIX vi), developed by Bram Moolenaar and others. It is
+Open Source and its license was made GPL-compatible since version 6.1. It also
+in a way charityware for iccf-holland (link).
+
+History:
+
+* Vim started when Bram Mooleenaar had to work on an Amiga system and was used
+to Vi. He took a nearly-vi clone, started improving it and adding extra
+features.
+
+* In 1992 he ported it to UNIX and by popular demand to other platforms as
+well.
+
+* 1994 Aug 12 - Vim 3.0 - Support for multiple buffers and windows.
+
+* 1996 May 29 - Vim 4.0 - Graphical User Interface
+
+* 1998 Feb 19 - Vim 5.0 - Syntax Coloring/Highlighting
+
+* 2000 Jul 09 - Vim 6.0a - Folding (and more)
+
+Features:
+
+# Several front-ends exist (console, Gtk+, Motif, KDE, Windows GUI).
+
+# Portable - runs on most UNIX flavours as well as Windows, MacOS, DOS,
+VMS and many others OSes.
+
+# Supports vi-like macros, its own scripting language and several
+common scripting languages (Perl, Python, Tcl, Ruby).
+
+# Syntax highlighting for hundreds of file formats.
+
+# Extensive Online Help
+
+# Supports UTF-8 and partial support for BIDI.
+
+# Multiple buffers/Multiple Views
+
+Many Others. Check http://www.vim.org/6kbyte.php.
+
+Command Mode and Editing Mode:
+------------------------------
+
+* By default Vim starts in command mode.
+* One cannot enter text then.
+* To begin entering text type the following commands:
+    "i" - to insert text before the cursor.
+    "a" - to append text after the cursor. (useful at the end of the lines.)
+    "I" - insert text before first character in the line.
+    "A" - append after last char in the line.
+* One can then enter text.
+* To exit command mode, press the <Esc> button on the keyboard.
+* Using "source $VIMRUNTIME/mswin.vim" will make the insert mode more
+  Windows-like and functional.
+    - hard core vi users avoid it.
+        - Shlomi Fish doesn't.
+
+    Command Mode:
+    -------------
+
+    * In command mode one can use the regular qwerty-keys to enter
+
+
+Movement:
+---------
+
+Vim (and vi in general) has many commands for moving around. A complete listing
+of them can be found in ":help motion.text". Examples:
+
+h/<Left>/<Backspace>/CTRL-H - left
+l/<Right>/<Space> - right
+k/<Up>/CTRL-P - up
+j/<Down>/CTRL-J/CTRL-N - down
+0 - to the beginning of the line
+$ - to the end of the line
+^ - to the first non-blank character in the line
+% - to a matching parens (a favourite of mine)
+gg - to the beginning of the file
+G - to the end of the file
+(/) - previous/next sentence
+{/} - previous/next paragraphs
+
+Some of these commands can be preceded by a number which causes them to repeat
+this number several times. For instance "5h" moves 5 character to the left
+and "100gg" moves to line number 100.
+
+Parameterised Movements:
+------------------------
+
+/[Regexp] - Go to the next occurence of the (Vim) regular expression [Regexp]
+?[Regexp] - Previous occurence of regexp.
+f[Char] - the next occurence of [Char] on the current line.
+F[Char] - previous occurence
+t[Char] - one character before the next occurence
+T[Char] - previous one character.
+
+Operators accepting movements:
+------------------------------
+
+Besides moving around, one can use the movement commands as input to various
+operators that precede them. Here are some:
+
+d - "cut" the text moved over into a register
+y - copy the text moved over into a register.
+! - filter through an external program
+> - indent to the right
+< - unindent
+zf - define a fold.
+
+All of them are listed in ":help motion.txt" and more can be defined by
+the user.
+
+Visual Mode:
+------------
+
+If the text you wish to select is irregular, you can use Vi's visual mode:
+
+1. Press v when in command mode.
+2. Move around using the standard Vi commands (but not with the arrow keys)
+3. Once you have the text selected, press the operator you want to perform it
+on.
+
+Example:
+
+"vj$hhhy" will copy all the text from the cursor to the next line excluding
+its last three characters.
+
+For more information consult ":help Visual"
+
+Marks:
+------
+
+You can set marks in the file and later move straight to them with
+one movement command. m{a-zA-Z} sets a mark. The a-z marks are local to the
+file, and the A-Z marks are global in all buffers. Jumping to the mark
+is done with `{A-Za-z}.
+
+A jump to a mark can be given to a movement operator. For instance:
+
+d`e deletes all text up to the mark "e".
+
+Vim has other mark-related command which can also be found in ":help motion.txt"
+
+Registers:
+----------
+
+A yank (copy) or delete (command) can copy the text into a specified register.
+A register is specified with a double-quotes (") followed by the register
+name which precedes the y or d command. There are several registers available:
+
+1. The default, unnamed register ""
+2. Standard named register "A-Z or "a-z (case insensitive)
+3. The clipboard register "+. (available in GUI Vims, and defaults to the
+unnamed register on console Vims)
+4. Registers 1-9 which provide history of the copied texts.
+5. Other special registers. (check ":help registers")
+
+To paste a text from a register use the "{reg}p command. Example:
+
+"sy$ - yanks the text until the end of the line into register 's'.
+gg"+yG - copies the entire file to  the clipboard.
+
+Register Repeats:
+-----------------
+
+The registers can be used to record macros. To record a macro type q{reg},
+and type the keystrokes you wish to record and then type q. To execute
+a macro type @{reg}. You can use the {integer}@{reg} to execute it a number of
+times.
+
+For example:
+
+qm/^sub<CR>4ly$/^{<CR>oprint "Entering <ESC>pa";<CR><ESC>q
+
+Then typing @m will cause:
+
+sub hello
+{
+    my ($x,$y) = @_;
+    print (($x+$y,"\n");
+}
+
+to transform to:
+
+sub hello
+{
+    print "Entering hello\n";
+    my ($x,$y) = @_;
+    print (($x+$y,"\n");
+}
+
+You can also type 1000@m and it will cause all the functions to be
+transformed.
+
+Key Mapping
+-----------
+
+You can assign a set of commands to a single key or key sequence. This is
+done using the :map and friends commands:
+
+
+    :map         Normal, Visual and Operator-pending
+    :vmap        Visual
+    :nmap        Normal
+    :omap        Operator-pending
+    :map!        Insert and Command-line
+    :imap        Insert
+    :cmap        Command-line
+
+For example, to assign <F2> as copy everything to the clipboard do:
+
+:map <F2> gg"+yG
+
+Another example, taken from the Vim User Manual is:
+
+:map <F2> GoDate: <Esc>:read !date<CR>kJ
+
+This one goes to the end of the file (G) inserts Date: there (oDate:),
+inserts the contents of the date command and join the lines together.
+(kJ)
+
+Vim Script:
+-----------
+
+Vim contains its own declarative scripting language, that can be used to
+extend it in style. Here is an example for a function and some bindings
+that use it that plays an MP3 using XMMS:
+
+function Xmms_Play_Mp3(xmms_opts)
+    let line = getline(".")
+    let repl = substitute(line, "'", "'\\\\''", "ge")
+    let repl = substitute(repl, "!", "\\\\!", "g")
+    execute "silent !xmms " . a:xmms_opts . " '" . repl . "'"
+endfunction
+
+map <F3> :call Xmms_Play_Mp3("-e")<CR>
+map <S-F3> :call Xmms_Play_Mp3("")<CR>
+
+
+

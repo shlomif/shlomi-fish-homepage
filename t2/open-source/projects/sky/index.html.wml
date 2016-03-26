@@ -1,0 +1,92 @@
+#include '../template.wml'
+#include "cpan_dists.wml"
+
+<latemp_subject "sky - a convenient uploading interface" />
+
+<latemp_meta_desc "sky - allow one to upload files to a remote host with a web service and give back the URL." />
+
+<p>
+sky is a wrapper around uploaders such as
+<a href="http://en.wikipedia.org/wiki/Rsync">rsync</a>, which uploads a file
+to a remote host with a web service, and gives you a URL that will allow other
+people to download it immediately.
+</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>
+Say you want to upload an <a href="http://en.wikipedia.org/wiki/Vorbis">Ogg
+Vorbis</a> file to your web hosting, for other people to download,
+then you do:
+</p>
+
+<pre>
+shlomif@telaviv1:~$ sky up /home/music/Music/mp3s/Thierry\ de\ Massia/Elements\ essentiels/01\ -\ Le\ vent.ogg
+X11 forwarding request failed on channel 0
+sending incremental file list
+01 - Le vent.ogg
+     5271287 100%  147.24kB/s    0:00:34 (xfer#1, to-check=0/1)
+
+sent 5272011 bytes  received 31 bytes  87141.19 bytes/sec
+total size is 5271287  speedup is 1.00
+Got URL:
+http://www.shlomifish.org/Files/files/music/mp3-ogg/01%20-%20Le%20vent.ogg
+shlomif@telaviv1:~$
+</pre>
+
+<p>
+(<code>up</code> is short for “upload”)
+</p>
+
+<p>
+Then you can use the URL:
+<a href="http://www.shlomifish.org/Files/files/music/mp3-ogg/01%20-%20Le%20vent.ogg">http://www.shlomifish.org/Files/files/music/mp3-ogg/01%20-%20Le%20vent.ogg</a>
+to download it.
+</p>
+
+<p>
+The configuration file used for it (under
+<code>~/.config/Perl/App-Sky/app_sky_conf.yml</code> is:
+</p>
+
+<pre>
+---
+default_site: homepage
+sites:
+    homepage:
+        base_upload_cmd:
+            - 'rsync'
+            - '-a'
+            - '-v'
+            - '--progress'
+            - '--inplace'
+        dest_upload_prefix: 'hostgator:public_html/'
+        dest_upload_url_prefix: 'http://www.shlomifish.org/'
+        sections:
+            code:
+                basename_re: '\.(?:pl|pm|c|py)\z'
+                target_dir: 'Files/files/code/'
+            music:
+                basename_re: '\.(?:mp3|ogg|wav|aac|m4a)\z'
+                target_dir: 'Files/files/music/mp3-ogg/'
+            video:
+                basename_re: '\.(?:webm|flv|avi|mpeg|mpg|mp4|ogv)\z'
+                target_dir: 'Files/files/video/'
+</pre>
+
+<h2 id="download">Download</h2>
+
+<p>
+<a href="https://metacpan.org/release/App-Sky">Download
+sky from the CPAN</a>
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<github_cpan_dist_links
+    dist="App-Sky"
+    github_url="https://github.com/shlomif/Sky-uploader"
+    freecode_url="http://freecode.com/projects/app-sky">
+</github_cpan_dist_links>
+
+<x11_licence name="sky" />

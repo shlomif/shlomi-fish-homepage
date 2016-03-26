@@ -1,0 +1,33 @@
+#include 'template.wml'
+
+<points>
+<li>
+In this example we will construct a function that performs a certain
+operation on the n'th elements of multiple lists.
+</li>
+<li>
+Together we will get a mapping of multiple lists.
+</li>
+</points>
+
+<mycode>
+<pre>
+orig <span class="Statement">=</span> [<span class="Constant">1</span> <span class="Statement">..</span> <span class="Constant">10</span>]
+one <span class="Statement">=</span> [ i<span class="Statement">*</span><span class="Constant">2</span> <span class="Statement">|</span> i <span class="Statement">&lt;-</span> orig ]
+two <span class="Statement">=</span> [ i<span class="Statement">*</span><span class="Constant">3</span><span class="Statement">+</span><span class="Constant">1</span> <span class="Statement">|</span> i <span class="Statement">&lt;-</span> orig ]
+three <span class="Statement">=</span> orig
+four <span class="Statement">=</span> [ <span class="Constant">100</span><span class="Statement">-</span>i <span class="Statement">|</span> i <span class="Statement">&lt;-</span> orig ]
+
+lists <span class="Statement">=</span> [one,two,three,four]
+
+transpose_list ([]<span class="Statement">:</span>as) <span class="Statement">=</span> []
+transpose_list as <span class="Statement">=</span>
+    [ head(i) <span class="Statement">|</span> i <span class="Statement">&lt;-</span> as] <span class="Statement">:</span>
+        transpose_list ([ tail (i) <span class="Statement">|</span> i <span class="Statement">&lt;-</span> as])
+
+multimap func list_of_lists <span class="Statement">=</span> (map func (transpose_list list_of_lists))
+
+result <span class="Statement">=</span> multimap sum lists
+
+</pre>
+</mycode>

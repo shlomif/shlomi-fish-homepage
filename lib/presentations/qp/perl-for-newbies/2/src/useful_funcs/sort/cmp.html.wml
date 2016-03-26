@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<p>
+Perl has two operators <tt>&lt;=&gt;</tt> and <tt>cmp</tt>, which are very
+useful when wishing to sort arrays. <tt>$x &lt;=&gt; $y</tt> returns -1 if
+<tt>$x</tt> is numerically lesser than <tt>$y</tt>, 1 if it's greater, and
+zero if they are equal.
+</p>
+
+<p>
+<tt>cmp</tt> does the same for string comparison. For instance the previous
+example could be re-written as:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/sort/integer_sort_cmp.pl" />
+</quadpres_code_block>
+
+<p>
+Much more civil, isn't it? The following example, sorts an array of strings
+in reverse:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/useful_funcs/sort/reverse_string_sort.pl" />
+</quadpres_code_block>
+
+

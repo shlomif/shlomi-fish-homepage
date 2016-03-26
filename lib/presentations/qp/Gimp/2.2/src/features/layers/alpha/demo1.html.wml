@@ -1,0 +1,36 @@
+#include 'template.wml'
+
+<table class="mydemo">
+<tr class="mydemo">
+<td class="mydemo">
+
+<h3>Demo</h3>
+
+<ol>
+<li>
+Generate an image with <menupath>&lt;Toolbox&gt; -&gt; Xtns -&gt; Script-Fu -&gt; Patterns -&gt; "3D Truchet"</menupath>.
+</li>
+<li>
+Duplicate the layer using <menupath>&lt;Layers&gt; -&gt; Duplicate Layer</menupath>.
+</li>
+<li>
+Render a nice gradient on the lower layer.
+</li>
+<li>
+Generate an alpha on the upper layer by using <menupath>&lt;Layers&gt; -&gt; "Add Layer Mask..."</menupath>.
+</li>
+<li>
+Select the paintbrush tool and paint black strokes on the alpha
+of the upper layer.
+</li>
+<li>
+Switch to a grey colour and paint grey strokes.
+</li>
+<li>
+Finalize the Layer's Mask using <menupath>&lt;Layers&gt; -&gt; "Apply Layer Mask"</menupath>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+

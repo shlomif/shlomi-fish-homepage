@@ -1,0 +1,149 @@
+אף על פי שהסיסמה של פרל היא "יש יותר מדרך אחת לעשות זאת", אני לא שש שתהיינה
+10 דרכים לעשות משהו. :-)
+
+-- לארי וול.
+
+א-----------------------
+
+הוא חיפש ביטוי רגולרי שמסיר את כל סימני ה"נקודה" במחרוזת ("." - dot or full stop)
+מלבד האחרונה.
+"perl.is.the.best.txt" ==> "perlisthebesttest.txt".
+
+- מה לא בסדר במה שרצה?
+
+- הוא רצה ביטוי רגולרי כאשר למעשה הוא צריך כל קוד שעובד, עובד טוב ועובד מהר.
+
+אני הכללתי זאת לכל שגרה.
+	-
+א--------------
+
+* כמה פתרונות שונים תוכלו למצוא?
+
+* חידון של פרל על מציאת פתרונות רבים ככל האפשר.
+
+* אילו פתרונות אתם יכולים לחשוב עליהם?
+
+א-------------
+
+* מה עושים דבר ראשון?
+
+	- כותבים בדיקות אוטומטיות!
+
+א-------------
+
+* http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide6.html
+
+via_split
+
+מפצלים את המחרוזת ליחידות/רכיבים בהתאם לנקודות שבה. ואז מרכיבים שוב.
+
+א-------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide7.html
+
+ביטוי רגולרי מהופך (לא קשור ל-Sex):
+
+הופכים את המחרוזת, מבצעים את זממנו, ואז הופכים את המחרוזת פעם נוספת.
+
+א-----------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide8.html
+
+שני חלקים:
+
+מוצאים את כל תת-המחרוזת עד לנקודה האחרונה ואת מה שאחריה. מסירים את כל סימני הנקודה
+מהצד השני, ומרכיבים מחדש.
+
+א----------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide9.html
+
+With Look Ahead:
+
+ביטוי רגולרי יחיד עם negative lookahead שזאת הרחבה של פרל.
+
+א------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide10.html
+
+Solution #5 - Count and Replace
+
+סופרים ואז מסירים עד האחרון בעזרת s///ge .
+
+א-------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide11.html
+
+Solution #6 - Eliminate the Last
+
+מחליפים כל נקודה מלבד האחרונה במחרוזת שלא יכולה להמצא (מפאת אורכה), ואז מסירים את כל
+המחרוזות הדמה הללו, ומחזירים את המחרוזת שקיבלנו.
+
+א------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide12.html
+
+rindex
+
+משתמשים בשגרות המובנות הייעודיות של פרל לטיפול במחרוזות, שדי בהן כאן במקום
+ביטויים רגולרים.
+
+א--------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide13.html
+
+משתמשים ברקורסיה על גבי מערך. ככה היו מבצעים משימה זו בסגנון של הספר
+Structure and Interpretation of Computer Programs: http://mitpress.mit.edu/sicp/
+
+א--------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide15.html
+
+התמונה היא של סוני בונו שקידם את חוק הארכת זכויות
+היוצרים בארה"ב (שכונה בבוז "Mickey Mouse Protection Act"), שבהקשרו נאמר שזכויות
+היוצרים צריכות להימשך "לעולם מלבד יום אחד", מפני שבחוקה האמריקאית כתוב ש
+To promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries
+"לקידום המדע והאומניות השימושיות, באמצעות נתינת זכות בלעדית לזמן *מוגבל* עבור
+מחברים וממציאים לכתבים ולתגליות שלהם."
+
+בכל מקרה, הלולאה מסירה כל הזמן את הנקודה האחרונה עד שלא נשארות נקודות ואז היא מחזירה
+את מה שקדם (לעולם פחות יום).
+
+א-----------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide16.html
+
+לולאת "כל עוד" נוספת, הפעם עם המרה ולכידה.
+
+א-------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide17a.html
+
+* "יש יותר מדי דרכים לעשות זאת."
+* אבל יש עוד כמה…
+
+א-------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide18.html
+
+דרך זו עושה שימוש ב-reverse lookup.
+
+א--------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide19.html
+
+א----------------------
+
+http://www.shlomifish.org/lecture/Perl/Lightning/Too-Many-Ways/slides/slide21.html
+
+הערה:
+
+* חלק מהפתרונות לא יעבדו אם:
+
+1. המחרוזת ריקה.
+
+2. היא מכילה סימני שורה חדשה.
+
+"בדיקות תוכנה יכולות לשמש כדי להוכיח את המצאותם של באגים, אבל לעולם לא את העדרם."
+
+--- http://en.wikipedia.org/wiki/Edsger_W._Dijkstra

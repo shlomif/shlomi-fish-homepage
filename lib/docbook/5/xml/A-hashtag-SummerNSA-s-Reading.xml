@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+    <info>
+        <title>A #SummerNSA’s Reading</title>
+        <authorgroup>
+            <author>
+                <personname>
+                    <firstname>Shlomi</firstname>
+                    <surname>Fish</surname>
+                </personname>
+                <affiliation>
+                    <address>
+                        <email>shlomif@shlomifish.org</email>
+                        <uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+                    </address>
+                </affiliation>
+            </author>
+         </authorgroup>
+         <copyright>
+             <year>2014</year>
+            <holder>Shlomi Fish</holder>
+        </copyright>
+        <legalnotice xml:id="main_legal_notice">
+            <para>
+                <!--Creative Commons License-->
+                This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Licence</link> (or at your option a greater version of it).
+                <!--/Creative Commons License-->
+            </para>
+        </legalnotice>
+        <revhistory>
+            <revision>
+                <revnumber>2014-09-08</revnumber>
+                <date>08 September 2014</date>
+                <authorinitials>shlomif</authorinitials>
+                <revremark>
+                    First version.
+                </revremark>
+            </revision>
+        </revhistory>
+    </info>
+
+    <section xml:id="about">
+        <info>
+            <title>About This Document and the #SummerNSA Effort</title>
+        </info>
+
+        <para>
+            It is September, 2014 now - the air here in Tel Aviv, Israel
+            has been getting cooler, and we are expecting the Jewish
+            Autumn holidays (starting from Rosh Hashanah) soon. It seems
+            that Autumn has finally arrived.
+        </para>
+
+        <para>
+            The concentrated #SummerNSA (“hashtag-SummerNSA”) effort spanned
+            most of the summer of 2014 for me, and now I’m trying to
+            summarise it (pardon the pun). Unfortunately, I have yet to
+            hear back either from Summer Glau or the other proposed
+            <link xlink:href="http://www.shlomifish.org/humour/Summerschool-at-the-NSA/cast.html">cast</link> of
+            the original screenplay, or from the people inside the
+            NSA itself. However, I’ve learned and taught a lot this summer,
+            and would like to concentrate many of my insights here, and
+            am not giving up on my intention to have a film, in whatever
+            format, created.
+        </para>
+
+    </section>
+
+    <section xml:id="timline">
+        <info>
+            <title>Rough Timeline of the #SummerNSA Effort</title>
+        </info>
+
+        <para>
+            The timeline of the
+            <link xlink:href="http://www.shlomifish.org/philosophy/SummerNSA/">#SummerNSA
+                effort</link> is roughly:
+        </para>
+
+        <orderedlist>
+            <listitem>
+                <para>
+                    In 1998, my friend Omer Zak and I discussed the shortage
+                    of IT workers as of then on E-mail and
+                    <link xlink:href="http://www.shlomifish.org/humour/fortunes/show.cgi?id=smg-next-film">I noted:</link>
+                </para>
+                <blockquote>
+                    <para>
+                        Shlomi Fish to Omer Zak: “Even the NSA doesn’t have
+                        enough programmers. But it is not likely that they will
+                        have more, and that’s because Summerschool at the NSA
+                        may might as well be the name of Sarah Michelle
+                        Gellar’s next movie.”
+                    </para>
+
+                    <para>
+                        Omer Zak to Shlomi Fish: “And as opposed to I Know What
+                        You Did Last Summer, it is going to be scary.”
+                    </para>
+                </blockquote>
+                <para>
+                    An adversary effect of this privately exchanged meme
+                    was throwing me into a mania, during which I did a lot
+                    of positively irrational things, but which inspired me
+                    ever since.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Many years later, I ended up <link xlink:href="http://www.shlomifish.org/humour/fortunes/show.cgi?id=kilmo-about-the-NSA">discussing this
+                        with my friend “Kilmo”</link> over instant messaging,
+                    yielding further memes.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    The <link xlink:href="http://www.shlomifish.org/humour/bits/facts/NSA/">NSA
+                        Facts page</link> was set up around
+                    <link xlink:href="http://shlomif-tech.livejournal.com/66252.html">6 February 2013</link>, largely inspired by the Chuck Norris factoids and
+                    similar factoids that I collected.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    On 12 March 2013 I published an
+                    <link xlink:href="http://www.advogato.org/article/1071.html">open
+                        letter</link> to Sarah Michelle Gellar
+                    about the production of a documentary film title
+                    “Summerschool at the NSA”.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Shortly afterwards on 6 April 2013, I made
+                    <link xlink:href="http://seclists.org/fulldisclosure/2013/Apr/54">an
+                        announcement</link> to the Full Disclosure
+                    mailing list about the fictional screenplay
+                    <link xlink:href="http://www.shlomifish.org/humour/Summerschool-at-the-NSA/">“Summerschool
+                        at the NSA”</link>. It stars fictionalised
+                    versions of Sarah Michelle Gellar, her colleague - and
+                    in some respects protégée -
+                    <link xlink:href="http://www.shlomifish.org/humour/bits/facts/Summer-Glau/">Summer
+                        Glau</link>, and <link xlink:href="https://en.wikipedia.org/wiki/Keith_B._Alexander">General
+                        Keith B. Alexander</link>, who was
+                    the director of the NSA at the time.
+                </para>
+                <para>
+                    After finishing the screenplay, it was publicised in
+                    several places (including /r/xkcd and /r/SummerGlau on
+                    reddit), and was generally well received.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+
+                    I initially expected Summer Glau to become the next Alpha
+                    Female, but on 1 June 2013 I wrote <link
+                        xlink:href="http://plus.google.com/+ShlomiFish/posts/gyrcAfAASev">a
+                        post</link> saying she instead will become the next
+                    “<emphasis role="bold">The Hacker
+                        Monarch</emphasis>”/Warrior monarch - a role which was
+                    held previously by: <link xlink:href="https://en.wikipedia.org/wiki/User:Shlomif/Saladin_Style">Saladin</link>, Leonardo da-Vinci, Isaac
+                    Newton, Cardinal Richelieu, George Washington,
+                    <link xlink:href="http://en.wikipedia.org/wiki/Alexandre_Dumas">Alexandre
+                        Dumas Pere</link>, Jules Verne, Walt Disney,
+                    <link xlink:href="http://en.wikipedia.org/wiki/Ayn_Rand">Ayn Rand</link>, The
+                    Beatles, Jim Henson,
+                    <link xlink:href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha
+                        Smith</link>,
+                    <link xlink:href="https://en.wikipedia.org/wiki/Larry_Wall">Larry
+                        Wall</link>, the
+                    fictional Capt. Jean-Luc Picard from
+                    <link xlink:href="http://en.memory-alpha.org/wiki/Star_Trek:_The_Next_Generation"><emphasis>Star Trek: The Next Generation</emphasis></link>, the
+                    fictional
+                    <link xlink:href="https://en.wikipedia.org/wiki/Buffy_Summers">Buffy
+                        Summers</link> from the show "Buffy the Vampire
+                    Slayer", and Shlomi Fish (= me).
+
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+
+                    On 4 July 2014, I wrote and published an essay titled
+                    <link xlink:href="https://plus.google.com/+ShlomiFish/posts/i5Z8XdqTdwE">“Summer
+                        Glau for Government”</link> where:
+                    “
+
+                </para>
+
+                <blockquote>
+                    <para>
+
+                        Abstract: This document will provide the motivation and
+                        a rough plan for Summer Glau (
+                        <link xlink:href="http://en.wikipedia.org/wiki/Summer_Glau">Wikipedia Entry</link>,
+                        <link xlink:href="http://www.shlomifish.org/humour/bits/facts/Summer-Glau/">page highlighting her significance</link>
+                        ) and/or other extremely powerful and influential, but
+                        possibly still relatively obscure, men and women, of
+                        any age, to become either the
+                        <link xlink:href="https://en.wikipedia.org/wiki/President_of_the_United_States">President
+                            of the United States</link>
+                        , or as ambassadors of good will and "Shalom"/"Salaam"
+                        (= "completeness" / "well-being" / "peace" / "harmony"
+                        / "serenity" / "welfare" / "safety" ; see
+                        <link xlink:href="https://en.wikipedia.org/wiki/Shalom">the
+                            Wikipedia entry</link> ).
+
+                    </para>
+                </blockquote>
+
+
+            </listitem>
+            <listitem>
+                <para>
+
+                    On 31 August 2014, I posted a <link
+                        xlink:href="http://shlomifish.livejournal.com/3001.html">"Call
+                        for Action [CfA]"</link>
+                    for finishing off the open content / Web 2.0 revolution
+                    revealing my intentions for the production of a film
+                    about it and for passing the baton of the Hacker King
+                    to Summer Glau. I didn't get a reply from anyone
+                    involved.
+
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    An <link xlink:href="http://www.shlomifish.org/me/rindolf/#update_long_live_us_hacker_monarchs">update</link> to my page about my
+                        “Rindolf” nickname read in 7 September 2014:
+                </para>
+                <blockquote>
+<para>
+(<emphasis role="bold">2014-Sep-07</emphasis>)
+Following the <link xlink:href="http://unarmed.shlomifish.org/3001.html">call for
+action</link> for “Finishing
+Off The Open Content / Web 2.0 Revolution (#SummerNSA)”, I have
+become tired of remaining <emphasis role="bold">The</emphasis> Hacker monarch.
+As a result, I mentally decided to quit prematurely and let the whole world
+go to hell.
+This was done per advice of
+<link xlink:href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</link>,
+who was the wonderful The Hacker King of the Open Source/Usenet revolution
+(~1984-1997), and quite The Invisible as well (by choice).
+</para>
+
+<para>
+After feeling vindictive and resentful for a while (which I knew by
+experience was a transitional feeling and that I should not act upon),
+I realised something. That was that Summer Glau, being the legendary Bajoran
+profile,
+“The Sexiest Terminator Ever”, just terminated the
+whole obsession of me and other people with a small group being
+“<emphasis role="bold">The</emphasis> Hacker Monarch” and instead there are now multiple
+potential “Hacker Monarchs”. And to that I am grateful to her.
+</para>
+
+<para>
+(FFFFUUUU <link xlink:href="http://mlp.wikia.com/wiki/Rainbow_Dash">Rainbow Dash</link>
+-like people, who always think there should be one and only winner in a
+competition.)
+</para>
+
+<para>
+Therefore, I plan on remaining <emphasis role="bold">an</emphasis> awesome hacker monarch for the
+foreseeable future,
+and will be joined by Ms. Glau and by other people who are willing to play
+that role. Perhaps future historians will designate some people in particular
+as being that in the present, but such global
+<link xlink:href="http://en.wikipedia.org/wiki/Superlative">superlatives</link>
+probably ought to die for now.
+</para>
+
+<para>
+(Also see how previously
+the fictional Selina Mandrake, being The Dispeller
+<link xlink:href="http://www.shlomifish.org/humour/Selina-Mandrake/ongoing-text.html#from-dispeller-to-selina">dispelled the whole ordeal with assigning profiles</link>.)
+</para>
+
+<para>
+I still plan on passing that d10 die to Summer in person with much fanfare,
+because it's now her property. And I am still planning on becoming a
+successful, rich, and famous, writer/entertainer/philosopher and
+screenwriter. Remember the name: Shlomi “Rindolf” Fish!
+</para>
+                </blockquote>
+            </listitem>
+            <listitem>
+                <para>
+                    On 14 September 2014, I published an announcement
+                    (<link xlink:href="https://twitter.com/shlomif/status/511107391673204736">Twitter</link> ;
+                    <link xlink:href="http://github.com/shlomif/shlomif-diary-drafts-and-docs/blob/master/do-you-want-to-be-a-hacker-monarch.md">GitHub</link> ;
+                    <link xlink:href="https://www.facebook.com/shlomi.fish/posts/10152277713431981">Facebook</link>)
+                    for “Do you want to become a hacker monarch? We need
+                    you.”
+                </para>
+                <blockquote>
+
+                    <para> "Who the hell are the Qohelethes?" or in plainer
+                        English "Who are the hacker monarchs of the world?"
+                    </para>
+
+                    <para> What is a Hacker Monarch?  A Hacker Monarch is also
+                        known as a “Warrior King/Queen/Monarch” / The
+                        best-of-the-best-of-the-best / A Saladin / A Qoheleth /
+                        A John Galt / A King Messiah / A master vampire / etc.
+                        To quote what Quark from the Star Trek franchise said
+                        about the Grand Nagus, he/she: «has the greatest
+                        business mind… always thinking ten, sometimes twenty
+                        steps ahead of everyone else.» and the kind of person
+                        who has the same ideas as everyone else only five years
+                        earlier and thus is named a lunatic.
+
+                        </para>
+
+                        <para> Up to a few days ago, it was believed that
+                    only a selected group of few people can be Hacker monarchs
+                    for a time. My tentative list of the known *The* Hacker
+                    monarchs is, since Saladin who was the first exemplar The
+                    Hacker Monarch: </para>
+
+                    <para> Saladin, Leonardo da-Vinci, Isaac Newton, Cardinal
+                        Richelieu, George Washington, Alexandre Dumas Pere,
+                        Jules Verne, Walt Disney, Ayn Rand, The Beatles, Jim
+                        Henson, Samantha Smith, Larry Wall, the fictional Capt.
+                        Jean-Luc Picard from "Star Trek: TNG", the fictional
+                        Buffy Summers from the show "Buffy the Vampire Slayer",
+                        Shlomi Fish (= me), and finally - Summer Glau (
+                        http://www.shlomifish.org/humour/bits/facts/Summer-Glau/
+                        ) </para>
+
+                    <para> What happened with Summer Glau? As you know, she is
+                        a terminator, and as terminators go she “terminated”
+                        the whole obsession with the “The” in **The** Hacker
+                        Monarch and opened the role of **A** Hacker monarch up
+                        for grabs.  </para>
+
+                </blockquote>
+            </listitem>
+        </orderedlist>
+    </section>
+
+    <section xml:id="accomplishments">
+
+        <info>
+            <title>Accomplishments</title>
+        </info>
+
+        <orderedlist>
+
+            <listitem>
+                <para>
+                    Realised the close correlation between sexual
+                    attractiveness and competence, strength and value
+                    production.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Realised that the following are strongly correlated:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <link
+                                xlink:href="https://en.wikipedia.org/wiki/Fitness_%28biology%29">Darwinian
+                                Fitness</link> in Humans
+                            (which is not the same as the so-called “Physical
+                            Fitness”).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            "Ability" - see Marx’s
+                            <link xlink:href="https://en.wikipedia.org/wiki/From_each_according_to_his_ability%2C_to_each_according_to_his_need">From each
+                                according to his ability, to each according
+                            to his need</link>.
+                        </para>
+                        <para>
+                            (We want to
+                            <link xlink:href="http://www.reddit.com/r/opensource/comments/26osyp/as_a_developer_which_is_the_best_opensource/chtrjna">encourage
+                                people</link> to become more able
+                            and to be less needy).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            “Hotness” or sexual attractiveness.
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    Helped publicise the SummerNSA Screenplay and the
+                    other screenplays and learned more about social media
+                    (Twitter / Facebook / G+ / Reddit / Freenode / etc.)
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link xlink:href="https://www.facebook.com/photo.php?fbid=10152235917961981&amp;set=a.10151954150601981.1073741826.666036980&amp;type=1">Got kissed for the first time.</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Attended <link xlink:href="http://www.yumecon.org/">YumeCon</link> in Ramat Gan, Israel (near Tel Aviv).
+                    See the <link xlink:href="https://www.flickr.com/photos/shlomif/sets/72157645603097277">photos</link> I took.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Attended the <link xlink:href="http://nineworlds.co.uk/">Nine
+                        Worlds Geekfest Sci-Fi/Fantasy Con</link> near
+                    Heathrow Airport in London.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Realised that a woman or a man are a lady or a gentleman
+                    even if they starred in a porn film, or sold sexual
+                    services for money (prostitution.). Also see what
+                    I wrote about the recent
+                    <link xlink:href="http://www.reddit.com/r/JenniferLawrence/comments/2fjgeq/advice_to_jennifer_about_the_recent_photos_leak/">August 2014
+                        images leak</link>.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    First expected to stop becoming The Hacker King and
+                    instead become The Hacker King Emeritus, and then realised
+                    that Summer Glau terminated the "the" and there are now
+                    many potential and individual and awesome Hacker Monarchs
+                    (without the the). <link xlink:href="http://www.shlomifish.org/me/rindolf/#update_long_live_us_hacker_monarchs">Long live us hacker monarchs</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Realised that enlightenment, honesty, and wisdom
+                    are constant processes, and that if you stop seeking bigger
+                    and bigger truths, you immediately become dishonest
+                    and cynical.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Decided to <link xlink:href="http://shlomif.wikia.com/wiki/Encourage_criticism_and_try_to_get_offended">encourage
+                        people to offend me</link> and encourage others
+                    to try to be offended by others.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Are there really bad people?
+                    <link xlink:href="https://twitter.com/shlomif/status/506754248411865089">Tweet</link>:
+                </para>
+                <blockquote>
+                    <para>
+                        «I never met a #monster that I didn't like»@TheMuppets
+                        my mum said«There are no #evil ppl—only evil
+                        actions»#NeoTech
+                    </para>
+                </blockquote>
+            </listitem>
+            <listitem>
+                <para>
+                    “Sloppiness” (Expecting to do things badly at first
+                    or that some people will always dislike what you
+                    do) → Confidence
+                    → Intelligence/Smartness → Awesomeness / Competence /
+                    Strength.
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <link xlink:href="https://www.youtube.com/watch?v=kYX8sjIzjGw">Christina Grimmie: “Feelin’ Good”</link>
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    <link xlink:href="https://en.wikipedia.org/wiki/User:Shlomif/Saladin_Style">Saladin Style</link> / Pygmalion Effect vs. Golem effect.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    «Doubt is not the antithesis of faith - it’s an element
+                    of faith» — parodies better highlight the truth.
+                </para>
+            </listitem>
+            <listitem>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://paulgraham.com/opensource.html">Geeks/Amateurs</link> (= people who enjoy
+                            what they do) and
+                            <link xlink:href="http://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/david_and_goliath.html">Hackers/Action Heroes</link> (=
+                            people who break the rules, bend the rules,
+                            and don't accept their fate, and earn their
+                            victory despite whatever obstacles they face).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            All attractive women and men are geeks.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    <link xlink:href="https://plus.google.com/+ShlomiFish/posts/MRLntf3xu5Y">Alternative
+                        Business Models for Internet commerce</link>.
+                </para>
+            </listitem>
+            <listitem>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            Philosophy started as a form of entertainment - today
+                            the best philosophers are still the entertainers.
+                            ( <link xlink:href="https://plus.google.com/+ShlomiFish/posts/GUpTuA6641x">Stand-up
+                                philosophy</link>. )
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.shlomifish.org/humour.html#if_ayn_rand_was_born_in_the_1990s">«If
+                                Ayn Rand was born in the 1990s, she would
+                                be Christina Grimmie»</link>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.shlomifish.org/humour.html#pbride_philosophers">«Have you heard of Plato? Aristotle? Socrates?»</link>
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    Understood that many of the things I described and were
+                    doubted at the time materialised:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://humanity.shlomifish.org/">Wiki-like
+                                editing of screenplays for films</link> - now
+                            quite common using the more modern Web 2.0-based
+                            wiki-like interfaces.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.shlomifish.org/humour/human-hacking/">Geeks,
+                                including software geeks</link> as the most
+                            popular / most coveted / alphas, back in 2004/2005
+                            despite some
+                            <link xlink:href="http://www.shlomifish.org/humour/human-hacking/conclusions/#review--modus-operandi">criticism</link>
+                            for not being realistic at the time.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.shlomifish.org/humour/TheEnemy/">The
+                                Hizbullah as a mostly benevolent youth
+                                group/etc.-like organisation
+                                whose activists are free to leave it</link>.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.shlomifish.org/philosophy/the-eternal-jew/the-eternal-jew/most_powerful_man.html">I am the most powerful man on Earth.</link>
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    Realised that things, including people and organisations
+                    can change. Citing old interviews or labelling someone
+                    for something he or she did in the past is not
+                    constructive. People can grow and become more competent,
+                    more able, and happier.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Realised that big money / big business and an uneven
+                    distribution of wealth are both desirable, not necessarily
+                    harmful, and not a new phenomenon:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.paulgraham.com/inequality.html">Paul Graham’s “Inequality and Risk”</link>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://paulgraham.com/gap.html">Paul Graham’s “Mind the Gap”</link>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.reddit.com/r/Judaism/comments/294u2n/pro_and_against_big_business_and_big_money_in_the/">“Pro
+                                and Against Big Business and Big Money
+                                in the Tanakh (= Jewish Bible)”</link> - my
+                            Reddit post.
+                        </para>
+                    </listitem>
+                </orderedlist>
+                <para>
+                    It is also evident that a lot of phenomena that started
+                    as insurgent and rebellious ended up becoming part
+                    of the establishment, such as: the American revolutionaries,
+                    the Hollywood film-makers, television, the philosophers in
+                    ancient Greece, the open source hackers, and soon—the open
+                    content / Web 2.0 enthusiasts.
+                </para>
+                <para>
+                    We are not going to get rid
+                    of the establishment, big money or big business, but one
+                    should realise that all the money and force in the world
+                    cannot stop progress for long:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://en.wikipedia.org/wiki/Humpty_Dumpty">Humpty Dumpty</link> nursery rhyme.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.imdb.com/title/tt0076759/quotes">“The Ability to Destroy a Planet is insignificant next to the power of the force”</link>
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem xml:id="you_are_the_whole_of_your_qualities">
+                <para>
+                    Realised that:
+                </para>
+                <blockquote>
+                    <programlisting>
+Hi William,
+
+On Mon, 25 Aug 2014 14:13:44 -0700
+William Brooks wrote:
+
+&gt;  Why is the gender or the nationality of the winner significant?
+&gt; I would prefer to hear what she did or wrote or discovered to win the prize.
+&gt;
+
+First of all, she was the first woman to have won this prize which has been
+given for a long time, so it is significant. Part of the problem is that the
+prize is given only to mathematicians under the age of 40, which for women is
+often a problem because they wish to have a family.
+
+Otherwise, I dislike the &quot;I don&#39;t care about what makes you who you are
+attitude&quot;. Like I note in my new screenplay “Buffy: A Few Good Slayers”:
+http://www.shlomifish.org/humour/Buffy/A-Few-Good-Slayers/ongoing-text.html#faith-s-childhood
+:
+
+««««««««
+[ Becky and Chankey are sitting in the library, studying together, and
+listening to Cimorelli - “When I’m
+gone” ( https://www.youtube.com/watch?v=MpZddsmoEsI ). Faith approaches them. ]
+
+Faith: Hmm... hi kids! That doesn’t sound exactly like Anna Kendrick.
+
+Faith: Whoa, who are all those girls?
+
+Becky: Oh, they are Cimorelli - six sisters who sing together. They are a big
+hit on YouTube.
+
+Faith: Six sisters!
+
+Chankey: And they also have some brothers.
+
+Faith: Heh, God bless their mother. After my third pregnancy (to twins) I said:
+“That’s it. No way, José!”.
+
+Faith: I would think their being a big family is part of their charm.
+
+Chankey: Yes, and the way I see it: all the power to them. See: I read 20,000
+Leagues Under the Sea as a child, and I ended up memorising the English
+translation and now the French original, because I liked it so much.
+
+Chankey: Anyway, Captain Nemo there, thinks he’s a nobody, which is what “Nemo”
+means in Latin, but he&#39;s not. Thing is: lots of people expressed interest in
+him due to his various distinctive qualities, and he kept thinking: “They are
+interested in tangential stuff, not in the real me. They don&#39;t know the real
+me.”
+
+Chankey: And here&#39;s the thing: all these qualities are what make you who you
+are, and you should exploit them and be yourself.
+
+Faith: Indeed!
+»»»»»»»»
+
+There&#39;s more about celebrating individuality in the screenplay and in other
+screenplays. So my advice to Ms. Mirzakhani is to be proud of being the first
+woman to have won it, and use it as publicity and a way to help further causes
+she believes in (whether related to her work and prize or otherwise) and to
+possibly even try to make a profit from it - by charging for personal
+appearances, collecting donations from audience in a hat (see
+my Stand-up philosophy idea at
+https://plus.google.com/+ShlomiFish/posts/GUpTuA6641x ).
+
+The whole &quot;they only care about my X/Y/Z/W - they don&#39;t care about the real me&quot;
+is damaging. You are the whole of your qualities not just a core, minimalistic,
+abstract, I-ness.
+
+And you are a born superstar -
+https://www.youtube.com/watch?v=dy5fm4gxq-s ;
+https://www.youtube.com/watch?v=xG0wi1m-89o .
+
+Best regards,
+
+	Shlomi Fish
+
+
+
+
+&gt; On Wednesday, August 13, 2014 5:41 PM, Chris Green
+&gt;
+&gt;
+&gt;
+&gt; The Fields Medal in Mathematics has been awarded to Maryam Mirzakhani, of
+&gt; Stanford U.
+&gt;
+&gt; She is the first woman to be awarded this prize, the &quot;Nobel Prize of
+&gt; Mathematics&quot;, and the first Iranian.
+&gt;
+&gt; &quot;The prizes are awarded every four years. Wednesday&#39;s prizes were presented
+&gt; by South Korean President Park Geun-hye, the first woman to hold that
+&gt; post.&quot;
+&gt;
+&gt; http://www.cbc.ca/news/technology/maryam-mirzakhani-becomes-1st-woman-to-win-fields-medal-1.2734950
+&gt;
+&gt; http://www.newscientist.com/article/dn26044-iranian-woman-wins-maths-top-prize-the-fields-medal.html#.U-vm3mOFmN8
+&gt;
+&gt; The New Scientist article also lists the other three winners of Fields
+&gt; Medals, which are awarded every 4 years.
+&gt;
+&gt; https://en.wikipedia.org/wiki/Maryam_Mirzakhani
+&gt;
+&gt;
+&gt; Cheers,
+&gt;
+&gt; Chris.
+&gt;
+&gt;
+
+_______________________________________________
+Writers mailing list
+</programlisting>
+                    </blockquote>
+                </listitem>
+                <!--
+            <listitem>
+                <para>
+                </para>
+            </listitem>
+            -->
+        </orderedlist>
+    </section>
+
+    <section xml:id="recommendations_for_the_future">
+
+        <info>
+            <title>Recommendations for the Future</title>
+        </info>
+
+        <orderedlist>
+
+            <listitem>
+                <para>
+                    Linux Kernel Development:
+                </para>
+                <orderedlist>
+                    <listitem>
+                        <para>
+
+                            1. Linus should quit - at least temporarily.
+                            (see my <link xlink:href="http://www.shlomifish.org/philosophy/computers/open-source/linus-torvalds-bus-factor/">“The
+                                Linus Torvalds Bus Factor”</link> for which I got completely
+                            blocked from the vger.kernel.org E-mail domain and which I
+                            now understand was the “truth” and an elephant in
+                            the room)
+
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            There should be more than one committer (same).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://www.itworld.com/software/365342/linus-torvalds-too-abusive-linux-kernel-mailing-list">The
+                                girl who complained on LKML</link> that they
+                            should be more tactful and friendly is right.
+                            Geeks can be more
+                            tactful and friendly without becoming less
+                            competent (false dichotomy).
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Linus accused her of being “passive-aggressive”
+                            (whatever that means) but he was wrong.
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>
+                    Greenpeace: proactive technological (tangible+mental)
+                    effort instead of anti-technology: 1. Start planting
+                    trees. 2. Lobby for more enforestation. 3. Encourage
+                    consuming less. 4. Work on industrialisation and
+                    modernisation of third-party nations: richer people->less
+                    children.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Realise that destruction solves nothing - “I can
+                    solve the Middle East’s problems in 20 minutes - by
+                    dropping a nuclear bomb on Israel.” ; “Nuke Tehran” -
+                    wrong! You're killing innocent people in both cases.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    If you banned someone from an IRC forum or felt offended,
+                    you should unban him and encourage people to offend you
+                    so you will grow intellectually.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    It seems that wikis such as
+                    <link
+                        xlink:href="http://en.wikipedia.org/wiki/Ikiwiki">ikiwiki</link>
+                    which use <link xlink:href="https://en.wikipedia.org/wiki/Distributed_revision_control">Distributed Version Control Systems</link> (DVCSes)
+                    for storage, are in general preferable
+                    to MediaWiki and other SQL-based wikis and content
+                    management systems (CMSes), due to better reliability,
+                    and the ability to backup all data. I suggest Wikia to
+                    offer an option to use ikiwiki.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Employ <link xlink:href="https://en.wikipedia.org/wiki/User:Shlomif/Saladin_Style">Saladin’s
+                        method</link> to fight violent and destructive
+                    dissidents.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    People should support the
+                    <link xlink:href="http://zgp.org/pipermail/linux-elitists/2014-August/013765.html">lowRISC project</link>
+                    to create a 100% open hardware RISC architecture.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+
+<section xml:id="licence">
+
+    <info><title>Licence</title></info>
+
+<para>
+This work is copyright by <link xlink:href="http://www.shlomifish.org/">Shlomi Fish</link>
+and licensed under the
+<link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
+    Commons Attribution licence version 3.0</link> (or any later
+version). See <link xlink:href="http://www.shlomifish.org/meta/copyrights/">my
+interpretation of it</link>.
+</para>
+
+</section>
+
+</article>

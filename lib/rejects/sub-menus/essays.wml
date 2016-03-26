@@ -1,0 +1,30 @@
+<:{
+require MyEssaysNavData;
+my $filename = "<latemp_default_val "<get-var latemp_filename />" "$(LATEMP_FILE
+NAME)" />";
+$filename =~ s!index\.html$!!;
+$filename = "/$filename";
+
+use vars qw($essays_nav_bar);
+
+$essays_nav_bar = HTML::Widgets::NavMenu->new(
+    'path_info' => $filename,
+    'current_host' => "<latemp_default_val "<get-var latemp_server />" "$(LATEMP
+_SERVER)" />",
+    MyEssaysNavData::get_params(),
+    'ul_classes' => [ "nm_main", "nm_nested", "nm_subnested", "nm_subsubnested", ],
+    );
+
+my $rendered_results = $essays_nav_bar->render();
+
+use vars qw($essays_nav_html);
+
+$essays_nav_html = $rendered_results->{html};
+
+}:>
+<define-tag essays_sub_menu>
+<div class="sub_menu">
+<:{ print join("\n", @$essays_nav_html); }:>
+</div>
+</define-tag>
+

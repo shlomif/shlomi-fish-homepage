@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<points>
+<li>
+Script-Fu enables to write GIMP Scripts and PDB entries in Scheme.
+</li>
+
+<li>
+The Scheme scripts reside in ~/.gimp-2.2/scripts. (Replace 2.2 with the
+current version of GIMP)
+</li>
+
+<li>
+Whenever changed they need to be refreshed by selecting
+
+<menupath>
+<tt>
+&lt;Toolbox&gt; -&gt; Xtns -&gt; Script-Fu -&gt; Refresh
+</tt>
+</menupath>
+</li>
+
+<li>
+Otherwise, GIMP sports an interactive Script-Fu Console.
+</li>
+
+</points>
+

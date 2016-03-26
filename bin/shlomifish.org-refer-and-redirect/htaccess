@@ -1,0 +1,4 @@
+Options +ExecCGI
+AddHandler cgi-script .pl
+DirectoryIndex sf.org-refer.pl
+ErrorDocument 404 /sf.org-refer.pl

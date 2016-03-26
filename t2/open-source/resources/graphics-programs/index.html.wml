@@ -1,0 +1,420 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Graphics Applications" />
+
+<latemp_meta_desc "List of Graphics Applications: image browsers, raster editors, vector editors, 3-D programs" />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various computer graphics-related
+software applications. <b>Note:</b> due to my affinity towards open-source
+and UNIX-like operating systems, this list may be lacking in its coverage
+of proprietary applications for Mac OS X, and to a lesser extent, Microsoft
+Windows.
+</p>
+
+<h2 id="image-browsers">Image Browsers</h2>
+
+<ul>
+
+<li>
+<p>
+<img src="Gwenview.svg" style="height:80px;" class="rfloaty" alt="Gwenview’s Logo" />
+<a href="http://userbase.kde.org/Gwenview">Gwenview</a> - an open-source
+(GPLed) image viewer from the KDE project.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/GThumb">gThumb</a> - an open source
+(GPLed) image viewer and organizer based on the Gtk+/GNOME libraries
+for UNIX-like systems.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Geeqie">Geeqie</a> - an
+open-source (GPLed) image viewer based on Gtk+ for UNIX-like systems
+(including Linux) and Mac OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.kornelix.com/fotoxx.html">Fotoxx</a> - an
+open-source Linux program for photo and image editing and collection
+management. Also see <a href="https://lwn.net/Articles/651874/">a review of
+it</a> on LWN.net.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/ACDSee">ACDSee</a> - a proprietary
+image viewer and organiser for Microsoft Windows and Mac OS X. Comes in
+several versions including a gratis one.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.digikam.org/">digiKam</a> - an open source (GPLed)
+image organizer based on the KDE platform for UNIX-like systems and Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/IrfanView">IrfanView</a> - a
+proprietary and free-for-non-commercial-use image viewer and manipulator for
+Microsoft Windows, which is noted for its small size and speed.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XnView">XnView</a> - a
+proprietary and free-for-some-uses image viewer and manipulator and general
+purpose file manager for Windows, Linux, and Mac OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Picasa">Picasa</a> - a proprietary
+and gratis (“freeware”) image organiser and an accompanying online service by
+Google, for Windows and Mac OS X (usable on Linux using
+<a href="https://en.wikipedia.org/wiki/Wine_%28software%29">Wine</a>).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://wiki.gnome.org/Apps/EyeOfGnome">Eye Of GNOME (eog)</a> - the
+open-source image viewer for the GNOME platform. Provides limited functionality.
+</p>
+</li>
+
+</ul>
+
+<h2 id="raster-editors">Raster/Bitmap Editors</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.gimp.org/">GIMP</a> - the so-called “GNU Image
+Manipulation Program” is a cross-platform and open-source (GPLv3+)
+raster/bitmap editor.
+</p>
+</li>
+
+<li id="Pinta">
+<p>
+<a href="http://pinta-project.com/">Pinta</a> - an open-source drawing/editing
+program modelled after <a href="#Paint_NET">Paint.NET</a> that runs on Linux, Windows, and Mac OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://krita.org/">Krita</a> - an open-source and
+cross-platform raster editor and illustrator based on the KDE platform with
+many powerful features.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://mypaint.intilinux.com/">MyPaint</a> - an open-source
+painting and digital art program for Linux and Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Adobe_Photoshop">Adobe Photoshop</a>
+- a proprietary and commercial raster editor for Windows and Mac OS X.
+Considered as the industry standard by many.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Corel_Photo-Paint">Corel Photo-Paint</a>
+- a proprietary and commercial raster graphics editor for Microsoft Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/PaintShop_Pro">PaintShop Pro</a>
+- a proprietary and commercial raster graphics editor for Microsoft Windows.
+It gained some popularity after being distributed as shareware, but note
+that recent versions are not using the shareware model.
+</p>
+</li>
+
+<li id="Paint_NET">
+<p>
+<a href="https://en.wikipedia.org/wiki/Paint.NET">Paint.NET</a> - a
+proprietary and gratis (“freeware”) raster graphics editor for Microsoft
+Windows, based on the .NET framework. Has a history of licence changes,
+and one may look at <a href="#Pinta">Pinta</a> for an open-source and
+cross-platform behave-a-like.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://photo-editor.canva.com/">Canva Photo Editor</a> - a
+rudimentary web-based and gratis photo editor and manipulator, which allows
+for editing using the web browser (including on mobile devices).
+</p>
+</li>
+
+</ul>
+
+<h2 id="two-d-vector-editors">(2-D) Vector Editors</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://inkscape.org/">Inkscape</a> - an open-source (GPLed)
+, cross-platform, and powerful, vector editor.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Adobe_Illustrator">Adobe Illustrator</a>
+- a proprietary and commercial vector graphics editor for Microsoft Windows
+and Mac OS X.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/CorelDRAW">CorelDRAW</a> - a proprietary
+and commercial vector graphics editor for Microsoft Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.openoffice.org/product/draw.html">Apache
+OpenOffice Draw</a> - an open-source drawing program that is part of the
+Apache OpenOffice / LibreOffice suite.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/SK1_%28program%29">SK1</a> - an
+open source (LGPLed) vector graphics editor written in Python based on the
+older Sketch vector editor. May have limited functionality.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Karbon_%28software%29">Karbon</a> -
+an open-source vector graphics editor based on the KDE platform.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Xfig">Xfig</a> - an open-source (MIT-like
+licence) editor for the X Window System with an antiquated look and feel.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.vpaint.org/">VPaint</a> - an open-source (MIT/X11 licensed)
+and experimental vector graphics editor that aims to be “a glimpse into the
+future of Vector Graphics and 2-D Animation”. Runs on Linux, Windows, and
+Mac OS X.
+</p>
+</li>
+
+</ul>
+
+<h2 id="diagramming">Diagramming Software</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://wiki.gnome.org/Apps/Dia">Dia</a> - an open-source (GPLed)
+diagram tool based on the Gtk+ GUI toolkit for Linux, Windows, Mac OS X,
+and UNIX-like systems.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.calligra.org/flow/">Calligra Flow</a> - an open-source
+(GPLed) diagramming tool that is part of the Calligra Suite, an office suite
+by the KDE project. Runs on UNIX-like systems (including Linux) and on Windows.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Microsoft_Visio">Microsoft Visio</a> - a
+proprietary and commercial diagramming application for Microsoft Windows by
+Microsoft. It is feature-rich and powerful.
+</p>
+</li>
+
+</ul>
+
+<h2 id="three-d-editors">3-D Editors</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.blender.org/">Blender</a> - an open-source (GPLv2+)
+and cross-platform full-featured 3-D editor.
+</p>
+</li>
+
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/POV-Ray">POV-Ray</a> - an
+open-source (AGPLv3) ray tracer that accepts text files as input.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Autodesk_Maya">Autodesk Maya</a> - a
+proprietary application for 3-D graphics manipulation (runs on some versions
+of Windows, Mac OS X and Linux).
+</p>
+</li>
+</ul>
+
+<h2 id="two-d-animation">Two Dimensional (2-D) Animation Software</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.synfig.org/">Synfig</a> - an open source (GPLed) and
+cross-platform 2-D animation program.
+</p>
+</li>
+</ul>
+
+<h2 id="screenshotting">Screenshotting Programs</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://shutter-project.org/">Shutter</a> - an open source
+and powerful screenshotting program for Linux.
+</p>
+</li>
+
+</ul>
+
+<h2 id="APIs">Graphics APIs</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/ImageMagick">ImageMagick</a> - an
+open source (Apache licensed) software suite for manipulating raster
+(and to a lesser extent vector) images.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/GraphicsMagick">GraphicsMagick</a> - a
+fork of ImageMagick with a similar scope. (MIT licensed).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/GD_Graphics_Library">GD Graphics
+Library</a> - an open-source library to generate images (BSD-like licence).
+</p>
+</li>
+</ul>
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/resources/multimedia-programs/">List of
+Multimedia Applications</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/art/">Art Section of My Home Site</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+The
+<a href="http://en.wikipedia.org/wiki/Raster_graphics_editor">“Raster graphics
+editor” entry</a> on the English Wikipedia - contains a list and a comparison.
+</p>
+</li>
+
+<li>
+<p>
+The
+<a href="http://en.wikipedia.org/wiki/Vector_graphics_editor">“Vector
+graphics editor” entry</a> on the English Wikipedia - contains a list and
+a comparison.
+</p>
+</li>
+
+</ul>
+
+
+<h3 id="fun-links">Fun Links</h3>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Gwenview#/media/File:Gwenview.svg">Gwenview
+Logo</a> taken from the English Wikipedia under the GPL.
+</p>
+</li>
+</ul>
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2015" />
+

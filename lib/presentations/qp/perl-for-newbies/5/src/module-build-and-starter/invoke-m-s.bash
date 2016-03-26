@@ -1,0 +1,11 @@
+module-starter --distro=MyMath::Ops \
+    --dir=MyMath-Ops \
+    --module=MyMath::Ops \
+    --module=MyMath::Ops::Add \
+    --module=MyMath::Ops::Multiply \
+    --module=MyMath::Ops::Subtract \
+    --module=MyMath::Ops::Divide \
+    --mb \
+    --author="Perl Newbie" \
+    --email='perl-newbie@perl-begin.org' \
+    --verbose

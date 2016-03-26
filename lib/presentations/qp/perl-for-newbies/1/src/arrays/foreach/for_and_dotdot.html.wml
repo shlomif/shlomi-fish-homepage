@@ -1,0 +1,14 @@
+#include 'template.wml'
+
+<p>
+The <tt>for</tt> keyword in Perl means exactly the same as <tt>foreach</tt> and
+you can use either one interchangeably.
+</p>
+
+<p>
+<tt>$x .. $y</tt> is a special operator that returns an array containing the
+sequence of consecutive integers from <tt>$x</tt> up to and including
+<tt>$y</tt>. Now one can fully understand the <tt>for $i (1 .. 10)</tt>
+construct that we used in the beginning of this lecture.
+</p>
+

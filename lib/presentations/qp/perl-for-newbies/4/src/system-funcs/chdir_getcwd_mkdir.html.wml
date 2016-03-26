@@ -1,0 +1,18 @@
+#include 'template.wml'
+
+<p>
+The built-in function <tt>chdir EXPR</tt> can be used to change the working
+directory of the program to a new value. If <tt>EXPR</tt> is omitted
+it changes to the home directory.
+</p>
+
+<p>
+By <tt>use</tt>'ing the Cwd module, one can invoke the <tt>getcwd()</tt>
+function that will retrieve the current working directory. This is similar
+to the <tt>pwd</tt> command on UNIX shells.
+</p>
+
+<p>
+Finally, <tt>mkdir FILENAME, MASK</tt> can be used to create a new directory
+with the permissions mask of <tt>MASK</tt>
+</p>

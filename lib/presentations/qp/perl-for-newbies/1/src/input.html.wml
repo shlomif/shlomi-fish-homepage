@@ -1,0 +1,28 @@
+#include 'template.wml'
+
+<p>
+In order to receive a value from the user, perl supplies the <tt>&lt;&gt;</tt>
+operator. When entered, this operator reads a line from the command line, and
+returns it (along with the newline character).
+</p>
+
+<p>Here's an example:</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/input/input1.pl" />
+</quadpres_code_block>
+
+<p>
+Notice the <tt>chomp</tt> function which strips off the trailing
+newline character from the variable. You would usually want to use it,
+when getting input from the user.
+</p>
+
+<p>
+Here's another example:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/input/input2.pl" />
+</quadpres_code_block>
+

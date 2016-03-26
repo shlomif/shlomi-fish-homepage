@@ -1,0 +1,55 @@
+a.nav:link { color: green }
+a.nav:visited { color: #FF1493 /* The DeepPink Colour */  }
+a.nav:active { color: blue }
+b.nav { color : Black}
+b.plain {color : Black}
+a:hover { background-color: yellow }
+body
+{
+    background-color : #FFFFFF;
+}
+a.contents:active { color: red }
+table.mycode { border-style : solid ; border-width : thin }
+td.mycode { width : 60em }
+table.mydemo { border-style : solid ; border-width : thin }
+td.mydemo { width : 60em }
+table.note { border-style : double ; border-width : 3em}
+h3.notbold { font-weight: normal }
+font.menupath { font-family: monospace }
+b.menupathcomponent { color: red }
+font.menupathseparator { color: green }
+tt.mycode { color : #8A2BE2 /* The BlueViolet Colour */ }
+tt { color : #8A2BE2 /* The BlueViolet Colour */ }
+li.notbold { padding-bottom : 15em }
+ul.contents
+{
+    list-style-type : none ;
+    padding-right : 2em;
+    padding-left : 0em;
+    margin : 0em 0em 0em 0em;
+}
+ul.contentsmain
+{
+    list-style-type : none ;
+    padding-right : 0em;
+    margin : 0em 0em 0em 0em;
+}
+.point
+{
+    font-size : large ;
+    padding-right : 1em;
+}
+.point li
+{
+    visibility: hidden;
+}
+table.frame { border-style : solid ; border-width : thin }
+img.thumb
+{
+    border-width : 3px;
+}
+.english
+{
+    direction: ltr;
+    text-align: left;
+}

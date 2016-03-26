@@ -1,0 +1,62 @@
+#include '../template.wml'
+
+<latemp_subject "KSokoban’s Maintenance Fork" />
+
+<latemp_meta_desc "Maintaining the original KSokoban code and porting it to KDE 4 and KDE Frameworks 5" />
+
+<p>
+This is a maintenance fork of KSokoban by Lukasz Kalamlacki and by me (=
+Shlomi Fish). KSokoban is a KDE-based implementation of
+<a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>, a type
+of computerised puzzles that originated from Japan.
+</p>
+
+<p>
+What happened for now is that the code was ported, first to KDE 4 and later
+to be based on Qt 5 and KDE Frameworks 5.
+</p>
+
+<h2 id="download">Download</h2>
+
+<set-var ver="0.12.0" />
+<set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
+<set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
+<set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
+
+<p>
+None yet. Please clone the repository.
+</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://sourceforge.net/u/shlomif/ksokoban/ci/default/tree/">Shlomi
+Fish’s clone of the Mercurial repository.</a> - with more recent changes.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://bitbucket.org/shlomif/ksokoban">Bitbucket
+clone of the repository</a>.
+</p>
+</li>
+
+</ul>
+
+<h2 id="similar-projects">Similar Projects</h2>
+
+<ul>
+
+<li>
+<p>
+<b>Magazynier</b> - a different maintenance fork of KSokoban, with some changes,
+that changed its name to the Polish word for “Warehouse Worker” due to possible
+trademark problems.
+</p>
+</li>
+</ul>
+

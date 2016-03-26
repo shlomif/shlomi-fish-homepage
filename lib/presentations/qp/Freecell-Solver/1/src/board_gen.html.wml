@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+
+<points>
+<li>
+A short time after the release of Freecell Solver 0.2.0, Eric Warmenhoven
+sent me a program he prepared to generate the initial boards of GNOME
+Freecell so they can later be input into Freecell Solver.
+</li>
+
+<li>
+I thanked him for his effort, and decided to continue the theme.
+</li>
+
+<li>
+So I wrote similar programs to generate the board layouts of GNOME AisleRiot,
+PySol, and the Microsoft Freecell/Freecell Pro deals (the latter are considered the standard among hard-core Freecell enthusiasts).
+</li>
+
+<li>
+Some programs have integrated the Freecell Solver library to allow for
+automatically solving a board starting at a position that the player
+has reached.
+</li>
+
+</points>

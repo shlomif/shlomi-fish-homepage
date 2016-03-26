@@ -1,0 +1,424 @@
+# Quicktask v1.2
+
+CURRENT TASKS:
+    - Change the URL of the xhtml11-dtds in "INSTALL":
+        * to the DTD package of validator.w3.org.
+    - Add a nav_block for political essays (MidEast/#SummerNSA/etc.)
+      @ Added [Wed 2014-09-17]
+    - Buttons in mobile mode should occupy all the width of the page.
+        * Thanks to Sagiv for the insight.
+        * DONE partially in the "Show NavBar" button.
+      @ Added [Tue 2014-11-04]
+    - Fix the left padding of <pre class="raw"> in the fortunes display.
+        * It's too close to the edge
+        * http://www.shlomifish.org/humour/fortunes/nyh-sigs.html
+      @ Added [Tue 2015-09-22]
+    - Add fortunes.
+        * BigBangT - "rocket scientist" as an insult.
+        * BigBangT - "the part with Penny and Sheldon from S02E02.
+        @ Added [Sun 2015-12-13]
+
+LONG TERM:
+    - Add icons/images to the nav_blocks.
+      @ Added [Fri 2014-08-22]
+    - Fortunes Atom Feed:
+        * Make it validate
+        * Syndicate it into the rest.
+        * fix the formatting of the fortunes (especially IRC fortunes)
+            * in Akregator.
+    - Check for Hebrew spelling in the Hebrew test suite:
+    - Adapt a better style which stretches the page.
+        * Maybe just make the page wider.
+        * Thanks to moofy and other people who commented on it.
+    - Add the tarball mirrors domain
+        * mirroring.shlomifish.org
+        * With scripts to mirror, tar.xz, .zip, etc.
+        * Note about APIs.
+            * Mostly valid XHTML
+                * Not terribly semantic because it’s a waste of time.
+            * Some JSON/etc.
+            * Mostly static.
+            * By a human - for humans.
+        * Added [Sat 2013-03-16]
+    - Add more essays I wrote to the Essays Index.
+        * About Female Action Heroes
+        * We are the Qs of the Q Continuum.
+        * Dealing with Internet Trolls
+        * http://shlomifish.livejournal.com/2615.html - Publish or Perish.
+    - Link the Hebrew Errors Page to the main one.
+    - Add a section to the drugs’ legalisation page about the “War on Drugs”
+        * Quote Larry Lessig’s Remix about “War on File Swapping”
+        * The Usenet quote about “Why can’t we ever attempt to solve a
+        problem in this country without having a ‘War’ on it?”
+        — Rich Thomson, talk.politics.misc
+    - Perhaps concentrate all the tech tips on one page.
+      @ Added [Tue 2013-12-31]
+    - MSIE Page Feb 2014 Update
+        * Add more links.
+        * Make some text bold.
+    - BBT With EmWatson:
+        * Penny: it's not like you're doing all these films for money.
+        * EmWatson: true that, Madame. I'm doing them for a shitload of money!
+        * (Maybe "I'm doing them for a bloody lot of money.").
+      @ Added [Mon 2014-08-18]
+    - Consider converting the code away from IO-All .
+      @ Added [Fri 2015-09-11]
+    - Add an attribution tag to the factoids.
+      @ Added [Fri 2014-10-24]
+
+
+MINOR PROBLEMS:
+    - individual presentations: add meaningful descriptions.
+        * link to the new presentation in "Linux for the Technion student".
+    - Add to the external FOSS contributions:
+        * MikMod
+        * Adopted CPAN Modules
+        * Wikipedia and related sites.
+    - HHFG: add some links and references to resources.
+        * For further enlightenment.
+
+COMPLETED TASKS:
+    - Add the Buffy facts:
+        * http://www.reddit.com/r/buffy/comments/1aet33/crowdsourcing_buffy_facts_a_la_chuck/
+    - Fix the Firefox button to not read "Firefox 3"
+        * Also not to point to spreadfirefox.com.
+    - Apply the corrections to Selina Mandrake
+        * based on what the correspondent from @GMail.com said.
+        * Added [Sun 2013-03-17]
+    - jqTree
+        - Expand some of the categories by default.
+            - Make sure the browser remembers when categories were collapsed
+            using a localStorage hack.
+    - Pack the other stories as separate DVCS repositories.
+    - Make sure the jqTree work of making it more GUI-like is credited.
+        * Added [Sat 2013-04-06]
+        * DONE [Tue 2013-04-09]
+    - Add a page about https://metacpan.org/module/XML::GrammarBase .
+        @ DONE [Sun 2013-04-21]
+    - New techgroups: add date/etc.
+        @ DONE [Fri 2013-04-26]
+        @ Added [Fri 2013-04-26]
+    - Fiction examples - find a good permanent link
+        @ DONE [Sun 2013-04-28]
+      * http://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/#examples
+      * The Distributed Examples link.
+      * Thanks to Shai from Freenode.
+      @ Added [Sun 2013-04-28]
+    - Humanity: add link to the recording of the song.
+        @ DONE [Tue 2013-04-30]
+      @ Added [Fri 2013-04-26]
+    - Finish translating t2/humour/RoadToHeaven/abstract.xhtml.wml
+        @ DONE [Tue 2013-04-30]
+      * To English
+      @ Added [Mon 2013-04-15]
+    - Add a link to the old site:
+        @ DONE [Tue 2013-04-30]
+      * http://old-1998-site.shlomifish.org/
+      @ Added [Tue 2013-04-30]
+    - __Beta-kmor site should not be crawlable.
+        @ DONE [Wed 2013-05-01]
+      @ Added [Sat 2013-04-27]
+    - Add the printable hack for a JS-based print version.
+        @ DONE [Wed 2013-05-01]
+      * Just uses the print stylesheet.
+      * TODO : add a printer icon to the button.
+      @ Added [Wed 2013-05-01]
+    - Resumes / Résumés :
+        - add an opening paragraph with who I am, what I specialise in,
+        and some things I believe in about software development and its
+        craftmanship.
+        @ DONE [Wed 2013-05-01]
+    - Add some references to general Objectivism stuff on humour/TOWTF.
+        @ DONE [Wed 2013-05-01]
+    - Add logos to the "Shlomi Fish elsewhere on the web"
+        @ DONE [Wed 2013-05-01]
+      @ Added [Wed 2013-05-01]
+    - Ask people about the name of the meta-scan algorithm in:
+        * Apparently it's not known in the literature.
+        * http://www.shlomifish.org/lecture/Perl/Lightning/Opt-Multi-Task-in-PDL/
+        @ DONE [Wed 2013-05-01]
+    - Add a test suite:
+        * HTML/XHTML validation.
+        * English spelling.
+        @ DONE [Wed 2013-05-01]
+    - Convert the main navigation style to a [+] / [-] tree.
+        * Thanks to moofy.
+        @ DONE [Wed 2013-05-01]
+    - Fortunes - all on one page.
+        @ DONE [Fri 2013-05-03]
+      @ Added [Thu 2013-05-02]
+    - Extract <bitbucket_cpan_dist_links> in lib/cpan_dists.wml
+        * From more places.
+        @ DONE [Fri 2013-05-03]
+    - Fix the URLs that are spelt "priviliges" instead of "privileges".
+        @ DONE [Fri 2013-05-03]
+    - Compress the .js files and put them all in one.
+        @ DONE [Wed 2013-05-08]
+      @ Added [Wed 2013-05-08]
+    - Create a home page for App-Sky.
+        * Publish it on Freecode.com.
+        @ DONE [Fri 2013-12-13]
+    - Make the /art/bk2hp page display the old bk2hp image.
+        @ Start [Sat 2013-11-02]
+        @ DONE [Fri 2013-12-13]
+    - Remove or replace the Eonspace logo on the front page:
+        @ DONE [Fri 2014-01-10]
+      * http://www.shlomifish.org/
+      * We're no longer using Eonspace.
+      @ Added [Fri 2014-01-10]
+    - Add http://shlomif-tech.livejournal.com/67311.html
+        @ DONE [Fri 2014-01-10]
+      @ Added [Fri 2013-12-27]
+    - Add the Chuck Norris "Sent by my iPhone" parody factoid.
+        @ DONE [Fri 2014-01-10]
+      @ Added [Fri 2013-12-27]
+    - Prepare a new Back to the Future Logo using GIMP or whatever
+        * as a PNG with anti-aliasing/etc.
+        * Thanks to moofy.
+        @ DONE [Sat 2013-11-02]
+    - Link "Google discontinues services" to the main page.
+        @ DONE [Fri 2014-06-27]
+      @ Added [Tue 2014-04-01]
+    - Link "New versions of the GPL" to the main page.
+        @ DONE [Fri 2014-06-27]
+      @ Added [Tue 2014-04-01]
+    - Add the new EmmaWatson/SGlau facts to the fortunes feed.
+        @ DONE [Fri 2014-06-27]
+      @ Added [Fri 2014-06-20]
+    - Add free-of-charge EPUBs and PDFs of the stories and screenplays.
+        @ DONE [Thu 2014-07-03]
+      @ Added [Tue 2014-07-01]
+    - Extract <story_episode_li> from more places.
+        @ DONE [Fri 2014-07-18]
+      @ Added [Sat 2014-07-12]
+    - EPUBs for the files generated from DocBook 5 should be correct.
+        * Problem seems to have fixed itself.
+        @ Added [Thu 2014-07-03]
+        @ DONE [Fri 2014-07-18]
+    - Graphics logo for the Muppet Show TNI.
+        @ DONE [Tue 2014-07-29]
+      @ Added [Mon 2014-07-28]
+    - Add http://www.flickr.com/photos/shlomif/8424748431/in/photolist-
+        * "Captioned Image: Holocaust"
+        @ DONE [Sun 2014-08-24]
+      @ Added [Sun 2014-08-24]
+    - Add the Socrates/Aristotle/Plato "Models" Princess Bride captioned image.
+        @ DONE [Sun 2014-08-24]
+      @ Added [Fri 2014-08-22]
+    - Prepare a page about how the new bk2hp image was created.
+        @ Start [Sat 2013-11-02]
+        @ DONE [Sun 2014-08-24]
+    - SummerGlau Facts
+        * "Chuck shot sheriff&deputy. SGlau shot Chuck."
+        @ DONE [Sun 2014-08-31]
+      @ Added [Sun 2014-08-31]
+    - Chuck wrote tvtropes.org so he can distract you and have sex to.
+        * your wife.
+      @ Added [Fri 2014-09-05]
+    - All mightiest Klingon warriors watched SesameStreet.
+        @ DONE [Mon 2014-09-08]
+      @ Added [Sat 2014-09-06]
+    - Infographics of girls+weapons in films/Televisions.
+        @ DONE [Mon 2014-09-08]
+      @ Added [Sat 2014-09-06]
+    - nav_blocks: refactor into based on Perl 5 code and dep tracking
+        @ DONE [Mon 2014-09-08]
+      @ Added [Fri 2014-08-22]
+    - Add wikipedia-like navigation blocks
+        * E.g: "SGlau"/"EmWatson"/"IsraeliPolitics"/"Rindolfism"
+        @ DONE [Mon 2014-09-08]
+      @ Added [Fri 2014-08-15]
+    - The colours on humour/fortunes are too bold/עזים.
+        * http://www.shlomifish.org/humour/fortunes/shlomif.html
+        @ DONE [Wed 2014-09-17]
+      @ Added [Mon 2014-07-21]
+    - EPUB books: create more meaningful cover images
+        * Instead of them all being the 1d10 die.
+        @ Added [Sun 2014-08-24]
+        @ DONE [Wed 2014-09-17]
+    - Implement a macro for /humour.html for captioned images.
+        * Partly done.
+        @ DONE [Sun 2014-09-21]
+      @ Added [Mon 2014-09-15]
+    - Convert lib/stories/stories-list.wml to a database based on Perl.
+        * Anything except The Pope.
+        @ DONE [Tue 2014-09-23]
+      @ Added [Mon 2014-09-22]
+    - A #SummerNSA Reading: looking back at the SummerNSA effort
+        * Better formatting for the quoted email.
+        @ DONE [Tue 2014-09-30]
+      @ Added [Mon 2014-09-08]
+    - Try to get the Embedded Perl code to work with strict/warnings.
+        @ DONE [Tue 2014-09-30]
+      @ Added [Tue 2014-09-30]
+    - Aphorism: unbirthday + call-to-say-love + best-day-of-life
+        @ DONE [Tue 2014-09-30]
+      @ Added [Sat 2014-09-06]
+    - Fix the alignment of the Pope Died on Sunday Hebrew Page
+        * English intro.
+        @ DONE [Sat 2014-10-11]
+      @ Added [Thu 2014-10-09]
+    - Add a question about where I stand in my belief system.
+        * Agnosticism
+        * Self-sufficient.
+        * Optimistic / anti-cynical.
+        * "Put your faith in Allah , but tie your camel".
+        * Pluralistic - draw inspiration from many sources.
+        * Anti-Fatalist - reason operates by choice.
+        @ DONE [Wed 2014-10-15]
+      @ Added [Tue 2014-10-14]
+    - Rephrase "framework" in the Freecell Solver page to something else.
+        @ DONE [Wed 2014-10-15]
+      @ Added [Tue 2014-10-14]
+    - Add placeholder images to t2/humour/stories/ .
+        * Thanks to Hananel from the email.
+        @ DONE [Wed 2014-10-15]
+      @ Added [Sun 2014-10-12]
+    - Convert the letter-to-sglau to HTML (from ODT in addition to PDF)
+        @ DONE [Wed 2014-10-15]
+      @ Added [Sun 2014-10-12]
+    - Add "Truly you have a dizzying intellect" CaptImg.
+        @ DONE [Wed 2014-10-15]
+      @ Added [Wed 2014-10-15]
+    - Link to “Ayn Rand’s BtVS”
+        @ DONE [Wed 2014-10-15]
+      @ Added [Sat 2014-10-04]
+    - Add the Chuck Norris Factoids from the #perl IRC conversation.
+        @ DONE [Sat 2014-10-18]
+      @ Added [Sat 2014-10-18]
+    - FAQ: Add a question about "Can you help me crack someone's account"?
+        @ DONE [Sun 2014-10-19]
+      @ Added [Sun 2014-10-19]
+    - Link to the branchable.com ikiwiki.
+        * Deprecate shlomif.wikia.com.
+        @ DONE [Sun 2014-10-19]
+      @ Added [Sun 2014-10-19]
+    - FAQ: Add a question about how to learn English.
+        @ DONE [Mon 2014-10-20]
+      @ Added [Sun 2014-10-19]
+    - FAQ: Do you link to your pages to bring in traffic to your site?
+        @ DONE [Mon 2014-10-20]
+      @ Added [Mon 2014-10-20]
+    - Ask the ProjWonderful people to update their AdBlock whitelist thing.
+        @ DONE [Mon 2014-10-20]
+      @ Added [Mon 2014-10-20]
+    - Add the SLP "Pinned it on me" CaptImg.
+        @ DONE [Tue 2014-10-28]
+      @ Added [Wed 2014-10-15]
+    - Get rid of "\n\n" in the output.
+        @ DONE [Tue 2014-10-28]
+      @ Added [Wed 2014-10-22]
+    - Change "Stopping to speak in riddle" in the nav menu.
+        @ DONE [Tue 2014-10-28]
+      @ Added [Wed 2014-10-22]
+    - Add "It always works at the end - too bad it doesn't work at the
+        @ DONE [Sun 2015-02-08]
+      beginning."
+      @ Added [Thu 2015-02-05]
+    - Add "Some people grow older and wiser. Not I. I grow older and more
+      foolish."
+        @ DONE [Sun 2015-02-08]
+      @ Added [Sun 2015-02-08]
+    - Add «Chuck Norris is 90 out of Jay-Z's 99 problems».
+        @ DONE [Fri 2015-02-27]
+      @ Added [Fri 2015-02-27]
+    - Add «Ariana Grande has one less problem *with* Chuck Norris.»
+        @ DONE [Fri 2015-02-27]
+      @ Added [Fri 2015-02-27]
+    - Add «Chuck Norris has truly appreciated Hamlet before he read it in the
+    original Klingon.»
+        @ DONE [Fri 2015-02-27]
+      @ Added [Fri 2015-02-27]
+    - Add http://lwn.net/Articles/509417/ ("Pointer chasing").
+        @ DONE [Sat 2015-02-28]
+      @ Added [Thu 2015-02-26]
+    - Make sure that http://shlomifish.org/ redirects to www.shlomifish.org
+        @ DONE [Mon 2015-03-02]
+      @ Added [Mon 2015-03-02]
+    - Add "Chuck Norris ain't Got Milk. He drinks the blood of his enemies."
+        @ DONE [Tue 2015-03-03]
+      @ Added [Mon 2015-03-02]
+    - Add "Q: How many Feminists does it take to change a lightbulb?"
+        @ DONE [Tue 2015-03-03]
+      @ Added [Tue 2015-03-03]
+    - Chuck Norris ain't gonna/gotta get down on Friday.
+        @ DONE [Tue 2015-03-17]
+      @ Added [Fri 2015-03-13]
+    - The more money Chuck Norris comes across, the less problem he sees.
+        @ DONE [Tue 2015-03-17]
+      @ Added [Mon 2015-03-16]
+    - Shania Twain was impressed by Chuck Norris.
+        @ DONE [Tue 2015-03-17]
+      @ Added [Mon 2015-03-16]
+    - Chuck Norris is not going to miss you when you're gone.
+        @ DONE [Tue 2015-03-17]
+      @ Added [Mon 2015-03-16]
+    - Right Said Fred’s "I'm Too Sexy" Chuck Norris Factoids
+        @ DONE [Wed 2015-04-15]
+      @ Added [Wed 2015-04-08]
+    - Add a list of GUI builders (Glade, Qt Creator, etc.) to "IDEs".
+        @ DONE [Thu 2015-05-07]
+      @ Added [Thu 2015-05-07]
+    - Add a list of Hex editors (ghex, okteta, etc.) under "resources/".
+        @ DONE [Thu 2015-05-07]
+      @ Added [Thu 2015-05-07]
+    - Chuck fact about tree falling in the middle of the forest
+        @ DONE [Mon 2015-05-18]
+      @ Added [Sun 2015-05-17]
+    - Chuck fact: CN's woodchuck can chuck wood.
+        @ DONE [Mon 2015-05-18]
+      @ Added [Sun 2015-05-17]
+    - Chuck fact: CN made the baby Jesus stop crying.
+        @ DONE [Mon 2015-05-18]
+      @ Added [Sun 2015-05-17]
+    - Add https://twitter.com/shlomif/status/616941713098027008
+        * "Good idea to stop worry about problems that can't be fixed."
+        @ DONE [Sat 2015-07-11]
+      @ Added [Fri 2015-07-03]
+    - FAQ Q: How to use Mercurial?
+        @ DONE [Wed 2015-08-05]
+      @ Added [Wed 2015-08-05]
+    - FAQ Q: How to handle the Shlomif_Common.cmake (sp?) File.
+        @ DONE [Wed 2015-08-05]
+      @ Added [Wed 2015-08-05]
+    - Add diagramming apps to graphics apps page:
+        * Dia, Visio, Calligra Flow.
+        * Thanks to Steve Litt for the suggestion.
+        @ DONE [Thu 2015-08-13]
+      @ Added [Thu 2015-08-13]
+    - "Chuck Norris saved Paradise by destroying it."
+        @ DONE [Sun 2015-09-13]
+      @ Added [Sun 2015-09-13]
+    - Add "Chuck Norris does not care who the fuck Alice is."
+        @ DONE [Mon 2015-10-12]
+      @ Added [Wed 2015-10-07]
+    - Add "Zeroth rule of Fight Club is Chuck Norris can talk about
+    Fight Club.
+        @ DONE [Mon 2015-10-12]
+      @ Added [Wed 2015-10-07]
+    - Add "Chuck Norris won't laugh with you if you laugh."
+        @ DONE [Mon 2015-10-12]
+      @ Added [Wed 2015-10-07]
+    - Mirror "If ppl bought cars like they but computers"
+        @ DONE [Wed 2015-10-14]
+      @ Added [Wed 2015-10-14]
+    - Clone the ebookmaker repository (from GitHub) and use a relative path to
+        @ DONE [Sat 2016-02-06]
+      it.
+        * There are many ebookmakers and no consensus on the leader.
+      @ Added [Sat 2016-02-06]
+    - Add the "There's nothing sexier than a man who doesn't want sex" CaptImg
+        @ DONE [Sat 2016-02-06]
+      @ Added [Wed 2014-10-15]
+    - Add fortunes.
+        * Greatest threat to a creator is obscurity - not piracy.
+        @ DONE [Thu 2016-02-25]
+    - Add "Chuck Norris created an O(1/N) algorithm."
+        @ Added [Sat 2016-02-06]
+        @ DONE [Thu 2016-02-25]
+    - Add links to the URLs of the executables needed to be present.
+        @ DONE [Tue 2016-03-22]
+      @ Added [Sat 2016-02-06]
+
+
+# vim:ft=quicktask:sw=4:ts=4

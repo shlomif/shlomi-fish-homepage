@@ -1,0 +1,1078 @@
+<html>
+<head>
+<link rel="StyleSheet" href="./style.css" type="text/css">
+<title>Freecell Solver - The Next Presentation</title>
+</head>
+<body bgcolor="white">
+
+<table summary=""><tr><td>
+<a href="./" class="nav" accesskey="c">Contents</a></td>
+<td>
+<b>Up</b></td>
+<td>
+<b>Prev</b></td>
+<td>
+<a href="./multi-tasking/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+Freecell Solver - The Next Presentation
+</h1>
+<h2>Contents</h2>
+<ul class="contentsmain">
+<li><a href="./multi-tasking/" class="contents">1 Multi-Tasking</a>
+<ul class="contents">
+<li><a href="./multi-tasking/ht-st.html" class="contents">1.1 Hard Threads and Soft Threads</a>
+</li><li><a href="./multi-tasking/best-meta-scan/" class="contents">1.2 Generating the Best Meta Scan</a>
+<ul class="contents">
+<li><a href="./multi-tasking/best-meta-scan/switch.html" class="contents">1.2.1 Naive Approach - Scan Switching</a>
+</li><li><a href="./multi-tasking/best-meta-scan/prelude.html" class="contents">1.2.2 More Sophisticated - Prelude</a>
+</li><li><a href="./multi-tasking/best-meta-scan/opt-algorithm.html" class="contents">1.2.3 Optimization Algorithm</a>
+</li></ul>
+</li></ul>
+</li><li><a href="./indirect-ss-opt/" class="contents">2 Indirect Stack States Optimizations</a>
+<ul class="contents">
+<li><a href="./indirect-ss-opt/cow.html" class="contents">2.1 Copy on Write Stacks</a>
+</li><li><a href="./indirect-ss-opt/compact-alloc.html" class="contents">2.2 Compact Allocation using Memory Pools</a>
+</li><li><a href="./indirect-ss-opt/result.html" class="contents">2.3 Result</a>
+</li></ul>
+</li><li><a href="./cmd-line/" class="contents">3 Command Line Processing</a>
+<ul class="contents">
+<li><a href="./cmd-line/generic-func.html" class="contents">3.1 Generic Function for CL Processing</a>
+</li><li><a href="./cmd-line/read-from-file.html" class="contents">3.2 --read-from-file</a>
+</li><li><a href="./cmd-line/presets.html" class="contents">3.3 Solver Presets</a>
+</li><li><a href="./cmd-line/recycle.html" class="contents">3.4 Recycling Solver Instances</a>
+</li></ul>
+</li><li><a href="./fc-pro/" class="contents">4 Freecell Pro Interoperability</a>
+<ul class="contents">
+<li><a href="./fc-pro/problem.html" class="contents">4.1 The Problem</a>
+</li><li><a href="./fc-pro/solution.html" class="contents">4.2 The Solution</a>
+</li></ul>
+</li><li><a href="./parent-links.html" class="contents">5 To Parent Links</a>
+</li><li><a href="./michael-mann.html" class="contents">6 The Michael Mann "Fork"</a>
+</li><li><a href="./future/" class="contents">7 Future Directions</a>
+<ul class="contents">
+<li><a href="./future/to-do.html" class="contents">7.1 To Do</a>
+</li><li><a href="./future/my-involvement.html" class="contents">7.2 My Involvement</a>
+</li></ul>
+</li></ul>
+<h2>Copyright</h2>
+<p>
+<a href="http://creativecommons.org/licenses/by/1.0/">Copyrighted under the
+Creative Commons Attribution License version 1.0 or greater.</a>
+</p>
+<hr />
+<table summary=""><tr><td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<b>Up</b></td>
+<td>
+<b>Prev</b></td>
+<td>
+<a href="./multi-tasking/" class="nav">Next</a></td>
+</tr></table>
+<p><a href="http://www.shlomifish.org/quad-pres/made_with.html"><i>Made with Quad-Pres</i></a></p>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="ht-st.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1 Multi-Tasking
+</h1>
+<ul class="point">
+<li>
+You wanted it - you got it! Freecell Solver supports multi-tasking since
+version 2.4.0.
+</li>
+<li>
+Run more than one scan on the same states collection.
+</li>
+<li>
+My early attempt at introducing multi-tasking when working on MS DevStudio
+failed to produce a working code.
+</li>
+<li>
+The next attempt that was planned more thoroughly and executed using gvim
+on Linux succeeded with blazing colours.
+</li>
+<li>
+(and they claim IDEs are superior)
+</li>
+</ul>
+<ul class="contentsmain">
+<li><a href="./ht-st.html" class="contents">1.1 Hard Threads and Soft Threads</a>
+</li><li><a href="./best-meta-scan/" class="contents">1.2 Generating the Best Meta Scan</a>
+<ul class="contents">
+<li><a href="./best-meta-scan/switch.html" class="contents">1.2.1 Naive Approach - Scan Switching</a>
+</li><li><a href="./best-meta-scan/prelude.html" class="contents">1.2.2 More Sophisticated - Prelude</a>
+</li><li><a href="./best-meta-scan/opt-algorithm.html" class="contents">1.2.3 Optimization Algorithm</a>
+</li></ul>
+</li></ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../" class="nav">Prev</a></td>
+<td>
+<a href="ht-st.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./best-meta-scan/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1.1 Hard Threads and Soft Threads
+</h1>
+<ul class="point">
+<li>
+Freecell Solver distinguishes between two levels of tasks:
+</li>
+<li>
+<b>1. Soft Thread</b> - a soft thread is one dedicated scan running
+on the state collection.
+</li>
+<li>
+<b>2. Hard Thread</b> - a task that should be performed by one system thread
+with all the dedicated resources that should prevent collisions with other
+hard threads as much as possible.
+</li>
+<li>
+A hard thread switches between several soft threads.
+</li>
+<li>
+At the moment, hard threads can not be multi-threaded using the system
+threads, as no locking mechanisms are in place. But the distinction still
+exists in the code.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./best-meta-scan/" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../ht-st.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="switch.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1.2 Generating the Best Meta Scan
+</h1>
+<ul class="point">
+<li>
+Now assuming we can multi-task, how can we generate the best (time-wise)
+meta-scan that consists of several individual scans?
+</li>
+</ul>
+<ul class="contentsmain">
+<li><a href="./switch.html" class="contents">1.2.1 Naive Approach - Scan Switching</a>
+</li><li><a href="./prelude.html" class="contents">1.2.2 More Sophisticated - Prelude</a>
+</li><li><a href="./opt-algorithm.html" class="contents">1.2.3 Optimization Algorithm</a>
+</li></ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../ht-st.html" class="nav">Prev</a></td>
+<td>
+<a href="switch.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./prelude.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1.2.1 Naive Approach - Scan Switching
+</h1>
+<ul class="point">
+<li>
+Do a circular switch between the scans, allocating a certain quota for
+each scan.
+</li>
+<li>
+Configurable from the command line.
+</li>
+<li>
+Such scans were constructed by hand, and gave relatively good results.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./prelude.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./switch.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./opt-algorithm.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1.2.2 More Sophisticated - Prelude
+</h1>
+<ul class="point">
+<li>
+Create a prelude to the scans, in which an initial sequence of scan IDs and
+their quotas are performed before the continuous circular process.
+</li>
+<li>
+The specified prelude can be very long.
+</li>
+<li>
+But how to construct such a (pseudo-)optimal prelude?
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./switch.html" class="nav">Prev</a></td>
+<td>
+<a href="./opt-algorithm.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./prelude.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./../../indirect-ss-opt/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+1.2.3 Optimization Algorithm
+</h1>
+<ul class="point">
+<li>
+I thought of the following greedy, (but not optimal) algorithm to create a
+pseudo-optimal prelude:
+</li>
+<li>
+First we record the number of iterations (= states scanned) it took the scans'
+to solve a given board for each of a large set of boards. (in our case the
+Microsoft 32,000).
+</li>
+<li>
+Then, we allocate a certain number of iterations, and assign this quota to
+the scan that solves the most boards within this quota.
+</li>
+<li>
+Repeat.
+</li>
+<li>
+The configurations generated by this algorithm yield very good performance.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./prelude.html" class="nav">Prev</a></td>
+<td>
+<a href="./../../indirect-ss-opt/" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../multi-tasking/best-meta-scan/opt-algorithm.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="cow.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+2 Indirect Stack States Optimizations
+</h1>
+<ul class="point">
+<li>
+As you may recall, stacks were allocated in pointers to a common stack
+collection, instead of the entire contents one after the other.
+</li>
+<li>
+This scheme is called indirect stack states.
+</li>
+<li>
+In recent versions, it was optimized.
+</li>
+</ul>
+<ul class="contentsmain">
+<li><a href="./cow.html" class="contents">2.1 Copy on Write Stacks</a>
+</li><li><a href="./compact-alloc.html" class="contents">2.2 Compact Allocation using Memory Pools</a>
+</li><li><a href="./result.html" class="contents">2.3 Result</a>
+</li></ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../multi-tasking/best-meta-scan/opt-algorithm.html" class="nav">Prev</a></td>
+<td>
+<a href="cow.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./compact-alloc.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+2.1 Copy on Write Stacks
+</h1>
+<ul class="point">
+<li>
+In older versions of FCS, when deriving a state, all the allocated stacks
+were first allocated to a temporary memory, then modified and then
+looked up or registered in the stack collection.
+</li>
+<li>
+Starting from version 2.6.x, a different, faster scheme was enacted:
+</li>
+<li>
+Every stack is marked with its own flag. Once modified, the stack is
+temporarily allocated and its flag set.
+</li>
+<li>
+The non-marked stacks are kept as they are, while the marked stacks
+are looked up in the stack collection.
+</li>
+<li>
+This is a variant of the Copy-on-Write (COW) technique.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./compact-alloc.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./cow.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./result.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+2.2 Compact Allocation using Memory Pools
+</h1>
+<ul class="point">
+<li>
+Indirect stacks were originally individually malloced.
+</li>
+<li>
+This consumed a lot of overhead memory.
+</li>
+<li>
+In recent versions, they were compactly allocated, contiguously, out of a
+memory pool.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./cow.html" class="nav">Prev</a></td>
+<td>
+<a href="./result.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./compact-alloc.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./../cmd-line/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+2.3 Result
+</h1>
+<ul class="point">
+<li>
+The indirect stack states became slightly faster than the normal "compact
+states".
+</li>
+<li>
+Thus, they were made the default.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./compact-alloc.html" class="nav">Prev</a></td>
+<td>
+<a href="./../cmd-line/" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../indirect-ss-opt/result.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="generic-func.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+3 Command Line Processing
+</h1>
+<ul class="point">
+<li>
+The command line processing of Freecell Solver has seen some improvements
+in the versions since the first presentation.
+</li>
+<li>
+This section will describe some of the more interesting ones.
+</li>
+</ul>
+<ul class="contentsmain">
+<li><a href="./generic-func.html" class="contents">3.1 Generic Function for CL Processing</a>
+</li><li><a href="./read-from-file.html" class="contents">3.2 --read-from-file</a>
+</li><li><a href="./presets.html" class="contents">3.3 Solver Presets</a>
+</li><li><a href="./recycle.html" class="contents">3.4 Recycling Solver Instances</a>
+</li></ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../indirect-ss-opt/result.html" class="nav">Prev</a></td>
+<td>
+<a href="generic-func.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./read-from-file.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+3.1 Generic Function for CL Processing
+</h1>
+<ul class="point">
+<li>
+The command line processing used to occupy a large part of the <tt>main()</tt>
+function of Freecell Solver.
+</li>
+<li>
+Instead, recent versions of Freecell Solver designated a special function (
+in the <tt>cmd_line.c</tt> module) to configure an instance according to the
+command line arguments that are passed to it.
+</li>
+<li>
+This enabled writing other programs which configure themselves according to
+this scheme. (as all they needed to do was call this function)
+</li>
+<li>
+It also allows for programs that use FCS and for its language bindings, to
+configure themselves using this one textual interface, instead of a multitude
+of separate configuration functions.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./read-from-file.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./generic-func.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./presets.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+3.2 --read-from-file
+</h1>
+<ul class="point">
+<li>
+The Freecell Solver command lines could get very long.
+</li>
+<li>
+To resolve this and allow for a more modular command line, a meta command
+line argument was created <tt>--read-from-file [SKIP],[FILENAME]</tt>.
+</li>
+<li>
+This allowed reading arguments from a text file with a format similar to
+a Bourne Shell command.
+</li>
+<li>
+(The code that tokenizes this file resides in <tt>cl_chop.c</tt> and
+is quite hideous. Still it works and doesn't interfere with the rest of the
+program so I just keep it as it is.)
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./generic-func.html" class="nav">Prev</a></td>
+<td>
+<a href="./presets.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./read-from-file.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./recycle.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+3.3 Solver Presets
+</h1>
+<ul class="point">
+<li>
+In Freecell Solver 2.8.0, a presets feature was introduced.
+</li>
+<li>
+It records certain command lines in central configuration files, and
+allows the user to retrieve them by saying <tt>-l [PRESET]</tt>.
+</li>
+<li>
+This way, <tt>fc-solve -l cool-jives</tt> is a configuration that is usually
+very fast, and stands for a 1,171 characters command line.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./read-from-file.html" class="nav">Prev</a></td>
+<td>
+<a href="./recycle.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./presets.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./../fc-pro/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+3.4 Recycling Solver Instances
+</h1>
+<ul class="point">
+<li>
+Starting from Freecell Solver 2.6.0, it can recycle instances so that they
+will have the same configuration as before, but still would be a candidate
+for trying to solve another board.
+</li>
+<li>
+This involved quite a lot of delicate coding to make sure that everything
+works perfectly, as the initialization and freeing up of an FCS instance
+is very complex.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./presets.html" class="nav">Prev</a></td>
+<td>
+<a href="./../fc-pro/" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../cmd-line/recycle.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="problem.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+4 Freecell Pro Interoperability
+</h1>
+<ul class="contentsmain">
+<li><a href="./problem.html" class="contents">4.1 The Problem</a>
+</li><li><a href="./solution.html" class="contents">4.2 The Solution</a>
+</li></ul>
+<ul class="point">
+<li>
+<a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell Pro</a> is
+a feature-rich Freecell implementation for Win32, that integrated its
+own solver (by Don Woods and further work by others).
+</li>
+<li>
+I wanted it to integrate Freecell Solver as well, so I was referred to
+its developer, Adrian Ettlinger.
+</li>
+<li>
+Ettlinger was happy to help me, and so we started working on integrating
+the two programs.
+</li>
+<li>
+After some code was written and about 100 E-mails were exchanged, a
+problem surfaced.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../cmd-line/recycle.html" class="nav">Prev</a></td>
+<td>
+<a href="problem.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./solution.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+4.1 The Problem
+</h1>
+<ul class="point">
+<li>
+Freecell Solver can move any number of cards as a sequence, and moves
+cards to the foundations when it sees fit.
+</li>
+<li>
+Freecell Pro tries to emulate Microsoft Freecell in its behaviour. Namely:
+<br />
+<ol>
+<li>
+Column-to-column moves were identified only by source and destination
+columns. (not the number of cards.)
+</li>
+<li>
+Cards that could be safely moved to the foundations, were indeed moved
+without an explicit move by the player or the solver.
+</li>
+</ol>
+</li>
+<li>
+This behaviour is even present in the internals of Freecell Pro, which
+made adapting FC-Pro to use FCS even more difficult.
+</li>
+<li>
+This brought the
+<a href="http://groups.yahoo.com/group/fc-solve-discuss/message/198">following
+active discussion in the mailing-list</a>.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./solution.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./problem.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./../parent-links.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+4.2 The Solution
+</h1>
+<ul class="point">
+<li>
+Adrian modified FC-Pro to accept sequence moves with a specified number
+of cards for moves to empty stacks only. (where the number of cards cannot
+be deduced from the destination.)
+</li>
+<li>
+I wrote an
+interface to process the Freecell Solver solution, and to generate moves
+that were acceptable to Freecell Pro.
+</li>
+<li>
+This involved playing the entire solution move by move, transferring cards to
+the foundations, and keeping track of such cards.
+</li>
+<li>
+This took about a 100 more E-mails between Adrian and I.
+</li>
+</ul>
+<h2>End Result</h2>
+<ul class="point">
+<li>
+Integration of Freecell Solver with Freecell Pro is now working, and the
+"Solver Evaluation Edition" of FC-Pro was released.
+</li>
+<li>
+All's well that ends well!
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./problem.html" class="nav">Prev</a></td>
+<td>
+<a href="./../parent-links.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./fc-pro/solution.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./michael-mann.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+5 To Parent Links
+</h1>
+<ul class="point">
+<li>
+In later versions of Freecell Solver, each state contains a pointer to
+its "parent state" - the first state from which it was discovered.
+</li>
+<li>
+I eventually realized I could add a move stack of moves that lead from
+the parent to it, thus enabling FCS to trace the solution of a state
+by collecting all the moves to the initial state.
+</li>
+<li>
+This resulted in shorter solutions, making the optimization scan almost
+completely unnecessary.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./fc-pro/solution.html" class="nav">Prev</a></td>
+<td>
+<a href="./michael-mann.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./parent-links.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./future/" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+6 The Michael Mann "Fork"
+</h1>
+<ul class="point">
+<li>
+At one point a certain man named Michael Mann submitted two patches to
+Freecell Solver, one of which I accepted.
+</li>
+<li>
+Then he explained his greater motivation:
+</li>
+<li>
+At one point he was interested to write a Freecell solver, but first
+decided to search if one existed. He found mine in a Google search.
+</li>
+<li>
+He saw in my to-do list that I wanted to convert it to Java, so he decided
+to privately convert it to C++ instead.
+</li>
+<li>
+He started at version 1.4, and as I released new versions he incorporated
+these changes into his C++ version, and so until version 2.2 of Freecell
+Solver.
+</li>
+<li>
+After he "came out of the closet" he submitted his C++ version (which was
+documented using <a href="http://www.doxygen.org/">doxygen</a>), which I
+<a href="http://fc-solve.shlomifish.org/michael_mann/">placed online</a> for
+reference.
+</li>
+<li>
+This is the single most amazing thing that happened to me in my professional
+life as a programmer.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./parent-links.html" class="nav">Prev</a></td>
+<td>
+<a href="./future/" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="../" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="../michael-mann.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="to-do.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+7 Future Directions
+</h1>
+<ul class="point">
+<li>
+This section will deal with what can possibly be implemented in Freecell
+Solver in the future.
+</li>
+</ul>
+<ul class="contentsmain">
+<li><a href="./to-do.html" class="contents">7.1 To Do</a>
+</li><li><a href="./my-involvement.html" class="contents">7.2 My Involvement</a>
+</li></ul>
+<hr />
+<table summary=""><tr><td>
+<a href="../" class="nav">Contents</a></td>
+<td>
+<a href="../" class="nav">Up</a></td>
+<td>
+<a href="../michael-mann.html" class="nav">Prev</a></td>
+<td>
+<a href="to-do.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./" class="nav" accesskey="p">Prev</a></td>
+<td>
+<a href="./my-involvement.html" class="nav" accesskey="n">Next</a></td>
+</tr></table>
+<h1>
+7.1 To Do
+</h1>
+<ul class="point">
+<li>
+Incorporating
+<a href="http://members.tripod.com/professor_tom/archives/">Patsolve</a>'s
+logic.
+</li>
+<li>
+Thread-enabling (true system threads that can make use of SMP capabilities).
+</li>
+<li>
+Writing an automatic testing framework.
+</li>
+<li>
+Safety from failed memory allocations. Currently if a malloc/realloc call
+fails, it can crash the program.
+</li>
+<li>
+Converting to Java.
+</li>
+<li>
+Others:
+<a href="http://vipe.technion.ac.il/~shlomif/freecell-solver/to-do.html">http://vipe.technion.ac.il/~shlomif/freecell-solver/to-do.html</a>
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./" class="nav">Prev</a></td>
+<td>
+<a href="./my-involvement.html" class="nav">Next</a></td>
+</tr></table>
+<hr>
+
+
+<table summary=""><tr><td>
+<a href="./../" class="nav" accesskey="c">Contents</a></td>
+<td>
+<a href="./" class="nav" accesskey="u">Up</a></td>
+<td>
+<a href="./to-do.html" class="nav" accesskey="p">Prev</a></td>
+<td>
+<b>Next</b></td>
+</tr></table>
+<h1>
+7.2 My Involvement
+</h1>
+<ul class="point">
+<li>
+I (= Shlomi Fish) have not seriously worked on Freecell Solver for a long
+time.
+</li>
+<li>
+I feel that it is already rather complete and feature-rich, and does not
+justify too much further work.
+</li>
+<li>
+While there are still some things that could possibly be done, I've lost
+interest (at least temporarily) in performing more work on the software.
+</li>
+<li>
+If someone shows he is interested on continuing the work on Freecell Solver
+instead, and that he is capable of making meaningful contributions, I'll
+gladly pass the baton to him or her.
+</li>
+</ul>
+<hr />
+<table summary=""><tr><td>
+<a href="./../" class="nav">Contents</a></td>
+<td>
+<a href="./" class="nav">Up</a></td>
+<td>
+<a href="./to-do.html" class="nav">Prev</a></td>
+<td>
+<b>Next</b></td>
+</tr></table>
+<hr>
+
+
+</body>
+</html>

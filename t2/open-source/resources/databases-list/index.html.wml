@@ -1,0 +1,380 @@
+#include '../template.wml'
+#include "toc_div.wml"
+
+<latemp_subject "List of Databases’ Implementations" />
+
+<latemp_meta_desc "List of Databases’ Implementations: key/value stores, SQL databases, Distributed databases, etc." />
+
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+This is a small, hand-maintained, list of various database implementations.
+</p>
+
+<h2 id="key-val-DBs">Filesystem-based Key/Value Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Berkeley_DB">Berkeley DB</a> - an
+open-source (formerly SleepyCat licence - now AGPLv3, which is
+a <a href="http://en.wikipedia.org/wiki/Copyleft#Strong_and_weak_copyleft">strong
+copyleft</a> licence)
+database that provides a binary-string-based key/value store. Now a product of
+Oracle Corporation.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/LevelDB">LevelDB</a> - an
+open-source (BSD-style), filesystem-based key/value store by Google. Reportedly
+unreliable.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tokyo_Cabinet_and_Kyoto_Cabinet">Tokyo
+Cabinet and Kyoto Cabinet</a> - open-source (LGPLed and GPLed) key/value
+stores.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://sphia.org/">Sophia</a> - a “modern embeddable transactional
+key-value storage” under the open source and permissive 2-clause BSD licence.
+</p>
+</li>
+
+</ul>
+
+<h2 id="other-FS-based">Other Filesystem-based Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XBase">xBase</a> - a standard
+for dBase-compatible database implementations, which store tables on the
+filesystem.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://packages.debian.org/sid/utils/nosql">“NoSQL”</a> - a
+“fast, portable, relational database management system without arbitrary
+limits, (other than memory and processor speed) that runs under, and interacts
+with, the UNIX Operating System. ”
+(Not to be confused with the so-called “NoSQL” crop of distributed databases).
+</p>
+</li>
+
+</ul>
+
+<h2 id="FS-based-SQL">Filesystem Based SQL databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/SQLite">SQLite</a> - an open-source
+(= Public Domain source code) SQL database-in-the-local-filesystem. Popular
+and widely used.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Microsoft_Jet_Database_Engine">Microsoft
+Jet Database Engine</a> - a proprietary and MS-Windows-specific SQL engine
+by Microsoft. Old and reportedly not very reliable.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/SolidDB">solidDB</a> - a memory-based
+or filesystem-based SQL-database. Proprietary.
+</p>
+</li>
+
+</ul>
+
+<h2 id="networked-SQL">Networked (Client/Server) SQL Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a> - an
+open-source (permissive, GPL-compatible licence), feature-rich and
+cross-platform database
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MySQL">MySQL</a> - a GPLed client/server
+database. Has some active forks such as
+<a href="https://en.wikipedia.org/wiki/MariaDB">MariaDB</a> (which provides
+LGPLed client libraries),
+<a href="https://en.wikipedia.org/wiki/Drizzle_%28database_server%29">Drizzle</a>
+(= a “smaller, slimmer and (hopefully) faster version of MySQL”),
+and <a href="https://en.wikipedia.org/wiki/WebScaleSQL">WebScaleSQL</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Firebird_%28database_server%29">Firebird</a>
+- an open source SQL database server originally forked from Borland InterBase.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ingres_%28database%29">Ingres</a> - an
+open source (GPLed) database server based on the original “Ingres”
+research project code.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Oracle_Database">Oracle Database</a> - a
+proprietary SQL server for some platforms by Oracle Corporation.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server">Microsoft SQL
+Server</a> (also known as “MS-SQL” or just as “SQL Server”) - a proprietary
+and Windows-only SQL server by Microsoft originally derived from Sybase SQL
+Server.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/IBM_Informix">IBM Informix</a> - a
+proprietary and cross-platform database server - originally by
+Informix Corporation, now by IBM.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/IBM_DB2">IBM DB2</a> - a proprietary
+and cross-platform SQL database server by IBM.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Sybase">Sybase SQL Server</a> - a
+line of proprietary SQL server products by Sybase.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/ADABAS">ADABAS</a> - a proprietary
+and cross-platform database server that runs on IBM mainframes, several
+variants of UNIX (including Linux) and on Microsoft Windows, that supports
+several types of interfaces (including SQL). By Software AG.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://sqream.com/">Sqream</a> - a proprietary GPU-accelerated
+SQL database.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MaxDB">MaxDB</a> - a freeware,
+proprietary, and cross-platform, database from SAP Corporation, that was
+available as open source software for some years.
+</p>
+</li>
+
+</ul>
+
+<h2 id="xml-DBs">XML Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/BaseX">BaseX</a> - an open-source
+(BSD-style licence) and cross-platform client/server XML database written in
+Java, with a RESTful API for other languages.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Berkeley_DB">Berkeley DB XML Edition
+(“dbxml”)</a> - an AGPLv3 local-storage XML database based on Berkeley DB
+and other technologies.
+</p>
+</li>
+
+</ul>
+
+<h2 id="object-DBs">Object Databases</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Db4o">db4o</a> - an open-source (GPL
+and other licences) and embeddable object database for Java and .NET.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/ObjectDB">ObjectDB</a> - a proprietary
+and cross-platform object database written in Java.
+</p>
+</li>
+
+</ul>
+
+<h2 id="distributed-DBs-NoSQL">Distributed Databases (so-called “NoSQL”)</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Apache_Cassandra">Apache Cassandra</a>
+- an open-source (Apache licence) distributed database written in Java.
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.scylladb.com/">Scylla DB</a> - a rewrite
+(and drop-in replacement) of Apache Cassandra in C++, licensed under the
+AGPLv3 that claims to be more performant.
+</p>
+</li>
+</ul>
+</li>
+
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a> - an
+open-source and cross-platform distributed document-oriented database (code is
+under AGPLv3;
+drivers are Apache licensed).
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="http://meirkriheli.com/talks/mongodb/index.html">Meir Kriheli’s
+MongoDB talk</a>.
+</p>
+</li>
+</ul>
+
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/CouchDB">CouchDB</a> - an open source
+(Apache licensed) document-oriented database written in Erlang.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Redis">Redis</a> - a distributed,
+in-memory, open source (BSD licensed) and cross-platform, data structure
+server.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Oracle_NoSQL_Database">Oracle NoSQL
+Database</a> - a distributed key/value store by Oracle Corporation available
+under the AGPL licence and a proprietary licence.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://docs.aws.amazon.com/gettingstarted/latest/awsgsg-intro/gsg-aws-database.html">Database Services for Amazon Web Services (“AWS”)</a> - Hosted
+solutions for AWS (proprietary with open source APIs).
+</p>
+</li>
+</ul>
+
+<!--
+
+To add:
+
+* Networked SQL
+    - ADABAS
+
+* Unified database APIs
+    - ODBC
+    - JDBC
+    - Perl’s DBI.
+
+* ORMs
+
+* Visual Database Designers.
+    - MS Access.
+    - OpenOffice / LibreOffice Base.
+
+-->
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/resources/text-processing-tools/">List of
+Text Processing Tools</a>.
+</p>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://linas.org/linux/db.html">“Linux SQL Databases and Tools”</a>
+- a list by Linas Vepstas with many links.
+</p>
+</li>
+
+</ul>
+
+
+<h3 id="fun-links">Fun Links</h3>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2015" />
+

@@ -1,0 +1,687 @@
+--- linux-2.6.37/scripts/kconfig/lkc.h.orig	2011-01-05 02:50:19.000000000 +0200
++++ linux-2.6.37/scripts/kconfig/lkc.h	2011-01-06 16:19:45.162310934 +0200
+@@ -150,6 +150,21 @@
+ struct symbol *prop_get_symbol(struct property *prop);
+ struct property *sym_get_env_prop(struct symbol *sym);
+ 
++typedef int (*sym_search_filter_t)(struct symbol *sym, void *context);
++struct symbol **sym_generic_search(sym_search_filter_t filter, void *context);
++struct symbol **sym_pattern_search(const char *pattern, unsigned int flags);
++
++enum SYM_PATTERN_SEARCH_FLAGS
++{
++	SYM_PATTERN_SEARCH_REGEX         =  0x0,
++	SYM_PATTERN_SEARCH_SUBSTRING     =  0x1,
++	SYM_PATTERN_SEARCH_KEYWORDS_AND  =  0x2,
++	SYM_PATTERN_SEARCH_TYPE_MASK     =  0xF,
++	SYM_PATTERN_CASE_SENSITIVE       = 0x10,
++	SYM_PATTERN_CASE_INSENSITIVE     = 0x00,
++	SYM_PATTERN_CASE_MASK            = 0x10,
++};
++
+ static inline tristate sym_get_tristate_value(struct symbol *sym)
+ {
+ 	return sym->curr.tri;
+--- linux-2.6.37/scripts/kconfig/Makefile.orig	2011-01-05 02:50:19.000000000 +0200
++++ linux-2.6.37/scripts/kconfig/Makefile	2011-01-06 16:23:08.998320308 +0200
+@@ -164,10 +164,10 @@
+ lxdialog := lxdialog/checklist.o lxdialog/util.o lxdialog/inputbox.o
+ lxdialog += lxdialog/textbox.o lxdialog/yesno.o lxdialog/menubox.o
+ 
+-conf-objs	:= conf.o  zconf.tab.o
+-mconf-objs     := mconf.o zconf.tab.o $(lxdialog)
+-nconf-objs     := nconf.o zconf.tab.o nconf.gui.o
+-kxgettext-objs	:= kxgettext.o zconf.tab.o
++conf-objs	:= conf.o  zconf.tab.o keywords_search.o
++mconf-objs     := mconf.o zconf.tab.o keywords_search.o $(lxdialog)
++nconf-objs     := nconf.o zconf.tab.o keywords_search.o nconf.gui.o
++kxgettext-objs	:= kxgettext.o zconf.tab.o keywords_search.o
+ 
+ hostprogs-y := conf qconf gconf kxgettext
+ 
+@@ -189,11 +189,11 @@
+ 
+ ifeq ($(qconf-target),1)
+ qconf-cxxobjs	:= qconf.o
+-qconf-objs	:= kconfig_load.o zconf.tab.o
++qconf-objs	:= kconfig_load.o zconf.tab.o keywords_search.o
+ endif
+ 
+ ifeq ($(gconf-target),1)
+-gconf-objs	:= gconf.o kconfig_load.o zconf.tab.o
++gconf-objs	:= gconf.o kconfig_load.o zconf.tab.o keywords_search.o
+ endif
+ 
+ clean-files	:= lkc_defs.h qconf.moc .tmp_qtcheck \
+@@ -331,7 +331,7 @@
+ # The following requires flex/bison/gperf
+ # By default we use the _shipped versions, uncomment the following line if
+ # you are modifying the flex/bison src.
+-# LKC_GENPARSER := 1
++LKC_GENPARSER := 1
+ 
+ ifdef LKC_GENPARSER
+ 
+--- linux-2.6.37/scripts/kconfig/qconf.cc.orig	2011-01-05 02:50:19.000000000 +0200
++++ linux-2.6.37/scripts/kconfig/qconf.cc	2011-01-06 16:48:42.475893291 +0200
+@@ -39,6 +39,7 @@
+ #include <qmessagebox.h>
+ #include <qregexp.h>
+ #include <qevent.h>
++#include <qradiobutton.h>
+ 
+ #include <stdlib.h>
+ 
+@@ -1196,6 +1197,36 @@
+ 	layout2->addWidget(searchButton);
+ 	layout1->addLayout(layout2);
+ 
++	// Initialize the "Search Type" button group.
++	searchType = new Q3VButtonGroup("Search Type", this, "searchType");
++
++	searchType->insert(new QRadioButton("Substring Match", searchType),
++			SYM_PATTERN_SEARCH_SUBSTRING
++			);
++
++	searchType->insert(new QRadioButton("Keywords", searchType),
++			SYM_PATTERN_SEARCH_KEYWORDS_AND
++			);
++
++	searchType->insert(new QRadioButton("Regular Expression", searchType),
++			SYM_PATTERN_SEARCH_REGEX
++			);
++
++	searchType->setButton(SYM_PATTERN_SEARCH_SUBSTRING);
++	layout1->addWidget(searchType);
++
++	// Initialize the "Options" button group.
++	options = new Q3VButtonGroup("Options", this, "Options");
++
++	caseSensitivity = new QCheckBox(
++			"Case sensitive", options, "Case sensitive"
++			);
++
++	caseSensitivity->setChecked(FALSE);
++
++	layout1->addWidget(options);
++
++	// Initialize the ConfigView and ConfigInfoView
+ 	split = new QSplitter(this);
+ 	split->setOrientation(Qt::Vertical);
+ 	list = new ConfigView(split, name);
+@@ -1242,6 +1273,17 @@
+ 	}
+ }
+ 
++unsigned int ConfigSearchWindow::getSearchFlags()
++{
++	return (searchType->selectedId()
++			|
++		(caseSensitivity->isChecked()
++		 ? SYM_PATTERN_CASE_SENSITIVE
++		 : SYM_PATTERN_CASE_INSENSITIVE
++		)
++	       );
++}
++
+ void ConfigSearchWindow::search(void)
+ {
+ 	struct symbol **p;
+@@ -1252,7 +1294,7 @@
+ 	list->list->clear();
+ 	info->clear();
+ 
+-	result = sym_re_search(editField->text().latin1());
++	result = sym_pattern_search(editField->text(), getSearchFlags());
+ 	if (!result)
+ 		return;
+ 	for (p = result; *p; p++) {
+--- linux-2.6.37/scripts/kconfig/qconf.h.orig	2011-01-05 02:50:19.000000000 +0200
++++ linux-2.6.37/scripts/kconfig/qconf.h	2011-01-06 16:48:10.048449475 +0200
+@@ -5,9 +5,12 @@
+ 
+ #if QT_VERSION < 0x040000
+ #include <qlistview.h>
++#include <qvbuttongroup.h>
+ #else
+ #include <q3listview.h>
++#include <Q3VButtonGroup>
+ #endif
++#include <qcheckbox.h>
+ #include <qsettings.h>
+ 
+ #if QT_VERSION < 0x040000
+@@ -22,6 +25,7 @@
+ #define Q3ToolBar               QToolBar
+ #define Q3ListViewItemIterator  QListViewItemIterator
+ #define Q3FileDialog            QFileDialog
++#define Q3VButtonGroup          QVButtonGroup 
+ #endif
+ 
+ class ConfigView;
+@@ -278,6 +282,7 @@
+ 	bool _showDebug;
+ };
+ 
++enum SEARCH_TYPE { SUBSTRING, KEYWORDS, REGEX };
+ class ConfigSearchWindow : public QDialog {
+ 	Q_OBJECT
+ 	typedef class QDialog Parent;
+@@ -291,11 +296,15 @@
+ protected:
+ 	QLineEdit* editField;
+ 	QPushButton* searchButton;
++	Q3VButtonGroup *searchType, *options;
++	QCheckBox *caseSensitivity;
+ 	QSplitter* split;
+ 	ConfigView* list;
+ 	ConfigInfoView* info;
+ 
+ 	struct symbol **result;
++
++	unsigned int getSearchFlags();
+ };
+ 
+ class ConfigMainWindow : public Q3MainWindow {
+@@ -335,3 +344,4 @@
+ 	QSplitter* split1;
+ 	QSplitter* split2;
+ };
++
+--- linux-2.6.37/scripts/kconfig/symbol.c.orig	2011-01-05 02:50:19.000000000 +0200
++++ linux-2.6.37/scripts/kconfig/symbol.c	2011-01-06 16:43:33.527512933 +0200
+@@ -9,6 +9,8 @@
+ #include <regex.h>
+ #include <sys/utsname.h>
+ 
++#include "keywords_search.h"
++
+ #define LKC_DIRECT_LINK
+ #include "lkc.h"
+ 
+@@ -889,23 +891,209 @@
+ 	return res;
+ }
+ 
++static int re_search_filter(struct symbol *sym, void *re_void)
++{
++	return (regexec((regex_t*)re_void, sym->name, 0, NULL, 0) == 0);
++}
++
++
++/* The old function that only searches through sym->name. */
+ struct symbol **sym_re_search(const char *pattern)
+ {
+-	struct symbol *sym, **sym_arr = NULL;
+-	int i, cnt, size;
+ 	regex_t re;
++	struct symbol **results;
+ 
+-	cnt = size = 0;
+-	/* Skip if empty */
+ 	if (strlen(pattern) == 0)
+ 		return NULL;
+ 	if (regcomp(&re, pattern, REG_EXTENDED|REG_NOSUB|REG_ICASE))
+ 		return NULL;
+ 
++	results = sym_generic_search(re_search_filter, (void *)&re);
++
++	regfree(&re);
++
++	return results;
++}
++
++struct substring_search_context_struct
++{
++	const char * substring;
++	char *(*find_func)(const char *,const char *);
++};
++
++typedef struct substring_search_context_struct substring_search_context_t;
++
++#define MATCH_SYMBOL() \
++	(MATCH(sym->name) || \
++	(sym->prop && \
++	 ((sym->prop->text && MATCH(sym->prop->text)) || \
++	  (sym->prop->menu && sym->prop->menu->help && \
++	  MATCH(sym->prop->menu->help))) \
++	));
++
++static int substring_filter(struct symbol *sym, void *context_void)
++{
++	substring_search_context_t *context;
++	context = (substring_search_context_t *)context_void;
++
++#define MATCH(string) \
++	(context->find_func((string), context->substring))
++
++	return MATCH_SYMBOL();
++#undef MATCH
++}
++
++/* 
++ * A not-so-efficient (but should be good enough) implementation of the
++ * GNU strcasestr extension. This is done because strcasestr is not portable
++ * and the compiler yells at us for using it.
++ * */
++static char * my_strcasestr(const char * haystack, const char * needle)
++{
++	size_t needle_len;
++	char * start_from;
++
++	needle_len = strlen(needle);
++	start_from = (char *)haystack;
++
++	while (*start_from)
++	{
++		if (!strncasecmp(start_from, needle, needle_len))
++		{
++			return start_from;
++		}
++
++		start_from++;
++	}
++
++	return NULL;
++}
++
++static struct symbol **substring_search(const char *substring, int case_sense)
++{
++	substring_search_context_t context;
++
++	context.substring = substring;
++	context.find_func = case_sense ? strstr : my_strcasestr;
++
++	return sym_generic_search(substring_filter, (void *)&context);
++}
++
++struct keywords_search_context_struct
++{
++	keywords_search_handle_t * h;
++	int case_sense;
++};
++
++typedef struct keywords_search_context_struct keywords_search_context_t;
++
++static int keywords_filter(struct symbol *sym, void *context_void)
++{
++	keywords_search_context_t *context;
++	context = (keywords_search_context_t *)context_void;
++
++	keywords_search_reset(context->h);
++
++#define MATCH(string) \
++	(keywords_search_matches(context->h, string, context->case_sense))
++
++	return MATCH_SYMBOL();
++#undef MATCH
++}
++
++static struct symbol **keywords_search(const char *query, int case_sense)
++{
++	struct symbol **results;
++	keywords_search_context_t context;
++
++	context.h = keywords_search_compile(query);
++	if (! context.h)
++	{
++		return NULL;
++	}
++	context.case_sense = case_sense;
++
++	results = sym_generic_search(keywords_filter, (void *)&context);
++	keywords_search_free (context.h);
++
++	return results;
++}
++
++
++static int re_search2_filter(struct symbol *sym, void *re_void)
++{
++	regex_t *re = (regex_t*)re_void;
++
++#define MATCH(string) \
++	(regexec(re, (string), 0, NULL, 0) == 0)
++
++	return MATCH_SYMBOL();
++#undef MATCH
++}
++
++static struct symbol **sym_re_search2(const char *pattern, int case_sense)
++{
++	regex_t re;
++	struct symbol **results;
++	int rc_flags;
++
++	rc_flags = case_sense ? 0 : REG_ICASE;
++
++	if (strlen(pattern) == 0)
++		return NULL;
++	if (regcomp(&re, pattern, REG_EXTENDED|REG_NOSUB|rc_flags))
++		return NULL;
++
++	results = sym_generic_search(re_search2_filter, (void *)&re);
++
++	regfree(&re);
++
++	return results;
++}
++
++
++#undef MATCH_SYMBOL
++
++#define is_case_sensitive(flags) \
++	(((flags) & SYM_PATTERN_CASE_MASK) == SYM_PATTERN_CASE_SENSITIVE)
++
++struct symbol **sym_pattern_search(const char *pattern, unsigned int flags)
++{
++	unsigned int type;
++	int case_sense;
++
++	type = (flags & SYM_PATTERN_SEARCH_TYPE_MASK);
++	case_sense = is_case_sensitive(flags);
++
++	if (type == SYM_PATTERN_SEARCH_REGEX)
++	{
++		return sym_re_search2(pattern, case_sense);
++	}
++	else if (type == SYM_PATTERN_SEARCH_SUBSTRING)
++	{
++		return substring_search(pattern, case_sense);
++	}
++	else if (type == SYM_PATTERN_SEARCH_KEYWORDS_AND)
++	{
++		return keywords_search(pattern, case_sense);
++	}
++	else
++	{
++		return NULL;
++	}
++}
++
++struct symbol **sym_generic_search(sym_search_filter_t filter, void *context)
++{
++	struct symbol *sym, **sym_arr = NULL;
++	int i, cnt, size;
++
++	cnt = size = 0;
++
+ 	for_all_symbols(i, sym) {
+ 		if (sym->flags & SYMBOL_CONST || !sym->name)
+ 			continue;
+-		if (regexec(&re, sym->name, 0, NULL, 0))
++		if (!filter(sym, context))
+ 			continue;
+ 		if (cnt + 1 >= size) {
+ 			void *tmp = sym_arr;
+@@ -921,7 +1109,6 @@
+ 	}
+ 	if (sym_arr)
+ 		sym_arr[cnt] = NULL;
+-	regfree(&re);
+ 
+ 	return sym_arr;
+ }
+--- linux-2.6.37/scripts/kconfig/keywords_search.c.orig	2011-01-06 16:50:12.014163348 +0200
++++ linux-2.6.37/scripts/kconfig/keywords_search.c	2011-01-06 16:19:45.154309833 +0200
+@@ -0,0 +1,216 @@
++/*
++ * Keywords' Search Micro-Library.
++ *
++ * Copyrighted by Shlomi Fish, 2007.
++ *
++ * Licensed under the MIT/X11 License:
++ *
++ * http://www.opensource.org/licenses/mit-license.php
++ *
++ * */
++#include "keywords_search.h"
++#include <string.h>
++#include <stdlib.h>
++#include <ctype.h>
++
++#define is_word_char(c) (isalpha(c) || isdigit(c))
++
++static int add_word(keywords_search_handle_t *h, const char **p)
++{
++	const char *start;
++	keywords_search_keyword_t *word;
++
++	start = *p;
++	while (is_word_char(**p))
++	{
++		(*p)++;
++	}
++	if (h->num_words == h->max_num_words)
++	{
++		void *new_ptr;
++		h->max_num_words += 16;
++		new_ptr = realloc(h->words,
++			sizeof(h->words[0]) * h->max_num_words
++			);
++		if (new_ptr == NULL)
++		{
++			return 0;
++		}
++		h->words = new_ptr;
++	}
++	word = &(h->words[h->num_words++]);
++	word->found = 0;
++	word->word =
++		malloc(sizeof(word->word[0]) *
++			(word->word_len = (*p)-start)+1
++		);
++	if (! word->word)
++	{
++		return 0;
++	}
++	memcpy(word->word, start, word->word_len);
++	word->word[word->word_len] = '\0';
++
++	return 1;
++}
++
++keywords_search_handle_t *keywords_search_compile(const char *pattern)
++{
++	int i;
++	keywords_search_handle_t *ret = NULL;
++	const char *char_ptr;
++
++	ret = malloc(sizeof(*ret));
++	if (!ret)
++	{
++		return NULL;
++	}
++
++	ret->num_words = 0;
++	ret->max_num_words = 0;
++	ret->num_found_words = 0;
++	ret->words = NULL;
++
++	char_ptr = pattern;
++
++	while (*char_ptr)
++	{
++		if (is_word_char(*char_ptr))
++		{
++			if (!add_word(ret, &char_ptr))
++			{
++				goto cleanup_words;
++			}
++		}
++		else
++		{
++			char_ptr++;
++		}
++	}
++
++	return ret;
++
++cleanup_words:
++	for(i=0;i<ret->num_words;i++)
++	{
++		free(ret->words[i].word);
++		ret->words[i].word = NULL;
++	}
++	free(ret->words);
++	ret->words = NULL;
++
++	free(ret);
++	ret = NULL;
++
++	return NULL;
++}
++
++static int
++cmp_word(keywords_search_handle_t* handle, keywords_search_keyword_t *word, const char *start, const int len)
++{
++	if (word->found || (word->word_len != len))
++	{
++		return 0;
++	}
++	
++	if (handle->case_sensitivity)
++	{
++		return !strncmp(word->word, start, len);
++	}
++	else
++	{
++		return !strncasecmp(word->word, start, len);
++	}
++}
++
++static int
++find_word(keywords_search_handle_t* handle, const char *start, const int len)
++{
++	int i;
++	keywords_search_keyword_t *word;
++
++	word = handle->words;
++	for(i = 0; i < handle->num_words; i++, word++)
++	{
++		if (cmp_word(handle, word, start, len))
++		{
++			word->found = 1;
++			if (++handle->num_found_words == handle->num_words)
++			{
++				return 1;
++			}
++		}
++	}
++	return 0;
++}
++
++int keywords_search_matches(keywords_search_handle_t *handle, const char *string, int case_sensitivity)
++{
++	const char *char_ptr, *start;
++
++	char_ptr = string;
++
++	handle->case_sensitivity = case_sensitivity;
++
++	if (handle->num_found_words == handle->num_words)
++	{
++		return 1;
++	}
++
++	/* Handle the NULL string gracefully. */
++	if (! string)
++	{
++		return 0;
++	}
++
++	while(*char_ptr)
++	{
++		if (is_word_char(*char_ptr))
++		{
++			int len;
++
++			start = char_ptr;
++			while (is_word_char(*char_ptr))
++			{
++				char_ptr++;
++			}
++			
++			len = char_ptr - start;
++
++			if (find_word(handle, start, len))
++			{
++				return 1;
++			}
++		}
++		else
++		{
++			char_ptr++;
++		}
++	}
++
++	return 0;
++}
++
++void keywords_search_reset(keywords_search_handle_t *handle)
++{
++	int i;
++
++	/* Reset the state of the handle to no words found. */
++	handle->num_found_words = 0;
++	for(i=0 ; i < handle->num_words ; i++)
++	{
++		handle->words[i].found = 0;
++	}
++}
++
++void keywords_search_free(keywords_search_handle_t *handle)
++{
++	int i;
++
++	for(i=0 ; i < handle->num_words ; i++)
++	{
++		free(handle->words[i].word);
++	}
++	free(handle->words);
++	free(handle);
++}
+--- linux-2.6.37/scripts/kconfig/keywords_search.h.orig	2011-01-06 16:50:15.785680154 +0200
++++ linux-2.6.37/scripts/kconfig/keywords_search.h	2011-01-06 16:19:45.156310109 +0200
+@@ -0,0 +1,41 @@
++/*
++ * Keywords' Search Micro-Library.
++ *
++ * Copyrighted by Shlomi Fish, 2007.
++ *
++ * Licensed under the MIT/X11 License:
++ *
++ * http://www.opensource.org/licenses/mit-license.php
++ *
++ * */
++#ifndef KEYWORDS_SEARCH_H
++#define KEYWORDS_SEARCH_H
++
++struct keywords_search_keyword_struct
++{
++	int found;
++	char *word;
++	int word_len;
++};
++
++typedef struct keywords_search_keyword_struct keywords_search_keyword_t;
++
++struct keywords_search_handle_struct
++{
++	int num_words;
++	int max_num_words;
++	int num_found_words;
++	keywords_search_keyword_t *words;
++	/* The case sensitivity flag - valid only for a search session. */
++	int case_sensitivity;
++};
++
++typedef struct keywords_search_handle_struct keywords_search_handle_t;
++
++keywords_search_handle_t *keywords_search_compile(const char *pattern);
++int keywords_search_matches(keywords_search_handle_t* handle, const char *string, int case_sensitivity);
++void keywords_search_reset(keywords_search_handle_t *handle);
++void keywords_search_free(keywords_search_handle_t *handle);
++
++#endif /* KEYWORDS_SEARCH_H */
++

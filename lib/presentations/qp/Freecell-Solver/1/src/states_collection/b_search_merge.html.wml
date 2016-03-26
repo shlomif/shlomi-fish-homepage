@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<points>
+<li>
+Instead of qsorting the sort margin in, keep it sorted and
+then use a binary-search based merge to merge it with the
+main array.
+</li>
+
+<li>
+The reason I used a binary search based merge, instead of a
+linear merge, is because I reasoned that the main array
+would become much larger than the margin (which has a constant
+size), and so this would result in a lot of comparisons.
+</li>
+
+<li>
+O(log(n)) lookup, O(n) insertion, and O(n<sup><small>2</small></sup>)
+accumulative complexity.
+</li>
+
+<li>
+Noticeably faster than qsorting.
+</li>
+</points>

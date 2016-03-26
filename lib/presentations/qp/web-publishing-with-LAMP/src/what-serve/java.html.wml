@@ -1,0 +1,26 @@
+#include 'template.wml'
+
+<points>
+<li>
+Java applets are useful to display an interactive GUI for the site.
+</li>
+<li>
+However, they should not be a replacement for plain HTML, nor should be
+loaded at the primary pages of the site.
+</li>
+<li>
+Your site should be perfectly usable without them.
+</li>
+</points>
+
+<h2>Good uses of Java:</h2>
+
+<ol class="point">
+<li>
+Games. (as always)
+</li>
+<li>
+Interactive Applications that will be very hard to implement in HTML and
+JavaScript.
+</li>
+</ol>

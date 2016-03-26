@@ -1,0 +1,21 @@
+shlomi[homepage]:$p4n/5/src/module-build-and-starter/MyMath-Ops$ ./Build
+Copying lib/MyMath/Ops/Subtract.pm -> blib/lib/MyMath/Ops/Subtract.pm
+Copying lib/MyMath/Ops/Divide.pm -> blib/lib/MyMath/Ops/Divide.pm
+Copying lib/MyMath/Ops/Multiply.pm -> blib/lib/MyMath/Ops/Multiply.pm
+Copying lib/MyMath/Ops.pm -> blib/lib/MyMath/Ops.pm
+Copying lib/MyMath/Ops/Add.pm -> blib/lib/MyMath/Ops/Add.pm
+Manifying blib/lib/MyMath/Ops/Add.pm -> blib/libdoc/MyMath::Ops::Add.3pm
+Manifying blib/lib/MyMath/Ops/Multiply.pm -> blib/libdoc/MyMath::Ops::Multiply.3pm
+Manifying blib/lib/MyMath/Ops/Subtract.pm -> blib/libdoc/MyMath::Ops::Subtract.3pm
+Manifying blib/lib/MyMath/Ops/Divide.pm -> blib/libdoc/MyMath::Ops::Divide.3pm
+Manifying blib/lib/MyMath/Ops.pm -> blib/libdoc/MyMath::Ops.3pm
+shlomi[homepage]:$p4n/5/src/module-build-and-starter/MyMath-Ops$ ./Build test
+t/00-load.t ....... 1/5 # Testing MyMath::Ops 0.01, Perl 5.010001, /usr/bin/perl5.10.1
+t/00-load.t ....... ok
+t/boilerplate.t ... ok
+t/pod-coverage.t .. ok
+t/pod.t ........... ok
+All tests successful.
+Files=4, Tests=22,  1 wallclock secs ( 0.10 usr  0.04 sys +  0.60 cusr  0.12 csys =  0.86 CPU)
+Result: PASS
+shlomi[homepage]:$p4n/5/src/module-build-and-starter/MyMath-Ops$

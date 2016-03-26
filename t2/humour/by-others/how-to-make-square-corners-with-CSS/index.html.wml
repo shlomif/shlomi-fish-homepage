@@ -1,0 +1,675 @@
+#include '../template.wml'
+<latemp_subject "How to make Square Corners with CSS" />
+<latemp_meta_desc "How to make Square Corners with CSS (originally from Drivl.com)" />
+<h2 id="note">Note</h2>
+<p>
+This bit appeared <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/700">on drivl.com</a> and is mirrored here.
+</p>
+<h2>How to Make Square Corners with CSS</h2>
+        <div id="bottom">
+            <div id="content">
+                            <h3 class="article">How to Make Square Corners with CSS</h3>
+        <div class="byline">
+        <p>
+                Posted on 16/2/07 by <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/users/profile/Oatmeal">Matthew Inman           </a>
+        </p>
+        </div>
+        <div class="article">
+<p>
+            <em class="teaser">An epic journey of compassion and liberty that
+embodies the semantic markup movement in modern web design in an
+unprecedented paradigm shift to right angled HTML elements.</em>
+</p>
+<p>
+            Finally! A solution for creating square corners on your
+website.&nbsp; You've probably read countless tutorials on how to make <a href="http://web.archive.org/web/20070329063414/http://del.icio.us/search/?fr=del_icio_us&amp;p=rounded+corners&amp;type=all">rounded corners</a>, but a simple, elegant solution for creating square corners has yet to emerge.<br /><br /><strong>Drivl to the rescue!&nbsp; </strong>Below
+ is our coveted 84 step process for creating beautiful square
+corners.&nbsp; Follow our lead and you'll soon be basking in splendid
+perpendicular glory.<strong><br /><br />1. </strong>Compile Apache 2.24023
+with mod_perl, mod_log_forensic, and mod_vhost_alias.&nbsp; Do not
+compile mod_perl as a DSO and keep apache in a chroot jail.&nbsp;&nbsp;
+Install Mysql 3.23 using yum, Perl 5.8, and /usr/bin/fortune.&nbsp; Set
+up load balancing and make sure mysql database connections are pooling
+properly.&nbsp; rm -f the main page for "ls" (usually stored in
+/usr/share/man).&nbsp; Create an alias in .bashrc that echos 'the fat
+man stands alone' every time you CD to a new directory.<strong><br /><br />2.&nbsp; </strong>With a yard stick, measure the approximate width and height of your computer monitor <br /><br /><strong>3.&nbsp; </strong>Using a hot pink highlighter, draw a 4x scale outline of your computer monitor on a large sheet of butcher paper<br /><br /><strong>4.&nbsp; </strong>Squeeze
+ the drippings from an uncooked 12 oz porterhouse steak onto the butcher
+ paper, smear the steak around until a greasy sheen is clearly visible<br /><br /><strong>5.&nbsp; </strong>Place
+ a housecat (latin: felis catus) in the center of the outline,&nbsp; if
+the cat leaves the boundaries of the monitor, squirt repeatedly with a
+water bottle (see: <a href="http://web.archive.org/web/20070329063414/http://www.w3schools.com/css/pr_pos_overflow.asp">overflow: auto</a>)<br /><br /><strong>6.&nbsp; </strong>Walk along the edges of the outline and count the number of steps required to make a complete loop<br /><br /><strong>7.&nbsp; </strong>Gently stroke the porterhouse-scented kitty <br /><br /><strong>8.&nbsp; </strong>Multiply the number of steps taken in step 6 by everyone's favorite irrational algebraic number: 1.61803399 (phi)<br /><br /><strong>9. </strong>Using
+ the computed product, plot the approximate height and width of your
+target div using MS Paint.&nbsp; Export it as a 50 megabyte TIFF file
+and upload this to your webserver.<br /><br /><strong>10.</strong> Open up
+your HTML file and create four divs: one above your bordered element,
+one below, and two floated to the side.&nbsp; Use the clearfix CSS hack
+and autoclear these elements using the :before and :after CSS selectors.
+ (Warning: Not supported in 94.2% of all browsers).&nbsp; Make sure the
+top and bottom elements are display: block and your doctype is XHTML 1.0
+ Strict.&nbsp; Using prototype.js, call Element.hide(targetDiv) and
+Ajax.Request to a PHP script that calls getimagesize() on your
+previously uploaded TIFF.&nbsp; Apply these dimensions to your target
+element using $('targetDiv').style.height = 'x';&nbsp; <br /><br /><strong>11.&nbsp; </strong>Huff a rag soaked in paint thinner<br /><br /><strong>12 - 83</strong>:&nbsp;
+ Once dementia has set in, enjoy a 13 hour parasailing excursion with
+imaginary cherub-beasts.&nbsp; Relax comfortably on the sands of space
+and time and sip mango mojitos.&nbsp; Do not listen to the golden pigs,
+they speak only lies and treachery.<br /><br /><strong>84.&nbsp; </strong>When sobriety returns, add the following line to your CSS file: <br />p { border: 1px solid #000; }<br /><br />That's it!&nbsp; Square corners are now yours for the taking.*<br /><br /><br />*Warning,
+ this method may not be compatible with Firefox 1.5 on Windows XP build
+902345, Firefox 2, FirePig 9, Pigs on Fire, IE6 with the Google Toolbar,
+ Safari 1.2+, IE7 Build 908234, IE 5+, Netscape 4.8, Camino, Opera, Web
+TV, and any version of lynx ever made.      </p>
+</div>
+    <div class="inset">
+            <a id="comments"></a><h2>32 Comments</h2>
+    <h3>Wanna comment? <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/register">Signup!</a></h3>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                Was using a table tag out of the question?
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1055">Reply to MildlyDisturbed</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 35px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Tables *shudder*
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1062">Reply to Edward</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 70px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Tables *shudder*... <br />
+<br />
+That's just typical...  They're only quick and easy to use, instantly
+cross-browser compatible, reliable, intuitive, and make a whole lot more
+ sense than spending an afternoon floating DIVs around a page.<br />
+<br />
+Generic block-level containers? ..Semantic markup my ass<br />
+<br />
+Tables have their problems, but they have their place too.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1074">Reply to landau</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 105px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                ...and they're best suited for actual table data, for example a
+parts list, or financial performance, or a course/section/teacher matrix<br />
+<br />
+for marking up most everything else I'll take a div or anyother block
+element anyday. heck you can make any element block level if you like
+for example;<br />
+<br />
+h1 { display: block; }<br />
+<br />
+besides it's a lot more forward-maintainable to divorce content from
+presentation, not to mention that the majority of folks with horribly
+out of date browsers already know that they have a horribly out of date
+browser. have you seen usage stats lately? the majority of the web
+browsing public uses either IE 6+ or FF. IE's problems notwithstanding
+(and they are well documented and relatively easy to work around or
+avoid), the problem isn't the browsers anymore it's us folks who code
+and maintain sites.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1075">Reply to mrbass68</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 140px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                <ul><li><i>IE's problems notwithstanding (and they are well documented and relatively easy to work around or avoid)</i></li></ul><br />
+<br />
+But that's the entire point. You don't need to with tables. None of the
+leading browsers are fully compliant with css 2.0 standards, so why
+spend time working out what you can and can't use, what workarounds are
+needed for which browsers, when table layouts render pretty prefect not
+only on IE, FF and other PC desktop browsers, but Mac, Palm, PSP, Wii,
+etc...<br />
+<br />
+I guess it all depends on if you feel like billing your client for
+another day or two's worth of work while you test all that or finish the
+ project early and have an extended weekend spent in the pub.<br />
+<br />
+<ul><li><i>divorce content from presentation</i></li></ul><br />
+<br />
+CSS only goes part of the way to that goal, in the same way HTML did.
+Unless you enforce everyone to use XML/XSLT to generate all the content
+for their web pages and ban the use of presentation tags like
+&lt;br/&gt; that statement is never going to be true, even using a CSS
+div layout.<br />
+<br />
+Yes tables aren't 'proper standards', but when no-ones playing by the
+full list of rules, a choice between the Netscape/IE days of seperate
+CSS sheets and fudges versus a table layout I know is going to work on
+every browser, I'll take the later.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1081">Reply to Brentp</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 175px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                BrentP; Shut up before you hurt yourself.<br />
+Table layouts DO NOT render correctly on small screens. You shouldn't have to scroll sideways.<br />
+<br />
+By using CSS you save your client money in the future by only requiring
+new stylesheets (as long as the HTML is truly semantic) and not changing
+ those 15 nested tables you so elegantly crafted.<br />
+<br />
+CSS totally separates content from presentation.<br />
+&lt;br /&gt; IS NOT presentation. It is content and denotes a line
+break. If you are using it for presentation then you are using it in a
+non semantic fashion.<br />
+<br />
+Tables are infact "proper standards" ... for tabular data, not design. Oh the surprise!!!<br />
+<br />
+As far as not playing by the rules... A crowd jumps off a cliff; Would you?
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1082">Reply to ixulai</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 210px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                <ul><li><i>You shouldn't have to scroll sideways.</i></li></ul><br />
+Bad table and CSS layouts both cause this. Do it right and it'll shrink to the content, after that you'll be forced to scroll.<br />
+<br />
+Bad table design however, doesn't deposit one layer on top of another on
+ small screens, making even bad table layout more readable.<br />
+<br />
+<ul><li><i>By using CSS you save your client money in the future by only requiring new stylesheets </i></li></ul><br />
+But you cost them more when developing. Either you have to fudge to work
+ on all browsers, or you sacrifice like as is advised below to what
+you'll 'support'.<br />
+<br />
+<ul><li><i>&lt;br /&gt; IS NOT presentation. It is content and denotes a line break.</i></li></ul><br />
+A line break already does a decent job of denoting a line break in
+textual content. BR just enforces a presentation action within HTML
+markup.. 'Do a line break here'. Oddly, other simliar tags have now all
+been abandoned B, I, Font....<br />
+<br />
+<ul><li><i>As far as not playing by the rules... A crowd jumps off a cliff; Would you?</i></li></ul><br />
+No, no matter how hard they preach about CSS saving the web.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1089">Reply to Brentp</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 245px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                I'm totally with you Brentp.  I fear for the future of the internet
+when abstract egg heads attempt to rule everything.  KISS...keep it
+simple stupid.  Do end users really care if content is sperated from
+presentation?  No...only the egg heads do.  Should we allow the egg
+heads to make everything abstract and comburson just so they can enforce
+ an idea with religious furvor?  No.  Tables do the job, have done the
+job, and will continue to do the job. When CSS gets to a point where it
+makes sense to use CSS over tables, great.  Till then...
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1092">Reply to infocyde</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 210px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                &gt;&gt; table layouts render pretty prefect not only on IE, FF and
+other PC desktop browsers, but Mac, Palm, PSP, Wii, etc... I guess it
+all depends on if you feel like billing your client for another day or
+two's worth of work while you test all that or finish the project early
+and have an extended weekend spent in the pub.<br />
+<br />
+generally I have my clients sign off on a technical spec that includes
+supported browsers, if I browser is not on the list I don't bother
+testing for that browser. we (the client and myself) will arrive at a
+list of "supported" browsers based on current usage stats as well as an
+audit of 6-9 months of web server logs (assuming they already have a
+site...). as a result testing is assumed to be part of the development
+process.<br />
+<br />
+&gt;&gt;None of the leading browsers are fully compliant with css 2.0
+standards, so why spend time working out what you can and can't use,
+what workarounds are needed for which browsers<br />
+<br />
+I don't, but lots of others out there have and do. a quick check of my
+favorite blogs or a google search is all I've ever needed to find the
+answer to a problem. I find that the more css I develop the less I need
+to research fixes. kind of reminds me of the old days of trying to find
+which nested table was broken.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1084">Reply to mrbass68</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 245px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Sign off on technical specs?  Arrive at a list of supported browsers?<br />
+<br />
+Maybe you have a lot of technical customers, but in my experience
+client's don't care or know anything about cross-browser compatibility,
+technical specs, server logs, or anything of the kind - they want their
+site to look perfect all the time, everywhere.<br />
+<br />
+It's naive of course, but that's why they're clients.  I don't sit down
+with my plumber and discuss of how he's going to install my new shower -
+ I don't care - I just want it to work, perfectly, all the time.<br />
+<br />
+And ixulai, there's a difference between 15 nested tables and reasonable use of tables.<br />
+<br />
+A bit like the way there's a difference between a reasonable use of style sheets, and a confused 50-sheet cascading nightmare.<br />
+<br />
+The point is that there's no need to say "shudder" when someone mentions
+ a table - nor is there any need to slavishly adhere to standards as if
+the entire web will sink beneath the waves if you don't. Standards
+evolve - surely one shouldn't assume any given version of a standard to
+define a perfect solution.<br />
+<br />
+The two techniques are not mutually exclusive.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1085">Reply to landau</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 280px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                &gt;&gt; Sign off on technical specs? Arrive at a list of supported
+browsers? Maybe you have a lot of technical customers, but in my
+experience client's don't care or know anything about cross-browser
+compatibility, technical specs, server logs, or anything of the kind<br />
+<br />
+my clients are not technically savvy, it's up to me to educate them,
+more often than not they appreciate it. if they don't get it they end up
+ working with someone else which is OK by me.<br />
+<br />
+&gt;&gt;they want their site to look perfect all the time, everywhere. It's naive of course, but that's why they're clients.<br />
+<br />
+not only is it naive, it's impossible. furthermore giving a client a promise that it would be so is negligent.<br />
+<br />
+&gt;&gt;I don't sit down with my plumber and discuss of how he's going
+to install my new shower - I don't care - I just want it to work,
+perfectly, all the time.<br />
+<br />
+so you allow your plumber to select the shower for you? presonally I, as
+ the consumer,  prefer to know up front what the options are so I can
+make an informed choice.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1086">Reply to mrbass68</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 315px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Well, fair enough - But I don't turn down work based on the fact
+that a client isn't technical, or not interested in learning how a
+system is implemented.  I'm happy to work for busy, non-technical
+people.<br />
+<br />
+Also, I don't suggest it would be a good thing to mislead clients about
+how reliable a given system will be - but I also don't expect them to
+know, initally, what's possible and what isn't - and I certainly don't
+suggest involving them in the process of working out the details of
+delivering a system.<br />
+<br />
+Clients pick things like colour, branding, maybe general layout,
+certainly content - a bit like the way I choose which shower I want,
+what colour it is, and which room it goes in - those are my options - I
+don't know, or need to know how it all works in the backgound.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1088">Reply to landau</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 350px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                &gt;&gt; But I don't turn down work based on the fact that a client
+isn't technical, or not interested in learning how a system is
+implemented. I'm happy to work for busy, non-technical people.<br />
+<br />
+I've worked for plenty of non-technical clients. I'm not suggesting that
+ I involve them in every detail of development. But when I'm specing
+things out with a client I want to be sure that we're on the same page.
+How I arrive at a solution is my problem. It's more like deciding is it
+going to run on gas or diesel--the actual engine is up to me. I choose
+CSS because in my experience it's faster up  front in terms of
+development and easier going forward in terms of maintanability. I don't
+ expect my clients to know what CSS means, but they usually appreciate
+it when I speak to them about it in gerneral terms. They also tend to
+appreciate it when I site is almost done and we decide at the 11th hour
+to move page elements and it doesn't blow up our schedule. It used to
+drive me nuts when I would have to go back and rework a nested table
+just to move a logo or a nav bar. With css a couple of declaration edits
+ and it's Miller time.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1090">Reply to mrbass68</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 385px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Wow, it's cool to run the comment threads into the wall, huh?
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1094">Reply to JaneCopland</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 420px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                How skinny does it go? Hmm...lets test it to destruction!
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1154">Reply to Scandalnavia</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 455px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                It must...not...stop...<br />
+<br />
+I must...go...on...
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1160">Reply to katzweb</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 490px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Never forget this...<br />
+<br />
+...tell your children...
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1161">Reply to katzweb</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 455px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Landau - Then you must not have very much experience. If you're
+clients aren't signing off on technical specifications, then you
+obviously don't have very many clients. If you do low-budget freelance
+work then that's fine (there's a place for every kind of job) but when
+dealing with larger budgets clients insist they know everything that is
+going on and rightly so, it's their money. Usually a tech department
+will go over the details but regardless you should supply those details
+anyway to ensure you don't find yourself in court because the client
+feels they were ripped off. Also you've only listed very few of the
+css/table arguments. Nobody has mentioned the accessibility benefits of a
+ valid CSS layout with semantic XHTML. Have you ever used a screen
+reader? I guess plumbers aren't blind, but I am sure their users are so I
+ can't imagine that blind people don't need plumbers. What about when
+you need to prepare a document for print? Can you do that with a table
+based layout? This can go on forever but any developer/designer/devigner
+ doesn't recognize the benefits of CSS/XHTML as opposed to using tables
+is just ignorant or an amateur. It's no coincidence that more and more
+major sites are converting to CSS/XHTML everyday.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1106">Reply to DHH</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 490px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                3 and 4 word line lengths are amazing.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1107">Reply to DHH</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 490px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                Hey! You made it outside the box/table/frame/border. Well done you!
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1155">Reply to Scandalnavia</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 455px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                I once had a table. I discovered eating on the couch, while watching the Simpson was much more comfy.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1093">Reply to franky</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                Wow, that was a lot easier than I thought it would be. Thanks.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1057">Reply to Eric</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                I'm stuck at step 36. <br />
+How does one make a mango mojito?
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1077">Reply to Crydust</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                I'd kill for a mango mojito. Hmm try this:<br />
+<br />
+1 1/2 oz Cruzano mango rum<br />
+3 oz club soda<br />
+4 mint leaves<br />
+1 lime wedge<br />
+<br />
+Muddle the mint leaves and lime wedge in the bottom of an old-fashioned
+glass. Add Cruzan mango rum and club soda as above or adjusted to taste.
+ Add ice cubes, and serve.<br />
+<br />
+Some people like to add sugar syrup, which a classic mojito would have -
+ BUT others just add more mango rum, making this a 'diet mojito' as well
+ as a headsmacker.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1080">Reply to phuego</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                sure sure but you're not answering the most pertinent question... how does one spell CSS?
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1083">Reply to soxiam</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                Thanks for the excellent tutorial :)
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1091">Reply to babyboy808</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                FOR THE LOVE OF GOD!<br />
+<br />
+That has got to be the best Drivl yet!! LMAO!<br />
+<br />
+(sorry to sound so net-lame)<br />
+<br />
+Serious... I'm sitting in my corner using every ounce of energy to hold in the laughter.<br />
+<br />
+Thanks... I really needed this.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1104">Reply to MrStitch</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                Freakin' awesome! Two snaps up.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1125">Reply to erikschmidt</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+            <h3>
+            </h3>
+            <div class="comment">
+                The most amazing thing about this tutorial, is that somehow, even
+though it was completely unrelated, and supposed to be humorous, people
+STILL managed to get into a tables vs. css debate. YAWNNNNNNNNNN. So
+tired. So over it. Will someone just buy the domain tablesvscss.com and
+document all the arguments so we can keep it all in one place and never
+have to look at it again? I am pro web standards, but at the end of the
+day, it is such a meaningless thing to be zealous about. People are
+hungry.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1129">Reply to anathema</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 35px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                amen.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1189">Reply to whiterabt</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments" style="margin-left: 70px;">
+            <h3>
+            </h3>
+            <div class="comment">
+                I'm a little weasel! Balls.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1261">Reply to WebFag</a>]
+                                    </div>
+                </div>
+            </div>
+<div class="comments">
+                        <div class="comment">
+                thank you very much.
+                <div class="comment_action">
+                    [<a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/comment/700/1391">Reply to resimler</a>]
+                                    </div>
+                </div>
+            </div>
+            <h3>Wanna comment? <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/register">Signup!</a></h3>
+    </div>
+            </div>
+            <div id="sidebar">
+                <div class="normal alt">
+                <h2>Submit a Story</h2>
+                <small><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/register">Write your own stories! »</a></small>
+            </div>
+            <div class="editors">
+                <h2>Editors Corner</h2>
+                <em>A few of our editors' favorites</em>
+                <ul class="arrow">
+                                        <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/738">The Worst NCAA D-I College Mascots</a></li>
+                                        <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/731">Social Media Websites in Illustrated Form</a></li>
+                                        <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/724">The Web Development Clients' 10 Commandments</a></li>
+                                        <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/704">My Latest Brush With Death</a></li>
+                                    </ul>
+                <strong><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/best">View the best of all time...</a></strong>
+            </div>
+                            <div class="normal">
+                    <h2>Random Haiku</h2>
+                   <small>It's March Madness time!<br />
+Degenerate gamblers, bust<br />
+out your wallets now.</small>
+                </div>
+            <div class="normal alt">
+                <h2>RSS Feeds</h2>
+                <ul class="arrow">
+               <li><a href="http://web.archive.org/web/20070329063414/http://feeds.feedburner.com/DrivlFrontPage">Drivl Front Page RSS Feed</a></li>
+               <li><a href="http://web.archive.org/web/20070329063414/http://feeds.feedburner.com/DrivlPage2">Drivl Page 2 RSS Feed</a></li>
+             </ul>
+            </div>
+                        <div class="normal">
+                <h2>From Page 2</h2>
+                <ul class="arrow">
+                                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/759">It's fun to be poor!</a></li>
+                                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/756">Everyone Wants to Save The Kids Right?</a></li>
+                                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/754">Alvin, Nell Carter, and the 'Rosieberlowjob'</a></li>
+                                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/751">All Hail the Goracle!</a></li>
+                                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/748">Honkers of Death</a></li>
+                                </ul>
+            </div>
+                        <div class="normal video">
+                <h2>Video of the Day</h2>
+                <br />
+              <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/631">It Won't Bring Your Honey Back, But It's Still Damn Funny</a>
+            </div>
+        </div>
+        <div id="drivel--footer">
+            <div id="drivel--footer-content">
+                <ul>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/">Front Page</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/2">Page Two</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/best">Best of</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/multimedia">Multimedia</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/cartoons">Cartoons</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/archives">Archives</a></li>
+                    <li><a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/about">About Drivl</a></li>
+                </ul>
+                <div id="copyright">Copyright © 2006 Drivl.com</div>
+            </div>
+        </div>
+        </div>

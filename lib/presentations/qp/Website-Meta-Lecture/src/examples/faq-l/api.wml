@@ -1,0 +1,53 @@
+<:{
+use vars qw(@question_number);
+
+@question_number=(0);
+}:>
+
+;;; Perl code here:
+<define-tag next-question><:{
+    my $temp = pop(@question_number)+1;
+    push @question_number, $temp;
+    my $qn_text = join(".", @question_number);
+    print $qn_text;
+}:></define-tag>
+
+;;; Perl code here:
+<define-tag promote><:{
+    push @question_number, 0;
+}:></define-tag>
+
+;;; Perl code here:
+<define-tag demote><:{
+    pop(@question_number);
+}:></define-tag>
+
+
+
+<define-tag question endtag="required">
+;;; Define anchor to be the first argument
+<preserve anchor />
+;;; Define title to be the second argument
+<preserve title />
+
+;;; This statement is required to actually set
+;;; anchor and title to a proper value
+<set-var %attributes />
+
+;;; next-question is defined above
+<set-var question-number="<next-question />" />
+
+<if <get-var render-body />
+;;; If the question should be rendered.
+        "
+        <p id="<get-var anchor />"><b><get-var question-number />. <get-var title /></b></p>
+        %body
+        "
+;;; If not
+    "<a href="answers.html#<get-var anchor />"><get-var question-number />. <get-var title /></a><br />"
+    />
+;;; Restore their previous values
+<restore title />
+<restore anchor />
+</define-tag>
+

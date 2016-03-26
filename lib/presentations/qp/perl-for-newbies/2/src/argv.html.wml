@@ -1,0 +1,25 @@
+#include 'template.wml'
+
+<p>
+One can use the <tt>@ARGV</tt> variable to access the command line arguments
+passed to the perl script at the command line. Here's an example, that makes a
+backup of the file specified as its argument:
+</p>
+
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="src/argv/copy.pl" />
+</quadpres_code_block>
+
+<p>
+Using the command-line for specifying parameters to the program is usually
+more handy than using files, or modifying the script each time.
+</p>
+
+<p>
+Note that it is often convenient to use <tt>shift</tt> to draw arguments
+out of <tt>@ARGV</tt> one at a time. When used without parameters outside of
+functions, shift extract arguments out of <tt>@ARGV</tt>.
+</p>
+
+
+

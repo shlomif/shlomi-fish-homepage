@@ -1,0 +1,115 @@
+// This is an old file that does not work properly.
+// Can be ignored for the while.
+
+.jqtree-tree
+    font-size: 13px
+    padding: 0
+    margin: 0
+    list-style: none
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+        margin-top: 4px
+    .jqtree-toggler
+        background: url(js/treeview/images/treeview-default.gif) -64px -25px no-repeat
+        height: 16px
+        width: 16px
+        margin-left: -16px
+        float: left
+        cursor: pointer
+        color: transparent
+        // Just so the various Unicode fonts won't be jumpy.
+        font-family: monospace
+
+    a.selected
+        background-color: #eee
+    .hover
+        color: red
+        cursor: pointer
+    li
+        margin: 0
+        padding: 3px 0pt 3px 16px
+        background: url(js/treeview/images/treeview-default-line.gif) 0 0 no-repeat
+        //&.collapsable, &.expandable
+        //    background-position: 0 -176px
+        &:last-child
+            background-position: 0 -1766px
+        &.lastCollapsable
+            background-image: url(js/treeview/images/treeview-default.gif)
+            background-position: 0 -111px
+        &.lastExpandable
+            background-image: url(js/treeview/images/treeview-default.gif)
+            background-position: -32px -67px
+        &.jqtree-closed
+            background-image: url(js/treeview/images/treeview-default.gif)
+            > div > a.jqtree-toggler
+                background-position: 0
+            background-position: -80px -3px
+            &:last-child
+                background-position: -32px -67px
+            > .jqtree_common
+                display: none
+    //.expandable-hitarea
+    //     background-position: -80px -3px
+
+/* fix for IE6
+
+* html .hitarea
+    display: inline
+    float: none
+
+#treecontrol
+    margin: 1em 0
+    display: none
+
+
+.treeview-red
+    li
+        background-image: url(js/treeview/images/treeview-red-line.gif)
+    .hitarea
+        background-image: url(js/treeview/images/treeview-red.gif)
+    li
+        &.lastCollapsable, &.lastExpandable
+            background-image: url(js/treeview/images/treeview-red.gif)
+
+.treeview-black
+    li
+        background-image: url(js/treeview/images/treeview-black-line.gif)
+    .hitarea
+        background-image: url(js/treeview/images/treeview-black.gif)
+    li
+        &.lastCollapsable, &.lastExpandable
+            background-image: url(js/treeview/images/treeview-black.gif)
+
+.treeview-gray
+    li
+        background-image: url(js/treeview/images/treeview-gray-line.gif)
+    .hitarea
+        background-image: url(js/treeview/images/treeview-gray.gif)
+    li
+        &.lastCollapsable, &.lastExpandable
+            background-image: url(js/treeview/images/treeview-gray.gif)
+
+.treeview-famfamfam
+    li
+        background-image: url(js/treeview/images/treeview-famfamfam-line.gif)
+    .hitarea
+        background-image: url(js/treeview/images/treeview-famfamfam.gif)
+    li
+        &.lastCollapsable, &.lastExpandable
+            background-image: url(js/treeview/images/treeview-famfamfam.gif)
+
+.filetree
+    li
+        padding: 3px 0 2px 16px
+    span
+        &.folder, &.file
+            padding: 1px 0 1px 16px
+            display: block
+        &.folder
+            background: url(js/treeview/images/folder.gif) 0 0 no-repeat
+    li.expandable span.folder
+        background: url(js/treeview/images/folder-closed.gif) 0 0 no-repeat
+    span.file
+        background: url(js/treeview/images/file.gif) 0 0 no-repeat

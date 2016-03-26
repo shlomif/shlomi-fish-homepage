@@ -1,0 +1,52 @@
+#include 'template.wml'
+
+<points>
+<li>
+By validating your pages you make sure the structure of the document is
+acceptable to standards-compliant browsers.
+</li>
+<li>
+When you deviate from the
+standard, you don't know how the browser is going to react.
+</li>
+<li>
+Saying that "I don't know if my site is standards compliant or not, but
+it looks good in all browsers." (or just in one browser and one platform
+on which it was tested) is not a good idea.
+</li>
+<li>
+The browsers may not display
+this page correctly in future versions, or a new browser may do
+things differently.
+</li>
+<li>
+(For instance, when MSIE 5.0 came, it was more
+standards-compliant than MSIE 4.x and as a result many sites that worked
+with IE before became broken. This happened in the release of MSIE 6.0,
+and in Windows XP Service Pack 2, as well.)
+</li>
+<li>
+The browser has a tough job as it is, so you shouldn't make it
+tougher by sending it mal-formed input.
+</li>
+</points>
+
+<h2>Caveats</h2>
+
+<points>
+<li>
+Standards-compliance is not a panacea.
+</li>
+<li>
+Even if all the output from the site is standards-compliant it doesn't mean it
+will display correctly.
+</li>
+<li>
+This is either because of bugs in the browsers, or because you haven't done
+the right thing.
+</li>
+<li>
+So, it is important to test the pages in as many browsers as possible, in
+addition to validating them.
+</li>
+</points>

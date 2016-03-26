@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xml" href="product-syndication.xsl"?>
+<!DOCTYPE comparison SYSTEM "product-syndication.dtd">
+<!--
+;;; To do:
+* Add rellink’s.
+;;; To add:
+* Postfix TDG
+* Refactoring by Fowler.
+* The Pragmatic Programmer - From Journeyman to Master.
+* The Algorithm Design Manual.
+* chromatic’s Modern Perl Book.
+* xUnit Test Patterns.
+* Kent Beck’s Test Driven Development by Example
+* The reviews I did on the Perl Mongers site.
+
+    In the future:
+    * CSS TDG
+    * DNS & BIND.
+
+-->
+<product-syndication>
+    <data>
+        <cat id="books">
+            <title>Shlomi Fish’s Non-Fiction Book Reviews</title>
+            <desc appendtoc="1">
+<p>
+This is a list of books I have read and hereby review. At the moment, it is
+focused on non-fiction, but I hope to add fiction later on in a different
+section.
+</p>
+
+<p>
+So if you’re looking for a good book to read, and are desperate enough to
+take my advice (☺), look no further than here. Happy reading!
+</p>
+
+            </desc>
+            <cat id="most_influential_non_fiction">
+                <title>My Most Influential Books (in Chronological Order)</title>
+                <desc>
+                    <p>
+                        This is a list of the four or so books that I found
+                        the most influential on my thinking. It is given here
+                        in the chronological order in which I read them.
+                    </p>
+                </desc>
+                <prod id="innumeracy">
+                    <title>Innumeracy - Mathematical Illiteracy and its Consequences</title>
+                    <isbn>0809058405</isbn>
+                    <creator type="author">John Allen Paulus</creator>
+                    <desc>
+<p>
+This is a great book about how the fact that people don’t understand
+Mathematics or don’t apply it well leads to various side-effects, such as
+believing in superstition, irrational fears, or mis-approximations.
+</p>
+</desc>
+                </prod>
+                <prod id="neo_tech_discovery">
+                    <title>The Neo-Tech Discovery by Frank R. Wallace and others</title>
+                    <isbn disable="1" />
+                    <desc>
+<p>
+This book is not available in book stores, but I believe it may be ordered by
+mail order by requesting a catalogue
+<a href="http://www.neo-tech.com/">from the Neo-Tech site</a>. It is also
+available online as <a href="http://www.neo-tech.com/neotech/advantages/">the
+Neo-Tech Advantages</a> and the
+<a href="http://www.neo-tech.com/neotech/discovery/">the Selected Portions
+from the Neo-Tech Discovery</a>.
+</p>
+<p>
+This is the most influential book I ever read. Neo-Tech is an extension and
+re-organization of
+<a href="http://en.wikipedia.org/wiki/Objectivist_philosophy">Ayn
+Rand’s Objectivism</a>, that also integrates
+Psychology, Business Practices, Science and other fields. After reading and
+integrating this book, one can throw away all the mental garbage that prevents
+growth, and no longer be influenced by various fallacies you constantly hear
+and believe in.
+</p>
+<p>
+Reading this document will make your mind think more clearly about the facts
+of human existence, and remove any unnecessary guilt you have.
+</p>
+</desc>
+                </prod>
+                <prod id="feeling_good">
+                    <title>Feeling Good: The New Mood Therapy</title>
+                    <isbn>0380810336</isbn>
+                    <creator type="author">David D. Burns</creator>
+                    <desc>
+<p>
+This is a field guide to cognitive Psychology. It explains how our conscious
+thoughts cause unnecessary mood swings, including depressions and euphorias.
+It also gives practical measures to correct one’s cognitive process, raise
+one’s self-esteem, handle criticism, and recover from unnecessary mood swings.
+</p>
+<p>
+This book can also help people maintain a good self-esteem, and understand
+why people have mood swings. It is a very good anti-thesis to the traditional
+Freudian or similar psychology that is very misleading. A highly recommended
+read!
+</p>
+                    </desc>
+                </prod>
+                <prod id="cathedral_bazaar">
+                    <title>The Cathedral &amp; The Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary</title>
+                    <isbn>0596001088</isbn>
+                    <creator type="author">Eric S. Raymond</creator>
+                    <desc>
+<p>
+<a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">This book is
+also available online</a> on
+<a href="http://www.catb.org/~esr/">Raymond’s Site</a>.
+</p>
+<p>
+This book is a set of mind-revolving essays about the Free and Open
+Source Software world - their culture, conventions, customs; organizational,
+cultural and economical conventions - and by inflection on Free/Open Culture
+in general. It is a must read for every person living in the 21st century.
+</p>
+                    </desc>
+                </prod>
+            </cat>
+            <cat id="other_non_fiction">
+                <title>Other Book Reviews</title>
+                <desc>
+                    <p>
+                        These are other books I am reviewing.
+                        (in no particular order).
+                    </p>
+                </desc>
+                <cat id="non_technical_books">
+                    <title>Non-Technical Books</title>
+                    <prod id="bicameral_mind">
+                        <title>The Origin of Consciousness in the Breakdown of
+                            the Bicameral Mind</title>
+                        <isbn>0618057072</isbn>
+                        <creator type="author">Julian Jaynes</creator>
+                        <desc>
+<p>
+This book presents a theory on the evolution of human consciousness that sounds
+fantastic at first, but that the author backs with a lot of evidence.
+Essentially, consciousness (or rather “sentience”) is a learned layer that is
+not necessary for normal operation. Furthermore, all humans up to around
+1300 BC were completely void of consciousness, when they developed it out
+of necessity, starting at the Near East.
+</p>
+<p>
+The book kept me entertained, and enlightened me.
+</p>
+                        </desc>
+                    </prod>
+
+                    <prod id="mythical_man_month">
+                        <title>The Mythical Man-Month: Essays on Software Engineering</title>
+                        <isbn>0201835959</isbn>
+                        <creator type="author">Frederick P.  Brooks</creator>
+                        <desc>
+
+                    <p>
+                    This book, written over 20 years ago, by the project
+                    manager of IBM’s OS/360 is one of the classic texts on
+                    software engineering, and for a very good reason. It still
+                    feels very fresh now, and supplies a lot of insights about
+                    how to manage a software project. It will also prove of
+                    interest to managers of other teams (that do not
+                    necessarily work on software).
+                    </p>
+                    <p>
+                    The 20th anniversary edition, contains some later essays
+                    and conclusions by the same author.
+                    </p>
+
+
+                        </desc>
+                    </prod>
+                    <prod id="design_of_everyday_things">
+                        <title>The Design of Everyday Things</title>
+                        <isbn>0465067107</isbn>
+                        <creator type="author">Donald A. Norman</creator>
+                        <desc>
+                    <p>
+
+                    A great book about designing for usability. Instead of
+                    covering software, it covers everyday things like doors,
+                    taps or phones , and why or why not they make sense. This
+                    book is amusing, insightful and makes a very good read.
+
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="guns_germs_and_steel">
+                        <title>Guns, Germs and Steel: The Fates of Human Societies</title>
+                        <isbn>0393061310</isbn>
+                        <creator type="author">Jared Diamond</creator>
+                        <desc>
+                    <p>
+
+                    This books tries to answer the question of why did
+                    different human societies evolve differently. It
+                    demonstrates that geography and bio-geography played a big
+                    role in shaping the destinies of people in different places
+                    on our planet. This book contains many interesting
+                    anecdotes, a wonderful theme, and is a pleasure to read.
+                    Highly recommended.
+
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="penguin_book_of_puzzles">
+                        <title>The Penguin Book of Curious and Interesting Puzzles</title>
+                        <isbn>0140148752</isbn>
+                        <creator type="author">David Wells</creator>
+                        <desc>
+                    <p>
+                    This book provides a wonderful collection of puzzles,
+                    and brain-teasers, outlining their history, and various
+                    interesting facts about them. It provides solutions at
+                    the end.
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="hackers_and_painters">
+                        <title>Hackers and Painters: Big Ideas from the Computer Age</title>
+                        <isbn>0596006624</isbn>
+                        <creator type="author">Paul Graham</creator>
+                        <desc>
+<p>
+This is a collection of essays which appeared on
+<a href="http://www.paulgraham.com/">the personal site Paul Graham</a>.
+I highly enjoyed reading his essays and learned a lot from them. There
+are some issues with his style of writing, and with some of his conclusions,
+but as a whole, they are highly recommended.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="mathematics_and_humor">
+                        <title>Mathematics and Humor: A Study of the Logic of Humor</title>
+                        <isbn>0226650251</isbn>
+                        <creator type="author">John Allen Paulos</creator>
+                        <desc>
+<p>
+In this book, John Allen Paulos analyses some of the mathematics behind
+humour, and what makes us laugh. A recommended read.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="I_think_therefore_I_laugh">
+                        <title>I Think, Therefore I Laugh</title>
+                        <isbn>0231119151</isbn>
+                        <creator type="author">John Allen Paulos</creator>
+                        <desc>
+<p>
+This book starts by quoting <a
+href="http://en.wikipedia.org/wiki/Ludwig_Wittgenstein">Wittgenstein</a>
+that <q>A serious and good philosophical work could be written consisting
+entirely of jokes</q>. This book goes on to demonstrate how such concepts
+as logic, mathematics, science, and language are problematic and how
+misapplying them can yield funny results.
+</p>
+
+<p>
+This book features <a href="http://en.wikipedia.org/wiki/Groucho_Marx">Groucho
+Marx</a>, as well as a host of imaginary placeholder characters such as
+George, Waldo and Martha. I read it several times, and enjoyed it every time
+I did.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="beyond_numeracy">
+                        <title>Beyond Numeracy</title>
+                        <isbn>067973807X</isbn>
+                        <creator type="author">John Allen Paulos</creator>
+                        <desc>
+<p>
+This book explains a little out of many subjects of mathematics, in
+a very engaging way. I bought it and enjoyed it.
+</p>
+                        </desc>
+                    </prod>
+
+                </cat>
+                <cat id="technical_books">
+                    <title>Technical Books</title>
+                    <prod id="programming_perl">
+                        <title>Programming Perl</title>
+                        <isbn>0596000278</isbn>
+                        <creator type="author">Larry Wall et al</creator>
+                        <desc>
+
+                        <p>
+                        This is the canonical reference to the <a
+                        href="http://www.perl.org/">Perl programming
+                        language</a> by some of its best and best-known
+                        experts. It covers the entire Perl language as of
+                        perl-5.6.1, with any nuance and any fine point being
+                        mentioned. Furthermore, it is a very entertaining read: the
+                        style is lightweight and easy, and it is one of the
+                        funniest technical books I’ve ever read.
+                        </p>
+
+                        <p>
+                        Note that programmers who don’t know how to program Perl at all yet, cannot use it
+                        in order to learn the language. Instead, it is
+                        recommended, that they first learn Perl and only then
+                        read “Programming Perl”. For learning Perl, see
+                        <a href="http://perl-begin.org/">the Perl Beginners’
+                        Site</a>. (Thanks to “infidel” from Freenode for
+                            suggesting this.)
+                        </p>
+
+
+                        </desc>
+                    </prod>
+                    <prod id="computation_structures">
+                        <title>Computation Structures</title>
+                        <isbn>0262231395</isbn>
+                        <creator type="author">Stephen A. Ward &amp; Robert H. Halstead</creator>
+                        <desc>
+                    <p>
+
+                    A great book about logic design and how to construct a
+                    computer from very basic elements. Also covers some layers
+                    above the digital circuits level, but this material did not
+                    particularly interest me. I studied using this book in two
+                    of my <a href="http://www.technion.ac.il/">Technion</a>
+                    courses, and can highly recommend it.
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="sicp">
+                        <title>Structure and Interpretation of Computer Programs</title>
+                        <isbn>0262011530</isbn>
+                        <creator type="author">Harold Abelson &amp; Gerald Jay Sussman</creator>
+                        <desc>
+
+                    <p>
+                    An excellent book that teaches the basics of good
+                    software design using the Scheme programming language.
+                    Introduces very interesting techniques, and demonstrates
+                    how they can be useful for real-life tasks. I took two
+                    courses in the Technion based on this book, and they also
+                    were very enlightening.  </p> <p> The text of this book and
+                    other related resources <a
+                    href="http://mitpress.mit.edu/sicp/">are available online
+                    on its site</a>.  </p>
+
+
+                        </desc>
+                    </prod>
+                    <prod id="ui_design_for_programmers">
+                        <title>User Interface Design for Programmers</title>
+                        <isbn>1893115941</isbn>
+                        <creator type="author">Joel Spolsky</creator>
+                        <desc>
+                    <p>
+
+                    I really liked <a
+                        href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">the
+                        online version of the book</a> when I read it on Joel’s
+                    site, and the printed version contains several additional
+                    chapters. This book is very funny, enlightening, with
+                    many screenshots and diagrams. It’s a must for anyone doing
+                    GUI or Web design. Highly recommended.
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="refactoring">
+                        <title>Refactoring - Improving The Design of
+                            Existing Code</title>
+                        <isbn>0201485672</isbn>
+                        <creator type="author">Martin Fowler</creator>
+                        <desc>
+                            <p>
+
+                                <a href="http://www.refactoring.com/">Refactoring</a>
+                                is improving the internal design of a
+                                code without changing its external
+                                behaviour. This book is the definitive
+                                guide to refactoring, at least in
+                                object-oriented systems.
+                            </p>
+
+                            <p>
+
+                                The first chapters of the book are rather
+                                general. They introduce the motivation
+                                for refactoring, why it is good, and why
+                                it actually speeds up development.
+                                Also, they also give a list of “bad smells” in the code that indicate that
+                                a refactoring is needed (like
+                                duplicate code or magic numbers). I found
+                                the bad smells part to be the most
+                                illuminating part of the book.
+
+                            </p>
+
+                            <p>
+                                The middle part of the book which is its
+                                lion’s share is a catalogue of various
+                                refactorings. These are things like extracting
+                                a method, creating a superclass, eliminating
+                                inheritance, or creating one. The author
+                                explains there each refactoring, when to do
+                                it, the steps for performing it most safely,
+                                and then usually gives an example of how to do
+                                it. I found the catalogue a bit tedious to read,
+                                but interesting nonetheless. It taught me some
+                                new techniques that I was not previously aware
+                                of.
+                            </p>
+
+                            <p>
+                                The final chapters wrap up the book, and are
+                                also interesting to read. They consist of an
+                                essay by William Opdyke (who wrote a very
+                                early research paper on refactoring) titled
+                                “Refactoring, Reuse and Reality”, a chapter
+                                about <a
+                                    href="http://www.refactoring.com/tools.html">Refactoring
+                                    Tools</a>, and a short summarising chapter
+                                by Kent Beck.
+                            </p>
+                            <p>
+                                The book smells a bit of hype: Java is used as
+                                the example language (albeit its use
+                                there is quite justified); there are
+                                many UML diagrams (which were at first
+                                confusing to me due to the many kind
+                                of arrows they have); and there are
+                                references of several of the so-called
+                                Design Patterns. (from the Gang of
+                                Four book and otherwise). But they
+                                don’t detract much from an otherwise
+                                good book.
+                            </p>
+                            <p>
+                                The book can also
+                                be used as a reference to look for
+                                refactorings or see how can they be
+                                performed well. I think this book has
+                                made me more conscious of how I
+                                refactor and write code, and I try to
+                                refactor in a way that will minimize
+                                the errors caused by it. I’m also now
+                                more aware of the “two hats”, as
+                                Fowler puts it, of either refactoring
+                                code or adding new features.
+                            </p>
+                            <p>
+                                To sum, this is a very good and
+                                important book to read, especially for
+                                beginning programmers. I’m just not
+                                sure it justifies the $54.00 list
+                                price. This price is too high for
+                                a book of this scope.
+                            </p>
+                        </desc>
+                    </prod>
+                    <prod id="art_of_unix_programming">
+                        <title>The Art of UNIX Programming</title>
+                        <isbn>0131429019</isbn>
+                        <creator type="author">Eric S. Raymond</creator>
+                        <desc>
+                    <p>
+
+                    A very nice book about the elements and know-how of planning and implementing
+                    UNIX software. You can read
+                    <a href="http://wiki.perl.org.il/index.php/Book_Review_-_The_Art_of_Unix_Programming_-_reviewed_by_Shlomi_Fish">a
+                    more detailed review and critique</a> of this book by me, and also <a href="http://www.catb.org/~esr/writings/taoup/">read it online</a>.
+
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="qmail_handbook">
+                        <title>The qmail Handbook</title>
+                        <isbn>1893115402</isbn>
+                        <creator type="author">Dave Sill</creator>
+                        <desc>
+
+                    <p> A very good book about the <a
+                    href="http://qmail.org/">qmail mail server</a>. Introduces
+                    the fundamental concepts of the server, and then instructs
+                    how to operate it, and configure other software for it. One
+                    thing to note about this book is that it convinced me that
+                    I should avoid using qmail unless it’s already installed
+                    and has a configuration. qmail has a very problematic
+                    license, lacks most necessary features out of the box, is
+                    no longer maintained, has a very problematic creator and
+                    copyright owner, etc.  </p>
+
+                    <p> If you’re going to install a new mail server, take a
+                    look at <a href="http://www.postfix.org/">Postfix</a>, <a
+                    href="http://www.exim.org/">Exim</a>, <a
+                    href="http://www.courier-mta.org/">Courier</a> or whatever.
+                    These are open-source, are actively developed, and lack all
+                    of the aforementioned problems. “The qmail Handbook”,
+                    however, is useful for those who need to administer
+                    existing qmail configurations, or migrate them to a
+                    different implementation. You can also take a look at <a
+                    href="http://www.lifewithqmail.org/">Life with qmail</a>
+                    which is a guide to qmail, by the same author.  </p>
+
+
+                        </desc>
+                    </prod>
+                    <prod id="svg_programming">
+                        <title>SVG Programming - The Graphical Web</title>
+                        <isbn>1590590198</isbn>
+                        <creator type="author">Kurt Cagle</creator>
+                        <desc>
+
+                    <p>
+
+                    A great book about <a
+                    href="http://www.w3.org/Graphics/SVG/">SVG</a> (= Scalable
+                    Vector Graphics), the emerging standard for vector
+                    graphics, animation and interactive applets on the web. It
+                    explains the standard step by step, with many nuances
+                    covered. The final chapters cover some advanced techniques.
+                    Highly recommended.
+                    </p>
+
+
+                        </desc>
+                    </prod>
+                    <prod id="mastering_algos_with_perl">
+                        <title>Mastering Algorithms with Perl</title>
+                        <isbn>1565923987</isbn>
+                        <creator type="author">John Macdonald, Jon Orwant and Jarkko Hietaniemi</creator>
+                        <desc>
+                    <p>
+
+                    I took a course about algorithms in <a
+                        href="http://www.technion.ac.il/">the Technion</a>
+                    before reading this book, and yet found this book to be
+                    very interesting. This books covers a lot of different
+                    fields and topics, each one with its own algorithms and
+                    each can give you a taste of what this field does. This is
+                    one of the best books I read in the O’Reilly series of Perl
+                    books, but it’s not specifically about Perl. Highly
+                    Recommended for Programmers.
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="porting_unix_software">
+                        <title>Porting UNIX Software</title>
+                        <isbn>1565921267</isbn>
+                        <creator type="author">Greg Lehey</creator>
+                        <desc>
+
+                    <p>
+                    When I started working in a Web Design company, UNIX
+                    systems were all we had and the only thing we liked in
+                    order to give our clients a presence on the Internet.
+                    However, we used a plethora of UNIXes: IRIX, SunOS 4.1.3,
+                    FreeBSD, Linux, and there are many more flavours of UNIX
+                    out there. So I naturally wondered what was the difference
+                    between them.
+                    </p>
+
+                    <p>
+                    A co-worker recommended that in order to better understand
+                    what’s involved I should read this book, and so I bought it
+                    from a local Israeli book store. I did not regret buying it
+                    - this book is simply superb. Some chapters (such as the
+                    one about handling terminal I/O) are of little interest to
+                    most programmers, but as a general rule this book gives a
+                    lot of essential information about how to write portable
+                    software.
+                    </p>
+
+                    <p>
+                    Many Windows programmers write code and test it on their
+                    local machine, and think it will be perfectly acceptable
+                    this way. But Windows is only one OS, and the x86’s is only
+                    one processor architecture. In the UNIX world, there are
+                    plenty of other operating systems and processor
+                    architectures. Often many subtle problems can occur because
+                    of lack of knowledge of UNIX concepts.
+                    </p>
+
+                    <p>
+                        The book is now <a href="http://www.lemis.com/grog/Documentation/PUS/">available online</a> on the author’s site under one one of the
+                        Creative Commons licences.
+                    </p>
+                        </desc>
+                    </prod>
+                    <prod id="perl_journal_vol_1">
+                        <title>Computer Science &amp; Perl Programming: Best of The Perl Journal</title>
+                        <isbn>0596003102</isbn>
+                        <creator type="author">Various</creator>
+                        <desc>
+                    <p>
+
+                    The first installment in the series of three books
+                    containing a collection of articles from “the Perl
+                    Journal”. Very nice book, with interesting articles.  You
+                    can <a
+                        href="http://www.perl.org.il/books/0596003102.html">read
+                        my review of it</a> to the Perl mongers.
+
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="perl_journal_vol_3">
+                        <title>Games, Diversions &amp; Perl Culture: Best of the Perl Journal</title>
+                        <isbn>0596003129</isbn>
+                        <creator type="author">Various</creator>
+                        <desc>
+                    <p>
+
+                    The third installment in the series of three books
+                    containing a collection of articles from “the Perl
+                    Journal”. As a whole it is very entertaining and
+                    enlightening. You can <a
+                        href="http://www.perl.org.il/books/0596003129.html">read
+                        my review of it</a>
+                    to the Perl mongers.
+
+                    </p>
+
+                        </desc>
+                    </prod>
+                    <prod id="higher_order_perl">
+                        <title>Higher Order Perl: Transforming Programs with Programs</title>
+                        <isbn>1558607013</isbn>
+                        <creator type="author">Mark Jason Dominus</creator>
+                        <desc>
+
+                    <p>
+                    “Higher Order Perl” is both enjoyable and accessible. Mark
+                    Jason Dominus demonstrates some techniques that originated
+                    from the LISP world and shows how to implement them in
+                    Perl, and how they can be put into good use. I learned a
+                    lot from this book: how currying, iterators and streams can
+                    be useful, how a recursive descent parser can be
+                    implemented, and many other things.
+                    </p>
+                    <p>
+                    Also see <a
+                        href="http://www.perl.org.il/books/1558607013.html">my
+                        review on the Israeli Perl Mongers site</a>.
+                    </p>
+                        </desc>
+                    </prod>
+
+                    <prod id="perl_hacks">
+                        <title>Perl Hacks</title>
+                        <isbn>0596526741</isbn>
+                        <creator type="author">chromatic, with Damian Conway
+                            and Curtis “Ovid” Poe</creator>
+                        <desc>
+
+<p>
+I received this book as a token of appreciation for my contributions to
+<a href="http://perladvent.pm.org/2006/">the 2006 Perl Advent Calendar</a>.
+It’s the first book I read as part of the
+<a href="http://www.oreilly.com/store/series/hacks.csp">O’Reilly Hacks’ series
+of books</a>, and it proved to be a light yet informative and entertaining
+read.
+</p>
+
+<p>
+The book covers various useful “hacks” or small tricks that allow one to
+achieve a lot of cool tasks when working with Perl. These tricks are unorthodox
+and stretch the limit of one’s Perl knowledge. Since they require an advanced
+knowledge and understanding of Perl, I would recommend this book only for Perl
+experts. Some of the B:: using modules were even too high-level for me to
+understand how they worked internally. However, I understood the purpose of the
+code in all cases, even if I didn’t understand the code itself.
+</p>
+
+<p>
+So it is a recommended read for people who’ve worked with Perl a lot,
+and wish to learn many new and useful tricks. Perl Hacks for Perl hackers,
+indeed!
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="perl_best_practices">
+                        <title>Perl Best Practices</title>
+                        <isbn>0596001738</isbn>
+                        <creator type="author">Damian Conway</creator>
+                        <desc>
+
+<p>
+Once upon a time, someone I talked with on IRC suggested I create and publicise
+a wishlist on Amazon.com so people can buy me gifts. I did so, and after a few
+months someone ordered me both this book and  <a
+href="http://www.amazon.com/exec/obidos/ASIN/0345348036/ref=nosim/shlomifishhom-20/">the
+book “The Princess Bride”</a> (which I have read since then and also liked).
+</p>
+
+<p>
+“Perl Best Practices” generated a lot of buzz in the Perl world, and so I had
+some good expectations. And happily the book has indeed fulfilled them. Perl
+Best Practices enumerates and explains the practice and rationale behind 256
+best practices of Perl, that according to the author will result in better,
+more maintainable code.
+</p>
+
+<p>
+I naturally didn’t fully agree with everything that was suggested there, but
+even so found it as a good food for thought. The book is highly recommended for
+anyone to read and become a better and more self-conscious Perl programmer.
+</p>
+
+<p>
+After speaking with the guy who bought me this book on email he gave another
+best practice that was absent (and not-practised) from the book: sort your
+pattern modifiers alphabetically (I.e: <tt>/egix</tt> instead of <tt>/gxie</tt>
+so they can later be searched for.
+</p>
+
+                        </desc>
+                    </prod>
+                    <prod id="joel_on_software">
+                        <title>Joel on Software: And on Diverse and
+                        Occasionally Related Matters That Will Prove of
+                        Interest to Software Developers, Designers, and
+                        Managers, and to Those Who, Whether by Good Fortune or
+                        Ill Luck, Work with Them in Some Capacity</title>
+                        <isbn>1590593898</isbn>
+                        <creator type="author">Joel Spolsky</creator>
+                        <desc>
+
+<p>
+This book is a collection of essays Joel Spolsky published on his
+<a href="http://www.joelonsoftware.com/"><i>Joel on Software</i> site</a>. Joel
+is an excellent writer, writing in a humorous and accessible way
+and providing many insights. I enjoyed reading his site, so I believe the
+book will definitely be very nice too.
+</p>
+
+<p>
+Joel writes about software management from his experience working for several
+companies, from his vast knowledge, and more recently from starting his own
+software shop. I learned a lot from the articles on his site, and found them
+useful in my day-to-day work as a software developer.
+</p>
+
+<p>
+I don’t always fully agree with everything Joel says, but even then, he
+provides a lot of useful food for thought.
+</p>
+
+                        </desc>
+                    </prod>
+                    <prod id="pragmatic_programmer">
+                        <title>The Pragmatic Programmer: From
+                        Journeyman to Master</title>
+                        <isbn>020161622X</isbn>
+                        <creator type="author">Andrew Hunt &amp; David
+                            Thomas</creator>
+                        <desc>
+
+<p>
+I heard of this book from several sources (including
+<a href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">the
+Joel on Software Book Recommendations’ page</a>), and it was very much
+esteemed, so I decided to buy it. After fully reading it, I dare say that
+I found it relatively disappointing and unfulfilling, especially in
+consideration of the great expectations I had from it.
+</p>
+
+<p>
+This book covers a series of best practices for a programmer or a team
+to become better and more capable. While it had some good points, they
+were in generally lost in the large amount of individual advice given.
+I still think many people may enjoy this book better than I did, but I
+personally found it lacking.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="extreme_programming_explained">
+                        <title>Extreme Programming Explained</title>
+                        <isbn>0201616416</isbn>
+                        <creator type="author">Kent Beck</creator>
+                        <desc>
+
+<p>
+I heard a lot about <a href="http://www.extremeprogramming.org/">Extreme
+Programming</a> from my friends and associates, and especially from an
+Israeli Perl Monger who is very enthusiastic about it. So I decided
+to buy this book and see for myself if the fuss was justified.
+</p>
+
+<p>
+I ended up really liking this book, and it did not disappoint me. It’s short,
+provides an accessible read, is written well, and it piques one’s interest.
+</p>
+
+<p>
+Extreme Programming (XP) aims to explain how to run a good software
+development team in an organisation. By focusing on the values of XP, the
+proposed methods (work in pairs, write unit tests, have the customers on
+site, etc.), and illustrating with many useful stories and diagrams, this
+book makes for a very good read. Highly recommended.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="mastering_perl">
+                        <title>Mastering Perl</title>
+                        <isbn>0596527241</isbn>
+                        <creator type="author">brian d foy</creator>
+                        <desc>
+<p>
+Mastering Perl is the third book in the installment of O’Reilly’s three
+books which introduce Perl to people who are not familiar with. I haven’t
+read <i>Learning Perl</i> and <i>Intermediate Perl</i>, which are the first two
+installments of the series, because I felt that I already knew most of
+the material that they are going to cover. Now, brian has written
+<i>Mastering Perl</i> with the help of the community, by maintaining its
+sources in a version control repository, and that’s how I ended up finally
+reading it in 2009.
+</p>
+
+<p>
+As a proficient Perl programmer who has been working with it since
+1996, and have <a href="http://metacpan.org/author/SHLOMIF">several
+modules on CPAN</a> and some other open-source Perl projects, I should note
+that the book did not teach me too many new things. However, I found it to be
+well-written, mildly entertaining at times, and generally accurate. The
+coverage of some of the technologies there is somewhat out-of-date, but
+hopefully this will be fixed in later editions. So I can recommend this
+book to beginning programmers who already know the material in the previous
+two books in the series.
+</p>
+
+<p>
+One fact to note is that the book focuses on generic Perl technologies that
+are useful for all types of programs, rather than on particular uses for
+Perl (e.g: web-development or database programming). As a result of it, I
+found the book to be of less interest to me, but naturally, this approach
+has its merit as it is good for all Perl programmers.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="tdd_by_example">
+                        <title>Test Driven Development by Example</title>
+                        <isbn>0321146530</isbn>
+                        <creator type="author">Kent Beck</creator>
+                        <desc>
+                            <p>
+                                I was disappointed after I started reading an earlier book about
+                                <a href="http://en.wikipedia.org/wiki/Test-driven_development">“Test
+                                    Driven Development” (TDD)</a>
+                                that I have bought (here's
+<a href="http://mail.perl.org.il/pipermail/perl/2010-April/010909.html">my
+earlier review and a recommendation against it</a>)
+but I decided
+to give the TDD sub-series of the Extreme Programming books another chance with
+the more elementary book in question. This time, the book met my expectations
+and I can recommend it.
+</p>
+
+<p>
+First of all, Beck's book is relatively short and small, as opposed to the
+<i>xUnit Test Patterns</i> book. It is also interesting, entertaining and full
+of insights. It is divided into three sections:
+</p>
+
+<ul>
+    <li>
+        <p>
+            In the first: a sample financial TDD project is developed in Java, with
+instructions on how to proceed every way. The standard “add-failing-test; get
+it to pass; refactor;” cycle is described there with a TODO list as a tool.
+This was the best section, in my opinion.
+</p>
+</li>
+<li>
+    <p>In the second section, Beck bootstraps an xUnit framework in Python
+        starting from nothing (and compares it to doing brain surgery on yourself.).</p>
+</li>
+
+<li>
+    <p>
+In the third section, he briefly discusses various TDD patterns. I admit I
+did not pay enough attention there because I read the book before going to
+sleep when I was tired, and want to go over it again.
+</p>
+</li>
+</ul>
+<p>
+So I can recommend this book for all people who want to learn how to do TDD
+better. Mr. Beck kinda aims for the high ideal of TDD and I often deviate from
+it, which I think is OK.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="programming_pearls">
+                        <title>Programming Pearls</title>
+                        <isbn>0201657880</isbn>
+                        <creator type="author">Jon Bentley</creator>
+                        <desc>
+<p>
+I've heard this book mentioned in several places before buying it and reading
+it and it did not disappoint me. This book is really great, with
+interesting coverage of interesting programming and computer science-related
+topics. It has an extensive discussion of optimising code, which I
+appreciated, being very interested in it (see:
+<a href="http://en.wikibooks.org/wiki/Optimizing_Code_for_Speed">my essay
+about it</a> ), and lots of other
+interesting stuff. The second edition was updated for modern times, and feels
+quite fresh.
+</p>
+
+<p>
+Bentley mentions in the book that he has written a book called "Writing
+Efficient Programs" which is now out-of-print with some techniques for
+optimising code. I was saddened to hear that it is indeed out-of-print,
+because I would like to read it. He does give a summary of the book in an
+appendix,
+though.
+</p>
+
+<p>
+The book contains many exercises, most of which I’ve mentally thought about,
+but did not actually solve using the computer. Otherwise, I enjoyed
+reading this book and can wholeheartedly recommend it.
+</p>
+                        </desc>
+                    </prod>
+                    <prod id="more_programming_pearls">
+                        <title>More Programming Pearls: Confessions of a Coder</title>
+                        <isbn>0201118890</isbn>
+                        <creator type="author">Jon Bentley</creator>
+                        <desc>
+<p>
+A fellow Perl programmer bought me this book as a birthday present from my
+Amazon.com wishlist because I put it there out of wishing to read the follow-up
+to the previous book in the series which I enjoyed. However, this book failed
+to meet my expectations, and I found it disappointing.
+</p>
+
+<p>
+It does not have the same focus on topics that interest me and instead
+contains
+many different topics. While not being completely bad, it fails to live up
+to the promise of the previous book, and I cannot really recommend it. The
+book is also showing its age.
+</p>
+
+<p>
+The book page on Amazon.com used to contain a single 3-star review for
+<i>More Programming Pearls</i> which kinda summarises my feelings.
+</p>
+                        </desc>
+                    </prod>
+                </cat>
+            </cat>
+        </cat>
+    </data>
+</product-syndication>

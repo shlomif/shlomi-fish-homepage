@@ -1,0 +1,16 @@
+#include 'template.wml'
+
+<points>
+
+<li>
+It is possible to specify plain rules in an Automake file, just as you
+would in a normal makefile.
+</li>
+
+<li>
+Within these rules one can use the meta-variables <tt>$&lt;</tt> as the
+source and <tt>$@</tt> as the target.
+</li>
+
+</points>
+

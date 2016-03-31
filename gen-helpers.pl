@@ -103,6 +103,8 @@ foreach my $cmd (
     _my_system($cmd);
 }
 
+utime(undef, undef, map { "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$_" } qw(html pdf));
+
 io()->file('Makefile')->print("include _Main.mak\n");
 
 =begin removed_duplicate_code

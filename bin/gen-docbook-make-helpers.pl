@@ -52,10 +52,13 @@ sub _github_clone
 
     my @cmd = ('git', 'clone', $url, $clone_into);
 
-    print "@cmd\n";
-    if (system (@cmd) )
+    if (! -e $clone_into)
     {
-        die "git clone [@cmd] failed!";
+        print "@cmd\n";
+        if (system (@cmd) )
+        {
+            die "git clone [@cmd] failed!";
+        }
     }
     if (! -e $link)
     {

@@ -438,6 +438,10 @@ my $humour_tree_contents =
                     url => "humour/bits/HTML-6/",
                 },
                 {
+                    text => "The Song “Wide Awake” by Katy Perry is Evil!",
+                    url => "humour/bits/The-Song-Wide-Awake-is-Evil/",
+                },
+                {
                     text => "Emma Watson’s Visit to Israel and Gaza",
                     url => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
                     title => "Emma Watson visiting the Gaza envelope and the Gaza strip",

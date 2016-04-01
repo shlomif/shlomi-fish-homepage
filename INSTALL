@@ -68,8 +68,9 @@ the path.
 #. Put the XHTML 1.1 DTDs , the XHTML 1.0 DTDs , etc. in your
 XML_CATALOG_FILES environment variable.
 
-    - An easy way to do that is to use
-    http://www.htmlhelp.com/tools/validator/offline/
+    - An easy way to do that is to do
+    git clone https://github.com/w3c/markup-validator.git
+    and set XML_CATALOG_FILES to "/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml"
 
 #. Do the following to build the site, after all dependencies were installed:
 

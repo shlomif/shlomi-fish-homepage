@@ -16,6 +16,8 @@ before_install:
     - bash -x bin/install-tidyp-systemwide.bash
     - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
+    - git clone https://github.com/w3c/markup-validator.git
+    - pwd
 python:
     - "3.5"
-script: "m() { make -j2 DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"
+script: "export XML_CATALOG_FILES=\"/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml\" ; m() { make -j2 DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

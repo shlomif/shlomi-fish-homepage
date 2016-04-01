@@ -3,9 +3,10 @@ dist: trusty
 before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -y ack-grep asciidoc cmake cpanminus docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape mercurial myspell-en-gb libperl-dev optipng perl valgrind wml xsltproc yui-compressor
+    - sudo ln -s /usr/bin/yui-compressor /usr/bin/yuicompressor
     - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
-    - sudo cpanm Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
-    - "sudo cpanm $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
+    - sudo cpanm --notest Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
+    - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
     - gem install sass compass compass-blueprint
     - bash bin/install-cmakey-program-system-wide.bash 'latemp' '0.8.0' 'http://web-cpan.shlomifish.org/latemp/download'
     - ( hg clone https://shlomif@bitbucket.org/shlomif/wml-extended-apis && cd wml-extended-apis/xhtml/1.x && bash Install.bash )

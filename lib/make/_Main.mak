@@ -1323,6 +1323,7 @@ ENEMY_STYLE = dest/t2/humour/TheEnemy/The-Enemy-English-v7/style.css
 all: $(ENEMY_STYLE)
 
 $(ENEMY_STYLE):
+	mkdir -p "$$(dirname "$@")"
 	touch $@
 
 tags:

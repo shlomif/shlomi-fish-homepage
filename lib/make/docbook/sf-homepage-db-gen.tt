@@ -91,27 +91,30 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% SET files = val.src_files %]
 
 [% v %]_BASE = [% val.src_dir %]
+[% SET stamp = v _ "_STAMP" %]
+[% SET vstamp = "\$(" _ stamp _ ")" %]
+[% stamp %] = $([% v %]_BASE)/FINISH_STAMP
 
 [% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
 [% v %]_DEST = $(T2_DEST)/[% val.dest_dir %]
 [% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
-[% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,[% files.join(" ") %])
+[% v %]_files = [% files.join(" ") %]
+[% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
+[% v %]_SRC_FILES = $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
 
 [% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
 
-[% # TODO : change from qp to "quadp".
-%]
 [% BLOCK cmd %]
 	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" WMLOPTS="--passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/presentations/qp/common/')"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
+	touch [% vstamp %]
 [% END %]
 
 [% pres_targets.push(l) %]
 
-$([% v %]_DEST_INDEX): $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml
+[% vstamp %]: $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml $([% v %]_SRC_FILES)
 [%- INCLUDE cmd %]
 
-$([% v %]_DEST_FILES): $([% v %]_DEST)/%: $([% v %]_BASE)/src/%.wml
-[%- INCLUDE cmd %]
+$([% v %]_DEST_INDEX) $([% v %]_DEST_FILES): [% vstamp %]
 
 [% END %]
 

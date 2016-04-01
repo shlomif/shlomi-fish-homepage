@@ -2,8 +2,10 @@ os: linux
 dist: trusty
 before_install:
     - sudo apt-get update -qq
-    - sudo apt-get install -y ack-grep asciidoc cmake cpanminus docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape mercurial myspell-en-gb libperl-dev optipng perl valgrind wml xsltproc yui-compressor
+    - sudo apt-get install -y ack-grep asciidoc cmake cpanminus docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape mercurial myspell-en-gb libperl-dev optipng perl python3 python3-setuptools python3-pip valgrind wml xsltproc yui-compressor
     - sudo ln -s /usr/bin/yui-compressor /usr/bin/yuicompressor
+    - sudo -H `which python3` -m pip install bs4
+    - sudo -H `which python3` -m pip install beautifulsoup4
     - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
     - sudo cpanm --notest Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
@@ -14,4 +16,6 @@ before_install:
     - bash -x bin/install-tidyp-systemwide.bash
     - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
+python:
+    - "3.5"
 script: "m() { make DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

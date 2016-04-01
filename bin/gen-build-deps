@@ -86,6 +86,27 @@ GetOptions(
 {
     my @not_found;
 
+    foreach my $module (qw(bs4))
+    {
+        if (system('python3', '-c', "import $module") != 0)
+        {
+            push @not_found, $module;
+        }
+    }
+    if (@not_found)
+    {
+        print "The following python3 modules could not be found:\n\n";
+        foreach my $module (@not_found)
+        {
+            print "$module\n";
+        }
+        exit(-1);
+    }
+}
+
+{
+    my @not_found;
+
     my %required_files =
     (
         "$ENV{HOME}/.shlomifish-amazon-sak.json" => <<'EOF'

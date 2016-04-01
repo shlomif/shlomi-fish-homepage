@@ -18,4 +18,4 @@ before_install:
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
 python:
     - "3.5"
-script: "m() { make DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"
+script: "m() { make -j2 DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

@@ -107,6 +107,8 @@ utime(undef, undef, map { "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/lette
 
 io()->file('Makefile')->print("include lib/make/_Main.mak\n");
 
+_my_system(['make', 'sects_cache']);
+
 =begin removed_duplicate_code
 
 my $wml_deps = io->file("deps.mak");

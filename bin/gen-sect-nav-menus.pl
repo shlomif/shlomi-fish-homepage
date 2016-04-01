@@ -58,7 +58,17 @@ sub _out
     return;
 }
 
-my $pm = Parallel::ForkManager->new(4);
+# At least temporarily disable Parallel::ForkManager because it causes
+# the main process to exit before all the work is done.
+
+my $WITH_PM = 0;
+
+my $pm;
+
+if ($WITH_PM)
+{
+    $pm = Parallel::ForkManager->new(4);
+}
 
 foreach my $host (qw(t2 vipe))
 {
@@ -72,11 +82,14 @@ foreach my $host (qw(t2 vipe))
     URLS:
     while (my @urls = $it->())
     {
-        my $pid = $pm->start;
-
-        if ($pid)
+        if ($WITH_PM)
         {
-            next URLS;
+            my $pid = $pm->start;
+
+            if ($pid)
+            {
+                next URLS;
+            }
         }
 
         foreach my $proto_url (@urls)
@@ -224,6 +237,9 @@ foreach my $host (qw(t2 vipe))
             print "filename=$filename\n";
         }
 
-        $pm->finish; # Terminates the child process
+        if ($WITH_PM)
+        {
+            $pm->finish; # Terminates the child process
+        }
     }
 }

@@ -1128,7 +1128,7 @@ $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && make docbook
 
 $(HTML_TUT_HEB_TT):
-	cd lib/presentations/docbook && hg clone ssh://hg@bitbucket.org/shlomif/html-tutorial
+	cd lib/presentations/docbook && hg clone https://shlomif@bitbucket.org/shlomif/html-tutorial
 
 update_html_tut: update_html_tut_hg html_tutorial
 

@@ -2,7 +2,7 @@ os: linux
 dist: trusty
 before_install:
     - sudo apt-get update -qq
-    - sudo apt-get install -y ack-grep asciidoc cmake cpanminus docbook-defguide docbook-xsl docbook-xsl-ns hunspell inkscape mercurial myspell-en-gb libperl-dev optipng perl valgrind wml xsltproc yui-compressor
+    - sudo apt-get install -y ack-grep asciidoc cmake cpanminus docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape mercurial myspell-en-gb libperl-dev optipng perl valgrind wml xsltproc yui-compressor
     - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
     - sudo cpanm Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
     - "sudo cpanm $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
@@ -12,5 +12,4 @@ before_install:
     - ( hg clone https://shlomif@bitbucket.org/shlomif/latemp && cd latemp/support-headers && perl install.pl )
     - bash -x bin/install-tidyp-systemwide.bash
     - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
-#  script: "m() { make DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"
-script: "m() { make DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl"
+script: "m() { make DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

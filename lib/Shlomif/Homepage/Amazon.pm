@@ -13,7 +13,7 @@ sub import
 
 package Shlomif::Homepage::Amazon::Obj;
 
-use Moose;
+use MooX (qw( late ));
 
 use JSON::MaybeXS qw(decode_json);
 
@@ -21,9 +21,9 @@ use XML::Grammar::ProductsSyndication;
 use XML::LibXML::XPathContext;
 use Term::ReadPassword;
 
-has 'wml_dir' => (isa => 'Str', is => 'ro');
-has 'lib_dir' => (isa => 'Str', is => 'ro');
-has 'xml_basename' => (isa => 'Str', is => 'ro');
+has 'wml_dir' => (isa => 'Str', is => 'ro', required => 1,);
+has 'lib_dir' => (isa => 'Str', is => 'ro', required => 1,);
+has 'xml_basename' => (isa => 'Str', is => 'ro', required => 1,);
 has 'ps' => (isa => 'XML::Grammar::ProductsSyndication', is => 'rw');
 
 sub BUILD

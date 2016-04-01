@@ -23,7 +23,9 @@ my $full_db_path = "$script_dir/$db_base_name";
 # May not be a good idea in the future.
 unlink($full_db_path, "$full_db_path-journal");
 
-my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
+my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","", { RaiseError => 1});
+
+$dbh->begin_work;
 
 $dbh->do("CREATE TABLE fortune_collections (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(60), desc TEXT, title VARCHAR(100), tooltip TEXT)");
 
@@ -44,15 +46,11 @@ INSERT INTO fortune_collections (str_id, title, tooltip, desc)
 VALUES(?, ?, ?, ?)
 EOF
 
-    $dbh->begin_work;
 
     foreach my $col (@$collections_aref)
     {
         $col_insert_sth->execute($col->id(), $col->text(), $col->title(), $col->desc());
     }
-
-    $dbh->commit;
-
 }
 
 my @file_bases = ( map { $_->id() } @$collections_aref);
@@ -61,9 +59,9 @@ my $collection_query_id_sth = $dbh->prepare(
     q{SELECT id FROM fortune_collections WHERE str_id = ?}
 );
 
-# We split the work to 50-items batches per the advice on
-# Freenode's #perl by tm604 and jql.
-$dbh->begin_work;
+# We put the work within one large commit per the advice on
+# Freenode's #perl by tm604 and jql , and to avoid these errors:
+# http://stackoverflow.com/questions/21054245/attempt-to-write-a-readonly-database-django-w-selinux-error
 
 my $global_idx = 0;
 
@@ -112,13 +110,14 @@ foreach my $basename (@file_bases)
     {
         $idx++;
 
-        if ((++$global_idx) % 100 == 0)
-        {
-            $dbh->commit;
-            $dbh->begin_work;
-        }
+        $global_idx++;
     }
 }
 
 # Commit the remaining items.
 $dbh->commit;
+
+$insert_sth->finish;
+$collection_query_id_sth->finish;
+
+$dbh->disconnect;

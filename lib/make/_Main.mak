@@ -59,6 +59,7 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
+VIPE_ALL_DIRS_DEST = $(VIPE_DIRS_DEST) $(VIPE_COMMON_DIRS_DEST)
 
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
@@ -93,7 +94,7 @@ define VIPE_COMMON_INCLUDE_WML_RENDER
 $(call GENERIC_WML_RENDER,vipe,$(COMMON_SRC_DIR),$(VIPE_DEST))
 endef
 
-make-dirs: $(T2_ALL_DIRS_DEST)
+make-dirs: $(T2_ALL_DIRS_DEST) $(VIPE_ALL_DIRS_DEST)
 
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 
@@ -332,19 +333,16 @@ GPERL_DEPS = lib/Shlomif/Homepage/Amazon.pm
 
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
-	$(MAKE)
 
 $(T2_DEST)/philosophy/books-recommends/index.html : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
-	$(MAKE)
 
 $(T2_DEST)/humour/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
-	$(MAKE)
 
 
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL

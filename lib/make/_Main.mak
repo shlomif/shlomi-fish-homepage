@@ -166,7 +166,7 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 
-test: runtest
+test: ptest
 
 runtest: all
 	runprove Tests/*.t

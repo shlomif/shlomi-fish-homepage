@@ -96,7 +96,7 @@ lib/xml_g_fiction.wml
     {
         my $contents = io->file($fn)->slurp;
 
-        foreach my $match ($contents =~ m{^(?:(?:\#include *")|(?:<shlomif_include_colorized_file filename="\.\./lib/))([^"]+)"}gms)
+        foreach my $match ($contents =~ m{^(?:(?:\#include *")|(?:<include file="\.\./lib/)|(?:<shlomif_include_colorized_file filename="\.\./lib/))([^"]+)"}gms)
         {
             if (exists($files_containing_headers{$match})
                     or ($match =~ m#\Adocbook/|fiction-xml/|screenplay-xml/#)

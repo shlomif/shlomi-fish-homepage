@@ -39,21 +39,21 @@ $(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
 [% SET my_ext_uc = my_ext_record.u %]
 
 $(T2_DEST)/[% d.path %]/[% d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
-[% "\t" %]cp -f $< $@
+[% "\t" %]$(call COPY)
 
 [% END %]
 
 [% IF (db_macro_prefix == 'DOCBOOK5') %]
 
 $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ONE_XHTML_DIR)/[% d.base %]/all-in-one.xhtml
-[% "\t" %]cp -f $< $@
+[% "\t" %]$(call COPY)
 
 [% END %]
 
 [%- SET foo_dest = '$(T2_DEST)/' _ d.path _ '/' _ d.base -%]
 [%- SET foo_src = '$(' _ db_macro_prefix _ '_INDIVIDUAL_XHTML_DIR)/' _ d.base %]
 
-[% SET rm_line = "\tcp -f lib/sgml/shlomif-docbook/xsl-stylesheets/style.css " _ foo_dest _ "/style.css" %]
+[% SET rm_line = "\tcp -f lib/sgml/shlomif-docbook/xsl-stylesheets/style.css " _ foo_dest _ "/style.css || true" %]
 [% IF d.custom_css %]
 [% SET rm_line = "\trm -f " _ foo_dest _ "/style.css\n" %]
 [% END %]

@@ -462,13 +462,13 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @ret, (
               "\$($dest_varname): \$($src_varname)\n"
-            . "\t" . q/cp -f $< $@/ . "\n\n"
+            . "\t" . q/$(call COPY)/ . "\n\n"
         );
 
         push @ret, <<"EOF";
 \$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
 \texport EBOOKMAKER="\$\$(pwd)/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" make epub
-\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
+\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname) || true
 EOF
     }
 
@@ -602,7 +602,7 @@ EOF
             (map { "\t\$($_) \\\n" } @screenplay_epubs),
             "\n\n",
             "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
-            (map { "$_: \$(SCREENPLAY_XML_EPUB_DIR)/" . [split m#/#, $_]->[-1] . "\n\tcp -f \$< \$\@\n\n" } @_files),
+            (map { "$_: \$(SCREENPLAY_XML_EPUB_DIR)/" . [split m#/#, $_]->[-1] . "\n\t\$(call COPY)\n\n" } @_files),
             (map { "$_: \$(SCREENPLAY_XML_HTML_DIR)/" .
                     do
                     {
@@ -610,7 +610,7 @@ EOF
                         $x =~ s/\.raw(\.html)\z/$1/;
                         $x;
                     }
-                    . "\n\tcp -f \$< \$\@\n\n"
+                    . "\n\t\$(call COPY)\n\n"
                 } @_htmls_files
             ),
         );
@@ -695,7 +695,7 @@ sub _calc_fiction_story_makefile_lines
         push @ret, "$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n";
         push @ret, "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n";
 
-        push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\tcp -f \$< \$@\n\n};
+        push @ret, qq{\$($from_vcs_varname): \$($src_varname)\n\t\$(call COPY)\n\n};
     }
 
     return \@ret;

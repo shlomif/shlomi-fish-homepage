@@ -1,3 +1,12 @@
+# cp may sometimes fail in parallel builds due to:
+# http://unix.stackexchange.com/questions/116280/cannot-create-regular-file-filename-file-exists
+#
+# cp: cannot create regular file 'dest/vipe/images/get-firefox.png': File exists
+#
+define COPY
+	cp -f $< $@ || true
+endef
+
 LATEMP_WML_FLAGS := $(shell latemp-config --wml-flags)
 
 # Whether this is the development environment
@@ -132,7 +141,7 @@ $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
 
 $(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(T2_SRC_DIR)/%/my_htaccess.conf
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	perl -Ilib $< $@
@@ -144,14 +153,14 @@ RSYNC = rsync --progress --verbose --rsh=ssh --exclude='*.d' --exclude='**/*.d' 
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
 $(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
-	cp -f $< $@
+	$(call COPY)
 	chmod +x $@
 
 $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
-	cp -f $< $@
+	$(call COPY)
 	chmod -x $@
 
 copy_fortunes: $(T2_DEST_FORTUNES)
@@ -339,7 +348,7 @@ $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/h
 
 
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL
-	cp -f $< $@
+	$(call COPY)
 
 SCREENPLAY_DOCS_ADDITIONS = \
 	ae-interview \
@@ -502,7 +511,7 @@ HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
 HHGG_CONVERT_SCRIPT_DEST = $(T2_DEST)/humour/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
-	cp -f $< $@
+	$(call COPY)
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
@@ -511,7 +520,7 @@ SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fr
 SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
 
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
-	cp -f $< $@
+	$(call COPY)
 
 QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg
 
@@ -522,31 +531,31 @@ QOHELETH_IMAGES__SOURCE = $(patsubst %,$(QOHELETH_IMAGES__SOURCE_PREFIX)/%,$(QOH
 QOHELETH_IMAGES__DEST = $(patsubst %,$(QOHELETH_IMAGES__DEST_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
 
 $(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__SOURCE_PREFIX)/%
-	cp -f $< $@
+	$(call COPY)
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
 $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt: $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
-	cp -f $< $@
+	$(call COPY)
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
@@ -579,15 +588,15 @@ $(T2_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_H
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(T2_DEST)/humour/TOWTF/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(T2_DEST)/humour/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
-	cp -f $< $@
+	$(call COPY)
 
 
 # Rebuild the pages containing the links to t2/humour/stories upon changing
@@ -600,31 +609,31 @@ $(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.ht
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(T2_DEST)/humour/by-others/division-two/index.html: lib/div2mag.wml
 
 $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
-	cp -f $< $@
+	$(call COPY)
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
-	cp -f $< $@
+	$(call COPY)
 
 %.show:
 	@echo "$* = $($*)"
@@ -742,7 +751,7 @@ $(FORTS_EPUB_SRC): fortunes-target
 	cd $(FORTUNES_XHTMLS_DIR) && ebookmaker --output $(FORTS_EPUB_BASENAME) book.json
 
 $(FORTS_EPUB_DEST): $(FORTS_EPUB_SRC)
-	cp -f $< $@
+	$(call COPY)
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 
@@ -753,10 +762,10 @@ $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	optipng "$@"
 
 $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
-	cp -f $< $@
+	$(call COPY)
 
 $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html
-	cp -f $< $@
+	$(call COPY)
 
 MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
@@ -811,17 +820,17 @@ HHFG_V2_IMAGES_DEST_FROM_VCS = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS)
 
 $(DOCBOOK4_HHFG_IMAGES_DEST): $(DOCBOOK4_HHFG_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(DOCBOOK4_HHFG_DEST_DIR)/index.html
-	cp -f $< $@
+	$(call COPY)
 
 $(HHFG_V2_IMAGES_DEST_DIR)/index.html: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/index.html
 	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)
 	cp -a $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/*.html $(HHFG_V2_IMAGES_DEST_DIR)/
 
 $(HHFG_V2_IMAGES_DEST): $(HHFG_V2_IMAGES_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.html
-	cp -f $< $@
+	$(call COPY)
 
 $(HHFG_V2_IMAGES_DEST_FROM_VCS): $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.html
-	cp -f $< $@
+	$(call COPY)
 
 DOCBOOK5_XSL_STYLESHEETS_PATH := /usr/share/sgml/docbook/xsl-ns-stylesheets
 
@@ -890,7 +899,7 @@ $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
 
 $(DEST__C_BAD_ELEMS_SRC): $(C_BAD_ELEMS_SRC)
-	cp -f $< $@
+	$(call COPY)
 
 all: $(DEST__C_BAD_ELEMS_SRC)
 
@@ -1031,7 +1040,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html :
 		(cd slides/ && (for I in *.html ; do tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; perl -lpi -e 's/[\t ]+\z//' "$$I" ; done)) && \
 		(find template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') \
 	)
-	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/
+	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | perl -pe 's!^\+!!' > $@
@@ -1103,7 +1112,7 @@ DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
 $(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
-	cp -f $< $@
+	$(call COPY)
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST) $(QOHELETH_IMAGES__DEST)
 
@@ -1147,7 +1156,7 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst $(T2_SRC_DIR)/%.pl,$(T2_D
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(T2_SRC_DIR)/%.pl
-	cp -f $< $@
+	$(call COPY)
 
 T2_DEST_IMAGES_DIR = $(T2_DEST)/images
 

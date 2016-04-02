@@ -4,6 +4,7 @@ set -x
 set -o pipefail
 
 export XML_CATALOG_FILES="/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml"
+export PATH="$PATH:/usr/games"
 
 m()
 {

@@ -1,10 +1,10 @@
 ---
 required:
     modules:
-        Carp: 0
-        Carp::Always: 0
         CGI: 0
         CGI::Minimal: 0
+        Carp: 0
+        Carp::Always: 0
         Config::IniFiles: 0
         Cwd: 0
         DBD::SQLite: 0
@@ -12,6 +12,7 @@ required:
         Data::Dumper: 0
         DateTime: 0
         Encode: 0
+        English: 0
         Exporter: 0
         Fcntl: 0
         File::Basename: 0
@@ -19,6 +20,7 @@ required:
         File::Find: 0
         File::Find::Object: 0
         File::Find::Object::Rule: 0
+        File::Glob: 0
         File::Path: 0
         File::Spec: 0
         File::Spec::Functions: 0
@@ -34,6 +36,7 @@ required:
         HTML::TokeParser::Simple: 0
         HTML::TreeBuilder::LibXML: 0
         HTML::Widgets::NavMenu: 0
+        HTML::Widgets::NavMenu::EscapeHtml: 0
         HTML::Widgets::NavMenu::ToJSON: 0
         HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML: 0
         IO::All: 0
@@ -49,10 +52,13 @@ required:
         Moo: 0
         MooX: 0
         MooX::late: 0
+        Moose: 0
         POSIX: 0
         Parallel::ForkManager: 0
         Path::Tiny: 0
+        Pod::Usage: 0
         SVG: 0
+        Scalar::Util: 0
         Spork::Shlomify: 0
         String::ShellQuote: 0
         Template: 0

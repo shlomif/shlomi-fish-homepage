@@ -1,9 +1,9 @@
 Intro
-    Capabilities of the language: Regexs, OOP, FP, unlimited data structures, 
+    Capabilities of the language: Regexs, OOP, FP, unlimited data structures,
     The perl cycle - write -> run -> debug -> correct -> run
     "There is no king's road to mathematics", Euclid
 Output
-    The print command. 
+    The print command.
     Note about semi-colons
 Expressions
     Basic operators : +, -, /, *, ( ... ), ., %, **
@@ -43,7 +43,7 @@ Condition Expressions:
     The && and || operators
 The While Loop
     Explanation
-    Examples:    
+    Examples:
         ##################################
         print "Input a number:\n";
         $number=<>;
@@ -52,7 +52,7 @@ The While Loop
         {
             $power_of_2 = ($power_of_2*$power_of_2);
         }
-        print ("The first power of 2 that is " .  
+        print ("The first power of 2 that is " .
             "greater than this number is " , $power_of_2, "\n");
         ##################################
 Arrays:
@@ -60,11 +60,11 @@ Arrays:
     The , operator.
     foreach
         Note about the fact that the for and foreach keywords are equivalent
-        Note about the .. operator (without too much explanation)    
+        Note about the .. operator (without too much explanation)
     Examples:
 
 End of lecture 1 ( or 2 )
 
-    
-    
-         
+
+
+

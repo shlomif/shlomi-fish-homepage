@@ -15,7 +15,7 @@ before_install:
     - ( hg clone https://shlomif@bitbucket.org/shlomif/wml-affiliations && cd wml-affiliations/wml && bash Install.bash )
     - ( hg clone https://shlomif@bitbucket.org/shlomif/latemp && cd latemp/support-headers && perl install.pl )
     - bash -x bin/install-tidyp-systemwide.bash
-    - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
+    - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.18.0' 'http://www.shlomifish.org/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
     - ( cd "$HOME" && git clone https://github.com/w3c/markup-validator.git )
     - pwd

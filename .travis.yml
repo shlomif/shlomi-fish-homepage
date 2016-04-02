@@ -12,12 +12,15 @@ before_install:
     - gem install sass compass compass-blueprint
     - bash bin/install-cmakey-program-system-wide.bash 'latemp' '0.8.0' 'http://web-cpan.shlomifish.org/latemp/download'
     - ( hg clone https://shlomif@bitbucket.org/shlomif/wml-extended-apis && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
+    - ( hg clone https://shlomif@bitbucket.org/shlomif/wml-affiliations && cd wml-affiliations/wml && bash Install.bash )
     - ( hg clone https://shlomif@bitbucket.org/shlomif/latemp && cd latemp/support-headers && perl install.pl )
     - bash -x bin/install-tidyp-systemwide.bash
     - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
     - git clone https://github.com/w3c/markup-validator.git
     - pwd
+    - echo "HOME=$HOME"
+    - find ~/conf
 python:
     - "3.5"
 script: "export XML_CATALOG_FILES=\"/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml\" ; m() { make DBTOEPUB=\"/usr/bin/ruby $(which dbtoepub)\" DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

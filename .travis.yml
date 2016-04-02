@@ -20,4 +20,4 @@ before_install:
     - pwd
 python:
     - "3.5"
-script: "export XML_CATALOG_FILES=\"/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml\" ; m() { make DBTOEPUB='/usr/bin/ruby dbtoepub' DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"
+script: "export XML_CATALOG_FILES=\"/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml\" ; m() { make DBTOEPUB=\"/usr/bin/ruby $(which dbtoepub)\" DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \"$@\" ; } ; ./gen-helpers.pl && m && m test"

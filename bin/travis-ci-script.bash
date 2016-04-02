@@ -5,6 +5,7 @@ set -o pipefail
 
 export XML_CATALOG_FILES="/etc/xml/catalog $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml"
 export PATH="$PATH:/usr/games"
+export SHLOMIF_SKIP_SPELL_CHECK=1
 
 m()
 {

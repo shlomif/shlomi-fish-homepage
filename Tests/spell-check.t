@@ -5,7 +5,16 @@ use warnings;
 
 use lib './lib';
 
-use Test::More tests => 1;
+use Test::More;
+
+if ($ENV{SHLOMIF_SKIP_SPELL_CHECK})
+{
+    plan skip_all => 'Skipping spell check due to environment variable';
+}
+else
+{
+    plan tests => 1;
+}
 
 use Shlomif::Spelling::Iface;
 

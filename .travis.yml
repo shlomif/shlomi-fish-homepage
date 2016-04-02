@@ -17,7 +17,7 @@ before_install:
     - bash -x bin/install-tidyp-systemwide.bash
     - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.16.0' 'http://www.shlomifish.org/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
-    - git clone https://github.com/w3c/markup-validator.git
+    - ( cd "$HOME" && git clone https://github.com/w3c/markup-validator.git )
     - pwd
     - echo "HOME=$HOME"
     - find ~/conf

@@ -1,0 +1,154 @@
+Gamla::Web::PathMan::View
+=========================
+
+Those who did not read the document describing Gamla::Web::PathMan,
+should read it in order to understand what this class is all about.
+
+G::W::PM::V aims to give the user a class that can easily retrieve
+information from a finalized PathMan. More will be understood as I
+describe its functionality. Gamla::Web::PathMan::View is not PathMan
+specific and can work with any PathMan provided that it supplies
+read-write or read-only pointers that conform to the Gamla
+specifications.
+
+Initialization
+--------------
+
+Assume $path_man exists and was filled with the site's contents.
+
+my $view = Gamla::Web::PathMan::View->new($path_man);
+
+Now $view will work on $path_man.
+
+Setting the base directory
+--------------------------
+
+If we use the view to render the links page we will use:
+
+$view->set_base_directory("Homepages/Shlomif/Links")
+
+or if we render the MathVentures homepage:
+
+$view->set_base_directory("Homepages/Shlomif/MathVentures");
+
+etc. This will be the url from which all relative URLS will be
+calculated.
+
+The get_base_directory() function can be used to retrieve it.
+
+Getting a View Pointer
+----------------------
+
+A view pointer is similar to a PathMan pointer, and a view can have
+several such pointers active.
+
+my $ptr_shlomif = $view->get_view_pointer(
+    $Gamla::PathMan::View::ptr_base,
+    ".."
+    );
+
+my $ptr_chen = $view->get_view_pointer(
+    $Gamla::PathMan::View::ptr_abs,
+    "Homepages/Chen");
+
+Each view pointer contains a reference to its parent view, so if the
+view is modified (e.g: it's base directory changes) the view pointer
+will automatically adapt.
+
+Operations on view pointers:
+============================
+
+1. cd()
+
+$ptr_shlomif->cd("./Links");
+$ptr_chen->cd("../IraAbramov");
+
+2. get_url()
+
+print "<a href=\"" .
+    $ptr_shlomif->get_url("Personal/Resume") .
+    "\">My Resume</a>\n";
+
+3. get_image_alt()
+
+same as get_url() only for the image alt text
+
+4. get_attr()
+
+get a user specified attribute from the specified directory.
+
+5. pwd()
+
+retrieves the location of the current directory of the view pointer.
+
+6. set_default_prefix()
+
+Sets the default prefix to either ".." or ".", assuming none is given
+in the directory specifation.
+
+Example Usage:
+--------------
+
+Here is an example for a small link-bar generator based on
+Gamla::Web::PathMan::View. Since the classes are not programmed yet,
+this code was not tested, so it may contain some bugs.
+
+{
+    my @links =
+    (
+    {
+        'l' => "Personal/AboutMe",
+        'd' => "About Myself",
+    },
+    {
+        'l' => "Personal/Resume",
+        'd' => "C.V.",
+    },
+    {
+        'l' => "Humour",
+        'd' => "Humour Collection",
+    },
+    {
+        'l' => "HaifuxLectures",
+        'd' => "Lectures to the Linux Club",
+    },
+    {
+        'l' => "Links",
+        'd' => "Links",
+    },
+    {
+        'l' => "MathVentures",
+        'd' => "MathVentures",
+    },
+    );
+
+    sub get_links_bar
+    {
+        my $view = shift;
+
+        my $ptr = $view->get_view_pointer();
+        $ptr->cd("/Homepages/Shlomif");
+        $ptr->set_defualt_prefix(".");
+
+        my $ret = "";
+
+        foreach my $link (@links)
+        {
+            my $link_ptr = $ptr->duplicate();
+            $link_ptr->cd($link->{'l'});
+            if ($view->get_base_directory() eq $link_ptr->pwd())
+            {
+                $ret .= "<b>" . $link->{'d'} . "</b>";
+            }
+            else
+            {
+                $ret .= "<a href=\"" . $link_ptr->get_url() . "\">" .
+                    $link->{'d'} . "</a>";
+            }
+            $ret .= "<br>\n";
+        }
+
+        return $ret;
+    }
+}
+

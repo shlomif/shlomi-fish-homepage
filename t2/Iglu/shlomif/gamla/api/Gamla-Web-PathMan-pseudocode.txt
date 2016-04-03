@@ -1,0 +1,174 @@
+Class Gamla::Web::PathMan::Pointer;
+
+Members:
+
+    pm_path - an array of sub-dirs names
+        e.g: [ "Homepages", "Shlomif", "Links"],
+
+    mounted_pointer  - the pointer of the mounted pathman that is being
+        accessed.
+
+    is_in_mounted
+
+    len_orig_path  - The number of sub-dirs leading to the currently used
+        mounting point
+
+    cur_dir - a reference to the current directory data structure
+
+    path_man - the associated path_man
+
+    recursive -
+        recursive->mount - allow to mount pathmans on mounted pathmans'
+            directories.
+        recursive->write - allow to use mkdir(), get_attrb(), etc. on
+            directories inside mounted pathmans.
+
+Methods:
+
+atomic_cd($path_component):
+
+    case $path_component == '.'
+        do nothing
+
+    case $path_component == '..'
+        if scalar(pm_path) == 0
+            return errorcode=1 , errorstring="Already at root"
+        pop pm_path
+        real_cd_up <- false
+        if is_in_mounted
+            if len_orig_path == scalar(pm_path)
+                mounted_pointer <- nil
+                is_in_mounted <- false
+                real_cd_up <- true
+            else
+                mounted_pointer->cd(..)
+        else
+            real_cd_up <- true
+        if real_cd_up
+            cur_dir <- cur_dir/..
+
+    else
+        ok <- false
+        if is_in_mounted
+            ret <- mounted_pointer->cd($path_component)
+            if (error_code[ret] == 0)
+                ok <- true
+        else
+            if (exists(cur_dir/$path_component))
+                cur_dir <- cur_dir/$path_component
+                handle_mounting();
+                ok <- true
+            else
+                ok <- false
+        if ok
+            push pm_path, $path_component
+
+handle_mounting:
+    if (is_mounting_point())
+        mounted_pointer <- cur_dir->mounted_pathman->get_base_pointer();
+        mounted_pointer->cd(cur_dir->path_to_start_from);
+        is_in_mounted <- true
+        len_orig_path <- scalar(pm_path)
+
+cd(@path):
+    foreach $path_component (@path)
+        ret <- atomic_cd($path_component)
+        if (error_code[ret] != 0)
+            return ret
+    return error_code=0, error_string=""
+
+pwd():
+    return copy_of(pm_path);
+
+duplicate1():
+    ptr <- new Pointer(path_man)
+    ptr->cd(pwd())
+    return ptr
+
+duplicate2():
+    ptr <- new Pointer     # Blessed, but that's all
+    ptr->path_man <- path_man
+    ptr->pm_path <- copy_of(pm_path)
+    ptr->cur_dir <- cur_dir
+    ptr->is_in_mounted <- is_in_mounted
+    if is_in_mounted
+        ptr->mounted_pointer <- mounted_pointer->duplicate();
+        ptr->len_orig_path <- len_orig_path
+    return ptr
+
+mkdir($subdir_name):
+    if is_in_mounted
+        if recursive->write
+            return mounted_pointer->mkdir($subdir_name)
+    else
+        if (exists(cur_cd/$subdir_name))
+            return 1, "There's already a directory by that name"
+        else
+            cur_cd/$subdir_name <- new Directory Structure;
+            cur_cd/$subdir_name/.. <- cur_cd
+
+set_attrbs(%attrbs):
+    if is_in_mounted
+        if recursive->write
+            return mounted_pointer->set_attrbs(%attrbs);
+    else
+        (Set the attributes)
+
+get_attrbs(@attrib_names):
+    if is_in_mounted
+        return mounted_pointer->set_attrbs(@attrib_names)
+    else
+        (Get the attributes)
+
+mount($new_pathman, @init_path):
+    if is_in_mounted
+        if recursive->mount
+            return mounted_pointer->mount($new_pathman, @init_path)
+    else
+        clean_dir()
+        mark_dir_as_mounting_point(cur_dir, true)
+        set_dir_mounted_pathman(cur_dir, mounted_pathman)
+        set_dir_path_to_start_From(cur_dir, @init_path)
+
+unmount:
+    if is_in_mounted
+        if len_orig_path == scalar(pm_path)
+            mark_dir_as_mounting_point(cur_dir, false)
+            set_dir_mounted_pathman(cur_dir, null)
+            set_dir_path_to_start_From(cur_dir, null)
+        else
+            return mounted_pointer->unmount();
+
+ls():
+    if is_in_mounted
+        return mounted_pointer->ls()
+    else
+        ( Enumerate the sub-dirs of the current location )
+
+
+
+
+clean_dir():
+    if (is_mounting_point())
+        unmount()
+    else
+        foreach subdir (ls())
+            rm(subdir)
+
+
+rm($subdir_name):
+    if is_in_mounted
+        return mounted_pointer->rm($subdir_name);
+    else
+        ptr = duplicate()
+        ptr->cd($subdir_name)
+        ptr->clean_dir()
+        ( Remove $subdir_name from the sub-dirs hash of cur_dir )
+
+get_path_man():
+    return path_man
+
+is_mounting_point():
+   ( Checks if cur_dir is a mounting point )
+
+

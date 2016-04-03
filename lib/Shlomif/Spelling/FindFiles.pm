@@ -29,6 +29,7 @@ my @prunes =
     qr#dest/t2/philosophy/computers/open-source/linus-torvalds-bus-factor/index#,
     qr#\.raw\.html$#,
     qr#^\Qdest/t2/js/jquery-ui\E#,
+    qr#^\Qdest/t2/Iglu/shlomif/gamla\E#,
     qr#^\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E#,
     qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E#,
     qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E#,

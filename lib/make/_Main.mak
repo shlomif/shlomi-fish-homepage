@@ -43,7 +43,7 @@ DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
 
 MATHJAX_SOURCE_README = lib/MathJax/README.md
 
-all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html
+all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
 
 include lib/make/gmsl/gmsl
 
@@ -1340,3 +1340,25 @@ $(T2_DOCS_DEST): $(T2_DEST)/%: \
 	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
+SRC_MODS_DIR = lib/assets/mods
+
+MODS = $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
+
+ZIP_MODS = $(patsubst %,%.zip,$(MODS))
+XZ_MODS = $(patsubst %,%.xz,$(MODS))
+
+DEST_MODS_DIR = $(T2_DEST)/Iglu/shlomif/mods/
+DEST_ZIP_MODS = $(patsubst %,$(DEST_MODS_DIR)/%,$(ZIP_MODS))
+DEST_XZ_MODS = $(patsubst %,$(DEST_MODS_DIR)/%,$(XZ_MODS))
+
+mod_files: $(DEST_ZIP_MODS) $(DEST_XZ_MODS)
+
+$(DEST_XZ_MODS): $(DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
+	mkdir -p "$$(dirname "$@")"
+	xz -9 --extreme < $< > $@
+
+$(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
+	bn='$(patsubst $(SRC_MODS_DIR)/%,%,$<)'; \
+	mkdir -p "$$(dirname "$@")"; \
+	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
+	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@

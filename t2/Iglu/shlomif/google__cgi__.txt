@@ -1,0 +1,127 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use CGI;
+
+use LWP::UserAgent;
+use HTTP::Request::Common;
+use HTTP::Response;
+use HTML::TokeParser;
+use CGI::Enurl;
+
+my $q = CGI->new();
+my $ua = LWP::UserAgent->new('agent' => $q->user_agent());
+
+my $path = exists($ENV{'PATH_INFO'})?$ENV{'PATH_INFO'}:"";
+
+if ($path =~ /^\//)
+{
+    $path = substr($path,1);
+}
+
+my $request_method = $q->request_method();
+
+my ($response);
+if ($request_method eq "GET")
+{
+    $response = $ua->request(
+        GET "http://www.google.com/$path" .
+            (scalar($q->param()) ?
+                ("?" . enurl(+{ map {$_ => $q->param($_)} $q->param()})) :
+                ""
+            )
+        );
+}
+elsif ($request_method eq "POST")
+{
+    $response = $ua->request(
+        POST "http://www.google.com/$path",
+        Content => [ map { $_ => $q->param($_) } $q->param() ],
+    );
+}
+elsif ($request_method eq "HEAD")
+{
+    $response = $ua->request(
+        HEAD "http://www.google.com/$path",
+    );
+}
+
+print $q->header(-type => $response->content_type());
+if ($response->content_type() ne "text/html")
+{
+    print $response->content();
+    exit(0);
+}
+
+my $content = $response->content();
+my $parser = HTML::TokeParser->new(\$content);
+my $absolute_link_prefix;
+{
+    my @links = ($path =~ m/\//g);
+    $absolute_link_prefix = "../" x @links;
+    # $absolute_link_prefix = join("",(map { "../" } split(/\//, $path)));
+}
+
+while (my $token = $parser->get_token())
+{
+    my $type = $token->[0];
+    if ($type eq "E")
+    {
+        print $token->[2];
+    }
+    elsif ($type eq "C")
+    {
+        print $token->[1];
+    }
+    elsif ($type eq "T")
+    {
+        print $token->[1];
+    }
+    elsif ($type eq "D")
+    {
+        print $token->[1];
+    }
+    elsif ($type eq "PI")
+    {
+        print $token->[2];
+    }
+    elsif ($type eq "S")
+    {
+        my $tag = $token->[1];
+        my %process_tags =
+        (
+            'form' => { 'action' => 1 },
+            'img' => { 'src' => 1},
+            'a' => { 'href' => 1},
+        );
+        if (exists($process_tags{$tag}))
+        {
+            my $ret = "<$tag ";
+            my $attrseq = $token->[3];
+            my $attr_values = $token->[2];
+            my $process_attrs = $process_tags{$tag};
+            foreach my $attr (@$attrseq)
+            {
+                my $value = $attr_values->{$attr};
+                if (exists($process_attrs->{$attr}))
+                {
+                    if ($value =~ /^\//)
+                    {
+                        $value =~ s/^\//$absolute_link_prefix/;
+                    }
+                }
+                $ret .= "$attr=\"$value\" ";
+            }
+            print $ret;
+            print ">";
+        }
+        else
+        {
+            print $token->[4];
+        }
+    }
+}
+
+

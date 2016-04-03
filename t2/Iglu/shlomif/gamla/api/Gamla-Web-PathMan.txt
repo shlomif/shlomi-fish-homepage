@@ -1,0 +1,151 @@
+Gamla::Web::PathMan and Gamla::Web::PathMan::Pointer
+----------------------------------------------------
+
+Motivation: create a class that will be able to maintain a hierarchy of
+pathes of documents in the sites controlled by Gamla, or in the
+outside the world. For example: the user can request for the document
+"Homepages/Shlomif/Links" and it will return "/shlomif/links.html" as its
+location.
+
+Usually, the user will not deal directly with the PathMan. Still, I'd like
+to describe the programmer's interface to it in this document.
+
+Communication with the PathMan will be done by way of pointers. Pointers are
+like Current Working Directory in UNIX in the essence that each one uniquely
+point to a directory in the logical PathMan hierarchy. To get a
+pointer for the root hierarchy, one uses the get_root_pointer() method
+of the PathMan.
+
+my $ptr = $path_man->get_root_pointer();
+
+A pointer can be cd'd into another directory in the PathMan using the
+cd method:
+
+$ptr->cd(["Homepages", "Shlomif"]);
+
+The path components in cd can be ".." which indicates the upper
+directory, and "." which indicates the current one.
+
+$ptr->cd(["..", "Chen"]);
+
+A pointer to the identical path can be genarated using the Pointer's
+duplicate method:
+
+my $dyna_ptr = $ptr->duplicate();
+$dynaptr->cd(["Links"]);
+
+# Do something with $dyna_ptr
+
+$dyna_ptr = $ptr->duplicate(); # Return back to "Homepages/Shlomif";
+
+Operations on pointers:
+
+1. mkdir()
+
+Makes a new sub-directory inside the pointer's directory.
+
+my $ptr = $path_man->get_root_pointer();
+$ptr->cd(["Homepages", "Shlomif"]);
+$ptr->mkdir("Links");
+
+2. set_attrs()
+
+Set the attributes of the pointer (path, site, image's alt text,
+etc.);
+
+$ptr->set_attrs(
+    {
+        'path' => '/shlomif/links.html',
+        'site' => $site,
+    }
+    );
+
+3. get_attrs()
+
+Retrieves a hash containing the requested attributes. Retrieves all
+attributes if the empty list is given
+
+my $links_attrbs = $ptr->get_attrs("path", "site");
+my $all_links_attrbs = $ptr->get_attrs();
+
+print $links_attrbs->{'path'};
+
+4. mount()
+
+Mounts another PathMan, starting from a specified directory onto the
+current location. All the previous attributes will be ignored and the
+hierarchy of links beneath it will be deleted.
+
+my $ptr = $path_man->get_root_pointer();
+$ptr->cd(["Download", "Files"]);
+$ptr->mount($download_path_man, ["Files"]);
+
+The above code will link whatever was in the Files hierarchy of
+$download_path_man on the Download/Files sub-dir of the main PathMan.
+
+Thus retrieving the path "Download/Files/Freecell Solver/0.4" will
+actually retrieve "Files/Freecell Solver/0.4" from $download_path_man.
+
+Note that $download_path_man can be a specialized PathMan that will be
+a service of a software registery present on the site.
+
+5. ls()
+
+The ls() method will return an array of all the sub-directories in the
+directory of the pointer. (excluding ".." and ".") For example:
+
+my $ptr = $path_man->get_root_pointer();
+$ptr->cd(["Homepages", "Shlomif"]);
+my @ret = $ptr->ls();
+print join("\n", @{$ret[1]});
+
+Displays:
+
+MathVentures
+FreeSoftware
+Personal
+Humour
+HaifuxLectures
+
+As you can see it's in no particular order, and basically the order
+which perl is comfortable to retrieve.
+
+I suggest we use dir() as an alias to ls().
+
+6. rm()
+
+rm() deletes a sub-directory of the current pointer.
+
+$ptr->rm("Humour");
+
+Note that it is recursive, in the manner.
+
+7. get_path_man()
+
+Retrieves the path_man of the pointer.
+
+8. unmount()
+
+Assuming the pointer is a mounting point it unmounts it.
+
+9. is_mounting_point()
+
+Returns true if the pointer is a mounting point.
+
+
+
+The manner in which pointers do all those operations is specific to
+the PathMan type and its pointer implementation. Pointers that point
+to paths within a mounted pathman will contain pointers of the mounted
+pathman, which can be of a different type than their own.
+
+In my next document, I will describe Gamla's Path Views, which will be
+the interface the user will use to query pathmans. While it can be
+done using pointers, I feel that it's quite dangerous, and that
+pointers should be used for these two purposes alone:
+
+1. To fill the path-man with data.
+2. By the Path View internally.
+
+Besides, the path view will allow some functionality that the user
+will find convenient.

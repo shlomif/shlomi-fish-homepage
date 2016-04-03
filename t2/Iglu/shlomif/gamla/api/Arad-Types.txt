@@ -1,0 +1,84 @@
+Documentation for the Arad::Types types management system
+---------------------------------------------------------
+
+Arad::Types aims to manage a set of types, while being able to inherit them,
+specify them on the fly and do various expected operations with them. It is
+meant so the user for example, will not input the string "abcd" where an
+integer is expected.
+
+An object that multiplexes between various types will from now on be called
+a Types Manager (or typeman for short). A typeman can be created by calling
+the Arad::Types constructor. E.g:
+
+my $types = Arad::Types->new();
+
+Afterwards it can be filled with types:
+
+my $type_int32 = Arad::Types::Int32->new();
+$types->register_type("int32", $type_int32);
+my $type_double = Arad::Types::Double->new();
+$types->register_type("double", $type_double);
+
+Types can inherit from other types. For example, suppose we have the int32
+type and a type called bounded which gives a scalar with an optional minimum
+and maximum we can inherit them by specifying:
+
+my $type_null = Arad::Types::Null->new();
+$types->register_type(
+    "bounded_int",
+    $type_null,
+    -inherits => [ "int32", "bounded" ]
+);
+
+Furthermore, typemans can be inherited from other existing typemans:
+
+$user_types = Arad::Types->new(
+    -inherits => [ $types ],
+);
+
+But what can you do with types? The following commands can be processed by
+the typemans by directing them to the type management object or one of its
+parents:
+
+(Note that those commands accept a type-parameters hash. This hash specifies
+type specific parameters. For example: "len" for varchars which specifies
+their maximal length, or "max" or "min" for the bounded type.)
+
+1. Verify a value as a type. Returns a boolean and a possible error string.
+
+2. Convert a value from SQL to perl.
+
+E.g: SQL boolean "t" => 1
+
+3. Convert a value from perl to sql
+
+1 as boolean => SQL "t"
+
+4. Compare two scalars of the same type
+
+5. Duplicate a type. (It is possible that a type will be implemented as a
+reference to a hash or an array.)
+
+note that instead of specifying a single type a user can specify an
+inheritance of several types by passing an array reference. Also, if the
+user inputs an object as one of the elements the object will be called for
+the functions.
+
+Implementation:
+
+The type-specific objects are standard perl objects inherited from
+Arad::Types::Base. Note, that inherited types do not inherit their parent
+types as the inheritance is managed by the typeman. A typeman will be called
+with a method like that:
+
+$types->convert_to_sql(
+    { Type Specification },
+    { Type Parameters Hash },
+    { Value to convert }
+);
+
+It then looks up the type by the given name and calls its to_sql() method.
+Before, that it does the same for the type's parents.
+
+The types of each typeman are stored in an associative array which contains
+a reference to the type's handler object and a list of parents.

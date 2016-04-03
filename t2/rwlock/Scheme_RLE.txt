@@ -4,7 +4,7 @@ Data Structures:
 The RWLock will use a queue. Each element of the queue will contain:
 1. a condition variable
 2. a flag that indicates if it contains readers or writers pending.
-3. num_threads - an integer specifiying how many threads are waiting on it.
+3. num_threads - an integer specifying how many threads are waiting on it.
 4. was_first_thr_accepted - a flag that indicates if the first thread has
 already been accepted from it. (used only for a writers' pack).
 

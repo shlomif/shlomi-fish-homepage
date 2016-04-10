@@ -19,7 +19,6 @@ use JSON::MaybeXS qw(decode_json);
 
 use XML::Grammar::ProductsSyndication;
 use XML::LibXML::XPathContext;
-use Term::ReadPassword;
 
 has 'wml_dir' => (isa => 'Str', is => 'ro', required => 1,);
 has 'lib_dir' => (isa => 'Str', is => 'ro', required => 1,);

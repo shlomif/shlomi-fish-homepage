@@ -30,13 +30,19 @@ sub _github_clone
 {
     my $args = shift;
 
+    my $type = $args->{'type'} // 'github_git';
+
     my $gh_username = $args->{'username'};
     my $repo = $args->{'repo'};
     my $into_dir = $args->{'into_dir'};
 
     my $url;
 
-    if (   ($gh_username eq 'shlomif') && ($global_username eq 'shlomif')
+    if ($type eq 'bitbucket_hg')
+    {
+        $url = qq#ssh://hg\@bitbucket.org/${gh_username}/${repo}#;
+    }
+    elsif (   ($gh_username eq 'shlomif') && ($global_username eq 'shlomif')
         && (!$ENV{SHLOMIF_ANON})
     )
     {
@@ -50,7 +56,10 @@ sub _github_clone
     my $clone_into = "$git_clones_dir/$repo";
     my $link = "$into_dir/$repo";
 
-    my @cmd = ('git', 'clone', $url, $clone_into);
+    my @prefix = (
+        ($type eq 'bitbucket_hg') ? ('hg', 'clone') : ('git', 'clone')
+    );
+    my @cmd = (@prefix, $url, $clone_into);
 
     if (! -e $clone_into)
     {
@@ -66,6 +75,20 @@ sub _github_clone
     }
 
     return;
+}
+
+sub _bitbucket_hg_shlomif_clone
+{
+    my ($into_dir, $repo) = @_;
+
+    return _github_clone(
+        {
+            type => 'bitbucket_hg',
+            username => 'shlomif',
+            into_dir => $into_dir,
+            repo => $repo,
+        }
+    );
 }
 
 sub _github_shlomif_clone
@@ -115,6 +138,18 @@ if (not -e 'lib/c-begin/README.md')
     if (! ($pid = $pm->start))
     {
         system('cd lib && git clone https://github.com/shlomif/c-begin.git');
+        $pm->finish;
+    }
+}
+
+my $BLOGS_DIR = 'lib/blogs';
+my $TECH_BLOG = 'shlomif-tech-diary';
+if (not -e "$BLOGS_DIR/$TECH_BLOG")
+{
+    my $pid;
+    if (! ($pid = $pm->start))
+    {
+        _bitbucket_hg_shlomif_clone($BLOGS_DIR, $TECH_BLOG);
         $pm->finish;
     }
 }

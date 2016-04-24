@@ -31,6 +31,7 @@ my @prunes =
     qr#^\Qdest/t2/js/jquery-ui\E#,
     qr#^\Qdest/t2/Iglu/shlomif/gamla\E#,
     qr#^\Qdest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E#,
+    qr#^\Qdest/t2/open-source/resources/tech-tips/\E#,
     qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E#,
     qr#^\Qdest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E#,
     qr#^\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E#,

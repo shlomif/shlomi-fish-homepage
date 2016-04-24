@@ -1362,3 +1362,14 @@ $(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	mkdir -p "$$(dirname "$@")"; \
 	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@
+
+TECH_BLOG_DIR = lib/blogs/shlomif-tech-diary
+TECH_TIPS_SCRIPT = $(TECH_BLOG_DIR)/extract-tech-tips.pl
+TECH_TIPS_INPUTS = $(patsubst %,$(TECH_BLOG_DIR)/%,old-tech-diary.xhtml tech-diary.xhtml)
+TECH_TIPS_OUT = lib/blogs/shlomif-tech-diary--tech-tips.xhtml
+
+$(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
+	perl $(TECH_TIPS_SCRIPT) $(patsubst %,--file=%,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
+
+$(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
+

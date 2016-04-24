@@ -264,6 +264,10 @@ my $software_tree_contents =
                     ],
                 },
                 {
+                    url => "open-source/resources/tech-tips/",
+                    text => "Tech Tips’ Collection",
+                },
+                {
                     url => "open-source/portability-libs/",
                     text => "Portability Libraries",
                     title => "Index of Libraries for Portability",

@@ -2958,6 +2958,7 @@ filename
 -Wcast-align
 -Wcast-qual
 -Wdeclaration-after-statement
+-Werror
 -Weverything
 -Wextra
 -Wfloat-equal
@@ -3015,9 +3016,12 @@ create_person
 deck_size
 deck_size-i
 diffing
+endl
 fh
+file_handle
 filenames
 fn
+fprintf
 get_address
 get_employee
 get_street
@@ -3032,6 +3036,7 @@ multithreading
 my_array
 my_boolean_slot
 my_class
+my_file_fh
 my_obj
 my_slot
 names_of_presidents
@@ -3061,6 +3066,7 @@ std
 strdup
 structs
 sub_array
+substring
 uppercase
 usr
 var

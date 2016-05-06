@@ -534,6 +534,10 @@ my $humour_tree_contents =
                     text => "What if People Bought Cars Like they Bought Computers?",
                     url => "humour/by-others/if-people-bought-cars-like-computers/",
                 },
+                {
+                    text => "What if drivers were hired like programmers",
+                    url => "humour/by-others/what-if-drivers-were-hired-like-programmers/",
+                },
             ],
         },
         {

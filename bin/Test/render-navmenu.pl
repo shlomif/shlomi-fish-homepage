@@ -6,7 +6,7 @@ use MyNavData;
 use Shlomif::Homepage::NavMenu::JQTreeView;
 use CGI qw();
 
-binmode STDOUT, ":utf8";
+binmode STDOUT, ":encoding(UTF-8)";
 
 my $my_THE_filename = "art/better-scm/index.html";
 {

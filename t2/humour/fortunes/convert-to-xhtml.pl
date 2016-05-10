@@ -20,7 +20,7 @@ XML::Grammar::Fortune
 
 open my $text_fh, "<", $abs_out_fn
     or die "Cannot open '$abs_out_fn' for reading - $!";
-binmode ($text_fh, ":utf8");
+binmode ($text_fh, ":encoding(UTF-8)");
 my $contents;
 {
     local $/;
@@ -32,7 +32,7 @@ $contents =~ s/[ \t]+$//gms;
 
 open my $back_fh, '>', $abs_out_fn
     or die "Cannot open '$abs_out_fn' for writing - $!";
-binmode ($back_fh, ":utf8");
+binmode ($back_fh, ":encoding(UTF-8)");
 print {$back_fh} $contents;
 close($back_fh);
 

@@ -6,6 +6,7 @@ use warnings;
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 use Getopt::Long;
+use Path::Tiny qw/ path /;
 
 my $out_fn;
 
@@ -47,9 +48,6 @@ $xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
 
 =cut
 
-    open my $out, ">", $out_fn;
-    binmode $out, ":utf8";
-    print {$out} $s;
-    close($out);
+    path($out_fn)->spew_utf8($s);
 }
 

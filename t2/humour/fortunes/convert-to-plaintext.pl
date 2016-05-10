@@ -14,8 +14,7 @@ my $abs_xml_fn = File::Spec->rel2abs($xml_fn);
 my $abs_out_fn = File::Spec->rel2abs($out_fn);
 
 {
-    open my $out, ">", $abs_out_fn;
-    binmode($out, ":utf8");
+    open my $out, ">:encoding(UTF-8)", $abs_out_fn;
     XML::Grammar::Fortune::ToText
         ->new({input => $abs_xml_fn, output => $out})
         ->run();

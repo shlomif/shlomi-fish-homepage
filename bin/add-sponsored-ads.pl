@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use autodie;
 
 use IO::All qw/ io /;
 
@@ -41,8 +42,8 @@ foreach my $ad (grep { /\.html$/ } io("Ads-for-Homepage")->all_files())
 
     my $ad = $1;
 
-    open O, ">>", "t2/$path";
-    print O <<"END_OF_HTML";
+    open my $out_fh, ">>:encoding(UTF-8)", "t2/$path";
+    print {$out_fh} <<"END_OF_HTML";
 
 
 ;;; Ad added at 2007-Oct-20 / 2007-10-20
@@ -54,6 +55,6 @@ $ad
 
 END_OF_HTML
 
-    close(O);
+    close($out_fh);
 }
 

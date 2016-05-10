@@ -9,10 +9,10 @@ use utf8;
 
 use open IO => ":encoding(utf8)";
 
-binmode STDIN, ":utf8";
-binmode STDOUT, ":utf8";
+binmode STDIN, ":encoding(UTF-8)";
+binmode STDOUT, ":encoding(UTF-8)";
 
-my $content = io('-')->binmode(":utf8")->slurp();
+my $content = io('-')->binmode(":encoding(UTF-8)")->slurp();
 
 sub to_unicode
 {

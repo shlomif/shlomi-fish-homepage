@@ -7,7 +7,7 @@ use autodie;
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 use Getopt::Long;
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $out_fn;
 
@@ -19,25 +19,8 @@ GetOptions(
 my $filename = shift(@ARGV)
     or die "Give me a filename as a command argument: myscript FILENAME";
 
-sub _slurp
 {
-    my $filename = shift;
-
-    open my $in, "<", $filename
-        or die "Cannot open '$filename' for slurping - $!";
-
-    binmode $in, ":encoding(utf-8)";
-
-    local $/;
-    my $contents = <$in>;
-
-    close($in);
-
-    return $contents;
-}
-
-{
-    my $s = _slurp($filename);
+    my $s = path($filename)->slurp_utf8;
 
     $s =~ s{\A.*?<body[^>]*>}{}sm;
     $s =~ s{</body>.*\z}{}ms;
@@ -53,9 +36,6 @@ sub _slurp
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;
 
     $s =~ s/[ \t]+$//gms;
-    open my $out, ">", $out_fn;
-    binmode $out, ":utf8";
-    print {$out} $s;
-    close($out);
+    path($out_fn)->spew_utf8($s);
 }
 

@@ -6,9 +6,9 @@ use autodie;
 
 use utf8;
 
-binmode STDOUT, ":utf8";
+binmode STDOUT, ":encoding(UTF-8)";
 
-open my $i, '<:utf8', 'foo.txt';
+open my $i, '<:encoding(UTF-8)', 'foo.txt';
 while (my $l = <$i>)
 {
     foreach my $m ($l =~ m/«(.*?)»/g)

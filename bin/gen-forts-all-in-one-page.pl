@@ -7,7 +7,7 @@ use utf8;
 
 use Shlomif::Homepage::FortuneCollections;
 
-binmode STDOUT, ':utf8';
+binmode STDOUT, ':encoding(UTF-8)';
 
 my $filename = shift(@ARGV);
 

@@ -54,8 +54,7 @@ sub _process_fortune_file
 
     my $xml_outfile = "$fort_file-non-format.xml";
 
-    open my $xml_out, ">", $xml_outfile;
-    binmode $xml_out, ":utf8";
+    open my $xml_out, ">:encoding(UTF-8)", $xml_outfile;
 
     my $writer = XML::Writer->new(OUTPUT => $xml_out);
 
@@ -68,7 +67,7 @@ sub _process_fortune_file
     $writer->startTag("list");
 
     open my $fh, "<", $fort_file;
-    binmode $fh, ":utf8";
+    binmode $fh, ":encoding(UTF-8)";
 
     my $line = <$fh>;
     chomp($line);
@@ -291,5 +290,5 @@ my $converter = XML::Grammar::Fortune::FromText->new(
     }
 );
 
-binmode STDOUT, ":utf8";
+binmode STDOUT, ":encoding(UTF-8)";
 $converter->process_all_input();

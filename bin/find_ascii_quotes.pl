@@ -10,7 +10,7 @@ use Getopt::Long;
 
 my $out_fn;
 
-binmode STDOUT, ":utf8";
+binmode STDOUT, ":encoding(UTF-8)";
 
 # Input the filename
 foreach my $filename (@ARGV)

@@ -27,7 +27,7 @@ if ($ENV{F})
         my $table_from = qq{<table class="$class">};
         my $table_to = qq{<table class="$class" summary="">};
 
-        eval qq{\$text =~ s#\\Q$table_from\\E#$table_to#g};
+        $text =~ s#\Q$table_from\E#$table_to#g;
     }
 }
 

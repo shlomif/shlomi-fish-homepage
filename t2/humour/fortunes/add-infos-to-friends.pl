@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 my $new_info = <<'EOF';
 <info>
     <author>David Crane &amp; Marta Kauffman</author>

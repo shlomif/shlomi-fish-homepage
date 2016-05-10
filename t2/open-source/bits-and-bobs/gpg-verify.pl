@@ -1,14 +1,16 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 use strict;
+use warnings;
+use autodie;
 
 my $fingerprints_fn = shift;
 
-(open I, "gpg --list-keys --fingerprint|") ||
-    die "Could not pipe from GnuPG";
+open my $gpg_fh, '-|', 'gpg', '--list-keys', '--fingerprint'
+    or die "Could not pipe from GnuPG";
 my $key = "";
 my %gpg_keys; # Fingerprint keys.
-while (<I>)
+while (<$gpg_fh>)
 {
     if (/^pub/ .. /^\n$/)
     {
@@ -24,10 +26,10 @@ while (<I>)
         $key = "";
     }
 }
-close(I);
-open I, "<$fingerprints_fn";
+close($gpg_fh);
+open my $finger_fh, '<', $fingerprints_fn;
 $key = "";
-while (<I>)
+while (<$finger_fh>)
 {
     if (/^pub/ .. /^\n$/)
     {
@@ -54,5 +56,5 @@ while (<I>)
         $key = "";
     }
 }
-close(I);
+close($finger_fh);
 

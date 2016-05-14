@@ -9,7 +9,7 @@ use Test::More ();
 
 my @files = `git ls-files`;
 chomp@files;
-@files = grep { !m#\Alib/presentations# and /\.(?:pl|pm|t)\z/ } @files;
+@files = grep { !m#\Alib/presentations/qp/perl-for-newbies/# and /\.(?:pl|pm|t)\z/ } @files;
 
 sub mtime
 {

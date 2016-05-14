@@ -1,6 +1,8 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 use strict;
+use warnings;
+use Path::Tiny qw/ path /;
 
 use File::Find;
 
@@ -20,19 +22,14 @@ sub wanted
     my $filename = $_;
     if ($filename =~ /\.html\.wml$/)
     {
-        open I, "<$filename";
-        my $text = join("", <I>);
-        close(I);
-
+        my $text = path($filename)->slurp_utf8;
         $text =~ s!(<h3 class="notbold">.*?</h3>)!&process($1)!sge;
 
         print "$File::Find::name\n\n\n";
 
         print $text;
 
-        open O, ">$filename";
-        print O $text;
-        close(O);
+        path($filename)->spew_utf8($text);
     }
 }
 

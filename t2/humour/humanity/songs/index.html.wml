@@ -18,6 +18,9 @@ These are recordings of the songs from the screenplay
 
 <h2 id="buy_the_fish_shlomif_with_amplified_audio"><a href="http://www.youtube.com/watch?v=Y8IeBG_SSt4">“Buy the Fish” - Amplified Audio</a></h2>
 
+<iframe width="420" height="315" src="https://www.youtube.com/embed/Y8IeBG_SSt4" allowfullscreen="allowfullscreen"></iframe>
+
+<define-tag old_flash__CANCELLING>
 <object type="application/x-shockwave-flash"
 style="width:450px; height:366px;"
 data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
@@ -26,45 +29,11 @@ data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
         <param name="allowscriptaccess" value="always" />
 </object>
 
+</define-tag>
+
 <h2 id="shlomif_singing_buy_the_fish_in_english"><a href="http://www.youtube.com/watch?v=xvjBojyWPoE">Shlomi
 Fish Singing “Buy the Fish” in English</a></h2>
 
-<object type="application/x-shockwave-flash"
-style="width:450px; height:366px;"
-data="http://www.youtube.com/v/xvjBojyWPoE?color2=FBE9EC&amp;version=3">
-        <param name="movie" value="http://www.youtube.com/v/xvjBojyWPoE?color2=FBE9EC&amp;version=3" />
-        <param name="allowFullScreen" value="true" />
-        <param name="allowscriptaccess" value="always" />
-</object>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/xvjBojyWPoE" allowfullscreen="allowfullscreen"></iframe>
 
 <div style="font-size: 0.8em"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<define-tag video_tag_experiment__CANCELLING>
-<page_extra_head_elements>
-<link href="$(ROOT)/js/video-js/video-js.min.css" rel="stylesheet" />
-<script src="$(ROOT)/js/video-js/video.min.js" type="text/javascript"></script>
-<script src="$(ROOT)/js/video-js/vjs.youtube.js" type="text/javascript"></script>
-</page_extra_head_elements>
-
-<h2 id="video_tag_test">Test</h2>
-
-<video id="vid1" class="video-js vjs-default-skin" controls="controls" preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/v/Y8IeBG_SSt4" }'></video>
-
-</define-tag>
-

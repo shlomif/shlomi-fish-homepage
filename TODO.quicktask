@@ -1,18 +1,10 @@
 # Quicktask v1.2
 
 CURRENT TASKS:
-    - Change the URL of the xhtml11-dtds in "INSTALL":
-        * to the DTD package of validator.w3.org.
-    - Add a nav_block for political essays (MidEast/#SummerNSA/etc.)
-      @ Added [Wed 2014-09-17]
     - Buttons in mobile mode should occupy all the width of the page.
         * Thanks to Sagiv for the insight.
         * DONE partially in the "Show NavBar" button.
       @ Added [Tue 2014-11-04]
-    - Fix the left padding of <pre class="raw"> in the fortunes display.
-        * It's too close to the edge
-        * http://www.shlomifish.org/humour/fortunes/nyh-sigs.html
-      @ Added [Tue 2015-09-22]
     - Add fortunes.
         * BigBangT - "rocket scientist" as an insult.
         * BigBangT - "the part with Penny and Sheldon from S02E02.
@@ -421,6 +413,13 @@ COMPLETED TASKS:
     - Add links to the URLs of the executables needed to be present.
         @ DONE [Tue 2016-03-22]
       @ Added [Sat 2016-02-06]
+    - Change the URL of the xhtml11-dtds in "INSTALL":
+        * to the DTD package of validator.w3.org.
+        * Already recommended doing a git clone.
+        @ DONE [Sat 2016-05-28]
+    - Add a nav_block for political essays (MidEast/#SummerNSA/etc.)
+        @ DONE [Sat 2016-05-28]
+      @ Added [Wed 2014-09-17]
 
 
 # vim:ft=quicktask:sw=4:ts=4

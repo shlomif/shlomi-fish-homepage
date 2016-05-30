@@ -33,4 +33,10 @@ if ($ENV{F})
 
 $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
 
+# Remove surrounding space of tags.
+$text =~ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
+
+# Remove document trailing space.
+$text =~ s#\s+\z##ms;
+
 _f()->print($text);

@@ -59,6 +59,10 @@ my $essays_tree_contents =
             subs =>
             [
                 {
+                    text => "C and C++ Bad Elements",
+                    url => "lecture/C-and-CPP/bad-elements/",
+                },
+                {
                     text => "Scheme &amp; Lambda Calculus",
                     url => "lecture/Lambda-Calculus/",
                 },

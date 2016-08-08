@@ -728,6 +728,45 @@ EOF
     {
         abstract => <<'EOF',
 <p>
+<a href="http://en.wikipedia.org/wiki/Windows_Update">Windows Update</a> is
+a service offered by Microsoft to update components of its software.
+</p>
+
+<p>
+These facts illustrate how horribly slow Windows Update is and how it is
+annoying to use.
+</p>
+
+EOF
+        id_base => "windows_update_facts",
+        img_alt => "XSLT Logo",
+        img_attribution => 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
+        img_class => "facts_logo windows_update",
+        img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
+        license_wml => <<'EOF',
+<cc_by_sa_british_blurb year="2016" />
+EOF
+        links_wml => <<'EOF',
+EOF
+        meta_desc => "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
+        nav_blocks_wml => <<'EOF',
+<nav_blocks>
+<foss_nav_block />
+</nav_blocks>
+EOF
+        see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+        short_id => 'windows_update',
+        tabs_title => "Windows Update Facts",
+        title => "Windows Update Facts",
+        url_base => "Windows-Update",
+    },
+    {
+        abstract => <<'EOF',
+<p>
 After reading the
 <a href="http://en.wikipedia.org/wiki/Chuck_Norris_facts">Wikipedia
 page about Chuck Norris Facts</a> (and related facts), I was saddened to learn

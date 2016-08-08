@@ -6,7 +6,6 @@ use warnings;
 use utf8;
 
 use Test::More tests => 5;
-use Test::Differences (qw(eq_or_diff));
 
 use IO::All qw/io/;
 

@@ -74,7 +74,7 @@ XML_CATALOG_FILES environment variable.
 
 #. Do the following to build the site, after all dependencies were installed:
 
-    $ hg clone https://bitbucket.org/shlomif/shlomi-fish-homepage trunk
+    $ git clone https://github.com/shlomif/shlomi-fish-homepage.git trunk
     $ cd trunk
     $ ./gen-helpers.pl
     $ make

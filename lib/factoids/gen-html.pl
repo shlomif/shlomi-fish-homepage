@@ -740,7 +740,7 @@ annoying to use.
 EOF
         id_base => "windows_update_facts",
         img_alt => "XSLT Logo",
-        img_attribution => 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
+        img_attribution => 'https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/humour/bits/facts/images/XSLT.svg',
         img_class => "facts_logo windows_update",
         img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
         license_wml => <<'EOF',

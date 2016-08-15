@@ -739,10 +739,10 @@ annoying to use.
 
 EOF
         id_base => "windows_update_facts",
-        img_alt => "XSLT Logo",
-        img_attribution => 'https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/humour/bits/facts/images/XSLT.svg',
+        img_alt => "Silhouette of a Snail",
+        img_attribution => 'https://openclipart.org/detail/230426/snail-silhouette',
         img_class => "facts_logo windows_update",
-        img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
+        img_src => "\$(ROOT)/humour/bits/facts/images/windows-update-snail.png",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2016" />
 EOF

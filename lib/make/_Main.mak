@@ -958,6 +958,14 @@ $(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
+DEST_WINDOWS_UPDATE_SNAIL_ICON = $(T2_DEST)/humour/bits/facts/images/windows-update-snail.png
+
+all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON)
+
+$(DEST_WINDOWS_UPDATE_SNAIL_ICON): t2/humour/bits/facts/images/snail.svg
+	inkscape --export-width=200 --export-png="$@" $<
+	$(OPTIPNG) $@
+
 $(ART_SLOGANS_PNGS): %.png: %.svg
 	inkscape --export-png=$@ $<
 	$(OPTIPNG) $@

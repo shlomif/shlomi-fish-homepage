@@ -19,7 +19,7 @@ use Test::TrailingSpace 0.0201;
             (?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
             )
             |
-            lib/ebookmaker
+            lib/ebookmaker/\.git
             |
             lib/MathJax
             |

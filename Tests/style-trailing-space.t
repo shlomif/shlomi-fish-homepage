@@ -24,14 +24,6 @@ use Test::TrailingSpace 0.0201;
             lib/MathJax
             |
             lib/presentations/docbook/html-tutorial
-            |
-            (?:
-            \Qlib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.screenplay-text.xhtml\E\z
-            )
-            (?:
-            |
-            \Qlib/screenplay-xml/from-vcs/Selina-Mandrake/selina-mandrake/screenplay/selina-mandrake-the-slayer.final.html\E\z
-            )
             )
             #msx,
         },

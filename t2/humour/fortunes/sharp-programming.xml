@@ -4216,5 +4216,63 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-programming-BitKeeper-or-GitHub">
+        <meta>
+            <title>Should I use BitKeeper or GitHub?</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="fanfan">When should I use BitKeeper (peer-to-peer) and when should I use GitHub (client-server) for my software project?</saying>
+<saying who="yawkat">fanfan: git is distributed</saying>
+<saying who="rindolf">fanfan: why do you want to use BitKeeper?</saying>
+<saying who="rindolf">fanfan: and git is distributed too.</saying>
+<saying who="fanfan">rindolf, I didn&#39;t understand.</saying>
+<saying who="rindolf">fanfan: git is peer-to-peer - just like BitKeeper.</saying>
+<saying who="fanfan">rindolf, so when should I use Git and when should I use GitHub?</saying>
+<saying who="rindolf">fanfan: there are other git services aside from GitHub and you can set up one of your own.</saying>
+<saying who="rindolf">fanfan: you normally use git to interact with GitHub.</saying>
+<saying who="fanfan">rindolf, I don&#39;t really know what should I do, can please guide me.</saying>
+<saying who="rindolf">fanfan: use GitHub if you like it - if not - use a different git service provider.</saying>
+<saying who="fanfan">rindolf, well I choose GitHub because there are already millions of people using it, so it seems trustworthy.</saying>
+<saying who="baum">fanfan: same for bitbucket and others</saying>
+<saying who="fanfan">baum, I will just use GitHub before I get crazy in all these options.</saying>
+<saying who="baum">fanfan: you could also just use git</saying>
+<saying who="rindolf">fanfan: it seems like a good choice at the moment.</saying>
+<saying who="rindolf">baum: we told him that.</saying>
+<saying who="fanfan">baum, So Git is better than BitKeeper?</saying>
+<saying who="catbadger">git is better than everything</saying>
+<saying who="rindolf">baum: this seems like one of those &#39;Should I use jQuery or JavaScript?&#39; questions.</saying>
+<saying who="baum">rindolf: oh i see, didn&#39;t read up. and yes it does</saying>
+<saying who="fanfan">rindolf, I get it now, I people use GitHub because they don&#39;t have a server or online-storage, and they don&#39;t want to. But I have a server so I can just use BitKeeper.</saying>
+<saying who="rindolf">fanfan: well, BitKeeper was made open source only relatively recently, which caused git (and previously other FOSS VCSes) to become popular instead.</saying>
+<saying who="rindolf">fanfan: why do you want to use bitkeeper?</saying>
+<saying who="fanfan">rindolf, because 15 years of development</saying>
+<saying who="rindolf">fanfan: you can set up a git service on your server as well.</saying>
+<saying who="fanfan">rindolf, and is supported by a big company</saying>
+<saying who="rindolf">fanfan: well, git probably had more contributors.</saying>
+<saying who="rindolf">fanfan: which big company supports BK?</saying>
+<saying who="fanfan">rindolf, just please tell me, for god&#39;s sake, should I use GitHub or Git?</saying>
+<saying who="baum">fanfan: if you are judging a source control solution by its company and years of existence maybe check out Visual SourceSafe :)</saying>
+<saying who="rindolf">fanfan: I suggest you use git and you can opt to use GitHub as well.</saying>
+<saying who="rindolf">baum: heh, I laughed-out-loud from that comment.</saying>
+<saying who="rindolf">baum: can I tweet it?</saying>
+<saying who="fanfan">rindolf, is GitHub best of its kind?</saying>
+<saying who="baum">rindolf: go for it :)</saying>
+<saying who="mpetch">used PVCS in an enterprise environment for many years with Nortel/BNR</saying>
+<saying who="rindolf">baum: thanks!</saying>
+<saying who="fanfan">okay guys, I will just use GitHub, before I get crAZY, now everyone shut up.</saying>
+<saying who="rindolf">fanfan: great.</saying>
+<saying who="mpetch">you sure you want to use github?</saying>
+<saying who="rindolf">mpetch: be careful or you&#39;ll make him be like the child monster who wants to be &quot;there&quot; - https://www.youtube.com/watch?v=9m-kbBamg_U</saying>
+<saying who="mpetch">haha</saying>
+<saying who="rindolf">mpetch: :-)</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Bit by the Git Hub</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

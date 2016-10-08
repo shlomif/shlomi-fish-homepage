@@ -8,6 +8,7 @@ use utf8;
 use lib './lib';
 
 use Path::Tiny qw/ path /;
+use Shlomif::Out qw/write_on_change write_on_change_no_utf8/;
 use JSON::MaybeXS ();
 
 use XML::LibXML;
@@ -26,6 +27,7 @@ my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 
 my $dom = $p->parse_file($facts_xml_path);
 
+my %deps;
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 {
     foreach my $lang (qw(en-US he-IL))
@@ -33,9 +35,9 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
         my $list_id = $list_node->value;
 
         my $basename = "$list_id--$lang";
-        my $out_xhtml =  "./lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
+        my $out_xhtml =  "lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
         system(
-            "xsltproc", "--output", $out_xhtml,
+            "xsltproc", "--output", "./$out_xhtml",
             "--stringparam", 'filter-facts-list.id', $list_id,
             "--stringparam", 'filter.lang', $lang,
             $xslt_path, $facts_xml_path,
@@ -48,9 +50,12 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 
         my $node = $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 
-        path("$out_xhtml.reduced")->spew_utf8(
-            $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr
+        my $reduced_xhtml = "$out_xhtml.reduced";
+        write_on_change(
+            scalar(path($reduced_xhtml)),
+            \($node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr)
         );
+        push @{$deps{$list_id}}, $reduced_xhtml;
     }
 }
 
@@ -1007,13 +1012,15 @@ END_OF_TEMPLATE
     $template->process(\$img_tt_text, $vars, \$tags_output);
     $template->process(\$tag_tt_text, $vars, \$tags_output);
     $template->process(\$main_page_tt, $vars, \$main_page_tag_list);
-    path("lib/factoids/pages/". $page->id_base().'.wml')->spew_utf8($out);
+    write_on_change(
+        scalar( path("lib/factoids/pages/". $page->id_base().'.wml')),
+        \$out,
+    );
 }
 
-path("lib/factoids/common-out/tags.wml")->spew_utf8(
-    $tags_output,
-    $main_page_tag_list,
-    "\n</define-tag>\n",
+write_on_change(
+    scalar( path("lib/factoids/common-out/tags.wml") ),
+    \($tags_output . $main_page_tag_list . "\n</define-tag>\n"),
 );
 
 my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
@@ -1026,7 +1033,6 @@ my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
         @pages
     ]);
 
-use Shlomif::Out qw/write_on_change_no_utf8/;
 
 my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
@@ -1034,3 +1040,16 @@ write_on_change_no_utf8(
     scalar( path($json_fn) ),
     \$new_json,
 );
+
+my @content =
+    map { my $id = $_->id_base; my $path = $_->url_base();
+        map { "dest/t2/humour/bits/facts/${path}/index.html: $_\n" }
+        @{$deps{$id}}
+    }
+    sort {$a->short_id cmp $b->short_id }
+    @pages;
+
+path("lib/factoids/deps.mak")->spew_utf8(@content);
+# No write_on_change() because we want it to have the time of the last run.
+path("lib/factoids/TIMESTAMP")->spew_utf8(time());
+

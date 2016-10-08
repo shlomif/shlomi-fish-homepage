@@ -1275,15 +1275,20 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 	perl $(PUT_CARDS_2013_INDIV_SCRIPT)
 
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
+FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD = perl $(FACTOIDS_RENDER_SCRIPT)
 
-FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
+# FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
 
-$(FACTOIDS_GENERATED_FILES): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
+$(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
 
-$(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
+all: $(FACTOIDS_TIMESTAMP)
+
+include lib/factoids/deps.mak
+
+# $(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
 
 all: manifest_html
 

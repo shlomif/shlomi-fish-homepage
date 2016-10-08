@@ -104,6 +104,7 @@ foreach my $cmd (
     [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
     [ $^X, "./bin/gen-fortunes.pl" ],
     [ $^X, "./bin/gen-deps-mak.pl" ],
+    [ $^X, "./lib/factoids/gen-html.pl" ],
 )
 {
     _my_system($cmd);

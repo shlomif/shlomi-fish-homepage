@@ -31,7 +31,7 @@ sub _calc_entry_body
 
     $body =~ s{ rel="nofollow"}{}g;
 
-    return "<!-- TITLE=" . escape_html(decode('utf-8', $entry->title())) . "-->\n" . $body;
+    return "<!-- TITLE=" . decode('utf-8', $entry->title()) . "-->\n" . $body;
 }
 
 sub run

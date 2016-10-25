@@ -523,10 +523,6 @@ sub generic_get_params
                         subs =>
                         [
                             {
-                                text => "Résumé as a Writer and Entertainer",
-                                url => "me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
-                            },
-                            {
                                 text => "Résumé as a Software Dev",
                                 url => "me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html",
                             },
@@ -539,6 +535,10 @@ sub generic_get_params
                                 text => "Detailed English Résumé",
                                 url => "SFresume_detailed.html",
                                 skip => 1,
+                            },
+                            {
+                                text => "Résumé as a Writer and Entertainer",
+                                url => "me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
                             },
                         ],
                     },

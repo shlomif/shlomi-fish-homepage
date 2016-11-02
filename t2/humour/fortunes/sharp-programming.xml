@@ -4274,5 +4274,58 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-programming-bad-C-code">
+        <meta>
+            <title>rindolf’s bad C code</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">In fc-solve&#39;s C source code I have 2,738 &quot;const&quot;s vs. 1,521 &quot;if&quot;s</saying>
+<saying who="rindolf">and I have 1,344 &quot;int&quot;s</saying>
+<saying who="imode">that&#39;s 5,376 bytes!</saying>
+<saying who="Felishia">rindolf, D:</saying>
+<saying who="Felishia">how can you have 0,738 of a constant?</saying>
+<saying who="rindolf">Felishia: 2,738 consts</saying>
+<saying who="rindolf">Felishia: over 2 thousand</saying>
+<saying who="rindolf">Felishia: it&#39;s not a decimal dot</saying>
+<saying who="Felishia">but you put a comma there</saying>
+<saying who="Felishia">it&#39;s a decimal comma</saying>
+<saying who="rindolf">Felishia: yes, for the thousands</saying>
+<saying who="Felishia">no for the thousands it&#39;s a dot</saying>
+<saying who="rindolf">Felishia: no, not in English.</saying>
+<saying who="rindolf">or in Hebrew</saying>
+<saying who="Felishia">D: wat</saying>
+<saying who="schally">I have 0.738 of a const</saying>
+<saying who="schally">because it only appears with certain typedefs</saying>
+<saying who="rindolf">shakalaka: good for you!</saying>
+<saying who="schally">or #defines rather</saying>
+<saying who="rindolf">schally: can I borrow 0.002 of a const?</saying>
+<saying who="schally">rindolf: go ahead</saying>
+<saying who="rindolf">schally: thanks!</saying>
+<saying who="rindolf">Hmmm... I gave 1,156 &quot;endif&quot;s - lots of preprocessor stuff. :-(</saying>
+<saying who="rindolf">and I have 1,102 &quot;instance&quot;s</saying>
+<saying who="Felishia">rindolf, what a bad code! ewwww!</saying>
+<saying who="Felishia">such a bad C grammar</saying>
+<saying who="rindolf">I have 864 &quot;void&quot;s</saying>
+<saying who="rindolf">Felishia: only 1,145 &quot;endif&quot;s now after I extracted a macro</saying>
+<saying who="rindolf">1,140 &quot;endif&quot;s now</saying>
+<saying who="rindolf">Felishia: 1,128 &quot;endif&quot;s now!</saying>
+<saying who="Felishia">rindolf, you gotta bring it down to 2 D:</saying>
+<saying who="rindolf">Felishia: heh.</saying>
+<saying who="Felishia">if windows... if unix...</saying>
+<saying who="rindolf">Felishia: I have #ifdef _cplusplus extern &quot;C&quot; { #endif on every header</saying>
+<saying who="rindolf"> 45 files changed, 1904 insertions(+), 2306 deletions(-) </saying>
+<saying who="rindolf">====&gt; what a day</saying>
+<saying who="Felishia">rindolf, what you only commit once a day</saying>
+<saying who="rindolf">Felishia: no.</saying>
+<saying who="rindolf">Felishia: this is git diff --stat</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>The end of the endifs is not so near</tagline>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

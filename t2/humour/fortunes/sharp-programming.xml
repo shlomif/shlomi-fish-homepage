@@ -4390,5 +4390,171 @@
             </info>
         </irc>
     </fortune>
+    <fortune id="sharp-programming-what-is-NP-complete">
+        <meta>
+            <title>What is "NP-complete"?</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">Rashad: generalised Freecell was shown to be NP-complete</saying>
+<saying who="Rashad">NP-complete means?</saying>
+<saying who="rindolf">Rashad: here?</saying>
+<saying who="Rashad">Yup.</saying>
+<saying who="Rashad">Just came back.</saying>
+<saying who="rindolf">Rashad: did you read about NP-completeness?</saying>
+<saying who="Rashad">Nope.</saying>
+<saying who="Rashad">What is it?</saying>
+<saying who="rindolf">Rashad: see https://en.wikipedia.org/wiki/NP-completeness</saying>
+<saying who="Rashad">Too much math.</saying>
+<saying who="Rashad">On wikipedia.</saying>
+<saying who="rindolf">Rashad: see http://www.shlomifish.org/humour/fortunes/show.cgi?id=memoir-from-a-Physics-lesson-in-the-9th-grade</saying>
+<saying who="Rashad">rindolf: Sometimes formality can make things more complex than they really are.</saying>
+<saying who="rindolf">Rashad: true</saying>
+<saying who="Rashad">rindolf: Can you give me a simple introduction?</saying>
+<saying who="rindolf">Rashad: well, do you know what polynomial time is?</saying>
+<saying who="Rashad">No.</saying>
+<saying who="rindolf">Rashad: hmmm...</saying>
+<saying who="Rashad">I know what a polynomial is.</saying>
+<saying who="Rashad">Is this related to the BigO notation?</saying>
+<saying who="rindolf">Rashad: yes.</saying>
+<saying who="rindolf">Rashad: polynomial time is O(P(N)) where P(N) is a polynomial of N</saying>
+<saying who="Rashad">OK.</saying>
+<saying who="Rashad">I am trying to think of an exaple..</saying>
+<saying who="Rashad">example*</saying>
+<saying who="sbrg">two nested loops</saying>
+<saying who="rindolf">Rashad: so it can be O(n^2) or O(n) or O(n*log(n)) or even O(n**100)</saying>
+<saying who="Rashad">Aha.</saying>
+<saying who="Rashad">What is &#39;n&#39;? Number of operations?</saying>
+<saying who="Rashad">Umm.</saying>
+<saying who="Rashad">Probably not.</saying>
+<saying who="rindolf">Rashad: the length of the input</saying>
+<saying who="Rashad">Yeah that makes sense.</saying>
+<saying who="rindolf">Rashad: ok.</saying>
+<saying who="Rashad">I remember stuff about search algorithms.</saying>
+<saying who="Rashad">n is the number of entries in an array, for example.</saying>
+<saying who="sbrg">yep</saying>
+<saying who="rindolf">Rashad: now, some problems&#39;s *verification algorithm* is polynomial and these problemms are called &quot;NP&quot;</saying>
+<saying who="Rashad">Verification algorithm?</saying>
+<saying who="rindolf">Rashad: verification means you verify that the solution is correct after given one.</saying>
+<saying who="Rashad">Aha.</saying>
+<saying who="sbrg">Rashad: for example, if I give you a list and tell you that it&#39;s sorted, you can verify in polynomial time that it is correct</saying>
+<saying who="sbrg">by simply checking each pair of elements</saying>
+<saying who="Rashad">A solution in freecell is a series of moves?</saying>
+<saying who="rindolf">Rashad: yes</saying>
+<saying who="Rashad">sbrg: I see.</saying>
+<saying who="Rashad">OK so NP *complete* means?</saying>
+<saying who="rindolf">Rashad: now, some problems are NP-hard which means that each of them can be used to solve any problem in NP after a polynomial transformation.</saying>
+<saying who="sbrg">and NP complete are problems which are both in NP and NP-hard</saying>
+<saying who="rindolf">Rashad: yes, what sbrg said,</saying>
+<saying who="sbrg">so, NP: a problem that, when given a solution, you can verify that it is correct in polynomial time</saying>
+<saying who="sbrg">NP-hard: a class of problems that can be converted to each other</saying>
+<saying who="Rashad">OK.</saying>
+<saying who="Rashad">OK.</saying>
+<saying who="Rashad">So NP-hard does not imply NP?</saying>
+<saying who="rindolf">Rashad: no, not necessarily</saying>
+<saying who="kadoban">No, problems that are harder than NP are in NP-hard too</saying>
+<saying who="Rashad">Ahhh</saying>
+<saying who="Rashad">Now that makes sense.</saying>
+<saying who="Rashad">*at least NP hard*</saying>
+<saying who="rindolf">Rashad: for instance, the Halting Problem is NP hard.</saying>
+<saying who="Rashad">OK now everything is in place for me.</saying>
+<saying who="rindolf">Rashad: good</saying>
+<saying who="kadoban">It gets complicated because we don&#39;t know the actual hard relationships between many of the complexity classes, like we don&#39;t actually know if P = NP or if there are problems in NP that aren&#39;t in P. Which leads to the famous question you&#39;ve likely heard of.</saying>
+<saying who="Rashad">But I am interested by how you can map NP-hard problems from one to the other.</saying>
+<saying who="rindolf">Rashad: there&#39;s a 1 million USD prize for proving whether P is NP or not,</saying>
+<saying who="Rashad">kadoban: It got pretty philosophical fast :P</saying>
+<saying who="Rashad">P = ?</saying>
+<saying who="rindolf">Rashad: P is the class of polynomial problem,s</saying>
+<saying who="kadoban">P, the complexity class above, which is problems you can solve in polynomial time on a deterministic turing machine.</saying>
+<saying who="Rashad">I am a bit confused now..</saying>
+<saying who="kadoban">NP, problems you can verify solutions to in polynomial time on a deterministic turing machine.</saying>
+<saying who="Rashad">OK so NP is about verification, P is about solving. Correct?</saying>
+<saying who="rindolf">Rashad: well yes, but you often want to find good solutions for NP problems</saying>
+<saying who="Rashad">What do you mean?</saying>
+<saying who="kadoban">Correct, though that&#39;s really just a definition used for picking which complexity class. In general we&#39;re still interested in getting the answer to problems in NP</saying>
+<saying who="Rashad">Ah.</saying>
+<saying who="sbrg">Rashad: P is the class of problems that can be *solved* in polynomial time. NP is the class of problems *whose solution can be verified* in polynomial time.</saying>
+<saying who="Rashad">So the concern is: Can you find a solution to NP problems faster than you can verify the given solution?</saying>
+<saying who="sbrg">Rashad: Assuming you mean &quot;faster or as fast&quot;, well.. you just asked whether P = NP</saying>
+<saying who="Rashad">I see.</saying>
+<saying who="sbrg">if you have an answer to that question, someone will give you a million dollars</saying>
+<saying who="Rashad">But how is that not a philosophical question, though?</saying>
+<saying who="Rashad">Let me rephrase that.</saying>
+<saying who="kadoban">It depends, what&#39;s a &quot;philosophical question&quot;?</saying>
+<saying who="sbrg">kadoban: that is ^</saying>
+<saying who="sbrg">lol</saying>
+<saying who="Rashad">Wouldn&#39;t a solution imply a way to verify it?</saying>
+<saying who="kadoban">But if you&#39;re asking if it has practical consequences, it does, potentially.</saying>
+<saying who="sbrg">Rashad: Well, take sudoku as an example</saying>
+<saying who="Rashad">OK!</saying>
+<saying who="sbrg">If I give you a solved sudoku, how long would it take for you to verify it?</saying>
+<saying who="Rashad">kadoban: What kind of consequences?</saying>
+<saying who="sbrg">it&#39;s the same every time. you just make sure that 1 to 9 appears in all rows, columns and boxes</saying>
+<saying who="Rashad">sbrg: OK</saying>
+<saying who="sbrg">however, does seeing the solution tell you how you solve it?</saying>
+<saying who="sbrg">How as in, which steps</saying>
+<saying who="Rashad">OK that&#39;s exactly what I am asking.</saying>
+<saying who="kadoban">Rashad: For example if P = NP, then quite a lot of cryptography isn&#39;t very well founded. That would mean there were &quot;quick&quot; (in one way of speaking) algorithms to solve hard problems that crypto relies on, such as discrete logarithm and integer factorization.</saying>
+<saying who="Rashad">How do you get an answer that is not completely random that in the same process of figuring it out you are unable to replicate the same logic into how you verify it?</saying>
+<saying who="Rashad">And we&#39;re still talking about computers here so I am not sure if Newton&#39;s apple aha moment counts...</saying>
+<saying who="Gamah">Rashad: sometimes it&#39;s easier to assert the validity a solution (P) than it is to explain it (NP)</saying>
+<saying who="Gamah">or... those reversed</saying>
+<saying who="Gamah">i forget.</saying>
+<saying who="sbrg">Rashad: well, how easy is it to verify a sudoku? it&#39;s very easy. it&#39;s the same steps every time. however, does that knowledge of the rules of the game allow you to also solve the puzzle in an equal number of moves it took you to verify it?</saying>
+<saying who="Rashad">sbrg: The solution however is ultimately guided by the rules of verification.</saying>
+<saying who="Gamah">sbrg: poorly formed... technically speaking it can be easier to solve some given sudoko puzzles than it is to verify they are solved</saying>
+<saying who="Rashad">Unless it is a complete shot in the dark.</saying>
+<saying who="sbrg">Gamah: and there are lists that are already sorted. that doesn&#39;t change the lower bound for sorting. what&#39;s your point?</saying>
+<saying who="sbrg">Rashad: Yes, it is. so one would think that it would be possible</saying>
+<saying who="sbrg">and as Gamah pointed out, some sudokus are very easy to solve, while others are much harder</saying>
+<saying who="Gamah">Rashad: no p</saying>
+<saying who="Gamah">:P</saying>
+<saying who="sbrg">the question is whether you can give an algorithm that guarantees that you can solve every sudoku within some time limit(in terms of the size of the input) that performs no more steps than you would verifying a sudoku</saying>
+<saying who="Gamah">sbrg: i&#39;m saying you can&#39;t apply the act of solving and the act of verifying a &quot;solved&quot; sudoko to p=np because in the space of sudoku, either task could be on either side of the equation</saying>
+<saying who="Gamah">define &quot;steps&quot;</saying>
+<saying who="Gamah">because it always takes less steps to solve than verify... from some perspective</saying>
+<saying who="Rashad">rindolf: So solitaire is O(n)?</saying>
+<saying who="sbrg"> Gamah: you don&#39;t seem to understand complexity theory. we&#39;re talking about sudokus in general. I can verify *any* sudoku in some bounded polynomial time</saying>
+<saying who="Rashad">Ah sorry, I meant verifying a solitaire solution is O(n)*.</saying>
+<saying who="Gamah">you can also solve any sudoku</saying>
+<saying who="sbrg">the question is whether I can somehow use the rules of verification to help me create a solution in at most as much time as it would take me to verify it. i.e. P vs NP</saying>
+<saying who="workmad3">iirc, np-complete problems are ones where verifying a solution is polynomial time, but calculating a solution is non-polynomial</saying>
+<saying who="rindolf">Rashad: there are many variants of card solitaire</saying>
+<saying who="Gamah">sbrg: but the number of sudoku permetations and soultions is not unbound...</saying>
+<saying who="rindolf">Rashad: generalised Freecell is NP-complete</saying>
+<saying who="rindolf">Rashad: which assumes you have n ranks of cards insetad of 13 (ace-to-king)</saying>
+<saying who="sbrg">Gamah: for a 9x9 sudoku, no, obviously not. but we are talking about sudoku in general</saying>
+<saying who="Gamah">hmm.</saying>
+<saying who="sbrg">Rashad: at any rate, the point is that we just don&#39;t know whether we can use the information that lets us verify solutions in polynomial time to also construct solutions in polynomial time</saying>
+<saying who="Gamah">i feel like sudoku is still a search problem (IE: rainbow table)</saying>
+<saying who="Gamah">and not really applicable</saying>
+<saying who="workmad3">Gamah: and how long would it take you to compute that rainbow table?</saying>
+<saying who="sbrg">by your logic, I can solve any problem that way.</saying>
+<saying who="sbrg">i can just create a database of all sorted lists.</saying>
+<saying who="Gamah">sure...</saying>
+<saying who="sbrg">.. just like i can create a database of all sudokus. if we fix n, then yes, it is bounded and you can just solve it in constant time.</saying>
+<saying who="kadoban">sbrg: Well, not really, you still have lookup time.</saying>
+<saying who="kadoban">Oh, for fixed n I guess that doesn&#39;t matter.</saying>
+<saying who="sbrg">constant time where a unit is defined to be the lookup time</saying>
+<saying who="sbrg">there you go!</saying>
+<saying who="Gamah">workmad3: that would depend on how well i could optimize the verification algo</saying>
+<saying who="sbrg">it&#39;s all about context</saying>
+<saying who="workmad3">sbrg: well, you can solve it in constant time, assuming the existence of an oracle :)</saying>
+<saying who="Gamah">the $1m question just says &quot;a computer&quot; and &quot;in polynomial time&quot;</saying>
+<saying who="Gamah">it doesn&#39;t say i can&#39;t spend years precomputing the search space</saying>
+<saying who="Gamah">:)</saying>
+<saying who="sbrg">i don&#39;t think you understand what P vs NP means</saying>
+<saying who="workmad3">Gamah: assuming the existence of an oracle is generally not classed as a solution to P vs NP</saying>
+<saying who="Gamah">i thought the smiley implied i was being pedantic</saying>
+<saying who="workmad3">Gamah: otherwise it would have been solved years ago :P</saying>
+<saying who="Gamah">workmad3: well i was just going to use oracle DB</saying>
+<saying who="Gamah">:)</saying>
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

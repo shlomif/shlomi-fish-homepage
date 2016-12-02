@@ -8884,5 +8884,67 @@ Thanks, and let me figure out what you just wrote, heh.
             </info>
         </quote>
     </fortune>
+    <fortune id="sharp-reddit-gamedev-compiling-the-world">
+        <meta>
+            <title>Compiling the World</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="rindolf">Hi all.</saying>
+<saying who="bkeys">Hello rindolf</saying>
+<saying who="rindolf">bkeys: sup?</saying>
+<saying who="bkeys">Messing with docker still</saying>
+<saying who="bkeys">I hate it but there is no better option</saying>
+<saying who="bkeys">yourself?</saying>
+<saying who="rindolf">bkeys: I fixed Freecell Solver on ARM linux.</saying>
+<saying who="rindolf">bkeys: turns out &quot;char&quot;s in C are unsigned there by default.</saying>
+<saying who="bkeys">I thought this was always the case</saying>
+<saying who="rindolf">bkeys: they are signed on x86</saying>
+<saying who="bkeys">I did not know this</saying>
+<saying who="ExpiredPopsicle">Protip: uint8_t and int8_t exist. Use them. :P</saying>
+<saying who="rindolf">bkeys: ah.</saying>
+<saying who="bkeys">I almost never use chars directly</saying>
+<saying who="rindolf">ExpiredPopsicle: I know</saying>
+<saying who="bkeys">Most of the time C++ data structures are good enough</saying>
+<saying who="ExpiredPopsicle">Sign extending a char to an int can ruin your day.</saying>
+<saying who="bkeys">Then ints and floats</saying>
+<saying who="BlackMoon">rindolf: so you actually have to type signed char? :)</saying>
+<saying who="BlackMoon">weird.</saying>
+<saying who="ExpiredPopsicle">Or you could just use int8_t.</saying>
+<saying who="BlackMoon">neverah</saying>
+<saying who="rindolf">BlackMoon: yes</saying>
+<saying who="BlackMoon">you can take my poorly defined types from my cold, dead, typedefed hands</saying>
+<saying who="ExpiredPopsicle">pfft</saying>
+<saying who="rindolf">BlackMoon: or use the -fsigned-char compiler flag</saying>
+<saying who="BlackMoon">&#39;build procedure: use more obscure flags&#39;</saying>
+<saying who="ExpiredPopsicle">-O9999999999999999999999999999999999</saying>
+<saying who="BlackMoon">-O911</saying>
+<saying who="ExpiredPopsicle">Performance problems solved!</saying>
+<saying who="BlackMoon">activate emergency optimizations!</saying>
+<saying who="ExpiredPopsicle">Also I accidentally made the optimizer sentient. We&#39;re all doomed.</saying>
+<saying who="BlackMoon">nah we&#39;r find just so long as.. oh, you showed it some of your source code too? Well no wonder it wants to end all human life</saying>
+<saying who="ExpiredPopsicle">You know how the optimizer figures out how some code is unneeded and just deletes it?</saying>
+<saying who="ExpiredPopsicle">It did that with humans.</saying>
+<saying who="BlackMoon">or stuffed us all into a lib somewhere, never to be linked with again</saying>
+<saying who="ExpiredPopsicle">We have been simplified down to a 32-bit constant: 0x4655434B</saying>
+<me_is who="rindolf">survived</me_is>
+<saying who="BlackMoon">I will not be typecast!</saying>
+<saying who="BlackMoon">I am a cHuman! NOT A NUMBER! AND DEFINATELY NOT A VOID*</saying>
+<saying who="Type-21">&gt;DEFINATELY</saying>
+<saying who="BlackMoon">I hope the compilers come for you first Type-21</saying>
+<saying who="Type-21">i&#39;m already lost</saying>
+<saying who="Type-21">the compilers are flowing through me</saying>
+<saying who="BlackMoon">resistance is futile, you will be compil error on line 53, invalid type-21</saying>
+<saying who="BlackFox">I&#39;m defiantly a void</saying>
+<me_is who="rindolf">got transpiled into JavaScript</me_is>
+<saying who="Type-21">aren&#39;t the kids these days doing coffescript or typescript or something?</saying>
+            </body>
+            <info>
+                <channel>#reddit-gamedev</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
 </list>
 </collection>

@@ -37,6 +37,7 @@ my @prunes =
     qr#^\Qdest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E#,
     qr#^\Qdest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z#,
     qr#^\Qdest/t2/humour/by-others/how-to-make-square-corners-with-CSS/#,
+    qr#^\Qdest/t2/philosophy/by-others/sscce/#,
 );
 
 sub list_htmls

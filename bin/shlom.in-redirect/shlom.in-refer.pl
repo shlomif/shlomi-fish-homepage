@@ -171,6 +171,11 @@ my @urls =
         url => "http://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/",
         desc => qq{“So, Who the Hell is Qoheleth?”},
     },
+    {
+        id => 'setup',
+        url => 'https://raw.githubusercontent.com/shlomif/shlomif-computer-settings/master/shlomif-settings/setup-all/setup-all.pl',
+        desc => qq{My setup script — for quick access},
+    },
 );
 
 my %urls_by_id;

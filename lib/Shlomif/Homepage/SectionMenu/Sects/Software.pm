@@ -53,6 +53,11 @@ my $software_tree_contents =
                     title => "A Preprocessor for HTML",
                 },
                 {
+                    text => "fortune-mod",
+                    url => "open-source/projects/fortune-mod/",
+                    title => "Display a random quote on the command line",
+                },
+                {
                     text => "Gradient-Fu Patch",
                     url => "grad-fu/",
                     title => "Gradient-Fu Patch for GIMP",

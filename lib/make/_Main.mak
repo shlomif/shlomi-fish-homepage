@@ -345,7 +345,7 @@ $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/h
 	$(GPERL) $<
 
 
-$(SITE_SOURCE_INSTALL_TARGET): INSTALL
+$(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 	$(call COPY)
 
 SCREENPLAY_DOCS_ADDITIONS = \
@@ -648,7 +648,6 @@ tidy: all
 $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	mkdir -p $@
 	rsync -r -v $< $@
-	find $@ -name '.svn' -print0 | xargs -0 rm -fr
 
 FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 

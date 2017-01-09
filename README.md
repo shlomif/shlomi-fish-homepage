@@ -1,3 +1,5 @@
+# ABOUT
+
 This repository contains the sources for the Shlomi Fish’s Homesite ( http://www.shlomifish.org/ ).
 
 For build instructions see the file <tt>INSTALL</tt> .

@@ -197,6 +197,8 @@ sub get_single_fortune_page_html_wml
 
 <h2*>About</h2*>
 
+#include "fortunes/corner_image.wml"
+
 @{[$r->about_blurb()]}
 
 <h3>Table of Contents</h3>

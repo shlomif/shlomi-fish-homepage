@@ -55,11 +55,11 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 
 [% SET rm_line = "\tcp -f lib/sgml/shlomif-docbook/xsl-stylesheets/style.css " _ foo_dest _ "/style.css || true" %]
 [% IF d.custom_css %]
-[% SET rm_line = "\trm -f " _ foo_dest _ "/style.css\n" %]
+[% SET rm_line = "" %]
 [% END %]
 
 [% foo_dest %]/index.html: [% foo_src %]/index.html
-[% "\t" %]rsync -r -v [% foo_src %]/ [% foo_dest %]/
+[% "\t" %]rsync --exclude 'style.css' -r -v [% foo_src %]/ [% foo_dest %]/
 [% rm_line %]
 
 [% foo_src %]/index.html: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)

@@ -110,7 +110,24 @@ foreach my $cmd (
     _my_system($cmd);
 }
 
-# utime(undef, undef, map { "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$_" } qw(html pdf));
+sub letter_fn
+{
+    my $ext = shift;
+    return "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$ext";
+}
+
+sub letter_io
+{
+    return io()->file(letter_fn(shift));
+}
+
+foreach my $ext (qw/ html pdf /)
+{
+    if (letter_io($ext)->mtime < letter_io('odt')->mtime)
+    {
+        utime(undef, undef, letter_fn($ext));
+    }
+}
 
 io()->file('Makefile')->print("include lib/make/_Main.mak\n");
 

@@ -352,9 +352,10 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	ae-interview \
 	Emma-Watson-applying-for-a-software-dev-job \
 	Emma-Watson-visit-to-Israel-and-Gaza \
-	sussman-interview \
+	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 	Mighty-Boosh--Ape-of-Death--Scenes \
+	sussman-interview \
 
 
 SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)

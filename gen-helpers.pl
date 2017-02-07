@@ -15,34 +15,29 @@ IO::All->import('io');
 
 require List::MoreUtils;
 
-if (system($^X,
-        '-Ilib', '-MShlomif::Homepage::LongStories',
-        '-e',
-        'Shlomif::Homepage::LongStories->render_make_fragment()'
-    )
-)
+sub _exec_perl
 {
-    die "LongStories render_make_fragment failed!";
+    my ($cmd, $err) = @_;
+
+    if (system($^X, '-Ilib', @$cmd))
+    {
+        die $err;
+    }
 }
 
-if (system($^X,
-        '-Ilib', '-MShlomif::Homepage::FortuneCollections',
+_exec_perl(['-MShlomif::Homepage::LongStories',
         '-e',
-        'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'
-    )
-)
-{
-    die "print_all_fortunes_html_wmls failed!";
-}
+        'Shlomif::Homepage::LongStories->render_make_fragment()',
+    ],"LongStories render_make_fragment failed!");
 
-if (system($^X,
-        '-Ilib', 'bin/gen-forts-all-in-one-page.pl',
-        't2/humour/fortunes/all-in-one.uncompressed.html.wml',
-    )
-)
-{
-    die "gen-forts-all-in-one-page.pl failed!";
-}
+_exec_perl(['-MShlomif::Homepage::FortuneCollections',
+        '-e',
+        'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()',
+    ], "print_all_fortunes_html_wmls failed!");
+
+_exec_perl(['bin/gen-forts-all-in-one-page.pl',
+        't2/humour/fortunes/all-in-one.uncompressed.html.wml',],
+    "gen-forts-all-in-one-page.pl failed!");
 
 my $generator =
     HTML::Latemp::GenMakeHelpers->new(

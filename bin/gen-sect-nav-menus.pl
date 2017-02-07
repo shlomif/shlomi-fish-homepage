@@ -188,7 +188,7 @@ URLS:
                     return \(
                         escape_html(
                             uri_escape(
-                                MyNavData::get_hosts()->{ $host }->{base_url}
+                                MyNavData::get_hosts()->{$host}->{base_url}
                                     . $url
                             )
                         )

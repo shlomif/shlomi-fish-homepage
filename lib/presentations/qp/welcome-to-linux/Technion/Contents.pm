@@ -92,7 +92,7 @@ my $contents = {
             ],
         },
     ],
-    'images' => [ 'style.css' ],
+    'images' => ['style.css'],
 };
 
 sub get_contents

@@ -64,7 +64,7 @@ EOF
 my @file_bases = ( map { $_->id() } @$collections_aref );
 
 my $collection_query_id_sth =
-    $dbh->prepare( q{SELECT id FROM fortune_collections WHERE str_id = ?} );
+    $dbh->prepare(q{SELECT id FROM fortune_collections WHERE str_id = ?});
 
 # We put the work within one large commit per the advice on
 # Freenode's #perl by tm604 and jql , and to avoid these errors:

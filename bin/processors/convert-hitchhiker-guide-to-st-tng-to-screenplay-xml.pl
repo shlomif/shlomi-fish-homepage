@@ -80,7 +80,7 @@ $text =~ s{^(\s*\Q$END\E.*)\z}{
     . qq{\n\n</s>\n\n}
 }ems;
 
-io->file( 'lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt' )
+io->file('lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt')
     ->print(
 qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generations">\n\n$text\n\n</s>}
     );

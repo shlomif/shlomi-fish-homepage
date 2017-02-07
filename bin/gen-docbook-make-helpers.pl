@@ -646,9 +646,8 @@ EOF
             "\n\n",
             "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
             (
-                map
-                {
-                    "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"
+                map {
+                          "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"
                         . [ split m#/#, $_ ]->[-1]
                         . "\n\t\$(call COPY)\n\n"
                 } @_files

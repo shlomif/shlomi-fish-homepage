@@ -46,8 +46,7 @@ EOF
 
 $out->print(
     map { "$_\n" }
-        map
-    {
+        map {
         my $escaped = escape_html($_);
         qq{<li><a href="$escaped">$escaped</a></li>}
         }

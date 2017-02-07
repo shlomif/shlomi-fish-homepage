@@ -12,7 +12,7 @@ binmode STDOUT, ':encoding(UTF-8)';
 my $filename = shift(@ARGV);
 
 Shlomif::Homepage::FortuneCollections->write_fortune_all_in_one_page_to_file(
-    $filename );
+    $filename);
 
 Shlomif::Homepage::FortuneCollections->write_epub_json(
     'lib/fortunes/xhtmls/book.json');

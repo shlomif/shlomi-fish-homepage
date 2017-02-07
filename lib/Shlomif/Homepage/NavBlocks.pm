@@ -20,7 +20,7 @@ use Shlomif::Homepage::NavBlocks::ShlomifWikiLink;
 
 sub _l
 {
-    return Shlomif::Homepage::NavBlocks::LocalLink->new( { @_ }, );
+    return Shlomif::Homepage::NavBlocks::LocalLink->new( {@_}, );
 }
 
 sub _fp

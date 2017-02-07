@@ -8,7 +8,8 @@ use utf8;
 use IO::All qw/ io /;
 
 my $text =
-    io->file('t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt')->slurp;
+    io->file('t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt')
+    ->slurp;
 
 sub prefix_lines
 {
@@ -31,7 +32,7 @@ sub calc_new_para
 {
     my $para = shift;
 
-    if ($para !~ m{:} or $para =~ m{:\n?\z})
+    if ( $para !~ m{:} or $para =~ m{:\n?\z} )
     {
         return wrap_as_desc($para);
     }
@@ -79,6 +80,7 @@ $text =~ s{^(\s*\Q$END\E.*)\z}{
     . qq{\n\n</s>\n\n}
 }ems;
 
-io->file(
-    'lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt'
-)->print(qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generations">\n\n$text\n\n</s>});
+io->file( 'lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt' )
+    ->print(
+qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generations">\n\n$text\n\n</s>}
+    );

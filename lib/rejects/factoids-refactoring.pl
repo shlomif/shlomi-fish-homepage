@@ -9,7 +9,7 @@ my $lang = shift(@ARGV);
 
 my $text = io('-')->slurp();
 
-if ($text !~ m/<ul>/)
+if ( $text !~ m/<ul>/ )
 {
     $text =~ s#<(/?)lip?>#<${1}li_$lang>#g;
 }

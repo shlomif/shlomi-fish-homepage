@@ -10,7 +10,7 @@ while (<>)
     if (/\A *<fortune/)
     {
         @this_fort = ($_);
-        GET_FORT_LOOP:
+    GET_FORT_LOOP:
         while (<>)
         {
             if (m{\A *</fortune})
@@ -21,12 +21,14 @@ while (<>)
         }
         push @this_fort, $_;
 
-        my $entire_fort = join("", @this_fort);
+        my $entire_fort = join( "", @this_fort );
 
-        if (! (($entire_fort =~ m{<channel>\#\#programming</channel>})
-            &&
-            ($entire_fort =~ m{<network>Freenode</network>}i)
-        ))
+        if (
+            !(
+                   ( $entire_fort =~ m{<channel>\#\#programming</channel>} )
+                && ( $entire_fort =~ m{<network>Freenode</network>}i )
+            )
+            )
         {
             print @this_fort;
         }
@@ -36,5 +38,4 @@ while (<>)
         print;
     }
 }
-
 

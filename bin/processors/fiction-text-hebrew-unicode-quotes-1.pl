@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 
-
 use utf8;
 
 use open IO => ':encoding(utf8)';
@@ -13,24 +12,24 @@ use Carp;
 binmode STDOUT, ':encoding(utf8)';
 local $/;
 
-my ($start, $end) = ('„', '“');
-if ($ENV{'ENG'})
+my ( $start, $end ) = ( '„', '“' );
+if ( $ENV{'ENG'} )
 {
-    ($start, $end) = ('“', '”');
+    ( $start, $end ) = ( '“', '”' );
 }
 
 sub _process_paragraph
 {
     my $s = shift;
 
-    if ($s =~ m{<})
+    if ( $s =~ m{<} )
     {
         return $s;
     }
 
-    my $count = () = ($s =~ m{"}g);
+    my $count = () = ( $s =~ m{"}g );
 
-    if ($count % 2 != 0)
+    if ( $count % 2 != 0 )
     {
         return $s;
     }
@@ -38,7 +37,7 @@ sub _process_paragraph
     my $i = 0;
     $s =~ s/"/(($i++) % 2 == 0) ? $start: $end/ge;
 
-    if ($i != $count)
+    if ( $i != $count )
     {
         Carp::confess("Error in paragraph '$s'");
     }

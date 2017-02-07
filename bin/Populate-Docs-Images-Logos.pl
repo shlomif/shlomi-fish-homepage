@@ -18,18 +18,18 @@ sub _github_clone
     my $args = shift;
 
     my $gh_username = $args->{'username'};
-    my $repo = $args->{'repo'};
-    my $target = $args->{'target'};
-    my $type = $args->{type} || 'github_git';
+    my $repo        = $args->{'repo'};
+    my $target      = $args->{'target'};
+    my $type        = $args->{type} || 'github_git';
 
     my $url;
 
     my $cmd;
 
-    if ($type eq 'github_git')
+    if ( $type eq 'github_git' )
     {
         $cmd = 'git';
-        if ($ENV{GITHUB_USERS} =~ m/,\Q$gh_username\E,/)
+        if ( $ENV{GITHUB_USERS} =~ m/,\Q$gh_username\E,/ )
         {
             $url = "git\@github.com:${gh_username}/${repo}.git";
         }
@@ -38,12 +38,12 @@ sub _github_clone
             $url = "https://github.com/$gh_username/$repo.git";
         }
     }
-    elsif ($type eq 'bitbucket_hg')
+    elsif ( $type eq 'bitbucket_hg' )
     {
         $cmd = 'hg';
-        if ($ENV{BITBUCKET_USERS} =~ m/,\Q$gh_username\E,/)
+        if ( $ENV{BITBUCKET_USERS} =~ m/,\Q$gh_username\E,/ )
         {
-            $url = "ssh://hg\@bitbucket.org/$gh_username/$repo"
+            $url = "ssh://hg\@bitbucket.org/$gh_username/$repo";
         }
         else
         {
@@ -55,7 +55,7 @@ sub _github_clone
         Carp::confess("Unknown type '$type'");
     }
 
-    system($cmd, 'clone', $url, (defined($target) ? ($target) : ()));
+    system( $cmd, 'clone', $url, ( defined($target) ? ($target) : () ) );
 
     return;
 }
@@ -64,38 +64,37 @@ sub _github_shlomif_clone
 {
     my ($args) = @_;
 
-    return _github_clone({ username => 'shlomif', %$args,});
+    return _github_clone( { username => 'shlomif', %$args, } );
 }
 
 my $pm = Parallel::ForkManager->new(20);
 
-my $logos =
-[
+my $logos = [
     {
-        b => 'Back-to-my-Homepage/git',
+        b         => 'Back-to-my-Homepage/git',
         repo_base => 'Shlomi-Fish-Back-to-my-Homepage-Logo',
-        type => 'github_git',
+        type      => 'github_git',
     },
     {
-        b => 'human-hacking-field-guide-logo',
+        b         => 'human-hacking-field-guide-logo',
         repo_base => 'human-hacking-field-guide-graphics',
-        type => 'bitbucket_hg',
+        type      => 'bitbucket_hg',
     },
     {
-        b => 'Summerschool-at-the-NSA/SummerNSA-logo',
+        b         => 'Summerschool-at-the-NSA/SummerNSA-logo',
         repo_base => 'Summerschool-at-the-NSA-logo',
-        type => 'github_git',
+        type      => 'github_git',
     },
     {
-        b => 'The-One-With-The-Fountainhead-TOWTF-Logo/git',
+        b         => 'The-One-With-The-Fountainhead-TOWTF-Logo/git',
         repo_base => 'The-One-with-the-Fountainhead-Logo',
-        type => 'github_git',
+        type      => 'github_git',
     },
 ];
 
 foreach my $l (@$logos)
 {
-    my $b =$l->{b}
+    my $b = $l->{b}
         or die "b not specified";
     my $repo_base = $l->{repo_base}
         or die "repo_base not specified.";
@@ -103,11 +102,11 @@ foreach my $l (@$logos)
         or die "type not specified.";
 
     my $pid;
-    if (! ($pid = $pm->start))
+    if ( !( $pid = $pm->start ) )
     {
         my $d = "$base_dir/$b";
 
-        if (! -d $d)
+        if ( !-d $d )
         {
             my $d_obj = io->dir($d);
             my $above = $d_obj->updir();
@@ -115,9 +114,9 @@ foreach my $l (@$logos)
 
             _github_shlomif_clone(
                 {
-                    repo => $repo_base,
+                    repo   => $repo_base,
                     target => $d,
-                    type => $type,
+                    type   => $type,
                 }
             );
         }

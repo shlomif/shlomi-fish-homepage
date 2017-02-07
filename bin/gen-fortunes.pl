@@ -12,12 +12,12 @@ use Cwd qw(getcwd);
 
     chdir("t2/humour/fortunes");
 
-    if (-e 'friends')
+    if ( -e 'friends' )
     {
-        system("make", "dist");
+        system( "make", "dist" );
     }
 
-    system("make", "-s", "list_files");
+    system( "make", "-s", "list_files" );
 
     chdir($orig_dir);
 }

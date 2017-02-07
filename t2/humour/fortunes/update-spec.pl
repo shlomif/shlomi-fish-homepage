@@ -5,17 +5,17 @@ use warnings;
 
 use Getopt::Long;
 
-my ($in_fn, $out_fn, $ver);
+my ( $in_fn, $out_fn, $ver );
 
 GetOptions(
-    "i|input=s" => \$in_fn,
+    "i|input=s"  => \$in_fn,
     "o|output=s" => \$out_fn,
-    "ver=s" => \$ver,
+    "ver=s"      => \$ver,
 );
 
-foreach my $param ($in_fn, $out_fn, $ver)
+foreach my $param ( $in_fn, $out_fn, $ver )
 {
-    if (!defined($param))
+    if ( !defined($param) )
     {
         die "One parameter is not defined!";
     }
@@ -26,10 +26,10 @@ open my $in, "<", $in_fn
     or die "Foo!";
 
 LINES_LOOP:
-while (my $line = <$in>)
+while ( my $line = <$in> )
 {
     chomp($line);
-    if ($line =~ m{\A%define version [\d\.]+\s*\z})
+    if ( $line =~ m{\A%define version [\d\.]+\s*\z} )
     {
         $buffer .= "%define version $ver\n";
         last LINES_LOOP;
@@ -40,7 +40,7 @@ while (my $line = <$in>)
     }
 }
 
-while (my $line = <$in>)
+while ( my $line = <$in> )
 {
     $buffer .= $line;
 }

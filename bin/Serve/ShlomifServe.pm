@@ -11,11 +11,11 @@ sub serve
     my (%args) = (@_);
     my $dir_to_serve = $args{'dir_to_serve'};
 
-    my $cgi = CGI->new();
+    my $cgi       = CGI->new();
     my $mimetypes = MIME::Types->new();
-    my $path = $cgi->path_info();
+    my $path      = $cgi->path_info();
 
-    if (grep { ($_ eq ".") || ($_ eq "..") } (split /\//, $path))
+    if ( grep { ( $_ eq "." ) || ( $_ eq ".." ) } ( split /\//, $path ) )
     {
         print $cgi->header();
         print "<html><body>You suck! Don't use .. or . as
@@ -23,25 +23,29 @@ sub serve
         exit(0);
     }
 
-    if ($path =~ m{/$})
+    if ( $path =~ m{/$} )
     {
-        if (-f $dir_to_serve.$path."index.html")
+        if ( -f $dir_to_serve . $path . "index.html" )
         {
             $path .= "index.html";
         }
         else
         {
-            opendir D, $dir_to_serve.$path;
-            my @files = (sort { $a cmp $b } grep { $_ ne "." } readdir(D));
+            opendir D, $dir_to_serve . $path;
+            my @files = ( sort { $a cmp $b } grep { $_ ne "." } readdir(D) );
             closedir(D);
             print $cgi->header();
-            my $title = "Listing for " . CGI::escapeHTML($path);
-            my $files_string = join("",
+            my $title        = "Listing for " . CGI::escapeHTML($path);
+            my $files_string = join(
+                "",
                 map {
-                    my $fn = CGI::escapeHTML($_) .
-                        ((-d $dir_to_serve.$path."/".$_)?"/":"");
+                    my $fn =
+                        CGI::escapeHTML($_)
+                        . (
+                        ( -d $dir_to_serve . $path . "/" . $_ ) ? "/" : "" );
                     qq{<li><a href=\"$fn\">$fn</a></li>\n}
-                } @files);
+                } @files
+            );
             $files_string = @files ? "<ol>\n$files_string\n</ol>" : "";
             print <<"EOF";
 <!DOCTYPE
@@ -61,19 +65,22 @@ EOF
         }
     }
 
-    my $file_full_path = $dir_to_serve.$path;
+    my $file_full_path = $dir_to_serve . $path;
     my $text;
-    do {
+    do
+    {
         local $/;
         open my $in, "<", $file_full_path;
         $text = <$in>;
         close($in);
     };
     my $mime_type = $mimetypes->mimeTypeOf($file_full_path);
-    if ($mime_type eq "text/html")
+    if ( $mime_type eq "text/html" )
     {
-        $text =~ s!http://www\.shlomifish\.org/!http://localhost/sites/hp/shlomif/!g;
-        $text =~ s!http://vipe\.technion\.ac\.il/\~shlomif/!http://localhost/sites/hp/vipe/!g;
+        $text =~
+            s!http://www\.shlomifish\.org/!http://localhost/sites/hp/shlomif/!g;
+        $text =~
+s!http://vipe\.technion\.ac\.il/\~shlomif/!http://localhost/sites/hp/vipe/!g;
     }
     print "Content-Type: $mime_type\n\n";
     print $text;

@@ -32,7 +32,7 @@ sub _fn
 {
 
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => _fn("philosophy/the-eternal-jew/"),
+        path_info    => _fn("philosophy/the-eternal-jew/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -40,7 +40,7 @@ sub _fn
 
     my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
-            host => 't2',
+            host     => 't2',
             nav_menu => $nav_bar,
         }
     );
@@ -49,14 +49,14 @@ sub _fn
         my $link = Shlomif::Homepage::NavBlocks::LocalLink->new(
             {
                 inner_html => "Ongoing Text",
-                path => "humour/Selina-Mandrake/ongoing-text.html",
+                path       => "humour/Selina-Mandrake/ongoing-text.html",
             },
         );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($link),
-            q{<li><p><a href="../../humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</a></p></li>},
+q{<li><p><a href="../../humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</a></p></li>},
             "Render Local Link.",
         );
     }
@@ -69,9 +69,9 @@ sub _fn
         );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($link),
-            q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">GitHub Repo</a></p></li>},
+q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">GitHub Repo</a></p></li>},
             "Render GitHub Link.",
         );
     }
@@ -80,12 +80,12 @@ sub _fn
         my $link = Shlomif::Homepage::NavBlocks::LocalLink->new(
             {
                 inner_html => "The Eternal Jew",
-                path => "philosophy/the-eternal-jew/",
+                path       => "philosophy/the-eternal-jew/",
             },
         );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($link),
             q{<li><p><strong class="current">The Eternal Jew</strong></p></li>},
             "Render current link.",
@@ -95,7 +95,7 @@ sub _fn
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => _fn("humour/Selina-Mandrake/"),
+        path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -103,30 +103,29 @@ sub _fn
 
     my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
-            host => 't2',
+            host     => 't2',
             nav_menu => $nav_bar,
         }
     );
 
     {
-        my @links =
-        (
+        my @links = (
             Shlomif::Homepage::NavBlocks::LocalLink->new(
                 {
                     inner_html => "Front Page",
-                    path => "humour/Selina-Mandrake/",
+                    path       => "humour/Selina-Mandrake/",
                 },
             ),
             Shlomif::Homepage::NavBlocks::LocalLink->new(
                 {
                     inner_html => "Ongoing Text",
-                    path => "humour/Selina-Mandrake/ongoing-text.html",
+                    path       => "humour/Selina-Mandrake/ongoing-text.html",
                 },
             ),
             Shlomif::Homepage::NavBlocks::LocalLink->new(
                 {
                     inner_html => "Proposed Cast",
-                    path => "humour/Selina-Mandrake/cast.html",
+                    path       => "humour/Selina-Mandrake/cast.html",
                 },
             ),
             Shlomif::Homepage::NavBlocks::GitHubLink->new(
@@ -144,8 +143,7 @@ sub _fn
         );
 
         # TEST
-        eq_or_diff
-        (
+        eq_or_diff(
             $tr->collect_local_links(),
             [
                 "humour/Selina-Mandrake/",
@@ -155,7 +153,7 @@ sub _fn
         );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($tr),
             <<'EOF',
 <tr>
@@ -177,7 +175,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => _fn("humour/Selina-Mandrake/"),
+        path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -185,7 +183,7 @@ EOF
 
     my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
-            host => 't2',
+            host     => 't2',
             nav_menu => $nav_bar,
         }
     );
@@ -198,15 +196,10 @@ EOF
         );
 
         # TEST
-        eq_or_diff
-        (
-            $subdiv_tr->collect_local_links(),
-            [
-            ],
-        );
+        eq_or_diff( $subdiv_tr->collect_local_links(), [], );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($subdiv_tr),
             <<'EOF',
 <tr class="subdiv">
@@ -225,15 +218,10 @@ EOF
         );
 
         # TEST
-        eq_or_diff
-        (
-            $master_tr->collect_local_links(),
-            [
-            ],
-        );
+        eq_or_diff( $master_tr->collect_local_links(), [], );
 
         # TEST
-        eq_or_diff (
+        eq_or_diff(
             $r->render($master_tr),
             <<'EOF',
 <tr class="main_title">
@@ -247,7 +235,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info => _fn("humour/Selina-Mandrake/"),
+        path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -255,7 +243,7 @@ EOF
 
     my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
         {
-            host => 't2',
+            host     => 't2',
             nav_menu => $nav_bar,
         }
     );
@@ -264,8 +252,8 @@ EOF
 
     # TEST
     eq_or_diff(
-        [$r->render($block)],
-        [<<'EOF',],
+        [ $r->render($block) ],
+        [ <<'EOF', ],
 <div class="topical_nav_block" id="buffy_nav_block">
 <table>
 <tr class="main_title">

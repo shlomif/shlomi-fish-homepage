@@ -13,7 +13,7 @@ close($arcs_list_fh);
 
 shift(@lines);
 
-my @fortunes = (map { /([\w\-_]+)/ ; $1 } @lines);
+my @fortunes = ( map { /([\w\-_]+)/; $1 } @lines );
 
 my $out = io()->file("source-files-list.html");
 
@@ -46,16 +46,24 @@ EOF
 
 $out->print(
     map { "$_\n" }
-    map { my $escaped = escape_html($_); qq{<li><a href="$escaped">$escaped</a></li>} }
-    sort { $a cmp $b }
-    (
-        (map { ( "$_.xml", $_, "$_.dat" ) } @fortunes),
-        (map { $_->filename(); }
-        io(".")->filter( sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in|xsl)\z} })->all_files()),
+        map
+    {
+        my $escaped = escape_html($_);
+        qq{<li><a href="$escaped">$escaped</a></li>}
+        }
+        sort { $a cmp $b } (
+        ( map { ( "$_.xml", $_, "$_.dat" ) } @fortunes ),
+        (
+            map { $_->filename(); } io(".")->filter(
+                sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in|xsl)\z} }
+            )->all_files()
+        ),
         "fortunes-shlomif-all.atom",
         "fortunes-shlomif-all.rss",
-        "Makefile", "ver.txt", "show-cgi.txt",
-    )
+        "Makefile",
+        "ver.txt",
+        "show-cgi.txt",
+        )
 );
 
 $out->print(<<"EOF");

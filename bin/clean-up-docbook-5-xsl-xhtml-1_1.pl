@@ -11,9 +11,7 @@ use Path::Tiny qw/ path /;
 
 my $out_fn;
 
-GetOptions(
-    "output|o=s" => \$out_fn,
-);
+GetOptions( "output|o=s" => \$out_fn, );
 
 # Input the filename
 my $filename = shift(@ARGV)

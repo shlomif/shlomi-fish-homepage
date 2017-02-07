@@ -10,20 +10,17 @@ use Path::Tiny qw/ path /;
 
 my $out_fn;
 
-GetOptions(
-    "output|o=s" => \$out_fn,
-);
+GetOptions( "output|o=s" => \$out_fn, );
 
 # Input the filename
 my $filename = shift(@ARGV)
     or die "Give me a filename as a command argument: myscript FILENAME";
 
 # Prepare the objects.
-my $xml = XML::LibXML->new;
+my $xml       = XML::LibXML->new;
 my $root_node = $xml->parse_file($filename);
-my $xpc = XML::LibXML::XPathContext->new($root_node);
-$xpc->registerNs("xhtml", "http://www.w3.org/1999/xhtml");
-
+my $xpc       = XML::LibXML::XPathContext->new($root_node);
+$xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
 
 {
     my ($body_node) = $xpc->findnodes('//xhtml:body');

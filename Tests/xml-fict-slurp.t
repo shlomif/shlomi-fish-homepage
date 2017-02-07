@@ -12,7 +12,8 @@ use Data::Dumper;
 use String::ShellQuote;
 use File::Spec;
 use File::Temp qw( tempdir );
-use Test::Trap qw( trap $trap :flow:stderr(systemsafe):stdout(systemsafe):warn );
+use Test::Trap
+    qw( trap $trap :flow:stderr(systemsafe):stdout(systemsafe):warn );
 
 use Shlomif::XmlFictionSlurp;
 
@@ -21,14 +22,14 @@ use Shlomif::XmlFictionSlurp;
     {
         Shlomif::XmlFictionSlurp->my_slurp(
             +{
-                fn => 'Tests/data/fict1.xml',
+                fn       => 'Tests/data/fict1.xml',
                 index_id => 'fiction_text_index',
             }
         );
     };
 
     # TEST
-    eq_or_diff (
+    eq_or_diff(
         $trap->stdout(),
         <<'EOF',
 

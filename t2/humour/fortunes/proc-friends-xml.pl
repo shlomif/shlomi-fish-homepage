@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-my $count = 1;
-my $enc = 0;
-my $id_str = "PLOC-IDENT";
+my $count     = 1;
+my $enc       = 0;
+my $id_str    = "PLOC-IDENT";
 my $title_str = "QUACKPROLOKOG==UNKNOWN-TITLE";
 
 while (<>)

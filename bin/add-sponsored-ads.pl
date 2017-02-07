@@ -6,22 +6,22 @@ use autodie;
 
 use IO::All qw/ io /;
 
-foreach my $ad (grep { /\.html$/ } io("Ads-for-Homepage")->all_files())
+foreach my $ad ( grep { /\.html$/ } io("Ads-for-Homepage")->all_files() )
 {
     my $contents = $ad->slurp();
 
-    if ($contents !~ m{\Ahttp://www.shlomifish.org/(\S+)})
+    if ( $contents !~ m{\Ahttp://www.shlomifish.org/(\S+)} )
     {
         die "No line found in $ad!";
     }
 
     my $path = $1;
 
-    if ($path =~ /\/$/)
+    if ( $path =~ /\/$/ )
     {
         $path .= "index.html.wml";
     }
-    elsif ($path =~ /\.x?html$/)
+    elsif ( $path =~ /\.x?html$/ )
     {
         $path .= ".wml";
     }
@@ -30,12 +30,12 @@ foreach my $ad (grep { /\.html$/ } io("Ads-for-Homepage")->all_files())
         die "Path $path does not end with /";
     }
 
-    if ($path =~ m{(\A|/)\.\.?(/|\z)})
+    if ( $path =~ m{(\A|/)\.\.?(/|\z)} )
     {
         die "Malicious Path";
     }
 
-    if ($contents !~ m{(<p>.*?</p>)}ms)
+    if ( $contents !~ m{(<p>.*?</p>)}ms )
     {
         die "Could not find ad!";
     }

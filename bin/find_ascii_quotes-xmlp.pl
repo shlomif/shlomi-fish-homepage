@@ -12,22 +12,19 @@ foreach my $filename (@ARGV)
     my $parser = XML::Parser->new(
         Handlers => {
             Char => sub {
-                my ($expat, $string) = @_;
+                my ( $expat, $string ) = @_;
 
                 my @lines = split /\n/, $string, -1;
 
-                foreach my $idx (0 .. $#lines)
+                foreach my $idx ( 0 .. $#lines )
                 {
                     my $l = $lines[$idx];
 
-                    if ($l =~ m{["']})
+                    if ( $l =~ m{["']} )
                     {
-                        printf {*STDOUT}
-                        (
-                            "%s:%d:%s\n",
-                                $filename,
-                                $idx+$expat->current_line(),
-                                $l
+                        printf {*STDOUT} (
+                            "%s:%d:%s\n", $filename,
+                            $idx + $expat->current_line(), $l
                         );
                     }
                 }
@@ -37,11 +34,9 @@ foreach my $filename (@ARGV)
         },
     );
 
-    eval {
-        $parser->parsefile($filename);
-    };
+    eval { $parser->parsefile($filename); };
 
-    if (my $err = $@)
+    if ( my $err = $@ )
     {
         die "Error '$err' at filename '$filename'";
     }

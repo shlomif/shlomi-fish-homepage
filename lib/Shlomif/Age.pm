@@ -9,11 +9,11 @@ sub calc_age
 {
     my ($class) = @_;
 
-    my $birth = DateTime->new(year => 1977, month => 5, day => 5);
+    my $birth = DateTime->new( year => 1977, month => 5, day => 5 );
 
     my $now = DateTime->now();
 
-    return ($now - $birth)->years();
+    return ( $now - $birth )->years();
 }
 
 1;

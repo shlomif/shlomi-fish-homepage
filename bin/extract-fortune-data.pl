@@ -16,18 +16,20 @@ use YAML::XS (qw(LoadFile DumpFile));
 
 my %d;
 
-my $yaml_data_fn = $INC{'Shlomif/Homepage/FortuneCollections.pm'} =~ s#/[^/]+\z#/fortunes-meta-data.yml#r;
+my $yaml_data_fn = $INC{'Shlomif/Homepage/FortuneCollections.pm'} =~
+    s#/[^/]+\z#/fortunes-meta-data.yml#r;
 my $data = LoadFile($yaml_data_fn);
 
-my @fields = ( qw(page_title meta_desc about_blurb) );
+my @fields = (qw(page_title meta_desc about_blurb));
 
-foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
+foreach my $r ( @{ Shlomif::Homepage::FortuneCollections->sorted_fortunes() } )
 {
     my $id = $r->id();
 
     my $contents = io->file("./t2/humour/fortunes/$id.html.wml")->utf8->slurp;
 
-    if ($contents !~ m%
+    if (
+        $contents !~ m%
 \A\#include\ '\.\./template\.wml'\n
 \#include\ "render_fortunes_pages\.wml"\n
 \n
@@ -46,8 +48,8 @@ foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
 </div>\n
 \s*
 \z
- %gmsx)
-
+ %gmsx
+        )
 
     {
         die "Cannot match at ID=$id\n";
@@ -55,18 +57,18 @@ foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
 
     my $added = +{ map { $_ => $+{$_} } @fields };
 
-    REC_LOOP:
-    foreach my $rec (@{ $data->{'shlomif_fortunes_collections'}->{'fortunes'} })
+REC_LOOP:
+    foreach
+        my $rec ( @{ $data->{'shlomif_fortunes_collections'}->{'fortunes'} } )
     {
-        if ($rec->{id} eq $id)
+        if ( $rec->{id} eq $id )
         {
-            %$rec = (%$rec, %$added);
+            %$rec = ( %$rec, %$added );
             last REC_LOOP;
         }
     }
 
 }
 
-DumpFile($yaml_data_fn, $data);
-
+DumpFile( $yaml_data_fn, $data );
 

@@ -2,141 +2,134 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "GNU Autoconf, Automake and Libtool",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro.html",
+            'url'   => "intro.html",
             'title' => "Introduction",
         },
         {
-            'url' => "how_it_fits.html",
+            'url'   => "how_it_fits.html",
             'title' => "How it all fits together",
         },
         {
-            'url' => "simple_project",
+            'url'   => "simple_project",
             'title' => "A Simple Project",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "Makefile.am.html",
+                    'url'   => "Makefile.am.html",
                     'title' => "The Makefile.am file",
                 },
                 {
-                    'url' => "configure.in.html",
+                    'url'   => "configure.in.html",
                     'title' => "The configure.in file",
                 },
             ],
         },
         {
-            'url' => "common_macros",
+            'url'   => "common_macros",
             'title' => "Commonly Used configure.in macros",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "AC_DEFINE.html",
+                    'url'   => "AC_DEFINE.html",
                     'title' => "AC_DEFINE",
                 },
                 {
-                    'url' => "AC_CHECK_LIB.html",
+                    'url'   => "AC_CHECK_LIB.html",
                     'title' => "AC_CHECK_LIB",
                 },
                 {
-                    'url' => "AC_ARG_ENABLE.html",
+                    'url'   => "AC_ARG_ENABLE.html",
                     'title' => "AC_ARG_ENABLE",
                 },
                 {
-                    'url' => "AC_OUTPUT.html",
+                    'url'   => "AC_OUTPUT.html",
                     'title' => "AC_OUTPUT",
                 },
                 {
-                    'url' => "AC_CHECK_FUNCS.html",
+                    'url'   => "AC_CHECK_FUNCS.html",
                     'title' => "AC_CHECK_FUNCS",
                 },
                 {
-                    'url' => "AC_CHECK_HEADERS.html",
+                    'url'   => "AC_CHECK_HEADERS.html",
                     'title' => "AC_CHECK_HEADERS",
                 },
             ],
         },
         {
-            'url' => "changequote.html",
+            'url'   => "changequote.html",
             'title' => "Using changequote",
         },
         {
-            'url' => "Makefile_am",
+            'url'   => "Makefile_am",
             'title' => "Format of the Makefile.am File",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "super.html",
+                    'url'   => "super.html",
                     'title' => "Super Targets",
                 },
                 {
-                    'url' => "sources.html",
+                    'url'   => "sources.html",
                     'title' => "Specifying the source files",
                 },
                 {
-                    'url' => "ldadd.html",
+                    'url'   => "ldadd.html",
                     'title' => "Linking with internal libraries",
                 },
                 {
-                    'url' => "headers.html",
+                    'url'   => "headers.html",
                     'title' => "Library Headers",
                 },
                 {
-                    'url' => "extra_dist.html",
+                    'url'   => "extra_dist.html",
                     'title' => "EXTRA_DIST",
                 },
                 {
-                    'url' => "plain.html",
+                    'url'   => "plain.html",
                     'title' => "Plain Rules",
                 },
                 {
-                    'url' => "lt-version.html",
+                    'url'   => "lt-version.html",
                     'title' => "Libtool Library Versioning",
                 },
             ],
         },
         {
-            'url' => "acconfig.h",
+            'url'   => "acconfig.h",
             'title' => "Format of acconfig.h",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "example.html",
+                    'url'   => "example.html",
                     'title' => "Example",
                 },
             ],
         },
         {
-            'url' => "issues",
+            'url'   => "issues",
             'title' => "Various Issues",
-            'subs' =>
-            [
+            'subs'  => [
                 {
                     'url' => "sub-dir.html",
-                    'title' => "Creating a Sub-Directory with a Different Configuration",
+                    'title' =>
+"Creating a Sub-Directory with a Different Configuration",
                 },
                 {
-                    'url' => "mylib-config.html",
+                    'url'   => "mylib-config.html",
                     'title' => "mylibrary-config program",
                 },
                 {
-                    'url' => "rpm-spec.html",
+                    'url'   => "rpm-spec.html",
                     'title' => "Creating an RPM Spec",
                 },
             ],
         },
         {
-            'url' => "links.html",
+            'url'   => "links.html",
             'title' => "Links and References",
         },
     ],
-    'images' =>
-    [
+    'images' => [
         'acconfig.h/acconfig.h',
         'changequote/configure.in',
         'common_macros/AC_ARG_ENABLE/configure.in',

@@ -2,42 +2,38 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Freecell Solver - Evolution of a C Program",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro",
+            'url'   => "intro",
             'title' => "Introduction",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "rules",
+                    'url'   => "rules",
                     'title' => "Rules of the Game",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "strategies.html",
+                            'url'   => "strategies.html",
                             'title' => "Common Strategies",
                         },
                     ],
                 },
                 {
-                    'url' => "disclaimer.html",
+                    'url'   => "disclaimer.html",
                     'title' => "Copyrights and Disclaimer",
                 },
             ],
         },
         {
-            'url' => "0.2",
+            'url'   => "0.2",
             'title' => "Freecell Solver 0.2's Architecture",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "scan.html",
+                    'url'   => "scan.html",
                     'title' => "The Scan that was used",
                 },
+
                 #{
                 #    'url' => "test.html",
                 #    'title' => "The Tests used by the Program",
@@ -49,45 +45,45 @@ my $contents =
             ],
         },
         {
-            'url' => "states_collection",
+            'url'   => "states_collection",
             'title' => "Evolution of the States' Collection",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "list.html",
+                    'url'   => "list.html",
                     'title' => "Initial Perl Version - Flat List",
                 },
                 {
-                    'url' => "qsorted_sort_margin.html",
+                    'url'   => "qsorted_sort_margin.html",
                     'title' => "First C Version - Sorted Array",
                 },
                 {
                     'url' => "b_search_merge.html",
-                    'title' => "Binary-Search-Based Merge to Add the Sort Margin",
+                    'title' =>
+                        "Binary-Search-Based Merge to Add the Sort Margin",
                 },
                 {
-                    'url' => "array_of_ptrs.html",
+                    'url'   => "array_of_ptrs.html",
                     'title' => "Array of Pointers",
                 },
                 {
-                    'url' => "balanced_binary_tree.html",
+                    'url'   => "balanced_binary_tree.html",
                     'title' => "A Balanced Binary Tree",
                 },
                 {
-                    'url' => "hash",
+                    'url'   => "hash",
                     'title' => "A Hash Table",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "function.html",
+                            'url'   => "function.html",
                             'title' => "The Choice of a Hash Function",
                         },
                         {
-                            'url' => "optimizations.html",
+                            'url'   => "optimizations.html",
                             'title' => "Hash Optimizations",
                         },
                     ],
                 },
+
                 #{
                 #    'url' => "benchmarks.html",
                 #'title' => "Benchmarks",
@@ -95,71 +91,68 @@ my $contents =
             ],
         },
         {
-            'url' => "moves",
+            'url'   => "moves",
             'title' => "Moves Management",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "meta.html",
+                    'url'   => "meta.html",
                     'title' => "Meta-Moves (instead of Atomic ones)",
                 },
                 {
-                    'url' => "stack-to-stack.html",
+                    'url'   => "stack-to-stack.html",
                     'title' => "Stack to Stack Moves",
                 },
                 {
-                    'url' => "generalization.html",
+                    'url'   => "generalization.html",
                     'title' => "More Moves Generalization",
                 },
                 {
-                    'url' => "non-solvable-deals.html",
+                    'url'   => "non-solvable-deals.html",
                     'title' => "Non-Solvable Deals",
                 },
             ],
         },
         {
-            'url' => "scans",
+            'url'   => "scans",
             'title' => "Scanning",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "tests_order.html",
+                    'url'   => "tests_order.html",
                     'title' => "Specifying the Order of Tests",
                 },
                 {
-                    'url' => "befs.html",
+                    'url'   => "befs.html",
                     'title' => "Best-First Search",
                 },
                 {
-                    'url' => "soft_dfs.html",
+                    'url'   => "soft_dfs.html",
                     'title' => "Soft DFS",
                 },
                 {
-                    'url' => "brfs_optimization.html",
+                    'url'   => "brfs_optimization.html",
                     'title' => "The BrFS Optimization Scan",
                 },
             ],
         },
         {
-            'url' => "state_representation",
+            'url'   => "state_representation",
             'title' => "The State Representation",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "data_type_diet.html",
+                    'url'   => "data_type_diet.html",
                     'title' => "Reducing the Data Type Bit-Width",
                 },
                 {
-                    'url' => "ptrs_to_stacks.html",
+                    'url'   => "ptrs_to_stacks.html",
                     'title' => "Pointers to Stacks",
                 },
                 {
                     'url' => "original_indices",
-                    'title' => "Remembering the Original Stack and Freecell Locations",
-                    'subs' =>
-                    [
+                    'title' =>
+                        "Remembering the Original Stack and Freecell Locations",
+                    'subs' => [
                         {
-                            'url' => "solution.html",
+                            'url'   => "solution.html",
                             'title' => "Solution",
                         },
                     ],
@@ -167,53 +160,50 @@ my $contents =
             ],
         },
         {
-            'url' => "board_gen.html",
+            'url'   => "board_gen.html",
             'title' => "Board Auto-Generators",
         },
         {
-            'url' => "why_not_cpp.html",
+            'url'   => "why_not_cpp.html",
             'title' => "Why not C++?",
         },
         {
-            'url' => "flame_war.html",
+            'url'   => "flame_war.html",
             'title' => "The fc-solve-discuss flame-war",
         },
         {
-            'url' => "api.html",
+            'url'   => "api.html",
             'title' => "The story of the user API",
         },
         {
-            'url' => "autoconf.html",
+            'url'   => "autoconf.html",
             'title' => "Auto-confisication and Friends",
         },
         {
-            'url' => "freshmeat_effect.html",
+            'url'   => "freshmeat_effect.html",
             'title' => "The Freshmeat Effect (and how to avoid it)",
         },
+
         #{
         #    'url' => "move_stacks.html",
         #'title' => "The Move Stacks",
         #},
         {
-            'url' => "finale",
+            'url'   => "finale",
             'title' => "Finale",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "links.html",
+                    'url'   => "links.html",
                     'title' => "Links and References",
                 },
                 {
-                    'url' => "book.html",
+                    'url'   => "book.html",
                     'title' => "Freecell Solver - EoaCP - The Book",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

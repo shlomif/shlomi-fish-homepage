@@ -11,23 +11,27 @@ use DateTime;
 
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
-has 'dir' => (is => 'ro', isa => 'Str', default =>
-    sub {
+has 'dir' => (
+    is      => 'ro',
+    isa     => 'Str',
+    default => sub {
         return "../lib/feeds/shlomif_hsite";
     }
 );
 
-has 'num_on_front' => (is => 'ro', isa => 'Int', default => sub { 7; } );
+has 'num_on_front' => ( is => 'ro', isa => 'Int', default => sub { 7; } );
 
-has 'items' => (is => 'ro', isa => 'ArrayRef', default => sub {
+has 'items' => (
+    is      => 'ro',
+    isa     => 'ArrayRef',
+    default => sub {
         return shift->calc_items();
     }
 );
 
-my @old_news_items =
-(
+my @old_news_items = (
     {
-        'date' => DateTime->new( year => 2005, month =>  3, day => 22 ),
+        'date' => DateTime->new( year => 2005, month => 3, day => 22 ),
         'body' => <<"EOF",
 <p class="newsitem">
 I added a <a href="links.html#pictures">section to my links collection with
@@ -48,7 +52,7 @@ Framework</a> is a new project of mine. Check it out if you’re interested.
 EOF
     },
     {
-        'date' => DateTime->new( year => 2005, month =>  5, day => 19 ),
+        'date' => DateTime->new( year => 2005, month => 5, day => 19 ),
         'body' => <<"EOF",
 <p class="newsitem">
 The full but incomplete text of <a href="humour/human-hacking/"><i>The Human
@@ -57,7 +61,7 @@ Hacking Field Guide</i></a> is now available online for your reading pleasure.
 EOF
     },
     {
-        'date' => DateTime->new( year => 2005, month =>  5, day => 22 ),
+        'date' => DateTime->new( year => 2005, month => 5, day => 22 ),
         'body' => <<"EOF",
 <p class="newsitem">
 I now have <a href="./me/personal-ad.html">a personal ad</a>. I’m
@@ -66,7 +70,7 @@ looking for a girlfriend who lives in Central Israel.
 EOF
     },
     {
-        'date' => DateTime->new( year => 2005, month =>  6, day => 26 ),
+        'date' => DateTime->new( year => 2005, month => 6, day => 26 ),
         'body' => <<"EOF",
 <p class="newsitem">
 Several new additions were added to the site. The <a href="./art/">art
@@ -89,7 +93,7 @@ essay was expanded with two new chapters.
 EOF
     },
     {
-        'date' => DateTime->new( year => 2005, month => 10, day =>  5 ),
+        'date' => DateTime->new( year => 2005, month => 10, day => 5 ),
         'body' => <<"EOF",
 <p class="newsitem">
 Added <a href="./philosophy/computers/when-c-is-best/">the “When C is the
@@ -163,15 +167,16 @@ EOF
 
 sub file_to_news_item
 {
-    my $self = shift;
+    my $self     = shift;
     my $filename = shift;
-    my $text = do {
+    my $text     = do
+    {
         local $/;
-        open my $file, "<:encoding(UTF-8)", $self->dir()."/".$filename;
+        open my $file, "<:encoding(UTF-8)", $self->dir() . "/" . $filename;
         <$file>;
     };
     my $title;
-    if ($text =~ s{\A<!-- TITLE=(.*?)-->\n}{})
+    if ( $text =~ s{\A<!-- TITLE=(.*?)-->\n}{} )
     {
         $title = $1;
     }
@@ -189,15 +194,15 @@ text.
 =cut
 
     $filename =~ /^(\d{4})-(\d{2})-(\d{2})\.html$/;
-    my ($y, $m, $d) = ($1, $2, $3);
-    my $date = DateTime->new(year => $y, month => $m, day => $d);
-    # (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
-    return
-        +{
-            'date' => $date,
-            'body' => $text,
-            'title' => $title,
-        };
+    my ( $y, $m, $d ) = ( $1, $2, $3 );
+    my $date = DateTime->new( year => $y, month => $m, day => $d );
+
+# (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
+    return +{
+        'date'  => $date,
+        'body'  => $text,
+        'title' => $title,
+    };
 }
 
 sub calc_rss_items
@@ -207,19 +212,15 @@ sub calc_rss_items
     opendir my $dir, $self->dir();
     my @files = readdir($dir);
     closedir($dir);
-    @files = (grep { /^\d{4}-\d{2}-\d{2}\.html$/ } @files);
+    @files = ( grep { /^\d{4}-\d{2}-\d{2}\.html$/ } @files );
     @files = sort { $a cmp $b } @files;
-    return [
-        map {
-            $self->file_to_news_item($_)
-        } @files
-        ];
+    return [ map { $self->file_to_news_item($_) } @files ];
 }
 
 sub calc_items
 {
     my $self = shift;
-    return [@old_news_items, @{$self->calc_rss_items()}];
+    return [ @old_news_items, @{ $self->calc_rss_items() } ];
 }
 
 sub _wmlize
@@ -233,9 +234,12 @@ sub _wmlize
 
 sub _format_date_human
 {
-    my ($self, $date) = @_;
+    my ( $self, $date ) = @_;
 
-    return (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year());
+    return (
+              sprintf( "%.2d", $date->day() ) . "-"
+            . $date->month_abbr() . "-"
+            . $date->year() );
 }
 
 sub get_item_html
@@ -243,46 +247,47 @@ sub get_item_html
     my $self = shift;
     my $item = shift;
 
-    my $date = $item->{date};
+    my $date  = $item->{date};
     my $title = $item->{title};
 
-    return q{<div class="news_item"><h3 class="newsitem" id="}
-        . $date->strftime(q{shlomifish.org_news_%Y_%m_%d})
-        . q{">}
+    return
+          q{<div class="news_item"><h3 class="newsitem" id="}
+        . $date->strftime(q{shlomifish.org_news_%Y_%m_%d}) . q{">}
         . $self->_format_date_human($date)
-        . (defined($title) ? ": $title" : "")
+        . ( defined($title) ? ": $title" : "" )
         . "</h3>\n\n"
-        . _wmlize($item->{'body'})
-        . qq{\n</div>\n}
-        ;
+        . _wmlize( $item->{'body'} )
+        . qq{\n</div>\n};
 }
 
 sub render_items
 {
-    my $self = shift;
+    my $self  = shift;
     my $items = shift;
-    return join("\n\n", (map { $self->get_item_html($_) } @$items));
+    return join( "\n\n", ( map { $self->get_item_html($_) } @$items ) );
 }
 
 sub render_front_page
 {
-    my $self = shift;
-    my @items = reverse(@{$self->items()});
-    return $self->render_items([@items[0..($self->num_on_front()-1)]]);
+    my $self  = shift;
+    my @items = reverse( @{ $self->items() } );
+    return $self->render_items(
+        [ @items[ 0 .. ( $self->num_on_front() - 1 ) ] ] );
 }
 
 sub render_old
 {
-    my $self = shift;
-    my @items = @{$self->items()};
-    return $self->render_items([reverse(@items[0 .. (@items - $self->num_on_front())])]);
+    my $self  = shift;
+    my @items = @{ $self->items() };
+    return $self->render_items(
+        [ reverse( @items[ 0 .. ( @items - $self->num_on_front() ) ] ) ] );
 }
 
 sub _printy
 {
-    my ($class, $meth) = @_;
+    my ( $class, $meth ) = @_;
 
-    _print_utf8($class->new->$meth);
+    _print_utf8( $class->new->$meth );
 
     return;
 }

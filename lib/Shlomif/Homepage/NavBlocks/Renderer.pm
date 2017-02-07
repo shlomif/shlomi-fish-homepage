@@ -9,13 +9,13 @@ use Carp ();
 
 use MooX (qw( late ));
 
-extends ('Exporter');
+extends('Exporter');
 
-has 'host' => (is => 'ro', isa => 'Str', required => 1);
+has 'host' => ( is => 'ro', isa => 'Str', required => 1 );
 
 sub render
 {
-    my ($self, $thingy) = @_;
+    my ( $self, $thingy ) = @_;
 
     return $thingy->cached_render(
         sub {
@@ -26,7 +26,7 @@ sub render
 
 sub _non_cached_render
 {
-    my ($self, $thingy) = @_;
+    my ( $self, $thingy ) = @_;
 
     return $thingy->render($self);
 }

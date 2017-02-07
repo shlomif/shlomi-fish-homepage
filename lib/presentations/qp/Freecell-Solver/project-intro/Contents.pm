@@ -2,36 +2,31 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Freecell Solver: Project Introduction",
-    'subs' =>
-    [
+    'subs'  => [
         {
             'title' => "Goals",
-            'url' => "goals.html",
+            'url'   => "goals.html",
         },
         {
             'title' => "History",
-            'url' => "history.html",
+            'url'   => "history.html",
         },
         {
             'title' => "Architecture",
-            'url' => "architecture.html",
+            'url'   => "architecture.html",
         },
         {
             'title' => "To Do's",
-            'url' => "to-dos.html",
+            'url'   => "to-dos.html",
         },
         {
             'title' => "Links and References",
-            'url' => "links.html",
+            'url'   => "links.html",
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

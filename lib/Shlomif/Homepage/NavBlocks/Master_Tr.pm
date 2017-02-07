@@ -5,8 +5,8 @@ use warnings;
 
 use MooX (qw( late ));
 
-extends ('Shlomif::Homepage::NavBlocks::Title_Tr');
+extends('Shlomif::Homepage::NavBlocks::Title_Tr');
 
-has 'css_class' => (is => 'ro', isa => 'Str', default => 'main_title');
+has 'css_class' => ( is => 'ro', isa => 'Str', default => 'main_title' );
 
 1;

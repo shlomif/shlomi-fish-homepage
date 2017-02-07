@@ -5,15 +5,15 @@ use warnings;
 
 use CGI;
 
-my $cgi = CGI->new();
+my $cgi  = CGI->new();
 my $path = $ENV{'REDIRECT_SCRIPT_URL'};
 
-if (! $path)
+if ( !$path )
 {
     $path = '/';
 }
 
-my $link = "http://www.shlomifish.org$path";
+my $link     = "http://www.shlomifish.org$path";
 my $link_esc = CGI::escapeHTML($link);
 
 my $title = "There's Nothing Here on Purpose - see http://www.shlomifish.org/";

@@ -26,31 +26,25 @@ sub get_menupath_text
     }
 
     # Split to the menu path components
-    my @components = split(/\s*-&gt;\s*/, $inside);
+    my @components = split( /\s*-&gt;\s*/, $inside );
 
     # Wrap the components of the path with the HTML Cascading Style
     # Sheets Magic
-    my @components_rendered = map {
-        "\n<b class=\"menupathcomponent\">\n" .
-        $_ . "\n" .
-        "</b>\n"
-        } @components;
+    my @components_rendered =
+        map { "\n<b class=\"menupathcomponent\">\n" . $_ . "\n" . "</b>\n" }
+        @components;
 
     # An arrow wrapped in CSS magic.
-    my $separator_string = "\n <span class=\"menupathseparator\">\n" .
-        "&rarr;" . #"-&gt;" .
+    my $separator_string =
+        "\n <span class=\"menupathseparator\">\n" . "&rarr;" .    #"-&gt;" .
         "</span> \n";
 
-    my $final_string = join($separator_string, @components_rendered);
+    my $final_string = join( $separator_string, @components_rendered );
 
-    $final_string =
-        "<span class=\"menupath\">" .
-        $final_string .
-        "</span>";
+    $final_string = "<span class=\"menupath\">" . $final_string . "</span>";
 
     return $final_string;
 }
 
 1;
-
 

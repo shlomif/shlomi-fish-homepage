@@ -2,35 +2,31 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Freecell Solver - The Next Presentation",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "multi-tasking",
+            'url'   => "multi-tasking",
             'title' => "Multi-Tasking",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "ht-st.html",
+                    'url'   => "ht-st.html",
                     'title' => "Hard Threads and Soft Threads",
                 },
                 {
-                    'url' => "best-meta-scan",
+                    'url'   => "best-meta-scan",
                     'title' => "Generating the Best Meta Scan",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "switch.html",
+                            'url'   => "switch.html",
                             'title' => "Naive Approach - Scan Switching",
                         },
                         {
-                            'url' => "prelude.html",
+                            'url'   => "prelude.html",
                             'title' => "More Sophisticated - Prelude",
                         },
                         {
-                            'url' => "opt-algorithm.html",
+                            'url'   => "opt-algorithm.html",
                             'title' => "Optimization Algorithm",
                         },
                     ],
@@ -38,90 +34,83 @@ my $contents =
             ],
         },
         {
-            'url' => "indirect-ss-opt",
+            'url'   => "indirect-ss-opt",
             'title' => "Indirect Stack States Optimizations",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "cow.html",
+                    'url'   => "cow.html",
                     'title' => "Copy on Write Stacks",
                 },
                 {
-                    'url' => "compact-alloc.html",
+                    'url'   => "compact-alloc.html",
                     'title' => "Compact Allocation using Memory Pools",
                 },
                 {
-                    'url' => "result.html",
+                    'url'   => "result.html",
                     'title' => "Result",
                 },
             ],
         },
         {
-            'url' => 'cmd-line',
+            'url'   => 'cmd-line',
             'title' => "Command Line Processing",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "generic-func.html",
+                    'url'   => "generic-func.html",
                     'title' => "Generic Function for CL Processing",
                 },
                 {
-                    'url' => "read-from-file.html",
+                    'url'   => "read-from-file.html",
                     'title' => "--read-from-file",
                 },
                 {
-                    'url' => "presets.html",
+                    'url'   => "presets.html",
                     'title' => "Solver Presets",
                 },
                 {
-                    'url' => "recycle.html",
+                    'url'   => "recycle.html",
                     'title' => "Recycling Solver Instances",
                 },
             ],
         },
         {
-            'url' => "fc-pro",
+            'url'   => "fc-pro",
             'title' => "Freecell Pro Interoperability",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "problem.html",
+                    'url'   => "problem.html",
                     'title' => "The Problem",
                 },
                 {
-                    'url' => "solution.html",
+                    'url'   => "solution.html",
                     'title' => "The Solution",
                 },
             ],
         },
         {
-            'url' => "parent-links.html",
+            'url'   => "parent-links.html",
             'title' => "To Parent Links",
         },
         {
-            'url' => "michael-mann.html",
+            'url'   => "michael-mann.html",
             'title' => "The Michael Mann \"Fork\"",
         },
         {
-            'url' => "future",
+            'url'   => "future",
             'title' => "Future Directions",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "to-do.html",
+                    'url'   => "to-do.html",
                     'title' => "To Do",
                 },
                 {
-                    'url' => "my-involvement.html",
+                    'url'   => "my-involvement.html",
                     'title' => "My Involvement",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

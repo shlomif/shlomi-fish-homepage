@@ -25,15 +25,15 @@ $m->print(<<'EOF');
 <ul>
 EOF
 
-
 {
-    my $ffo = File::Find::Object->new({}, './dest/t2');
+    my $ffo = File::Find::Object->new( {}, './dest/t2' );
 
-    while (my $r = $ffo->next_obj())
+    while ( my $r = $ffo->next_obj() )
     {
-        if ($r->is_file)
+        if ( $r->is_file )
         {
-            my $rel_path = escape_html(join('/', @{$r->full_components()}));
+            my $rel_path =
+                escape_html( join( '/', @{ $r->full_components() } ) );
             print {$m} qq{<li><a href="$rel_path">$rel_path</a></li>\n};
         }
     }

@@ -9,16 +9,16 @@ my $fingerprints_fn = shift;
 open my $gpg_fh, '-|', 'gpg', '--list-keys', '--fingerprint'
     or die "Could not pipe from GnuPG";
 my $key = "";
-my %gpg_keys; # Fingerprint keys.
+my %gpg_keys;    # Fingerprint keys.
 while (<$gpg_fh>)
 {
-    if (/^pub/ .. /^\n$/)
+    if ( /^pub/ .. /^\n$/ )
     {
         $key .= $_;
     }
     if (/^\n$/)
     {
-        if ($key =~ /^pub/)
+        if ( $key =~ /^pub/ )
         {
             $key =~ /^(pub.*)\n/;
             $gpg_keys{$1} = $key;
@@ -31,19 +31,19 @@ open my $finger_fh, '<', $fingerprints_fn;
 $key = "";
 while (<$finger_fh>)
 {
-    if (/^pub/ .. /^\n$/)
+    if ( /^pub/ .. /^\n$/ )
     {
         $key .= $_;
     }
     if (/^\n$/)
     {
-        if ($key =~ /^pub/)
+        if ( $key =~ /^pub/ )
         {
             $key =~ /^(pub.*)\n/;
             my $id = $1;
-            if (exists($gpg_keys{$id}))
+            if ( exists( $gpg_keys{$id} ) )
             {
-                if ($gpg_keys{$id} eq $key)
+                if ( $gpg_keys{$id} eq $key )
                 {
                     # print "\nKey Exists! ($id)";
                 }

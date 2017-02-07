@@ -7,11 +7,13 @@ use utf8;
 
 use MooX (qw( late ));
 
-extends ('Shlomif::Homepage::NavBlocks::Thingy');
+extends('Shlomif::Homepage::NavBlocks::Thingy');
 
-has [qw(
-    url
-)] => (is => 'ro', isa => 'Str', required => 1);
+has [
+    qw(
+        url
+        )
+] => ( is => 'ro', isa => 'Str', required => 1 );
 
 sub collect_local_links
 {

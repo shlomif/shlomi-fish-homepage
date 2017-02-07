@@ -21,20 +21,19 @@ use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub _init_fortune
 {
-    my ($class, $rec) = @_;
+    my ( $class, $rec ) = @_;
 
     return Shlomif::Homepage::FortuneCollections::Record->new($rec);
 }
 
 use Shlomif::FindLib ();
 
-my $yaml_data_fn = Shlomif::FindLib->rel_path(['Shlomif', 'fortunes-meta-data.yml']);
-my $orig_fortunes_records = LoadFile($yaml_data_fn)->{'shlomif_fortunes_collections'}->{'fortunes'};
+my $yaml_data_fn =
+    Shlomif::FindLib->rel_path( [ 'Shlomif', 'fortunes-meta-data.yml' ] );
+my $orig_fortunes_records =
+    LoadFile($yaml_data_fn)->{'shlomif_fortunes_collections'}->{'fortunes'};
 
-my @forts =
-(
-    map { __PACKAGE__->_init_fortune($_) } @$orig_fortunes_records,
-);
+my @forts = ( map { __PACKAGE__->_init_fortune($_) } @$orig_fortunes_records, );
 
 sub get_fortune_records
 {
@@ -47,25 +46,22 @@ sub sorted_fortunes
 {
     my ($class) = @_;
 
-    return
-    [
-        sort { $a->id() cmp $b->id() }
-        @{$class->get_fortune_records()}
-    ];
+    return [ sort { $a->id() cmp $b->id() }
+            @{ $class->get_fortune_records() } ];
 }
 
 sub nav_data
 {
     my ($class) = @_;
 
-    return [ map { $_->nav_record() } @{$class->sorted_fortunes()} ] ;
+    return [ map { $_->nav_record() } @{ $class->sorted_fortunes() } ];
 }
 
 sub print_single_fortune_record_toc_entry
 {
-    my ($class, $r) = @_;
+    my ( $class, $r ) = @_;
 
-    my $id = $r->id;
+    my $id   = $r->id;
     my $desc = $r->desc;
 
     _print_utf8( <<"EOF" );
@@ -83,9 +79,9 @@ EOF
 
 sub get_single_fortune_record_all_in_one_page_entry
 {
-    my ($class, $r) = @_;
+    my ( $class, $r ) = @_;
 
-    my $id = $r->id;
+    my $id    = $r->id;
     my $title = $r->title;
 
     return <<"EOF";
@@ -100,7 +96,7 @@ sub print_fortune_records_toc
 {
     my ($class) = @_;
 
-    foreach my $r (@{$class->get_fortune_records()})
+    foreach my $r ( @{ $class->get_fortune_records() } )
     {
         $class->print_single_fortune_record_toc_entry($r);
     }
@@ -123,10 +119,10 @@ sub get_fortune_all_in_one_page_html_wml
 <ul>
 EOF
 
-    foreach my $r (@{$class->get_fortune_records()})
+    foreach my $r ( @{ $class->get_fortune_records() } )
     {
 
-        my $id = $r->id();
+        my $id    = $r->id();
         my $title = $r->title();
 
         $ret .= <<"FOO_EOF" ;
@@ -140,7 +136,7 @@ FOO_EOF
     $ret .= "</ul>\n";
     $ret .= "</div>\n";
 
-    foreach my $r (@{$class->get_fortune_records()})
+    foreach my $r ( @{ $class->get_fortune_records() } )
     {
         $ret .= $class->get_single_fortune_record_all_in_one_page_entry($r);
     }
@@ -148,22 +144,18 @@ FOO_EOF
     return $ret;
 }
 
-my $deps_mtime_max = max(
-    map { io->file($_)->mtime() }
-    __FILE__ , $yaml_data_fn
-);
+my $deps_mtime_max =
+    max( map { io->file($_)->mtime() } __FILE__, $yaml_data_fn );
 
 sub _print_if_update_needed
 {
-    my ($class, $path, $contents_promise) = @_;
+    my ( $class, $path, $contents_promise ) = @_;
 
     my $fh = io->file($path);
 
-    if ( (! $fh->exists()) ||  ($deps_mtime_max > $fh->mtime()) )
+    if ( ( !$fh->exists() ) || ( $deps_mtime_max > $fh->mtime() ) )
     {
-        $fh->utf8->print(
-            $contents_promise->(),
-        );
+        $fh->utf8->print( $contents_promise->(), );
     }
 
     return;
@@ -171,9 +163,10 @@ sub _print_if_update_needed
 
 sub write_fortune_all_in_one_page_to_file
 {
-    my ($class, $filename) = @_;
+    my ( $class, $filename ) = @_;
 
-    $class->_print_if_update_needed($filename,
+    $class->_print_if_update_needed(
+        $filename,
         sub {
             return $class->get_fortune_all_in_one_page_html_wml();
         },
@@ -184,9 +177,9 @@ sub write_fortune_all_in_one_page_to_file
 
 sub get_single_fortune_page_html_wml
 {
-    my ($class, $r) = @_;
+    my ( $class, $r ) = @_;
 
-    my $id = $r->id();
+    my $id    = $r->id();
     my $title = $r->title();
 
     return <<"EOF";
@@ -217,8 +210,8 @@ sub print_all_fortunes_html_wmls
 {
     my ($class) = @_;
 
-
-    foreach my $r (@{Shlomif::Homepage::FortuneCollections->sorted_fortunes() })
+    foreach
+        my $r ( @{ Shlomif::Homepage::FortuneCollections->sorted_fortunes() } )
     {
         my $path = "t2/humour/fortunes/@{[$r->id()]}.html.wml";
         $class->_print_if_update_needed(
@@ -232,52 +225,46 @@ sub print_all_fortunes_html_wmls
 
 sub write_epub_json
 {
-    my ($class, $fn) = @_;
+    my ( $class, $fn ) = @_;
 
-    io()->file($fn)->print
-    (
-        JSON::MaybeXS->new(utf8 =>1, canonical => 1)->encode
-        (
+    io()->file($fn)->print(
+        JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
             +{
                 filename => $fn,
-                title => "Quotes / Fortunes Cookies by Shlomi Fish",
-                authors =>
-                [
+                title    => "Quotes / Fortunes Cookies by Shlomi Fish",
+                authors  => [
                     {
                         name => "Shlomi Fish",
                         sort => "Fish, Shlomi",
                     }
                 ],
-                cover => "shlomif-fortunes.jpg",
-                rights => "CC-by-sa",
-                publisher => 'http://www.shlomifish.org/',
-                language => 'en',
-                subjects => ['Humor',],
-                identifier =>
-                {
+                cover      => "shlomif-fortunes.jpg",
+                rights     => "CC-by-sa",
+                publisher  => 'http://www.shlomifish.org/',
+                language   => 'en',
+                subjects   => [ 'Humor', ],
+                identifier => {
                     scheme => 'URL',
-                    value => q#http://www.shlomifish.org/humour/fortunes/#,
+                    value  => q#http://www.shlomifish.org/humour/fortunes/#,
                 },
-                contents =>
-                [
+                contents => [
                     {
-                        type => 'toc',
+                        type   => 'toc',
                         source => 'toc.html',
                     },
                     (
-                        map
-                        {
-                            +{ type => 'text', source => ($_->id().".xhtml"), }
-                        }
-                        @{$class->get_fortune_records()},
+                        map {
+                            +{
+                                type   => 'text',
+                                source => ( $_->id() . ".xhtml" ),
+                                }
+                        } @{ $class->get_fortune_records() },
                     ),
                 ],
-                toc =>
-                {
-                    depth => 2,
-                    parse => ['text'],
-                    generate =>
-                    {
+                toc => {
+                    depth    => 2,
+                    parse    => ['text'],
+                    generate => {
                         title => 'Index',
                     },
                 },

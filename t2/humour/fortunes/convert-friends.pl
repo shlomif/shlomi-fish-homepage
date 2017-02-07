@@ -38,7 +38,6 @@ foreach my $fort (@fortunes)
     my $txt_fn = "$id.fortune.txt";
     my $xml_fn = "$id.fortune.xml";
 
-
     my ($raw) = $fort->findnodes("raw");
 
     my $convert_to_xml = sub {
@@ -46,21 +45,21 @@ foreach my $fort (@fortunes)
 
         my @text_childs = $text->childNodes();
 
-        if (@text_childs != 1)
+        if ( @text_childs != 1 )
         {
             die '@cdata is not 1';
         }
 
         my $cdata = $text_childs[0];
 
-        if ($cdata->nodeType() != XML_CDATA_SECTION_NODE())
+        if ( $cdata->nodeType() != XML_CDATA_SECTION_NODE() )
         {
             die "Not a cdata";
         }
 
         my $content = $cdata->nodeValue();
 
-        if ($content =~ s{Excerpt from the TV Show "Friends"[\s\n]*\z}{}ms)
+        if ( $content =~ s{Excerpt from the TV Show "Friends"[\s\n]*\z}{}ms )
         {
             # Everything is OK.
             print "OK\n";
@@ -72,15 +71,14 @@ foreach my $fort (@fortunes)
 
         $content =~ s{[\s\n]+\z}{}ms;
 
-        io()->file($txt_fn)->utf8->print("<scene id=\"$id\">\n\n$content\n\n</scene>\n");
-        if (system("perl",
-            "-MXML::Grammar::Screenplay::App::FromProto",
-            "-e",
-            'run()',
-            "--",
-            "-o", $xml_fn,
-            $txt_fn
-        ))
+        io()->file($txt_fn)
+            ->utf8->print("<scene id=\"$id\">\n\n$content\n\n</scene>\n");
+        if (
+            system(
+                "perl", "-MXML::Grammar::Screenplay::App::FromProto",
+                "-e", 'run()', "--", "-o", $xml_fn, $txt_fn
+            )
+            )
         {
             die "Conversion of '$id' failed.";
         }
@@ -91,10 +89,10 @@ foreach my $fort (@fortunes)
     my ($scene_elem) = $screenplay_xml->findnodes("descendant::scene");
 
     my $scp_elem = XML::LibXML::Element->new("screenplay");
-    my $body = XML::LibXML::Element->new("body");
+    my $body     = XML::LibXML::Element->new("body");
     $scp_elem->appendChild($body);
 
-    foreach my $node ($scene_elem->childNodes())
+    foreach my $node ( $scene_elem->childNodes() )
     {
         $body->appendChild($node);
     }
@@ -102,4 +100,4 @@ foreach my $fort (@fortunes)
     $scp_elem->appendChild($info);
     $raw->replaceNode($scp_elem);
 }
-$doc->toFile($filename.".new");
+$doc->toFile( $filename . ".new" );

@@ -2,150 +2,143 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Web Publishing Using LAMP",
-    'subs' =>
-    [
+    'subs'  => [
         {
             'title' => "Introduction - What is LAMP?",
-            'url' => "intro",
-            'subs' =>
-            [
+            'url'   => "intro",
+            'subs'  => [
                 {
                     'title' => "L is...",
-                    'url' => "L.html",
+                    'url'   => "L.html",
                 },
                 {
                     'title' => "A is...",
-                    'url' => "A.html",
+                    'url'   => "A.html",
                 },
                 {
                     'title' => "M is...",
-                    'url' => "M.html",
+                    'url'   => "M.html",
                 },
                 {
                     'title' => "P is...",
-                    'url' => "P.html",
+                    'url'   => "P.html",
                 },
                 {
                     'title' => "Order of Importance",
-                    'url' => "order_of_importance.html",
+                    'url'   => "order_of_importance.html",
                 },
             ],
         },
         {
             'title' => "What can you serve?",
-            'url' => "what-serve",
-            'subs' =>
-            [
+            'url'   => "what-serve",
+            'subs'  => [
                 {
                     'title' => "HTML",
-                    'url' => "html.html",
+                    'url'   => "html.html",
                 },
                 {
                     'title' => "CSS",
-                    'url' => "css",
-                    'subs' =>
-                    [
+                    'url'   => "css",
+                    'subs'  => [
                         {
                             'title' => "CSS Layout and Positioning",
-                            'url' => "layout.html",
+                            'url'   => "layout.html",
                         },
                     ],
                 },
                 {
                     'title' => "Images",
-                    'url' => "images.html",
+                    'url'   => "images.html",
                 },
                 {
                     'title' => "JavaScript",
-                    'url' => "java-script.html",
+                    'url'   => "java-script.html",
                 },
                 {
                     'title' => "Frames",
-                    'url' => "frames.html",
+                    'url'   => "frames.html",
                 },
                 {
                     'title' => "Java (Client-Side)",
-                    'url' => "java.html",
+                    'url'   => "java.html",
                 },
                 {
                     'title' => "Flash",
-                    'url' => "flash.html",
+                    'url'   => "flash.html",
                 },
                 {
                     'title' => "Dynamic HTML",
-                    'url' => "dynamic-html.html",
+                    'url'   => "dynamic-html.html",
                 },
                 {
                     'title' => "Media",
-                    'url' => "media.html",
+                    'url'   => "media.html",
                 },
             ]
         },
         {
             'title' => "What's on the server?",
-            'url' => "server-technologies",
-            'subs' =>
-            [
+            'url'   => "server-technologies",
+            'subs'  => [
                 {
                     'title' => "How much Generated Content do you Need?",
-                    'url' => "how-much.html",
+                    'url'   => "how-much.html",
                 },
                 {
-                    'title' => "Overview of Common Server-Side Scripting Technologies",
-                    'url' => "sss-overview",
-                    'subs' =>
-                    [
+                    'title' =>
+                        "Overview of Common Server-Side Scripting Technologies",
+                    'url'  => "sss-overview",
+                    'subs' => [
                         {
                             'title' => "Perl",
-                            'url' => "perl.html",
+                            'url'   => "perl.html",
                         },
                         {
                             'title' => "PHP",
-                            'url' => "php.html",
+                            'url'   => "php.html",
                         },
                         {
                             'title' => "Python",
-                            'url' => "python.html",
+                            'url'   => "python.html",
                         },
                         {
                             'title' => "Other Technologies",
-                            'url' => "other",
-                            'subs' =>
-                            [
+                            'url'   => "other",
+                            'subs'  => [
                                 {
                                     'title' => "Ruby",
-                                    'url' => "ruby.html",
+                                    'url'   => "ruby.html",
                                 },
                                 {
                                     'title' => "OCaml",
-                                    'url' => "ocaml.html",
+                                    'url'   => "ocaml.html",
                                 },
                                 {
                                     'title' => "Tcl",
-                                    'url' => "tcl.html",
+                                    'url'   => "tcl.html",
                                 },
                                 {
                                     'title' => "Java Server Pages (JSP)",
-                                    'url' => "JSP.html",
+                                    'url'   => "JSP.html",
                                 },
                                 {
                                     'title' => "Java Servelets",
-                                    'url' => "servelets.html",
+                                    'url'   => "servelets.html",
                                 },
                                 {
                                     'title' => "CGI, FastCGI C/C++ Scripts",
-                                    'url' => "c-cgi.html",
+                                    'url'   => "c-cgi.html",
                                 },
                                 {
                                     'title' => "Web-server Extensions",
-                                    'url' => "extensions.html",
+                                    'url'   => "extensions.html",
                                 },
                                 {
                                     'title' => "Writing your own Web-Server",
-                                    'url' => "web-server.html",
+                                    'url'   => "web-server.html",
                                 },
                             ],
                         },
@@ -155,108 +148,103 @@ my $contents =
         },
         {
             'title' => "Content Management Systems",
-            'url' => "cms",
-            'subs' =>
-            [
+            'url'   => "cms",
+            'subs'  => [
                 {
                     'title' => "Examples of Server-Installed CMSes",
-                    'url' => "server-installed.html",
+                    'url'   => "server-installed.html",
                 },
                 {
                     'title' => "Examples of Content-Generating CMSes",
-                    'url' => "content-generating.html",
+                    'url'   => "content-generating.html",
                 },
             ],
         },
         {
             'title' => "Databases",
-            'url' => "databases",
-            'subs' =>
-            [
+            'url'   => "databases",
+            'subs'  => [
                 {
                     'title' => "Overview of SQL Databases",
-                    'url' => "sql.html",
+                    'url'   => "sql.html",
                 },
                 {
                     'title' => "Non-SQL Databases",
-                    'url' => "non-sql.html",
+                    'url'   => "non-sql.html",
                 },
                 {
                     'title' => "Compatibility between Databases",
-                    'url' => "compatibility.html",
+                    'url'   => "compatibility.html",
                 },
                 {
                     'title' => "Do you need a Database?",
-                    'url' => "necessity.html",
+                    'url'   => "necessity.html",
                 },
             ],
         },
         {
             'title' => "Know your Enemy - Web Browsers Coverage",
-            'url' => "web-browsers",
-            'subs' =>
-            [
+            'url'   => "web-browsers",
+            'subs'  => [
                 {
                     'title' => "Netscape Navigator 4.x",
-                    'url' => "nn4.html",
+                    'url'   => "nn4.html",
                 },
                 {
                     'title' => "Internet Explorer 5.0, 5.5, 6.0",
-                    'url' => "msie.html",
+                    'url'   => "msie.html",
                 },
                 {
                     'title' => "Mozilla",
-                    'url' => "mozilla.html",
+                    'url'   => "mozilla.html",
                 },
                 {
                     'title' => "KHTML/Safari",
-                    'url' => "khtml.html",
+                    'url'   => "khtml.html",
                 },
                 {
                     'title' => "Opera",
-                    'url' => "opera.html",
+                    'url'   => "opera.html",
                 },
             ],
         },
         {
             'title' => "Designing for Compatibility",
-            'url' => "compatibility",
-            'subs' =>
-            [
+            'url'   => "compatibility",
+            'subs'  => [
                 {
-                    'title' => "Why it is Important to Support non-MSIE Browsers",
+                    'title' =>
+                        "Why it is Important to Support non-MSIE Browsers",
                     'url' => "non-msie.html",
                 },
                 {
-                    'title' => "Why it is Important to Keep Your Site Standards Compliant",
+                    'title' =>
+"Why it is Important to Keep Your Site Standards Compliant",
                     'url' => "standards.html",
                 },
                 {
-                    'title' => "Why it is Important to Keep Your Site Clean of Unnecessary Embellishments",
+                    'title' =>
+"Why it is Important to Keep Your Site Clean of Unnecessary Embellishments",
                     'url' => "embellishments.html",
                 },
                 {
                     'title' => "Some Words of Wisdom",
-                    'url' => "words-of-wisdom.html",
+                    'url'   => "words-of-wisdom.html",
                 },
             ],
         },
         {
             'title' => "Legal Notes",
-            'url' => "legal-notes",
-            'subs' =>
-            [
+            'url'   => "legal-notes",
+            'subs'  => [
                 {
                     'title' => "Should you fear the GPL?",
-                    'url' => "gpl.html",
+                    'url'   => "gpl.html",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

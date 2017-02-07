@@ -6,7 +6,7 @@ use Path::Tiny qw/ path /;
 
 use File::Find;
 
-find (\&wanted, "./src");
+find( \&wanted, "./src" );
 
 sub process
 {
@@ -20,7 +20,7 @@ sub process
 sub wanted
 {
     my $filename = $_;
-    if ($filename =~ /\.html\.wml$/)
+    if ( $filename =~ /\.html\.wml$/ )
     {
         my $text = path($filename)->slurp_utf8;
         $text =~ s!(<h3 class="notbold">.*?</h3>)!&process($1)!sge;
@@ -32,5 +32,4 @@ sub wanted
         path($filename)->spew_utf8($text);
     }
 }
-
 

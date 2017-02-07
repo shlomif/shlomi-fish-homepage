@@ -22,9 +22,9 @@ shift(@lines);
 
 my $list_num = 1;
 
-my $orig = "std.vcf";
+my $orig   = "std.vcf";
 my $backup = "__BACKUP-std.vcf";
-if (!-e $backup)
+if ( !-e $backup )
 {
     io($orig) > io($backup);
 }
@@ -32,13 +32,13 @@ if (!-e $backup)
 my $vcf = io($orig);
 foreach my $l (@lines)
 {
-    if ($l =~ m{^([^=]+)=([A-Za-z\d,]+)$})
+    if ( $l =~ m{^([^=]+)=([A-Za-z\d,]+)$} )
     {
-        my ($name, $members_str) = ($1, $2);
+        my ( $name, $members_str ) = ( $1, $2 );
         $members_str =~ s{,$}{};
-        my @members = split(/,,/, $members_str);
+        my @members = split( /,,/, $members_str );
 
-        my $out_mem = join("", map { ";$_\\," } @members);
+        my $out_mem = join( "", map { ";$_\\," } @members );
         $vcf->append(<<"EOF");
 
 BEGIN:VCARD

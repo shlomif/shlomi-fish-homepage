@@ -2,82 +2,74 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "QuaD-Pres - A Perl-based Tool for Presentation",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro.html",
+            'url'   => "intro.html",
             'title' => "Introduction",
         },
         {
-            'url' => "history.html",
+            'url'   => "history.html",
             'title' => "The History of QuaD-Pres",
         },
         {
-            'url' => "features.html",
+            'url'   => "features.html",
             'title' => "Quad-Pres Features",
         },
         {
-            'url' => "usage",
+            'url'   => "usage",
             'title' => "Usage",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "setting-up.html",
+                    'url'   => "setting-up.html",
                     'title' => "Setting Up",
                 },
                 {
-                    'url' => "Contents.pm.html",
+                    'url'   => "Contents.pm.html",
                     'title' => "The Contents.pm File",
                 },
                 {
-                    'url' => "page.html",
+                    'url'   => "page.html",
                     'title' => "An Individual Page",
                 },
                 {
-                    'url' => "images.html",
+                    'url'   => "images.html",
                     'title' => "Including Images",
                 },
             ],
-            'images' => [ 'logo-wml.png' ],
+            'images' => ['logo-wml.png'],
         },
         {
-            'url' => "no_wml",
+            'url'   => "no_wml",
             'title' => "Using QuaD-Pres without Website Meta Language",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "page.html",
+                    'url'   => "page.html",
                     'title' => "An Individual Page",
                 },
                 {
-                    'url' => "render-modes.html",
+                    'url'   => "render-modes.html",
                     'title' => "The Render Modes",
                 },
             ],
         },
         {
-            'url' => "finale",
+            'url'   => "finale",
             'title' => "Finale",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "samples.html",
+                    'url'   => "samples.html",
                     'title' => "Sample Presentations",
                 },
                 {
-                    'url' => "links.html",
+                    'url'   => "links.html",
                     'title' => "Links",
                 },
             ],
         }
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

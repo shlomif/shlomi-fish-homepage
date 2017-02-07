@@ -7,7 +7,8 @@ use parent 'Exporter';
 
 our @EXPORT_OK = (qw(_print_utf8 _wrap_as_utf8));
 
-sub _wrap_as_utf8 {
+sub _wrap_as_utf8
+{
     my ($cb) = @_;
 
     binmode STDOUT, ":encoding(UTF-8)";
@@ -19,10 +20,12 @@ sub _wrap_as_utf8 {
     return;
 }
 
-sub _print_utf8 {
+sub _print_utf8
+{
     my (@data) = @_;
 
-    _wrap_as_utf8 ( sub {
+    _wrap_as_utf8(
+        sub {
             print @data;
 
             return;

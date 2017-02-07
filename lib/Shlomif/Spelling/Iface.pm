@@ -8,9 +8,13 @@ use MooX (qw( late ));
 use Shlomif::Spelling::Check;
 use Shlomif::Spelling::FindFiles;
 
-has obj => (is => 'ro', default => sub { return Shlomif::Spelling::Check->new();} );
+has obj =>
+    ( is => 'ro', default => sub { return Shlomif::Spelling::Check->new(); } );
 
-has files => (is => 'ro', default => sub { return Shlomif::Spelling::FindFiles->new->list_htmls(); });
+has files => (
+    is      => 'ro',
+    default => sub { return Shlomif::Spelling::FindFiles->new->list_htmls(); }
+);
 
 sub run
 {
@@ -25,7 +29,7 @@ sub run
 
 sub test_spelling
 {
-    my ($self, $blurb) = @_;
+    my ( $self, $blurb ) = @_;
 
     return $self->obj->obj->test_spelling(
         {

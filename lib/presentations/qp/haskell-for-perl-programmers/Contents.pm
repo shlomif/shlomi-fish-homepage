@@ -2,84 +2,75 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Haskell for Perl Programmers",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro.html",
+            'url'   => "intro.html",
             'title' => "Introduction",
         },
         {
-            'url' => "basic",
+            'url'   => "basic",
             'title' => "Basic Examples",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "recursion.html",
+                    'url'   => "recursion.html",
                     'title' => "Recursion",
                 },
                 {
-                    'url' => "lists.html",
+                    'url'   => "lists.html",
                     'title' => "Lists",
                 },
             ],
         },
         {
-            'url' => "infinite_lists",
+            'url'   => "infinite_lists",
             'title' => "Infinite Lists",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "fibonacci.html",
+                    'url'   => "fibonacci.html",
                     'title' => "Fibonacci with Lists",
                 },
                 {
-                    'url' => "primes1.html",
+                    'url'   => "primes1.html",
                     'title' => "Primes (with low efficiency)",
                 },
                 {
-                    'url' => "primes2.html",
+                    'url'   => "primes2.html",
                     'title' => "Primes (with better efficiency)",
                 },
             ],
         },
         {
-            'url' => "list_manip",
+            'url'   => "list_manip",
             'title' => "List and String Manipulation Routines",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "examples.html",
+                    'url'   => "examples.html",
                     'title' => "Examples",
                 },
                 {
-                    'url' => "multimap.html",
+                    'url'   => "multimap.html",
                     'title' => "Multi-map Function",
                 },
             ],
         },
         {
-            'url' => "arrays",
+            'url'   => "arrays",
             'title' => "Arrays",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "histogram.html",
+                    'url'   => "histogram.html",
                     'title' => "Histogram",
                 },
                 {
-                    'url' => "hash.html",
+                    'url'   => "hash.html",
                     'title' => "Hash",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

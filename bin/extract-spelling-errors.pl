@@ -9,9 +9,9 @@ use utf8;
 binmode STDOUT, ":encoding(UTF-8)";
 
 open my $i, '<:encoding(UTF-8)', 'foo.txt';
-while (my $l = <$i>)
+while ( my $l = <$i> )
 {
-    foreach my $m ($l =~ m/«(.*?)»/g)
+    foreach my $m ( $l =~ m/«(.*?)»/g )
     {
         print "$m\n";
     }

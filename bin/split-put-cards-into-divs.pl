@@ -8,10 +8,8 @@ use utf8;
 use IO::All qw/ io /;
 use XML::LibXML;
 
-my $dom = XML::LibXML->load_xml(
-    location =>
-    'lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml'
-);
+my $dom = XML::LibXML->load_xml( location =>
+        'lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml' );
 
 sub _xpc
 {
@@ -19,11 +17,10 @@ sub _xpc
 
     my $xpc = XML::LibXML::XPathContext->new($node);
 
-    $xpc->registerNs('xhtml', 'http://www.w3.org/1999/xhtml');
+    $xpc->registerNs( 'xhtml', 'http://www.w3.org/1999/xhtml' );
 
     return $xpc;
 }
-
 
 my @nodes = _xpc($dom)->findnodes(q{//xhtml:div[@class='section']});
 
@@ -31,11 +28,11 @@ my @nodes = _xpc($dom)->findnodes(q{//xhtml:div[@class='section']});
 #
 foreach my $sect (@nodes)
 {
-    my $id = _xpc($sect)->findvalue(q{xhtml:h2/@id});
+    my $id    = _xpc($sect)->findvalue(q{xhtml:h2/@id});
     my $title = _xpc($sect)->findnodes(q{xhtml:h2})->[0]->textContent;
 
     io->file(
-        qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
+qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
     )->utf8->print(<<"EOF");
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE

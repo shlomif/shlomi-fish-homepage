@@ -21,7 +21,8 @@ use Shlomif::Homepage::FactoidsPages::Page;
 
 my $p = XML::LibXML->new;
 
-my $xslt_path = XML::Grammar::Fortune->new->dist_path_slot("to_html_xslt_transform_basename");
+my $xslt_path = XML::Grammar::Fortune->new->dist_path_slot(
+    "to_html_xslt_transform_basename");
 
 my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 
@@ -34,28 +35,27 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
     {
         my $list_id = $list_node->value;
 
-        my $basename = "$list_id--$lang";
-        my $out_xhtml =  "lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
+        my $basename  = "$list_id--$lang";
+        my $out_xhtml = "lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
         system(
-            "xsltproc", "--output", "./$out_xhtml",
+            "xsltproc",      "--output",             "./$out_xhtml",
             "--stringparam", 'filter-facts-list.id', $list_id,
-            "--stringparam", 'filter.lang', $lang,
-            $xslt_path, $facts_xml_path,
+            "--stringparam", 'filter.lang',          $lang,
+            $xslt_path,      $facts_xml_path,
         );
 
         my $indiv_dom = $p->parse_file($out_xhtml);
 
         my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
-        $xpc->registerNs('xhtml', "http://www.w3.org/1999/xhtml" );
+        $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
 
-        my $node = $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
+        my $node =
+            $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 
         my $reduced_xhtml = "$out_xhtml.reduced";
-        write_on_change(
-            scalar(path($reduced_xhtml)),
-            \($node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr)
-        );
-        push @{$deps{$list_id}}, $reduced_xhtml;
+        write_on_change( scalar( path($reduced_xhtml) ),
+            \( $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr ) );
+        push @{ $deps{$list_id} }, $reduced_xhtml;
     }
 }
 
@@ -64,10 +64,7 @@ sub _page_to_obj
     my ($hash_ref) = @_;
 
     my $ret;
-    eval
-    {
-        $ret = Shlomif::Homepage::FactoidsPages::Page->new($_);
-    };
+    eval { $ret = Shlomif::Homepage::FactoidsPages::Page->new($_); };
 
     if ($@)
     {
@@ -78,8 +75,7 @@ sub _page_to_obj
     return $ret;
 }
 
-my @chuck_pages =
-(
+my @chuck_pages = (
     {
         abstract => <<'EOF',
 <p>
@@ -106,7 +102,8 @@ and masculinity.
 EOF
         id_base => "chuck_facts",
         img_alt => "Photo of Chuck Norris from the English Wikipedia",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
+        img_attribution =>
+            'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
         img_class => "facts_logo chuck_norris",
         img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1-150w.jpg",
         license_wml => <<'EOF',
@@ -147,7 +144,8 @@ second major battle that Chuck Norris lost.
 
 </ul>
 EOF
-        meta_desc => "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
+        meta_desc =>
+"Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <foss_nav_block />
@@ -158,15 +156,14 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'chuck',
+        short_id   => 'chuck',
         tabs_title => "Chuck Norris Facts",
-        title => "Chuck Norris Facts",
-        url_base => "Chuck-Norris",
+        title      => "Chuck Norris Facts",
+        url_base   => "Chuck-Norris",
     },
 );
 
-my @soviet_pages =
-(
+my @soviet_pages = (
     {
         abstract => <<'EOF',
 <p>
@@ -177,9 +174,10 @@ Soviet Russia…</a> (or “Soviet reversal”) meme by my friends and me.
 EOF
         id_base => "in_soviet_russia_facts",
         img_alt => "Soviet Russia",
-        img_attribution => 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
-        img_class => "facts_logo in_soviet_russia",
-        img_src => "\$(ROOT)/humour/bits/facts/images/soviet-150w.png",
+        img_attribution =>
+'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
+        img_class   => "facts_logo in_soviet_russia",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/soviet-150w.png",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -195,7 +193,7 @@ reversal (“In Soviet Russia”) on the Wikipedia</a>
 
 </ul>
 EOF
-        meta_desc => "In Soviet Russia, jokes laugh at you.",
+        meta_desc      => "In Soviet Russia, jokes laugh at you.",
         nav_blocks_wml => <<'EOF',
 EOF
         see_also_wml => <<'EOF',
@@ -217,15 +215,14 @@ anti-authoritarianism stuff.
 
 </ul>
 EOF
-        short_id => 'in_soviet_russia',
+        short_id   => 'in_soviet_russia',
         tabs_title => "“In Soviet Russia” Aphorisms",
-        title => "“In Soviet Russia” Additions",
-        url_base => "In-Soviet-Russia",
+        title      => "“In Soviet Russia” Additions",
+        url_base   => "In-Soviet-Russia",
     },
 );
 
-my @main_pages =
-(
+my @main_pages = (
     {
         abstract => <<'EOF',
 <p>
@@ -242,10 +239,12 @@ Whedon</a> and portrayed by
 
 EOF
         id_base => 'buffy_facts',
-        img_alt => "Photo of Buffy Summers from the show DVD via the English Wikipedia",
+        img_alt =>
+"Photo of Buffy Summers from the show DVD via the English Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
-        img_class => "facts_logo buffy",
-        img_src => "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
+        img_class       => "facts_logo buffy",
+        img_src =>
+            "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -335,10 +334,10 @@ Gellar theme.
 
 </ul>
 EOF
-        short_id => 'buffy',
+        short_id   => 'buffy',
         tabs_title => 'Buffy Facts',
-        title => 'Buffy Facts',
-        url_base => "Buffy",
+        title      => 'Buffy Facts',
+        url_base   => "Buffy",
     },
     {
         abstract => <<'EOF',
@@ -355,9 +354,10 @@ and played by
 EOF
         id_base => "clarissa_facts",
         img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
-        img_class => "facts_logo clarissa",
-        img_src => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
+        img_attribution =>
+'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
+        img_class   => "facts_logo clarissa",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF
@@ -378,7 +378,8 @@ EOF
 
 </ul>
 EOF
-        meta_desc => "Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
+        meta_desc =>
+"Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
         nav_blocks_wml => <<'EOF',
 EOF
         see_also_wml => <<'EOF',
@@ -400,10 +401,10 @@ herself.
 
 </ul>
 EOF
-        short_id => 'clarissa',
+        short_id   => 'clarissa',
         tabs_title => "Clarissa Darling Facts",
-        title => "Clarissa Darling Facts (from Clarissa Explains it All)",
-        url_base => "Clarissa",
+        title      => "Clarissa Darling Facts (from Clarissa Explains it All)",
+        url_base   => "Clarissa",
     },
     {
         abstract => <<'EOF',
@@ -411,9 +412,10 @@ EOF
 EOF
         id_base => "emma_watson_facts",
         img_alt => "Photo of Emma Watson from the Wikipedia",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
-        img_class => "facts_logo emma_watson",
-        img_src => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
+        img_attribution =>
+            'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
+        img_class   => "facts_logo emma_watson",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2014" />
 EOF
@@ -424,7 +426,7 @@ EOF
 
 </ul>
 EOF
-        meta_desc => "Factoids about Emma Watson, the British actress",
+        meta_desc      => "Factoids about Emma Watson, the British actress",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <harry_potter_nav_block />
@@ -435,10 +437,10 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'emma_watson',
+        short_id   => 'emma_watson',
         tabs_title => "Emma Watson Facts",
-        title => "Emma Watson Facts",
-        url_base => "Emma-Watson",
+        title      => "Emma Watson Facts",
+        url_base   => "Emma-Watson",
     },
     {
         abstract => <<'EOF',
@@ -456,9 +458,10 @@ These facts explain why he isn’t God, but pretty close.
 EOF
         id_base => "knuth_is_not_god_facts",
         img_alt => "Photo of Prof. Don Knuth from Flickr via the Wikipedia",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
-        img_class => "facts_logo knuth",
-        img_src => "\$(ROOT)/humour/bits/facts/images/knuth-small.jpg",
+        img_attribution =>
+            'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
+        img_class   => "facts_logo knuth",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/knuth-small.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2002" />
 EOF
@@ -481,7 +484,8 @@ with Knuth</a>
 
 </ul>
 EOF
-        meta_desc => "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
+        meta_desc =>
+"Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <foss_nav_block />
@@ -492,10 +496,10 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'knuth',
+        short_id   => 'knuth',
         tabs_title => "Why Knuth is Not God",
-        title => "Knuth Facts",
-        url_base => "Knuth",
+        title      => "Knuth Facts",
+        url_base   => "Knuth",
     },
     {
         abstract => <<'EOF',
@@ -510,9 +514,10 @@ These facts illustrate his “hacky” (= rule bending) awesomeness.
 EOF
         id_base => "larry_wall_facts",
         img_alt => "Larry Wall",
-        img_attribution => 'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
-        img_src => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg" ,
-        img_class => "facts_logo larry_wall",
+        img_attribution =>
+            'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
+        img_src     => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg",
+        img_class   => "facts_logo larry_wall",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2007" />
 EOF
@@ -527,7 +532,8 @@ EOF
 
 </ul>
 EOF
-        meta_desc => "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
+        meta_desc =>
+"Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <foss_nav_block />
@@ -538,10 +544,10 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'lwall',
+        short_id   => 'lwall',
         tabs_title => "Larry Wall Facts",
-        title => "Larry Wall Facts",
-        url_base => "Larry-Wall",
+        title      => "Larry Wall Facts",
+        url_base   => "Larry-Wall",
     },
     {
         abstract => <<'EOF',
@@ -556,9 +562,10 @@ why it should not be feared.
 EOF
         id_base => "nsa_facts",
         img_alt => "NSA Logo",
-        img_attribution => 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
-        img_class => "facts_logo nsa",
-        img_src => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
+        img_attribution =>
+'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
+        img_class   => "facts_logo nsa",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
         license_wml => <<'EOF',
 <cc_by_british_blurb year="2013" />
 EOF
@@ -567,7 +574,8 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        meta_desc => "Factoids about the NSA - the U.S. government National Security Agency",
+        meta_desc =>
+"Factoids about the NSA - the U.S. government National Security Agency",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <xkcd_nav_block />
@@ -671,10 +679,10 @@ warfare, and justice, that still has implications today.
 
 </ol>
 EOF
-        short_id => 'nsa',
+        short_id   => 'nsa',
         tabs_title => "NSA Facts",
-        title => "NSA Facts",
-        url_base => "NSA",
+        title      => "NSA Facts",
+        url_base   => "NSA",
     },
     {
         abstract => <<'EOF',
@@ -699,12 +707,12 @@ which is the subject of such facts here.
 </p>
 
 EOF
-        id_base => "summer_glau_facts",
-        img_alt => "Photo of Summer Glau from the English Wikipedia",
+        id_base         => "summer_glau_facts",
+        img_alt         => "Photo of Summer Glau from the English Wikipedia",
         img_attribution => '',
-        img_class => "facts_logo summer_glau",
-        img_src => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
-        license_wml => <<'EOF',
+        img_class       => "facts_logo summer_glau",
+        img_src         => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
+        license_wml     => <<'EOF',
 <cc_by_sa_british_blurb year="2014" />
 EOF
         links_wml => <<'EOF',
@@ -714,7 +722,7 @@ EOF
 
 </ul>
 EOF
-        meta_desc => "Factoids about Summer Glau, the Hollywood actress",
+        meta_desc      => "Factoids about Summer Glau, the Hollywood actress",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <xkcd_nav_block />
@@ -725,10 +733,10 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'sglau',
+        short_id   => 'sglau',
         tabs_title => "Summer Glau Facts",
-        title => "Summer Glau Facts",
-        url_base => "Summer-Glau",
+        title      => "Summer Glau Facts",
+        url_base   => "Summer-Glau",
     },
     {
         abstract => <<'EOF',
@@ -745,7 +753,8 @@ annoying to use.
 EOF
         id_base => "windows_update_facts",
         img_alt => "Silhouette of a Snail",
-        img_attribution => 'https://openclipart.org/detail/230426/snail-silhouette',
+        img_attribution =>
+            'https://openclipart.org/detail/230426/snail-silhouette',
         img_class => "facts_logo windows_update",
         img_src => "\$(ROOT)/humour/bits/facts/images/windows-update-snail.png",
         license_wml => <<'EOF',
@@ -753,7 +762,8 @@ EOF
 EOF
         links_wml => <<'EOF',
 EOF
-        meta_desc => "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
+        meta_desc =>
+"Facts about Windows Update, the slowest and most frutrating package manager in existence.",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <foss_nav_block />
@@ -764,10 +774,10 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'windows_update',
+        short_id   => 'windows_update',
         tabs_title => "Windows Update Facts",
-        title => "Windows Update Facts",
-        url_base => "Windows-Update",
+        title      => "Windows Update Facts",
+        url_base   => "Windows-Update",
     },
     {
         abstract => <<'EOF',
@@ -789,9 +799,10 @@ I also found the character of Xena to be more comical than strong.
 EOF
         id_base => "xena_facts",
         img_alt => "Photo of Xena, the Warrior Princess",
-        img_attribution => 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
-        img_class => "facts_logo xena",
-        img_src => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
+        img_attribution =>
+'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
+        img_class   => "facts_logo xena",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
@@ -808,7 +819,7 @@ Female Ass-Kickers</a>.
 </li>
 </ul>
 EOF
-        meta_desc => "Factoids about Xena, the Warrior Princess",
+        meta_desc      => "Factoids about Xena, the Warrior Princess",
         nav_blocks_wml => <<'EOF',
 EOF
         see_also_wml => <<'EOF',
@@ -837,10 +848,10 @@ Chuck Norris Facts</a> - more toughness.
 
 </ul>
 EOF
-        short_id => 'xena',
+        short_id   => 'xena',
         tabs_title => "Xena Facts",
-        title => "Xena (the Warrior Princess) Facts",
-        url_base => "Xena",
+        title      => "Xena (the Warrior Princess) Facts",
+        url_base   => "Xena",
     },
     {
         abstract => <<'EOF',
@@ -865,9 +876,10 @@ seems cool.
 EOF
         id_base => "xslt_facts",
         img_alt => "XSLT Logo",
-        img_attribution => 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
-        img_class => "facts_logo xslt",
-        img_src => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
+        img_attribution =>
+'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
+        img_class   => "facts_logo xslt",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF
@@ -890,7 +902,7 @@ refers to several resources.
 
 </ul>
 EOF
-        meta_desc => "Facts about XSLT, the most Evil thing in existence.",
+        meta_desc      => "Facts about XSLT, the most Evil thing in existence.",
         nav_blocks_wml => <<'EOF',
 <nav_blocks>
 <foss_nav_block />
@@ -901,22 +913,17 @@ EOF
 <b>TODO</b>
 </p>
 EOF
-        short_id => 'xslt',
+        short_id   => 'xslt',
         tabs_title => "XSLT Facts",
-        title => "XSLT Facts",
-        url_base => "XSLT",
+        title      => "XSLT Facts",
+        url_base   => "XSLT",
     },
 );
 
 # Chuck at the beginning. In Soviet Russia at the end.
-my @pages_proto = (@chuck_pages, @main_pages, @soviet_pages);
+my @pages_proto = ( @chuck_pages, @main_pages, @soviet_pages );
 
-my @pages =
-(
-    map
-    { _page_to_obj($_); }
-    @pages_proto
-);
+my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
 my $tags_output = <<'EOF';
 #include "Inc/emma_watson.wml"
@@ -960,19 +967,15 @@ END_OF_TEMPLATE
 foreach my $page (@pages)
 {
     # some useful options (see below for full list)
-    my $config =
-    {
-        POST_CHOMP   => 1,               # cleanup whitespace
-        EVAL_PERL    => 1,               # evaluate Perl code blocks
+    my $config = {
+        POST_CHOMP => 1,    # cleanup whitespace
+        EVAL_PERL  => 1,    # evaluate Perl code blocks
     };
 
     # create Template object
     my $template = Template->new($config);
 
-    my $vars =
-    {
-        p => $page,
-    };
+    my $vars = { p => $page, };
 
     my $tt_text = <<'END_OF_TEMPLATE';
 #include '../template.wml'
@@ -1008,48 +1011,46 @@ foreach my $page (@pages)
 END_OF_TEMPLATE
 
     my $out = '';
-    $template->process(\$tt_text, $vars, \$out);
-    $template->process(\$img_tt_text, $vars, \$tags_output);
-    $template->process(\$tag_tt_text, $vars, \$tags_output);
-    $template->process(\$main_page_tt, $vars, \$main_page_tag_list);
+    $template->process( \$tt_text,      $vars, \$out );
+    $template->process( \$img_tt_text,  $vars, \$tags_output );
+    $template->process( \$tag_tt_text,  $vars, \$tags_output );
+    $template->process( \$main_page_tt, $vars, \$main_page_tag_list );
     write_on_change(
-        scalar( path("lib/factoids/pages/". $page->id_base().'.wml')),
-        \$out,
-    );
+        scalar( path( "lib/factoids/pages/" . $page->id_base() . '.wml' ) ),
+        \$out, );
 }
 
 write_on_change(
     scalar( path("lib/factoids/common-out/tags.wml") ),
-    \($tags_output . $main_page_tag_list . "\n</define-tag>\n"),
+    \( $tags_output . $main_page_tag_list . "\n</define-tag>\n" ),
 );
 
-my $new_json = JSON::MaybeXS->new(utf8 => 1, canonical => 1)->encode([
+my $new_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
+    [
         map {
             +{
-                url => "humour/bits/facts/" . $_->url_base() . "/",
+                url  => "humour/bits/facts/" . $_->url_base() . "/",
                 text => $_->title(),
-            }
-        }
-        @pages
-    ]);
-
+                }
+        } @pages
+    ]
+);
 
 my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
-write_on_change_no_utf8(
-    scalar( path($json_fn) ),
-    \$new_json,
-);
+write_on_change_no_utf8( scalar( path($json_fn) ), \$new_json, );
 
 my @content =
-    map { my $id = $_->id_base; my $path = $_->url_base();
-        map { "dest/t2/humour/bits/facts/${path}/index.html: $_\n" }
-        @{$deps{$id}}
+    map {
+    my $id   = $_->id_base;
+    my $path = $_->url_base();
+    map { "dest/t2/humour/bits/facts/${path}/index.html: $_\n" }
+        @{ $deps{$id} }
     }
-    sort {$a->short_id cmp $b->short_id }
-    @pages;
+    sort { $a->short_id cmp $b->short_id } @pages;
 
 path("lib/factoids/deps.mak")->spew_utf8(@content);
+
 # No write_on_change() because we want it to have the time of the last run.
-path("lib/factoids/TIMESTAMP")->spew_utf8(time());
+path("lib/factoids/TIMESTAMP")->spew_utf8( time() );
 

@@ -13,11 +13,11 @@ sub is_newer
     my $file2 = shift;
     my @stat1 = stat($file1);
     my @stat2 = stat($file2);
-    if (! @stat2)
+    if ( !@stat2 )
     {
         return 1;
     }
-    return ($stat1[9] >= $stat2[9]);
+    return ( $stat1[9] >= $stat2[9] );
 }
 
 sub get_syntax_highlighted_html_from_file
@@ -28,15 +28,15 @@ sub get_syntax_highlighted_html_from_file
 
     my $html_filename = "$filename.html-for-quad-pres";
 
-    if (is_newer( $filename, $html_filename))
+    if ( is_newer( $filename, $html_filename ) )
     {
         my $syntax = Text::VimColor->new(
-            file => $filename,
+            file           => $filename,
             html_full_page => 1,
-            ($args{'filetype'} ? (filetype => $args{'filetype'}) : ()),
+            ( $args{'filetype'} ? ( filetype => $args{'filetype'} ) : () ),
         );
 
-        io->file($html_filename)->print ( $syntax->html );
+        io->file($html_filename)->print( $syntax->html );
     }
 
     my $text = io->file($html_filename)->all;

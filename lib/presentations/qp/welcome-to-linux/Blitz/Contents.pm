@@ -3,239 +3,229 @@ package Contents;
 use strict;
 use utf8;
 
-my $contents =
-{
+my $contents = {
     'title' => "מבוא ללינוקס",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro",
+            'url'   => "intro",
             'title' => "הקדמה",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "distributions.html",
+                    'url'   => "distributions.html",
                     'title' => "מהן \"הפצות\"?",
                 },
             ],
         },
         {
-            'url' => "x",
+            'url'   => "x",
             'title' => "X-Windows ו-KDE",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "similarities.html",
+                    'url'   => "similarities.html",
                     'title' => "הדמיון לחלונות",
                 },
                 {
-                    'url' => "workspaces.html",
+                    'url'   => "workspaces.html",
                     'title' => "מרחבי העבודה",
                 },
                 {
-                    'url' => "show_desktop.html",
+                    'url'   => "show_desktop.html",
                     'title' => "הראה את שולחן העבודה",
                 },
                 {
-                    'url' => "cut_n_paste",
+                    'url'   => "cut_n_paste",
                     'title' => "העתקה והדבקה ב-X-Windows",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "klipper.html",
+                            'url'   => "klipper.html",
                             'title' => "Klipper",
                         }
                     ],
-                    'images' =>
-                    [
-                        "klipper.png",
-                    ],
+                    'images' => [ "klipper.png", ],
                 },
             ],
-            'images' => [ "k.png", "folder_home.png", "workspaces_pager.png", "desktop.png", ],
+            'images' => [
+                "k.png",                "folder_home.png",
+                "workspaces_pager.png", "desktop.png",
+            ],
         },
         {
             'url' => "equivalents",
-            'title' => "מקבילות בלינוקס לתוכנות בעולם החלונות",
-            'subs' =>
-            [
+            'title' =>
+"מקבילות בלינוקס לתוכנות בעולם החלונות",
+            'subs' => [
                 {
-                    'url' => "web-browsers.html",
+                    'url'   => "web-browsers.html",
                     'title' => "דפדפני וו'ב",
                 },
                 {
-                    'url' => "email-clients.html",
+                    'url'   => "email-clients.html",
                     'title' => "לקוחות דואר אלקטרוני",
                 },
                 {
-                    'url' => "office.html",
+                    'url'   => "office.html",
                     'title' => "תוכנות משרדיות",
                 },
                 {
-                    'url' => "instant-messaging.html",
+                    'url'   => "instant-messaging.html",
                     'title' => "מסרים מיידיים",
                 },
                 {
-                    'url' => "image-editing.html",
+                    'url'   => "image-editing.html",
                     'title' => "תוכנות לעיבוד תמונה",
                 },
                 {
-                    'url' => "IDEs.html",
+                    'url'   => "IDEs.html",
                     'title' => "סביבות פיתוח משולבות",
                 },
                 {
-                    'url' => "multimedia.html",
+                    'url'   => "multimedia.html",
                     'title' => "נגני מולטימדיה",
                 },
                 {
-                    'url' => "games.html",
+                    'url'   => "games.html",
                     'title' => "משחקים",
                 },
             ],
-            'images' => [ "firefox-1.png", "firefox-1-thumb.png",
-                "mdk91-scr7-s.jpg", "konq_navigate-thumb.png",
+            'images' => [
+                "firefox-1.png",             "firefox-1-thumb.png",
+                "mdk91-scr7-s.jpg",          "konq_navigate-thumb.png",
                 "gimp-screenshot-thumb.png", "gimp-screenshot.png",
-                "kmail_main-thumb.png", "thunderbird-thumb.png",
-                "evolution-thumb.png", "ooo-thumb.png",
-                "kspread-thumb.png", "licq-thumb.png", "gaim-thumb.png",
-                "xmms-thumb.jpg", "mplayer-thumb.jpg", "xine-thumb.png",
+                "kmail_main-thumb.png",      "thunderbird-thumb.png",
+                "evolution-thumb.png",       "ooo-thumb.png",
+                "kspread-thumb.png",         "licq-thumb.png",
+                "gaim-thumb.png",            "xmms-thumb.jpg",
+                "mplayer-thumb.jpg",         "xine-thumb.png",
                 "ogle-thumb.jpg",
-                ],
+            ],
         },
         {
-            'url' => "console",
+            'url'   => "console",
             'title' => "חלון הפקודות של לינוקס",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "opening.html",
+                    'url'   => "opening.html",
                     'title' => "פתיחת חלון מסוף",
                 },
                 {
-                    'url' => "exiting.html",
+                    'url'   => "exiting.html",
                     'title' => "יציאה מחלון המסוף",
                 },
                 {
-                    'url' => "cmd_loop.html",
+                    'url'   => "cmd_loop.html",
                     'title' => "מחזור הפקודה",
                 },
                 {
-                    'url' => "goodies.html",
+                    'url'   => "goodies.html",
                     'title' => "תכונות נחמדות של המעטפת",
                 },
                 {
                     'url' => "filesystem.html",
-                    'title' => "מאפיינים בסיסיים של מערכת הקבצים",
+                    'title' =>
+"מאפיינים בסיסיים של מערכת הקבצים",
                 },
                 {
-                    'url' => "common_cmds.html",
+                    'url'   => "common_cmds.html",
                     'title' => "פקודות נפוצות",
                 },
             ],
-            'images' => [ "konsole.png" ],
+            'images' => ["konsole.png"],
         },
         {
-            'url' => "help",
+            'url'   => "help",
             'title' => "קבלת עזרה",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "man.html",
+                    'url'   => "man.html",
                     'title' => "דפי ה-Man",
                 },
                 {
-                    'url' => "apropos.html",
+                    'url'   => "apropos.html",
                     'title' => "Apropos",
                 },
                 {
-                    'url' => "info.html",
+                    'url'   => "info.html",
                     'title' => "מדריכי ה-\"Info\"",
                 },
                 {
-                    'url' => "howtos.html",
+                    'url'   => "howtos.html",
                     'title' => "הכיצדריכים המקוונים",
                 },
                 {
-                    'url' => "internet.html",
+                    'url'   => "internet.html",
                     'title' => "משאבים באינטרנט",
                 },
             ],
         },
         {
-            'url' => "config",
+            'url'   => "config",
             'title' => "כלי קונפיגורציה",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "mandriva.html",
+                    'url'   => "mandriva.html",
                     'title' => "במנדריבה",
                 },
                 {
-                    'url' => "fedora.html",
+                    'url'   => "fedora.html",
                     'title' => "בפדורה",
                 },
                 {
-                    'url' => "ubuntu.html",
+                    'url'   => "ubuntu.html",
                     'title' => "באובונטו/קובונטו",
                 },
             ],
         },
         {
-            'url' => "packages",
+            'url'   => "packages",
             'title' => "התקנת חבילות",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "rpm.html",
+                    'url'   => "rpm.html",
                     'title' => "בשימוש בפקודה rpm",
                 },
                 {
-                    'url' => "yum.html",
+                    'url'   => "yum.html",
                     'title' => "בשימשו בפקודה yum",
                 },
                 {
-                    'url' => "apt.html",
+                    'url'   => "apt.html",
                     'title' => "בשימוש בפקודה apt",
                 },
                 {
-                    'url' => "urpmi.html",
+                    'url'   => "urpmi.html",
                     'title' => "בשימוש בפקודה urpmi",
                 },
             ],
         },
         {
             'url' => "foss-philosophy",
-            'title' => "פילוסופיית הקוד הפתוח והתוכנה החופשית",
-            'subs' =>
-            [
+            'title' =>
+"פילוסופיית הקוד הפתוח והתוכנה החופשית",
+            'subs' => [
                 {
-                    'url' => "free-software-definition.html",
+                    'url'   => "free-software-definition.html",
                     'title' => "הגדרת התוכנה החופשית",
                 },
                 {
-                    'url' => "copyleft.html",
+                    'url'   => "copyleft.html",
                     'title' => "מהו Copyleft?",
                 },
                 {
-                    'url' => "bazaar.html",
+                    'url'   => "bazaar.html",
                     'title' => "מודל פיתוח הבזאר",
                 },
                 {
-                    'url' => "more-info.html",
+                    'url'   => "more-info.html",
                     'title' => "למידע נוסף",
                 },
             ],
         },
         {
-            'url' => "links.html",
+            'url'   => "links.html",
             'title' => "קישורים ומראי מקום",
         },
     ],
-    'images' =>
-    [
-        'slidy.js',
-        'style.css',
-    ],
+    'images' => [ 'slidy.js', 'style.css', ],
 };
 
 sub get_contents

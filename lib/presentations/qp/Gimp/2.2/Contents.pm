@@ -2,115 +2,110 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Do it with the GIMP",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro",
+            'url'   => "intro",
             'title' => "Introduction",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "history.html",
+                    'url'   => "history.html",
                     'title' => "History of the GIMP",
                 },
                 {
-                    'url' => "future.html",
+                    'url'   => "future.html",
                     'title' => "Future Directions",
                 },
                 {
-                    'url' => "conventions.html",
+                    'url'   => "conventions.html",
                     'title' => "Conventions Used in this Lecture",
                 },
             ],
         },
         {
-            'url' => "features",
+            'url'   => "features",
             'title' => "Overview of Features",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "colour_modes.html",
+                    'url'   => "colour_modes.html",
                     'title' => "Colour Modes",
                 },
                 {
-                    'url' => "8bit.html",
+                    'url'   => "8bit.html",
                     'title' => "8 bits per colour value",
                 },
                 {
-                    'url' => "rgb_and_hsv",
+                    'url'   => "rgb_and_hsv",
                     'title' => "RGB and HSV modes",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Demo",
                         },
                         {
-                            'url' => "explanation.html",
+                            'url'   => "explanation.html",
                             'title' => "What are RGB and HSV?"
                         },
                         {
-                            'url' => "cmyk.html",
+                            'url'   => "cmyk.html",
                             'title' => "What about CMYK?",
                         },
                     ],
                 },
                 {
-                    'url' => "toolbox.html",
+                    'url'   => "toolbox.html",
                     'title' => "Basic Effects using the Toolbox",
                 },
                 {
-                    'url' => "plug_ins.html",
+                    'url'   => "plug_ins.html",
                     'title' => "Plug-ins",
                 },
                 {
-                    'url' => "selection",
+                    'url'   => "selection",
                     'title' => "Selection and its Usage",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
                             'url' => "red.html",
-                            'title' => "Using the Red \"Paint Selection\" Button",
+                            'title' =>
+                                "Using the Red \"Paint Selection\" Button",
                         },
                         {
                             'url' => "menu.html",
-                            'title' => "The \"&lt;Image&gt; &rarr; Select\" Menu",
+                            'title' =>
+                                "The \"&lt;Image&gt; &rarr; Select\" Menu",
                         },
                     ],
                 },
                 {
-                    'url' => "layers",
+                    'url'   => "layers",
                     'title' => "Layers",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => 'alpha',
+                            'url'   => 'alpha',
                             'title' => "Alpha",
-                            'subs' =>
-                            [
+                            'subs'  => [
                                 {
-                                    'url' => "demo1.html",
+                                    'url'   => "demo1.html",
                                     'title' => "Demo 1",
                                 },
                                 {
                                     'url' => "demo_grad.html",
-                                    'title' => "Demo : Using a Gradient as a Layer Mask",
+                                    'title' =>
+"Demo : Using a Gradient as a Layer Mask",
                                 },
                             ],
                         },
                         {
-                            'url' => "filters.html",
+                            'url'   => "filters.html",
                             'title' => "Filters and Layers",
                         },
                         {
-                            'url' => "modes.html",
+                            'url'   => "modes.html",
                             'title' => "Layer Modes",
                         },
                         {
-                            'url' => "gradients.html",
+                            'url'   => "gradients.html",
                             'title' => "Gradients",
                         },
                     ],
@@ -118,91 +113,85 @@ my $contents =
             ],
         },
         {
-            'url' => "lut",
+            'url'   => "lut",
             'title' => "LUT (Look-Up Tables Effects)",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "brightness_and_contrast",
+                    'url'   => "brightness_and_contrast",
                     'title' => "Brightness and Contrast",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "answer.html",
+                            'url'   => "answer.html",
                             'title' => "Answer",
                         },
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Demonstration",
                         },
                     ],
                 },
                 {
-                    'url' => "gamma_correction",
+                    'url'   => "gamma_correction",
                     'title' => "Gamma Correction",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "concept.html",
+                            'url'   => "concept.html",
                             'title' => "Concept",
                         },
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Demonstration",
                         },
                     ],
                 },
                 {
-                    'url' => "equalize.html",
+                    'url'   => "equalize.html",
                     'title' => "Equalize",
                 },
                 {
-                    'url' => "color_map_rotation.html",
+                    'url'   => "color_map_rotation.html",
                     'title' => "Color Map Rotation",
                 },
                 {
-                    'url' => "color_balance.html",
+                    'url'   => "color_balance.html",
                     'title' => "Color Balance",
                 },
                 {
-                    'url' => "more_luts.html",
+                    'url'   => "more_luts.html",
                     'title' => "More LUTs",
                 },
             ],
         },
         {
-            'url' => "areal",
+            'url'   => "areal",
             'title' => "Basic Areal Effects",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "blur",
+                    'url'   => "blur",
                     'title' => "Blur",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "answer.html",
+                            'url'   => "answer.html",
                             'title' => "Answer to how one can blur an image",
                         },
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Demo of a simple blur",
                         },
                         {
-                            'url' => "gaussian",
+                            'url'   => "gaussian",
                             'title' => "Gaussian Blur",
-                            'subs' =>
-                            [
+                            'subs'  => [
                                 {
-                                    'url' => "iir_rle.html",
+                                    'url'   => "iir_rle.html",
                                     'title' => "IIR vs. RLE Gaussian Blurs",
                                 },
                                 {
-                                    'url' => "demo_iir.html",
+                                    'url'   => "demo_iir.html",
                                     'title' => "Demo of IIR Gauss. Blur",
                                 },
                                 {
-                                    'url' => "demo_rle.html",
+                                    'url'   => "demo_rle.html",
                                     'title' => "Demo of RLE Gauss. Blur",
                                 },
                             ],
@@ -210,31 +199,29 @@ my $contents =
                     ],
                 },
                 {
-                    'url' => "sharpen",
+                    'url'   => "sharpen",
                     'title' => "Sharpening",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "answer.html",
+                            'url'   => "answer.html",
                             'title' => "Answer to how one can sharpen",
                         },
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Sharpening Demo",
                         },
                     ],
                 },
                 {
-                    'url' => "motion_blur",
+                    'url'   => "motion_blur",
                     'title' => "Motion Blur",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "answer.html",
+                            'url'   => "answer.html",
                             'title' => "Answer to how one can motion blur",
                         },
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Demo",
                         }
                     ],
@@ -242,28 +229,25 @@ my $contents =
             ],
         },
         {
-            'url' => "areal_transforms",
+            'url'   => "areal_transforms",
             'title' => "Basic Areal Transformations",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "scaling",
+                    'url'   => "scaling",
                     'title' => "Scaling an Image",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "interpolation.html",
+                            'url'   => "interpolation.html",
                             'title' => "Interpolation",
                         },
                     ],
                 },
                 {
-                    'url' => "transform_tools",
+                    'url'   => "transform_tools",
                     'title' => "The Rotate, Scale and Perspective Tools",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => 'demo.html',
+                            'url'   => 'demo.html',
                             'title' => "Demo",
                         },
                     ],
@@ -271,100 +255,91 @@ my $contents =
             ],
         },
         {
-            'url' => "cool_effects",
+            'url'   => "cool_effects",
             'title' => "Some Cool Effects",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "gradient_map",
+                    'url'   => "gradient_map",
                     'title' => "Gradient Map",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "demo1.html",
+                            'url'   => "demo1.html",
                             'title' => "Demo 1 : Real-life picture",
                         },
                         {
-                            'url' => "demo2.html",
+                            'url'   => "demo2.html",
                             'title' => "Demo 2 : Text Caption",
                         },
                     ],
                 },
                 {
-                    'url' => "fractal_explorer.html",
+                    'url'   => "fractal_explorer.html",
                     'title' => "Fractal Explorer",
                 },
             ],
         },
         {
-            'url' => "photo2painting",
+            'url'   => "photo2painting",
             'title' => "Turning a Photograph into a Painting",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "oilify.html",
+                    'url'   => "oilify.html",
                     'title' => "Oilify",
                 },
                 {
-                    'url' => "gimpressionist.html",
+                    'url'   => "gimpressionist.html",
                     'title' => "Gimpressionist",
                 },
             ],
         },
         {
-            'url' => "scripting",
+            'url'   => "scripting",
             'title' => "Scripting the GIMP",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "pdb.html",
+                    'url'   => "pdb.html",
                     'title' => "The Procedural Database",
                 },
                 {
-                    'url' => "script-fu",
+                    'url'   => "script-fu",
                     'title' => "Script-Fu Scripting",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "demo.html",
+                            'url'   => "demo.html",
                             'title' => "Interactive Demo",
                         },
                         {
-                            'url' => "generating_logo.html",
+                            'url'   => "generating_logo.html",
                             'title' => "Generating a Logo",
                         },
                     ],
                 },
                 {
-                    'url' => "gimp-perl.html",
+                    'url'   => "gimp-perl.html",
                     'title' => "Gimp-Perl Scripting",
                 },
                 {
-                    'url' => "plug-ins.html",
+                    'url'   => "plug-ins.html",
                     'title' => "GIMP (C-based) Plug-ins",
                 },
             ],
         },
         {
-            'url' => "finale",
+            'url'   => "finale",
             'title' => "Finale",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "links.html",
+                    'url'   => "links.html",
                     'title' => "References and Links",
                 },
                 {
-                    'url' => "images.html",
+                    'url'   => "images.html",
                     'title' => "Origins and Copyrights of the Images",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

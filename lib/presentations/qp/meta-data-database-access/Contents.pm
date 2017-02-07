@@ -2,35 +2,29 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Meta-Data Database Access",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "intro.html",
+            'url'   => "intro.html",
             'title' => "Introduction",
         },
         {
-            'url' => "example",
+            'url'   => "example",
             'title' => "Example",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "wheres_the_code.html",
+                    'url'   => "wheres_the_code.html",
                     'title' => "Where's the code?"
                 },
             ],
         },
         {
-            'url' => "future.html",
+            'url'   => "future.html",
             'title' => "Future Directions",
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

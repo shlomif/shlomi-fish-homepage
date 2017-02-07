@@ -2,109 +2,100 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "LM-Solve - A Logic Mazes Solver",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "history",
+            'url'   => "history",
             'title' => "History",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "first_encounter.html",
+                    'url'   => "first_encounter.html",
                     'title' => "First Encounter with the Logic Mazes",
                 },
                 {
-                    'url' => "two_initial_scripts.html",
+                    'url'   => "two_initial_scripts.html",
                     'title' => "Two Initial Scripts",
                 },
                 {
-                    'url' => "first_version.html",
+                    'url'   => "first_version.html",
                     'title' => "First Version of LM-Solve",
                 },
                 {
-                    'url' => "next_versions.html",
+                    'url'   => "next_versions.html",
                     'title' => "LM-Solve 0.4.0 and 0.6.0",
                 },
                 {
-                    'url' => "no_bitkeeper.html",
+                    'url'   => "no_bitkeeper.html",
                     'title' => "No BitKeeper for you!",
                 },
                 {
-                    'url' => "recent_work.html",
+                    'url'   => "recent_work.html",
                     'title' => "Recent Work",
                 },
             ],
         },
         {
-            'url' => "technologies",
+            'url'   => "technologies",
             'title' => "Technologies used by LM-Solve",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "Makefile-PL.html",
+                    'url'   => "Makefile-PL.html",
                     'title' => "Makefile.PL",
                 },
                 {
-                    'url' => "Getopt.html",
+                    'url'   => "Getopt.html",
                     'title' => "Getopt::Long",
                 },
                 {
-                    'url' => "pod.html",
+                    'url'   => "pod.html",
                     'title' => "POD, Pod::Usage and Friends",
                 },
                 {
-                    'url' => "RPM-Spec.html",
+                    'url'   => "RPM-Spec.html",
                     'title' => "Writing an RPM Spec"
                 },
             ],
         },
         {
-            'url' => "architecture",
+            'url'   => "architecture",
             'title' => "Architecture of LM-Solve",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "base-derived.html",
+                    'url'   => "base-derived.html",
                     'title' => "Multiple Solvers Implementation",
                 },
                 {
-                    'url' => "registry.html",
+                    'url'   => "registry.html",
                     'title' => "Registry",
                 },
                 {
-                    'url' => "input.html",
+                    'url'   => "input.html",
                     'title' => "The Input Module",
                 },
             ],
         },
         {
-            'url' => "exotic-bugs",
+            'url'   => "exotic-bugs",
             'title' => "Exotic Bugs",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "hex_swamps.html",
+                    'url'   => "hex_swamps.html",
                     'title' => "The Hex Swamps Conundrum",
                 },
                 {
-                    'url' => "recursion_limit.html",
+                    'url'   => "recursion_limit.html",
                     'title' => "Recursion Limit",
                 },
             ],
-            'images' => [ "hex_swamps_proto_game.png" ],
+            'images' => ["hex_swamps_proto_game.png"],
         },
         {
-            'url' => "links.html",
+            'url'   => "links.html",
             'title' => "Links and References",
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

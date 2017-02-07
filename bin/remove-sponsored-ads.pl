@@ -14,7 +14,8 @@ foreach my $file (`ack -l '$remove_at' t2`)
     chomp($file);
     print $file, "\n";
     my $text = io($file)->slurp();
-    $text =~ s{(?:^;;;[^\n]*\n)*<shlomif_sponsored_ad[^\n]*\Q$remove_at\E.*?</shlomif_sponsored_ad>[^\n]*\n?}{}ms;
+    $text =~
+s{(?:^;;;[^\n]*\n)*<shlomif_sponsored_ad[^\n]*\Q$remove_at\E.*?</shlomif_sponsored_ad>[^\n]*\n?}{}ms;
     io($file)->print($text);
 }
 

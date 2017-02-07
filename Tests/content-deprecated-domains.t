@@ -12,9 +12,6 @@ use IO::All qw/io/;
 
 {
     # TEST
-    eq_or_diff(
-        scalar(`ag -i 'penguin\\.org\\.il' ./dest`),
-        '',
-        "No deprecated (hijacked/etc.) domains."
-    );
+    eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' ./dest`),
+        '', "No deprecated (hijacked/etc.) domains." );
 }

@@ -2,108 +2,97 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Software Development under Linux",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "why.html",
+            'url'   => "why.html",
             'title' => "Why Program under Linux? (Briefly)",
         },
         {
-            'url' => "gcc",
+            'url'   => "gcc",
             'title' => "Use of gcc/g++",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "flags.html",
+                    'url'   => "flags.html",
                     'title' => "Important gcc Flags",
                 },
                 {
-                    'url' => "gpp.html",
+                    'url'   => "gpp.html",
                     'title' => "g++",
                 },
             ],
         },
         {
-            'url' => "makefiles",
+            'url'   => "makefiles",
             'title' => "Writing Makefiles",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "basics.html",
+                    'url'   => "basics.html",
                     'title' => "Makefile Basics",
                 },
                 {
-                    'url' => "variables.html",
+                    'url'   => "variables.html",
                     'title' => "Makefile Variables",
                 },
                 {
-                    'url' => "notes.html",
+                    'url'   => "notes.html",
                     'title' => "Final Notes",
                 },
             ],
         },
         {
-            'url' => "emacs",
+            'url'   => "emacs",
             'title' => "The Almighty Emacs",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "more.html",
+                    'url'   => "more.html",
                     'title' => "More Emacs",
                 },
                 {
-                    'url' => "yet-more.html",
+                    'url'   => "yet-more.html",
                     'title' => "Yet More Emacs",
                 },
                 {
-                    'url' => "end.html",
+                    'url'   => "end.html",
                     'title' => "Emacs - The End (Well at Least the Last Slide)",
                 },
             ],
             'images' => ['test.c'],
         },
         {
-            'url' => "gdb",
+            'url'   => "gdb",
             'title' => "The gdb Debugger",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "basic.html",
+                    'url'   => "basic.html",
                     'title' => "Basic gdb Commands",
                 },
             ],
         },
         {
-            'url' => "ddd",
+            'url'   => "ddd",
             'title' => "DDD - The Data Display Debugger",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "tips.html",
+                    'url'   => "tips.html",
                     'title' => "DDD Debugging Tips",
                 },
             ],
             'images' => ['testddd.c'],
         },
         {
-            'url' => "valgrind",
+            'url'   => "valgrind",
             'title' => "valgrind - a Good Tool to Detect Memory Problems",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "more.html",
+                    'url'   => "more.html",
                     'title' => "More Valgrind",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css'
-    ],
+    'images' => [ 'style.css' ],
 };
 
 sub get_contents

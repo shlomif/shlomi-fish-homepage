@@ -7,10 +7,10 @@ use XML::LibXSLT;
 use XML::LibXML;
 
 my $parser = XML::LibXML->new();
-my $xslt = XML::LibXSLT->new();
+my $xslt   = XML::LibXSLT->new();
 
-my $base_path="../lib/article-index/";
-my $source = $parser->parse_file("$base_path/article-index.xml");
+my $base_path = "../lib/article-index/";
+my $source    = $parser->parse_file("$base_path/article-index.xml");
 my $style_doc = $parser->parse_file("$base_path/article-index.xsl");
 
 my $stylesheet = $xslt->parse_stylesheet($style_doc);

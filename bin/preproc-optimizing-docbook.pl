@@ -7,7 +7,8 @@ use XML::LibXML;
 
 my $parser = XML::LibXML->new();
 
-my $doc = $parser->parse_file("lib/docbook/from-mediawiki/optimizing-code-for-speed.docbook.xml");
+my $doc = $parser->parse_file(
+    "lib/docbook/from-mediawiki/optimizing-code-for-speed.docbook.xml");
 
 sub empty
 {
@@ -22,23 +23,19 @@ sub stringify
 {
     my $list = shift;
 
-    return
-    [
-        map { (ref($_) eq "") ? XML::LibXML::Text->new($_) : $_ } @$list
-    ];
+    return [ map { ( ref($_) eq "" ) ? XML::LibXML::Text->new($_) : $_ }
+            @$list ];
 }
 
 sub replace
 {
-    my $node = shift;
+    my $node   = shift;
     my $childs = shift;
 
     empty($node);
 
-    foreach my $c (@{
-            stringify((ref($childs) eq "ARRAY") ? $childs : [$childs])
-        }
-    )
+    foreach my $c (
+        @{ stringify( ( ref($childs) eq "ARRAY" ) ? $childs : [$childs] ) } )
     {
         $node->appendChild($c);
     }
@@ -63,17 +60,14 @@ sub replace
 
 =cut
 
-my $book = $doc->findnodes("/book");
+my $book     = $doc->findnodes("/book");
 my $bookinfo = $book->findnodes("bookinfo");
 
 $book->removeChild($bookinfo);
 
 my $article = $book->findnodes("article");
-replace($book, [$article->childNodes()]);
+replace( $book, [ $article->childNodes() ] );
 $article = $book;
 $article->setNodeName("article");
-
-
-
 
 print $doc->toString();

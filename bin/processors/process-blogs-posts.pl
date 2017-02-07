@@ -7,13 +7,13 @@ use IO::All qw/ io /;
 
 foreach my $fn (@ARGV)
 {
-    if (my ($date) = $fn =~ m/(\d{4}-\d{2}-\d{2})\.html\z/)
+    if ( my ($date) = $fn =~ m/(\d{4}-\d{2}-\d{2})\.html\z/ )
     {
         my $out_fn = "lib/feeds/shlomif_hsite/$date.html";
 
         my $contents = io($fn)->slurp;
 
-        if (not $contents =~ s{\A\s*<h2>([^<]+)</h2>\s*}{}ms)
+        if ( not $contents =~ s{\A\s*<h2>([^<]+)</h2>\s*}{}ms )
         {
             die "Cannot match title at '$fn'!";
         }
@@ -24,7 +24,8 @@ foreach my $fn (@ARGV)
 
         my $out_contents = io($out_fn)->slurp();
 
-        if ($out_contents !~ m{(<p><a href="http:.*?livejournal.*?</a></p>\s*\z)}ms)
+        if ( $out_contents !~
+            m{(<p><a href="http:.*?livejournal.*?</a></p>\s*\z)}ms )
         {
             die "Cannot match <a href in '$out_fn'";
         }
@@ -37,4 +38,4 @@ foreach my $fn (@ARGV)
     }
 }
 
-system("touch", "t2/old-news.html.wml", "t2/index.html.wml");
+system( "touch", "t2/old-news.html.wml", "t2/index.html.wml" );

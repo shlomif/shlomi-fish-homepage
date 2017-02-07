@@ -19,7 +19,6 @@ sub remove
     return;
 }
 
-
 sub empty
 {
     my $node = shift;
@@ -33,23 +32,19 @@ sub stringify
 {
     my $list = shift;
 
-    return
-    [
-        map { (ref($_) eq "") ? XML::LibXML::Text->new($_) : $_ } @$list
-    ];
+    return [ map { ( ref($_) eq "" ) ? XML::LibXML::Text->new($_) : $_ }
+            @$list ];
 }
 
 sub replace
 {
-    my $node = shift;
+    my $node   = shift;
     my $childs = shift;
 
     empty($node);
 
-    foreach my $c (@{
-            stringify((ref($childs) eq "ARRAY") ? $childs : [$childs])
-        }
-    )
+    foreach my $c (
+        @{ stringify( ( ref($childs) eq "ARRAY" ) ? $childs : [$childs] ) } )
     {
         $node->appendChild($c);
     }
@@ -62,27 +57,25 @@ sub xhtml_con
     my $node = shift;
 
     my $xc = XML::LibXML::XPathContext->new($node);
-    $xc->registerNs('xhtml', 'http://www.w3.org/1999/xhtml');
+    $xc->registerNs( 'xhtml', 'http://www.w3.org/1999/xhtml' );
 
     return $xc;
 }
 
-my $doc = $parser->parse_file(
-    shift(@ARGV)
-);
+my $doc = $parser->parse_file( shift(@ARGV) );
 
 sub is_empty_or_comment
 {
     my $node = shift;
 
-    if ($node->nodeType() == XML_COMMENT_NODE)
+    if ( $node->nodeType() == XML_COMMENT_NODE )
     {
         return 1;
     }
 
-    if ($node->nodeType() == XML_TEXT_NODE)
+    if ( $node->nodeType() == XML_TEXT_NODE )
     {
-        if ($node->data() !~ /\S/)
+        if ( $node->data() !~ /\S/ )
         {
             return 1;
         }
@@ -92,10 +85,10 @@ sub is_empty_or_comment
 }
 
 my $xc = XML::LibXML::XPathContext->new($doc);
-$xc->registerNs('xhtml', 'http://www.w3.org/1999/xhtml');
+$xc->registerNs( 'xhtml', 'http://www.w3.org/1999/xhtml' );
 
 # Remove the table-of-contents because we generate our own.
-my ($toc) =  $xc->findnodes("//xhtml:table[\@id='toc']");
+my ($toc) = $xc->findnodes("//xhtml:table[\@id='toc']");
 remove($toc);
 
 {
@@ -108,16 +101,18 @@ remove($toc);
     while ($parent)
     {
         my $start = $el;
+
         # In subsequent iterations - we want to remove the node only
         # after the parent
         if ($innermost)
         {
             my $next_el = $start->previousSibling();
-            while ($next_el && is_empty_or_comment($next_el))
+            while ( $next_el && is_empty_or_comment($next_el) )
             {
-                $start = $next_el;
+                $start   = $next_el;
                 $next_el = $start->previousSibling();
             }
+
             # $start is now OK.
         }
         else
@@ -141,26 +136,26 @@ remove($toc);
     }
     continue
     {
-        $el = $parent;
-        $parent = $el->parentNode();
+        $el        = $parent;
+        $parent    = $el->parentNode();
         $innermost = 0;
     }
 }
 
-foreach my $el ($xc->findnodes("//xhtml:script"))
+foreach my $el ( $xc->findnodes("//xhtml:script") )
 {
     remove($el);
 }
 
 foreach my $attr (qw(rel class title))
 {
-    foreach my $el ($xc->findnodes("//*[\@$attr]"))
+    foreach my $el ( $xc->findnodes("//*[\@$attr]") )
     {
         $el->removeAttribute($attr);
     }
 }
 
-foreach my $a_el ($xc->findnodes("//xhtml:p/xhtml:a[\@id]"))
+foreach my $a_el ( $xc->findnodes("//xhtml:p/xhtml:a[\@id]") )
 {
     my $id = $a_el->getAttribute("id");
 
@@ -168,16 +163,15 @@ foreach my $a_el ($xc->findnodes("//xhtml:p/xhtml:a[\@id]"))
 
     my $h_tag = $p->nextSibling();
 
-    while(   $h_tag->nodeType() != XML_ELEMENT_NODE
-          || $h_tag->nodeName() !~ m{\Ah}
-      )
+    while ($h_tag->nodeType() != XML_ELEMENT_NODE
+        || $h_tag->nodeName() !~ m{\Ah} )
     {
         $h_tag = $h_tag->nextSibling();
     }
 
     remove($p);
 
-    $h_tag->setAttribute("id", $id);
+    $h_tag->setAttribute( "id", $id );
 
     my ($span) = xhtml_con($h_tag)->findnodes("xhtml:span/xhtml:a");
 
@@ -187,15 +181,15 @@ foreach my $a_el ($xc->findnodes("//xhtml:p/xhtml:a[\@id]"))
 
     ($span) = xhtml_con($h_tag)->findnodes("xhtml:span");
 
-    replace($h_tag, $span->textContent());
+    replace( $h_tag, $span->textContent() );
 }
 
-foreach my $a_el ($xc->findnodes("//xhtml:a[\@href]"))
+foreach my $a_el ( $xc->findnodes("//xhtml:a[\@href]") )
 {
     my $href = $a_el->getAttribute("href");
-    if ($href =~ m{\A/})
+    if ( $href =~ m{\A/} )
     {
-        $a_el->setAttribute("href", "http://en.wikibooks.org$href");
+        $a_el->setAttribute( "href", "http://en.wikibooks.org$href" );
     }
 }
 

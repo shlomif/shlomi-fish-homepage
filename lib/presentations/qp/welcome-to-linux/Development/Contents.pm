@@ -2,84 +2,77 @@ package Contents;
 
 use strict;
 
-my $contents =
-{
+my $contents = {
     'title' => "Software Development on Linux",
-    'subs' =>
-    [
+    'subs'  => [
         {
-            'url' => "devel-process.html",
+            'url'   => "devel-process.html",
             'title' => "The Linux Development process",
         },
         {
-            'url' => "text-editing",
+            'url'   => "text-editing",
             'title' => "Editing Text using Text Editors",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "text-nuances.html",
+                    'url'   => "text-nuances.html",
                     'title' => "Text Nuances",
                 },
                 {
-                    'url' => "editors.html",
+                    'url'   => "editors.html",
                     'title' => "Recommended Editors for Beginners",
                 },
                 {
-                    'url' => "advanced-editors.html",
+                    'url'   => "advanced-editors.html",
                     'title' => "Advanced Editors",
                 },
             ],
         },
         {
-            'url' => "gcc",
+            'url'   => "gcc",
             'title' => "Use of gcc/g++",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "flags.html",
+                    'url'   => "flags.html",
                     'title' => "Important gcc Flags",
                 },
                 {
-                    'url' => "gpp.html",
+                    'url'   => "gpp.html",
                     'title' => "g++",
                 },
             ],
         },
         {
-            'url' => "makefiles",
+            'url'   => "makefiles",
             'title' => "Writing Makefiles",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "basics.html",
+                    'url'   => "basics.html",
                     'title' => "Makefile Basics",
                 },
                 {
-                    'url' => "variables.html",
+                    'url'   => "variables.html",
                     'title' => "Makefile Variables",
                 },
                 {
-                    'url' => "notes.html",
+                    'url'   => "notes.html",
                     'title' => "Final Notes",
                 },
             ],
         },
         {
-            'url' => "gdb",
+            'url'   => "gdb",
             'title' => "The gdb Debugger",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "basics_cmds.html",
+                    'url'   => "basics_cmds.html",
                     'title' => "Basic gdb Commands",
                 },
                 {
-                    'url' => "ddd",
+                    'url'   => "ddd",
                     'title' => "DDD - The Data Display Debugger",
-                    'subs' =>
-                    [
+                    'subs'  => [
                         {
-                            'url' => "tips.html",
+                            'url'   => "tips.html",
                             'title' => "DDD Debugging Tips",
                         },
                     ],
@@ -87,32 +80,27 @@ my $contents =
             ],
         },
         {
-            'url' => "valgrind",
+            'url'   => "valgrind",
             'title' => "valgrind - a Memory Problems Detector",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "more.html",
+                    'url'   => "more.html",
                     'title' => "More Valgrind",
                 },
             ],
         },
         {
-            'url' => "IDEs",
+            'url'   => "IDEs",
             'title' => "Integrated Development Environments",
-            'subs' =>
-            [
+            'subs'  => [
                 {
-                    'url' => "alternatives.html",
+                    'url'   => "alternatives.html",
                     'title' => "The Various Available Alternatives",
                 },
             ],
         },
     ],
-    'images' =>
-    [
-        'style.css',
-    ],
+    'images' => [ 'style.css', ],
 };
 
 sub get_contents

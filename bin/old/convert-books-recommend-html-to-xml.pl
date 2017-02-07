@@ -8,23 +8,25 @@ use IO::All qw/ io /;
 my @lines = io()->file("old-index.html.temp.wml")->slurp();
 
 my $line_idx = 0;
+
 sub get_line
 {
-    return $lines[$line_idx++];
+    return $lines[ $line_idx++ ];
 }
 my $line;
 
-while ($line = get_line())
+while ( $line = get_line() )
 {
-    if ($line =~ s/^\s*<dt id="([^"]*)">//)
+    if ( $line =~ s/^\s*<dt id="([^"]*)">// )
     {
         my $id = $1;
         my $asin;
-        if ($line =~ s{^<a href="http://www.amazon.com/.*?ASIN/(\w+)&amp;[^"]*">}{})
+        if ( $line =~
+            s{^<a href="http://www.amazon.com/.*?ASIN/(\w+)&amp;[^"]*">}{} )
         {
             $asin = $1;
         }
-        elsif ($line =~ s{^<a href="<affil_link id="([^"]+)" */? *>">}{})
+        elsif ( $line =~ s{^<a href="<affil_link id="([^"]+)" */? *>">}{} )
         {
             $asin = $1;
         }
@@ -34,9 +36,9 @@ while ($line = get_line())
         }
         my $title;
         my $author;
-        if ($line =~ s{^(.*?)</a>\s*-?\s*by (.*?)</dt>\s*$}{})
+        if ( $line =~ s{^(.*?)</a>\s*-?\s*by (.*?)</dt>\s*$}{} )
         {
-            $title = $1;
+            $title  = $1;
             $author = $2;
         }
         else
@@ -44,14 +46,14 @@ while ($line = get_line())
             die "Unknown formatting [author/title] at Line $line_idx\n";
         }
         my $desc = "";
-        while ($line = get_line())
+        while ( $line = get_line() )
         {
-            if ($line =~ s{^\s*<dd>}{})
+            if ( $line =~ s{^\s*<dd>}{} )
             {
                 $desc .= $line;
-                while ($line = get_line())
+                while ( $line = get_line() )
                 {
-                    if ($line =~ s{\s*</dd>$}{})
+                    if ( $line =~ s{\s*</dd>$}{} )
                     {
                         $desc .= $line;
                         last;
@@ -61,7 +63,7 @@ while ($line = get_line())
                 last;
             }
         }
-        if ($desc !~ /<p>/)
+        if ( $desc !~ /<p>/ )
         {
             $desc = "<p>\n$desc\n</p>\n";
         }

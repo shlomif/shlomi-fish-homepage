@@ -54,24 +54,34 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
     ],
     filename_lists_post_filter => sub {
         my ($args) = @_;
-        my $is_bucket = sub { return $args->{bucket} eq shift; };
-        my $filenames = $args->{filenames};
-        my $results   = sub {
+        my $is_bucket  = sub { return $args->{bucket} eq shift; };
+        my $filenames  = $args->{filenames};
+        my $ipp_filter = sub {
+            return [ grep { not /\Aipp\.\S*\z/ } @{ shift @_ } ];
+        };
+        my $results = sub {
             if ( $args->{host} eq 't2' )
             {
                 if ( $is_bucket->('DOCS') )
                 {
-                    return [
-                        grep {
-                            not( m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
-                                && $1 ne 'index' )
-                        } @$filenames
-                    ];
+                    return $ipp_filter->(
+                        [
+                            grep {
+                                not(
+m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
+                                    && $1 ne 'index' )
+                            } @$filenames
+                        ]
+                    );
                 }
                 if ( $is_bucket->('IMAGES') )
                 {
                     return [ grep { $_ ne 'humour/fortunes/show.cgi' }
                             @$filenames ];
+                }
+                if ( $is_bucket->('DIRS') )
+                {
+                    return $ipp_filter->($filenames);
                 }
             }
             return $filenames;
@@ -84,12 +94,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
 
 $generator->process_all();
 
-my $text = io("include.mak")->slurp();
-$text =~
-s!^((?:T2_DOCS|T2_DIRS) = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s# +ipp\.\S*##gr)!ems;
-io("include.mak")->print($text);
-
-$text = io("rules.mak")->slurp();
+my $text = io("rules.mak")->slurp();
 $text =~
 s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
     or die "Cannot subt";

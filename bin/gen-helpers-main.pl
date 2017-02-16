@@ -54,20 +54,26 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
     ],
     filename_lists_post_filter => sub {
         my ($args) = @_;
+        my $is_bucket = sub { return $args->{bucket} eq shift; };
         my $filenames = $args->{filenames};
-        if ( $args->{host} eq 't2' and $args->{bucket} eq 'DOCS' )
+        if ( $args->{host} eq 't2' )
         {
-            return [
-                grep {
-                    not( m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
-                        && $1 ne 'index' )
-                } @$filenames
-            ];
+            if ( $is_bucket->('DOCS') )
+            {
+                return [
+                    grep {
+                        not( m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
+                            && $1 ne 'index' )
+                    } @$filenames
+                ];
+            }
+            if ( $is_bucket->('IMAGES') )
+            {
+                return [ grep { $_ ne 'humour/fortunes/show.cgi' }
+                        @$filenames ];
+            }
         }
-        else
-        {
-            return $filenames;
-        }
+        return $filenames;
     },
 );
 
@@ -76,7 +82,6 @@ $generator->process_all();
 my $text = io("include.mak")->slurp();
 $text =~
 s!^((?:T2_DOCS|T2_DIRS) = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s# +ipp\.\S*##gr)!ems;
-$text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;
 $text =~ s{ *humour/fortunes/\S+\.tar\.gz}{}g;
 io("include.mak")->print($text);
 

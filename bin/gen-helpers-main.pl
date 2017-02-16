@@ -52,29 +52,28 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 }
         } (qw(common t2 vipe))
     ],
+    filename_lists_post_filter => sub {
+        my ($args) = @_;
+        my $filenames = $args->{filenames};
+        if ( $args->{host} eq 't2' and $args->{bucket} eq 'DOCS' )
+        {
+            return [
+                grep {
+                    not( m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
+                        && $1 ne 'index' )
+                } @$filenames
+            ];
+        }
+        else
+        {
+            return $filenames;
+        }
+    },
 );
 
 $generator->process_all();
 
-sub _process_T2_DOCS_files
-{
-    my ($files) = @_;
-
-    return \(
-        join(
-            ' ',
-            grep {
-                not( m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
-                    && $1 ne 'index' )
-                } split /\s+/,
-            $$files
-        )
-    );
-}
-
 my $text = io("include.mak")->slurp();
-$text =~
-s!^(T2_DOCS = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ${_process_T2_DOCS_files(\$files)}!ems;
 $text =~
 s!^((?:T2_DOCS|T2_DIRS) = )([^\n]*)!my ($prefix, $files) = ($1,$2); $prefix . ($files =~ s# +ipp\.\S*##gr)!ems;
 $text =~ s!^(T2_IMAGES = .*)humour/fortunes/show\.cgi!$1!m;

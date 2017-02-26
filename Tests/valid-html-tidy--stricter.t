@@ -25,6 +25,7 @@ package main;
 my %whitelist = (
     map { $_ => 1 } (
 'dest/t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.html',
+        'dest/vipe/js/jquery-ui/index.html',
     ),
 );
 
@@ -36,6 +37,7 @@ MyTidy->new(
         targets => [
             './dest/t2/me/',                    './dest/t2/meta/',
             './dest/t2/open-source/resources/', './dest/t2/work/',
+            './dest/vipe/',
         ],
     }
 )->run;

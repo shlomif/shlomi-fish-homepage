@@ -33,6 +33,9 @@ MyTidy->new(
         filename_filter => sub {
             return not exists $whitelist{ shift @_ };
         },
-        targets => [ './dest/t2/me/', './dest/t2/open-source/resources/', ],
+        targets => [
+            './dest/t2/me/', './dest/t2/meta/',
+            './dest/t2/open-source/resources/',
+        ],
     }
 )->run;

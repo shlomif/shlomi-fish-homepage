@@ -49,10 +49,13 @@ m#\Adest/t2/(?:MathVentures/|js/MathJax/|open-source/projects/Spark/mission/)#
             './dest/t2/js/',                    './dest/t2/lambda-calculus/',
             './dest/t2/linux_banner/',          './dest/t2/MathVentures/',
             './dest/t2/me/',                    './dest/t2/meta/',
-            './dest/t2/old-news.html',          './dest/t2/open-source/',
-            './dest/t2/personal-heb.html',      './dest/t2/personal.html',
-            './dest/t2/prog-evolution/',        './dest/t2/puzzles/',
-            './dest/t2/work/',                  './dest/vipe/',
+            './dest/t2/no-ie/',                 './dest/t2/old-news.html',
+            './dest/t2/open-source/',           './dest/t2/personal-heb.html',
+            './dest/t2/personal.html',          './dest/t2/prog-evolution/',
+            './dest/t2/puzzles/',               './dest/t2/recommendations/',
+            './dest/t2/rindolf/',               './dest/t2/rwlock/',
+            './dest/t2/site-map/',              './dest/t2/work/',
+            './dest/vipe/',
         ],
     }
 )->run;

@@ -122,7 +122,6 @@ to its parent namespace, and <tt>this</tt> that would start at the current one.
 Example:
 </p>
 
-<p>
 <pre>
     class Parent
     {
@@ -143,7 +142,6 @@ Example:
     this::Parent::ya_func();
     # Prints myfunc() was called!
 </pre>
-</p>
 
 <h3>A Basic File Primitive</h3>
 
@@ -174,11 +172,14 @@ such user defined functions. (<b>accum</b> comes to mind).
 
 <h3>Proper-Tail Recursion</h3>
 
-<ul>
-    <i>The more I think about it, the more I think I should think about it
-        some more.</i><br />
-    Clarissa in "Clarissa Explains it All"
-</ul>
+<blockquote>
+    <p>The more I think about it, the more I think I should think about it
+        some more.</p>
+</blockquote>
+
+<p>
+— Clarissa in <i>Clarissa Explains it All</i>.
+</p>
 
 <p>
 In order to make sure Clarissa does not run out of stack space - proper-tail
@@ -259,13 +260,11 @@ It would be possible to define a function prototype using a regular-expression
 like construct of the terms:
 </p>
 
-<p>
 <pre>
     sub myfunc (ext{{scalar}?{array}{typeglob}?})
     {
     }
 </pre>
-</p>
 
 <p>
 Moreover, the meta-function <tt>wantwhat()</tt> can be used a definition of

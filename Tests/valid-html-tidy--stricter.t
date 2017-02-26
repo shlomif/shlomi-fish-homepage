@@ -54,8 +54,10 @@ m#\Adest/t2/(?:MathVentures/|js/MathJax/|open-source/projects/Spark/mission/)#
             './dest/t2/personal.html',          './dest/t2/prog-evolution/',
             './dest/t2/puzzles/',               './dest/t2/recommendations/',
             './dest/t2/rindolf/',               './dest/t2/rwlock/',
-            './dest/t2/site-map/',              './dest/t2/work/',
-            './dest/vipe/',
+            './dest/t2/site-map/',              './dest/t2/t/',
+            './dest/t2/temp/',                  './dest/t2/toggle.html',
+            './dest/t2/wonderous.html',         './dest/t2/work/',
+            './dest/t2/wysiwyt.html',           './dest/vipe/',
         ],
     }
 )->run;

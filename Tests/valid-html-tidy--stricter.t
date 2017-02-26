@@ -32,16 +32,26 @@ my %whitelist = (
 MyTidy->new(
     {
         filename_filter => sub {
-            return not exists $whitelist{ shift @_ };
+            my $fn = shift;
+            return not( exists $whitelist{$fn}
+                or $fn =~ m#\Adest/t2/open-source/projects/Spark/mission# );
         },
         targets => [
-            './dest/t2/SFresume.html',   './dest/t2/SFresume_detailed.html',
-            './dest/t2/art/',            './dest/t2/index.html',
-            './dest/t2/me/',             './dest/t2/meta/',
-            './dest/t2/old-news.html',   './dest/t2/open-source/resources/',
-            './dest/t2/personal.html',   './dest/t2/personal-heb.html',
-            './dest/t2/prog-evolution/', './dest/t2/puzzles/',
-            './dest/t2/work/',           './dest/vipe/',
+            './dest/t2/SFresume.html',
+            './dest/t2/SFresume_detailed.html',
+            './dest/t2/art/',
+            './dest/t2/index.html',
+            './dest/t2/me/',
+            './dest/t2/meta/',
+            './dest/t2/old-news.html',
+            './dest/t2/open-source/projects/',
+            './dest/t2/open-source/resources/',
+            './dest/t2/personal-heb.html',
+            './dest/t2/personal.html',
+            './dest/t2/prog-evolution/',
+            './dest/t2/puzzles/',
+            './dest/t2/work/',
+            './dest/vipe/',
         ],
     }
 )->run;

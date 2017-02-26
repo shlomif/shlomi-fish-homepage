@@ -17,6 +17,8 @@ sub my_slurp
     my $text = io->file($fn)->utf8->slurp;
 
     $text =~ s{\bindex\b}{$index_id}g;
+    $text =~ s# xml:space="preserve"([ >])#$1#g;
+    $text =~ s#^[ \t]+(<)#$1#gms;
 
     _print_utf8($text);
 

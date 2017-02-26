@@ -33,42 +33,42 @@ use Shlomif::XmlFictionSlurp;
         $trap->stdout(),
         <<'EOF',
 
-    <div xml:lang="en-UK" class="article" xml:space="preserve">
-      <div class="titlepage" xml:space="preserve">
-        <div xml:space="preserve">
-          <div xml:space="preserve">
-            <h3 id="fiction_text_index" class="title" xml:space="preserve"><a xml:space="preserve" shape="rect"/>David vs. Goliath - Part I</h3>
-          </div>
-        </div>
-        <hr />
-      </div>
-      <div class="section" xml:space="preserve">
-        <div class="titlepage" xml:space="preserve">
-          <div xml:space="preserve">
-            <div xml:space="preserve">
-              <h4 id="top" class="title" xml:space="preserve"><a xml:space="preserve" shape="rect"/>The Top Section</h4>
-            </div>
-          </div>
-        </div>
-        <p xml:space="preserve">King <a class="link" href="http://en.wikipedia.org/wiki/David" xml:space="preserve" shape="rect">David</a> and Goliath were standing by each other.
+<div xml:lang="en-UK" class="article">
+<div class="titlepage">
+<div>
+<div>
+<h3 id="fiction_text_index" class="title"><a shape="rect"/>David vs. Goliath - Part I</h3>
+</div>
+</div>
+<hr />
+</div>
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h4 id="top" class="title"><a shape="rect"/>The Top Section</h4>
+</div>
+</div>
+</div>
+<p>King <a class="link" href="http://en.wikipedia.org/wiki/David" shape="rect">David</a> and Goliath were standing by each other.
 </p>
-        <p xml:space="preserve">David said unto Goliath: “I will shoot you. I <span class="bold" xml:space="preserve"><strong xml:space="preserve">swear</strong></span> I will”
+<p>David said unto Goliath: “I will shoot you. I <span class="bold"><strong>swear</strong></span> I will”
 </p>
-        <div class="section" xml:space="preserve">
-          <div class="titlepage" xml:space="preserve">
-            <div xml:space="preserve">
-              <div xml:space="preserve">
-                <h5 id="goliath" class="title" xml:space="preserve"><a xml:space="preserve" shape="rect"/>Goliath's Response</h5>
-              </div>
-            </div>
-          </div>
-          <p xml:space="preserve">Goliath was not amused.
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h5 id="goliath" class="title"><a shape="rect"/>Goliath's Response</h5>
+</div>
+</div>
+</div>
+<p>Goliath was not amused.
 </p>
-          <p xml:space="preserve">He said to David: “Oh, really. <span class="emphasis" xml:space="preserve"><em xml:space="preserve">David</em></span>, the red-headed!”.
+<p>He said to David: “Oh, really. <span class="emphasis"><em>David</em></span>, the red-headed!”.
 </p>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
+</div>
 EOF
         "->my_slurp()",
     );

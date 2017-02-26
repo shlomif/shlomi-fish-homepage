@@ -175,11 +175,12 @@ sub file_to_news_item
         open my $file, "<:encoding(UTF-8)", $self->dir() . "/" . $filename;
         <$file>;
     };
-    my $title;
+    my $title = '';
     if ( $text =~ s{\A<!-- TITLE=(.*?)-->\n}{} )
     {
         $title = $1;
     }
+    $title =~ s#&#&amp;#g;
 
 =begin Removed
 

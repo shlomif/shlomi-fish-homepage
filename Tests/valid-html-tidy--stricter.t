@@ -35,9 +35,9 @@ MyTidy->new(
             return not exists $whitelist{ shift @_ };
         },
         targets => [
-            './dest/t2/me/',                    './dest/t2/meta/',
-            './dest/t2/open-source/resources/', './dest/t2/work/',
-            './dest/vipe/',
+            './dest/t2/art/',  './dest/t2/me/',
+            './dest/t2/meta/', './dest/t2/open-source/resources/',
+            './dest/t2/work/', './dest/vipe/',
         ],
     }
 )->run;

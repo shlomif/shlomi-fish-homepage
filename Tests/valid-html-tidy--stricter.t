@@ -50,6 +50,7 @@ MyTidy->new(
             './dest/t2/open-source/by-others/',
             './dest/t2/open-source/contributions/',
             './dest/t2/open-source/favourite/',
+            './dest/t2/open-source/interviews/',
             './dest/t2/open-source/projects/',
             './dest/t2/open-source/resources/',
             './dest/t2/personal-heb.html',

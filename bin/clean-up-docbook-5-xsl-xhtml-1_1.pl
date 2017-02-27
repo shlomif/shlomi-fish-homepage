@@ -4,10 +4,14 @@ use strict;
 use warnings;
 use autodie;
 
+use lib './lib';
+
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 use Getopt::Long;
 use Path::Tiny qw/ path /;
+
+use Shlomif::DocBookClean;
 
 my $out_fn;
 
@@ -23,12 +27,7 @@ my $filename = shift(@ARGV)
     $s =~ s{\A.*?<body[^>]*>}{}sm;
     $s =~ s{</body>.*\z}{}ms;
 
-    # It's a kludge
-    $s =~ s{ lang="en"}{}g;
-    $s =~ s{ xml:lang="en"}{}g;
-    $s =~ s{ type="(?:1|disc)"}{}g;
-    $s =~ s{<hr[^/]*/>}{<hr />}g;
-    $s =~ s{ target="_top"}{}g;
+    Shlomif::DocBookClean::cleanup_docbook( \$s );
 
     # Fixed in Perl 6...
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+2)}ge;

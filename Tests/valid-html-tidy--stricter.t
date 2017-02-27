@@ -24,6 +24,8 @@ package main;
 
 my %whitelist = (
     map { $_ => 1 } (
+        'dest/t2/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html',
+        'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
         'dest/t2/js/jquery-ui/index.html',
 'dest/t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.html',
         'dest/vipe/js/jquery-ui/index.html',
@@ -34,9 +36,27 @@ MyTidy->new(
     {
         filename_filter => sub {
             my $fn = shift;
-            return not( exists $whitelist{$fn}
-                or $fn =~
-m#\Adest/t2/(?:MathVentures/|js/MathJax/|open-source/projects/Spark/mission/)#
+            return not(
+                exists $whitelist{$fn}
+                or $fn =~ m#\A dest/t2/
+                    (?:MathVentures/ |
+                    lecture/
+                    (?:
+                    Perl/
+                    (?:
+                    Lightning/
+                    (?: Mojolicious | Opt-Multi-Task-in-PDL/ | Test-Run/ |
+                    Too-Many-Ways/
+                        )
+                        |
+                    Graham-Function/
+                    )
+                    | SCM/subversion/for-pythoneers/ | Vim/beginners/ )
+                    slides/ |
+                    js/MathJax/ |
+                    open-source/projects/Spark/mission/
+                    )
+                #x
             );
         },
         targets => [
@@ -47,17 +67,18 @@ m#\Adest/t2/(?:MathVentures/|js/MathJax/|open-source/projects/Spark/mission/)#
             './dest/t2/homesteading/',          './dest/t2/i-bex/',
             './dest/t2/images/',                './dest/t2/jmikmod/',
             './dest/t2/js/',                    './dest/t2/lambda-calculus/',
-            './dest/t2/linux_banner/',          './dest/t2/MathVentures/',
-            './dest/t2/me/',                    './dest/t2/meta/',
-            './dest/t2/no-ie/',                 './dest/t2/old-news.html',
-            './dest/t2/open-source/',           './dest/t2/personal-heb.html',
-            './dest/t2/personal.html',          './dest/t2/prog-evolution/',
-            './dest/t2/puzzles/',               './dest/t2/recommendations/',
-            './dest/t2/rindolf/',               './dest/t2/rwlock/',
-            './dest/t2/site-map/',              './dest/t2/t/',
-            './dest/t2/temp/',                  './dest/t2/toggle.html',
-            './dest/t2/wonderous.html',         './dest/t2/work/',
-            './dest/t2/wysiwyt.html',           './dest/vipe/',
+            './dest/t2/lecture/',               './dest/t2/linux_banner/',
+            './dest/t2/MathVentures/',          './dest/t2/me/',
+            './dest/t2/meta/',                  './dest/t2/no-ie/',
+            './dest/t2/old-news.html',          './dest/t2/open-source/',
+            './dest/t2/personal-heb.html',      './dest/t2/personal.html',
+            './dest/t2/prog-evolution/',        './dest/t2/puzzles/',
+            './dest/t2/recommendations/',       './dest/t2/rindolf/',
+            './dest/t2/rwlock/',                './dest/t2/site-map/',
+            './dest/t2/t/',                     './dest/t2/temp/',
+            './dest/t2/toggle.html',            './dest/t2/wonderous.html',
+            './dest/t2/work/',                  './dest/t2/wysiwyt.html',
+            './dest/vipe/',
         ],
     }
 )->run;

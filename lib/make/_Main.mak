@@ -881,7 +881,7 @@ $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xht
 	$(DOCMAKE) --stringparam "root.filename=$@.temp.xml" --basepath $(DOCBOOK5_XSL_STYLESHEETS_PATH) -x $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) xhtml-1_1 $<
 	xsltproc --output $@ ./bin/clean-up-docbook-xhtml-1.1.xslt $@.temp.xml.html
 	rm -f $@.temp.xml.html
-	perl -lpi -e 's/[ \t]+\z//' $@
+	perl -I./lib -MShlomif::DocBookClean -lpi -0777 -e 's/[ \t]+$$//gms; Shlomif::DocBookClean::cleanup_docbook(\$$_);' $@
 
 $(DOCBOOK5_RENDERED_DIR)/%.xhtml: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
 	./bin/clean-up-docbook-5-xsl-xhtml-1_1.pl -o $@ $<
@@ -1016,6 +1016,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
 	text-vimcolor --format html --full-page $< --output $@
+	perl -i -lapE 's#^( *)<style>$$#$$1<style type="text/css">#ms' $@
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \

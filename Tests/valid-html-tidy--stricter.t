@@ -25,6 +25,9 @@ package main;
 my %whitelist = (
     map { $_ => 1 } (
         'dest/t2/humour/Blue-Rabbit-Log/ideas.xhtml',
+        'dest/t2/humour/by-others/oded-c/No_name.html',
+        'dest/t2/humour/by-others/oded-c/bla_bla.html',
+        'dest/t2/humour/by-others/oded-c/hilazon.html',
         'dest/t2/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html',
         'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
         'dest/t2/js/jquery-ui/index.html',
@@ -88,6 +91,7 @@ MyTidy->new(
             './dest/t2/humour/TheEnemy/',
             './dest/t2/humour/aphorisms/',
             './dest/t2/humour/bits/',
+            './dest/t2/humour/by-others/',
             './dest/t2/i-bex/',
             './dest/t2/images/',
             './dest/t2/jmikmod/',

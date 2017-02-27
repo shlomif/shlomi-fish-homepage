@@ -101,6 +101,8 @@ MyTidy->new(
             './dest/t2/humour/index.html',
             './dest/t2/humour/recommendations/',
             './dest/t2/humour/stories/',
+            './dest/t2/humour/ways_to_do_it-heb.html',
+            './dest/t2/humour/ways_to_do_it.html',
             './dest/t2/i-bex/',
             './dest/t2/images/',
             './dest/t2/jmikmod/',

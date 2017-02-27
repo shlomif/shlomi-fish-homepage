@@ -86,6 +86,8 @@ MyTidy->new(
             './dest/t2/humour/TOWTF/',
             './dest/t2/humour/The-Earth-Angel/',
             './dest/t2/humour/TheEnemy/',
+            './dest/t2/humour/aphorisms/',
+            './dest/t2/humour/bits/',
             './dest/t2/i-bex/',
             './dest/t2/images/',
             './dest/t2/jmikmod/',

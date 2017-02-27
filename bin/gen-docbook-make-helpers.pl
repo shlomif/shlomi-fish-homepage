@@ -661,7 +661,7 @@ EOF
                         $x =~ s/\.raw(\.html)\z/$1/;
                         $x;
                         }
-                        . "\n\t\$(call COPY)\n\n"
+                        . qq{\n\tperl -lpE 's#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E## if m#^<html #ms' < \$< > \$\@\n\n}
                 } @_htmls_files
             ),
         );

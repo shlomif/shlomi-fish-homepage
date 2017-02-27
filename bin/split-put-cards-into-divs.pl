@@ -2,11 +2,14 @@
 
 use strict;
 use warnings;
+use lib './lib';
 
 use utf8;
 
 use IO::All qw/ io /;
 use XML::LibXML;
+
+use Shlomif::DocBookClean;
 
 my $dom = XML::LibXML->load_xml( location =>
         'lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml' );
@@ -31,9 +34,7 @@ foreach my $sect (@nodes)
     my $id    = _xpc($sect)->findvalue(q{xhtml:h2/@id});
     my $title = _xpc($sect)->findnodes(q{xhtml:h2})->[0]->textContent;
 
-    io->file(
-qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
-    )->utf8->print(<<"EOF");
+    my $contents = <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE
     html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -56,4 +57,9 @@ a:hover { background-color: palegreen;}
 </html>
 EOF
 
+    Shlomif::DocBookClean::cleanup_docbook( \$contents );
+
+    io->file(
+qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
+    )->utf8->print($contents);
 }

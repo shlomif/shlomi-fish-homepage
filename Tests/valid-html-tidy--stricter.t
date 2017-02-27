@@ -28,6 +28,7 @@ my %whitelist = (
         'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
         'dest/t2/js/jquery-ui/index.html',
 'dest/t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.html',
+'dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
         'dest/vipe/js/jquery-ui/index.html',
     ),
 );
@@ -72,13 +73,13 @@ MyTidy->new(
             './dest/t2/meta/',                  './dest/t2/no-ie/',
             './dest/t2/old-news.html',          './dest/t2/open-source/',
             './dest/t2/personal-heb.html',      './dest/t2/personal.html',
-            './dest/t2/prog-evolution/',        './dest/t2/puzzles/',
-            './dest/t2/recommendations/',       './dest/t2/rindolf/',
-            './dest/t2/rwlock/',                './dest/t2/site-map/',
-            './dest/t2/t/',                     './dest/t2/temp/',
-            './dest/t2/toggle.html',            './dest/t2/wonderous.html',
-            './dest/t2/work/',                  './dest/t2/wysiwyt.html',
-            './dest/vipe/',
+            './dest/t2/philosophy/',            './dest/t2/prog-evolution/',
+            './dest/t2/puzzles/',               './dest/t2/recommendations/',
+            './dest/t2/rindolf/',               './dest/t2/rwlock/',
+            './dest/t2/site-map/',              './dest/t2/t/',
+            './dest/t2/temp/',                  './dest/t2/toggle.html',
+            './dest/t2/wonderous.html',         './dest/t2/work/',
+            './dest/t2/wysiwyt.html',           './dest/vipe/',
         ],
     }
 )->run;

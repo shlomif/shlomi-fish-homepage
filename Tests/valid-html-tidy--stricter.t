@@ -83,6 +83,8 @@ MyTidy->new(
             './dest/t2/humour/So-Who-The-Hell-Is-Qoheleth/',
             './dest/t2/humour/Star-Trek/',
             './dest/t2/humour/Summerschool-at-the-NSA/',
+            './dest/t2/humour/TOWTF/',
+            './dest/t2/humour/The-Earth-Angel/',
             './dest/t2/i-bex/',
             './dest/t2/images/',
             './dest/t2/jmikmod/',

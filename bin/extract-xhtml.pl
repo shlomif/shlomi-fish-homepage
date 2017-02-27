@@ -3,10 +3,14 @@
 use strict;
 use warnings;
 
+use lib './lib';
+
 use XML::LibXML;
 use XML::LibXML::XPathContext;
 use Getopt::Long;
 use Path::Tiny qw/ path /;
+
+use Shlomif::DocBookClean;
 
 my $out_fn;
 
@@ -32,18 +36,10 @@ $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
 
     $s =~ s{<h1[^>]*>.*?</h1>}{}sm;
 
-=begin Hello
+    Shlomif::DocBookClean::cleanup_docbook( \$s );
 
-    # It's a kludge
-    $s =~ s{ lang="en"}{}g;
-    $s =~ s{ xml:lang="en"}{}g;
-    $s =~ s{ type="(1|disc)"}{}g;
-    $s =~ s{<hr[^/]*/>}{<hr />}g;
-    $s =~ s{ target="_top"}{}g;
-
-=end Hello
-
-=cut
+    $s =~ s#<span>\s*</span>##gms;
+    $s =~ s#<span style="[^"]*" */>##gms;
 
     path($out_fn)->spew_utf8($s);
 }

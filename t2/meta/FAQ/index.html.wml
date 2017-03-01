@@ -1586,8 +1586,8 @@ own site which you can start populating with interesting content to your
 heart’s content.
 </p>
 
-<h3 id="selfishness">Is the fact that you/are an Objectivist (= an advocate of
-Ayn Rand’s philosophy) makes you selfish?</h3>
+<h3 id="selfishness">Is the fact that you are/were an Objectivist (= an
+advocate of Ayn Rand’s philosophy) makes you selfish?</h3>
 
 <p>
 <a href="$(ROOT)/humour/fortunes/show.cgi?id=neo-tech-selfishness">This
@@ -1615,6 +1615,33 @@ that both selfish and selfless (= having an irrational disregard for one’s
 self) behaviours should be avoided as much as possible, and that one should
 strive for “Rational Self-Growth” and that often “selfish vs. selfless” is
 presented as a false dichotomy.
+</p>
+
+<h3 id="how_site_is_generated">How is this site generated? Which CMS (Content
+Management System) are you using?</h3>
+
+<p>
+Most of the site is comprised
+of <a href="https://en.wikipedia.org/wiki/Static_web_page">static HTML web
+pages</a>, which are uploaded to the web-site as they are, <b>after</b> being
+generated using templates, data, and programs. The site’s
+<a href="$(ROOT)/meta/site-source/">sources</a> are public and kept in
+a public version control repository, which also contains some
+<a href="https://en.wikipedia.org/wiki/Test_automation">automated tests</a>
+and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> service.
+</p>
+
+<p>
+While I am not ashamed of the site’s sources, they have been through a long
+<a href="#site_history">history</a> and
+<a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
+and while I remain a big fan of static site generation, there are probably
+some better approaches out there for that, and often it is simpler to just
+write something of your own using a <a href="$(ROOT)/open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
+a good <a href="$(ROOT)/open-source/resources/software-tools/">build system</a>
+and some code glue. But for me converting to something else would be too
+time-consuming, and I've already found some faults in one existing popular
+static site generator that I tried.
 </p>
 
 <h2 id="works_of_fiction">About my works of fiction.</h2>

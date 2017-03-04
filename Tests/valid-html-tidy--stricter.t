@@ -95,6 +95,7 @@ MyTidy->new(
             './dest/t2/humour/aphorisms/',
             './dest/t2/humour/bits/',
             './dest/t2/humour/by-others/',
+            './dest/t2/humour/fortunes/',
             './dest/t2/humour/human-hacking/',
             './dest/t2/humour/humanity/',
             './dest/t2/humour/images/',

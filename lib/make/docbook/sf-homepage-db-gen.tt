@@ -104,7 +104,7 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
 
 [% BLOCK cmd %]
-	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" WMLOPTS="--passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/presentations/qp/common/')"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
+	export T2_DEST="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$(T2_DEST)')" WMLOPTS="--passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/presentations/qp/common/') --passoption=3,-I$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' 'lib/')"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
 	touch [% vstamp %]
 [% END %]
 

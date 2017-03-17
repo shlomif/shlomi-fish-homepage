@@ -35,8 +35,7 @@ sub get_menupath_text
         @components;
 
     # An arrow wrapped in CSS magic.
-    my $separator_string =
-        "\n <span class=\"menupathseparator\">\n" . "-&gt;" . "</span> \n";
+    my $separator_string = qq{\n<span class="menupathseparator">-&gt;</span>\n};
 
     my $final_string = join( $separator_string, @components_rendered );
 

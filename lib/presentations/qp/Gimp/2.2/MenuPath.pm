@@ -1,6 +1,8 @@
 package MenuPath;
 
 use strict;
+use warnings;
+use utf8;
 
 sub get_menupath_text
 {
@@ -35,9 +37,7 @@ sub get_menupath_text
         @components;
 
     # An arrow wrapped in CSS magic.
-    my $separator_string =
-        "\n <span class=\"menupathseparator\">\n" . "&rarr;" .    #"-&gt;" .
-        "</span> \n";
+    my $separator_string = qq#<span class="menupathseparator">→</span>\n#;
 
     my $final_string = join( $separator_string, @components_rendered );
 

@@ -229,6 +229,7 @@ sub _wmlize
     my $s = shift;
 
     $s =~ s{^#}{\\#}gms;
+    $s =~ s#^[ \t]+##gms;
 
     return $s;
 }

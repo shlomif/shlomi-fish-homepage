@@ -124,34 +124,16 @@ shlomifish.org
 <define-tag affil_wml>
 </define-tag>
 <define-tag affil_valid_xhtml11>
-<p>
-<a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!"
-class="bless"><img
-    class="highlight bless"
-    src="$(ROOT)/images/xh11-btn.png"
-    alt="Valid XHTML 1.1!"
-    /></a>
-</p>
+<p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless"><img class="highlight bless" src="$(ROOT)/images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
 </define-tag>
 <define-tag affil_valid_css>
-<p>
-<a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
-class="bless"><img
-    class="highlight bless"
-    src="$(ROOT)/images/css-btn.png"
-    alt="Valid CSS!" /></a>
-</p>
+<p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!" class="bless"><img class="highlight bless" src="$(ROOT)/images/css-btn.png" alt="Valid CSS!" /></a></p>
 </define-tag>
 <latemp_affiliations_buttons>
 
 <div class="about_author">
 
-<div class="center">
-<img src="$(ROOT)/images/shlomif-sglau-nsa-shirt-small.jpg"
-    alt="Photo of Shlomi Fish"
-    title="Head shot of Shlomi Fish"
-    />
-</div>
+<div class="center"><img src="$(ROOT)/images/shlomif-sglau-nsa-shirt-small.jpg" alt="Photo of Shlomi Fish" title="Head shot of Shlomi Fish"/></div>
 
 <p>
 <a href="$(ROOT)/#about_site">Shlomi Fish</a>
@@ -183,21 +165,8 @@ It is easy to reach Shlomi using a large number of
 
 {#PAGE_EXTRA_AFFIL#}
 
-<p>
-<a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img
-    src="$(ROOT)/images/rss-feed-sticker.png"
-    alt="RSS Feed" title="RSS Feed for Easy Notification on Update"
-    class="bless"
-    /></a>
-</p>
-<p>
-<a href="http://www.livejournal.com/community/shlomif_hsite/data/atom"
-    class="bless"><img
-    src="$(ROOT)/images/atom-feed-sticker.png"
-    alt="Atom Feed" title="Atom Feed for Easy Notification on Update"
-    class="bless"
-    /></a>
-</p>
+<p><a href="http://www.livejournal.com/community/shlomif_hsite/data/rss" class="bless"><img src="$(ROOT)/images/rss-feed-sticker.png" alt="RSS Feed" title="RSS Feed for Easy Notification on Update" class="bless"/></a></p>
+<p><a href="http://www.livejournal.com/community/shlomif_hsite/data/atom" class="bless"><img src="$(ROOT)/images/atom-feed-sticker.png" alt="Atom Feed" title="Atom Feed for Easy Notification on Update" class="bless"/></a></p>
 
 
 <div class="center">

@@ -43,7 +43,7 @@
 <a href="mailto:%0">%0</a>
 </define-tag>
 
-<define-tag mailto_link_to_self>
+<define-tag mailto_link_to_self whitespace="delete">
 <preserve email />
 <set-var %attributes />
 <a href="mailto:<get-var email />"><get-var email /></a>

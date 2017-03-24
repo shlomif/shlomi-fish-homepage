@@ -119,6 +119,7 @@ ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOU
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
 T2_CACHE_ALL_STAMP = lib/cache/STAMP.one
+T2_CLEAN_STAMP = lib/cache/STAMP.two
 
 T2_CACHE_PREF = lib/cache/combined/t2
 
@@ -1387,3 +1388,8 @@ $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 
 $(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
 
+all: $(T2_CLEAN_STAMP)
+
+$(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
+	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | NO_I=1 xargs $(PROCESS_ALL_INCLUDES)
+	touch $@

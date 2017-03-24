@@ -25,10 +25,13 @@ foreach my $fn (@ARGV)
     # In case there's an error - fail and need to rebuild.
     $_f->()->unlink();
 
-    $text =~
-        s#^\({5}include "([^"]+)"\){5}\n#io->file("lib/$1")->utf8->all#egms;
-    $text =~
+    if ( !$ENV{NO_I} )
+    {
+        $text =~
+            s#^\({5}include "([^"]+)"\){5}\n#io->file("lib/$1")->utf8->all#egms;
+        $text =~
 s#\({5}chomp_inc='([^']+)'\){5}#io->file("lib/$1")->chomp->utf8->getline("\n")#egms;
+    }
 
     if ( $ENV{F} )
     {

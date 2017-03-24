@@ -32,6 +32,18 @@ if ( $ENV{F} )
     }
 }
 
+use HTML::Tidy;
+
+my $tidy = HTML::Tidy->new(
+    {
+        'input_xml'     => 1,
+        'output_xml'    => 1,
+        'char_encoding' => 'utf8',
+    }
+);
+
+$text = $tidy->clean($text);
+$text =~ s# +$##gms;
 $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
 
 # Remove surrounding space of tags.

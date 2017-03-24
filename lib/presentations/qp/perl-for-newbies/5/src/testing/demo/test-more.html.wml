@@ -2,7 +2,7 @@
 
 <p>
 Perl ships with a module called Test::More (which is part of the
-<a href="http://search.cpan.org/dist/Test-Simple/">Test-Simple CPAN
+<a href="http://metacpan.org/release/Test-Simple/">Test-Simple CPAN
 distribution</a>, which may be more up-to-date there), that allows one
 to write and run tests using convenient functions. Here's an example
 for a test script:
@@ -21,7 +21,7 @@ performs a deep comparison of nested data structures, and others.
 
 <p>
 You may also notice the <tt># TEST</tt> comments - these are
-<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> annotations
+<a href="http://metacpan.org/release/Test-Count/">Test::Count</a> annotations
 that allow us to keep track of the number of test assertions that we have
 declared and update it.
 </p>
@@ -64,7 +64,7 @@ For more information refer to the following sources:
 <ol>
 
 <li>
-<a href="http://search.cpan.org/perldoc?Test%3A%3ATutorial">Test::Tutorial on the
+<a href="http://metacpan.org/pod/Test%3A%3ATutorial">Test::Tutorial on the
 CPAN</a>
 </li>
 
@@ -74,7 +74,7 @@ Gabor Szabo</a> - comprehensive material of a talk about Perl and testing.
 </li>
 
 <li>
-<a href="http://search.cpan.org/dist/Test-Count/">Test::Count</a> - allows
+<a href="http://metacpan.org/release/Test-Count/">Test::Count</a> - allows
 one to keep track of the number of assertions in the test file.
 </li>
 

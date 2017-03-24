@@ -8,7 +8,7 @@ Here are some additional resources regarding managing a CPAN-like distribution.
 
 <li>
 <p>
-<a href="http://search.cpan.org/dist/ExtUtils-MakeMaker/"><b>ExtUtils-MakeMaker</b></a>
+<a href="http://metacpan.org/release/ExtUtils-MakeMaker/"><b>ExtUtils-MakeMaker</b></a>
 is Perl's older and now largely unloved distribution manager, which relies on
 generating
 <a href="http://en.wikipedia.org/wiki/Make_%28software%29">makefiles</a>. It was
@@ -24,7 +24,7 @@ cross-shell quoting issues that entails</q> .
 
 <li>
 <p>
-<a href="http://search.cpan.org/dist/Module-Install/"><b>Module-Install</b></a> is
+<a href="http://metacpan.org/release/Module-Install/"><b>Module-Install</b></a> is
 a more modern and succinct wrapper around ExtUtils-MakeMaker that has gained
 some popularity. It ships its code (and the code of its extensions) under an
 <tt>./inc</tt> directory in the distribution, which has known to cause some

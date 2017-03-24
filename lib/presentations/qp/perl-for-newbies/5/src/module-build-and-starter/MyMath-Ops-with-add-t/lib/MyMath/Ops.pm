@@ -86,7 +86,7 @@ L<http://cpanratings.perl.org/d/MyMath::Ops>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/MyMath::Ops/>
+L<http://metacpan.org/release/MyMath::Ops/>
 
 =back
 

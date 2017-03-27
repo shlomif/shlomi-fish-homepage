@@ -44,7 +44,13 @@ s#\({5}chomp_inc='([^']+)'\){5}#io->file("lib/$1")->chomp->utf8->getline("\n")#e
         }
     }
 
-    $text = $tidy->clean($text);
+    # Disabling tidyp for the time being due to:
+    # https://github.com/petdance/tidyp/issues/21 .
+    if (0)
+    {
+        $text = $tidy->clean($text);
+    }
+
     $text =~ s# +$##gms;
     $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
 

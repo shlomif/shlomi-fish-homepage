@@ -56,7 +56,7 @@ sub _out
 # At least temporarily disable Parallel::ForkManager because it causes
 # the main process to exit before all the work is done.
 
-my $WITH_PM = 0;
+my $WITH_PM = 1;
 
 my $pm;
 
@@ -244,4 +244,9 @@ URLS:
             $pm->finish;    # Terminates the child process
         }
     }
+}
+
+if ($WITH_PM)
+{
+    $pm->wait_all_children;
 }

@@ -9043,5 +9043,52 @@ Thanks, and let me figure out what you just wrote, heh.
         </irc>
     </fortune>
 
+    <fortune id="mongodb-vs-dev-null">
+        <meta>
+            <title>MongoDB vs. /dev/null</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="Hans">http://engineering.wayfair.com/wp-content/uploads/2013/03/mongovsdevnull.png</saying>
+<saying who="Hans">&gt; I’ll have to get to the bottom of those unreliable read operations.  But this is looking *very* promising</saying>
+<saying who="Hans">&gt; /dev/null is web scale, we heard, and it supports sharding!</saying>
+<saying who="shlomif">heheh</saying>
+<saying who="shlomif">have I shown you http://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-sharp-programming-dev-null-is-webscale ?</saying>
+<saying who="Hans">nope,</saying>
+<saying who="shlomif">and http://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-perl-nosql-dev-null</saying>
+<saying who="Hans">```how to properly secure it against abuse, so it will only null what you send to it. Not anything external and unsolicited.``` - sounds good</saying>
+<saying who="shlomif">I should start a page on my wiki collecting links to the /dev/null is webscale meme</saying>
+<saying who="Hans">&gt;/dev/null has handled zettabytes of write-only data flawlessly</saying>
+<saying who="Hans">maybe ^^</saying>
+<saying who="shlomif">there's also https://devnull-as-a-service.com/</saying>
+<saying who="Hans">haha yeah</saying>
+<saying who="Hans">but i dont like their setup,</saying>
+<saying who="Hans">its not really scalable,</saying>
+<saying who="shlomif">:-)</saying>
+<saying who="Hans">https://i.imgur.com/N9Ajqcv.png</saying>
+<saying who="Hans">yeah but really, nginx stores the entire request body, either in memory or on disk, before serving http 200</saying>
+<saying who="Hans">that's not optimal!</saying>
+<saying who="Hans">if you send a too-big-request-body to this server, you'll get a `Nginx: 413 Request Entity Too Large Error`</saying>
+<saying who="shlomif">ah.</saying>
+<saying who="Hans">do you see my point? :P</saying>
+<saying who="shlomif">ah</saying>
+<saying who="shlomif">nice analysis'</saying>
+<saying who="shlomif">did you tell them about it?</saying>
+<saying who="Hans">nope</saying>
+<saying who="shlomif">ah</saying>
+<saying who="Hans">maybe i should haha</saying>
+<saying who="Hans">&gt;mail: mail@devnull-as-a-service.com blog: noqqe.de twitter: @noqqe</saying>
+<saying who="shlomif">nice</saying>
+<saying who="Hans">(also, if you send with content-encoding: gzip/deflate/sdch, their setup will actually bother to use cpu DECOMPRESSING it, before discarding it)</saying>
+<saying who="shlomif">ah, heh.</saying>
+            </body>
+            <info>
+                <channel>private conversation</channel>
+                <network>Facebook</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

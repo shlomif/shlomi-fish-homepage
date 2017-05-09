@@ -405,6 +405,11 @@ my $essays_tree_contents = {
                             title =>
 "Alternative Models for Web-based Commerce that Do Not Involve Intrusive Advertising",
                         },
+                        {
+                            text => "Validate Your HTML",
+                            url =>
+                                "philosophy/computers/web/validate-your-html/",
+                        },
                     ],
                 },
                 {

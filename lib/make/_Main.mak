@@ -1388,6 +1388,8 @@ $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 
 $(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
 
+$(T2_DEST)/philosophy/computers/web/validate-your-html/index.html: lib/blogs/validate-your-html/README.md
+
 all: $(T2_CLEAN_STAMP)
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)

@@ -1,0 +1,13 @@
+#include '../template.wml'
+
+<latemp_subject "Validate Your HTML" />
+<latemp_meta_desc "The what, why, and how, of having valid HTML" />
+<latemp_more_keywords "html, html5, validation, validate, valid, standards" />
+
+<:
+use Text::Markdown qw/ markdown /;
+use Path::Tiny qw/ path /;
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+
+_print_utf8( markdown(path('./../lib/blogs/validate-your-html/README.md')->slurp_utf8));
+:>

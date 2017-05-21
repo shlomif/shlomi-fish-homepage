@@ -65,9 +65,10 @@ s#\({5}chomp_inc='([^']+)'\){5}#io->file("lib/$1")->chomp->utf8->getline("\n")#e
             $_f->()->print($text);
         }
     };
-    if ($@)
+    if ( my $err = $@ )
     {
         # In case there's an error - fail and need to rebuild.
         $_f->()->unlink();
+        die $err;
     }
 }

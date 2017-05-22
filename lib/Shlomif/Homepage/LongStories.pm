@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
@@ -601,8 +601,8 @@ sub render_make_fragment
         }
     }
 
-    io->file("lib/make/long_sories.mak")
-        ->utf8->print( @var_decls, "\n", @rules, "\n",
+    path("lib/make/long_sories.mak")
+        ->spew_utf8( @var_decls, "\n", @rules, "\n",
         "art_slogans_targets: $deps\n\n",
         );
 }

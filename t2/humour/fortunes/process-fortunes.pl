@@ -253,11 +253,11 @@ sub _process_single_fortune
 
 package main;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 sub read_fortune_files_list
 {
-    my @lines = io("Makefile")->getlines();
+    my @lines = path("Makefile")->lines_utf8;
 
     my @f;
 GET_FORTUNE_FILES_LOOP:

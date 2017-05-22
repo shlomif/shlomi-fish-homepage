@@ -4,8 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 open my $arcs_list_fh, "<", "fortunes-list.mak";
 my @lines = <$arcs_list_fh>;
@@ -15,9 +14,9 @@ shift(@lines);
 
 my @fortunes = ( map { /([\w\-_]+)/; $1 } @lines );
 
-my $out = io()->file("source-files-list.html");
+my $out = path("source-files-list.html");
 
-$out->print(<<"EOF");
+$out->spew_utf8(<<"EOF");
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -42,7 +41,7 @@ Download this list using <tt>wget -r --level=1</tt>.
 <ul>
 EOF
 
-$out->print(
+$out->append_utf8(
     map { "$_\n" }
         map {
         my $escaped = escape_html($_);
@@ -51,9 +50,8 @@ $out->print(
         sort { $a cmp $b } (
         ( map { ( "$_.xml", $_, "$_.dat" ) } @fortunes ),
         (
-            map { $_->filename(); } io(".")->filter(
-                sub { $_->filename =~ m{\.(?:pl|mak|bash|spec\.in|xsl)\z} }
-            )->all_files()
+            map { $_->basename; }
+                path(".")->children(qr{\.(?:pl|mak|bash|spec\.in|xsl)\z})
         ),
         "fortunes-shlomif-all.atom",
         "fortunes-shlomif-all.rss",
@@ -63,7 +61,7 @@ $out->print(
         )
 );
 
-$out->print(<<"EOF");
+$out->append_utf8(<<"EOF");
 </ul>
 </body>
 </html>

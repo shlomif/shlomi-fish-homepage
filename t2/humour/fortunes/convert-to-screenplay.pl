@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use XML::LibXML;
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $filename = "shlomif-fav.xml";
 
@@ -73,8 +73,8 @@ foreach my $fort (@fortunes)
 
         $content =~ s{[\s\n]+\z}{}ms;
 
-        io()->file($txt_fn)
-            ->utf8->print("<scene id=\"$id\">\n\n$content\n\n</scene>\n");
+        path($txt_fn)
+            ->spew_utf8("<scene id=\"$id\">\n\n$content\n\n</scene>\n");
         if (
             system(
                 "perl", "-MXML::Grammar::Screenplay::App::FromProto",

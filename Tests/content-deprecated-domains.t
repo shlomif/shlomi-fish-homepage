@@ -8,8 +8,6 @@ use utf8;
 use Test::More tests => 1;
 use Test::Differences (qw(eq_or_diff));
 
-use IO::All qw/io/;
-
 {
     # TEST
     eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' ./dest`),

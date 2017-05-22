@@ -7,11 +7,11 @@ use utf8;
 
 use Test::More tests => 1;
 
-use IO::All qw/io/;
+use Path::Tiny qw/ path /;
 
 {
     my $content =
-        io->file("./dest/t2/humour/fortunes/sharp-programming.html")->utf8->all;
+        path("./dest/t2/humour/fortunes/sharp-programming.html")->slurp_utf8;
 
     # TEST
     like(

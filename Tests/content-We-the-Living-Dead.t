@@ -7,12 +7,12 @@ use utf8;
 
 use Test::More tests => 5;
 
-use IO::All qw/io/;
+use Path::Tiny qw/ path /;
 
 {
-    my $content = io->file(
-        "./dest/t2/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
-        ->utf8->all;
+    my $content =
+        path("./dest/t2/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
+        ->slurp_utf8;
 
     # TEST
     like( $content, qr{<div class="screenplay"}, 'Contains a screenplay div.' );

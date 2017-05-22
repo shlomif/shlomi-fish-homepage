@@ -5,11 +5,11 @@ use warnings;
 
 use Test::More tests => 1;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 {
     # TEST
-    like( io->file("./dest/t2/index.html")->utf8->all,
+    like( path("./dest/t2/index.html")->slurp_utf8,
 qr#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#
     );
 }

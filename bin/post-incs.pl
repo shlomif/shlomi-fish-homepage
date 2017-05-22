@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 use HTML::Tidy ();
 
 my $tidy = HTML::Tidy->new(
@@ -17,19 +17,19 @@ my $tidy = HTML::Tidy->new(
 foreach my $fn (@ARGV)
 {
     my $_f = sub {
-        return io->file($fn)->utf8;
+        return path($fn);
     };
 
     eval {
-        my $orig_text = $_f->()->all;
+        my $orig_text = $_f->()->slurp_utf8;
         my $text      = $orig_text;
 
         if ( !$ENV{NO_I} )
         {
             $text =~
-s#^\({5}include "([^"]+)"\){5}\n#io->file("lib/$1")->utf8->all#egms;
+s#^\({5}include "([^"]+)"\){5}\n#path("lib/$1")->slurp_utf8#egms;
             $text =~
-s#\({5}chomp_inc='([^']+)'\){5}#io->file("lib/$1")->chomp->utf8->getline("\n")#egms;
+s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1});chomp$l;$l#egms;
         }
 
         if ( $ENV{F} )
@@ -62,13 +62,13 @@ s#\({5}chomp_inc='([^']+)'\){5}#io->file("lib/$1")->chomp->utf8->getline("\n")#e
 
         if ( $text ne $orig_text )
         {
-            $_f->()->print($text);
+            $_f->()->spew_utf8($text);
         }
     };
     if ( my $err = $@ )
     {
         # In case there's an error - fail and need to rebuild.
-        $_f->()->unlink();
+        $_f->()->remove();
         die $err;
     }
 }

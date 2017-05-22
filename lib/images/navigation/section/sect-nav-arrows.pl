@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use SVG;
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $dim    = 30;
 my $width  = $dim;
@@ -95,8 +95,8 @@ foreach my $button_style (
                 %{ $button_style->{style} },
             },
         );
-        io->file("$dest_dir/sect-arr-$basename$button_basename.svg")
-            ->print(
+        path("$dest_dir/sect-arr-$basename$button_basename.svg")
+            ->spew(
             scalar( $svg->xmlify() ) =~ s/<!--.*?-->//gmrs =~ s/[ \t]+$//gmrs );
     }
 }

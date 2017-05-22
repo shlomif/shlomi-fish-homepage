@@ -3,11 +3,10 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
-
 my $lang = shift(@ARGV);
 
-my $text = io('-')->slurp();
+local $/;
+my $text = <>;
 
 if ( $text !~ m/<ul>/ )
 {

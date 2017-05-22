@@ -2,17 +2,14 @@
 
 use strict;
 use warnings;
-
 use 5.014;
 
-use IO::All qw/ io /;
-
-use List::Util qw(first);
+use Path::Tiny qw/ path /;
+use List::Util qw/ first /;
+use YAML::XS qw/ LoadFile DumpFile /;
 
 use lib './lib';
 use Shlomif::Homepage::FortuneCollections;
-
-use YAML::XS (qw(LoadFile DumpFile));
 
 my %d;
 
@@ -26,7 +23,7 @@ foreach my $r ( @{ Shlomif::Homepage::FortuneCollections->sorted_fortunes() } )
 {
     my $id = $r->id();
 
-    my $contents = io->file("./t2/humour/fortunes/$id.html.wml")->utf8->slurp;
+    my $contents = path("./t2/humour/fortunes/$id.html.wml")->slurp_utf8;
 
     if (
         $contents !~ m%

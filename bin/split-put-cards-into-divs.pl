@@ -6,7 +6,7 @@ use lib './lib';
 
 use utf8;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 use XML::LibXML;
 
 use Shlomif::DocBookClean;
@@ -57,7 +57,7 @@ EOF
 
     Shlomif::DocBookClean::cleanup_docbook( \$contents );
 
-    io->file(
+    path(
 qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
-    )->utf8->print($contents);
+    )->spew_utf8($contents);
 }

@@ -2,11 +2,10 @@
 
 use strict;
 use warnings;
-
-use IO::All qw/ io /;
-use File::Find::Object::Rule;
-
 use 5.014;
+
+use File::Find::Object::Rule;
+use Path::Tiny qw/ path /;
 
 sub _map_wmls_to_deps
 {
@@ -77,7 +76,7 @@ lib/xml_g_fiction.wml
 
     foreach my $fn (@files)
     {
-        my $contents = io->file($fn)->slurp;
+        my $contents = path($fn)->slurp_utf8;
 
         foreach my $match ( $contents =~
 m{^(?:(?:\#include *")|(?:<include file="\.\./lib/)|(?:<shlomif_include_colorized_file filename="\.\./lib/))([^"]+)"}gms
@@ -108,6 +107,6 @@ m{^(?:(?:\#include *")|(?:<include file="\.\./lib/)|(?:<shlomif_include_colorize
         }
     }
 
-    io->file("deps.mak")->print($deps_text);
+    path("deps.mak")->spew_utf8($deps_text);
 }
 

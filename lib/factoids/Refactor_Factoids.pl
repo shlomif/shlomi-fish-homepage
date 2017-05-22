@@ -5,9 +5,8 @@ use warnings;
 
 use 5.020;
 
-use IO::All qw/ io /;
-
-my $t = io('-')->all;
+local $/;
+my $t = <>;
 
 print <<"END_OF_OUTPUT";
     id_base => @{[$t =~ m#<facts__header_tabs id_base=("[^"]+")# ? $1: (die "Bar")]},

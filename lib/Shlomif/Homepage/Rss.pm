@@ -7,8 +7,7 @@ use MooX (qw( late ));
 
 use XML::Feed;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 use Encode (qw(decode));
 
@@ -51,7 +50,7 @@ sub run
         my $issued = $entry->issued();
 
         my $filename = "lib/feeds/shlomif_hsite/" . $issued->ymd() . ".html";
-        io()->file($filename)->utf8->print($text);
+        path($filename)->spew_utf8($text);
     }
 }
 

@@ -4,8 +4,7 @@ use strict;
 use warnings;
 
 use JSON::MaybeXS qw( decode_json );
-
-use IO::All qw( io );
+use Path::Tiny qw/ path /;
 
 use MyNavData;
 
@@ -90,7 +89,7 @@ sub output_fully_expanded_as_json
     my $brief_keys_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )
         ->encode($brief_keys_data);
 
-    io->file('./dest/t2/_data/n.json')->print($brief_keys_json);
+    path('./dest/t2/_data/n.json')->spew($brief_keys_json);
 
     return $verbose_keys_json;
 }

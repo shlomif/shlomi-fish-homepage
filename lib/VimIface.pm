@@ -3,9 +3,8 @@ package VimIface;
 use strict;
 use warnings;
 
-use Text::VimColor;
-
-use IO::All qw/ io /;
+use Text::VimColor ();
+use Path::Tiny qw/ path /;
 
 sub is_newer
 {
@@ -36,10 +35,10 @@ sub get_syntax_highlighted_html_from_file
             ( $args{'filetype'} ? ( filetype => $args{'filetype'} ) : () ),
         );
 
-        io->file($html_filename)->print( $syntax->html );
+        path($html_filename)->spew( $syntax->html );
     }
 
-    my $text = io->file($html_filename)->all;
+    my $text = path($html_filename)->slurp;
 
     $text =~ s{\A.*<pre>[\s\n\r]*}{}s;
     $text =~ s{[\s\n\r]*</pre>.*\z}{}s;

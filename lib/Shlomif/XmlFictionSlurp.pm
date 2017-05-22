@@ -3,8 +3,7 @@ package Shlomif::XmlFictionSlurp;
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
-
+use Path::Tiny qw/ path /;
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub my_slurp
@@ -14,7 +13,7 @@ sub my_slurp
     my $fn       = $args->{fn};
     my $index_id = $args->{index_id};
 
-    my $text = io->file($fn)->utf8->slurp;
+    my $text = path($fn)->slurp_utf8;
 
     $text =~ s{\bindex\b}{$index_id}g;
     $text =~ s# xml:space="preserve"([ >]|/>)#$1#g;

@@ -5,18 +5,12 @@ use warnings;
 use autodie;
 
 use File::Basename qw(dirname basename);
-
 use Cwd qw(getcwd);
-
-use Template;
-
-use IO::All qw/ io /;
-
-use File::Find::Object::Rule;
-
+use Template ();
+use Path::Tiny qw/ path /;
+use File::Find::Object::Rule ();
 use List::MoreUtils qw(any);
-
-use Parallel::ForkManager;
+use Parallel::ForkManager ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
@@ -24,7 +18,7 @@ my $cwd            = getcwd();
 my $upper_dir      = dirname($cwd);
 my $cwd_basename   = basename($cwd);
 my $git_clones_dir = "$upper_dir/_$cwd_basename--clones";
-io->dir($git_clones_dir)->mkpath;
+path($git_clones_dir)->mkpath;
 
 sub _github_clone
 {
@@ -647,7 +641,7 @@ EOF
             map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 
         my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-        io->file("lib/make/docbook/sf-screenplays.mak")->print(
+        path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
             @o,
             "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
             ( map { "\t$_ \\\n" } @screenplay_docs_basenames ),
@@ -842,7 +836,7 @@ sub _calc_fiction_story_makefile_lines
     my @o =
         ( map { @{ _calc_fiction_story_makefile_lines($_) } } @$fiction_data );
 
-    io->file("lib/make/docbook/sf-fictions.mak")->print(
+    path("lib/make/docbook/sf-fictions.mak")->spew_utf8(
         "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n",
         @o,
         (
@@ -1069,7 +1063,10 @@ close($template_fh);
 close($make_fh);
 
 # Remove multiple consecutive \ns
-my $m = io->file($gen_make_fn)->utf8();
-$m->print( $m->all() =~ s/\n\n+/\n\n/gr );
+path($gen_make_fn)->edit_utf8(
+    sub {
+        s/\n\n+/\n\n/gr;
+    }
+);
 
 $pm->wait_all_children;

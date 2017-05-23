@@ -146,7 +146,7 @@ FOO_EOF
 }
 
 my $deps_mtime_max =
-    max( map { io->file($_)->mtime() } __FILE__, $yaml_data_fn );
+    max( map { path($_)->stat->mtime } __FILE__, $yaml_data_fn );
 
 sub _print_if_update_needed
 {

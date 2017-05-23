@@ -3,17 +3,15 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
-my $s = io->file("lib/Shlomif/Homepage/LongStories.pm")->utf8;
-
-my $t = $s->all;
+my $t = path("lib/Shlomif/Homepage/LongStories.pm")->slurp_utf8;
 
 my @ids = $t =~ /id => '([^']+)'/g;
 
 my %h;
 
-my $m = io->file("_Main.mak")->utf8->all;
+my $m = path("_Main.mak")->slurp_utf8;
 
 foreach my $id (@ids)
 {
@@ -42,7 +40,7 @@ foreach my $id (@ids)
 while ( my ( $id, $svg ) = each(%h) )
 {
     my $t = '';
-    my @l = io->file("lib/Shlomif/Homepage/LongStories.pm")->utf8->getlines;
+    my @l = path("lib/Shlomif/Homepage/LongStories.pm")->lines_utf8;
     while ( my $l = shift(@l) )
     {
         $t .= $l;
@@ -52,7 +50,7 @@ while ( my ( $id, $svg ) = each(%h) )
             while ( $l = shift(@l) )
             {
                 $t .= $l;
-                if ( $l =~ /^(\s+)logo_src =>/ )
+                if ( $l =~ /^(\slurp_utf8s+)logo_src =>/ )
                 {
                     $t .= "$1logo_svg => '$svg',\n";
                     last INNER;
@@ -60,5 +58,5 @@ while ( my ( $id, $svg ) = each(%h) )
             }
         }
     }
-    io->file("lib/Shlomif/Homepage/LongStories.pm")->utf8->print($t);
+    path("lib/Shlomif/Homepage/LongStories.pm")->spew_utf8($t);
 }

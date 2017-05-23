@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $date = "2008-10-20";
 
@@ -13,9 +13,10 @@ foreach my $file (`ack -l '$remove_at' t2`)
 {
     chomp($file);
     print $file, "\n";
-    my $text = io($file)->slurp();
-    $text =~
+    path($file)->edit_utf8(
+        sub {
 s{(?:^;;;[^\n]*\n)*<shlomif_sponsored_ad[^\n]*\Q$remove_at\E.*?</shlomif_sponsored_ad>[^\n]*\n?}{}ms;
-    io($file)->print($text);
+        }
+    );
 }
 

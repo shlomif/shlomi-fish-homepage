@@ -4,10 +4,8 @@ use strict;
 use warnings;
 
 use Carp ();
-
 use Parallel::ForkManager;
-
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $base_dir = "$ENV{HOME}/Docs/Images/Logos";
 
@@ -108,9 +106,7 @@ foreach my $l (@$logos)
 
         if ( !-d $d )
         {
-            my $d_obj = io->dir($d);
-            my $above = $d_obj->updir();
-            $above->mkpath();
+            path($base_dir)->mkpath;
 
             _github_shlomif_clone(
                 {

@@ -16,6 +16,7 @@ use YAML::XS (qw(LoadFile));
 use JSON::MaybeXS;
 
 use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
@@ -227,7 +228,7 @@ sub write_epub_json
 {
     my ( $class, $fn ) = @_;
 
-    io()->file($fn)->print(
+    path($fn)->spew(
         JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
             +{
                 filename => $fn,

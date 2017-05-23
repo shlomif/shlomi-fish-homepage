@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
-my @lines = io()->file("old-index.html.temp.wml")->slurp();
+my @lines = path("old-index.html.temp.wml")->lines_utf8;
 
 my $line_idx = 0;
 

@@ -2,9 +2,6 @@
 
 use strict;
 use warnings;
-
-use IO::All qw/ io /;
-
 use utf8;
 
 use open IO => ":encoding(utf8)";
@@ -12,7 +9,7 @@ use open IO => ":encoding(utf8)";
 binmode STDIN,  ":encoding(UTF-8)";
 binmode STDOUT, ":encoding(UTF-8)";
 
-my $content = io('-')->binmode(":encoding(UTF-8)")->slurp();
+my $content = do { local $/; <STDIN> };
 
 sub to_unicode
 {

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 foreach my $fn (@ARGV)
 {
@@ -11,7 +11,7 @@ foreach my $fn (@ARGV)
     {
         my $out_fn = "lib/feeds/shlomif_hsite/$date.html";
 
-        my $contents = io($fn)->slurp;
+        my $contents = path($fn)->slurp_utf8;
 
         if ( not $contents =~ s{\A\s*<h2>([^<]+)</h2>\s*}{}ms )
         {
@@ -22,7 +22,7 @@ foreach my $fn (@ARGV)
 
         $contents =~ s{\s*<!--.*?-->\s*}{}gms;
 
-        my $out_contents = io($out_fn)->slurp();
+        my $out_contents = path($out_fn)->slurp_utf8;
 
         if ( $out_contents !~
             m{(<p><a href="http:.*?livejournal.*?</a></p>\s*\z)}ms )
@@ -30,7 +30,7 @@ foreach my $fn (@ARGV)
             die "Cannot match <a href in '$out_fn'";
         }
         my $comments = $1;
-        io($out_fn)->print("<!-- TITLE=$title-->\n$contents\n$comments");
+        path($out_fn)->spew_utf8("<!-- TITLE=$title-->\n$contents\n$comments");
     }
     else
     {
@@ -38,4 +38,7 @@ foreach my $fn (@ARGV)
     }
 }
 
-system( "touch", "t2/old-news.html.wml", "t2/index.html.wml" );
+foreach my $fn ( "t2/old-news.html.wml", "t2/index.html.wml" )
+{
+    path($fn)->touch;
+}

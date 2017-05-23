@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.5.0;
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 use List::MoreUtils ();
 
 sub _exec_perl
@@ -94,7 +94,8 @@ m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
 
 $generator->process_all();
 
-my $text = io("rules.mak")->slurp();
+my $r_fh = path('rules.mak');
+my $text = $r_fh->slurp_utf8;
 $text =~
 s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
     or die "Cannot subt";
@@ -113,7 +114,7 @@ s#^(\$\(VIPE_COMMON_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call VIPE_COMMON_INCLUDE
     $text =~ s#^\t\Q$needle\E$#\t\$(call COPY)#gms;
 }
 
-io("rules.mak")->print($text);
+$r_fh->spew_utf8($text);
 
 sub _my_system
 {
@@ -145,18 +146,19 @@ sub letter_fn
 
 sub letter_io
 {
-    return io()->file( letter_fn(shift) );
+    return path( letter_fn(shift) );
 }
 
 foreach my $ext (qw/ html pdf /)
 {
-    if ( letter_io($ext)->mtime < letter_io('odt')->mtime )
+    my $fh = letter_io($ext);
+    if ( $fh->stat->mtime < letter_io('odt')->stat->mtime )
     {
-        utime( undef, undef, letter_fn($ext) );
+        $fh->touch;
     }
 }
 
-io()->file('Makefile')->print("include lib/make/_Main.mak\n");
+path('Makefile')->spew_utf8("include lib/make/_Main.mak\n");
 
 _my_system( [ 'make', 'sects_cache' ] );
 

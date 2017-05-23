@@ -2,14 +2,13 @@
 
 use strict;
 use warnings;
-
 use utf8;
 
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 my $text =
-    io->file('t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt')
-    ->slurp;
+    path('t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt')
+    ->slurp_utf8;
 
 sub prefix_lines
 {
@@ -80,7 +79,7 @@ $text =~ s{^(\s*\Q$END\E.*)\z}{
     . qq{\n\n</s>\n\n}
 }ems;
 
-io->file('lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt')
-    ->print(
+path('lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt')
+    ->spew_utf8(
 qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generations">\n\n$text\n\n</s>}
     );

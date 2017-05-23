@@ -2,24 +2,19 @@
 
 use strict;
 use warnings;
-
-use Carp::Always;
-
 use lib './lib';
 
+use Carp::Always;
 use Getopt::Long qw(GetOptions);
-
-use IO::All qw/ io /;
+use Path::Tiny qw/ path /;
 
 use Shlomif::Homepage::NavData::JSON;
 
 my $output_fn;
 
-GetOptions(
-    'output|o=s' => \$output_fn,
-)
-or die "Wrong options - $!";
+GetOptions( 'output|o=s' => \$output_fn, )
+    or die "Wrong options - $!";
 
-io->file($output_fn)->println(
-    Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json()
-);
+path($output_fn)
+    ->spew( Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json(),
+    "\n", );

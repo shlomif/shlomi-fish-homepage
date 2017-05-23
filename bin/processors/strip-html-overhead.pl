@@ -3,9 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
-
-my $s = io("-")->slurp();
+my $s = do { local $/; <>; };
 
 $s =~ s{\A.*<body>}{}ms;
 $s =~ s{</body>.*}{}ms;

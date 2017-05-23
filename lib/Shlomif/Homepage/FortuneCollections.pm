@@ -2,22 +2,16 @@ package Shlomif::Homepage::FortuneCollections;
 
 use strict;
 use warnings;
+use 5.014;
+use utf8;
 
 use Shlomif::Homepage::FortuneCollections::Record;
 
-use 5.014;
-
-use utf8;
-
 use Carp;
 use List::Util qw(max);
-
 use YAML::XS (qw(LoadFile));
-use JSON::MaybeXS;
-
-use IO::All qw/ io /;
+use JSON::MaybeXS ();
 use Path::Tiny qw/ path /;
-
 use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 sub _init_fortune
@@ -152,11 +146,11 @@ sub _print_if_update_needed
 {
     my ( $class, $path, $contents_promise ) = @_;
 
-    my $fh = io->file($path);
+    my $fh = path($path);
 
-    if ( ( !$fh->exists() ) || ( $deps_mtime_max > $fh->mtime() ) )
+    if ( ( !$fh->exists() ) || ( $deps_mtime_max > $fh->stat->mtime ) )
     {
-        $fh->utf8->print( $contents_promise->(), );
+        $fh->spew_utf8( $contents_promise->(), );
     }
 
     return;

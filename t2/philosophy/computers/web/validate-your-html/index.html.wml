@@ -4,6 +4,10 @@
 <latemp_meta_desc "The what, why, and how, of having valid HTML" />
 <latemp_more_keywords "html, html5, validation, validate, valid, standards" />
 
+<p>
+<img src="Valid_XHTML_1.0.svg" style="height:100px;" class="rfloaty" alt="Valid XHTML 1.0 Logo" title="One of the valid markup logos." />
+</p>
+
 <:
 use Text::Markdown qw/ markdown /;
 use Path::Tiny qw/ path /;
@@ -11,3 +15,15 @@ use Shlomif::WrapAsUtf8 (qw(_print_utf8));
 
 _print_utf8( markdown(path('./../lib/blogs/validate-your-html/README.md')->slurp_utf8));
 :>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://commons.wikimedia.org/wiki/File:Valid_XHTML_1.0.svg">Valid XHTML 1.0 Logo</a> taken from the Wikimedia Commons under the public domain.
+</p>
+</li>
+
+</ul>

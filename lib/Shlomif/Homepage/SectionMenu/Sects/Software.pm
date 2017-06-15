@@ -216,6 +216,17 @@ my $software_tree_contents = {
 "Patch to Enhance the Configuration Searching of the Linux Kernel",
                 },
                 {
+                    text => "Problem Sets and Competitive Programming Sites",
+                    url  => "open-source/projects/problem-sets-and-cp/",
+                    subs => [
+                        {
+                            text => "Project Euler",
+                            url =>
+"open-source/projects/problem-sets-and-cp/project-euler/",
+                        },
+                    ],
+                },
+                {
                     text  => "Bits and Bobs",
                     url   => "open-source/bits.html",
                     title => "Small Open Source Programs",

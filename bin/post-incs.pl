@@ -4,15 +4,6 @@ use strict;
 use warnings;
 
 use Path::Tiny qw/ path /;
-use HTML::Tidy ();
-
-my $tidy = HTML::Tidy->new(
-    {
-        'input_xml'     => 1,
-        'output_xml'    => 1,
-        'char_encoding' => 'utf8',
-    }
-);
 
 foreach my $fn (@ARGV)
 {
@@ -43,13 +34,6 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
             }
         }
 
-        # Disabling tidyp for the time being due to:
-        # https://github.com/petdance/tidyp/issues/21 .
-        if (0)
-        {
-            $text = $tidy->clean($text);
-        }
-
         $text =~ s# +$##gms;
         $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
 
@@ -64,6 +48,10 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         {
             $_f->()->spew_utf8($text);
         }
+        my $new_fn = "$fn.new";
+        system( 'html-minifier', '--keep-closing-slash', '-o', $new_fn, $fn )
+            and die "html-min $!";
+        rename( $new_fn, $fn );
     };
     if ( my $err = $@ )
     {

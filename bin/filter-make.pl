@@ -6,7 +6,7 @@ use warnings;
 use IO::Handle;
 
 STDOUT->autoflush(1);
-my $NUM_LAST = 100;
+my $NUM_LAST = 500;
 my @last;
 my $STATUS_EVERY = 200;
 my $count        = 0;

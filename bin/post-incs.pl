@@ -5,6 +5,7 @@ use warnings;
 
 use Path::Tiny qw/ path /;
 
+my @filenames;
 foreach my $fn (@ARGV)
 {
     my $_f = sub {
@@ -47,11 +48,8 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         if ( $text ne $orig_text )
         {
             $_f->()->spew_utf8($text);
+            push @filenames, $fn;
         }
-        my $new_fn = "$fn.new";
-        system( 'html-minifier', '--keep-closing-slash', '-o', $new_fn, $fn )
-            and die "html-min $!";
-        rename( $new_fn, $fn );
     };
     if ( my $err = $@ )
     {
@@ -60,3 +58,5 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         die $err;
     }
 }
+system( 'bin/batch-inplace-html-minifier', '--keep-closing-slash', @filenames )
+    and die "html-min $!";

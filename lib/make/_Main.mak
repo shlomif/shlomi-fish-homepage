@@ -1157,6 +1157,7 @@ $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 	rsync -r -v --progress lib/MathJax/ $(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
+	rm -fr $(MATHJAX_DEST_DIR)/test
 
 SCRIPTS_WITH_OFFENDING_EXTENSIONS = t2/MathVentures/gen-bugs-in-square-svg.pl t2/open-source/bits-and-bobs/nowplay-xchat.pl t2/open-source/bits-and-bobs/pmwiki-revert.pl t2/open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 

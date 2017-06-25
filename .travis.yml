@@ -22,6 +22,7 @@ before_install:
     - echo "HOME=$HOME"
     - find ~/conf
     - touch t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/*.{html,pdf}
+    - npm install html-minifier
 python:
     - "3.5"
 script: "bash -x bin/travis-ci-script.bash"

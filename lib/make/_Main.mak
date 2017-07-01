@@ -1246,7 +1246,7 @@ $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 
 $(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
-	cat $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html  | grep -vP '^<\?xml ver' > printable/Shlomi-Fish-Heb-Resume.html
+	perl -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > printable/Shlomi-Fish-Heb-Resume.html
 	cp -f printable/SFresume.html printable/Shlomi-Fish-English-Resume.html
 	cp -f printable/SFresume_detailed.html printable/Shlomi-Fish-English-Resume-Detailed.html
 

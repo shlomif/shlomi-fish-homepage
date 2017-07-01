@@ -45,9 +45,14 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         # Remove document trailing space.
         $text =~ s#\s+\z##ms;
 
+        my $minify = $ENV{ALWAYS_MIN};
         if ( $text ne $orig_text )
         {
             $_f->()->spew_utf8($text);
+            $minify ||= 1;
+        }
+        if ($minify)
+        {
             push @filenames, $fn;
         }
     };
@@ -58,5 +63,8 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         die $err;
     }
 }
-system( 'bin/batch-inplace-html-minifier', '--keep-closing-slash', @filenames )
-    and die "html-min $!";
+system(
+    'bin/batch-inplace-html-minifier',
+    '-c', 'bin/html-min-cli-config-file.conf',
+    '--keep-closing-slash', @filenames
+) and die "html-min $!";

@@ -8,8 +8,12 @@ use Test::More tests => 1;
 use Path::Tiny qw/ path /;
 
 {
+    my $H_RE = qr#\s*http-equiv="Content-Type"\s*#;
+    my $C_RE = qr#\s*content="text/html; charset=utf-8"\s*#;
+
     # TEST
-    like( path("./dest/t2/index.html")->slurp_utf8,
-qr#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" */>#
+    like(
+        path("./dest/t2/index.html")->slurp_utf8,
+        qr#<meta (?:(?:$H_RE$C_RE)|(?:$C_RE$H_RE))/>#
     );
 }

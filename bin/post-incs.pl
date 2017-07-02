@@ -49,7 +49,7 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         if ( $text ne $orig_text )
         {
             $_f->()->spew_utf8($text);
-            $minify ||= 1;
+            $minify //= 1;
         }
         if ($minify)
         {

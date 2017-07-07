@@ -39,7 +39,7 @@ NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 
 SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
 
-DOCS_COMMON_DEPS = template.wml $(NAV_DATA_DEP)
+DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
 
 MATHJAX_SOURCE_README = lib/MathJax/README.md
 

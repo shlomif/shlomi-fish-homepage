@@ -978,7 +978,7 @@ foreach my $page (@pages)
     my $vars = { p => $page, };
 
     my $tt_text = <<'END_OF_TEMPLATE';
-#include '../template.wml'
+#include "template.wml"
 
 #include "Inc/emma_watson.wml"
 #include "Inc/factoids_jqui_tabs_multi_lang.wml"

@@ -1,4 +1,5 @@
 #include '../template.wml'
+#include "Inc/proj_euler.wml"
 
 <latemp_subject "Project Euler Solutions" />
 
@@ -7,6 +8,10 @@
 <p>
 I’m keeping most of my solutions to
 <a href="https://en.wikipedia.org/wiki/Project_Euler">Project Euler</a> in
-<a href="https://github.com/shlomif/project-euler">version
+a <a href="https://github.com/shlomif/project-euler">version
 control repository</a>.
 </p>
+
+<h2 id="progress">Progress</h2>
+
+<project_euler_progress />

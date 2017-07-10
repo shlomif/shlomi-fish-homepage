@@ -10,7 +10,7 @@ url="$1"
 shift
 
 clone_dir='mygit'
-"$vcstool" clone "$url" "$clone_dir"
+"$vcs_tool" clone "$url" "$clone_dir"
 (cd "$clone_dir/$d"
 
 ( a="$(pwd)"; mkdir B2 && cd B2 && hg clone https://bitbucket.org/shlomif/shlomif-cmake-modules && cd shlomif-cmake-modules/shlomif-cmake-modules && cp -f "$(pwd)"/Shlomif_Common.cmake "$a"/cmake/ )

@@ -10,12 +10,12 @@ before_install:
     - sudo cpanm --notest Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
     - gem install sass compass compass-blueprint
-    - bash bin/install-git-cmakey-program-system-wide.bash 'installer' 'https://github.com/thewml/latemp.git'
+    - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
     - ( cd .. && hg clone https://shlomif@bitbucket.org/shlomif/wml-extended-apis && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
     - ( cd .. && hg clone https://shlomif@bitbucket.org/shlomif/wml-affiliations && cd wml-affiliations/wml && bash Install.bash )
     - ( cd .. && hg clone https://shlomif@bitbucket.org/shlomif/latemp && cd latemp/support-headers && perl install.pl )
     - bash -x bin/install-tidyp-systemwide.bash
-    - bash bin/install-cmakey-program-system-wide.bash 'quad-pres' '0.18.0' 'http://www.shlomifish.org/quad-pres'
+    - bash bin/install-git-cmakey-program-system-wide.bash 'hg' 'installer' 'https://bitbucket.org/shlomif/quad-pres'
     - echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
     - ( cd "$HOME" && git clone https://github.com/w3c/markup-validator.git )
     - pwd

@@ -710,6 +710,7 @@ $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
 		mv -f "$$f.xhtml" "$$f"; \
 	done
 	$(FORTUNES_TIDY) -o $@ $<
+	NO_I=1 $(PROCESS_ALL_INCLUDES) $@
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \

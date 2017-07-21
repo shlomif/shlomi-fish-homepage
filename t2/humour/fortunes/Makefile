@@ -1,10 +1,11 @@
 include fortunes-list.mak
 
-VERSION_FILE = $(shell perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->version_file;')
+FORTUNES_PERL = perl -I. -MShlomifFortunesMake -e
+VERSION_FILE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->version_file;')
 
-VER = $(shell perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->ver;')
+VER = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->ver;')
 
-DIST_BASE = $(shell perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->dist_base;')
+DIST_BASE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
 
 INDEX_FILE = index.html
 
@@ -15,9 +16,9 @@ SOURCE_FILES_LIST = source-files-list.html
 RPM_SPEC = $(DIST_BASE).spec
 RPM_SPEC_IN = $(RPM_SPEC).in
 
-DIST_DIR = $(shell perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->dist_dir;')
+DIST_DIR = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_dir;')
 
-PACKAGE_BASE = $(shell perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')
+PACKAGE_BASE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->package_base;')
 
 FILES = $(FORTUNES_FILES_BASE)
 

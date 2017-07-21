@@ -14,7 +14,7 @@ export FORTUNES_DIR=humour/fortunes
 
 if (
     cd "$T2_SRC_DIR"
-    wml -o "${WML_LATEMP_PATH}" $T2_WML_FLAGS -DLATEMP_FILENAME="$(perl -E 'print shift =~ s#\Adest/t2/##r =~ s#\.wml\z##r' "$dest")" -DPACKAGE_BASE="$(cd "$FORTUNES_DIR" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')" "${src##t2/}"
+    wml -o "${WML_LATEMP_PATH}" $T2_WML_FLAGS -DLATEMP_FILENAME="$(perl -E 'print shift =~ s#\Adest/t2/##r =~ s#\.wml\z##r' "$dest")" -DPACKAGE_BASE="$(cd "$FORTUNES_DIR" && perl -I. -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')" "${src##t2/}"
 ) ; then
     if ! perl -pi -0777 -C bin/process-includes.pl "$dest" ; then
         rm -f "$dest";

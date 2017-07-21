@@ -64,7 +64,7 @@ VIPE_ALL_DIRS_DEST = $(VIPE_DIRS_DEST) $(VIPE_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
-FIND_PKG_BASE = "$$(cd "$(FORTUNES_DIR)" && perl -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')"
+FIND_PKG_BASE = "$$(cd "$(FORTUNES_DIR)" && perl -I. -MShlomifFortunesMake -e 'print ShlomifFortunesMake->package_base;')"
 
 define DEF_WML_PATH
 WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ;

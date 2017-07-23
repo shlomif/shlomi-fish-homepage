@@ -309,6 +309,11 @@ my $essays_tree_contents = {
                     url  => "philosophy/computers/optimizing-code-for-speed/",
                 },
                 {
+                    text => "How to share code online for getting help with it",
+                    url =>
+"philosophy/computers/how-to-share-code-for-getting-help/",
+                },
+                {
                     text => "Perl",
                     url  => "philosophy/computers/perl/",
                     title =>

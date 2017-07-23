@@ -1,0 +1,16 @@
+#include "template.wml"
+
+<latemp_subject "How to share code online for getting help with it" />
+<latemp_meta_desc "How to share code online for getting help with it" />
+<latemp_more_keywords "share, code, review, help, irc, floodpaste, pastebot, pastesite, paste, programming, web" />
+
+<:
+use Text::Markdown qw/ markdown /;
+use Path::Tiny qw/ path /;
+use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+
+_print_utf8( markdown(path('./../lib/blogs/how-to-share-code-online/README.md')->slurp_utf8));
+:>
+
+<h2 id="credits">Credits</h2>
+

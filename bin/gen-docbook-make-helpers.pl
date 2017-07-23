@@ -160,13 +160,16 @@ if ( not -e "$BLOGS_DIR/$TECH_BLOG" )
     }
 }
 my $VALIDATE_YOUR = 'validate-your-html';
-if ( not -e "$BLOGS_DIR/$VALIDATE_YOUR" )
+foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', )
 {
-    my $pid;
-    if ( !( $pid = $pm->start ) )
+    if ( not -e "$BLOGS_DIR/$repo" )
     {
-        _github_shlomif_clone( $BLOGS_DIR, $VALIDATE_YOUR );
-        $pm->finish;
+        my $pid;
+        if ( !( $pid = $pm->start ) )
+        {
+            _github_shlomif_clone( $BLOGS_DIR, $repo );
+            $pm->finish;
+        }
     }
 }
 

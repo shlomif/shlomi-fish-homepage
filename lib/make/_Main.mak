@@ -709,6 +709,7 @@ $(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
 		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
 		mv -f "$$f.xhtml" "$$f"; \
 	done
+	NO_I=1 $(PROCESS_ALL_INCLUDES) $(T2_DEST_HTMLS_FORTUNES)
 	$(FORTUNES_TIDY) -o $@ $<
 	NO_I=1 $(PROCESS_ALL_INCLUDES) $@
 

@@ -68,9 +68,10 @@ my @urls = (
         desc => "The One With the Fountainhead",
     },
     {
-        id => "rethinking-cpan",
-        url =>
-            "http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html",
+        id  => "rethinking-cpan",
+        url => "http://use.perl.org/use.perl.org/_petdance/journal/36073.html",
+
+        # "http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html",
         desc => "Rethinking CPAN",
     },
     {

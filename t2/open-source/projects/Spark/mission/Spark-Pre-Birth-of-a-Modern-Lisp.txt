@@ -3,6 +3,7 @@ Spark - Pre-Birth of a Modern Lisp
 Author: Shlomi Fish
 Email: shlomif@shlomifish.org
 
+[id="intro"]
 Introduction
 ------------
 
@@ -25,11 +26,14 @@ http://en.wikipedia.org/wiki/Ruby_%28programming_language%29[Ruby],
 Java and
 http://en.wikipedia.org/wiki/Haskell_%28programming_language%29[Haskell].
 
+[id="some_essentials"]
 Some Spark Essentials
 ---------------------
 
+
 These are some of the guiding elements in the design of Spark.
 
+[id="not_another_scheme"]
 Spark is not another implementation of Scheme (or Common Lisp)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -42,6 +46,7 @@ with either Scheme (or any of its implementations), Common Lisp or even with
 Arc. It will still be Lisp, though, as we hope you will see.
 
 
+[id="dynamic_lang"]
 Spark will be a dynamic (so-called “scripting”) programming language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -77,6 +82,7 @@ languages see Larry Wall’s “Programming is Hard. Let’s Go Scripting”:
 
 http://www.perl.com/pub/a/2007/12/06/soto-11.html
 
+[id="popular"]
 Spark aims to be popular and be actively used for real-world tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -162,6 +168,7 @@ viral marketing and community efforts, but was hype nonetheless. Perl and
 PHP were never strongly hyped, and they seem to have been doing fine without
 it.)
 
+[id="not_compete_with_c"]
 Spark does not aim to compete with C and friends
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -185,6 +192,7 @@ Object Pascal) and they can be commended for that, but unlike them, Spark
 does not aim to replace C in most of the valid use cases for a C-like
 language.
 
+[id="types"]
 Spark will have a rich type system but won’t be strongly typed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -226,6 +234,7 @@ $ spark -e '(-> "Hello World" say)'
 +->+ Is a simple macro that converts +(-> obj method args)+ to
 +(method obj args)+ and is used for some syntactic sugar.
 
+[id="useful_for_scripting"]
 Spark will be capable of being used for Scripting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -242,6 +251,7 @@ implement something similar in Spark (Hopefully, Peteris will feature a
 “Famous Spark One Liners Explained” feature in his blog someday
 too).
 
+[id="line_count_script"]
 Line Count:
 ^^^^^^^^^^^
 
@@ -249,6 +259,7 @@ Line Count:
 $ spark -e '(foreach (fh ARGV) (++ i)) (say i)' [Files]
 ------------------------------------------------
 
+[id="line_count_script_reloaded"]
 Line Count Reloaded
 ^^^^^^^^^^^^^^^^^^^
 
@@ -266,6 +277,7 @@ $ spark -e '(say (len (getlines (fh ARGV))))' [Files]
 
 But is shorter and cleaner.
 
+[id="double_space_script"]
 Double-space a file
 ^^^^^^^^^^^^^^^^^^^
 
@@ -275,6 +287,7 @@ $ spark -pe '(say)'
 
 (Think Perl)
 
+[id="number_lines_script"]
 Number lines in each file
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -318,6 +331,7 @@ In the case of the +:to+ named parameter to +(say)+ (or to +(print)+ or
 to +(printf)+ or whatever we have or define) we don’t need the explicit
 +(fh ...)+ (= file handle) call but it won’t hurt.
 
+[id="note_cmd_line_magic"]
 Note about command line magic
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -351,6 +365,7 @@ a multi-millionaire from selling a 300K Lines program that evolved from a
 simple +spark/perl/ruby --dump-code=code.... -e '....'+ invocation (after
 a successful plain +-e+ invocation).
 
+[id="nested_namespaces"]
 Spark will have nested namespaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -377,6 +392,7 @@ alternatives. http://cpan6.org/[CPAN6] (orthogonal to Perl 6) is worth
 a look for some ideas, as is http://www.cpan.org/misc/ZCAN.html["The Zen
 of Comprehensive Archive Networks"]
 
+[id="succinct"]
 Spark will be more succinct than most Lisps, but not overly terse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -479,6 +495,7 @@ tests, which would serve as automatically verifiable examples. Arc really
 had none, and often you needed to read the implementation code, or one of
 the example web applications.
 
+[id="written_in_plaintext"]
 Spark will be written in plaintext
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -514,6 +531,7 @@ you forget what it has now or it changes unbeknowest to you
 run, debug, change, run debug, etc. Hopefully with automated tests for
 extra bonus points in Software Management sainthood.
 
+[id="dedicated_syntax_for_re"]
 Regexps and other important elements have dedicated syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -540,6 +558,7 @@ read macro:
 $ spark -pe '(~ ^LINE (re.s /ba([zro])(\s+)mozart/ ma$1$2bozart))'
 ---------------------
 
+[id="c_conventions"]
 C/Perl/etc. conventions
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -549,6 +568,7 @@ C/Perl/etc. conventions
 
 3. With C-style escapes - backslash does the right thing.
 
+[id="proliferation_implementations"]
 Spark will not encourage a proliferation of implementations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -629,6 +649,7 @@ and Clojure, but rather something like Perl 5 was to Perl 4 or Perl 6 is
 to Perl 5 : a paradigm shift, which Lispers and non-Lispers alike will
 appreciate.
 
+[id="ultimate_lisp"]
 The first version of Spark will not be the ultimate Lisp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -660,6 +681,7 @@ decisions that still add to the language’s colour and make it a bit more
 interesting to program in than a 100% perfect language. Sometimes perfection
 is in imperfection.
 
+[id="why_lisp_unpopular"]
 Why Lisp Has Been Unpopular
 ---------------------------
 
@@ -706,11 +728,13 @@ One can find other resources about what makes a language popular here:
 
 
 
+[id="impl_details"]
 Some Implementation Details
 ---------------------------
 
 These are some implementation details that are still subject to change:
 
+[id="vm"]
 Virtual Machine
 ~~~~~~~~~~~~~~~
 
@@ -733,6 +757,7 @@ nicely. The http://www.parrot.org/languages[Parrot languages Page] already
 lists several implementation of Scheme which can serve as the basis for
 a Spark implementation, so I’d like to start there.
 
+[id="licensing"]
 Spark Licensing
 ~~~~~~~~~~~~~~~
 
@@ -745,6 +770,7 @@ BSD-style licence that specifically allows sub-licensing. To avoid legal
 confusion, every file should contain an explicit “Licensing” notice to
 indicate under which license it is.
 
+[id="tdd"]
 Test-driven development
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -764,6 +790,7 @@ decisions to change. Test-driven development, while accepting the fact that
 often a lot of testing code will need to be modified, will allow us to do
 that.
 
+[id="documentation"]
 Documentation
 ~~~~~~~~~~~~~
 
@@ -778,6 +805,7 @@ internals of the front-end will not be very well documented, as they will
 tend to get out-of-sync with the code, and in general the code should be
 structured to be self-documenting and easy to understand using refactoring.
 
+[id="licence_of_this_doc"]
 Licence
 -------
 

@@ -61,8 +61,7 @@ MyTidy->new(
                     )
                     | SCM/subversion/for-pythoneers/ | Vim/beginners/ )
                     slides/ |
-                    js/MathJax/ |
-                    open-source/projects/Spark/mission/
+                    js/MathJax/
                     )
                 #x
             );

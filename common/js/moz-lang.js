@@ -1,9 +1,10 @@
 function lang_load() {
 $('*').each(
     function(i) {
-        var l = $(this)[0].getAttribute('xml:lang');
+        var e = $(this)[0];
+        var l = e.getAttribute('xml:lang');
         if (l) {
-            $(this)[0].setAttribute('lang', l);
+            e.setAttribute('lang', l);
         }
     }
 );

@@ -7,7 +7,7 @@
 ; Copyright (C) 1999, 2004 Shlomi Fish
 ;
 ; This file can be freely used, modified and distributed under the terms of
-; the MIT X11 license.
+; the Expat license.
 ;
 ; INSTRUCTIONS:
 ; Put this file in your ~/.gimp/scripts directory. Run the gimp and

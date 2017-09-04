@@ -9,7 +9,7 @@
 #
 # Written by Shlomi Fish, November 2006.
 #
-# This code is made available under the MIT X11 License.
+# This code is made available under the MIT/Expat License.
 
 use strict;
 use warnings;

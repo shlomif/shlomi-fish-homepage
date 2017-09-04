@@ -8,7 +8,7 @@
 #
 # Written by Shlomi Fish, 2008.
 #
-# Licensed under the MIT X11 license:
+# Licensed under the MIT/Expat license:
 # http://www.opensource.org/licenses/mit-license.php )
 #
 # Requires:

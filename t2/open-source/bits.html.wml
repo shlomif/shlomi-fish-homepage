@@ -27,7 +27,7 @@ the same as those in the file.
 To resolve it, I wrote <a href="<bit_link "gpg-verify.pl" />">a script</a>
 that checks the signatures in the file and verifies that they are the same
 as those reported by GPG in the key-ring. You can freely use it under
-the terms of the MIT X11 license.
+the terms of the MIT/Expat license.
 </p>
 
 <p>
@@ -67,7 +67,7 @@ What this little Perl script does is register an
 <a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
 that whenever invoked displays a message of “/me is listening to My Artist -
 My Song” in the current channel. Feel free to make any use of it whatsoever
-under the terms of the MIT X11 license. It queries either
+under the terms of the MIT/Expat license. It queries either
 <a href="http://amarok.kde.org/">Amarok</a> or <a href="http://www.xmms.org/">XMMS 1.x</a>.
 </p>
 
@@ -118,7 +118,7 @@ of KDE’s
 the one supplied by kdepim-3.5.4. This Perl script can be used to do the porting
 automatically. Read the instructions at its top. Note that it will skip
 lists that have raw emails inside the distribution lists’ directives. This
-script is available under the MIT X11 licence, with absolutely no warranty.
+script is available under the MIT/Expat licence, with absolutely no warranty.
 </p>
 
 <h2 id="amarok">Amarok Scripts</h2>
@@ -216,7 +216,7 @@ Output Analyser</a></h2>
 that can recursively scan directory trees and output the space used by
 them. After one has done <tt>\du . &gt; du.txt</tt>, one can use this script
 to analyse the file by filtering the sub-directories of a certain depth (and
-under a certain sub-directory). (Licensed under the MIT/X11 License).
+under a certain sub-directory). (Licensed under the MIT/Expat License).
 </p>
 
 <h2 id="set_xfce_workspaces"><a
@@ -235,7 +235,7 @@ This is useful to restore them in case they were reset. Use this script while
 Xfce is running. (See
 <a href="http://foo-projects.org/pipermail/xfce/2009-December/026469.html">a
 discussion on the Xfce mailing list</a> for more information.) Licensed
-under the MIT/X11 License.
+under the MIT/Expat License.
 </p>
 
 <h2 id="quad-pres-in-haskell"><a

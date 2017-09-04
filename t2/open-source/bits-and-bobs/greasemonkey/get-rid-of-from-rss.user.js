@@ -9,7 +9,7 @@
 // ===============================================================
 
 //
-// License is X11 License:
+// License is the Expat License:
 // http://www.opensource.org/licenses/mit-license.php
 
 var loc = window.location.href;

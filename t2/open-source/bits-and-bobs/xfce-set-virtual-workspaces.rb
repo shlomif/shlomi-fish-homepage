@@ -6,7 +6,7 @@
 #
 # Copyright by Shlomi Fish, 2009.
 #
-# Licensed under the MIT/X11 License:
+# Licensed under the MIT/Expat license:
 #
 # http://www.opensource.org/licenses/mit-license.php
 

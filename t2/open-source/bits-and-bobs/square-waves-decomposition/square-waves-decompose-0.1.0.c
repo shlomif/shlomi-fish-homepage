@@ -7,7 +7,7 @@
  *
  * Written by Shlomi Fish, 2007.
  *
- * Licensed under the MIT X11 license.
+ * Licensed under the MIT/Expat license.
  *
  * Compile with:
  * gcc -o square-waves -Wall square-waves.c -lm

@@ -24,7 +24,7 @@
 "
 " Author: Shlomi Fish
 " Date: 02 December 2004
-" License: MIT X11
+" License: MIT Expat
 "
 
 " TODO: Change Get_product to s:get_product().

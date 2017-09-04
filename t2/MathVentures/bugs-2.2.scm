@@ -7,7 +7,7 @@
 ; Copyright (C) 1999 Shlomi Fish
 ;
 ; This file can be freely used, modified and distributed under the terms of
-; the MIT X11 license.
+; the Expat license.
 ;
 ;
 ; INSTRUCTIONS:

@@ -2,7 +2,7 @@
 /*
  * jQtree from HTML-Widgets-NavMenu code.
  *
- * Copyright by Shlomi Fish, 2012 under the MIT/X11 Licence.
+ * Copyright by Shlomi Fish, 2012 under the Expat Licence.
  * */
 
 // Taken from http://stackoverflow.com/questions/202605/repeat-string-javascript

@@ -1,46 +1,46 @@
 (define zero (lambda (f) (lambda (x) x)))
 
 (define (church->int church)
-	((church (lambda (a) (+ a 1))) 0)
+        ((church (lambda (a) (+ a 1))) 0)
 )
 
 (define succ
 (lambda (n)
-	(lambda (f)
-		(lambda (x)
-			(f ((n f) x))
-		)
-	)
+        (lambda (f)
+                (lambda (x)
+                        (f ((n f) x))
+                )
+        )
 ))
 
 (define (int->church n)
-	(if (= n 0)
-		zero
-		(succ (int->church (- n 1)))
-	)
+        (if (= n 0)
+                zero
+                (succ (int->church (- n 1)))
+        )
 )
 
 (define add
 (lambda (n)
-	(lambda (m)
-		((n succ) m)
-	)
+        (lambda (m)
+                ((n succ) m)
+        )
 ))
 
 (define mult
 (lambda (m)
-	(lambda (n)
-		(lambda (f)
-			(m (n f))
-		)
-	)
+        (lambda (n)
+                (lambda (f)
+                        (m (n f))
+                )
+        )
 ))
 
 (define power
 (lambda (m)
-	(lambda (n)
-		((n (mult m)) (succ zero))
-	)
+        (lambda (n)
+                ((n (mult m)) (succ zero))
+        )
 ))
 
 (define c2 (int->church 2))
@@ -57,45 +57,45 @@
 
 (define lc_cons
 (lambda (mycar)
-	(lambda (mycdr)
-		; we return this lambda-expression:
-		(lambda (which)
-			((which mycar) mycdr)
-		)
-	)
+        (lambda (mycdr)
+                ; we return this lambda-expression:
+                (lambda (which)
+                        ((which mycar) mycdr)
+                )
+        )
 ))
 
 (define lc_car
 (lambda (tuple)
-	(tuple lc_true)
+        (tuple lc_true)
 ))
 
 (define lc_cdr
 (lambda (tuple)
-	(tuple lc_false)
+        (tuple lc_false)
 ))
 
 (define pred_next_tuple
 (lambda (tuple)
-	((lc_cons
-		(lc_cdr tuple))
-		(succ (lc_cdr tuple)))
+        ((lc_cons
+                (lc_cdr tuple))
+                (succ (lc_cdr tuple)))
 ))
 
 (define pred
 (lambda (n)
-	(lc_car
-		((n pred_next_tuple)
-			((lc_cons zero) zero)
-		)
-	)
+        (lc_car
+                ((n pred_next_tuple)
+                        ((lc_cons zero) zero)
+                )
+        )
 ))
 
 (define subtract
 (lambda (n)
-	(lambda (m)
-		((m pred) n)
-	)
+        (lambda (m)
+                ((m pred) n)
+        )
 ))
 
 (define is-zero?

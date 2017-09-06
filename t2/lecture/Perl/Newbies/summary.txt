@@ -220,7 +220,7 @@ Objects
     Object Inheritance:
         The use vars qw(@ISA); @ISA=qw(My::Class Parent); scheme
         Calling methods from base classes
-        	The SUPER directive ($self->SUPER::hello());
+            The SUPER directive ($self->SUPER::hello());
     Destructors
         The DESTROY method
     isa() and can()

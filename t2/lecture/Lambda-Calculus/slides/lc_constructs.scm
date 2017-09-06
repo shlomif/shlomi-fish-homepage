@@ -33,9 +33,9 @@
 ; Scheme Example for the while loop:
 (define (_cond x) (if (> x 5) lc_false lc_true))
 (define (_oper x)
-	(display x)
-	(newline)
-	(+ x 1)
+    (display x)
+    (newline)
+    (+ x 1)
 )
 (((lc_while _cond) _oper) 0)
 

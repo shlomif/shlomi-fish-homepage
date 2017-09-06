@@ -27,11 +27,11 @@ One can pipe the output of one command to the input of another by using
 the "|". Examples:
 
 ls -l | less
-	pages the output of ls -l
+    pages the output of ls -l
 cat *.c *.h | wc -l
-	Determines how many lines are in c and h
+    Determines how many lines are in c and h
 ls -l | grep '^d' | wc -l
-	Counts the number of directories in the CWD. (* - what MosheZ noted)
+    Counts the number of directories in the CWD. (* - what MosheZ noted)
 
 Variables:
 ----------
@@ -68,11 +68,11 @@ echo "Please enter a number:"
 read A
 
 if expr $A \> 1000 > /dev/null ; then
-	echo "$A is greater than one thousand"
+    echo "$A is greater than one thousand"
 elif expr $A \> 100 > /dev/null ; then
-	echo "$A is greater than one hundred"
+    echo "$A is greater than one hundred"
 else
-	echo "$A is lesser or equal to one hundred"
+    echo "$A is lesser or equal to one hundred"
 fi
 
 Note: the condition can be any program or builtin command that returns
@@ -94,8 +94,8 @@ Use while to execute a group of statement as long as a condition is met:
 
 A=1
 while expr $A \<= 100 > /dev/null ; do
-	echo $A
-	A=`expr $A + 1`
+    echo $A
+    A=`expr $A + 1`
 done
 
 One can iterate over all the lines of the standard input with "while read
@@ -105,7 +105,7 @@ MYVAR" :
 
 find . -name '*.c' |
 (while read T ; do
-	cp $T $T.bak ;
+    cp $T $T.bak ;
  done)
 
 For:
@@ -114,7 +114,7 @@ For:
 Use for to iterate over a group of values:
 
 for I in *.c *.h ; do
-	cp $I $I.bak
+    cp $I $I.bak
 done
 
 - Notice: If you wish to pre-specify the values you wish to iterate over in
@@ -122,7 +122,7 @@ a statement then use for I in $MYLIST. For example:
 
 MYLIST="one two three four"
 for I in $MYLIST ; do
-	echo $I
+    echo $I
 done
 
 - If you wish to have whitespaces inside the arguments use the following
@@ -171,10 +171,10 @@ apparent on the main script.
 
 find . -name '*.c' |
 (
-	while read T ; do
-		A=`echo $T | sed 's/\\.c\$//'`
-		cp $T $A.bak
-	done
+    while read T ; do
+        A=`echo $T | sed 's/\\.c\$//'`
+        cp $T $A.bak
+    done
 )
 
 # A or T are not set here.

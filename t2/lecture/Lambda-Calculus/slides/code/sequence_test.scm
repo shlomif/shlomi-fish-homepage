@@ -7,7 +7,7 @@
 
 (define my_seq
 (lambda (x)
-	(f6 (f5 (f4 (f3 (f2 (f1 x))))))
+        (f6 (f5 (f4 (f3 (f2 (f1 x))))))
 ))
 
 (my_seq 0)

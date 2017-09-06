@@ -2,5 +2,5 @@
 
 find . -name '*.c' |
 (while read T ; do
-	cp $T $T.bak ;
+    cp $T $T.bak ;
  done)

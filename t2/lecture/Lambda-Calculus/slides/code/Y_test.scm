@@ -18,13 +18,13 @@
 (define (result x) (caddr x))
 (define mysum
 (Y (lambda (f)
-	(lambda (x)
-		(if (<= (var x) (top x))
-		        ;
-			(f (list (top x) (+ (var x) 1) (+ (result x) (var x))))
-			x
-		)
-	)
+        (lambda (x)
+                (if (<= (var x) (top x))
+                        ;
+                        (f (list (top x) (+ (var x) 1) (+ (result x) (var x))))
+                        x
+                )
+        )
 )))
 
 (define solution (mysum (list 10 5 0)))
@@ -38,40 +38,40 @@
 
 (define make-mysum-list
 (lambda (top)
-	(lambda (var)
-		(lambda (result)
-			((lc_cons top) ((lc_cons var) ((lc_cons result) zero)))
-		)
-	)
+        (lambda (var)
+                (lambda (result)
+                        ((lc_cons top) ((lc_cons var) ((lc_cons result) zero)))
+                )
+        )
 ))
 
 (define mysum
 (Y (lambda (f)
-	(lambda (x)
-		(((((less-or-equal (var x)) (top x))     ; If var x < top x
-			(lambda (no_use)
-			(f
-				(((make-mysum-list
-					(top x))
-					(succ (var x)))
-					((add (result x)) (var x)))
-			)
-			))
-			(lambda (no_use)
-				x
-			))
-				zero ;  Pass zero as argument to no_use
-			)
-		)
-	)
+        (lambda (x)
+                (((((less-or-equal (var x)) (top x))     ; If var x < top x
+                        (lambda (no_use)
+                        (f
+                                (((make-mysum-list
+                                        (top x))
+                                        (succ (var x)))
+                                        ((add (result x)) (var x)))
+                        )
+                        ))
+                        (lambda (no_use)
+                                x
+                        ))
+                                zero ;  Pass zero as argument to no_use
+                        )
+                )
+        )
 ))
 
 (define solution (mysum
-	(((make-mysum-list
-		(int->church 10))
-		(int->church 5))
-		(int->church 0))
-		))
+        (((make-mysum-list
+                (int->church 10))
+                (int->church 5))
+                (int->church 0))
+                ))
 
 (display "The solution is: ")
 (display (church->int (result solution)))

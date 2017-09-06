@@ -34,7 +34,7 @@ This distribution is source only, so you'll need a Java compiler (such
 as the JDK's 'javac' to compile it). Please read the other sections of
 this document before you try to use it.
 
-	Shlomi Fish
+    Shlomi Fish
 
 
 
@@ -156,9 +156,9 @@ MikMod related places.
 
 http://www.javasoft.com/product/jdk/
 
-	Various Information about Sun's JDK.
+    Various Information about Sun's JDK.
 
 http://www.kaffe.org/
 
-	Kaffe is a freely available JIT-based runtime environment for
+    Kaffe is a freely available JIT-based runtime environment for
 UNIXes.

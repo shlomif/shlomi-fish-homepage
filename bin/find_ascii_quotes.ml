@@ -18,9 +18,9 @@ let find_quotes input filename =
 
 let () =
      Array.iter (fun filename ->
-	let ic = open_in filename in
-	ignore (find_quotes
-		(Xmlm.make_input ~entity:(fun e -> Some e) (`Channel ic))
-		filename))
+        let ic = open_in filename in
+        ignore (find_quotes
+                (Xmlm.make_input ~entity:(fun e -> Some e) (`Channel ic))
+                filename))
        (Array.sub Sys.argv 1 (Array.length Sys.argv - 1))
 

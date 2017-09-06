@@ -18,10 +18,10 @@
 
 (if (< a b)
     (begin
-    	(display a)
-	(display " is lesser than ")
-	(display b)
-	(newline)
+        (display a)
+        (display " is lesser than ")
+        (display b)
+        (newline)
     )
 )
 

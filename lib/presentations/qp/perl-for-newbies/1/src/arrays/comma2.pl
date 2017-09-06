@@ -5,5 +5,5 @@
 
 for $idx (0 .. $#primes)
 {
-	print $primes[$idx], "\n";
+    print $primes[$idx], "\n";
 }

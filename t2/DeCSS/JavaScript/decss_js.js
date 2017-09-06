@@ -18,8 +18,8 @@ function CSSdescramble(sec, key)
 
     for (a = 0; a < sec.length ; a++)
     {
-    	c_code = sec.charCodeAt(a);
-    	ret += String.fromCharCode((c_code-3)%256);
+        c_code = sec.charCodeAt(a);
+        ret += String.fromCharCode((c_code-3)%256);
     }
 
     return ret;

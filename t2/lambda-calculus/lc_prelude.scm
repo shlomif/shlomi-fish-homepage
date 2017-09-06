@@ -103,7 +103,7 @@
 ; Converting Church numerals to regular integers:
 
 (define (church->int church)
-	(
+    (
         (church
             (lambda (a) (+ a 1))
         )
@@ -115,20 +115,20 @@
 ; Let's take f and execute it on n one more time:
 (define succ
     (lambda (n)
-	    (lambda (f)
-    		(lambda (x)
-    			(f ((n f) x))
-    		)
-    	)
+        (lambda (f)
+            (lambda (x)
+                (f ((n f) x))
+            )
+        )
     )
 )
 
 ; Converting an integer to a Church numeral
 (define (int->church n)
-	(if (= n 0)
-		zero
-		(succ (int->church (- n 1)))
-	)
+    (if (= n 0)
+        zero
+        (succ (int->church (- n 1)))
+    )
 )
 
 ; Operations with Church Numerals

@@ -28,11 +28,11 @@ function build_main_nav_menu_toggler() {
 }
 
 $(document).ready(function(){
-	$("#sect_menu_wrapper > ul").treeview({
-		persist: "location",
-		collapsed: false,
-		unique: false
-	});
+    $("#sect_menu_wrapper > ul").treeview({
+        persist: "location",
+        collapsed: false,
+        unique: false
+    });
 
     build_sect_nav_menu_toggler();
     build_main_nav_menu_toggler();

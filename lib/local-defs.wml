@@ -20,9 +20,6 @@
 <set-var latemp_with_head_meta_tags="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_nav_links="<latemp_mynot "$(PRINTABLE)" />" />
 <set-var latemp_with_html_head_stylesheets="<latemp_mynot "$(PRINTABLE)" />" />
-<:{
-    use Shlomif::WrapAsUtf8 (qw(_print_utf8));
-}:>
 
 <define-tag latemp_get_breadcrumbs_trail_unconditionally>
 <inc_cache id="breadcrumbs-trail" />

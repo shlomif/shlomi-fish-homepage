@@ -7,9 +7,9 @@
 <:
 use Text::Markdown qw/ markdown /;
 use Path::Tiny qw/ path /;
-use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
-_print_utf8( markdown(path('./../lib/blogs/how-to-share-code-online/README.md')->slurp_utf8));
+print_utf8( markdown(path('./../lib/blogs/how-to-share-code-online/README.md')->slurp_utf8));
 :>
 
 <h2 id="credits">Credits</h2>

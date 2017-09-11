@@ -5,11 +5,9 @@ use warnings;
 
 use utf8;
 
-use MooX (qw( late ));
-
+use MooX qw( late );
 use DateTime;
-
-use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 has 'dir' => (
     is      => 'ro',
@@ -289,7 +287,7 @@ sub _printy
 {
     my ( $class, $meth ) = @_;
 
-    _print_utf8( $class->new->$meth );
+    print_utf8( $class->new->$meth );
 
     return;
 }

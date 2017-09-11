@@ -6,10 +6,8 @@ use warnings;
 use utf8;
 
 use Path::Tiny qw/ path /;
-
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-
-use Shlomif::WrapAsUtf8 qw(_print_utf8);
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 use Shlomif::Homepage::LongStories::Story;
 
@@ -544,7 +542,7 @@ sub render_abstract
 {
     my ( $class, $id ) = @_;
 
-    _print_utf8( @{ $class->_get_abstract_tags($id) } );
+    print_utf8( @{ $class->_get_abstract_tags($id) } );
 
     return;
 }
@@ -553,7 +551,7 @@ sub render_logo
 {
     my ( $class, $id ) = @_;
 
-    _print_utf8( @{ $class->_get_logo_tags($id) } );
+    print_utf8( @{ $class->_get_logo_tags($id) } );
 
     return;
 }
@@ -562,7 +560,7 @@ sub render_common_top_elems
 {
     my ( $class, $id ) = @_;
 
-    _print_utf8( @{ $class->_get_common_top_elems($id) }, );
+    print_utf8( @{ $class->_get_common_top_elems($id) }, );
 
     return;
 }
@@ -571,7 +569,7 @@ sub render_all_stories_entries
 {
     my ( $class, $tag ) = @_;
 
-    _print_utf8( @{ $class->_get_all_stories_entries_tags($tag) }, );
+    print_utf8( @{ $class->_get_all_stories_entries_tags($tag) }, );
 
     return;
 }

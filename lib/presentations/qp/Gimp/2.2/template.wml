@@ -12,12 +12,12 @@
 <:{
 
 use MenuPath;
-use Shlomif::WrapAsUtf8 qw/ _print_utf8 /;
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 }:>
 <define-tag menupath endtag="required">
 <:{
-_print_utf8(MenuPath::get_menupath_text(<<'EOFOPOPOPLKJKJQWEQWEQW'));
+print_utf8(MenuPath::get_menupath_text(<<'EOFOPOPOPLKJKJQWEQWEQW'));
 %body
 EOFOPOPOPLKJKJQWEQWEQW
 }:>

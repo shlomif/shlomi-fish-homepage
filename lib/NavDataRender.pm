@@ -13,7 +13,7 @@ use HTML::Widgets::NavMenu::JQueryTreeView;
 use URI::Escape qw(uri_escape);
 use MyNavLinks;
 
-use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub nav_data_render
 {
@@ -77,7 +77,7 @@ sub render_breadcrumbs_trail_unconditionally
 {
     my ( $class, $args ) = @_;
 
-    _print_utf8( $class->get_breadcrumbs_trail_unconditionally($args) );
+    print_utf8( $class->get_breadcrumbs_trail_unconditionally($args) );
 }
 
 sub get_html_head_nav_links
@@ -104,7 +104,7 @@ sub render_html_head_nav_links
 {
     my ( $class, $args ) = @_;
 
-    _print_utf8( $class->get_html_head_nav_links );
+    print_utf8( $class->get_html_head_nav_links );
 
     return;
 }

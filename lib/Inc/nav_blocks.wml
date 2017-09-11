@@ -26,7 +26,8 @@ use Shlomif::Homepage::NavBlocks (qw(
         {
             die "I suck. You suck.";
         }
-        _print_utf8( _render_nav_block(@_) );
+        use Text::WrapAsUtf8 qw/ print_utf8 /;
+        print_utf8( _render_nav_block(@_) );
 
         return;
     }

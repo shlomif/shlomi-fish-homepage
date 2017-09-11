@@ -8,7 +8,8 @@
     {
         push @params, ('with_accesskey' => $with_accesskey);
     }
-    _print_utf8($nav_links_renderer->get_total_html(@params));
+    use Text::WrapAsUtf8 qw/ print_utf8 /;
+    print_utf8($nav_links_renderer->get_total_html(@params));
 }:>
 <restore with_accesskey />
 </define-tag>

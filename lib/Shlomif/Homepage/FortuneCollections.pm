@@ -12,7 +12,7 @@ use List::Util qw(max);
 use YAML::XS (qw(LoadFile));
 use JSON::MaybeXS ();
 use Path::Tiny qw/ path /;
-use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub _init_fortune
 {
@@ -59,7 +59,7 @@ sub print_single_fortune_record_toc_entry
     my $id   = $r->id;
     my $desc = $r->desc;
 
-    _print_utf8( <<"EOF" );
+    print_utf8( <<"EOF" );
 <li>
 <p>
 <a href="$id.html"><b>$id</b></a>

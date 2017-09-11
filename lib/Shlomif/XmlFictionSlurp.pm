@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Path::Tiny qw/ path /;
-use Shlomif::WrapAsUtf8 (qw(_print_utf8));
+use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub my_slurp
 {
@@ -19,7 +19,7 @@ sub my_slurp
     $text =~ s# xml:space="preserve"([ >]|/>)#$1#g;
     $text =~ s#^[ \t]+(<)#$1#gms;
 
-    _print_utf8($text);
+    print_utf8($text);
 
     return;
 }

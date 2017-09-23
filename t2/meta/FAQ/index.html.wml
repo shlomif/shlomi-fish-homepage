@@ -6,6 +6,8 @@
 <latemp_subject "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
 <latemp_meta_desc "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
 
+<set-var Technion="<a href="http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology">Technion</a>" />
+
 <p>
 This document is a list of questions and answers to common questions I have
 been asked or have found myself answering or telling about. I don’t mind being
@@ -30,7 +32,7 @@ I can link to it.
 I am <a href="$(ROOT)/personal.html">Shlomi Fish</a>, a professional Israeli
 software developer, and author of articles, essays, presentations, and funny
 stories, aphorisms and bits. I have a Bachelor of Sciences (B.Sc.) from
-the Technion in Electrical Engineering, but it would be a stretch to call
+the <get-var Technion /> in Electrical Engineering, but it would be a stretch to call
 me an Electrical Engineer, at least with my current level of expertise in
 the field. I’m actually more of a programmer and a specialised mathematician.
 </p>
@@ -419,7 +421,7 @@ the time). And it also had a rudimentary pageful of links, and a bio.
 </p>
 
 <p>
-When I became a student in the Technion, I moved my site to its undergraduate
+When I became a student in the <get-var Technion />, I moved my site to its undergraduate
 server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
 and more resources to the site. Here is
 the site <a href="$(ROOT)/meta/old-site-snapshots/">as of 1998</a>. I had a
@@ -444,7 +446,7 @@ features.
 
 <p>
 Eventually I realised that the vipe server has too much down time (due
-to problems at the Technion’s network) and moved all of its content over
+to problems at the <get-var Technion />’s network) and moved all of its content over
 to the www.shlomifish.org domain.
 </p>
 
@@ -769,7 +771,7 @@ Here are a few jokes about it:
 
 <p>
 Shlomi Fish once defined himself as a “Programmer, Writer, Amateur
-Mathematician, Wannabe Philosopher, and someone who studied in the Technion in
+Mathematician, Wannabe Philosopher, and someone who studied in the <get-var Technion /> in
 the vain hope of becoming an Electrical Engineer”. He does not consider himself
 a sane person, but is quite certain that only makes him more interesting.
 </p>
@@ -1099,7 +1101,7 @@ became my favourite language.
 </p>
 
 <p>
-By the time I started studying the Technion, I had a relatively early
+By the time I started studying the <get-var Technion />, I had a relatively early
 distribution of
 <a href="http://en.wikipedia.org/wiki/Linux">Linux</a> installed on my
 computer, and started playing with various languages available there.

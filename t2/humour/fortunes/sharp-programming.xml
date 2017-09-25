@@ -4786,5 +4786,210 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-programming-progressive-web-apps">
+        <meta>
+            <title>Progressive Web Applications</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="Zajt">Hello! Is this UML diagram https://go.gliffy.com/go/share/sm4frpobsubifu6j6jv8 a correct example of the factory method design pattern?</saying>
+<saying who="rindolf">Zajt: is this homework?</saying>
+<saying who="Zajt">rindolf kind of, it&#39;s from school work but the purpose is not to make an UML diagra. I just try to explain the pattern by making this figure, but needs to be sure that it&#39;s correct so I don&#39;t miss anything in it</saying>
+<saying who="rindolf">Zajt: ah</saying>
+<saying who="rindolf">Zajt: it figures that it is schoolwork</saying>
+<saying who="SPEEDRAC1ST">UML&#39;s main purpose is to keep CS profs employed and students busy</saying>
+<saying who="rindolf">SPEEDRAC1ST: heh</saying>
+<saying who="iawc">Though the profs still suffer a concaussion when doing both at the same time.</saying>
+<saying who="Zajt">rindolf what do you mean?</saying>
+<saying who="rindolf">Zajt: UML and Design Patterns are not oof much interest elsewhere</saying>
+<saying who="SPEEDRAC1ST">design patterns became a buzzword recently</saying>
+<saying who="SPEEDRAC1ST">also, &quot;anti-pattern&quot;</saying>
+<saying who="Zajt">yeah but did you read what I wrote above? I do it for a report in school so I have not an exercise that says &quot;Write this UML-diagram&quot;, but I have done it myself just to illustrate the problem. But I want to make sure it&#39;s correct what I have done</saying>
+<saying who="Groogy">design patterns and anti-pattern are super old buzzwords</saying>
+<saying who="Groogy">what do you mean recently</saying>
+<saying who="Groogy">the last 30 years?</saying>
+<saying who="SPEEDRAC1ST">recently there was a resurgence of those</saying>
+<saying who="Groogy">lol okay</saying>
+<saying who="SPEEDRAC1ST">&quot;we&#39;re kewl, we use JavaScript design patterns&quot;</saying>
+<saying who="Groogy">Designu-patteru-jutsu</saying>
+<saying who="SPEEDRAC1ST">are you a pattern-ninja?</saying>
+<saying who="Groogy">HAI!</saying>
+<saying who="SPEEDRAC1ST">then join our innovative revolutionary startup which has lots of hype and VC monies</saying>
+<saying who="Groogy">Actually I think it is good to read about design patterns and anti-patterns, to just have in back of your mind. But to actively try and &quot;apply&quot; the &quot;molds&quot; is not really the intent of it</saying>
+<saying who="SPEEDRAC1ST">some of those are neat. the ones that are about complexity management, and organization</saying>
+<saying who="SPEEDRAC1ST">but most are barely necessary</saying>
+<saying who="SPEEDRAC1ST">but overall, WTF would one need design patterns to make yet another web app?</saying>
+<saying who="rindolf">SPEEDRAC1ST: is it a disruptive startup?</saying>
+<saying who="SPEEDRAC1ST">it&#39;s about to disrupt at least 3 industries</saying>
+<saying who="rindolf">SPEEDRAC1ST: heh</saying>
+<saying who="rockman37">Has anyone made a webapp for making webapps yet?</saying>
+<saying who="bookworm">WordPress</saying>
+<saying who="rockman37">Hah.</saying>
+<saying who="Groogy">but from a glance it looks like you have what I would expect out of a factory</saying>
+<saying who="SPEEDRAC1ST">AI can drive cars, but can&#39;t make web apps yet</saying>
+<saying who="rockman37">My friend&#39;s friend is apparently working on a mobile app for making mobile apps.</saying>
+<saying who="rockman37">(Which my friend plans to use to make a mobile app.)</saying>
+<saying who="PlanckWalk">There are tons of apps for making apps</saying>
+<saying who="SPEEDRAC1ST">PlanckWalk: none of them are functional, since an emulator is required to run one</saying>
+<saying who="SPEEDRAC1ST">also, they don&#39;t solve the distribution problem</saying>
+<saying who="merijn">Hell, people can&#39;t even make decent apps yet...</saying>
+<saying who="SPEEDRAC1ST">define decent</saying>
+<saying who="SPEEDRAC1ST">Instagram and Snapchat are totally decent for uploading food pics and duckface pics</saying>
+<saying who="merijn">SPEEDRAC1ST: They&#39;re several gigabytes larger than they should be</saying>
+<saying who="ongy">snapchat? isn&#39;t that exclusivly for sexting?</saying>
+<saying who="ongy">you have phone apps that are multiple gigabytes?</saying>
+<saying who="SPEEDRAC1ST">merijn: so is all software these days, except for embedded</saying>
+<saying who="SPEEDRAC1ST">ongy: if you include the SDK, yes</saying>
+<saying who="merijn">ongy: I&#39;d like to introduce you to my friend, the hyperbole :)</saying>
+<saying who="SPEEDRAC1ST">mobile apps themselves are 100s of MB</saying>
+<saying who="rockman37">Which is still huge for a program.</saying>
+<saying who="rts-sander">these apps take hundreds of terabytes to display a single butten!</saying>
+<saying who="rindolf">merijn: are they a boy or a girl? ;)</saying>
+<saying who="rockman37">fuck buttons</saying>
+<saying who="Groogy">well sometihng I guess? I don&#39;t really know the task you are having from your teacher</saying>
+<saying who="merijn">rts-sander: Ah, I see you too have downloaded slack?</saying>
+<saying who="merijn">rindolf: Probably a boy, hyperbole is constantly 1-upping people ;)</saying>
+<saying who="SPEEDRAC1ST">Groogy: Zajt: http://www.developermemes.com/wp-content/uploads/2013/03/java-problem-factory.jpg</saying>
+<saying who="rindolf">merijn: :)</saying>
+<saying who="rockman37">SPEEDRAC1ST: rofl</saying>
+<saying who="rindolf">SPEEDRAC1ST: heh, still funny</saying>
+<saying who="rts-sander">hahaha Java is verbose hahahaha</saying>
+<saying who="merijn">rts-sander: I refuse to download atrocities that spend 500+MB memory just to run IRC &gt;.&gt;</saying>
+<saying who="rockman37">I refuse to download atrocities full stop.</saying>
+<saying who="merijn">irssi is taking 8MB after running for, like, 2 weeks straight in 15 channels...</saying>
+<saying who="rts-sander">lightweight software is the best!</saying>
+<saying who="SPEEDRAC1ST">merijn: Firefox sometimes takes 2+GB of RAM</saying>
+<saying who="rts-sander">lets port it all to webapplications</saying>
+<saying who="xssposed">what about weechat</saying>
+<saying who="ongy">I had chrome at &gt;3G. fun times</saying>
+<saying who="xssposed">i use it a lot</saying>
+<saying who="xssposed">its nice</saying>
+<saying who="SPEEDRAC1ST">Facebook tab sometimes eats 100s of MB running all of the tracking and ad JS code</saying>
+<saying who="Groogy">I&#39;ve had weechat running for more than a mount without restart</saying>
+<saying who="Groogy">25mb</saying>
+<saying who="SPEEDRAC1ST">rts-sander: heard of progressive web apps?</saying>
+<saying who="merijn">ongy: WTF are you doing? Chrome is at, like, 1GB for me with 40 or so tabs open in 4 windows</saying>
+<saying who="Batholith">Chrome likes to eat RAM, that is known</saying>
+<saying who="Zajt">haha SPEEDRAC1ST</saying>
+<saying who="rindolf">here kwin_x11 consumes more RAM than firefox - no idea why</saying>
+<saying who="xssposed">theres an extension that counteracts chromes hunger for ram. i forget the name of it, but it saves 90%</saying>
+<saying who="merijn">Chrome&#39;s memory usage is increased a bit by the fact that it uses 1 process per tab, but it&#39;s not that drastic. Most of the gross memory usage that people blame on Chrome is just really &quot;websites being shitty in the 2010s&quot;</saying>
+<saying who="rockman37">rindolf: Is it huge, or is Firefox small?</saying>
+<saying who="xssposed">has my browser running faster</saying>
+<saying who="rindolf">rockman37: well, i recently restarted ff</saying>
+<saying who="rockman37">rindolf: Ah.</saying>
+<saying who="rindolf">xssposed: heh, nice nickname</saying>
+<saying who="SPEEDRAC1ST">websites also have gotten a lot fatter</saying>
+<saying who="SPEEDRAC1ST">probably due to ads</saying>
+<saying who="rockman37">We should stop feeding them or something.</saying>
+<saying who="xssposed">rindolf: heh, ty</saying>
+<me_is who="rindolf">recently reduced the HTML of his site</me_is>
+<saying who="rindolf">using https://github.com/kangax/html-minifier</saying>
+<saying who="SPEEDRAC1ST">also, JS frameworks and libs are 100+K LoC</saying>
+<saying who="rindolf">SPEEDRAC1ST: are they webscale?</saying>
+<saying who="SPEEDRAC1ST">maybe. they&#39;re responsive for sure</saying>
+<saying who="rindolf">http://shlomifishswiki.branchable.com/slash-dev-null_is_WebScale/</saying>
+<saying who="SPEEDRAC1ST">webscale is usually said about databases</saying>
+<saying who="rindolf">SPEEDRAC1ST: both responsive and progressive? Impossibru</saying>
+<saying who="rindolf">you can only have at most 1</saying>
+<saying who="SPEEDRAC1ST">progressive is the new buzzword, gotta replace them to keep the hype alive</saying>
+<saying who="merijn">Man, the one JS keyword that pisses me off the most is &quot;isomorphic&quot;, because that&#39;s not what isomorphic means, you jackasses</saying>
+<saying who="rindolf">SPEEDRAC1ST: are progressive web apps webscale enough?</saying>
+<saying who="ongy">I want a /dev/null directory to copy things into...</saying>
+<saying who="SPEEDRAC1ST">rindolf: come on. webscale is so 5 years ago :)</saying>
+<saying who="rindolf">ongy: use asynchronous writes</saying>
+<saying who="okuu">merijn: I edited the “isomorphism” tag on Stack Overflow to explicitly refer to, you know, isomorphisms. :-p</saying>
+<saying who="rindolf">SPEEDRAC1ST: heh</saying>
+<saying who="merijn">okuu: &lt;3</saying>
+<saying who="merijn">ongy: Why?</saying>
+<saying who="SPEEDRAC1ST">merijn: is it a reserved keyword?</saying>
+<saying who="merijn">SPEEDRAC1ST: No, it&#39;s &quot;running the same code on the client as on the server&quot;, or some shit</saying>
+<saying who="SPEEDRAC1ST">JS&#39;s scope pisses me off the most. something as simple as accessing a variable inside foreach is complicated</saying>
+<saying who="SPEEDRAC1ST">merijn: oh, you mean buzzword</saying>
+<saying who="merijn">s/&#39;s scope//</saying>
+<saying who="merijn">SPEEDRAC1ST: Yeah, I haven&#39;t had my coffee yet</saying>
+<saying who="okuu">SPEEDRAC1ST: But there is an excuse - JavaScript was designed in 10 days!</saying>
+<saying who="rindolf">ongy: mount /dev/null as /home</saying>
+<saying who="okuu">Errr, designed and implemented.</saying>
+<saying who="SPEEDRAC1ST">okuu: because Netscape managers rejected a Scheme-based language. and Self-based one too</saying>
+<saying who="okuu">rindolf: Double-checking my solutions to my topology handout.</saying>
+<saying who="merijn">I respect Brendan Eichman, because for something designed and implemented in 10 days JS is an impressive feat. But as language...god...fuck it</saying>
+<saying who="merijn">okuu: Sounds more fun that figuring out how to formulate my API to work with 3 slightly different libraries that don&#39;t have a common API :)</saying>
+<saying who="SPEEDRAC1ST">merijn: he proposed to use Scheme, Netscape said &quot;no way&quot;. Then he decided to prank them with JS. and now we&#39;re paying for it</saying>
+<saying who="ongy">rindolf: still a file, so I can&#39;t access /home/ongy</saying>
+<saying who="ongy">merijn: because I wanted to direct an output directory to /dev/null before and it didn&#39;t work</saying>
+<saying who="okuu">merijn: At least I&#39;m allowed (in fact, required) to make sense.</saying>
+<saying who="merijn">okuu: Trying to make my library play nicely with pipes, conduits, and just regular old forM/mapM...it&#39;s...tricky :p</saying>
+<saying who="rindolf">SPEEDRAC1ST: it needed to resemble Java</saying>
+<saying who="merijn">ongy: I don&#39;t quite understand what &quot;copying to /dev/null&quot; is supposed to do, though?</saying>
+<saying who="rindolf">merijn: oooh - buzzwords</saying>
+<saying who="mniip">but those are words</saying>
+<saying who="merijn">rindolf: Hmm?</saying>
+<saying who="ongy">merijn: why are you doing that? is it something you want others to use?</saying>
+<saying who="rindolf">merijn: &quot;pipes&quot;, &quot;conduits&quot;</saying>
+<saying who="okuu">rindolf: Haskell plumbling libraries.</saying>
+<saying who="merijn">rindolf: They are haskell libraries :)</saying>
+<saying who="ongy">merijn: ignore all output that should be written there. sometimes I need that</saying>
+<saying who="merijn">ongy: Because I use a mix of pipes and conduits in different projects and I find myself reinventing the same boilerplate</saying>
+<saying who="merijn">ongy: And I wanna be done with it once and for all</saying>
+<saying who="SPEEDRAC1ST">I&#39;ve learned about Cloud Haskell a few months ago</saying>
+<saying who="SPEEDRAC1ST">I guess they chose the name for marketing reasons</saying>
+<saying who="mniip">merijn, that &quot;once and for all&quot; bit sounds unconvinving</saying>
+<saying who="okuu">rindolf: Basically, so that you can replace “going crazy debugging” with “doing crazy with types” when doing stream processing. Although the “going crazy debugging” is sometimes not completely avoided.</saying>
+<saying who="merijn">mniip: Why?</saying>
+<saying who="rindolf">okuu: heh, sounds nasty</saying>
+<saying who="okuu">rindolf: Yeah, but it&#39;s how Haskellers think.</saying>
+<saying who="rindolf">okuu: haskellers are crazy?</saying>
+<saying who="okuu">rindolf: Everyone is crazy in their own way.</saying>
+<saying who="mniip">I must say haskell debugging sucks</saying>
+<saying who="rindolf">okuu: true</saying>
+<saying who="iawc">okuu: Haskell is just an API for common structures.</saying>
+<saying who="mniip">why does everyone try to mimic imperative program debugging</saying>
+<saying who="merijn">okuu: To be fair, conduits/pipes DO make some tasks that are really obnoxious in other languages really nice</saying>
+<saying who="iawc">Or is that Ruby?</saying>
+<saying who="mniip">functional semantics need to reflect respectively in the debugger</saying>
+<saying who="iawc">They seem the same in a way.</saying>
+<saying who="rockman37">iawc: Ruby and Haskell?</saying>
+<saying who="merijn">rindolf: Basically, they abstract over &quot;I want to stream process data from a pipe/socket/file/whatever in constant memory&quot;</saying>
+<saying who="SPEEDRAC1ST">sounds like a job for a queue</saying>
+<saying who="okuu">merijn: Then it turns out you want to backtrack, and everything goes to hell.</saying>
+<saying who="rindolf">rockman37: reminds me of that guy who said Visual Basic was essentially the same as C++</saying>
+<saying who="merijn">okuu: So, don&#39;t do that then :)</saying>
+<saying who="merijn">okuu: I have plenty of cases where I don&#39;t need that</saying>
+<saying who="merijn">okuu: If you need backtracking, use STM or something</saying>
+<saying who="okuu">merijn: I have to admit, when you don&#39;t need to backtrack, pipes and conduit are very nice.</saying>
+<saying who="rindolf">rockman37: and then went on to try to create a lossless audio compression that could compress a 40 MB WAV file into 20 kB</saying>
+<saying who="rockman37">rindolf: Well, I wouldn&#39;t touch either :p</saying>
+<saying who="merijn">SPEEDRAC1ST: Yeah, except that all the annoying bits of getting data, putting them in queues, adapting your code to read from them, etc. has all been done for you</saying>
+<saying who="rockman37">rindolf: Lossless?</saying>
+<saying who="mniip">something something yoctoparsec</saying>
+<saying who="rindolf">rockman37: yes</saying>
+<saying who="SPEEDRAC1ST">merijn: by the corresponding librarires?</saying>
+<saying who="merijn">SPEEDRAC1ST: They&#39;re basically a bunch of tools for turning stuff like a parser for a single object you wrote into one that gets fed data on demands and output an object every time it finishes (with further tools to incrementally process those)</saying>
+<saying who="merijn">SPEEDRAC1ST: It&#39;s not earth-shattering rocket science. It&#39;s just a bunch of really convenient tools that I haven&#39;t found an adequate replacement for in other languages</saying>
+<saying who="okuu">merijn: Probably because they aren&#39;t conveniently expressible in other languages. :-p</saying>
+<saying who="mniip">everything is possible when you have programmable semicolons</saying>
+<saying who="rindolf">rockman37: i think he was the one who was going on about that Planet Source Code thingy</saying>
+<saying who="okuu">SPEEDRAC1ST: Think iterators on steroids.</saying>
+<saying who="SPEEDRAC1ST">merijn: ok. I haven&#39;t had that exactly problem, but if I had I&#39;d use something like Elixir&#39;s GenStage</saying>
+<saying who="rockman37">Programmable semicolons sound nasty.</saying>
+<saying who="rockman37">rindolf: Haven&#39;t heard of that.</saying>
+<saying who="mniip">rockman37, ish, perl does that all the time</saying>
+<saying who="rockman37">&quot;4.3 million lines of source code examples and apps to build from.&quot; Hmm...</saying>
+<saying who="rockman37">mniip: Interesting.</saying>
+<saying who="iawc">howdy do dat?</saying>
+<saying who="mniip">anyway, I remotely remember someone saying that monads (their do-block syntax specifically) are just programmable semicolons</saying>
+<saying who="rindolf">rockman37: under a contradictory licence</saying>
+<saying who="rockman37">rindolf: Serves users right, I say.</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

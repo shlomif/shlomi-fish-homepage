@@ -79,7 +79,7 @@ function letsJQuery() {
     var host = location.host;
 
     var h;
-    for ( h_idx in svn_hosts)
+    for (h_idx in svn_hosts)
     {
         h = svn_hosts[h_idx];
         if (h["host_re"].test(host))

@@ -4991,5 +4991,187 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-programming-controlling-starships-using-SQL">
+        <meta>
+            <title>SQL interfaces</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="AbleBacon">mpDrive-&gt;getLoc().list[i]-&gt;stats.getVal()-&gt;val; sometimes i wish object oriented programming was never invented</saying>
+<saying who="GeDaMo">Only sometimes? :P</saying>
+<saying who="rindolf">AbleBacon: https://en.wikipedia.org/wiki/Law_of_Demeter</saying>
+<saying who="AbleBacon">oh my god this law of demeter is exactly the opposite of what we&#39;re doing</saying>
+<saying who="patientplatypus">does anyone know how to programmatically create a subtable in postgres?</saying>
+<saying who="rindolf">patientplatypus: not off hand</saying>
+<saying who="rindolf">patientplatypus: is there an sql syntax for that?</saying>
+<saying who="rindolf">AbleBacon: heh</saying>
+<saying who="GeDaMo">Would a subtable be like a view?</saying>
+<saying who="patientplatypus">errr....</saying>
+<saying who="patientplatypus">i want to basically make a tree of tables</saying>
+<saying who="patientplatypus">like a json object</saying>
+<saying who="rindolf">patientplatypus: sound like it would stand against the normalisation rules</saying>
+<saying who="AbleBacon">what urge would possess you to make something as evil as a tree of tables?</saying>
+<saying who="AbleBacon">i understand the desire to do something to see if it can be done, but us mortals should not meddle in the workings of sorcery</saying>
+<saying who="patientplatypus">im making dnd in sql</saying>
+<saying who="GeDaMo">You might want to look up Common Table Expressions</saying>
+<saying who="rindolf">patientplatypus: the game?</saying>
+<saying who="patientplatypus">yeah</saying>
+<saying who="rindolf">patientplatypus: ah</saying>
+<saying who="patientplatypus">its a challenging problem</saying>
+<saying who="AbleBacon">LOL i&#39;m picturing players taking their turns by submitting database queries with their requests</saying>
+<saying who="patientplatypus">but it would be useful to be able to use a tree structure</saying>
+<saying who="patientplatypus">im just making the game sheet</saying>
+<saying who="GeDaMo">There&#39;s at least one game like that</saying>
+<saying who="patientplatypus">if i get that working that would be a hat trick</saying>
+<saying who="rindolf">patientplatypus: you can encode trees using a table or two</saying>
+<saying who="patientplatypus">hmmm</saying>
+<saying who="AbleBacon">ADD &quot;MOVE, 1&quot; TO TABLE &quot;MOVE_QUEUE_$PLAYER_NAME&quot;</saying>
+<saying who="GeDaMo">AbleBacon: https://schemaverse.com/</saying>
+<saying who="AbleBacon">i always feel like SQL people are screaming</saying>
+<saying who="patientplatypus">AHHHHH</saying>
+<saying who="AbleBacon">&quot;Compete against other players using raw SQL commands to command your fleet.&quot; picard never had to do this</saying>
+<saying who="rindolf">patientplatypus: https://duckduckgo.com/?q=sql+tree&amp;ia=qa</saying>
+<saying who="AbleBacon">&quot;CAPTAIN, we&#39;ve lost control of our primary command instruments! all commands to the ship will have to be issued via MICROSOFT sql queries&quot;</saying>
+<saying who="AbleBacon">&quot;... number one, give the order to abandon ship.&quot;</saying>
+<saying who="rindolf">AbleBacon: heh</saying>
+<saying who="patientplatypus">i may just use lots of tables without the tree - looks overly complicated</saying>
+<saying who="rindolf">patientplatypus: what?</saying>
+<saying who="GeDaMo">Why do you need trees of tables?</saying>
+<saying who="patientplatypus">oh well....i was thinking trees but it just looks like this would be sort of sucky</saying>
+<saying who="Myrl-saki">AbleBacon: I&#39;d be screaming too if I had to write SQL for a living.</saying>
+<saying who="rindolf">patientplatypus: every purpose should have a single table</saying>
+<saying who="AbleBacon">&quot;you adopted capslock for internet arguments... i was born with capslock&quot;</saying>
+<saying who="GeDaMo">I remember computers before lowercase was invented :P</saying>
+<saying who="CashDash123">How is a game like flappy bird ported to so many systems?</saying>
+<saying who="CashDash123">I mean what makes it so easy to port?</saying>
+<saying who="CashDash123">I mean it&#39;s been ported to the snes,gba,etc</saying>
+<saying who="AbleBacon">&quot;captain, our systems are down! we can only match enemy ships for targeting using regex!&quot; &quot;... number one, issue the command &quot;.*&quot;&quot; &quot;but sir there are civi-&quot; &quot;i give up&quot;</saying>
+<saying who="jrslepak">CashDash123: how complex is the game itself?</saying>
+<saying who="CashDash123">no very jrslepak but how was the source code obtained or was it reverse engineered?</saying>
+<saying who="AbleBacon">CashDash123, the logic behind the game is very simple. if it was written in, say, C++ there&#39;s probably a C++ compiler for all of those systems. the only thing that would change really is how to display the graphics</saying>
+<saying who="AbleBacon">ah--birds were the key to the game&#39;s breakthrough into success i see</saying>
+<saying who="AbleBacon">unless the birds are just a RED HERRING!</saying>
+<saying who="AbleBacon">wait--is a herring a fish?</saying>
+<saying who="AbleBacon">or a bird?</saying>
+<saying who="wedr_">Yeah, the Inverse Laws of Game Design, the shorter the jump distance, the more popular it gets via word of mouth</saying>
+<saying who="CashDash123">AbleBacon, the addiction of beating a highscore lead to its popularity</saying>
+<saying who="wedr_">herring is a fish yes</saying>
+<saying who="wedr_">a type of tuna</saying>
+<saying who="rindolf">AbleBacon: heh</saying>
+<saying who="wedr_">salmon, not tuna</saying>
+<saying who="AbleBacon">then we need to invent &quot;flappy herring&quot;</saying>
+<saying who="AbleBacon">avoid sharks and other sea creatures idk</saying>
+<saying who="wedr_">For a warning, I think it&#39;s called red harring.</saying>
+<saying who="wedr_">Or haerring</saying>
+<saying who="AbleBacon">no, &quot;red flag&quot; is a warning. &quot;red herring&quot; is something that distracts you from the real thing</saying>
+<saying who="AbleBacon">shoot i don&#39;t know anymore</saying>
+<saying who="wedr_">red herring is a fish.</saying>
+<saying who="wedr_">:/</saying>
+<saying who="wedr_">red Sirens, maybe?</saying>
+<saying who="jrslepak">it&#39;s also an idiom whose meaning is as AbleBacon described</saying>
+<saying who="wedr_">In Norse mythology, Sirens are blue.</saying>
+<saying who="wedr_">Or was it Greek?</saying>
+<saying who="wedr_">So red Sirens is like the shiny Pokemon that distracts you in real life.</saying>
+<saying who="AbleBacon">all those poor kids getting hit by cars looking at their phones hunting for pokemon</saying>
+<saying who="wedr_">True, Pokemon Go caused kids to get hit more often</saying>
+<saying who="jrslepak">the best solution is to play it on the bus :-P</saying>
+<saying who="AbleBacon">you don&#39;t want to go on the bus in america</saying>
+<saying who="AbleBacon">it is not a nice place</saying>
+<saying who="jrslepak">I was just there a few hours ago</saying>
+<saying who="GeDaMo">Does America only have one bus? :|</saying>
+<saying who="jrslepak">haha</saying>
+<saying who="jrslepak">it seems that way some evenings</saying>
+<saying who="CashDash123">Leads me to question of how were games ported back in the day when you would have to downgrade a game to run on a system?</saying>
+<saying who="GeDaMo">A lot of hard work</saying>
+<saying who="CashDash123">kinda like how lets say you have developed a dreamcast game while also having a linux and windows port</saying>
+<saying who="CashDash123">how does that work or even in reverse</saying>
+<saying who="GeDaMo">The game engine may have to be partly rewritten but the content (graphics etc.) should be reusable</saying>
+<saying who="CashDash123">I mean I was thinking in a similar vain to Elysian Shadows which I&#39;m pretty sure was designed around the dreamcast</saying>
+<saying who="CashDash123">Which was tweaked most likey</saying>
+<saying who="CashDash123">that or I may also get an Idea by reading quora</saying>
+<saying who="GeDaMo">Hmmm ... there&#39;s a #dreamcastdev channel</saying>
+<saying who="horny-sama">GeDaMo: I thought dreamcast was stuff before I was born. Surprised that people still dev for it</saying>
+<saying who="GeDaMo">There&#39;s a also an #elysian_shadows channel but only one person in it</saying>
+<saying who="GeDaMo">People still develop for a lot of old systems</saying>
+<saying who="CashDash123">It&#39;s been chronicled on youtube since they were in high school in 2007</saying>
+<saying who="CashDash123">horny-sama, The Dreamcast due to it&#39;s discontinuation date makes it more common to have a system without protection from playing burned cdr&#39;s though it&#39;s bad for the laser</saying>
+<saying who="AbleBacon">&quot;bad for the laser&quot;--a likely story</saying>
+<saying who="patientplatypus">ok</saying>
+<saying who="patientplatypus">im confused</saying>
+<saying who="CashDash123">AbleBacon, well it was designed for GD-ROM</saying>
+<saying who="AbleBacon">how could it damage the laser, though?</saying>
+<saying who="AbleBacon">lasers don&#39;t have any moving parts!</saying>
+<saying who="patientplatypus">so here&#39;s my question: if i have a table with a, b, c, d, e and I want each of those 5 letters to reference 5 different tables A, B, C, D, E how would I do this in postgresql? I can link tables by foreign/primary key but I cant see how they actually reference the value its linking to</saying>
+<saying who="patientplatypus">so</saying>
+<saying who="GeDaMo">Why do you have 5 different tables?</saying>
+<saying who="patientplatypus">in dnd you have paladin, fighter, etc. I want each of those items to link to a table that contains their statistics. So one table with classnames, several linked tables with different statistics</saying>
+<saying who="grouse">GeDaMo, gotta have redundant table in case bobby drops them ;)</saying>
+<saying who="GeDaMo">Why can&#39;t this be in one table?</saying>
+<saying who="AbleBacon">all classes have strength, intelligence, etc. you should have one table for shared characteristics of all classes</saying>
+<saying who="patientplatypus">because each class is entirely different from another</saying>
+<saying who="AbleBacon">oh i see what you&#39;re saying</saying>
+<saying who="patientplatypus">well like wizard and fighter are so different that the tables need to be totally separate</saying>
+<saying who="patientplatypus">the way sql seems to want to work is that it just replicates tables in a single customer/many purchases type pattern</saying>
+<saying who="patientplatypus">does anyone have any suggestions? im totally lost and have been staring at this for a while</saying>
+<saying who="GeDaMo">I&#39;m having difficulty visualising your DB structure</saying>
+<saying who="patientplatypus">so one table for classes (fighter, wizard, etc)</saying>
+<saying who="patientplatypus">each class will have its one table - fighter table, wizard table, paladin table</saying>
+<saying who="patientplatypus">with their own special statistics on each</saying>
+<saying who="GeDaMo">What fields do these tables have?</saying>
+<saying who="patientplatypus">each table will have entirely different fields (this is the problem- if they were similar it would not be an issue). so fighter has swords and fighting, and wizard would have spells etc</saying>
+<saying who="patientplatypus">i need what is essentially some sort of tree/json like hiearchy but in sql</saying>
+<saying who="patientplatypus">ltree seems very confusing</saying>
+<saying who="patientplatypus">what do you mean beaky?</saying>
+<saying who="GeDaMo">What do these tables represent? Are they like D&amp;D character sheets?</saying>
+<saying who="horny-sama">CashDash123: gd-rom?</saying>
+<saying who="GeDaMo">Yeah, IRC will do that to you :|</saying>
+<saying who="CashDash123">horny-sama, It was Sega&#39;s specialized cd I think the reason the burned cd exploit had to do something with an exploit with the mil-cd format</saying>
+<saying who="CashDash123">though</saying>
+<saying who="horny-sama">Is it safe to assume that gd-rom is out of production</saying>
+<saying who="CashDash123">https://en.wikipedia.org/wiki/GD-ROM horny-sama</saying>
+<saying who="horny-sama">CashDash123: did not say if it is out of production or not</saying>
+<saying who="CashDash123">I don&#39;t think anyone can press there games to GD-Rom anymore.</saying>
+<saying who="CashDash123">I don&#39;t acually even own a dreamcast I just learned abit about it</saying>
+<saying who="CashDash123">long ago</saying>
+<saying who="horny-sama">good luck with whatever you are doing</saying>
+<saying who="horny-sama">sounds cool</saying>
+<saying who="CashDash123">I figured it out hombre is pressed to mil-cd&#39;s</saying>
+<saying who="xeno">why would anyone wanna press things onto GD-Ros anymore?</saying>
+<saying who="xeno">or why am I asking?</saying>
+<saying who="CashDash123">don&#39;t qoute me on that</saying>
+<saying who="CashDash123">quote</saying>
+<saying who="horny-sama">xeno: I think CashDash123 is doing some dreamcast dev</saying>
+<saying who="CashDash123">horny-sama, I&#39;m not</saying>
+<saying who="horny-sama">CashDash123: so just quest for knowledge?</saying>
+<saying who="xeno">horny-sama: yeah, but why?</saying>
+<saying who="CashDash123">It would just be a good place to get an Idea of how a game is ported</saying>
+<saying who="xeno">horny-sama: it&#39;s like the  worst waste of time</saying>
+<saying who="horny-sama">xeno: different people have different hobby</saying>
+<saying who="xeno">yeah I know</saying>
+<saying who="AbleBacon">oh no... we&#39;re resorting to &quot;scrum&quot; meetings every morning. things must be getting really desperate.</saying>
+<saying who="CashDash123">I mean how games are made for old consoles really is interesting</saying>
+<saying who="horny-sama">AbleBacon: ?</saying>
+<saying who="AbleBacon">at my work</saying>
+<saying who="AbleBacon">and they pay me and all i have to do is not die</saying>
+<saying who="GeDaMo">https://upload.wikimedia.org/wikipedia/commons/b/bd/Scrum-1.JPG</saying>
+<saying who="horny-sama">AbleBacon: in other words, you are their basic bitch</saying>
+<saying who="CashDash123">horny-sama, You could say that,and I really wanted a dreamcast a long time ago</saying>
+<saying who="AbleBacon">it&#39;s not a giant wrestling orgy; it&#39;s a management technique</saying>
+<saying who="GeDaMo">Why not both? :D</saying>
+<saying who="horny-sama">AbleBacon: just hope you made your fuck you money soon so you can quit</saying>
+<saying who="horny-sama">lol</saying>
+<saying who="Rounin">AbleBacon: Your team just needs to move their organization to Sloth® so that all of their personal data can be sold to advertisers</saying>
+<saying who="Rounin">Then you&#39;ll be truly efficient</saying>
+<saying who="Rounin">And of course SourceHub™ to organize your Packer images</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

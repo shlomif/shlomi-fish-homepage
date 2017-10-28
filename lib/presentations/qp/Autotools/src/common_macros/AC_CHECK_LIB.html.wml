@@ -3,7 +3,7 @@
 
 <points>
 <li>
-<tt>AC_CHECK_LIB</tt> checks for a presence of a symbol inside a library.
+<code>AC_CHECK_LIB</code> checks for a presence of a symbol inside a library.
 </li>
 
 <li>
@@ -12,8 +12,8 @@ if it succeeds or fails.
 </li>
 
 <li>
-If it succeeds it will prepend <tt>-l[library]</tt> to compiler flags,
-and define the preprocessor macro <tt>HAVE_LIB[library]</tt>.
+If it succeeds it will prepend <code>-l[library]</code> to compiler flags,
+and define the preprocessor macro <code>HAVE_LIB[library]</code>.
 </li>
 
 <li>

@@ -4,14 +4,14 @@
 
 <p>
 POD sections start with a single POD directive on a new line and continue
-up to the next <tt>=cut</tt> directive also on a line of its own. Here are
+up to the next <code>=cut</code> directive also on a line of its own. Here are
 some POD directives:
 </p>
 
 <h3 id="pod-demo-headers">Headers</h3>
 
 <p>
-<tt>=head1</tt>, <tt>=head2</tt>, <tt>=head3</tt>, etc. - these are headers.
+<code>=head1</code>, <code>=head2</code>, <code>=head3</code>, etc. - these are headers.
 The lower the header number is, the more significant it is and the bigger
 font will be used for it. Headers are followed by the text of the header.
 For example:
@@ -50,43 +50,43 @@ One can use some formatting codes:
 <ul>
 
 <li>
-<tt>I&lt;text&gt;</tt> - for italic text.
+<code>I&lt;text&gt;</code> - for italic text.
 </li>
 
 <li>
-<tt>B&lt;text&gt;</tt> - for bold text.
+<code>B&lt;text&gt;</code> - for bold text.
 </li>
 
 <li>
-<tt>C&lt;text&gt;</tt> - for code (monospace) text.
+<code>C&lt;text&gt;</code> - for code (monospace) text.
 </li>
 
 <li>
-<tt>L&lt;text&gt;</tt> - hyperlinks - see
+<code>L&lt;text&gt;</code> - hyperlinks - see
 <a href="http://perldoc.perl.org/perlpod.html">perldoc perlpod</a> for
 more information.
 </li>
 
 <li>
-<tt>E&lt;lt&gt;</tt> , <tt>E&lt;gt&gt;</tt> , <tt>E&lt;htmlname&gt;</tt>,
+<code>E&lt;lt&gt;</code> , <code>E&lt;gt&gt;</code> , <code>E&lt;htmlname&gt;</code>,
 etc. are escapes.
 </li>
 </ul>
 
 <p>
 One should note that one can combine several styles at once using
-<tt>BI&lt; ... &gt;</tt> notation. Furthermore, one can enclose text with
-special characters (such as <tt>&lt;</tt> and <tt>&gt;</tt>) using
-several <tt>&lt;&lt;&lt;</tt> and trailing <tt>&gt;&gt;&gt;</tt> characters.
+<code>BI&lt; ... &gt;</code> notation. Furthermore, one can enclose text with
+special characters (such as <code>&lt;</code> and <code>&gt;</code>) using
+several <code>&lt;&lt;&lt;</code> and trailing <code>&gt;&gt;&gt;</code> characters.
 </p>
 
 <h3 id="pod-demo-lists">Lists</h3>
 
 <p>
-One can use lists in POD by writing <tt>=over 4</tt> (or some other value
-of indent-level instead of "4"), and then several <tt>=item</tt>'s and
-finally <tt>=back</tt>. An item can be <tt>=item *</tt> for a bullet,
-<tt>=item 1.</tt> to produce numbered lists or <tt>=item title</tt> to
+One can use lists in POD by writing <code>=over 4</code> (or some other value
+of indent-level instead of "4"), and then several <code>=item</code>'s and
+finally <code>=back</code>. An item can be <code>=item *</code> for a bullet,
+<code>=item 1.</code> to produce numbered lists or <code>=item title</code> to
 produce a definition list.
 </p>
 

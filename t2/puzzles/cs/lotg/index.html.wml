@@ -15,9 +15,9 @@ it is Turing-complete. Here is an explanation of it.
 <p>
 Lotg is defined on a memory in which there is a cell associated with every
 integral number (positive, negative and zero), and every cell can contain
-one integral value. The cells will be marked as <tt>m[i]</tt> where
-<tt>i</tt> is the index of the cell. There are two registers - “pointer” and
-“register” which will be marked as <tt>r</tt> and <tt>p</tt>.
+one integral value. The cells will be marked as <code>m[i]</code> where
+<code>i</code> is the index of the cell. There are two registers - “pointer” and
+“register” which will be marked as <code>r</code> and <code>p</code>.
 </p>
 
 <p>
@@ -26,22 +26,22 @@ The following instructions are defined:
 
 <ol>
 <li>
-<tt>p &larr; i</tt>, where <tt>i</tt> is any integral parameter. This
+<code>p &larr; i</code>, where <code>i</code> is any integral parameter. This
 is the only instruction that accepts an arbitrary parameter.
 </li>
 <li>
-<tt>r &larr; r+p</tt>
+<code>r &larr; r+p</code>
 </li>
 <li>
-<tt>p &larr; m[p]</tt>
+<code>p &larr; m[p]</code>
 </li>
 <li>
-<tt>m[p] &larr; r ; r &larr; 0</tt> - a composite instruction doing
+<code>m[p] &larr; r ; r &larr; 0</code> - a composite instruction doing
 two instructions one after the other.
 </li>
 <li>
-<tt>if r&gt;0 jump to p</tt> (If <tt>r</tt> is greater than 0 jump to the
-instruction whose index is <tt>p</tt>).
+<code>if r&gt;0 jump to p</code> (If <code>r</code> is greater than 0 jump to the
+instruction whose index is <code>p</code>).
 </li>
 </ol>
 

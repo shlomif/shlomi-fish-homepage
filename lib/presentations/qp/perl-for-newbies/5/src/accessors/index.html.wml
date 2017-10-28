@@ -4,9 +4,9 @@
 Object accessors are a way to abstract access to an object's member variables
 (also known as “properties”, “attributes”, “fields”, “slots”, etc.) behind
 method
-calls. For example we can use <tt>$person-&gt;age()</tt> to get the age
-of <tt>$person</tt> and <tt>$person-&gt;age(21)</tt> or
-<tt>$person-&gt;set_age(21)</tt> to set their age to 21.
+calls. For example we can use <code>$person-&gt;age()</code> to get the age
+of <code>$person</code> and <code>$person-&gt;age(21)</code> or
+<code>$person-&gt;set_age(21)</code> to set their age to 21.
 </p>
 
 <p>

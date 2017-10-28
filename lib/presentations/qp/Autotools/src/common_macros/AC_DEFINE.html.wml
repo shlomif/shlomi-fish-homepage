@@ -3,7 +3,7 @@
 
 <points>
 <li>
-The macro <tt>AC_DEFINE</tt> can be used anywhere in the script, to define
+The macro <code>AC_DEFINE</code> can be used anywhere in the script, to define
 a C preprocessor macro.
 </li>
 
@@ -13,7 +13,7 @@ It accepts an optional argument indicating the value of the macro.
 
 <li>
 If you want to do shell expansion for the value,
-use <tt>AC_DEFINE_UNQUOTED</tt> instead.
+use <code>AC_DEFINE_UNQUOTED</code> instead.
 </li>
 
 <li>

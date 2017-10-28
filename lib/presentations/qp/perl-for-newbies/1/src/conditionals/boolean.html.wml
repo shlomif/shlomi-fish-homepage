@@ -11,8 +11,8 @@ For doing this, Perl supplies boolean operators.
 <h2>&amp;&amp;</h2>
 
 <p>
-<tt>$x &amp;&amp; $y</tt> evaluates to true if both <tt>$x</tt> and <tt>$y</tt> are true.
-It is called the “logical and” of the two operands <tt>$x</tt> and <tt>$y</tt>.
+<code>$x &amp;&amp; $y</code> evaluates to true if both <code>$x</code> and <code>$y</code> are true.
+It is called the “logical and” of the two operands <code>$x</code> and <code>$y</code>.
 </p>
 
 </td>
@@ -22,7 +22,7 @@ It is called the “logical and” of the two operands <tt>$x</tt> and <tt>$y</t
 <h2>||</h2>
 
 <p>
-<tt>$x || $y</tt> (called the “logical or” of <tt>$x</tt> and <tt>$y</tt>) is
+<code>$x || $y</code> (called the “logical or” of <code>$x</code> and <code>$y</code>) is
 evaluated to true if one or both of its operands are true.
 </p>
 
@@ -34,8 +34,8 @@ evaluated to true if one or both of its operands are true.
 <h2>!</h2>
 
 <p>
-<tt>! $x</tt> (pronounced “not <tt>$x</tt>”) evaluates to true
-if <tt>$x</tt> is false.
+<code>! $x</code> (pronounced “not <code>$x</code>”) evaluates to true
+if <code>$x</code> is false.
 </p>
 
 </td>
@@ -44,8 +44,8 @@ if <tt>$x</tt> is false.
 
 <p>
 Note that if the first operand is evaluated to false in an
-<tt>&amp;&amp;</tt> operation, the second operand will not be evaluated at
-all. Similarly, if the first operand of <tt>||</tt> was found to be true,
+<code>&amp;&amp;</code> operation, the second operand will not be evaluated at
+all. Similarly, if the first operand of <code>||</code> was found to be true,
 the second one will not be evaluated either.
 </p>
 
@@ -67,7 +67,7 @@ them to variables first.
 </quadpres_code_block>
 
 <p>
-Note: The function <tt>lc()</tt> converts a string to lowercase.
+Note: The function <code>lc()</code> converts a string to lowercase.
 </p>
 
 

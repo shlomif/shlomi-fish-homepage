@@ -32,9 +32,9 @@ the other hand, does enter such functions.
 </p>
 
 <p>
-To step over type <tt>n</tt> (short for "next") followed by enter
+To step over type <code>n</code> (short for "next") followed by enter
 , and you'll see the next perl command displayed. To step in type
-<tt>s</tt> (short for "step").
+<code>s</code> (short for "step").
 </p>
 
 <p>
@@ -63,7 +63,7 @@ main::(add_cr.pl:11):	    open my $in, "&lt;", $file;
 
 <p>
 Note that sometimes an expression will take more than one step over to
-pass. Operations such as <tt>map</tt>, <tt>sort</tt> and friends are especially
+pass. Operations such as <code>map</code>, <code>sort</code> and friends are especially
 notorious for that. Breakpoints that will be covered in the next slide
 offer a solution to this problem.
 </p>

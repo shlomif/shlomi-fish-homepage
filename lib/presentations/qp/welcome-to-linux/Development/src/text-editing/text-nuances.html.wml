@@ -40,7 +40,7 @@ The problem is that some Linux tools will not tolerate CRs at the end
 of lines, so they have to be removed somehow.
 </li>
 <li>
-You can use the following command: <tt>perl -pi -e 's/\r$//' [files]</tt>
+You can use the following command: <code>perl -pi -e 's/\r$//' [files]</code>
 to convert files from DOS-style to Windows-style.
 </li>
 </points>

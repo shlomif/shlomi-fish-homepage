@@ -2,11 +2,11 @@
 
 <points>
 <li>
-The <tt>Games::LMSolve::Input</tt> module is a utility module used for
+The <code>Games::LMSolve::Input</code> module is a utility module used for
 inputting the board layouts.
 </li>
 <li>
-Its board is a set of <tt>key = value</tt> pairs where there are several
+Its board is a set of <code>key = value</code> pairs where there are several
 types of values. Namely, integers, X-Y pairs, Start-End pairs, and arrays
 are supported. (albeit not all possible combinations).
 </li>

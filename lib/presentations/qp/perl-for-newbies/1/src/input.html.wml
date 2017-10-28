@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-In order to receive a value from the user, perl supplies the <tt>&lt;&gt;</tt>
+In order to receive a value from the user, perl supplies the <code>&lt;&gt;</code>
 operator. When entered, this operator reads a line from the command line, and
 returns it (along with the newline character).
 </p>
@@ -13,7 +13,7 @@ returns it (along with the newline character).
 </quadpres_code_block>
 
 <p>
-Notice the <tt>chomp</tt> function which strips off the trailing
+Notice the <code>chomp</code> function which strips off the trailing
 newline character from the variable. You would usually want to use it,
 when getting input from the user.
 </p>

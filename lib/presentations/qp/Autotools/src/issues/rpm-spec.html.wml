@@ -3,25 +3,25 @@
 <points>
 <li>
 To generate an RPM Spec, include a template for the RPM as
-<tt>mypackage.spec.in</tt> in the main directory of the package.
+<code>mypackage.spec.in</code> in the main directory of the package.
 </li>
 
 <li>
-The template is identical to the spec except that the <tt>Version:</tt>
-field should contain <tt>@VERSION@</tt> as its contents.
+The template is identical to the spec except that the <code>Version:</code>
+field should contain <code>@VERSION@</code> as its contents.
 </li>
 
 <li>
-Add <tt>mypackage.spec</tt> to <tt>AC_OUTPUT</tt>.
+Add <code>mypackage.spec</code> to <code>AC_OUTPUT</code>.
 </li>
 
 <li>
-And add both <tt>mypackage.spec</tt> and <tt>mypackage.spec.in</tt> to the
-<tt>EXTRA_DIST</tt> of <tt>Makefile.am</tt>.
+And add both <code>mypackage.spec</code> and <code>mypackage.spec.in</code> to the
+<code>EXTRA_DIST</code> of <code>Makefile.am</code>.
 </li>
 
 <li>
-Now, invoking <tt>rpm -tb</tt> with the archive name as a parameter would
+Now, invoking <code>rpm -tb</code> with the archive name as a parameter would
 build an RPM out of it.
 </li>
 

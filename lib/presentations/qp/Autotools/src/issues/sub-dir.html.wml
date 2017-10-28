@@ -4,12 +4,12 @@
 <points>
 
 <li>
-To have a directory with its own separate <tt>configure</tt> script, first
-put it in the <tt>SUBDIRS</tt> variable of Makefile.am
+To have a directory with its own separate <code>configure</code> script, first
+put it in the <code>SUBDIRS</code> variable of Makefile.am
 </li>
 
 <li>
-Then use the <tt>AC_CONFIG_SUBDIRS</tt> macro in <tt>configure.in</tt> to
+Then use the <code>AC_CONFIG_SUBDIRS</code> macro in <code>configure.in</code> to
 configure them as separate sub-directories.
 </li>
 

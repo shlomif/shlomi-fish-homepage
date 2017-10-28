@@ -3,12 +3,12 @@
 <points>
 <li>
 Valgrind does not require special compilation. You simply execute it like
-so: <tt>valgrind --num-callers=15 progname</tt>. It will run the program
-<tt>progname</tt> and intercept calls to malloc/free/new/delete and
+so: <code>valgrind --num-callers=15 progname</code>. It will run the program
+<code>progname</code> and intercept calls to malloc/free/new/delete and
 monitor all memory uses.
 </li>
 <li>
-Another useful flag is <tt>--gdb-attach=yes</tt> that invokes gdb on the
+Another useful flag is <code>--gdb-attach=yes</code> that invokes gdb on the
 process when errors are detected, and let you debug the place of the
 error.
 </li>
@@ -44,12 +44,12 @@ blocks were allocated/freed.
 Valgrind is most probably not installed on the Linux box you are working on,
 however installation is trivial and fairly quick: download, unpack and then
 run one after another:<br />
-<tt>./configure</tt><br />
-<tt>make</tt><br />
-<tt>make install</tt><br />
+<code>./configure</code><br />
+<code>make</code><br />
+<code>make install</code><br />
 </li>
 <li>
 Valgrind's manual is available in the distribution directory under
-<tt>docs/index.html</tt>.
+<code>docs/index.html</code>.
 </li>
 </points>

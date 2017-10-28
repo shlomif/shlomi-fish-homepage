@@ -73,7 +73,7 @@ https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fict
 <li>
 <p>
 <a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under
-<tt>t/fiction/data/</tt> in the distribution (mostly in English).
+<code>t/fiction/data/</code> in the distribution (mostly in English).
 </p>
 </li>
 
@@ -110,7 +110,7 @@ Fiction-Text.
 <p>
 <a href="<url_to_data_examples base="screenplay" />"><b>Distributed
 Examples</b></a>- there are some short and silly examples
-in the <tt>t/screenplay/data</tt> directory in the distribution.
+in the <code>t/screenplay/data</code> directory in the distribution.
 </p>
 </li>
 
@@ -190,8 +190,8 @@ there were:
 
 <li>
 <p>
-New tags - <tt>&lt;ol&gt;</tt>, <tt>&lt;ul&gt;</tt>, <tt>&lt;li&gt;</tt>,
-<tt>&lt;programlisting&gt;</tt> and <tt>&lt;a href=&gt;</tt> (the
+New tags - <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>,
+<code>&lt;programlisting&gt;</code> and <code>&lt;a href=&gt;</code> (the
 latter for for hypertext.)
 </p>
 </li>
@@ -211,14 +211,14 @@ An XSLT stylesheet to convert Screenplay-Text to
 
 <li>
 <p>
-Got rid of the <tt>&lt;!DOCTYPE…</tt> declaration in the Screenplay-XML
+Got rid of the <code>&lt;!DOCTYPE…</code> declaration in the Screenplay-XML
 output. It made debugging difficult and was not necessary.
 </p>
 </li>
 
 <li>
 <p>
-Add support for numeric entities such as <tt>&amp;#91;</tt>.
+Add support for numeric entities such as <code>&amp;#91;</code>.
 </p>
 </li>
 

@@ -2,8 +2,8 @@
 
 <p>
 Standard CPAN and CPAN-like Perl packages contain their tests as a group
-of <tt>*.t</tt> under the sub-directory <tt>t/</tt>, and allow running them
-by invoking the <tt>make test</tt> or <tt>./Build test</tt> commands.
+of <code>*.t</code> under the sub-directory <code>t/</code>, and allow running them
+by invoking the <code>make test</code> or <code>./Build test</code> commands.
 </p>
 
 <p>
@@ -20,7 +20,7 @@ can later be uploaded to CPAN for sharing with other users and developers.
 
 <p>
 Here’s an example of testing a CPAN distribution from CPAN using
-<tt>./Build test</tt>:
+<code>./Build test</code>:
 </p>
 
 <quadpres_code_block>

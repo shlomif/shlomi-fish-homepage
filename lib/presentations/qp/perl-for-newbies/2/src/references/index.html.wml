@@ -17,7 +17,7 @@ possible but quite meaningless.
 
 <li>
 A reference is guaranteed to remain the same even if an array or a string are
-resized. In C, <tt>realloc</tt>ing an array yields a completely different
+resized. In C, <code>realloc</code>ing an array yields a completely different
 pointer.
 </li>
 </ol>

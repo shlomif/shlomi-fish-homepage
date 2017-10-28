@@ -302,7 +302,7 @@ Alternatively, if you want to have a server-side generated web-site you need
 to make sure it doesn’t have SQL injection attacks, Cross-Site Scripting (or
 HTML injection or XSS) attacks, privilege escalation, comment or wiki spam
 (see <a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html">the
-<tt>rel="nofollow"</tt> attribute</a> for instance), or any other security problem.
+<code>rel="nofollow"</code> attribute</a> for instance), or any other security problem.
 This requires much more conscious effort and discipline than a plain HTML site.
 </p>
 
@@ -399,7 +399,7 @@ for more information.
 <p>
 Aside from being markup, your markup should be semantically correct. So, for
 example if you want to make a text larger, you should use CSS instead of
-designating it as a heading (<tt>&lt;h1&gt;</tt>, <tt>&lt;h2&gt;</tt>, etc.).
+designating it as a heading (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.).
 </p>
 
 
@@ -494,12 +494,12 @@ hate it. Some people completely disable Flash on their default browsers.
 <h5 id="pres_nice_urls">Nice URLs</h5>
 
 <p>
-Imagine the URL <tt>http://www.myhost.tld/index.php?section=about&amp;subsection=personal&amp;page=bio</tt>.
+Imagine the URL <code>http://www.myhost.tld/index.php?section=about&amp;subsection=personal&amp;page=bio</code>.
 Such URLs that contain an excessive amount of CGI parameters are hideous. A
 good site is served on the root, and uses nice URLs with slashes. Something
-like <tt>http://www.myhost.tld/about/personal/bio/</tt>. Assuming you’re using
+like <code>http://www.myhost.tld/about/personal/bio/</code>. Assuming you’re using
 a server-side scripting technology, you can easily implement it using the
-<tt>PATH_INFO</tt> environment variable. (You should avoid using Apache’s
+<code>PATH_INFO</code> environment variable. (You should avoid using Apache’s
 mod_rewrite and friends for that, because they cause a lot of trouble for
 such things).
 </p>
@@ -518,7 +518,7 @@ how to appropriately section and sub-section your home site.
 
 <p>
 A good site shouldn’t have any links like
-<tt>http://www.mysite.tld/some/place/</tt> within the site, as they will break
+<code>http://www.mysite.tld/some/place/</code> within the site, as they will break
 if the site moves to a different place. Preferably, no links that begin with
 slash, should be present, either, because they will break if more components
 are added or removed to the beginning of the site. Coding a logic that will
@@ -549,7 +549,7 @@ with it, but there are many others).
 On the other hand, preventing legitimate users from sending you mail just by
 pressing a link at the bottom is going to make everyone annoyed. So make sure
 you have a link like
-<tt>&lt;a href="mailto:webmaster@myhost.tld"&gt;webmaster@myhost.tld&lt;/a&gt;</tt>
+<code>&lt;a href="mailto:webmaster@myhost.tld"&gt;webmaster@myhost.tld&lt;/a&gt;</code>
 at the bottom of all your pages.
 </p>
 
@@ -781,8 +781,8 @@ control system, allows you to keep the entire history of the pages, view the
 difference between two versions, and easily perform rollbacks.
 </p>
 <p>
-The various ad-hoc ways of version control like keeping <tt>.bak</tt>,
-<tt>.bak2</tt>, etc. files or keeping periodic archives, are not as robust,
+The various ad-hoc ways of version control like keeping <code>.bak</code>,
+<code>.bak2</code>, etc. files or keeping periodic archives, are not as robust,
 or failsafe as using a true version control system.
 </p>
 <p>

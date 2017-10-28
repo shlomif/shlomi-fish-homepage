@@ -9,17 +9,17 @@
 <li>
 מרגע שיש לכם apt יש לבקש ממנו לעדכן את רשימת החבילות המקומית המצביעה
 לחבילות הרחוקות מהמקורות ממנו הוא מתקין באמצעות הפקודה
-<tt dir="ltr">apt-get update</tt>.
+<code dir="ltr">apt-get update</code>.
 </li>
 <li>
 כדי להתקין חבילה מרוחקת חדשה עם כל החבילות בהן היא תלויה יש להקיש את
 הפקודה
-<tt dir="ltr">apt-get install [package name]</tt>.
+<code dir="ltr">apt-get install [package name]</code>.
 </li>
 <li>
 כדי לחפש תוכנית במאגר של apt באמצעות מילות מפתח כמו "image" יש לבצע את
 הפקודה:
-<tt dir="ltr">apt-cache search image</tt>.
+<code dir="ltr">apt-cache search image</code>.
 </li>
 <li>
 ממשק גרפי טוב ל-apt הוא synaptic.

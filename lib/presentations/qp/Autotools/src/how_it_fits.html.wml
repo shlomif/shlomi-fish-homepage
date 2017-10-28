@@ -2,25 +2,25 @@
 
 <points>
 <li>
-Automake takes as input the file <tt>Makefile.am</tt> and produces
-<tt>Makefile.in</tt>.
+Automake takes as input the file <code>Makefile.am</code> and produces
+<code>Makefile.in</code>.
 </li>
 
 <li>
-The "autoconf" program takes as input the file <tt>configure.in</tt>
-(or in Autoconf 2.5 the file <tt>configure.ac</tt>) and generates the
-<tt>./configure</tt> script out of it.
+The "autoconf" program takes as input the file <code>configure.in</code>
+(or in Autoconf 2.5 the file <code>configure.ac</code>) and generates the
+<code>./configure</code> script out of it.
 </li>
 
 <li>
-Autoheader takes as input the files <tt>acconfig.h</tt> and generates the
-<tt>config.h.in</tt> template by parsing <tt>configure.in</tt>.
+Autoheader takes as input the files <code>acconfig.h</code> and generates the
+<code>config.h.in</code> template by parsing <code>configure.in</code>.
 </li>
 
 <li>
-<tt>./configure</tt>, when ran by the user generates the normal
-<tt>Makefile</tt> out of <tt>Makefile.in</tt> and optionally processes other
-files (such as <tt>config.h.in</tt> -&gt; <tt>config.h</tt>, an optional
+<code>./configure</code>, when ran by the user generates the normal
+<code>Makefile</code> out of <code>Makefile.in</code> and optionally processes other
+files (such as <code>config.h.in</code> -&gt; <code>config.h</code>, an optional
 RPM Spec, Makefiles in other directories, etc.
 </li>
 

@@ -20,7 +20,7 @@ Raises "a" to the power of "b". Works on floating point numbers too.
 <h2>a . b</h2>
 
 <p>
-Concatenates two strings. The comma (<tt>,</tt>) as used by print does not
+Concatenates two strings. The comma (<code>,</code>) as used by print does not
 really concatenates two strings, but rather prints them one after the other.
 (There's a subtle difference in functionality of the print command too, but we
 won't get into that, now).
@@ -40,7 +40,7 @@ integers they are rounded to an integral value.
 <h2>( sub-expr )</h2>
 
 <p>
-Makes sure that <tt>sub-expr</tt> is evaluated as a separate sub-expression
+Makes sure that <code>sub-expr</code> is evaluated as a separate sub-expression
 , an operation that could override the default operator precedence.
 </p>
 

@@ -11,9 +11,9 @@ type the following code fragment near the beginning of the module:
 </quadpres_code_block>
 
 <p>
-What this fragment does is make the module inherit the <tt>Exporter</tt>
+What this fragment does is make the module inherit the <code>Exporter</code>
 module which is a special Perl module that can export symbols. Then
-it declares the special variable <tt>@EXPORT</tt> which should be filled
+it declares the special variable <code>@EXPORT</code> which should be filled
 with all the functions that one wishes to export.
 </p>
 
@@ -31,7 +31,7 @@ Here is an example which has a module called "Calc" and a script that uses it:
 
 <p>
 As you can see, the script invokes the "gcd" function of the "Calc" module
-without having to invoke it with <tt>Calc::gcd()</tt>. Exporting functions
+without having to invoke it with <code>Calc::gcd()</code>. Exporting functions
 like that should be used with care, as the function names may conflict with
 those of the importing namespace.
 </p>

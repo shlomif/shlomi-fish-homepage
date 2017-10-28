@@ -7,8 +7,8 @@ and usually is, another variable.
 </p>
 
 <p>
-To refer to the <tt>$i</tt>'th element of the array <tt>@myarray</tt>, one uses
-the syntax <tt>$myarray[$i]</tt>. This element can be assigned to or its
+To refer to the <code>$i</code>'th element of the array <code>@myarray</code>, one uses
+the syntax <code>$myarray[$i]</code>. This element can be assigned to or its
 value can be retrieved, with the same notation.
 </p>
 
@@ -27,10 +27,10 @@ The following program prints the primes up to 200:
 </quadpres_code_block>
 
 <p>
-The notation <tt>scalar(@myarray)</tt> can be used to refer to the number
+The notation <code>scalar(@myarray)</code> can be used to refer to the number
 of elements in an array. This number is equal to the maximal index which
 was assigned in the array plus one. You will also see the notation
-<tt>$#myarray</tt> which is equal to the maximal index itself (or -1 if the
+<code>$#myarray</code> which is equal to the maximal index itself (or -1 if the
 array is empty).
 </p>
 

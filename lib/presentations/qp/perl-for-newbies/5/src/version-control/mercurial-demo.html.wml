@@ -45,7 +45,7 @@ manager, or by downloading an installer from the
 </p>
 
 <p>
-Then create a new empty directory and run <tt>hg init .</tt>:
+Then create a new empty directory and run <code>hg init .</code>:
 </p>
 
 <quadpres_code_block>
@@ -54,7 +54,7 @@ $p4n/5/merc-test$ hg init .
 
 <p>
 Now let's add some files. Start your favourite text editor and put these
-contents in the file <tt>MyModule.pm</tt>:
+contents in the file <code>MyModule.pm</code>:
 </p>
 
 <quadpres_code_block>
@@ -76,7 +76,7 @@ $p4n/5/merc-test/MyModule$ hg status
 </quadpres_code_block>
 
 <p>
-As we can see from the output of <tt>hg status</tt>, the file is not
+As we can see from the output of <code>hg status</code>, the file is not
 tracked. Let's add it:
 </p>
 
@@ -88,7 +88,7 @@ $p4n/5/merc-test/MyModule$
 </quadpres_code_block>
 
 <p>
-Now the file is scheduled to be committed (note the <tt>A</tt>). Let's
+Now the file is scheduled to be committed (note the <code>A</code>). Let's
 commit it:
 </p>
 
@@ -99,7 +99,7 @@ $p4n/5/merc-test/MyModule$
 </quadpres_code_block>
 
 <p>
-We can see it in the output of the version control command <tt>hg log</tt>,
+We can see it in the output of the version control command <code>hg log</code>,
 which, as it name implies, gives a log of what has been done in the past:
 </p>
 
@@ -142,7 +142,7 @@ $p4n/5/merc-test/MyModule$
 </quadpres_code_block>
 
 <p>
-And let's commit it as well by using <tt>hg commit</tt>.
+And let's commit it as well by using <code>hg commit</code>.
 </p>
 
 <quadpres_code_block>
@@ -299,7 +299,7 @@ M mytest.t
 
 <p>
 Two files are changed  in the working copy. We can now put them in the
-repository using <tt>hg commit</tt>:
+repository using <code>hg commit</code>:
 </p>
 
 <quadpres_code_block>

@@ -4,7 +4,7 @@
 
 <p>
 One can specify several possible matching for an expression to match with
-<tt>|</tt>.  For instance, <tt>dog|cat|mouse</tt> will match either "dog" or
+<code>|</code>.  For instance, <code>dog|cat|mouse</code> will match either "dog" or
 "cat" or "mouse".  But naturally the options can themselves be regular
 expression which are as complex as perl supports.
 </p>
@@ -12,7 +12,7 @@ expression which are as complex as perl supports.
 <p>
 The alternation operator will try to match as much of the expression as it can,
 so it is recommended to use grouping to bound it.
-(e.g: <tt>(?:dog|cat|mouse)</tt>)
+(e.g: <code>(?:dog|cat|mouse)</code>)
 </p>
 
 <p>

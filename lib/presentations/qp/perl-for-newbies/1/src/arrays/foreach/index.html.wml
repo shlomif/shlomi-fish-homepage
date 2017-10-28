@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-By using the <tt>foreach</tt> loop we can iterate over all the elements of
+By using the <code>foreach</code> loop we can iterate over all the elements of
 an array, and perform the same set of operations on each one of them. Here's
 an example:
 </p>
@@ -11,8 +11,8 @@ an example:
 </quadpres_code_block>
 
 <p>
-The <tt>foreach</tt> loop in the example assigns each of the elements of the
-array which was  passed to it to <tt>$i</tt> in turn, and executes the same
+The <code>foreach</code> loop in the example assigns each of the elements of the
+array which was  passed to it to <code>$i</code> in turn, and executes the same
 set of commands for each value.
 </p>
 

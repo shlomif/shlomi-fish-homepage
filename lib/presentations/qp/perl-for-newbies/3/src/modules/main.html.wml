@@ -4,14 +4,14 @@
 
 <p>
 One can access the main namespace (i.e, the namespace of the script),
-from any other namespace by designating <tt>main</tt> as the
-namespace path. For instance, <tt>main::hello()</tt> will invoke
+from any other namespace by designating <code>main</code> as the
+namespace path. For instance, <code>main::hello()</code> will invoke
 the function named "hello" in the script file.
 </p>
 
 <p>
 Usually, the "main" part can be omitted and the symbols be accessed
-with the notation of <tt>::hello()</tt> alone.
+with the notation of <code>::hello()</code> alone.
 </p>
 
 

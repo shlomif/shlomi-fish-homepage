@@ -9,16 +9,16 @@ frame.
 <p>
 In Perl, file I/O is handled by using sessions: you are opening a file for
 reading or writing (or both), do with it what you want, and then close it.
-In Perl, filehandles implemented as the so-called <tt>globs</tt> are placed on
+In Perl, filehandles implemented as the so-called <code>globs</code> are placed on
 a separate namespace than that of the  variables. It is generally marked with
-a starting asterisk (<tt>*</tt>), which can be omitted if the first letter is a
+a starting asterisk (<code>*</code>), which can be omitted if the first letter is a
 capital one.
 </p>
 
 <p>
-To open a file use the <tt>open my $my_file_handle, $mode, $file_path;</tt>
-notation, and to close a file use the <tt>close($my_file_handle);</tt>
-notation. The <tt>$mode</tt> determines whether the file will be
+To open a file use the <code>open my $my_file_handle, $mode, $file_path;</code>
+notation, and to close a file use the <code>close($my_file_handle);</code>
+notation. The <code>$mode</code> determines whether the file will be
 open for reading, writing, appending or some of them. The following table
 should give  you a quick reference:
 </p>
@@ -69,9 +69,9 @@ Read-write, or just write without truncating.
 </table>
 
 <p>
-<tt>$file_path</tt> is the pathname of the file to open relative
+<code>$file_path</code> is the pathname of the file to open relative
 to the script current working directory (<b>CWD</b>). For instance, the
-command <tt>open I, "&lt;", "../hello.txt";</tt> opens the file "hello.txt"
+command <code>open I, "&lt;", "../hello.txt";</code> opens the file "hello.txt"
 found a directory above the current directory for reading.
 </p>
 

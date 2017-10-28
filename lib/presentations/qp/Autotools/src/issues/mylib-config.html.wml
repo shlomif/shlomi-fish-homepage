@@ -3,11 +3,11 @@
 
 <points>
 <li>
-To have a mylibrary-config script, you need to put it in <tt>AC_OUTPUT</tt>.
+To have a mylibrary-config script, you need to put it in <code>AC_OUTPUT</code>.
 </li>
 
 <li>
-<tt>configure</tt> would expect a <tt>mylibrary-config.in</tt> file to be
+<code>configure</code> would expect a <code>mylibrary-config.in</code> file to be
 present, so you'll need to write a template for it there.
 </li>
 

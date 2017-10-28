@@ -11,7 +11,7 @@ Basically, a regular expression tells the interpreter to search a string
 for a pattern. The pattern can be a simple one like the word "hello" or a
 complex one, such as the word "hello" followed by any number of instances of
 the word "one", followed by the word "triple". The latter will be
-written as <tt>hello(?:one)*triple</tt> inside a regular expression.
+written as <code>hello(?:one)*triple</code> inside a regular expression.
 </p>
 
 <p>
@@ -35,7 +35,7 @@ or (perl) expression.
 </ol>
 
 <p>
-Some perl functions such as <tt>split</tt> and <tt>grep</tt> (which will be
+Some perl functions such as <code>split</code> and <code>grep</code> (which will be
 covered later) can utilise regular expressions to do other tasks.
 </p>
 

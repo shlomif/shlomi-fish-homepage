@@ -27,7 +27,7 @@ cross-shell quoting issues that entails</q> .
 <a href="http://metacpan.org/release/Module-Install/"><b>Module-Install</b></a> is
 a more modern and succinct wrapper around ExtUtils-MakeMaker that has gained
 some popularity. It ships its code (and the code of its extensions) under an
-<tt>./inc</tt> directory in the distribution, which has known to cause some
+<code>./inc</code> directory in the distribution, which has known to cause some
 bootstrapping issues for co-developers who would like to collaborate on the
 code from its version control repository. Nevertheless, it may be worth taking a
 look.

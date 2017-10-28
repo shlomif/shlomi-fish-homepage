@@ -9,7 +9,7 @@ How many characters are in the perl motto? Perl can tell that right away:
 </quadpres_code_block>
 
 <p>
-<tt>length()</tt> is a built-in function that tells how many characters are in
+<code>length()</code> is a built-in function that tells how many characters are in
 a string. A function is a named sub-routine that accepts several arguments
 and returns a value that can be further evaluated as part of a greater
 expression, or used directly.
@@ -17,7 +17,7 @@ expression, or used directly.
 
 <p>
 To help us understand functions further, let's inspect the perl function
-<tt>substr</tt> (short for "substring"). <tt>substr</tt> retrieves sub-strings
+<code>substr</code> (short for "substring"). <code>substr</code> retrieves sub-strings
 of a given string. The first argument to it is a string, the second is the
 offset from which to take the substring, and the third is the length of the
 substring to be taken. The third one is optional and if unspecified, returns
@@ -53,8 +53,8 @@ though. The above program could have been re-written as:
 </quadpres_code_block>
 
 <p>
-We need an extra set of parenthesis so <tt>print</tt> (which is also a function)
-would not be confused and consider only the result of the <tt>substr</tt>
+We need an extra set of parenthesis so <code>print</code> (which is also a function)
+would not be confused and consider only the result of the <code>substr</code>
 operation as its argument. If it makes no sense, then it shouldn't; however,
 remember that a set of parenthesis, that wraps up the argument list
 of a function, can do you no harm.

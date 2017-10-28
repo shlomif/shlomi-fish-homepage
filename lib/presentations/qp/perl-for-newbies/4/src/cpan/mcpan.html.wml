@@ -2,9 +2,9 @@
 
 <p>
 Perl has a module called CPAN with which one can install CPAN modules along
-with all of the modules they depend on. To invoke it type <tt>perl -MCPAN -e
-shell</tt> at the command line while being a super-user, and follow the
-instructions it gives you. The <tt>install</tt> command can be used to
+with all of the modules they depend on. To invoke it type <code>perl -MCPAN -e
+shell</code> at the command line while being a super-user, and follow the
+instructions it gives you. The <code>install</code> command can be used to
 automatically install modules. For example: to install the XML::XSLT module,
 the following can be done from the CPAN prompt:
 </p>

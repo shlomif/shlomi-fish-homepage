@@ -6,10 +6,10 @@ In Freecell Solver 2.8.0, a presets feature was introduced.
 </li>
 <li>
 It records certain command lines in central configuration files, and
-allows the user to retrieve them by saying <tt>-l [PRESET]</tt>.
+allows the user to retrieve them by saying <code>-l [PRESET]</code>.
 </li>
 <li>
-This way, <tt>fc-solve -l cool-jives</tt> is a configuration that is usually
+This way, <code>fc-solve -l cool-jives</code> is a configuration that is usually
 very fast, and stands for a 1,171 characters command line.
 </li>
 </points>

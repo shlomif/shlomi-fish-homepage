@@ -33,7 +33,7 @@ $out->spew_utf8(<<"EOF");
 <h2 id="intro">Introduction</h2>
 
 <p>
-Download this list using <tt>wget -r --level=1</tt>.
+Download this list using <code>wget -r --level=1</code>.
 </p>
 
 <h2 id="list">The List</h2>

@@ -3,42 +3,42 @@
 
 
 <p>
-We have already encountered the <tt>\n</tt> "escape sequence" which can come
+We have already encountered the <code>\n</code> "escape sequence" which can come
 inside strings and designates a newline character. There are many others in
 perl. Here is a list of the most important ones:
 </p>
 
 <ul>
 <li>
-<tt>\\</tt> - designates an actual backslash (<tt>\</tt>)
+<code>\\</code> - designates an actual backslash (<code>\</code>)
 </li>
 
 <li>
-<tt>\"</tt> - designates an actual double-quote character (<tt>"</tt>)
+<code>\"</code> - designates an actual double-quote character (<code>"</code>)
 </li>
 
 <li>
-<tt>\$</tt> - an actual dollar sign (a real <tt>$</tt> does something else)
+<code>\$</code> - an actual dollar sign (a real <code>$</code> does something else)
 </li>
 
 <li>
-<tt>\@</tt> - an actual at-sign (a non-escaped <tt>@</tt> does something else)
+<code>\@</code> - an actual at-sign (a non-escaped <code>@</code> does something else)
 </li>
 
 <li>
-<tt>\n</tt> - a newline character
+<code>\n</code> - a newline character
 </li>
 
 <li>
-<tt>\r</tt> - a carriage return sign
+<code>\r</code> - a carriage return sign
 </li>
 
 <li>
-<tt>\t</tt> - a tab character
+<code>\t</code> - a tab character
 </li>
 
 <li>
-<tt>\xDD</tt> - where "DD" are two hexadecimal digits - gives the character
+<code>\xDD</code> - where "DD" are two hexadecimal digits - gives the character
 whose ASCII code is "DD".
 </li>
 

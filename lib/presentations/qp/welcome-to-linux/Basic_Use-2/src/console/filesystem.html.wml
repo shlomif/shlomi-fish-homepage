@@ -7,16 +7,16 @@ can contain files or other directories.
 </li>
 <li>
 There is one topmost directory which is called the root directory, and is
-labelled as <tt>/</tt>.
+labelled as <code>/</code>.
 </li>
 <li>
-The <tt>.</tt> meta directory designated the current directory.
-"<tt>..</tt>" is the directory above it. If a <tt>/</tt> is prefixed at
+The <code>.</code> meta directory designated the current directory.
+"<code>..</code>" is the directory above it. If a <code>/</code> is prefixed at
 the beginning than the path would be absolute.
 </li>
 <li>
-The <tt>cd</tt> command changes the current working directory to a different
-directory. The <tt>pwd</tt> command prints the path of the current working
+The <code>cd</code> command changes the current working directory to a different
+directory. The <code>pwd</code> command prints the path of the current working
 directory.
 </li>
 <li>

@@ -363,7 +363,7 @@ only “shlomif” on the Internet</a>.
 </p>
 
 <p>
-On the IRC, I generally use <a href="#origin_of_rindolf">the nickname “<tt>rindolf</tt>”</a>.
+On the IRC, I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
 </p>
 
 <h3 id="spent_on_the_site">How much time do you spend on this site?</h3>
@@ -885,9 +885,9 @@ to be a good idea.
 
 <p>
 Therefore I decided to make XHTML 1.1 the default doctype for the pages
-on my site. The reason I’m serving them as <tt>text/html</tt> is because
+on my site. The reason I’m serving them as <code>text/html</code> is because
 <a href="$(ROOT)/no-ie/">Microsoft Internet Explorer</a> does not handle
-<tt>application/xml+xhtml</tt> properly, and I’d rather not needlessly
+<code>application/xml+xhtml</code> properly, and I’d rather not needlessly
 discriminate against people who still use it (possibly against their
 will).
 </p>
@@ -896,7 +896,7 @@ will).
 I realise that it stands against the XHTML standard, but I’m not a standards
 purist, and want to be a bit pragmatic in still supporting Explorer.
 Note that some pages in the <a href="$(ROOT)/MathVentures/">Math-Ventures
-section</a> end with the <tt>.xhtml</tt> suffix and are served as XHTML
+section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
 because they contain <a href="http://www.w3.org/Math/">MathML</a>.
 </p>
 

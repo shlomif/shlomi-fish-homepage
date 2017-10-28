@@ -20,7 +20,7 @@ Written By:
 Version Control ID
 </dt>
 <dd>
-<tt>$Id$</tt>
+<code>$Id$</code>
 </dd>
 <dt>
 Finish Date:
@@ -205,7 +205,7 @@ to think how to port it to Java, which a high-level language that is
 similar to C. Freecell Solver represents the states of the board as an array
 of pointers to columns, where each column is an array of bytes, where each
 byte represents a single card. The states themselves are allocated from blocks
-of contiguous memory. The blocks themselves are not <tt>realloc</tt>ed, and
+of contiguous memory. The blocks themselves are not <code>realloc</code>ed, and
 thus remain in the same memory address. If more states need to be allocated,
 then more blocks are created. This is all done to reduce the amount of
 allocated memory, as individually allocating the states may incur a lot of
@@ -275,7 +275,7 @@ may incur speed overheads due to the fact Java also does bounds checking.
 
 <p>
 Finally, Freecell Solver uses a lot of C-isms. It compares structs using
-<tt>memcmp()</tt>, copies adjacent regions of memory using <tt>memcpy()</tt>,
+<code>memcmp()</code>, copies adjacent regions of memory using <code>memcpy()</code>,
 etc. These have a more limited support in Java, and may not necessarily make
 sense all of the time.
 </p>

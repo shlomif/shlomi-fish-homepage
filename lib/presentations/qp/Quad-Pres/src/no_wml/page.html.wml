@@ -54,14 +54,14 @@ Here is an example:
 
 <ul class="point">
 <li>
-<tt>begin_header</tt> to <tt>end_header</tt> denote the header, and it will be
+<code>begin_header</code> to <code>end_header</code> denote the header, and it will be
 replaced by the file's header. Whatever comes between it is ignored.
 </li>
 <li>
-Similarly <tt>begin_footer</tt> and <tt>end_footer</tt> denote the footer.
+Similarly <code>begin_footer</code> and <code>end_footer</code> denote the footer.
 </li>
 <li>
-<tt>begin_contents</tt> and <tt>end_contents</tt> insert a table of contents
+<code>begin_contents</code> and <code>end_contents</code> insert a table of contents
 into the text
 </li>
 </ul>

@@ -3,16 +3,16 @@
 
 
 <p>
-Now, let's suppose we would like to create a class similar to <tt>Foo</tt>,
+Now, let's suppose we would like to create a class similar to <code>Foo</code>,
 that's also keeps track of the number of times its name was assigned. While
 we can write a completely different object, we can <b>inherit</b> from Foo
 and use what we already have in place.
 </p>
 
 <p>
-Here's a class derived from <tt>Foo</tt> that has a method
-<tt>assign_name_ext</tt> that keeps track of the number of times it was
-called, and a method <tt>get_num_times_assigned</tt> that retrieves this
+Here's a class derived from <code>Foo</code> that has a method
+<code>assign_name_ext</code> that keeps track of the number of times it was
+called, and a method <code>get_num_times_assigned</code> that retrieves this
 number:
 </p>
 

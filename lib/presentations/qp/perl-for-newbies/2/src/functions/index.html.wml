@@ -10,14 +10,14 @@ That way, you won't have to change it in more than one place.
 <p>
 In Perl, every function accepts an array of arguments and returns an array of
 return values. The arguments (also known as "parameters") can be found in the
-<tt>@_</tt> variable. This variable is magical and need not and should not be
-declared with <tt>my</tt>. In order to return values from a function, one can
-use the <tt>return</tt> keyword.
+<code>@_</code> variable. This variable is magical and need not and should not be
+declared with <code>my</code>. In order to return values from a function, one can
+use the <code>return</code> keyword.
 </p>
 
 <p>
-To declare a function use type <tt>sub function_name {</tt> at the beginning
-and a <tt>}</tt> at the end. Everything in between, is the function body.
+To declare a function use type <code>sub function_name {</code> at the beginning
+and a <code>}</code> at the end. Everything in between, is the function body.
 </p>
 
 <p>

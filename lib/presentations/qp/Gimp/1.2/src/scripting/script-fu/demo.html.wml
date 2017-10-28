@@ -27,7 +27,7 @@ Create a new image with the background as its filling.
 </li>
 
 <li>
-At the command prompt of the console, type <tt class="mycode">(gimp-image-list)</tt> and press enter.
+At the command prompt of the console, type <code class="mycode">(gimp-image-list)</code> and press enter.
 </li>
 
 <li>
@@ -35,20 +35,20 @@ Record the index of the image. (it's inside the inner parenthesis)
 </li>
 
 <li>
-Type <tt class="mycode">(gimp-image-active-drawable $image)</tt> and record the drawable number.
+Type <code class="mycode">(gimp-image-active-drawable $image)</code> and record the drawable number.
 (In the GIMP internals, a drawable is a base class for layers and such)
 </li>
 
 <li>
-Type <tt class="mycode">(gimp-rect-select $image 10 10 50 80 ADD 0 0)</tt> and press enter.
+Type <code class="mycode">(gimp-rect-select $image 10 10 50 80 ADD 0 0)</code> and press enter.
 </li>
 
 <li>
-Type <tt class="mycode">(gimp-rect-select $image 40 70 50 80 ADD 0 0)</tt> and press enter.
+Type <code class="mycode">(gimp-rect-select $image 40 70 50 80 ADD 0 0)</code> and press enter.
 </li>
 
 <li>
-Type <tt class="mycode">(gimp-bucket-fill $drawable FG-BUCKET-FILL NORMAL 100 0 0 0 0)</tt>
+Type <code class="mycode">(gimp-bucket-fill $drawable FG-BUCKET-FILL NORMAL 100 0 0 0 0)</code>
 and press enter.
 </li>
 

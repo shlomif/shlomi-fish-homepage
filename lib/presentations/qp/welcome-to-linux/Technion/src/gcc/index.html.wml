@@ -6,20 +6,20 @@ gcc is the GNU  compiler collection,  originally called GNU C compiler.
 </li>
 <li>
 gcc is commonly invoked  from the command line, like so:<br />
-<tt class="cmd">gcc [ option | filename ]... </tt><br />
+<code class="cmd">gcc [ option | filename ]... </code><br />
 </li>
 
 <li>
 This is correct  but, probably means nothing to you, one would normally
 use gcc like so:<br />
 
-<tt class="cmd">gcc [flags] file1 [file2 [file3 ...]] [-o output_file]  </tt>
+<code class="cmd">gcc [flags] file1 [file2 [file3 ...]] [-o output_file]  </code>
 <br />
 where file1 file2 etc. are input files, either C source files or pre-compiled
 object files.
 </li>
 <li>
-Example: <tt>gcc foo1.c foo2.c -o foo</tt>
+Example: <code>gcc foo1.c foo2.c -o foo</code>
 </li>
 <li>
 The default executable output filename is a.out. When producing object files,

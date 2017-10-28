@@ -3,12 +3,12 @@
 
 <points>
 <li>
-<tt>AC_OUTPUT</tt> generates files that are required for building the packages.
+<code>AC_OUTPUT</code> generates files that are required for building the packages.
 </li>
 
 <li>
 Its first argument is a whitespace separated list of files. The script will
-look for these files along with the suffix <tt>.in</tt> and convert them
+look for these files along with the suffix <code>.in</code> and convert them
 to their output files while substituting the output variable values.
 </li>
 

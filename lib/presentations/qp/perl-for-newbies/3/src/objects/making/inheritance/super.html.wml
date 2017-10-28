@@ -5,12 +5,12 @@
 <p>
 It is possible to explicitly call the method of a base class even if it
 was overridden by another method in the derived class. To do that use
-the <tt>SUPER::</tt> prefix before the method name.
+the <code>SUPER::</code> prefix before the method name.
 </p>
 
 <p>
-Here is a rewrite of the <tt>Bar</tt> class, this time with
-<tt>assign_name</tt> retaining its name.
+Here is a rewrite of the <code>Bar</code> class, this time with
+<code>assign_name</code> retaining its name.
 </p>
 
 <quadpres_code_block>

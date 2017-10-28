@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-In Perl we use the <tt>print</tt> command to echo strings and expressions
+In Perl we use the <code>print</code> command to echo strings and expressions
 to the screen.
 </p>
 
@@ -17,17 +17,17 @@ The neophyte "Hello World!" program can be written in perl as follows:
 
 <ol>
 <li>
-The string is enclosed in double-quotes(<tt>" ... "</tt>) because that's how
+The string is enclosed in double-quotes(<code>" ... "</code>) because that's how
 string constants are represented in perl.
 </li>
 
 <li>
-<tt>\n</tt> is a special character that is called "newline". When you print a
+<code>\n</code> is a special character that is called "newline". When you print a
 newline you will see that your output started on a new line.
 </li>
 
 <li>
-The semi-colon (<tt>;</tt>) at the end indicates that this is the end of
+The semi-colon (<code>;</code>) at the end indicates that this is the end of
 a perl command. Every perl command should be terminated with a semicolon.
 </li>
 </ol>

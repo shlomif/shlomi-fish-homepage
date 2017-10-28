@@ -3,12 +3,12 @@
 <points>
 <li>
 g++ is actually a script which calls gcc with the appropriate options in
-order to compile C++. Standard suffixes for C++ source files are: <tt>.C</tt>,
-<tt>.cc</tt>, <tt>.cxx</tt>, <tt>.cpp</tt>, or <tt>.c++</tt>.
+order to compile C++. Standard suffixes for C++ source files are: <code>.C</code>,
+<code>.cc</code>, <code>.cxx</code>, <code>.cpp</code>, or <code>.c++</code>.
 </li>
 <li>
 I recommend using g++ like so:<br />
-<tt class="cmd">g++ -Wall file1 [file2 [file3...]] -o output_file</tt>
+<code class="cmd">g++ -Wall file1 [file2 [file3...]] -o output_file</code>
 </li>
 </points>
 

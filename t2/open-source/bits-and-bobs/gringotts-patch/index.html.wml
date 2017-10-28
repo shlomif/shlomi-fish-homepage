@@ -88,7 +88,7 @@ against Gtk+ 2.4.9). This is done by porting the API calls to the new ones.
 </li>
 <li>
 Allow it to compile with stricter gcc flags.
-(<tt>-Wall -Wstrict-prototypes -Werror-implicit-function-declaration</tt>)
+(<code>-Wall -Wstrict-prototypes -Werror-implicit-function-declaration</code>)
 </li>
 <li>
 Add keyboard shortcuts to the menus, so you can press Alt+F+S to save a file,
@@ -101,7 +101,7 @@ Add a rudimentary autogen.sh file.
 Make sure that when searching, the text view scrolls to view the found pattern.
 </li>
 <li>
-Document another minor issue in the <tt>BUGS</tt> file.
+Document another minor issue in the <code>BUGS</code> file.
 </li>
 </ol>
 

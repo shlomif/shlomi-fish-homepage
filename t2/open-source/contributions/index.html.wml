@@ -36,7 +36,7 @@ Control System</a></h2>
 <p>
 I started out by bug-squashing some bugs I found in the
 <a href="http://subversion.tigris.org/project_issues.html">Issue Tracker</a>.
-The largest contribution I did was adding a <tt>--config-dir</tt> directive
+The largest contribution I did was adding a <code>--config-dir</code> directive
 to the Subversion clients, to specify a different directory where the
 configuration files reside. The original motive for this, was to fix the
 test suite when ran using a configuration that breaks it.

@@ -2,14 +2,14 @@
 
 <points>
 <li>
-At this point we should mention <tt>C-x u</tt> which is the undo option it
+At this point we should mention <code>C-x u</code> which is the undo option it
 will undo the last act. You can do several of these in a row,
-notice there is a big difference between <tt>C-x u</tt> and <tt>C-x C-u</tt>
-you must let go of the Ctrl key, before hitting the <tt>u</tt> key.
+notice there is a big difference between <code>C-x u</code> and <code>C-x C-u</code>
+you must let go of the Ctrl key, before hitting the <code>u</code> key.
 </li>
 <li>
 Handling files and buffers can be done with menus on top but also
-with shortcuts: opening a file is with <tt>C-x C-f</tt> you can use the tab to
+with shortcuts: opening a file is with <code>C-x C-f</code> you can use the tab to
 complete file names as you can in the bash/tcsh command prompt.
 </li>
 <li>
@@ -18,10 +18,10 @@ a parameter, in both cases emacs will create a new file should the file not
 exist.
 </li>
 <li>
-Saving is done by <tt>C-x C-s</tt> which saves the current buffer(file) or
-<tt>C-x s</tt> which will prompt to verify and save each and every open buffer.
+Saving is done by <code>C-x C-s</code> which saves the current buffer(file) or
+<code>C-x s</code> which will prompt to verify and save each and every open buffer.
 </li>
 <li>
-One exits emacs with <tt>C-x C-c</tt>.
+One exits emacs with <code>C-x C-c</code>.
 </li>
 </points>

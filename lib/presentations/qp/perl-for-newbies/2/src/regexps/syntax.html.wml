@@ -2,7 +2,7 @@
 
 <p>
 The syntax for checking if a string contains the regular expression is
-<tt>$string =~ /$regexp/</tt>. For instance the following program checks if
+<code>$string =~ /$regexp/</code>. For instance the following program checks if
 a given string contains the word hello (in all lowercase):
 </p>
 
@@ -13,7 +13,7 @@ a given string contains the word hello (in all lowercase):
 <p>
 Note that alphanumeric characters in regular expressions stand for themselves,
 and that behaviour is guaranteed not to change in further versions of perl.
-Other characters may need to be prefixed with a backslash (<tt>\</tt>) if
+Other characters may need to be prefixed with a backslash (<code>\</code>) if
 placed inside a regular expression.
 </p>
 

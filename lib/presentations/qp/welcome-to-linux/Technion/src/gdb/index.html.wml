@@ -11,17 +11,17 @@ Even though it does not have a fancy GUI, it does the trick.
 <b>In order to use gdb one must use the -g flag when compiling!</b>
 </li>
 <li>
-Executing gdb is simple:  <tt>gdb program_name</tt>
+Executing gdb is simple:  <code>gdb program_name</code>
 (it can be run differently but for that RTFM)
 </li>
 <li>
-gdb has an excellent built in help, you can type <tt>help</tt> from the
+gdb has an excellent built in help, you can type <code>help</code> from the
 gdb command line and get a list of stuff to get help on, or type
-<tt>help &lt;something&gt;</tt>, and get specific help on something - either
+<code>help &lt;something&gt;</code>, and get specific help on something - either
 a command or a topic name.
 </li>
 <li>
-Another good source for help on gdb is the info pages. Type: <tt>pinfo gdb</tt>
-or <tt>info gdb</tt> if <tt>pinfo</tt> is not available.
+Another good source for help on gdb is the info pages. Type: <code>pinfo gdb</code>
+or <code>info gdb</code> if <code>pinfo</code> is not available.
 </li>
 </points>

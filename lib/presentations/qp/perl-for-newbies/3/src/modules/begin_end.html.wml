@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-There are two special code blocks for perl modules - <tt>BEGIN</tt> and
-<tt>END</tt>. These blocks are executed when a module is first loaded,
+There are two special code blocks for perl modules - <code>BEGIN</code> and
+<code>END</code>. These blocks are executed when a module is first loaded,
 and when the perl interpreter is about to unload it, respectively.
 </p>
 

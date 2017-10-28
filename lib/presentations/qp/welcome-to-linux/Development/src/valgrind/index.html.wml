@@ -5,8 +5,8 @@
 valgrind can detect problems such as:<br />
 <ul>
   <li>Use of uninitialized memory.</li>
-  <li>Reading/writing memory after it has been <tt>free()</tt>ed.</li>
-  <li>Reading/writing off the end of <tt>malloc()</tt>ed blocks.</li>
+  <li>Reading/writing memory after it has been <code>free()</code>ed.</li>
+  <li>Reading/writing off the end of <code>malloc()</code>ed blocks.</li>
   <li>Reading/writing inappropriate areas on the stack.</li>
   <li>Memory leaks -- where pointers to malloc'd  blocks are lost
   forever.</li>
@@ -14,20 +14,20 @@ valgrind can detect problems such as:<br />
   Passing of uninitialized and/or unaddressable memory
   to system calls.
   </li>
-  <li>Mismatched use of <tt>malloc()</tt>/<tt>new</tt>/<tt>new []</tt> vs
-  <tt>free()</tt>/<tt>delete</tt>/<tt>delete []</tt>.</li>
+  <li>Mismatched use of <code>malloc()</code>/<code>new</code>/<code>new []</code> vs
+  <code>free()</code>/<code>delete</code>/<code>delete []</code>.</li>
   <li>Some abuses of the POSIX pthreads API.</li>
 </ul>
 </li>
 <li>
 valgrind is very easy to use. It has many optional flags that you can learn
-about from the documentation. (<tt>valgrind -h</tt>).
+about from the documentation. (<code>valgrind -h</code>).
 </li>
 <li>
-A useful flag is <tt>--num-callers=<span style="color:red">NNN</span></tt>
+A useful flag is <code>--num-callers=<span style="color:red">NNN</span></code>
 which sets how far back to print the function call sequence when an error
 is detected, (sometimes the error actually occurs in a sequence of functions
-you didn't write). By default it is <tt>--num-callers=4</tt>.
+you didn't write). By default it is <code>--num-callers=4</code>.
 </li>
 </points>
 

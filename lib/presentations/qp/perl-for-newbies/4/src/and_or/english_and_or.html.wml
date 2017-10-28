@@ -1,10 +1,10 @@
 #include 'template.wml'
 
 <p>
-Perl supplies two operators <tt>and</tt> and <tt>or</tt> which are equivalent
-to <tt>&amp;&amp;</tt> and <tt>||</tt> except that they have a very low
-precedence. (lower than any other operator in fact). There's also <tt>not</tt>
-which is the ultra-low precedence equivalent of <tt>!</tt>.
+Perl supplies two operators <code>and</code> and <code>or</code> which are equivalent
+to <code>&amp;&amp;</code> and <code>||</code> except that they have a very low
+precedence. (lower than any other operator in fact). There's also <code>not</code>
+which is the ultra-low precedence equivalent of <code>!</code>.
 </p>
 
 <p>

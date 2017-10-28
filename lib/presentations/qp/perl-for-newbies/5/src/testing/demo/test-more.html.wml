@@ -13,14 +13,14 @@ for a test script:
 </quadpres_code_block>
 
 <p>
-<tt>is()</tt> is a Test-More built-in that compares a received result ("have")
+<code>is()</code> is a Test-More built-in that compares a received result ("have")
 to an expected result ("want") for exact equivalence. There are also
-<tt>ok()</tt>, which just tests for truth-hood, <tt>is_deeply()</tt> which
+<code>ok()</code>, which just tests for truth-hood, <code>is_deeply()</code> which
 performs a deep comparison of nested data structures, and others.
 </p>
 
 <p>
-You may also notice the <tt># TEST</tt> comments - these are
+You may also notice the <code># TEST</code> comments - these are
 <a href="http://metacpan.org/release/Test-Count/">Test::Count</a> annotations
 that allow us to keep track of the number of test assertions that we have
 declared and update it.
@@ -45,7 +45,7 @@ ok 7 - 3.5+3.5 == 7
 This is in an output format called <a href="http://testanything.org/">TAP - The
 Test Anything Protocol</a>. There are several TAP parsers, which analyse the
 output and present a human-friendly summary. For example, we can run the test
-script above using the <tt>prove</tt> command-line utility that ships with
+script above using the <code>prove</code> command-line utility that ships with
 perl 5:
 </p>
 

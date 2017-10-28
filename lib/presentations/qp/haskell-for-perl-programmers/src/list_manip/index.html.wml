@@ -16,16 +16,16 @@ Here are some common routines:
 <th>Description</th>
 </tr>
 <tr>
-<td><tt>head</tt></td>
+<td><code>head</code></td>
 <td>The first element in the list</td>
 </tr>
 <tr>
-<td><tt>tail</tt></td>
+<td><code>tail</code></td>
 <td>The list containing the second to the other elements</td>
 </tr>
 <tr>
 <td>
-<tt>length</tt>
+<code>length</code>
 </td>
 <td>
 The length of the list.
@@ -33,7 +33,7 @@ The length of the list.
 </tr>
 <tr>
 <td>
-<tt>reverse</tt>
+<code>reverse</code>
 </td>
 <td>
 A list whose elements are reversed.
@@ -41,15 +41,15 @@ A list whose elements are reversed.
 </tr>
 <tr>
 <td>
-<tt>take num_elems list</tt>
+<code>take num_elems list</code>
 </td>
 <td>
-Extracts a list with the first <tt>num_elems</tt> from <tt>list</tt>.
+Extracts a list with the first <code>num_elems</code> from <code>list</code>.
 </td>
 </tr>
 <tr>
 <td>
-<tt>drop num_elems list</tt>
+<code>drop num_elems list</code>
 </td>
 <td>
 Extracts the list starting with the num_elems+1's element.
@@ -57,16 +57,16 @@ Extracts the list starting with the num_elems+1's element.
 </tr>
 <tr>
 <td>
-<tt>filter callback list</tt>
+<code>filter callback list</code>
 </td>
 <td>
 Extracts the list of elements that match a certain callback. A kin to
-<tt>grep</tt> in Perl.
+<code>grep</code> in Perl.
 </td>
 </tr>
 <tr>
 <td>
-<tt>map callback list</tt>
+<code>map callback list</code>
 </td>
 <td>
 transforms each element in the list according to the callback
@@ -74,7 +74,7 @@ transforms each element in the list according to the callback
 </tr>
 <tr>
 <td>
-<tt>a ++ b</tt>
+<code>a ++ b</code>
 </td>
 <td>
 Concatenates the lists a and b

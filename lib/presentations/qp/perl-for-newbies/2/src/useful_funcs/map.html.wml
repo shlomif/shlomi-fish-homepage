@@ -4,12 +4,12 @@
 The map function traverses an array and maps each element to one or more (
 or zero) elements in a new array. It has a rather unorthodox syntax in that
 it is written as
-<tt>@new_array = (map { &lt;Some Expression with $_&gt; } @array)</tt>
+<code>@new_array = (map { &lt;Some Expression with $_&gt; } @array)</code>
 .
 </p>
 
 <p>
-For each element of the array @array, the variable <tt>$_</tt> is assigned
+For each element of the array @array, the variable <code>$_</code> is assigned
 its value, and within the curly brackets one can put an expression that is
 dependant on it.
 </p>
@@ -24,7 +24,7 @@ The following example multiplies each element of an array by two:
 
 <p>
 Using map is usually faster than using a
-<tt>foreach $elem (@array) { ... push @new_array, $new_elem; }</tt>
+<code>foreach $elem (@array) { ... push @new_array, $new_elem; }</code>
 loop, at least when the function performed is a relatively uncomplex one.
 </p>
 

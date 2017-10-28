@@ -2,7 +2,7 @@
 
 <p>
 In order to designate that a code belongs to a different namespace
-you should use the <tt>package</tt> directive. For instance, if you want
+you should use the <code>package</code> directive. For instance, if you want
 your module name to be "MyModule" your file should look something like
 this:
 </p>
@@ -19,7 +19,7 @@ explains the use of "1;".
 
 <p>
 A namespace may contain sub-namespaces. To separate namespace components,
-use the <tt>::</tt> separator. For example:
+use the <code>::</code> separator. For example:
 </p>
 
 <quadpres_code_block>

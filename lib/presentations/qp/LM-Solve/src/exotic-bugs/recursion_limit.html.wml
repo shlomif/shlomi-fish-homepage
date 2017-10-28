@@ -6,16 +6,16 @@ When first using the procedurally-recursive version, warnings were given for
 deep recursion.
 </li>
 <li>
-<tt>Deep recursion on subroutine "main::sum" at recurse.pl line 17.</tt>
+<code>Deep recursion on subroutine "main::sum" at recurse.pl line 17.</code>
 </li>
 <li>
-To resolve it one can specify <tt>no warnings "recursion"</tt>.
+To resolve it one can specify <code>no warnings "recursion"</code>.
 </li>
 <li>
 However, the perl debugger still warns about "100 levels deep in subroutine calls!".
 </li>
 <li>
-To resolve this set the <tt>$DB::deep</tt> to a large enough value from
+To resolve this set the <code>$DB::deep</code> to a large enough value from
 within the perl debugger.
 </li>
 </points>

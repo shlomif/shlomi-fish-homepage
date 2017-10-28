@@ -18,7 +18,7 @@
 Shlomi Fish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>
 has taken the time to sit down with us for an interview on his latest
 book, <i>Mastering cat</i>. In this 344 pages-long book, Fish details
-everything  you wanted to know about the UNIX <tt>cat</tt> command. We
+everything  you wanted to know about the UNIX <code>cat</code> command. We
 decided to  have an interview with him to find out more about the
 book’s motivation, content, and philosophy.
 </p>
@@ -36,9 +36,9 @@ book’s motivation, content, and philosophy.
 </p>
 
 <p>
-<b>Shlomi Fish</b>: Well, I realised people use <tt>cat</tt> so often
+<b>Shlomi Fish</b>: Well, I realised people use <code>cat</code> so often
 that they don’t take the time to fully investigate it and learn it.
-For example, many people I worked with believed that <tt>cat</tt> can
+For example, many people I worked with believed that <code>cat</code> can
 only be used to output one file at a  time. So to output several files
 they used something like:
 </p>
@@ -62,13 +62,13 @@ understand the command.
 </p>
 
 <p>
-<b>O’Reilly Net</b>: Isn’t mastering <tt>cat</tt> supposed to be quite
+<b>O’Reilly Net</b>: Isn’t mastering <code>cat</code> supposed to be quite
 easy? Does it really necessitate its own book?
 </p>
 
 <p>
-<b>Shlomi Fish</b>: Hell no! Mastering <tt>cat</tt> is not easy at all.
-In fact, mastering <tt>cat</tt> is almost as difficult as herding cats.
+<b>Shlomi Fish</b>: Hell no! Mastering <code>cat</code> is not easy at all.
+In fact, mastering <code>cat</code> is almost as difficult as herding cats.
 </p>
 
 <p>
@@ -85,13 +85,13 @@ mv -f myfile.txt.new myfile.txt
 <p>
 But people do not realize that and instead opted to use sed, awk, or
 even perl (!). It can be taken further, of course. If the prefix is
-already in its own file, you can simply use <tt>cat prefix.txt
-    myfile.txt</tt>
+already in its own file, you can simply use <code>cat prefix.txt
+    myfile.txt</code>
 </p>
 
 <p>
 Of course, if you want to append the same text to both the start and
-the end of a file, you can’t do that with <tt>cat - myfile.txt -</tt>.
+the end of a file, you can’t do that with <code>cat - myfile.txt -</code>.
 It simply doesn’t work that way. So, I end up explaining a lot about
 UNIX pipeline concepts in the book.
 </p>
@@ -107,16 +107,16 @@ Well, I cover many things there. Among them are:
 <ol>
 
 <li>
-History of the <tt>cat</tt> command.
+History of the <code>cat</code> command.
 </li>
 
 <li>
-Differences between the various <tt>cat</tt> implementations. (GNU,
+Differences between the various <code>cat</code> implementations. (GNU,
 the BSDs, System V, etc.)
 </li>
 
 <li>
-<tt>cat</tt> equivalents in other operating systems (DOS, Win32,
+<code>cat</code> equivalents in other operating systems (DOS, Win32,
 VMS, OS/390, etc.)
 </li>
 
@@ -127,16 +127,16 @@ Overview of the GNU cat codebase (for programmers).
 </ol>
 
 <p>
-I’m also focusing on the various <tt>cat</tt> flags, which aid in its
-interactive use. For example, the <tt>-E</tt>/<tt>--show-ends</tt>
+I’m also focusing on the various <code>cat</code> flags, which aid in its
+interactive use. For example, the <code>-E</code>/<code>--show-ends</code>
 flag, that places dollar signs at the end of the lines.
 </p>
 
 <p>
 Aside from all that, I’m also covering
 <a href="http://jl.photodex.com/dog/">dog</a> which is a program
-that provides a superset of the <tt>cat</tt> program. I should also
-mention <tt>mouse</tt> which aimed to provide an even greater
+that provides a superset of the <code>cat</code> program. I should also
+mention <code>mouse</code> which aimed to provide an even greater
 superset, and was never released. Rumours say some parts of it are
 based on code of the leaked Windows 2000 sources.
 </p>
@@ -148,7 +148,7 @@ values of popularity). What can we expect from you next?
 
 <p>
 <b>Shlomi Fish</b>: Well, I hope many people will buy the book, or
-read it online so they’ll be educated about <tt>cat</tt>. If you like
+read it online so they’ll be educated about <code>cat</code>. If you like
 <i>Mastering cat</i>, look forward to my next book - <i>Mastering echo</i>. I
 expect it to be published next fall.
 </p>

@@ -1,21 +1,21 @@
 #include 'template.wml'
 
 <p>
-Assuming the reference of a function is stored in the variable <tt>$myref</tt>,
+Assuming the reference of a function is stored in the variable <code>$myref</code>,
 there are two methods to call the function from it:
 </p>
 
 <ol>
 <li>
-<tt>&amp;{$myref}(@args)</tt>
+<code>&amp;{$myref}(@args)</code>
 </li>
 <li>
-<tt>$myref-&gt;(@args)</tt>
+<code>$myref-&gt;(@args)</code>
 </li>
 </ol>
 
 <p>
-<tt>$myref</tt> can be as complex an expression as you would like,
+<code>$myref</code> can be as complex an expression as you would like,
 but you'll usually need parenthesis in the second notation.
 </p>
 

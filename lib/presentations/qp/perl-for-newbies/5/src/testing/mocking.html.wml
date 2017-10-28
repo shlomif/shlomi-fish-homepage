@@ -31,7 +31,7 @@ databases for testing.
 
 <p>
 With regard to mocking modules, one may opt to simulate loading a module using
-the Perl <tt>%INC</tt> variable (see
+the Perl <code>%INC</code> variable (see
 <a href="http://perldoc.perl.org/perlvar.html">perlvar</a>) by doing
 something like:
 </p>
@@ -41,7 +41,7 @@ something like:
 </quadpres_code_block>
 
 <p>
-After doing this, the tested code can do <tt>use CGI;</tt> and still think it
+After doing this, the tested code can do <code>use CGI;</code> and still think it
 loaded the original module, while actually it is using our own mocked
 version.
 </p>

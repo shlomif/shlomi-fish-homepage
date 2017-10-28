@@ -102,8 +102,8 @@ solved boards. Its columns are:
 <b>solution</b> - this is the compacted solution. The 0,2,4 etc. characters are
 the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
 the corresponding moved cards after calculating
-<tt>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</tt> where the suits
-are ordered <tt>H,C,D,S</tt>. It will total 51*2 characters. Here’s
+<code>chr(1 + $suits_to_n{$s} * 13 + $ranks_to_n{$r})</code> where the suits
+are ordered <code>H,C,D,S</code>. It will total 51*2 characters. Here’s
 <a href="https://github.com/shlomif/black-hole-solitaire/blob/master/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
 </li>
@@ -161,7 +161,7 @@ from now on), and an ability to be built as an RPM.
 
 <p>
 Version 0.10.0 of Black Hole Solitaire Solver was released. The highlights of
-this release are the new <tt>--display-iters-step</tt> flag, which allows for
+this release are the new <code>--display-iters-step</code> flag, which allows for
 monitoring the progress of the solutions, and fixes for the build system with
 version 3.0.0 of CMake.
 </p>
@@ -170,16 +170,16 @@ version 3.0.0 of CMake.
 
 <p>
 Version 0.8.0 of Black Hole Solitaire Solver was released. The highlights of
-this release are the new <tt>--version</tt> flag, and the
-<tt>--rank-reach-prune</tt> flag, which can improve performance.
+this release are the new <code>--version</code> flag, and the
+<code>--rank-reach-prune</code> flag, which can improve performance.
 </p>
 
 <h3 id="news_version_0_6_0">Version 0.6.0</h3>
 
 <p>
 Version 0.6.0 of Black Hole Solitaire Solver was released. The highlights of
-this release are the inclusion of the NEWS file, the <tt>--help</tt>
-flag and most importantly the <tt>--display-boards</tt> flag that displays
+this release are the inclusion of the NEWS file, the <code>--help</code>
+flag and most importantly the <code>--display-boards</code> flag that displays
 the intermediate board layouts after every move.
 </p>
 

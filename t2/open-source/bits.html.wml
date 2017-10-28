@@ -64,7 +64,7 @@ allows it to compile with the latest Gtk+, and fixes some other annoyances.
 
 <p>
 What this little Perl script does is register an
-<a href="http://www.xchat.org/">X-Chat</a> command called <tt>/nowplay</tt>,
+<a href="http://www.xchat.org/">X-Chat</a> command called <code>/nowplay</code>,
 that whenever invoked displays a message of “/me is listening to My Artist -
 My Song” in the current channel. Feel free to make any use of it whatsoever
 under the terms of the MIT/Expat license. It queries either
@@ -75,7 +75,7 @@ under the terms of the MIT/Expat license. It queries either
 You need to install the
 <cpan_dist d="Xmms-Perl">Xmms-Perl distribution</cpan_dist>
 and have the X-Chat Perl interface. To use, make it executable and put it
-under your <tt>$HOME/.xchat2</tt> directory.
+under your <code>$HOME/.xchat2</code> directory.
 </p>
 
 <h2 id="old_pmwiki_revert"><a href="<bit_link "pmwiki-revert-pl.txt" />">Revert
@@ -184,14 +184,14 @@ Presentation Helper</a></h2>
 This is a JavaScript script based on
 <a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily
 reduced and evolved. It supplies use of the left and right arrow keys for
-moving between slides (<tt>&lt;li&gt;</tt> elements
-somewhere inside an element with a class named “<tt>point</tt>”). It also
+moving between slides (<code>&lt;li&gt;</code> elements
+somewhere inside an element with a class named “<code>point</code>”). It also
 provides the “n” and “p” keys to follow the links with the appropriate
 accesskey.
 </p>
 
 <p>
-If the global variable <tt>rtl_keys</tt> is set to true, then the left and
+If the global variable <code>rtl_keys</code> is set to true, then the left and
 right keys are reversed to be suitable for a language that is written
 from right to left.
 </p>
@@ -214,7 +214,7 @@ Output Analyser</a></h2>
 <p>
 <a href="http://en.wikipedia.org/wiki/Du_(Unix)">du</a> is a UNIX command
 that can recursively scan directory trees and output the space used by
-them. After one has done <tt>\du . &gt; du.txt</tt>, one can use this script
+them. After one has done <code>\du . &gt; du.txt</code>, one can use this script
 to analyse the file by filtering the sub-directories of a certain depth (and
 under a certain sub-directory). (Licensed under the MIT/Expat License).
 </p>

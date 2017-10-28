@@ -8,7 +8,7 @@
 Previously Perl test-programs used the built-in <b>Test.pm</b> module, but it
 has many limitations.
 <a href="http://beta.metacpan.org/module/Test::More">Test::More</a> is much
-better, but its <tt>ok()</tt> method is incompatible with Test.pm. As a result,
+better, but its <code>ok()</code> method is incompatible with Test.pm. As a result,
 I'm providing this script to do a partial machine conversion of Test.pm-based
 legacy scripts to Test::More. It makes use of
 <a href="http://beta.metacpan.org/release/PPI">PPI</a> - The Perl
@@ -45,8 +45,8 @@ No option to avoid adding the
 
 <li>
 <p>
-Can mess up single-parameter <tt>ok()</tt> tests with low-precedence operators
-such as <tt>not</tt>
+Can mess up single-parameter <code>ok()</code> tests with low-precedence operators
+such as <code>not</code>
 </p>
 </li>
 

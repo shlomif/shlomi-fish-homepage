@@ -55,8 +55,8 @@ lines long “libtool” shell script, which incurs a lot of overhead.
 <p>
 Autotools cause the archive size to increase dramatically due to their
 extra
-<tt>configure.ac</tt> / <tt>configure</tt> /
-<tt>Makefile.in</tt> / <tt>libtool</tt> / etc. overhead.
+<code>configure.ac</code> / <code>configure</code> /
+<code>Makefile.in</code> / <code>libtool</code> / etc. overhead.
 The Autotools-based <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
 version 2.8.14 gzipped tarball (tar.gz) took 562,301 bytes. After it was
 converted to CMake in version 2.12.0, the tar.gz fell down to 217,307, less

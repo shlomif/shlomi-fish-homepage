@@ -10,13 +10,13 @@ placing their name along with the dollars inside them. Here's an example:
 </quadpres_code_block>
 
 <p>
-Note that once perl encounters a <tt>$</tt>-sign, it will try to use as
+Note that once perl encounters a <code>$</code>-sign, it will try to use as
 many characters as possible from the string as the variable name,
 even if a variable by that name does not exist. Therefore, if you write
-<tt>$xy</tt> inside a string, it will not take the value of <tt>$x</tt> and
+<code>$xy</code> inside a string, it will not take the value of <code>$x</code> and
 append the string "y" to it! To overcome this limitation, you can limit the
 variable name using curly braces:
-<tt>"Hello ${boy}and${girl}"</tt>.
+<code>"Hello ${boy}and${girl}"</code>.
 </p>
 
 <p>

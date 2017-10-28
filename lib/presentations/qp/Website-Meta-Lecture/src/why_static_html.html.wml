@@ -11,7 +11,7 @@ Server-side-generated HTML is:
 Necessarily slower than static HTML.
 </li>
 <li>
-Prune to bugs, security holes and security breaches. (<tt>eval($q-&gt;param("code"))</tt> anyone?)
+Prune to bugs, security holes and security breaches. (<code>eval($q-&gt;param("code"))</code> anyone?)
 </li>
 <li>
 For many sites, whose content does not change very often, it is completely

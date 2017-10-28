@@ -1,9 +1,9 @@
 #include 'template.wml'
 
 <p>
-The statement <tt>die</tt> throws an exception which can be any Perl
-scalar. The statement <tt>eval { ... }</tt> catches an excpetion that was
-given inside it, and after it sets the special variable <tt>$@</tt>
+The statement <code>die</code> throws an exception which can be any Perl
+scalar. The statement <code>eval { ... }</code> catches an excpetion that was
+given inside it, and after it sets the special variable <code>$@</code>
 to be the value of the exception or undef if none was caught.
 </p>
 

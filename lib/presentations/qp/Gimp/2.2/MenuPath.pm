@@ -12,7 +12,7 @@ sub get_menupath_text
     $inside =~ s/\n//g;
 
     # Remove the existing <tt>'s and such.
-    $inside =~ s/< *\/? *tt *>//g;
+    $inside =~ s/< *\/? *(?:tt|code) *>//g;
 
     # convert these ampersand escapes to normal text.
     if (0)

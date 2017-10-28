@@ -95,9 +95,9 @@ This is impossible to do in csh which forces loops to be on separate lines.
 
 <li>
 <p>
-Sub-shells and capture-subshells (<tt>$(...)</tt>) actually work in Bourne
+Sub-shells and capture-subshells (<code>$(...)</code>) actually work in Bourne
 Shell. And Bash actually <b>has</b> capture-subshells which are much safer
-than back-ticks (<tt>`...`</tt>).
+than back-ticks (<code>`...`</code>).
 </p>
 </li>
 

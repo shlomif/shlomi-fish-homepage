@@ -2,16 +2,16 @@
 
 <p>
 As could be seen from the last example, once the module has been
-<tt>use</tt>'d, its functions can be invoked by typing the
-full path of the package followed by <tt>::</tt> and followed by
+<code>use</code>'d, its functions can be invoked by typing the
+full path of the package followed by <code>::</code> and followed by
 the function name.
 </p>
 
 <p>
-Note that if you are in package <tt>Foo</tt> and you are trying to access
-functions from package <tt>Foo::Bar</tt>, then typing <tt>Bar::my_func()</tt>
+Note that if you are in package <code>Foo</code> and you are trying to access
+functions from package <code>Foo::Bar</code>, then typing <code>Bar::my_func()</code>
 will not do. You have to type the full path of the module.
-(<tt>Foo::Bar::my_func()</tt> in our case)
+(<code>Foo::Bar::my_func()</code> in our case)
 </p>
 
 

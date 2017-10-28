@@ -1,12 +1,12 @@
 #include 'template.wml'
 
 <p>
-The <tt>split</tt> function can be used to split a string according to
+The <code>split</code> function can be used to split a string according to
 a regular expression. The syntax of the split function is as follows:
 </p>
 
 <p>
-<tt>@components = split(/$regexp/, $string);</tt>
+<code>@components = split(/$regexp/, $string);</code>
 </p>
 
 <p>

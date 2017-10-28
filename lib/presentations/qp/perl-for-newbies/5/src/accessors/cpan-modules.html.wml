@@ -4,7 +4,7 @@
 As you may have noticed from our example, writing accessors by hand
 involves a lot of duplicate code, and can get tedious. One way to overcome
 it is by using namespace games
-(e.g: <tt>*Person::${field} = sub { .... }</tt>), but there are many modules
+(e.g: <code>*Person::${field} = sub { .... }</code>), but there are many modules
 on CPAN that do it all for you. Here's an overview of some of the most
 prominent ones:
 </p>

@@ -1,10 +1,10 @@
 #include 'template.wml'
 
 <p>
-If we look at the code of the <tt>lib/…*.pm</tt> file, we'll see that there's
+If we look at the code of the <code>lib/…*.pm</code> file, we'll see that there's
 practically nothing there. So now it's time that we add some meaningful
 code to the modules. But first we need to add some tests. Let's add this
-test script under <tt>t/add.t</tt>
+test script under <code>t/add.t</code>
 </p>
 
 <quadpres_code_block>
@@ -12,8 +12,8 @@ test script under <tt>t/add.t</tt>
 </quadpres_code_block>
 
 <p>
-Now we need to add it to the <tt>MANIFEST</tt>, so it will be included in
-future versions of Perl. After we did it, let's run <tt>./Build test</tt>
+Now we need to add it to the <code>MANIFEST</code>, so it will be included in
+future versions of Perl. After we did it, let's run <code>./Build test</code>
 to see the tests fail:
 </p>
 
@@ -43,7 +43,7 @@ Failed 1/5 test programs. 0/22 subtests failed.
 </quadpres_code_block>
 
 <p>
-So now we need to fix the tests. Open <tt>lib/MyMath/Ops/Add.pm</tt> and write
+So now we need to fix the tests. Open <code>lib/MyMath/Ops/Add.pm</code> and write
 that:
 </p>
 
@@ -82,6 +82,6 @@ change will better make sure that we didn't break something.
 
 <p>
 This "write more tests", "get tests to pass", "refactor" is the cycle of
-development and maintenance, and Perl tools such as <tt>Module-Build</tt>
+development and maintenance, and Perl tools such as <code>Module-Build</code>
 facilitate it.
 </p>

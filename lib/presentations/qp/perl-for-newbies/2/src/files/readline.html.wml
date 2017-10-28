@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-Just like <tt>print</tt> can be generalised to files, so can the
-<tt>&lt;&gt;</tt> which we encountered before. If you place the name of the
+Just like <code>print</code> can be generalised to files, so can the
+<code>&lt;&gt;</code> which we encountered before. If you place the name of the
 filehandle inside the operator, it will read a line from the file opened by
 that filehandle.
 </p>
@@ -25,7 +25,7 @@ the letter "A" (case-insensitive).
 </quadpres_code_block>
 
 <p>
-The <tt>join("", &lt;FILEHANDLE&gt;)</tt> command returns the entire contents
+The <code>join("", &lt;FILEHANDLE&gt;)</code> command returns the entire contents
 of the file from the current position onwards, and may prove to be useful.
 Examples for it will be given in the next section where regular expressions
 will be taught.

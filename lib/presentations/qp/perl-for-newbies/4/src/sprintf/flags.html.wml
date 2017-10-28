@@ -8,7 +8,7 @@ conversion character, which alter the output. Here is a list of them:
 <define-tag flag endtag="required">
 <tr>
 <td>
-<tt>%0</tt>
+<code>%0</code>
 </td>
 <td>
 %body
@@ -26,7 +26,7 @@ binary with "0b"</flag>
 </table>
 
 <p>
-For example (taken from <tt>perldoc -f sprintf</tt>):
+For example (taken from <code>perldoc -f sprintf</code>):
 </p>
 
 <quadpres_code_block>
@@ -34,7 +34,7 @@ For example (taken from <tt>perldoc -f sprintf</tt>):
 </quadpres_code_block>
 
 <p>
-Note that <tt>printf</tt> formats its arguments using <tt>sprintf</tt> and
-then prints them using <tt>print</tt>.
+Note that <code>printf</code> formats its arguments using <code>sprintf</code> and
+then prints them using <code>print</code>.
 </p>
 

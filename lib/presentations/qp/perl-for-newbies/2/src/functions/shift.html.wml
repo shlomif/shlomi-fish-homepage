@@ -1,14 +1,14 @@
 #include 'template.wml'
 
 <p>
-One can use the <tt>shift</tt> function to extract arguments out of the
-argument array. Since this use is so common, then simply typing <tt>shift</tt>
+One can use the <code>shift</code> function to extract arguments out of the
+argument array. Since this use is so common, then simply typing <code>shift</code>
 without any arguments will do exactly that.
 </p>
 
 <p>
 Here is the split program from the previous slide, which was
-re-written using <tt>shift</tt>:
+re-written using <code>shift</code>:
 </p>
 
 <quadpres_code_block>

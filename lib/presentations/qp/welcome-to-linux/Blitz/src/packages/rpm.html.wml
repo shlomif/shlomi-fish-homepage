@@ -8,18 +8,18 @@
 </li>
 <li>
 כדי להתקין חבילות יש לעבור למשתמש root ולהשתמש בפקודה
-"<tt dir="ltr">rpm -Uvh [package names]</tt>".
+"<code dir="ltr">rpm -Uvh [package names]</code>".
 </li>
 <li>
 כדי להסיר חבילות יש להשתמש בפקודה
-"<tt dir="ltr">rpm -e</tt>".
+"<code dir="ltr">rpm -e</code>".
 (גם כן בתור משתמש העל)
 </li>
 <li>
 כדי לבצע שאילתות על החבילות ניתן להשתמש בפקודות
-"<tt dir="ltr">rpm -qa</tt>"
+"<code dir="ltr">rpm -qa</code>"
  או
-"<tt dir="ltr">rpm -qil [package]</tt>".
+"<code dir="ltr">rpm -qil [package]</code>".
 </li>
 <li>
 ראוי לציין שהפקודה "rpm" מזהירה על היעדר תלויות אך אינה מנסה לפתור אותן.

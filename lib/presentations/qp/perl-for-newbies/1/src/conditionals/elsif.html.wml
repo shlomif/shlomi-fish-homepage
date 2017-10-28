@@ -9,12 +9,12 @@ The full syntax of the if statement is as follows:
 </quadpres_code_block>
 
 <p>
-The N-th <tt>elsif</tt> block will be executed only if all the conditions
+The N-th <code>elsif</code> block will be executed only if all the conditions
 in the previous blocks were not met <b>and</b> its own condition was met.
 </p>
 
 <p>
-You can do the same with nesting <tt>if</tt> statements inside <tt>else</tt>
+You can do the same with nesting <code>if</code> statements inside <code>else</code>
 statements, but isn't it nice of perl to save you all those extra brackets
 and indentations?
 </p>

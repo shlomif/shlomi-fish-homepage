@@ -8,10 +8,10 @@ the distribution.
 </p>
 
 <p>
-Luckily, it also generates a script on <tt>t/boilerplate.t</tt> that checks
+Luckily, it also generates a script on <code>t/boilerplate.t</code> that checks
 for that boilerplate and reports it. However, the tests there are marked as
 TODO tests, whose failure status is ignored by default. To turn off their
-TODO status, open <tt>t/boilerplate.t</tt> in your text editor and remove
+TODO status, open <code>t/boilerplate.t</code> in your text editor and remove
 or comment-out the following line
 </p>
 
@@ -20,7 +20,7 @@ or comment-out the following line
 </quadpres_code_block>
 
 <p>
-After we do that, we get some test failures when running <tt>./Build test</tt>:
+After we do that, we get some test failures when running <code>./Build test</code>:
 </p>
 
 <quadpres_code_block>

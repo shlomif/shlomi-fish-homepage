@@ -1,11 +1,11 @@
 #include 'template.wml'
 
 <p>
-The expression <tt>$myarray[-$n]</tt> is equivalent to
-<tt>$myarray[scalar(@myarray)-$n]</tt>. I.e: subscripts with negative indexes
-return  the <tt>$n</tt>'th element from the end of the array. So to get the
-value of the last element you can write <tt>$myarray[-1]</tt> and for the
-second last <tt>$myarray[-2]</tt>,
+The expression <code>$myarray[-$n]</code> is equivalent to
+<code>$myarray[scalar(@myarray)-$n]</code>. I.e: subscripts with negative indexes
+return  the <code>$n</code>'th element from the end of the array. So to get the
+value of the last element you can write <code>$myarray[-1]</code> and for the
+second last <code>$myarray[-2]</code>,
 etc.
 </p>
 

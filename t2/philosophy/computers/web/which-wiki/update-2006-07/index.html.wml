@@ -73,7 +73,7 @@ case of excessive spamming.
 <p>
 I was told that in order to facilitate maintaining several instances of
 MediaWiki on the same host (under different URLs or domains) one can re-use
-the same <tt>LocalSettings.php</tt> file, only with a dispatch of some
+the same <code>LocalSettings.php</code> file, only with a dispatch of some
 sort to the host and URL. I was able to achieve it pretty easily on the
 iglu.org.il host, and upgrading the MediaWiki is thus much easier.
 </p>

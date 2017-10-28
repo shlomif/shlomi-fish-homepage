@@ -1,6 +1,8 @@
 package MenuPath;
 
 use strict;
+use warnings;
+use utf8;
 
 sub get_menupath_text
 {
@@ -10,7 +12,7 @@ sub get_menupath_text
     $inside =~ s/\n//g;
 
     # Remove the existing <tt>'s and such.
-    $inside =~ s/< *\/? *tt *>//;
+    $inside =~ s/< *\/? *(?:tt|code) *>//g;
 
     # convert these ampersand escapes to normal text.
     if (0)
@@ -35,7 +37,7 @@ sub get_menupath_text
         @components;
 
     # An arrow wrapped in CSS magic.
-    my $separator_string = qq{\n<span class="menupathseparator">-&gt;</span>\n};
+    my $separator_string = qq#<span class="menupathseparator">-&gt;</span>\n#;
 
     my $final_string = join( $separator_string, @components_rendered );
 

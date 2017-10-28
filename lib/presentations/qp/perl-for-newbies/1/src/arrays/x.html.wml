@@ -1,10 +1,10 @@
 #include 'template.wml'
 
 <p>
-The expression <tt>(@array) x $num_times</tt> returns an array that is composed
-of <tt>$num_times</tt> copies of <tt>@array</tt> one after the other. The
-expression <tt>$scalar x $num_times</tt>, on the other hand, returns
-a string containing <tt>$num_times</tt> copies of <tt>$scalar</tt>
+The expression <code>(@array) x $num_times</code> returns an array that is composed
+of <code>$num_times</code> copies of <code>@array</code> one after the other. The
+expression <code>$scalar x $num_times</code>, on the other hand, returns
+a string containing <code>$num_times</code> copies of <code>$scalar</code>
 concatenated together string-wise.
 </p>
 

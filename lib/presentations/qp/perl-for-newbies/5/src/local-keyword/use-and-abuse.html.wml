@@ -1,10 +1,10 @@
 #include 'template.wml'
 
 <p>
-The rule of the thumb is that for general scoping, <tt>local</tt> should not
-be used instead of <tt>my</tt>, which is safer and better. You may still
+The rule of the thumb is that for general scoping, <code>local</code> should not
+be used instead of <code>my</code>, which is safer and better. You may still
 encounter some code using local in the wild, but assuming you need to maintain
-it, this code should be revamped to use <tt>my</tt> instead.
+it, this code should be revamped to use <code>my</code> instead.
 </p>
 
 <p>
@@ -20,13 +20,13 @@ For more information refer to:
 
 <li>
 <a href="http://perl.plover.com/local.html">"Seven Useful Uses of
-<tt>local</tt>"</a> - also by Mark Jason Dominus.
+<code>local</code>"</a> - also by Mark Jason Dominus.
 </li>
 
 <li>
 <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg33714.html">A
 Linux-IL post explaining the difference between
-<tt>my</tt> and <tt>local</tt></a> - by Shlomi Fish.
+<code>my</code> and <code>local</code></a> - by Shlomi Fish.
 </li>
 
 </ul>

@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-Perl supports such mathematical operators as <tt>+</tt>, <tt>-</tt>,
-<tt>*</tt> (multiplication), and parenthesis (<tt>( ... )</tt>). An example
+Perl supports such mathematical operators as <code>+</code>, <code>-</code>,
+<code>*</code> (multiplication), and parenthesis (<code>( ... )</code>). An example
 is worth a thousand words:
 </p>
 
@@ -30,7 +30,7 @@ before all others do.
 <h3>Note:</h3>
 
 You can use commas to print more than one expression at once. It beats
-writing a separate <tt>print</tt> command for every expression you wish to
+writing a separate <code>print</code> command for every expression you wish to
 output. However, for better readability, it is recommended that you will
 separate your expressions among several prints.
 </td>

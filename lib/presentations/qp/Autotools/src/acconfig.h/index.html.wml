@@ -4,8 +4,8 @@
 <points>
 
 <li>
-<tt>acconfig.h</tt> is used to generate <tt>config.h.in</tt>, which is the
-file used to generate <tt>config.h</tt>.
+<code>acconfig.h</code> is used to generate <code>config.h.in</code>, which is the
+file used to generate <code>config.h</code>.
 </li>
 
 <li>
@@ -13,19 +13,19 @@ It should contain all the macro definitions needed to control the program.
 </li>
 
 <li>
-In it, a line of <tt>#undef MYMACRO</tt> specifies that the macro should
+In it, a line of <code>#undef MYMACRO</code> specifies that the macro should
 not be defined by default. If it was defined during the run of the ./configure
 script, it would replace it as such.
 </li>
 
 <li>
-A line containing <tt>#define MYMACRO</tt> specifies that the macro would
+A line containing <code>#define MYMACRO</code> specifies that the macro would
 always be defined, but its value may vary.
 </li>
 
 <li>
-The utility <tt>autoheader</tt> can help in creating an initial
-<tt>config.h.in</tt> file.
+The utility <code>autoheader</code> can help in creating an initial
+<code>config.h.in</code> file.
 </li>
 </points>
 

@@ -99,23 +99,23 @@ napkins and let's start:
 
 <p>
 It would be possible to define a class (or a lightweight namespace) in
-Rindolf using <tt>class MyClass { ... }</tt>. The elements of such classes
+Rindolf using <code>class MyClass { ... }</code>. The elements of such classes
 can be accessed from other namespaces. Furthermore, an anonymous class
-can be constructed using <tt>class { ... }</tt>. Two keywords <tt>expand</tt>
-and <tt>extend</tt> will be supplied to manipulate those classes.
+can be constructed using <code>class { ... }</code>. Two keywords <code>expand</code>
+and <code>extend</code> will be supplied to manipulate those classes.
 </p>
 
 <p>
-<tt>expand</tt> will dump the contents of a class onto the current namespace.
-<tt>extend</tt> will add more contents to an existing class. <tt>bless</tt>
+<code>expand</code> will dump the contents of a class onto the current namespace.
+<code>extend</code> will add more contents to an existing class. <code>bless</code>
 will accept a class reference as its second argument.
 </p>
 
 <h3>Parent and this meta-namespaces</h3>
 
 <p>
-Rindolf will support the <tt>Parent</tt> namespace that would bring a namespace
-to its parent namespace, and <tt>this</tt> that would start at the current one.
+Rindolf will support the <code>Parent</code> namespace that would bring a namespace
+to its parent namespace, and <code>this</code> that would start at the current one.
 </p>
 
 <p>
@@ -147,7 +147,7 @@ Example:
 
 <p>
 Rindolf will sport the existence of a basic file primitive, which would be
-very versatile and powerful. Typeglobs, <tt>FileHandle</tt> and other I/O
+very versatile and powerful. Typeglobs, <code>FileHandle</code> and other I/O
 mechanisms would be implemented using it. Note that it is intended for
 those who are doing extensions and should not be used by mundane people,
 nor would it be very usable this way.
@@ -183,14 +183,14 @@ such user defined functions. (<b>accum</b> comes to mind).
 
 <p>
 In order to make sure Clarissa does not run out of stack space - proper-tail
-recursion is here. The primitive <tt>pt_return</tt> will behave exactly like
-<tt>return</tt> except that it would try to make the routine properly-tail
-recursive if possible. <tt>line_return</tt> would explicitly be non tail
+recursion is here. The primitive <code>pt_return</code> will behave exactly like
+<code>return</code> except that it would try to make the routine properly-tail
+recursive if possible. <code>line_return</code> would explicitly be non tail
 recursive.
 </p>
 
 <p>
-A pragma <tt>use recursion</tt> would be available to toggle the default
+A pragma <code>use recursion</code> would be available to toggle the default
 behaviour and should be very flexible.
 </p>
 
@@ -208,8 +208,8 @@ useful.
 <h4>Re-usable blocks</h4>
 
 <p>
-<tt>map</tt>, <tt>sort</tt> and friends can be implemented in userland
-using the <tt>block { ... }</tt> construct.
+<code>map</code>, <code>sort</code> and friends can be implemented in userland
+using the <code>block { ... }</code> construct.
 </p>
 
 <pre>
@@ -249,8 +249,8 @@ as the basis for better code writing and modifying mechanisms.
 
 <p>
 As in some dialects of Scheme, it would be possible to store reference to
-the current environment using a meta function <tt>this_env()</tt> and to
-pass it to <tt>eval ""</tt>.
+the current environment using a meta function <code>this_env()</code> and to
+pass it to <code>eval ""</code>.
 </p>
 
 <h3>Better Function Prototypes and Function Return Prototypes</h3>
@@ -267,8 +267,8 @@ like construct of the terms:
 </pre>
 
 <p>
-Moreover, the meta-function <tt>wantwhat()</tt> can be used a definition of
-what the function is expected to return. Like <tt>wantarray</tt> on steroids.
+Moreover, the meta-function <code>wantwhat()</code> can be used a definition of
+what the function is expected to return. Like <code>wantarray</code> on steroids.
 </p>
 
 <h3>Pragmas to Modify some of Perl 5’s Idiosyncrasies</h3>
@@ -276,6 +276,6 @@ what the function is expected to return. Like <tt>wantarray</tt> on steroids.
 <p>
 Rindolf by default will be fully compatible to Perl 5. However, it will have
 pragmas that can modify some of the things I (or others) consider as
-idiosyncrasies: atomic key-value pairs, non-ambiguous <tt>x</tt> operator,
-our to be an exact replacement for <tt>use vars qw( )</tt>, etc.
+idiosyncrasies: atomic key-value pairs, non-ambiguous <code>x</code> operator,
+our to be an exact replacement for <code>use vars qw( )</code>, etc.
 </p>

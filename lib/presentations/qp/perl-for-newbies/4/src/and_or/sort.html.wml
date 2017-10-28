@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-The <tt>||</tt> operator can be used in <tt>sort</tt>, in conjunction
-with operators such as <tt>cmp</tt> or <tt>&lt;=&gt;</tt> to sort
+The <code>||</code> operator can be used in <code>sort</code>, in conjunction
+with operators such as <code>cmp</code> or <code>&lt;=&gt;</code> to sort
 according to several criteria. For example, if you wish to sort
 according to the last name and if this is equal according to the first
 name as well, you can write the following:

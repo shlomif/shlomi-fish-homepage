@@ -21,55 +21,55 @@ too:
 
 <tr>
 <td>
-<tt>eq</tt>
+<code>eq</code>
 </td>
 <td>
-<tt>==</tt>
-</td>
-</tr>
-
-<tr>
-<td>
-<tt>ne</tt>
-</td>
-<td>
-<tt>!=</tt>
+<code>==</code>
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>gt</tt>
+<code>ne</code>
 </td>
 <td>
-<tt>&gt;</tt>
-</td>
-</tr>
-
-<tr>
-<td>
-<tt>lt</tt>
-</td>
-<td>
-<tt>&lt;</tt>
+<code>!=</code>
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>ge</tt>
+<code>gt</code>
 </td>
 <td>
-<tt>&gt;=</tt>
+<code>&gt;</code>
 </td>
 </tr>
 
 <tr>
 <td>
-<tt>le</tt>
+<code>lt</code>
 </td>
 <td>
-<tt>&lt;=</tt>
+<code>&lt;</code>
+</td>
+</tr>
+
+<tr>
+<td>
+<code>ge</code>
+</td>
+<td>
+<code>&gt;=</code>
+</td>
+</tr>
+
+<tr>
+<td>
+<code>le</code>
+</td>
+<td>
+<code>&lt;=</code>
 </td>
 </tr>
 </table>
@@ -78,7 +78,7 @@ too:
 Notice that the string operators are built from the initials of their
 abbreviated names. (E.g: eq = equal, gt = greater than). Perl's string
 comparison is case-sensitive. If you want a case insensitive
-string comparison, use the <tt>lc</tt> function to convert the strings to
+string comparison, use the <code>lc</code> function to convert the strings to
 lowercase beforehand.
 </p>
 

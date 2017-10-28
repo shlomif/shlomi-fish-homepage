@@ -1,14 +1,14 @@
 #include 'template.wml'
 
 <p>
-The <tt>opendir DIRHANDLE, EXPR</tt> function can be used to open the
-directory <tt>EXPR</tt> for reading its file and sub-directory entries.
-Afterwards <tt>readdir(DIRHANDLE)</tt> can be used to read one entry
+The <code>opendir DIRHANDLE, EXPR</code> function can be used to open the
+directory <code>EXPR</code> for reading its file and sub-directory entries.
+Afterwards <code>readdir(DIRHANDLE)</code> can be used to read one entry
 from there, or all the entries if used in list context.
 </p>
 
 <p>
-Use <tt>closedir()</tt> to close an opened directory.
+Use <code>closedir()</code> to close an opened directory.
 </p>
 
 <p>

@@ -1,8 +1,8 @@
 #include 'template.wml'
 
 <p>
-The <tt>open</tt> command can be used for command execution. By prefixing
-the filename with a pipe (<tt>|</tt>), the rest of it is interpreted
+The <code>open</code> command can be used for command execution. By prefixing
+the filename with a pipe (<code>|</code>), the rest of it is interpreted
 as a command invocation, which accepts standard input by printing to the
 filehandle, and is executed after the filehandle is closed. If the last
 character is a pipe, then the command is executed and its standard output
@@ -52,11 +52,11 @@ while (my $line = &lt;$read_from_process&gt;)
 
 <p>
 Doing something like
-<tt>open my $print_to_process, "|-", "sendmail", $to_address;</tt>
+<code>open my $print_to_process, "|-", "sendmail", $to_address;</code>
 is safer than doing:
-<tt>open my $print_to_process, "|-", "sendmail $to_address";</tt>
+<code>open my $print_to_process, "|-", "sendmail $to_address";</code>
 Because a malicious person may put some offending shell characters in
-<tt>$to_address</tt> and end up with something like:
+<code>$to_address</code> and end up with something like:
 </p>
 
 <quadpres_code_block>

@@ -1,7 +1,7 @@
 #include 'template.wml'
 
 <p>
-The <tt>stat</tt> function can be used to retrieve a 13-element array
+The <code>stat</code> function can be used to retrieve a 13-element array
 that gives status information for a given file or filehandle.
 </p>
 
@@ -16,13 +16,13 @@ The syntax is:
 </quadpres_code_block>
 
 <p>
-Here, <tt>$mode</tt> is the file mode, <tt>$size</tt> is the size of the
-file, <tt>$atime</tt> is the last access time (in seconds since the epoch),
-<tt>$mtime</tt> is the last modification time.
+Here, <code>$mode</code> is the file mode, <code>$size</code> is the size of the
+file, <code>$atime</code> is the last access time (in seconds since the epoch),
+<code>$mtime</code> is the last modification time.
 </p>
 
 <p>
-For more information about <tt>stat</tt> consult <tt>perldoc -f stat</tt>
-or its entry in <tt>perlfunc</tt>.
+For more information about <code>stat</code> consult <code>perldoc -f stat</code>
+or its entry in <code>perlfunc</code>.
 </p>
 

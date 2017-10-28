@@ -87,8 +87,8 @@ to the modifications disclaimed.
 
 <p>
 Version 0.0300 of File-Find-Object-Rule was released yesterday. The main
-highlight of this release is that the iterative <tt>-&gt;start()</tt>
-and <tt>-&gt;match()</tt> methods are now truly iterative and use
+highlight of this release is that the iterative <code>-&gt;start()</code>
+and <code>-&gt;match()</code> methods are now truly iterative and use
 File-Find-Object to scan the tree incrementally, instead of building a long
 list of results in memory, and then iterating over it.
 </p>

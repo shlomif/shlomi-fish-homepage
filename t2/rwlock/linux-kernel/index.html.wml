@@ -17,6 +17,6 @@ Without this patch, the Linux kernel discriminates against writers,
 and accepts readers into a lock in readers state even if there are
 pending writers. The <a href="test_flock.c">following
 test program</a> can demonstrate the two behaviours (try running it as
-<tt>test_flock 20 2</tt>).
+<code>test_flock 20 2</code>).
 </p>
 

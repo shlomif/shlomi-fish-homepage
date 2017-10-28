@@ -18,12 +18,12 @@ valgrind can detect problems such as:<br />
 </li>
 <li>
 valgrind is very easy to use. It has many optional flags that you can learn
-about from the documentation. (<tt>valgrind -h</tt>).
+about from the documentation. (<code>valgrind -h</code>).
 </li>
 <li>
-A useful flag is <tt>--num-callers=<span style="color:red">NNN</span></tt>
+A useful flag is <code>--num-callers=<span style="color:red">NNN</span></code>
 which sets how far back to print the function call sequence when an error
 is detected, (sometimes the error actually occurs in a sequence of functions
-you didn't write). By default it is <tt>--num-callers=4</tt>.
+you didn't write). By default it is <code>--num-callers=4</code>.
 </li>
 </points>

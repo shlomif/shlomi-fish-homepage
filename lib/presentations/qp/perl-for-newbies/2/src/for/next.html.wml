@@ -1,9 +1,9 @@
 #include 'template.wml'
 
 <p>
-An important difference between the <tt>for</tt> loop and the <tt>while</tt>
-loop is the behaviour of <tt>next</tt> inside it. In a <tt>for</tt> loop,
-<tt>next</tt> skips the rest of the iteration but still executes the
+An important difference between the <code>for</code> loop and the <code>while</code>
+loop is the behaviour of <code>next</code> inside it. In a <code>for</code> loop,
+<code>next</code> skips the rest of the iteration but still executes the
 iteration commands which were passed to the loop as arguments.
 </p>
 

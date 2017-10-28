@@ -6,21 +6,21 @@ reading blocks of a certain size.
 </p>
 
 <p>
-<tt>seek FILEHANDLE, POSITION, WHENCE</tt> sets the filehandle position
-within the file in bytes. If you specify <tt>use Fcntl;</tt> at
-the beginning of your program, then WHENCE can be <tt>SEEK_SET</tt> for
-start of file, <tt>SEEK_CUR</tt> for the current position and
-<tt>SEEK_END</tt> for the end of file.
+<code>seek FILEHANDLE, POSITION, WHENCE</code> sets the filehandle position
+within the file in bytes. If you specify <code>use Fcntl;</code> at
+the beginning of your program, then WHENCE can be <code>SEEK_SET</code> for
+start of file, <code>SEEK_CUR</code> for the current position and
+<code>SEEK_END</code> for the end of file.
 </p>
 
 <p>
-<tt>tell FILEHANDLE</tt> returns the position of the current file cursor
+<code>tell FILEHANDLE</code> returns the position of the current file cursor
 in bytes from the beginning of the file.
 </p>
 
 <p>
-<tt>read FILEHANDLE, SCALAR, LENGTH</tt> reads <tt>LENGTH</tt> characters
-from <tt>FILEHANDLE</tt> into the <tt>SCALAR</tt> variable.
+<code>read FILEHANDLE, SCALAR, LENGTH</code> reads <code>LENGTH</code> characters
+from <code>FILEHANDLE</code> into the <code>SCALAR</code> variable.
 </p>
 
 <p>

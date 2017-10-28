@@ -264,7 +264,7 @@ Link the following words to a URL. (at least not without giving any option of
 the “&lt;a” tag).
 </li>
 <li>
-Line breaks (<tt>\n</tt> characters) cause a new line to start at the post.
+Line breaks (<code>\n</code> characters) cause a new line to start at the post.
 (very annoying!)
 </li>
 <li>
@@ -296,7 +296,7 @@ that are well tested and extensively used.
 
 <p>
 Avoid horizontal scroll bars. Trim long URLs in your posts, and make sure that
-people don’t overflow with large codes in “<tt>&lt;pre&gt;…&lt;/pre&gt;</tt>”
+people don’t overflow with large codes in “<code>&lt;pre&gt;…&lt;/pre&gt;</code>”
 sections.
 </p>
 
@@ -305,7 +305,7 @@ sections.
 <p>
 Make sure your forum has measurements against spam. Bayesian filtering or a
 different spam filter is a good idea. A must is the
-<a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html"><tt>rel="nofollow"</tt>
+<a href="http://googleblog.blogspot.com/2005/01/preventing-comment-spam.html"><code>rel="nofollow"</code>
 attribute</a> which will render comment spam useless.
 </p>
 

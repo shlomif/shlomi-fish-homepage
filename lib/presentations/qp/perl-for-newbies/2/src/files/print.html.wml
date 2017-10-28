@@ -3,12 +3,12 @@
 <p>
 The print command which we encountered before can also be used to send output
 to files. In fact, the screen itself is a special filehandle, whose name is
-<tt>STDOUT</tt>, but since its use is so common, perl allows it to be omitted.
+<code>STDOUT</code>, but since its use is so common, perl allows it to be omitted.
 </p>
 
 <p>
 The syntax of printing to a file is
-<tt>print File $string1, $string2, ... </tt>. Here's a short example that
+<code>print File $string1, $string2, ... </code>. Here's a short example that
 prepares a file with a pyramid in it:
 </p>
 

@@ -7,7 +7,7 @@ This is useful if your string contains a lot of irregular characters.
 </p>
 
 <p>
-The syntax for a here document is a <tt>&lt;&lt;</tt> followed by
+The syntax for a here document is a <code>&lt;&lt;</code> followed by
 the string ending sequence, followed by the end of the statement. In
 the lines afterwards, one places the string itself followed by its
 ending sequence.
@@ -38,9 +38,9 @@ Hoola
 </quadpres_code_block>
 
 <p>
-Note that if the delimeters on the terminator after the <tt>&lt;&lt;</tt>
-are double-quotes (<tt>"..."</tt>), then the here-document will interpolate,
-and if they are single-quotes (<tt>'...'</tt>), it will not.
+Note that if the delimeters on the terminator after the <code>&lt;&lt;</code>
+are double-quotes (<code>"..."</code>), then the here-document will interpolate,
+and if they are single-quotes (<code>'...'</code>), it will not.
 </p>
 
 <p>

@@ -3,10 +3,10 @@
 
 
 <p>
-The <tt>grep</tt> function can be used to filter items out of an array based
+The <code>grep</code> function can be used to filter items out of an array based
 on a boolean expression or a regular expression. The syntax for the block
-usage is similar to <tt>map</tt> while the syntax for the regexp usage is
-similar to <tt>split</tt>.
+usage is similar to <code>map</code> while the syntax for the regexp usage is
+similar to <code>split</code>.
 </p>
 
 <p>
@@ -19,7 +19,7 @@ length is lesser than 80 characters:
 </quadpres_code_block>
 
 <p>
-And here's how <tt>grep</tt> can help us find the first 100 primes:
+And here's how <code>grep</code> can help us find the first 100 primes:
 </p>
 
 <quadpres_code_block>

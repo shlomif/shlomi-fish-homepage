@@ -116,8 +116,8 @@ sub _invalid_mode
 <h1>Error! Invalid mode "$mode_esc".</h1>
 
 <p>
-Only valid modes are <tt>random</tt> and <tt>str_id</tt>
-(where <tt>str_id</tt> is the default).
+Only valid modes are <code>random</code> and <code>str_id</code>
+(where <code>str_id</code> is the default).
 </p>
 END_OF_BODY
     return;

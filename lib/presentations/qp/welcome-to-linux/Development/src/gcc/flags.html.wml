@@ -5,7 +5,7 @@
 <set-var %attributes />
 <tr>
 <td>
-<tt><get-var f /></tt>
+<code><get-var f /></code>
 </td>
 <td>
 %body
@@ -28,7 +28,7 @@ Show all reasonable warnings (there are more).
 Produce debug information, necessary for debugging.
 </flag>
 <flag f="-l<span style="color : red">library</span>">
-Links to a standard library. Use <tt>-l<span style="color : red">m</span></tt>
+Links to a standard library. Use <code>-l<span style="color : red">m</span></code>
 to load the standard maths library.
 </flag>
 <flag f="-c">
@@ -41,7 +41,7 @@ Compile only; output assembly code.
 Pre-process only. Output pre-processed code.
 </flag>
 <flag f="-D<span style="color : red">macro</span>">
-Define a macro, one can also use <tt>-D<span style="color : red">macro</span>=<span style="color :red">val</span></tt> in order to assign a value
+Define a macro, one can also use <code>-D<span style="color : red">macro</span>=<span style="color :red">val</span></code> in order to assign a value
 for the macro. This will be used for preprocessing all files.
 </flag>
 </table>
@@ -49,6 +49,6 @@ for the macro. This will be used for preprocessing all files.
 <points>
 <li>
 When compiling, I recommend (and Kimchi demands) compiling with:<br />
-<tt class="cmd">gcc -ansi -pedantic -Wall file1 [file2 [file3...]] -o output</tt>
+<code class="cmd">gcc -ansi -pedantic -Wall file1 [file2 [file3...]] -o output</code>
 </li>
 </points>

@@ -14,24 +14,25 @@ use XML::LibXML::XPathContext;
 has 'wml_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'lib_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'xml_basename' => ( isa => 'Str', is => 'ro', required => 1, );
-has 'ps' => ( isa => 'XML::Grammar::ProductsSyndication', is => 'rw' );
+has 'ps'           => (
+    isa  => 'XML::Grammar::ProductsSyndication',
+    is   => 'rw',
+    lazy => 1,
+    default =>
 
-sub BUILD
-{
-    my $self = shift;
+        sub {
+        my $self = shift;
 
-    $self->ps(
-        XML::Grammar::ProductsSyndication->new(
+        return XML::Grammar::ProductsSyndication->new(
             {
                 'source' => {
                     'file' =>
                         sprintf( "%s/%s", $self->wml_dir, $self->xml_basename ),
                 }
             },
-        )
-    );
-
-}
+        );
+        },
+);
 
 sub process
 {
@@ -50,10 +51,9 @@ sub process
     my $xc = XML::LibXML::XPathContext->new($xml);
     $xc->registerNs( 'html' => "http://www.w3.org/1999/xhtml" );
 
-    open my $out, ">:encoding(UTF-8)", $self->lib_dir() . "/include-me.html";
-    print {$out}
-        $xc->findnodes('/html:html/html:body/html:div')->[0]->toString(0);
-    close($out);
+    path( $self->lib_dir() . "/include-me.html" )
+        ->spew_utf8(
+        $xc->findnodes('/html:html/html:body/html:div')->[0]->toString(0) );
 
     $self->ps->update_cover_images(
         {

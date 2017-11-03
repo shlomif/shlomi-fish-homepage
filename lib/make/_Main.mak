@@ -330,7 +330,7 @@ $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 	touch $@
 
 GPERL = perl -Ilib
-GPERL_DEPS = lib/Shlomif/Homepage/Amazon.pm
+GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<

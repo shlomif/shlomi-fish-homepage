@@ -1,15 +1,7 @@
-package Shlomif::Homepage::Amazon;
+package Shlomif::Homepage::Amazon::Obj;
 
 use strict;
 use warnings;
-
-sub import
-{
-    my ( $module, $args ) = @_;
-    return Shlomif::Homepage::Amazon::Obj->new($args)->process;
-}
-
-package Shlomif::Homepage::Amazon::Obj;
 
 use MooX qw( late );
 

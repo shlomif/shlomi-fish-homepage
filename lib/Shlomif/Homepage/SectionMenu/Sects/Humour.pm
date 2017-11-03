@@ -10,24 +10,10 @@ use MyNavData;
 
 use Shlomif::Homepage::FortuneCollections;
 use JSON::MaybeXS (qw( decode_json ));
+use Path::Tiny qw( path );
 
 my $json_data_fn =
     Shlomif::FindLib->rel_path( [qw(Shlomif factoids-nav.json)] );
-
-sub _slurp
-{
-    my $filename = shift;
-
-    open my $in, '<:raw', $filename
-        or die "Cannot open '$filename' for slurping - $!";
-
-    local $/;
-    my $contents = <$in>;
-
-    close($in);
-
-    return $contents;
-}
 
 my $humour_tree_contents = {
     host        => "t2",
@@ -315,7 +301,7 @@ my $humour_tree_contents = {
                     url  => "humour/bits/facts/",
                     title =>
 "Collections of funny factoids about various people and things",
-                    subs => decode_json( _slurp($json_data_fn) ),
+                    subs => decode_json( path($json_data_fn)->slurp_raw ),
                 },
             ],
         },

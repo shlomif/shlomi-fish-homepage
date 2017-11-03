@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Text::VimColor;
+use Path::Tiny qw( path );
 
 sub is_newer
 {
@@ -34,18 +35,10 @@ sub get_syntax_highlighted_html_from_file
             ( $args{'filetype'} ? ( filetype => $args{'filetype'} ) : () ),
         );
 
-        open my $out, ">", $html_filename
-            or die "Could not open HTML file '$html_filename' for output - $!";
-
-        print {$out} $syntax->html();
-        close($out);
+        path($html_filenam)->spew_utf8( $syntax->html() );
     }
 
-    open my $in, "<", $html_filename
-        or die "Could not open HTML file '$html_filename' for input - $!";
-    my $text = do { local $/; <$in> };
-    close($in);
-
+    my $text = path($html_filename)->slurp_raw;
     $text =~ s{^.*<pre>[\s\n\r]*}{}s;
     $text =~ s{[\s\n\r]*</pre>.*$}{}s;
     $text =~ s{(class=")syn}{$1}g;

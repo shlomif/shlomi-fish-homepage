@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.5.0;
+use File::Copy qw/ copy /;
 use Path::Tiny qw/ path /;
 use List::MoreUtils ();
 
@@ -17,6 +18,7 @@ sub _exec_perl
     }
 }
 
+copy( "lib/VimIface.pm", "lib/presentations/qp/common/VimIface.pm" );
 _exec_perl(
     [
         '-MShlomif::Homepage::LongStories', '-e',

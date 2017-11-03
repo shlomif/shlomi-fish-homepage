@@ -1399,3 +1399,8 @@ all: $(T2_CLEAN_STAMP)
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | NO_I=1 xargs $(PROCESS_ALL_INCLUDES)
 	touch $@
+
+all: lib/presentations/qp/common/VimIface.pm
+
+lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
+	$(call COPY)

@@ -11,8 +11,9 @@ sub import
 
 package Shlomif::Homepage::Amazon::Obj;
 
-use MooX (qw( late ));
+use MooX qw( late );
 
+use Path::Tiny qw(path);
 use JSON::MaybeXS qw(decode_json);
 
 use XML::Grammar::ProductsSyndication;
@@ -40,30 +41,13 @@ sub BUILD
 
 }
 
-sub _utf8_slurp
-{
-    my $filename = shift;
-
-    open my $in, '<', $filename
-        or die "Cannot open '$filename' for slurping - $!";
-
-    binmode $in, ':encoding(utf8)';
-
-    local $/;
-    my $contents = <$in>;
-
-    close($in);
-
-    return $contents;
-}
-
 sub process
 {
     my ($self) = @_;
 
     my $config =
         decode_json(
-        _utf8_slurp( $ENV{HOME} . '/.shlomifish-amazon-sak.json' ) );
+        path( $ENV{HOME} . '/.shlomifish-amazon-sak.json' )->slurp_utf8 );
 
     if ( !$self->ps->is_valid() )
     {

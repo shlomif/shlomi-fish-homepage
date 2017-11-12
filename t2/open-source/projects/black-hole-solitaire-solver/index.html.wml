@@ -18,7 +18,7 @@ the cards to move.
 
 <h2 id="download">Download</h2>
 
-<set-var ver="0.14.0" />
+<set-var ver="0.16.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -137,6 +137,12 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <h2 id="news">News</h2>
+
+<h3 id="news_version_0_16_0">Version 0.16.0</h3>
+
+<p>
+Version 0.16.0 was released with a fix to a crash and some code cleanups.
+</p>
 
 <h3 id="news_version_0_14_0">Version 0.14.0</h3>
 

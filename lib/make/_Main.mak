@@ -775,7 +775,7 @@ HACKING_DOC = $(T2_DEST)/open-source/resources/how-to-contribute-to-my-projects/
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
 $(MOJOLICIOUS_LECTURE_SLIDE1): t2/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
-	asciidoc -o $@ $<
+	asciidoc -a linkcss -o $@ $<
 
 $(DOCBOOK4_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoc --backend=docbook -o $@ $<

@@ -28,7 +28,6 @@ my %whitelist = (
 'dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
         'dest/t2/humour/human-hacking/arabic-v2.html',
         'dest/t2/humour/humanity/songs/index.html',
-        'dest/t2/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html',
         'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
         'dest/t2/js/jquery-ui/index.html',
 'dest/t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.html',

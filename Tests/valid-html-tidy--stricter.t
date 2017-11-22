@@ -39,23 +39,31 @@ MyTidy->new(
             my $fn = shift;
             return not(
                 exists $whitelist{$fn}
-                or $fn =~ m#\A dest/t2/
-                    (?:MathVentures/ |
-                    lecture/
-                    (?:
-                    Perl/
-                    (?:
-                    Lightning/
-                    (?: Opt-Multi-Task-in-PDL/ | Test-Run/ |
-                    Too-Many-Ways/
-                        )
+                or $fn =~ m#\A
+    dest/t2/ (?:
+        MathVentures/
+            |
+        lecture/ (?:
+            Perl/ (?:
+                Lightning/ (?:
+                    Opt-Multi-Task-in-PDL/
                         |
-                    Graham-Function/
-                    )
-                    | SCM/subversion/for-pythoneers/ | Vim/beginners/ )
-                    slides/ |
-                    js/MathJax/
-                    )
+                    Test-Run/
+                        |
+                    Too-Many-Ways/
+                )
+                    |
+                Graham-Function/
+            )
+                |
+            SCM/subversion/for-pythoneers/
+                |
+            Vim/beginners/
+        )
+            slides/
+            |
+        js/MathJax/
+    )
                 #x
             );
         },

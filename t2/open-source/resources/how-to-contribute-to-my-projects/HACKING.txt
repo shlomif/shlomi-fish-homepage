@@ -4,9 +4,11 @@ Shlomi Fish <shlomif@cpan.org>
 :Date: 2012-05-14
 :Revision: $Id$
 
+[id="perl-style"]
 Perl Style Guidelines
 ---------------------
 
+[id="test-more"]
 Use Test::More for test scripts while using Test::Count annotations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,6 +20,7 @@ not be used for new code.
 Any bug fixes or feature addition patches should be accompanied with
 a test script to test the code.
 
+[id="trailing"]
 Avoid trailing statement modifiers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -38,12 +41,14 @@ if ($cond)
 }
 ----------------
 
+[id="until-and-unless"]
 Avoid until and unless
 ~~~~~~~~~~~~~~~~~~~~~~
 
 "until" and "unless" should be spelled using "if !" or "while !" or
 alternatively "if not" or "while not".
 
+[id="MANIFEST"]
 Make sure you update the "MANIFEST" file with any new source files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -51,6 +56,7 @@ All the new source files should be places in the "MANIFEST" file in the core
 distribution. Note that I am considering to make use of "MANIFEST.SKIP"
 instead, which would not necessitate that in general.
 
+[id="changes-file"]
 Make sure to update the "Changes" (or equivalently named) file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,6 +66,7 @@ generated. Note that due to historical reasons, the exact format of the Changes
 varies between different projects of mine and you should try to emulate the
 style and format of the one of the CPAN distribution in question.
 
+[id="tests-no-inet"]
 Test programs should not connect to Internet resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,6 +82,7 @@ on such Internet resources:
 * Such Internet resources can fluctuate in their content and behaviour,
 which may break the tests.
 
+[id="new-tests"]
 Bug fixes and new features should be accompanied by new automated tests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -89,16 +97,19 @@ For more information, see:
 
 * http://en.wikipedia.org/wiki/Test_automation
 
+[id="other-bad-elems"]
 Other elements to avoid
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 See http://perl-begin.org/tutorials/bad-elements/ .
 
+[id="c"]
 C Style Guidelines
 ------------------
 
 Here are some style guidelines for new code to be accepted into XML-LibXML:
 
+[id="four-spaces"]
 4 Spaces for Indentation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -120,6 +131,7 @@ if (COND())
 }
 ----------------
 
+[id="curly-braces"]
 Curly Braces Alignment
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -151,6 +163,7 @@ if ( COND() )
   }
 ----------------
 
+[id="comments-precede"]
 Comments should precede the lines performing the action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -168,6 +181,7 @@ for(dc=0;dc<c-1;dc++)
 
 +TODO: Fill in+
 
+[id="one-line-clauses"]
 One line clauses should be avoided
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -197,6 +211,7 @@ while (COND())
 }
 ----------------
 
+[id="id-naming"]
 Identifier Naming Conventions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -224,6 +239,7 @@ idx - index
 i, j - indexes
 ----------------
 
+[id="if-0"]
 Don't comment-out - use #if 0 to temporarily remove code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -243,6 +259,7 @@ Removed code here.
 =cut
 ----------------
 
+[id="decls-after-stmts"]
 No declarations after statements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -282,6 +299,7 @@ int my_func(int arg)
 }
 ----------------
 
+[id="comments-empty-space"]
 Comments should have an empty space after the comment leader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -306,6 +324,7 @@ print "Hello\n";
 printf("%s\n", "Hello");
 ----------------
 
+[id="sizeof1"]
 sizeof(var) is preferable to sizeof(mytype_t)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -314,12 +333,14 @@ and +sizeof(mytype_t)+ where +mytype_t+ is a type, the former should be
 preferable. This way, if the type of the variable changes, one does not
 need to fix the +sizeof(…)+.
 
+[id="sizeof-parentheses"]
 sizeof() must always be enclosed in parentheses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Do not write +sizeof int+, +sizeof mystruct_t+ etc. Instead write
 +sizeof(int)+, +sizeof(mystruct_t)+ .
 
+[id="types-and-structs"]
 Types should end in “_t” ; Raw struct definitions in “_struct”
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

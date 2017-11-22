@@ -781,7 +781,7 @@ $(DOCBOOK4_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/pr
 	asciidoc --backend=docbook -o $@ $<
 
 $(HACKING_DOC): t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
-	asciidoc -o $@ $<
+	asciidoc -a linkcss -o $@ $<
 
 t2/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
 

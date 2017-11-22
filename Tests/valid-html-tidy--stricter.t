@@ -46,7 +46,7 @@ MyTidy->new(
                     Perl/
                     (?:
                     Lightning/
-                    (?: Mojolicious | Opt-Multi-Task-in-PDL/ | Test-Run/ |
+                    (?: Opt-Multi-Task-in-PDL/ | Test-Run/ |
                     Too-Many-Ways/
                         )
                         |

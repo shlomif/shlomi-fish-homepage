@@ -4,9 +4,9 @@ use strict;
 use warnings;
 
 use Getopt::Long qw/ GetOptions /;
-use Path::Tiny qw/ path /;
 use File::Which qw/ which /;
 use YAML::XS qw/ LoadFile /;
+use Path::Tiny qw/ path /;
 
 my $out_fn;
 my $exes_fn;
@@ -60,7 +60,7 @@ GetOptions(
     {
         my $v = $required_modules->{$m};
         local $SIG{__WARN__} = sub { };
-        my $verdict = eval( "use $m " . ( $v || '' ) . ';' );
+        my $verdict = eval( "use $m " . ( $v || '' ) . ' ();' );
         my $Err = $@;
 
         if ($Err)

@@ -1,9 +1,6 @@
 # Quicktask v1.2
 
 CURRENT TASKS:
-    - Get Tests/valid-html-tidy--stricter.t to validate all the site.
-        * Add more paths to validate.
-      @ Added [Sun 2017-02-26]
     - Buttons in mobile mode should occupy all the width of the page.
         * Thanks to Sagiv for the insight.
         * DONE partially in the "Show NavBar" button.
@@ -14,18 +11,10 @@ CURRENT TASKS:
         @ Added [Sun 2015-12-13]
 
 LONG TERM:
-    - Hyperlink the raw URLs in the IRC conversations.
-        * Under humour/fortunes .
-      @ Added [Sat 2016-12-31]
     - Spice up the front page, so it won't be boring text.
       @ Added [Mon 2016-10-10]
     - Add icons/images to the nav_blocks.
       @ Added [Fri 2014-08-22]
-    - Fortunes Atom Feed:
-        * Make it validate
-        * Syndicate it into the rest.
-        * fix the formatting of the fortunes (especially IRC fortunes)
-            * in Akregator.
     - Check for Hebrew spelling in the Hebrew test suite:
     - Spell-check the *.txt files.
       @ Added [Sun 2016-04-03]
@@ -42,11 +31,6 @@ LONG TERM:
             * Mostly static.
             * By a human - for humans.
         * Added [Sat 2013-03-16]
-    - Add more essays I wrote to the Essays Index.
-        * About Female Action Heroes
-        * We are the Qs of the Q Continuum.
-        * Dealing with Internet Trolls
-        * http://shlomifish.livejournal.com/2615.html - Publish or Perish.
     - Link the Hebrew Errors Page to the main one.
     - Add a section to the drugs’ legalisation page about the “War on Drugs”
         * Quote Larry Lessig’s Remix about “War on File Swapping”
@@ -58,13 +42,6 @@ LONG TERM:
     - MSIE Page Feb 2014 Update
         * Add more links.
         * Make some text bold.
-    - BBT With EmWatson:
-        * Penny: it's not like you're doing all these films for money.
-        * EmWatson: true that, Madame. I'm doing them for a shitload of money!
-        * (Maybe "I'm doing them for a bloody lot of money.").
-      @ Added [Mon 2014-08-18]
-    - Consider converting the code away from IO-All .
-      @ Added [Fri 2015-09-11]
     - Add an attribution tag to the factoids.
       @ Added [Fri 2014-10-24]
     - Clarify the explanation of the dodecahedron volume based on email thread.
@@ -80,6 +57,11 @@ MINOR PROBLEMS:
         * Wikipedia and related sites.
     - HHFG: add some links and references to resources.
         * For further enlightenment.
+    - Fortunes Atom Feed:
+        * Make it validate
+        * Syndicate it into the rest.
+        * fix the formatting of the fortunes (especially IRC fortunes)
+            * in Akregator.
 
 COMPLETED TASKS:
     - Add the Buffy facts:
@@ -433,6 +415,23 @@ COMPLETED TASKS:
     - Remove occurrences of "Red Hat" without the space.
         @ Added [Mon 2016-05-30]
         @ DONE [Mon 2016-05-30]
+    - Get Tests/valid-html-tidy--stricter.t to validate all the site.
+        * Add more paths to validate.
+        @ DONE [Thu 2017-11-23]
+      @ Added [Sun 2017-02-26]
+    - Hyperlink the raw URLs in the IRC conversations.
+        * Under humour/fortunes .
+        @ DONE [Thu 2017-11-23]
+      @ Added [Sat 2016-12-31]
+    - BBT With EmWatson:
+        * Penny: it's not like you're doing all these films for money.
+        * EmWatson: true that, Madame. I'm doing them for a shitload of money!
+        * (Maybe "I'm doing them for a bloody lot of money.").
+        @ DONE [Thu 2017-11-23]
+      @ Added [Mon 2014-08-18]
+    - Consider converting the code away from IO-All .
+        @ DONE [Thu 2017-11-23]
+      @ Added [Fri 2015-09-11]
 
 
 # vim:ft=quicktask:sw=4:ts=4

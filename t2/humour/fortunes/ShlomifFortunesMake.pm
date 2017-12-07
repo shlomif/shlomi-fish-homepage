@@ -5,7 +5,7 @@ use warnings;
 
 my $DIR = __FILE__ =~ s#(?:/|\A)[^/]*\z##r;
 
-my $VERSION_FILE = $DIR . '/' . 'ver.txt';
+my $VERSION_FILE = ( ( $DIR || '.' ) . '/' . 'ver.txt' );
 
 sub version_file
 {

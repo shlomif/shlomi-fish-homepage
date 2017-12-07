@@ -34,11 +34,17 @@ They have been converted to a custom XML-based grammar, based on
 
 <ul>
 
+<:
+
+use lib './humour/fortunes/';
+use ShlomifFortunesMake;
+
+:>
 <link_to_epub_only basename="fortunes-shlomif" />
 
 <li>
 <p>
-<a href="$(PACKAGE_BASE)"><b>These fortunes in a tar.gz file</b></a>
+<a href="<: print ShlomifFortunesMake->package_base; :>"><b>These fortunes in a tar.gz file</b></a>
 </p>
 </li>
 

@@ -3,7 +3,9 @@ package ShlomifFortunesMake;
 use strict;
 use warnings;
 
-my $VERSION_FILE = 'ver.txt';
+my $DIR = __FILE__ =~ s#(?:/|\A)[^/]*\z##r;
+
+my $VERSION_FILE = $DIR . '/' . 'ver.txt';
 
 sub version_file
 {

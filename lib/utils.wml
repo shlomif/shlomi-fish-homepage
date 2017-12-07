@@ -16,13 +16,7 @@
 
 <if <match "<get-var url />" "^http://" action="report" />
     "<get-var url />"
-    <ifeq "$(LATEMP_SERVER)" "<get-var host />"
-        "$(ROOT)/<get-var url />"
-        <ifeq "<get-var host />" "t2"
-            "http://www.shlomifish.org/<get-var url />"
-            "http://www.shlomifish.org/Vipe/<get-var url />"
-            />
-    />
+    "$(ROOT)/<get-var url />"
 />
 
 <restore host />

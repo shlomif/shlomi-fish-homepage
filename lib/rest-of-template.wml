@@ -154,8 +154,6 @@ It is easy to reach Shlomi using a large number of
 
 </div>
 
-<shlomif_sponsored_ad_text />
-
 <google_search />
 <duck_duck_go_search />
 
@@ -291,8 +289,7 @@ of an EvilPHish”</a> cartoon of
 ;;; If it is the t2 index than display the <hosting_link> macro
 ;;; Else - display the back to my homepage image
 <latemp_foot_image>
-<if <ifeq "$(LATEMP_FILENAME)" "index.html"
-        <ifeq "$(LATEMP_SERVER)" "t2" "t2" "" /> "" />
+<ifeq "$(LATEMP_FILENAME)" "index.html"
     <hosting_link />
     <backtomyhp />
     />

@@ -57,12 +57,13 @@ VIPE_ALL_DIRS_DEST = $(VIPE_DIRS_DEST) $(VIPE_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
+# WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ;
 define DEF_WML_PATH
-WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ;
+WML_LATEMP_PATH="$$PWD/$@" ;
 endef
 
 define GENERIC_GENERIC_WML_RENDER
-$(call DEF_WML_PATH) ( cd $2 && wml -o "$${WML_LATEMP_PATH}" $(WML_FLAGS) -DLATEMP_SERVER=$1 -DLATEMP_FILENAME=$(patsubst $3/%,%,$(patsubst %.wml,%,$@)) $(patsubst $2/%,%,$<) ) && $4 '$@'
+$(call DEF_WML_PATH) ( cd $2 && wml -o "$${WML_LATEMP_PATH}" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $3/%,%,$(patsubst %.wml,%,$@)) $(patsubst $2/%,%,$<) ) && $4 '$@'
 endef
 
 define GENERIC_WML_RENDER

@@ -44,7 +44,7 @@ my @cmd_line = (
     "--master-url"  => $master_url,
     "--title"       => "Shlomi Fish's Fortune Feeds",
     "--tagline"     => "Shlomi Fish's Fortune Feeds",
-    "--author"      => "shlomif\@iglu.org.il (Shlomi Fish)",
+    "--author"      => "shlomif\@cpan.org (Shlomi Fish)",
 );
 
 print join( " ", map { m{ } ? qq{"$_"} : $_ } @cmd_line ), "\n";

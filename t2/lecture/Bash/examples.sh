@@ -11,10 +11,10 @@ done
 
 # ${paramter%word} is a Bash extension that removes the suffix from the
 # parameter. For more information consult the bash man page or
-# http://www.iglu.org.il/LDP/LDP/abs/html/parameter-substitution.html
+# http://www.tldp.org/LDP/abs/html/parameter-substitution.html
 #
 # Let's define a tag <bashguide "page"/> ==>
-# http://www.iglu.org.il/LDP/LDP/abs/html/page.html
+# http://www.tldp.org/LDP/abs/html/page.html
 # <bashguide "parameter-substitution"/>
 
 # Or in pure Bourne Shell

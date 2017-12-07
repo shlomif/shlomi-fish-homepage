@@ -3,17 +3,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
 "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" >
 </define-tag>
-
 #include "driver.wml"
 
 <page_extra_head_elements>
 <link rel="stylesheet" type="text/css" href="bugs-in-square.css" />
 </page_extra_head_elements>
-
 <latemp_subject "Bugs in a Square (MathML Enabled Version)" />
 <latemp_meta_desc "My own solution to the bugs in the square following each other riddle" />
-
-#include "mathjax.wml"
+#include "Inc/mathjax.wml"
 
 <p>
 I first encountered this problem in the science journal of a laboratory

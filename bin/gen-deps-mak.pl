@@ -21,36 +21,6 @@ sub _map_wmls_to_deps
     ];
 }
 
-=begin foo
-
-lib/amazon.wml
-lib/camila_ron.wml
-lib/cpan_dists.wml
-lib/dbook.wml
-lib/div2mag.wml
-lib/driver.wml
-lib/footer.wml
-lib/iglu.wml
-lib/lang_switch.wml
-lib/local-defs.wml
-lib/mathjax.wml
-lib/multi-lang.wml
-lib/paypal.wml
-lib/prelude.wml
-lib/render_fortunes_pages.wml
-lib/rest-of-template.wml
-lib/SFresume_base.wml
-lib/share-this.wml
-lib/sponsored_ad.wml
-lib/toc_div.wml
-lib/utils.wml
-lib/vim_include_code.wml
-lib/xml_g_fiction.wml
-
-=end foo
-
-=cut
-
 # Write deps.mak
 {
     my @files = File::Find::Object::Rule->name('*.wml')->in('t2');

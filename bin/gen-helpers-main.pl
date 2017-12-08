@@ -52,7 +52,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 'source_dir' => $_,
                 'dest_dir'   => "\$(ALL_DEST_BASE)/$_"
                 }
-        } (qw(common t2 vipe))
+        } (qw(common t2))
     ],
     filename_lists_post_filter => sub {
         my ($args) = @_;
@@ -102,13 +102,7 @@ $text =~
 s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
     or die "Cannot subt";
 $text =~
-s#^(\$\(VIPE_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call VIPE_INCLUDE_WML_RENDER)#ms
-    or die "Cannot subt";
-$text =~
 s#^(\$\(T2_COMMON_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_COMMON_INCLUDE_WML_RENDER)#ms
-    or die "Cannot subt";
-$text =~
-s#^(\$\(VIPE_COMMON_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call VIPE_COMMON_INCLUDE_WML_RENDER)#ms
     or die "Cannot subt";
 
 {

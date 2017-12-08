@@ -52,7 +52,6 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
-VIPE_ALL_DIRS_DEST = $(VIPE_DIRS_DEST) $(VIPE_COMMON_DIRS_DEST)
 
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
@@ -74,19 +73,11 @@ define T2_INCLUDE_WML_RENDER
 $(call GENERIC_WML_RENDER,t2,$(T2_SRC_DIR),$(T2_DEST))
 endef
 
-define VIPE_INCLUDE_WML_RENDER
-$(call GENERIC_WML_RENDER,vipe,$(VIPE_SRC_DIR),$(VIPE_DEST))
-endef
-
 define T2_COMMON_INCLUDE_WML_RENDER
 $(call GENERIC_WML_RENDER,t2,$(COMMON_SRC_DIR),$(T2_DEST))
 endef
 
-define VIPE_COMMON_INCLUDE_WML_RENDER
-$(call GENERIC_WML_RENDER,vipe,$(COMMON_SRC_DIR),$(VIPE_DEST))
-endef
-
-make-dirs: $(T2_ALL_DIRS_DEST) $(VIPE_ALL_DIRS_DEST)
+make-dirs: $(T2_ALL_DIRS_DEST)
 
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 
@@ -232,7 +223,6 @@ $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html: lib/pages/t2/heb_resume.xhtml
 
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
-VIPE_DOCS_SRC = $(patsubst $(VIPE_DEST)/%,$(VIPE_SRC_DIR)/%.wml,$(VIPE_DOCS_DEST))
 
 T2_PHILOSOPHY_DOCS = \
 	$(filter $(T2_DEST)/philosophy/%,$(T2_DOCS_DEST)) \
@@ -244,11 +234,6 @@ $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))
 
 $(T2_LECTURES_DOCS_SRC): $(T2_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
-	touch $@
-
-VIPE_LECTURES_DOCS_SRC = $(filter $(VIPE_SRC_DIR)/lecture/%,$(VIPE_DOCS_SRC))
-
-$(VIPE_LECTURES_DOCS_SRC): $(VIPE_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
 COMMON_LECTURES_DOCS_SRC = $(patsubst %,common/%.wml,$(filter lecture/%,$(COMMON_DOCS)))
@@ -266,12 +251,6 @@ T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
 $(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
 
-VIPE_SOFTWARE_DOCS_SRC =
-
-$(VIPE_SOFTWARE_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
-	touch $@
-
-
 #### Humour thing
 
 T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
@@ -285,12 +264,6 @@ $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 T2_ART_DOCS_DEST = $(filter $(T2_DEST)/art/%,$(T2_DOCS_DEST))
 
 $(T2_ART_DOCS_DEST): $(ART_DEPS)
-
-VIPE_HUMOUR_DOCS_SRC =
-
-$(VIPE_HUMOUR_DOCS_SRC): $(VIPE_SRC_DIR)/%.wml: $(HUMOUR_DEPS)
-	touch $@
-
 
 T2_PUZZLES_DOCS_SRC = $(filter $(T2_SRC_DIR)/puzzles/%,$(T2_DOCS_SRC)) $(filter $(T2_SRC_DIR)/MathVentures/%,$(T2_DOCS_SRC)) $(filter $(T2_SRC_DIR)/toggle.html.wml,$(T2_DOCS_SRC))
 
@@ -1051,18 +1024,14 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
 T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
-VIPE_CSS_TARGETS = $(patsubst %,$(VIPE_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
-css_targets: $(T2_CSS_TARGETS) $(VIPE_CSS_TARGETS) $(T2_DEST)/screenplay.css
+css_targets: $(T2_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
 SASS_STYLE = compressed
 # SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
 $(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass
-	$(SASS_CMD) $< $@
-
-$(VIPE_CSS_TARGETS): $(VIPE_DEST)/%.css: lib/sass/%.sass
 	$(SASS_CMD) $< $@
 
 FORT_SASS_DEPS = lib/sass/fortunes.sass

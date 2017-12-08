@@ -869,7 +869,7 @@ $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	perl -lpi -e 's/[ \t]+\z//' $@
 
 # DOCBOOK5_RELAXNG = http://www.docbook.org/xml/5.0/rng/docbook.rng
-DOCBOOK5_RELAXNG = rng/docbook.rng
+DOCBOOK5_RELAXNG = lib/sgml/relax-ng/docbook.rng
 
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	# jing $(DOCBOOK5_RELAXNG) $<

@@ -7,7 +7,7 @@ before_install:
     - sudo -H `which python3` -m pip install bs4
     - sudo -H `which python3` -m pip install beautifulsoup4
     - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
-    - sudo cpanm --notest Alien::Tidyp App::XML::DocBook::Builder File::Find::Rule Pod::Xhtml Template::Preprocessor::TTML YAML::XS
+    - sudo cpanm --notest Alien::Tidyp YAML::XS
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"
     - gem install sass compass compass-blueprint
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'

@@ -1,6 +1,7 @@
 ---
 required:
     modules:
+        App::XML::DocBook::Builder: 0
         CGI: 0
         CGI::Minimal: 0
         Carp: 0
@@ -21,6 +22,7 @@ required:
         File::Find: 0
         File::Find::Object: 0
         File::Find::Object::Rule: 0
+        File::Find::Rule: 0
         File::Glob: 0
         File::Path: 0
         File::Spec: 0
@@ -60,11 +62,13 @@ required:
         Parallel::ForkManager: 0
         Path::Tiny: 0
         Pod::Usage: 0
+        Pod::Xhtml: 0
         SVG: 0
         Scalar::Util: 0
         Spork::Shlomify: 0
         String::ShellQuote: 0
         Template: 0
+        Template::Preprocessor::TTML: 0
         Test::Code::TidyAll: 0
         Test::Count: 0
         Test::Count::Filter: 0

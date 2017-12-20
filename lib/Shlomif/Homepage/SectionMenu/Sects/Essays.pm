@@ -229,7 +229,7 @@ my $essays_tree_contents = {
 "How can one start contributing to free and open-source software (FOSS)",
                             subs => [
                                 {
-                                    text => "Mirror of Longer Document",
+                                    text => "Longer Document",
                                     url =>
 "philosophy/computers/open-source/how-to-start-contributing/tos-document.html",
                                 },

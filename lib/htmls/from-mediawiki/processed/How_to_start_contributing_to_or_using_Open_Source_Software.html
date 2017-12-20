@@ -178,7 +178,7 @@ The good news is that you can install Linux while being able to keep your Window
 </li>
 
 <li>
- <b>LiveCD/LiveUSB</b> - a Linux LiveCD, LiveDVD or LiveUSB is a self-contained Linux distribution that boots up and runs directly from the CD drive or USB stick without requiring installation on the hard-disk, and while leaving the host system in tact. The downside is that any changes not saved on the hard-disk will be lost after a reboot, and reportedly using a LiveCD for prolonged periods tends to ruin the CD-ROM drive.
+ <b>LiveCD/LiveUSB</b> - a Linux LiveCD, LiveDVD or LiveUSB is a self-contained Linux distribution that boots up and runs directly from the CD drive or USB stick without requiring installation on the hard-disk, and while leaving the host system intact. The downside is that any changes not saved on the hard-disk will be lost after a reboot, and reportedly using a LiveCD for prolonged periods tends to ruin the CD-ROM drive.
 
 </li>
 
@@ -215,7 +215,11 @@ Since the Linux operating system and its individual components are all open-sour
 </li>
 
 <li>
- <a href="http://www.mageia.org/">Mageia Linux</a> - a free desktop-oriented distribution with semi-annual releases, good integration between the components and good desktop polish.
+<a href="http://linuxmint.com/">Linux Mint</a> - a desktop-oriented distribution based on Ubuntu, with customized desktops, and support for more hardware.
+</li>
+
+<li>
+<a href="http://www.mageia.org/">Mageia Linux</a> - a free desktop-oriented distribution with semi-annual releases, good integration between the components and good desktop polish.
 
 </li>
 
@@ -235,25 +239,32 @@ Some recommended Live CD / Live DVD distributions are:
 <ol>
 
 <li>
- <a href="http://www.knoppix.net/">Knoppix</a>
-
+<a href="http://www.knoppix.net/">Knoppix</a>
 </li>
 
 <li>
- <a href="http://www.mageia.org/">Mageia Linux</a>
-
-</li>
-
-<li>
- <a href="http://www.pclinuxos.com/">PCLinuxOS</a>
-
+<a href="http://www.mageia.org/">Mageia Linux</a>
 </li>
 
 </ol>
 
 <p>
-Whatever you do make sure you avoid the “distribution hopping”-syndrome where you hop from one distribution to another after running into a few difficulties with one distribution. Choose one distribution and stick with it, as you are likely to encounter different issues in a different distribution.
+Whatever you do, make sure you avoid the “distribution hopping”-syndrome where you hop from one distribution to another after running into a few difficulties with one distribution. Choose one distribution and stick with it, as you are likely to encounter different issues in a different distribution.
 
+</p>
+
+<h2 id="How_to_get_help">How to get help</h2>
+
+<p>
+You naturally may run into problems when using open-source software applications, but luckily, you can get help by using Internet mediums. The first thing to note is that whenever possible, you should not contact one of the authors or maintainers of the program directly, but rather post to an appropriate forum. Furthermore, when you get a reply, make sure you reply to the entire forum, either by avoiding the "/msg" command on IRC (Internet Relay Chat) or by using your mailer's Reply to All feature. A more comprehensive discussion can be found in <a class="external text" href="http://www.catb.org/esr/faqs/smart-questions.html">Eric Raymond and Rick Moen's “How to Ask Questions the Smart Way”</a>.
+</p>
+
+<p>
+The first thing to do when you have a problem or question is to perform some searches using a web search engine such as <a href="http://www.google.com/">Google</a> or <a href="https://duckduckgo.com/">DuckDuckGo</a>. If that fails, you can try asking on <a class="external text" href="http://freenode.net/">the Freenode Internet Relay Chat (IRC) network</a>, which is dedicated for chatting about open-source projects. It hosts many topic-specific channels (the IRC terminology for chatrooms) , and some general ones such as "##linux" or "##programming".
+</p>
+
+<p>
+If that fails, you can try posting on the appropriate project's mailing list and/or on an appropriate <a href="http://stackexchange.com/">StackExchange site</a>.
 </p>
 
 <h2 id="Should_you_aspire_for_.E2.80.9Csainthood.E2.80.9D.3F">Should you aspire for “sainthood”? </h2>
@@ -476,26 +487,22 @@ While Linux is perfectly usable using a graphical user-interface (GUI), it has a
 
 <p>
 The important thing to realize about the UNIX command line is <b>not to be afraid</b> of it. While it may seem intimidating at first, most people will quickly find it to be very convenient and a very powerful tool. Furthermore, it is often a requirement for people who wish to contribute to open-source projects, as many tasks can only be done or are better done there.
-
 </p>
 
 <h4 id="Build_Systems">Build Systems </h4>
 
 <p>
 Open source software is normally distributed as packed and compressed archives of the source code, which need to be built in order to be installed and deployed on the host system. Downstream distributors tend to take the source packages and prepare binary and ready-to-install packages out of them, which are specific to only one particular package manager (such as <a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">rpm</a> or <a href="http://en.wikipedia.org/wiki/dpkg">dpkg</a>). However, if you plan on contributing to an open-source project you’ll need to know how to build its source code.
-
 </p>
 
 <p>
 Here’s a coverage of some popular build-systems and how to build code from them:
-
 </p>
 
 <h5 id="perl.E2.80.99s_Module-Build">perl’s Module-Build </h5>
 
 <p>
 <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a> is Perl 5’s newer build system, which is not dependent on the idiosyncrasies of the system’s shell and its make implementation. To use it one should do something like:
-
 </p>
 
 <pre>        $ perl Build.PL
@@ -527,7 +534,7 @@ Here’s a coverage of some popular build-systems and how to build code from the
        $ make
        $ make install
 </pre>
-<h5 id="CMake">CMake </h5>
+<h5 id="CMake">CMake</h5>
 
 <p>
 <a href="http://en.wikipedia.org/wiki/CMake">wikipedia:CMake</a> is a new cross-platform build-system that aims to be a better alternative to GNU Autotools and sports many enhancements. To build a CMake-based project, use something like:
@@ -549,115 +556,99 @@ Reading from <a href="http://onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.htm
 
 <blockquote>
 
-
 <p>
-
 A version control system enables developers to keep historical versions of the files under development and to retrieve past versions. It stores version information for every file (and the entire project structure) in a collection normally called a repository.
-
 </p>
 
 
 <p>
-
 Inside the repository, several parallel lines of development, normally called branches, may exist. This can be useful to keep a maintenance branch for a stable, released version while still working on the bleeding-edge version. Another option is to open a dedicated branch to work on an experimental feature.
-
 </p>
 
 
 <p>
-
 Version control systems also let the user give labels to a snapshot of a branch (often referred to as tags), to ease later extraction. This is useful to signify individual releases or the most recent usable development version.
-
 </p>
 
 
 <p>
-
 Using a version control system is an absolute must for a developer of a project above a few hundred lines of code, and even more so for projects involving the collaboration of several developers. Using a good version control system is certainly better than the ad-hoc methods some developers use to maintain various revisions of their code.
-
 </p>
 
 </blockquote>
 
 <p>
 So if the project you’re trying to contribute to does not use a version control system, it should start right away. You can read more about the motivation for version control in the mentioned article and in <a href="http://www.slideshare.net/xSawyer/source-code-management-systems">a presentation that Sawyer X gave</a>.  Here’s some introductory material on the various popular version control systems in use today:
-
 </p>
 
 
 <ol>
 
 <li>
- For CVS, which is an old version control systems, and which is now largely unloved (but which can still be found in use), see <a href="http://cvsbook.red-bean.com/">the online book <i>Open Source Development with CVS</i></a>.
+For CVS, which is an old version control systems, and which is now largely unloved (but which can still be found in use), see <a href="http://cvsbook.red-bean.com/">the online book <i>Open Source Development with CVS</i></a>.
+</li>
+
+<li>
+For Subversion, a centralised version control system that aims to be an improved and corrected CVS, see <a href="http://svnbook.red-bean.com/">the online book <i>Version Control with Subversion</i></a>.
 
 </li>
 
 <li>
- For Subversion, a centralised version control system that aims to be an improved and corrected CVS, see <a href="http://svnbook.red-bean.com/">the online book <i>Version Control with Subversion</i></a>.
-
+For Git, a distributed version control system that has been gaining popularity, see <a href="http://progit.org/book/">the online book <i>Pro Git</i></a>
 </li>
 
 <li>
- For Git, a distributed version control system that has been gaining popularity, see <a href="http://progit.org/book/">the online book <i>Pro Git</i></a>
-
+For Mercurial, a distributed version control system written in Python, see <a href="http://hgbook.red-bean.com/">the online book <i>Mercurial: The Definitive Guide</i></a>.
 </li>
 
 <li>
- For Mercurial, a distributed version control system written in Python, see <a href="http://hgbook.red-bean.com/">the online book <i>Mercurial: The Definitive Guide</i></a>.
-
-</li>
-
-<li>
- For help with Bazaar, another distributed version control system written in Python, see <a href="http://wiki.bazaar.canonical.com/Documentation">its documentation</a>.
-
+For help with Bazaar, another distributed version control system written in Python, see <a href="http://wiki.bazaar.canonical.com/Documentation">its documentation</a>.
 </li>
 
 </ol>
+
 <h4 id="Bug_tracking">Bug tracking </h4>
 
 <p>
 As defects (a.k.a “bugs”) and requests for enhancements are introduced to the project, one needs to track them using a bug tracker. “Joel on Software” gives <a href="http://www.joelonsoftware.com/articles/fog0000000029.html">the motivation and how-to of bug-tracking in an essay</a> which you should probably read.
-
 </p>
 
 <p>
 Most bug-trackers nowadays have a web-based interface, which one can use from the browser and is mostly self-explanatory. So try to use it and if you run into problems consult your co-developers for help. There are too many different implementations of bug trackers to cover them all here, but being web-based, they should not be too hard to use for active contribution.
-
 </p>
 
 <h3 id="Learning_How_to_Program">Learning How to Program </h3>
 
 <p>
 Once you start contributing to open-source, you probably would like to advance your contributions to the next logical level, by learning how to program. Now the topic of what should be the introductory programming language is a topic of ongoing debate (see for example <a href="http://www.shlomifish.org/philosophy/computers/education/introductory-language/">this essay by Shlomi Fish</a>). We recommend that you start by learning either <a href="http://en.wikipedia.org/wiki/Perl">the Perl programming language</a> or <a href="http://en.wikipedia.org/wiki/Python_(programming_language)">the Python programming language</a> and then learning the other one.
-
 </p>
 
 <p>
 To learn Perl, refer to <a href="http://perl-begin.org/">the Perl Beginners’ Site</a> which provides many good resources. To learn Python refer to the book <a href="http://www.greenteapress.com/thinkpython/">How to think like a computer scientist - in Python</a> and there are other <a href="http://wiki.python.org/moin/IntroductoryBooks">Python introductory books listed on the Python wiki</a>. You then may be able to contribute to a project written in either language , but continue learning other programming languages and topics.
-
 </p>
 
 <p>
 It takes many years to become a good programmer, and good programmers are constantly trying to improve their skills and expand their knowledge.
-
 </p>
 
 <h2 id="Summary">Summary </h2>
 
 <p>
 Using open-source software can make your computer work more enjoyable, give you more freedom, and supply you with many important technological advantages such as lack of vendor lock-in, lower costs, and the ability to contribute. In addition, contributing to open-source software may be fun, and it also has the advantage that you’re also helping you and other users of the open-source applications.
-
 </p>
 
 <p>
 We hope this document has given you the information and pointers necessary to start your journey into the world of open-source software. Feel free to contact us if you feel anything is amiss, so we can improve it.
-
 </p>
 
 <h2 id="Where_to_go_from_here">Where to go from here </h2>
 
 <p>
 This section aims to list some additional resources about contributing to open-source. The first one is <a href="http://www.shlomifish.org/philosophy/foss-other-beasts/">the essay “Open Source, Free Software, and Other Beasts”</a> by Shlomi Fish (who also wrote most of the first version of this essay.), which provides an introduction to the world of open source software for those who are not very familiar with it. It is available online under the open-content Creative Commons Attribution licence.
+</p>
+
+<p>
+You may also wish to peruse the essay <a href="http://blog.smartbear.com/programming/14-ways-to-contribute-to-open-source-without-being-a-programming-genius-or-a-rock-star/">“14 Ways to Contribute without Being a Programming Genius or a Rock Star”</a> by Andy Lester on SmartBear.com.
 </p>
 
 <p>
@@ -672,42 +663,34 @@ The <a href="http://www.gnu.org/philosophy/">Philosophy section of the Free Soft
 
 <p>
 Some good resources about software management for open-source programmers include:
-
 </p>
-
 
 <ol>
 
 <li>
- <a href="http://www.paulgraham.com/">Paul Graham’s Essays</a>
-
+<a href="http://www.paulgraham.com/">Paul Graham’s Essays</a>
 </li>
 
 <li>
- <a href="http://www.joelonsoftware.com/">The <i>Joel on Software</i> site</a> by Joel Spolsky.
-
+<a href="http://www.joelonsoftware.com/">The <i>Joel on Software</i> site</a> by Joel Spolsky.
 </li>
 
 <li>
- <a href="http://linuxmafia.com/~rick/">Rick Moen’s resources</a>
-
+<a href="http://linuxmafia.com/~rick/">Rick Moen’s resources</a>
 </li>
 
 <li>
- <a href="http://www.extremeprogramming.org/">Extreme Programming</a>
-
+<a href="http://www.extremeprogramming.org/">Extreme Programming</a>
 </li>
 
 <li>
- The aforementioned resources by Eric Raymond.
-
+The aforementioned resources by Eric Raymond.
 </li>
 
 </ol>
 
 <p>
 You can find many additional resources on open source software by performing web searches or by perusing the various <a href="http://www.wikimedia.org/">Wikimedia resources</a> (such as the Wikipedia or Wikibooks), and on <a href="http://www.wikia.com/">Wikia</a>.
-
 </p>
 
 <h2 id="Authors">Authors </h2>
@@ -715,13 +698,12 @@ You can find many additional resources on open source software by performing web
 <ul>
 
 <li>
- Primary Author: <a href="http://teachingopensource.org/index.php/">Shlomi Fish</a> - also see <a href="http://www.shlomifish.org/">his homepage</a>
+Primary Author: Shlomi Fish - also see <a href="http://www.shlomifish.org/">his homepage</a>
 
 </li>
 
 <li>
- Some contributions from <a href="http://www.teachingopensource.org/index.php?title=How_to_start_contributing_to_or_using_Open_Source_Software&amp;action=history">other users of the Teaching Open Source wiki</a> including <a href="http://teachingopensource.org/index.php/">Erkan Yilmaz</a> and <a href="http://teachingopensource.org/index.php/">NeoPhyte Rep</a> .
-
+Some contributions from <a href="http://www.teachingopensource.org/index.php?title=How_to_start_contributing_to_or_using_Open_Source_Software&amp;action=history">other users of the Teaching Open Source wiki</a> including <a href="http://teachingopensource.org/index.php/">Erkan Yilmaz</a> and <a href="http://teachingopensource.org/index.php/">NeoPhyte Rep</a> .
 </li>
 
 </ul>

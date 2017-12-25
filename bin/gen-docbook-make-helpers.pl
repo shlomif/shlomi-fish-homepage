@@ -969,150 +969,115 @@ EOF
                         )
                 } ( 1 .. 5 )
             ),
-            get_quad_pres_files(
-                {
-                    id       => 'autotools',
-                    dir      => "Autotools",
-                    dest_dir => "lecture/Autotools/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'catb',
-                    dir      => "CatB",
-                    dest_dir => "lecture/CatB/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'gimp_1_2',
-                    dir      => "Gimp/1.2",
-                    dest_dir => "lecture/Gimp/1/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'gimp_2_2',
-                    dir      => "Gimp/2.2",
-                    dest_dir => "lecture/Gimp/1/2.2-slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'haskell_for_perlers',
-                    dir      => "haskell-for-perl-programmers",
-                    dest_dir => "lecture/Perl/Haskell/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'joel_test',
-                    dir      => "joel-test",
-                    dest_dir => "lecture/joel-test/heb-slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'lamp',
-                    dir      => "web-publishing-with-LAMP",
-                    dest_dir => "lecture/LAMP/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'freecell_solver_1',
-                    dir      => "Freecell-Solver/1",
-                    dest_dir => "lecture/Freecell-Solver/slides",
-                }
-
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'freecell_solver_the_next_pres',
-                    dir      => "Freecell-Solver/The-Next-Pres",
-                    dest_dir => "lecture/Freecell-Solver/The-Next-Pres/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'freecell_solver_project_intro',
-                    dir      => "Freecell-Solver/project-intro",
-                    dest_dir => "lecture/Freecell-Solver/project-intro/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'lm_solve',
-                    dir      => "LM-Solve",
-                    dest_dir => "lecture/LM-Solve/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'mdda',
-                    dir      => "meta-data-database-access",
-                    dest_dir => "lecture/mini/mdda/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'quad_pres',
-                    dir      => "Quad-Pres",
-                    dest_dir => "lecture/Quad-Pres/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_basic_use',
-                    dir      => "welcome-to-linux/Basic_Use-2",
-                    dest_dir => "lecture/W2L/Basic_Use/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_blitz',
-                    dir      => "welcome-to-linux/Blitz",
-                    dest_dir => "lecture/W2L/Blitz/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_devel',
-                    dir      => "welcome-to-linux/Development",
-                    dest_dir => "lecture/W2L/Development/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_mini_intro',
-                    dir      => "welcome-to-linux/Mini-Intro",
-                    dest_dir => "lecture/W2L/Mini-Intro/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_networking',
-                    dir      => "welcome-to-linux/Networking",
-                    dest_dir => "lecture/W2L/Network/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id       => 'w2l_technion',
-                    dir      => "welcome-to-linux/Technion",
-                    dest_dir => "lecture/W2L/Technion/slides",
-                }
-            ),
-            get_quad_pres_files(
-                {
-                    id         => 'website_meta_lect',
-                    dir        => "Website-Meta-Lecture",
-                    include_cb => sub {
-                        my $fn = shift;
-                        return ( $fn !~ m{\Aexamples/} );
+            (
+                map { get_quad_pres_files($_) } (
+                    {
+                        id       => 'autotools',
+                        dir      => "Autotools",
+                        dest_dir => "lecture/Autotools/slides",
                     },
-                    dest_dir => "lecture/WebMetaLecture/slides",
-                },
+                    {
+                        id       => 'catb',
+                        dir      => "CatB",
+                        dest_dir => "lecture/CatB/slides",
+                    },
+                    {
+                        id       => 'gimp_1_2',
+                        dir      => "Gimp/1.2",
+                        dest_dir => "lecture/Gimp/1/slides",
+                    },
+                    {
+                        id       => 'gimp_2_2',
+                        dir      => "Gimp/2.2",
+                        dest_dir => "lecture/Gimp/1/2.2-slides",
+                    },
+                    {
+                        id       => 'haskell_for_perlers',
+                        dir      => "haskell-for-perl-programmers",
+                        dest_dir => "lecture/Perl/Haskell/slides",
+                    },
+                    {
+                        id       => 'joel_test',
+                        dir      => "joel-test",
+                        dest_dir => "lecture/joel-test/heb-slides",
+                    },
+                    {
+                        id       => 'lamp',
+                        dir      => "web-publishing-with-LAMP",
+                        dest_dir => "lecture/LAMP/slides",
+                    },
+                    {
+                        id       => 'freecell_solver_1',
+                        dir      => "Freecell-Solver/1",
+                        dest_dir => "lecture/Freecell-Solver/slides",
+                    },
+                    {
+                        id  => 'freecell_solver_the_next_pres',
+                        dir => "Freecell-Solver/The-Next-Pres",
+                        dest_dir =>
+                            "lecture/Freecell-Solver/The-Next-Pres/slides",
+                    },
+                    {
+                        id  => 'freecell_solver_project_intro',
+                        dir => "Freecell-Solver/project-intro",
+                        dest_dir =>
+                            "lecture/Freecell-Solver/project-intro/slides",
+                    },
+                    {
+                        id       => 'lm_solve',
+                        dir      => "LM-Solve",
+                        dest_dir => "lecture/LM-Solve/slides",
+                    },
+                    {
+                        id       => 'mdda',
+                        dir      => "meta-data-database-access",
+                        dest_dir => "lecture/mini/mdda/slides",
+                    },
+                    {
+                        id       => 'quad_pres',
+                        dir      => "Quad-Pres",
+                        dest_dir => "lecture/Quad-Pres/slides",
+                    },
+                    {
+                        id       => 'w2l_basic_use',
+                        dir      => "welcome-to-linux/Basic_Use-2",
+                        dest_dir => "lecture/W2L/Basic_Use/slides",
+                    },
+                    {
+                        id       => 'w2l_blitz',
+                        dir      => "welcome-to-linux/Blitz",
+                        dest_dir => "lecture/W2L/Blitz/slides",
+                    },
+                    {
+                        id       => 'w2l_devel',
+                        dir      => "welcome-to-linux/Development",
+                        dest_dir => "lecture/W2L/Development/slides",
+                    },
+                    {
+                        id       => 'w2l_mini_intro',
+                        dir      => "welcome-to-linux/Mini-Intro",
+                        dest_dir => "lecture/W2L/Mini-Intro/slides",
+                    },
+                    {
+                        id       => 'w2l_networking',
+                        dir      => "welcome-to-linux/Networking",
+                        dest_dir => "lecture/W2L/Network/slides",
+                    },
+                    {
+                        id       => 'w2l_technion',
+                        dir      => "welcome-to-linux/Technion",
+                        dest_dir => "lecture/W2L/Technion/slides",
+                    },
+                    {
+                        id         => 'website_meta_lect',
+                        dir        => "Website-Meta-Lecture",
+                        include_cb => sub {
+                            my $fn = shift;
+                            return ( $fn !~ m{\Aexamples/} );
+                        },
+                        dest_dir => "lecture/WebMetaLecture/slides",
+                    },
+                )
             ),
         },
     },

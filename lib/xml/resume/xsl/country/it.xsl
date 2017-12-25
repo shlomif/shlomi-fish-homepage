@@ -83,4 +83,3 @@ $Id: it.xsl,v 1.4 2002/11/18 21:04:25 brandondoyle Exp $
   <xsl:param name="phone.mobile.phrase">TRANSLATION NEEDED</xsl:param>
   <xsl:param name="pager.word">TRANSLATION NEEDED</xsl:param>
 </xsl:stylesheet>
-

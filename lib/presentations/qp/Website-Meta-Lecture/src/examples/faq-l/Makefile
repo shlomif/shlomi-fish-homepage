@@ -1,6 +1,5 @@
 DEPS = api.wml questions.wml
 
-
 all: index.html answers.html
 
 index.html: index.html.wml $(DEPS)
@@ -8,4 +7,3 @@ index.html: index.html.wml $(DEPS)
 
 answers.html: answers.html.wml $(DEPS)
 	wml --passoption=2,-X3074 $< > $@
-

@@ -138,4 +138,3 @@ let g:Template_table		= "<table><CR>"
 				\."</table>"
 
 let g:Template_ulink		= "<ulink url=\"-:-\"/>"
-

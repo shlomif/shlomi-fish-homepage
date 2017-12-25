@@ -187,8 +187,6 @@ function letsJQuery()
 
 })();
 
-
     $("#wpTextbox1").keypress(autocomplete_box_on_press);
 
 }
-

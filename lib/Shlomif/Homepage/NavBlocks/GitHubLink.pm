@@ -21,4 +21,3 @@ sub render
 }
 
 1;
-

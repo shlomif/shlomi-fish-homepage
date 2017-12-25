@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 Now, let's suppose we would like to create a class similar to <code>Foo</code>,
 that's also keeps track of the number of times its name was assigned. While
@@ -19,4 +17,3 @@ number:
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/objects/making/inheritance/Bar.pm" />
 </quadpres_code_block>
-

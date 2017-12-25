@@ -139,4 +139,3 @@
                     SF-TOGGLE "Mark Path?" TRUE
                     SF-VALUE "Ratio" "0.1"
                     )
-

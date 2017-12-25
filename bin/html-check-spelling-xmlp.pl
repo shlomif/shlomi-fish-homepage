@@ -12,4 +12,3 @@ Shlomif::Spelling::Check->new()->spell_check(
         files => \@ARGV,
     },
 );
-

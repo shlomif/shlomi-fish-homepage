@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 The <code>for</code> loop has another syntax which can be used to encapsulate
 <code>while</code>-like loops in a more compact way, which also has some
@@ -30,4 +28,3 @@ The following simple example prints the multiplication board:
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/for/multiplication_board.pl" />
 </quadpres_code_block>
-

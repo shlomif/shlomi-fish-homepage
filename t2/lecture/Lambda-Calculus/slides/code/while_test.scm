@@ -44,4 +44,3 @@
 (display "a = ")
 (display (church->int a))
 (newline)
-

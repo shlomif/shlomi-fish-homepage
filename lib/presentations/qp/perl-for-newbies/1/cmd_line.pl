@@ -24,5 +24,3 @@ unless (grep { $_ eq $render_type } ("server", "harddisk"))
 my $p = Quad::Pres->new($contents, $document_name, $render_type);
 
 $p->render();
-
-

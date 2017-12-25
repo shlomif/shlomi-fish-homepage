@@ -49,4 +49,3 @@ while ( my $r = $finder->next() )
 }
 print "Before size: $before_size\n";
 print "After size: $after_size\n";
-

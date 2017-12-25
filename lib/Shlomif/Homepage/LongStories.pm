@@ -606,4 +606,3 @@ sub render_make_fragment
 }
 
 1;
-

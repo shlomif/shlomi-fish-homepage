@@ -23,5 +23,3 @@ sub mysplit
 }
 
 mysplit(10,3);
-
-

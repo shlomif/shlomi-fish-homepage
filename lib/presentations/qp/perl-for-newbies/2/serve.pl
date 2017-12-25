@@ -19,5 +19,3 @@ $document_name =~ s/^.*serve.pl\/?//;
 my $p = Quad::Pres->new($contents, $document_name, 'cgi');
 
 $p->render();
-
-

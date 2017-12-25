@@ -17,4 +17,3 @@ sub assign_name
 
     return 0;
 }
-

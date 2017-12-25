@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 One can specify several possible matching for an expression to match with
 <code>|</code>.  For instance, <code>dog|cat|mouse</code> will match either "dog" or
@@ -24,4 +22,3 @@ positive integer):
 <quadpres_code_block>
 (?:[a-zA-Z]+|[0-9]+)(?: +(?:[a-zA-Z]+|[0-9]+))*
 </quadpres_code_block>
-

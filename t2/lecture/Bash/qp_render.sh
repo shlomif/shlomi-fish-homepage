@@ -13,4 +13,3 @@ done
 if [ -x Render_all_contents.pl ] ; then
     ./Render_all_contents.pl
 fi
-

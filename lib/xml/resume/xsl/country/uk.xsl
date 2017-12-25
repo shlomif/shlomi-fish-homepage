@@ -83,4 +83,3 @@ $Id: uk.xsl,v 1.2 2002/11/18 21:04:25 brandondoyle Exp $
   <xsl:param name="security-clearances.word">TRANSLATION NEEDED</xsl:param>
   <xsl:param name="url.word">TRANSLATION NEEDED</xsl:param>
 </xsl:stylesheet>
-

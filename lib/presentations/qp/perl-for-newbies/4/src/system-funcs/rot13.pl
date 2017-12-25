@@ -22,4 +22,3 @@ $text =~ tr/A-Za-z/N-ZA-Mn-za-m/;
 seek(F, 64, SEEK_SET);
 print F $text;
 close(F);
-

@@ -300,4 +300,3 @@
 (define sum (((lc-bit-vector-add (int->church (cadr a))) (car a)) (car b)))
 (for-each display (list a_int "+" b_int " = " (bit-vector->int (r-c-result sum) (cadr a))))
 (newline)
-

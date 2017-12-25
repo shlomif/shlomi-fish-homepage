@@ -15,5 +15,3 @@ primes how_much = sieve [2..how_much] where
                     )
          sieve [] = []
          mybound = ceiling(sqrt(fromIntegral how_much))
-
-

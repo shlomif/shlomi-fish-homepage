@@ -27,4 +27,3 @@ $essays_nav_html = $rendered_results->{html};
 <:{ print join("\n", @$essays_nav_html); }:>
 </div>
 </define-tag>
-

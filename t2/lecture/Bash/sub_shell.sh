@@ -7,4 +7,3 @@ find . -name '*.c' |
 )
 
 # A is not set here.
-

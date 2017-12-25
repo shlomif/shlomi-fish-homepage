@@ -194,4 +194,3 @@ foreach my $a_el ( $xc->findnodes("//xhtml:a[\@href]") )
 }
 
 print $doc->toString();
-

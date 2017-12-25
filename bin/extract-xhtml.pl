@@ -43,4 +43,3 @@ $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
 
     path($out_fn)->spew_utf8($s);
 }
-

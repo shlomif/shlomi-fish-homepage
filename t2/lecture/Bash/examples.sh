@@ -239,5 +239,3 @@ power()
     done
     echo $result
 }
-
-

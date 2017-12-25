@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use MooX (qw( late ));
+use MooX qw( late );
 
 has [
     qw(
@@ -31,4 +31,3 @@ sub nav_record
 }
 
 1;
-

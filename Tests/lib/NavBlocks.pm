@@ -384,4 +384,3 @@ sub get_nav_block
 }
 
 1;
-

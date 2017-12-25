@@ -12,4 +12,3 @@ use Shlomif::Homepage::SectionMenu::Sects::Puzzles;
 use Shlomif::Homepage::SectionMenu::Sects::Software;
 
 1;
-

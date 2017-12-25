@@ -65,5 +65,3 @@
 ; Thus, it will consume a memory of O(div/div_by). Nevertheless,
 ; a tail recursion version can be written using a tuple of
 ; (div, accumulator).
-
-

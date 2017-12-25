@@ -437,7 +437,3 @@ void barfill(int StartX, int StartY, int EndX, int EndY, int barwidth)
 }
 
 #endif // __CSEE_H
-
-
-
-

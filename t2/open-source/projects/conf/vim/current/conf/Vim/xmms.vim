@@ -10,4 +10,3 @@ map <S-F3> :call Xmms_Play_Mp3("xmms", "")<CR>
 
 map <F4> :call Xmms_Play_Mp3("/home/shlomi/apps/sound/bmpx/bin/bmp-enqueue-files-2.0", "")<CR><CR>
 map <S-F4> :call Xmms_Play_Mp3("/home/shlomi/apps/sound/bmpx/bin/bmp-play-files-2.0", "")<CR><CR>
-

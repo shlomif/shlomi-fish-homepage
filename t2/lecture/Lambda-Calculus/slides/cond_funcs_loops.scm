@@ -27,5 +27,3 @@
 
 ; The if returns the value of the expression that was executed.
 (define max (if (> a b) a b))
-
-

@@ -269,4 +269,3 @@ sub write_epub_json
 }
 
 1;
-

@@ -25,4 +25,3 @@ else
 {
     die "Wrong output."
 }
-

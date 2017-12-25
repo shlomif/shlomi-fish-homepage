@@ -276,4 +276,3 @@ foreach my $n ($start .. $end)
     my ($g_val, $composition) = Graham($n);
     print "G($n) = " . $g_val . " [" . join(",", @$composition) . "]\n";
 }
-

@@ -146,6 +146,3 @@ rehash (MyHash hash_function compare_function size table num_elems) new_size =
 --            iterate index = myaccumolate (table!index) ++ (iterate (index+1)) where
 --                myaccumolate [] = "\n"
 --                myaccumolate (a:as) = (show (snd a)) ++ (myaccumolate as)
-
-
-

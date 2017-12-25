@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 An object is basically a reference to a hash where the hash members
 are the object member variables. That reference is "blessed" to be associated
@@ -16,6 +14,3 @@ Method calls in perl are done using the
 passing the object reference is done explicitly and it is the first argument
 passed to the function.
 </p>
-
-
-

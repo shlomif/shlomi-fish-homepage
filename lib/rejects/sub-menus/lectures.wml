@@ -27,4 +27,3 @@ $lectures_nav_html = $rendered_results->{html};
 <:{ print join("\n", @$lectures_nav_html); }:>
 </div>
 </define-tag>
-

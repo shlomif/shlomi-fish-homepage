@@ -5,8 +5,6 @@
 
 <set-var display_ads="1" />
 
-
-
 #include "quadpres_main.wml"
 
 <:{
@@ -35,4 +33,3 @@ print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var fi
 Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
 </p>
 </qp:after_bottom_nav_bar>
-

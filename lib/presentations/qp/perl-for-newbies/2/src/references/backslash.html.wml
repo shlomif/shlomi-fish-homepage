@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 In Perl the backslash (<code>\</code>) is an operator that returns the
 reference to an existing variable. It can also return a dynamic reference
@@ -20,6 +18,3 @@ Here is an example that uses a reference to update a sum:
 As can be seen, because the reference to <code>$sum</code> was used, its value
 changes throughout the program.
 </p>
-
-
-

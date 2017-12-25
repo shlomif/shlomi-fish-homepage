@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 Variables can be made local to their own scope by declaring them
 using a keyword called <code>my</code>. When the interpreter leaves the
@@ -23,4 +21,3 @@ a set of parenthesis surrounding the variable list. For example:
 <code>my (@array, $scalar1, %hash, $scalar2);</code>. If you want to declare only
 one variable, then they are optional.
 </p>
-

@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 Perl allows the programmer to store a reference to a function inside
 a scalar value. This variable can later be dereferenced in order to
@@ -28,6 +26,3 @@ Closures enable the program to pass state information into callbacks that
 do not accept state information, and are generally a very convenient
 mechanism.
 </p>
-
-
-

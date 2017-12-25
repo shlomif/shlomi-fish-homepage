@@ -80,4 +80,3 @@ map! =symv   class myUnnamedValidator extends sfValidator<CR>{<CR>public functio
 
 :autocmd BufNewFile */validate/*.yml 0r ~/symvimny/validate.yml
 :autocmd BufNewFile */config/schema.xml 0r ~/symvimny/schema.xml
-

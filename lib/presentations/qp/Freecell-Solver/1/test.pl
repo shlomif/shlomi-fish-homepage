@@ -54,4 +54,3 @@ foreach my $c (@controls)
 use Data::Dumper;
 my $d = Data::Dumper->new( [ \@controls ], ['$controls'] );
 print $d->Dump();
-

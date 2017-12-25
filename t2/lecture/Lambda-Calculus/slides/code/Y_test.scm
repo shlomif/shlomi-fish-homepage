@@ -76,4 +76,3 @@
 (display "The solution is: ")
 (display (church->int (result solution)))
 (newline)
-

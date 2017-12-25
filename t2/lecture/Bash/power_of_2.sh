@@ -14,5 +14,3 @@ power_of_2()
     done
     echo $result
 }
-
-

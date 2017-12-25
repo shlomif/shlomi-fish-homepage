@@ -43,4 +43,3 @@ $Id: us-html.xsl,v 1.1 2002/05/26 03:45:52 bruckie Exp $
   US English and US-Letter size paper already. -->
 
 </xsl:stylesheet>
-

@@ -23,4 +23,3 @@ let () =
                 (Xmlm.make_input ~entity:(fun e -> Some e) (`Channel ic))
                 filename))
        (Array.sub Sys.argv 1 (Array.length Sys.argv - 1))
-

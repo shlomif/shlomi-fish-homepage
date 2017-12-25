@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 The <code>while</code> loop enables you to repeat a sequence of statements
 an arbitrary number of times for as long a condition is met. The syntax
@@ -25,8 +23,6 @@ The following program checks if a given string is made entirely of "a"
 characters:
 </p>
 
-
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/while/all_as.pl" />
 </quadpres_code_block>
-

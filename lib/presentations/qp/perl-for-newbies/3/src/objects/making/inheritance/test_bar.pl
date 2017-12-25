@@ -13,5 +13,3 @@ print $bar->get_name(), "\n";
 $bar->assign_name_ext("Choo");
 
 print $bar->get_num_times_assigned(), "\n";
-
-

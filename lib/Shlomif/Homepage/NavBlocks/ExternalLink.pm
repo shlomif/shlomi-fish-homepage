@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use MooX (qw( late ));
+use MooX qw/ late /;
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');
 
@@ -23,4 +23,3 @@ sub collect_local_links
 }
 
 1;
-

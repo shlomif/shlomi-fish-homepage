@@ -89,4 +89,3 @@ locks mutex
 Decrements num_readers. If num_readers == 0 it calls accept_pending_items.
 
 unlocks mutex
-

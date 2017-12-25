@@ -1053,4 +1053,3 @@ path("lib/factoids/deps.mak")->spew_utf8(@content);
 
 # No write_on_change() because we want it to have the time of the last run.
 path("lib/factoids/TIMESTAMP")->spew_utf8( time() );
-

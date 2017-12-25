@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 The <code>grep</code> function can be used to filter items out of an array based
 on a boolean expression or a regular expression. The syntax for the block
@@ -25,4 +23,3 @@ And here's how <code>grep</code> can help us find the first 100 primes:
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/useful_funcs/primes.pl" />
 </quadpres_code_block>
-

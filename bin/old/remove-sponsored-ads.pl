@@ -19,4 +19,3 @@ s{(?:^;;;[^\n]*\n)*<shlomif_sponsored_ad[^\n]*\Q$remove_at\E.*?</shlomif_sponsor
         }
     );
 }
-

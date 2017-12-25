@@ -303,4 +303,3 @@ sub print_old_news
 }
 
 1;
-

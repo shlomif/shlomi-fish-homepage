@@ -7,7 +7,6 @@
 
 #include "quadpres_main.wml"
 
-
 <:{
 require VimIface;
 }:>
@@ -28,11 +27,8 @@ print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var fi
 <restore filename />
 </define-tag>
 
-
-
 <qp:after_bottom_nav_bar>
 <p>
 Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
 </p>
 </qp:after_bottom_nav_bar>
-

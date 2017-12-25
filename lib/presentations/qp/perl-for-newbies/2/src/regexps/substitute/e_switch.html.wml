@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 If an <code>e</code> is appended to the end of the substitution command,
 then the right side is treated as a normal Perl expression, giving you
@@ -24,4 +22,3 @@ And the following example, converts the first word that starts with the letter
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/regexps/substitute/uppercase.pl" />
 </quadpres_code_block>
-

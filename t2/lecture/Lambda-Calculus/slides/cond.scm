@@ -28,5 +28,3 @@
 
 ; The if returns the value of the expression that was executed.
 (define max-of-a-and-b (if (> a b) a b))
-
-

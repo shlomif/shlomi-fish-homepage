@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 
-
 use Bar2;
 
 my $bar = Bar2->new();
@@ -14,5 +13,3 @@ print $bar->get_name(), "\n";
 $bar->assign_name("Choo");
 
 print $bar->get_num_times_assigned(), "\n";
-
-

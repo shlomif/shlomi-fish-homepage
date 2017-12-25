@@ -54,11 +54,9 @@ cp Parser/Encodings/Japanese_Encodings.msg blib/lib/XM
 After the wait, the module will be compiled. It is preferable to test it first, by invoking <code>make test</code>:
 </p>
 
-
 <quadpres_code_block>
 $ make test
 </quadpres_code_block>
-
 
 <p>
 Now you can install it, by becoming
@@ -92,4 +90,3 @@ More information can be found in
 <a href="http://metacpan.org/pod/Module::Build">the main Module-Build
 document</a>
 </p>
-

@@ -27,5 +27,3 @@ EXTRA_DIST += test_queue.cpp
 EXTRA_DIST += pthread/rwlock_fcfs.h pthread/rwlock_fcfs_queue.h
 
 EXTRA_DIST += TODO
-
-

@@ -1,8 +1,5 @@
 #include 'template.wml'
 
-
-
-
 <points>
 <li>
 In the GIMP, effects and filters are implemented using plug-ins.
@@ -23,7 +20,6 @@ Aside from plug-ins written in C, GIMP ships with Scheme and Perl Extensions,
 that enable writing filters and scripts in these languages.
 </li>
 </points>
-
 
 <table class="mydemo">
 <tr class="mydemo">
@@ -57,4 +53,3 @@ The image is now blurred.
 </td>
 </tr>
 </table>
-

@@ -12,4 +12,3 @@ $ungreedy =~ s/<html>.*?<\/html>/REPLACED/;
 print $string, "\n",
     $greedy, "\n",
     $ungreedy, "\n";
-

@@ -22,4 +22,3 @@ sub cached_render
 }
 
 1;
-

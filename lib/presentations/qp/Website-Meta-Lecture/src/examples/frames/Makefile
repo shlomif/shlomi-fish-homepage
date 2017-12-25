@@ -19,4 +19,3 @@ $(TARGETS) :: $(D)/% : %.wml template.wml
 
 $(IMAGES) :: $(D)/% : %
 	cp -f $< $@
-

@@ -62,5 +62,3 @@
 
 ; This technique simplifies the lambda calculus grammar and allows
 ; us to only deal with functions (and function calls) of one argument
-
-

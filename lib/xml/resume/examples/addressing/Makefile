@@ -97,4 +97,3 @@ clean:
 
 %.pdf: %.fo
 	$(JAVACMD) -cp $(CLASSPATH) org.apache.fop.apps.Fop $< $@
-

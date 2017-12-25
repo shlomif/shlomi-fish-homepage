@@ -32,4 +32,3 @@ sub write_on_change_no_utf8
 }
 
 1;
-

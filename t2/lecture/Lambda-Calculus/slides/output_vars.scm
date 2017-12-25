@@ -39,4 +39,3 @@
 (set! a 500)
 (set! b "Hello")
 (set! myvar 89) ; Error - myvar was not declared.
-

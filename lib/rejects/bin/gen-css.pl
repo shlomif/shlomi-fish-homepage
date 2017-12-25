@@ -152,4 +152,3 @@ sub _mode_regular
 package main;
 
 Template::Preprocessor::TTML->new( { 'argv' => [@ARGV] } )->run();
-

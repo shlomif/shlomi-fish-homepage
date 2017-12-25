@@ -101,7 +101,6 @@ function letsJQuery() {
                     )
                     ;
 
-
                 items_string +=
                     "<li>"
                     + "<a href=\"" + encodeURI(prefix + path) + "\">"
@@ -122,4 +121,3 @@ function letsJQuery() {
         }
     }
 }
-

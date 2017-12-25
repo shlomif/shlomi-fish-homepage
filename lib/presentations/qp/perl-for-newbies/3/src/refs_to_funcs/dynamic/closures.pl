@@ -28,5 +28,3 @@ for my $i (1 .. 100)
 
     print "$which_counter = $value\n";
 }
-
-

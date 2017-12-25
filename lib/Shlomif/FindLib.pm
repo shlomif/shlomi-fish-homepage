@@ -20,4 +20,3 @@ sub rel_path
 }
 
 1;
-

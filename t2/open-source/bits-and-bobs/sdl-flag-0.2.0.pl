@@ -175,4 +175,3 @@ for ( $t = 1 ; $mycont ; $t = ( ( $t + 1 ) & ( $DEGREES_RANGE - 1 ) ) )
 }
 
 __END__
-

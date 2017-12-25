@@ -54,4 +54,3 @@ $text
 
 END_OF_HTML
 }
-

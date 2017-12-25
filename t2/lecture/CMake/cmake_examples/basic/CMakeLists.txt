@@ -25,4 +25,3 @@ target_link_libraries(app common pthread)
 
 #message(CMAKE_C_FLAGS:)
 #message(${CMAKE_C_FLAGS})
-

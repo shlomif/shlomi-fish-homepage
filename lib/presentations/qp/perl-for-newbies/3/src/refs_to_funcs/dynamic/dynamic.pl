@@ -18,4 +18,3 @@ while ($increment->() < 100)
 {
     # Do Nothing
 }
-

@@ -3,4 +3,3 @@ upload_vipe: $(VIPE_TARGETS)
 
 upload_vipe_alt: $(VIPE_TARGETS)
 	( cd $(VIPE_DEST) && $(RSYNC) -r * $${HOMEPAGE_SSH_PATH}/Vipe/ )
-

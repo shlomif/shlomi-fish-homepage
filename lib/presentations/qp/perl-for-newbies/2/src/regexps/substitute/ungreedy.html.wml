@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 By default, the regular expression repetition operators such as
 <code>*</code>, <code>+</code> and friends are greedy. Hence, they will try to
@@ -16,4 +14,3 @@ If you wish them to match as little as possible, append a question mark
 <quadpres_code_block>
 <quadpres_include_colorized_file filename="src/regexps/substitute/ungreedy.pl" />
 </quadpres_code_block>
-

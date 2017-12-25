@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 So far we have learned about three different kinds of for loops, so
 you are probably wondering when to use each one.
@@ -23,4 +21,3 @@ The <code>foreach $item (@array) </code> loop is quite handy, but sometimes
 when iterating over an array of items the index of the item is of importance.
 In that case, one may prefer to use a normal <code>for</code> loop.
 </p>
-

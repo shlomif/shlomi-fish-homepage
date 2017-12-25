@@ -19,4 +19,3 @@ my @comments = grep(/^#/, @lines);
 my @short_comments = (grep { length($_) <= 80 ; } @comments);
 
 print join("\n", @short_comments), "\n";
-

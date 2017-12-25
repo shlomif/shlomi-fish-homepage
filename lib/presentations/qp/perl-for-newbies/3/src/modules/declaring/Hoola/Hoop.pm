@@ -14,4 +14,3 @@ sub get_counter
 }
 
 1;
-

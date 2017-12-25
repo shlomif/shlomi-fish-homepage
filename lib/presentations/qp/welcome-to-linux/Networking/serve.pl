@@ -6,4 +6,3 @@ use Shlomif::Quad::Pres::CGI;
 my $cgi = Shlomif::Quad::Pres::CGI->new();
 
 $cgi->run();
-

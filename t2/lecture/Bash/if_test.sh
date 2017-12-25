@@ -10,4 +10,3 @@ elif expr $A \> 100 > /dev/null ; then
 else
     echo "$A is lesser or equal to one hundred"
 fi
-

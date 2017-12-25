@@ -25,7 +25,6 @@ should give  you a quick reference:
 
 <table border=1>
 
-
 <tr>
 <td>
 &gt;
@@ -34,7 +33,6 @@ should give  you a quick reference:
 Writing (the original file will be erased before the function starts).
 </td>
 </tr>
-
 
 <tr>
 <td>
@@ -45,7 +43,6 @@ Reading
 </td>
 </tr>
 
-
 <tr>
 <td>
 &gt;&gt;
@@ -55,7 +52,6 @@ Appending (the file pointer will start at the end and the file will not be
 overridden)
 </td>
 </tr>
-
 
 <tr>
 <td>
@@ -74,4 +70,3 @@ to the script current working directory (<b>CWD</b>). For instance, the
 command <code>open I, "&lt;", "../hello.txt";</code> opens the file "hello.txt"
 found a directory above the current directory for reading.
 </p>
-

@@ -56,4 +56,3 @@ sub assign_name
 }
 
 1;
-

@@ -58,4 +58,3 @@ open my $back_fh, '>', $abs_out_fn
 binmode( $back_fh, ":encoding(UTF-8)" );
 print {$back_fh} $contents;
 close($back_fh);
-

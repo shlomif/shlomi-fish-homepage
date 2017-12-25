@@ -32,4 +32,3 @@
     <xsl:template match="xhtml:a/@id"/>
 
 </xsl:stylesheet>
-

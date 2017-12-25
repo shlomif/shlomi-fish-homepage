@@ -32,4 +32,3 @@
 function! Perl_Tests_Count()
     execute "%!perl ~/conf/Vim/perl-test-manage-helper.pl --ft=".&filetype
 endfunction
-

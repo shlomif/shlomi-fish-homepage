@@ -24,4 +24,3 @@ end
 
 xconf_workspace_query("count", [names.length.to_s])
 xconf_workspace_query("names", names)
-

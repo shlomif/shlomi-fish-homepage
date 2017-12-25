@@ -12,4 +12,3 @@ for my $i ($start .. $end)
 {
     print "$i\n";
 }
-

@@ -25,4 +25,3 @@ sub init_section_nav_menu
 
 init_section_nav_menu();
 print $section_nav_menu->get_html();
-

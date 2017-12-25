@@ -28,4 +28,3 @@ while (my $line = <$source_handle>)
 
 close($source_handle);
 close($dest_handle);
-

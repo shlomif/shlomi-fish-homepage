@@ -22,4 +22,3 @@ $text =~ s{\A.*?(<div class="screenplay")}{$1}ms;
 substr( $text, rindex( $text, "</div>" ) ) = "</div>";
 
 path($out_fn)->spew_utf8($text);
-

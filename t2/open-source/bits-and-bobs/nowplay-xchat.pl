@@ -1,6 +1,7 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 use strict;
+use warnings;
 
 # use Xmms::Remote ();
 use Net::DBus ();
@@ -101,4 +102,3 @@ sub display_now_playing_song
         || get_amarok_title();
     IRC::command("/me is listening to $title");
 }
-

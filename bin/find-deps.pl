@@ -45,4 +45,3 @@ foreach my $dep (@deps)
     print {$deps_mak} qq{\$(T2_DEST)/$file :  lib/$depends_on\n\n},;
 }
 close($deps_mak);
-

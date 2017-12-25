@@ -405,4 +405,3 @@ function! CursorLeftByTag()
 		endif
 	endif
 endfunction
-

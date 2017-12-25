@@ -30,4 +30,3 @@ foreach my $record (@sorted_array)
 {
     print $record->{'last'} . ", " . $record->{'first'} . "\n";
 }
-

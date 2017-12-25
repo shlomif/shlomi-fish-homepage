@@ -34,4 +34,3 @@ function letsJQuery() {
     var myclass = 'truncate';
     $('.' + myclass).removeClass(myclass);
 }
-

@@ -66,4 +66,3 @@ $out->append_utf8(<<"EOF");
 </body>
 </html>
 EOF
-

@@ -21,4 +21,3 @@ while ( my $card = $reader->get_next_card( { encoding => "windows-1255" } ) )
     print "Title = ", _remove_trail_ws( $card->{'title'} ), "\nBody = <<<\n",
         _remove_trail_ws( $card->{'body'} ), "\n>>>\n\n";
 }
-

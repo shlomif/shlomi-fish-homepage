@@ -24,4 +24,3 @@ my $entries = get_dir_files($dir_path);
 my @mp3s = (grep { /\.mp3$/ } @$entries);
 
 print "You have " . scalar(@mp3s) . " mp3s in $dir_path.\n";
-

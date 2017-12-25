@@ -17,4 +17,3 @@ endfunction
 
 command -range -nargs=1 Rs call Range_Search(<f-args>,<line1>,<line2>)
 command -range -nargs=1 RS call Range_Search(<f-args>,<line1>,<line2>)
-

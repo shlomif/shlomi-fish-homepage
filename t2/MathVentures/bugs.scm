@@ -13,8 +13,6 @@
 ; Put this file in your ~/.gimp/scripts directory. Run the gimp and
 ; select the "Xtns -> Script-Fu -> Shlomif -> Bugs" menu item.
 
-
-
 ; A function to automatically construct one of those INT32ARRAYs or FLOATARRYs
 ; out of standard Scheme lists
 (define (general-array type coords)
@@ -138,4 +136,3 @@
                     SF-TOGGLE "Mark Path?" TRUE
                     SF-VALUE "Ratio" "0.1"
                     )
-

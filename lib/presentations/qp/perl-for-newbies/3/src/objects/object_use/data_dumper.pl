@@ -22,4 +22,3 @@ my $dumper = Data::Dumper->new([ $data], [ "\$data" ]);
 
 # Call its method that renders it into a string.
 print $dumper->Dump();
-

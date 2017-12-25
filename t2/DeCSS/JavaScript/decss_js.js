@@ -6,7 +6,6 @@
 // to the character code.
 //
 
-
 //
 //    sec and key are both strings
 //
@@ -179,4 +178,3 @@ function decode_a_string_with_escape_sequences(str)
 
     return ret;
 }
-

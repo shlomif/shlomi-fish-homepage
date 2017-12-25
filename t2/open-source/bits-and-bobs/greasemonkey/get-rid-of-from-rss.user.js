@@ -18,4 +18,3 @@ if (new_loc != loc)
 {
     window.location = new_loc;
 }
-

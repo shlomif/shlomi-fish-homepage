@@ -5,4 +5,3 @@ function! Add_isbn_tag()
 endfunction
 
 map <F4> :call Add_isbn_tag()<CR>
-

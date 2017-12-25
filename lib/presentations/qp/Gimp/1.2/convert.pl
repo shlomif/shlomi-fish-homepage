@@ -32,4 +32,3 @@ sub wanted
         path($filename)->spew_utf8($text);
     }
 }
-

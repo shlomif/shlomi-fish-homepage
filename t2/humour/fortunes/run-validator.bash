@@ -10,4 +10,3 @@ shift
     {mode => "validate"})->run({input => shift(@ARGV)});exit(0);' \
        "$cur_dir/$filename"
 )
-

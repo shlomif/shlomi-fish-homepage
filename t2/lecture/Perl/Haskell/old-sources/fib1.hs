@@ -5,5 +5,3 @@ fib_pair n = (b,a+b) where
 
 fib :: Integer -> Integer
 fib n = (fst (fib_pair n))
-
-

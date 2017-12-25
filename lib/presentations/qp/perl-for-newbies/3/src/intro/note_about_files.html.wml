@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 In Perl, every module resides in his own file, and it is sometimes even
 necessary to put them inside a nested directory structure. (Note that it
@@ -16,6 +14,3 @@ contain the filename in its header comment. The filename will be given in UNIX
 notation, with slashes (<i>/</i>) and all, and will be relative to
 the directory in which the script is executed.
 </p>
-
-
-

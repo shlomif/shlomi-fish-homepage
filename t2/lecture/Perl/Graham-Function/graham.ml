@@ -212,5 +212,3 @@ let myend = if (Array.length(Sys.argv) > 2) then (int_of_string Sys.argv.(2)) el
 for n = mystart to myend do
     Printf.printf "G(%i) = %i\n" n (graham n);
 done;;
-
-

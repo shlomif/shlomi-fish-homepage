@@ -1,7 +1,5 @@
 #include 'template.wml'
 
-
-
 <p>
 To call the methods of an object, one should use the
 <code>$object_ref-&gt;method_name(@args)</code> notation.
@@ -11,6 +9,3 @@ To call the methods of an object, one should use the
 Note that internally the method receives <code>$object_ref</code>
 as its first argument.
 </p>
-
-
-

@@ -97,4 +97,3 @@ qq{<tr>\n<td>$link<img src="thumbnails/$fn.png" alt="Thumbnail for &quot;$fn&quo
 }
 
 my $target_html = io()->file("out.html")->print($html);
-

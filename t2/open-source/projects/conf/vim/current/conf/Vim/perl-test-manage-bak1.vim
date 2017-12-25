@@ -13,4 +13,3 @@ function! Perl_Tests_Count()
     call setline(".", new_line_contents)
     " call setline(".", mycount)
 endfunction
-

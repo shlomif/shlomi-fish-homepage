@@ -32,4 +32,3 @@ $newton->greet();
 print "Newton would have been ", $newton->get_age(),
     " years old today if he had been alive.\n"
     ;
-

@@ -127,4 +127,3 @@ nmap <S-F9> :call TightenTagLeft()			" Delete whitespace left of tag.
 nmap <S-F10> :call InsertStringLeftOfTag(" ")		" Insert space to the left of tag.
 nmap <S-F11> :call InsertStringRightOfTag(" ")	" Insert space to the right of tag.
 nmap <S-F12> :call TightenTagRight()			" Delete whitespace right of tag.
-

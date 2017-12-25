@@ -16,4 +16,3 @@ print join("\n", (("hello") x 5)), "\n\n";
 
 print "Test 5:\n";
 print join("\n", ("hello" x 5)), "\n\n";
-

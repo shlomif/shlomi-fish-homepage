@@ -180,4 +180,3 @@ function letsJQuery()
 
     $("center > h3").after("<b>MediaWiki Title:</b> <input name=\"mw_title\" id=\"mw_title\" value=\"" + myesc(total_text) + "\">\n<br>\n<br>\n<br>\n");
 }
-

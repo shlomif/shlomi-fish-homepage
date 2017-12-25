@@ -35,4 +35,3 @@ my $filename = shift(@ARGV)
     $s =~ s/[ \t]+$//gms;
     path($out_fn)->spew_utf8($s);
 }
-

@@ -314,4 +314,3 @@ $Id: common.xsl,v 1.8 2002/11/05 08:51:53 brandondoyle Exp $
   </xsl:template>
 
 </xsl:stylesheet>
-

@@ -32,4 +32,3 @@ sub _non_cached_render
 }
 
 1;
-

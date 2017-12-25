@@ -9,4 +9,3 @@ open O, ">", "/hello.txt" or die "Cannot open file!";
 print O "Hello World!\n";
 
 close(O);
-

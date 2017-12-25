@@ -57,4 +57,3 @@ while (<$finger_fh>)
     }
 }
 close($finger_fh);
-

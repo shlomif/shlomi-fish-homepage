@@ -238,4 +238,3 @@ sub get_contents
 {
     return $contents;
 }
-

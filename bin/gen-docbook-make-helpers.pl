@@ -861,6 +861,21 @@ sub get_quad_pres_files
     my $dir = shift;
     my $args = shift || {};
 
+    my $serve_fn = "$dir/serve.pl";
+    path($serve_fn)->spew_utf8(<<"EOF");
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use lib "\$ENV{HOME}/apps/test/quadpres/share/quad-pres/perl5";
+use Shlomif::Quad::Pres::CGI;
+
+Shlomif::Quad::Pres::CGI->new->run;
+EOF
+
+    chmod oct("0755"), $serve_fn;
+
     my $include_cb = $args->{'include_cb'} || sub { return 1; };
 
     my $dir_src = "$dir/src";

@@ -859,6 +859,7 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 sub get_quad_pres_files
 {
     my $args     = shift || {};
+    my $id       = $args->{id};
     my $dir      = "lib/presentations/qp/" . $args->{dir};
     my $dest_dir = $args->{dest_dir};
 
@@ -923,7 +924,7 @@ EOF
         $f =~ s{\.wml\z}{};
     }
 
-    return [
+    return $id => +{
         dest_dir    => $dest_dir,
         'src_dir'   => $dir,
         'src_files' => [
@@ -934,7 +935,7 @@ EOF
                 # dependency.
                 grep { $_ ne "index.html" } @files
         ],
-    ];
+    };
 }
 
 sub get_p4n_files
@@ -954,231 +955,165 @@ $tt->process(
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF
+## Please see file perltidy.ERR
+## Please see file perltidy.ERR
         quadp_presentations => {
             (
                 map {
-                    (
-                        "p4n$_" => {
-                            @{
-                                get_p4n_files(
-                                    $_,
-                                    {
-                                        dest_dir =>
-                                            "lecture/Perl/Newbies/lecture$_",
-                                    }
-                                )
-                            },
-                        },
+                    get_p4n_files(
+                        $_,
+                        {
+                            id       => "p4n$_",
+                            dest_dir => "lecture/Perl/Newbies/lecture$_",
+                        }
                         )
                 } ( 1 .. 5 )
             ),
-            'autotools' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "Autotools",
-                            dest_dir => "lecture/Autotools/slides",
-                        }
-                    )
-                },
-            },
-            'catb' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "CatB",
-                            dest_dir => "lecture/CatB/slides",
-                        }
-                    )
-                },
-            },
-            'gimp_1_2' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "Gimp/1.2",
-                            dest_dir => "lecture/Gimp/1/slides",
-                        }
-                    )
-                },
-            },
-            'gimp_2_2' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "Gimp/2.2",
-                            dest_dir => "lecture/Gimp/1/2.2-slides",
-                        }
-                    )
-                },
-            },
-            'haskell_for_perlers' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "haskell-for-perl-programmers",
-                            dest_dir => "lecture/Perl/Haskell/slides",
-                        }
-                    )
-                },
-            },
-            'joel_test' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "joel-test",
-                            dest_dir => "lecture/joel-test/heb-slides",
-                        }
-                    )
-                },
-            },
-            'lamp' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "web-publishing-with-LAMP",
-                            dest_dir => "lecture/LAMP/slides",
-                        }
-                    )
-                },
-            },
-            'freecell_solver_1' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "Freecell-Solver/1",
-                            dest_dir => "lecture/Freecell-Solver/slides",
-                        }
+            get_quad_pres_files(
+                {
+                    id       => 'autotools',
+                    dir      => "Autotools",
+                    dest_dir => "lecture/Autotools/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'catb',
+                    dir      => "CatB",
+                    dest_dir => "lecture/CatB/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'gimp_1_2',
+                    dir      => "Gimp/1.2",
+                    dest_dir => "lecture/Gimp/1/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'gimp_2_2',
+                    dir      => "Gimp/2.2",
+                    dest_dir => "lecture/Gimp/1/2.2-slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'haskell_for_perlers',
+                    dir      => "haskell-for-perl-programmers",
+                    dest_dir => "lecture/Perl/Haskell/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'joel_test',
+                    dir      => "joel-test",
+                    dest_dir => "lecture/joel-test/heb-slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'lamp',
+                    dir      => "web-publishing-with-LAMP",
+                    dest_dir => "lecture/LAMP/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'freecell_solver_1',
+                    dir      => "Freecell-Solver/1",
+                    dest_dir => "lecture/Freecell-Solver/slides",
+                }
 
-                    )
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'freecell_solver_the_next_pres',
+                    dir      => "Freecell-Solver/The-Next-Pres",
+                    dest_dir => "lecture/Freecell-Solver/The-Next-Pres/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'freecell_solver_project_intro',
+                    dir      => "Freecell-Solver/project-intro",
+                    dest_dir => "lecture/Freecell-Solver/project-intro/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'lm_solve',
+                    dir      => "LM-Solve",
+                    dest_dir => "lecture/LM-Solve/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'mdda',
+                    dir      => "meta-data-database-access",
+                    dest_dir => "lecture/mini/mdda/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'quad_pres',
+                    dir      => "Quad-Pres",
+                    dest_dir => "lecture/Quad-Pres/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_basic_use',
+                    dir      => "welcome-to-linux/Basic_Use-2",
+                    dest_dir => "lecture/W2L/Basic_Use/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_blitz',
+                    dir      => "welcome-to-linux/Blitz",
+                    dest_dir => "lecture/W2L/Blitz/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_devel',
+                    dir      => "welcome-to-linux/Development",
+                    dest_dir => "lecture/W2L/Development/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_mini_intro',
+                    dir      => "welcome-to-linux/Mini-Intro",
+                    dest_dir => "lecture/W2L/Mini-Intro/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_networking',
+                    dir      => "welcome-to-linux/Networking",
+                    dest_dir => "lecture/W2L/Network/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id       => 'w2l_technion',
+                    dir      => "welcome-to-linux/Technion",
+                    dest_dir => "lecture/W2L/Technion/slides",
+                }
+            ),
+            get_quad_pres_files(
+                {
+                    id         => 'website_meta_lect',
+                    dir        => "Website-Meta-Lecture",
+                    include_cb => sub {
+                        my $fn = shift;
+                        return ( $fn !~ m{\Aexamples/} );
+                    },
+                    dest_dir => "lecture/WebMetaLecture/slides",
                 },
-            },
-            'freecell_solver_the_next_pres' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir => "Freecell-Solver/The-Next-Pres",
-                            dest_dir =>
-                                "lecture/Freecell-Solver/The-Next-Pres/slides",
-                        }
-                    )
-                },
-            },
-            'freecell_solver_project_intro' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir => "Freecell-Solver/project-intro",
-                            dest_dir =>
-                                "lecture/Freecell-Solver/project-intro/slides",
-                        }
-                    )
-                },
-            },
-            'lm_solve' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "LM-Solve",
-                            dest_dir => "lecture/LM-Solve/slides",
-                        }
-                    )
-                },
-            },
-            'mdda' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "meta-data-database-access",
-                            dest_dir => "lecture/mini/mdda/slides",
-                        }
-                    )
-                },
-            },
-            'quad_pres' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "Quad-Pres",
-                            dest_dir => "lecture/Quad-Pres/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_basic_use' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Basic_Use-2",
-                            dest_dir => "lecture/W2L/Basic_Use/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_blitz' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Blitz",
-                            dest_dir => "lecture/W2L/Blitz/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_devel' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Development",
-                            dest_dir => "lecture/W2L/Development/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_mini_intro' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Mini-Intro",
-                            dest_dir => "lecture/W2L/Mini-Intro/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_networking' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Networking",
-                            dest_dir => "lecture/W2L/Network/slides",
-                        }
-                    )
-                },
-            },
-            'w2l_technion' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir      => "welcome-to-linux/Technion",
-                            dest_dir => "lecture/W2L/Technion/slides",
-                        }
-                    )
-                },
-            },
-            'website_meta_lect' => {
-                @{
-                    get_quad_pres_files(
-                        {
-                            dir        => "Website-Meta-Lecture",
-                            include_cb => sub {
-                                my $fn = shift;
-                                return ( $fn !~ m{\Aexamples/} );
-                            },
-                            dest_dir => "lecture/WebMetaLecture/slides",
-                        },
-                    )
-                },
-            },
+            ),
         },
     },
     $make_fh

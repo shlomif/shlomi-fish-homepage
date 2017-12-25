@@ -858,8 +858,8 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
 sub get_quad_pres_files
 {
-    my $dir      = "lib/presentations/qp/" . shift;
     my $args     = shift || {};
+    my $dir      = "lib/presentations/qp/" . $args->{dir};
     my $dest_dir = $args->{dest_dir};
 
     my $serve_fn = "$dir/serve.pl";
@@ -941,7 +941,8 @@ sub get_p4n_files
 {
     my $n = shift;
 
-    return get_quad_pres_files( "perl-for-newbies/$n", shift );
+    return get_quad_pres_files(
+        { dir => "perl-for-newbies/$n", %{ shift @_ } } );
 }
 
 $tt->process(
@@ -974,8 +975,8 @@ EOF
             'autotools' => {
                 @{
                     get_quad_pres_files(
-                        "Autotools",
                         {
+                            dir      => "Autotools",
                             dest_dir => "lecture/Autotools/slides",
                         }
                     )
@@ -984,8 +985,8 @@ EOF
             'catb' => {
                 @{
                     get_quad_pres_files(
-                        "CatB",
                         {
+                            dir      => "CatB",
                             dest_dir => "lecture/CatB/slides",
                         }
                     )
@@ -994,8 +995,8 @@ EOF
             'gimp_1_2' => {
                 @{
                     get_quad_pres_files(
-                        "Gimp/1.2",
                         {
+                            dir      => "Gimp/1.2",
                             dest_dir => "lecture/Gimp/1/slides",
                         }
                     )
@@ -1004,8 +1005,8 @@ EOF
             'gimp_2_2' => {
                 @{
                     get_quad_pres_files(
-                        "Gimp/2.2",
                         {
+                            dir      => "Gimp/2.2",
                             dest_dir => "lecture/Gimp/1/2.2-slides",
                         }
                     )
@@ -1014,8 +1015,8 @@ EOF
             'haskell_for_perlers' => {
                 @{
                     get_quad_pres_files(
-                        "haskell-for-perl-programmers",
                         {
+                            dir      => "haskell-for-perl-programmers",
                             dest_dir => "lecture/Perl/Haskell/slides",
                         }
                     )
@@ -1024,8 +1025,8 @@ EOF
             'joel_test' => {
                 @{
                     get_quad_pres_files(
-                        "joel-test",
                         {
+                            dir      => "joel-test",
                             dest_dir => "lecture/joel-test/heb-slides",
                         }
                     )
@@ -1034,8 +1035,8 @@ EOF
             'lamp' => {
                 @{
                     get_quad_pres_files(
-                        "web-publishing-with-LAMP",
                         {
+                            dir      => "web-publishing-with-LAMP",
                             dest_dir => "lecture/LAMP/slides",
                         }
                     )
@@ -1044,8 +1045,8 @@ EOF
             'freecell_solver_1' => {
                 @{
                     get_quad_pres_files(
-                        "Freecell-Solver/1",
                         {
+                            dir      => "Freecell-Solver/1",
                             dest_dir => "lecture/Freecell-Solver/slides",
                         }
 
@@ -1055,8 +1056,8 @@ EOF
             'freecell_solver_the_next_pres' => {
                 @{
                     get_quad_pres_files(
-                        "Freecell-Solver/The-Next-Pres",
                         {
+                            dir => "Freecell-Solver/The-Next-Pres",
                             dest_dir =>
                                 "lecture/Freecell-Solver/The-Next-Pres/slides",
                         }
@@ -1066,8 +1067,8 @@ EOF
             'freecell_solver_project_intro' => {
                 @{
                     get_quad_pres_files(
-                        "Freecell-Solver/project-intro",
                         {
+                            dir => "Freecell-Solver/project-intro",
                             dest_dir =>
                                 "lecture/Freecell-Solver/project-intro/slides",
                         }
@@ -1077,8 +1078,8 @@ EOF
             'lm_solve' => {
                 @{
                     get_quad_pres_files(
-                        "LM-Solve",
                         {
+                            dir      => "LM-Solve",
                             dest_dir => "lecture/LM-Solve/slides",
                         }
                     )
@@ -1087,8 +1088,8 @@ EOF
             'mdda' => {
                 @{
                     get_quad_pres_files(
-                        "meta-data-database-access",
                         {
+                            dir      => "meta-data-database-access",
                             dest_dir => "lecture/mini/mdda/slides",
                         }
                     )
@@ -1097,8 +1098,8 @@ EOF
             'quad_pres' => {
                 @{
                     get_quad_pres_files(
-                        "Quad-Pres",
                         {
+                            dir      => "Quad-Pres",
                             dest_dir => "lecture/Quad-Pres/slides",
                         }
                     )
@@ -1107,8 +1108,8 @@ EOF
             'w2l_basic_use' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Basic_Use-2",
                         {
+                            dir      => "welcome-to-linux/Basic_Use-2",
                             dest_dir => "lecture/W2L/Basic_Use/slides",
                         }
                     )
@@ -1117,8 +1118,8 @@ EOF
             'w2l_blitz' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Blitz",
                         {
+                            dir      => "welcome-to-linux/Blitz",
                             dest_dir => "lecture/W2L/Blitz/slides",
                         }
                     )
@@ -1127,8 +1128,8 @@ EOF
             'w2l_devel' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Development",
                         {
+                            dir      => "welcome-to-linux/Development",
                             dest_dir => "lecture/W2L/Development/slides",
                         }
                     )
@@ -1137,19 +1138,18 @@ EOF
             'w2l_mini_intro' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Mini-Intro",
                         {
+                            dir      => "welcome-to-linux/Mini-Intro",
                             dest_dir => "lecture/W2L/Mini-Intro/slides",
                         }
-
                     )
                 },
             },
             'w2l_networking' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Networking",
                         {
+                            dir      => "welcome-to-linux/Networking",
                             dest_dir => "lecture/W2L/Network/slides",
                         }
                     )
@@ -1158,8 +1158,8 @@ EOF
             'w2l_technion' => {
                 @{
                     get_quad_pres_files(
-                        "welcome-to-linux/Technion",
                         {
+                            dir      => "welcome-to-linux/Technion",
                             dest_dir => "lecture/W2L/Technion/slides",
                         }
                     )
@@ -1168,8 +1168,8 @@ EOF
             'website_meta_lect' => {
                 @{
                     get_quad_pres_files(
-                        "Website-Meta-Lecture",
                         {
+                            dir        => "Website-Meta-Lecture",
                             include_cb => sub {
                                 my $fn = shift;
                                 return ( $fn !~ m{\Aexamples/} );

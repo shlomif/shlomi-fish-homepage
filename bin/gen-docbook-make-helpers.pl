@@ -938,14 +938,6 @@ EOF
     };
 }
 
-sub get_p4n_files
-{
-    my $n = shift;
-
-    return get_quad_pres_files(
-        { dir => "perl-for-newbies/$n", %{ shift @_ } } );
-}
-
 $tt->process(
     $template_fh,
     {
@@ -960,10 +952,10 @@ EOF
         quadp_presentations => {
             (
                 map {
-                    get_p4n_files(
-                        $_,
+                    get_quad_pres_files(
                         {
                             id       => "p4n$_",
+                            dir      => "perl-for-newbies/$_",
                             dest_dir => "lecture/Perl/Newbies/lecture$_",
                         }
                         )

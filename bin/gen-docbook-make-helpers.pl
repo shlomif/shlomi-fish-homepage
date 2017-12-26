@@ -876,6 +876,10 @@ use Shlomif::Quad::Pres::CGI;
 Shlomif::Quad::Pres::CGI->new->run;
 EOF
 
+    my $dot_q = "$dir/.quadpres";
+    path($dot_q)->mkpath;
+    path("$dot_q/is_root")->spew_utf8('');
+
     path("$dir/.wmlrc")->spew_utf8(<<"EOF");
 -DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
 EOF

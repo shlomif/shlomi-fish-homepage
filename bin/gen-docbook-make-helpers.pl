@@ -862,9 +862,9 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 sub get_quad_pres_files
 {
     my $args     = shift || {};
-    my $id       = $args->{id};
+    my $dir_base = $args->{dir};
     my $lang     = $args->{lang} // '';
-    my $dir      = "lib/presentations/qp/" . $args->{dir};
+    my $dir      = "lib/presentations/qp/$dir_base";
     my $dest_dir = $args->{dest_dir};
 
     my $serve_fn = "$dir/serve.pl";
@@ -1006,7 +1006,7 @@ EOF
         $f =~ s{\.wml\z}{};
     }
 
-    return $id => +{
+    return +( $dir_base =~ tr#/-#__#r ) => +{
         dest_dir    => $dest_dir,
         'src_dir'   => $dir,
         'src_files' => [
@@ -1034,7 +1034,6 @@ EOF
                 (
                     map {
                         +{
-                            id       => "p4n$_",
                             lang     => 'en',
                             dir      => "perl-for-newbies/$_",
                             dest_dir => "lecture/Perl/Newbies/lecture$_",
@@ -1042,118 +1041,98 @@ EOF
                     } ( 1 .. 5 )
                 ),
                 {
-                    id       => 'autotools',
                     lang     => 'en',
                     dir      => "Autotools",
                     dest_dir => "lecture/Autotools/slides",
                 },
                 {
-                    id       => 'catb',
                     lang     => 'en',
                     dir      => "CatB",
                     dest_dir => "lecture/CatB/slides",
                 },
                 {
-                    id       => 'gimp_1_2',
                     lang     => 'en',
                     dir      => "Gimp/1.2",
                     dest_dir => "lecture/Gimp/1/slides",
                 },
                 {
-                    id       => 'gimp_2_2',
                     lang     => 'en',
                     dir      => "Gimp/2.2",
                     dest_dir => "lecture/Gimp/1/2.2-slides",
                 },
                 {
-                    id       => 'haskell_for_perlers',
                     lang     => 'en',
                     dir      => "haskell-for-perl-programmers",
                     dest_dir => "lecture/Perl/Haskell/slides",
                 },
                 {
-                    id       => 'joel_test',
                     dir      => "joel-test",
                     dest_dir => "lecture/joel-test/heb-slides",
                 },
                 {
-                    id       => 'lamp',
                     lang     => 'en',
                     dir      => "web-publishing-with-LAMP",
                     dest_dir => "lecture/LAMP/slides",
                 },
                 {
-                    id       => 'freecell_solver_1',
                     lang     => 'en',
                     dir      => "Freecell-Solver/1",
                     dest_dir => "lecture/Freecell-Solver/slides",
                 },
                 {
-                    id       => 'freecell_solver_the_next_pres',
                     lang     => 'en',
                     dir      => "Freecell-Solver/The-Next-Pres",
                     dest_dir => "lecture/Freecell-Solver/The-Next-Pres/slides",
                 },
                 {
-                    id       => 'freecell_solver_project_intro',
                     lang     => 'en',
                     dir      => "Freecell-Solver/project-intro",
                     dest_dir => "lecture/Freecell-Solver/project-intro/slides",
                 },
                 {
-                    id       => 'lm_solve',
                     lang     => 'en',
                     dir      => "LM-Solve",
                     dest_dir => "lecture/LM-Solve/slides",
                 },
                 {
-                    id       => 'mdda',
                     lang     => 'en',
                     dir      => "meta-data-database-access",
                     dest_dir => "lecture/mini/mdda/slides",
                 },
                 {
-                    id       => 'quad_pres',
                     lang     => 'en',
                     dir      => "Quad-Pres",
                     dest_dir => "lecture/Quad-Pres/slides",
                 },
                 {
-                    id       => 'w2l_basic_use',
                     lang     => 'en',
                     dir      => "welcome-to-linux/Basic_Use-2",
                     dest_dir => "lecture/W2L/Basic_Use/slides",
                 },
                 {
-                    id       => 'w2l_blitz',
                     dir      => "welcome-to-linux/Blitz",
                     dest_dir => "lecture/W2L/Blitz/slides",
                 },
                 {
-                    id       => 'w2l_devel',
                     lang     => 'en',
                     dir      => "welcome-to-linux/Development",
                     dest_dir => "lecture/W2L/Development/slides",
                 },
                 {
-                    id       => 'w2l_mini_intro',
                     dir      => "welcome-to-linux/Mini-Intro",
                     dest_dir => "lecture/W2L/Mini-Intro/slides",
                 },
                 {
-                    id       => 'w2l_networking',
                     lang     => 'en',
                     dir      => "welcome-to-linux/Networking",
                     dest_dir => "lecture/W2L/Network/slides",
                 },
                 {
-                    id       => 'w2l_technion',
                     lang     => 'en',
                     dir      => "welcome-to-linux/Technion",
                     dest_dir => "lecture/W2L/Technion/slides",
                 },
                 {
-                    id         => 'website_meta_lect',
                     lang       => 'en',
                     dir        => "Website-Meta-Lecture",
                     include_cb => sub {

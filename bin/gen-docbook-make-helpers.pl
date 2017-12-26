@@ -876,6 +876,10 @@ use Shlomif::Quad::Pres::CGI;
 Shlomif::Quad::Pres::CGI->new->run;
 EOF
 
+    path("$dir/.wmlrc")->spew_utf8(<<"EOF");
+-DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
+EOF
+
     path("$dir/quadpres.ini")->spew_utf8(<<"EOF");
 [quadpres]
 

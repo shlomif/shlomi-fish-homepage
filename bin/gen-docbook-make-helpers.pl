@@ -12,6 +12,9 @@ use File::Find::Object::Rule ();
 use List::MoreUtils qw(any);
 use Parallel::ForkManager ();
 
+use lib './lib';
+use Shlomif::Out qw/ write_on_change /;
+
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $cwd            = getcwd();
@@ -860,6 +863,7 @@ sub get_quad_pres_files
 {
     my $args     = shift || {};
     my $id       = $args->{id};
+    my $lang     = $args->{lang} // '';
     my $dir      = "lib/presentations/qp/" . $args->{dir};
     my $dest_dir = $args->{dest_dir};
 
@@ -880,6 +884,76 @@ EOF
     path($dot_q)->mkpath;
     path("$dot_q/is_root")->spew_utf8('');
 
+    if ( $lang eq 'en' )
+    {
+        write_on_change( scalar( path("$dir/template.wml") ), \<<"EOF");
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "en-GB" />
+<default-var "qp_charset" "utf-8" />
+
+<set-var display_ads="1" />
+
+#include "quadpres_main.wml"
+
+<define-tag menupath endtag="required">
+<:{
+    require MenuPath;
+    use Text::WrapAsUtf8 qw/ print_utf8 /;
+print_utf8(MenuPath::get_menupath_text(<<'EOFOPOPOPLKJKJQWEQWEQW'));
+%body
+EOFOPOPOPLKJKJQWEQWEQW
+}:>
+</define-tag>
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+
+<define-tag esr:homesite:link endtag="required" whitespace="delete">
+<preserve href />
+<set-var %attributes />
+<a href="http://www.catb.org/~esr/<get-var href />">%body</a>
+<restore href />
+</define-tag>
+
+<define-tag mycode endtag="required">
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+%body
+</td>
+</tr>
+</table>
+</define-tag>
+
+<:{
+require VimIface;
+}:>
+<define-tag quadpres_code_block endtag="required" whitespace="delete">
+<div class="code_block">
+<pre>
+%body
+</pre>
+</div>
+</define-tag>
+
+<define-tag quadpres_include_colorized_file whitespace="delete">
+<preserve filename />
+<set-var %attributes />
+<:{
+print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+}:>
+<restore filename />
+</define-tag>
+
+<define-tag renderedexample endtag="required">
+<a href="http://www.shlomifish.org/lecture/WebMetaLecture/rendered/%0/">%body</a>
+</define-tag>
+EOF
+    }
     path("$dir/.wmlrc")->spew_utf8(<<"EOF");
 -DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
 EOF
@@ -961,6 +1035,7 @@ EOF
                     map {
                         +{
                             id       => "p4n$_",
+                            lang     => 'en',
                             dir      => "perl-for-newbies/$_",
                             dest_dir => "lecture/Perl/Newbies/lecture$_",
                             }
@@ -968,26 +1043,31 @@ EOF
                 ),
                 {
                     id       => 'autotools',
+                    lang     => 'en',
                     dir      => "Autotools",
                     dest_dir => "lecture/Autotools/slides",
                 },
                 {
                     id       => 'catb',
+                    lang     => 'en',
                     dir      => "CatB",
                     dest_dir => "lecture/CatB/slides",
                 },
                 {
                     id       => 'gimp_1_2',
+                    lang     => 'en',
                     dir      => "Gimp/1.2",
                     dest_dir => "lecture/Gimp/1/slides",
                 },
                 {
                     id       => 'gimp_2_2',
+                    lang     => 'en',
                     dir      => "Gimp/2.2",
                     dest_dir => "lecture/Gimp/1/2.2-slides",
                 },
                 {
                     id       => 'haskell_for_perlers',
+                    lang     => 'en',
                     dir      => "haskell-for-perl-programmers",
                     dest_dir => "lecture/Perl/Haskell/slides",
                 },
@@ -998,41 +1078,49 @@ EOF
                 },
                 {
                     id       => 'lamp',
+                    lang     => 'en',
                     dir      => "web-publishing-with-LAMP",
                     dest_dir => "lecture/LAMP/slides",
                 },
                 {
                     id       => 'freecell_solver_1',
+                    lang     => 'en',
                     dir      => "Freecell-Solver/1",
                     dest_dir => "lecture/Freecell-Solver/slides",
                 },
                 {
                     id       => 'freecell_solver_the_next_pres',
+                    lang     => 'en',
                     dir      => "Freecell-Solver/The-Next-Pres",
                     dest_dir => "lecture/Freecell-Solver/The-Next-Pres/slides",
                 },
                 {
                     id       => 'freecell_solver_project_intro',
+                    lang     => 'en',
                     dir      => "Freecell-Solver/project-intro",
                     dest_dir => "lecture/Freecell-Solver/project-intro/slides",
                 },
                 {
                     id       => 'lm_solve',
+                    lang     => 'en',
                     dir      => "LM-Solve",
                     dest_dir => "lecture/LM-Solve/slides",
                 },
                 {
                     id       => 'mdda',
+                    lang     => 'en',
                     dir      => "meta-data-database-access",
                     dest_dir => "lecture/mini/mdda/slides",
                 },
                 {
                     id       => 'quad_pres',
+                    lang     => 'en',
                     dir      => "Quad-Pres",
                     dest_dir => "lecture/Quad-Pres/slides",
                 },
                 {
                     id       => 'w2l_basic_use',
+                    lang     => 'en',
                     dir      => "welcome-to-linux/Basic_Use-2",
                     dest_dir => "lecture/W2L/Basic_Use/slides",
                 },
@@ -1043,6 +1131,7 @@ EOF
                 },
                 {
                     id       => 'w2l_devel',
+                    lang     => 'en',
                     dir      => "welcome-to-linux/Development",
                     dest_dir => "lecture/W2L/Development/slides",
                 },
@@ -1053,16 +1142,19 @@ EOF
                 },
                 {
                     id       => 'w2l_networking',
+                    lang     => 'en',
                     dir      => "welcome-to-linux/Networking",
                     dest_dir => "lecture/W2L/Network/slides",
                 },
                 {
                     id       => 'w2l_technion',
+                    lang     => 'en',
                     dir      => "welcome-to-linux/Technion",
                     dest_dir => "lecture/W2L/Technion/slides",
                 },
                 {
                     id         => 'website_meta_lect',
+                    lang       => 'en',
                     dir        => "Website-Meta-Lecture",
                     include_cb => sub {
                         my $fn = shift;

@@ -8,9 +8,7 @@ to write and run tests using convenient functions. Here's an example
 for a test script:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/Test-More-1.t" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/Test-More-1.t" />
 
 <p>
 <code>is()</code> is a Test-More built-in that compares a received result ("have")

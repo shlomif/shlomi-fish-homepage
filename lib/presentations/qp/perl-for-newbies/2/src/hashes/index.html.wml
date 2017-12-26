@@ -19,15 +19,11 @@ by typing <code>keys(%myhash)</code>. Here's a short example, that runs a simple
 bank, that will illustrate this functionality:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/hashes/bank.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/hashes/bank.pl" />
 
 <p>
 The following example, which is considerably shorter, uses a hash to
 find out if a list of strings contains only unique strings:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/hashes/unique.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/hashes/unique.pl" />

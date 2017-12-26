@@ -9,9 +9,7 @@ the same set of operations for each number.
 For example, the following program prints all the numbers from 1 to 100:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/for_loop/1to100.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/for_loop/1to100.pl" />
 
 <p>
 Some explanations about the syntax:
@@ -40,9 +38,7 @@ We can nest loops, so for example the following program prints the
 multiplication board:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/for_loop/multiplication_board.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/for_loop/multiplication_board.pl" />
 
 <p>
 You may have noticed the program's comments. In perl comments start with the

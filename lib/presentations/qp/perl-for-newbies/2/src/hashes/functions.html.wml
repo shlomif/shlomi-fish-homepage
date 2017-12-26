@@ -7,9 +7,7 @@ delete can be used to remove a key or a set of keys out of a hash.
 For example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/hashes/delete.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/hashes/delete.pl" />
 
 <h2>The Comma Regarding Hashes</h2>
 
@@ -24,9 +22,7 @@ Here's an example:
 </p>
 
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/hashes/comma.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/hashes/comma.pl" />
 
 <p>
 If the two combined hashes contain several identical keys, then the values

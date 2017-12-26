@@ -13,17 +13,13 @@ lexical filehandles for both file handles and directory handles.
 Here is an example for a program implementing a directory listing.
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/new-features/ls.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/new-features/ls.pl" />
 
 <p>
 And here is an example that copies a file:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/new-features/copy.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/new-features/copy.pl" />
 
 <h2>IO::Handle and Friends</h2>
 

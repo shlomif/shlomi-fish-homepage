@@ -10,15 +10,11 @@ the ability to use operators and functions.
 The following example, replaces the first word in the sentence with its length:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/substitute/length.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/substitute/length.pl" />
 
 <p>
 And the following example, converts the first word that starts with the letter
 "S" into uppercase:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/substitute/uppercase.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/substitute/uppercase.pl" />

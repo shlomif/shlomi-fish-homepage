@@ -12,9 +12,7 @@ As an example let's print a tree of the contents of the part of the lecture
 that was presented in the previous slide:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/references/print_contents.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/references/print_contents.pl" />
 
 <p>
 Note that the arrows following the first arrow are optional as perl sees

@@ -11,17 +11,13 @@ iteration commands which were passed to the loop as arguments.
 For example, the following program prints the first 200 primes:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/for/primes.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/for/primes.pl" />
 
 <p>
 Now, the equivalent program using a while loop:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/for/primes_while.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/for/primes_while.pl" />
 
 <p>
 gets stuck. (<b>why?</b>)

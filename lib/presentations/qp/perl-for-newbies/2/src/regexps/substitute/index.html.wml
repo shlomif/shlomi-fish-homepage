@@ -7,9 +7,7 @@ used for this is <code>s/$exp_to_search/$exp_to_subs_for/</code>. The following
 simple program replaces a number with the string "Some Number":
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/substitute/number.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/substitute/number.pl" />
 
 <p>
 Notice that in this case, only the first occurrence of the string will be
@@ -29,9 +27,7 @@ sentence:
 </p>
 
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/substitute/reverse_words.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/substitute/reverse_words.pl" />
 
 
 <table class="note">

@@ -11,10 +11,6 @@ Here's an example for a module that defines a variable and another one that
 access it:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/modules/loading/MyVar.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/modules/loading/MyVar.pm" />
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/modules/loading/test_myvar.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/modules/loading/test_myvar.pl" />

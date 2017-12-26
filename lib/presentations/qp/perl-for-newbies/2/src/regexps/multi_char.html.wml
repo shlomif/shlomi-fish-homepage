@@ -14,9 +14,7 @@ the following snippet matches 5 letter words that start with 'l' and end with
 'x':
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/l---x.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/l---x.pl" />
 
 <h2>The [ ... ] specifies more than one option for a character</h2>
 
@@ -36,6 +34,4 @@ Here's an example that checks if a valid identifier for a perl variable is
 present in the string:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/perl_var.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/perl_var.pl" />

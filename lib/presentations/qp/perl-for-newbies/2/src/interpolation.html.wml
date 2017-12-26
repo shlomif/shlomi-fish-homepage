@@ -5,9 +5,7 @@ Perl supports inserting variables into string constants simply by
 placing their name along with the dollars inside them. Here's an example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/interpolate1.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/interpolate1.pl" />
 
 <p>
 Note that once perl encounters a <code>$</code>-sign, it will try to use as

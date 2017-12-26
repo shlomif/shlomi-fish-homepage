@@ -17,9 +17,7 @@ beginning of your program and you can sleep better at nights.
 As an example, here is the primes program, <code>use strict</code>-ed:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/my/primes_us.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/my/primes_us.pl" />
 
 <p>
 Notice the use of <code>my</code> in the declaration of the <code>foreach</code> loop.

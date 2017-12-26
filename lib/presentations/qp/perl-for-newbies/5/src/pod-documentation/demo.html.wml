@@ -17,9 +17,7 @@ font will be used for it. Headers are followed by the text of the header.
 For example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/pod-documentation/headers.pod" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/pod-documentation/headers.pod" />
 
 <h3 id="regular-text">Regular Text</h3>
 
@@ -36,9 +34,7 @@ of the text that's indented by using whitespace. In code blocks, newlines are
 not ignored. For example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/pod-documentation/code-block.pod" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/pod-documentation/code-block.pod" />
 
 
 <h3 id="pod-demo-formatting-codes">Formatting Codes</h3>
@@ -94,9 +90,7 @@ produce a definition list.
 For example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/pod-documentation/list1.pod" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/pod-documentation/list1.pod" />
 
 <h2 id="pod-demo-for-more-info">For More Information</h2>
 

@@ -6,17 +6,13 @@ Perl supports such mathematical operators as <code>+</code>, <code>-</code>,
 is worth a thousand words:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/operators.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/operators.pl" />
 
 <p>
 The output of this program is:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/operators.out.txt" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/operators.out.txt" />
 
 <p>
 The operators have the same precedence as their mathematical equivalents. The

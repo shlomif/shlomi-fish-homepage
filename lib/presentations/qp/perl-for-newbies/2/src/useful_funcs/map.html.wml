@@ -18,9 +18,7 @@ dependant on it.
 The following example multiplies each element of an array by two:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/double.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/double.pl" />
 
 <p>
 Using map is usually faster than using a
@@ -33,9 +31,7 @@ The following program decodes a run-length encoding compression, in which each
 element of the array is a number followed by its number of times:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/rle.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/rle.pl" />
 
 <p>
 As you can see, the expression at the end of the map iterator can be an

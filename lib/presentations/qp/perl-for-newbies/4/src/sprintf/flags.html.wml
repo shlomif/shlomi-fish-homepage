@@ -29,9 +29,7 @@ binary with "0b"</flag>
 For example (taken from <code>perldoc -f sprintf</code>):
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/sprintf/flags-examples.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/sprintf/flags-examples.pl" />
 
 <p>
 Note that <code>printf</code> formats its arguments using <code>sprintf</code> and

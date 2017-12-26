@@ -12,9 +12,7 @@ Here's an example where recursion is used to find all the permutations of
 splitting 10 among three numbers:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/functions/splitting.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/functions/splitting.pl" />
 
 <p>
 A couple of notes are in place. First of all, perl does not handle tail

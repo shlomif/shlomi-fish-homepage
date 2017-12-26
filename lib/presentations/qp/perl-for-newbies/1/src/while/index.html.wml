@@ -7,9 +7,7 @@ is very similar to the if statement and will be introduced in the following
 example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/while/power_of_2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/while/power_of_2.pl" />
 
 <p>
 It is possible that a <code>while</code> loop will not be executed at all, if the
@@ -23,6 +21,4 @@ The following program checks if a given string is made entirely of "a"
 characters:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/while/all_as.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/while/all_as.pl" />

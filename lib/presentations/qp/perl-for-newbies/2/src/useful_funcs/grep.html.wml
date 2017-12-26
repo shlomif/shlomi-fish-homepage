@@ -12,14 +12,10 @@ Here is an example that takes a file and filters only the perl comments whose
 length is lesser than 80 characters:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/grep.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/grep.pl" />
 
 <p>
 And here's how <code>grep</code> can help us find the first 100 primes:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/primes.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/primes.pl" />

@@ -10,9 +10,7 @@ to a constant.
 Here is an example that uses a reference to update a sum:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/references/update_sum.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/references/update_sum.pl" />
 
 <p>
 As can be seen, because the reference to <code>$sum</code> was used, its value

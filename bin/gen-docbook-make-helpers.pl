@@ -949,6 +949,15 @@ print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var fi
 <restore filename />
 </define-tag>
 
+<define-tag quadpres_code_file>
+<preserve filename />
+<set-var %attributes />
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="<get-var filename />" />
+</quadpres_code_block>
+<restore filename />
+</define-tag>
+
 <define-tag renderedexample endtag="required">
 <a href="http://www.shlomifish.org/lecture/WebMetaLecture/rendered/%0/">%body</a>
 </define-tag>

@@ -6,15 +6,11 @@ After you install Module-Starter, you can type
 as the following:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/module-build-and-starter/module-starter.help.txt" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/module-build-and-starter/module-starter.help.txt" />
 
 <p>
 Let's show an example invocation for our own module called
 <code>MyMath::Ops</code> which will contain some silly mathematical routines:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/module-build-and-starter/invoke-m-s.bash" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/module-build-and-starter/invoke-m-s.bash" />

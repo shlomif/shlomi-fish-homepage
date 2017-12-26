@@ -6,9 +6,7 @@ The syntax for checking if a string contains the regular expression is
 a given string contains the word hello (in all lowercase):
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/hello.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/hello.pl" />
 
 <p>
 Note that alphanumeric characters in regular expressions stand for themselves,

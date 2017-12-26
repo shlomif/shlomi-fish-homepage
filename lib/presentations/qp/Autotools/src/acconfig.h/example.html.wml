@@ -1,5 +1,3 @@
 #include 'template.wml'
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/acconfig.h/acconfig.h" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/acconfig.h/acconfig.h" />

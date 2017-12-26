@@ -4,9 +4,7 @@
 How many characters are in the perl motto? Perl can tell that right away:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/length.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/length.pl" />
 
 <p>
 <code>length()</code> is a built-in function that tells how many characters are in
@@ -28,17 +26,13 @@ the substring till the end of the string.
 An example will illustrate it best:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/substr.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/substr.pl" />
 
 <p>
 The output of this program is:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/substr.out.txt" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/substr.out.txt" />
 
 <p>( You may notice that the position of the first character is 0. )</p>
 
@@ -48,9 +42,7 @@ are  mandatory in perl. The parenthesis that enclose them are optional,
 though. The above program could have been re-written as:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/substr2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/substr2.pl" />
 
 <p>
 We need an extra set of parenthesis so <code>print</code> (which is also a function)
@@ -67,6 +59,4 @@ Another useful function is int(). This function takes a number and rounds it
 down to a near integer (= whole number). Here's an example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/expressions/int.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/expressions/int.pl" />

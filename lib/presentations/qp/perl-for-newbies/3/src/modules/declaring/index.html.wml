@@ -8,9 +8,7 @@ this:
 </p>
 
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/modules/declaring/MyModule.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/modules/declaring/MyModule.pm" />
 
 <p>
 Note that a module has to return a true value to the perl interpreter, which
@@ -22,6 +20,4 @@ A namespace may contain sub-namespaces. To separate namespace components,
 use the <code>::</code> separator. For example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/modules/declaring/Hoola/Hoop.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/modules/declaring/Hoola/Hoop.pm" />

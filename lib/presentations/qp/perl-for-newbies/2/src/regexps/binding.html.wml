@@ -11,9 +11,7 @@ For example, the following program checks if a string is composed entirely of
 the letter A:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/all_as.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/all_as.pl" />
 
 <p>
 It's much shorter than with using a loop and also much faster.
@@ -23,6 +21,4 @@ It's much shorter than with using a loop and also much faster.
 Here's another example. Let's check if a string ends with three periods:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/string_ends_ellip.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/string_ends_ellip.pl" />

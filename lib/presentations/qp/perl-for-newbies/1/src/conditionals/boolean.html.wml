@@ -56,15 +56,11 @@ them to variables first.
 
 <p>Here are some examples:</p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/conditionals/range.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/conditionals/range.pl" />
 
 <hr />
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/conditionals/name_abc.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/conditionals/name_abc.pl" />
 
 <p>
 Note: The function <code>lc()</code> converts a string to lowercase.

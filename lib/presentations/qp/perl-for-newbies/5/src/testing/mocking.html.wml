@@ -36,9 +36,7 @@ the Perl <code>%INC</code> variable (see
 something like:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/MockModules.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/MockModules.pm" />
 
 <p>
 After doing this, the tested code can do <code>use CGI;</code> and still think it

@@ -6,9 +6,7 @@ certain condition is met. For example the following program, reports to the
 user whether or not his name starts with the letter "A":
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/conditionals/letter_a.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/conditionals/letter_a.pl" />
 
 <p>
 The code <code>substr($name,0,1) eq "A"</code> is a condition expression which uses

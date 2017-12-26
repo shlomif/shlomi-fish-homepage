@@ -22,9 +22,7 @@ the amount of available memory the computer has.
 The following program prints the primes up to 200:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/primes1.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/primes1.pl" />
 
 <p>
 The notation <code>scalar(@myarray)</code> can be used to refer to the number
@@ -38,6 +36,4 @@ array is empty).
 Thus, for example, the above program could have been written as follows:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/primes2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/primes2.pl" />

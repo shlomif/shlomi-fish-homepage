@@ -10,15 +10,11 @@ Here are two example methods in the class <code>Foo</code>, that retrieve and se
 its name:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/objects/making/Foo.more-methods.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/objects/making/Foo.more-methods.pm" />
 
 <p>
 And here's a script that makes use of these functions. Can you guess what its
 output would be?
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/objects/making/test_methods.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/objects/making/test_methods.pl" />

@@ -19,9 +19,7 @@ checks if it is an entire sentence that starts with "the" and ends with
 "there":
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/sentence.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/sentence.pl" />
 
 <p>
 It is possible to nest groupings, so for example the following matches a
@@ -29,9 +27,7 @@ square brackets-enclosed semicolon separated list of curly braces-enclosed
 comma-separated lists of numbers:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/regexps/semicolons_and_commas.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/regexps/semicolons_and_commas.pl" />
 
 <p>
 So it matches strings like <code>[{54,129};{236,78}]</code> and

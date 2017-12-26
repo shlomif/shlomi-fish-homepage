@@ -12,15 +12,11 @@ zero if they are equal.
 example could be re-written as:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/sort/integer_sort_cmp.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/sort/integer_sort_cmp.pl" />
 
 <p>
 Much more civil, isn't it? The following example, sorts an array of strings
 in reverse:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/useful_funcs/sort/reverse_string_sort.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/useful_funcs/sort/reverse_string_sort.pl" />

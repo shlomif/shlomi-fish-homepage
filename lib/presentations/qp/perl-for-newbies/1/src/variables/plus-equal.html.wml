@@ -5,9 +5,7 @@ Perl provides a shortcut for writing "$myvar = $myvar + $value", or
 "$myvar = $myvar / $value" and similar operations. Here's an example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/variables/plus-equal1.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/variables/plus-equal1.pl" />
 
 <p>
 Since the operations <code>$x += 1</code> and <code>$x -= 1</code> are so commonly used,
@@ -16,6 +14,4 @@ they were also assigned a separate operator. One can use <code>$x++</code> and
 been written as:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/variables/plus-equal2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/variables/plus-equal2.pl" />

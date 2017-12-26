@@ -7,9 +7,7 @@ The <code>push</code> function appends an element or an entire array to the
 end of an array variable. The syntax is <code>push @array_to_append_to, @array_to_append</code> or <code>push @array, $elem1</code>. For example, the primes program from earlier could be written as:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/push.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/push.pl" />
 
 <p>
 Notice that <code>push</code> is equivalent to typing
@@ -24,9 +22,7 @@ to use it, because it minimises error and it executes faster.
 short example to demonstrate it:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/pop.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/pop.pl" />
 
 <h2>shift</h2>
 
@@ -40,9 +36,7 @@ previously, with the 1 to <code>scalar(@array)-1</code> indexes.
 Here's the above example, while using <code>shift</code> instead of <code>pop</code>:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/shift.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/shift.pl" />
 
 <h2>join</h2>
 
@@ -52,9 +46,7 @@ concatenates the elements of <code>@array</code> while putting <code>$separator<
 between. Here's an example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/join.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/join.pl" />
 
 
 <h2>reverse</h2>
@@ -64,9 +56,7 @@ The <code>reverse</code> function returns the array which contains the elements
 of the array passed to it as argument in reverse. Here's an example:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/reverse.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/reverse.pl" />
 
 
 <p>

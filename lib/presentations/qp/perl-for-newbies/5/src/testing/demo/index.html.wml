@@ -5,17 +5,13 @@ Let's suppose we want to test a function that adds two numbers. (This is
 a classic example.) We have the following function in the module Add1.pm:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/Add1.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/Add1.pm" />
 
 <p>
 One way to write a rudimentary script to test it, would be the following:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/add1-test.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/add1-test.pl" />
 
 <p>
 This script will die with an ugly exception if adding 2 and 2 failed and
@@ -31,9 +27,7 @@ $
 Everything is OK. Now let's write another test:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/add1-test-2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/add1-test-2.pl" />
 
 <p>
 This time the test fails:
@@ -49,17 +43,13 @@ $
 As a result, we need to fix the production code:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/Add2.pm" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/Add2.pm" />
 
 <p>
 And the equivalent test script is successful:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/testing/demo/add2-test-2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/testing/demo/add2-test-2.pl" />
 
 <p>
 Now we can continue writing more tests, and see that they passed.

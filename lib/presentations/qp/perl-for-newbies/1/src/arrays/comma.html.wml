@@ -6,17 +6,13 @@ in function calls. The comma concatenates two arrays. We can use it to
 initialise an array in one call:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/comma1.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/comma1.pl" />
 
 <p>
 We can also use it to concatenate two existing arrays:
 </p>
 
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="src/arrays/comma2.pl" />
-</quadpres_code_block>
+<quadpres_code_file filename="src/arrays/comma2.pl" />
 
 <p>
 So why it is used in function calls? In perl every function accepts an array

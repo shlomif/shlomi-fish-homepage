@@ -6,6 +6,7 @@ before_install:
     - sudo ln -s /usr/bin/yui-compressor /usr/bin/yuicompressor
     - sudo -H `which python3` -m pip install bs4
     - sudo -H `which python3` -m pip install beautifulsoup4
+    - sudo -H `which python3` -m pip install cookiecutter
     - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
     - sudo cpanm --notest Alien::Tidyp YAML::XS
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{modules}})')"

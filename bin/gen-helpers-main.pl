@@ -8,16 +8,25 @@ use File::Copy qw/ copy /;
 use Path::Tiny qw/ path /;
 use List::MoreUtils ();
 
+sub _exec
+{
+    my ( $cmd, $err ) = @_;
+
+    if ( system( @$cmd ) )
+    {
+        die $err;
+    }
+    return;
+}
+
 sub _exec_perl
 {
     my ( $cmd, $err ) = @_;
 
-    if ( system( $^X, '-Ilib', @$cmd ) )
-    {
-        die $err;
-    }
+    return _exec( [$^X, '-Ilib', @$cmd], $err );
 }
 
+    _exec(['cookiecutter', '-f', '--no-input', 'gh:shlomif/cookiecutter--shlomif-latemp-sites', 'project_slug=.',], 'cookiecutter failed.');
 copy( "lib/VimIface.pm", "lib/presentations/qp/common/VimIface.pm" );
 _exec_perl(
     [

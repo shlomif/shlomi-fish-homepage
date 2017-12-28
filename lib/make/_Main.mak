@@ -1182,9 +1182,6 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/print-ver.js \
 
 
-MAIN_TOTAL_MIN_JS__SOURCES____REJECTS = \
-
-
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
 	$(MULTI_YUI) -o $@ $(JQTREE_SRC)
 

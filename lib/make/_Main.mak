@@ -1161,11 +1161,6 @@ $(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
 
 generate_nav_data_as_json:
 
-JSMIN = bin/jsmin
-
-$(JSMIN): lib/jsmin/jsmin.c
-	gcc -o $@ -O2 -Wall $<
-
 JQTREE_SRC = common/js/tree.jquery.js
 JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js
 MAIN_TOTAL_MIN_JS_DEST = $(T2_DEST)/js/main_all.js
@@ -1190,8 +1185,8 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 MAIN_TOTAL_MIN_JS__SOURCES____REJECTS = \
 
 
-$(JQTREE_MIN_DEST): $(JQTREE_SRC) $(JSMIN)
-	$(JSMIN) < $(JQTREE_SRC) > $(JQTREE_MIN_DEST)
+$(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
+	$(MULTI_YUI) -o $@ $(JQTREE_SRC)
 
 minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
 

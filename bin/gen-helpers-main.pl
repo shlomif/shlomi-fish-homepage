@@ -12,7 +12,7 @@ sub _exec
 {
     my ( $cmd, $err ) = @_;
 
-    if ( system( @$cmd ) )
+    if ( system(@$cmd) )
     {
         die $err;
     }
@@ -23,10 +23,17 @@ sub _exec_perl
 {
     my ( $cmd, $err ) = @_;
 
-    return _exec( [$^X, '-Ilib', @$cmd], $err );
+    return _exec( [ $^X, '-Ilib', @$cmd ], $err );
 }
 
-    _exec(['cookiecutter', '-f', '--no-input', 'gh:shlomif/cookiecutter--shlomif-latemp-sites', 'project_slug=.',], 'cookiecutter failed.');
+_exec(
+    [
+        'cookiecutter', '-f', '--no-input',
+        'gh:shlomif/cookiecutter--shlomif-latemp-sites',
+        'project_slug=.',
+    ],
+    'cookiecutter failed.'
+);
 copy( "lib/VimIface.pm", "lib/presentations/qp/common/VimIface.pm" );
 _exec_perl(
     [

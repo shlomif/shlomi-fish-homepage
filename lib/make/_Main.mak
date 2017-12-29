@@ -170,7 +170,7 @@ ptest: all
 	prove Tests/*.t
 
 spell: all
-	./bin/spell-checker-iface.sh
+	./bin/spell-checker-iface
 
 define UPLOAD
 (cd $(T2_DEST) && $(RSYNC) -a . $1 )

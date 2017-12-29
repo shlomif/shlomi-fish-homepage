@@ -1,6 +1,9 @@
 ---
 required:
-    modules:
+    files:
+        - path: "~/.shlomifish-amazon-sak.json"
+          desc: "You can try putting the JSON string «{\"amazon_sak\":\"invalid\"}» there."
+    perl5_modules:
         App::XML::DocBook::Builder: 0
         CGI: 0
         CGI::Minimal: 0
@@ -110,3 +113,5 @@ required:
         utf8: 0
         vars: 0
         warnings: 0
+    py3_modules:
+        bs4: 0

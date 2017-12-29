@@ -52,87 +52,88 @@ GetOptions(
 {
     my ($yaml_data) = LoadFile($modules_fn);
 
-    my $required_modules = $yaml_data->{required}->{modules};
-
-    my @not_found;
-
-    foreach my $m ( sort { $a cmp $b } keys(%$required_modules) )
     {
-        my $v = $required_modules->{$m};
-        local $SIG{__WARN__} = sub { };
-        my $verdict = eval( "use $m " . ( $v || '' ) . ' ();' );
-        my $Err = $@;
+        my $required_modules = $yaml_data->{required}->{perl5_modules};
 
-        if ($Err)
+        my @not_found;
+
+        foreach my $m ( sort { $a cmp $b } keys(%$required_modules) )
         {
-            push @not_found, $m;
+            my $v = $required_modules->{$m};
+            local $SIG{__WARN__} = sub { };
+            my $verdict = eval( "use $m " . ( $v || '' ) . ' ();' );
+            my $Err = $@;
+
+            if ($Err)
+            {
+                push @not_found, $m;
+            }
+        }
+
+        if (@not_found)
+        {
+            print "The following modules could not be found:\n\n";
+            foreach my $module (@not_found)
+            {
+                print "$module\n";
+            }
+            exit(-1);
+        }
+    }
+    {
+        my @required_modules = keys %{ $yaml_data->{required}->{py3_modules} };
+        my @not_found;
+
+        foreach my $module (@required_modules)
+        {
+            if ( system( 'python3', '-c', "import $module" ) != 0 )
+            {
+                push @not_found, $module;
+            }
+        }
+        if (@not_found)
+        {
+            print "The following python3 modules could not be found:\n\n";
+            foreach my $module (@not_found)
+            {
+                print "$module\n";
+            }
+            exit(-1);
         }
     }
 
-    if (@not_found)
     {
-        print "The following modules could not be found:\n\n";
-        foreach my $module (@not_found)
+        my @not_found;
+
+        my @required_files = @{ $yaml_data->{required}->{files} };
+        foreach my $path (@required_files)
         {
-            print "$module\n";
+            my $p = $path->{path};
+            if ( $p =~ m#[\\\$]# )
+            {
+                die "Invalid path $p!";
+            }
+            if ( !-e ( $p =~ s#\A~/#$ENV{HOME}/#r ) )
+            {
+                push @not_found, $path;
+            }
         }
-        exit(-1);
+
+        if (@not_found)
+        {
+            print "The following required files could not be found.\n";
+            print "Please set them up:\n";
+            print "\n";
+
+            foreach my $path (@not_found)
+            {
+                print "$path->{path}\n$path->{desc}\n";
+            }
+            exit(-1);
+        }
     }
+
 }
-
-{
-    my @not_found;
-
-    foreach my $module (qw(bs4))
-    {
-        if ( system( 'python3', '-c', "import $module" ) != 0 )
-        {
-            push @not_found, $module;
-        }
-    }
-    if (@not_found)
-    {
-        print "The following python3 modules could not be found:\n\n";
-        foreach my $module (@not_found)
-        {
-            print "$module\n";
-        }
-        exit(-1);
-    }
-}
-
-{
-    my @not_found;
-
-    my %required_files = (
-        "$ENV{HOME}/.shlomifish-amazon-sak.json" => <<'EOF'
-    You can try putting the JSON string «{"amazon_sak":"invalid"}» there.
-EOF
-    );
-
-    foreach my $path ( sort { $a cmp $b } keys %required_files )
-    {
-        if ( !-e $path )
-        {
-            push @not_found, $path;
-        }
-    }
-
-    if (@not_found)
-    {
-        print "The following required files could not be found.\n";
-        print "Please set them up:\n";
-        print "\n";
-
-        foreach my $path (@not_found)
-        {
-            print "$path\n";
-            print $required_files{$path}, "\n";
-        }
-        exit(-1);
-    }
-}
-
 path($out_fn)->spew_utf8("Success!");
 
 exit(0);

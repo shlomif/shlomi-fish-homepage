@@ -168,7 +168,7 @@ lectures on a myriad of topics there, and enjoy going to listen to the
 other people lecturing.
 </p>
 
-<h3 id="foss_telux"><a href="http://tel.foss.org.il/">Tel Aviv Open Source Club</a></h3>
+<h3 id="foss_telux"><a href="http://www.cs.tau.ac.il/telux/">Tel Aviv Open Source Club</a></h3>
 
 <p>
 The Tel Aviv Open Source Club (or Telux or TelFOSS for short) is a club in a
@@ -177,7 +177,7 @@ Aviv, I tended to attend its lectures and be more active there, instead of in
 Haifux.
 </p>
 
-<h3 id="foss_hackers_il"><a href="http://www.hackers.org.il/">Hackers-IL</a></h3>
+<h3 id="foss_hackers_il"><a href="https://groups.yahoo.com/neo/groups/hackers-il/info">Hackers-IL</a></h3>
 
 <p>
 Hackers-IL is a community of Israeli-oriented
@@ -243,8 +243,8 @@ engineer should read), and other truly enlightening articles.
 Joel Spolsky is an experienced information technology worker who maintains
 a site in which he expresses his bold opinions regarding software
 management and its distribution. I don’t agree with everything he says
-there, but some of his articles are very enlightening. He also has a very
-funny and amusing style of writing and look on life.
+there, but some of his articles are very enlightening. He also has a
+funny and amusing style of writing.
 </p>
 
 <h3 id="software_gurus_paul_graham"><a href="http://www.paulgraham.com/">Paul Graham</a></h3>
@@ -266,8 +266,8 @@ is much more awe-striking. Has other good articles.
 
 <p>
 His web-site contains pages with a lot of information about RAID in Linux,
-CORBA, clusters, bug tracking. Also has some software he wrote, papers on
-software freedom and other oddities.
+CORBA, clusters, bug tracking, and other topics. Also has some software he
+wrote, papers on software freedom and other oddities.
 </p>
 
 <h3 id="software_gurus_rick_moen"><a href="http://www.linuxmafia.com/~rick/">Rick Moen</a></h3>
@@ -305,6 +305,9 @@ about him</a>.
 <li><a href="http://www.ida.net/users/housley/">Ken Housley</a> - talked
 with him about <a href="$(ROOT)/MathVentures/toggle_squares.html">his
 Toggle-Squares puzzle</a> and later about BeOS.</li>
+<li><a href="http://texasdex.com:1234/adexter/">Andrew (Drew) Dexter</a>
+- met him through <a href="http://slashdot.org/">Slashdot</a>. A
+not-too-technical guy who’s using Linux because it works better.</li>
 </define-tag>
 
 <ul>
@@ -314,9 +317,6 @@ contacted me about my Freecell solver, due to the fact he also wrote one.</li>
 Games enthusiast and maintainer of
 <a href="http://www.solitairelaboratory.com/fcfaq.html">the Freecell
 FAQ</a>. He contacted me about my Freecell solver.</li>
-<li><a href="http://texasdex.com:1234/adexter/">Andrew (Drew) Dexter</a>
-- met him through <a href="http://slashdot.org/">Slashdot</a>. A
-not-too-technical guy who’s using Linux because it works better.</li>
 <li><a href="http://loxosceles.org/about_me.shtml">Beth Skwarecki</a> -
 “beth” on irc.freenode.org.</li>
 <li><a href="http://www.xslf.com/">Shoshannah Forbes</a> - an Israeli
@@ -358,10 +358,13 @@ main navigation menu</a>.
 
 <h3 id="friends_haifux">Haifa Linux Clubbers</h3>
 
-<ul>
+<define-tag remove>
 <li><a href="http://users.actcom.co.il/~choo/">Guy Keren</a></li>
+</define-tag>
+
+<ul>
 <li><a href="http://www.mulix.org/">Muli Ben-Yehuda</a></li>
-<li><a href="http://homes.esat.kuleuven.be/~odunkelm/">Orr Dunkelman</a></li>
+<li><a href="http://www.cs.haifa.ac.il/~orrd/">Orr Dunkelman</a></li>
 <li><a href="http://nadav.harel.org.il/">Nadav Har’El</a></li>
 <li><a href="http://ladypine.org/">Orna Agmon</a></li>
 </ul>
@@ -447,6 +450,10 @@ you to other sites of interest:
 </p>
 
 <ul>
+<li>
+<a href="https://duckduckgo.com/">DuckDuckGo</a> - a search engine that doesn't
+<a href="https://en.wikipedia.org/wiki/Filter_bubble">bubble</a>.
+</li>
 <li><a href="http://www.google.com/">Google</a> - a fast and high-relevance
 search engine.</li>
 <li><a href="http://dmoz.org/">Dmoz (The Open Directory Project)</a> - a
@@ -469,6 +476,15 @@ software for Linux</li>
 <h2 id="reference_sites">Interesting Reference Sites</h2>
 
 <ul>
+<li><a href="http://www.wikipedia.org/">The Wikipedia</a> - a world-viewable,
+world-editable encyclopedia that is very comprehensive and getting better
+and better all the time. (Feel free to contribute something of your own!)
+</li>
+
+<li>
+<a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> -
+reference site for open WWW technologies.
+</li>
 <li><a href="http://www.imdb.com/">The Internet Movie Database</a> - an on-line
 database with a lot of film-related information.</li>
 <li><a href="http://www.m-w.com/dictionary.htm">WWWebster</a> - a useful
@@ -478,10 +494,6 @@ documentation on all aspects of the Linux operating system.</li>
 <li><a href="http://www.catb.org/jargon/">The Jargon File</a> - a dictionary
 of computer geeks’ jargon.</li>
 <li><a href="http://slashdot.org/">Slashdot</a> - a really cool computer-related news page.</li>
-<li><a href="http://www.wikipedia.org/">The Wikipedia</a> - a world-viewable,
-world-editable encyclopedia that is very comprehensive and getting better
-and better all the time. (feel free to contribute something of your own!).
-</li>
 </ul>
 
 <h2 id="software">Software</h2>
@@ -501,15 +513,14 @@ non-free-as-in-speech software I came to like.
 
 <ul>
 <li>
-<a href="http://office.microsoft.com/en-us/FX010858001033.aspx">Microsoft
+<a href="https://en.wikipedia.org/wiki/Microsoft_Excel">Microsoft
 Excel</a> - the best spreadsheet program I’ve worked with. Excel 95 was nice;
 Excel 97 and especially 2000 were buggy as hell and in general hideous. Excel
-XP was finally a new decent version. I haven’t encountered an open-source
-product that’s quite up to it, but I’m hopeful something up-to-par with it
-will be developed in the future.
+XP was finally a new decent version. I am now mostly using
+<a href="http://www.gnumeric.org/">Gnumeric</a> instead.
 </li>
 <li>
-<a href="http://www.corel.com/servlet/Satellite?pagename=Corel2/Products/Home&amp;pid=1047022690654">Corel-Draw</a> -
+<a href="https://en.wikipedia.org/wiki/CorelDRAW">Corel-Draw</a> -
 an excellent vector graphics program for Windows (with a lesser Linux
 availability), which is very easy to use and yet very powerful. The only
 limitation I found in it was that it does not (or at least did not) support
@@ -570,16 +581,20 @@ Here are some links with software and information about MOD files:
 <li><a href="http://wuarchive.wustl.edu/aminet/mods/">The Aminet MOD archive</a>
  - (almost) all the MOD files you’ll ever want.</li>
 <li><a href="http://www.modarchive.com/">MOD Archive</a> - and more.</li>
-<li><a href="http://www.lib.ox.ac.uk/internet/news/faq/archive/sound-file-format.mod-faq.part1.html">
-The alt.sounds.mods FAQ</a> - a very comprehensive FAQ that answers common
+<li><a href="https://resources.openmpt.org/modfaq/">
+The alt.binaries.sounds.mods FAQ</a> - a very comprehensive FAQ that answers common
 questions about MOD files, and includes links to MOD software and
 archives.</li>
 <li><a href="http://www.tcp-ip.or.jp/~ebiten/mod/mod-files-links.html">MOD
 Resources Index</a></li>
 <li><a href="http://www.hornet.org/">The Hornet Archive</a> - contains
 many MOD players, composers and utilities for the PC.</li>
-<li><a href="http://mikmod.raphnet.net/">MikMod</a> - a portable MOD-playing
+<li><a href="http://mikmod.sourceforge.net/">MikMod</a> - a portable MOD-playing
 library.</li>
+<li>
+<a href="http://xmp.sourceforge.net/">xmp and libxmp</a> - powerful open source
+MOD player.
+</li>
 </ul>
 </div>
 

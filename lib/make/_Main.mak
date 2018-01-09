@@ -49,10 +49,7 @@ T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
 include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
-
-
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
-
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
@@ -80,7 +77,6 @@ endef
 make-dirs: $(T2_ALL_DIRS_DEST)
 
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
-
 
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
@@ -221,7 +217,6 @@ $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib
 
 $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html: lib/pages/t2/heb_resume.xhtml
 
-
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
 T2_PHILOSOPHY_DOCS = \
@@ -310,7 +305,6 @@ $(T2_DEST)/humour/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 	$(call COPY)
 
@@ -321,19 +315,16 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 	Mighty-Boosh--Ape-of-Death--Scenes \
-	sussman-interview \
-
+	sussman-interview
 
 SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
 
 FICTION_DOCS_ADDITIONS = \
 	fiction-text-example-for-X-G-Fiction-demo \
 	The-Enemy-Hebrew-rev6 \
-	The-Enemy-Hebrew-v7 \
-
+	The-Enemy-Hebrew-v7
 
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
-
 
 DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
@@ -439,7 +430,6 @@ HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
 HHFG_HEB_V2_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
 HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
 
-
 FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.txt
 
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
@@ -459,7 +449,6 @@ $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	perl -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
 	-o $@ $<
 	perl -i -lape 's/\s+$$//' $@
-
 
 $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -563,7 +552,6 @@ $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html 
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 	$(call COPY)
 
-
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
@@ -606,8 +594,7 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: make-dirs install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
-
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
@@ -620,7 +607,6 @@ FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 
 FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
 FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
-
 
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
@@ -705,7 +691,6 @@ $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FOR
 
 $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
-
 FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 
@@ -763,7 +748,6 @@ t2/humour/TheEnemy/The-Enemy-English-rev6.html.wml: lib/htmls/The-Enemy-English-
 lib/htmls/The-Enemy-English-rev6.html-part: t2/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
 
-
 DOCBOOK4_HHFG_IMAGES_RAW = \
 	background-image.png \
 	background-shlomif.png \
@@ -773,7 +757,6 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	hhfg-bg-top.png \
 	style.css \
 	top-shlomif.png
-
 
 DOCBOOK4_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
 DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
@@ -893,7 +876,6 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-
 ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
@@ -910,7 +892,6 @@ include lib/make/long_sories.mak
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png
 HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
-
 
 BK2HP_NEW_PNG = common/images/bk2hp.png
 
@@ -941,7 +922,6 @@ $(ART_SLOGANS_PNGS): %.png: %.svg
 $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	convert -resize '200' $< $@
 	$(OPTIPNG) $@
-
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
 	inkscape --export-width=30 --export-png="$@" $<
@@ -994,7 +974,6 @@ SPORK_LECTURES_BASENAMES = \
 	SCM/subversion/for-pythoneers \
 	Vim/beginners \
 
-
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
 GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
 GFUNC_PRES_DEST = $(T2_DEST)/lecture/Perl/Graham-Function
@@ -1039,7 +1018,6 @@ COMMON_SASS_DEPS = lib/sass/common-body.sass
 
 $(T2_DEST)/style.css $(T2_DEST)/style-2008.css $(T2_DEST)/print.css: lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
 
-
 $(T2_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 
 $(T2_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
@@ -1058,7 +1036,6 @@ docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 	install_docbook5_pdfs install_docbook5_rtfs
 
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
-
 
 docbook_targets: docbook4_targets docbook5_targets screenplay_targets \
 	install_docbook5_epubs \
@@ -1144,7 +1121,6 @@ SVG_NAV_IMAGES = \
 	$(T2_DEST_IMAGES_DIR)/sect-arr-up-pressed.svg \
 	$(T2_DEST_IMAGES_DIR)/sect-arr-up.svg
 
-
 svg_nav_images: $(SVG_NAV_IMAGES)
 
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
@@ -1180,7 +1156,6 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/selfl.js \
 	common/js/sub_menu.js \
 	common/js/print-ver.js \
-
 
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
 	$(MULTI_YUI) -o $@ $(JQTREE_SRC)
@@ -1220,7 +1195,6 @@ install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
 install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
 
 install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
-
 
 install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
 
@@ -1300,7 +1274,6 @@ $(ENEMY_STYLE):
 
 tags:
 	ctags -R --exclude='.hg/**' --exclude='*~' .
-
 
 $(T2_DOCS_DEST): $(T2_DEST)/%: \
 	$(T2_CACHE_PREF)/%/breadcrumbs-trail \

@@ -1,8 +1,8 @@
-function lang_load() {
+function langLoad() {
 $('*').each(
     function(i) {
-        var e = $(this)[0];
-        var l = e.getAttribute('xml:lang');
+        let e = $(this)[0];
+        const l = e.getAttribute('xml:lang');
         if (l) {
             e.setAttribute('lang', l);
         }

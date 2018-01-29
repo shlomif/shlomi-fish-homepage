@@ -2,5 +2,6 @@ extends: google
 parserOptions:
     ecmaVersion: 7
 rules:
+    camelcase: off
     no-unused-vars: off
     require-jsdoc: off

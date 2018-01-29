@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-var toggle_sect_key = "shlomifish.org_section_navigation_menu_shown";
-var toggle_main_key = "shlomifish.org_main_navigation_menu_shown";
+let toggle_sect_key = 'shlomifish.org_section_navigation_menu_shown';
+let toggle_main_key = 'shlomifish.org_main_navigation_menu_shown';
 
 function build_sect_nav_menu_toggler() {
     build_toggler({
@@ -27,11 +27,11 @@ function build_main_nav_menu_toggler() {
     });
 }
 
-$(document).ready(function(){
-    $("#sect_menu_wrapper > ul").treeview({
-        persist: "location",
+$(document).ready(function() {
+    $('#sect_menu_wrapper > ul').treeview({
+        persist: 'location',
         collapsed: false,
-        unique: false
+        unique: false,
     });
 
     build_sect_nav_menu_toggler();

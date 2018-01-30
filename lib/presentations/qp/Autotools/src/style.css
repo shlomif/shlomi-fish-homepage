@@ -10,13 +10,18 @@ body { background-color : #FFFFFF }
 a.contents:active { color: red }
 table.mycode { border-style : solid ; border-width : thin }
 td.mycode { width : 60em }
-table.mydemo { border-style : solid ; border-width : thin }
-td.mydemo { width : 60em }
-table.note { border-style : double ; border-width : 3}
+table.mydemo, div.mydemo { border-style : solid ; border-width : thin }
+td.mydemo, div.mydemo { width : 90% }
+div.mydemo { padding : 0.5em }
+table.note { border-style : double ; border-width : 3em}
 h3.notbold { font-weight: normal }
 .menupath { font-family: monospace }
 b.menupathcomponent { color: red }
 .menupathseparator { color: green }
 tt.mycode { color : BlueViolet }
 tt { color : BlueViolet }
-li.notbold { padding-bottom : 15 }
+li.notbold { padding-bottom : 15em }
+ul.contents { list-style-type : none ; padding-left : 2em }
+ul.contentsmain { list-style-type : none ; padding-left : 0em }
+.point { font-size : large }
+table.frame { border-style : solid ; border-width : thin }

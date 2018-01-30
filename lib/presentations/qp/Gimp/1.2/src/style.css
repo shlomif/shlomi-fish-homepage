@@ -1,8 +1,10 @@
 a.nav:link { color: green }
-a.nav:visited { color: #FF1493 /* The DeepPink Colour */  }
+a.nav:visited { color: DeepPink }
 a.nav:active { color: blue }
 b.nav { color : Black}
 b.plain {color : Black}
+i.orig { }
+i { color : BlueViolet }
 a:hover { background-color: yellow }
 body { background-color : #FFFFFF }
 a.contents:active { color: red }
@@ -13,11 +15,11 @@ td.mydemo, div.mydemo { width : 90% }
 div.mydemo { padding : 0.5em }
 table.note { border-style : double ; border-width : 3em}
 h3.notbold { font-weight: normal }
-span.menupath { font-family: monospace }
+.menupath { font-family: monospace }
 b.menupathcomponent { color: red }
-span.menupathseparator { color: green }
-tt.mycode { color : #8A2BE2 /* The BlueViolet Colour */ }
-tt { color : #8A2BE2 /* The BlueViolet Colour */ }
+.menupathseparator { color: green }
+tt.mycode { color : BlueViolet }
+tt { color : BlueViolet }
 li.notbold { padding-bottom : 15em }
 ul.contents { list-style-type : none ; padding-left : 2em }
 ul.contentsmain { list-style-type : none ; padding-left : 0em }

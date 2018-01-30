@@ -29,9 +29,22 @@ b.menupathcomponent { color: red }
 tt.mycode { color : BlueViolet }
 tt { color : BlueViolet }
 li.notbold { padding-bottom : 15em }
-ul.contents { list-style-type : none ; padding-left : 2em; margin-left:0em; }
-ul.contentsmain { list-style-type : none ; padding-left : 0em; margin-left:0.3em; }
-.point { font-size : large }
+ul.contents
+{
+    list-style-type: none;
+    padding-left: 2em;
+    margin-left:0em;
+}
+ul.contentsmain
+{
+    list-style-type: none;
+    padding-left: 0em;
+    margin-left:0.3em; 
+}
+.point
+{
+    font-size: large;
+}
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
 table.border1
@@ -63,6 +76,28 @@ table.info td
     padding: 0.2em;
     vertical-align: top;
 }
+img.thumb
+{
+    border-width : 3px;
+}
+.english
+{
+    direction: ltr;
+    text-align: left;
+}
+.help
+{
+    border: solid thin black;
+    padding: 0.5em;
+}
+.help p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.cmd { left-margin : 1em; border-color : black;
+       border-style : solid ; border-width : thin }
+.center td { text-align : center }
 table.gdb
 {
     border-width : thin;
@@ -85,3 +120,4 @@ table.gdb
 .Statement { color: #a52a2a; font-weight: bold; }
 .PreProc { color: #a020f0; }
 .Type { color: #2e8b57; font-weight: bold; }
+.c31 { color: #008b8b; }

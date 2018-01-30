@@ -853,7 +853,8 @@ sub _calc_fiction_story_makefile_lines
     );
 }
 
-my $tt = Template->new( {} );
+my $tt     = Template->new( {} );
+my $css_tt = Template->new( {} );
 
 my $gen_make_fn = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 open my $make_fh,     ">", $gen_make_fn;
@@ -861,11 +862,15 @@ open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
 sub get_quad_pres_files
 {
-    my $args     = shift || {};
-    my $dir_base = $args->{dir};
-    my $lang     = $args->{lang} // '';
-    my $dir      = "lib/presentations/qp/$dir_base";
-    my $dest_dir = $args->{dest_dir};
+    my $args       = shift || {};
+    my $dir_base   = $args->{dir};
+    my $lang       = $args->{lang} // '';
+    my $css_params = $args->{css} // +();
+    my $dir        = "lib/presentations/qp/$dir_base";
+    my $dest_dir   = $args->{dest_dir};
+
+    $css_tt->process( "lib/presentations/qp/common/style.css.tt2",
+        $css_params, "$dir/src/style.css" );
 
     my $serve_fn = "$dir/serve.pl";
     path($serve_fn)->spew_utf8(<<"EOF");
@@ -1075,8 +1080,9 @@ EOF
                     dest_dir => "lecture/Perl/Haskell/slides",
                 },
                 {
-                    dir      => "joel-test",
-                    dest_dir => "lecture/joel-test/heb-slides",
+                    css_params => { heb => 1, interact => 1, },
+                    dir        => "joel-test",
+                    dest_dir   => "lecture/joel-test/heb-slides",
                 },
                 {
                     lang     => 'en',
@@ -1119,6 +1125,7 @@ EOF
                     dest_dir => "lecture/W2L/Basic_Use/slides",
                 },
                 {
+                    css_params => { heb => 1, interact => 1, },
                     dir      => "welcome-to-linux/Blitz",
                     dest_dir => "lecture/W2L/Blitz/slides",
                 },
@@ -1128,6 +1135,7 @@ EOF
                     dest_dir => "lecture/W2L/Development/slides",
                 },
                 {
+                    css_params => { heb => 1, interact => 1, },
                     dir      => "welcome-to-linux/Mini-Intro",
                     dest_dir => "lecture/W2L/Mini-Intro/slides",
                 },

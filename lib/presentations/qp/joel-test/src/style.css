@@ -32,12 +32,15 @@ li.notbold { padding-bottom : 15em }
 ul.contents
 {
     list-style-type: none;
-    padding-left: 2em;
+    padding-right: 2em;
+    padding-left: 0em;
+    margin: 0em 0em 0em 0em;
 }
 ul.contentsmain
 {
     list-style-type: none;
-    padding-left: 0em;
+    padding-right: 0em;
+    margin: 0em 0em 0em 0em;
 }
 .point
 {
@@ -123,3 +126,4 @@ table.gdb
 .Statement { color: #a52a2a; font-weight: bold; }
 .PreProc { color: #a020f0; }
 .Type { color: #2e8b57; font-weight: bold; }
+.c31 { color: #008b8b; }

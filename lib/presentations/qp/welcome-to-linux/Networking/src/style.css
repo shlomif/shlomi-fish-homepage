@@ -8,7 +8,7 @@ i { color : BlueViolet }
 a:hover { background-color: yellow }
 body { background-color : white }
 a.contents:active { color: red }
-table.mycode { border-style : solid ; border-width : thin }
+table.mycode, div.mycode { border-style : solid ; border-width : thin }
 td.mycode { width : 60em }
 .code_block
 {
@@ -29,9 +29,22 @@ b.menupathcomponent { color: red }
 tt.mycode { color : BlueViolet }
 tt { color : BlueViolet }
 li.notbold { padding-bottom : 15em }
-ul.contents { list-style-type : none ; padding-left : 2em; margin-left:0em; }
-ul.contentsmain { list-style-type : none ; padding-left : 0em; margin-left:0.3em; }
-.point { font-size : large }
+ul.contents
+{
+    list-style-type: none;
+    padding-left: 2em;
+    margin-left:0em;
+}
+ul.contentsmain
+{
+    list-style-type: none;
+    padding-left: 0em;
+    margin-left:0.3em;
+}
+.point
+{
+    font-size: large;
+}
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
 table.border1
@@ -42,7 +55,7 @@ table.border1
 }
 table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
 {
-    border-style : solid;
+    border-style: solid;
     border-width: 1px;
     border-color: gray #eeeeee #eeeeee gray;
 }
@@ -50,6 +63,55 @@ table.bordered { border-style : solid ; border-width : thin }
 table.bordered td, table.bordered th { border-style : solid ; border-width : thin }
 div.indent { margin-left : 2em ; margin-top : 1em ; margin-bottom : 1em ;}
 p.quote { font-size : large }
+table.info, table.info td
+{
+    border: thin black solid;
+}
+table.info
+{
+    border-collapse: collapse;
+}
+table.info td
+{
+    padding: 0.2em;
+    vertical-align: top;
+}
+img.thumb
+{
+    border-width : 3px;
+}
+.english
+{
+    direction: ltr;
+    text-align: left;
+}
+.help
+{
+    border: solid thin black;
+    padding: 0.5em;
+}
+.help p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.cmd { left-margin : 1em; border-color : black;
+       border-style : solid ; border-width : thin }
+.center td { text-align : center }
+table.gdb
+{
+    border-width : thin;
+    border-color : black;
+    border-style : solid;
+}
+.gdb td
+{
+    vertical-align : top ;
+    border-width : thin ;
+    border-color : black ;
+    border-style : solid;
+    padding: 2pt 4pt 2pt 4pt;
+}
 /* Vim-HTML markup codes */
 .Comment { color: #0000ff; }
 .Constant { color: #ff00ff; }
@@ -58,3 +120,4 @@ p.quote { font-size : large }
 .Statement { color: #a52a2a; font-weight: bold; }
 .PreProc { color: #a020f0; }
 .Type { color: #2e8b57; font-weight: bold; }
+.c31 { color: #008b8b; }

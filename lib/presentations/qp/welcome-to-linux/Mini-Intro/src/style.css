@@ -4,10 +4,7 @@ a.nav:active { color: blue }
 b.nav { color : Black}
 b.plain {color : Black}
 a:hover { background-color: yellow }
-body
-{
-    background-color : #FFFFFF;
-}
+body { background-color : white }
 a.contents:active { color: red }
 table.mycode { border-style : solid ; border-width : thin }
 td.mycode { width : 60em }
@@ -21,6 +18,12 @@ b.menupathcomponent { color: red }
 tt.mycode { color : #8A2BE2 /* The BlueViolet Colour */ }
 tt { color : #8A2BE2 /* The BlueViolet Colour */ }
 li.notbold { padding-bottom : 15em }
+table.frame { border-style : solid ; border-width : thin }
+.Comment { color: #0000ff; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.Identifier { color: #008b8b; }
+.Constant { color: #ff00ff; }
+.Special { color: #6a5acd; }
 ul.contents
 {
     list-style-type : none ;
@@ -43,7 +46,6 @@ ul.contentsmain
 {
     visibility: hidden;
 }
-table.frame { border-style : solid ; border-width : thin }
 img.thumb
 {
     border-width : 3px;

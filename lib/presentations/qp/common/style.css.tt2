@@ -32,25 +32,39 @@ li.notbold { padding-bottom : 15em }
 ul.contents
 {
     list-style-type: none;
+[% IF heb -%]
     padding-right: 2em;
     padding-left: 0em;
     margin: 0em 0em 0em 0em;
+[% ELSE -%]
+    padding-left: 2em;
+    margin-left: 0em;
+[% END -%]
 }
 ul.contentsmain
 {
     list-style-type: none;
+[% IF heb -%]
     padding-right: 0em;
     margin: 0em 0em 0em 0em;
+[% ELSE -%]
+    padding-left: 0em;
+    margin-left: 0.3em;
+[% END -%]
 }
 .point
 {
     font-size: large;
+[% IF heb %]
     padding-right: 1em;
+[% END -%]
 }
+[%- IF interact %]
 .point li
 {
     visibility: hidden;
 }
+[% END %]
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
 table.border1

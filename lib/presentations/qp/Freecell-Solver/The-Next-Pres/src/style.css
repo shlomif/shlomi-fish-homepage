@@ -3,23 +3,34 @@ a.nav:visited { color: DeepPink }
 a.nav:active { color: blue }
 b.nav { color : Black}
 b.plain {color : Black}
+i.orig { }
+i { color : BlueViolet }
 a:hover { background-color: yellow }
 body { background-color : white }
 a.contents:active { color: red }
 table.mycode { border-style : solid ; border-width : thin }
 td.mycode { width : 60em }
-table.mydemo { border-style : solid ; border-width : thin }
-td.mydemo { width : 60em }
+.code_block
+{
+    border-style : solid;
+    border-width : thin;
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+table.mydemo, div.mydemo { border-style : solid ; border-width : thin }
+td.mydemo, div.mydemo { width : 90% }
+div.mydemo { padding : 0.5em }
 table.note { border-style : double ; border-width : 3em}
 h3.notbold { font-weight: normal }
 .menupath { font-family: monospace }
 b.menupathcomponent { color: red }
 .menupathseparator { color: green }
-tt.mycode { color : #8A2BE2 /* The BlueViolet Colour */ }
-tt { color : #8A2BE2 /* The BlueViolet Colour */ }
+tt.mycode { color : BlueViolet }
+tt { color : BlueViolet }
 li.notbold { padding-bottom : 15em }
-ul.contents { list-style-type : none ; padding-left : 2em }
-ul.contentsmain { list-style-type : none ; padding-left : 0em }
+ul.contents { list-style-type : none ; padding-left : 2em; margin-left:0em; }
+ul.contentsmain { list-style-type : none ; padding-left : 0em; margin-left:0.3em; }
 .point { font-size : large }
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
@@ -35,6 +46,8 @@ table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
     border-width: 1px;
     border-color: gray #eeeeee #eeeeee gray;
 }
+table.bordered { border-style : solid ; border-width : thin }
+table.bordered td, table.bordered th { border-style : solid ; border-width : thin }
 /* Vim-HTML markup codes */
 .Comment { color: #0000ff; }
 .Constant { color: #ff00ff; }

@@ -46,6 +46,8 @@ table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
     border-width: 1px;
     border-color: gray #eeeeee #eeeeee gray;
 }
+table.bordered { border-style : solid ; border-width : thin }
+table.bordered td, table.bordered th { border-style : solid ; border-width : thin }
 /* Vim-HTML markup codes */
 .Comment { color: #0000ff; }
 .Constant { color: #ff00ff; }
@@ -54,4 +56,3 @@ table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
 .Statement { color: #a52a2a; font-weight: bold; }
 .PreProc { color: #a020f0; }
 .Type { color: #2e8b57; font-weight: bold; }
-

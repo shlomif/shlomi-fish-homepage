@@ -18,10 +18,34 @@ b.menupathcomponent { color: red }
 tt.mycode { color : #8A2BE2 /* The BlueViolet Colour */ }
 tt { color : #8A2BE2 /* The BlueViolet Colour */ }
 li.notbold { padding-bottom : 15em }
-ul.contents { list-style-type : none ; padding-left : 2em }
-ul.contentsmain { list-style-type : none ; padding-left : 0em }
-.point { font-size : large }
-.point li { visibility : hidden }
+ul.contents
+{
+    list-style-type: none;
+    padding-left: 2em;
+}
+ul.contentsmain
+{
+    list-style-type: none;
+    padding-left: 0em;
+}
+.point
+{
+    font-size: large;
+    padding-right: 1em;
+}
+.point li
+{
+    visibility: hidden;
+}
+img.thumb
+{
+    border-width : 3px;
+}
+.english
+{
+    direction: ltr;
+    text-align: left;
+}
 table.frame { border-style : solid ; border-width : thin }
 /* The border1 class for border="1"-like tables */
 table.border1

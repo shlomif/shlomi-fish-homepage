@@ -48,6 +48,8 @@ table.border1 > tbody > tr > th, table.border1 > tbody > tr > td
 }
 table.bordered { border-style : solid ; border-width : thin }
 table.bordered td, table.bordered th { border-style : solid ; border-width : thin }
+div.indent { margin-left : 2em ; margin-top : 1em ; margin-bottom : 1em ;}
+p.quote { font-size : large }
 /* Vim-HTML markup codes */
 .Comment { color: #0000ff; }
 .Constant { color: #ff00ff; }

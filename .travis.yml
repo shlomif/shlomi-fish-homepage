@@ -4,10 +4,7 @@ before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -y asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libhunspell-dev libperl-dev optipng perl python3 python3-setuptools python3-pip valgrind wml xsltproc xz-utils yui-compressor zip
     - sudo ln -s /usr/bin/yui-compressor /usr/bin/yuicompressor
-    - sudo -H `which python3` -m pip install bs4
-    - sudo -H `which python3` -m pip install beautifulsoup4
-    - sudo -H `which python3` -m pip install cookiecutter
-    - sudo -H `which python3` -m pip install Zenfilter
+    - sudo -H `which python3` -m pip install bs4 beautifulsoup4 cookiecutter Zenfilter
     - sudo cpanm --notest Alien::Tidyp YAML::XS
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{perl5_modules}})')"
     - gem install sass compass compass-blueprint

@@ -1,12 +1,3 @@
-# cp may sometimes fail in parallel builds due to:
-# http://unix.stackexchange.com/questions/116280/cannot-create-regular-file-filename-file-exists
-#
-# cp: cannot create regular file 'dest/vipe/images/get-firefox.png': File exists
-#
-define COPY
-	cp -f $< $@ || true
-endef
-
 LATEMP_WML_FLAGS := $(shell latemp-config --wml-flags)
 
 # Whether this is the development environment
@@ -38,8 +29,8 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
 
+include lib/make/shlomif_common.mak
 include lib/make/gmsl/gmsl
-
 include include.mak
 include rules.mak
 
@@ -140,8 +131,6 @@ $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 
 # t2 macros
 
-RSYNC = rsync --progress --verbose --rsh=ssh --exclude='*.d' --exclude='**/*.d' --exclude='**/.*.swp'
-
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
 $(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
@@ -156,17 +145,6 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	chmod -x $@
 
 copy_fortunes: $(T2_DEST_FORTUNES)
-
-test: ptest
-
-runtest: all
-	runprove Tests/*.t
-
-ptest: all
-	prove Tests/*.t
-
-spell: all
-	./bin/spell-checker-iface
 
 define UPLOAD
 (cd $(T2_DEST) && $(RSYNC) -a . $1 )
@@ -587,9 +565,6 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/T
 
 $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
 	$(call COPY)
-
-%.show:
-	@echo "$* = $($*)"
 
 tidy: all
 	perl bin/run-tidy.pl

@@ -1,7 +1,6 @@
-var n;
+let n = -1;
 
-function button_html(x, y, value)
-{
+function button_html(x, y, value) {
     return (
         "<img src=\"" +
         (value ? "1.png" : "0.png") +
@@ -13,21 +12,17 @@ function button_html(x, y, value)
 }
 
 
-function generate_board()
-{
-    var board_html = "";
-    var y, x;
+function generate_board() {
+    let board_html = "";
 
     n = parseInt($("#num_squares").val());
 
     board_html += "<table class=\"game\">";
 
-    for (y=0 ; y < n ; y++)
-    {
+    for (let y=0; y < n; y++) {
         board_html += "<tr>";
-        for(x=0 ; x < n ; x++)
-        {
-            board_html += "<td>" + button_html(x,y,false) + "</td>";
+        for (let x=0; x < n; x++) {
+            board_html += "<td>" + button_html(x, y, false) + "</td>";
         }
         board_html += "</tr>";
     }

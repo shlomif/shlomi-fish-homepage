@@ -707,12 +707,13 @@ which is the subject of such facts here.
 </p>
 
 EOF
-        id_base         => "summer_glau_facts",
-        img_alt         => "Photo of Summer Glau from the English Wikipedia",
-        img_attribution => '',
-        img_class       => "facts_logo summer_glau",
-        img_src         => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
-        license_wml     => <<'EOF',
+        id_base => "summer_glau_facts",
+        img_alt => "Photo of Summer Glau from the English Wikipedia",
+        img_attribution =>
+'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',
+        img_class   => "facts_logo summer_glau",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
+        license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2014" />
 EOF
         links_wml => <<'EOF',

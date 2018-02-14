@@ -30,7 +30,6 @@
 <td valign="top" class="main">
 </define-tag>
 
-# </define-tag>
 <if "<mynot "$(PRINTABLE)" />" "<start_table />" "" />
 
 <latemp_default_h1_tag />
@@ -54,5 +53,4 @@
 </body>
 </html>
 
-#   per default we are in body
 {#LATEMP_BODY#:

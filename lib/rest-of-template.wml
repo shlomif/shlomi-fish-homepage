@@ -120,7 +120,7 @@ shlomifish.org
 <latemp_author "Shlomi Fish" />
 <latemp_common_keywords "Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Subversion, version control, Web, Web Design, DeCSS, Software" />
 <latemp_meta_desc "Shlomi Fish’s Homepage" />
-# Nullify the affil_wml
+;;; Nullify the affil_wml
 <define-tag affil_wml>
 </define-tag>
 <define-tag affil_valid_xhtml11>
@@ -366,7 +366,6 @@ of an EvilPHish”</a> cartoon of
 </define-tag>
 
 <set-var is_dev="$(LATEMP_IS_DEV_ENV)" />
-# <set-var is_dev="1" />
 
 <define-tag my_extra_head_elements>
 <link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen" title="Old 2008 Style" />
@@ -399,15 +398,14 @@ td { vertical-align : top; }
 </latemp_before_main_title>
 
 <latemp_after_body>
-# For loading the jqTree contents from dest/t2-homepage/_data/nav.json
-# using AJAX and processing it into something acceptable by it and replacing
-# the existing tree.
+;;; For loading the jqTree contents from dest/t2-homepage/_data/nav.json
+;;; using AJAX and processing it into something acceptable by it and replacing
+;;; the existing tree.
 <script type="text/javascript">
 shlomif_load_nav("<: print get_page_path(); :>");
 </script>
 <share_this_button />
 <div id="prnt_ver"></div>
-# <google_adsense_code_after_text />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}

@@ -31,7 +31,6 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
 
 include lib/make/shlomif_common.mak
-include lib/make/gmsl/gmsl
 include include.mak
 include rules.mak
 
@@ -305,7 +304,7 @@ FICTION_DOCS_ADDITIONS = \
 
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
-DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach doc,$(DOCBOOK4_DOCS),$(T2_DEST)/$(call get,DOCBOOK4_DIRS_MAP,$(doc))/docbook-css)
+DOCBOOK4_INSTALLED_CSS_DIRS = $(foreach dir,$(DOCBOOK4_DIRS_LIST),$(T2_DEST)/$(dir)/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
 DOCBOOK4_BASE_DIR = lib/docbook/4

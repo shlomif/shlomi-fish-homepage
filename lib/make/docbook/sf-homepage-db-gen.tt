@@ -13,9 +13,7 @@ QUADPRES_EXE = quadp
 [% db_ver_path = ( db_ver _ "/" ) %]
 [% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
 
-[% FOREACH d = docs %]
-$(call set,[% db_macro_prefix %]_DIRS_MAP,[% d.base %],[% d.path %])
-[% END %]
+[% db_macro_prefix %]_DIRS_LIST =[% FOREACH d = docs %] [% d.path %][% END %]
 
 [% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
 

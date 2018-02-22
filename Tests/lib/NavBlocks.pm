@@ -2,10 +2,9 @@ package NavBlocks;
 
 use strict;
 use warnings;
-
 use utf8;
-
 use parent ('Exporter');
+use Carp   ();
 
 our @EXPORT_OK = (
     qw(

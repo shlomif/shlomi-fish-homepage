@@ -14,7 +14,7 @@ use Cwd qw(getcwd);
 
     if ( -e 'friends' )
     {
-        system( "make", "dist" );
+        system( "make", "-s", "dist" );
     }
 
     system( "make", "-s", "list_files" );

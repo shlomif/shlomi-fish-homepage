@@ -1126,8 +1126,8 @@ EOF
                 },
                 {
                     css_params => { heb => 1, interact => 1, },
-                    dir      => "welcome-to-linux/Blitz",
-                    dest_dir => "lecture/W2L/Blitz/slides",
+                    dir        => "welcome-to-linux/Blitz",
+                    dest_dir   => "lecture/W2L/Blitz/slides",
                 },
                 {
                     lang     => 'en',
@@ -1136,8 +1136,8 @@ EOF
                 },
                 {
                     css_params => { heb => 1, interact => 1, },
-                    dir      => "welcome-to-linux/Mini-Intro",
-                    dest_dir => "lecture/W2L/Mini-Intro/slides",
+                    dir        => "welcome-to-linux/Mini-Intro",
+                    dest_dir   => "lecture/W2L/Mini-Intro/slides",
                 },
                 {
                     lang     => 'en',

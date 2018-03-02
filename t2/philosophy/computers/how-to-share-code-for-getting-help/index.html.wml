@@ -5,11 +5,8 @@
 <latemp_more_keywords "share, code, review, help, irc, floodpaste, pastebot, pastesite, paste, programming, web" />
 
 <:
-use Text::Markdown qw/ markdown /;
-use Path::Tiny qw/ path /;
-use Text::WrapAsUtf8 qw/ print_utf8 /;
-
-print_utf8( markdown(path('./../lib/blogs/how-to-share-code-online/README.md')->slurp_utf8));
+use Shlomif::MD qw/ print_markdown /;
+print_markdown('./../lib/blogs/how-to-share-code-online/README.md');
 :>
 
 <h2 id="credits">Credits</h2>

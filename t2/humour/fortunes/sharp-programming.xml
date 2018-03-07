@@ -6100,5 +6100,104 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-programming-copyrighting-fibonacci">
+        <meta>
+            <title>Copyrighting Fibonacci</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="G3nka1">Hello I am finding fib number for a large series, here is my code https://pastebin.com/Eu5J4r5y but I get the following error</saying>
+<saying who="AbleBacon">man this python looks like greek to me. i&#39;m so out of touch</saying>
+<saying who="rindolf">G3nka1: hi</saying>
+<saying who="rindolf">G3nka1: this is an inaccurate method</saying>
+<saying who="rindolf">G3nka1: perhaps try using matrix exp</saying>
+<saying who="G3nka1">Hi rindolf</saying>
+<saying who="G3nka1">oh</saying>
+<saying who="G3nka1">matrix exp?</saying>
+<saying who="rindolf">G3nka1: yes</saying>
+<saying who="rindolf">G3nka1: or just use the a,b = b, a+b algo</saying>
+<saying who="G3nka1">But rindolf it will take longer that way, and stack overflows because of multiple recursions</saying>
+<saying who="rindolf">G3nka1: what?</saying>
+<saying who="rindolf">G3nka1: why?</saying>
+<saying who="GeDaMo">You don&#39;t have to do it recursively</saying>
+<saying who="rindolf">G3nka1: do it iteratively</saying>
+<saying who="G3nka1">rindolf, using yield</saying>
+<saying who="G3nka1">?</saying>
+<saying who="rindolf">G3nka1: that is an option</saying>
+<saying who="rindolf">G3nka1: wait a sec</saying>
+<saying who="G3nka1">alright</saying>
+<saying who="rindolf">G3nka1: see https://github.com/shlomif/shlomif-perl-snippets/blob/master/fibonacci-iterative.py</saying>
+<saying who="AbleBacon">good lord... you need an enormous license statement for that snippet?</saying>
+<saying who="rindolf">AbleBacon: yes</saying>
+<saying who="iodev">AbleBacon, LOL!!!</saying>
+<saying who="AbleBacon">&quot;i used this snippet in my production software and it totally destroyed everything and now i&#39;m gonna sue&quot;</saying>
+<saying who="iodev">rindolf, this is illegal!</saying>
+<saying who="iodev">you can&#39;t copyright fibonacci!</saying>
+<saying who="G3nka1">rindolf, yup I also had written something similar https://paste.pound-python.org/show/WnXeO2U2BwuzHRQ8k8e2/</saying>
+<saying who="iodev">you can only copyright a unique idea, fibonacci-iterative.py is like copyrighting the stool :D</saying>
+<saying who="rindolf">iodev: i copyright the code and it is expat</saying>
+<saying who="AbleBacon">that&#39;s not similar... it doesn&#39;t have an elaborate license explicitly stated in the code file</saying>
+<saying who="iodev">rindolf, well, i can do whatever I want with it, fibo is public domain, you can&#39;t MIT it, if I wanna use it in proprietary software, I can</saying>
+<saying who="AbleBacon">it&#39;s a good thing you didn&#39;t write something similar, because that shit is already copyrighted</saying>
+<saying who="rindolf">iodev: go ahead</saying>
+<saying who="iodev">because it&#39;s not really original, so not copyrighted, so you can&#39;t sue</saying>
+<saying who="rindolf">iodev: mit allows that</saying>
+<saying who="AbleBacon">did he just implicitly award you a license to use fibbonacci?</saying>
+<saying who="rindolf">iodev: i wont sue you</saying>
+<saying who="iodev">The above copyright notice and this permission notice shall be</saying>
+<saying who="iodev">included in all copies or substantial portions of the Software.</saying>
+<saying who="iodev">no, even if I don&#39;t do this, you can&#39;t sue me rindolf</saying>
+<saying who="AbleBacon">&quot;i used this fibonacci code as the random number generator for my library and my security has been cracked. i&#39;m totally suing&quot;</saying>
+<saying who="iodev">rindolf, there, I broke your license :D http://dpaste.com/1NWZFH0</saying>
+<saying who="rindolf">G3nka1: fibgen and F are identical</saying>
+<saying who="iodev">and I dare you to sue me! rindolf make me rich, sue me :D I&#39;ll win</saying>
+<saying who="Trashlord">heh</saying>
+<saying who="rindolf">iodev: i&#39;m cool with that</saying>
+<saying who="iodev">or get the MIT to sue me, even better :D</saying>
+<saying who="Trashlord">it didn&#39;t occur to me that I should use something like b = a, a = a+b</saying>
+<saying who="Trashlord">I always do it like result = a+b, b = a, a = result</saying>
+<saying who="iodev">rindolf, I&#39;m joking pal, don&#39;t be angry okay</saying>
+<saying who="rindolf">iodev: http://fc-solve.shlomifish.org/faq.html#abuse_of_fc_solve</saying>
+<saying who="Trashlord">I need a course in how to not over complicated software</saying>
+<saying who="rindolf">iodev: i&#39;m laughing</saying>
+<saying who="rindolf">iodev: that is ok</saying>
+<saying who="AbleBacon">i mean, an iterative approach is what you use when generating fibonacci numbers on paper</saying>
+<saying who="G3nka1">I know rindolf</saying>
+<saying who="iodev">rindolf, anyway, you see, before you MIT/GPL something you must having something Original, that is the copyrighted thing :D</saying>
+<saying who="iodev">if anyone can make it, just like anyone can make a stool, no patent, no copyright is given, because you&#39;re not the author of anything, rindolf</saying>
+<saying who="AbleBacon">fibonacci isn&#39;t around to say that it&#39;s not original</saying>
+<saying who="AbleBacon">that mofo is 6 feet under somewhere in italy</saying>
+<saying who="GeDaMo">fibs = 0 : 1 : zipWith (+) fibs (tail fibs)</saying>
+<saying who="iodev">I&#39;m an amateur lawyer, rindolf :-)</saying>
+<saying who="iodev">I like to learn legalese :D</saying>
+<saying who="AbleBacon">i&#39;ve seen a couple of episodes of law &amp; order and i can confirm he&#39;s correct</saying>
+<saying who="AbleBacon">this case just needs a bombshell for the thrill factor</saying>
+<saying who="AbleBacon">fibonacci&#39;s great-great-great-great-grandson comes in as a surprise witness</saying>
+<saying who="AbleBacon">and testifies that fibonacci stole the formula</saying>
+<saying who="iodev">AbleBacon, yes, soap opera</saying>
+<saying who="iodev">and in 20 years, he confesses on his death bead to have stolen the formula from an orphan</saying>
+<saying who="iodev">and asks him for forgiveness through an email, and gets a &quot;NOO!&quot;</saying>
+<saying who="iodev">and then he dies, crying :D</saying>
+<saying who="AbleBacon">:-(</saying>
+<saying who="iodev">AbleBacon, don&#39;t cry, it sells</saying>
+<saying who="iodev">or it seems like he died, in about 200 episodes he wakes up out of a comma on a hospital bed!</saying>
+<saying who="iodev">when everyone has forgetten that he was dead, and the soap opera contradicts itself :-)</saying>
+<saying who="rindolf">heh</saying>
+<saying who="rindolf">LOL</saying>
+<saying who="iodev">rindolf, you are sworen to tell the truth and nothing but the truth, don&#39;t soap operas contradict themselves?</saying>
+<saying who="rindolf">iodev: see http://linuxmafia.com/faq/Licensing_and_Law/public-domain.html</saying>
+<saying who="iodev">LOL!!! linuxmafia</saying>
+<saying who="iodev">rindolf, a site againsts linux, unbelivable!</saying>
+<saying who="rindolf">iodev: it isnt against linux</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

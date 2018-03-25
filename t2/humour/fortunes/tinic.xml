@@ -1394,5 +1394,50 @@ Bastard Operator from Hell". (which is a highly recommended read).
           </info>
       </quote>
     </fortune>
+    <fortune id="the-FORTH-question">
+      <meta>
+          <title>The FORTH Question</title>
+      </meta>
+      <quote>
+          <body>
+
+              <p>
+
+                  On the other hand, let's not forget what I believe to be the
+                  reason for FORTH's demise. FORTH is a very elegant language,
+                  with unorthodox ideas.  It was invented by Chuck Moore, who
+                  is having his own eccentric (and fresh) ideas about how one
+                  should program.  </p>
+
+              <p>
+
+                  The reason FORTH didn't take hold (at least in my own
+                  projects) was that it lacked standard libraries for the
+                  things which I needed. It expected people to reinvent the
+                  wheel (and optimize it to their project's needs) all the
+                  time. It didn't take to heart Pareto's Law (80% of the
+                  computer time/programmer time/memory requirements/bug
+                  expenses of software are in 20% of the code). People should
+                  optimize and design their own implementations of data
+                  structures only when and where they are critical to the
+                  software's performance. For non-critical parts of the
+                  software, standard libraries are good enough and should be
+                  used.  </p>
+
+              <p> The morale of the story to hash functions in STL: STL should
+                  have provided a standard hash implementation (like Perl
+                  does).  But the standard implementation should (like
+                  implementations of all other STL data structuers) have
+                  provisions for people to substitute their optimized
+                  algorithms when those algorithms are really needed for a
+                  specific application </p>
+
+          </body>
+          <info>
+              <author>Omer Zak</author>
+              <work href="https://groups.yahoo.com/neo/groups/hackers-il/conversations/messages/1833">Hackers-IL Post</work>
+          </info>
+      </quote>
+    </fortune>
   </list>
 </collection>

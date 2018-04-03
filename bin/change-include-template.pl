@@ -3,4 +3,4 @@
 use strict;
 use warnings;
 
-s{^#include '\.\./template.wml'$}{#include "template.wml"};
+s{^#include "cpan_dists.wml"$}{#include "Inc/cpan_dists.wml"};

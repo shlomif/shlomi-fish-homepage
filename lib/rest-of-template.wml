@@ -1,4 +1,4 @@
-<define-tag project_wonderful_top_proto>
+<define-tag cancelled_project_wonderful_top_proto>
 <!-- Project Wonderful Ad Box Loader -->
 <script type="text/javascript">
 (function(){function pw_load(){if(arguments.callee.z)return;else arguments.callee.z=true;var d=document;var s=d.createElement('script');var x=d.getElementsByTagName('script')[0];s.type='text/javascript';s.async=true;s.src='//www.projectwonderful.com/pwa.js';x.parentNode.insertBefore(s,x);}if (window.attachEvent){window.attachEvent('DOMContentLoaded',pw_load);window.attachEvent('onload',pw_load);}else{window.addEventListener('DOMContentLoaded',pw_load,false);window.addEventListener('load',pw_load,false);}})();
@@ -18,6 +18,9 @@
 <script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
 <!-- End of Project Wonderful ad code. -->
 </define-tag>
+<define-tag project_wonderful_top_proto>
+<div id="project_wonderful_top_proto">Placeholder</div>
+</define-tag>
 
 <define-tag hebrew_open_div>
 {#HEBREW_XML_LANG_SCRIPT#:<script src="$(ROOT)/js/moz-lang.js" type="text/javascript"></script>:##}
@@ -32,7 +35,7 @@
     />
 </define-tag>
 
-<define-tag project_wonderful_code_side_proto>
+<define-tag cancelled__project_wonderful_code_side_proto>
 <!-- Project Wonderful Ad Box Code -->
 <div id="pw_adbox_42545_3_0"></div>
 <script type="text/javascript"></script>
@@ -43,6 +46,9 @@
 </define-tag>
 <if "<latemp_is_xhtml5 />" "" "<projectwonderful_noscript_3 />" />
 <!-- End Project Wonderful Ad Box Code -->
+</define-tag>
+<define-tag project_wonderful_code_side_proto>
+<div id="project_wonderful_code_side_proto">Placeholder</div>
 </define-tag>
 
 <define-tag shlomif_web_ads_code_side>

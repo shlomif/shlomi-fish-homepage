@@ -6,6 +6,7 @@ use warnings;
 use Path::Tiny qw/ path /;
 
 my @filenames;
+my @ad_filenames;
 foreach my $fn (@ARGV)
 {
     my $_f = sub {
@@ -55,6 +56,10 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
         {
             push @filenames, $fn;
         }
+        elsif ( $ENV{APPLY_ADS} )
+        {
+            push @ad_filenames, $fn;
+        }
     };
     if ( my $err = $@ )
     {
@@ -69,10 +74,12 @@ system(
     '--keep-closing-slash', @filenames
 ) and die "html-min $!";
 
-my $PW1_START = q#<!-- Project Wonderful Ad Box Loader -->#;
-my $PW1_END   = q#<!-- End of Project Wonderful ad code. -->#;
+if ( $ENV{APPLY_ADS} )
+{
+    my $PW1_START = q#<!-- Project Wonderful Ad Box Loader -->#;
+    my $PW1_END   = q#<!-- End of Project Wonderful ad code. -->#;
 
-my $PW_TEXT1 = <<'EOF';
+    my $PW_TEXT1 = <<'EOF';
 <script type="text/javascript">
 (function(){function pw_load(){if(arguments.callee.z)return;else arguments.callee.z=true;var d=document;var s=d.createElement('script');var x=d.getElementsByTagName('script')[0];s.type='text/javascript';s.async=true;s.src='//www.projectwonderful.com/pwa.js';x.parentNode.insertBefore(s,x);}if (window.attachEvent){window.attachEvent('DOMContentLoaded',pw_load);window.attachEvent('onload',pw_load);}else{window.addEventListener('DOMContentLoaded',pw_load,false);window.addEventListener('load',pw_load,false);}})();
 </script>
@@ -85,22 +92,22 @@ my $PW_TEXT1 = <<'EOF';
 <script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
 EOF
 
-my $PW2_START = q#<!-- Project Wonderful Ad Box Code -->#;
-my $PW2_END   = q#<!-- End Project Wonderful Ad Box Code -->#;
+    my $PW2_START = q#<!-- Project Wonderful Ad Box Code -->#;
+    my $PW2_END   = q#<!-- End Project Wonderful Ad Box Code -->#;
 
-my $PW_TEXT2 = <<'EOF';
+    my $PW_TEXT2 = <<'EOF';
 <div id="pw_adbox_42545_3_0"></div><script type="text/javascript"></script>
 <noscript><div><map id="admap42545"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=0&amp;id=42545&amp;type=3" shape="rect" coords="0,0,160,600" title="" alt="" /></map></div><table summary=""><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=42545&amp;type=3" width="160" height="600" usemap="admap42545" alt="" /></td></tr><tr><td colspan="1"><div class="cen"><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=42545&amp;type=3">Ads by Project Wonderful! Your ad here, right now: $0.02</a></div></td></tr><tr><td colspan="1" style="height:3px;font-size:1px;padding:0px;max-height:3px;vertical-align:top;"></td></tr></table>
 </noscript>
 EOF
 
-foreach my $fn (@filenames)
-{
-    path($fn)->edit_utf8(
-        sub {
-            s#(\Q$PW1_START\E).*?(\Q$PW1_END\E)(.*)#"\n".$1."\n".$PW_TEXT1.$2.
-            ($3 =~ s/(\Q$PW2_START\E).*?(\Q$PW2_END\E)/\n$1\n$PW_TEXT2$2/mrs)
-            #ems;
-        }
-    );
+    foreach my $fn ( @filenames, @ad_filenames )
+    {
+        path($fn)->edit_utf8(
+            sub {
+s%<div id="project_wonderful_top_proto">Placeholder</div>%"\n".$PW1_START."\n".$PW_TEXT1.$PW1_END%ems;
+s%<div id="project_wonderful_code_side_proto">Placeholder</div>%\n$PW2_START\n$PW_TEXT2$PW2_END%ms;
+            }
+        );
+    }
 }

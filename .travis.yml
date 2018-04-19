@@ -2,7 +2,7 @@ os: linux
 dist: trusty
 before_install:
     - sudo apt-get update -qq
-    - sudo apt-get install -y asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libdb5.3-dev libgd-dev libhunspell-dev libncurses-dev libpcre3-dev libperl-dev lynx optipng perl python3 python3-setuptools python3-pip valgrind wml xsltproc xz-utils zip
+    - sudo apt-get install -y asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libdb5.3-dev libgd-dev libhunspell-dev libncurses-dev libpcre3-dev libperl-dev lynx optipng perl python3 python3-setuptools python3-pip silversearcher-ag valgrind wml xsltproc xz-utils zip
     - sudo -H `which python3` -m pip install bs4 beautifulsoup4 cookiecutter Zenfilter
     - sudo cpanm --notest Alien::Tidyp YAML::XS
     # For wml

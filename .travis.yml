@@ -8,7 +8,7 @@ before_install:
     # For wml
     - sudo cpanm --notest Bit::Vector Class::XSAccessor GD Getopt::Long IO::All Image::Size Term::ReadKey
     # For quadp
-    - sudo cpanm --notest Config::IniFiles Games::Solitaire::Verify::Base HTML::Links::Localize
+    - sudo cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     - "sudo cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{perl5_modules}})')"
     - gem install sass compass compass-blueprint
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'

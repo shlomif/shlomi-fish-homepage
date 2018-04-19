@@ -105,7 +105,7 @@ EOF
     {
         path($fn)->edit_utf8(
             sub {
-s%<div id="project_wonderful_top_proto">Placeholder</div>%"\n".$PW1_START."\n".$PW_TEXT1.$PW1_END%ems;
+s%<div id="project_wonderful_top_proto">Placeholder</div>%\n$PW1_START\n$PW_TEXT1$PW1_END%ms;
 s%<div id="project_wonderful_code_side_proto">Placeholder</div>%\n$PW2_START\n$PW_TEXT2$PW2_END%ms;
             }
         );

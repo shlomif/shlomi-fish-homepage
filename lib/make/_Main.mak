@@ -1140,7 +1140,10 @@ minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
 
-PRINTABLE_RESUMES__HTML = printable/Shlomi-Fish-English-Resume-Detailed.html printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html printable/Shlomi-Fish-Resume-as-Software-Dev.html
+# Removing because they all get built in parallel:
+#
+# printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html printable/Shlomi-Fish-Resume-as-Software-Dev.html
+PRINTABLE_RESUMES__HTML = printable/Shlomi-Fish-English-Resume-Detailed.html
 
 printable_resumes__html : $(PRINTABLE_RESUMES__HTML)
 

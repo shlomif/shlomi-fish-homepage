@@ -4,6 +4,8 @@ use strict;
 use warnings;
 
 use Path::Tiny qw/ path /;
+use lib './lib';
+use Shlomif::Out qw/ modify_on_change /;
 
 my @filenames;
 my @ad_filenames;
@@ -101,10 +103,20 @@ EOF
 
     foreach my $fn ( @filenames, @ad_filenames )
     {
-        path($fn)->edit_utf8(
+        modify_on_change(
+            scalar( path($fn) ),
             sub {
-s%<div id="project_wonderful_top_proto">Placeholder</div>%\n$PW_TEXT1%ms;
-s%<div id="project_wonderful_code_side_proto">Placeholder</div>%\n$PW_TEXT2%ms;
+                my $text_ref = shift;
+                return (
+                    (
+                        $$text_ref =~
+s%<div id="project_wonderful_top_proto">Placeholder</div>%\n$PW_TEXT1%ms
+                    )
+                        || ( $$text_ref =~
+s%<div id="project_wonderful_code_side_proto">Placeholder</div>%\n$PW_TEXT2%ms
+                        )
+                );
+
             }
         );
     }

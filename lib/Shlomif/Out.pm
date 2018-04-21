@@ -5,7 +5,7 @@ use warnings;
 
 use parent 'Exporter';
 
-our @EXPORT_OK = (qw(write_on_change write_on_change_no_utf8));
+our @EXPORT_OK = (qw(modify_on_change write_on_change write_on_change_no_utf8));
 
 sub write_on_change
 {
@@ -14,6 +14,20 @@ sub write_on_change
     if ( ( !-e $io ) or ( $io->slurp_utf8() ne $$text_ref ) )
     {
         $io->spew_utf8($$text_ref);
+    }
+
+    return;
+}
+
+sub modify_on_change
+{
+    my ( $io, $sub_ref ) = @_;
+
+    my $text = $io->slurp_utf8();
+
+    if ( $sub_ref->( \$text ) )
+    {
+        $io->spew_utf8($text);
     }
 
     return;

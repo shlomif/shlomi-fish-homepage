@@ -1140,19 +1140,18 @@ minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
 
-# Removing because they all get built in parallel:
-#
-# printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html printable/Shlomi-Fish-Resume-as-Software-Dev.html
-PRINTABLE_RESUMES__HTML = printable/Shlomi-Fish-English-Resume-Detailed.html
+PRINTABLE_RESUMES__HTML__PIVOT = printable/Shlomi-Fish-English-Resume-Detailed.html
+PRINTABLE_RESUMES__HTML = $(PRINTABLE_RESUMES__HTML__PIVOT) printable/Shlomi-Fish-English-Resume.html printable/Shlomi-Fish-Heb-Resume.html printable/Shlomi-Fish-Resume-as-Software-Dev.html
 
-printable_resumes__html : $(PRINTABLE_RESUMES__HTML)
+
+printable_resumes__html : $(PRINTABLE_RESUMES__HTML__PIVOT)
 
 PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
 
 $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 	libreoffice --headless -convert-to docx --outdir printable $<
 
-$(PRINTABLE_RESUMES__HTML): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
+$(PRINTABLE_RESUMES__HTML__PIVOT): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
 	perl -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > printable/Shlomi-Fish-Heb-Resume.html
 	cp -f printable/SFresume.html printable/Shlomi-Fish-English-Resume.html

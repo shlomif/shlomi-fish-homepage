@@ -965,14 +965,9 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_S
 	rsync -a $(patsubst %/start.html,%/,$<) $(patsubst %/start.html,%/,$@)
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
-	(cd $(patsubst %/slides/start.html,%,$@) && \
-		shspork -make && \
-		(cd slides/ && (for I in *.html ; do \
-		perl -0777 -MSQ -pi -E 's%<a accesskey=$${S}\S+$${S}\s+href="">([^<]+)</a>%<strong>$$1</strong>%gms' "$$I" ; \
-		perl -lni -E 'say unless m%\Q<link rel="stylesheet" type="text/css" href="" />\E%' "$$I" ; \
-		perl -lpi -e 's/(<table)/$$1 summary="Navigation aids" /g' "$$I" ; tidy -asxhtml -o "$$I".new "$$I" ; mv -f "$$I".new "$$I" ; perl -lpi -e 's/[\t ]+\z//' "$$I" ; done)) && \
-		(find template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') \
-	)
+	dn="$(patsubst %/slides/start.html,%,$@)" ; \
+		(cd "$$dn" && shspork -make) && perl bin/fix-spork.pl "$$dn"/*.html && \
+		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') \
 	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source

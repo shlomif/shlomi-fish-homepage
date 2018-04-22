@@ -26,23 +26,6 @@ Test::HTML::Tidy::Recursive::Strict->new(
     dest/t2/ (?:
         MathVentures/
             |
-        lecture/ (?:
-            Perl/ (?:
-                Lightning/ (?:
-                    Opt-Multi-Task-in-PDL/
-                        |
-                    Test-Run/
-                        |
-                    Too-Many-Ways/
-                )
-                    |
-                Graham-Function/
-            )
-                |
-            SCM/subversion/for-pythoneers/
-        )
-            slides/
-            |
         js/MathJax/
     )
                 #x

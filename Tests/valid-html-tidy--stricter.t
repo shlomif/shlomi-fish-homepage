@@ -40,8 +40,6 @@ Test::HTML::Tidy::Recursive::Strict->new(
             )
                 |
             SCM/subversion/for-pythoneers/
-                |
-            Vim/beginners/
         )
             slides/
             |

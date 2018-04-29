@@ -1,5 +1,3 @@
-LATEMP_WML_FLAGS := $(shell latemp-config --wml-flags)
-
 # Whether this is the development environment
 DEV = 0
 
@@ -9,6 +7,14 @@ ifeq ($(DEV),1)
 	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1
 endif
 
+ALL_DEST_BASE = dest
+
+all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
+
+include lib/make/shlomif_common.mak
+include lib/make/include.mak
+include lib/make/rules.mak
+
 WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \
 	--passoption=3,-I../lib/ \
 	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
@@ -16,8 +22,6 @@ WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \
 	-DROOT~. -DLATEMP_THEME=sf.org1 \
 	-I $${HOME}/apps/wml \
 	$(DEV_WML_FLAGS)
-
-ALL_DEST_BASE = dest
 
 NAV_DATA_DEP = lib/MyNavData.pm
 NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
@@ -27,12 +31,6 @@ SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-commo
 DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
 
 MATHJAX_SOURCE_README = lib/MathJax/README.md
-
-all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
-
-include lib/make/shlomif_common.mak
-include lib/make/include.mak
-include lib/make/rules.mak
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)

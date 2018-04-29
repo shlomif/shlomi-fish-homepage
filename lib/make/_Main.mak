@@ -1261,7 +1261,7 @@ $(T2_DOCS_DEST): $(T2_DEST)/%: \
 
 SRC_MODS_DIR = lib/assets/mods
 
-MODS = $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
+MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 
 ZIP_MODS = $(patsubst %,%.zip,$(MODS))
 XZ_MODS = $(patsubst %,%.xz,$(MODS))

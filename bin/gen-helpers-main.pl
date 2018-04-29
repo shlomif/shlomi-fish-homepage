@@ -52,6 +52,8 @@ _exec_perl(
     "gen-forts-all-in-one-page.pl failed!"
 );
 
+my $DIR = "lib/make/";
+
 my $generator = HTML::Latemp::GenMakeHelpers->new(
     'hosts' => [
         map {
@@ -62,6 +64,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 }
         } (qw(common t2))
     ],
+    out_dir                    => $DIR,
     filename_lists_post_filter => sub {
         my ($args) = @_;
         my $is_bucket  = sub { return $args->{bucket} eq shift; };
@@ -104,7 +107,7 @@ m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
 
 $generator->process_all();
 
-my $r_fh = path('rules.mak');
+my $r_fh = path("$DIR/rules.mak");
 my $text = $r_fh->slurp_utf8;
 $text =~
 s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
@@ -162,7 +165,7 @@ foreach my $ext (qw/ html pdf /)
     }
 }
 
-path('Makefile')->spew_utf8("include lib/make/_Main.mak\n");
+path('Makefile')->spew_utf8("include $DIR/_Main.mak\n");
 
 _my_system( [ 'make', 'sects_cache' ] );
 

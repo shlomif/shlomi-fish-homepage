@@ -31,8 +31,8 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
 
 include lib/make/shlomif_common.mak
-include include.mak
-include rules.mak
+include lib/make/include.mak
+include lib/make/rules.mak
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)

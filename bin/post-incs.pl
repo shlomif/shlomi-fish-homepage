@@ -107,16 +107,15 @@ EOF
             scalar( path($fn) ),
             sub {
                 my $text_ref = shift;
-                return (
-                    (
-                        $$text_ref =~
+                my $r1 =
+                    ( $$text_ref =~
 s%<div id="project_wonderful_top_proto">Placeholder</div>%\n$PW_TEXT1%ms
-                    )
-                        || ( $$text_ref =~
+                    );
+                my $r2 =
+                    ( $$text_ref =~
 s%<div id="project_wonderful_code_side_proto">Placeholder</div>%\n$PW_TEXT2%ms
-                        )
-                );
-
+                    );
+                return ( $r1 || $r2 );
             }
         );
     }

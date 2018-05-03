@@ -959,7 +959,7 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_S
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
 	dn="$(patsubst %/slides/start.html,%,$@)" ; \
-		(cd "$$dn" && shspork -make) && perl bin/fix-spork.pl "$$dn"/slides/*.html && \
+	   (cd "$$dn" && perl -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && perl bin/fix-spork.pl "$$dn"/slides/*.html && \
 		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') && \
 	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/ || true
 

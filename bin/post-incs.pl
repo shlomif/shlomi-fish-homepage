@@ -7,6 +7,15 @@ use Path::Tiny qw/ path /;
 use lib './lib';
 use Shlomif::Out qw/ modify_on_change /;
 
+my $XMLNS_NEEDLE = <<'EOF';
+ xmlns:db="http://docbook.org/ns/docbook" xmlns:d="http://docbook.org/ns/docbook" xmlns:vrd="http://www.shlomifish.org/open-source/projects/XML-Grammar/Vered/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+EOF
+
+my @needles = $XMLNS_NEEDLE =~ m#\b(xmlns:[a-zA-Z_]+="[^"]+")#g;
+
+my $ALTERNATIVES_TEXT = join '|',
+    map { '(?:' . ( quotemeta $_ ) . ')' } @needles;
+
 my @filenames;
 my @ad_filenames;
 foreach my $fn (@ARGV)
@@ -40,6 +49,9 @@ s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1
 
         $text =~ s# +$##gms;
         $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
+
+        $text =~ s#\s+xml:space="[^"]*"##g;
+        $text =~ s#(<div)(?:\s+(?:$ALTERNATIVES_TEXT))+#$1 #gms;
 
         # Remove surrounding space of tags.
         $text =~

@@ -1,8 +1,8 @@
 [PerlTidy]
 select = **/*.{pl,pm,t}
 argv = -ci=4 -bl -cti=0
-ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/blogs/shlomif-tech-diary/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/*
+ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/*
 
 [PerlCritic]
 select = **/*.{pl,pm,t}
-ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/blogs/shlomif-tech-diary/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/*
+ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/*

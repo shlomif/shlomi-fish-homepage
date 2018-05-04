@@ -1045,12 +1045,12 @@ $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && make docbook
 
 $(HTML_TUT_HEB_TT):
-	cd lib/presentations/docbook && hg clone https://shlomif@bitbucket.org/shlomif/html-tutorial
+	cd lib/presentations/docbook && git clone https://github.com/shlomif/html-tutorial
 
 update_html_tut: update_html_tut_hg html_tutorial
 
 update_html_tut_hg:
-	cd $(HTML_TUT_BASE) && (hg pull ; hg update)
+	cd $(HTML_TUT_BASE) && (git pull)
 
 include deps.mak
 

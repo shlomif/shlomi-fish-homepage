@@ -76,7 +76,7 @@ my $logos = [
     {
         b         => 'human-hacking-field-guide-logo',
         repo_base => 'human-hacking-field-guide-graphics',
-        type      => 'bitbucket_hg',
+        type      => 'github_git',
     },
     {
         b         => 'Summerschool-at-the-NSA/SummerNSA-logo',

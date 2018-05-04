@@ -151,19 +151,10 @@ if ( not -e 'lib/c-begin/README.md' )
     }
 }
 
-my $BLOGS_DIR = 'lib/blogs';
-my $TECH_BLOG = 'shlomif-tech-diary';
-if ( not -e "$BLOGS_DIR/$TECH_BLOG" )
-{
-    my $pid;
-    if ( !( $pid = $pm->start ) )
-    {
-        _bitbucket_hg_shlomif_clone( $BLOGS_DIR, $TECH_BLOG );
-        $pm->finish;
-    }
-}
+my $BLOGS_DIR     = 'lib/blogs';
+my $TECH_BLOG     = 'shlomif-tech-diary';
 my $VALIDATE_YOUR = 'validate-your-html';
-foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', )
+foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG, )
 {
     if ( not -e "$BLOGS_DIR/$repo" )
     {

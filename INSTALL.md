@@ -37,11 +37,11 @@ PATH="$HOME/apps/latemp/bin:$PATH"
 8. Install the latest version of Quad-Pres from:
 
 See http://www.shlomifish.org/quad-pres/ and
-https://bitbucket.org/shlomif/quad-pres
+https://github.com/shlomif/quad-pres
 
 ```bash
-hg clone https://bitbucket.org/shlomif/quad-pres
-cd installer
+git clone https://github.com/shlomif/quad-pres
+cd quad-pres/installer
 ```
 
 See its INSTALL file. Put a working `quadp` executable in your shell's PATH.
@@ -49,7 +49,7 @@ See its INSTALL file. Put a working `quadp` executable in your shell's PATH.
 9. Install the wml-affiliations.
 
 ```bash
-hg clone https://shlomif@bitbucket.org/shlomif/wml-affiliations trunk
+git clone https://github.com/shlomif/wml-affiliations trunk
 cd trunk/wml
 bash Install.bash
 ```
@@ -57,7 +57,7 @@ bash Install.bash
 10. Install the wml-extended-apis:
 
 ```bash
-hg clone https://shlomif@bitbucket.org/shlomif/wml-extended-apis trunk
+git clone https://github.com/thewml/wml-extended-apis trunk
 cd trunk/xhtml/1.x/
 bash Install.bash
 ```

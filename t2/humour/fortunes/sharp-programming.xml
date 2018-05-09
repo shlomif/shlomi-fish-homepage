@@ -6365,5 +6365,113 @@
         </irc>
     </fortune>
 
+    <fortune id="compilation-speeds">
+        <meta>
+            <title>Compilation Speeds</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="GeDaMo">Turbo Pascal :P</saying>
+<saying who="rindolf">GeDaMo: where?</saying>
+<saying who="Aruseus">many modern language features are slow to compile. rust has that problem too</saying>
+<saying who="InPhase">Fast compilation, fast development, fast runtime.  Choose 2.</saying>
+<saying who="rindolf">InPhase: heh</saying>
+<saying who="rindolf">InPhase: 2 or less</saying>
+<saying who="GeDaMo">rindolf: that was to beaky&#39;s &quot;instant compile speeds&quot;</saying>
+<saying who="rindolf">GeDaMo: ah</saying>
+<saying who="InPhase">There&#39;s a fundamental reason one ends up with that tradeoff of choosing 2.  Turning complicated ideas into fast instructions is complicated.  And that complexity has to eventually be processed somewhere, either in the head of the programmer, by the compiler, or as a runtime cost.</saying>
+<saying who="rindolf">InPhase: interesting</saying>
+<saying who="_W_">most slow compilers are so, not because it is necessary, but simply because making it fast hasn&#39;t been a priority</saying>
+<saying who="_W_">s/so/slow</saying>
+<saying who="InPhase">_W_: Well the major C++ compiler designers, and the C++ language committee, reportedly spent effort trying to significantly speed up compilation in recent years.  But I think we can see there were not many meaningful results from those efforts.  They&#39;ve had trouble finding ways that don&#39;t majorly break the features that make the C++ runtime fast.</saying>
+<saying who="xeno">if I don&#39;t learn how to read a file line by line in Swift, this one will also be slow, memory consuming or unstable ;/</saying>
+<saying who="xeno">:/</saying>
+<saying who="_W_">well C++ compilation is already relatively fast, so it makes sense that there wouldn&#39;t be a lot to gain</saying>
+<saying who="jeaye">There have been huge results in the reduction of TMP compilation speeds, thanks to pressure from the clang/llvm world.</saying>
+<saying who="jeaye">Templates, of course, being the biggest practical slowdown in C++ compilation, that&#39;s a big win.</saying>
+<saying who="rindolf">jeaye: what is TMP?</saying>
+<saying who="jeaye">rindolf: Template MetaProgramming</saying>
+<saying who="_W_">I&#39;d go so far as to say that there&#39;s more of a correlation between how young a language is and how slow its compilation is, than between complexity of language and how slow the compilation is</saying>
+<saying who="rindolf">jeaye: ah</saying>
+<saying who="SlashLife">jeaye: And to be fair, I don&#39;t think it was obvious 20-25 years ago how big TMP would become.</saying>
+<saying who="rindolf">_W_: some languages started off with fast compilers</saying>
+<saying who="_W_">yes, it&#39;s not a hard rule by any means</saying>
+<saying who="rindolf">_W_: and gcc got slower - https://github.com/shlomif/fc-solve/blob/master/fc-solve/docs/gcc-2.95.txt</saying>
+<saying who="gehn">fast in terms of time to compile? or fast in terms of the performance of the resulting executable?</saying>
+<saying who="_W_">gehn: time spent in compilation was what was being discussed</saying>
+<saying who="_W_">(and contrasted up against speed of development and speed of execution)</saying>
+<saying who="gehn">ah</saying>
+<saying who="xeno">would guess most languages started off with fast compilers that got slower</saying>
+<saying who="_W_">probably, at least up to some level of complexity and features</saying>
+<saying who="velco">speed of development is subjective, its place is not at all with the other too</saying>
+<saying who="velco">two*</saying>
+<saying who="gehn">compile time is certainly something that impacts dev time</saying>
+<saying who="gehn">at least in my experience</saying>
+<saying who="gehn">I like C++, but I don&#39;t love everything about it. it would be nice if we had significantly faster C++ compile times</saying>
+<saying who="velco">in my experience, it does impact time taken only when not writing code</saying>
+<saying who="gehn">well, testing the code written is a pretty important and continuous process of my development</saying>
+<saying who="gehn">I have unit tests, but those don&#39;t cover everything</saying>
+<saying who="gehn">and GUIs are often more difficult to test at all</saying>
+<saying who="gehn">especially difficult to test things like the result of a render operation on an opengl context</saying>
+<saying who="gehn">so, needing to wait a significant amount of time (upwards of a minute or several) just to test some fairly simple change can spiral time-to-dev costs</saying>
+<saying who="rindolf">gehn: yes</saying>
+<saying who="rindolf">gehn: using ccache has changed my life</saying>
+<saying who="velco">what percentage of this time is spent compiling? and what is spent analysing the issue, coming up with a solution, implementing the solution, writing a test, code review, running the test?</saying>
+<saying who="gehn">rindolf, is that different from how a Makefile or whatever (or a cmake generated project) should be able to detect which files need compile and which don&#39;t?</saying>
+<saying who="gehn">velco, like I said, it&#39;s not always feasible to write a test for everything</saying>
+<saying who="rindolf">gehn: sometimes it is</saying>
+<saying who="gehn">I don&#39;t have an answer as to exact percentage, but on many days I suspect I spend almost 50% of my total time waiting for compiles</saying>
+<saying who="rindolf">gehn: if you did make clean for example</saying>
+<saying who="velco">gehn: Sure. Why do you feel compelled to tell this to me?</saying>
+<saying who="gehn">that might be an overestimate, but it&#39;s not far away</saying>
+<saying who="Aruseus">gehn, if you have a file b that depends on a. if you change a, then you&#39;ll need to recompile b even if you didn&#39;t change it at all. so probably not everything will change</saying>
+<saying who="gehn">velco, were you not asking the percentage question as a response to what I had said?</saying>
+<saying who="rindolf">obxkcd: https://www.xkcd.com/303/</saying>
+<me_is who="goiko_">has quit (Ping timeout: 264 seconds)</me_is>
+<saying who="gehn">unit tests help a lot</saying>
+<me_is who="Mutex7">(~Mutex7@S010620e52a28896a.wp.shawcable.net) has joined</me_is>
+<saying who="velco">gehn: yes, and if you don&#39;t write test, my list potentially incomplete list of things allows for a 0 percent</saying>
+<saying who="gehn">because they compile much faster as each unit is typically decoupled from the entire app</saying>
+<me_is who="goiko__">(~goiko@pD95836BC.dip0.t-ipconnect.de) has joined</me_is>
+<me_is who="geste__">(~geste@pd95b0b70.dip0.t-ipconnect.de) has joined</me_is>
+<saying who="velco">gehn: sound like you need to rethink your workflow</saying>
+<saying who="gehn">velco, sorry I don&#39;t understand what you just said</saying>
+<saying who="gehn">velco, maybe, but I&#39;m not sure what to change about said workflow</saying>
+<saying who="velco">gehn: I have not put a restriction of non-zero time on any perticular item in my list, so I don&#39;t understand why do you need to tell me some of these may take zero time</saying>
+<saying who="gehn">so, it&#39;s great to write unit tests, and I write a lot of them, but when doing more GUI centric integration centric work - a workflow centered around unit tests isn&#39;t viable</saying>
+<saying who="gehn">velco, I seriously still don&#39;t understand what you&#39;re saying?</saying>
+<saying who="gehn">when did I say anything about zero time?</saying>
+<saying who="rindolf">gehn: there is also https://en.wikipedia.org/wiki/Distcc</saying>
+<saying who="gehn">velco, yes, what about that statement?</saying>
+<saying who="velco">I have found that a a simple change incurs less than 2 minutes of building of a large c++ project, most of it spent in linking</saying>
+<saying who="gehn">2 minutes is still kind of a lot</saying>
+<saying who="gehn">I tend to not write tons of code before recompiling and testing</saying>
+<saying who="gehn">so I might spend anywhere from 30s to 5 minutes on a few lines, and then I usually want to test again before moving on</saying>
+<saying who="gehn">with unit tests where compilation and runtime is usually &lt; 20-30s that&#39;s mostly not an issue</saying>
+<saying who="gehn">but when compile times start to rise above the minute-or-several mark, then this begins to become more of a problematic issue</saying>
+<saying who="velco">why run compilation and test so often?</saying>
+<saying who="gehn">I think the answer to that should be fairly clear to many if not most devs</saying>
+<saying who="velco">I run it when I have written a committable amount of code</saying>
+<saying who="exio4_noznc">velco: fail early</saying>
+<saying who="gehn">the more lines of code you write the more chance that you&#39;ve made a mistake, and the further you go without checking your work, the more likely it is you&#39;ll end up in a very difficult to debug situation that consumes more time than it should</saying>
+<saying who="velco">exio4_noznc: it looks to me that some fail even before starting :P</saying>
+<saying who="gde33">shouldn&#39;t make mistakes</saying>
+<saying who="gehn">linting helps with that a lot</saying>
+<saying who="gehn">but still doesn&#39;t prevent logic or runtime errors</saying>
+<saying who="velco">gehn: that does not come form my experience; it is very rare I have an error in each line I write</saying>
+<saying who="gehn">so I guess velco is a near god-like perfect programmer</saying>
+<saying who="velco">in fact, most are correct; hence, testign them in isolation proves pointless</saying>
+<saying who="gehn">for the rest of us mortals however...</saying>
+<saying who="gehn">I don&#39;t test lines in isolation</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

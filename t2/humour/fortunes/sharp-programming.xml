@@ -6275,5 +6275,95 @@
         </irc>
     </fortune>
 
+    <fortune id="to-boldly-code">
+        <meta>
+            <title>To boldly code</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="rts-sander">as in suddenly you&#39;ll start getting empty responses</saying>
+<saying who="adsc">an api that has 1 request per minute limit is nearly useless</saying>
+<saying who="rts-sander">well it&#39;s not a limit but it&#39;s recommended</saying>
+<saying who="wedr_">fetch(url).then((r)=&gt; return r.ok ? r.json() : r.text()).then((json) =&gt; doStuff(json));</saying>
+<saying who="wedr_">Pretty much</saying>
+<saying who="solidfox">then</saying>
+<saying who="solidfox">that&#39;s new to me.</saying>
+<saying who="qoxncyha">wedr_: that will break for !r.ok</saying>
+<saying who="Tywin">Ugh, reddit&#39;s still written in python. No wonder it&#39;s slow as hell.</saying>
+<saying who="qoxncyha">i usually do `.then(r =&gt; { if (!r.ok) { throw r; } return r.json() })`</saying>
+<saying who="wedr_">oh</saying>
+<saying who="solidfox">I write my websites in C</saying>
+<saying who="wedr_">You should write in WebASM</saying>
+<saying who="wedr_">:D</saying>
+<saying who="velco">s/Web//</saying>
+<saying who="solidfox">nah man. I mean the backend</saying>
+<saying who="wedr_">oh</saying>
+<saying who="adsc">soon you will be able to write the frontend in C, too</saying>
+<saying who="rindolf">solidfox: my websites are mostly static html</saying>
+<saying who="solidfox">sweet. I can render my interface myself instead of using css</saying>
+<saying who="Tywin">Is C web-scale? Do all the cool kids use it?</saying>
+<saying who="rindolf">Tywin: /dev/null is web scale</saying>
+<saying who="solidfox">rindolf, ah. so you don&#39;t use any programming?</saying>
+<saying who="rindolf">Tywin: it has sharding</saying>
+<saying who="rindolf">solidfox: i do</saying>
+<saying who="Tywin">rindolf, does /dev/null also have native non-blocking sharding?</saying>
+<saying who="Tywin">:D</saying>
+<saying who="rindolf">solidfox: i use static site gens</saying>
+<saying who="rindolf">solidfox: and there is client-side js</saying>
+<saying who="rindolf">Tywin: http://shlomifishswiki.branchable.com/slash-dev-null_is_WebScale/</saying>
+<saying who="solidfox">rindolf, ah I see</saying>
+<saying who="solidfox">I think I remember now. aren&#39;t your static site generators written in perl?</saying>
+<saying who="Tywin">rindolf, how can I get this /dev/null? What do I have to type in my 5000$ Mac?</saying>
+<saying who="rindolf">solidfox: see http://www.shlomifish.org/meta/site-source/</saying>
+<saying who="rindolf">solidfox: not entirely</saying>
+<saying who="rindolf">Tywin: just paypal me 100 bitcoins</saying>
+<saying who="wedr_">Paypal supports bitcoins?</saying>
+<saying who="wedr_">Or that&#39;s a joke?</saying>
+<saying who="rindolf">wedr_: a joke</saying>
+<saying who="wedr_">ok</saying>
+<saying who="wedr_">Otherwise, my co-workers going to cash all in on Paypal</saying>
+<saying who="wedr_">They have a strut of bitcoins</saying>
+<saying who="wedr_">Hoping to get back into the green</saying>
+<saying who="rindolf">wedr_: he can pay me 1,000,000 usd instead</saying>
+<saying who="rindolf">to get the coveted /dev/null</saying>
+<saying who="wedr_">Wait until we hit 2030, when USD is probably hyperinflating.</saying>
+<saying who="solidfox">wedr_, that ain&#39;t gonna happen</saying>
+<saying who="solidfox">wedr_, we can barely maintain current inflation rates</saying>
+<saying who="wedr_">Hence it&#39;s a joke</saying>
+<saying who="arahael">rindolf: not entirely a joke, unless it is extremely widespread.  there are quite a few results for &#39;paypal bitcoin&#39;</saying>
+<saying who="rindolf">arahael: i &#39;d imagine</saying>
+<saying who="arahael">rindolf: the more promising sites seem to be old though, eg, a pcworld article from 2015.  i suspect that they may have considered it in the past. (but i havent read it. )</saying>
+<saying who="wedr_">or extremely fiticious and click-baity</saying>
+<saying who="rindolf">solidfox: https://github.com/shlomif/shlomi-fish-homepage/blob/master/.travis.yml - this is the build process</saying>
+<saying who="rts-sander">for a mere 999,000 usd I&#39;ll even spin up /dev/null as a service for you</saying>
+<saying who="rts-sander">which exists already apparently: https://devnull-as-a-service.com/</saying>
+<saying who="Tywin">rts-sander, it&#39;s expensive as hell, so it must be good. I&#39;m talking with my management right now about buying some /dev/null.</saying>
+<saying who="xi-">rts-sander: dispose of your data safely and efficiently with /dev/null!</saying>
+<saying who="rindolf">Tywin: heh</saying>
+<saying who="xi-">now for only 150$ per month on a 5 year contract!</saying>
+<saying who="rts-sander">I legit think there&#39;s non-technical business people you could sell this to</saying>
+<saying who="rindolf">rts-sander: see http://www.shlomifish.org/humour/fortunes/show.cgi?id=mongodb-vs-dev-null</saying>
+<saying who="rts-sander">rindolf, this hans guy is thorough</saying>
+<saying who="rindolf">rts-sander: http://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-perl-paid-version-of-cpan</saying>
+<saying who="rts-sander">rindolf, it&#39;s true though if you look at what some companies pay for enterprise software</saying>
+<saying who="rindolf">rts-sander: enterprise!</saying>
+<saying who="rindolf">to boldly code what many have coded before</saying>
+<saying who="rindolf">lol</saying>
+<saying who="rts-sander">not like many of us are going through uncharted territory, we at least have the decency to not pretend otherwise</saying>
+<saying who="rindolf">rts-sander: enterprise software! https://fc-solve.blogspot.co.il/2010/03/01-april-2010-freecell-solver.html</saying>
+<saying who="rts-sander">rindolf, consistent usage of the trademark symbol</saying>
+<saying who="rts-sander">if you miss it once your intellectual property might get stolen!</saying>
+<saying who="rts-sander"> &quot;Eh, what the hell?&quot; lol</saying>
+<saying who="rindolf">rts-sander: heh. That is True™</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

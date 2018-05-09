@@ -12,37 +12,37 @@ use Path::Tiny qw/ path /;
 my $out_fn;
 my $modules_fn = 'bin/required-modules.yml';
 
-GetOptions(
-    'o|output=s'     => \$out_fn,
-) or die "Failed - $!";
+GetOptions( 'o|output=s' => \$out_fn, )
+    or die "Failed - $!";
 
 open my $o, '>', $out_fn;
-$o->print(<<"EOF");
-Summary:	Require shlomif homesite deps
-Name:		task-shlomif-homesite
+{
+    my ($yaml_data) = LoadFile($modules_fn);
+
+    my $keys = $yaml_data->{required}->{meta_data}->{'keys'};
+    $o->print(<<"EOF");
+Summary:	$keys->{summary}
+Name:		$keys->{package_name}
 Version:	0.0.1
 Release:	%mkrel 1
 License:	MIT
 Group:		System
-Url:		http://www.shlomifish.org/
+Url:		$keys->{url}
 BuildArch:	noarch
 EOF
-{
-    my ($yaml_data) = LoadFile($modules_fn);
-
     {
         foreach my $line ( @{ $yaml_data->{required}->{executables} } )
         {
             my $cmd = $line->{exe};
-            if ($cmd eq 'sass')
+            if ( $cmd eq 'sass' )
             {
                 $cmd = 'ruby-sass';
             }
-            elsif ($cmd eq 'convert')
+            elsif ( $cmd eq 'convert' )
             {
                 $cmd = 'imagemagick';
             }
-            elsif ($cmd eq 'node')
+            elsif ( $cmd eq 'node' )
             {
                 $cmd = 'nodejs';
             }
@@ -62,25 +62,25 @@ EOF
 
         foreach my $module (@required_modules)
         {
-            if ($module eq 'bs4')
+            if ( $module eq 'bs4' )
             {
                 $module = 'beautifulsoup4';
             }
             $o->print("Requires: python3dist($module)\n");
         }
     }
-}
 
-$o->print(<<"EOF");
+    $o->print(<<"EOF");
 
 %description
-This task package installs some of the packages that Shlomi Fish needs.
+$keys->{desc}
 
 %files
 
 %changelog
-* Mon Jan 12 2015 shlomif <shlomif\@shlomifish.org> 0.2.0-1.mga5
+* Mon Jan 12 2015 shlomif <shlomif\@shlomifish.org> 0.0.1-1.mga5
 - Initial package.
 EOF
-close($o);
-exit(0);
+    close($o);
+    exit(0);
+}

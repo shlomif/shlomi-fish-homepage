@@ -46,6 +46,12 @@ required:
     files:
         - path: "~/.shlomifish-amazon-sak.json"
           desc: "You can try putting the JSON string «{\"amazon_sak\":\"invalid\"}» there."
+    meta_data:
+        keys:
+            package_name: task-shlomif-homesite
+            summary: 'Require shlomif homesite deps'
+            url: 'http://www.shlomifish.org/'
+            desc: 'This task package installs some of the packages that Shlomi Fish needs.'
     perl5_modules:
         App::XML::DocBook::Builder: 0
         CGI: 0

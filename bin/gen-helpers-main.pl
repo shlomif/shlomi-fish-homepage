@@ -171,7 +171,7 @@ _my_system( [ 'make', 'sects_cache' ] );
 
 =begin removed_duplicate_code
 
-my $wml_deps = io->file("deps.mak");
+my $wml_deps = io->file("lib/make/deps.mak");
 
 foreach my $wml_obj (
     io->dir("t2")->filter(sub { $_->filename =~ qr/\.wml\z/ })->All_Files

@@ -77,5 +77,5 @@ m{^(?:(?:\#include *")|(?:<include file="\.\./lib/)|(?:<shlomif_include_colorize
         }
     }
 
-    path("deps.mak")->spew_utf8($deps_text);
+    path("lib/make/deps.mak")->spew_utf8($deps_text);
 }

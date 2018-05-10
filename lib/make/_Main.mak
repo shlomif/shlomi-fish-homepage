@@ -1052,7 +1052,7 @@ update_html_tut: update_html_tut_hg html_tutorial
 update_html_tut_hg:
 	cd $(HTML_TUT_BASE) && (git pull)
 
-include deps.mak
+include lib/make/deps.mak
 
 MATHJAX_DEST_DIR = $(T2_DEST)/js/MathJax
 MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md

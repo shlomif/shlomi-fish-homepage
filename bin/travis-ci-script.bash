@@ -14,7 +14,7 @@ m()
     "$@"
 }
 
-if ! ./gen-helpers.pl | perl bin/filter-make.pl ; then
+if ! ./gen-helpers | perl bin/filter-make.pl ; then
     echo "Error in executing ./gen-helpers.pl" 1>&2
     exit -1
 fi

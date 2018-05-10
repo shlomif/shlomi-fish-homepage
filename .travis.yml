@@ -28,6 +28,4 @@ before_install:
 python:
     - "3.5"
 script:
-    - which wml
-    - wml --version
     - "bash -x bin/travis-ci-script.bash"

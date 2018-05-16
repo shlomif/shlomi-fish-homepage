@@ -165,7 +165,7 @@ foreach my $ext (qw/ html pdf /)
     }
 }
 
-path('Makefile')->spew_utf8("include $DIR/_Main.mak\n");
+path('Makefile')->spew_utf8("include ${DIR}_Main.mak\n");
 
 _my_system( [ 'make', 'sects_cache' ] );
 

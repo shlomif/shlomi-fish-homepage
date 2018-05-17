@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 use autodie;
+use utf8;
 
 use File::Basename qw(dirname basename);
 use Cwd qw(getcwd);
@@ -959,6 +960,89 @@ print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var fi
 </define-tag>
 EOF
     }
+    else
+    {
+        write_on_change( scalar( path("$dir/template.wml") ), \<<'EOF');
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "he-IL" />
+<default-var "qp_charset" "utf-8" />
+<default-var "qp_body_dir" "rtl" />
+
+<:{
+use utf8;
+
+if (1)
+{
+$translate_control_text = sub {
+    my $title = shift;
+    my %translations =
+        (
+            "Next" => "הבא",
+            "Prev" => "הקודם",
+            "Up" => "למעלה",
+            "Contents" => "תוכן",
+        );
+   return $translations{$title};
+};
+}
+
+}:>
+
+#include "quadpres_main.wml"
+
+<qp:more_head_elems>
+<script src="<qp:contentsurl />slidy.js" type="text/javascript"></script>
+</qp:more_head_elems>
+
+<script type="text/javascript">rtl_keys = true;</script>
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+
+<define-tag link_to_screenshot endtag="required">
+<preserve href title filename />
+<set-var %attributes />
+<:{
+my $url = "<get-var href />";
+my $title = "<get-var title />";
+my $filename = "<get-var filename />";
+$url =~ m{^(.*)/([^/]+)$};
+my ($base, $last_component) = ($1,$2);
+$filename ||= $last_component;
+if ($ENV{LOCAL_SHOTS})
+{
+    print <<"EOFUGAFBVEBNASFASVBDSF";
+<a href="$filename" title="$title">%body</a>
+EOFUGAFBVEBNASFASVBDSF
+    open O, ">>Quad-Pres-Screenshots-Urls.txt";
+    print O "wget -O $filename $url\n";
+    close O;
+}
+else
+{
+    print <<"EOFJHKDKFGKDFKGKDFGK"
+<a href="$url" title="$title">%body</a>
+EOFJHKDKFGKDFKGKDFGK
+}
+}:>
+<restore href title filename />
+</define-tag>
+
+{#QUADPRES_AFTER_TOP_NAV_BAR#:<div class="help">
+<p>
+כדי לעבור לנקודה הבאה או הקודמת בשקף יש ללחוץ במקלדת על החיצים שמאלה וימינה.
+</p>
+
+<p>
+ניתן לעבור לשקף הבא על-ידי המקשים "N" ו-"P".
+</p>
+</div>:##}
+EOF
+    }
     path("$dir/.wmlrc")->spew_utf8(<<"EOF");
 -DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
 EOF
@@ -966,7 +1050,7 @@ EOF
     path("$dir/quadpres.ini")->spew_utf8(<<"EOF");
 [quadpres]
 
-; The destination direcory in which to place the rendered files.
+; The destination directory in which to place the rendered files.
 server_dest_dir=./rendered
 
 ; The group to which the files should be associated with (defaults

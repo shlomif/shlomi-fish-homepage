@@ -1018,9 +1018,10 @@ if ($ENV{LOCAL_SHOTS})
     print <<"EOFUGAFBVEBNASFASVBDSF";
 <a href="$filename" title="$title">%body</a>
 EOFUGAFBVEBNASFASVBDSF
-    open O, ">>Quad-Pres-Screenshots-Urls.txt";
-    print O "wget -O $filename $url\n";
-    close O;
+    use autodie;
+    open my $out_fh, '>>', 'Quad-Pres-Screenshots-Urls.txt';
+    print {$out_fh} "wget -O $filename $url\n";
+    close $out_fh;
 }
 else
 {

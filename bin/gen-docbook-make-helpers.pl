@@ -852,6 +852,11 @@ my $gen_make_fn = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 open my $make_fh,     ">", $gen_make_fn;
 open my $template_fh, "<", "lib/make/docbook/sf-homepage-db-gen.tt";
 
+my $qp_template_en_text =
+    path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
+my $qp_template_he_text =
+    path("lib/presentations/qp/common/template-he.wml")->slurp_utf8;
+
 sub get_quad_pres_files
 {
     my $args       = shift || {};
@@ -881,169 +886,8 @@ EOF
     path($dot_q)->mkpath;
     path("$dot_q/is_root")->spew_utf8('');
 
-    if ( $lang eq 'en' )
-    {
-        write_on_change( scalar( path("$dir/template.wml") ), \<<"EOF");
-#include "wml_helpers.wml"
-
-<default-var "qp_lang" "en-GB" />
-<default-var "qp_charset" "utf-8" />
-
-<set-var display_ads="1" />
-
-#include "quadpres_main.wml"
-
-<define-tag menupath endtag="required">
-<:{
-    require MenuPath;
-    use Text::WrapAsUtf8 qw/ print_utf8 /;
-print_utf8(MenuPath::get_menupath_text(<<'EOFOPOPOPLKJKJQWEQWEQW'));
-%body
-EOFOPOPOPLKJKJQWEQWEQW
-}:>
-</define-tag>
-
-<qp:after_bottom_nav_bar>
-<p>
-Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
-</p>
-</qp:after_bottom_nav_bar>
-
-<define-tag esr:homesite:link endtag="required" whitespace="delete">
-<preserve href />
-<set-var %attributes />
-<a href="http://www.catb.org/~esr/<get-var href />">%body</a>
-<restore href />
-</define-tag>
-
-<define-tag mycode endtag="required">
-<table class="mycode">
-<tr class="mycode">
-<td class="mycode">
-%body
-</td>
-</tr>
-</table>
-</define-tag>
-
-<:{
-require VimIface;
-}:>
-<define-tag quadpres_code_block endtag="required" whitespace="delete">
-<div class="code_block">
-<pre>
-%body
-</pre>
-</div>
-</define-tag>
-
-<define-tag quadpres_include_colorized_file whitespace="delete">
-<preserve filename />
-<set-var %attributes />
-<:{
-print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
-}:>
-<restore filename />
-</define-tag>
-
-<define-tag quadpres_code_file>
-<preserve filename />
-<set-var %attributes />
-<quadpres_code_block>
-<quadpres_include_colorized_file filename="<get-var filename />" />
-</quadpres_code_block>
-<restore filename />
-</define-tag>
-
-<define-tag renderedexample endtag="required">
-<a href="http://www.shlomifish.org/lecture/WebMetaLecture/rendered/%0/">%body</a>
-</define-tag>
-EOF
-    }
-    else
-    {
-        write_on_change( scalar( path("$dir/template.wml") ), \<<'EOF');
-#include "wml_helpers.wml"
-
-<default-var "qp_lang" "he-IL" />
-<default-var "qp_charset" "utf-8" />
-<default-var "qp_body_dir" "rtl" />
-
-<:{
-use utf8;
-
-if (1)
-{
-$translate_control_text = sub {
-    my $title = shift;
-    my %translations =
-        (
-            "Next" => "הבא",
-            "Prev" => "הקודם",
-            "Up" => "למעלה",
-            "Contents" => "תוכן",
-        );
-   return $translations{$title};
-};
-}
-
-}:>
-
-#include "quadpres_main.wml"
-
-<qp:more_head_elems>
-<script src="<qp:contentsurl />slidy.js" type="text/javascript"></script>
-</qp:more_head_elems>
-
-<script type="text/javascript">rtl_keys = true;</script>
-
-<qp:after_bottom_nav_bar>
-<p>
-Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
-</p>
-</qp:after_bottom_nav_bar>
-
-<define-tag link_to_screenshot endtag="required">
-<preserve href title filename />
-<set-var %attributes />
-<:{
-my $url = "<get-var href />";
-my $title = "<get-var title />";
-my $filename = "<get-var filename />";
-$url =~ m{^(.*)/([^/]+)$};
-my ($base, $last_component) = ($1,$2);
-$filename ||= $last_component;
-if ($ENV{LOCAL_SHOTS})
-{
-    print <<"EOFUGAFBVEBNASFASVBDSF";
-<a href="$filename" title="$title">%body</a>
-EOFUGAFBVEBNASFASVBDSF
-    use autodie;
-    open my $out_fh, '>>', 'Quad-Pres-Screenshots-Urls.txt';
-    print {$out_fh} "wget -O $filename $url\n";
-    close $out_fh;
-}
-else
-{
-    print <<"EOFJHKDKFGKDFKGKDFGK"
-<a href="$url" title="$title">%body</a>
-EOFJHKDKFGKDFKGKDFGK
-}
-}:>
-<restore href title filename />
-</define-tag>
-
-{#QUADPRES_AFTER_TOP_NAV_BAR#:<div class="help">
-<p>
-כדי לעבור לנקודה הבאה או הקודמת בשקף יש ללחוץ במקלדת על החיצים שמאלה וימינה.
-</p>
-
-<p>
-ניתן לעבור לשקף הבא על-ידי המקשים "N" ו-"P".
-</p>
-</div>:##}
-EOF
-    }
+    write_on_change( scalar( path("$dir/template.wml") ),
+        ( $lang eq 'en' ? \$qp_template_en_text : \$qp_template_he_text ) );
     path("$dir/.wmlrc")->spew_utf8(<<"EOF");
 -DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
 EOF

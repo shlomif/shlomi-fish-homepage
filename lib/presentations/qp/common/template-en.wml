@@ -1,0 +1,74 @@
+#include "wml_helpers.wml"
+
+<default-var "qp_lang" "en-GB" />
+<default-var "qp_charset" "utf-8" />
+
+<set-var display_ads="1" />
+
+#include "quadpres_main.wml"
+
+<define-tag menupath endtag="required">
+<:{
+    require MenuPath;
+    use Text::WrapAsUtf8 qw/ print_utf8 /;
+print_utf8(MenuPath::get_menupath_text(<<'EOFOPOPOPLKJKJQWEQWEQW'));
+%body
+EOFOPOPOPLKJKJQWEQWEQW
+}:>
+</define-tag>
+
+<qp:after_bottom_nav_bar>
+<p>
+Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
+</p>
+</qp:after_bottom_nav_bar>
+
+<define-tag esr:homesite:link endtag="required" whitespace="delete">
+<preserve href />
+<set-var %attributes />
+<a href="http://www.catb.org/~esr/<get-var href />">%body</a>
+<restore href />
+</define-tag>
+
+<define-tag mycode endtag="required">
+<table class="mycode">
+<tr class="mycode">
+<td class="mycode">
+%body
+</td>
+</tr>
+</table>
+</define-tag>
+
+<:{
+require VimIface;
+}:>
+<define-tag quadpres_code_block endtag="required" whitespace="delete">
+<div class="code_block">
+<pre>
+%body
+</pre>
+</div>
+</define-tag>
+
+<define-tag quadpres_include_colorized_file whitespace="delete">
+<preserve filename />
+<set-var %attributes />
+<:{
+print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+}:>
+<restore filename />
+</define-tag>
+
+<define-tag quadpres_code_file>
+<preserve filename />
+<set-var %attributes />
+<quadpres_code_block>
+<quadpres_include_colorized_file filename="<get-var filename />" />
+</quadpres_code_block>
+<restore filename />
+</define-tag>
+
+<define-tag renderedexample endtag="required">
+<a href="http://www.shlomifish.org/lecture/WebMetaLecture/rendered/%0/">%body</a>
+</define-tag>

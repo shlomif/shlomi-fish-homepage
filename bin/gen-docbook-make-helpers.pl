@@ -870,7 +870,7 @@ sub get_quad_pres_files
         $css_params, "$dir/src/style.css" );
 
     my $serve_fn = "$dir/serve.pl";
-    path($serve_fn)->spew_utf8(<<"EOF");
+    write_on_change( scalar( path($serve_fn) ), \<<"EOF");
 #!/usr/bin/env perl
 
 use strict;

@@ -92,7 +92,7 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% SET vstamp = "\$(" _ stamp _ ")" %]
 [% stamp %] = $([% v %]_BASE)/FINISH_STAMP
 
-[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm template.wml)
+[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm Contents.yml template.wml)
 [% v %]_DEST = $(T2_DEST)/[% val.dest_dir %]
 [% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
 [% v %]_files = [% files.join(" ") %]

@@ -1,0 +1,170 @@
+---
+images:
+- style.css
+subs:
+- subs:
+  - title: History of the GIMP
+    url: history.html
+  - title: Future Directions
+    url: future.html
+  - title: Conventions Used in this Lecture
+    url: conventions.html
+  title: Introduction
+  url: intro
+- subs:
+  - title: Colour Modes
+    url: colour_modes.html
+  - title: 8 bits per colour value
+    url: 8bit.html
+  - subs:
+    - title: Demo
+      url: demo.html
+    - title: What are RGB and HSV?
+      url: explanation.html
+    - title: What about CMYK?
+      url: cmyk.html
+    title: RGB and HSV modes
+    url: rgb_and_hsv
+  - title: Basic Effects using the Toolbox
+    url: toolbox.html
+  - title: Plug-ins
+    url: plug_ins.html
+  - subs:
+    - title: Using the Red "Paint Selection" Button
+      url: red.html
+    - title: The "&lt;Image&gt; -> Select" Menu
+      url: menu.html
+    title: Selection and its Usage
+    url: selection
+  - subs:
+    - subs:
+      - title: Demo 1
+        url: demo1.html
+      - title: 'Demo : Using a Gradient as a Layer Mask'
+        url: demo_grad.html
+      title: Alpha
+      url: alpha
+    - title: Filters and Layers
+      url: filters.html
+    - title: Layer Modes
+      url: modes.html
+    - title: Gradients
+      url: gradients.html
+    title: Layers
+    url: layers
+  title: Overview of Features
+  url: features
+- subs:
+  - subs:
+    - title: Answer
+      url: answer.html
+    - title: Demonstration
+      url: demo.html
+    title: Brightness and Contrast
+    url: brightness_and_contrast
+  - subs:
+    - title: Concept
+      url: concept.html
+    - title: Demonstration
+      url: demo.html
+    title: Gamma Correction
+    url: gamma_correction
+  - title: Equalize
+    url: equalize.html
+  - title: Color Map Rotation
+    url: color_map_rotation.html
+  - title: Color Balance
+    url: color_balance.html
+  - title: More LUTs
+    url: more_luts.html
+  title: LUT (Look-Up Tables Effects)
+  url: lut
+- subs:
+  - subs:
+    - title: Answer to how one can blur an image
+      url: answer.html
+    - title: Demo of a simple blur
+      url: demo.html
+    - subs:
+      - title: IIR vs. RLE Gaussian Blurs
+        url: iir_rle.html
+      - title: Demo of IIR Gauss. Blur
+        url: demo_iir.html
+      - title: Demo of RLE Gauss. Blur
+        url: demo_rle.html
+      title: Gaussian Blur
+      url: gaussian
+    title: Blur
+    url: blur
+  - subs:
+    - title: Answer to how one can sharpen
+      url: answer.html
+    - title: Sharpening Demo
+      url: demo.html
+    title: Sharpening
+    url: sharpen
+  - subs:
+    - title: Answer to how one can motion blur
+      url: answer.html
+    - title: Demo
+      url: demo.html
+    title: Motion Blur
+    url: motion_blur
+  title: Basic Areal Effects
+  url: areal
+- subs:
+  - subs:
+    - title: Interpolation
+      url: interpolation.html
+    title: Scaling an Image
+    url: scaling
+  - subs:
+    - title: Demo
+      url: demo.html
+    title: The Rotate/Scale/Perspective Tool
+    url: transform_tool
+  title: Basic Areal Transformations
+  url: areal_transforms
+- subs:
+  - subs:
+    - title: 'Demo 1 : Real-life picture'
+      url: demo1.html
+    - title: 'Demo 2 : Text Caption'
+      url: demo2.html
+    title: Gradient Map
+    url: gradient_map
+  - title: Fractal Explorer
+    url: fractal_explorer.html
+  title: Some Cool Effects
+  url: cool_effects
+- subs:
+  - title: Oilify
+    url: oilify.html
+  - title: Gimpressionist
+    url: gimpressionist.html
+  title: Turning a Photograph into a Painting
+  url: photo2painting
+- subs:
+  - title: The Procedural Database
+    url: pdb.html
+  - subs:
+    - title: Interactive Demo
+      url: demo.html
+    - title: Generating a Logo
+      url: generating_logo.html
+    title: Script-Fu Scripting
+    url: script-fu
+  - title: Gimp-Perl Scripting
+    url: gimp-perl.html
+  - title: GIMP (C-based) Plug-ins
+    url: plug-ins.html
+  title: Scripting the GIMP
+  url: scripting
+- subs:
+  - title: References and Links
+    url: links.html
+  - title: Origins and Copyrights of the Images
+    url: images.html
+  title: Finale
+  url: finale
+title: Do it with the GIMP

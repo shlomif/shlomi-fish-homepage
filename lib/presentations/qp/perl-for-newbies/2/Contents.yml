@@ -1,0 +1,162 @@
+---
+images:
+- somerights20.gif
+- style.css
+- argv/copy.pl
+- files/line_count.pl
+- files/line_numbers.pl
+- files/print2.pl
+- files/print.pl
+- for/multiplication_board.pl
+- for/primes.pl
+- for/primes_while.pl
+- functions/min_max.pl
+- functions/pythagoras.pl
+- functions/splitting.pl
+- functions/splitting_shift.pl
+- hashes/bank.old.pl
+- hashes/bank.pl
+- hashes/comma.pl
+- hashes/delete.pl
+- hashes/unique.pl
+- interpolate1.pl
+- my/my1.pl
+- my/primes_us.pl
+- references/deref1.pl
+- references/hanoi.pl
+- references/lol.pl
+- references/print_contents.pl
+- references/update_sum.pl
+- references/vector_sum.pl
+- regexps/all_as.pl
+- regexps/flags/index.pl
+- regexps/hello.pl
+- regexps/l---x.pl
+- regexps/perl_var.pl
+- regexps/semicolons_and_commas.pl
+- regexps/sentence.pl
+- regexps/sentence_with_numbers.pl
+- regexps/string_ends_ellip.pl
+- regexps/substitute/length.pl
+- regexps/substitute/number.pl
+- regexps/substitute/reverse_words.pl
+- regexps/substitute/ungreedy.pl
+- regexps/substitute/uppercase.pl
+- useful_funcs/double.pl
+- useful_funcs/grep.pl
+- useful_funcs/primes.pl
+- useful_funcs/rle.pl
+- useful_funcs/sort/integer_sort_cmp.pl
+- useful_funcs/sort/integer_sort.pl
+- useful_funcs/sort/reverse_string_sort.pl
+- useful_funcs/uid.pl
+- useful_funcs/words.pl
+subs:
+- subs:
+  - title: Behaviour of next in the for Loop
+    url: next.html
+  - title: Whence for?
+    url: whence_for.html
+  title: The for Loop
+  url: for
+- subs:
+  - title: Hash-Related Functions
+    url: functions.html
+  title: Hashes
+  url: hashes
+- subs:
+  - title: '"use strict", Luke!'
+    url: use_strict.html
+  - title: '"use warnings", Luke!'
+    url: use_warnings.html
+  title: Declaring Local Variables with "my"
+  url: my
+- subs:
+  - title: Function Recursion
+    url: recursion.html
+  - title: Use of "shift" in Functions
+    url: shift.html
+  title: Functions
+  url: functions
+- subs:
+  - title: Using "print" with Files
+    url: print.html
+  - title: The &lt;FILEHANDLE&gt; Operator
+    url: readline.html
+  title: File Input/Output
+  url: files
+- title: The @ARGV Array
+  url: argv.html
+- subs:
+  - title: Syntax
+    url: syntax.html
+  - title: '".", "[ ... ]"'
+    url: multi_char.html
+  - title: The "*" and Friends
+    url: asterisk.html
+  - title: Grouping
+    url: grouping.html
+  - title: Alternation with "|"
+    url: alternation.html
+  - title: Binding to the Beginning or the End of a String
+    url: binding.html
+  - subs:
+    - title: The "e" Switch
+      url: e_switch.html
+    - title: Ungreedy Matching with *? and Friends
+      url: ungreedy.html
+    title: Substituting using Regular Expressions
+    url: substitute
+  - title: Useful Flags
+    url: flags.html
+  - title: Useful Escape Sequences
+    url: esc_seqs.html
+  - title: The Next Step
+    url: next_step.html
+  title: Regular Expressions
+  url: regexps
+- title: String Interpolation
+  url: interpolation.html
+- subs:
+  - title: split
+    url: split.html
+  - title: map
+    url: map.html
+  - subs:
+    - title: '&lt;=&gt; and cmp'
+      url: cmp.html
+    title: sort
+    url: sort
+  - title: grep
+    url: grep.html
+  title: Useful Functions
+  url: useful_funcs
+- subs:
+  - title: 'Example: The Towers of Hanoi'
+    url: hanoi.html
+  - title: \ - Taking a Reference to an Existing Variable
+    url: backslash.html
+  - title: '[ @array ] - a Dynamic Reference to an Array'
+    url: square_brackets.html
+  - title: '{ %hash } - a Dynamic Reference to a Hash'
+    url: curly_brackets.html
+  - title: The Arrow Operators
+    url: arrow.html
+  - title: Dereferencing
+    url: dereferencing.html
+  title: References
+  url: references
+- subs:
+  - title: Stepping over and Stepping in
+    url: stepping.html
+  - title: Setting Breakpoints and Continuing
+    url: breakpoints.html
+  - title: Executing Perl Commands inside the Debugger
+    url: perl_cmds.html
+  - title: Getting More Information
+    url: more_info.html
+  title: Using the perl Debugger
+  url: debugger
+- title: Finale
+  url: finale.html
+title: '"Perl for Perl Newbies" - Part 2'

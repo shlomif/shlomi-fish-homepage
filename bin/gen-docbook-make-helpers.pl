@@ -886,6 +886,24 @@ EOF
     path($dot_q)->mkpath;
     path("$dot_q/is_root")->spew_utf8('');
 
+    write_on_change( scalar( path("$dir/Contents.pm") ), \<<'EOF');
+package Contents;
+
+use strict;
+use warnings;
+
+use File::Basename qw/ dirname /;
+use YAML::XS qw/ LoadFile /;
+
+my $contents = LoadFile( dirname(__FILE__) . '/Contents.yml' );
+
+sub get_contents
+{
+    return $contents;
+}
+
+1;
+EOF
     write_on_change( scalar( path("$dir/template.wml") ),
         ( $lang eq 'en' ? \$qp_template_en_text : \$qp_template_he_text ) );
     path("$dir/.wmlrc")->spew_utf8(<<"EOF");

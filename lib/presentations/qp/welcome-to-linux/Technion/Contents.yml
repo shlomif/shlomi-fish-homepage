@@ -1,0 +1,51 @@
+---
+images:
+- style.css
+subs:
+- title: Why Program under Linux? (Briefly)
+  url: why.html
+- subs:
+  - title: Important gcc Flags
+    url: flags.html
+  - title: g++
+    url: gpp.html
+  title: Use of gcc/g++
+  url: gcc
+- subs:
+  - title: Makefile Basics
+    url: basics.html
+  - title: Makefile Variables
+    url: variables.html
+  - title: Final Notes
+    url: notes.html
+  title: Writing Makefiles
+  url: makefiles
+- images:
+  - test.c
+  subs:
+  - title: More Emacs
+    url: more.html
+  - title: Yet More Emacs
+    url: yet-more.html
+  - title: Emacs - The End (Well at Least the Last Slide)
+    url: end.html
+  title: The Almighty Emacs
+  url: emacs
+- subs:
+  - title: Basic gdb Commands
+    url: basic.html
+  title: The gdb Debugger
+  url: gdb
+- images:
+  - testddd.c
+  subs:
+  - title: DDD Debugging Tips
+    url: tips.html
+  title: DDD - The Data Display Debugger
+  url: ddd
+- subs:
+  - title: More Valgrind
+    url: more.html
+  title: valgrind - a Good Tool to Detect Memory Problems
+  url: valgrind
+title: Software Development under Linux

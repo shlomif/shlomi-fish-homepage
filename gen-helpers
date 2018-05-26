@@ -22,11 +22,17 @@ _exec(
     ],
     'cookiecutter failed.'
 );
+_exec( [ "make", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
+    "build-deps failed!" );
+_exec( [ $^X, './bin/gen-helpers-main.pl' ], "gen-helpers-main.pl failed." );
 
-if ( system( "make", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ) )
-{
-    die "build-deps failed!";
-}
+__END__
 
-system( $^X, './bin/gen-helpers-main.pl' )
-    and die "gen-helpers-main.pl failed.";
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2018 by Shlomi Fish
+
+This program is distributed under the MIT / Expat License:
+L<http://www.opensource.org/licenses/mit-license.php>
+
+=cut

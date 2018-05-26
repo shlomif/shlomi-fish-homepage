@@ -168,37 +168,3 @@ foreach my $ext (qw/ html pdf /)
 path('Makefile')->spew_utf8("include ${DIR}_Main.mak\n");
 
 _my_system( [ 'make', 'sects_cache' ] );
-
-=begin removed_duplicate_code
-
-my $wml_deps = io->file("lib/make/deps.mak");
-
-foreach my $wml_obj (
-    io->dir("t2")->filter(sub { $_->filename =~ qr/\.wml\z/ })->All_Files
-)
-{
-    my $filename = $wml_obj->canonpath;
-    my @deps =
-        grep { $_ ne '../template.wml' }
-    List::MoreUtils::uniq(
-        map { /\A\s*#include (?:'([^']+)'|"([^"]+)"|<([^>]+)>)\s*\z/ ? ($1 || $2 || $3) : () }
-        grep { /\A\s*#include/ } $wml_obj->chomp->getlines);
-
-    foreach my $dep (@deps)
-    {
-        foreach my $dir (".", "lib")
-        {
-            my $full_dep = "$dir/$dep";
-            if (-e $full_dep)
-            {
-                print "$filename: $full_dep\n";
-            }
-        }
-    }
-}
-
-=end removed_duplicate_code
-
-=cut
-
-1;

@@ -2,11 +2,6 @@ package Shlomif::Homepage::NavBlocks::Renderer;
 
 use strict;
 use warnings;
-
-use utf8;
-
-use Carp ();
-
 use MooX (qw( late ));
 
 extends('Exporter');

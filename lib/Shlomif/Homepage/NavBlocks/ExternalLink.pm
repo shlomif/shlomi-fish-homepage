@@ -2,9 +2,6 @@ package Shlomif::Homepage::NavBlocks::ExternalLink;
 
 use strict;
 use warnings;
-
-use utf8;
-
 use MooX qw/ late /;
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');

@@ -3,10 +3,7 @@
 use strict;
 use warnings;
 
-use utf8;
-
 use Test::More tests => 5;
-
 use Path::Tiny qw/ path /;
 
 {

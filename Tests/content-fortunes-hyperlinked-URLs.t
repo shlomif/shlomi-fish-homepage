@@ -2,11 +2,7 @@
 
 use strict;
 use warnings;
-
-use utf8;
-
 use Test::More tests => 1;
-
 use Path::Tiny qw/ path /;
 
 {
@@ -20,3 +16,14 @@ qr{<a href=\r?\n?"https://en.wikipedia.org/wiki/NP-completeness" rel=\r?\n?"nofo
         'Contains a hyperlink.'
     );
 }
+
+__END__
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2018 by Shlomi Fish
+
+This program is distributed under the MIT / Expat License:
+L<http://www.opensource.org/licenses/mit-license.php>
+
+=cut

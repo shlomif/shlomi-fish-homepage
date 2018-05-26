@@ -53,8 +53,7 @@ $contents =~ s/[ \t]+$//gms;
 
 $contents =~ s#\Q$PREF\E(.*?)\Q$SUF\E#<a href="$1" rel="nofollow">$1</a>#gms;
 
-open my $back_fh, '>', $abs_out_fn
+open my $back_fh, '>:encoding(UTF-8)', $abs_out_fn
     or die "Cannot open '$abs_out_fn' for writing - $!";
-binmode( $back_fh, ":encoding(UTF-8)" );
 print {$back_fh} $contents;
 close($back_fh);

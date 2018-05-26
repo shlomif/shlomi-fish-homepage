@@ -5,9 +5,6 @@ use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use Shlomif::Homepage::RelUrl qw/ _path_info _rel_url /;
-
-use utf8;
-
 use MooX (qw( late ));
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');

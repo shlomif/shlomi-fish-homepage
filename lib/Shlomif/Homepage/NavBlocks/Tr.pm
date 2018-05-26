@@ -3,8 +3,6 @@ package Shlomif::Homepage::NavBlocks::Tr;
 use strict;
 use warnings;
 
-use utf8;
-
 use MooX (qw( late ));
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');

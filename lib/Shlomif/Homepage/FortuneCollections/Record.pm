@@ -3,8 +3,6 @@ package Shlomif::Homepage::FortuneCollections::Record;
 use strict;
 use warnings;
 
-use utf8;
-
 use MooX qw( late );
 
 has [

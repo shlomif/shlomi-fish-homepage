@@ -1,5 +1,7 @@
-os: linux
+cache:
+    - $HOME/perl5
 dist: trusty
+os: linux
 before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -y asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libdb5.3-dev libgd-dev libhunspell-dev libncurses-dev libpcre3-dev libperl-dev lynx optipng perl python3 python3-setuptools python3-pip silversearcher-ag tidy valgrind wml xsltproc xz-utils zip

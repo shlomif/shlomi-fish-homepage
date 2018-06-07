@@ -23,7 +23,6 @@ my %whitelist = (
     map { $_ => 1 } (
         'dest/t2/humour/human-hacking/arabic-v2.html',
 'dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
-        'dest/t2/humour/humanity/songs/index.html',
         'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
 'dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
 'dest/t2/philosophy/case-for-file-swapping/revision-3/case-for-file-swapping-rev3/internet_as_alternative_medium.html',

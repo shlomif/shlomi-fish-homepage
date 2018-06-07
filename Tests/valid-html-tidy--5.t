@@ -21,7 +21,6 @@ package main;
 
 my %whitelist = (
     map { $_ => 1 } (
-        'dest/t2/humour/Blue-Rabbit-Log/ideas.xhtml',
         'dest/t2/humour/human-hacking/arabic-v2.html',
 'dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
         'dest/t2/humour/humanity/songs/index.html',

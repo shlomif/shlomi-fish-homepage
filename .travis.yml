@@ -10,7 +10,7 @@ before_install:
     - eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
     - cpanm --notest Alien::Tidyp YAML::XS
     - cpanm Alien::TidyHTML5
-    - (git clone https://github.com/robrwo/html-tidy5 && cd html-tidy5 && cpanm --installdeps . && perl Makefile.PL && make && make test && make install)
+    - (git clone https://github.com/robrwo/html-tidy5 && cd html-tidy5 && cpanm --installdeps . && perl Makefile.PL && make && make test && make install) && rm -fr html-tidy5
     # For wml
     - cpanm --notest Bit::Vector Class::XSAccessor GD Getopt::Long IO::All Image::Size Term::ReadKey
     # For quadp

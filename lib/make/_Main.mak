@@ -168,12 +168,6 @@ upload_all: upload upload_var upload_local upload_beta
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')
 
-t2/SFresume.html.wml : lib/SFresume_base.wml
-	touch $@
-
-t2/SFresume_detailed.html.wml : lib/SFresume_base.wml
-	touch $@
-
 $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html: lib/pages/t2/heb_resume.xhtml

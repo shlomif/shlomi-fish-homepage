@@ -2,7 +2,7 @@
 
 $Shlomif::Homepage::in_nav_block = undef();
 
-use Shlomif::Homepage::NavBlocks::Renderer;
+use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::NavBlocks (qw(
     get_nav_block
 ));

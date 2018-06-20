@@ -54,10 +54,6 @@ define T2_INCLUDE_WML_RENDER
 $(call GENERIC_WML_RENDER,t2,$(T2_SRC_DIR),$(T2_DEST))
 endef
 
-define T2_COMMON_INCLUDE_WML_RENDER
-$(call GENERIC_WML_RENDER,t2,$(COMMON_SRC_DIR),$(T2_DEST))
-endef
-
 make-dirs: $(T2_ALL_DIRS_DEST)
 
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl

@@ -148,20 +148,12 @@ upload_deps: all
 upload_local: upload_deps
 	$(call UPLOAD,$${HOMEPAGE_SSH_PATH})
 
-upload_backup: upload_deps
-	$(call UPLOAD,shlomif@alberni.textdrive.com:domains/www-backup.shlomifish.org/web/public)
-
-upload: upload_remote
-
-upload_remote: upload_local upload_remote_only
+upload: upload_local upload_remote_only
 
 upload_remote_only: upload_deps upload_remote_only_without_deps
 
 upload_remote_only_without_deps:
 	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
-
-upload_adbrite_only: upload_deps
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/adbrite-ie8-breakage/)
 
 upload_var: upload_deps upload_var_without_deps
 
@@ -172,8 +164,6 @@ upload_beta: upload_deps
 	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
 
 upload_all: upload upload_var upload_local upload_beta
-
-clean:
 
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')

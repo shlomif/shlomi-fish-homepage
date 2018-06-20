@@ -1241,7 +1241,7 @@ $(ENEMY_STYLE):
 	touch $@
 
 tags:
-	ctags -R --exclude='.hg/**' --exclude='*~' .
+	ctags -R --exclude='.git/**' --exclude='*~' .
 
 $(T2_DOCS_DEST): $(T2_DEST)/%: \
 	$(T2_CACHE_PREF)/%/breadcrumbs-trail \

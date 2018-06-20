@@ -143,6 +143,19 @@ my %tr_s = (
                 path       => "humour/bits/Copying-Ubuntu-Bug-No-1/",
             ),
             _l(
+                inner_html => "Announcing New Versions of the GPL",
+                path       => "humour/bits/New-versions-of-the-GPL/",
+            ),
+            _l(
+                inner_html =>
+                    "The Atom text editor edits a 2,000,001 bytes file",
+                path => "humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/",
+            ),
+            _l(
+                inner_html => "“HTML 6”, the new version of the Web",
+                path       => "humour/bits/HTML-6/",
+            ),
+            _l(
                 inner_html =>
                     "It’s not a Fooware - It’s an Operating System",
                 path =>

@@ -170,8 +170,6 @@ upload_hostgator: upload_deps
 
 $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
-$(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html: lib/pages/t2/heb_resume.xhtml
-
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
 T2_PHILOSOPHY_DOCS = \

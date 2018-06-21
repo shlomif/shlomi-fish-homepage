@@ -85,7 +85,7 @@ T2_CACHE_PREF = lib/cache/combined/t2
 T2_CACHE_ALL_DOCS = $(patsubst $(T2_DEST)/%,$(T2_CACHE_PREF)/%/sect-navmenu,$(T2_DOCS_DEST))
 
 $(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
-	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(COMMON_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 	touch $@
 
 sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
@@ -178,11 +178,6 @@ $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))
 
 $(T2_LECTURES_DOCS_SRC): $(T2_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
-	touch $@
-
-COMMON_LECTURES_DOCS_SRC = $(patsubst %,common/%.wml,$(filter lecture/%,$(COMMON_DOCS)))
-
-$(COMMON_LECTURES_DOCS_SRC): common/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
 T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \

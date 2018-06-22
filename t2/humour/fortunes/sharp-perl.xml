@@ -7625,5 +7625,74 @@
             </info>
         </irc>
     </fortune>
+
+    <fortune id="sharp-perl-length-n-minus-1">
+        <meta>
+            <title>length $n - 1</title>
+        </meta>
+        <irc>
+            <body>
+<saying who="rindolf">Hi all. So today I learned that: 1. Math::BigInt is much slower than native 64-bits even with the &#39;GMP&#39; backend (which I already knew, but I had it in legacy code). and - 2. `length $n - 1` evals to `length ($n - 1)` which was surprising.</saying>
+<saying who="simcop2387">deparse: length $n - 1</saying>
+<saying who="perlbot">simcop2387: length( ( $n - 1 ) );</saying>
+<saying who="rindolf">simcop2387: :)</saying>
+<saying who="simcop2387">eval: prototype(\&amp;CORE::length)</saying>
+<saying who="perlbot">simcop2387: _</saying>
+<saying who="simcop2387">huh, i&#39;m not sure i&#39;d have expected that either</saying>
+<saying who="anno">-1 + length $n; # if you hate parens</saying>
+<saying who="integral">&quot;named unary operators&quot; are below + - . but above ==, &amp;, etc</saying>
+<saying who="gordonfish">&quot;2. `length $n - 1` evals to `length ($n - 1)` which was surprising.&quot; ; Are you sure? I would think it&#39;s prototype would lock it to taking just one arg</saying>
+<saying who="integral">deparse: length $n - 1 &gt; 5</saying>
+<saying who="perlbot">integral: ( length( ( $n - 1 ) ) &gt; 5 );</saying>
+<saying who="ttkp">mmm parents</saying>
+<saying who="simcop2387">gordonfish: the deparse above shows it</saying>
+<saying who="ttkp">er &quot;parens&quot;</saying>
+<saying who="gordonfish">wth</saying>
+<saying who="simcop2387">rindolf: it seems that with #2 you&#39;re in good company</saying>
+<saying who="integral">gordonfish: it should be a &quot;named unary operator&quot; in the perlop precedence table</saying>
+<saying who="rindolf">simcop2387: i guess</saying>
+<saying who="integral">deparse: sin 5 &gt; 0.5</saying>
+<saying who="perlbot">integral: Can&#39;t locate object method &quot;object_2svref&quot; via package &quot;B::SPECIAL&quot; at /home/ryan/perl5/perlbrew/perls/perlbot-blead-2018-06-10_16794/lib/5.28.0/B/Deparse.pm line 5418.</saying>
+<saying who="integral">deparse: sin $n - 1 &gt; 0.5</saying>
+<saying who="perlbot">integral: ( sin( ( $n - 1 ) ) &gt; &quot;0.5&quot; );</saying>
+<saying who="xenu">gordonfish: that&#39;s not how prototypes work</saying>
+<saying who="simcop2387">integral++ # wtf did that break for</saying>
+<saying who="xenu">gordonfish: they affect commas</saying>
+<saying who="integral">simcop2387: optimiser compiles to a constant (guess)</saying>
+<saying who="simcop2387">integral: ah could be</saying>
+<saying who="simcop2387">also, that build is from 6-10? that&#39;s not good</saying>
+<saying who="xenu">deparse: sub penis($) { }; penis 1, 2;</saying>
+<saying who="perlbot">xenu: sub penis { ( $) }     ( penis(1), 2 );</saying>
+<saying who="xenu">deparse: sub penis($) { }; penis 1 + 2;</saying>
+<saying who="perlbot">xenu: sub penis { ( $) }     penis(3);</saying>
+<saying who="xenu">deparse: sub penis { }; penis 1, 2;</saying>
+<saying who="perlbot">xenu: sub penis { } penis( 1, 2 );</saying>
+<saying who="xenu">wait, why did old prototype syntax work? isn&#39;t perlbot enabling signatures?</saying>
+<saying who="simcop2387">xenu: not in deparse</saying>
+<saying who="gordonfish">sweval: no feature &#39;signatures&#39;; sub len1(_) { length shift } sub len2($) { length shift } [ [len1 &#39;foo&#39; - 1], [len2 &#39;foo&#39; - 1], [length &#39;foo&#39; - 1] ];</saying>
+<saying who="perlbot">gordonfish: Argument &quot;foo&quot; isn&#39;t numeric in subtraction (-) at (IRC) line 1. Argument &quot;foo&quot; isn&#39;t numeric in subtraction (-) at (IRC) line 1. Argument &quot;foo&quot; isn&#39;t numeric in subtraction (-) at (IRC) line 1. [[2],[2],[2]]</saying>
+<saying who="xenu">&gt;wait</saying>
+<saying who="xenu">er</saying>
+<saying who="xenu">wait</saying>
+<saying who="xenu">&gt;sub penis { ( $) }</saying>
+<saying who="xenu">wut</saying>
+<saying who="simcop2387">xenu: likely something horribly broken with how i end up mangling the B::Deparse output to make it work the way it does.  with the new eval server i don&#39;t need to do that since i can safely exec things differently but i haven&#39;t changed it yet</saying>
+<saying who="rindolf">simcop2387: length($n - 1) is usually not what i want</saying>
+<saying who="rindolf">and length($n)-1 is useful for substr</saying>
+<saying who="rindolf">like in for loops</saying>
+<saying who="simcop2387">that&#39;s one reason that i try not to be in the habit of not using parens for most perl functions.  it&#39;s easy enough to get bit by issues with commas even without thinking about cases like that</saying>
+<saying who="xenu">yeah, but special casing just one operator would be a bad design decision</saying>
+<saying who="simcop2387">xenu: agreed.  just because it&#39;s surprising doesn&#39;t mean it&#39;s wrong</saying>
+<saying who="rindolf">simcop2387: yeah</saying>
+<saying who="integral">perl&#39;s probably unique in having two different precendence levels for function calls and the lexer can&#39;t tell them apart without extra info</saying>
+
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

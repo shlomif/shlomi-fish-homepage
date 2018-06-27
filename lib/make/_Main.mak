@@ -1094,7 +1094,6 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/to-jqtree-2.js \
 	common/js/selfl.js \
 	common/js/sub_menu.js \
-	common/js/print-ver.js \
 
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
 	$(MULTI_YUI) -o $@ $(JQTREE_SRC)

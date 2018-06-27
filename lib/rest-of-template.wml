@@ -368,7 +368,6 @@ of an EvilPHish”</a> cartoon of
 <script type="text/javascript" src="$(ROOT)/js/to-jqtree-2.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/selfl.js"></script>
 <script type="text/javascript" src="$(ROOT)/js/sub_menu.js"></script>
-<script type="text/javascript" src="$(ROOT)/js/print-ver.js"></script>
 </define-tag>
 
 <define-tag main_all__js_scripts__proudction>
@@ -415,7 +414,6 @@ td { vertical-align : top; }
 shlomif_load_nav("<: print get_page_path(); :>");
 </script>
 <share_this_button />
-<div id="prnt_ver"></div>
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />
 {#HEBREW_XML_LANG_SCRIPT#}

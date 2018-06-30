@@ -1,22 +1,20 @@
 #!/usr/bin/perl
 
-use Carp::Always;
-
 use strict;
 use warnings;
 
 use lib './lib';
 
+use Carp::Always;
 use File::Basename qw/ dirname /;
 use Path::Tiny qw/ path /;
 use List::MoreUtils qw/ natatime /;
-
-use NavSectMenuRender;
-use NavDataRender;
-use MyNavData;
+use NavSectMenuRender ();
+use NavDataRender     ();
+use MyNavData         ();
 use URI::Escape qw(uri_escape);
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Parallel::ForkManager;
+use Parallel::ForkManager ();
 
 sub get_page_path
 {
@@ -37,7 +35,7 @@ sub get_root
     return ( ( $ret eq '' ) ? '.' : $ret );
 }
 
-use Shlomif::Out qw/write_on_change/;
+use File::Update qw/ write_on_change /;
 
 sub _out
 {

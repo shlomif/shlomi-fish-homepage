@@ -12,9 +12,7 @@ use Path::Tiny qw/ path /;
 use File::Find::Object::Rule ();
 use List::MoreUtils qw(any);
 use Parallel::ForkManager ();
-
-use lib './lib';
-use Shlomif::Out qw/ write_on_change /;
+use File::Update qw/ write_on_change /;
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 

@@ -2,22 +2,18 @@
 
 use strict;
 use warnings;
-
 use utf8;
 
 use lib './lib';
 
 use Path::Tiny qw/ path /;
-use Shlomif::Out qw/write_on_change write_on_change_no_utf8/;
-use JSON::MaybeXS ();
-
-use XML::LibXML;
-use XML::LibXML::XPathContext;
-
+use File::Update qw/ write_on_change write_on_change_no_utf8 /;
+use JSON::MaybeXS             ();
+use XML::LibXML               ();
+use XML::LibXML::XPathContext ();
 use XML::Grammar::Fortune 0.0600;
-use Template;
-
-use Shlomif::Homepage::FactoidsPages::Page;
+use Template                               ();
+use Shlomif::Homepage::FactoidsPages::Page ();
 
 my $p = XML::LibXML->new;
 

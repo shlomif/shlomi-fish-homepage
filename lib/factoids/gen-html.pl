@@ -983,7 +983,6 @@ foreach my $page (@pages)
 #include "Inc/summer_glau.wml"
 #include "factoids/common-out/tags.wml"
 #include "stories/stories-list.wml"
-#include "utils.wml"
 
 <latemp_subject "[% p.title() %]" />
 <latemp_meta_desc "[% p.meta_desc() %]" />

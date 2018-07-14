@@ -15,7 +15,7 @@ qr#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#
     qr#guide2ee/undergrad#,
     qr#(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))#,
 qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))#,
-    qr#humour/bits/facts/(?:Chuck-Norris|XSLT)#,
+    qr#humour/bits/facts/(?:XSLT)#,
     qr#^dest/t2/humour/fortunes/all-in-one#,
     qr#^dest/t2/humour/fortunes/joel#,
     qr#^dest/t2/humour/fortunes/nyh-sig#,

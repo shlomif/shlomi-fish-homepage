@@ -9,11 +9,20 @@ use utf8;
 binmode STDOUT, ":encoding(UTF-8)";
 
 open my $i, '<:encoding(UTF-8)', 'foo.txt';
+my %h;
+my @matches;
 while ( my $l = <$i> )
 {
     foreach my $m ( $l =~ m/«(.*?)»/g )
     {
-        print "$m\n";
+        if ( !$h{$m}++ )
+        {
+            push @matches, $m;
+        }
     }
 }
 close($i);
+foreach my $m (@matches)
+{
+    print "$m\t$h{$m}\n";
+}

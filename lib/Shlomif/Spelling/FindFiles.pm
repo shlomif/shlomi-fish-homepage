@@ -18,7 +18,6 @@ qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitch
     qr#^dest/t2/humour/fortunes/all-in-one#,
     qr#^dest/t2/humour/fortunes/joel#,
     qr#^dest/t2/humour/fortunes/nyh-sig#,
-    qr#^dest/t2/humour/fortunes/osp#,
     qr#^dest/t2/humour/fortunes/paul#,
     qr#^dest/t2/humour/fortunes/sharp#,
     qr#^dest/t2/humour/fortunes/shlomif-fav\.html#,

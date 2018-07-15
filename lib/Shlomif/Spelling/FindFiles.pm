@@ -21,7 +21,6 @@ qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitch
     qr#^dest/t2/humour/fortunes/osp#,
     qr#^dest/t2/humour/fortunes/paul#,
     qr#^dest/t2/humour/fortunes/sharp#,
-    qr#^dest/t2/humour/fortunes/shlomif\.html#,
     qr#^dest/t2/humour/fortunes/shlomif-fav\.html#,
     qr#^dest/t2/humour/fortunes/source-files-list.html#,
     qr#^dest/t2/humour/fortunes/subversion.html#,

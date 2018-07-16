@@ -27,6 +27,11 @@ my $software_tree_contents = {
                     title => "A Library and Program to solve Solitaire Games",
                 },
                 {
+                    text  => "PySol FC",
+                    url   => "open-source/projects/pysol/",
+                    title => "A suite of Solitaire games",
+                },
+                {
                     text  => "Latemp",
                     url   => "open-source/projects/latemp/",
                     title => "A Content Management System for Static HTML",

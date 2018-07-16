@@ -20,7 +20,6 @@ qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitch
     qr#^dest/t2/humour/fortunes/shlomif-fav\.html#,
     qr#^dest/t2/humour/fortunes/source-files-list.html#,
     qr#^dest/t2/humour/fortunes/subversion.html#,
-    qr#^dest/t2/humour/fortunes/tinic.html#,
     qr#humour/human-hacking/.*arabic#,
     qr#humour/human-hacking/human-hacking-field-guide/#,
     qr#humour/human-hacking/hebrew-v2#,

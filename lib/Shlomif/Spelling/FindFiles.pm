@@ -17,7 +17,6 @@ qr#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#
 qr#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))#,
     qr#^dest/t2/humour/fortunes/all-in-one#,
     qr#^dest/t2/humour/fortunes/sharp#,
-    qr#^dest/t2/humour/fortunes/shlomif-fav\.html#,
     qr#^dest/t2/humour/fortunes/source-files-list.html#,
     qr#humour/human-hacking/.*arabic#,
     qr#humour/human-hacking/human-hacking-field-guide/#,

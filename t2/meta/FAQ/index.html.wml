@@ -1682,6 +1682,22 @@ time-consuming, and I've already found some faults in one existing popular
 static site generator that I tried.
 </p>
 
+<h4 id="is_site_written_in_perl">Is this site written in Perl?</h4>
+
+<p>
+See <a href="#how_site_is_generated">above</a> - most of the site is generated
+using code and data and is served as static content on the server. There are
+about three
+<a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> scripts written in Perl 5 using
+<cpan_dist d="CGI-Minimal" /> but they do not serve most of the content.
+</p>
+
+<p>
+It is true that I make use of a lot of Perl code to generate the site's
+content, but the site's source code is not limited to Perl, and it does
+not run on the web server, nor is required to run most of it.
+</p>
+
 <h3 id="broken_links">I found some broken links on one of your sites. Should I report them to you?</h3>
 
 <p>

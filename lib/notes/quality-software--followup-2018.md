@@ -22,3 +22,5 @@
         - kinda slow
     - Mostly Positive: vlc
     - Mostly Positive: Emscripten / asm.js / WebAssembly
+    - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
+        - Fast

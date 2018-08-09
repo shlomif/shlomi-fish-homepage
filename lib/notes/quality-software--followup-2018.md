@@ -20,3 +20,5 @@
         - At computer shutdown
     - Red Hat's dnf
         - kinda slow
+    - Mostly Positive: vlc
+    - Mostly Positive: Emscripten / asm.js / WebAssembly

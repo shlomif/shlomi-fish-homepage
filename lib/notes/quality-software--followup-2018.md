@@ -1,29 +1,22 @@
 * Essay: reflections on how software quality has improved/worsened.
-
     - Follow-up on http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/
-
     - Follow-up on https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed
-
     - Follow-up on http://perl-begin.org/tutorials/bad-elements/
-
     - Follow-up on http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/
-
     - Follow-up on https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn#what-are-some-best-practices-in-programming-that-i-should-adopt
-
     - Freecell Solver speedups ( https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks ), new features ( http://fc-solve.shlomifish.org/features.html ), tests suite, CI, etc.  - cost of code complexity and readability
-
     - Learned about CI from https://perlhacks.com/2012/03/you-must-hate-version-control-systems/
-
     - Electron-based apps:
-
         - http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/
-
         - https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/
-
     - Software becoming slower and more resource hungry:
-
         - https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b
-
         - https://twitter.com/TheoVanGrind/status/888850519564984322
-
         - https://twitter.com/xbs/status/626781529054834688
+    - Windows Update - slow:
+        - http://www.shlomifish.org/humour/bits/facts/Windows-Update/
+        - Reportedly still breaks the system sometimes
+        - Gets invoked at inconvenient times
+        - At computer shutdown
+    - Red Hat's dnf
+        - kinda slow

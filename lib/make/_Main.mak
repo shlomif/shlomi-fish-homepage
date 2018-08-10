@@ -1112,7 +1112,7 @@ printable_resumes__html : $(PRINTABLE_RESUMES__HTML__PIVOT)
 PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
 
 $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
-	libreoffice --headless -convert-to docx --outdir printable $<
+	libreoffice --writer --headless --convert-to docx --outdir printable $<
 
 $(PRINTABLE_RESUMES__HTML__PIVOT): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh

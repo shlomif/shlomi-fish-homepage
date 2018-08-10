@@ -17,10 +17,14 @@
         - http://www.shlomifish.org/humour/bits/facts/Windows-Update/
         - Reportedly still breaks the system sometimes
         - Gets invoked at inconvenient times
-        - At computer shutdown
+            - Like at computer shutdown
     - Red Hat's dnf
         - kinda slow
     - Mostly Positive: vlc
     - Mostly Positive: Emscripten / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
+    - KDE/Plasma's update from 3 to 4 was badly done, and so was 4→5.
+        - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called ["Activities"|https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it] instead of on virtual workspaces.
+        - https://bugs.kde.org/show_bug.cgi?id=343246
+        - http://www.trinitydesktop.org/

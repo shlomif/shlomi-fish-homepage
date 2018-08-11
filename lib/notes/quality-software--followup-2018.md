@@ -5,7 +5,8 @@
     - Follow-up on http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/
     - Follow-up on https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn#what-are-some-best-practices-in-programming-that-i-should-adopt
     - Freecell Solver speedups ( https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks ), new features ( http://fc-solve.shlomifish.org/features.html ), tests suite, CI, etc.  - cost of code complexity and readability
-    - Learned about CI from https://perlhacks.com/2012/03/you-must-hate-version-control-systems/
+    - Learned about [CI](https://en.wikipedia.org/wiki/Continuous_integration) from https://perlhacks.com/2012/03/you-must-hate-version-control-systems/
+    - Since the essays were written, some apps improved while others got worse.
     - Electron-based apps:
         - http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/
         - https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/

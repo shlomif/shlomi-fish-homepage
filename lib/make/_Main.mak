@@ -9,7 +9,9 @@ endif
 
 ALL_DEST_BASE = dest
 
-all: sects_cache docbook_targets fortunes-target latemp_targets css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
+all: all_deps latemp_targets
+
+all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts mathjax_dest htaccesses_target printable_resumes__html mod_files
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -236,6 +238,7 @@ $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/a
 	$(GPERL) $<
 
 $(T2_DEST)/philosophy/books-recommends/index.html : $(PROD_SYND_NON_FICTION_BOOKS_INC)
+all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
@@ -478,6 +481,7 @@ $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HT
 	perl $(STRIP_HTML_BIN) < $< > $@
 
 $(T2_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
+all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
@@ -1267,5 +1271,5 @@ all: lib/presentations/qp/common/VimIface.pm
 lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 	$(call COPY)
 
-fastrender: $(T2_DOCS_SRC)
+fastrender: $(T2_DOCS_SRC) all_deps
 	LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS_DEST)

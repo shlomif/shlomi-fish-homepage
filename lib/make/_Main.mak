@@ -43,15 +43,15 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 define GENERIC_GENERIC_WML_RENDER
-$(call DEF_WML_PATH) ( cd $2 && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $3/%,%,$(patsubst %.wml,%,$@)) $(patsubst $2/%,%,$<) ) && $4 '$@'
+$(call DEF_WML_PATH) ( cd $1 && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $2/%,%,$(patsubst %.wml,%,$@)) $(patsubst $1/%,%,$<) ) && $3 '$@'
 endef
 
 define GENERIC_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER,$1,$2,$3,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES))
+$(call GENERIC_GENERIC_WML_RENDER,$1,$2,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES))
 endef
 
 define T2_INCLUDE_WML_RENDER
-$(call GENERIC_WML_RENDER,t2,$(T2_SRC_DIR),$(T2_DEST))
+$(call GENERIC_WML_RENDER,$(T2_SRC_DIR),$(T2_DEST))
 endef
 
 make-dirs: $(T2_ALL_DIRS_DEST)
@@ -620,7 +620,7 @@ $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMO
 FORTUNES_PROCESS_ALL_INCLUDES = F=1 APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)
 
 define FORTUNES_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER,t2,$(T2_SRC_DIR),$(T2_DEST),$(FORTUNES_PROCESS_ALL_INCLUDES))
+$(call GENERIC_GENERIC_WML_RENDER,$(T2_SRC_DIR),$(T2_DEST),$(FORTUNES_PROCESS_ALL_INCLUDES))
 endef
 
 # TODO : extract a macro for this and the rule below.

@@ -15,7 +15,7 @@ use lib "$HOME/apps/test/wml/lib64/wml";
 
 use WML_Frontends::Wml::Runner ();
 
-my ($dest) = @ARGV;
+my (@dests) = @ARGV;
 
 my $PWD       = Cwd::getcwd();
 my @WML_FLAGS = (
@@ -31,7 +31,7 @@ chdir($T2_SRC_DIR);
 
 my $obj = WML_Frontends::Wml::Runner->new;
 
-foreach my $dest ($dest)
+foreach my $dest (@dests)
 {
     my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
     $obj->run_with_ARGV(

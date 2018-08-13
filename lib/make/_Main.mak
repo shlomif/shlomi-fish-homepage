@@ -48,12 +48,8 @@ define GENERIC_GENERIC_WML_RENDER
 $(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $1 '$@'
 endef
 
-define GENERIC_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES))
-endef
-
 define T2_INCLUDE_WML_RENDER
-$(call GENERIC_WML_RENDER)
+$(call GENERIC_GENERIC_WML_RENDER,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES))
 endef
 
 make-dirs: $(T2_ALL_DIRS_DEST)

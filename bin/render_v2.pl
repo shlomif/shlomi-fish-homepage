@@ -56,8 +56,8 @@ foreach my $dest (@dests)
         $obj->run_with_ARGV(
             {
                 ARGV => [
-                    "-o",       $abs_dest,
-                    @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
+                    @WML_FLAGS, "-o",
+                    $abs_dest,  "-DLATEMP_FILENAME=$lfn",
                     $src,
                 ],
             }

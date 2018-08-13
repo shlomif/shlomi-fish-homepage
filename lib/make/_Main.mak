@@ -1259,6 +1259,7 @@ $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	perl $(TECH_TIPS_SCRIPT) $(patsubst %,--file=%,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
 
 $(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
+all_deps: $(TECH_TIPS_OUT)
 
 $(T2_DEST)/philosophy/computers/web/validate-your-html/index.html: lib/blogs/validate-your-html/README.md
 $(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.html: lib/blogs/how-to-share-code-online/README.md

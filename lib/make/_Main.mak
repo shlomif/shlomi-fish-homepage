@@ -1268,4 +1268,4 @@ lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 	$(call COPY)
 
 fastrender:
-	perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS_DEST)
+	LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS_DEST)

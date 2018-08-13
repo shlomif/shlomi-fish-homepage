@@ -43,7 +43,7 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 define GENERIC_GENERIC_WML_RENDER
-perl bin/render_v2.pl "$@" && $1 '$@'
+perl bin/render_v2.pl "$1" "$@"
 endef
 
 define T2_INCLUDE_WML_RENDER
@@ -1266,3 +1266,6 @@ all: lib/presentations/qp/common/VimIface.pm
 
 lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 	$(call COPY)
+
+fastrender:
+	perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS_DEST)

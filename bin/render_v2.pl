@@ -15,6 +15,7 @@ use lib "$HOME/apps/test/wml/lib64/wml";
 
 use WML_Frontends::Wml::Runner ();
 
+my $CMD = shift @ARGV;
 my (@dests) = @ARGV;
 
 my $PWD       = Cwd::getcwd();
@@ -60,5 +61,6 @@ foreach my $dest (@dests)
                 ],
             }
         ) and die "$!";
+        system("cd $PWD && $CMD $dest") and die "$!";
     }
 }

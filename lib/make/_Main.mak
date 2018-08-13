@@ -45,7 +45,7 @@ PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 # Does not work:
 # $(call DEF_WML_PATH) ( cd $1 && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $2/%.wml,%,$@) $(patsubst $1/%,%,$<) ) && $3 '$@'
 define GENERIC_GENERIC_WML_RENDER
-$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $1 '$@'
+$(call DEF_WML_PATH) ( cd $(T2_SRC_DIR) && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$@) $(patsubst $(T2_SRC_DIR)/%,%,$<) ) && $1 '$@'
 endef
 
 define T2_INCLUDE_WML_RENDER

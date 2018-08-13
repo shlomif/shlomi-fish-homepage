@@ -45,6 +45,7 @@ sub is_newer
     return ( $stat1[9] >= $stat2[9] );
 }
 
+my @to_proc;
 foreach my $dest (@dests)
 {
     my $lfn      = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
@@ -61,6 +62,7 @@ foreach my $dest (@dests)
                 ],
             }
         ) and die "$!";
-        system("cd $PWD && $CMD $dest") and die "$!";
+        push @to_proc, $dest;
     }
 }
+system("cd $PWD && $CMD @to_proc") and die "$!";

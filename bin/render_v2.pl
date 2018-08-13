@@ -31,16 +31,34 @@ chdir($T2_SRC_DIR);
 
 my $obj = WML_Frontends::Wml::Runner->new;
 
+sub is_newer
+{
+    my $file1 = shift;
+    my $file2 = shift;
+    my @stat1 = stat($file1);
+    my @stat2 = stat($file2);
+    if ( !@stat2 )
+    {
+        return 1;
+    }
+    return ( $stat1[9] >= $stat2[9] );
+}
+
 foreach my $dest (@dests)
 {
-    my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
-    $obj->run_with_ARGV(
-        {
-            ARGV => [
-                "-o",       "$PWD/$dest",
-                @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
-                "$lfn.wml"
-            ],
-        }
-    ) and die "$!";
+    my $lfn      = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
+    my $abs_dest = "$PWD/$dest";
+    my $src      = "$lfn.wml";
+    if ( is_newer( $src, $abs_dest ) )
+    {
+        $obj->run_with_ARGV(
+            {
+                ARGV => [
+                    "-o",       $abs_dest,
+                    @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
+                    $src,
+                ],
+            }
+        ) and die "$!";
+    }
 }

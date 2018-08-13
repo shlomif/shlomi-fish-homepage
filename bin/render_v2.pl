@@ -29,13 +29,18 @@ my $T2_DEST    = "dest/$T2_SRC_DIR";
 
 chdir($T2_SRC_DIR);
 
-my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
-WML_Frontends::Wml::Runner->new->run_with_ARGV(
-    {
-        ARGV => [
-            "-o",       "$PWD/$dest",
-            @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
-            "$lfn.wml"
-        ],
-    }
-) and die "$!";
+my $obj = WML_Frontends::Wml::Runner->new;
+
+foreach my $dest ($dest)
+{
+    my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
+    $obj->run_with_ARGV(
+        {
+            ARGV => [
+                "-o",       "$PWD/$dest",
+                @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
+                "$lfn.wml"
+            ],
+        }
+    ) and die "$!";
+}

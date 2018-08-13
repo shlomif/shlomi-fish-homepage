@@ -5,6 +5,7 @@ use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.5.0;
 use File::Copy qw/ copy /;
+use File::Which qw/ which /;
 use Path::Tiny qw/ path /;
 use List::MoreUtils ();
 
@@ -163,4 +164,9 @@ foreach my $ext (qw/ html pdf /)
 
 path('Makefile')->spew_utf8("include ${DIR}_Main.mak\n");
 
+path('bin/render_v2.pl')->spew_utf8(
+    path('bin/render_v2-proto.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
+    path((which('wml'))[0])->slurp_utf8() =~ /^((?:use lib[^\n]+\n)+)/ms
+    ? $1 : die "no wml"#emrs
+);
 _my_system( [ 'make', 'sects_cache' ] );

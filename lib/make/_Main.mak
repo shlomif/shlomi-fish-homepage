@@ -42,6 +42,8 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
+# Does not work:
+# $(call DEF_WML_PATH) ( cd $1 && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $2/%.wml,%,$@) $(patsubst $1/%,%,$<) ) && $3 '$@'
 define GENERIC_GENERIC_WML_RENDER
 $(call DEF_WML_PATH) ( cd $1 && wml -o "$$fn" $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $2/%,%,$(patsubst %.wml,%,$@)) $(patsubst $1/%,%,$<) ) && $3 '$@'
 endef

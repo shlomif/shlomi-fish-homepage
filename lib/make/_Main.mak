@@ -231,6 +231,8 @@ PROD_SYND_FILMS_INC = $(PROD_SYND_FILMS_DIR)/include-me.html
 $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 	touch $@
 
+all_deps: $(PROD_SYND_MUSIC_INC)
+
 GPERL = perl -Ilib
 GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 
@@ -244,6 +246,7 @@ $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod
 	$(GPERL) $<
 
 $(T2_DEST)/humour/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
+all_deps: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<

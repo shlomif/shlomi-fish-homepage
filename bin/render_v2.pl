@@ -5,8 +5,17 @@ use warnings;
 use 5.014;
 use Cwd ();
 
+BEGIN
+{
+    use vars qw/ $HOME /;
+    $HOME = $ENV{HOME};
+}
+use lib "$HOME/apps/test/wml/lib64/wml";
+use lib "$HOME/apps/test/wml/lib64/wml";
+
+use WML_Frontends::Wml::Runner ();
+
 my ($dest) = @ARGV;
-my $HOME = $ENV{HOME};
 
 my $PWD       = Cwd::getcwd();
 my @WML_FLAGS = (
@@ -21,6 +30,12 @@ my $T2_DEST    = "dest/$T2_SRC_DIR";
 chdir($T2_SRC_DIR);
 
 my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
-system( "wml", "-o", "$PWD/$dest", @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
-    "$lfn.wml" )
-    and die "$!";
+WML_Frontends::Wml::Runner->new->run_with_ARGV(
+    {
+        ARGV => [
+            "-o",       "$PWD/$dest",
+            @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
+            "$lfn.wml"
+        ],
+    }
+) and die "$!";

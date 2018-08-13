@@ -19,6 +19,5 @@ my $T2_DEST    = "dest/$T2_SRC_DIR";
 chdir($T2_SRC_DIR);
 
 my $lfn = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
-system( "wml", "-o", $fn, @WML_FLAGS, "-DLATEMP_FILENAME=$lfn",
-    $src =~ s#\A\Q$T2_SRC_DIR\E/##r )
+system( "wml", "-o", $fn, @WML_FLAGS, "-DLATEMP_FILENAME=$lfn", "$lfn.wml" )
     and die "$!";

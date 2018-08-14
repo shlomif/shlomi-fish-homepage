@@ -31,6 +31,7 @@ before_install:
     - find ~/conf
     - touch t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/*.{html,pdf}
     - bash -x bin/install-npm-deps.sh
+    - sudo ln -s /usr/bin/make /usr/bin/gmake
 python:
     - "3.5"
 script:

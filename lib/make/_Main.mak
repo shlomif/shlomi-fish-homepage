@@ -825,8 +825,8 @@ ART_SLOGANS_DOCS = \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
 ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
-ART_SLOGANS_PNGS = $(patsubst %,%.png,$(ART_SLOGANS_PATHS))
-ART_SLOGANS_THUMBS = $(patsubst %,%.thumb.png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
 OPTIPNG = optipng -o7
 

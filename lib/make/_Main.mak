@@ -769,7 +769,7 @@ $(DOCBOOK4_RTF_DIR)/%.rtf: $(DOCBOOK4_FO_DIR)/%.fo
 
 $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
-	mv $(patsubst %/all-in-one.html,%/index.html,$@) $@
+	mv $(@:%/all-in-one.html=%/index.html) $@
 	perl -lpi -e 's/[ \t]+\z//' $@
 
 # DOCBOOK5_RELAXNG = http://www.docbook.org/xml/5.0/rng/docbook.rng

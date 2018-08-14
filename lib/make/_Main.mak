@@ -45,7 +45,7 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 define GENERIC_GENERIC_WML_RENDER
-LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" UNCOND=1 perl bin/render_v2.pl "$1" "$@"
+LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" UNCOND=1 perl bin/render_v2.pl "$1" "${@:$(T2_DEST)/%=%}"
 endef
 
 define T2_INCLUDE_WML_RENDER
@@ -1276,4 +1276,4 @@ lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 	$(call COPY)
 
 fastrender: $(T2_DOCS_SRC) all_deps
-	LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS_DEST)
+	LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" perl bin/render_v2.pl "APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)" $(T2_DOCS)

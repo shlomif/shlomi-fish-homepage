@@ -47,9 +47,9 @@ sub is_newer
 }
 
 my @to_proc;
-foreach my $dest (@dests)
+foreach my $lfn (@dests)
 {
-    my $lfn      = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
+    my $dest     = "$T2_DEST/$lfn";
     my $abs_dest = "$PWD/$dest";
     my $src      = "$lfn.wml";
     if ( $UNCOND or is_newer( $src, $abs_dest ) )

@@ -169,6 +169,7 @@ $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
 t2_filt = $(filter $(T2_DEST)/$1/%,$(T2_DOCS_DEST))
+t2_src_filt = $(filter $(T2_SRC_DIR)/$1/%,$(T2_DOCS_SRC))
 
 T2_PHILOSOPHY_DOCS = \
 	$(call t2_filt,philosophy) \
@@ -177,17 +178,17 @@ T2_PHILOSOPHY_DOCS = \
 
 $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 
-T2_LECTURES_DOCS_SRC = $(filter $(T2_SRC_DIR)/lecture/%,$(T2_DOCS_SRC))
+T2_LECTURES_DOCS_SRC = $(call t2_src_filt,lecture/)
 
 $(T2_LECTURES_DOCS_SRC): $(T2_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
 	touch $@
 
-T2_SOFTWARE_DOCS_SRC = $(filter $(T2_SRC_DIR)/open-source/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/jmikmod/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/grad-fu/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/no-ie/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/rindolf/%,$(T2_DOCS_SRC)) \
-					   $(filter $(T2_SRC_DIR)/rwlock/%,$(T2_DOCS_SRC))
+T2_SOFTWARE_DOCS_SRC = $(call t2_src_filt,open-source) \
+					   $(call t2_src_filt,jmikmod) \
+					   $(call t2_src_filt,grad-fu) \
+					   $(call t2_src_filt,no-ie) \
+					   $(call t2_src_filt,rindolf) \
+					   $(call t2_src_filt,rwlock)
 
 $(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 	touch $@
@@ -206,7 +207,7 @@ T2_ART_DOCS_DEST = $(call t2_filt,art)
 
 $(T2_ART_DOCS_DEST): $(ART_DEPS)
 
-T2_PUZZLES_DOCS_SRC = $(filter $(T2_SRC_DIR)/puzzles/%,$(T2_DOCS_SRC)) $(filter $(T2_SRC_DIR)/MathVentures/%,$(T2_DOCS_SRC)) $(filter $(T2_SRC_DIR)/toggle.html.wml,$(T2_DOCS_SRC))
+T2_PUZZLES_DOCS_SRC = $(call t2_src_filt,puzzles) $(call t2_src_filt,MathVentures) $(filter $(T2_SRC_DIR)/toggle.html.wml,$(T2_DOCS_SRC))
 
 $(T2_PUZZLES_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(PUZZLES_DEPS)
 	touch $@

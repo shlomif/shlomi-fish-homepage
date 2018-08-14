@@ -168,6 +168,7 @@ $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
+t2_filt_file = $(filter $(T2_DEST)/$1,$(T2_DOCS_DEST))
 t2_filt = $(filter $(T2_DEST)/$1/%,$(T2_DOCS_DEST))
 t2_src_filt = $(filter $(T2_SRC_DIR)/$1/%,$(T2_DOCS_SRC))
 
@@ -195,11 +196,12 @@ $(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 
 #### Humour thing
 
-T2_HUMOUR_DOCS_DEST = $(call t2_filt,humour) \
-					 $(filter $(T2_DEST)/humour.html,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/humour-heb.html,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/wysiwyt.html,$(T2_DOCS_DEST)) \
-					 $(filter $(T2_DEST)/wonderous.html,$(T2_DOCS_DEST))
+T2_HUMOUR_DOCS_DEST = \
+	$(call t2_filt,humour) \
+	$(call t2_filt_file,humour.html) \
+	$(call t2_filt_file,humour-heb.html) \
+	$(call t2_filt_file,wysiwyt.html) \
+	$(call t2_filt_file,wonderous.html)
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 

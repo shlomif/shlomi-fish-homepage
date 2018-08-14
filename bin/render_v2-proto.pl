@@ -15,7 +15,8 @@ use lib "$HOME/apps/test/wml/lib64/wml";
 
 use WML_Frontends::Wml::Runner ();
 
-my $CMD = shift @ARGV;
+my $UNCOND  = $ENV{UNCOND} // '';
+my $CMD     = shift @ARGV;
 my (@dests) = @ARGV;
 
 my $PWD       = Cwd::getcwd();
@@ -51,7 +52,7 @@ foreach my $dest (@dests)
     my $lfn      = $dest =~ s#\A\Q$T2_DEST\E/##mrs;
     my $abs_dest = "$PWD/$dest";
     my $src      = "$lfn.wml";
-    if ( is_newer( $src, $abs_dest ) )
+    if ( $UNCOND or is_newer( $src, $abs_dest ) )
     {
         $obj->run_with_ARGV(
             {

@@ -45,7 +45,7 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 
 define GENERIC_GENERIC_WML_RENDER
-LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" perl bin/render_v2.pl "$1" "$@"
+LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" UNCOND=1 perl bin/render_v2.pl "$1" "$@"
 endef
 
 define T2_INCLUDE_WML_RENDER

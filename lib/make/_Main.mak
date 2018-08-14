@@ -168,10 +168,12 @@ $(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
+t2_filt = $(filter $(T2_DEST)/$1/%,$(T2_DOCS_DEST))
+
 T2_PHILOSOPHY_DOCS = \
-	$(filter $(T2_DEST)/philosophy/%,$(T2_DOCS_DEST)) \
-	$(filter $(T2_DEST)/prog-evolution/%,$(T2_DOCS_DEST)) \
-	$(filter $(T2_DEST)/DeCSS/%,$(T2_DOCS_DEST))
+	$(call t2_filt,philosophy) \
+	$(call t2_filt,prog-evolution) \
+	$(call t2_filt,DeCSS)
 
 $(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
 
@@ -192,7 +194,7 @@ $(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
 
 #### Humour thing
 
-T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
+T2_HUMOUR_DOCS_DEST = $(call t2_filt,humour) \
 					 $(filter $(T2_DEST)/humour.html,$(T2_DOCS_DEST)) \
 					 $(filter $(T2_DEST)/humour-heb.html,$(T2_DOCS_DEST)) \
 					 $(filter $(T2_DEST)/wysiwyt.html,$(T2_DOCS_DEST)) \
@@ -200,7 +202,7 @@ T2_HUMOUR_DOCS_DEST = $(filter $(T2_DEST)/humour/%,$(T2_DOCS_DEST)) \
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
-T2_ART_DOCS_DEST = $(filter $(T2_DEST)/art/%,$(T2_DOCS_DEST))
+T2_ART_DOCS_DEST = $(call t2_filt,art)
 
 $(T2_ART_DOCS_DEST): $(ART_DEPS)
 
@@ -209,7 +211,7 @@ T2_PUZZLES_DOCS_SRC = $(filter $(T2_SRC_DIR)/puzzles/%,$(T2_DOCS_SRC)) $(filter 
 $(T2_PUZZLES_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(PUZZLES_DEPS)
 	touch $@
 
-T2_META_DOCS_DEST = $(filter $(T2_DEST)/meta/%,$(T2_DOCS_DEST))
+T2_META_DOCS_DEST = $(call t2_filt,meta)
 
 $(T2_META_DOCS_DEST): $(META_SUBSECT_DEPS)
 
@@ -738,19 +740,6 @@ DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-styleshe
 DOCBOOK5_XSL_FO_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-fo.xsl
 
 DOCBOOK5_DOCS += $(FICTION_DOCS)
-
-# DOCBOOK4_BASE_DIR = lib/docbook/4
-# DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
-# DOCBOOK4_SOURCES_DIR = $(DOCBOOK4_BASE_DIR)/xml
-# DOCBOOK4_FO_DIR = $(DOCBOOK4_BASE_DIR)/fo
-# DOCBOOK4_PDF_DIR = $(DOCBOOK4_BASE_DIR)/pdf
-# DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
-
-# DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
-# DOCBOOK5_RENDERED_HTMLS = $(patsubst %,$(DOCBOOK5_RENDERED_DIR)/%.xhtml,$(DOCBOOK5_DOCS))
-# DOCBOOK5_FOS = $(patsubst %,$(DOCBOOK5_FO_DIR)/%.fo,$(DOCBOOK5_DOCS))
-# DOCBOOK5_PDFS = $(patsubst %,$(DOCBOOK5_PDF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
-# DOCBOOK5_RTFS = $(patsubst %,$(DOCBOOK5_RTF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
 
 $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<

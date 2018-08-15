@@ -8,7 +8,6 @@ use lib './lib';
 use Carp::Always;
 use File::Basename qw/ dirname /;
 use Path::Tiny qw/ path /;
-use List::MoreUtils qw/ natatime /;
 use NavSectMenuRender ();
 use NavDataRender     ();
 use MyNavData         ();

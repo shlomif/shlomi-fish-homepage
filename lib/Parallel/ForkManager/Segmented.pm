@@ -1,0 +1,70 @@
+package Parallel::ForkManager::Segmented;
+
+use strict;
+use warnings;
+
+use List::MoreUtils qw/ natatime /;
+use Parallel::ForkManager ();
+
+sub new
+{
+    my $class = shift;
+
+    my $self = bless {}, $class;
+
+    $self->_init(@_);
+
+    return $self;
+}
+
+sub _init
+{
+    my ( $self, $args ) = @_;
+
+    return;
+}
+
+sub run
+{
+    my ( $self, $args ) = @_;
+
+    my $WITH_PM = $args->{WITH_PM};
+    my $items   = $args->{items};
+    my $cb      = $args->{process_item};
+
+    my $pm;
+
+    if ($WITH_PM)
+    {
+        $pm = Parallel::ForkManager->new(4);
+    }
+    my $it = natatime 8, @$items;
+ITEMS:
+    while ( my @batch = $it->() )
+    {
+        if ($WITH_PM)
+        {
+            my $pid = $pm->start;
+
+            if ($pid)
+            {
+                next ITEMS;
+            }
+        }
+        foreach my $item (@batch)
+        {
+            $cb->($item);
+        }
+        if ($WITH_PM)
+        {
+            $pm->finish;    # Terminates the child process
+        }
+    }
+    if ($WITH_PM)
+    {
+        $pm->wait_all_children;
+    }
+    return;
+}
+
+1;

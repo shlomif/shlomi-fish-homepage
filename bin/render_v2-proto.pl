@@ -4,8 +4,6 @@ use strict;
 use warnings;
 use 5.014;
 use Cwd ();
-use List::MoreUtils qw/ natatime /;
-use Parallel::ForkManager ();
 
 BEGIN
 {
@@ -16,6 +14,10 @@ use lib "$HOME/apps/test/wml/lib64/wml";
 use lib "$HOME/apps/test/wml/lib64/wml";
 
 use WML_Frontends::Wml::Runner ();
+
+use lib './lib';
+
+use Parallel::ForkManager::Segmented ();
 
 my $UNCOND  = $ENV{UNCOND} // '';
 my $CMD     = shift @ARGV;
@@ -61,8 +63,7 @@ foreach my $lfn (@dests)
 }
 my $to_proc = [ map $_->[1], @queue ];
 my @FLAGS = ( @WML_FLAGS, '-o', );
-my $pm    = Parallel::ForkManager->new(4);
-my $proc  = sub {
+my $proc = sub {
     $obj->run_with_ARGV(
         {
             ARGV => [ @FLAGS, @{ shift(@_)->[0] } ],
@@ -70,24 +71,13 @@ my $proc  = sub {
     ) and die "$!";
     return;
 };
-$proc->( shift @queue );
-my $it = natatime 8, @queue;
-URLS:
-while ( my @items = $it->() )
-{
-    my $pid = $pm->start;
-
-    if ($pid)
+Parallel::ForkManager::Segmented->new->run(
     {
-        next URLS;
+        WITH_PM      => 1,
+        items        => \@queue,
+        process_item => $proc,
     }
-    foreach my $item (@items)
-    {
-        $proc->($item);
-    }
-    $pm->finish;    # Terminates the child process
-}
-$pm->wait_all_children;
+);
 system("cd $PWD && $CMD @{$to_proc}") and die "$!";
 
 __END__

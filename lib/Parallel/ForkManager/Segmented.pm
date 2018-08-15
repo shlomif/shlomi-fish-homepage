@@ -38,6 +38,7 @@ sub run
     {
         $pm = Parallel::ForkManager->new(4);
     }
+    $cb->( shift @$items );
     my $it = natatime 8, @$items;
 ITEMS:
     while ( my @batch = $it->() )

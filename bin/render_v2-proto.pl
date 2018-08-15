@@ -57,11 +57,12 @@ foreach my $lfn (@dests)
         push @queue, [ [ $abs_dest, "-DLATEMP_FILENAME=$lfn", $src, ], $dest ];
     }
 }
+my @FLAGS = ( @WML_FLAGS, '-o', );
 foreach my $item (@queue)
 {
     $obj->run_with_ARGV(
         {
-            ARGV => [ @WML_FLAGS, "-o", @{ $item->[0] } ],
+            ARGV => [ @FLAGS, @{ $item->[0] } ],
         }
     ) and die "$!";
 }

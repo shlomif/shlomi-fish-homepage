@@ -65,6 +65,8 @@ foreach my $host (qw(t2 vipe))
                 ? ( \@ARGV )
                 : [qw(index.html lecture/index.html)]
             ),
+            nproc        => 4,
+            batch_size   => 8,
             process_item => sub {
                 my $proto_url = shift;
                 my $url       = $proto_url =~ s#(\A|/)index\.html\z#$1#r;

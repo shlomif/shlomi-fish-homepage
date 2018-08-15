@@ -28,18 +28,20 @@ sub run
 {
     my ( $self, $args ) = @_;
 
-    my $WITH_PM = $args->{WITH_PM};
-    my $items   = $args->{items};
-    my $cb      = $args->{process_item};
+    my $WITH_PM    = $args->{WITH_PM};
+    my $items      = $args->{items};
+    my $cb         = $args->{process_item};
+    my $nproc      = $args->{nproc};
+    my $batch_size = $args->{batch_size};
 
     my $pm;
 
     if ($WITH_PM)
     {
-        $pm = Parallel::ForkManager->new(4);
+        $pm = Parallel::ForkManager->new($nproc);
     }
     $cb->( shift @$items );
-    my $it = natatime 8, @$items;
+    my $it = natatime $batch_size, @$items;
 ITEMS:
     while ( my @batch = $it->() )
     {

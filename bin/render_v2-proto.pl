@@ -46,7 +46,7 @@ sub is_newer
     return ( $stat1[9] >= $stat2[9] );
 }
 
-my @to_proc;
+my @queue;
 foreach my $lfn (@dests)
 {
     my $dest     = "$T2_DEST/$lfn";
@@ -54,19 +54,18 @@ foreach my $lfn (@dests)
     my $src      = "$lfn.wml";
     if ( $UNCOND or is_newer( $src, $abs_dest ) )
     {
-        $obj->run_with_ARGV(
-            {
-                ARGV => [
-                    @WML_FLAGS, "-o",
-                    $abs_dest,  "-DLATEMP_FILENAME=$lfn",
-                    $src,
-                ],
-            }
-        ) and die "$!";
-        push @to_proc, $dest;
+        push @queue, [ [ $abs_dest, "-DLATEMP_FILENAME=$lfn", $src, ], $dest ];
     }
 }
-system("cd $PWD && $CMD @to_proc") and die "$!";
+foreach my $item (@queue)
+{
+    $obj->run_with_ARGV(
+        {
+            ARGV => [ @WML_FLAGS, "-o", @{ $item->[0] } ],
+        }
+    ) and die "$!";
+}
+system("cd $PWD && $CMD @{[map $_->[1], @queue]}") and die "$!";
 
 __END__
 

@@ -2,6 +2,7 @@ package Parallel::ForkManager::Segmented;
 
 use strict;
 use warnings;
+use 5.014;
 
 use List::MoreUtils qw/ natatime /;
 use Parallel::ForkManager ();
@@ -28,7 +29,7 @@ sub run
 {
     my ( $self, $args ) = @_;
 
-    my $WITH_PM    = $args->{WITH_PM};
+    my $WITH_PM    = !$args->{disable_fork};
     my $items      = $args->{items};
     my $cb         = $args->{process_item};
     my $nproc      = $args->{nproc};

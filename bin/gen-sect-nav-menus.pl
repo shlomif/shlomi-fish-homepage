@@ -59,8 +59,7 @@ foreach my $host (qw(t2 vipe))
 
     Parallel::ForkManager::Segmented->new->run(
         {
-            WITH_PM => 1,
-            items   => (
+            items => (
                   ( $host eq 't2' )
                 ? ( \@ARGV )
                 : [qw(index.html lecture/index.html)]

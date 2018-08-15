@@ -73,7 +73,6 @@ my $proc = sub {
 };
 Parallel::ForkManager::Segmented->new->run(
     {
-        WITH_PM      => 1,
         items        => \@queue,
         nproc        => 4,
         batch_size   => 8,

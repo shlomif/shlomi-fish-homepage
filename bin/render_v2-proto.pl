@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use 5.014;
 use Cwd ();
+use List::MoreUtils qw/ natatime /;
+use Parallel::ForkManager ();
 
 BEGIN
 {
@@ -57,16 +59,36 @@ foreach my $lfn (@dests)
         push @queue, [ [ $abs_dest, "-DLATEMP_FILENAME=$lfn", $src, ], $dest ];
     }
 }
+my $to_proc = [ map $_->[1], @queue ];
 my @FLAGS = ( @WML_FLAGS, '-o', );
-foreach my $item (@queue)
-{
+my $pm    = Parallel::ForkManager->new(4);
+my $proc  = sub {
     $obj->run_with_ARGV(
         {
-            ARGV => [ @FLAGS, @{ $item->[0] } ],
+            ARGV => [ @FLAGS, @{ shift(@_)->[0] } ],
         }
     ) and die "$!";
+    return;
+};
+$proc->( shift @queue );
+my $it = natatime 8, @queue;
+URLS:
+while ( my @items = $it->() )
+{
+    my $pid = $pm->start;
+
+    if ($pid)
+    {
+        next URLS;
+    }
+    foreach my $item (@items)
+    {
+        $proc->($item);
+    }
+    $pm->finish;    # Terminates the child process
 }
-system("cd $PWD && $CMD @{[map $_->[1], @queue]}") and die "$!";
+$pm->wait_all_children;
+system("cd $PWD && $CMD @{$to_proc}") and die "$!";
 
 __END__
 

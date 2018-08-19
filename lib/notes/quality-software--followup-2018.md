@@ -26,10 +26,10 @@
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
     - KDE/Plasma's update from 3 to 4 was poorly done, and so was 4→5.
-        - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called ["Activities"|https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it] instead of on virtual workspaces.
+        - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called ["Activities"](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
         - https://bugs.kde.org/show_bug.cgi?id=343246
         - http://www.trinitydesktop.org/
-    - Mostly Positive: [cmake|https://en.wikipedia.org/wiki/CMake]
+    - Mostly Positive: [cmake](https://en.wikipedia.org/wiki/CMake)
         - Not perfect but less errorprone and faster than GNU Autotools
         - http://www.shlomifish.org/open-source/anti/autohell/
         - https://en.wikipedia.org/wiki/Meson_(software)

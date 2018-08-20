@@ -9,6 +9,7 @@
 /bin/Run-YUI-Compressor
 /bin/batch-inplace-html-minifier
 /bin/clean-up-docbook-xhtml-1.1.xslt
+/bin/extract-spelling-errors.pl
 /bin/gen-build-deps
 /bin/gen-rpm-for-build-deps
 /bin/html-min-cli-config-file.conf
@@ -16,6 +17,7 @@
 /bin/render_v2.pl
 /bin/sort-check-spelling-file
 /bin/spell-checker-iface
+/bin/spell.bash
 /bin/translate-Vered-XML
 /common/images/bk2hp.png
 /dest
@@ -299,20 +301,20 @@
 /lib/htmls/The-Enemy-rev5.html-part
 /lib/make/build-deps/build-deps.mak
 /lib/make/build-deps/build-deps.stamp
+/lib/make/deps.mak
 /lib/make/docbook/sf-fictions.mak
 /lib/make/docbook/sf-homepage-docbooks-generated.mak
 /lib/make/docbook/sf-screenplays.mak
-/lib/make/deps.mak
-/lib/make/long_sories.mak
 /lib/make/include.mak
+/lib/make/long_sories.mak
 /lib/make/rules.mak
 /lib/make/shlomif_common.mak
 /lib/pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped
 /lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml.processed-stripped
 /lib/presentations/docbook/html-tutorial
-/lib/presentations/qp/**/Contents.pm
 /lib/presentations/qp/**/.quadpres/is_root
 /lib/presentations/qp/**/.wmlrc
+/lib/presentations/qp/**/Contents.pm
 /lib/presentations/qp/**/src/style.css
 /lib/presentations/qp/Autotools/FINISH_STAMP
 /lib/presentations/qp/Autotools/SOURCE
@@ -582,7 +584,6 @@
 /lib/presentations/qp/perl-for-newbies/5/src/accessors/Person.pm.html-for-quad-pres
 /lib/presentations/qp/perl-for-newbies/5/src/accessors/test-person.pl.html-for-quad-pres
 /lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/MyMath-Ops-with-MyMath-Ops-Add-pm/lib/MyMath/Ops/Add.pm.html-for-quad-pres
-lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/MyMath-Ops-with-add-t/t/add.t.html-for-quad-pres
 /lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/invoke-m-s.bash.html-for-quad-pres
 /lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/module-starter.help.txt.html-for-quad-pres
 /lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/perl-Build-PL-1-output.txt.html-for-quad-pres
@@ -697,7 +698,6 @@ lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/MyMath-Ops-
 /node_modules/
 /package-lock.json
 /printable
-t2/humour/fortunes/*.dat
 /t2/humour/fortunes/all-in-one.uncompressed.html.wml
 /t2/humour/fortunes/arcs-list.mak
 /t2/humour/fortunes/bbt
@@ -735,3 +735,5 @@ t2/humour/fortunes/*.dat
 /t2/humour/fortunes/tinic.html.wml
 /tags
 /tslint.json
+lib/presentations/qp/perl-for-newbies/5/src/module-build-and-starter/MyMath-Ops-with-add-t/t/add.t.html-for-quad-pres
+t2/humour/fortunes/*.dat

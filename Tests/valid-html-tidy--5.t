@@ -21,10 +21,10 @@ package main;
 
 my %whitelist = (
     map { $_ => 1 } (
-        'dest/t2/humour/human-hacking/arabic-v2.html',
-'dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
-        'dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
-'dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
+        'post-dest/t2/humour/human-hacking/arabic-v2.html',
+'post-dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
+'post-dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
+'post-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
     ),
 );
 
@@ -34,9 +34,10 @@ Test::HTML::Tidy::Recursive::Tidy5->new(
             my $fn = shift;
             return not(
                 exists $whitelist{$fn}
-                or $fn =~ m#\A dest/t2/ (?: MathVentures | js/jquery-ui/ ) #x,
+                or $fn =~
+                m#\A post-dest/t2/ (?: MathVentures | js/jquery-ui/ ) #x,
             );
         },
-        targets => ['./dest'],
+        targets => ['./post-dest'],
     }
 )->run;

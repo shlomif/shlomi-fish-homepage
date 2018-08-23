@@ -7,7 +7,8 @@ use Path::Tiny qw/ path /;
 
 {
     my $content =
-        path("./dest/t2/humour/fortunes/sharp-programming.html")->slurp_utf8;
+        path("./post-dest/t2/humour/fortunes/sharp-programming.html")
+        ->slurp_utf8;
 
     # TEST
     like(

@@ -7,12 +7,12 @@ use Test::HTML::Tidy::Recursive;
 
 Test::HTML::Tidy::Recursive->new(
     {
-        targets         => ['./dest'],
+        targets         => ['./post-dest'],
         filename_filter => sub {
             my $fn = shift;
             return (
                 not(   $fn =~ m{js/MathJax}
-                    or $fn =~ m{\Adest/t2/MathVentures/} )
+                    or $fn =~ m{\Apost-dest/t2/MathVentures/} )
             );
         },
     }

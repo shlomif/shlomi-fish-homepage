@@ -17,7 +17,7 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             abs_path_prune_re => qr%
             \A(?:
             (?:
-            (?:dest/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
+            (?:(?:dest|post-dest)/t2|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
             )
             |
             lib/ebookmaker/\.git

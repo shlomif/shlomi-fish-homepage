@@ -13,7 +13,7 @@ use Path::Tiny qw/ path /;
 
     # TEST
     like(
-        path("./dest/t2/index.html")->slurp_utf8,
+        path("./post-dest/t2/index.html")->slurp_utf8,
         qr#<meta (?:(?:$H_RE$C_RE)|(?:$C_RE$H_RE))/>#
     );
 }

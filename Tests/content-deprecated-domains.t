@@ -6,7 +6,7 @@ use Test::More tests => 1;
 use Test::Differences (qw(eq_or_diff));
 
 # TEST
-eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' ./dest`),
+eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' ./post-dest`),
     '', "No deprecated (hijacked/etc.) domains." );
 __END__
 

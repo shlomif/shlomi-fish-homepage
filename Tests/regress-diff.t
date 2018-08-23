@@ -4,8 +4,8 @@ use warnings;
 use Test::More ( tests => 1 );
 use Test::Differences qw(eq_or_diff);
 
-my $src  = 'dest';
-my $good = '../GOOD-dest';
+my $src  = 'post-dest';
+my $good = '../GOOD-post-dest';
 
 {
     # TEST

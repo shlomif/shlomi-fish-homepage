@@ -43,6 +43,7 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
+PROCESS_ALL_INCLUDES__NON_INPLACE = perl bin/post-incs-v2.pl
 
 define WML_RENDER
 LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 perl bin/render_v2.pl "$2"
@@ -1260,8 +1261,10 @@ $(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.html: l
 
 all: $(T2_CLEAN_STAMP)
 
+T2_POST_DEST = post-dest/t2
+
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
-	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | NO_I=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES)
+	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | NO_I=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
 	touch $@
 
 all: lib/presentations/qp/common/VimIface.pm

@@ -8,7 +8,8 @@ use Path::Tiny qw/ path /;
 
 {
     my $content =
-        path("./dest/t2/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
+        path(
+        "./post-dest/t2/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
         ->slurp_utf8;
 
     # TEST

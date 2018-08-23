@@ -364,10 +364,12 @@ include lib/make/docbook/sf-homepage-docbooks-generated.mak
 include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak
 
-SCREENPLAY_RENDERED_HTMLS = $(patsubst %,$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
-SCREENPLAY_XML_HTMLS = $(patsubst %,$(SCREENPLAY_XML_HTML_DIR)/%.html,$(SCREENPLAY_DOCS))
+screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
+
+SCREENPLAY_RENDERED_HTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_RENDERED_HTML_DIR),html)
+SCREENPLAY_XML_HTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_HTML_DIR),html)
 SCREENPLAY_XML_EPUBS = $(patsubst %,$(SCREENPLAY_XML_EPUB_DIR)/%.epub,$(SCREENPLAY_DOCS_FROM_GEN))
-SCREENPLAY_XML_FOR_OOO_XHTMLS = $(patsubst %,$(SCREENPLAY_XML_FOR_OOO_XHTML_DIR)/%.xhtml,$(SCREENPLAY_DOCS))
+SCREENPLAY_XML_FOR_OOO_XHTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_FOR_OOO_XHTML_DIR),xhtml)
 
 splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS) $(SCREENPLAY_XML_EPUBS)
 

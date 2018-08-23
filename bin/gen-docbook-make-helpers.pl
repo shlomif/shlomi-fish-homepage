@@ -1106,7 +1106,7 @@ close($make_fh);
 # Remove multiple consecutive \ns
 path($gen_make_fn)->edit_utf8(
     sub {
-        s/\n\n+/\n\n/gr;
+        s/\n\n+/\n\n/g;
     }
 );
 

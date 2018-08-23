@@ -61,10 +61,6 @@ foreach my $lfn (@dests)
     }
 }
 my $to_proc = [ map $_->[1], @queue ];
-if ( !@$to_proc )
-{
-    exit 0;
-}
 my @FLAGS = ( @WML_FLAGS, '-o', );
 my $proc = sub {
     $obj->run_with_ARGV(

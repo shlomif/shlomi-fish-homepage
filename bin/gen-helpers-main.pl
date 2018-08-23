@@ -164,7 +164,7 @@ foreach my $ext (qw/ html pdf /)
     }
 }
 
-path('Makefile')->spew_utf8("include ${DIR}_Main.mak\n");
+path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 path('bin/render_v2.pl')->spew_utf8(
     path('bin/render_v2-proto.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#

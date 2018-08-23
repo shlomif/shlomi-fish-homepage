@@ -18,10 +18,11 @@ QUADPRES_EXE = quadp
 [% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
 
 [% FOREACH fmt = fmts %]
-[% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %][% UNLESS fmt.var == 'EPUB' and d.no_epub %] $(T2_DEST)/[% d.path %]/[% d.base %][% fmt.installed_ext ? fmt.installed_ext : fmt.ext %][% END %][% END %]
+[% BLOCK fmt_dest_dir %][% IF fmt.var == 'INDIVIDUAL_XHTML' %]$(T2_DEST)[% ELSE %]$(T2_POST_DEST)[% END %][% END %]
+    [% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %][% UNLESS fmt.var == 'EPUB' and d.no_epub %] [% INCLUDE fmt_dest_dir %]/[% d.path %]/[% d.base %][% fmt.installed_ext ? fmt.installed_ext : fmt.ext %][% END %][% END %]
 
 [% IF db_ver == '5' %]
-[% db_macro_prefix %]_INSTALLED_HTMLS =[% FOREACH d = docs %] $(T2_DEST)/[% d.path %]/[% d.base %].raw.html[% END %]
+[% db_macro_prefix %]_INSTALLED_HTMLS =[% FOREACH d = docs %] [% INCLUDE fmt_dest_dir %]/[% d.path %]/[% d.base %].raw.html[% END %]
 [% END %]
 
 [% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
@@ -36,7 +37,7 @@ QUADPRES_EXE = quadp
 [% SET my_ext = my_ext_record.l %]
 [% SET my_ext_uc = my_ext_record.u %]
 
-$(T2_DEST)/[% d.path %]/[% d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
+$(T2_POST_DEST)/[% d.path %]/[% d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
 [% "\t" %]$(call COPY)
 
 [% END %]

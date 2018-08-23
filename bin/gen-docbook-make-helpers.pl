@@ -617,22 +617,22 @@ EOF
         );
         my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
         my $epub_dests         = <<'EOF';
-$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
-$(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
-$(T2_DEST)/humour/humanity/Humanity-Movie.epub \
-$(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
-$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
-$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
-$(T2_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
-$(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
-$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
-$(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
-$(T2_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
+$(T2_POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
+$(T2_POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
+$(T2_POST_DEST)/humour/humanity/Humanity-Movie.epub \
+$(T2_POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
+$(T2_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
+$(T2_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
+$(T2_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
+$(T2_POST_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
+$(T2_POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
+$(T2_POST_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
+$(T2_POST_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
+$(T2_POST_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
+$(T2_POST_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
 EOF
 
-        my @_files = ( $epub_dests =~ /(\$\(T2_DEST\)\S+)/g );
+        my @_files = ( $epub_dests =~ /(\$\(T2_POST_DEST\)\S+)/g );
         my @_htmls_files =
             map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 

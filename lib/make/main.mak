@@ -147,7 +147,7 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 copy_fortunes: $(T2_DEST_FORTUNES)
 
 define UPLOAD
-(cd $(T2_DEST) && $(RSYNC) -a . $1 )
+(cd $(T2_POST_DEST) && $(RSYNC) -a . $1 )
 endef
 
 upload_deps: all

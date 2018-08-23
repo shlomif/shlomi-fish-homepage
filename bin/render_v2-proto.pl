@@ -11,7 +11,6 @@ BEGIN
     $HOME = $ENV{HOME};
 }
 use lib "$HOME/apps/test/wml/lib64/wml";
-use lib "$HOME/apps/test/wml/lib64/wml";
 
 use WML_Frontends::Wml::Runner ();
 

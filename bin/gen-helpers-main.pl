@@ -168,7 +168,7 @@ path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 path('bin/render_v2.pl')->spew_utf8(
     path('bin/render_v2-proto.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
-    path((which('wml'))[0])->slurp_utf8() =~ /^((?:use lib[^\n]+\n)+)/ms
-    ? $1 : die "no wml"#emrs
+    "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
+    #emrs
 );
 _my_system( [ 'make', 'sects_cache' ] );

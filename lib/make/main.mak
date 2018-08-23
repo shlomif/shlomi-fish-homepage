@@ -321,18 +321,14 @@ DOCBOOK5_RTF_DIR = $(DOCBOOK5_BASE_DIR)/rtf
 DOCBOOK5_FOR_OOO_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/for-ooo-xhtml
 DOCBOOK5_RENDERED_DIR = $(DOCBOOK5_BASE_DIR)/rendered
 
-DOCBOOK4_TARGETS = $(patsubst %,$(DOCBOOK4_RENDERED_DIR)/%.html,$(DOCBOOK4_DOCS))
-DOCBOOK4_XMLS = $(patsubst %,$(DOCBOOK4_XML_DIR)/%.xml,$(DOCBOOK4_DOCS))
-
-DOCBOOK4_FOS = $(patsubst %,$(DOCBOOK4_FO_DIR)/%.fo,$(DOCBOOK4_DOCS))
-
-DOCBOOK4_PDFS = $(patsubst %,$(DOCBOOK4_PDF_DIR)/%.pdf,$(DOCBOOK4_DOCS))
-
-DOCBOOK4_RTFS = $(patsubst %,$(DOCBOOK4_RTF_DIR)/%.rtf,$(DOCBOOK4_DOCS))
-
-DOCBOOK4_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK4_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK4_DOCS))
-
-DOCBOOK4_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_DOCS))
+docbook4_targets = $(patsubst %,$(1)/%$(2),$(DOCBOOK4_DOCS))
+DOCBOOK4_TARGETS = $(call docbook4_targets,$(DOCBOOK4_RENDERED_DIR),.html)
+DOCBOOK4_XMLS = $(call docbook4_targets,$(DOCBOOK4_XML_DIR),.xml)
+DOCBOOK4_FOS = $(call docbook4_targets,$(DOCBOOK4_FO_DIR),.fo)
+DOCBOOK4_PDFS = $(call docbook4_targets,$(DOCBOOK4_PDF_DIR),.pdf)
+DOCBOOK4_RTFS = $(call docbook4_targets,$(DOCBOOK4_RTF_DIR),.rtf)
+DOCBOOK4_INDIVIDUAL_XHTMLS = $(call docbook4_targets,$(DOCBOOK4_INDIVIDUAL_XHTML_DIR),)
+DOCBOOK4_ALL_IN_ONE_XHTMLS = $(call docbook4_targets,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR),/all-in-one.html)
 
 # We have our own style for human-hacking-field-guide so we get rid of it.
 DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS = $(patsubst %/all-in-one.html,%/style.css,$(filter-out human-hacking-%,$(DOCBOOK4_ALL_IN_ONE_XHTMLS)))

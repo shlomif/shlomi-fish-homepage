@@ -290,7 +290,7 @@ FICTION_DOCS_ADDITIONS = \
 
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
-DOCBOOK4_INSTALLED_CSS_DIRS = $(DOCBOOK4_DIRS_LIST:%=$(T2_DEST)/%/docbook-css)
+DOCBOOK4_INSTALLED_CSS_DIRS = $(DOCBOOK4_DIRS_LIST:%=$(T2_POST_DEST)/%/docbook-css)
 DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
 DOCBOOK4_BASE_DIR = lib/docbook/4
@@ -825,7 +825,7 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-ART_SLOGANS_PATHS = $(patsubst %,$(T2_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PATHS = $(patsubst %,$(T2_POST_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
@@ -949,7 +949,7 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 
 GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
-T2_CSS_TARGETS = $(patsubst %,$(T2_DEST)/%,$(GEN_STYLE_CSS_FILES))
+T2_CSS_TARGETS = $(patsubst %,$(T2_POST_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(T2_CSS_TARGETS) $(T2_DEST)/screenplay.css
 
@@ -957,19 +957,19 @@ SASS_STYLE = compressed
 # SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
-$(T2_CSS_TARGETS): $(T2_DEST)/%.css: lib/sass/%.sass
+$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.sass
 	$(SASS_CMD) $< $@
 
 FORT_SASS_DEPS = lib/sass/fortunes.sass
 COMMON_SASS_DEPS = lib/sass/common-body.sass
 
-$(T2_DEST)/style.css $(T2_DEST)/style-2008.css $(T2_DEST)/print.css: lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
+$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
 
-$(T2_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
+$(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 
-$(T2_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
+$(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
-$(T2_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
+$(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
 $(T2_DEST)/humour.html $(T2_DEST)/humour-heb.html: lib/pages/t2/humour.wml
@@ -1274,6 +1274,7 @@ all: $(T2_CLEAN_STAMP)
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | NO_I=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
+	$(RSYNC) --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 
 all: lib/presentations/qp/common/VimIface.pm

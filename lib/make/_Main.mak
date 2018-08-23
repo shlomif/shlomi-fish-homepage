@@ -951,7 +951,7 @@ GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fo
 
 T2_CSS_TARGETS = $(patsubst %,$(T2_POST_DEST)/%,$(GEN_STYLE_CSS_FILES))
 
-css_targets: $(T2_CSS_TARGETS) $(T2_DEST)/screenplay.css
+css_targets: $(T2_CSS_TARGETS)
 
 SASS_STYLE = compressed
 # SASS_STYLE = expanded
@@ -1198,8 +1198,8 @@ OCT_2014_SGLAU_LET_DIR = t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/
 OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
 OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.html
 
-MY_NAME_IS_RINDOLF_SRC = $(T2_DEST)/me/rindolf/images/my-name-is-rindolf.jpg
-MY_NAME_IS_RINDOLF_DEST = $(T2_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
+MY_NAME_IS_RINDOLF_SRC = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf.jpg
+MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST)
 

@@ -113,6 +113,8 @@ my $text = $r_fh->slurp_utf8;
 $text =~
 s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
     or die "Cannot subt";
+$text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
+    or die "Cannot subt";
 {
     my $needle = 'cp -f $< $@';
     $text =~ s#^\t\Q$needle\E$#\t\$(call COPY)#gms;

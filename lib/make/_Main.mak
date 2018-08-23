@@ -2,6 +2,7 @@
 DEV = 0
 
 DEV_WML_FLAGS :=
+T2_POST_DEST = post-dest/t2
 
 ifeq ($(DEV),1)
 	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1
@@ -16,6 +17,9 @@ all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_target
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
 include lib/make/rules.mak
+
+T2_POST_DIRS_DEST = $(patsubst %,$(T2_POST_DEST)/%,$(T2_DIRS))
+T2_TARGETS += $(T2_POST_DIRS_DEST)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \
 	--passoption=3,-I../lib/ \
@@ -96,6 +100,12 @@ T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
+
+$(T2_POST_DIRS_DEST) : % :
+	mkdir -p $@
+	touch $@
+
+make-dirs: $(T2_POST_DIRS_DEST)
 
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml
@@ -1261,7 +1271,6 @@ $(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.html: l
 
 all: $(T2_CLEAN_STAMP)
 
-T2_POST_DEST = post-dest/t2
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | NO_I=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)

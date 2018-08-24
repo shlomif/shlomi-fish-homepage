@@ -1,5 +1,6 @@
 cache:
-    - $HOME/perl5
+    directories:
+        - $HOME/perl_modules
 dist: trusty
 os: linux
 before_install:
@@ -36,6 +37,3 @@ python:
     - "3.5"
 script:
     - "bash -x bin/travis-ci-script.bash"
-cache:
-    directories:
-    - $HOME/perl_modules

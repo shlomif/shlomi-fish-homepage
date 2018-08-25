@@ -109,7 +109,7 @@ $(T2_POST_DIRS_DEST) : % :
 make-dirs: $(T2_POST_DIRS_DEST)
 
 bulk-make-dirs:
-	mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST)
+	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST)
 
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml

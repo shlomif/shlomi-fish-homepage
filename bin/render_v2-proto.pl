@@ -18,8 +18,7 @@ use lib './lib';
 
 use Parallel::ForkManager::Segmented ();
 
-my $UNCOND  = $ENV{UNCOND} // '';
-my $CMD     = shift @ARGV;
+my $UNCOND = $ENV{UNCOND} // '';
 my (@dests) = @ARGV;
 
 my $PWD       = Cwd::getcwd();
@@ -60,7 +59,6 @@ foreach my $lfn (@dests)
         push @queue, [ [ $abs_dest, "-DLATEMP_FILENAME=$lfn", $src, ], $dest ];
     }
 }
-my $to_proc = [ map $_->[1], @queue ];
 my @FLAGS = ( @WML_FLAGS, '-o', );
 my $proc = sub {
     $obj->run_with_ARGV(
@@ -78,7 +76,6 @@ Parallel::ForkManager::Segmented->new->run(
         process_item => $proc,
     }
 );
-system("cd $PWD && $CMD @{$to_proc}") and die "$!";
 
 __END__
 

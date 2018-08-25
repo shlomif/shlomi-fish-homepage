@@ -50,15 +50,15 @@ PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 PROCESS_ALL_INCLUDES__NON_INPLACE = perl bin/post-incs-v2.pl
 
 define WML_RENDER
-LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 perl bin/render_v2.pl "$2"
+LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 perl bin/render_v2.pl
 endef
 
 define GENERIC_GENERIC_WML_RENDER
-$(call WML_RENDER,UNCOND=1,$1) "${@:$(T2_DEST)/%=%}"
+$(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
 endef
 
 define T2_INCLUDE_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES))
+$(call GENERIC_GENERIC_WML_RENDER)
 endef
 
 make-dirs: $(T2_ALL_DIRS_DEST)
@@ -614,16 +614,6 @@ FORTUNES_TIDY = tidyp -asxhtml -utf8 -quiet
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
-$(T2_FORTUNES_ALL__HTML): $(T2_FORTUNES_ALL__TEMP__HTML) $(FORTUNES_WMLS_HTMLS)
-	rm -f $@
-	for f in $(T2_DEST_HTMLS_FORTUNES) ; do \
-		$(FORTUNES_TIDY) -o "$$f".xhtml "$$f"; \
-		mv -f "$$f.xhtml" "$$f"; \
-	done
-	NO_I=1 APPLY_ADS=1 $(PROCESS_ALL_INCLUDES) $(T2_DEST_HTMLS_FORTUNES)
-	$(FORTUNES_TIDY) -o $@ $<
-	NO_I=1 APPLY_ADS=1 $(PROCESS_ALL_INCLUDES) $@
-
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	perl $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
@@ -636,10 +626,8 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
 
-FORTUNES_PROCESS_ALL_INCLUDES = F=1 APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)
-
 define FORTUNES_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER,$(FORTUNES_PROCESS_ALL_INCLUDES))
+$(call GENERIC_GENERIC_WML_RENDER)
 endef
 
 # TODO : extract a macro for this and the rule below.
@@ -1271,7 +1259,8 @@ all: $(T2_CLEAN_STAMP)
 
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
-	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | NO_I=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
+	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
+	find $(T2_DEST)/humour/fortunes -regex '.*\.x?html' | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
 	$(RSYNC) --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 
@@ -1281,4 +1270,4 @@ lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 	$(call COPY)
 
 fastrender: $(T2_DOCS_SRC) all_deps
-	$(call WML_RENDER,,APPLY_ADS=1 $(PROCESS_ALL_INCLUDES)) $(T2_DOCS)
+	$(call WML_RENDER,) $(T2_DOCS)

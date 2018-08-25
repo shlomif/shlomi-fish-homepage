@@ -46,7 +46,6 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
-PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 PROCESS_ALL_INCLUDES__NON_INPLACE = perl bin/post-incs-v2.pl
 
 define WML_RENDER

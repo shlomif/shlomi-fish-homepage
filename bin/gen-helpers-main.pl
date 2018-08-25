@@ -163,4 +163,5 @@ path('bin/render_v2.pl')->spew_utf8(
     "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
     #emrs
 );
+_my_system( [ 'make', 'bulk-make-dirs' ] );
 _my_system( [ 'make', 'sects_cache' ] );

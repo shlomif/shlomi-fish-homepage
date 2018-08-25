@@ -109,6 +109,9 @@ $(T2_POST_DIRS_DEST) : % :
 
 make-dirs: $(T2_POST_DIRS_DEST)
 
+bulk-make-dirs:
+	mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST)
+
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml
 
@@ -556,7 +559,7 @@ $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/
 tidy: all
 	perl bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs bulk-make-dirs
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.

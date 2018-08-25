@@ -78,15 +78,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
             {
                 if ( $is_bucket->('DOCS') )
                 {
-                    return $ipp_filter->(
-                        [
-                            grep {
-                                not(
-m#\Ahumour/fortunes/([a-zA-Z_\-\.]+)\.html\z#
-                                    && $1 ne 'index' )
-                            } @$filenames
-                        ]
-                    );
+                    return $ipp_filter->( [ @$filenames, ] );
                 }
                 if ( $is_bucket->('IMAGES') )
                 {

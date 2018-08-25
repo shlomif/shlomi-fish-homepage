@@ -68,7 +68,8 @@ GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
 T2_FORTUNES_ALL_WML = $(T2_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).wml
-T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
+T2_FORTUNES_ALL__HTML = $(T2_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
+T2_FORTUNES_ALL__HTML__POST = $(T2_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
 SECTION_MENU_DEPS = lib/Shlomif/Homepage/SectionMenu.pm
@@ -97,6 +98,7 @@ sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
 
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
+T2_POST_DEST_FORTUNES_DIR = $(T2_POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
@@ -632,10 +634,8 @@ endef
 
 # TODO : extract a macro for this and the rule below.
 $(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.html.wml lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
-	$(call FORTUNES_WML_RENDER)
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
-	$(call FORTUNES_WML_RENDER)
 
 $(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
@@ -1257,6 +1257,7 @@ $(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.html: l
 
 all: $(T2_CLEAN_STAMP)
 
+$(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
@@ -1271,3 +1272,7 @@ lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
 
 fastrender: $(T2_DOCS_SRC) all_deps
 	$(call WML_RENDER,) $(T2_DOCS)
+
+$(T2_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
+	$(call COPY)
+

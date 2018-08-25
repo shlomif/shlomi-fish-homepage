@@ -50,7 +50,7 @@ PROCESS_ALL_INCLUDES = perl bin/post-incs.pl
 PROCESS_ALL_INCLUDES__NON_INPLACE = perl bin/post-incs-v2.pl
 
 define WML_RENDER
-LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 perl bin/render_v2.pl
+LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 bin/render
 endef
 
 define GENERIC_GENERIC_WML_RENDER

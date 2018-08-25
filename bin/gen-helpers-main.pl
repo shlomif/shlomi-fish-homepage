@@ -158,10 +158,12 @@ foreach my $ext (qw/ html pdf /)
 
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
-path('bin/render_v2.pl')->spew_utf8(
-    path('bin/render_v2-proto.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
+my $render = path('bin/render');
+$render->spew_utf8(
+    path('bin/render-source.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
     "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
     #emrs
 );
+$render->chmod(0755);
 _my_system( [ 'make', 'bulk-make-dirs' ] );
 _my_system( [ 'make', 'sects_cache' ] );

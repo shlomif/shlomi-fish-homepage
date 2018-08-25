@@ -1,0 +1,14 @@
+#!/bin/bash
+rebuild()
+{
+    (
+        set -x
+        set -e
+        git clean -dxf .
+        ./gen-helpers
+        bash -x bin/install-npm-deps.sh
+        make -j4 fastrender
+        make -j4 test
+    )
+}
+rebuild

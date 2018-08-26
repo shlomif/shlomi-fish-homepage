@@ -58,7 +58,7 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% END %]
 
 [% foo_dest %]/index.html: [% foo_src %]/index.html
-[% "\t" %]rsync --exclude 'style.css' -r -v [% foo_src %]/ [% foo_dest %]/
+[% "\t" %]rsync --exclude 'style.css' -r [% foo_src %]/ [% foo_dest %]/
 [% rm_line %]
 
 [% foo_src %]/index.html: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)

@@ -561,7 +561,7 @@ tidy: all
 
 $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	mkdir -p $@
-	rsync -r -v $< $@
+	rsync -r $< $@
 
 FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
 
@@ -1021,7 +1021,7 @@ MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
 $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	rsync -r -v --progress lib/MathJax/ $(T2_DEST)/js/MathJax/
+	rsync -r lib/MathJax/ $(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
 	rm -fr $(MATHJAX_DEST_DIR)/test
@@ -1258,7 +1258,7 @@ PROC_INCLUDES_COMMON = APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
 	find $(T2_DEST)/humour/fortunes -regex '.*\.x?html' | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 $(PROC_INCLUDES_COMMON)
-	$(RSYNC) --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
+	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 
 all: lib/presentations/qp/common/VimIface.pm

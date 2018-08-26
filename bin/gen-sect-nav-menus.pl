@@ -65,7 +65,7 @@ foreach my $host (qw(t2 vipe))
                 : [qw(index.html lecture/index.html)]
             ),
             nproc        => 4,
-            batch_size   => 8,
+            batch_size   => 16,
             process_item => sub {
                 my $proto_url = shift;
                 my $url       = $proto_url =~ s#(\A|/)index\.html\z#$1#r;
@@ -77,7 +77,7 @@ foreach my $host (qw(t2 vipe))
                     "$hostp/" . ( $url =~ s#(\A|/)$#${1}index.html#r ) . '/';
                 path($urlp)->mkpath;
 
-                print "start filename=$filename\n";
+                # print "start filename=$filename\n";
 
                 my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
                     'path_info'    => $filename,
@@ -217,7 +217,8 @@ foreach my $host (qw(t2 vipe))
                         },
                     );
                 }
-                print "filename=$filename\n";
+
+                # print "filename=$filename\n";
             }
         }
     );

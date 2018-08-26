@@ -1271,4 +1271,3 @@ fastrender: $(T2_DOCS_SRC) all_deps
 
 $(T2_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 	$(call COPY)
-

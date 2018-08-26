@@ -52,12 +52,8 @@ define WML_RENDER
 LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 bin/render
 endef
 
-define GENERIC_GENERIC_WML_RENDER
-$(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
-endef
-
 define T2_INCLUDE_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER)
+$(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
 endef
 
 make-dirs: $(T2_ALL_DIRS_DEST)
@@ -629,10 +625,6 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 	perl -Ilib $<
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
-
-define FORTUNES_WML_RENDER
-$(call GENERIC_GENERIC_WML_RENDER)
-endef
 
 # TODO : extract a macro for this and the rule below.
 $(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.html.wml lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)

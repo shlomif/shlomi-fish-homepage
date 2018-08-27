@@ -1,4 +1,7 @@
 #!/bin/bash
+
+dest="dest/printable"
+
 render_i_o()
 {
     local filename="$1"
@@ -13,7 +16,7 @@ render_i_o()
         -I $HOME/conf/wml/Latemp/lib \
         -I $HOME/apps/wml \
         ) | grep -vP '^<\?xml ver' \
-        > printable/"$out_filename"
+        > "$dest"/"$out_filename"
 }
 
 render()
@@ -21,6 +24,7 @@ render()
     render_i_o "$1" "$1"
 }
 
+mkdir -p "$dest"
 render "SFresume_detailed.html"
 render "SFresume.html"
 render_i_o "me/resumes/Resume-Recent.html" "SFresume-Recent.html"

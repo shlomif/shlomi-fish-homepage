@@ -385,7 +385,8 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	-o $@ $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
-SCREENPLAY_SOURCES_ON_DEST = $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(T2_DEST)/humour/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
+DEST_TOWTF := $(T2_DEST)/humour/TOWTF
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(T2_DEST)/humour/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
 
 HHFG_DIR = $(T2_DEST)/humour/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -504,7 +505,7 @@ all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
-$(T2_DEST)/humour/TOWTF/TOW_Fountainhead_1.txt $(T2_DEST)/humour/TOWTF/TOW_Fountainhead_2.txt: $(T2_DEST)/humour/TOWTF/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
+$(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt: $(DEST_TOWTF)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(call COPY)
 
 $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(T2_DEST)/humour/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt

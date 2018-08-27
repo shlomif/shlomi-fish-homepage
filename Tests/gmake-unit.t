@@ -2,14 +2,15 @@
 
 use strict;
 use warnings;
-use Test::More tests => 4;
+use Test::More tests => 5;
 
 sub gmake_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    return like( scalar(`gmake $var.show`), qr% \Q$word\E %, $blurb, );
+    return like( scalar(`gmake $var.show`),
+        qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 
 {
@@ -19,6 +20,13 @@ sub gmake_test
 
     # TEST
     gmake_test( 'T2_HUMOUR_DOCS_DEST', 'dest/t2/humour.html', "found a file" );
+
+    # TEST
+    gmake_test(
+        'SCREENPLAY_SOURCES_ON_DEST',
+'dest/t2/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
+        "SCREENPLAY_SOURCES_ON_DEST - Qoheleth",
+    );
 
     # TEST
     gmake_test(

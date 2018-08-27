@@ -388,7 +388,11 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	perl -lpi -e 's/[ \t]+\z//' $@
 
 DEST_TOWTF := $(DEST_HUMOUR)/TOWTF
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_HUMOUR)/humanity/Humanity-Movie.txt $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
+DEST_SPLAY_BlueRab1 := $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt
+DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
+DEST_SPLAY_HUMANITY := $(DEST_HUMOUR)/humanity/Humanity-Movie.txt
+DEST_SPLAY_QOHELETH := $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH)
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -455,10 +459,10 @@ $(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
-$(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt: $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
+$(DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 	$(call COPY)
 
-$(DEST_HUMOUR)/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
+$(DEST_SPLAY_HUMANITY): $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
 	$(call COPY)
 
 $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
@@ -527,7 +531,7 @@ $(DEST_HUMOUR)/humanity/index.html $(DEST_HUMOUR)/humanity/ongoing-text.html $(D
 
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.html: lib/div2mag.wml
 
-$(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
+$(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 	$(call COPY)
 
 $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
@@ -536,7 +540,7 @@ $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $
 $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
 	$(call COPY)
 
-$(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
+$(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
 	$(call COPY)
 
 $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt

@@ -107,7 +107,8 @@ make-dirs: $(T2_POST_DIRS_DEST)
 bulk-make-dirs:
 	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST)
 
-DEST_POPE := $(T2_DEST)/humour/Pope
+DEST_HUMOUR := $(T2_DEST)/humour
+DEST_POPE := $(DEST_HUMOUR)/Pope
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
@@ -117,7 +118,7 @@ T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
 
 T2_FORTUNES_DIR_HTACCESS = $(T2_DEST_FORTUNES_DIR)/.htaccess
 
-ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(T2_DEST)/humour/humanity/songs/.htaccess $(T2_DEST)/lecture/PostgreSQL-Lecture/.htaccess
+ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(DEST_HUMOUR)/humanity/songs/.htaccess $(T2_DEST)/lecture/PostgreSQL-Lecture/.htaccess
 
 htaccesses_target: $(ALL_HTACCESSES)
 
@@ -264,7 +265,7 @@ all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-$(T2_DEST)/humour/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
+$(DEST_HUMOUR)/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
 all_deps: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
@@ -386,10 +387,10 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	-o $@ $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
-DEST_TOWTF := $(T2_DEST)/humour/TOWTF
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(T2_DEST)/humour/humanity/Humanity-Movie.txt $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt $(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt $(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(T2_DEST)/humour/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
+DEST_TOWTF := $(DEST_HUMOUR)/TOWTF
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_HUMOUR)/humanity/Humanity-Movie.txt $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
 
-HHFG_DIR = $(T2_DEST)/humour/human-hacking
+HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
 HHFG_HEB_V2_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
 HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
@@ -426,7 +427,7 @@ DOCMAKE_PARAMS = -v
 
 HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
 HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
-HHGG_CONVERT_SCRIPT_DEST = $(T2_DEST)/humour/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
+HHGG_CONVERT_SCRIPT_DEST = $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 	$(call COPY)
@@ -435,7 +436,7 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
 SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
-SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(T2_DEST)/humour/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(DEST_HUMOUR)/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
 
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 	$(call COPY)
@@ -443,7 +444,7 @@ $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURC
 QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg
 
 QOHELETH_IMAGES__SOURCE_PREFIX = $(SO_WHO_THE_HELL_IS_QOHELETH__VCS_DIR)/graphics
-QOHELETH_IMAGES__DEST_PREFIX = $(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/images
+QOHELETH_IMAGES__DEST_PREFIX = $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
 
 QOHELETH_IMAGES__SOURCE = $(patsubst %,$(QOHELETH_IMAGES__SOURCE_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
 QOHELETH_IMAGES__DEST = $(patsubst %,$(QOHELETH_IMAGES__DEST_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
@@ -454,13 +455,13 @@ $(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
 
-$(T2_DEST)/humour/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt: $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
+$(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt: $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
+$(DEST_HUMOUR)/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
+$(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
 	$(call COPY)
 
 $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
@@ -509,7 +510,7 @@ all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt: $(DEST_TOWTF)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(T2_DEST)/humour/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
+$(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(DEST_HUMOUR)/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(call COPY)
 
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
@@ -520,25 +521,25 @@ $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
-$(T2_DEST)/humour/index.html $(T2_DEST)/humour/stories/index.html $(T2_DEST)/humour/stories/Star-Trek/index.html $(T2_DEST)/humour/stories/Star-Trek/We-the-Living-Dead/index.html $(T2_DEST)/humour/TheEnemy/index.html: lib/stories/stories-list.wml
+$(DEST_HUMOUR)/index.html $(DEST_HUMOUR)/stories/index.html $(DEST_HUMOUR)/stories/Star-Trek/index.html $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.html $(DEST_HUMOUR)/TheEnemy/index.html: lib/stories/stories-list.wml
 
-$(T2_DEST)/humour/humanity/index.html $(T2_DEST)/humour/humanity/ongoing-text.html $(T2_DEST)/humour/humanity/buy-the-fish-in-hebrew.html $(T2_DEST)/humour/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
+$(DEST_HUMOUR)/humanity/index.html $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
 
-$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(T2_DEST)/humour/by-others/division-two/index.html: lib/div2mag.wml
+$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.html: lib/div2mag.wml
 
-$(T2_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
+$(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt: $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
+$(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
+$(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
+$(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
+$(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
 	$(call COPY)
 
 $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
@@ -633,7 +634,7 @@ $(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.htm
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
 
-$(T2_DEST)/humour/fortunes/index.html: $(FORTUNES_LIST__DEPS)
+$(DEST_HUMOUR)/fortunes/index.html: $(FORTUNES_LIST__DEPS)
 
 FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
@@ -702,11 +703,11 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK4_HHFG_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide
+DOCBOOK4_HHFG_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
-HHFG_V2_IMAGES_DEST_DIR_FROM_VCS = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide-v2--english
-HHFG_V2_IMAGES_DEST_DIR = $(T2_DEST)/humour/human-hacking/human-hacking-field-guide-v2
+HHFG_V2_IMAGES_DEST_DIR_FROM_VCS = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
+HHFG_V2_IMAGES_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
 HHFG_V2_IMAGES_DEST = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 HHFG_V2_IMAGES_DEST_FROM_VCS = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
@@ -822,11 +823,11 @@ include lib/make/long_sories.mak
 
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png
-HHFG_SMALL_BANNER_AD_PNG = $(T2_DEST)/humour/human-hacking/images/hhfg-ad-468x60.svg.preview.png
+HHFG_SMALL_BANNER_AD_PNG = $(DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
 BK2HP_NEW_PNG = common/images/bk2hp.png
 
-DEST_HTML_6_LOGO_PNG = $(T2_DEST)/humour/bits/HTML-6/HTML-6-logo.png
+DEST_HTML_6_LOGO_PNG = $(DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	convert -matte -bordercolor none -border 5 $< $@
@@ -838,7 +839,7 @@ $(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
-DEST_WINDOWS_UPDATE_SNAIL_ICON = $(T2_DEST)/humour/bits/facts/images/windows-update-snail.png
+DEST_WINDOWS_UPDATE_SNAIL_ICON = $(DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
 
 all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON)
 
@@ -954,7 +955,7 @@ $(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 $(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
-$(T2_DEST)/humour.html $(T2_DEST)/humour-heb.html: lib/pages/t2/humour.wml
+$(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.wml
 $(T2_DEST)/work/hire-me/index.html $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.wml
 
 $(T2_DEST)/open-source/projects/Module-Format/index.html $(T2_DEST)/open-source/projects/File-Find-Object/index.html $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.html $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.html $(T2_DEST)/meta/FAQ/index.html $(T2_DEST)/open-source/contributions/index.html: lib/Inc/cpan_dists.wml
@@ -1142,7 +1143,7 @@ FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD = perl $(FACTOIDS_RENDER_SCRIPT)
 
-# FACTOIDS_DOCS_DEST = $(filter $(T2_DEST)/humour/bits/facts/%,$(T2_DOCS_DEST))
+# FACTOIDS_DOCS_DEST = $(filter $(DEST_HUMOUR)/bits/facts/%,$(T2_DOCS_DEST))
 
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
@@ -1260,7 +1261,7 @@ PROC_INCLUDES_COMMON = APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
-	find $(T2_DEST)/humour/fortunes -regex '.*\.x?html' | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 $(PROC_INCLUDES_COMMON)
+	find $(DEST_HUMOUR)/fortunes -regex '.*\.x?html' | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 

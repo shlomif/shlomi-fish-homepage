@@ -387,12 +387,18 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	-o $@ $<
 	perl -lpi -e 's/[ \t]+\z//' $@
 
+DEST_HUMOUR_SELINA := $(DEST_HUMOUR)/Selina-Mandrake
+DEST_INTERVIEWS := $(T2_DEST)/open-source/interviews
 DEST_TOWTF := $(DEST_HUMOUR)/TOWTF
+
 DEST_SPLAY_BlueRab1 := $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt
 DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 DEST_SPLAY_HUMANITY := $(DEST_HUMOUR)/humanity/Humanity-Movie.txt
 DEST_SPLAY_QOHELETH := $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt $(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt $(T2_DEST)/open-source/interviews/ae-interview.txt $(T2_DEST)/open-source/interviews/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH)
+DEST_SPLAY_SELINA := $(DEST_HUMOUR_SELINA)/selina-mandrake-the-slayer.txt
+
+
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_SPLAY_ST_WeTheLiving) $(DEST_SPLAY_SELINA) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH)
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -440,7 +446,7 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
 SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
-SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(DEST_HUMOUR)/Selina-Mandrake/images/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(DEST_HUMOUR_SELINA)/images/$(FRON_IMAGE_BASE)
 
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 	$(call COPY)
@@ -514,7 +520,7 @@ all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt: $(DEST_TOWTF)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(call COPY)
 
-$(DEST_HUMOUR)/Selina-Mandrake/selina-mandrake-the-slayer.txt: $(DEST_HUMOUR)/Selina-Mandrake/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
+$(DEST_SPLAY_SELINA): $(DEST_HUMOUR_SELINA)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(call COPY)
 
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
@@ -534,7 +540,7 @@ $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-persona
 $(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 	$(call COPY)
 
-$(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/star-trek--we-the-living-dead.txt: $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
+$(DEST_SPLAY_ST_WeTheLiving): $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
 	$(call COPY)
 
 $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt: $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
@@ -546,10 +552,10 @@ $(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.tx
 $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
 	$(call COPY)
 
-$(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
+$(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
 	$(call COPY)
 
-$(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
+$(DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 	$(call COPY)
 
 $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml

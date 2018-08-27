@@ -21,9 +21,9 @@ sub is_newer
 
 sub get_syntax_highlighted_html_from_file
 {
-    my (%args) = (@_);
+    my ($args) = @_;
 
-    my $filename = $args{'filename'};
+    my $filename = $args->{'filename'};
 
     my $html_filename = "$filename.html-for-quad-pres";
 
@@ -32,7 +32,7 @@ sub get_syntax_highlighted_html_from_file
         my $syntax = Text::VimColor->new(
             file           => $filename,
             html_full_page => 1,
-            ( $args{'filetype'} ? ( filetype => $args{'filetype'} ) : () ),
+            ( $args->{'filetype'} ? ( filetype => $args->{'filetype'} ) : () ),
         );
 
         path($html_filename)->spew( $syntax->html );

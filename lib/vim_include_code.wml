@@ -1,3 +1,6 @@
+;;; Copyright (C) 2018 Shlomi Fish <shlomif@cpan.org>
+;;;
+;;; Distributed under terms of the MIT/Expat license.
 <:{
 require VimIface;
 }:>
@@ -13,7 +16,7 @@ require VimIface;
 <preserve filename />
 <set-var %attributes />
 <:{
-print VimIface::get_syntax_highlighted_html_from_file('filename' => "<get-var filename />");
+print VimIface::get_syntax_highlighted_html_from_file(+{'filename' => "<get-var filename />", });
 }:>
 <restore filename />
 </define-tag>

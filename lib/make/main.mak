@@ -1261,9 +1261,11 @@ $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 
-all: lib/presentations/qp/common/VimIface.pm
+QP_VIM_IFACE := lib/presentations/qp/common/VimIface.pm
 
-lib/presentations/qp/common/VimIface.pm: lib/VimIface.pm
+all: $(QP_VIM_IFACE)
+
+$(QP_VIM_IFACE): lib/VimIface.pm
 	$(call COPY)
 
 fastrender: $(T2_DOCS_SRC) all_deps

@@ -107,8 +107,9 @@ make-dirs: $(T2_POST_DIRS_DEST)
 bulk-make-dirs:
 	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST)
 
-all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml
-all: $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml
+DEST_POPE := $(T2_DEST)/humour/Pope
+all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
+all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
@@ -393,7 +394,7 @@ HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
 HHFG_HEB_V2_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
 HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
 
-FICTION_TEXT_SOURCES_ON_DEST = $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.txt
+FICTION_TEXT_SOURCES_ON_DEST = $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
@@ -462,10 +463,10 @@ $(T2_DEST)/humour/humanity/Humanity-Movie.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanit
 $(T2_DEST)/humour/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
+$(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
+$(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
 	$(call COPY)
 
 $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew.txt
@@ -546,10 +547,10 @@ $(T2_DEST)/open-source/interviews/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae
 $(T2_DEST)/open-source/interviews/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 	$(call COPY)
 
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
+$(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
 	$(call COPY)
 
-$(T2_DEST)/humour/Pope/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
+$(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
 	$(call COPY)
 
 tidy: all

@@ -18,6 +18,7 @@ include lib/make/shlomif_common.mak
 include lib/make/include.mak
 include lib/make/rules.mak
 
+PERL := perl
 T2_POST_DIRS_DEST = $(patsubst %,$(T2_POST_DEST)/%,$(T2_DIRS))
 T2_TARGETS += $(T2_POST_DIRS_DEST)
 
@@ -46,7 +47,7 @@ include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
-PROCESS_ALL_INCLUDES__NON_INPLACE = perl bin/post-incs-v2.pl
+PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
 define WML_RENDER
 LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 bin/render
@@ -86,7 +87,7 @@ T2_CLEAN_STAMP = lib/cache/STAMP.two
 T2_CACHE_PREF = lib/cache/combined/t2
 
 $(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
-	perl $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+	$(PERL) $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 	touch $@
 
 sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
@@ -126,7 +127,7 @@ $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
 
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
-	perl -Ilib $< $@
+	$(PERL) -Ilib $< $@
 
 # t2 macros
 
@@ -227,7 +228,7 @@ $(T2_META_DOCS_DEST): $(META_SUBSECT_DEPS)
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 rss:
-	perl ./bin/fetch-shlomif_hsite-feed.pl
+	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
 	touch t2/old-news.html.wml
 
@@ -247,7 +248,7 @@ $(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
 
 all_deps: $(PROD_SYND_MUSIC_INC)
 
-GPERL = perl -Ilib
+GPERL = $(PERL) -Ilib
 GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
@@ -363,20 +364,20 @@ SCREENPLAY_XML_FOR_OOO_XHTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_FOR_OOO_
 splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS) $(SCREENPLAY_XML_EPUBS)
 
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
-	perl -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
+	$(PERL) -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
 	-o $@ $<
-	perl -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 $(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html: $(SCREENPLAY_XML_HTML_DIR)/%.html
 	./bin/extract-screenplay-xml-html.pl -o $@ $<
 
 $(SCREENPLAY_XML_FOR_OOO_XHTML_DIR)/%.xhtml: $(SCREENPLAY_XML_HTML_DIR)/%.html
-	cat $< | perl -lne 'print unless m{\A<\?xml}' > $@
+	cat $< | $(PERL) -lne 'print unless m{\A<\?xml}' > $@
 
 $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	perl -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
+	$(PERL) -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
 	-o $@ $<
-	perl -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 DEST_HUMOUR_SELINA := $(DEST_HUMOUR)/Selina-Mandrake
 DEST_INTERVIEWS := $(T2_DEST)/open-source/interviews
@@ -403,19 +404,19 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
 	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
 	if test -e "$$xslt" ; then \
-		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 			-o "$$temp_db5" $< && \
 		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
 	else \
-		perl -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 			-o $@ $< ; \
 	fi
-	perl -i -lape 's/\s+$$//' $@
+	$(PERL) -i -lape 's/\s+$$//' $@
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
-	perl -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
+	$(PERL) -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
 	-o $@ $<
-	perl -i -lape 's/\s+$$//' $@
+	$(PERL) -i -lape 's/\s+$$//' $@
 
 $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
@@ -446,7 +447,7 @@ QOHELETH_IMAGES__SOURCE = $(patsubst %,$(QOHELETH_IMAGES__SOURCE_PREFIX)/%,$(QOH
 QOHELETH_IMAGES__DEST = $(patsubst %,$(QOHELETH_IMAGES__DEST_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
-	perl $<
+	$(PERL) $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
@@ -466,7 +467,7 @@ PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
 
 STRIP_HTML_BIN = bin/processors/strip-html-overhead.pl
-strip_html = perl $(STRIP_HTML_BIN) < $< > $@
+strip_html = $(PERL) $(STRIP_HTML_BIN) < $< > $@
 
 $(PUT_CARDS_2013_XHTML_STRIPPED): $(PUT_CARDS_2013_XHTML) $(STRIP_HTML_BIN)
 	$(call strip_html)
@@ -495,7 +496,7 @@ $(DEST_HUMOUR)/humanity/index.html $(DEST_HUMOUR)/humanity/ongoing-text.html $(D
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.html: lib/div2mag.wml
 
 tidy: all
-	perl bin/run-tidy.pl
+	$(PERL) bin/run-tidy.pl
 
 .PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs bulk-make-dirs
 
@@ -534,20 +535,20 @@ FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(T2_FORTUNES_DIR)/prepare-xhtml-for-input.pl
 
 $(FORTUNES_SOURCE_WMLS): $(FORTUNES_LIST__DEPS)
-	perl -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'
+	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'
 
 $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT)
-	perl $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
+	$(PERL) $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
 
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
-	perl $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
+	$(PERL) $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
 
 FORTUNES_XML_TO_XHTML_TOC_XSLT = lib/fortunes/fortune-xml-to-xhtml-toc.xslt
 
 $(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_XML_TO_XHTML_TOC_XSLT)
 	xsltproc $(FORTUNES_XML_TO_XHTML_TOC_XSLT) $< | \
-	perl -0777 -lapE 's#\A.*?<ul[^>]*?>#<ul>#ms; s#^[ \t]+##gms; s#[ \t]+$$##gms' - > \
+	$(PERL) -0777 -lapE 's#\A.*?<ul[^>]*?>#<ul>#ms; s#^[ \t]+##gms; s#[ \t]+$$##gms' - > \
 	$@
 
 $(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
@@ -559,13 +560,13 @@ $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 
 $(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
-	perl $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
+	$(PERL) $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
 $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
-	perl $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
+	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
 
 $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_LIST__DEPS)
-	perl -Ilib $<
+	$(PERL) -Ilib $<
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
 
@@ -612,17 +613,17 @@ $(HACKING_DOC): t2/open-source/resources/how-to-contribute-to-my-projects/HACKIN
 t2/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
 
 lib/htmls/The-Enemy-rev5.html-part: t2/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
+	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 t2/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-rev5.html-part
 
 lib/htmls/The-Enemy-English-rev5.html-part: t2/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
+	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 t2/humour/TheEnemy/The-Enemy-English-rev6.html.wml: lib/htmls/The-Enemy-English-rev6.html-part
 
 lib/htmls/The-Enemy-English-rev6.html-part: t2/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | perl ./bin/extract-xhtml.pl -o $@ -
+	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 DOCBOOK4_HHFG_IMAGES_RAW = \
 	background-image.png \
@@ -665,7 +666,7 @@ $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.h
 
 $(DOCBOOK4_FO_DIR)/%.fo: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE_WITH_PARAMS) -o $@ --stringparam "docmake.output.format=fo" -x $(FO_XSLT_SS) fo $<
-	perl -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 $(DOCBOOK4_PDF_DIR)/%.pdf: $(DOCBOOK4_FO_DIR)/%.fo
 	fop -fo $< -pdf $@
@@ -676,7 +677,7 @@ $(DOCBOOK4_RTF_DIR)/%.rtf: $(DOCBOOK4_FO_DIR)/%.fo
 $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html: $(DOCBOOK4_XML_DIR)/%.xml
 	$(DOCMAKE) --stringparam "docmake.output.format=xhtml" -x $(XHTML_ONE_CHUNK_XSLT_SS) -o $(patsubst $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html,$(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%,$@) xhtml $<
 	mv $(@:%/all-in-one.html=%/index.html) $@
-	perl -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 # DOCBOOK5_RELAXNG = http://www.docbook.org/xml/5.0/rng/docbook.rng
 DOCBOOK5_RELAXNG = lib/sgml/relax-ng/docbook.rng
@@ -686,14 +687,14 @@ $(DOCBOOK5_ALL_IN_ONE_XHTMLS): $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xht
 	$(DOCMAKE) --stringparam "root.filename=$@.temp.xml" --basepath $(DOCBOOK5_XSL_STYLESHEETS_PATH) -x $(DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET) xhtml-1_1 $<
 	xsltproc --output $@ ./bin/clean-up-docbook-xhtml-1.1.xslt $@.temp.xml.html
 	rm -f $@.temp.xml.html
-	perl -I./lib -MShlomif::DocBookClean -lpi -0777 -e 's/[ \t]+$$//gms; Shlomif::DocBookClean::cleanup_docbook(\$$_);' $@
+	$(PERL) -I./lib -MShlomif::DocBookClean -lpi -0777 -e 's/[ \t]+$$//gms; Shlomif::DocBookClean::cleanup_docbook(\$$_);' $@
 
 $(DOCBOOK5_RENDERED_DIR)/%.xhtml: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
 	./bin/clean-up-docbook-5-xsl-xhtml-1_1.pl -o $@ $<
 
 $(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	$(DOCMAKE_WITH_PARAMS) --basepath $(DOCBOOK5_XSL_STYLESHEETS_PATH) -o $@ -x $(DOCBOOK5_XSL_FO_XSLT_STYLESHEET) fo $<
-	perl -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 DEST__C_BAD_ELEMS_SRC = dest/t2/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
@@ -717,7 +718,7 @@ $(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
 	fop -fo $< -rtf $@
 
 $(DOCBOOK5_FOR_OOO_XHTML_DIR)/%.html: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
-	cat $< | perl -lne 's{(</title>)}{$${1}<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />}; print unless m{\A<\?xml}' > $@
+	cat $< | $(PERL) -lne 's{(</title>)}{$${1}<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />}; print unless m{\A<\?xml}' > $@
 
 ART_SLOGANS_DOCS = \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
@@ -815,7 +816,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
 	text-vimcolor --format html --full-page $< --output $@
-	perl -i -lapE 's#^( *)<style>$$#$$1<style type="text/css">#ms' $@
+	$(PERL) -i -lapE 's#^( *)<style>$$#$$1<style type="text/css">#ms' $@
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \
@@ -842,12 +843,12 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_S
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
 	dn="$(patsubst %/slides/start.html,%,$@)" ; \
-	   (cd "$$dn" && perl -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && perl bin/fix-spork.pl "$$dn"/slides/*.html && \
-		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs perl -lpi -e 's/[\t ]+\z//') && \
+	   (cd "$$dn" && $(PERL) -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && $(PERL) bin/fix-spork.pl "$$dn"/slides/*.html && \
+		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs $(PERL) -lpi -e 's/[\t ]+\z//') && \
 	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
-	cat $< | perl -pe 's!^\+!!' > $@
+	cat $< | $(PERL) -pe 's!^\+!!' > $@
 
 GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
@@ -967,7 +968,7 @@ SVG_NAV_IMAGES = \
 svg_nav_images: $(SVG_NAV_IMAGES)
 
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
-	perl $< $(T2_DEST_IMAGES_DIR)
+	$(PERL) $< $(T2_DEST_IMAGES_DIR)
 
 NAV_DATA_AS_JSON = $(T2_DEST)/_data/nav.json
 
@@ -1021,7 +1022,7 @@ $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 
 $(PRINTABLE_RESUMES__HTML__PIVOT): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_detailed.html $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(T2_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
-	perl -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > $(PRINTABLE_DEST_DIR)/Shlomi-Fish-Heb-Resume.html
+	$(PERL) -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(T2_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > $(PRINTABLE_DEST_DIR)/Shlomi-Fish-Heb-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume_detailed.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
 
@@ -1049,12 +1050,12 @@ PUT_CARDS_2013_INDIV_SCRIPT = bin/split-put-cards-into-divs.pl
 all: $(PUT_CARDS_2013_DEST_INDIV)
 
 $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
-	perl $(PUT_CARDS_2013_INDIV_SCRIPT)
+	$(PERL) $(PUT_CARDS_2013_INDIV_SCRIPT)
 
 FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
 FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
-FACTOIDS_GEN_CMD = perl $(FACTOIDS_RENDER_SCRIPT)
+FACTOIDS_GEN_CMD = $(PERL) $(FACTOIDS_RENDER_SCRIPT)
 
 # FACTOIDS_DOCS_DEST = $(filter $(DEST_HUMOUR)/bits/facts/%,$(T2_DOCS_DEST))
 
@@ -1074,7 +1075,7 @@ MAN_HTML = $(T2_DEST)/MANIFEST.html
 manifest_html: $(MAN_HTML)
 
 $(MAN_HTML): ./bin/gen-manifest.pl
-	perl $<
+	$(PERL) $<
 
 $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
@@ -1158,7 +1159,7 @@ TECH_TIPS_INPUTS = $(patsubst %,$(TECH_BLOG_DIR)/%,old-tech-diary.xhtml tech-dia
 TECH_TIPS_OUT = lib/blogs/shlomif-tech-diary--tech-tips.xhtml
 
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
-	perl $(TECH_TIPS_SCRIPT) $(patsubst %,--file=%,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
+	$(PERL) $(TECH_TIPS_SCRIPT) $(patsubst %,--file=%,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
 
 $(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)
@@ -1173,8 +1174,8 @@ $(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 PROC_INCLUDES_COMMON = APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
-	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
-	find $(DEST_HUMOUR)/fortunes -regex '.*\.x?html' | perl -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 $(PROC_INCLUDES_COMMON)
+	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | $(PERL) -lpe 's#\A(?:./)?$(T2_DEST)/?##' | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
+	find $(DEST_HUMOUR)/fortunes -regex '.*\.x?html' | $(PERL) -lpe 's#\A(?:./)?$(T2_DEST)/?##' | F=1 $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 

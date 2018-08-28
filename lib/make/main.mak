@@ -125,18 +125,12 @@ htaccesses_target: $(ALL_HTACCESSES)
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(T2_FORTUNES_DIR) && make)
 
-$(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(T2_SRC_DIR)/%/my_htaccess.conf
-	$(call COPY)
-
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	perl -Ilib $< $@
 
 # t2 macros
 
 T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
-
-$(T2_DEST_FORTUNES): $(T2_DEST)/%: $(T2_SRC_DIR)/%
-	$(call COPY)
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call COPY)
@@ -270,9 +264,6 @@ all_deps: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
-
-$(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
-	$(call COPY)
 
 SCREENPLAY_DOCS_ADDITIONS = \
 	ae-interview \
@@ -440,17 +431,11 @@ HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
 HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
 HHGG_CONVERT_SCRIPT_DEST = $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
-$(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
-	$(call COPY)
-
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
 SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
 SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST = $(DEST_HUMOUR_SELINA)/images/$(FRON_IMAGE_BASE)
-
-$(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
-	$(call COPY)
 
 QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg
 
@@ -460,32 +445,8 @@ QOHELETH_IMAGES__DEST_PREFIX = $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
 QOHELETH_IMAGES__SOURCE = $(patsubst %,$(QOHELETH_IMAGES__SOURCE_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
 QOHELETH_IMAGES__DEST = $(patsubst %,$(QOHELETH_IMAGES__DEST_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
 
-$(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__SOURCE_PREFIX)/%
-	$(call COPY)
-
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	perl $<
-
-$(DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
-	$(call COPY)
-
-$(DEST_SPLAY_HUMANITY): $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
-	$(call COPY)
-
-$(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt: $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie-hebrew.txt
-	$(call COPY)
-
-$(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
-	$(call COPY)
-
-$(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
-	$(call COPY)
-
-$(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew.txt
-	$(call COPY)
-
-$(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
-	$(call COPY)
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
@@ -522,16 +483,7 @@ all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
-$(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt: $(DEST_TOWTF)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	$(call COPY)
-
-$(DEST_SPLAY_SELINA): $(DEST_HUMOUR_SELINA)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	$(call COPY)
-
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
-
-$(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
-	$(call COPY)
 
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
@@ -541,33 +493,6 @@ $(DEST_HUMOUR)/index.html $(DEST_HUMOUR)/stories/index.html $(DEST_HUMOUR)/stori
 $(DEST_HUMOUR)/humanity/index.html $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
 
 $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.html: lib/div2mag.wml
-
-$(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
-	$(call COPY)
-
-$(DEST_SPLAY_ST_WeTheLiving): $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
-	$(call COPY)
-
-$(DEST_SPLAY_SummerNSA): $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
-	$(call COPY)
-
-$(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
-	$(call COPY)
-
-$(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
-	$(call COPY)
-
-$(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
-	$(call COPY)
-
-$(DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
-	$(call COPY)
-
-$(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
-	$(call COPY)
-
-$(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
-	$(call COPY)
 
 tidy: all
 	perl bin/run-tidy.pl
@@ -661,9 +586,6 @@ FORTS_EPUB_SRC = $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
 $(FORTS_EPUB_SRC): fortunes-target
 	cd $(FORTUNES_XHTMLS_DIR) && ebookmaker --output $(FORTS_EPUB_BASENAME) book.json
 
-$(FORTS_EPUB_DEST): $(FORTS_EPUB_SRC)
-	$(call COPY)
-
 fortunes-epub: $(FORTS_EPUB_DEST)
 
 fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
@@ -671,12 +593,6 @@ fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(
 $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \
 	optipng "$@"
-
-$(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
-	$(call COPY)
-
-$(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html
-	$(call COPY)
 
 MOJOLICIOUS_LECTURE_SLIDE1 = $(T2_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
@@ -728,18 +644,9 @@ HHFG_V2_IMAGES_DEST_FROM_VCS = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/
 
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS)
 
-$(DOCBOOK4_HHFG_IMAGES_DEST): $(DOCBOOK4_HHFG_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(DOCBOOK4_HHFG_DEST_DIR)/index.html
-	$(call COPY)
-
 $(HHFG_V2_IMAGES_DEST_DIR)/index.html: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/index.html
 	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)
 	cp -a $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/*.html $(HHFG_V2_IMAGES_DEST_DIR)/
-
-$(HHFG_V2_IMAGES_DEST): $(HHFG_V2_IMAGES_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.html
-	$(call COPY)
-
-$(HHFG_V2_IMAGES_DEST_FROM_VCS): $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.html
-	$(call COPY)
 
 DOCBOOK5_XSL_STYLESHEETS_PATH := /usr/share/sgml/docbook/xsl-ns-stylesheets
 
@@ -793,9 +700,6 @@ DEST__C_BAD_ELEMS_SRC = dest/t2/lecture/C-and-CPP/bad-elements/c-and-cpp-element
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
-
-$(DEST__C_BAD_ELEMS_SRC): $(C_BAD_ELEMS_SRC)
-	$(call COPY)
 
 all: $(DEST__C_BAD_ELEMS_SRC)
 
@@ -1005,9 +909,6 @@ HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
 
-$(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
-	$(call COPY)
-
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST) $(QOHELETH_IMAGES__DEST)
 
 pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
@@ -1049,9 +950,6 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS = t2/MathVentures/gen-bugs-in-square-svg.pl t2
 SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst $(T2_SRC_DIR)/%.pl,$(T2_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
-
-$(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(T2_SRC_DIR)/%.pl
-	$(call COPY)
 
 T2_DEST_IMAGES_DIR = $(T2_DEST)/images
 
@@ -1285,11 +1183,7 @@ QP_VIM_IFACE := lib/presentations/qp/common/$(VIM_IFACE_BN)
 
 all: $(QP_VIM_IFACE)
 
-$(QP_VIM_IFACE): lib/$(VIM_IFACE_BN)
-	$(call COPY)
-
 fastrender: $(T2_DOCS_SRC) all_deps
 	$(call WML_RENDER,) $(T2_DOCS)
 
-$(T2_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
-	$(call COPY)
+include lib/make/copies-generated-include.mak

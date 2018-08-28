@@ -156,6 +156,10 @@ foreach my $ext (qw/ html pdf /)
     }
 }
 
+path("${DIR}copies-generated-include.mak")
+    ->spew_utf8( map { $_, qq#\t\$(call COPY)\n#, "\n" }
+        path("${DIR}copies-source.mak")->lines_utf8 );
+
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 my $render = path('bin/render');

@@ -1777,6 +1777,86 @@ in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower 
 
 </ol>
 
+<h3 id="site_loads_quickly">This site loads so quickly. What is your secret?</h3>
+
+<p>
+First of all note that I do not consider myself an expert on load time
+optimisations, and you may be able to find better advice elsewhere using a
+web search.
+</p>
+
+<p>
+That put aside, here are some factors that may contribute to this:
+</p>
+
+<ol>
+<li>
+<p>
+Some of it has to do with my <a href="$(ROOT)/meta/hosting">web hosting</a>,
+currently HostGator. While not perfect, I am quite happy with them, and
+can recommend them for shared hosting.
+</p>
+</li>
+
+<li>
+<p>
+It is possible the site does not receive a lot of traffic for a variety of
+reasons (not sure).
+</p>
+</li>
+
+<li>
+<p>
+I enabled server-side gzip/deflate/etc. compression.
+</p>
+</li>
+
+<li>
+<p>
+XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
+and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
+minimised.
+</p>
+</li>
+
+<li>
+<p>
+I use common external stylesheets, script files, and images instead of embedding
+them on every page.
+</p>
+</li>
+
+<li>
+<p>
+The website is mostly
+<a href="https://en.wikipedia.org/wiki/Static_web_page">static</a> and served
+from the server's hard disk directly without potentially costly server-side
+scripting.
+</p>
+</li>
+
+<li>
+<p>
+I avoid loading unnecessary JavaScript codes and other resources from other
+sites (with some possible exceptions.).
+</p>
+</li>
+
+<li>
+<p>
+PNG images are compressed using
+<a href="http://optipng.sourceforge.net/">OptiPNG</a> ; <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> images are used as well.
+</p>
+</li>
+
+<li>
+<p>
+I sometimes remove various embellishments of the site, that while seemed a good
+idea or were one at a time, are no longer needed.
+</p>
+</li>
+</ol>
+
 <h2 id="works_of_fiction">About my works of fiction.</h2>
 
 <h3 id="why_fan_fic">Why do you write mostly fan-fiction and crossovers?</h3>

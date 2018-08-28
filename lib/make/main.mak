@@ -1139,9 +1139,10 @@ MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 ZIP_MODS = $(patsubst %,%.zip,$(MODS))
 XZ_MODS = $(patsubst %,%.xz,$(MODS))
 
-DEST_MODS_DIR = $(T2_DEST)/Iglu/shlomif/mods/
-DEST_ZIP_MODS = $(patsubst %,$(DEST_MODS_DIR)/%,$(ZIP_MODS))
-DEST_XZ_MODS = $(patsubst %,$(DEST_MODS_DIR)/%,$(XZ_MODS))
+DEST_MODS_DIR = $(T2_DEST)/Iglu/shlomif/mods
+dest_mods = $(addprefix $(DEST_MODS_DIR)/,$(1))
+DEST_ZIP_MODS = $(call dest_mods,$(ZIP_MODS))
+DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
 
 mod_files: $(DEST_ZIP_MODS) $(DEST_XZ_MODS)
 

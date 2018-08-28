@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 5;
+use Test::More tests => 7;
 
 sub gmake_test
 {
@@ -38,5 +38,13 @@ sub gmake_test
     # TEST
     gmake_test( 'DOCBOOK4_PDFS',
         'lib/docbook/4/pdf/what-makes-software-high-quality-rev2.pdf',
+        "found a file" );
+
+    # TEST
+    gmake_test( 'DEST_ZIP_MODS', 'dest/t2/Iglu/shlomif/mods/dreams2.xm.zip',
+        "found a file" );
+
+    # TEST
+    gmake_test( 'DEST_XZ_MODS', 'dest/t2/Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
 }

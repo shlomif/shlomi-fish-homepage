@@ -10,11 +10,13 @@ endif
 
 ALL_DEST_BASE = dest
 
+MATHJAX_SOURCE_README = lib/MathJax/README.md
+
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets mojo_pres hhgg_convert lib/MathJax/README.md plaintext_scripts_with_offending_extensions svg_nav_images generate_nav_data_as_json minified_javascripts
+all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets hhgg_convert plaintext_scripts_with_offending_extensions generate_nav_data_as_json
 
-non_latemp_targets:  htaccesses_target mathjax_dest mod_files printable_resumes__html
+non_latemp_targets: htaccesses_target mathjax_dest minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -38,8 +40,6 @@ NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
 
 DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
-
-MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)

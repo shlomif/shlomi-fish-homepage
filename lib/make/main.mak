@@ -489,10 +489,12 @@ $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: $(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml
+$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: \
+	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
+	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
+	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
+	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
+
 
 # Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are
 # modified.

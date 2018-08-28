@@ -503,17 +503,19 @@ PUT_CARDS_2013_DEST = $(T2_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
 
 STRIP_HTML_BIN = bin/processors/strip-html-overhead.pl
+strip_html = perl $(STRIP_HTML_BIN) < $< > $@
 
 $(PUT_CARDS_2013_XHTML_STRIPPED): $(PUT_CARDS_2013_XHTML) $(STRIP_HTML_BIN)
-	perl $(STRIP_HTML_BIN) < $< > $@
+	$(call strip_html)
 
 HOW_TO_GET_HELP_2013_XHTML = lib/pages/t2/philosophy/how-to-get-help-online.xhtml
 HOW_TO_GET_HELP_2013_XHTML_STRIPPED = $(HOW_TO_GET_HELP_2013_XHTML).processed-stripped
 
 $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HTML_BIN)
-	perl $(STRIP_HTML_BIN) < $< > $@
+	$(call strip_html)
 
 $(T2_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
+
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)

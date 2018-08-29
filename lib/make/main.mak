@@ -88,8 +88,11 @@ T2_CLEAN_STAMP = lib/cache/STAMP.two
 
 T2_CACHE_PREF = lib/cache/combined/t2
 
+GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+
 $(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
-	$(PERL) $(GEN_SECT_NAV_MENUS) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.html $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+	@echo "Generating sects_cache"
+	@$(GEN_CACHE_CMD)
 	touch $@
 
 sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)

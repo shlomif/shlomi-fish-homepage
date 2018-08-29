@@ -16,7 +16,7 @@ all: all_deps latemp_targets non_latemp_targets
 
 all_deps: sects_cache docbook_targets fortunes-target sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets hhgg_convert plaintext_scripts_with_offending_extensions
 
-non_latemp_targets: css_targets generate_nav_data_as_json htaccesses_target mathjax_dest minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
+non_latemp_targets: css_targets generate_nav_data_as_json htaccesses_target mathjax_dest min_svgs minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -1192,5 +1192,17 @@ all: $(QP_VIM_IFACE)
 fastrender: $(T2_DOCS_SRC) all_deps
 	@echo fastrender
 	@$(call WML_RENDER,) $(T2_DOCS)
+
+T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
+T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
+T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
+
+min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz)
+
+$(T2_SVGS__MIN): %.min.svg: %.svg
+	minify --svg-decimals 3 -o $@ $<
+
+$(T2_SVGS__svgz): %.svgz: %.min.svg
+	gzip --best < $< > $@
 
 include lib/make/copies-generated-include.mak

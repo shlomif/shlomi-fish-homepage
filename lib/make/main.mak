@@ -14,9 +14,9 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets hhgg_convert plaintext_scripts_with_offending_extensions generate_nav_data_as_json
+all_deps: sects_cache docbook_targets fortunes-target css_targets sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets hhgg_convert plaintext_scripts_with_offending_extensions
 
-non_latemp_targets: htaccesses_target mathjax_dest minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
+non_latemp_targets: generate_nav_data_as_json htaccesses_target mathjax_dest minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -980,8 +980,6 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
 $(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
-
-generate_nav_data_as_json:
 
 JQTREE_SRC = common/js/tree.jquery.js
 JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js

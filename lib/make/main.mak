@@ -1187,6 +1187,7 @@ QP_VIM_IFACE := lib/presentations/qp/common/$(VIM_IFACE_BN)
 all: $(QP_VIM_IFACE)
 
 fastrender: $(T2_DOCS_SRC) all_deps
-	$(call WML_RENDER,) $(T2_DOCS)
+	@echo fastrender
+	@$(call WML_RENDER,) $(T2_DOCS)
 
 include lib/make/copies-generated-include.mak

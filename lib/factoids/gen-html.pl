@@ -752,8 +752,8 @@ EOF
         img_alt => "Silhouette of a Snail",
         img_attribution =>
             'https://openclipart.org/detail/230426/snail-silhouette',
-        img_class => "facts_logo windows_update",
-        img_src => "\$(ROOT)/humour/bits/facts/images/windows-update-snail.png",
+        img_class   => "facts_logo windows_update",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/snail.min.svg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2016" />
 EOF

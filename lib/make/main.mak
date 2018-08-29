@@ -1178,10 +1178,11 @@ $(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON := APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
+find_htmls = find $(1) -regex '.*\.x?html'
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
-	find $(T2_DEST) -regex '.*\.x?html' | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | $(STRIP_T2_DEST) | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
-	find $(DEST_HUMOUR)/fortunes -regex '.*\.x?html' | $(STRIP_T2_DEST) | F=1 $(PROC_INCLUDES_COMMON)
+	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | $(STRIP_T2_DEST) | grep -vP '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
+	$(call find_htmls,$(DEST_HUMOUR)/fortunes) | $(STRIP_T2_DEST) | F=1 $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	touch $@
 

@@ -181,6 +181,10 @@ my %tr_s = (
             ),
             _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/", ),
             _l(
+                inner_html => "Windows Update Facts",
+                path       => "humour/bits/facts/Windows-Update/",
+            ),
+            _l(
                 inner_html => "XSLT Facts",
                 path       => "humour/bits/facts/XSLT/",
             ),

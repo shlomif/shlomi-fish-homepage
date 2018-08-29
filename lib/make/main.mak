@@ -101,7 +101,7 @@ FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
 site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
 
-$(T2_POST_DIRS_DEST) : % :
+$(T2_POST_DIRS_DEST): %:
 	mkdir -p $@
 	touch $@
 
@@ -229,6 +229,7 @@ T2_META_DOCS_DEST = $(call t2_filt,meta)
 $(T2_META_DOCS_DEST): $(META_SUBSECT_DEPS)
 
 $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
+
 rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
@@ -1110,7 +1111,7 @@ $(OCT_2014_SGLAU_LET_HTML): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/lett
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 	convert -resize '200' $< $@
 
-ENEMY_STYLE = dest/t2/humour/TheEnemy/The-Enemy-English-v7/style.css
+ENEMY_STYLE = $(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
 
 all: $(ENEMY_STYLE)
 

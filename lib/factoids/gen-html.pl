@@ -172,8 +172,9 @@ EOF
         img_alt => "Soviet Russia",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
-        img_class   => "facts_logo in_soviet_russia",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/soviet-150w.png",
+        img_class => "facts_logo in_soviet_russia",
+        img_src =>
+            "\$(ROOT)/humour/bits/facts/images/soviet-union-modified.min.svg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
 EOF

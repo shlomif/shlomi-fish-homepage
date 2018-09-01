@@ -11,9 +11,10 @@ Test::HTML::Tidy::Recursive->new(
         filename_filter => sub {
             my $fn = shift;
             return (
-                not(   $fn =~ m{\Apost-dest/t2/meta/FAQ/}
+                not(   $fn =~ m{\A post-dest/t2/meta/FAQ/}x
+                    or $fn =~ m{\A post-dest/t2/me/rindolf/ }x
                     or $fn =~ m{js/MathJax}
-                    or $fn =~ m{\Apost-dest/t2/MathVentures/} )
+                    or $fn =~ m{\A post-dest/t2/MathVentures/}x )
             );
         },
     }

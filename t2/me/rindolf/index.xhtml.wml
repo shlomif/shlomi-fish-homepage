@@ -1,4 +1,6 @@
-#include "template.wml"
+#include "prelude.wml"
+<set-var latemp_html_standard="xhtml5" />
+#include "driver.wml"
 #include "toc_div.wml"
 
 <latemp_subject "About “Rindolf” - Shlomi Fish’s Nickname" />
@@ -16,9 +18,9 @@
 
 <toc_div />
 
-<div class="rindolf">
+<div class="rindolf fancy_sects">
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h2 id="what">“Rindolf” - Shlomi Fish’s Nickname</h2>
 
@@ -31,9 +33,9 @@ Some common pet names for Rindolf include “Rin”,
 “Rinny”, “Rindy”, “Rinfold”, etc.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h2 id="rindolf_the_dwarf">Rindolf the Dwarven Warrior</h2>
 
@@ -66,9 +68,9 @@ I settled on “rindolf”, which I felt was the most original nickname, and par
 of my individuality.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h2 id="rindolf_the_evil_reindeer">Rindolf the Evil Reindeer</h2>
 
@@ -119,7 +121,7 @@ Some of Rindolf the Evil Reindeer’s appearances on IRC include:
 
 </ol>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h3 id="gandalfs_reindeer">Gandalf’s Reindeer</h3>
 
@@ -133,9 +135,9 @@ and became the former pet of Gandalf, who betrayed him and acquired a lot
 of evil magic using his EvilAntlers™.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h3 id="the_rindolf_algo">The Rindolf Algorithm</h3>
 
@@ -146,9 +148,9 @@ with the sole exception of one's 5 years old little sister. See
 <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Rijndael</a>.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h3 id="rindolf_aim_very_high_hitlower">Rindolf “Aim Very High” Hitlower</h3>
 
@@ -163,7 +165,7 @@ very high</b> in the hope that I will hit the aim or perhaps a little lower,
 and so settled on this nickname.
 </p>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="the_hacker_monarch">The Hacker Monarch</h4>
 
@@ -192,9 +194,9 @@ in Black</i></a>. Despite whatever faults she or I had, we are both full of
 awesomeness.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="from_the_invisible_to_alpha_male">From the Invisible to the Alpha Male</h4>
 
@@ -222,9 +224,9 @@ years of wonder, fame, fortune, and especially - love, strength, sexiness,
 pluralism, joy and happiness.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="passing_the_baton">Passing the Baton</h4>
 
@@ -249,9 +251,9 @@ is <b>blessed</b> and <b>cursed</b> at the same time (which are
 the same coin</a>). Now Summer will decide what to do with it.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="sic_transit_gloria">Sic Transit Gloria</h4>
 
@@ -262,9 +264,9 @@ Gloria Mundi</b></a>, and
 if asked I would have known this day would come.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="looking_into_the_future">Looking into the Future</h4>
 
@@ -276,9 +278,9 @@ motherfucker!!! Do you speak it?! And:
 <a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">hackers</a> of the world - unite!!
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h4 id="update_long_live_us_hacker_monarchs">Update: Long Live, us, [no-"the"!] Hacker Monarchs!</h4>
 
@@ -337,13 +339,13 @@ successful, rich, and famous, writer/entertainer/philosopher and
 screenwriter. Remember the name: Shlomi “Rindolf” Fish!
 </p>
 
-</div>
+</section>
 
-</div>
+</section>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h2 id="rindolfism">Rindolfism</h2>
 
@@ -570,7 +572,7 @@ require a lot of revamping.
 
 </ol>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h3 id="neo_semitism">Neo-Semitism</h3>
 
@@ -599,11 +601,11 @@ cross-pollination, acceptance, tolerance, rationality and life.
 
 </blockquote>
 
-</div>
+</section>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section class="sub_section">
 
 <h2 id="rindolf_trivia">Trivia</h2>
 
@@ -652,6 +654,6 @@ is the language of love and “Love is Evil, and Evil is Love”.
 
 </ul>
 
-</div>
+</section>
 
 </div>

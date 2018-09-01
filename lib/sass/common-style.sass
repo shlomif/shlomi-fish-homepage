@@ -698,20 +698,27 @@ div.abstract
 
 $ss_margin: 2em
 
+=mysection
+    margin-top: $ss_margin
+    margin-left: 1em
+    // margin-bottom: $ss_margin
+    padding-left: 1.5em
+    border-left: black solid 3pt
+    padding-top: 0.3em
+    // padding-bottom: 0.3em
+    // border-radius: 5pt
+    &:hover
+        border-left-color: #555555
+    > p:last-child, > ul:last-child > li:last-child > p:last-child, > ol:last-child > li:last-child > p:last-child
+        padding-bottom: 1em
+
 .rindolf
     .sub_section
-        margin-top: $ss_margin
-        margin-left: 1em
-        // margin-bottom: $ss_margin
-        padding-left: 1.5em
-        border-left: black solid 3pt
-        padding-top: 0.3em
-        // padding-bottom: 0.3em
-        // border-radius: 5pt
-        &:hover
-            border-left-color: #555555
-        > p:last-child, > ul:last-child > li:last-child > p:last-child, > ol:last-child > li:last-child > p:last-child
-            padding-bottom: 1em
+        +mysection()
+
+.faq
+    section
+        +mysection()
 
 h2, h3
     &.story

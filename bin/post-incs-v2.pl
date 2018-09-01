@@ -138,5 +138,6 @@ s%<div id="([^"]+)">Placeholder</div>%"\n" . $TEXTS{$1}%egms
 foreach my $rec ( @filenames, @ad_filenames, @raw_filenames )
 {
     my $d = path("$dest_dir/$rec->{bn}");
-    write_on_change( $d->touchpath, \( path( $rec->{temp} )->slurp_utf8 ) );
+    $d->parent->mkpath;
+    write_on_change( $d, \( path( $rec->{temp} )->slurp_utf8 ) );
 }

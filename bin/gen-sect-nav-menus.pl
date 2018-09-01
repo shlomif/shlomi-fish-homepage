@@ -18,7 +18,7 @@ use Parallel::ForkManager::Segmented ();
 sub get_page_path
 {
     my $filename = "<get-var filename />";
-    $filename =~ s{index\.html$}{};
+    $filename =~ s{index\.x?html$}{};
 
     return $filename;
 }
@@ -68,13 +68,13 @@ foreach my $host (qw(t2 vipe))
             batch_size   => 16,
             process_item => sub {
                 my $proto_url = shift;
-                my $url       = $proto_url =~ s#(\A|/)index\.html\z#$1#r;
+                my $url       = $proto_url =~ s#(\A|/)(index\.x?html)\z#$1#r;
 
+                my $suf      = $2;
                 my $filename = "/$url";
 
                 # urlpath.
-                my $urlp =
-                    "$hostp/" . ( $url =~ s#(\A|/)$#${1}index.html#r ) . '/';
+                my $urlp = "$hostp/" . ( $url =~ s#(\A|/)$#${1}$suf#r ) . '/';
                 path($urlp)->mkpath;
 
                 # print "start filename=$filename\n";

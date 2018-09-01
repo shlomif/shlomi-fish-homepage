@@ -1,4 +1,6 @@
-#include "template.wml"
+#include "prelude.wml"
+<set-var latemp_html_standard="xhtml5" />
+#include "driver.wml"
 
 #include "toc_div.wml"
 #include "Inc/cpan_dists.wml"
@@ -42,7 +44,10 @@ Some related FAQs I co-maintain:
 </ul>
 <toc_div />
 
+<section class="h2">
 <h2 id="about">About Shlomi Fish</h2>
+
+<section class="h3">
 
 <h3 id="who_are_you">Who are you?</h3>
 
@@ -70,6 +75,10 @@ any other “Shlomi Fish”’es of significance (at least not
 according to Internet searches).
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="guy_or_girl">Are you a Guy or a Girl?</h3>
 
 <p>
@@ -88,6 +97,10 @@ many Israeli Hebrew feminine names that end with “i”. One reason I’m using
 “Shlomi” instead of “Shlomy” is because “Shlomy” might be pronounced to rhyme
 with the word “my”.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="your_name">What can you say about your name?</h3>
 
@@ -158,6 +171,8 @@ for both the "P" and the "F" sounds, and it would be "P" in the beginning of
 the word.
 </p>
 
+<section class="h4">
+
 <h4 id="is_shlomi_fish_your_real_name">Is Shlomi Fish Your Real Name?</h4>
 
 <p>
@@ -165,6 +180,12 @@ Despite what the name may imply to non-Israeli people, Shlomi Fish is my
 real, and legal, name. See <a href="#your_name">the question above</a>
 for more information about its etymology.
 </p>
+
+</section>
+
+</section>
+
+<section class="h3">
 
 <h3 id="where_are_you_from">Where are you from? Where do you
 live currently?</h3>
@@ -180,6 +201,10 @@ back to Tel Aviv and I lived in
 <a href="https://en.wikipedia.org/wiki/Ramat_Aviv">Ramat Aviv Gimmel</a>
 ever since.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="your_job">What is your day job? What do you do for a living?
 What is your work about?</h3>
@@ -203,6 +228,10 @@ wonderful, exciting, and wonderous, journey, and I’m not going to give up.
 </li>
 </ul>
 
+</section>
+
+<section class="h3">
+
 <h3 id="why_were_you_unemployed">You seem very knowledgeable and capable. How come you said you were unemployed?</h3>
 
 <p>
@@ -220,11 +249,17 @@ That put aside, if you are interested in hiring me, despite whatever
 limitations I may have, please contact me and we'll see about that.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="nicknames">How else are you known?</h3>
 
 <p>
 I’m also known as “shlomif” or on the IRC as “rindolf”.
 </p>
+
+<section class="h4">
 
 <h4 id="origin_of_rindolf">What is the origin of your “rindolf” IRC nickname?</h4>
 
@@ -272,6 +307,12 @@ manifestations of this joke in
 cookies</a>.
 </p>
 
+</section>
+
+</section>
+
+<section class="h3">
+
 <h3 id="refer_or_address">How should I address you or refer to you?</h3>
 
 <p>
@@ -302,6 +343,11 @@ only “shlomif” on the Internet</a>.
 <p>
 On the IRC, I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
 </p>
+
+</section>
+
+
+<section class="h3">
 
 <h3 id="religious_belief">What is your Religious Belief or Inclination?</h3>
 
@@ -371,6 +417,11 @@ and do.
 </li>
 </ul>
 
+</section>
+
+
+<section class="h3">
+
 <h3 id="ethnicity">What is your ethnicity? What is your lineage?</h3>
 
 <p>
@@ -396,6 +447,11 @@ As such, I look
 like a kind of a Iraqi/Persian version of my father, who looks East European.
 </p>
 
+</section>
+
+
+<section class="h3">
+
 <h3 id="idf_service">Did you serve in the Israeli Military (the IDF)?</h3>
 
 <p>
@@ -412,6 +468,11 @@ That put aside, I
 <a href="http://groups.yahoo.com/group/philosophy-il/message/25">oppose the
 draft</a> in Israel or wherever.
 </p>
+
+</section>
+
+
+<section class="h3">
 
 <h3 id="favourite_music">What kind of Music do you like to listen to?</h3>
 
@@ -432,6 +493,11 @@ sang by Gidi Gov, but it was composed by Poliker with words written by Meir
 Ariel. My favourite song in English is “You Gotta Be” by
 <a href="http://en.wikipedia.org/wiki/Des'ree">Des’ree</a>.
 </p>
+
+</section>
+
+
+<section class="h3">
 
 <h3 id="should_i_email">May I email you about X?</h3>
 
@@ -518,6 +584,11 @@ created or maintain.
 
 </ul>
 
+</section>
+
+
+<section class="h3">
+
 <h3 id="diet">What can you tell about your diet?</h3>
 
 <p>
@@ -558,6 +629,10 @@ beef, pork/bacon/ham/etc. and the occasional mutton) - sorry vegans/vegetarians
 but I feel like I need to eat meat. I used to avoid consuming sugary foods
 and beverages, but I now consume them again and am much happier.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="mental_illness">Do you have any mental illnesses?</h3>
 
@@ -644,6 +719,10 @@ Ethics, philosophy and opinions change with time, as technology, culture
 and education progresses.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="irc_part_message">What is the origin of your IRC part
 message (“Yay! I’m a Llama again!”)?</h3>
 
@@ -663,6 +742,10 @@ href="http://www.shlomifish.org/humour/bits/facts/Summer-Glau/">http://www.shlom
 <a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> screenplay and Ms. Glau.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="obscure_email_addr">Why don’t you obscure/hide your email address?
 People can spam you.</h3>
@@ -702,6 +785,10 @@ post to the “Joel on Software” forum</a> about
 “Email at the bottom of every page”.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="evilphish-emblem">What can you tell about the Fish Emblem on the top-left corner?</h3>
 
 <p>
@@ -734,6 +821,10 @@ they are familiar with, and with a memorable emblem such as EvilPHish.
 You can also find <a href="$(ROOT)/me/images/EvilPHish-Icon/">various
 versions</a> of the EvilPHish image for download and reuse.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="computers-specs">What are your Computers’ Specifications?</h3>
 
@@ -855,6 +946,10 @@ This dual-boots between Windows 7 Home something and <a href="https://en.wikiped
 (which is what I’m using most of the time.).
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="programming_languages">Which Programming Language did you start with? Which programming languages do you know now?</h3>
 
 <p>
@@ -914,6 +1009,10 @@ You can find a list of languages that I currently know on
 <a href="$(ROOT)/SFresume.html">my résumé</a>.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="revealing_incriminating_details">Why are you revealing incriminating
 details
 about yourself? This makes you look bad for potential employers.</h3>
@@ -960,6 +1059,10 @@ or keep important details about you not in the open will end up working against
 you, and cause you a lot of aggravations.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="how_did_you_learn_english">How did you learn English?</h3>
 
 <p>
@@ -984,6 +1087,10 @@ looking back at my English text from a few years back, I cringe at how bad
 it was, and am still being told that some of my writing is non-idiomatic by some
 native speakers.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="how_can_I_improve_my_English">How can I improve my English?</h3>
 
@@ -1056,6 +1163,10 @@ and improving it in <a href="https://github.com/yvoronoy/awesome-english">the
 “Awesome English” curated list of links</a> on GitHub.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="asperger_syndrome">Do you have Asperger syndrome (Asperger’s)?</h3>
 
 <p>
@@ -1065,6 +1176,10 @@ syndrome</a> or am otherwise on the Autistic spectrum, but my psychotherapist
 (who has a Ph.D. in Clinical Psychology and with whom I met face to face many
 times), told me I most probably don’t have it, after I asked him whether I do.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="text_editors">Which text editors are you using? What is your
 favourite text editor?</h3>
@@ -1100,6 +1215,10 @@ quite a lot of Vim extensions written in vimscript and in Vim’s extension
 languages, which are not supported by Evil.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="choice_of_operating_system">Why are you using your choice of an operating system (= Mageia Linux)?</h3>
 
 <p>
@@ -1130,6 +1249,10 @@ problems. Part of my motivation is
 <a href="$(ROOT)/humour/fortunes/show.cgi?id=esr-catb--writing-for-the-world">this
 quote</a> from “The Cathedral and the Bazaar”.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="d10_dice">Why are you obsessed with ten-sided dice? (d10) What do you
 do with them?</h3>
@@ -1205,6 +1328,10 @@ people do.
 
 </ol>
 
+</section>
+
+<section class="h3">
+
 <h3 id="selfishness">Is the fact that you are/were an Objectivist (= an
 advocate of Ayn Rand’s philosophy) makes you selfish?</h3>
 
@@ -1236,6 +1363,10 @@ strive for “Rational Self-Growth” and that often “selfish vs. selfless” 
 presented as a false dichotomy.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="zionist">Are you a "Zionist"? Are you an "anti-Zionist"?</h3>
 
 <p>
@@ -1251,6 +1382,10 @@ Seems like "anti-Zionism" is broadly defined (see <a href="https://en.wikipedia.
 </p>
 
 </blockquote>
+
+</section>
+
+<section class="h3">
 
 <h3 id="hebrew_and_arabic">Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?</h3>
 
@@ -1303,7 +1438,15 @@ in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower 
 
 </ol>
 
+</section>
+
+</section>
+
+<section class="h2">
+
 <h2 id="about_this_site">About this Site</h2>
+
+<section class="h3">
 
 <h3 id="shlomifish_org_domain">Why did you get the
 www.shlomifish.org domain?</h3>
@@ -1323,6 +1466,10 @@ http://shlomifish.org/ used to be a parked hostname of my DNS registrar, but
 now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="refer_to_shlomifish.org">How should I refer to this site?</h3>
 
@@ -1351,6 +1498,10 @@ I picked the appropriate domain for that.
 </li>
 
 </ol>
+
+</section>
+
+<section class="h3">
 
 <h3 id="website_in_english">Why is this website in English? Why not
 Hebrew?</h3>
@@ -1402,6 +1553,10 @@ their common subset), are inconsistent and confusing, but I have to make
 a choice of some sort.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="spent_on_the_site">How much time do you spend on this site?</h3>
 
 <p>
@@ -1429,6 +1584,10 @@ I am still working on the site, both by adding new content and attractions,
 by revising or correcting existing ones, by making it more usable, or by
 trying to publicise new attractions in various online resources.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="site_history">What can you tell me about this site’s history?</h3>
 
@@ -1510,6 +1669,10 @@ wrote
 article about it</a>, which you can read.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="homesite_or_blog">Is www.shlomifish.org a blog?</h3>
 
 <p>
@@ -1542,6 +1705,10 @@ see:
 
 </ul>
 
+</section>
+
+<section class="h3">
+
 <h3 id="xhtml_11">Why are you using XHTML 1.1 for many pages on your site
 while serving them as “text/html”?</h3>
 
@@ -1569,6 +1736,10 @@ section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
 because they contain <a href="http://www.w3.org/Math/">MathML</a>.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="is_everything_here_true">Is everything you say here true?
 Should I take it seriously?</h3>
 
@@ -1591,6 +1762,10 @@ necessary technical skills, you can peruse the pages’ history in the
 <a href="$(ROOT)/meta/site-source/">version control repository</a>.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="how_many_visitors">How many visitors/hits/uniques/etc. does this site
 get per month?</h3>
 
@@ -1606,6 +1781,10 @@ better, and working on better publicity - both using Internet-based media
 and using real-world networking - and don't have the energy to spend time
 on silly statistics.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="why_not_https">Why isn’t this site hosted using HTTPS/SSL?</h3>
 
@@ -1656,6 +1835,10 @@ You can mirror the site using <code>wget --mirror</code> if you care about
 
 </ol>
 
+</section>
+
+<section class="h3">
+
 <h3 id="please_delete_offensive_stuff">Can you please delete offensive/blasphemous/derogatory stuff that appears on your site?</h3>
 
 <p>
@@ -1698,6 +1881,10 @@ with updates, corrections, or saying that I no longer approve of their content.
 But this is assuming I agree with them.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="link_here_to_drive_traffic">Do you link to your site to drive in traffic?</h3>
 
 <p>
@@ -1723,6 +1910,10 @@ you’re too envious of me linking to my site, then please stop and get your
 own site which you can start populating with interesting content to your
 heart’s content.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="how_site_is_generated">How is this site generated? Which CMS (Content
 Management System) are you using?</h3>
@@ -1751,6 +1942,10 @@ time-consuming, and I've already found some faults in one existing popular
 static site generator that I tried.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="is_site_written_in_perl">Is this site written in Perl?</h3>
 
 <p>
@@ -1767,6 +1962,10 @@ content, but the site's source code is not limited to Perl, and it does
 not run on the web server, nor is required to run most of it.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="broken_links">I found some broken links on one of your sites. Should I report them to you?</h3>
 
 <p>
@@ -1778,6 +1977,10 @@ years, and it is natural that some of the links have become stale. As a result,
 dealing with these reports have become quite frustrating due to their
 frequency
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="site_loads_quickly">This site loads so quickly. What is your secret?</h3>
 
@@ -1891,7 +2094,14 @@ average web page size</a>
 </li>
 </ol>
 
+</section>
+
+</section>
+
+<section class="h2">
 <h2 id="works_of_fiction">About my works of fiction.</h2>
+
+<section class="h3">
 
 <h3 id="why_fan_fic">Why do you write mostly fan-fiction and crossovers?</h3>
 
@@ -1916,6 +2126,10 @@ works. I don’t have a lot of control of the ideas I come up with, but I know
 I must materialise them eventually.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="why_real_person_fiction">What about your Real person fiction?</h3>
 
 <p>
@@ -1930,6 +2144,10 @@ the case for me.
 <p>
 The general consensus is that a celebrity generally allows himself or herself to be a subject of reuse in literature, and that includes me, Shlomi Fish.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="featuring_sexy_women_and_girls">You feature sexy women and girls in your works. Are you a pervert?</h3>
 
@@ -1985,7 +2203,13 @@ for Drug Legalisation”</a> for why Marijuana, and all other illegal narcotics,
 should be made legal globally.
 </p>
 
+</section>
+
+</section>
+<section class="h2">
 <h2 id="foss">About Free and Open Source Software (FOSS)</h2>
+
+<section class="h3">
 
 <h3 id="how_to_become_hacker">How can I become an open-source contributor?</h3>
 
@@ -1996,6 +2220,10 @@ You may also wish to read my
 <a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">“Advice
 for the Young”</a> essay.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="help_me_crack">Can you help me intrude into/exploit (so-called “crack”
 or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?</h3>
@@ -2070,6 +2298,10 @@ From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
 
 </ul>
 
+</section>
+
+<section class="h3">
+
 <h3 id="are_you_a_hacker">Are you a hacker?</h3>
 
 <p>
@@ -2089,6 +2321,10 @@ people can judge whether I am indeed a hacker of them. And my policy is to
 <a href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">encourage criticism</a> rather than fanboy/fangirl-ism.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="how_use_hg">You’re using Mercurial (on Bitbucket.org/etc.) for some of
 your projects. How can I learn how to use it?</h3>
 
@@ -2099,6 +2335,10 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 <a href="https://duckduckgo.com/?q=mercurial%20tutorial">web search for
 “mercurial tutorial”</a>. Mercurial is not too hard to learn.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="Shlomif_Common_cmake">When building some of your CMake-based
 projects, I am getting an error for a missing “Shlomif_Common.cmake” file</h3>
@@ -2111,6 +2351,10 @@ not be encountered when building a source release from the source archive
 downloads.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="how_many_projects">How many Projects are you Working on?</h3>
 
 <p>
@@ -2119,12 +2363,20 @@ switch-tasking between them. Some of them have sub-projects or individual
 tasks. You can find some lists and activity logs on <a href="$(ROOT)/open-source/">this page</a>.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="github_account">Do you have a GitHub account?</h3>
 
 <p>
 Yes, see <a href="$(ROOT)/open-source/projects/#forges_home_pages">this
 link</a> for more information.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="thought_you_were_a_Perl_guy">Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!</h3>
 
@@ -2159,6 +2411,10 @@ I Hate Advocacy</a> - by Mark-Jason Dominus.
 </li>
 
 </ul>
+
+</section>
+
+<section class="h3">
 
 <h3 id="publishing_proj_euler">Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?</h3>
 
@@ -2200,6 +2456,10 @@ employers and other interested parties.
 
 </ol>
 
+</section>
+
+<section class="h3">
+
 <h3 id="proj_euler_in_order">Do you solve the Project Euler problems in their order?</h3>
 
 <p>
@@ -2207,6 +2467,10 @@ No, I don't. I often skip problems which I find too difficult or not interesting
 enough. I did solve 149 out of the first 150 problems (excluding <a
 href="https://projecteuler.net/problem=143">No. 143</a>).
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="todo_lists_and_organised">How do you keep organised? What do you use for To-Do lists?</h3>
 
@@ -2220,7 +2484,15 @@ using the <a href="https://github.com/aaronbieber/vim-quicktask">vim-quicktask
 plugin</a>.
 </p>
 
+</section>
+
+</section>
+
+<section class="h2">
+
 <h2 id="political_correctness">Political Correctness (or Lack of it)</h2>
+
+<section class="h3">
 
 <h3 id="pc_rating">What is the Approximate Maturity Rating of this Site?</h3>
 
@@ -2228,6 +2500,10 @@ plugin</a>.
 Most of it should be either U (Universal) or PG-Something (Parent Guidance).
 I’m not a blatantly pornographic person.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="pc_girl">Why are you using the terms “girl”, “chick”, etc.?</h3>
 
@@ -2237,6 +2513,10 @@ told that some overly strict feminists consider it derogatory, but until a bette
 emerges, that’s what I’m going to use. (And I don’t find it particularly
 derogatory).
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="pc_nazi">Why are you using the term “nazi” to refer to people
 who are “needlessly strict”?</h3>
@@ -2288,6 +2568,8 @@ Jewish Bible).
 </li>
 </ol>
 
+<section class="h4">
+
 <h4 id="pc_nazi_writings">Why do you mention Hitler, Nazis, etc. in some of
 Your Writings?</h4>
 
@@ -2299,6 +2581,12 @@ are Jewish Holocaust survivors, also featured the Nazis or Hitler in many
 films (notably the Indiana Jones trilogy), so if a fire has caught the
 Firs…
 </p>
+
+</section>
+
+</section>
+
+<section class="h3">
 
 <h3 id="pc_porn">What do you think about Porn?</h3>
 
@@ -2323,9 +2611,17 @@ one should be allowed to produce it, distribute it, and experience it. Some
 of the greatest artists in history produced pornographic or erotic artworks.
 </p>
 
+<section class="h4">
+
 <h4 id="pc_porn_links">Are there any Links to Porn on your Site?</h4>
 
 <p>
 There may be some links to soft porn, etc. Or to individual pornographic
 pages that illustrate a certain point.
 </p>
+
+</section>
+
+</section>
+
+</section>

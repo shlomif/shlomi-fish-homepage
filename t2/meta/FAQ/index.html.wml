@@ -702,33 +702,6 @@ post to the “Joel on Software” forum</a> about
 “Email at the bottom of every page”.
 </p>
 
-<h3 id="xhtml_11">Why are you using XHTML 1.1 for many pages on your site
-while serving them as “text/html”?</h3>
-
-<p>
-I feel that validating against an XHTML schema makes my code cleaner and less
-buggy, because I need to have closing tags, as well as use a trailing “/” for
-standalone tags, etc. I also find the additional XHTML 1.1 restrictions
-to be a good idea.
-</p>
-
-<p>
-Therefore I decided to make XHTML 1.1 the default doctype for the pages
-on my site. The reason I’m serving them as <code>text/html</code> is because
-<a href="$(ROOT)/no-ie/">Microsoft Internet Explorer</a> does not handle
-<code>application/xml+xhtml</code> properly, and I’d rather not needlessly
-discriminate against people who still use it (possibly against their
-will).
-</p>
-
-<p>
-I realise that it stands against the XHTML standard, but I’m not a standards
-purist, and want to be a bit pragmatic in still supporting Explorer.
-Note that some pages in the <a href="$(ROOT)/MathVentures/">Math-Ventures
-section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
-because they contain <a href="http://www.w3.org/Math/">MathML</a>.
-</p>
-
 <h3 id="evilphish-emblem">What can you tell about the Fish Emblem on the top-left corner?</h3>
 
 <p>
@@ -1568,6 +1541,33 @@ see:
 </li>
 
 </ul>
+
+<h3 id="xhtml_11">Why are you using XHTML 1.1 for many pages on your site
+while serving them as “text/html”?</h3>
+
+<p>
+I feel that validating against an XHTML schema makes my code cleaner and less
+buggy, because I need to have closing tags, as well as use a trailing “/” for
+standalone tags, etc. I also find the additional XHTML 1.1 restrictions
+to be a good idea.
+</p>
+
+<p>
+Therefore I decided to make XHTML 1.1 the default doctype for the pages
+on my site. The reason I’m serving them as <code>text/html</code> is because
+<a href="$(ROOT)/no-ie/">Microsoft Internet Explorer</a> does not handle
+<code>application/xml+xhtml</code> properly, and I’d rather not needlessly
+discriminate against people who still use it (possibly against their
+will).
+</p>
+
+<p>
+I realise that it stands against the XHTML standard, but I’m not a standards
+purist, and want to be a bit pragmatic in still supporting Explorer.
+Note that some pages in the <a href="$(ROOT)/MathVentures/">Math-Ventures
+section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
+because they contain <a href="http://www.w3.org/Math/">MathML</a>.
+</p>
 
 <h3 id="is_everything_here_true">Is everything you say here true?
 Should I take it seriously?</h3>

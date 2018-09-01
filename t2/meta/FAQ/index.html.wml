@@ -42,7 +42,7 @@ Some related FAQs I co-maintain:
 </ul>
 <toc_div />
 
-<h2 id="about">About Shlomi Fish and this Site</h2>
+<h2 id="about">About Shlomi Fish</h2>
 
 <h3 id="who_are_you">Who are you?</h3>
 
@@ -220,103 +220,6 @@ That put aside, if you are interested in hiring me, despite whatever
 limitations I may have, please contact me and we'll see about that.
 </p>
 
-<h3 id="shlomifish_org_domain">Why did you get the
-www.shlomifish.org domain?</h3>
-
-<p>
-Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
-DNS service, but it had a lot of DNS problems. Thus, I set up
-<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>. I didn’t
-take shlomifish.org.il because .il domains used to cost a lot of money, and
-also required co-ordination by a fax message (how low-tech) upon every
-change. I also didn’t want a .com domain because I feel I’m a private individual
-rather than a company.
-</p>
-
-<p>
-http://shlomifish.org/ used to be a parked hostname of my DNS registrar, but
-now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
-which I bought later.
-</p>
-
-<h3 id="refer_to_shlomifish.org">How should I refer to this site?</h3>
-
-<p>
-You can call it “Shlomi Fish’s Homepage”, “Shlomi Fish’s Homesite”,
-“Shlomi Fish’s personal web site”, or “shlomifish.org”. Some wrong ways to refer
-to it are:
-</p>
-
-<ol>
-
-<li>
-<p>
-<b>“Your blog”</b> - it is <a href="#homesite_or_blog">not a blog</a> and I
-have more than one blog and site.
-</p>
-</li>
-
-<li>
-<p>
-<b>“shlomifish”</b> or <b>“ShlomiFish”</b> - Shlomi Fish (with capital letters
-and a space) happens to be my name as written in Latin letters, and I’m a
-flesh-and-blood individual and more than just this site. It just happens that
-I picked the appropriate domain for that.
-</p>
-</li>
-
-</ol>
-
-<h3 id="website_in_english">Why is this website in English? Why not
-Hebrew?</h3>
-
-<p>
-For several reasons:
-</p>
-
-<ol>
-<li>
-There are many more English speakers (either as their mother tongue or as
-a secondary language) than Hebrew speakers. So I’m reaching a bigger target
-audience by writing in English.
-</li>
-<li>
-Most native Hebrew speakers (i.e: Israelis) can read English well enough to
-understand my English writing. So most of the target audience for writing stuff
-in Hebrew will benefit from it very little.
-</li>
-<li>
-I find it more comfortable and faster to type in English and express myself in
-writing using English for most types of writing (some
-<a href="$(ROOT)/humour/">stories I’m writing</a> being an exception).
-</li>
-<li>
-I often use a lot of tech jargon or slang, which is more difficult to
-translate to Hebrew.
-</li>
-</ol>
-
-<p>
-That put aside, if you wish to translate a piece I wrote to any other
-language (including Hebrew), feel free to do so. I contributed some
-Hebrew translations to some English articles that other people originated,
-and also translated some things I wrote in Hebrew to English.
-</p>
-
-<p>
-Note that <b>I’m using Commonwealth English</b> on this site. Partly because
-I think that’s what Israelis are supposed to use, partly because I have been
-somewhat British-oriented, and partly because it feels nicer to use an
-uncommon spelling. I am still using US English spelling for source
-code and for technical documents, though.
-</p>
-
-<p>
-My thoughts are that both the British spelling and the American spelling (and
-their common subset), are inconsistent and confusing, but I have to make
-a choice of some sort.
-</p>
-
 <h3 id="nicknames">How else are you known?</h3>
 
 <p>
@@ -398,114 +301,6 @@ only “shlomif” on the Internet</a>.
 
 <p>
 On the IRC, I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
-</p>
-
-<h3 id="spent_on_the_site">How much time do you spend on this site?</h3>
-
-<p>
-A lot. I spent several hundreds of hours on the site, possibly several
-thousands. While the pages of this site were originally just a collection of
-hand-maintained HTML pages, they were then converted to use
-<a href="http://thewml.org/">Website Meta Language</a>, and converted to have a
-common look and feel, a style that’s hopefully semantic, converted to use
-<a href="http://www.w3.org/MarkUp/">valid XHTML markup</a>
-(XHTML 1.1 for the while); some navigation aids were added, etc.
-</p>
-
-<p>
-All of the source code for the site is available online in various places. I’ve
-prepared <a href="$(ROOT)/meta/site-source/">a top-to-bottom
-document</a> on how to compile the site from
-scratch). Some of the hand-crafted code was released as
-<a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
-System</a> or various <a href="<shlomif_cpan />">assisting
-CPAN modules</a> under an open-source license.
-</p>
-
-<p>
-I am still working on the site, both by adding new content and attractions,
-by revising or correcting existing ones, by making it more usable, or by
-trying to publicise new attractions in various online resources.
-</p>
-
-<h3 id="site_history">What can you tell me about this site’s history?</h3>
-
-<p>
-Well, a journey of a thousand miles begins with one small step and continues
-with many subsequent small steps.
-</p>
-
-<p>
-My homesite started from a small number of static HTML pages kept on the
-server of my workplace back then (Smart Link - smlink.com). It had the
-address http://www.smlink.com/~shlomif/, now inactive,
-where shlomif was my username on ibm.net back then (which ended up becoming
-my general unofficial ID). We hosted the server behind our Point-to-Point
-connection (not such a smart idea retrospectively) and we had to create the
-alias in <a href="https://en.wikipedia.org/wiki/Internet_Information_Services">IIS</a> specifically for me to put stuff there.
-</p>
-
-<p>
-I recall that I had <a href="$(ROOT)/humour.html">the Aphorisms collection</a>
-with a few jokes I originated, as well as
-<a href="$(ROOT)/toggle.html">the report about the
-algorithmic solution to the Toggle Squares
-puzzle</a> I sent to its originator (with whom I was corresponding at
-the time). And it also had a rudimentary pageful of links, and a bio.
-</p>
-
-<p>
-When I became a student in the <get-var Technion />, I moved my site to its undergraduate
-server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
-and more resources to the site. Here is
-the site <a href="$(ROOT)/meta/old-site-snapshots/">as of 1998</a>. I had a
-limited quota there, and when I got
-an account on “vipe”, a server managed by the students, I hosted part of
-my home site there as well, as http://vipe.technion.ac.il/~shlomif/ . The
-two parts of the site had cross-links to one another.
-</p>
-
-<p>
-Eventually, I was about to graduate and so moved the t2.technion.a.il part
-of my homesite, first to shlomif.il.eu.org (a free hostname, which ended up
-causing too many DNS problems), and then to www.shlomifish.org which is
-where it has been residing until now. In the process, I converted all of the
-main pages to
-use <a href="http://thewml.org/">Website Meta Language</a> and what would
-eventually become <a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a>.
-This has enabled the site to have a common look and feel, a nice CSS
-stylesheet, a navigation menu and other navigation aids and other nice
-features.
-</p>
-
-<p>
-Eventually I realised that the vipe server has too much down time (due
-to problems at the <get-var Technion />’s network) and moved all of its content over
-to the www.shlomifish.org domain.
-</p>
-
-<p>
-Throughout all this time, many resources were added to the homesite: software,
-essays, stories, artwork, presentations, puzzles, and more information about
-myself. I also now maintain a large number of
-<a href="$(ROOT)/me/blogs/">blogs</a> and sites for my projects, as well as
-sites I volunteered to maintain. I really like the way the web allows me to
-express myself, and to communicate using text, hypertext, and other types of
-media.
-</p>
-
-<p>
-Even more recently, I've been writing more and more on
-<a href="http://en.wikipedia.org/wiki/Social_media">social media</a> outlets.
-There’s <a href="#shlomif_on_the_web">a list</a> of my accounts for many
-social media and user-generated-content sites on every page of my home site.
-</p>
-
-<p>
-In case you’re interested in setting up a personal web site of your own, I
-wrote
-<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/">an
-article about it</a>, which you can read.
 </p>
 
 <h3 id="religious_belief">What is your Religious Belief or Inclination?</h3>
@@ -1146,38 +941,6 @@ You can find a list of languages that I currently know on
 <a href="$(ROOT)/SFresume.html">my résumé</a>.
 </p>
 
-<h3 id="homesite_or_blog">Is www.shlomifish.org a blog?</h3>
-
-<p>
-The short answer is that www.shlomifish.org is a good, old-fashioned,
-Web 1.0-style home site - not a weblog/blog/online journal. Despite all that,
-my web site is fairly modern in its client-side technology and its
-look-and-feel should be usable and attractive enough. I have
-<a href="$(ROOT)/me/blogs/">several blogs</a> and am not opposed to the
-concept, but a classic web site has many advantages. For more information,
-see:
-</p>
-
-<ul>
-
-<li>
-
-<p>
-<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create a Great Personal Home Site”</a>
-</p>
-
-</li>
-
-<li>
-
-<p>
-<a href="$(ROOT)/philosophy/computers/web/homepage-vs-blog/">“Homepage vs. Blog”</a>
-</p>
-
-</li>
-
-</ul>
-
 <h3 id="revealing_incriminating_details">Why are you revealing incriminating
 details
 about yourself? This makes you look bad for potential employers.</h3>
@@ -1395,44 +1158,6 @@ problems. Part of my motivation is
 quote</a> from “The Cathedral and the Bazaar”.
 </p>
 
-<h3 id="is_everything_here_true">Is everything you say here true?
-Should I take it seriously?</h3>
-
-<p>
-The answer is that not everything that I wrote, quoted and/or placed on
-my homepage and on other kinds of Internet and World Wide Web (WWW) mediums is
-still something I agree with (i.e: I changed my mind since then), or should be
-taken too seriously (i.e: may be amusing or thought provoking but isn’t really
-something I agree with), or that should be taken as an unbreakable rule (i.e:
-because such works are usually guidelines rather than something that should
-be taken as gospel). So please take them with a grain of salt, and apply
-your judgement.
-</p>
-
-<p>
-Naturally, it does not help that I often omit the dates of creation and last
-update from a resource, and that I sometimes neglect to add a “Recent Update”
-note at the top of the page when it becomes irrelevant. If you have the
-necessary technical skills, you can peruse the pages’ history in the
-<a href="$(ROOT)/meta/site-source/">version control repository</a>.
-</p>
-
-<h3 id="how_many_visitors">How many visitors/hits/uniques/etc. does this site
-get per month?</h3>
-
-<p>
-Please don't ask me that, and that's not because I can't tell you that - it's
-because I don't think it matters too much. This is the same kind of
-<a href="http://en.wikipedia.org/wiki/Penis_envy">penis envy</a> (= “my
-$THINGY is bigger than yours”) and false
-<a href="http://www.catb.org/jargon/html/M/machoflops.html">machoflops</a>/etc.
-competitions) and I care little for stuff like that. I'm now trying to
-work on creating more and more good content, enhancing the site usability
-better, and working on better publicity - both using Internet-based media
-and using real-world networking - and don't have the energy to spend time
-on silly statistics.
-</p>
-
 <h3 id="d10_dice">Why are you obsessed with ten-sided dice? (d10) What do you
 do with them?</h3>
 
@@ -1506,6 +1231,381 @@ people do.
 </li>
 
 </ol>
+
+<h3 id="selfishness">Is the fact that you are/were an Objectivist (= an
+advocate of Ayn Rand’s philosophy) makes you selfish?</h3>
+
+<p>
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=neo-tech-selfishness">This
+quote</a> from the Neo-Tech literature summarises the issues that led to
+this confusion:
+</p>
+
+<blockquote>
+<p>
+Although the contents of her book, The Virtue of Selfishness, are precisely
+accurate and widely integrated, Ayn Rand committed an error by distorting the
+word "selfishness" in fashioning a dramatic statement. The word "selfishness"
+does have valuable, precise denotations of "an irrational, harmful disregard
+for others". Rand could have strengthened her work by selecting accurate
+wording such as rational self-growth. Instead, she unnecessarily bent and
+undermined the precise, valuable meaning of selfishness. …As with selflessness,
+selfishness is a form of immature, destructive, irrational behavior -- a form
+of stupid behavior.
+</p>
+</blockquote>
+
+<p>
+While I’m no longer a Neo-Tech/Objectivism purist, I still agree with them
+that both selfish and selfless (= having an irrational disregard for one’s
+self) behaviours should be avoided as much as possible, and that one should
+strive for “Rational Self-Growth” and that often “selfish vs. selfless” is
+presented as a false dichotomy.
+</p>
+
+<h3 id="zionist">Are you a "Zionist"? Are you an "anti-Zionist"?</h3>
+
+<p>
+See <a href="https://twitter.com/shlomif/status/1021078089797898241">this tweet</a>
+which largely relies on <a href="$(ROOT)/philosophy/politics/define-zionism/">an
+older essay titled “Define ‘Zionism’”</a>. Reading from it:
+</p>
+
+<blockquote>
+
+<p>
+Seems like "anti-Zionism" is broadly defined (see <a href="https://en.wikipedia.org/wiki/Anti-Zionism">Anti-Zionism</a> ) just as "Zionism" is poorly defined. I'm Jewish and live in Israel and oppose the by-laws discrimination against non-Jews/Jews/whatever. What does that make me?
+</p>
+
+</blockquote>
+
+<h3 id="hebrew_and_arabic">Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?</h3>
+
+<p>
+While both Arabic and Hebrew are <a href="https://en.wikipedia.org/wiki/Semitic_languages">Semitic languages</a>, they
+are relatively distant from one another and not mutually understandable.
+I am a Hebrew speaker and reader/writer, but cannot understand the spoken
+Arabic dialect spoken by some of the local Arab speakers, except for a few
+words. Note that there are many spoken Arabic dialects as well as
+<a href="https://en.wikipedia.org/wiki/Modern_Standard_Arabic">Literary
+Arabic</a> which is common but not normally used in speech. Many Arabic
+speakers in Israel also know Hebrew, but native Hebrew speakers (Jews/etc.)
+usually do not have the motivation to learn Arabic or retain their knowledge
+of it.
+</p>
+
+<p>
+Some other notes:
+</p>
+
+<ol>
+
+<li>
+<p>
+I studied Literary Arabic for 6 years in junior high and high school
+and passed the 5 points matriculation exam in it. However, I lost most of
+my vocabulary due to lack of use, and also do not readily remember some of the
+grammar.
+</p>
+</li>
+
+<li>
+<p>
+A few Arab Israelis I spoke with told me it was easier for them to learn
+to read and write Hebrew than it was to learn Literary Arabic, despite the
+fact that the local Palestinian Arabic was their mother language. This is
+due to the <a href="https://en.wikipedia.org/wiki/Diglossia">diglossia</a>
+present there.
+</p>
+</li>
+
+<li>
+<p>
+If you know both English and Arabic, I can highly recommend listening to
+<a href="https://www.youtube.com/watch?v=2bpVrKm9QCc">Shaike Ophir’s
+"The English Teacher" skit</a> - just note that it has a short introduction
+in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower grades. It is 07:30 in the morning. The children are assembled in the classroom. The Teacher enters - everyone stands up. The teacher says:”.
+</p>
+</li>
+
+</ol>
+
+<h2 id="about_this_site">About this Site</h2>
+
+<h3 id="shlomifish_org_domain">Why did you get the
+www.shlomifish.org domain?</h3>
+
+<p>
+Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
+DNS service, but it had a lot of DNS problems. Thus, I set up
+<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>. I didn’t
+take shlomifish.org.il because .il domains used to cost a lot of money, and
+also required co-ordination by a fax message (how low-tech) upon every
+change. I also didn’t want a .com domain because I feel I’m a private individual
+rather than a company.
+</p>
+
+<p>
+http://shlomifish.org/ used to be a parked hostname of my DNS registrar, but
+now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
+which I bought later.
+</p>
+
+<h3 id="refer_to_shlomifish.org">How should I refer to this site?</h3>
+
+<p>
+You can call it “Shlomi Fish’s Homepage”, “Shlomi Fish’s Homesite”,
+“Shlomi Fish’s personal web site”, or “shlomifish.org”. Some wrong ways to refer
+to it are:
+</p>
+
+<ol>
+
+<li>
+<p>
+<b>“Your blog”</b> - it is <a href="#homesite_or_blog">not a blog</a> and I
+have more than one blog and site.
+</p>
+</li>
+
+<li>
+<p>
+<b>“shlomifish”</b> or <b>“ShlomiFish”</b> - Shlomi Fish (with capital letters
+and a space) happens to be my name as written in Latin letters, and I’m a
+flesh-and-blood individual and more than just this site. It just happens that
+I picked the appropriate domain for that.
+</p>
+</li>
+
+</ol>
+
+<h3 id="website_in_english">Why is this website in English? Why not
+Hebrew?</h3>
+
+<p>
+For several reasons:
+</p>
+
+<ol>
+<li>
+There are many more English speakers (either as their mother tongue or as
+a secondary language) than Hebrew speakers. So I’m reaching a bigger target
+audience by writing in English.
+</li>
+<li>
+Most native Hebrew speakers (i.e: Israelis) can read English well enough to
+understand my English writing. So most of the target audience for writing stuff
+in Hebrew will benefit from it very little.
+</li>
+<li>
+I find it more comfortable and faster to type in English and express myself in
+writing using English for most types of writing (some
+<a href="$(ROOT)/humour/">stories I’m writing</a> being an exception).
+</li>
+<li>
+I often use a lot of tech jargon or slang, which is more difficult to
+translate to Hebrew.
+</li>
+</ol>
+
+<p>
+That put aside, if you wish to translate a piece I wrote to any other
+language (including Hebrew), feel free to do so. I contributed some
+Hebrew translations to some English articles that other people originated,
+and also translated some things I wrote in Hebrew to English.
+</p>
+
+<p>
+Note that <b>I’m using Commonwealth English</b> on this site. Partly because
+I think that’s what Israelis are supposed to use, partly because I have been
+somewhat British-oriented, and partly because it feels nicer to use an
+uncommon spelling. I am still using US English spelling for source
+code and for technical documents, though.
+</p>
+
+<p>
+My thoughts are that both the British spelling and the American spelling (and
+their common subset), are inconsistent and confusing, but I have to make
+a choice of some sort.
+</p>
+
+<h3 id="spent_on_the_site">How much time do you spend on this site?</h3>
+
+<p>
+A lot. I spent several hundreds of hours on the site, possibly several
+thousands. While the pages of this site were originally just a collection of
+hand-maintained HTML pages, they were then converted to use
+<a href="http://thewml.org/">Website Meta Language</a>, and converted to have a
+common look and feel, a style that’s hopefully semantic, converted to use
+<a href="http://www.w3.org/MarkUp/">valid XHTML markup</a>
+(XHTML 1.1 for the while); some navigation aids were added, etc.
+</p>
+
+<p>
+All of the source code for the site is available online in various places. I’ve
+prepared <a href="$(ROOT)/meta/site-source/">a top-to-bottom
+document</a> on how to compile the site from
+scratch). Some of the hand-crafted code was released as
+<a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
+System</a> or various <a href="<shlomif_cpan />">assisting
+CPAN modules</a> under an open-source license.
+</p>
+
+<p>
+I am still working on the site, both by adding new content and attractions,
+by revising or correcting existing ones, by making it more usable, or by
+trying to publicise new attractions in various online resources.
+</p>
+
+<h3 id="site_history">What can you tell me about this site’s history?</h3>
+
+<p>
+Well, a journey of a thousand miles begins with one small step and continues
+with many subsequent small steps.
+</p>
+
+<p>
+My homesite started from a small number of static HTML pages kept on the
+server of my workplace back then (Smart Link - smlink.com). It had the
+address http://www.smlink.com/~shlomif/, now inactive,
+where shlomif was my username on ibm.net back then (which ended up becoming
+my general unofficial ID). We hosted the server behind our Point-to-Point
+connection (not such a smart idea retrospectively) and we had to create the
+alias in <a href="https://en.wikipedia.org/wiki/Internet_Information_Services">IIS</a> specifically for me to put stuff there.
+</p>
+
+<p>
+I recall that I had <a href="$(ROOT)/humour.html">the Aphorisms collection</a>
+with a few jokes I originated, as well as
+<a href="$(ROOT)/toggle.html">the report about the
+algorithmic solution to the Toggle Squares
+puzzle</a> I sent to its originator (with whom I was corresponding at
+the time). And it also had a rudimentary pageful of links, and a bio.
+</p>
+
+<p>
+When I became a student in the <get-var Technion />, I moved my site to its undergraduate
+server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
+and more resources to the site. Here is
+the site <a href="$(ROOT)/meta/old-site-snapshots/">as of 1998</a>. I had a
+limited quota there, and when I got
+an account on “vipe”, a server managed by the students, I hosted part of
+my home site there as well, as http://vipe.technion.ac.il/~shlomif/ . The
+two parts of the site had cross-links to one another.
+</p>
+
+<p>
+Eventually, I was about to graduate and so moved the t2.technion.a.il part
+of my homesite, first to shlomif.il.eu.org (a free hostname, which ended up
+causing too many DNS problems), and then to www.shlomifish.org which is
+where it has been residing until now. In the process, I converted all of the
+main pages to
+use <a href="http://thewml.org/">Website Meta Language</a> and what would
+eventually become <a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a>.
+This has enabled the site to have a common look and feel, a nice CSS
+stylesheet, a navigation menu and other navigation aids and other nice
+features.
+</p>
+
+<p>
+Eventually I realised that the vipe server has too much down time (due
+to problems at the <get-var Technion />’s network) and moved all of its content over
+to the www.shlomifish.org domain.
+</p>
+
+<p>
+Throughout all this time, many resources were added to the homesite: software,
+essays, stories, artwork, presentations, puzzles, and more information about
+myself. I also now maintain a large number of
+<a href="$(ROOT)/me/blogs/">blogs</a> and sites for my projects, as well as
+sites I volunteered to maintain. I really like the way the web allows me to
+express myself, and to communicate using text, hypertext, and other types of
+media.
+</p>
+
+<p>
+Even more recently, I've been writing more and more on
+<a href="http://en.wikipedia.org/wiki/Social_media">social media</a> outlets.
+There’s <a href="#shlomif_on_the_web">a list</a> of my accounts for many
+social media and user-generated-content sites on every page of my home site.
+</p>
+
+<p>
+In case you’re interested in setting up a personal web site of your own, I
+wrote
+<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/">an
+article about it</a>, which you can read.
+</p>
+
+<h3 id="homesite_or_blog">Is www.shlomifish.org a blog?</h3>
+
+<p>
+The short answer is that www.shlomifish.org is a good, old-fashioned,
+Web 1.0-style home site - not a weblog/blog/online journal. Despite all that,
+my web site is fairly modern in its client-side technology and its
+look-and-feel should be usable and attractive enough. I have
+<a href="$(ROOT)/me/blogs/">several blogs</a> and am not opposed to the
+concept, but a classic web site has many advantages. For more information,
+see:
+</p>
+
+<ul>
+
+<li>
+
+<p>
+<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create a Great Personal Home Site”</a>
+</p>
+
+</li>
+
+<li>
+
+<p>
+<a href="$(ROOT)/philosophy/computers/web/homepage-vs-blog/">“Homepage vs. Blog”</a>
+</p>
+
+</li>
+
+</ul>
+
+<h3 id="is_everything_here_true">Is everything you say here true?
+Should I take it seriously?</h3>
+
+<p>
+The answer is that not everything that I wrote, quoted and/or placed on
+my homepage and on other kinds of Internet and World Wide Web (WWW) mediums is
+still something I agree with (i.e: I changed my mind since then), or should be
+taken too seriously (i.e: may be amusing or thought provoking but isn’t really
+something I agree with), or that should be taken as an unbreakable rule (i.e:
+because such works are usually guidelines rather than something that should
+be taken as gospel). So please take them with a grain of salt, and apply
+your judgement.
+</p>
+
+<p>
+Naturally, it does not help that I often omit the dates of creation and last
+update from a resource, and that I sometimes neglect to add a “Recent Update”
+note at the top of the page when it becomes irrelevant. If you have the
+necessary technical skills, you can peruse the pages’ history in the
+<a href="$(ROOT)/meta/site-source/">version control repository</a>.
+</p>
+
+<h3 id="how_many_visitors">How many visitors/hits/uniques/etc. does this site
+get per month?</h3>
+
+<p>
+Please don't ask me that, and that's not because I can't tell you that - it's
+because I don't think it matters too much. This is the same kind of
+<a href="http://en.wikipedia.org/wiki/Penis_envy">penis envy</a> (= “my
+$THINGY is bigger than yours”) and false
+<a href="http://www.catb.org/jargon/html/M/machoflops.html">machoflops</a>/etc.
+competitions) and I care little for stuff like that. I'm now trying to
+work on creating more and more good content, enhancing the site usability
+better, and working on better publicity - both using Internet-based media
+and using real-world networking - and don't have the energy to spend time
+on silly statistics.
+</p>
 
 <h3 id="why_not_https">Why isn’t this site hosted using HTTPS/SSL?</h3>
 
@@ -1624,37 +1724,6 @@ own site which you can start populating with interesting content to your
 heart’s content.
 </p>
 
-<h3 id="selfishness">Is the fact that you are/were an Objectivist (= an
-advocate of Ayn Rand’s philosophy) makes you selfish?</h3>
-
-<p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=neo-tech-selfishness">This
-quote</a> from the Neo-Tech literature summarises the issues that led to
-this confusion:
-</p>
-
-<blockquote>
-<p>
-Although the contents of her book, The Virtue of Selfishness, are precisely
-accurate and widely integrated, Ayn Rand committed an error by distorting the
-word "selfishness" in fashioning a dramatic statement. The word "selfishness"
-does have valuable, precise denotations of "an irrational, harmful disregard
-for others". Rand could have strengthened her work by selecting accurate
-wording such as rational self-growth. Instead, she unnecessarily bent and
-undermined the precise, valuable meaning of selfishness. …As with selflessness,
-selfishness is a form of immature, destructive, irrational behavior -- a form
-of stupid behavior.
-</p>
-</blockquote>
-
-<p>
-While I’m no longer a Neo-Tech/Objectivism purist, I still agree with them
-that both selfish and selfless (= having an irrational disregard for one’s
-self) behaviours should be avoided as much as possible, and that one should
-strive for “Rational Self-Growth” and that often “selfish vs. selfless” is
-presented as a false dichotomy.
-</p>
-
 <h3 id="how_site_is_generated">How is this site generated? Which CMS (Content
 Management System) are you using?</h3>
 
@@ -1682,7 +1751,7 @@ time-consuming, and I've already found some faults in one existing popular
 static site generator that I tried.
 </p>
 
-<h4 id="is_site_written_in_perl">Is this site written in Perl?</h4>
+<h3 id="is_site_written_in_perl">Is this site written in Perl?</h3>
 
 <p>
 See <a href="#how_site_is_generated">above</a> - most of the site is generated
@@ -1709,73 +1778,6 @@ years, and it is natural that some of the links have become stale. As a result,
 dealing with these reports have become quite frustrating due to their
 frequency
 </p>
-
-<h3 id="zionist">Are you a "Zionist"? Are you an "anti-Zionist"?</h3>
-
-<p>
-See <a href="https://twitter.com/shlomif/status/1021078089797898241">this tweet</a>
-which largely relies on <a href="$(ROOT)/philosophy/politics/define-zionism/">an
-older essay titled “Define ‘Zionism’”</a>. Reading from it:
-</p>
-
-<blockquote>
-
-<p>
-Seems like "anti-Zionism" is broadly defined (see <a href="https://en.wikipedia.org/wiki/Anti-Zionism">Anti-Zionism</a> ) just as "Zionism" is poorly defined. I'm Jewish and live in Israel and oppose the by-laws discrimination against non-Jews/Jews/whatever. What does that make me?
-</p>
-
-</blockquote>
-
-<h3 id="hebrew_and_arabic">Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?</h3>
-
-<p>
-While both Arabic and Hebrew are <a href="https://en.wikipedia.org/wiki/Semitic_languages">Semitic languages</a>, they
-are relatively distant from one another and not mutually understandable.
-I am a Hebrew speaker and reader/writer, but cannot understand the spoken
-Arabic dialect spoken by some of the local Arab speakers, except for a few
-words. Note that there are many spoken Arabic dialects as well as
-<a href="https://en.wikipedia.org/wiki/Modern_Standard_Arabic">Literary
-Arabic</a> which is common but not normally used in speech. Many Arabic
-speakers in Israel also know Hebrew, but native Hebrew speakers (Jews/etc.)
-usually do not have the motivation to learn Arabic or retain their knowledge
-of it.
-</p>
-
-<p>
-Some other notes:
-</p>
-
-<ol>
-
-<li>
-<p>
-I studied Literary Arabic for 6 years in junior high and high school
-and passed the 5 points matriculation exam in it. However, I lost most of
-my vocabulary due to lack of use, and also do not readily remember some of the
-grammar.
-</p>
-</li>
-
-<li>
-<p>
-A few Arab Israelis I spoke with told me it was easier for them to learn
-to read and write Hebrew than it was to learn Literary Arabic, despite the
-fact that the local Palestinian Arabic was their mother language. This is
-due to the <a href="https://en.wikipedia.org/wiki/Diglossia">diglossia</a>
-present there.
-</p>
-</li>
-
-<li>
-<p>
-If you know both English and Arabic, I can highly recommend listening to
-<a href="https://www.youtube.com/watch?v=2bpVrKm9QCc">Shaike Ophir’s
-"The English Teacher" skit</a> - just note that it has a short introduction
-in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower grades. It is 07:30 in the morning. The children are assembled in the classroom. The Teacher enters - everyone stands up. The teacher says:”.
-</p>
-</li>
-
-</ol>
 
 <h3 id="site_loads_quickly">This site loads so quickly. What is your secret?</h3>
 

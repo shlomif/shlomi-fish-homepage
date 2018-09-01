@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Data::Munge qw/ list2re /;
-use File::Update qw/ modify_on_change /;
+use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
 
 my $XMLNS_NEEDLE = <<'EOF';
@@ -138,5 +138,5 @@ s%<div id="([^"]+)">Placeholder</div>%"\n" . $TEXTS{$1}%egms
 foreach my $rec ( @filenames, @ad_filenames, @raw_filenames )
 {
     my $d = path("$dest_dir/$rec->{bn}");
-    $d->touchpath->spew_utf8( path( $rec->{temp} )->slurp_utf8 );
+    write_on_change( $d->touchpath, \( path( $rec->{temp} )->slurp_utf8 ) );
 }

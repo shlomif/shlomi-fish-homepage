@@ -18,7 +18,7 @@ before_install:
     # For quadp
     - cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     - "cpanm --notest $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{perl5_modules}})')"
-    - gem install sass compass compass-blueprint
+    - gem install compass compass-blueprint
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
     - ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )

@@ -8,7 +8,12 @@
 <toc_div />
 
 <div class="fancy_sects">
+<define-tag section endtag="required">
 <div class="sub_section">
+%body
+</div>
+</define-tag>
+<section>
 <h2 id="studies">Studies Related</h2>
 
 <h3 id="technion"><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
@@ -29,11 +34,11 @@ My Department.
 A very cool laboratory where I did my projects and liked to hang out in.
 </p>
 
-</div>
+</section>
 
 <h2 id="current_workplaces">Current Workplaces</h2>
 
-<div class="sub_section">
+<section>
 <h2 id="past_workplaces">Past Workplaces</h2>
 
 
@@ -60,9 +65,9 @@ many important events and activities.
 These are my previous workplaces. Check them out, if you’d like.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="philosophy">Philosophy and Politics</h2>
 
 <h3 id="philosophy_objectivism"><a href="http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/">The Google Directory Objectivism Branch</a></h3>
@@ -113,9 +118,9 @@ Three Hundreds Proofs of God’s Existence</a> (humorous), and
 the Christian Bible</a>.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="foss">Linux and Free Software</h2>
 
 <h3 id="foss_linux"><a href="http://www.linux.org/">The Linux’s Homepage</a></h3>
@@ -208,9 +213,9 @@ by chromatic about Modern Perl programming.
 
 </ul>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="software_gurus">Software “Gurus”</h2>
 <h3 id="software_gurus_esr"><a href="http://www.catb.org/~esr/">Eric S. Raymond</a></h3>
 
@@ -280,9 +285,9 @@ interesting information and links. See also
 about him</a>.
 </p>
 
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="friends">My Friends’ Home Pages</h2>
 
 <ul>
@@ -393,9 +398,9 @@ and Hebrew podcast about Free Software and other Tech issues.
 </li>
 
 </ul>
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 
 <h2 id="net_search">Favourite Pages for Searching and Locating Resources on
 the Web</h2>
@@ -420,9 +425,9 @@ utilities.
 <li><a href="http://freecode.com/">Freecode</a> - a comprehensive directory of
 software for Linux (no longer updated)</li>
 </ul>
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="reference_sites">Interesting Reference Sites</h2>
 
 <ul>
@@ -445,9 +450,9 @@ documentation on all aspects of the Linux operating system.</li>
 of computer geeks’ jargon.</li>
 <li><a href="http://slashdot.org/">Slashdot</a> - a really cool computer-related news page.</li>
 </ul>
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="software">Software</h2>
 
 <h3 id="software_foss"><a href="$(ROOT)/open-source/favourite/">Open Source Software</a></h3>
@@ -481,7 +486,7 @@ is the open-source <a href="http://www.inkscape.org/">Inkscape</a>.)
 </li>
 </ul>
 
-<div class="sub_section">
+<section>
 <h3 id="mod_music_files">MOD Files</h3>
 
 <p>
@@ -512,10 +517,10 @@ library.</li>
 MOD player.
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
-<div class="sub_section">
+<section>
 
 <h2 id="humour">Humour</h2>
 
@@ -1187,9 +1192,9 @@ problems using the computer.
 </li>
 
 </ul>
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="pictures">Wallpapers and Other Pictures</h2>
 
 <ul>
@@ -1270,9 +1275,9 @@ Desktop Wallpapers for Widescreen, High Definition, Mobile” - several
 categories.
 </li>
 </ul>
-</div>
+</section>
 
-<div class="sub_section">
+<section>
 <h2 id="music">Music to Buy and Download</h2>
 
 <ul>
@@ -1340,8 +1345,8 @@ Danger”.
 
 </ul>
 
-</div>
-<div class="sub_section">
+</section>
+<section>
 <h2 id="web_design">Web Design and Programming</h2>
 
 <ul>
@@ -1371,8 +1376,8 @@ Names</a> -a list of the HTML colour names that are accepted by the browsers,
 and will be part of CSS 3.0.
 </li>
 </ul>
-</div>
-<div class="sub_section">
+</section>
+<section>
 
 <h2 id="various">Various Sites of Interest</h2>
 
@@ -1390,5 +1395,5 @@ predictions of 2009.”</a>.
 </li>
 
 </ul>
-</div>
+</section>
 </div>

@@ -9,8 +9,6 @@ DIST_BASE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
 
 INDEX_FILE = index.html
 
-ARCS_LIST_INCLUDE = arcs-list.mak
-
 SOURCE_FILES_LIST = source-files-list.html
 
 RPM_SPEC = $(DIST_BASE).spec
@@ -29,7 +27,7 @@ XMLS = $(addsuffix .xml,$(FILES))
 XHTMLS = $(patsubst %.xml,%.xhtml,$(XMLS))
 
 
-.PHONY: all test html distdir upload list_files
+.PHONY: all test html distdir upload
 
 all: dist test gen_htaccess
 
@@ -39,7 +37,7 @@ $(DATS):: %.dat : %
 test: $(DATS)
 	@fortune -e $(FILES)
 
-dist: $(PACKAGE_BASE) list_files gen_sources_list
+dist: $(PACKAGE_BASE) gen_sources_list
 
 html: $(INDEX_FILE)
 
@@ -71,11 +69,6 @@ upload: dist
 print_package_base:
 	@echo $(PACKAGE_BASE)
 
-list_files: $(ARCS_LIST_INCLUDE)
-
-$(ARCS_LIST_INCLUDE): $(VERSION_FILE)
-	@perl -le 'print "FORTUNES_ARCS_LIST =" . join("", (map { " $$_" } glob("fortunes-shlomif-*.tar.gz")))' > $@
-
 xhtmls: $(XHTMLS)
 
 $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
@@ -85,7 +78,7 @@ $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 
 gen_sources_list: $(SOURCE_FILES_LIST)
 
-$(SOURCE_FILES_LIST): generate-file-list.pl $(ARCS_LIST_INCLUDE)
+$(SOURCE_FILES_LIST): generate-file-list.pl
 	perl $<
 
 $(RPM_SPEC): $(RPM_SPEC_IN) $(VERSION_FILE)

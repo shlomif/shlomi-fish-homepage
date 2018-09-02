@@ -110,6 +110,7 @@ use Cache::File ();
 my $KEY = 'HTML_POST_INCS_DATA_DIR';
 my $cache = Cache::File->new( cache_root => ( $ENV{KEY} || '/tmp/cacheroot' ) );
 
+my @queue;
 foreach my $fn ( ( map { $_->{temp} } @filenames ), )
 {
     my $k = path($fn)->slurp;
@@ -120,12 +121,20 @@ foreach my $fn ( ( map { $_->{temp} } @filenames ), )
     }
     else
     {
-        system(
-            'bin/batch-inplace-html-minifier',
-            '-c', 'bin/html-min-cli-config-file.conf',
-            '--keep-closing-slash', $fn
-        ) and die "html-min $!";
-        $cache->set( $k, scalar( path($fn)->slurp ), '100000 days' );
+        push @queue, [ $k, $fn ];
+    }
+}
+if (@queue)
+{
+    system(
+        'bin/batch-inplace-html-minifier',
+        '-c', 'bin/html-min-cli-config-file.conf',
+        '--keep-closing-slash', map { $_->[1] } @queue
+    ) and die "html-min $!";
+    foreach my $fn (@queue)
+    {
+        $cache->set( $fn->[0], scalar( path( $fn->[1] )->slurp ),
+            '100000 days' );
     }
 }
 

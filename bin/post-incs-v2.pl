@@ -104,11 +104,30 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
         die $err;
     }
 }
-system(
-    'bin/batch-inplace-html-minifier',   '-c',
-    'bin/html-min-cli-config-file.conf', '--keep-closing-slash',
-    ( map { $_->{temp} } @filenames ),
-) and die "html-min $!";
+
+use Cache::File ();
+
+my $KEY = 'HTML_POST_INCS_DATA_DIR';
+my $cache = Cache::File->new( cache_root => ( $ENV{KEY} || '/tmp/cacheroot' ) );
+
+foreach my $fn ( ( map { $_->{temp} } @filenames ), )
+{
+    my $k = path($fn)->slurp;
+    my $v = $cache->get($k);
+    if ($v)
+    {
+        path($fn)->spew($v);
+    }
+    else
+    {
+        system(
+            'bin/batch-inplace-html-minifier',
+            '-c', 'bin/html-min-cli-config-file.conf',
+            '--keep-closing-slash', $fn
+        ) and die "html-min $!";
+        $cache->set( $k, scalar( path($fn)->slurp ), '100000 days' );
+    }
+}
 
 sub _summary
 {

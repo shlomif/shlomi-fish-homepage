@@ -1,13 +1,15 @@
+<set-var js_type="<ifeq "<get-var latemp_html_standard />" xhtml5 "" " type=\"text/javascript\"" />" />
+
+<define-tag js_script endtag="required">
+<script <get-var js_type /> %attributes>%body</script>
+</define-tag>
+
 <define-tag hebrew_open_div>
 {#HEBREW_XML_LANG_SCRIPT#:<js_script src="$(ROOT)/js/moz-lang.js"></js_script>:##}
 {#BODY_PARAMS#: onload="langLoad()":##}
 <div class="hebrew" xml:lang="he-IL">
 </define-tag>
 
-<set-var js_type="<ifeq "<get-var latemp_html_standard />" xhtml5 "" " type=\"text/javascript\"" />" />
-<define-tag js_script endtag="required">
-<script <get-var js_type /> %attributes>%body</script>
-</define-tag>
 <set-var with_banner="" />
 
 <define-tag top_with_banner>
@@ -242,7 +244,6 @@ of an EvilPHish”</a> cartoon of
 
 <latemp_before_main_title>
 {#SECTION_NAV_MENU_ELEMS#}
-<news_sites_buttons />
 </latemp_before_main_title>
 
 <section_nav_menu_elements>

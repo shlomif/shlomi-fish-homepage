@@ -72,11 +72,12 @@ sub run
     my @filenames;
     my @ad_filenames;
     my @raw_filenames;
-    my $source_dir = shift @ARGV;
-    my $dest_dir   = shift @ARGV;
+    my $argv       = [@ARGV];
+    my $source_dir = shift @$argv;
+    my $dest_dir   = shift @$argv;
     my $temp_dir   = Path::Tiny->tempdir;
     my $counter    = 0;
-    foreach my $bn (@ARGV)
+    foreach my $bn (@$argv)
     {
         my $_f = sub {
             return path("$source_dir/$bn");

@@ -9,7 +9,7 @@
 
 l1()
 {
-git ls-files lib/presentations/qp | grep -P 'Contents\.pm$'
+git ls-files lib/presentations/qp | grep -E 'Contents\.pm$'
 }
 
 l1 | (while read t

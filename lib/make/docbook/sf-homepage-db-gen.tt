@@ -70,7 +70,7 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
 [% "\t\t" %]-x [% xslt_ss %] -o [% foo_src %] xhtml-1_1 $< \
 [% "\t" %]&& touch $@
-[% "\t" %]for fn in $$(ls [% foo_src %]/* | grep -P '\.x?html$$') ; do perl -lpi -e 's/[ \t]+\z//' "$$fn" ; perl -0777 -pi -e 's#<p>\s*?</p>##gms' "$$fn" ; done
+[% "\t" %]for fn in $$(ls [% foo_src %]/* | grep -E '\.x?html$$') ; do perl -lpi -e 's/[ \t]+\z//' "$$fn" ; perl -0777 -pi -e 's#<p>\s*?</p>##gms' "$$fn" ; done
 [% END %]
 
 [% END # db_ver loop.

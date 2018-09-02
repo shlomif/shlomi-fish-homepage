@@ -12,6 +12,8 @@ use Data::Munge qw/ list2re /;
 use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
 
+has '_minifier_conf_fn' => ( is => 'rw', isa => 'Str' );
+
 my $XMLNS_NEEDLE = <<'EOF';
  xmlns:db="http://docbook.org/ns/docbook" xmlns:d="http://docbook.org/ns/docbook" xmlns:vrd="http://www.shlomifish.org/open-source/projects/XML-Grammar/Vered/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml"
 EOF
@@ -35,7 +37,7 @@ sub _call_minifier
     my ( $self, $filenames ) = @_;
     my $KEY = 'HTML_POST_INCS_DATA_DIR';
     my $cache =
-        Cache::File->new( cache_root => ( $ENV{KEY} || '/tmp/cacheroot' ) );
+        Cache::File->new( cache_root => ( $ENV{$KEY} || '/tmp/cacheroot' ) );
 
     my @queue;
     foreach my $fn ( ( map { $_->{temp} } @$filenames ), )
@@ -53,11 +55,10 @@ sub _call_minifier
     }
     if (@queue)
     {
-        system(
-            'bin/batch-inplace-html-minifier',
-            '-c', 'bin/html-min-cli-config-file.conf',
-            '--keep-closing-slash', map { $_->[1] } @queue
-        ) and die "html-min $!";
+        system( 'bin/batch-inplace-html-minifier',
+            '-c', $self->_minifier_conf_fn,
+            '--keep-closing-slash', map { $_->[1] } @queue )
+            and die "html-min $!";
         foreach my $fn (@queue)
         {
             $fn->[0]->set( scalar( path( $fn->[1] )->slurp ), '100000 days' );
@@ -77,17 +78,20 @@ sub run
     my $source_dir;
     my $dest_dir;
     my $mode;
+    my $conf;
     GetOptionsFromArray(
         $argv,
         'mode=s'       => \$mode,
         'source-dir=s' => \$source_dir,
         'dest-dir=s'   => \$dest_dir,
+        'conf=s'       => \$conf,
     ) or die "$!";
 
     if ( $mode ne 'minify' )
     {
         die "--mode should be minify!";
     }
+    $self->_minifier_conf_fn($conf);
     my $temp_dir = Path::Tiny->tempdir;
     my $counter  = 0;
 

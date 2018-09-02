@@ -118,7 +118,7 @@ if ( not -e 'lib/MathJax/README.md' )
     if ( !( $pid = $pm->start ) )
     {
         system(
-'cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout v2.1-latest'
+'cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
         );
         $pm->finish;
     }

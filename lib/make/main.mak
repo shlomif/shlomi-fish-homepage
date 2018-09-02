@@ -946,7 +946,7 @@ MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
 $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	rsync -r lib/MathJax/ $(T2_DEST)/js/MathJax/
+	rsync -r --exclude='**/.git/**' lib/MathJax/ $(T2_DEST)/js/MathJax/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
 	rm -fr $(MATHJAX_DEST_DIR)/test

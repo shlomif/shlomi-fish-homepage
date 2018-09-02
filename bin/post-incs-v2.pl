@@ -110,32 +110,31 @@ system(
     ( map { $_->{temp} } @filenames ),
 ) and die "html-min $!";
 
+sub _summary
+{
+    my $text_ref = shift;
+    if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
+    {
+        return $$text_ref =~ s%<table summary=""%<table%g;
+    }
+    return '';
+}
 if ( $ENV{APPLY_ADS} )
 {
     my $dir = "lib/ads/";
     my %TEXTS = ( map { $_ => path("$dir/texts/$_")->slurp_utf8 }
             path("$dir/texts-lists.txt")->lines_utf8( { chomp => 1 } ) );
+
     my $cb = %TEXTS
         ? sub {
         my $text_ref = shift;
         my $r1 =
             ( $$text_ref =~
                 s%<div id="([^"]+)">Placeholder</div>%"\n" . $TEXTS{$1}%egms );
-        my $r2 = '';
-        if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
-        {
-            $r2 = $$text_ref =~ s%<table summary=""%<table%g;
-        }
+        my $r2 = _summary($text_ref);
         return ( $r1 || $r2 );
         }
-        : sub {
-        my $text_ref = shift;
-        if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
-        {
-            return $$text_ref =~ s%<table summary=""%<table%g;
-        }
-        return '';
-        };
+        : \&_summary;
 
     foreach my $rec ( @filenames, @ad_filenames )
     {

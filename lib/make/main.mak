@@ -14,9 +14,9 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target copy_fortunes presentations_targets
+all_deps: sects_cache docbook_targets fortunes-target copy_fortunes
 
-non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target graham_func_pres_targets hhgg_convert lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html site_source_install svg_nav_images
+non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target graham_func_pres_targets hhgg_convert lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak

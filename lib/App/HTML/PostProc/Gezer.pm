@@ -107,11 +107,6 @@ sub run
                 my $orig_text = $_f->()->slurp_utf8;
                 my $text      = $orig_text;
 
-                if ( $text =~ /^<!-- Project Wonderful/ms )
-                {
-                    last PROCESS_FILE;
-                }
-
                 if ( !$ENV{NO_I} )
                 {
                     $text =~

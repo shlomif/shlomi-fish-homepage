@@ -152,8 +152,10 @@ if ( not -e 'lib/c-begin/README.md' )
 
 my $BLOGS_DIR     = 'lib/blogs';
 my $TECH_BLOG     = 'shlomif-tech-diary';
+my $back_to_hp    = 'Shlomi-Fish-Back-to-my-Homepage-Logo';
 my $VALIDATE_YOUR = 'validate-your-html';
-foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG, )
+foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
+    $back_to_hp, )
 {
     if ( not -e "$BLOGS_DIR/$repo" )
     {

@@ -1,4 +1,4 @@
-package App::HTML::PostProc::Eve;
+package App::HTML::PostProc::Gezer;
 
 use strict;
 use warnings;

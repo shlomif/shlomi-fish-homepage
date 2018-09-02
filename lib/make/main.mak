@@ -44,7 +44,6 @@ DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
 
-include $(T2_FORTUNES_DIR)/arcs-list.mak
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
 T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
@@ -135,8 +134,8 @@ $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -Ilib $< $@
 
 # t2 macros
-
-T2_DEST_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
+FORTUNES_ARCS_LIST := $(patsubst $(T2_FORTUNES_DIR)/%,%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
+T2_DEST_FORTUNES := $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call COPY)

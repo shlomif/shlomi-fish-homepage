@@ -1175,7 +1175,7 @@ all: $(T2_CLEAN_STAMP)
 
 $(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 
-PROC_INCLUDES_COMMON := APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --conf=bin/html-min-cli-config-file.conf --source-dir=$(T2_DEST) --dest-dir=$(T2_POST_DEST) --
+PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(T2_DEST) --dest-dir=$(T2_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
 find_htmls = find $(1) -regex '.*\.x?html'
 

@@ -79,11 +79,13 @@ sub run
     my $dest_dir;
     my $mode;
     my $conf;
+    my $texts_dir;
     GetOptionsFromArray(
         $argv,
         'mode=s'       => \$mode,
         'source-dir=s' => \$source_dir,
         'dest-dir=s'   => \$dest_dir,
+        'texts-dir=s'  => \$texts_dir,
         'conf=s'       => \$conf,
     ) or die "$!";
 
@@ -94,6 +96,8 @@ sub run
     $self->_minifier_conf_fn($conf);
     my $temp_dir = Path::Tiny->tempdir;
     my $counter  = 0;
+
+    my $APPLY_TEXTS = $ENV{APPLY_TEXTS};
 
     foreach my $bn (@$argv)
     {
@@ -155,7 +159,7 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
                 {
                     push @filenames, $rec;
                 }
-                elsif ( $ENV{APPLY_ADS} )
+                elsif ($APPLY_TEXTS)
                 {
                     push @ad_filenames, $rec;
                 }
@@ -175,11 +179,12 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
 
     $self->_call_minifier( \@filenames );
 
-    if ( $ENV{APPLY_ADS} )
+    if ($APPLY_TEXTS)
     {
-        my $dir = "lib/ads/";
-        my %TEXTS = ( map { $_ => path("$dir/texts/$_")->slurp_utf8 }
-                path("$dir/texts-lists.txt")->lines_utf8( { chomp => 1 } ) );
+        my %TEXTS =
+            ( map { $_ => path("$texts_dir/texts/$_")->slurp_utf8 }
+                path("$texts_dir/texts-lists.txt")->lines_utf8( { chomp => 1 } )
+            );
 
         my $cb = %TEXTS
             ? sub {

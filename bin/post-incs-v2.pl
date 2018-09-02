@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 
+use Cache::File ();
 use Data::Munge qw/ list2re /;
 use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
@@ -105,38 +106,42 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
     }
 }
 
-use Cache::File ();
-
-my $KEY = 'HTML_POST_INCS_DATA_DIR';
-my $cache = Cache::File->new( cache_root => ( $ENV{KEY} || '/tmp/cacheroot' ) );
-
-my @queue;
-foreach my $fn ( ( map { $_->{temp} } @filenames ), )
+sub _call_minifier
 {
-    my $k = path($fn)->slurp;
-    my $v = $cache->get($k);
-    if ($v)
+    my $KEY = 'HTML_POST_INCS_DATA_DIR';
+    my $cache =
+        Cache::File->new( cache_root => ( $ENV{KEY} || '/tmp/cacheroot' ) );
+
+    my @queue;
+    foreach my $fn ( ( map { $_->{temp} } @filenames ), )
     {
-        path($fn)->spew($v);
+        my $k = path($fn)->slurp;
+        my $e = $cache->entry($k);
+        if ( $e->exists )
+        {
+            path($fn)->spew( $e->get );
+        }
+        else
+        {
+            push @queue, [ $e, $fn ];
+        }
     }
-    else
+    if (@queue)
     {
-        push @queue, [ $k, $fn ];
+        system(
+            'bin/batch-inplace-html-minifier',
+            '-c', 'bin/html-min-cli-config-file.conf',
+            '--keep-closing-slash', map { $_->[1] } @queue
+        ) and die "html-min $!";
+        foreach my $fn (@queue)
+        {
+            $fn->[0]->set( scalar( path( $fn->[1] )->slurp ), '100000 days' );
+        }
     }
+    return;
 }
-if (@queue)
-{
-    system(
-        'bin/batch-inplace-html-minifier',
-        '-c', 'bin/html-min-cli-config-file.conf',
-        '--keep-closing-slash', map { $_->[1] } @queue
-    ) and die "html-min $!";
-    foreach my $fn (@queue)
-    {
-        $cache->set( $fn->[0], scalar( path( $fn->[1] )->slurp ),
-            '100000 days' );
-    }
-}
+
+_call_minifier();
 
 sub _summary
 {

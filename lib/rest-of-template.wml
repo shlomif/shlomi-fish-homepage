@@ -1,10 +1,13 @@
 <define-tag hebrew_open_div>
-{#HEBREW_XML_LANG_SCRIPT#:<script src="$(ROOT)/js/moz-lang.js" <get-var js_type />></script>:##}
+{#HEBREW_XML_LANG_SCRIPT#:<js_script src="$(ROOT)/js/moz-lang.js"></js_script>:##}
 {#BODY_PARAMS#: onload="langLoad()":##}
 <div class="hebrew" xml:lang="he-IL">
 </define-tag>
 
 <set-var js_type="<ifeq "<get-var latemp_html_standard />" xhtml5 "" " type=\"text/javascript\"" />" />
+<define-tag js_script endtag="required">
+<script <get-var js_type /> %attributes>%body</script>
+</define-tag>
 <set-var with_banner="" />
 
 <define-tag top_with_banner>
@@ -268,25 +271,25 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag remove_extra_head_elements>
 <link rel="stylesheet" href="$(ROOT)/jqtree.css" type="text/css" media="screen" title="Normal" />
-<script  <get-var js_type /> src="$(ROOT)/js/main_nav_menu.js"></script>
+<js_script src="$(ROOT)/js/main_nav_menu.js"></js_script>
 <link rel="stylesheet" type="text/css" href="$(ROOT)/js/treeview/jquery.treeview.css" />
 </define-tag>
 
 <define-tag main_all__js_scripts__dev>
-<script  <get-var js_type /> src="$(ROOT)/js/jq.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/jquery.treeview.min.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/toggler.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/toggle_sect.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/tree.jq.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/jquery.cookie.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/to-jqtree.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/to-jqtree-2.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/selfl.js"></script>
-<script  <get-var js_type /> src="$(ROOT)/js/sub_menu.js"></script>
+<js_script src="$(ROOT)/js/jq.js"></js_script>
+<js_script src="$(ROOT)/js/jquery.treeview.min.js"></js_script>
+<js_script src="$(ROOT)/js/toggler.js"></js_script>
+<js_script src="$(ROOT)/js/toggle_sect.js"></js_script>
+<js_script src="$(ROOT)/js/tree.jq.js"></js_script>
+<js_script src="$(ROOT)/js/jquery.cookie.js"></js_script>
+<js_script src="$(ROOT)/js/to-jqtree.js"></js_script>
+<js_script src="$(ROOT)/js/to-jqtree-2.js"></js_script>
+<js_script src="$(ROOT)/js/selfl.js"></js_script>
+<js_script src="$(ROOT)/js/sub_menu.js"></js_script>
 </define-tag>
 
 <define-tag main_all__js_scripts__proudction>
-<script  <get-var js_type /> src="$(ROOT)/js/main_all.js"></script>
+<js_script src="$(ROOT)/js/main_all.js"></js_script>
 </define-tag>
 
 <set-var is_dev="$(LATEMP_IS_DEV_ENV)" />
@@ -325,9 +328,9 @@ td { vertical-align : top; }
 ;;; For loading the jqTree contents from dest/t2-homepage/_data/nav.json
 ;;; using AJAX and processing it into something acceptable by it and replacing
 ;;; the existing tree.
-<script <get-var js_type />>
+<js_script>
 shlomif_load_nav("<: print get_page_path(); :>");
-</script>
+</js_script>
 <share_this_button />
 ;;; For the div class=hebrew.
 <if "<get-var rtl_layout />" "</div>" />

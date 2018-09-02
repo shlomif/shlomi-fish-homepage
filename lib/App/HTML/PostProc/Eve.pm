@@ -5,6 +5,7 @@ use warnings;
 use 5.014;
 
 use MooX qw/ late /;
+use Getopt::Long qw/ GetOptionsFromArray /;
 
 use Cache::File ();
 use Data::Munge qw/ list2re /;
@@ -72,11 +73,17 @@ sub run
     my @filenames;
     my @ad_filenames;
     my @raw_filenames;
-    my $argv       = [@ARGV];
-    my $source_dir = shift @$argv;
-    my $dest_dir   = shift @$argv;
-    my $temp_dir   = Path::Tiny->tempdir;
-    my $counter    = 0;
+    my $argv = [@ARGV];
+    my $source_dir;
+    my $dest_dir;
+    GetOptionsFromArray(
+        $argv,
+        'source-dir=s' => \$source_dir,
+        'dest-dir=s'   => \$dest_dir,
+    ) or die "$!";
+    my $temp_dir = Path::Tiny->tempdir;
+    my $counter  = 0;
+
     foreach my $bn (@$argv)
     {
         my $_f = sub {

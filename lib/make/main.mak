@@ -1175,7 +1175,7 @@ all: $(T2_CLEAN_STAMP)
 
 $(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 
-PROC_INCLUDES_COMMON := APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) $(T2_DEST) $(T2_POST_DEST)
+PROC_INCLUDES_COMMON := APPLY_ADS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --source-dir=$(T2_DEST) --dest-dir=$(T2_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
 find_htmls = find $(1) -regex '.*\.x?html'
 

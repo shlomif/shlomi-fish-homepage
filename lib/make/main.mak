@@ -1207,4 +1207,6 @@ $(T2_SVGS__MIN): %.min.svg: %.svg
 $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best < $< > $@
 
+BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
+
 include lib/make/copies-generated-include.mak

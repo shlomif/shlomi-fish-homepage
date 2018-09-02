@@ -76,11 +76,18 @@ sub run
     my $argv = $args->{ARGV};
     my $source_dir;
     my $dest_dir;
+    my $mode;
     GetOptionsFromArray(
         $argv,
+        'mode=s'       => \$mode,
         'source-dir=s' => \$source_dir,
         'dest-dir=s'   => \$dest_dir,
     ) or die "$!";
+
+    if ( $mode ne 'minify' )
+    {
+        die "--mode should be minify!";
+    }
     my $temp_dir = Path::Tiny->tempdir;
     my $counter  = 0;
 

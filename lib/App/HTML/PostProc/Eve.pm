@@ -16,9 +16,9 @@ my $XMLNS_NEEDLE = <<'EOF';
  xmlns:db="http://docbook.org/ns/docbook" xmlns:d="http://docbook.org/ns/docbook" xmlns:vrd="http://www.shlomifish.org/open-source/projects/XML-Grammar/Vered/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml"
 EOF
 
-my @needles = $XMLNS_NEEDLE =~ m#\b(xmlns:[a-zA-Z_]+="[^"]+")#g;
+my @NEEDLES = $XMLNS_NEEDLE =~ m#\b(xmlns:[a-zA-Z_]+="[^"]+")#g;
 
-my $ALTERNATIVES_TEXT = list2re @needles;
+my $ALTERNATIVES_TEXT = list2re @NEEDLES;
 
 sub _summary
 {

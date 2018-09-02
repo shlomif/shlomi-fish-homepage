@@ -115,24 +115,31 @@ if ( $ENV{APPLY_ADS} )
     my $dir = "lib/ads/";
     my %TEXTS = ( map { $_ => path("$dir/texts/$_")->slurp_utf8 }
             path("$dir/texts-lists.txt")->lines_utf8( { chomp => 1 } ) );
+    my $cb = %TEXTS
+        ? sub {
+        my $text_ref = shift;
+        my $r1 =
+            ( $$text_ref =~
+                s%<div id="([^"]+)">Placeholder</div>%"\n" . $TEXTS{$1}%egms );
+        my $r2 = '';
+        if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
+        {
+            $r2 = $$text_ref =~ s%<table summary=""%<table%g;
+        }
+        return ( $r1 || $r2 );
+        }
+        : sub {
+        my $text_ref = shift;
+        if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
+        {
+            return $$text_ref =~ s%<table summary=""%<table%g;
+        }
+        return '';
+        };
+
     foreach my $rec ( @filenames, @ad_filenames )
     {
-        modify_on_change(
-            scalar( path( $rec->{temp} ) ),
-            sub {
-                my $text_ref = shift;
-                my $r1 =
-                    ( $$text_ref =~
-s%<div id="([^"]+)">Placeholder</div>%"\n" . $TEXTS{$1}%egms
-                    );
-                my $r2 = '';
-                if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
-                {
-                    $r2 = $$text_ref =~ s%<table summary=""%<table%g;
-                }
-                return ( $r1 || $r2 );
-            }
-        );
+        modify_on_change( scalar( path( $rec->{temp} ) ), $cb );
     }
 }
 foreach my $rec ( @filenames, @ad_filenames, @raw_filenames )

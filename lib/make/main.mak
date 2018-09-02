@@ -14,9 +14,9 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target sitemap_targets copy_fortunes site-source-install presentations_targets lc_pres_targets art_slogans_targets graham_func_pres_targets hhgg_convert plaintext_scripts_with_offending_extensions
+all_deps: sects_cache docbook_targets fortunes-target sitemap_targets copy_fortunes site-source-install presentations_targets graham_func_pres_targets hhgg_convert
 
-non_latemp_targets: css_targets generate_nav_data_as_json htaccesses_target mathjax_dest min_svgs minified_javascripts mod_files mojo_pres printable_resumes__html svg_nav_images
+non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -952,9 +952,9 @@ $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
 	rm -fr $(MATHJAX_DEST_DIR)/test
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS = t2/MathVentures/gen-bugs-in-square-svg.pl t2/open-source/bits-and-bobs/nowplay-xchat.pl t2/open-source/bits-and-bobs/pmwiki-revert.pl t2/open-source/bits-and-bobs/convert-kabc-dist-lists.pl
+SCRIPTS_WITH_OFFENDING_EXTENSIONS = MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst $(T2_SRC_DIR)/%.pl,$(T2_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
+SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(T2_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 

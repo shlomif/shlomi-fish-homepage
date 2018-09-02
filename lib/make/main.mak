@@ -14,9 +14,9 @@ MATHJAX_SOURCE_README = lib/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target sitemap_targets copy_fortunes site-source-install presentations_targets graham_func_pres_targets hhgg_convert
+all_deps: sects_cache docbook_targets fortunes-target copy_fortunes presentations_targets
 
-non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html svg_nav_images
+non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target graham_func_pres_targets hhgg_convert lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html site_source_install svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -102,7 +102,7 @@ T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
 T2_POST_DEST_FORTUNES_DIR = $(T2_POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.html
 
-site-source-install: $(SITE_SOURCE_INSTALL_TARGET)
+site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 
 $(T2_POST_DIRS_DEST): %:
 	mkdir -p $@
@@ -237,8 +237,6 @@ rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
 	touch t2/index.html.wml
 	touch t2/old-news.html.wml
-
-sitemap_targets: $(T2_SITEMAP_FILE)
 
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
 PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
@@ -844,8 +842,10 @@ SPORK_LECTURES_BASE_STARTS = $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%/slides/st
 
 graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)
 
+start_html = $(patsubst %/start.html,%/,$1)
+
 $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_SOURCE_BASE)/%/start.html
-	rsync -a $(patsubst %/start.html,%/,$<) $(patsubst %/start.html,%/,$@)
+	rsync -a $(call start_html,$<) $(call start_html,$@)
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
 	dn="$(patsubst %/slides/start.html,%,$@)" ; \

@@ -338,7 +338,7 @@ DOCBOOK5_PDFS = $(patsubst %,$(DOCBOOK5_PDF_DIR)/%.pdf,$(DOCBOOK5_DOCS))
 
 DOCBOOK5_RTFS = $(patsubst %,$(DOCBOOK5_RTF_DIR)/%.rtf,$(DOCBOOK5_DOCS))
 
-DOCBOOK5_INDIVIDUAL_XHTMLS = $(patsubst %,$(DOCBOOK5_INDIVIDUAL_XHTML_DIR)/%,$(DOCBOOK5_DOCS))
+DOCBOOK5_INDIVIDUAL_XHTMLS = $(addprefix $(DOCBOOK5_INDIVIDUAL_XHTML_DIR)/,$(DOCBOOK5_DOCS))
 
 DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
 
@@ -437,8 +437,8 @@ QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400
 QOHELETH_IMAGES__SOURCE_PREFIX = $(SO_WHO_THE_HELL_IS_QOHELETH__VCS_DIR)/graphics
 QOHELETH_IMAGES__DEST_PREFIX = $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
 
-QOHELETH_IMAGES__SOURCE = $(patsubst %,$(QOHELETH_IMAGES__SOURCE_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
-QOHELETH_IMAGES__DEST = $(patsubst %,$(QOHELETH_IMAGES__DEST_PREFIX)/%,$(QOHELETH_IMAGES__BASE))
+QOHELETH_IMAGES__SOURCE = $(addprefix $(QOHELETH_IMAGES__SOURCE_PREFIX)/,$(QOHELETH_IMAGES__BASE))
+QOHELETH_IMAGES__DEST = $(addprefix $(QOHELETH_IMAGES__DEST_PREFIX)/,$(QOHELETH_IMAGES__BASE))
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
@@ -507,7 +507,7 @@ FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
 FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
 
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
-FORTUNES_XMLS_SRC = $(patsubst %,$(T2_FORTUNES_DIR)/%,$(FORTUNES_XMLS_BASE))
+FORTUNES_XMLS_SRC = $(addprefix $(T2_FORTUNES_DIR)/,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
 FORTUNES_XHTMLS_TOCS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.toc-xhtml,$(FORTUNES_XMLS_SRC))
 FORTUNES_SOURCE_WMLS = $(patsubst %,$(T2_FORTUNES_DIR)/%.html.wml,$(FORTUNES_FILES_BASE))
@@ -630,12 +630,12 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	top-shlomif.png
 
 DOCBOOK4_HHFG_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
-DOCBOOK4_HHFG_IMAGES_DEST = $(patsubst %,$(DOCBOOK4_HHFG_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
+DOCBOOK4_HHFG_IMAGES_DEST = $(addprefix $(DOCBOOK4_HHFG_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
 HHFG_V2_IMAGES_DEST_DIR_FROM_VCS = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
 HHFG_V2_IMAGES_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
-HHFG_V2_IMAGES_DEST = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
-HHFG_V2_IMAGES_DEST_FROM_VCS = $(patsubst %,$(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/%,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_DEST = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS)
 
@@ -1130,8 +1130,8 @@ SRC_MODS_DIR = lib/assets/mods
 
 MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 
-ZIP_MODS = $(patsubst %,%.zip,$(MODS))
-XZ_MODS = $(patsubst %,%.xz,$(MODS))
+ZIP_MODS = $(addsuffix .zip,$(MODS))
+XZ_MODS = $(addsuffix .xz,$(MODS))
 
 DEST_MODS_DIR = $(T2_DEST)/Iglu/shlomif/mods
 dest_mods = $(addprefix $(DEST_MODS_DIR)/,$(1))
@@ -1152,11 +1152,11 @@ $(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 
 TECH_BLOG_DIR = lib/blogs/shlomif-tech-diary
 TECH_TIPS_SCRIPT = $(TECH_BLOG_DIR)/extract-tech-tips.pl
-TECH_TIPS_INPUTS = $(patsubst %,$(TECH_BLOG_DIR)/%,old-tech-diary.xhtml tech-diary.xhtml)
+TECH_TIPS_INPUTS = $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
 TECH_TIPS_OUT = lib/blogs/shlomif-tech-diary--tech-tips.xhtml
 
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
-	$(PERL) $(TECH_TIPS_SCRIPT) $(patsubst %,--file=%,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
+	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
 
 $(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)

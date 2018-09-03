@@ -850,7 +850,7 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 
 GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
-T2_CSS_TARGETS = $(patsubst %,$(T2_POST_DEST)/%,$(GEN_STYLE_CSS_FILES))
+T2_CSS_TARGETS = $(addprefix $(T2_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(T2_CSS_TARGETS)
 

@@ -50,13 +50,8 @@ T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
-define WML_RENDER
-LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 bin/render
-endef
-
-define T2_INCLUDE_WML_RENDER
-$(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
-endef
+WML_RENDER = LATEMP_WML_FLAGS="$(LATEMP_WML_FLAGS)" $1 bin/render
+T2_INCLUDE_WML_RENDER = $(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
 
 make-dirs: $(T2_ALL_DIRS_DEST)
 
@@ -145,9 +140,7 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 
-define UPLOAD
-(cd $(T2_POST_DEST) && $(RSYNC) -a . $1 )
-endef
+UPLOAD = (cd $(T2_POST_DEST) && $(RSYNC) -a . $1 )
 
 upload_deps: all
 

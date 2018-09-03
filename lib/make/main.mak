@@ -135,13 +135,13 @@ $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 
 T2_DEST_FORTUNES := $(patsubst $(T2_FORTUNES_DIR)/%,$(T2_DEST_FORTUNES_DIR)/%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
+chmod_copy = $(call COPY) ; chmod +x $@
+
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call COPY)
-	chmod +x $@
+	$(call chmod_copy)
 
 $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call COPY)
-	chmod -x $@
+	$(call chmod_copy)
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 

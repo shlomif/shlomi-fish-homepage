@@ -722,7 +722,7 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-ART_SLOGANS_PATHS = $(patsubst %,$(T2_POST_DEST)/art/slogans/%,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PATHS = $(addprefix $(T2_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
@@ -820,28 +820,30 @@ SPORK_LECTURES_BASENAMES = \
 	SCM/subversion/for-pythoneers \
 	Vim/beginners \
 
+START_html := /start.html
+SLIDES_start := /slides$(START_html)
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
 GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
 GFUNC_PRES_DEST = $(T2_DEST)/lecture/Perl/Graham-Function
-GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)/slides/start.html
-GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)/slides/start.html
+GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)$(SLIDES_start)
+GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)$(SLIDES_start)
 
-SPORK_LECTURES_DESTS = $(patsubst %,$(T2_DEST)/lecture/%,$(SPORK_LECTURES_BASENAMES))
-SPORK_LECTURES_DEST_STARTS = $(patsubst %,%/slides/start.html,$(SPORK_LECTURES_DESTS))
-SPORK_LECTURES_BASE_STARTS = $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html,$(SPORK_LECTURES_BASENAMES))
+SPORK_LECTURES_DESTS := $(addprefix $(T2_DEST)/lecture/,$(SPORK_LECTURES_BASENAMES))
+SPORK_LECTURES_DEST_STARTS := $(addsuffix $(SLIDES_start),$(SPORK_LECTURES_DESTS))
+SPORK_LECTURES_BASE_STARTS := $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start),$(SPORK_LECTURES_BASENAMES))
 
 graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)
 
-start_html = $(patsubst %/start.html,%/,$1)
+start_html = $(patsubst %$(START_html),%/,$1)
 
-$(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%/start.html: $(SPORK_LECTS_SOURCE_BASE)/%/start.html
+$(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%$(START_html): $(SPORK_LECTS_SOURCE_BASE)/%$(START_html)
 	rsync -a $(call start_html,$<) $(call start_html,$@)
 
-$(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%/slides/start.html : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
-	dn="$(patsubst %/slides/start.html,%,$@)" ; \
+$(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
+	dn="$(patsubst %$(SLIDES_start),%,$@)" ; \
 	   (cd "$$dn" && $(PERL) -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && $(PERL) bin/fix-spork.pl "$$dn"/slides/*.html && \
 		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs $(PERL) -lpi -e 's/[\t ]+\z//') && \
-	cp -f common/favicon.png $(patsubst %/start.html,%,$@)/ || true
+	cp -f common/favicon.png $(patsubst %$(START_html),%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | $(PERL) -pe 's!^\+!!' > $@

@@ -133,9 +133,7 @@ $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -Ilib $< $@
 
-# t2 macros
-FORTUNES_ARCS_LIST := $(patsubst $(T2_FORTUNES_DIR)/%,%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
-T2_DEST_FORTUNES := $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%,$(FORTUNES_ARCS_LIST))
+T2_DEST_FORTUNES := $(patsubst $(T2_FORTUNES_DIR)/%,$(T2_DEST_FORTUNES_DIR)/%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call COPY)

@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 7;
+use Test::More tests => 8;
 
 sub gmake_test
 {
@@ -47,4 +47,8 @@ sub gmake_test
     # TEST
     gmake_test( 'DEST_XZ_MODS', 'dest/t2/Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
+    #
+    # TEST
+    gmake_test( 'T2_POST_DIRS_DEST', 'post-dest/t2/art/original-graphics',
+        "found a dir" );
 }

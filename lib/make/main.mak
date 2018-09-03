@@ -23,7 +23,7 @@ include lib/make/include.mak
 include lib/make/rules.mak
 
 PERL := perl
-T2_POST_DIRS_DEST = $(patsubst %,$(T2_POST_DEST)/%,$(T2_DIRS))
+T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
 T2_TARGETS += $(T2_POST_DIRS_DEST)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \

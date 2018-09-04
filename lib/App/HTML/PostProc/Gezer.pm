@@ -43,16 +43,17 @@ sub _call_minifier
     my @queue;
     my $_proc_dir = Path::Tiny->tempdir;
     $self->_proc_dir($_proc_dir);
+    my $temp_dir = $self->_temp_dir;
     foreach my $rec (@$filenames)
     {
-        my $fn      = $rec->{temp};
         my $temp_bn = $rec->{temp_bn};
-        my $k       = path($fn)->slurp;
+        my $src     = $temp_dir->child($temp_bn);
+        my $k       = $src->slurp;
         my $e       = $cache->entry($k);
         if ( $e->exists )
         {
             $_proc_dir->child($temp_bn)->spew( $e->get );
-            path($fn)->remove;
+            $src->remove;
         }
         else
         {
@@ -160,10 +161,8 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
                 my $temp_bn = ( ++$counter ) . ".html";
                 my $temp_fh = $temp_dir->child($temp_bn);
                 $temp_fh->spew_utf8($text);
-                my $fn  = $temp_fh . '';
                 my $rec = +{
                     bn      => $bn,
-                    temp    => $fn,
                     temp_bn => $temp_bn,
                 };
                 if ($minify)

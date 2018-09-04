@@ -56,8 +56,7 @@ sub _call_minifier
     if (@queue)
     {
         system( 'bin/batch-inplace-html-minifier',
-            '-c', $self->_minifier_conf_fn,
-            '--keep-closing-slash', map { $_->[1] } @queue )
+            '-c', $self->_minifier_conf_fn, map { $_->[1] } @queue )
             and die "html-min $!";
         foreach my $fn (@queue)
         {

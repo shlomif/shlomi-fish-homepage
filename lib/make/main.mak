@@ -726,7 +726,7 @@ ART_SLOGANS_PATHS = $(addprefix $(T2_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS)
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
-OPTIPNG = optipng -o7
+OPTIPNG = optipng -o7 -quiet
 
 define EXPORT_INKSCAPE_PNG
 	inkscape --export-width=200 --export-png="$@" $<

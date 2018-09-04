@@ -13,6 +13,7 @@ use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
 
 has '_minifier_conf_fn' => ( is => 'rw', isa => 'Str' );
+has [ '_temp_dir', '_proc_dir' ] => ( is => 'rw' );
 
 my $XMLNS_NEEDLE = <<'EOF';
  xmlns:db="http://docbook.org/ns/docbook" xmlns:d="http://docbook.org/ns/docbook" xmlns:vrd="http://www.shlomifish.org/open-source/projects/XML-Grammar/Vered/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -40,27 +41,35 @@ sub _call_minifier
         Cache::File->new( cache_root => ( $ENV{$KEY} || '/tmp/cacheroot' ) );
 
     my @queue;
-    foreach my $fn ( ( map { $_->{temp} } @$filenames ), )
+    my $_proc_dir = Path::Tiny->tempdir;
+    $self->_proc_dir($_proc_dir);
+    foreach my $rec (@$filenames)
     {
-        my $k = path($fn)->slurp;
-        my $e = $cache->entry($k);
+        my $fn      = $rec->{temp};
+        my $temp_bn = $rec->{temp_bn};
+        my $k       = path($fn)->slurp;
+        my $e       = $cache->entry($k);
         if ( $e->exists )
         {
-            path($fn)->spew( $e->get );
+            $_proc_dir->child($temp_bn)->spew( $e->get );
+            path($fn)->remove;
         }
         else
         {
-            push @queue, [ $e, $fn ];
+            push @queue, [ $e, $temp_bn ];
         }
     }
     if (@queue)
     {
-        system( 'bin/batch-inplace-html-minifier',
-            '-c', $self->_minifier_conf_fn, map { $_->[1] } @queue )
-            and die "html-min $!";
+        system(
+            'html-minifier', '-c', $self->_minifier_conf_fn, '--input-dir',
+            $self->_temp_dir . '',
+            '--output-dir', $self->_proc_dir . '',
+        ) and die "html-min $!";
         foreach my $fn (@queue)
         {
-            $fn->[0]->set( scalar( path( $fn->[1] )->slurp ), '100000 days' );
+            $fn->[0]->set( scalar( $_proc_dir->child( $fn->[1] )->slurp ),
+                '100000 days' );
         }
     }
     return;
@@ -94,7 +103,8 @@ sub run
     }
     $self->_minifier_conf_fn($conf);
     my $temp_dir = Path::Tiny->tempdir;
-    my $counter  = 0;
+    $self->_temp_dir($temp_dir);
+    my $counter = 0;
 
     my $APPLY_TEXTS = $ENV{APPLY_TEXTS};
 
@@ -147,12 +157,14 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
                 {
                     $minify //= 1;
                 }
-                my $temp_fh = $temp_dir->child( ( ++$counter ) . ".html" );
+                my $temp_bn = ( ++$counter ) . ".html";
+                my $temp_fh = $temp_dir->child($temp_bn);
                 $temp_fh->spew_utf8($text);
                 my $fn  = $temp_fh . '';
                 my $rec = +{
-                    bn   => $bn,
-                    temp => $fn,
+                    bn      => $bn,
+                    temp    => $fn,
+                    temp_bn => $temp_bn,
                 };
                 if ($minify)
                 {
@@ -178,6 +190,7 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
 
     $self->_call_minifier( \@filenames );
 
+    my $_proc_dir = $self->_proc_dir;
     if ($APPLY_TEXTS)
     {
         my %TEXTS =
@@ -199,15 +212,20 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
 
         foreach my $rec ( @filenames, @ad_filenames )
         {
-            modify_on_change( scalar( path( $rec->{temp} ) ), $cb );
+            modify_on_change( scalar( $_proc_dir->child( $rec->{temp_bn} ) ),
+                $cb );
         }
     }
     foreach my $rec ( @filenames, @ad_filenames, @raw_filenames )
     {
         my $d = path("$dest_dir/$rec->{bn}");
         $d->parent->mkpath;
-        write_on_change( $d, \( path( $rec->{temp} )->slurp_utf8 ) );
+        write_on_change( $d,
+            \( $_proc_dir->child( $rec->{temp_bn} )->slurp_utf8 ) );
     }
+    $self->_temp_dir(undef);
+    $self->_proc_dir(undef);
+    return;
 }
 
 1;

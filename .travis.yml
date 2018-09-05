@@ -5,11 +5,8 @@ cache:
 os: linux
 dist: trusty
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get --no-install-recommends install -y ack-grep asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libdb5.3-dev libgd-dev libhunspell-dev libncurses-dev libpcre3-dev libperl-dev mercurial myspell-en-gb lynx optipng perl python3 python3-setuptools python3-pip silversearcher-ag tidy valgrind wml xsltproc xz-utils zip
-    - sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+    - bash .travis.bash --cmd before_install
     - go get -u github.com/tdewolff/minify/cmd/minify
-    - cpanm local::lib
     - eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
     - cpanm Alien::Tidyp App::XML::DocBook::Builder Pod::Xhtml YAML::XS
     - cpanm --notest HTML::Tidy

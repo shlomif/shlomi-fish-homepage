@@ -1,6 +1,3 @@
-<define-tag affil_berlios>
-</define-tag>
-
 <define-tag affil_firefox>
 <p><a href="//affiliates.mozilla.org/link/banner/34673" class="bless"><img class="bless" alt="Get Firefox!" title="Get Firefox! A safer, faster, better web-browser." src="$(ROOT)/images/get-firefox.png"/></a></p>
 </define-tag>
@@ -20,12 +17,6 @@
 <define-tag affil_valid_css>
 <p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!" class="bless"><img class="highlight bless" src="$(ROOT)/images/valid-css.png" alt="Valid CSS!"/></a></p>
 </define-tag>
-<define-tag affil_wml>
-<p><a href="http://thewml.org/" title="Website META Language" class="bless"><img src="$(ROOT)/images/logo-wml.png" alt="Website Meta Language" class="bless" width="100" height="50"/></a></p>
-</define-tag>
-<define-tag affil_latemp>
-<p><a href="http://web-cpan.shlomifish.org/latemp/" title="Made with Latemp" class="bless"><img src="$(ROOT)/images/latemp-button-rounded.png" alt="Made with Latemp" class="bless"/></a></p>
-</define-tag>
 
 <define-tag affil_perl_begin>
 <p><a href="http://perl-begin.org/" title="The Perl Beginners' Site" class="bless"><img src="$(ROOT)/images/perl-begin.png" alt="The Perl Beginners' Site" class="bless"/></a></p>
@@ -36,11 +27,4 @@
 <affil_perl_begin />
 <affil_valid_html />
 <affil_valid_css />
-<affil_wml />
-<affil_latemp />
-</define-tag>
-
-<define-tag affil_collection_berlios>
-<affil_berlios />
-<affil_collection_shlomif />
 </define-tag>

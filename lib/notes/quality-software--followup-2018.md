@@ -21,6 +21,7 @@
             - Like at computer shutdown
     - Red Hat's dnf
         - kinda slow
+        - hopefully [will improve](https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/)
     - Mostly Positive: vlc
     - Mostly Positive: Emscripten / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)

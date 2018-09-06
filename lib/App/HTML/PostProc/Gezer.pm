@@ -91,11 +91,11 @@ sub run
     my $texts_dir;
     GetOptionsFromArray(
         $argv,
-        'mode=s'       => \$mode,
-        'source-dir=s' => \$source_dir,
-        'dest-dir=s'   => \$dest_dir,
-        'texts-dir=s'  => \$texts_dir,
-        'conf=s'       => \$conf,
+        'mode=s'          => \$mode,
+        'source-dir=s'    => \$source_dir,
+        'dest-dir=s'      => \$dest_dir,
+        'texts-dir=s'     => \$texts_dir,
+        'minifier-conf=s' => \$conf,
     ) or die "$!";
 
     if ( $mode ne 'minify' )

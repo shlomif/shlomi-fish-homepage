@@ -1,8 +1,3 @@
-<set-var js_type="<ifeq "<get-var latemp_html_standard />" xhtml5 "" " type=\"text/javascript\"" />" />
-
-<define-tag js_script endtag="required">
-<script <get-var js_type /> %attributes>%body</script>
-</define-tag>
 
 <define-tag hebrew_open_div>
 {#HEBREW_XML_LANG_SCRIPT#:<js_script src="$(ROOT)/js/moz-lang.js"></js_script>:##}

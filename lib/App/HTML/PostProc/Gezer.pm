@@ -30,6 +30,12 @@ sub _summary
     {
         return $$text_ref =~ s%<table summary=""%<table%g;
     }
+    else
+    {
+        my $r1 = $$text_ref =~ s%<main\b%<div class="main"%g;
+        my $r2 = $$text_ref =~ s%</main>%</div>%g;
+        return $r1 || $r2;
+    }
     return '';
 }
 

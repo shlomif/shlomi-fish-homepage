@@ -2,6 +2,13 @@
 ;;; of the local definitions were set. It does the actual rendering of the page
 ;;; as part of the site common look and feel.
 
+<set-var is_html5=<string-eq "<get-var latemp_html_standard />" "xhtml5" /> />
+<set-var js_type="<if <get-var is_html5 /> "" " type=\"text/javascript\"" />" />
+
+<define-tag js_script endtag="required">
+<script <get-var js_type /> %attributes>%body</script>
+</define-tag>
+
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"
 #include "rest-of-template.wml"

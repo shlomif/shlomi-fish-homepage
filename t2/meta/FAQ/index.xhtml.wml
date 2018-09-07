@@ -994,79 +994,6 @@ times), told me I most probably don’t have it, after I asked him whether I do.
 
 <section class="h3">
 
-<h3 id="text_editors">Which text editors are you using? What is your
-favourite text editor?</h3>
-
-<p>
-Well, I'm usually using gvim (the Gtk+/GUI version of
-the <a href="http://www.vim.org/">Vim</a> programmer’s editor) for coding and
-for writing purely-Latin texts. For bidirectional (mixed Hebrew+Latin / etc.)
-texts, I sometimes use
-<a href="http://en.wikipedia.org/wiki/Kate_%28text_editor%29">Kate</a>
-instead, with a fallback on
-<a href="http://en.wikipedia.org/wiki/Gedit">gedit</a>. Sometimes, I use Vim
-(the console version) for quick edits or when I cannot or would prefer not to
-use a GUI editor.
-</p>
-
-<p>
-The reason I am using gvim instead of vim, is because many terminal emulators
-on Linux (including Konsole which is my preferred one) mess up with the
-Hebrew/Latin bidirectionality too much (enough to confuse vim), because the
-syntax highlighting looks nicer there, because the mouse support is better,
-and because it does not start much slower than Vim. If the console-based
-Vim works for you, feel free to use it.
-</p>
-
-<p>
-Regarding <a href="http://en.wikipedia.org/wiki/Emacs">Emacs</a>: from what
-I know, it should be a fine text editor, but I could never get used to it,
-so that’s not what I’m using. I was told about
-<a href="http://www.emacswiki.org/emacs/Evil">the Evil mode</a> which provides
-partial Vim compatibility, but I didn’t try it, in part because I’m now using
-quite a lot of Vim extensions written in vimscript and in Vim’s extension
-languages, which are not supported by Evil.
-</p>
-
-</section>
-
-<section class="h3">
-
-<h3 id="choice_of_operating_system">Why are you using your choice of an operating system (= Mageia Linux)?</h3>
-
-<p>
-The short answer is that
-<a href="http://en.wikipedia.org/wiki/Mageia">Mageia</a>
-is what I’m used to, what I like, and what I’m
-most comfortable with, and that I find the community of contributors and
-users friendly and helpful, so that is what I’m staying with for now.
-</p>
-
-<p>
-My original motivation for trying out Mandrake Linux (which later was renamed
-as “Mandriva Linux” and was even later forked into Mageia), was that I bought
-a 40 GB hard-disk (which was a large capacity for its time) and sought a distribution
-to install on it, that supported ReiserFS which was a file system that had
-<a href="http://en.wikipedia.org/wiki/Journaling_file_system">journaling</a>,
-so I won't have to spend a lot of time in running “ext2.fsck”. Eventually, it
-turned out that ReiserFS caused my hard disk to become faulty (and had no way
-to gracefully handle bad blocks) but in the meanwhile I grew to like Mandriva
-and used it and later its Mageia fork since.
-</p>
-
-<p>
-That put aside, I still willingly try to help people, who
-are using other Linux distributions, or even non-Linux operating
-systems, with their technical
-problems. Part of my motivation is
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=esr-catb--writing-for-the-world">this
-quote</a> from “The Cathedral and the Bazaar”.
-</p>
-
-</section>
-
-<section class="h3">
-
 <h3 id="d10_dice">Why are you obsessed with ten-sided dice? (d10) What do you
 do with them?</h3>
 
@@ -2206,6 +2133,79 @@ computer, and started playing with various languages available there.
 <p>
 You can find a list of languages that I currently know on
 <a href="$(ROOT)/SFresume.html">my résumé</a>.
+</p>
+
+</section>
+
+<section class="h3">
+
+<h3 id="text_editors">Which text editors are you using? What is your
+favourite text editor?</h3>
+
+<p>
+Well, I'm usually using gvim (the Gtk+/GUI version of
+the <a href="http://www.vim.org/">Vim</a> programmer’s editor) for coding and
+for writing purely-Latin texts. For bidirectional (mixed Hebrew+Latin / etc.)
+texts, I sometimes use
+<a href="http://en.wikipedia.org/wiki/Kate_%28text_editor%29">Kate</a>
+instead, with a fallback on
+<a href="http://en.wikipedia.org/wiki/Gedit">gedit</a>. Sometimes, I use Vim
+(the console version) for quick edits or when I cannot or would prefer not to
+use a GUI editor.
+</p>
+
+<p>
+The reason I am using gvim instead of vim, is because many terminal emulators
+on Linux (including Konsole which is my preferred one) mess up with the
+Hebrew/Latin bidirectionality too much (enough to confuse vim), because the
+syntax highlighting looks nicer there, because the mouse support is better,
+and because it does not start much slower than Vim. If the console-based
+Vim works for you, feel free to use it.
+</p>
+
+<p>
+Regarding <a href="http://en.wikipedia.org/wiki/Emacs">Emacs</a>: from what
+I know, it should be a fine text editor, but I could never get used to it,
+so that’s not what I’m using. I was told about
+<a href="http://www.emacswiki.org/emacs/Evil">the Evil mode</a> which provides
+partial Vim compatibility, but I didn’t try it, in part because I’m now using
+quite a lot of Vim extensions written in vimscript and in Vim’s extension
+languages, which are not supported by Evil.
+</p>
+
+</section>
+
+<section class="h3">
+
+<h3 id="choice_of_operating_system">Why are you using your choice of an operating system (= Mageia Linux)?</h3>
+
+<p>
+The short answer is that
+<a href="http://en.wikipedia.org/wiki/Mageia">Mageia</a>
+is what I’m used to, what I like, and what I’m
+most comfortable with, and that I find the community of contributors and
+users friendly and helpful, so that is what I’m staying with for now.
+</p>
+
+<p>
+My original motivation for trying out Mandrake Linux (which later was renamed
+as “Mandriva Linux” and was even later forked into Mageia), was that I bought
+a 40 GB hard-disk (which was a large capacity for its time) and sought a distribution
+to install on it, that supported ReiserFS which was a file system that had
+<a href="http://en.wikipedia.org/wiki/Journaling_file_system">journaling</a>,
+so I won't have to spend a lot of time in running “ext2.fsck”. Eventually, it
+turned out that ReiserFS caused my hard disk to become faulty (and had no way
+to gracefully handle bad blocks) but in the meanwhile I grew to like Mandriva
+and used it and later its Mageia fork since.
+</p>
+
+<p>
+That put aside, I still willingly try to help people, who
+are using other Linux distributions, or even non-Linux operating
+systems, with their technical
+problems. Part of my motivation is
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=esr-catb--writing-for-the-world">this
+quote</a> from “The Cathedral and the Bazaar”.
 </p>
 
 </section>

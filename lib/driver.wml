@@ -16,6 +16,9 @@
 <define-tag nav endtag="required">
 <div %attributes>%body</div>
 </define-tag>
+<define-tag header endtag="required">
+%body
+</define-tag>
 </when>
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"

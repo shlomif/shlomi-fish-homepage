@@ -7,15 +7,19 @@
 <set-var full_url="$(ROOT)/art/<get-var url />" />
 <set-var full_thumb_url="$(ROOT)/art/<get-var thumb_url />" />
 
-<div class="design">
+<article class="design">
+
+<header>
 <h3 id="<get-var id />"><a href="<get-var full_url />"><get-var title /></a></h3>
+</header>
 
 <a href="<get-var full_url />"><img
     src="<get-var full_thumb_url />" alt="<get-var thumb_alt />"
     /></a>
 
 %body
-</div>
+
+</article>
 
 <restore id url thumb_url thumb_alt title />
 

@@ -12,6 +12,7 @@ my @SKIP_LIST = (
         post-dest/t2/art/back-to-my-homepage-2nd-ver/
         post-dest/t2/art/bk2hp/
         post-dest/t2/art/index.xhtml
+        post-dest/t2/index.xhtml
         post-dest/t2/art/original-graphics/
         post-dest/t2/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml
         post-dest/t2/humour/Selina-Mandrake/index.xhtml

@@ -10,18 +10,23 @@
 </define-tag>
 
 <when <not <get-var is_html5 /> /> >
+
 <define-tag article endtag="required">
 <div %attributes>%body</div>
 </define-tag>
+
 <define-tag footer endtag="required">
 <div class="footer" %attributes>%body</div>
 </define-tag>
+
 <define-tag nav endtag="required">
 <div %attributes>%body</div>
 </define-tag>
+
 <define-tag header endtag="required">
 %body
 </define-tag>
+
 </when>
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"

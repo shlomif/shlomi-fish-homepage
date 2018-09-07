@@ -1,6 +1,7 @@
 cache:
     directories:
         - $HOME/perl_modules
+        - $HOME/tidyall_d
 
 os: linux
 dist: trusty
@@ -35,4 +36,4 @@ before_install:
     - bash -x bin/install-npm-deps.sh
     - sudo ln -s /usr/bin/make /usr/bin/gmake
 script:
-    - bash -x bin/run-ci-build.bash
+    - TIDYALL_DATA_DIR="$HOME/tidyall_d" bash -x bin/run-ci-build.bash

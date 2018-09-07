@@ -13,6 +13,8 @@ Test::HTML::Tidy::Recursive->new(
             return (
                 not(   $fn =~ m{\A post-dest/t2/meta/FAQ/}x
                     or $fn =~ m{\A post-dest/t2/me/rindolf/ }x
+                    or $fn =~
+                    m{\A post-dest/t2/art/back-to-my-homepage-2nd-ver/ }x
                     or $fn =~ m{\A post-dest/t2/humour/humanity/songs/ }x
                     or $fn =~ m{\A post-dest/t2/open-source/anti/Adobe-Flash/ }x
                     or $fn =~ m{js/MathJax}

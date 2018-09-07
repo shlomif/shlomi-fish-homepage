@@ -9,6 +9,11 @@
 <script <get-var js_type /> %attributes>%body</script>
 </define-tag>
 
+<when <not <get-var is_html5 /> /> >
+<define-tag footer endtag="required">
+<div class="footer" %attributes>%body</div>
+</define-tag>
+</when>
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"
 #include "rest-of-template.wml"

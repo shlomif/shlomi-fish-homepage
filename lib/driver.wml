@@ -13,6 +13,9 @@
 <define-tag footer endtag="required">
 <div class="footer" %attributes>%body</div>
 </define-tag>
+<define-tag nav endtag="required">
+<div %attributes>%body</div>
+</define-tag>
 </when>
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"

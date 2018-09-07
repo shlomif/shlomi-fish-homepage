@@ -14,6 +14,7 @@ Test::HTML::Tidy::Recursive->new(
                 not(   $fn =~ m{\A post-dest/t2/meta/FAQ/}x
                     or $fn =~ m{\A post-dest/t2/me/rindolf/ }x
                     or $fn =~ m{\A post-dest/t2/art/index.xhtml }x
+                    or $fn =~ m{\A post-dest/t2/art/original-graphics/ }x
                     or $fn =~ m{\A post-dest/t2/art/bk2hp/ }x
                     or $fn =~
                     m{\A post-dest/t2/art/back-to-my-homepage-2nd-ver/ }x

@@ -29,7 +29,7 @@ sub render
 {
     my ( $self, $r ) = @_;
 
-    my $normalize = sub { return shift =~ s#/index\.html\z#/#gr };
+    my $normalize = sub { return shift =~ s#/index\.x?html\z#/#gr };
 
     if ( $normalize->( $self->path ) eq $normalize->( _path_info() ) )
     {

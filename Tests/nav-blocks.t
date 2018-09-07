@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use Test::More tests => 10;
+use Test::More tests => 11;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './Tests/lib';
@@ -233,9 +233,11 @@ EOF
     }
 }
 
+# TEST:$ext=2;
+foreach my $ext ( '', 'index.xhtml', )
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info    => _fn("humour/Selina-Mandrake/"),
+        path_info    => _fn("humour/Selina-Mandrake/$ext"),
         current_host => 't2',
         MyNavData::get_params(),
         'no_leading_dot' => 1,
@@ -250,7 +252,7 @@ EOF
 
     my $block = get_nav_block('buffy');
 
-    # TEST
+    # TEST*$ext
     eq_or_diff(
         [ $r->render($block) ],
         [ <<'EOF', ],

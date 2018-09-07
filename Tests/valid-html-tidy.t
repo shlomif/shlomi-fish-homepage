@@ -13,6 +13,7 @@ my @SKIP_LIST = (
         post-dest/t2/art/bk2hp/
         post-dest/t2/art/index.xhtml
         post-dest/t2/art/original-graphics/
+        post-dest/t2/humour/Selina-Mandrake/index.xhtml
         post-dest/t2/humour/humanity/songs/
         post-dest/t2/me/rindolf/
         post-dest/t2/meta/FAQ/

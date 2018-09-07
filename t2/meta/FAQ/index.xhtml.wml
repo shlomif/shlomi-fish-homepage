@@ -826,193 +826,6 @@ versions</a> of the EvilPHish image for download and reuse.
 
 <section class="h3">
 
-<h3 id="computers-specs">What are your Computers’ Specifications?</h3>
-
-<p>
-My primary machine is a desktop machine with a:
-</p>
-
-<ul>
-
-<li>
-An Intel Core i3 CPU (x86-64).
-</li>
-
-<li>
-8 GB of RAM.
-</li>
-
-<li>
-Intel Corporation Sandy Bridge Integrated Graphics Controller (rev 09)
-</li>
-
-<li>
-A 2 TB hard-disk.
-</li>
-
-<li>
-A 21″ Wide LCD Screen by LG.
-</li>
-
-<li>
-Intel Corporation Cougar Point High Definition Audio Controller.
-</li>
-
-<li>
-Intel Corporation 82579V Gigabit Network Connection.
-</li>
-
-</ul>
-
-<p>
-I’m running <a href="http://www.mageia.org/">Mageia Linux</a> on it. This
-desktop computer replaced my older computer which was a:
-</p>
-
-<ul>
-
-<li>
-Pentium 4, 2.4 GHz CPU.
-</li>
-
-<li>
-2.5 GB of RAM.
-</li>
-
-<li>
-An ATI Radeon HD 2600 card.
-</li>
-
-<li>
-One 160 GB Hard-disk and two smaller ones of 80 GB or so.
-</li>
-
-<li>
-A 19″ LCD Screen by ViewSonic.
-</li>
-
-<li>
-A standard built-in AC’97 sound-card.
-</li>
-</ul>
-
-<p>
-I’m using mostly
-<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
-and Open Source Software</a> (FOSS) on it, and try not to depend on
-non-FOSS software. I documented
-<a href="$(ROOT)/philosophy/computers/open-source/not-trust-non-FOSS/">the
-reason why I no longer trust non-FOSS software</a> on my technical weblog.
-</p>
-
-<p>
-I also have an Acer Aspire 5738DZG laptop with the following specs:
-</p>
-
-<ul>
-
-<li>
-Intel Pentium(R) Dual-Core CPU       T4300  @ 2.10GHz. (x86-64).
-</li>
-
-<li>
-ATI Mobility Radeon™ HD 4570 (r700)
-</li>
-
-<li>
-15.6″ 3D HD LCD Screen.
-</li>
-
-<li>
-3 GB Memory
-</li>
-
-<li>
-320 GB Hard Disk Drive.
-</li>
-
-<li>
-“DVD Super Multi DL drive”
-</li>
-
-<li>
-Acer Nplify™ 802.11b/g/n.
-</li>
-
-</ul>
-
-<p>
-This dual-boots between Windows 7 Home something and <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora Linux</a>
-(which is what I’m using most of the time.).
-</p>
-
-</section>
-
-<section class="h3">
-
-<h3 id="programming_languages">Which Programming Language did you start with? Which programming languages do you know now?</h3>
-
-<p>
-When I was in the 4th grade (back around 1987), my father bought my family
-a PC XT machine, with 640 KB of memory, and a colour
-<a href="http://en.wikipedia.org/wiki/Color_Graphics_Adapter">CGA</a>
-screen. Using this, my
-friends and I started learning how to program, first using the
-<a href="http://en.wikipedia.org/wiki/BASIC">BASIC</a>
-interpreter that was installed on the BIOS and was invoked if you didn’t put a
-diskette inside, and then using some of the BASIC variants that ran on DOS such
-as BASIC.COM,
-<a href="http://en.wikipedia.org/wiki/GW-BASIC">GWBASIC</a> and
-<a href="http://en.wikipedia.org/wiki/IBM_BASICA">BASICA</a>. So for better
-or for worse, BASIC was my first language.
-</p>
-
-<p>
-I’ve neglected programming for a long while and just played games on the
-computer, and possibly did some work on it. However, I returned to programming
-when I was in the 9th grade, this time on a 386 SX with
-<a href="http://en.wikipedia.org/wiki/QBasic">QBasic</a> which came with
-some later versions of DOS, and later on with
-<a href="http://en.wikipedia.org/wiki/Turbo_C%2B%2B">Borland Turbo C++</a>
-3.0 (which sported a much more primitive variant of C++ compared to today’s
-flavours). Despite knowing C and C/C++, I still found QBasic of use, due to
-my ability to rapidly develop code in it (what Larry Wall later called
-“whipuptitude” in some of his talks.). I also may have dabbled with Excel’s
-<a href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
-Basic for Applications (VBA)</a> before I graduated from high school, and
-during my 10th grade, I learned some Pascal using Microsoft QuickPascal on
-DOS.
-</p>
-
-<p>
-After I graduated from high school, I worked at three firms. In some of them
-I've done C or C++ development on Windows, but I also studied some
-<a href="http://en.wikipedia.org/wiki/SQL">SQL</a>, and
-became familiar with some
-<a href="http://en.wikipedia.org/wiki/Unix">UNIX</a> flavours
-and with <a href="http://perl-begin.org/">Perl 5</a> and the UNIX shells. UNIX
-has been an epiphany for me: until then I used DOS and Windows, and considered
-them bad, but did not know what a good system is. UNIX was the first genuinely
-good system that I have encountered. I also fell in love with Perl, and it
-became my favourite language.
-</p>
-
-<p>
-By the time I started studying the <get-var Technion />, I had a relatively early
-distribution of
-<a href="http://en.wikipedia.org/wiki/Linux">Linux</a> installed on my
-computer, and started playing with various languages available there.
-</p>
-
-<p>
-You can find a list of languages that I currently know on
-<a href="$(ROOT)/SFresume.html">my résumé</a>.
-</p>
-
-</section>
-
-<section class="h3">
-
 <h3 id="revealing_incriminating_details">Why are you revealing incriminating
 details
 about yourself? This makes you look bad for potential employers.</h3>
@@ -2207,11 +2020,203 @@ should be made legal globally.
 
 </section>
 <section class="h2">
-<h2 id="foss">About Free and Open Source Software (FOSS)</h2>
+
+<h2 id="computing">About computing and software development</h2>
 
 <section class="h3">
 
-<h3 id="how_to_become_hacker">How can I become an open-source contributor?</h3>
+<h3 id="computers-specs">What are your Computers’ Specifications?</h3>
+
+<p>
+My primary machine is a desktop machine with a:
+</p>
+
+<ul>
+
+<li>
+An Intel Core i3 CPU (x86-64).
+</li>
+
+<li>
+8 GB of RAM.
+</li>
+
+<li>
+Intel Corporation Sandy Bridge Integrated Graphics Controller (rev 09)
+</li>
+
+<li>
+A 2 TB hard-disk.
+</li>
+
+<li>
+A 21″ Wide LCD Screen by LG.
+</li>
+
+<li>
+Intel Corporation Cougar Point High Definition Audio Controller.
+</li>
+
+<li>
+Intel Corporation 82579V Gigabit Network Connection.
+</li>
+
+</ul>
+
+<p>
+I’m running <a href="http://www.mageia.org/">Mageia Linux</a> on it. This
+desktop computer replaced my older computer which was a:
+</p>
+
+<ul>
+
+<li>
+Pentium 4, 2.4 GHz CPU.
+</li>
+
+<li>
+2.5 GB of RAM.
+</li>
+
+<li>
+An ATI Radeon HD 2600 card.
+</li>
+
+<li>
+One 160 GB Hard-disk and two smaller ones of 80 GB or so.
+</li>
+
+<li>
+A 19″ LCD Screen by ViewSonic.
+</li>
+
+<li>
+A standard built-in AC’97 sound-card.
+</li>
+</ul>
+
+<p>
+I’m using mostly
+<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
+and Open Source Software</a> (FOSS) on it, and try not to depend on
+non-FOSS software. I documented
+<a href="$(ROOT)/philosophy/computers/open-source/not-trust-non-FOSS/">the
+reason why I no longer trust non-FOSS software</a> on my technical weblog.
+</p>
+
+<p>
+I also have an Acer Aspire 5738DZG laptop with the following specs:
+</p>
+
+<ul>
+
+<li>
+Intel Pentium(R) Dual-Core CPU       T4300  @ 2.10GHz. (x86-64).
+</li>
+
+<li>
+ATI Mobility Radeon™ HD 4570 (r700)
+</li>
+
+<li>
+15.6″ 3D HD LCD Screen.
+</li>
+
+<li>
+3 GB Memory
+</li>
+
+<li>
+320 GB Hard Disk Drive.
+</li>
+
+<li>
+“DVD Super Multi DL drive”
+</li>
+
+<li>
+Acer Nplify™ 802.11b/g/n.
+</li>
+
+</ul>
+
+<p>
+This dual-boots between Windows 7 Home something and <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora Linux</a>
+(which is what I’m using most of the time.).
+</p>
+
+</section>
+
+<section class="h3">
+
+<h3 id="programming_languages">Which Programming Language did you start with? Which programming languages do you know now?</h3>
+
+<p>
+When I was in the 4th grade (back around 1987), my father bought my family
+a PC XT machine, with 640 KB of memory, and a colour
+<a href="http://en.wikipedia.org/wiki/Color_Graphics_Adapter">CGA</a>
+screen. Using this, my
+friends and I started learning how to program, first using the
+<a href="http://en.wikipedia.org/wiki/BASIC">BASIC</a>
+interpreter that was installed on the BIOS and was invoked if you didn’t put a
+diskette inside, and then using some of the BASIC variants that ran on DOS such
+as BASIC.COM,
+<a href="http://en.wikipedia.org/wiki/GW-BASIC">GWBASIC</a> and
+<a href="http://en.wikipedia.org/wiki/IBM_BASICA">BASICA</a>. So for better
+or for worse, BASIC was my first language.
+</p>
+
+<p>
+I’ve neglected programming for a long while and just played games on the
+computer, and possibly did some work on it. However, I returned to programming
+when I was in the 9th grade, this time on a 386 SX with
+<a href="http://en.wikipedia.org/wiki/QBasic">QBasic</a> which came with
+some later versions of DOS, and later on with
+<a href="http://en.wikipedia.org/wiki/Turbo_C%2B%2B">Borland Turbo C++</a>
+3.0 (which sported a much more primitive variant of C++ compared to today’s
+flavours). Despite knowing C and C/C++, I still found QBasic of use, due to
+my ability to rapidly develop code in it (what Larry Wall later called
+“whipuptitude” in some of his talks.). I also may have dabbled with Excel’s
+<a href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
+Basic for Applications (VBA)</a> before I graduated from high school, and
+during my 10th grade, I learned some Pascal using Microsoft QuickPascal on
+DOS.
+</p>
+
+<p>
+After I graduated from high school, I worked at three firms. In some of them
+I've done C or C++ development on Windows, but I also studied some
+<a href="http://en.wikipedia.org/wiki/SQL">SQL</a>, and
+became familiar with some
+<a href="http://en.wikipedia.org/wiki/Unix">UNIX</a> flavours
+and with <a href="http://perl-begin.org/">Perl 5</a> and the UNIX shells. UNIX
+has been an epiphany for me: until then I used DOS and Windows, and considered
+them bad, but did not know what a good system is. UNIX was the first genuinely
+good system that I have encountered. I also fell in love with Perl, and it
+became my favourite language.
+</p>
+
+<p>
+By the time I started studying the <get-var Technion />, I had a relatively early
+distribution of
+<a href="http://en.wikipedia.org/wiki/Linux">Linux</a> installed on my
+computer, and started playing with various languages available there.
+</p>
+
+<p>
+You can find a list of languages that I currently know on
+<a href="$(ROOT)/SFresume.html">my résumé</a>.
+</p>
+
+</section>
+
+<section class="h3">
+
+<h3 id="foss">About Free and Open Source Software (FOSS)</h3>
+
+<section class="h4">
+
+<h4 id="how_to_become_hacker">How can I become an open-source contributor?</h4>
 
 <p>
 See
@@ -2223,10 +2228,10 @@ for the Young”</a> essay.
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="help_me_crack">Can you help me intrude into/exploit (so-called “crack”
-or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?</h3>
+<h4 id="help_me_crack">Can you help me intrude into/exploit (so-called “crack”
+or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?</h4>
 
 <p>
 No, and that is because I am not a
@@ -2300,9 +2305,9 @@ From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="are_you_a_hacker">Are you a hacker?</h3>
+<h4 id="are_you_a_hacker">Are you a hacker?</h4>
 
 <p>
 The word "Hacker" can mean several things. It can mean a computer intruder,
@@ -2323,10 +2328,10 @@ people can judge whether I am indeed a hacker of them. And my policy is to
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="how_use_hg">You’re using Mercurial (on Bitbucket.org/etc.) for some of
-your projects. How can I learn how to use it?</h3>
+<h4 id="how_use_hg">You’re using Mercurial (on Bitbucket.org/etc.) for some of
+your projects. How can I learn how to use it?</h4>
 
 <p>
 There are some links to tutorials on
@@ -2338,10 +2343,10 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="Shlomif_Common_cmake">When building some of your CMake-based
-projects, I am getting an error for a missing “Shlomif_Common.cmake” file</h3>
+<h4 id="Shlomif_Common_cmake">When building some of your CMake-based
+projects, I am getting an error for a missing “Shlomif_Common.cmake” file</h4>
 
 <p>
 Yes, you can find it in
@@ -2353,9 +2358,9 @@ downloads.
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="how_many_projects">How many Projects are you Working on?</h3>
+<h4 id="how_many_projects">How many Projects are you Working on?</h4>
 
 <p>
 I have originated, maintain, or contribute to more than one project and keep
@@ -2365,9 +2370,9 @@ tasks. You can find some lists and activity logs on <a href="$(ROOT)/open-source
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="github_account">Do you have a GitHub account?</h3>
+<h4 id="github_account">Do you have a GitHub account?</h4>
 
 <p>
 Yes, see <a href="$(ROOT)/open-source/projects/#forges_home_pages">this
@@ -2376,9 +2381,9 @@ link</a> for more information.
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="thought_you_were_a_Perl_guy">Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!</h3>
+<h4 id="thought_you_were_a_Perl_guy">Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!</h4>
 
 <p>
 While I have written a lot of Perl 5 code, and often still maintain it because
@@ -2414,9 +2419,9 @@ I Hate Advocacy</a> - by Mark-Jason Dominus.
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="publishing_proj_euler">Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?</h3>
+<h4 id="publishing_proj_euler">Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?</h4>
 
 <p>
 For several reasons:
@@ -2458,9 +2463,9 @@ employers and other interested parties.
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="proj_euler_in_order">Do you solve the Project Euler problems in their order?</h3>
+<h4 id="proj_euler_in_order">Do you solve the Project Euler problems in their order?</h4>
 
 <p>
 No, I don't. I often skip problems which I find too difficult or not interesting
@@ -2470,9 +2475,9 @@ href="https://projecteuler.net/problem=143">No. 143</a>).
 
 </section>
 
-<section class="h3">
+<section class="h4">
 
-<h3 id="todo_lists_and_organised">How do you keep organised? What do you use for To-Do lists?</h3>
+<h4 id="todo_lists_and_organised">How do you keep organised? What do you use for To-Do lists?</h4>
 
 <p>
 First of all, see <a href="https://shlomif-tech.livejournal.com/74492.html">this
@@ -2483,6 +2488,8 @@ use
 using the <a href="https://github.com/aaronbieber/vim-quicktask">vim-quicktask
 plugin</a>.
 </p>
+
+</section>
 
 </section>
 

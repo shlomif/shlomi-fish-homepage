@@ -124,9 +124,9 @@ sub run
                 if ( !$ENV{NO_I} )
                 {
                     $text =~
-s#^\({5}include "([^"]+)"\){5}\n#path("lib/$1")->slurp_utf8#egms;
+s#^\({5}include[= ](['"])([^'"]+)\1\){5}\n#path("lib/$2")->slurp_utf8#egms;
                     $text =~
-s#\({5}chomp_inc='([^']+)'\){5}#my ($l) = path("lib/$1")->lines_utf8({count => 1});chomp$l;$l#egms;
+s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({count => 1});chomp$l;$l#egms;
                 }
 
                 if ( $ENV{F} )

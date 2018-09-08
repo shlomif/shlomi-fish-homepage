@@ -295,9 +295,10 @@ my @documents = (
         db_ver => 5,
     },
     {
-        id   => "Spark-Pre-Birth-of-a-Modern-Lisp",
-        path => "open-source/projects/Spark/mission",
-        base => "Spark-Pre-Birth-of-a-Modern-Lisp",
+        id     => "Spark-Pre-Birth-of-a-Modern-Lisp",
+        path   => "open-source/projects/Spark/mission",
+        base   => "Spark-Pre-Birth-of-a-Modern-Lisp",
+        db_ver => 5,
     },
     {
         id => "SummerNSA-2014-09-call-for-action",

@@ -933,9 +933,13 @@ my $main_page_tag_list = <<'EOF';
 EOF
 
 my $main_page_tt = <<'END_OF_TEMPLATE';
+<section class="h3">
+<header>
 <h3 id="facts-[% p.short_id() %]" class="facts"><a href="[% p.url_base() %]/">[% p.title() %]</a></h3>
-
+</header>
 <facts__[% p.short_id() %] />
+
+</section>
 END_OF_TEMPLATE
 
 my $img_tt_text = <<'END_OF_TEMPLATE';

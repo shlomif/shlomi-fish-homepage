@@ -21,6 +21,7 @@ my @SKIP_LIST = (
         post-dest/t2/philosophy/
         post-dest/t2/puzzles/
         post-dest/t2/rindolf/
+        post-dest/t2/site-map/
         post-dest/t2/work/
         #
 );

@@ -25,7 +25,13 @@ my %whitelist = (
 'post-dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
 'post-dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
 'post-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
+        'post-dest/t2/philosophy/SummerNSA/A-SummerNSA-Reading/index.xhtml',
         'post-dest/t2/open-source/projects/Spark/mission/index.xhtml',
+        'post-dest/t2/philosophy/case-for-file-swapping/revision-3/index.xhtml',
+        'post-dest/t2/philosophy/computers/high-quality-software/index.xhtml',
+'post-dest/t2/philosophy/computers/high-quality-software/rev2/index.xhtml',
+'post-dest/t2/philosophy/computers/software-management/end-of-it-slavery/index.xhtml',
+'post-dest/t2/philosophy/computers/open-source/foss-licences-wars/index.xhtml',
     ),
 );
 

@@ -1,0 +1,14 @@
+#include "template5.wml"
+
+<latemp_subject "Index to Shlomi Fish’s Essays" />
+
+<latemp_meta_desc "Index to Shlomi Fish’s Essays" />
+
+<:{
+
+use strict;
+use warnings;
+
+require Shlomif::Homepage::ArticleIndex;
+
+}:>

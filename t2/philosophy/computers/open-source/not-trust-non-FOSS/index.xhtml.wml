@@ -1,0 +1,219 @@
+#include "template5.wml"
+
+<latemp_subject "Why I Do Not Trust Non-open-source Software" />
+<latemp_meta_desc "An essay that explains why I do not trust non-open source software and would rather not depend on it." />
+
+<p>
+<b>Publishing Date:</b> 3 March 2014
+</p>
+
+<h2 id="about">About this Article</h2>
+
+<p>
+This article aims to explain why I do not trust non-open-source software,
+and would rather not depend on them, even if they are technically superior
+to their open source alternatives in some respects.
+</p>
+
+<h2 id="article">The Article</h2>
+
+<p>
+In this essay, I would like to explain why I do not trust
+programs that are not
+<a href="http://en.wikipedia.org/wiki/Free_and_open-source_software">Free and
+open-source software (FOSS)</a> and instead are more restrictive. (I have
+previously told this story as part of
+<a href="http://better-scm.shlomifish.org/docs/shlomif-evolution.html">a
+different essay</a>, but it was easy to miss there.)
+</p>
+
+<p>
+In any case, the <a href="http://better-scm.shlomifish.org/bk/">BitKeeper
+version control system</a> is now quite obscure, due to the advent of quality
+distributed open-source systems such as
+<a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a>
+and <a href="http://en.wikipedia.org/wiki/Mercurial">Mercurial</a>. However,
+several years ago it was used by many developers of the
+<a href="https://en.wikipedia.org/wiki/Linux_kernel">Linux kernel</a>, and the
+demise of its gratis version was in fact the impetus for the creation of
+Git, and later Mercurial. Several years ago, some time before Linus Torvalds
+started using it as the version control system of the kernel’s source code,
+I ran into a limitation of
+<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>,
+a popular, but limited, open-source version control system, which I used back
+then.
+As a result, I went looking for an alternative, and after
+reading an out-of-date article about BitKeeper (which said its source
+was available under a mostly open source licence), decided to use it and its
+bkbits.net service.
+</p>
+
+<p>
+At first, I was quite happy using BitKeeper for some of my projects, but then I
+posted a question to the mailing list, asking where I can find the source,
+which was implied to be available on the BitKeeper site. Larry McVoy
+(= BitKeeper’s main creator and maintainer) replied by saying that they
+opted to remove the source code, because some users modified it to remove the
+restrictions, and allowed them to abuse the licensing of the gratis version
+and prevent them from paying for the commercial version. He also noted that
+availability of source, meant that, in practice, your software was Public
+Domain, and that they provide the sources for people they can trust,
+in private.
+</p>
+
+<p>
+At that point, I figured out that I don't have an immediate need for the
+source, and that perhaps in the future, I can win BitMover (= BitKeeper’s
+parent company) trust and gain access to it. So I continued using BitKeeper.
+</p>
+
+<p>
+That changed, however, when Mr. McVoy announced a licence change to BitKeeper
+(while requiring all users of the gratis version to upgrade) that
+<a href="http://www.advogato.org/person/shlomif/diary/78.html">I found
+unacceptable</a>, and caused me to seek a different alternative. This
+caused an unpleasant exchange between me and the BitKeeper developers,
+and made me lose some of the repositories I hosted on bkbits.net.
+</p>
+
+<p>
+From that moment on, I realised that I cannot really trust non-open-source
+software, because even if I am allowed to continue to use its previous version
+after a licence change, then it may accumulate bugs or stop being runnable
+on my systems, or stop being supported, and I cannot risk it. To quote
+<a href="http://en.wikipedia.org/wiki/Richard_Stallman">Richard
+Stallman</a>: “Every non-free [= non-FOSS] program has a lord, a master —
+and if you use the program, he is your master”.
+</p>
+
+<p>
+The end of the BitKeeper story, was that after evaluating a few open-source
+alternatives, I settled on using the open-source Subversion, and later on
+also started using Mercurial and Git. Furthermore, from then on, I often
+refused to look at and evaluate proprietary programs. Lately, many open-source
+developers have become infatuated with
+<a href="http://en.wikipedia.org/wiki/Sublime_Text">Sublime Text</a>, but
+I am not willing to even try it, because it is not open-source, so I will
+never have to depend on it.
+</p>
+
+<p>
+Despite all that, I still license most of my original open
+source software under
+non-<a href="http://en.wikipedia.org/wiki/Copyleft">Copyleft</a> licences,
+because the GPLv2 and the GPLv3 are incompatible, both
+with one another, and with many other open-source licences; because
+I know of at least three different interpretations to the GPL
+(GNU’s one in the GPL FAQ, the Linux kernel's one, and the draconian
+<a href="https://svn.nmap.org/nmap/COPYING" rel="nofollow">Nmap
+interpretation</a>); because I want my code to be of the maximal available
+use without the need to consult a lawyer; and because I don't want to be
+worried about how it will possibly be abused, when I don't care if it will.
+I'm still using GPLed software, in the hope that I won't get sued.
+</p>
+
+<p>
+To sum up, I do not wish to rely on non-FOSS, because it may mean these
+software applications later become unavailable to me, in a similar
+manner to what was the case with BitKeeper. I hope you can relate to that,
+and if not, you may likely run into a similar situation in the future,
+which was also the case for the Linux kernel project, with the demise of
+the gratis BitKeeper version altogether.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://esr.ibiblio.org/?p=4371">“Evaluating the harm from closed
+source”</a> — an essay by Eric Raymond (ESR).
+</p>
+</li>
+
+</ul>
+
+<h3 id="discontinued_proprietary_apps">Some Discontinued Non-FOSS Applications</h3>
+
+<ul>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Visual_Basic">Visual Basic 6 (and
+earlier)</a> - was famously discontinued by Microsoft in favour of the
+incompatible Visual Basic .NET. (Also see
+<a href="http://www.joelonsoftware.com/articles/APIWar.html">“How
+Microsoft Lost the API War”</a>.)
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/PSOS_%28real-time_operating_system%29">pSOS</a> - stood a risk of being discontinued.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Xv_%28software%29">The Xv Image
+Viewer for X</a> - no release since 1994.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/Microsoft_FrontPage">Microsoft FrontPage</a> - also see John C. Dvorak’s
+<a href="http://www.pcmag.com/article2/0,2817,2394717,00.asp">“Microsoft
+and Skype: A Marriage Made in Hell”</a>, which references the demise of
+FrontPage.
+</p>
+</li>
+
+<li>
+<p>
+Adobe’s acquisition of
+<a href="http://en.wikipedia.org/wiki/Macromedia">Macromedia</a> resulted
+in many software applications either by Adobe or by Macromedia being
+discontinued.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/HoTMetaL">HotMetaL</a> - an HTML
+editor for Windows and Mac OS.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/FoundationDB">FoundationDB</a> - a
+proprietary database system. <b>Update:</b> it was made open-source under
+the Apache 2.0 licence, several years later.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Picasa">Picasa</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<cc_by_british_blurb year="2014" />
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.reddit.com/r/opensource/comments/261w6v/why_i_do_not_trust_nonfoss_and_why_you_shouldnt/">On the opensource subreddit</a>.
+</p>
+</li>
+
+</ul>

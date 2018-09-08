@@ -17,6 +17,7 @@ my @SKIP_LIST = (
         post-dest/t2/me/
         post-dest/t2/meta/
         post-dest/t2/open-source/
+        post-dest/t2/philosophy/
         post-dest/t2/puzzles/
         #
 );

@@ -1,0 +1,16 @@
+#include "template5.wml"
+
+#include "toc_div.wml"
+#include "Inc/db_formats.wml"
+
+<latemp_subject "#SummerNSA: 2014 Sep’s Call for Action" />
+
+<latemp_meta_desc "The “Summerschool at the NSA”/“#SummerNSA” effort’s Call for Action: Finishing Off The Open Content/Web 2.0 Revolution (~2000-2014)" />
+
+<toc_div />
+
+<docbook_formats_w_base h2_id="formats" h2_text="Formats" base="DocBook5/SummerNSA-2014-09-call-for-action" />
+
+<h2 id="content">Content</h2>
+
+#include "docbook/5/rendered/SummerNSA-2014-09-call-for-action.xhtml"

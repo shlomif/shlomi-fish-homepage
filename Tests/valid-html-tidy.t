@@ -14,7 +14,7 @@ my @SKIP_LIST = (
         post-dest/t2/art/original-graphics/
         post-dest/t2/humour/
         post-dest/t2/lecture/
-        post-dest/t2/me/rindolf/
+        post-dest/t2/me/
         post-dest/t2/meta/
         post-dest/t2/open-source/
         post-dest/t2/puzzles/

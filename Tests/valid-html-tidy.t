@@ -33,7 +33,8 @@ Test::HTML::Tidy::Recursive->new(
         filename_filter => sub {
             my $fn = shift;
             return (
-                not(   $fn =~ m{\A$RE}
+                not(   $fn =~ m{/index\.xhtml\z}
+                    or $fn =~ m{\A$RE}
                     or $fn =~ m{js/MathJax} )
             );
         },

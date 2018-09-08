@@ -21,7 +21,7 @@ my @SKIP_LIST = (
         post-dest/t2/humour/humanity/songs/
         post-dest/t2/me/rindolf/
         post-dest/t2/meta/FAQ/
-        post-dest/t2/open-source/anti/Adobe-Flash/
+        post-dest/t2/open-source/anti/
         #
 );
 

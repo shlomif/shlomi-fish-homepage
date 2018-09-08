@@ -1,5 +1,5 @@
 <set-var rtl_layout="1" />
-#include "template.wml"
+#include "template5.wml"
 
 <latemp_subject "סיפורים הומוריסטיים מאת עודד כ." />
 <latemp_meta_desc "סיפורים הומוריסטיים מאת עודד כ." />
@@ -14,7 +14,8 @@ href="http://www.openoffice.org/">OpenOffice.org</a>
 ופתוח למסמכים משרדיים).
 </p>
 
-<table class="visible">
+<div class="visible">
+<table>
 
 <tr>
 <th>שם הסיפור</th>
@@ -49,3 +50,4 @@ href="http://www.openoffice.org/">OpenOffice.org</a>
 </tr>
 
 </table>
+</div>

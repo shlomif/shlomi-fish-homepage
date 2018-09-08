@@ -1,4 +1,4 @@
-#include "template.wml"
+#include "template5.wml"
 <latemp_subject "How to make Square Corners with CSS" />
 <latemp_meta_desc "How to make Square Corners with CSS (originally from Drivl.com)" />
 <h2 id="note">Note</h2>
@@ -22,38 +22,38 @@ unprecedented paradigm shift to right angled HTML elements.</em>
 </p>
 <p>
             Finally! A solution for creating square corners on your
-website.&nbsp; You've probably read countless tutorials on how to make <a href="http://web.archive.org/web/20070329063414/http://del.icio.us/search/?fr=del_icio_us&amp;p=rounded+corners&amp;type=all">rounded corners</a>, but a simple, elegant solution for creating square corners has yet to emerge.<br /><br /><strong>Drivl to the rescue!&nbsp; </strong>Below
+website.  You've probably read countless tutorials on how to make <a href="http://web.archive.org/web/20070329063414/http://del.icio.us/search/?fr=del_icio_us&amp;p=rounded+corners&amp;type=all">rounded corners</a>, but a simple, elegant solution for creating square corners has yet to emerge.<br /><br /><strong>Drivl to the rescue!  </strong>Below
  is our coveted 84 step process for creating beautiful square
-corners.&nbsp; Follow our lead and you'll soon be basking in splendid
+corners.  Follow our lead and you'll soon be basking in splendid
 perpendicular glory.<strong><br /><br />1. </strong>Compile Apache 2.24023
-with mod_perl, mod_log_forensic, and mod_vhost_alias.&nbsp; Do not
-compile mod_perl as a DSO and keep apache in a chroot jail.&nbsp;&nbsp;
-Install Mysql 3.23 using yum, Perl 5.8, and /usr/bin/fortune.&nbsp; Set
+with mod_perl, mod_log_forensic, and mod_vhost_alias.  Do not
+compile mod_perl as a DSO and keep apache in a chroot jail.
+Install Mysql 3.23 using yum, Perl 5.8, and /usr/bin/fortune.  Set
 up load balancing and make sure mysql database connections are pooling
-properly.&nbsp; rm -f the main page for "ls" (usually stored in
-/usr/share/man).&nbsp; Create an alias in .bashrc that echos 'the fat
-man stands alone' every time you CD to a new directory.<strong><br /><br />2.&nbsp; </strong>With a yard stick, measure the approximate width and height of your computer monitor <br /><br /><strong>3.&nbsp; </strong>Using a hot pink highlighter, draw a 4x scale outline of your computer monitor on a large sheet of butcher paper<br /><br /><strong>4.&nbsp; </strong>Squeeze
+properly.  rm -f the main page for "ls" (usually stored in
+/usr/share/man).  Create an alias in .bashrc that echos 'the fat
+man stands alone' every time you CD to a new directory.<strong><br /><br />2.  </strong>With a yard stick, measure the approximate width and height of your computer monitor <br /><br /><strong>3.  </strong>Using a hot pink highlighter, draw a 4x scale outline of your computer monitor on a large sheet of butcher paper<br /><br /><strong>4.  </strong>Squeeze
  the drippings from an uncooked 12 oz porterhouse steak onto the butcher
- paper, smear the steak around until a greasy sheen is clearly visible<br /><br /><strong>5.&nbsp; </strong>Place
- a housecat (latin: felis catus) in the center of the outline,&nbsp; if
+ paper, smear the steak around until a greasy sheen is clearly visible<br /><br /><strong>5.  </strong>Place
+ a housecat (latin: felis catus) in the center of the outline,  if
 the cat leaves the boundaries of the monitor, squirt repeatedly with a
-water bottle (see: <a href="http://web.archive.org/web/20070329063414/http://www.w3schools.com/css/pr_pos_overflow.asp">overflow: auto</a>)<br /><br /><strong>6.&nbsp; </strong>Walk along the edges of the outline and count the number of steps required to make a complete loop<br /><br /><strong>7.&nbsp; </strong>Gently stroke the porterhouse-scented kitty <br /><br /><strong>8.&nbsp; </strong>Multiply the number of steps taken in step 6 by everyone's favorite irrational algebraic number: 1.61803399 (phi)<br /><br /><strong>9. </strong>Using
+water bottle (see: <a href="http://web.archive.org/web/20070329063414/http://www.w3schools.com/css/pr_pos_overflow.asp">overflow: auto</a>)<br /><br /><strong>6.  </strong>Walk along the edges of the outline and count the number of steps required to make a complete loop<br /><br /><strong>7.  </strong>Gently stroke the porterhouse-scented kitty <br /><br /><strong>8.  </strong>Multiply the number of steps taken in step 6 by everyone's favorite irrational algebraic number: 1.61803399 (phi)<br /><br /><strong>9. </strong>Using
  the computed product, plot the approximate height and width of your
-target div using MS Paint.&nbsp; Export it as a 50 megabyte TIFF file
+target div using MS Paint.  Export it as a 50 megabyte TIFF file
 and upload this to your webserver.<br /><br /><strong>10.</strong> Open up
 your HTML file and create four divs: one above your bordered element,
-one below, and two floated to the side.&nbsp; Use the clearfix CSS hack
+one below, and two floated to the side.  Use the clearfix CSS hack
 and autoclear these elements using the :before and :after CSS selectors.
- (Warning: Not supported in 94.2% of all browsers).&nbsp; Make sure the
+ (Warning: Not supported in 94.2% of all browsers).  Make sure the
 top and bottom elements are display: block and your doctype is XHTML 1.0
- Strict.&nbsp; Using prototype.js, call Element.hide(targetDiv) and
+ Strict.  Using prototype.js, call Element.hide(targetDiv) and
 Ajax.Request to a PHP script that calls getimagesize() on your
-previously uploaded TIFF.&nbsp; Apply these dimensions to your target
-element using $('targetDiv').style.height = 'x';&nbsp; <br /><br /><strong>11.&nbsp; </strong>Huff a rag soaked in paint thinner<br /><br /><strong>12 - 83</strong>:&nbsp;
+previously uploaded TIFF.  Apply these dimensions to your target
+element using $('targetDiv').style.height = 'x';  <br /><br /><strong>11.  </strong>Huff a rag soaked in paint thinner<br /><br /><strong>12 - 83</strong>:
  Once dementia has set in, enjoy a 13 hour parasailing excursion with
-imaginary cherub-beasts.&nbsp; Relax comfortably on the sands of space
-and time and sip mango mojitos.&nbsp; Do not listen to the golden pigs,
-they speak only lies and treachery.<br /><br /><strong>84.&nbsp; </strong>When sobriety returns, add the following line to your CSS file: <br />p { border: 1px solid #000; }<br /><br />That's it!&nbsp; Square corners are now yours for the taking.*<br /><br /><br />*Warning,
+imaginary cherub-beasts.  Relax comfortably on the sands of space
+and time and sip mango mojitos.  Do not listen to the golden pigs,
+they speak only lies and treachery.<br /><br /><strong>84.  </strong>When sobriety returns, add the following line to your CSS file: <br />p { border: 1px solid #000; }<br /><br />That's it!  Square corners are now yours for the taking.*<br /><br /><br />*Warning,
  this method may not be compatible with Firefox 1.5 on Windows XP build
 902345, Firefox 2, FirePig 9, Pigs on Fire, IE6 with the Google Toolbar,
  Safari 1.2+, IE7 Build 908234, IE 5+, Netscape 4.8, Camino, Opera, Web

@@ -15,7 +15,7 @@ sub gmake_test
 
 {
     # TEST
-    gmake_test( 'T2_SOFTWARE_DOCS_SRC', 't2/open-source/index.html.wml',
+    gmake_test( 'T2_SOFTWARE_DOCS_SRC', 't2/open-source/index.xhtml.wml',
         "found a file" );
 
     # TEST

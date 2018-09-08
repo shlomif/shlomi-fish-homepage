@@ -6,7 +6,7 @@ function button_html(x, y, value) {
         (value ? "1.png" : "0.png") +
         "\" alt=\"" +
         (value ? "white" : "black") +
-        "\" id=\"button_" + x + "_" + y + "\"" +
+        "\" id=\"button_" + x + "_" + y + "\" " +
         "onclick=\"user_press_button(" + x + "," + y + "); return false;\" />"
         );
 }
@@ -27,7 +27,7 @@ function generate_board() {
         board_html += "</tr>";
     }
 
-    board_html += "</table>\n";
+    board_html += "</table>";
 
     $("#board").html(board_html);
     randomize_squares(n);

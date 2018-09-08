@@ -11,6 +11,7 @@ my @SKIP_LIST = (
         post-dest/t2/MathVentures/
         post-dest/t2/art/back-to-my-homepage-2nd-ver/
         post-dest/t2/art/bk2hp/
+        post-dest/t2/art/d-and-d-cartoon--comparing-lances/index.xhtml
         post-dest/t2/art/index.xhtml
         post-dest/t2/index.xhtml
         post-dest/t2/art/original-graphics/

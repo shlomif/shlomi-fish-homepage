@@ -858,13 +858,13 @@ SASS_STYLE = compressed
 # SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
-$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.sass
+FORT_SASS_DEPS = lib/sass/fortunes.sass
+COMMON_SASS_DEPS = lib/sass/common-body.sass lib/sass/common-style.sass
+
+$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.sass $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
-FORT_SASS_DEPS = lib/sass/fortunes.sass
-COMMON_SASS_DEPS = lib/sass/common-body.sass
-
-$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: lib/sass/common-style.sass $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
+$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
 
 $(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 

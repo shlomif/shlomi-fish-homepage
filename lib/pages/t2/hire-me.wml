@@ -2,19 +2,19 @@
 <set-var rtl_layout="1" />
 </he>
 #include "template.wml"
+#include "lang_switch.wml"
 #include "xhtml/1.x/std/toc.wml"
+
+<lang_switch url:eng="./" url:heb="hebrew.html" />
+
+<div class="main_text">
+
 <en>
 
 <latemp_subject "Shlomi Fish - Geek for Hire!" />
 
 <latemp_meta_desc "Shlomi Fish - Geek for Hire!" />
 
-<div class="lang_switch">
-<ul>
-<li><a href="./">English</a></li>
-<li><a href="./hebrew.html">Hebrew (עברית)</a></li>
-</ul>
-</div>
 
 </en>
 
@@ -24,17 +24,7 @@
 
 <latemp_meta_desc "שלומי פיש - שכור לך שפצר!" />
 
-<div class="lang_switch">
-
-<ul>
-<li><a href="./">English</a></li>
-<li><a href="./hebrew.html">Hebrew (עברית)</a></li>
-</ul>
-</div>
-
 </he>
-
-
 
 <en>
 <p>
@@ -240,3 +230,5 @@ HTML
 אפקטיביות.
 </p>
 </he>
+
+</div>

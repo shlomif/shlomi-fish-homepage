@@ -26,17 +26,17 @@ The following instructions are defined:
 
 <ol>
 <li>
-<code>p &larr; i</code>, where <code>i</code> is any integral parameter. This
+<code>p ← i</code>, where <code>i</code> is any integral parameter. This
 is the only instruction that accepts an arbitrary parameter.
 </li>
 <li>
-<code>r &larr; r+p</code>
+<code>r ← r+p</code>
 </li>
 <li>
-<code>p &larr; m[p]</code>
+<code>p ← m[p]</code>
 </li>
 <li>
-<code>m[p] &larr; r ; r &larr; 0</code> - a composite instruction doing
+<code>m[p] ← r ; r ← 0</code> - a composite instruction doing
 two instructions one after the other.
 </li>
 <li>

@@ -45,6 +45,19 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
         my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
         $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
 
+        if ( $lang eq 'he-IL' )
+        {
+            foreach my $node (
+                $xpc->findnodes(
+"//xhtml:table/xhtml:tbody/xhtml:tr[\@class='author']/xhtml:td[\@class='field']/xhtml:b[text() = 'Author']"
+                )
+                )
+            {
+                $node->replaceChild( XML::LibXML::Text->new("מאת:"),
+                    $node->firstChild );
+            }
+        }
+
         my $node =
             $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 

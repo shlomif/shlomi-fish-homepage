@@ -81,8 +81,21 @@ div.rightalign
  *  with a different colour. That's CSS 2.
  *  http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
 
-.main img
-    margin-right: 1em
+.main, main
+    img
+        margin-right: 1em
+    li
+        margin-top: 0.25em
+        margin-bottom: 0.25em
+    .hebrew
+        li
+            // Removed due to the facts displayed with bullets on separate
+            // lines:
+            //
+            // overflow: hidden
+            // list-style-position: inside
+        ul li
+            list-style-type: disc
 
 ul.noindent
     margin-left: 0em
@@ -484,10 +497,6 @@ table.visible
 .news_buttons
     float: right
 
-.main li
-    margin-top: 0.25em
-    margin-bottom: 0.25em
-
 .designs
     th
         vertical-align: top
@@ -557,16 +566,6 @@ table.visible
     padding: 0.3em
     padding-top: 1em
     overflow: hidden
-
-.main .hebrew
-    li
-        // Removed due to the facts displayed with bullets on separate
-        // lines:
-        //
-        // overflow: hidden
-        // list-style-position: inside
-    ul li
-        list-style-type: disc
 
 .articles_list
     p

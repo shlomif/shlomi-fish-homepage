@@ -10,11 +10,11 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="216.29532"
+   height="65.348442"
    id="svg3146"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="XSLT.svg">
   <defs
      id="defs3148">
@@ -60,7 +60,7 @@
        y2="323.29605"
        gradientUnits="userSpaceOnUse" />
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter3961">
       <feFlood
@@ -75,7 +75,6 @@
          result="composite1"
          id="feComposite3965" />
       <feGaussianBlur
-         in="composite"
          stdDeviation="2"
          result="blur"
          id="feGaussianBlur3967" />
@@ -100,16 +99,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2773885"
-     inkscape:cx="341.42857"
-     inkscape:cy="627.14286"
+     inkscape:cx="90.531381"
+     inkscape:cy="-69.249048"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1017"
      inkscape:window-height="785"
      inkscape:window-x="99"
-     inkscape:window-y="249"
-     inkscape:window-maximized="0" />
+     inkscape:window-y="230"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata3151">
     <rdf:RDF>
@@ -125,18 +128,18 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-71.233759,-290.62183)">
     <text
        xml:space="preserve"
-       style="font-size:72px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:url(#linearGradient3951);fill-opacity:1;stroke:#000000;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono Bold Oblique;stroke-opacity:1;filter:url(#filter3961)"
+       style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold Oblique';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient3951);fill-opacity:1;stroke:#000000;stroke-opacity:1;filter:url(#filter3961)"
        x="94.285713"
        y="349.50504"
-       id="text3154"
-       sodipodi:linespacing="125%"><tspan
+       id="text3154"><tspan
          sodipodi:role="line"
          id="tspan3156"
          x="94.285713"
          y="349.50504"
-         style="fill-opacity:1;fill:url(#linearGradient3951);stroke:#000000;stroke-opacity:1">XSLT</tspan></text>
+         style="font-size:72px;line-height:1.25;fill:url(#linearGradient3951);fill-opacity:1;stroke:#000000;stroke-opacity:1">XSLT</tspan></text>
   </g>
 </svg>

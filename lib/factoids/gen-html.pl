@@ -877,7 +877,7 @@ EOF
         img_attribution =>
 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
         img_class   => "facts_logo xslt",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/xslt-150w.png",
+        img_src     => "\$(ROOT)/humour/bits/facts/images/XSLT.min.svg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2009" />
 EOF

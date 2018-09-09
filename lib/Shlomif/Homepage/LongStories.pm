@@ -229,7 +229,7 @@ EOF
             logo_class => "buffy_few_good",
             logo_id    => "buffy_a_few_good_slayers_logo",
             logo_src =>
-"humour/Buffy/A-Few-Good-Slayers/images/buffy-afgs-logo-small.png",
+'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.min.svg',
             logo_svg =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
             entry_id   => "buffy-few-good",

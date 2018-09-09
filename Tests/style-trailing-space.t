@@ -26,6 +26,8 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             |
             lib/MathJax
             |
+            lib/js/jquery-expander
+            |
             lib/presentations/docbook/html-tutorial
             |
             lib/presentations/qp/[\w\-_\.0-9/]*?/rendered

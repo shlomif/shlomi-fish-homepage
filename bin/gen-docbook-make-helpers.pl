@@ -124,6 +124,17 @@ if ( not -e 'lib/MathJax/README.md' )
     }
 }
 
+if ( not -e 'lib/js/jquery-expander' )
+{
+    my $pid;
+    if ( !( $pid = $pm->start ) )
+    {
+        system(
+'cd lib/js && git clone https://github.com/kswedberg/jquery-expander'
+        );
+        $pm->finish;
+    }
+}
 if ( not -e 'lib/ebookmaker/README.md' )
 {
     my $pid;

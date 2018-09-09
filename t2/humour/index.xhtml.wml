@@ -6,16 +6,9 @@
 
 <js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
 
-;;; Renewed monthly.
-<define-tag online_casinos_ad>
-<div style="border: double black 3pt; padding: 0.5em; margin: 0.3em; float: right; width: 30%;">
-<p>
-For some users, there is no better entertainment than playing
-<a href="http://www.onlinecasinobluebook.com/" rel="nofollow">online
-casino sites</a>.
-</p>
-</div>
-</define-tag>
+<section class="h2">
+
+<h2 id="intro">What you can find here</h2>
 
 <p>
 You can read the humorous works that I have placed here, including:
@@ -58,18 +51,26 @@ They are usually under
 licences.
 </p>
 
+</section>
+
+<section>
 <h2 id="large-scale"><a href="stories/">Large-scale Creations</a></h2>
 
-<section class="sub_section collapse">
+<div class="sub_section">
 
+<div class="collapse">
 <humour_stories_list_text />
+</div>
+
+</div>
 
 </section>
+
+<section>
 
 <h2 id="quotes"><a href="aphorisms/">Aphorisms &amp; Quotes</a></h2>
 
 <div class="sub_section">
-
 <h3 id="quotes-collection"><a href="../humour.html">Collection of My Quotes and Aphorisms</a></h3>
 
 <p>
@@ -99,6 +100,10 @@ the Vampire Slayer</i>), <a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT</a>,
 
 </div>
 
+</section>
+
+<section class="h2">
+
 <h2 id="small-scale"><a href="$(ROOT)/humour/bits/">Small-scale Creations</a></h2>
 
 <div class="sub_section">
@@ -108,6 +113,10 @@ Than One Way to Do It”</a> to other programming languages,
 <a href="$(ROOT)/humour/bits/Spam-for-Everyone/">fight for accessible
 spam E-mail</a>, and lots of other stuff.
 </div>
+
+</section>
+
+<section class="h2">
 
 <h2 id="by-others"><a href="by-others/">By Others</a></h2>
 
@@ -120,6 +129,10 @@ Humorous creations by other people that are kept here for posterity.
 
 </div>
 
+</section>
+
+<section class="h2">
+
 <h2 id="recommendations"><a href="recommendations/">Media Recommendations</a></h2>
 
 <div class="sub_section">
@@ -129,6 +142,8 @@ Media Recommendations of films, fiction books, etc.
 </p>
 
 </div>
+
+</section>
 
 <js_script>
 

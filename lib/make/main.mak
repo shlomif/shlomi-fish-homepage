@@ -149,7 +149,8 @@ upload_local: upload_deps
 
 upload: upload_local upload_remote_only
 
-upload_remote_only: upload_deps upload_remote_only_without_deps
+upload_remote_only: upload_deps
+	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
 
 upload_remote_only_without_deps:
 	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})

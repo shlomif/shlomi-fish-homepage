@@ -585,7 +585,7 @@ sub generic_get_params
                         text   => "Hire Me!",
                         url    => "work/hire-me/",
                         title  => "I’m a Geek for Hire",
-                        expand => { re => "work/", },
+                        expand => { re => "\\Awork/", },
                         subs   => [
                             {
                                 text => "Private Lessons",

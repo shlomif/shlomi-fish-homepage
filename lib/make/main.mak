@@ -755,6 +755,7 @@ $(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
 	$(OPTIPNG) $@
 
 DEST_WINDOWS_UPDATE_SNAIL_ICON = $(DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
+DEST_FIERY_Q_PNG = $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 
 all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON)
 
@@ -985,9 +986,6 @@ EXPANDER_MIN_JS_DEST := $(T2_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(T2_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
 MULTI_YUI = ./bin/Run-YUI-Compressor
-
-$(EXPANDER_JS_DEST): $(EXPANDER_JS_SRC)
-	$(call COPY)
 
 $(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
 	$(MULTI_YUI) -o $@ $<

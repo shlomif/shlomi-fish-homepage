@@ -1,11 +1,11 @@
 #include "template5.wml"
-#include "xhtml/1.x/std/toc.wml"
+#include "toc_div.wml"
 
 <latemp_subject "Lectures given by Shlomi Fish" />
 
-<h2*>Table of Contents</h2*>
+<div class="fancy_sects side_toc">
 
-<toc />
+<toc_div />
 
 <h2 id="perl-for-newbies"><a href="./Perl/Newbies/">Perl
 for Perl Newbies</a></h2>
@@ -30,9 +30,37 @@ A presentation about web publishing using the popular LAMP - Linux, Apache
 , MySQL and Perl/PHP/Python platform.
 </p>
 
+<h2 id="soft_mgmt">Software Management</h2>
+
+<h3 id="catb"><a href="./CatB/">The Cathedral and the Bazaar - an Overview</a></h3>
+
+<div class="indent">
+<p>
+An overview of Eric Raymond's "The Cathedral and the Bazaar" series which
+is considered one of the most important works on the Open Source world.
+</p>
+</div>
+
+<h3 id="joel-test"><a href="joel-test/">The Joel Test</a></h3>
+
+<div class="indent">
+<p>
+A Hebrew Presentation about
+<a href="http://www.joelonsoftware.com/articles/fog0000000043.html">the Joel
+Test</a> which is a way to better ensure the quality of a software
+development team.
+</p>
+</div>
+
 <h2 id="programming-languages">Programming Languages</h2>
 
-<h3 id="scheme-and-lc"><a href="./Lambda-Calculus/">Scheme and Lambda Calculus</a></h3>
+<h3 id="c-bad-elems"><a href="C-and-CPP/bad-elements/">C and C++ Elements to Avoid</a></h3>
+
+<p>
+Coding Elements and anti-patterns that should be avoided in C and C++.
+</p>
+
+<h3 id="scheme-and-lc"><a href="Lambda-Calculus/">Scheme and Lambda Calculus</a></h3>
 
 <p>
 A presentation that briefly covers the Scheme programming language and
@@ -53,7 +81,7 @@ language.
 
 <dl>
 <dt>
-<a href="./Gimp/">Do it with the GIMP</a>
+<a href="Gimp/">Do it with the GIMP</a>
 </dt>
 <dd>
 a lecture about the <a href="http://www.gimp.org/">GNU Image
@@ -61,28 +89,28 @@ Manipulation Program</a>, a free Photoshop-like alternative with many
 powerful features.
 </dd>
 <dt>
-<a href="./PostgreSQL-Lecture/">The PostgreSQL Database Server</a>
+<a href="PostgreSQL-Lecture/">The PostgreSQL Database Server</a>
 </dt>
 <dd>
 A lecture about the Postgres database server, a free and powerful SQL
 server for UNIX systems.
 </dd>
 <dt>
-<a href="./Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a>
+<a href="Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a>
 </dt>
 <dd>
 A tool about these two tools for helping to write compilers and interpreters.
 </dd>
 <dt>
-<a href="./Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a>
+<a href="Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a>
 </dt>
 <dd>
 A trio of tools that make writing programs that compile on various UNIX
 (and Win32) platforms easier.
 </dd>
 <dt>
-<a href="./WebMetaLecture/">Web Meta Lecture - a lecture about the
-Website Meta Language</a> (upcoming lecture)
+<a href="WebMetaLecture/">Web Meta Lecture - a lecture about the
+Website Meta Language</a>
 </dt>
 <dd>
 A tool for generating sophisticated static HTML web-sites.
@@ -99,9 +127,19 @@ introduces it for beginners.
 </dd>
 </dl>
 
+<h3 id="pres-tools">Presentation Tools</h3>
+
+<ul>
+<li>
+<a href="./Quad-Pres/">QuaD-Pres</a>
+</li>
+<li>
+<a href="./Pres-Tools/Perl-Point/">PerlPoint</a>
+</li>
+</ul>
 <hr />
 
-<h2 id="welcome-to-linux"><a href="./W2L/">"Welcome to Linux" Lectures</a></h2>
+<h2 id="welcome-to-linux"><a href="W2L/">"Welcome to Linux" Lectures</a></h2>
 
 <div class="indent">
 <p>
@@ -142,31 +180,13 @@ Covers history, technologies, architecture and exotic bugs.
 </p>
 </div>
 
-<h2 id="catb"><a href="./CatB/">The Cathedral and the Bazaar - an Overview</a></h2>
-
-<div class="indent">
-<p>
-An overview of Eric Raymond's "The Cathedral and the Bazaar" series which
-is considered one of the most important works on the Open Source world.
-</p>
-</div>
-
-<h2 id="pres-tools">Presentation Tools</h2>
-
-<ul>
-<li>
-<a href="./Quad-Pres/">QuaD-Pres</a>
-</li>
-<li>
-<a href="./Pres-Tools/Perl-Point/">PerlPoint</a>
-</li>
-</ul>
-
-<h2 id="lightning-talks"><a href="./cat/lightning-talks/">Mini Presentations ("Lightning
+<h2 id="lightning-talks"><a href="cat/lightning-talks/">Mini Presentations ("Lightning
 Talks")</a></h2>
 
 <div class="indent">
 <p>
 Short presentations on various topics.
 </p>
+</div>
+
 </div>

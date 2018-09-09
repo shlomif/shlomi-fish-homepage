@@ -32,12 +32,11 @@ my $essays_tree_contents = {
             text  => "Web Publishing with LAMP",
             url   => "lecture/LAMP/",
             title => "Web Publishing using Linux/Apache/MySQL/Perl/PHP/Python",
-            host  => "t2",
         },
         {
             text  => "Software Management",
             url   => "lecture/cat/software-management/",
-            title => "Presentation about Software Management",
+            title => "Presentations about Software Management",
             subs  => [
                 {
                     text => "CatB",
@@ -102,13 +101,11 @@ my $essays_tree_contents = {
                     title => "Presentation about Website Meta Language",
                 },
                 {
-                    host  => "t2",
                     text  => "Vim for Beginners",
                     url   => "lecture/Vim/beginners/",
                     title => "The Vim (Vi-Improved) Editor for Beginners",
                 },
                 {
-                    host => "t2",
                     text => "Vim Tips and Tricks",
                     url  => "lecture/Vim/telux-tips-and-tricks/",
                 },

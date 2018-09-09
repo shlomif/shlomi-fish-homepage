@@ -24,7 +24,7 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             |
             lib/ebookmaker/\.git
             |
-            lib/MathJax
+            lib/js/MathJax
             |
             lib/js/jquery-expander
             |

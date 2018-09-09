@@ -112,13 +112,13 @@ sub _github_shlomif_clone
 
 my $pm = Parallel::ForkManager->new(20);
 
-if ( not -e 'lib/MathJax/README.md' )
+if ( not -e 'lib/js/MathJax/README.md' )
 {
     my $pid;
     if ( !( $pid = $pm->start ) )
     {
         system(
-'cd lib && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
+'cd lib/js && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
         );
         $pm->finish;
     }

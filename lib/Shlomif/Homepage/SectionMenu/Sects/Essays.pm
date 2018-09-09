@@ -502,6 +502,14 @@ my $essays_tree_contents = {
                                     . " programmer"
                             ),
                         },
+                        {
+                            text  => "At Cortext",
+                            url   => "prog-evolution/shlomif-at-cortext.html",
+                            title => (
+"Describes my experiences in Cortext, a web-design shop based on UNIX, "
+                                    . "Windows, and Perl."
+                            ),
+                        },
                     ],
                 },
             ],

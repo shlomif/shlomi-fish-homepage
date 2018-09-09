@@ -757,7 +757,7 @@ $(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
 DEST_WINDOWS_UPDATE_SNAIL_ICON = $(DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
 DEST_FIERY_Q_PNG = $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 
-all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON)
+all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON) $(DEST_FIERY_Q_PNG)
 
 $(DEST_WINDOWS_UPDATE_SNAIL_ICON): t2/humour/bits/facts/images/snail.svg
 	inkscape --export-width=200 --export-png="$@" $<

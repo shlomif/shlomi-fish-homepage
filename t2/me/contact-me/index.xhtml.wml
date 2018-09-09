@@ -3,6 +3,9 @@
 <latemp_subject "How to Reach Me" />
 <latemp_meta_desc "How to Reach Shlomi Fish: E-mail, IM, mobile phone, IRC and many user-generated content sites." />
 
+<when>
+<js_script src="$(ROOT)/js/jquery.expander.js"></js_script>
+</when>
 <js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
 
 <h2 id="contact_me">How to contact me / How to reach me</h2>
@@ -158,6 +161,7 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
     $("#more_contacts_list").expander({
         slicePoint: 400,
         expandText: 'read more…',
+        expandPrefix: '…',
     });
 
 });

@@ -977,11 +977,19 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 
 $(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
 
-JQTREE_SRC = common/js/tree.jquery.js
-JQTREE_MIN_DEST = $(T2_DEST)/js/tree.jq.js
-MAIN_TOTAL_MIN_JS_DEST = $(T2_DEST)/js/main_all.js
-
+JQTREE_SRC := common/js/tree.jquery.js
+JQTREE_MIN_DEST := $(T2_DEST)/js/tree.jq.js
+MAIN_TOTAL_MIN_JS_DEST := $(T2_DEST)/js/main_all.js
+EXPANDER_MIN_JS_DEST := $(T2_DEST)/js/jquery.expander.min.js
+EXPANDER_JS_DEST := $(T2_DEST)/js/jquery.expander.js
+EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
 MULTI_YUI = ./bin/Run-YUI-Compressor
+
+$(EXPANDER_JS_DEST): $(EXPANDER_JS_SRC)
+	$(call COPY)
+
+$(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
+	$(MULTI_YUI) -o $@ $<
 
 # Must not be sorted!
 MAIN_TOTAL_MIN_JS__SOURCES = \
@@ -999,7 +1007,7 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 $(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
 	$(MULTI_YUI) -o $@ $(JQTREE_SRC)
 
-minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST)
+minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)

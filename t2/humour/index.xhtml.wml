@@ -138,6 +138,7 @@ Media Recommendations of films, fiction books, etc.
     $("div.collapse").expander({
         slicePoint: 1200,
         expandText: 'read more…',
+        expandPrefix: '…',
     });
 
 });

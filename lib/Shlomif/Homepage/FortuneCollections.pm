@@ -109,7 +109,7 @@ sub get_fortune_all_in_one_page_html_wml
 <latemp_subject "Shlomi Fish Fortunes Collections - All in One Page" />
 <latemp_meta_desc "Shlomi Fish Fortunes Collections - All in One Page" />
 
-<div class="page_toc">
+<nav class="page_toc">
 <h2 id="toc">Table of Contents</h2>
 <ul>
 EOF
@@ -129,7 +129,7 @@ FOO_EOF
     }
 
     $ret .= "</ul>\n";
-    $ret .= "</div>\n";
+    $ret .= "</nav>\n";
 
     foreach my $r ( @{ $class->get_fortune_records() } )
     {

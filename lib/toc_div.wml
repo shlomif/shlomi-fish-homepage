@@ -12,11 +12,11 @@
 <ifeq "<get-var lang />" "en" "<set-var title="Table of Contents" />" />
 <ifeq "<get-var lang />" "he" "<set-var title="תוכן העניינים" />" />
 
-<div class="page_toc">
+<nav class="page_toc">
 <<get-var head_tag />* id="toc"><get-var title /></<get-var head_tag />*>
 
 <toc />
-</div>
+</nav>
 
 <restore head_tag lang />
 

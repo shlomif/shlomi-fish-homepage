@@ -315,7 +315,7 @@ EOF
         },
         {
             id         => 'humanity',
-            tagline    => "TODO FILL IN",
+            tagline    => "Intelligent (?) and Conscious (?)",
             logo_alt   => "Humanity Logo",
             logo_class => "humanity",
             logo_id    => "humanity_logo",

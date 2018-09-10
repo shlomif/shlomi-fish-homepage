@@ -272,15 +272,17 @@ my @documents = (
     },
 
     {
-        id   => "what-makes-software-high-quality",
-        path => "philosophy/computers/high-quality-software",
-        base => "what-makes-software-high-quality",
+        id     => "what-makes-software-high-quality",
+        path   => "philosophy/computers/high-quality-software",
+        base   => "what-makes-software-high-quality",
+        db_ver => 5,
     },
 
     {
-        id   => "what-makes-software-high-quality-rev2",
-        path => "philosophy/computers/high-quality-software/rev2",
-        base => "what-makes-software-high-quality-rev2",
+        id     => "what-makes-software-high-quality-rev2",
+        path   => "philosophy/computers/high-quality-software/rev2",
+        base   => "what-makes-software-high-quality-rev2",
+        db_ver => 5,
     },
     {
         id     => "perfect-it-workplace",

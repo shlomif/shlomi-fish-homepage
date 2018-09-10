@@ -28,8 +28,6 @@ my %whitelist = (
         'post-dest/t2/philosophy/SummerNSA/A-SummerNSA-Reading/index.xhtml',
         'post-dest/t2/open-source/projects/Spark/mission/index.xhtml',
         'post-dest/t2/philosophy/case-for-file-swapping/revision-3/index.xhtml',
-        'post-dest/t2/philosophy/computers/high-quality-software/index.xhtml',
-'post-dest/t2/philosophy/computers/high-quality-software/rev2/index.xhtml',
     ),
 );
 

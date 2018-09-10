@@ -36,8 +36,7 @@ sub gmake_test
     );
 
     # TEST
-    gmake_test( 'DOCBOOK4_PDFS',
-        'lib/docbook/4/pdf/what-makes-software-high-quality-rev2.pdf',
+    gmake_test( 'DOCBOOK4_PDFS', 'lib/docbook/4/pdf/the-eternal-jew.pdf',
         "found a file" );
 
     # TEST

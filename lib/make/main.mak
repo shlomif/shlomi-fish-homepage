@@ -118,7 +118,7 @@ T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
 
 T2_FORTUNES_DIR_HTACCESS = $(T2_DEST_FORTUNES_DIR)/.htaccess
 
-ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(DEST_HUMOUR)/.htaccess dest/t2/open-source/.htaccess dest/t2/philosophy/.htaccess dest/t2/MathVentures/.htaccess dest/t2/prog-evolution/.htaccess dest/t2/me/.htaccess dest/t2/lecture/.htaccess dest/t2/puzzles/.htaccess dest/t2/rindolf/.htaccess $(DEST_HUMOUR)/humanity/songs/.htaccess $(T2_DEST)/lecture/PostgreSQL-Lecture/.htaccess
+ALL_HTACCESSES = $(T2_FORTUNES_DIR_HTACCESS) $(DEST_HUMOUR)/.htaccess dest/t2/open-source/.htaccess dest/t2/philosophy/.htaccess dest/t2/MathVentures/.htaccess dest/t2/prog-evolution/.htaccess dest/t2/me/.htaccess dest/t2/lecture/.htaccess dest/t2/puzzles/.htaccess dest/t2/rindolf/.htaccess dest/t2/grad-fu/.htaccess dest/t2/work/.htaccess $(DEST_HUMOUR)/humanity/songs/.htaccess $(T2_DEST)/lecture/PostgreSQL-Lecture/.htaccess
 
 htaccesses_target: $(ALL_HTACCESSES)
 

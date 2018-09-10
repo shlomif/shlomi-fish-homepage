@@ -11,6 +11,7 @@ my @SKIP_LIST = (
         post-dest/t2/MathVentures/
         post-dest/t2/MathVentures/3d-outof-4d-mathml.xhtml
         post-dest/t2/MathVentures/bugs-in-square-mathml.xhtml
+        post-dest/t2/grad-fu/
         post-dest/t2/humour/
         post-dest/t2/lecture/
         post-dest/t2/me/
@@ -19,6 +20,7 @@ my @SKIP_LIST = (
         post-dest/t2/prog-evolution/
         post-dest/t2/puzzles/
         post-dest/t2/rindolf/
+        post-dest/t2/work/
         #
 );
 

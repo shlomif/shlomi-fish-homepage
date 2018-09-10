@@ -10,9 +10,7 @@ my @SKIP_LIST = (
     qw#
         post-dest/t2/MathVentures/3d-outof-4d-mathml.xhtml
         post-dest/t2/MathVentures/bugs-in-square-mathml.xhtml
-        post-dest/t2/humour/RoadToHeaven/abstract.xhtml
-        post-dest/t2/humour/bits/Google-Discontinues-Services/__to-copy-and-paste.xhtml
-        post-dest/t2/humour/bits/New-versions-of-the-GPL/__to-copy-and-paste.xhtml
+        post-dest/t2/humour/
         post-dest/t2/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml
         #
 );
@@ -25,7 +23,7 @@ Test::HTML::Tidy::Recursive->new(
             my $fn = shift;
             return (
                 not(   $fn =~ m{/index\.xhtml\z}
-                    or $fn =~ m{\A$RE\z}
+                    or $fn =~ m{\A$RE}
                     or $fn =~ m{js/MathJax} )
             );
         },

@@ -1095,9 +1095,9 @@ $(LC_LECTURE_ARC):
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
 
-OCT_2014_SGLAU_LET_DIR = t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/
+OCT_2014_SGLAU_LET_DIR = t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10
 OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
-OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.html
+OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
 MY_NAME_IS_RINDOLF_SRC = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf.jpg
 MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
@@ -1108,7 +1108,7 @@ $(OCT_2014_SGLAU_LET_PDF): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/lette
 	export A="$$(pwd)" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"
 
 $(OCT_2014_SGLAU_LET_HTML): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
-	export A="$$(pwd)" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to html "$$A/$<"
+	export A="$$(pwd)" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 	convert -resize '200' $< $@

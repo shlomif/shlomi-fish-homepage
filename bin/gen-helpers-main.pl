@@ -147,7 +147,7 @@ sub letter_io
     return path( letter_fn(shift) );
 }
 
-foreach my $ext (qw/ html pdf /)
+foreach my $ext (qw/ xhtml pdf /)
 {
     my $fh = letter_io($ext);
     if ( $fh->stat->mtime < letter_io('odt')->stat->mtime )

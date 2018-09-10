@@ -24,7 +24,6 @@ my %whitelist = (
         'post-dest/t2/humour/human-hacking/arabic-v2.html',
 'post-dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
 'post-dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
-'post-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
     ),
 );
 

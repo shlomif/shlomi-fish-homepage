@@ -35,7 +35,7 @@ qr#^\Qpost-dest/t2/open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror\E#,
 qr#^\Qpost-dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/\E#,
 qr#^\Qpost-dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/\E#,
 qr#^\Qpost-dest/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5/\E#,
-qr#^\Qpost-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html\E\z#,
+qr#^\Qpost-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.xhtml\E\z#,
     qr#^\Qpost-dest/t2/humour/by-others/how-to-make-square-corners-with-CSS/#,
     qr#^\Qpost-dest/t2/philosophy/by-others/sscce/#,
 );

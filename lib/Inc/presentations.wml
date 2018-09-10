@@ -27,3 +27,38 @@ version of the Blitz).
 </li>
 </ul>
 </define-tag>
+
+<define-tag t2_lect whitespace="delete">
+$(ROOT)/lecture/Perl/Lightning/%0/
+</define-tag>
+
+<define-tag lightning_talks_list>
+
+<ul>
+<li>
+<a href="$(ROOT)/lecture/mini/mdda/">Meta-Data Database Access</a>
+</li>
+<li>
+<a href="$(ROOT)/lecture/Perl/Graham-Function/">Presentation about Finding the
+Graham Function</a>
+</li>
+<li>
+<a href="$(ROOT)/lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
+Templating System for Perl</a>
+</li>
+<li>
+<a href="<t2_lect "Opt-Multi-Task-in-PDL" />">Optimising Multitasking in
+PDL</a>
+</li>
+<li>
+<a href="<t2_lect "Test-Run" />">Test::Run - a New and Improved Test Harness</a>
+</li>
+<li>
+<a href="<t2_lect "Too-Many-Ways" />">There are too Many Ways to Do it</a>
+</li>
+<li>
+<a href="<t2_lect "Mojolicious" />">Mojolicious and Mojolicious::Lite</a> -
+a presentation about the web-development frameworks.
+</li>
+</ul>
+</define-tag>

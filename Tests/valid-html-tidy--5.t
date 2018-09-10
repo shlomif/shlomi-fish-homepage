@@ -14,7 +14,7 @@ sub calc_tidy
 {
     my $self = shift;
 
-    return HTML::Tidy5->new( { output_xhtml => 1, } );
+    return HTML::Tidy5->new( { input_xml => 1, output_xhtml => 1, } );
 }
 
 package main;
@@ -25,7 +25,6 @@ my %whitelist = (
 'post-dest/t2/humour/human-hacking/arabic-v2/human-hacking-field-guide-v2-arabic/index.html',
 'post-dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
 'post-dest/t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.html',
-        'post-dest/t2/open-source/projects/Spark/mission/index.xhtml',
     ),
 );
 

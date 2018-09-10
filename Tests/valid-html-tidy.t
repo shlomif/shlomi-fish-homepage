@@ -10,12 +10,7 @@ my @SKIP_LIST = (
     qw#
         post-dest/t2/MathVentures/
         post-dest/t2/humour/
-        post-dest/t2/lecture/
-        post-dest/t2/me/
-        post-dest/t2/meta/
-        post-dest/t2/open-source/
         post-dest/t2/philosophy/
-        post-dest/t2/puzzles/
         post-dest/t2/rindolf/
         post-dest/t2/site-map/
         post-dest/t2/work/

@@ -282,9 +282,10 @@ my @documents = (
         base => "what-makes-software-high-quality-rev2",
     },
     {
-        id   => "perfect-it-workplace",
-        path => "philosophy/computers/software-management/perfect-workplace",
-        base => "perfect-it-workplace",
+        id     => "perfect-it-workplace",
+        path   => "philosophy/computers/software-management/perfect-workplace",
+        base   => "perfect-it-workplace",
+        db_ver => 5,
     },
     {
         id   => "park-lisp-informal-spec",

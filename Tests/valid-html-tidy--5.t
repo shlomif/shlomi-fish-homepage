@@ -31,7 +31,6 @@ my %whitelist = (
         'post-dest/t2/philosophy/computers/high-quality-software/index.xhtml',
 'post-dest/t2/philosophy/computers/high-quality-software/rev2/index.xhtml',
 'post-dest/t2/philosophy/computers/software-management/end-of-it-slavery/index.xhtml',
-'post-dest/t2/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml',
     ),
 );
 

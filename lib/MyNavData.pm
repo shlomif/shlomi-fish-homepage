@@ -189,40 +189,15 @@ my %reduced_sub_trees = (
                         url  => "open-source/projects/freecell-solver/",
                     },
                     {
-                        text => "MikMod",
-                        url  => "open-source/projects/mikmod/",
-                        title =>
-"A library and player for playing music module files",
-                        subs => [
-                            {
-                                text => "For Java",
-                                title =>
-"A Player for MOD Files (a type of Music Files) for the Java Environment",
-                                url => "jmikmod/",
-                            },
-                        ],
+                        text  => "PySol FC",
+                        url   => "open-source/projects/pysol/",
+                        title => "A suite of Solitaire games",
                     },
                     {
                         text => "FCFS RWLock",
                         title =>
                             "A First-Come First-Served Readers/Writers Lock",
                         url => "rwlock/",
-                    },
-                    {
-                        text  => "Quad-Pres",
-                        title => "A Tool for Creating HTML Presentations",
-                        url   => "open-source/projects/quad-pres/",
-                    },
-                    {
-                        text  => "Gradient-Fu",
-                        title => "Gradient-Fu Patch for the GIMP",
-                        url   => "grad-fu/",
-                        hide  => 1,
-                    },
-                    {
-                        text  => "Bits and Bobs",
-                        title => "Various Small-Scale Open-Source Works",
-                        url   => "open-source/bits.html",
                     },
                 ],
             },
@@ -273,12 +248,6 @@ my %reduced_sub_trees = (
                 title =>
                     "Contributions to Other Projects, that I did not Start",
                 url => "open-source/contributions/",
-            },
-            {
-                text   => "Anti Pages",
-                title  => "Against Commonly Used but Bad Software",
-                url    => "open-source/anti/",
-                expand => { re => "^(?:no-ie|open-source/anti)/", },
             },
         ],
     },

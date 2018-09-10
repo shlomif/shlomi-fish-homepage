@@ -344,9 +344,10 @@ my @documents = (
     },
 
     {
-        id   => "foss-licences-wars",
-        path => "philosophy/computers/open-source/foss-licences-wars",
-        base => "foss-licences-wars",
+        id     => "foss-licences-wars",
+        path   => "philosophy/computers/open-source/foss-licences-wars",
+        base   => "foss-licences-wars",
+        db_ver => 5,
     },
 
     {

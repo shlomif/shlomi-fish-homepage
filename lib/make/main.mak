@@ -1179,10 +1179,13 @@ PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE)
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
 find_htmls = find $(1) -regex '.*\.x?html'
 
+WMLect_PATH := lecture/WebMetaLecture/slides/examples
+
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
 	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | $(STRIP_T2_DEST) | grep -vE '^humour/fortunes' | $(PROC_INCLUDES_COMMON)
 	$(call find_htmls,$(DEST_HUMOUR)/fortunes) | $(STRIP_T2_DEST) | F=1 $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
+	rsync -a $(T2_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)
 	touch $@
 
 VIM_IFACE_BN := VimIface.pm

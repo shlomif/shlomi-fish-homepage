@@ -35,7 +35,8 @@ sub get_syntax_highlighted_html_from_file
             ( $args->{'filetype'} ? ( filetype => $args->{'filetype'} ) : () ),
         );
 
-        path($html_filename)->spew( $syntax->html );
+        path($html_filename)
+            ->spew( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr );
     }
 
     my $text = path($html_filename)->slurp;

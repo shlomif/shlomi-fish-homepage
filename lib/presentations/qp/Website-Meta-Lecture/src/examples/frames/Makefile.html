@@ -1,44 +1,64 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<title>~/Docs/homepage/homepage/trunk/lib/presentations/qp/Website-Meta-Lecture/src/examples/frames/Makefile.html</title>
-<meta name="Generator" content="Vim/7.2" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<style type="text/css">
-<!--
-.Comment { color: #0000ff; }
-.Constant { color: #ff00ff; }
-.Statement { color: #a52a2a; font-weight: bold; }
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
-body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Identifier { color: #008b8b; }
--->
+ <head>
+  <title>[untitled]</title>
+  <style>
+/*
+ * A stylesheet designed to be used with the HTML output of the
+ * Perl module Text::VimColor.
+ *
+ * This is designed to make the highlighting look like the default gvim
+ * colour scheme, with 'background=light'.
+ *
+ * Geoff Richards (qef@laxan.com)
+ *
+ * This CSS file (light.css) is public domain.  Do what you want with it.
+ * That doesn't mean that HTML with this CSS in is public domain.
+ */
+
+body { color: black; background: white none }
+
+A:link { color: #00F; background: white none }
+A:visited { color: #909; background: white none }
+A:hover { color: #F00; background: white none }
+A:active { color: #F00; background: white none }
+
+.synComment    { color: #0000FF }
+.synConstant   { color: #FF00FF }
+.synIdentifier { color: #008B8B }
+.synStatement  { color: #A52A2A ; font-weight: bold }
+.synPreProc    { color: #A020F0 }
+.synType       { color: #2E8B57 ; font-weight: bold }
+.synSpecial    { color: #6A5ACD }
+.synUnderlined { color: #000000 ; text-decoration: underline }
+.synError      { color: #FFFFFF ; background: #FF0000 none }
+.synTodo       { color: #0000FF ; background: #FFFF00 none }
 </style>
-</head>
-<body>
-<pre>
-<span class="Identifier">D </span>= dest
+ </head>
+ <body>
 
-<span class="Identifier">TARGETS </span>= <span class="Identifier">$(D)</span>/index.html <span class="Identifier">$(D)</span>/links.html <span class="Identifier">$(D)</span>/download.html
-<span class="Identifier">IMAGES </span>= <span class="Identifier">$(D)</span>/style.css <span class="Identifier">$(D)</span>/frames.html
+<pre><span class="synIdentifier">D </span>= dest
 
-<span class="Identifier">all:</span> <span class="Identifier">$(TARGETS)</span> <span class="Identifier">$(IMAGES)</span> <span class="Identifier">$(D)</span>/navbar-frame.html
+<span class="synIdentifier">TARGETS </span>= <span class="synIdentifier">$(D)</span>/index.html <span class="synIdentifier">$(D)</span>/links.html <span class="synIdentifier">$(D)</span>/download.html
+<span class="synIdentifier">IMAGES </span>= <span class="synIdentifier">$(D)</span>/style.css <span class="synIdentifier">$(D)</span>/frames.html
 
-<span class="Comment"># This flag makes sure WML generates XHTML output</span>
-<span class="Identifier">WML_FLAGS </span>= --passoption=2,-X
+<span class="synIdentifier">all:</span> <span class="synIdentifier">$(TARGETS)</span> <span class="synIdentifier">$(IMAGES)</span> <span class="synIdentifier">$(D)</span>/navbar-frame.html
 
-<span class="Comment"># This flag sets ROOT to be the current directory</span>
-<span class="Identifier">WML_FLAGS </span>+= -D ROOT~.
+<span class="synComment"># This flag makes sure WML generates XHTML output</span>
+<span class="synIdentifier">WML_FLAGS </span>= --passoption=2,-X
 
-<span class="Identifier">$(D)/navbar-frame.html :</span> navbar-frame.html.wml
-<span class="Constant">    wml </span><span class="Identifier">$(WML_FLAGS)</span><span class="Constant"> -o </span><span class="Identifier">$@</span><span class="Constant"> </span><span class="Identifier">$&lt;</span>
+<span class="synComment"># This flag sets ROOT to be the current directory</span>
+<span class="synIdentifier">WML_FLAGS </span>+= -D ROOT~.
 
-<span class="Identifier">$(TARGETS) ::</span> <span class="Identifier">$(D)</span>/<span class="Identifier">%</span> : <span class="Identifier">%</span>.wml template.wml
-<span class="Constant">    wml </span><span class="Identifier">$(WML_FLAGS)</span><span class="Constant"> -o UNDEF+NOFRAMES:</span><span class="Identifier">$@</span><span class="Constant"> -o UNDEF+FRAMES:</span><span class="Identifier">$@</span><span class="Constant">.frames.html -DFILENAME=</span><span class="Constant">&quot;</span><span class="Identifier">$(</span><span class="Statement">notdir</span><span class="Identifier"> $@)</span><span class="Constant">&quot;</span><span class="Constant"> </span><span class="Identifier">$&lt;</span>
+<span class="synIdentifier">$(D)/navbar-frame.html :</span> navbar-frame.html.wml
+<span class="synConstant">	wml </span><span class="synIdentifier">$(WML_FLAGS)</span><span class="synConstant"> -o </span><span class="synIdentifier">$@</span><span class="synConstant"> </span><span class="synIdentifier">$&lt;</span>
 
-<span class="Identifier">$(IMAGES) ::</span> <span class="Identifier">$(D)</span>/<span class="Identifier">%</span> : <span class="Identifier">%</span>
-<span class="Constant">    cp -f </span><span class="Identifier">$&lt;</span><span class="Constant"> </span><span class="Identifier">$@</span>
+<span class="synIdentifier">$(TARGETS) ::</span> <span class="synIdentifier">$(D)</span>/<span class="synIdentifier">%</span> : <span class="synIdentifier">%</span>.wml template.wml
+<span class="synConstant">	wml </span><span class="synIdentifier">$(WML_FLAGS)</span><span class="synConstant"> -o UNDEF+NOFRAMES:</span><span class="synIdentifier">$@</span><span class="synConstant"> -o UNDEF+FRAMES:</span><span class="synIdentifier">$@</span><span class="synConstant">.frames.html -DFILENAME=&quot;</span><span class="synIdentifier">$(</span><span class="synStatement">notdir</span><span class="synIdentifier"> $@)</span><span class="synConstant">&quot; </span><span class="synIdentifier">$&lt;</span>
 
+<span class="synIdentifier">$(IMAGES) ::</span> <span class="synIdentifier">$(D)</span>/<span class="synIdentifier">%</span> : <span class="synIdentifier">%</span>
+<span class="synConstant">	cp -f </span><span class="synIdentifier">$&lt;</span><span class="synConstant"> </span><span class="synIdentifier">$@</span>
 </pre>
-</body>
+
+ </body>
 </html>

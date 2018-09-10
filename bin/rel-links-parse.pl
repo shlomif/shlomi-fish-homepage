@@ -5,7 +5,7 @@ use 5.014;
 use XML::LibXML               ();
 use XML::LibXML::XPathContext ();
 
-my $p = XML::LibXML->new;
+my $p = XML::LibXML->new( load_ext_dtd => 1 );
 foreach my $fn (@ARGV)
 {
     say "\t$fn";

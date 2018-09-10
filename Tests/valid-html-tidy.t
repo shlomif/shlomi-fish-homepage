@@ -8,11 +8,7 @@ use Test::HTML::Tidy::Recursive;
 
 my @SKIP_LIST = (
     qw#
-        post-dest/t2/DeCSS/
         post-dest/t2/MathVentures/
-        post-dest/t2/art/
-        post-dest/t2/index.xhtml
-        post-dest/t2/art/original-graphics/
         post-dest/t2/humour/
         post-dest/t2/lecture/
         post-dest/t2/me/

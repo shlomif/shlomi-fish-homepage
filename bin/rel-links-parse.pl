@@ -8,12 +8,12 @@ use XML::LibXML::XPathContext ();
 my $p = XML::LibXML->new( load_ext_dtd => 1 );
 foreach my $fn (@ARGV)
 {
-    say "\t$fn";
+    say "== $fn ==";
     my $indiv_dom = $p->parse_file($fn);
 
     my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
     $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
-    say $xpc->findnodes(qq{//xhtml:link[\@rel="next"]/\@href}), "\t",
+    say "\t", $xpc->findnodes(qq{//xhtml:link[\@rel="next"]/\@href}), "\t",
         $xpc->findnodes(qq{//xhtml:a[\@accesskey="n"]/\@href});
 
 }

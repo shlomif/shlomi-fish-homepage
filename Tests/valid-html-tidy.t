@@ -12,7 +12,7 @@ my @SKIP_LIST = (
         post-dest/t2/humour/RoadToHeaven/abstract.xhtml
         post-dest/t2/humour/bits/Google-Discontinues-Services/__to-copy-and-paste.xhtml
         post-dest/t2/humour/bits/New-versions-of-the-GPL/__to-copy-and-paste.xhtml
-        post-dest/t2/philosophy/
+        post-dest/t2/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml
         #
 );
 

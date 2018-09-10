@@ -119,7 +119,7 @@ T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
 htacc = $(addsuffix /.htaccess,$(1))
 T2_FORTUNES_DIR_HTACCESS = $(call htacc,$(T2_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(DEST_HUMOUR) dest/t2/open-source dest/t2/philosophy dest/t2/MathVentures dest/t2/prog-evolution dest/t2/me dest/t2/lecture dest/t2/puzzles dest/t2/rindolf dest/t2/grad-fu dest/t2/work $(DEST_HUMOUR)/humanity/songs $(T2_DEST)/lecture/PostgreSQL-Lecture)
+ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(DEST_HUMOUR) $(DEST_HUMOUR)/humanity/songs $(addprefix $(T2_DEST)/,open-source philosophy MathVentures prog-evolution me lecture puzzles rindolf grad-fu work lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 

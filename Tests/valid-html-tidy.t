@@ -11,6 +11,7 @@ my @SKIP_LIST = (
         post-dest/t2/MathVentures/3d-outof-4d-mathml.xhtml
         post-dest/t2/MathVentures/bugs-in-square-mathml.xhtml
         post-dest/t2/humour/
+        post-dest/t2/open-source/
         post-dest/t2/philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml
         #
 );

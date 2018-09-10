@@ -1,39 +1,23 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>The Case for File Swapping</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-<!-- -->
-<!-- $Id$ -->
-<!-- -->
-<!-- $Log$ -->
-<!-- -->
-<!-- General reminders: -->
-
-<article id="index">
-    <articleinfo>
-        <title>The Case for File Swapping</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2004</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-      <legalnotice id="main_legal_notice">
+      <legalnotice xml:id="main_legal_notice">
             <!-- Ci vis pacem -->
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option a greater version of it).
+This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
         <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Work rdf:about="">
             <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -51,7 +35,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
             <revision>
                 <revnumber>1417</revnumber>
-                <date>14 October 2005</date>
+                <date>2005-10-14</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Forked the text from a previous document, and starting to
@@ -60,7 +44,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1422</revnumber>
-                <date>21 October 2005</date>
+                <date>2005-10-21</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added a rudimentary introduction and the entire terminology
@@ -69,7 +53,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1426</revnumber>
-                <date>21 October 2005</date>
+                <date>2005-10-21</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added a “Why File Swapping should be Legal?” Section.
@@ -77,7 +61,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1427</revnumber>
-                <date>21 October 2005</date>
+                <date>2005-10-21</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Wrote the ”About this Document” section.
@@ -85,7 +69,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1428</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Wrote the “Refuting Common Arguments” section.
@@ -93,7 +77,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1429</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added two more examples for why file-sharing does
@@ -102,7 +86,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1431</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “more legal uses” section.
@@ -110,7 +94,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1432</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “Reflections on Online Stores”.
@@ -118,7 +102,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1434</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “Conclusions”.
@@ -126,7 +110,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1435</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “Other Important Copyrights Issues”.
@@ -134,7 +118,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1436</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “more links” sub-section.
@@ -142,7 +126,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1438</revnumber>
-                <date>22 October 2005</date>
+                <date>2005-10-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Went over the article and corrected many problems.
@@ -150,7 +134,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1446</revnumber>
-                <date>06 November 2005</date>
+                <date>2005-11-06</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “Can File Swapping Really be Stopped?” Section.
@@ -158,7 +142,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1447</revnumber>
-                <date>06 November 2005</date>
+                <date>2005-11-06</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added the “How you can Help” Section.
@@ -166,7 +150,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1452</revnumber>
-                <date>10 November 2005</date>
+                <date>2005-11-10</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed a grammatical problem courtesy of t1ber from
@@ -175,7 +159,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1601</revnumber>
-                <date>18 August 2006</date>
+                <date>2006-08-18</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added a footnote about the benevolent felons, a note
@@ -188,7 +172,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1604</revnumber>
-                <date>28 August 2006</date>
+                <date>2006-08-28</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed a typo (“who” → “which”).
@@ -196,7 +180,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1618</revnumber>
-                <date>19 November 2006</date>
+                <date>2006-11-19</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed a grammatical problem pointed by a correspondent.
@@ -204,7 +188,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1773</revnumber>
-                <date>20 May 2007</date>
+                <date>2007-05-20</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected some errors (such as spelling, phrasing or
@@ -216,7 +200,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>4854</revnumber>
-                <date>05 June 2011</date>
+                <date>2011-06-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Convert to Unicode-style quotes.
@@ -224,17 +208,17 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>5230</revnumber>
-                <date>22 September 2012</date>
+                <date>2012-09-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fix some spelling errors.
                 </revremark>
             </revision>
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="introduction">
-    <title>Introduction</title>
+<section xml:id="introduction"><info><title>Introduction</title></info>
+
     <para>
         The purpose of this article is to explain why Internet file
         swapping (of media such as music files, video files, etc.) is moral,
@@ -245,8 +229,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 </section>
 
 
-<section id="misleading_terms">
-    <title>Debunking Some Misleading Terms</title>
+<section xml:id="misleading_terms"><info><title>Debunking Some Misleading Terms</title></info>
+
     <para>
         The Human Language is primarily a tool of thought, and only afterwards
         a tool of communication. As such, mutations in the meaning of words
@@ -254,11 +238,11 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         is no exception. Before we continue, allow me to explain about the
         improper validity or application of some terms.
     </para>
-    <section id="term_intellectual_property">
-        <title>“Intellectual Property”</title>
+    <section xml:id="term_intellectual_property"><info><title>“Intellectual Property”</title></info>
+
         <para>
-            As noted by Richard Stallman, <ulink url="http://www.linux.com/archive/feature/39915">the term Intellectual property is a
-                seductive mirage</ulink>. Patents, Copyrights, and Trademarks
+            As noted by Richard Stallman, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linux.com/archive/feature/39915">the term Intellectual property is a
+                seductive mirage</link>. Patents, Copyrights, and Trademarks
             are not equivalent to property, not even “intellectual” one.
             Furthermore, they shouldn’t be grouped together as they are
             intended for different purposes and do different things. (And are
@@ -270,8 +254,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             “stealing”. But that is not the case here.
         </para>
     </section>
-    <section id="term_stealing_theft">
-        <title>“Stealing” or “Theft”</title>
+    <section xml:id="term_stealing_theft"><info><title>“Stealing” or “Theft”</title></info>
+
         <para>
             Copyright apologists like to say that copying a work that is
             copyrighted and was published to the public, is equivalent to
@@ -287,7 +271,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             “stealing” obscures two other forms of media-related crimes that
             are in fact stealing:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     If someone has somehow gained access to my private
@@ -313,8 +297,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             “swapping”, “sharing”, etc.
         </para>
     </section>
-    <section id="piracy">
-        <title>“Piracy”</title>
+    <section xml:id="piracy"><info><title>“Piracy”</title></info>
+
         <para>
             The term “Piracy” is very common for the action of copying files,
             either for money or free of charge. One thing that should be noted
@@ -331,8 +315,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             use the term here below.
         </para>
     </section>
-    <section id="crime">
-        <title>“Crime”</title>
+    <section xml:id="crime"><info><title>“Crime”</title></info>
+
         <para>
             If one violates the letter of the law of my country did he commit
             a crime? Not necessarily. A crime is an action that is globally
@@ -348,13 +332,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             Now, were people who bought Alcoholic beverages during
-            <ulink url="http://en.wikipedia.org/wiki/Prohibition#United_States">the
-                time the U.S.A. had alcoholic prohibition</ulink> criminals?
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Prohibition#United_States">the
+                time the U.S.A. had alcoholic prohibition</link> criminals?
             Again no. The Law at this point was completely irrational, and so
             the American Government could not have prevented such
             violations, and it was a regulation that the public could not
             withstand.
-            <footnote id="benevolent_felons">
+            <footnote xml:id="benevolent_felons">
                 <para>
                     One correspondent to this article complained that I
                     shouldn’t have given these two examples, because one cannot
@@ -364,7 +348,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                     American mafia.
                 </para>
                 <para>
-                    However, this is the <ulink url="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">style over substance fallacy</ulink>, where one
+                    However, this is the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">style over substance fallacy</link>, where one
                     criticises the style of a writing instead of what it says.
                     My point was to bring two cases where people were acting
                     illegally yet were acting either ethically or just
@@ -387,8 +371,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             American Revolution, but there are many other examples.
         </para>
     </section>
-    <section id="terms_conclusion">
-        <title>Conclusion</title>
+    <section xml:id="terms_conclusion"><info><title>Conclusion</title></info>
+
         <para>
             In one IRC conversation I had with supporters of actions against
             file sharers, I realised that while I gave a lot of arguments for
@@ -408,14 +392,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 </section>
 
 
-<section id="why_file_swapping_should_be_legal">
-    <title>Why File Swapping should be Legal?</title>
+<section xml:id="why_file_swapping_should_be_legal"><info><title>Why File Swapping should be Legal?</title></info>
+
     <para>
         So why should file swapping be legal? Let’s examine the reasons one
         by one.
     </para>
-    <section id="why_should_be_legal_not_a_crime">
-        <title>It is not a Crime</title>
+    <section xml:id="why_should_be_legal_not_a_crime"><info><title>It is not a Crime</title></info>
+
         <para>
             The primary reason why file swapping should be legal is because
             it’s not a crime, at least not an ethical one. Sites or services
@@ -454,8 +438,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             “Why it is not moral?”. And they’ll probably have no answer.
         </para>
         <para>
-            According to <ulink url="http://www.shlomifish.org/philosophy/obj-oss/obj-oss/two_levels_of_morality.html">the definition of Ethics and Morality
-                that I accept</ulink> (presented there as
+            According to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/obj-oss/obj-oss/two_levels_of_morality.html">the definition of Ethics and Morality
+                that I accept</link> (presented there as
             “Constitutionality and  Beneficiality”), then file sharing is
             ethical, because it does
             not involve an initiatory force, threat of force or fraud against
@@ -473,8 +457,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             non-commercial digital distribution of them.
         </para>
     </section>
-    <section id="why_should_be_legal_other_ways_to_make_money">
-        <title>There are other ways to make money</title>
+    <section xml:id="why_should_be_legal_other_ways_to_make_money"><info><title>There are other ways to make money</title></info>
+
         <para>
             There are many other ways in which originators of media can make
             money even if they allow free distribution. First of all, they can
@@ -503,49 +487,48 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             This is naturally excluding live performances of artists of
             various sorts, like Rock concerts, that are also a huge potential
-            source of revenue, as well as sales of Merchandise. <ulink
-                url="http://www.strategy-business.com/press/16635507/9095">The Grateful
+            source of revenue, as well as sales of Merchandise. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.strategy-business.com/press/16635507/9095">The Grateful
                 Dead made more money on merchandise than they ever did on
-                selling records</ulink>.
+                selling records</link>.
         </para>
     </section>
-    <section id="why_should_be_legal_not_hurt_media_sales">
-        <title>File Sharing Does not Hurt Media Sales</title>
+    <section xml:id="why_should_be_legal_not_hurt_media_sales"><info><title>File Sharing Does not Hurt Media Sales</title></info>
+
         <para>
             Many people erroneously believe that file sharing hurts media
             sales. However, there is a lot of evidence to the contrary:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
-                    <ulink url="http://it.slashdot.org/article.pl?sid=05/07/13/2317247&amp;tid=141&amp;tid=218">Legal Music Downloads Increase in 2005</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://it.slashdot.org/article.pl?sid=05/07/13/2317247&amp;tid=141&amp;tid=218">Legal Music Downloads Increase in 2005</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://slashdot.org/article.pl?sid=04/01/04/0049249">Slashdot Article about CD-R’s and MP3s not hurting record sales in Australia</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://slashdot.org/article.pl?sid=04/01/04/0049249">Slashdot Article about CD-R’s and MP3s not hurting record sales in Australia</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://195.128.176.201/Article.jpg">CD Sales in Israel went up by 15% in 2004.</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://195.128.176.201/Article.jpg">CD Sales in Israel went up by 15% in 2004.</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.washingtonpost.com/wp-dyn/content/article/2005/03/26/AR2005032600104.html">Success
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.washingtonpost.com/wp-dyn/content/article/2005/03/26/AR2005032600104.html">Success
                         of the single “No Meaning No” by
-                        Chuck D and the Fine Arts Militia</ulink> that was
+                        Chuck D and the Fine Arts Militia</link> that was
                     released under a liberal
-                    <ulink url="http://www.creativecommons.org/">Creative
-                        Commons</ulink> license, that allows free distribution.
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.creativecommons.org/">Creative
+                        Commons</link> license, that allows free distribution.
                 </para>
             </listitem>
             <listitem>
                 <para>
                     The U.S. band
-                    <ulink url="http://en.wikipedia.org/wiki/Wilco">Wilco</ulink>
-                    released their album <ulink url="http://en.wikipedia.org/wiki/Yankee_Hotel_Foxtrot">“Yankee Hotel Foxtrot”</ulink> as mp3s online
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Wilco">Wilco</link>
+                    released their album <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Yankee_Hotel_Foxtrot">“Yankee Hotel Foxtrot”</link> as mp3s online
                     after their record label demanded they remix their songs.
                     After a different record label decided to distribute their
                     songs instead, and distributed the album, it became their
@@ -555,8 +538,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <listitem>
                 <para>
                     The Movie “Pirates of the Caribbean”
-                    <ulink url="http://opendotdotdot.blogspot.com/2006/07/pirates-redeeming-pirates.html">was
-                        heavily “pirated”</ulink>, yet also had
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://opendotdotdot.blogspot.com/2006/07/pirates-redeeming-pirates.html">was
+                        heavily “pirated”</link>, yet also had
                     very successful sales and was incredibly profitable.
                 </para>
             </listitem>
@@ -577,8 +560,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </orderedlist>
     </section>
 
-    <section id="why_should_be_legal_witch_hunt">
-        <title>Media Organisations hunt File Sharers and Prosecute Them</title>
+    <section xml:id="why_should_be_legal_witch_hunt"><info><title>Media Organisations hunt File Sharers and Prosecute Them</title></info>
+
         <!--
         TODO: Add links.
         -->
@@ -614,8 +597,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </section>
 
 
-    <section id="why_should_be_legal_put_into_perspective">
-        <title>Put it into Perspective</title>
+    <section xml:id="why_should_be_legal_put_into_perspective"><info><title>Put it into Perspective</title></info>
+
         <!--
         TODO: Add links.
         -->
@@ -636,14 +619,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </section>
 </section>
 
-<section id="refuting_common_arguments">
-    <title>Refuting Common Arguments against File Swapping</title>
+<section xml:id="refuting_common_arguments"><info><title>Refuting Common Arguments against File Swapping</title></info>
+
     <para>
         This section aims to refute some common arguments against file
         swapping.
     </para>
-    <section id="refuting_common_arguments_domino_effect">
-        <title>The Domino Effect</title>
+    <section xml:id="refuting_common_arguments_domino_effect"><info><title>The Domino Effect</title></info>
+
         <para>
             Some people are using “the Domino Effect” as an argument that file
             swapping should be stopped. What they say is that if the
@@ -665,9 +648,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 
-    <section id="refuting_common_arguments_anarchy">
-        <title>Violating the Law against File Swapping will Cause
-        Anarchy</title>
+    <section xml:id="refuting_common_arguments_anarchy"><info><title>Violating the Law against File Swapping will Cause
+        Anarchy</title></info>
+
         <para>
             Some people say that if the law of a country prohibits sharing
             files, then this law must be obeyed, because otherwise there
@@ -687,8 +670,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 
-    <section id="refuting_common_arguments_disobeying_traffic_laws">
-        <title>Sharing Files is like Disobeying Traffic Laws</title>
+    <section xml:id="refuting_common_arguments_disobeying_traffic_laws"><info><title>Sharing Files is like Disobeying Traffic Laws</title></info>
+
         <para>
             The comparison of sharing and downloading files to disobeying
             traffic laws seems to be quite prevalent. But naturally, copying
@@ -700,9 +683,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 
-    <section id="stealing_from_the_rich">
-        <title>“Stealing from the Rich and Giving to the Poor” is still
-            Stealing</title>
+    <section xml:id="stealing_from_the_rich"><info><title>“Stealing from the Rich and Giving to the Poor” is still
+            Stealing</title></info>
+
         <para>
             Some people claim that because the main entities that will
             supposedly be harmed from making file swapping legal are media
@@ -740,13 +723,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </section>
 
 
-    <section id="golden_rule">
-        <title>The Golden Rule Argument</title>
+    <section xml:id="golden_rule"><info><title>The Golden Rule Argument</title></info>
+
         <para>
             A few people who criticised the article, claimed that by proposing
             that media will be free to be non-commercially copied, I’ve been
-            violating <ulink url="http://en.wikipedia.org/wiki/Ethic_of_reciprocity">the
-                Golden Rule</ulink>
+            violating <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Ethic_of_reciprocity">the
+                Golden Rule</link>
             (“Treat others as you wish them to treat you”) as I don’t want
             copyright to be undermined for my own
             works.
@@ -768,13 +751,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 
 </section>
 
-<section id="legal_uses">
-    <title>Uses of File Swapping Services, which are More Legal</title>
+<section xml:id="legal_uses"><info><title>Uses of File Swapping Services, which are More Legal</title></info>
+
     <para>
         Aside from gaining a copy of a file one didn’t buy, there are many
         ways to use file sharing services, that are more legitimate:
     </para>
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
             <para>
                 Getting tracks from a misplaced CD by downloading them from
@@ -822,12 +805,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="reflection_on_online_music_stores">
-    <title>Reflections on Online Music Stores</title>
+<section xml:id="reflection_on_online_music_stores"><info><title>Reflections on Online Music Stores</title></info>
+
     <para>
         Lately we’ve been seeing online music purchasing services such as
-        <ulink url="http://www.apple.com/itunes/">iTunes</ulink>,
-        <ulink url="http://www.real.com/musicstore/">Real Music Store</ulink>,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.apple.com/itunes/">iTunes</link>,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.real.com/musicstore/">Real Music Store</link>,
         etc. Such services are a good thing as they allow Media companies to
         make money off selling music files, while allowing users to buy and
         download their favourite songs without too much hassle.
@@ -849,8 +832,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="can_it_be_stopped">
-    <title>Can File Swapping Really be Stopped?</title>
+<section xml:id="can_it_be_stopped"><info><title>Can File Swapping Really be Stopped?</title></info>
+
     <para>
         People who fight file swapping would like to believe it can be
         stopped. But the opposite is the fact. The first part is the fact that
@@ -861,7 +844,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     <para>
         So they can say “that’s fine. We’ll log in with a fake client and find
         people who upload files are prosecute them according to their IPs”.
-        Enter <ulink url="http://tor.eff.org/">Tor</ulink>, the
+        Enter <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tor.eff.org/">Tor</link>, the
         anonymous Internet communication system. Within the Tor network,
         traffic to the actual Internet is trafficked to different nodes in
         the network, and everything is encrypted, so one cannot determine
@@ -880,8 +863,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         1.2 billion dollars instead of 1 billion?
     </para>
 </section>
-<section id="internet_as_alternative_medium">
-    <title>The Internet as an Alternative Medium of Distribution</title>
+<section xml:id="internet_as_alternative_medium"><info><title>The Internet as an Alternative Medium of Distribution</title></info>
+
     <para>
         Now that the Internet is becoming more and more common and more and
         more integral for life, artists should consider that instead or as
@@ -896,16 +879,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         being noticed by such distributors. Let’s inspect the various venues
         for each content type.
     </para>
-    <section id="internet_as_alternative_medium__music">
-        <title>Music</title>
+    <section xml:id="internet_as_alternative_medium__music"><info><title>Music</title></info>
+
         <para>
             There are several venues for having freely re-distributable Music
             on the Internet:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
-                    <ulink url="http://garageband.com/">GarageBand.com</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://garageband.com/">GarageBand.com</link>
                     is an online community for artists which have made some
                     tracks available online. GarageBand allows one to download
                     the music for free, rate it, review it, and link to it from
@@ -918,14 +901,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://ccmixter.org/">ccMixter</ulink> is
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://ccmixter.org/">ccMixter</link> is
                     a Creative Commons sponsored community for sampling, mixing
                     and sharing music under licences that allow that.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <ulink url="http://www.magnatune.com/">MagnaTune</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.magnatune.com/">MagnaTune</link>
                     is a records’ label which publishes artists whose music is
                     licensed under freely-redistributable licences.
                 </para>
@@ -938,19 +921,19 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </listitem>
         </orderedlist>
     </section>
-    <section id="internet_as_alternative_medium__text">
-        <title>Text</title>
+    <section xml:id="internet_as_alternative_medium__text"><info><title>Text</title></info>
+
         <para>
             Most of the Web is text, and publishing text works that you
             wrote is possible in several ways:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
-                    <ulink url="http://en.wikipedia.org/wiki/Wiki">Wikis</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Wiki">Wikis</link>
                     such as
-                    <ulink url="http://www.wikipedia.org/">the
-                        Wikipedia</ulink> and friends.
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.wikipedia.org/">the
+                        Wikipedia</link> and friends.
                 </para>
             </listitem>
             <listitem>
@@ -963,9 +946,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <para>
                     Weblogs and blog comments are an increasingly popular way
                     of publishing content online. Many blog services such as
-                    <ulink url="http://www.livejournal.com/">LiveJournal</ulink>,
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.livejournal.com/">LiveJournal</link>,
                     or
-                    <ulink url="http://www.blogger.com/start">Blogger</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.blogger.com/start">Blogger</link>
                     will publish your blogs free of charge, as will many
                     community web sites.
                 </para>
@@ -973,16 +956,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <listitem>
                 <para>
                     Several writing or artist communities like
-                    <ulink url="http://www.myspace.com/">MySpace</ulink> and
-                    <ulink url="http://www.writing.com/">Writing.com</ulink>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.myspace.com/">MySpace</link> and
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.writing.com/">Writing.com</link>
                     accept submissions to publicise one’s artwork.
                 </para>
             </listitem>
         </orderedlist>
     </section>
 
-    <section id="internet_as_alternative_medium__images">
-        <title>Images</title>
+    <section xml:id="internet_as_alternative_medium__images"><info><title>Images</title></info>
+
         <para>
             Images are de-facto freely distributable, and to a slightly lesser
             extent modifiable. Trying to protect the gratis use of your
@@ -991,23 +974,23 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             There are several images’ search engines online, and there’s also
             photos sharing communities such as
-            <ulink url="http://www.flickr.com/">Flickr</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.flickr.com/">Flickr</link>.
         </para>
     </section>
 
-    <section id="internet_as_alternative_medium__video">
-        <title>Videos and Animations</title>
+    <section xml:id="internet_as_alternative_medium__video"><info><title>Videos and Animations</title></info>
+
         <para>
             One can distribute videos and animations in the following means:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     Animations using the proprietary (but de-facto standard)
                     Flash technology, or using the open
-                    <ulink url="http://www.w3.org/Graphics/SVG/">
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.w3.org/Graphics/SVG/">
                         SVG (“Scalable Vector Graphics”)
-                        technology</ulink>
+                        technology</link>
                 </para>
             </listitem>
             <listitem>
@@ -1018,26 +1001,26 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <listitem>
                 <para>
                     Video sharing sites such as
-                    <ulink url="http://video.google.com/">Google
-                        Video</ulink>, and
-                    <ulink url="http://www.youtube.com/">YouTube</ulink>.
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://video.google.com/">Google
+                        Video</link>, and
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.youtube.com/">YouTube</link>.
                 </para>
             </listitem>
         </orderedlist>
     </section>
 
-    <section id="value_of_linking">
-        <title>The Value of Linking</title>
+    <section xml:id="value_of_linking"><info><title>The Value of Linking</title></info>
+
         <para>
             By having a legitimate link to a piece of content one can
             immediately enjoy and experience it. For example I can say:
-            “<ulink url="http://www.garageband.com/song?%7Cpe1%7CS8LTM0LdsaSkYVezYGA">Jenna
-                Drey’s single ‘That’s What They All Say’</ulink> is very nice,
+            “<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.garageband.com/song?%7Cpe1%7CS8LTM0LdsaSkYVezYGA">Jenna
+                Drey’s single ‘That’s What They All Say’</link> is very nice,
             follow the link to download it.”, or
-            “<ulink url="http://www.shlomifish.org/Files/files/music/mp3-ogg/Austin%20Acton%20-%20Two%20Point%20Six.ogg">Austin
-                Acton’s ‘Two Point Six’</ulink> is lame but still cool.”, or
+            “<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/Files/files/music/mp3-ogg/Austin%20Acton%20-%20Two%20Point%20Six.ogg">Austin
+                Acton’s ‘Two Point Six’</link> is lame but still cool.”, or
             “Pearl Jam made their new single ‘Life Wasted’ freely
-            distributable. <ulink url="http://www.legaltorrents.com/bit/pearl-jam-life-wasted-video.torrent">Here’s the torrent.</ulink>”. Etc. (These are all
+            distributable. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.legaltorrents.com/bit/pearl-jam-life-wasted-video.torrent">Here’s the torrent.</link>”. Etc. (These are all
             legitimate downloads).
         </para>
         <para>
@@ -1047,38 +1030,38 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
         <para>
             For more information consult Paul Graham’s essays
-            <ulink url="http://www.paulgraham.com/web20.html">“Web
-                2.0”</ulink> and
-            <ulink url="http://www.paulgraham.com/opensource.html">“What
-                Business can Learn from Open Source”</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/web20.html">“Web
+                2.0”</link> and
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/opensource.html">“What
+                Business can Learn from Open Source”</link>.
         </para>
     </section>
 </section>
 
-<section id="dont_download_this_song">
-    <title>Weird Al Yankovic’s “Don’t Download This Song”</title>
+<section xml:id="dont_download_this_song"><info><title>Weird Al Yankovic’s “Don’t Download This Song”</title></info>
+
     <para>
-        <ulink url="http://www.weirdal.com/">Weird Al Yankovic</ulink>,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.weirdal.com/">Weird Al Yankovic</link>,
         the famous musical comedian, has released the track
-        <ulink url="http://music.download.com/weirdalyankovic/3600-10607_32-100948958.html">“Don’t
-            Download this Song”</ulink> out of his album <emphasis>Straight
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://music.download.com/weirdalyankovic/3600-10607_32-100948958.html">“Don’t
+            Download this Song”</link> out of his album <emphasis>Straight
             outta Lynwood</emphasis>. Despite its ironic title, it is available for free download.
     </para>
     <para>
-        <ulink url="http://www.com-www.com/weirdal/dontdownloadthissong.html">The
-            Lyrics for the song</ulink> are illuminating the absurdity of the
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.com-www.com/weirdal/dontdownloadthissong.html">The
+            Lyrics for the song</link> are illuminating the absurdity of the
         big copyright owners’ fight against file-swapping in a funny way.
     </para>
 </section>
 
-<section id="historical_perspective">
-    <title>A Historical Perspective</title>
+<section xml:id="historical_perspective"><info><title>A Historical Perspective</title></info>
+
     <para>
         This section aims to give a historical perspective to why copyrighted
         work ought to be freely and non-commercially re-distributable.
     </para>
-    <section id="history__ancient_times">
-        <title>Ancient Times through the Middle Ages</title>
+    <section xml:id="history__ancient_times"><info><title>Ancient Times through the Middle Ages</title></info>
+
         <para>
             During ancient times (before the invention of paper, and the
             press), texts were written on stone or on animals’ hides and
@@ -1087,14 +1070,14 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             as they maintained proper attribution.
         </para>
     </section>
-    <section id="history__after_press">
-        <title>After the Invention of the Press</title>
+    <section xml:id="history__after_press"><info><title>After the Invention of the Press</title></info>
+
         <para>
             After the Press was invented, and became cheaper, commercial
             books started to appear. Eventually copyright on texts emerged
             to make sure that:
         </para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     Artists would be protected so their works will not be
@@ -1122,12 +1105,12 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             another 14 years.
         </para>
     </section>
-    <section id="history__analysis">
-        <title>My Analysis of This</title>
+    <section xml:id="history__analysis"><info><title>My Analysis of This</title></info>
+
         <para>
             The
-            <ulink url="http://en.wikipedia.org/wiki/Copyright_Act_of_1790">Copyright
-                Act of 1790</ulink> granted the originator of a text “the
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Copyright_Act_of_1790">Copyright
+                Act of 1790</link> granted the originator of a text “the
             sole liberty of printing, reprinting, publishing and vending” of
             a work. Note that it does not talk about mere duplication. Printing
             and reprinting were at the time very costly operations, produced
@@ -1139,7 +1122,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             Furthermore, it makes sense that now that we have the Internet that
             can “copy arbitrary blobs of data from one place to another at
             virtually no cost, in virtually no time, with virtually no
-            control” (to <ulink url="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">quote Cory Doctorow</ulink>), then the copyright laws
+            control” (to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">quote Cory Doctorow</link>), then the copyright laws
             will once again be amended to reflect the new technological
             reality.
         </para>
@@ -1150,8 +1133,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 </section>
-<section id="conclusion">
-    <title>Conclusion</title>
+<section xml:id="conclusion"><info><title>Conclusion</title></info>
+
     <para>
         File swapping must be legal, because it’s ethical, moral, makes
         economical sense, and is otherwise beneficial for artists,
@@ -1175,13 +1158,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="how_you_can_help">
-    <title>How you can Help</title>
+<section xml:id="how_you_can_help"><info><title>How you can Help</title></info>
+
     <para>
         There are several ways in which you can help fight for the cause of
         protecting file swapping:
     </para>
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
             <para>
                 Write. Write school reports, university theses, essays, news
@@ -1192,8 +1175,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <listitem>
             <para>
                 Publish the art you create under a freely-distributable
-                license. The <ulink url="http://creativecommons.org/">Creative
-                    Commons licenses</ulink> can give you enough protection,
+                license. The <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/">Creative
+                    Commons licenses</link> can give you enough protection,
                 while still retaining this right.
             </para>
         </listitem>
@@ -1225,16 +1208,16 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="other_important_copyrights_issues">
-    <title>Other Important Copyrights Issues</title>
+<section xml:id="other_important_copyrights_issues"><info><title>Other Important Copyrights Issues</title></info>
+
     <para>
         This section will cover other significant copyright issues that are
         at stake today and require a struggle.
     </para>
     <para>
         The first is the lengthening of the copyright term. Recently
-        <ulink url="http://en.wikipedia.org/wiki/Copyright_Term_Extension_Act">the
-            Sonny Bono Copyright Term Extension Act</ulink> that was passed in
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Copyright_Term_Extension_Act">the
+            Sonny Bono Copyright Term Extension Act</link> that was passed in
         American congress extended the copyrights act by 20 years. One should
         note that the term was already extended several times in the past,
         since the first American copyrights law. 95 years for a copyrights
@@ -1243,81 +1226,81 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         day”)
     </para>
     <para>
-        A different issue is the <ulink url="http://www.anti-dmca.org/">Digital
-            Millennium Copyright Act</ulink> (or DMCA for short). This law that
+        A different issue is the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.anti-dmca.org/">Digital
+            Millennium Copyright Act</link> (or DMCA for short). This law that
         was passed in the 90’s criminalises a lot of valid activity. It
         prohibits the writing of “circumvention devices” to bypass copyright
         protection (and some say every computer security measure, in general).
         It is actively used to threaten to remove allegedly copyrighted content
         from web sites, because they may violate it. (See
-        <ulink url="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">Cory
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.boingboing.net/2004/11/06/save_canadas_interne.html">Cory
             Doctorow’s excellent essay “Save Canada’s Internet
-            from WIPO”</ulink>.) It also contains a lot of other damaging
+            from WIPO”</link>.) It also contains a lot of other damaging
         clauses.
     </para>
     <para>
-        The <ulink url="http://www.fepproject.org/">Free Expression
-            Policy Project</ulink> has an excellent
-        <ulink url="http://www.fepproject.org/policyreports/copyright2dvalves.html">report
+        The <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.fepproject.org/">Free Expression
+            Policy Project</link> has an excellent
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.fepproject.org/policyreports/copyright2dvalves.html">report
             on the various issues in copyrights law in the past and
-            today</ulink>. It is a very recommended read.
+            today</link>. It is a very recommended read.
     </para>
     <para>
-        A different issue is that of the so-called <ulink url="http://en.wikipedia.org/wiki/Digital_Rights_Management">“Digital Restrictions
-            Management” measures (or DRM for short)</ulink>, which are measures
+        A different issue is that of the so-called <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Digital_Rights_Management">“Digital Restrictions
+            Management” measures (or DRM for short)</link>, which are measures
         meant to prevent the copying or ripping of digital media. Perhaps the
-        most extreme form of this is <ulink url="http://en.wikipedia.org/wiki/2005_Sony_BMG_CD_copy_protection_scandal">The
-            “Sony Rootkit” scandal</ulink>, in which a copyright-protection
+        most extreme form of this is <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/2005_Sony_BMG_CD_copy_protection_scandal">The
+            “Sony Rootkit” scandal</link>, in which a copyright-protection
         measure, turned out to put one’s Windows installation at risk, once the
         CD was inserted to the computer.
     </para>
     <para>
-        The <ulink url="http://www.eff.org/">Electronic
-            Frontier Foundation</ulink> has many resources related to
+        The <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.eff.org/">Electronic
+            Frontier Foundation</link> has many resources related to
         activity against various harmful copyrights regulations.
     </para>
 </section>
 
-<section id="about">
-    <title>About this document</title>
-    <section id="about_copyrights">
-        <title>Copyrights</title>
+<section xml:id="about"><info><title>About this document</title></info>
+
+    <section xml:id="about_copyrights"><info><title>Copyrights</title></info>
+
         <para>
         This work is licensed under the
-        <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
-            Commons Attribution 2.5 License</ulink> (or at your option a
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
+            Commons Attribution 2.5 License</link> (or at your option a
         greater version of it). The CC-Attribution is almost
         Public Domain except for a requirement to make an attribution to the
         original author.
         </para>
         <para>
-            It was written by <ulink url="http://www.shlomifish.org/">Shlomi
-                Fish</ulink> who also holds the copyrights.
+            It was written by <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/">Shlomi
+                Fish</link> who also holds the copyrights.
         </para>
     </section>
-    <section id="about_author">
-        <title>About the Author</title>
+    <section xml:id="about_author"><info><title>About the Author</title></info>
+
         <para>
             Shlomi Fish was born in Israel in 1977, and has lived there most of
             his life. He is a user, developer, advocate and activist of
             Open Source Software. His greatest contribution so far in this
-            regard has been <ulink url="http://fc-solve.shlomifish.org/">Freecell
-                Solver</ulink>, a Public Domain Library for solving games
+            regard has been <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/">Freecell
+                Solver</link>, a Public Domain Library for solving games
             of Freecell and other types of Solitaire. However, he also
-            <ulink url="http://www.shlomifish.org/open-source/projects/">initiated
-                several other projects</ulink> and
-            <ulink url="http://www.shlomifish.org/open-source/contributions/">made
-                important contributions to projects he did not initiate</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/projects/">initiated
+                several other projects</link> and
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/contributions/">made
+                important contributions to projects he did not initiate</link>
             some of them very large scale.
         </para>
         <para>
-            Otherwise, Fish has written <ulink url="http://www.shlomifish.org/humour/">several
-                humorous novellas, stories and aphorisms</ulink>, which he
+            Otherwise, Fish has written <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/humour/">several
+                humorous novellas, stories and aphorisms</link>, which he
             has released online, under the CC-by or CC-by-sa licenses. He also
-            wrote <ulink url="http://www.shlomifish.org/philosophy/">many
-                essays and articles</ulink> as well as
-            <ulink url="http://www.shlomifish.org/lecture/">material
-                for presentations</ulink> which (unless specified otherwise)
+            wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/">many
+                essays and articles</link> as well as
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/lecture/">material
+                for presentations</link> which (unless specified otherwise)
             were released under the CC-by license.
         </para>
         <para>
@@ -1329,7 +1312,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <para>
             Shlomi Fish is a Jew and an Israeli by nationality, an atheist
             by faith (or lack of it) and a
-            <ulink url="http://www.neo-tech.com/neotech/advantages/">Neo-Tech</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.neo-tech.com/neotech/advantages/">Neo-Tech</link>
             Objectivist by ideology. As such he is a firm believer in both
             individual rights and freedoms, and freedom from oppression, as well
             as a free economy (Laissez-Faire Capitalism) that is free of
@@ -1338,28 +1321,28 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             thought, passion, and rational self-growth.
         </para>
     </section>
-    <section id="about_links">
-        <title>More Links</title>
+    <section xml:id="about_links"><info><title>More Links</title></info>
+
         <para>
-            <ulink url="http://www.advogato.org/article/841.html">“Acting
-                against anti-File-Swapping Lawsuits in Israel”</ulink> was
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.advogato.org/article/841.html">“Acting
+                against anti-File-Swapping Lawsuits in Israel”</link> was
             an early attempt to convey this message written by me. It
-            sparked <ulink url="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39822.html">a
-                discussion at the Linux-IL mailing list</ulink> and
-            <ulink url="http://mirror.hamakor.org.il/archives/discussions/05-2005/1646.html">a
+            sparked <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39822.html">a
+                discussion at the Linux-IL mailing list</link> and
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://mirror.hamakor.org.il/archives/discussions/05-2005/1646.html">a
                 discussion at the Hamakor Discussions mailing
-                list</ulink>.
+                list</link>.
         </para>
         <para>
             Glyn Moody maintains a blog titled
-            <ulink url="http://opendotdotdot.blogspot.com/">opendotdotdot</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://opendotdotdot.blogspot.com/">opendotdotdot</link>
             where he talks about Open Source, Open Content, Open Access, and
             various other Internet paradigms. It is well worth reading and
             following.
         </para>
         <para>
-             Finally, Wil Wheaton has <ulink url="http://interviews.slashdot.org/article.pl?sid=05/06/27/0926218&amp;tid=97&amp;tid=129&amp;tid=192&amp;tid=214&amp;tid=11&amp;tid=10a">some interesting insights in a Slashdot interview with
-                 him</ulink>:
+             Finally, Wil Wheaton has <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://interviews.slashdot.org/article.pl?sid=05/06/27/0926218&amp;tid=97&amp;tid=129&amp;tid=192&amp;tid=214&amp;tid=11&amp;tid=10a">some interesting insights in a Slashdot interview with
+                 him</link>:
          </para>
          <blockquote>
              <para>
@@ -1371,28 +1354,28 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
              </para>
          </blockquote>
     </section>
-    <section id="about_acknowledgements">
-        <title>Acknowledgements</title>
+    <section xml:id="about_acknowledgements"><info><title>Acknowledgements</title></info>
+
         <para>
             Thanks to the members of the Linux-IL and Hamakor Discussions
             mailing list for discussing an
-            <ulink url="http://www.advogato.org/article/841.html">early
-                incarnation of this article</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.advogato.org/article/841.html">early
+                incarnation of this article</link>.
         </para>
         <para>
             Thanks to
-            <ulink url="http://www.livejournal.com/users/talash/">Talash</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.livejournal.com/users/talash/">Talash</link>
             for referencing
-            <ulink url="http://www.livejournal.com/users/talash/216391.html">the
-                local Israeli file-swapping protection activity</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.livejournal.com/users/talash/216391.html">the
+                local Israeli file-swapping protection activity</link>.
         </para>
         <para>
-            Thanks to <ulink url="http://lessig.org/">Lawrence Lessig</ulink>
-            for <ulink url="http://lessig.org/freeculture/">an excellent
-                related presentation called “Free Culture”</ulink> and for
+            Thanks to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://lessig.org/">Lawrence Lessig</link>
+            for <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://lessig.org/freeculture/">an excellent
+                related presentation called “Free Culture”</link> and for
             the Wilco anecdote.
         </para>
     </section>
 </section>
 
-</article>    <!-- End of the article -->
+</article>

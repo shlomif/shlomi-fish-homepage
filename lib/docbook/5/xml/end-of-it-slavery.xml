@@ -1,32 +1,22 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>The End of IT Slavery</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-
-<article id="index">
-    <articleinfo>
-        <title>The End of IT Slavery</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
         </authorgroup>
         <copyright>
             <year>2007</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-        <legalnotice id="main_legal_notice">
+        <legalnotice xml:id="main_legal_notice">
             <para>
                 <!--Creative Commons License-->
-                This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</ulink> (or at your option any greater version of it).
+                This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option any greater version of it).
             </para>
         </legalnotice>
 
@@ -34,7 +24,7 @@
 
             <revision>
                 <revnumber>4872</revnumber>
-                <date>5 June 2011</date>
+                <date>2011-06-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Convert single and double quotes from ASCII to Unicode.
@@ -43,7 +33,7 @@
 
             <revision>
                 <revnumber>1746</revnumber>
-                <date>1 May 2007</date>
+                <date>2007-05-01</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected many errors courtesy of a reviewer from the
@@ -53,7 +43,7 @@
 
             <revision>
                 <revnumber>1742</revnumber>
-                <date>1 May 2007</date>
+                <date>2007-05-01</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected many things, added more bolds, and a few extra
@@ -63,7 +53,7 @@
 
             <revision>
                 <revnumber>1740</revnumber>
-                <date>1 May 2007</date>
+                <date>2007-05-01</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Finished the article.
@@ -72,7 +62,7 @@
 
             <revision>
                 <revnumber>1705</revnumber>
-                <date>17 April 2007</date>
+                <date>2007-04-17</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Forked the template from a previous work and working on
@@ -82,10 +72,10 @@
 
 
         </revhistory>
-    </articleinfo>
+    </info>
 
-    <section id="introduction">
-        <title>Introduction</title>
+    <section xml:id="introduction"><info><title>Introduction</title></info>
+
         <para>
             This is the year 2007. This is Shlomi Fish, <emphasis role="bold">a good hacker</emphasis>,
             where hacker
@@ -98,8 +88,8 @@
         </para>
     </section>
 
-    <section id="facts-about-working">
-        <title>Some Facts about Working</title>
+    <section xml:id="facts-about-working"><info><title>Some Facts about Working</title></info>
+
 
         <para>
             Do you honestly believe that if you employ someone for 9 hours,
@@ -127,14 +117,14 @@
             to do something in a better way. The more such decisions he reaches,
             the more productive he is, and the more value he is to his company.
             He’s no longer just a code monkey - he’s
-            <ulink url="http://www.joelonsoftware.com/items/2004/12/06.html">a
-                “Rosh Gadol” and innovative programmer</ulink>, who is of much
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/items/2004/12/06.html">a
+                “Rosh Gadol” and innovative programmer</link>, who is of much
             more value to the company than just someone who writes the code
             that other people told him how it should behave.
         </para>
 
-        <section id="achieving-productivity">
-            <title>Achieving Productivity</title>
+        <section xml:id="achieving-productivity"><info><title>Achieving Productivity</title></info>
+
 
             <para>
                 If you want your programmers to be as productive as possible,
@@ -145,11 +135,11 @@
 
             <para>
                 Paul Graham called these developers
-                <ulink url="http://www.paulgraham.com/gh.html">“Great
-                    Hackers” in an essay he wrote</ulink>. As I said before,
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/gh.html">“Great
+                    Hackers” in an essay he wrote</link>. As I said before,
                 I can testify I’m a good (or “above-average”) programmer (and
-                <ulink url="http://www.shlomifish.org/">other
-                    things</ulink>), but not that I’m a great one. That’s
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/">other
+                    things</link>), but not that I’m a great one. That’s
                 because the baker cannot testify for the quality of his
                 dough. However, I know some people whom I can tell are great
                 hackers.
@@ -163,14 +153,14 @@
                 mostly bug-free, feature-rich and efficient.
             </para>
 
-            <section id="reuse">
-                <title>Re-use instead of Start-over</title>
+            <section xml:id="reuse"><info><title>Re-use instead of Start-over</title></info>
+
                 <para>
                     Another important factor, that is not always present in
                     nascent programmers, is their desire or even necessity to
                     re-use code, however ugly it may seem. Eric Raymond
-                    <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html">wrote
-                        about it in “the Cathedral and the Bazaar”</ulink>:
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html">wrote
+                        about it in “the Cathedral and the Bazaar”</link>:
                 </para>
 
                 <blockquote>
@@ -198,10 +188,10 @@
                 </blockquote>
 
                 <para>
-                    Later on Joel Spolsky expanded on it in <ulink url="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things You Should Never
-                        Do, Part I”</ulink>, and
-                    <ulink url="http://www.joelonsoftware.com/articles/fog0000000348.html">“Rub
-                        a dub dub”</ulink>, and it’s also been extensively
+                    Later on Joel Spolsky expanded on it in <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000069.html">“Things You Should Never
+                        Do, Part I”</link>, and
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">“Rub
+                        a dub dub”</link>, and it’s also been extensively
                     documented elsewhere.
                 </para>
 
@@ -232,13 +222,13 @@
 
     </section>
 
-    <section id="we-cant-find-good-programmers">
-        <title>“We Can’t Find Good Programmers”</title>
+    <section xml:id="we-cant-find-good-programmers"><info><title>“We Can’t Find Good Programmers”</title></info>
+
 
         <para>
             How many times have you heard this phrase? I’ll tell you why you can’t
             find them. It’s because you treat them like dirt.
-            <ulink url="http://www.paulgraham.com/gh.html">Great Hackers</ulink> are
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/gh.html">Great Hackers</link> are
             exceptional people: they won’t work for you, unless they’re completely
             happy. Some people who read the original article by Paul Graham,
             thought that they won’t fix bugs or do routine tasks. That’s not
@@ -252,12 +242,12 @@
             recognise a great developer when you see one.
         </para>
     </section>
-    <section id="how-to-find-great-developers">
-        <title>How to find Great Developers?</title>
+    <section xml:id="how-to-find-great-developers"><info><title>How to find Great Developers?</title></info>
 
-        <section id="open-source">
 
-            <title>Open Source</title>
+        <section xml:id="open-source"><info><title>Open Source</title></info>
+
+
 
             <para>
                 Great Developers experiment on their own - they love to “hack”:
@@ -275,8 +265,8 @@
 
             <para>
                 Most importantly, great developers in this day and age work on
-                <ulink url="http://en.wikipedia.org/wiki/Open_source">open-source
-                    projects</ulink>. While open-source became popular with software,
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Open_source">open-source
+                    projects</link>. While open-source became popular with software,
                 it later expanded to many other fields: there’s now
                 open-content/free-content texts, pictures and photographs, music,
                 videos, and anything else. There are open patents, open science,
@@ -293,7 +283,7 @@
                 pay from at most 10 people (if you’re lucky), and no-one can or is
                 willing to contribute back. On the other hand, if your program is
                 open-source, and you publicise it on
-                <ulink url="http://freshmeat.net/">freshmeat.net</ulink> or a similar site,
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net/">freshmeat.net</link> or a similar site,
                 some people will gladly take a look, some of them will try it
                 (instead of immediately ignoring it for being non-open-source), some
                 of them will send you a good input, and some will even become
@@ -318,15 +308,15 @@
                 keep up with it.
             </para>
         </section>
-        <section id="language">
-            <title>Language</title>
+        <section xml:id="language"><info><title>Language</title></info>
+
 
             <para>
                 It is known that great programmers almost consistently have very
                 good lingual skills. All of the great programmers I know have a very
                 good level of English. The
-                <ulink url="http://en.wikipedia.org/wiki/Edsger_Dijkstra">famous
-                    computer scientist Edsger Dijkstra</ulink> once commented that he
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Edsger_Dijkstra">famous
+                    computer scientist Edsger Dijkstra</link> once commented that he
                 preferred to hire English majors over Computer Science majors because
                 the former made better programmers. If you see someone with an
                 obviously broken English - don’t hire him! (I’m not talking about a few
@@ -334,8 +324,8 @@
                 cognition are more susceptible to them. )
             </para>
         </section>
-        <section id="philosophy">
-            <title>Philosophy</title>
+        <section xml:id="philosophy"><info><title>Philosophy</title></info>
+
 
             <para>
                 So language is one element. Another element is philosophy. I’m not
@@ -374,14 +364,14 @@
         </section>
     </section>
 
-    <section id="how-to-treat-great-developers">
-        <title>How to treat Great Developers</title>
+    <section xml:id="how-to-treat-great-developers"><info><title>How to treat Great Developers</title></info>
+
 
         <para>
             So you want to hire a great hacker. That’s great!
             What should you do? Great hackers, are not too concerned with getting
-            <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">an
-                exceptional salary</ulink>. They probably won’t work for free, but they
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">an
+                exceptional salary</link>. They probably won’t work for free, but they
             will often prefer a better job with a smaller pay than an abusive
             job with a higher pay. But what do they like?
         </para>
@@ -391,7 +381,7 @@
             that are preferably open-source. In today’s world it means either
             C or C++ using gcc and g++; Perl, Python, Ruby and to a lesser extent
             PHP; Java and possibly also .NET on Windows 2003 or the open-source and
-            cross-platform <ulink url="http://www.mono-project.com/">Mono</ulink>. If
+            cross-platform <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.mono-project.com/">Mono</link>. If
             your platform doesn’t work, has bugs that delving into the source
             won’t reveal (if the source can be read at all) - they’re not going
             to be happy.
@@ -409,8 +399,7 @@
         </para>
 
         <para>
-            Another thing great developers hate is to <emphasis
-                role="bold">forced to be consumed by their work</emphasis>. In
+            Another thing great developers hate is to <emphasis role="bold">forced to be consumed by their work</emphasis>. In
             Israel, some workplaces require at least 9 hours of daily work. How
             can you work like that, and still work on open-source projects,
             have a girlfriend or a boyfriend, go to the meetings of social or
@@ -432,22 +421,22 @@
         </para>
 
         <para>
-            But guess what? <ulink url="http://www.fogcreek.com/">Fog Creek
-                software</ulink>, best known as the company co-owned by
-            <ulink url="http://www.joelonsoftware.com/">Joel Spolsky from the
-                “Joel on Software” site</ulink> gives people 6 weeks of paid vacation
+            But guess what? <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.fogcreek.com/">Fog Creek
+                software</link>, best known as the company co-owned by
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">Joel Spolsky from the
+                “Joel on Software” site</link> gives people 6 weeks of paid vacation
             annually. And they’re doing very fine, and people there are
             super-happy and productive. So, why should I work for you if all I
             get are 14 stupid days? Get real!
         </para>
 
-        <section id="best-equipment-money-can-buy">
-            <title>The Best Equipment Money can Buy</title>
+        <section xml:id="best-equipment-money-can-buy"><info><title>The Best Equipment Money can Buy</title></info>
+
 
             <para>
                 The
-                <ulink url="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel
-                    Test</ulink> specifically says that you should give your
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel
+                    Test</link> specifically says that you should give your
                 developers the best tools and equipment money can buy - from
                 hardware to software, to office conditions, to food, to
                 location, to everything else. Many workplaces don’t understand
@@ -461,8 +450,8 @@
                 machines running there. Another computer we
                 developed on still had a 40 GB hard disk too. We ran out
                 of space there because we had a huge checkout of the
-                <ulink url="http://subversion.tigris.org/">Subversion
-                    version control system</ulink> there. And the only
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://subversion.tigris.org/">Subversion
+                    version control system</link> there. And the only
                 hard-disks that our lab had were whopping 80 GB ones, bought
                 because they were the cheapest ones, which probably wouldn’t
                 have been sufficient for too long, either.
@@ -486,35 +475,31 @@
                 easily move around (a flat-panel LCD screen). They want good
                 food in the kitchen. They want talkative, interesting and
                 benevolent people to talk with. They want a spacious office.
-                They <ulink
-                    url="http://www.fysh.org/~katie/computing/no-net-access.txt">want
-                    Internet connectivity</ulink> so they can surf the web and
+                They <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.fysh.org/~katie/computing/no-net-access.txt">want
+                    Internet connectivity</link> so they can surf the web and
                 search for answers, chat with their friends, ask people on the
                 IRC for help, and contact some people who know more about the
                 software they are using than they do.
             </para>
 
         </section>
-        <section id="leave-your-developers-alone">
-            <title>Leave Your Developers Alone</title>
+        <section xml:id="leave-your-developers-alone"><info><title>Leave Your Developers Alone</title></info>
+
 
             <para>
-                At a previous workplace of mine, my bosses <emphasis
-                    role="bold">did not like the fact that I sometimes
+                At a previous workplace of mine, my bosses <emphasis role="bold">did not like the fact that I sometimes
                     played</emphasis> card solitaire games or Sokoban. I’m not
                 much of a gamer and don’t spend hours on end playing high-end
-                games. But they didn’t like that people who passed by <emphasis
-                    role="bold">saw me not working at that very
+                games. But they didn’t like that people who passed by <emphasis role="bold">saw me not working at that very
                     moment</emphasis>.
             </para>
 
             <para> I needed these games to bring my mind back into cycle. I was
                 also labelled as a “strange bird”, because I often stood and
                 looked at our building’s garden and lawn through the window. As
-                <ulink url="http://www.paulgraham.com/opensource.html">Paul
-                    Graham notes</ulink> there’s a large difference between
-                <emphasis role="bold">“pretend work”</emphasis> and <emphasis
-                    role="bold">“real work”</emphasis>. Playing games and
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/opensource.html">Paul
+                    Graham notes</link> there’s a large difference between
+                <emphasis role="bold">“pretend work”</emphasis> and <emphasis role="bold">“real work”</emphasis>. Playing games and
                 looking through the window do not make you less productive. If
                 you’re just writing code for the same codebase all the time,
                 your mind will soon run in circles, and you won’t be
@@ -522,14 +507,13 @@
             </para>
 
             <para>
-                <ulink
-                    url="http://tech.groups.yahoo.com/group/hackers-il/message/4784">In
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/4784">In
                     a mission statement to an innovative software
-                    company</ulink>, I said that I expected developers to work
+                    company</link>, I said that I expected developers to work
                 for only 20% of the time? Why? They:
             </para>
 
-            <orderedlist>
+            <orderedlist inheritnum="ignore" continuation="restarts">
                 <listitem>
                     <para>
                         Usually won’t work more anyhow.
@@ -557,8 +541,8 @@
                 they want and go when they want. If you sometimes need more
                 time or better attendance, then great
                 developers will be happy to comply - temporarily. But
-                <ulink url="http://www.igda.org/articles/erobinsonncrunch.php">crunch
-                    mode is a recipe for disaster</ulink> - your developers
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.igda.org/articles/erobinsonncrunch.php">crunch
+                    mode is a recipe for disaster</link> - your developers
                 will be over-worked, under-productive, and unhappy. And if
                 they’re smart, they will soon quit.
             </para>
@@ -574,8 +558,8 @@
 
         </section>
 
-        <section id="be_honest_to_your_developers">
-            <title>Be Honest with your Developers</title>
+        <section xml:id="be_honest_to_your_developers"><info><title>Be Honest with your Developers</title></info>
+
 
             <para>
                 The first thing about being honest with your developers is
@@ -626,8 +610,8 @@
             </para>
 
         </section>
-        <section id="let_them_grow">
-            <title>Let Them Grow</title>
+        <section xml:id="let_them_grow"><info><title>Let Them Grow</title></info>
+
 
             <para>
                 Here’s another insight: let your developers grow. If you
@@ -655,10 +639,10 @@
 
             <para>
                 The reason people want experience is
-                <ulink url="http://www.joelonsoftware.com/articles/LordPalmerston.html">not
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/LordPalmerston.html">not
                     because the people with experience are more productive, but
                     because they know how to handle problems they encounter
-                    better</ulink>. I don’t claim experience is not important.
+                    better</link>. I don’t claim experience is not important.
                 However, if you’re using a platform which is both reliable and
                 predictable (<quote>it just works</quote>), give your
                 programmers access to the Internet (with the Web,
@@ -670,10 +654,10 @@
 
             <para>
                 A different programmer, also from the UK,
-                <ulink url="http://www.perl.org.il/pipermail/perl/2006-June/007956.html">testified
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.org.il/pipermail/perl/2006-June/007956.html">testified
                     that while
                     he started working with Perl and liked it and was good,
-                    no one was willing to give him a chance to grow</ulink>.
+                    no one was willing to give him a chance to grow</link>.
                 What is important about great hackers is not their knowledge
                 or experience but their potential, attitude and
                 autodidacticism. Given proper conditions they will accumulate
@@ -692,28 +676,28 @@
 
         </section>
 
-        <section id="take-some-advice">
-            <title>Take Some Good Advice</title>
+        <section xml:id="take-some-advice"><info><title>Take Some Good Advice</title></info>
+
 
             <para>
                 Here is some good advice I found about software management:
             </para>
 
-            <orderedlist>
+            <orderedlist inheritnum="ignore" continuation="restarts">
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric S. Raymond’s <emphasis>The Cathedral and the Bazaar</emphasis> series</ulink>.
-                        Also see his <ulink url="http://www.catb.org/~esr/faqs/hacker-howto.html">“How
-                            to Become a Hacker” document</ulink>. Concentrates
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric S. Raymond’s <emphasis>The Cathedral and the Bazaar</emphasis> series</link>.
+                        Also see his <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html">“How
+                            to Become a Hacker” document</link>. Concentrates
                         on open-source hacking.
                     </para>
                 </listitem>
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.joelonsoftware.com/"><emphasis>Joel on
-                            Software</emphasis></ulink> - a collection of articles and
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/"><emphasis>Joel on
+                            Software</emphasis></link> - a collection of articles and
                         essays and a weblog by Joel Spolsky. Concentrates on
                         writing commercial, marketplace software.
                     </para>
@@ -721,8 +705,8 @@
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.paulgraham.com/">Paul
-                            Graham</ulink> - many essays on different topics
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/">Paul
+                            Graham</link> - many essays on different topics
                         including Lisp, language design, dynamic languages,
                         startups, and general philosophy.
                     </para>
@@ -730,8 +714,8 @@
 
                 <listitem>
                     <para>
-                        <ulink url="http://www.extremeprogramming.org/">Extreme
-                            Programming</ulink> - a software management
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.extremeprogramming.org/">Extreme
+                            Programming</link> - a software management
                         methodology intended primarily for developing in-house
                         software, but with some good, general ideas.
                     </para>
@@ -746,8 +730,8 @@
             </para>
         </section>
 
-        <section id="respect-and-cherish">
-            <title>Respect and Cherish Your Developers</title>
+        <section xml:id="respect-and-cherish"><info><title>Respect and Cherish Your Developers</title></info>
+
 
             <para>
                 The final advice I can give you is to respect and cherish
@@ -800,8 +784,8 @@
         </section>
     </section>
 
-    <section id="conclusion">
-        <title>Conclusion</title>
+    <section xml:id="conclusion"><info><title>Conclusion</title></info>
+
 
         <para>
             If you implement all of these suggestions, you’ll become known
@@ -825,4 +809,4 @@
         </para>
 
     </section>
-</article>    <!-- End of the article -->
+</article>

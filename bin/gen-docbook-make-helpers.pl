@@ -216,9 +216,10 @@ my @documents = (
         db_ver           => 5,
     },
     {
-        id   => "end-of-it-slavery",
-        path => "philosophy/computers/software-management/end-of-it-slavery",
-        base => "end-of-it-slavery",
+        id     => "end-of-it-slavery",
+        path   => "philosophy/computers/software-management/end-of-it-slavery",
+        base   => "end-of-it-slavery",
+        db_ver => 5,
     },
     {
         id   => "foss-and-other-beasts",

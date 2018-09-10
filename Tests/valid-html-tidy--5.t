@@ -19,11 +19,7 @@ sub calc_tidy
 
 package main;
 
-my %whitelist = (
-    map { $_ => 1 } (
-'post-dest/t2/lecture/WebMetaLecture/slides/examples/APIs/toc/index.html',
-    ),
-);
+my %whitelist = ( map { $_ => 1 } (), );
 
 Test::HTML::Tidy::Recursive::Tidy5->new(
     {

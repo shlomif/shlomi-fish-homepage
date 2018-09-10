@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Data::Munge qw/ list2re /;
-use Test::HTML::Tidy::Recursive;
+use Test::HTML::Tidy::Recursive ();
 
 my @SKIP_LIST = (
     qw#

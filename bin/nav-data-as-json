@@ -15,6 +15,7 @@ my $output_fn;
 GetOptions( 'output|o=s' => \$output_fn, )
     or die "Wrong options - $!";
 
-path($output_fn)
-    ->spew( Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json(),
+my $fh = path($output_fn);
+$fh->touchpath;
+$fh->spew( Shlomif::Homepage::NavData::JSON->output_fully_expanded_as_json(),
     "\n", );

@@ -89,7 +89,7 @@ sub output_fully_expanded_as_json
     my $brief_keys_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )
         ->encode($brief_keys_data);
 
-    path('./dest/t2/_data/n.json')->spew($brief_keys_json);
+    path('./dest/pre-incs/t2/_data/n.json')->spew($brief_keys_json);
 
     return $verbose_keys_json;
 }

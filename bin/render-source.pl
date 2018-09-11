@@ -29,7 +29,7 @@ my @WML_FLAGS = (
 );
 
 my $T2_SRC_DIR = 't2';
-my $T2_DEST    = "dest/$T2_SRC_DIR";
+my $T2_DEST    = "dest/pre-incs/$T2_SRC_DIR";
 
 chdir($T2_SRC_DIR);
 

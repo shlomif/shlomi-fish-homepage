@@ -19,12 +19,13 @@ sub gmake_test
         "found a file" );
 
     # TEST
-    gmake_test( 'T2_HUMOUR_DOCS_DEST', 'dest/t2/humour.html', "found a file" );
+    gmake_test( 'T2_HUMOUR_DOCS_DEST', 'dest/pre-incs/t2/humour.html',
+        "found a file" );
 
     # TEST
     gmake_test(
         'SCREENPLAY_SOURCES_ON_DEST',
-'dest/t2/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
+'dest/pre-incs/t2/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
         "SCREENPLAY_SOURCES_ON_DEST - Qoheleth",
     );
 
@@ -40,11 +41,13 @@ sub gmake_test
         "found a file" );
 
     # TEST
-    gmake_test( 'DEST_ZIP_MODS', 'dest/t2/Iglu/shlomif/mods/dreams2.xm.zip',
+    gmake_test( 'DEST_ZIP_MODS',
+        'dest/pre-incs/t2/Iglu/shlomif/mods/dreams2.xm.zip',
         "found a file" );
 
     # TEST
-    gmake_test( 'DEST_XZ_MODS', 'dest/t2/Iglu/shlomif/mods/focus.mod.xz',
+    gmake_test( 'DEST_XZ_MODS',
+        'dest/pre-incs/t2/Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
 
     # TEST
@@ -52,10 +55,10 @@ sub gmake_test
         "found a dir" );
 
     # TEST
-    gmake_test( 'ALL_HTACCESSES', 'dest/t2/humour/fortunes/.htaccess',
+    gmake_test( 'ALL_HTACCESSES', 'dest/pre-incs/t2/humour/fortunes/.htaccess',
         ".htaccess" );
 
     # TEST
-    gmake_test( 'ALL_HTACCESSES', 'dest/t2/open-source/.htaccess',
+    gmake_test( 'ALL_HTACCESSES', 'dest/pre-incs/t2/open-source/.htaccess',
         ".htaccess" );
 }

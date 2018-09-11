@@ -8,7 +8,7 @@ ifeq ($(DEV),1)
 	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1
 endif
 
-ALL_DEST_BASE = dest
+ALL_DEST_BASE = dest/pre-incs
 
 MATHJAX_SOURCE_README = lib/js/MathJax/README.md
 
@@ -693,7 +693,7 @@ $(DOCBOOK5_FO_DIR)/%.fo: $(DOCBOOK5_SOURCES_DIR)/%.xml
 	$(PERL) -lpi -e 's/[ \t]+\z//' $@
 
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
-DEST__C_BAD_ELEMS_SRC = dest/t2/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+DEST__C_BAD_ELEMS_SRC = $(T2_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"

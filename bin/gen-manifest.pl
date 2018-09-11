@@ -8,7 +8,8 @@ use File::Find::Object;
 use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
-open my $m, '>', './dest/t2/MANIFEST.html';
+my $T2_DEST = './dest/pre-incs/t2';
+open my $m, '>', "$T2_DEST/MANIFEST.html";
 
 $m->print(<<'EOF');
 <?xml version="1.0" encoding="utf-8"?>
@@ -24,7 +25,7 @@ $m->print(<<'EOF');
 EOF
 
 {
-    my $ffo = File::Find::Object->new( {}, './dest/t2' );
+    my $ffo = File::Find::Object->new( {}, $T2_DEST, );
 
     while ( my $r = $ffo->next_obj() )
     {

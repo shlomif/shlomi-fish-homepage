@@ -58,6 +58,6 @@ EOF
     Shlomif::DocBookClean::cleanup_docbook( \$contents );
 
     path(
-qq#dest/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
+qq#dest/pre-incs/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
     )->spew_utf8($contents);
 }

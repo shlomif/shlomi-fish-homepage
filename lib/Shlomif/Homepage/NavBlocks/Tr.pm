@@ -22,7 +22,7 @@ sub render
     my ( $self, $r ) = @_;
 
     return join '', map { "$_\n" } "<tr>",
-        sprintf( qq{<td colspan="2"><b>%s</b></td>}, $self->title ),
+        sprintf( qq{<td><b>%s</b></td>}, $self->title ),
         "<td>",
         "<ul>",
         ( map { $r->render($_) } @{ $self->items } ),

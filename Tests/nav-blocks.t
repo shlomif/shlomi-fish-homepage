@@ -157,7 +157,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
             $r->render($tr),
             <<'EOF',
 <tr>
-<td colspan="2"><b>Selina Mandrake - The Slayer</b></td>
+<td><b>Selina Mandrake - The Slayer</b></td>
 <td>
 <ul>
 <li><p><strong class="current">Front Page</strong></p></li>
@@ -203,7 +203,7 @@ EOF
             $r->render($subdiv_tr),
             <<'EOF',
 <tr class="subdiv">
-<th colspan="3">Screenplays</th>
+<th colspan="2">Screenplays</th>
 </tr>
 EOF
             "Render Subdiv_Tr",
@@ -225,7 +225,7 @@ EOF
             $r->render($master_tr),
             <<'EOF',
 <tr class="main_title">
-<th colspan="3">Harry Potter/Emma Watson Fanfiction</th>
+<th colspan="2">Harry Potter/Emma Watson Fanfiction</th>
 </tr>
 EOF
             "Render Master_Tr",
@@ -259,15 +259,15 @@ foreach my $ext ( '', 'index.xhtml', )
 <div class="topical_nav_block" id="buffy_nav_block">
 <table>
 <tr class="main_title">
-<th colspan="3">Buffy Fanfiction</th>
+<th colspan="2">Buffy Fanfiction</th>
 </tr>
 
 <tr class="subdiv">
-<th colspan="3">Screenplays</th>
+<th colspan="2">Screenplays</th>
 </tr>
 
 <tr>
-<td colspan="2"><b>Star Trek: We, the Living Dead</b></td>
+<td><b>Star Trek: We, the Living Dead</b></td>
 <td>
 <ul>
 <li><p><a href="../Star-Trek/We-the-Living-Dead/">Front Page</a></p></li>
@@ -278,7 +278,7 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 <tr>
-<td colspan="2"><b>Selina Mandrake - The Slayer</b></td>
+<td><b>Selina Mandrake - The Slayer</b></td>
 <td>
 <ul>
 <li><p><strong class="current">Front Page</strong></p></li>
@@ -290,7 +290,7 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 <tr>
-<td colspan="2"><b>Summerschool at the NSA</b></td>
+<td><b>Summerschool at the NSA</b></td>
 <td>
 <ul>
 <li><p><a href="../Summerschool-at-the-NSA/">Front Page</a></p></li>
@@ -303,7 +303,7 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 <tr>
-<td colspan="2"><b>Buffy: A Few Good Slayers</b></td>
+<td><b>Buffy: A Few Good Slayers</b></td>
 <td>
 <ul>
 <li><p><a href="../Buffy/A-Few-Good-Slayers/">Front Page</a></p></li>
@@ -314,11 +314,11 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 <tr class="subdiv">
-<th colspan="3">Factoids</th>
+<th colspan="2">Factoids</th>
 </tr>
 
 <tr>
-<td colspan="2"><b>“Facts”</b></td>
+<td><b>“Facts”</b></td>
 <td>
 <ul>
 <li><p><a href="../bits/facts/Buffy/">Buffy Facts</a></p></li>

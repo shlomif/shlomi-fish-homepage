@@ -21,7 +21,7 @@ sub render
 
     return join '',
         map { "$_\n" } sprintf( q{<tr class="%s">}, $self->css_class ),
-        sprintf( qq{<th colspan="3">%s</th>}, $self->title ),
+        sprintf( qq{<th colspan="2">%s</th>}, $self->title ),
         "</tr>",
         ;
 }

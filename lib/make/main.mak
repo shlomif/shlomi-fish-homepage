@@ -2,7 +2,7 @@
 DEV = 0
 
 DEV_WML_FLAGS :=
-T2_POST_DEST = post-dest/t2
+T2_POST_DEST = dest/post-incs/t2
 
 ifeq ($(DEV),1)
 	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1

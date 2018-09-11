@@ -6,7 +6,8 @@ use Test::More tests => 10;
 use lib './lib';
 use Shlomif::Homepage::Paths;
 
-my $T2_DEST = Shlomif::Homepage::Paths->new->t2_dest;
+my $T2_DEST      = Shlomif::Homepage::Paths->new->t2_dest;
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
 sub gmake_test
 {
@@ -59,7 +60,7 @@ sub dest_test
         "found a file" );
 
     # TEST
-    gmake_test( 'T2_POST_DIRS_DEST', 'post-dest/t2/art/original-graphics',
+    gmake_test( 'T2_POST_DIRS_DEST', "$T2_POST_DEST/art/original-graphics",
         "found a dir" );
 
     # TEST

@@ -5,11 +5,15 @@ use warnings;
 
 use Test::More tests => 5;
 use Path::Tiny qw/ path /;
+use lib './lib';
+use Shlomif::Homepage::Paths;
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
 {
     my $content =
         path(
-        "./post-dest/t2/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
+        "$T2_POST_DEST/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
         ->slurp_utf8;
 
     # TEST

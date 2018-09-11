@@ -4,8 +4,14 @@ use warnings;
 use Test::More ( tests => 1 );
 use Test::Differences qw(eq_or_diff);
 
-my $src  = 'post-dest';
-my $good = '../GOOD-post-dest';
+use lib './lib';
+use Shlomif::Homepage::Paths ();
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
+
+my $src = $T2_POST_DEST;
+
+my $good = '../GOOD-post-inc/t2';
 
 {
     # TEST

@@ -6,11 +6,15 @@ use utf8;
 
 use Test::More tests => 1;
 use Path::Tiny qw/ path /;
+use lib './lib';
+use Shlomif::Homepage::Paths ();
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
 {
     my $content =
         path(
-"./post-dest/t2/lecture/Perl/Newbies/lecture2/useful_funcs/sort/cmp.html"
+        "$T2_POST_DEST/lecture/Perl/Newbies/lecture2/useful_funcs/sort/cmp.html"
     )->slurp_utf8;
 
     my $needle = <<'EOF';

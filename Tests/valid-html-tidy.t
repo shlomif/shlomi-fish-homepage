@@ -5,29 +5,33 @@ use warnings;
 
 use Data::Munge qw/ list2re /;
 use Test::HTML::Tidy::Recursive ();
+use lib './lib';
+use Shlomif::Homepage::Paths ();
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
 my @SKIP_LIST = (
     qw#
-        post-dest/t2/MathVentures/
-        post-dest/t2/MathVentures/3d-outof-4d-mathml.xhtml
-        post-dest/t2/MathVentures/bugs-in-square-mathml.xhtml
-        post-dest/t2/grad-fu/
-        post-dest/t2/humour/
-        post-dest/t2/lecture/
-        post-dest/t2/me/
-        post-dest/t2/open-source/
-        post-dest/t2/philosophy/
-        post-dest/t2/prog-evolution/
-        post-dest/t2/puzzles/
-        post-dest/t2/rindolf/
-        post-dest/t2/work/
+        dest/post-incs/t2/MathVentures/
+        dest/post-incs/t2/MathVentures/3d-outof-4d-mathml.xhtml
+        dest/post-incs/t2/MathVentures/bugs-in-square-mathml.xhtml
+        dest/post-incs/t2/grad-fu/
+        dest/post-incs/t2/humour/
+        dest/post-incs/t2/lecture/
+        dest/post-incs/t2/me/
+        dest/post-incs/t2/open-source/
+        dest/post-incs/t2/philosophy/
+        dest/post-incs/t2/prog-evolution/
+        dest/post-incs/t2/puzzles/
+        dest/post-incs/t2/rindolf/
+        dest/post-incs/t2/work/
         #
 );
 
 my $RE = list2re @SKIP_LIST;
 Test::HTML::Tidy::Recursive->new(
     {
-        targets         => ['./post-dest'],
+        targets         => [$T2_POST_DEST],
         filename_filter => sub {
             my $fn = shift;
             return (

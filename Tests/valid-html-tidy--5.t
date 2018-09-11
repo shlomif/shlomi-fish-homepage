@@ -19,6 +19,10 @@ sub calc_tidy
 
 package main;
 
+use lib './lib';
+use Shlomif::Homepage::Paths ();
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 my %whitelist = ( map { $_ => 1 } (), );
 
 Test::HTML::Tidy::Recursive::Tidy5->new(
@@ -28,9 +32,9 @@ Test::HTML::Tidy::Recursive::Tidy5->new(
             return not(
                 exists $whitelist{$fn}
                 or $fn =~
-                m#\A post-dest/t2/ (?: MathVentures | js/jquery-ui/ ) #x,
+                m#\A \Q$T2_POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
             );
         },
-        targets => ['./post-dest'],
+        targets => [$T2_POST_DEST],
     }
 )->run;

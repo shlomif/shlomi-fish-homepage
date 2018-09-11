@@ -7,6 +7,10 @@ package Test::HTML::Tidy::Recursive::XML;
 
 use MooX qw/ late /;
 use XML::LibXML ();
+use lib './lib';
+use Shlomif::Homepage::Paths ();
+
+my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
 extends('Test::HTML::Tidy::Recursive');
 
@@ -35,9 +39,9 @@ Test::HTML::Tidy::Recursive::XML->new(
             return not(
                 exists $whitelist{$fn}
                 or $fn =~
-                m#\A post-dest/t2/ (?: MathVentures | js/jquery-ui/ ) #x,
+                m#\A \Q$T2_POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
             );
         },
-        targets => ['./post-dest'],
+        targets => [$T2_POST_DEST],
     }
 )->run;

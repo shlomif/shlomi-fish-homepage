@@ -857,6 +857,13 @@ Chuck Norris Facts</a> - more toughness.
 </p>
 </li>
 
+<li>
+<p>
+<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> - about
+a real-life female.
+</p>
+</li>
+
 </ul>
 EOF
         short_id   => 'xena',

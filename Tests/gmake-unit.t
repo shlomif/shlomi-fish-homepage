@@ -3,6 +3,10 @@
 use strict;
 use warnings;
 use Test::More tests => 10;
+use lib './lib';
+use Shlomif::Homepage::Paths;
+
+my $T2_DEST = Shlomif::Homepage::Paths->new->t2_dest;
 
 sub gmake_test
 {
@@ -13,19 +17,25 @@ sub gmake_test
         qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 
+sub dest_test
+{
+    my ( $var, $word, $blurb ) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    return gmake_test( $var, "$T2_DEST/$word", $blurb );
+}
+
 {
     # TEST
     gmake_test( 'T2_SOFTWARE_DOCS_SRC', 't2/open-source/index.xhtml.wml',
         "found a file" );
 
     # TEST
-    gmake_test( 'T2_HUMOUR_DOCS_DEST', 'dest/pre-incs/t2/humour.html',
-        "found a file" );
+    dest_test( 'T2_HUMOUR_DOCS_DEST', 'humour.html', "found a file" );
 
     # TEST
-    gmake_test(
+    dest_test(
         'SCREENPLAY_SOURCES_ON_DEST',
-'dest/pre-incs/t2/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
+'humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
         "SCREENPLAY_SOURCES_ON_DEST - Qoheleth",
     );
 
@@ -41,13 +51,11 @@ sub gmake_test
         "found a file" );
 
     # TEST
-    gmake_test( 'DEST_ZIP_MODS',
-        'dest/pre-incs/t2/Iglu/shlomif/mods/dreams2.xm.zip',
+    dest_test( 'DEST_ZIP_MODS', 'Iglu/shlomif/mods/dreams2.xm.zip',
         "found a file" );
 
     # TEST
-    gmake_test( 'DEST_XZ_MODS',
-        'dest/pre-incs/t2/Iglu/shlomif/mods/focus.mod.xz',
+    dest_test( 'DEST_XZ_MODS', 'Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
 
     # TEST
@@ -55,10 +63,8 @@ sub gmake_test
         "found a dir" );
 
     # TEST
-    gmake_test( 'ALL_HTACCESSES', 'dest/pre-incs/t2/humour/fortunes/.htaccess',
-        ".htaccess" );
+    dest_test( 'ALL_HTACCESSES', 'humour/fortunes/.htaccess', ".htaccess" );
 
     # TEST
-    gmake_test( 'ALL_HTACCESSES', 'dest/pre-incs/t2/open-source/.htaccess',
-        ".htaccess" );
+    dest_test( 'ALL_HTACCESSES', 'open-source/.htaccess', ".htaccess" );
 }

@@ -174,7 +174,7 @@ my %reduced_sub_trees = (
     'Shlomif::Homepage::SectionMenu::Sects::Software' => {
         text   => "Software",
         url    => "open-source/",
-        expand => { re => "^open-source/", },
+        expand => { re => "^(?:no-ie/|open-source/|rindolf/)", },
         title  => "Pages related to Software (mostly Open-Source)",
         subs   => [
             {

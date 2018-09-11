@@ -7,5 +7,5 @@
 #
 set -e
 set -x
-touch t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/*.{html,pdf}
+touch t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/*.{xhtml,pdf}
 bash -x bin/travis-ci-script.bash

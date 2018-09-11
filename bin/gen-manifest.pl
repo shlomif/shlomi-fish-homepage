@@ -7,8 +7,11 @@ use autodie;
 use File::Find::Object;
 use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use lib './lib';
+use Shlomif::Homepage::Paths;
 
-my $T2_DEST = './dest/pre-incs/t2';
+my $T2_DEST = Shlomif::Homepage::Paths->new->t2_dest;
+
 open my $m, '>', "$T2_DEST/MANIFEST.html";
 
 $m->print(<<'EOF');

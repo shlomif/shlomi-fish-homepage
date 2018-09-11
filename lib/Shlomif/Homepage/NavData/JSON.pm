@@ -11,6 +11,9 @@ use MyNavData;
 use HTML::Widgets::NavMenu::ToJSON;
 use HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML;
 
+use Shlomif::Homepage::Paths;
+
+my $T2_DEST       = Shlomif::Homepage::Paths->new->t2_dest;
 my %keys_briefing = (
     subs   => 's',
     id     => 'i',
@@ -89,7 +92,7 @@ sub output_fully_expanded_as_json
     my $brief_keys_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )
         ->encode($brief_keys_data);
 
-    path('./dest/pre-incs/t2/_data/n.json')->spew($brief_keys_json);
+    path("$T2_DEST/_data/n.json")->spew($brief_keys_json);
 
     return $verbose_keys_json;
 }

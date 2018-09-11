@@ -17,6 +17,7 @@ s# (?:xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"|xml:space="preserve"
     $$str_ref =~ s{<hr[^/]*/>}{<hr />}g;
     $$str_ref =~ s{ target="_top"}{}g;
     $$str_ref =~ s{ shape="rect"}{}g;
+    $$str_ref =~ s{ align="left"}{}g;
     $$str_ref =~ s{ align="right"}{}g;
     $$str_ref =~ s{ valign="top"}{}g;
     $$str_ref =~ s{ border="0"}{}g;

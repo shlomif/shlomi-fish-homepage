@@ -33,7 +33,7 @@ use Shlomif::XmlFictionSlurp;
         $trap->stdout(),
         <<'EOF',
 
-<div xml:lang="en-UK" class="article">
+<div xml:lang="en" class="article">
 <div class="titlepage">
 <div>
 <div>

@@ -77,8 +77,8 @@ ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOU
 
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
-T2_CACHE_ALL_STAMP = lib/cache/STAMP.one
-T2_CLEAN_STAMP = lib/cache/STAMP.two
+T2_CACHE_ALL_STAMP = lib/cache/STAMP.sects-includes
+T2_CLEAN_STAMP = lib/cache/STAMP.post-dest
 
 T2_CACHE_PREF = lib/cache/combined/t2
 

@@ -1,7 +1,7 @@
 <page_extra_head_elements>
 <js_script src="$(ROOT)/js/jquery-ui/jquery-ui.min.js"></js_script>
-<link rel="stylesheet" type="text/css" href="$(ROOT)/js/jquery-ui/jquery-ui.min.css" media="screen, projection" />
-<link rel="stylesheet" type="text/css" href="$(ROOT)/jqui-override.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="$(ROOT)/js/jquery-ui/jquery-ui.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="$(ROOT)/jqui-override.css" media="screen" />
 <js_script>
 $(function() {
     $(".tabs").tabs();

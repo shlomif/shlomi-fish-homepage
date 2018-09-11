@@ -191,7 +191,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
 <title>$title_esc</title>
-<link rel="stylesheet" href="$base_dir/fort_total.css" media="screen, projection" />
+<link rel="stylesheet" href="$base_dir/fort_total.css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>

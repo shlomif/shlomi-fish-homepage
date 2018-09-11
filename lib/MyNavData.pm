@@ -401,6 +401,11 @@ my %reduced_sub_trees = (
                 text  => "Hosting",
                 title => "About this site’s hosting provider.",
             },
+            {
+                text  => "Old Site Snapshots (Nostalgia)",
+                url   => "meta/old-site-snapshots/",
+                title => "The site as it looked like many years ago.",
+            },
         ],
     },
 );

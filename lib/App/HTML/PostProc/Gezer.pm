@@ -28,7 +28,8 @@ sub _summary
     my $text_ref = shift;
     if ( index( $$text_ref, q#<!DOCTYPE html># ) >= 0 )
     {
-        return $$text_ref =~ s%(<table(?:\s+class="[^"]*"\s*)?) summary=""%$1%g;
+        return $$text_ref =~
+            s%(<table(?:\s+(?:class|style)="[^"]*"\s*)*) summary=""%$1%g;
     }
     else
     {

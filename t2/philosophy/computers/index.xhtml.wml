@@ -5,6 +5,11 @@
 
 <latemp_meta_desc "Shlomi Fish’s Writings about Computing" />
 
+<div class="side_toc fancy_sects">
+<toc_div />
+
+<h2 id="intro">Introduction</h2>
+
 <p>
 Being a software developer, that is also very interested in computers and like
 to program for fun, I started conveying some of my thoughts about computing
@@ -17,77 +22,105 @@ Some of these essays will require some technical knowledge, but most of them
 can be read by anyone with a pseudo-technical background.
 </p>
 
-<toc_div />
+<section class="h2">
 
 <h2 id="articles-and-essays">The Articles and Essays</h2>
 
-<div class="sub_section">
+<section class="h3">
 
 <h3 id="open-source"><a href="open-source/">Articles about Open Source Software</a></h3>
 
-<p class="indent">
+<p>
 These are essays about <a href="http://en.wikipedia.org/wiki/Open_source">Free
 and Open Source Software</a>, which is software that is available along
 with the original source code, and can be freely distributed and modified.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="web"><a href="web/">Articles about the World-Wide Web (WWW)</a></h3>
 
-<p class="indent">
+<p>
 Articles about the Web, or the Internet in general.
 </p>
+
+</section>
+
+<section class="h3">
 
 <h3 id="software-management"><a href="software-management/">Articles about
 Software Management</a></h3>
 
-<p class="indent">
+<p>
 Software management: leading a team, designing software, working on software,
 hiring employees, growing a user base, software engineering, etc.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="how-to-get-help-online"><a href="how-to-get-help-online/">“How to
 Get Help Online?”</a></h3>
 
-<p class="indent">
+<p>
 A guide that points to the Internet resources that one should consult
 for getting help online.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="high-quality-soft"><a href="high-quality-software/">“What Makes
 Software High-Quality?”</a></h3>
 
-<p class="indent">
+<p>
 An overview of the parameters that make software high-quality, with a focus
 on open-source software, and the various methods that can be used to
 maintain good quality and increase it.
 </p>
 
+</section>
+
+<section class="h3">
+
 <h3 id="perl"><a href="perl/">Articles about Perl</a></h3>
 
-<p class="indent">
+<p>
 Articles about <a href="http://perl-begin.org/">the Perl programming
 language</a>.
 </p>
 
-</div>
+</section>
+
+</section>
+
+<section class="h2">
 
 <h2 id="misc">Miscellaneous Articles</h2>
 
-<div class="sub_section">
-
 <h3 id="when-c-is-best"><a href="$(ROOT)/philosophy/computers/when-c-is-best/">When C is the Best? (Tool for the Job)</a></h3>
 
-<p class="indent">
+<p>
 An essay that explains the times when the C programming language is the best
 language to use to write an application in, and why it’s still used very often.
 </p>
 
-</div>
+</section>
+
+<section class="h2">
 
 <h2 id="memoirs"><a href="$(ROOT)/prog-evolution/">My Memoirs as a
 Programmer</a></h2>
 
-<p class="indent">
+<p>
 My memoirs from the years I worked in various places as a programmer, from
 the times before I kept <a href="$(ROOT)/me/blogs/">a blog</a>.
 </p>
+
+</section>
+
+</div>

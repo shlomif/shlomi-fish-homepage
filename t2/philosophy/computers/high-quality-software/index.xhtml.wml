@@ -4,6 +4,9 @@
 <latemp_subject "What Makes Software High-Quality?" />
 <latemp_meta_desc "Which parameters make software applications high-quality? And which parameters or methods, while desirable, are not directly “quality”? This article, inspired by a post of someone else on a mailing list I started for one of my projects aims to answer this question." />
 
+<div class="side_toc fancy_sects">
+<toc_div />
+
 <note>
 <h2 id="note">Note (24-May-2008)</h2>
 
@@ -15,6 +18,8 @@ report any problems with the first revision.
 
 </note>
 
+<section class="h2">
+
 <h2 id="main_intro">Introduction</h2>
 
 <p>
@@ -24,11 +29,17 @@ inspired by a post of someone else on a mailing list I started for one of my
 projects aims to answer this question.
 </p>
 
-<toc_div />
+</section>
 
-<h3 id="itself">The Article Itself</h3>
+<section class="h2">
+
+<h2 id="itself">The Article Itself</h2>
 
 #include "docbook/5/rendered/what-makes-software-high-quality.xhtml"
+
+</section>
+
+<section class="h2">
 
 <h2 id="other_formats">Other Formats</h2>
 
@@ -41,7 +52,13 @@ projects aims to answer this question.
 </li>
 </ul>
 
+</section>
+
+<section class="h2">
+
 <h2 id="coverage">Coverage</h2>
+
+<section class="h3">
 
 <h3 id="coverage-1st">1st Edition</h3>
 
@@ -70,3 +87,9 @@ fc-solve-discuss mailing list</a>.
 <a href="http://arclanguage.org/item?id=6583">The Arc Language Forum</a>
 </li>
 </ul>
+
+</section>
+
+</section>
+
+</div>

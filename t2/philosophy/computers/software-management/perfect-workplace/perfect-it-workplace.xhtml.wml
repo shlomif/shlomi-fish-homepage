@@ -4,6 +4,11 @@
 <latemp_subject "The Perfect IT Workplace - Revision 1" />
 <latemp_meta_desc "The Perfect IT Workplace - Revision 1" />
 
+<div class="side_toc fancy_sects">
+
+<toc_div />
+<section class="h2">
+
 <h2 id="intro">Introduction</h2>
 
 <p>
@@ -16,11 +21,17 @@ I’m OK with it publicised as is and would just work on the second revision
 now which will be better publicised.
 </p>
 
-<toc_div />
+</section>
 
-<h3 id="itself">The Article Itself</h3>
+<section class="h2">
+
+<h2 id="itself">The Article Itself</h2>
 
 #include "docbook/5/rendered/perfect-it-workplace.xhtml"
+
+</section>
+
+<section class="h2">
 
 <h2 id="other_formats">Other Formats</h2>
 
@@ -32,3 +43,7 @@ now which will be better publicised.
 <a href="perfect-it-workplace.xml">Original DocBook/XML</a>.
 </li>
 </ul>
+
+</section>
+
+</div>

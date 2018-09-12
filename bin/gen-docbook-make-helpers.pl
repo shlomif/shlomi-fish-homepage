@@ -474,7 +474,7 @@ my @end_formats = (
             {
                 var           => "INDIVIDUAL_XHTML",
                 ext           => "",
-                installed_ext => '/index.html',
+                installed_ext => '/index',
                 dir           => "indiv-nodes",
             },
         )

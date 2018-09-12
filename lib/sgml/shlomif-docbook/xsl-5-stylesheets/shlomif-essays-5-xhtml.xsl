@@ -6,13 +6,11 @@
     xmlns:d="http://docbook.org/ns/docbook"
     version="1.0"
     >
-    <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml-1_1/chunk.xsl" />
+    <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/chunk.xsl" />
     <xsl:import href="shlomif-essays-5-xhtml-common.xsl" />
     <xsl:param name="use.id.as.filename">1</xsl:param>
     <xsl:param name="html.stylesheet">style.css</xsl:param>
     <xsl:param name="itemizedlist.propagates.style">1</xsl:param>
-    <xsl:param name="chunker.output.doctype-public">-//W3C//DTD XHTML 1.0 Transitional//EN</xsl:param>
-    <xsl:param name="chunker.output.doctype-system">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</xsl:param>
     <!-- Parameters for Generating Strict Output. See:
     http://www.sagehill.net/docbookxsl/OtherOutputForms.html#StrictXhtmlValid
     -->

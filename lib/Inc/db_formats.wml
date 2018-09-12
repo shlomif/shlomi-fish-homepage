@@ -3,7 +3,7 @@
 <preserve h2_id h2_text indiv_href epub_href orig_xml_href pdf_href />
 <set-var %attributes />
 
-<div class="docbook_formats">
+<section class="docbook_formats h2">
 
 <h2 id="<get-var h2_id />"><get-var h2_text /></h2>
 
@@ -36,7 +36,7 @@ page per section.
 
 </ul>
 
-</div>
+</section>
 
 <restore h2_id h2_text indiv_href epub_href orig_xml_href pdf_href />
 

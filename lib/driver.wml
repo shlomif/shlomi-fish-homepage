@@ -27,6 +27,9 @@
 %body
 </define-tag>
 
+<define-tag section endtag="required">
+<div <attributes-quote %attributes />>%body</div>
+</define-tag>
 </when>
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"

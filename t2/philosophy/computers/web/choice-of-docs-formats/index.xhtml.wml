@@ -1,11 +1,12 @@
 #include "template5.wml"
 
-#include "toc_div.wml"
 #include "Inc/cpan_dists.wml"
 
 <latemp_subject "Choice of Document Formats" />
 <latemp_meta_desc "Choice of Document Formats" />
 <latemp_more_keywords "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" />
+
+<section class="h2">
 
 <h2 id="about">About this Document</h2>
 
@@ -15,8 +16,9 @@ derived from a reply I wrote to a thread in the
 <a href="http://mail.pm.org/mailman/listinfo/boston-pm">Boston Perl Mongers
 mailing list</a>.
 </p>
+</section>
 
-<toc_div />
+<section class="h2">
 
 <h2 id="meta">Document Information</h2>
 
@@ -41,9 +43,16 @@ Last Updated:
 </dd>
 </dl>
 
+<section class="h3">
+
 <h3 id="licence">Licence</h3>
 
 <cc_by_british_blurb year="2006" />
+
+</section>
+</section>
+
+<section class="h2">
 
 <h2 id="article">The Article Itself</h2>
 
@@ -191,9 +200,15 @@ One final note is that DocBook/XML was problematic for using in bi-directional
 texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
+</section>
+
+<section class="h2">
 
 <h2 id="coverage">Coverage and Comments</h2>
 
 <p>
 TODO: Fill in.
 </p>
+
+</section>
+

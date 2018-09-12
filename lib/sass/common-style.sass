@@ -6,6 +6,14 @@
     font-family: Arial,Sans-Serif
     font-size: 16px
 
+=margin-lr($mar)
+    margin-left: $mar
+    margin-right: $mar
+
+=padding-lr($mar)
+    padding-left: $mar
+    padding-right: $mar
+
 =rounded_corners($radius)
     -webkit-border-radius: $radius
     -moz-border-radius: $radius
@@ -537,12 +545,6 @@ table.visible , .visible > table
             margin-bottom: 0
             padding-top: 0
 
-.article
-    p, li, pre
-        margin-left: 40px
-        margin-right: 40px
-        line-height: 1.3
-
 #disqus_thread
     clear: right
 
@@ -685,11 +687,12 @@ div.abstract
         border-bottom-left-radius: 10px
 
         li , ul
-            margin-left: 0
-            padding-left: 0
+            +margin-lr(0)
+            +padding-lr(0)
 
         ul
-            margin-left: 1em
+            $mar: 1em
+            +margin-lr($mar)
 
         a
             word-break: normal

@@ -181,9 +181,10 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 
 my @documents = (
     {
-        id   => "case-for-drug-legalisation",
-        path => "philosophy/politics/drug-legalisation",
-        base => "case-for-drug-legalisation",
+        id     => "case-for-drug-legalisation",
+        path   => "philosophy/politics/drug-legalisation",
+        base   => "case-for-drug-legalisation",
+        db_ver => 5,
     },
     {
         id     => "case-for-drug-legalisation-rev2",

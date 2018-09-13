@@ -1,32 +1,22 @@
-<?xml version='1.0' encoding="utf-8"?>
-<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>The Case for Drug Legalisation</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-
-<article id="index">
-    <articleinfo>
-        <title>The Case for Drug Legalisation</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2006</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-      <legalnotice id="main_legal_notice">
+      <legalnotice xml:id="main_legal_notice">
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</ulink> (or at your option a greater version of it).
+This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</link> (or at your option a greater version of it).
         <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Work rdf:about="">
             <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -44,7 +34,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <revhistory>
             <revision>
                 <revnumber>1801</revnumber>
-                <date>29 February 2008</date>
+                <date>2008-02-29</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed some typos, added the "What you can do about it?"
@@ -53,7 +43,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1548</revnumber>
-                <date>28 July 2006</date>
+                <date>2006-07-28</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Finished the first published version.
@@ -61,7 +51,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             </revision>
             <revision>
                 <revnumber>1518</revnumber>
-                <date>14 October 2005</date>
+                <date>2005-10-14</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Forked the text from a previous document, and starting to
@@ -69,10 +59,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 </revremark>
             </revision>
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="introduction">
-    <title>Introduction</title>
+<section xml:id="introduction"><info><title>Introduction</title></info>
+
     <para>
         Many people take the prohibition on the currently illegal narcotics
         (e.g: Marijuana, Cocaine, Heroin) for granted. They believe that
@@ -98,8 +88,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
 </section>
 
 
-<section id="morality">
-    <title>The Morality of Drug Abuse</title>
+<section xml:id="morality"><info><title>The Morality of Drug Abuse</title></info>
+
     <para>
         A person has a basic right to harm himself, as long as he does not harm
         others in the process. That's because everyone of us is the owner of
@@ -124,8 +114,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="biology">
-    <title>The Biology of Drug Use</title>
+<section xml:id="biology"><info><title>The Biology of Drug Use</title></info>
+
     <para>
         Drugs are not as harmful as many people think. Most drug users
         are perfectly healthy people who just happen to have a drug problem,
@@ -140,7 +130,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         numbers into account, in the U.S. there used to be 390,000 deaths
         per year from Tobacco, 150,000 from Alcohol and only 400 from Heroin
         and 200 from Cocaine (and none from Marijuana).
-        (<ulink url="http://www.cato.org/pubs/pas/pa121.html">Source</ulink>.)
+        (<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cato.org/pubs/pas/pa121.html">Source</link>.)
     </para>
     <para>
         Thus, legalising drugs, which would potentially make them more
@@ -149,8 +139,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="bio_psychology">
-    <title>The Bio-Psychology of Drug Use</title>
+<section xml:id="bio_psychology"><info><title>The Bio-Psychology of Drug Use</title></info>
+
     <para>
         The mere act of consuming illegal narcotics, usually does not cause
         one to commits crimes. While drugs affect the mind, a large
@@ -166,10 +156,10 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="arguments_for">
-    <title>Arguments for Drug Legalisation</title>
-    <section id="arguments_for__inflation_of_crime">
-        <title>The Prohibition on Drugs Causes an Inflation of Crime</title>
+<section xml:id="arguments_for"><info><title>Arguments for Drug Legalisation</title></info>
+
+    <section xml:id="arguments_for__inflation_of_crime"><info><title>The Prohibition on Drugs Causes an Inflation of Crime</title></info>
+
         <para>
             As drugs are illegal, they are being marketed by outlaws, who
             charge an inflated price for them. Much more inflated that the
@@ -202,8 +192,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             be none.).
         </para>
     </section>
-    <section id="arguments_for__not_helping">
-        <title>The War on Drugs does not Help to Fight them</title>
+    <section xml:id="arguments_for__not_helping"><info><title>The War on Drugs does not Help to Fight them</title></info>
+
         <para>
             Law enforcement organisations attempt to stop drug trade by
             catching drug shipments, and drug dealers. However, any shipment
@@ -213,9 +203,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             a pointless struggle to try to stop them.
         </para>
     </section>
-    <section id="arguments_for__quality_decrease">
-        <title>The Prohibition on Drugs Lowers the
-            Quality of Drugs</title>
+    <section xml:id="arguments_for__quality_decrease"><info><title>The Prohibition on Drugs Lowers the
+            Quality of Drugs</title></info>
+
         <para>
             Illegal drugs are not sold in the free market and as a result the
             sold good is subject to the whims of the local outlaw manufacturer
@@ -229,9 +219,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             happens now with the currently illegal drugs.
         </para>
     </section>
-    <section id="arguments_for__causes_proliferation">
-        <title>The Prohibition on Drugs Causes Proliferation of
-        Drugs' Use</title>
+    <section xml:id="arguments_for__causes_proliferation"><info><title>The Prohibition on Drugs Causes Proliferation of
+        Drugs' Use</title></info>
+
         <para>
             People who become heavy drug users often need to find a way to
             finance their habit. As a result, they often become drug dealers
@@ -244,8 +234,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             to become drug dealers themselves to finance their habit.
         </para>
     </section>
-    <section id="arguments_for__lower_sectors_progress">
-        <title>Slowdown of the Progress of Lower Sectors</title>
+    <section xml:id="arguments_for__lower_sectors_progress"><info><title>Slowdown of the Progress of Lower Sectors</title></info>
+
         <para>
             Drug dealing in a society where drugs are criminalised is
             a way to make a lot of money. As a result, young people among
@@ -261,8 +251,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             status.
         </para>
     </section>
-    <section id="arguments_for__unholy_enemy">
-        <title>Drug Users Serve as the "Unholy Enemy" of Society</title>
+    <section xml:id="arguments_for__unholy_enemy"><info><title>Drug Users Serve as the "Unholy Enemy" of Society</title></info>
+
         <para>
             There is a common pattern in history of "unholy enemies" -
             groups of people who are presented by leaders to be of such
@@ -271,7 +261,7 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             These have been the Jews in Nazi Germany, and the Kafirs in
             Islam. In modern society, drug users now serve as an unholy
             enemy for which the government can undermine
-            <ulink url="http://en.wikipedia.org/wiki/Liberalism">Liberalism</ulink>
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Liberalism">Liberalism</link>
             and gradually repress the people.
         </para>
         <para>
@@ -288,9 +278,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             drugs.
         </para>
     </section>
-    <section id="arguments_for__abusive_behaviour">
-        <title>The Prohibition Causes an Abusive Behaviour among
-        the Users</title>
+    <section xml:id="arguments_for__abusive_behaviour"><info><title>The Prohibition Causes an Abusive Behaviour among
+        the Users</title></info>
+
         <para>
             Since drugs are illegal and using them can jail a person,
             drug users usually exhibit abusive behaviours: they lie, steal,
@@ -301,8 +291,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             problems, and seek help.
         </para>
     </section>
-    <section id="arguments_for__legit_uses">
-        <title>Prevention of Legitimate Uses</title>
+    <section xml:id="arguments_for__legit_uses"><info><title>Prevention of Legitimate Uses</title></info>
+
         <para>
             The prohibition of illegal drugs prevents some legitimate uses
             of the plants from which they are made. The most prominent examples
@@ -311,8 +301,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             environment), and the various medical uses of Marijuana.
         </para>
     </section>
-    <section id="arguments_for__jailing_people">
-        <title>Strain on Society due to People in Jail</title>
+    <section xml:id="arguments_for__jailing_people"><info><title>Strain on Society due to People in Jail</title></info>
+
         <para>
             The prohibition on drugs puts many people in Jail - there
             are over 1 million prisoners for drug offences in the United
@@ -333,8 +323,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         </para>
     </section>
 </section>
-<section id="summary">
-    <title>Summary</title>
+<section xml:id="summary"><info><title>Summary</title></info>
+
     <para>
         The prohibition against Drugs is the real drug problem. It is a war
         against the people, that consumes lives, money, and property. It has
@@ -343,13 +333,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         different.
     </para>
 </section>
-<section id="what_you_can_do_about_it">
-    <title>What You can do about it?</title>
+<section xml:id="what_you_can_do_about_it"><info><title>What You can do about it?</title></info>
+
     <para>
         Here is a list of things you can do to help the cause of fighting
         for drug legalisation:
     </para>
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
             <para>
                 <emphasis role="bold">Educate people about it</emphasis>:
@@ -361,9 +351,9 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
             <para>
                 Note that you should feel free to link to this article, or
                 even quote its text, as long as you give attribution. (See
-                <ulink url="http://creativecommons.org/licenses/by/2.5/">its
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">its
                     open-content, Creative Commons, licence for more
-                    information.</ulink>
+                    information.</link>
             </para>
         </listitem>
         <listitem>
@@ -380,8 +370,8 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
                 <emphasis role="bold">Don't work against the cause</emphasis>
                 - if you're a drug-enforcing policeman, then switch to a
                 different department, or quit. If you're an agent of the
-                <ulink url="http://en.wikipedia.org/wiki/Drug_Enforcement_Administration">Drug
-                    Enforcement Administration (DEA)</ulink> or a similar
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Drug_Enforcement_Administration">Drug
+                    Enforcement Administration (DEA)</link> or a similar
                 organisation - then quit.
             </para>
         </listitem>
@@ -404,13 +394,13 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
     </para>
 </section>
 
-<section id="links">
-    <title>Links</title>
+<section xml:id="links"><info><title>Links</title></info>
+
     <itemizedlist>
         <listitem>
             <para>
-                <ulink url="http://www.cato.org/pubs/pas/pa121.html">James
-                    Ostrowski's "Thinking about Drug Legalization"</ulink> is an
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cato.org/pubs/pas/pa121.html">James
+                    Ostrowski's "Thinking about Drug Legalization"</link> is an
                 excellent and detailed article about the problems of drug
                 prohibition.
             </para>
@@ -418,32 +408,32 @@ This work is licensed under the <ulink url="http://creativecommons.org/licenses/
         <listitem>
             <para>
                 The Wikipedia has an
-                <ulink url="http://en.wikipedia.org/wiki/Prohibition_(drugs)">article
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Prohibition_(drugs)">article
 
-                    written on the Prohibition on drugs</ulink> from a hopefully
+                    written on the Prohibition on drugs</link> from a hopefully
                 Neutral Point of View.
             </para>
         </listitem>
         <listitem>
             <para>
                 The web site
-                <ulink url="http://www.drugwarfacts.org/">"Drug
-                    War Facts"</ulink> was recommended to me by a
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.drugwarfacts.org/">"Drug
+                    War Facts"</link> was recommended to me by a
                 libertarian correspondent. I didn't fully read it yet.
             </para>
         </listitem>
         <listitem>
             <para>
-                <ulink url="http://www.druglibrary.org/schaffer/">The Schaffer
-                    Library of Drug Policy</ulink> is a comprehensive site for
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.druglibrary.org/schaffer/">The Schaffer
+                    Library of Drug Policy</link> is a comprehensive site for
                 support of the legalisation of drugs. It contains a
-                <ulink url="http://www.druglibrary.org/schaffer/dea/">copy of
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.druglibrary.org/schaffer/dea/">copy of
                     the Drug Enforcement Administration (DEA) site, with
-                    comments</ulink> and especially a step-by-step
-                <ulink url="http://www.druglibrary.org/schaffer/dea/pubs/legaliz/claims.htm">rebuttal of their "Speaking Out against Drug Legalisation"
-                    document</ulink>.
+                    comments</link> and especially a step-by-step
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.druglibrary.org/schaffer/dea/pubs/legaliz/claims.htm">rebuttal of their "Speaking Out against Drug Legalisation"
+                    document</link>.
             </para>
         </listitem>
     </itemizedlist>
 </section>
-</article>    <!-- End of the article -->
+</article>

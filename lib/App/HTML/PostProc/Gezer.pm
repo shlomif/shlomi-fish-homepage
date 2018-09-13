@@ -150,7 +150,7 @@ s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({
                 }
 
                 $text =~ s# +$##gms;
-                $text =~ s#(</div>|</li>|</html>)\n\n#$1\n#g;
+                $text =~ s#</(?:div|li|html)>\n\K\n##g;
 
                 $text =~ s#\s+xml:space="[^"]*"##g;
                 $text =~ s#(<div)(?:\s+(?:$ALTERNATIVES_TEXT))+#$1 #gms;

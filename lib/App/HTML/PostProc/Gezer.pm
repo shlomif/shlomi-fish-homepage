@@ -37,7 +37,6 @@ sub _summary
         my $r2 = $$text_ref =~ s%</main>%</div>%g;
         return $r1 || $r2;
     }
-    return '';
 }
 
 sub _call_minifier
@@ -107,7 +106,7 @@ sub run
 
     if ( $mode ne 'minify' )
     {
-        die "--mode should be minify!";
+        die qq#--mode should be "minify"!#;
     }
     $self->_minifier_conf_fn($conf);
     my $temp_dir = Path::Tiny->tempdir;

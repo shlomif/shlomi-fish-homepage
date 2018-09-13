@@ -7,7 +7,7 @@ use 5.014;
 use Moo;
 use Getopt::Long qw/ GetOptionsFromArray /;
 
-use Cache::File ();
+use CHI ();
 use Data::Munge qw/ list2re /;
 use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
@@ -42,9 +42,11 @@ sub _summary
 sub _call_minifier
 {
     my ( $self, $filenames ) = @_;
-    my $KEY = 'HTML_POST_INCS_DATA_DIR';
-    my $cache =
-        Cache::File->new( cache_root => ( $ENV{$KEY} || '/tmp/cacheroot' ) );
+    my $KEY   = 'HTML_POST_INCS_DATA_DIR';
+    my $cache = CHI->new(
+        driver   => 'File',
+        root_dir => ( $ENV{$KEY} || '/tmp/cacheroot' )
+    );
 
     my @queue;
     my $_proc_dir = Path::Tiny->tempdir;
@@ -55,15 +57,15 @@ sub _call_minifier
         my $temp_bn = $rec->{temp_bn};
         my $src     = $temp_dir->child($temp_bn);
         my $k       = $src->slurp;
-        my $e       = $cache->entry($k);
-        if ( $e->exists )
+        my $e       = $cache->get($k);
+        if ( defined $e )
         {
-            $_proc_dir->child($temp_bn)->spew( $e->get );
+            $_proc_dir->child($temp_bn)->spew($e);
             $src->remove;
         }
         else
         {
-            push @queue, [ $e, $temp_bn ];
+            push @queue, [ $k, $temp_bn ];
         }
     }
     if (@queue)
@@ -75,7 +77,8 @@ sub _call_minifier
         ) and die "html-min $!";
         foreach my $fn (@queue)
         {
-            $fn->[0]->set( scalar( $_proc_dir->child( $fn->[1] )->slurp ),
+            $cache->set( $fn->[0],
+                scalar( $_proc_dir->child( $fn->[1] )->slurp ),
                 '100000 days' );
         }
     }

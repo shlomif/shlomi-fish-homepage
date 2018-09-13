@@ -344,9 +344,10 @@ my @documents = (
         custom_css => 1,
     },
     {
-        id   => "human-hacking-field-guide-v2-arabic",
-        path => "humour/human-hacking/arabic-v2",
-        base => "human-hacking-field-guide-v2-arabic",
+        id     => "human-hacking-field-guide-v2-arabic",
+        path   => "humour/human-hacking/arabic-v2",
+        base   => "human-hacking-field-guide-v2-arabic",
+        db_ver => 5,
     },
     {
         id   => "perfect-it-workplace-v2",

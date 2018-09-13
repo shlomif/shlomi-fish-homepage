@@ -250,9 +250,11 @@ my @documents = (
     },
 
     {
-        id   => "objectivism-and-open-source",
-        path => "philosophy/obj-oss",
-        base => "objectivism-and-open-source",
+        id        => "objectivism-and-open-source",
+        path      => "philosophy/obj-oss",
+        base      => "objectivism-and-open-source-r1",
+        dest_base => "objectivism-and-open-source",
+        db_ver    => 5,
     },
 
     {

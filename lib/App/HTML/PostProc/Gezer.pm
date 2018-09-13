@@ -70,8 +70,8 @@ sub _call_minifier
     {
         system(
             'html-minifier', '-c', $self->_minifier_conf_fn, '--input-dir',
-            $self->_temp_dir . '',
-            '--output-dir', $self->_proc_dir . '',
+            $temp_dir . '',
+            '--output-dir', $_proc_dir . '',
         ) and die "html-min $!";
         foreach my $fn (@queue)
         {

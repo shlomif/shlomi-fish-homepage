@@ -1,28 +1,13 @@
-<?xml version='1.0' encoding='utf-8'?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>The Human Hacking Field Guide</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-<!-- -->
-<!-- $Id$ -->
-<!-- -->
-<!-- $Log$ -->
-<!-- -->
-<!-- General reminders: -->
-
-<article id="index">
-    <articleinfo>
-        <title>The Human Hacking Field Guide</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2004</year>
@@ -34,15 +19,15 @@
                 <!-- belum. ;-) -->
                 This document is copyrighted by Shlomi Fish
                 under the
-                <ulink url="http://creativecommons.org/licenses/by-sa/2.0/">Creative
-                    Commons Attribution Share-Alike License version 2.0</ulink>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by-sa/2.0/">Creative
+                    Commons Attribution Share-Alike License version 2.0</link>
                 (or at your option a greater version).
             </para>
         </legalnotice>
         <revhistory>
             <revision>
                 <revnumber>1134</revnumber>
-                <date>20 August 2004</date>
+                <date>2004-08-20</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Started working on this document after forking the template
@@ -51,7 +36,7 @@
             </revision>
             <revision>
                 <revnumber>1143</revnumber>
-                <date>21 August 2004</date>
+                <date>2004-08-21</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added up to the middle of the "Are you done insulting me?"
@@ -60,7 +45,7 @@
             </revision>
             <revision>
                 <revnumber>1152</revnumber>
-                <date>22 August 2004</date>
+                <date>2004-08-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "I'm just a geek".
@@ -68,7 +53,7 @@
             </revision>
             <revision>
                 <revnumber>1158</revnumber>
-                <date>22 August 2004</date>
+                <date>2004-08-22</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of the first IRC conversation ("BETH!").
@@ -76,7 +61,7 @@
             </revision>
             <revision>
                 <revnumber>1168</revnumber>
-                <date>24 August 2004</date>
+                <date>2004-08-24</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "She still is…"
@@ -84,7 +69,7 @@
             </revision>
             <revision>
                 <revnumber>1168</revnumber>
-                <date>27 August 2004</date>
+                <date>2004-08-27</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "Evil HTML E-mail"
@@ -92,7 +77,7 @@
             </revision>
             <revision>
                 <revnumber>1194</revnumber>
-                <date>27 August 2004</date>
+                <date>2004-08-27</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "TRIZ"
@@ -100,7 +85,7 @@
             </revision>
             <revision>
                 <revnumber>1203</revnumber>
-                <date>30 August 2004</date>
+                <date>2004-08-30</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "Divine's Good"
@@ -108,7 +93,7 @@
             </revision>
             <revision>
                 <revnumber>1266</revnumber>
-                <date>30 September 2004</date>
+                <date>2004-09-30</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the end of "'Abandoning' Debian" and fixed
@@ -117,7 +102,7 @@
             </revision>
             <revision>
                 <revnumber>1280</revnumber>
-                <date>2 October 2004</date>
+                <date>2004-10-02</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed many typos, many of which were discovered by
@@ -126,7 +111,7 @@
             </revision>
             <revision>
                 <revnumber>1284</revnumber>
-                <date>5 October 2004</date>
+                <date>2004-10-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the End of "RMS is Coming to Town".
@@ -134,7 +119,7 @@
             </revision>
             <revision>
                 <revnumber>1287</revnumber>
-                <date>7 October 2004</date>
+                <date>2004-10-07</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added to the End of "God Works in Mysterious Ways".
@@ -142,7 +127,7 @@
             </revision>
             <revision>
                 <revnumber>1289</revnumber>
-                <date>9 October 2004</date>
+                <date>2004-10-09</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed many typos reported by Uri Bruck.
@@ -150,7 +135,7 @@
             </revision>
             <revision>
                 <revnumber>1369</revnumber>
-                <date>20 May 2005</date>
+                <date>2005-05-20</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed some typos.
@@ -158,7 +143,7 @@
             </revision>
             <revision>
                 <revnumber>1373</revnumber>
-                <date>27 May 2005</date>
+                <date>2005-05-27</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Finished the document, and spell-checked it.
@@ -166,7 +151,7 @@
             </revision>
             <revision>
                 <revnumber>1379</revnumber>
-                <date>28 May 2005</date>
+                <date>2005-05-28</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Changed "FreeNode" to "Freenode". Also fixed two minor
@@ -175,16 +160,16 @@
             </revision>
             <revision>
                 <revnumber>1380</revnumber>
-                <date>28 May 2005</date>
+                <date>2005-05-28</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed some missing quotes, courtesy of Freenode's
-                    <ulink url="http://rob.axpr.net/">AthlonRob</ulink>.
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://rob.axpr.net/">AthlonRob</link>.
                 </revremark>
             </revision>
             <revision>
                 <revnumber>1382</revnumber>
-                <date>28 May 2005</date>
+                <date>2005-05-28</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Read the story cover to cover, and fixed many typos
@@ -193,7 +178,7 @@
             </revision>
             <revision>
                 <revnumber>1384</revnumber>
-                <date>30 May 2005</date>
+                <date>2005-05-30</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed some problems courtesy of Steve Harris.
@@ -201,7 +186,7 @@
             </revision>
             <revision>
                 <revnumber>1389</revnumber>
-                <date>1 June 2005</date>
+                <date>2005-06-01</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Added another joke to the last chapter.
@@ -209,7 +194,7 @@
             </revision>
             <revision>
                 <revnumber>1414</revnumber>
-                <date>14 October 2005</date>
+                <date>2005-10-14</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Revamped a part in "Divine's Good". Also fixed a lot of
@@ -218,7 +203,7 @@
             </revision>
             <revision>
                 <revnumber>1418</revnumber>
-                <date>17 October 2005</date>
+                <date>2005-10-17</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Made the "radius" detail much more realistic. (10 km
@@ -227,7 +212,7 @@
             </revision>
             <revision>
                 <revnumber>1443</revnumber>
-                <date>05 November 2005</date>
+                <date>2005-11-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Fixed the major/minor mix-ups in "God Works in Mysterious
@@ -236,7 +221,7 @@
             </revision>
             <revision>
                 <revnumber>1443</revnumber>
-                <date>05 November 2005</date>
+                <date>2005-11-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected a typo.
@@ -244,7 +229,7 @@
             </revision>
             <revision>
                 <revnumber>1559</revnumber>
-                <date>05 November 2005</date>
+                <date>2005-11-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected a typo and changed a word to a variant with
@@ -253,7 +238,7 @@
             </revision>
             <revision>
                 <revnumber>1685</revnumber>
-                <date>09 April 2007</date>
+                <date>2007-04-09</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Corrected a few errors in "Search of Lost Time"
@@ -261,7 +246,7 @@
             </revision>
             <revision>
                 <revnumber>1752</revnumber>
-                <date>09 May 2007</date>
+                <date>2007-05-09</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Revamped the beginning (discussion of how to get
@@ -270,7 +255,7 @@
             </revision>
             <revision>
                 <revnumber>1841</revnumber>
-                <date>15 July 2008</date>
+                <date>2008-07-15</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Revamped the start of the beach scene.
@@ -278,7 +263,7 @@
             </revision>
             <revision>
                 <revnumber>2710</revnumber>
-                <date>07 September 2009</date>
+                <date>2009-09-07</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Revamped the
@@ -287,7 +272,7 @@
             </revision>
             <revision>
                 <revnumber>2768</revnumber>
-                <date>14 September 2009</date>
+                <date>2009-09-14</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Made various corrections and enhancements.
@@ -295,7 +280,7 @@
             </revision>
             <revision>
                 <revnumber>3001</revnumber>
-                <date>06 October 2009</date>
+                <date>2009-10-06</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Some grammar, and formatting corrections. Changed
@@ -305,7 +290,7 @@
             </revision>
             <revision>
                 <revnumber>3135</revnumber>
-                <date>06 November 2009</date>
+                <date>2009-11-06</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Converted the spelling of "Maths" to the commonwealth
@@ -314,10 +299,10 @@
                 </revremark>
             </revision>
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="things_you_do_to_get_to_univ">
-    <title>The Things you do to Get to University</title>
+<section xml:id="things_you_do_to_get_to_univ"><info><title>The Things you do to Get to University</title></info>
+
     <para>
         My name is Jennifer. Jennifer Susan Raymond, to be exact.
         I live in Los-Angeles, in one of those nice neigbourhoods that they
@@ -634,8 +619,8 @@
         hand, and left the lab.
     </para>
 </section>
-<section id="are_you_done_insulting_me">
-    <title>Are You Done Insulting Me?</title>
+<section xml:id="are_you_done_insulting_me"><info><title>Are You Done Insulting Me?</title></info>
+
     <para>
         The next day, I approached Taylor in one of the breaks carrying a
         printout of this "How to become a Hacker" essay. I was quite vexed,
@@ -717,8 +702,8 @@
     <para>
         "Jenn, " he told me as he held my hands, "I'm sure you will.".
     </para>
-    <section id="are_you_done_part2">
-        <title>Are you Done - Part 2</title>
+    <section xml:id="are_you_done_part2"><info><title>Are you Done - Part 2</title></info>
+
         <para>
             Erisa dropped by my house on Saturday. My brother answered the
             door, and was shocked, and a bit scared of the way she looked.
@@ -823,8 +808,8 @@
         </para>
     </section>
 </section>
-<section id="just_a_geek">
-    <title>I'm just a Geek…</title>
+<section xml:id="just_a_geek"><info><title>I'm just a Geek…</title></info>
+
     <para>
         "I hate her, I positively and completely hate her." I said to Jonathan.
         (Who, like I said, was my boyfriend)
@@ -861,7 +846,7 @@
         Language) and its CSS (Cascading Style Sheets) thing. I created a
         homepage with:
     </para>
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
             <para>
                 Some information about myself. My bio, my C.V.
@@ -1008,8 +993,8 @@
         I stopped liking her after this twist of the conversation.
     </para>
 </section> <!-- End of "I'm just a geek…" -->
-<section id="hardware_hackers">
-    <title>Hardware Hackers are…</title>
+<section xml:id="hardware_hackers"><info><title>Hardware Hackers are…</title></info>
+
     <para>
         I decided to attend these LUG meetings, from then on. So on the next
         Wednesday, Taylor and I took the bus to the local university, and
@@ -1158,8 +1143,8 @@
         were talking about.
     </para>
 </section> <!-- End of Hardware Hackers are… -->
-<section id="beth">
-    <title>BETH!</title>
+<section xml:id="beth"><info><title>BETH!</title></info>
+
     <para>
         The next time we met, Erisa came to me, she showed me some Perl
         tutorials (Taylor was right!) and started instructing me on how to
@@ -1176,70 +1161,70 @@
         happened:
     </para>
     <programlisting>
-        <![CDATA[
-                -->  You are now talking on #perl
+
+                --&gt;  You are now talking on #perl
                 ---  Topic for #perl is Welcome to #perl :: Do not flood, use
                      http://sial.org/pbot/perl/ to show us code.  This is a
                      Perl help channel, please ask your question. :: Latest
                      perl golf can be found at http://terje2.perlgolf.org ::
                      Latest perl is 5.8.5
                 ---  Topic for #perl set by qualoo
-          <jennray>  Hi all!
-          <rindolf>  So like I was saying, I did not had a serious experience
+          &lt;jennray&gt;  Hi all!
+          &lt;rindolf&gt;  So like I was saying, I did not had a serious experience
                      with the BSDs, so I could not say.
-          <rindolf>  jennray: hi!
-          <jennray>  Can you help me with debugging some code? I'm trying
+          &lt;rindolf&gt;  jennray: hi!
+          &lt;jennray&gt;  Can you help me with debugging some code? I'm trying
                      to learn Perl.
-          <rindolf>  Sure. Just don't paste it here. Use the pastebot.
-          <rindolf>  perlbot: nopaste
-          <perlbot>  Paste your code here and #perl will be able to view it:
+          &lt;rindolf&gt;  Sure. Just don't paste it here. Use the pastebot.
+          &lt;rindolf&gt;  perlbot: nopaste
+          &lt;perlbot&gt;  Paste your code here and #perl will be able to view it:
                      http://sial.org/pbot/perl
-          <jennray>  Okey dokey.
-          <rindolf>  jennray: I see on your /whois that your name is "Jennifer
+          &lt;jennray&gt;  Okey dokey.
+          &lt;rindolf&gt;  jennray: I see on your /whois that your name is "Jennifer
                      Raymond".
-          <rindolf>  So you're a girl?
-          <jennray>  Yes, I am.
-          <rindolf>  jennray: nice. We could always use more girl perlers.
-          <rindolf>  We have another female regular here called "beth". She,
+          &lt;rindolf&gt;  So you're a girl?
+          &lt;jennray&gt;  Yes, I am.
+          &lt;rindolf&gt;  jennray: nice. We could always use more girl perlers.
+          &lt;rindolf&gt;  We have another female regular here called "beth". She,
                      on the other hand, knows her stuff pretty well.
-          <jennray>  :-)
-          <rindolf>  Also, guys flirt with her all the time here. (and she
+          &lt;jennray&gt;  :-)
+          &lt;rindolf&gt;  Also, guys flirt with her all the time here. (and she
                      flirts back).
-          <jennray>  Well, I have a boyfriend.
-          <rindolf>  So does beth.
-                -->  beth has joined #perl
-          <rindolf>  jennray: talk about the devil!
-          <rindolf>  BETH!
-             <beth>  RINDOLF! HOW ARE YOU?
-          <rindolf>  jennray: something you need to know about beth is that
+          &lt;jennray&gt;  Well, I have a boyfriend.
+          &lt;rindolf&gt;  So does beth.
+                --&gt;  beth has joined #perl
+          &lt;rindolf&gt;  jennray: talk about the devil!
+          &lt;rindolf&gt;  BETH!
+             &lt;beth&gt;  RINDOLF! HOW ARE YOU?
+          &lt;rindolf&gt;  jennray: something you need to know about beth is that
                      you must always greet her with ALL-CAPS.
-          <jennray>  Heh heh.
-          <rindolf>  beth: jennray is trying to learn Perl and she has a
+          &lt;jennray&gt;  Heh heh.
+          &lt;rindolf&gt;  beth: jennray is trying to learn Perl and she has a
                      problematic code. jennray: will you please post it to the
                      pastebot now?
-          <jennray>  Yeah, OK.
-        <pasteling>  "jennray" at 127.0.0.1 pasted "Problematic Code"
+          &lt;jennray&gt;  Yeah, OK.
+        &lt;pasteling&gt;  "jennray" at 127.0.0.1 pasted "Problematic Code"
                      (16 lines) at http://sial.org/pbot/3326
-             <beth>  hmmm… jennray, are you sure you want to use a '*' in the
+             &lt;beth&gt;  hmmm… jennray, are you sure you want to use a '*' in the
                      regex on the last character and not on the whole string?
-          <jennray>  Oh! It affects just the last character?
-          <rindolf>  Yes. You need to cluster it by using (?:mystring) or
+          &lt;jennray&gt;  Oh! It affects just the last character?
+          &lt;rindolf&gt;  Yes. You need to cluster it by using (?:mystring) or
                      capture it using (mystring).
-          <jennray>  Trying…
-          <jennray>  It works!
-          <jennray>  Thanks beth and rindolf!
-             <beth>  no problem. i'm here to serve.
-          <rindolf>  beth++
-          <rindolf>  jennray: whenever someone helps you you must increase
+          &lt;jennray&gt;  Trying…
+          &lt;jennray&gt;  It works!
+          &lt;jennray&gt;  Thanks beth and rindolf!
+             &lt;beth&gt;  no problem. i'm here to serve.
+          &lt;rindolf&gt;  beth++
+          &lt;rindolf&gt;  jennray: whenever someone helps you you must increase
                      their karma by plus-plusing them.
-          <jennray>  rindolf: ah, OK.
-          <jennray>  beth++
+          &lt;jennray&gt;  rindolf: ah, OK.
+          &lt;jennray&gt;  beth++
                   *  beth hugs jennray
-        ]]>
+
     </programlisting>
 </section> <!-- End of Section "BETH!" -->
-<section id="she_still_is">
-    <title>"She still is…"</title>
+<section xml:id="she_still_is"><info><title>"She still is…"</title></info>
+
     <para>
     Erisa continued to tutor me, and I continued to learn new things. Perl
     is positively huge and has many nuances. Eventually, Erisa told me that I
@@ -1523,8 +1508,8 @@
         and retreated, while she returned to her book.
     </para>
 </section>    <!-- End of Section "She still is…" -->
-<section id="mime_poe_xul_other_beasts">
-    <title>MIME, POE, XUL and other Beasts</title>
+<section xml:id="mime_poe_xul_other_beasts"><info><title>MIME, POE, XUL and other Beasts</title></info>
+
     <para>
         I continued to learn new things everyday. With the help of Erisa,
         I learned about C, (which is much sexier than Pascal), Internet
@@ -1647,8 +1632,8 @@
         "Cool. ", I said, "Now back to designing this baby…"
     </para>
 </section>
-<section id="evil_html_email">
-    <title>"That would be as Evil as HTML E-mail is…"</title>
+<section xml:id="evil_html_email"><info><title>"That would be as Evil as HTML E-mail is…"</title></info>
+
     <para>
         Jeff dropped by a few days later. I offered him a drink and we
         chatted about the latest Linux developments, then we went to my room.
@@ -1664,25 +1649,25 @@
         document format I knew until then. Here's a small glimpse of it:
     </para>
     <programlisting>
-        <![CDATA[
-<orderedlist>
-    <listitem>
-        <para>
+
+&lt;orderedlist&gt;
+    &lt;listitem&gt;
+        &lt;para&gt;
             First Item.
-        </para>
-    </listitem>
-    <listitem>
-        <para>
+        &lt;/para&gt;
+    &lt;/listitem&gt;
+    &lt;listitem&gt;
+        &lt;para&gt;
             Second Item.
-        </para>
-    </listitem>
-    <listitem>
-        <para>
+        &lt;/para&gt;
+    &lt;/listitem&gt;
+    &lt;listitem&gt;
+        &lt;para&gt;
             Fourth Item. Just kidding! It's the third.
-        </para>
-    </listitem>
-</orderedlist>
-        ]]>
+        &lt;/para&gt;
+    &lt;/listitem&gt;
+&lt;/orderedlist&gt;
+
     </programlisting>
     <para>
         But with a lot of fast typing and copy and pasting, it was pretty
@@ -1743,8 +1728,8 @@
         on the mailing list. It was all a lot of fun.
     </para>
 </section>
-<section id="triz">
-    <title>TRIZ</title>
+<section xml:id="triz"><info><title>TRIZ</title></info>
+
     <para>
         At one of our semi-weekly gym sessions, Taylor and I discussed
         the latest happenings and traded gossip. Somehow the conversation
@@ -1839,41 +1824,41 @@
         channel again, my mind still occupied by this.
     </para>
     <programlisting>
-        <![CDATA[
-          <jennray>  Hi all, I'm back.
-          <rindolf>  jennray: hi!
-             <beth>  hi jennray!
-          <jennray>  Hey beth, rindolf.
-                -->  perlygatekeeper has joined #perl
-  <perlygatekeeper>  Good morning, #perl!
-             <beth>  good morning, perly!
-          <rindolf>  Hi perly!
-          <jennray>  Hi perly.
-          <jennray>  Can I consult you guys on a personal matter?
-          <rindolf>  jennray: shoot.
-          <jennray>  OK, here goes: my best friend (a boy) has started dating
+
+          &lt;jennray&gt;  Hi all, I'm back.
+          &lt;rindolf&gt;  jennray: hi!
+             &lt;beth&gt;  hi jennray!
+          &lt;jennray&gt;  Hey beth, rindolf.
+                --&gt;  perlygatekeeper has joined #perl
+  &lt;perlygatekeeper&gt;  Good morning, #perl!
+             &lt;beth&gt;  good morning, perly!
+          &lt;rindolf&gt;  Hi perly!
+          &lt;jennray&gt;  Hi perly.
+          &lt;jennray&gt;  Can I consult you guys on a personal matter?
+          &lt;rindolf&gt;  jennray: shoot.
+          &lt;jennray&gt;  OK, here goes: my best friend (a boy) has started dating
                      a good friend of mine, who treats her dates awfully,
                      and looks positively awful (purple hair, too much and
                      inconsistent makeup, and general neglect).
-          <jennray>  She's not really what was his type of girls so far, so
+          &lt;jennray&gt;  She's not really what was his type of girls so far, so
                      I'm afraid he's going to get hurt. What should I do?
-          <rindolf>  jennray: TRIZ!
-          <jennray>  rindolf: what's TRIZ?
-          <rindolf>  TRIZ == Theory of Inventive Problem Solving.
+          &lt;rindolf&gt;  jennray: TRIZ!
+          &lt;jennray&gt;  rindolf: what's TRIZ?
+          &lt;rindolf&gt;  TRIZ == Theory of Inventive Problem Solving.
                   *  jennray is puzzled
-          <jennray>  That should be TIPS.
-          <rindolf>  jennray: well, these are the initials in Russian.
-          <jennray>  rindolf: ah OK.
-  <perlygatekeeper>  jennray: why don't you just perform a makeover on this
+          &lt;jennray&gt;  That should be TIPS.
+          &lt;rindolf&gt;  jennray: well, these are the initials in Russian.
+          &lt;jennray&gt;  rindolf: ah OK.
+  &lt;perlygatekeeper&gt;  jennray: why don't you just perform a makeover on this
                      girl and get her to at least look better.
-          <jennray>  But what about her attitude?
-  <perlygatekeeper>  Well, one bird in the hand is better than two in the
+          &lt;jennray&gt;  But what about her attitude?
+  &lt;perlygatekeeper&gt;  Well, one bird in the hand is better than two in the
                      bush.
-          <jennray>  perly: you might be right.
+          &lt;jennray&gt;  perly: you might be right.
                   *  rindolf gives perlygatekeeper the international TRIZ
                      medal.
-          <jennray>  perlygatekeeper++
-        ]]>
+          &lt;jennray&gt;  perlygatekeeper++
+
     </programlisting>
     <para>
         After this, I picked up the phone and called Jeff. "Jeff, you know
@@ -1894,8 +1879,8 @@
         "I have this wicked idea…"
     </para>
 </section>
-<section id="divine_is_good">
-    <title>"Divine"'s Good</title>
+<section xml:id="divine_is_good"><info><title>"Divine"'s Good</title></info>
+
     <para>
         That Friday's afternoon, Jonathan, Jeff, Amanda (who is Jeff's
         girlfriend as you may remember), and I arrived at Erisa's home
@@ -2116,8 +2101,8 @@
         "I'd love to, Mrs. Siegel.", I said. "Yeah, me too" everybody said.
     </para>
 </section>
-<section id="commiting_adultery">
-    <title>Committing Adultery in Your Heart is…</title>
+<section xml:id="commiting_adultery"><info><title>Committing Adultery in Your Heart is…</title></info>
+
     <para>
         We did not stay late enough to see Eve return from her date. The next
         Monday, I arrived at school in time only to discover my first lesson
@@ -2357,8 +2342,8 @@
         both laughed.
     </para>
 </section>
-<section id="so_exciting">
-    <title>Man, it was so exciting!</title>
+<section xml:id="so_exciting"><info><title>Man, it was so exciting!</title></info>
+
     <para>
         Eve has certainly changed. Taylor, Eve and I socialised a lot in
         School, and spent a lot of time discussing our Media-IRC project,
@@ -2457,8 +2442,8 @@
         Man, it was so exciting!
     </para>
 </section>
-<section id="raesha">
-    <title>"Raesha - meh ho owmer?"</title>
+<section xml:id="raesha"><info><title>"Raesha - meh ho owmer?"</title></info>
+
     <para>
         Eve dropped by the computer lab some time later. "Listen, my extended
         family is holding a Passover Seder at our house next Saturday's night.
@@ -2613,12 +2598,12 @@
         very well hidden."
     </para>
 </section>
-<section id="debian">
-    <title>"Abandoning" Debian</title>
+<section xml:id="debian"><info><title>"Abandoning" Debian</title></info>
+
     <programlisting>
-        <![CDATA[
-From: Eve Siegel <eve@eve-siegel.eu.org>
-To: Debian Devel <debian-devel@lists.debian.org>
+
+From: Eve Siegel &lt;eve@eve-siegel.eu.org&gt;
+To: Debian Devel &lt;debian-devel@lists.debian.org&gt;
 Subject: "Abandoning" Debian
 
 Hi all!
@@ -2700,15 +2685,15 @@ officially no longer a Debianist.
 Sincerely yours,
 
     Eve Siegel ("Erisa").
-        ]]>
+
     </programlisting>
     <para>
         Eve has sent me a copy of this message. It started an entire
         active discussion at the mailing list to which it was sent.
     </para>
 </section>
-<section id="rms">
-    <title>RMS is Coming to Town</title>
+<section xml:id="rms"><info><title>RMS is Coming to Town</title></info>
+
     <para>
         One day when Jonathan, Taylor and I were having a conversation
         in one of our school hallways, we saw Eve approaching us, carrying
@@ -2943,8 +2928,8 @@ Sincerely yours,
         ask him that on E-mail."
     </para>
 </section>
-<section id="homecoming_queen">
-    <title>"Who will Take a Second Look at it, unless…"</title>
+<section xml:id="homecoming_queen"><info><title>"Who will Take a Second Look at it, unless…"</title></info>
+
     <para>
         I don't remember whose idea it was, but we ended up enrolling Eve
         into the Homecoming Queen contest. When Eve discovered she was
@@ -3014,8 +2999,8 @@ Sincerely yours,
         She did not put it in her resumé.
     </para>
 </section>
-<section id="god_works">
-    <title>God Works in Mysterious Ways</title>
+<section xml:id="god_works"><info><title>God Works in Mysterious Ways</title></info>
+
     <para>
         Taylor, Eve, Jonathan and I gathered at the living room in my
         house, together with our college acceptance letters, and each
@@ -3118,8 +3103,8 @@ Sincerely yours,
         me, I think we still have some homework to do… high school one."
     </para>
 </section>
-<section id="search_of_lost_time">
-    <title>I can write my own replacement for 'In Search of Lost Time'</title>
+<section xml:id="search_of_lost_time"><info><title>I can write my own replacement for 'In Search of Lost Time'</title></info>
+
     <para>
         After the summer vacation arrived, and we had some time before our
         Sophomore year at the university, Eve said that she'd rather not work
@@ -3253,8 +3238,8 @@ Sincerely yours,
         completely non-serious way…
     </para>
 </section>
-<section id="most_of_our_graduates">
-    <title>Most of our Electrical Engineering graduates cannot…</title>
+<section xml:id="most_of_our_graduates"><info><title>Most of our Electrical Engineering graduates cannot…</title></info>
+
     <para>
         "Man, this is so exciting" Eve said as the four of us were entering the
         hall in which the beginning ceremony of the new Stanford
@@ -3333,8 +3318,8 @@ Sincerely yours,
         "Hi!", Eve continued, "I'm a… I'm a great, I'm a great adm…
         ehhhh…," and she fainted into Taylor's arms.
     </para>
-    <section id="hex_dollar">
-        <title>Hexadecimal Dollar</title>
+    <section xml:id="hex_dollar"><info><title>Hexadecimal Dollar</title></info>
+
         <para>
             We were in a relatively quiet side room. Prof. Knuth was there
             and also the four of us, (with Eve still unconscious) and a
@@ -3386,4 +3371,4 @@ Sincerely yours,
         </para>
     </section>
 </section>
-</article>    <!-- End of the article -->
+</article>

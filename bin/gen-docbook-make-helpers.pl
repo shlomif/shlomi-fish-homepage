@@ -341,6 +341,7 @@ my @documents = (
         id         => "human-hacking-field-guide",
         path       => "humour/human-hacking",
         base       => "human-hacking-field-guide",
+        db_ver     => 5,
         custom_css => 1,
     },
     {

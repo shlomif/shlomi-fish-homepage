@@ -244,9 +244,10 @@ my @documents = (
     },
 
     {
-        id   => "isr-pales-conflict-solution",
-        path => "philosophy/israel-pales",
-        base => "isr-pales-conflict-solution",
+        id     => "isr-pales-conflict-solution",
+        path   => "philosophy/israel-pales",
+        base   => "isr-pales-conflict-solution",
+        db_ver => 5,
     },
 
     {

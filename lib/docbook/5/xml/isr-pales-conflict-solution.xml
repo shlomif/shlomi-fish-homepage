@@ -1,42 +1,26 @@
-<?xml version='1.0' encoding='utf-8'?>
-<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>A Solution to the Israeli-Palestinian Conflict</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-<!-- -->
-<!-- $Id$ -->
-<!-- -->
-<!-- $Log$ -->
-<!-- -->
-<!-- General reminders: -->
-
-<article id="index">
-    <articleinfo>
-        <title>A Solution to the Israeli-Palestinian Conflict</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@shlomifish.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2004</year>
             <holder>Shlomi Fish</holder>
         </copyright>
-      <legalnotice id="main_legal_notice">
+      <legalnotice xml:id="main_legal_notice">
             <!-- Ci vis pacem -->
             <para>
                 <!-- belum. ;-) -->
                 This document is copyrighted by Shlomi Fish
                 under the
-                <ulink url="http://creativecommons.org/licenses/by/2.0/">Creative
-                    Commons Attribution License version 2.0</ulink> (or at
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.0/">Creative
+                    Commons Attribution License version 2.0</link> (or at
                 your option a greater version).
             </para>
         </legalnotice>
@@ -45,7 +29,7 @@
 
             <revision>
                 <revnumber>1095</revnumber>
-                <date>16 July 2004</date>
+                <date>2004-07-16</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Started working on this document after forking the template
@@ -55,7 +39,7 @@
 
             <revision>
                 <revnumber>1319</revnumber>
-                <date>17 November 2004</date>
+                <date>2004-11-17</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     The document is finished. Spell-checked. Now to get
@@ -65,7 +49,7 @@
 
             <revision>
                 <revnumber>4885</revnumber>
-                <date>5 June 2011</date>
+                <date>2011-06-05</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Convert double and single quotes to Unicode.
@@ -73,10 +57,10 @@
             </revision>
 
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="introduction">
-    <title>Introduction</title>
+<section xml:id="introduction"><info><title>Introduction</title></info>
+
     <para>
         The Israeli-Palestinian conflict is probably the single gravest
         problem in Israeli external politics, at present. (and naturally
@@ -91,24 +75,24 @@
         outside the occupied territories. (unless explicitly said otherwise)
     </para>
     <para>
-        (Note that this article is based on <ulink url="http://www.advogato.org/person/shlomif/diary.html?start=197">an older and
-            unofficial essay</ulink>
-        that the author of these line wrote <ulink url="http://www.advogato.org/person/shlomif/">in his online
-            diary</ulink>. Its content is still relevant, but otherwise
+        (Note that this article is based on <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.advogato.org/person/shlomif/diary.html?start=197">an older and
+            unofficial essay</link>
+        that the author of these line wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.advogato.org/person/shlomif/">in his online
+            diary</link>. Its content is still relevant, but otherwise
         superseded by this essay.
         )
     </para>
     <!-- TODO : write more things in the introduction. (?) -->
 </section>
-<section id="status_quo">
-    <title>Analysis of the Current Situation</title>
+<section xml:id="status_quo"><info><title>Analysis of the Current Situation</title></info>
+
     <para>
         Before we begin proposing a solution let’s enumerate the various
         elements of the current situation, be they problematic or not, and
         explain what’s wrong with them.
     </para>
     <para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     <emphasis role="bold">A Partial Palestinian Autonomy
@@ -170,15 +154,15 @@
         </orderedlist>
     </para>
 </section>
-<section id="ethical_logical_facts">
-    <title>Some Ethical and Logical Facts (and their Implications)</title>
+<section xml:id="ethical_logical_facts"><info><title>Some Ethical and Logical Facts (and their Implications)</title></info>
+
     <para>
         This section will cover several logical and ethical principles that
         are necessary for formulating a proper solution. It will explain why
         they hold and also briefly cover their implications.
     </para>
-    <section id="right_to_settle">
-        <title>The Right to Live Everywhere</title>
+    <section xml:id="right_to_settle"><info><title>The Right to Live Everywhere</title></info>
+
         <para>
             A Person has a basic right to live everywhere he chooses and can
             support himself. Depriving a person of his home or banishing him
@@ -201,8 +185,8 @@
             are the rightful owners of the Palestine.
         </para>
     </section>
-    <section id="force_protect">
-        <title>No Person can Force Another to Protect Himself</title>
+    <section xml:id="force_protect"><info><title>No Person can Force Another to Protect Himself</title></info>
+
         <para>
             On the other hand, forcing a person to protect someone against
             his will is immoral. This is simply because it goes against the
@@ -215,16 +199,16 @@
             should not be required to do this.
         </para>
     </section>
-    <section id="right_to_bear_arms">
-        <title>Right to Bear Arms</title>
+    <section xml:id="right_to_bear_arms"><info><title>Right to Bear Arms</title></info>
+
         <para>
             It should be noted that a person has a basic right to bear arms,
             and carry weapons. Again, this is part of the freedom of the
             individual.
         </para>
     </section>
-    <section id="blaming_others_for_ones_problems">
-        <title>Blaming Others for One’s Own Problems</title>
+    <section xml:id="blaming_others_for_ones_problems"><info><title>Blaming Others for One’s Own Problems</title></info>
+
         <para>
             A person or group of persons who routinely blame their own
             problems on others are behaving irrationally. By all means, every
@@ -239,15 +223,15 @@
         TODO: Add about government discrimination.
     -->
 </section>
-<section id="israel_short_term_solution">
-    <title>Israel’s Short-Term Solution to the Problem</title>
+<section xml:id="israel_short_term_solution"><info><title>Israel’s Short-Term Solution to the Problem</title></info>
+
     <para>
         This is a short-term solution to the problem. However, Israel has
         many other constitutional problems that make a permanent resolution
         problematic. They will be discussed in the next section.
     </para>
     <para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     Israeli soldiers should be given a choice of whether
@@ -287,8 +271,8 @@
         settlements and their inhabitants.
     </para>
 </section>
-<section id="israel_long_term_solution">
-    <title>The Israeli Long-Term Part of the Solution</title>
+<section xml:id="israel_long_term_solution"><info><title>The Israeli Long-Term Part of the Solution</title></info>
+
     <para>
         Israel has a constitutional problem that prevents proper external
         relationship with Arabs. The problem is that Israel has constitutional
@@ -317,9 +301,9 @@
         Arabs are at the moment exempted for army service, while Jews are
         obliged to serve there. To solve it either the army should be mandatory
         for everybody, or voluntary for everybody. The best solution is
-        <ulink url="http://groups.yahoo.com/group/philosophy-il/message/25">to
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.yahoo.com/group/philosophy-il/message/25">to
             eliminate the draft completely and enact a voluntary
-            service</ulink>.
+            service</link>.
     </para>
     <para>
         At the moment, there is also a discrimination in government funding
@@ -333,8 +317,8 @@
         that serves as the basis for such sentiments.
     </para>
 </section>
-<section id="pales_solution">
-    <title>Palestinian Solution</title>
+<section xml:id="pales_solution"><info><title>Palestinian Solution</title></info>
+
     <para>
         Remember the peaceful and prosperous period of time a few years
         ago? There were few acts of violence, Palestinians cooperated with
@@ -353,13 +337,13 @@
         and those who are should quit.
     </para>
 </section>
-<section id="geneva_accord">
-    <title>What’s Wrong with the Geneva Accord</title>
+<section xml:id="geneva_accord"><info><title>What’s Wrong with the Geneva Accord</title></info>
+
     <para>
         The Geneva Accord is not adequate as it is three serious flaws:
     </para>
     <para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     It advocates disarming the terror organizations. I don’t
@@ -397,15 +381,15 @@
         </orderedlist>
     </para>
 </section>
-<section id="separation_fence">
-    <title>What’s Wrong with the Separation Fence?</title>
+<section xml:id="separation_fence"><info><title>What’s Wrong with the Separation Fence?</title></info>
+
     <para>
         A suggestion was made to build a separation fence, protecting Israel
         and the settlements from the Palestinians. This suggestion is wrong from
         the following reasons:
     </para>
     <para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
                     It is still based on the assumption that the problem lies
@@ -464,4 +448,4 @@
         </orderedlist>
     </para>
 </section>
-</article>    <!-- End of the article -->
+</article>

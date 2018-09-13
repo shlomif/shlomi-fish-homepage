@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 
-use MooX qw/ late /;
+use Moo;
 use Getopt::Long qw/ GetOptionsFromArray /;
 
 use Cache::File ();
@@ -12,8 +12,8 @@ use Data::Munge qw/ list2re /;
 use File::Update qw/ modify_on_change write_on_change /;
 use Path::Tiny qw/ path /;
 
-has '_minifier_conf_fn' => ( is => 'rw', isa => 'Str' );
-has [ '_temp_dir', '_proc_dir' ] => ( is => 'rw' );
+has '_minifier_conf_fn' => ( is => 'rw', );
+has [ '_temp_dir', '_proc_dir' ] => ( is => 'rw', );
 
 my $XMLNS_NEEDLE = <<'EOF';
  xmlns:db="http://docbook.org/ns/docbook" xmlns:d="http://docbook.org/ns/docbook" xmlns:vrd="http://www.shlomifish.org/open-source/projects/XML-Grammar/Vered/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml"

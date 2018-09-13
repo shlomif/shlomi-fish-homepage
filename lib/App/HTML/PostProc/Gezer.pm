@@ -118,7 +118,6 @@ sub run
 
     my $APPLY_TEXTS = $ENV{APPLY_TEXTS};
     my $INCS        = !$ENV{NO_I};
-    my $FORTUNES    = $ENV{F};
     my $ALWAYS_MIN  = $ENV{ALWAYS_MIN};
 
     foreach my $bn (@$argv)
@@ -141,21 +140,10 @@ s#^\({5}include[= ](['"])([^'"]+)\1\){5}\n#path("lib/$2")->slurp_utf8#egms;
 s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({count => 1});chomp$l;$l#egms;
                 }
 
-                if ($FORTUNES)
-                {
-                    foreach my $class (qw(info irc-conversation))
-                    {
-                        my $table_from = qq{<table class="$class">};
-                        my $table_to   = qq{<table class="$class" summary="">};
-
-                        $text =~ s#\Q$table_from\E#$table_to#g;
-                    }
-                }
-
                 $text =~ s# +$##gms;
                 $text =~ s#</(?:div|li|html)>\n\K\n##g;
 
-                $text =~ s#\s+xml:space="[^"]*"##g;
+                # $text =~ s#\s+xml:space="[^"]*"##g;
                 $text =~ s#(<div)(?:\s+(?:$ALTERNATIVES_TEXT))+#$1 #gms;
 
 =begin removed

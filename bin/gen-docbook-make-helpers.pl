@@ -299,9 +299,10 @@ my @documents = (
         db_ver => 5,
     },
     {
-        id   => "park-lisp-informal-spec",
-        path => "open-source/projects/Park-Lisp",
-        base => "park-lisp-informal-spec",
+        id     => "park-lisp-informal-spec",
+        path   => "open-source/projects/Park-Lisp",
+        base   => "park-lisp-informal-spec",
+        db_ver => 5,
     },
     {
         id => "putting-all-cards-on-the-table-2013",

@@ -1,28 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<!-- Converted by db4-upgrade version 1.0 -->
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index">
+    <info><title>Park - Park is, is not, is too, is not Arc</title>
 
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd"[
-]>
-<!-- -->
-<!-- $Id$ -->
-<!-- -->
-<!-- $Log$ -->
-<!-- -->
-<!-- General reminders: -->
-
-<article id="index">
-    <articleinfo>
-        <title>Park - Park is, is not, is too, is not Arc</title>
         <authorgroup>
-            <author>
-                <firstname>Shlomi</firstname>
-                <surname>Fish</surname>
-                <affiliation>
+            <author><personname><firstname>Shlomi</firstname><surname>Fish</surname></personname><affiliation>
                     <address>
                         <email>shlomif@cpan.org</email>
                     </address>
-                </affiliation>
-            </author>
+                </affiliation></author>
          </authorgroup>
          <copyright>
              <year>2004</year>
@@ -34,8 +19,8 @@
                 <!-- belum. ;-) -->
                 This document is copyrighted by Shlomi Fish
                 under the
-                <ulink url="http://creativecommons.org/licenses/by/2.5/">Creative
-                    Commons Attribution License version 2.5</ulink>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
+                    Commons Attribution License version 2.5</link>
                 (or at your option a greater version). The code samples are
                 under the Public Domain.
             </para>
@@ -43,7 +28,7 @@
         <revhistory>
             <revision>
                 <revnumber>3</revnumber>
-                <date>21 June 2006</date>
+                <date>2006-06-21</date>
                 <authorinitials>shlomif</authorinitials>
                 <revremark>
                     Started working on this document after forking the template
@@ -51,15 +36,15 @@
                 </revremark>
             </revision>
         </revhistory>
-    </articleinfo>
+    </info>
 
-<section id="about_park">
-    <title>Park - Park is, is not, is too, is not Arc</title>
+<section xml:id="about_park"><info><title>Park - Park is, is not, is too, is not Arc</title></info>
+
 
 
     <para>
     Park
-        <footnote id="about_the_slogan">
+        <footnote xml:id="about_the_slogan">
 
             <para>
             The "Park - Park is, is not, is too, is not Arc" slogan is
@@ -68,8 +53,8 @@
             </para>
         </footnote>
     is a new dialect of Lisp, based on
-    <ulink url="http://www.paulgraham.com/arc.html">Paul
-    Graham's Arc effort</ulink>. Park is in fact a malicious and incompatible
+    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arc.html">Paul
+    Graham's Arc effort</link>. Park is in fact a malicious and incompatible
     fork of Arc. A fork not of the code, which is still not available to the
     public, but of the concept and motivation.
     </para>
@@ -80,11 +65,11 @@
     I disagree with Graham about some of his language design elements. A few
     days ago I came with a revelation that it was hopeless waiting for
     Mr. Graham to actually release either a final spec to the public of Arc
-    or a actual working code. Arc <ulink url="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</ulink>. It's
+    or a actual working code. Arc <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</link>. It's
     been almost 5 years from now, and there's still not a working code or a
     coherent spec. Furthermore, Graham stopped adding the ideas people sent
-    him to the <ulink url="http://www.archub.org/arcsug.txt">emails collection
-    containing them</ulink> (including one that I sent a few years ago, which
+    him to the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.archub.org/arcsug.txt">emails collection
+    containing them</link> (including one that I sent a few years ago, which
     I know he is aware of because he responded to my message).
     </para>
 
@@ -92,12 +77,12 @@
     Thus enter Park. The name stems from "Parc" but is actually an English
     world. One can say that Park is a LISP that starts with "P", or that
     working with it is like a stroll in the Park. Park has
-    <ulink url="http://www.paulgraham.com/popular.html">the design goals of
-    Arc</ulink> but:
+    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/popular.html">the design goals of
+    Arc</link> but:
     </para>
 
     <para>
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
     <listitem>
     <para>
     Is different and incompatible.
@@ -136,7 +121,7 @@
 
     <para>
     One note about myself. My name is
-    <ulink url="http://www.shlomifish.org/">Shlomi Fish</ulink> and I'm a
+    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/">Shlomi Fish</link> and I'm a
     software enthusiast and a writer. I am not the ideal person to design
     Park, but I believe and hope that I have the right attitude. If you happen
     to know better about some things, please post your corrections to the
@@ -146,10 +131,10 @@
     naturally everyone can edit the wiki.
     </para>
 
-    <section id="why_am_i_doing_it">
-        <title>Why am I Doing it?</title>
+    <section xml:id="why_am_i_doing_it"><info><title>Why am I Doing it?</title></info>
+
         <blockquote>
-            <attribution><ulink url="http://groups.google.com/group/comp.lang.perl/msg/620a1599759c9bc?hl=en">Larry Wall</ulink></attribution>
+            <attribution><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.google.com/group/comp.lang.perl/msg/620a1599759c9bc?hl=en">Larry Wall</link></attribution>
             <para>
             All language designers are arrogant. Comes with the territory.
             </para>
@@ -158,10 +143,10 @@
             Why am I doing it? For several reasons:
         </para>
         <para>
-            <orderedlist>
+            <orderedlist inheritnum="ignore" continuation="restarts">
                 <listitem>
                     <para>
-                        <ulink url="http://www.amazon.com/gp/product/0066620724/103-5528911-1875020">Because it's fun.</ulink> This is by itself a good
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/gp/product/0066620724/103-5528911-1875020">Because it's fun.</link> This is by itself a good
                         reason.
                     </para>
                 </listitem>
@@ -170,8 +155,8 @@
                         Because I found that designing your own language is
                         one of the best ways to learn more about the original
                         languages it is based on. When I designed the
-                        <ulink url="http://www.shlomifish.org/rindolf/">Perl
-                            dialect "Rindolf"</ulink>, I learned that some
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/rindolf/">Perl
+                            dialect "Rindolf"</link>, I learned that some
                         features I suggested for it were already doable in
                         Perl 5.
                     </para>
@@ -191,9 +176,9 @@
                         some relics of the Lisp distant past, where it was
                         expected to run
                         on such now obscure systems as
-                        <ulink url="http://en.wikipedia.org/wiki/PDP-10">the
-                            PDP-10</ulink> and
-                        <ulink url="http://en.wikipedia.org/wiki/Incompatible_Timesharing_System">ITS</ulink> or the LISP Machine. They do not correspond to
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/PDP-10">the
+                            PDP-10</link> and
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Incompatible_Timesharing_System">ITS</link> or the LISP Machine. They do not correspond to
                         the modern's world "All the world is a VAX" and
                         "Everything on top is a UNIX" reality. (Which has
                         persisted for better or for worse).
@@ -216,27 +201,27 @@
         </para>
     </section>
 
-    <section id="why_a_new_dialect">
-        <title>Why a new Dialect?</title>
+    <section xml:id="why_a_new_dialect"><info><title>Why a new Dialect?</title></info>
+
 
         <para>
-            Paul Graham explains it very well in <ulink url="http://www.paulgraham.com/arcfaq.html">the
-                Arc FAQ</ulink>, and in
-            <ulink url="http://www.paulgraham.com/popular.html">"Being
-                Popular"</ulink>. Park is Arc done faster, and hopefully
+            Paul Graham explains it very well in <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arcfaq.html">the
+                Arc FAQ</link>, and in
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/popular.html">"Being
+                Popular"</link>. Park is Arc done faster, and hopefully
             also better.
         </para>
     </section>
 </section>
 
-<section id="what_park_is_based_on">
-    <title>What Park is based on</title>
+<section xml:id="what_park_is_based_on"><info><title>What Park is based on</title></info>
+
 
     <para>
     The following languages have influenced Park:
     </para>
 
-    <orderedlist>
+    <orderedlist inheritnum="ignore" continuation="restarts">
 
     <listitem>
     <para>
@@ -266,14 +251,14 @@
     </orderedlist>
 </section>
 
-<section id="elements_of_design">
-    <title>Elements of Design</title>
-    <section id="arc_is_object_oriented">
-        <title>Arc is Object Oriented (Everything is an Object)</title>
+<section xml:id="elements_of_design"><info><title>Elements of Design</title></info>
+
+    <section xml:id="arc_is_object_oriented"><info><title>Arc is Object Oriented (Everything is an Object)</title></info>
+
 
         <para>
-        Paul Graham wrote <ulink url="http://www.paulgraham.com/noop.html">Why
-        Arc isn't Especially Object-Oriented.</ulink>. His conclusion for why
+        Paul Graham wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/noop.html">Why
+        Arc isn't Especially Object-Oriented.</link>. His conclusion for why
         this is the case are:
         </para>
 
@@ -304,7 +289,7 @@
         Furthermore, having learned a bit about Perl 6 and Ruby, I believe that
         making everything an object, can be advantageous because one can
         more easily inherit from it, and add methods (and multimethods) to
-        constants or regular variables (e.g: <quote>6->my_func();</quote>),
+        constants or regular variables (e.g: <quote>6-&gt;my_func();</quote>),
         or even easily override default behaviour.
         </para>
 
@@ -312,8 +297,8 @@
         So there we go. Note that Park will not be overly-Object-Oriented
         (OOO). One would be able to declare global functions and variables,
         and write scripts or modules without wrapping it in Objects. (Read
-        what <ulink url="http://www.builderau.com.au/program/0,39024614,39160082,00.htm">Damian
-        Conway has to say about the Hello World program in Java</ulink> for
+        what <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.builderau.com.au/program/0,39024614,39160082,00.htm">Damian
+        Conway has to say about the Hello World program in Java</link> for
         why I don't like it).
         </para>
 
@@ -321,7 +306,7 @@
         Here are some features of the object system:
         </para>
 
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
 
             <listitem>
             <para>
@@ -339,7 +324,7 @@
             <listitem>
             <para>
                 Supports
-                <ulink url="http://use.perl.org/~Ovid/journal/27656">traits</ulink>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://use.perl.org/~Ovid/journal/27656">traits</link>
                 (or as the Perl 6 people call them "Roles").
             </para>
             </listitem>
@@ -428,8 +413,8 @@
 
     </section>
 
-    <section id="lexical_scoping_and_dynamic_scoping">
-        <title>Lexical Scoping and Dynamic Scoping</title>
+    <section xml:id="lexical_scoping_and_dynamic_scoping"><info><title>Lexical Scoping and Dynamic Scoping</title></info>
+
 
         <para>
         Scheme and Common Lisp which are the most modern popular
@@ -440,8 +425,8 @@
         <para>
         The default localization of values in Park would be lexical. However,
         having used Perl 5's <literal>local</literal>, I am aware of
-        <ulink url="http://perl.plover.com/local.html">several good uses for
-        dynamic scoping in a mostly lexical scoping language</ulink>. So,
+        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perl.plover.com/local.html">several good uses for
+        dynamic scoping in a mostly lexical scoping language</link>. So,
         there will be a way to localise variables dynamically in Park.
         </para>
 
@@ -467,8 +452,8 @@
         </para>
     </section>
 
-    <section id="full_posix_conventions">
-        <title>Park would be Fully POSIX</title>
+    <section xml:id="full_posix_conventions"><info><title>Park would be Fully POSIX</title></info>
+
         <para>
             Park will be expected to run on a Unix or a Unix-like system
             (such as Win32) and will provide APIs for such common POSIX
@@ -483,12 +468,12 @@
             and their APIs would be common to all implementations.
         </para>
 
-        <section id="monads_for_files">
-            <title>Thoughts about using Monads for Files</title>
+        <section xml:id="monads_for_files"><info><title>Thoughts about using Monads for Files</title></info>
+
             <blockquote>
                 <attribution>
                 An anonymous Perl 5 and
-                <ulink url="https://en.wikipedia.org/wiki/Pugs_(programming)">Pugs</ulink> hacker
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://en.wikipedia.org/wiki/Pugs_(programming)">Pugs</link> hacker
                 about Haskell's Monads.
                 </attribution>
                 <para>
@@ -510,7 +495,7 @@
                 the default file Input/Output API will either be a reflection
                 of the POSIX one, or alternatively something similar
                 in spirit to
-                <ulink url="http://search.cpan.org/search?query=perlio&amp;mode=module">PerlIO</ulink>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://search.cpan.org/search?query=perlio&amp;mode=module">PerlIO</link>
                 or the Python or Ruby files and sockets I/O classes.
             </para>
 
@@ -520,8 +505,8 @@
             </para>
         </section> <!-- /monads_for_files -->
 
-        <section id="bootstrapping_self_hosting_and_c_hosting">
-            <title>Bootstrapping, Self Hosting and C Hosting</title>
+        <section xml:id="bootstrapping_self_hosting_and_c_hosting"><info><title>Bootstrapping, Self Hosting and C Hosting</title></info>
+
 
             <para>
                 Bootstrapping is the process of implementing a virtual machine
@@ -529,7 +514,7 @@
                 for example perl 5, CPython, ruby, php and the Tcl interpreter
                 are all written in ANSI C. That way they can be bootstrapped
                 to run on any system for which a C compiler (such as
-                <ulink url="http://gcc.gnu.org/">the Open-Source gcc</ulink>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://gcc.gnu.org/">the Open-Source gcc</link>
                 is available).
             </para>
             <para>
@@ -546,8 +531,8 @@
 
         </section> <!-- bootstrapping_self_hosting_and_c_hosting -->
 
-        <section id="constants_in_park">
-            <title>Constants in Park</title>
+        <section xml:id="constants_in_park"><info><title>Constants in Park</title></info>
+
 
             <blockquote>
                 <attribution>
@@ -576,11 +561,11 @@
             <literal>100000</literal>).
             </para>
 
-            <section id="strings_quoting_and_interpolation">
-                <title>Strings, Quoting and Interpolation</title>
+            <section xml:id="strings_quoting_and_interpolation"><info><title>Strings, Quoting and Interpolation</title></info>
 
-                <section id="string_constants">
-                    <title>String Constants</title>
+
+                <section xml:id="string_constants"><info><title>String Constants</title></info>
+
                     <para>
                         String constants will be written in a large
                         correspondence to the C, Perl 5 and Perl 6
@@ -603,12 +588,12 @@
 # (You gotta love S-expressions.)
 </programlisting>
                 </section>
-                <section id="string_interpolation">
-                <title>String Interpolation</title>
+                <section xml:id="string_interpolation"><info><title>String Interpolation</title></info>
+
                 <para>
                     There was a very interesting presentation in an
-                    <ulink url="http://www.perl.org.il/">Israeli Perl Mongers
-                        meeting</ulink> about strings, quoting and
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.org.il/">Israeli Perl Mongers
+                        meeting</link> about strings, quoting and
                     interpolation in other languages and Perl. The presentation
                     noted among else that in other languages one has to write
                     relatively
@@ -656,4 +641,4 @@
     </section> <!-- full_posix_conventions -->
 
 </section>
-</article>    <!-- End of the article -->
+</article>

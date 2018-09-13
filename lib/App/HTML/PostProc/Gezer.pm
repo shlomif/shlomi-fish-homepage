@@ -114,6 +114,9 @@ sub run
     my $counter = 0;
 
     my $APPLY_TEXTS = $ENV{APPLY_TEXTS};
+    my $INCS        = !$ENV{NO_I};
+    my $FORTUNES    = $ENV{F};
+    my $ALWAYS_MIN  = $ENV{ALWAYS_MIN};
 
     foreach my $bn (@$argv)
     {
@@ -127,7 +130,7 @@ sub run
                 my $orig_text = $_f->()->slurp_utf8;
                 my $text      = $orig_text;
 
-                if ( !$ENV{NO_I} )
+                if ($INCS)
                 {
                     $text =~
 s#^\({5}include[= ](['"])([^'"]+)\1\){5}\n#path("lib/$2")->slurp_utf8#egms;
@@ -135,7 +138,7 @@ s#^\({5}include[= ](['"])([^'"]+)\1\){5}\n#path("lib/$2")->slurp_utf8#egms;
 s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({count => 1});chomp$l;$l#egms;
                 }
 
-                if ( $ENV{F} )
+                if ($FORTUNES)
                 {
                     foreach my $class (qw(info irc-conversation))
                     {
@@ -159,11 +162,6 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
                 # Remove document trailing space.
                 $text =~ s#\s+\z##ms;
 
-                my $minify = $ENV{ALWAYS_MIN};
-                if ( $text ne $orig_text )
-                {
-                    $minify //= 1;
-                }
                 my $temp_bn = ( ++$counter ) . ".html";
                 my $temp_fh = $temp_dir->child($temp_bn);
                 $temp_fh->spew_utf8($text);
@@ -171,7 +169,7 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
                     bn      => $bn,
                     temp_bn => $temp_bn,
                 };
-                if ($minify)
+                if ( $ALWAYS_MIN // ( $text ne $orig_text ) )
                 {
                     push @filenames, $rec;
                 }

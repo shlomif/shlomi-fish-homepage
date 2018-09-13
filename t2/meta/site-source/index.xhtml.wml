@@ -4,6 +4,10 @@
 
 <latemp_meta_desc "Where to find the source code for www.shlomifish.org and how to build it." />
 
+<section class="h2">
+
+<h2 id="sources">How to build the site</h2>
+
 <p>
 The source code of this site is maintained inside
 <a href="https://github.com/shlomif/shlomi-fish-homepage">a
@@ -13,5 +17,98 @@ several other dependencies.
 </p>
 
 <p>
-Detailed instructions for building the site are available in the <a href="INSTALL"><b>INSTALL</b> File</a>.
+Detailed instructions for building the site are available in the <a
+href="INSTALL"><b>INSTALL</b> File</a>. You should also refer to the build
+process in the <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/.travis.yml">travis.yml file</a> (read about <a href="https://en.wikipedia.org/wiki/Travis_CI">Travis CI</a> and <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> in general)
+which gives a recipe for a consistent and reproducible build on Ubuntu Linux
+systems.
 </p>
+
+<section class="h2">
+
+<h2 id="techs_used">Technologies that are Used</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://docbook.org/">DocBook</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/kangax/html-minifier">html-minifier</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.gnu.org/software/make/">GNU make</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.perl.org/">Perl 5</a> and
+<a href="https://www.cpan.org/">CPAN</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/thewml/website-meta-language">Website META Language</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/tdewolff/minify">Golang minify</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://inkscape.org/en/">Inkscape</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://developer.mozilla.org/en-US/">MDN</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://jquery.com/">jQuery</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://html5doctor.com/">HTML 5 Doctor</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.html-tidy.org/">HTML Tidy</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.gnu.org/software/bash/">GNU Bash</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://sass-lang.com/">SASS CSS Generator</a>
+</p>
+</li>
+
+</ul>
+
+</section>

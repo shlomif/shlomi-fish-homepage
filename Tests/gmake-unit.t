@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 9;
 use lib './lib';
 use Shlomif::Homepage::Paths;
 
@@ -46,10 +46,6 @@ sub dest_test
         'lib/screenplay-xml/html/TOW_Fountainhead_1.html',
         "found a file"
     );
-
-    # TEST
-    gmake_test( 'DOCBOOK4_PDFS', 'lib/docbook/4/pdf/the-eternal-jew.pdf',
-        "found a file" );
 
     # TEST
     dest_test( 'DEST_ZIP_MODS', 'Iglu/shlomif/mods/dreams2.xm.zip',

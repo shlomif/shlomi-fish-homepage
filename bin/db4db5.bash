@@ -15,7 +15,7 @@ ff()
     shift
     local bn="`basename "$fn"`"
     local nbn="${1:-$bn}"
-    shift
+    shift || true
     git mv lib/docbook/4/xml/"$bn" lib/docbook/5/xml/"$nbn"
     xsltproc /home/shlomif/Download/Arcs/db4-upgrade.xsl lib/docbook/5/xml/"$nbn" > ytemp
     perl -lapE 's/[ \t]+$//' < ytemp > lib/docbook/5/xml/"$nbn"

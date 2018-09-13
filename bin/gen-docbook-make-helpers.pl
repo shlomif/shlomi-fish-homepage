@@ -271,9 +271,10 @@ my @documents = (
     },
 
     {
-        id   => "the-eternal-jew",
-        path => "philosophy/the-eternal-jew",
-        base => "the-eternal-jew",
+        id     => "the-eternal-jew",
+        path   => "philosophy/the-eternal-jew",
+        base   => "the-eternal-jew",
+        db_ver => 5,
     },
 
     {

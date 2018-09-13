@@ -12,8 +12,10 @@ body
     padding-top: 20px;
     background: url(hhfg-bg-top.png) no-repeat center top #E5F0FA;
     height: 180px;
+    margin-left:auto;
+    margin-right:auto;
 }
-.navfooter
+footer
 {
     background: url(hhfg-bg-bottom.png) no-repeat center top #E5F0FA;
     height: 180px;
@@ -28,7 +30,12 @@ body
     list-style-type : none;
     font-size: large;
 }
-.section, .toc, .title, .author, table, p, hr, .titlepage div
+header, footer
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+.navfooter, .navheader, .section, .toc, .title, .author, table, p, hr, .titlepage div, section, main
 {
     margin-left:auto;
     margin-right:auto;

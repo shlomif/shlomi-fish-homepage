@@ -41,7 +41,7 @@ sub _summary
 
 sub _call_minifier
 {
-    my ( $self, $filenames ) = @_;
+    my ( $self, $filenames, $ad_filenames ) = @_;
     my $KEY   = 'HTML_POST_INCS_DATA_DIR';
     my $cache = CHI->new(
         driver   => 'File',
@@ -52,7 +52,7 @@ sub _call_minifier
     my $_proc_dir = Path::Tiny->tempdir;
     $self->_proc_dir($_proc_dir);
     my $temp_dir = $self->_temp_dir;
-    foreach my $rec (@$filenames)
+    foreach my $rec ( @$filenames, @$ad_filenames )
     {
         my $temp_bn = $rec->{temp_bn};
         my $src     = $temp_dir->child($temp_bn);
@@ -164,12 +164,12 @@ s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({
                 $text =~
 s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
 
+                # Remove document trailing space.
+                $text =~ s#\s+\z##ms;
+
 =end removed
 
 =cut
-
-                # Remove document trailing space.
-                $text =~ s#\s+\z##ms;
 
                 my $temp_bn = ( ++$counter ) . ".html";
                 my $temp_fh = $temp_dir->child($temp_bn);
@@ -200,7 +200,7 @@ s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
         }
     }
 
-    $self->_call_minifier( \@filenames );
+    $self->_call_minifier( \@filenames, \@ad_filenames );
 
     my $_proc_dir = $self->_proc_dir;
     if ($APPLY_TEXTS)

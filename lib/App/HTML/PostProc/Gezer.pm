@@ -158,9 +158,15 @@ s#\({5}chomp_inc[= ](['"])([^'"]+)\1\){5}#my ($l) = path("lib/$2")->lines_utf8({
                 $text =~ s#\s+xml:space="[^"]*"##g;
                 $text =~ s#(<div)(?:\s+(?:$ALTERNATIVES_TEXT))+#$1 #gms;
 
+=begin removed
+
                 # Remove surrounding space of tags.
                 $text =~
 s#\s*(</?(?:body|(?:br /)|div|head|li|ol|p|title|ul)>)\s*#$1#gms;
+
+=end removed
+
+=cut
 
                 # Remove document trailing space.
                 $text =~ s#\s+\z##ms;

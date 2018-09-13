@@ -223,9 +223,10 @@ my @documents = (
         db_ver => 5,
     },
     {
-        id   => "foss-and-other-beasts",
-        path => "philosophy/foss-other-beasts/revision-2",
-        base => "foss-and-other-beasts",
+        id     => "foss-and-other-beasts",
+        path   => "philosophy/foss-other-beasts/revision-2",
+        base   => "foss-and-other-beasts",
+        db_ver => 5,
     },
     {
         id      => "hebrew-html-tutorial",

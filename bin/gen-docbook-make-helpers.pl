@@ -266,9 +266,10 @@ my @documents = (
     },
 
     {
-        id   => "rindolf-spec",
-        path => "rindolf",
-        base => "rindolf-spec",
+        id     => "rindolf-spec",
+        path   => "rindolf",
+        base   => "rindolf-spec",
+        db_ver => 5,
     },
 
     {

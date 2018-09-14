@@ -12,7 +12,7 @@ BEGIN
 }
 use lib "$HOME/apps/test/wml/lib64/wml";
 
-use WML_Frontends::Wml::Runner ();
+use TheWML::Frontends::Wml::Runner ();
 
 use lib './lib';
 
@@ -33,7 +33,7 @@ my $T2_DEST    = "dest/pre-incs/$T2_SRC_DIR";
 
 chdir($T2_SRC_DIR);
 
-my $obj = WML_Frontends::Wml::Runner->new;
+my $obj = TheWML::Frontends::Wml::Runner->new;
 
 sub is_newer
 {

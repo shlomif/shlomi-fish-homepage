@@ -31,6 +31,10 @@ Last Updated:
 </dd>
 </dl>
 
+<define-tag SQL>
+<a href="https://en.wikipedia.org/wiki/SQL"><abbr title="Structured Query Language">SQL</abbr></a>
+</define-tag>
+
 <h2 id="how_i_started">How I started Working in Elpas</h2>
 
 <p>
@@ -92,7 +96,7 @@ that so they told me to start with Microsoft Access.
 
 <p>
 Access... we had Access 2.0, and I had to find a way to work against it from
-our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning SQL from the
+our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning <SQL /> from the
 Access docs, started converting our application to store the data on Access,
 and access it using DDE. It was a lot of work as the application was written
 in C.
@@ -117,8 +121,8 @@ eventually did it. So I converted the code to use ODBC.
 It was a bit faster than using DDE and NetDDE, but was still slow and still
 crashed a lot. We thought that we might need a better database but then we got
 a few other consultants who brought us to a realisation: since we needed to
-query the database in real time, we couldn’t afford to construct SQL queries
-send them to an SQL server that will parse them, process them relatively
+query the database in real time, we couldn’t afford to construct <SQL /> queries
+send them to an <SQL /> server that will parse them, process them relatively
 inefficiently, and then return the results over a stream which will need to
 be processed and parsed (to say nothing of API overhead). We needed something
 much faster, and my original vector-based database was as good as any.
@@ -193,7 +197,7 @@ wage. Nevertheless, I was out of Elpas for good.
 
 <p>
 I really liked working at Elpas because I learned many new concepts and
-technologies there, including SQL and relational databases, Windows (16-bit)
+technologies there, including <SQL /> and relational databases, Windows (16-bit)
 programming, ODBC, some aspects of Microsoft Access, and a small amount of
 UNIX. Some of these served me well later on.
 </p>

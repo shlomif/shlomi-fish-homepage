@@ -2,7 +2,7 @@
 
 <define-tag toc_div>
 
-<preserve head_tag lang />
+<preserve collapse head_tag lang />
 
 <set-var %attributes />
 
@@ -13,11 +13,13 @@
 <ifeq "<get-var lang />" "he" "<set-var title="תוכן העניינים" />" />
 
 <nav class="page_toc">
-<<get-var head_tag />* id="toc"><get-var title /></<get-var head_tag />*>
+<set-var head="<<get-var head_tag />* id="toc"><get-var title /></<get-var head_tag />*>" />
+<set-var details="<summary><get-var title /></summary>" />
 
-<toc />
+<if "<get-var collapse />" "<details id="toc"><get-var details /><toc /></details>" "<get-var head /><toc />" />
+
 </nav>
 
-<restore head_tag lang />
+<restore collapse head_tag lang />
 
 </define-tag>

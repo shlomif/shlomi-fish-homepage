@@ -33,18 +33,38 @@
 
 </when>
 
-<define-tag h2_section endtag="required">
+<define-tag generic_section endtag="required">
 
-<preserve id href title />
+<preserve id href title h-tag />
 <set-var %attributes />
 
-<section class="h2">
+<section class="<get-var h-tag />">
 
-<header><h2 id="<get-var id />"><if "<get-var href />" "<a href="<get-var href />"><get-var title /></a>" "<get-var title />" /></h2></header>
+<header><<get-var h-tag /> id="<get-var id />"><if "<get-var href />" "<a href="<get-var href />"><get-var title /></a>" "<get-var title />" /></<get-var h-tag />></header>
 
 %body
 
 </section>
+
+<restore id href title h-tag />
+
+</define-tag>
+
+<define-tag h2_section endtag="required">
+
+<generic_section h-tag="h2" <attributes-quote %attributes />>%body</generic_section>
+
+</define-tag>
+
+<define-tag h3_section endtag="required">
+
+<generic_section h-tag="h3" <attributes-quote %attributes />>%body</generic_section>
+
+</define-tag>
+
+<define-tag h4_section endtag="required">
+
+<generic_section h-tag="h4" <attributes-quote %attributes />>%body</generic_section>
 
 </define-tag>
 

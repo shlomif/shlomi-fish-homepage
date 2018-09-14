@@ -33,38 +33,74 @@
 
 </when>
 
-<define-tag generic_section endtag="required">
+<define-tag generic_section endtag="required" whitespace="delete">
 
-<preserve id href title h-tag />
+<preserve id href title />
 <set-var %attributes />
 
-<section class="<get-var h-tag />">
+<:
 
-<header><<get-var h-tag /> id="<get-var id />"><if "<get-var href />" "<a href="<get-var href />"><get-var title /></a>" "<get-var title />" /></<get-var h-tag />></header>
+0 and die qq|
+%attributes
+
+<get-var h_tag />
+
+<get-var id />
+
+ENDU
+|
+:>
+
+<section class="<get-var h_tag />">
+
+<header><<get-var h_tag /> id="<get-var id />">
+<when <get-var href />>
+<a href="<get-var href />"><get-var title /></a>
+</when>
+<when <not <get-var href /> />>
+<get-var title />
+</when>
+</<get-var h_tag />>
+</header>
 
 %body
 
 </section>
 
-<restore id href title h-tag />
+<restore id href title />
 
 </define-tag>
 
 <define-tag h2_section endtag="required">
 
-<generic_section h-tag="h2" <attributes-quote %attributes />>%body</generic_section>
+<set-var h_tag="h2" />
+<generic_section %attributes >
+
+%body
+
+</generic_section>
 
 </define-tag>
 
 <define-tag h3_section endtag="required">
 
-<generic_section h-tag="h3" <attributes-quote %attributes />>%body</generic_section>
+<set-var h_tag="h3" />
+<generic_section %attributes >
+
+%body
+
+</generic_section>
 
 </define-tag>
 
 <define-tag h4_section endtag="required">
 
-<generic_section h-tag="h4" <attributes-quote %attributes />>%body</generic_section>
+<set-var h_tag="h4" />
+<generic_section %attributes >
+
+%body
+
+</generic_section>
 
 </define-tag>
 

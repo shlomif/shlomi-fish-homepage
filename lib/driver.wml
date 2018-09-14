@@ -30,7 +30,24 @@
 <define-tag section endtag="required">
 <div <attributes-quote %attributes />>%body</div>
 </define-tag>
+
 </when>
+
+<define-tag h2_section endtag="required">
+
+<preserve id href title />
+<set-var %attributes />
+
+<section class="h2">
+
+<header><h2 id="<get-var id />"><if "<get-var href />" "<a href="<get-var href />"><get-var title /></a>" "<get-var title />" /></h2></header>
+
+%body
+
+</section>
+
+</define-tag>
+
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"
 #include "rest-of-template.wml"

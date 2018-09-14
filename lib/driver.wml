@@ -32,78 +32,7 @@
 </define-tag>
 
 </when>
-
-<define-tag generic_section endtag="required" whitespace="delete">
-
-<preserve id href title />
-<set-var %attributes />
-
-<:
-
-0 and die qq|
-%attributes
-
-<get-var h_tag />
-
-<get-var id />
-
-ENDU
-|
-:>
-
-<section class="<get-var h_tag />">
-
-<header><<get-var h_tag /> id="<get-var id />">
-<when <get-var href />>
-<a href="<get-var href />"><get-var title /></a>
-</when>
-<when <not <get-var href /> />>
-<get-var title />
-</when>
-</<get-var h_tag />>
-</header>
-
-%body
-
-</section>
-
-<restore id href title />
-
-</define-tag>
-
-<define-tag h2_section endtag="required">
-
-<set-var h_tag="h2" />
-<generic_section %attributes >
-
-%body
-
-</generic_section>
-
-</define-tag>
-
-<define-tag h3_section endtag="required">
-
-<set-var h_tag="h3" />
-<generic_section %attributes >
-
-%body
-
-</generic_section>
-
-</define-tag>
-
-<define-tag h4_section endtag="required">
-
-<set-var h_tag="h4" />
-<generic_section %attributes >
-
-%body
-
-</generic_section>
-
-</define-tag>
-
+#include "h_sections.wml"
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"
 #include "rest-of-template.wml"

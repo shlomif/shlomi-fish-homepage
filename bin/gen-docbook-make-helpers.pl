@@ -1140,4 +1140,55 @@ path($gen_make_fn)->edit_utf8(
     }
 );
 
+write_on_change(
+    path("lib/h_sections.wml"),
+    \(
+        join "\n",
+        map {
+            my $n = $_;
+            <<"EOF"
+<define-tag h${n}_section endtag="required" whitespace="delete">
+
+<set-var h_tag="wml_toc_h$n"  />
+<set-var h_class="h$n" />
+<preserve id href title />
+<set-var %attributes />
+
+<:
+
+0 and die qq|
+%attributes
+
+<get-var h_tag />
+
+<get-var id />
+
+ENDU
+|
+:>
+
+<section class="<get-var h_class />">
+
+<header><wml_toc_h$n id="<get-var id />">
+<when <get-var href />>
+<a href="<get-var href />"><get-var title /></a>
+</when>
+<when <not <get-var href /> />>
+<get-var title />
+</when>
+</wml_toc_h$n>
+</header>
+
+%body
+
+</section>
+
+<restore id href title />
+
+</define-tag>
+EOF
+        } 2 .. 6
+    )
+);
+
 $pm->wait_all_children;

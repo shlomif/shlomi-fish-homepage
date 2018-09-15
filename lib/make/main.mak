@@ -141,7 +141,13 @@ $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 
 copy_fortunes: $(T2_DEST_FORTUNES)
 
-UPLOAD = (cd $(T2_POST_DEST) && $(RSYNC) -a . $1 )
+RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
+
+ifeq ($(UPLOAD_MATHJAX),1)
+	RSYNC_EXCLUDES :=
+endif
+
+UPLOAD = (cd $(T2_POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
 
 upload_deps: all
 

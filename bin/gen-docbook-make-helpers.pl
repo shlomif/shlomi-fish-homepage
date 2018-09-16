@@ -884,6 +884,7 @@ my $qp_template_en_text =
     path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
 my $qp_template_he_text =
     path("lib/presentations/qp/common/template-he.wml")->slurp_utf8;
+my $qp_slidy = path("lib/presentations/qp/common/slidy.js")->slurp_utf8;
 
 sub get_quad_pres_files
 {
@@ -894,6 +895,7 @@ sub get_quad_pres_files
     my $dir        = "lib/presentations/qp/$dir_base";
     my $dest_dir   = $args->{dest_dir};
 
+    write_on_change( scalar( path("$dir/src/slidy.js") ), \$qp_slidy );
     $css_tt->process( "lib/presentations/qp/common/style.css.tt2",
         $css_params, "$dir/src/style.css" );
 

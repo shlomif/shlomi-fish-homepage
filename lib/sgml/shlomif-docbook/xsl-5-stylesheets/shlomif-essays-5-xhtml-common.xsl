@@ -7,6 +7,7 @@
     version='1.0'
     >
 
+    <xsl:param name="generate.id.attributes" select="0"></xsl:param>
     <!--
          Commented out because it does not work properly.
     <xsl:template name="anchor">

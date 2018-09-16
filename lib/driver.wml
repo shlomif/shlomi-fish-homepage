@@ -32,6 +32,23 @@
 </define-tag>
 
 </when>
+
+<when <get-var is_html5 /> >
+
+<define-tag section endtag="required">
+
+<preserve id />
+<set-var %attributes />
+<:
+    use vars qw/ $wml_last_section_id /;
+    $::wml_last_section_id = q|<get-var id />|;
+:>
+<section* <attributes-quote %attributes />>%body</section*>
+<restore id />
+</define-tag>
+
+</when>
+
 #include "h_sections.wml"
 #include "latemp/latemp-driver.wml"
 #include "Inc/shf-affiliations.wml"

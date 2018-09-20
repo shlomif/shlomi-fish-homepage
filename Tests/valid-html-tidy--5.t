@@ -6,7 +6,7 @@ use warnings;
 package Test::HTML::Tidy::Recursive::Tidy5;
 
 use MooX qw/ late /;
-use HTML::Tidy5;
+use HTML::T5;
 
 extends('Test::HTML::Tidy::Recursive');
 
@@ -14,7 +14,7 @@ sub calc_tidy
 {
     my $self = shift;
 
-    return HTML::Tidy5->new( { input_xml => 1, output_xhtml => 1, } );
+    return HTML::T5->new( { input_xml => 1, output_xhtml => 1, } );
 }
 
 package main;

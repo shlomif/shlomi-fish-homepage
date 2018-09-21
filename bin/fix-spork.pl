@@ -37,7 +37,7 @@ foreach my $fn (@fns)
 
 foreach my $I (@fns)
 {
-    system(qq#tidy -asxhtml -o "$I".new "$I" ; mv -f "$I".new "$I"#);
+    system(qq#tidy -quiet -asxhtml -o "$I".new "$I" ; mv -f "$I".new "$I"#);
 }
 
 =head1 COPYRIGHT & LICENSE

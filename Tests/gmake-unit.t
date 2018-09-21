@@ -9,6 +9,8 @@ use Shlomif::Homepage::Paths;
 my $T2_DEST      = Shlomif::Homepage::Paths->new->t2_dest;
 my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
 
+delete $ENV{MAKEFLAGS};
+
 sub gmake_test
 {
     my ( $var, $word, $blurb ) = @_;

@@ -153,36 +153,46 @@ Aims to introduce the Linux operating system to beginners.
 
 </div>
 
-<h2 id="software-projects">Presentations about my software Projects</h2>
+<h2_section id="software-projects" title="Presentations about my software Projects">
 
-<div class="indent">
-<h3 id="freecell-solver"><a href="./Freecell-Solver/">Freecell Solver - Evolution of a C Program</a></h3>
+<h3_section id="freecell-solver" title="Freecell Solver">
+
+<h4_section id="fcs-evolution" href="$(ROOT)/lecture/Freecell-Solver/" title="Freecell Solver - Evolution of a C Program">
 
 <p>
 The history of my pet project, Freecell Solver.
 </p>
 
-<div class="indent">
-<h4 id="fcs-the-next-pres"><a href="./Freecell-Solver/The-Next-Pres/">Freecell Solver - The Next Presentation</a></h4>
+</h4_section>
+
+<h4_section id="fcs-the-next-pres" href="$(ROOT)/lecture/Freecell-Solver/The-Next-Pres/" title="Freecell Solver - The Next Presentation">
 
 <p>
 More recent history and development of the project.
 </p>
 
-<h4 id="fcs-project-intro"><a href="./Freecell-Solver/project-intro/">Freecell Solver: Project Introduction</a></h4>
+</h4_section>
+
+<h4_section id="fcs-project-intro" href="$(ROOT)/lecture/Freecell-Solver/project-intro/" title="Freecell Solver: Project Introduction">
 
 <p>
 An introduction of the project for people who are interested to contribute.
 </p>
-</div>
 
-<h3 id="lm-solve"><a href="./LM-Solve/">LM-Solve</a></h3>
+</h4_section>
+
+</h3_section>
+
+<h3_section id="lm-solve" href="$(ROOT)/lecture/LM-Solve/" title="LM-Solve">
 
 <p>
-A presentation about <a href="../lm-solve/">LM-Solve</a>, a Logic Mazes Solver.
-Covers history, technologies, architecture and exotic bugs.
+A presentation about <a href="$(ROOT)/lm-solve/">LM-Solve</a>, a Logic Mazes
+Solver. Covers history, technologies, architecture and exotic bugs.
 </p>
-</div>
+
+</h3_section>
+
+</h2_section>
 
 <h2 id="lightning-talks"><a href="cat/lightning-talks/">Mini Presentations ("Lightning
 Talks")</a></h2>

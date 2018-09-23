@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 1;
+use Test::More tests => 2;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use Shlomif::Homepage::Paths;
@@ -21,6 +21,26 @@ my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
             index( $content,
 q{<a href="#machines_that_can_give_questions">The Machines That Can Give You Questions</a>}
             ) >= 0
+        ),
+        'Contains a hyperlink.'
+    );
+}
+
+{
+    my $content =
+        path("$T2_POST_DEST/prog-evolution/shlomif-at-cortext.html")
+        ->slurp_utf8;
+
+    # TEST
+    ok(
+        scalar(
+            index( $content,
+q{<a href="#how_i_started">How I started Working for Cortext</a>}
+                ) >= 0
+                and index(
+                $content,
+                q{<h2 id="how_i_started">How I started Working for Cortext</h2>}
+                ) >= 0
         ),
         'Contains a hyperlink.'
     );

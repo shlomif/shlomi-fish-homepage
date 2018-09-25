@@ -288,7 +288,12 @@ of an EvilPHish”</a> cartoon of
 <set-var is_dev="$(LATEMP_IS_DEV_ENV)" />
 
 <define-tag my_extra_head_elements>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="$(ROOT)/css/materialize.min.css"  media="screen,projection"/>
+<js_script src="$(ROOT)/js/materialize.min.js"></js_script>
 <link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen" title="Old 2008 Style" />
+;;; Let browser know website is optimized for mobile
+<@[<meta name="viewport" content="width=device-width, initial-scale=1.0" />]@>
 <if "<get-var is_dev />"
     "<main_all__js_scripts__dev />"
     "<main_all__js_scripts__proudction />"

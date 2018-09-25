@@ -879,6 +879,18 @@ $(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 
 $(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
+Mater_CSS = $(T2_POST_DEST)/css/materialize.css
+Mater_JS = $(T2_POST_DEST)/js/materialize.min.js
+
+non_latemp_targets: $(Mater_CSS) $(Mater_JS)
+
+$(Mater_CSS): node_modules/materialize-css/sass/materialize.scss
+	$(SASS_CMD) $< $@
+
+$(Mater_JS):
+	(cd node_modules/materialize-css/ && npm install . && grunt js_compile)
+	cp -f node_modules/materialize-css/dist/js/materialize.min.js $@
+
 $(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml

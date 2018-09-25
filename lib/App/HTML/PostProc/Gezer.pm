@@ -33,7 +33,8 @@ sub _summary
     }
     else
     {
-        my $r1 = $$text_ref =~ s%<main\b%<div class="main"%g;
+        my $r1 = $$text_ref =~
+s%(<main(?:\s+(?:class|id|style)="[^"]*"\s*)*>)%my $s = $1; $s=~s/main/div/;$s=~s/(\sclass=")/${1}main /;$s%egms;
         my $r2 = $$text_ref =~ s%</main>%</div>%g;
         return $r1 || $r2;
     }

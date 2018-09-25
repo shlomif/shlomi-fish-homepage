@@ -29,28 +29,14 @@
     height: 150px
 
 .navbar
-    +big-screen
-        float: left
-        width: 20%
-        padding-left: 0.5em
-        padding-right: 0.5em
-        padding-top: 1.5em
-        padding-bottom: 2em
-    +small-screen
-        &.novis
-            display: none
+    &.novis
+        display: none
 
-+big-screen
-    #navbar_wrapper
-        .small_screen
-            display: none
-
-+small-screen
-    #show_navbar
-        padding-top: 1.0em
-        padding-bottom: 1.0em
-        font-size: 150%
-        width: 100%
+#show_navbar
+    padding-top: 1.0em
+    padding-bottom: 1.0em
+    font-size: 150%
+    width: 100%
 
 ul
     &.navbarmain
@@ -595,8 +581,7 @@ table.visible , .visible > table
         margin-left: 3em
 
 .sub_section
-    +big-screen
-        +indent
+    +indent
 
 =logo_margin
     margin-top: 1em

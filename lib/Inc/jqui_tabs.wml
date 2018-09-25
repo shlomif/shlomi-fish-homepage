@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="$(ROOT)/jqui-override.css" media="screen" />
 <js_script>
 $(function() {
-    $(".tabs").tabs();
+    $(".jqueryui_tabs").tabs();
 });
 </js_script>
 </page_extra_head_elements>

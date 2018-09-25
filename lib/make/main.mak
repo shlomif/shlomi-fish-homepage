@@ -1219,8 +1219,6 @@ T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
 T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
 T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
 
-min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz)
-
 $(T2_SVGS__MIN): %.min.svg: %.svg
 	minify --svg-decimals 3 -o $@ $<
 
@@ -1228,5 +1226,7 @@ $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best < $< > $@
 
 BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
+
+min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 
 include lib/make/copies-generated-include.mak

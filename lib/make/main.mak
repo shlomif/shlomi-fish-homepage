@@ -879,7 +879,7 @@ $(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
 
 $(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
-Mater_CSS = $(T2_POST_DEST)/css/materialize.css
+Mater_CSS = $(T2_POST_DEST)/css/materialize.min.css
 Mater_JS = $(T2_POST_DEST)/js/materialize.min.js
 
 non_latemp_targets: $(Mater_CSS) $(Mater_JS)

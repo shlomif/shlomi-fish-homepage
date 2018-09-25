@@ -16,12 +16,12 @@
 <latemp_get_breadcrumbs_trail />
 </div>
 <div id="faux">
-<div id="container-all">
+<div id="container-all row">
 <p class="invisible">
 <a href="#main">Go to main content</a>
 </p>
 
-<div id="navbar_wrapper">
+<div id="navbar_wrapper" class="col s3">
 <div class="small_screen">
 <button id="show_navbar" class="off">Show NavBar</button>
 </div>
@@ -42,7 +42,7 @@
 </nav>
 </div>
 
-<main id="main">
+<main id="main" class="col s9">
 <latemp_before_main_title_text />
 </define-tag>
 

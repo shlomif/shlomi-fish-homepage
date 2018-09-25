@@ -19,12 +19,12 @@
 
 <div class="tabs">
 
-<ul>
+<ul class="selector">
 <li><a href="#<get-var en_id />">English</a></li>
 <li><a href="#<get-var he_id />">Hebrew (עברית)</a></li>
 </ul>
 
-<div id="<get-var en_id />">
+<div id="<get-var en_id />" class="tab">
 
 <get-var common_prefix />
 {#EN#}
@@ -32,7 +32,7 @@
 
 </div>
 
-<div id="<get-var he_id />" class="hebrew">
+<div id="<get-var he_id />" class="hebrew tab">
 
 <get-var common_prefix />
 {#HE#}

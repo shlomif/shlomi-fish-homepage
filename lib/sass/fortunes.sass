@@ -60,7 +60,7 @@
             margin-top: 5px
             margin-bottom: 2em
             position: relative
-            // display: table
+            display: table
 
             =elem
                 display: table-row
@@ -74,11 +74,17 @@
                     +elem
                     // outline: red 2px solid
 
-            > blockquote
+            =child
                 +elem
 
                 p
                     padding: 0 1em
+
+            > blockquote
+                +child
+
+            > .screenplay
+                +child
 
             h3
                 // background-color: $fortune_color

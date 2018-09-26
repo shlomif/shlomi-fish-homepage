@@ -184,6 +184,9 @@ sub get_single_fortune_page_html_wml
 <latemp_subject "@{[$r->page_title()]}" />
 <latemp_meta_desc "@{[$r->meta_desc()]}" />
 
+<page_extra_head_elements>
+<link rel="stylesheet" href="\$(ROOT)/fortunes.css" type="text/css" media="screen" />
+</page_extra_head_elements>
 <h2*>About</h2*>
 
 #include "fortunes/corner_image.wml"

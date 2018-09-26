@@ -64,6 +64,9 @@ ul
 
 .news article
     // +indent
+    blockquote , ol , ul , p
+        margin-left: 0
+        padding-left: 0.3em
 
 div.rightalign
     text-align: right
@@ -594,6 +597,7 @@ table.visible , .visible > table
 
 .story_logo, .screenplay_image
     +logo_image
+    // max-width: 20%
     float: right
 
     &.enemy
@@ -643,9 +647,15 @@ table.visible , .visible > table
 .screenplay.read , .docbook_formats
     +highlight_div_frame
 
+$border: 3px darkgreen solid
+
 div.abstract
     &.towtf , &.pope
-        +highlight_div_frame
+        // +highlight_div_frame
+        border-bottom: $border
+        margin-bottom: 1em
+        border-top: $border
+        overflow: hidden
 
 .hebrew
     /*.story_logo
@@ -755,13 +765,13 @@ $ss_margin: 2em
 
 h2, h3
     &.story
-        clear: right
+        // clear: right
     &.facts, &#facts
         clear: both
 
 .shlomif_tips
     > .entry
-        border: 3px darkgreen solid
+        border: $border
         padding: 0.5em
         margin-bottom: 1em
 

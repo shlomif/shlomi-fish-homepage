@@ -57,8 +57,17 @@
             position: relative
             display: table
 
-            > .head , > blockquote
+            =elem
                 display: table-row
+
+            > .head
+                +elem
+
+            > blockquote
+                +elem
+
+                p
+                    padding: 0.5em 1em
 
             h3
                 // background-color: $fortune_color

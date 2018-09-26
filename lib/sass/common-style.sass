@@ -296,10 +296,17 @@ table.thumbs
 p.desc
     margin-left: 3em
 
-.invisible
-    visibility: hidden
-    padding: 0
-    margin: 0
+.invisible a
+    position: absolute
+    left: -10000px
+    top: auto
+    width: 1px
+    height: 1px
+    overflow: hidden
+    &:focus
+        position: static
+        width: auto
+        height: auto
 
 $about_color: #008000
 

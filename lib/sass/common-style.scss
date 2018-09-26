@@ -872,6 +872,14 @@ table.visible, .visible > table {
 
 $border: 3px darkgreen solid;
 
+.shlomif_tips {
+    > .entry {
+        border: $border;
+        padding: 0.5em;
+        margin-bottom: 1em;
+    }
+}
+
 div.abstract {
     &.towtf, &.pope {
         // +highlight_div_frame
@@ -1037,14 +1045,6 @@ h2, h3 {
 
     &.facts, &#facts {
         clear: both;
-    }
-}
-
-.shlomif_tips {
-    > .entry {
-        border: $border;
-        padding: 0.5em;
-        margin-bottom: 1em;
     }
 }
 

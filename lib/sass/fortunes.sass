@@ -60,7 +60,7 @@
             margin-top: 5px
             margin-bottom: 2em
             position: relative
-            display: table
+            // display: table
 
             =elem
                 display: table-row
@@ -68,8 +68,11 @@
             > .head
                 +elem
 
-            > .irc-conversation
-                +elem
+            > .irc-body
+                // outline: blue 4px solid
+                > .irc-conversation
+                    +elem
+                    // outline: red 2px solid
 
             > blockquote
                 +elem

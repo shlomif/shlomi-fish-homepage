@@ -23,6 +23,9 @@ $contents =~ s{</body>(?:.*?)\z}{}ms;
 $contents =~
 s#(?<full><h3 id=\s*"(?<id>[^"]+)"[^>]*>[^<]+</h3>)#<div class="head">$+{full}\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p></div>\n#g;
 
+$contents =~
+s#(?<full><table class="irc-conversation">.*?</table>)#<div class="irc-body">$+{full}</div>#gms;
+
 $contents =~ s/\n(\s*)#/${1} #/gms;
 
 path($abs_out_fn)->spew_utf8($contents);

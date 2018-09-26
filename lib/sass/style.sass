@@ -19,12 +19,25 @@
 .banner
     height: 80px
 
+=cell
+    display: table-cell
+
 body
     background: #01698f
     padding: 1em
 
-    nav#navbar
+
+    #container-all
+        display: table-row
+
+    #navbar_wrapper
+        width: 30%
         padding: 1em
+        +cell
+
+    #main
+        width: 70%
+        +cell
 
 #faux
     background-color: #e0ebef

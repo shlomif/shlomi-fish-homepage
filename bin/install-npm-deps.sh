@@ -12,5 +12,6 @@ npm install \
     materialize-css@next \
     param-case \
     sass \
+    sass-convert \
     uglify-es \
 

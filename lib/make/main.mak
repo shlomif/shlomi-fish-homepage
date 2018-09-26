@@ -867,15 +867,15 @@ css_targets: $(T2_CSS_TARGETS)
 SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
-FORT_SASS_DEPS = lib/sass/fortunes.sass
-COMMON_SASS_DEPS = lib/sass/common-body.sass lib/sass/common-style.sass
+FORT_SASS_DEPS = lib/sass/fortunes.scss
+COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss
 
-$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.sass $(COMMON_SASS_DEPS)
+$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
-$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.sass $(FORT_SASS_DEPS) lib/sass/code_block.sass lib/sass/jqtree.sass lib/sass/treeview.sass lib/sass/common-with-print.sass lib/sass/self_link.sass
+$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
 
-$(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.sass lib/sass/footer.sass
+$(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
 
 $(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
@@ -891,7 +891,7 @@ $(Mater_JS):
 	(cd node_modules/materialize-css/ && npm install . && grunt js_compile)
 	cp -f node_modules/materialize-css/dist/js/materialize.min.js $@
 
-$(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.sass lib/sass/fortunes_show.sass $(COMMON_SASS_DEPS) lib/sass/screenplay.sass
+$(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
 $(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.wml

@@ -1,17 +1,15 @@
-@import "common-style"
-
 .ui-helper-clearfix:after
     clear: none
 
 .ui-widget
     font-size: 1em
-    +default_font_family
+    // +default_font_family
 
 .ui-widget-content
     color: black
 
 // Why do I have to do that?
-.tabs
+.jqueryui_tabs
     overflow: hidden
     .first
         margin-top: 1em
@@ -34,12 +32,12 @@
             > li
                 margin-bottom: 1.5em
 
-    .main_facts_list > ul , > div > ul
-        clear: left
-        margin-top: 3em
-        li
+        > ul , > div > ul
+            clear: left
+            margin-top: 3em
             li
-                margin-bottom: 0em
+                li
+                    margin-bottom: 0em
 
 .ui-tabs-panel
     padding: 0.5em

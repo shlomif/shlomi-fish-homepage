@@ -882,7 +882,7 @@ $(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 Mater_CSS = $(T2_POST_DEST)/css/materialize.min.css
 Mater_JS = $(T2_POST_DEST)/js/materialize.min.js
 
-non_latemp_targets: $(Mater_CSS) $(Mater_JS)
+# non_latemp_targets: $(Mater_CSS) $(Mater_JS)
 
 $(Mater_CSS): lib/sass/materialize/components/application.scss node_modules/materialize-css/sass/materialize.scss lib/sass/materialize/components/variables.scss
 	$(SASS_CMD) -I $$PWD/lib/sass/materialize/ -I $$PWD/lib/sass/materialize/components/ -I node_modules/materialize-css/sass/ $< $@

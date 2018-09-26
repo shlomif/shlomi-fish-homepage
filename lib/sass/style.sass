@@ -28,13 +28,19 @@ body
     #container-all
         display: table-row
 
-    #navbar_wrapper
-        width: 30%
+    #navbar_wrapper , #show_navbar
+        width: 20%
         padding: 1em
+
+        &.novis
+            width: 0%
+
+    #navbar_wrapper
         +cell
 
     #main
-        width: 70%
+        // width: 80%
+        width: auto
         +cell
 
 #faux

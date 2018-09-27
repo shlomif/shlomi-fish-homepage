@@ -58,11 +58,10 @@ body {
         @include cell;
 
         * {
-            // word-break: break-all
+            // word-break: break-all;
 
-            // overflow-wrap: break-word
-            // word-wrap: break-word
-
+            // overflow-wrap: break-word;
+            // word-wrap: break-word;
         }
     }
 }
@@ -103,5 +102,5 @@ body {
 @import "jqtree";
 
 * {
-    // outline: hotpink solid 2px
+    // outline: hotpink solid 2px;
 }

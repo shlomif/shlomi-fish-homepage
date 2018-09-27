@@ -108,8 +108,10 @@ body {
     }
 }
 
-.lim_width img {
-    max-width: 50%;
+.lim_width {
+    img , iframe {
+        max-width: 80%;
+    }
 }
 
 img.bizcard {

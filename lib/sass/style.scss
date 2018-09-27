@@ -20,6 +20,13 @@
     height: 80px;
 }
 
+@mixin wrap {
+    word-break: break-all;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 @mixin cell {
     display: table-cell;
 }
@@ -57,11 +64,8 @@ body {
 
         @include cell;
 
-        .news * {
-            word-break: break-all;
-
-            overflow-wrap: break-word;
-            word-wrap: break-word;
+        .news * , .wrap-me * {
+            @include wrap;
         }
         * {
             // word-break: break-all;
@@ -102,6 +106,17 @@ body {
             background-color: transparent;
         }
     }
+}
+
+.lim_width img {
+    max-width: 50%;
+}
+
+img.bizcard {
+    background-color: white;
+    border: 0.5em black solid;
+    border-radius: 0.35em;
+    max-width: 80%;
 }
 
 @import "footer";

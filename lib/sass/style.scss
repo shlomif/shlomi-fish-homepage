@@ -32,8 +32,13 @@ body {
         display: table-row;
     }
 
-    #navbar_wrapper, #show_navbar {
+    #show_navbar {
+        width: 100%;
+    }
+    #navbar_wrapper {
         width: 20%;
+    }
+    #navbar_wrapper, #show_navbar {
         padding: 1em;
 
         &.novis {

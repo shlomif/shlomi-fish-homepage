@@ -44,7 +44,7 @@ Heaven is Paved with Bad Intentions</a>.
 
 <toc_div />
 
-<h2 id="sources">Sources</h2>
+<h2_section id="sources" title="Sources">
 
 <ul>
 
@@ -72,7 +72,9 @@ greater version of this license). Year of copyright is 1997.
 <!--/Creative Commons License-->
 </p>
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+</h2_section>
+
+<h2_section id="sources_of_inspiration" title="Sources of Inspiration">
 
 <ul>
 
@@ -140,7 +142,9 @@ relatively negligible.
 
 </ul>
 
-<h2 id="thanks">Thanks and Acknowledgements</h2>
+</h2_section>
+
+<h2_section id="thanks" title="Thanks and Acknowledgements">
 
 <ul>
 
@@ -179,7 +183,12 @@ syntax corrections to the Hebrew version of the story.
 
 </ul>
 
-<h2 id="resources">Resources</h2>
+</h2_section>
+
+<h2_section id="resources" title="Resources">
+
+
+
 
 <ul>
 <li>
@@ -190,20 +199,10 @@ entry in my weblog</a> about the history and motivation of this story.
 </li>
 </ul>
 
-<js_script>
-$(function() {
-    $("#previous_vers_accordion").accordion({
-        collapsible: true,
-        active: false
-    });
-});
-</js_script>
-
-<div id="previous_vers_accordion">
-
 <h2 id="previous-vers">Previous Versions</h2>
 
-<div>
+<details>
+<summary>Previous Versions</summary>
 <h3 id="previous-rev6">Revision 6</h3>
 
 <ul>
@@ -253,11 +252,11 @@ etc.)
 
 </ul>
 
-</div> ;;; End accordion div.
+</details>
 
-</div>
+</h2_section>
 
-<h2 id="see_also">See Also</h2>
+<h2_section id="see_also" title="See Also">
 
 <ul>
 
@@ -277,6 +276,8 @@ discrimination.
 </li>
 
 </ul>
+
+</h2_section>
 
 <nav_blocks>
 

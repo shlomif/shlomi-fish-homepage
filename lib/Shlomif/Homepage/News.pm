@@ -5,6 +5,7 @@ use warnings;
 
 use utf8;
 
+use Carp ();
 use MooX qw( late );
 use DateTime;
 use Text::WrapAsUtf8 qw/ print_utf8 /;
@@ -194,8 +195,9 @@ text.
 
 =cut
 
-    $filename =~ /^(\d{4})-(\d{2})-(\d{2})\.html$/;
-    my ( $y, $m, $d ) = ( $1, $2, $3 );
+    my ( $y, $m, $d ) =
+        $filename =~ /\A([0-9]{4})-([0-9]{2})-([0-9]{2})\.html\z/
+        or Carp::confess("cannot extract date from filename '$filename'!");
     my $date = DateTime->new( year => $y, month => $m, day => $d );
 
 # (sprintf("%.2d", $date->day()) . "-" . $date->month_abbr(). "-" . $date->year()),
@@ -213,7 +215,7 @@ sub calc_rss_items
     opendir my $dir, $self->dir();
     my @files = readdir($dir);
     closedir($dir);
-    @files = ( grep { /\A\d{4}-\d{2}-\d{2}\.html\z/ } @files );
+    @files = ( grep { /\A[0-9]{4}-[0-9]{2}-[0-9]{2}\.html\z/ } @files );
     @files = sort { $a cmp $b } @files;
     return [ map { $self->file_to_news_item($_) } @files ];
 }

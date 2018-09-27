@@ -25,20 +25,20 @@
 
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
 
-    /* based on
-     * https://stackoverflow.com/questions/34691470/responsive-pre-tag
-     * - thanks!
-     */
-    pre {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        text-align: justify;
-        direction: ltr;
-        max-width: 90%;
-        // overflow-x: scroll;
-        overflow-x: hidden;
-    }
+/* based on
+ * https://stackoverflow.com/questions/34691470/responsive-pre-tag
+ * - thanks!
+ */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+    direction: ltr;
+    max-width: 90%;
+    // overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 @mixin cell {

@@ -1014,11 +1014,11 @@ $ss_margin: 2em;
 
 @mixin mysection {
     margin-top: $ss_margin;
-    margin-left: 1em;
+    margin-left: 0.5em;
 
     // margin-bottom: $ss_margin
-    padding-left: 1.5em;
-    border-left: black solid 3pt;
+    padding-left: 1em;
+    border-left: black solid 3px;
     padding-top: 0.3em;
 
     // padding-bottom: 0.3em

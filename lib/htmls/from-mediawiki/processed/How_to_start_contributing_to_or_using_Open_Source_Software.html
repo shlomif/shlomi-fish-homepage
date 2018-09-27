@@ -460,10 +460,13 @@ Here’s a coverage of some popular build-systems and how to build code from the
 <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a> is Perl 5’s newer build system, which is not dependent on the idiosyncrasies of the system’s shell and its make implementation. To use it one should do something like:
 </p>
 
-<pre>        $ perl Build.PL
-        $ ./Build
-        $ ./Build test
-        $ ./Build install # as root or using local::lib or some Build.PL arguments to install locally.
+<pre>
+$ perl Build.PL
+$ ./Build
+$ ./Build test
+# As root or using local::lib or some Build.PL
+# arguments to install locally.
+$ ./Build install
 </pre>
 <h5 id="perl.E2.80.99s_ExtUtils::MakeMaker">perl’s ExtUtils::MakeMaker </h5>
 
@@ -472,10 +475,13 @@ Here’s a coverage of some popular build-systems and how to build code from the
 
 </p>
 
-<pre>        $ perl Makefile.PL
-        $ make
-        $ make test
-        $ make install # as root or using local::lib or some Makefile.PL arguments to install locally.
+<pre>
+$ perl Makefile.PL
+$ make
+$ make test
+# As root or using local::lib or some
+# Makefile.PL arguments to install locally.
+$ make install
 </pre>
 <h5 id="GNU_Autotools">GNU Autotools </h5>
 
@@ -484,10 +490,11 @@ Here’s a coverage of some popular build-systems and how to build code from the
 
 </p>
 
-<pre>       $ ./autogen.sh # Or similar - if building from the raw source.
-       $ ./configure --prefix="$HOME/apps/myapp" # And possibly other flags.
-       $ make
-       $ make install
+<pre>
+$ ./autogen.sh
+$ ./configure --prefix="$HOME/apps/myapp"
+$ make
+$ make install
 </pre>
 <h5 id="CMake">CMake</h5>
 
@@ -496,11 +503,12 @@ Here’s a coverage of some popular build-systems and how to build code from the
 
 </p>
 
-<pre>   $ mkdir build
-   $ cd build
-   $ cmake-gui ..
-   $ make
-   $ make install
+<pre>
+$ mkdir build
+$ cd build
+$ cmake-gui ..
+$ make
+$ make install
 </pre>
 <h4 id="Version_Control_Systems">Version Control Systems </h4>
 

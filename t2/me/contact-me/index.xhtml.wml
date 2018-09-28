@@ -159,9 +159,9 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 \$(document).ready(function() {
 
     $("#more_contacts_list").expander({
-        slicePoint: 400,
-        expandText: 'read more…',
-        expandPrefix: '…',
+        slicePoint: 500,
+        expandText: 'Read more',
+        expandPrefix: ' …',
     });
 
 });

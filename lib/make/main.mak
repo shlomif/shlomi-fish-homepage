@@ -857,7 +857,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	cat $< | $(PERL) -pe 's!^\+!!' > $@
 
-GEN_STYLE_CSS_FILES = style.css style-2008.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
+GEN_STYLE_CSS_FILES = style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
 T2_CSS_TARGETS = $(addprefix $(T2_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
@@ -873,7 +873,7 @@ COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss
 $(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
-$(T2_POST_DEST)/style.css $(T2_POST_DEST)/style-2008.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
+$(T2_POST_DEST)/style.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
 
 $(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
 

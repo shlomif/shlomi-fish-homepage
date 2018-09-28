@@ -93,6 +93,7 @@ body {
 
 #faux {
     background-color: #e0ebef;
+    width: 100%;
 }
 
 /* This is for the breadcrumbs trail (= leading path) at the top. */
@@ -123,7 +124,7 @@ body {
     }
 }
 
-.lim_width {
+.lim_width , #navbar_wrapper {
     img , iframe {
         max-width: 99%;
         height: auto;

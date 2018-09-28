@@ -18,7 +18,7 @@ my $text = path($filename)->slurp_utf8;
 
 $text =~ s{<(/?h)(\d+)}{"<".$1.($2+1)}ge;
 
-$text =~ s{\A.*?(<div class="screenplay")}{$1}ms;
-substr( $text, rindex( $text, "</div>" ) ) = "</div>";
+$text =~ s{\A.*?(<)main( class="screenplay")}{$1 . "div" . $2}ems;
+substr( $text, rindex( $text, "</main>" ) ) = "</div>";
 
 path($out_fn)->spew_utf8($text);

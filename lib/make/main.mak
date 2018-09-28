@@ -864,8 +864,8 @@ T2_CSS_TARGETS = $(addprefix $(T2_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(T2_CSS_TARGETS)
 
-# SASS_STYLE = compressed
-SASS_STYLE = expanded
+SASS_STYLE = compressed
+# SASS_STYLE = expanded
 SASS_CMD = sass --style $(SASS_STYLE)
 
 FORT_SASS_DEPS = lib/sass/fortunes.scss

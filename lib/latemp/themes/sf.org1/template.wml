@@ -16,14 +16,14 @@
 <latemp_get_breadcrumbs_trail />
 </div>
 <div id="faux">
-<button id="show_navbar" class="off">Show NavBar</button>
+<button id="show_navbar" class="on">Hide NavBar</button>
 <div id="container-all" class="row">
 <p class="invisible">
 <a href="#main">Go to main content</a>
 </p>
 
-<div id="navbar_wrapper" class="col s3 novis">
-<nav class="navbar novis" id="navbar">
+<div id="navbar_wrapper" class="col s3">
+<nav class="navbar" id="navbar">
 <p class="invisible">
 <a href="#nav_menu">Go to the navigation menu</a>
 </p>

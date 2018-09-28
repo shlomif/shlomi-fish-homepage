@@ -8,6 +8,8 @@
 </when>
 <js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
 
+<js_script src="$(ROOT)/js/my-expander.js"></js_script>
+
 <h2_section id="contact_me" title="How to contact me / How to reach me">
 
 <p>
@@ -158,16 +160,7 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 
 <js_script>
 
-\$(document).ready(function() {
-
-    $("#more_contacts_list").expander({
-        slicePoint: 500,
-        expandText: 'Read more',
-        expandPrefix: ' …',
-    });
-
-});
-
+shf_expand("#more_contacts_list", 500);
 </js_script>
 
 </h2_section>

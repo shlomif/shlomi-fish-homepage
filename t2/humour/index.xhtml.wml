@@ -5,6 +5,7 @@
 <latemp_meta_desc "Aphorisms, Quotes, Factoids, bits, parodical songs, stories and screenplays by Shlomi Fish" />
 
 <js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
+<js_script src="$(ROOT)/js/my-expander.js"></js_script>
 
 <section class="h2">
 
@@ -146,15 +147,5 @@ Media Recommendations of films, fiction books, etc.
 </section>
 
 <js_script>
-
-\$(document).ready(function() {
-
-    $("div.collapse").expander({
-        slicePoint: 1200,
-        expandText: 'read more…',
-        expandPrefix: '…',
-    });
-
-});
-
+shf_expand("div.collapse", 1200);
 </js_script>

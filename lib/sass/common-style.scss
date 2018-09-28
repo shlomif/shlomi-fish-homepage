@@ -3,20 +3,6 @@
 @import "common-body";
 @import "common-with-print";
 
-@mixin margin-lr($mar) {
-    margin-left: $mar;
-    margin-right: $mar;
-}
-
-@mixin padding-lr($mar) {
-    padding-left: $mar;
-    padding-right: $mar;
-}
-
-@mixin rounded_corners($radius) {
-    border-radius: $radius;
-}
-
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover, .bk2hp:hover {
     background-color: #90EE90;
 

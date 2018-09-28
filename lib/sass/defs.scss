@@ -3,3 +3,16 @@
     font-size: 16px;
 }
 
+@mixin margin-lr($mar) {
+    margin-left: $mar;
+    margin-right: $mar;
+}
+
+@mixin padding-lr($mar) {
+    padding-left: $mar;
+    padding-right: $mar;
+}
+
+@mixin rounded_corners($radius) {
+    border-radius: $radius;
+}

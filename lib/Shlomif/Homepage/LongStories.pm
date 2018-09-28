@@ -515,7 +515,8 @@ sub _get_story_entry_tags
     my $o = $class->_get_story($id);
 
     return [
-        qq{<div class="story">\n},
+        qq{<section class="story">\n},
+        qq{<header>\n},
         sprintf(
             qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
@@ -524,9 +525,10 @@ sub _get_story_entry_tags
             ( $o->entry_text || die "Elimbda $id" ),
             $tag,
         ),
+        qq{</header>\n},
         @{ $class->_get_list_items_tags($id) },
         $o->entry_extra_html(),
-        qq{</div>\n}
+        qq{</section>\n}
     ];
 }
 

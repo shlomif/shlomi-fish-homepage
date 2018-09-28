@@ -294,7 +294,6 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag my_extra_head_elements>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-<link rel="alternate stylesheet" type="text/css" href="$(ROOT)/style-2008.css" media="screen" title="Old 2008 Style" />
 ;;; Let browser know website is optimized for mobile
 <@[<meta name="viewport" content="width=device-width, initial-scale=1.0" />]@>
 <if "<get-var is_dev />"

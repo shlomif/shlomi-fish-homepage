@@ -1148,10 +1148,13 @@ write_on_change(
         join "\n",
         map {
             my $n = $_;
+
+            # my $tag = "wml_toc_h$n";
+            my $tag = "h$n";
             <<"EOF"
 <define-tag h${n}_section endtag="required" whitespace="delete">
 
-<set-var h_tag="wml_toc_h$n"  />
+<set-var h_tag="$tag"  />
 <set-var h_class="h$n" />
 <preserve _wml_id_h$n id href title />
 <set-var %attributes />
@@ -1172,14 +1175,14 @@ ENDU
 <set-var _wml_id_h$n=<get-var id /> />
 <section class="<get-var h_class />">
 
-<header><wml_toc_h$n id="<get-var _wml_id_h$n />">
+<header><$tag id="<get-var _wml_id_h$n />">
 <when <get-var href />>
 <a href="<get-var href />"><get-var title /></a>
 </when>
 <when <not <get-var href /> />>
 <get-var title />
 </when>
-</wml_toc_h$n>
+</$tag>
 </header>
 
 %body

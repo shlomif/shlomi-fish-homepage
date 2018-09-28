@@ -8,7 +8,7 @@
 </when>
 <js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
 
-<h2 id="contact_me">How to contact me / How to reach me</h2>
+<h2_section id="contact_me" title="How to contact me / How to reach me">
 
 <p>
 This page lists the various ways in which I (= Shlomi Fish) can be contacted.
@@ -39,7 +39,9 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 <dd>+972-54-6232377 (Orange)</dd>
 </dl>
 
-<h2 id="more_contact_details">More Contact Details</h2>
+</h2_section>
+
+<h2_section id="more_contact_details" title="More Contact Details">
 
 <dl id="more_contacts_list" class="contact">
 
@@ -167,3 +169,4 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 });
 
 </script>
+</h2_section>

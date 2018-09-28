@@ -1,3 +1,5 @@
+@import "defs";
+
 .ui-helper-clearfix:after {
     clear: none;
 }
@@ -5,7 +7,7 @@
 .ui-widget {
     font-size: 1em;
 
-    // +default_font_family
+    @include default_font_family;
 }
 
 .ui-widget-content {

@@ -6,6 +6,8 @@
 
 <latemp_meta_desc "The XML-Grammar Meta-Project: XML-Grammar-Fiction, XML-Grammar-Screenplay, XML-Grammar-Fortune, etc." />
 
+<h2_section id="about" title="About">
+
 <p>
 The XML-Grammar project aims to define several XML grammars for specialised
 tasks, with schemas, converters and processors. We use the <a
@@ -27,7 +29,9 @@ Sometimes, we define simpler and less verbose <b>text-based
 markup languages</b> that are in turn converted to the XML.
 </p>
 
-<h2 id="list-of-projects">List of Modules</h2>
+</h2_section>
+
+<h2_section id="list-of-projects" title="List of Modules">
 
 <ol>
 
@@ -73,4 +77,13 @@ plain-text from them.
 an XML grammar for creating lists of products. See
 <a href="$(ROOT)/recommendations/">my recommendations page</a> for examples.
 </li>
+
+<li>
+<p>
+<cpan_self_dist d="XML-Grammar-Vered" /> -
+an XML grammar for managing some technical documents.
+</p>
+</li>
 </ol>
+
+</h2_section>

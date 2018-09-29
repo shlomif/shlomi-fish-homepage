@@ -882,7 +882,7 @@ div.abstract {
 }
 
 .side_toc {
-    nav.page_toc {
+    div.page_toc , nav.page_toc {
         clear: right;
         float: right;
         font-size: 85%;

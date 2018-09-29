@@ -5,6 +5,8 @@
 
 <latemp_meta_desc "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
 
+<h2_section id="about" title="About">
+
 <p>
 The perl 5 distribution ships with the File::Find module, which can be used
 to traverse directory trees. However, it has some serious limitations:
@@ -41,9 +43,11 @@ declarative interface for File-Find-Object, while overcoming the limitations
 of File::Find.
 </p>
 
-<h2 id="links">Project Links</h2>
+</h2_section>
 
-<h3 id="links-file-find-object">For File-Find-Object</h3>
+<h2_section id="links" title="Project Links">
+
+<h3_section id="links-file-find-object" title="For File-Find-Object">
 
 <bitbucket_cpan_dist_links
     dist="File-Find-Object"
@@ -51,7 +55,9 @@ of File::Find.
     freecode_url="http://freecode.com/projects/file-find-object/">
 </bitbucket_cpan_dist_links >
 
-<h3 id="links-file-find-object-rule">File-Find-Object-Rule</h3>
+</h3_section>
+
+<h3_section id="links-file-find-object-rule" title="File-Find-Object-Rule">
 
 <bitbucket_cpan_dist_links
     dist="File-Find-Object-Rule"
@@ -65,8 +71,11 @@ Record</a>
 </li>
 </define-tag>
 
+</h3_section>
 
-<h2 id="licence">Licence</h2>
+</h2_section>
+
+<h2_section id="licence" title="Licence">
 
 <p>
 File-Find-Object is multi-licensed under the GNU General Public Licence (GPL)
@@ -81,9 +90,11 @@ is distributed under its same terms with all subsequent copyright claims
 to the modifications disclaimed.
 </p>
 
-<h2 id="news">News</h2>
+</h2_section>
 
-<h3 id="news-2009-06-26">2009-06-26: File-Find-Object-Rule Version 0.0300</h3>
+<h2_section id="news" title="News">
+
+<h3_section id="news-2009-06-26" title="2009-06-26: File-Find-Object-Rule Version 0.0300">
 
 <p>
 Version 0.0300 of File-Find-Object-Rule was released yesterday. The main
@@ -102,8 +113,9 @@ File-Find-Object-Rule (instead of the original File-Find-Rule) and more links
 and keywords as META.yml meta-data.
 </p>
 
-<h3 id="news-2009-01-09">2009-01-09: File-Find-Object 0.1.6 Was Released With
-a Huge Speed Boost</h3>
+</h3_section>
+
+<h3_section id="news-2009-01-09" title="2009-01-09: File-Find-Object 0.1.6 Was Released With a Huge Speed Boost">
 
 <p>
 Recently, File-Find-Object was benchmarked using a test program that
@@ -124,9 +136,13 @@ because the conversion yielded a substantial increase in speed. More
 information can be found in the Changes file in the distribution.
 </p>
 
-<h2 id="coverage">Coverage of File-Find-Object</h2>
+</h3_section>
 
-<h3 id="coverage-shlomif">Coverage in Shlomi Fish’s Blogs</h3>
+</h2_section>
+
+<h2_section id="coverage" title="Coverage of File-Find-Object">
+
+<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
 
 <ul>
 
@@ -152,3 +168,7 @@ you can do with File-Find-Object (that you can’t with File::Find)”</a>
 </li>
 
 </ul>
+
+</h3_section>
+
+</h2_section>

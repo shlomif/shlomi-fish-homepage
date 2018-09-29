@@ -531,8 +531,8 @@ sub generic_get_params
                             {
                                 text => "Reddit “Ask Me Anything”",
                                 url  => "me/interviews/reddit-AMA/",
+                                skip => 1,
                             },
-
                         ],
                     },
                     {

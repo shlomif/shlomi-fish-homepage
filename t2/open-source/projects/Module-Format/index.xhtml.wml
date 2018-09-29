@@ -7,6 +7,8 @@
 
 <latemp_meta_desc "<get-var modname /> - perform bulk operations on Perl modules" />
 
+<h2_section id="about" title="About">
+
 <p>
 <get-var modname /> aims to simplify installing a large number of Perl modules
 (or their associated CPAN distributions) which are often stringified into
@@ -63,9 +65,11 @@ libfoo-bar-baz-perl
 <get-var modname /> can input from most of them and output to all of them.
 </p>
 
-<h2 id="use-cases">Use Cases</h2>
+</h2_section>
 
-<h3 id="apt-get">apt-get</h3>
+<h2_section id="use-cases" title="Use Cases">
+
+<h3_section id="apt-get" title="apt-get">
 
 <p>
 To install a group of modules using
@@ -85,8 +89,9 @@ Then you can type invocations like
 <code>up XML::RSS XML-LibXML DBIx/Class.pm</code> (note the inconsistency in the
 parameters.) to install Perl modules.
 </p>
+</h3_section>
 
-<h3 id="urpmi">urpmi</h3>
+<h3_section id="urpmi" title="urpmi">
 
 <p>
 To install a group of modules using
@@ -108,9 +113,13 @@ Then you can type invocations like
 parameters.) to install Perl modules.
 </p>
 
-<h2 id="links">Project Links</h2>
+</h3_section>
 
-<h3 id="links-module-format">For <get-var modname /></h3>
+</h2_section>
+
+<h2_section id="links" title="Project Links">
+
+<h3_section id="links-module-format" title="For <get-var modname />">
 
 <bitbucket_cpan_dist_links
     dist="<get-var modname />"
@@ -118,11 +127,16 @@ parameters.) to install Perl modules.
     freecode_url="http://freecode.com/projects/module-format">
 </bitbucket_cpan_dist_links >
 
+</h3_section>
+
+</h2_section>
+
 <x11_licence name="Module-Format" />
 
-<h2 id="news">News</h2>
+<h2_section id="news" title="News">
+</h2_section>
 
-<h2 id="blog-posts">Blog Posts About <get-var modname /></h2>
+<h2_section id="blog-posts" title="Blog Posts About <get-var modname />">
 
 <ul>
 
@@ -134,3 +148,5 @@ Module-Format”</a> - on Shlomi Fish’s Technical Blog.
 </li>
 
 </ul>
+
+</h2_section>

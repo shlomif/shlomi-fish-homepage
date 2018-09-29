@@ -246,8 +246,7 @@ PROD_SYND_NON_FICTION_BOOKS_INC = $(PROD_SYND_NON_FICTION_BOOKS_DIR)/include-me.
 PROD_SYND_FILMS_DIR = lib/prod-synd/films
 PROD_SYND_FILMS_INC = $(PROD_SYND_FILMS_DIR)/include-me.html
 
-$(T2_SRC_DIR)/art/recommendations/music/index.html.wml : $(PROD_SYND_MUSIC_INC)
-	touch $@
+$(T2_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
 
 all_deps: $(PROD_SYND_MUSIC_INC)
 
@@ -257,13 +256,15 @@ GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-$(T2_DEST)/philosophy/books-recommends/index.html : $(PROD_SYND_NON_FICTION_BOOKS_INC)
+$(T2_DEST)/philosophy/books-recommends/index.xhtml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
+
 all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-$(DEST_HUMOUR)/recommendations/films/index.html: $(PROD_SYND_FILMS_INC)
+$(DEST_HUMOUR)/recommendations/films/index.xhtml: $(PROD_SYND_FILMS_INC)
+
 all_deps: $(PROD_SYND_FILMS_INC)
 
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)

@@ -16,7 +16,7 @@ and a command line application that after being fed with a layout will emit
 the cards to move.
 </p>
 
-<h2 id="download">Download</h2>
+<h2_section id="download" title="Download">
 
 <set-var ver="0.16.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
@@ -43,7 +43,7 @@ of an <a href="http://www.sqlite.org/">SQLite</a> database.
 
 </ul>
 
-<h3 id="download-solving-data">Solving Data</h3>
+<h3_section id="download-solving-data" title="Solving Data">
 
 <p>
 We’ve ran the solver on the first 1 million
@@ -114,7 +114,11 @@ that was used to generate them from the more verbose solution files</a>.
 
 </ol>
 
-<h2 id="project-links">Project Links</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="project-links" title="Project Links">
 
 <github_cpan_dist_links
     dist="Games-Solitaire-BlackHole-Solver"
@@ -122,7 +126,9 @@ that was used to generate them from the more verbose solution files</a>.
     freecode_url="http://freecode.com/projects/black-hole-solitaire-solver">
 </github_cpan_dist_links >
 
-<h2 id="similar-projects">Similar Projects</h2>
+</h2_section>
+
+<h2_section id="similar-projects" title="Similar Projects">
 
 <ul>
 
@@ -133,17 +139,21 @@ solvers</a>.
 </li>
 </ul>
 
+</h2_section>
+
 <x11_licence name="The Black Hole Solitaire Solver" />
 
-<h2 id="news">News</h2>
+<h2_section id="news" title="News">
 
-<h3 id="news_version_0_16_0">Version 0.16.0</h3>
+<h3_section id="news_version_0_16_0" title="Version 0.16.0">
 
 <p>
 Version 0.16.0 was released with a fix to a crash and some code cleanups.
 </p>
 
-<h3 id="news_version_0_14_0">Version 0.14.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_14_0" title="Version 0.14.0">
 
 <p>
 Version 0.14.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -153,7 +163,9 @@ and moving the
 Git and GitHub and enabling <a href="https://travis-ci.org/shlomif/black-hole-solitaire">Travis-CI</a>.
 </p>
 
-<h3 id="news_version_0_12_0">Version 0.12.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_12_0" title="Version 0.12.0">
 
 <p>
 Version 0.12.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -161,7 +173,9 @@ this release are an improved API, many cleanups (the code requires “-std=gnu99
 from now on), and an ability to be built as an RPM.
 </p>
 
-<h3 id="news_version_0_10_0">Version 0.10.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_10_0" title="Version 0.10.0">
 
 <p>
 Version 0.10.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -170,7 +184,9 @@ monitoring the progress of the solutions, and fixes for the build system with
 version 3.0.0 of CMake.
 </p>
 
-<h3 id="news_version_0_8_0">Version 0.8.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_8_0" title="Version 0.8.0">
 
 <p>
 Version 0.8.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -178,7 +194,9 @@ this release are the new <code>--version</code> flag, and the
 <code>--rank-reach-prune</code> flag, which can improve performance.
 </p>
 
-<h3 id="news_version_0_6_0">Version 0.6.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_6_0" title="Version 0.6.0">
 
 <p>
 Version 0.6.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -187,7 +205,9 @@ flag and most importantly the <code>--display-boards</code> flag that displays
 the intermediate board layouts after every move.
 </p>
 
-<h3 id="news_version_0_4_0">Version 0.4.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_4_0" title="Version 0.4.0">
 
 <p>
 Version 0.4.0 of Black Hole Solitaire Solver was released. The highlight of
@@ -206,7 +226,9 @@ a Row Solitaire and have drawn some conclusions:
 
 </ul>
 
-<h3 id="news_version_0_2_0">Version 0.2.0</h3>
+</h3_section>
+
+<h3_section id="news_version_0_2_0" title="Version 0.2.0">
 
 <p>
 Version 0.2.0 of Black Hole Solitaire Solver was released. The highlight of
@@ -227,3 +249,7 @@ Hole Solitaire and have drawn some conclusions:
 </li>
 
 </ul>
+
+</h3_section>
+
+</h2_section>

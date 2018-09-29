@@ -25,7 +25,7 @@ so I believe it can also serve as a reference implementation for those
 who wish to implement such a mechanism for other platforms.
 </p>
 
-<h2 id="licence">Licence</h2>
+<h2_section id="licence" title="Licence">
 
 <p>
 You may use this code under your choice of:
@@ -50,7 +50,9 @@ This work is published from
 </li>
 </ul>
 
-<h2 id="links">Links</h2>
+</h2_section>
+
+<h2_section id="links" title="Links">
 
 <ul>
 
@@ -65,14 +67,17 @@ This work is published from
 
 </ul>
 
-<h2>Todo List</h2>
+</h2_section>
+
+<h2_section id="todo" title="Todo List">
 
 <ul>
 <li>Make an RPM SPEC/Debian Package etc.</li>
 <li>Port to Win32, ZThreads, etc.</li>
 </ul>
+</h2_section>
 
-<h2 id="q_and_a">Questions and Answers</h2>
+<h2_section id="q_and_a" title="Questions and Answers">
 
 <h3>What is a Readers/Writers Lock?</h3>
 
@@ -119,7 +124,9 @@ variables. The new scheme for it (which is a bit more complex) can be found
 <a href="Scheme_RLE.txt">here</a>.
 </p>
 
-<h2>Older Versions</h2>
+</h2_section>
+
+<h2_section id="old_versions" title="Older Versions">
 
 <ul>
 
@@ -136,3 +143,5 @@ variables. The new scheme for it (which is a bit more complex) can be found
 </li>
 
 </ul>
+
+</h2_section>

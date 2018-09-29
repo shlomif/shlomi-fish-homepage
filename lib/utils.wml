@@ -52,7 +52,9 @@
 
 <note>
 
+<header>
 <h2 id="under-construction-note">Note</h2>
+</header>
 
 <p>
 This page is temporary, under construction and should not be publicised or
@@ -185,13 +187,15 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <preserve name plural />
 <set-var %attributes />
 
-<h2 id="licence">Licence</h2>
+<h2_section id="licence" title="Licence">
 
 <p>
 <get-var name /> <if "<get-var plural />" "are" "is" /> free and open-source software (FOSS) distributed
 under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/Expat
-License</a>, a permissive, public-domain-like, software licence.
+License</a>, a permissive software licence.
 </p>
+
+</h2_section>
 
 <restore name plural />
 

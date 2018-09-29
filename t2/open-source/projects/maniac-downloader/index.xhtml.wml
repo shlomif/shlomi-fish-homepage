@@ -5,14 +5,16 @@
 
 <latemp_meta_desc "Maniac Downloader - a download accelerator with a key improvement." />
 
-<h2 id="usage">Usage</h2>
+<h2_section id="usage" title="Usage">
 
 <pre>
-\# To download with 10 segments
+<:print "# To download with 10 segments";:>
 $ mdown -k=10 http://path.to.my.url.tld/path-to-file.txt
 </pre>
 
-<h2 id="about">About</h2>
+</h2_section>
+
+<h2_section id="about" title="About">
 
 <p>
 This is Maniac Downloader, a maniac download accelerator. It is currently very
@@ -22,7 +24,7 @@ download speed of files here (which I suspect is caused by a misconfiguration
 of my ISP's networking), and as a result, may prove of use elsewhere.
 </p>
 
-<h3 id="secret-sauce">The Secret Sauce</h3>
+<h3_section id="secret-sauce" title="The Secret Sauce">
 
 <p>
 The main improvement of Maniac Downloader over other downloader managers is
@@ -30,15 +32,19 @@ that if a segment of the downloaded file finishes, then it splits the largest
 remaining segment, and starts another new download, so the slowest downloads
 won't delay the completion time by much.
 </p>
+</h3_section>
 
-<h2 id="download">Download</h2>
+</h2_section>
+
+<h2_section id="download" title="Download">
 
 <p>
 <a href="https://metacpan.org/release/App-ManiacDownloader">Download
 Maniac Downloader from the CPAN</a>
 </p>
+</h2_section>
 
-<h2 id="project-links">Project Links</h2>
+<h2_section id="project-links" title="Project Links">
 
 <bitbucket_cpan_dist_links
     dist="App-ManiacDownloader"
@@ -46,9 +52,11 @@ Maniac Downloader from the CPAN</a>
     freecode_url="http://freecode.com/projects/maniac-downloader/">
 </bitbucket_cpan_dist_links >
 
-<h2 id="coverage">Coverage of <get-var cpan_dist /></h2>
+</h2_section>
 
-<h3 id="coverage-shlomif">Coverage in Shlomi Fish’s Blogs</h3>
+<h2_section id="coverage" title="Coverage of <get-var cpan_dist />">
+
+<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
 
 <ul>
 
@@ -72,5 +80,9 @@ Maniac Downloader from the CPAN</a>
 </li>
 
 </ul>
+
+</h3_section>
+
+</h2_section>
 
 <x11_licence name="Maniac Downloader" />

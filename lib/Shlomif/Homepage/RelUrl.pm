@@ -10,6 +10,10 @@ our @EXPORT_OK = (qw( _path_info _rel_url ));
 sub _is_slash_terminated
 {
     my $string = shift;
+    if ( !defined $string )
+    {
+        Carp::confess("undef");
+    }
     return ( ( $string =~ m#/\z# ) ? 1 : 0 );
 }
 

@@ -451,6 +451,8 @@ sub _get_tagline_tags
     return [ qq#<h2 id="tagline">#, $class->get_tagline($id), qq#</h2>\n#, ];
 }
 
+use Shlomif::Homepage::RelUrl qw/ _rel_url /;
+
 sub _get_abstract_tags
 {
     my ( $class, $id ) = @_;
@@ -465,8 +467,6 @@ sub _get_abstract_tags
 
     return [$abstract];
 }
-
-use Shlomif::Homepage::RelUrl qw/ _rel_url /;
 
 sub _get_logo_tags
 {

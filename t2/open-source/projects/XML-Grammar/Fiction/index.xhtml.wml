@@ -13,6 +13,8 @@
 
 <div class="wrap-me">
 
+<h2_section id="about" title="About">
+
 <p>
 <get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight
 plaintext-based markup language, which can be used to write such fiction as
@@ -38,11 +40,13 @@ project</a> that provides several specialised processors for XML grammars
 for various tasks.
 </p>
 
+</h2_section>
+
 <toc_div />
 
-<h2 id="links">Project Links</h2>
+<h2_section id="links" title="Project Links">
 
-<h3 id="links-xml-grammar-fiction">For <get-var cpan_dist /></h3>
+<h3_section id="links-xml-grammar-fiction" title="For <get-var cpan_dist />">
 
 <bitbucket_cpan_dist_links
     dist="<get-var cpan_dist />"
@@ -50,11 +54,15 @@ for various tasks.
     bitbucket_url="https://bitbucket.org/shlomif/fiction-xml">
 </bitbucket_cpan_dist_links>
 
+</h3_section>
+
+</h2_section>
+
 <x11_licence name="<get-var cpan_dist />" />
 
-<h2 id="examples">Examples</h2>
+<h2_section id="examples" title="Examples">
 
-<h3 id="fiction_examples">Fiction-Text Examples</h3>
+<h3_section id="fiction_examples" title="Fiction-Text Examples">
 
 <define-tag __OLD__url_to_data_examples whitespace="delete">
 <preserve base />
@@ -104,7 +112,9 @@ Fiction-Text.
 
 </ul>
 
-<h3 id="screenplay_examples">Screenplay-Text Examples</h3>
+</h3_section>
+
+<h3_section id="screenplay_examples" title="Screenplay-Text Examples">
 
 <ul>
 
@@ -178,10 +188,13 @@ well-known people (celebrities/etc.).
 
 </ul>
 
-<h2 id="news">News</h2>
+</h3_section>
 
-<h3 id="news-2011-05-22">2011-05-22: <get-var cpan_dist /> version 0.5.1 is
-out</h3>
+</h2_section>
+
+<h2_section id="news" title="News">
+
+<h3_section id="news-2011-05-22" title="2011-05-22: <get-var cpan_dist /> version 0.5.1 is out">
 
 <p>
 There are many improvements in this release. Since the last news item here,
@@ -226,9 +239,9 @@ Add support for numeric entities such as <code>&amp;#91;</code>.
 
 </ol>
 
+</h3_section>
 
-<h3 id="news-2011-04-05">2011-04-05: <get-var cpan_dist /> version 0.1.5 is
-out</h3>
+<h3_section id="news-2011-04-05" title="2011-04-05: <get-var cpan_dist /> version 0.1.5 is out">
 
 <p>
 This release has many small bug-fixes and improvements:
@@ -262,8 +275,9 @@ Add support for &lt;i&gt; tags in XML-Grammar-Screenplay.
 Everyone are recommended to upgrade.
 </p>
 
-<h3 id="news-2009-11-25">2009-11-25: <get-var cpan_dist /> version 0.0.2 was
-released</h3>
+</h3_section>
+
+<h3_section id="news-2009-11-25" title="2009-11-25: <get-var cpan_dist /> version 0.0.2 was released">
 
 <p>
 <get-var cpan_dist /> was released today, and should be available on CPAN
@@ -273,8 +287,9 @@ should remain the same, but the code is now much more malleable for future
 improvements, and there may have been a few accidental fixes.
 </p>
 
-<h3 id="news-2009-11-05">2009-11-05: <get-var cpan_dist /> version 0.0.1 was
-released</h3>
+</h3_section>
+
+<h3_section id="news-2009-11-05" title="2009-11-05: <get-var cpan_dist /> version 0.0.1 was released">
 
 <p>
 The first version of <get-var cpan_dist /> (v0.0.1) was unleashed onto the
@@ -291,9 +306,12 @@ Writing Month)</a> and hopefully <get-var cpan_dist /> will prove of assistance
 to you for this NaNoWriMo or future ones.
 </p>
 
-<h2 id="coverage">Coverage of <get-var cpan_dist /></h2>
+</h3_section>
+</h2_section>
 
-<h3 id="coverage-shlomif">Coverage in Shlomi Fish’s Blogs</h3>
+<h2_section id="coverage" title="Coverage of <get-var cpan_dist />">
+
+<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
 
 <ul>
 
@@ -330,9 +348,13 @@ to you for this NaNoWriMo or future ones.
 
 </ul>
 
-<h2 id="demos">Demos</h2>
+</h3_section>
 
-<h3 id="demo-fiction1">Fiction Demo 1</h3>
+</h2_section>
+
+<h2_section id="demos" title="Demos">
+
+<h3_section id="demo-fiction1" title="Fiction Demo 1">
 
 <p>
 If we have this sample Fiction-Text document:
@@ -364,7 +386,9 @@ Shlomif::XmlFictionSlurp->my_slurp(
 
 </div>
 
-<h3 id="demo-screenplay1">Screenplay Demo 1</h3>
+</h3_section>
+
+<h3_section id="demo-screenplay1" title="Screenplay Demo 1">
 
 <p>
 If we have this sample screenplay:
@@ -393,7 +417,11 @@ Shlomif::XmlFictionSlurp->my_slurp(
 
 }:>
 
-<h2 id="similar">Similar Projects</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="similar" title="Similar Projects">
 
 <ul>
 
@@ -419,10 +447,13 @@ program that was quite sluggish from my experience.
 <p>
 <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> - a very rich
 and open-source markup language that can be used for notating text and can
-be converted into DocBook 4, directly into HTML, and to several other formats.
+be converted into DocBook 4/5, directly into HTML, and to several other formats.
+Also see <a href="https://asciidoctor.org/">Asciidoctor</a>.
 </p>
 </li>
 
 </ul>
+
+</h2_section>
 
 </div>

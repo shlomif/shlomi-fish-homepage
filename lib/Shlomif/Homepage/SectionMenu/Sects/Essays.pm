@@ -326,6 +326,7 @@ my $essays_tree_contents = {
 "“Usability” of the Perl Online World for Newcomers",
                             subs => [
                                 {
+                                    skip => 1,
                                     text => "Version 1",
                                     url  => "philosophy/perl-newcomers/v1/",
                                 },

@@ -6,6 +6,8 @@
 
 <latemp_meta_desc "Docmake - a Perl-based tool to Render DocBook/XML" />
 
+<h2_section id="about" title="About">
+
 <p>
 Docmake is a command line tool to translate
 <a href="http://en.wikipedia.org/wiki/DocBook">DocBook/XML</a> code into
@@ -14,15 +16,9 @@ more low-level tools. It aims to be a replacement for
 <a href="http://cyberelk.net/tim/software/xmlto/">xmlto</a>.
 </p>
 
-<h2>Project Resources</h2>
+</h2_section>
 
-<ul>
-<li>
-<a href="http://freecode.com/projects/docmake/">Freecode Record</a>
-</li>
-</ul>
-
-<h2>Subversion Directories</h2>
+<h2>Version Control</h2>
 
 <ul>
 
@@ -32,7 +28,7 @@ more low-level tools. It aims to be a replacement for
 
 </ul>
 
-<h2 id="links">Project Links</h2>
+<h2_section id="links" title="Project Links">
 
 <ul>
 
@@ -40,13 +36,19 @@ more low-level tools. It aims to be a replacement for
 <cpan_dist d="App-XML-DocBook-Builder">On metacpan.org</cpan_dist>
 </li>
 
-<li>
-<a href="http://freecode.com/projects/docmake/">Freecode
-Record</a>
-</li>
-
 </ul>
+
+</h2_section>
 
 <x11_licence name="Docmake" />
 
-<h2 id="news">News</h2>
+<h2_section id="news" title="News">
+</h2_section>
+
+<h2>Old Project Resources</h2>
+
+<ul>
+<li>
+<a href="http://freecode.com/projects/docmake/">Freecode Record</a>
+</li>
+</ul>

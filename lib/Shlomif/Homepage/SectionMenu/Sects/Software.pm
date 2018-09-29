@@ -164,6 +164,7 @@ my $software_tree_contents = {
                     title => "A Tool for Generating HTML Presentations",
                 },
                 {
+                    skip => 1,
                     text => "yjobs.co.il on Firefox/Mozilla",
                     url  => "open-source/projects/yjobs-on-mozilla/",
                     title =>
@@ -198,15 +199,18 @@ my $software_tree_contents = {
                         "A KDE implementation of Sokoban - maintenance branch",
                 },
                 {
+                    skip => 1,
                     text => "Spark - A Lisp Dialect",
                     url  => "open-source/projects/Spark/",
                     subs => [
                         {
+                            skip  => 1,
                             text  => "Mission Statement",
                             url   => "open-source/projects/Spark/mission/",
                             title => "Spark - Pre-Birth of a Modern Lisp",
                         },
                         {
+                            skip => 1,
                             text => "Old Document ( “Park” )",
                             url  => "open-source/projects/Park-Lisp/",
                             title =>

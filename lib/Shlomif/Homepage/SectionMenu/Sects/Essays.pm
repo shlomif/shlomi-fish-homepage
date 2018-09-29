@@ -338,6 +338,7 @@ my $essays_tree_contents = {
                             title => "An Essay about why I Like Perl so much.",
                             subs  => [
                                 {
+                                    skip => 1,
                                     text => "The Text Itself",
                                     url =>
 "philosophy/computers/perl/joy-of-perl/joy-of-perl.html",

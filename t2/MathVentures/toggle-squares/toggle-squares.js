@@ -41,15 +41,15 @@ function toggle_button(ix, iy) {
 
     const old_src = button_handle.attr('src');
 
-    const old_state = (old_src == '1.png');
+    const old_state = (old_src == '1.min.svg');
     const new_state = !old_state;
 
     if (new_state) {
-        button_handle.attr('src', '1.png');
+        button_handle.attr('src', '1.min.svg');
         ++count_of_ons;
         button_handle.attr('alt', 'on');
     } else {
-        button_handle.attr('src', '0.png');
+        button_handle.attr('src', '0.min.svg');
         --count_of_ons;
         button_handle.attr('alt', 'off');
     }

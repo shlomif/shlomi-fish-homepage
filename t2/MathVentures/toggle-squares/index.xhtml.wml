@@ -14,6 +14,8 @@
 .game img
 {
     display: block;
+    width: 40px;
+    height: auto;
 }
 </style>
 </page_extra_head_elements>
@@ -26,12 +28,16 @@
 <latemp_subject "Toggle Squares Game" />
 <latemp_meta_desc "Toggle Squares Game in JavaScript - originally by Ken Housley" />
 
+<h2_section id="intro" title="Introduction">
+
 <p>
 This game originated from a Java game by Dr. Ken Housley, whose personal
 site has since gone offline. This implementation is JavaScript-based.
 </p>
 
-<h2 id="rules">Rules</h2>
+</h2_section>
+
+<h2_section id="rules" title="Rules">
 
 <p>
 You are presented with a board of squares that can be either of two
@@ -45,7 +51,9 @@ ones). As a result, clicking on side or corner squares will toggle
 only 6 or 4 squares.
 </p>
 
-<h2 id="links">Links</h2>
+</h2_section>
+
+<h2_section id="links" title="Links">
 
 <ul>
 <li>
@@ -59,7 +67,9 @@ a human without extra aids.
 </li>
 </ul>
 
-<h2 id="game">The Game</h2>
+</h2_section>
+
+<h2_section id="game" title="The Game">
 
 <form>
 <p>
@@ -74,3 +84,5 @@ Num Squares: <input name="num_squares" value="5" id="num_squares" />
 
 <div id="board">
 </div>
+
+</h2_section>

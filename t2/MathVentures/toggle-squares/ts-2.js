@@ -3,8 +3,8 @@ let n = -1;
 function button_html(x, y, value) {
     return (
         "<img src=\"" +
-        (value ? "1.png" : "0.png") +
-        "\" alt=\"" +
+        (value ? "1" : "0") +
+        ".min.svg\" alt=\"" +
         (value ? "white" : "black") +
         "\" id=\"button_" + x + "_" + y + "\" " +
         "onclick=\"user_press_button(" + x + "," + y + "); return false;\" />"

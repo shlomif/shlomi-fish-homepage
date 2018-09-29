@@ -4,17 +4,19 @@
 
 <latemp_meta_desc "“Fortunes Mania” : A Community Quotes Sites" />
 
-<h2 id="intro">Introduction</h2>
+<h2_section id="intro" title="Introduction">
 
 <p>
-When I told some people on <a href="irc://irc.freenode.net/#perl">Freenode’s
-\#perl</a> that I had an idea for a
+When I told some people on
+<a href="irc://irc.freenode.net/#perl">Freenode’s #perl</a> that I had an idea for a
 <a href="http://www.paulgraham.com/web20.html">Web 2.0</a> site, someone
 told me: “write it down, and then burn it”. But I still think it’s a good
 idea. So here goes.
 </p>
 
-<h2 id="what_is">What is “Fortunes Mania”</h2>
+</h2_section>
+
+<h2_section id="what_is" title="What is “Fortunes Mania”">
 
 <p>
 In a nutshell, Fortunes Mania is a community sharing sites for quotations,
@@ -23,7 +25,7 @@ can create feeds of quotes, syndicate and aggregate them, tag and categorise
 them, rate and comment on them, etc.
 </p>
 
-<h3 id="existing_efforts">Existing Efforts (and why they are inadequate.)</h3>
+<h3_section id="existing_efforts" title="Existing Efforts (and why they are inadequate.)">
 
 <p>
 There are <a href="http://www.google.com/Top/Reference/Quotations/">many
@@ -40,12 +42,16 @@ few are categorised into the topics’ pages.
 <p>
 <a href="http://www.bash.org/">The Quote Database</a> is a collection of
 user-submitted IRC conversations. The problem with it is that the quotes
-still have to be accepted by the editors, and reportedly they have a huge
+still have to be accepted by the editors, and reportedly they have a large
 backlog. The quotes are not categorised in any way, and they are all plain
 text.
 </p>
 
-<h2 id="features">Features of the Site</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="features" title="Features of the Site">
 
 <p>
 The site will allow users to register an account, and start publishing
@@ -55,7 +61,7 @@ the appropriate RSS/Atom feeds) that can be controlled and/or moderated
 by groups of editors (using the site’s permission system).
 </p>
 
-<h3 id="formats">The Formats</h3>
+<h3_section id="formats" title="The Formats">
 
 <p>
 Clearly the traditional text format of the
@@ -76,7 +82,9 @@ format (while possibly keeping the original) and will export it to the final
 formats on demand. I also believe this format needs to have structured markup.
 </p>
 
-<h3 id="interfaces">Interfaces</h3>
+</h3_section>
+
+<h3_section id="interfaces" title="Interfaces">
 
 <p>
 Beside the web-interface (possibly facilitated by AJAX), it will probably be
@@ -89,7 +97,11 @@ By defining an API, one can expect a culture of open-source and
 non-open-source clients to emerge eventually.
 </p>
 
-<h2 id="strategy">Strategy</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="strategy" title="Strategy">
 
 <p>
 The site should supply a way to export to and from Wikiquote and other such
@@ -98,9 +110,13 @@ quotes sites. For more information refer to Joel on Software’s
 go Back” essay</a>.
 </p>
 
-<h2 id="commercial_value">Commercial Value</h2>
+</h2_section>
+
+<h2_section id="commercial_value" title="Commercial Value">
 
 <p>
-As with most Web 2.0 sites one can make money from commercials, as well as
-by giving the users the offer of premium accounts with more advantages.
+As with most other Web 2.0 sites, one can make money from commercials, as well
+as by giving the users the offer of premium accounts with more advantages.
 </p>
+
+</h2_section>

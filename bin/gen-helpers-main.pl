@@ -78,7 +78,12 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
             {
                 if ( $is_bucket->('DOCS') )
                 {
-                    return $ipp_filter->( [ @$filenames, ] );
+                    return $ipp_filter->(
+                        [
+                            grep { not m{lecture/Lambda-Calculus/slides} }
+                                @$filenames,
+                        ]
+                    );
                 }
                 if ( $is_bucket->('IMAGES') )
                 {

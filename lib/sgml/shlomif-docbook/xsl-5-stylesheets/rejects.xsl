@@ -13,6 +13,6 @@ google_color_link = "0000FF";
 google_color_url = "008000";
 </script>
 <script type="text/javascript"
-  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>

@@ -49,7 +49,7 @@ sub nav_data
 {
     my ($class) = @_;
 
-    return [ map { $_->nav_record() } @{ $class->sorted_fortunes() } ];
+    return [ map { $_->nav_record() } @{ $class->get_fortune_records() } ];
 }
 
 sub print_single_fortune_record_toc_entry
@@ -221,8 +221,8 @@ sub print_all_fortunes_html_wmls
 {
     my ($class) = @_;
 
-    foreach
-        my $r ( @{ Shlomif::Homepage::FortuneCollections->sorted_fortunes() } )
+    foreach my $r (
+        @{ Shlomif::Homepage::FortuneCollections->get_fortune_records() } )
     {
         my $path = "t2/humour/fortunes/@{[$r->id()]}.html.wml";
         $class->_print_if_update_needed(

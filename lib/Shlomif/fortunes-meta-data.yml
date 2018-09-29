@@ -67,6 +67,20 @@ shlomif_fortunes_collections:
     title: 'Quotes from the site “Joel on Software”'
   - about_blurb: |
       <p>
+      <a href="http://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul
+      Graham</a> is a software developer and essayist who maintains
+      <a href="http://www.paulgraham.com/">a web site with essays</a>. This is a
+      collection of memorable quotes from there.
+      </p>
+    desc: 'Quotes from the essays and writings
+      of <a href="http://www.paulgraham.com/">Paul Graham</a>.'
+    id: 'paul-graham'
+    meta_desc: 'Quotes from Paul Graham (= the software developer and essayist) as fortune cookies as collected by Shlomi Fish'
+    page_title: Paul Graham Fortune Cookies
+    text: 'paul-graham'
+    title: Paul Graham Quotes
+  - about_blurb: |
+      <p>
       Quotes from <a href="http://nadav.harel.org.il/">Nadav Har’El</a>’s
       signatures. They were extracted using a script.
       </p>
@@ -93,20 +107,6 @@ shlomif_fortunes_collections:
     title: Rules of Open Source Programming
   - about_blurb: |
       <p>
-      <a href="http://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul
-      Graham</a> is a software developer and essayist who maintains
-      <a href="http://www.paulgraham.com/">a web site with essays</a>. This is a
-      collection of memorable quotes from there.
-      </p>
-    desc: 'Quotes from the essays and writings
-      of <a href="http://www.paulgraham.com/">Paul Graham</a>.'
-    id: 'paul-graham'
-    meta_desc: 'Quotes from Paul Graham (= the software developer and essayist) as fortune cookies as collected by Shlomi Fish'
-    page_title: Paul Graham Fortune Cookies
-    text: 'paul-graham'
-    title: Paul Graham Quotes
-  - about_blurb: |
-      <p>
       These are fortune cookies related to the
       <a href="http://subversion.apache.org/">Subversion version control system</a>.
       </p>
@@ -128,6 +128,18 @@ shlomif_fortunes_collections:
     page_title: '“There is no IGLU Cabal” Quotes'
     text: tinic
     title: Quotes from the online Linux-IL Folklore
+  - about_blurb: |
+      <p>
+      Additions to <a href="http://www.shlomifish.org/humour/bits/facts/">the
+      collections of Factoids about people and things (e.g: Chuck Norris)</a>
+      in Unix fortune format.
+      </p>
+    desc: 'A collection of factoids about people and things (e.g: Chuck Norris).'
+    id: shlomif-factoids
+    meta_desc: 'Shlomi Fish and Friends’ Additions to the Chuck Norris/etc. Facts'
+    page_title: 'Shlomi Fish and Friends’ Additions to the Chuck Norris/etc. Facts'
+    text: shlomif-factoids
+    title: 'Funny Factoids about People and Things (Chuck Norris, etc.)'
   - about_blurb: |
       <p>
       Collection of conversations from
@@ -153,15 +165,3 @@ shlomif_fortunes_collections:
     page_title: 'Freenode ##programming Conversations - (Fortunes Cookies) Shlomi Fish’s Collection'
     text: '##programming'
     title: 'Quotes from the Freenode ##programming channel'
-  - about_blurb: |
-      <p>
-      Additions to <a href="http://www.shlomifish.org/humour/bits/facts/">the
-      collections of Factoids about people and things (e.g: Chuck Norris)</a>
-      in Unix fortune format.
-      </p>
-    desc: 'A collection of factoids about people and things (e.g: Chuck Norris).'
-    id: shlomif-factoids
-    meta_desc: 'Shlomi Fish and Friends’ Additions to the Chuck Norris/etc. Facts'
-    page_title: 'Shlomi Fish and Friends’ Additions to the Chuck Norris/etc. Facts'
-    text: shlomif-factoids
-    title: 'Funny Factoids about People and Things (Chuck Norris, etc.)'

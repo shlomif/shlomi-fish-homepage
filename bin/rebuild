@@ -4,6 +4,10 @@ rebuild()
     (
         set -x
         set -e
+        for d in ../_*--clones/*
+        do
+            ( cd "$d"; git clean -dxf . )
+        done
         git clean -dxf .
         bash -x bin/install-npm-deps.sh
         ./gen-helpers

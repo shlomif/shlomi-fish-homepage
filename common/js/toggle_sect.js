@@ -21,8 +21,8 @@ function build_main_nav_menu_toggler() {
         toggler_selector: '#show_navbar',
         toggled_selector: '#navbar , #navbar_wrapper',
         toggled_class: 'novis',
-        hide_text: 'Hide NavBar',
-        show_text: 'Show NavBar',
+        hide_text: 'Hide NavBar ⬈',
+        show_text: 'Show NavBar ⬋',
         default_state: false,
     });
 }

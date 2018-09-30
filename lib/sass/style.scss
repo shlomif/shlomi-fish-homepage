@@ -56,6 +56,10 @@ body {
 
     #show_navbar {
         width: 100%;
+
+        &.on {
+            width: 20%;
+        }
     }
     #navbar_wrapper {
         width: 20%;

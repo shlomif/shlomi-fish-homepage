@@ -1,0 +1,26 @@
+Image Embedding Scriptology Plannig Document
+============================================
+Shlomi Fish <shlomif@cpan.org>
+:Date: 2018-09-30
+:Revision: $Id$
+
+[id="requires"]
+Requirements
+------------
+
+* Place the image (.png, .jpg, .xcf, .svg. etc.) inside the repo.
+
+* Download it if necessary.
+
+* Add link, attribution, licence, etc.
+** On the commit message.
+** On the page
+
+* Crop/resize if a bitmap.
+
+* Add <img /> / etc. tag
+** Several formats: DocBook 5, asciidoc, X/HTML 5, XHTML 1.x, markdown,
+[wml](https://github.com/thewml/website-meta-language), etc.
+** CSS style/classes
+** Relative link
+*** +$(ROOT)

@@ -176,6 +176,7 @@ upload_all: upload upload_var upload_local upload_beta
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')
 
+$(T2_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(T2_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
@@ -1232,5 +1233,3 @@ BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
 min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 
 include lib/make/copies-generated-include.mak
-
-$(T2_DEST)/open-source/projects/Spark/mission/index.xhtml: lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml

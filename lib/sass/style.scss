@@ -52,6 +52,7 @@ body {
 
     #container-all {
         display: table-row;
+        position: relative;
     }
 
     #show_navbar {
@@ -145,6 +146,12 @@ img.bizcard {
 .read-more , .read-less {
     display: block;
     margin-top: 2em;
+}
+
+@media(max-width: 900px) {
+    #navbar_wrapper {
+        position: absolute;
+    }
 }
 
 @import "footer";

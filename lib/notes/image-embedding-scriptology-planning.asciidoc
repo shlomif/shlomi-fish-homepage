@@ -9,11 +9,12 @@ Requirements
 ------------
 
 * Place the image (.png, .jpg, .xcf, .svg. etc.) inside the repo.
+** In the right dir.
 
 * Download it if necessary.
 
 * Add link, attribution, licence, etc.
-** On the commit message.
+** In the commit message.
 ** On the page
 
 * Crop/resize if a bitmap.
@@ -25,3 +26,12 @@ https://github.com/thewml/website-meta-language[wml], etc.
 ** +alt="…"+ and +title="…"+ attributes.
 ** Relative link
 *** +$(ROOT)+
+
+[id="ui"]
+User Interface
+--------------
+
+----
+img --url 'https://openclipart.org/detail/307527/a-mushroom' \
+    --at t2/philosophy/philosophy/closed-books-are-so-19th-century/index.xhtml.wml \
+----

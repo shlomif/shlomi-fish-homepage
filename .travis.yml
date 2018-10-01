@@ -13,7 +13,7 @@ before_install:
     - bash .travis.bash --cmd before_install
     - go get -u github.com/tdewolff/minify/cmd/minify
     - eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
-    - cpanm Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml YAML::XS
+    - cpanm Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     - cpanm --notest HTML::Tidy
     - cpanm HTML::T5
     # For wml
@@ -22,10 +22,10 @@ before_install:
     - cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-    - "cpanm $(perl -MYAML::XS=LoadFile -e 'print join q( ), sort {$a cmp $b} keys(%{LoadFile(q(bin/required-modules.yml))->{required}->{perl5_modules}})')"
+    - deps-app plinst -i bin/required-modules.yml
     - gem install asciidoctor compass compass-blueprint
-    - sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter Zenfilter
-    - a='latemp' ; v='0.10.0' ; b="$a-$v" ; arc="$b.tar.xz"; ( wget http://web-cpan.shlomifish.org/latemp/download/"$arc" && tar -xvf "$arc" && (cd "$b" && mkdir b && cd b && cmake .. && make && sudo make install) && rm -fr "$b" )
+    - sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml Zenfilter
+    - a='latemp' ; v='0.10.2' ; b="$a-$v" ; arc="$b.tar.xz"; ( wget http://web-cpan.shlomifish.org/latemp/download/"$arc" && tar -xvf "$arc" && (cd "$b" && mkdir b && cd b && cmake .. && make && sudo make install) && rm -fr "$b" )
     - ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
     - ( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
     - ( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )

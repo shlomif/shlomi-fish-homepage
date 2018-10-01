@@ -176,7 +176,7 @@ upload_all: upload upload_var upload_local upload_beta
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')
 
-$(T2_DEST)/philosophy/Index/index.html : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
+$(T2_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
 
@@ -234,7 +234,7 @@ $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
 rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
-	touch t2/index.html.wml
+	touch t2/index.xhtml.wml
 	touch t2/old-news.html.wml
 
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
@@ -455,7 +455,7 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html: \
+$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
 	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
@@ -488,16 +488,16 @@ all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
-$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.html : $(PUT_CARDS_2013_XHTML_STRIPPED)
+$(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
 # Rebuild the pages containing the links to t2/humour/stories upon changing
 # the lib/stories.
 
-$(DEST_HUMOUR)/index.html $(DEST_HUMOUR)/stories/index.html $(DEST_HUMOUR)/stories/Star-Trek/index.html $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.html $(DEST_HUMOUR)/TheEnemy/index.html: lib/stories/stories-list.wml
+$(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.wml
 
-$(DEST_HUMOUR)/humanity/index.html $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
+$(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
 
-$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.html: lib/div2mag.wml
+$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.xhtml $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.xhtml: lib/div2mag.wml
 
 tidy: all
 	$(PERL) bin/run-tidy.pl
@@ -897,9 +897,9 @@ $(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sas
 
 $(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
 $(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.wml
-$(T2_DEST)/work/hire-me/index.html $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.wml
+$(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.wml
 
-$(T2_DEST)/open-source/projects/Module-Format/index.html $(T2_DEST)/open-source/projects/File-Find-Object/index.html $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.html $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.html $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.html $(T2_DEST)/meta/FAQ/index.html $(T2_DEST)/open-source/contributions/index.html: lib/Inc/cpan_dists.wml
+$(T2_DEST)/open-source/projects/Module-Format/index.xhtml $(T2_DEST)/open-source/projects/File-Find-Object/index.xhtml $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.xhtml $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.xhtml $(T2_DEST)/meta/FAQ/index.xhtml $(T2_DEST)/open-source/contributions/index.xhtml: lib/Inc/cpan_dists.wml
 
 docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
 	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \
@@ -921,7 +921,7 @@ docbook5_targets: $(DOCBOOK5_TARGETS) $(DOCBOOK5_ALL_IN_ONE_XHTMLS) $(DOCBOOK5_A
 
 $(T2_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(T2_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
 
-$(T2_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.html: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
+$(T2_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
 
 HTML_TUT_BASE = lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
 
@@ -929,7 +929,7 @@ HTML_TUT_HEB_DIR = $(HTML_TUT_BASE)/hebrew-html-tutorial
 HTML_TUT_HEB_DB = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
 HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
 DEST_HTML_TUT_BASE = $(T2_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
-DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.html
+DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.xhtml
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST) $(QOHELETH_IMAGES__DEST)
 
@@ -998,7 +998,7 @@ generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepage/NavData/JSON.pm $(ALL_SUBSECTS_DEPS)
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
-$(T2_DEST)/site-map/index.html: $(ALL_SUBSECTS_DEPS)
+$(T2_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 JQTREE_SRC := common/js/tree.jquery.js
 JQTREE_MIN_DEST := $(T2_DEST)/js/tree.jq.js
@@ -1186,11 +1186,11 @@ TECH_TIPS_OUT = lib/blogs/shlomif-tech-diary--tech-tips.xhtml
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
 
-$(T2_DEST)/open-source/resources/tech-tips/index.html: $(TECH_TIPS_OUT)
+$(T2_DEST)/open-source/resources/tech-tips/index.xhtml: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)
 
-$(T2_DEST)/philosophy/computers/web/validate-your-html/index.html: lib/blogs/validate-your-html/README.md
-$(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.html: lib/blogs/how-to-share-code-online/README.md
+$(T2_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/blogs/validate-your-html/README.md
+$(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/blogs/how-to-share-code-online/README.md
 
 all: $(T2_CLEAN_STAMP)
 
@@ -1232,3 +1232,5 @@ BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
 min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 
 include lib/make/copies-generated-include.mak
+
+$(T2_DEST)/open-source/projects/Spark/mission/index.xhtml: lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml

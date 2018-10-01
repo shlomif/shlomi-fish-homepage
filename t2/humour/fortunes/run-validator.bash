@@ -1,4 +1,4 @@
-cur_dir="$(pwd)"
+cur_dir="$PWD"
 
 filename="$1"
 shift

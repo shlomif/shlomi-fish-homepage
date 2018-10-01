@@ -96,8 +96,12 @@ body {
     }
 }
 
-#faux {
+@mixin body-background {
     background-color: #e0ebef;
+}
+
+#faux {
+    @include body-background;
     width: 100%;
 }
 
@@ -150,6 +154,8 @@ img.bizcard {
 
 @media(max-width: 900px) {
     #navbar_wrapper {
+        @include body-background;
+        border: 2px black solid;
         position: absolute;
     }
 }

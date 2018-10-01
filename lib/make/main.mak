@@ -42,7 +42,7 @@ SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-commo
 DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
 
 FORTUNES_DIR = humour/fortunes
-T2_FORTUNES_DIR = t2/$(FORTUNES_DIR)
+T2_FORTUNES_DIR = $(T2_SRC_DIR)/$(FORTUNES_DIR)
 
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
@@ -235,8 +235,8 @@ $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
 rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
-	touch t2/index.xhtml.wml
-	touch t2/old-news.html.wml
+	touch $(T2_SRC_DIR)/index.xhtml.wml
+	touch $(T2_SRC_DIR)/old-news.html.wml
 
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
 PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
@@ -451,7 +451,7 @@ QOHELETH_IMAGES__DEST_PREFIX = $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
 QOHELETH_IMAGES__SOURCE = $(addprefix $(QOHELETH_IMAGES__SOURCE_PREFIX)/,$(QOHELETH_IMAGES__BASE))
 QOHELETH_IMAGES__DEST = $(addprefix $(QOHELETH_IMAGES__DEST_PREFIX)/,$(QOHELETH_IMAGES__BASE))
 
-$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) t2/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
+$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(T2_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
@@ -491,7 +491,7 @@ all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
-# Rebuild the pages containing the links to t2/humour/stories upon changing
+# Rebuild the pages containing the links to $(T2_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
 
 $(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.wml
@@ -606,28 +606,28 @@ HACKING_DOC = $(T2_DEST)/open-source/resources/how-to-contribute-to-my-projects/
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
-$(MOJOLICIOUS_LECTURE_SLIDE1): t2/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+$(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
 	asciidoc -a linkcss -o $@ $<
 
-$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: t2/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
+$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoctor --backend=docbook5 -o $@ $<
 
-$(HACKING_DOC): t2/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
+$(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
 	asciidoc -a linkcss -o $@ $<
 
-t2/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
+$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
 
-lib/htmls/The-Enemy-rev5.html-part: t2/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
-t2/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-rev5.html-part
+$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-rev5.html-part
 
-lib/htmls/The-Enemy-English-rev5.html-part: t2/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
-t2/humour/TheEnemy/The-Enemy-English-rev6.html.wml: lib/htmls/The-Enemy-English-rev6.html-part
+$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.html.wml: lib/htmls/The-Enemy-English-rev6.html-part
 
-lib/htmls/The-Enemy-English-rev6.html-part: t2/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev6.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 DOCBOOK4_HHFG_IMAGES_RAW = \
@@ -760,7 +760,7 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 
 art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(DEST_HTML_6_LOGO_PNG)
 
-$(DEST_HTML_6_LOGO_PNG): t2/humour/bits/HTML-6/HTML-6-logo.svg
+$(DEST_HTML_6_LOGO_PNG): $(T2_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
@@ -769,7 +769,7 @@ DEST_FIERY_Q_PNG = $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.pn
 
 all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON) $(DEST_FIERY_Q_PNG)
 
-$(DEST_WINDOWS_UPDATE_SNAIL_ICON): t2/humour/bits/facts/images/snail.svg
+$(DEST_WINDOWS_UPDATE_SNAIL_ICON): $(T2_SRC_DIR)/humour/bits/facts/images/snail.svg
 	inkscape --export-width=200 --export-png="$@" $<
 	$(OPTIPNG) $@
 
@@ -820,7 +820,7 @@ LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(T2_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC
 lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
-$(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: t2/%.scm
+$(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: $(T2_SRC_DIR)/%.scm
 	text-vimcolor --format html --full-page $< --output $@
 	$(PERL) -i -lapE 's#^( *)<style>$$#$$1<style type="text/css">#ms' $@
 
@@ -1117,7 +1117,7 @@ $(LC_LECTURE_ARC):
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
 
-OCT_2014_SGLAU_LET_DIR = t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10
+OCT_2014_SGLAU_LET_DIR = $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
 OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
 OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
@@ -1126,10 +1126,10 @@ MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-2
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST)
 
-$(OCT_2014_SGLAU_LET_PDF): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
+$(OCT_2014_SGLAU_LET_PDF): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"
 
-$(OCT_2014_SGLAU_LET_HTML): t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
+$(OCT_2014_SGLAU_LET_HTML): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
@@ -1204,7 +1204,7 @@ find_htmls = find $(1) -regex '.*\.x?html'
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
-	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e t2/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
+	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	rsync -a $(T2_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)
 	touch $@

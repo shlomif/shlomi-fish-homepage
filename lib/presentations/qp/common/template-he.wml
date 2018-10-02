@@ -27,8 +27,8 @@ $translate_control_text = sub {
 #include "quadpres_main.wml"
 
 <qp:more_head_elems>
-<script src="https://www.shlomifish.org/js/jq.js" type="text/javascript"></script>
-<script src="<qp:contentsurl />slidy.js" type="text/javascript"></script>
+<script src="https://www.shlomifish.org/js/jq.js"></script>
+<script src="<qp:contentsurl />slidy.js"></script>
 </qp:more_head_elems>
 
 <script type="text/javascript">rtl_keys = true;</script>

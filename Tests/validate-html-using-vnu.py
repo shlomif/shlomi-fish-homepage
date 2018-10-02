@@ -58,7 +58,7 @@ class VnuValidate:
                 path = join(dirpath, fn)
                 html = re.match(r'.*\.html?$', fn)
                 if re.match('.*\\.xhtml$', fn) or (
-                        html and not re.match(self.non_xhtml_re, path)):
+                        html and not re.search(self.non_xhtml_re, path)):
                     print(fn)
                     open(join(dn, re.sub('\.[^\.]*$', '.xhtml',
                                          fn)), 'w').write(

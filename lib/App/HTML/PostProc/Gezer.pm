@@ -46,7 +46,11 @@ sub _call_minifier
     my $KEY   = 'HTML_POST_INCS_DATA_DIR';
     my $cache = CHI->new(
         driver   => 'File',
-        root_dir => ( $ENV{$KEY} || '/tmp/cacheroot' )
+        root_dir => (
+            $ENV{$KEY}
+                || (
+                ( $ENV{TMPDIR} || '/tmp' ) . '/html-post-proc-gezer-cache' )
+        )
     );
 
     my @queue;

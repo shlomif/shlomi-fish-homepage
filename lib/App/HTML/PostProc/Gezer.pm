@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 
+use Carp::Always;
 use Moo;
 use Getopt::Long qw/ GetOptionsFromArray /;
 
@@ -127,6 +128,7 @@ sub run
 
     foreach my $bn (@$argv)
     {
+        say $bn;
         my $_f = sub {
             return path("$source_dir/$bn");
         };

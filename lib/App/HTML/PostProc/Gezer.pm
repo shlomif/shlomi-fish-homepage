@@ -128,7 +128,6 @@ sub run
 
     foreach my $bn (@$argv)
     {
-        say $bn;
         my $_f = sub {
             return path("$source_dir/$bn");
         };

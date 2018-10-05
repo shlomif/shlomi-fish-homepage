@@ -36,7 +36,7 @@ Mytype stupid_get_num_codes (int number)
       for (shift = 0; shift < number - 1; shift++)
       {
          perm = ((perm & 1) << (number - 1)) + (perm >> 1);
-         if (perm < code) /* If the permutation is lower then */
+         if (perm < code) /* If the permutation is lower than */
          	break;        /* it was already scanned by this loop. */
       }
       if (shift == number - 1)

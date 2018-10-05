@@ -13,6 +13,8 @@ use File::Find::Object::Rule ();
 use List::MoreUtils qw(any);
 use Parallel::ForkManager ();
 use File::Update qw/ write_on_change /;
+use lib './lib';
+use HTML::Latemp::GenWmlHSects;
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
@@ -1121,59 +1123,6 @@ path($gen_make_fn)->edit_utf8(
     }
 );
 
-write_on_change(
-    path("lib/h_sections.wml"),
-    \(
-        join "\n",
-        map {
-            my $n = $_;
-
-            # my $tag = "wml_toc_h$n";
-            my $tag = "h$n";
-            <<"EOF"
-<define-tag h${n}_section endtag="required" whitespace="delete">
-
-<set-var h_tag="$tag"  />
-<set-var h_class="h$n" />
-<preserve _wml_id_h$n id href title />
-<set-var %attributes />
-
-<:
-
-0 and die qq|
-%attributes
-
-<get-var h_tag />
-
-<get-var id />
-
-ENDU
-|
-:>
-
-<set-var _wml_id_h$n=<get-var id /> />
-<section class="<get-var h_class />">
-
-<header><$tag id="<get-var _wml_id_h$n />">
-<when <get-var href />>
-<a href="<get-var href />"><get-var title /></a>
-</when>
-<when <not <get-var href /> />>
-<get-var title />
-</when>
-</$tag>
-</header>
-
-%body
-
-</section>
-
-<restore _wml_id_h$n id href title />
-
-</define-tag>
-EOF
-        } 2 .. 6
-    )
-);
+HTML::Latemp::GenWmlHSects->new->run;
 
 $pm->wait_all_children;

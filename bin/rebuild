@@ -4,6 +4,7 @@ rebuild()
     (
         set -x
         set -e
+        mkdir -p ../_"$(basename "$PWD")"-clones
         for d in ../_*--clones/*
         do
             ( cd "$d"; git clean -dxf . )

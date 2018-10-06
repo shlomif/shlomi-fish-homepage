@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -14,7 +14,7 @@ use List::MoreUtils qw(any);
 use Parallel::ForkManager ();
 use File::Update qw/ write_on_change /;
 use lib './lib';
-use HTML::Latemp::GenWmlHSects;
+use HTML::Latemp::GenWmlHSects ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
@@ -890,9 +890,10 @@ my $qp_slidy = path("lib/presentations/qp/common/slidy.js")->slurp_utf8;
 
 sub get_quad_pres_files
 {
-    my $args       = shift || {};
-    my $dir_base   = $args->{dir};
-    my $lang       = $args->{lang} // 'he';
+    my $args     = shift || {};
+    my $dir_base = $args->{dir};
+    my $lang     = $args->{lang}
+        or die "lang in $dir_base is not specified!";
     my $css_params = $args->{css} // +();
     my $dir        = "lib/presentations/qp/$dir_base";
     my $dest_dir   = $args->{dest_dir};
@@ -1030,6 +1031,7 @@ EOF
                     dest_dir => "lecture/Perl/Haskell/slides",
                 },
                 {
+                    lang       => 'he',
                     css_params => { heb => 1, interact => 1, },
                     dir        => "joel-test",
                     dest_dir   => "lecture/joel-test/heb-slides",
@@ -1075,6 +1077,7 @@ EOF
                     dest_dir => "lecture/W2L/Basic_Use/slides",
                 },
                 {
+                    lang       => 'he',
                     css_params => { heb => 1, interact => 1, },
                     dir        => "welcome-to-linux/Blitz",
                     dest_dir   => "lecture/W2L/Blitz/slides",
@@ -1085,6 +1088,7 @@ EOF
                     dest_dir => "lecture/W2L/Development/slides",
                 },
                 {
+                    lang       => 'he',
                     css_params => { heb => 1, interact => 1, },
                     dir        => "welcome-to-linux/Mini-Intro",
                     dest_dir   => "lecture/W2L/Mini-Intro/slides",

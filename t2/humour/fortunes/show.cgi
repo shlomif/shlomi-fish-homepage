@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 BEGIN {
     my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' :

@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #
 # square-waves-decompose.pl : compose a sine wave out of square waves.
 #

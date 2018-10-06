@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # Generate an SVG diagram as a model for:
 # -- http://www.shlomifish.org/MathVentures/bugs-in-square-mathml.xhtml

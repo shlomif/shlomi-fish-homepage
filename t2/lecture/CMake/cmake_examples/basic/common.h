@@ -1,1 +1,1 @@
-../lib/common.h
+void common_func();

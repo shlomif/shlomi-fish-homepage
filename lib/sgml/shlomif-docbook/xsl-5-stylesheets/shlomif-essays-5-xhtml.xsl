@@ -55,4 +55,11 @@
 <xsl:template name="generate.html.title">
 </xsl:template>
 
+<xsl:template name="root.attributes">
+    <!-- customize to add attributes to <html> element  -->
+        <xsl:attribute name="lang">
+            <xsl:value-of select="//*/@lang"/>
+        </xsl:attribute>
+</xsl:template>
+
 </xsl:stylesheet>

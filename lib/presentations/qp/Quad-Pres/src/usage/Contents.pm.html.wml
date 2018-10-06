@@ -33,91 +33,91 @@ of this very lecture.
 <tr class="mycode">
 <td class="mycode">
 <pre class="mycode">
-<font color="#a52a2a"><b>package</b></font><font color="#2e8b57"><b> Contents;</b></font>
+<span style="color: #a52a2a;"><b>package</b></span><span style="color: #2e8b57;"><b> Contents;</b></span>
 
-<font color="#a52a2a"><b>use strict</b></font>;
+<span style="color: #a52a2a;"><b>use strict</b></span>;
 
-<font color="#a52a2a"><b>my</b></font> <font color="#008b8b">$contents</font> =
+<span style="color: #a52a2a;"><b>my</b></span> <span style="color: #008b8b;">$contents</span> =
 {
-    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">QuaD-Pres - A Perl-based Tool for Presentation</font><font color="#ff00ff">&quot;</font>,
-    <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">QuaD-Pres - A Perl-based Tool for Presentation</span><span style="color: #ff00ff;">&quot;</span>,
+    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">subs</span><span style="color: #ff00ff;">'</span> =&gt;
     [
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">intro.html</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Introduction</font><font color="#ff00ff">&quot;</font>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">intro.html</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Introduction</span><span style="color: #ff00ff;">&quot;</span>,
         },
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">history.html</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The History of QuaD-Pres</font><font color="#ff00ff">&quot;</font>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">history.html</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">The History of QuaD-Pres</span><span style="color: #ff00ff;">&quot;</span>,
         },
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">features.html</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Quad-Pres Features</font><font color="#ff00ff">&quot;</font>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">features.html</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Quad-Pres Features</span><span style="color: #ff00ff;">&quot;</span>,
         },
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">usage</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Usage</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">usage</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Usage</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">subs</span><span style="color: #ff00ff;">'</span> =&gt;
             [
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">setting-up.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Setting Up</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">setting-up.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Setting Up</span><span style="color: #ff00ff;">&quot;</span>,
                 },
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Contents.pm.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The Contents.pm File</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Contents.pm.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">The Contents.pm File</span><span style="color: #ff00ff;">&quot;</span>,
                 },
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">page.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">An Individual Page</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">page.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">An Individual Page</span><span style="color: #ff00ff;">&quot;</span>,
                 },
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">images.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Including Images</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">images.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Including Images</span><span style="color: #ff00ff;">&quot;</span>,
                 },
             ],
-            <font color="#ff00ff">'</font><font color="#ff00ff">images</font><font color="#ff00ff">'</font> =&gt; [ <font color="#ff00ff">'</font><font color="#ff00ff">logo-wml.png</font><font color="#ff00ff">'</font> ],
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">images</span><span style="color: #ff00ff;">'</span> =&gt; [ <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">logo-wml.png</span><span style="color: #ff00ff;">'</span> ],
         },
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">no_wml</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Using QuaD-Pres without Website Meta Language</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">no_wml</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Using QuaD-Pres without Website Meta Language</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">subs</span><span style="color: #ff00ff;">'</span> =&gt;
             [
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">page.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">An Individual Page</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">page.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">An Individual Page</span><span style="color: #ff00ff;">&quot;</span>,
                 },
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">render-modes.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">The Render Modes</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">render-modes.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">The Render Modes</span><span style="color: #ff00ff;">&quot;</span>,
                 },
             ],
         },
         {
-            <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">finale</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Finale</font><font color="#ff00ff">&quot;</font>,
-            <font color="#ff00ff">'</font><font color="#ff00ff">subs</font><font color="#ff00ff">'</font> =&gt;
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">finale</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Finale</span><span style="color: #ff00ff;">&quot;</span>,
+            <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">subs</span><span style="color: #ff00ff;">'</span> =&gt;
             [
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">samples.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Sample Presentations</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">samples.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Sample Presentations</span><span style="color: #ff00ff;">&quot;</span>,
                 },
                 {
-                    <font color="#ff00ff">'</font><font color="#ff00ff">url</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">links.html</font><font color="#ff00ff">&quot;</font>,
-                    <font color="#ff00ff">'</font><font color="#ff00ff">title</font><font color="#ff00ff">'</font> =&gt; <font color="#ff00ff">&quot;</font><font color="#ff00ff">Links</font><font color="#ff00ff">&quot;</font>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">url</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">links.html</span><span style="color: #ff00ff;">&quot;</span>,
+                    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">title</span><span style="color: #ff00ff;">'</span> =&gt; <span style="color: #ff00ff;">&quot;</span><span style="color: #ff00ff;">Links</span><span style="color: #ff00ff;">&quot;</span>,
                 },
             ],
         }
     ],
-    <font color="#ff00ff">'</font><font color="#ff00ff">images</font><font color="#ff00ff">'</font> =&gt;
+    <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">images</span><span style="color: #ff00ff;">'</span> =&gt;
     [
-        <font color="#ff00ff">'</font><font color="#ff00ff">style.css</font><font color="#ff00ff">'</font>,
+        <span style="color: #ff00ff;">'</span><span style="color: #ff00ff;">style.css</span><span style="color: #ff00ff;">'</span>,
     ],
 };
 
-<font color="#a52a2a"><b>sub</b></font><font color="#008b8b"> </font><font color="#008b8b">get_contents</font>
+<span style="color: #a52a2a;"><b>sub</b></span><span style="color: #008b8b;"> </span><span style="color: #008b8b;">get_contents</span>
 {
-    <font color="#a52a2a"><b>return</b></font> <font color="#008b8b">$contents</font>;
+    <span style="color: #a52a2a;"><b>return</b></span> <span style="color: #008b8b;">$contents</span>;
 }
 </pre>
 </td>

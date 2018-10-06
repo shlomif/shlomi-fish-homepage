@@ -16,35 +16,35 @@ Here is an example:
 <tr class="mycode">
 <td class="mycode">
 <pre class="mycode">
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_header --</font><font color="#0000ff">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font><font color="#ff00ff"><b>Do it with the GIMP</b></font><font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>title</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>head</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>bgcolor</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;#FFFFFF&quot;</font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font><font color="#ff00ff"><b>Do it with the GIMP</b></font><font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>h1</b></font><font color="#008b8b">&gt;</font>
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_header --</font><font color="#0000ff">&gt;</font>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; begin_header --</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>html</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>head</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>title</b></span><span style="color: #008b8b;">&gt;</span><span style="color: #ff00ff;"><b>Do it with the GIMP</b></span><span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>title</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>head</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>body</b></span><span style="color: #008b8b;"> </span><span style="color: #2e8b57;"><b>bgcolor</b></span><span style="color: #008b8b;">=</span><span style="color: #ff00ff;">&quot;#FFFFFF&quot;</span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>h1</b></span><span style="color: #008b8b;">&gt;</span><span style="color: #ff00ff;"><b>Do it with the GIMP</b></span><span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>h1</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; end_header --</span><span style="color: #0000ff;">&gt;</span>
 
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>h3</b></font><font color="#008b8b"> </font><font color="#2e8b57"><b>class</b></font><font color="#008b8b">=</font><font color="#ff00ff">&quot;notbold&quot;</font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>ul</b></font><font color="#008b8b">&gt;</font>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>h3</b></span><span style="color: #008b8b;"> </span><span style="color: #2e8b57;"><b>class</b></span><span style="color: #008b8b;">=</span><span style="color: #ff00ff;">&quot;notbold&quot;</span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>ul</b></span><span style="color: #008b8b;">&gt;</span>
 
-<font color="#008b8b">&lt;</font><font color="#a52a2a"><b>li</b></font><font color="#008b8b">&gt;</font>
-<font color="#ff00ff"><b>As opposed to Look-Up Tables, areal filters may take into account the values</b></font>
-<font color="#ff00ff"><b>of the neighbouring pixels and use them to calculate the value of the resultant</b></font>
-<font color="#ff00ff"><b>pixel.</b></font>
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>li</b></font><font color="#008b8b">&gt;</font>
+<span style="color: #008b8b;">&lt;</span><span style="color: #a52a2a;"><b>li</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #ff00ff;"><b>As opposed to Look-Up Tables, areal filters may take into account the values</b></span>
+<span style="color: #ff00ff;"><b>of the neighbouring pixels and use them to calculate the value of the resultant</b></span>
+<span style="color: #ff00ff;"><b>pixel.</b></span>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>li</b></span><span style="color: #008b8b;">&gt;</span>
 
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>ul</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>h3</b></font><font color="#008b8b">&gt;</font>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>ul</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>h3</b></span><span style="color: #008b8b;">&gt;</span>
 
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_contents --</font><font color="#0000ff">&gt;</font>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; begin_contents --</span><span style="color: #0000ff;">&gt;</span>
 
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_contents --</font><font color="#0000ff">&gt;</font>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; end_contents --</span><span style="color: #0000ff;">&gt;</span>
 
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; begin_footer --</font><font color="#0000ff">&gt;</font>
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>body</b></font><font color="#008b8b">&gt;</font>
-<font color="#008b8b">&lt;/</font><font color="#a52a2a"><b>html</b></font><font color="#008b8b">&gt;</font>
-<font color="#0000ff">&lt;!</font><font color="#0000ff">--&amp; end_footer --</font><font color="#0000ff">&gt;</font>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; begin_footer --</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>body</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #008b8b;">&lt;/</span><span style="color: #a52a2a;"><b>html</b></span><span style="color: #008b8b;">&gt;</span>
+<span style="color: #0000ff;">&lt;!</span><span style="color: #0000ff;">--&amp; end_footer --</span><span style="color: #0000ff;">&gt;</span>
 
 
 </pre>

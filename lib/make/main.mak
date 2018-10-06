@@ -854,7 +854,7 @@ $(SPORK_LECTURES_DEST_STARTS) : $(T2_DEST)/lecture/%$(START_html): $(SPORK_LECTS
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
 	dn="$(patsubst %$(SLIDES_start),%,$@)" ; \
 	   (cd "$$dn" && $(PERL) -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && $(PERL) bin/fix-spork.pl "$$dn"/slides/*.html && \
-		(find "$$dn"/template -name '*.js' -or -name '*.html' | xargs $(PERL) -lpi -e 's/[\t ]+\z//') && \
+		(find "$$dn"/template -name '*.js' -o -name '*.html' | xargs $(PERL) -lpi -e 's/[\t ]+\z//') && \
 	cp -f common/favicon.png $(patsubst %$(START_html),%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
@@ -1199,7 +1199,7 @@ $(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(T2_DEST) --dest-dir=$(T2_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
-find_htmls = find $(1) -regex '.*\.x?html'
+find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 

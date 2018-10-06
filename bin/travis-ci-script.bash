@@ -9,7 +9,7 @@ export SKIP_SPELL_CHECK=1
 
 m()
 {
-    make DBTOEPUB="/usr/bin/ruby $(which dbtoepub)" \
+    gmake DBTOEPUB="/usr/bin/ruby $(which dbtoepub)" \
         DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \
     "$@"
 }

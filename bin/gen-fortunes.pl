@@ -12,7 +12,7 @@ use Cwd qw(getcwd);
 
     if ( -e 'friends' )
     {
-        system( "make", "-s", "dist" );
+        system( "gmake", "-s", "dist" );
     }
 
     chdir($orig_dir);

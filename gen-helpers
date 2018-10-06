@@ -22,7 +22,7 @@ _exec(
     ],
     'cookiecutter failed.'
 );
-_exec( [ "make", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
+_exec( [ "gmake", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
     "build-deps failed!" );
 _exec( [ $^X, './bin/gen-helpers-main.pl' ], "gen-helpers-main.pl failed." );
 

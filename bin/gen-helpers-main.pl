@@ -174,5 +174,5 @@ $render->spew_utf8(
     #emrs
 );
 $render->chmod(0755);
-_my_system( [ 'make', 'bulk-make-dirs' ] );
-_my_system( [ 'make', 'sects_cache' ] );
+_my_system( [ 'gmake', 'bulk-make-dirs' ] );
+_my_system( [ 'gmake', 'sects_cache' ] );

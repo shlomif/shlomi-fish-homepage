@@ -12,8 +12,8 @@ rebuild()
         git clean -dxf .
         bash -x bin/install-npm-deps.sh
         ./gen-helpers
-        make -j4 fastrender
-        make -j4 test
+        gmake -j4 fastrender
+        gmake -j4 test
     )
 }
 rebuild

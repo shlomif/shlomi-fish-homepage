@@ -125,7 +125,7 @@ ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(DEST_HUMOUR) $(DEST_HUMO
 htaccesses_target: $(ALL_HTACCESSES)
 
 $(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
-	(cd $(T2_FORTUNES_DIR) && make)
+	(cd $(T2_FORTUNES_DIR) && gmake)
 
 $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -Ilib $< $@
@@ -945,7 +945,7 @@ $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	rsync -r $(HTML_TUT_HEB_DIR)/ $(DEST_HTML_TUT_BASE)
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
-	cd $(HTML_TUT_BASE) && make docbook
+	cd $(HTML_TUT_BASE) && gmake docbook
 
 $(HTML_TUT_HEB_TT):
 	cd lib/presentations/docbook && git clone https://github.com/shlomif/html-tutorial

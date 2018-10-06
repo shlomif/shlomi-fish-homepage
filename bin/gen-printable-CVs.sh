@@ -15,7 +15,7 @@ render_i_o()
         -DLATEMP_THEME=better-scm \
         -I $HOME/conf/wml/Latemp/lib \
         -I $HOME/apps/wml \
-        ) | grep -vP '^<\?xml ver' \
+        ) | perl -p -0777 -e 's%\A<\?xml ver[^>]*>%%' \
         > "$dest"/"$out_filename"
 }
 

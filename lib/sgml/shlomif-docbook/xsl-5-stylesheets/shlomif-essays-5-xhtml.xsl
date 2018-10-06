@@ -58,7 +58,12 @@
 <xsl:template name="root.attributes">
     <!-- customize to add attributes to <html> element  -->
         <xsl:attribute name="lang">
-            <xsl:value-of select="//*/@lang"/>
+            <xsl:if test="//*/@lang">
+                <xsl:value-of select="//*/@lang"/>
+            </xsl:if>
+            <xsl:if test="//*/@xml:lang">
+                <xsl:value-of select="//*/@xml:lang"/>
+            </xsl:if>
         </xsl:attribute>
 </xsl:template>
 

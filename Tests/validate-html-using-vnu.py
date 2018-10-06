@@ -85,7 +85,9 @@ class MyTests(unittest.TestCase):
                     return re.search(_re, path)
                 return _cb
             _skip_cb = _create_cb(
-                '/(?:old-news|personal(?:-heb)?|wysiwyt)\\.html$')
+                '/(?:SFresume[a-z_A-Z]+|links|old-news|' +
+                'shlomif.il.eu.org-questions|' +
+                'personal(?:-heb)?|wysiwyt)\\.html$')
             _non_xhtml_cb = _create_cb('jquery-ui')
             self.assertTrue(
                 VnuValidate(dir_, os.environ[key], _non_xhtml_cb,

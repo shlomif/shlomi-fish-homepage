@@ -892,7 +892,7 @@ sub get_quad_pres_files
 {
     my $args       = shift || {};
     my $dir_base   = $args->{dir};
-    my $lang       = $args->{lang} // '';
+    my $lang       = $args->{lang} // 'he';
     my $css_params = $args->{css} // +();
     my $dir        = "lib/presentations/qp/$dir_base";
     my $dest_dir   = $args->{dest_dir};
@@ -971,6 +971,7 @@ EOF
 
     return +( $dir_base =~ tr#/-#__#r ) => +{
         dest_dir    => $dest_dir,
+        lang        => $lang,
         'src_dir'   => $dir,
         'src_files' => [
             sort     { $a cmp $b }

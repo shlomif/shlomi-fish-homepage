@@ -32,68 +32,28 @@ OTHER DEALINGS IN THE SOFTWARE.
 =cut
 """
 
-import os
-from os.path import join
 import re
-import tempfile
-from subprocess import call
 import unittest
+import vnu_validator
 
 
-class VnuValidate:
-    """docstring for VnuValidate"""
-    def __init__(self, path, jar, non_xhtml_cb, skip_cb):
-        self.path = path
-        self.jar = jar
-        self.non_xhtml_cb = non_xhtml_cb
-        self.skip_cb = skip_cb
-
-    def run(self):
-        """docstring for run"""
-        t = tempfile.TemporaryDirectory()
-        for dirpath, _, fns in os.walk(self.path):
-            dn = join(t.name, dirpath)
-            os.makedirs(dn)
-            for fn in fns:
-                path = join(dirpath, fn)
-                if self.skip_cb(path):
-                    continue
-                html = re.match(r'.*\.html?$', fn)
-                if re.match('.*\\.xhtml$', fn) or (
-                        html and not self.non_xhtml_cb(path)):
-                    open(join(dn, re.sub('\.[^\.]*$', '.xhtml',
-                                         fn)), 'w').write(
-                        open(join(dirpath, fn)).read())
-                elif html:
-                    open(join(dn, fn), 'w').write(
-                        open(path).read())
-
-        return call(['java', '-jar', self.jar, '--Werror',
-                     '--skip-non-html', t.name]) == 0
-
-
-class MyTests(unittest.TestCase):
+class MyTests(vnu_validator.VnuTest):
     def test_main(self):
         dir_ = './dest/post-incs/t2/'
-        key = 'HTML_VALID_VNU_JAR'
-        if key in os.environ:
-            def _create_cb(s):
-                """docstring for _create_cb"""
-                _re = re.compile(s)
 
-                def _cb(path):
-                    return re.search(_re, path)
-                return _cb
-            _skip_cb = _create_cb(
-                '/(?:SFresume[a-z_A-Z]+|links|old-news|' +
-                'shlomif.il.eu.org-questions|' +
-                'personal(?:-heb)?|wysiwyt)\\.html$')
-            _non_xhtml_cb = _create_cb('jquery-ui')
-            self.assertTrue(
-                VnuValidate(dir_, os.environ[key], _non_xhtml_cb,
-                            _skip_cb).run())
-        else:
-            self.assertTrue(True, key + ' not set')
+        def _create_cb(s):
+            """docstring for _create_cb"""
+            _re = re.compile(s)
+
+            def _cb(path):
+                return re.search(_re, path)
+            return _cb
+        _skip_cb = _create_cb(
+            '/(?:SFresume[a-z_A-Z]+|links|old-news|' +
+            'shlomif.il.eu.org-questions|' +
+            'personal(?:-heb)?|wysiwyt)\\.html$')
+        _non_xhtml_cb = _create_cb('jquery-ui')
+        return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb)
 
 
 if __name__ == '__main__':

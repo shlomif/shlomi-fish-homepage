@@ -10,7 +10,7 @@ cache:
 os: linux
 dist: trusty
 before_install:
-    - bash .travis.bash --cmd before_install
+    - . .travis.bash --cmd before_install
     - go get -u github.com/tdewolff/minify/cmd/minify
     - eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
     - cpanm Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
@@ -24,7 +24,7 @@ before_install:
     - bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
     - deps-app plinst -i bin/required-modules.yml
     - gem install asciidoctor compass compass-blueprint
-    - sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml Zenfilter
+    - sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator Zenfilter
     - a='latemp' ; v='0.10.2' ; b="$a-$v" ; arc="$b.tar.xz"; ( wget http://web-cpan.shlomifish.org/latemp/download/"$arc" && tar -xvf "$arc" && (cd "$b" && mkdir b && cd b && cmake .. && make && sudo make install) && rm -fr "$b" )
     - ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
     - ( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
@@ -39,4 +39,5 @@ before_install:
     - bash -x bin/install-npm-deps.sh
     - sudo ln -s /usr/bin/make /usr/bin/gmake
 script:
+    - export XML_CATALOG_FILES="/etc/xml/catalog $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
     - TIDYALL_DATA_DIR="$HOME/tidyall_d" bash -x bin/run-ci-build.bash

@@ -822,7 +822,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: $(T2_SRC_DIR)/%.scm
 	text-vimcolor --format html --full-page $< --output $@
-	$(PERL) -i -lapE 's#^( *)<style>$$#$$1<style type="text/css">#ms' $@
+	$(PERL) bin/fix-vimcolor.pl $@
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \

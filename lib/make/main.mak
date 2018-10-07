@@ -607,13 +607,13 @@ HACKING_DOC = $(T2_DEST)/open-source/resources/how-to-contribute-to-my-projects/
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
 $(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
-	asciidoc -a linkcss -o $@ $<
+	asciidoctor --backend=xhtml5 -o $@ $<
 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoctor --backend=docbook5 -o $@ $<
 
 $(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
-	asciidoc -a linkcss -o $@ $<
+	asciidoctor --backend=xhtml5 -o $@ $<
 
 $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
 

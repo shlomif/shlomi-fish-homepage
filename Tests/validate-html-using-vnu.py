@@ -43,18 +43,48 @@ class MyTests(vnu_validator.VnuTest):
 
         def _create_cb(s):
             """docstring for _create_cb"""
-            _re = re.compile(s)
+            _re = re.compile(s, re.X)
 
             def _cb(path):
                 return re.search(_re, path)
             return _cb
-        _skip_cb = _create_cb(
-            '(?:/t2/index\.xhtml|(?:/(?:MANIFEST|SFresume[a-z_A-Z]*|' +
-            '404|' +
-            'humour(?:-heb)?|' +
-            'links|old-news|' +
-            'shlomif.il.eu.org-questions|' +
-            'personal(?:-heb)?|toggle|wonderous|wysiwyt)\\.html))$')
+        _skip_cb = _create_cb("""
+        (?:
+            (?:/t2/index\.xhtml)
+                |
+            (?:/t2/lecture/
+                (?:
+                    (?:Perl/Lightning/Mojolicious/mojolicious-slides\.x?html)
+                        |
+                    (?:
+                        (?:Perl/
+                        (?:
+                            (?:Lightning/
+                                (?:Opt-Multi-Task-in-PDL|
+                                    Test-Run|Too-Many-Ways
+                                )
+                            )
+                                |
+                            Graham-Function
+                        )
+                        )
+                            |
+                        WebMetaLecture
+                    )
+                    /slides/.*\.x?html
+                )
+            )
+                |
+            (?:/
+                (?:MANIFEST|SFresume[a-z_A-Z]*|
+                404|
+                humour(?:-heb)?|
+                links|old-news|
+                shlomif.il.eu.org-questions|
+                personal(?:-heb)?|toggle|wonderous|wysiwyt)\\.html
+            )
+        )$
+            """)
         _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb)
 

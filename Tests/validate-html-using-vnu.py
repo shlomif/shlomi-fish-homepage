@@ -49,9 +49,12 @@ class MyTests(vnu_validator.VnuTest):
                 return re.search(_re, path)
             return _cb
         _skip_cb = _create_cb(
-            '/(?:SFresume[a-z_A-Z]+|links|old-news|' +
+            '(?:/t2/index\.xhtml|(?:/(?:MANIFEST|SFresume[a-z_A-Z]*|' +
+            '404|' +
+            'humour(?:-heb)?|' +
+            'links|old-news|' +
             'shlomif.il.eu.org-questions|' +
-            'personal(?:-heb)?|wysiwyt)\\.html$')
+            'personal(?:-heb)?|toggle|wonderous|wysiwyt)\\.html))$')
         _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb)
 

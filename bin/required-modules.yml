@@ -61,6 +61,7 @@ required:
             url: 'http://www.shlomifish.org/'
             desc: 'This task package installs some of the packages that Shlomi Fish needs.'
     perl5_modules:
+        App::Gezer: 0
         App::XML::DocBook::Builder: 0.0500
         CGI: 0
         CGI::Minimal: 0

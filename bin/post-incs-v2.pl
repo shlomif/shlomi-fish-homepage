@@ -3,8 +3,7 @@
 use strict;
 use warnings;
 
-use lib './lib';
-use App::Gezer;
+use App::Gezer ();
 App::Gezer->new->run( { ARGV => \@ARGV } );
 __END__
 

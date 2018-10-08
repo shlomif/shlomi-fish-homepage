@@ -4,8 +4,8 @@ use strict;
 use warnings;
 
 use lib './lib';
-use App::HTML::PostProc::Gezer;
-App::HTML::PostProc::Gezer->new->run( { ARGV => \@ARGV } );
+use App::Gezer;
+App::Gezer->new->run( { ARGV => \@ARGV } );
 __END__
 
 =head1 COPYRIGHT & LICENSE

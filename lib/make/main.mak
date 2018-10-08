@@ -509,7 +509,7 @@ $(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-persona
 tidy: all
 	$(PERL) bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs bulk-make-dirs
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs bulk-make-dirs presentations_targets
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.
@@ -1209,7 +1209,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(T2_CLEAN_STAMP): $(T2_DOCS_DEST)
+$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES)
 	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	rsync -a $(T2_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)

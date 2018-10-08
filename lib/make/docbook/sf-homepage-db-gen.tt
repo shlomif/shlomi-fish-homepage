@@ -79,6 +79,7 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 %]
 
 [% SET pres_targets = [] %]
+[% SET pres_targets_files = [] %]
 
 [% # The Perl-for-Newbies files handling.
 %]
@@ -102,7 +103,9 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
 [% v %]_SRC_FILES = $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
 
-[% l %]: $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES)
+[% SET targets = "\$(" _ v _ "_DEST_INDEX) \$(" _ v _ "_DEST_FILES)" %]
+[% pres_targets_files.push(targets) %]
+[% l %]: [% targets %]
 
 [% BLOCK cmd %]
 [% "\t" %]export T2_DEST="$(PWD)/$(T2_DEST)" WMLOPTS="--passoption=3,-I$(PWD)/lib/presentations/qp/common/ --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-9"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) render_all_in_one_page[% IF val.lang == 'he' %] --html-dir rtl[% END %] --output-dir all-in-one && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
@@ -119,3 +122,5 @@ $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES): [% vstamp %]
 [% END %]
 
 presentations_targets: [% pres_targets.join(" ") %]
+
+PRES_TARGETS_ALL_FILES := [% pres_targets_files.join(" ") %]

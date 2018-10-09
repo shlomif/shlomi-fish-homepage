@@ -3,11 +3,11 @@
 use strict;
 use warnings;
 use lib './lib';
-use Shlomif::Homepage::Paths ();
+use HTML::Latemp::Local::Paths ();
 
 use Test::HTML::Recursive::DeprecatedTags;
 
-my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
+my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 Test::HTML::Recursive::DeprecatedTags->new(
     {
         targets         => [$T2_POST_DEST],

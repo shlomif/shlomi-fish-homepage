@@ -1,4 +1,4 @@
-package Shlomif::Homepage::Paths;
+package HTML::Latemp::Local::Paths;
 
 use strict;
 use warnings;

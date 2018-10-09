@@ -11,9 +11,9 @@ use MyNavData;
 use HTML::Widgets::NavMenu::ToJSON;
 use HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML;
 
-use Shlomif::Homepage::Paths;
+use HTML::Latemp::Local::Paths;
 
-my $T2_DEST       = Shlomif::Homepage::Paths->new->t2_dest;
+my $T2_DEST       = HTML::Latemp::Local::Paths->new->t2_dest;
 my %keys_briefing = (
     subs   => 's',
     id     => 'i',

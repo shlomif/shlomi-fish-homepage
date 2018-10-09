@@ -20,9 +20,9 @@ sub calc_tidy
 package main;
 
 use lib './lib';
-use Shlomif::Homepage::Paths ();
+use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
+my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 my %whitelist = ( map { $_ => 1 } (), );
 
 Test::HTML::Tidy::Recursive::Tidy5->new(

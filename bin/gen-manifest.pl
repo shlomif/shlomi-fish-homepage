@@ -8,9 +8,9 @@ use File::Find::Object;
 use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use lib './lib';
-use Shlomif::Homepage::Paths;
+use HTML::Latemp::Local::Paths;
 
-my $T2_DEST = Shlomif::Homepage::Paths->new->t2_dest;
+my $T2_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
 
 open my $m, '>', "$T2_DEST/MANIFEST.html";
 

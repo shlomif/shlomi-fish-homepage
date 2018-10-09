@@ -8,9 +8,9 @@ use List::MoreUtils qw/any/;
 
 use HTML::Spelling::Site::Finder;
 use lib './lib';
-use Shlomif::Homepage::Paths ();
+use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = Shlomif::Homepage::Paths->new->t2_post_dest;
+my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 my @prunes = (
     qr#^\Q$T2_POST_DEST\E/MANIFEST\.html$#,

@@ -1,15 +1,23 @@
 #!/bin/bash
-txt2html --xhtml --eight_bit_clean --title "Perl for Newbies Lecture 5: Hebrew Notes" t2/lecture/Perl/Newbies/lecture5-notes.txt |
-(while read l ; do
-    echo "$l"
-    if echo "$l" | grep '^<meta name=' > /dev/null ; then
+marky-markdown t2/lecture/Perl/Newbies/lecture5-notes.txt |
+(
         cat <<'EOF'
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="he" dir="rtl">
+<head>
+<title>Shlomi Fish’s Homepage</title>
+<meta charset="utf-8" />
 <meta name="description" content="Perl for Newbies Lecture 5: Hebrew Notes" />
-<style type="text/css">
+<style>
 body { direction: rtl; text-align: right; }
 </style>
+</head>
+<body>
 EOF
-    fi
-done
+    cat -
+    cat <<'EOF'
+</body>
+</html>
+EOF
 )

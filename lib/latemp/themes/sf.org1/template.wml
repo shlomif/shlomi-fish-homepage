@@ -17,27 +17,10 @@
 </div>
 <div id="faux">
 <button id="show_navbar" class="on">Hide NavBar ⬈</button>
-<div id="container-all" class="row">
 <p class="invisible">
 <a href="#main">Go to main content</a>
 </p>
-
-<div id="navbar_wrapper" class="col s3">
-<nav class="navbar" id="navbar">
-<p class="invisible">
-<a href="#nav_menu">Go to the navigation menu</a>
-</p>
-
-<latemp_top_left_corner_logo_text />
-<latemp_get_html_body_nav_links place="top-left" with_accesskey="1" />
-<div id="nav_menu">
-<latemp_get_nav_menu_html />
-</div>
-
-<latemp_affiliations_buttons_text />
-<latemp_get_html_body_nav_links place="bottom-left" />
-</nav>
-</div>
+<div id="container-all" class="row">
 
 <main id="main" class="col s9">
 <latemp_before_main_title_text />
@@ -54,6 +37,20 @@
 <define-tag latemp_end_layout>
 <latemp_after_body_text />
 </main>
+
+<div id="navbar_wrapper" class="col s3">
+<nav class="navbar" id="navbar">
+
+<latemp_top_left_corner_logo_text />
+<latemp_get_html_body_nav_links place="top-left" with_accesskey="1" />
+<div id="nav_menu">
+<latemp_get_nav_menu_html />
+</div>
+
+<latemp_affiliations_buttons_text />
+<latemp_get_html_body_nav_links place="bottom-left" />
+</nav>
+</div>
 <div id="container-footer">
 </div>
 </div> ;;; container-all

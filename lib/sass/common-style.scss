@@ -18,6 +18,7 @@
 .navbar {
     &.novis {
         display: none;
+        grid-column: 0 / 0;
     }
 }
 

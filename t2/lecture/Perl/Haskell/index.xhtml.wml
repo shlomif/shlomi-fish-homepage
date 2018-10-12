@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "Haskell for Perl Programmers" />
 <latemp_meta_desc "A presentation that introduces The Haskell Programming Language to Perl programmers." />
@@ -12,10 +13,5 @@ to Perl programmers.
 </p>
 
 <ul>
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
-<li>
-<a href="slides/src.tar.gz">The Quad-Pres Source</a>
-</li>
+<qp-lect dir="slides" />
 </ul>

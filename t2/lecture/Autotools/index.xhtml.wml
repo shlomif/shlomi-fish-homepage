@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "A Talk about the GNU Autotools" />
 <latemp_meta_desc "A Talk about the GNU Autotools" />
@@ -37,16 +38,10 @@ and how to use them for your application.
 
 <ul>
 
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
+<qp-lect dir="slides" />
 
 <li>
 <a href="Summary.txt">Summary of the talk</a>
-</li>
-
-<li>
-<a href="slides/src.tar.gz">Quad-Pres Source for the Talk</a>
 </li>
 
 </ul>

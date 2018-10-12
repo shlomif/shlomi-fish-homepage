@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "Presentation: Do it with the GIMP" />
 <latemp_meta_desc "The GIMP is a sophisticated image processing and composition program available for UNIXes and several other platforms (including Win32 and Mac OS X) . The GIMP includes many features attractive to graphics professionals and novices alike. This is a talk about the GIMP and its algorithms." />
@@ -33,9 +34,7 @@ are still available, but it is recommended not to use GIMP 1.2 any more.
 
 <ul>
 
-<li>
-<a href="1/2.2-slides/"><b>The Slides</b></a>
-</li>
+<qp-lect dir="2.2-slides" />
 
 <li>
 <a href="1/gimp_lecture_summary.txt">Summary of the Talk</a>
@@ -43,10 +42,6 @@ are still available, but it is recommended not to use GIMP 1.2 any more.
 
 <li>
 <a href="1/images/">Images for the talk</a>
-</li>
-
-<li>
-<a href="1/2.2-slides/src.tar.gz">Quad-Pres Source for the Slides</a>
 </li>
 
 </ul>

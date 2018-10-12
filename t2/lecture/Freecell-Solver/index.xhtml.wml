@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "Freecell Solver - Evolution of a C Program" />
 <latemp_meta_desc "This presentation covers the evolution of Freecell Solver, an ANSI C library for solving some types of Solitaire games. It covers the algorithms, data structures and decisions that were implemented there." />
@@ -12,16 +13,10 @@ algorithms, data structures and decisions that were implemented there.
 
 <ul>
 
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
+<qp-lect dir="slides" />
 
 <li>
 <a href="fcs-lecture-points-take3.txt">Summary of the lecture</a>
-</li>
-
-<li>
-<a href="slides/src.tar.gz">Quad-Pres Source of the Slides</a>
 </li>
 
 <li>

@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "The Cathedral and the Bazaar Series - an Overview" />
 <latemp_meta_desc "Overview of the Cathedral and the Bazaar series by Eric S. Raymond: “The Cathedral and the Bazaar”, “Homesteading the Noosphere”, and “The Magic Cauldron”" />
@@ -15,10 +16,5 @@ reader or hearer a taste of what can be found there.
 </p>
 
 <ul>
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
-<li>
-<a href="slides/src.tar.gz">Quad-Pres Source</a>
-</li>
+<qp-lect dir="slides" />
 </ul>

@@ -98,12 +98,14 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 
 [% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm Contents.yml template.wml)
 [% v %]_DEST = $(T2_DEST)/[% val.dest_dir %]
+[% v %]_DEST_all_in_one_html_dir = $(T2_DEST)/[% val.all_in_one_html_dir %]
 [% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
+[% v %]_DEST_all_in_one_html_dir_INDEX = $([% v %]_DEST_all_in_one_html_dir)/index.html
 [% v %]_files = [% files.join(" ") %]
 [% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
 [% v %]_SRC_FILES = $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
 
-[% SET targets = "\$(" _ v _ "_DEST_INDEX) \$(" _ v _ "_DEST_FILES)" %]
+[% SET targets = "\$(" _ v _ "_DEST_INDEX) \$(" _ v _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ v _ "_DEST_FILES)" %]
 [% pres_targets_files.push(targets) %]
 [% l %]: [% targets %]
 
@@ -118,6 +120,13 @@ $(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ON
 [%- INCLUDE cmd %]
 
 $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES): [% vstamp %]
+
+[% v %]_SRC_all_in_one_html_dir = $([% v %]_BASE)/all-in-one
+
+$([% v %]_SRC_all_in_one_html_dir)/index.html: [% vstamp %]
+
+$([% v %]_DEST_all_in_one_html_dir_INDEX): $([% v %]_SRC_all_in_one_html_dir)/index.html
+[% "\t" %]rsync -r $([% v %]_SRC_all_in_one_html_dir)/ $$(dirname $@)
 
 [% END %]
 

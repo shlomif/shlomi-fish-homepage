@@ -971,6 +971,8 @@ EOF
     }
 
     return +( $dir_base =~ tr#/-#__#r ) => +{
+        all_in_one_html_dir =>
+            scalar( $dest_dir =~ s#/slides\z#/all-in-one-html#r ),
         dest_dir    => $dest_dir,
         lang        => $lang,
         'src_dir'   => $dir,

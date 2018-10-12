@@ -31,36 +31,25 @@ If you have any other questions or comments regarding this series, then
 <thead>
 <tr>
 <th>View Online</th>
+<th>All-on-one-page</th>
 <th><a href="http://www.shlomifish.org/quad-pres/">Quad-Pres</a> Source</th>
 </tr>
 </thead>
 <tbody>
-
+<define-tag part>
+<set-var %attributes />
 <tr>
-<td id="part1"><a href="lecture1/"><b>Part 1</b> - the basics</a></td>
-<td><a href="lecture1/src.tar.gz">Source</a></td>
+<td id="part<get-var idx />"><a href="lecture<get-var idx />/"><b>Part <get-var idx /></b> - <get-var desc /></a></td>
+<td><a href="lecture<get-var idx />--all-in-one-html/">All On One Page HTML</a></td>
+<td><a href="lecture<get-var idx />/src.tar.gz">Source</a></td>
 </tr>
+</define-tag>
 
-<tr>
-<td id="part2"><a href="lecture2/"><b>Part 2</b> - more advanced topics</a></td>
-<td><a href="lecture2/src.tar.gz">Source</a></td>
-</tr>
-
-<tr>
-<td id="part3"><a href="lecture3/"><b>Part 3</b> - modules and objects</a></td>
-<td><a href="lecture3/src.tar.gz">Source</a></td>
-</tr>
-
-<tr>
-<td id="part4"><a href="lecture4/"><b>Part 4</b> - CPAN, sprintf,
-system functions, exceptions.</a></td>
-<td><a href="lecture4/src.tar.gz">Source</a></td>
-</tr>
-
-<tr>
-<td id="part5"><a href="lecture5/"><b>Part 5</b> - good programming practices</a></td>
-<td><a href="lecture5/src.tar.gz">Source</a></td>
-</tr>
+<part idx="1" desc="the basics" />
+<part idx="2" desc="more advanced topics" />
+<part idx="3" desc="modules and objects" />
+<part idx="4" desc="CPAN, sprintf, system functions, exceptions" />
+<part idx="5" desc="good programming practices" />
 
 </tbody>
 </table>

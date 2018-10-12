@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "Freecell Solver - Project Introduction" />
 <latemp_meta_desc "A small presentation that introduces the Freecell Solver project to people who may be interested in contributing to it." />
@@ -10,16 +11,12 @@ to people who may be interested in contributing to it.
 
 <ul>
 
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
+<qp-lect dir="slides" />
 
 <li>
-<a href="slides/src.tar.gz">Quad-Pres Source for the Slides</a>
-</li>
-
-<li>
+<p>
 <a href="Summary.txt">Summary (plain-text)</a>
+</p>
 </li>
 
 </ul>

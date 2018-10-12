@@ -1,4 +1,6 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
+
 <latemp_subject "Welcome to Linux - Development Lecture" />
 
 <latemp_meta_desc "A presentation that covers basic software development under Linux. Originally prepared by Meir Maor, and then revised and enhanced by Shlomi Fish." />
@@ -10,6 +12,5 @@ me.
 </p>
 
 <ul>
-<li><a href="slides/"><b>The Slides</b></a></li>
-<li><a href="slides/src.tar.gz">Quad-Pres Source for the Slides</a></li>
+<qp-lect dir="slides" />
 </ul>

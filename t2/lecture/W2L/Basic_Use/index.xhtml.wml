@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/presentations.wml"
 
 <latemp_subject "Welcome to Linux - Basic Use" />
 
@@ -13,12 +14,6 @@ in the Hebrew language), but this presentation may still be of interest.
 
 <ul>
 
-<li>
-<a href="slides/"><b>The Slides</b></a>
-</li>
-
-<li>
-<a href="slides/src.tar.gz">Quad-Pres source of the slides</a>
-</li>
+<qp-lect dir="slides" />
 
 </ul>

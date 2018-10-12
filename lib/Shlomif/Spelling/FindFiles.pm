@@ -14,7 +14,7 @@ my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 my @prunes = (
     qr#^\Q$T2_POST_DEST\E/MANIFEST\.html$#,
-    qr#\A\Q$T2_POST_DEST\E/lecture/.*?/all-in-one-html/.*?\z#,
+    qr#\A\Q$T2_POST_DEST\E/lecture/.*?/[a-zA-Z_\-0-9\.]*?--all-in-one-html/#,
     qr#philosophy/foss-other-beasts/revision-2/#,
 qr#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#,
     qr#guide2ee/undergrad#,

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from bottle import route, request, template, redirect, abort
+from bottle import route, request, run, template, redirect, abort
 import random
 import os.path
 import sqlite3
@@ -37,7 +37,7 @@ def _emit_error(title, body):
 </html>''' % {'title': title, 'body': body})
 
 
-@route('/')
+@route(['/'])
 def main():
     mode = request.query.mode or 'str_id'
 
@@ -80,7 +80,7 @@ Report this problem to the webmaster.
 
     cur.execute(
         'SELECT str_id FROM fortune_cookies WHERE id = ?',
-        random.randint(1, max_id[0]),
+        (str(random.randint(1, int(max_id[0]))),)
     )
 
     str_id = cur.fetchone()
@@ -126,11 +126,12 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 </ul>
 <h1>{{title_esc}}</h1>
 <div class="fortunes_list">
-$html_text
+{{!html_text}}
 </div>
 </body>
 </html>''',
-                    base_dir=base_dir, col_title=col_title,
+                    base_dir=base_dir, col_title=col_title, str_id=str_id,
+                    html_text=html_text,
                     col_str_id=col_str_id, title_esc=title_esc)
 
 
@@ -146,10 +147,10 @@ The ID parameter must be specified.
     cur.execute(
             '''SELECT f.text, f.title, c.str_id, c.title
 FROM fortune_cookies AS f, fortune_collections AS c
-WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', str_id)
+WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
     data = cur.fetchone()
     if data:
-        return _display_fortune_from_data(**([str_id] + data))
+        return _display_fortune_from_data(*([str_id] + list(data)))
     else:
         return _emit_error(
             title='URL not found',
@@ -162,6 +163,8 @@ be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
 Fish (the Webmaster)</a> and let him know of this problem.
 </p>''' % (cgi.escape(str_id, True)))
 
+
+run(server='cgi')
 
 '''
 

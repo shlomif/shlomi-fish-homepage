@@ -13,7 +13,8 @@ random.seed()
 # The Directory containing the script.
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path += [script_dir]
-from bottle import route, request, run, template, redirect, abort  # noqa: E402
+from bottle import route, request, run, template, \
+        response, redirect, abort  # noqa: E402
 
 db_base_name = "fortunes-shlomif-lookup.sqlite3"
 
@@ -47,6 +48,7 @@ def _emit_error(title, body):
 
 @route(['/'])
 def main():
+    response.content_type = 'application/xhtml+xml; charset=utf-8'
     mode = request.query.mode or 'str_id'
 
     if mode == "random":

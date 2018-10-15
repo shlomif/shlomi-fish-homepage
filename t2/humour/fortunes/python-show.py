@@ -102,7 +102,7 @@ Report this problem to the webmaster.
 
 def _display_fortune_from_data(str_id, html_text, html_title,
                                col_str_id, col_title):
-    title_esc = cgi.escape(html_title + " - Fortune", True)
+    title = html_title + " - Fortune"
     base_dir = '../..'
 
     return template(
@@ -112,7 +112,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>$title_esc</title>
+<title>{{title}}</title>
 <link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -126,7 +126,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <ul id="random">
 <li><a href="show.cgi?mode=random">Random Fortune</a></li>
 </ul>
-<h1>{{title_esc}}</h1>
+<h1>{{title}}</h1>
 <div class="fortunes_list">
 {{!html_text}}
 </div>
@@ -134,7 +134,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 </html>''',
                     base_dir=base_dir, col_title=col_title, str_id=str_id,
                     html_text=html_text,
-                    col_str_id=col_str_id, title_esc=title_esc)
+                    col_str_id=col_str_id, title=title)
 
 
 def _show_by_str_id(str_id):

@@ -1,261 +1,181 @@
-#!/usr/bin/env perl
+#!/usr/bin/env python3
 
-BEGIN {
-    my $base_module_dir = (-d '/home/shlomif/perl' ? '/home/shlomif/perl' :
-        ( getpwuid($>) )[7] . '/perl/');
-    unshift @INC, map { $base_module_dir . $_ } @INC;
-}
-
-use strict;
-use warnings;
-
-use CGI::Minimal;
-use DBI;
-use Encode qw(decode);
-
-use File::Spec::Functions qw( catpath splitpath rel2abs );
-
-binmode STDOUT, ':encoding(utf8)';
+import random
+import re
+import os.path
+import sqlite3
+import sys
+import cgi
 
 # We're using rand() later.
-srand();
+random.seed()
 
 # The Directory containing the script.
-my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path += [script_dir]
+from bottle import route, request, run, template, \
+        response, redirect, abort  # noqa: E402
 
-my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
+db_base_name = "fortunes-shlomif-lookup.sqlite3"
 
-my $full_db_path = "$script_dir/$db_base_name";
+full_db_path = script_dir + "/" + db_base_name
 
-my $dbh = DBI->connect("dbi:SQLite:dbname=$full_db_path","","");
+dbh = sqlite3.connect(full_db_path)
+cur = dbh.cursor()
 
-my $select_sth = $dbh->prepare(<<'EOF');
-SELECT f.text, f.title, c.str_id, c.title
-FROM fortune_cookies AS f, fortune_collections AS c
-WHERE ((f.str_id = ?) AND (f.collection_id = c.id))
-EOF
+NL = "\015\012"
 
-my $select_max_id = $dbh->prepare(
-    q{SELECT MAX(id) FROM fortune_cookies}
-);
 
-my $lookup_str_id_from_id = $dbh->prepare(
-    q{SELECT str_id FROM fortune_cookies WHERE id = ?}
-);
+def _my_fullpath():
+    """docstring for _my_fullpath"""
+    return re.sub('/+$', '', request.fullpath)
 
-my $cgi = CGI::Minimal->new;
 
-my $NL = "\015\012";
-
-sub _header
-{
-    print "Content-Type: text/html; charset=utf-8$NL$NL";
-
-    return;
-}
-
-sub _emit_error
-{
-    my ($args) = @_;
-
-    print "Status: 404 Not Found$NL";
-    _header();
-
-    _wrap_error_html($args);
-
-    return;
-}
-
-sub _wrap_error_html
-{
-    my ($args) = @_;
-
-    my $title = $args->{title};
-    my $body = $args->{body};
-
-    print <<"ERROR_HTML";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+def _emit_error(title, body):
+    abort(404,
+          '''<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>$title</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>%(title)s</title>
+<meta charset="utf-8" />
 </head>
 <body>
-$body
+%(body)s
 </body>
-</html>
-ERROR_HTML
-}
+</html>''' % {'title': title, 'body': body})
 
-my $mode = ($cgi->param('mode') || 'str_id');
 
-if ($mode eq "random")
-{
-    _pick_random();
-}
-elsif ($mode eq "str_id")
-{
-    my $str_id = $cgi->param('id');
-    _show_by_str_id($str_id);
-}
-else
-{
-    _invalid_mode($mode);
-}
+@route(['/'])
+def main():
+    response.content_type = 'application/xhtml+xml; charset=utf-8'
+    mode = request.query.mode or 'str_id'
 
-sub _invalid_mode
-{
-    my ($mode) = @_;
+    if mode == "random":
+        return _pick_random()
+    elif mode == "str_id":
+        str_id = request.query.id
+        return _show_by_str_id(str_id)
+    else:
+        return _invalid_mode(mode)
 
-    my $mode_esc = $cgi->htmlize($mode);
 
-    _emit_error({
-            title => qq{Error! Invalid mode "$mode_esc"},
-            body => <<"END_OF_BODY", });
-<h1>Error! Invalid mode "$mode_esc".</h1>
+def _invalid_mode(mode):
+    mode_esc = cgi.escape(mode, True)
+
+    _emit_error(
+            title='Error! Invalid mode "%s"' % (mode_esc),
+            body='''<h1>Error! Invalid mode "%s".</h1>
 
 <p>
 Only valid modes are <code>random</code> and <code>str_id</code>
 (where <code>str_id</code> is the default).
-</p>
-END_OF_BODY
-    return;
-}
+</p>''' % (mode_esc))
+    return
 
-sub _pick_random
-{
-    my $rv = $select_max_id->execute();
 
-    my ($max_id) = $select_max_id->fetchrow_array;
+def _pick_random():
+    cur.execute('SELECT MAX(id) FROM fortune_cookies')
+    max_id = cur.fetchone()
 
-    if (! $max_id)
-    {
-        _emit_error({
-                title => "Query failed",
-                body => <<"END_OF_BODY", });
-<h1>Query failed</h1>
+    if not max_id:
+        _emit_error(
+                title="Query failed",
+                body='''<h1>Query failed</h1>
 
 <p>
 Report this problem to the webmaster.
-</p>
-END_OF_BODY
-        return;
-    }
+</p>''')
+        return
 
-    $rv = $lookup_str_id_from_id->execute(
-        int(rand() * ($max_id)) + 1
-    );
+    cur.execute(
+        'SELECT str_id FROM fortune_cookies WHERE id = ?',
+        (str(random.randint(1, int(max_id[0]))),)
+    )
 
-    my ($str_id) = $lookup_str_id_from_id->fetchrow_array();
+    str_id = cur.fetchone()
 
-    if (! $str_id)
-    {
-        _emit_error({ title => q{Unknown fortune ID},
-                body => <<'EOF'});
-<h1>lookup_str_id_from_id query failed</h1>
-
+    if not str_id:
+        _emit_error(title='Unknown fortune ID',
+                    body='''<h1>lookup_str_id_from_id query failed</h1>
 <p>
 Report this problem to the webmaster.
-</p>
-EOF
-        return;
-    }
+</p>''')
+        return
 
     # str_id must not contain any strange HTML/URI/etc. characters
     # If it does - then we suck.
-    print "Location: ./show.cgi?id=$str_id$NL$NL";
+    redirect(_my_fullpath() + "?id=" + str_id[0])
 
-    return;
-}
 
-sub _display_fortune_from_data
-{
-    my ($str_id, $html_text, $html_title, $col_str_id, $col_title) = @_;
+def _display_fortune_from_data(str_id, html_text, html_title,
+                               col_str_id, col_title):
+    title = html_title + " - Fortune"
+    base_dir = '../..'
 
-    $html_text = decode('utf-8', $html_text);
-
-    my $title_esc =
-        $cgi->htmlize(decode('utf-8', $html_title)) . " - Fortune"
-        ;
-
-    _header();
-
-    my $base_dir = '../..';
-
-    print <<"FORTUNE";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE
-html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    return template(
+                    '''<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
-<title>$title_esc</title>
-<link rel="stylesheet" href="$base_dir/fort_total.css" media="screen" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{title}}</title>
+<link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />
+<meta charset="utf-8" />
 </head>
 <body>
 <ul id="nav">
 <li><a href="/">Shlomi Fish's Homepage</a></li>
 <li><a href="./">Fortune Cookies Page</a></li>
-<li><a href="${col_str_id}.html">@{[$cgi->htmlize($col_title)]}</a></li>
-<li><a href="${col_str_id}.html#${str_id}">Fortune Cookie</a></li>
+<li><a href="{{col_str_id}}.html">{{col_title}}</a></li>
+<li><a href="{{col_str_id}}.html#{{str_id}}">Fortune Cookie</a></li>
 </ul>
 <ul id="random">
-<li><a href="show.cgi?mode=random">Random Fortune</a></li>
+<li><a href="{{fullpath}}?mode=random">Random Fortune</a></li>
 </ul>
-<h1>$title_esc</h1>
+<h1>{{title}}</h1>
 <div class="fortunes_list">
-$html_text
+{{!html_text}}
 </div>
 </body>
-</html>
-FORTUNE
+</html>''',
+                    base_dir=base_dir, col_title=col_title, str_id=str_id,
+                    fullpath=_my_fullpath(),
+                    html_text=html_text,
+                    col_str_id=col_str_id, title=title)
 
-    return;
-}
 
-sub _show_by_str_id
-{
-    my ($str_id) = @_;
-
-    if (! $str_id)
-    {
-        _emit_error({ title => q{ID parameter not specified},
-                body => <<'END_OF_BODY'});
-<h1>Error! Must specify ID parameter</h1>
-
+def _show_by_str_id(str_id):
+    if not str_id:
+        return _emit_error(
+            title='ID parameter not specified',
+            body='''<h1>Error! Must specify ID parameter</h1>
 <p>
 The ID parameter must be specified.
-</p>
-END_OF_BODY
-        return;
-    }
+</p>''')
 
-    my $rv = $select_sth->execute($str_id);
-
-    if (my @data = $select_sth->fetchrow_array)
-    {
-        return _display_fortune_from_data($str_id, @data);
-    }
-    else
-    {
-        _emit_error({ title => q{URL not found},
-                body => <<"END_OF_BODY"});
-<h1>URL not found</h1>
+    cur.execute(
+            '''SELECT f.text, f.title, c.str_id, c.title
+FROM fortune_cookies AS f, fortune_collections AS c
+WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
+    data = cur.fetchone()
+    if data:
+        return _display_fortune_from_data(*([str_id] + list(data)))
+    else:
+        return _emit_error(
+            title='URL not found',
+            body='''<h1>URL not found</h1>
 
 <p>
-The fortune ID @{[$cgi->htmlize($str_id)]} is not recognised.
+The fortune ID %s is not recognised.
 If you've reached this URL and think it should
-be defined please contact <a href="mailto:shlomif\@shlomifish.org">Shlomi
+be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
 Fish (the Webmaster)</a> and let him know of this problem.
-</p>
-END_OF_BODY
-        return;
-    }
-}
+</p>''' % (cgi.escape(str_id, True)))
 
-__END__
+
+run(server='cgi')
+
+'''
 
 =head1 NAME
 
@@ -290,4 +210,4 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-=cut
+'''

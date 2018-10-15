@@ -7,18 +7,18 @@ import sqlite3
 import sys
 import cgi
 
-# We're using rand() later.
+# We're using random later.
 random.seed()
 
 # The Directory containing the script.
 script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path += [script_dir]
+sys.path.append(script_dir)
 from bottle import route, request, run, template, \
         response, redirect, abort  # noqa: E402
 
-db_base_name = "fortunes-shlomif-lookup.sqlite3"
+DB_BASE_NAME = "fortunes-shlomif-lookup.sqlite3"
 
-full_db_path = script_dir + "/" + db_base_name
+full_db_path = script_dir + "/" + DB_BASE_NAME
 
 dbh = sqlite3.connect(full_db_path)
 cur = dbh.cursor()
@@ -27,7 +27,6 @@ NL = "\015\012"
 
 
 def _my_fullpath():
-    """docstring for _my_fullpath"""
     return re.sub('/+$', '', request.fullpath)
 
 
@@ -138,10 +137,13 @@ def _display_fortune_from_data(str_id, html_text, html_title,
 </div>
 </body>
 </html>''',
-                    base_dir=base_dir, col_title=col_title, str_id=str_id,
+                    base_dir=base_dir,
+                    col_str_id=col_str_id,
+                    col_title=col_title,
                     fullpath=_my_fullpath(),
                     html_text=html_text,
-                    col_str_id=col_str_id, title=title)
+                    str_id=str_id,
+                    title=title)
 
 
 def _show_by_str_id(str_id):

@@ -54,7 +54,16 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?:/t2/lecture/
                 (?:
+                    (?: HTML-Tutorial/v1/xhtml1/hebrew/
+                        hebrew-html-tutorial.raw.html
+                    )
+                    |
+                (?:
                     (?:Perl/Lightning/Mojolicious/mojolicious-slides\.x?html)
+                        |
+                    (?:Perl/Newbies/
+                        lecture[1-5](?:--all-in-one-html)?/.*?\.x?html
+                    )
                         |
                     (?:
                         (?:Perl/
@@ -66,12 +75,19 @@ class MyTests(vnu_validator.VnuTest):
                             )
                                 |
                             Graham-Function
+                                |
+                            Haskell
                         )
                         )
                             |
+                        Vim/beginners
+                            |
                         WebMetaLecture
+                            |
+                        mini/mdda
                     )
-                    /slides/.*\.x?html
+                    /(?:slides|slides--all-in-one-html)/.*\.x?html
+                )
                 )
             )
                 |

@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-from bottle import route, request, run, template, redirect, abort
 import random
 import os.path
 import sqlite3
+import sys
 import cgi
 
 # We're using rand() later.
@@ -11,6 +11,8 @@ random.seed()
 
 # The Directory containing the script.
 script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path += [script_dir]
+from bottle import route, request, run, template, redirect, abort  # noqa: E402
 
 db_base_name = "fortunes-shlomif-lookup.sqlite3"
 

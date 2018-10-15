@@ -3,8 +3,6 @@
     <xsl:param name="use.id.as.filename">1</xsl:param>
     <xsl:param name="html.stylesheet">style.css</xsl:param>
     <xsl:param name="itemizedlist.propagates.style">1</xsl:param>
-    <xsl:param name="chunker.output.doctype-public">-//W3C//DTD XHTML 1.0 Transitional//EN</xsl:param>
-    <xsl:param name="chunker.output.doctype-system">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</xsl:param>
     <!-- Parameters for Generating Strict Output. See:
     http://www.sagehill.net/docbookxsl/OtherOutputForms.html#StrictXhtmlValid
     -->

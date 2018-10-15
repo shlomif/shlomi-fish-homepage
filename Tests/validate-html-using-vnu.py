@@ -58,6 +58,9 @@ class MyTests(vnu_validator.VnuTest):
                         hebrew-html-tutorial.raw.html
                     )
                     |
+                    (?: Pres-Tools/Perl-Point/slide[0-9]+\.htm
+                    )
+                    |
                 (?:
                     (?:Perl/Lightning/Mojolicious/mojolicious-slides\.x?html)
                         |
@@ -79,6 +82,8 @@ class MyTests(vnu_validator.VnuTest):
                             Haskell
                         )
                         )
+                            |
+                        SCM/subversion/for-pythoneers
                             |
                         Vim/beginners
                             |

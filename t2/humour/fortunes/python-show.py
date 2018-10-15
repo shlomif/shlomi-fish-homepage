@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import random
+import re
 import os.path
 import sqlite3
 import sys
@@ -22,6 +23,11 @@ dbh = sqlite3.connect(full_db_path)
 cur = dbh.cursor()
 
 NL = "\015\012"
+
+
+def _my_fullpath():
+    """docstring for _my_fullpath"""
+    return re.sub('/+$', '', request.fullpath)
 
 
 def _emit_error(title, body):
@@ -97,7 +103,7 @@ Report this problem to the webmaster.
 
     # str_id must not contain any strange HTML/URI/etc. characters
     # If it does - then we suck.
-    redirect("./show.cgi?id=" + str_id[0])
+    redirect(_my_fullpath() + "?id=" + str_id[0])
 
 
 def _display_fortune_from_data(str_id, html_text, html_title,
@@ -124,7 +130,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 <li><a href="{{col_str_id}}.html#{{str_id}}">Fortune Cookie</a></li>
 </ul>
 <ul id="random">
-<li><a href="show.cgi?mode=random">Random Fortune</a></li>
+<li><a href="{{fullpath}}?mode=random">Random Fortune</a></li>
 </ul>
 <h1>{{title}}</h1>
 <div class="fortunes_list">
@@ -133,6 +139,7 @@ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 </body>
 </html>''',
                     base_dir=base_dir, col_title=col_title, str_id=str_id,
+                    fullpath=_my_fullpath(),
                     html_text=html_text,
                     col_str_id=col_str_id, title=title)
 

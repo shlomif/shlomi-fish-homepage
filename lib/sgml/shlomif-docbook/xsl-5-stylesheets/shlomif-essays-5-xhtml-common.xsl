@@ -6,8 +6,8 @@
     xmlns:d="http://docbook.org/ns/docbook"
     version='1.0'
     >
+    <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/html5-element-mods.xsl"/>
 
-    <xsl:param name="css.decoration" select="0"></xsl:param>
     <xsl:param name="generate.id.attributes" select="0"></xsl:param>
     <xsl:param name="make.clean.html" select="1"></xsl:param>
 
@@ -29,7 +29,6 @@
     </xsl:template>
     -->
 <xsl:template name="root.attributes">
-    <!-- customize to add attributes to <html> element  -->
         <xsl:attribute name="lang">
             <xsl:if test="//*/@lang">
                 <xsl:value-of select="//*/@lang"/>

@@ -6,7 +6,6 @@
     <!-- Parameters for Generating Strict Output. See:
     http://www.sagehill.net/docbookxsl/OtherOutputForms.html#StrictXhtmlValid
     -->
-    <xsl:param name="css.decoration">0</xsl:param>
     <xsl:param name="ulink.target"></xsl:param>
     <xsl:param name="use.viewport">0</xsl:param>
     <!-- End of Strict Params -->
@@ -35,12 +34,6 @@
              </xsl:attribute>
          </xsl:if>
 
-
-      <xsl:if test="$css.decoration != 0">
-        <xsl:attribute name="type">
-          <xsl:call-template name="list.itemsymbol"/>
-        </xsl:attribute>
-      </xsl:if>
 
       <xsl:if test="@spacing='compact'">
         <xsl:attribute name="compact">

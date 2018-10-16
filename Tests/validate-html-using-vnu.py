@@ -108,7 +108,7 @@ class MyTests(vnu_validator.VnuTest):
             )
         )$
             """)
-        _non_xhtml_cb = _create_cb('jquery-ui')
+        _non_xhtml_cb = _create_cb('jquery-ui|philosophy/by-others/sscce')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb)
 
 

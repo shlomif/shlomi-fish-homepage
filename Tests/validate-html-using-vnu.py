@@ -106,6 +106,21 @@ class MyTests(vnu_validator.VnuTest):
                 shlomif.il.eu.org-questions|
                 personal(?:-heb)?|toggle|wonderous|wysiwyt)\\.html
             )
+                |
+            (?: MathJax/.*? )
+                |
+            (?: MathVentures/.*? )
+                |
+            (?: humour/
+                (?: by-others/oded-c/\S+\.x?html
+                    |
+                Blue-Rabbit-Log/ideas\.xhtml
+                )
+            )
+                |
+            (?: me/resumes/Shlomi-Fish-Heb.*? )
+                |
+            (?: work/.*? )
         )$
             """)
         _non_xhtml_cb = _create_cb('jquery-ui|philosophy/by-others/sscce')

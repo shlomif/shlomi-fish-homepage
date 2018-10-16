@@ -1,4 +1,4 @@
-#include "template.wml"
+#include "template5.wml"
 
 <define-tag detailed endtag="required">
 <if "<get-var is:detailed />" "%body" "" />
@@ -12,7 +12,7 @@
 <latemp_meta_desc "Shlomi Fish’s Résumé : education, experience, areas of expertise, past accomplishments." />
 
 <page_extra_head_elements>
-<style type="text/css">
+<style>
 td > p:first-child
 {
     margin-top: 0;
@@ -53,7 +53,7 @@ to tread on the fine line between modularity (DRY) and making sure
 the code is not overly clever and hard to read (KISS).
 </p>
 
-<table cellspacing="0" cellpadding="7" class="cv" summary="main C.V. table. Left Column contains the dates. Right Column contains the entries">
+<table class="cv">
 
 <tr>
 <td colspan="2">

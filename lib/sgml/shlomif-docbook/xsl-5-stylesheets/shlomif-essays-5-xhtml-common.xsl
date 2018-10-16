@@ -8,9 +8,18 @@
     >
     <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/html5-element-mods.xsl"/>
 
+    <xsl:param name="css.decoration" select="0"></xsl:param>
     <xsl:param name="generate.id.attributes" select="0"></xsl:param>
+    <xsl:param name="html.cellspacing"></xsl:param>
+    <xsl:param name="html.cellpadding"></xsl:param>
     <xsl:param name="make.clean.html" select="1"></xsl:param>
 
+    <xsl:template name="pi.dbhtml_cellpadding">
+        <xsl:text/>
+    </xsl:template>
+    <xsl:template name="pi.dbhtml_cellspacing">
+        <xsl:text/>
+    </xsl:template>
     <!--
          Commented out because it does not work properly.
     <xsl:template name="anchor">

@@ -7,7 +7,10 @@
     version='1.0'
     >
 
+    <xsl:param name="css.decoration" select="0"></xsl:param>
     <xsl:param name="generate.id.attributes" select="0"></xsl:param>
+    <xsl:param name="make.clean.html" select="1"></xsl:param>
+
     <!--
          Commented out because it does not work properly.
     <xsl:template name="anchor">

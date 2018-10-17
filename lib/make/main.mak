@@ -1238,4 +1238,6 @@ BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
 
 min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 
+TEST_TARGETS = Tests/*.{py,t}
+
 include lib/make/copies-generated-include.mak

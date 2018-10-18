@@ -1,0 +1,76 @@
+[% FOREACH db_ver = [4,5] %]
+[% IF db_ver == '5' %]
+[% xslt_ss = '$(DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET)' %]
+[% html_ext = '.xhtml' %]
+[% ELSE %]
+[% xslt_ss = '$(XHTML_XSLT_SS)' %]
+[% html_ext = '.html' %]
+[% END %]
+[% docs = ((db_ver == 4) ? docs_4 : docs_5) %]
+[% db_ver_path = ( db_ver _ "/" ) %]
+[% SET db_macro_prefix = "DOCBOOK" _ db_ver %]
+
+[% db_macro_prefix %]_DIRS_LIST =[% FOREACH d = docs %] [% d.path %][% END %]
+
+[% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
+
+[% FOREACH fmt = fmts %]
+[% BLOCK fmt_dest_dir %][% IF fmt.var == 'INDIVIDUAL_XHTML' %]$(T2_DEST)[% ELSE %]$(T2_POST_DEST)[% END %][% END %]
+    [% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %][% UNLESS fmt.var == 'EPUB' and d.no_epub %] [% INCLUDE fmt_dest_dir %]/[% d.path %]/[% d.dest_base || d.base %][% fmt.installed_ext ? (fmt.installed_ext _ html_ext) : fmt.ext %][% END %][% END %]
+
+[% IF db_ver == '5' %]
+[% db_macro_prefix %]_INSTALLED_HTMLS =[% FOREACH d = docs %] [% INCLUDE fmt_dest_dir %]/[% d.path %]/[% d.base %].raw.html[% END %]
+[% END %]
+
+[% db_macro_prefix %]_[% fmt.var %]_DIR = lib/docbook/[% db_ver_path %][% fmt.dir %]
+
+[% END %]
+
+# The individual docs.
+[% FOREACH d = docs %]
+
+[% FOREACH my_ext_record = [{l => 'epub', u => 'EPUB'}, {l=> 'pdf',u => 'PDF'},{l => 'xml', u => 'XML'},{l => 'rtf', u => 'RTF',}] %]
+
+[% SET my_ext = my_ext_record.l %]
+[% SET my_ext_uc = my_ext_record.u %]
+
+$(T2_POST_DEST)/[% d.path %]/[% d.dest_base || d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
+[% "\t" %]$(call COPY)
+
+[% END %]
+
+[% IF (db_macro_prefix == 'DOCBOOK5') %]
+
+$(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ONE_XHTML_DIR)/[% d.base %]/all-in-one.xhtml
+[% "\t" %]$(call COPY)
+
+[% END %]
+
+[%- SET foo_dest = '$(T2_DEST)/' _ d.path _ '/' _ ( d.dest_base || d.base) -%]
+[%- SET foo_src = '$(' _ db_macro_prefix _ '_INDIVIDUAL_XHTML_DIR)/' _ d.base %]
+
+[% SET rm_line = "\tcp -f lib/sgml/shlomif-docbook/xsl-stylesheets/style.css " _ foo_dest _ "/style.css || true" %]
+[% IF d.custom_css %]
+[% SET rm_line = "" %]
+[% END %]
+
+[% foo_dest %]/index[% html_ext %]: [% foo_src %]/index[% html_ext %]
+[% "\t" %]rsync --exclude 'style.css' -r [% foo_src %]/ [% foo_dest %]/
+[% rm_line %]
+
+[% foo_src %]/index[% html_ext %]: $([% db_macro_prefix %]_XML_DIR)/[% d.base %].xml $(XSL_SOURCES)
+[% "\t" %]mkdir -p [% foo_src %]
+[% "\t" %]$(DOCMAKE_WITH_PARAMS) \
+[% "\t\t" %]--trailing-slash=0 \
+[% "\t\t" %]--stringparam "docmake.output.format=xhtml" \
+[% "\t\t" %]--stringparam "docmake.output.path_to_root=[% "../../" %]" \
+[%- SET v = d.work_in_progress ? "1" : "" %]
+[% "\t\t" %]--stringparam "docmake.output.work_in_progress=[% v %]" \
+[% IF d.del_revhistory %][% "\t\t" %]--stringparam "generate.revhistory.link=1" \[% "\n" %][% END -%]
+[% "\t\t" %]-x [% xslt_ss %] -o [% foo_src %]/notneeded.x [% IF db_ver == '5' %]xhtml5[% ELSE %]xhtml-1_1[% END %] $< \
+[% "\t" %]&& touch $@
+[% "\t" %]for fn in $$(ls [% foo_src %]/* | grep -E '\.x?html$$') ; do echo "$$fn"; if true; then xsltproc --output "$$fn.new" bin/clean-up-docbook-xhtml-1.1.xslt "$$fn" || true ; mv -f "$$fn.new" "$$fn" ; fi; perl -0777 -pi -e 's#<p>\s*?</p>##gms' "$$fn" ; perl -lpi -e 's/[ \t]+\z//' "$$fn" ; done
+[% END %]
+
+[% END # db_ver loop.
+%]

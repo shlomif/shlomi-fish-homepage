@@ -330,99 +330,10 @@ EOF
 }
 
 {
-    my $screenplays_data = [
-        {
-            base        => "TOWTF",
-            github_repo => "TOW-Fountainhead",
-            subdir      => "TOW_Fountainhead",
-            docs        => [
-                { base => "TOW_Fountainhead_1", suffix => "1", },
-                { base => "TOW_Fountainhead_2", suffix => "2", },
-            ],
-        },
-        {
-            base        => "STAR_TREK_WTLD",
-            github_repo => "Star-Trek--We-the-Living-Dead",
-            subdir      => "star-trek--we-the-living-dead",
-            docs        => [
-                { base => "Star-Trek--We-the-Living-Dead", suffix => "ENG", },
-
-         # { base => "Star-Trek--We-the-Living-Dead-hebrew", suffix => "HEB", },
-            ],
-        },
-        {
-            base        => "HUMANITY",
-            github_repo => "Humanity-the-Movie",
-            subdir      => "humanity",
-            docs        => [
-                { base => "Humanity-Movie",        suffix => "ENG", },
-                { base => "Humanity-Movie-hebrew", suffix => "HEB", },
-            ],
-        },
-        {
-            base        => "SELINA_MANDRAKE",
-            github_repo => "Selina-Mandrake",
-            subdir      => "selina-mandrake",
-            docs =>
-                [ { base => "selina-mandrake-the-slayer", suffix => "ENG", }, ],
-        },
-        {
-            base        => "SUMMERSCHOOL_AT_THE_NSA",
-            github_repo => "Summerschool-at-the-NSA",
-            subdir      => "summerschool-at-the-nsa",
-            docs =>
-                [ { base => "Summerschool-at-the-NSA", suffix => "ENG", }, ],
-        },
-        {
-            base        => "BUFFY_A_FEW_GOOD_SLAYERS",
-            github_repo => "Buffy-a-Few-Good-Slayers",
-            subdir      => "buffy--a-few-good-slayers",
-            docs =>
-                [ { base => "Buffy--a-Few-Good-Slayers", suffix => "ENG", }, ],
-        },
-        {
-            base        => "MUPPET_SHOW_TNI",
-            github_repo => "The-Muppets-Show--The-New-Incarnation",
-            subdir      => "Muppets-Show-TNI",
-            docs        => [
-                {
-                    base   => "Muppets-Show--Harry-Potter",
-                    suffix => "Harry-Potter",
-                },
-                {
-                    base   => "Muppets-Show--Jennifer-Lawrence",
-                    suffix => "Jennifer-Lawrence",
-                },
-                {
-                    base   => "Muppets-Show--Summer-Glau-and-Chuck-Norris",
-                    suffix => "Summer-Glau-and-Chuck-Norris",
-                },
-            ],
-        },
-        {
-            base        => "SO_WHO_THE_HELL_IS_QOHELETH",
-            github_repo => "So-Who-the-Hell-Is-Qoheleth",
-            subdir      => "so-who-the-hell-is-qoheleth",
-            docs        => [
-                { base => "So-Who-the-Hell-is-Qoheleth", suffix => "ENG", },
-            ],
-        },
-        {
-            base        => "BLUE_RABBIT_LOG",
-            github_repo => "Blue-Rabbit-Log",
-            subdir      => "Blue-Rabbit-Log",
-            docs =>
-                [ { base => "Blue-Rabbit-Log-part-1", suffix => "part-1", }, ],
-        },
-    ];
-
-    {
-        my @o = (
-            map { @{ _calc_screenplay_doc_makefile_lines($_) } }
-                @$screenplays_data,
-        );
-        my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
-        my $epub_dests         = <<'EOF';
+    my @o = ( map { @{ _calc_screenplay_doc_makefile_lines($_) } }
+            @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } );
+    my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
+    my $epub_dests         = <<'EOF';
 $(T2_POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(T2_POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(T2_POST_DEST)/humour/humanity/Humanity-Movie.epub \
@@ -438,40 +349,39 @@ $(T2_POST_DEST)/humour/TOWTF/TOW_Fountainhead_1.epub \
 $(T2_POST_DEST)/humour/TOWTF/TOW_Fountainhead_2.epub \
 EOF
 
-        my @_files = ( $epub_dests =~ /(\$\(T2_POST_DEST\)\S+)/g );
-        my @_htmls_files =
-            map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
+    my @_files = ( $epub_dests =~ /(\$\(T2_POST_DEST\)\S+)/g );
+    my @_htmls_files =
+        map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 
-        my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-        path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
-            @o,
-            "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
-            ( map { "\t$_ \\\n" } @screenplay_docs_basenames ),
-            "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
-            ( map { "\t\$($_) \\\n" } @screenplay_epubs ),
-            "\n\n",
-            "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
-            (
-                map {
-                          "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"
-                        . [ split m#/#, $_ ]->[-1]
-                        . "\n\t\$(call COPY)\n\n"
-                } @_files
-            ),
-            (
-                map {
-                    "$_: \$(SCREENPLAY_XML_HTML_DIR)/"
-                        . do
-                    {
-                        my $x = [ split m#/#, $_ ]->[-1];
-                        $x =~ s/\.raw(\.html)\z/$1/;
-                        $x;
-                        }
-                        . qq{\n\tperl -lpE 's#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E## if m#^<html #ms' < \$< > \$\@\n\n}
-                } @_htmls_files
-            ),
-        );
-    }
+    my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
+    path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
+        @o,
+        "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
+        ( map { "\t$_ \\\n" } @screenplay_docs_basenames ),
+        "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
+        ( map { "\t\$($_) \\\n" } @screenplay_epubs ),
+        "\n\n",
+        "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
+        (
+            map {
+                      "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"
+                    . [ split m#/#, $_ ]->[-1]
+                    . "\n\t\$(call COPY)\n\n"
+            } @_files
+        ),
+        (
+            map {
+                "$_: \$(SCREENPLAY_XML_HTML_DIR)/"
+                    . do
+                {
+                    my $x = [ split m#/#, $_ ]->[-1];
+                    $x =~ s/\.raw(\.html)\z/$1/;
+                    $x;
+                    }
+                    . qq{\n\tperl -lpE 's#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E## if m#^<html #ms' < \$< > \$\@\n\n}
+            } @_htmls_files
+        ),
+    );
 
     my $clone_cb = sub {
         my ($r) = @_;

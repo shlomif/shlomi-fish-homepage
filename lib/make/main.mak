@@ -295,7 +295,6 @@ FICTION_DOCS_ADDITIONS = \
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
 DOCBOOK4_INSTALLED_CSS_DIRS = $(DOCBOOK4_DIRS_LIST:%=$(T2_POST_DEST)/%/docbook-css)
-DOCMAKE_STYLE_CSS = $(DOCMAKE_XSLT_PATH)/style.css
 
 DOCBOOK4_BASE_DIR = lib/docbook/4
 DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
@@ -433,10 +432,10 @@ $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.h
 	./bin/clean-up-docbook-xsl-xhtml.pl -o $@ $<
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
-DOCBOOK4_MAK_MAKEFILES_PATH = lib/make/docbook
 
-include $(DOCBOOK4_MAK_MAKEFILES_PATH)/docbook-render.mak
+DOCMAKE ?= docmake
 
+DOCMAKE_WITH_PARAMS = $(DOCMAKE) $(DOCMAKE_PARAMS)
 DOCMAKE_PARAMS = -v
 
 HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl

@@ -2,6 +2,7 @@
 [% top_header %]
 
 QUADPRES_EXE = quadp
+QUADPRES__WML_OPTS := --passoption=3,-I$(PWD)/lib/presentations/qp/common/ --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-9
 
 [% SET pres_targets = [] %]
 [% SET pres_targets_files = [] %]
@@ -35,7 +36,7 @@ QUADPRES_EXE = quadp
 [% l %]: [% targets %]
 
 [% BLOCK cmd %]
-[% "\t" %]export T2_DEST="$(PWD)/$(T2_DEST)" WMLOPTS="--passoption=3,-I$(PWD)/lib/presentations/qp/common/ --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-9"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) render_all_in_one_page[% IF val.lang == 'he' %] --html-dir rtl[% END %] --output-dir all-in-one && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
+[% "\t" %]export T2_DEST="$(PWD)/$(T2_DEST)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) render -a && $(QUADPRES_EXE) render_all_in_one_page[% IF val.lang == 'he' %] --html-dir rtl[% END %] --output-dir all-in-one && $(QUADPRES_EXE) pack && $(QUADPRES_EXE) upload)
 [% "\t" %]touch [% vstamp %]
 [% END %]
 

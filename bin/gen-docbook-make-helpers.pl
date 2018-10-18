@@ -879,9 +879,7 @@ my $tt     = Template->new( {} );
 my $css_tt = Template->new( {} );
 
 my $gen_make_fn = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
-open my $make_fh,        ">", $gen_make_fn;
-open my $template_fh,    "<", "lib/make/docbook/sf-homepage-db-gen.tt";
-open my $db_template_fh, "<", "lib/make/docbook/sf-homepage-docbook-gen.tt";
+open my $make_fh, ">", $gen_make_fn;
 
 my $qp_template_en_text =
     path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
@@ -988,7 +986,7 @@ EOF
 }
 
 $tt->process(
-    $db_template_fh,
+    "lib/make/docbook/sf-homepage-docbook-gen.tt",
     {
         docs_4     => [ grep { $_->{db_ver} != 5 } @documents ],
         docs_5     => [ grep { $_->{db_ver} == 5 } @documents ],
@@ -1000,7 +998,7 @@ EOF
     $make_fh
 ) or die $tt->error();
 $tt->process(
-    $template_fh,
+    "lib/make/docbook/sf-homepage-db-gen.tt",
     {
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
@@ -1129,8 +1127,6 @@ EOF
     $make_fh
 ) or die $tt->error();
 
-close($db_template_fh);
-close($template_fh);
 close($make_fh);
 
 # Remove multiple consecutive \ns

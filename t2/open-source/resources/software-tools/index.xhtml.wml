@@ -41,7 +41,7 @@ file checksums, and other powerful features.
 <p>
 <a href="http://www.dsmit.com/cons/">CONS</a> - a make replacement written
 in Perl with file checksums and other features.
-<a href="http://www.scons.org/">SCons</a> is a Python version, that has been
+<a href="#scons">SCons</a> is a Python version, that has been
 more actively maintained recently.
 </p>
 </li>
@@ -159,6 +159,7 @@ other projects.
 <a href="http://mesonbuild.com/">Meson</a> - an open source build system
 that aims to be fast and user-friendly. Uses a non-Turing-complete
 <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>.
+Requires Python 3.6-or-later.
 </p>
 </li>
 
@@ -170,7 +171,7 @@ and Windows NT platforms. Proprietary.
 </p>
 </li>
 
-<li>
+<li id="scons">
 <p>
 <a href="http://www.scons.org/">SCons</a> can be used for writing such
 configuration tasks as well. It’s written in Python, does not distinguish
@@ -183,7 +184,7 @@ between the configuration phase and the build phase and tends to be slow.
 <p>
 <a href="http://code.google.com/p/waf/">Waf</a> - an open-source (modified
 BSD) tool based on SCons, CMake and other tools, and also written in Python.
-Created for KDE 4 as an enhanced version of SCons, but they eventually decided
+Created for <a href="https://en.wikipedia.org/wiki/KDE_Software_Compilation_4">KDE 4</a> as an enhanced version of SCons, but they eventually decided
 to use CMake instead.
 </p>
 </li>
@@ -243,13 +244,6 @@ software packaging system.
 
 <li>
 <p>
-<a href="http://win-get.sourceforge.net/">win-get</a> - a package manager for
-Microsoft Windows.
-</p>
-</li>
-
-<li>
-<p>
 <a href="http://chocolatey.org/">chocolatey</a> - “Chocolatey NuGet is a
 Machine Package Manager, somewhat like apt-get, but built with Windows in
 mind”.
@@ -290,7 +284,7 @@ many ways. (GPLed).
 
 <li>
 <p>
-<a href="http://subversion.tigris.org/">Subversion</a> - a CVS replacement
+<a href="https://subversion.apache.org/">Subversion</a> - a CVS replacement
 with atomic commits, networking over HTTP, efficient handling of binary file
 and other features. Still mostly a client/server, centralised protocol,
 but much more reliable than CVS and works better. (Apache/BSD Licence).
@@ -299,7 +293,7 @@ but much more reliable than CVS and works better. (Apache/BSD Licence).
 
 <li>
 <p>
-<a href="http://git.or.cz/">Git</a> - a version control system originally
+<a href="https://git-scm.com/">Git</a> - a version control system originally
 designed for the Linux kernel. Very fast and 100% distributed, but has some
 user-interface idiosyncrasies, a complex command-set, and lacks good
 documentation. (GPLed)
@@ -327,7 +321,7 @@ Canonical, Ubuntu’s parent company. Slow and quirky from my experience.
 <p>
 <a href="http://en.wikipedia.org/wiki/Fossil_%28software%29">Fossil</a> - an
 open source distributed version control system, bug tracker and wiki program
-written in C, based on SQLite and by the same originator. (BSD licence)
+written in C, based on <a href="https://www.sqlite.org/index.html">SQLite</a> and by the same originator. (BSD licence)
 </p>
 </li>
 

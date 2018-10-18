@@ -997,8 +997,9 @@ EOF
     },
     $make_fh
 ) or die $tt->error();
+
 $tt->process(
-    "lib/make/docbook/sf-homepage-db-gen.tt",
+    "lib/make/docbook/sf-homepage-quadpres-gen.tt",
     {
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl

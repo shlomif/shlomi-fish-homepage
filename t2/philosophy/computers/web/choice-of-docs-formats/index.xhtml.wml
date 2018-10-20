@@ -193,6 +193,27 @@ that the order of tags are incorrect, which takes me much less time to solve.
 One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https://en.wikipedia.org/wiki/TeX4ht">TeX4ht</a> which works reasonably well,
 and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 </p>
+
+<h3_section id="word-processors" title="Note about Word Processors">
+
+<p>
+One may be tempted to use <a href="https://en.wikipedia.org/wiki/Word_processor_program">word
+processors</a> such as <a href="https://en.wikipedia.org/wiki/Microsoft_Word">Microsoft Word</a>
+or <a href="https://en.wikipedia.org/wiki/LibreOffice">LibreOffice</a> Writer, and they
+provide the XML-based standards of <a href="https://en.wikipedia.org/wiki/OpenDocument">ODF</a>
+and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">.docx</a>. Part of the problem
+is their conversion to output formats tends to be non-semantic if not completely
+<a href="$(ROOT)/philosophy/computers/web/validate-your-html/">non-valid</a>, and at least
+in the case of Word, have a huge problem with maintaining compatibility of documents
+created with newer or older versions. As I
+<a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
+in a Reddit comment</a>, Word processors are the kind of programs that are created by smart
+people for people who are less smarter than them (because smart programmers can use text
+editors and markup languages.)
+</p>
+
+</h3_section>
+
 <hr />
 
 <p>
@@ -239,6 +260,12 @@ line tool to translate DocBook/XML to its end formats.
 <p>
 <a href="$(ROOT)/philosophy/ideas/unixdoc/">Unixdoc</a> - a vision for a unified
 documentation system.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/resources/editors-and-IDEs/">List of Text Editors and IDEs</a>
 </p>
 </li>
 </ul>

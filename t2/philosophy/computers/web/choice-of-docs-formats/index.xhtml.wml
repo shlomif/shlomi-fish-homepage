@@ -39,7 +39,7 @@ Finish Date:
 Last Updated:
 </dt>
 <dd>
-05-August-2008
+20-October-2018
 </dd>
 </dl>
 
@@ -76,7 +76,7 @@ out there to convert the POD source to PDF etc.
 </blockquote>
 
 <p>
-I think <a href="http://www.kwiki.org/">Kwiki</a> has a
+I think <a href="https://metacpan.org/pod/Kwiki">Kwiki</a> has a
 plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl’s so-called
 “Plain, Old, Documentation”)</a>.
 </p>
@@ -86,11 +86,14 @@ Just a note about POD: POD is incredibly limited. Some things that you may
 want to try to do with it are not possible. It is not the only generic format
 available, however. One option is naturally
 <a href="http://www.docbook.xml.org/">DocBook/XML</a>, which can be
-translated into HTML as well as PDF, Microsoft Word, LaTeX and other
+translated into <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> (
+both XHTML 1.x as well as XHTML 5 and HTML 5)
+as well as <a href="https://en.wikipedia.org/wiki/PDF">PDF</a>,
+Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
+<a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
 formats. It cannot be directly translated to plain text, but can through
 an intermediate format. POD can be translated into DocBook/XML using
-<cpan_self_dist d="Pod-DocBook" />. (<b>Recent Update</b>:
-<cpan_self_mod m="Pod::PseudoPod::DocBook" /> may be a better choice.).
+<cpan_self_mod m="Pod::PseudoPod::DocBook" /> may be a better choice.
 </p>
 
 <p>
@@ -101,7 +104,7 @@ Dead Camel</a>. It is old and broken and has been unmaintained for a long time.
 </p>
 
 <p>
-Note that the DocBook generated may not be perfectly semantically-correct due
+Note that the DocBook generated from the POD may not be perfectly semantically-correct due
 to the fact DocBook is richer than POD.
 </p>
 
@@ -111,7 +114,7 @@ text-with-brief-style-specifiers can be found in
 <a href="http://zgp.org/pipermail/linux-elitists/2005-August/thread.html#11265">this
 Linux-elitists thread called “mini-markup language?”</a>. Prominent examples
 include <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> which can
-be converted to HTML, XHTML and DocBook/XML, and
+be converted to HTML, XHTML and DocBook/XML using <a href="https://asciidoctor.org/">Asciidoctor</a>, and
 <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> which can only
 be converted to XHTML.
 </p>
@@ -119,21 +122,25 @@ be converted to XHTML.
 <p>
 They all can be converted to HTML and some of them to DocBook too. One Wiki or
 another is also an option, but note that they tend to have incompatible
-formats, and some may not have an ability to export as DocBook. I like the
+formats, and some may not have an ability to export as DocBook. I used to
+like the
 <a href="http://www.mediawiki.org/">MediaWiki</a> format which is an
 extension of that of
 <a href="http://www.usemod.com/cgi-bin/wiki.pl">UseModWiki</a> (and its
 <a href="http://www.oddmuse.org/">Oddmuse Wiki fork</a>, which should be
 better.), but I think that DokuWiki’s format is
-also quite good. I really dislike the default Kwiki format, and despite all
+also quite good. Note however that the MediaWiki format is very hard to
+parse reliably, and it used to only have one ad hoc and hacky parser written
+in PHP in the MediaWiki source. I really dislike the default Kwiki format, and
+despite all
 the flood of Kwiki plugins, no-one has written a
 UseModWiki/Oddmuse/MediaWiki-subset format for it yet. I keep intending to
 do that, but I have not find the time for this yet.
 </p>
 
 <p>
-You can also try to use XHTML 1.1 with semantic markup of elements for use
-as a good generic markup.
+You can also try to use XHTML 1.1 or XHTML 5 with semantic markup of elements
+for use as a good generic markup.
 </p>
 
 <p>
@@ -162,7 +169,7 @@ LaTeX has poor support for hypertext, and other PDF niceties.
 
 <li>
 PDF and PostScript, which are the default-and-least-error-prone TeX
-formats, have relatively poor accessibility and internationalisation. For
+output formats, have relatively poor accessibility and internationalisation. For
 example, from my understanding Bi-directional text (mixed Arabic-English
 text, etc.) is rendered visually.
 </li>
@@ -182,13 +189,20 @@ exactly went wrong. In DocBook/XML it just reports that one tag is missing, or
 that the order of tags are incorrect, which takes me much less time to solve.
 </p>
 
+<p>
+One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https://en.wikipedia.org/wiki/TeX4ht">TeX4ht</a> which works reasonably well,
+and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
+</p>
 <hr />
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The
 Camel Book and other perl books were written in POD. I wrote some
-documentation for Perl and non-Perl projects in POD. I also write all my man
-pages in POD because nroff scares me.
+documentation for Perl and non-Perl projects in POD. I also write some of
+my
+<a href="https://en.wikipedia.org/wiki/Man_page">man pages</a>
+in POD because <a href="https://en.wikipedia.org/wiki/Nroff">nroff</a>'s
+syntax scares me.
 </p>
 
 <p>
@@ -200,6 +214,35 @@ One final note is that DocBook/XML was problematic for using in bi-directional
 texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
+</section>
+
+<section class="h2">
+
+<h2 id="see-also">See Also</h2>
+
+<ul>
+<li>
+<p>
+<a href="http://pandoc.org/">Pandoc</a> - converts between many formats
+although not always flawlessly.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/open-source/projects/docmake/">docmake</a> - a command
+line tool to translate DocBook/XML to its end formats.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/philosophy/ideas/unixdoc/">Unixdoc</a> - a vision for a unified
+documentation system.
+</p>
+</li>
+</ul>
+
 </section>
 
 <section class="h2">

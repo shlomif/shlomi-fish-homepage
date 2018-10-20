@@ -679,7 +679,7 @@ $tt->process(
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF
     },
-    $gen_quadpres_fn,
+    $gen_make_fn,
 ) or die $tt->error();
 
 $tt->process(
@@ -809,7 +809,7 @@ EOF
             )
         },
     },
-    $gen_make_fn,
+    $gen_quadpres_fn,
 ) or die $tt->error();
 
 # Remove multiple consecutive \ns

@@ -5,4 +5,4 @@ ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/fiction-xml/fr
 
 [PerlCritic]
 select = **/*.{pl,pm,t}
-ignore = dest/**/* lib/App/Deps/Verify.pm lib/presentations/qp/perl-for-newbies/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/* node_modules/**/*
+ignore = bin/gen-docbook-make-helpers.pl dest/**/* lib/App/Deps/Verify.pm lib/presentations/qp/perl-for-newbies/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/* node_modules/**/*

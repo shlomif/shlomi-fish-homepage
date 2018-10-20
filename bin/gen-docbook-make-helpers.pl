@@ -117,30 +117,39 @@ sub _github_shlomif_clone
 
 my $pm = Parallel::ForkManager->new(20);
 
+sub _task(&)
+{
+    my $cb = shift;
+    if ( not $pm->start )
+    {
+        $cb->();
+        $pm->finish;
+    }
+    return;
+}
+
 if ( not -e 'lib/js/MathJax/README.md' )
 {
-    if ( not $pm->start )
+    _task
     {
         system(
 'cd lib/js && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
         );
-        $pm->finish;
-    }
+    };
 }
 
 if ( not -e 'lib/js/jquery-expander' )
 {
-    if ( not $pm->start )
+    _task
     {
         system(
 'cd lib/js && git clone https://github.com/kswedberg/jquery-expander'
         );
-        $pm->finish;
-    }
+    };
 }
 if ( not -e 'lib/ebookmaker/README.md' )
 {
-    if ( not $pm->start )
+    _task
     {
       # Broken due to the bug in this pull-request:
       #    - https://github.com/setanta/ebookmaker/pull/7
@@ -149,17 +158,15 @@ if ( not -e 'lib/ebookmaker/README.md' )
       #
       # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
         system('cd lib && git clone https://github.com/shlomif/ebookmaker');
-        $pm->finish;
-    }
+    };
 }
 
 if ( not -e 'lib/c-begin/README.md' )
 {
-    if ( not $pm->start )
+    _task
     {
         system('cd lib && git clone https://github.com/shlomif/c-begin.git');
-        $pm->finish;
-    }
+    };
 }
 
 my $BLOGS_DIR     = 'lib/blogs';
@@ -171,11 +178,10 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 {
     if ( not -e "$BLOGS_DIR/$repo" )
     {
-        if ( not $pm->start )
+        _task
         {
             _github_shlomif_clone( $BLOGS_DIR, $repo );
-            $pm->finish;
-        }
+        };
     }
 }
 
@@ -339,11 +345,10 @@ EOF
 
         if ( not -e $full )
         {
-            if ( not $pm->start )
+            _task
             {
                 _github_shlomif_clone( $screenplay_vcs_base_dir, $r );
-                $pm->finish;
-            }
+            };
         }
 
         return;
@@ -482,11 +487,10 @@ FICT:
         my $full        = "$fiction_vcs_base_dir/$r";
 
         next FICT if -e $full;
-        if ( not $pm->start )
+        _task
         {
             _github_shlomif_clone( $fiction_vcs_base_dir, $r );
-            $pm->finish;
-        }
+        };
     }
 
     my @o =

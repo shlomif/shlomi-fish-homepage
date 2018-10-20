@@ -15,7 +15,8 @@ use Parallel::ForkManager ();
 use File::Update qw/ write_on_change /;
 use YAML::XS ();
 use lib './lib';
-use HTML::Latemp::GenWmlHSects ();
+use HTML::Latemp::GenWmlHSects        ();
+use HTML::Latemp::DocBook::EndFormats ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
@@ -218,54 +219,6 @@ foreach my $d (@documents)
         $d->{del_revhistory} = 0;
     }
 }
-
-sub process_simple_end_format
-{
-    my $fmt = shift;
-
-    my %f = %$fmt;
-
-    if ( !exists( $f{dir} ) )
-    {
-        $f{dir} = lc( $f{var} );
-    }
-
-    return \%f;
-}
-
-my @end_formats = (
-    (
-        map { process_simple_end_format($_) } (
-            {
-                var => "EPUB",
-                ext => ".epub",
-            },
-            {
-                var => "PDF",
-                ext => ".pdf",
-            },
-            {
-                var => "XML",
-                ext => ".xml",
-            },
-            {
-                var => "RTF",
-                ext => ".rtf",
-            },
-            {
-                var          => "FO",
-                ext          => ".fo",
-                skip_install => 1,
-            },
-            {
-                var           => "INDIVIDUAL_XHTML",
-                ext           => "",
-                installed_ext => '/index',
-                dir           => "indiv-nodes",
-            },
-        )
-    )
-);
 
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
@@ -674,7 +627,7 @@ $tt->process(
     {
         docs_4     => [ grep { $_->{db_ver} != 5 } @documents ],
         docs_5     => [ grep { $_->{db_ver} == 5 } @documents ],
-        fmts       => \@end_formats,
+        fmts       => scalar( HTML::Latemp::DocBook::EndFormats->new->get_formats ),
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF

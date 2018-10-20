@@ -361,6 +361,7 @@ DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all
 all: splay
 
 include lib/make/docbook/sf-homepage-docbooks-generated.mak
+include lib/make/docbook/sf-homepage-quadpres-generated.mak
 include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak
 

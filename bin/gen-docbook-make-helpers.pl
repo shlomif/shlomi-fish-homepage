@@ -562,8 +562,8 @@ sub _calc_fiction_story_makefile_lines
 my $tt     = Template->new( {} );
 my $css_tt = Template->new( {} );
 
-my $gen_make_fn = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
-open my $make_fh, ">", $gen_make_fn;
+my $gen_make_fn     = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
+my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
 
 my $qp_template_en_text =
     path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
@@ -679,7 +679,7 @@ $tt->process(
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF
     },
-    $make_fh
+    $gen_quadpres_fn,
 ) or die $tt->error();
 
 $tt->process(
@@ -809,17 +809,18 @@ EOF
             )
         },
     },
-    $make_fh
+    $gen_make_fn,
 ) or die $tt->error();
 
-close($make_fh);
-
 # Remove multiple consecutive \ns
-path($gen_make_fn)->edit_utf8(
-    sub {
-        s/\n\n+/\n\n/g;
-    }
-);
+foreach my $fn ( $gen_make_fn, $gen_quadpres_fn )
+{
+    path($fn)->edit_utf8(
+        sub {
+            s/\n\n+/\n\n/g;
+        }
+    );
+}
 
 HTML::Latemp::GenWmlHSects->new->run;
 

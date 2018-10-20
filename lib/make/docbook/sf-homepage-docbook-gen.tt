@@ -15,7 +15,7 @@
 [% db_macro_prefix %]_DOCS =[% FOREACH d = docs %] [% d.base %][% END %]
 
 [% FOREACH fmt = fmts %]
-[% BLOCK fmt_dest_dir %][% IF fmt.var == 'INDIVIDUAL_XHTML' %]$(T2_DEST)[% ELSE %]$(T2_POST_DEST)[% END %][% END %]
+[% BLOCK fmt_dest_dir %][% IF fmt.var == 'INDIVIDUAL_XHTML' %][% DEST %][% ELSE %][% POST_DEST %][% END %][% END %]
     [% db_macro_prefix %]_INSTALLED_[% fmt.var %]S =[% FOREACH d = docs %][% UNLESS fmt.var == 'EPUB' and d.no_epub %] [% INCLUDE fmt_dest_dir %]/[% d.path %]/[% d.dest_base || d.base %][% fmt.installed_ext ? (fmt.installed_ext _ html_ext) : fmt.ext %][% END %][% END %]
 
 [% IF db_ver == '5' %]
@@ -34,19 +34,19 @@
 [% SET my_ext = my_ext_record.l %]
 [% SET my_ext_uc = my_ext_record.u %]
 
-$(T2_POST_DEST)/[% d.path %]/[% d.dest_base || d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
+[% POST_DEST %][% d.path %]/[% d.dest_base || d.base %].[% my_ext %]: $([% db_macro_prefix %]_[% my_ext_uc %]_DIR)/[% d.base %].[% my_ext %]
 [% "\t" %]$(call COPY)
 
 [% END %]
 
 [% IF (db_macro_prefix == 'DOCBOOK5') %]
 
-$(T2_DEST)/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ONE_XHTML_DIR)/[% d.base %]/all-in-one.xhtml
+[% DEST %]/[% d.path %]/[% d.base %].raw.html: $([% db_macro_prefix %]_ALL_IN_ONE_XHTML_DIR)/[% d.base %]/all-in-one.xhtml
 [% "\t" %]$(call COPY)
 
 [% END %]
 
-[%- SET foo_dest = '$(T2_DEST)/' _ d.path _ '/' _ ( d.dest_base || d.base) -%]
+[%- SET foo_dest = DEST _ '/' _ d.path _ '/' _ ( d.dest_base || d.base) -%]
 [%- SET foo_src = '$(' _ db_macro_prefix _ '_INDIVIDUAL_XHTML_DIR)/' _ d.base %]
 
 [% SET rm_line = "\tcp -f lib/sgml/shlomif-docbook/xsl-stylesheets/style.css " _ foo_dest _ "/style.css || true" %]

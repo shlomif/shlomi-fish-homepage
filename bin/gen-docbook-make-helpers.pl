@@ -515,9 +515,11 @@ my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
 $tt->process(
     "lib/make/docbook/sf-homepage-docbook-gen.tt",
     {
-        docs_4     => [ grep { $_->{db_ver} != 5 } @documents ],
-        docs_5     => [ grep { $_->{db_ver} == 5 } @documents ],
-        fmts       => scalar( HTML::Latemp::DocBook::EndFormats->new->get_formats ),
+        DEST      => '$(T2_DEST)',
+        POST_DEST => '$(T2_POST_DEST)',
+        docs_4    => [ grep { $_->{db_ver} != 5 } @documents ],
+        docs_5    => [ grep { $_->{db_ver} == 5 } @documents ],
+        fmts => scalar( HTML::Latemp::DocBook::EndFormats->new->get_formats ),
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl
 EOF

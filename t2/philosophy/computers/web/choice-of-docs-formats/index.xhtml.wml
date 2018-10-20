@@ -6,6 +6,8 @@
 <latemp_meta_desc "Choice of Document Formats" />
 <latemp_more_keywords "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" />
 
+<div class="fancy_sects">
+
 <h2_section id="about" title="About this Document">
 
 <p>
@@ -145,6 +147,9 @@ You can also try to use XHTML 1.1 or XHTML 5 with semantic markup of elements
 for use as a good generic markup.
 </p>
 
+<h3_section id="latex" title="LaTeX and TeX">
+
+
 <p>
 All that put aside, I should note that if you are thinking about using TeX or
 LaTeX, please re-consider. Tex/LaTeX are very convenient for generating
@@ -196,6 +201,8 @@ One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https:/
 and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 </p>
 
+</h3_section>
+
 <h3_section id="word-processors" title="Note about Word Processors">
 
 <p>
@@ -216,7 +223,7 @@ editors and markup languages.)
 
 </h3_section>
 
-<hr />
+<h3_section id="more-about-POD" title="More about POD">
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The
@@ -237,6 +244,8 @@ One final note is that DocBook/XML was problematic for using in bi-directional
 texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
+
+</h3_section>
 
 </h2_section>
 
@@ -286,3 +295,5 @@ TODO: Fill in.
 </p>
 
 </h2_section>
+
+</div>

@@ -6,9 +6,7 @@
 <latemp_meta_desc "Choice of Document Formats" />
 <latemp_more_keywords "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" />
 
-<section class="h2">
-
-<h2 id="about">About this Document</h2>
+<h2_section id="about" title="About this Document">
 
 <p>
 This is an overview of popular file formats, which is
@@ -16,11 +14,10 @@ derived from a reply I wrote to a thread in the
 <a href="http://mail.pm.org/mailman/listinfo/boston-pm">Boston Perl Mongers
 mailing list</a>.
 </p>
-</section>
 
-<section class="h2">
+</h2_section>
 
-<h2 id="meta">Document Information</h2>
+<h2_section id="meta" title="Document Information">
 
 <dl class="meta">
 <dt>
@@ -43,18 +40,15 @@ Last Updated:
 </dd>
 </dl>
 
-<section class="h3">
-
-<h3 id="licence">Licence</h3>
+<h3_section id="licence" title="Licence">
 
 <cc_by_british_blurb year="2006" />
 
-</section>
-</section>
+</h3_section>
 
-<section class="h2">
+</h2_section>
 
-<h2 id="article">The Article Itself</h2>
+<h2_section id="article" title="The Article Itself">
 
 <p>
 A previous correspondent wrote:
@@ -243,11 +237,10 @@ One final note is that DocBook/XML was problematic for using in bi-directional
 texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
-</section>
 
-<section class="h2">
+</h2_section>
 
-<h2 id="see-also">See Also</h2>
+<h2_section id="see-also" title="See Also">
 
 <ul>
 <li>
@@ -276,17 +269,20 @@ documentation system.
 <a href="$(ROOT)/open-source/resources/editors-and-IDEs/">List of Text Editors and IDEs</a>
 </p>
 </li>
+
+<li>
+<p>
+<a href="https://shlomif-tech.livejournal.com/74922.html">"The Despair of a Static Site Generator Creator"</a>
+</p>
+</li>
 </ul>
 
-</section>
+</h2_section>
 
-<section class="h2">
-
-<h2 id="coverage">Coverage and Comments</h2>
+<h2_section id="coverage" title="Coverage and Comments">
 
 <p>
 TODO: Fill in.
 </p>
 
-</section>
-
+</h2_section>

@@ -34,29 +34,13 @@ sub _github_clone
 
     my $url;
 
-    if (   ( $gh_username eq 'shlomif' )
-        && ( $global_username eq 'shlomif' )
-        && ( !$ENV{SHLOMIF_ANON} ) )
+    if ( $type eq 'bitbucket_hg' )
     {
-        if ( $type eq 'bitbucket_hg' )
-        {
-            $url = qq#ssh://hg\@bitbucket.org/${gh_username}/${repo}#;
-        }
-        else
-        {
-            $url = "git\@github.com:${gh_username}/${repo}.git";
-        }
+        $url = qq#https://$gh_username\@bitbucket.org/$gh_username/$repo#;
     }
     else
     {
-        if ( $type eq 'bitbucket_hg' )
-        {
-            $url = qq#https://$gh_username\@bitbucket.org/$gh_username/$repo#;
-        }
-        else
-        {
-            $url = "https://github.com/$gh_username/$repo.git";
-        }
+        $url = "https://github.com/$gh_username/$repo.git";
     }
 
     my $clone_into = $git_clones_dir->child($repo);

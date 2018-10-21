@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 9;
+use Test::More tests => 10;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
@@ -28,6 +28,10 @@ sub dest_test
 }
 
 {
+    # TEST
+    gmake_test( 'DOCBOOK5_EPUB_DIR', 'lib/docbook/5/epub',
+        "DOCBOOK5_EPUB_DIR" );
+
     # TEST
     gmake_test( 'T2_SOFTWARE_DOCS_SRC', 't2/open-source/index.xhtml.wml',
         "found a file" );

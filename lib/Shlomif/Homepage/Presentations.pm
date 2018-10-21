@@ -2,9 +2,12 @@ package Shlomif::Homepage::Presentations;
 
 use strict;
 use warnings;
+use autodie;
+
 use Template ();
 use Path::Tiny qw/ path /;
 use File::Update qw/ write_on_change /;
+use File::Find::Object::Rule ();
 
 use Moo;
 

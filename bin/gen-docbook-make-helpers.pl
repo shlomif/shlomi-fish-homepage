@@ -6,13 +6,10 @@ use autodie;
 use utf8;
 
 use File::Basename qw(dirname basename);
-use Cwd qw(getcwd);
 use Template ();
-use Path::Tiny qw/ path /;
-use File::Find::Object::Rule ();
-use Parallel::ForkManager    ();
-use File::Update qw/ write_on_change /;
-use YAML::XS ();
+use Path::Tiny qw/ cwd path /;
+use Parallel::ForkManager ();
+use YAML::XS              ();
 use lib './lib';
 use HTML::Latemp::GenWmlHSects        ();
 use HTML::Latemp::DocBook::EndFormats ();
@@ -21,11 +18,11 @@ use Shlomif::Homepage::Presentations  ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
-my $cwd            = getcwd();
+my $cwd            = cwd();
 my $upper_dir      = dirname($cwd);
 my $cwd_basename   = basename($cwd);
-my $git_clones_dir = "$upper_dir/_$cwd_basename--clones";
-path($git_clones_dir)->mkpath;
+my $git_clones_dir = path("$upper_dir/_$cwd_basename--clones");
+$git_clones_dir->mkpath;
 
 sub _github_clone
 {
@@ -64,7 +61,7 @@ sub _github_clone
         }
     }
 
-    my $clone_into = "$git_clones_dir/$repo";
+    my $clone_into = $git_clones_dir->child($repo);
     my $link       = "$into_dir/$repo";
 
     my @prefix =

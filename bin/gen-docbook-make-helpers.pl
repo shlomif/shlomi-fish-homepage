@@ -11,9 +11,9 @@ use Path::Tiny qw/ cwd path /;
 use Parallel::ForkManager ();
 use YAML::XS              ();
 use lib './lib';
-use HTML::Latemp::GenWmlHSects       ();
-use HTML::Latemp::DocBook::GenMake   ();
-use Shlomif::Homepage::Presentations ();
+use HTML::Latemp::GenWmlHSects        ();
+use HTML::Latemp::DocBook::GenMake    ();
+use Shlomif::Homepage::GenQuadPresMak ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
@@ -466,36 +466,10 @@ FICT:
     );
 }
 
-my $tt = Template->new( {} );
-
-my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
-
 HTML::Latemp::DocBook::GenMake->new(
     { dest_var => '$(T2_DEST)', post_dest_var => '$(T2_POST_DEST)' } )
     ->generate;
-$tt->process(
-    "lib/make/docbook/sf-homepage-quadpres-gen.tt",
-    {
-        top_header => <<"EOF",
-### This file is auto-generated from gen-dobook-make-helpers.pl
-EOF
-        quadp_presentations => scalar(
-            Shlomif::Homepage::Presentations->new->quadp_presentations
-        ),
-    },
-    $gen_quadpres_fn,
-) or die $tt->error();
-
-# Remove multiple consecutive \ns
-foreach my $fn ($gen_quadpres_fn)
-{
-    path($fn)->edit_utf8(
-        sub {
-            s/\n\n+/\n\n/g;
-        }
-    );
-}
-
+Shlomif::Homepage::GenQuadPresMak->new->generate;
 HTML::Latemp::GenWmlHSects->new->run;
 
 $pm->wait_all_children;

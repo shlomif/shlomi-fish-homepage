@@ -169,18 +169,17 @@ sub _calc_screenplay_doc_makefile_lines
 {
     my $d = $_;
 
-    my $b           = $d->{base};
+    my $base        = $d->{base};
     my $github_repo = $d->{github_repo};
     my $subdir      = $d->{subdir};
     my $docs        = $d->{docs};
 
-    my $vcs_dir_var = "${b}__VCS_DIR";
+    my $vcs_dir_var = "${base}__VCS_DIR";
 
     push @screenplay_git_checkouts, { github_repo => $github_repo, };
 
-    my @ret;
-
-    push @ret, "$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n";
+    my @ret =
+        ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
 
     foreach my $doc (@$docs)
     {
@@ -189,10 +188,10 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @screenplay_docs_basenames, $doc_base;
 
-        my $src_varname       = "${b}_${suf}_SCREENPLAY_XML_SOURCE";
-        my $dest_varname      = "${b}_${suf}_TXT_FROM_VCS";
-        my $epub_dest_varname = "${b}_${suf}_EPUB_FROM_VCS";
-        my $src_vcs_dir_var   = "${b}_${suf}_SCREENPLAY_XML__SRC_DIR";
+        my $src_varname       = "${base}_${suf}_SCREENPLAY_XML_SOURCE";
+        my $dest_varname      = "${base}_${suf}_TXT_FROM_VCS";
+        my $epub_dest_varname = "${base}_${suf}_EPUB_FROM_VCS";
+        my $src_vcs_dir_var   = "${base}_${suf}_SCREENPLAY_XML__SRC_DIR";
 
         push @screenplay_epubs, $epub_dest_varname;
 
@@ -303,24 +302,21 @@ sub _calc_fiction_story_makefile_lines
 {
     my ($d) = @_;
 
-    my $b           = $d->{base};
+    my $base        = $d->{base};
     my $github_repo = $d->{github_repo};
     my $subdir      = $d->{subdir};
-    my $docs        = $d->{docs};
 
-    my $vcs_dir_var = "${b}__VCS_DIR";
+    my $vcs_dir_var = "${base}__VCS_DIR";
 
-    my @ret;
+    my @ret = ("$vcs_dir_var = \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n");
 
-    push @ret, "$vcs_dir_var = \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n";
-
-    foreach my $doc (@$docs)
+    foreach my $doc ( @{ $d->{docs} } )
     {
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suf};
         my $type     = $doc->{type};
 
-        my $bsuf = "${b}_${suf}";
+        my $bsuf = "${base}_${suf}";
 
         my (
             $src_varname, $from_vcs_varname, $src_suffix,
@@ -347,12 +343,9 @@ sub _calc_fiction_story_makefile_lines
         }
 
         push @ret,
-"$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n";
-        push @ret,
-            "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n";
-
-        push @ret,
-            qq{\$($from_vcs_varname): \$($src_varname)\n\t\$(call COPY)\n\n};
+"$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n",
+            "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n",
+            "\$($from_vcs_varname): \$($src_varname)\n\t\$(call COPY)\n\n";
     }
 
     return \@ret;

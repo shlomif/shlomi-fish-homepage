@@ -10,13 +10,13 @@ use Cwd qw(getcwd);
 use Template ();
 use Path::Tiny qw/ path /;
 use File::Find::Object::Rule ();
-use List::MoreUtils qw(any);
-use Parallel::ForkManager ();
+use Parallel::ForkManager    ();
 use File::Update qw/ write_on_change /;
 use YAML::XS ();
 use lib './lib';
 use HTML::Latemp::GenWmlHSects        ();
 use HTML::Latemp::DocBook::EndFormats ();
+use HTML::Latemp::DocBook::DocsList   ();
 use Shlomif::Homepage::Presentations  ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
@@ -182,43 +182,6 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
         {
             _github_shlomif_clone( $BLOGS_DIR, $repo );
         };
-    }
-}
-
-my @documents = @{ YAML::XS::LoadFile("./lib/docbook/docs.yaml") };
-
-=begin foo
-    # Removed due to it already being in FICTION_DOCS in Makefile.
-    {
-        id => "The-Pope-Died-on-Sunday-hebrew",
-        path => "humour/Pope/",
-        base => "The-Pope-Died-on-Sunday-hebrew",
-        work_in_progress => 1,
-        db_ver => 5,
-    },
-=end foo
-
-=cut
-
-foreach my $d (@documents)
-{
-    if ( !exists( $d->{db_ver} ) )
-    {
-        $d->{db_ver} = 4;
-    }
-    elsif ( !( any { $d->{db_ver} eq $_ } ( 4, 5 ) ) )
-    {
-        die "Illegal db_ver $d->{db_ver}!";
-    }
-
-    if ( !exists( $d->{custom_css} ) )
-    {
-        $d->{custom_css} = 0;
-    }
-
-    if ( !exists( $d->{del_revhistory} ) )
-    {
-        $d->{del_revhistory} = 0;
     }
 }
 
@@ -512,13 +475,15 @@ my $tt = Template->new( {} );
 my $gen_make_fn     = "lib/make/docbook/sf-homepage-docbooks-generated.mak";
 my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
 
+my $documents = HTML::Latemp::DocBook::DocsList->new->docs_list;
+
 $tt->process(
     "lib/make/docbook/sf-homepage-docbook-gen.tt",
     {
         DEST      => '$(T2_DEST)',
         POST_DEST => '$(T2_POST_DEST)',
-        docs_4    => [ grep { $_->{db_ver} != 5 } @documents ],
-        docs_5    => [ grep { $_->{db_ver} == 5 } @documents ],
+        docs_4    => [ grep { $_->{db_ver} != 5 } @$documents ],
+        docs_5    => [ grep { $_->{db_ver} == 5 } @$documents ],
         fmts => scalar( HTML::Latemp::DocBook::EndFormats->new->get_formats ),
         top_header => <<"EOF",
 ### This file is auto-generated from gen-dobook-make-helpers.pl

@@ -296,11 +296,9 @@ EOF
 
 my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
 
-my @fiction_docs_basenames;
-
 sub _calc_fiction_story_makefile_lines
 {
-    my ($d) = @_;
+    my ( $d, $fiction_docs_basenames ) = @_;
 
     my $base        = $d->{base};
     my $github_repo = $d->{github_repo};
@@ -325,7 +323,7 @@ sub _calc_fiction_story_makefile_lines
 
         if ( $type eq 'fiction-text' )
         {
-            push @fiction_docs_basenames, $doc_base;
+            push @$fiction_docs_basenames, $doc_base;
 
             $src_varname      = "${bsuf}_FICTION_XML_SOURCE";
             $src_suffix       = 'fiction-text.txt';
@@ -417,8 +415,16 @@ FICT:
         _git_task( $fiction_vcs_base_dir, $r );
     }
 
-    my @o =
-        ( map { @{ _calc_fiction_story_makefile_lines($_) } } @$fiction_data );
+    my @fiction_docs_basenames;
+
+    my @o = (
+        map {
+            @{
+                _calc_fiction_story_makefile_lines( $_,
+                    \@fiction_docs_basenames )
+                }
+        } @$fiction_data
+    );
 
     path("lib/make/docbook/sf-fictions.mak")->spew_utf8(
         "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n",

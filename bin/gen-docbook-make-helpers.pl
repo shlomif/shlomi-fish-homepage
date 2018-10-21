@@ -107,45 +107,38 @@ sub _task(&)
     return;
 }
 
+sub _sys_task
+{
+    my @x = @_;
+    return _task { system(@x); };
+}
+
 if ( not -e 'lib/js/MathJax/README.md' )
 {
-    _task
-    {
-        system(
+    _sys_task(
 'cd lib/js && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
-        );
-    };
+    );
 }
 
 if ( not -e 'lib/js/jquery-expander' )
 {
-    _task
-    {
-        system(
-'cd lib/js && git clone https://github.com/kswedberg/jquery-expander'
-        );
-    };
+    _sys_task(
+        'cd lib/js && git clone https://github.com/kswedberg/jquery-expander');
 }
 if ( not -e 'lib/ebookmaker/README.md' )
 {
-    _task
-    {
-      # Broken due to the bug in this pull-request:
-      #    - https://github.com/setanta/ebookmaker/pull/7
-      #
-      # I switched to my fork for now.
-      #
-      # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
-        system('cd lib && git clone https://github.com/shlomif/ebookmaker');
-    };
+    # Broken due to the bug in this pull-request:
+    #    - https://github.com/setanta/ebookmaker/pull/7
+    #
+    # I switched to my fork for now.
+    #
+    # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
+    _sys_task('cd lib && git clone https://github.com/shlomif/ebookmaker');
 }
 
 if ( not -e 'lib/c-begin/README.md' )
 {
-    _task
-    {
-        system('cd lib && git clone https://github.com/shlomif/c-begin.git');
-    };
+    _sys_task('cd lib && git clone https://github.com/shlomif/c-begin.git');
 }
 
 my $BLOGS_DIR     = 'lib/blogs';

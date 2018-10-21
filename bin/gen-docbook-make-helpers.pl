@@ -6,7 +6,6 @@ use autodie;
 use utf8;
 
 use File::Basename qw(dirname basename);
-use Template ();
 use Path::Tiny qw/ cwd path /;
 use Parallel::ForkManager ();
 use YAML::XS              ();

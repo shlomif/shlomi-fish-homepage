@@ -113,6 +113,11 @@ sub _sys_task
     return _task { system(@x); };
 }
 
+sub _git_task
+{
+    my @x = @_;
+    return _task { _github_shlomif_clone(@x); };
+}
 if ( not -e 'lib/js/MathJax/README.md' )
 {
     _sys_task(
@@ -150,10 +155,7 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 {
     if ( not -e "$BLOGS_DIR/$repo" )
     {
-        _task
-        {
-            _github_shlomif_clone( $BLOGS_DIR, $repo );
-        };
+        _git_task( $BLOGS_DIR, $repo );
     }
 }
 
@@ -280,10 +282,7 @@ EOF
 
         if ( not -e $full )
         {
-            _task
-            {
-                _github_shlomif_clone( $screenplay_vcs_base_dir, $r );
-            };
+            _git_task( $screenplay_vcs_base_dir, $r );
         }
 
         return;
@@ -422,10 +421,7 @@ FICT:
         my $full        = "$fiction_vcs_base_dir/$r";
 
         next FICT if -e $full;
-        _task
-        {
-            _github_shlomif_clone( $fiction_vcs_base_dir, $r );
-        };
+        _git_task( $fiction_vcs_base_dir, $r );
     }
 
     my @o =

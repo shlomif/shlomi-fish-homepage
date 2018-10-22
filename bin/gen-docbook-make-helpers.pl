@@ -193,26 +193,20 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @epubs, $epub_dest_varname;
 
-        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n";
-        push @ret,
-"$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n";
-
-        push @ret,
-            "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n";
-
-        push @ret,
-"$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n";
-
-        push @ret,
+        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n",
+"$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
+            "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
+"$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
-                . "\n\n" );
+                . "\n\n" ),
 
-        push @ret, <<"EOF";
+            <<"EOF",
 \$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
 \texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" gmake epub
 \tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname) || true
 EOF
+            ;
     }
 
     return +{ rec => $d, lines => \@ret, epubs => \@epubs };

@@ -161,7 +161,6 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
-my @screenplay_docs_basenames;
 my @screenplay_epubs;
 
 sub _calc_screenplay_doc_makefile_lines
@@ -182,8 +181,6 @@ sub _calc_screenplay_doc_makefile_lines
     {
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suffix};
-
-        push @screenplay_docs_basenames, $doc_base;
 
         my $src_varname       = "${base}_${suf}_SCREENPLAY_XML_SOURCE";
         my $dest_varname      = "${base}_${suf}_TXT_FROM_VCS";
@@ -245,7 +242,7 @@ EOF
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
-        ( map { "\t$_ \\\n" } @screenplay_docs_basenames ),
+        ( map { "\t$_->{base} \\\n" } map { @{ $_->{rec}->{docs} } } @records ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
         ( map { "\t\$($_) \\\n" } @screenplay_epubs ),
         "\n\n",

@@ -294,6 +294,14 @@ FICTION_DOCS_ADDITIONS = \
 
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
+DOCBOOK5_BASE_DIR = lib/docbook/5
+DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
+DOCBOOK5_SOURCES_DIR = $(DOCBOOK5_BASE_DIR)/xml
+DOCBOOK5_FOR_OOO_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/for-ooo-xhtml
+DOCBOOK5_RENDERED_DIR = $(DOCBOOK5_BASE_DIR)/rendered
+
+include lib/make/docbook/sf-homepage-docbooks-generated.mak
+
 DOCBOOK4_INSTALLED_CSS_DIRS = $(DOCBOOK4_DIRS_LIST:%=$(T2_POST_DEST)/%/docbook-css)
 
 DOCBOOK4_BASE_DIR = lib/docbook/4
@@ -314,15 +322,6 @@ FICTION_XML_TXT_DIR = $(FICTION_XML_BASE_DIR)/txt
 FICTION_XML_DB5_XSLT_DIR = $(FICTION_XML_BASE_DIR)/docbook5-post-proc
 FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 
-DOCBOOK5_BASE_DIR = lib/docbook/5
-DOCBOOK5_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/essays
-DOCBOOK5_SOURCES_DIR = $(DOCBOOK5_BASE_DIR)/xml
-DOCBOOK5_EPUB_DIR = $(DOCBOOK5_BASE_DIR)/epub
-DOCBOOK5_FO_DIR = $(DOCBOOK5_BASE_DIR)/fo
-DOCBOOK5_PDF_DIR = $(DOCBOOK5_BASE_DIR)/pdf
-DOCBOOK5_RTF_DIR = $(DOCBOOK5_BASE_DIR)/rtf
-DOCBOOK5_FOR_OOO_XHTML_DIR = $(DOCBOOK5_BASE_DIR)/for-ooo-xhtml
-DOCBOOK5_RENDERED_DIR = $(DOCBOOK5_BASE_DIR)/rendered
 
 docbook4_targets = $(patsubst %,$(1)/%$(2),$(DOCBOOK4_DOCS))
 DOCBOOK4_TARGETS = $(call docbook4_targets,$(DOCBOOK4_RENDERED_DIR),.html)
@@ -361,7 +360,6 @@ FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 
 all: splay
 
-include lib/make/docbook/sf-homepage-docbooks-generated.mak
 include lib/make/docbook/sf-homepage-quadpres-generated.mak
 include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak

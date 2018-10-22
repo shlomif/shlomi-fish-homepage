@@ -182,10 +182,14 @@ sub _calc_screenplay_doc_makefile_lines
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suffix};
 
-        my $src_varname       = "${base}_${suf}_SCREENPLAY_XML_SOURCE";
-        my $dest_varname      = "${base}_${suf}_TXT_FROM_VCS";
-        my $epub_dest_varname = "${base}_${suf}_EPUB_FROM_VCS";
-        my $src_vcs_dir_var   = "${base}_${suf}_SCREENPLAY_XML__SRC_DIR";
+        my $gen_name = sub {
+            return "${base}_${suf}_" . shift;
+        };
+
+        my $src_varname       = $gen_name->("SCREENPLAY_XML_SOURCE");
+        my $dest_varname      = $gen_name->("TXT_FROM_VCS");
+        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
+        my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
 
         push @epubs, $epub_dest_varname;
 

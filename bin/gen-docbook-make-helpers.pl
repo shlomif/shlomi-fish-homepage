@@ -5,6 +5,57 @@ use warnings;
 use autodie;
 use utf8;
 
+sub _calc_screenplay_doc_makefile_lines
+{
+    my ( $screenplay_vcs_base_dir, $d ) = @_;
+
+    my $base        = $d->{base};
+    my $github_repo = $d->{github_repo};
+    my $subdir      = $d->{subdir};
+    my $docs        = $d->{docs};
+
+    my $vcs_dir_var = "${base}__VCS_DIR";
+
+    my @ret =
+        ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
+
+    my @epubs;
+
+    foreach my $doc (@$docs)
+    {
+        my $doc_base = $doc->{base};
+        my $suf      = $doc->{suffix};
+
+        my $gen_name = sub {
+            return "${base}_${suf}_" . shift;
+        };
+
+        my $src_varname       = $gen_name->("SCREENPLAY_XML_SOURCE");
+        my $dest_varname      = $gen_name->("TXT_FROM_VCS");
+        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
+        my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
+
+        push @epubs, $epub_dest_varname;
+
+        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n",
+"$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
+            "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
+"$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
+            (     "\$($dest_varname): \$($src_varname)\n" . "\t"
+                . q/$(call COPY)/
+                . "\n\n" ),
+
+            <<"EOF",
+\$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
+\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" gmake epub
+\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname) || true
+EOF
+            ;
+    }
+
+    return +{ rec => $d, lines => \@ret, epubs => \@epubs };
+}
+
 use File::Basename qw(dirname basename);
 use Path::Tiny qw/ cwd path /;
 use Parallel::ForkManager ();
@@ -161,60 +212,12 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
-sub _calc_screenplay_doc_makefile_lines
 {
-    my $d = $_;
-
-    my $base        = $d->{base};
-    my $github_repo = $d->{github_repo};
-    my $subdir      = $d->{subdir};
-    my $docs        = $d->{docs};
-
-    my $vcs_dir_var = "${base}__VCS_DIR";
-
-    my @ret =
-        ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
-
-    my @epubs;
-
-    foreach my $doc (@$docs)
-    {
-        my $doc_base = $doc->{base};
-        my $suf      = $doc->{suffix};
-
-        my $gen_name = sub {
-            return "${base}_${suf}_" . shift;
-        };
-
-        my $src_varname       = $gen_name->("SCREENPLAY_XML_SOURCE");
-        my $dest_varname      = $gen_name->("TXT_FROM_VCS");
-        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
-        my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
-
-        push @epubs, $epub_dest_varname;
-
-        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n",
-"$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
-            "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
-"$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
-            (     "\$($dest_varname): \$($src_varname)\n" . "\t"
-                . q/$(call COPY)/
-                . "\n\n" ),
-
-            <<"EOF",
-\$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" gmake epub
-\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname) || true
-EOF
-            ;
-    }
-
-    return +{ rec => $d, lines => \@ret, epubs => \@epubs };
-}
-
-{
-    my @records = ( map { _calc_screenplay_doc_makefile_lines($_) }
-            @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } );
+    my @records = (
+        map {
+            _calc_screenplay_doc_makefile_lines( $screenplay_vcs_base_dir, $_ )
+        } @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
+    );
     my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
     my $epub_dests         = <<'EOF';
 $(T2_POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \

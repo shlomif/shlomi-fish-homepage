@@ -308,21 +308,6 @@ DOCBOOK4_BASE_DIR = lib/docbook/4
 DOCBOOK4_RENDERED_DIR = $(DOCBOOK4_BASE_DIR)/rendered
 DOCBOOK4_ALL_IN_ONE_XHTML_DIR = $(DOCBOOK4_BASE_DIR)/essays
 
-SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
-SCREENPLAY_XML_EPUB_DIR = $(SCREENPLAY_XML_BASE_DIR)/epub
-SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
-SCREENPLAY_XML_TXT_DIR = $(SCREENPLAY_XML_BASE_DIR)/txt
-SCREENPLAY_XML_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/html
-SCREENPLAY_XML_FOR_OOO_XHTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/for-ooo-xhtml
-SCREENPLAY_XML_RENDERED_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/rendered-html
-
-FICTION_XML_BASE_DIR = lib/fiction-xml
-FICTION_XML_XML_DIR = $(FICTION_XML_BASE_DIR)/xml
-FICTION_XML_TXT_DIR = $(FICTION_XML_BASE_DIR)/txt
-FICTION_XML_DB5_XSLT_DIR = $(FICTION_XML_BASE_DIR)/docbook5-post-proc
-FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
-
-
 docbook4_targets = $(patsubst %,$(1)/%$(2),$(DOCBOOK4_DOCS))
 DOCBOOK4_TARGETS = $(call docbook4_targets,$(DOCBOOK4_RENDERED_DIR),.html)
 DOCBOOK4_XMLS = $(call docbook4_targets,$(DOCBOOK4_XML_DIR),.xml)
@@ -353,6 +338,35 @@ DOCBOOK5_INDIVIDUAL_XHTMLS = $(addprefix $(DOCBOOK5_INDIVIDUAL_XHTML_DIR)/,$(DOC
 DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%,$(DOCBOOK5_DOCS))
 DOCBOOK5_ALL_IN_ONE_XHTMLS = $(patsubst %,$(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml,$(DOCBOOK5_DOCS))
 
+install_docbook5_epubs: make-dirs $(DOCBOOK5_INSTALLED_EPUBS)
+install_docbook5_htmls: make-dirs $(DOCBOOK5_INSTALLED_HTMLS)
+
+install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
+install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
+
+install_docbook4_xmls: make-dirs $(DOCBOOK4_INSTALLED_XMLS)
+install_docbook5_xmls: make-dirs $(DOCBOOK5_INSTALLED_XMLS)
+
+install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
+install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
+
+install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
+
+install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
+
+SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
+SCREENPLAY_XML_EPUB_DIR = $(SCREENPLAY_XML_BASE_DIR)/epub
+SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
+SCREENPLAY_XML_TXT_DIR = $(SCREENPLAY_XML_BASE_DIR)/txt
+SCREENPLAY_XML_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/html
+SCREENPLAY_XML_FOR_OOO_XHTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/for-ooo-xhtml
+SCREENPLAY_XML_RENDERED_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/rendered-html
+
+FICTION_XML_BASE_DIR = lib/fiction-xml
+FICTION_XML_XML_DIR = $(FICTION_XML_BASE_DIR)/xml
+FICTION_XML_TXT_DIR = $(FICTION_XML_BASE_DIR)/txt
+FICTION_XML_DB5_XSLT_DIR = $(FICTION_XML_BASE_DIR)/docbook5-post-proc
+FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 
 SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS))
@@ -1057,22 +1071,6 @@ $(PRINTABLE_RESUMES__HTML__PIVOT): $(T2_DEST)/SFresume.html $(T2_DEST)/SFresume_
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume_detailed.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
 
 resumes: $(PRINTABLE_RESUMES__DOCX)
-
-install_docbook5_epubs: make-dirs $(DOCBOOK5_INSTALLED_EPUBS)
-install_docbook5_htmls: make-dirs $(DOCBOOK5_INSTALLED_HTMLS)
-
-install_docbook4_pdfs: make-dirs $(DOCBOOK4_INSTALLED_PDFS)
-install_docbook5_pdfs: make-dirs $(DOCBOOK5_INSTALLED_PDFS)
-
-install_docbook4_xmls: make-dirs $(DOCBOOK4_INSTALLED_XMLS)
-install_docbook5_xmls: make-dirs $(DOCBOOK5_INSTALLED_XMLS)
-
-install_docbook4_rtfs: make-dirs  $(DOCBOOK4_INSTALLED_RTFS)
-install_docbook5_rtfs: make-dirs  $(DOCBOOK5_INSTALLED_RTFS)
-
-install_docbook_individual_xhtmls: make-dirs $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS) $(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS)
-
-install_docbook_css_dirs: make-dirs $(DOCBOOK4_INSTALLED_CSS_DIRS)
 
 PUT_CARDS_2013_DEST_INDIV = $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
 PUT_CARDS_2013_INDIV_SCRIPT = bin/split-put-cards-into-divs.pl

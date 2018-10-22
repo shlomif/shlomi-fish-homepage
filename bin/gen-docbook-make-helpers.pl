@@ -163,8 +163,6 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 Shlomif::Homepage::GenScreenplaysMak->new->generate(
     { git_task => \&_git_task } );
 
-my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
-
 sub _calc_fiction_story_makefile_lines
 {
     my ( $d, $fiction_docs_basenames ) = @_;
@@ -272,6 +270,8 @@ sub _calc_fiction_story_makefile_lines
             ],
         },
     ];
+
+    my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
 
 FICT:
     foreach my $d (@$fiction_data)

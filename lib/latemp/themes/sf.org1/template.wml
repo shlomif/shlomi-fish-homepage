@@ -20,9 +20,12 @@
 <p class="invisible">
 <a href="#main">Go to main content</a>
 </p>
-<div id="container-all" class="row">
+<p class="invisible">
+<a href="#navbar">Go to the navigation</a>
+</p>
+<div id="container-all">
 
-<main id="main" class="col s9">
+<main id="main">
 <latemp_before_main_title_text />
 </define-tag>
 
@@ -38,7 +41,7 @@
 <latemp_after_body_text />
 </main>
 
-<div id="navbar_wrapper" class="col s3">
+<div id="navbar_wrapper">
 <nav class="navbar" id="navbar">
 
 <latemp_top_left_corner_logo_text />

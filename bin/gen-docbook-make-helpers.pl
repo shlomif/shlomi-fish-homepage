@@ -115,8 +115,12 @@ sub _sys_task
 
 sub _git_task
 {
-    my @x = @_;
-    return _task { _github_shlomif_clone(@x); };
+    my ( $d, $bn ) = @_;
+    if ( not -e "$d/$bn" )
+    {
+        return _task { _github_shlomif_clone( $d, $bn ); };
+    }
+    return;
 }
 if ( not -e 'lib/js/MathJax/README.md' )
 {
@@ -153,10 +157,7 @@ my $VALIDATE_YOUR = 'validate-your-html';
 foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
     $back_to_hp, )
 {
-    if ( not -e "$BLOGS_DIR/$repo" )
-    {
-        _git_task( $BLOGS_DIR, $repo );
-    }
+    _git_task( $BLOGS_DIR, $repo );
 }
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(
@@ -277,9 +278,6 @@ FICT:
     {
         my $github_repo = $d->{github_repo};
         my $r           = $github_repo;
-        my $full        = "$fiction_vcs_base_dir/$r";
-
-        next FICT if -e $full;
         _git_task( $fiction_vcs_base_dir, $r );
     }
 

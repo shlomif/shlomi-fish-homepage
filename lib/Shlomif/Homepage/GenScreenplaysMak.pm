@@ -126,14 +126,7 @@ EOF
     my $clone_cb = sub {
         my ($r) = @_;
 
-        my $full = "$screenplay_vcs_base_dir/$r";
-
-        if ( not -e $full )
-        {
-            $git_task->( $screenplay_vcs_base_dir, $r );
-        }
-
-        return;
+        return $git_task->( $screenplay_vcs_base_dir, $r );
     };
 
     foreach my $github_repo (@records)

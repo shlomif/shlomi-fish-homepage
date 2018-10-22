@@ -150,14 +150,12 @@ if ( not -e 'lib/c-begin/README.md' )
     _sys_task('cd lib && git clone https://github.com/shlomif/c-begin.git');
 }
 
-my $BLOGS_DIR     = 'lib/blogs';
-my $TECH_BLOG     = 'shlomif-tech-diary';
-my $back_to_hp    = 'Shlomi-Fish-Back-to-my-Homepage-Logo';
-my $VALIDATE_YOUR = 'validate-your-html';
-foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
-    $back_to_hp, )
+foreach my $repo (
+    'validate-your-html', 'how-to-share-code-online',
+    'shlomif-tech-diary', 'Shlomi-Fish-Back-to-my-Homepage-Logo',
+    )
 {
-    _git_task( $BLOGS_DIR, $repo );
+    _git_task( 'lib/blogs', $repo );
 }
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(

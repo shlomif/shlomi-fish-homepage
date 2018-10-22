@@ -161,8 +161,6 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
-my @screenplay_epubs;
-
 sub _calc_screenplay_doc_makefile_lines
 {
     my $d = $_;
@@ -177,6 +175,8 @@ sub _calc_screenplay_doc_makefile_lines
     my @ret =
         ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
 
+    my @epubs;
+
     foreach my $doc (@$docs)
     {
         my $doc_base = $doc->{base};
@@ -187,7 +187,7 @@ sub _calc_screenplay_doc_makefile_lines
         my $epub_dest_varname = "${base}_${suf}_EPUB_FROM_VCS";
         my $src_vcs_dir_var   = "${base}_${suf}_SCREENPLAY_XML__SRC_DIR";
 
-        push @screenplay_epubs, $epub_dest_varname;
+        push @epubs, $epub_dest_varname;
 
         push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n";
         push @ret,
@@ -211,7 +211,7 @@ sub _calc_screenplay_doc_makefile_lines
 EOF
     }
 
-    return +{ rec => $d, lines => \@ret, };
+    return +{ rec => $d, lines => \@ret, epubs => \@epubs };
 }
 
 {
@@ -244,7 +244,7 @@ EOF
         "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
         ( map { "\t$_->{base} \\\n" } map { @{ $_->{rec}->{docs} } } @records ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
-        ( map { "\t\$($_) \\\n" } @screenplay_epubs ),
+        ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n\n",
         "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
         (

@@ -161,7 +161,6 @@ foreach my $repo ( $VALIDATE_YOUR, 'how-to-share-code-online', $TECH_BLOG,
 
 my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
-my @screenplay_git_checkouts;
 my @screenplay_docs_basenames;
 my @screenplay_epubs;
 
@@ -175,8 +174,6 @@ sub _calc_screenplay_doc_makefile_lines
     my $docs        = $d->{docs};
 
     my $vcs_dir_var = "${base}__VCS_DIR";
-
-    push @screenplay_git_checkouts, { github_repo => $github_repo, };
 
     my @ret =
         ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
@@ -217,11 +214,11 @@ sub _calc_screenplay_doc_makefile_lines
 EOF
     }
 
-    return \@ret;
+    return +{ rec => $d, lines => \@ret, };
 }
 
 {
-    my @o = ( map { @{ _calc_screenplay_doc_makefile_lines($_) } }
+    my @records = ( map { _calc_screenplay_doc_makefile_lines($_) }
             @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } );
     my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
     my $epub_dests         = <<'EOF';
@@ -246,7 +243,7 @@ EOF
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
-        @o,
+        ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
         ( map { "\t$_ \\\n" } @screenplay_docs_basenames ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
@@ -287,9 +284,9 @@ EOF
         return;
     };
 
-    foreach my $github_repo (@screenplay_git_checkouts)
+    foreach my $github_repo (@records)
     {
-        $clone_cb->( $github_repo->{github_repo} );
+        $clone_cb->( $github_repo->{rec}->{github_repo} );
     }
     $clone_cb->('screenplays-common');
 }

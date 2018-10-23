@@ -142,9 +142,10 @@ FICT:
         } @$fiction_data
     );
 
-    path("lib/make/docbook/sf-fictions.mak")->spew_utf8(
-        "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n",
-        @o,
+    path("lib/make/docbook/sf-fictions.mak")
+        ->spew_utf8( "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n", @o );
+
+    path("lib/make/docbook/sf-fictions-list.mak")->spew_utf8(
         (
             "\n\nFICTION_DOCS_FROM_GEN = \\\n",
             ( map { "\t$_ \\\n" } @fiction_docs_basenames ),

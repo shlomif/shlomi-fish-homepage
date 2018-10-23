@@ -291,6 +291,8 @@ FICTION_DOCS_ADDITIONS = \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7
 
+include lib/make/docbook/sf-fictions-list.mak
+
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
@@ -313,7 +315,6 @@ FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS))
 all: splay
 
 include lib/make/docbook/sf-homepage-quadpres-generated.mak
-include lib/make/docbook/sf-fictions.mak
 include lib/make/docbook/sf-screenplays.mak
 
 screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
@@ -536,9 +537,6 @@ mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 $(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
 
-$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
-	asciidoctor --backend=docbook5 -o $@ $<
-
 $(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
 
@@ -584,6 +582,7 @@ $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/inde
 DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 include lib/make/docbook/sf-docbook-common.mak
+include lib/make/docbook/sf-fictions.mak
 
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
@@ -771,8 +770,7 @@ $(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pag
 
 $(T2_DEST)/open-source/projects/Module-Format/index.xhtml $(T2_DEST)/open-source/projects/File-Find-Object/index.xhtml $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.xhtml $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.xhtml $(T2_DEST)/meta/FAQ/index.xhtml $(T2_DEST)/open-source/contributions/index.xhtml: lib/Inc/cpan_dists.wml
 
-docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
-docbook_targets: pope_fiction selina_mandrake hhfg_fiction \
+docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 
 $(T2_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(T2_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
 
@@ -1096,4 +1094,5 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
-
+$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
+	asciidoctor --backend=docbook5 -o $@ $<

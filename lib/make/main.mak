@@ -22,7 +22,6 @@ include lib/make/shlomif_common.mak
 include lib/make/include.mak
 include lib/make/rules.mak
 
-PERL := perl
 T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
 T2_TARGETS += $(T2_POST_DIRS_DEST)
 
@@ -389,11 +388,6 @@ $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.h
 
 DOCMAKE_SGML_PATH = lib/sgml/shlomif-docbook
 
-DOCMAKE ?= docmake
-
-DOCMAKE_PARAMS = -v
-DOCMAKE_WITH_PARAMS = $(DOCMAKE) $(DOCMAKE_PARAMS)
-
 HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
 HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
 HHGG_CONVERT_SCRIPT_DEST = $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
@@ -615,16 +609,6 @@ $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/inde
 	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)
 	cp -a $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/*.xhtml $(HHFG_V2_IMAGES_DEST_DIR)/
 
-DOCBOOK5_XSL_STYLESHEETS_PATH := /usr/share/sgml/docbook/xsl-ns-stylesheets
-
-DOCBOOK5_XSL_STYLESHEETS_XHTML_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/xhtml-1_1
-DOCBOOK5_XSL_STYLESHEETS_ONECHUNK_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/onechunk
-DOCBOOK5_XSL_STYLESHEETS_FO_PATH := $(DOCBOOK5_XSL_STYLESHEETS_PATH)/fo
-
-DOCBOOK5_XSL_CUSTOM_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml.xsl
-DOCBOOK5_XSL_ONECHUNK_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-xhtml-onechunk.xsl
-DOCBOOK5_XSL_FO_XSLT_STYLESHEET := lib/sgml/shlomif-docbook/xsl-5-stylesheets/shlomif-essays-5-fo.xsl
-
 DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 $(DOCBOOK4_RENDERED_DIR)/%.html: $(DOCBOOK4_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.html
@@ -669,22 +653,6 @@ $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
 
 all: $(DEST__C_BAD_ELEMS_SRC)
-
-$(DOCBOOK5_PDF_DIR)/%.pdf: $(DOCBOOK5_FO_DIR)/%.fo
-	fop -fo $< -pdf $@
-
-EPUB_SCRIPT = $(DOCBOOK5_XSL_STYLESHEETS_PATH)/epub/bin/dbtoepub
-EPUB_XSLT = lib/sgml/shlomif-docbook/docbook-epub-preproc.xslt
-DBTOEPUB = ruby $(EPUB_SCRIPT)
-
-$(DOCBOOK5_EPUBS): $(DOCBOOK5_EPUB_DIR)/%.epub: $(DOCBOOK5_XML_DIR)/%.xml
-	$(DBTOEPUB) -s $(EPUB_XSLT) -o $@ $<
-
-$(DOCBOOK5_RTF_DIR)/%.rtf: $(DOCBOOK5_FO_DIR)/%.fo
-	fop -fo $< -rtf $@
-
-$(DOCBOOK5_FOR_OOO_XHTML_DIR)/%.html: $(DOCBOOK5_ALL_IN_ONE_XHTML_DIR)/%/all-in-one.xhtml
-	cat $< | $(PERL) -lne 's{(</title>)}{$${1}<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />}; print unless m{\A<\?xml}' > $@
 
 ART_SLOGANS_DOCS = \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
@@ -863,19 +831,8 @@ $(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pag
 
 $(T2_DEST)/open-source/projects/Module-Format/index.xhtml $(T2_DEST)/open-source/projects/File-Find-Object/index.xhtml $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.xhtml $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.xhtml $(T2_DEST)/meta/FAQ/index.xhtml $(T2_DEST)/open-source/contributions/index.xhtml: lib/Inc/cpan_dists.wml
 
-docbook_extended: $(DOCBOOK4_FOS) $(DOCBOOK4_PDFS) \
-	$(DOCBOOK5_FOS) $(DOCBOOK5_PDFS) \
-	install_docbook4_pdfs install_docbook4_rtfs \
-	install_docbook5_pdfs install_docbook5_rtfs
-
 docbook_indiv: $(DOCBOOK4_INDIVIDUAL_XHTMLS)
-
-docbook_targets: docbook4_targets docbook5_targets screenplay_targets \
-	install_docbook5_epubs \
-	install_docbook5_htmls \
-	install_docbook4_xmls install_docbook_individual_xhtmls \
-	install_docbook_css_dirs docbook_hhfg_images install_docbook5_xmls \
-	pope_fiction selina_mandrake hhfg_fiction \
+docbook_targets: pope_fiction selina_mandrake hhfg_fiction \
 
 docbook4_targets: $(DOCBOOK4_TARGETS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS) $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS)
 
@@ -1180,3 +1137,6 @@ min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 TEST_TARGETS = Tests/*.{py,t}
 
 include lib/make/copies-generated-include.mak
+
+docbook_targets: docbook_hhfg_images
+docbook_targets: screenplay_targets

@@ -293,8 +293,6 @@ FICTION_DOCS_ADDITIONS = \
 
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
-include lib/make/docbook/sf-docbook-common.mak
-
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
 SCREENPLAY_XML_EPUB_DIR = $(SCREENPLAY_XML_BASE_DIR)/epub
 SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
@@ -311,7 +309,6 @@ FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 
 SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS))
-FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 
 all: splay
 
@@ -365,19 +362,6 @@ HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postp
 
 FICTION_TEXT_SOURCES_ON_DEST = $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
-$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
-	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
-	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
-	if test -e "$$xslt" ; then \
-		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-			-o "$$temp_db5" $< && \
-		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
-	else \
-		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-			-o $@ $< ; \
-	fi
-	$(PERL) -i -lape 's/\s+$$//' $@
-
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	$(PERL) -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
 	-o $@ $<
@@ -405,13 +389,6 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 	$(PERL) $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
-
-$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
-	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
-	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
-	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
-	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
-
 
 # Rebuild the embedded docbook4 pages in the $(T2_DEST) after they are
 # modified.
@@ -606,6 +583,9 @@ $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/inde
 
 DOCBOOK5_DOCS += $(FICTION_DOCS)
 
+include lib/make/docbook/sf-docbook-common.mak
+
+FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 DEST__C_BAD_ELEMS_SRC = $(T2_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
@@ -1096,3 +1076,24 @@ include lib/make/copies-generated-include.mak
 
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets
+
+$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
+	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
+	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
+	if test -e "$$xslt" ; then \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o "$$temp_db5" $< && \
+		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
+	else \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o $@ $< ; \
+	fi
+	$(PERL) -i -lape 's/\s+$$//' $@
+
+$(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
+	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
+	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
+	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
+	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
+
+

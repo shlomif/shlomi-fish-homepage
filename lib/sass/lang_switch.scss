@@ -12,7 +12,9 @@
         padding: 0;
     }
 
-    li {
+    > ul > li , li.lang , li.title {
+        margin-top: 0;
+        margin-bottom: 0;
         display: block;
         float: left;
         padding: 0;

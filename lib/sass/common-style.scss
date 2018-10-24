@@ -2,6 +2,7 @@
 @import "defs";
 @import "common-body";
 @import "common-with-print";
+@import "lang_switch";
 
 :link:hover, :visited:hover, img.highlight:hover, .nav_links img:hover, .bk2hp:hover {
     background-color: #90EE90;
@@ -80,7 +81,7 @@ div.rightalign {
  *  with a different colour. That's CSS 2.
  *  http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html */
 
-.main, #main, main {
+.main, main {
     padding: 1em;
 
     img {
@@ -1044,7 +1045,6 @@ h2, h3 {
 }
 
 @import "self_link";
-@import "lang_switch";
 @import "code_block";
 @import "treeview";
 @import "footer";

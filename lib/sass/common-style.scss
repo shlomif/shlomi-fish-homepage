@@ -378,7 +378,7 @@ p.desc {
     margin-left: 3em;
 }
 
-.invisible a {
+.invisible , .invisible a {
     position: absolute;
     left: -10000px;
     top: auto;

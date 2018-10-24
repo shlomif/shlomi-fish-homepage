@@ -157,7 +157,7 @@ img.bizcard {
 @media(max-width: 900px) {
     #navbar_wrapper {
         @include body-background;
-        border: 2px black solid;
+        /* border: 2px black solid; */
         position: absolute;
     }
 }

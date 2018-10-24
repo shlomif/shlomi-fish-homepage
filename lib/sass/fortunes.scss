@@ -128,6 +128,7 @@
                 border-bottom: $fort_border_color $fortune_border;
                 margin-top: 0;
                 margin-bottom: 0;
+                grid-row: 1 / span 1;
             }
 
             h3 {
@@ -144,7 +145,6 @@
 
                 grid-column-start: 1;
                 grid-column-end: span 4;
-                grid-row: 1 / span 1;
             }
 
             pre {
@@ -153,9 +153,9 @@
 
             .disp {
                 @include head;
+                padding: 0.3em;
                 grid-column-start: 5;
                 grid-column-end: span 1;
-                grid-row: 1 / span 1;
                 border-bottom: $fort_border_color $fortune_border;
                 border-left: black solid 3px;
 

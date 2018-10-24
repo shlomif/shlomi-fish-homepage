@@ -38,6 +38,8 @@
     }
 
     .info {
+        grid-column: 1 / span 5;
+        grid-row: 3 / span 1;
         border-collapse: collapse;
         margin: 0.7em;
 
@@ -79,10 +81,16 @@
             margin-top: 5px;
             margin-bottom: 2em;
             position: relative;
-            display: table;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            // grid-template-rows: repeat(3, 1fr);
 
             @mixin elem {
-                display: table-row;
+            }
+
+            @mixin content {
+                grid-column: 1 / span 5;
+                grid-row: 2;
             }
 
             > .head {
@@ -94,7 +102,7 @@
 
                 // outline: blue 4px solid
                 > .irc-conversation {
-                    @include elem;
+                    @include content;
 
                     // outline: red 2px solid
 
@@ -102,7 +110,7 @@
             }
 
             @mixin child {
-                @include elem;
+                @include content;
 
                 p {
                     padding: 0 1em;
@@ -116,20 +124,27 @@
             > .screenplay {
                 @include child;
             }
+            @mixin head {
+                border-bottom: $fort_border_color $fortune_border;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
 
             h3 {
+                @include head;
                 // background-color: $fortune_color
-                border-top-left-radius: $fortune_radius;
+                /*border-top-left-radius: $fortune_radius;
                 border-top-right-radius: $fortune_radius;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                border-bottom: $fort_border_color $fortune_border;
+                */
                 color: #000;
-                margin-top: 0;
 
                 @include fortune_style;
 
-                display: table-cell;
+                grid-column-start: 1;
+                grid-column-end: span 4;
+                grid-row: 1 / span 1;
             }
 
             pre {
@@ -137,9 +152,10 @@
             }
 
             .disp {
-                // padding: 0
-                // margin: 0
-                display: table-cell;
+                @include head;
+                grid-column-start: 5;
+                grid-column-end: span 1;
+                grid-row: 1 / span 1;
                 border-bottom: $fort_border_color $fortune_border;
                 border-left: black solid 3px;
 

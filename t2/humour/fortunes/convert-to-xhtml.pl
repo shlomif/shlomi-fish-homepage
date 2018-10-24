@@ -35,6 +35,16 @@ my $SUF  = '»גבא⋄⋄»';
             return qq#$PREF$text$SUF#;
         }
     );
+    foreach my $node ( $xc->findnodes(q#//html:div[@class='head']#) )
+    {
+        my $parent = $node->parentNode;
+        my @c      = $node->childNodes;
+        for my $c (@c)
+        {
+            $parent->insertAfter( $c, $node );
+        }
+        $parent->removeChild($node);
+    }
     foreach my $node (
         $xc->findnodes(
 q#//html:table[@class='irc-conversation']/html:tbody/html:tr[@class='saying']/html:td[@class='text']/text()#

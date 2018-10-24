@@ -21,7 +21,7 @@ $contents =~ s{\A(?:.*?)<body>}{}ms;
 $contents =~ s{</body>(?:.*?)\z}{}ms;
 
 $contents =~
-s#(?<full><h3 id=\s*"(?<id>[^"]+)"[^>]*>[^<]+</h3>)#<div class="head">$+{full}\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p></div>\n#g;
+s#(?<full><h3 id=\s*"(?<id>[^"]+)"[^>]*>[^<]+</h3>)#$+{full}\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p>\n#g;
 
 $contents =~
 s#(?<full><table class="irc-conversation">.*?</table>)#<div class="irc-body">$+{full}</div>#gms;

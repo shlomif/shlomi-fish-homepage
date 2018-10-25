@@ -5,7 +5,6 @@ use warnings;
 use autodie;
 use utf8;
 
-use File::Basename qw(dirname basename);
 use Path::Tiny qw/ cwd path /;
 use Parallel::ForkManager ();
 use lib './lib';
@@ -18,9 +17,8 @@ use Shlomif::Homepage::GenScreenplaysMak ();
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $cwd            = cwd();
-my $upper_dir      = dirname($cwd);
-my $cwd_basename   = basename($cwd);
-my $git_clones_dir = path("$upper_dir/_$cwd_basename--clones");
+my $upper_dir      = $cwd->parent;
+my $git_clones_dir = $upper_dir->child( $cwd->basename . "--clones" );
 $git_clones_dir->mkpath;
 
 sub _github_clone
@@ -68,20 +66,6 @@ sub _github_clone
     return;
 }
 
-sub _bitbucket_hg_shlomif_clone
-{
-    my ( $into_dir, $repo ) = @_;
-
-    return _github_clone(
-        {
-            type     => 'bitbucket_hg',
-            username => 'shlomif',
-            into_dir => $into_dir,
-            repo     => $repo,
-        }
-    );
-}
-
 sub _github_shlomif_clone
 {
     my ( $into_dir, $repo ) = @_;
@@ -123,6 +107,7 @@ sub _git_task
     }
     return;
 }
+
 if ( not -e 'lib/js/MathJax/README.md' )
 {
     _sys_task(

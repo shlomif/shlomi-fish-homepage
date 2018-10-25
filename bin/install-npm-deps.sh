@@ -7,6 +7,7 @@
 #
 npm install \
     camel-case \
+    hackmyresume \
     html-minifier \
     marky-markdown \
     param-case \

@@ -1096,3 +1096,12 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoctor --backend=docbook5 -o $@ $<
+
+JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
+
+JSON_RES_DEST := $(T2_DEST)/$(JSON_RES_BASE).json
+
+$(JSON_RES_DEST): $(T2_SRC_DIR)/$(JSON_RES_BASE).yaml
+	yaml2json $< > $@
+
+non_latemp_targets: $(JSON_RES_DEST)

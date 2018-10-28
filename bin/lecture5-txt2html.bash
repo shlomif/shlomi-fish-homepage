@@ -1,5 +1,5 @@
 #!/bin/bash
-marky-markdown t2/lecture/Perl/Newbies/lecture5-notes.txt |
+perl -C `which markdent-html` --dialects GitHub --file t2/lecture/Perl/Newbies/lecture5-notes.txt |
 (
         cat <<'EOF'
 <?xml version="1.0" encoding="utf-8"?>

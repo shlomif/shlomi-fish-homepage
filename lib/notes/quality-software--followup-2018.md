@@ -23,7 +23,7 @@
         - kinda slow
         - hopefully [will improve](https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/)
     - Mostly Positive: vlc
-    - Mostly Positive: Emscripten / asm.js / WebAssembly
+    - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
     - KDE/Plasma's update from 3 to 4 was poorly done, and so was 4→5.
@@ -34,6 +34,9 @@
         - Not perfect but less errorprone and faster than GNU Autotools
         - http://www.shlomifish.org/open-source/anti/autohell/
         - https://en.wikipedia.org/wiki/Meson_(software)
+    - Reflections on "Simple" in the context of software:
+        - https://shlomif-tech.livejournal.com/64318.html
+        - Simple may imply lacking features or being hard to use.
 
 ## Comment I wrote
 

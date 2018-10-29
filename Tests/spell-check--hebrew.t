@@ -335,19 +335,13 @@ has obj => (
     default => sub { return Shlomif::Spelling::Hebrew::Check->new(); }
 );
 
-has files => (
-    is => 'ro',
-    default =>
-        sub { return Shlomif::Spelling::Hebrew::FindFiles->new->list_htmls(); }
-);
-
 sub test_spelling
 {
     my ( $self, $blurb ) = @_;
 
     return $self->obj->obj->test_spelling(
         {
-            files => $self->files,
+            files => Shlomif::Spelling::Hebrew::FindFiles->new->list_htmls(),
             blurb => $blurb,
         },
     );

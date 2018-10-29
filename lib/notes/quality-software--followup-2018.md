@@ -22,7 +22,9 @@
     - Red Hat's dnf
         - kinda slow
         - hopefully [will improve](https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/)
-    - Mostly Positive: vlc
+    - Mostly Positive: [VLC](https://www.videolan.org/vlc/)
+        - Easy to use interface
+        - Popular among many Windows and macOS users.
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast

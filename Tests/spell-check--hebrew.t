@@ -185,23 +185,6 @@ s{\A(?:(?:ֹו?(?:ש|ל|מ|ב|כש|לכש|מה|שה|לכשה|ב-))|ו)-?}{};
     return { misspellings => \@ret, };
 }
 
-sub spell_check
-{
-    my ( $self, $args ) = @_;
-
-    my $misspellings = $self->_calc_mispellings($args);
-
-    foreach my $error ( @{ $misspellings->{misspellings} } )
-    {
-        printf {*STDOUT} (
-            "%s:%d:%s\n",       $error->{filename},
-            $error->{line_num}, $error->{line_with_context},
-        );
-    }
-
-    print "\n";
-}
-
 sub test_spelling
 {
     my ( $self, $args ) = @_;
@@ -252,47 +235,11 @@ has obj => (
     }
 );
 
-sub spell_check
-{
-    my ( $self, $args ) = @_;
-
-    return $self->obj->spell_check(
-        {
-            files => $args->{files}
-        }
-    );
-}
-
-package Shlomif::Spelling::Hebrew::Iface;
-
-use strict;
-use warnings;
-
-use Moo;
-
-has obj => (
-    is      => 'ro',
-    default => sub { return Shlomif::Spelling::Hebrew::Check->new(); }
+Shlomif::Spelling::Hebrew::Check->new()->obj->test_spelling(
+    {
+        files => [
+            map { s/\n?\z//r } `find dest/post-incs/t2 -name '*html' -type f`
+        ],
+        blurb => 'blurb',
+    },
 );
-
-sub test_spelling
-{
-    my ( $self, $blurb ) = @_;
-
-    return $self->obj->obj->test_spelling(
-        {
-            files => [
-                map { s/\n?\z//r }
-                    `find dest/post-incs/t2 -name '*html' -type f`
-            ],
-            blurb => $blurb,
-        },
-    );
-}
-
-1;
-
-package main;
-
-# TEST
-Shlomif::Spelling::Hebrew::Iface->new->test_spelling("No spelling errors.");

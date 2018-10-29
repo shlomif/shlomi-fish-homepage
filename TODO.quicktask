@@ -14,23 +14,8 @@ LONG TERM:
       @ Added [Mon 2016-10-10]
     - Add icons/images to the nav_blocks.
       @ Added [Fri 2014-08-22]
-    - Check for Hebrew spelling in the Hebrew test suite:
     - Spell-check the *.txt files.
       @ Added [Sun 2016-04-03]
-    - Adapt a better style which stretches the page.
-        * Maybe just make the page wider.
-        * Thanks to moofy and other people who commented on it.
-    - Add the tarball mirrors domain
-        * mirroring.shlomifish.org
-        * With scripts to mirror, tar.xz, .zip, etc.
-        * Note about APIs.
-            * Mostly valid XHTML
-                * Not terribly semantic because it’s a waste of time.
-            * Some JSON/etc.
-            * Mostly static.
-            * By a human - for humans.
-        * Added [Sat 2013-03-16]
-    - Link the Hebrew Errors Page to the main one.
     - Add a section to the drugs’ legalisation page about the “War on Drugs”
         * Quote Larry Lessig’s Remix about “War on File Swapping”
         * The Usenet quote about “Why can’t we ever attempt to solve a
@@ -44,7 +29,10 @@ LONG TERM:
         * BigBangT - "rocket scientist" as an insult.
         * BigBangT - "the part with Penny and Sheldon from S02E02.
         @ Added [Sun 2015-12-13]
-   @ DONE [Mon 2018-10-01]
+    - Check for Hebrew spelling in the HTMLs test suite:
+      @ Added [Mon 2018-10-29]
+    - Link the Hebrew Errors Page to the main one.
+      @ Added [Mon 2018-10-29]
 
 
 MINOR PROBLEMS:
@@ -461,6 +449,21 @@ COMPLETED TASKS:
     - Generate the *.wml.html vim-coloured files of Web-Meta-Lecture
         @ DONE [Mon 2018-10-29]
       @ Added [Sat 2018-09-15]
+    - Adapt a better style which stretches the page.
+        * Maybe just make the page wider.
+        * Thanks to moofy and other people who commented on it.
+        @ DONE [Mon 2018-10-29]
+    - Add the tarball mirrors domain
+        * mirroring.shlomifish.org
+        * With scripts to mirror, tar.xz, .zip, etc.
+        * Note about APIs.
+            * Mostly valid XHTML
+                * Not terribly semantic because it’s a waste of time.
+            * Some JSON/etc.
+            * Mostly static.
+            * By a human - for humans.
+        @ Added [Sat 2013-03-16]
+        @ DONE [Mon 2018-10-29]
 
 
 # vim:ft=quicktask:sw=4:ts=4

@@ -46,18 +46,17 @@ use utf8;
 
 use 5.014;
 
-use MooX qw/late/;
+use Moo;
 
 use HTML::Parser 3.00 ();
 use List::MoreUtils qw(any);
 use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
-has '_inside' =>
-    ( is => 'rw', isa => 'HashRef', default => sub { return +{}; } );
-has 'whitelist_parser' => ( is => 'ro', required => 1 );
-has 'check_word_cb' => ( is => 'ro', isa => 'CodeRef', required => 1 );
-has 'timestamp_cache_fn' => ( is => 'ro', isa => 'Str', required => 1 );
+has '_inside'            => ( is => 'rw', default  => sub { return +{}; } );
+has 'whitelist_parser'   => ( is => 'ro', required => 1 );
+has 'check_word_cb'      => ( is => 'ro', required => 1 );
+has 'timestamp_cache_fn' => ( is => 'ro', required => 1 );
 
 sub _tag
 {

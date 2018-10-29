@@ -25,16 +25,18 @@ use Moo;
 
 sub check_word
 {
-    my ($self, $args) = @_;
+    my ( $self, $args ) = @_;
 
     my $filename = $args->{filename};
-    my $word = $args->{word};
+    my $word     = $args->{word};
     return 0;
 }
 
-sub parse {
-return;
+sub parse
+{
+    return;
 }
+
 package Shlomif::Spelling::Hebrew::Check;
 
 use strict;

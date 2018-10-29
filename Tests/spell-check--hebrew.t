@@ -32,9 +32,8 @@ use List::MoreUtils qw(any);
 use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
-has '_inside'            => ( is => 'rw', default  => sub { return +{}; } );
-has 'check_word_cb'      => ( is => 'ro', required => 1 );
-has 'timestamp_cache_fn' => ( is => 'ro', required => 1 );
+has '_inside' => ( is => 'rw', default => sub { return +{}; } );
+has 'check_word_cb' => ( is => 'ro', required => 1 );
 
 sub _tag
 {
@@ -55,49 +54,14 @@ sub _calc_mispellings
 
     binmode STDOUT, ":encoding(utf8)";
 
-    my $calc_cache_io = sub {
-        return io->file( $self->timestamp_cache_fn );
-    };
-
     my $app_key  = 'HTML-Spelling-Site';
     my $data_key = 'timestamp_cache';
-
-    my $write_cache = sub {
-        my $ref = shift;
-        $calc_cache_io->()->print(
-            JSON::MaybeXS->new( canonical => 1 )->encode(
-                {
-                    $app_key => {
-                        $data_key => $ref,
-                    },
-                },
-            )
-        );
-
-        return;
-    };
-
-    if ( !$calc_cache_io->()->exists() )
-    {
-        $write_cache->( +{} );
-    }
-
-    my $timestamp_cache =
-        decode_json( scalar( $calc_cache_io->()->slurp() ) )->{$app_key}
-        ->{$data_key};
 
     my $check_word = $self->check_word_cb;
 
 FILENAMES_LOOP:
     foreach my $filename (@$filenames)
     {
-        if ( exists( $timestamp_cache->{$filename} )
-            and $timestamp_cache->{$filename} >=
-            ( io->file($filename)->mtime() ) )
-        {
-            next FILENAMES_LOOP;
-        }
-
         my $file_is_ok = 1;
 
         my $process_text = sub {
@@ -174,13 +138,7 @@ s{\A(?:(?:ֹו?(?:ש|ל|מ|ב|כש|לכש|מה|שה|לכשה|ב-))|ו)-?}{};
 
         close($fh);
 
-        if ($file_is_ok)
-        {
-            $timestamp_cache->{$filename} = io->file($filename)->mtime();
-        }
     }
-
-    $write_cache->($timestamp_cache);
 
     return { misspellings => \@ret, };
 }

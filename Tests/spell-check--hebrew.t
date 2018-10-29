@@ -297,32 +297,6 @@ sub spell_check
     );
 }
 
-package Shlomif::Spelling::Hebrew::FindFiles;
-
-use strict;
-use warnings;
-
-use Moo;
-use List::MoreUtils qw/any/;
-
-use HTML::Spelling::Site::Finder;
-use lib './lib';
-
-sub list_htmls
-{
-    my ($self) = @_;
-
-    return HTML::Spelling::Site::Finder->new(
-        {
-            root_dir => './dest/post-incs/t2',
-            prune_cb => sub {
-                my ($path) = @_;
-                return 0;
-            },
-        }
-    )->list_all_htmls;
-}
-
 package Shlomif::Spelling::Hebrew::Iface;
 
 use strict;
@@ -341,7 +315,10 @@ sub test_spelling
 
     return $self->obj->obj->test_spelling(
         {
-            files => Shlomif::Spelling::Hebrew::FindFiles->new->list_htmls(),
+            files => [
+                map { s/\n?\z//r }
+                    `find dest/post-incs/t2 -name '*html' -type f`
+            ],
             blurb => $blurb,
         },
     );

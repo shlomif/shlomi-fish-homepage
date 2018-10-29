@@ -341,17 +341,6 @@ has files => (
         sub { return Shlomif::Spelling::Hebrew::FindFiles->new->list_htmls(); }
 );
 
-sub run
-{
-    my ($self) = @_;
-
-    return $self->obj->spell_check(
-        {
-            files => $self->files,
-        },
-    );
-}
-
 sub test_spelling
 {
     my ( $self, $blurb ) = @_;

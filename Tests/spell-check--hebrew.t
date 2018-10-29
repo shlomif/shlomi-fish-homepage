@@ -204,38 +204,28 @@ use warnings;
 use autodie;
 use utf8;
 
-use Moo;
-
 use Text::Hunspell;
 
-has obj => (
-    is      => 'ro',
-    default => sub {
-        my ($self) = @_;
-        my $speller = Text::Hunspell->new(
-            '/usr/share/hunspell/he_IL.aff',
-            '/usr/share/hunspell/he_IL.dic',
-        );
-
-        if ( not $speller )
-        {
-            die "Could not initialize speller!";
-        }
-
-        return HTML::Spelling::Site::Checker->new(
-            {
-                timestamp_cache_fn =>
-                    './Tests/data/cache/hebrew-spelling-timestamp.json',
-                check_word_cb => sub {
-                    my ($word) = @_;
-                    return $speller->check($word);
-                },
-            }
-        );
-    }
+my $speller = Text::Hunspell->new(
+    '/usr/share/hunspell/he_IL.aff',
+    '/usr/share/hunspell/he_IL.dic',
 );
 
-Shlomif::Spelling::Hebrew::Check->new()->obj->test_spelling(
+if ( not $speller )
+{
+    die "Could not initialize speller!";
+}
+
+HTML::Spelling::Site::Checker->new(
+    {
+        timestamp_cache_fn =>
+            './Tests/data/cache/hebrew-spelling-timestamp.json',
+        check_word_cb => sub {
+            my ($word) = @_;
+            return $speller->check($word);
+        },
+    }
+)->test_spelling(
     {
         files => [
             map { s/\n?\z//r } `find dest/post-incs/t2 -name '*html' -type f`

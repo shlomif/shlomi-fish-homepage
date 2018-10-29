@@ -16,27 +16,6 @@ else
     plan tests => 1;
 }
 
-package Shlomif::Spelling::Hebrew::Whitelist;
-
-use strict;
-use warnings;
-
-use Moo;
-
-sub check_word
-{
-    my ( $self, $args ) = @_;
-
-    my $filename = $args->{filename};
-    my $word     = $args->{word};
-    return 0;
-}
-
-sub parse
-{
-    return;
-}
-
 package HTML::Spelling::Site::Checker;
 $HTML::Spelling::Site::Checker::VERSION = '0.0.5';
 use strict;
@@ -54,7 +33,6 @@ use JSON::MaybeXS qw(decode_json);
 use IO::All qw/ io /;
 
 has '_inside'            => ( is => 'rw', default  => sub { return +{}; } );
-has 'whitelist_parser'   => ( is => 'ro', required => 1 );
 has 'check_word_cb'      => ( is => 'ro', required => 1 );
 has 'timestamp_cache_fn' => ( is => 'ro', required => 1 );
 
@@ -74,9 +52,6 @@ sub _calc_mispellings
     my @ret;
 
     my $filenames = $args->{files};
-
-    my $whitelist = $self->whitelist_parser;
-    $whitelist->parse;
 
     binmode STDOUT, ":encoding(utf8)";
 
@@ -158,15 +133,8 @@ s{\A(?:(?:ֹו?(?:ש|ל|מ|ב|כש|לכש|מה|שה|לכשה|ב-))|ו)-?}{};
                         $word =~ s{'?ים\z}{};
                     }
 
-                    my $verdict = (
-                        (
-                            !$whitelist->check_word(
-                                { filename => $filename, word => $word }
-                            )
-                        )
-                            && ( $word !~ m#\A[\p{Hebrew}\-'’]+\z# )
-                            && ( !( $check_word->($word) ) )
-                    );
+                    my $verdict = ( ( $word !~ m#\A[\p{Hebrew}\-'’]+\z# )
+                            && ( !( $check_word->($word) ) ) );
 
                     $mispelling_found ||= $verdict;
 
@@ -275,8 +243,6 @@ has obj => (
             {
                 timestamp_cache_fn =>
                     './Tests/data/cache/hebrew-spelling-timestamp.json',
-                whitelist_parser =>
-                    scalar( Shlomif::Spelling::Hebrew::Whitelist->new() ),
                 check_word_cb => sub {
                     my ($word) = @_;
                     return $speller->check($word);

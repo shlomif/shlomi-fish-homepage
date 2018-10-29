@@ -102,9 +102,6 @@ use List::MoreUtils qw/any/;
 
 use HTML::Spelling::Site::Finder;
 use lib './lib';
-use HTML::Latemp::Local::Paths ();
-
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 sub list_htmls
 {
@@ -112,7 +109,7 @@ sub list_htmls
 
     return HTML::Spelling::Site::Finder->new(
         {
-            root_dir => $T2_POST_DEST,
+            root_dir => './dest/post-incs/t2',
             prune_cb => sub {
                 my ($path) = @_;
                 return 0;

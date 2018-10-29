@@ -150,9 +150,9 @@ sub test_spelling
     my $misspellings = $self->_calc_mispellings($args);
 
     require Test::Differences;
+    use Test::More;
 
-    return Test::Differences::eq_or_diff( $misspellings->{misspellings},
-        [], $args->{blurb}, );
+    return is_deeply( $misspellings->{misspellings}, [], $args->{blurb}, );
 }
 
 package Shlomif::Spelling::Hebrew::Check;

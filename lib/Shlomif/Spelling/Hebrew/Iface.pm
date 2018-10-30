@@ -38,6 +38,7 @@ sub test_spelling
         {
             files => $self->files,
             blurb => $blurb,
+            light => 1,
         },
     );
 }

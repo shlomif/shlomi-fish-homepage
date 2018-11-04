@@ -111,14 +111,15 @@ EOF
         ),
         (
             map {
-                "$_: \$(SCREENPLAY_XML_HTML_DIR)/"
-                    . do
+                my $x = [ split m#/#, $_ ]->[-1];
+                $x =~ s/\.raw(\.html)\z/$1/;
+                my $heb_filt = '';
+                if ( $x =~ /hebrew/ )
                 {
-                    my $x = [ split m#/#, $_ ]->[-1];
-                    $x =~ s/\.raw(\.html)\z/$1/;
-                    $x;
-                    }
-                    . qq{\n\tperl -lpE 's#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E## if m#^<html #ms' < \$< > \$\@\n\n}
+                    $heb_filt = "DIR=rtl ";
+                }
+                "$_: \$(SCREENPLAY_XML_HTML_DIR)/" . $x
+                    . qq{\n\t${heb_filt}perl -lpE 'do { s#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E##; my \$\$d = \$\$ENV{DIR}; \$\$d and s/(<html )/\$\$1dir="\$\$d" /; } if m#^<html #ms' < \$< > \$\@\n\n}
             } @_htmls_files
         ),
     );

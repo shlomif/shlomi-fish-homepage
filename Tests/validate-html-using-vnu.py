@@ -54,11 +54,12 @@ class VnuValidate:
     is not XHTML
     :param skip_cb Return whether a path should be skipped entirely
     """
-    def __init__(self, path, jar, non_xhtml_cb, skip_cb):
+    def __init__(self, path, jar, non_xhtml_cb, skip_cb, cache_path=None):
         self.path = path
         self.jar = jar
         self.non_xhtml_cb = non_xhtml_cb
         self.skip_cb = skip_cb
+        self.cache_path = cache_path
 
     def run(self):
         """
@@ -67,19 +68,30 @@ class VnuValidate:
         t = tempfile.TemporaryDirectory()
         # t = VnuValidate(0, 0, 0, 0)
         # t.name = "/tmp/zjzj"
-        whitelist = {'html': {}, 'xhtml': {}}
+        try:
+            if self.cache_path:
+                whitelist = json.load(
+                    open(self.cache_path, 'rb'))['vnu_valid']['cache']
+        except FileNotFoundError:
+            whitelist = {'html': {}, 'xhtml': {}}
         which = {}
+        greylist = {'html': {}, 'xhtml': {}}
+
+        def _mytrim(s):
+            return re.sub('^(?:\\./)?', '', s)
+
         for dirpath, _, fns in os.walk(self.path):
-            dn = join(t.name, dirpath)
+            dn = _mytrim(join(t.name, _mytrim(dirpath)))
             os.makedirs(dn)
             for fn in fns:
-                path = join(dirpath, fn)
+                path = _mytrim(join(dirpath, fn))
+                # print(path)
                 if self.skip_cb(path):
                     continue
                 html = re.match(r'.*\.html?$', fn)
 
                 def _content():
-                    return open(path, 'r').read()
+                    return open(path, 'rb').read()
                 out_fn = None
                 if re.match('.*\\.xhtml$', fn) or (
                         html and not self.non_xhtml_cb(path)):
@@ -90,19 +102,23 @@ class VnuValidate:
                 if out_fn:
                     c = _content()
                     m = hashlib.sha256()
-                    m.update(bytes(c, 'utf-8'))
-                    d = m.digest()
+                    m.update(c)
+                    d = m.hexdigest()
                     key = 'html' if html else 'xhtml'
                     if d not in whitelist[key]:
                         fn = join(dn, out_fn)
-                        open(fn, 'w').write(c)
+                        # print(dn, out_fn, fn)
+                        # import sys
+                        # sys.stdout.flush()
+                        open(fn, 'wb').write(c)
                         which[fn] = key
+                        greylist[key][d] = True
 
         cmd = ['java', '-jar', self.jar, '--format', 'json', '--Werror',
                '--skip-non-html', t.name]
         print(" ".join(cmd))
-        import sys
-        sys.exit(0)
+        # import sys
+        # sys.exit(0)
         with Popen(cmd, stderr=PIPE) as ret:
             ret.wait()
             text = ret.stderr.read()
@@ -114,16 +130,19 @@ class VnuValidate:
                 url = msg['url']
                 fn = urlparse(url).path
                 if fn not in found:
-                    found.append(fn)
-                    c = open(fn, 'r').read()
+                    found.add(fn)
+                    c = open(fn, 'rb').read()
                     m = hashlib.sha256()
                     m.update(c)
-                    d = m.digest()
+                    d = m.hexdigest()
                     blacklist[which[fn]][d] = True
             for key in ['html', 'xhtml']:
-                for k in list(whitelist[key].keys()):
+                for k in list(greylist[key].keys()):
                     if k not in blacklist[key]:
-                        del whitelist[key][k]
+                        whitelist[key][k] = True
+            if self.cache_path:
+                json.dump({'vnu_valid': {'cache': whitelist}},
+                          open(self.cache_path, 'w'))
             return len(blacklist['html']) + len(blacklist['xhtml']) == 0
 
 
@@ -132,7 +151,7 @@ class VnuTest(unittest.TestCase):
     One can find some examples for this here:
 
     """
-    def vnu_test_dir(self, path, non_xhtml_cb, skip_cb):
+    def vnu_test_dir(self, path, non_xhtml_cb, skip_cb, cache_path=None):
         """
         A unit test helper for checking a directory tree.
         :param path the path of the root directory
@@ -147,7 +166,7 @@ class VnuTest(unittest.TestCase):
         if key in os.environ:
             self.assertTrue(
                 VnuValidate(path, os.environ[key], non_xhtml_cb,
-                            skip_cb).run(),
+                            skip_cb, cache_path).run(),
                 "passed validation")
         else:
             self.assertTrue(True, key + ' not set')
@@ -156,6 +175,7 @@ class VnuTest(unittest.TestCase):
 class MyTests(VnuTest):
     def test_main(self):
         dir_ = './dest/post-incs/t2/'
+        # dir_ = './dest/post-incs/t2/humour/'
 
         def _create_cb(s):
             """docstring for _create_cb"""
@@ -240,7 +260,8 @@ class MyTests(VnuTest):
         )$
             """)
         _non_xhtml_cb = _create_cb('jquery-ui|philosophy/by-others/sscce')
-        return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb)
+        return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
+                                 'Tests/data/cache/vnu-html-validator.json')
 
 
 if __name__ == '__main__':

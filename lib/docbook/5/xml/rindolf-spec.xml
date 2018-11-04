@@ -1,10 +1,22 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" lang="en">
-<info><title>Rindolf Specification Document</title></info>
-
-    <section xml:id="rindolf_spec"><info><title>Rindolf Specification Document</title></info>
-
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+<info><title>Rindolf Specification Document</title>
+    <authorgroup>
+        <author>
+            <personname>
+                <firstname>Shlomi</firstname>
+                <surname>Fish</surname>
+            </personname>
+            <affiliation>
+                <address>
+                    <email>shlomif@shlomifish.org</email>
+                    <uri type="homepage">http://www.shlomifish.org/</uri>
+                </address>
+            </affiliation>
+        </author>
+    </authorgroup>
+</info>
 <section xml:id="version"><info><title>Version</title></info>
 
 
@@ -747,7 +759,4 @@ print "a[1][1].y = ", $results-&gt;[1]-&gt;[1]-&gt;[1], "\n"; # prints 10
         </para>
     </section> <!-- Re-usable Virtual Machines Instances -->
 </section><!-- LISP-like Features -->
-</section>
-
-
 </article>

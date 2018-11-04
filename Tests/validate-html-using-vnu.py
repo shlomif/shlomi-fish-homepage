@@ -127,6 +127,7 @@ class VnuValidate:
             blacklist = {'html': {}, 'xhtml': {}}
             found = set()
             for msg in data['messages']:
+                print(msg)
                 url = msg['url']
                 fn = urlparse(url).path
                 if fn not in found:
@@ -259,7 +260,7 @@ class MyTests(VnuTest):
             (?: work/.*? )
         )$
             """)
-        _non_xhtml_cb = _create_cb('jquery-ui|philosophy/by-others/sscce')
+        _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
                                  'Tests/data/cache/vnu-html-validator.json')
 

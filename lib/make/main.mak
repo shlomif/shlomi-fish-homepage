@@ -536,9 +536,11 @@ mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
 $(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
+	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
 $(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
+	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
 $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
 

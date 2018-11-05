@@ -69,7 +69,7 @@ class VnuValidate:
 
     def run(self):
         """
-        :returns boolean for sucess or failure.
+        :returns boolean for success or failure.
         """
         t = tempfile.TemporaryDirectory()
         # t = VnuValidate(0, 0, 0, 0)

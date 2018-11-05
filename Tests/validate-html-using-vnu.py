@@ -61,6 +61,12 @@ class VnuValidate:
         self.skip_cb = skip_cb
         self.cache_path = cache_path
 
+    def _digest(self, content):
+        """docstring for _digest"""
+        m = hashlib.sha256()
+        m.update(content)
+        return m.hexdigest()
+
     def run(self):
         """
         :returns boolean for sucess or failure.
@@ -101,9 +107,7 @@ class VnuValidate:
 
                 if out_fn:
                     c = _content()
-                    m = hashlib.sha256()
-                    m.update(c)
-                    d = m.hexdigest()
+                    d = self._digest(c)
                     key = 'html' if html else 'xhtml'
                     if d not in whitelist[key]:
                         fn = join(dn, out_fn)
@@ -132,10 +136,7 @@ class VnuValidate:
                 fn = urlparse(url).path
                 if fn not in found:
                     found.add(fn)
-                    c = open(fn, 'rb').read()
-                    m = hashlib.sha256()
-                    m.update(c)
-                    d = m.hexdigest()
+                    d = self._digest(open(fn, 'rb').read())
                     blacklist[which[fn]][d] = True
             for key in ['html', 'xhtml']:
                 for k in list(greylist[key].keys()):

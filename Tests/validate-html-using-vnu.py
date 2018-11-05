@@ -67,6 +67,9 @@ class VnuValidate:
         m.update(content)
         return m.hexdigest()
 
+    def _empty_cache(self):
+        return {'html': {}, 'xhtml': {}}
+
     def run(self):
         """
         :returns boolean for success or failure.
@@ -79,9 +82,9 @@ class VnuValidate:
                 whitelist = json.load(
                     open(self.cache_path, 'rb'))['vnu_valid']['cache']
         except FileNotFoundError:
-            whitelist = {'html': {}, 'xhtml': {}}
+            whitelist = self._empty_cache()
         which = {}
-        greylist = {'html': {}, 'xhtml': {}}
+        greylist = self._empty_cache()
 
         def _mytrim(s):
             return re.sub('^(?:\\./)?', '', s)
@@ -91,13 +94,9 @@ class VnuValidate:
             os.makedirs(dn)
             for fn in fns:
                 path = _mytrim(join(dirpath, fn))
-                # print(path)
                 if self.skip_cb(path):
                     continue
                 html = re.match(r'.*\.html?$', fn)
-
-                def _content():
-                    return open(path, 'rb').read()
                 out_fn = None
                 if re.match('.*\\.xhtml$', fn) or (
                         html and not self.non_xhtml_cb(path)):
@@ -106,17 +105,14 @@ class VnuValidate:
                     out_fn = fn
 
                 if out_fn:
-                    c = _content()
+                    c = open(path, 'rb').read()
                     d = self._digest(c)
-                    key = 'html' if html else 'xhtml'
-                    if d not in whitelist[key]:
+                    format_ = 'html' if html else 'xhtml'
+                    if d not in whitelist[format_]:
                         fn = join(dn, out_fn)
-                        # print(dn, out_fn, fn)
-                        # import sys
-                        # sys.stdout.flush()
                         open(fn, 'wb').write(c)
-                        which[fn] = key
-                        greylist[key][d] = True
+                        which[fn] = format_
+                        greylist[format_][d] = True
 
         cmd = ['java', '-jar', self.jar, '--format', 'json', '--Werror',
                '--skip-non-html', t.name]
@@ -126,7 +122,6 @@ class VnuValidate:
         with Popen(cmd, stderr=PIPE) as ret:
             ret.wait()
             text = ret.stderr.read()
-            # open('foo.json', 'w').write(text.decode('utf-8'))
             data = json.loads(text)
             blacklist = {'html': {}, 'xhtml': {}}
             found = set()
@@ -138,10 +133,10 @@ class VnuValidate:
                     found.add(fn)
                     d = self._digest(open(fn, 'rb').read())
                     blacklist[which[fn]][d] = True
-            for key in ['html', 'xhtml']:
-                for k in list(greylist[key].keys()):
-                    if k not in blacklist[key]:
-                        whitelist[key][k] = True
+            for format_ in ['html', 'xhtml']:
+                for k in list(greylist[format_].keys()):
+                    if k not in blacklist[format_]:
+                        whitelist[format_][k] = True
             if self.cache_path:
                 json.dump({'vnu_valid': {'cache': whitelist}},
                           open(self.cache_path, 'w'))

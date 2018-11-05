@@ -123,7 +123,7 @@ class VnuValidate:
             ret.wait()
             text = ret.stderr.read()
             data = json.loads(text)
-            blacklist = {'html': {}, 'xhtml': {}}
+            blacklist = self._empty_cache()
             found = set()
             for msg in data['messages']:
                 print(msg)

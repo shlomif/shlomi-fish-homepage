@@ -85,7 +85,8 @@ class VnuValidate:
         try:
             if self.cache_path:
                 whitelist = json.load(
-                    open(self.cache_path, 'rb'))['vnu_valid']['cache']
+                    open(self.cache_path, 'rb'))['vnu_valid']['cache'][
+                            'sha256']
         except FileNotFoundError:
             whitelist = self._empty_cache()
         which = {}
@@ -143,7 +144,7 @@ class VnuValidate:
                     if k not in blacklist[format_]:
                         whitelist[format_][k] = True
             if self.cache_path:
-                json.dump({'vnu_valid': {'cache': whitelist}},
+                json.dump({'vnu_valid': {'cache': {'sha256': whitelist}}},
                           open(self.cache_path, 'w'))
             return len(blacklist['html']) + len(blacklist['xhtml']) == 0
 

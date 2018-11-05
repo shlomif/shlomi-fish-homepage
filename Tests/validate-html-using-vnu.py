@@ -70,6 +70,11 @@ class VnuValidate:
     def _empty_cache(self):
         return {'html': {}, 'xhtml': {}}
 
+    _TRIM_RE = re.compile('^(?:\\./)?')
+    _HTML_SUF_RE = re.compile(r'.*\.html?$')
+    _XHTML_SUF_RE = re.compile(r'.*\.xhtml?$')
+    _SUF_RE = re.compile(r'\.[^\.]*$')
+
     def run(self):
         """
         :returns boolean for success or failure.
@@ -87,7 +92,7 @@ class VnuValidate:
         greylist = self._empty_cache()
 
         def _mytrim(s):
-            return re.sub('^(?:\\./)?', '', s)
+            return self._TRIM_RE.sub('', s)
 
         for dirpath, _, fns in os.walk(self.path):
             dn = _mytrim(join(t.name, _mytrim(dirpath)))
@@ -96,11 +101,11 @@ class VnuValidate:
                 path = _mytrim(join(dirpath, fn))
                 if self.skip_cb(path):
                     continue
-                html = re.match(r'.*\.html?$', fn)
+                html = self._HTML_SUF_RE.match(fn)
                 out_fn = None
-                if re.match('.*\\.xhtml$', fn) or (
+                if self._XHTML_SUF_RE.match(fn) or (
                         html and not self.non_xhtml_cb(path)):
-                    out_fn = re.sub('\.[^\.]*$', '.xhtml', fn)
+                    out_fn = self._SUF_RE.sub('.xhtml', fn)
                 elif html:
                     out_fn = fn
 

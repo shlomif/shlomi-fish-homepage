@@ -4,11 +4,14 @@ rebuild()
     (
         set -x
         set -e
-        cl_d=../_"$(basename "$PWD")"--clones
+        cl_d=../"$(basename "$PWD")"--clones
         mkdir -p "$cl_d"
         for d in "$cl_d"/*
         do
-            ( cd "$d"; git clean -dxf . )
+            if test -e "$d"
+            then
+                ( cd "$d"; git clean -dxf . )
+            fi
         done
         git clean -dxf .
         bash -x bin/install-npm-deps.sh

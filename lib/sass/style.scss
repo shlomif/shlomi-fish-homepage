@@ -56,10 +56,19 @@ body {
     }
 
     #show_navbar {
+        * {
+            vertical-align: middle;
+        }
         width: 100%;
 
         &.on {
             width: 20%;
+        }
+
+        .logo {
+            // outline: 2px solid hotpink;
+            max-height: 2em;
+            width: auto;
         }
     }
     #navbar_wrapper, #show_navbar {

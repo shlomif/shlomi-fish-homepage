@@ -17,7 +17,7 @@ function build_toggler(args) {
         var was_on = !was_off;
         var is_on_now = !was_on;
 
-        elem.text(was_off ? hide_text : show_text);
+        elem.html(was_off ? hide_text : show_text);
         $(toggled_selector).toggleClass(toggled_class);
         elem.toggleClass("off");
         elem.toggleClass("on");

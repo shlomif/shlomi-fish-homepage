@@ -7,6 +7,8 @@ cache:
         - $HOME/perl_modules
         - $HOME/tidyall_d
 
+go:
+    - '1.11.x'
 os: linux
 dist: trusty
 before_install:

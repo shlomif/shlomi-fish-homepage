@@ -12,7 +12,7 @@
 
 <toc_div />
 
-<h2 id="intro">Introduction</h2>
+<h2_section id="intro" title="Introduction">
 
 <p>
 This is a small, hand-maintained, directory of numerical software:
@@ -20,7 +20,9 @@ spreadsheets, statistical analysis software, computer algebra systems (CASes),
 matrix/tensor-based packages, etc.
 </p>
 
-<h2 id="tensor-based">Tensor-based</h2>
+</h2_section>
+
+<h2_section id="tensor-based" title="Tensor-based">
 
 <ul>
 
@@ -65,8 +67,9 @@ an open-source IDL-clone.
 </ul>
 
 ;;; End of MATLAB-like
+</h2_section>
 
-<h2 id="spreadsheets">Spreadsheets</h2>
+<h2_section id="spreadsheets" title="Spreadsheets">
 
 <ul>
 
@@ -106,7 +109,9 @@ suite.
 
 ;;; End of Spreadsheets.
 
-<h2 id="CASes">Computer Algebra Systems (CASes)</h2>
+</h2_section>
+
+<h2_section id="CASes" title="Computer Algebra Systems (CASes)">
 
 <ul>
 
@@ -148,7 +153,9 @@ Open-source.
 
 ;;; End of Computer Algebra Systems (CASes).
 
-<h2 id="statistical">Statistical Software</h2>
+</h2_section>
+
+<h2_section id="statistical" title="Statistical Software">
 
 <ul>
 
@@ -166,7 +173,9 @@ program for Statistics. Should be very complete.
 
 ;;; End of Statistical Software
 
-<h2 id="libraries">Libraries</h2>
+</h2_section>
+
+<h2_section id="libraries" title="Libraries">
 
 <ul>
 
@@ -199,9 +208,11 @@ restrictive).
 
 ;;; End of libraries
 
-<h2 id="calculators">Calculators</h2>
+</h2_section>
 
-<h3 id="gui-calculators">Graphical (GUI) Calculators</h3>
+<h2_section id="calculators" title="Calculators">
+
+<h3_section id="gui-calculators" title="Graphical (GUI) Calculators">
 
 <ul>
 
@@ -228,7 +239,9 @@ BC or Matlab. Open source, GPLv3.
 
 </ul>
 
-<h3 id="cli-calculators">Command Line Calculators</h3>
+</h3_section>
+
+<h3_section id="cli-calculators" title="Command Line Calculators">
 
 <ul>
 
@@ -251,7 +264,11 @@ Unix Programming Environment</a>.
 
 ;;; End of calculators
 
-<h2 id="links">Links</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="links" title="Links">
 
 <ul>
 
@@ -268,6 +285,10 @@ with many comments.
 
 </ul>
 
-<h2 id="licence">Licence</h2>
+</h2_section>
+
+<h2_section id="licence" title="Licence">
 
 <cc_by_british_blurb year="2011" />
+
+</h2_section>

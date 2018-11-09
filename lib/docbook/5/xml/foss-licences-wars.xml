@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" lang="en">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en">
     <info><title>Open Source Licences Wars</title>
 
         <authorgroup>
@@ -155,7 +155,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     <para>
         I should note that I am not a lawyer, and only write this according
         to my best knowledge, understanding and experience.
-        <footnote xml:id="ianal" title="IANAL">
+        <footnote xml:id="ianal" label="IANAL">
             <para>
                 Some people believe that discussing legal matters should be
                 reserved to people who are Law experts. However, this is
@@ -677,7 +677,7 @@ The Creative Commons Attribution (CC-by) and Attribution-ShareAlike Licences
 Debian legal team concluded that they were not free up to version 3.0, which
 was.
 
-<footnote xml:id="debian-free-software-guidelines-for-non-software" label="DFSG for Non-software">
+<footnote xml:id="debian-free-software-guidelines-for-non-software" label="DFSG-non-sw">
 
     <para>
     I should note that I have issues with the entire Debian policy of

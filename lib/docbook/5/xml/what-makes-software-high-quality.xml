@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" lang="en">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en">
     <info><title>What Makes Software High-Quality?</title>
 
         <authorgroup>
@@ -1317,7 +1317,7 @@ No package named this-does-not-exist
                 Unix flavours</link> and other POSIX-capable or
             ANSI C-capable operating-systems, then writing code
             in x86 Assembly exclusively will make it a non-starter.
-            <footnote xml:id="portions-in-assembly" label="Portions of Assembly">
+            <footnote xml:id="portions-in-assembly" label="Assembly">
                 <para>
                     In some cases, the developers of portable software
                     maintain versions of parts of the code in Assembly of

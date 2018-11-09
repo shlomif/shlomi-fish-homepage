@@ -6,7 +6,7 @@
 <div class="lim_width">
 <img src="../../images/bk2hp-v2.svg" alt="Back to my homepage" style="margin-bottom : 1.5em; height:140px;" />
 
-<h2 id="about">About this image</h2>
+<h2_section id="about" title="About this image">
 
 <p>
 This is a logo not unlike the one used for the film
@@ -20,7 +20,9 @@ one, which is used in the original logo, because I felt it was nicer to the
 eye in this context.
 </p>
 
-<h2 id="why">Why the new version?</h2>
+</h2_section>
+
+<h2_section id="why" title="Why the new version?">
 
 <p>
 The <a href="../bk2hp/">previous version of the image</a> which had been
@@ -34,7 +36,7 @@ could no longer open it in CorelDRAW 4, which reported a missing font.
 
 <p>
 Since this was yet another case of why
-<a href="http://shlomif-tech.livejournal.com/65226.html">non-open-source
+<a href="$(ROOT)/philosophy/computers/open-source/not-trust-non-FOSS/">non-open-source
 software cannot really be trusted and depended on</a>, I eventually decided
 that it may be easier (and better in the long run) to try to redo my
 efforts using open source graphics programs such as
@@ -52,7 +54,9 @@ They can be found in a
 repository</b></a>.
 </p>
 
-<h2 id="the_process">The Design Process</h2>
+</h2_section>
+
+<h2_section id="the_process" title="The Design Process">
 
 <p>
 The design followed that of the previous incarnation, only this time done
@@ -60,7 +64,7 @@ using Inkscape and some scripts and extensions. I would also like to describe
 the false leads.
 </p>
 
-<h3 id="step__wireframe">Step 1: Creating the Wireframe Base Image</h3>
+<h3_section id="step__wireframe" title="Step 1: Creating the Wireframe Base Image">
 
 <p>
 Similar to the old Corel-Draw-based version, I picked up a font that looked
@@ -76,7 +80,9 @@ It looks something like that:
 
 <img src="inkscape-bk2hp-v2-new-image-cropped.png" alt="Base wireframe image in Inkscape" />
 
-<h3 id="step__bezier_envelope">Step 2: Bézier Envelope</h3>
+</h3_section>
+
+<h3_section id="step__bezier_envelope" title="Step 2: Bézier Envelope">
 
 <p>
 Shortly after that I needed to apply a Bézier envelope. I found out that
@@ -89,13 +95,15 @@ the built-in Inkscape envelope effect yielded a deformed effect:
 <p>
 So I sought a different approach. I considered my own ad-hoc effect by doing
 mathematical calculations using a curve and a deformation, but then was
-referred to
+referred to the
 <a href="https://github.com/shlomif/Bezier-Envelope-for-Inkscape">Bézier
-Envelope extension for Inkscape</a> which I was sent by E-mail and placed
-on my GitHub account, which worked nicely and yielded a good effect.
+Envelope extension for Inkscape</a> which I was given by E-mail and placed
+on my GitHub account. This worked nicely and yielded a usable effect.
 </p>
 
-<h3 id="step__perspective">Step 3: Perspective</h3>
+</h3_section>
+
+<h3_section id="step__perspective" title="Step 3: Perspective">
 
 <p>
 After the envelope was done, I wanted to apply a perspective effect. It
@@ -107,7 +115,9 @@ drawn rectangle in Inkscape. So the lines of the perspective had to be
 drawn using the segmented-straight-lines tool with the help of the grid.
 </p>
 
-<h3 id="step__automating_using_a_script">Step 4: Automating Using a Script</h3>
+</h3_section>
+
+<h3_section id="step__automating_using_a_script" title="Step 4: Automating Using a Script">
 
 <p>
 I decided that I wanted to keep as much of the process as automated as
@@ -119,5 +129,9 @@ Inkscape script</a> written in Python, which produced several intermediate
 SVG files, while running subsequent scripts on them to produce other files
 (and doing some other SVG manipulation).
 </p>
+
+</h3_section>
+
+</h2_section>
 
 </div>

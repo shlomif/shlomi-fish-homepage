@@ -7,7 +7,7 @@
 
 <toc_div />
 
-<h2 id="intro">Introduction</h2>
+<h2_section id="intro" title="Introduction">
 
 <p>
 This is a small, hand-maintained, list of automated text processing tools.
@@ -15,7 +15,9 @@ You may also be interested in <a href="../editors-and-IDEs/">my list of
 text editors and IDEs</a>.
 </p>
 
-<h2 id="general_preprocessors">General-Purpose Preprocessors</h2>
+</h2_section>
+
+<h2_section id="general_preprocessors" title="General-Purpose Preprocessors">
 
 <ul>
 
@@ -54,7 +56,9 @@ unmaintained since 1999. Open source (GPLv2).
 
 </ul>
 
-<h2 id="general_template_systems">General-purpose Template Systems</h2>
+</h2_section>
+
+<h2_section id="general_template_systems" title="General-purpose Template Systems">
 
 <ul>
 
@@ -119,7 +123,9 @@ unmaintained since 2010 and does not support Python 3.
 
 </ul>
 
-<h2 id="parser_generators">Parser Generators</h2>
+</h2_section>
+
+<h2_section id="parser_generators" title="Parser Generators">
 
 <ul>
 
@@ -195,7 +201,9 @@ the SQLite project. Open source (public domain).
 
 </ul>
 
-<h2 id="regex_libs">Regular Expression Libraries</h2>
+</h2_section>
+
+<h2_section id="regex_libs" title="Regular Expression Libraries">
 
 <ul>
 
@@ -205,9 +213,12 @@ the SQLite project. Open source (public domain).
 comparison of regular expression engines</a>.
 </p>
 </li>
+
 </ul>
 
-<h2 id="diff_and_patch">Diffing and Patching Tools</h2>
+</h2_section>
+
+<h2_section id="diff_and_patch" title="Diffing and Patching Tools">
 
 <ul>
 
@@ -263,9 +274,11 @@ to GNU diff for comparing files on a word-per-word basis.
 
 </ul>
 
-<h2 id="specialised_processors">Specialised Processors</h2>
+</h2_section>
 
-<h3 id="xml_processors">XML Processors</h3>
+<h2_section id="specialised_processors" title="Specialised Processors">
+
+<h3_section id="xml_processors" title="XML Processors">
 
 <ul>
 
@@ -295,7 +308,11 @@ transformation languages</a> - a Wikipedia page containing more alternatives.
 
 </ul>
 
-<h2 id="unix_text_processing_tools">Standard UNIX Text Processing Tools</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="unix_text_processing_tools" title="Standard UNIX Text Processing Tools">
 
 <ul>
 
@@ -394,8 +411,9 @@ idiosyncrasies).
 </li>
 </ul>
 
-<h2 id="prog_langs_with_text_proc_support">Some General-Purpose
-Programming Languages with Good Text Processing Support</h2>
+</h2_section>
+
+<h2_section id="prog_langs_with_text_proc_support" title="Some General-Purpose Programming Languages with Good Text Processing Support">
 
 <ul>
 <li>
@@ -423,7 +441,9 @@ with many powerful features. Also see <a href="http://perl6maven.com/">Perl
 
 </ul>
 
-<h2 id="links">Links</h2>
+</h2_section>
+
+<h2_section id="links" title="Links">
 
 <ul>
 
@@ -483,7 +503,7 @@ Beginners’ Site</a>.
 
 </ul>
 
-<h3 id="fun-links">Fun Links</h3>
+<h3_section id="fun-links" title="Fun Links">
 
 <ul>
 
@@ -516,6 +536,12 @@ cartoon.
 
 </ul>
 
-<h2 id="licence">Licence</h2>
+</h3_section>
+
+</h2_section>
+
+<h2_section id="licence" title="Licence">
 
 <cc_by_british_blurb year="2012" />
+
+</h2_section>

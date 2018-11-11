@@ -55,33 +55,6 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 
 <toc_div />
 
-<define-tag ebook_for_purchase>
-
-<h2 id="ebook">Ebook for Purchase</h2>
-
-<p>
-An Ebook of the screenplay for purchase in EPUB and MOBI formats.
-</p>
-
-<ul>
-
-<li>
-<a href="https://payhip.com/b/MbZC"><b>Payhip.com</b></a>
-</li>
-
-<li>
-<a href="http://www.lulu.com/shop/shlomi-fish/selina-mandrake-the-slayer/ebook/product-20936805.html">Lulu.com</a>
-</li>
-
-</ul>
-
-<p>
-The Ebooks are made available under the same CC-by-sa licence as the source,
-and can be built from the repository with some technological know how.
-</p>
-
-</define-tag>
-
 <js_script>
 $(function() {
     $(".accordion").accordion({
@@ -152,13 +125,9 @@ Mandrake</a> - about the protagonist.
 
 <div class="fancy_sects">
 
-<section class="sub_section">
+<h2_section id="coverage" title="Coverage">
 
-<h2 id="coverage">Coverage</h2>
-
-<section class="sub_section">
-
-<h3 id="fanfiction.net">FanFiction.Net</h3>
+<h3_section id="fanfiction.net" title="FanFiction.Net">
 
 <ol>
 
@@ -168,11 +137,9 @@ Mandrake</a> - about the protagonist.
 
 </ol>
 
-</section>
+</h3_section>
 
-<section class="sub_section">
-
-<h3 id="coverage_mageia_forums">Mageia Forums</h3>
+<h3_section id="coverage_mageia_forums" title="Mageia Forums">
 
 <ol>
 
@@ -183,11 +150,9 @@ on the Mageia Forums</a>
 
 </ol>
 
-</section>
+</h3_section>
 
-<section class="sub_section">
-
-<h3 id="coverage_fxp_forums">On the fxp.co.il forums</h3>
+<h3_section id="coverage_fxp_forums" title="On the fxp.co.il forums">
 
 <ol>
 
@@ -198,11 +163,9 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 </ol>
 
-</section>
+</h3_section>
 
-<section class="sub_section">
-
-<h3 id="coverage_r_buffy">On the /r/buffy subreddit</h3>
+<h3_section id="coverage_r_buffy" title="On the /r/buffy subreddit">
 
 <ol>
 
@@ -214,17 +177,13 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 </ol>
 
-</section>
+</h3_section>
 
-</section>
+</h2_section>
 
-<section class="sub_section">
+<h2_section id="credits" title="Credits">
 
-<h2 id="credits">Credits</h2>
-
-<section class="sub_section">
-
-<h3 id="d10_image_credits">1d10 Image Credit</h3>
+<h3_section id="d10_image_credits" title="1d10 Image Credit">
 
 <p>
 <a href="http://commons.wikimedia.org/wiki/File:Green-d10-dice.png">1d10
@@ -233,7 +192,7 @@ image</a> taken from Wikimedia Commons by
 the GFDL/CC-by-sa-3.0.
 </p>
 
-</section>
+</h3_section>
 
 <section class="sub_section">
 
@@ -253,8 +212,7 @@ pull request</a> I sent him. Thanks, Marcelo, for your great work!
 
 <section class="sub_section">
 
-<h3 id="sell_ebooks_online"><a href="http://www.hongkiat.com/blog/sell-ebooks/">“20
-Websites To Sell Your EBook”</a></h3>
+<h3 id="sell_ebooks_online"><a href="http://www.hongkiat.com/blog/sell-ebooks/">“20 Websites To Sell Your EBook”</a></h3>
 
 <p>
 A post about websites that allow you to sell your electronic book / EPUB.
@@ -273,11 +231,9 @@ helped me with purchasing some ten-sided dice I was seeking (in Hebrew).
 
 </section>
 
-</section>
+</h2_section>
 
-<section class="sub_section">
-
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+<h2_section id="sources_of_inspiration" title="Sources of Inspiration">
 
 <ul>
 
@@ -421,11 +377,9 @@ of “museum pieces”, and what can be done about it.
 
 <links_to_judaism_and_israel />
 
-</section>
+</h2_section>
 
-<section class="sub_section">
-
-<h2 id="licensing">Licensing</h2>
+<h2_section id="licensing" title="Licensing">
 
 <p>
 Well, since this work is a parody of <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the Vampire Slayer</i></a> (written by
@@ -464,15 +418,11 @@ have some web commercials which I’m making some small money from, and which
 I hope are acceptable to the copyright holders. Please don’t sue me.
 </p>
 
-</section>
+</h2_section>
 
-<section class="sub_section">
+<h2_section id="links" title="Links">
 
-<h2 id="links">Links</h2>
-
-<section class="sub_section">
-
-<h3 id="buffy_links">Buffy Links</h3>
+<h3_section id="buffy_links" title="Buffy Links">
 
 <ul>
 
@@ -507,13 +457,11 @@ Rand’s Buffy the Vampire Slayer</a> (via
 
 </ul>
 
-</section>
+</h3_section>
 
-</section>
+</h2_section>
 
-<section class="sub_section">
-
-<h2 id="see_also">See Also</h2>
+<h2_section id="see_also" title="See Also">
 
 <ul>
 
@@ -545,7 +493,7 @@ facts about Buffy Summers, the protagonist of the show.
 
 </ul>
 
-</section>
+</h2_section>
 
 </div> ;;; /fancy_sects
 

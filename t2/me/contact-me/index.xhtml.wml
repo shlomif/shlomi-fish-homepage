@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "How to Reach Me" />
 <latemp_meta_desc "How to Reach Shlomi Fish: E-mail, IM, mobile phone, IRC and many user-generated content sites." />
@@ -47,7 +48,7 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 
 <dl id="more_contacts_list" class="contact">
 
-<dt>IRC:</dt>
+<dt><my_acronym key="IRC"/>:</dt>
 <dd><code>rindolf</code> on <a href="http://www.freenode.org/">FreeNode</a>,
 <a href="http://www.efnet.org/">EF-Net</a>,
 <a href="http://www.oftc.net/">OFTC</a> and

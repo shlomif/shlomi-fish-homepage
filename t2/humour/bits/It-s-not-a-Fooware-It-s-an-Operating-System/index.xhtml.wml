@@ -1,5 +1,6 @@
 #include "template5.wml"
 #include "Inc/nav_blocks.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "It’s not a Fooware - It’s an Operating System" />
 <latemp_meta_desc "A document that lists several software applications that have grown beyond their original purpose and practically became operating systems." />
@@ -80,7 +81,7 @@ href="http://e-p-i-c.sourceforge.net/">Perl</a>.
 
 <p>
 What do you need in your web browser? Surely you also need SMTP/POP/IMAP
-email (not just webmail), a Newsgroup client, IRC, an HTML editor, plugins and
+email (not just webmail), a Newsgroup client, <my_acronym key="IRC"/>, an HTML editor, plugins and
 extensions, themes and skins, and a kitchen sink. <a
 href="http://www.mozilla.org/projects/seamonkey/">SeaMonkey</a> (formerly the
 Mozilla Suite) has all of these and more. “All your Internet Needs in One

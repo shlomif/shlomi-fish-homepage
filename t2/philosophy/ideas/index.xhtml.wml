@@ -1,5 +1,6 @@
 #include "template5.wml"
 #include "toc_div.wml"
+#include "Inc/acronyms.wml"
 
 <!--
 TODO:
@@ -128,7 +129,7 @@ An idea for a community site for the collection of fortune cookies.
 
 <p>
 From a conversation I had with
-<a href="http://tddpirate.livejournal.com/">TDDPirate</a> on IRC, we came
+<a href="https://tddpirate.zak.co.il/">TDDPirate</a> on <my_acronym key="IRC"/>, we came
 to the conclusion that it would be desirable to have a framework that will
 enable code written in a certain high level language (say Perl) to make
 use of code written in a different high level language (say Python) and that

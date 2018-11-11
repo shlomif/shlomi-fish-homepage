@@ -1,6 +1,6 @@
 #include "template5.wml"
-
 #include "toc_div.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "How to Get Help Online (2013)" />
 
@@ -42,9 +42,9 @@ by posting to
 
 <li>
 <p>
-<b>A.</b> (an Instant Messaging and IRC friend of mine) - for encouraging me to
+<b>A.</b> (an Instant Messaging and <my_acronym key="IRC"/> friend of mine) - for encouraging me to
 try to feature the article on Slashdot, after a chat, during which we concluded
-that IRC was an incredibly useful Internet medium for getting help, yet many
+that <my_acronym key="IRC"/> was an incredibly useful Internet medium for getting help, yet many
 people were oblivious to it.
 </p>
 </li>

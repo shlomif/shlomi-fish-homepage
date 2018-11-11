@@ -1,5 +1,6 @@
 #include "template5.wml"
 #include "Inc/nav_blocks.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "Programs Every Programmer Has Written" />
 <latemp_meta_desc "Programs Every Programmer Has Written" />
@@ -29,7 +30,7 @@ A database abstraction layer, or Object-Relational Mapper (ORM)
 </li>
 
 <li>
-An <a href="http://www.wikipedia.org/wiki/Internet_Relay_Chat"  title="wikipedia:Internet_Relay_Chat">IRC</a> bot
+An <my_acronym key="IRC"/> bot
 </li>
 
 <li>

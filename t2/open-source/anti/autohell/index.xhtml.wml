@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "Escape from GNU Autohell!" />
 
@@ -103,7 +104,7 @@ much more restrictive.
 CMake is much easier to learn than GNU Autotools. It took me less time
 to convert the Freecell Solver distribution to CMake (without having known
 CMake first) than it did to add Autotools support for it in the first place,
-and someone I chatted with on IRC testified the same.
+and someone I chatted with on <my_acronym key="IRC"/> testified the same.
 </p>
 </li>
 </ol>
@@ -121,7 +122,7 @@ Escape from GNU Autohell!
 CMake has a tutorial and a reference document as a large
 page on <a href="http://www.cmake.org/">the CMake site</a>,
 <a href="http://www.cmake.org/Wiki/CMake">a helpful wiki</a>, and web
-searches can also prove of help. It also has a mailing list and an IRC
+searches can also prove of help. It also has a mailing list and an <my_acronym key="IRC"/>
 channel where one can get help. I find it much better than Autoconf and
 friend’s documentation, which tends to be incomplete, verbose, split
 and confusing.

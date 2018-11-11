@@ -1,6 +1,7 @@
 #include "template.wml"
 #include "toc_div.wml"
 #include "div2mag.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "My Cool Links List" />
 <latemp_meta_desc "Shlomi Fish’s Links List: contains links to various sites and pages." />
@@ -735,7 +736,7 @@ Trek: The Next Generation</a> - an insanely funny cross of both
 <li>
 <a href="$(ROOT)/humour/by-others/darien--everybody-is-free.html">Everybody’s
 Free (to Ping Timeout)</a> - a very amusing spoof where the 90’s anthem
-“Everybody’s Free (to Wear Sunscreen)” meets the IRC world.
+“Everybody’s Free (to Wear Sunscreen)” meets the <my_acronym key="IRC"/> world.
 </li>
 <li>
 <a href="$(ROOT)/humour/GNU-Visual-Basic/GNU-Visual-Basic.html">GNU Visual
@@ -1304,7 +1305,7 @@ interesting Manga graphics and sketches.
 </li>
 <li>
 <a href="http://web-server.net/g/brasil/">Pictures from Brazil</a> - Pictures
-of Brazil from a trip by an IRC correspondent.
+of Brazil from a trip by an <my_acronym key="IRC"/> correspondent.
 </li>
 <li>
 <a href="http://www.daemonisch.be/">BSDs Wallpapers</a> - Wallpapers based

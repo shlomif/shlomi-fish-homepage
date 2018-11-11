@@ -3,6 +3,7 @@
 #include "xml_g_fiction.wml"
 #include "toc_div.wml"
 #include "Inc/nav_blocks.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "The Human Hacking Field Guide" />
 <latemp_meta_desc "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." />
@@ -190,9 +191,9 @@ a Great Personal Home Site”</a> - my essay about creating a personal web site.
 
 <li>
 <p>
-<a href="http://freenode.net/">Freenode</a> - an IRC network dedicated for
+<a href="http://freenode.net/">Freenode</a> - an <my_acronym key="IRC"/> network dedicated for
 discussing Free and Open Source Software projects, and other collaborative
-projects, that is featured in the story. <b>Warning:</b> IRC is addictive.
+projects, that is featured in the story. <b>Warning:</b> <my_acronym key="IRC"/> is addictive.
 </p>
 </li>
 
@@ -263,7 +264,7 @@ favourite song of theirs.
 <li>
 <p>
 <a href="$(ROOT)/humour.html#too_girly">“Too Girly”</a> -
-IRC conversation.
+<my_acronym key="IRC"/> conversation.
 </p>
 </li>
 

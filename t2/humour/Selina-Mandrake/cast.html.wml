@@ -2,22 +2,26 @@
 #include "stories/stories-list.wml"
 #include "xml_g_fiction.wml"
 #include "Inc/nav_blocks.wml"
+#include "stories/selina-common.wml"
 
 <latemp_subject "Selina Mandrake - Who Should be the Cast?" />
-<latemp_meta_desc "Selina Mandrake - The Slayer (Buffy Parody) - a geeky Anglo-American high school senior in 2011 California discovers she is none other than the legendary heroine “The Slayer”, who is destined to slay many notable demons." />
 
 <: Shlomif::Homepage::LongStories->render_common_top_elems('selina_mandrake'); :>
 
-<h2 id="about">About</h2>
+<h2_section id="about" title="About">
 
 <p>
 On this page, I would like to note who I think should be the cast for some
 of the characters of Selina Mandrake.
 </p>
 
+<section>
+
+<header>
 <h3 id="selina">Selina Mandrake: <a href="http://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a></h3>
 
 <a href="http://commons.wikimedia.org/wiki/File:Emma_Watson_GoF_Premiere.jpg"><img src="$(ROOT)/humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson" /></a>
+</header>
 
 <p>
 Well, Selina has to be an Englishwoman, right? Otherwise, I feel that
@@ -30,10 +34,16 @@ are seen, which isn't what I want for Selina, who should be the kind of girl
 that people should not feel intimated by.
 </p>
 
+</section>
+
+<section>
+
+<header>
 <h3 id="the-guide">The Guide: <a href="http://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a></h3>
 
 <a href="http://www.flickr.com/photos/genevieve719/4878236040/"><img
 src="images/wil_wheaton-reduced.jpg" alt="Photo of Wil Wheaton" /></a>
+</header>
 
 <p>
 The Guide should be an American, a geek, and someone we
@@ -43,8 +53,15 @@ antagonist). He also can be somewhat older. I think Mr. Wheaton will
 be perfect for all this.
 </p>
 
-<h3 id="kate">Prof. Kate Hampshire / Lady Kate Canterson:
-<a href="http://en.wikipedia.org/wiki/Gabrielle_Anwar">Gabrielle Anwar</a></h3>
+</section>
+
+<section>
+
+<header>
+
+<h3 id="kate">Prof. Kate Hampshire / Lady Kate Canterson: <a href="http://en.wikipedia.org/wiki/Gabrielle_Anwar">Gabrielle Anwar</a></h3>
+
+</header>
 
 <p>
 Anwar lights up the room on fire when she is seen, and she seems suitable
@@ -55,11 +72,16 @@ now I want her to go full circle and play the more real life version of
 Milady de-Winter, Kate Hampshire-Canterson.
 </p>
 
+</section>
+
+<section>
+
+<header>
 <h3 id="cardinal_richelieu">Cardinal Richelieu:
 <a href="http://en.wikipedia.org/wiki/Patrick_Stewart">Patrick Stewart</a></h3>
 
-<a href="http://en.wikipedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore.jpg"><img
-src="images/patrick-stewart-small.jpg" alt="Photo of Patrick Stewart from the English Wikipedia" /></a>
+<a href="http://en.wikipedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore.jpg"><img src="images/patrick-stewart-small.jpg" alt="Photo of Patrick Stewart from the English Wikipedia" /></a>
+</header>
 
 <p>
 I think Stewart resembles
@@ -72,6 +94,10 @@ upgraded version of “The Commander”,
 Jean-Luc Picard</a> (a.k.a: “The Picard”). Finally, Capt. Picard is a
 Frenchman, just like Cardinal Richelieu.
 </p>
+
+</section>
+
+</h2_section>
 
 <nav_blocks>
 

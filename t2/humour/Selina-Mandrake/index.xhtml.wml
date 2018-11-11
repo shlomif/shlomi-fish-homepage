@@ -6,9 +6,9 @@
 #include "toc_div.wml"
 #include "Inc/judaism_and_israel.wml"
 #include "Inc/nav_blocks.wml"
+#include "stories/selina-common.wml"
 
 <latemp_subject "Selina Mandrake - The Slayer (Buffy Parody)" />
-<latemp_meta_desc "Selina Mandrake - The Slayer (Buffy Parody) - a geeky Anglo-American high school senior in 2011 California discovers she is none other than the legendary heroine “The Slayer”, who is destined to slay many notable demons." />
 
 <: Shlomif::Homepage::LongStories->render_common_top_elems('selina_mandrake'); :>
 
@@ -194,9 +194,7 @@ the GFDL/CC-by-sa-3.0.
 
 </h3_section>
 
-<section class="sub_section">
-
-<h3 id="ebookmaker"><a href="http://github.com/setanta/ebookmaker">ebookmaker</a></h3>
+<h3_section id="ebookmaker" href="http://github.com/setanta/ebookmaker" title="ebookmaker">
 
 <p>
 Ebookmaker is a Python 3 script that allows one to generate an EPUB and was
@@ -208,28 +206,24 @@ merged <a href="https://github.com/setanta/ebookmaker/pull/1">a
 pull request</a> I sent him. Thanks, Marcelo, for your great work!
 </p>
 
-</section>
+</h3_section>
 
-<section class="sub_section">
-
-<h3 id="sell_ebooks_online"><a href="http://www.hongkiat.com/blog/sell-ebooks/">“20 Websites To Sell Your EBook”</a></h3>
+<h3_section id="sell_ebooks_online" title="<a href="http://www.hongkiat.com/blog/sell-ebooks/">“20 Websites To Sell Your EBook”</a>">
 
 <p>
 A post about websites that allow you to sell your electronic book / EPUB.
 </p>
 
-</section>
+</h3_section>
 
-<section class="sub_section">
-
-<h3 id="fxp_about_buying_dice"><a href="http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371">Thread in fxp.co.il about buying d10 Dice</a></h3>
+<h3_section id="fxp_about_buying_dice" href="http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371" title="Thread in fxp.co.il about buying d10 Dice">
 
 <p>
 Some people on <a href="http://www.fxp.co.il/">the fxp.co.il forums</a>
 helped me with purchasing some ten-sided dice I was seeking (in Hebrew).
 </p>
 
-</section>
+</h3_section>
 
 </h2_section>
 

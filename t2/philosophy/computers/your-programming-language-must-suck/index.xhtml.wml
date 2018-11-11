@@ -1,7 +1,7 @@
 #include "template5.wml"
 
 <latemp_subject "Your Programming Language Must Suck" />
-<latemp_meta_desc "An essay illustrating the design tradeoffs in programming languages design and why some people will always be unhappy" />
+<latemp_meta_desc "An essay illustrating the design trade-offs in programming languages design and why some people will always be unhappy" />
 
 <h2_section id="text" title="The text">
 
@@ -98,3 +98,31 @@ worse than code with longer methods.</p>
 
 </h2_section>
 
+<links_sect>
+
+<ul>
+
+<li>
+<p>
+<a href="https://shlomif-tech.livejournal.com/57811.html">Original version</a> - as a post
+on my tech blog.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://twitter.com/shlomif/status/1025334909014077440">My Tweet</a> -
+<q>The solution a friend wrote in Haskell for Euler630, and I tried to optimize, while using ghc -O2 is currently slower than cpython and <a href="https://en.wikipedia.org/wiki/PyPy">PyPy</a> runs it 4 times faster. Optimizing Haskell code seems like a dark art.</q>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="$(ROOT)/humour/fortunes/show.cgi?id=compilation-speeds">Compilation Speeds Conversation</a>.
+</p>
+</li>
+</ul>
+
+</links_sect>
+
+<cc_by_licence_section year="2011"/>

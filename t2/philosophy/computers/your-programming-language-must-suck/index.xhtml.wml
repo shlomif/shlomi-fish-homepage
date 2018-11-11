@@ -1,0 +1,100 @@
+#include "template5.wml"
+
+<latemp_subject "Your Programming Language Must Suck" />
+<latemp_meta_desc "An essay illustrating the design tradeoffs in programming languages design and why some people will always be unhappy" />
+
+<h2_section id="text" title="The text">
+
+<p>
+All <a href="https://en.wikipedia.org/wiki/Programming_language">languages</a>
+of the world suck. If you require people to declare variables
+(like in Pascal, C, <a
+    href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
+or Perl 5 with <a href="http://perldoc.perl.org/strict.html">strict</a>), then
+some people will be inconvenienced by the need to declare, and will tell you
+they like variables to spring up upon first use. Without
+variable declarations, then you get various weird side-effects of the implicit
+scoping. If you use curly braces for scoping, then you'll have to type more and
+there's more clutter. With indentation-based scoping (like in Python), you'll
+find it hard to introduce multiple-expression <a
+    href="http://en.wikipedia.org/wiki/Lambda_calculus#First-class_functions">lambdas</a> and <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">some other problems</a>.
+</p>
+
+<p>
+Rob Pike and Paul Graham hated <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming (OOP)</a> and so they
+didn't introduce it in their <a
+    href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">"Go"</a>
+and <a
+    href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">"Arc"</a>
+languages, well after OOP has become mainstream. And guess what? Many people,
+including me, think that OOP is still a good thing (and no, in my opinion, C++
+did not do OOP very well) and so gave up on Arc quickly and did not look
+closely at Go. Many people who oppose OOP claim that it mashes together many
+separate features, such as typing, capability of being instantiated,
+and polymorphism which belong as separate features in the language, but
+naturally it <b>is</b> convenient to have them integrated as one, because
+they are often useful together.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Dynamic_programming_language">Dynamically typed languages</a> (like Perl 5, Python, Ruby, or most dialects of Lisp) possibly
+suffer from many subtle errors&#160;; Statically typed languages (like Haskell)
+are less expressive and it seems that about one third of the language design
+papers published on <a href="http://lambda-the-ultimate.org/">Lambda the
+    Ultimate</a> are about various funky extensions to the Haskell type system
+to allow for better expressiveness.
+</p>
+
+<p>Purely functional languages have no
+assignment and most people find them harder, in part because the world around
+us has a lot of state, and they also need to do funky compiler tricks to make
+you feel like you don't need assignment. Non-functional languages have
+side-effects and so are prone to many errors.</p>
+
+<p>If you have goto or
+goto-like statements (such as exceptions or Perl 5's "last LABEL;" (more like
+"break" in C) or "next LABEL;"), then you encourage code to not be factored
+correctly. If you don't have such stuff, then programmers will hate you for
+having to go through many hoops to write quick-and-dirty code.</p>
+
+<p>Perl 5
+has a dedicated <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a> syntax, which is treated magically by the
+parser. PHP and Java use strings for them, and require weird escaping and
+backslashing rules to interpolate the sub-regexes inside them. And if you
+incorporate a first-order syntax for regular expressions, then people will want
+similar first-order syntaxes for <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, for XML (like some recent versions of
+Visual Basic .NET have), and for all other grammars you may need to embed.</p>
+
+<p>Finally, many people absolutely hate all the clutter created by the leading
+<a
+    href="http://en.wikipedia.org/wiki/Sigil_%28computer_programming%29">sigils</a>
+of Perl 5 (the <code>$</code>, <code>@</code>, etc.), and similar languages, but they allow for much
+better backward compatibility, facilitate the so-called "interpolation" (=
+embedding inside strings), and also give some important visual cues when
+skimming code (even without syntax highlighting).
+</p>
+
+<p><b>You are damned either way</b>, whatever you do.</p>
+
+<p>I could have gone
+on, but I think I got my message across. Thing is, when designing a programming
+language, you need to make a lot of design decisions - what to include, what to
+exclude, etc. However, many of these design decisions are not 100% advantages
+or 100% disadvantages, but in fact trade-offs, and many people will question
+them and be unhappy. You can never please all the people. So make a design
+decision, and stick with it, and realise that <b>your programming language must
+    suck</b>, but that it may suck less for some tasks, or for some people.</p>
+
+<p>Joel on Software <a
+    href="http://www.joelonsoftware.com/items/2003/10/15.html">refers</a> to
+the book <a
+    href="http://www.amazon.com/exec/obidos/ASIN/1400040507/joelonsoftware/ref=nosim"><i>Small
+        Things Considered: Why There Is No Perfect Design</i></a>, which I have
+not read, but I've concluded it holds for programming language design.
+Moreover, even when writing code, we run into many trade-offs. For example, if
+our methods or functions are very short, then they are easier to over-ride and
+re-use, but, in that case, the code would be harder to follow and will perform
+worse than code with longer methods.</p>
+
+</h2_section>
+

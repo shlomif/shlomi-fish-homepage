@@ -314,6 +314,11 @@ my $essays_tree_contents = {
 "philosophy/computers/how-to-share-code-for-getting-help/",
                 },
                 {
+                    text => "Your Programming Language Must Suck",
+                    url =>
+"philosophy/computers/your-programming-language-must-suck/",
+                },
+                {
                     text => "Perl",
                     url  => "philosophy/computers/perl/",
                     title =>

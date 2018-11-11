@@ -31,8 +31,19 @@ Last Updated:
 </dd>
 </dl>
 
+<:
+use HTML::Latemp::Acronyms;
+$::latemp_acroman = HTML::Latemp::Acronyms->new;
+:>
+
+<define-tag my_acronym>
+<set-var %attributes />
+<:
+print $::latemp_acroman->abbr({key => '<get-var key/>',})->{html};
+:>
+</define-tag>
 <define-tag SQL>
-<a href="https://en.wikipedia.org/wiki/SQL"><abbr title="Structured Query Language">SQL</abbr></a>
+<my_acronym key="SQL"/>
 </define-tag>
 
 <h2_section id="how_i_started" title="How I started Working in Elpas">

@@ -1,0 +1,11 @@
+<:
+use HTML::Latemp::Acronyms;
+$::latemp_acroman = HTML::Latemp::Acronyms->new;
+:>
+
+<define-tag my_acronym>
+<set-var %attributes />
+<:
+print $::latemp_acroman->abbr({key => '<get-var key/>',})->{html};
+:>
+</define-tag>

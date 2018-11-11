@@ -1,4 +1,5 @@
 #include "template5.wml"
+#include "Inc/acronyms.wml"
 #include "toc_div.wml"
 
 <latemp_subject "About “Rindolf” - Shlomi Fish’s Nickname" />
@@ -21,7 +22,7 @@
 <h2_section id="what" title="“Rindolf” - Shlomi Fish’s Nickname">
 
 <p>
-I, Shlomi Fish, have decided to allow people on and off <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat"><abbr title="Internet Relay Chat">IRC</abbr></a> to call me
+I, Shlomi Fish, have decided to allow people on and off <my_acronym key="IRC"/> to call me
 “Rindolf”, due to the fact that some non-Hebrew inclined people have problems
 with my private name - <a href="$(ROOT)/meta/FAQ/#your_name">“Shlomi”</a>.
 Some common pet names for Rindolf include “Rin”,

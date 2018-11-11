@@ -11,3 +11,4 @@ endfunction
 map <F2> :s!^<\(h[0-9]\) id="\([^"]\+\)">\(.\+\)</\1>$!\=Foo()!<CR><CR>
 map <F3> :s!^<\(h[0-9]\) id="\([^"]\+\)"><a href="\([^"]\+\)">\(.\+\)</a></\1>$!\=Foo_link()!<CR><CR>
 map <F4> /^<h2_section id="links" title="Links">$/<cr>cc<links_sect><esc>/\/h2_section<cr>cc</links_sect><esc>
+map <F4> /^<h2_section id="intro" title="Introduction">$/<cr>cc<intro><esc>/\/h2_section<cr>cc</intro><esc>

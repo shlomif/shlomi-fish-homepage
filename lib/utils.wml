@@ -187,7 +187,7 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <preserve name plural />
 <set-var %attributes />
 
-<h2_section id="licence" title="Licence">
+<licence_sect>
 
 <p>
 <get-var name /> <if "<get-var plural />" "are" "is" /> free and open-source software (FOSS) distributed
@@ -195,7 +195,7 @@ under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/Expat
 License</a>, a permissive software licence.
 </p>
 
-</h2_section>
+</licence_sect>
 
 <restore name plural />
 
@@ -217,11 +217,11 @@ shlomif@shlomifish.org
 
 <set-var %attributes />
 
-<h2_section id="licence" title="Licence">
+<licence_sect>
 
 <cc_by_british_blurb year="<get-var year />" />
 
-</h2_section>
+</licence_sect>
 
 </define-tag>
 
@@ -238,6 +238,16 @@ shlomif@shlomifish.org
 <define-tag intro endtag="required">
 
 <h2_section id="intro" title="Introduction">
+
+%body
+
+</h2_section>
+
+</define-tag>
+
+<define-tag licence_sect endtag="required">
+
+<h2_section id="licence" title="Licence">
 
 %body
 

@@ -19,3 +19,4 @@ map <F4> /^<h2_section id="intro" title="Introduction">$/<cr>cc<intro><esc>/\/h2
 call Replace_Sect('about', 'About', 'about_sect')
 call Replace_Sect('see_also', 'See Also', 'see_also')
 call Replace_Sect('news', 'News', 'news_sect')
+call Replace_Sect('licence', 'Licence', 'licence_sect')

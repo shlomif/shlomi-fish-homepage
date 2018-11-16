@@ -289,6 +289,51 @@ such games.
 
 </section>
 
+<h3_section id="nsbcpp" title="nsbcpp - the not so braindead C preprocessor">
+
+<p>
+An extended version of the <a href="https://en.wikipedia.org/wiki/C_preprocessor">C preprocessor</a> which will provide:
+</p>
+
+<ol>
+<li>
+<p>
+Multi-line blocks
+</p>
+</li>
+<li>
+<p>
+inner block conditionals using if/else/etc.
+</p>
+</li>
+<li>
+<p>
+for/while/foreach loops
+</p>
+</li>
+<li>
+<p>
+blocks as arguments.
+</p>
+</li>
+<li>
+<p>
+functions
+</p>
+</li>
+<li>
+<p>
+utility built-ins
+</p>
+</li>
+<li>
+<p>
+Objects/structs/records / <a href="https://en.wikipedia.org/wiki/Associative_array">dictionaries</a>, methods, and inheritance.
+</p>
+</li>
+</ol>
+</h3_section>
+
 </section>
 
 </div>

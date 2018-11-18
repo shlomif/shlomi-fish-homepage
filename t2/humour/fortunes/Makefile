@@ -1,30 +1,30 @@
 include fortunes-list.mak
 
-FORTUNES_PERL = perl -I. -MShlomifFortunesMake -e
-VERSION_FILE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->version_file;')
+FORTUNES_PERL := perl -I. -MShlomifFortunesMake -e
+VERSION_FILE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->version_file;')
 
-VER = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->ver;')
+VER := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->ver;')
 
-DIST_BASE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
+DIST_BASE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
 
-INDEX_FILE = index.html
+INDEX_FILE := index.html
 
-SOURCE_FILES_LIST = source-files-list.html
+SOURCE_FILES_LIST := source-files-list.html
 
-RPM_SPEC = $(DIST_BASE).spec
-RPM_SPEC_IN = $(RPM_SPEC).in
+RPM_SPEC := $(DIST_BASE).spec
+RPM_SPEC_IN := $(RPM_SPEC).in
 
-DIST_DIR = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_dir;')
+DIST_DIR := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_dir;')
 
-PACKAGE_BASE = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->package_base;')
+PACKAGE_BASE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->package_base;')
 
-FILES = $(FORTUNES_FILES_BASE)
+FILES := $(FORTUNES_FILES_BASE)
 
-DATS = $(addsuffix .dat,$(FILES))
+DATS := $(addsuffix .dat,$(FILES))
 
-XMLS = $(addsuffix .xml,$(FILES))
+XMLS := $(addsuffix .xml,$(FILES))
 
-XHTMLS = $(patsubst %.xml,%.xhtml,$(XMLS))
+XHTMLS := $(patsubst %.xml,%.xhtml,$(XMLS))
 
 
 .PHONY: all test html distdir upload

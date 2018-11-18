@@ -66,7 +66,7 @@ class MyTests(vnu_validator.VnuTest):
                     (?:Perl/Lightning/Mojolicious/mojolicious-slides\.x?html)
                         |
                     (?:Perl/Newbies/
-                        lecture[1-5](?:--all-in-one-html)?/.*?\.x?html
+                        lecture[1-5](?:--all-in-one-html)?/index\.x?html
                     )
                         |
                     (?:

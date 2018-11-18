@@ -49,9 +49,10 @@ class MyTests(vnu_validator.VnuTest):
             def _cb(path):
                 return re.search(_re, path)
             return _cb
+        xhtml_ext = '\\.x?html'
         _skip_cb = _create_cb("""
         (?:
-            (?:/t2/index\.xhtml)
+            (?:/t2/index\\.xhtml)
                 |
             (?:/t2/lecture/
                 (?:
@@ -59,14 +60,14 @@ class MyTests(vnu_validator.VnuTest):
                         hebrew-html-tutorial.raw.html
                     )
                     |
-                    (?: Pres-Tools/Perl-Point/slide[0-9]+\.htm
+                    (?: Pres-Tools/Perl-Point/slide[0-9]+\\.htm
                     )
                     |
                 (?:
-                    (?:Perl/Lightning/Mojolicious/mojolicious-slides\.x?html)
+                    (?:Perl/Lightning/Mojolicious/mojolicious-slides%(ext)s)
                         |
                     (?:Perl/Newbies/
-                        lecture[1-5](?:--all-in-one-html)?/index\.x?html
+                        lecture[1-5](?:--all-in-one-html)?/index%(ext)s
                     )
                         |
                     (?:
@@ -92,7 +93,7 @@ class MyTests(vnu_validator.VnuTest):
                             |
                         mini/mdda
                     )
-                    /(?:slides|slides--all-in-one-html)/.*\.x?html
+                    /(?:slides|slides--all-in-one-html)/.*%(ext)s
                 )
                 )
             )
@@ -113,9 +114,9 @@ class MyTests(vnu_validator.VnuTest):
             (?: MathVentures/.*? )
                 |
             (?: humour/
-                (?: by-others/oded-c/\S+\.x?html
+                (?: by-others/oded-c/\\S+%(ext)s
                     |
-                Blue-Rabbit-Log/ideas\.xhtml
+                Blue-Rabbit-Log/ideas\\.xhtml
                 )
             )
                 |
@@ -123,7 +124,7 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?: work/.*? )
         )$
-            """)
+            """ % {'ext': xhtml_ext})
         _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
                                  'Tests/data/cache/vnu-html-validator.json')

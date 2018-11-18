@@ -62,7 +62,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 'id'         => $_,
                 'source_dir' => $_,
                 'dest_dir'   => "\$(ALL_DEST_BASE)/$_"
-                }
+            }
         } (qw(common t2))
     ],
     out_dir                    => $DIR,
@@ -130,9 +130,10 @@ sub _my_system
     }
 }
 
+# [ $^X, "./bin/gen-fortunes.pl" ],
+
 foreach my $cmd (
     [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
-    [ $^X, "./bin/gen-fortunes.pl" ],
     [ $^X, "./bin/gen-deps-mak.pl" ],
     [ $^X, "./lib/factoids/gen-html.pl" ],
     )

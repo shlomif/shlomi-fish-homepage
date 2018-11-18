@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>[% slide_heading %]</title>
+<meta charset="[% character_encoding %]" />
+<meta name="generator" content="[% spork_version %]" />
+<link rel='icon' href='favicon.png' />
+[% FOR css_file = hub.css.files -%]
+  <link rel="stylesheet" type="text/css" href="[% css_file %]" />
+[% END -%]
+<style><!--
+[% INCLUDE slide.css %]
+--></style>
+<script>
+[% INCLUDE controls.js %]
+</script>
+</head>
+<body>
+<div id="topbar">
+<table>
+<tr>
+<td style="width:13%;">[% presentation_topic %]</td>
+<td style="width:73%;text-align:center;">
+    <a accesskey="s" href="start.html">[% presentation_title %]</a>
+</td>
+<td style="width:13%;text-align:right;">
+    [% slide_num ? "#$slide_num" : ' ' %]
+</td>
+</tr>
+</table>
+</div>
+<!-- END top -->

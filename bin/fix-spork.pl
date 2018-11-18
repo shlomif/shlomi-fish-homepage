@@ -34,7 +34,6 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
         sub {
 
             $_ = '' if m%\Q<link rel="stylesheet" type="text/css" href="" />\E%;
-            s/(<table)/$1 summary="Navigation aids" /g;
             s/[\t ]+(\n?)\z/$1/;
         }
     );

@@ -23,6 +23,8 @@ foreach my $fn (@fns)
         sub {
 s%<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd">%<!DOCTYPE html>%gms;
 s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset="utf-8"/>%gms;
+            s%<tt>%<code>%gms;
+            s%</tt>%</code>%gms;
 
             s%<a accesskey='\S+'\s+href="">([^<]+)</a>%<strong>$1</strong>%gms;
             s%<style type="text/css">%<style>%gms;

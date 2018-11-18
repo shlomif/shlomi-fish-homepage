@@ -60,7 +60,7 @@ foreach my $lfn (@dests)
     }
 }
 my @FLAGS = ( @WML_FLAGS, '-o', );
-my $proc = sub {
+my $proc  = sub {
     $obj->run_with_ARGV(
         {
             ARGV => [ @FLAGS, @{ shift(@_)->[0] } ],

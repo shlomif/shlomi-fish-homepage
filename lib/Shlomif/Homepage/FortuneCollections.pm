@@ -268,7 +268,7 @@ sub write_epub_json
                             +{
                                 type   => 'text',
                                 source => ( $_->id() . ".xhtml" ),
-                                }
+                            }
                         } @{ $class->get_fortune_records() },
                     ),
                 ],

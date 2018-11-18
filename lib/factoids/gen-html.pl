@@ -1052,7 +1052,7 @@ my $new_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
             +{
                 url  => "humour/bits/facts/" . $_->url_base() . "/",
                 text => $_->title(),
-                }
+            }
         } @pages
     ]
 );

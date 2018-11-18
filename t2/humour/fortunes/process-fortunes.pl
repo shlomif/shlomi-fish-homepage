@@ -12,7 +12,7 @@ use List::MoreUtils (qw(any));
 use MooX (qw( late ));
 
 has '_id' => ( is => 'rw', isa => 'Int', default => sub { return 0; }, );
-has '_xml_writer' => ( is => 'rw', isa => 'Maybe[XML::Writer]' );
+has '_xml_writer'              => ( is => 'rw', isa => 'Maybe[XML::Writer]' );
 has 'unix_fortune_files_paths' => (
     is       => 'ro',
     isa      => 'ArrayRef[Str]',

@@ -13,7 +13,7 @@ use Moo;
 
 {
     my $qp_slidy = path("lib/presentations/qp/common/slidy.js")->slurp_utf8;
-    my $css_tt = Template->new( {} );
+    my $css_tt   = Template->new( {} );
     my $qp_template_en_text =
         path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
     my $qp_template_he_text =
@@ -128,7 +128,7 @@ my $quadp_presentations = {
                     lang     => 'en',
                     dir      => "perl-for-newbies/$_",
                     dest_dir => "lecture/Perl/Newbies/lecture$_",
-                    }
+                }
             } ( 1 .. 5 )
         ),
         {

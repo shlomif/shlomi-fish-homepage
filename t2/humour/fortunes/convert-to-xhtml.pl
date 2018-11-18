@@ -27,7 +27,7 @@ my $SUF  = '»גבא⋄⋄»';
 {
     use XML::LibXML::XPathContext;
     my $doc = XML::LibXML->load_xml( location => $abs_out_fn );
-    my $xc = XML::LibXML::XPathContext->new($doc);
+    my $xc  = XML::LibXML::XPathContext->new($doc);
     $xc->registerNs( 'html' => "http://www.w3.org/1999/xhtml" );
     my $finder = URI::Find->new(
         sub {

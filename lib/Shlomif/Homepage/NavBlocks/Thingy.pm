@@ -5,7 +5,7 @@ use warnings;
 
 use MooX (qw( late ));
 
-has 'cache' => ( is => 'rw' );
+has 'cache'     => ( is => 'rw' );
 has 'is_cached' => ( is => 'rw', isa => 'Bool', default => 0 );
 
 sub cached_render

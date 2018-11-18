@@ -22,7 +22,7 @@ my %skip = (
         "philosophy/computers/web/which-wiki/update-2006-07/index.html",
         "philosophy/open-letter/open_letter.html",
         "rwlock/index.html",
-        )
+    )
 
 );
 

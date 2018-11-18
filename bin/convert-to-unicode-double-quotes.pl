@@ -20,7 +20,7 @@ foreach my $para ( $xc->findnodes('//db5:para') )
     print STDERR +( $num_paras++ ), "\n";
     foreach my $text_node ( $xc->findnodes( '//text()', $para ) )
     {
-        my $str = $text_node->nodeValue();
+        my $str   = $text_node->nodeValue();
         my $count = () = ( $str =~ m{"}g );
         if ( $count > 0 and ( ( $count % 2 ) == 0 ) )
         {

@@ -20,7 +20,7 @@ my $half_width  = $width * 0.5;
 my $half_height = $height * 0.5;
 
 # Calculate some constants
-my $angle = rad2deg( atan2( $proportion, 1 - $proportion ) );
+my $angle      = rad2deg( atan2( $proportion, 1 - $proportion ) );
 my $size_ratio = sqrt( $proportion**2 + ( 1 - $proportion )**2 );
 
 my $svg = SVG->new( width => $width, height => $height, );

@@ -54,7 +54,7 @@ MAIN:
     }
 }
 
-my $num = 100;
+my $num    = 100;
 my @points = ( map { $_ / $num } ( -$num .. $num ) );
 
 my $good = pdl( [ map { sin( $_ * PI() ) } @points ] );

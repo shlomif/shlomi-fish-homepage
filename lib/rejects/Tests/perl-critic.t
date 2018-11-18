@@ -19,7 +19,7 @@ sub mtime
 }
 
 my $files_mtime = max( map { mtime($_); } @files );
-my $TS = 'Tests/data/cache/perl-critic.timestamp';
+my $TS          = 'Tests/data/cache/perl-critic.timestamp';
 if ( all_critic_ok( ( $files_mtime < mtime($TS) ) ? ( $files[0] ) : @files ) )
 {
     utime( undef, undef, $TS );

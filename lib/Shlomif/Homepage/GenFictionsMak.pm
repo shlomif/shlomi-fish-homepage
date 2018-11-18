@@ -138,7 +138,7 @@ FICT:
             @{
                 _calc_fiction_story_makefile_lines( $_,
                     \@fiction_docs_basenames )
-                }
+            }
         } @$fiction_data
     );
 

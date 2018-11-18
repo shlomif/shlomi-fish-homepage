@@ -37,7 +37,7 @@ my @matches = (
 );
 
 my $re_s = join( "|", map { '(?:' . quotemeta($_) . ')' } @matches );
-my $re = qr/\b$re_s\b/i;
+my $re   = qr/\b$re_s\b/i;
 
 $content =~ s{($re)}{to_unicode($1)}egi;
 

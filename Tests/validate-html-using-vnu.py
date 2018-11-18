@@ -64,10 +64,10 @@ class MyTests(vnu_validator.VnuTest):
                     )
                     |
                 (?:
-                    (?:Perl/Lightning/Mojolicious/mojolicious-slides%(ext)s)
+                    (?:Perl/Lightning/Mojolicious/mojolicious-slides{ext})
                         |
                     (?:Perl/Newbies/
-                        lecture[1-5](?:--all-in-one-html)?/index%(ext)s
+                        lecture[1-5](?:--all-in-one-html)?/index{ext}
                     )
                         |
                     (?:
@@ -93,7 +93,7 @@ class MyTests(vnu_validator.VnuTest):
                             |
                         mini/mdda
                     )
-                    /(?:slides|slides--all-in-one-html)/.*%(ext)s
+                    /(?:slides|slides--all-in-one-html)/.*{ext}
                 )
                 )
             )
@@ -114,7 +114,7 @@ class MyTests(vnu_validator.VnuTest):
             (?: MathVentures/.*? )
                 |
             (?: humour/
-                (?: by-others/oded-c/\\S+%(ext)s
+                (?: by-others/oded-c/\\S+{ext}
                     |
                 Blue-Rabbit-Log/ideas\\.xhtml
                 )
@@ -124,7 +124,7 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?: work/.*? )
         )$
-            """ % {'ext': xhtml_ext})
+            """.format(ext=xhtml_ext))
         _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
                                  'Tests/data/cache/vnu-html-validator.json')

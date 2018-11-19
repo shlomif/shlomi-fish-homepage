@@ -25,30 +25,19 @@ then
     sudo apt-get update -qq
     sudo apt-get --no-install-recommends install -y ack-grep asciidoc build-essential cmake cpanminus dbtoepub docbook-defguide docbook-xsl docbook-xsl-ns fortune-mod hunspell inkscape myspell-en-gb libdb5.3-dev libgd-dev libhunspell-dev libncurses-dev libpcre3-dev libperl-dev libxml2-dev mercurial myspell-en-gb lynx optipng perl python3 python3-setuptools python3-pip silversearcher-ag tidy valgrind wml xsltproc xz-utils zip
     sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
-    cpanm --notest local::lib
+    cpanm local::lib
     eval "$(GIMME_GO_VERSION=1.11 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
-    cpanm --notest Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
+    cpanm Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     cpanm --notest HTML::Tidy
-    cpanm -n HTML::T5
+    cpanm HTML::T5
     # For wml
     cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size Term::ReadKey
     # For quadp
     cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-    cpanm -n Markdent Parallel::ForkManager::Segmented Moo MooX MooX::late Test::Code::TidyAll Text::Hunspell \
-        XML::Grammar::Fiction::App::FromProto \
-        XML::Grammar::Fiction::App::ToDocBook \
-        XML::Grammar::Fortune \
-        XML::Grammar::Fortune::Synd::App \
-        XML::Grammar::Fortune::ToText \
-        XML::Grammar::ProductsSyndication \
-        XML::Grammar::Screenplay::App::FromProto \
-        XML::Grammar::Screenplay::App::ToHTML \
-        XML::Grammar::Vered \
-
     deps-app plinst -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator Zenfilter
@@ -71,7 +60,7 @@ then
     cpanm --notest Alien::Tidyp YAML::XS
     bash -x bin/install-tidyp-systemwide.bash
     cpanm --notest HTML::Tidy
-    cpanm -n HTML::T5
+    cpanm HTML::T5
     h=~/Docs/homepage/homepage
     mkdir -p "$h"
     git clone https://github.com/shlomif/shlomi-fish-homepage "$h/trunk"

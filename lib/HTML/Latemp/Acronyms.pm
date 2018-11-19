@@ -21,7 +21,8 @@ sub abbr
 {
     my ( $self, $args ) = @_;
 
-    my $key = $args->{key};
+    my $key     = $args->{key};
+    my $no_link = $args->{no_link};
 
     my $rec = $self->_dict->{$key};
 
@@ -30,8 +31,9 @@ sub abbr
         Carp::confess("unknown key '$key'!");
     }
 
-    return +{ html =>
-qq{<a href="$rec->{url}"><abbr title="$rec->{title}">$rec->{abbr}</abbr></a>},
+    my $tag = qq{<abbr title="$rec->{title}">$rec->{abbr}</abbr>};
+
+    return +{ html => ( $no_link ? $tag : qq{<a href="$rec->{url}">$tag</a>} ),
     };
 }
 

@@ -77,8 +77,6 @@ class MyTests(vnu_validator.VnuTest):
                         )
                             |
                         Graham-Function
-                            |
-                        Haskell
                     )
                     )
                         |
@@ -91,6 +89,10 @@ class MyTests(vnu_validator.VnuTest):
                     mini/mdda
                 )
                 /(?:slides|slides--all-in-one-html)/.*{ext}
+                            |
+                (?:Perl/Haskell/
+                    (?:slides|slides--all-in-one-html)/index{ext}
+                )
             )
         )""".format(ext=xhtml_ext)
         _skip_cb = _create_cb("""

@@ -12,6 +12,8 @@ use strict;
 use warnings;
 
 use Path::Tiny qw/ path /;
+use XML::LibXML               ();
+use XML::LibXML::XPathContext ();
 
 my @fns = @ARGV;
 
@@ -39,6 +41,26 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
             s/[\t ]+(\n?)\z/$1/;
         }
     );
+    my $p         = XML::LibXML->new;
+    my $indiv_dom = $p->parse_file($fn);
+
+    my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
+    my $ns  = "http://www.w3.org/1999/xhtml";
+    $xpc->registerNs( 'xhtml', $ns );
+    foreach my $node (
+        $xpc->findnodes(
+"//xhtml:ul/xhtml:ul | //xhtml:ul/xhtml:ol | //xhtml:ol/xhtml:ul | //xhtml:ol/xhtml:ol"
+        )
+        )
+    {
+        my $parent = $node->parentNode;
+        my $copy   = $node->cloneNode(1);
+        my $li     = XML::LibXML::Element->new('li');
+        $li->setNamespace($ns);
+        $li->appendChild($copy);
+        $parent->replaceChild( $li, $node );
+    }
+    $fh->spew_utf8( $indiv_dom->toString() );
 }
 
 foreach my $I (@fns)

@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 use MyNavData;
 use HTML::Widgets::NavMenu;
 use MyNavLinks;
@@ -58,7 +59,7 @@ my $my_THE_filename = "meta/old-site-snapshots/";
 
     use vars qw($leading_path_string);
 
-    $leading_path_string = join( " &rarr; ",
+    $leading_path_string = join( " → ",
         ( map { $render_leading_path_component->($_) } @$leading_path ) );
 
     use vars qw($nav_links_renderer);
@@ -112,7 +113,7 @@ my $render_leading_path_component = sub {
         . $component->label() . "</a>";
 };
 
-print join( " &rarr; ",
+print join( " → ",
     ( map { $render_leading_path_component->($_) } @$total_leading_path ) );
 
 print "\n";

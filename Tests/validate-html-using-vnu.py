@@ -80,8 +80,6 @@ class MyTests(vnu_validator.VnuTest):
                     )
                     )
                         |
-                    SCM/subversion/for-pythoneers
-                        |
                     Vim/beginners
                         |
                     WebMetaLecture

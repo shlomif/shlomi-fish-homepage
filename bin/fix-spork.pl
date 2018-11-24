@@ -47,18 +47,21 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
     my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
     my $ns  = "http://www.w3.org/1999/xhtml";
     $xpc->registerNs( 'xhtml', $ns );
-    foreach my $node (
-        $xpc->findnodes(
+    while (
+        my @nodes = $xpc->findnodes(
 "//xhtml:ul/xhtml:ul | //xhtml:ul/xhtml:ol | //xhtml:ol/xhtml:ul | //xhtml:ol/xhtml:ol"
         )
         )
     {
-        my $parent = $node->parentNode;
-        my $copy   = $node->cloneNode(1);
-        my $li     = XML::LibXML::Element->new('li');
-        $li->setNamespace($ns);
-        $li->appendChild($copy);
-        $parent->replaceChild( $li, $node );
+        foreach my $node ( $nodes[0] )
+        {
+            my $parent = $node->parentNode;
+            my $copy   = $node->cloneNode(1);
+            my $li     = XML::LibXML::Element->new('li');
+            $li->setNamespace($ns);
+            $li->appendChild($copy);
+            $parent->replaceChild( $li, $node );
+        }
     }
     $fh->spew_utf8( $indiv_dom->toString() );
 }

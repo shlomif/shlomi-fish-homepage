@@ -75,12 +75,8 @@ class MyTests(vnu_validator.VnuTest):
                                 Test-Run|Too-Many-Ways
                             )
                         )
-                            |
-                        Graham-Function
                     )
                     )
-                        |
-                    Vim/beginners
                         |
                     WebMetaLecture
                         |

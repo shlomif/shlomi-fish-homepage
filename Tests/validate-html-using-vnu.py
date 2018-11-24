@@ -68,12 +68,12 @@ class MyTests(vnu_validator.VnuTest):
                     |
                 (?:
                     WebMetaLecture
-                        |
-                    mini/mdda
                 )
                 /{slides_dir}/.*{ext}
                             |
-                (?:Perl/Haskell/
+                (?:(?:Perl/Haskell
+                        |
+                    mini/mdda )/
                     {slides_dir}/index{ext}
                 )
             )

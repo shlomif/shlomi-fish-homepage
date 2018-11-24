@@ -50,6 +50,7 @@ class MyTests(vnu_validator.VnuTest):
                 return re.search(_re, path)
             return _cb
         xhtml_ext = '\\.x?html'
+        slides_dir = "(?:slides|slides--all-in-one-html)"
 
         lecture_re = """
         (?:
@@ -61,8 +62,6 @@ class MyTests(vnu_validator.VnuTest):
             )
             |
             (?:
-                (?:Perl/Lightning/Mojolicious/mojolicious-slides{ext})
-                    |
                 (?:Perl/Newbies/
                     lecture[1-5](?:--all-in-one-html)?/index{ext}
                 )
@@ -72,13 +71,13 @@ class MyTests(vnu_validator.VnuTest):
                         |
                     mini/mdda
                 )
-                /(?:slides|slides--all-in-one-html)/.*{ext}
+                /{slides_dir}/.*{ext}
                             |
                 (?:Perl/Haskell/
-                    (?:slides|slides--all-in-one-html)/index{ext}
+                    {slides_dir}/index{ext}
                 )
             )
-        )""".format(ext=xhtml_ext)
+        )""".format(ext=xhtml_ext, slides_dir=slides_dir)
         _skip_cb = _create_cb("""
         (?:
             (?:/t2/index\\.xhtml)

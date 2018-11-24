@@ -68,16 +68,6 @@ class MyTests(vnu_validator.VnuTest):
                 )
                     |
                 (?:
-                    (?:Perl/
-                    (?:
-                        (?:Lightning/
-                            (?:Opt-Multi-Task-in-PDL|
-                                Test-Run|Too-Many-Ways
-                            )
-                        )
-                    )
-                    )
-                        |
                     WebMetaLecture
                         |
                     mini/mdda

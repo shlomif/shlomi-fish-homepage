@@ -50,53 +50,54 @@ class MyTests(vnu_validator.VnuTest):
                 return re.search(_re, path)
             return _cb
         xhtml_ext = '\\.x?html'
+
+        lecture_re = """
+        (?:
+            (?: HTML-Tutorial/v1/xhtml1/hebrew/
+                hebrew-html-tutorial.raw.html
+            )
+            |
+            (?: Pres-Tools/Perl-Point/slide[0-9]+\\.htm
+            )
+            |
+            (?:
+                (?:Perl/Lightning/Mojolicious/mojolicious-slides{ext})
+                    |
+                (?:Perl/Newbies/
+                    lecture[1-5](?:--all-in-one-html)?/index{ext}
+                )
+                    |
+                (?:
+                    (?:Perl/
+                    (?:
+                        (?:Lightning/
+                            (?:Opt-Multi-Task-in-PDL|
+                                Test-Run|Too-Many-Ways
+                            )
+                        )
+                            |
+                        Graham-Function
+                            |
+                        Haskell
+                    )
+                    )
+                        |
+                    SCM/subversion/for-pythoneers
+                        |
+                    Vim/beginners
+                        |
+                    WebMetaLecture
+                        |
+                    mini/mdda
+                )
+                /(?:slides|slides--all-in-one-html)/.*{ext}
+            )
+        )""".format(ext=xhtml_ext)
         _skip_cb = _create_cb("""
         (?:
             (?:/t2/index\\.xhtml)
                 |
-            (?:/t2/lecture/
-                (?:
-                    (?: HTML-Tutorial/v1/xhtml1/hebrew/
-                        hebrew-html-tutorial.raw.html
-                    )
-                    |
-                    (?: Pres-Tools/Perl-Point/slide[0-9]+\\.htm
-                    )
-                    |
-                (?:
-                    (?:Perl/Lightning/Mojolicious/mojolicious-slides{ext})
-                        |
-                    (?:Perl/Newbies/
-                        lecture[1-5](?:--all-in-one-html)?/index{ext}
-                    )
-                        |
-                    (?:
-                        (?:Perl/
-                        (?:
-                            (?:Lightning/
-                                (?:Opt-Multi-Task-in-PDL|
-                                    Test-Run|Too-Many-Ways
-                                )
-                            )
-                                |
-                            Graham-Function
-                                |
-                            Haskell
-                        )
-                        )
-                            |
-                        SCM/subversion/for-pythoneers
-                            |
-                        Vim/beginners
-                            |
-                        WebMetaLecture
-                            |
-                        mini/mdda
-                    )
-                    /(?:slides|slides--all-in-one-html)/.*{ext}
-                )
-                )
-            )
+            (?:/t2/lecture/{lecture_re})
                 |
             (?:/
                 (?:MANIFEST|SFresume[a-z_A-Z]*|
@@ -124,7 +125,7 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?: work/.*? )
         )$
-            """.format(ext=xhtml_ext))
+            """.format(ext=xhtml_ext, lecture_re=lecture_re))
         _non_xhtml_cb = _create_cb('jquery-ui')
         return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
                                  'Tests/data/cache/vnu-html-validator.json')

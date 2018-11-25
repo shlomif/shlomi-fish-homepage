@@ -1693,7 +1693,7 @@ static site generator that I tried.
 See <a href="#how_site_is_generated">above</a> - most of the site is generated
 using code and data and is served as static content on the server. There are
 about three
-<a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> scripts written in Perl 5 using
+<my_acronym key="CGI"/> scripts written in Perl 5 using
 <cpan_dist d="CGI-Minimal" /> but they do not serve most of the content.
 </p>
 

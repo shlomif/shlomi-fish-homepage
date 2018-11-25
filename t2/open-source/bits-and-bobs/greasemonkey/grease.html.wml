@@ -50,7 +50,7 @@ of “from=rss” in the URL</a></h2>
 <p>
 I am always annoyed that when I follow links in the RSS feeds of
 <a href="http://slashdot.org/">Slashdot</a> or other Slash-based sites,
-I’m getting a “?from=rss” or “&amp;from=rss” CGI parameter at the URL.
+I’m getting a “?from=rss” or “&amp;from=rss” <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">HTTP GET</a> parameter at the URL.
 This later implies more work for me when I want to link to them.
 </p>
 

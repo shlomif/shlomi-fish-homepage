@@ -1,6 +1,6 @@
 #include "template5.wml"
-
 #include "toc_div.wml"
+#include "Inc/acronyms.wml"
 
 <latemp_subject "Shlomi Fish at Cortext: HTML, UNIX and Perl - oh my!" />
 <latemp_meta_desc "Some Memoirs of Shlomi Fish when Working at Cortext" />
@@ -215,7 +215,7 @@ All these computers served for our job in setting up sites for clients, using
 HTML (a very old version, where best viewed in the Netscape browser, was the
 de-facto standard), the
 <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache
-web server</a>, and CGI scripts written in Perl 5. Ah, the bad old days.
+web server</a>, and <my_acronym key="CGI"/> scripts written in Perl 5. Ah, the bad old days.
 </p>
 
 </h2_section>

@@ -3,7 +3,7 @@ package VimIface;
 use strict;
 use warnings;
 
-use Text::VimColor ();
+use Shlomif::TextVimColorXHTML5 ();
 use Path::Tiny qw/ path /;
 
 sub is_newer
@@ -29,11 +29,12 @@ sub get_syntax_highlighted_html_from_file
 
     if ( is_newer( $filename, $html_filename ) )
     {
-        my $syntax = Text::VimColor->new(
+        my $syntax = Shlomif::TextVimColorXHTML5->new(
             file           => $filename,
             html_full_page => 1,
             ( $args->{'filetype'} ? ( filetype => $args->{'filetype'} ) : () ),
         );
+        $syntax->{xhtml5} = 1;
 
         path($html_filename)
             ->spew( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr );

@@ -8,7 +8,7 @@ use Moo;
 use Path::Tiny qw/ path /;
 use File::Update qw/ write_on_change /;
 use Template                         ();
-use Text::VimColor                   ();
+use Shlomif::TextVimColorXHTML5      ();
 use Shlomif::Homepage::Presentations ();
 
 my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
@@ -40,10 +40,11 @@ sub generate
     foreach my $fn ( split /\n/, $BASENAMES )
     {
         my $ffn = "lib/presentations/qp/Website-Meta-Lecture/src/examples/$fn";
-        my $syntax = Text::VimColor->new(
+        my $syntax = Shlomif::TextVimColorXHTML5->new(
             file           => $ffn,
             html_full_page => 1,
         );
+        $syntax->{xhtml5} = 1;
 
         write_on_change( path( $ffn . ".html" ),
             \( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr ) );

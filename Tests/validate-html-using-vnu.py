@@ -65,13 +65,15 @@ class MyTests(vnu_validator.VnuTest):
                 (?:Perl/Newbies/
                     lecture[1-5](?:--all-in-one-html)?/index{ext}
                 )
-                    |
+                        |
                 (?:
-                    WebMetaLecture
+                    WebMetaLecture/
+                        {slides_dir}/examples/frames(?:/dest)?/frames{ext}
                 )
-                /{slides_dir}/.*{ext}
                             |
                 (?:(?:Perl/Haskell
+                        |
+                    WebMetaLecture
                         |
                     mini/mdda )/
                     {slides_dir}/index{ext}

@@ -10,7 +10,7 @@ cache:
 go:
     - '1.11.x'
 os: linux
-dist: trusty
+dist: xenial
 before_install:
     - . .travis.bash --cmd before_install
 script:

@@ -34,6 +34,8 @@ all: dist test gen_htaccess
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile $<
 
+dats: $(DATS)
+
 test: $(DATS)
 	@fortune -e $(FILES)
 

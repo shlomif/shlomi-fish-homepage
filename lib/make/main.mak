@@ -1097,7 +1097,8 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
-	asciidoctor --backend=docbook5 -o $@ $<
+	asciidoctor --backend=docbook5 -o $@.temp.xml $<
+	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 
 JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
 

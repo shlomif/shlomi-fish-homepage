@@ -55,6 +55,64 @@ _exec_perl(
 
 my $DIR = "lib/make/";
 
+sub _my_system
+{
+    my $cmd = shift;
+
+    print join( ' ', @$cmd ), "\n";
+    if ( system { $cmd->[0] } (@$cmd) )
+    {
+        die "<<@$cmd>> failed.";
+    }
+}
+
+# [ $^X, "./bin/gen-fortunes.pl" ],
+
+foreach my $cmd (
+    [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
+    [ $^X, "./lib/factoids/gen-html.pl" ],
+    [ $^X, "./bin/gen-fortunes-dats.pl" ],
+    [ $^X, "./bin/gen-deps-mak.pl" ],
+    )
+{
+    _my_system($cmd);
+}
+
+sub letter_fn
+{
+    my $ext = shift;
+    return
+        "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$ext";
+}
+
+sub letter_io
+{
+    return path( letter_fn(shift) );
+}
+
+foreach my $ext (qw/ xhtml pdf /)
+{
+    my $fh = letter_io($ext);
+    if ( $fh->stat->mtime < letter_io('odt')->stat->mtime )
+    {
+        $fh->touch;
+    }
+}
+
+path("${DIR}copies-generated-include.mak")
+    ->spew_utf8( map { $_, qq#\t\$(call COPY)\n#, "\n" }
+        path("${DIR}copies-source.mak")->lines_utf8 );
+
+path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
+
+my $render = path('bin/render');
+$render->spew_utf8(
+    path('bin/render-source.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
+    "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
+    #emrs
+);
+$render->chmod(0755);
+
 my $generator = HTML::Latemp::GenMakeHelpers->new(
     'hosts' => [
         map {
@@ -119,62 +177,5 @@ $text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
 
 $r_fh->spew_utf8($text);
 
-sub _my_system
-{
-    my $cmd = shift;
-
-    print join( ' ', @$cmd ), "\n";
-    if ( system { $cmd->[0] } (@$cmd) )
-    {
-        die "<<@$cmd>> failed.";
-    }
-}
-
-# [ $^X, "./bin/gen-fortunes.pl" ],
-
-foreach my $cmd (
-    [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
-    [ $^X, "./lib/factoids/gen-html.pl" ],
-    [ $^X, "./bin/gen-fortunes-dats.pl" ],
-    [ $^X, "./bin/gen-deps-mak.pl" ],
-    )
-{
-    _my_system($cmd);
-}
-
-sub letter_fn
-{
-    my $ext = shift;
-    return
-        "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$ext";
-}
-
-sub letter_io
-{
-    return path( letter_fn(shift) );
-}
-
-foreach my $ext (qw/ xhtml pdf /)
-{
-    my $fh = letter_io($ext);
-    if ( $fh->stat->mtime < letter_io('odt')->stat->mtime )
-    {
-        $fh->touch;
-    }
-}
-
-path("${DIR}copies-generated-include.mak")
-    ->spew_utf8( map { $_, qq#\t\$(call COPY)\n#, "\n" }
-        path("${DIR}copies-source.mak")->lines_utf8 );
-
-path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
-
-my $render = path('bin/render');
-$render->spew_utf8(
-    path('bin/render-source.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
-    "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
-    #emrs
-);
-$render->chmod(0755);
 _my_system( [ 'gmake', 'bulk-make-dirs' ] );
 _my_system( [ 'gmake', 'sects_cache' ] );

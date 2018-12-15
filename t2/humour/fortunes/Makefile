@@ -1,5 +1,7 @@
 include fortunes-list.mak
 
+T2_FORTUNES_DIR = .
+PERL = perl
 FORTUNES_PERL := perl -I. -MShlomifFortunesMake -e
 VERSION_FILE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->version_file;')
 
@@ -77,6 +79,10 @@ $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 	bash run-validator.bash $< $@
 	perl convert-to-xhtml.pl $<
 	touch $(patsubst %.xml,%.html.wml,$<)
+
+$(FILES): %: %.xml
+	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
+	$(PERL) $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
 gen_sources_list: $(SOURCE_FILES_LIST)
 

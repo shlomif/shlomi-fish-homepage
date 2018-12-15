@@ -14,14 +14,8 @@ sub _exec
     return;
 }
 
-_exec(
-    [
-        'cookiecutter', '-f', '--no-input',
-        'gh:shlomif/cookiecutter--shlomif-latemp-sites',
-        'project_slug=.',
-    ],
-    'cookiecutter failed.'
-);
+_exec( [ $^X, 'bin/my-cookiecutter.pl' ], 'cookiecutter failed.' );
+
 _exec( [ "gmake", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
     "build-deps failed!" );
 _exec( [ $^X, './bin/gen-helpers-main.pl' ], "gen-helpers-main.pl failed." );

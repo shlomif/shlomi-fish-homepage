@@ -134,9 +134,9 @@ sub _my_system
 
 foreach my $cmd (
     [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
-    [ $^X, "./bin/gen-deps-mak.pl" ],
     [ $^X, "./lib/factoids/gen-html.pl" ],
     [ $^X, "./bin/gen-fortunes-dats.pl" ],
+    [ $^X, "./bin/gen-deps-mak.pl" ],
     )
 {
     _my_system($cmd);

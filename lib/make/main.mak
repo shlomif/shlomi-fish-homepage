@@ -20,7 +20,13 @@ non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json ht
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
+
+BK2HP_SVG_BASE := images/bk2hp-v2.svg
+T2_IMAGES += $(BK2HP_SVG_BASE)
+
 include lib/make/rules.mak
+
+BK2HP_SVG_SRC := $(T2_SRC_DIR)/$(BK2HP_SVG_BASE)
 
 T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
 T2_TARGETS += $(T2_POST_DIRS_DEST)
@@ -1065,8 +1071,6 @@ $(T2_SVGS__MIN): %.min.svg: %.svg
 
 $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best < $< > $@
-
-BK2HP_SVG_SRC := $(T2_SRC_DIR)/images/bk2hp-v2.svg
 
 min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 

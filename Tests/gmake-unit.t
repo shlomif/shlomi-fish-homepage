@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 11;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
@@ -70,4 +70,11 @@ sub dest_test
 
     # TEST
     dest_test( 'ALL_HTACCESSES', 'open-source/.htaccess', ".htaccess" );
+
+    # TEST
+    gmake_test(
+        'T2_SVGS__svgz',
+        "$T2_POST_DEST/images/bk2hp-v2.svgz",
+        "bk2hp-v2 svg is present."
+    );
 }

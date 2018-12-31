@@ -58,9 +58,6 @@ class MyTests(vnu_validator.VnuTest):
                 hebrew-html-tutorial.raw.html
             )
             |
-            (?: Pres-Tools/Perl-Point/slide[0-9]+\\.htm
-            )
-            |
             (?:
                 (?:Perl/Newbies/
                     lecture[1-5](?:--all-in-one-html)?/index{ext}

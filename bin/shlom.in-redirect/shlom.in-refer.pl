@@ -189,6 +189,11 @@ my @urls = (
 'https://raw.githubusercontent.com/shlomif/shlomif-computer-settings/master/shlomif-settings/setup-all/setup-all.pl',
         desc => qq{My setup script — for quick access},
     },
+    {
+        id => "graphics",
+        url => "https://www.shlomifish.org/open-source/resources/graphics-programs/",
+        desc => qq{List of Graphics Applications},
+    },
 );
 
 my %urls_by_id;

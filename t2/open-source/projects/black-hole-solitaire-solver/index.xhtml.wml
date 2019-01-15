@@ -3,10 +3,11 @@
 
 <latemp_subject "Black Hole Solitaire Solver" />
 
-<latemp_meta_desc "Solver for Black Hole Solitaire as well as All in a Row Solitaire" />
+<latemp_meta_desc "Solver for Golf Solitaire, Black Hole Solitaire, and All in a Row Solitaire" />
 
 <p>
 This is a solver, written in C, to solve
+<a href="https://en.wikipedia.org/wiki/Golf_(patience)">Golf solitaire</a>,
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">the
 Solitaire variant called “Black Hole”</a>
 and the one called
@@ -18,7 +19,7 @@ the cards to move.
 
 <h2_section id="download" title="Download">
 
-<set-var ver="0.16.0" />
+<set-var ver="0.18.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -144,6 +145,14 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <news_sect>
+
+<h3_section id="news_version_0_18_0" title="Version 0.18.0">
+
+<p>
+Version 0.18.0 was released with added support for <a href="https://en.wikipedia.org/wiki/Golf_(patience)">three variants of Golf</a>.
+</p>
+
+</h3_section>
 
 <h3_section id="news_version_0_16_0" title="Version 0.16.0">
 

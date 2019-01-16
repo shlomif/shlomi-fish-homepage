@@ -53,7 +53,6 @@ then
     ( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
     ( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
     bash -x bin/install-npm-deps.sh
-    bash -x bin/install-tidyp-systemwide.bash
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
     echo '{"amazon_sak":"invalid"}' > "$HOME"/.shlomifish-amazon-sak.json
     ( cd "$HOME" && git clone https://github.com/w3c/markup-validator.git )
@@ -66,12 +65,13 @@ then
 elif test "$cmd" = "install"
 then
     cpanm --notest Alien::Tidyp YAML::XS
-    bash -x bin/install-tidyp-systemwide.bash
     cpanm --notest HTML::Tidy
     cpanm HTML::T5
     h=~/Docs/homepage/homepage
     mkdir -p "$h"
     git clone https://github.com/shlomif/shlomi-fish-homepage "$h/trunk"
+    sudo -H `which python3` -m pip install cookiecutter
+    ( cd "$h/trunk" && perl bin/my-cookiecutter.pl )
 
 elif test "$cmd" = "build"
 then

@@ -38,7 +38,7 @@ while ( my $r = $finder->next() )
             next FILES_LOOP;
         }
         $before_size += ( -s $r );
-        if ( system( qw(tidyp -utf8 -q -config lib/tidy.rc -m), $r ) )
+        if ( system( qw(tidy -utf8 -q -config lib/tidy.rc -m), $r ) )
         {
             system( "gvim", "-p",
                 ( ( -e "t2/$base.wml" ) ? "t2/$base.wml" : "t2/$base" ), $r, );

@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-use CGI;
-
 =begin debug
 
 sub debug
@@ -21,8 +19,8 @@ debug();
 
 =cut
 
-my $cgi  = CGI->new();
-my $path = $ENV{'REDIRECT_URL'};
+my $HEADER = "Content-Type: text/html; charset=utf-8\r\n\r\n";
+my $path   = $ENV{'REDIRECT_URL'};
 
 if ( !defined($path) and !exists( $ENV{APACHE_REDIRECT_URL} ) )
 {
@@ -204,8 +202,7 @@ foreach my $rec (@urls)
 {
     if ( !( $rec->{id} && $rec->{url} && $rec->{desc} ) )
     {
-        print $cgi->header();
-        print "Ask Shlomi Fish to fix record No. $idx";
+        print $HEADER, "Ask Shlomi Fish to fix record No. $idx";
         exit(0);
     }
     $urls_by_id{ $rec->{id} } = $rec->{url};
@@ -222,16 +219,12 @@ if ( my ($id) = $path =~ m{\A/([^/]+)\z} )
     $url = $urls_by_id{$id};
     if ( defined($url) )
     {
-        print $cgi->redirect(
-            -uri    => $url,
-            -status => 301,
-        );
+        print "Status: 301\r\nLocation: $url\r\n\r\n";
         exit(0);
     }
     else
     {
-        print $cgi->header();
-        print <<'EOF';
+        print $HEADER, <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -255,8 +248,7 @@ EOF
 }
 else
 {
-    print $cgi->header();
-    print <<'EOF';
+    print $HEADER, <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">

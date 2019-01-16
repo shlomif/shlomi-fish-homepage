@@ -191,7 +191,8 @@ my @urls = (
     },
     {
         id => "graphics",
-        url => "https://www.shlomifish.org/open-source/resources/graphics-programs/",
+        url =>
+"https://www.shlomifish.org/open-source/resources/graphics-programs/",
         desc => qq{List of Graphics Applications},
     },
 );

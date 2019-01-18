@@ -1,4 +1,14 @@
-all:
+DB = D.pm
 
-upload:
-	rsync -a -v --progress "shlom.in-refer.pl" hostgator:shlom.in/public_html/
+all: $(DB)
+
+$(DB): gen-db.pl
+	perl $<
+
+upload: all
+	rsync -a -v --progress "shlom.in-refer.pl" $(DB) hostgator:shlom.in/public_html/
+
+test: all
+	prove t/*.t
+
+check: test

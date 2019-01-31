@@ -8,6 +8,8 @@
     # hackmyresume \
 npm install \
     camel-case \
+    eslint \
+    eslint-config-google \
     html-minifier \
     param-case \
     sass \

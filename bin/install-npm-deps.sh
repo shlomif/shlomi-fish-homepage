@@ -5,9 +5,9 @@
 #
 # Distributed under terms of the MIT license.
 #
+    # hackmyresume \
 npm install \
     camel-case \
-    hackmyresume \
     html-minifier \
     param-case \
     sass \

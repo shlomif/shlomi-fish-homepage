@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
+import cgi
+import os.path
 import random
 import re
-import os.path
 import sqlite3
 import sys
-import cgi
 
 # We're using random later.
 random.seed()
@@ -13,8 +13,8 @@ random.seed()
 # The Directory containing the script.
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(script_dir)
-from bottle import route, request, run, template, \
-        response, redirect, abort  # noqa: E402
+from bottle import Bottle, redirect, request, response, \
+    run, template  # noqa: E402
 
 DB_BASE_NAME = "fortunes-shlomif-lookup.sqlite3"
 
@@ -25,14 +25,16 @@ cur = dbh.cursor()
 
 NL = "\015\012"
 
+app = Bottle()
+
 
 def _my_fullpath():
     return re.sub('/+$', '', request.fullpath)
 
 
 def _emit_error(title, body):
-    abort(404,
-          '''<?xml version="1.0" encoding="utf-8"?>
+    app.abort(404,
+              '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>
@@ -45,7 +47,7 @@ def _emit_error(title, body):
 </html>''' % {'title': title, 'body': body})
 
 
-@route(['/'])
+@app.route(['/'])
 def main():
     response.content_type = 'application/xhtml+xml; charset=utf-8'
     mode = request.query.mode or 'str_id'
@@ -175,7 +177,7 @@ Fish (the Webmaster)</a> and let him know of this problem.
 </p>''' % (cgi.escape(str_id, True)))
 
 
-run(server='cgi')
+run(app, server='cgi')
 
 '''
 

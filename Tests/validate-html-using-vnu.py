@@ -32,6 +32,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 =cut
 """
 
+import os
 import re
 import unittest
 import vnu_validator
@@ -111,8 +112,9 @@ class MyTests(vnu_validator.VnuTest):
         )$
             """.format(ext=xhtml_ext, lecture_re=lecture_re))
         _non_xhtml_cb = _create_cb('jquery-ui')
-        return self.vnu_test_dir(dir_, _non_xhtml_cb, _skip_cb,
-                                 'Tests/data/cache/vnu-html-validator.json')
+        return self.vnu_test_dir(
+            dir_, _non_xhtml_cb, _skip_cb,
+            os.getenv('VNU_CACHE', 'Tests/data/cache/vnu-html-validator.json'))
 
 
 if __name__ == '__main__':

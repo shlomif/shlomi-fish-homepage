@@ -2,9 +2,8 @@
 
 use strict;
 use warnings;
-use MyNavData;
-use Shlomif::Homepage::NavMenu::JQTreeView;
-use CGI qw();
+use MyNavData                              ();
+use Shlomif::Homepage::NavMenu::JQTreeView ();
 
 binmode STDOUT, ":encoding(UTF-8)";
 

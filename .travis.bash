@@ -81,7 +81,7 @@ then
     {
         make DBTOEPUB="/usr/bin/ruby $(which dbtoepub)" \
             DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \
-        "$@"
+        "$@"https://github.com/oscarg933/shlomi-fish-homepage/pulse
     }
     m
     m test

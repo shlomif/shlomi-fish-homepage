@@ -1,0 +1,131 @@
+Skip to content
+Your account has been flagged.
+Because of that, your profile is hidden from the public. If you believe this is a mistake, contact support to have your account status reviewed.
+
+jenkins travis enterprise server
+Repositories0
+Code15K
+Commits0
+Issues181
+Marketplace0
+Topics0
+Wikis96
+Users0
+Language
+
+Sort
+
+15,321 code results
+@MilesChou
+MilesChou/articles – day22.md
+Showing the top three matches
+Last indexed 12 days ago
+Markdown
+# CI 工具大亂鬥
+
+三十天也快結束了，大家對 CI 已經有更深的了解了。今天開始會講 CI 工具，有了概念後再開始實作，相信會做得更有樣子。
+
+CI server 主要的目的是隨時待命，只要程式碼有新的提交，它就會開始忙著測東測西，最後會跟你說本次提交是成功還是失敗。歷史記錄是必要的，報表和 Artifacts 通常也都會幫你收集起來備存。
+| 價格 | Free | Free / [Enterprise](https://travis-ci.com/plans) |  Free / [Pricing](https://circleci.com/pricing/) | Free / On-premise | Free / [Pricing](https://bitbucket.org/product/pricing/upcoming) |
+@MilesChou
+MilesChou/book-intro-of-ci – day22.md
+Showing the top three matches
+Last indexed on Jul 5, 2018
+Markdown
+# CI 工具大亂鬥
+
+三十天也快結束了，大家對 CI 已經有更深的了解了。今天開始會講 CI 工具，有了概念後再開始實作，相信會做得更有樣子。
+
+CI server 主要的目的是隨時待命，只要程式碼有新的提交，它就會開始忙著測東測西，最後會跟你說本次提交是成功還是失敗。歷史記錄是必要的，報表和 Artifacts 通常也都會幫你收集起來備存。 
+| 價格 | Free | Free / [Enterprise](https://travis-ci.com/plans) |  Free / [Pricing](https://circleci.com/pricing/) | Free / On-premise | Free / [Pricing](https://bitbucket.org/product/pricing/upcoming) |
+@mattbostock
+mattbostock/talks – main.slide
+Showing the top six matches
+Last indexed on Jun 29, 2018
+Using Docker for CI builds
+21 Jan 2015
+Tags: ci, containers, docker, jenkins, drone, travis
+
+Matt Bostock
+- [[https://enterprise.travis-ci.com][Travis Enterprise]]
+
+* All three run builds using Docker
+
+* DotCI
+
+- Developed by Groupon
+@tinfot
+tinfot/tinfot.github.io – 2017-10-30-介绍几款关于持续集成的工具.markdown
+Showing the top four matches
+Last indexed on Aug 8, 2018
+Markdown
+The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+Apache Continuum™ is an enterprise-ready continuous integration server with features such as automated builds, release management, role-based security, and integration with popular build tools and source control management systems. Whether you have a centralized build team or want to put control of releases in the hands of developers, Continuum can help you improve quality and maintain a consistent build environment.
+@jackl0phty
+jackl0phty/opschef-cookbook-chefknife – README.md
+Showing the top six matches
+Last indexed on Jun 27, 2018
+Markdown
+Now upload ALL data bags to a single Chef server:
+<pre><code>
+jenkins@jenkins.example.com: ~/chef-hosted: chefknife
+from a single Chef server:
+<pre><code>
+jenkins@jenkins.example.com: ~/chef-hosted: chefknife dump_nodes json /tmp/nodes
+@spinnaker
+spinnaker/igor – README.md
+Showing the top five matches
+Last indexed on Jun 26, 2018
+Markdown
+[![Build Status](https://api.travis-ci.org/spinnaker/igor.svg?branch=master)](https://travis-ci.org/spinnaker/igor)
+
+Igor provides a single point of integration with Jenkins, Travis and Git repositories ( BitBucket, Stash, and Github ) within Spinnaker.
+Igor keeps track of the credentials for multiple Jenkins and/or Travis hosts and sends events to [echo](http://www.github.com/spinnaker/echo) whenever build information has changed. 
+@rchench
+rchench/spinnaker – README.md
+Showing the top five matches
+Last indexed 10 days ago
+Markdown
+[![Build Status](https://api.travis-ci.org/spinnaker/igor.svg?branch=master)](https://travis-ci.org/spinnaker/igor)
+
+Igor provides a single point of integration with Jenkins, Travis and Git repositories ( BitBucket, Stash, and Github ) within Spinnaker.
+Igor keeps track of the credentials for multiple Jenkins and/or Travis hosts and sends events to [echo](http://www.github.com/spinnaker/echo) whenever build information has changed. 
+@zhili1
+zhili1/jenkins-demo – INTEGRATION_OF_MODEL_OPERATION_TASK_CLI_WITH_CICD_TOOLS.md
+Showing the top six matches
+Last indexed on Sep 5, 2018
+Markdown
+You can integrate IBM AI OpenScale model operation task cli tools into existing CI/CD tools such as IBM Cloud Continuous Delivery service (available in IBM Bluemix), Jenkins, and Travis CI wherever fits.
+
+## Typical steps to integrate IBM AI OpenScale model operation task cli tools with IBM Cloud Continuous Delivery service
+3. Set up your Jenkins server or gain an access account to an existing Jenkins server where you want to integrate with IBM AI OpenScale model operation task cli tools.
+@casperkl
+casperkl/SOP – README.md
+Showing the top four matches
+Last indexed on Jul 2, 2018
+Markdown
+[![Build Status](https://travis-ci.org/casperkl/SOP.svg?branch=master)](https://travis-ci.org/casperkl/SOP)
+[![codecov.io](https://codecov.io/github/casperkl/SOP/coverage.svg?branch=master)](https://codecov.io/github/casperkl/SOP?branch=master)
+ - Learn how to install, configure, and secure your Jenkins server
+ - Organize and monitor general-purpose build jobs
+ - Integrate automated tests to verify builds, and set up code quality reporting
+@HewlettPackard
+HewlettPackard/Jenkins-stats – README.md
+Showing the top two matches
+Last indexed on Jul 12, 2018
+Markdown
+[![Build Status](https://travis-ci.org/HewlettPackard/Jenkins-stats.svg?branch=master)](https://travis-ci.org/HewlettPackard/Jenkins-stats)
+[![Docker Automated build](https://img.shields.io/docker/automated/zingstats/jenkins-stats.svg?maxAge=2592000?style=plastic)](https://hub.docker.com/r/zingstats/jenkins-stats/)
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.

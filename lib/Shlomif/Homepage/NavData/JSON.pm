@@ -22,11 +22,20 @@ my %keys_briefing = (
     text   => 'x',
     expand => 'e',
     re     => 'r',
-    skip   => 's',
+    skip   => 'k',
     bool   => 'b',
     host   => 'h',
     capt   => 'c',
 );
+
+my %rev;
+while ( my ( $k, $v ) = each %keys_briefing )
+{
+    if ( $rev{$v}++ )
+    {
+        die "keys_briefing == $v appears more than once!";
+    }
+}
 
 sub _map_data
 {

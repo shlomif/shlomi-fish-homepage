@@ -125,6 +125,7 @@ all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
+T2_SRC_FORTUNE_SHOW_PY = $(T2_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
 T2_SRC_BOTTLE = $(T2_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
 T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
 T2_DEST_FORTUNE_BOTTLE = $(T2_DEST_FORTUNES_DIR)/bottle.py
@@ -147,6 +148,9 @@ T2_DEST_FORTUNES := $(patsubst $(T2_FORTUNES_DIR)/%,$(T2_DEST_FORTUNES_DIR)/%,$(
 chmod_copy = $(call COPY) ; chmod +x $@
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
+	$(call chmod_copy)
+
+$(T2_SRC_FORTUNE_SHOW_PY): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
 $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
@@ -1113,4 +1117,4 @@ JSON_RES_DEST := $(T2_DEST)/$(JSON_RES_BASE).json
 $(JSON_RES_DEST): $(T2_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
 
-non_latemp_targets: $(JSON_RES_DEST)
+non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)

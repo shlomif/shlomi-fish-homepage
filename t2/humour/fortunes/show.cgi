@@ -177,7 +177,8 @@ Fish (the Webmaster)</a> and let him know of this problem.
 </p>''' % (cgi.escape(str_id, True)))
 
 
-run(app, server='cgi')
+if __name__ == "__main__":
+    run(app, server='cgi')
 
 '''
 

@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use autodie;
+
+use App::Deps::Verify ();
+use Path::Tiny qw/ path /;
+use YAML::XS qw/ LoadFile /;
+
+my $modules_fn = 'bin/required-modules.yml';
+
+my $spec = "f.spec";
+App::Deps::Verify->new->write_rpm_spec_text_to_fh(
+    {
+        out_fh => path($spec)->openw_utf8,
+        yamls  => [
+            map { LoadFile($_) }
+                qw# bin/required-modules.yml bin/common-required-deps.yml #
+        ],
+    }
+);
+
+system( "rpmbuild", "-ba", $spec );

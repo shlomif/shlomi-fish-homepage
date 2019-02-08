@@ -125,7 +125,9 @@ all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
+T2_SRC_BOTTLE = $(T2_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
 T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
+T2_DEST_FORTUNE_BOTTLE = $(T2_DEST_FORTUNES_DIR)/bottle.py
 
 htacc = $(addsuffix /.htaccess,$(1))
 T2_FORTUNES_DIR_HTACCESS = $(call htacc,$(T2_DEST_FORTUNES_DIR))

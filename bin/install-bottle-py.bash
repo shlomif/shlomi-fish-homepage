@@ -5,4 +5,7 @@
 #
 # Distributed under terms of the MIT license.
 #
-wget -O t2/humour/fortunes/bottle.py https://bottlepy.org/bottle.py
+set -e -x
+dest="t2/humour/fortunes/bottle.py"
+wget -O "$dest" https://bottlepy.org/bottle.py
+touch "$dest"

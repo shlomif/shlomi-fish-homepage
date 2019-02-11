@@ -43,6 +43,7 @@ class MyTests(unittest.TestCase):
     def test_main(self):
         app = TestApp(fortunes_show.app)
         assert app
+        assert app.get('?id=shlomif-fact-chuck-118').status_code == 200
 
 
 if __name__ == '__main__':

@@ -10,6 +10,10 @@ unalias l
 l()
 {
     make
-    bin/spell-checker-iface > foo.txt
+    bin/heb-spell-checker-iface > foo.txt
     perl bin/extract-spelling-errors.pl > y.txt
+}
+e()
+{
+    gvim -o foo.txt y.txt lib/hunspell/hebrew-whitelist1.txt
 }

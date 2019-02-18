@@ -39,7 +39,7 @@ $(DATS):: %.dat : %
 dats: $(DATS)
 
 test: $(DATS)
-	@fortune -e $(FILES)
+	@fortune -e $(FILES) > /dev/null
 
 dist: $(PACKAGE_BASE) gen_sources_list
 

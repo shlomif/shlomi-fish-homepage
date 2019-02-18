@@ -55,7 +55,7 @@ require VimIface;
 <preserve filename />
 <set-var %attributes />
 <:{
-print VimIface::get_syntax_highlighted_html_from_file({'filename' => "<get-var filename />"});
+print VimIface::get_syntax_highlighted_html_from_file({'filename' => "<get-var filename />"}) =~ s/([\{\}])/sprintf("&#x%%02X;", ord($1))/egr;
 }:>
 <restore filename />
 </define-tag>

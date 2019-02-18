@@ -9,7 +9,7 @@ use MooX qw/late/;
 
 use Text::Hunspell;
 use Shlomif::Spelling::Hebrew::Whitelist;
-use HTML::Spelling::Site::Checker;
+use Shlomif::Spelling::Hebrew::SiteChecker;
 
 has obj => (
     is      => 'ro',
@@ -25,7 +25,7 @@ has obj => (
             die "Could not initialize speller!";
         }
 
-        return HTML::Spelling::Site::Checker->new(
+        return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>
                     './Tests/data/cache/hebrew-spelling-timestamp.json',

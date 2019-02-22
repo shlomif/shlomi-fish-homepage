@@ -4,6 +4,7 @@ rebuild()
     (
         set -x
         set -e
+        PATH="$PWD/bin/mod:$PATH"
         cl_d=../"$(basename "$PWD")"--clones
         mkdir -p "$cl_d"
         for d in "$cl_d"/*

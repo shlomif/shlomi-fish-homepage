@@ -1,0 +1,3 @@
+#!/bin/sh
+PATH=/usr/bin:"$PATH"
+exec gzip -n "$@"

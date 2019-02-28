@@ -24,8 +24,20 @@ queried</a> the Linux-IL mailing-list about it and received some answers.
 </li>
 
 <li>
+<p>
 The most probable reasons: less memory -&gt; less cache misses, and handling
 bytes is just as fast as handling ints.
+</p>
+<ul>
+<li>
+<p>
+<b>Update:</b> It may also have to do with the limited size of the CPU
+<a href="https://en.wikipedia.org/wiki/CPU_cache#CACHE-LINES">cache lines</a>,
+typically 32 bytes on 32-bit x86 CPUs. The more items fit into a cache lines,
+the less cache misses there are.
+</p>
+</li>
+</ul>
 </li>
 
 </points>

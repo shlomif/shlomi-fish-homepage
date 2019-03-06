@@ -9,8 +9,6 @@ VER := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->ver;')
 
 DIST_BASE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
 
-INDEX_FILE := index.html
-
 SOURCE_FILES_LIST := source-files-list.html
 
 RPM_SPEC := $(DIST_BASE).spec
@@ -43,8 +41,6 @@ test: $(DATS)
 
 dist: $(PACKAGE_BASE) gen_sources_list
 
-html: $(INDEX_FILE)
-
 EXTRA_FILES = Makefile fortunes-list.mak $(RPM_SPEC) $(RPM_SPEC_IN)
 
 PACKAGE_DEPS = $(DATS) $(EXTRA_FILES) $(VERSION_FILE)
@@ -64,11 +60,8 @@ $(PACKAGE_BASE): $(PACKAGE_DEPS)
 	tar -czvf $@ $(DIST_DIR)
 	rm -fr $(DIST_DIR)
 
-$(INDEX_FILE): fortunes-index.html $(PACKAGE_BASE)
-	cat $< | sed '/%%PACKAGE_BASE%%/ s/href=".*"/href="$(PACKAGE_BASE)"/' > $@
-
 upload: dist
-	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) $(INDEX_FILE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/"
+	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/"
 
 print_package_base:
 	@echo $(PACKAGE_BASE)

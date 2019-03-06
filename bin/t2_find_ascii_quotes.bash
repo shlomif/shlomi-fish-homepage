@@ -9,7 +9,7 @@ temp_filter()
     grep -vE '^(dest/t2-homepage/old-news\.html)' |
     grep -vE '^(dest/t2-homepage/lecture/)' |
     grep -vE '^(dest/t2-homepage/philosophy/politics/define-zionism/heb/index\.html)' |
-    grep -vE '^(dest/t2-homepage/philosophy/politics/drug-legalisation/hebrew\.html)'
+    grep -vE '^(dest/t2-homepage/philosophy/politics/drug-legalisation/hebrew\.html)' |
     cat
 }
 

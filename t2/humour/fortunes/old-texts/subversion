@@ -2,14 +2,14 @@
  <sussman> !!
  <sussman> for the parent directory?
          * sussman banishes libsvn_wc into the underworld
- 
+
 	A typical day on #svn, the Subversion channel
 %
  <kfogel> heh
  <kfogel> sussman just filed a dup, sussman just filed a dup, sussman just fi
         * epg points and laughs at sussman
  <kfogel> everyone: point and laugh at sussman
-        * kfogel hears the raucous, hyena-like sound of #svn 
+        * kfogel hears the raucous, hyena-like sound of #svn
           laughing at sussman
         * sussman crumbles
 
@@ -49,34 +49,34 @@ Who is Christopher Michael Pilato, anyway?
 
 	Shlomi Fish
 %
-  <rindolf> sussman: for the record, I think the build system is the ultimate 
+  <rindolf> sussman: for the record, I think the build system is the ultimate
             proof that python code can be as bad as Perl one.
           * clkao giggles
   <jackr>   hehe
           * rindolf hopes he's not starting a flamewar
-  <clkao>   btw, freebsd svn port maintainer was complaining about unable to 
+  <clkao>   btw, freebsd svn port maintainer was complaining about unable to
             do --with-swig specifying only perl or pythong bindings to build..
           * cmpilato notes that the topic of this channel is Subversion.
-  <clkao>   (so he refused to include the option for building either bindings 
+  <clkao>   (so he refused to include the option for building either bindings
             in the port!)
   <rindolf> I once saw a perl5 code written in perl4 style. Now that was
             hideous.
   <fitz>    complicated != bad
   <fitz>    "Building is complicated--that's why build systems are
             complicated." --kfogel
-    
+
 	Discussing the Subversion Build System in #svn.
 %
-  <rindolf>    Is gstein the person to blame for the anti-Perl FUD on 
+  <rindolf>    Is gstein the person to blame for the anti-Perl FUD on
                http://viewcvs.sf.net/?
   <sussman>    yes.
   <cmpilato>   likely.
   . . .
-  <ghudson>    Subversion used to be this amazing nest of anti-perl people.  
-               That's calmed down a bit... largely because Greg Stein has been 
+  <ghudson>    Subversion used to be this amazing nest of anti-perl people.
+               That's calmed down a bit... largely because Greg Stein has been
                distracted. :)
-  <rindolf>    I personally am a Perl guy who despises Python, but can still 
-               tolerate the Subversion tests because they are actually shell 
+  <rindolf>    I personally am a Perl guy who despises Python, but can still
+               tolerate the Subversion tests because they are actually shell
                scripts in disguise.
             *  jackr thinks there are other Python-loving Perl haters around
 
@@ -92,7 +92,7 @@ Who is Christopher Michael Pilato, anyway?
   <sussman>  hehehe
   <josander> yes, the floppy network. -:)
 
-	#svn 
+	#svn
 %
   <sussman>   rollin rollin rollin
   <sussman>   keep that tarball rollin
@@ -117,7 +117,7 @@ Who is Christopher Michael Pilato, anyway?
   <CIA>     kfogel committed revision 7737: * CHANGES: Mention APR req
             upgrade for 0.33.
           * rooneg wonders how kfogel will deal with having burning hair...
-        
+
 	#svn
 %
   <sussman> ghudson: what OS did you compile the tarball on?
@@ -131,7 +131,7 @@ Who is Christopher Michael Pilato, anyway?
 %
           Talking about commit souds...
 
-  <rooneg>  weird, mine and jack's come out way too fast with this 
+  <rooneg>  weird, mine and jack's come out way too fast with this
             player...  but the others all work fine.
   <rooneg>  and after hearing them all, i have two thinigs to say:  first,
             it must be really amusing hearing that stuff randomly throughout
@@ -155,7 +155,7 @@ Who is Christopher Michael Pilato, anyway?
 
 	#svn
 %
-  <CIA>      sussman committed revision 6517: A minimal C client app, for 
+  <CIA>      sussman committed revision 6517: A minimal C client app, for
              demonstration purposes.  Now we can point
           *  sussman pets CIA again
           *  rindolf pets sussman again
@@ -163,14 +163,14 @@ Who is Christopher Michael Pilato, anyway?
 
 	#svn
 %
-  <kfogel>   rindolf: CIA watches much more than just Subversion.  Google 
-             on it (uh, include the word "commit" too I guess), the details 
+  <kfogel>   rindolf: CIA watches much more than just Subversion.  Google
+             on it (uh, include the word "commit" too I guess), the details
              are quite interesting.
   <fitz>     it's currently watching kfogel's houseplants
-  <kfogel>   rindolf: If you don't know Fitz, you'll probably assume he's 
+  <kfogel>   rindolf: If you don't know Fitz, you'll probably assume he's
              joking.
   <sussman>  go into #commits
-  <sussman>  you can see all the CIA commits for different opensource 
+  <sussman>  you can see all the CIA commits for different opensource
              projects
   <kfogel>   ...which is to say, all the commits.
   <kfogel>   muwah-ha-hah-hah-haaaaah
@@ -191,21 +191,21 @@ Who is Christopher Michael Pilato, anyway?
 
             A typical day at #svn (the Subversion channel)
 %
-  <jackr>     clkao: I have a 1.25Tb CVS repo that I'm afraid they'll ask me 
+  <jackr>     clkao: I have a 1.25Tb CVS repo that I'm afraid they'll ask me
               to convert
   <sussman>   fear!
   <jackr>     ... and loathing!
   <clkao>     you must! since you're @collab
   <clkao>     heh
   <sussman>   indeed.
-  <jackr>     It would probably go into several SVN repos (there are no 
-              boundaries inside CVS, so it's not necessarily 1::1).  But 
+  <jackr>     It would probably go into several SVN repos (there are no
+              boundaries inside CVS, so it's not necessarily 1::1).  But
               individual pieces are often much bigger than 10.5g
   <sussman>   fear, indeed.
            *  sussman covers his eyes, ears, and mouth.
   <sussman>   "there's no problem here"
 
-        #svn - the Subversion channel.   
+        #svn - the Subversion channel.
 %
   <rindolf>     Hmmmppf... sussman is not here?
   <rindolf>     What is #svn without sussman?
@@ -224,9 +224,9 @@ Who is Christopher Michael Pilato, anyway?
 
     A not-so-typical day at #svn.
 %
-          *  rindolf feels a desire for mayhem and murder of the Subversion 
+          *  rindolf feels a desire for mayhem and murder of the Subversion
              developers
-  <darix>	   rindolf: don't do this!  
+  <darix>	   rindolf: don't do this!
   <darix>	   we still need them
   <rindolf>  darix: heh heh right.
   <rindolf>  Of course, I am a Subversion developer, too.
@@ -263,21 +263,21 @@ Who is Christopher Michael Pilato, anyway?
   <sussman>  you need to use gdb in a real IDE, like emacs, or ddd.
   <sussman>  something that shows a pointer moving down your code.
   <rindolf>  sussman: IDEs are for wimps... ;-)
-  <rindolf>  Seriously, sometimes invoking gdb is very quick and I'm 
+  <rindolf>  Seriously, sometimes invoking gdb is very quick and I'm
              accustomed to it.
   <rindolf>  ddd is quite on the heavy side.
-  <rindolf>  "Programming happens in the mind, not in the IDE" 
+  <rindolf>  "Programming happens in the mind, not in the IDE"
                  --- Gil'ad Ben-Yossef
   <rindolf>  So does debugging.
   <sussman>  sure.
   <sussman>  why would you possibly want to see all your code at once?
-  <sussman>  it's much easier to see single lines printed out and try 
+  <sussman>  it's much easier to see single lines printed out and try
              to remember what the function looks like. :-)
   <rindolf>  ed, anyone? ;-)
-  <rindolf>  "I wanna use ex and I wanna use vee (=vi). Ed is dead, ed is dead, 
+  <rindolf>  "I wanna use ex and I wanna use vee (=vi). Ed is dead, ed is dead,
              baby!"
   <sussman>  "Ed is for people who can *remember* what they're working on."
-          *  jackr remembers when he could remember what he was working on.  
+          *  jackr remembers when he could remember what he was working on.
              Sometimes.
         #svn - The Subversion Channel.
 %
@@ -288,11 +288,11 @@ Who is Christopher Michael Pilato, anyway?
    <sussman>  no infinite loop, unfortunately.
   <dionisos>  lol :-)
    <rindolf>  subversion?
-     <ayita>   subversion is a Next-Generation Open Source Version Control 
+     <ayita>   subversion is a Next-Generation Open Source Version Control
               System (with a space at the beginning)
   <dionisos>  sander tried her to get to leave when she first came in :-)
   <dionisos>  giving here some \n string
-   <rindolf>  ayita: learn subversion=subversion is a Next-Generation Open 
+   <rindolf>  ayita: learn subversion=subversion is a Next-Generation Open
               Source Version Control System
      <ayita>  rindolf: you're not authorised to tell me that.
            *  rindolf kills dionisos
@@ -309,15 +309,15 @@ Who is Christopher Michael Pilato, anyway?
 %
        <rindolf>  How can I best install Subversion on a Debian Stable system?
         <breser>  rindolf: Presumably with apt.
-       <rindolf>  breser: subversion is not present in Debian Stable, and 
-                  installing it from testing or unstable may require upgrading 
+       <rindolf>  breser: subversion is not present in Debian Stable, and
+                  installing it from testing or unstable may require upgrading
                   half if not more of the system.
        <rindolf>  And I know what apt is.
-               *  rindolf kicks breser so he won't give obvious but useless 
+               *  rindolf kicks breser so he won't give obvious but useless
                   answers like Microsoft support persons.
-               *  breser kicks rindolf so he won't ask vague questions that 
-                  result in obvious but useless responses when he already 
-                  knows the obvious but usless response is the obvious 
+               *  breser kicks rindolf so he won't ask vague questions that
+                  result in obvious but useless responses when he already
+                  knows the obvious but usless response is the obvious
                   response to give.
                *  rindolf kicks breser for no reason at all.
 
@@ -336,20 +336,20 @@ Who is Christopher Michael Pilato, anyway?
 
     Looking for sussman, at #svn, the Subversion Channel.
 %
-  <rindolf> sussman: people mock your name (= Ben Collins-Sussman) here: 
+  <rindolf> sussman: people mock your name (= Ben Collins-Sussman) here:
             http://tinyurl.com/5vl69
-  <rindolf> sussman: and it's the only comments I got regarding the interview 
+  <rindolf> sussman: and it's the only comments I got regarding the interview
             except for kfogel's
   <sussman> rindolf: I replied.
   <rindolf> sussman: reloading
   <rindolf> sussman: 220$ for a last name change? Holy virgin mother of god!
   <sussman> why?
-  <rindolf> sussman: but if you were Ben Collins, people would have confused you 
+  <rindolf> sussman: but if you were Ben Collins, people would have confused you
             with BenC. And no-one will understand who "sussman" is.
   <rindolf> sussman: $220 is a lot of money, especially in Israel.
-  <sussman> Horrible sexist discrimination, really.   I had to pay $400 and 
+  <sussman> Horrible sexist discrimination, really.   I had to pay $400 and
             swear in front of a judge, to get my name changed.
-  <sussman> My wife had to do nothing.  She just showed her marriage license, 
+  <sussman> My wife had to do nothing.  She just showed her marriage license,
             and instantly got a new ID.
   <rindolf> sussman: another fortune cookie coming right up.
 
@@ -361,13 +361,13 @@ Who is Christopher Michael Pilato, anyway?
   <rindolf>  What's wrooooooooooooooooooooooooooong
     <darix>  rindolf: sussman is gone.
   <rindolf>  I can speak whale.
-  <rindolf>  Caaaaaaaaaan yoooooooouuuuuuu speaaaaaaaakkkkkkkk 
+  <rindolf>  Caaaaaaaaaan yoooooooouuuuuuu speaaaaaaaakkkkkkkk
              whaaaaaaaaaaaale?
    <edmund>  ha ha
 
 	#svn's tribute to "Finding Nemo"
 %
-  <rindolf>  sussman: have your wife and you decided what your newborn is going 
+  <rindolf>  sussman: have your wife and you decided what your newborn is going
              to be called?
    <DannyB>  "Baby Sussman"
   <PerlJam>  Sussbaby
@@ -377,9 +377,9 @@ Who is Christopher Michael Pilato, anyway?
   <rindolf>  5|_|55m/-\n
    <DannyB>  Sussman baby edition
   <Rytmis_>  Ben Mini?
-  <rindolf>  Will he have a last name of Collins-Sussman as well, or just 
+  <rindolf>  Will he have a last name of Collins-Sussman as well, or just
              Sussman?
-  <PerlJam>  rindolf: he may have a completely different last name!  Why limit 
+  <PerlJam>  rindolf: he may have a completely different last name!  Why limit
              the selection so?  ;)
   <sussman>  heh
   <sussman>  no names yet
@@ -432,7 +432,7 @@ Who is Christopher Michael Pilato, anyway?
               knights who say "git git git cogito Linus!".
    <rindolf>  danderson: "Subversion!". "Bleh, that's one word that the knights
               who say "git git git cogito Linus!" cannot hear."
-   <rindolf>  "What is your name?" "What is your quest?" "What is the 
+   <rindolf>  "What is your name?" "What is your quest?" "What is the
               asymptotic complexity of the Subversion delta algorithm."
    <rindolf>  "Which one? vdelta or xdelta?"
  <danderson>  what do you mean, xdelta or vdelta?
@@ -443,15 +443,15 @@ Who is Christopher Michael Pilato, anyway?
 
         Freenode #svn's Quest for the Holy Grail
 %
-Hi, 
- 
-a friend of mine runs a small restaurant and wants to professionalize his 
-IT. Our idea was to store everything in subversion (we use Debian with svn 
-1.3). We had absolutely no problems with the 2D objects, converting recipes 
-to ASCII and storing them was peanuts. However the 3D objects are giving us 
-a headache - the forks and knifes are stuck in the keyboard, we even 
-destroyed a floppy drive trying to read an apple. 
- 
+Hi,
+
+a friend of mine runs a small restaurant and wants to professionalize his
+IT. Our idea was to store everything in subversion (we use Debian with svn
+1.3). We had absolutely no problems with the 2D objects, converting recipes
+to ASCII and storing them was peanuts. However the 3D objects are giving us
+a headache - the forks and knifes are stuck in the keyboard, we even
+destroyed a floppy drive trying to read an apple.
+
 Any ideas how we can still use SVN to store everything?
 
     Konrad Rosenbaum on the Subversion Users' mailing list
@@ -494,5 +494,5 @@ a hand crafted, build system dependent, manual (i.e: error prone) method.
 
 What a lame excuse.
 
-    -- Oron Peled in 
+    -- Oron Peled in
        http://hamakor.org.il/pipermail/haifux/2008-February/000164.html

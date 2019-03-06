@@ -347,7 +347,7 @@ $(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html: $(SCREENPLAY_XML_HTML_DIR)/%.html
 	./bin/extract-screenplay-xml-html.pl -o $@ $<
 
 $(SCREENPLAY_XML_FOR_OOO_XHTML_DIR)/%.xhtml: $(SCREENPLAY_XML_HTML_DIR)/%.html
-	cat $< | $(PERL) -lne 'print unless m{\A<\?xml}' > $@
+	< $< $(PERL) -lne 'print unless m{\A<\?xml}' > $@
 
 $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(PERL) -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
@@ -740,7 +740,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(
 	cp -f common/favicon.png $(patsubst %$(START_html),%,$@)/ || true
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
-	cat $< | $(PERL) -pe 's!^\+!!' > $@
+	< $< $(PERL) -pe 's!^\+!!' > $@
 
 GEN_STYLE_CSS_FILES = style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 

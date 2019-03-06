@@ -1020,12 +1020,10 @@ DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
 mod_files: $(DEST_ZIP_MODS) $(DEST_XZ_MODS)
 
 $(DEST_XZ_MODS): $(DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
-	mkdir -p "$$(dirname "$@")"
 	xz -9 --extreme < $< > $@
 
 $(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	bn='$(patsubst $(SRC_MODS_DIR)/%,%,$<)'; \
-	mkdir -p "$$(dirname "$@")"; \
 	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@
 

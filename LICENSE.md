@@ -15,5 +15,5 @@ originated by someone else, licensed under
 the [Apache License](https://en.wikipedia.org/wiki/Apache_License) version
 2.0 or, at your option, any later version.
 
-Finally note that parts of the text has some aspects of being private or
+Finally note that parts of the text have some aspects of being private or
 personal.

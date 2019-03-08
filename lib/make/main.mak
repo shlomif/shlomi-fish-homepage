@@ -34,7 +34,7 @@ T2_TARGETS += $(T2_POST_DIRS_DEST)
 LATEMP_WML_FLAGS += $(DEV_WML_FLAGS)
 WML_FLAGS += --passoption=2,-X3074 --passoption=2,-I../lib/ \
 	--passoption=3,-I../lib/ \
-	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
+	-I../lib/ $(LATEMP_WML_FLAGS) \
 	-p1-3,5,7,8 \
 	-DROOT~. -DLATEMP_THEME=sf.org1 \
 	-I $${HOME}/apps/wml

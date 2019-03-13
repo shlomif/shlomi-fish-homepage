@@ -34,6 +34,17 @@ available on the site, supports Unicode and encodings, syntax highlighting,
 has both console and a GUI versions. Vim licence (open-source and
 GPL-compatible licence).
 </p>
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/neovim/neovim">Neovim</a> - a fork of vim that
+aims to aggressively refactor it and improve extensibility and usability.
+Cross-platform and open source.
+</p>
+</li>
+</ul>
 </li>
 
 <li id="emacs">
@@ -97,8 +108,7 @@ ActiveState. Also see
 <p>
 <img src="Sc-apps-kate.min.svg" style="height:80px;" class="rfloaty" alt="Logo of the “Kate” Text Editor" />
 <a href="http://kate-editor.org/">Kate</a> - a programmer’s editor for
-KDE (the K Desktop Environment). As of this writing (January 2010), it crashes
-a lot on MS-Windows. Contains syntax highlighting, good support for Unicode
+KDE (the K Desktop Environment). Contains syntax highlighting, good support for Unicode
 and bi-directional scripts, and other features.
 </p>
 </li>
@@ -147,6 +157,13 @@ text editor with the default key-bindings reminiscent of WordStar.
 </p>
 </li>
 
+<li>
+<p>
+<a href="https://kakoune.org/">Kakoune</a> - an open source modal text
+editor, which is inspired by Vim, but which aims to improve and rethink on
+its philosophy.
+</p>
+</li>
 </ul>
 
 </h3_section>
@@ -166,7 +183,8 @@ in Java. Very comprehensive and contains intellisense, automated refactoring
 
 <li>
 <p>
-<a href="http://www.netbeans.org/">NetBeans</a> - a Java IDE from Sun which
+<a href="http://www.netbeans.org/">NetBeans</a> - a Java IDE from Sun and
+the Apache Software Foundation which
 uses SWING (and thus has a non-native and quirky look-and-feel) with good
 support for Java and support for other languages, including C and C++.
 </p>
@@ -175,7 +193,7 @@ support for Java and support for other languages, including C and C++.
 <li>
 <p>
 <a href="http://www.icsharpcode.net/OpenSource/SD/">SharpDevelop</a> and
-<a href="http://monodevelop.com/">MonoDevelop</a> - open-source IDEs for
+<a href="https://www.monodevelop.com/">MonoDevelop</a> - open-source IDEs for
 Microsoft .NET / Mono.
 </p>
 </li>
@@ -224,7 +242,7 @@ GPLed).
 
 <li>
 <p>
-<a href="http://qt.digia.com/Product/Developer-Tools/">Qt Creator</a> -
+<a href="https://en.wikipedia.org/wiki/Qt_Creator">Qt Creator</a> -
 a cross-platform IDE written in Qt/C++, and primarily intended for developing
 Qt applications. Part of the Qt SDK from Troll Tech (now part of Digia).
 (open-source, LGPLed).
@@ -241,7 +259,7 @@ Linux/Unix, and Mac OS X and supports multiple compilers.
 
 <li>
 <p>
-<a href="http://webpages.charter.net/edreamleo/front.html">Leo</a> - an IDE
+<a href="http://www.leoeditor.com/">Leo</a> - an IDE
 written in Python, using PyQt, for Python and other languages that takes the
 unusual approach of also integrating project management, a rendering engine,
 and a music and video player. (MIT licence).

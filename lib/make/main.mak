@@ -1027,10 +1027,10 @@ $(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@
 
-TECH_BLOG_DIR = lib/blogs/shlomif-tech-diary
+TECH_BLOG_DIR = lib/repos/shlomif-tech-diary
 TECH_TIPS_SCRIPT = $(TECH_BLOG_DIR)/extract-tech-tips.pl
 TECH_TIPS_INPUTS = $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
-TECH_TIPS_OUT = lib/blogs/shlomif-tech-diary--tech-tips.xhtml
+TECH_TIPS_OUT = lib/repos/shlomif-tech-diary--tech-tips.xhtml
 
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
@@ -1038,8 +1038,8 @@ $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 $(T2_DEST)/open-source/resources/tech-tips/index.xhtml: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)
 
-$(T2_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/blogs/validate-your-html/README.md
-$(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/blogs/how-to-share-code-online/README.md
+$(T2_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
+$(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
 
 all: $(T2_CLEAN_STAMP)
 

@@ -141,7 +141,7 @@ foreach my $repo (
     'shlomif-tech-diary', 'Shlomi-Fish-Back-to-my-Homepage-Logo',
     )
 {
-    _git_task( 'lib/blogs', $repo );
+    _git_task( 'lib/repos', $repo );
 }
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(

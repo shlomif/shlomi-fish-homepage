@@ -35,6 +35,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 import os
 import re
 import unittest
+
 import vnu_validator
 
 
@@ -66,7 +67,7 @@ class MyTests(vnu_validator.VnuTest):
                         |
                 (?:
                     WebMetaLecture/
-                        {slides_dir}/examples/frames(?:/dest)?/frames{ext}
+                        {slides_dir}/examples/frames(?:/dest)?/(?:frames|links){ext}
                 )
                             |
                 (?:(?:Perl/Haskell
@@ -87,12 +88,11 @@ class MyTests(vnu_validator.VnuTest):
             (?:/
                 (?:MANIFEST|SFresume[a-z_A-Z]*|
                 404|
-                humour(?:-heb)?|
                 no-ie/index|
                 no-ie/update-2014-02/index|
-                links|old-news|
-                shlomif.il.eu.org-questions|
-                personal(?:-heb)?|toggle|wonderous|wysiwyt)\\.html
+                old-news|
+                shlomif.il.eu.org-questions
+                )\\.html
             )
                 |
             (?: MathJax/.*? )

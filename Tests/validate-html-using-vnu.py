@@ -86,12 +86,9 @@ class MyTests(vnu_validator.VnuTest):
             (?:/t2/lecture/{lecture_re})
                 |
             (?:/
-                (?:SFresume[a-z_A-Z]*|
-                404|
+                (?:
                 no-ie/index|
                 no-ie/update-2014-02/index|
-                old-news|
-                shlomif.il.eu.org-questions
                 )\\.html
             )
                 |

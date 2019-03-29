@@ -37,10 +37,9 @@ my $obj = TheWML::Frontends::Wml::Runner->new;
 
 sub is_newer
 {
-    my $file1 = shift;
-    my $file2 = shift;
-    my @stat1 = stat($file1);
-    my @stat2 = stat($file2);
+    my ( $fn1, $fn2 ) = @_;
+    my @stat1 = stat($fn1);
+    my @stat2 = stat($fn2);
     if ( !@stat2 )
     {
         return 1;

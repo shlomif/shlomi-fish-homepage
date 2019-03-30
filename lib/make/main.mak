@@ -660,7 +660,7 @@ $(ART_SLOGANS_PNGS): %.png: %.svg
 	$(OPTIPNG) $@
 
 $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
-	convert -resize '200' $< $@
+	gm convert -resize '200' $< $@
 	$(OPTIPNG) $@
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg

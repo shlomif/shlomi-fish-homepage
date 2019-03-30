@@ -15,5 +15,4 @@ sub _exec
     return;
 }
 
-chdir("t2/humour/fortunes");
-_exec( [ "gmake", "-s", "-j16", "dats" ], 'gmake' );
+_exec( [qw#gmake -s -j16 -C t2/humour/fortunes dats#], 'gmake' );

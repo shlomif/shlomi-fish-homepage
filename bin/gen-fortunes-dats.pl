@@ -2,8 +2,7 @@
 
 use strict;
 use warnings;
-
-use Cwd qw(getcwd);
+use autodie;
 
 sub _exec
 {
@@ -16,12 +15,5 @@ sub _exec
     return;
 }
 
-{
-    my $orig_dir = getcwd();
-
-    chdir("t2/humour/fortunes");
-
-    _exec( [ "gmake", "-s", "dats" ], 'gmake' );
-
-    chdir($orig_dir);
-}
+chdir("t2/humour/fortunes");
+_exec( [ "gmake", "-s", "-j16", "dats" ], 'gmake' );

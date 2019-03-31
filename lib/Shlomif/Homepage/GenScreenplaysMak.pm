@@ -51,7 +51,7 @@ sub _calc_screenplay_doc_makefile_lines
             <<"EOF",
 \$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
 \texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" gmake epub
-\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname) || true
+\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
 EOF
             ;
     }

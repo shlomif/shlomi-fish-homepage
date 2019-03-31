@@ -447,6 +447,10 @@ my $humour_tree_contents = {
                         "humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/",
                 },
                 {
+                    text => "Announcing Python 4",
+                    url  => "humour/bits/Python4-Announcement/",
+                },
+                {
                     text => "Emma Watson’s Visit to Israel and Gaza",
                     url  => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
                     title =>

@@ -60,6 +60,7 @@ T2_INCLUDE_WML_RENDER = $(call WML_RENDER,UNCOND=1) "${@:$(T2_DEST)/%=%}"
 
 make-dirs: $(T2_ALL_DIRS_DEST)
 
+MAN_HTML = $(T2_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
@@ -944,12 +945,7 @@ include lib/factoids/deps.mak
 
 all: manifest_html
 
-MAN_HTML = $(T2_DEST)/MANIFEST.html
-
 manifest_html: $(MAN_HTML)
-
-$(MAN_HTML): ./bin/gen-manifest.pl
-	$(PERL) $<
 
 $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
@@ -1050,7 +1046,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS)
+$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML)
 	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	rsync -a $(T2_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)
@@ -1115,3 +1111,6 @@ $(JSON_RES_DEST): $(T2_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
 
 non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)
+
+$(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES)
+	$(PERL) $<

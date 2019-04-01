@@ -2,7 +2,7 @@
 [% top_header %]
 
 QUADPRES_EXE = quadp
-QUADPRES__WML_OPTS := --passoption=3,-I$(PWD)/lib/presentations/qp/common/ --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-3,5,7,8
+QUADPRES__WML_OPTS := --passoption=3,-I$(PWD)/lib/presentations/qp/common/ --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-3,5,7,8 -q
 
 [% SET pres_targets = [] %]
 [% SET pres_targets_files = [] %]

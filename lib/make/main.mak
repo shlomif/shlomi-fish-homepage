@@ -487,7 +487,6 @@ $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(
 	$(PERL) $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
 
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
-	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	$(PERL) $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
 
 FORTUNES_XML_TO_XHTML_TOC_XSLT = lib/fortunes/fortune-xml-to-xhtml-toc.xslt

@@ -1050,7 +1050,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES)
+$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS)
 	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	rsync -a $(T2_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)

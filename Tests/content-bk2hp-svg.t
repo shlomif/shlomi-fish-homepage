@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::More tests => 2;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -15,4 +15,7 @@ my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
     # TEST
     like( $content, qr{<svg}, 'Contains a tag.' );
+
+    # TEST
+    ok( scalar( -e "$T2_POST_DEST/images/bk2hp.png" ), "bk2hp.png" );
 }

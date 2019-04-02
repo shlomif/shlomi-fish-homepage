@@ -11,4 +11,4 @@ dest="$1"
 shift
 rm -fr "$dest"
 cp -a "$src" "$dest"
-find "$dest" -type f | grep -E '(/lecture/.*/src\.tar\.gz$)|(\.epub$)' | xargs rm -f
+find "$dest" -type f | grep -E '(\.epub$)' | xargs rm -f

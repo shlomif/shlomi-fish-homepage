@@ -179,3 +179,6 @@ $r_fh->spew_utf8($text);
 
 _my_system( [ 'gmake', 'bulk-make-dirs' ] );
 _my_system( [ 'gmake', 'sects_cache' ] );
+
+# For https://reproducible-builds.org/
+_my_system( [ 'gmake', 'mathjax_dest' ] );

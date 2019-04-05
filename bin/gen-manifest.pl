@@ -4,11 +4,11 @@ use strict;
 use warnings;
 use autodie;
 
-use File::Find::Object;
+use File::Find::Object ();
 use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use lib './lib';
-use HTML::Latemp::Local::Paths;
+use HTML::Latemp::Local::Paths ();
 
 my $T2_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
 

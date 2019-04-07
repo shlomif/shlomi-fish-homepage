@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
     <info><title>Park - Park is, is not, is too, is not Arc</title>
 
         <authorgroup>
@@ -20,7 +20,7 @@
                 <!-- belum. ;-) -->
                 This document is copyrighted by Shlomi Fish
                 under the
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
+                <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
                     Commons Attribution License version 2.5</link>
                 (or at your option a greater version). The code samples are
                 under the Public Domain.
@@ -54,7 +54,7 @@
             </para>
         </footnote>
     is a new dialect of Lisp, based on
-    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arc.html">Paul
+    <link xlink:href="http://www.paulgraham.com/arc.html">Paul
     Graham's Arc effort</link>. Park is in fact a malicious and incompatible
     fork of Arc. A fork not of the code, which is still not available to the
     public, but of the concept and motivation.
@@ -66,10 +66,10 @@
     I disagree with Graham about some of his language design elements. A few
     days ago I came with a revelation that it was hopeless waiting for
     Mr. Graham to actually release either a final spec to the public of Arc
-    or a actual working code. Arc <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</link>. It's
+    or a actual working code. Arc <link xlink:href="http://www.paulgraham.com/arcll1.html">was announced at the LL1 conference at November 2001</link>. It's
     been almost 5 years from now, and there's still not a working code or a
     coherent spec. Furthermore, Graham stopped adding the ideas people sent
-    him to the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.archub.org/arcsug.txt">emails collection
+    him to the <link xlink:href="http://www.archub.org/arcsug.txt">emails collection
     containing them</link> (including one that I sent a few years ago, which
     I know he is aware of because he responded to my message).
     </para>
@@ -78,7 +78,7 @@
     Thus enter Park. The name stems from "Parc" but is actually an English
     world. One can say that Park is a LISP that starts with "P", or that
     working with it is like a stroll in the Park. Park has
-    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/popular.html">the design goals of
+    <link xlink:href="http://www.paulgraham.com/popular.html">the design goals of
     Arc</link> but:
     </para>
 
@@ -122,7 +122,7 @@
 
     <para>
     One note about myself. My name is
-    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/">Shlomi Fish</link> and I'm a
+    <link xlink:href="http://www.shlomifish.org/">Shlomi Fish</link> and I'm a
     software enthusiast and a writer. I am not the ideal person to design
     Park, but I believe and hope that I have the right attitude. If you happen
     to know better about some things, please post your corrections to the
@@ -135,7 +135,7 @@
     <section xml:id="why_am_i_doing_it"><info><title>Why am I Doing it?</title></info>
 
         <blockquote>
-            <attribution><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.google.com/group/comp.lang.perl/msg/620a1599759c9bc?hl=en">Larry Wall</link></attribution>
+            <attribution><link xlink:href="http://groups.google.com/group/comp.lang.perl/msg/620a1599759c9bc?hl=en">Larry Wall</link></attribution>
             <para>
             All language designers are arrogant. Comes with the territory.
             </para>
@@ -147,7 +147,7 @@
             <orderedlist inheritnum="ignore" continuation="restarts">
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/gp/product/0066620724/103-5528911-1875020">Because it's fun.</link> This is by itself a good
+                        <link xlink:href="http://www.amazon.com/gp/product/0066620724/103-5528911-1875020">Because it's fun.</link> This is by itself a good
                         reason.
                     </para>
                 </listitem>
@@ -156,7 +156,7 @@
                         Because I found that designing your own language is
                         one of the best ways to learn more about the original
                         languages it is based on. When I designed the
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/rindolf/">Perl
+                        <link xlink:href="http://www.shlomifish.org/rindolf/">Perl
                             dialect "Rindolf"</link>, I learned that some
                         features I suggested for it were already doable in
                         Perl 5.
@@ -177,9 +177,9 @@
                         some relics of the Lisp distant past, where it was
                         expected to run
                         on such now obscure systems as
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/PDP-10">the
+                        <link xlink:href="http://en.wikipedia.org/wiki/PDP-10">the
                             PDP-10</link> and
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Incompatible_Timesharing_System">ITS</link> or the LISP Machine. They do not correspond to
+                        <link xlink:href="http://en.wikipedia.org/wiki/Incompatible_Timesharing_System">ITS</link> or the LISP Machine. They do not correspond to
                         the modern's world "All the world is a VAX" and
                         "Everything on top is a UNIX" reality. (Which has
                         persisted for better or for worse).
@@ -206,9 +206,9 @@
 
 
         <para>
-            Paul Graham explains it very well in <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/arcfaq.html">the
+            Paul Graham explains it very well in <link xlink:href="http://www.paulgraham.com/arcfaq.html">the
                 Arc FAQ</link>, and in
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/popular.html">"Being
+            <link xlink:href="http://www.paulgraham.com/popular.html">"Being
                 Popular"</link>. Park is Arc done faster, and hopefully
             also better.
         </para>
@@ -258,7 +258,7 @@
 
 
         <para>
-        Paul Graham wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/noop.html">Why
+        Paul Graham wrote <link xlink:href="http://www.paulgraham.com/noop.html">Why
         Arc isn't Especially Object-Oriented.</link>. His conclusion for why
         this is the case are:
         </para>
@@ -298,7 +298,7 @@
         So there we go. Note that Park will not be overly-Object-Oriented
         (OOO). One would be able to declare global functions and variables,
         and write scripts or modules without wrapping it in Objects. (Read
-        what <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.builderau.com.au/program/0,39024614,39160082,00.htm">Damian
+        what <link xlink:href="http://www.builderau.com.au/program/0,39024614,39160082,00.htm">Damian
         Conway has to say about the Hello World program in Java</link> for
         why I don't like it).
         </para>
@@ -325,7 +325,7 @@
             <listitem>
             <para>
                 Supports
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://use.perl.org/~Ovid/journal/27656">traits</link>
+                <link xlink:href="http://use.perl.org/~Ovid/journal/27656">traits</link>
                 (or as the Perl 6 people call them "Roles").
             </para>
             </listitem>
@@ -426,7 +426,7 @@
         <para>
         The default localization of values in Park would be lexical. However,
         having used Perl 5's <literal>local</literal>, I am aware of
-        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perl.plover.com/local.html">several good uses for
+        <link xlink:href="http://perl.plover.com/local.html">several good uses for
         dynamic scoping in a mostly lexical scoping language</link>. So,
         there will be a way to localise variables dynamically in Park.
         </para>
@@ -474,7 +474,7 @@
             <blockquote>
                 <attribution>
                 An anonymous Perl 5 and
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://en.wikipedia.org/wiki/Pugs_(programming)">Pugs</link> hacker
+                <link xlink:href="https://en.wikipedia.org/wiki/Pugs_(programming)">Pugs</link> hacker
                 about Haskell's Monads.
                 </attribution>
                 <para>
@@ -496,7 +496,7 @@
                 the default file Input/Output API will either be a reflection
                 of the POSIX one, or alternatively something similar
                 in spirit to
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://search.cpan.org/search?query=perlio&amp;mode=module">PerlIO</link>
+                <link xlink:href="http://search.cpan.org/search?query=perlio&amp;mode=module">PerlIO</link>
                 or the Python or Ruby files and sockets I/O classes.
             </para>
 
@@ -515,7 +515,7 @@
                 for example perl 5, CPython, ruby, php and the Tcl interpreter
                 are all written in ANSI C. That way they can be bootstrapped
                 to run on any system for which a C compiler (such as
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://gcc.gnu.org/">the Open-Source gcc</link>
+                <link xlink:href="http://gcc.gnu.org/">the Open-Source gcc</link>
                 is available).
             </para>
             <para>
@@ -593,7 +593,7 @@
 
                 <para>
                     There was a very interesting presentation in an
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.org.il/">Israeli Perl Mongers
+                    <link xlink:href="http://www.perl.org.il/">Israeli Perl Mongers
                         meeting</link> about strings, quoting and
                     interpolation in other languages and Perl. The presentation
                     noted among else that in other languages one has to write

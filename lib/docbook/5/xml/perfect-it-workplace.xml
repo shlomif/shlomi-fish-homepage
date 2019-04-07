@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
     <info><title>The Perfect IT Workplace</title>
 
         <authorgroup>
@@ -17,7 +17,7 @@
         <legalnotice xml:id="main_legal_notice">
             <para>
                 <!--Creative Commons License-->
-                This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option any greater version of it).
+                This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option any greater version of it).
             </para>
         </legalnotice>
 
@@ -58,7 +58,7 @@
     <section xml:id="introduction"><info><title>Introduction</title></info>
 
         <para>
-            I originally wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/computers/software-management/end-of-it-slavery/">"The
+            I originally wrote <link xlink:href="http://www.shlomifish.org/philosophy/computers/software-management/end-of-it-slavery/">"The
                 End of Info-Tech Slavery"</link> about a year ago, shortly
             after I was fired from a job I liked and for which I worked
             about three months. Some people who commented on the
@@ -88,7 +88,7 @@
         <para>
             So this time, I'm going to try again and hopefully be more
             successful. This article aims to cover the elements that
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/gh.html">great
+            <link xlink:href="http://www.paulgraham.com/gh.html">great
                 programmers</link> would love to see in a perfect workplace.
             By implementing as many of them as possible, or at least giving
             them a serious thought, you can make such potential employees want
@@ -129,30 +129,30 @@
             <orderedlist inheritnum="ignore" continuation="restarts">
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/esr/">Eric S.
+                        <link xlink:href="http://www.catb.org/esr/">Eric S.
                             Raymond's Homepage</link> and especially
-                        his <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/esr/writings/cathedral-bazaar/">the "Cathedral and the Bazaar" series</link> and his
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html">"How
+                        his <link xlink:href="http://www.catb.org/esr/writings/cathedral-bazaar/">the "Cathedral and the Bazaar" series</link> and his
+                        <link xlink:href="http://www.catb.org/~esr/faqs/hacker-howto.html">"How
                             to become a Hacker"</link> document.
                     </para>
                 </listitem>
                 <listitem>
                     <para>
                         The
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">wonderful
+                        <link xlink:href="http://www.joelonsoftware.com/">wonderful
                         "Joel on Software" site</link> by Joel Spolsky.
                     </para>
                 </listitem>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/">Paul
+                        <link xlink:href="http://www.paulgraham.com/">Paul
                             Graham's essays</link> - tend to be interesting,
                         but often suffering from some problems.
                     </para>
                 </listitem>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.extremeprogramming.org/">"Extreme
+                        <link xlink:href="http://www.extremeprogramming.org/">"Extreme
                             Programming"</link> - seems a bit too
                         rigorous, but still has many good ideas.
                     </para>
@@ -160,7 +160,7 @@
                 <listitem>
                     <para>
                         Damian Conway's excellent book
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.oreilly.com/catalog/perlbp/">Perl
+                        <link xlink:href="http://www.oreilly.com/catalog/perlbp/">Perl
                             Best Practices</link>
                     </para>
                 </listitem>
@@ -172,22 +172,22 @@
         <section xml:id="hire-the-best-developers"><info><title>Hire the Best Developers</title></info>
 
             <para>
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">"Joel
+                <link xlink:href="http://www.joelonsoftware.com/">"Joel
                     on Software"</link> and others have written about
                 the importance of having very good developers. See for
                 example his
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html">"Guerilla
+                <link xlink:href="http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html">"Guerilla
                     Guide to Interviewing"</link>.
                 Bad programmers will create code that's buggy, insecure,
                 hard-to-maintain, etc. The so-called "Medium-level techs"
                 will probably not, but will be heavily under-productive in
                 comparison to star programmers. (And according to
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Brooks'_law">Brooks'
+                <link xlink:href="http://en.wikipedia.org/wiki/Brooks'_law">Brooks'
                     Law</link>, you can't effectively replace one good
                 programmer with many worse ones.)
             </para>
             <para>
-                As I noted <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://discuss.joelonsoftware.com/default.asp?joel.3.197867.7">there
+                As I noted <link xlink:href="http://discuss.joelonsoftware.com/default.asp?joel.3.197867.7">there
                     are many aspects that qualify someone as a
                     good programmer</link>. However, it does not change
                 the fact that hiring a large number of mediocre programmers
@@ -216,12 +216,12 @@
                 programmers to show parts of it to their online friends to get
                 some advice. You should make as much of it as possible public,
                 under
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Open_source_license">open
+                <link xlink:href="http://en.wikipedia.org/wiki/Open_source_license">open
                     source licences</link> to allow it to be used more often,
                 increase its quality, and grow a culture around it. From my
                 experience, working on "shrinkwrap" software that is used by
                 end-users in the wild, and open-source software in particular,
-                is the best way to increase the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/computers/high-quality-software/">quality
+                is the best way to increase the <link xlink:href="http://www.shlomifish.org/philosophy/computers/high-quality-software/">quality
                     of the software</link> as it requires the most discipline
                 to work on and support.
             </para>
@@ -241,7 +241,7 @@
             <para>
                 Finally, you should avoid vendor lock-in: use standard
                 or documented protocols and specifications,
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000052.html">take
+                <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000052.html">take
                     Joel Spolsky's advice
                     of letting your users go back</link>, and make sure
                 your users have control of their data and can access it,
@@ -249,7 +249,7 @@
             </para>
             <para>
                 A good example for this is
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://flickr.com/">the photo-sharing
+                <link xlink:href="http://flickr.com/">the photo-sharing
                     site Flickr</link>, which has
                 published full APIs for its service, and even allowed these
                 APIs to be used by competing site.
@@ -288,7 +288,7 @@
             <section xml:id="conditions--best-tools"><info><title>The Best Tools That Money Can Buy</title></info>
 
                 <para>
-                    This cannot stressed enough. As <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Spolsky notes</link> (based
+                    This cannot stressed enough. As <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Spolsky notes</link> (based
                     on Steve McConnell) in item No. 9 of the Joel
                     Test, you need to "use the best tools that money can buy".
                 </para>
@@ -337,7 +337,7 @@
 
                 <para>
                     You also need a
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://better-scm.shlomifish.org/">state-of-the-art
+                    <link xlink:href="http://better-scm.shlomifish.org/">state-of-the-art
                         version control system</link> , of which there are
                     currently several high-quality open-source alternatives.
                     Some very costly version control systems have a bad
@@ -348,7 +348,7 @@
                 <para>
                     If there's a good commercial software that your employees
                     like to use and can recommend, don't hesitate to buy it.
-                    You'll also find <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://safari.oreilly.com/">O'Reilly
+                    You'll also find <link xlink:href="http://safari.oreilly.com/">O'Reilly
                         Safari</link> Licences to be a good idea so your
                     employees can easily look up and read information in many
                     books online.
@@ -358,7 +358,7 @@
 
 
                 <para>
-                    Give your employees <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.igda.org/articles/erobinson_crunch.php">sane
+                    Give your employees <link xlink:href="http://www.igda.org/articles/erobinson_crunch.php">sane
                         working hours</link> - 40 hours work-weeks or less.
                     While sometimes asking them to stay late to finish a
                     deadline is acceptable, the so-called "crunch mode" is
@@ -418,9 +418,9 @@
                     <listitem>
 
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">Internet
+                            <link xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">Internet
                                 Relay Chat</link> and other forms
-                            of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Instant_messaging">Instant
+                            of <link xlink:href="http://en.wikipedia.org/wiki/Instant_messaging">Instant
                                 Messaging</link>. This allows star programmers
                             to discuss problems and share solutions
                             interactively with their peers, or just to
@@ -432,7 +432,7 @@
                     <listitem>
 
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.openssh.org/">SSH - Secure
+                            <link xlink:href="http://www.openssh.org/">SSH - Secure
                                 Shell</link> - allows access to remote
                             computers over the network.
                         </para>
@@ -442,7 +442,7 @@
                     <listitem>
 
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/BitTorrent_(protocol)">BitTorrent</link> -
+                            <link xlink:href="http://en.wikipedia.org/wiki/BitTorrent_(protocol)">BitTorrent</link> -
                             allows downloading some content that is otherwise
                             not available on the Web.
                         </para>
@@ -482,7 +482,7 @@
                     absolutely everything. Great programmers won't work
                     for you for free, but they'll find many other
                     conditions much more tempting than an over-blown
-                    salary. See what <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">Eric Raymond
+                    salary. See what <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/homesteading/ar01s19.html">Eric Raymond
                         wrote about it
                         in "Homesteading the Noosphere"</link>, quoting
                     many studies:
@@ -544,7 +544,7 @@
 
             <para>
                 When doing
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Pair_programming">Pair
+                <link xlink:href="http://en.wikipedia.org/wiki/Pair_programming">Pair
                     programming</link>, there are two programmers
                 sitting next to a single computer screen and keyboard, with
                 one of them actually writing the code, and the other one
@@ -584,7 +584,7 @@
             <para>
                 I had had a very good experience working in pairs back when
                 I was an undergraduate student at
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.technion.ac.il/">the
+                <link xlink:href="http://www.technion.ac.il/">the
                     Technion</link> and can highly recommend it.
             </para>
         </section>
@@ -651,10 +651,10 @@
                 Moreover, some tasks that your employees do at their
                 free time, may eventually bring your company publicity
                 and esteem. Part of the reason Joel Spolsky's
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.fogcreek.com/">"Fog Creek
+                <link xlink:href="http://www.fogcreek.com/">"Fog Creek
                     Software" company</link> is so well-known is because
                 of the
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">Joel
+                <link xlink:href="http://www.joelonsoftware.com/">Joel
                     on Software</link> blog, which is one of the
                 most-read weblogs about software management. This in turn
                 resulted in a lot of publicity to the Fog Creek products.
@@ -663,10 +663,10 @@
                 If your employees are productive, you should not really be
                 concerned what they are doing on their work time.<footnote xml:id="eric-sink-scrabble" label="EricSink">
                     <para>
-                        Eric Sink wrote <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ericsink.com/entries/scrabble_1994.html">a
+                        Eric Sink wrote <link xlink:href="http://www.ericsink.com/entries/scrabble_1994.html">a
                             wonderful entry about the tolerance of
                             his former boss</link> on his weblog. (Here's
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ericsink.com/entries/ethics.html">an update</link>.)
+                        <link xlink:href="http://www.ericsink.com/entries/ethics.html">an update</link>.)
                     </para>
                 </footnote>
                 Google allows its employees work on non-work-related-tasks
@@ -686,7 +686,7 @@
                 <emphasis role="bold">Boring</emphasis>.
             </para>
             <para>
-                Your job ad need to stand out. Take <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.google.com/group/israelrb/browse_frm/thread/bb11cf1c3ed8e221">this job ad that was posted to the Israeli Ruby mailing
+                Your job ad need to stand out. Take <link xlink:href="http://groups.google.com/group/israelrb/browse_frm/thread/bb11cf1c3ed8e221">this job ad that was posted to the Israeli Ruby mailing
                     list</link> for an excellent example:
             </para>
             <blockquote>
@@ -742,7 +742,7 @@
                 So this ad has caught my attention.
             </para>
             <para>
-                As <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/LordPalmerston.html">Joel
+                As <link xlink:href="http://www.joelonsoftware.com/articles/LordPalmerston.html">Joel
                     on Software notes about experience</link>, the reason
                 companies want people with a lot of experience in a certain
                 niche, is because they tend to overcome problems they
@@ -775,10 +775,10 @@
             </para>
             <para>
                 Another tip I can offer to look for employees is to use
-                specialised job boards like the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jobs.joelonsoftware.com/">the
+                specialised job boards like the <link xlink:href="http://jobs.joelonsoftware.com/">the
                     Joel on Software job-board</link>,
-                and <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jobs.perl.org/">jobs.perl.org</link>,
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jobs.thedailywtf.com/1001/browse.aspx">the
+                and <link xlink:href="http://jobs.perl.org/">jobs.perl.org</link>,
+                <link xlink:href="http://jobs.thedailywtf.com/1001/browse.aspx">the
                     DailyWTF "Non-WTF" board</link> which highly-qualified and
                 niche people follow. Just make sure
                 to phrase your ad in a non-boring way, as I noted earlier.
@@ -817,7 +817,7 @@
                 may eventually become unhappy, and you should make sure they
                 can tell you how they feel, and to take note of what they
                 say. Otherwise, you're risking underproductivity or downright
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Clinical_depression">clinical
+                <link xlink:href="http://en.wikipedia.org/wiki/Clinical_depression">clinical
                 depression</link>.
             </para>
         </section>
@@ -827,7 +827,7 @@
 
 
                 <para>
-                    The first advice I can give is to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000036.html"><emphasis role="bold">write
+                    The first advice I can give is to <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000036.html"><emphasis role="bold">write
                         functional specs</emphasis></link>. In the link, Joel Spolsky
                     explains the motivation and method of writing functional
                     spec. A functional spec describes how the end-user will
@@ -845,14 +845,14 @@
                 <orderedlist inheritnum="ignore" continuation="restarts">
                     <listitem>
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://svn.berlios.de/svnroot/repos/web-cpan/App-Freelancers-Board-Yonathan/trunk/docs/functional-spec/App-Freelancer-Board-Yonathan-functional-spec.txt">Functional
+                            <link xlink:href="http://svn.berlios.de/svnroot/repos/web-cpan/App-Freelancers-Board-Yonathan/trunk/docs/functional-spec/App-Freelancer-Board-Yonathan-functional-spec.txt">Functional
                                 Spec for a Freelancers Board</link> (with a
                             Biblical theme).
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://svn.berlios.de/svnroot/repos/web-cpan/CPAN-Module-Classification/trunk/docs/functional-spec-for-CPAN-Classification-Proposal.txt">Functional
+                            <link xlink:href="http://svn.berlios.de/svnroot/repos/web-cpan/CPAN-Module-Classification/trunk/docs/functional-spec-for-CPAN-Classification-Proposal.txt">Functional
                                 Spec for a better classification of CPAN
                                 Modules</link> (with a theme of FOSS world
                             celebrities).
@@ -860,9 +860,9 @@
                     </listitem>
                     <listitem>
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://svn.berlios.de/svnroot/repos/winapt/winapt/trunk/docs/design/functional-spec.txt">Functional Spec
+                            <link xlink:href="http://svn.berlios.de/svnroot/repos/winapt/winapt/trunk/docs/design/functional-spec.txt">Functional Spec
                                 for a Windows package management system.</link>
-                            (featuring characters from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ozyandmillie.org/">Ozy and Millie</link>).
+                            (featuring characters from <link xlink:href="http://www.ozyandmillie.org/">Ozy and Millie</link>).
                         </para>
                     </listitem>
                 </orderedlist>
@@ -883,14 +883,14 @@
                 <itemizedlist>
                     <listitem>
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://qa.perl.org/">The Perl
+                            <link xlink:href="http://qa.perl.org/">The Perl
                                 Quality Assurance project</link>, also
                             see their wiki.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Software_testing">The Wikipedia
+                            <link xlink:href="http://en.wikipedia.org/wiki/Software_testing">The Wikipedia
                                 page about Software Testing.</link>
 
                         </para>
@@ -898,7 +898,7 @@
                 </itemizedlist>
                 <para>
                     Note that having automated tests is not a substitute for
-                    having <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000067.html">dedicated
+                    having <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000067.html">dedicated
                         software testers</link> (and vice versa). By
                     all means, they are both necessary for any serious
                     operation.
@@ -918,7 +918,7 @@
             <section xml:id="refactoring"><info><title>Refactoring</title></info>
 
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.refactoring.com/">Refactoring</link>
+                    <link xlink:href="http://www.refactoring.com/">Refactoring</link>
                     is the process of improving the internal quality of
                     the code (from "a big mess" to "squeaky-clean and modular
                     code"), while not changing its external behaviour. This
@@ -927,9 +927,9 @@
                 </para>
                 <para>
                     "Joel on Software" features two excellent article about
-                    the motivation for refactoring: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things You Should Never Do,
+                    the motivation for refactoring: <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000069.html">"Things You Should Never Do,
                         Part I (why rewriting functional code from
-                        scratch is a bad idea)"</link>, and <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub
+                        scratch is a bad idea)"</link>, and <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">"Rub
                         a dub dub" (how and why to do refactoring).</link>.
                 </para>
                 <para>
@@ -1009,7 +1009,7 @@ function create_employee(params)
                         complex <literal>emp.set_salary()</literal> call to
                         a simple <literal>emp.calculate_salary()</literal>
                         method. This
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://c2.com/cgi/wiki?ExtractMethod">method
+                        <link xlink:href="http://c2.com/cgi/wiki?ExtractMethod">method
                         extraction</link> will make the intention of
                         the code self-documenting (as the method will have
                         a meaningful name) and much more robust for future
@@ -1022,7 +1022,7 @@ function create_employee(params)
                 </para>
                 <para>
                 Some documentation (especially API documentation such as
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Plain_Old_Documentation">Perl's POD</link> or <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.doxygen.org/">Doxygen</link>)
+                <link xlink:href="http://en.wikipedia.org/wiki/Plain_Old_Documentation">Perl's POD</link> or <link xlink:href="http://www.doxygen.org/">Doxygen</link>)
                 is good, and you shouldn't feel too guilty about writing a
                 comment for an interesting trick, but too much documentation
                 slows things down, and doesn't help with the design process,
@@ -1030,7 +1030,7 @@ function create_employee(params)
                 </para>
                 <para>
                     Something else I consider a bad idea is
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/You_Ain't_Gonna_Need_It">Overengineering
+                    <link xlink:href="http://en.wikipedia.org/wiki/You_Ain't_Gonna_Need_It">Overengineering
                     or YAGNI ("You Ain't Gonna Need It")</link>. The basic
                     idea is not to implement too many features at once, or
                     over-complicate the design of the code, and instead focus
@@ -1060,7 +1060,7 @@ function create_employee(params)
                 </para>
                 <para>
                     One possible solution to this problem
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/FogBugzIII.html">has been
+                    <link xlink:href="http://www.joelonsoftware.com/articles/FogBugzIII.html">has been
                         illustrated by Fog Creek software</link>. What
                     they did was implement a compiler from a common language,
                     to several target languages. Naturally, this compiler also
@@ -1082,7 +1082,7 @@ function create_employee(params)
             <para>
                 Programmers need to have a solid understanding of the entire
                 product stack in their head. Good programmers can also
-                benefit from a change of scenery. And naturally, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Code_review">reviewing
+                benefit from a change of scenery. And naturally, <link xlink:href="http://en.wikipedia.org/wiki/Code_review">reviewing
                     someone else's code</link>, and criticising it, is also
                 always beneficial.
             </para>
@@ -1112,13 +1112,13 @@ function create_employee(params)
         <section xml:id="listen-to-your-customers"><info><title>Listen to Your Customers or Users</title></info>
 
             <para>
-                Joel on Software gives <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">a lot of good advice on having
+                Joel on Software gives <link xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">a lot of good advice on having
                     a good customer service</link>. You should listen to
                 what your customers (or users) say. Don't dismiss them.
                 Don't give them annoying canned responses. Open your
                 bug-tracker to the world as a web-service. There are many
                 web-based, and gratis bug-trackers, such as
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.bugzilla.org/">Bugzilla</link>,
+                <link xlink:href="http://www.bugzilla.org/">Bugzilla</link>,
                 and you should use one of them for better interaction with
                 your customers.
             </para>
@@ -1133,14 +1133,14 @@ function create_employee(params)
                 feature, and it seems to be important enough, give a priority
                 to implementing it. As a Mercury Interactive (Now part of HP)
                 developer
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/2751">noted</link>
+                <link xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/2751">noted</link>
                 usually the features requested by the customers, are the
                 ones that will yield the most newer customers,
                 not-to-mention will allow keeping customers, if they are
                 paying for upgrades or as a "software-as-a-service" model.
             </para>
             <para>
-                Joel Spolsky <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.inc.com/magazine/20080401/how-hard-could-it-be-fire-and-motion.html?partner=fogcreek">also
+                Joel Spolsky <link xlink:href="http://www.inc.com/magazine/20080401/how-hard-could-it-be-fire-and-motion.html?partner=fogcreek">also
                     notes that good customer service is part of the key
                 to a small ISV's success</link>.
             </para>
@@ -1150,7 +1150,7 @@ function create_employee(params)
             <para>
                 Originality and "innovation" is not as important as people
                 think it is. It is perfectly OK to create a product in
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000056.html">a
+                <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000056.html">a
                     niche which has a lot of existing competition</link>,
                 it's OK to build on other people's efforts, and it's OK to
                 "borrow" or "steal" (see the quote at the top) ideas from
@@ -1160,7 +1160,7 @@ function create_employee(params)
                 You're not getting credit for originality - you're getting
                 credit for high-quality products (software, services, support,
                 etc. - whatever you do) and especially for revenue and
-                profits. See <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000074.html">"Converting Capital into Software That Works" for
+                profits. See <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000074.html">"Converting Capital into Software That Works" for
                 more information</link>
             </para>
 
@@ -1180,7 +1180,7 @@ function create_employee(params)
                 Similar in software, you can often see competing products
                 displacing more established competition, or sometimes
                 a market where there isn't a clear winner (e.g:
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://xwinman.org/">window
+                <link xlink:href="http://xwinman.org/">window
                     managers and desktop environments for Unix</link>,
                 Bug trackers, text editors, etc.)
             </para>
@@ -1230,10 +1230,10 @@ function create_employee(params)
             <itemizedlist>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/exec/obidos/ASIN/0380810336/ref=nosim/shlomifishhom-20/">"Feeling Good: The New Mood
+                        <link xlink:href="http://www.amazon.com/exec/obidos/ASIN/0380810336/ref=nosim/shlomifishhom-20/">"Feeling Good: The New Mood
                             Therapy"</link> -
                         the best book I've read about Psychology. A self-help
-                        book of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Cognitive_behavioral_therapy">Cognitive-behavioural
+                        book of <link xlink:href="http://en.wikipedia.org/wiki/Cognitive_behavioral_therapy">Cognitive-behavioural
                             therapy</link>, this books explains what
                         causes Clinical depressions, and other negative
                         mood swings, and why people behave the way they do.
@@ -1246,7 +1246,7 @@ function create_employee(params)
                 </listitem>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/philosophy/guide-to-neo-tech/">"The
+                        <link xlink:href="http://www.shlomifish.org/philosophy/philosophy/guide-to-neo-tech/">"The
                             Neo-Tech Discovery"</link> - an off-shoot of
                         Ayn Rand' Objectivism, Neo-Tech is the best idea-system
                         I've encountered yet. Note that it is easy to both
@@ -1260,7 +1260,7 @@ function create_employee(params)
                         Note that as of May 2008, the old hyperlinks to
                         the Neo-Tech site lead to redirects or PHP errors.
                         You can still find the old pages
-                        on <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.archive.org/">the web
+                        on <link xlink:href="http://www.archive.org/">the web
                             archive</link>, and I hope they'll get fixed.
                         In any case, it may be a good idea to order
                         "The Neo-Tech Discovery" book. (It is not available
@@ -1269,7 +1269,7 @@ function create_employee(params)
                 </listitem>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/exec/obidos/ASIN/0465067107/ref=nosim/shlomifishhom-20/">"The
+                        <link xlink:href="http://www.amazon.com/exec/obidos/ASIN/0465067107/ref=nosim/shlomifishhom-20/">"The
                             Design of Everyday Things"</link> - this
                         book is a must read to everyone doing user-interface
                         design. It explains how frustrating it is to use many
@@ -1279,10 +1279,10 @@ function create_employee(params)
                 </listitem>
                 <listitem>
                     <para>
-                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.amazon.com/exec/obidos/ASIN/071672328X/ref=nosim/shlomifishhom-20/">"Helplessness:
+                        <link xlink:href="http://www.amazon.com/exec/obidos/ASIN/071672328X/ref=nosim/shlomifishhom-20/">"Helplessness:
                             On Depression, Development and Death"</link> -
                         I haven't read this book yet, but it was recommended
-                        on <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">the
+                        on <link xlink:href="http://www.joelonsoftware.com/navLinks/fog0000000262.html">the
                             "Joel on Software" book reviews</link>,
                         which I found to be of value. It is
                         also written from the Cognitive-Behavioural Psychology
@@ -1311,7 +1311,7 @@ function create_employee(params)
                 could do, would possibly please him, and that he was
                 demotivating on purpose. This was one of the reasons
                 that caused me to assume a
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Hypomania">variation
+                <link xlink:href="http://en.wikipedia.org/wiki/Hypomania">variation
                     of a clinical depression called "Hypomania"</link>,
                 which in turn made me under-productive.
             </para>
@@ -1342,7 +1342,7 @@ function create_employee(params)
 
             <para>
                 One of the anti-patterns I encountered in previous workplaces
-                and one especially is that of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://use.perl.org/~Shlomi+Fish/journal/33013">the
+                and one especially is that of <link xlink:href="http://use.perl.org/~Shlomi+Fish/journal/33013">the
                     "Knowledge in the Ether"</link>. Quoting from my
                 original post:
             </para>
@@ -1353,7 +1353,7 @@ function create_employee(params)
                     for getting the application up and running, and a lot of
                     the collective knowledge were not written down in a
                     collective place. TDDPirate said he was familiar with it
-                    and called it the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Oral_Torah">"Oral
+                    and called it the <link xlink:href="http://en.wikipedia.org/wiki/Oral_Torah">"Oral
                         Torah"</link> syndrome.
                 </para>
                 <para>
@@ -1386,7 +1386,7 @@ function create_employee(params)
                 knowledge-base as a group of Microsoft Word documents stored
                 inside Visual SourceSafe. As a result, people felt it was
                 too much bother to update and maintain them. Eventually,
-                he set up an instance of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.mediawiki.org/">MediaWiki</link>
+                he set up an instance of <link xlink:href="http://www.mediawiki.org/">MediaWiki</link>
                 there, which proved to be much more convenient, accessible
                 and quick.
             </para>
@@ -1398,7 +1398,7 @@ function create_employee(params)
                 So which technology should you choose? I'm not giving
                 to give a direct answer, and often there are many factors
                 that make one more appropriate in certain cases than others.
-                Joel Spolsky <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/items/2006/09/01.html">attempted
+                Joel Spolsky <link xlink:href="http://www.joelonsoftware.com/items/2006/09/01.html">attempted
                     to answer this question</link>, but ended up falling into
                 many common miconceptions and prejudices (while still making
                 a few good points). He was also focusing exclusively on
@@ -1422,7 +1422,7 @@ function create_employee(params)
                     technology being present.
                 </para>
                 <para>
-                    For example, Microsoft's <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Visual_Basic">Visual
+                    For example, Microsoft's <link xlink:href="http://en.wikipedia.org/wiki/Visual_Basic">Visual
                         Basic</link> was a closed-source and Windows 32-bit
                     and x86 specific programming language, which had
                     proven to be very popular. However, Microsoft decided
@@ -1435,7 +1435,7 @@ function create_employee(params)
             <section xml:id="tech-expect-unexpected"><info><title>Expect some Unexpected Problems</title></info>
 
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.faqs.org/docs/artu/ch16s01.html">Eric
+                    <link xlink:href="http://www.faqs.org/docs/artu/ch16s01.html">Eric
                         Raymond's "Tale of J. Random Newbie"</link> is
                     illustrative of the many problems programmers encounter
                     in highly-proprietary environments. Generally however,
@@ -1462,7 +1462,7 @@ function create_employee(params)
 
                 <para>
                     Various technologies and
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/Platforms.html">development
+                    <link xlink:href="http://www.joelonsoftware.com/articles/Platforms.html">development
                         platforms</link>, vary in their power and cost. As
                     opposed to the possible misconception of "If you want
                     something good, you'll have to pay more.", often cheaper,
@@ -1473,14 +1473,14 @@ function create_employee(params)
                 <para>
                     Often, however, the really good solutions will be an
                     overkill. Most experts I've talked with agreed that
-                    the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.oracle.com/database/index.html">
+                    the <link xlink:href="http://www.oracle.com/database/index.html">
                         Oracle Database</link> is the most powerful on the
                     market and "years ahead of anything else out there".
                     However, most run-of-the-mill web applications won't
                     make use of even a small percentage of its advanced
                     features, enough to justify using it instead of, say,
                     the open-source and gratis
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.postgresql.org/">PostgreSQL</link>.
+                    <link xlink:href="http://www.postgresql.org/">PostgreSQL</link>.
                 </para>
                 <para>
                     For many problem domains, Oracle would make the most
@@ -1492,11 +1492,11 @@ function create_employee(params)
 
                 <para>
                     It makes sense to
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/LordPalmerston.html">choose
+                    <link xlink:href="http://www.joelonsoftware.com/articles/LordPalmerston.html">choose
                         a technology which you know very well</link>, so
                     you can overcome problems more quickly. However, smart
                     programmers can learn different technologies very quickly.
-                    As Spolsky <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">notes</link>:
+                    As Spolsky <link xlink:href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">notes</link>:
                 </para>
                 <blockquote>
                     <para>
@@ -1528,9 +1528,9 @@ function create_employee(params)
                 <para>
                     Often a technology will get a bad reputation as being
                     "quirky", "hard-to-get-right", "buggy", "unreliable",
-                    etc. This for example, has been the case <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/anti/mysql/">against
+                    etc. This for example, has been the case <link xlink:href="http://www.shlomifish.org/open-source/anti/mysql/">against
                         MySQL</link>,
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.google.com/search?q=php%20sucks">against
+                    <link xlink:href="http://www.google.com/search?q=php%20sucks">against
                         PHP</link>,
                     against Sendmail,
                     and against other technologies. From my experience, such
@@ -1552,7 +1552,7 @@ function create_employee(params)
                 <para>
                     I was instructed to write a mail-processing framework
                     in PHP. Now since I know and love Perl, I know there
-                    are many fine modules for doing that on <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sial.org/howto/perl/life-with-cpan/">CPAN (= The
+                    are many fine modules for doing that on <link xlink:href="http://sial.org/howto/perl/life-with-cpan/">CPAN (= The
                         Comprehensive Perl Archive Network)</link>, but there
                     was little of substantial quality for PHP. At a certain
                     time I needed to register at a site, to download the
@@ -1566,7 +1566,7 @@ function create_employee(params)
                     possibly without any Perl experience.
                 </para>
                 <para>
-                    That wasn't all. They also decided against using <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.postfix.org/">Postfix</link>,
+                    That wasn't all. They also decided against using <link xlink:href="http://www.postfix.org/">Postfix</link>,
                     which is a modern, high-performance and open-source
                     SMTP server, and instead preferred the old
                     Sendmail SMTP server which has a far worse reputation,
@@ -1633,7 +1633,7 @@ function create_employee(params)
 
         <para>
             Thanks to
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jnw.name/">firespeaker</link> for going over
+            <link xlink:href="http://jnw.name/">firespeaker</link> for going over
             an early version of this article and providing some corrections.
         </para>
 

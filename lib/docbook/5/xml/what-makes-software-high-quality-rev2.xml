@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="index" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
     <info><title>What Makes Software High-Quality?</title>
 
         <authorgroup>
@@ -17,7 +17,7 @@
       <legalnotice xml:id="main_legal_notice">
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
         <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Work rdf:about="">
             <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -154,7 +154,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         I’m not talking about the application that’s the most hyped, or the
         fastest, most featureful, or best. Sometimes you can often hear
         endless rants
-        and <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
+        and <link xlink:href="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">Fear,
             Uncertainty and Doubt (FUD)</link> attacks about it. Often, it has
         competing programs that are superior in many respects.
     </para>
@@ -168,14 +168,14 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 
         <para>
             How did it occur to me to ponder this question? I am active in the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss
+            <link xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss
                 mailing list</link>,
             which is dedicated to computerised techniques for solving
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.freecell.org/">the Freecell solitaire card
+            <link xlink:href="http://www.freecell.org/">the Freecell solitaire card
                 game</link>, and for discussing other automated solving
             and research of Solitaire games. This mailing list was started after
             I wrote
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link> (with
+            <link xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link> (with
             a lowercase “c” and an uppercase “S”), an open-source solver,
             which has proven to be quite popular. However, the mailing list
             was not restricted to discussing it exclusively, and was joined
@@ -183,7 +183,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             Recently, Gary Campbell wrote
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this
+            <link xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/741">this
                 message</link> reading:
         </para>
         <blockquote>
@@ -232,7 +232,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 
         <para>
             This article is written from my point-of-view as a developer
-            of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Free_and_open_source_software">“Free
+            of <link xlink:href="http://en.wikipedia.org/wiki/Free_and_open_source_software">“Free
                 and Open Source Software”</link>, and will focus on
             open-source and pseudo-open-source software. However, a lot of
             what I say is more universal.
@@ -257,7 +257,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             <para>
                 I would certainly prefer the other alternative. That’s because
                 I know I can always refactor that codebase, either by
-                <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">large
+                <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">large
                     scale refactoring</link> or by continuous refactoring
                 or even “Just-in-Time” refactoring, only to add a new feature.
             </para>
@@ -274,7 +274,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             <para>
                 For example, I mention later that the more liberal the
                 source licence of a program, the higher quality it is.
-                Obviously, a lot of <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/FOSS">non-
+                Obviously, a lot of <link xlink:href="http://en.wikipedia.org/wiki/FOSS">non-
                     “Free and Open Source Software”</link> or even binary-only
                 applications are high-quality too. But, the use of such
                 software is still more limited than an open-source one, so it
@@ -283,7 +283,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             </para>
             <para>
                 Similarly, libraries or programs that are distributed
-                under the relatively restrictive <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU
+                under the relatively restrictive <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU
                     General Public Licence (GPL)</link> (and which are
                 considered open-source and usable by most Linux distributions)
                 cannot be used in many common situations,
@@ -306,7 +306,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
 
         <para>
             Alternatively, in the case of
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Coverity">the
+            <link xlink:href="http://en.wikipedia.org/wiki/Coverity">the
                 “Stanford checker”</link>, which is
             a sophisticated tool for static code analysis, it is not available
             for download, but instead is a service provided by its parent
@@ -322,7 +322,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             In the “Cathedral and the Bazaar”, Eric Raymond recommends
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html">to
+            <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html">to
                 “release early and release often”</link>. Make frequent,
             incremental releases, so your project won’t stagnate. If you
             take your project and work on it yourself for too long, people
@@ -391,10 +391,10 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         <para>
             As a result, many people will find a program with a licence that
             is not 100%
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/philosophy/free-sw.html">Free
+            <link xlink:href="http://www.gnu.org/philosophy/free-sw.html">Free
                 and Open Source Software</link> - unacceptable. To be truly
             useful the application also needs be
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.dwheeler.com/essays/gpl-compatible.html">GPL
+            <link xlink:href="http://www.dwheeler.com/essays/gpl-compatible.html">GPL
                 compatible</link>, and naturally usable public-domain licences
             such as the modified BSD licence, the MIT X11 licence, or even
             pure Public Domain source code<footnote xml:id="public-domain-source" label="public-domain">
@@ -409,7 +409,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
                 </para>
 
                 <para>
-                    While <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net/browse/197/">quite
+                    While <link xlink:href="http://freshmeat.net/browse/197/">quite
                         a lot of important programs has been released under
                         the public domain</link>, and they are doing quite
                     fine, they may have some problematic legal implications.
@@ -472,7 +472,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
                     Mercurial and GNU Arch a no-starter for many uses.
                 </para>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tendra.org/">Tendra</link> is the
+                    <link xlink:href="http://www.tendra.org/">Tendra</link> is the
                     most prominent alternative C and C++ compiler to GCC, but
                     it’s hardly as advanced as GCC is, does not have
                     all of GCC’s features and extensions, and is not usable
@@ -495,7 +495,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
                     Vim, both keys dismiss the prompt. The key combination to
                     dismiss it is not written anywhere on the screen and I
                     won’t tell you what it is. According to
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User
+                    <link xlink:href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User
                         Interface Design for Programmers</link>, <quote>A
                         user-interface is well-designed when the program
                         behaves exactly how the user thought it would</quote>.
@@ -522,7 +522,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             homepage which introduces them, has download information, gives
             links, and provides a starting point to receive more information.
             And no - a <literal>/project/myprogram/</literal> page on
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sourceforge.net/">Source Forge</link> or
+            <link xlink:href="http://sourceforge.net/">Source Forge</link> or
             a different software hub - is much more sub-optimal than that, and
             leaves a bad impression.
         </para>
@@ -539,7 +539,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             <listitem>
                 <para>
                     The common standard building procedure using the
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sourceware.org/autobook/">GNU
+                    <link xlink:href="http://sourceware.org/autobook/">GNU
                         Autotools</link> is
                     <literal>./configure --prefix=$PREFIX ;
                         make ; make install</literal>.
@@ -548,19 +548,19 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             <listitem>
                 <para>
                     There are now
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/resources/software-tools/">some
+                    <link xlink:href="http://www.shlomifish.org/open-source/resources/software-tools/">some
                         more modern alternatives to the GNU Autotools</link>,
                     which may also prove useful.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cpan.org/">CPAN</link>
+                    <link xlink:href="http://www.cpan.org/">CPAN</link>
                     Perl distributions have a similar <literal>perl
                         Makefile.PL</literal> procedure or more recently
                     also one using <literal>perl
                         Build.PL</literal> which tends to be less quirky
-                    (see <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://cpan.uwinnipeg.ca/dist/Module-Build">Module-Build</link> ).
+                    (see <link xlink:href="http://cpan.uwinnipeg.ca/dist/Module-Build">Module-Build</link> ).
                 </para>
                 <para>
                     Generally, one usually installs them using the CPAN.pm
@@ -572,7 +572,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.python.org/">Python</link>
+                    <link xlink:href="http://www.python.org/">Python</link>
                     packages have the standard <literal>setup.py</literal>
                     procedure which can also generate Linux RPMs and other
                     native packages.
@@ -590,7 +590,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             However, it’s not uncommon to find a program that fails to
             build even on GNU/Linux on an x86 computer, which is the most
             common platform for development. Or the case of
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">the
+            <link xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">the
                 qmail email server</link>, which has a long and quirky
             build process. It reportedly fails to compile on modern
             Linuxes, and someone I know who tried to build it said that
@@ -603,10 +603,10 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
 
         <para>
-            If we take <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://plagger.org/">Plagger</link>,
+            If we take <link xlink:href="http://plagger.org/">Plagger</link>,
             a web-feed mix-and-match framework in Perl (not unlike
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pipes.yahoo.com/">Yahoo Pipes</link>, but
-            predates it), then its <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://search.cpan.org/dist/Plagger/">Plagger
+            <link xlink:href="http://pipes.yahoo.com/">Yahoo Pipes</link>, but
+            predates it), then its <link xlink:href="http://search.cpan.org/dist/Plagger/">Plagger
                 distribution on CPAN</link> contains all of its plug-ins
             inside, and as a result requires “half of CPAN” including such
             obscure modules, as those for handling Chinese and Japanese dates.
@@ -643,7 +643,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             A good example for how this can become wrong is the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">qmail
+            <link xlink:href="http://www.shlomifish.org/open-source/anti/qmail/">qmail
                 SMTP server</link>, before it became public-domain. The qmail
             copyright terms prevented distributing modified sources, or binary
             packages. As a result, the distributions that supported
@@ -666,7 +666,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             There are many types of documentation: the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net/articles/view/519/">--help
+            <link xlink:href="http://freshmeat.net/articles/view/519/">--help
                 flag</link>, the man page, the README/USAGE/INSTALL files,
             full-fledged in-depth guides, documents about the philosophy,
             wikis, etc. If the program is well-designed, then the user should
@@ -676,7 +676,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             If we take Subversion as an example, then it has a
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://svnbook.red-bean.com/">full Book
+            <link xlink:href="http://svnbook.red-bean.com/">full Book
                 online</link>, several tutorials, an <literal>svn
                 help</literal> command which provides help to all the
             other commands, and a lot of help can be found using a
@@ -731,8 +731,8 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
                     systems became dominant there were some more exotic
                     architectures that could not run C comfortably. Prime
                     examples for them are the
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/PDP-10">PDP-10</link>
-                    and the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Lisp_machine">Lisp machines</link>.
+                    <link xlink:href="http://en.wikipedia.org/wiki/PDP-10">PDP-10</link>
+                    and the <link xlink:href="http://en.wikipedia.org/wiki/Lisp_machine">Lisp machines</link>.
                 </para>
                 <para>
                     However, such more “unconventional” architectures are now
@@ -763,7 +763,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         <para>
             The bootstrapping ANSI C compiler of gcc for example, is written in
             very portable
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R
+            <link xlink:href="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R
                 C</link>, so it can be compiled by any C compiler. Later
             on, this compiler can be used to compile most of the rest of the
             GCC compilers.
@@ -771,7 +771,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         <para>
             Compare that to many compilers for other languages that are
             written in the same language. For example,
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
+            <link xlink:href="http://www.haskell.org/ghc/">GHC - The Glasgow Haskell
                 Compiler</link> is written in itself, and requires a
             relatively recent version of itself to compile itself. So you need
             to bootstrap several intermediate compilers to build it.
@@ -788,9 +788,9 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             Some people believe that security is the most important aspect
             of software, but it’s only one factor that affects its quality.
             For example, once I was talking with a certain UNIX expert, and
-            he argued that the Win32 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://msdn2.microsoft.com/en-us/library/ms682425.aspx">CreateProcess() system call</link> was
+            he argued that the Win32 <link xlink:href="http://msdn2.microsoft.com/en-us/library/ms682425.aspx">CreateProcess() system call</link> was
             superior to the UNIX combination of
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Fork-exec">Fork()
+            <link xlink:href="http://en.wikipedia.org/wiki/Fork-exec">Fork()
                 and Exec()</link>, just because it made some bugs harder
             to code.  However, some multitasking paradigms are not possible,
             without the fork() system call, which is not present in the Win32
@@ -811,7 +811,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
     <section xml:id="backwards_compatiblity"><info><title>Backwards Compatibility</title></info>
 
         <para>
-            A high-quality program maintains as much <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Backward_compatibility">backward
+            A high-quality program maintains as much <link xlink:href="http://en.wikipedia.org/wiki/Backward_compatibility">backward
                 compatibility</link>
             with its older versions as possible. Some backward compatibility,
             like relying on bugs or other misbehaviours
@@ -821,7 +821,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         </para>
         <para>
             A bad example for software that does not maintain backwards
-            compatibility is <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.php.net/">PHP</link>,
+            compatibility is <link xlink:href="http://www.php.net/">PHP</link>,
             where every primary digit breaks the compatibility with the older
             one: PHP 4 was not compatible with PHP 3 and PHP 5 was not
             compatible with PHP 4. Furthermore, sometimes existing user-land
@@ -857,7 +857,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC (Internet Relay Chats)</link>
+                    <link xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC (Internet Relay Chats)</link>
                     Channels.
                 </para>
             </listitem>
@@ -880,7 +880,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         <para>
             Without good ways to receive support, users will be unnecessarily
             frustrated when they encounter a problem, which cannot be answered
-            by the documentation. Refer to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">Joel Spolsky’s
+            by the documentation. Refer to <link xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">Joel Spolsky’s
                 “Seven Steps to Remarkable Customer Service”</link> for more information on
             how to give good support.
         </para>
@@ -912,7 +912,7 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
         <para>
             A good example for how such optimisations can make such a huge
             difference are the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and
+            <link xlink:href="http://blog.pavlov.net/2008/03/11/firefox-3-memory-usage/">memory optimisations done to Firefox between Firefox 2 and
                 Firefox 3</link>, which greatly improved its
             performance, memory consumption, and reduced the
             number of memory leaks. It should be noted that often,
@@ -926,8 +926,8 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             is responsiveness, which is often manifested when people complain
             that the program is “sluggish”. Java programs are especially
             notorious for being such, for some reason, while programs written
-            in <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.perl.org/">Perl</link> and
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.python.org/">Python</link> are more
+            in <link xlink:href="http://www.perl.org/">Perl</link> and
+            <link xlink:href="http://www.python.org/">Python</link> are more
             responsive and feel snappy, despite the fact that their backends
             are generally slower than the Java virtual machine.
         </para>
@@ -953,8 +953,8 @@ This work is licensed under the <link xmlns:xlink="http://www.w3.org/1999/xlink"
             Different types of applications, and those running
             on different platforms, have different conventions for what
             is considered aesthetic. In
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://catb.org/~esr/writings/taoup/">The
-                Art of UNIX Programming</link>, Eric Raymond <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://catb.org/~esr/writings/taoup/html/ch11s09.html">makes the case for
+            <link xlink:href="http://catb.org/~esr/writings/taoup/">The
+                Art of UNIX Programming</link>, Eric Raymond <link xlink:href="http://catb.org/~esr/writings/taoup/html/ch11s09.html">makes the case for
                 the “Silence is Golden” principle of designing UNIX
                 command-line interfaces</link>.
             Basically, a command line program should output as little as
@@ -1018,7 +1018,7 @@ No package named this-does-not-exist
             theme, and also had some proprietary and non-gratis theming
             software, Linux supplied all of that out-of-the-box and with
             a more attractive theme. The
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://youtube.com/watch?v=xC5uEe5OzNQ">effects
+            <link xlink:href="http://youtube.com/watch?v=xC5uEe5OzNQ">effects
                 supplied by the Linux 3-D desktops</link>, which
             have put the 9-milliard Dollar effects of Vista to shame,
             have convinced some people to install Linux on their computer
@@ -1091,12 +1091,12 @@ No package named this-does-not-exist
             The more modular a project’s code is, the easier it is to
             change it, understand it and extend it, and the faster development
             will take.
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.refactoring.com/">Refactoring</link> is
+            <link xlink:href="http://www.refactoring.com/">Refactoring</link> is
             the name given to the process used to transform code from
             sub-optimal and “ugly”, but still mostly functional and bug-free
             code, to a code that is equally functional but more modular
             and clean. See
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">the
+            <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000348.html">the
                 <emphasis>Joel on Software</emphasis> excellent article
                 “Rub a dub dub”</link>
             for some of the motivation and practices of good refactoring
@@ -1126,9 +1126,9 @@ No package named this-does-not-exist
             Organisational quality deserves its own separate article (or
             arguably book, web-site, or even more than one book), but
             external software quality (much less internal one), is not a
-            substitute for it. Please refer to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
+            substitute for it. Please refer to <link xlink:href="http://www.shlomifish.org/philosophy/philosophy/advice-for-the-young/#recommended_writings">a
                 partial list I prepared on a different article</link>,
-            and my <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/links.html#software_gurus">software
+            and my <link xlink:href="http://www.shlomifish.org/links.html#software_gurus">software
                 “gurus” links</link> on my home-site’s links’ list.
         </para>
     </section>
@@ -1153,7 +1153,7 @@ No package named this-does-not-exist
         <para>
             Writing automated tests before we write the actual code,
             or before we fix a bug, and accumulating such tests
-            (the so-called <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Test-driven_development">“Test-driven development”</link>
+            (the so-called <link xlink:href="http://en.wikipedia.org/wiki/Test-driven_development">“Test-driven development”</link>
             paradigm), is a good practice which helps maintain
             high-quality code, and facilitates refactoring
             and makes it safer.
@@ -1179,7 +1179,7 @@ No package named this-does-not-exist
         <para>
             Naturally, there are advantages for slower release cycles, or
             for predictable release cycles like
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnome.org/">GNOME 2.x</link>
+            <link xlink:href="http://www.gnome.org/">GNOME 2.x</link>
             has. I won’t voice a definite opinion for which is the best
             methodology, but such a decision should be taken into
             consideration.
@@ -1202,25 +1202,25 @@ No package named this-does-not-exist
         <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric Raymond’s
+                    <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/">Eric Raymond’s
                        “The Cathedral and the Bazaar” series</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.joelonsoftware.com/">The <emphasis>Joel
+                    <link xlink:href="http://www.joelonsoftware.com/">The <emphasis>Joel
                         on Software</emphasis> site</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/">Paul Graham’s
+                    <link xlink:href="http://www.paulgraham.com/">Paul Graham’s
                     Essays</link> (on various topics)
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.extremeprogramming.org/">Extreme
+                    <link xlink:href="http://www.extremeprogramming.org/">Extreme
                     Programming</link>
                 </para>
             </listitem>
@@ -1240,7 +1240,7 @@ No package named this-does-not-exist
             Often, social engineering should be made part of the design of the
             software, or the web-sites dedicated to it. For example, it took
             me several iterations of having to fill the same project form in
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://savannah.gnu.org/">the
+            <link xlink:href="http://savannah.gnu.org/">the
                 GNU Savannah software-hub</link>, only for it to be
             rejected, and me having to follow the process again. Despite
             the fact the admins were polite, it still was annoying.
@@ -1263,7 +1263,7 @@ No package named this-does-not-exist
         <para>
             Bad politics in a software project is a lot like
             subjectivity,
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://shlomif.livejournal.com/52439.html">it
+            <link xlink:href="http://shlomif.livejournal.com/52439.html">it
                 can never be fully eliminated, but we should still strive
                 to reduce it to the minimum.</link>. If bad political
             processes become common in a project, then important features are
@@ -1303,7 +1303,7 @@ No package named this-does-not-exist
         <para>
             Despite common belief I believe that the less hype and general
             noise there is regarding a software project, the better off
-            it is. For example, as <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.paulgraham.com/javacover.html">Paul
+            it is. For example, as <link xlink:href="http://www.paulgraham.com/javacover.html">Paul
                 Graham notes regarding Java</link>:
         </para>
         <blockquote>
@@ -1319,7 +1319,7 @@ No package named this-does-not-exist
         <para>
             In fact, I can argue that if your project receives a lot
             of negative hype, then it is an indication that it is successful.
-            Perl, for example, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perl-begin.org/learn/myth-dispelling/">has
+            Perl, for example, <link xlink:href="http://perl-begin.org/learn/myth-dispelling/">has
                 received (and still receives) a lot of criticism</link>,
             and Perl aficionados often get tired of constantly hearing or
             seeing the same repetitive and tired arguments by its
@@ -1332,7 +1332,7 @@ No package named this-does-not-exist
         </para>
         <para>
             Similar criticism has been voiced against
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://subversion.tigris.org/">the
+            <link xlink:href="http://subversion.tigris.org/">the
                 Subversion version control system</link>,
             Linux, etc. One thing one can notice about such highly-criticised
             projects is that they tend not to be bothered by it too much.
@@ -1354,7 +1354,7 @@ No package named this-does-not-exist
         <para>
             Finally, a project should have a good name. One example for
             a project with an awful name is
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.march-hare.com/cvspro/">CVSNT</link>.
+            <link xlink:href="http://www.march-hare.com/cvspro/">CVSNT</link>.
             There are two problems with the name:
         </para>
         <orderedlist inheritnum="ignore" continuation="restarts">
@@ -1384,7 +1384,7 @@ No package named this-does-not-exist
             helps a lot.
         </para>
         <para>
-            Also consider what <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus
+            Also consider what <link xlink:href="http://groups.google.com/group/comp.unix.pc-clone.32bit/msg/80bb74847934edc7">Linus
                 Torvalds said about Linux and 386BSD</link> (half jokingly):
         </para>
         <blockquote>
@@ -1421,7 +1421,7 @@ No package named this-does-not-exist
             my investigation into what makes a project high-quality and which
             quality-increasing-measures are not elements of quality by
             themselves. And since
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link>
+            <link xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link>
             has been my pet project, and as I’m still interested in
             techniques for solving Solitaire, I’d like to conclude this essay
             by analysing the various solvers according to the parameters I
@@ -1481,7 +1481,7 @@ No package named this-does-not-exist
             solvers are <emphasis role="bold">not commonly
                 available</emphasis> for downloading or even for
             buying. For
-            example, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill
+            example, <link xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/158">Bill
                 Raymond’s solver</link> (named “Cat in the Sack”) which he
             has been talking about extensively, has not been released yet,
             under any licensing terms. Similarly, Danny A. Jones has kept his
@@ -1498,14 +1498,14 @@ No package named this-does-not-exist
             to inspect the source code.
         </para>
         <para>
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/links.html#other_solvers">Most
+            <link xlink:href="http://fc-solve.shlomifish.org/links.html#other_solvers">Most
                 other solvers</link>
             are <emphasis role="bold">available for free
                 download</emphasis>, and many are accompanied
             with the source, most probably under an open-source licence.
         </para>
         <para xml:id="quality-analysis--prog-lang">
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.numin8r.us/programs/">Gary
+            <link xlink:href="http://www.numin8r.us/programs/">Gary
                 Campbell’s Solver</link> is written in 8086 Assembly, with
             some 32-bit extensions, and only runs on DOS and DOS-compatible
             platforms. The assembly is compiled using a self-hosting
@@ -1518,12 +1518,12 @@ No package named this-does-not-exist
             denominator, but that is not always the case. Imagine that you
             are writing a Freecell game for an embedded device running a
             non-x86 architecture such as
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/ARM_architecture">ARM</link>
+            <link xlink:href="http://en.wikipedia.org/wiki/ARM_architecture">ARM</link>
             or
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/PowerPC">PowerPC</link>.
+            <link xlink:href="http://en.wikipedia.org/wiki/PowerPC">PowerPC</link>.
             In that case, in order to run Campbell’s solver, you’ll need to
             embed an x86-and-DOS emulator (such as
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.dosbox.com/">DOSBox</link>) inside the
+            <link xlink:href="http://www.dosbox.com/">DOSBox</link>) inside the
             device, which will complicate things, consume a lot of memory,
             and slow things down. On the other, an ANSI C-based solver,
             such as Freecell Solver, or Tom Holroyd’s Patsolve, can be easily
@@ -1533,7 +1533,7 @@ No package named this-does-not-exist
         <para>
             Similarly, when writing <emphasis role="bold">portable
                 programs</emphasis> for
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Unix">the various
+            <link xlink:href="http://en.wikipedia.org/wiki/Unix">the various
                 Unix flavours</link> and other POSIX-capable or
             ANSI C-capable operating-systems, then writing code
             in x86 Assembly exclusively will make it a non-starter.
@@ -1578,7 +1578,7 @@ make: *** [param.h] Error 127
         <para xml:id="quality-analysis--usability">
             Freecell Solver has very good
             <emphasis role="bold">usability</emphasis>: it mostly respects
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/writings/taoup/">the
+            <link xlink:href="http://www.catb.org/~esr/writings/taoup/">the
                 Unix conventions and best practices</link>,
             it can start solving from any arbitrary Solitaire board position
             given to it as input, and has kept command line interface
@@ -1593,14 +1593,14 @@ make: *** [param.h] Error 127
         <para xml:id="quality-analysis--homepage">
             Regarding <emphasis role="bold">the homepage</emphasis> of
             the solver:
-            the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/">Freecell
+            the <link xlink:href="http://fc-solve.shlomifish.org/">Freecell
                 Solver homepage</link> has many pages, a navigation
             menu, a common look-and-feel and many links and information. On
             the other hand, Patsolve’s homepage is nothing but a link in
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://members.tripod.com/professor_tom/archives/">Tom
+            <link xlink:href="http://members.tripod.com/professor_tom/archives/">Tom
                 Holroyd’s software archive</link>, which
             can easily be missed. Gary Campbell’s
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.numin8r.us/programs/">homepage
+            <link xlink:href="http://www.numin8r.us/programs/">homepage
                 for his solver</link> has a Baroque design
             and quite a lot of marketing-speak. And it’s only one page with no
             anchors or a navigation menu, and very few links.
@@ -1634,11 +1634,11 @@ make: *** [param.h] Error 127
             </footnote> On the other hand, Patsolve is
             distributed
             under the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL
+            <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL
                 licence</link> which while usable is
             considerably more restrictive than Public Domain, or BSD-style
             licences. This is also the case for
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://kevin.atkinson.dhs.org/freecell/">this
+            <link xlink:href="http://kevin.atkinson.dhs.org/freecell/">this
                 Common Lisp solver</link> by Kevin Atkinson and Shari
             Holstege. Many other solvers, including
             Campbell’s are binary-only, “All Rights Reserved”, which makes
@@ -1650,7 +1650,7 @@ make: *** [param.h] Error 127
 
         <para xml:id="quality-analysis--documentation">
             Freecell Solver (FCS) is extensively documented, and even its
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net/articles/view/519/">online
+            <link xlink:href="http://freshmeat.net/articles/view/519/">online
                 help is helpful and usable by itself</link>. The other solvers
             are much less documented, but arguably they also have much
             fewer options and features than Freecell Solver does.
@@ -1658,11 +1658,11 @@ make: *** [param.h] Error 127
 
         <para xml:id="quality-analysis--features">
             Which brings us to the features - Freecell Solver has
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/features.html">a long
+            <link xlink:href="http://fc-solve.shlomifish.org/features.html">a long
                 list of features</link>, and I’m not aware of any
             other solver with so many. Especially of note is that it
             can solve many other Solitaire variants, including
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple
+            <link xlink:href="http://en.wikipedia.org/wiki/Simple_Simon_(solitaire)">Simple
                 Simon</link>, of which FCS is probably the only solver
             capable of solving.
         </para>
@@ -1673,13 +1673,13 @@ make: *** [param.h] Error 127
             command-line, almost any solver will do, and the only
             cases where such speed matters more is for Solitaire research,
             and for analysing large sets of different games. (see the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.solitairelaboratory.com/fcfaq.html">Freecell
+            <link xlink:href="http://www.solitairelaboratory.com/fcfaq.html">Freecell
             FAQ</link> for more information).
         </para>
 
         <para xml:id="quality-analysis--solution-length">
             In his original message, Mr. Campbell claimed that the
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell
+            <link xlink:href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell
                 Pro</link> solvers (Freecell Solver, Patsolve and the solver
             that originated from Don Woods) generated long and unusable
             solutions. That has not been my experience with Freecell Solver
@@ -1718,14 +1718,14 @@ make: *** [param.h] Error 127
         <para>
             All things considered, I still feel that Freecell Solver is
             probably the best quality Solitaire solver out there. While
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/to-do.html">it still
+            <link xlink:href="http://fc-solve.shlomifish.org/to-do.html">it still
                 has a lot of room for improvement</link>, the rest of
             its competition have much bigger issues, or have not been
             made available (yet or ever).
         </para>
         <para>
             Several factors contributed for its success: the fact that
-            I announced <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net/">many releases
+            I announced <link xlink:href="http://freshmeat.net/">many releases
                 on Freshmeat.net</link>, that I received a lot of input
             from my users and co-developers, that I was determined to
             constantly improve it and work on it, and that I worked on
@@ -1754,14 +1754,14 @@ make: *** [param.h] Error 127
 
         <para>
         This work is licensed under the
-        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
+        <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
             Commons Attribution 2.5 License</link> (or at your option a
         greater version of it). The CC-Attribution is almost
         Public Domain except for a requirement to make an attribution to the
         original author.
         </para>
         <para>
-            It was written by <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/">Shlomi
+            It was written by <link xlink:href="http://www.shlomifish.org/">Shlomi
                 Fish</link> who also holds the copyrights.
         </para>
     </section>
@@ -1771,22 +1771,22 @@ make: *** [param.h] Error 127
             Shlomi Fish was born in Israel in 1977, and has lived there most of
             his life. He is a user, developer, advocate and activist of
             Open Source Software. His single greatest contribution so far in
-            this area has been <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://fc-solve.shlomifish.org/">Freecell
+            this area has been <link xlink:href="http://fc-solve.shlomifish.org/">Freecell
                 Solver</link>, a Public Domain Library for solving games
             of Freecell and other types of Solitaire. However, he also
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/projects/">initiated
+            <link xlink:href="http://www.shlomifish.org/open-source/projects/">initiated
                some other projects</link> and
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/open-source/contributions/">made
+            <link xlink:href="http://www.shlomifish.org/open-source/contributions/">made
                 important contributions to projects he did not initiate</link>
             some of them very large scale. Recently, most of his contribution
             were
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://cpan.uwinnipeg.ca/~shlomif">perl distributions
+            <link xlink:href="http://cpan.uwinnipeg.ca/~shlomif">perl distributions
                 he uploaded to CPAN</link> under his username.
         </para>
         <para>
             Fish’s work on Freecell Solver and other open source projects,
             and the fact he is interested in many software management
-            techniques has led him to write <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shlomifish.org/philosophy/">a
+            techniques has led him to write <link xlink:href="http://www.shlomifish.org/philosophy/">a
                 large number of articles</link>, and weblog entries which
             describe his unique views as a developer of mostly
             portable software.
@@ -1797,10 +1797,10 @@ make: *** [param.h] Error 127
         <para>
             Thanks to Mr. Gary Campbell, the author of “FCELL.COM” whose
             original message provided the inspiration for this article. Thanks
-            to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.zak.co.il/">Omer Zak</link>, who
+            to <link xlink:href="http://www.zak.co.il/">Omer Zak</link>, who
             went over an early draft of this article and supplied many
             useful comments. Thanks to Jacinta Richardson of
-            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://perltraining.com.au/">Perl Training Australia</link>,
+            <link xlink:href="http://perltraining.com.au/">Perl Training Australia</link>,
             who gave some very useful comments on the first and second
             revisions, and to “Limbic_Region”, for noting an
             omission from it. Thanks to many people on the IRC

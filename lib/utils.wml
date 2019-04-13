@@ -16,7 +16,7 @@
 
 <if <match "<get-var url />" "^http://" action="report" />
     "<get-var url />"
-    "$(ROOT)/<get-var url />"
+    "$(PATH_TO_ROOT)<get-var url />"
 />
 
 <restore host />
@@ -59,7 +59,7 @@
 <p>
 This page is temporary, under construction and should not be publicised or
 publicly linked to. Please send comments to
-<a href="$(ROOT)/me/contact-me/">the author</a> in private.
+<a href="$(PATH_TO_ROOT)me/contact-me/">the author</a> in private.
 </p>
 
 </note>
@@ -70,7 +70,7 @@ publicly linked to. Please send comments to
 <preserve year />
 <set-var %attributes />
 
-<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="$(ROOT)/images/somerights20.png"/></a></p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="$(PATH_TO_ROOT)images/somerights20.png"/></a></p>
 
 <p>
 This document is Copyright by Shlomi Fish, <get-var year />, and is available
@@ -160,7 +160,7 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 <preserve year />
 <set-var %attributes />
 
-<p><a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img alt="Creative Commons License" class="bless" src="$(ROOT)/images/somerights20.png"/></a></p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img alt="Creative Commons License" class="bless" src="$(PATH_TO_ROOT)images/somerights20.png"/></a></p>
 
 <p>
 זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת <get-var year/>,

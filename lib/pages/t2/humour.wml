@@ -49,7 +49,7 @@
 </div>
 </define-tag>
 
-<img src="$(ROOT)/humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" style="float:left;width:20%;"/>
+<img src="$(PATH_TO_ROOT)humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" style="float:left;width:20%;"/>
 
 <define-tag eng_intro>
 
@@ -61,7 +61,7 @@ throughout the years. They are arranged in roughly chronological order.
 </p>
 
 <p>
-You can also find them and others <a href="$(ROOT)/humour/fortunes/">in machine-readable UNIX fortune cookies collections</a>.
+You can also find them and others <a href="$(PATH_TO_ROOT)humour/fortunes/">in machine-readable UNIX fortune cookies collections</a>.
 </p>
 </define-tag>
 
@@ -78,7 +78,7 @@ You can also find them and others <a href="$(ROOT)/humour/fortunes/">in machine-
 הם תורגמו על ידי
 <a href="humour.html">מהמקור האנגלי</a>
 ותוכלו למצוא אותם ואחרים
-<a href="$(ROOT)/humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
+<a href="$(PATH_TO_ROOT)humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
 מבוססות XML הניתנות לקריאה על ידי מכונה.
 </p>
 
@@ -1152,7 +1152,7 @@ Linux - Because Software Problems Should not Cost Money
 
 <comment>
 <p>
-Refer to <a href="$(ROOT)/art/linux_banner/">this page about that Slogan
+Refer to <a href="$(PATH_TO_ROOT)art/linux_banner/">this page about that Slogan
 and a resultant graphics made from it.</a>
 </p>
 </comment>
@@ -1165,7 +1165,7 @@ and a resultant graphics made from it.</a>
 לינוקס - כי בעיות תוכנה לא צריכות לעלות כסף.
 </p>
 <p>
-<i>פנו ל <a href="$(ROOT)/art/linux_banner/">דף זה על אודות הסיסמה והגרפיקה שנוצרה ממנה.</a>
+<i>פנו ל <a href="$(PATH_TO_ROOT)art/linux_banner/">דף זה על אודות הסיסמה והגרפיקה שנוצרה ממנה.</a>
 </i>
 </p>
 </heb_header_joke>
@@ -1430,7 +1430,7 @@ destroyed all evidence with his bare hands so no one will know his secrets.
 <comment>
 <p>
 There’s more about Chuck Norris and Perl 6
-<a href="$(ROOT)/humour/fortunes/shlomif.html">in this
+<a href="$(PATH_TO_ROOT)humour/fortunes/shlomif.html">in this
 Unix fortune file</a> and more about Norris on
 <a href="http://www.chucknorrisfacts.com/">the Chuck Norris Facts
 web-site.</a>.
@@ -2349,10 +2349,10 @@ That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/
 
 </define-tag> ;;; github_captioned_image_joke
 
-<github_captioned_image_joke id="yo-nsa-publish-or-perish" header="Yo NSA, Publish or Perish" repo_href="http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish" src="$(ROOT)/images/nsa-publish-or-perish.jpg" alt="Yo NSA, Publish or Perish">
+<github_captioned_image_joke id="yo-nsa-publish-or-perish" header="Yo NSA, Publish or Perish" repo_href="http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish" src="$(PATH_TO_ROOT)images/nsa-publish-or-perish.jpg" alt="Yo NSA, Publish or Perish">
 
 <p>
-Also see <a href="$(ROOT)/philosophy/SummerNSA/">the #SummerNSA initiative</a>.
+Also see <a href="$(PATH_TO_ROOT)philosophy/SummerNSA/">the #SummerNSA initiative</a>.
 </p>
 
 <p>
@@ -2492,7 +2492,7 @@ Scary thought of the day: <i>The Princess Bride</i>: the 3-D Remake.
 
 </eng_header_joke>
 
-<github_captioned_image_joke id="if_ayn_rand_was_born_in_the_1990s" header="If Ayn Rand was born in the 1990s…" repo_href="https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie" src="$(ROOT)/humour/images/Ayn_Rand--to--Christina_Grimmie--reduced.png" alt="Ayn Rand→Christina Grimmie">
+<github_captioned_image_joke id="if_ayn_rand_was_born_in_the_1990s" header="If Ayn Rand was born in the 1990s…" repo_href="https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie" src="$(PATH_TO_ROOT)humour/images/Ayn_Rand--to--Christina_Grimmie--reduced.png" alt="Ayn Rand→Christina Grimmie">
 
 <quote>
 <p>
@@ -2620,7 +2620,7 @@ a prostitute. Treat her with respect, be honest to her
 
 </eng_header_joke>
 
-<github_captioned_image_joke id="carpe_diem" header="Carpe diem, motherfucker!! Do you speak it?!!" repo_href="https://github.com/shlomif/Captioned-Image-Carpe-Diem--Mofo" src="$(ROOT)/humour/images/carpe-diem-mofo--reduced.jpg" alt="Carpe diem, motherfucker!! Do you speak it?!!">
+<github_captioned_image_joke id="carpe_diem" header="Carpe diem, motherfucker!! Do you speak it?!!" repo_href="https://github.com/shlomif/Captioned-Image-Carpe-Diem--Mofo" src="$(PATH_TO_ROOT)humour/images/carpe-diem-mofo--reduced.jpg" alt="Carpe diem, motherfucker!! Do you speak it?!!">
 
 <quote>
 <p>
@@ -2661,13 +2661,13 @@ a blazing success.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Summerschool-at-the-NSA/">“Summerschool at the NSA”</a>
+<a href="$(PATH_TO_ROOT)humour/Summerschool-at-the-NSA/">“Summerschool at the NSA”</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Summer
+<a href="$(PATH_TO_ROOT)humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Summer
 Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe Diem” message].
 </p>
 </li>
@@ -2678,7 +2678,7 @@ Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe 
 </github_captioned_image_joke>
 
 
-<github_captioned_image_joke id="holocaust_denial" header="Holocaust Denial" repo_href="http://github.com/shlomif/Captioned-Image-Holocaust" src="$(ROOT)/humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”">
+<github_captioned_image_joke id="holocaust_denial" header="Holocaust Denial" repo_href="http://github.com/shlomif/Captioned-Image-Holocaust" src="$(PATH_TO_ROOT)humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”">
 
 <quote>
 <p>
@@ -2730,7 +2730,7 @@ image is primarily intended at Israelis and Europeans as intellectual activism.
 
 </github_captioned_image_joke>
 
-<github_captioned_image_joke id="pbride_philosophers" header="Have you heard of Plato? Aristotle?" repo_href="http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers" src="$(ROOT)/humour/images/philosophers-princess-bride.svg.jpg" alt="Princess Bride + Greek Philosophers">
+<github_captioned_image_joke id="pbride_philosophers" header="Have you heard of Plato? Aristotle?" repo_href="http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers" src="$(PATH_TO_ROOT)humour/images/philosophers-princess-bride.svg.jpg" alt="Princess Bride + Greek Philosophers">
 
 <quote>
 <p>
@@ -2748,7 +2748,7 @@ some modelling even back then.
 
 </github_captioned_image_joke>
 
-<github_captioned_image_joke id="mighty_klingon_warriors" header="Mighty Klingon Warriors" repo_href="https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior" src="$(ROOT)/humour/images/Every-mighty-Klingon-Warrior.svg.jpg" alt="Every Mighty Klingon warrior has watched Sesame Street!">
+<github_captioned_image_joke id="mighty_klingon_warriors" header="Mighty Klingon Warriors" repo_href="https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior" src="$(PATH_TO_ROOT)humour/images/Every-mighty-Klingon-Warrior.svg.jpg" alt="Every Mighty Klingon warrior has watched Sesame Street!">
 
 <quote>
 <p>
@@ -2758,9 +2758,9 @@ Every Mighty Klingon warrior has watched Sesame Street!
 
 <p>
 Originally a funny quote from a
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=selina-mandrake-the-three">a
+<a href="$(PATH_TO_ROOT)humour/fortunes/show.cgi?id=selina-mandrake-the-three">a
 scene</a> from my screenplay
-<a href="$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake -
+<a href="$(PATH_TO_ROOT)humour/Selina-Mandrake/"><i>Selina Mandrake -
 The Slayer</i></a>, it stuck in my mind and grew some life of its own. Here is
 <a href="http://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/best_warriors.html">the
 rest</a> of the explanation for the grain of truth behind it.
@@ -2769,7 +2769,7 @@ rest</a> of the explanation for the grain of truth behind it.
 </github_captioned_image_joke>
 
 
-<github_captioned_image_joke id="evolution_of_girls_w_weapons" header="Evolution of Girls with Weapons" repo_href="http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons" src="$(ROOT)/humour/images/evolution-of-girls-with-weapons.svg.png" alt="Evolution of Girls with Weapons" img_style="border: 0.2em solid black; border-radius: 0.15em;">
+<github_captioned_image_joke id="evolution_of_girls_w_weapons" header="Evolution of Girls with Weapons" repo_href="http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons" src="$(PATH_TO_ROOT)humour/images/evolution-of-girls-with-weapons.svg.png" alt="Evolution of Girls with Weapons" img_style="border: 0.2em solid black; border-radius: 0.15em;">
 
 <p>
 Another captioned image / info graphics with some fun at the expense of
@@ -2793,7 +2793,7 @@ life</a> so far!
 
 </eng_header_joke>
 
-<github_captioned_image_joke id="dizzying_intellect" header="What I say after someone implies that correlation implies causation" repo_href="https://github.com/shlomif/Captioned-Image-Truly-You-Have" src="$(ROOT)/humour/images/Truly-You-Have.svg.jpg" alt="Truly You Have a Dizzying Intellect">
+<github_captioned_image_joke id="dizzying_intellect" header="What I say after someone implies that correlation implies causation" repo_href="https://github.com/shlomif/Captioned-Image-Truly-You-Have" src="$(PATH_TO_ROOT)humour/images/Truly-You-Have.svg.jpg" alt="Truly You Have a Dizzying Intellect">
 
 <quote>
 <p>
@@ -2812,7 +2812,7 @@ implies causation</a>.
 
 </github_captioned_image_joke>
 
-<github_captioned_image_joke id="pin_it_all_on_me" header="“And the boss called me in to his office and tried to pin it all on me.”" repo_href="https://github.com/shlomif/Captioned-Image-SLP-Pinned-It-On-Me" src="$(ROOT)/humour/images/SLP-excerpt-pinned-it-on-me.jpg" alt="Tried to Pin it All on Me">
+<github_captioned_image_joke id="pin_it_all_on_me" header="“And the boss called me in to his office and tried to pin it all on me.”" repo_href="https://github.com/shlomif/Captioned-Image-SLP-Pinned-It-On-Me" src="$(PATH_TO_ROOT)humour/images/SLP-excerpt-pinned-it-on-me.jpg" alt="Tried to Pin it All on Me">
 
 <quote>
 <p>
@@ -2939,7 +2939,7 @@ that cannot be fixed.
 
 </eng_header_joke>
 
-<github_captioned_image_joke id="nothing_sexier" header="“There’s nothing sexier than a man who does not want to have sex.”" repo_href="http://github.com/shlomif/Captioned-Image-Nothing-Sexier" src="$(ROOT)/humour/images/Nothing-Sexier.svg.jpg" alt="“As a woman, there is nothing sexier than a man who does not want to have sex.”">
+<github_captioned_image_joke id="nothing_sexier" header="“There’s nothing sexier than a man who does not want to have sex.”" repo_href="http://github.com/shlomif/Captioned-Image-Nothing-Sexier" src="$(PATH_TO_ROOT)humour/images/Nothing-Sexier.svg.jpg" alt="“As a woman, there is nothing sexier than a man who does not want to have sex.”">
 
 <quote>
 <p>

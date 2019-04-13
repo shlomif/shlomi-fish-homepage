@@ -12,7 +12,9 @@
         padding: 0;
     }
 
-    > ul > li , li.lang , li.title {
+    > ul > li,
+    li.lang,
+    li.title {
         margin-top: 0;
         margin-bottom: 0;
         display: block;
@@ -20,7 +22,8 @@
         padding: 0;
         margin: 0;
 
-        a, b {
+        a,
+        b {
             display: block;
             padding-top: 3pt;
             padding-bottom: 3pt;

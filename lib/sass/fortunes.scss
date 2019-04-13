@@ -52,7 +52,7 @@
 
 #main {
     .fortunes_list {
-        $fortune_color: #00F;
+        $fortune_color: #00f;
         $fort_border_color: black;
         $fortune_radius: 5px;
         $fortune_border: 7px solid;
@@ -97,7 +97,6 @@
                     @include elem;
 
                     // outline: red 2px solid
-
                 }
             }
 
@@ -151,7 +150,7 @@
                     // right: 0
                     margin-top: 0;
                     margin-bottom: 0;
-                    color: #48F;
+                    color: #48f;
                     text-decoration: none;
 
                     @include fortune_style;

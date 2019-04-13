@@ -26,7 +26,8 @@ body {
     text-overflow: ellipsis;
     margin: 0 0 0 0;
 
-    a, b {
+    a,
+    b {
         display: inline;
         text-decoration: none;
         height: 20px;
@@ -67,7 +68,8 @@ span.jqtree_common {
 
 ul {
     &.jqtree_common {
-        li ul.jqtree_common li:last-child, > li:last-child {
+        li ul.jqtree_common li:last-child,
+        > li:last-child {
             background-position: 0 -1766px;
         }
     }

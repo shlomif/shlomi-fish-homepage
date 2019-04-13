@@ -3,7 +3,7 @@
 @import "common-style";
 
 .sub_menu {
-    background-color: #C0C0C0;
+    background-color: #c0c0c0;
     padding-top: 20pt;
     padding-bottom: 3em;
     padding-left: 10pt;
@@ -11,7 +11,8 @@
     border-radius: 10px;
     margin-bottom: 1em;
 
-    .nav_links img:hover, .nav_links a {
+    .nav_links img:hover,
+    .nav_links a {
         background: transparent;
     }
 }
@@ -71,7 +72,8 @@ body {
             width: auto;
         }
     }
-    #navbar_wrapper, #show_navbar {
+    #navbar_wrapper,
+    #show_navbar {
         padding: 1em;
 
         &.novis {
@@ -95,7 +97,8 @@ body {
             grid-column: 1 / 6;
         }
 
-        .news * , .wrap-me * {
+        .news *,
+        .wrap-me * {
             @include wrap;
         }
         * {
@@ -134,18 +137,20 @@ body {
         }
 
         &:visited {
-            color: #FF8800;
+            color: #ff8800;
         }
 
         &:hover {
-            color: #40FF40;
+            color: #40ff40;
             background-color: transparent;
         }
     }
 }
 
-.lim_width , #navbar_wrapper {
-    img , iframe {
+.lim_width,
+#navbar_wrapper {
+    img,
+    iframe {
         max-width: 99%;
         height: auto;
     }
@@ -158,12 +163,13 @@ img.bizcard {
     max-width: 80%;
 }
 
-.read-more , .read-less {
+.read-more,
+.read-less {
     display: block;
     margin-top: 2em;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     #navbar_wrapper {
         @include body-background;
         /* border: 2px black solid; */

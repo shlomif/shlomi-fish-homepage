@@ -49,7 +49,7 @@ ul.jqtree-tree {
 
         /* fix for ie9 */
         border-bottom: none;
-        color: #262E7E;
+        color: #262e7e;
 
         &:hover {
             color: #000;
@@ -69,7 +69,7 @@ ul.jqtree-tree {
     }
 
     .jqtree-title {
-        color: #1C4257;
+        color: #1c4257;
         vertical-align: middle;
     }
 
@@ -144,16 +144,28 @@ ul.jqtree-tree {
     }
 
     li.jqtree-selected > div {
-        background-color: #97BDD6;
-        background: -webkit-gradient(linear, left top, left bottom, from(#bee0f5), to(#89afca));
+        background-color: #97bdd6;
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#bee0f5),
+            to(#89afca)
+        );
         background: -moz-linear-gradient(top, #bee0f5, #89afca);
         background: -ms-linear-gradient(top, #bee0f5, #89afca);
         background: -o-linear-gradient(top, #bee0f5, #89afca);
         text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 
         &:hover {
-            background-color: #97BDD6;
-            background: -webkit-gradient(linear, left top, left bottom, from(#bee0f5), to(#89afca));
+            background-color: #97bdd6;
+            background: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                from(#bee0f5),
+                to(#89afca)
+            );
             background: -moz-linear-gradient(top, #bee0f5, #89afca);
             background: -ms-linear-gradient(top, #bee0f5, #89afca);
             background: -o-linear-gradient(top, #bee0f5, #89afca);

@@ -8,7 +8,33 @@
 
 @import "charsheet-basics";
 
-html, body, div, span, applet, object, iframe, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, s, samp, small, var, fieldset, form, label, legend {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+font,
+img,
+ins,
+kbd,
+s,
+samp,
+small,
+var,
+fieldset,
+form,
+label,
+legend {
     margin: 0;
     padding: 0;
     border: 0;
@@ -45,7 +71,7 @@ body {
         letter-spacing: 4px;
 
         a {
-            color: #FFF;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -54,7 +80,7 @@ body {
     p {
         margin: 10px auto 0 22px;
         font-size: 25px;
-        color: #FFF;
+        color: #fff;
         letter-spacing: 2px;
     }
 }
@@ -68,11 +94,9 @@ body {
         background: url("images/faux-extended-1200.jpg") repeat;
     }
 
-
     @include small-screen {
         background-color: #e0ebef;
     }
-
 
     border-radius: 10px 10px 10px;
 }
@@ -96,7 +120,6 @@ body {
         float: left;
     }
 
-
     h2 {
         font-size: 16px;
         letter-spacing: 1px;
@@ -116,7 +139,6 @@ body {
         //list-style: square
         //list-style-position: inside
         //line-height: 18px
-
     }
 
     #searchform .hidden {
@@ -138,7 +160,7 @@ body {
             border: #01698f solid 1px;
             font-weight: bold;
             font-size: 15px;
-            color: #4265A7;
+            color: #4265a7;
             line-height: 20px;
             overflow: hidden;
             text-align: center;
@@ -148,7 +170,7 @@ body {
             margin: 0 auto 0 0;
             height: 18px;
             width: 53px;
-            color: #FFF;
+            color: #fff;
             border: 0;
             background: #01698f;
             font-size: 12px;
@@ -254,7 +276,6 @@ a {
         padding-right: 0.5em;
     }
 
-
     .comments {
         margin: 10px auto auto auto;
         width: 590px;
@@ -321,17 +342,17 @@ a {
     }
 
     img {
-        border: 4px solid #DDDDDD;
+        border: 4px solid #dddddd;
         margin: 4px 0;
     }
 
     a {
         img {
-            border: 4px solid #DDDDDD;
+            border: 4px solid #dddddd;
         }
 
         &:hover img {
-            border-color: #CCCCCC;
+            border-color: #cccccc;
         }
 
         color: #01698f;
@@ -439,7 +460,10 @@ a {
 }
 
 #commentform {
-    #author, #email, #url, #comment {
+    #author,
+    #email,
+    #url,
+    #comment {
         background: #ffffff;
         border: 1px solid #cccccc;
         color: #666666;
@@ -466,8 +490,8 @@ a {
 
 .post-meta {
     width: 590px;
-    background: #F5F5F5 none repeat scroll 0 0;
-    border: 1px solid #E3E4E4;
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #e3e4e4;
     color: #666666;
     margin: 10px 0 22px;
     padding: 5px 10px;
@@ -483,12 +507,12 @@ a {
     width: 590px;
     height: auto;
     font-size: 14px;
-    color: #01698F;
+    color: #01698f;
 
     a {
         text-decoration: none;
         font-weight: bold;
-        color: #01698F;
+        color: #01698f;
     }
 
     .alignleft {
@@ -502,7 +526,8 @@ a {
     }
 
     a {
-        &.alignleft, &.alignright {
+        &.alignleft,
+        &.alignright {
             border: none;
         }
     }
@@ -523,30 +548,30 @@ a {
 
         span.pages {
             background: none;
-            color: #01698F;
-            border: 1px solid #01698F;
+            color: #01698f;
+            border: 1px solid #01698f;
             font-size: 11px;
         }
     }
 
     span.current {
         background: none;
-        color: #01698F;
-        border: 1px solid #01698F;
+        color: #01698f;
+        border: 1px solid #01698f;
         font-size: 11px;
     }
 
     a {
         &.page {
             background: none;
-            color: #01698F;
-            border: 1px solid #01698F;
+            color: #01698f;
+            border: 1px solid #01698f;
             font-size: 11px;
         }
 
         background: none;
-        color: #01698F;
-        border: 1px solid #01698F;
+        color: #01698f;
+        border: 1px solid #01698f;
         font-size: 11px;
     }
 }
@@ -576,7 +601,7 @@ a {
     margin-right: 2em;
 
     a {
-        color: #FF8800;
+        color: #ff8800;
         text-decoration: underline;
         font-weight: bold;
     }

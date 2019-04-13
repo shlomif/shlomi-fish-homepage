@@ -12,6 +12,6 @@ npm install \
     eslint-config-google \
     html-minifier \
     param-case \
+    prettier \
     sass \
     uglify-es \
-

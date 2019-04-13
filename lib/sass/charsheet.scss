@@ -6,7 +6,6 @@ div {
             font-size: 32pt;
         }
 
-
         @include big-screen {
             font-size: 18pt;
         }
@@ -17,7 +16,6 @@ div {
             font-size: 26pt;
         }
 
-
         @include big-screen {
             font-size: 16pt;
         }
@@ -27,7 +25,6 @@ div {
         @include small-screen {
             font-size: 20pt;
         }
-
 
         @include big-screen {
             font-size: 12pt;
@@ -40,7 +37,6 @@ body {
         max-width: 900px;
         margin: 1em auto;
     }
-
 
     @include small-screen {
         margin: 0;
@@ -61,7 +57,9 @@ body /deep/ .fulltext {
     }
 }
 
-div.skill-data.skill-name, div.skill-data.skill-key, div.skill-data.skill-eq {
+div.skill-data.skill-name,
+div.skill-data.skill-key,
+div.skill-data.skill-eq {
     color: #173228 !important;
     font-size: 160%;
     font-family: "Lusitana", serif;
@@ -70,7 +68,8 @@ div.skill-data.skill-name, div.skill-data.skill-key, div.skill-data.skill-eq {
 }
 
 div.skill-data {
-    &.skill-ability:before, &.skill-misc:before {
+    &.skill-ability:before,
+    &.skill-misc:before {
         content: "+";
         position: absolute;
         top: 0.3em;
@@ -85,7 +84,6 @@ div.skill-eq {
         text-align: center;
     }
 
-
     @include small-screen {
         text-align: right;
     }
@@ -98,10 +96,9 @@ div.computed {
         }
     }
 
-
     /deep/ input[readonly] {
         background: white;
-        border-color: #D0D3EC;
+        border-color: #d0d3ec;
         border-width: 0 0 2px 2px;
     }
 
@@ -110,7 +107,7 @@ div.computed {
     }
 
     /deep/ label {
-        border-right-color: #D0D3EC;
+        border-right-color: #d0d3ec;
     }
 }
 
@@ -119,7 +116,7 @@ div.skill-header {
 }
 
 div.breakdown div.connector-line {
-    border-right: 2px solid #D0D3EC;
+    border-right: 2px solid #d0d3ec;
     min-height: 1em;
     position: relative;
     right: 15px;
@@ -135,7 +132,7 @@ div.breakdown.active {
 }
 
 div.breakdown div.summary-data {
-    border: 2px solid #D0D3EC;
+    border: 2px solid #d0d3ec;
     padding: 1em inherit;
 }
 
@@ -152,7 +149,7 @@ legend {
     background: #e4ffff;
     padding: 0.1em 0.2em;
     border: 0;
-    border-bottom: 2px solid #F2C49E;
+    border-bottom: 2px solid #f2c49e;
     font-family: "Oxygen", sans-serif;
 }
 

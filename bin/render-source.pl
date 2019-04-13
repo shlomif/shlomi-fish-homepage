@@ -19,7 +19,6 @@ use lib './lib';
 use Parallel::ForkManager::Segmented ();
 
 my $UNCOND = $ENV{UNCOND} // '';
-my (@dests) = @ARGV;
 
 my $PWD       = Cwd::getcwd();
 my @WML_FLAGS = (
@@ -48,7 +47,7 @@ sub is_newer
 }
 
 my @queue;
-foreach my $lfn (@dests)
+foreach my $lfn (@ARGV)
 {
     my $dest     = "$T2_DEST/$lfn";
     my $abs_dest = "$PWD/$dest";
@@ -57,14 +56,11 @@ foreach my $lfn (@dests)
     {
         push @queue,
             [
-            [
-                $abs_dest,
-                "-DPATH_TO_ROOT="
-                    . ( "../" x ( scalar( () = $lfn =~ m#/#g ) - 0 ) ),
-                "-DLATEMP_FILENAME=$lfn",
-                $src,
-            ],
-            $dest
+            $abs_dest,
+            "-DPATH_TO_ROOT="
+                . ( "../" x ( scalar( () = $lfn =~ m#/#g ) - 0 ) ),
+            "-DLATEMP_FILENAME=$lfn",
+            $src,
             ];
     }
 }
@@ -72,7 +68,7 @@ my @FLAGS = ( @WML_FLAGS, '-o', );
 my $proc  = sub {
     $obj->run_with_ARGV(
         {
-            ARGV => [ @FLAGS, @{ shift(@_)->[0] } ],
+            ARGV => [ @FLAGS, @{ shift(@_) } ],
         }
     ) and die "$!";
     return;

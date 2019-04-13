@@ -83,7 +83,7 @@ foreach my $host (qw(t2 vipe))
                     'path_info'    => $filename,
                     'current_host' => $host,
                     MyNavData::get_params(),
-                    'ul_classes'     => [ "navbarmain", ("navbarnested") x 10 ],
+                    'ul_classes'     => [],
                     'no_leading_dot' => 1,
                 );
 

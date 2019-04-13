@@ -55,7 +55,17 @@ foreach my $lfn (@dests)
     my $src      = "$lfn.wml";
     if ( $UNCOND or is_newer( $src, $abs_dest ) )
     {
-        push @queue, [ [ $abs_dest, "-DLATEMP_FILENAME=$lfn", $src, ], $dest ];
+        push @queue,
+            [
+            [
+                $abs_dest,
+                "-DPATH_TO_ROOT="
+                    . ( "../" x ( scalar( () = $lfn =~ m#/#g ) - 0 ) ),
+                "-DLATEMP_FILENAME=$lfn",
+                $src,
+            ],
+            $dest
+            ];
     }
 }
 my @FLAGS = ( @WML_FLAGS, '-o', );

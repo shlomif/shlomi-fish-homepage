@@ -1,6 +1,6 @@
 
 <define-tag hebrew_open_div>
-{#HEBREW_XML_LANG_SCRIPT#:<js_script src="$(ROOT)/js/moz-lang.js"></js_script>:##}
+{#HEBREW_XML_LANG_SCRIPT#:<js_script src="$(PATH_TO_ROOT)js/moz-lang.js"></js_script>:##}
 {#BODY_PARAMS#: onload="langLoad()":##}
 <div class="hebrew" xml:lang="he-IL">
 </define-tag>
@@ -24,7 +24,7 @@
 </latemp_top_banner>
 
 <latemp_top_left_corner_logo>
-<div class="center"><a href="<rellink url="" host="t2" />" title="Shlomi Fish’s Homepage"><img src="$(ROOT)/images/evilphish.png" alt="EvilPHish by Illiad" class="highlight" style="border:0;margin-bottom:0.5em;"/></a></div>
+<div class="center"><a href="<rellink url="" host="t2" />" title="Shlomi Fish’s Homepage"><img src="$(PATH_TO_ROOT)images/evilphish.png" alt="EvilPHish by Illiad" class="highlight" style="border:0;margin-bottom:0.5em;"/></a></div>
 </latemp_top_left_corner_logo>
 
 <define-tag google_search>
@@ -67,20 +67,20 @@ shlomifish.org
 <latemp_common_keywords "Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Software" />
 <latemp_meta_desc "Shlomi Fish’s Homepage" />
 <define-tag affil_valid_xhtml11>
-<p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless"><img class="highlight bless" src="$(ROOT)/images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
+<p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless"><img class="highlight bless" src="$(PATH_TO_ROOT)images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
 </define-tag>
 <define-tag affil_valid_css>
-<p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!" class="bless"><img class="highlight bless" src="$(ROOT)/images/css-btn.png" alt="Valid CSS!" /></a></p>
+<p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!" class="bless"><img class="highlight bless" src="$(PATH_TO_ROOT)images/css-btn.png" alt="Valid CSS!" /></a></p>
 </define-tag>
 <latemp_affiliations_buttons>
 
 <div class="about_author">
 
-<div class="center"><img src="$(ROOT)/images/shlomif-sglau-nsa-shirt-small.jpg" alt="Photo of Shlomi Fish" title="Head shot of Shlomi Fish"/></div>
+<div class="center"><img src="$(PATH_TO_ROOT)images/shlomif-sglau-nsa-shirt-small.jpg" alt="Photo of Shlomi Fish" title="Head shot of Shlomi Fish"/></div>
 
 <p>
-<a href="$(ROOT)/#about_site">Shlomi Fish</a>
-(שלומי פיש), also known as <a href="$(ROOT)/me/rindolf/">“Rindolf”</a>,
+<a href="$(PATH_TO_ROOT)#about_site">Shlomi Fish</a>
+(שלומי פיש), also known as <a href="$(PATH_TO_ROOT)me/rindolf/">“Rindolf”</a>,
 is an Israeli humorist, writer, and software geek.
 </p>
 
@@ -91,7 +91,7 @@ in general.
 
 <p class="sep">
 It is easy to reach Shlomi using a large number of
-<a href="$(ROOT)/me/contact-me/">online means</a>, including
+<a href="$(PATH_TO_ROOT)me/contact-me/">online means</a>, including
 <a href="mailto:<main_email />">E-mail</a>.
 </p>
 
@@ -113,19 +113,19 @@ It is easy to reach Shlomi using a large number of
 
 <li>
 <p>
-<a href="http://twitter.com/shlomif"><img src="$(ROOT)/images/twitter-bird-light-bgs-20.png" alt="Twitter Logo" /> Twitter</a>
+<a href="http://twitter.com/shlomif"><img src="$(PATH_TO_ROOT)images/twitter-bird-light-bgs-20.png" alt="Twitter Logo" /> Twitter</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://plus.google.com/+ShlomiFish/posts"><img src="$(ROOT)/images/google-plus-icon-30x30.png" alt="Google+ Logo" /> Google+</a>
+<a href="https://plus.google.com/+ShlomiFish/posts"><img src="$(PATH_TO_ROOT)images/google-plus-icon-30x30.png" alt="Google+ Logo" /> Google+</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.facebook.com/shlomi.fish"><img src="$(ROOT)/images/facebook-icon-30x30.png" alt="Facebook Logo" /> Facebook</a>
+<a href="http://www.facebook.com/shlomi.fish"><img src="$(PATH_TO_ROOT)images/facebook-icon-30x30.png" alt="Facebook Logo" /> Facebook</a>
 </p>
 </li>
 
@@ -138,37 +138,37 @@ still Dangerous</i> Blog</a>
 
 <li>
 <p>
-<a href="http://www.reddit.com/user/shlomif"><img src="$(ROOT)/images/Reddit_30x30.png" alt="Reddit Logo" /> Reddit</a>
+<a href="http://www.reddit.com/user/shlomif"><img src="$(PATH_TO_ROOT)images/Reddit_30x30.png" alt="Reddit Logo" /> Reddit</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://en.wikipedia.org/wiki/User:Shlomif"><img src="$(ROOT)/images/wikipedia-logo-20.png" alt="Wikipedia Logo" /> Wikipedia</a>
+<a href="http://en.wikipedia.org/wiki/User:Shlomif"><img src="$(PATH_TO_ROOT)images/wikipedia-logo-20.png" alt="Wikipedia Logo" /> Wikipedia</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.flickr.com/photos/shlomif/"><img src="$(ROOT)/images/flickr-32x32.png" alt="Flickr Logo" /> Flickr</a>
+<a href="http://www.flickr.com/photos/shlomif/"><img src="$(PATH_TO_ROOT)images/flickr-32x32.png" alt="Flickr Logo" /> Flickr</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://shlomif.deviantart.com/"><img src="$(ROOT)/images/deviantart-30x30.png" alt="deviantART Logo" /> deviantART</a>
+<a href="http://shlomif.deviantart.com/"><img src="$(PATH_TO_ROOT)images/deviantart-30x30.png" alt="deviantART Logo" /> deviantART</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.youtube.com/user/ShlomiFish"><img src="$(ROOT)/images/youtube-30x30.png" alt="YouTube Logo" /> YouTube</a>
+<a href="http://www.youtube.com/user/ShlomiFish"><img src="$(PATH_TO_ROOT)images/youtube-30x30.png" alt="YouTube Logo" /> YouTube</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://github.com/shlomif"><img src="$(ROOT)/images/github-24-black.png" alt="GitHub Logo" /> GitHub</a>
+<a href="http://github.com/shlomif"><img src="$(PATH_TO_ROOT)images/github-24-black.png" alt="GitHub Logo" /> GitHub</a>
 </p>
 </li>
 
@@ -195,7 +195,7 @@ Style and look based on the
 by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin</a>.
 </p>
 <p>
-<a href="$(ROOT)/meta/FAQ/#evilphish-emblem">Fish emblem</a>
+<a href="$(PATH_TO_ROOT)meta/FAQ/#evilphish-emblem">Fish emblem</a>
 taken from the
 <a href="http://ars.userfriendly.org/cartoons/?id=20030803">“Anatomy
 of an EvilPHish”</a> cartoon of
@@ -205,7 +205,7 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag hosting_link>
 <div class="rightalign">
-<a href="$(ROOT)/meta/hosting/#hostgator"><img src="images/hostgator.png"
+<a href="$(PATH_TO_ROOT)meta/hosting/#hostgator"><img src="images/hostgator.png"
    alt="Hosted at HostGator" class="highlight" style="border : 0"
    title="Hosted at HostGator" /></a>
 </div>
@@ -213,7 +213,7 @@ of an EvilPHish”</a> cartoon of
 
 <define-tag backtomyhp>
 <div>
-<a href="<rellink url="" host="t2" />"><img src="$(ROOT)/images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
+<a href="<rellink url="" host="t2" />"><img src="$(PATH_TO_ROOT)images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
 </div>
 </define-tag>
 
@@ -263,33 +263,33 @@ of an EvilPHish”</a> cartoon of
 </define-tag>
 
 <define-tag remove_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/jqtree.css" type="text/css" media="screen" title="Normal" />
-<js_script src="$(ROOT)/js/main_nav_menu.js"></js_script>
-<link rel="stylesheet" type="text/css" href="$(ROOT)/js/treeview/jquery.treeview.css" />
+<link rel="stylesheet" href="$(PATH_TO_ROOT)jqtree.css" type="text/css" media="screen" title="Normal" />
+<js_script src="$(PATH_TO_ROOT)js/main_nav_menu.js"></js_script>
+<link rel="stylesheet" type="text/css" href="$(PATH_TO_ROOT)js/treeview/jquery.treeview.css" />
 </define-tag>
 
 <define-tag main_all__js_scripts__dev>
-<js_script src="$(ROOT)/js/jq.js"></js_script>
-<js_script src="$(ROOT)/js/jquery.treeview.min.js"></js_script>
-<js_script src="$(ROOT)/js/toggler.js"></js_script>
-<js_script src="$(ROOT)/js/toggle_sect.js"></js_script>
-<js_script src="$(ROOT)/js/tree.jq.js"></js_script>
-<js_script src="$(ROOT)/js/jquery.cookie.js"></js_script>
-<js_script src="$(ROOT)/js/to-jqtree.js"></js_script>
-<js_script src="$(ROOT)/js/to-jqtree-2.js"></js_script>
-<js_script src="$(ROOT)/js/selfl.js"></js_script>
-<js_script src="$(ROOT)/js/sub_menu.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/jq.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/jquery.treeview.min.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/toggler.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/toggle_sect.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/tree.jq.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/jquery.cookie.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/to-jqtree.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/to-jqtree-2.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/selfl.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/sub_menu.js"></js_script>
 </define-tag>
 
 <define-tag main_all__js_scripts__proudction>
-<js_script src="$(ROOT)/js/main_all.js"></js_script>
+<js_script src="$(PATH_TO_ROOT)js/main_all.js"></js_script>
 </define-tag>
 
 <set-var is_dev="$(LATEMP_IS_DEV_ENV)" />
 
 <when>
-<link type="text/css" rel="stylesheet" href="$(ROOT)/css/materialize.min.css"  media="screen" />
-<js_script src="$(ROOT)/js/materialize.min.js"></js_script>
+<link type="text/css" rel="stylesheet" href="$(PATH_TO_ROOT)css/materialize.min.css"  media="screen" />
+<js_script src="$(PATH_TO_ROOT)js/materialize.min.js"></js_script>
 </when>
 
 <define-tag my_extra_head_elements>
@@ -346,7 +346,7 @@ shlomif_load_nav("<: print get_page_path(); :>");
 <define-tag apply_screenplay_style>
 
 <page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/screenplay.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="$(PATH_TO_ROOT)screenplay.css" type="text/css" media="screen" />
 </page_extra_head_elements>
 
 </define-tag>

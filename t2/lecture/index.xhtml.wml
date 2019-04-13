@@ -8,7 +8,7 @@
 
 <toc_div />
 
-<h2 id="perl-for-newbies"><a href="./Perl/Newbies/">Perl
+<h2 id="perl-for-newbies"><a href="Perl/Newbies/">Perl
 for Perl Newbies</a></h2>
 
 <p>
@@ -33,7 +33,7 @@ A presentation about web publishing using the popular LAMP - Linux, Apache
 
 <h2 id="soft_mgmt">Software Management</h2>
 
-<h3 id="catb"><a href="./CatB/">The Cathedral and the Bazaar - an Overview</a></h3>
+<h3 id="catb"><a href="CatB/">The Cathedral and the Bazaar - an Overview</a></h3>
 
 <div class="indent">
 <p>
@@ -69,7 +69,7 @@ then use it to present the Lambda Calculus: a model for programming,
 which is a full-fledge programming language with just two primitives.
 </p>
 
-<h3 id="haskell-for-perlers"><a href="./Perl/Haskell/">Haskell for Perl Programmers</a></h3>
+<h3 id="haskell-for-perlers"><a href="Perl/Haskell/">Haskell for Perl Programmers</a></h3>
 
 <p>
 A Haskell for Perl Programmers introduction. (part of the Israeli Perl
@@ -132,10 +132,10 @@ introduces it for beginners.
 
 <ul>
 <li>
-<a href="./Quad-Pres/">QuaD-Pres</a>
+<a href="Quad-Pres/">QuaD-Pres</a>
 </li>
 <li>
-<a href="./Pres-Tools/Perl-Point/">PerlPoint</a>
+<a href="Pres-Tools/Perl-Point/">PerlPoint</a>
 </li>
 </ul>
 <hr />
@@ -157,7 +157,7 @@ Aims to introduce the Linux operating system to beginners.
 
 <h3_section id="freecell-solver" title="Freecell Solver">
 
-<h4_section id="fcs-evolution" href="$(ROOT)/lecture/Freecell-Solver/" title="Freecell Solver - Evolution of a C Program">
+<h4_section id="fcs-evolution" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/" title="Freecell Solver - Evolution of a C Program">
 
 <p>
 The history of my pet project, Freecell Solver.
@@ -165,7 +165,7 @@ The history of my pet project, Freecell Solver.
 
 </h4_section>
 
-<h4_section id="fcs-the-next-pres" href="$(ROOT)/lecture/Freecell-Solver/The-Next-Pres/" title="Freecell Solver - The Next Presentation">
+<h4_section id="fcs-the-next-pres" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/The-Next-Pres/" title="Freecell Solver - The Next Presentation">
 
 <p>
 More recent history and development of the project.
@@ -173,7 +173,7 @@ More recent history and development of the project.
 
 </h4_section>
 
-<h4_section id="fcs-project-intro" href="$(ROOT)/lecture/Freecell-Solver/project-intro/" title="Freecell Solver: Project Introduction">
+<h4_section id="fcs-project-intro" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/project-intro/" title="Freecell Solver: Project Introduction">
 
 <p>
 An introduction of the project for people who are interested to contribute.
@@ -183,10 +183,10 @@ An introduction of the project for people who are interested to contribute.
 
 </h3_section>
 
-<h3_section id="lm-solve" href="$(ROOT)/lecture/LM-Solve/" title="LM-Solve">
+<h3_section id="lm-solve" href="$(PATH_TO_ROOT)lecture/LM-Solve/" title="LM-Solve">
 
 <p>
-A presentation about <a href="$(ROOT)/lm-solve/">LM-Solve</a>, a Logic Mazes
+A presentation about <a href="$(PATH_TO_ROOT)lm-solve/">LM-Solve</a>, a Logic Mazes
 Solver. Covers history, technologies, architecture and exotic bugs.
 </p>
 

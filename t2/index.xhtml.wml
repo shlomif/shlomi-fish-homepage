@@ -19,7 +19,7 @@
 <h2 id="about_site">About this Site</h2>
 
 <p>
-<img src="$(ROOT)/images/shlomif-head.jpg" class="rfloaty" alt="Shlomi Fish’s Head"/>
+<img src="$(PATH_TO_ROOT)images/shlomif-head.jpg" class="rfloaty" alt="Shlomi Fish’s Head"/>
 Hi all, and welcome to the personal website of
 <a href="personal.html"><b>Shlomi Fish</b></a>. I
 am an Israeli writer of stories, articles, essays, and
@@ -43,18 +43,18 @@ Here are some of the things you can find here:
 <h3 id="humour"><a href="humour/">Humour</a></h3>
 
 <p>
-You can read many <a href="$(ROOT)/humour/bits/">shorter bits</a>
-I have written, a <a href="$(ROOT)/humour.html">collection</a> of
+You can read many <a href="$(PATH_TO_ROOT)humour/bits/">shorter bits</a>
+I have written, a <a href="$(PATH_TO_ROOT)humour.html">collection</a> of
 original aphorisms and quotes,
-<a href="$(ROOT)/humour/bits/facts/">factoids</a> about people
+<a href="$(PATH_TO_ROOT)humour/bits/facts/">factoids</a> about people
 and things (Chuck Norris/etc.), and
-<a href="$(ROOT)/humour/fortunes/">a large collection of quotes</a> by
+<a href="$(PATH_TO_ROOT)humour/fortunes/">a large collection of quotes</a> by
 myself and others.
 </p>
 
 <p>
 If you do not lack the patience for reading longer texts, you can read
-<a href="$(ROOT)/humour/stories">large-scope humorous
+<a href="$(PATH_TO_ROOT)humour/stories">large-scope humorous
 stories (novellas) and screenplays</a>, which I have written.
 </p>
 
@@ -71,7 +71,7 @@ I am <a href="philosophy/politics/define-zionism/">a Jew and an Israeli</a>
 by nationality, an agnostic by faith (or lack of it), and <a
 href="philosophy/philosophy/guide-to-neo-tech/">a “Neo-Tech”
 Objectivist</a> by ideology. (Objectivism
-<a href="$(ROOT)/humour/fortunes/shlomif-fav.html#neo-tech-selfishness">does
+<a href="$(PATH_TO_ROOT)humour/fortunes/shlomif-fav.html#neo-tech-selfishness">does
 not imply selfishness</a>, by the way, but rather rational self-growth.)
 My expertise as a software developer (in many fields), and my interest
 in philosophy, history, software management, and other fields also provide
@@ -122,9 +122,9 @@ one place. Who doesn’t like links?
 
 <p>
 I hope you enjoy my web-site. If you do, please
-<a href="$(ROOT)/meta/how-to-help/">link here</a> or share a link on
+<a href="$(PATH_TO_ROOT)meta/how-to-help/">link here</a> or share a link on
 social media, recommend
-it to your friends, and <a href="$(ROOT)/me/contact-me/">drop me a line</a>.
+it to your friends, and <a href="$(PATH_TO_ROOT)me/contact-me/">drop me a line</a>.
 </p>
 
 </section>

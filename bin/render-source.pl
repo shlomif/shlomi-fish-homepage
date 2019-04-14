@@ -10,12 +10,8 @@ BEGIN
     use vars qw/ $HOME /;
     $HOME = $ENV{HOME};
 }
-use lib "$HOME/apps/test/wml/lib64/wml";
-
-use TheWML::Frontends::Wml::Runner ();
-
-use lib './lib';
-
+use lib "$HOME/apps/test/wml/share/wml";
+use TheWML::Frontends::Wml::Runner   ();
 use Parallel::ForkManager::Segmented ();
 
 my $UNCOND = $ENV{UNCOND} // '';
@@ -37,12 +33,12 @@ my $obj = TheWML::Frontends::Wml::Runner->new;
 sub is_newer
 {
     my ( $fn1, $fn2 ) = @_;
-    my @stat1 = stat($fn1);
     my @stat2 = stat($fn2);
     if ( !@stat2 )
     {
         return 1;
     }
+    my @stat1 = stat($fn1);
     return ( $stat1[9] >= $stat2[9] );
 }
 
@@ -57,10 +53,8 @@ foreach my $lfn (@ARGV)
         push @queue,
             [
             $abs_dest,
-            "-DPATH_TO_ROOT="
-                . ( "../" x ( scalar( () = $lfn =~ m#/#g ) - 0 ) ),
-            "-DLATEMP_FILENAME=$lfn",
-            $src,
+            "-DPATH_TO_ROOT=" . ( "../" x scalar( () = $lfn =~ m#/#g ) ),
+            "-DLATEMP_FILENAME=$lfn", $src,
             ];
     }
 }

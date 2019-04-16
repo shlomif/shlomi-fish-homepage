@@ -138,8 +138,10 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 {
                     return $ipp_filter->(
                         [
-                            grep { not m{lecture/Lambda-Calculus/slides} }
-                                @$filenames,
+                            grep {
+                                not( m{lecture/Lambda-Calculus/slides}
+                                    && !m{/slides(/|/index.*)?$} )
+                            } @$filenames,
                         ]
                     );
                 }

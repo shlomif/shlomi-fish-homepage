@@ -61,6 +61,13 @@ my $essays_tree_contents = {
                 {
                     text => "Scheme &amp; Lambda Calculus",
                     url  => "lecture/Lambda-Calculus/",
+                    subs => [
+                        {
+                            text => "Slides",
+                            url  => "lecture/Lambda-Calculus/slides/",
+                            skip => 1,
+                        },
+                    ],
                 },
                 {
                     text => "Haskell for Perlers",

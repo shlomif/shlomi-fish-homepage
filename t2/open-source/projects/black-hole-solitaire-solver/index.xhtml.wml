@@ -19,7 +19,7 @@ the cards to move.
 
 <h2_section id="download" title="Download">
 
-<set-var ver="0.18.0" />
+<set-var ver="0.20.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -27,7 +27,7 @@ the cards to move.
 <ul>
 
 <li>
-<a href="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var arc />"><get-var arc /></a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
+<a href="https://fc-solve.shlomifish.org/downloads/fc-solve/<get-var arc />"><get-var arc /></a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
 </li>
 
 <li>
@@ -146,6 +146,14 @@ solvers</a>.
 
 <news_sect>
 
+<h3_section id="news_version_0_20_0" title="Version 0.20.0">
+
+<p>
+Version 0.20.0 was released with recycling instances support and some
+speed improvements.
+</p>
+
+</h3_section>
 <h3_section id="news_version_0_18_0" title="Version 0.18.0">
 
 <p>

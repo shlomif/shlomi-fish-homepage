@@ -12,12 +12,22 @@ use File::Find::Object::Rule ();
 use Moo;
 
 {
-    my $qp_slidy = path("lib/presentations/qp/common/slidy.js")->slurp_utf8;
-    my $css_tt   = Template->new( {} );
-    my $qp_template_en_text =
-        path("lib/presentations/qp/common/template-en.wml")->slurp_utf8;
-    my $qp_template_he_text =
-        path("lib/presentations/qp/common/template-he.wml")->slurp_utf8;
+    my $qp_base   = path("lib/presentations/qp");
+    my $qp_common = $qp_base->child("common");
+
+    sub _common_path
+    {
+        return $qp_common->child(@_);
+    }
+
+    sub _common_slurp
+    {
+        return _common_path(@_)->slurp_utf8;
+    }
+    my $qp_slidy            = _common_slurp("slidy.js");
+    my $css_tt              = Template->new( {} );
+    my $qp_template_en_text = _common_slurp("template-en.wml");
+    my $qp_template_he_text = _common_slurp("template-he.wml");
 
     sub _get_quad_pres_files
     {
@@ -30,7 +40,7 @@ use Moo;
         my $dest_dir   = $args->{dest_dir};
 
         write_on_change( scalar( path("$dir/src/slidy.js") ), \$qp_slidy );
-        $css_tt->process( "lib/presentations/qp/common/style.css.tt2",
+        $css_tt->process( _common_path("style.css.tt2"),
             $css_params, "$dir/src/style.css" );
 
         my $serve_fn = "$dir/serve.pl";
@@ -68,8 +78,14 @@ sub get_contents
 
 1;
 EOF
-        write_on_change( scalar( path("$dir/template.wml") ),
-            ( $lang eq 'en' ? \$qp_template_en_text : \$qp_template_he_text ) );
+        write_on_change(
+            scalar( path("$dir/template.wml") ),
+            (
+                $lang eq 'en'
+                ? \$qp_template_en_text
+                : \$qp_template_he_text
+            )
+        );
         path("$dir/.wmlrc")->spew_utf8(<<"EOF");
 -DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
 EOF

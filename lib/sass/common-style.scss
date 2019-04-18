@@ -68,14 +68,16 @@ img.highlight:hover,
     @include indent;
 }
 
-.news article {
-    // +indent
-    blockquote,
-    ol,
-    ul,
-    p {
-        margin-left: 0;
-        padding-left: 0.3em;
+@if false {
+    .news article {
+        // +indent
+        blockquote,
+        ol,
+        ul,
+        p {
+            margin-left: 0;
+            padding-left: 0.3em;
+        }
     }
 }
 

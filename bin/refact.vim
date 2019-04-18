@@ -23,6 +23,6 @@ call Replace_Sect('licence', 'Licence', 'licence_sect')
 function H4_repl()
     :%s/<section class="h4">[\s\n]*<h4 id="\([^"]\+\)">\(\_[^<]\+\)<\/h4>\(\_.\{-\}\)<\/section>/<h4_section id="\1" title="\2">\3<\/h4_section>/
     :%s/<section class="h3">[\s\n]*<h3 id="\([^"]\+\)">\(\_[^<]\+\)<\/h3>\(\_.\{-\}\)<\/section>/<h3_section id="\1" title="\2">\3<\/h3_section>/
-    :%s/<section class="h2">[\s\n]*<h2 id="\([^"]\+\)">\(\_[^<]\+\)<\/h2>\(\_.\{-\}\)<\/section>/<h2_section id="\1" title="\2">\2<\/h2_section>/
+    :%s/<section class="h2">[\s\n]*<h2 id="\([^"]\+\)">\(\_[^<]\+\)<\/h2>\(\_.\{-\}\)<\/section>/<h2_section id="\1" title="\2">\3<\/h2_section>/
     :%s/\n\n\+//g
 endfunction

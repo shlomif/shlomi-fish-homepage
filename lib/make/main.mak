@@ -134,7 +134,7 @@ T2_DEST_FORTUNE_BOTTLE = $(T2_DEST_FORTUNES_DIR)/bottle.py
 htacc = $(addsuffix /.htaccess,$(1))
 T2_FORTUNES_DIR_HTACCESS = $(call htacc,$(T2_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(DEST_HUMOUR) $(DEST_HUMOUR)/humanity/songs $(addprefix $(T2_DEST)/,guide2ee open-source philosophy MathVentures prog-evolution me lecture puzzles rindolf grad-fu work lecture/PostgreSQL-Lecture))
+ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(addprefix $(T2_DEST)/,lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 

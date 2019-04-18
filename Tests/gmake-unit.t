@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 11;
+use Test::More tests => 9;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
@@ -64,12 +64,6 @@ sub dest_test
     # TEST
     gmake_test( 'T2_POST_DIRS_DEST', "$T2_POST_DEST/art/original-graphics",
         "found a dir" );
-
-    # TEST
-    dest_test( 'ALL_HTACCESSES', 'humour/fortunes/.htaccess', ".htaccess" );
-
-    # TEST
-    dest_test( 'ALL_HTACCESSES', 'open-source/.htaccess', ".htaccess" );
 
     # TEST
     gmake_test(

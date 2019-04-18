@@ -85,13 +85,6 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?:/t2/lecture/{lecture_re})
                 |
-            (?:/
-                (?:
-                no-ie/index|
-                no-ie/update-2014-02/index|
-                )\\.html
-            )
-                |
             (?: MathJax/.*? )
                 |
             (?: MathVentures/.*? )

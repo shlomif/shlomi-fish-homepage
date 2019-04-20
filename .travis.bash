@@ -62,16 +62,6 @@ then
     sudo ln -s /usr/bin/make /usr/bin/gmake
 
 
-elif test "$cmd" = "install"
-then
-    cpanm --notest Alien::Tidyp YAML::XS
-    cpanm --notest HTML::Tidy
-    cpanm HTML::T5
-    h=~/Docs/homepage/homepage
-    mkdir -p "$h"
-    git clone https://github.com/shlomif/shlomi-fish-homepage "$h/trunk"
-    sudo -H `which python3` -m pip install cookiecutter
-    ( cd "$h/trunk" && perl bin/my-cookiecutter.pl )
 
 elif test "$cmd" = "build"
 then

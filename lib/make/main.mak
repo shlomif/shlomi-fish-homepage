@@ -672,7 +672,7 @@ $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	$(OPTIPNG) $@
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
-	convert -resize '50%' $< $@
+	gm convert -resize '50%' $< $@
 	$(OPTIPNG) $@
 
 LC_PRES_PATH = lecture/Lambda-Calculus/slides
@@ -977,7 +977,7 @@ $(OCT_2014_SGLAU_LET_HTML): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
-	convert -resize '200' $< $@
+	gm convert -resize '200' $< $@
 
 ENEMY_STYLE = $(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
 

@@ -11,6 +11,7 @@ npm install \
     eslint \
     eslint-config-google \
     html-minifier \
+    jquery \
     param-case \
     prettier \
     sass \

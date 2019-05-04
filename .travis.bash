@@ -35,8 +35,7 @@ then
     eval "$(GIMME_GO_VERSION=1.11 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
-    cpanm Alien::Tidyp App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
-    cpanm --notest HTML::Tidy
+    cpanm App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     cpanm HTML::T5
     # For wml
     cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey

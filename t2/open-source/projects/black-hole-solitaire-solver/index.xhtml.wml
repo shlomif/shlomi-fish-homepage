@@ -19,7 +19,7 @@ the cards to move.
 
 <h2_section id="download" title="Download">
 
-<set-var ver="0.20.0" />
+<set-var ver="0.22.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -138,6 +138,12 @@ that was used to generate them from the more verbose solution files</a>.
 <a href="http://fc-solve.shlomifish.org/links.html#other_solvers">other Solitaire
 solvers</a>.
 </li>
+
+<li>
+<a href="https://metacpan.org/pod/Games::Solitaire::Verify::Golf">Games::Solitaire::Verify::Golf</a> -
+validate solutions as correct.
+</li>
+
 </ul>
 
 </h2_section>
@@ -145,6 +151,16 @@ solvers</a>.
 <x11_licence name="The Black Hole Solitaire Solver" />
 
 <news_sect>
+
+<h3_section id="news_version_0_22_0" title="Version 0.22.0">
+
+<p>
+Version 0.22.0 was released with hopefully better handling
+of failed <a href="https://en.wikipedia.org/wiki/Memory_management#DYNAMIC">memory
+allocation</a>, as well as a refactored test suite.
+</p>
+
+</h3_section>
 
 <h3_section id="news_version_0_20_0" title="Version 0.20.0">
 
@@ -154,6 +170,7 @@ speed improvements.
 </p>
 
 </h3_section>
+
 <h3_section id="news_version_0_18_0" title="Version 0.18.0">
 
 <p>

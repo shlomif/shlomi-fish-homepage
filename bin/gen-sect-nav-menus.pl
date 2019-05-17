@@ -193,7 +193,7 @@ foreach my $host (qw(t2 vipe))
                                     '',
                                     $shlomif_nav_links_renderer->get_total_html(
                                         @params)
-                                )
+                                ) =~ s%(<img src=")\./%$1%gr
                             );
                         },
                     );

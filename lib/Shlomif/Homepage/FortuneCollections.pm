@@ -179,7 +179,7 @@ sub _get_common_wml
 
     return <<"EOF";
 <page_extra_head_elements>
-<link rel="stylesheet" href="\$(ROOT)/fortunes.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="\$(ROOT)/fortunes.css" media="screen" />
 </page_extra_head_elements>
 EOF
 }

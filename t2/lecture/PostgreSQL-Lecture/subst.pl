@@ -11,7 +11,7 @@ foreach my $f ( glob("*.html") )
     my $text = path($f)->slurp_utf8;
 
     $text =~
-s{</head>}{<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Normal" />\n</head>};
+s{</head>}{<link rel="stylesheet" href="style.css" media="screen" title="Normal" />\n</head>};
     $text =~ s{<body bgcolor="#FFFFFF">}{<body>};
 
     path($f)->spew_utf8($text);

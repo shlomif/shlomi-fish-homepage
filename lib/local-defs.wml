@@ -52,6 +52,6 @@
 ;;; Keep this tag empty.
 </define-tag>
 <define-tag latemp_html_head_stylesheets>
-<link rel="stylesheet" href="<latemp_default_val "<get-var latemp_screen_stylesheet_url />" "$(PATH_TO_ROOT)style.css" />" type="text/css" media="screen" title="Normal" />
-<link rel="stylesheet" href="<latemp_default_val "<get-var latemp_print_stylesheet_url />" "$(PATH_TO_ROOT)print.css" />" type="text/css" media="print" />
+<link rel="stylesheet" href="<latemp_default_val "<get-var latemp_screen_stylesheet_url />" "$(PATH_TO_ROOT)style.css" />" media="screen" title="Normal" />
+<link rel="stylesheet" href="<latemp_default_val "<get-var latemp_print_stylesheet_url />" "$(PATH_TO_ROOT)print.css" />" media="print" />
 </define-tag>

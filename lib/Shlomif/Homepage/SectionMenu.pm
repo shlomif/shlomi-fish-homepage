@@ -124,7 +124,6 @@ sub get_html
     {
         return
 qq{<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>\n}
-            . qq{<div class="menu_floaty">}
             . qq{<div class="sub_menu">\n}
             . qq{<h2>}
             . $self->title()
@@ -136,7 +135,6 @@ qq{<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>\n}
             . qq{\n</div>\n}
             . qq{\n</div>\n}
             . ( defined( $self->bottom_code() ) ? $self->bottom_code() : "" )
-            . qq{\n</div>\n}
             . qq{\n<div id="aft_sub_menu"></div>\n};
     }
 }

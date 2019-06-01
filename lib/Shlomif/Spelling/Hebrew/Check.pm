@@ -7,9 +7,9 @@ use utf8;
 
 use MooX qw/late/;
 
-use Text::Hunspell;
-use Shlomif::Spelling::Hebrew::Whitelist;
-use Shlomif::Spelling::Hebrew::SiteChecker;
+use Text::Hunspell                         ();
+use Shlomif::Spelling::Hebrew::Whitelist   ();
+use Shlomif::Spelling::Hebrew::SiteChecker ();
 
 has obj => (
     is      => 'ro',

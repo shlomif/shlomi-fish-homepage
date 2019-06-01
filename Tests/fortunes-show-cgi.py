@@ -34,6 +34,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 import sys
 import unittest
+
 from webtest import TestApp
 sys.path.append('./t2/humour/fortunes/')
 import fortunes_show  # noqa:E402
@@ -46,6 +47,13 @@ class MyTests(unittest.TestCase):
         resp = app.get('?id=shlomif-fact-chuck-118')
         assert resp.status_code == 200
         assert ("proven experience" in resp.text)
+
+    def test_not_exist_id(self):
+        app = TestApp(fortunes_show.app)
+        assert app
+        resp = app.get('?id=NotExiSTTTTTTttttt', expect_errors=True)
+        assert resp.status_code == 404
+        assert ("The fortune ID NotExiSTTTTTTttttt is not recog" in resp.text)
 
 
 if __name__ == '__main__':

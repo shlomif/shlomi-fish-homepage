@@ -13,7 +13,7 @@ random.seed()
 # The Directory containing the script.
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(script_dir)
-from bottle import Bottle, redirect, request, response, \
+from bottle import Bottle, abort, redirect, request, response, \
     run, template  # noqa: E402
 
 DB_BASE_NAME = "fortunes-shlomif-lookup.sqlite3"
@@ -33,8 +33,8 @@ def _my_fullpath():
 
 
 def _emit_error(title, body):
-    app.abort(404,
-              '''<?xml version="1.0" encoding="utf-8"?>
+    abort(404,
+          '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 <head>

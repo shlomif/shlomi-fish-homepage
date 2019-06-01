@@ -157,7 +157,9 @@ $(T2_SRC_FORTUNE_SHOW_PY): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-copy_fortunes: $(T2_DEST_FORTUNES)
+T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
+
+copy_fortunes: $(T2_DEST_FORTUNES_many_files)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 

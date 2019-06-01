@@ -125,6 +125,7 @@ all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
+T2_POST_DEST_SHOW_CGI = $(T2_POST_DEST_FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 T2_SRC_FORTUNE_SHOW_PY = $(T2_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
 T2_SRC_BOTTLE = $(T2_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
@@ -1039,9 +1040,9 @@ all_deps: $(TECH_TIPS_OUT)
 $(T2_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
 $(T2_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
 
-all: $(T2_CLEAN_STAMP)
+all: $(T2_CLEAN_STAMP) $(T2_POST_DEST_SHOW_CGI)
 
-$(T2_FORTUNES_ALL__HTML__POST): $(T2_CLEAN_STAMP)
+$(T2_FORTUNES_ALL__HTML__POST) $(T2_POST_DEST_SHOW_CGI): $(T2_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(T2_DEST) --dest-dir=$(T2_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(T2_DEST)/?=='
@@ -1049,7 +1050,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README)
+$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
 	$(call find_htmls,$(T2_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(T2_DEST)/ $(T2_POST_DEST)/
 	find $(T2_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip

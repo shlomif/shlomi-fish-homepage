@@ -33,12 +33,12 @@ import HspellPy
 speller = HspellPy.Hspell(linguistics=True)
 
 def hspell_check(word):
-    print("<{}>".format(word))
+    # print("<{}>".format(word))
     try:
         ret = speller.check_word(word);
     except Exception:
         ret = False
-    print("ret=<{}>".format(ret))
+    # print("ret=<{}>".format(ret))
     return ret
 EOF
         return Shlomif::Spelling::Hebrew::SiteChecker->new(

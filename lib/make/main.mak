@@ -1121,8 +1121,14 @@ $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECT
 	$(PERL) $<
 
 catb_copy = $(T2_DEST)/catb-heb.xhtml
+catb_copy_post = $(T2_POST_DEST)/catb-heb.xhtml
 
 $(catb_copy): t2/homesteading/catb-heb.xhtml
 	$(call COPY)
 
 all_deps: $(catb_copy)
+
+$(catb_copy_post): $(catb_copy)
+	$(call COPY)
+
+all: $(catb_copy_post)

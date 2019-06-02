@@ -10,21 +10,6 @@ use MooX qw/late/;
 use Text::Hunspell                         ();
 use Shlomif::Spelling::Hebrew::Whitelist   ();
 use Shlomif::Spelling::Hebrew::SiteChecker ();
-use Inline Python => <<'EOF';
-from __future__ import unicode_literals
-import HspellPy
-
-speller = HspellPy.Hspell(linguistics=True)
-
-def hspell_check(word):
-    print("<{}>".format(word))
-    try:
-        ret = speller.check_word(word);
-    except Exception:
-        ret = False
-    print("ret=<{}>".format(ret))
-    return ret
-EOF
 
 has obj => (
     is      => 'ro',
@@ -40,6 +25,22 @@ has obj => (
             die "Could not initialize speller!";
         }
 
+        require Inline;
+        Inline->import( Python => <<'EOF');
+from __future__ import unicode_literals
+import HspellPy
+
+speller = HspellPy.Hspell(linguistics=True)
+
+def hspell_check(word):
+    print("<{}>".format(word))
+    try:
+        ret = speller.check_word(word);
+    except Exception:
+        ret = False
+    print("ret=<{}>".format(ret))
+    return ret
+EOF
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>

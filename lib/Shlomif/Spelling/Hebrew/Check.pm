@@ -10,6 +10,21 @@ use MooX qw/late/;
 use Text::Hunspell                         ();
 use Shlomif::Spelling::Hebrew::Whitelist   ();
 use Shlomif::Spelling::Hebrew::SiteChecker ();
+use Inline Python => <<'EOF';
+from __future__ import unicode_literals
+import HspellPy
+
+speller = HspellPy.Hspell(linguistics=True)
+
+def hspell_check(word):
+    print("<{}>".format(word))
+    try:
+        ret = speller.check_word(word);
+    except Exception:
+        ret = False
+    print("ret=<{}>".format(ret))
+    return ret
+EOF
 
 has obj => (
     is      => 'ro',
@@ -33,7 +48,7 @@ has obj => (
                     scalar( Shlomif::Spelling::Hebrew::Whitelist->new() ),
                 check_word_cb => sub {
                     my ($word) = @_;
-                    return $speller->check($word);
+                    return hspell_check($word);
                 },
             }
         );

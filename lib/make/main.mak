@@ -1119,3 +1119,10 @@ non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)
 
 $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
+
+catb_copy = $(T2_DEST)/catb-heb.xhtml
+
+$(catb_copy): t2/homesteading/catb-heb.xhtml
+	$(call COPY)
+
+all_deps: $(catb_copy)

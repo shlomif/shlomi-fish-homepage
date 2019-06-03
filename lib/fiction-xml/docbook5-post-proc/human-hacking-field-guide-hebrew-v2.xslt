@@ -43,8 +43,8 @@
                 </para>
 
                 <para>
-                    התרגום, כמו הסיפור, זמין תחת רשיון <link
-                        xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">רשיון
+                    התרגום, כמו הסיפור, זמין תחת רישיון <link
+                        xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">רישיון
                         הייחוס-שיתוף-זהה 3.0 (Unported) של קריאטיב קומונס
                         (CC-by-sa)</link> או לשיקולכם כל גרסה מאוחרת יותר.
                 </para>
@@ -53,7 +53,7 @@
                     ראו את <link
                         xlink:href="http://www.shlomifish.org/meta/copyrights/">דף
                         תנאי זכויות היוצרים שלי</link> על כיצד לעמוד
-                    בתנאי רשיון זה.
+                    בתנאי רישיון זה.
                 </para>
 
                 <para>

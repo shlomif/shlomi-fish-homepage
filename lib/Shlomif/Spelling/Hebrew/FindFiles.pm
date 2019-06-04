@@ -24,9 +24,9 @@ sub list_htmls
             prune_cb => sub {
                 my ($path) = @_;
 
-                # warn $path if ;
+                # warn $path if 1;
                 return (
-                           ( -f $path and $path !~ /heb/i )
+                           ( -f $path and $path !~ /heb|lecture/i )
                         or ( any { $path =~ $_ } @prunes )
                 );
             },

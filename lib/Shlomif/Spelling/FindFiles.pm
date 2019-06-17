@@ -43,6 +43,7 @@ qr#^\Q$T2_POST_DEST/philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocB
 qr#^\Q$T2_POST_DEST/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.xhtml\E\z#,
 qr#^\Q$T2_POST_DEST\E/humour/by-others/how-to-make-square-corners-with-CSS/#,
     qr#^\Q$T2_POST_DEST\E/philosophy/by-others/sscce/#,
+qr#^\Q$T2_POST_DEST\E/philosophy/case-for-file-swapping/case-for-file-swapping/#,
 );
 
 sub list_htmls

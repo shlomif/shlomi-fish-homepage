@@ -5,6 +5,8 @@ use warnings;
 use autodie;
 use utf8;
 
+use Path::Tiny qw/ path /;
+
 use MooX qw/late/;
 
 use Text::Hunspell                         ();
@@ -24,9 +26,11 @@ has obj => (
         {
             die "Could not initialize speller!";
         }
+        my $dir = ( ( $ENV{TMPDIR} // "/tmp" )
+            . "/Shlomif-Spelling-Hebrew-SiteChecker-Inline/" );
+        path($dir)->mkpath;
 
-        require Inline;
-        Inline->import( Python => <<'EOF');
+        my $code = <<'EOF';
 from __future__ import unicode_literals
 import HspellPy
 
@@ -41,6 +45,11 @@ def hspell_check(word):
     # print("ret=<{}>".format(ret))
     return ret
 EOF
+        require Inline;
+        Inline->import(
+            Python    => $code,
+            directory => $dir,
+        );
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>

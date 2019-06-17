@@ -592,7 +592,10 @@ HHFG_V2_IMAGES_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 HHFG_V2_IMAGES_DEST = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 HHFG_V2_IMAGES_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
-docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS)
+docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS) $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css
+
+$(HHFG_V2_IMAGES_DEST_DIR)/docbook.css: lib/docbook/5/indiv-nodes/human-hacking-field-guide-v2--english/docbook.css
+	cp -f $< $@
 
 $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/index.xhtml
 	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)

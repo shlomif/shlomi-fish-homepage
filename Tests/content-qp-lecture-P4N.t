@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 1;
+use Test::More tests => 2;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -25,4 +25,15 @@ EOF
 
     # TEST
     like( $content, qr{\Q$needle\E}, 'Contains the correct <pre> text' );
+}
+
+{
+    my $content =
+        path("$T2_POST_DEST/lecture/Perl/Newbies/lecture2/style.css")
+        ->slurp_utf8;
+
+    my $needle = 'color:';
+
+    # TEST
+    like( $content, qr{\Q$needle\E}, 'Contains the correct CSS directive' );
 }

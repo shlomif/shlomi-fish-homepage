@@ -40,8 +40,9 @@ use Moo;
         my $dest_dir   = $args->{dest_dir};
 
         write_on_change( scalar( path("$dir/src/slidy.js") ), \$qp_slidy );
-        $css_tt->process( _common_path("style.css.tt2"),
-            $css_params, "$dir/src/style.css" );
+        $css_tt->process( _common_path("style.css.tt2") . '',
+            $css_params, "$dir/src/style.css" )
+            or die "$!";
 
         my $serve_fn = "$dir/serve.pl";
         write_on_change( scalar( path($serve_fn) ), \<<"EOF");
@@ -165,7 +166,7 @@ my $quadp_presentations = {
         {
             lang     => 'en',
             dir      => "Gimp/2.2",
-            dest_dir => "lecture/Gimp/1/2.2-slides",
+            dest_dir => "lecture/Gimp/2.2-slides",
         },
         {
             lang     => 'en',

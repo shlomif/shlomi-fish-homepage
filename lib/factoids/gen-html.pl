@@ -1032,10 +1032,10 @@ foreach my $page (@pages)
 END_OF_TEMPLATE
 
     my $out = '';
-    $template->process( \$tt_text,      $vars, \$out );
-    $template->process( \$img_tt_text,  $vars, \$tags_output );
-    $template->process( \$tag_tt_text,  $vars, \$tags_output );
-    $template->process( \$main_page_tt, $vars, \$main_page_tag_list );
+    $template->process( \$tt_text,      $vars, \$out )                or die $!;
+    $template->process( \$img_tt_text,  $vars, \$tags_output )        or die $!;
+    $template->process( \$tag_tt_text,  $vars, \$tags_output )        or die $!;
+    $template->process( \$main_page_tt, $vars, \$main_page_tag_list ) or die $!;
     write_on_change(
         scalar( path( "lib/factoids/pages/" . $page->id_base() . '.wml' ) ),
         \$out, );

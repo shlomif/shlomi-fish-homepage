@@ -125,7 +125,7 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
     ],
     out_dir                    => $DIR,
     filename_lists_post_filter => sub {
-        my ($args) = @_;
+        my ($args)     = @_;
         my $is_bucket  = sub { return $args->{bucket} eq shift; };
         my $filenames  = $args->{filenames};
         my $ipp_filter = sub {

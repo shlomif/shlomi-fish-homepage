@@ -8,7 +8,8 @@
 <latemp_more_keywords "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" />
 
 <p>
-Programming an application that can run both on UNIX and on Windows 32-bit
+Programming an application that can run both on <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a>
+systems and on <a href="https://en.wikipedia.org/wiki/Microsoft_Windows">Microsoft Windows</a>
 (and optionally other platforms) can be very hard because of the fact that
 the APIs of those platforms are substantially different. Luckily,
 there are abstraction libraries with which a programmer can maintain a
@@ -16,11 +17,13 @@ very similar code, while focusing on writing the application itself.
 </p>
 
 <p>
-I will focus here on such libraries for C and C++. Higher level languages
+I will focus here on such libraries for <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> and
+<a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a>. Higher level languages
 such as <a href="http://www.perl.org/">Perl</a>,
 <a href="http://www.python.org/">Python</a> or
-<a href="http://www.ruby-lang.org/en/">Ruby</a> usually provide an abstraction
-for such things within the language.
+<a href="http://www.ruby-lang.org/en/">Ruby</a> usually provide abstractions
+for such things within the language or bindings to libraries in lower-level
+languages.
 </p>
 
 <define-tag licence_qt>

@@ -7216,5 +7216,104 @@ It doesn’t yet do anything useful.
             </quote>
         </fortune>
 
+        <fortune id="schwern-on-no-broken-windows">
+            <meta>
+                <title>chromatic about testing DSLs</title>
+            </meta>
+            <quote>
+            <body>
+
+            <blockquote>
+            <blockquote><p>So what should I do to eliminate it?</p></blockquote>
+
+            <p>
+
+            Maybe Just Nothing
+            </p>
+
+            <p>
+
+            The issue is that you can't special case get_current_coords to be
+            truish, as far as Devel::Cover is concerned - it might not be.
+            </p>
+
+            <p>
+
+            Any fix that could be thought up is inherently problematic.
+            </p>
+
+            <p>
+            Coverage reporting is not done for the pretty colors - a human reads
+            it, and says "OK, this is logical, get_current_coords always returns
+            a true value". It's not a race for greens and percentages.
+            </p>
+
+            </blockquote>
+
+            <p>
+
+            While I agree coverage is not a race, I disagree that a human should have
+            to disambiguate between real missing coverage and a false negative.  At
+            least not more than once.
+            </p>
+
+            <p>
+
+            I'll make the same argument "no broken windows" argument here that I do
+            about warnings and tests: eliminate all warnings, even if they are dubious.
+            Ensure all tests pass eliminating all false negatives.  Do not leave any
+            "expected warnings" or "expected failures" because this erodes the
+            confidence in the test suite.  Warnings and test failures fail to ring alarm
+            bells.  One "expected" warning leads to two.  Then four.  Then finally too
+            many to remember which are expected and which are not and you ignore them
+            all together.
+            </p>
+
+            <p>
+
+            The Pragmatic Programmer does a good job with this argument.
+            http://www.pragmaticprogrammer.com/ppbook/extracts/no_broken_windows.html
+            </p>
+            <p>
+
+            So goes the same with coverage.  Red should be a BAD color, something you
+            do not want to see.  You want to eliminate the red.  But sometimes its a
+            false negative.  In that case there should be some way to tell the tool
+            that it is, in fact, a false negative.  Just like skipping tests, you
+            store the fact that there is a false negative to make the red go away.  Red
+            remains a bad color and seeing it means something is wrong.  The team doesn't
+            have to remember which bits are expected to be uncovered and which are not.
+            </p>
+
+            <p>
+
+            What's missing is a way to let Devel::Cover know that a bit of coverage is
+            not necessary.  The first way to do this which pops into my mind is a comment.
+            </p>
+
+            <p>
+
+            my $foo = $bar || default();  # DC ignore X|0
+            </p>
+
+            <p>
+            "Hey, Devel::Cover!  Ignore the case where the right side of this logic is
+            false."
+            </p>
+
+            <p>
+
+            Ignored conditions would be green, but perhaps a slightly different shade of
+            green so they can be spotted if you're looking for them.
+            </p>
+
+            </body>
+            <info>
+            <author>Michael G Schwern</author>
+            <work href="https://www.nntp.perl.org/group/perl.qa/2005/07/msg4492.html">Post to the Perl-QA mailing list</work>
+            </info>
+            </quote>
+        </fortune>
+
     </list>
 </collection>

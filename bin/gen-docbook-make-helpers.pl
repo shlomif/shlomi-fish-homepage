@@ -139,6 +139,8 @@ if ( not -e 'lib/c-begin/README.md' )
 foreach my $repo (
     'validate-your-html', 'how-to-share-code-online',
     'shlomif-tech-diary', 'Shlomi-Fish-Back-to-my-Homepage-Logo',
+    'XML-Grammar-Vered',
+
     )
 {
     _git_task( 'lib/repos', $repo );

@@ -25,7 +25,7 @@ tabs at such files.
 
 <points>
 <li>
-On Linux and other UNIX systems, the lines of text files are terminate with
+On Linux and other UNIX systems, the lines of text files are terminated with
 a single character called
 <a href="http://en.wikipedia.org/wiki/Line_feed">"Newline" or
 "Linefeed"</a>.
@@ -41,6 +41,6 @@ of lines, so they have to be removed somehow.
 </li>
 <li>
 You can use the following command: <code>perl -pi -e 's/\r$//' [files]</code>
-to convert files from DOS-style to Windows-style.
+to convert files from DOS-style to Linux/Unix-style.
 </li>
 </points>

@@ -13,6 +13,11 @@
 bits-and-bobs/%0
 </define-tag>
 
+
+<define-tag repo_bit_link whitespace="delete">
+https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/%0
+</define-tag>
+
 <h2 id="gnupg_sign_verify">GnuPG Insta-Party Signature List Verification Script</h2>
 
 <p>
@@ -24,7 +29,7 @@ the same as those in the file.
 </p>
 
 <p>
-To resolve it, I wrote <a href="<bit_link "gpg-verify.pl" />">a script</a>
+To resolve it, I wrote <a href="<repo_bit_link "gpg-verify.pl" />">a script</a>
 that checks the signatures in the file and verifies that they are the same
 as those reported by GPG in the key-ring. You can freely use it under
 the terms of the MIT/Expat license.
@@ -173,7 +178,7 @@ story of how I originally recreated the fluttering flag effect.
 </p>
 
 <p>
-There is also <a href="<bit_link "sdl-flag-0.2.0.pl" />">perl version</a>
+There is also <a href="<repo_bit_link "sdl-flag-0.2.0.pl" />">perl version</a>
 which is slower.
 </p>
 
@@ -220,7 +225,7 @@ under a certain sub-directory). (Licensed under the MIT/Expat License).
 </p>
 
 <h2 id="set_xfce_workspaces"><a
-href="<bit_link "xfce-set-virtual-workspaces.rb" />">Set the
+href="<repo_bit_link "xfce-set-virtual-workspaces.rb" />">Set the
 Xfce Virtual Workspaces Number and Names</a></h2>
 
 <p>

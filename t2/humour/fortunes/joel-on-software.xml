@@ -2600,5 +2600,60 @@
                 </info>
             </quote>
         </fortune>
+        <fortune id="joel-prototypes">
+            <meta>
+                <title>Joel on Software - Software prototypes</title>
+            </meta>
+            <quote>
+                <body>
+
+                <p>Years ago, the Excel team was trying to figure out if it
+                would be a good idea to allow users to drag and drop cells
+                using the mouse. They had a couple of interns &#8220;whip up a
+                prototype&#8221; suitable for usability testing, using the
+                cutting edge Visual Basic 1.0. Building the prototype took all
+                summer, because it had to duplicate so much of Excel&#8217;s
+                real functionality or you couldn&#8217;t do a real usability
+                test.</p>
+
+                <p>The conclusion of the usability test? Yes, it was
+                a good feature! The programmer in charge spent <em>maybe</em> a
+                week and completely implemented the drag and drop feature. The
+                joke is, of course, that the whole <em>point</em> of creating a
+                prototype is to &#8220;save time.&#8221;</p>
+
+                <p>A year later,
+                another top-secret Microsoft team built a complete prototype
+                for a new user interface using the cutting edge product <a
+                href="http://www.asymetrix.com/en/toolbook/index.asp">Asymetrix
+                Toolbook</a> (good lord, it&#8217;s hard to believe that
+                thing survived). This prototype took something like a year to
+                build. The real product: <a
+                href="http://toastytech.com/guis/bob2.html">Microsoft Bob</a>,
+                the <a
+                href="http://www.pcmag.com/article2/0,4149,57460,00.asp">PCjr</a>
+                of the software world. Another wasted prototype. </p>
+
+                <p>I&#8217;ve basically given up on software prototypes. If the
+                prototype can do everything the product can do, it might as
+                well <em>be</em> the product, and if it can&#8217;t, it&#8217;s
+                not much use. Luckily, there&#8217;s a much better idea: paper
+                prototypes, which neatly solve this problem and the <a
+                href="https://www.joelonsoftware.com/articles/fog0000000356.html">iceberg
+                problem</a> in one fell swoop. Even luckier, <a
+                href="http://www.snyderconsulting.net/">Carolyn Snyder</a> has
+                just written a great new book, <a
+                href="http://www.amazon.com/exec/obidos/tg/detail/-/1558608702/joelonsoftware">Paper
+                Prototyping</a>, on the subject. This is an essential reference
+                for anyone designing user interfaces, and it&#8217;s well
+                written to boot.</p>
+
+                </body>
+                <info>
+                    <author>Joel Spolsky</author>
+                    <work href="https://www.joelonsoftware.com/2003/05/">May 2003 Post</work>
+                </info>
+            </quote>
+        </fortune>
     </list>
 </collection>

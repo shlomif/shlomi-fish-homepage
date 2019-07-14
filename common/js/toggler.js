@@ -30,28 +30,27 @@ function build_toggler(args) {
         }
     };
 
-    var elem = $(toggler_selector);
+    const elem = $(toggler_selector);
 
     elem.on("click", function (event) { toggle_sect_menu(); });
 
     $(document).ready(function() {
 
-        if (has_ls) {
-            var in_storage = localStorage.getItem(toggle_sect_key);
+        if (! has_ls) {
+            return;
+        }
+        const in_storage = localStorage.getItem(toggle_sect_key);
 
-            if (in_storage == undefined) {
-                in_storage = default_state;
-            } else {
-                in_storage = (in_storage == "1" ? true : false);
-            }
+        if (in_storage == undefined) {
+            in_storage = default_state;
+        } else {
+            in_storage = (in_storage == "1" ? true : false);
+        }
 
-            var in_elem = elem.hasClass("on");
+        const in_elem = elem.hasClass("on");
 
-            if ((in_storage && (!in_elem)) || ((!in_storage) && in_elem)) {
-                toggle_sect_menu();
-            }
+        if ((in_storage && (!in_elem)) || ((!in_storage) && in_elem)) {
+            toggle_sect_menu();
         }
     });
-
-    return;
 }

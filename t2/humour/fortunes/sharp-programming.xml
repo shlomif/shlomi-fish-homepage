@@ -6910,5 +6910,75 @@
         </irc>
     </fortune>
 
+    <fortune id="european-bundle">
+        <meta>
+            <title>The European Bundle</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="zenix_2k2">so someone here advised me to compile my program on Windows 10 and it is gonna work backward on the other versions, but when i run on Windows 8 it says something like &quot;api-ms-win-crt-runtime-l1-1-0.dll is missing&quot;</saying>
+<saying who="rindolf">zenix_2k2: i recall similar issues</saying>
+<saying who="zenix_2k2">and i was trying to compile the program with pyinstaller</saying>
+<saying who="Arahael">zenix_2k2: You need to find the redistributable for the libraries you&#39;re using, and install them.  Looks like windows 10 has it by default.</saying>
+<saying who="zenix_2k2">more like freezing it</saying>
+<saying who="Arahael">zenix_2k2: That said, the convention in most enviornments is to get the *oldest* environment you wnat to support, and use that.</saying>
+<saying who="Arahael">zenix_2k2: Older apps tend to work well on newer systems.  THe reverse is not usually true.</saying>
+<saying who="deniska">zenix_2k2: when compiling for compatibility, you probably would want to go with older systems rather than newer</saying>
+<saying who="zenix_2k2">well, maybe i will just compile on Windows 8 and hopefully it will work on win10 and win7</saying>
+<saying who="deniska">(not sure how it works on windows though)</saying>
+<saying who="Arahael">zenix_2k2: In that case, compile on windows 7.</saying>
+<saying who="deniska">if you want to target win7, you probably should use win7</saying>
+<saying who="zenix_2k2">that&#39;s weird, some people here said i should have compiled on win10</saying>
+<saying who="zenix_2k2">it is gonna work backward</saying>
+<saying who="zenix_2k2">or maybe i lagged :P</saying>
+<saying who="vdamewood">Windows 7 is EOL in 7 months.</saying>
+<saying who="zenix_2k2">well... but i bet its apps will still work on windows 10 and 8</saying>
+<saying who="vdamewood">zenix_2k2: Compiling for Windows 7 on Windows 10 should, in theory work, as long as you only use libraries that come with 7.</saying>
+<saying who="vdamewood">Same with 8.1.</saying>
+<saying who="rindolf">zenix_2k2: Arahael deniska : I think the https://pysolfc.sourceforge.io/ packages work fine on older windows and they are built on win10</saying>
+<saying who="zenix_2k2">does this mean i should ask my users to install the appropriate libraries every time they use my program ?</saying>
+<saying who="Arahael">rindolf: If you know what your&#39;e doing, sure.</saying>
+<saying who="Arahael">rindolf: But if you&#39;re strugglign, well, one *very obvious* way to figure it out is to just use the oldest system.</saying>
+<saying who="rindolf">zenix_2k2: you can bundle them</saying>
+<saying who="vdamewood">zenix_2k2: The thing is, I think that missing lib you mentioned isn&#39;t distributed with Windows before 10. Maybe before 8.0.</saying>
+<saying who="deniska">depending on the licensing terms of this library, you may redistribute it with your program</saying>
+<saying who="rindolf">Arahael: yes</saying>
+<saying who="zenix_2k2">rindolf : bundle ? this sounds new to me</saying>
+<saying who="vdamewood">deniska: It looks like an MS-supplied library. MS is basically You may distribute Release versions of the dll&#39;s freely. No modification, no source, no static libs, and no debug versions.</saying>
+<saying who="rindolf">zenix_2k2: it is an english word</saying>
+<saying who="zenix_2k2">yea but its definition in this situation isn&#39;t</saying>
+<saying who="rindolf">zenix_2k2: means &quot;to include&quot;</saying>
+<saying who="zenix_2k2">yes i know, but when you talk about include, i can only imagine something like &quot;#include&quot;</saying>
+<saying who="zenix_2k2">in C, C++ programs</saying>
+<saying who="vdamewood">zenix_2k2: Think more like zip myzip myapp foo.dll</saying>
+<saying who="vdamewood">That&#39;s a terrible command.</saying>
+<saying who="rindolf">zenix_2k2: include has a more general meaning</saying>
+<saying who="vdamewood">zenix_2k2: Anyway, think about &#39;including&#39; something in the same archive file, or such, when people speak of bundling.</saying>
+<saying who="rindolf">zenix_2k2: like &quot;europeans, including Frenchmen, are ...&quot;</saying>
+<me_is who="vdamewood">bundles France with Europe.</me_is>
+<saying who="rindolf">vdamewood: heh</saying>
+<me_is who="Arahael">thinks #include &lt;frenchmen&gt; is a bit weird.</me_is>
+<saying who="rindolf">vdamewood: will it cost extra?</saying>
+<saying who="vdamewood">#include &lt;frenchman.h&gt;</saying>
+<saying who="vdamewood">#include &lt;aussie.h&gt;</saying>
+<saying who="Arahael">#include &lt;australia.cpp&gt;</saying>
+<saying who="zenix_2k2">yea, that is a good example, so bundle in this case is like a zip file ?</saying>
+<saying who="deniska">#ifdef __deal__ #include &lt;uk&gt;</saying>
+<saying who="deniska">&gt;_&gt;</saying>
+<saying who="deniska">&lt;_&lt;</saying>
+<saying who="Arahael">deniska: Isn&#39;t that over yet?</saying>
+<saying who="deniska">dunno, I don&#39;t really follow this</saying>
+<saying who="vdamewood">zenix_2k2: Yeah, same concept. You just include it with your installer program, though, which often is something similar to a self-extracting zip file.</saying>
+<saying who="zenix_2k2">Hm, i don&#39;t think pyinstaller offers any option like that</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

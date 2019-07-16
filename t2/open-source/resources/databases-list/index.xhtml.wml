@@ -165,8 +165,8 @@ proprietary SQL server for some platforms by Oracle Corporation.
 <p>
 <a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server">Microsoft SQL
 Server</a> (also known as “MS-SQL” or just as “SQL Server”) - a proprietary
-and Windows-only SQL server by Microsoft originally derived from Sybase SQL
-Server.
+SQL server by Microsoft, for Windows and some versions of Linux, originally
+derived from Sybase SQL Server.
 </p>
 </li>
 
@@ -290,10 +290,11 @@ the AGPLv3, and which is claimed to be more performant.
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a> - an
-open-source and cross-platform distributed document-oriented database (code is
-under AGPLv3;
-drivers are Apache licensed).
+<a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a> - a
+source-available and cross-platform distributed document-oriented database.
+The code used to be under AGPLv3, but was changed to <a href="https://www.geekwire.com/2019/mongodbs-licensing-changes-led-red-hat-drop-database-latest-version-server-os/">more restrictive licence</a>,
+which was not approved as open source or <a href="https://www.gnu.org/licenses/license-list.html">free software</a>.
+Drivers are Apache licensed.
 </p>
 
 <ul>
@@ -344,9 +345,6 @@ solutions for AWS (proprietary with open source <my_acronym key="API"/>s).
 <!--
 
 To add:
-
-* Networked SQL
-    - ADABAS
 
 * Unified database APIs
     - ODBC

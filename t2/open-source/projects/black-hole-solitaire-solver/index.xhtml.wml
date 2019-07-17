@@ -19,7 +19,7 @@ the cards to move.
 
 <h2_section id="download" title="Download">
 
-<set-var ver="1.0.0" />
+<set-var ver="1.4.0" />
 <set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
 <set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
 <set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
@@ -152,6 +152,14 @@ validate solutions as correct.
 
 <news_sect>
 
+<h3_section id="news_version_1_4_0" title="Version 1.4.0">
+
+<p>
+Version 1.4.0 was released with some optimisations and cleanups.
+</p>
+
+</h3_section>
+
 <h3_section id="news_version_1_0_0" title="Version 1.0.0">
 
 <p>
@@ -160,6 +168,7 @@ a new major version digit.
 </p>
 
 </h3_section>
+
 <h3_section id="news_version_0_22_0" title="Version 0.22.0">
 
 <p>

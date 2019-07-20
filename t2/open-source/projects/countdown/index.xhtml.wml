@@ -8,8 +8,9 @@
 
 <p>
 This is a Perl CPAN distribution that implements a command line application,
-which delays for a given number of seconds (similar to the UNIX sleep command),
-but while displaying the remaining time in seconds.
+which delays for a given number of seconds (similar to the <a href="https://en.wikipedia.org/wiki/Sleep_(command)">UNIX sleep</a> command),
+but while displaying the remaining time in seconds. Using the <code>--to</code>
+flag, it is also possible to specify an end time in the future.
 </p>
 
 <h2 id="download">Download</h2>

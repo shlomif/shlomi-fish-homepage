@@ -4,7 +4,7 @@ set -x
 set -o pipefail
 
 export XML_CATALOG_FILES="/etc/xml/catalog $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
-export PATH="$PATH:/usr/games:$PWD/node_modules/.bin/"
+export PATH="$PWD/node_modules/.bin:$PATH:/usr/games"
 export SKIP_SPELL_CHECK=1
 
 m()

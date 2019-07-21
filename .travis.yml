@@ -56,7 +56,7 @@ before_install:
 script:
     - export XML_CATALOG_FILES="/etc/xml/catalog $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
     - TIDYALL_DATA_DIR="$HOME/tidyall_d" bash -x bin/run-ci-build.bash
-    - tar -cavf shlomif-homepage-dest.tar.xz dest/
+    - tar -caf shlomif-homepage-dest.tar.xz dest/
 deploy:
     provider: releases
     api_key:

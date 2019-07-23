@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Interviews with Me" -%]
+[%- SET desc = "Interviews of Shlomi Fish" -%]
 
-<latemp_subject "Interviews with Me" />
 
-<latemp_meta_desc "Interviews of Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <toc_div />
 
@@ -11,7 +11,7 @@
 
 <p>
 These are links to interviews that were conducted with me. The
-<a href="$(ROOT)/open-source/interviews/">interviews that I conducted with
+<a href="[% base_path %]open-source/interviews/">interviews that I conducted with
 different people</a> are present on a different page in the link.
 </p>
 
@@ -41,3 +41,5 @@ A Hebrew interview with me on the <a href="http://www.zulo.org.il/">zulo.org.il
 Israeli site</a> for Linux and open-source software enthusiasts.
 Conducted by <a href="http://meital.blogli.co.il/">Meital Bourvine</a>.
 </p>
+
+[% END %]

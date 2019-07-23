@@ -18,7 +18,20 @@ s#<($re)>#[%- WRAPPER $1 -%]#g;
 s#</$re>#[%- END -%]#g;
 s/\$\(ROOT\)\//[% base_path %]/g;
 
+my $meta = '';
+
+if (s{^<latemp_meta_desc\s+"([^"]+)"\s*/>}{}ms)
+{
+    $meta .= "[%- SET desc = \"$1\" -%]\n";
+}
+if (s{^<latemp_more_keywords\s+"([^"]+)"\s*/>}{}ms)
+{
+    $meta .= "[%- SET more_keywords = \"$1\" -%]\n";
+}
+
 s{\A#include "template.wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{[%- SET title = $1 -%]
+${meta}
+
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]\n\n};
 

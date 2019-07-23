@@ -1,10 +1,10 @@
-#include "template.wml"
+[%- SET title = "Mathematical Analysis of the Toggle Squares Game" -%]
+[%- SET desc = "Mathematical Analysis of the Toggle Squares Game" -%]
+[%- SET more_keywords = "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" -%]
 
-<latemp_subject "Mathematical Analysis of the Toggle Squares Game" />
 
-<latemp_meta_desc "Mathematical Analysis of the Toggle Squares Game" />
-
-<latemp_more_keywords "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Dr. Ken Housley,
@@ -519,3 +519,5 @@ However, I believe it is agreeable that it is the simplest algorithm
 (yet) regarding “CPU” requirement and growing complexity, and has the
 advantage that it can be utilized without the aid of a computer.
 </pre>
+
+[% END %]

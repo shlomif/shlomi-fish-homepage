@@ -124,9 +124,19 @@ my $vars = +{
 
 my @tt = path("lib/make/tt2.txt")->lines_raw;
 chomp @tt;
-my $toc = HTML::Latemp::AddToc->new;
+my $toc        = HTML::Latemp::AddToc->new;
+my $INC_PREF   = qq#\n(((((include "cache/combined/$LATEMP_SERVER#;
+my $INC_SUFFIX = qq#")))))\n#;
+
+sub _inc
+{
+    my ( $result, $id ) = @_;
+    return sprintf( "%s/%s/%s%s", $INC_PREF, $result, $id, $INC_SUFFIX );
+}
+
 foreach my $result (@tt)
 {
+    my $myinc    = sub { return _inc( $result, shift ); };
     my $basename = basename($result);
     my @fn       = split m#/#, $result;
     my @fn_nav   = @fn;
@@ -186,8 +196,7 @@ foreach my $result (@tt)
         }
     }
 
-    my $leading_path_string =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/breadcrumbs-trail")))))\n#;
+    my $leading_path_string = $myinc->("breadcrumbs-trail");
 
     my $share_link = escape_html(
         uri_escape(
@@ -200,18 +209,15 @@ qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/breadcrumbs-trail")))))
     $vars->{base_path}           = $base_path;
     $vars->{fn_path}             = $result;
     $vars->{leading_path_string} = $leading_path_string;
-    $vars->{nav_links} =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/html_head_nav_links")))))\n#;
+    $vars->{nav_links}           = $myinc->("html_head_nav_links");
     $vars->{nav_links_without_accesskey} =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/shlomif_nav_links_renderer-with_accesskey=0")))))\n#;
+        $myinc->("shlomif_nav_links_renderer-with_accesskey=0");
     $vars->{nav_links_with_accesskey} =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/shlomif_nav_links_renderer-with_accesskey=1")))))\n#;
-    $vars->{nav_menu_html} =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/main_nav_menu_html")))))\n#;
-    $vars->{sect_nav_menu_html} =
-qq#\n(((((include "cache/combined/$LATEMP_SERVER/$result/sect-navmenu")))))\n#;
-    $vars->{share_link}      = $share_link;
-    $vars->{slurp_bad_elems} = sub {
+        $myinc->("shlomif_nav_links_renderer-with_accesskey=1");
+    $vars->{nav_menu_html}      = $myinc->("main_nav_menu_html");
+    $vars->{sect_nav_menu_html} = $myinc->("sect-navmenu");
+    $vars->{share_link}         = $share_link;
+    $vars->{slurp_bad_elems}    = sub {
         return path("lib/docbook/5/rendered/bad-elements.xhtml")->slurp_utf8()
             =~ s{\$\(ROOT\)}{$base_path}gr;
     };

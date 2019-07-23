@@ -6,7 +6,6 @@ use 5.014;
 use utf8;
 
 use lib './lib';
-use URI::Escape qw( uri_escape );
 use Template ();
 
 use File::Basename qw( basename );
@@ -14,22 +13,9 @@ use File::Path qw( mkpath );
 use File::Spec ();
 use Path::Tiny qw/ path /;
 
-use HTML::Widgets::NavMenu ();
-use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 use HTML::Latemp::AddToc ();
-use MyNavData            ();
 
-sub _render_leading_path_component
-{
-    my $component  = shift;
-    my $title      = $component->title();
-    my $title_attr = defined($title) ? " title=\"$title\"" : "";
-    return
-          "<a href=\""
-        . escape_html( $component->direct_url() )
-        . "\"$title_attr>"
-        . $component->label() . "</a>";
-}
+# use MyNavData            ();
 
 # use MyNavLinks ();
 
@@ -146,7 +132,9 @@ foreach my $result (@tt)
     }
     my $base_path =
         ( '../' x ( scalar(@fn) - 1 ) );
-    my $fn2     = join( '/', @fn_nav ) || '/';
+    my $fn2 = join( '/', @fn_nav ) || '/';
+
+=begin removed
     my $nav_bar = HTML::Widgets::NavMenu->new(
         'path_info'    => $fn2,
         'current_host' => $LATEMP_SERVER,
@@ -156,12 +144,7 @@ foreach my $result (@tt)
     );
 
     my $rendered_results = $nav_bar->render();
-
     my $nav_links_obj = $rendered_results->{nav_links_obj};
-
-    my $nav_html = $rendered_results->{html};
-
-=begin removed
             my $nav_links = $rendered_results->{nav_links};
             my $nav_links_renderer = MyNavLinks->new(
                 'nav_links'     => $nav_links,
@@ -177,38 +160,10 @@ foreach my $result (@tt)
             my $text = $nav_links_renderer->get_total_html(@params);
 =cut
 
-    my $t2 = '';
-
-    {
-        my @keys = ( sort { $a cmp $b } keys(%$nav_links_obj) );
-    LINKS:
-        foreach my $key (@keys)
-        {
-            if ( ( $key eq 'top' ) or ( $key eq 'up' ) )
-            {
-                next LINKS;
-            }
-            my $val        = $nav_links_obj->{$key};
-            my $url        = escape_html( $val->direct_url() );
-            my $title      = $val->title();
-            my $title_attr = defined($title) ? " title=\"$title\"" : "";
-            $t2 .= "<link rel=\"$key\" href=\"$url\"$title_attr />\n";
-        }
-    }
-
-    my $leading_path_string = $myinc->("breadcrumbs-trail");
-
-    my $share_link = escape_html(
-        uri_escape(
-            MyNavData::get_hosts()->{ $nav_bar->current_host() }->{'base_url'}
-                . $nav_bar->path_info()
-        )
-    );
-
     mkpath( File::Spec->catdir( @DEST, @fn[ 0 .. $#fn - 1 ] ) );
     $vars->{base_path}           = $base_path;
     $vars->{fn_path}             = $result;
-    $vars->{leading_path_string} = $leading_path_string;
+    $vars->{leading_path_string} = $myinc->("breadcrumbs-trail");
     $vars->{nav_links}           = $myinc->("html_head_nav_links");
     $vars->{nav_links_without_accesskey} =
         $myinc->("shlomif_nav_links_renderer-with_accesskey=0");
@@ -216,11 +171,6 @@ foreach my $result (@tt)
         $myinc->("shlomif_nav_links_renderer-with_accesskey=1");
     $vars->{nav_menu_html}      = $myinc->("main_nav_menu_html");
     $vars->{sect_nav_menu_html} = $myinc->("sect-navmenu");
-    $vars->{share_link}         = $share_link;
-    $vars->{slurp_bad_elems}    = sub {
-        return path("lib/docbook/5/rendered/bad-elements.xhtml")->slurp_utf8()
-            =~ s{\$\(ROOT\)}{$base_path}gr;
-    };
     my $html = '';
     $template->process( "src/$result.tt2", $vars, \$html, binmode => ':utf8', )
         or die $template->error();

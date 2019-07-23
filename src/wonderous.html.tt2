@@ -1,8 +1,8 @@
-#include "template.wml"
+[%- SET title = "Wonderous are the ways of Microsoft" -%]
+[%- SET desc = "Wonderous are the ways of Microsoft" -%]
 
-<latemp_subject "Wonderous are the ways of Microsoft" />
-
-<latemp_meta_desc "Wonderous are the ways of Microsoft" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <ol>
 
@@ -60,3 +60,5 @@ work in style.
 <p>
 <b>Coming Next:</b> Windows CE, Windows 98 and Windows NT 5.0!
 </p>
+
+[% END %]

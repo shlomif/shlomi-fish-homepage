@@ -1065,6 +1065,7 @@ all: $(QP_VIM_IFACE)
 fastrender: $(T2_DOCS_SRC) all_deps
 	@echo $(MAKE) fastrender
 	@$(call WML_RENDER,) $(T2_DOCS)
+	perl bin/tt-render.pl
 
 T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
 T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)

@@ -418,7 +418,7 @@ of an EvilPHish”</a> cartoon of
 </p>
 </div>
 
-<a href=""><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
+<a href="[% base_path || "./" %]"><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
 </footer>
 	</body>
 </html>

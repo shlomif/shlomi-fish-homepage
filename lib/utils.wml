@@ -16,7 +16,7 @@
 
 <if <match "<get-var url />" "^http://" action="report" />
     "<get-var url />"
-    "$(PATH_TO_ROOT)<get-var url />"
+    <or "$(PATH_TO_ROOT)<get-var url />" "./" />
 />
 
 <restore host />

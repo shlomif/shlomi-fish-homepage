@@ -1,2 +1,8 @@
 ./gen-helpers&& make fastrender&& make -j 17
-a=dest/post-incs/t2/wonderous.html; b=/home/shlomif/Backup/Arcs/post-$a; tidy < $a > $a.xhtml ; tidy < $b > $b.xhtml ; gvimdiff $a.xhtml $b.xhtml  +colorscheme" apprentice" +"exe \"normal \\<c-w>J\""
+a=dest/post-incs/t2/toggle.html
+b=/home/shlomif/Backup/Arcs/post-$a
+adest=have.xhtml
+bdest=want.xhtml
+tidy < $a > $adest
+tidy < $b > $bdest
+gvimdiff $adest $bdest +colorscheme" apprentice" +"exe \"normal \\<c-w>J\""

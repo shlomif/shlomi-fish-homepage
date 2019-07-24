@@ -1,10 +1,12 @@
-#include "template.wml"
+[%- SET title = "Stop Using Internet Explorer!" -%]
+[%- SET desc = "Why you should stop using Microsoft Internet Explorer and use a better browser." -%]
+[%- SET more_keywords = "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety" -%]
 
-<latemp_subject "Stop Using Internet Explorer!" />
-<latemp_meta_desc "Why you should stop using Microsoft Internet Explorer and use a better browser." />
-<latemp_more_keywords "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety" />
 
-<note>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[%- WRAPPER note -%]
 
 <h2 id="note_2014">Recent Note (16 February 2014)</h2>
 
@@ -16,7 +18,7 @@ kept here for historical reasons. You can also read a
 the situation then and today.
 </p>
 
-</note>
+[%- END -%]
 
 <p>
 You should stop using Microsoft Internet Explorer for surfing the web. This is
@@ -636,7 +638,7 @@ suite that includes a browser, and an email application.
 </li>
 <li>
 <a href="http://www.apple.com/safari/">Safari</a> - a browser by Apple
-(with <a href="$(ROOT)/open-source/anti/apple/">all the warnings regarding
+(with <a href="[% base_path %]open-source/anti/apple/">all the warnings regarding
 Apple</a> based on the open-source <a href="http://webkit.org/">WebKit
 engine</a> that was derived from the now under-maintained KHTML engine by
 the KDE project. Safari itself is not open-source and only runs on Mac OS X
@@ -701,4 +703,6 @@ NOT SPELL GOOGLE WRONG</a> - video on YouTube.
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2012" />
+[% cc_by_british_blurb( "year" => "2012", ) %]
+
+[% END %]

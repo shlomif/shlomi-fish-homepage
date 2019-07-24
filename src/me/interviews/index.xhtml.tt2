@@ -5,7 +5,7 @@
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div() %]
 
 <h2 id="intro">Introduction</h2>
 

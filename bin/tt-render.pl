@@ -53,6 +53,24 @@ sub slurp
 
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $vars = +{
+    toc_div => sub {
+        my %args = %{ shift() // {} };
+        $args{head_tag} //= 'h2';
+        $args{lang}     //= 'en';
+        my $title =
+            $args{lang} eq 'en'
+            ? "Table of Contents"
+            : "תוכן העניינים";
+
+        my $head = "<$args{head_tag} id=\"toc\">$title</$args{head_tag}>";
+        $head = '';
+        my $details = "<summary>$title</summary>";
+        my $c =
+            $args{collapse}
+            ? "<details id=\"toc\">$details<toc /></details>"
+            : "$head<toc />";
+        return qq#<nav class="page_toc">$c</nav>#;
+    },
     wiki_link => sub {
         my %args = %{ shift() // {} };
         return qq#http://perl.net.au/wiki/Beginners#

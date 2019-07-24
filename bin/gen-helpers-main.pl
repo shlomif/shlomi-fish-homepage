@@ -171,7 +171,7 @@ $text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
 }
 
 $r_fh->spew_utf8($text);
-my $iter = path("./src")->iterator;
+my $iter = path("./src")->iterator( { recurse => 1, } );
 my @tt;
 while ( my $next = $iter->() )
 {

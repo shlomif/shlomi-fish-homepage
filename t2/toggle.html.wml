@@ -91,7 +91,6 @@ toggle-squares board, i.e: conjectures that apply to the set of rows of size
 Mathematically, it can be treated as vectors that belong to the linear
 space (or vector field) {0,1}^n where the operations in the set {0,1} are
 XOR for ‘+’ and AND for ‘*’.
-
 </pre>
 
 <h3 id="lemma1">Lemma 1</h3>
@@ -114,7 +113,6 @@ If 1000000 can be solved then along with the press 110000...00 than
 and from here it can be proved inductively that the vectors with all 0s
 and one 1, are solvable. Since this is a basis of {1,0}^N then every state
 is solvable. (i.e contained in Sp{Presses} )
-
 </pre>
 
 <h3 id="lemma2">Lemma 2</h3>
@@ -199,10 +197,8 @@ and
 
 and thus the dimension of the span is less than n, and so not every state is
 included in it, and is solvable.
-
-
-
 </pre>
+
 <h2 id="Two-Dimensional-Board">Analysis of 2-D Boards</h2>
 
 <p>
@@ -230,7 +226,6 @@ and Lemma 2 proved that for N=3k+2 it has unsolvable states. If some
 formations of the first row cannot be solved by any combination of the
 presses on the block, much less the entire board can be solved for every
 state.
-
 </pre>
 
 <h3 id="theorem2">Theorem 2</h3>
@@ -333,7 +328,6 @@ new one, and we can clear that way the first N-1 rows. After the iteration
 when the first N-1 rows are cleared, the last row cannot be partially
 filled because it’s a column-wise contradiction of Lemma 1. Therefore, it
 will also be cleared.
-
 </pre>
 
 <h3 id="theorem4">Theorem 4:</h3>
@@ -411,7 +405,6 @@ there is a state of 1000...0 than one should use the leftmost press to
 change it into 0100...000. Then, by repetitive pressing to the right
 of the leftmost filled square, one gets to the 0...11 state, which is
 afterwards cleared.
-
 </pre>
 
 <h3 id="theorem5">Theorem 5:</h3>
@@ -457,9 +450,6 @@ press those cells and it will be be moved to
 0000000
 0110110
 0000000
-
-
-
 </pre>
 
 <h2 id="dim_press_span">The Dimension of the Presses Span in 3k+2 boards</h2>
@@ -510,7 +500,6 @@ is the only vector left that can affect square (4,4). And so-on for the
 other layers, proving that they are a linearly independent set of
 vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
 span the space of the solvable states of (3k+2) boards.
-
 </pre>
 
 <h2 id="efficiency">A Note about Efficiency</h2>
@@ -529,5 +518,4 @@ which was returned from my matrix-canonization program.
 However, I believe it is agreeable that it is the simplest algorithm
 (yet) regarding “CPU” requirement and growing complexity, and has the
 advantage that it can be utilized without the aid of a computer.
-
 </pre>

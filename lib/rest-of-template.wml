@@ -244,7 +244,7 @@ of an EvilPHish”</a> cartoon of
     sub get_page_path
     {
         my $filename = "<get-var filename />";
-        $filename =~ s{index\.html$}{};
+        $filename =~ s{index\.x?html$}{};
 
         return $filename;
     }

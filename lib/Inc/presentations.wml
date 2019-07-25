@@ -23,10 +23,10 @@
 <define-tag w2l_talks_list>
 <ul>
 <li>
-<a href="$(ROOT)/lecture/W2L/Basic_Use/">Basic Use</a>
+<a href="$(PATH_TO_ROOT)lecture/W2L/Basic_Use/">Basic Use</a>
 </li>
 <li>
-<a href="$(ROOT)/lecture/W2L/Network/">Networking in Linux</a> - content authored by
+<a href="$(PATH_TO_ROOT)lecture/W2L/Network/">Networking in Linux</a> - content authored by
 Shachar Reindel.
 </li>
 <li>
@@ -36,7 +36,7 @@ by Meir Maor. <a href="<rellink host="t2" url="lecture/W2L/Technion/" />">An old
 presentation</a> is also available.
 </li>
 <li>
-<a href="$(ROOT)/lecture/W2L/Why_Linux/">What Linux is to Me</a>
+<a href="$(PATH_TO_ROOT)lecture/W2L/Why_Linux/">What Linux is to Me</a>
 </li>
 <li>
 <a href="<rellink host="t2" url="lecture/W2L/Blitz/" />">The Blitz Lecture (in
@@ -51,21 +51,21 @@ version of the Blitz).
 </define-tag>
 
 <define-tag t2_lect whitespace="delete">
-$(ROOT)/lecture/Perl/Lightning/%0/
+$(PATH_TO_ROOT)lecture/Perl/Lightning/%0/
 </define-tag>
 
 <define-tag lightning_talks_list>
 
 <ul>
 <li>
-<a href="$(ROOT)/lecture/mini/mdda/">Meta-Data Database Access</a>
+<a href="$(PATH_TO_ROOT)lecture/mini/mdda/">Meta-Data Database Access</a>
 </li>
 <li>
-<a href="$(ROOT)/lecture/Perl/Graham-Function/">Presentation about Finding the
+<a href="$(PATH_TO_ROOT)lecture/Perl/Graham-Function/">Presentation about Finding the
 Graham Function</a>
 </li>
 <li>
-<a href="$(ROOT)/lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
+<a href="$(PATH_TO_ROOT)lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
 Templating System for Perl</a>
 </li>
 <li>

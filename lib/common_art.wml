@@ -4,8 +4,8 @@
 
 <set-var %attributes />
 
-<set-var full_url="$(ROOT)/art/<get-var url />" />
-<set-var full_thumb_url="$(ROOT)/art/<get-var thumb_url />" />
+<set-var full_url="$(PATH_TO_ROOT)art/<get-var url />" />
+<set-var full_thumb_url="$(PATH_TO_ROOT)art/<get-var thumb_url />" />
 
 <article class="design">
 
@@ -94,7 +94,7 @@ A design reading “Made With Latemp” for providing a button for the
     title="Background for the “Human Hacking Field Guide Story”">
 
 <p>
-After I wrote <a href="$(ROOT)/humour/human-hacking/">the story <i>Human Hacking
+After I wrote <a href="$(PATH_TO_ROOT)humour/human-hacking/">the story <i>Human Hacking
 Field Guide</i></a> I was looking for a nice design for its online chapters.
 I found a design I liked, but its images were not suitable, so I duplicated
 the effect using <a href="http://www.gimp.org/">the GIMP</a>.

@@ -1,7 +1,7 @@
 <page_extra_head_elements>
-<js_script src="$(ROOT)/js/jquery-ui/jquery-ui.min.js"></js_script>
-<link rel="stylesheet" href="$(ROOT)/js/jquery-ui/jquery-ui.min.css" media="screen" />
-<link rel="stylesheet" href="$(ROOT)/jqui-override.css" media="screen" />
+<js_script src="$(PATH_TO_ROOT)js/jquery-ui/jquery-ui.min.js"></js_script>
+<link rel="stylesheet" href="$(PATH_TO_ROOT)js/jquery-ui/jquery-ui.min.css" media="screen" />
+<link rel="stylesheet" href="$(PATH_TO_ROOT)jqui-override.css" media="screen" />
 <js_script>
 $(function() {
     $(".jqueryui_tabs").tabs();

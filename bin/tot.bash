@@ -1,5 +1,5 @@
 ./gen-helpers&& make fastrender&& make -j 17
-a=dest/post-incs/t2/no-ie/index.html
+a=dest/post-incs/t2/wonderous.html
 b=/home/shlomif/Backup/Arcs/post-$a
 adest=have.xhtml
 bdest=want.xhtml

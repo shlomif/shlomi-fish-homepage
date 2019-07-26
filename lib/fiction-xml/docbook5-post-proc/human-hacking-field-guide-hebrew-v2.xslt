@@ -34,7 +34,7 @@
                 <year>2011</year>
                 <holder>שלומי פיש</holder>
             </copyright>
-            <legalnotice>
+            <legalnotice xml:id="main_legal_notice">
 
                 <para>
                     זהו תרגום לעברית של סיפור מקורי ובדיוני מאת <link

@@ -141,7 +141,7 @@ Example:
     }
 
     this::Parent::ya_func();
-    <: print("# Prints myfunc() was called!"); :>
+    # Prints myfunc() was called!
 </pre>
 
 <h3>A Basic File Primitive</h3>

@@ -1,6 +1,9 @@
-#include "template.wml"
-<latemp_subject "Gradient-Fu Patch for the GIMP" />
-<latemp_meta_desc "Patch for old versions of the GIMP to be able to perform gradient operations from within scripts and plug-ins." />
+[%- SET title = "Gradient-Fu Patch for the GIMP" -%]
+[%- SET desc = "Patch for old versions of the GIMP to be able to perform gradient operations from within scripts and plug-ins." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Recent Note</h2>
 
@@ -44,3 +47,5 @@ According to what I read in an interview with one of the GIMP’s developers,
 better gradient support is planned for GIMP 1.4 or GIMP 2.0. So I guess a
 functionality similar to what this patch offers will be available.
 </p>
+
+[% END %]

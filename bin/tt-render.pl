@@ -52,7 +52,32 @@ sub slurp
 }
 
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
+my $base_path;
 my $vars = +{
+    cc_by_british_blurb => sub {
+        my %args = %{ shift() // {} };
+        my $year = $args{year};
+
+        return <<"EOF";
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
+
+<p>
+This document is Copyright by Shlomi Fish, $year, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
+Attribution License 3.0 Unported</a> (or at your option any
+later version of that licence).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+EOF
+    },
     toc_div => sub {
         my %args = %{ shift() // {} };
         $args{head_tag} //= 'h2';
@@ -148,7 +173,7 @@ foreach my $result (@tt)
     {
         $fn_nav[-1] = '';
     }
-    my $base_path =
+    $base_path =
         ( '../' x ( scalar(@fn) - 1 ) );
     my $fn2 = join( '/', @fn_nav ) || '/';
 
@@ -179,30 +204,6 @@ foreach my $result (@tt)
 =cut
 
     mkpath( File::Spec->catdir( @DEST, @fn[ 0 .. $#fn - 1 ] ) );
-    $vars->{cc_by_british_blurb} = sub {
-        my %args = %{ shift() // {} };
-        my $year = $args{year};
-
-        return <<"EOF";
-<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
-
-<p>
-This document is Copyright by Shlomi Fish, $year, and is available
-under the
-terms of <a rel="license"
-href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
-Attribution License 3.0 Unported</a> (or at your option any
-later version of that licence).
-</p>
-
-<p>
-For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
-and see <a href="http://www.shlomifish.org/meta/copyrights/">the
-explicit requirements</a> that are being spelt from abiding by that licence.
-</p>
-EOF
-    };
 
     $vars->{base_path}           = $base_path;
     $vars->{fn_path}             = $result;

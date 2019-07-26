@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "Graham’s Function Talk" -%]
+[%- SET desc = "A presentation about finding the Graham’s function using Perl code, as a conclusion to a Perl Quiz-of-the-Week that was done about it." -%]
 
-<latemp_subject "Graham’s Function Talk" />
-<latemp_meta_desc "A presentation about finding the Graham’s function using Perl code, as a conclusion to a Perl Quiz-of-the-Week that was done about it." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 A presentation about finding the Graham’s function using Perl code, as a
@@ -20,7 +21,7 @@ Quiz-of-the-Week</a> that was done about it.
 <li>
 <a href="http://use.perl.org/~Shlomi+Fish/journal/32132">A blog entry</a> I
 wrote about
-<cpan_self_dist d="Math-GrahamFunction" />,
+[% cpan_self_dist( "d" => "Math-GrahamFunction", ) %],
 which is a CPAN module, that is derived from the original code.
 </li>
 </ul>
@@ -44,3 +45,5 @@ original code to Perl 6</a>
 </li>
 
 </ul>
+
+[% END %]

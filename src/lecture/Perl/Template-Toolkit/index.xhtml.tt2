@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Lightning Talk: The Template Toolkit" -%]
+[%- SET desc = "The Template Toolkit is a powerful templating system for use in Perl applications. This presentation presents the motivation behind needing a templating system in the first place, and then explains why one should choose the Template Toolkit." -%]
 
-<latemp_subject "Lightning Talk: The Template Toolkit" />
 
-<latemp_meta_desc "The Template Toolkit is a powerful templating system for use in Perl applications. This presentation presents the motivation behind needing a templating system in the first place, and then explains why one should choose the Template Toolkit." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -32,3 +33,5 @@ format - OpenOffice.org, etc.).
 </li>
 
 </ul>
+
+[% END %]

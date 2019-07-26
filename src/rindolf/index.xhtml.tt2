@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Rindolf Specification" -%]
+[%- SET desc = "Rindolf Specification" -%]
 
-<latemp_subject "Rindolf Specification" />
 
-<latemp_meta_desc "Rindolf Specification" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is the DocBook/XML for <b>“Rindolf”</b>, a dialect of the Perl
@@ -27,3 +28,5 @@ This SPEC, however, is kept here for posterity.
 <a href="rindolf-spec.xml">The DocBook/XML Source</a>
 </li>
 </ul>
+
+[% END %]

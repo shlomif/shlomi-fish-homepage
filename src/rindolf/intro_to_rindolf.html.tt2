@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "An Introduction to Rindolf" -%]
+[%- SET desc = "An Introduction to Rindolf" -%]
 
-<latemp_subject "An Introduction to Rindolf" />
 
-<latemp_meta_desc "An Introduction to Rindolf" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>What is Rindolf</h2>
 
@@ -279,3 +280,5 @@ pragmas that can modify some of the things I (or others) consider as
 idiosyncrasies: atomic key-value pairs, non-ambiguous <code>x</code> operator,
 our to be an exact replacement for <code>use vars qw( )</code>, etc.
 </p>
+
+[% END %]

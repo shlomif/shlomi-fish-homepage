@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Don’t Abuse JavaScript!" -%]
+[%- SET desc = "Don’t Abuse JavaScript!" -%]
 
-<latemp_subject "Don’t Abuse JavaScript!" />
 
-<latemp_meta_desc "Don’t Abuse JavaScript!" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 28-January-2010
@@ -36,14 +37,6 @@ function</a> for formatting strings.
 <p>
 In addition to that, JavaScript does not have a date formatting function.
 </p>
-
-<define-tag sort_rejects>
-<h3 id="sort">No sorting routines</h3>
-
-<p>
-JavaScript has no built-in routines for sorting lists or arrays.
-</p>
-</define-tag>
 
 <h3 id="implicit-scoping">Implicit scoping - var is optional</h3>
 
@@ -232,3 +225,5 @@ you”</a>
 </li>
 
 </ul>
+
+[% END %]

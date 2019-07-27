@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against TIOBE - The Test Index of Programming Languages’ Popularity" -%]
+[%- SET desc = "Shlomi Fish’s List of Links against TIOBE - the Test Index of Programming Languages’s Popularity" -%]
 
-<latemp_subject "Links against TIOBE - The Test Index of Programming Languages’ Popularity" />
 
-<latemp_meta_desc "Shlomi Fish’s List of Links against TIOBE - the Test Index of Programming Languages’s Popularity" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -70,3 +71,5 @@ Bunce: “TIOBE or not TIOBE – An Update”</a>
 </li>
 
 </ol>
+
+[% END %]

@@ -9,11 +9,16 @@ use YAML::XS ();
 
 use Moo;
 
+my $FN = "lib/acronyms/list1.yaml";
+
 has '_dict' => (
     is      => 'ro',
     lazy    => 1,
     default => sub {
-        return YAML::XS::LoadFile("../lib/acronyms/list1.yaml");
+        return (
+            eval { YAML::XS::LoadFile($FN) }
+                or YAML::XS::LoadFile("../$FN")
+        );
     }
 );
 

@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against Adobe Flash" -%]
+[%- SET desc = "Links against Adobe Flash: the Rich Media Browser Plugin." -%]
 
-<latemp_subject "Links against Adobe Flash" />
-<latemp_meta_desc "Links against Adobe Flash: the Rich Media Browser Plugin." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 7-September-2018
@@ -108,3 +110,5 @@ third with 316 security bugs.
 </li>
 
 </ol>
+
+[% END %]

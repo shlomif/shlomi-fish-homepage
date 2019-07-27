@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Stop Using (and Teaching) C-Shell and Tcsh" -%]
+[%- SET desc = "Stop Using (and Teaching) C-Shell and Tcsh: why they suck, and why they should be avoided." -%]
 
-<latemp_subject "Stop Using (and Teaching) C-Shell and Tcsh" />
 
-<latemp_meta_desc "Stop Using (and Teaching) C-Shell and Tcsh: why they suck, and why they should be avoided." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 01-October-2007
@@ -178,4 +179,6 @@ thread in the Haifa Linux Club mailing list with some comments</a>
 
 <h2 id="license">Licence</h2>
 
-<cc_by_british_blurb year="2007" />
+[% cc_by_british_blurb( "year" => "2007", ) %]
+
+[% END %]

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-s#<(cc_by_british_blurb|book_info|cpan_dist|cpan_self_dist|cpan_b_self_dist|cpan_self_mod|pdoc_f|toc_div|wiki_link)\s([^>]*?)/>#
+s#<(cc_by_british_blurb|book_info|cpan_dist|cpan_self_dist|cpan_b_self_dist|cpan_self_mod|pdoc_f|toc_div|wiki_link|my_acronym)\s([^>]*?)/>#
     my ($tag, $args) = ($1, $2);
     "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;

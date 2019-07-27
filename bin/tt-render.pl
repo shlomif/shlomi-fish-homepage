@@ -13,7 +13,10 @@ use File::Path qw( mkpath );
 use File::Spec ();
 use Path::Tiny qw/ path /;
 
-use HTML::Latemp::AddToc ();
+use HTML::Latemp::AddToc   ();
+use HTML::Latemp::Acronyms ();
+
+my $latemp_acroman = HTML::Latemp::Acronyms->new;
 
 # use MyNavData            ();
 
@@ -54,7 +57,11 @@ sub slurp
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
-    main_email          => 'shlomif@shlomifish.org',
+    main_email => 'shlomif@shlomifish.org',
+    my_acronym => sub {
+        my %args = %{ shift() // {} };
+        return $latemp_acroman->abbr( { key => $args{key}, } )->{html};
+    },
     cc_by_british_blurb => sub {
         my %args = %{ shift() // {} };
         my $year = $args{year};

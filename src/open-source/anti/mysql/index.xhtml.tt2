@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against MySQL" -%]
+[%- SET desc = "Links against MySQL: the SQL database." -%]
 
-<latemp_subject "Links against MySQL" />
 
-<latemp_meta_desc "Links against MySQL: the SQL database." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 14-June-2018
@@ -289,3 +290,5 @@ Anywhere: Unpublished MySQL FAQ”</a>
 </li>
 
 </ul>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against Apple Inc." -%]
+[%- SET desc = "Links against Apple Inc. - their practices, their products, their public image." -%]
 
-<latemp_subject "Links against Apple Inc." />
 
-<latemp_meta_desc "Links against Apple Inc. - their practices, their products, their public image." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 11-October-2013
@@ -1319,3 +1320,5 @@ Like Apple”</a>
 </li>
 
 </ul>
+
+[% END %]

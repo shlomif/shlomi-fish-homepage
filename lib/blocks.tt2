@@ -180,7 +180,9 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 <link rel="stylesheet" href="[% base_path %]print.css" media="print" />
 <link rel="shortcut icon" href="[% base_path %]favicon.ico" type="image/x-icon" />
 [%- html_head_nav_links -%]
+[%- IF 0 -%]
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+[%- END -%]
 [% # Let browser know website is optimized for mobile
 %]
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

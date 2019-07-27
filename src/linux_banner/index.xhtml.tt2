@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Linux Installation Party (Technion, Winter 97/98) Banner" -%]
+[%- SET desc = "Linux Installation Party (Technion, Winter 97/98) Banner" -%]
 
-<latemp_subject "Linux Installation Party (Technion, Winter 97/98) Banner" />
 
-<latemp_meta_desc "Linux Installation Party (Technion, Winter 97/98) Banner" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <img src="linux3.gif"
 alt="Linux - Because Software Problems Should Not Cost Money" />
@@ -24,3 +25,5 @@ The graphics on this page were created by <a href="../">Shlomi Fish</a>. They
 are based on a concept by Dr. Falk Fish (my father), and were designed with his
 mental assistance. Feel free to distribute them or modify them as you please.
 </p>
+
+[% END %]

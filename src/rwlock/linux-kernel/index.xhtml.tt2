@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Linux Kernel FCFS fcntl/flock Locks" -%]
+[%- SET desc = "Linux Kernel patch to implement a first-come first-served (FCFS)-locking semantics for the flock()/fcntl() system calls." -%]
 
-<latemp_subject "Linux Kernel FCFS fcntl/flock Locks" />
-<latemp_meta_desc "Linux Kernel patch to implement a first-come first-served (FCFS)-locking semantics for the flock()/fcntl() system calls." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>
 
@@ -19,3 +21,5 @@ pending writers. The <a href="test_flock.c">following
 test program</a> can demonstrate the two behaviours (try running it as
 <code>test_flock 20 2</code>).
 </p>
+
+[% END %]

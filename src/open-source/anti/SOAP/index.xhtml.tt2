@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against SOAP" -%]
+[%- SET desc = "Shlomi Fish’s Links against SOAP - the web services’ API" -%]
 
-<latemp_subject "Links against SOAP" />
 
-<latemp_meta_desc "Shlomi Fish’s Links against SOAP - the web services’ API" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -18,7 +19,7 @@ which voiced reservations from it, and which I encountered.
 <li>
 <p>
 <a href="http://wanderingbarque.com/nonintersecting/2006/11/15/the-s-stands-for-simple/">“The S stands for Simple”</a> on Peter Lacey’s Weblog.
-(<a href="$(ROOT)/humour/by-others/s-stands-for-simple/">Local mirror</a>.)
+(<a href="[% base_path %]humour/by-others/s-stands-for-simple/">Local mirror</a>.)
 </p>
 </li>
 
@@ -70,3 +71,5 @@ is SOAP distasteful?” section of a blog post</a> - by mvuets.
 </li>
 
 </ul>
+
+[% END %]

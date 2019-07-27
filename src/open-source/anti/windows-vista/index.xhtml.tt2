@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Links against Windows Vista" -%]
+[%- SET desc = "Links against Windows Vista" -%]
 
-<latemp_subject "Links against Windows Vista" />
 
-<latemp_meta_desc "Links against Windows Vista" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 30-September-2007
@@ -484,3 +485,5 @@ Illiad’s Greatest Opus”</a>
 </li>
 
 </ol>
+
+[% END %]

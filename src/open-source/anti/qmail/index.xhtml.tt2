@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Anti-qmail Page" -%]
+[%- SET desc = "The Anti-qmail Page" -%]
 
-<latemp_subject "The Anti-qmail Page" />
 
-<latemp_meta_desc "The Anti-qmail Page" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="note">
 <h2 id="note">Note</h2>
@@ -149,3 +150,5 @@ mailing list</a></li>
 <a href="http://zgp.org/pipermail/linux-elitists/2005-November/011333.html">Linux-elitists</a>
 </li>
 </ul>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "PHP Sucks (originally by czth)" -%]
+[%- SET desc = "Links against PHP - PHP Sucks." -%]
 
-<latemp_subject "PHP Sucks (originally by czth)" />
 
-<latemp_meta_desc "Links against PHP - PHP Sucks." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -182,3 +183,5 @@ href="php-the-good-parts.jpeg">Local mirror</a>.)
 </li>
 
 </ul>
+
+[% END %]

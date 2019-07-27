@@ -16,7 +16,9 @@ qr#(?:perl_for_newbies_entry|note|modern_perl_entry|beginning_perl_entry|cpan_di
 
 s#<($re)>#[%- WRAPPER $1 -%]#g;
 s#</$re>#[%- END -%]#g;
-s/\$\(ROOT\)\//[% base_path %]/g;
+my $rep = "[% base_path %]";
+s/\$\(ROOT\)\//$rep/g;
+s/\$\(PATH_TO_ROOT\)/$rep/g;
 
 my $meta = '';
 

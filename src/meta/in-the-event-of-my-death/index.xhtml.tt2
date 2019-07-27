@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "In the Event of My Death" -%]
+[%- SET desc = "What should be done with the online resources and legacy of Shlomi Fish in the even of his death" -%]
 
-<latemp_subject "In the Event of My Death" />
 
-<latemp_meta_desc "What should be done with the online resources and legacy of Shlomi Fish in the even of his death" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This page aims to document the measures needed to ensure the long term survival
@@ -43,3 +44,5 @@ reflection of my values, and wish it will remain intact after my demise.
 I have placed the sources of the site under a <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">a CC-by-nc-sa blanket licence</a>
 so one can legally build upon them under certain conditions.
 </p>
+
+[% END %]

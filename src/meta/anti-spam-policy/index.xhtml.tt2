@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Anti-Spam Policy of Shlomi Fish’s Domains" -%]
+[%- SET desc = "Anti-Spam Policy of Shlomi Fish’s Domains" -%]
 
-<latemp_subject "Anti-Spam Policy of Shlomi Fish’s Domains" />
 
-<latemp_meta_desc "Anti-Spam Policy of Shlomi Fish’s Domains" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 The domains <a href="http://www.shlomifish.org/">www.shlomifish.org</a> ,
@@ -11,7 +12,7 @@ The domains <a href="http://www.shlomifish.org/">www.shlomifish.org</a> ,
 even editable using a public facing web-interface), and as such any spam
 present on them should be attributed to either a misplaced link, or an intrusion
 and tampering of some sort. If you know of any spam on the pages please
-<a href="$(ROOT)/me/contact-me/">contact the webmaster</a> and he’ll try
+<a href="[% base_path %]me/contact-me/">contact the webmaster</a> and he’ll try
 to resolve it. Otherwise, our domains do not and cannot contain any spam.
 </p>
 
@@ -21,3 +22,5 @@ pages in exchange for a monetary payment. This is done deliberately and
 willingly and is not really spam. If it still points to a spam site, let us
 know and we’ll try to see if the ads may be cancelled.
 </p>
+
+[% END %]

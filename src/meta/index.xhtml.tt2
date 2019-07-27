@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Meta Information about this Site" -%]
+[%- SET desc = "Meta Information about Shlomi Fish’s site: FAQ, how to help, site source, privacy policy, linking policy, anti-spam policy, copyright info, donations, and hosting" -%]
 
-<latemp_subject "Meta Information about this Site" />
 
-<latemp_meta_desc "Meta Information about Shlomi Fish’s site: FAQ, how to help, site source, privacy policy, linking policy, anti-spam policy, copyright info, donations, and hosting" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This section contains meta-information about the site: where one can find
@@ -89,3 +90,5 @@ www.shlomifish.org, as it stood years ago.
 </li>
 
 </ul>
+
+[% END %]

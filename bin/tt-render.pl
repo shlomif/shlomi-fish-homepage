@@ -54,6 +54,7 @@ sub slurp
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
+    main_email          => 'shlomif@shlomifish.org',
     cc_by_british_blurb => sub {
         my %args = %{ shift() // {} };
         my $year = $args{year};

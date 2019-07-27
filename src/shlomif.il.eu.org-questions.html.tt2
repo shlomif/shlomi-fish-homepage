@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "About the Location Change" -%]
+[%- SET desc = "About the Location Change" -%]
 
-<latemp_subject "About the Location Change" />
 
-<latemp_meta_desc "About the Location Change" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Well <a href="http://t2.technion.ac.il/">t2.technion.ac.il</a>
@@ -33,3 +34,5 @@ after a while, and may be hijacked by all kinds of Internet low-life.
 , forever. It’s sad that the current DNS service works like that, so I have
 to find the best solution.
 </p>
+
+[% END %]

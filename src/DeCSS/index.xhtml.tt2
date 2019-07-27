@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Opinion on DeCSS" -%]
+[%- SET desc = "I explain what I think about the DeCSS fiasco" -%]
 
-<latemp_subject "Shlomi Fish’s Opinion on DeCSS" />
-<latemp_meta_desc "I explain what I think about the DeCSS fiasco" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Note</h2>
 
@@ -123,3 +125,5 @@ that page to clickable hyperlinks.
 </ul>
 </li>
 </ul>
+
+[% END %]

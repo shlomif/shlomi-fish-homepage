@@ -1,3 +1,19 @@
+[%- BLOCK h_section -%]
+<section class="[% h_class %]">
+<header><[% h_tag %] id="[% id %]">[% title %]</[% h_tag %]></header>
+[% content %]
+</section>
+[%- END -%]
+[%- BLOCK h2_section -%]
+[%- WRAPPER h_section h_tag="h2" h_class="h2" id=id title=title -%]
+[% content %]
+[%- END -%]
+[%- END -%]
+[%- BLOCK h3_section -%]
+[%- WRAPPER h_section h_tag="h3" h_class="h3" id=id title=title -%]
+[% content %]
+[%- END -%]
+[%- END -%]
 [%- BLOCK mailto_link_to_self -%]
 <a href="mailto:[% email %]">[% email %]</a>
 [%- END -%]

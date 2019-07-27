@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art - Better SCM Logo" -%]
+[%- SET desc = "How I created the Better SCM Logo" -%]
 
-<latemp_subject "Shlomi Fish’s Art - Better SCM Logo" />
-<latemp_meta_desc "How I created the Better SCM Logo" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Written at</b>: 29-Nov-2005
@@ -56,3 +58,5 @@ translucent to enable seeing the “Better” below it.
 be instructive for further investigation or building upon this effort. Just
 note that the fonts used there may be have a restrictive license.
 </p>
+
+[% END %]

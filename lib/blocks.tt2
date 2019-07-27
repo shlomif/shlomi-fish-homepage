@@ -1,16 +1,21 @@
 [%- BLOCK h_section -%]
 <section class="[% h_class %]">
-<header><[% h_tag %] id="[% id %]">[% title %]</[% h_tag %]></header>
+<header><[% h_tag %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_tag %]></header>
 [% content %]
 </section>
 [%- END -%]
 [%- BLOCK h2_section -%]
-[%- WRAPPER h_section h_tag="h2" h_class="h2" id=id title=title -%]
+[%- WRAPPER h_section h_tag="h2" h_class="h2" id=id title=title href=href-%]
 [% content %]
 [%- END -%]
 [%- END -%]
 [%- BLOCK h3_section -%]
-[%- WRAPPER h_section h_tag="h3" h_class="h3" id=id title=title -%]
+[%- WRAPPER h_section h_tag="h3" h_class="h3" id=id title=title href=href -%]
+[% content %]
+[%- END -%]
+[%- END -%]
+[%- BLOCK links_sect -%]
+[%- WRAPPER h2_section id="links" title="Links" -%]
 [% content %]
 [%- END -%]
 [%- END -%]

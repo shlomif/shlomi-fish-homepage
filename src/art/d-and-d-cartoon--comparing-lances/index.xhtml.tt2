@@ -1,14 +1,16 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art - D&amp;D Cartoon: Comparing Horse Lances" -%]
+[%- SET desc = "A Dungeons-and-Dragons cartoon that Shlomi Fish prepared" -%]
+[%- SET more_keywords = "dungeons,dragons,d&amp;d,rpg,frp,role playing games,cartoon,comic,joke,lances,horse,inkscape,SVG,funny,humor" -%]
 
-<latemp_subject "Shlomi Fish’s Art - D&amp;D Cartoon: Comparing Horse Lances" />
-<latemp_meta_desc "A Dungeons-and-Dragons cartoon that Shlomi Fish prepared" />
-<latemp_more_keywords "dungeons,dragons,d&amp;d,rpg,frp,role playing games,cartoon,comic,joke,lances,horse,inkscape,SVG,funny,humor" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 
 <img src="d-and-d-cartoon-exported.png" alt="D&amp;D Cartoon - Comparing Lances" style="margin-bottom : 1.5em" />
 
-<h2_section id="about" title="About this image">
+[% WRAPPER h2_section "id" => "about", "title" => "About this image", %]
 
 <p>
 You can find the sources for this cartoon in
@@ -23,9 +25,9 @@ worked on preparing a version of it using the Inkscape vector graphics editor,
 which you can see here.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="attribution" title="Attribution">
+[% WRAPPER h2_section "id" => "attribution", "title" => "Attribution", %]
 
 <ul>
 
@@ -48,9 +50,9 @@ is unknown and it may be subject to trademark rights.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -63,7 +65,7 @@ Subreddit Thread</a>
 
 <li>
 <p>
-<a href="$(ROOT)/MathVentures/3d-outof-4d-mathml.xhtml">“Combinatorics
+<a href="[% base_path %]MathVentures/3d-outof-4d-mathml.xhtml">“Combinatorics
 and the art of Dungeons and Dragons”</a> - another D&amp;D-inspired page - this
 time about Mathematics.
 </p>
@@ -71,6 +73,8 @@ time about Mathematics.
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
 </div>
+
+[% END %]

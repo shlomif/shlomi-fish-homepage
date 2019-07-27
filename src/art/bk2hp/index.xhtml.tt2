@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art - Back to my Homepage" -%]
+[%- SET desc = "A “Back to my Homepage” graphic artwork similar to the logo of “Back to the future”" -%]
 
-<latemp_subject "Shlomi Fish’s Art - Back to my Homepage" />
-<latemp_meta_desc "A “Back to my Homepage” graphic artwork similar to the logo of “Back to the future”" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 
@@ -106,3 +108,5 @@ lawyer, its legal status in this regard is unclear, and may vary based on
 the jurisdiction.
 </p>
 </div>
+
+[% END %]

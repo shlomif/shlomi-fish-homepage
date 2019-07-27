@@ -1,5 +1,5 @@
 ./gen-helpers&& make fastrender&& make -j 17
-a="dest/post-incs/t2/wysiwyt.html"
+a="dest/post-incs/t2/art/by-others/index.xhtml"
 b=/home/shlomif/Backup/Arcs/post-$a
 adest=have.xhtml
 bdest=want.xhtml

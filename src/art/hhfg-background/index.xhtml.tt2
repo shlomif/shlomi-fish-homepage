@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art - HHFG Background" -%]
+[%- SET desc = "Background for “The Human Hacking Field Guide” story" -%]
 
-<latemp_subject "Shlomi Fish’s Art - HHFG Background" />
-<latemp_meta_desc "Background for “The Human Hacking Field Guide” story" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 <p>
@@ -13,7 +15,7 @@ alt="Corner of the HHFG Background Image"
 style="margin-bottom : 1.5em" />
 
 <p>
-After I finished writing my story, <a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking Field Guide</i></a>, I was looking for a page layout to make it more interesting. Browsing <a href="http://www.oswd.org/">Open Source Web
+After I finished writing my story, <a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking Field Guide</i></a>, I was looking for a page layout to make it more interesting. Browsing <a href="http://www.oswd.org/">Open Source Web
 Design</a> yielded the
 <a href="http://www.oswd.org/viewdesign.phtml?id=1959&amp;referer=%2Fsearch.php%3Fsearchstring%3Dtwin%2Btriangles%26tab%3Ddescription">Twin
 Triangles</a> theme which I liked. However, it included other elements to
@@ -81,3 +83,5 @@ it only seemed to have made it worse, so I abandoned the idea.
 </p>
 
 </div>
+
+[% END %]

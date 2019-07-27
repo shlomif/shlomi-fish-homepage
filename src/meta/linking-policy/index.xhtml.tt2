@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Linking Policy of Shlomi Fish’s Homesite" -%]
+[%- SET desc = "Linking Policy of Shlomi Fish’s Homesite" -%]
 
-<latemp_subject "Linking Policy of Shlomi Fish’s Homesite" />
 
-<latemp_meta_desc "Linking Policy of Shlomi Fish’s Homesite" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I don’t believe that restricting linking to any site is ethical, moral, or
@@ -22,3 +23,5 @@ me about it and I’ll see what I can do.
 <p>
 Have fun!
 </p>
+
+[% END %]

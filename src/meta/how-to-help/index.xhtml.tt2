@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "How to Help this Site" -%]
+[%- SET desc = "How to Help Shlomi Fish’s Home Site" -%]
 
-<latemp_subject "How to Help this Site" />
 
-<latemp_meta_desc "How to Help Shlomi Fish’s Home Site" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 If you like this site, there are several ways in which you can help me with
@@ -70,7 +71,7 @@ Bad phrasing.
 </li>
 <li>
 <s>Broken hyperlinks.</s> - please do not report broken links. It is the
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature
+<a href="[% base_path %]humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature
 of the web</a> that links get broken and sometimes I have nothing to do but
 wait. Please don't waste my time E-mailing me about them.
 </li>
@@ -92,7 +93,7 @@ lack proper coverage.
 </p>
 <p>
 If you want to send unified text patches make sure you do them against
-<a href="<rellink host="t2" url="meta/site-source/" />">the source of
+<a href="[% base_path %]meta/site-source/">the source of
 the site</a> in the version control system.
 </p>
 </li>
@@ -105,7 +106,7 @@ I’m not receiving too many, and so I can respond to most of them, so if
 you’re polite and friendly, expect a response.
 </p>
 <p>
-See my <a href="$(PATH_TO_ROOT)me/contact-me/">contact information</a>.
+See my <a href="[% base_path %]me/contact-me/">contact information</a>.
 </p>
 </li>
 
@@ -128,3 +129,5 @@ would appreciate it if you do.
 </p>
 </li>
 </ol>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "About this Site’s Hosting" -%]
+[%- SET desc = "About Shlomi Fish’s site hosting." -%]
 
-<latemp_subject "About this Site’s Hosting" />
 
-<latemp_meta_desc "About Shlomi Fish’s site hosting." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="hostgator">Hostgator</h2>
 
@@ -36,11 +37,14 @@ shlomifish.org used to be hosted at
 downtimes.
 </p>
 
-<define-tag whs_notice>
+[% BLOCK whs_notice %]
+
 <p>
 If you need something more specific - like <a
 href="http://www.webhostingsearch.com/dedicated-server.php">dedicated
 server hosting</a> for example - then have a look at our long term buddies:
 the Web Hosting Search.
 </p>
-</define-tag>
+[% END %]
+
+[% END %]

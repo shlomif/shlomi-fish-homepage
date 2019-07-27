@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Old Snapshots of My Site" -%]
+[%- SET desc = "This page links to old snapshots of my site, to see how it progressed in time." -%]
 
-<latemp_subject "Old Snapshots of My Site" />
 
-<latemp_meta_desc "This page links to old snapshots of my site, to see how it progressed in time." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This page links to old snapshots of my site, so you can witness its old
@@ -23,3 +24,5 @@ HTML, and a Spartan design.
 <p>
 My site around 2005.
 </p>
+
+[% END %]

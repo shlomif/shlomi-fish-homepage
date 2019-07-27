@@ -54,6 +54,43 @@ sub slurp
     return path(shift)->slurp_utf8;
 }
 
+sub cc_by_sa_british_blurb
+{
+    my %args = %{ shift() // {} };
+    my $year = $args{year};
+
+    return <<"EOF";
+<p>
+This document is Copyright by Shlomi Fish, $year, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
+Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+EOF
+}
+
+sub cc_by_sa_license_british
+{
+    my %args = %{ shift() // {} };
+
+    my $head_tag = $args{head_tag} // 'h3';
+
+    return qq#
+<$head_tag id="license">Copyright and Licence</$head_tag># .
+
+        cc_by_sa_british_blurb( \%args );
+
+}
+
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
@@ -62,7 +99,9 @@ my $vars = +{
         my %args = %{ shift() // {} };
         return $latemp_acroman->abbr( { key => $args{key}, } )->{html};
     },
-    cc_by_british_blurb => sub {
+    cc_by_sa_british_blurb   => \&cc_by_sa_british_blurb,
+    cc_by_sa_license_british => \&cc_by_sa_license_british,
+    cc_by_british_blurb      => sub {
         my %args = %{ shift() // {} };
         my $year = $args{year};
 

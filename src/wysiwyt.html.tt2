@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "IRPWUG Announces Project “What you see is what you think”" -%]
+[%- SET desc = "IRPWUG Announces Project “What you see is what you think”" -%]
 
-<latemp_subject "IRPWUG Announces Project “What you see is what you think”" />
 
-<latemp_meta_desc "IRPWUG Announces Project “What you see is what you think”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 9-April-2011.
@@ -134,4 +135,6 @@ eventually be able to use this OS. </p>
 
 </ul>
 
-<cc_by_sa_license_british year="1997" head_tag="h2" />
+[% cc_by_sa_license_british(year="1997",head_tag="h2") %]
+
+[% END %]

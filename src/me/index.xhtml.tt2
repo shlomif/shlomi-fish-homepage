@@ -1,79 +1,80 @@
-#include "template.wml"
+[%- SET title = "About: Shlomi Fish" -%]
+[%- SET desc = "About Shlomi Fish: biography, contact information, C.V.s, personal ad, blogs, and his rindolf nickname." -%]
 
-<latemp_subject "About: Shlomi Fish" />
 
-<latemp_meta_desc "About Shlomi Fish: biography, contact information, C.V.s, personal ad, blogs, and his rindolf nickname." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<h2_section id="bio" href="$(ROOT)/personal.html" title="My Bio">
+[% WRAPPER h2_section id = "bio"  href = base_path _ "personal.html"  title = "My Bio"  %]
 
 <p>
 A page with a photograph of me, and some history and background. What I did,
 and when.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="contact" href="contact-me/" title="How to Contact Me">
+[% WRAPPER h2_section id = "contact"  href = "contact-me/"  title = "How to Contact Me"  %]
 
 <p>
 Information on how to reach me in any conceivable means.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="resumes" href="resumes/" title="Resumés (in various versions)">
+[% WRAPPER h2_section id = "resumes"  href = "resumes/"  title = "Resumés (in various versions)"  %]
 
 <p>
 Resumés (also known as Curriculum Vitae or C.V.) in various languages
 and formats.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="personal-ad" href="personal-ad.html" title="Personal Ad">
+[% WRAPPER h2_section id = "personal-ad"  href = "personal-ad.html"  title = "Personal Ad"  %]
 
 <p>
 I’m looking for a girlfriend. If you are a girl and are available, please read
 <a href="personal-ad.html">this personal Ad and see if you’re interested</a>.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="blogs" title="<a href="blogs/">Online Weblogs</a>">
+[% WRAPPER h2_section id = "blogs"  title = "Online Weblogs" href="blogs/" %]
 
 <p>
 These are my online weblogs, which you can read online or subscribe to by
 using RSS or a similar technology.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="interviews" href="interviews/" title="Interviews with Me">
+[% WRAPPER h2_section id = "interviews"  href = "interviews/"  title = "Interviews with Me"  %]
 
 <p>
 Links to interviews with me.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rindolf_nickname" href="rindolf/" title="About the “Rindolf” Nickname">
+[% WRAPPER h2_section id = "rindolf_nickname"  href = "rindolf/"  title = "About the “Rindolf” Nickname"  %]
 
 <p>
 The “Rindolf” nickname, its history and etymology, and a little about
 my “Rindolfism” philosophy.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="faq" href="$(ROOT)/meta/FAQ/" title="Frequently Asked Questions (F.A.Q.) List">
+[% WRAPPER h2_section id = "faq"  href = base_path _ "meta/FAQ/"  title = "Frequently Asked Questions (F.A.Q.) List"  %]
 
 <p>
 A list of frequently asked questions about me and this site.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="gpg-key" href="crypto/pgp/shlomif-public-key.txt" title="My GnuPG Public Key">
+[% WRAPPER h2_section id = "gpg-key"  href = "crypto/pgp/shlomif-public-key.txt"  title = "My GnuPG Public Key"  %]
 
 <p>
 This is my public key, which you can use to send me encrypted E-mail or verify
@@ -81,18 +82,18 @@ signed E-mails that I sent. There’s more information about it in
 <a href="http://www.gnupg.org/">the GnuPG (GNU Privacy Guard) homepage</a>.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="ssh-key" href="crypto/ssh/id_rsa.pub" title="My SSH Public Key">
+[% WRAPPER h2_section id = "ssh-key"  href = "crypto/ssh/id_rsa.pub"  title = "My SSH Public Key"  %]
 
 <p>
 A Public Key which you can assign to your
 <a href="http://www.openssh.com/">OpenSSH</a> daemon to enable me to login.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="my-sites" title="A List of Sites I Maintain">
+[% WRAPPER h2_section id = "my-sites"  title = "A List of Sites I Maintain"  %]
 
 
 <ul>
@@ -152,4 +153,6 @@ A Public Key which you can assign to your
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

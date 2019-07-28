@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "“I, Bex!” - A StoneAge Clone for Perl/SDL" -%]
+[%- SET desc = "“I, Bex!” - A StoneAge Clone for Perl/SDL" -%]
 
-<latemp_subject "“I, Bex!” - A StoneAge Clone for Perl/SDL" />
-<latemp_meta_desc "“I, Bex!” - A StoneAge Clone for Perl/SDL" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="i-bex-0.1.13.tar.gz"><b>Download I-Bex Version 0.1.13</b></a>
@@ -44,3 +46,5 @@ Start-up menus
 More Levels. (very important!)
 </li>
 </ul>
+
+[% END %]

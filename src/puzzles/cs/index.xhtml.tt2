@@ -1,0 +1,14 @@
+[%- SET title = "Computer Science Amusements" -%]
+[%- SET desc = "Computer Science Amusements by Shlomi Fish" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2><a href="lotg/">The “Lotg” Code</a></h2>
+
+<p>
+A minimalistic pseudocode I designed.
+</p>
+
+[% END %]

@@ -1,0 +1,14 @@
+[%- SET title = "Maths Puzzles" -%]
+[%- SET desc = "Maths Puzzles" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<ol>
+<li>
+<a href="n5-riddle/">Modulo n^5 Riddle</a>
+</li>
+</ol>
+
+[% END %]

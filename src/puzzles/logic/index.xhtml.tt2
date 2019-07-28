@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Logic Puzzles" -%]
+[%- SET desc = "Logic Puzzles" -%]
 
-<latemp_subject "Logic Puzzles" />
 
-<latemp_meta_desc "Logic Puzzles" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <ol>
 <li>
@@ -20,3 +21,5 @@ swords collected by an adventurer, arranged in a horizontal row. Which is
 which?
 </li>
 </ol>
+
+[% END %]

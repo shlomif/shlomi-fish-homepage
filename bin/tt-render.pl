@@ -94,6 +94,12 @@ sub cc_by_sa_license_british
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
+    longblank => <<'EOF',
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+EOF
     main_email => 'shlomif@shlomifish.org',
     my_acronym => sub {
         my %args = %{ shift() // {} };

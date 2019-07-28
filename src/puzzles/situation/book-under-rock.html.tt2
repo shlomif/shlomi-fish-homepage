@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Situation Puzzle: A Book under a Rock" -%]
+[%- SET desc = "Situation Puzzle: A Book under a Rock" -%]
 
-<latemp_subject "Situation Puzzle: A Book under a Rock" />
 
-<latemp_meta_desc "Situation Puzzle: A Book under a Rock" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
 
@@ -17,7 +18,7 @@ I came up with. You are welcome to tell it to your friends for amusement.
 There’s a book under a rock in the middle of the wilderness.
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Answer</h2>
 
@@ -44,3 +45,5 @@ So they went back and looked for it. Once they arrived, he went to the place he
 knew he left it there, and placed a rock above it so his friend will not find
 it. He indeed did not find the dictionary and they cancelled the gamble.
 </p>
+
+[% END %]

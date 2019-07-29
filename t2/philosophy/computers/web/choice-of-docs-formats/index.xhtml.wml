@@ -81,7 +81,7 @@ plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl’s so-calle
 Just a note about POD: POD is incredibly limited. Some things that you may
 want to try to do with it are not possible. It is not the only generic format
 available, however. One option is naturally
-<a href="http://www.docbook.xml.org/">DocBook/XML</a>, which can be
+<a href="https://docbook.org/">DocBook/XML</a>, which can be
 translated into <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> (
 both XHTML 1.x as well as XHTML 5 and HTML 5)
 as well as <a href="https://en.wikipedia.org/wiki/PDF">PDF</a>,
@@ -89,7 +89,7 @@ Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
 <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
 formats. It cannot be directly translated to plain text, but can through
 an intermediate format. POD can be translated into DocBook/XML using
-<cpan_self_mod m="Pod::PseudoPod::DocBook" /> may be a better choice.
+<cpan_self_mod m="Pod::PseudoPod::DocBook" />.
 </p>
 
 <p>

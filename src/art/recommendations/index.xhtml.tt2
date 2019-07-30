@@ -1,0 +1,14 @@
+[%- SET title = "Shlomi Fish’s Art Recommendations" -%]
+[%- SET desc = "Recommendations of artworks I enjoyed." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2><a href="music/">Music</a></h2>
+
+<p>
+Recommendations of music.
+</p>
+
+[% END %]

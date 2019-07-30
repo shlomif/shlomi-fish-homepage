@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art : Linux Slogan" -%]
+[%- SET desc = "The creation of the logo “Linux - Because software problems should nto cost money”." -%]
 
-<latemp_subject "Shlomi Fish’s Art : Linux Slogan" />
-<latemp_meta_desc "The creation of the logo “Linux - Because software problems should nto cost money”." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 <img src="../images/linux1.gif" alt="Linux - Because software problems should not cost money" />
@@ -83,3 +85,5 @@ For sources, and different arrangements of this banner, go to
 <a href="../../linux_banner/">its home page</a>.
 </p>
 </div>
+
+[% END %]

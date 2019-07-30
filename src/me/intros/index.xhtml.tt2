@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Introductions" -%]
+[%- SET desc = "Shlomi Fish introducing himself to various forums." -%]
 
-<latemp_subject "Introductions" />
 
-<latemp_meta_desc "Shlomi Fish introducing himself to various forums." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are various introductions of myself that I presented
@@ -14,3 +15,5 @@ to various forums.
 <a href="writers/">An introduction to the MIT Writers Mailing List</a>
 </li>
 </ul>
+
+[% END %]

@@ -1,17 +1,15 @@
-#include "template.wml"
+[%- SET title = "Contributions Made to External Open-Source Projects" -%]
+[%- SET desc = "Contributions Made to External Open-Source Projects" -%]
 
-#include "toc_div.wml"
-#include "Inc/cpan_dists.wml"
 
-<latemp_subject "Contributions Made to External Open-Source Projects" />
-
-<latemp_meta_desc "Contributions Made to External Open-Source Projects" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 21-November-2009.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="gimp"><a href="http://www.gimp.org/">GIMP - The GNU Image
 Manipulation Program</a></h2>
@@ -141,7 +139,7 @@ the author of
 <a href="http://fc-solve.shlomifish.org/">Freecell
 Solver</a>, I wanted to integrate it into Freecell Pro. Thus, I reached
 one of the Freecell Pro core developers and current maintainer,
-<a href="$(ROOT)/open-source/interviews/adrian-ettlinger.html">Adrian
+<a href="[% base_path %]open-source/interviews/adrian-ettlinger.html">Adrian
 Ettlinger</a>. Adrian was eager to incorporate my solver as well, and we
 cooperated on incorporating it.
 </p>
@@ -153,8 +151,8 @@ successfully. Adrian and I became friends, and we have been talking by
 E-mail since then.
 </p>
 
-<h2 id="error.pm"><cpan_dist d="Error">The
-Error.pm CPAN distribution</cpan_dist></h2>
+<h2 id="error.pm">[%- WRAPPER cpan_dist d = "Error" -%]The
+Error.pm CPAN distribution[%- END -%]</h2>
 
 <p>
 After a long time of neglect by its contemporary maintainer, I adopted this
@@ -179,8 +177,8 @@ Error.pm”</a> - the blog entry that started it all.
 </li>
 </ul>
 
-<h2 id="xml-rss"><cpan_dist d="XML-RSS">XML::RSS - a
-CPAN Module for Processing RSS</cpan_dist></h2>
+<h2 id="xml-rss">[%- WRAPPER cpan_dist d = "XML-RSS" -%]XML::RSS - a
+CPAN Module for Processing RSS[%- END -%]</h2>
 
 <p>
 After running into an XML::RSS bug, I submitted a patch for it, which was
@@ -225,11 +223,11 @@ the KDE configuration directory, and ported it to the new version of FUSE. My
 changes were incorporated into version 0.4 of LoggedFS.
 </p>
 
-<h2 id="file-find-object"><a href="$(ROOT)/open-source/projects/File-Find-Object/">File-Find-Object</a></h2>
+<h2 id="file-find-object"><a href="[% base_path %]open-source/projects/File-Find-Object/">File-Find-Object</a></h2>
 
 <p>
 File-Find-Object is a CPAN module, originally created by
-<a href="<cpan_homepage who="nanardon" />">Olivier Thauvin (Nanardon)</a>,
+<a href="http://metacpan.org/author/NANARDON">Olivier Thauvin (Nanardon)</a>,
 which allows one to traverse a directory tree, and solves some inherent
 limitations in the perl 5 core File::Find module. I started contributing
 to this module after its 0.0.2 release, and did most of the work on it
@@ -242,3 +240,5 @@ a port of File-Find-Rule to File-Find-Object. This in turn provides
 a convenient, declarative interface to File-Find-Object, while overcoming the
 philosophical limitations of File::Find.
 </p>
+
+[% END %]

@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "A Solidarian Disco Circle" -%]
+[%- SET desc = "When can we have a disco circle where every boy dances with every girl exactly once?" -%]
 
-<latemp_subject "A Solidarian Disco Circle" />
-<latemp_meta_desc "When can we have a disco circle where every boy dances with every girl exactly once?" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Are you familiar with disco circles? I participated in quite a lot of them
@@ -33,7 +35,7 @@ number of times together?
 The solution can be found some space below:
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 
@@ -108,3 +110,5 @@ together once can be formed on one of the following conditions:
 participate in the circle.</li>
 <li>There is exactly one boy and exactly one girl.</li>
 </ol>
+
+[% END %]

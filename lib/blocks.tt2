@@ -232,8 +232,10 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 <body[% body_params %]>
 
 <div class="header" id="header">
+[%- IF 0 -%]
 <div class="banner">
 </div>
+[%- END -%]
 <div class="leading_path">
 [% leading_path_string %]
 </div>

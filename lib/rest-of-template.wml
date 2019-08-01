@@ -15,12 +15,14 @@
 </define-tag>
 
 <latemp_top_banner>
+<when "<get-var with_banner />">
 <div class="banner">
 <if "<get-var with_banner />"
     "<top_with_banner />"
     "<top_without_banner />"
     />
 </div>
+</when>
 </latemp_top_banner>
 
 <latemp_top_left_corner_logo>

@@ -1,16 +1,16 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "Test::Run - Update for 9-May-2006" -%]
+[%- SET desc = "Test::Run - Update for 9-May-2006" -%]
 
-<latemp_subject "Test::Run - Update for 9-May-2006" />
-<latemp_meta_desc "Test::Run - Update for 9-May-2006" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>*::Plugin::ColorSummary on CPAN</h2>
 
 <p>
-The colour-summaries lines were released on CPAN as
-<cpan_self_dist d="Test-Run-Plugin-ColorSummary" />
-and
-<cpan_self_dist d="Test-Run-CmdLine-Plugin-ColorSummary" />.
+The colour-summaries lines were released on CPAN as [%
+cpan_self_dist( "d" => "Test-Run-Plugin-ColorSummary", ) %] and [%
+cpan_self_dist( "d" => "Test-Run-CmdLine-Plugin-ColorSummary", ) %].
 They now allow configuring the colour in which the summary would be displayed.
 </p>
 
@@ -82,8 +82,8 @@ module which has a good test coverage.
 <h2>Test-Run-TAP-Model</h2>
 
 <p>
-The <cpan_self_dist d="Test-Tap-Model" />
-was adapted to Test::Run, after a talk with one of its developers.
+The [% cpan_self_dist( "d" => "Test-Tap-Model", ) %] was
+adapted to Test::Run, after a talk with one of its developers.
 </p>
 
 <h2>More Ideas for the Future:</h2>
@@ -105,3 +105,5 @@ Integration into ExtUtils::MakeMaker, and Module::Build.
 Colour the individual files’ status reports.
 </li>
 </ul>
+
+[% END %]

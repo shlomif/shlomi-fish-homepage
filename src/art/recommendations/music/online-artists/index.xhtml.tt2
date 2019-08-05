@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Favourite Online Musicians" -%]
+[%- SET desc = "Shlomi Fish’s Favourite Online Musicians" -%]
 
-<latemp_subject "Shlomi Fish’s Favourite Online Musicians" />
-<latemp_meta_desc "Shlomi Fish’s Favourite Online Musicians" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="online_artists">List of Artists</h2>
 
@@ -101,3 +103,5 @@ information page</a>
 </ol>
 </li>
 </ul>
+
+[% END %]

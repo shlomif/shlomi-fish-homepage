@@ -1,0 +1,17 @@
+[%- SET title = "Hash Implementation in Pure Haskell" -%]
+[%- SET desc = "Hash Implementation in Pure Haskell" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+<a href="Hash.hs">The Hash module</a>
+</p>
+
+<p>
+<a href="hash_test.hs">A test program</a>
+(which uses a very bad hash function)
+</p>
+
+[% END %]

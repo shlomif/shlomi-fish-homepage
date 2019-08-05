@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Writings about General Philosophy" -%]
+[%- SET desc = "Shlomi Fish’s Writings about General Philosophy" -%]
 
-<latemp_subject "Shlomi Fish’s Writings about General Philosophy" />
 
-<latemp_meta_desc "Shlomi Fish’s Writings about General Philosophy" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are essays I wrote about general philosophy - life, the universe and
@@ -14,7 +15,7 @@ whatever between them.
 <h2 id="list">The Articles and Essays</h2>
 
 <article>
-<h3 id="the_eternal_jew"><a href="$(ROOT)/philosophy/the-eternal-jew/">The Eternal Jew</a></h3>
+<h3 id="the_eternal_jew"><a href="[% base_path %]philosophy/the-eternal-jew/">The Eternal Jew</a></h3>
 
 <p>
 An article that nicely summarizes the principals of my view on self and of
@@ -62,7 +63,7 @@ online free-of-charge.
 
 <p>
 What is the problem with
-<a href="$(ROOT)/philosophy/computers/education/opinion-on-the-technion/">the
+<a href="[% base_path %]philosophy/computers/education/opinion-on-the-technion/">the
 Technion</a> and why is it graver in M.I.T., and
 why you should watch the film
 <a href="http://en.wikipedia.org/wiki/Silver_Linings_Playbook"><i>Silver
@@ -88,3 +89,5 @@ but imperfect and sweet.
 </article>
 
 </section>
+
+[% END %]

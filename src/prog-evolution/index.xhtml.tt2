@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "My Evolution as a Programmer" -%]
+[%- SET desc = "Shlomi Fish’s evolution as a programmer, where he shares his memoires from his older years." -%]
 
-<latemp_subject "My Evolution as a Programmer" />
-<latemp_meta_desc "Shlomi Fish’s evolution as a programmer, where he shares his memoires from his older years." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are my memoirs of myself as a software engineer with many interesting
@@ -11,39 +13,35 @@ instructive.
 
 <h2>Chapters</h2>
 
-<define-tag mytd endtag="required">
-<td>
-%body
-</td>
-</define-tag>
-
 <table class="visible">
 <tr>
-<mytd>
+<td>
 <a href="pre-elpas.html">The Pre-Elpas Years</a>
-</mytd>
-<mytd>
+</td>
+<td>
 Describes Shlomi Fish as a child and teenager programmer before his first
 serious job as one.
-</mytd>
+</td>
 </tr>
 <tr>
-<mytd>
+<td>
 <a href="shlomif-at-elpas.html">At Elpas</a>
-</mytd>
-<mytd>
+</td>
+<td>
 Describes my experiences in <a href="http://www.elpas.com/">Elpas</a> -
 my first workplace as a programmer.
-</mytd>
+</td>
 </tr>
 <tr>
-<mytd>
+<td>
 <a href="shlomif-at-cortext.html">At Cortext</a>
-</mytd>
-<mytd>
+</td>
+<td>
 Describes my experiences in Cortext, a web-design shop based on UNIX,
 Windows, and Perl.
-</mytd>
+</td>
 </tr>
 
 </table>
+
+[% END %]

@@ -1,13 +1,13 @@
-#include "template.wml"
-
-<latemp_subject "Between the Screws - A Logic Puzzle" />
-
-<latemp_meta_desc "Between the Screws - A Logic Puzzle" />
-
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+[%- SET title = "Between the Screws - A Logic Puzzle" -%]
+[%- SET desc = "Between the Screws - A Logic Puzzle" -%]
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-</page_extra_head_elements>
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
 
@@ -234,3 +234,5 @@ Our final results are:
 </tr>
 
 </table>
+
+[% END %]

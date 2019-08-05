@@ -37,6 +37,10 @@ if (s{^<latemp_more_keywords\s+"([^"]+)"\s*/>}{}ms)
 {
     $meta .= "[%- SET more_keywords = \"$1\" -%]\n";
 }
+while (s{^<(page_extra_head_elements)>(.*?)</\1>}{}ms)
+{
+    $meta .= "[% BLOCK $1 %]${2}[% END %]\n";
+}
 
 s{\A#include "template.wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{[%- SET title = $1 -%]
 ${meta}

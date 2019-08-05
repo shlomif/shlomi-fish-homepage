@@ -48,4 +48,4 @@ my @cmd_line = (
 );
 
 print join( " ", map { m{ } ? qq{"$_"} : $_ } @cmd_line ), "\n";
-exit( system(@cmd_line) );
+exit( system(@cmd_line) ? (-1) : 0 );

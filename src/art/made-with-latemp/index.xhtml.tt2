@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Art- “Made with Latemp”" -%]
+[%- SET desc = "The “Made with Latemp” logo." -%]
 
-<latemp_subject "Shlomi Fish’s Art- “Made with Latemp”" />
-<latemp_meta_desc "The “Made with Latemp” logo." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 <p>
@@ -43,3 +45,5 @@ I’m pretty happy with the results, even though it did not require too much
 effort.
 </p>
 </div>
+
+[% END %]

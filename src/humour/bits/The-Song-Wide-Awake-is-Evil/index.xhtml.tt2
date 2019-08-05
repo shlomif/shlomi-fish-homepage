@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "The song “Wide Awake” by Katy Perry is Evil!" -%]
+[%- SET desc = "Why the song is the epitome of evil." -%]
 
-<latemp_subject "The song “Wide Awake” by Katy Perry is Evil!" />
-<latemp_meta_desc "Why the song is the epitome of evil." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <img src="katy-perry.jpg" alt="Photo of Katy Perry" style="float:right;margin:0.5em;" />
 
@@ -106,7 +107,7 @@ because my other ideas didn't seem as good.
 <ul>
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-bad-taste">Why Liking Katy Perry is Bad Taste</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-bad-taste">Why Liking Katy Perry is Bad Taste</a>
 </p>
 </li>
 </ul>
@@ -143,3 +144,5 @@ For securing additional rights, please contact
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
+
+[% END %]

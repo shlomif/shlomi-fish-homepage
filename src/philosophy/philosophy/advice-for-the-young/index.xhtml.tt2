@@ -1,12 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Shlomi Fish’s Advice for the Young" -%]
+[%- SET desc = "Shlomi Fish’s Advice for the Young: Live like you were going to die tomorrow, writing to learn and integrate, reverse your growth death" -%]
 
-<latemp_subject "Shlomi Fish’s Advice for the Young" />
 
-<latemp_meta_desc "Shlomi Fish’s Advice for the Young: Live like you were going to die tomorrow, writing to learn and integrate, reverse your growth death" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -265,7 +264,7 @@ they put into their writing.
 </p>
 
 <p>
-Note that all-lowercase writing, while acceptable on the <my_acronym key="IRC"/> (albeit I
+Note that all-lowercase writing, while acceptable on the [% my_acronym( "key" => "IRC",) %] (albeit I
 do not write this way either) is completely frowned upon in E-mails, and
 leaves an impression of lack of professionalism, no time and care to press the
 shift key, and general disinterest. Don’t do it. Putting such improperly-written
@@ -291,7 +290,7 @@ about Computer history. They are familiar with Knuth, Dijkstra and other great
 names, only throughout the algorithms they have formulated, and are not familiar
 with when things came to being, or why they are this way at all. There are many
 good resources for learning about computer history on the Net, and you should
-probably read them. Chatting on the <my_acronym key="IRC"/> in the appropriate channels can also
+probably read them. Chatting on the [% my_acronym( "key" => "IRC",) %] in the appropriate channels can also
 help you learn more about it.
 </p>
 
@@ -346,7 +345,7 @@ but also extremely good.
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2005" />
+[% cc_by_british_blurb( "year" => "2005", ) %]
 
 <h2 id="meta_info">Meta Information</h2>
 
@@ -360,3 +359,5 @@ but also extremely good.
 <dt>License:</dt>
 <dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>.<!--/Creative Commons License--></dd>
 </dl>
+
+[% END %]

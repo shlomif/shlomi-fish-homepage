@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Why I Concluded that Scientology is Bad" -%]
+[%- SET desc = "This is an essay about why I concluded (based on very limited data) that the Scientology modern religion was bad." -%]
 
-<latemp_subject "Why I Concluded that Scientology is Bad" />
 
-<latemp_meta_desc "This is an essay about why I concluded (based on very limited data) that the Scientology modern religion was bad." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
 
@@ -121,3 +122,5 @@ their sites, or removing links to them from search engines, etc. They
 completely favour government control and regulation of online free speech ,and
 as such, act against a free, unregulated economy.
 </p>
+
+[% END %]

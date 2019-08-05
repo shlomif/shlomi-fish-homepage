@@ -2,6 +2,12 @@
 
 @import "common-style";
 
+$top_height: 80px;
+
+#header {
+    padding-top: $top_height;
+}
+
 .sub_menu {
     background-color: #c0c0c0;
     padding-top: 20pt;
@@ -18,7 +24,7 @@
 }
 
 .banner {
-    height: 80px;
+    height: $top_height;
 }
 
 @mixin wrap {

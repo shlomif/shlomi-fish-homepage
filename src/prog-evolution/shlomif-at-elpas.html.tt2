@@ -1,13 +1,12 @@
-#include "template.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Shlomi Fish at Elpas" -%]
+[%- SET desc = "Some memoirs of Shlomi Fish when Working at Elpas" -%]
+[%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Elpas, Windows" -%]
 
-#include "toc_div.wml"
 
-<latemp_subject "Shlomi Fish at Elpas" />
-<latemp_meta_desc "Some memoirs of Shlomi Fish when Working at Elpas" />
-<latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Elpas, Windows" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -32,11 +31,9 @@ Last Updated:
 </dd>
 </dl>
 
-<define-tag SQL>
-<my_acronym key="SQL"/>
-</define-tag>
+[% SET SQL = my_acronym( "key" => "SQL",) %]
 
-<h2_section id="how_i_started" title="How I started Working in Elpas">
+[% WRAPPER h2_section id = "how_i_started"  title = "How I started Working in Elpas"  %]
 
 <p>
 I started working in <a href="http://www.elpas.com/">Elpas</a> after I
@@ -74,9 +71,9 @@ Elpas developed. Next, we wanted to eliminate the dependence on the SCO UNIX
 system.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="start" title="Let’s start coding!">
+[% WRAPPER h2_section id = "start"  title = "Let’s start coding!"  %]
 
 <p>
 I had a rough idea of what was required. So what I did was to gradually
@@ -95,13 +92,13 @@ a “standard database” such as Informix, Oracle, etc. We didn’t have one li
 that so they told me to start with Microsoft Access.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="access" title="Let’s start coding with Access">
+[% WRAPPER h2_section id = "access"  title = "Let’s start coding with Access"  %]
 
 <p>
 Access... we had Access 2.0, and I had to find a way to work against it from
-our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning <SQL /> from the
+our C program. I eventually discovered <a href="http://en.wikipedia.org/wiki/Dynamic_Data_Exchange">Dynamic Data Exchange</a>, and after learning [% SQL %] from the
 Access docs, started converting our application to store the data on Access,
 and access it using DDE. It was a lot of work as the application was written
 in C.
@@ -126,16 +123,16 @@ eventually did it. So I converted the code to use ODBC.
 It was a bit faster than using DDE and NetDDE, but was still slow and still
 crashed a lot. We thought that we might need a better database but then we got
 a few other consultants who brought us to a realisation: since we needed to
-query the database in real time, we couldn’t afford to construct <SQL /> queries
-send them to an <SQL /> server that will parse them, process them relatively
+query the database in real time, we couldn’t afford to construct [% SQL %] queries
+send them to an [% SQL %] server that will parse them, process them relatively
 inefficiently, and then return the results over a stream which will need to
-be processed and parsed (to say nothing of <my_acronym key="API"/> overhead). We needed something
+be processed and parsed (to say nothing of [% my_acronym( "key" => "API",) %] overhead). We needed something
 much faster, and my original vector-based database was as good as any.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="back_to_basic" title="Back to Basics">
+[% WRAPPER h2_section id = "back_to_basic"  title = "Back to Basics"  %]
 
 <p>
 So I started finishing the vector-based database, which was I had started
@@ -175,9 +172,9 @@ brought many representatives from large corporations to inspect our
 products, and many of them were very impressed.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="why_i_quit" title="Why I quit?">
+[% WRAPPER h2_section id = "why_i_quit"  title = "Why I quit?"  %]
 
 <p>
 For a long time I worked for minimal wage at Elpas. This was a bit before
@@ -202,13 +199,13 @@ there full time, which was what I intended to do and was also close to minimal
 wage. Nevertheless, I was out of Elpas for good.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="conclusion" title="Conclusion">
+[% WRAPPER h2_section id = "conclusion"  title = "Conclusion"  %]
 
 <p>
 I really liked working at Elpas because I learned many new concepts and
-technologies there, including <SQL /> and relational databases, Windows (16-bit)
+technologies there, including [% SQL %] and relational databases, Windows (16-bit)
 programming, ODBC, some aspects of Microsoft Access, and a small amount of
 UNIX. Some of these served me well later on.
 </p>
@@ -229,13 +226,15 @@ build a release in one command; we did not have the best tools money can buy,
 and we should have got some better consultants in the start.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="thanks" title="Thanks">
+[% WRAPPER h2_section id = "thanks"  title = "Thanks"  %]
 
 <p>
 Thanks to the Freenode people Windrose and uberspaced for reviewing this
 memoir and giving some comments.
 </p>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

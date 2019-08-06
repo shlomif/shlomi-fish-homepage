@@ -1,12 +1,12 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish as a Programmer - the pre-Elpas Years" -%]
+[%- SET desc = "Some memoirs of Shlomi Fish about programming when he was a teenager" -%]
+[%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Windows, DOS, BASIC, QBASIC, VBA, Visual Basic for Applications, Excel" -%]
 
-#include "toc_div.wml"
 
-<latemp_subject "Shlomi Fish as a Programmer - the pre-Elpas Years" />
-<latemp_meta_desc "Some memoirs of Shlomi Fish about programming when he was a teenager" />
-<latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Windows, DOS, BASIC, QBASIC, VBA, Visual Basic for Applications, Excel" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -31,7 +31,7 @@ Last Updated:
 </dd>
 </dl>
 
-<h2_section id="xt_basic_dos" title="XTs, BASICs and DOS">
+[% WRAPPER h2_section id = "xt_basic_dos"  title = "XTs, BASICs and DOS"  %]
 
 <p>
 The first time I programmed was for an
@@ -84,9 +84,9 @@ it no longer needed line numbers unless for explicit labels. It was a bit
 like Visual Basic in this regard.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="learning_c" title="Learning C">
+[% WRAPPER h2_section id = "learning_c"  title = "Learning C"  %]
 
 <p>
 My friend became a better DOS engineer than I was, and soon bought Microsoft
@@ -132,9 +132,9 @@ and a mathematically-inclined programmer can write such routines on his
 own.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="some_basic_programs_that_saved_the_day" title="Some BASIC Programs that Saved the Day">
+[% WRAPPER h2_section id = "some_basic_programs_that_saved_the_day"  title = "Some BASIC Programs that Saved the Day"  %]
 
 <p>
 When my father bought a CD-ROM drive for our computer
@@ -163,7 +163,7 @@ Another issue was when my friend wondered what was the average of a 4d6
 minus the least score method of generating AD&amp;D abilities was. He used a C
 (or BASIC perhaps) program with several loops to calculate. I actually tried to
 find a mathematical solution and was eventually able to. (refer to <a
-href="$(ROOT)/MathVentures/3d-outof-4d-mathml.xhtml">my “Combinatorics and the
+href="[% base_path %]MathVentures/3d-outof-4d-mathml.xhtml">my “Combinatorics and the
 Art of Dungeons and Dragons” article</a> ).
 But I did check my final result (which I could calculate with a hand
 calculator) with a program I wrote to see they were identical.
@@ -186,7 +186,7 @@ on other people I told them this riddle) found has a polynomial complexity,
 which is much nicer than exponential.
 </p>
 
-<h3_section id="the_most_underestimated_feature_of_excel" title="The Most Under-estimated Feature of Excel">
+[% WRAPPER h3_section id = "the_most_underestimated_feature_of_excel"  title = "The Most Under-estimated Feature of Excel"  %]
 
 <p>
 When my father bought Excel 4.0 for Windows 3.1 I realized it came with a nice
@@ -217,11 +217,11 @@ tools for something similar later on, and my father installed the awk.exe
 program. That was after I learned UNIX)
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="income" title="Positive (albeit Small) Income">
+[% WRAPPER h2_section id = "income"  title = "Positive (albeit Small) Income"  %]
 
 <p>
 My first gig was to translate a document from English to Hebrew. I remember my
@@ -307,9 +307,9 @@ time. They can copy it and they will. Your model has to be different if
 you wish to earn money. But this is out of the scope of this document.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="israeli_edu_system" title="A Brief Encounter with Pascal and the Israeli Education System">
+[% WRAPPER h2_section id = "israeli_edu_system"  title = "A Brief Encounter with Pascal and the Israeli Education System"  %]
 
 <p>
 When I joined the 10th grade, my first grade of high school, we had
@@ -364,9 +364,9 @@ from reference books, I can eventually be able to read Arabic texts. And I
 did learn a bit about the Arabic culture through such lessons.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="epilogue" title="Epilogue">
+[% WRAPPER h2_section id = "epilogue"  title = "Epilogue"  %]
 
 <p>After I graduated from high school, I became bored, so my father
 arranged for a job interview in <a href="shlomif-at-elpas.html">Elpas</a>, a
@@ -447,4 +447,6 @@ and I think it applies to all other fields of science and engineering
 as well.
 </p>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

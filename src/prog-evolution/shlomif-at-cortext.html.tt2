@@ -1,12 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Shlomi Fish at Cortext: HTML, UNIX and Perl - oh my!" -%]
+[%- SET desc = "Some Memoirs of Shlomi Fish when Working at Cortext" -%]
+[%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Cortext, Perl, UNIX, Unix, HTML" -%]
 
-<latemp_subject "Shlomi Fish at Cortext: HTML, UNIX and Perl - oh my!" />
-<latemp_meta_desc "Some Memoirs of Shlomi Fish when Working at Cortext" />
-<latemp_more_keywords "Shlomi Fish, shlomif, Shlomi, Cortext, Perl, UNIX, Unix, HTML" />
 
-<toc_div />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -31,7 +31,7 @@ Last Updated:
 </dd>
 </dl>
 
-<h2_section id="how_i_started" title="How I started Working for Cortext">
+[% WRAPPER h2_section id = "how_i_started"  title = "How I started Working for Cortext"  %]
 
 <p>
 One qualm I had about <a href="shlomif-at-elpas.html">working at Elpas</a>
@@ -64,9 +64,9 @@ in Herzl street). Ran said “It takes 10 years to learn UNIX - I want you to
 learn it in a month”. So I set out to learn both UNIX and Perl.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="prepartions" title="Preparations">
+[% WRAPPER h2_section id = "prepartions"  title = "Preparations"  %]
 
 <p>
 Ran instructed me to buy a Linux CD-ROM and play it, and I went to a computer
@@ -100,18 +100,18 @@ would learn in a month (or in 10 years), but it turned out to be enough
 to be productive there.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="the-story-of-the-enemy" title="The Story of The Enemy">
+[% WRAPPER h2_section id = "the-story-of-the-enemy"  title = "The Story of The Enemy"  %]
 
 <p>
 My work at Cortext proved to be a catalyst for my writing of the story
-<a href="$(ROOT)/humour/TheEnemy/"><i>The Enemy and
+<a href="[% base_path %]humour/TheEnemy/"><i>The Enemy and
 How I Helped to Fight it</i></a>. I’ve told the
 <a href="http://www.advogato.org/person/shlomif/diary/227.html">more
 complete story here</a>, but I’d like to tell it from a more Cortext-oriented
 perspective. Before going to Cortext, I had spent some time reading the
-<a href="$(ROOT)/philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a>
+<a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a>
 book my father had bought when I was in the 9th grade. Neo-Tech is highly
 enlightening, but very easy to misunderstand at first and I misunderstood it
 to a large extent back when I still worked for
@@ -168,9 +168,9 @@ enabled me to be really creative and is actually reflected to a large extent
 in them.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="cortext-computers" title="The Cortext Computers">
+[% WRAPPER h2_section id = "cortext-computers"  title = "The Cortext Computers"  %]
 
 <p>
 Cortext was quite an operation. The main computer I worked on was a Pentium I
@@ -189,7 +189,7 @@ using it for a long time since as my default terminal editor.
 
 <p>
 At Cortext, we consistently used
-<a href="$(ROOT)/open-source/anti/csh/">the tcsh shell</a>, but back then I
+<a href="[% base_path %]open-source/anti/csh/">the tcsh shell</a>, but back then I
 didn’t notice a lot of difference between it and
 <a href="http://www.gnu.org/software/bash/">GNU Bash</a> that I had at home
 on my Linux system, despite the fact that they are radically different (I now
@@ -215,12 +215,12 @@ All these computers served for our job in setting up sites for clients, using
 HTML (a very old version, where best viewed in the Netscape browser, was the
 de-facto standard), the
 <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache
-web server</a>, and <my_acronym key="CGI"/> scripts written in Perl 5. Ah, the bad old days.
+web server</a>, and [% my_acronym( "key" => "CGI",) %] scripts written in Perl 5. Ah, the bad old days.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="what-I-learned" title="What I Learned">
+[% WRAPPER h2_section id = "what-I-learned"  title = "What I Learned"  %]
 
 <p>
 Cortext was my first serious introduction to the Perl 5 programming
@@ -261,4 +261,6 @@ use the GNU software without paying, but it took some time for me to get to
 the bottom of the whole “Free-as-in-speech Software” ideology.
 </p>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

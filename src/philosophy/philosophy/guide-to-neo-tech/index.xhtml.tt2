@@ -1,9 +1,11 @@
-#include "template.wml"
+[%- SET title = "Guide to the Online Neo-Tech Resources" -%]
+[%- SET desc = "Guide to the Online Neo-Tech Resources" -%]
 
-<latemp_subject "Guide to the Online Neo-Tech Resources" />
-<latemp_meta_desc "Guide to the Online Neo-Tech Resources" />
 
-<note>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER note  %]
 <h2 id="note">Note</h2>
 
 <p>
@@ -13,7 +15,7 @@ material is great, but I don’t have any control of it. Thus, please don’t
 report problems with bad links to me.
 </p>
 
-</note>
+[%- END -%]
 
 <h2>Introduction</h2>
 
@@ -145,11 +147,13 @@ Zero</a>.
 
 <p>
 I’ve recommended other very good books in my
-<a href="$(ROOT)/philosophy/books-recommends/">Book Recommendations</a>. Aside
-from that I also wrote <a href="$(ROOT)/philosophy/">many essays myself</a>
+<a href="[% base_path %]philosophy/books-recommends/">Book Recommendations</a>. Aside
+from that I also wrote <a href="[% base_path %]philosophy/">many essays myself</a>
 that are based on Neo-Tech. Also look at
 <a href="http://www.shlomifish.org/philosophy/solving/">Solving</a>, which
 is a political/philosophical system I initiated that is heavily inspired from
 both Neo-Tech and the Open Source world. Its pages may contain a lot of
 wisdom.
 </p>
+
+[% END %]

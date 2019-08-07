@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "“Usability” of the Perl Online World for Newcomers" -%]
+[%- SET desc = "“Usability” of the Perl Online World for Newcomers" -%]
 
-<latemp_subject "“Usability” of the Perl Online World for Newcomers" />
 
-<latemp_meta_desc "“Usability” of the Perl Online World for Newcomers" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 How usable is the <a href="http://www.perl.org/">Perl</a> Online World and
@@ -22,3 +23,5 @@ some discussion on Advogato.org.
 <a href="http://fc-solve.shlomifish.org/perl-att-newbies/year-after/perl-att-newbies-year-later.html">A Year (and some) Later Conclusions and Corrections</a>
 </li>
 </ul>
+
+[% END %]

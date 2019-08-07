@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Writings about Politics" -%]
+[%- SET desc = "Shlomi Fish’s Writings about Politics" -%]
 
-<latemp_subject "Shlomi Fish’s Writings about Politics" />
 
-<latemp_meta_desc "Shlomi Fish’s Writings about Politics" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are essays that deal with Politics, but from the Philosophical side.
@@ -15,7 +16,7 @@ Left-winged and Right-winged people.
 
 <div class="articles_list">
 
-<h3><a href="$(ROOT)/philosophy/SummerNSA/">The #SummerNSA Effort</a></h3>
+<h3><a href="[% base_path %]philosophy/SummerNSA/">The #SummerNSA Effort</a></h3>
 
 <p>
 An effort to make the NSA more benevolent and transparent, to successfully
@@ -23,21 +24,21 @@ end the open content / Web 2.0 revolution, to make feature films
 of the screenplay “Summerschool at the NSA”, and several other causes.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/obj-oss/">Objectivism and Open Source</a></h3>
+<h3><a href="[% base_path %]philosophy/obj-oss/">Objectivism and Open Source</a></h3>
 
 <p>
 An essay, intended for people who adhere to Ayn Rand’s Objectivism philosophy,
 that explains why the Open Source paradigm is compatible with it.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/israel-pales/">A Solution to the
+<h3><a href="[% base_path %]philosophy/israel-pales/">A Solution to the
 Israeli-Palestinian Conflict</a></h3>
 
 <p>
 This is a proposed and innovative solution to the Israeli-Palestinian Conflict.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/case-for-file-swapping/">The Case for
+<h3><a href="[% base_path %]philosophy/case-for-file-swapping/">The Case for
 File Swapping</a></h3>
 
 <p>
@@ -45,7 +46,7 @@ Brings arguments for Internet file-swapping - why it is ethical and should be
 legal, and explains why media companies are not harmed by it.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/politics/why-scientology-is-bad/">Why I
+<h3><a href="[% base_path %]philosophy/politics/why-scientology-is-bad/">Why I
 Concluded that Scientology was Bad</a></h3>
 
 <p>
@@ -53,7 +54,7 @@ How I concluded based on very limited data that the Church of Scientology was
 bad and harmful.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/politics/drug-legalisation/">The Case for
+<h3><a href="[% base_path %]philosophy/politics/drug-legalisation/">The Case for
 Drug Legalisation</a></h3>
 
 <p>
@@ -61,7 +62,7 @@ Why the so-called “War on Drugs” is the real drug problem, and why a
 legalisation of the currently illegal narcotics is the right solution.
 </p>
 
-<h4><a href="$(ROOT)/philosophy/politics/drug-legalisation/hebrew.html">Hebrew
+<h4><a href="[% base_path %]philosophy/politics/drug-legalisation/hebrew.html">Hebrew
 Translation</a></h4>
 
 <p>
@@ -69,7 +70,7 @@ Hebrew translation of the article, under the same licence.
 </p>
 
 
-<h3><a href="$(ROOT)/philosophy/politics/define-zionism/">Define
+<h3><a href="[% base_path %]philosophy/politics/define-zionism/">Define
 “Zionism”!</a></h3>
 
 <p>
@@ -77,7 +78,7 @@ An article that tries to find out whether “Zionism” and related terms are
 well-understood and explains where I stand on these issues.
 </p>
 
-<h3><a href="$(ROOT)/philosophy/politics/dispelling-myths-about-israel/">Dispelling
+<h3><a href="[% base_path %]philosophy/politics/dispelling-myths-about-israel/">Dispelling
 Some Myths about Israel</a></h3>
 
 <p>
@@ -85,3 +86,5 @@ An article that dispels some common myths about Israel.
 </p>
 
 </div>
+
+[% END %]

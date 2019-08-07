@@ -10,12 +10,12 @@ TODO:
 
 <latemp_subject "Shlomi Fish’s Random Ideas" />
 
-<latemp_meta_desc "Shlomi Fish’s Random Ideas" />
+
 
 <div class="fancy_sects side_toc">
-<toc_div />
+[% toc_div( ) %]
 
-<h2_section id="intro" title="Introduction">
+[% WRAPPER h2_section id = "intro"  title = "Introduction"  %]
 
 <p>
 Ideas are the lowest level of value-production and comprise of 1/1111 of the
@@ -32,11 +32,11 @@ them (or know of someone who did), write me a note and I’ll mention you
 on this site.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="non_computer" title="Non-computer related">
+[% WRAPPER h2_section id = "non_computer"  title = "Non-computer related"  %]
 
-<h3_section id="private_school_network" title="An Affordable Private School Network">
+[% WRAPPER h3_section id = "private_school_network"  title = "An Affordable Private School Network"  %]
 
 <p>
 Objectivists can tell you only too much about the evils of public education.
@@ -52,9 +52,9 @@ the need for public schools would be very much decreased and eventually
 completely eliminated.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="discotheques" title="Discotheques Playing Music at a Decent Volume">
+[% WRAPPER h3_section id = "discotheques"  title = "Discotheques Playing Music at a Decent Volume"  %]
 
 <p>
 I hate going to discotheque because the music is so loud and I don’t like
@@ -63,9 +63,9 @@ believe a discotheque that would make it its policy not to play music too
 loudly can actually make a lot of money from people like me.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="stand_up_philosophy" title="Stand-up Philosophy">
+[% WRAPPER h3_section id = "stand_up_philosophy"  title = "Stand-up Philosophy"  %]
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Ludwig_Wittgenstein">Ludwig
@@ -74,13 +74,13 @@ could be written that would consist entirely of jokes</q>. Well, stand-up
 philosophy is based on the opposite conjecture: that philosophy is good
 enough to be funny or at least entertaining.
 </p>
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="computer" title="Computer Related">
+[% WRAPPER h2_section id = "computer"  title = "Computer Related"  %]
 
-<h3_section id="computer_games_with_sensible_budget" title="Computer Games with a Sensible Budget">
+[% WRAPPER h3_section id = "computer_games_with_sensible_budget"  title = "Computer Games with a Sensible Budget"  %]
 
 <p>
 It is well known that to accommodate with today gaming “standards”, computer
@@ -96,21 +96,21 @@ I think it is possible and that this course of action would be better in
 the long run. Think about it.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="fortunes_mania" href="fortunes-mania/" title="Fortunes Mania">
+[% WRAPPER h3_section id = "fortunes_mania"  href = "fortunes-mania/"  title = "Fortunes Mania"  %]
 
 <p>
 An idea for a community site for the collection of quotations.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="tucan" title="Tucan - Interfacing High-level Languages">
+[% WRAPPER h3_section id = "tucan"  title = "Tucan - Interfacing High-level Languages"  %]
 
 <p>
 From a conversation I had with
-<a href="https://tddpirate.zak.co.il/">TDDPirate</a> on <my_acronym key="IRC"/>, we came
+<a href="https://tddpirate.zak.co.il/">TDDPirate</a> on [% my_acronym( "key" => "IRC",) %], we came
 to the conclusion that it would be desirable to have a framework that will
 enable code written in a certain high level language (say Perl) to make
 use of code written in a different high level language (say Python) and that
@@ -147,17 +147,17 @@ It may be a good idea to use <a href="http://www.yaml.org/">YAML</a> and/or
 Tucan.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="unixdoc" title="<a href="unixdoc/">Unixdoc</a>">
+[% WRAPPER h3_section id = "unixdoc"  title = "<a href=" unixdoc/" %]Unixdoc</a>">
 
 <p>
 An integrated documentation framework for UNIX-like systems.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="qantor-idea" title="Qantor">
+[% WRAPPER h3_section id = "qantor-idea"  title = "Qantor"  %]
 
 <p>
 <b>Qantor</b> (short for "Qantor ain't no TeX/troff - oh really!") - a
@@ -165,9 +165,9 @@ post-modern typesetting system to provide a saner alternative to TeX and
 LaTeX (and other typesetting systems).
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="eatline-idea" title="libeatline">
+[% WRAPPER h3_section id = "eatline-idea"  title = "libeatline"  %]
 
 <p>
 <b>libeatline</b> - a BSDLed alternative
@@ -196,23 +196,23 @@ Client/server model.
 
 <li>
 <p>
-Database backend. See (<a href="$(ROOT)/open-source/resources/databases-list/">list</a>)
+Database backend. See (<a href="[% base_path %]open-source/resources/databases-list/">list</a>)
 </p>
 </li>
 </ol>
 </li>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="winapt-idea" title="Winapt">
+[% WRAPPER h3_section id = "winapt-idea"  title = "Winapt"  %]
 
 <p>
 Package management for Microsoft Windows. See <a href="https://chocolatey.org/">Chocolatey</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="webmail-idea" title="A better web-based email">
+[% WRAPPER h3_section id = "webmail-idea"  title = "A better web-based email"  %]
 
 <p>
 A <b>better Web-based email</b> system, because even
@@ -225,9 +225,9 @@ the fact our client will be free for other users to install, and for competing
 services to provide data.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="yonathan" title="Yonathan">
+[% WRAPPER h3_section id = "yonathan"  title = "Yonathan"  %]
 
 <p>
 <b>The Yonathan Job Board</b> - Yonathan will be a new and actually usable
@@ -236,9 +236,9 @@ and fun job board for hiring freelancers. See
 information.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="spark-lisp" title="Spark Lisp">
+[% WRAPPER h3_section id = "spark-lisp"  title = "Spark Lisp"  %]
 
 <p>
 <a href="http://www.shlomifish.org/open-source/projects/Park-Lisp/"><b>Spark
@@ -247,9 +247,9 @@ Lisp</b></a> - a modern and usable dialect of Lisp inspired by
 Ruby, Smalltalk, and other languages.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="peque" title="Peque">
+[% WRAPPER h3_section id = "peque"  title = "Peque"  %]
 
 <p>
 <b>Peque</b> - short for "Personal Questing Engine" - a vertical engine for
@@ -260,9 +260,9 @@ Questing Archive Network" which will contain re-usable code and media for
 such games.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="nsbcpp" title="nsbcpp - the not so braindead C preprocessor">
+[% WRAPPER h3_section id = "nsbcpp"  title = "nsbcpp - the not so braindead C preprocessor"  %]
 
 <p>
 An extended version of the <a href="https://en.wikipedia.org/wiki/C_preprocessor">C preprocessor</a> which will provide:
@@ -305,8 +305,10 @@ Objects/structs/records / <a href="https://en.wikipedia.org/wiki/Associative_arr
 </p>
 </li>
 </ol>
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

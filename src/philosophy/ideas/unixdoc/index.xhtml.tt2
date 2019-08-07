@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Unixdoc - an Integrated Offline and Online Documentation Framework" -%]
+[%- SET desc = "Unixdoc - an Integrated Offline and Online Documentation Framework" -%]
 
-<latemp_subject "Unixdoc - an Integrated Offline and Online Documentation Framework" />
 
-<latemp_meta_desc "Unixdoc - an Integrated Offline and Online Documentation Framework" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -94,3 +95,5 @@ in his book <a href="http://www.faqs.org/docs/artu/"><i>The Art of Unix
 Programming</i></a>. He gives DocBook/XML as the possible solution, and this
 may actually be a good final format for Unixdoc.
 </p>
+
+[% END %]

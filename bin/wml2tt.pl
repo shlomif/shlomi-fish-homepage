@@ -19,7 +19,7 @@ s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;
 my $re =
 qr#(?:intro|perl_for_newbies_entry|note|modern_perl_entry|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|h[234]_section)#;
 
-s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, $2);
+s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, ($2 // ''));
     "[% WRAPPER $tag " . ($args =~ s{([a-z]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"
     #egms;
 s#</$re>#[%- END -%]#g;

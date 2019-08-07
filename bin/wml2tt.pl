@@ -8,8 +8,8 @@ s#<(cc_by_british_blurb|cc_by_sa_license_british|book_info|cpan_dist|cpan_self_d
     "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;
 
-s#<(mailto_link_to_self)\s([^>]*?)/>#
-    my ($tag, $args) = ($1, $2);
+s#<(cc_by_licence_section|mailto_link_to_self)\s([^>]*?)/>#
+    my ($tag, $args) = ($1, ($2 // ''));
     "[% PROCESS $tag " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . " %]"
     #egms;
 

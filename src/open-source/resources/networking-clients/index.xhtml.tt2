@@ -1,22 +1,22 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Networking Clients" -%]
+[%- SET desc = "List of network clients: IM clients, FTP clients, dedicated IRC clients, web browsers, RSS aggregators, microblogging clients, E-mail clients, P2P clients" -%]
 
-<latemp_subject "List of Networking Clients" />
 
-<latemp_meta_desc "List of network clients: IM clients, FTP clients, dedicated IRC clients, web browsers, RSS aggregators, microblogging clients, E-mail clients, P2P clients" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of various networking applications.
 The focus is on GUI client applications.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="instant-messaging" title="Instant Messaging Clients">
+[% WRAPPER h2_section id = "instant-messaging"  title = "Instant Messaging Clients"  %]
 
 <ul>
 
@@ -103,9 +103,9 @@ networks gateway.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="ftp-clients" title="FTP Clients">
+[% WRAPPER h2_section id = "ftp-clients"  title = "FTP Clients"  %]
 
 <ul>
 
@@ -159,9 +159,9 @@ Comparison of FTP client software</a>
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="irc-clients" title="Dedicated IRC (Internet Relay Chat) Clients">
+[% WRAPPER h2_section id = "irc-clients"  title = "Dedicated IRC (Internet Relay Chat) Clients"  %]
 
 <p>
 Note: some multi-protocol
@@ -239,9 +239,9 @@ extensible chat client. Open source (GPLed).
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="web-browsers" title="Web Browsers">
+[% WRAPPER h2_section id = "web-browsers"  title = "Web Browsers"  %]
 
 <ul>
 
@@ -328,9 +328,9 @@ Comparison of Web Browsers</a>
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rss-aggregators" title="RSS Feed Aggregators">
+[% WRAPPER h2_section id = "rss-aggregators"  title = "RSS Feed Aggregators"  %]
 
 <ul>
 
@@ -372,9 +372,9 @@ and RSS feeds.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="micro-blogging" title="Microblogging Clients">
+[% WRAPPER h2_section id = "micro-blogging"  title = "Microblogging Clients"  %]
 
 <ul>
 
@@ -401,9 +401,9 @@ client for the K Desktop environment.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="email-clients" title="Email Clients (Mail User Agents / MUAs)">
+[% WRAPPER h2_section id = "email-clients"  title = "Email Clients (Mail User Agents / MUAs)"  %]
 
 <ul>
 
@@ -475,9 +475,9 @@ client as well as a browser.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="p2p-clients" title="Peer-to-Peer File Sharing Clients">
+[% WRAPPER h2_section id = "p2p-clients"  title = "Peer-to-Peer File Sharing Clients"  %]
 
 <ul>
 
@@ -526,9 +526,9 @@ GUI clients, and that can be controlled by web and terminal clients.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="download-managers" title="Download Managers">
+[% WRAPPER h2_section id = "download-managers"  title = "Download Managers"  %]
 
 <ul>
 
@@ -563,9 +563,9 @@ manager for the KDE desktop environment. Open source.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="nntp-readers" title="NNTP (Net News / Usenet) Readers">
+[% WRAPPER h2_section id = "nntp-readers"  title = "NNTP (Net News / Usenet) Readers"  %]
 
 <ul>
 
@@ -598,9 +598,9 @@ console-based news reader.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="cmd-line-WWW-clients" title="Command Line WWW (HTTP, FTP, etc.) clients">
+[% WRAPPER h2_section id = "cmd-line-WWW-clients"  title = "Command Line WWW (HTTP, FTP, etc.) clients"  %]
 
 <ul>
 
@@ -629,9 +629,9 @@ support, syntax highlighting, wget-like downloads, extensions, etc.”
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="misc" title="Miscellaneous">
+[% WRAPPER h2_section id = "misc"  title = "Miscellaneous"  %]
 
 <ul>
 
@@ -654,11 +654,11 @@ based on HTTP-1.1. Open Source (Artistic 2.0).
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
-<h3_section id="fun-links" title="Fun Links">
+[% WRAPPER h3_section id = "fun-links"  title = "Fun Links"  %]
 
 <ul>
 
@@ -674,8 +674,10 @@ on
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2012" />
+[% INCLUDE cc_by_licence_section year="2012" %]
+
+[% END %]

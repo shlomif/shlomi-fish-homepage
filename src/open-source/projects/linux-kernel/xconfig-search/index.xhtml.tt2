@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Linux Kernel Patch: “make xconfig” Search Enhancement" -%]
+[%- SET desc = "Linux Kernel Patch: “make xconfig” Search Enhancement" -%]
 
-<latemp_subject "Linux Kernel Patch: “make xconfig” Search Enhancement" />
 
-<latemp_meta_desc "Linux Kernel Patch: “make xconfig” Search Enhancement" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -64,3 +65,5 @@ the Expat Licence.
 <li><a href="http://freecode.com/projects/linux-make-xconfig-patch/">Project
 Record on Freecode</a></li>
 </ul>
+
+[% END %]

@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Documentation for the Park Lisp Dialect" -%]
+[%- SET desc = "Documentation for the Park Lisp Dialect" -%]
 
-<latemp_subject "Documentation for the Park Lisp Dialect" />
-<latemp_meta_desc "Documentation for the Park Lisp Dialect" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About</h2>
 
@@ -27,3 +29,5 @@ language. (As from my impression Arc still leaves a lot to be desired.)
 </li>
 
 </ul>
+
+[% END %]

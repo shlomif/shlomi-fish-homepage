@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "libtap Maintenance" -%]
+[%- SET desc = "Maintenance version of libtap" -%]
 
-<latemp_subject "libtap Maintenance" />
 
-<latemp_meta_desc "Maintenance version of libtap" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 libtap is a library to implement <a href="http://testanything.org/">the
@@ -94,3 +95,5 @@ fixes from the CCAN (= Comprehensive C Archive Network) version of libtap.
 However, some of the changes in CCAN made the libtap API incompatible with
 that of the original libtap-1.01 so they were rejected.
 </p>
+
+[% END %]

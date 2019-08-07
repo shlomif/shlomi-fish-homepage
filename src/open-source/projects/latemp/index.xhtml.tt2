@@ -1,0 +1,17 @@
+[%- SET title = "Latemp - A static site generator" -%]
+[%- SET desc = "Latemp - A static site generator - based on Website Meta Language and other technologies - powerful but slow" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+<a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a> is a static site
+generator based on <a href="[% base_path %]open-source/projects/website-meta-language/">Website Meta
+Language</a> and other technologies. It is powerful but relatively slow.
+I use it to maintain this site,
+and <a href="http://web-cpan.shlomifish.org/latemp/examples/">several other
+sites</a>.
+</p>
+
+[% END %]

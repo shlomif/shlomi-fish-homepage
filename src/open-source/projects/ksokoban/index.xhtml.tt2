@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "KSokoban’s Maintenance Fork" -%]
+[%- SET desc = "Maintaining the original KSokoban code and porting it to KDE 4 and KDE Frameworks 5" -%]
 
-<latemp_subject "KSokoban’s Maintenance Fork" />
 
-<latemp_meta_desc "Maintaining the original KSokoban code and porting it to KDE 4 and KDE Frameworks 5" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a maintenance fork of KSokoban by Lukasz Kalamlacki and by me (=
@@ -17,11 +18,6 @@ to be based on Qt 5 and KDE Frameworks 5.
 </p>
 
 <h2 id="download">Download</h2>
-
-<set-var ver="0.12.0" />
-<set-var arc="black-hole-solver-<get-var ver />.tar.xz" />
-<set-var sqlite_dump_arc="black_hole_solver.dump.xz" />
-<set-var sqlite_dump_url="http://fc-solve.shlomifish.org/downloads/fc-solve/<get-var sqlite_dump_arc />" />
 
 <p>
 None yet. Please clone the repository.
@@ -59,3 +55,5 @@ trademark problems.
 </p>
 </li>
 </ul>
+
+[% END %]

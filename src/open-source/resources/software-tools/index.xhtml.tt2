@@ -1,23 +1,24 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Software Construction and Management Tools" -%]
+[%- SET desc = "List of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." -%]
+[%- SET more_keywords = "bug trackers, software, git, vcs, version control, CVS, subversion, GitLab, GitHub, scons, autoconf, rpm, deb, dpkg, apt, CMake, SourceForge, open source, make, unix, packaging" -%]
 
-<latemp_subject "Software Construction and Management Tools" />
 
-<latemp_meta_desc "List of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." />
-<latemp_more_keywords "bug trackers, software, git, vcs, version control, CVS, subversion, GitLab, GitHub, scons, autoconf, rpm, deb, dpkg, apt, CMake, SourceForge, open source, make, unix, packaging" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
+[% IF 0 %]
 ;;; Removed due to a firefox bug with the CSS in the sb.css. The page
 ;;; doesn't look much worse without it, anyway.
-<define-tag REMOVED_DUE_TO_FIREFOX_MISBEHAVIOR>
-<page_extra_head_elements>
-<link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
-</page_extra_head_elements>
-</define-tag>
 
-<toc_div />
+[% BLOCK _removed______page_extra_head_elements %]
+<link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
+[% END %]
+[% END %]
+
+[% toc_div( ) %]
 
 <div class="software_build">
-<h2_section id="build" title="Software Building">
+[% WRAPPER h2_section id = "build"  title = "Software Building"  %]
 
 <ul>
 
@@ -85,7 +86,7 @@ JavaScript and Node.js.
 </li>
 </ul>
 
-<h3_section id="build_links" title="Links to Lists, Comparisons and Other Resources">
+[% WRAPPER h3_section id = "build_links"  title = "Links to Lists, Comparisons and Other Resources"  %]
 
 <ul>
 
@@ -118,11 +119,11 @@ Google Spreadsheet with a Comparison of various Alternatives</a>
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="configure" title="Software Pre-building Configuration">
+[% WRAPPER h2_section id = "configure"  title = "Software Pre-building Configuration"  %]
 
 <ul>
 
@@ -134,7 +135,7 @@ and <a href="http://www.gnu.org/software/libtool/libtool.html">Libtool</a>:
 a trio of programs to portably build applications across multiple UNIX
 platforms. The de-facto standard in the open-source world, but very kludgy
 and causes many problems. See my
-<a href="$(ROOT)/open-source/anti/autohell/">“Escape
+<a href="[% base_path %]open-source/anti/autohell/">“Escape
 from GNU Autohell!”</a> page.
 </p>
 </li>
@@ -192,9 +193,9 @@ to use CMake instead.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="package" title="Software Packaging">
+[% WRAPPER h2_section id = "package"  title = "Software Packaging"  %]
 
 <ul>
 
@@ -288,9 +289,9 @@ effort to port and package open source software for macOS .
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="scm" title="Version Control Systems">
+[% WRAPPER h2_section id = "scm"  title = "Version Control Systems"  %]
 
 <ul>
 
@@ -354,7 +355,7 @@ version control and bug tracking system. (Apache licence).
 
 </ul>
 
-<h3_section id="scm_links" title="Links to Lists, Comparisons, and Other Resources">
+[% WRAPPER h3_section id = "scm_links"  title = "Links to Lists, Comparisons, and Other Resources"  %]
 
 <ul>
 
@@ -385,11 +386,11 @@ directory may also prove helpful.</a>.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="bug_tracking" title="Bug Tracking">
+[% WRAPPER h2_section id = "bug_tracking"  title = "Bug Tracking"  %]
 
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
@@ -459,9 +460,9 @@ of some relevance.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="testing" title="Testing Frameworks">
+[% WRAPPER h2_section id = "testing"  title = "Testing Frameworks"  %]
 
 <ul>
 
@@ -504,9 +505,9 @@ for acceptance testing (system tests etc.).
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="continuous_integration_tools" title="Continuous Integration Tools and Services">
+[% WRAPPER h2_section id = "continuous_integration_tools"  title = "Continuous Integration Tools and Services"  %]
 
 <ul>
 
@@ -538,9 +539,9 @@ Ubuntu Linux, available for GitHub, GitLab, Bitbucket and other services.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="all_in_one_proj_mgmt" title="All in One Project Management Programs">
+[% WRAPPER h2_section id = "all_in_one_proj_mgmt"  title = "All in One Project Management Programs"  %]
 
 <ul>
 
@@ -623,9 +624,9 @@ deployment. Written in Ruby-on-Rails and other languages.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -638,16 +639,16 @@ best practices in the software industry.
 </li>
 </ul>
 
-</links_sect>
+[%- END -%]
 
 </div>
 
-<cc_by_licence_section year="2011" />
+[% PROCESS cc_by_licence_section "year" => "2011",  %]
 
 <!-- To add:
-
 Configuration: the SC entries,
 SCMs: BitKeeper.
 Testing: Expect.
-
 -->
+
+[% END %]

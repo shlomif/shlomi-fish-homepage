@@ -1,18 +1,16 @@
-#include "template.wml"
-#include "toc_div.wml"
-
-<latemp_subject "Directory of Numerical Software" />
-
-<latemp_meta_desc "A small, hand-maintained, directory of numerical software: spreadsheets, statistical analysis software, computer algebra systems (CASes), matrix/tensor-based packages, etc." />
-
-<page_extra_head_elements>
+[%- SET title = "Directory of Numerical Software" -%]
+[%- SET desc = "A small, hand-maintained, directory of numerical software: spreadsheets, statistical analysis software, computer algebra systems (CASes), matrix/tensor-based packages, etc." -%]
+[% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
-</page_extra_head_elements>
+[% END %]
 
 
-<toc_div />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<intro>
+[% toc_div( ) %]
+
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, directory of numerical software:
@@ -20,9 +18,9 @@ spreadsheets, statistical analysis software, computer algebra systems (CASes),
 matrix/tensor-based packages, etc.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="tensor-based" title="Tensor-based">
+[% WRAPPER h2_section id = "tensor-based"  title = "Tensor-based"  %]
 
 <ul>
 
@@ -66,10 +64,12 @@ an open-source IDL-clone.
 
 </ul>
 
-;;; End of MATLAB-like
-</h2_section>
+[% # End of MATLAB-like
+%]
 
-<h2_section id="spreadsheets" title="Spreadsheets">
+[%- END -%]
+
+[% WRAPPER h2_section id = "spreadsheets"  title = "Spreadsheets"  %]
 
 <ul>
 
@@ -117,11 +117,13 @@ Python-based and oriented spreadsheet that uses python formulae.
 
 </ul>
 
-;;; End of Spreadsheets.
+[% # End of Spreadsheets.
+%]
 
-</h2_section>
 
-<h2_section id="CASes" title="Computer Algebra Systems (CASes)">
+[%- END -%]
+
+[% WRAPPER h2_section id = "CASes"  title = "Computer Algebra Systems (CASes)"  %]
 
 <ul>
 
@@ -161,11 +163,13 @@ Open-source.
 
 </ul>
 
-;;; End of Computer Algebra Systems (CASes).
+[% # End of Computer Algebra Systems (CASes).
+%]
 
-</h2_section>
 
-<h2_section id="statistical" title="Statistical Software">
+[%- END -%]
+
+[% WRAPPER h2_section id = "statistical"  title = "Statistical Software"  %]
 
 <ul>
 
@@ -181,11 +185,13 @@ program for Statistics. Should be very complete.
 
 </ul>
 
-;;; End of Statistical Software
+[% # End of Statistical Software
+%]
 
-</h2_section>
 
-<h2_section id="libraries" title="Libraries">
+[%- END -%]
+
+[% WRAPPER h2_section id = "libraries"  title = "Libraries"  %]
 
 <ul>
 
@@ -216,13 +222,15 @@ restrictive).
 
 </ul>
 
-;;; End of libraries
+[% # End of libraries
+%]
 
-</h2_section>
 
-<h2_section id="calculators" title="Calculators">
+[%- END -%]
 
-<h3_section id="gui-calculators" title="Graphical (GUI) Calculators">
+[% WRAPPER h2_section id = "calculators"  title = "Calculators"  %]
+
+[% WRAPPER h3_section id = "gui-calculators"  title = "Graphical (GUI) Calculators"  %]
 
 <ul>
 
@@ -249,9 +257,9 @@ BC or Matlab. Open source, GPLv3.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="cli-calculators" title="Command Line Calculators">
+[% WRAPPER h3_section id = "cli-calculators"  title = "Command Line Calculators"  %]
 
 <ul>
 
@@ -272,13 +280,15 @@ Unix Programming Environment</a>.
 
 </ul>
 
-;;; End of calculators
+[% # End of calculators
+%]
 
-</h3_section>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[%- END -%]
+
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -295,6 +305,8 @@ with many comments.
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2009" />
+[% PROCESS cc_by_licence_section "year" => "2009",  %]
+
+[% END %]

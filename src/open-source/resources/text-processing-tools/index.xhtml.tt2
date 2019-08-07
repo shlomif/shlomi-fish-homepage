@@ -1,13 +1,13 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Text Processing Tools" -%]
+[%- SET desc = "List of text processing tools: processors, template systems, parser generators, regular expression libraries, etc." -%]
 
-<latemp_subject "List of Text Processing Tools" />
 
-<latemp_meta_desc "List of text processing tools: processors, template systems, parser generators, regular expression libraries, etc." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of automated text processing tools.
@@ -15,9 +15,9 @@ You may also be interested in <a href="../editors-and-IDEs/">my list of
 text editors and IDEs</a>.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="general_preprocessors" title="General-Purpose Preprocessors">
+[% WRAPPER h2_section id = "general_preprocessors"  title = "General-Purpose Preprocessors"  %]
 
 <ul>
 
@@ -64,9 +64,9 @@ that it appears to be the most popular preprocessor.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="general_template_systems" title="General-purpose Template Systems">
+[% WRAPPER h2_section id = "general_template_systems"  title = "General-purpose Template Systems"  %]
 
 <ul>
 
@@ -131,9 +131,9 @@ unmaintained since 2010 and does not support Python 3.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="parser_generators" title="Parser Generators">
+[% WRAPPER h2_section id = "parser_generators"  title = "Parser Generators"  %]
 
 <ul>
 
@@ -209,9 +209,9 @@ the SQLite project. Open source (public domain).
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="regex_libs" title="Regular Expression Libraries">
+[% WRAPPER h2_section id = "regex_libs"  title = "Regular Expression Libraries"  %]
 
 <ul>
 
@@ -224,9 +224,9 @@ comparison of regular expression engines</a>.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="diff_and_patch" title="Diffing and Patching Tools">
+[% WRAPPER h2_section id = "diff_and_patch"  title = "Diffing and Patching Tools"  %]
 
 <ul>
 
@@ -282,11 +282,11 @@ to GNU diff for comparing files on a word-per-word basis.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="specialised_processors" title="Specialised Processors">
+[% WRAPPER h2_section id = "specialised_processors"  title = "Specialised Processors"  %]
 
-<h3_section id="xml_processors" title="XML Processors">
+[% WRAPPER h3_section id = "xml_processors"  title = "XML Processors"  %]
 
 <ul>
 
@@ -316,11 +316,11 @@ transformation languages</a> - a Wikipedia page containing more alternatives.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="unix_text_processing_tools" title="Standard UNIX Text Processing Tools">
+[% WRAPPER h2_section id = "unix_text_processing_tools"  title = "Standard UNIX Text Processing Tools"  %]
 
 <ul>
 
@@ -419,9 +419,9 @@ idiosyncrasies).
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="prog_langs_with_text_proc_support" title="Some General-Purpose Programming Languages with Good Text Processing Support">
+[% WRAPPER h2_section id = "prog_langs_with_text_proc_support"  title = "Some General-Purpose Programming Languages with Good Text Processing Support"  %]
 
 <ul>
 <li>
@@ -459,9 +459,9 @@ with many powerful features. Also see <a href="http://perl6maven.com/">Perl
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -481,7 +481,7 @@ markup language” article on the Wikipedia</a> - also contains a comparison.
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/computers/web/which-wiki/">“Which Open Source
+<a href="[% base_path %]philosophy/computers/web/which-wiki/">“Which Open Source
 Wiki Works for You?”</a> - an article I wrote about wikis (also see the
 update).
 </p>
@@ -528,7 +528,7 @@ Explained</a> + <a href="https://nostarch.com/perloneliners">book</a>.
 
 </ul>
 
-<h3_section id="fun-links" title="Fun Links">
+[% WRAPPER h3_section id = "fun-links"  title = "Fun Links"  %]
 
 <ul>
 
@@ -541,7 +541,7 @@ comment on parsing HTML using regular expressions.</a>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT Facts</a> (on this site).
+<a href="[% base_path %]humour/bits/facts/XSLT/">XSLT Facts</a> (on this site).
 </p>
 </li>
 
@@ -561,8 +561,10 @@ cartoon.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2012" />
+[% PROCESS cc_by_licence_section "year" => "2012",  %]
+
+[% END %]

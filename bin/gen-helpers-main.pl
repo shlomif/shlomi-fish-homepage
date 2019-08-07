@@ -113,6 +113,22 @@ $render->spew_utf8(
 );
 $render->chmod(0755);
 
+my $iter = path("./src")->iterator( { recurse => 1, } );
+my @tt;
+my %src_dirs;
+while ( my $next = $iter->() )
+{
+    my $s = "$next";
+    $s =~ s#\A(\./)?src/##;
+    if ( -d $next )
+    {
+        $src_dirs{$s} = 1;
+    }
+    elsif ( $s =~ s#\.tt2\z## )
+    {
+        push @tt, $s;
+    }
+}
 my $generator = HTML::Latemp::GenMakeHelpers->new(
     'hosts' => [
         map {
@@ -145,7 +161,14 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                 }
                 if ( $is_bucket->('DIRS') )
                 {
-                    return $ipp_filter->($filenames);
+                    return [
+                        sort keys %{
+                            +{
+                                %src_dirs,
+                                map { $_ => 1 } @{ $ipp_filter->($filenames) }
+                            }
+                        }
+                    ];
                 }
             }
             return $filenames;
@@ -171,17 +194,6 @@ $text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
 }
 
 $r_fh->spew_utf8($text);
-my $iter = path("./src")->iterator( { recurse => 1, } );
-my @tt;
-while ( my $next = $iter->() )
-{
-    my $s = "$next";
-    $s =~ s#\A(\./)?src/##;
-    if ( $s =~ s#\.tt2\z## )
-    {
-        push @tt, $s;
-    }
-}
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
 _my_system( [ 'gmake', 'bulk-make-dirs' ] );

@@ -1,16 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[% SET title= "Shlomi Fish’s Random Ideas" %]
 
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 <!--
 TODO:
 * Add cups/glasses with identifying marks.
 * Add "Have a Life" Scholarships.
 -->
-
-<latemp_subject "Shlomi Fish’s Random Ideas" />
-
-
 
 <div class="fancy_sects side_toc">
 [% toc_div( ) %]
@@ -149,7 +145,7 @@ Tucan.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "unixdoc"  title = "<a href=" unixdoc/" %]Unixdoc</a>">
+[% WRAPPER h3_section id = "unixdoc"  title = "Unixdoc" href="unixdoc/" %]
 
 <p>
 An integrated documentation framework for UNIX-like systems.

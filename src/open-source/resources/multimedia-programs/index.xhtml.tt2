@@ -1,22 +1,22 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Multimedia Applications" -%]
+[%- SET desc = "List of Multimedia Applications: all-in-one media players, dedicated music players, video downloaders, waveform editors, etc." -%]
 
-<latemp_subject "List of Multimedia Applications" />
 
-<latemp_meta_desc "List of Multimedia Applications: all-in-one media players, dedicated music players, video downloaders, waveform editors, etc." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of various multimedia-related
 applications.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="media-players" title="All-in-one Media Players">
+[% WRAPPER h2_section id = "media-players"  title = "All-in-one Media Players"  %]
 
 <ul>
 
@@ -76,9 +76,9 @@ Comparison of Video Player Software</a>.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="dedicated-music-players" title="Dedicated Music Players">
+[% WRAPPER h2_section id = "dedicated-music-players"  title = "Dedicated Music Players"  %]
 
 <ul>
 
@@ -152,9 +152,9 @@ Comparison of Audio Player Software</a>.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="video-downloaders" title="Video Downloaders">
+[% WRAPPER h2_section id = "video-downloaders"  title = "Video Downloaders"  %]
 
 <ul>
 
@@ -178,9 +178,9 @@ DownloadHelper</a> - an extension for Firefox that downloads videos from
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="waveform-editors" title="Waveform Editors">
+[% WRAPPER h2_section id = "waveform-editors"  title = "Waveform Editors"  %]
 
 <ul>
 
@@ -209,9 +209,9 @@ OS X.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="video-editors" title="Video Editors">
+[% WRAPPER h2_section id = "video-editors"  title = "Video Editors"  %]
 
 <ul>
 
@@ -248,9 +248,9 @@ and Microsoft Windows.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -262,6 +262,8 @@ and Microsoft Windows.
 </li>
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2012" />
+[% PROCESS cc_by_licence_section "year" => "2012",  %]
+
+[% END %]

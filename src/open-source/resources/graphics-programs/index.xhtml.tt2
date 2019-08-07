@@ -1,13 +1,13 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Graphics Applications" -%]
+[%- SET desc = "List of Graphics Applications: image browsers, raster editors, vector editors, 3-D programs" -%]
 
-<latemp_subject "List of Graphics Applications" />
 
-<latemp_meta_desc "List of Graphics Applications: image browsers, raster editors, vector editors, 3-D programs" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of various computer graphics-related
@@ -17,9 +17,9 @@ of proprietary applications for Mac OS X, and to a lesser extent, Microsoft
 Windows.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="image-browsers" title="Image Browsers">
+[% WRAPPER h2_section id = "image-browsers"  title = "Image Browsers"  %]
 
 <ul>
 
@@ -105,9 +105,9 @@ open-source image viewer for the GNOME platform. Provides limited functionality.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="raster-editors" title="Raster/Bitmap Editors">
+[% WRAPPER h2_section id = "raster-editors"  title = "Raster/Bitmap Editors"  %]
 
 <ul>
 
@@ -226,9 +226,9 @@ for editing using the web browser (including on mobile devices).
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="two-d-vector-editors" title="(2-D) Vector Editors">
+[% WRAPPER h2_section id = "two-d-vector-editors"  title = "(2-D) Vector Editors"  %]
 
 <ul>
 
@@ -296,9 +296,9 @@ Mac OS X.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="diagramming" title="Diagramming Software">
+[% WRAPPER h2_section id = "diagramming"  title = "Diagramming Software"  %]
 
 <ul>
 
@@ -328,9 +328,9 @@ Microsoft. It is feature-rich and powerful.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="three-d-editors" title="3-D Editors">
+[% WRAPPER h2_section id = "three-d-editors"  title = "3-D Editors"  %]
 
 <ul>
 
@@ -357,9 +357,9 @@ of Windows, Mac OS X and Linux).
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="two-d-animation" title="Two Dimensional (2-D) Animation Software">
+[% WRAPPER h2_section id = "two-d-animation"  title = "Two Dimensional (2-D) Animation Software"  %]
 
 <ul>
 
@@ -386,9 +386,9 @@ and web-based editor for animated sprites and pixel art.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="screenshotting" title="Screenshotting Programs">
+[% WRAPPER h2_section id = "screenshotting"  title = "Screenshotting Programs"  %]
 
 <ul>
 
@@ -401,9 +401,9 @@ and powerful screenshotting program for Linux.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="screencasting" title="Screen Recording (Screencasting) Programs">
+[% WRAPPER h2_section id = "screencasting"  title = "Screen Recording (Screencasting) Programs"  %]
 
 <ul>
 
@@ -438,9 +438,9 @@ Recorders for Linux in 2019”</a> - a list on "It's FOSS".
 </ul>
 
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="APIs" title="Graphics APIs">
+[% WRAPPER h2_section id = "APIs"  title = "Graphics APIs"  %]
 
 <ul>
 
@@ -467,30 +467,30 @@ Library</a> - an open-source library to generate images (BSD-like licence).
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/resources/multimedia-programs/">List of
+<a href="[% base_path %]open-source/resources/multimedia-programs/">List of
 Multimedia Applications</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/art/">Art Section of My Home Site</a>
+<a href="[% base_path %]art/">Art Section of My Home Site</a>
 </p>
 </li>
 
 </ul>
 
-</see_also>
+[% END %]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -521,9 +521,9 @@ of awesome free &amp; open source software &amp; libraries for photography”</a
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="credits" title="Credits">
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
 
 <ul>
 
@@ -543,6 +543,8 @@ Logo</a> taken from the English Wikipedia under the GPL.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<cc_by_licence_section year="2015" />
+[% PROCESS cc_by_licence_section "year" => "2015",  %]
+
+[% END %]

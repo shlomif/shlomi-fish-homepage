@@ -1,23 +1,22 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "List of Databases’ Implementations" -%]
+[%- SET desc = "List of Databases’ Implementations: key/value stores, SQL databases, Distributed databases, etc." -%]
+[%- SET more_keywords = "software, databases, SQL, mysql, berkeley db, oracle, postgres, postgresql, nosql, mongo db, open source, unix" -%]
 
-<latemp_subject "List of Databases’ Implementations" />
 
-<latemp_meta_desc "List of Databases’ Implementations: key/value stores, SQL databases, Distributed databases, etc." />
-<latemp_more_keywords "software, databases, SQL, mysql, berkeley db, oracle, postgres, postgresql, nosql, mongo db, open source, unix" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of various database implementations.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="key-val-DBs" title="Filesystem-based Key/Value Databases">
+[% WRAPPER h2_section id = "key-val-DBs"  title = "Filesystem-based Key/Value Databases"  %]
 
 <ul>
 
@@ -57,9 +56,9 @@ key-value storage” under the open source and permissive 2-clause BSD licence.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="other-FS-based" title="Other Filesystem-based Databases">
+[% WRAPPER h2_section id = "other-FS-based"  title = "Other Filesystem-based Databases"  %]
 
 <ul>
 
@@ -83,9 +82,9 @@ with, the UNIX Operating System. ”
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="FS-based-SQL" title="Filesystem Based SQL databases">
+[% WRAPPER h2_section id = "FS-based-SQL"  title = "Filesystem Based SQL databases"  %]
 
 <ul>
 
@@ -114,9 +113,9 @@ or filesystem-based SQL-database. Proprietary.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="networked-SQL" title="Networked (Client/Server) SQL Databases">
+[% WRAPPER h2_section id = "networked-SQL"  title = "Networked (Client/Server) SQL Databases"  %]
 
 <ul>
 
@@ -219,9 +218,9 @@ available as open source software for some years.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="xml-DBs" title="XML Databases">
+[% WRAPPER h2_section id = "xml-DBs"  title = "XML Databases"  %]
 
 <ul>
 
@@ -229,7 +228,7 @@ available as open source software for some years.
 <p>
 <a href="https://en.wikipedia.org/wiki/BaseX">BaseX</a> - an open-source
 (BSD-style licence) and cross-platform client/server XML database written in
-Java, with a RESTful <my_acronym key="API"/> for other languages.
+Java, with a RESTful [% my_acronym( "key" => "API",) %] for other languages.
 </p>
 </li>
 
@@ -243,9 +242,9 @@ and other technologies.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="object-DBs" title="Object Databases">
+[% WRAPPER h2_section id = "object-DBs"  title = "Object Databases"  %]
 
 <ul>
 
@@ -265,9 +264,9 @@ and cross-platform object database written in Java.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="distributed-DBs-NoSQL" title="Distributed Databases (so-called “NoSQL”)">
+[% WRAPPER h2_section id = "distributed-DBs-NoSQL"  title = "Distributed Databases (so-called “NoSQL”)"  %]
 
 <ul>
 
@@ -336,46 +335,41 @@ under the AGPL licence and a proprietary licence.
 <li>
 <p>
 <a href="http://docs.aws.amazon.com/gettingstarted/latest/awsgsg-intro/gsg-aws-database.html">Database Services for Amazon Web Services (“AWS”)</a> - Hosted
-solutions for AWS (proprietary with open source <my_acronym key="API"/>s).
+solutions for AWS (proprietary with open source [% my_acronym( "key" => "API",) %]s).
 </p>
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
 <!--
-
 To add:
-
 * Unified database APIs
     - ODBC
     - JDBC
     - Perl’s DBI.
-
 * ORMs
-
 * Visual Database Designers.
     - MS Access.
     - LibreOffice Base.
-
 -->
 
-<see_also>
+[% WRAPPER see_also %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/resources/text-processing-tools/">List of
+<a href="[% base_path %]open-source/resources/text-processing-tools/">List of
 Text Processing Tools</a>.
 </p>
 </li>
 
 </ul>
 
-</see_also>
+[% END %]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -388,6 +382,8 @@ Text Processing Tools</a>.
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2015" />
+[% PROCESS cc_by_licence_section "year" => "2015",  %]
+
+[% END %]

@@ -1,27 +1,27 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Text Editors and IDEs" -%]
+[%- SET desc = "List of Text Editors and IDEs: cross-platform, platform-specific, open source, non-open source." -%]
+[%- SET more_keywords = "editors, text, IDEs, vim, vi, emacs, open source, software, hex, debuggers, gui, user interface, linux, windows, kde, programmers, developers" -%]
 
-<latemp_subject "List of Text Editors and IDEs" />
 
-<latemp_meta_desc "List of Text Editors and IDEs: cross-platform, platform-specific, open source, non-open source." />
-<latemp_more_keywords "editors, text, IDEs, vim, vi, emacs, open source, software, hex, debuggers, gui, user interface, linux, windows, kde, programmers, developers" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This is a small, hand-maintained, list of text editors and IDEs (Integrated
 Development Environments), useful for programmers and other developers.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="open-source" title="Open Source Text Editors and IDEs">
+[% WRAPPER h2_section id = "open-source"  title = "Open Source Text Editors and IDEs"  %]
 
-<h3_section id="cross-platform-open-editors" title="Cross-Platform Open Source Editors">
+[% WRAPPER h3_section id = "cross-platform-open-editors"  title = "Cross-Platform Open Source Editors"  %]
 
 <ul>
 
@@ -167,9 +167,9 @@ its philosophy.
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="cross-platform-open-IDEs" title="Cross-Platform Open Source IDEs">
+[% WRAPPER h3_section id = "cross-platform-open-IDEs"  title = "Cross-Platform Open Source IDEs"  %]
 
 <ul>
 
@@ -269,9 +269,9 @@ and a music and video player. (MIT licence).
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="platform-specific-open-editors" title="Platform-specific Open Source Editors">
+[% WRAPPER h3_section id = "platform-specific-open-editors"  title = "Platform-specific Open Source Editors"  %]
 
 <ul>
 
@@ -314,9 +314,9 @@ systems.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="open-GUI-designers" title="Open Source GUI Designers">
+[% WRAPPER h3_section id = "open-GUI-designers"  title = "Open Source GUI Designers"  %]
 
 <ul>
 
@@ -336,9 +336,9 @@ wxWidgets. (MIT/Expat-licensed).
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="open-hex-editors" title="Open Source Hex Editors">
+[% WRAPPER h3_section id = "open-hex-editors"  title = "Open Source Hex Editors"  %]
 
 <ul>
 
@@ -401,9 +401,9 @@ the binary, and can be used in conjunction with a text editor such as Vim.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="open-debugger-GUIs" title="Open Source Debugger GUIs">
+[% WRAPPER h3_section id = "open-debugger-GUIs"  title = "Open Source Debugger GUIs"  %]
 
 <ul>
 
@@ -432,13 +432,13 @@ source (GPL) front-end for gdb based on the GNOME project and its components.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="non-foss" title="Non-Open-Source Text Editors and IDEs">
+[% WRAPPER h2_section id = "non-foss"  title = "Non-Open-Source Text Editors and IDEs"  %]
 
-<h3_section id="non-foss-editors" title="Non Open-source (and probably platform-specific) Editors">
+[% WRAPPER h3_section id = "non-foss-editors"  title = "Non Open-source (and probably platform-specific) Editors"  %]
 
 <ul>
 
@@ -481,9 +481,9 @@ editor for Windows, x86 Linux and Mac OS X.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="non-foss-IDEs" title="Non Open-source (and probably platform-specific) IDEs">
+[% WRAPPER h3_section id = "non-foss-IDEs"  title = "Non Open-source (and probably platform-specific) IDEs"  %]
 
 <ul>
 
@@ -550,33 +550,33 @@ OS X and iOS. Runs only on Mac OS X.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/resources/text-processing-tools/">List of Text
+<a href="[% base_path %]open-source/resources/text-processing-tools/">List of Text
 Processing Tools</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/resources/software-tools/">List of
+<a href="[% base_path %]open-source/resources/software-tools/">List of
 Software Build and Management Tools</a>
 </p>
 </li>
 
 </ul>
 
-</see_also>
+[% END %]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -617,7 +617,7 @@ mentions many alternatives and discusses their merits.
 
 </ul>
 
-<h3_section id="fun-links" title="Fun Links">
+[% WRAPPER h3_section id = "fun-links"  title = "Fun Links"  %]
 
 <ul>
 
@@ -658,29 +658,29 @@ Vim from 1993 today”</a>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=eclipse-is-emacs-for-the-21st-century">“Eclipse
+<a href="[% base_path %]humour/fortunes/show.cgi?id=eclipse-is-emacs-for-the-21st-century">“Eclipse
 is Emacs for the 21st Century”</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=eclipsed">“Eclipsed” IRC conversation</a>.
+<a href="[% base_path %]humour/fortunes/show.cgi?id=eclipsed">“Eclipsed” IRC conversation</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=how-many-clicks">“How many clicks?”</a> - IRC conversation.
+<a href="[% base_path %]humour/fortunes/show.cgi?id=how-many-clicks">“How many clicks?”</a> - IRC conversation.
 </p>
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="credits" title="Credits">
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
 
 <ul>
 
@@ -721,8 +721,10 @@ owned by the Eclipse Foundation, under “Fair Use”.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<cc_by_licence_section year="2011" />
+[% PROCESS cc_by_licence_section "year" => "2011",  %]
 
 </div>
+
+[% END %]

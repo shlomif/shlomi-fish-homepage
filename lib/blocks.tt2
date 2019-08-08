@@ -47,6 +47,50 @@
 [% content %]
 </section>
 [%- END -%]
+[% BLOCK docbook_formats %]
+
+<section class="docbook_formats h2">
+
+<h2 id="[% h2_id %]">[% h2_text %]</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="[% indiv_href %]">Read Online</a> - one
+page per section.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% epub_href %]">EPUB</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% orig_xml_href %]">Original DocBook 5/XML</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% pdf_href %]">PDF (Acrobat Reader)</a>
+</p>
+</li>
+
+</ul>
+
+</section>
+
+[% END %]
+
+[% BLOCK docbook_formats_w_base %]
+
+[% INCLUDE docbook_formats h2_id=h2_id h2_text=h2_text indiv_href=base _ "/" epub_href=base _".epub" orig_xml_href=base _".xml" pdf_href=base _".pdf" %]
+
+[% END %]
 [% BLOCK files_and_directories_modules %]
 
 <h2 id="modules">Modules</h2>

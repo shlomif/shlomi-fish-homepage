@@ -1,17 +1,16 @@
-#include "template.wml"
+[%- SET title = "Open Source, Free Software and Other Beasts" -%]
+[%- SET desc = "What is Open Source? What is Free Software? Why is it important? Read the essay to find out." -%]
 
-#include "Inc/db_formats.wml"
 
-<latemp_subject "Open Source, Free Software and Other Beasts" />
-
-<latemp_meta_desc "What is Open Source? What is Free Software? Why is it important? Read the essay to find out." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 What is Open Source? What is Free Software? Why is it important? Read the
 essay I wrote about it to find out.
 </p>
 
-<docbook_formats_w_base h2_id="v3_formats" h2_text="Third Version (Latest)" base="version-3/foss-and-other-beasts-v3" />
+[% PROCESS docbook_formats_w_base h2_id = "v3_formats", h2_text = "Third Version (Latest)", base = "version-3/foss-and-other-beasts-v3"  %]
 
 <h2>Second Revision</h2>
 
@@ -30,3 +29,5 @@ essay I wrote about it to find out.
 <a href="http://fc-solve.shlomifish.org/oss-fs/docbook/">Various formats</a>
 of the first revision of this essay.
 </p>
+
+[% END %]

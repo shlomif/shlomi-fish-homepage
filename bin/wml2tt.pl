@@ -8,9 +8,9 @@ s#<(cc_by_british_blurb|cc_by_sa_license_british|book_info|cpan_dist|cpan_self_d
     "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;
 
-s#<(cc_by_licence_section|mailto_link_to_self)\s([^>]*?)/>#
+s#<(cc_by_licence_section|docbook_formats_w_base|mailto_link_to_self)\s([^>]*?)/>#
     my ($tag, $args) = ($1, ($2 // ''));
-    "[% PROCESS $tag " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . " %]"
+    "[% PROCESS $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
     #egms;
 
 s#<pdoc_f f="(\w+)">#[%- WRAPPER pdoc_f f = "$1" -%]#g;

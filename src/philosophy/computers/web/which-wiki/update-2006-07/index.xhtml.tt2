@@ -1,10 +1,9 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "July 2006 Update to “Which Wiki”" -%]
+[%- SET desc = "July 2006 Update to “Which Wiki”" -%]
 
-<latemp_subject "July 2006 Update to “Which Wiki”" />
 
-<latemp_meta_desc "July 2006 Update to “Which Wiki”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About this Document</h2>
 
@@ -14,7 +13,7 @@ about wikis. Furthermore wiki spam has become much more of a problem, and
 I’d like to detail some ways of fighting it. Without further ado: here it is.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -41,7 +40,7 @@ Last Updated:
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2006" />
+[% cc_by_british_blurb( "year" => "2006", ) %]
 
 <h2 id="body">The Article Itself</h2>
 
@@ -179,9 +178,8 @@ annoying.
 Again</h3>
 
 <p>
-The CPAN Module
-<cpan_self_dist d="HTML-WikiConverter" />
-allows one to convert HTML to the formats of most popular Wikis. DocBook/XML
+The CPAN Module [% cpan_self_dist( "d" => "HTML-WikiConverter", ) %] allows
+one to convert HTML to the formats of most popular Wikis. DocBook/XML
 and POD can generate HTML, which means they can be fed to it in turn.
 </p>
 
@@ -194,3 +192,5 @@ and from that to DocBook and many other formats. Finally there’s
 Summer of Code project</a> for working on a MoinMoin to-and-from DocBook/XML
 conversion.
 </p>
+
+[% END %]

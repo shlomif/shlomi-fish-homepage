@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "When C is the Best (Tool for the Job)" -%]
+[%- SET desc = "Trying to explain why the C language is sometimes the best language to use for writing a software application." -%]
 
-<latemp_subject "When C is the Best (Tool for the Job)" />
 
-<latemp_meta_desc "Trying to explain why the C language is sometimes the best language to use for writing a software application." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="when-c-is-the-best.html">The Essay Itself</a></h2>
 
@@ -24,3 +25,5 @@ why it will also <b>feel wrong</b> in Java.
 this article in OSNews</a>
 </li>
 </ul>
+
+[% END %]

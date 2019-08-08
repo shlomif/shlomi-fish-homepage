@@ -30,3 +30,7 @@ function Deftag()
     :'a,'es/^<define-tag.*/[% IF 0 %]/
     :'a,'es/^<\/define-tag>/[% END %]/
 endfunction
+function Block()
+    :'a,'es/<define-tag \(\w\+\)>/[% BLOCK \1 %]/
+    :'a,'es/<get-var \(\S\+\) *\/>/[% \1 %]/g
+endfunction

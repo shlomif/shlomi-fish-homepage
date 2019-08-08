@@ -26,3 +26,7 @@ function H4_repl()
     :%s/<section class="h2">[\s\n]*<h2 id="\([^"]\+\)">\(\_[^<]\+\)<\/h2>\(\_.\{-\}\)<\/section>/<h2_section id="\1" title="\2">\3<\/h2_section>/
     :%s/\n\n\+//g
 endfunction
+function Deftag()
+    :'a,'es/^<define-tag.*/[% IF 0 %]/
+    :'a,'es/^<\/define-tag>/[% END %]/
+endfunction

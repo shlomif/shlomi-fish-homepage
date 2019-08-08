@@ -1,6 +1,9 @@
-#include "template.wml"
-<latemp_subject "A First-Come First-Served Readers/Writers Lock" />
-<latemp_meta_desc "A First-Come First-Served Readers/Writers Lock" />
+[%- SET title = "A First-Come First-Served Readers/Writers Lock" -%]
+[%- SET desc = "A First-Come First-Served Readers/Writers Lock" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="pthread_rwlock_fcfs-0.8.0.tar.bz2"><b>Download the latest (0.8.0) stable version source code.</b></a>
@@ -10,13 +13,13 @@
 <a href="linux-kernel/">FCFS flock for the Linux Kernel</a>
 </p>
 
-<define-tag devel_version>
+[% IF 0 %]
 ;;; removed until I have a new development version
 
 <p>
 <a href="pthread_rwlock_fcfs-0.3.5.tar.gz">Development version</a>
 </p>
-</define-tag>
+[% END %]
 
 <p>
 This is a working implementation of a First-Come First-Served
@@ -25,7 +28,7 @@ so I believe it can also serve as a reference implementation for those
 who wish to implement such a mechanism for other platforms.
 </p>
 
-<licence_sect>
+[% WRAPPER licence_sect  %]
 
 <p>
 You may use this code under your choice of:
@@ -34,7 +37,7 @@ You may use this code under your choice of:
 <ul>
 <li>
 <p>
-<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;"><img src="$(ROOT)/images/CC-zero-1.0-88x31.png" alt="CC0"/></a>
+<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;"><img src="[% base_path %]images/CC-zero-1.0-88x31.png" alt="CC0"/></a>
 <br />
 To the extent possible under law, <a href="http://www.shlomifish.org/"><span>Shlomi Fish</span></a>
 has waived all copyright and related or neighbouring rights to
@@ -50,9 +53,9 @@ This work is published from
 </li>
 </ul>
 
-</licence_sect>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -67,17 +70,17 @@ This work is published from
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="todo" title="Todo List">
+[% WRAPPER h2_section id = "todo"  title = "Todo List"  %]
 
 <ul>
 <li>Make an RPM SPEC/Debian Package etc.</li>
 <li>Port to Win32, ZThreads, etc.</li>
 </ul>
-</h2_section>
+[%- END -%]
 
-<h2_section id="q_and_a" title="Questions and Answers">
+[% WRAPPER h2_section id = "q_and_a"  title = "Questions and Answers"  %]
 
 <h3>What is a Readers/Writers Lock?</h3>
 
@@ -113,7 +116,7 @@ By using a queue in which each element controls a pending thread. A detailed
 description of the algorithm can be found <a href="Scheme.txt">here</a> and
 naturally, there are also the comments in the code. If there’s anything you
 don’t understand, don’t hesitate to
-<a href="$(ROOT)/me/contact-me/">contact me</a>
+<a href="[% base_path %]me/contact-me/">contact me</a>
 and ask.
 </p>
 
@@ -124,9 +127,9 @@ variables. The new scheme for it (which is a bit more complex) can be found
 <a href="Scheme_RLE.txt">here</a>.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="old_versions" title="Older Versions">
+[% WRAPPER h2_section id = "old_versions"  title = "Older Versions"  %]
 
 <ul>
 
@@ -144,4 +147,6 @@ variables. The new scheme for it (which is a bit more complex) can be found
 
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

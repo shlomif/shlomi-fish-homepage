@@ -1,13 +1,13 @@
-#include "template.wml"
-
-<latemp_subject "Ravensborg’s Guild - A Logic Puzzle" />
-
-<latemp_meta_desc "Ravensborg’s Guild - A Logic Puzzle" />
-
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+[%- SET title = "Ravensborg’s Guild - A Logic Puzzle" -%]
+[%- SET desc = "Ravensborg’s Guild - A Logic Puzzle" -%]
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-</page_extra_head_elements>
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Recent Note</h2>
 
@@ -159,3 +159,5 @@ To sum up the results:
 <td>Wizard (Leader)</td>
 </tr>
 </table>
+
+[% END %]

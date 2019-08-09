@@ -1,13 +1,13 @@
-#include "template.wml"
-
-<latemp_subject "On the Tip of the Sword - A Logic Puzzle" />
-
-<latemp_meta_desc "On the Tip of the Sword - A Logic Puzzle" />
-
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+[%- SET title = "On the Tip of the Sword - A Logic Puzzle" -%]
+[%- SET desc = "On the Tip of the Sword - A Logic Puzzle" -%]
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-</page_extra_head_elements>
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="logic">
 <h2>Introduction</h2>
@@ -466,7 +466,7 @@ So, to summarise the results, the solution is:
 </table>
 
 
-#if 0
+[% IF 0 %]
 ;;; <p>
 ;;; ===============================================================
 ;;; </p>
@@ -532,6 +532,8 @@ So, to summarise the results, the solution is:
 ;;; <li>Mid-Right - Silvered - Found in Pirate Ship - - Rapier or Khopesh</li>
 ;;; <li>Rightmost - Plain tipped - Present by the king - Rapier or Khopesh</li>
 ;;; </ul>
-#endif
+[% END %]
 
 </div>
+
+[% END %]

@@ -1,0 +1,29 @@
+[%- SET title = "Perl Lightning Talk - “There are too many ways to do it”" -%]
+[%- SET desc = "A lightning talk about a certain text manipulation task, and the various solutions which people could think of in order to implement it." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2><a href="slides/">The Slides</a></h2>
+
+[% WRAPPER intro  %]
+
+<p>
+A lightning talk about a certain text manipulation task, and the various
+solutions which people could think of in order to implement it.
+</p>
+
+[%- END -%]
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+
+<li>
+<a href="too-many-ways-hebrew-notes.txt">Notes in Hebrew in plain-text format</a>
+</li>
+
+</ul>
+
+[% END %]

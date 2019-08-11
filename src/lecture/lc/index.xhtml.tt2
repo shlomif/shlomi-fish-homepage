@@ -1,0 +1,17 @@
+[%- SET title = "Talk about Scheme and Lambda Calculus" -%]
+[%- SET desc = "Talk about Scheme and Lambda Calculus" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+<a href="[% base_path %]lecture/Lambda-Calculus/">These slides</a> introduce the
+reader to the <a href="http://www.schemers.org/">Scheme programming
+language</a>, which is a relatively minimalistic dialect of LISP. It then
+uses it to teach about Lambda Calculus, which is a minimalistic
+Turing-complete environment with only two primitives, but one that is still
+quite usable.
+</p>
+
+[% END %]

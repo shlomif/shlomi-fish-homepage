@@ -1,0 +1,19 @@
+[%- SET title = "Welcome to Linux - Networking in Linux" -%]
+[%- SET desc = "The “Welcome to Linux” Presentation that explains networking in Linux and how to set it up. It was originally authored by Shachar Reindel.
+" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a <a href="http://welcome.linux.org.il/">“Welcome to Linux”</a>
+Presentation that explains networking in Linux and how to set it up. It was
+originally authored by Shachar Reindel.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% END %]

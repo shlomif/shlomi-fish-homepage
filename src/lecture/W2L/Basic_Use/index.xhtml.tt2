@@ -1,0 +1,21 @@
+[%- SET title = "Welcome to Linux - Basic Use" -%]
+[%- SET desc = "A “Welcome to Linux” Presentation for teaching the basic use of Linux. It was later superseded by the Blitz presentation (written in the Hebrew language), but this presentation may still be of interest." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a <a href="http://welcome.linux.org.il/">“Welcome to Linux”</a>
+Presentation for teaching the basic use of Linux. It was later superseded by
+the <a href="[% base_path %]lecture/W2L/Blitz/">Blitz presentation</a> (written
+in the Hebrew language), but this presentation may still be of interest.
+</p>
+
+<ul>
+
+[% PROCESS qp_lect dir = "slides",  %]
+
+</ul>
+
+[% END %]

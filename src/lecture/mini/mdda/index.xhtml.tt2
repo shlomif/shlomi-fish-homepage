@@ -1,0 +1,17 @@
+[%- SET title = "Lightning Talk about Meta-Data Database Access" -%]
+[%- SET desc = "Lightning Talk about Meta-Data Database Access" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a presentation about handling database queries by using meta-data,
+so if the database schema changes, the changes will be relatively minimal.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% END %]

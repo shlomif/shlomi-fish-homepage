@@ -1,0 +1,20 @@
+[%- SET title = "Lecture about the PostgreSQL Relational Database Server" -%]
+[%- SET desc = "Lecture about the PostgreSQL Relational Database Server" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2><a href="[% base_path %]lecture/PostgreSQL-Lecture/">The Slides</a></h2>
+
+<h2>Introduction</h2>
+
+<p>
+This is a presentation I gave about
+<a href="http://www.postgresql.org/">the PostgreSQL relational database
+server</a>, after having had some experience with it. One person who was
+very knowledgeable about Postgres attended the presentation and gave some
+useful commentary on it, which I did not integrate yet.
+</p>
+
+[% END %]

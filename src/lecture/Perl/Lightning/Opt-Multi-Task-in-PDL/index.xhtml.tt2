@@ -1,0 +1,31 @@
+[%- SET title = "Perl Lightning Talk - Optimising Multi-Tasking in PDL" -%]
+[%- SET desc = "A presentation about how to implement a certain Game AI multi-tasking optimisation problem in PDL (the Perl Data Language), thus gaining both speed and flexibility." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2><a href="slides/">The Slides</a></h2>
+
+<h2>Introduction</h2>
+
+<p>
+This is a presentation about how to implement a certain Game AI
+multi-tasking optimisation problem in <a href="http://pdl.perl.org/">PDL</a>
+(the Perl Data Language), thus gaining both speed and flexibility.
+</p>
+
+[% WRAPPER note  %]
+<h2 id="note">Note</h2>
+
+<p>
+I have now made a derivative version of code discussed here available as
+[%- WRAPPER cpan_dist d = "AI-Pathfinding-OptimizeMultiple" -%]CPAN package called
+“AI-Pathfinding-OptimizeMultiple”[%- END -%]. Strangely enough, other
+people and I were not able to find prior art for this algorithm and technique
+in the Game Artificial Intelligence literature.
+</p>
+
+[%- END -%]
+
+[% END %]

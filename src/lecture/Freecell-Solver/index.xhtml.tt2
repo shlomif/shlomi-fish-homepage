@@ -1,0 +1,34 @@
+[%- SET title = "Freecell Solver - Evolution of a C Program" -%]
+[%- SET desc = "This presentation covers the evolution of Freecell Solver, an ANSI C library for solving some types of Solitaire games. It covers the algorithms, data structures and decisions that were implemented there." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This presentation covers the evolution of
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>, an
+ANSI C library for solving some types of Solitaire games. It covers the
+algorithms, data structures and decisions that were implemented there.
+</p>
+
+<ul>
+
+[% PROCESS qp_lect dir = "slides",  %]
+
+<li>
+<a href="fcs-lecture-points-take3.txt">Summary of the lecture</a>
+</li>
+
+<li>
+<a href="http://fc-solve.shlomifish.org/download.html">The various versions of
+the program for download.</a>
+</li>
+
+<li>
+<a href="Summary-deprecated.txt">Deprecated summary of the talk</a>
+</li>
+
+</ul>
+
+[% END %]

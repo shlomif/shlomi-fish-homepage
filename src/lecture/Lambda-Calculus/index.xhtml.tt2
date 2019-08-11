@@ -1,0 +1,24 @@
+[%- SET title = "Talk about Scheme and Lambda Calculus" -%]
+[%- SET desc = "Slides for a talk that introduces Scheme, a minimal dialect of Lisp, and then uses it to introduce Lambda Calculus, a minimal but usable model for computation, invented by Alonzo Church." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro  %]
+
+<p>
+This is a presentation that introduces
+<a href="http://www.schemers.org/">the Scheme programming language</a>,
+and then uses the learned subset to demonstrate
+<a href="http://en.wikipedia.org/wiki/Lambda_calculus">Lambda
+Calculus</a>.
+Lambda Calculus is a mathematical model of computation, which only has
+two primitives and yet is still quite usable and fun.
+</p>
+
+[%- END -%]
+
+<h2><a href="slides/">The Slides</a></h2>
+
+[% END %]

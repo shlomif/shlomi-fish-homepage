@@ -1,0 +1,21 @@
+[%- SET title = "Lecture about QuaD-Pres" -%]
+[%- SET desc = "Lecture about QuaD-Pres" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a meta-presentation about
+<a href="http://wwww.shlomifish.org/quad-pres/">QuaD-Pres</a>, a
+tool for creating HTML presentation slides. You can find the online slides
+here and a self-contained source package that was used to generate it.
+</p>
+
+<ul>
+
+[% PROCESS qp_lect dir = "slides",  %]
+
+</ul>
+
+[% END %]

@@ -1,0 +1,18 @@
+[%- SET title = "Welcome to Linux - Blitz Lecture (in Hebrew)" -%]
+[%- SET desc = "The so-called “Blitz” lecture that provides an encompassing
+introduction to Linux for beginners in Hebrew." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is the so-called “Blitz” lecture that provides an encompassing
+introduction to Linux for beginners in Hebrew.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% END %]

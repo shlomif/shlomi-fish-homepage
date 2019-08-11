@@ -1,0 +1,18 @@
+[%- SET title = "Welcome to Linux - Mini-Intro" -%]
+[%- SET desc = "This is the so-called “Mini-Intro” lecture which serves as an introduction to Linux in Hebrew, and was compiled as the good parts from the “Blitz” presentation." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is the so-called “Mini-Intro” lecture which serves as an introduction
+to Linux in Hebrew, and was compiled as the good parts from the
+<a href="../Blitz/">“Blitz” presentation</a>.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% END %]

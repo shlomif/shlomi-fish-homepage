@@ -1,0 +1,17 @@
+[%- SET title = "Lecture about the BASH Shell (upcoming lecture)" -%]
+[%- SET desc = "Lecture about the BASH Shell (upcoming lecture)" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<ul>
+<li>
+<a href="newfangled_summary.txt">Newfangled Summary</a>
+</li>
+<li>
+<a href="summary.txt">Summary</a>.
+</li>
+</ul>
+
+[% END %]

@@ -1,0 +1,18 @@
+[%- SET title = "Freecell Solver - The Next Presentation" -%]
+[%- SET desc = "The sequel to the previous presentation about Freecell Solver where Shlomi Fish explores more recent developments to the program." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+The sequel to <a href="../">the previous presentation</a> where I explore
+more recent developments to <a href="http://fc-solve.shlomifish.org/">Freecell
+Solver</a>.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% END %]

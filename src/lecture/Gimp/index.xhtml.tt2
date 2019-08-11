@@ -1,0 +1,66 @@
+[%- SET title = "Presentation: Do it with the GIMP" -%]
+[%- SET desc = "The GIMP is a sophisticated image processing and composition program available for UNIXes and several other platforms (including Win32 and Mac OS X) . The GIMP includes many features attractive to graphics professionals and novices alike. This is a talk about the GIMP and its algorithms." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+<a href="http://www.gimp.org/">The GIMP</a> is a sophisticated image
+processing and composition program available for UNIXes and several other
+platforms (including
+<a href="http://www.gimp.org/windows/">Win32</a> and
+<a href="http://www.macgimp.org/">Mac OS X</a>)
+. The GIMP includes many features attractive to graphics professionals and
+novices alike, and is up-to-par with commercial offerings such as Adobe
+Photoshop.
+</p>
+
+<p>
+While several entire books were written on the GIMP, this talk does not
+aim to be a comprehensive introduction or not even an introduction to the
+most basic elements. Rather it should give a taste of several things that
+can be done with this program, and let the user experience further on his or
+her own.
+</p>
+
+<p>
+This talk has now been updated to GIMP 2.2. The
+<a href="1/slides/">older slides, intended for GIMP 1.2.x</a>
+are still available, but it is recommended not to use GIMP 1.2 any more.
+</p>
+
+<h2 id="material">The presentation's Material</h2>
+
+<ul>
+
+[% PROCESS qp_lect dir = "2.2-slides",  %]
+
+<li>
+<a href="1/gimp_lecture_summary.txt">Summary of the Talk</a>
+</li>
+
+<li>
+<a href="1/images/">Images for the talk</a>
+</li>
+
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+
+<li><a href="http://www.gimp.org/">The GIMP’s Homepage</a></li>
+
+<li><a href="http://gimp-savvy.com/">Gimp-Savvy</a> - Some Gimp Resources.</li>
+
+<li><a href="http://manual.gimp.org/">The Gimp’s User Manual</a> - a
+comprehensive manual about the GIMP. Available on-line
+or for download.</li>
+
+<li><a href="http://gimp-savvy.com/BOOK/">Grokking the GIMP</a> - a Gimp book
+which is freely available online.</li>
+
+</ul>
+
+[% END %]

@@ -1,0 +1,25 @@
+[%- SET title = "Freecell Solver - Project Introduction" -%]
+[%- SET desc = "A small presentation that introduces the Freecell Solver project to people who may be interested in contributing to it." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a small presentation that introduces the Freecell Solver project
+to people who may be interested in contributing to it.
+</p>
+
+<ul>
+
+[% PROCESS qp_lect dir = "slides",  %]
+
+<li>
+<p>
+<a href="Summary.txt">Summary (plain-text)</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]

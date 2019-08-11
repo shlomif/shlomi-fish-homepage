@@ -10,5 +10,5 @@ shift
 dest="$1"
 shift
 rm -fr "$dest"
-cp -a "$src" "$dest"
+rsync -a --exclude='**/MathJax/**' "$src" "$dest"
 # find "$dest" -type f | grep -E '(\.epub$)' | xargs rm -f

@@ -1,14 +1,13 @@
-#include "template.wml"
+[%- SET title = "Create a Great Personal Home Site - 2nd Revision" -%]
+[%- SET desc = "How to create a Great Personal Internet Home Site" -%]
+[%- SET more_keywords = "Shlomi Fish, Shlomi, Fish, HTML, Homesite, Homepage, Home, Page, Site, Perl, PHP, Python, JavaScript, Content, Presentations" -%]
 
-#include "toc_div.wml"
-#include "div2mag.wml"
 
-<latemp_subject "Create a Great Personal Home Site - 2nd Revision" />
-<latemp_meta_desc "How to create a Great Personal Internet Home Site" />
-<latemp_more_keywords "Shlomi Fish, Shlomi, Fish, HTML, Homesite, Homepage, Home, Page, Site, Perl, PHP, Python, JavaScript, Content, Presentations" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc">
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="about">About this Document</h2>
 
@@ -48,7 +47,7 @@ Last Updated:
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2009" />
+[% cc_by_british_blurb( "year" => "2009", ) %]
 
 <div class="article">
 
@@ -62,13 +61,13 @@ a few years ago. The most important trend was probably that personal blogs
 seem to have become much more prevalent than personal web-sites up to
 the point that some people referred to www.shlomifish.org as a blog. I have
 been annoyed at this to some extent, and even wrote
-<a href="$(ROOT)/philosophy/computers/web/homepage-vs-blog/">an entire
+<a href="[% base_path %]philosophy/computers/web/homepage-vs-blog/">an entire
 essay about the distinction between a home page and a blog</a> and why
 this homepage is not a blog.
 </p>
 
 <p>
-Nevertheless, as <a href="$(ROOT)/me/blogs/">an
+Nevertheless, as <a href="[% base_path %]me/blogs/">an
 active blogger</a>, it’s not that I hate blogs or try to underrate them -
 it’s just that I think that I invest more effort and rigour in writing
 articles or essays on my home page, than I do on the various random stuff
@@ -118,8 +117,8 @@ annoying animations, large text all over the place; too little content,
 obscure pages that no one knows how to get to from the reachable ones;
 no navigation menus, no site map, and no breadcrumbs trail; horrible markup and
 too little content to show for. If you want to have a good laugh, then
-<a href="<get-var d2url />">DivisionTwo magazine</a> has an
-<a href="<get-var d2url />articles/kellysworld.htm">insanely funny
+<a href="[% d2url %]">DivisionTwo magazine</a> has an
+<a href="[% d2url %]articles/kellysworld.htm">insanely funny
 parody of the bad homepage</a> (warning: contains a lot of explicit
 content).
 </p>
@@ -1017,16 +1016,20 @@ personal site</a>.
 
 <h4 id="critique_paul_graham">Paul Graham’s Home Site</h4>
 
-<define-tag pg_url>http://www.paulgraham.com/%0.html</define-tag>
-<define-tag pg_link1><a href="<pg_url "%0" />">/%0.html</a></define-tag>
+[%- BLOCK pg_url -%]
+http://www.paulgraham.com/[% u %].html
+[%- END -%]
+[%- BLOCK pg_link1 -%]
+<a href="[% INCLUDE pg_url %]">/[% u %].html</a>
+[%- END -%]
 
 <p>
 <a href="http://www.paulgraham.com/">Paul Graham’s site</a> is beautifully designed, and contains a lot of interesting
 essays and articles. It has a navigation menu to the left, made out of images,
 but it does not expand or change from page to page. What’s worse is that all
-the pages are present on the same top directory - <pg_link1 "arc" />,
-<pg_link1 "faq" />, <pg_link1 "books" />, <pg_link1 "nerds" />. Let’s suppose
-you end up at <a href="<pg_url "zero" />">this page</a>, called
+the pages are present on the same top directory - [% INCLUDE pg_link1 u="arc" %],
+[% INCLUDE pg_link1 u="faq" %], [% INCLUDE pg_link1 u="books" %], [% INCLUDE pg_link1 u="nerds" %]. Let’s suppose
+you end up at <a href="[% INCLUDE pg_url u="zero" %]">this page</a>, called
 “zero.html”,
 what page does it belong to? Even <a href="http://www.google.com/search?sourceid=mozclient&amp;q=link:http%3A//www.paulgraham.com/zero.html">the Google
 back-links feature is no help today</a>. (The spoiler is that it belongs
@@ -1041,7 +1044,7 @@ often lags behind the dates in which the actual essays appear.
 
 <p>
 The URLs of the various pages are often not semantic enough. For example:
-<pg_link1 "hp" />. Without accessing the URL, what do you think of when
+[% INCLUDE pg_link1 u="hp" %]. Without accessing the URL, what do you think of when
 you see “hp”? My immediate guess would be Hewlett-Packard and
 <a href="http://www.google.com/search?sourceid=mozclient&amp;ie=utf-8&amp;oe=utf-8&amp;q=hp">Google
 agrees with me</a>. I might also think of “Harry Potter”,
@@ -1237,6 +1240,8 @@ Joel on Software forum</a>
 </li>
 </ul>
 
-</div> ;;; for div class="article"
+</div>
 
-</div> ;;; for div class="side_toc"
+</div>
+
+[% END %]

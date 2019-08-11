@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "The “Use qmail instead!” Syndrome" -%]
+[%- SET desc = "The “Use qmail instead!” Syndrome" -%]
 
-<latemp_subject "The “Use qmail instead!” Syndrome" />
 
-<latemp_meta_desc "The “Use qmail instead!” Syndrome" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -43,7 +44,7 @@ A few years ago, I’ve noticed a pattern in
 mailing list</a>. Often, when someone asked for help with a
 <a href="http://en.wikipedia.org/wiki/Sendmail">Sendmail</a> problem, some
 people said something similar to: “Sendmail sucks! Use
-<a href="$(ROOT)/open-source/anti/qmail/">qmail</a> instead.”.
+<a href="[% base_path %]open-source/anti/qmail/">qmail</a> instead.”.
 </p>
 
 <p>
@@ -114,4 +115,6 @@ one’s reason (as always) and the recommendation to avoid the
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2006" />
+[% cc_by_british_blurb( "year" => "2006", ) %]
+
+[% END %]

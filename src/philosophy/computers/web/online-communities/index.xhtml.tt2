@@ -1,10 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Reflections on Online Communities" -%]
+[%- SET desc = "Reflections on how to manage an online community." -%]
 
-<latemp_subject "Reflections on Online Communities" />
-<latemp_meta_desc "Reflections on how to manage an online community." />
 
-<note>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER note  %]
 <h2 id="note">Note</h2>
 
 <p>
@@ -17,7 +18,7 @@ quoting policy</a>. However, I believe that:
 <ol>
 <li>
 Both Joel and the Law Professor he is quoting are wrong on ethical grounds.
-See my essay <a href="$(ROOT)/philosophy/case-for-file-swapping/">“The Case
+See my essay <a href="[% base_path %]philosophy/case-for-file-swapping/">“The Case
 for File Swapping”</a> for some things that are wrong with the current
 copyright law, and links to more.
 </li>
@@ -41,9 +42,9 @@ products are either not enforceable or even not ethical, and I don’t feel that
 I need to respect them, even if they exist.
 </p>
 
-</note>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -423,3 +424,5 @@ build nicer, better and less dysfunctional online forums.
 Joel on Software forum</a>.
 </li>
 </ul>
+
+[% END %]

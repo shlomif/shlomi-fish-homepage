@@ -1,14 +1,16 @@
-#include "template.wml"
+[%- SET title = "Homepage vs. Blog" -%]
+[%- SET desc = "Explains the distinction between a homepage (or homesite) and a blog, and why this site is not a blog" -%]
+[%- SET more_keywords = "HTML, Homesite, Homepage, Home, Blog, Weblog, Tags, Categories, RSS" -%]
 
-<latemp_subject "Homepage vs. Blog" />
-<latemp_meta_desc "Explains the distinction between a homepage (or homesite) and a blog, and why this site is not a blog" />
-<latemp_more_keywords "HTML, Homesite, Homepage, Home, Blog, Weblog, Tags, Categories, RSS" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About this Document</h2>
 
 <p>
 This documents explains the distinction between a homepage (or homesite) and
-a blog and why <a href="$(PATH_TO_ROOT)">this site</a> is not a blog. It is adapted
+a blog and why <a href="[% base_path %]">this site</a> is not a blog. It is adapted
 from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011919.html">this
 post to the Linux-Elitists mailing list</a>.
 </p>
@@ -38,7 +40,7 @@ Last Updated:
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2007" />
+[% cc_by_british_blurb( "year" => "2007", ) %]
 
 <h2 id="itself">The Article Itself</h2>
 
@@ -120,7 +122,7 @@ forums, etc. But they are not blog entries.
 </ol>
 
 <p>
-Now, I do have <a href="$(PATH_TO_ROOT)me/blogs/">some weblogs</a> and write in
+Now, I do have <a href="[% base_path %]me/blogs/">some weblogs</a> and write in
 them often. But my home site is a completely different and much more impressive
 beast.
 </p>
@@ -131,3 +133,5 @@ home sites using Movable Type, WordPress, or their likes. Normally, the blogger
 maintains the front page of the site as a blog, and adds a page or two about
 other things. I personally always look down on such sites.
 </p>
+
+[% END %]

@@ -1,17 +1,16 @@
-#include "template.wml"
+[%- SET title = "Validate Your HTML" -%]
+[%- SET desc = "The what, why, and how, of having valid HTML" -%]
+[%- SET more_keywords = "html, html5, validation, validate, valid, standards" -%]
 
-<latemp_subject "Validate Your HTML" />
-<latemp_meta_desc "The what, why, and how, of having valid HTML" />
-<latemp_more_keywords "html, html5, validation, validate, valid, standards" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <img src="Valid_XHTML_1.0.min.svg" style="height:100px;" class="rfloaty" alt="Valid XHTML 1.0 Logo" title="One of the valid markup logos." />
 </p>
 
-<:
-use Shlomif::MD qw/ print_markdown /;
-print_markdown('../lib/repos/validate-your-html/README.md');
-:>
+[% print_markdown(fn=>'lib/repos/validate-your-html/README.md') %]
 
 <h2 id="credits">Credits</h2>
 
@@ -24,3 +23,5 @@ print_markdown('../lib/repos/validate-your-html/README.md');
 </li>
 
 </ul>
+
+[% END %]

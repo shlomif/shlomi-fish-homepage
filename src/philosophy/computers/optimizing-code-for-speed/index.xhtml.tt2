@@ -1,12 +1,13 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Optimizing Code for Speed" -%]
+[%- SET desc = "An overview of why and how one can optimize code for speed" -%]
+[%- SET more_keywords = "optimization,optimisation,optimize,optimise,code,c,freecell solver,perl,speed,memory,software quality,snappiness,moore’s law" -%]
 
-<latemp_subject "Optimizing Code for Speed" />
-<latemp_meta_desc "An overview of why and how one can optimize code for speed" />
-<latemp_more_keywords "optimization,optimisation,optimize,optimise,code,c,freecell solver,perl,speed,memory,software quality,snappiness,moore’s law" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">
-<toc_div />
+[% toc_div( ) %]
 
 <section class="h2">
 
@@ -35,7 +36,7 @@ Last Updated:
 
 </section>
 
-#include "htmls/from-mediawiki/processed/Optimizing_Code_For_Speed-rev1.html"
+[% INSERT "htmls/from-mediawiki/processed/Optimizing_Code_For_Speed-rev1.html" %]
 
 <section class="h2">
 
@@ -85,3 +86,5 @@ Joel on Software forum</a>
 </section>
 
 </div>
+
+[% END %]

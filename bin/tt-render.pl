@@ -94,6 +94,12 @@ sub cc_by_sa_license_british
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
+    d2url          => "http://divisiontwo.shlomifish.org/",
+    print_markdown => sub {
+        my %args = %{ shift() // {} };
+        require Shlomif::MD;
+        return Shlomif::MD::as_text( $args{fn} );
+    },
     longblank => <<'EOF',
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

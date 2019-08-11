@@ -1,20 +1,20 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Perl-Related Essays" -%]
+[%- SET desc = "Essays related to the Perl programming language: the Joy of Perl, Critique of where Perl 6 is heading, etc." -%]
 
-<latemp_subject "Perl-Related Essays" />
 
-<latemp_meta_desc "Essays related to the Perl programming language: the Joy of Perl, Critique of where Perl 6 is heading, etc." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Essays related to the <a href="http://perl-begin.org/">Perl</a>
 programming languages.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="articles-list">The Articles List</h2>
 
-<h3 id="newcomers"><a href="$(ROOT)/philosophy/perl-newcomers/">“Usability”
+<h3 id="newcomers"><a href="[% base_path %]philosophy/perl-newcomers/">“Usability”
 of the Perl Online World for Newcomers</a></h3>
 
 <p>
@@ -101,8 +101,10 @@ especially <a href="http://perl.org.il/">the Israeli Perl Mongers</a>.
 </li>
 
 <li>
-<a href="$(ROOT)/lecture/">My presentations’ slides - some of them about
+<a href="[% base_path %]lecture/">My presentations’ slides - some of them about
 Perl</a>
 </li>
 
 </ul>
+
+[% END %]

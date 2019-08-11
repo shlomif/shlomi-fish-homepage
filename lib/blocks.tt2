@@ -1,3 +1,23 @@
+[% BLOCK qp_lect %]
+
+<li>
+<p>
+<a href="[% dir %]/"><b>The Slides</b></a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% dir %]--all-in-one-html/">All On One Page Version</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% dir %]/src.tar.gz">Quad-Pres Source for the Lecture</a>
+</p>
+</li>
+[% END %]
 [%- BLOCK h_section -%]
 <section class="[% h_class %]">
 <header><[% h_tag %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_tag %]></header>

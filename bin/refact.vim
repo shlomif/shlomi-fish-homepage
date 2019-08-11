@@ -20,17 +20,17 @@ call Replace_Sect('about', 'About', 'about_sect')
 call Replace_Sect('see_also', 'See Also', 'see_also')
 call Replace_Sect('news', 'News', 'news_sect')
 call Replace_Sect('licence', 'Licence', 'licence_sect')
-function H4_repl()
+function! H4_repl()
     :%s/<section class="h4">[\s\n]*<h4 id="\([^"]\+\)">\(\_[^<]\+\)<\/h4>\(\_.\{-\}\)<\/section>/<h4_section id="\1" title="\2">\3<\/h4_section>/
     :%s/<section class="h3">[\s\n]*<h3 id="\([^"]\+\)">\(\_[^<]\+\)<\/h3>\(\_.\{-\}\)<\/section>/<h3_section id="\1" title="\2">\3<\/h3_section>/
     :%s/<section class="h2">[\s\n]*<h2 id="\([^"]\+\)">\(\_[^<]\+\)<\/h2>\(\_.\{-\}\)<\/section>/<h2_section id="\1" title="\2">\3<\/h2_section>/
     :%s/\n\n\+//g
 endfunction
-function Deftag()
+function! Deftag()
     :'a,'es/^<define-tag.*/[% IF 0 %]/
     :'a,'es/^<\/define-tag>/[% END %]/
 endfunction
-function Block()
-    :'a,'es/<define-tag \(\w\+\)>/[% BLOCK \1 %]/
+function! Block()
+    :'a,'es/<define-tag \(\([-_]\|\w\)\+\)>/[% BLOCK \1 %]/
     :'a,'es/<get-var \(\S\+\) *\/>/[% \1 %]/g
 endfunction

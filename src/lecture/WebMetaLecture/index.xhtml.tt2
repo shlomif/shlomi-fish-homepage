@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/presentations.wml"
+[%- SET title = "WebMetaLecture - a lecture about Website Meta Language" -%]
+[%- SET desc = "WebMetaLecture - a lecture about Website Meta Language" -%]
 
-<latemp_subject "WebMetaLecture - a lecture about Website Meta Language" />
 
-<latemp_meta_desc "WebMetaLecture - a lecture about Website Meta Language" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="http://thewml.org/">Website Meta Language</a> is a versatile and
@@ -19,7 +19,7 @@ usage.
 
 <ul>
 
-<qp-lect dir="slides" />
+[% PROCESS qp_lect dir = "slides",  %]
 
 <li>
 <a href="WebMetaLecture-summary.txt">Summary for the lecture</a>
@@ -31,3 +31,5 @@ examples</a>
 </li>
 
 </ul>
+
+[% END %]

@@ -33,8 +33,10 @@ sub _calc_screenplay_doc_makefile_lines
             return "${base}_${suf}_" . shift;
         };
 
-        my $src_varname       = $gen_name->("SCREENPLAY_XML_SOURCE");
-        my $dest_varname      = $gen_name->("TXT_FROM_VCS");
+        my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
+        my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
+        my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
+        my $dest_varname   = $gen_name->("TXT_FROM_VCS");
         my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
         my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
 
@@ -42,6 +44,8 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n",
 "$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
+"$src_xhtmlname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n\n",
+"$dest_xhtmlname = \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n\n",
             "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
 "$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
@@ -49,9 +53,8 @@ sub _calc_screenplay_doc_makefile_lines
                 . "\n\n" ),
 
             <<"EOF",
-\$($epub_dest_varname): \$($src_varname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; cd \$($src_vcs_dir_var) && SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" gmake epub
-\tcp -f \$($src_vcs_dir_var)/${doc_base}.epub \$($epub_dest_varname)
+\$($epub_dest_varname): \$($dest_xhtmlname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
+\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; orig_dir="\$\$PWD"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
     }

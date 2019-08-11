@@ -17,12 +17,14 @@ rebuild()
         git clean -dxf .
         bash -x bin/install-npm-deps.sh
         ./gen-helpers
-        # if ! gmake fastrender
-        if ! gmake -j4 docbook_targets
+        # if ! gmake -j4 docbook_targets
+        # if ! gmake -j4 screenplay_epub_dests
+        if ! gmake -j4 fastrender
         then
             echo "docbook_targets failed"
             false
         fi
+        # exit
         if ! gmake -j4 fastrender
         then
             echo "fastrender failed"

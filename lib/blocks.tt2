@@ -1,3 +1,22 @@
+[% BLOCK shlomif_docbook_doc_text %]
+[% IF NOT level %][% SET level=2 %][% END %]
+[% IF dir %][% SET dir = dir _ "/" %][% END %]
+
+<h[% level %] id="[% doc %]-formats">Formats</h[% level %]>
+
+<ul>
+<li><a href="[% dir %][% doc %]/">HTML (read online)</a></li>
+<li><a href="[% dir %][% doc %].pdf">Acrobat Reader (PDF)</a></li>
+<li><a href="[% dir %][% doc %].rtf">MS Word RTF</a></li>
+</ul>
+
+<h[% level %] id="[% doc %]-sources">DocBook/XML Sources</h[% level %]>
+
+<ul>
+<li><a href="[% dir %][% doc %].xml">XML Source</a></li>
+</ul>
+
+[% END %]
 [% BLOCK qp_lect %]
 
 <li>

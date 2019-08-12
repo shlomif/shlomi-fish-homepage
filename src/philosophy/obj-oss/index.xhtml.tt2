@@ -1,0 +1,17 @@
+[%- SET title = "Objectivism and Open Source" -%]
+[%- SET desc = "Objectivism and Open Source" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+Here you can find an essay I wrote titled “Objectivism and Open Source”
+that aims to explain why the two are compatible.
+</p>
+
+<h2 id="revision-2"><a href="rev2/">Revision 2</a></h2>
+
+[% PROCESS shlomif_docbook_doc_text doc = "objectivism-and-open-source",  %]
+
+[% END %]

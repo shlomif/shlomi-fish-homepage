@@ -1,14 +1,13 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "My Weblogs" -%]
+[%- SET desc = "List of Weblogs/Blogs by Shlomi Fish." -%]
 
-<latemp_subject "My Weblogs" />
 
-<latemp_meta_desc "List of Weblogs/Blogs by Shlomi Fish." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc">
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -81,7 +80,7 @@ Journal</a></h3>
 
 <p>
 A LiveJournal journal where I log what’s new on this homesite. It’s also
-syndicated on <a href="$(ROOT)/">the front page</a> of the site. Comments can
+syndicated on <a href="[% base_path %]">the front page</a> of the site. Comments can
 be posted or read there.
 </p>
 
@@ -112,13 +111,13 @@ Pictures</a></h3>
 A stream of pictures I’m posting to <a href="http://www.flickr.com/">Flickr</a>.
 </p>
 
-<h3 id="fortunes"><a href="$(ROOT)/humour/fortunes/">Unix-like
+<h3 id="fortunes"><a href="[% base_path %]humour/fortunes/">Unix-like
 Fortune Cookies Collection</a></h3>
 
 <p>
 As I add more and more fortunes to my fortune cookies collection, I’m uploading
 them to my site, and rendering them into various formats from their XML
-source. They also have <a href="$(ROOT)/humour/fortunes/#web-feed">their
+source. They also have <a href="[% base_path %]humour/fortunes/#web-feed">their
 own web-feeds</a> for subscribing using a web-feed aggregator.
 </p>
 
@@ -159,7 +158,7 @@ If you’re interested in different ways to mix-and-match such feeds look at:
 <ol>
 
 <li>
-<cpan_self_dist d="XML-Feed" /> - a Perl-based
+[% cpan_self_dist( "d" => "XML-Feed", ) %] - a Perl-based
 CPAN module to mix, match and manipulate feeds of various formats.
 </li>
 
@@ -207,3 +206,5 @@ including off-topic posts by Israeli open source enthusiasts.
 </ul>
 
 </div>
+
+[% END %]

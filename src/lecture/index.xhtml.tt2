@@ -1,13 +1,12 @@
-#include "template.wml"
-#include "Inc/presentations.wml"
-#include "toc_div.wml"
+[%- SET title = "Presentations given by Shlomi Fish" -%]
+[%- SET desc = "Slides and material for technical presentations given by Shlomi Fish. Linux, Perl, Web publishing, software management, software development." -%]
 
-<latemp_subject "Presentations given by Shlomi Fish" />
-<latemp_meta_desc "Slides and material for technical presentations given by Shlomi Fish. Linux, Perl, Web publishing, software management, software development." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="perl-for-newbies"><a href="Perl/Newbies/">Perl
 for Perl Newbies</a></h2>
@@ -17,14 +16,14 @@ A series of talks that teach Perl for Perl beginners. No knowledge of
 any other programming language is required, but it will be helpful.
 </p>
 
-<h2 id="html-tutorial"><a href="<rellink url="lecture/HTML-Tutorial/" host="t2" />">HTML Tutorial (for Standards Compliance)</a></h2>
+<h2 id="html-tutorial"><a href="[% PROCESS rellink url = "lecture/HTML-Tutorial/", host = "t2",  %]">HTML Tutorial (for Standards Compliance)</a></h2>
 
 <p>
 A Public-Domain HTML Tutorial (currently available only in Hebrew) for
 how to write standard and semantic HTML.
 </p>
 
-<h2 id="web-publishing-using-lamp"><a href="<rellink url="lecture/LAMP/" host="t2" />">Web Publishing
+<h2 id="web-publishing-using-lamp"><a href="[% PROCESS rellink url = "lecture/LAMP/", host = "t2",  %]">Web Publishing
 Using LAMP</a></h2>
 
 <p>
@@ -54,7 +53,7 @@ development team.
 </p>
 </div>
 
-<h2_section id="programming-languages" title="Programming Languages">
+[% WRAPPER h2_section id = "programming-languages"  title = "Programming Languages"  %]
 
 <h3 id="c-bad-elems"><a href="C-and-CPP/bad-elements/">C and C++ Elements to Avoid</a></h3>
 
@@ -79,9 +78,9 @@ required and can be substituted by knowledge of a similar programming
 language.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="various-tools" title="Various Tools">
+[% WRAPPER h2_section id = "various-tools"  title = "Various Tools"  %]
 
 <dl>
 <dt>
@@ -120,7 +119,7 @@ Website Meta Language</a>
 A tool for generating sophisticated static HTML web-sites.
 </dd>
 <dt>
-<a href="<rellink url="lecture/Vim/beginners/" host="t2" />">The Vim
+<a href="[% PROCESS rellink url = "lecture/Vim/beginners/", host = "t2",  %]">The Vim
 Editor for Beginners</a>
 </dt>
 <dd>
@@ -131,7 +130,7 @@ introduces it for beginners.
 </dd>
 </dl>
 
-<h3_section id="pres-tools" title="Presentation Tools">
+[% WRAPPER h3_section id = "pres-tools"  title = "Presentation Tools"  %]
 
 <ul>
 <li>
@@ -142,9 +141,9 @@ introduces it for beginners.
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 <h2 id="welcome-to-linux"><a href="W2L/">"Welcome to Linux" Presentations</a></h2>
 
 <div class="indent">
@@ -154,50 +153,50 @@ Presentation Material that was prepared as part of the
 Aims to introduce the Linux operating system to beginners.
 </p>
 
-<w2l_talks_list />
+[% PROCESS w2l_talks_list %]
 
 </div>
 
-<h2_section id="software-projects" title="Presentations about my software Projects">
+[% WRAPPER h2_section id = "software-projects"  title = "Presentations about my software Projects"  %]
 
-<h3_section id="freecell-solver" title="Freecell Solver">
+[% WRAPPER h3_section id = "freecell-solver"  title = "Freecell Solver"  %]
 
-<h4_section id="fcs-evolution" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/" title="Freecell Solver - Evolution of a C Program">
+[% WRAPPER h4_section id = "fcs-evolution"  href = base_path _"lecture/Freecell-Solver/"  title = "Freecell Solver - Evolution of a C Program"  %]
 
 <p>
 The history of my pet project, Freecell Solver.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="fcs-the-next-pres" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/The-Next-Pres/" title="Freecell Solver - The Next Presentation">
+[% WRAPPER h4_section id = "fcs-the-next-pres"  href = base_path _"lecture/Freecell-Solver/The-Next-Pres/"  title = "Freecell Solver - The Next Presentation"  %]
 
 <p>
 More recent history and development of the project.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="fcs-project-intro" href="$(PATH_TO_ROOT)lecture/Freecell-Solver/project-intro/" title="Freecell Solver: Project Introduction">
+[% WRAPPER h4_section id = "fcs-project-intro"  href = base_path _ "lecture/Freecell-Solver/project-intro/"  title = "Freecell Solver: Project Introduction"  %]
 
 <p>
 An introduction of the project for people who are interested to contribute.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="lm-solve" href="$(PATH_TO_ROOT)lecture/LM-Solve/" title="LM-Solve">
+[% WRAPPER h3_section id = "lm-solve"  href = base_path _ "lecture/LM-Solve/"  title = "LM-Solve"  %]
 
 <p>
-A presentation about <a href="$(PATH_TO_ROOT)lm-solve/">LM-Solve</a>, a Logic Mazes
+A presentation about <a href="[% base_path %]lm-solve/">LM-Solve</a>, a Logic Mazes
 Solver. Covers history, technologies, architecture and exotic bugs.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
 <h2 id="lightning-talks"><a href="cat/lightning-talks/">Mini Presentations ("Lightning Talks")</a></h2>
 
@@ -206,8 +205,10 @@ Solver. Covers history, technologies, architecture and exotic bugs.
 Short presentations on various topics.
 </p>
 
-<lightning_talks_list />
+[% PROCESS lightning_talks_list  %]
 
 </div>
 
 </div>
+
+[% END %]

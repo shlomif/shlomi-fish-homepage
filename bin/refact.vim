@@ -30,6 +30,9 @@ function! Deftag()
     :'a,'es/^<define-tag.*/[% IF 0 %]/
     :'a,'es/^<\/define-tag>/[% END %]/
 endfunction
+function! T2()
+    %s#\v\<t2_lect \"([^\"]+)\" *\/\>#[% PROCESS t2_lect url = "\1" %]#g
+endfunction
 function! Block()
     :'a,'es/<define-tag \(\([-_]\|\w\)\+\)>/[% BLOCK \1 %]/
     :'a,'es/<get-var \(\S\+\) *\/>/[% \1 %]/g

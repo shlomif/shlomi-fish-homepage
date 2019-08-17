@@ -1,6 +1,69 @@
+[% BLOCK t2_lect %]
+[% base_path %]lecture/Perl/Lightning/[% url %]/
+[% END %]
+
+[% BLOCK lightning_talks_list %]
+
+<ul>
+<li>
+<a href="[% base_path %]lecture/mini/mdda/">Meta-Data Database Access</a>
+</li>
+<li>
+<a href="[% base_path %]lecture/Perl/Graham-Function/">Presentation about Finding the
+Graham Function</a>
+</li>
+<li>
+<a href="[% base_path %]lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
+Templating System for Perl</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Opt-Multi-Task-in-PDL" %]">Optimising Multitasking in
+PDL</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Test-Run" %]">Test::Run - a New and Improved Test Harness</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Too-Many-Ways" %]">There are too Many Ways to Do it</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Mojolicious" %]">Mojolicious and Mojolicious::Lite</a> -
+a presentation about the web-development frameworks.
+</li>
+</ul>
+[% END %]
 [%- BLOCK rellink -%]
 [% base_path _ url %]
 [%- END -%]
+[% BLOCK w2l_talks_list %]
+<ul>
+<li>
+<a href="[% base_path %]lecture/W2L/Basic_Use/">Basic Use</a>
+</li>
+<li>
+<a href="[% base_path %]lecture/W2L/Network/">Networking in Linux</a> - content authored by
+Shachar Reindel.
+</li>
+<li>
+<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Development/",  %]">Development
+under Linux</a> - the content of this presentation was originally authored
+by Meir Maor. <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Technion/",  %]">An older incarnation of this
+presentation</a> is also available.
+</li>
+<li>
+<a href="[% base_path %]lecture/W2L/Why_Linux/">What Linux is to Me</a>
+</li>
+<li>
+<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Blitz/",  %]">The Blitz Lecture (in
+Hebrew)</a> - getting up to speed with Linux.
+</li>
+<li>
+<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Mini-Intro/",  %]">The Mini-Intro
+Lecture (in Hebrew)</a> - getting up to speed with Linux. (More modernised
+version of the Blitz).
+</li>
+</ul>
+[% END %]
 [% BLOCK shlomif_docbook_doc_text %]
 [% IF NOT level %][% SET level=2 %][% END %]
 [% IF dir %][% SET dir = dir _ "/" %][% END %]
@@ -53,6 +116,11 @@
 [%- END -%]
 [%- BLOCK h3_section -%]
 [%- WRAPPER h_section h_tag="h3" h_class="h3" id=id title=title href=href -%]
+[% content %]
+[%- END -%]
+[%- END -%]
+[%- BLOCK h4_section -%]
+[%- WRAPPER h_section h_tag="h4" h_class="h4" id=id title=title href=href -%]
 [% content %]
 [%- END -%]
 [%- END -%]

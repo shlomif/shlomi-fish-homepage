@@ -1,3 +1,4 @@
+[%- PROCESS "blocks.tt2" -%]
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -78,7 +79,7 @@
 
 <p style="margin-left: 1em;">
   <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;">
-    <img src="$(ROOT)/images/CC-zero-1.0-88x31.png" alt="CC0" />
+    <img src="[% base_path %]images/CC-zero-1.0-88x31.png" alt="CC0" />
   </a>
   <br />
   To the extent possible under law, <a href="http://www.shlomifish.org/"><span>Shlomi Fish</span></a>

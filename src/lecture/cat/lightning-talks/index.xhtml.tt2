@@ -1,0 +1,16 @@
+[%- SET title = "Lightning Talks" -%]
+[%- SET desc = "Short (~ 5 minute) slides for presentations" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+These are <a href="http://perl.plover.com/lt/lightning-talks.html">lightning
+talks</a> - short presentations about specific subjects - that I have given
+in the past.
+</p>
+
+[% PROCESS lightning_talks_list  %]
+
+[% END %]

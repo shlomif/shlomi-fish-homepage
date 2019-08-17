@@ -1,0 +1,24 @@
+[%- SET title = "Presentations Category - Presentation Tools" -%]
+[%- SET desc = "Presentations Category - Presentation Tools" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+Meta-Presentations about Presentation Tools by Shlomi Fish.
+</p>
+
+<dl>
+<dt><a href="[% base_path %]lecture/Quad-Pres/">Presentation about Quad-Pres</a></dt>
+<dd>
+A Presentation about Quad-Pres, my own tool for creating HTML presentations.
+</dd>
+<dt><a href="[% base_path %]lecture/Pres-Tools/Perl-Point/">Presentation about PerlPoint</a></dt>
+<dd>
+A Presentation about PerlPoint, a tool for creating HTML presentations by
+Tom Christiansen.
+</dd>
+</dl>
+
+[% END %]

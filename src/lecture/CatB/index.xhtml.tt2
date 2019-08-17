@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/presentations.wml"
+[%- SET title = "The Cathedral and the Bazaar Series - an Overview" -%]
+[%- SET desc = "Overview of the Cathedral and the Bazaar series by Eric S. Raymond: “The Cathedral and the Bazaar”, “Homesteading the Noosphere”, and “The Magic Cauldron”" -%]
 
-<latemp_subject "The Cathedral and the Bazaar Series - an Overview" />
-<latemp_meta_desc "Overview of the Cathedral and the Bazaar series by Eric S. Raymond: “The Cathedral and the Bazaar”, “Homesteading the Noosphere”, and “The Magic Cauldron”" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="http://catb.org/~esr/writings/cathedral-bazaar/">The Cathedral and the
@@ -16,5 +17,7 @@ reader or hearer a taste of what can be found there.
 </p>
 
 <ul>
-<qp-lect dir="slides" />
+[% PROCESS qp_lect dir = "slides",  %]
 </ul>
+
+[% END %]

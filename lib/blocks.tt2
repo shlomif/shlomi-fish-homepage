@@ -1,3 +1,6 @@
+[%- BLOCK rellink -%]
+[% base_path _ url %]
+[%- END -%]
 [% BLOCK shlomif_docbook_doc_text %]
 [% IF NOT level %][% SET level=2 %][% END %]
 [% IF dir %][% SET dir = dir _ "/" %][% END %]

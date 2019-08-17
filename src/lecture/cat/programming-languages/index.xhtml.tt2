@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Presentations about Programming Languages" -%]
+[%- SET desc = "Presentations about Scheme and Lambda Calculus, and Haskell for Perl Programmers" -%]
 
-<latemp_subject "Presentations about Programming Languages" />
-<latemp_meta_desc "Presentations about Scheme and Lambda Calculus, and Haskell for Perl Programmers" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are presentations about various programming languages and programming
@@ -9,14 +11,14 @@ concepts.
 </p>
 
 <dl>
-<dt><a href="<rellink host="t2" url="lecture/Lambda-Calculus/" />">Scheme
+<dt><a href="[% PROCESS rellink host = "t2", url = "lecture/Lambda-Calculus/",  %]">Scheme
 and Lambda Calculus</a></dt>
 <dd>
 A presentation that teaches some rudimentary Scheme (a simple dialect of
 LISP), and then uses this knowledge to teach Lambda Calculus, a minimalistic
 and elegant model for a programming environment.
 </dd>
-<dt><a href="<rellink host="t2" url="lecture/Perl/Haskell/" />">Haskell
+<dt><a href="[% PROCESS rellink host = "t2", url = "lecture/Perl/Haskell/",  %]">Haskell
 for Perl Programmers</a></dt>
 <dd>
 This presentation teaches the <a href="http://www.haskell.org/">Haskell
@@ -25,3 +27,5 @@ programming language</a> for Perl Programmers. Given as part of the
 coverage.
 </dd>
 </dl>
+
+[% END %]

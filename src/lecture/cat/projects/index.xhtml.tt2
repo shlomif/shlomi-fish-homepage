@@ -1,0 +1,27 @@
+[%- SET title = "Presentations on Shlomi Fish’s Projects" -%]
+[%- SET desc = "Presentations on Shlomi Fish’s Projects: Freecell Solver, LM-Solve and Test-Run" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+These are presentations about my <a href="[% PROCESS rellink host = "t2", url = "open-source/",  %]">Open Source Projects</a>.
+</p>
+
+<h2>Presentations about Freecell Solver</h2>
+
+<ul>
+<li><a href="[% base_path %]lecture/Freecell-Solver/">Freecell Solver - Evolution
+of a C Program</a></li>
+<li><a href="[% base_path %]lecture/Freecell-Solver/The-Next-Pres/">Freecell
+Solver - The Next Presentation</a></li>
+<li><a href="[% base_path %]lecture/Freecell-Solver/project-intro/">Freecell Solver:
+Project Introduction</a></li>
+</ul>
+
+<h2><a href="[% base_path %]lecture/LM-Solve/">LM-Solve - a Logic Mazes Solver</a></h2>
+
+<h2><a href="[% base_path %]lecture/Perl/Lightning/Test-Run/">Test::Run - a New and Improved Test Harness</a></h2>
+
+[% END %]

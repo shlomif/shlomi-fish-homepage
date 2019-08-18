@@ -1,4 +1,3 @@
-[%- PROCESS "blocks.tt2" -%]
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -9,11 +8,8 @@
 <meta name="description" content="Presentation about Scheme and Lambda Calculus" />
 </head>
 <body>
-
 <h1>Lecture about Scheme and Lambda Calculus</h1>
-
 <h2>Scheme</h2>
-
 <ul>
 <li>
 <a href="output_vars.scm.html">Output and Variables</a>  (<a href="output_vars.scm">Scheme Code</a>)
@@ -31,9 +27,7 @@
 <a href="lists.scm.html">Lists</a>  (<a href="lists.scm">Scheme Code</a>)
 </li>
 </ul>
-
 <h2>Lambda Calculus</h2>
-
 <ul>
 <li>
 <a href="lc_intro.scm.html">Introduction</a>  (<a href="lc_intro.scm">Scheme Code</a>)
@@ -63,9 +57,7 @@
 <a href="lc_church_div.scm.html">Division and Modulo in Church Numerals</a>  (<a href="lc_church_div.scm">Scheme Code</a>)
 </li>
 </ul>
-
 <h2>Finale</h2>
-
 <ul>
 <li>
 <a href="notes.scm.html">Final Notes</a>  (<a href="notes.scm">Scheme Code</a>)
@@ -74,9 +66,7 @@
 <a href="refs_n_links.html">References and Links</a>
 </li>
 </ul>
-
 <h2 id="licence">Licence</h2>
-
 <p style="margin-left: 1em;">
   <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;">
     <img src="[% base_path %]images/CC-zero-1.0-88x31.png" alt="CC0" />
@@ -88,9 +78,7 @@
 This work is published from
 <span>Israel</span>.
 </p>
-
 <hr />
-
 <p>
 <a href="../../Lambda-Calculus.tar.gz">This lecture in an archive</a>
 </p>

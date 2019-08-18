@@ -1,10 +1,11 @@
-#include "template.wml"
+[%- SET title = "PySol Fan Club Edition" -%]
+[%- SET desc = "An open source and feature-rich collection of Solitaire games" -%]
 
-<latemp_subject "PySol Fan Club Edition" />
 
-<latemp_meta_desc "An open source and feature-rich collection of Solitaire games" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 An open source and feature-rich collection of Solitaire games. I adopted the
@@ -12,9 +13,9 @@ project which has undergone several forks and merges, and some other people
 and I are now maintaining it. Contributions are welcome!
 </p>
 
-</about_sect>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -32,9 +33,9 @@ and I are now maintaining it. Contributions are welcome!
 
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="similar-projects" title="Similar Projects">
+[% WRAPPER h2_section id = "similar-projects"  title = "Similar Projects"  %]
 
 <ul>
 
@@ -46,4 +47,6 @@ solvers</a>.
 
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

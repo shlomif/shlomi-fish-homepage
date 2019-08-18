@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Freecell Solver" -%]
+[%- SET desc = "Freecell Solver is a set of APIs and command line programs, written in C, to solve deals of Freecell and similar variants of card Solitaire." -%]
 
-<latemp_subject "Freecell Solver" />
-<latemp_meta_desc "Freecell Solver is a set of APIs and command line programs, written in C, to solve deals of Freecell and similar variants of card Solitaire." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a>
@@ -17,4 +19,6 @@ fast, versatile, and portable, program with many features, and has already
 been integrated into three Freecell implementations so far.
 </p>
 
-<x11_licence name="Freecell Solver" />
+[% PROCESS x11_licence name = "Freecell Solver",  %]
+
+[% END %]

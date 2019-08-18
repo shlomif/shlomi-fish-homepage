@@ -134,6 +134,24 @@ version of the Blitz).
 [% content %]
 [%- END -%]
 [%- END -%]
+[% BLOCK x11_licence %]
+
+[% WRAPPER licence_sect %]
+
+<p>
+[% name %] [% IF plural %]are[% ELSE %]is[% END %] free and open-source software (FOSS) distributed
+under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/Expat
+License</a>, a permissive software licence.
+</p>
+
+[% END %]
+
+[% END %]
+[%- BLOCK about_sect -%]
+[%- WRAPPER h2_section id="about" title="About" -%]
+[% content %]
+[%- END -%]
+[%- END -%]
 [%- BLOCK links_sect -%]
 [%- WRAPPER h2_section id="links" title="Links" -%]
 [% content %]

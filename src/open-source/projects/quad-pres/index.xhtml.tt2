@@ -1,11 +1,14 @@
-#include "template.wml"
+[%- SET title = "Quad-Pres - a tool for writing HTML presentations" -%]
+[%- SET desc = "Quad-Pres - a tool for writing HTML presentations" -%]
 
-<latemp_subject "Quad-Pres - a tool for writing HTML presentations" />
 
-<latemp_meta_desc "Quad-Pres - a tool for writing HTML presentations" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <a href="http://www.shlomifish.org/quad-pres/">Quad-Pres</a> is a program for writing
 HTML presentations. It is based on <a href="http://thewml.org/">Website Meta
 Language</a> and <a href="http://www.perl.org/">perl</a>.
 </p>
+
+[% END %]

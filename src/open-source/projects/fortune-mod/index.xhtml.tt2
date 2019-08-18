@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "fortune-mod - display random text quotes on the command line" -%]
+[%- SET desc = "fortune-mod - display random text quotes on the command line" -%]
 
-<latemp_subject "fortune-mod - display random text quotes on the command line" />
-<latemp_meta_desc "fortune-mod - display random text quotes on the command line" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is one of the versions of the
@@ -10,7 +12,7 @@ that displays a random quotation from a database of quotations. It was adapted
 to run on Linux and other systems and is now maintained here.
 </p>
 
-<h2_section id="links" title="Project Links">
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 
 <ul>
 
@@ -28,9 +30,9 @@ to run on Linux and other systems and is now maintained here.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<licence_sect>
+[% WRAPPER licence_sect  %]
 
 <p>
 fortune-mod is derived from the NetBSD’s fortune program and retains
@@ -38,11 +40,11 @@ its licence (original 4-clause
 <a href="https://en.wikipedia.org/wiki/BSD_licenses">BSD</a>).
 </p>
 
-</licence_sect>
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage of fortune-mod">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage of fortune-mod"  %]
 
-<h3_section id="coverage-shlomif" title="Coverage on Reddit">
+[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage on Reddit"  %]
 
 <ul>
 
@@ -66,6 +68,8 @@ its licence (original 4-clause
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
+
+[% END %]

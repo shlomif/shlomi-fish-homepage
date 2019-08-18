@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "MikMod - playback library and player for module files." -%]
+[%- SET desc = "MikMod - playback library and player for module files." -%]
 
-<latemp_subject "MikMod - playback library and player for module files." />
 
-<latemp_meta_desc "MikMod - playback library and player for module files." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I adopted the
@@ -15,7 +16,7 @@ are a group of several related formats of music files.
 </p>
 
 <p>
-Previously, I had written <a href="$(ROOT)/jmikmod/">MikMod for Java</a>,
+Previously, I had written <a href="[% base_path %]jmikmod/">MikMod for Java</a>,
 which is a port of an old version of MikMod to the Java programming language
 and the JVM.
 </p>
@@ -31,3 +32,5 @@ and the JVM.
 </li>
 
 </ul>
+
+[% END %]

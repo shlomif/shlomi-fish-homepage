@@ -25,18 +25,14 @@ received a lot of commentary, both supporting, and criticising.
 
 [% INCLUDE "docbook/5/rendered/usability-of-perl-world-for-newcomers.xhtml" %]
 
-<set-var db5_base="usability-of-perl-world-for-newcomers" />
+[% SET db5_base = "usability-of-perl-world-for-newcomers" %]
 
-[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base="<get-var db5_base  %]" />
+[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base=db5_base %]
 
 <h2 id="coverage">Coverage</h2>
 
 <p>
 <b>TODO :</b> fill in.
 </p>
-
-[% END %]
-
-[% END %]
 
 [% END %]

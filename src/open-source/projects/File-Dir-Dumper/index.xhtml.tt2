@@ -21,8 +21,8 @@ CPAN[%- END -%]
 
 <h2 id="project-links">Project Links</h2>
 
-[% WRAPPER github_cpan_dist_links     dist = "File-Dir-Dumper" 
-    github_url = "https://github.com/shlomif/perl-File-Dir-Dumper" 
+[% WRAPPER github_cpan_dist_links     dist = "File-Dir-Dumper"
+    github_url = "https://github.com/shlomif/perl-File-Dir-Dumper"
     freecode_url = "http://freecode.com/projects/file-dir-dumper/"  %]
 [%- END -%]
 

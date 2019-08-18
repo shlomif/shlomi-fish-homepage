@@ -50,3 +50,5 @@ ${meta}
 [%- WRAPPER wrap_html -%]\n\n};
 
 $_ .= "\n[% END %]\n";
+
+s#[ \t]+$##gms;

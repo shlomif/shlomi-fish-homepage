@@ -1,12 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/db_formats.wml"
+[%- SET title = "Thoughts about the Best Introductory Language" -%]
+[%- SET desc = "Thoughts about the Best Introductory Language" -%]
 
-<latemp_subject "Thoughts about the Best Introductory Language" />
-<latemp_meta_desc "Thoughts about the Best Introductory Language" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc">
-<toc_div />
+[% toc_div( ) %]
 
 <section class="h2">
 
@@ -31,10 +31,11 @@ gives some other good food for thought.
 
 <h2 id="itself">The Article Itself - 2nd Revision</h2>
 
-#include "docbook/5/rendered/introductory-language.xhtml"
+[% INCLUDE "docbook/5/rendered/introductory-language.xhtml" %]
+
 </section>
 
-<docbook_formats_w_base h2_id="other_formats" h2_text="Other Formats" base="introductory-language" />
+[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "introductory-language",  %]
 
 <section class="h2">
 
@@ -85,3 +86,5 @@ the Ultimate Forums</a>
 </ul>
 
 </section>
+
+[% END %]

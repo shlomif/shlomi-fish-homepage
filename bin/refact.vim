@@ -42,4 +42,5 @@ function! V()
     :%s#\v\<set\-var +([^\=]+)\=\"([^\"]+)\" *\/ *\>#[% SET \1 = "\2" %]#g
 endfunction
 command! R !bash bin/rename.bash %
+command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
 let @e='[% END %]'

@@ -1,0 +1,39 @@
+[%- SET title = "C and C++ Elements to Avoid" -%]
+[%- SET desc = "Coding Elements and anti-patterns that should be avoided in C and C++" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( ) %]
+
+<h2 id="itself">The Text Itself</h2>
+
+[% INCLUDE "docbook/5/rendered/c-and-cpp-elements-to-avoid.xhtml" %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "c-and-cpp-elements-to-avoid",  %]
+
+[% WRAPPER h2_section id = "vcs"  title = "Version Control Repository"  %]
+
+<p>
+This document is maintained in a
+<a href="https://github.com/shlomif/c-begin"><b>GitHub Repository</b></a>
+which one can clone, fork, send pull-requests, and file issues for. Note
+that all contributions are assumed to be licensed under the
+<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+Attribution 4.0-and-above (CC-by) licence</a>. Enjoy!
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
+
+<p>
+<b>TODO:</b> fill in.
+</p>
+
+[%- END -%]
+
+[% END %]
+
+[% END %]

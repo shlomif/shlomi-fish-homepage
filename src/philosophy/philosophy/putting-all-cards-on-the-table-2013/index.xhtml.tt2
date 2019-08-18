@@ -1,0 +1,20 @@
+[%- SET title = "Putting all the Cards on the Table (2013)" -%]
+[%- SET desc = "Putting all the Cards on the Table (2013): codifying my philosophy in regards to everything I have to say: about self esteem, resourcefulness, being an action hero, not caring what other people think about you, and honesty." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects">
+
+[% toc_div( ) %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/putting-all-cards-on-the-table-2013",  %]
+
+<h2 id="content">Content</h2>
+
+[% INCLUDE "docbook/5/rendered/putting-all-cards-on-the-table-2013.xhtml" %]
+
+</div>
+
+[% END %]

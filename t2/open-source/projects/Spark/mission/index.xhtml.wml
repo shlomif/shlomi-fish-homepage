@@ -12,14 +12,10 @@
 
 <div class="wrap-me">
 
-<:
+#include "docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml"
 
-use Path::Tiny qw/ path /;
-use Text::WrapAsUtf8 qw/ print_utf8 /;
-print_utf8( path("../lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml")->slurp_utf8 =~ s{ summary="[^"]*"}{}gr);
-# print_utf8( path("../lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml")->slurp_utf8 =~ s{f}{f}gr);
-:>
 </div>
+
 <h2 id="formats">Other Formats</h2>
 
 <ul>

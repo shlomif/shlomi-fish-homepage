@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Installing Plagger from RPMs on Mandriva 2007.1" -%]
+[%- SET desc = "Installing Plagger from RPMs on Mandriva 2007.1" -%]
 
-<latemp_subject "Installing Plagger from RPMs on Mandriva 2007.1" />
 
-<latemp_meta_desc "Installing Plagger from RPMs on Mandriva 2007.1" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are the commands I used to install
@@ -27,3 +28,5 @@ the more correct thing to do would have been to translate them to their
 containing distributions.
 </li>
 </ul>
+
+[% END %]

@@ -1,10 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Spark - Pre-Birth of a Modern Lisp" -%]
+[%- SET desc = "Spark - Pre-Birth of a Modern Lisp" -%]
 
-<latemp_subject "Spark - Pre-Birth of a Modern Lisp" />
-<latemp_meta_desc "Spark - Pre-Birth of a Modern Lisp" />
 
-<toc_div />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( ) %]
 
 <h2 id="itself">The Article Itself</h2>
 
@@ -12,7 +13,7 @@
 
 <div class="wrap-me">
 
-#include "docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml"
+[% INCLUDE "lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml" %]
 
 </div>
 
@@ -37,3 +38,5 @@ please don’t print, though.
 </li>
 
 </ul>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Website META Language" -%]
+[%- SET desc = "Website META Language - an HTML preprocessor" -%]
 
-<latemp_subject "Website META Language" />
 
-<latemp_meta_desc "Website META Language - an HTML preprocessor" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I am the current maintainer for Website META Language (often abbreviated as
@@ -34,7 +35,7 @@ Project</a>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/projects/latemp/">Latemp</a> - a static
+<a href="[% base_path %]open-source/projects/latemp/">Latemp</a> - a static
 site generator based on Website Meta Language, which was
 created by me. I use it to maintain this site and some other sites
 </p>
@@ -51,3 +52,5 @@ contains online documentation and some information, but needs to be updated.
 
 
 </ul>
+
+[% END %]

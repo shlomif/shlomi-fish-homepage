@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Spark - a Modern Dialect of Lisp" -%]
+[%- SET desc = "Spark - a Modern Dialect of Lisp" -%]
 
-<latemp_subject "Spark - a Modern Dialect of Lisp" />
 
-<latemp_meta_desc "Spark - a Modern Dialect of Lisp" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Spark is a modern dialect of Lisp that aims to be popular, used for real-world
@@ -45,3 +46,5 @@ Seven Deadly Sins of Arc</a> - what Shlomi Fish found lacking in Arc.
 </li>
 
 </ul>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Ancient Code" -%]
+[%- SET desc = "Nostalgia: old/ancient code by Shlomi Fish" -%]
 
-<latemp_subject "Shlomi Fish’s Ancient Code" />
 
-<latemp_meta_desc "Nostalgia: old/ancient code by Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I found a zip file lying around on the hard disk, containing some source
@@ -20,29 +21,26 @@ back at high school, then feel free to check these files out. Here are short
 descriptions of some of them:
 </p>
 
-<define-tag file whitespace="delete">
-<preserve name />
-<set-var %attributes />
-<a href="progs/<get-var name />"><b><get-var name /></b></a>
-<restore name />
-</define-tag>
+[%- BLOCK file -%]
+<a href="progs/[% name %]"><b>[% name %]</b></a>
+[%- END -%]
 
 <ul>
 <li id="csee">
 <p>
-<file name="csee.h" />, <file name="csee.cpp" /> -
+[% PROCESS file name="csee.h" %], [% PROCESS file name="csee.cpp" %] -
 C-See - a library of various graphical routines.
 </p>
 </li>
 <li id="ccalc">
 <p>
-<file name="ccalc.cpp" /> - C-Calc - a library of mathematical and
+[% PROCESS file name="ccalc.cpp" %] - C-Calc - a library of mathematical and
 number theory routines.
 </p>
 </li>
 <li id="gregorian_to_jewish">
 <p>
-<file name="gtoj.c" />, <file name="gtoj2.cpp" />, <file name="gtoj.h" /> -
+[% PROCESS file name="gtoj.c" %], [% PROCESS file name="gtoj2.cpp" %], [% PROCESS file name="gtoj.h" %] -
 some routines to convert dates of
 <a href="http://en.wikipedia.org/wiki/Gregorian_calendar">the
 Gregorian Calendar</a> to the
@@ -58,19 +56,21 @@ to ANSI C.
 </li>
 <li id="bezier">
 <p>
-<file name="bezier.cpp" /> - a program to generate Bezier Curves.
+[% PROCESS file name="bezier.cpp" %] - a program to generate Bezier Curves.
 </p>
 </li>
 <li id="mandelbroot">
 <p>
-<file name="mandelbr.cpp" /> - a program to generate the Manelbrot set. (Who
+[% PROCESS file name="mandelbr.cpp" %] - a program to generate the Manelbrot set. (Who
 didn’t write something like that?)
 </p>
 </li>
 <li id="cdd">
 <p>
-<file name="cdd.cpp" /> - a program to change a drive and a directory at
+[% PROCESS file name="cdd.cpp" %] - a program to change a drive and a directory at
 once. Like <code>cdd d:\progs\tcc</code>.
 </p>
 </li>
 </ul>
+
+[% END %]

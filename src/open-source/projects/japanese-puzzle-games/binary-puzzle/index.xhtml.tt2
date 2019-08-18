@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "Solver for binarypuzzle.com" -%]
+[%- SET desc = "A solver for binarypuzzle.com, the Binary Puzzle" -%]
 
-<latemp_subject "Solver for binarypuzzle.com" />
 
-<latemp_meta_desc "A solver for binarypuzzle.com, the Binary Puzzle" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is an incomplete solver for the so-called
@@ -11,7 +11,7 @@ This is an incomplete solver for the so-called
 featured on binarypuzzle.com. Also see <a href="https://en.wikipedia.org/wiki/Takuzu">the Wikipedia entry</a>.
 </p>
 
-<h2_section id="project-links" title="Project Links">
+[% WRAPPER h2_section id = "project-links"  title = "Project Links"  %]
 
 <ul>
 
@@ -46,9 +46,9 @@ using backtracking, but does not display the reasoning.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="publicity" title="Publicity">
+[% WRAPPER h2_section id = "publicity"  title = "Publicity"  %]
 
 <ul>
 
@@ -62,6 +62,8 @@ enthusiasts mailing list about it.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<x11_licence name="The Binary Puzzle Solver" plural="" />
+[% PROCESS x11_licence name = "The Binary Puzzle Solver", plural=""  %]
+
+[% END %]

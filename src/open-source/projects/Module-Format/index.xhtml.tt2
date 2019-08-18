@@ -1,16 +1,14 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[% SET modname = "Module-Format" %]
+[%- SET title = "$modname - perform bulk operations on Perl modules" -%]
+[%- SET desc = title -%]
 
-<set-var modname="Module-Format" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "<get-var modname /> - perform bulk operations on Perl modules" />
-
-<latemp_meta_desc "<get-var modname /> - perform bulk operations on Perl modules" />
-
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
-<get-var modname /> aims to simplify installing a large number of Perl modules
+[% modname %] aims to simplify installing a large number of Perl modules
 (or their associated CPAN distributions) which are often stringified into
 various different formats in the Perl world. It can handle all of these
 format, including input from heterogeneous formats.
@@ -62,14 +60,14 @@ libfoo-bar-baz-perl
 </ul>
 
 <p>
-<get-var modname /> can input from most of them and output to all of them.
+[% modname %] can input from most of them and output to all of them.
 </p>
 
-</about_sect>
+[%- END -%]
 
-<h2_section id="use-cases" title="Use Cases">
+[% WRAPPER h2_section id = "use-cases"  title = "Use Cases"  %]
 
-<h3_section id="apt-get" title="apt-get">
+[% WRAPPER h3_section id = "apt-get"  title = "apt-get"  %]
 
 <p>
 To install a group of modules using
@@ -89,9 +87,9 @@ Then you can type invocations like
 <code>up XML::RSS XML-LibXML DBIx/Class.pm</code> (note the inconsistency in the
 parameters.) to install Perl modules.
 </p>
-</h3_section>
+[%- END -%]
 
-<h3_section id="urpmi" title="urpmi">
+[% WRAPPER h3_section id = "urpmi"  title = "urpmi"  %]
 
 <p>
 To install a group of modules using
@@ -113,27 +111,25 @@ Then you can type invocations like
 parameters.) to install Perl modules.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="links" title="Project Links">
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 
-<h3_section id="links-module-format" title="For <get-var modname />">
+[% WRAPPER h3_section id = "links-module-format"  title="For $modname" %]
 
-<bitbucket_cpan_dist_links
-    dist="<get-var modname />"
-    bitbucket_url="http://bitbucket.org/shlomif/web-cpan"
-    freecode_url="http://freecode.com/projects/module-format">
-</bitbucket_cpan_dist_links >
+[% WRAPPER bitbucket_cpan_dist_links     dist = modname
+    bitbucket_url = "http://bitbucket.org/shlomif/web-cpan"
+    freecode_url = "http://freecode.com/projects/module-format"  %]
+[%- END -%]
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[% PROCESS x11_licence name = "Module-Format",  %]
 
-<x11_licence name="Module-Format" />
-
-<h2_section id="blog-posts" title="Blog Posts About <get-var modname />">
+[% WRAPPER h2_section id = "blog-posts"  title="Blog Posts About $modname" %]
 
 <ul>
 
@@ -146,4 +142,6 @@ Module-Format”</a> - on Shlomi Fish’s Technical Blog.
 
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "software.wml"
+[%- SET title = "Open Source Software I wrote" -%]
+[%- SET desc = "Software resources on Shlomi Fish’s sites: projects, resource pages, pages against bad software, and interviews." -%]
+[%- SET more_keywords = "open, source, open source, free software, free, software, freecell, solver, perl, cpan, linux, unix, programs, applications, libraries, apis" -%]
 
-<latemp_subject "Open Source Software I wrote" />
 
-<latemp_meta_desc "Software resources on Shlomi Fish’s sites: projects, resource pages, pages against bad software, and interviews." />
-
-<latemp_more_keywords "open, source, open source, free software, free, software, freecell, solver, perl, cpan, linux, unix, programs, applications, libraries, apis" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I love computers, and I also like to program for fun, profit and ideals. I’ve
@@ -13,12 +12,12 @@ been programming since I was 10 years old (back in 1987 for the PC XT ROM
 BASIC). Now in my free time I’m using a Linux machine for development, and
 am working on <a href="http://www.opensource.org/">Open Source
 Software</a>. I also maintain some software-related resources, and also have
-some <a href="$(ROOT)/philosophy/computers/">essays about computing</a>.
+some <a href="[% base_path %]philosophy/computers/">essays about computing</a>.
 </p>
 
 <h2 id="projects">Open Source Projects</h2>
 
-<home_pages_on_forges />
+[% PROCESS home_pages_on_forges  %]
 
 <h2 id="contributions"><a href="contributions/">Contributions to Open Source Software</a></h2>
 
@@ -64,3 +63,5 @@ bad programs.
 These are old programs I wrote for DOS during high school, mostly in
 <a href="http://en.wikipedia.org/wiki/Turbo_C++">Turbo C++</a>.
 </p>
+
+[% END %]

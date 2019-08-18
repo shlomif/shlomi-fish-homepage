@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Test.pm to Test::More Partial Conversion" -%]
+[%- SET desc = "Test.pm to Test::More Partial Conversion" -%]
 
-<latemp_subject "Test.pm to Test::More Partial Conversion" />
 
-<latemp_meta_desc "Test.pm to Test::More Partial Conversion" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Previously Perl test-programs used the built-in <b>Test.pm</b> module, but it
@@ -74,8 +75,10 @@ Not packaged as a CPAN distribution.
 Patches for some of these would be welcome.
 </p>
 
-<x11_licence name="Test.pm-to-Test-More.pl" />
+[% PROCESS x11_licence name = "Test.pm-to-Test-More.pl",  %]
 
 <h2 id="news">News</h2>
 
 <h2 id="blog-posts">Blog Posts</h2>
+
+[% END %]

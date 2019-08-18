@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "File-Find-Object - CPAN Module to Traverse a Directory Tree" -%]
+[%- SET desc = "File-Find-Object - CPAN Module to Traverse a Directory Tree" -%]
 
-<latemp_subject "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "File-Find-Object - CPAN Module to Traverse a Directory Tree" />
-
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 The perl 5 distribution ships with the File::Find module, which can be used
@@ -30,7 +29,7 @@ It does not have an iterative interface.
 
 <p>
 File-Find-Object is a CPAN module, which was originally created by
-<a href="<cpan_homepage who="nanardon" />">Olivier Thauvin</a> and
+<a href="http://metacpan.org/author/NANARDON">Olivier Thauvin</a> and
 now mostly maintained by me (= Shlomi Fish) that aims to address these
 limitations and more, and provide Perl programmers with a robust,
 object-oriented and usable alternative.
@@ -43,39 +42,28 @@ declarative interface for File-Find-Object, while overcoming the limitations
 of File::Find.
 </p>
 
-</about_sect>
+[%- END -%]
 
-<h2_section id="links" title="Project Links">
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 
-<h3_section id="links-file-find-object" title="For File-Find-Object">
+[% WRAPPER h3_section id = "links-file-find-object"  title = "For File-Find-Object"  %]
 
-<bitbucket_cpan_dist_links
-    dist="File-Find-Object"
-    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object"
-    freecode_url="http://freecode.com/projects/file-find-object/">
-</bitbucket_cpan_dist_links >
+[% WRAPPER bitbucket_cpan_dist_links     dist = "File-Find-Object"
+    bitbucket_url = "https://bitbucket.org/shlomif/perl-file-find-object"
+    freecode_url = "http://freecode.com/projects/file-find-object/"  %]
+[%- END -%]
+[%- END -%]
 
-</h3_section>
+[% WRAPPER h3_section id = "links-file-find-object-rule"  title = "File-Find-Object-Rule"  %]
 
-<h3_section id="links-file-find-object-rule" title="File-Find-Object-Rule">
+[% WRAPPER bitbucket_cpan_dist_links     dist = "File-Find-Object-Rule"
+    bitbucket_url = "https://bitbucket.org/shlomif/perl-file-find-object-rule"  %]
+[%- END -%]
+[%- END -%]
 
-<bitbucket_cpan_dist_links
-    dist="File-Find-Object-Rule"
-    bitbucket_url="https://bitbucket.org/shlomif/perl-file-find-object-rule">
-</bitbucket_cpan_dist_links >
+[%- END -%]
 
-<define-tag freecode_removed>
-<li>
-<a href="http://freecode.com/projects/file-find-object/">Freecode
-Record</a>
-</li>
-</define-tag>
-
-</h3_section>
-
-</h2_section>
-
-<licence_sect>
+[% WRAPPER licence_sect  %]
 
 <p>
 File-Find-Object is multi-licensed under the GNU General Public Licence (GPL)
@@ -90,11 +78,12 @@ is distributed under its same terms with all subsequent copyright claims
 to the modifications disclaimed.
 </p>
 
-</licence_sect>
+[%- END -%]
 
-<news_sect>
+[% WRAPPER news_sect  %]
 
-<h3_section id="news-2009-06-26" title="2009-06-26: File-Find-Object-Rule Version 0.0300">
+[% SET xsac=cpan_self_dist( "d" => "Class-XSAccessor", ) %]
+[% WRAPPER h3_section id = "news-2009-06-26"  title = "2009-06-26: File-Find-Object-Rule Version 0.0300"  %]
 
 <p>
 Version 0.0300 of File-Find-Object-Rule was released yesterday. The main
@@ -104,17 +93,16 @@ File-Find-Object to scan the tree incrementally, instead of building a long
 list of results in memory, and then iterating over it.
 </p>
 
-<set-var xsac="<cpan_self_dist d="Class-XSAccessor" />" />
 <p>
 Other, more minor, improvements included a cleanup of the code to use
-<get-var xsac />, POD tests and full POD coverage, update of the documentation for
+[% xsac %], POD tests and full POD coverage, update of the documentation for
 File-Find-Object-Rule (instead of the original File-Find-Rule) and more links
 and keywords as META.yml meta-data.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="news-2009-01-09" title="2009-01-09: File-Find-Object 0.1.6 Was Released With a Huge Speed Boost">
+[% WRAPPER h3_section id = "news-2009-01-09"  title = "2009-01-09: File-Find-Object 0.1.6 Was Released With a Huge Speed Boost"  %]
 
 <p>
 Recently, File-Find-Object was benchmarked using a test program that
@@ -127,21 +115,18 @@ shortly.
 </p>
 
 <p>
-One thing to note is that we are now using
-<get-var xsac />
-instead of
-<cpan_self_dist d="Class-Accessor" />,
+One thing to note is that we are now using [% xsac %] instead of [% cpan_self_dist( "d" => "Class-Accessor", ) %],
 because the conversion yielded a substantial increase in speed. More
 information can be found in the Changes file in the distribution.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</news_sect>
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage of File-Find-Object">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage of File-Find-Object"  %]
 
-<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
+[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage in Shlomi Fish’s Blogs"  %]
 
 <ul>
 
@@ -168,6 +153,8 @@ you can do with File-Find-Object (that you can’t with File::Find)”</a>
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
+
+[% END %]

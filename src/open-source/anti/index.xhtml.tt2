@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Pages against Various Software" -%]
+[%- SET desc = "Pages against Various Software: Internet Explorer, C-Shell, qmail, Apple Inc., MySQL, PHP, GNU Autotools, Java, SOAP" -%]
 
-<latemp_subject "Pages against Various Software" />
 
-<latemp_meta_desc "Pages against Various Software: Internet Explorer, C-Shell, qmail, Apple Inc., MySQL, PHP, GNU Autotools, Java, SOAP" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are pages that concentrate links against various software.
@@ -12,7 +13,7 @@ These are pages that concentrate links against various software.
 
 <div class="sub_section">
 
-<h3><a href="$(ROOT)/no-ie/">Stop Using Internet Explorer!</a></h3>
+<h3><a href="[% base_path %]no-ie/">Stop Using Internet Explorer!</a></h3>
 
 <h3><a href="qmail/">Stop Using the qmail SMTP Server</a></h3>
 
@@ -61,3 +62,5 @@ world of the Flash Player plugin.
 </li>
 
 </ul>
+
+[% END %]

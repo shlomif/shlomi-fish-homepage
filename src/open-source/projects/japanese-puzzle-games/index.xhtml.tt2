@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Solvers and Other Programs for Japanese Puzzle Games" -%]
+[%- SET desc = "Solvers and Other Programs for Japanese-like Puzzle Games" -%]
 
-<latemp_subject "Solvers and Other Programs for Japanese Puzzle Games" />
 
-<latemp_meta_desc "Solvers and Other Programs for Japanese-like Puzzle Games" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Japanese puzzle games, either those published by the Japanese publisher Nikoli
@@ -141,3 +142,5 @@ many games.
 </li>
 
 </ul>
+
+[% END %]

@@ -1,0 +1,32 @@
+[%- SET title = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
+[%- SET desc = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER about_sect  %]
+
+<p>
+Docmake is a command line tool to translate
+<a href="http://en.wikipedia.org/wiki/DocBook">DocBook/XML</a> code into
+various resultant formats such as XHTML, RTF, PDF and XSL-FO, using the
+more low-level tools. It aims to be a replacement for
+<a href="http://cyberelk.net/tim/software/xmlto/">xmlto</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
+
+[% WRAPPER github_cpan_dist_links     dist = "App-XML-DocBook-Builder"
+    github_url = "http://github.com/shlomif/docmake"
+    freecode_url = "http://freecode.com/projects/docmake/"  %]
+</github_cpan_dist_links >
+
+[%- END -%]
+
+[%- END -%]
+
+[% PROCESS x11_licence name = "Docmake",  %]
+
+[% END %]

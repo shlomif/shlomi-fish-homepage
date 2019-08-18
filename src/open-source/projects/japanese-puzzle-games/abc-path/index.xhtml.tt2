@@ -1,16 +1,16 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "Solver and Generator for ABC Path" -%]
+[%- SET desc = "Solver and Generator for ABC Path: a riddle game, as featured on brainbashers.com." -%]
 
-<latemp_subject "Solver and Generator for ABC Path" />
 
-<latemp_meta_desc "Solver and Generator for ABC Path: a riddle game, as featured on brainbashers.com." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<set-var modname="Games-ABC_Path-Solver" />
+[% SET modname = "Games-ABC_Path-Solver" %]
 
-<set-var gen_modname="Games-ABC_Path-Generator" />
+[% SET gen_modname = "Games-ABC_Path-Generator" %]
 
 <p>
-<get-var modname /> is a Perl 5 CPAN distribution which implements a solver
+[% modname %] is a Perl 5 CPAN distribution which implements a solver
 for
 <a href="http://www.brainbashers.com/abcpath.asp">ABC Path</a> as featured on
 brainbashers.com. It provides a standalone command-line “abc-path-solver”
@@ -19,7 +19,7 @@ program and an Application Programmer Interface (API).
 
 <p>
 The
-<get-var gen_modname /> Perl 5 CPAN
+[% gen_modname %] Perl 5 CPAN
 distribution implements a generator for ABC Path layouts based on a random
 number seed. What it does is first generate a random path through the 5*5
 board, and then assigns the hints randomly. Sometimes the process takes a
@@ -36,29 +36,27 @@ an in-browser game in the future.
 Currently, documentation is a little lacking.
 </p>
 
-<h2_section id="links" title="Project Links">
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 
-<h3_section id="links-abc-path-solver" title="For the ABC Path Solver">
+[% WRAPPER h3_section id = "links-abc-path-solver"  title = "For the ABC Path Solver"  %]
 
-<github_cpan_dist_links
-    dist="<get-var modname />"
+[% WRAPPER github_cpan_dist_links     dist=modname
     freecode_url="http://freecode.com/projects/abc-path-solver"
-    github_url="https://github.com/shlomif/abc-path">
-</github_cpan_dist_links>
+    github_url="https://github.com/shlomif/abc-path" %]
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="links-abc-path-gen" title="For the ABC Path Generator">
+[% WRAPPER h3_section id = "links-abc-path-gen"  title = "For the ABC Path Generator"  %]
 
-<github_cpan_dist_links
-    dist="<get-var gen_modname />"
+[% WRAPPER github_cpan_dist_links     dist=gen_modname
     freecode_url="http://freecode.com/projects/abc-path-generator"
-    github_url="https://github.com/shlomif/abc-path">
-</github_cpan_dist_links>
+    github_url="https://github.com/shlomif/abc-path" %]
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="video-demos" title="Videos">
+[% WRAPPER h3_section id = "video-demos"  title = "Videos"  %]
 
 <ul>
 
@@ -72,9 +70,9 @@ and the generator. (on YouTube)
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="general-links" title="General ABC-Path Links">
+[% WRAPPER h3_section id = "general-links"  title = "General ABC-Path Links"  %]
 
 <ul>
 
@@ -96,8 +94,10 @@ is in German).
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<x11_licence name="<get-var modname /> and <get-var gen_modname />" plural="1" />
+[% PROCESS x11_licence name="$modname and $gen_modname" plural="1" %]
+
+[% END %]

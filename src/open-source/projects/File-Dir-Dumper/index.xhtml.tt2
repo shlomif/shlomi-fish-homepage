@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" -%]
+[%- SET desc = "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" -%]
 
-<latemp_subject "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" />
 
-<latemp_meta_desc "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a Perl CPAN distribution to dump the meta data (file sizes,
@@ -15,17 +15,16 @@ as its representation.
 <h2 id="download">Download</h2>
 
 <p>
-<cpan_dist d="File-Dir-Dumper">Download File-Dir-Dumper from the
-CPAN</cpan_dist>
+[%- WRAPPER cpan_dist d = "File-Dir-Dumper" -%]Download File-Dir-Dumper from the
+CPAN[%- END -%]
 </p>
 
 <h2 id="project-links">Project Links</h2>
 
-<github_cpan_dist_links
-    dist="File-Dir-Dumper"
-    github_url="https://github.com/shlomif/perl-File-Dir-Dumper"
-    freecode_url="http://freecode.com/projects/file-dir-dumper/">
-</github_cpan_dist_links>
+[% WRAPPER github_cpan_dist_links     dist = "File-Dir-Dumper" 
+    github_url = "https://github.com/shlomif/perl-File-Dir-Dumper" 
+    freecode_url = "http://freecode.com/projects/file-dir-dumper/"  %]
+[%- END -%]
 
 <h2 id="similar-projects">Similar Projects</h2>
 
@@ -43,4 +42,6 @@ Java and XML.
 
 </ul>
 
-<x11_licence name="File-Dir-Dumper" />
+[% PROCESS x11_licence name = "File-Dir-Dumper",  %]
+
+[% END %]

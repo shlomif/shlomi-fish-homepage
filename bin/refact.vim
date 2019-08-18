@@ -37,4 +37,8 @@ function! Block()
     :'a,'es/<define-tag \(\([-_]\|\w\)\+\)>/[% BLOCK \1 %]/
     :'a,'es/<get-var \(\S\+\) *\/>/[% \1 %]/g
 endfunction
+function! V()
+    :%s/<get-var \(\S\+\) *\/>/[% \1 %]/g
+    :%s#\v\<set\-var +([^\=]+)\=\"([^\"]+)\" *\/ *\>#[% SET \1 = "\2" %]#g
+endfunction
 command! R !bash bin/rename.bash %

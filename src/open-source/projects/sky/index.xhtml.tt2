@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "sky - a convenient uploading interface" -%]
+[%- SET desc = "sky - allow one to upload files to a remote host with a web service and give back the URL." -%]
 
-<latemp_subject "sky - a convenient uploading interface" />
 
-<latemp_meta_desc "sky - allow one to upload files to a remote host with a web service and give back the URL." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="wrap-me">
 <p>
@@ -84,12 +84,13 @@ sky from the CPAN</a>
 
 <h2 id="project-links">Project Links</h2>
 
-<github_cpan_dist_links
-    dist="App-Sky"
-    github_url="https://github.com/shlomif/Sky-uploader"
-    freecode_url="http://freecode.com/projects/app-sky">
-</github_cpan_dist_links>
+[% WRAPPER github_cpan_dist_links     dist = "App-Sky"
+    github_url = "https://github.com/shlomif/Sky-uploader"
+    freecode_url = "http://freecode.com/projects/app-sky"  %]
+[%- END -%]
 
-<x11_licence name="sky" />
+[% PROCESS x11_licence name = "sky",  %]
 
 </div>
+
+[% END %]

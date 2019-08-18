@@ -1,10 +1,9 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "countdown - Delay, while Displaying the remaining time" -%]
+[%- SET desc = "countdown - a Perl program to delay an event while Displaying the remaining time (a better sleep (1))." -%]
 
-<latemp_subject "countdown - Delay, while Displaying the remaining time" />
 
-<latemp_meta_desc "countdown - a Perl program to delay an event while Displaying the remaining time (a better sleep (1))." />
-
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a Perl CPAN distribution that implements a command line application,
@@ -22,10 +21,11 @@ countdown from the CPAN</a>
 
 <h2 id="project-links">Project Links</h2>
 
-<github_cpan_dist_links
-    dist="App-Countdown"
-    github_url="https://github.com/shlomif/App-Countdown"
-    freecode_url="http://freecode.com/projects/app-countdown">
-</github_cpan_dist_links>
+[% WRAPPER github_cpan_dist_links     dist = "App-Countdown" 
+    github_url = "https://github.com/shlomif/App-Countdown" 
+    freecode_url = "http://freecode.com/projects/app-countdown"  %]
+[%- END -%]
 
-<x11_licence name="countdown" />
+[% PROCESS x11_licence name = "countdown",  %]
+
+[% END %]

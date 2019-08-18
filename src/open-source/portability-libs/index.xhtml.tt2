@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Cross-Platform Abstraction Libraries" -%]
+[%- SET desc = "Cross-Platform libraries for abstracting system services and for portability." -%]
+[%- SET more_keywords = "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" -%]
 
-<latemp_subject "Cross-Platform Abstraction Libraries" />
 
-<latemp_meta_desc "Cross-Platform libraries for abstracting system services and for portability." />
-
-<latemp_more_keywords "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Programming an application that can run both on <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a>
@@ -26,31 +25,28 @@ for such things within the language or bindings to libraries in lower-level
 languages.
 </p>
 
-<define-tag licence_qt>
+[% BLOCK licence_qt %]
 LGPLed starting from version 4.5. Previously licensed under either the GPL
 or a commercial licence.
-</define-tag>
+[% END %]
 
-<define-tag qt_logo>
+[% BLOCK qt_logo %]
 <img src="Qt_logo_2015.svg" alt="Qt’s Logo" title="Qt’s logo from the English Wikipedia" style="height:80px; float:right;" />
-</define-tag>
+[% END %]
 
-<define-tag lib_qt_core>
-<preserve with_logo />
-<set-var %attributes />
+[% BLOCK lib_qt_core %]
 <li>
 <p>
 <a href="https://doc.qt.io/qt-5/qtcore-index.html">QtCore</a> -
 part of <a href="#lib_qt">Qt</a> that provides data structures and system
-services (and not GUI). <licence_qt />
-<if "<get-var with_logo />" "<qt_logo />" "" />
+services (and not GUI). [% INCLUDE licence_qt %]
+[% IF with_logo %][% INCLUDE qt_logo %][% END %]
 </p>
-<restore with_logo />
 </li>
 
-</define-tag>
+[% END %]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="data_structures">Data Structures</h2>
 
@@ -103,7 +99,7 @@ functions. LGPLed.
 </p>
 </li>
 
-<lib_qt_core with_logo="1" />
+[% INCLUDE lib_qt_core with_logo="1" %]
 
 </ul>
 
@@ -216,7 +212,7 @@ a library for threading abstractions (open source).
 </p>
 </li>
 
-<lib_qt_core />
+[% INCLUDE lib_qt_core with_logo="" %]
 
 </ul>
 
@@ -236,8 +232,8 @@ back-ends. Native look-and-feel. LGPLed.
 <p>
 <a href="http://www.trolltech.com/">Qt</a> -  a C++ cross-platform GUI
 library with Win32, X-Windows and Mac OS X backends. A very encompassing API.
-<licence_qt />
-<qt_logo />
+[% INCLUDE licence_qt %]
+[% INCLUDE qt_logo %]
 </p>
 </li>
 
@@ -445,7 +441,7 @@ platforms and languages.
 <li>
 <p>
 The book
-<a href="$(ROOT)/philosophy/books-recommends/#porting_unix_software">“Porting
+<a href="[% base_path %]philosophy/books-recommends/#porting_unix_software">“Porting
 UNIX Software” by Greg Lehey</a> - outdated, but still can provide many
 insights.
 </p>
@@ -483,7 +479,7 @@ taken from the English Wikipedia under the public domain.
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2011" />
+[% cc_by_british_blurb( "year" => "2011", ) %]
 
 <!--
 
@@ -494,3 +490,5 @@ Databases:
 ** Not native Win32 for the time being
 
 -->
+
+[% END %]

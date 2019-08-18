@@ -1,12 +1,9 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Guide to Israeli Free and Open Source Software Resources" -%]
 
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "Guide to Israeli Free and Open Source Software Resources" />
-
-<latemp_meta_desc "Guide to Israeli Free and Open Source Software Resources" />
-
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="portals">Portals, News, etc.</h2>
 
@@ -41,14 +38,14 @@ comments, guides and documents and blogs. (Inactive).
 <a href="http://linux-israel.net/">Linux-Israel.Net</a>
 </li>
 
-<define-tag peng_org_il__removed>
+[% BLOCK peng_org_il__removed %]
 
 <li>
 <a href="http://www.p.org.il/">P.org.il - guides, support
 and news</a>
 </li>
 
-</define-tag>
+[% END %]
 
 <li>
 <a href="http://www.guides.co.il/linux.php">Hebrew Guides to Linux from
@@ -153,13 +150,13 @@ in Herzeliyah</a> - organises bi-weekly meetings.
 <a href="http://rubyisrael.org/">Ruby Israel (or Israel.rb)</a>.
 </li>
 
-<define-tag php_israel_removed>
+[% BLOCK php_israel_removed %]
 ;;; The php-israel Link is no longer active.
 ;;;
 <li>
 <a href="http://php-israel.org/drupal/">Israeli PHP User Group</a>.
 </li>
-</define-tag>
+[% END %]
 
 <li>
 <a href="http://mozilla.org.il/">Mozilla Israel (mozilla.org.il)</a> -
@@ -366,12 +363,12 @@ in Israel.</a>
 <a href="http://ubuntu-il.org/wiki">Ubuntu Israel’s Wiki</a>
 </li>
 
-<define-tag peng_org_il__removed>
+[% BLOCK peng_org_il__removed %]
 <li>
 <a href="http://peng.org.il/doku.php">The Peng.org.il Wiki</a> - primarily
 intended for writing Hebrew Linux Guides.
 </li>
-</define-tag>
+[% END %]
 
 <li>
 <a href="http://www.hackers.org.il/mediawiki/index.php/Main_Page">The Hackers-IL
@@ -407,4 +404,12 @@ TODO: Add:
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2011" />
+[% cc_by_british_blurb( "year" => "2011", ) %]
+
+<!--
+
+TODO: Add:
+
+* Ivrix.org.il (once it is restored).
+-->
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Israel-Related Open Source Resources" -%]
+[%- SET desc = "Israel-Related Open Source Resources" -%]
 
-<latemp_subject "Israel-Related Open Source Resources" />
 
-<latemp_meta_desc "Israel-Related Open Source Resources" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="guide-to-israeli-foss-resources/">Guide to Israeli Free
 and Open Source Software Resources</a></h2>
@@ -17,3 +18,5 @@ A guide to the online resources about Free and Open Source Software in Israel.
 A list of Israeli open-source projects that used to be on the wiki of
 Hackers-IL.
 </p>
+
+[% END %]

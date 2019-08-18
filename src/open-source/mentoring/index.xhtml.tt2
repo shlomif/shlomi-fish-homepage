@@ -1,17 +1,17 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish Mentoring Others in Open Source/Open Content" -%]
+[%- SET desc = "Shlomi Fish Mentoring Others in Open Source/Open Content" -%]
+[%- SET more_keywords = "open, source, open source, free software, free, software, mentoring, mentor, training" -%]
 
-<latemp_subject "Shlomi Fish Mentoring Others in Open Source/Open Content" />
 
-<latemp_meta_desc "Shlomi Fish Mentoring Others in Open Source/Open Content" />
-
-<latemp_more_keywords "open, source, open source, free software, free, software, mentoring, mentor, training" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
-I, <a href="$(ROOT)/">Shlomi Fish</a>, am willing to mentor newcomers with their
+I, <a href="[% base_path %]">Shlomi Fish</a>, am willing to mentor newcomers with their
 first steps into the world of contributing to
-<a href="$(ROOT)/philosophy/foss-other-beasts/">free and
+<a href="[% base_path %]philosophy/foss-other-beasts/">free and
 open source software (FOSS) and free and open content</a>, whether in
-<a href="$(ROOT)/open-source/">my own projects</a> or in projects I’m
+<a href="[% base_path %]open-source/">my own projects</a> or in projects I’m
 not directly involved in. By mentoring I will provide guidance into how to
 contribute and assistance.
 </p>
@@ -21,7 +21,7 @@ Before contacting me, make sure you are serious about contributing and that
 you won’t waste my time by asking me for help. If you are, then please
 pick a project you’d like to contribute to (it can be any project, but
 naturally I can provide more assistance with a project which I’ve been
-involved with) and <a href="$(ROOT)/me/contact-me/">contact me</a> via Instant
+involved with) and <a href="[% base_path %]me/contact-me/">contact me</a> via Instant
 Messaging, as E-mail is far less effective for that.
 </p>
 
@@ -39,3 +39,5 @@ initiative.
 <a href="http://szabgab.com/blog/2009/09/1251862435.html">in his
 blog Post “Perl projects for Newbies”</a>
 </p>
+
+[% END %]

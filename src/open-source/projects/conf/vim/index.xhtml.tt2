@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Vim Configuration" -%]
+[%- SET desc = "Vim Configuration" -%]
 
-<latemp_subject "Vim Configuration" />
 
-<latemp_meta_desc "Vim Configuration" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="current">Current Vim Configuration</h2>
 
@@ -19,3 +20,5 @@ repository</a>.
 The old configuration I have placed on this site, now superseded by the
 version controlled one.
 </p>
+
+[% END %]

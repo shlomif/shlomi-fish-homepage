@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Open Inventor BSD Daemon" -%]
+[%- SET desc = "Open Inventor BSD Daemon" -%]
 
-<latemp_subject "Open Inventor BSD Daemon" />
 
-<latemp_meta_desc "Open Inventor BSD Daemon" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="OpenInventor-BSD-Daemon-0.2.0.tar.gz">Download the Archive</a></h2>
 
@@ -21,3 +22,5 @@ for it to follow.
 <p>
 You’ll need the OpenInventor support libraries to compile it.
 </p>
+
+[% END %]

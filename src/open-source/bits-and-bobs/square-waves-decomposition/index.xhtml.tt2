@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Square Waves Decomposition of a Sine Wave" -%]
+[%- SET desc = "Square Waves Decomposition of a Sine Wave" -%]
 
-<latemp_subject "Square Waves Decomposition of a Sine Wave" />
 
-<latemp_meta_desc "Square Waves Decomposition of a Sine Wave" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I’ve been on <a href="irc://irc.freenode.net/#math">Freenode’s #math
@@ -41,3 +42,5 @@ about it</a>).
 The C version is faster, but both produce identical results. The Perl version
 requires <a href="http://pdl.perl.org">PDL - the Perl Data Language</a>.
 </p>
+
+[% END %]

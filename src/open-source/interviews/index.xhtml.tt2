@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Interviews with Open Source People" -%]
+[%- SET desc = "Interviews with Open Source People" -%]
 
-<latemp_subject "Interviews with Open Source People" />
 
-<latemp_meta_desc "Interviews with Open Source People" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
 
@@ -40,3 +41,5 @@ Collins-Sussman</a> who is best known for being a core developer of the
 <p>
 <a href="sussman-interview.txt">Source in XML-Grammar-Screenplay Format</a>
 </p>
+
+[% END %]

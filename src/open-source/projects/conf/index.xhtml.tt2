@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Configuration of my Computers" -%]
+[%- SET desc = "Configuration files of Shlomi Fish’s computer." -%]
 
-<latemp_subject "Configuration of my Computers" />
 
-<latemp_meta_desc "Configuration files of Shlomi Fish’s computer." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I’m keeping some of the configuration files for my computer systems (running
@@ -22,3 +23,5 @@ configuration for the Perl 5 debugger, and some other stuff.
 The configuration files for the <a href="http://www.vim.org/">Vim
 text editor</a>.
 </p>
+
+[% END %]

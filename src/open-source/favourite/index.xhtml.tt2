@@ -1,10 +1,9 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Favourite Free and Open Source Software (FOSS) of Mine" -%]
+[%- SET desc = "Shlomi Fish’s Favourite Free and Open Source Software (FOSS) of Mine" -%]
 
-<latemp_subject "Favourite Free and Open Source Software (FOSS) of Mine" />
 
-<latemp_meta_desc "Shlomi Fish’s Favourite Free and Open Source Software (FOSS) of Mine" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 
@@ -15,11 +14,11 @@ and open source software (FOSS)</a>. You are welcome to check these packages
 out, and see if they are useful to you as well.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="linux"><a href="http://www.linux.org/">Linux</a></h2>
 
-<img src="$(ROOT)/art/images/linux1-scaled.png" alt="Linux slogan" class="rfloaty" />
+<img src="[% base_path %]art/images/linux1-scaled.png" alt="Linux slogan" class="rfloaty" />
 
 <p>
 Linux is a UNIX clone for many platforms including regular PCs. It is fast,
@@ -150,7 +149,7 @@ Konqueror is a nice web-browser and file manager for the KDE environment.
 <h3 id="xchat"><a href="http://www.xchat.org/">XChat</a></h3>
 
 <p>
-A nice <my_acronym key="IRC"/> client for X-Windows. <a href="http://hexchat.org/">HexChat</a>
+A nice [% my_acronym( "key" => "IRC",) %] client for X-Windows. <a href="http://hexchat.org/">HexChat</a>
 is a more actively maintained fork, which I now prefer.
 </p>
 
@@ -241,7 +240,7 @@ for information. Complements the ubiquitous
 A very good build-system for cross-platform builds, that generates makefiles
 or IDE project files, and allows one to compile complex projects on Windows,
 Mac OS X and many flavours of UNIX. Also see
-<a href="$(ROOT)/open-source/anti/autohell/">my page about “GNU Autohell”
+<a href="[% base_path %]open-source/anti/autohell/">my page about “GNU Autohell”
 (= the GNU Autotools)</a> and why you should use CMake instead.
 </p>
 
@@ -510,7 +509,7 @@ containing viruses that are sent to you. It is regularly updated.
 <h3 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h3>
 
 <p>
-If you’re <a href="$(ROOT)/open-source/anti/qmail/">unfortunate enough
+If you’re <a href="[% base_path %]open-source/anti/qmail/">unfortunate enough
 to use qmail</a> for some of your mail accounts, and still wish to filter
 out all the viruses that arrive at your account, then Qclam may be the
 right solution for you. QClam is a program that feeds the message to ClamAV,
@@ -623,3 +622,5 @@ Awesome (But Lesser-Known) Open-Source Applications for Windows”</a> - on
 
 </ul>
 </div>
+
+[% END %]

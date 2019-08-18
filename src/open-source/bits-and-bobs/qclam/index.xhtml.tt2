@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "The QClam-Shlomif Modified QClam" -%]
+[%- SET desc = "The QClam-Shlomif Modified QClam" -%]
 
-<latemp_subject "The QClam-Shlomif Modified QClam" />
 
-<latemp_meta_desc "The QClam-Shlomif Modified QClam" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Last Updated:</b> 06-January-2007.
@@ -17,3 +18,5 @@ This is a version of the <a href="http://sageshome.net/oss/qclam.php">QClam</a>
 utility, that converted the code from C++ to ANSI C, fixed some bugs, and made
 the makefile more modular.
 </p>
+
+[% END %]

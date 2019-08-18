@@ -85,8 +85,6 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?:/t2/lecture/{lecture_re})
                 |
-            (?:.*?Spark.*?)
-                |
             (?: MathJax/.*? )
                 |
             (?: MathVentures/.*? )

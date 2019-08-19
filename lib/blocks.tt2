@@ -495,7 +495,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 <title>[% title %]</title>
 <meta charset="utf-8"/>
 <meta name="author" content="Shlomi Fish"/>
-<meta name="description" content="[% desc || "" %]"/>
+<meta name="description" content="[% desc || title %]"/>
 <meta name="keywords" content="Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Software[% more_keywords ? (", " _ more_keywords) : "" %]"/>
 <link rel="stylesheet" href="[% base_path %]style.css" media= "screen" title="Normal" />
 <link rel="stylesheet" href="[% base_path %]print.css" media="print" />

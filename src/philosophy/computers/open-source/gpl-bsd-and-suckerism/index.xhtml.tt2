@@ -1,19 +1,20 @@
-#include "template.wml"
+[%- SET title = "The GPL, the BSD Licence, and Being a Sucker" -%]
+[%- SET desc = "The GPL, the BSD Licence, and Being a Sucker" -%]
 
-<latemp_subject "The GPL, the BSD Licence, and Being a Sucker" />
 
-<latemp_meta_desc "The GPL, the BSD Licence, and Being a Sucker" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 I wrote this essay as a way to clarify my position on the choice of a licence
 for one’s open-source project and how it relates to being a sucker.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="dates" title="Dates">
+[% WRAPPER h2_section id = "dates"  title = "Dates"  %]
 
 <dl>
 <dt>Published:</dt>
@@ -24,9 +25,9 @@ for one’s open-source project and how it relates to being a sucker.
 <dd>10-April-2011</dd>
 </dl>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="text" title="The Essay Itself">
+[% WRAPPER h2_section id = "text"  title = "The Essay Itself"  %]
 
 <p>
 At <a href="http://linmagazine.co.il/node/view/11659">this (Hebrew)
@@ -161,9 +162,9 @@ two possible strategies. But <a href="http://www.neo-tech.com/neotech/advantages
 is a third option - Rational Self Growth</a>.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
 
 <ul>
 <li>
@@ -172,6 +173,8 @@ essay on Linmagazine.co.il</a> - plus some discussion.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<cc_by_licence_section year="2005" />
+[% PROCESS cc_by_licence_section year = "2005",  %]
+
+[% END %]

@@ -1,11 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "FOSS Licences Wars" -%]
+[%- SET desc = "This article gives an overview of the various options in picking up a licence for one’s Free and Open Source Software (FOSS) project, and tries to give some guidelines for choosing one." -%]
 
-<latemp_subject "FOSS Licences Wars" />
-<latemp_meta_desc "This article gives an overview of the various options in picking up a licence for one’s Free and Open Source Software (FOSS) project, and tries to give some guidelines for choosing one." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">
-<toc_div />
+[% toc_div( ) %]
 <h2 id="main_intro">Introduction</h2>
 
 <p>
@@ -14,7 +15,7 @@ for one’s Free and Open Source Software (FOSS) project, and tries to give
 some guidelines for choosing one.
 </p>
 
-#include "docbook/5/rendered/foss-licences-wars.xhtml"
+[% INCLUDE "docbook/5/rendered/foss-licences-wars.xhtml" %]
 
 <section class="h2">
 
@@ -85,3 +86,5 @@ License Minefield”</a> - thanks to
 </section>
 
 </div>
+
+[% END %]

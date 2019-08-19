@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "FOSS Licences Wars - First Supplemental" -%]
+[%- SET desc = "FOSS Licences Wars - First Supplemental" -%]
 
-<latemp_subject "FOSS Licences Wars - First Supplemental" />
-<latemp_meta_desc "FOSS Licences Wars - First Supplemental" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="why-bsdl">Why I prefer Permissive Licences?</h2>
 
@@ -118,7 +119,7 @@ my time, that bring me much more benefit.
 <p>
 Now, on to the issue of whether developing BSD-style code makes me a “sucker”.
 I covered it earlier in
-<a href="$(ROOT)/philosophy/computers/open-source/gpl-bsd-and-suckerism/">
+<a href="[% base_path %]philosophy/computers/open-source/gpl-bsd-and-suckerism/">
 “The GPL, the BSD, and being a Sucker”</a> mini-essay.
 </p>
 
@@ -201,3 +202,5 @@ it did not make me regret that I released it as FOSS. I hadn’t wanted it to be
 an issue in the first place, and so it wasn’t.
 <a href="http://en.wikipedia.org/wiki/Hakuna_matata">Hakuna Matata</a>.
 </p>
+
+[% END %]

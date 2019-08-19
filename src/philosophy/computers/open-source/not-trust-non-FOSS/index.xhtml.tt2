@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Why I Do Not Trust Non-open-source Software" -%]
+[%- SET desc = "An essay that explains why I do not trust non-open source software and would rather not depend on it." -%]
 
-<latemp_subject "Why I Do Not Trust Non-open-source Software" />
-<latemp_meta_desc "An essay that explains why I do not trust non-open source software and would rather not depend on it." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Publishing Date:</b> 3 March 2014
@@ -204,7 +206,7 @@ the Apache 2.0 licence, several years later.
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2014" />
+[% cc_by_british_blurb( "year" => "2014", ) %]
 
 <h2 id="coverage">Coverage</h2>
 
@@ -217,3 +219,5 @@ the Apache 2.0 licence, several years later.
 </li>
 
 </ul>
+
+[% END %]

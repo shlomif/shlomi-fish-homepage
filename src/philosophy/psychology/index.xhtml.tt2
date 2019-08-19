@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Psychology Writings by Shlomi Fish" -%]
+[%- SET desc = "Psychology Writings by Shlomi Fish" -%]
 
-<latemp_subject "Psychology Writings by Shlomi Fish" />
 
-<latemp_meta_desc "Psychology Writings by Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are essays I wrote about psychology.
@@ -25,3 +26,5 @@ anxieties, hypomanias and even had a few manias.
 A small parable which became an Internet Meme, which I’ve transcribed here
 for posterity.
 </p>
+
+[% END %]

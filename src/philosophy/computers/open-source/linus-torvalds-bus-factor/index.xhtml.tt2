@@ -1,9 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Linus Torvalds Bus Factor" -%]
+[%- SET desc = "The Value of Multiple Committers and of &quot;Hitting the Benevolent Dictator with a Bus&quot;" -%]
 
-#include "toc_div.wml"
 
-<latemp_subject "The Linus Torvalds Bus Factor" />
-<latemp_meta_desc "The Value of Multiple Committers and of &quot;Hitting the Benevolent Dictator with a Bus&quot;" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About this Document</h2>
 
@@ -15,7 +15,7 @@ more general, and illustrates a good point about open source software
 development.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -42,7 +42,7 @@ TODO : 8-April-2007
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2006" />
+[% cc_by_british_blurb( "year" => "2006", ) %]
 
 <h2 id="itself">The Article Itself</h2>
 
@@ -92,7 +92,7 @@ Pugs. Audrey Tang is extremely liberal about giving people commit access.
 She gives it to practically everyone who asks or who has something to
 contribute just so she or whoever, won’t be bothered with committing it
 themselves. Even I received a commit despite my notorious
-<a href="$(ROOT)/philosophy/computers/perl/perl6-critique/">perl6-critique
+<a href="[% base_path %]philosophy/computers/perl/perl6-critique/">perl6-critique
 essay</a>. Larry Wall has said that it makes Pugs
 <a href="http://www.perl.com/pub/a/2006/09/21/onion.html?page=3">“a
 happy hivemind. Er, I mean family”</a>.
@@ -366,7 +366,7 @@ up for a long time</a>.
 <p>
 I wrote this message in the course of about two hours, and then consulted
 people on the IRC on it. I cited several URLs and references. I have made a
-lot of <a href="$(ROOT)/">contribution to free software in the past</a>, but
+lot of <a href="[% base_path %]">contribution to free software in the past</a>, but
 even if I did not, I believe my suggestion should have been dealt with by
 explaining to me why what I suggested was a  bad idea, in your opinion.
 </p>
@@ -407,3 +407,5 @@ topics was similar to preventing rape by killing all the women.
 </ul>
 
 <hr />
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Essays about Open-Source Software" -%]
+[%- SET desc = "Essays related to Free and Open Source Software by Shlomi Fish." -%]
 
-<latemp_subject "Essays about Open-Source Software" />
 
-<latemp_meta_desc "Essays related to Free and Open Source Software by Shlomi Fish." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -15,7 +16,7 @@ Essays related to Free and Open Source Software.
 <div class="articles_list">
 
 <h3 id="foss-other-beasts"><a
-href="$(ROOT)/philosophy/foss-other-beasts/">Open Source, Free Software
+href="[% base_path %]philosophy/foss-other-beasts/">Open Source, Free Software
 and Other Beasts</a></h3>
 
 <p>
@@ -66,3 +67,5 @@ Explaining why I prefer not to use and depend on non-open-source software.
 </p>
 
 </div>
+
+[% END %]

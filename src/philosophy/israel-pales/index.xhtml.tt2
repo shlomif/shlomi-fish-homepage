@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "A Solution to the Israeli-Palestinian Conflict" -%]
+[%- SET desc = "A Solution to the Israeli-Palestinian Conflict" -%]
 
-<latemp_subject "A Solution to the Israeli-Palestinian Conflict" />
 
-<latemp_meta_desc "A Solution to the Israeli-Palestinian Conflict" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <ul>
 <li>
@@ -23,3 +24,5 @@ an end in themselves, rather than as means to an end. In the essay, I tried to
 outline why they were a logical consequence of the ethical principles I
 mentioned, but it may not be an adequate replacement for this.
 </p>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Critique of Where Perl 6 is Heading" -%]
+[%- SET desc = "An essay I had written about the problems I had seen in the design of Perl 6." -%]
 
-<latemp_subject "Critique of Where Perl 6 is Heading" />
 
-<latemp_meta_desc "An essay I had written about the problems I had seen in the design of Perl 6." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is an essay I had written about the problems I had seen in the design
@@ -29,3 +30,5 @@ by Michael G. Schwern</a> is a worthwhile read, as well.
 (in Hebrew)
 </li>
 </ul>
+
+[% END %]

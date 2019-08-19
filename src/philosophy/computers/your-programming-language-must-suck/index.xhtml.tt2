@@ -1,9 +1,11 @@
-#include "template.wml"
+[%- SET title = "Your Programming Language Must Suck" -%]
+[%- SET desc = "An essay illustrating the design trade-offs in programming languages design and why some people will always be unhappy" -%]
 
-<latemp_subject "Your Programming Language Must Suck" />
-<latemp_meta_desc "An essay illustrating the design trade-offs in programming languages design and why some people will always be unhappy" />
 
-<h2_section id="text" title="The text">
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text"  title = "The text"  %]
 
 <p>
 All <a href="https://en.wikipedia.org/wiki/Programming_language">languages</a>
@@ -96,9 +98,9 @@ our methods or functions are very short, then they are easier to over-ride and
 re-use, but, in that case, the code would be harder to follow and will perform
 worse than code with longer methods.</p>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -118,11 +120,13 @@ on my tech blog.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=compilation-speeds">Compilation Speeds Conversation</a>.
+<a href="[% base_path %]humour/fortunes/show.cgi?id=compilation-speeds">Compilation Speeds Conversation</a>.
 </p>
 </li>
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<cc_by_licence_section year="2011"/>
+[% PROCESS cc_by_licence_section year = "2011", %]
+
+[% END %]

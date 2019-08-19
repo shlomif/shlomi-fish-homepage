@@ -1,14 +1,14 @@
-#include "template.wml"
+[%- SET title = "Choice of Document Formats" -%]
+[%- SET desc = "Choice of Document Formats" -%]
+[%- SET more_keywords = "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" -%]
 
-#include "Inc/cpan_dists.wml"
 
-<latemp_subject "Choice of Document Formats" />
-<latemp_meta_desc "Choice of Document Formats" />
-<latemp_more_keywords "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects">
 
-<h2_section id="about" title="About this Document">
+[% WRAPPER h2_section id = "about"  title = "About this Document"  %]
 
 <p>
 This is an overview of popular file formats, which is
@@ -17,9 +17,9 @@ derived from a reply I wrote to a thread in the
 mailing list</a>.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="meta" title="Document Information">
+[% WRAPPER h2_section id = "meta"  title = "Document Information"  %]
 
 <dl class="meta">
 <dt>
@@ -42,15 +42,15 @@ Last Updated:
 </dd>
 </dl>
 
-<h3_section id="licence" title="Licence">
+[% WRAPPER h3_section id = "licence"  title = "Licence"  %]
 
-<cc_by_british_blurb year="2006" />
+[% cc_by_british_blurb( "year" => "2006", ) %]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="article" title="The Article Itself">
+[% WRAPPER h2_section id = "article"  title = "The Article Itself"  %]
 
 <p>
 A previous correspondent wrote:
@@ -89,7 +89,7 @@ Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
 <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
 formats. It cannot be directly translated to plain text, but can through
 an intermediate format. POD can be translated into DocBook/XML using
-<cpan_self_mod m="Pod::PseudoPod::DocBook" />.
+[% cpan_self_mod( "m" => "Pod::PseudoPod::DocBook", ) %].
 </p>
 
 <p>
@@ -147,7 +147,7 @@ You can also try to use XHTML 1.1 or XHTML 5 with semantic markup of elements
 for use as a good generic markup.
 </p>
 
-<h3_section id="latex" title="LaTeX and TeX">
+[% WRAPPER h3_section id = "latex"  title = "LaTeX and TeX"  %]
 
 
 <p>
@@ -201,9 +201,9 @@ One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https:/
 and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="word-processors" title="Note about Word Processors">
+[% WRAPPER h3_section id = "word-processors"  title = "Note about Word Processors"  %]
 
 <p>
 One may be tempted to use <a href="https://en.wikipedia.org/wiki/Word_processor_program">word
@@ -212,7 +212,7 @@ or <a href="https://en.wikipedia.org/wiki/LibreOffice">LibreOffice</a> Writer, a
 provide the XML-based standards of <a href="https://en.wikipedia.org/wiki/OpenDocument">ODF</a>
 and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">.docx</a>. Part of the problem
 is their conversion to output formats tends to be non-semantic if not completely
-<a href="$(ROOT)/philosophy/computers/web/validate-your-html/">non-valid</a>, and at least
+<a href="[% base_path %]philosophy/computers/web/validate-your-html/">non-valid</a>, and at least
 in the case of Word, have a huge problem with maintaining compatibility of documents
 created with newer or older versions. As I
 <a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
@@ -221,9 +221,9 @@ people for people who are less smarter than them (because smart programmers can
 use text editors and markup languages.)
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="more-about-POD" title="More about POD">
+[% WRAPPER h3_section id = "more-about-POD"  title = "More about POD"  %]
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The
@@ -245,11 +245,11 @@ texts because of implementation or standard problems, last time I checked.
 Otherwise, its Unicode support should be very good.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="see-also" title="See Also">
+[% WRAPPER h2_section id = "see-also"  title = "See Also"  %]
 
 <ul>
 <li>
@@ -261,21 +261,21 @@ although not always flawlessly.
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/projects/docmake/">docmake</a> - a command
+<a href="[% base_path %]open-source/projects/docmake/">docmake</a> - a command
 line tool to translate DocBook/XML to its end formats.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/ideas/unixdoc/">Unixdoc</a> - a vision for a unified
+<a href="[% base_path %]philosophy/ideas/unixdoc/">Unixdoc</a> - a vision for a unified
 documentation system.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/resources/editors-and-IDEs/">List of Text Editors and IDEs</a>
+<a href="[% base_path %]open-source/resources/editors-and-IDEs/">List of Text Editors and IDEs</a>
 </p>
 </li>
 
@@ -286,14 +286,16 @@ documentation system.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage and Comments">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage and Comments"  %]
 
 <p>
 TODO: Fill in.
 </p>
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

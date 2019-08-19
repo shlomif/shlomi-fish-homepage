@@ -1,10 +1,10 @@
-#include "template.wml"
+[%- SET title = "“Alternative” Profitable Models for Web-based Commerce" -%]
+[%- SET desc = "A page that collects some commercial models for profitable web-based commerce that do not require to rely on intrusive online advertising" -%]
+[%- SET more_keywords = "commercial, models, web, WWW, advertising, donations, bandcamp, humble bundle, cloud, flickr, premium, account" -%]
 
-#include "toc_div.wml"
 
-<latemp_subject "“Alternative” Profitable Models for Web-based Commerce" />
-<latemp_meta_desc "A page that collects some commercial models for profitable web-based commerce that do not require to rely on intrusive online advertising" />
-<latemp_more_keywords "commercial, models, web, WWW, advertising, donations, bandcamp, humble bundle, cloud, flickr, premium, account" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="doc">The Main Document</h2>
 
@@ -76,7 +76,7 @@ it will be very profitable.
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_nc_sa_british_blurb year="2015" />
+[% PROCESS cc_by_nc_sa_british_blurb year = "2015",  %]
 
 <h2 id="see_also">See Also</h2>
 
@@ -107,3 +107,5 @@ Last Updated:
 26-August-2015
 </dd>
 </dl>
+
+[% END %]

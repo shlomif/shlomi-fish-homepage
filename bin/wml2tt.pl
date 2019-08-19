@@ -8,7 +8,7 @@ s#<(cc_by_british_blurb|cc_by_sa_license_british|book_info|cpan_dist|cpan_self_d
     "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;
 
-s#<(cc_by_licence_section|docbook_formats_w_base|home_pages_on_forges|lightning_talks_list|mailto_link_to_self|qp-lect|rellink|shlomif_docbook_doc_text|x11_licence)\s([^>]*?)/>#
+s#<(cc_by_licence_section|cc_by_nc_sa_british_blurb|docbook_formats_w_base|home_pages_on_forges|lightning_talks_list|mailto_link_to_self|qp-lect|rellink|shlomif_docbook_doc_text|x11_licence)\s([^>]*?)/>#
     my ($tag, $args) = ($1, ($2 // ''));
     $tag =~ tr/-/_/;
     "[% PROCESS $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"

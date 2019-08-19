@@ -1,12 +1,9 @@
-<set-var disable_comments="1" />
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "The Perfect Info-Tech Workplace" -%]
 
-<latemp_subject "The Perfect Info-Tech Workplace" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "The Perfect Info-Tech Workplace" />
-
-<under_construction_note />
+[%- PROCESS under_construction_note -%]
 
 <p class="hilight">
 [ <a href="#itself"><b>Skip to the main content</b></a> ]
@@ -18,13 +15,13 @@
 <b>TODO :</b> FILL IN.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <div class="article">
 
 <h3 id="itself">The Article Itself - 2nd Revision</h3>
 
-<include file="docbook/5/rendered/perfect-it-workplace-v2.xhtml" />
+[% INCLUDE "docbook/5/rendered/perfect-it-workplace-v2.xhtml" %]
 
 </div>
 
@@ -47,3 +44,5 @@
 <p>
 <b>TODO :</b> fill in.
 </p>
+
+[% END %]

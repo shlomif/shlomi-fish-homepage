@@ -1,9 +1,10 @@
-#include "template.wml"
+[%- SET title = "Reflections on Online Communities" -%]
+[%- SET desc = "Essay written by inspiration from the Joel on Software essay
+Building Communities with Software. Comments on the original incarnation of it led me to write this version, which hopefully would be better." -%]
 
-<latemp_subject "Reflections on Online Communities" />
 
-<latemp_meta_desc "Essay written by inspiration from the Joel on Software essay
-Building Communities with Software. Comments on the original incarnation of it led me to write this version, which hopefully would be better." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -62,9 +63,11 @@ the nature and atmosphere of the forum.
 
 <h3 id="growing_a_community">Growing a Community</h3>
 
+[% IF 0 %]
 ;;; E-mailing a person upon a comment.
 ;;; RSS feeds for the discussions, and for parts of the discussion.
 ;;;     - copy from old.
+[% END %]
 
 <p>
 One of the issues that face any starting forum is how to gather an active
@@ -101,15 +104,18 @@ his thread for responses time and again.
 
 <h3 id="registration_and_authentication">Registration and Authentication</h3>
 
+[% IF 0 %]
 ;;;
 ;;; * Can work for the web.
 ;;;    - It is probably a good idea not to have it.
 ;;; * A must for the IRC.
 ;;; * Cryptologically-secure methods for doing that are probably an overkill
 ;;;     - use plaintext passwords.
+[% END %]
 
 <h3 id="dealing_with_spam">Dealing with Spam</h3>
 
+[% IF 0 %]
 ;;; rel=“nofollow”.
 ;;; Bayesian spam-filtering.
 ;;;     - Spam filters - mostly have been for E-mail until now, but
@@ -118,9 +124,11 @@ his thread for responses time and again.
 ;;;     - a E-mail handshake.
 ;;;     - Captchas. (accessibility problem, and not a full solution)
 ;;; URL blacklist.
+[% END %]
 
 <h3 id="dealing_with_trolling">Dealing with Trolling and Insults</h3>
 
+[% IF 0 %]
 ;;; - Filtering content based on keywords - not a good idea
 ;;;     - “one grown” vs. negro.
 ;;;     - woman’s last name that contained “dick”
@@ -128,11 +136,13 @@ his thread for responses time and again.
 ;;; #debian on Freenode:
 ;;;     - one person there who constantly flame newbies.
 ;;;     - #debian redirects to #knoppix - even if it’s a debian problem.
+[% END %]
 
 <h3 id="dealing_with_low_clue">Dealing with Low-clue Posts or Remarks</h3>
 
 <h3 id="good_snr">Maintaining a good “Signal to Noise Ratio”</h3>
 
+[% IF 0 %]
 ;;; - Off-topic discussions don’t necessarily reduce the SNR.
 ;;; - Discussions tend to drift off sometimes, and people dislike others
 ;;;   telling them that they should stay on-topic.
@@ -149,6 +159,7 @@ his thread for responses time and again.
 ;;;         - Useful for many sites.
 ;;;         - Slashdot: articles hitting the entire blogosphere, but are
 ;;;           absent from it.
+[% END %]
 
 <p>
 Usually an online forum is dedicated to one central topic. This is generally
@@ -159,6 +170,7 @@ consider it to have a low signal-to-noise ratio.
 
 <h3 id="semantics_of_operations">Semantics of Joining, Posting and Commenting</h3>
 
+[% IF 0 %]
 ;;; * Mailing lists that reject posts to other people.
 ;;;
 ;;; * Reply-To:
@@ -170,9 +182,11 @@ consider it to have a low signal-to-noise ratio.
 ;;; * Explain exactly what happens.
 ;;;     - “one grown” vs negro without any feedback on what’s wrong.
 ;;;     - The shortened URL that caused me trouble withou any feedback.
+[% END %]
 
 <h3 id="markup">The Markup</h3>
 
+[% IF 0 %]
 ;;; * Support as broad a subset of HTML as possible.
 ;;;     - Convert unacceptable Markup to proper markup.
 ;;; * Have an option to use HTML or some subset of it.
@@ -183,7 +197,7 @@ consider it to have a low signal-to-noise ratio.
 ;;;         - Mouse-driven keyboards? Give me a break!
 ;;;         - Problem if a foreigner is trying to take part in a localised
 ;;;           forum.
-
+[% END %]
 
 <p>
 Some forums have no markup except perhaps for URLs being
@@ -215,3 +229,5 @@ HTML is very easy to learn and one can get the hang of it pretty quickly. Many
 times, people post markup from web pages they created with HTML, and they’ll
 be annoyed if they can’t post it as is.
 </p>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Which Open Source Wiki Works for you?" -%]
+[%- SET desc = "An article I wrote to ONLamp.com about how various popular Open Source wiki implementations fare. A wiki is a world-editable web-site, and wikis have become increasingly popular lately." -%]
 
-<latemp_subject "Which Open Source Wiki Works for you?" />
 
-<latemp_meta_desc "An article I wrote to ONLamp.com about how various popular Open Source wiki implementations fare. A wiki is a world-editable web-site, and wikis have become increasingly popular lately." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="http://www.onlamp.com/pub/a/onlamp/2004/11/04/which_wiki.html">The article itself and some discussion on ONLamp.com</a></h2>
 
@@ -40,3 +41,5 @@ the importance of the RSS feed.
 <a href="update-2006-07/">July 2006 Update</a>.
 </li>
 </ol>
+
+[% END %]

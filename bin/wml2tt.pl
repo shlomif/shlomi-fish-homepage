@@ -7,6 +7,8 @@ s#<(cc_by_british_blurb|cc_by_sa_license_british|book_info|cpan_dist|cpan_self_d
     my ($tag, $args) = ($1, $2);
     "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;
+my $assigns = '';
+s#<set-var\s+(rtl_layout)="([^"]+)"\s+/>#$assigns .= qq/[% SET $1 = "$2" %]\n/;""#egms;
 
 s#<(cc_by_licence_section|cc_by_nc_sa_british_blurb|docbook_formats_w_base|home_pages_on_forges|lightning_talks_list|mailto_link_to_self|qp-lect|rellink|shlomif_docbook_doc_text|x11_licence)\s([^>]*?)/>#
     my ($tag, $args) = ($1, ($2 // ''));
@@ -43,7 +45,7 @@ while (s{^<(page_extra_head_elements)>(.*?)</\1>}{}ms)
     $meta .= "[% BLOCK $1 %]${2}[% END %]\n";
 }
 
-s{\A#include "template.wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{[%- SET title = $1 -%]
+s{\A#include "template.wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{${assigns}[%- SET title = $1 -%]
 ${meta}
 
 [%- PROCESS "blocks.tt2" -%]

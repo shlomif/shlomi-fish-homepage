@@ -1,3 +1,7 @@
+[% IF rtl_layout %]
+[% SET body_params = body_params _ " onload=\"langLoad()\"" %]
+[% SET HEBREW_XML_LANG_SCRIPT = '<js_script src="' _ base_path _ 'js/moz-lang.js"></js_script>' %]
+[% END %]
 [% BLOCK t2_lect %]
 [% base_path %]lecture/Perl/Lightning/[% url %]/
 [% END %]
@@ -588,6 +592,9 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 <div id="container-all">
 
 <main class="main" id="main">
+[% IF rtl_layout %]
+<div class="hebrew" xml:lang="he-IL">
+[% END %]
 [%sect_nav_menu_html%]
 
 <header>
@@ -606,6 +613,10 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 shlomif_load_nav("[% raw_fn_path %]");
 </script>
 [% INCLUDE share_this_button %]
+[% HEBREW_XML_LANG_SCRIPT %]
+[% IF rtl_layout %]
+</div>
+[% END %]
 </main>
 <div id="navbar_wrapper">
 <nav class="navbar" id="navbar">

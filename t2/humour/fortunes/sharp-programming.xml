@@ -6980,5 +6980,127 @@
         </irc>
     </fortune>
 
+    <fortune id="the-last-mercurialian">
+        <meta>
+            <title>Last of the Mercurialians</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="mobinoob">mercurial is on the way out folks: https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket</saying>
+<saying who="mobinoob">time to buckle up and git gud</saying>
+<saying who="rindolf">mobinoob: saw that</saying>
+<saying who="merijn">mobinoob: pfft, that won&#39;t stop me from using Mercurial :)</saying>
+<saying who="merijn">mobinoob: I&#39;ve been using Github as main host for my code in mercurial for years to prepare for this moment :p</saying>
+<saying who="mobinoob">the mercurial rats swim to the last big sinking ship :)</saying>
+<saying who="mobinoob">merijn, haha but at some point you&#39;ll have to learn git though :)</saying>
+<saying who="duncan">Does github support mercurial or do you just push it there as a git repo?</saying>
+<saying who="merijn">mobinoob: Why? I&#39;ve managed with Mercurial since 2009 across 3 different companies where everyone was using git</saying>
+<saying who="merijn">duncan: hg-git extension allows bidirectional conversion/interaction with git</saying>
+<saying who="duncan">I have in my mind a long-standing idea to write a host for rcs projects that merely offers an rsync interface</saying>
+<saying who="merijn">duncan: So I just clone with &quot;hg clone git+ssh://url&quot; work with Mercurial and when I&#39;m done I just do &quot;hg push&quot; and it Just Works (TM) (unless there&#39;s git submodules, then things get super annoying)</saying>
+<saying who="merijn">But then submodules are also annoying in git :p</saying>
+<saying who="duncan">I do understand they compare closely which is nice</saying>
+<saying who="merijn">duncan: The data model is very similar, the approach to UI/workflow is not, Mercurial is much more human friendly :p</saying>
+<saying who="duncan">For keeping track of notes I like to use rcs as it is so simple and reliable</saying>
+<saying who="mobinoob">merijn, can you also do interactive rebases etc?</saying>
+<saying who="merijn">mobinoob: Why wouldn&#39;t you?</saying>
+<saying who="mobinoob">merijn, idk maybe there&#39;s some subset of functionality that isn&#39;t available via merc</saying>
+<saying who="mobinoob">you wouldn&#39;t know because you don&#39;t know git after all</saying>
+<saying who="rindolf">duncan: https://en.wikipedia.org/wiki/Revision_Control_System - this?</saying>
+<saying who="mobinoob">you&#39;re missing out</saying>
+<saying who="duncan">Yup, good old rcs</saying>
+<saying who="rindolf">duncan: i use git or hg for notes</saying>
+<saying who="duncan">I have many such notes and the emacs rcs interface is good</saying>
+<saying who="merijn">mobinoob: Some people say Mercurial doesn&#39;t &quot;natively&quot; support rebases, etc. because rebase is technically an extension, but it&#39;s an extension that&#39;s maintained by the Mercurial core team and ships as part of the standard mercurial install, so I think that&#39;s kinda nonsense</saying>
+<saying who="merijn">mobinoob: I would actually argue that the evolve extension of Mercurial is infinitely better than interactive rebases</saying>
+<saying who="mobinoob">merijn, yeah an extension by the core team is good enough</saying>
+<saying who="mobinoob">alright guess there&#39;s no problem then</saying>
+<saying who="merijn">mobinoob: https://www.mercurial-scm.org/doc/evolution/</saying>
+<saying who="mobinoob">it&#39;s like a javascript developer that only programs in some language that compiles to javascript</saying>
+<saying who="mobinoob">but less severe as it&#39;s more personal</saying>
+<saying who="Jck_true">Sadly it seems like Bitbucket is dropping support for mercurial... So getting hosting for open source project is gonna get even harder under hg</saying>
+<saying who="vdamewood">Jck_true: That rather sucks. hg is one of the two SCMs that don&#39;t suck.</saying>
+<saying who="duncan">What is the other one?</saying>
+<saying who="vdamewood">duncan: git</saying>
+<saying who="velco">as they say in the announcement, git just won.</saying>
+<saying who="velco">they&#39;ve got like 1% of users using hg</saying>
+<saying who="vdamewood">Though, hg&#39;s development does seem to be lagging behind the Python 2 EOL party.</saying>
+<saying who="velco">and that&#39;s not the top of the foodchain 1% :P</saying>
+<saying who="mobinoob">popular doesn&#39;t always mean better though</saying>
+<saying who="duncan">vdamewood: it is full of stuff like `git-clip-submodule --sense-change [ --cripple-branch | --overcome-archive | --hurtle-nag-subtree ]` though</saying>
+<saying who="vdamewood">duncan: So?</saying>
+<saying who="duncan">It is a tad confusing</saying>
+<saying who="mobinoob">tad</saying>
+<saying who="mrig">oh Hg is mercury, right got to the same page in the end :)</saying>
+<saying who="mrig">I was just admiring how easy it is to use a bare remote git repo on any server; Love git.</saying>
+<saying who="mrig">That said I have never tried mercurial, likely a little slow compared to git no?</saying>
+<saying who="Jck_true">Speed was never an issue for me on my personal projects</saying>
+<saying who="vdamewood">duncan: Is that enough for it to suck?</saying>
+<saying who="mrig">not that it would make the slightest difference on any of my tiny projects.</saying>
+<saying who="icholy">all projects start small</saying>
+<saying who="Jck_true">And wait what... As I read the blog post are they simply gonna scrap all hg repositories?!?</saying>
+<saying who="duncan">I thought hg is faster than git</saying>
+<saying who="icholy">noo</saying>
+<saying who="icholy">Jck_true: where you reading that?</saying>
+<saying who="Jck_true">&quot;Mercurial features and repositories will be officially removed from Bitbucket and its API on June 1, 2020.&quot;</saying>
+<saying who="mobinoob">and I never found git to be super fast</saying>
+<saying who="icholy">mobinoob: have you ever worked with svn?</saying>
+<saying who="mobinoob">icholy, once</saying>
+<saying who="mobinoob">icholy, svn is another level of shit though</saying>
+<saying who="icholy">used to be the best</saying>
+<saying who="icholy">&quot;best&quot;</saying>
+<saying who="Jck_true">SVN does however have the fantastic TortoiseSVN interface... Which makes it great for non commandline users...</saying>
+<saying who="Jck_true">And there is something nice about the &quot;everything is on the server&quot;</saying>
+<saying who="mobinoob">lmao you&#39;re joking right?</saying>
+<saying who="vdamewood">I wonder what major open-source projects still use Hg.</saying>
+<saying who="rindolf">mobinoob: what is faster than git? perforce?</saying>
+<saying who="rindolf">vdamewood: firefox</saying>
+<saying who="vdamewood">rindolf: I thought they might. I wonder if Thunderbird does, too.</saying>
+<saying who="mobinoob">rindolf, idk</saying>
+<saying who="Jck_true">mobinoob: You&#39;re welcome to call me stupid. But like 40% of the time I don&#39;t know what the fuck I am doing when it comes to git stuff...</saying>
+<saying who="rindolf">vdamewood: https://en.wikipedia.org/wiki/Mercurial</saying>
+<saying who="mobinoob">Jck_true, we all make mistakes, it&#39;s never too late to git gud</saying>
+<saying who="icholy">rapidwave: most are hand-written</saying>
+<saying who="rindolf">Jck_true: i still miss the simplicity and transparency of the svn model</saying>
+<saying who="rindolf">Jck_true: though i&#39;m mostly using git and hg now</saying>
+<saying who="mobinoob">once you get git at the basic level it becomes easy in usage</saying>
+<saying who="rindolf">Jck_true: but i dont feel i understand their program model</saying>
+<saying who="icholy">took me a long time before I really &quot;got&quot; git</saying>
+<saying who="mobinoob">the process takes years and requires an inquisitive mind</saying>
+<saying who="icholy">this talk is pretty good https://www.youtube.com/watch?v=XCnnSryzPrE</saying>
+<saying who="Jck_true">That is such backwards thinking... ~60 years of computer science? And Git is the best we can do?</saying>
+<saying who="icholy">Jck_true: I feel ya</saying>
+<saying who="Jck_true">(But only if you spend a few years learning it)</saying>
+<saying who="mobinoob">Jck_true, linus would be sad to see those words</saying>
+<saying who="icholy">it&#39;s really great once you master it though</saying>
+<saying who="icholy">kinda like vim</saying>
+<saying who="icholy">the ux is the main issue with git</saying>
+<saying who="mobinoob">damn git was created in 2005, doesn&#39;t seem that old</saying>
+<saying who="mobinoob">as in 2005 wasn&#39;t that long ago</saying>
+<saying who="Jck_true">That is how I tried explaining it to my ex wife. Told her she just needed a few more years getting to know me and then everything would be great between us</saying>
+<saying who="icholy">lmao</saying>
+<saying who="mobinoob">on the first date: &quot;just let me fuck you for a couple of years, eventually it&#39;ll git gud&quot;</saying>
+<saying who="noteqstmo">not that long ago? hmm git is half as old as x86 arch?</saying>
+<saying who="rindolf">Jck_true: heh</saying>
+<saying who="noteqstmo">386 i mean</saying>
+<saying who="noteqstmo">wait was 286 32 bit?</saying>
+<saying who="rindolf">noteqstmo: it wasn&#39;t</saying>
+<saying who="GeDaMo">&quot;The Intel 80286[3] (also marketed as the iAPX 286[4] and often called Intel 286) is a 16-bit microprocessor&quot; https://en.wikipedia.org/wiki/Intel_80286</saying>
+<saying who="rindolf">noteqstmo: the first x86 was 8086/8088</saying>
+<saying who="noteqstmo">yeah definitely meant 386 with that comment then</saying>
+<saying who="rindolf">noteqstmo: and it was compatible with the 8080</saying>
+<saying who="GeDaMo">Only in the sense that 8080 asm could be run through a trnaslator to get 8086 asm</saying>
+<saying who="rindolf">there was also https://en.wikipedia.org/wiki/Zilog</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+                <tagline>Let's give it a few years</tagline>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

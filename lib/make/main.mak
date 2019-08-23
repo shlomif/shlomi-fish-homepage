@@ -514,9 +514,6 @@ $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feed
 $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_LIST__DEPS)
 	$(PERL) -Ilib $<
 
-$(T2_DEST_FORTUNES_SQLITE_DB) :$(FORTUNES_SQLITE_DB)
-	$(call COPY)
-
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.xhtml.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
 
 # TODO : extract a macro for this and the rule below.
@@ -1083,6 +1080,8 @@ min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
 
 TEST_TARGETS = Tests/*.{py,t}
 
+T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
+
 include lib/make/copies-generated-include.mak
 
 docbook_targets: docbook_hhfg_images
@@ -1135,7 +1134,5 @@ $(catb_copy_post): $(catb_copy)
 	$(call COPY)
 
 all: $(catb_copy_post)
-
-T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
 
 copy_fortunes: $(T2_DEST_FORTUNES_many_files)

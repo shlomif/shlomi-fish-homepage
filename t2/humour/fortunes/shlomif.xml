@@ -9280,5 +9280,51 @@ Thanks, and let me figure out what you just wrote, heh.
         </quote>
     </fortune>
 
+    <fortune id="sharp-pypy--got-better-things-to-do">
+        <meta>
+            <title>I've got better things to do</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="rindolf">fijal: i&#39;ve ran it 100 times now - same results - as expected</saying>
+<saying who="fijal">rindolf: what&#39;s &quot;same result&quot; anyway?</saying>
+<saying who="fijal">I meant specifically 100 times in the same process and ignore the first few (warmup)</saying>
+<saying who="rindolf">fijal: ah</saying>
+<saying who="rindolf">fijal: i ran it from the shell</saying>
+<saying who="fijal">warmup has much higher variability</saying>
+<saying who="fijal">yeah that does nothing - you are measuring essentially the equivalent of &quot;how long does it take to run gcc&quot;</saying>
+<saying who="rindolf">fijal: thing is there are caches</saying>
+<saying who="fijal">which is both very unpredictable</saying>
+<saying who="fijal">then you have to clean the caches</saying>
+<saying who="rindolf">fijal: ok</saying>
+<saying who="rindolf">fijal: well, whatever - i&#39;ve got better things to do</saying>
+<saying who="rindolf">fijal: like handling https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket</saying>
+<saying who="fijal">heh</saying>
+<saying who="fijal">well, then I don&#39;t understand what is your problem to be honest - why did you come to ask questions here in the first place?</saying>
+<saying who="fijal">I&#39;m happy to help and explore how things work and explain why you are getting strangely seeming results, but if you are not willing to play along than you are just wasting my time here</saying>
+<saying who="rindolf">fijal: ok, this was a minor annoyance that seemed noteworthy but not  too critical</saying>
+<me_is who="mattip">will try to remember &quot;I&#39;ve got better things to do&quot; response for the next time rindolf asks for help</me_is>
+<saying who="rindolf">mattip: heh, good burn</saying>
+<saying who="rindolf">&quot;pypy ran &#39;rm -fr ~&#39; due to a bug&quot; &quot;i&#39;ve got better things to do than to fix it&quot;</saying>
+<saying who="rindolf">joking aside - i really like pypy - so thanks all</saying>
+<saying who="rindolf">on #perl6 we were joking that the reason it is so fast is due to alicorn magic</saying>
+<saying who="rindolf">fijal: well maybe i&#39;ll try</saying>
+<saying who="rindolf">fijal: https://paste.debian.net/1096980/ - a bit better after removing</saying>
+<saying who="rindolf">fijal: is my approach sound?</saying>
+<saying who="ronan">rindolf: the difference between the two is most probably below the noise level</saying>
+<saying who="rindolf">ronan: yes</saying>
+<saying who="ronan">rindolf: check out https://dl.acm.org/citation.cfm?id=3133876</saying>
+<saying who="rindolf">ronan: open access - nice</saying>
+<saying who="rindolf">bye all, killing xfce for benchmarking something else (not pypy) and sorry if i was rude</saying>
+
+            </body>
+            <info>
+                <channel>#gamedev</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

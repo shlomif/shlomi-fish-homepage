@@ -1,9 +1,10 @@
-<set-var rtl_layout="1" />
-#include "template.wml"
+[% SET rtl_layout = "1" %]
+[%- SET title = "מורה פרטי" -%]
+[%- SET desc = "מורה פרטי" -%]
 
-<latemp_subject "מורה פרטי" />
 
-<latemp_meta_desc "מורה פרטי" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 מורה פרטי, בוגר טכניון בהנדסת חשמל, נותן שיעורים פרטיים ב-:
@@ -28,5 +29,7 @@
 שלומי<br />
 03-6424668<br />
 054-6232377<br />
-<main_email /><br />
+[% main_email %]<br />
 </p>
+
+[% END %]

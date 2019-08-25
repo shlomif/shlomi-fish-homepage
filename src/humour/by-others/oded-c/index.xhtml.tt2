@@ -1,8 +1,10 @@
-<set-var rtl_layout="1" />
-#include "template.wml"
+[% SET rtl_layout = "1" %]
+[%- SET title = "סיפורים הומוריסטיים מאת עודד כ." -%]
+[%- SET desc = "סיפורים הומוריסטיים מאת עודד כ." -%]
 
-<latemp_subject "סיפורים הומוריסטיים מאת עודד כ." />
-<latemp_meta_desc "סיפורים הומוריסטיים מאת עודד כ." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 בסביבות שנת 2000 ו-2001 התכתבתי עם בחור צעיר בשם עודד בדואר אלקטרוני,
@@ -51,3 +53,5 @@ href="http://www.openoffice.org/">OpenOffice.org</a>
 
 </table>
 </div>
+
+[% END %]

@@ -517,6 +517,27 @@ the public.
 <a href="http://perldoc.perl.org/functions/[% f %].html">[% content %]</a>
 [%- END -%]
 
+[% BLOCK factoids_frame %]
+
+<div class="bordered">
+
+<h2 id="facts"><a href="[% base_path %]humour/bits/facts/">Collections of “Facts”</a></h2>
+
+<p>
+Starting from the meme of the
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris facts</a>
+and continuing to other people or things, such as
+<a href="[% base_path %]humour/bits/facts/Larry-Wall/">Larry Wall</a>,
+<a href="[% base_path %]humour/bits/facts/Xena/">Xena the Warrior Princess</a>,
+<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>,
+and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
+<a href="[% base_path %]humour/bits/facts/NSA/">the NSA</a>.
+</p>
+
+</div>
+
+[% END %]
+
 [%- SET openstudy_group_url = "http://openstudy.com/study-groups/Perl+For+Beginners+-+Perl-begin.org" -%]
 [% BLOCK openstudy_button %]
 

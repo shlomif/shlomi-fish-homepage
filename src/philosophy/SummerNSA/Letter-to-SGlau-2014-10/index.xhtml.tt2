@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Letter to Summer Glau (from Shlomi Fish) - sent on October 2014" -%]
+[%- SET desc = "TODO: FILL IN" -%]
 
-<latemp_subject "Letter to Summer Glau (from Shlomi Fish) - sent on October 2014" />
 
-<latemp_meta_desc "TODO: FILL IN" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -54,8 +54,10 @@ TODO : FILL IN.
 
 </ul>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<politics_nav_block />
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

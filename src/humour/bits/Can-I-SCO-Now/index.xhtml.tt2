@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "“Can I SCO Now?”" -%]
+[%- SET desc = "“Can I SCO Now?” - a geek parody of the song “Can I Go Now?” by Jennifer Love Hewitt reflecting on the SCO/Linux saga." -%]
 
-<latemp_subject "“Can I SCO Now?”" />
-<latemp_meta_desc "“Can I SCO Now?” - a geek parody of the song “Can I Go Now?” by Jennifer Love Hewitt reflecting on the SCO/Linux saga." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -49,10 +50,12 @@ Can I, can I, SCO now….
 
 <h2 id="license">Copyright and Licence</h2>
 
-<cc_by_sa_british_blurb year="2012" />
+[% cc_by_sa_british_blurb( "year" => "2012", ) %]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

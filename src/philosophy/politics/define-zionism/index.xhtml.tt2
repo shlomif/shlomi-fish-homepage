@@ -1,12 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Define “Zionism”" -%]
+[%- SET desc = "An article that tries to find out whether “Zionism” and related terms are well-understood and explains where I stand on these issues." -%]
 
-<latemp_subject "Define “Zionism”" />
 
-<latemp_meta_desc "An article that tries to find out whether “Zionism” and related terms are well-understood and explains where I stand on these issues." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-#include "pages/t2/philosophy/define-zionism.wml"
+[% INCLUDE "pages/t2/philosophy/define-zionism.tt2" %]
 
 <p style="clear:left;">
 <a href="http://www.ozyandmillie.net/2000/om20001229.html"
@@ -18,9 +17,9 @@
     /></a>
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 A few weeks ago I talked with an Atheist Jewish American on
@@ -46,9 +45,9 @@ anti-Israelism/pro-Israelism, anti-Semitism, and constitutional
 discrimination in Israel.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="judaism_clarification" title="Clarification Regarding Judaism">
+[% WRAPPER h2_section id = "judaism_clarification"  title = "Clarification Regarding Judaism"  %]
 
 <p>
 The first fact that needs to be understood is that Judaism is not a religion,
@@ -87,9 +86,9 @@ The Jewish religion is only a small part of Judaism, and also completely
 inessential for a person to be a Jew.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="zionism_defs" title="The Definitions of Zionism">
+[% WRAPPER h2_section id = "zionism_defs"  title = "The Definitions of Zionism"  %]
 
 <p>
 I see several possible definitions for Zionism today:
@@ -133,7 +132,7 @@ country.
 Now let’s try to analyse definition no. 3.
 </p>
 
-<h3_section id="constitutional_discrimination" title="Why it is Wrong for Israel to have Constitutional Discrimination">
+[% WRAPPER h3_section id = "constitutional_discrimination"  title = "Why it is Wrong for Israel to have Constitutional Discrimination"  %]
 
 <p>
 <a href="http://groups.yahoo.com/group/philosophy-il/message/81">Private
@@ -177,7 +176,7 @@ Israeli rather than the land of the Jew, and it’s high time its laws reflected
 that.
 </p>
 
-<h4_section id="biblical_right" title="Addressing the Jewish “Biblical Rights” Claims">
+[% WRAPPER h4_section id = "biblical_right"  title = "Addressing the Jewish “Biblical Rights” Claims"  %]
 
 <p>
 Often you’ll hear pro-Discrimination advocates claiming that Jews have rights
@@ -213,11 +212,11 @@ people is unethical for similar reasons. And the Bible or any other subjective
 source has nothing to do with it.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="zionism_defs_concluded" title="Definitions of Zionism - Concluded">
+[% WRAPPER h3_section id = "zionism_defs_concluded"  title = "Definitions of Zionism - Concluded"  %]
 
 <p>
 I brought several contemporary definitions of Zionism, but may have missed
@@ -227,11 +226,11 @@ meaningless. Next, I’ll try to make some distinctions between other related
 terms.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="anti_pro" title="Anti/Pro-Israel, Anti-Semite, Anti-Zionist, etc.">
+[% WRAPPER h2_section id = "anti_pro"  title = "Anti/Pro-Israel, Anti-Semite, Anti-Zionist, etc."  %]
 
 <p>
 On April 2006, someone sent a message to
@@ -264,9 +263,9 @@ person who identifies himself as an anti-Zionist should explain what he means
 or stop using the term altogether.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="conclusion" title="Conclusion">
+[% WRAPPER h2_section id = "conclusion"  title = "Conclusion"  %]
 
 <p>
 A lot of the sensitivity of Israelis and pro-Israelis is due to disputed
@@ -275,7 +274,7 @@ constitutional discrimination. And people who try to support Israel should be
 wiser than to default on the Jewish “Biblical rights to the Land of Israel”.
 </p>
 
-<h3_section id="links" title="Links">
+[% WRAPPER h3_section id = "links"  title = "Links"  %]
 
 <p>
 For more information refer to the following resources:
@@ -283,7 +282,7 @@ For more information refer to the following resources:
 
 <ul>
 <li>
-<a href="$(ROOT)/philosophy/israel-pales/">A Solution to the
+<a href="[% base_path %]philosophy/israel-pales/">A Solution to the
 Israeli Palestinian Conflict</a> - an essay I wrote in 2004.
 </li>
 <li>
@@ -294,13 +293,13 @@ discrimination angle.
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<licence_sect>
+[% WRAPPER licence_sect  %]
 
-<cc_by_british_blurb year="2006" />
+[% cc_by_british_blurb( "year" => "2006", ) %]
 
 <p>
 Note that the image at the top is taken out of the
@@ -310,10 +309,12 @@ comics’ strip which is ©
 a licence that prohibits sale.
 </p>
 
-</licence_sect>
+[%- END -%]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<politics_nav_block />
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

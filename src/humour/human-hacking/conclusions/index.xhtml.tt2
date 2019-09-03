@@ -1,12 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/nav_blocks.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Conclusions and Reviews of the Human Hacking Field Guide" -%]
+[%- SET desc = "Conclusions and Reviews of the Human Hacking Field Guide" -%]
 
-<latemp_subject "Conclusions and Reviews of the Human Hacking Field Guide" />
-<latemp_meta_desc "Conclusions and Reviews of the Human Hacking Field Guide" />
 
-<toc_div />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -44,7 +43,7 @@ faults I found in it.
 
 <p>
 While my favourite story and the one I consider my best yet is
-<a href="$(ROOT)/humour/TheEnemy/"><i>The Enemy</i></a>, then like a father who
+<a href="[% base_path %]humour/TheEnemy/"><i>The Enemy</i></a>, then like a father who
 is proud in each of his children, I still find other stories to be unique
 in their own right. What I like about the
 <i>The Human Hacking Field Guide</i> (HHFG)
@@ -121,7 +120,7 @@ culture.  Try to work a conflict and resolution into each story.
 I agree that the sub-division into chapters is appropriate, but I also think
 that the story has quite a lot of coherence. Each chapter is too short to
 be a short story (and may be too long to be
-<a href="$(ROOT)/humour/bits/">one of my bits</a>). So I think I’ll have to
+<a href="[% base_path %]humour/bits/">one of my bits</a>). So I think I’ll have to
 agree to disagree with him about it, while accepting the fact that Jennifer
 learns programming in such a short time as a known bug in the story.
 </p>
@@ -140,7 +139,7 @@ locally. Still wonderful writing though</q>
 <p>
 A U.S.-based female teenager who was also interested in Linux and open-source
 , and who was Pennsylvania-based and home-schooled, which I’ll call “L”,
-conversed with me about the story on <my_acronym key="IRC"/> as follows:
+conversed with me about the story on [% my_acronym( "key" => "IRC",) %] as follows:
 </p>
 
 <blockquote>
@@ -275,8 +274,10 @@ has received some positive reputation, and sparked a discussion between
 <a href="http://www.reddit.com/user/YannAnth">YannAuth</a> and me.
 </p>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

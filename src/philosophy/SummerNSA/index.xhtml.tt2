@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "The #SummerNSA (Summerschool at the NSA) Effort" -%]
+[%- SET desc = "A political/philosophical effort based on “Summerschool at the NSA” and “NSA Facts”" -%]
 
-<latemp_subject "The #SummerNSA (Summerschool at the NSA) Effort" />
 
-<latemp_meta_desc "A political/philosophical effort based on “Summerschool at the NSA” and “NSA Facts”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -12,8 +12,8 @@ The #SummerNSA effort has its origins in
 <a href="http://www.shlomifish.org/humour/fortunes/show.cgi?id=smg-next-film">an
 email exchange</a> from around ~1998 and has acquired much more momentum
 much later with the publication of
-<a href="$(ROOT)/humour/bits/facts/NSA/">NSA facts</a>
-and the <a href="$(ROOT)/humour/Summerschool-at-the-NSA/">Summerschool
+<a href="[% base_path %]humour/bits/facts/NSA/">NSA facts</a>
+and the <a href="[% base_path %]humour/Summerschool-at-the-NSA/">Summerschool
 at the NSA</a> screenplay which features the Hollywood actresses
 Sarah Michelle Gellar and Summer Glau as themselves.
 </p>
@@ -36,7 +36,7 @@ Shlomi Fish Wiki</a>.
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/SummerNSA-2014-09-call-for-action/">#SummerNSA:
+<a href="[% base_path %]philosophy/philosophy/SummerNSA-2014-09-call-for-action/">#SummerNSA:
 2014 September’ Call for Action</a> - The “Summerschool at the
 NSA”/“#SummerNSA” effort’s Call for Action: Finishing Off The Open Content/Web
 2.0 Revolution (~2000-2014)
@@ -58,8 +58,10 @@ sent via physical mail.
 </li>
 </ul>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<politics_nav_block />
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

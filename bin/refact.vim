@@ -44,4 +44,5 @@ function! V()
 endfunction
 command! R !bash bin/rename.bash %
 command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
+let @s='[% IF 0 %]'
 let @e='[% END %]'

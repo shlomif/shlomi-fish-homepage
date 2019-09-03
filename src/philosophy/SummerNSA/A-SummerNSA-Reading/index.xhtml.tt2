@@ -1,0 +1,26 @@
+[%- SET title = "A #SummerNSA’s Reading" -%]
+[%- SET desc = "Summarising the #SummerNSA effort - Summerschool at the NSA" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( ) %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "A-hashtag-SummerNSA-s-Reading",  %]
+
+<h2 id="content">Content</h2>
+
+<div class="lim_width wrap-me">
+
+[% INCLUDE "docbook/5/rendered/A-hashtag-SummerNSA-s-Reading.xhtml" %]
+
+</div>
+
+[% IF 0 %]
+[% WRAPPER nav_blocks  %]
+[% PROCESS politics_nav_block  %]
+[%- END -%]
+[% END %]
+
+[% END %]

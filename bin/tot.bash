@@ -1,5 +1,5 @@
 ./gen-helpers && make fastrender && make -j 17
-a="dest/post-incs/t2/humour/bits/Crackas-Paradise/index.xhtml"
+a="dest/post-incs/t2/philosophy/politics/define-zionism/index.xhtml"
 b=/home/shlomif/Backup/Arcs/post-$a
 adest=have.xhtml
 bdest=want.xhtml

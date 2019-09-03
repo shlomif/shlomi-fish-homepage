@@ -1,0 +1,81 @@
+[%- SET title = "The GNU Project Will Integrate GNU Guile into GNU coreutils" -%]
+[%- SET desc = "The GNU Project Will Integrate GNU Guile into GNU coreutils" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<img src="GNU-Guile-logo.min.svg" class="rfloaty" style="height:100px" alt="GNU Guile Logo" />
+
+<p>
+<b>Tel Aviv, Israel:</b> the GNU (= “Guile N' UNIX”) project announced today
+that following the popular decision to integrate GNU Guile (= an implementation
+of the Scheme programming language) into GNU Make, it is going to integrate
+GNU Guile into the various tools inside GNU coreutils. So for example, GNU
+cat will have a "-g" flag that will allow embedding Scheme expressions, GNU
+echo will gain a similar flag, and GNU true and GNU false will allow evaluating
+Scheme expressions for truth or falsehood. It is not yet clear what
+functionality GNU head and GNU tail will gain by the integration.
+</p>
+
+<p>
+O’Reilly Media announced that it will publish a new edition of its
+<a href="http://www.shlomifish.org/humour/bits/Mastering-Cat/">series of
+books</a>, which includes <i>Mastering cat</i> and <i>Mastering echo</i> to
+cover the additional functionality provided by GNU Guile, and we will give
+an overview of the additional functionality in
+<a href="http://www.shlomifish.org/humour/bits/New-Israeli-Tech-Usergroups/">the
+usergroups</a> of the cat mongers, the echo-chamberists, and the (GNU) true
+believers.
+</p>
+
+<p>
+“If it’s not bloat, it’s not us.”, said Richard Stallman, the colourful
+head of the GNU project, and started to sing the Free Software song. Linus
+Torvalds was not available for comments about the proposal to integrate
+GNU Guile into the Linux kernel.
+</p>
+
+<h2 id="about">About</h2>
+
+<p>
+This was originally <a href="http://shlomif-tech.livejournal.com/67311.html">a
+post</a> on one of my blogs.
+</p>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/GNU_Guile#/media/File:GNU-Guile-logo.svg">Guile Logo taken from the Wikipedia</a> under CC-by-sa by Luis Felipe López Acevedo (aka sirgazil).
+</p>
+</li>
+</ul>
+
+<h2 id="license">Copyright and Licence</h2>
+
+<p>
+This document is copyright by <a href="http://www.shlomifish.org/">Shlomi
+Fish</a>, 2016, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
+Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS foss_nav_block  %]
+
+[%- END -%]
+
+[% END %]

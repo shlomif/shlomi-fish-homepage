@@ -1,0 +1,113 @@
+[%- SET title = "Announcing Python 4" -%]
+[%- SET desc = "Announcing Python 4" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<img src="Python_logo_and_wordmark.min.svg" class="rfloaty" style="height:100px" alt="Python Logo" />
+
+<p>
+<b>1 April, 2019, Tel Aviv, Israel:</b> The <a href="https://en.wikipedia.org/wiki/Python_Software_Foundation">Python Software Foundation</a>
+today announced the immediate availability of version 4 of the
+popular <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python programming language</a>.
+</p>
+
+<p>
+The main (and only) change from version 3 is the replacement of the
+<a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">use
+of indentation for scoping</a>, with curly braces.
+Whereas a sample session of Python version 3 and below is:
+</p>
+
+<pre>
+$ python3
+Python 3.7.2 (default, Jan 28 2019, 01:12:59)
+[GCC 8.2.1 20190118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; from __future__ import braces
+  File "&lt;stdin&gt;", line 1
+SyntaxError: not a chance
+&gt;&gt;&gt;
+</pre>
+
+<p>
+In Python 4 it is:
+</p>
+
+<pre>
+$ python4
+Python 4.0.0 (default, Apr 1 2019)
+[GCC 8.2.1 20190118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; from __future__ import braces
+Fuck, yeah!
+&gt;&gt;&gt; for i in range(3): { print(i); }
+0
+1
+2
+&gt;&gt;&gt;
+</pre>
+
+<p>
+Note that the import statement is entirely optional and the use of braces
+will be enforced.
+</p>
+
+<p>
+The foundation advises all Python developers to migrate their code to Python
+4 because Python 3 will be end-of-lifed in 2030. One can use the new version
+of <a href="https://pypi.org/project/six/">six.py</a> called "twentyfour.py"
+(24 = 2×3×4) to write code which is compatible with both versions.
+</p>
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/ways_to_do_it.html">Ways to Do it According to
+the Programming Languages of the World</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.python.org/doc/humor/">Python Humour</a>
+</p>
+</li>
+
+</ul>
+
+<h2 id="license">Copyright and Licence</h2>
+
+<p>
+This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi
+Fish</a>, 2019, and is available
+under the
+terms of <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/">the Creative Commons
+Attribution-Noncommercial-ShareAlike License 4.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+The <a href="https://en.wikipedia.org/wiki/Python_(programming_language)#/media/File:Python_logo_and_wordmark.svg">Python logo</a>
+was taken from the English Wikipedia under the <a href="https://www.python.org/psf/trademarks/">trademarks policy</a>.
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS foss_nav_block  %]
+
+[%- END -%]
+
+[% END %]

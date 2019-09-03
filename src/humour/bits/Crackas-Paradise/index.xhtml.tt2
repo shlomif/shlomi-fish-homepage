@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "“Cracka’s Paradise”" -%]
+[%- SET desc = "A geek parody of Coolio’s song “Gangsta’s Paradise”." -%]
 
-<latemp_subject "“Cracka’s Paradise”" />
-<latemp_meta_desc "A geek parody of Coolio’s song “Gangsta’s Paradise”." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -57,10 +58,12 @@ are you and me?
 
 <h2 id="license">Copyright and Licence</h2>
 
-<cc_by_sa_british_blurb year="2008" />
+[% cc_by_sa_british_blurb( "year" => "2008", ) %]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

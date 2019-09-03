@@ -1,0 +1,39 @@
+[% BLOCK star_trek_nav_block %]
+[% print_nav_block (name => 'star_trek') %]
+[% END %]
+
+[% BLOCK harry_potter_nav_block %]
+[% print_nav_block (name => 'harry_potter') %]
+[% END %]
+
+[% BLOCK xkcd_nav_block %]
+[% print_nav_block (name => 'xkcd') %]
+[% END %]
+
+[% BLOCK foss_nav_block %]
+[% print_nav_block(name=>'foss') %]
+[% END %]
+
+[% BLOCK buffy_nav_block %]
+[% print_nav_block (name => 'buffy') %]
+[% END %]
+
+[% BLOCK politics_nav_block %]
+[% print_nav_block (name => 'politics') %]
+[% END %]
+
+[% BLOCK nav_blocks %]
+
+[% in_nav_block_set() %]
+
+<div class="nav_blocks">
+
+<h2 id="nav_blocks">Navigation Blocks</h2>
+
+[% content %]
+
+</div>
+
+[% in_nav_block_unset() %]
+
+[% END %]

@@ -1,11 +1,12 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "COBOL - The New Age Programming Language" -%]
+[%- SET desc = "COBOL - The New Age Programming Language: parody page about COBOL and advocacy pages for new programming languages." -%]
+[%- SET more_keywords = "COBOL, parody, funny, humour, humor" -%]
 
-<latemp_subject "COBOL - The New Age Programming Language" />
-<latemp_meta_desc "COBOL - The New Age Programming Language: parody page about COBOL and advocacy pages for new programming languages." />
-<latemp_more_keywords "COBOL, parody, funny, humour, humor" />
 
-<note>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER note  %]
 <h2 id="note">Note (3-July-2010)</h2>
 
 <p>
@@ -16,7 +17,7 @@ boat. So here are my notes about COBOL, with a little organisation, just
 in case it will make you chuckle.
 </p>
 
-</note>
+[%- END -%]
 
 <h2 id="content">The Content</h2>
 
@@ -223,7 +224,7 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 
 <h2 id="license">Copyright and Licence</h2>
 
-<cc_by_sa_british_blurb year="2010" />
+[% cc_by_sa_british_blurb( "year" => "2010", ) %]
 
 <h2 id="links">Links</h2>
 
@@ -261,8 +262,10 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 </li>
 </ul>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

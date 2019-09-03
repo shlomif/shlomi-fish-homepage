@@ -17,6 +17,37 @@ use HTML::Latemp::AddToc   ();
 use HTML::Latemp::Acronyms ();
 
 my $latemp_acroman = HTML::Latemp::Acronyms->new;
+$Shlomif::Homepage::in_nav_block = undef();
+
+use Shlomif::Homepage::NavBlocks::Renderer ();
+use Shlomif::Homepage::NavBlocks (
+    qw(
+        get_nav_block
+        )
+);
+
+my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
+    {
+        host => 't2',
+    }
+);
+
+sub _render_nav_block
+{
+    my ($id) = @_;
+
+    return $nav_block_renderer->render( get_nav_block($id) );
+}
+
+sub _print_nav_block
+{
+    if ( not $Shlomif::Homepage::in_nav_block )
+    {
+        # Cancelled due to tt2 scoping.
+        # die "I suck. \$Shlomif::Homepage::in_nav_block must be set.";
+    }
+    return _render_nav_block(@_);
+}
 
 # use MyNavData            ();
 
@@ -94,7 +125,19 @@ sub cc_by_sa_license_british
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
-    d2url          => "http://divisiontwo.shlomifish.org/",
+    d2url            => "http://divisiontwo.shlomifish.org/",
+    in_nav_block_set => sub {
+        $Shlomif::Homepage::in_nav_block = 1;
+        return;
+    },
+    in_nav_block_unset => sub {
+        $Shlomif::Homepage::in_nav_block = undef();
+        return;
+    },
+    print_nav_block => sub {
+        my %args = %{ shift() // {} };
+        return _print_nav_block( $args{name} );
+    },
     print_markdown => sub {
         my %args = %{ shift() // {} };
         require Shlomif::MD;
@@ -224,6 +267,7 @@ sub _inc
 
 foreach my $result (@tt)
 {
+    $::latemp_filename = $result;
     my $myinc    = sub { return _inc( $result, shift ); };
     my $basename = basename($result);
     my @fn       = split m#/#, $result;

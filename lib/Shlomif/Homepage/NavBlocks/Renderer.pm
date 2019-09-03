@@ -12,11 +12,13 @@ sub render
 {
     my ( $self, $thingy ) = @_;
 
-    return $thingy->cached_render(
+    return    # $thingy->cached_render(
         sub {
-            return $self->_non_cached_render($thingy);
+        return $self->_non_cached_render($thingy);
         }
-    );
+        ->();
+
+    # );
 }
 
 sub _non_cached_render

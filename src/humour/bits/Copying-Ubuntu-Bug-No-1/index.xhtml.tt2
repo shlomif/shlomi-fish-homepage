@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Copying Ubuntu Bug No. 1" -%]
+[%- SET desc = "“Ubuntu can’t have all the fun only for itself”, open source distributors are saying as they rush to copy its Bug No. 1 titled “Microsoft has a majority market share”." -%]
 
-<latemp_subject "Copying Ubuntu Bug No. 1" />
-<latemp_meta_desc "“Ubuntu can’t have all the fun only for itself”, open source distributors are saying as they rush to copy its Bug No. 1 titled “Microsoft has a majority market share”." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Published on:</b> 23-September-2010
@@ -96,7 +97,7 @@ open only amplifies the problem.”
 <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/3.0/"><img
     alt="Creative Commons License" class="bless"
-    src="$(ROOT)/images/somerights20.png" /></a><br />This
+    src="[% base_path %]images/somerights20.png" /></a><br />This
 work is licensed under the
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
 Commons Attribution-ShareAlike 3.0 (Unported) License</a> (or at your option
@@ -130,8 +131,10 @@ for Ricers”</a>.
 
 </ul>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

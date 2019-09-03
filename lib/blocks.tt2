@@ -410,6 +410,7 @@ of them.
 
 [% END %]
 
+[% PROCESS "common_art.tt2" %]
 [% BLOCK win32_intro %]
 
 <p>

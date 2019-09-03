@@ -1,12 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "common_art.wml"
+[%- SET title = "Shlomi Fish’s Art" -%]
+[%- SET desc = "Various artwork by Shlomi Fish: computer graphics, some photographs, and some music" -%]
 
-<latemp_subject "Shlomi Fish’s Art" />
-<latemp_meta_desc "Various artwork by Shlomi Fish: computer graphics, some photographs, and some music" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc lim_width">
-<toc_div />
+[% toc_div( ) %]
 <section>
 <h2 id="intro">Introduction</h2>
 
@@ -19,18 +19,18 @@ shamelessly duplicate my efforts and create similar art.
 
 </section>
 
-<common_art__graphics_design />
+[% PROCESS common_art__graphics_design  %]
 
-<h2_section id="slogans" title="<a href="slogans/">Slogans</a>">
+[% WRAPPER h2_section id = "slogans"  title = "Slogans" href = "slogans/" %]
 
 <p>
-Some slogans I came up with (<a href="$(ROOT)/humour.html">see my collection
+Some slogans I came up with (<a href="[% base_path %]humour.html">see my collection
 of aphorisms</a>) - converted to designs.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="photography" title="Photography">
+[% WRAPPER h2_section id = "photography"  title = "Photography"  %]
 
 <p>
 I’m not much of a photographer, but I still enjoy taking photographs using
@@ -46,9 +46,9 @@ November, 2005</a>
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="music" title="Music">
+[% WRAPPER h2_section id = "music"  title = "Music"  %]
 
 <ul>
 <li>
@@ -82,17 +82,17 @@ a .zip file).
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="by_others" title="<a href="by-others/">By Others</a>">
+[% WRAPPER h2_section id = "by_others"  title="By Others" href="by-others/" %]
 
 <p>
 Mirrors or restorations of artworks by other people.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="recommendations" title="Recommendations">
+[% WRAPPER h2_section id = "recommendations"  title = "Recommendations"  %]
 
 <ul>
 <li>
@@ -104,6 +104,8 @@ recommend.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

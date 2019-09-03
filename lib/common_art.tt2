@@ -1,0 +1,126 @@
+[% BLOCK art__my_image %]
+
+[% SET full_url = "${base_path}art/$url" %]
+[% SET full_thumb_url = "${base_path}art/$thumb_url" %]
+
+<article class="design">
+
+<header>
+<h3 id="[% id %]"><a href="[% full_url %]">[% title %]</a></h3>
+</header>
+
+<a href="[% full_url %]"><img
+    src="[% full_thumb_url %]" alt="[% thumb_alt %]"
+    /></a>
+
+[% content %]
+
+</article>
+
+[% END %]
+
+[% BLOCK common_art__graphics_design %]
+
+<div class="graphic_designs">
+
+<h2 id="graphics">Graphics</h2>
+
+[% WRAPPER art__my_image id = "back-to-my-homepage--second-ver--using-inkscape"
+    url = "back-to-my-homepage-2nd-ver/"
+    thumb_url = "images/back_to_my_homepage--v2--inkscape.png"
+    thumb_alt = "Back to my Homepage Logo Second Version Using Inkscape"
+    title = "Back to my Homepage - Second Version Using Inkscape"  %]
+
+<p>
+Second version of the “Back to my Homepage” logo resembling the logo of the
+film <i>Back to the Future</i>. This time it was done using the open-source
+Inkscape vector-graphics editor and some scripts.
+</p>
+
+[%- END -%]
+
+
+[% WRAPPER art__my_image id = "back-to-my-homepage"
+    url = "bk2hp/"
+    thumb_url = "images/bk2hp_old.png"
+    thumb_alt = "Back to my Homepage (Like Back to the Future)"
+    title = "Back to my Homepage"  %]
+
+<p>
+The first incarnation of the “Back to my Homepage” image. Many similar images
+were popular in ye olde web, but
+this time it is modelled like the logo of the film <i>Back to the Future</i>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER art__my_image id = "linux-slogan"
+    url = "linux_banner/"
+    thumb_url = "images/linux1-scaled.png"
+    thumb_alt = "Linux - Because software problems should not cost money"
+    title = "Linux Slogan"  %]
+
+<p>
+A funny Linux Slogan -
+<q>Linux - Because software problems should not cost money.</q> rendered
+into a nice design.
+</p>
+
+[%- END -%]
+
+[% WRAPPER art__my_image id = "made-with-latemp"
+    url = "made-with-latemp/"
+    thumb_url = "made-with-latemp/made-with-latemp-big.png"
+    thumb_alt = "Made with Latemp"
+    title = "Made with Latemp"  %]
+
+<p>
+A design reading “Made With Latemp” for providing a button for the
+<a href="http://web-cpan.shlomifish.org/latemp/">Latemp Static Site Generator</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER art__my_image id = "hhfg-background"
+    url = "hhfg-background/"
+    thumb_url = "hhfg-background/corner.png"
+    thumb_alt = "“Human Hacking Field Guide” Background Image"
+    title = "Background for the “Human Hacking Field Guide Story”"  %]
+
+<p>
+After I wrote <a href="[% base_path %]humour/human-hacking/">the story <i>Human Hacking
+Field Guide</i></a> I was looking for a nice design for its online chapters.
+I found a design I liked, but its images were not suitable, so I duplicated
+the effect using <a href="http://www.gimp.org/">the GIMP</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER art__my_image id = "better-scm"
+    url = "better-scm/"
+    thumb_url = "better-scm/better-scm-logo.png"
+    thumb_alt = "“Better SCM” Site Logo"
+    title = "Better SCM Logo"  %]
+
+<p>
+The Logo for the
+<a href="http://better-scm.shlomifish.org/">Better-SCM web-site</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER art__my_image id = "d-and-d-cartoon--comparing-lances"
+    url = "d-and-d-cartoon--comparing-lances/"
+    thumb_url = "d-and-d-cartoon--comparing-lances/thumb.png"
+    thumb_alt = "“Comparing Lances” D&amp;D Cartoon"
+    title = "D&amp;D Cartoon: Comparing Lances"  %]
+
+<p>
+A Dungeons&amp;Dragons themed cartoon I created - comparing horse lances.
+</p>
+
+[%- END -%]
+
+</div>
+
+[% END %]

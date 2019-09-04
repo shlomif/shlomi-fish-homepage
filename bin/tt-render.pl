@@ -334,6 +334,8 @@ foreach my $result (@tt)
     $vars->{raw_fn_path}         = $result =~ s#/index\.x?html\z#/#r;
     $vars->{leading_path_string} = $myinc->("breadcrumbs-trail");
     $vars->{html_head_nav_links} = $myinc->("html_head_nav_links");
+    $vars->{shlomif_main_expanded_nav_bar} =
+        $myinc->("shlomif_main_expanded_nav_bar");
     $vars->{nav_links_without_accesskey} =
         $myinc->("shlomif_nav_links_renderer-with_accesskey=0");
     $vars->{nav_links_with_accesskey} =

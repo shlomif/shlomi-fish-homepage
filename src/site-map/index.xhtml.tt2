@@ -1,0 +1,17 @@
+[%- SET title = "Site Map" -%]
+[%- SET desc = "Site map for Shlomi Fish’s web site (www.shlomifish.org)" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<div class="sitemap">
+[% shlomif_main_expanded_nav_bar %]
+</div>
+
+<p>
+<a href="[% base_path %]MANIFEST.html">MANIFEST.html</a> - list of all files in main
+source, for easy retrieval.
+</p>
+
+[% END %]

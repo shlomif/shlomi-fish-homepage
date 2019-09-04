@@ -205,7 +205,7 @@ EOF
     },
     cpan_self_mod => sub {
         my %args = %{ shift() };
-        return cpan_mod( %args, body => $args{m} );
+        return cpan_mod( %args, body => $args{'m'} );
     },
     cpan_b_self_dist => sub {
         my %args = %{ shift() };
@@ -250,7 +250,13 @@ EOF
         require PerlBegin::TopicsExamples::FilesAndDirs;
 
         return PerlBegin::TopicsExamples::FilesAndDirs->_run();
-    }
+    },
+    long_stories__calc_common_top_elems => sub {
+        require Shlomif::Homepage::LongStories;
+        my %args = %{ shift() // {} };
+        return Shlomif::Homepage::LongStories->calc_common_top_elems(
+            $args{id} );
+    },
 };
 
 my @tt = path("lib/make/tt2.txt")->lines_raw;

@@ -584,6 +584,13 @@ sub render_logo
     return;
 }
 
+sub calc_common_top_elems
+{
+    my ( $class, $id ) = @_;
+
+    return join( '', @{ $class->_get_common_top_elems($id) }, );
+}
+
 sub render_common_top_elems
 {
     my ( $class, $id ) = @_;

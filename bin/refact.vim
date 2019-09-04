@@ -48,5 +48,6 @@ function! MyRename()
 endfunction
 command! R call MyRename()
 command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
+command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_common_top_elems\((\'\w+')\)\; \:\>/[% long_stories__calc_common_top_elems(id => \1) %]/
 let @s='[% IF 0 %]'
 let @e='[% END %]'

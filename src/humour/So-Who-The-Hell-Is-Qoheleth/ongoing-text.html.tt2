@@ -1,0 +1,17 @@
+[%- SET title = "“So, who the Hell is Qoheleth?” - Ongoing Text" -%]
+[%- SET desc = "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% long_stories__calc_common_top_elems(id => 'who_is_qoheleth') %]
+
+
+
+<div class="who_is_qoheleth">
+[% INCLUDE "screenplay-xml/rendered-html/So-Who-the-Hell-is-Qoheleth.html" %]
+</div>
+
+[% END %]

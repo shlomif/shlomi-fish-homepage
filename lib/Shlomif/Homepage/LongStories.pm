@@ -575,6 +575,13 @@ sub render_abstract
     return;
 }
 
+sub calc_logo
+{
+    my ( $class, $id ) = @_;
+
+    return join( '', @{ $class->_get_logo_tags($id) } );
+}
+
 sub render_logo
 {
     my ( $class, $id ) = @_;

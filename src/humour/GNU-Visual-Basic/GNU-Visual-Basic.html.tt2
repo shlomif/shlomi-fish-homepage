@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "GNU Visual Basic" -%]
+[%- SET desc = "GNU Visual Basic - an exciting shift of direction from the GNU project." -%]
 
-<latemp_subject "GNU Visual Basic" />
-<latemp_meta_desc "GNU Visual Basic - an exciting shift of direction from the GNU project." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Richard Stallman, leader of the Free Software Foundation and the
@@ -107,3 +109,5 @@ This article was originally published on
 1 April of one year. It was since misplaced there. This is a copy of it that
 is placed here for posterity. It was not written by me (= Shlomi Fish).
 </p>
+
+[% END %]

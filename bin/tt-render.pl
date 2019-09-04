@@ -267,6 +267,11 @@ EOF
         return Shlomif::Homepage::LongStories->calc_common_top_elems(
             $args{id} );
     },
+    long_stories__calc_logo => sub {
+        require Shlomif::Homepage::LongStories;
+        my $args = shift() // {};
+        return Shlomif::Homepage::LongStories->calc_logo( $args->{id} );
+    },
 };
 
 my @tt = path("lib/make/tt2.txt")->lines_raw;

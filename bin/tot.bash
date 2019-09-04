@@ -1,5 +1,5 @@
 ./gen-helpers && make fastrender && make -j 17
-a="dest/post-incs/t2/humour/Summerschool-at-the-NSA/ongoing-text.html"
+a="dest/post-incs/t2/humour/Selina-Mandrake/ongoing-text.html"
 b=/home/shlomif/Backup/Arcs/post-$a
 adest=have.xhtml
 bdest=want.xhtml

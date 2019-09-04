@@ -1,8 +1,10 @@
 ./gen-helpers && make fastrender && make -j 17
 a="dest/post-incs/t2/meta/FAQ/index.xhtml"
 b=/home/shlomif/Backup/Arcs/post-$a
-adest=have.xhtml
-bdest=want.xhtml
+dir=../temp-compare-out--to-del
+mkdir -p "$dir"
+adest="$dir/have.xhtml"
+bdest="$dir/want.xhtml"
 f()
 {
     perl -lapE 's/</\n</g'

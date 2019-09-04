@@ -48,6 +48,7 @@ DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = $(T2_SRC_DIR)/$(FORTUNES_DIR)
+SRC_FORTUNES_DIR = src/$(FORTUNES_DIR)
 
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
@@ -461,8 +462,8 @@ FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC = $(addprefix $(T2_FORTUNES_DIR)/,$(FORTUNES_XMLS_BASE))
 FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
 FORTUNES_XHTMLS_TOCS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.toc-xhtml,$(FORTUNES_XMLS_SRC))
-FORTUNES_SOURCE_WMLS = $(patsubst %,$(T2_FORTUNES_DIR)/%.html.wml,$(FORTUNES_FILES_BASE))
-FORTUNES_DEST_HTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.html.wml,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_SOURCE_WMLS))
+FORTUNES_SOURCE_WMLS = $(patsubst %,$(SRC_FORTUNES_DIR)/%.html.tt2,$(FORTUNES_FILES_BASE))
+FORTUNES_DEST_HTMLS = $(patsubst $(SRC_FORTUNES_DIR)/%.html.tt2,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_SOURCE_WMLS))
 FORTUNES_XHTMLS__COMPRESSED = $(patsubst %.xhtml,%.compressed.xhtml,$(FORTUNES_XHTMLS))
 FORTUNES_XHTMLS__FOR_INPUT_PORTIONS = $(patsubst %.xhtml,%.xhtml-for-input,$(FORTUNES_XHTMLS))
 FORTUNES_WMLS_HTMLS = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
@@ -517,7 +518,7 @@ $(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.xhtml.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
 
 # TODO : extract a macro for this and the rule below.
-$(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(T2_FORTUNES_DIR)/%.html.wml lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
+$(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
 
 $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
 

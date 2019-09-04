@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "stories/bits.wml"
+[%- SET title = "Shlomi Fish’s Funny Bits" -%]
+[%- SET desc = "Shlomi Fish’s Funny Bits - shorter than novellas or short stories, and longer than an aphorism." -%]
 
-<latemp_subject "Shlomi Fish’s Funny Bits" />
-<latemp_meta_desc "Shlomi Fish’s Funny Bits - shorter than novellas or short stories, and longer than an aphorism." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Funny short scale stories I wrote - often just a pageful or two.
@@ -21,7 +22,7 @@ to the other programming languages out there.
 
 <article class="h3">
 
-<h3 id="wysiwyt"><a href="$(ROOT)/wysiwyt.html">IRPWUG Announces Project WYSIWYT</a></h3>
+<h3 id="wysiwyt"><a href="[% base_path %]wysiwyt.html">IRPWUG Announces Project WYSIWYT</a></h3>
 
 <p>
 The “International Really Pissed-off Windows Users Group” (IRPWUG) announces
@@ -64,7 +65,7 @@ Slashdot discussion</a>.
 
 <article class="h3">
 
-<h3 id="wonderous_ways_of_ms"><a href="$(ROOT)/wonderous.html">Wonderous are the Ways of
+<h3 id="wonderous_ways_of_ms"><a href="[% base_path %]wonderous.html">Wonderous are the Ways of
 Microsoft</a></h3>
 
 <p>
@@ -310,14 +311,14 @@ A significant step forward…
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/">Collections of Factoids</a> - about
+<a href="[% base_path %]humour/bits/facts/">Collections of Factoids</a> - about
 Chuck Norris/etc.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/aphorisms/">Aphorisms and Quotes Pages</a>
+<a href="[% base_path %]humour/aphorisms/">Aphorisms and Quotes Pages</a>
 </p>
 </li>
 </ul>
@@ -325,3 +326,5 @@ Chuck Norris/etc.
 </section>
 
 </div>
+
+[% END %]

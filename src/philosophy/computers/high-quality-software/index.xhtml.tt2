@@ -1,12 +1,23 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "What Makes Software High-Quality?" -%]
+[%- SET desc = "Which parameters make software applications high-quality? And which parameters or methods, while desirable, are not directly “quality”? This article, inspired by a post of someone else on a mailing list I started for one of my projects aims to answer this question." -%]
 
-<latemp_subject "What Makes Software High-Quality? (Revision 2)" />
-<latemp_meta_desc "Which parameters make software applications high-quality? And which parameters or methods, while desirable, are not directly “quality”? This article, inspired by a post of someone else on a mailing list I started for one of my projects aims to answer this question." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc fancy_sects">
+[% toc_div( ) %]
 
-<toc_div />
+[% WRAPPER note  %]
+<h2 id="note">Note (24-May-2008)</h2>
+
+<p>
+There’s now <a href="rev2/">a second revision to this article</a>,
+with many corrections and additions, which is more recommended. Please don’t
+report any problems with the first revision.
+</p>
+
+[%- END -%]
 
 <section class="h2">
 
@@ -15,21 +26,17 @@
 <p>
 Which parameters make software applications high-quality? And which parameters
 or methods, while desirable, are not directly “quality”? This article,
-inspired by a post of someone else, on a mailing list I started for one of my
-projects, aims to answer these questions.
+inspired by a post of someone else on a mailing list I started for one of my
+projects aims to answer this question.
 </p>
 
-<p>
-This is the second revision of <a href="../">the original article</a>
-with many corrections and additions.
-</p>
 </section>
 
 <section class="h2">
 
-<h2 id="itself">The Article Itself - 2nd Revision</h2>
+<h2 id="itself">The Article Itself</h2>
 
-#include "docbook/5/rendered/what-makes-software-high-quality-rev2.xhtml"
+[% INCLUDE "docbook/5/rendered/what-makes-software-high-quality.xhtml" %]
 
 </section>
 
@@ -39,12 +46,13 @@ with many corrections and additions.
 
 <ul>
 <li>
-<a href="what-makes-software-high-quality-rev2.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+<a href="what-makes-software-high-quality.pdf">Acrobat Reader (PDF) Format</a>.
 </li>
 <li>
-<a href="what-makes-software-high-quality-rev2.xml">Original DocBook/XML</a>.
+<a href="what-makes-software-high-quality.xml">Original DocBook/XML</a>.
 </li>
 </ul>
+
 </section>
 
 <section class="h2">
@@ -83,20 +91,8 @@ fc-solve-discuss mailing list</a>.
 
 </section>
 
-
-<section class="h3">
-
-<h3 id="coverage-2nd">2nd Edition</h3>
-
-<ul>
-
-<li>
-<a href="http://lxer.com/module/newswire/view/103806/index.html">LXer</a>
-</li>
-
-</ul>
-
 </section>
 
-</section>
 </div>
+
+[% END %]

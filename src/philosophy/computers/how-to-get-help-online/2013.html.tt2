@@ -1,17 +1,16 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "How to Get Help Online (2013)" -%]
+[%- SET desc = "A document explaining where and how to get help on the Internet - updated for 2013" -%]
 
-<latemp_subject "How to Get Help Online (2013)" />
 
-<latemp_meta_desc "A document explaining where and how to get help on the Internet - updated for 2013" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc">
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="content">Content</h2>
 
-#include "pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped"
+[% INCLUDE "pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped" %]
 
 <h2 id="coverage">Coverage</h2>
 
@@ -42,9 +41,9 @@ by posting to
 
 <li>
 <p>
-<b>A.</b> (an Instant Messaging and <my_acronym key="IRC"/> friend of mine) - for encouraging me to
+<b>A.</b> (an Instant Messaging and [% my_acronym( "key" => "IRC",) %] friend of mine) - for encouraging me to
 try to feature the article on Slashdot, after a chat, during which we concluded
-that <my_acronym key="IRC"/> was an incredibly useful Internet medium for getting help, yet many
+that [% my_acronym( "key" => "IRC",) %] was an incredibly useful Internet medium for getting help, yet many
 people were oblivious to it.
 </p>
 </li>
@@ -71,3 +70,5 @@ over the article, and pointing out some potential spelling and grammar errors.
 </ul>
 
 </div>
+
+[% END %]

@@ -69,6 +69,14 @@ sub cpan_mod
     return qq#<a href="http://metacpan.org/module/$args{m}">$args{body}</a>#;
 }
 
+sub cpan_homepage
+{
+    my %args = %{ shift() };
+    return qq#http://metacpan.org/author/\U$args{who}\E#;
+}
+
+my $shlomif_cpan = cpan_homepage( +{ who => 'shlomif' } );
+
 sub cpan_dist
 {
     my %args = %{ shift() };
@@ -154,6 +162,8 @@ EOF
         my %args = %{ shift() // {} };
         return $latemp_acroman->abbr( { key => $args{key}, } )->{html};
     },
+    shlomif_cpan             => $shlomif_cpan,
+    cpan_homepage            => \&cpan_homepage,
     cc_by_sa_british_blurb   => \&cc_by_sa_british_blurb,
     cc_by_sa_license_british => \&cc_by_sa_license_british,
     cc_by_british_blurb      => sub {

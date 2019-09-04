@@ -1,13 +1,11 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Frequently Asked Questions (FAQ) List" -%]
+[%- SET desc = "Shlomi Fish’s Frequently Asked Questions (FAQ) List" -%]
 
-#include "toc_div.wml"
-#include "Inc/cpan_dists.wml"
-#include "Inc/acronyms.wml"
 
-<latemp_subject "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
-<latemp_meta_desc "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<set-var Technion="<a href="http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology">Technion</a>" />
+[% SET Technion = "<a href=\"http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology\">Technion</a>" %]
 
 <p>
 This document is a list of questions and answers to common questions I have
@@ -41,19 +39,19 @@ Some related FAQs I co-maintain:
 </li>
 
 </ul>
-<toc_div />
+[% toc_div( ) %]
 
 <div class="faq fancy_sects lim_width wrap-me">
 
-<h2_section id="about" title="About Shlomi Fish">
+[% WRAPPER h2_section id = "about"  title = "About Shlomi Fish"  %]
 
-<h3_section id="who_are_you" title="Who are you?">
+[% WRAPPER h3_section id = "who_are_you"  title = "Who are you?"  %]
 
 <p>
-I am <a href="$(ROOT)/personal.html">Shlomi Fish</a>, a professional Israeli
+I am <a href="[% base_path %]personal.html">Shlomi Fish</a>, a professional Israeli
 software developer, and author of articles, essays, presentations, and funny
 stories, aphorisms and bits. I have a Bachelor of Sciences (B.Sc.) from
-the <get-var Technion /> in Electrical Engineering, but it would be a stretch to call
+the [% Technion %] in Electrical Engineering, but it would be a stretch to call
 me an Electrical Engineer, at least with my current level of expertise in
 the field. I’m actually more of a programmer and a specialised mathematician.
 </p>
@@ -73,9 +71,9 @@ any other “Shlomi Fish”’es of significance (at least not
 according to Internet searches).
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="guy_or_girl" title="Are you a Guy or a Girl?">
+[% WRAPPER h3_section id = "guy_or_girl"  title = "Are you a Guy or a Girl?"  %]
 
 <p>
 I am very much a guy, despite what my first name’s suffix (the “i” of
@@ -94,9 +92,9 @@ many Israeli Hebrew feminine names that end with “i”. One reason I’m using
 with the word “my”.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="your_name" title="What can you say about your name?">
+[% WRAPPER h3_section id = "your_name"  title = "What can you say about your name?"  %]
 
 <p>
 Well, “Shlomi” or “שלומי” in Hebrew (see its <a
@@ -122,7 +120,7 @@ when they are distanced too much from the
 <a href="http://en.wikipedia.org/wiki/Stress_%28linguistics%29">Stress</a> of
 the word. Quite a few non-Hebrew speakers have issues with pronouncing Hebrew
 words that start with several Schwas in succession (as
-<a href="$(ROOT)/humour/Selina-Mandrake/ongoing-text.html#is-moshes-ben-amram-the-jewish-prophet">this
+<a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html#is-moshes-ben-amram-the-jewish-prophet">this
 scene</a> from a screenplay I wrote indicates).
 </p>
 
@@ -165,7 +163,7 @@ for both the "P" and the "F" sounds, and it would be "P" in the beginning of
 the word.
 </p>
 
-<h4_section id="is_shlomi_fish_your_real_name" title="Is Shlomi Fish Your Real Name?">
+[% WRAPPER h4_section id = "is_shlomi_fish_your_real_name"  title = "Is Shlomi Fish Your Real Name?"  %]
 
 <p>
 Despite what the name may imply to non-Israeli people, Shlomi Fish is my
@@ -173,12 +171,12 @@ real, and legal, name. See <a href="#your_name">the question above</a>
 for more information about its etymology.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="where_are_you_from" title="Where are you from? Where do you
-live currently?">
+[% WRAPPER h3_section id = "where_are_you_from"  title = "Where are you from? Where do you
+live currently?"  %]
 
 <p>
 Well, I was born in Israel in 5 May 1977, and lived in Tel Aviv for a
@@ -192,10 +190,10 @@ back to Tel Aviv and I lived in
 ever since.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="your_job" title="What is your day job? What do you do for a living?
-What is your work about?">
+[% WRAPPER h3_section id = "your_job"  title = "What is your day job? What do you do for a living?
+What is your work about?"  %]
 
 <p>
 Currently (September 2014) I am happily unemployed, and trying to build
@@ -216,9 +214,9 @@ wonderful, exciting, and wonderous, journey, and I’m not going to give up.
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="why_were_you_unemployed" title="You seem very knowledgeable and capable. How come you said you were unemployed?">
+[% WRAPPER h3_section id = "why_were_you_unemployed"  title = "You seem very knowledgeable and capable. How come you said you were unemployed?"  %]
 
 <p>
 First of all, thanks for thinking highly of me. Otherwise, note that while I
@@ -235,19 +233,19 @@ That put aside, if you are interested in hiring me, despite whatever
 limitations I may have, please contact me and we'll see about that.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="nicknames" title="How else are you known?">
+[% WRAPPER h3_section id = "nicknames"  title = "How else are you known?"  %]
 
 <p>
-I’m also known as “shlomif” or on the <my_acronym key="IRC"/> as “rindolf”.
+I’m also known as “shlomif” or on the [% my_acronym( "key" => "IRC",) %] as “rindolf”.
 </p>
 
-<h4_section id="origin_of_rindolf" title="What is the origin of your “rindolf” IRC nickname?">
+[% WRAPPER h4_section id = "origin_of_rindolf"  title = "What is the origin of your “rindolf” IRC nickname?"  %]
 
 <p>
 For more information about the name "rindolf", see
-<a href="$(ROOT)/me/rindolf/">the dedicated page about my Rindolf nickname</a>.
+<a href="[% base_path %]me/rindolf/">the dedicated page about my Rindolf nickname</a>.
 </p>
 
 <p>
@@ -263,7 +261,7 @@ has a nice ring.
 </p>
 
 <p>
-The first <my_acronym key="IRC"/> nickname I used was “dori” after one of the dwarves in
+The first [% my_acronym( "key" => "IRC",) %] nickname I used was “dori” after one of the dwarves in
 Tolkien’s <a href="http://en.wikipedia.org/wiki/The_Hobbit">the Hobbit</a>,
 and later on decided it was a common name, so I switched to “gloin”, the name
 of a different dwarf. Then I wanted something more original, so I picked up
@@ -271,29 +269,29 @@ of a different dwarf. Then I wanted something more original, so I picked up
 </p>
 
 <p>
-If I had been able to change it again, I would have picked “shlomif” for my <my_acronym key="IRC"/>
+If I had been able to change it again, I would have picked “shlomif” for my [% my_acronym( "key" => "IRC",) %]
 career, because it is my handle almost everywhere else, but now everyone
-on <my_acronym key="IRC"/> know me as “rindolf” so I feel it's too late (not to mention that,
-in my impression, it is common and accepted to use a pseudonym on <my_acronym key="IRC"/>, to
+on [% my_acronym( "key" => "IRC",) %] know me as “rindolf” so I feel it's too late (not to mention that,
+in my impression, it is common and accepted to use a pseudonym on [% my_acronym( "key" => "IRC",) %], to
 show some creativity).
 </p>
 
 <p>
-The running joke we have on <my_acronym key="IRC"/>, is that Rindolf is the evil twin brother
+The running joke we have on [% my_acronym( "key" => "IRC",) %], is that Rindolf is the evil twin brother
 of Santa Claus’s goody-two-shoes reindeer, Rudolph and Randolph, who are
 among his arch-enemies. Rindolf is also one of the cornerstones of the
 Evil Reindeer Evil World Domination Evil Conspiracy, with the evil aim to
 spread the Reindeer Evil all over the world. You can find some of the
 manifestations of this joke in
-<a href="$(ROOT)/humour/fortunes/">the IRC conversations quoted on my fortune
+<a href="[% base_path %]humour/fortunes/">the IRC conversations quoted on my fortune
 cookies</a>.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="refer_or_address" title="How should I address you or refer to you?">
+[% WRAPPER h3_section id = "refer_or_address"  title = "How should I address you or refer to you?"  %]
 
 <p>
 When writing a letter to me you can start it with
@@ -321,12 +319,12 @@ only “shlomif” on the Internet</a>.
 </p>
 
 <p>
-On the <my_acronym key="IRC"/>, I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
+On the [% my_acronym( "key" => "IRC",) %], I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="religious_belief" title="What is your Religious Belief or Inclination?">
+[% WRAPPER h3_section id = "religious_belief"  title = "What is your Religious Belief or Inclination?"  %]
 
 <p>
 First of all, I should note that one’s general classification of
@@ -343,7 +341,7 @@ explain what all those mean:
 <p>
 I’m <b>agnostic</b> because I’m not sure whether God — however he/she/they/it are
 manifested — exists or not. I suspect they do, but don’t take chances and
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/tie_your_camel.xhtml">don’t
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/tie_your_camel.xhtml">don’t
 wish to risk dying</a> - now or ever.
 </p>
 </li>
@@ -372,7 +370,7 @@ remember (and I’m 1977-born).
 <p>
 I’m <b>pluralistic</b>, because I constantly have derived and will derive
 inspiration from
-<a href="$(ROOT)/me/rindolf/#rindolfism">many sources</a> and also try
+<a href="[% base_path %]me/rindolf/#rindolfism">many sources</a> and also try
 not to dismiss an insight based on its source - see
 <a href="http://en.wikipedia.org/wiki/Ad_hominem">Ad-hominem</a>,
 <a href="http://en.wikipedia.org/wiki/Reductio_ad_Hitlerum">Reductio
@@ -384,7 +382,7 @@ ad Hitlerum</a> for more information about why this is fallacious.
 <p>
 I am <b>anti-Fatalistic</b> because I believe that humans’ survival mechanism
 - <a href="http://en.wikipedia.org/wiki/Reason">reason</a> operates
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/dont_just_go_with_the_flow.xhtml"><b>by
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/dont_just_go_with_the_flow.xhtml"><b>by
 choice</b></a>, and not automatically, and that we have
 <a href="http://en.wikipedia.org/wiki/Free_will">free will</a>. This is as
 opposed to the new age crop of neo-Deterministic materialistic atheists who
@@ -394,9 +392,9 @@ and do.
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="ethnicity" title="What is your ethnicity? What is your lineage?">
+[% WRAPPER h3_section id = "ethnicity"  title = "What is your ethnicity? What is your lineage?"  %]
 
 <p>
 I am an ethnic <a href="https://en.wikipedia.org/wiki/Jews">Jew</a> as far
@@ -421,9 +419,9 @@ As such, I look
 like a kind of a Iraqi/Persian version of my father, who looks East European.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="idf_service" title="Did you serve in the Israeli Military (the IDF)?">
+[% WRAPPER h3_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
 
 <p>
 No, I did not. I’m exempt from service, due to the various
@@ -440,9 +438,9 @@ That put aside, I
 draft</a> in Israel or wherever.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="favourite_music" title="What kind of Music do you like to listen to?">
+[% WRAPPER h3_section id = "favourite_music"  title = "What kind of Music do you like to listen to?"  %]
 
 <p>
 I mostly listen to Rock and Pop, but have some favourite songs of many genres
@@ -462,9 +460,9 @@ Ariel. My favourite song in English is <a href="https://www.youtube.com/watch?v=
 <a href="http://en.wikipedia.org/wiki/Des'ree">Des’ree</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="should_i_email" title="May I email you about X?">
+[% WRAPPER h3_section id = "should_i_email"  title = "May I email you about X?"  %]
 
 <p>
 While the amount of emails that I receive is not overwhelming (yet), I still
@@ -507,7 +505,7 @@ it. Else, I am likely to throw away your E-mail.
 <p>
 Please don’t send me a <b>“Can you teach me how to become a hacker?”</b>
 emails. See my
-<a href="$(ROOT)/philosophy/computers/open-source/how-to-start-contributing/">How
+<a href="[% base_path %]philosophy/computers/open-source/how-to-start-contributing/">How
 Can I Start Contributing to Free and Open Source Software (FOSS)</a> essay
 instead. If you’re living in Tel Aviv and vicinity and are
 willing to pay for me giving you private lessons, then this is an option.
@@ -535,7 +533,7 @@ commissions such as book reviews are also appropriate.
 Please don’t send me emails with <b>technical questions</b> about open source
 projects or other general knowledge-and-experience questions that other people
 may be able to answer. I maintain
-<a href="$(ROOT)/philosophy/computers/how-to-get-help-online/">a document
+<a href="[% base_path %]philosophy/computers/how-to-get-help-online/">a document
 explaining how to get help on the Internet</a> and you should refer to it for
 general enlightenment.
 </p>
@@ -549,9 +547,9 @@ created or maintain.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="diet" title="What can you tell about your diet?">
+[% WRAPPER h3_section id = "diet"  title = "What can you tell about your diet?"  %]
 
 <p>
 I don’t drink alcoholic beverages, don’t consume caffeinated beverages, and
@@ -562,7 +560,7 @@ negative bio-physical aphrodisiacs to be happy, and neither do you.
 </p>
 
 <p>
-Most of the people I talk with on the <my_acronym key="IRC"/> who consume caffeine have become
+Most of the people I talk with on the [% my_acronym( "key" => "IRC",) %] who consume caffeine have become
 dependent on it and cannot function without their
 morning/mid-morning/midday/etc. coffee. On the other hand, I’m energetic
 from the time I wake up until I go to sleep. As for alcohol, it has negative
@@ -579,7 +577,7 @@ their health.
 
 <p>
 All that put aside, I still believe
-<a href="$(ROOT)/philosophy/politics/drug-legalisation/">all these substances
+<a href="[% base_path %]philosophy/politics/drug-legalisation/">all these substances
 should be legal</a>, and should not be regulated in any way.
 </p>
 
@@ -592,9 +590,9 @@ but I feel like I need to eat meat. I used to avoid consuming sugary foods
 and beverages, but I now consume them again and am much happier.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="mental_illness" title="Do you have any mental illnesses?">
+[% WRAPPER h3_section id = "mental_illness"  title = "Do you have any mental illnesses?"  %]
 
 <p>
 As a matter of fact, I do. I used to get into
@@ -621,7 +619,7 @@ am OK.
 <p>
 Note that the opinions I express and what I say are not a consequence of my
 mental status, but rather of the
-<a href="$(ROOT)/philosophy/books-recommends/">many
+<a href="[% base_path %]philosophy/books-recommends/">many
 philosophical influences</a>, I’ve been exposed to, which I feel made my
 thinking process straighter and more logical. Some people take many common
 “truisms” for granted, but I can often demonstrate they are wrong.
@@ -635,7 +633,7 @@ Here are a few jokes about it:
 
 <p>
 Shlomi Fish once defined himself as a “Programmer, Writer, Amateur
-Mathematician, Wannabe Philosopher, and someone who studied in the <get-var Technion /> in
+Mathematician, Wannabe Philosopher, and someone who studied in the [% Technion %] in
 the vain hope of becoming an Electrical Engineer”. He does not consider himself
 a sane person, but is quite certain that only makes him more interesting.
 </p>
@@ -679,9 +677,9 @@ Ethics, philosophy and opinions change with time, as technology, culture
 and education progresses.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="irc_part_message" title="What is the origin of your IRC part message (“Yay! I’m a Llama again!”)?">
+[% WRAPPER h3_section id = "irc_part_message"  title = "What is the origin of your IRC part message (“Yay! I’m a Llama again!”)?"  %]
 
 <p>
 It’s a quote from the Disney Animated film
@@ -696,13 +694,13 @@ Summer Glau exactly a minute to write a rebuttal like in xkcd: “Venting”, an
 she would sign it as Chuck Norris.  ( <a
 href="http://www.shlomifish.org/humour/bits/facts/Summer-Glau/">http://www.shlomifish.org/humour/bits/facts/Summer-Glau/</a>
 )», which is part of my activism to promote the
-<a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> screenplay and Ms. Glau.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="obscure_email_addr" title="Why don’t you obscure/hide your email address?  People can spam you.">
+[% WRAPPER h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address?  People can spam you."  %]
 
 <p>
 First of all, in this day and age, it’s unlikely that the spammers <b>will
@@ -714,7 +712,7 @@ prevent spam entirely.
 
 <p>
 I deal with spam by filtering it on the client side. I’m using
-<a href="$(ROOT)/open-source/favourite/#spamassassin">SpamAssassin</a>
+<a href="[% base_path %]open-source/favourite/#spamassassin">SpamAssassin</a>
 to filter my email and so far it’s doing a very good job. Some spam still
 arrives at my inbox, but otherwise very little. There are
 <a href="http://freecode.com/articles/view/964/">several other open-source
@@ -739,9 +737,9 @@ post to the “Joel on Software” forum</a> about
 “Email at the bottom of every page”.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="evilphish-emblem" title="What can you tell about the Fish Emblem on the top-left corner?">
+[% WRAPPER h3_section id = "evilphish-emblem"  title = "What can you tell about the Fish Emblem on the top-left corner?"  %]
 
 <p>
 This is <a href="http://ars.userfriendly.org/cartoons/?id=20030803">EvilPHish</a>
@@ -770,13 +768,13 @@ they are familiar with, and with a memorable emblem such as EvilPHish.
 </p>
 
 <p>
-You can also find <a href="$(ROOT)/me/images/EvilPHish-Icon/">various
+You can also find <a href="[% base_path %]me/images/EvilPHish-Icon/">various
 versions</a> of the EvilPHish image for download and reuse.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="revealing_incriminating_details" title="Why are you revealing incriminating details about yourself? This makes you look bad for potential employers.">
+[% WRAPPER h3_section id = "revealing_incriminating_details"  title = "Why are you revealing incriminating details about yourself? This makes you look bad for potential employers."  %]
 
 <p>
 A few people told me that I shouldn't mention the fact that I have been exempt
@@ -809,7 +807,7 @@ For more information, see:
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/#honesty">“Honesty” section</a> - from “Putting all the Cards on the Table (2013)”
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#honesty">“Honesty” section</a> - from “Putting all the Cards on the Table (2013)”
 </p>
 </li>
 </ol>
@@ -820,9 +818,9 @@ or keep important details about you not in the open will end up working against
 you, and cause you a lot of aggravations.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="how_did_you_learn_english" title="How did you learn English?">
+[% WRAPPER h3_section id = "how_did_you_learn_english"  title = "How did you learn English?"  %]
 
 <p>
 Well, I am Israeli-born, but my parents moved to the United States when
@@ -847,9 +845,9 @@ it was, and am still being told that some of my writing is non-idiomatic by some
 native speakers.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="how_can_I_improve_my_English" title="How can I improve my English?">
+[% WRAPPER h3_section id = "how_can_I_improve_my_English"  title = "How can I improve my English?"  %]
 
 <p>
 Some of the effective ways I found to better learn English are:
@@ -884,7 +882,7 @@ too hastily.
 
 <li>
 <p>
-Chat with English speakers on <my_acronym key="IRC"/> - I like Freenode for that and they have
+Chat with English speakers on [% my_acronym( "key" => "IRC",) %] - I like Freenode for that and they have
 an ##English channel, but other channels accept somewhat off-topicish
 discussion, especially some #not-channels or channels like #perlcafe ,
 or #perl-cats (sorry, I'm an old school Perler bastard), which are
@@ -920,9 +918,9 @@ and improving it in <a href="https://github.com/yvoronoy/awesome-english">the
 “Awesome English” curated list of links</a> on GitHub.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="asperger_syndrome" title="Do you have Asperger syndrome (Asperger’s)?">
+[% WRAPPER h3_section id = "asperger_syndrome"  title = "Do you have Asperger syndrome (Asperger’s)?"  %]
 
 <p>
 Some people on the Internet told me that they believe I have
@@ -932,9 +930,9 @@ syndrome</a> or am otherwise on the Autistic spectrum, but my psychotherapist
 times), told me I most probably don’t have it, after I asked him whether I do.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="d10_dice" title="Why are you obsessed with ten-sided dice? (d10) What do you do with them?">
+[% WRAPPER h3_section id = "d10_dice"  title = "Why are you obsessed with ten-sided dice? (d10) What do you do with them?"  %]
 
 <p>
 I originally ran into
@@ -973,11 +971,11 @@ As a result, it became a symbol of power of mine. Now what I do with them:
 <li>
 
 <p>
-<a href="$(ROOT)/me/rindolf/images/brown-1d10-SGlau-LARGE.jpg"><img src="$(ROOT)/me/rindolf/images/brown-1d10-SGlau-scaled.jpg" alt="My ten-sided-die “Schartz” ring/amulet of power" style="float:right;margin:0 2em;" /></a>
+<a href="[% base_path %]me/rindolf/images/brown-1d10-SGlau-LARGE.jpg"><img src="[% base_path %]me/rindolf/images/brown-1d10-SGlau-scaled.jpg" alt="My ten-sided-die “Schartz” ring/amulet of power" style="float:right;margin:0 2em;" /></a>
 
 After I donated my role-playing gear to a local role-playing club that my
 friends ran, I was given
-<a href="$(ROOT)/me/rindolf/images/brown-1d10-SGlau-LARGE.jpg">a plain
+<a href="[% base_path %]me/rindolf/images/brown-1d10-SGlau-LARGE.jpg">a plain
 brown 1d10 die</a> that my friends at the time (~1997ish) allowed me to take.
 I carried it in my pencil case, and it became my amulet of power and
 feel it brought me a lot of good luck and bad luck (which are often two sides
@@ -986,7 +984,7 @@ of the same coin.
 
 <p>
 Now, however, I decided to give it to
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Ms. Summer Glau</a> (who is
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Ms. Summer Glau</a> (who is
 a Hollywood actress, but much more than that for me), and it is now
 her property, which I intend to officially pass it along to her and see what
 she will decide to do with it.
@@ -1007,12 +1005,12 @@ people do.
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="selfishness" title="Is the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) makes you selfish?">
+[% WRAPPER h3_section id = "selfishness"  title = "Is the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) makes you selfish?"  %]
 
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=neo-tech-selfishness">This
+<a href="[% base_path %]humour/fortunes/show.cgi?id=neo-tech-selfishness">This
 quote</a> from the Neo-Tech literature summarises the issues that led to
 this confusion:
 </p>
@@ -1039,13 +1037,13 @@ strive for “Rational Self-Growth” and that often “selfish vs. selfless” 
 presented as a false dichotomy.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="zionist" title="Are you a “Zionist”? Are you an “anti-Zionist”?">
+[% WRAPPER h3_section id = "zionist"  title = "Are you a " Zionist"? Are you an "anti-Zionist"?" %]
 
 <p>
 See <a href="https://twitter.com/shlomif/status/1021078089797898241">this tweet</a>
-which largely relies on <a href="$(ROOT)/philosophy/politics/define-zionism/">an
+which largely relies on <a href="[% base_path %]philosophy/politics/define-zionism/">an
 older essay titled “Define ‘Zionism’”</a>. Reading from it:
 </p>
 
@@ -1057,9 +1055,9 @@ Seems like "anti-Zionism" is broadly defined (see <a href="https://en.wikipedia.
 
 </blockquote>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="hebrew_and_arabic" title="Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?">
+[% WRAPPER h3_section id = "hebrew_and_arabic"  title = "Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?"  %]
 
 <p>
 While both Arabic and Hebrew are <a href="https://en.wikipedia.org/wiki/Semitic_languages">Semitic languages</a>, they
@@ -1110,14 +1108,14 @@ in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower 
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="about_this_site" title="About this Site">
+[% WRAPPER h2_section id = "about_this_site"  title = "About this Site"  %]
 
-<h3_section id="shlomifish_org_domain" title="Why did you get the
-www.shlomifish.org domain?">
+[% WRAPPER h3_section id = "shlomifish_org_domain"  title = "Why did you get the
+www.shlomifish.org domain?"  %]
 
 <p>
 Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
@@ -1135,9 +1133,9 @@ now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="refer_to_shlomifish.org" title="How should I refer to this site?">
+[% WRAPPER h3_section id = "refer_to_shlomifish.org"  title = "How should I refer to this site?"  %]
 
 <p>
 You can call it “Shlomi Fish’s Homepage”, “Shlomi Fish’s Homesite”,
@@ -1165,9 +1163,9 @@ I picked the appropriate domain for that.
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="website_in_english" title="Why is this website in English? Why not Hebrew?">
+[% WRAPPER h3_section id = "website_in_english"  title = "Why is this website in English? Why not Hebrew?"  %]
 
 <p>
 For several reasons:
@@ -1187,7 +1185,7 @@ in Hebrew will benefit from it very little.
 <li>
 I find it more comfortable and faster to type in English and express myself in
 writing using English for most types of writing (some
-<a href="$(ROOT)/humour/">stories I’m writing</a> being an exception).
+<a href="[% base_path %]humour/">stories I’m writing</a> being an exception).
 </li>
 <li>
 I often use a lot of tech jargon or slang, which is more difficult to
@@ -1216,9 +1214,9 @@ their common subset), are inconsistent and confusing, but I have to make
 a choice of some sort.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="spent_on_the_site" title="How much time do you spend on this site?">
+[% WRAPPER h3_section id = "spent_on_the_site"  title = "How much time do you spend on this site?"  %]
 
 <p>
 A lot. I spent several hundreds of hours on the site, possibly several
@@ -1232,11 +1230,11 @@ common look and feel, a style that’s hopefully semantic, converted to use
 
 <p>
 All of the source code for the site is available online in various places. I’ve
-prepared <a href="$(ROOT)/meta/site-source/">a top-to-bottom
+prepared <a href="[% base_path %]meta/site-source/">a top-to-bottom
 document</a> on how to compile the site from
 scratch). Some of the hand-crafted code was released as
 <a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
-System</a> or various <a href="<shlomif_cpan />">assisting
+System</a> or various <a href="[% shlomif_cpan %]">assisting
 CPAN modules</a> under an open-source license.
 </p>
 
@@ -1246,9 +1244,9 @@ by revising or correcting existing ones, by making it more usable, or by
 trying to publicise new attractions in various online resources.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="site_history" title="What can you tell me about this site’s history?">
+[% WRAPPER h3_section id = "site_history"  title = "What can you tell me about this site’s history?"  %]
 
 <p>
 Well, a journey of a thousand miles begins with one small step and continues
@@ -1266,19 +1264,19 @@ alias in <a href="https://en.wikipedia.org/wiki/Internet_Information_Services">I
 </p>
 
 <p>
-I recall that I had <a href="$(ROOT)/humour.html">the Aphorisms collection</a>
+I recall that I had <a href="[% base_path %]humour.html">the Aphorisms collection</a>
 with a few jokes I originated, as well as
-<a href="$(ROOT)/toggle.html">the report about the
+<a href="[% base_path %]toggle.html">the report about the
 algorithmic solution to the Toggle Squares
 puzzle</a> I sent to its originator (with whom I was corresponding at
 the time). And it also had a rudimentary pageful of links, and a bio.
 </p>
 
 <p>
-When I became a student in the <get-var Technion />, I moved my site to its undergraduate
+When I became a student in the [% Technion %], I moved my site to its undergraduate
 server at the address http://t2.technion.ac.il/~shlomif/ . There I added more
 and more resources to the site. Here is
-the site <a href="$(ROOT)/meta/old-site-snapshots/">as of 1998</a>. I had a
+the site <a href="[% base_path %]meta/old-site-snapshots/">as of 1998</a>. I had a
 limited quota there, and when I got
 an account on “vipe”, a server managed by the students, I hosted part of
 my home site there as well, as http://vipe.technion.ac.il/~shlomif/ . The
@@ -1300,7 +1298,7 @@ features.
 
 <p>
 Eventually I realised that the vipe server has too much down time (due
-to problems at the <get-var Technion />’s network) and moved all of its content over
+to problems at the [% Technion %]’s network) and moved all of its content over
 to the www.shlomifish.org domain.
 </p>
 
@@ -1308,7 +1306,7 @@ to the www.shlomifish.org domain.
 Throughout all this time, many resources were added to the homesite: software,
 essays, stories, artwork, presentations, puzzles, and more information about
 myself. I also now maintain a large number of
-<a href="$(ROOT)/me/blogs/">blogs</a> and sites for my projects, as well as
+<a href="[% base_path %]me/blogs/">blogs</a> and sites for my projects, as well as
 sites I volunteered to maintain. I really like the way the web allows me to
 express myself, and to communicate using text, hypertext, and other types of
 media.
@@ -1324,20 +1322,20 @@ social media and user-generated-content sites on every page of my home site.
 <p>
 In case you’re interested in setting up a personal web site of your own, I
 wrote
-<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/">an
+<a href="[% base_path %]philosophy/computers/web/create-a-great-personal-homesite/">an
 article about it</a>, which you can read.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="homesite_or_blog" title="Is www.shlomifish.org a blog?">
+[% WRAPPER h3_section id = "homesite_or_blog"  title = "Is www.shlomifish.org a blog?"  %]
 
 <p>
 The short answer is that www.shlomifish.org is a good, old-fashioned,
 Web 1.0-style home site - not a weblog/blog/online journal. Despite all that,
 my web site is fairly modern in its client-side technology and its
 look-and-feel should be usable and attractive enough. I have
-<a href="$(ROOT)/me/blogs/">several blogs</a> and am not opposed to the
+<a href="[% base_path %]me/blogs/">several blogs</a> and am not opposed to the
 concept, but a classic web site has many advantages. For more information,
 see:
 </p>
@@ -1347,7 +1345,7 @@ see:
 <li>
 
 <p>
-<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create a Great Personal Home Site”</a>
+<a href="[% base_path %]philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create a Great Personal Home Site”</a>
 </p>
 
 </li>
@@ -1355,16 +1353,16 @@ see:
 <li>
 
 <p>
-<a href="$(ROOT)/philosophy/computers/web/homepage-vs-blog/">“Homepage vs. Blog”</a>
+<a href="[% base_path %]philosophy/computers/web/homepage-vs-blog/">“Homepage vs. Blog”</a>
 </p>
 
 </li>
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="xhtml_11" title="Why are you using XHTML 1.1 for many pages on your site while serving them as “text/html”?">
+[% WRAPPER h3_section id = "xhtml_11"  title = "Why are you using XHTML 1.1 for many pages on your site while serving them as “text/html”?"  %]
 
 <p>
 I feel that validating against an XHTML schema makes my code cleaner and less
@@ -1376,7 +1374,7 @@ to be a good idea.
 <p>
 Therefore I decided to make XHTML 1.1 the default doctype for the pages
 on my site. The reason I’m serving them as <code>text/html</code> is because
-<a href="$(ROOT)/no-ie/">Microsoft Internet Explorer</a> does not handle
+<a href="[% base_path %]no-ie/">Microsoft Internet Explorer</a> does not handle
 <code>application/xml+xhtml</code> properly, and I’d rather not needlessly
 discriminate against people who still use it (possibly against their
 will).
@@ -1385,14 +1383,14 @@ will).
 <p>
 I realise that it stands against the XHTML standard, but I’m not a standards
 purist, and want to be a bit pragmatic in still supporting Explorer.
-Note that some pages in the <a href="$(ROOT)/MathVentures/">Math-Ventures
+Note that some pages in the <a href="[% base_path %]MathVentures/">Math-Ventures
 section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
 because they contain <a href="http://www.w3.org/Math/">MathML</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="is_everything_here_true" title="Is everything you say here true?  Should I take it seriously?">
+[% WRAPPER h3_section id = "is_everything_here_true"  title = "Is everything you say here true?  Should I take it seriously?"  %]
 
 <p>
 The answer is that not everything that I wrote, quoted and/or placed on
@@ -1410,12 +1408,12 @@ Naturally, it does not help that I often omit the dates of creation and last
 update from a resource, and that I sometimes neglect to add a “Recent Update”
 note at the top of the page when it becomes irrelevant. If you have the
 necessary technical skills, you can peruse the pages’ history in the
-<a href="$(ROOT)/meta/site-source/">version control repository</a>.
+<a href="[% base_path %]meta/site-source/">version control repository</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="how_many_visitors" title="How many visitors/hits/uniques/etc. does this site get per month?">
+[% WRAPPER h3_section id = "how_many_visitors"  title = "How many visitors/hits/uniques/etc. does this site get per month?"  %]
 
 <p>
 Please don't ask me that, and that's not because I can't tell you that - it's
@@ -1430,9 +1428,9 @@ and using real-world networking - and don't have the energy to spend time
 on silly statistics.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="why_not_https" title="Why isn’t this site hosted using HTTPS/SSL?">
+[% WRAPPER h3_section id = "why_not_https"  title = "Why isn’t this site hosted using HTTPS/SSL?"  %]
 
 <p>
 For several reasons:
@@ -1481,9 +1479,9 @@ You can mirror the site using <code>wget --mirror</code> if you care about
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="please_delete_offensive_stuff" title="Can you please delete offensive/blasphemous/derogatory stuff that appears on your site?">
+[% WRAPPER h3_section id = "please_delete_offensive_stuff"  title = "Can you please delete offensive/blasphemous/derogatory stuff that appears on your site?"  %]
 
 <p>
 The simple answer to that question is: no. I speak my mind and express myself
@@ -1500,7 +1498,7 @@ necessary.
 <p>
 As noted <a href="#political_correctness">elsewhere on this F.A.Q.</a>, I have
 a strong stance against political correctness fanaticism. Furthermore, as
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/#trying_to_please_everybody">the
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#trying_to_please_everybody">the
 old tale of “The miller, his son, and the donkey”</a> demonstrates, trying to
 comply with everyone's whims regarding what they disapprove of in this site,
 is a slippery slope, that will lead to a lot of content removed.
@@ -1525,9 +1523,9 @@ with updates, corrections, or saying that I no longer approve of their content.
 But this is assuming I agree with them.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="link_here_to_drive_traffic" title="Do you link to your site to drive in traffic?">
+[% WRAPPER h3_section id = "link_here_to_drive_traffic"  title = "Do you link to your site to drive in traffic?"  %]
 
 <p>
 Many people whom I gave links to the various resources on my site, accused me
@@ -1553,17 +1551,17 @@ own site which you can start populating with interesting content to your
 heart’s content.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="how_site_is_generated" title="How is this site generated? Which CMS (Content
-Management System) are you using?">
+[% WRAPPER h3_section id = "how_site_is_generated"  title = "How is this site generated? Which CMS (Content
+Management System) are you using?"  %]
 
 <p>
 Most of the site is comprised
 of <a href="https://en.wikipedia.org/wiki/Static_web_page">static HTML web
 pages</a>, which are uploaded to the web-site as they are, <b>after</b> being
 generated using templates, data, and programs. The site’s
-<a href="$(ROOT)/meta/site-source/">sources</a> are public and kept in
+<a href="[% base_path %]meta/site-source/">sources</a> are public and kept in
 a public version control repository, which also contains some
 <a href="https://en.wikipedia.org/wiki/Test_automation">automated tests</a>
 and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> service.
@@ -1575,23 +1573,23 @@ While I am not ashamed of the site’s sources, they have been through a long
 <a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
 and while I remain a big fan of static site generation, there are probably
 some better approaches out there for that, and often it is simpler to just
-write something of your own using a <a href="$(ROOT)/open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
-a good <a href="$(ROOT)/open-source/resources/software-tools/">build system</a>
+write something of your own using a <a href="[% base_path %]open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
+a good <a href="[% base_path %]open-source/resources/software-tools/">build system</a>
 and some code glue. However, for me, converting to something else would be too
 time-consuming, and I've already found some faults in one existing popular
 static site generator that I tried.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="is_site_written_in_perl" title="Is this site written in Perl?">
+[% WRAPPER h3_section id = "is_site_written_in_perl"  title = "Is this site written in Perl?"  %]
 
 <p>
 See <a href="#how_site_is_generated">above</a> - most of the site is generated
 using code and data and is served as static content on the server. There are
 about three
-<my_acronym key="CGI"/> scripts written in Perl 5 using
-<cpan_self_dist d="CGI-Minimal" /> but they do not serve most of the content.
+[% my_acronym( "key" => "CGI",) %] scripts written in Perl 5 using
+[% cpan_self_dist( "d" => "CGI-Minimal", ) %] but they do not serve most of the content.
 </p>
 
 <p>
@@ -1600,23 +1598,23 @@ content, but the site's source code is not limited to Perl, and it does
 not run on the web server, nor is required to run most of it.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="broken_links" title="I found some broken links on one of your sites. Should I report them to you?">
+[% WRAPPER h3_section id = "broken_links"  title = "I found some broken links on one of your sites. Should I report them to you?"  %]
 
 <p>
 I guess I'd be interested to hear reports about them as long as one provides
 the text of the link and their URL. Note that it is the
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature of the web that links get broken</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature of the web that links get broken</a>
 and it is part of what makes it work. Moreover, I've had this site for many
 years, and it is natural that some of the links have become stale. As a result,
 dealing with these reports have become quite frustrating due to their
 frequency
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="site_loads_quickly" title="This site loads so quickly. What is your secret?">
+[% WRAPPER h3_section id = "site_loads_quickly"  title = "This site loads so quickly. What is your secret?"  %]
 
 <p>
 First of all note that I do not consider myself an expert on load time
@@ -1631,7 +1629,7 @@ That put aside, here are some factors that may contribute to this:
 <ol>
 <li>
 <p>
-Some of it has to do with my <a href="$(ROOT)/meta/hosting">web hosting</a>,
+Some of it has to do with my <a href="[% base_path %]meta/hosting">web hosting</a>,
 currently HostGator. While not perfect, I am quite happy with them, and
 can recommend them for shared hosting.
 </p>
@@ -1728,13 +1726,13 @@ average web page size</a>
 </li>
 </ol>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="works_of_fiction" title="About my works of fiction.">
+[% WRAPPER h2_section id = "works_of_fiction"  title = "About my works of fiction."  %]
 
-<h3_section id="why_fan_fic" title="Why do you write mostly fan-fiction and crossovers?">
+[% WRAPPER h3_section id = "why_fan_fic"  title = "Why do you write mostly fan-fiction and crossovers?"  %]
 
 <p>
 Lawrence Lessig gives many good reasons for remixing in
@@ -1757,9 +1755,9 @@ works. I don’t have a lot of control of the ideas I come up with, but I know
 I must materialise them eventually.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="why_real_person_fiction" title="What about your Real person fiction?">
+[% WRAPPER h3_section id = "why_real_person_fiction"  title = "What about your Real person fiction?"  %]
 
 <p>
 I feature or reference several celebrities in my stories (whether past
@@ -1774,9 +1772,9 @@ the case for me.
 The general consensus is that a celebrity generally allows himself or herself to be a subject of reuse in literature, and that includes me, Shlomi Fish.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="featuring_sexy_women_and_girls" title="You feature sexy women and girls in your works. Are you a pervert?">
+[% WRAPPER h3_section id = "featuring_sexy_women_and_girls"  title = "You feature sexy women and girls in your works. Are you a pervert?"  %]
 
 <p>
 Well, I don’t know about you, but I feel that a man who is attracted
@@ -1825,18 +1823,18 @@ Just another note about Culkin: some people also criticised him for
 possessing Marijuana and for its use, but many young and not-so-young people
 I talked with have had a history of Marijuana use, or even Marijuana addiction,
 so I do not hold it against him. See my
-<a href="$(ROOT)/philosophy/politics/drug-legalisation/">“The Case
+<a href="[% base_path %]philosophy/politics/drug-legalisation/">“The Case
 for Drug Legalisation”</a> for why Marijuana, and all other illegal narcotics,
 should be made legal globally.
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="computing" title="About computing and software development">
+[% WRAPPER h2_section id = "computing"  title = "About computing and software development"  %]
 
-<h3_section id="computers-specs" title="What are your Computers’ Specifications?">
+[% WRAPPER h3_section id = "computers-specs"  title = "What are your Computers’ Specifications?"  %]
 
 <p>
 My primary machine is a desktop machine with a:
@@ -1911,7 +1909,7 @@ I’m using mostly
 <a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
 and Open Source Software</a> (FOSS) on it, and try not to depend on
 non-FOSS software. I documented
-<a href="$(ROOT)/philosophy/computers/open-source/not-trust-non-FOSS/">the
+<a href="[% base_path %]philosophy/computers/open-source/not-trust-non-FOSS/">the
 reason why I no longer trust non-FOSS software</a> on my technical weblog.
 </p>
 
@@ -1956,9 +1954,9 @@ This dual-boots between Windows 7 Home something and <a href="https://en.wikiped
 (which is what I’m using most of the time.).
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="programming_languages" title="Which Programming Language did you start with? Which programming languages do you know now?">
+[% WRAPPER h3_section id = "programming_languages"  title = "Which Programming Language did you start with? Which programming languages do you know now?"  %]
 
 <p>
 When I was in the 4th grade (back around 1987), my father bought my family
@@ -2006,7 +2004,7 @@ became my favourite language.
 </p>
 
 <p>
-By the time I started studying the <get-var Technion />, I had a relatively early
+By the time I started studying the [% Technion %], I had a relatively early
 distribution of
 <a href="http://en.wikipedia.org/wiki/Linux">Linux</a> installed on my
 computer, and started playing with various languages available there.
@@ -2014,13 +2012,13 @@ computer, and started playing with various languages available there.
 
 <p>
 You can find a list of languages that I currently know on
-<a href="$(ROOT)/SFresume.html">my résumé</a>.
+<a href="[% base_path %]SFresume.html">my résumé</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="text_editors" title="Which text editors are you using? What is your
-favourite text editor?">
+[% WRAPPER h3_section id = "text_editors"  title = "Which text editors are you using? What is your
+favourite text editor?"  %]
 
 <p>
 Well, I'm usually using gvim (the Gtk+/GUI version of
@@ -2053,9 +2051,9 @@ quite a lot of Vim extensions written in vimscript and in Vim’s extension
 languages, which are not supported by Evil.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="choice_of_operating_system" title="Why are you using your choice of an operating system (= Mageia Linux)?">
+[% WRAPPER h3_section id = "choice_of_operating_system"  title = "Why are you using your choice of an operating system (= Mageia Linux)?"  %]
 
 <p>
 The short answer is that
@@ -2082,13 +2080,13 @@ That put aside, I still willingly try to help people, who
 are using other Linux distributions, or even non-Linux operating
 systems, with their technical
 problems. Part of my motivation is
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=esr-catb--writing-for-the-world">this
+<a href="[% base_path %]humour/fortunes/show.cgi?id=esr-catb--writing-for-the-world">this
 quote</a> from “The Cathedral and the Bazaar”.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="bsc_final_projects" title="What were your B.Sc.'s Final Projects?">
+[% WRAPPER h3_section id = "bsc_final_projects"  title = "What were your B.Sc.'s Final Projects?"  %]
 
 <p>
 They were:
@@ -2112,9 +2110,9 @@ seminars manager written in Perl 5.
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="why_duckduckgo" title="Why are you using DuckDuckGo? (Instead of Google?)">
+[% WRAPPER h3_section id = "why_duckduckgo"  title = "Why are you using DuckDuckGo? (Instead of Google?)"  %]
 
 <ol>
 
@@ -2150,24 +2148,24 @@ Also note that DuckDuckGo claims to avoid tracking the users, but I
 personally do not care too much about that.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="foss" title="About Free and Open Source Software (FOSS)">
+[% WRAPPER h3_section id = "foss"  title = "About Free and Open Source Software (FOSS)"  %]
 
-<h4_section id="how_to_become_hacker" title="How can I become an open-source contributor?">
+[% WRAPPER h4_section id = "how_to_become_hacker"  title = "How can I become an open-source contributor?"  %]
 
 <p>
 See
-<a href="$(ROOT)/philosophy/computers/open-source/how-to-start-contributing/">what I wrote</a> about it on my homepage. I’m giving instructions there.
+<a href="[% base_path %]philosophy/computers/open-source/how-to-start-contributing/">what I wrote</a> about it on my homepage. I’m giving instructions there.
 You may also wish to read my
-<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">“Advice
+<a href="[% base_path %]philosophy/philosophy/advice-for-the-young/">“Advice
 for the Young”</a> essay.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="help_me_crack" title="Can you help me intrude into/exploit (so-called “crack”
-or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?">
+[% WRAPPER h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack”
+or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
 
 <p>
 No, and that is because I am not a
@@ -2239,16 +2237,16 @@ From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
 
 </ul>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="are_you_a_hacker" title="Are you a hacker?">
+[% WRAPPER h4_section id = "are_you_a_hacker"  title = "Are you a hacker?"  %]
 
 <p>
 The word "Hacker" can mean several things. It can mean a computer intruder,
 in which case, see <a href="#help_me_crack">the question above</a> - I
 am certainly not one. Otherwise, it can mean a clever and competent enthusiast
 of a certain field of endeavour, primarily used by and for computer workers, but
-not exclusive to them. As <a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">I note</a> by inspiration
+not exclusive to them. As <a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">I note</a> by inspiration
 from other sources hacking is at least millennia old.
 </p>
 
@@ -2260,9 +2258,9 @@ people can judge whether I am indeed a hacker of them. And my policy is to
 <a href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">encourage criticism</a> rather than fanboy/fangirl-ism.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="how_use_hg" title="You’re using Mercurial (on Bitbucket.org/etc.) for some of your projects. How can I learn how to use it?">
+[% WRAPPER h4_section id = "how_use_hg"  title = "You’re using Mercurial (on Bitbucket.org/etc.) for some of your projects. How can I learn how to use it?"  %]
 
 <p>
 There are some links to tutorials on
@@ -2272,10 +2270,10 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 “mercurial tutorial”</a>. Mercurial is not too hard to learn.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="Shlomif_Common_cmake" title="When building some of your CMake-based
-projects, I am getting an error for a missing “Shlomif_Common.cmake” file">
+[% WRAPPER h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based
+projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
 
 <p>
 Yes, you can find it in
@@ -2285,28 +2283,28 @@ not be encountered when building a source release from the source archive
 downloads.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="how_many_projects" title="How many Projects are you Working on?">
+[% WRAPPER h4_section id = "how_many_projects"  title = "How many Projects are you Working on?"  %]
 
 <p>
 I have originated, maintain, or contribute to more than one project and keep
 switch-tasking between them. Some of them have sub-projects or individual
-tasks. You can find some lists and activity logs on <a href="$(ROOT)/open-source/">this page</a>.
+tasks. You can find some lists and activity logs on <a href="[% base_path %]open-source/">this page</a>.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="github_account" title="Do you have a GitHub account?">
+[% WRAPPER h4_section id = "github_account"  title = "Do you have a GitHub account?"  %]
 
 <p>
-Yes, see <a href="$(ROOT)/open-source/projects/#forges_home_pages">this
+Yes, see <a href="[% base_path %]open-source/projects/#forges_home_pages">this
 link</a> for more information.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="thought_you_were_a_Perl_guy" title="Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!">
+[% WRAPPER h4_section id = "thought_you_were_a_Perl_guy"  title = "Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!"  %]
 
 <p>
 While I have written a lot of Perl 5 code, and often still maintain it because
@@ -2340,9 +2338,9 @@ I Hate Advocacy</a> - by Mark-Jason Dominus.
 
 </ul>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="publishing_proj_euler" title="Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?">
+[% WRAPPER h4_section id = "publishing_proj_euler"  title = "Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?"  %]
 
 <p>
 For several reasons:
@@ -2382,9 +2380,9 @@ employers and other interested parties.
 
 </ol>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="proj_euler_in_order" title="Do you solve the Project Euler problems in their order?">
+[% WRAPPER h4_section id = "proj_euler_in_order"  title = "Do you solve the Project Euler problems in their order?"  %]
 
 <p>
 No, I don't. I often skip problems which I find too difficult or not interesting
@@ -2392,9 +2390,9 @@ enough. I did solve 149 out of the first 150 problems (excluding <a
 href="https://projecteuler.net/problem=143">No. 143</a>).
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="todo_lists_and_organised" title="How do you keep organised? What do you use for To-Do lists?">
+[% WRAPPER h4_section id = "todo_lists_and_organised"  title = "How do you keep organised? What do you use for To-Do lists?"  %]
 
 <p>
 First of all, see <a href="https://shlomif-tech.livejournal.com/74492.html">this
@@ -2406,24 +2404,24 @@ using the <a href="https://github.com/aaronbieber/vim-quicktask">vim-quicktask
 plugin</a>.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="political_correctness" title="Political Correctness (or Lack of it">
+[% WRAPPER h2_section id = "political_correctness"  title = "Political Correctness (or Lack of it"  %]
 
-<h3_section id="pc_rating" title="What is the Approximate Maturity Rating of this Site?">
+[% WRAPPER h3_section id = "pc_rating"  title = "What is the Approximate Maturity Rating of this Site?"  %]
 
 <p>
 Most of it should be either U (Universal) or PG-Something (Parent Guidance).
 I’m not a blatantly pornographic person.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="pc_girl" title="Why are you using the terms “girl”, “chick”, etc.?">
+[% WRAPPER h3_section id = "pc_girl"  title = "Why are you using the terms “girl”, “chick”, etc.?"  %]
 
 <p>
 I’m using the term “girl” for lack of a better term for “a female guy”. I was
@@ -2432,9 +2430,9 @@ emerges, that’s what I’m going to use. (And I don’t find it particularly
 derogatory).
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="pc_nazi" title="Why are you using the term “nazi” to refer to people who are “needlessly strict”?">
+[% WRAPPER h3_section id = "pc_nazi"  title = "Why are you using the term “nazi” to refer to people who are “needlessly strict”?"  %]
 
 <p>
 Because it is an acceptable use for such a word. You can find the
@@ -2454,7 +2452,7 @@ with too much “holiness”.
 
 <p>
 Another recent use of this in my works is in featuring
-<a href="$(ROOT)/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Chuck
+<a href="[% base_path %]humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Chuck
 Norris and Summer Glau on The Muppet Show as Grammar Nazis</a> (with
 a capital “N”) who undergo a gradual
 <a href="http://en.wikipedia.org/wiki/Catharsis">Catharsis</a> and become
@@ -2483,7 +2481,7 @@ Jewish Bible).
 </li>
 </ol>
 
-<h4_section id="pc_nazi_writings" title="Why do you mention Hitler, Nazis, etc. in some of Your Writings?">
+[% WRAPPER h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, Nazis, etc. in some of Your Writings?"  %]
 
 <p>
 I found it suitable to use it for them, so I did. For the record, my
@@ -2494,11 +2492,11 @@ films (notably the <a href="https://en.wikipedia.org/wiki/Indiana_Jones_(franchi
 Firs…
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="pc_porn" title="What do you think about Porn?">
+[% WRAPPER h3_section id = "pc_porn"  title = "What do you think about Porn?"  %]
 
 <p>
 Every person has an inalienable right to expose his or her body in private,
@@ -2521,17 +2519,19 @@ one should be allowed to produce it, distribute it, and experience it. Some
 of the greatest artists in history produced pornographic or erotic artworks.
 </p>
 
-<h4_section id="pc_porn_links" title="Are there any Links to Porn on your Site?">
+[% WRAPPER h4_section id = "pc_porn_links"  title = "Are there any Links to Porn on your Site?"  %]
 
 <p>
 There may be some links to soft porn, etc. Or to individual pornographic
 pages that illustrate a certain point.
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

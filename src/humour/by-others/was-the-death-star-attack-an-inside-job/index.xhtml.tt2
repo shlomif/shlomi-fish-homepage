@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Uncomfortable Questions: Was the Death Star Attack an Inside Job?" -%]
+[%- SET desc = "Uncomfortable Questions: Was the Death Star Attack an Inside Job? - Parody of conspiracy theories" -%]
 
-<latemp_subject "Uncomfortable Questions: Was the Death Star Attack an Inside Job?" />
-<latemp_meta_desc "Uncomfortable Questions: Was the Death Star Attack an Inside Job? - Parody of conspiracy theories" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -384,3 +386,5 @@ it?</p></div>
 </div>
 </div>
 </div>
+
+[% END %]

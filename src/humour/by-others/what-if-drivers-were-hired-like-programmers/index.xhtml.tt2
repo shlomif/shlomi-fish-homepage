@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "What If Drivers Were Hired Like Programmers?" -%]
+[%- SET desc = "Satirical piece about software developers hiring practices." -%]
 
-<latemp_subject "What If Drivers Were Hired Like Programmers?" />
-<latemp_meta_desc "Satirical piece about software developers hiring practices." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="humor bit">
 
@@ -55,3 +57,5 @@ post on Alex’s blog on jitbit.com</a> which he says: “Saw this on a
 programmers’ forum, but was unable to locate the original.”. I originally
 ran into it in a Facebook post where it was given as an image.
 </p>
+
+[% END %]

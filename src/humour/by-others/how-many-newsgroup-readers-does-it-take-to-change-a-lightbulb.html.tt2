@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "How Many Newsgroup Readers does it Take to Change a Lightbulb?" -%]
+[%- SET desc = "How Many Newsgroup Readers does it Take to Change a Lightbulb?" -%]
 
-<latemp_subject "How Many Newsgroup Readers does it Take to Change a Lightbulb?" />
-<latemp_meta_desc "How Many Newsgroup Readers does it Take to Change a Lightbulb?" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -119,3 +121,5 @@ it all over again.
 </li>
 
 </ul>
+
+[% END %]

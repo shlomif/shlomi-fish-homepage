@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Mirror of http://funroll-loops.info/ (“Gentoo is Rice”)" -%]
+[%- SET desc = "Mirror of http://funroll-loops.info/ (“Gentoo is Rice”)" -%]
 
-<latemp_subject "Mirror of http://funroll-loops.info/ (“Gentoo is Rice”)" />
-<latemp_meta_desc "Mirror of http://funroll-loops.info/ (“Gentoo is Rice”)" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About</h2>
 
@@ -31,3 +33,5 @@ from oblivion.
 </li>
 
 </ul>
+
+[% END %]

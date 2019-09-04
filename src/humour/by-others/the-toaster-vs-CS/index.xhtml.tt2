@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Toaster vs Computer Science" -%]
+[%- SET desc = "The Toaster vs Computer Science" -%]
 
-<latemp_subject "The Toaster vs Computer Science" />
-<latemp_meta_desc "The Toaster vs Computer Science" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -121,3 +123,5 @@ happily ever after.
 (Unknown originator.)
 </p>
 </div>
+
+[% END %]

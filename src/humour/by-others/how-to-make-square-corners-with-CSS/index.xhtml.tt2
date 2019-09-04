@@ -1,6 +1,10 @@
-#include "template.wml"
-<latemp_subject "How to make Square Corners with CSS" />
-<latemp_meta_desc "How to make Square Corners with CSS (originally from Drivl.com)" />
+[%- SET title = "How to make Square Corners with CSS" -%]
+[%- SET desc = "How to make Square Corners with CSS (originally from Drivl.com)" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
 <h2 id="note">Note</h2>
 <p>
 This bit appeared <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/700">on drivl.com</a> and is mirrored here.
@@ -603,3 +607,5 @@ out your wallets now.</small>
             </div>
         </div>
         </div>
+
+[% END %]

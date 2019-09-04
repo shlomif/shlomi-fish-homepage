@@ -1,8 +1,10 @@
-#include "template.wml"
+[%- SET title = "Everybody’s Free (to Ping Timeout) - by Darien" -%]
+[%- SET desc = "Everybody’s Free to Wear Sunscreen meets the IRC world." -%]
+[%- SET more_keywords = "everybody, free, wear, sunscreen, irc, parody, spoof, chanops, trust me on the, darien" -%]
 
-<latemp_subject "Everybody’s Free (to Ping Timeout) - by Darien" />
-<latemp_meta_desc "Everybody’s Free to Wear Sunscreen meets the IRC world." />
-<latemp_more_keywords "everybody, free, wear, sunscreen, irc, parody, spoof, chanops, trust me on the, darien" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -81,3 +83,5 @@ the long-term benefits of chanops have been proved by netadmins, while the rest 
 <p>Be careful whose warez you solicit, but be patient with those who supply it. Warez is a form of piracy; dispensing it is a way of fishing useful software off the net, cracking it, putting it in a RAR file, and trading it online far more than it&#8217;s worth.</p>
 
 <p>But trust me on the chanops. </p>
+
+[% END %]

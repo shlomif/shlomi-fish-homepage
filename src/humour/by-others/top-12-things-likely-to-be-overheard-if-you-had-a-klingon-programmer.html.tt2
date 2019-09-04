@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Top 12 things likely to be overheard if you had a Klingon Programmer" -%]
+[%- SET desc = "Top 12 things likely to be overheard if you had a Klingon Programmer" -%]
 
-<latemp_subject "Top 12 things likely to be overheard if you had a Klingon Programmer" />
-<latemp_meta_desc "Top 12 things likely to be overheard if you had a Klingon Programmer" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -77,3 +79,5 @@ stand!"
 1) "Our users will know fear and cower before our software! Ship it! Ship it
 and let them flee like the dogs they are!"
 </p>
+
+[% END %]

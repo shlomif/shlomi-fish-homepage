@@ -1,0 +1,21 @@
+[%- SET title = "Division Two Magazine - Restored Mirror" -%]
+[%- SET desc = "Restored mirror of the Division Two Magazine parodical site." -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2 id="note">Note</h2>
+
+<p>
+Division Two magazine was a parodical site that used to reside at
+<code>www.divisiontwo.com</code> and
+later went off the air and became a parked domain. I restored it from
+<a href="http://www.archive.org/web/web.php">the Wayback Machine</a>
+and am mirroring it <a href="[% d2url %]">at
+[% d2url %]</a>. Enjoy!
+</p>
+
+<h2 id="mirror"><a href="[% d2url %]">The Mirror</a></h2>
+
+[% END %]

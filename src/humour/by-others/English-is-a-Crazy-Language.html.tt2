@@ -1,8 +1,10 @@
-#include "template.wml"
+[%- SET title = "English is a crazy language…" -%]
+[%- SET desc = "English is a crazy language…" -%]
+[%- SET more_keywords = "english, funny, humor, humour" -%]
 
-<latemp_subject "English is a crazy language…" />
-<latemp_meta_desc "English is a crazy language…" />
-<latemp_more_keywords "english, funny, humor, humour" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -92,3 +94,5 @@ That is why, when the stars are out, they are visible, but when the
 lights are out, they are invisible. And why, when I wind up my watch,
 I start it, but when I wind up this essay, I end it.
 </p>
+
+[% END %]

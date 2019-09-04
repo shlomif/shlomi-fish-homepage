@@ -42,7 +42,11 @@ function! V()
     :%s/<get-var \(\S\+\) *\/>/[% \1 %]/g
     :%s#\v\<set\-var +([^\=]+)\=\"([^\"]+)\" *\/ *\>#[% SET \1 = "\2" %]#g
 endfunction
-command! R !bash bin/rename.bash %
+function! MyRename()
+     !bash bin/rename.bash %
+     execute "e " . substitute(expand("%"), "^t2/\\(.*\\)\\.wml$", "src/\\1.tt2", "")
+endfunction
+command! R call MyRename()
 command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
 let @s='[% IF 0 %]'
 let @e='[% END %]'

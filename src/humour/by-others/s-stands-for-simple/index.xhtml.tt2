@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "SOAP - The S stands for Simple" -%]
+[%- SET desc = "SOAP - The S stands for Simple" -%]
 
-<latemp_subject "SOAP - The S stands for Simple" />
-<latemp_meta_desc "SOAP - The S stands for Simple" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -175,3 +177,5 @@ simple. That’s what the ‘S’ stood for.”</p>
 <p><strong>Dev</strong>: (blink)</p>
 
 <p><strong>SG</strong>: Let me tell you about UDDI.</p>
+
+[% END %]

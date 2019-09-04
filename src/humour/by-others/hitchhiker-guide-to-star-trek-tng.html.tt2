@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Hitchhiker's Guide to Star Trek - The Next Generation" -%]
+[%- SET desc = "Copy of David T. Lu’s and Mickey McCarter's parodical screenplay crossing “The Hitchhiker’s Guide to the Galaxy” and “Star Trek: The Next Generation” here." -%]
 
-<latemp_subject "The Hitchhiker's Guide to Star Trek - The Next Generation" />
-<latemp_meta_desc "Copy of David T. Lu’s and Mickey McCarter's parodical screenplay crossing “The Hitchhiker’s Guide to the Galaxy” and “Star Trek: The Next Generation” here." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -27,7 +29,7 @@ Version</a></h2>
 
 <p>
 An HTML version of the screenplay, as rendered by
-<a href="$(ROOT)/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction</a>
+<a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction</a>
 after the original text was translated to "Screenplay-Text" using
 <a href="convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl.txt">a crude
 Perl-5.10.x+ script</a> and then tweaked manually extensively.
@@ -41,3 +43,5 @@ Tweaked Screenplay-Text screenplay</a>
 </p>
 </li>
 </ul>
+
+[% END %]

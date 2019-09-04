@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "Humorous Creations by Other People" -%]
+[%- SET desc = "Shlomi Fish’s mirrors and restorations of humorous works by other people" -%]
 
-<latemp_subject "Humorous Creations by Other People" />
-<latemp_meta_desc "Shlomi Fish’s mirrors and restorations of humorous works by other people" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are works of humour by other people that are kept here for
@@ -31,7 +32,7 @@ from the old Freshmeat.net site.
 <li>
 <p>
 <a href="darien--everybody-is-free.html">Darien - Everybody’s Free (to Ping
-Timeout)</a> - <my_acronym key="IRC"/> parody of <a
+Timeout)</a> - [% my_acronym( "key" => "IRC",) %] parody of <a
 href="http://en.wikipedia.org/wiki/Wear_Sunscreen">Wear Sunscreen</a>
 </p>
 </li>
@@ -146,3 +147,5 @@ hired like programmers?”</a>
 </li>
 
 </ul>
+
+[% END %]

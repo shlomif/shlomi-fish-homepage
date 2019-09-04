@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "What if people bought cars like they bought computers?" -%]
+[%- SET desc = "What if people bought cars like they bought computers?" -%]
 
-<latemp_subject "What if people bought cars like they bought computers?" />
-<latemp_meta_desc "What if people bought cars like they bought computers?" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -70,3 +72,5 @@ CUSTOMER:  "I'm not a technical person!  I just want to go places in my car!"
 </p>
 
 </div>
+
+[% END %]

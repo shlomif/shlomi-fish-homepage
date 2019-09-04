@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Fountainhead - Starring Skull Force (A Parody)" -%]
+[%- SET desc = "The Fountainhead - Starring Skull Force (A Parody)" -%]
 
-<latemp_subject "The Fountainhead - Starring Skull Force (A Parody)" />
-<latemp_meta_desc "The Fountainhead - Starring Skull Force (A Parody)" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -20,7 +22,7 @@ from <a href="http://blank.org/memory/funny/fountainhead/">a mirror</a>.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/TOWTF/">“The One With The Fountainhead”</a> - my own
+<a href="[% base_path %]humour/TOWTF/">“The One With The Fountainhead”</a> - my own
 parody of the Fountainhead, modelled around a two-part episode of the
 Television show <i>Friends</i>.
 </p>
@@ -34,3 +36,5 @@ and Humor about Objectivism</a> - in the Objectivism Reference Center.
 </li>
 
 </ul>
+
+[% END %]

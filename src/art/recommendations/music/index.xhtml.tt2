@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Music Recommendations" -%]
+[%- SET desc = "Recommendations of music albums I enjoyed." -%]
 
-<latemp_subject "Shlomi Fish’s Music Recommendations" />
-<latemp_meta_desc "Recommendations of music albums I enjoyed." />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -11,6 +13,7 @@ You can find my other musical reviews on
 and on <a href="http://www.youtube.com/user/ShlomiFish">my YouTube page</a>.
 </p>
 
+[% IF 0 %]
 ;;; To add:
 ;;; + Beatles - Red Album
 ;;; + Beatles - Blue Album
@@ -47,5 +50,8 @@ and on <a href="http://www.youtube.com/user/ShlomiFish">my YouTube page</a>.
 ;;;     - Spiral
 ;;; SleepWalks
 ;;; + Explosive - the best of bond
+[% END %]
 
-#include "prod-synd/music/include-me.html"
+[% INCLUDE "prod-synd/music/include-me.html" %]
+
+[% END %]

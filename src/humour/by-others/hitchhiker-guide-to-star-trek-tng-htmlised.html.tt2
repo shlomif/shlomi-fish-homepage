@@ -1,0 +1,11 @@
+[%- SET title = "The Hitchhiker’s Guide to Star Trek - The Next Generation - As HTML" -%]
+[%- SET desc = "The Hitchhiker’s Guide to Star Trek - The Next Generation - As HTML" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html" %]
+
+[% END %]

@@ -36,6 +36,10 @@ if (s{^<latemp_meta_desc\s+"([^"]+)"\s*/>}{}ms)
 {
     $meta .= "[%- SET desc = \"$1\" -%]\n";
 }
+if (s{^<(apply_screenplay_style)\s*/>}{}ms)
+{
+    $meta .= "[%- SET $1 = 1 -%]\n";
+}
 if (s{^<latemp_more_keywords\s+"([^"]+)"\s*/>}{}ms)
 {
     $meta .= "[%- SET more_keywords = \"$1\" -%]\n";

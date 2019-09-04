@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Articles about E-mail Netiquette" -%]
+[%- SET desc = "Articles about E-mail Netiquette - In-Reply-To, reply to list, etc." -%]
 
-<latemp_subject "Articles about E-mail Netiquette" />
 
-<latemp_meta_desc "Articles about E-mail Netiquette - In-Reply-To, reply to list, etc." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="the_articles">The Articles</h2>
 
@@ -19,3 +20,5 @@ Why you should not reply to an existing message in order to start a new thread.
 Why you should reply to the list if the original message was a mailing list
 post.
 </p>
+
+[% END %]

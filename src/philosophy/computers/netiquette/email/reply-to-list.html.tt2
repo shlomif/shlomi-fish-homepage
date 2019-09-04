@@ -1,10 +1,9 @@
-#include "template.wml"
+[%- SET title = "E-mail Netiquette: Reply to List" -%]
+[%- SET desc = "Please reply to the list on mailing lists’s posts" -%]
 
-#include "toc_div.wml"
 
-<latemp_subject "E-mail Netiquette: Reply to List" />
-
-<latemp_meta_desc "Please reply to the list on mailing lists’s posts" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 If the email to which you are replying was sent to a mailing list,
@@ -19,3 +18,5 @@ and contribute to it, and you won’t waste the poster’s time. If you’ve
 still decided to make an exception, then make sure to explicitly state
 that this is a private response.
 </p>
+
+[% END %]

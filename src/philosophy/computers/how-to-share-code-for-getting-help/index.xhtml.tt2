@@ -1,0 +1,13 @@
+[%- SET title = "How to share code online for getting help with it" -%]
+[%- SET desc = "How to share code online for getting help with it" -%]
+[%- SET more_keywords = "share, code, review, help, irc, floodpaste, pastebot, pastesite, paste, programming, web" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% print_markdown(fn=>'lib/repos/how-to-share-code-online/README.md') %]
+
+<h2 id="credits">Credits</h2>
+
+[% END %]

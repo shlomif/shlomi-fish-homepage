@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
+[%- SET desc = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
 
-<latemp_subject "How Can I Start Contributing to Free and Open Source Software (FOSS)" />
 
-<latemp_meta_desc "How Can I Start Contributing to Free and Open Source Software (FOSS)" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -33,7 +34,7 @@ First of all, you should read the following documents:
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/foss-other-beasts/">“Open Source,
+<a href="[% base_path %]philosophy/foss-other-beasts/">“Open Source,
 Free Software and Other Beasts”</a> - to learn what FOSS really
 is about.
 </p>
@@ -81,6 +82,8 @@ and <a href="http://freecode.com/">Freecode</a>.
 <p>
 You may wish to <b>get a mentor</b> who will guide you that you’ll be
 able to consult in case you encounter difficulties.
-<a href="$(ROOT)/open-source/mentoring/">I’m willing to act as a mentor</a>
+<a href="[% base_path %]open-source/mentoring/">I’m willing to act as a mentor</a>
 and you should be able to find others who will be willing to guide you.
 </p>
+
+[% END %]

@@ -1,0 +1,12 @@
+[%- SET title = "Articles about Netiquette" -%]
+[%- SET desc = "Articles about Netiquette - The Proper Internet Behaviour" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h2 id="sections">Sections</h2>
+
+<h3 id="email_netiquette"><a href="email/">Email Netiquette</a></h3>
+
+[% END %]

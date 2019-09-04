@@ -1,0 +1,28 @@
+[%- SET title = "How to start contributing to or using Open Source Software" -%]
+[%- SET desc = "How to start contributing to or using Open Source Software; a detailed guide with motivation, links and explanations" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<div class="lim_width wrap-me side_toc">
+
+[% toc_div( ) %]
+
+<h2 id="note">Note</h2>
+
+<p>
+This document is derived from
+the original version
+on
+<a href="http://teachingopensource.org/">TeachingOpenSource.org</a>, which is
+under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+Commons Attribution-ShareAlike 3.0 Unported licence</a> and is now maintained
+here.
+</p>
+
+[% INCLUDE "htmls/from-mediawiki/processed/How_to_start_contributing_to_or_using_Open_Source_Software.html" %]
+
+</div>
+
+[% END %]

@@ -1,12 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Shlomi Fish’s Writings about Computing" -%]
+[%- SET desc = "Shlomi Fish’s Writings about Computing" -%]
 
-<latemp_subject "Shlomi Fish’s Writings about Computing" />
 
-<latemp_meta_desc "Shlomi Fish’s Writings about Computing" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -102,34 +102,36 @@ language</a>.
 
 <h2 id="misc">Miscellaneous Articles</h2>
 
-<h3_section id="when-c-is-best" href="$(ROOT)/philosophy/computers/when-c-is-best/" title="When C is the Best? (Tool for the Job)">
+[% WRAPPER h3_section id = "when-c-is-best"  href = "${base_path}philosophy/computers/when-c-is-best/"  title = "When C is the Best? (Tool for the Job)"  %]
 
 <p>
 An essay that explains the times when the C programming language is the best
 language to use to write an application in, and why it’s still used very often.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="your-prog-lang-must-suck" href="$(ROOT)/philosophy/computers/your-programming-language-must-suck/" title="Your Programming Language Must Suck">
+[% WRAPPER h3_section id = "your-prog-lang-must-suck"  href = "${base_path}philosophy/computers/your-programming-language-must-suck/"  title = "Your Programming Language Must Suck"  %]
 
 <p>
 An essay illustrating the design trade-offs in programming languages design and why some people will always be unhappy.
 </p>
 
-</h3_section>
+[%- END -%]
 </section>
 
 <section class="h2">
 
-<h2 id="memoirs"><a href="$(ROOT)/prog-evolution/">My Memoirs as a
+<h2 id="memoirs"><a href="[% base_path %]prog-evolution/">My Memoirs as a
 Programmer</a></h2>
 
 <p>
 My memoirs from the years I worked in various places as a programmer, from
-the times before I kept <a href="$(ROOT)/me/blogs/">a blog</a>.
+the times before I kept <a href="[% base_path %]me/blogs/">a blog</a>.
 </p>
 
 </section>
 
 </div>
+
+[% END %]

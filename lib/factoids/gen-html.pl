@@ -115,10 +115,9 @@ EOF
             'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
         img_class => "facts_logo chuck_norris",
         img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1-150w.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2010" />
-EOF
-        links_wml => <<'EOF',
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2010",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -188,10 +187,9 @@ EOF
         img_class => "facts_logo in_soviet_russia",
         img_src =>
             "\$(ROOT)/humour/bits/facts/images/soviet-union-modified.min.svg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2013" />
-EOF
-        links_wml => <<'EOF',
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2013",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -255,10 +253,9 @@ EOF
         img_class       => "facts_logo buffy",
         img_src =>
             "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2013" />
-EOF
-        links_wml => <<'EOF',
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2013",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -366,12 +363,11 @@ EOF
         img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
         img_attribution =>
 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
-        img_class   => "facts_logo clarissa",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2013" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo clarissa",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.jpg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2013",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -424,12 +420,11 @@ EOF
         img_alt => "Photo of Emma Watson from the Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
-        img_class   => "facts_logo emma_watson",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2014" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo emma_watson",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/emwatson-small.jpg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2014",
+        links_wml    => <<'EOF',
 <ul>
 
 <emma_watson_common_links />
@@ -470,12 +465,11 @@ EOF
         img_alt => "Photo of Prof. Don Knuth from Flickr via the Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
-        img_class   => "facts_logo knuth",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/knuth-small.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2002" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo knuth",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/knuth-small.jpg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2002",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -526,12 +520,11 @@ EOF
         img_alt => "Larry Wall",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
-        img_src     => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg",
-        img_class   => "facts_logo larry_wall",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2007" />
-EOF
-        links_wml => <<'EOF',
+        img_src      => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg",
+        img_class    => "facts_logo larry_wall",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2007",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -574,12 +567,11 @@ EOF
         img_alt => "NSA Logo",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
-        img_class   => "facts_logo nsa",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
-        license_wml => <<'EOF',
-<cc_by_british_blurb year="2013" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo nsa",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
+        license_tag  => "cc_by_british_blurb",
+        license_year => "2013",
+        links_wml    => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -721,12 +713,11 @@ EOF
         img_alt => "Photo of Summer Glau from the English Wikipedia",
         img_attribution =>
 'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',
-        img_class   => "facts_logo summer_glau",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2014" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo summer_glau",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/sglau-150w.jpg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2014",
+        links_wml    => <<'EOF',
 <ul>
 
 <summer_glau_common_links />
@@ -766,12 +757,11 @@ EOF
         img_alt => "Silhouette of a Snail",
         img_attribution =>
             'https://openclipart.org/detail/230426/snail-silhouette',
-        img_class   => "facts_logo windows_update",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/snail.min.svg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2016" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo windows_update",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/snail.min.svg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2016",
+        links_wml    => <<'EOF',
 EOF
         meta_desc =>
 "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
@@ -812,12 +802,11 @@ EOF
         img_alt => "Photo of Xena, the Warrior Princess",
         img_attribution =>
 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
-        img_class   => "facts_logo xena",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2009" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo xena",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/xena-small.jpg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2009",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -896,12 +885,11 @@ EOF
         img_alt => "XSLT Logo",
         img_attribution =>
 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
-        img_class   => "facts_logo xslt",
-        img_src     => "\$(ROOT)/humour/bits/facts/images/XSLT.min.svg",
-        license_wml => <<'EOF',
-<cc_by_sa_british_blurb year="2009" />
-EOF
-        links_wml => <<'EOF',
+        img_class    => "facts_logo xslt",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/XSLT.min.svg",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2009",
+        links_wml    => <<'EOF',
 <ul>
 
 <li>
@@ -1018,7 +1006,7 @@ foreach my $page (@pages)
 
 <h2 id="license">Copyright and Licence</h2>
 
-[% p.license_wml() %]
+<[% p.license_tag() %] year="[% p.license_year() %]" />
 
 <h2 id="links">Links</h2>
 

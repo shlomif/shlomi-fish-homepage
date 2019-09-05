@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "“Completely Overrated” by James Carr" -%]
+[%- SET desc = "“Completely Overrated” by James Carr" -%]
 
-<latemp_subject "“Completely Overrated” by James Carr" />
 
-<latemp_meta_desc "“Completely Overrated” by James Carr" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>
 
@@ -35,3 +36,5 @@ Cartoons.
 </blockquote>
 
 <p>Also, from there, I found my way to another <a href="http://muttawa.blogspot.com/">blog</a>, which goes into great detail about the issue and is well worth the read. </p>
+
+[% END %]

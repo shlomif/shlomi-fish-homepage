@@ -1,5 +1,5 @@
 ./gen-helpers && make fastrender && make -j 17
-a="dest/post-incs/t2/art/photography/2005-11-27-cats/index.xhtml"
+a="dest/post-incs/t2/philosophy/by-others/james-carr--completely-overrated.html"
 b=/home/shlomif/Backup/Arcs/post-$a
 dir=../temp-compare-out--to-del
 mkdir -p "$dir"

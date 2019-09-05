@@ -1,8 +1,8 @@
-#include "template.wml"
+[%- SET title = "Essays and Articles by Other People" -%]
+[%- SET desc = "Shlomi Fish’s mirrored or translated essays and articles by other people." -%]
 
-<latemp_subject "Essays and Articles by Other People" />
-
-<latemp_meta_desc "Shlomi Fish’s mirrored or translated essays and articles by other people." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -39,3 +39,5 @@ about the book <a href="http://shop.oreilly.com/product/9780596007836.do"><i>Tim
 </p>
 </li>
 </ul>
+
+[% END %]

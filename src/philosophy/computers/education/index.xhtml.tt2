@@ -1,8 +1,8 @@
-#include "template.wml"
+[%- SET title = "Essays about Computers’ Education" -%]
+[%- SET desc = "Shlomi Fish’s Essays about Computers’ Education: Opinion on electrical enigineering in the Technion, and thoughts about the best introductory progrmaming language." -%]
 
-<latemp_subject "Essays about Computers’ Education" />
-
-<latemp_meta_desc "Shlomi Fish’s Essays about Computers’ Education: Opinion on electrical enigineering in the Technion, and thoughts about the best introductory progrmaming language." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are essays about Education and Pedagogy as related to Computers,
@@ -31,7 +31,7 @@ purpose is to teach just that. The latter is best taught by experiencing.
 
 </blockquote>
 
-<h3 id="intro-lang"><a href="$(ROOT)/philosophy/computers/education/introductory-language/">Thoughts
+<h3 id="intro-lang"><a href="[% base_path %]philosophy/computers/education/introductory-language/">Thoughts
 about the Best Introductory Programming Language</a></h3>
 
 <p>
@@ -40,3 +40,5 @@ day and age. Includes a critique of some other opinions, some useful relations
 (Language A should come before Language B), a conclusion and other useful
 food for thought.
 </p>
+
+[% END %]

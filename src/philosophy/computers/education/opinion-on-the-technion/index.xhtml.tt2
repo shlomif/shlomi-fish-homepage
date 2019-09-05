@@ -1,12 +1,11 @@
-#include "template.wml"
-
-#include "toc_div.wml"
-
-<latemp_subject "My Opinion on Electrical Engineering Studies in the Technion" />
-<latemp_meta_desc "Shlomi Fish opinion on studying Electrical Engineering in
+[%- SET title = "My Opinion on Electrical Engineering Studies in the Technion" -%]
+[%- SET desc = "Shlomi Fish opinion on studying Electrical Engineering in
 the Technion (and by implication
-other Universities) after Graduating from There." />
-<latemp_more_keywords "Shlomi Fish, Shlomi, Fish, Technion, univeristy, college, Israel,EE,Electrical Engineering,studies" />
+other Universities) after Graduating from There." -%]
+[%- SET more_keywords = "Shlomi Fish, Shlomi, Fish, Technion, univeristy, college, Israel,EE,Electrical Engineering,studies" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About this Document</h2>
 
@@ -18,7 +17,7 @@ Technion</a> close and after graduation. Some of it may be applicable to other h
 institutes.
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="meta">Document Information</h2>
 
@@ -52,7 +51,7 @@ Last Updated:
 
 <h3 id="licence">Licence</h3>
 
-<cc_by_british_blurb year="2007" />
+[% cc_by_british_blurb( "year" => "2007", ) %]
 
 <h2 id="itself">The Article Itself</h2>
 
@@ -326,7 +325,7 @@ courses I’ve had to learn.
 Maybe I just happen to be a bright student who cannot handle high loads
 too well. Maybe I just hate to spend all my time on studies and
 also like to have other interests like working on
-<a href="$(ROOT)/open-source/">open source projects</a>, or
+<a href="[% base_path %]open-source/">open source projects</a>, or
 corresponding with my friends. But I don’t think there’s anything wrong
 with any of these two facts, and it’s a shame the Technion could not have
 made it easier on me. If I could study hard the entire semester and then
@@ -480,9 +479,9 @@ students; or just have plain old fun or get rest.
 Finally, don’t expect the university to make you a good programmer - it won’t.
 Don’t even expect it to teach you programming, if you don’t already know it.
 If you want to become a better programmer
-<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">read
+<a href="[% base_path %]philosophy/philosophy/advice-for-the-young/">read
 my “Advice for the Young”</a> essay, and also see
-<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/#other_sources">the
+<a href="[% base_path %]philosophy/philosophy/advice-for-the-young/#other_sources">the
 other links there</a>.
 </p>
 
@@ -495,3 +494,5 @@ keren, Ido Kanner and other people from
 <a href="http://www.perl.org.il/">the Israeli Perl Mongers</a> for
 commenting on early drafts of this article.
 </p>
+
+[% END %]

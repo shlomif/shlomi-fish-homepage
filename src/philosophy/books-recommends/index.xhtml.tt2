@@ -1,0 +1,9 @@
+[%- SET title = "Shlomi Fish’s Book Reviews" -%]
+[%- SET desc = "Book reviews by Shlomi Fish." -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "prod-synd/non-fiction-books/include-me.html" %]
+
+[% END %]

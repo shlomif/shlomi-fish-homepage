@@ -1,0 +1,9 @@
+[%- SET title = "Perlcast Transcript - Interview with Tom Limoncelli" -%]
+[%- SET desc = "Perlcast Transcript - Interview with Tom Limoncelli" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html" %]
+
+[% END %]

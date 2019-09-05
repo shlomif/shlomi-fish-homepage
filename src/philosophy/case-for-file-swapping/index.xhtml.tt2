@@ -1,8 +1,8 @@
-#include "template.wml"
+[%- SET title = "The Case for File Swapping" -%]
+[%- SET desc = "Why file swapping should not be illegal, and why it cannot be stopped." -%]
 
-<latemp_subject "The Case for File Swapping" />
-
-<latemp_meta_desc "Why file swapping should not be illegal, and why it cannot be stopped." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 There’s a lot of fuss about how bad Internet file swapping (i.e: the sharing
@@ -408,3 +408,5 @@ Says <i>Game of Thrones</i> Piracy is ‘a Compliment’”</a> (31-March-2013).
 <a href="http://www.blendernation.com/2014/04/05/sony-blocks-sintel-on-youtube/">“Sony Blocks Sintel on YouTube”</a> (5-April-2014)
 </li>
 </ul>
+
+[% END %]

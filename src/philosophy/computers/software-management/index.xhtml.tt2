@@ -1,8 +1,8 @@
-#include "template.wml"
+[%- SET title = "Software Management-Related Essays" -%]
+[%- SET desc = "Software Management-Related Essays" -%]
 
-<latemp_subject "Software Management-Related Essays" />
-
-<latemp_meta_desc "Software Management-Related Essays" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Essays related to software management - leading a team, managing projects,
@@ -43,3 +43,5 @@ to flourish.
 </article>
 
 </section>
+
+[% END %]

@@ -1,0 +1,9 @@
+[%- SET title = "The Joy of Perl" -%]
+[%- SET desc = "An essay about why Shlomi Fish likes the Perl programming language so much." -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "pages/t2/joy-of-perl.tt2" %]
+
+[% END %]

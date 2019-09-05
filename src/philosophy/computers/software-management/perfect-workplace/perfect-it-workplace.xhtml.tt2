@@ -1,12 +1,13 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "The Perfect IT Workplace - Revision 1" -%]
+[%- SET desc = "The Perfect IT Workplace - Revision 1" -%]
 
-<latemp_subject "The Perfect IT Workplace - Revision 1" />
-<latemp_meta_desc "The Perfect IT Workplace - Revision 1" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc fancy_sects">
 
-<toc_div />
+[% toc_div( ) %]
 <section class="h2">
 
 <h2 id="intro">Introduction</h2>
@@ -27,7 +28,7 @@ now which will be better publicised.
 
 <h2 id="itself">The Article Itself</h2>
 
-<include file="docbook/5/rendered/perfect-it-workplace.xhtml" />
+[% INCLUDE "docbook/5/rendered/perfect-it-workplace.xhtml" %]
 
 </section>
 
@@ -47,3 +48,5 @@ now which will be better publicised.
 </section>
 
 </div>
+
+[% END %]

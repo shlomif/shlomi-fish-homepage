@@ -1,9 +1,8 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "The Perfect Info-Tech Workplace" -%]
+[%- SET desc = "The Perfect Info-Tech Workplace" -%]
 
-<latemp_subject "The Perfect Info-Tech Workplace" />
-
-<latemp_meta_desc "The Perfect Info-Tech Workplace" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="revisions">Revisions</h2>
 
@@ -24,3 +23,5 @@ As published on Reddit by an associate.
 </li>
 
 </ul>
+
+[% END %]

@@ -1,12 +1,12 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "The End of Info-Tech Slavery" -%]
+[%- SET desc = "Do you want to find good software developers? Do you have a problem finding ones? Have you been unhappy with your latest jobs? Read this and understand why." -%]
 
-<latemp_subject "The End of Info-Tech Slavery" />
-<latemp_meta_desc "Do you want to find good software developers? Do you have a problem finding ones? Have you been unhappy with your latest jobs? Read this and understand why." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">
 
-<toc_div />
+[% toc_div( ) %]
 
 <section class="h2">
 
@@ -24,7 +24,7 @@ why.
 
 <h2 id="itself">The Article Itself</h2>
 
-#include "docbook/5/rendered/end-of-it-slavery.xhtml"
+[% INCLUDE "docbook/5/rendered/end-of-it-slavery.xhtml" %]
 
 </section>
 
@@ -87,3 +87,4 @@ the <i>Joel on Software</i> Forum</a>
 
 </div>
 
+[% END %]

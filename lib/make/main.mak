@@ -1063,9 +1063,16 @@ QP_VIM_IFACE := lib/presentations/qp/common/$(VIM_IFACE_BN)
 
 all: $(QP_VIM_IFACE)
 
-fastrender: $(T2_DOCS_SRC) all_deps
-	@echo $(MAKE) fastrender
+FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
+
+fastrender: $(FASTRENDER_DEPS) fastrender-wml fastrender-tt2
+
+fastrender-wml: $(FASTRENDER_DEPS)
+	@echo $(MAKE) fastrender-wml
 	@$(call WML_RENDER,) $(T2_DOCS)
+
+fastrender-tt2: $(FASTRENDER_DEPS)
+	@echo $(MAKE) fastrender-tt2
 	perl bin/tt-render.pl
 
 T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))

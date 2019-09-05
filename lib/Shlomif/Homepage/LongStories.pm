@@ -607,6 +607,13 @@ sub render_common_top_elems
     return;
 }
 
+sub calc_all_stories_entries
+{
+    my ( $class, $tag ) = @_;
+
+    return join( '', @{ $class->_get_all_stories_entries_tags($tag) }, );
+}
+
 sub render_all_stories_entries
 {
     my ( $class, $tag ) = @_;

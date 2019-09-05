@@ -265,6 +265,12 @@ EOF
 
         return PerlBegin::TopicsExamples::FilesAndDirs->_run();
     },
+    long_stories__calc_all_stories_entries => sub {
+        require Shlomif::Homepage::LongStories;
+        my $args = shift() // {};
+        return Shlomif::Homepage::LongStories->calc_all_stories_entries(
+            $args->{tag} );
+    },
     long_stories__calc_common_top_elems => sub {
         require Shlomif::Homepage::LongStories;
         my %args = %{ shift() // {} };

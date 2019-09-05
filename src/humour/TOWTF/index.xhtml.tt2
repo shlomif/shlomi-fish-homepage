@@ -1,52 +1,48 @@
-#include "template.wml"
-#include "xml_g_fiction.wml"
-#include "stories/stories-list.wml"
-#include "toc_div.wml"
+[%- SET title = "The One with the Fountainhead" -%]
+[%- SET desc = "The six friends of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." -%]
+[%- SET more_keywords = "fountainhead,ayn rand,parody,spoof,humour,funny,screenplay,story,friends,television,tv,objectivism,randianism" -%]
 
-<latemp_subject "The One with the Fountainhead" />
-<latemp_meta_desc "The six friends of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_more_keywords "fountainhead,ayn rand,parody,spoof,humour,funny,screenplay,story,friends,television,tv,objectivism,randianism" />
+[% long_stories__calc_common_top_elems(id => 'tow_the_fountainhead') %]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('tow_the_fountainhead'); :>
-
-<screenplay_read_online>
+[% WRAPPER screenplay_read_online  %]
 
 <ul>
-<story_episode_li base="TOW_Fountainhead_1" title="The One with the Fountainhead - Part 1" />
-<story_episode_li base="TOW_Fountainhead_2" title="The One with the Fountainhead - Part 2" />
+[% PROCESS story_episode_li base = "TOW_Fountainhead_1", title = "The One with the Fountainhead - Part 1",  %]
+[% PROCESS story_episode_li base = "TOW_Fountainhead_2", title = "The One with the Fountainhead - Part 2",  %]
 </ul>
 
-</screenplay_read_online>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="sources">Sources</h2>
 
 <ul>
 
 <li>
-<screenplay_github_repo
-    url="http://github.com/shlomif/TOW-Fountainhead" />
+[% PROCESS screenplay_github_repo     url = "http://github.com/shlomif/TOW-Fountainhead",  %]
 </li>
 
 <li>
-<link_to_screenplay base="TOW_Fountainhead_1" desc="Part 1 - " />
+[% PROCESS link_to_screenplay base = "TOW_Fountainhead_1", screenplay_desc = "Part 1 - ",  %]
 </li>
 
 <li>
-<link_to_screenplay base="TOW_Fountainhead_2" desc="Part 2 - " />
+[% PROCESS link_to_screenplay base = "TOW_Fountainhead_2", screenplay_desc = "Part 2 - ",  %]
 </li>
 
 </ul>
 
-<define-tag reviews>
+[% BLOCK reviews %]
 A friend of mine who read the book, but didn’t watch <i>Friends</i> found this
 piece highly entertaining. Moreover, an English lady I’ve been talking with
 online, who likes Friends and hasn’t read the book yet, also liked reading
 this creation of mine. So it is probably good enough for people who are
 familiar with only one of the two sources of inspiration.
-</define-tag>
+[% END %]
 
 <h2 id="suitability">Suitability</h2>
 
@@ -165,7 +161,7 @@ gags in Friends” page</a>.
 <ul>
 
 <li>
-<a href="$(ROOT)/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The
+<a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The
 Hitchhiker’s Guide to Star Trek - The Next Generation</a> - an old Internet
 cross of the <i>The Hitchhiker’s Guide to the Galaxy</i> and
 <i>Star Trek - The Next Generation</i>. Incredibly funny, and inspired me
@@ -280,35 +276,35 @@ One with the Fountainhead” (Fountainhead Parody and Modernisation)</a>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
+<a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
 a story about teenage open source/open content developers in 2005 Los Angeles.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek:
 “We, the Living Dead”</a> - a Star Trek episode inspired by Objectivism.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/obj-oss/">“Objectivism and Open Source”</a> -
+<a href="[% base_path %]philosophy/obj-oss/">“Objectivism and Open Source”</a> -
 why open source is compatible with Objectivism.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">Shlomi Fish’s
+<a href="[% base_path %]philosophy/philosophy/advice-for-the-young/">Shlomi Fish’s
 Advice for the Young</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/the-eternal-jew/">“The Eternal Jew”</a> - another
+<a href="[% base_path %]philosophy/the-eternal-jew/">“The Eternal Jew”</a> - another
 Objectivism-inspired essay.
 </p>
 </li>
@@ -329,3 +325,5 @@ One can find the intermediate images
 in <a href="http://github.com/shlomif/The-One-with-the-Fountainhead-Logo">a
 GitHub repository</a>.
 </p>
+
+[% END %]

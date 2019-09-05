@@ -88,7 +88,7 @@ EOF
             )
         );
         path("$dir/.wmlrc")->spew_utf8(<<"EOF");
--DROOT~src --passoption=2,-X3074 -DTHEME=shlomif-text
+-DROOT~src --passoption=2,-X3330 -DTHEME=shlomif-text
 EOF
 
         path("$dir/quadpres.ini")->spew_utf8(<<"EOF");

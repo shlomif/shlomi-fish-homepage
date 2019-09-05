@@ -19,7 +19,7 @@ my $UNCOND = $ENV{UNCOND} // '';
 my $PWD       = Cwd::getcwd();
 my @WML_FLAGS = (
     qq%
---passoption=2,-X3074 --passoption=2,-I../lib/ --passoption=3,-I../lib/ -I../lib/ $ENV{LATEMP_WML_FLAGS} -p1-3,5,7,8 --passoption=8,--nosharp --passoption=7,-S --passoption=7,quotes -DROOT~. -DLATEMP_THEME=sf.org1 -I $HOME/apps/wml -q
+--passoption=2,-X3330 --passoption=2,-I../lib/ --passoption=3,-I../lib/ -I../lib/ $ENV{LATEMP_WML_FLAGS} -p1-3,5,7,8 --passoption=8,--nosharp --passoption=7,-S --passoption=7,quotes -DROOT~. -DLATEMP_THEME=sf.org1 -I $HOME/apps/wml -q
 % =~ /(\S+)/g
 );
 

@@ -1,9 +1,10 @@
-#include "template.wml"
+[%- SET title = "Yachar’s Music" -%]
+[%- SET desc = "Yacher’s Music Restored from Jamendo" -%]
 
-<latemp_subject "Yachar’s Music" />
-<latemp_meta_desc "Yacher’s Music Restored from Jamendo" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 Yachar is a wonderful neo-classical composer artist, who used to be on
@@ -13,9 +14,9 @@ I am legally allowed to distribute them because they are licensed under
 <a href="https://creativecommons.org/">Creative Commons</a> licences.
 </p>
 
-</about_sect>
+[%- END -%]
 
-<h2_section id="download" title="The Files">
+[% WRAPPER h2_section id = "download"  title = "The Files"  %]
 
 <ul>
 
@@ -29,4 +30,6 @@ I am legally allowed to distribute them because they are licensed under
 
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

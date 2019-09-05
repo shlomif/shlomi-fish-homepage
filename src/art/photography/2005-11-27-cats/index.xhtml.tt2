@@ -1,7 +1,8 @@
-#include "template.wml"
+[%- SET title = "Photographs of Cats from 2005-11-27" -%]
+[%- SET desc = "Photograhps of Cats" -%]
 
-<latemp_subject "Photographs of Cats from 2005-11-27" />
-<latemp_meta_desc "Photograhps of Cats" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These are photographs of street cats I took in my neighbourhood -
@@ -12,7 +13,7 @@ one can sharpen them using an image retouching program.
 </p>
 
 <table class="thumbs">
-#include "photos/2005-11-27/thumbs.html"
+[% INCLUDE "photos/2005-11-27/thumbs.html" %]
 </table>
 
 <h2>Licence</h2>
@@ -21,7 +22,7 @@ one can sharpen them using an image retouching program.
 <!--Creative Commons License-->
 <a rel="license" href="http://creativecommons.org/licenses/publicdomain/"><img
 alt="Creative Commons License" class="bless"
-src="$(ROOT)/images/CC-zero-1.0-88x31.png"
+src="[% base_path %]images/CC-zero-1.0-88x31.png"
 /></a><br/>This work is licensed under a
 <a rel="license"
 href="https://creativecommons.org/choose/zero/">Creative Commons
@@ -30,3 +31,5 @@ CC0 (Public Domain) Licence</a>.
 </p>
 
 <!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><Work rdf:about=""><license rdf:resource="http://web.resource.org/cc/PublicDomain"/></Work><License rdf:about="http://web.resource.org/cc/PublicDomain"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+
+[% END %]

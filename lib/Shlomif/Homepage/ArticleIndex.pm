@@ -6,22 +6,27 @@ use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
 
-my $parser = XML::LibXML->new();
-my $xslt   = XML::LibXSLT->new();
+use Moo;
 
-my $base_path = "../lib/article-index/";
-my $source    = $parser->parse_file("$base_path/article-index.xml");
-my $style_doc = $parser->parse_file("$base_path/article-index.xsl");
+sub calc_string
+{
+    my $parser = XML::LibXML->new();
+    my $xslt   = XML::LibXSLT->new();
 
-my $stylesheet = $xslt->parse_stylesheet($style_doc);
+    my $base_path = "lib/article-index/";
+    my $source    = $parser->parse_file("$base_path/article-index.xml");
+    my $style_doc = $parser->parse_file("$base_path/article-index.xsl");
 
-my $results = $stylesheet->transform($source);
+    my $stylesheet = $xslt->parse_stylesheet($style_doc);
 
-my $out_string = $stylesheet->output_string($results);
+    my $results = $stylesheet->transform($source);
 
-$out_string =~ s{\A.*?<body>}{}s;
-$out_string =~ s{</body>.*\z}{}s;
+    my $out_string = $stylesheet->output_string($results);
 
-print $out_string;
+    $out_string =~ s{\A.*?<body>}{}s;
+    $out_string =~ s{</body>.*\z}{}s;
+
+    return $out_string;
+}
 
 1;

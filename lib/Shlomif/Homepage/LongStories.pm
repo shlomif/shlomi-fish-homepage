@@ -496,7 +496,23 @@ sub _get_list_items_tags
 sub _get_common_top_elems
 {
     my ( $class, $id ) = @_;
+    if ($::wml_xhtml_std_toc_section)
+    {
+        my @prev_sects = ($::wml_xhtml_std_toc_section);
+        foreach my $idx ( 3 .. 2 )
+        {
+            if ( !exists( $prev_sects[-1]->{'subs'} ) )
+            {
+                use Data::Dumper;
+                print {*STDERR} Dumper( \@prev_sects );
+                die "Cannot find a subs in the last prev_sects!";
+            }
+            push @prev_sects, $prev_sects[-1]->{'subs'}->[-1];
+        }
+        push @{ $prev_sects[-1]->{subs} },
+            { 'id' => 'abstract', 'body' => "Abstract", 'subs' => [], };
 
+    }
     return [
         @{ $class->_get_tagline_tags($id) },
         @{ $class->_get_logo_tags($id) },

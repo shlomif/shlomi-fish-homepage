@@ -1,12 +1,10 @@
-#include "template.wml"
-#include "Inc/emma_watson.wml"
-#include "Inc/nav_blocks.wml"
-#include "toc_div.wml"
+[%- SET title = "Emma Watson getting interviewed for a software developer job" -%]
+[%- SET desc = "Emma Watson getting interviewed for a software developer job" -%]
 
-<latemp_subject "Emma Watson getting interviewed for a software developer job" />
-<latemp_meta_desc "Emma Watson getting interviewed for a software developer job" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<when>
+[% IF 0 %]
 <div class="note">
 <h2 id="note">Note</h2>
 
@@ -18,12 +16,12 @@ appreciate what I do enough, in order to donate.
 </p>
 
 </div>
-</when>
+[% END %]
 
 <section class="h2">
 <h2 id="intro">Introduction</h2>
 
-<emma_watson_intro />
+[% PROCESS emma_watson_intro  %]
 
 <p>
 Now the question is: does she have what it takes to work as a Java
@@ -33,13 +31,13 @@ software</a> developer… ;-).
 
 </section>
 
-<toc_div />
+[% toc_div( ) %]
 
 <section class="h2">
 
 <h2 id="text">Text</h2>
 
-#include "screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html"
+[% INCLUDE "screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html" %]
 
 </section>
 
@@ -67,7 +65,7 @@ software</a> developer… ;-).
 
 <ul>
 
-<emma_watson_common_links />
+[% PROCESS emma_watson_common_links  %]
 
 </ul>
 
@@ -103,7 +101,7 @@ Worst Job Offer Ever”.
 
 <h2 id="license">Copyright and Licence</h2>
 
-<cc_by_sa_british_blurb year="2014" />
+[% cc_by_sa_british_blurb( "year" => "2014", ) %]
 
 </section>
 
@@ -130,9 +128,11 @@ on Freenode’s #objectivism.
 
 </section>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<harry_potter_nav_block />
-<foss_nav_block />
+[% PROCESS harry_potter_nav_block  %]
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

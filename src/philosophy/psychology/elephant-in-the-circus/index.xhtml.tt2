@@ -1,13 +1,9 @@
-#include "multi-lang.wml"
-<set-var shlomif_lang="en" />
+[%- SET title = "The Elephant in the Circus" -%]
 
-#include "template.wml"
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-#include "pages/t2/philosophy/elephant-in-circus.wml"
-
-<latemp_subject "The Elephant in the Circus" />
-
-<latemp_meta_desc "The Elephant in the Circus" />
+[% INCLUDE "pages/t2/philosophy/elephant-in-circus.tt2" %]
 
 <div class="main_text">
 
@@ -75,10 +71,12 @@ best time to plant a tree was twenty years ago. The second best time is now.”<
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=quora-learning-to-drum-at-65">“Learning How to Drum at Age 65”</a> - story by Jason Riggs from Quora.com.
+<a href="[% base_path %]humour/fortunes/show.cgi?id=quora-learning-to-drum-at-65">“Learning How to Drum at Age 65”</a> - story by Jason Riggs from Quora.com.
 </p>
 </li>
 
 </ul>
 
-</div> ;;; End for main_text
+</div>
+
+[% END %]

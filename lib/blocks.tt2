@@ -2,7 +2,6 @@
 [% IF rtl_layout %]
 [% SET body_params = body_params _ " onload=\"langLoad()\"" %]
 [% SET HEBREW_XML_LANG_SCRIPT = '</div><script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
-[% SET html_lang = "he" %]
 [% END %]
 [% BLOCK t2_lect %]
 [% base_path %]lecture/Perl/Lightning/[% url %]/

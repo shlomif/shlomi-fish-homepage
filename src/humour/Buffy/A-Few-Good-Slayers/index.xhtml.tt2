@@ -1,24 +1,19 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "toc_div.wml"
-#include "Inc/judaism_and_israel.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Buffy - a Few Good Slayers - A Screenplay" -%]
+[%- SET desc = "The Demonic underworld is held under tight control in a forked version of the Buffy universe where the Scooby Gang all ended up happier and more powerful, and men and women have equal opportunities when it comes to fighting Demons. A new class of students start the three year demon fighting program in the year of 2014/2015, while the older Scooby Gang who are their teachers and mentors have to deal with the usual set of problems that come with being teachers, parents, spouses and adults." -%]
 
-<latemp_subject "Buffy - a Few Good Slayers - A Screenplay" />
-<latemp_meta_desc "The Demonic underworld is held under tight control in a forked version of the Buffy universe where the Scooby Gang all ended up happier and more powerful, and men and women have equal opportunities when it comes to fighting Demons. A new class of students start the three year demon fighting program in the year of 2014/2015, while the older Scooby Gang who are their teachers and mentors have to deal with the usual set of problems that come with being teachers, parents, spouses and adults." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('buffy_a_few_good_slayers'); :>
+[% long_stories__calc_common_top_elems(id => 'buffy_a_few_good_slayers') %]
 
-<screenplay_read_online>
+[% WRAPPER screenplay_read_online  %]
 <ul>
 
-<story_ongoing_episode_li base="Buffy--a-Few-Good-Slayers" />
+[% PROCESS story_ongoing_episode_li base = "Buffy--a-Few-Good-Slayers",  %]
 
 <li>
 <p>
-<screenplay_github_repo
-    url="http://github.com/shlomif/Buffy-a-Few-Good-Slayers" />
+[% PROCESS screenplay_github_repo     url = "http://github.com/shlomif/Buffy-a-Few-Good-Slayers",  %]
 </p>
 <ul>
 
@@ -41,13 +36,13 @@ format</a>
 </li>
 
 </ul>
-</screenplay_read_online>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <div class="fancy_sects">
 
-<h2_section id="licensing" title="Licensing">
+[% WRAPPER h2_section id = "licensing"  title = "Licensing"  %]
 
 <p>
 This work uses some characters and concepts from the Buffy universe by
@@ -64,21 +59,21 @@ Creative Commons Attribution Noncommercial ShareAlike licence Unported (CC-by-nc
 the situation is more complicated than that.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <p>
 TBD.
 </p>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="credits" title="Credits">
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="sources_of_inspiration" title="Sources of Inspiration">
+[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
 
 <ul>
 
@@ -129,8 +124,8 @@ it.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Summers Facts</a>,
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>,
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Summers Facts</a>,
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>,
 and <a href="http://en.wikipedia.org/wiki/Ultimate_Showdown_of_Ultimate_Destiny">Ultimate Showdown of Ultimate Destiny</a> .
 </p>
 </li>
@@ -181,7 +176,7 @@ as a role model for her image as a
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=almost-worthy">“Almost
+<a href="[% base_path %]humour/fortunes/show.cgi?id=almost-worthy">“Almost
 Worthy”</a> quote based on a quote from the novel
 <a href="http://en.wikipedia.org/wiki/Jane_Eyre">Jane Eyre</a> by
 Charlotte Brontë.
@@ -190,23 +185,23 @@ Charlotte Brontë.
 
 </ul>
 
-<links_to_judaism_and_israel />
+[% PROCESS links_to_judaism_and_israel  %]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
 
 <h3 id="r_buffy_1"><a href="http://www.reddit.com/r/buffy/comments/294ow1/buffy_a_few_good_slayers_buffy_fanfic_set_in/">On the /r/buffy subreddit</a></h3>
 
-</h2_section>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also  %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Selina-Mandrake"><i>Selina Mandrake -
+<a href="[% base_path %]humour/Selina-Mandrake"><i>Selina Mandrake -
 The Slayer</i></a> - a <i>Buffy the Vampire Slayer</i> parody,
 antithesis, and modernisation.
 </p>
@@ -214,28 +209,30 @@ antithesis, and modernisation.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Facts</a> - facts about
 Buffy Summers from the show.
 </p>
 </li>
 
 </ul>
 
-</see_also>
+[%- END -%]
 
-<h2_section id="thanks" title="Thanks and Acknowledgements">
+[% WRAPPER h2_section id = "thanks"  title = "Thanks and Acknowledgements"  %]
 
 <p>
 <b>TODO: FILL IN.</b>
 </p>
 
-</h2_section>
+[%- END -%]
 
-</div> ;;; /fancy_sects
+</div> [% # /fancy_sects
+%]
+[% WRAPPER nav_blocks  %]
 
-<nav_blocks>
+[% PROCESS buffy_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
 
-<buffy_nav_block />
-<harry_potter_nav_block />
+[%- END -%]
 
-</nav_blocks>
+[% END %]

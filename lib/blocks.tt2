@@ -1,6 +1,8 @@
+[% SET html_lang = "en-US" %]
 [% IF rtl_layout %]
 [% SET body_params = body_params _ " onload=\"langLoad()\"" %]
 [% SET HEBREW_XML_LANG_SCRIPT = '</div><script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
+[% SET html_lang = "he" %]
 [% END %]
 [% BLOCK t2_lect %]
 [% base_path %]lecture/Perl/Lightning/[% url %]/
@@ -558,7 +560,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 [%- BLOCK start_html -%]
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]">
 <head>
 <title>[% title %]</title>
 <meta charset="utf-8"/>

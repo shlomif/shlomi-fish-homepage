@@ -75,8 +75,6 @@ T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__HTML__POST = $(T2_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
-fortunes-target: $(T2_FORTUNES_ALL__HTML)
-
 SECTION_MENU_DEPS = lib/Shlomif/Homepage/SectionMenu.pm
 PHILOSOPHY_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Essays.pm
 LECTURES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Lectures.pm
@@ -1066,7 +1064,7 @@ all: $(QP_VIM_IFACE)
 
 FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
 
-fastrender: $(FASTRENDER_DEPS) fastrender-wml fastrender-tt2
+fastrender: $(FASTRENDER_DEPS) fastrender-wml fastrender-tt2 $(T2_FORTUNES_ALL__HTML)
 
 fastrender-wml: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-wml

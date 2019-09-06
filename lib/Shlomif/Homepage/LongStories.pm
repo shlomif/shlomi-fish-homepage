@@ -54,7 +54,7 @@ EOF
         {
             id => 'tow_the_fountainhead',
             tagline =>
-"<i>The Fountainhead</i> may have been good enough in the 60’s, but we’re in the Information Age now",
+"The Fountainhead may have been good enough in the 60’s, but we’re in the Information Age now",
             logo_alt   => "The One With The Fountainhead Logo",
             logo_class => "towtf",
             logo_id    => "tow_the_fountainhead_logo",

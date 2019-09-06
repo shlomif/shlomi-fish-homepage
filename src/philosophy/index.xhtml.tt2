@@ -1,11 +1,8 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Shlomi Fish’s Articles and Essays" -%]
+[%- SET desc = "Shlomi Fish’s Articles and Essays: about computing, politics, general philosophy, education, etc." -%]
 
-<latemp_subject "Shlomi Fish’s Articles and Essays" />
-
-<latemp_meta_desc "Shlomi Fish’s Articles and Essays: about computing, politics, general philosophy, education, etc." />
-
-;;; <toc_div />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <section class="intro">
 
@@ -78,7 +75,7 @@ else. (it’s lame, but everyone else is doing it)
 
 <div class="sub_section">
 
-<h3 id="blogs"><a href="$(ROOT)/me/blogs/">My Blogs</a></h3>
+<h3 id="blogs"><a href="[% base_path %]me/blogs/">My Blogs</a></h3>
 
 <p class="indent">
 I post regular thoughts and smaller-scope, more controversial or less
@@ -123,3 +120,5 @@ A new philosophical-political initiative that outlines several new
 (and experimental) paradigms for advancing Liberalism beyond a
 purely-democratic process.
 </p>
+
+[% END %]

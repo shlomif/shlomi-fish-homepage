@@ -1,3 +1,4 @@
+[%- SET rtl_layout = 1 -%]
 [%- SET title = "משל הפיל בקרקס" -%]
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]

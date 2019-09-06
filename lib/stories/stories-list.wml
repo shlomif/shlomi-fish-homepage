@@ -70,17 +70,17 @@ requests, and filing bugs/issues in the bug tracker
 </define-tag>
 
 <define-tag story_episode_li>
-<preserve base title />
+<preserve base story_title />
 <set-var %attributes />
 <li>
 <p>
-<a href="<get-var base />.html"><b><get-var title /></b></a>
+<a href="<get-var base />.html"><b><get-var story_title /></b></a>
 </p>
 <ul>
 <link_to_epub basename="<get-var epub_prefix /><get-var base />" />
 </ul>
 </li>
-<restore base title />
+<restore base story_title />
 </define-tag>
 
 

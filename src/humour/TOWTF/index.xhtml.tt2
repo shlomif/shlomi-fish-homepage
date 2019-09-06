@@ -10,8 +10,8 @@
 [% WRAPPER screenplay_read_online  %]
 
 <ul>
-[% PROCESS story_episode_li base = "TOW_Fountainhead_1", title = "The One with the Fountainhead - Part 1",  %]
-[% PROCESS story_episode_li base = "TOW_Fountainhead_2", title = "The One with the Fountainhead - Part 2",  %]
+[% PROCESS story_episode_li base = "TOW_Fountainhead_1", story_title = "The One with the Fountainhead - Part 1",  %]
+[% PROCESS story_episode_li base = "TOW_Fountainhead_2", story_title = "The One with the Fountainhead - Part 2",  %]
 </ul>
 
 [%- END -%]

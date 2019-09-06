@@ -448,7 +448,10 @@ sub _get_tagline_tags
 {
     my ( $class, $id ) = @_;
 
-    return [ qq#<h2 id="tagline">#, $class->get_tagline($id), qq#</h2>\n#, ];
+    my $tag_id    = 'tagline';
+    my $tag_title = $class->get_tagline($id);
+    $class->_push_toc_h2( { 'id' => $tag_id, 'body' => $tag_title, } );
+    return [ qq#<h2 id="$tag_id">#, $tag_title, qq#</h2>\n#, ];
 }
 
 use Shlomif::Homepage::RelUrl qw/ _rel_url /;
@@ -493,9 +496,9 @@ sub _get_list_items_tags
     ];
 }
 
-sub _get_common_top_elems
+sub _push_toc_h2
 {
-    my ( $class, $id ) = @_;
+    my ( $class, $args ) = @_;
     if ($::wml_xhtml_std_toc_section)
     {
         my @prev_sects = ($::wml_xhtml_std_toc_section);
@@ -510,10 +513,15 @@ sub _get_common_top_elems
             push @prev_sects, $prev_sects[-1]->{'subs'}->[-1];
         }
         push @{ $prev_sects[-1]->{subs} },
-            { 'id' => 'abstract', 'body' => "Abstract", 'subs' => [], };
+            { 'id' => $args->{id}, 'body' => $args->{body}, 'subs' => [], };
 
     }
-    return [
+}
+
+sub _get_common_top_elems
+{
+    my ( $class, $id ) = @_;
+    my $ret = [
         @{ $class->_get_tagline_tags($id) },
         @{ $class->_get_logo_tags($id) },
         sprintf( qq#<div class="%s abstract">\n#,
@@ -522,6 +530,8 @@ sub _get_common_top_elems
         @{ $class->_get_abstract_tags($id) },
         qq{</div>\n},
     ];
+    $class->_push_toc_h2( { 'id' => 'abstract', 'body' => "Abstract", }, );
+    return $ret;
 }
 
 sub _get_story_entry_tags

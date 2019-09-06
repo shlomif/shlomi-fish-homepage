@@ -48,7 +48,7 @@ _exec_perl(
 _exec_perl(
     [
         'bin/gen-forts-all-in-one-page.pl',
-        't2/humour/fortunes/all-in-one.uncompressed.html.wml',
+        'src/humour/fortunes/all-in-one.uncompressed.html.tt2',
     ],
     "gen-forts-all-in-one-page.pl failed!"
 );

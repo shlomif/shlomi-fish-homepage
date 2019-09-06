@@ -194,6 +194,7 @@ $text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
 }
 
 $r_fh->spew_utf8($text);
+push @tt, "humour/fortunes/all-in-one.uncompressed.html";
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
 _my_system( [ 'gmake', 'bulk-make-dirs' ] );

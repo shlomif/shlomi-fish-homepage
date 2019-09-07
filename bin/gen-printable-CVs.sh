@@ -9,9 +9,8 @@ tt2__render_i_o()
     local out_filename="$1"
     shift
 
-    (perl bin/tt-render.pl
-        --printable --stdout --fn="${filename}"
-        ) | perl -p -0777 -e 's%\A<\?xml ver[^>]*>%%' \
+    perl bin/tt-render.pl --printable --stdout --fn="${filename}" \
+        | perl -p -0777 -e 's%\A<\?xml ver[^>]*>%%' \
         > "$dest"/"$out_filename"
 }
 render_i_o()

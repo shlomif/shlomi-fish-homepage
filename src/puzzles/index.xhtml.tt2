@@ -1,17 +1,17 @@
-#include "template.wml"
+[%- SET title = "Puzzles, Riddles and Brain-teasers" -%]
+[%- SET desc = "Puzzles, Riddles and Brain-teasers" -%]
+[%- SET more_keywords = "puzzles, riddles, maths, math, mathematics, logic, problems, brain teasers, original" -%]
 
-<latemp_subject "Puzzles, Riddles and Brain-teasers" />
 
-<latemp_meta_desc "Puzzles, Riddles and Brain-teasers" />
-
-<latemp_more_keywords "puzzles, riddles, maths, math, mathematics, logic, problems, brain teasers, original" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This section of my homepage contains various puzzles, riddles and
 brain-teasers I came up with.
 </p>
 
-<h2><a href="$(ROOT)/MathVentures/">Math-Ventures</a></h2>
+<h2><a href="[% base_path %]MathVentures/">Math-Ventures</a></h2>
 
 <p>
 Mathematical problems I encountered or got interested in and was able to
@@ -40,3 +40,5 @@ This section features some original situation puzzles I came up with.
 <p>
 A minimalistic pseudocode I designed.
 </p>
+
+[% END %]

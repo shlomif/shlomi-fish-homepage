@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "What is this sequence?" -%]
+[%- SET desc = "What is the sequence 4,8,7,5,10,11,13,8" -%]
 
-<latemp_subject "What is this sequence?" />
-<latemp_meta_desc "What is the sequence 4,8,7,5,10,11,13,8" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a sequence of numbers with a certain logic that I thought of. Try to
@@ -17,7 +19,7 @@ If you’re having a hard time you can consult the hint below and the solution
 below it.
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Hint</h2>
 
@@ -34,7 +36,7 @@ sequence is:
 Can you now determine what it is?
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution</h2>
 
@@ -50,3 +52,5 @@ connection I found this sequence
 <a href="http://www.research.att.com/~njas/sequences/A001370">in the
 On-Line Encyclopedia of Integer Sequences</a>.
 </p>
+
+[% END %]

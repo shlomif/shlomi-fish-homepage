@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Reddit “Ask Me Anything” (“IAmA…AMA”) Interviews with Me" -%]
+[%- SET desc = "Reddit Interviews of Shlomi Fish" -%]
 
-<latemp_subject "Reddit “Ask Me Anything” (“IAmA…AMA”) Interviews with Me" />
 
-<latemp_meta_desc "Reddit Interviews of Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="iama_2014_09_12"><a href="http://www.reddit.com/r/IAmA/comments/2g7xf4/iama_shlomi_fish_aka_rindolf/">2014-09-12 (12 September 2014)</a></h2>
 
@@ -10,3 +11,5 @@
 Ask questions on that page after registering to reddit.com and I will try
 to answer them.
 </p>
+
+[% END %]

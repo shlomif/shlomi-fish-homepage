@@ -1,11 +1,12 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" -%]
+[%- SET desc = "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" -%]
 
-<latemp_subject "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" />
 
-<latemp_meta_desc "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
-<b>From:</b> Shlomi Fish &lt;<mailto_link_to_self email="<main_email />" />&gt;<br />
+<b>From:</b> Shlomi Fish &lt;[% PROCESS mailto_link_to_self email=main_email %]&gt;<br />
 <b>To:</b> writers<br />
 <b>Subject:</b> WOW: Introducing Myself (Shlomi Fish)<br />
 <b>Date:</b> Thu, 16 Sep 2004 17:34:11 +0300<br />
@@ -424,3 +425,5 @@ links interesting.
 <p>
 <i>Shlomi Fish</i>
 </p>
+
+[% END %]

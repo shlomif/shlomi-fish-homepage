@@ -12,6 +12,7 @@ use File::Basename qw( basename );
 use File::Path qw( mkpath );
 use File::Spec ();
 use Path::Tiny qw/ path /;
+use Encode qw/ decode /;
 
 use HTML::Latemp::AddToc   ();
 use HTML::Latemp::Acronyms ();
@@ -286,6 +287,9 @@ EOF
         require Shlomif::Homepage::LongStories;
         my $args = shift() // {};
         return Shlomif::Homepage::LongStories->calc_logo( $args->{id} );
+    },
+    p4n_lecture5_heb_notes => sub {
+        return decode( 'UTF-8', scalar `bash bin/lecture5-txt2html.bash` );
     },
 };
 

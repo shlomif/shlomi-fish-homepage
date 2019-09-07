@@ -1,0 +1,21 @@
+[%- SET title = "Welcome to Linux - Development Lecture" -%]
+[%- SET desc = "A presentation that covers basic software development under Linux. Originally prepared by Meir Maor, and then revised and enhanced by Shlomi Fish." -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a presentation that covers basic software development under Linux.
+It was originally prepared by Meir Maor, and then revised and enhanced by
+me.
+</p>
+
+<ul>
+[% PROCESS qp_lect dir = "slides",  %]
+</ul>
+
+[% PROCESS "presentations/qp/common/licenses.tt2" %]
+
+[% PROCESS w2l_devel_talk__license  %]
+
+[% END %]

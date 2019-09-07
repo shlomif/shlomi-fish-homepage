@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
+[%- SET title = "Summer Glau: Photo of her Holding Two Guns" -%]
+[%- SET desc = "Summer Glau: Photo of her Holding Two Guns" -%]
 
-<latemp_subject "Summer Glau: Photo of her Holding Two Guns" />
-<latemp_meta_desc "Summer Glau: Photo of her Holding Two Guns" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 These photos were mirrored from <a href="http://wallpaper.skins.be/summer-glau/36018/1920x1200/">the photo page</a> over at
@@ -25,3 +26,5 @@ alt="Summer Glau Thumbnail" /></a>
 title="1920 * 1200 image"
 ><img src="../images/summer-glau-1920x1200-36018--small.jpg"
 alt="Summer Glau Thumbnail" /></a>
+
+[% END %]

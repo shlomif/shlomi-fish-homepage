@@ -1,136 +1,6 @@
-#include "template.wml"
-
-<latemp_subject "Shlomi Fish’s Homepage" />
-<latemp_meta_desc "Shlomi Fish’s Homepage: humour, articles and essays, puzzles and riddles, art, software and many links" />
-
-<page_extra_head_elements>
-;;; OpenID-enabling http://www.shlomifish.org/ - see:
-;;; http://blog.woobling.org/2009/05/your-openid-sucks.html
-<set-var openid="http://shlomif.livejournal.com/">
-<meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
-<link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
-<link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
-<link rel="openid.delegate" href="<get-var openid />" />
-<link rel="openid2.local_id" href="<get-var openid />" />
-</page_extra_head_elements>
-
-<section class="about_site">
-
-<h2 id="about_site">About this Site</h2>
-
-<p>
-<img src="$(PATH_TO_ROOT)images/shlomif-head.jpg" class="rfloaty" alt="Shlomi Fish’s Head"/>
-Hi all, and welcome to the personal website of
-<a href="personal.html"><b>Shlomi Fish</b></a>. I
-am an Israeli writer of stories, articles, essays, and
-presentations and a professional software developer (which I find is
-a necessary means to the end of writing, blogging and online and offline
-entertainment).
-</p>
-
-<p>
-You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
-to the
-left.  Alternatively, you can traverse it page-by-page using the <b>arrows at
-the top</b>. There’s also <a href="#news">a <b>news feed</b></a> for what is
-new on the site, which is updated periodically.
-</p>
-
-<p>
-Here are some of the things you can find here:
-</p>
-
-<h3 id="humour"><a href="humour/">Humour</a></h3>
-
-<p>
-You can read many <a href="$(PATH_TO_ROOT)humour/bits/">shorter bits</a>
-I have written, a <a href="$(PATH_TO_ROOT)humour.html">collection</a> of
-original aphorisms and quotes,
-<a href="$(PATH_TO_ROOT)humour/bits/facts/">factoids</a> about people
-and things (Chuck Norris/etc.), and
-<a href="$(PATH_TO_ROOT)humour/fortunes/">a large collection of quotes</a> by
-myself and others.
-</p>
-
-<p>
-If you do not lack the patience for reading longer texts, you can read
-<a href="$(PATH_TO_ROOT)humour/stories">large-scope humorous
-stories (novellas) and screenplays</a>, which I have written.
-</p>
-
-<h3 id="philosophy"><a href="philosophy/">Articles and Essays</a></h3>
-
-<p>
-You can read various essays and articles I wrote about politics, software
-development, and software management, the Internet, psychology, and ideology.
-</p>
-
-<define-tag old_essays_description>
-<p>
-I am <a href="philosophy/politics/define-zionism/">a Jew and an Israeli</a>
-by nationality, an agnostic by faith (or lack of it), and <a
-href="philosophy/philosophy/guide-to-neo-tech/">a “Neo-Tech”
-Objectivist</a> by ideology. (Objectivism
-<a href="$(PATH_TO_ROOT)humour/fortunes/shlomif-fav.html#neo-tech-selfishness">does
-not imply selfishness</a>, by the way, but rather rational self-growth.)
-My expertise as a software developer (in many fields), and my interest
-in philosophy, history, software management, and other fields also provide
-fodder for my essays and articles.
-</p>
-</define-tag>
-
-<h3 id="open-source"><a href="open-source/">Open Source Software</a></h3>
-
-<p>
-Links to software I wrote, and some resources with links to other software.
-Knock yourself out!
-</p>
-
-<h3 id="presentations"><a href="lecture/">Presentations</a></h3>
-
-<p>
-You can find several technical presentations I have written or maintain
-here. Especially recommended is the
-<a href="lecture/Perl/Newbies/"><i>Perl for Newbies</i> series</a>
-introducing <a href="http://perl-begin.org/">the Perl programming
-language</a> to absolute beginners.
-</p>
-
-<h3 id="puzzles"><a href="puzzles/">Puzzles and Riddles</a></h3>
-
-<p>
-Some pages with <a href="MathVentures/">Mathematical problems</a>,
-with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles.
-</p>
-
-<h3 id="computer_art"><a href="art/">Computer Art</a></h3>
-
-<p>
-You can find my lame attempts for art which I prepared, in
-<a href="art/">the art section</a> which includes graphic designs, photographs,
-and one piece of music.
-</p>
-
-<h3 id="links"><a href="links.html">Links</a></h3>
-
-<p>
-There are many links on the site, but I also concentrated many of them in
-one place. Who doesn’t like links?
-</p>
-
-<h3>Enjoy!</h3>
-
-<p>
-I hope you enjoy my web-site. If you do, please
-<a href="$(PATH_TO_ROOT)meta/how-to-help/">link here</a> or share a link on
-social media, recommend
-it to your friends, and <a href="$(PATH_TO_ROOT)me/contact-me/">drop me a line</a>.
-</p>
-
-</section>
-
-
-<page_blog_roll>
+[%- SET title = "Shlomi Fish’s Homepage" -%]
+[%- SET desc = "Shlomi Fish’s Homepage: humour, articles and essays, puzzles and riddles, art, software and many links" -%]
+[% BLOCK page_blog_roll %]
 
 <div class="blog_roll">
 
@@ -206,21 +76,150 @@ open source, web culture, Internet freedom, etc. from the author of
 
 </div>
 
-</page_blog_roll>
+[% END %]
+
+[% BLOCK page_extra_head_elements %]
+[% IF 0 %]
+;;; OpenID-enabling http://www.shlomifish.org/ - see:
+;;; http://blog.woobling.org/2009/05/your-openid-sucks.html
+[% END %]
+[%SET openid="http://shlomif.livejournal.com/"%]
+<meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
+<link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
+<link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
+<link rel="openid.delegate" href="[% openid %]" />
+<link rel="openid2.local_id" href="[% openid %]" />
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<section class="about_site">
+
+<h2 id="about_site">About this Site</h2>
+
+<p>
+<img src="[% base_path %]images/shlomif-head.jpg" class="rfloaty" alt="Shlomi Fish’s Head"/>
+Hi all, and welcome to the personal website of
+<a href="personal.html"><b>Shlomi Fish</b></a>. I
+am an Israeli writer of stories, articles, essays, and
+presentations and a professional software developer (which I find is
+a necessary means to the end of writing, blogging and online and offline
+entertainment).
+</p>
+
+<p>
+You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
+to the
+left.  Alternatively, you can traverse it page-by-page using the <b>arrows at
+the top</b>. There’s also <a href="#news">a <b>news feed</b></a> for what is
+new on the site, which is updated periodically.
+</p>
+
+<p>
+Here are some of the things you can find here:
+</p>
+
+<h3 id="humour"><a href="humour/">Humour</a></h3>
+
+<p>
+You can read many <a href="[% base_path %]humour/bits/">shorter bits</a>
+I have written, a <a href="[% base_path %]humour.html">collection</a> of
+original aphorisms and quotes,
+<a href="[% base_path %]humour/bits/facts/">factoids</a> about people
+and things (Chuck Norris/etc.), and
+<a href="[% base_path %]humour/fortunes/">a large collection of quotes</a> by
+myself and others.
+</p>
+
+<p>
+If you do not lack the patience for reading longer texts, you can read
+<a href="[% base_path %]humour/stories">large-scope humorous
+stories (novellas) and screenplays</a>, which I have written.
+</p>
+
+<h3 id="philosophy"><a href="philosophy/">Articles and Essays</a></h3>
+
+<p>
+You can read various essays and articles I wrote about politics, software
+development, and software management, the Internet, psychology, and ideology.
+</p>
+
+[% BLOCK old_essays_description %]
+<p>
+I am <a href="philosophy/politics/define-zionism/">a Jew and an Israeli</a>
+by nationality, an agnostic by faith (or lack of it), and <a
+href="philosophy/philosophy/guide-to-neo-tech/">a “Neo-Tech”
+Objectivist</a> by ideology. (Objectivism
+<a href="[% base_path %]humour/fortunes/shlomif-fav.html#neo-tech-selfishness">does
+not imply selfishness</a>, by the way, but rather rational self-growth.)
+My expertise as a software developer (in many fields), and my interest
+in philosophy, history, software management, and other fields also provide
+fodder for my essays and articles.
+</p>
+[% END %]
+
+<h3 id="open-source"><a href="open-source/">Open Source Software</a></h3>
+
+<p>
+Links to software I wrote, and some resources with links to other software.
+Knock yourself out!
+</p>
+
+<h3 id="presentations"><a href="lecture/">Presentations</a></h3>
+
+<p>
+You can find several technical presentations I have written or maintain
+here. Especially recommended is the
+<a href="lecture/Perl/Newbies/"><i>Perl for Newbies</i> series</a>
+introducing <a href="http://perl-begin.org/">the Perl programming
+language</a> to absolute beginners.
+</p>
+
+<h3 id="puzzles"><a href="puzzles/">Puzzles and Riddles</a></h3>
+
+<p>
+Some pages with <a href="MathVentures/">Mathematical problems</a>,
+with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles.
+</p>
+
+<h3 id="computer_art"><a href="art/">Computer Art</a></h3>
+
+<p>
+You can find my lame attempts for art which I prepared, in
+<a href="art/">the art section</a> which includes graphic designs, photographs,
+and one piece of music.
+</p>
+
+<h3 id="links"><a href="links.html">Links</a></h3>
+
+<p>
+There are many links on the site, but I also concentrated many of them in
+one place. Who doesn’t like links?
+</p>
+
+<h3>Enjoy!</h3>
+
+<p>
+I hope you enjoy my web-site. If you do, please
+<a href="[% base_path %]meta/how-to-help/">link here</a> or share a link on
+social media, recommend
+it to your friends, and <a href="[% base_path %]me/contact-me/">drop me a line</a>.
+</p>
+
+</section>
+
+
 
 <section class="news">
 
 <h2 id="news">News</h2>
 
-<:{
-use strict;
-use warnings;
-
-use Shlomif::Homepage::News;
-Shlomif::Homepage::News->print_front_page();
-
-}:>
+[% print_front_page() %]
 
 <h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
 
 </section>
+
+[% END %]

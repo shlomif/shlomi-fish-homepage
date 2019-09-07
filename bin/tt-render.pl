@@ -173,6 +173,11 @@ my $vars = +{
         return Shlomif::Homepage::FortuneCollections->calc_fortune_records_toc(
         );
     },
+    print_front_page => sub {
+        require Shlomif::Homepage::News;
+        return Shlomif::Homepage::News->new(
+            { dir => "lib/feeds/shlomif_hsite" } )->render_front_page;
+    },
     print_old_news => sub {
         require Shlomif::Homepage::News;
         return Shlomif::Homepage::News->new(
@@ -389,7 +394,7 @@ foreach my $result (@tt)
 
     $vars->{base_path}           = $base_path;
     $vars->{fn_path}             = $result;
-    $vars->{raw_fn_path}         = $result =~ s#/index\.x?html\z#/#r;
+    $vars->{raw_fn_path}         = $result =~ s#(\A|/)index\.x?html\z#$1#r;
     $vars->{leading_path_string} = $myinc->("breadcrumbs-trail");
     $vars->{html_head_nav_links} = $myinc->("html_head_nav_links");
     $vars->{shlomif_main_expanded_nav_bar} =

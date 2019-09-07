@@ -709,6 +709,10 @@ width="88" /></a></p>
 <p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
 class="bless"><img class="highlight bless" src="[% base_path %]images/css-btn.png"
 alt="Valid CSS!" /></a></p>
+[% TRY %]
+[% INCLUDE page_blog_roll %]
+[% CATCH file %]
+[% END %]
 (((((include "shlomif_elsewhere.htmlish")))))
 <div class="elsew_on_web">
 <ul>

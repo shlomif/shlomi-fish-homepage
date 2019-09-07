@@ -1,8 +1,11 @@
-<set-var rtl_layout="1" />
-#include "template.wml"
-#include "pages/t2/humour/ways_to_do_it.wml"
-<latemp_subject "דרכים לעשות זאת על פי שפות התכנות של העולם" />
-<latemp_meta_desc "דרכים לעשות זאת על פי שפות התכנות של העולם" />
+[% SET rtl_layout = "1" %]
+[%- SET title = "דרכים לעשות זאת על פי שפות התכנות של העולם" -%]
+[%- SET desc = "דרכים לעשות זאת על פי שפות התכנות של העולם" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[% INCLUDE "pages/t2/humour/ways_to_do_it.tt2" %]
 
 <div class="main_text">
 <ul>
@@ -97,7 +100,9 @@
 </ul>
 
 <div class="english">
-<cc_by_sa_license_british year="2002" />
+[% cc_by_sa_license_british( "year" => "2002", ) %]
 </div>
 
-</div> ;;; End of main_text
+</div>
+
+[% END %]

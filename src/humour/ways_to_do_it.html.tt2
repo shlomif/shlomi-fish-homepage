@@ -1,9 +1,10 @@
-#include "template.wml"
+[%- SET title = "Ways to do it According to the Programming Languages of the World" -%]
+[%- SET desc = "Ways to do it According to the Programming Languages of the World" -%]
 
-#include "pages/t2/humour/ways_to_do_it.wml"
 
-<latemp_subject "Ways to do it According to the Programming Languages of the World" />
-<latemp_meta_desc "Ways to do it According to the Programming Languages of the World" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[% INCLUDE "pages/t2/humour/ways_to_do_it.tt2" %]
 
 <div class="main_text">
 
@@ -86,6 +87,8 @@ to decide which way to do it.
 </li>
 </ul>
 
-<cc_by_sa_license_british year="2002" />
+[% cc_by_sa_license_british( "year" => "2002", ) %]
 
-</div> ;;; End of main_text
+</div>
+
+[% END %]

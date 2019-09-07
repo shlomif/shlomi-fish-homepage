@@ -1,20 +1,19 @@
-#include "template.wml"
-#include "Inc/cpan_dists.wml"
+[%- SET title = "Maniac Downloader - a download accelerator" -%]
+[%- SET desc = "Maniac Downloader - a download accelerator with a key improvement." -%]
 
-<latemp_subject "Maniac Downloader - a download accelerator" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "Maniac Downloader - a download accelerator with a key improvement." />
-
-<h2_section id="usage" title="Usage">
+[% WRAPPER h2_section id = "usage"  title = "Usage"  %]
 
 <pre>
-<:print "# To download with 10 segments";:>
+# To download with 10 segments
 $ mdown -k=10 http://path.to.my.url.tld/path-to-file.txt
 </pre>
 
-</h2_section>
+[%- END -%]
 
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 This is Maniac Downloader, a maniac download accelerator. It is currently very
@@ -24,7 +23,7 @@ download speed of files here (which I suspect is caused by a misconfiguration
 of my ISP's networking), and as a result, may prove of use elsewhere.
 </p>
 
-<h3_section id="secret-sauce" title="The Secret Sauce">
+[% WRAPPER h3_section id = "secret-sauce"  title = "The Secret Sauce"  %]
 
 <p>
 The main improvement of Maniac Downloader over other downloader managers is
@@ -32,31 +31,31 @@ that if a segment of the downloaded file finishes, then it splits the largest
 remaining segment, and starts another new download, so the slowest downloads
 won't delay the completion time by much.
 </p>
-</h3_section>
+[%- END -%]
 
-</about_sect>
+[%- END -%]
 
-<h2_section id="download" title="Download">
+[% WRAPPER h2_section id = "download"  title = "Download"  %]
 
 <p>
 <a href="https://metacpan.org/release/App-ManiacDownloader">Download
 Maniac Downloader from the CPAN</a>
 </p>
-</h2_section>
+[%- END -%]
 
-<h2_section id="project-links" title="Project Links">
+[% WRAPPER h2_section id = "project-links"  title = "Project Links"  %]
 
-<bitbucket_cpan_dist_links
-    dist="App-ManiacDownloader"
-    bitbucket_url="https://bitbucket.org/shlomif/maniac-downloader"
-    freecode_url="http://freecode.com/projects/maniac-downloader/">
-</bitbucket_cpan_dist_links >
+[% WRAPPER bitbucket_cpan_dist_links     dist = "App-ManiacDownloader"
+    bitbucket_url = "https://bitbucket.org/shlomif/maniac-downloader"
+    freecode_url = "http://freecode.com/projects/maniac-downloader/"  %]
 
-</h2_section>
+[% END %]
 
-<h2_section id="coverage" title="Coverage of <get-var cpan_dist />">
+[%- END -%]
 
-<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
+[% WRAPPER h2_section id = "coverage"  title="Coverage of $cpan_dist" %]
+
+[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage in Shlomi Fish’s Blogs"  %]
 
 <ul>
 
@@ -81,8 +80,10 @@ Maniac Downloader from the CPAN</a>
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<x11_licence name="Maniac Downloader" />
+[% PROCESS x11_licence name = "Maniac Downloader",  %]
+
+[% END %]

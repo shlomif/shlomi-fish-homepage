@@ -1,0 +1,36 @@
+[% SET cpan_dist="XML-GrammarBase" %]
+[%- SET title = "$cpan_dist - wrappers for writing your own XML grammar modules" -%]
+[%- SET desc = "$cpan_dist - wrappers for writing your own XML grammar modules" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+[% cpan_dist %] provides some roles (known as traits in other languages)
+and classes (with tests) for validating and processing XML grammars, so far
+using RELAX NG and XSLT, but in the future other technologies in the
+XML ecosystem (such as DTDs or XML Schemas). It uses
+XML-LibXML and XML-LibXSLT under the hood but wraps them in a lot of Moo/Moose
+goodness.
+</p>
+
+<p>
+[% cpan_dist %] is part of the <a href="../">Web-CPAN XML-Grammar
+project</a> that provides several specialised processors for XML grammars
+for various tasks.
+</p>
+
+<h2 id="links">Project Links</h2>
+
+<h3 id="links-xml-grammarbase">For [% cpan_dist %]</h3>
+
+[% WRAPPER bitbucket_cpan_dist_links     dist=cpan_dist
+    freecode_url="http://freecode.com/projects/xml-grammarbase/"
+    bitbucket_url="https://bitbucket.org/shlomif/perl-xml-grammarbase" %]
+[%- END -%]
+
+[% PROCESS x11_licence name=cpan_dist %]
+
+[% END %]

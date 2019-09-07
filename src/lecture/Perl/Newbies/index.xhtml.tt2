@@ -1,10 +1,11 @@
-#include "template.wml"
-#include "Inc/presentations.wml"
+[%- SET title = "Perl for Perl Newbies" -%]
+[%- SET desc = "Tutorials aiming to give a good introduction to the basic and most important elements of Perl programming. Knowledge of another programming language is recommended, but is not necessary." -%]
 
-<latemp_subject "Perl for Perl Newbies" />
-<latemp_meta_desc "Tutorials aiming to give a good introduction to the basic and most important elements of Perl programming. Knowledge of another programming language is recommended, but is not necessary." />
 
-<about_sect>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER about_sect  %]
 
 <p>
 <a href="http://perl-begin.org/">Perl</a> is a useful language for working on
@@ -23,10 +24,10 @@ not necessary.
 
 <p>
 If you have any other questions or comments regarding this series, then
-<a href="$(PATH_TO_ROOT)me/contact-me/">contact me about them</a>.
+<a href="[% base_path %]me/contact-me/">contact me about them</a>.
 </p>
 
-</about_sect>
+[%- END -%]
 
 <h2 id="material">Available Material</h2>
 
@@ -40,20 +41,19 @@ If you have any other questions or comments regarding this series, then
 </tr>
 </thead>
 <tbody>
-<define-tag part>
-<set-var %attributes />
+[% BLOCK part %]
 <tr>
-<td id="part<get-var idx />"><a href="lecture<get-var idx />/"><b>Part <get-var idx /></b> - <get-var desc /></a></td>
-<td><a href="lecture<get-var idx />--all-in-one-html/">All On One Page HTML</a></td>
-<td><a href="lecture<get-var idx />/src.tar.gz">Source</a></td>
+<td id="part[% idx %]"><a href="lecture[% idx %]/"><b>Part [% idx %]</b> - [% desc %]</a></td>
+<td><a href="lecture[% idx %]--all-in-one-html/">All On One Page HTML</a></td>
+<td><a href="lecture[% idx %]/src.tar.gz">Source</a></td>
 </tr>
-</define-tag>
+[% END %]
 
-<part idx="1" desc="the basics" />
-<part idx="2" desc="more advanced topics" />
-<part idx="3" desc="modules and objects" />
-<part idx="4" desc="CPAN, sprintf, system functions, exceptions" />
-<part idx="5" desc="good programming practices" />
+[% INCLUDE part idx="1" desc="the basics" %]
+[% INCLUDE part idx="2" desc="more advanced topics" %]
+[% INCLUDE part idx="3" desc="modules and objects" %]
+[% INCLUDE part idx="4" desc="CPAN, sprintf, system functions, exceptions" %]
+[% INCLUDE part idx="5" desc="good programming practices" %]
 
 </tbody>
 </table>
@@ -82,7 +82,7 @@ material on the slides. (<a href="lecture5-heb-notes.html">HTML format</a>.)
 </li>
 </ul>
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 <li>
@@ -110,9 +110,9 @@ the Perl world.
 </li>
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="other-tuts" title="Other Introductory Perl Tutorials">
+[% WRAPPER h2_section id = "other-tuts"  title = "Other Introductory Perl Tutorials"  %]
 
 <ul>
 <li>
@@ -129,4 +129,6 @@ Introduction to Perl</a> - a Perl.com resource.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

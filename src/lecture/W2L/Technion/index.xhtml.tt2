@@ -1,0 +1,22 @@
+[%- SET title = "Welcome to Linux - Development under Linux (Older Version)" -%]
+[%- SET desc = "Welcome to Linux - Development under Linux (Older Version)" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro  %]
+
+<p>
+These slides are <b>old</b> and superseded by <a href="../Development/"><b>a
+newer version</b></a>.
+</p>
+
+[%- END -%]
+
+<h2><a href="slides/">The Slides</a></h2>
+
+[% PROCESS "presentations/qp/common/licenses.tt2" %]
+
+[% PROCESS w2l_devel_talk__license  %]
+
+[% END %]

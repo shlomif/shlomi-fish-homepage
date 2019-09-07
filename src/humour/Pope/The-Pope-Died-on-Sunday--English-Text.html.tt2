@@ -1,0 +1,25 @@
+[% SET shlomif_lang = "en" %]
+[%- SET title = "The Pope Died on Sunday - English Text" -%]
+[%- SET desc = "English text for a story about a hectic week in the life of an American graphics’ artist" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% long_stories__calc_common_top_elems(id => 'pope_died_on_sunday') %]
+
+[% toc_div( ) %]
+
+<p><b>By:</b> Shlomi Fish</p>
+
+<h2 id="text">The Text</h2>
+
+<div class="story">
+
+<h3 id="the-story">The Text</h3>
+
+[% INCLUDE "docbook/5/rendered/The-Pope-Died-on-Sunday-english.xhtml" %]
+
+</div>
+
+[% END %]

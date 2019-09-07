@@ -1,0 +1,27 @@
+[% SET rtl_layout = "1 " %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "האפיפיור מת ביום ראשון" -%]
+[%- SET desc = "Hebrew text for a story about a hectic week in the life of an American graphics’ artist" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<div class="english">
+
+[% long_stories__calc_common_top_elems(id => 'pope_died_on_sunday') %]
+
+</div>
+
+[% toc_div( "lang" => "he", ) %]
+
+<h2 id="text">הטקסט</h2>
+
+<div class="story">
+
+<h3 id="the-story">הטקסט</h3>
+
+[% INCLUDE "docbook/5/rendered/The-Pope-Died-on-Sunday-hebrew.xhtml" %]
+
+</div>
+
+[% END %]

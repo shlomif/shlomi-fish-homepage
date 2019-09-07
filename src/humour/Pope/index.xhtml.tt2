@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
+[%- SET title = "The Pope Died on Sunday" -%]
+[%- SET desc = "A story about a hectic week in the life of an American graphics’s artist" -%]
 
-<latemp_subject "The Pope Died on Sunday" />
-<latemp_meta_desc "A story about a hectic week in the life of an American graphics’s artist" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('pope_died_on_sunday'); :>
+[% long_stories__calc_common_top_elems(id => 'pope_died_on_sunday') %]
 
 <h2 id="text">Text of the Story</h2>
 
@@ -22,7 +21,7 @@ Text - read online. (HTML)</b></a>
 
 <li>
 <p>
-<link_to_fiction_text base="The-Pope-Died-on-Sunday-english" />
+[% PROCESS link_to_fiction_text base = "The-Pope-Died-on-Sunday-english",  %]
 </p>
 </li>
 
@@ -48,7 +47,7 @@ Text - read online. (HTML)</b></a>
 
 <li>
 <p>
-<link_to_fiction_text base="The-Pope-Died-on-Sunday-hebrew" />
+[% PROCESS link_to_fiction_text base = "The-Pope-Died-on-Sunday-hebrew",  %]
 </p>
 </li>
 
@@ -80,7 +79,7 @@ intermediate format.</a>
 <li>
 
 <p>
-<a href="$(ROOT)/humour/human-hacking/"><i>The
+<a href="[% base_path %]humour/human-hacking/"><i>The
 Human Hacking Field Guide</i></a> - another story I've written
 about female software developers, this time in high school.
 </p>
@@ -89,7 +88,7 @@ about female software developers, this time in high school.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek:
 “We, the Living Dead”</a> - sports Katie Jacobson, another female software
 hacker.
 </p>
@@ -97,7 +96,7 @@ hacker.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake -
+<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake -
 The Slayer</i></a> - a Buffy parody that features a female geek as the
 protagonist.
 </p>
@@ -105,7 +104,7 @@ protagonist.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Clarissa/">Clarissa Facts</a> - factoids
+<a href="[% base_path %]humour/bits/facts/Clarissa/">Clarissa Facts</a> - factoids
 about Clarissa Darling from <i>Clarissa Explains It All</i>.
 </p>
 </li>
@@ -121,3 +120,5 @@ Paul II</a>. I wrote most of what you can find here several years ago
 . Here’s <a href="http://groups.yahoo.com/group/hackers-il/message/676">my
 first announcement of its writing</a>. It’s not finished yet.
 </p>
+
+[% END %]

@@ -1,22 +1,17 @@
-#include "template.wml"
-#include "Inc/jqui_tabs.wml"
+[%- SET title = "Selina Mandrake - The Slayer (Buffy Parody)" -%]
 
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "toc_div.wml"
-#include "Inc/judaism_and_israel.wml"
-#include "Inc/nav_blocks.wml"
-#include "stories/selina-common.wml"
+[%- PROCESS "stories/selina-common.tt2" -%]
+[%- PROCESS "Inc/jqui_tabs.tt2" -%]
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "Selina Mandrake - The Slayer (Buffy Parody)" />
-
-<: Shlomif::Homepage::LongStories->render_common_top_elems('selina_mandrake'); :>
+[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
 
 <p>
 This is a parody of the television series
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy the Vampire Slayer</a>, while referencing other pieces of popular
 culture, and has many ties to my other screenplay,
-<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
 serious messages and insights.
 </p>
@@ -25,14 +20,14 @@ serious messages and insights.
 Hope you enjoy it!
 </p>
 
-<screenplay_read_online>
+[% WRAPPER screenplay_read_online  %]
 <ul>
 
-<story_ongoing_episode_li base="selina-mandrake-the-slayer" />
+[% PROCESS story_ongoing_episode_li base = "selina-mandrake-the-slayer",  %]
 
 <li>
 <p>
-<screenplay_github_repo url="https://github.com/shlomif/Selina-Mandrake" />
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Selina-Mandrake",  %]
 </p>
 </li>
 
@@ -51,18 +46,18 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 
 </ul>
 
-</screenplay_read_online>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<js_script>
+<script>
 $(function() {
     $(".accordion").accordion({
         collapsible: true,
         active: false
     });
 });
-</js_script>
+</script>
 
 <div class="accordion">
 
@@ -121,13 +116,13 @@ Mandrake</a> - about the protagonist.
 
 </div>
 
-</div> ;;; /class=accordion
+</div>
 
 <div class="fancy_sects">
 
-<h2_section id="coverage" title="Coverage">
+[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
 
-<h3_section id="fanfiction.net" title="FanFiction.Net">
+[% WRAPPER h3_section id = "fanfiction.net"  title = "FanFiction.Net"  %]
 
 <ol>
 
@@ -137,9 +132,9 @@ Mandrake</a> - about the protagonist.
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="coverage_mageia_forums" title="Mageia Forums">
+[% WRAPPER h3_section id = "coverage_mageia_forums"  title = "Mageia Forums"  %]
 
 <ol>
 
@@ -150,9 +145,9 @@ on the Mageia Forums</a>
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="coverage_fxp_forums" title="On the fxp.co.il forums">
+[% WRAPPER h3_section id = "coverage_fxp_forums"  title = "On the fxp.co.il forums"  %]
 
 <ol>
 
@@ -163,9 +158,9 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="coverage_r_buffy" title="On the /r/buffy subreddit">
+[% WRAPPER h3_section id = "coverage_r_buffy"  title = "On the /r/buffy subreddit"  %]
 
 <ol>
 
@@ -177,13 +172,13 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="credits" title="Credits">
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
 
-<h3_section id="d10_image_credits" title="1d10 Image Credit">
+[% WRAPPER h3_section id = "d10_image_credits"  title = "1d10 Image Credit"  %]
 
 <p>
 <a href="http://commons.wikimedia.org/wiki/File:Green-d10-dice.png">1d10
@@ -192,9 +187,9 @@ image</a> taken from Wikimedia Commons by
 the GFDL/CC-by-sa-3.0.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="ebookmaker" href="http://github.com/setanta/ebookmaker" title="ebookmaker">
+[% WRAPPER h3_section id = "ebookmaker"  href = "http://github.com/setanta/ebookmaker"  title = "ebookmaker"  %]
 
 <p>
 Ebookmaker is a Python 3 script that allows one to generate an EPUB and was
@@ -206,28 +201,28 @@ merged <a href="https://github.com/setanta/ebookmaker/pull/1">a
 pull request</a> I sent him. Thanks, Marcelo, for your great work!
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="sell_ebooks_online" title="<a href="http://www.hongkiat.com/blog/sell-ebooks/">“20 Websites To Sell Your EBook”</a>">
+[% WRAPPER h3_section id = "sell_ebooks_online" href="http://www.hongkiat.com/blog/sell-ebooks/" title ="“20 Websites To Sell Your EBook”" %]
 
 <p>
 A post about websites that allow you to sell your electronic book / EPUB.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="fxp_about_buying_dice" href="http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371" title="Thread in fxp.co.il about buying d10 Dice">
+[% WRAPPER h3_section id = "fxp_about_buying_dice"  href = "http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371"  title = "Thread in fxp.co.il about buying d10 Dice"  %]
 
 <p>
 Some people on <a href="http://www.fxp.co.il/">the fxp.co.il forums</a>
 helped me with purchasing some ten-sided dice I was seeking (in Hebrew).
 </p>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="sources_of_inspiration" title="Sources of Inspiration">
+[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
 
 <ul>
 
@@ -293,7 +288,7 @@ fashioned (but still funny as ever) muppets. I eventually decided to adopt a
 similar approach in writing <i>Selina</i>, both as a criticism of some
 of our contemporary culture, and more importantly as a way to honestly convey
 my farfetched imaginary world (induced by a long period of
-<a href="$(ROOT)/philosophy/psychology/hypomanias/">hypomanias and manias</a>)
+<a href="[% base_path %]philosophy/psychology/hypomanias/">hypomanias and manias</a>)
 into this screenplay.
 </p>
 </li>
@@ -316,7 +311,7 @@ The Three.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/recommendations/films/#princess-bride">My review
+<a href="[% base_path %]humour/recommendations/films/#princess-bride">My review
 of the film</a>.
 </p>
 </li>
@@ -369,11 +364,11 @@ of “museum pieces”, and what can be done about it.
 
 </ul>
 
-<links_to_judaism_and_israel />
+[% PROCESS links_to_judaism_and_israel  %]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="licensing" title="Licensing">
+[% WRAPPER h2_section id = "licensing"  title = "Licensing"  %]
 
 <p>
 Well, since this work is a parody of <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the Vampire Slayer</i></a> (written by
@@ -412,11 +407,11 @@ have some web commercials which I’m making some small money from, and which
 I hope are acceptable to the copyright holders. Please don’t sue me.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
-<h3_section id="buffy_links" title="Buffy Links">
+[% WRAPPER h3_section id = "buffy_links"  title = "Buffy Links"  %]
 
 <ul>
 
@@ -451,17 +446,17 @@ Rand’s Buffy the Vampire Slayer</a> (via
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</links_sect>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also  %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> - another screenplay with a strong Buffy/Sarah Michelle
 Gellar theme.
 </p>
@@ -470,7 +465,7 @@ Gellar theme.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few
+<a href="[% base_path %]humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few
 Good Slayers</i></a> - a work-in-progress screenplay that is a more traditional
 Buffy fanfic. Set in a fork of the Buffy universe, and takes place in 2014/2015
 Sunnydale, where the Scooby Gang are adults, married men and women, parents,
@@ -480,21 +475,23 @@ and teachers/mentors.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> (also by me) -
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Facts</a> (also by me) -
 facts about Buffy Summers, the protagonist of the show.
 </p>
 </li>
 
 </ul>
 
-</see_also>
+[%- END -%]
 
-</div> ;;; /fancy_sects
+</div>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<buffy_nav_block />
-<star_trek_nav_block />
-<harry_potter_nav_block />
+[% PROCESS buffy_nav_block  %]
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

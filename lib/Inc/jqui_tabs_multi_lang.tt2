@@ -1,0 +1,101 @@
+#include "Inc/jqui_tabs.wml"
+
+<define-tag en endtag="required">
+{#EN#:%body:##}
+</define-tag>
+
+<define-tag he endtag="required">
+{#HE#:%body:##}
+</define-tag>
+
+<define-tag both endtag="required">
+<en>%body</en><he>%body</he>
+</define-tag>
+
+<define-tag li_en endtag="required">
+<en>
+<lip>
+%body
+</lip>
+</en>
+</define-tag>
+
+<define-tag li_he endtag="required">
+<he>
+<lip>
+%body
+</lip>
+</he>
+</define-tag>
+
+<define-tag non_trans_en endtag="required">
+<en>%body</en>
+</define-tag>
+
+<define-tag non_trans_he endtag="required">
+<he>%body</he>
+</define-tag>
+
+<define-tag en_he_tabs>
+
+<preserve  id_base common_prefix common_suffix />
+
+<set-var %attributes />
+
+<set-var en_id="<get-var id_base />_en" />
+<set-var he_id="<get-var id_base />_he" />
+
+<div class="jqueryui_tabs">
+
+<ul>
+<li><a href="#<get-var en_id />">English</a></li>
+<li><a href="#<get-var he_id />">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="<get-var en_id />">
+
+<get-var common_prefix />
+{#EN#}
+<get-var common_suffix />
+
+</div>
+
+<div id="<get-var he_id />" class="hebrew">
+
+<get-var common_prefix />
+{#HE#}
+<get-var common_suffix />
+
+</div>
+
+</div> ;;; end of .tabs
+
+<restore id_base common_prefix common_suffix />
+
+</define-tag>
+
+<define-tag facts__en_he_tabs>
+
+<preserve id_base />
+
+<set-var %attributes />
+
+<en_he_tabs id_base="<get-var id_base />" common_prefix="<ul>" common_suffix="</ul>" />
+
+<restore id_base />
+
+</define-tag>
+
+<define-tag facts__header_tabs>
+
+<preserve id_base h />
+
+<set-var %attributes />
+
+<h2 id="facts"><get-var h /></h2>
+
+<facts__en_he_tabs id_base="<get-var id_base />" />
+
+<restore id_base h />
+
+</define-tag>

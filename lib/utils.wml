@@ -149,13 +149,13 @@ explicit requirements</a> that are being spelt from abiding by that licence.
     />
 
 ;;; Duplicate code to invoke the toc macros
-<when "<string-eq "<get-var head-tag />" "h2" />" >
+<when <string-eq "<get-var head_tag />" "h2" /> >
 <h2 id="license">Copyright and Licence</h2>
 </when>
-<when "<string-eq "<get-var head-tag />" "h3" />" >
+<when <string-eq "<get-var head_tag />" "h3" /> >
 <h3 id="license">Copyright and Licence</h3>
 </when>
-<when "<string-eq "<get-var head-tag />" "h4" />" >
+<when <string-eq "<get-var head_tag />" "h4" /> >
 <h4 id="license">Copyright and Licence</h4>
 </when>
 

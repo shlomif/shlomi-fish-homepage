@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -30,4 +30,15 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
     # TEST
     like( $content, qr{\Q$needle\E}, 'Contains the correct URL.' );
 
+}
+
+{
+    my $content =
+        path("$T2_POST_DEST/humour/bits/Spam-for-Everyone/index.xhtml")
+        ->slurp_utf8;
+
+    my $needle = q#<h2 id="license">#;
+
+    # TEST
+    like( $content, qr{\Q$needle\E}, 'Contains the correct URL.' );
 }

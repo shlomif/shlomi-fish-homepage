@@ -1,11 +1,12 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
+[%- SET title = "Shlomi Fish’s Humorous Creations" -%]
+[%- SET desc = "Aphorisms, Quotes, Factoids, bits, parodical songs, stories and screenplays by Shlomi Fish" -%]
 
-<latemp_subject "Shlomi Fish’s Humorous Creations" />
-<latemp_meta_desc "Aphorisms, Quotes, Factoids, bits, parodical songs, stories and screenplays by Shlomi Fish" />
 
-<js_script src="$(ROOT)/js/jquery.expander.min.js"></js_script>
-<js_script src="$(ROOT)/js/my-expander.js"></js_script>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<script src="[% base_path %]js/jquery.expander.min.js"></script>
+<script src="[% base_path %]js/my-expander.js"></script>
 
 <section class="h2">
 
@@ -60,7 +61,7 @@ licences.
 <div class="sub_section">
 
 <div class="collapse">
-<humour_stories_list_text />
+[% PROCESS humour_stories_list_text  %]
 </div>
 
 </div>
@@ -79,7 +80,7 @@ A collection of funny or insightful bits and pieces I wrote and collected
 throughout the years.
 </p>
 
-<h3 id="fortunes"><a href="$(ROOT)/humour/fortunes/">Fortune Cookies Collection</a></h3>
+<h3 id="fortunes"><a href="[% base_path %]humour/fortunes/">Fortune Cookies Collection</a></h3>
 
 <p>
 A collection of files for the UNIX fortune program (that can also be read with
@@ -87,16 +88,16 @@ a naked eye) that consist of several collections of funny or enlightening
 quotes.
 </p>
 
-<h3 id="factoids"><a href="$(ROOT)/humour/bits/facts/">Factoids about
+<h3 id="factoids"><a href="[% base_path %]humour/bits/facts/">Factoids about
 people and things (Chuck Norris/etc.)</a></h3>
 
 <p>
 My own contribution to the factoids meme, with facts about
-<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau</a>,
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Summers</a> (from <i>Buffy
-the Vampire Slayer</i>), <a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT</a>,
-<a href="$(ROOT)/humour/bits/facts/Larry-Wall/">Larry Wall</a>, and more.
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau</a>,
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Summers</a> (from <i>Buffy
+the Vampire Slayer</i>), <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a>,
+<a href="[% base_path %]humour/bits/facts/Larry-Wall/">Larry Wall</a>, and more.
 </p>
 
 </div>
@@ -105,13 +106,13 @@ the Vampire Slayer</i>), <a href="$(ROOT)/humour/bits/facts/XSLT/">XSLT</a>,
 
 <section class="h2">
 
-<h2 id="small-scale"><a href="$(ROOT)/humour/bits/">Small-scale Creations</a></h2>
+<h2 id="small-scale"><a href="[% base_path %]humour/bits/">Small-scale Creations</a></h2>
 
 <div class="sub_section">
 Small scale creations - often just a pageful or two.
-<a href="$(ROOT)/humour/ways_to_do_it.html">Extrapolate “There’s More
+<a href="[% base_path %]humour/ways_to_do_it.html">Extrapolate “There’s More
 Than One Way to Do It”</a> to other programming languages,
-<a href="$(ROOT)/humour/bits/Spam-for-Everyone/">fight for accessible
+<a href="[% base_path %]humour/bits/Spam-for-Everyone/">fight for accessible
 spam E-mail</a>, and lots of other stuff.
 </div>
 
@@ -146,6 +147,8 @@ Media Recommendations of films, fiction books, etc.
 
 </section>
 
-<js_script>
+<script>
 shf_expand("div.collapse", 1200);
-</js_script>
+</script>
+
+[% END %]

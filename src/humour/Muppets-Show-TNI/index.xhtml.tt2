@@ -1,33 +1,29 @@
-#include "template.wml"
-#include "xml_g_fiction.wml"
-#include "stories/stories-list.wml"
-#include "toc_div.wml"
+[%- SET title = "The Muppets’ Show - The Next Incarnation" -%]
+[%- SET desc = "Ideas for the next incarnation of The Muppet Show" -%]
+[%- SET more_keywords = "muppet,muppets,The Muppet Show" -%]
 
-<latemp_subject "The Muppets’ Show - The Next Incarnation" />
-<latemp_meta_desc "Ideas for the next incarnation of The Muppet Show" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_more_keywords "muppet,muppets,The Muppet Show" />
-
-<: Shlomif::Homepage::LongStories->render_common_top_elems('muppets_show_tni'); :>
+[% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]
 
 <h2 id="read_online">Read Online</h2>
 
-<set-var epub_prefix="Muppets-Show--" />
+[% SET epub_prefix="Muppets-Show--" %]
 <ul>
-<story_episode_li base="Harry-Potter" story_title="Harry Potter" />
-<story_episode_li base="Summer-Glau-and-Chuck-Norris" story_title="Summer Glau and Chuck Norris" />
-<story_episode_li base="Jennifer-Lawrence" story_title="Jennifer Lawrence" />
+[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter",  %]
+[% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris",  %]
+[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence",  %]
 </ul>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="sources">Sources</h2>
 
 <ul>
 
 <li>
-<screenplay_github_repo
-    url="http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation" />
+[% PROCESS screenplay_github_repo     url = "http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation",  %]
 </li>
 
 </ul>
@@ -56,35 +52,35 @@ like I said, the situation is more complicated than that.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
+<a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
 a story about teenage open source/open content developers in 2005 Los Angeles.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek:
 “We, the Living Dead”</a> - a Star Trek episode inspired by Objectivism.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/obj-oss/">“Objectivism and Open Source”</a> -
+<a href="[% base_path %]philosophy/obj-oss/">“Objectivism and Open Source”</a> -
 why open source is compatible with Objectivism.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/advice-for-the-young/">Shlomi Fish’s
+<a href="[% base_path %]philosophy/philosophy/advice-for-the-young/">Shlomi Fish’s
 Advice for the Young</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/the-eternal-jew/">“The Eternal Jew”</a> - another
+<a href="[% base_path %]philosophy/the-eternal-jew/">“The Eternal Jew”</a> - another
 Objectivism-inspired essay.
 </p>
 </li>
@@ -105,3 +101,5 @@ One can find the intermediate images
 in <a href="http://github.com/shlomif/The-One-with-the-Fountainhead-Logo">a
 GitHub repository</a>.
 </p>
+
+[% END %]

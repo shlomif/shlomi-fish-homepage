@@ -14,7 +14,7 @@ href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
 
 [% BLOCK humour_stories_list_text %]
 
-[% long_stories__calc_all_stories_entries('h3') %]
+[% long_stories__calc_all_stories_entries(tag=>'h3') %]
 
 [% END %]
 

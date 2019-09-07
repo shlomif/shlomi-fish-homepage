@@ -208,7 +208,7 @@ EOF
         my $details = "<summary>$title</summary>";
         my $c =
             $args{collapse}
-            ? "<details id=\"toc\">$details<toc /></details>"
+            ? "<details id=\"toc\">$details<toc nohtag=\"1\" /></details>"
             : "$head<toc />";
         return qq#<nav class="page_toc">$c</nav>#;
     },

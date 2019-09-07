@@ -1,0 +1,18 @@
+[%- SET title = "Star Trek fan‐fiction by Shlomi Fish" -%]
+[%- SET desc = "Star Trek fan‐fiction by Shlomi Fish" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This page contains a list of Star-Trek fan‐fiction by Shlomi Fish.
+</p>
+
+<h2 id="stories">The Stories</h2>
+
+<h3 id="we_the_living_dead"><a href="We-the-Living-Dead/"><i>We,
+the Living Dead</i></a></h3>
+
+[% long_stories__calc_abstract(id => 'we_the_living_dead') %]
+
+[% END %]

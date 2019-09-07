@@ -1,25 +1,18 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Homepage Old News Items" -%]
+[%- SET desc = "Shlomi Fish’s Homepage Old News Items" -%]
 
-<latemp_subject "Shlomi Fish’s Homepage Old News Items" />
 
-<latemp_meta_desc "Shlomi Fish’s Homepage Old News Items" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<:{
-use strict;
-use warnings;
-
-use Shlomif::Homepage::News;
-
-Shlomif::Homepage::News->print_old_news();
-}:>
-
+[% print_old_news() %]
 
 <h3 class="newsitem">30-Oct-2004</h3>
 
 <p class="newsitem">
-Added the <a href="$(PATH_TO_ROOT)open-source/bits.html">Open-Source Bits and
+Added the <a href="[% base_path %]open-source/bits.html">Open-Source Bits and
 Bobs page</a>. Added the
-<a href="$(PATH_TO_ROOT)work/academic/Thermo/Material-Summary/">material summary
+<a href="[% base_path %]work/academic/Thermo/Material-Summary/">material summary
 for the Thermodynamics course I took in the Technion</a>.
 </p>
 
@@ -94,8 +87,8 @@ section</a>.
 <p class="newsitem">
 Added the <a href="open-source/favourite/">favourite open source
 software list</a>. Added the
-<a href="<rellink url="lecture/mini/mdda/" host="vipe" />">Meta-Data
-Database Access lecture</a> to the <a href="<rellink url="lecture/" host="vipe" />">lectures collection</a>.
+<a href="[% PROCESS rellink url = "lecture/mini/mdda/", host = "vipe",  %]">Meta-Data
+Database Access lecture</a> to the <a href="[% PROCESS rellink url = "lecture/", host = "vipe",  %]">lectures collection</a>.
 </p>
 
 <h3 class="newsitem">26-Oct-2002</h3>
@@ -131,8 +124,8 @@ section</a>.
 <p class="newsitem">
 Added the <a href="open-source/favourite/">favourite open source
 software list</a>. Added the
-<a href="<rellink url="lecture/mini/mdda/" host="vipe" />">Meta-Data
-Database Access lecture</a> to the <a href="<rellink url="lecture/" host="vipe" />">lectures collection</a>.
+<a href="[% PROCESS rellink url = "lecture/mini/mdda/", host = "vipe",  %]">Meta-Data
+Database Access lecture</a> to the <a href="[% PROCESS rellink url = "lecture/", host = "vipe",  %]">lectures collection</a>.
 </p>
 
 <h3 class="newsitem">26-Oct-2002</h3>
@@ -164,3 +157,5 @@ I set up a
 discussing my stories on Yahoo-Groups. Feel free to join it or post messages
 there. (one does not need to be a subscriber to post).
 </p>
+
+[% END %]

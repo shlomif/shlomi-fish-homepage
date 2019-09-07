@@ -173,6 +173,11 @@ my $vars = +{
         return Shlomif::Homepage::FortuneCollections->calc_fortune_records_toc(
         );
     },
+    print_old_news => sub {
+        require Shlomif::Homepage::News;
+        return Shlomif::Homepage::News->new(
+            { dir => "lib/feeds/shlomif_hsite" } )->render_old;
+    },
     print_markdown => sub {
         my %args = %{ shift() // {} };
         require Shlomif::MD;

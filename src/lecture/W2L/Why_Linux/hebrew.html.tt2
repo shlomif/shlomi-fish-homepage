@@ -1,10 +1,12 @@
-#include "template.wml"
+[% SET is_hebrew = "1" %]
+[%- SET title = "מה לינוקס הוא בשבילי" -%]
+[%- SET desc = "מה לינוקס הוא בשבילי" -%]
 
-<latemp_subject "מה לינוקס הוא בשבילי" />
 
-<latemp_meta_desc "מה לינוקס הוא בשבילי" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<hebrew_div>
+[% WRAPPER hebrew_div  %]
 
 <p>
 אני מתכנת ומפתח במקצועי, ואני מנוסה בפיתוח בסביבת
@@ -60,4 +62,6 @@ Microsoft Visual Studio
 כדי לבצע ולעשות אוטומטיזיציה של המטלות שאני צריך לבצע כמשתמש. בלינוקס,
 ניתן לעשות כמעט הכל על שורת הפקודה, ולכן, הכל בר-תכנות.
 </p>
-</hebrew_div>
+[%- END -%]
+
+[% END %]

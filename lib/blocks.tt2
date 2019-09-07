@@ -1,7 +1,12 @@
 [% SET html_lang = "en-US" %]
+[% SET HEBREW_XML_LANG_SCRIPT = '' %]
 [% IF rtl_layout %]
+[% SET is_hebrew = 1 %]
+[% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '</div>' %]
+[% END %]
+[% IF is_hebrew %]
 [% SET body_params = body_params _ " onload=\"langLoad()\"" %]
-[% SET HEBREW_XML_LANG_SCRIPT = '</div><script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
+[% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '<script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
 [% END %]
 [% BLOCK t2_lect %]
 [% base_path %]lecture/Perl/Lightning/[% url %]/
@@ -642,6 +647,11 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 </p>
 [%- END -%]
 
+[% BLOCK hebrew_div %]
+<div class="hebrew" xml:lang="he-IL">
+[% content %]
+</div>
+[% END %]
 [%- BLOCK end_html -%]
 <script>
 shlomif_load_nav("[% raw_fn_path %]");

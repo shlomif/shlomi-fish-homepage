@@ -1,9 +1,11 @@
-#include "template.wml"
+[% SET is_hebrew = "1" %]
+[%- SET title = "Technion Bit #1" -%]
+[%- SET desc = "Technion Bit #1 - recorded for posterity by Shlomi Fish" -%]
 
-<latemp_subject "Technion Bit #1" />
-<latemp_meta_desc "Technion Bit #1 - recorded for posterity by Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<hebrew_div>
+[% WRAPPER hebrew_div  %]
 ראיתי את השיר הזה כתוב על שולחן בבניין פישבך בטכניון. אני לא מבטיח שתבינו אותו
 לחלוטין אם אינכם מכירים את הטכניון היטב.
 
@@ -30,4 +32,6 @@
 
 </ul>
 
-</hebrew_div>
+[%- END -%]
+
+[% END %]

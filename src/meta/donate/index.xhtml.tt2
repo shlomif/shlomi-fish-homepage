@@ -1,7 +1,8 @@
-#include "template.wml"
+[%- SET title = "I accept Donations" -%]
+[%- SET desc = "Shlomi Fish is accepting monetary/goods donations" -%]
 
-<latemp_subject "I accept Donations" />
-<latemp_meta_desc "Shlomi Fish is accepting monetary/goods donations" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Throughout the years I have produced a lot of useful or entertaining
@@ -12,6 +13,7 @@ a <a href="http://en.wikipedia.org/wiki/Open_content">free/open content
 licence</a>.
 </p>
 
+[% SET amazon_wishlist_link= "http://www.amazon.com/gp/registry/3K9IITLFAIUG2/wishlist" %]
 <p>
 Working on these works required a lot of time and still requires a
 lot of time for maintenance. While working on such endeavours gives me a
@@ -19,7 +21,7 @@ lot of pleasure, I still would like to see some financial benefit. That’s why
 I decided to ask for donations using PayPal. <b>So if what I created has
 benefited you in some way, please consider donating</b>. If you don’t want
 to make a direct monetary donation, you can also
-<a href="<amazon_wishlist_link />">purchase
+<a href="[% amazon_wishlist_link %]">purchase
 items out of my <b>Amazon.com wishlist</b></a>.
 </p>
 
@@ -42,7 +44,7 @@ Spend it on nice things for my friends, my family and me.
 </li>
 </ol>
 
-<define-tag non_cancelled_how_to_donate>
+[% BLOCK non_cancelled_how_to_donate %]
 <p>
 Since I was told that
 <a href="http://mail.perl.org.il/pipermail/perl/2011-December/012241.html">PayPal
@@ -52,16 +54,16 @@ reference, if you’d like to contribute or send money to me, you can use my
 PayPal ID - <b><code>shlomif@shlomifish.org</code></b>. Sorry for the inconvenience
 until I sort this out.
 </p>
-</define-tag>
+[% END %]
 
-<define-tag cancelled_paypal>
+[% BLOCK cancelled_paypal %]
 <paypal_donate_code type="nolink" />
-</define-tag>
+[% END %]
 
-<non_cancelled_how_to_donate />
+[% INCLUDE non_cancelled_how_to_donate %]
 
 <p>
-<a href="<amazon_wishlist_link />">Amazon.com Wishlist</a>
+<a href="[% amazon_wishlist_link %]">Amazon.com Wishlist</a>
 </p>
 
 <h3 id="bitcoin">Bitcoin</h3>
@@ -78,3 +80,5 @@ into my bank account, and is real money that I can spend on goods.
 Bitcoin donations, in order to explain to future visitors why this is not
 going to happen.)
 </p>
+
+[% END %]

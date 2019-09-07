@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "Copyright Terms of Shlomi Fish’s Homesite" -%]
+[%- SET desc = "Copyright Terms of Shlomi Fish’s Homesite: Creative Commons licences, my interpretation of them, etc." -%]
 
-<latemp_subject "Copyright Terms of Shlomi Fish’s Homesite" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "Copyright Terms of Shlomi Fish’s Homesite: Creative Commons licences, my interpretation of them, etc." />
-
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="global_copyrights">Global Copyrights’ Terms</h2>
 
@@ -43,7 +42,7 @@ noted as under a different licence is not.
 
 <p>
 If you want to re-use part of the content of this site, that has no explicit
-copyrights terms, then <a href="$(ROOT)/me/contact-me/">drop me a line</a>
+copyrights terms, then <a href="[% base_path %]me/contact-me/">drop me a line</a>
 and I’ll see what I can do. Chances are that I can give you permission to
 use it or even license it under a more permissive licence.
 </p>
@@ -116,7 +115,7 @@ claim that you originated the original version, or sue me for any damages
 caused by using or misusing the information.
 </p>
 
-<define-tag in_exchange>
+[% BLOCK in_exchange %]
 <p>
 All of that put aside, if you find works under this licence useful, you
 are encouraged to credit me; share them under similar liberal licences;
@@ -127,9 +126,9 @@ files, for I lack the energy for pesky circular physical media),
 and naturally by sending me an appreciation note that you
 enjoyed them or found them of value. But I’m not forcing you to.
 </p>
-</define-tag>
+[% END %]
 
-<in_exchange />
+[% INCLUDE in_exchange %]
 
 <p>
 I’m using this licence for most of my photos (but not all of them), for some
@@ -192,7 +191,7 @@ And like what I said in “The Public Domain”:
 </p>
 
 <blockquote>
-<in_exchange />
+[% INCLUDE in_exchange %]
 </blockquote>
 
 <p>
@@ -285,7 +284,7 @@ And like what I said earlier:
 </p>
 
 <blockquote>
-<in_exchange />
+[% INCLUDE in_exchange %]
 </blockquote>
 
 <p>
@@ -345,8 +344,10 @@ All derivatives must be CC-by-nc-sa.
 <p>
 I’m currently using CC-by-nc-sa for some of my more recent screenplays
 and stories (hoping to auction them later), including
-<a href="$(ROOT)/humour/Blue-Rabbit-Log/"><i>The Blue Rabbit Log</i></a> (which
+<a href="[% base_path %]humour/Blue-Rabbit-Log/"><i>The Blue Rabbit Log</i></a> (which
 is still incomplete as of September 2014), and for some of
 <a href="http://www.flickr.com/photos/shlomif/">the Flickr photos</a>,
 which I’ve published and contain photos of my personal friends.
 </p>
+
+[% END %]

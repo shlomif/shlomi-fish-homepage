@@ -1,9 +1,9 @@
-#include "template.wml"
-#include "Inc/proj_euler.wml"
+[%- SET title = "Project Euler Solutions" -%]
+[%- SET desc = "Project Euler Solutions by Shlomi Fish" -%]
 
-<latemp_subject "Project Euler Solutions" />
 
-<latemp_meta_desc "Project Euler Solutions by Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I’m keeping most of my solutions to
@@ -14,4 +14,6 @@ control repository</a>.
 
 <h2 id="progress">Progress</h2>
 
-<project_euler_progress />
+[% PROCESS project_euler_progress  %]
+
+[% END %]

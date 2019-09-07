@@ -13,6 +13,7 @@ use File::Path qw( mkpath );
 use File::Spec ();
 use Path::Tiny qw/ path /;
 use Encode qw/ decode /;
+use Getopt::Long qw/ GetOptions /;
 
 use HTML::Latemp::AddToc   ();
 use HTML::Latemp::Acronyms ();
@@ -53,6 +54,15 @@ sub _print_nav_block
 # use MyNavData            ();
 
 # use MyNavLinks ();
+
+my $printable;
+my $stdout;
+my @filenames;
+GetOptions(
+    'printable!' => \$printable,
+    'stdout!'    => \$stdout,
+    'fn=s'       => \@filenames,
+);
 
 my $LATEMP_SERVER = "t2";
 my $template      = Template->new(
@@ -134,6 +144,7 @@ sub cc_by_sa_license_british
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
+    ( $printable ? ( PRINTABLE => 1 ) : () ),
     d2url            => "http://divisiontwo.shlomifish.org/",
     in_nav_block_set => sub {
         $Shlomif::Homepage::in_nav_block = 1;
@@ -308,8 +319,16 @@ EOF
     },
 };
 
-my @tt = path("lib/make/tt2.txt")->lines_raw;
-chomp @tt;
+my @tt;
+if (@filenames)
+{
+    @tt = @filenames;
+}
+else
+{
+    @tt = path("lib/make/tt2.txt")->lines_raw;
+    chomp @tt;
+}
 my $toc        = HTML::Latemp::AddToc->new;
 my $INC_PREF   = qq#\n(((((include "cache/combined/$LATEMP_SERVER#;
 my $INC_SUFFIX = qq#")))))\n#;
@@ -381,7 +400,14 @@ foreach my $result (@tt)
         or die $template->error();
 
     $toc->add_toc( \$html );
-    path( File::Spec->catfile( @DEST, @fn, ) )->spew_utf8($html);
+    if ($stdout)
+    {
+        print $html;
+    }
+    else
+    {
+        path( File::Spec->catfile( @DEST, @fn, ) )->spew_utf8($html);
+    }
 
 =begin removed
 

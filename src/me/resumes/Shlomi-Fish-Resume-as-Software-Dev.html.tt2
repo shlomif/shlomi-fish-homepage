@@ -1,8 +1,7 @@
-#include "template.wml"
-#include "Inc/proj_euler.wml"
+[%- SET title = "Shlomi Fish’s Résumé as a Software Developer" -%]
 
-<latemp_subject "Shlomi Fish’s Résumé as a Software Developer" />
-<latemp_meta_desc "Shlomi Fish’s Résumé as a Software Developer" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <hr />
 
@@ -31,13 +30,13 @@ Has over 140 distributions on CPAN (= the Comprehensive Perl Archive Network):
 </p>
 </li>
 
-<define-tag remove_dead_link>
+[% BLOCK remove_dead_link %]
 <li>
 <p>
 <a href="http://perlresume.org/SHLOMIF">http://perlresume.org/SHLOMIF</a>
 </p>
 </li>
-</define-tag>
+[% END %]
 
 </ol>
 
@@ -83,8 +82,10 @@ look and feel, close to 100% valid HTML code, and good usability.
 </li>
 
 <li>
-<project_euler_progress />
+[% PROCESS project_euler_progress  %]
 </li>
 
 </ol>
 </div>
+
+[% END %]

@@ -1,0 +1,15 @@
+[% SET rtl_layout = "1 " %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "האויב ואיך עזרתי להילחם בו" -%]
+[%- SET desc = "האויב ואיך עזרתי להילחם בו" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% toc_div( "lang" => "he", ) %]
+
+<p><b>מאת:</b> שלומי פיש </p>
+
+[% INCLUDE "htmls/The-Enemy-rev5.html-part" %]
+
+[% END %]

@@ -1,0 +1,19 @@
+[% SET rtl_layout = "1" %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "האויב ואיך עזרתי להילחם בו (גרסה 6)" -%]
+[%- SET desc = "האויב ואיך עזרתי להילחם בו (גרסה 6)" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p><b>מאת:</b> שלומי פיש</p>
+
+<h2 id="text">הטקסט של הסיפור</h2>
+
+[% INCLUDE "docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml" %]
+
+<div class="english">
+[% cc_by_sa_license_british( "year" => "1997", head_tag => "h2", ) %]
+</div>
+
+[% END %]

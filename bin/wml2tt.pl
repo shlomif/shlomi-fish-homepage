@@ -5,7 +5,7 @@ use warnings;
 
 s#<(cc_by_british_blurb|cc_by_sa_british_blurb|cc_by_sa_license_british|book_info|cpan_dist|cpan_self_dist|cpan_b_self_dist|cpan_self_mod|pdoc_f|toc_div|wiki_link|my_acronym)\s([^>]*?)/>#
     my ($tag, $args) = ($1, $2);
-    "[% $tag( " . ($args =~ s{([a-z]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
+    "[% $tag( " . ($args =~ s{([a-z_]+)="([^"]+)"}{"$1" => "$2",}gmrs) . ") %]"
     #egms;
 my $assigns = '';
 s#\s*<set-var\s+(rtl_layout|shlomif_lang)="?([^"]+)"?\s*/>\s*#$assigns .= qq/[% SET $1 = "$2" %]\n/;""#egms;
@@ -23,7 +23,7 @@ my $re =
 qr#(?:about_sect|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
 
 s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, ($2 // ''));
-    "[% WRAPPER $tag " . ($args =~ s{([a-z]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"
+    "[% WRAPPER $tag " . ($args =~ s{([a-z_]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"
     #egms;
 s#</$re>#[%- END -%]#g;
 my $rep = "[% base_path %]";

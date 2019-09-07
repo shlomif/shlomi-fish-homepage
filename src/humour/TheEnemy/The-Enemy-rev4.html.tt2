@@ -1,14 +1,12 @@
-<set-var rtl_layout=1 />
-#include "multi-lang.wml"
-<set-var shlomif_lang="he" />
+[% SET rtl_layout = "1" %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "האויב ואיך עזרתי להילחם בו" -%]
+[%- SET desc = "האויב ואיך עזרתי להילחם בו" -%]
 
-#include "template.wml"
-#include "toc_div.wml"
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "האויב ואיך עזרתי להילחם בו" />
-<latemp_meta_desc "האויב ואיך עזרתי להילחם בו" />
-
-<toc_div lang="he" />
+[% toc_div( "lang" => "he", ) %]
 
 <p><b>מאת:</b> שלומי פיש </p>
 
@@ -1080,3 +1078,5 @@ Trace] </h2>
 <p>"לעזאזל! " אמרתי לעצמי "רק התחלתי להתחמם..." </p>
 
 <p>- סוף -  </p>
+
+[% END %]

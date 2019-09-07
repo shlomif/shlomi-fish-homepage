@@ -1,14 +1,15 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "“The Enemy and How I Helped to Fight it” - Text of the English Translation" -%]
+[%- SET desc = "“The Enemy and How I Helped to Fight it” - Text of the English Translation" -%]
 
-<latemp_subject "“The Enemy and How I Helped to Fight it” - Text of the English Translation" />
-<latemp_meta_desc "“The Enemy and How I Helped to Fight it” - Text of the English Translation" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Written and Translated By:</b> Shlomi Fish
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <div class="story">
 <h2 id="left_without_a_trace">1. Left Without a Trace</h2>
@@ -2018,3 +2019,5 @@ Oh! I wish you could see the look on his face! Actually, I would have also liked
 "Damn!" I said to myself "I was just beginning to warm up..."
 </p>
 </div>
+
+[% END %]

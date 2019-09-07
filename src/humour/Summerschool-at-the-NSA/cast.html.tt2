@@ -1,10 +1,8 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Summerschool at the NSA - Who Should be the Cast?" -%]
+[%- SET desc = "Summerschool at the NSA - Who I think should play which role in the film" -%]
 
-<latemp_subject "Summerschool at the NSA - Who Should be the Cast?" />
-<latemp_meta_desc "Summerschool at the NSA - Who I think should play which role in the film" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="about">About</h2>
 
@@ -17,20 +15,20 @@ of the characters of <i>Summerschool at the NSA</i>.
 
 <h3 id="cast__direction">Direction: <a href="http://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris</a></h3>
 
-<img src="$(ROOT)/humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia" class="story_logo chuck_norris" />
+<img src="[% base_path %]humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia" class="story_logo chuck_norris" />
 
 <p>
 Norris is an excellent actor, and director of action films and has recently
 made a huge comeback thanks to his
-<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">factoids</a> and
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">factoids</a> and
 became a bigger star than he ever was and the "alpha male". I want him to
 direct <i>Summerschool at the NSA</i> which is all about action.
 </p>
 
 <h3 id="cast__sglau" style="clear: right;">Summer Glau: either <a href="http://en.wikipedia.org/wiki/Summer_Glau">herself</a> or <a href="http://en.wikipedia.org/wiki/Megan_Fox">Megan Fox</a> (as fallback)</h3>
 
-<img src="$(ROOT)/humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia" class="story_logo summer_glau" />
-<img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/megan-fox-1.jpg" alt="Photo of Megan Fox from the English Wikipedia" class="story_logo summer_glau" />
+<img src="[% base_path %]humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia" class="story_logo summer_glau" />
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/megan-fox-1.jpg" alt="Photo of Megan Fox from the English Wikipedia" class="story_logo summer_glau" />
 
 <p>
 If Summer can play herself, then so be it, but if not, then I believe Fox can
@@ -39,7 +37,7 @@ be a good substitute, because she’s a great actress.
 
 <h3 id="cast__smg" style="clear: right;">Sarah Michelle Gellar: <a href="http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Herself</a></h3>
 
-<img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/smg-1.jpg" alt="Photo of Sarah Michelle Gellar from the English Wikipedia" class="story_logo sm_gellar" />
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/smg-1.jpg" alt="Photo of Sarah Michelle Gellar from the English Wikipedia" class="story_logo sm_gellar" />
 
 <p>
 A bit obvious, right?
@@ -47,7 +45,7 @@ A bit obvious, right?
 
 <h3 id="cast__waitress" style="clear: right;">The Waitress: <a href="http://en.wikipedia.org/wiki/Jennifer_Lawrence">Jennifer Lawrence</a></h3>
 
-<img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/jenn-lawrence-1.jpg" alt="Photo of Jennifer Lawrence from the English Wikipedia" class="story_logo jenn_law" />
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/jenn-lawrence-1.jpg" alt="Photo of Jennifer Lawrence from the English Wikipedia" class="story_logo jenn_law" />
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Sic_transit_gloria_mundi">Sic
@@ -58,7 +56,7 @@ be Sarah Michelle who?!!".
 
 <h3 id="cast__andrew" style="clear: right;">Andrew: <a href="http://en.wikipedia.org/wiki/Chris_Tucker">Chris Tucker</a></h3>
 
-<img src="$(ROOT)/humour/Summerschool-at-the-NSA/images/chris-tucker-1.jpg" alt="Photo of Chris Tucker from the English Wikipedia" class="story_logo chris_tucker" />
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/chris-tucker-1.jpg" alt="Photo of Chris Tucker from the English Wikipedia" class="story_logo chris_tucker" />
 
 <p>
 I recall seeing Tucker play on
@@ -69,10 +67,12 @@ similar enough to his role there.
 
 <div style="clear: right;" />
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<xkcd_nav_block />
-<buffy_nav_block />
-<politics_nav_block />
+[% PROCESS xkcd_nav_block  %]
+[% PROCESS buffy_nav_block  %]
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

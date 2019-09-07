@@ -1,12 +1,11 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "toc_div.wml"
+[%- SET title = "Conclusions and Reflection of Summerschool at the NSA" -%]
+[%- SET desc = "Reflection and conclusions about the screenplay Summerschool at the NSA which pities Sarah Michelle Gellar and Summer Glau (= the Hollywood actresses) against the U.S. National Security Agency (NSA)" -%]
 
-<latemp_subject "Conclusions and Reflection of Summerschool at the NSA" />
-<latemp_meta_desc "Reflection and conclusions about the screenplay Summerschool at the NSA which pities Sarah Michelle Gellar and Summer Glau (= the Hollywood actresses) against the U.S. National Security Agency (NSA)" />
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('summerschool_at_the_nsa'); :>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% long_stories__calc_common_top_elems(id => 'summerschool_at_the_nsa') %]
 
 <p>
 Reflection and conclusion about the screenplay Summerschool at the NSA which
@@ -95,3 +94,5 @@ Bipolar (= Manic-depressive) or Schizophrenics, due to the huge amount of
 stress and evil they run into, and I'm reminded of the delusions I thought
 of during my own "Great Mania" which were irrational at the time.
 </p>
+
+[% END %]

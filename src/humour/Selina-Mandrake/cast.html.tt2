@@ -1,14 +1,12 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "Inc/nav_blocks.wml"
-#include "stories/selina-common.wml"
+[%- SET title = "Selina Mandrake - Who Should be the Cast?" -%]
+[%- PROCESS "stories/selina-common.tt2" %]
 
-<latemp_subject "Selina Mandrake - Who Should be the Cast?" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('selina_mandrake'); :>
+[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
 
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 On this page, I would like to note who I think should be the cast for some
@@ -20,7 +18,7 @@ of the characters of Selina Mandrake.
 <header>
 <h3 id="selina">Selina Mandrake: <a href="http://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a></h3>
 
-<a href="http://commons.wikimedia.org/wiki/File:Emma_Watson_GoF_Premiere.jpg"><img src="$(ROOT)/humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson" /></a>
+<a href="http://commons.wikimedia.org/wiki/File:Emma_Watson_GoF_Premiere.jpg"><img src="[% base_path %]humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson" /></a>
 </header>
 
 <p>
@@ -97,12 +95,14 @@ Frenchman, just like Cardinal Richelieu.
 
 </section>
 
-</about_sect>
+[%- END -%]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<star_trek_nav_block />
-<harry_potter_nav_block />
-<buffy_nav_block />
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
+[% PROCESS buffy_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

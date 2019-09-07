@@ -1,14 +1,15 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Fourth Draft" -%]
+[%- SET desc = "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Fourth Draft" -%]
 
-<latemp_subject "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Fourth Draft" />
-<latemp_meta_desc "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Fourth Draft" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 <b>Written and Translated  By:</b> Shlomi Fish
 </p>
 
-<toc_div />
+[% toc_div( ) %]
 
 <div class="story">
 
@@ -3678,3 +3679,5 @@ and lied down on bed.
 </p>
 
 </div>
+
+[% END %]

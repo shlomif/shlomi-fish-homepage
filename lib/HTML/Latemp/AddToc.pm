@@ -2,18 +2,18 @@ package HTML::Latemp::AddToc;
 
 use strict;
 use warnings;
+use utf8;
 
 use Moo;
 use HTML::Toc          ();
 use HTML::TocGenerator ();
 
-my $TOC         = qr#<toc */ *>#;
-my $TOC_NO_HTAG = qr#<toc *nohtag="1" */ *>#;
+my $TOC = qr#<toc *lang=\"([a-z\-A-Z]+)\" *((?:nohtag="1" *)?) */ *>#;
 
 sub add_toc
 {
     my ( $self, $html_ref ) = @_;
-    if ( $$html_ref =~ $TOC or $$html_ref =~ $TOC_NO_HTAG )
+    if ( my ( $lang, $nohtag ) = $$html_ref =~ $TOC )
     {
         my $toc = HTML::Toc->new();
         $toc->setOptions(
@@ -40,13 +40,17 @@ sub add_toc
         my $tocgen = HTML::TocGenerator->new();
         $tocgen->generate( $toc, $$html_ref, {} );
         my $text = $toc->format();
-        $text =~ s%\A\s*<!-.*?->\s*%<h2 id="toc">Table of Contents</h2>%ms
+        my $title =
+            $lang eq 'en'
+            ? "Table of Contents"
+            : "תוכן העניינים";
+        $text =~ s%\A\s*<!-.*?->\s*%<h2 id="toc">$title</h2>%ms
             or die "foo";
-        $text      =~ s%(</a>)\s*(<ul>)%$1<br/>$2%gms;
-        $text      =~ s%<!-.*?->\s*%%gms;
-        $$html_ref =~ s#$TOC#$text#g;
-        my $text_nohtag = $text =~ s%<h2 id="toc">Table of Contents</h2>%%mrs;
-        $$html_ref =~ s#$TOC_NO_HTAG#$text_nohtag#g;
+        $text =~ s%(</a>)\s*(<ul>)%$1<br/>$2%gms;
+        $text =~ s%<!-.*?->\s*%%gms;
+        my $text_nohtag =
+            $nohtag ? $text =~ s%<h2 id="toc">[^<]+</h2>%%mrs : $text;
+        $$html_ref =~ s#$TOC#$text_nohtag#g;
     }
 
     return;

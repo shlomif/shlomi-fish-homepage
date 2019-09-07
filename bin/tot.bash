@@ -1,5 +1,5 @@
 ./gen-helpers && make fastrender && make -j 17
-a="dest/post-incs/t2/humour/humanity/ongoing-text-hebrew.html"
+a="dest/post-incs/t2/humour/TheEnemy/The-Enemy-English-rev6.html"
 b=/home/shlomif/Backup/Arcs/post-$a
 dir=../temp-compare-out--to-del
 mkdir -p "$dir"

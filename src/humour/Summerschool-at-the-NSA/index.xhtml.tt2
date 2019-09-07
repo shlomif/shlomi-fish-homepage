@@ -1,14 +1,12 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "toc_div.wml"
-#include "Inc/summer_glau.wml"
-#include "Inc/nav_blocks.wml"
+[%- SET title = "Summerschool at the NSA - A Screenplay" -%]
+[%- SET desc = "Two Hollywood actresses conspire to kick the ass of the NSA, using special warfare that is completely non-violent and non-destructive, bringing an old Internet meme to life. Set in the Spring of 2013." -%]
 
-<latemp_subject "Summerschool at the NSA - A Screenplay" />
-<latemp_meta_desc "Two Hollywood actresses conspire to kick the ass of the NSA, using special warfare that is completely non-violent and non-destructive, bringing an old Internet meme to life. Set in the Spring of 2013." />
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('summerschool_at_the_nsa'); :>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[%- PROCESS "Inc/summer_glau.tt2" -%]
+[% long_stories__calc_common_top_elems(id => 'summerschool_at_the_nsa') %]
 
 <p>
 This informal screenplay (which was not produced or filmed yet) is surrealist
@@ -16,16 +14,15 @@ realism, and takes place in the spring-summer of 2013. It is far-fetched, but
 could actually happen.
 </p>
 
-<screenplay_read_online>
+[% WRAPPER screenplay_read_online  %]
 
 <ul>
 
-<story_ongoing_episode_li base="Summerschool-at-the-NSA" />
+[% PROCESS story_ongoing_episode_li base = "Summerschool-at-the-NSA",  %]
 
 <li>
 <p>
-<screenplay_github_repo
-    url="https://github.com/shlomif/Summerschool-at-the-NSA" />
+[% PROCESS screenplay_github_repo     url = "https://github.com/shlomif/Summerschool-at-the-NSA",  %]
 </p>
 
 <ul>
@@ -55,9 +52,9 @@ format</a>
 
 </ul>
 
-</screenplay_read_online>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="licensing">Licensing</h2>
 
@@ -82,7 +79,7 @@ the situation is more complicated than that.
 <li>
 
 <p>
-<a href="$(ROOT)/humour/bits/facts/NSA/">The “NSA Facts” page</a> -
+<a href="[% base_path %]humour/bits/facts/NSA/">The “NSA Facts” page</a> -
 concentrating the rest of my anti-NSA activism.
 </p>
 
@@ -237,9 +234,9 @@ I also consider <i>Summerschool at the NSA</i> to be a 2013 modernisation of
 <b>Note:</b> while considering myself a mostly Objectivist, and while I enjoyed
 reading <i>The Fountainhead</i> and <i>Atlas Shrugged</i>, I reject
 Classical Randianism as unfitting for 2013 and forward, and
-<a href="$(ROOT)/humour/stories/">my other stories</a> and more serious
+<a href="[% base_path %]humour/stories/">my other stories</a> and more serious
 writings reflect a more modern mentality, including
-<a href="$(ROOT)/humour/TOWTF/">my parody and modernisation</a> of Rand’s
+<a href="[% base_path %]humour/TOWTF/">my parody and modernisation</a> of Rand’s
 book <i>The Fountainhead</i>.
 </p>
 
@@ -247,7 +244,7 @@ book <i>The Fountainhead</i>.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/NSA/">The “NSA Facts” page</a> -
+<a href="[% base_path %]humour/bits/facts/NSA/">The “NSA Facts” page</a> -
 concentrating most of my own anti-NSA hacktivity including the
 original quote of “<i>Summerschool at the NSA</i> may well be the name of
 Sarah Michelle Gellar’s next movie”.
@@ -271,7 +268,7 @@ The
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/the-eternal-jew/">“The Eternal Jew”</a> - an essay
+<a href="[% base_path %]philosophy/the-eternal-jew/">“The Eternal Jew”</a> - an essay
 I wrote whose “I am the Messiah” and “I am the Most Powerful Man on Earth”
 themes play an important role in the story. I introduce them there using
 the <a href="http://en.wikipedia.org/wiki/Chabad">Chabad</a> Jewish
@@ -287,7 +284,7 @@ agnostic.
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
 all the Cards on the Table (2013)</a> - a vital update for “The
 Eternal Jew”.
 </p>
@@ -352,33 +349,33 @@ screenplay): the NSA gets schooled on security”</a>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/NSA/">The “NSA Facts” page</a> -
+<a href="[% base_path %]humour/bits/facts/NSA/">The “NSA Facts” page</a> -
 concentrating my NSA activism.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Selina-Mandrake"><i>Selina Mandrake -
+<a href="[% base_path %]humour/Selina-Mandrake"><i>Selina Mandrake -
 The Slayer</i></a> - a <i>Buffy the Vampire Slayer</i> parody and modernisation.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> -
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> -
 facts about one of the protagonists. Chuck Norris gets pwned by a girl - HOT!!!
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Facts</a> - facts about
 Buffy Summers from the show.
 </p>
 </li>
 
-<li_SummerNSA_hashtag />
+[% INCLUDE li_SummerNSA_hashtag %]
 
 </ul>
 
@@ -416,10 +413,12 @@ inspiring some other changes.
 
 </ul>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<xkcd_nav_block />
-<buffy_nav_block />
-<politics_nav_block />
+[% PROCESS xkcd_nav_block  %]
+[% PROCESS buffy_nav_block  %]
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

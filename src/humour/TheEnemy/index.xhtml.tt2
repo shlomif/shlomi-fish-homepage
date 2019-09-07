@@ -1,16 +1,13 @@
-#include "template.wml"
-#include "Inc/jqui_tabs.wml"
-#include "toc_div.wml"
-#include "xml_g_fiction.wml"
-#include "Inc/nav_blocks.wml"
-#include "stories/stories-list.wml"
+[%- SET title = "The Enemy and How I Helped to Fight it" -%]
+[%- SET desc = "A member of the terrorist organisation “The Organisation” quits, but before he leaves, makes a suggestion that makes his former comrades fight each other to death. Join the now ex‐Member of the Organisation as he embarks on an ego trip, where he tries to prove that A can in fact be not‐A, whether or not Aristotle would agree." -%]
+[%- SET more_keywords = "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" -%]
 
-<latemp_subject "The Enemy and How I Helped to Fight it" />
-<latemp_meta_desc "A member of the terrorist organisation “The Organisation” quits, but before he leaves, makes a suggestion that makes his former comrades fight each other to death. Join the now ex‐Member of the Organisation as he embarks on an ego trip, where he tries to prove that A can in fact be not‐A, whether or not Aristotle would agree." />
 
-<latemp_more_keywords "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" />
+[%- PROCESS "Inc/jqui_tabs.tt2" -%]
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('the_enemy'); :>
+[% long_stories__calc_common_top_elems(id => 'the_enemy') %]
 
 <p>
 It’s a political satire, but one that is universal in its message, and
@@ -38,13 +35,13 @@ Heaven is Paved with Bad Intentions</a>.
 </p>
 </li>
 
-<story_episode_li base="The-Enemy-English-v7" story_title="English HTML" />
+[% PROCESS story_episode_li base = "The-Enemy-English-v7", story_title = "English HTML",  %]
 
 </ul>
 
-<toc_div />
+[% toc_div( ) %]
 
-<h2_section id="sources" title="Sources">
+[% WRAPPER h2_section id = "sources"  title = "Sources"  %]
 
 <ul>
 
@@ -64,7 +61,7 @@ Heaven is Paved with Bad Intentions</a>.
 <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/2.5/"><img
     alt="Creative Commons License" class="bless"
-    src="$(ROOT)/images/somerights20.png" /></a><br />This
+    src="[% base_path %]images/somerights20.png" /></a><br />This
 work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative
 Commons Attribution-ShareAlike 2.5 License</a> (or at your option a
@@ -72,16 +69,16 @@ greater version of this license). Year of copyright is 1997.
 <!--/Creative Commons License-->
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="sources_of_inspiration" title="Sources of Inspiration">
+[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
 
 <ul>
 
 <li>
 
 <p>
-<a href="$(ROOT)/philosophy/philosophy/guide-to-neo-tech/">My Guide to
+<a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">My Guide to
 Neo-Tech</a> - The philosophical foundation behind the story, which is a
 recommended read anyway you look at it.
 </p>
@@ -142,9 +139,9 @@ relatively negligible.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="thanks" title="Thanks and Acknowledgements">
+[% WRAPPER h2_section id = "thanks"  title = "Thanks and Acknowledgements"  %]
 
 <ul>
 
@@ -183,9 +180,9 @@ syntax corrections to the Hebrew version of the story.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="resources" title="Resources">
+[% WRAPPER h2_section id = "resources"  title = "Resources"  %]
 
 
 
@@ -254,9 +251,9 @@ etc.)
 
 </details>
 
-</h2_section>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also  %]
 
 <ul>
 
@@ -269,7 +266,7 @@ is Responsible for the War with the Hizbullah”</a>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/politics/define-zionism/">“Define Zionism”</a> -
+<a href="[% base_path %]philosophy/politics/define-zionism/">“Define Zionism”</a> -
 an essay I have written which criticises Israel’s constitutional
 discrimination.
 </p>
@@ -277,10 +274,12 @@ discrimination.
 
 </ul>
 
-</see_also>
+[%- END -%]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<politics_nav_block />
+[% PROCESS politics_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

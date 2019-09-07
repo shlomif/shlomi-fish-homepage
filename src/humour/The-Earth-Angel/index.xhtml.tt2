@@ -1,15 +1,12 @@
-#include "template.wml"
-#include "Inc/jqui_tabs.wml"
-#include "toc_div.wml"
+[%- SET title = "The Earth Angel" -%]
+[%- SET desc = "The Earth Angel" -%]
+[%- SET more_keywords = "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" -%]
 
-#include "stories/stories-list.wml"
+[%- PROCESS "Inc/jqui_tabs.tt2" -%]
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "The Earth Angel" />
-<latemp_meta_desc "The Earth Angel" />
-
-<latemp_more_keywords "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" />
-
-<: Shlomif::Homepage::LongStories->render_common_top_elems('the_earth_angel'); :>
+[% long_stories__calc_common_top_elems(id => 'the_earth_angel') %]
 
 <ul>
 
@@ -26,7 +23,7 @@ GitHub</a>
 
 </ul>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="licence">Licence</h2>
 
@@ -67,27 +64,27 @@ entry in my weblog</a> about the history and motivation of this story.
 </li>
 </ul>
 
-<js_script>
+<script>
 $(function() {
     $("#previous_vers_accordion").accordion({
         collapsible: true,
         active: false
     });
 });
-</js_script>
+</script>
 
-<define-tag removed>
+[% BLOCK removed %]
 <div id="previous_vers_accordion">
 
 <h2 id="previous-vers">Previous Versions</h2>
 
 <div>
 
-</div> ;;; End accordion div.
+</div>
 
 </div>
 
-</define-tag>
+[% END %]
 
 <h2 id="see_also">See Also</h2>
 
@@ -98,3 +95,5 @@ TODO : Fill in.
 </li>
 
 </ul>
+
+[% END %]

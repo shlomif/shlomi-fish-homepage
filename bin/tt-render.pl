@@ -402,6 +402,7 @@ foreach my $result (@tt)
     $toc->add_toc( \$html );
     if ($stdout)
     {
+        binmode STDOUT, ':encoding(utf-8)';
         print $html;
     }
     else

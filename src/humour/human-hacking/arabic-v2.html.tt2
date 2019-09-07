@@ -1,0 +1,29 @@
+[% SET rtl_layout = "1" %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "The Human Hacking Field Guide - Version 2 - Arabic Translation" -%]
+[%- SET desc = "The Human Hacking Field Guide - Version 2 - Arabic Translation" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<div class="english">
+
+<p><b>By:</b> Shlomi Fish</p>
+
+<p><b>Translated into Arabic by:</b> Vieq</p>
+
+</div>
+
+[% long_stories__calc_logo(id => 'hhfg') %]
+
+<h2 id="text">The Text</h2>
+
+<div class="story">
+
+<h3 id="the-story">The Story</h3>
+
+[% INCLUDE "docbook/5/rendered/human-hacking-field-guide-v2-arabic.xhtml" %]
+
+</div>
+
+[% END %]

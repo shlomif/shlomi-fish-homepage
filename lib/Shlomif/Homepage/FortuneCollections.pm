@@ -52,6 +52,24 @@ sub nav_data
     return [ map { $_->nav_record() } @{ $class->get_fortune_records() } ];
 }
 
+sub calc_single_fortune_record_toc_entry
+{
+    my ( $class, $r ) = @_;
+
+    my $id   = $r->id;
+    my $desc = $r->desc;
+
+    return ( <<"EOF" );
+<li>
+<p>
+<a href="$id.html"><b>$id</b></a>
+(<a href="$id.xml">XML</a>, <a href="$id">Plaintext</a>) -
+$desc
+</p>
+</li>
+EOF
+}
+
 sub print_single_fortune_record_toc_entry
 {
     my ( $class, $r ) = @_;
@@ -85,6 +103,19 @@ sub get_single_fortune_record_all_in_one_page_entry
 (((((include "fortunes/xhtmls/$id.xhtml-for-input")))))
 </div>
 EOF
+}
+
+sub calc_fortune_records_toc
+{
+    my ($class) = @_;
+    my $ret = '';
+
+    foreach my $r ( @{ $class->get_fortune_records() } )
+    {
+        $ret .= $class->calc_single_fortune_record_toc_entry($r);
+    }
+
+    return $ret;
 }
 
 sub print_fortune_records_toc

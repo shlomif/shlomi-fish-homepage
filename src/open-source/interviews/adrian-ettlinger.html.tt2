@@ -1,0 +1,10 @@
+[%- SET title = "Interview with Adrian Ettlinger" -%]
+[%- SET desc = "Interview with Adrian Ettlinger" -%]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "screenplay-xml/rendered-html/ae-interview.html" %]
+
+[% END %]

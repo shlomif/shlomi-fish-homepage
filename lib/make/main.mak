@@ -555,17 +555,17 @@ $(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-proj
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
-$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-rev5.html.wml: lib/htmls/The-Enemy-rev5.html-part
+all_deps: lib/htmls/The-Enemy-rev5.html-part
 
 lib/htmls/The-Enemy-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
-$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.html.wml: lib/htmls/The-Enemy-English-rev5.html-part
+all_deps: lib/htmls/The-Enemy-English-rev5.html-part
 
 lib/htmls/The-Enemy-English-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
-$(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.html.wml: lib/htmls/The-Enemy-English-rev6.html-part
+all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 
 lib/htmls/The-Enemy-English-rev6.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -

@@ -1,14 +1,11 @@
-<set-var rtl_layout="1" />
-#include "multi-lang.wml"
-<set-var shlomif_lang="he" />
+[% SET rtl_layout = "1" %]
+[% SET shlomif_lang = "he" %]
+[%- SET title = "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" -%]
+[%- SET desc = "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" -%]
 
-#include "template.wml"
 
-#include "toc_div.wml"
-
-<latemp_subject "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" />
-
-<latemp_meta_desc "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>מזהה של מערכת ניהול הגרסאות (Version Control ID)</h2>
 
@@ -31,7 +28,6 @@ This work is licensed under the <a rel="license" href="http://creativecommons.or
 version 2.0 or at your option any more higher version.
 <!-- /Creative Commons License -->
 </p>
-
 <!--
 <rdf:RDF xmlns="http://web.resource.org/cc/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -180,3 +176,5 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <a href="http://www.ohel-shem.com/subjects/sifrut/hibur2.htm">הנחיות לקראת חיבור מאת זמירה שם-טוב</a>
 </li>
 </ul>
+
+[% END %]

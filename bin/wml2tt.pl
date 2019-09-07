@@ -49,7 +49,7 @@ while (s{^<(page_extra_head_elements)>(.*?)</\1>}{}ms)
     $meta .= "[% BLOCK $1 %]${2}[% END %]\n";
 }
 
-s{\A[\s\n\r]*#include "template.wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{${assigns}[%- SET title = $1 -%]
+s{\A[\s\n\r]*#include "(?:multi-lang|template).wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{${assigns}[%- SET title = $1 -%]
 ${meta}
 
 [%- PROCESS "blocks.tt2" -%]

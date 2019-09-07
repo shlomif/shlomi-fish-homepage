@@ -10,6 +10,11 @@ s#<(cc_by_british_blurb|cc_by_sa_british_blurb|cc_by_sa_license_british|book_inf
 my $assigns = '';
 s#\s*<set-var\s+(rtl_layout|shlomif_lang)="?([^"]+)"?\s*/>\s*#$assigns .= qq/[% SET $1 = "$2" %]\n/;""#egms;
 
+s#<(longblank)\s*/\s*>#
+    my ($tag, $args) = ($1, ($2 // ''));
+    $tag =~ tr/-/_/;
+    "[% $tag %]"
+    #egms;
 s#<(rindolf_floaty_img|w2l_devel_talk__license|project_euler_progress|story_ongoing_episode_li|screenplay_github_repo|cc_by_licence_section|cc_by_nc_sa_british_blurb|common_art__graphics_design|docbook_formats_w_base|emma_watson_common_links|emma_watson_intro_text|emma_watson_intro|factoids_frame|home_pages_on_forges|humanity_licensing|lightning_talks_list|mailto_link_to_self|qp-lect|rellink|shlomif_docbook_doc_text|link_to_fiction_text|link_to_screenplay|link_to_epub_only|link_to_epub|link_to_fiction_text|links_to_judaism_and_israel|tagline|humour_link|humour_story|humour_stories_list_text|story_episode_li|x11_licence|(?:[a-z_]+_nav_block))\s([^>]*?)/>#
     my ($tag, $args) = ($1, ($2 // ''));
     $tag =~ tr/-/_/;
@@ -20,7 +25,7 @@ s#<pdoc_f f="(\w+)">#[%- WRAPPER pdoc_f f = "$1" -%]#g;
 s#<cpan_dist d="([^"]*)">#[%- WRAPPER cpan_dist d = "$1" -%]#g;
 s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;
 my $re =
-qr#(?:about_sect|hebrew_div|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
+qr#(?:about_sect|hebrew_div|riddle|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
 
 s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, ($2 // ''));
     "[% WRAPPER $tag " . ($args =~ s{([a-z_]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"

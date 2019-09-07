@@ -1,8 +1,8 @@
-#include "template.wml"
-#include "Inc/riddle.wml"
+[%- SET title = "Bugs in a Square" -%]
+[%- SET desc = "My own solution to the bugs in the square following each other riddle" -%]
 
-<latemp_subject "Bugs in a Square" />
-<latemp_meta_desc "My own solution to the bugs in the square following each other riddle" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I first encountered this problem in the science journal of a laboratory
@@ -16,7 +16,7 @@ didn’t satisfy me either. Anyway, I devised my own solution beforehand.
 Here’s the riddle:
 </p>
 
-<riddle>
+[% WRAPPER riddle  %]
 <p>
 Four bugs are standing at the corners of a square. At time 0 a bell rings and
 they start moving towards each other. Each bug advances in the direction of the
@@ -29,10 +29,10 @@ Assuming the square is 1 meter long, and the bugs are moving in the velocity of
 of the square?
 </p>
 
-</riddle>
+[%- END -%]
 
 The solution can be found some space below:
-<longblank />
+[% longblank %]
 
 
 <h2>Solution:</h2>
@@ -140,3 +140,5 @@ that generates a series of squares inside squares, and optionally marks the
 path of a single bug. And here’s the <a href="bugs-2.2.scm">corresponding
 script for Gimp version 2.2</a>.
 </p>
+
+[% END %]

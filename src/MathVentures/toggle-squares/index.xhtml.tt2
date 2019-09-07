@@ -1,6 +1,7 @@
-#include "template.wml"
-
-<page_extra_head_elements>
+[%- SET title = "Toggle Squares Game" -%]
+[%- SET desc = "Toggle Squares Game in JavaScript - originally by Ken Housley" -%]
+[%- SET more_keywords = "toggle, squares, javascript, game, online game, javascript game" -%]
+[% BLOCK page_extra_head_elements %]
 <style type="text/css">
 .game, .game td, .game tr, .game img
 {
@@ -18,25 +19,24 @@
     height: auto;
 }
 </style>
-</page_extra_head_elements>
+[% END %]
 
-<latemp_more_keywords "toggle, squares, javascript, game, online game, javascript game" />
-<latemp_subject "Toggle Squares Game" />
-<latemp_meta_desc "Toggle Squares Game in JavaScript - originally by Ken Housley" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<js_script src="toggle-squares.js"></js_script>
-<js_script src="ts-2.js"></js_script>
+<script src="toggle-squares.js"></script>
+<script src="ts-2.js"></script>
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 This game originated from a Java game by Dr. Ken Housley, whose personal
 site has since gone offline. This implementation is JavaScript-based.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="rules" title="Rules">
+[% WRAPPER h2_section id = "rules"  title = "Rules"  %]
 
 <p>
 You are presented with a board of squares that can be either of two
@@ -50,13 +50,13 @@ ones). As a result, clicking on side or corner squares will toggle
 only 6 or 4 squares.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
 <ul>
 <li>
-<a href="$(ROOT)/MathVentures/toggle_squares.html">Mathematical Analysis of
+<a href="[% base_path %]MathVentures/toggle_squares.html">Mathematical Analysis of
 the game</a> - also describes an efficient algorithm that can be done by
 a human without extra aids.
 </li>
@@ -66,9 +66,9 @@ a human without extra aids.
 </li>
 </ul>
 
-</links_sect>
+[%- END -%]
 
-<h2_section id="game" title="The Game">
+[% WRAPPER h2_section id = "game"  title = "The Game"  %]
 
 <form>
 <p>
@@ -84,4 +84,6 @@ Num Squares: <input name="num_squares" value="5" id="num_squares" />
 <div id="board">
 </div>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

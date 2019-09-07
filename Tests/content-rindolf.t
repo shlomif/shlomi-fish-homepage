@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More tests => 4;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -16,6 +16,13 @@ my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
     # TEST
     like( $content, qr{ \# Prints myfunc\(}, 'Contains a comment.' );
+}
+
+{
+    my $content = path("$T2_POST_DEST/me/rindolf/index.xhtml")->slurp_utf8;
+
+    # TEST
+    like( $content, qr{\[no-"the"!\]}, 'Contains the string' );
 }
 
 {

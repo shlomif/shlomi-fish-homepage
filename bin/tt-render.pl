@@ -147,6 +147,10 @@ my $vars = +{
         my %args = %{ shift() // {} };
         return _print_nav_block( $args{name} );
     },
+    p_ArticleIndex__calc_string => sub {
+        require Shlomif::Homepage::ArticleIndex;
+        return Shlomif::Homepage::ArticleIndex->new->calc_string();
+    },
     p_ShlomifFortunesMake__package_base => sub {
         use lib './t2/humour/fortunes/';
         use ShlomifFortunesMake;

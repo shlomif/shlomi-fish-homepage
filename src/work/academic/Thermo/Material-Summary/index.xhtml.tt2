@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Material Summary for “Introduction to Thermodynamics and Statistical Physics”" -%]
+[%- SET desc = "Material Summary for “Introduction to Thermodynamics and Statistical Physics”" -%]
 
-<latemp_subject "Material Summary for “Introduction to Thermodynamics and Statistical Physics”" />
 
-<latemp_meta_desc "Material Summary for “Introduction to Thermodynamics and Statistical Physics”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a <a href="Thermo-Material-Summary.tar.xz">summary I prepared</a>
@@ -21,3 +22,5 @@ students, so it will be more comprehensive.
 Note that I and especially the lecturer are not responsible to the
 correctness of the material here. Please report any incorrections to me.
 </p>
+
+[% END %]

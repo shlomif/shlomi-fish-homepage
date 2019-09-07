@@ -1,11 +1,8 @@
-#include "template.wml"
+[%- SET title = "Recording of Songs from the Humanity - The Movie screenplay" -%]
+[%- SET desc = "Songs from the screenplay for a film Humanity, a parody of humanity and modern life in particular: “Buy the Fish”" -%]
 
-#include "stories/blurbs.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-
-<latemp_subject "Recording of Songs from the Humanity - The Movie screenplay" />
-<latemp_meta_desc "Songs from the screenplay for a film Humanity, a parody of humanity and modern life in particular: “Buy the Fish”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -20,7 +17,7 @@ These are recordings of the songs from the screenplay
 
 <iframe src="https://www.youtube.com/embed/Y8IeBG_SSt4" allowfullscreen="allowfullscreen"></iframe>
 
-<define-tag old_flash__CANCELLING>
+[% BLOCK old_flash__CANCELLING %]
 <object type="application/x-shockwave-flash"
 style="width:450px; height:366px;"
 data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
@@ -28,8 +25,7 @@ data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
         <param name="allowFullScreen" value="true" />
         <param name="allowscriptaccess" value="always" />
 </object>
-
-</define-tag>
+[% END %]
 
 <h2 id="shlomif_singing_buy_the_fish_in_english"><a href="http://www.youtube.com/watch?v=xvjBojyWPoE">Shlomi
 Fish Singing “Buy the Fish” in English</a></h2>
@@ -38,3 +34,5 @@ Fish Singing “Buy the Fish” in English</a></h2>
 
 <div style="font-size: 0.8em"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></div>
 </div>
+
+[% END %]

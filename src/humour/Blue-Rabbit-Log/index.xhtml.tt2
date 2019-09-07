@@ -1,11 +1,10 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
+[%- SET title = "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" -%]
+[%- SET desc = "The Blue Rabbit Log - A Crazy Comedy about Tabletop Role-Playing Games" -%]
 
-<latemp_subject "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" />
-<latemp_meta_desc "The Blue Rabbit Log - A Crazy Comedy about Tabletop Role-Playing Games" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<intro>
+[% WRAPPER intro  %]
 
 <p>
 <i>The Blue Rabbit Log</i> is an original but incomplete screenplay for a
@@ -16,24 +15,24 @@ Included here are the beginning of the screenplay of the first part and
 some disorganised ideas for the continuation.
 </p>
 
-</intro>
+[%- END -%]
 
-<h2_section id="read_online" title="The Text">
+[% WRAPPER h2_section id = "read_online"  title = "The Text"  %]
 
 <ul>
 
-<set-var epub_prefix="Blue-Rabbit-Log-" />
-<story_episode_li base="part-1" story_title="Part I - The Ongoing Text" />
+[% SET epub_prefix="Blue-Rabbit-Log-" %]
+[% PROCESS story_episode_li base = "part-1", story_title = "Part I - The Ongoing Text",  %]
 
 <li>
 <p>
-<screenplay_github_repo url="http://github.com/shlomif/Blue-Rabbit-Log" />
+[% PROCESS screenplay_github_repo url = "http://github.com/shlomif/Blue-Rabbit-Log",  %]
 </p>
 </li>
 
 <li>
 <p>
-<link_to_screenplay base="Blue-Rabbit-Log-Part-1" />
+[% PROCESS link_to_screenplay base = "Blue-Rabbit-Log-Part-1",  %]
 </p>
 </li>
 
@@ -45,9 +44,9 @@ some disorganised ideas for the continuation.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<licence_sect>
+[% WRAPPER licence_sect  %]
 
 <p>
 The <i>Blue Rabbit Log</i>’s Screenplay and Ideas are made available under the
@@ -57,22 +56,22 @@ option any later version of this licence)</a>. It is copyright by
 <a href="http://www.shlomifish.org/">Shlomi Fish</a>, 2009.
 </p>
 
-</licence_sect>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also  %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/art/d-and-d-cartoon--comparing-lances/">D&amp;D Cartoon - comparing horse
+<a href="[% base_path %]art/d-and-d-cartoon--comparing-lances/">D&amp;D Cartoon - comparing horse
 lances.</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/MathVentures/3d-outof-4d-mathml.xhtml">“Combinatorics
+<a href="[% base_path %]MathVentures/3d-outof-4d-mathml.xhtml">“Combinatorics
 and the art of Dungeons and Dragons”</a> - another D&amp;D-inspired page - this
 time about Mathematics.
 </p>
@@ -80,4 +79,6 @@ time about Mathematics.
 
 </ul>
 
-</see_also>
+[%- END -%]
+
+[% END %]

@@ -566,6 +566,13 @@ sub _get_all_stories_entries_tags
             @_Stories ];
 }
 
+sub calc_abstract
+{
+    my ( $class, $id ) = @_;
+
+    return join( "", @{ $class->_get_abstract_tags($id) } );
+}
+
 sub render_abstract
 {
     my ( $class, $id ) = @_;

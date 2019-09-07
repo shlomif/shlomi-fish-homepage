@@ -277,6 +277,11 @@ EOF
         return Shlomif::Homepage::LongStories->calc_common_top_elems(
             $args{id} );
     },
+    long_stories__calc_abstract => sub {
+        require Shlomif::Homepage::LongStories;
+        my $args = shift() // {};
+        return Shlomif::Homepage::LongStories->calc_abstract( $args->{id} );
+    },
     long_stories__calc_logo => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift() // {};

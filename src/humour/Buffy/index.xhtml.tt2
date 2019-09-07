@@ -1,0 +1,27 @@
+[%- SET title = "Buffy fan‐fiction by Shlomi Fish" -%]
+[%- SET desc = "Buffy fan‐fiction by Shlomi Fish" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<p>
+This page contains a list of Buffy fan‐fiction by Shlomi Fish.
+</p>
+
+[% WRAPPER h2_section id = "stories"  title = "The Stories"  %]
+
+[% WRAPPER h3_section id = "selina_mandrake"  href = "${base_path}humour/Selina-Mandrake/"  title="<i>Selina Mandrake — The Slayer</i>" %]
+
+[% long_stories__calc_abstract(id => 'selina_mandrake') %]
+
+[%- END -%]
+
+[% WRAPPER h3_section id = "a_few_good_slayers"  href = "A-Few-Good-Slayers/"  title="<i>Buffy: a Few Good Slayers</i>" %]
+
+[% long_stories__calc_abstract(id => 'buffy_a_few_good_slayers') %]
+
+[%- END -%]
+
+[%- END -%]
+
+[% END %]

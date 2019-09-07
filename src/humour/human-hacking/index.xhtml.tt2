@@ -1,17 +1,13 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "toc_div.wml"
-#include "Inc/nav_blocks.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "The Human Hacking Field Guide" -%]
+[%- SET desc = "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." -%]
+[%- SET more_keywords = "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" -%]
 
-<latemp_subject "The Human Hacking Field Guide" />
-<latemp_meta_desc "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." />
-<latemp_more_keywords "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('hhfg'); :>
+[% long_stories__calc_common_top_elems(id => 'hhfg') %]
 
-<define-tag old_desc>
+[% BLOCK old_desc %]
 <p>
 An unlikely female computer <a
 href="http://www.catb.org/~esr/faqs/hacker-howto.html">hacker</a> (=
@@ -19,7 +15,7 @@ software enthusiast, not a computer intruder)-wannabe is getting taught by an
 even more unlikely female computer hacker. It takes place in Los Angeles,
 California and is written in English.
 </p>
-</define-tag>
+[% END %]
 
 <h2 id="text">The Text</h2>
 
@@ -33,7 +29,7 @@ California and is written in English.
 </p>
 </li>
 
-<link_to_epub basename="human-hacking-field-guide-v2--english" />
+[% PROCESS link_to_epub basename = "human-hacking-field-guide-v2--english",  %]
 
 <li>
 <p>
@@ -69,7 +65,7 @@ Sources:
 
 <li>
 <p>
-<link_to_fiction_text base="human-hacking-field-guide-hebrew-v2" />
+[% PROCESS link_to_fiction_text base = "human-hacking-field-guide-hebrew-v2",  %]
 </p>
 </li>
 
@@ -104,7 +100,7 @@ stylesheet</a> to post-process the resultant DocBook 5/XML source.
 
 </ul>
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="source_repo">Source Repository</h2>
 
@@ -124,7 +120,7 @@ stylesheet</a> to post-process the resultant DocBook 5/XML source.
 
 </ul>
 
-<define-tag buffy_inspiration>
+[% BLOCK buffy_inspiration %]
 <li>
 <p>
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_(TV_series)">The <i>Buffy the Vampire Slayer</i> television series</a> - I believe the
@@ -134,7 +130,7 @@ were heavily inspired by those of
 and <a href="http://en.wikipedia.org/wiki/Faith_(Buffy_the_Vampire_Slayer)">Faith</a> from the television show, respectively.
 </p>
 </li>
-</define-tag>
+[% END %]
 
 <h2 id="see_also">See Also</h2>
 
@@ -152,14 +148,14 @@ initiative).
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek:
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek:
 “We, the Living Dead”</a> - a screenplay for an original
 <i>Star Trek: Deep Space Nine</i> episode, which also predominantly features
 software hackerdom and female geeks.
 </p>
 </li>
 
-<buffy_inspiration />
+[% PROCESS buffy_inspiration %]
 
 <li>
 <p>
@@ -183,7 +179,7 @@ some very good HTML and CSS tutorials.
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create
+<a href="[% base_path %]philosophy/computers/web/create-a-great-personal-homesite/rev2.html">“Create
 a Great Personal Home Site”</a> - my essay about creating a personal web site.
 </p>
 </li>
@@ -191,9 +187,9 @@ a Great Personal Home Site”</a> - my essay about creating a personal web site.
 
 <li>
 <p>
-<a href="http://freenode.net/">Freenode</a> - an <my_acronym key="IRC"/> network dedicated for
+<a href="http://freenode.net/">Freenode</a> - an [% my_acronym( "key" => "IRC",) %] network dedicated for
 discussing Free and Open Source Software projects, and other collaborative
-projects, that is featured in the story. <b>Warning:</b> <my_acronym key="IRC"/> is addictive.
+projects, that is featured in the story. <b>Warning:</b> [% my_acronym( "key" => "IRC",) %] is addictive.
 </p>
 </li>
 
@@ -203,7 +199,7 @@ projects, that is featured in the story. <b>Warning:</b> <my_acronym key="IRC"/>
 
 <ol>
 
-<buffy_inspiration />
+[% PROCESS buffy_inspiration %]
 
 <li>
 <p>
@@ -263,8 +259,8 @@ favourite song of theirs.
 
 <li>
 <p>
-<a href="$(ROOT)/humour.html#too_girly">“Too Girly”</a> -
-<my_acronym key="IRC"/> conversation.
+<a href="[% base_path %]humour.html#too_girly">“Too Girly”</a> -
+[% my_acronym( "key" => "IRC",) %] conversation.
 </p>
 </li>
 
@@ -326,7 +322,7 @@ If you enjoyed the story, but still think you can do better, I would love to
 see more spin-offs, from making the story a little different, to writing
 sequels, prequels, etc. to video or audio versions of it. If you find
 the CC-by-sa too permissive or too restrictive to license the derivative
-work under, then <a href="$(ROOT)/me/contact-me/">drop me
+work under, then <a href="[% base_path %]me/contact-me/">drop me
 a line</a> and we may be able to negotiate a better, commercial, licence.
 </p>
 
@@ -365,14 +361,14 @@ and Enjoy! (As long as you keep the derivatives under the same licence.)
 
 <tr>
 
-<td> ;;; start image
+<td>
 
 <a href="images/hhfg-ad-468x60.svg.png"><img
     src="images/hhfg-ad-468x60.svg.preview.png" alt="banner ad for HHFG" /></a>
 
-</td> ;;; end image
+</td>
 
-<td> ;;; start description
+<td>
 
 <p>
 Banner (468 * 60 pixels) ad reading “The Human Hacking Field Guide ;
@@ -389,21 +385,21 @@ Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logo
 
 </ul>
 
-</td> ;;; end description
+</td>
 
 </tr>
 
 
 <tr>
 
-<td> ;;; start image
+<td>
 
 <a href="images/hhfg-ad.svg.png"><img
 src="images/hhfg-ad.svg.png" alt="skyscraper ad for HHFG" /></a>
 
-</td> ;;; end image
+</td>
 
-<td> ;;; start description
+<td>
 
 <p>
 Skyscraper (160 * 600 pixels) ad reading “The Human Hacking Field Guide ;
@@ -420,15 +416,16 @@ Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logo
 
 </ul>
 
-</td> ;;; end description
+</td>
 
 </tr>
 
-
 </table>
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<foss_nav_block />
+[% PROCESS foss_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

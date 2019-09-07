@@ -1,39 +1,33 @@
-#include "template.wml"
-#include "Inc/acronyms.wml"
-#include "toc_div.wml"
+[%- SET title = "About “Rindolf” - Shlomi Fish’s Nickname" -%]
+[%- SET desc = "About “Rindolf” - Shlomi Fish’s Nickname: Rindolf the Dwarven Warrior, the IRC nickname, Rindolf the Evil Reindeer, and “Rindolfism”" -%]
 
-<latemp_subject "About “Rindolf” - Shlomi Fish’s Nickname" />
 
-<latemp_meta_desc "About “Rindolf” - Shlomi Fish’s Nickname: Rindolf the Dwarven Warrior, the IRC nickname, Rindolf the Evil Reindeer, and “Rindolfism”" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<define-tag rindolf_floaty_img>
-<preserve href src alt title />
-<set-var %attributes />
-
-<a href="<get-var href />"><img src="<get-var src />" alt="<get-var alt />" title="<get-var title />" style="float:right;margin:0 2em;" /></a>
-
-<restore href src alt title />
-</define-tag>
+[% BLOCK rindolf_floaty_img %]
+<a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" style="float:right;margin:0 2em;" /></a>
+[% END %]
 
 <div class="side_toc fancy_sects lim_width">
 
-<toc_div />
+[% toc_div( ) %]
 
-<h2_section id="what" title="“Rindolf” - Shlomi Fish’s Nickname">
+[% WRAPPER h2_section id = "what"  title = "“Rindolf” - Shlomi Fish’s Nickname"  %]
 
 <p>
-I, Shlomi Fish, have decided to allow people on and off <my_acronym key="IRC"/> to call me
+I, Shlomi Fish, have decided to allow people on and off [% my_acronym( "key" => "IRC",) %] to call me
 “Rindolf”, due to the fact that some non-Hebrew inclined people have problems
-with my private name - <a href="$(ROOT)/meta/FAQ/#your_name">“Shlomi”</a>.
+with my private name - <a href="[% base_path %]meta/FAQ/#your_name">“Shlomi”</a>.
 Some common pet names for Rindolf include “Rin”,
 “Rinny”, “Rindy”, “Rinfold”, etc.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rindolf_the_dwarf" title="Rindolf the Dwarven Warrior">
+[% WRAPPER h2_section id = "rindolf_the_dwarf"  title = "Rindolf the Dwarven Warrior"  %]
 
-<rindolf_floaty_img href="http://clockworkgods.wikia.com/wiki/Dwarf" src="images/500px-Dwarf_miner--200w.jpg" alt="Dwarven Warrior with a Pick" title="Photo of a Dwarven Warrior with a War pick" />
+[% INCLUDE rindolf_floaty_img href = "http://clockworkgods.wikia.com/wiki/Dwarf", src = "images/500px-Dwarf_miner--200w.jpg", alt = "Dwarven Warrior with a Pick", title = "Photo of a Dwarven Warrior with a War pick",  %]
 <p>
 Rindolf was a dwarven warrior that I played in an
 <a href="http://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons#Advanced_Dungeons_.26_Dragons_2nd_edition">AD&amp;D 2nd edition</a> session. I
@@ -63,14 +57,14 @@ I settled on “rindolf”, which I felt was the most original nickname, and par
 of my individuality.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rindolf_the_evil_reindeer" title="Rindolf the Evil Reindeer">
+[% WRAPPER h2_section id = "rindolf_the_evil_reindeer"  title = "Rindolf the Evil Reindeer"  %]
 
-<rindolf_floaty_img href="https://drawception.com/viewgame/eydXpMGgOh/inception/" src="images/evil-reindeer-200w.png" alt="Evil Reindeer" title="Photo of “Rindolf” the EvilReindeer" />
+[% INCLUDE rindolf_floaty_img href = "https://drawception.com/viewgame/eydXpMGgOh/inception/", src = "images/evil-reindeer-200w.png", alt = "Evil Reindeer", title = "Photo of “Rindolf” the EvilReindeer",  %]
 
 <p>
-After I started talking intensively on <my_acronym key="IRC"/> at around 2003 and 2004, especially
+After I started talking intensively on [% my_acronym( "key" => "IRC",) %] at around 2003 and 2004, especially
 on the <a href="http://freenode.net/">Freenode network</a>, which I can
 still recommend, a few people teased me for being one of Santa Claus’s
 red-nosed
@@ -96,27 +90,27 @@ Some of Rindolf the Evil Reindeer’s appearances on IRC include:
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-reindeers-tomatoes-and-nicks">“Reindeer, Tomatoes and Nicks”</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-reindeers-tomatoes-and-nicks">“Reindeer, Tomatoes and Nicks”</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-the-ultimate-showdown">“The Ultimate ##programming Showdown”</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-the-ultimate-showdown">“The Ultimate ##programming Showdown”</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-what-kind-of-animal-is-Zuu">“What kind of animal is Zuu?”</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-what-kind-of-animal-is-Zuu">“What kind of animal is Zuu?”</a>
 </p>
 </li>
 
 </ol>
 
-<h3_section id="gandalfs_reindeer" title="Gandalf’s Reindeer">
+[% WRAPPER h3_section id = "gandalfs_reindeer"  title = "Gandalf’s Reindeer"  %]
 
-<rindolf_floaty_img href="images/my-name-is-rindolf.jpg" src="images/my-name-is-rindolf-200w.jpg" alt="My Name is Rindolf" title="Gandalf saying “My name is Rindolf”" />
+[% INCLUDE rindolf_floaty_img href = "images/my-name-is-rindolf.jpg", src = "images/my-name-is-rindolf-200w.jpg", alt = "My Name is Rindolf", title = "Gandalf saying “My name is Rindolf”",  %]
 
 <p>
 Some people told me the name “Rindolf” reminds them of that of
@@ -126,9 +120,9 @@ and became the former pet of Gandalf, who betrayed him and acquired a lot
 of evil magic using his EvilAntlers™.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="the_rindolf_algo" title="The Rindolf Algorithm">
+[% WRAPPER h3_section id = "the_rindolf_algo"  title = "The Rindolf Algorithm"  %]
 
 <p>
 Rindolf has devised The Rindolf Algorithm, which is a sophisticated encryption
@@ -137,9 +131,9 @@ with the sole exception of one's 5 years old little sister. See
 <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Rijndael</a>.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="rindolf_aim_very_high_hitlower" title="Rindolf “Aim Very High” Hitlower">
+[% WRAPPER h3_section id = "rindolf_aim_very_high_hitlower"  title = "Rindolf “Aim Very High” Hitlower"  %]
 
 <p>
 Not only is Rindolf an evil Reindeer, but he is also the notorious insane
@@ -152,9 +146,9 @@ very high</b> in the hope that I will hit the aim or perhaps a little lower,
 and so settled on this nickname.
 </p>
 
-<h4_section id="the_hacker_monarch" title="The Hacker Monarch">
+[% WRAPPER h4_section id = "the_hacker_monarch"  title = "The Hacker Monarch"  %]
 
-<rindolf_floaty_img href="$(ROOT)/humour/bits/facts/Summer-Glau/" src="$(ROOT)/humour/bits/facts/images/summer-glau-1-200w.jpg" alt="Photo of Summer Glau from the English Wikipedia" title="Summer Glau" />
+[% INCLUDE rindolf_floaty_img href = "${base_path}humour/bits/facts/Summer-Glau/", src = "${base_path}humour/bits/facts/images/summer-glau-1-200w.jpg", alt = "Photo of Summer Glau from the English Wikipedia", title = "Summer Glau",  %]
 
 <p>
 I concluded that
@@ -165,7 +159,7 @@ up-to-and-until the publication of the informal screenplay
 at the NSA”</a>. At that point, one of my
 <a href="http://en.wikipedia.org/wiki/Galatea_%28mythology%29">“Galateas”</a>,
 the lovely and real-life
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau</a>, became an
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau</a>, became an
 “apple that completely supplanted the tree”.
 </p>
 
@@ -179,9 +173,9 @@ in Black</i></a>. Despite whatever faults she or I had, we are both full of
 awesomeness.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="from_the_invisible_to_alpha_male" title="From the Invisible to the Alpha Male">
+[% WRAPPER h4_section id = "from_the_invisible_to_alpha_male"  title = "From the Invisible to the Alpha Male"  %]
 
 <p>
 Meanwhile, I’m glad I’m no longer playing
@@ -207,11 +201,11 @@ years of wonder, fame, fortune, and especially - love, strength, sexiness,
 pluralism, joy and happiness.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="passing_the_baton" title="Passing the Baton">
+[% WRAPPER h4_section id = "passing_the_baton"  title = "Passing the Baton"  %]
 
-<rindolf_floaty_img href="images/brown-1d10-SGlau-LARGE.jpg" src="images/brown-1d10-SGlau-scaled.jpg" alt="My ten-sided-die “Schartz” ring/amulet of power" title="My ten-sided-die “Schartz” ring/amulet of power" />
+[% INCLUDE rindolf_floaty_img href = "images/brown-1d10-SGlau-LARGE.jpg", src = "images/brown-1d10-SGlau-scaled.jpg", alt = "My ten-sided-die “Schartz” ring/amulet of power", title = "My ten-sided-die “Schartz” ring/amulet of power",  %]
 
 <p>
 I hope I can meet Summer Glau at the upcoming
@@ -232,9 +226,9 @@ is <b>blessed</b> and <b>cursed</b> at the same time (which are
 the same coin</a>). Now Summer will decide what to do with it.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="sic_transit_gloria" title="Sic Transit Gloria">
+[% WRAPPER h4_section id = "sic_transit_gloria"  title = "Sic Transit Gloria"  %]
 
 <p>
 I was the hacker king and it was a great honour, but I guess that
@@ -243,23 +237,23 @@ Gloria Mundi</b></a>, and
 if asked I would have known this day would come.
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="looking_into_the_future" title="Looking into the Future">
+[% WRAPPER h4_section id = "looking_into_the_future"  title = "Looking into the Future"  %]
 
 <p>
 In the meanwhile:
 <a href="http://www.reddit.com/r/Judaism/comments/2923ba/what_does_jehovah_mean/">Summer Glau
 jehovah Qoheleth</a>. So let me say: <a href="http://www.shlomifish.org/humour.html#carpe_diem">Carpe diem</a>,
 motherfucker!!! Do you speak it?! And:
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">hackers</a> of the world - unite!!
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">hackers</a> of the world - unite!!
 </p>
 
-</h4_section>
+[%- END -%]
 
-<h4_section id="update_long_live_us_hacker_monarchs" title="Update: Long Live, us, [no-\"the\"!] Hacker Monarchs!">
+[% WRAPPER h4_section id = "update_long_live_us_hacker_monarchs"  title = "Update: Long Live, us, [no-\"the\"!] Hacker Monarchs!" %]
 
-<rindolf_floaty_img href="$(ROOT)/philosophy/SummerNSA/" src="$(ROOT)/humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png" alt="Summerschool at the NSA Logo" title="Summerschool at the NSA Logo" />
+[% INCLUDE rindolf_floaty_img href = "${base_path}philosophy/SummerNSA/", src = "${base_path}humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png", alt = "Summerschool at the NSA Logo", title = "Summerschool at the NSA Logo",  %]
 
 <p>
 (<b>2014-Sep-07</b>)
@@ -314,13 +308,13 @@ successful, rich, and famous, writer/entertainer/philosopher and
 screenwriter. Remember the name: Shlomi “Rindolf” Fish!
 </p>
 
-</h4_section>
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rindolfism" title="Rindolfism">
+[% WRAPPER h2_section id = "rindolfism"  title = "Rindolfism"  %]
 
 <p>
 Rindolfism is my own personal philosophy and idea system, based on many
@@ -498,11 +492,11 @@ Try to compete with it.
 <p>
 I am also not planning to write a complete summary of Rindolfism any time soon,
 because like I said, it is constantly evolving, and because I don't see
-the point. If interested, you can read <a href="$(ROOT)/philosophy/">my
+the point. If interested, you can read <a href="[% base_path %]philosophy/">my
 essays</a> (some of which are somewhat outdated),
-<a href="$(ROOT)/humour/">my works of humour and fiction</a> (which are
+<a href="[% base_path %]humour/">my works of humour and fiction</a> (which are
 arguably both more serious, and not as funny as my essays),
-the posts on my <a href="$(ROOT)/me/blogs/">blogs</a>,
+the posts on my <a href="[% base_path %]me/blogs/">blogs</a>,
 <a href="http://twitter.com/shlomif">my <b>Twitter</b> feed</a>, and other
 Internet
 <a href="#shlomif_on_the_web">social media outlets</a> where I have posted
@@ -517,14 +511,14 @@ For some attempts at codifying Rindolfism, see:
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/the-eternal-jew/">“The Eternal Jew”</a> - an old
+<a href="[% base_path %]philosophy/the-eternal-jew/">“The Eternal Jew”</a> - an old
 essay, but still mostly pertinent.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
 all the Cards on the Table (2013)”</a> - a newer essay - relevant for 2013,
 about which I received mixed opinions, may not be for everyone and that may
 require a lot of revamping.
@@ -545,7 +539,7 @@ require a lot of revamping.
 
 </ol>
 
-<h3_section id="neo_semitism" title="Neo-Semitism">
+[% WRAPPER h3_section id = "neo_semitism"  title = "Neo-Semitism"  %]
 
 <p>
 A central tenant of “Rindolf” is Neo-Semitism, which has been an attempt to
@@ -558,7 +552,7 @@ as a facilitator, and with fast land, sea, and air travel.
 
 <p>
 I originally documented the term in
-<a href="$(ROOT)/humour/Selina-Mandrake/ongoing-text.html#from-dispeller-to-selina">a scene from my screenplay Selina Mandrake</a>:
+<a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html#from-dispeller-to-selina">a scene from my screenplay Selina Mandrake</a>:
 </p>
 
 <blockquote>
@@ -572,11 +566,11 @@ cross-pollination, acceptance, tolerance, rationality and life.
 
 </blockquote>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="rindolf_trivia" title="Trivia">
+[% WRAPPER h2_section id = "rindolf_trivia"  title = "Trivia"  %]
 
 <ul>
 
@@ -623,9 +617,9 @@ is the language of love and “Love is Evil, and Evil is Love”.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="credits" title="Credits">
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
 
 <ul>
 
@@ -655,6 +649,8 @@ Gandalf photo with caption provided by a Facebook friend of a friend.
 </li>
 </ul>
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

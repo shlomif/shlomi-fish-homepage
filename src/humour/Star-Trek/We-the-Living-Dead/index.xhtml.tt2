@@ -1,23 +1,21 @@
-#include "template.wml"
-#include "stories/stories-list.wml"
-#include "xml_g_fiction.wml"
-#include "Inc/judaism_and_israel.wml"
-#include "Inc/star_trek.wml"
+[%- SET title = "Star Trek: “We, the Living Dead”" -%]
+[%- SET desc = "Fan Episode of Star Trek: Deep Space Nine where we discover the true essence of the Q Continuum, and meet some “living dead” and “vampires”. Also crossing Buffy, Judaism, computer geeks’ culture, and other influences." -%]
 
-<latemp_subject "Star Trek: “We, the Living Dead”" />
-<latemp_meta_desc "Fan Episode of Star Trek: Deep Space Nine where we discover the true essence of the Q Continuum, and meet some “living dead” and “vampires”. Also crossing Buffy, Judaism, computer geeks’ culture, and other influences." />
 
-<: Shlomif::Homepage::LongStories->render_common_top_elems('we_the_living_dead'); :>
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<screenplay_read_online>
+[% long_stories__calc_common_top_elems(id => 'we_the_living_dead') %]
+
+[% WRAPPER screenplay_read_online  %]
 
 <ul>
 
-<story_ongoing_episode_li base="Star-Trek--We-the-Living-Dead" />
+[% PROCESS story_ongoing_episode_li base = "Star-Trek--We-the-Living-Dead",  %]
 
 <li>
 <p>
-<screenplay_github_repo url="https://github.com/shlomif/Star-Trek--We-the-Living-Dead" />
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Star-Trek--We-the-Living-Dead",  %]
 </p>
 </li>
 
@@ -32,9 +30,9 @@ Fan Art Wikia</a> (so-called “Star Trek Expanded Universe”)
 
 </ul>
 
-</screenplay_read_online>
+[%- END -%]
 
-<h2_section id="story_elements" title="Common Elements in the Story">
+[% WRAPPER h2_section id = "story_elements"  title = "Common Elements in the Story"  %]
 
 <p>
 This episode will contain many elements, a lot of them are common in other
@@ -52,7 +50,7 @@ Computers, software, maths, logic and technology.
 </li>
 
 <li>
-<a href="$(ROOT)/philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a> and
+<a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a> and
 Objectivism and related topics like individualism, greed and free economy.
 </li>
 
@@ -99,11 +97,11 @@ and the Return of James T. Kirk</i></a>, which I have not read, but indeed
 seems extremely far-fetched.
 </p>
 
-</h2_section>
+[%- END -%]
 
-<when>
+[% IF 0 %]
 
-<h2_section id="ebook" title="Ebook for Purchase">
+[% WRAPPER h2_section id = "ebook"  title = "Ebook for Purchase"  %]
 
 <p>
 An Ebook of the screenplay for purchase in EPUB and MOBI formats.
@@ -122,13 +120,13 @@ The Ebooks are made available under the same CC-by-sa licence as the source,
 and can be built from the repository with some technical know how.
 </p>
 
-</h2_section>
+[%- END -%]
 
-</when>
+[% END %]
 
-<links_sect>
+[% WRAPPER links_sect  %]
 
-<h3_section id="star_trek_links" title="Star Trek Links">
+[% WRAPPER h3_section id = "star_trek_links"  title = "Star Trek Links"  %]
 
 <ul>
 
@@ -155,7 +153,7 @@ Wikipedia</a>.
 </li>
 
 <li>
-<a href="$(ROOT)/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The Hitchhiker’s
+<a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The Hitchhiker’s
 Guide to Star Trek - The Next Generation</a> - a wonderful cross of both
 the <i>Hitchhiker’s Guide to the Galaxy</i>, and <i>Star Trek: The Next
 Generation</i>.
@@ -168,13 +166,13 @@ From Memories of the Future Volume One</a> - by Wil Wheaton, under CC-by-nc-sa.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="philosophy_links" title="Links to the Philosophy Behind the Story">
+[% WRAPPER h3_section id = "philosophy_links"  title = "Links to the Philosophy Behind the Story"  %]
 
 <ul>
 <li>
-<a href="$(ROOT)/philosophy/philosophy/guide-to-neo-tech/">“Guide to
+<a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">“Guide to
 Neo-Tech”</a> - a small article I wrote introducing a willing reader on
 getting started with Neo-Tech.
 </li>
@@ -184,16 +182,16 @@ in the Wikipedia</a>
 </li>
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<links_to_judaism_and_israel />
+[% PROCESS links_to_judaism_and_israel  %]
 
-<h3_section id="hackerdom" title="Links about Hackerdom">
+[% WRAPPER h3_section id = "hackerdom"  title = "Links about Hackerdom"  %]
 
 <ul>
 
 <li>
-<a href="$(ROOT)/philosophy/foss-other-beasts/">“Open Source, Free
+<a href="[% base_path %]philosophy/foss-other-beasts/">“Open Source, Free
 Software and other Beasts”</a> - an essay I wrote introducing the free
 and open-source software world to people who are not familiar with it.
 </li>
@@ -204,23 +202,23 @@ to Become a Hacker”</a>
 </li>
 
 <li>
-<a href="$(ROOT)/humour/human-hacking/"><i>The Human Hacking
+<a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking
 Field Guide</i></a> - another story I wrote about hackerdom.
 </li>
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</links_sect>
+[%- END -%]
 
-<see_also>
+[% WRAPPER see_also  %]
 
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i>
+<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i>
 (a Buffy parody)</a> - a parody and modernisation of the show
 <i>Buffy the Vampire Slayer</i> that has many ties to this screenplay,
 and also features some characters and concepts from
@@ -243,11 +241,13 @@ place.
 
 </ul>
 
-</see_also>
+[%- END -%]
 
-<nav_blocks>
+[% WRAPPER nav_blocks  %]
 
-<star_trek_nav_block />
-<buffy_nav_block />
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS buffy_nav_block  %]
 
-</nav_blocks>
+[%- END -%]
+
+[% END %]

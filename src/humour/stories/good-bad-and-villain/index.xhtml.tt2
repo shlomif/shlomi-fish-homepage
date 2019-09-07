@@ -1,9 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Good, the Bad, and the Villain" -%]
+[%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength and beauty" -%]
 
-#include "stories/stories-list.wml"
 
-<latemp_subject "The Good, the Bad, and the Villain" />
-<latemp_meta_desc "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength and beauty" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -29,3 +29,5 @@ TODO: write.
 </tr>
 
 </table>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "factoids/common-out/tags.wml"
+[%- SET title = "Shlomi Fish’s Humorous Collections of Facts" -%]
+[%- SET desc = "Funny facts about Chuck Norris, Summer Glau, Emma Watson, Buffy, Prof. Don Knuth, Larry Wall, XSLT (the epitome of Evil), the NSA, and Xena the Warrior Princess" -%]
 
-<latemp_subject "Shlomi Fish’s Humorous Collections of Facts" />
-<latemp_meta_desc "Funny facts about Chuck Norris, Summer Glau, Emma Watson, Buffy, Prof. Don Knuth, Larry Wall, XSLT (the epitome of Evil), the NSA, and Xena the Warrior Princess" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[%- PROCESS "factoids/common-out/tags.tt2" -%]
 
 <section class="intro">
 <h2 id="intro">Introduction</h2>
@@ -27,7 +28,7 @@ friends seem to, so don't worry if you do not.
 
 <h2 id="the-collections">The Collections</h2>
 
-<facts__list />
+[% INCLUDE facts__list %]
 
 </section>
 
@@ -45,3 +46,5 @@ proofreading these pages.
 </ul>
 
 </section>
+
+[% END %]

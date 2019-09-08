@@ -1068,41 +1068,7 @@ foreach my $page (@pages)
 [% END %]
 END_OF_TEMPLATE
 
-    my $tt_text = <<'END_OF_TEMPLATE';
-#include "template.wml"
-
-#include "Inc/emma_watson.wml"
-#include "Inc/factoids_jqui_tabs_multi_lang.wml"
-#include "Inc/nav_blocks.wml"
-#include "Inc/summer_glau.wml"
-#include "factoids/common-out/tags.wml"
-#include "stories/stories-list.wml"
-
-<latemp_subject "[% p.title() %]" />
-<latemp_meta_desc "[% p.meta_desc() %]" />
-
-<facts__[% p.short_id() %] />
-
-<facts__header_tabs id_base="[% p.id_base() %]" h="[% p.tabs_title() %]" />
-
-<h2 id="license">Copyright and Licence</h2>
-
-<[% p.license_tag() %] year="[% p.license_year() %]" />
-
-<h2 id="links">Links</h2>
-
-[% p.links_wml() %]
-
-<h2 id="see_also">See Also</h2>
-
-[% p.see_also_wml() %]
-
-[% p.nav_blocks_wml() %]
-END_OF_TEMPLATE
-
-    my $out      = '';
     my $tt2__out = '';
-    $template->process( \$tt_text, $vars, \$out ) or die $!;
     $tt2__template->process( \$tt2__tt_text, $vars, \$tt2__out ) or die $!;
     $template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
         or die $!;
@@ -1116,9 +1082,6 @@ END_OF_TEMPLATE
     write_on_change(
         scalar( path( "lib/factoids/pages/" . $page->id_base() . '.tt2' ) ),
         \$tt2__out, );
-    write_on_change(
-        scalar( path( "lib/factoids/pages/" . $page->id_base() . '.wml' ) ),
-        \$out, );
 }
 
 write_on_change(

@@ -32,7 +32,7 @@ render_i_o()
 
 render()
 {
-    render_i_o "$1" "$1"
+    tt2__render_i_o "$1" "$1"
 }
 
 mkdir -p "$dest"

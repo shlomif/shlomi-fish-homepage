@@ -35,7 +35,7 @@ s#<cpan_dist d="([^"]*)">#[%- WRAPPER cpan_dist d = "$1" -%]#g;
 s#%body#[% content %]#g;
 s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;
 my $re =
-qr#(?:about_sect|github_captioned_image_joke|joke|header_joke|eng_header_joke|heb_header_joke|quote|comment|shot|detailed|undetailed|hebrew_div|he|en|mydesign|riddle|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
+qr#(?:about_sect|github_captioned_image_joke|joke|header_joke|li_en|li_he|eng_header_joke|heb_header_joke|quote|comment|shot|detailed|undetailed|hebrew_div|he|en|mydesign|riddle|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
 
 s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, ($2 // ''));
     "[% WRAPPER $tag " . ($args =~ s{([a-z_]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"

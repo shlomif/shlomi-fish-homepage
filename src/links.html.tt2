@@ -1,12 +1,10 @@
-#include "template.wml"
-#include "toc_div.wml"
-#include "div2mag.wml"
-#include "Inc/acronyms.wml"
+[%- SET title = "My Cool Links List" -%]
+[%- SET desc = "Shlomi Fish’s Links List: contains links to various sites and pages." -%]
 
-<latemp_subject "My Cool Links List" />
-<latemp_meta_desc "Shlomi Fish’s Links List: contains links to various sites and pages." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <div class="fancy_sects">
 
@@ -104,7 +102,7 @@ Neo-Tech by (snail) mail.
 </p>
 
 <p>
-See my <a href="$(PATH_TO_ROOT)philosophy/philosophy/guide-to-neo-tech/">guide to
+See my <a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">guide to
 Neo Tech</a> for an explanation on how to use the material that can be found
 online.
 </p>
@@ -500,7 +498,7 @@ of computer geeks’ jargon.</li>
 
 <section>
 
-<h3 id="software_foss"><a href="$(PATH_TO_ROOT)open-source/favourite/">Open Source Software</a></h3>
+<h3 id="software_foss"><a href="[% base_path %]open-source/favourite/">Open Source Software</a></h3>
 
 <p>
 Refer to this link, for a page about my favourite open source.
@@ -581,11 +579,11 @@ Operator from Hell</a> - A really funny story, for those who know about UNIX.
 <a href="http://humorix.org/">Humorix</a> - Linux-related humour items.
 </li>
 <li>
-<a href="<get-var d2url />">Divisiontwo Magazine</a> - a great
+<a href="[% d2url %]">Divisiontwo Magazine</a> - a great
 collection of parodies of the Internet Life. Includes
-<a href="<get-var d2url />articles/mcse2.htm">“Windows vs. Linux on
+<a href="[% d2url %]articles/mcse2.htm">“Windows vs. Linux on
 the Server and on the Desktop” by Jorge Lopez, MCSE</a> and
-<a href="<get-var d2url />articles/kellysworld.htm">a parody of
+<a href="[% d2url %]articles/kellysworld.htm">a parody of
 bad web pages</a>.
 </li>
 <li>
@@ -731,12 +729,12 @@ Trek: The Next Generation</a> - an insanely funny cross of both
 <i>Star Trek: The Next Generation</i>.
 </li>
 <li>
-<a href="$(PATH_TO_ROOT)humour/by-others/darien--everybody-is-free.html">Everybody’s
+<a href="[% base_path %]humour/by-others/darien--everybody-is-free.html">Everybody’s
 Free (to Ping Timeout)</a> - a very amusing spoof where the 90’s anthem
-“Everybody’s Free (to Wear Sunscreen)” meets the <my_acronym key="IRC"/> world.
+“Everybody’s Free (to Wear Sunscreen)” meets the [% my_acronym( "key" => "IRC",) %] world.
 </li>
 <li>
-<a href="$(PATH_TO_ROOT)humour/GNU-Visual-Basic/GNU-Visual-Basic.html">GNU Visual
+<a href="[% base_path %]humour/GNU-Visual-Basic/GNU-Visual-Basic.html">GNU Visual
 Basic</a> - <a href="http://en.wikipedia.org/wiki/Richard_Stallman">Richard
 Stallman</a> switches from LISP to BASIC.
 </li>
@@ -823,7 +821,7 @@ a collection of facts about the most, well, most something, geek in existence.
 </li>
 <li>
 <a href="https://metacpan.org/source/COSIMO/Acme-24-0.04/fortune/jackbauer">Jack
-Bauer facts</a> (in <a href="$(PATH_TO_ROOT)humour/fortunes/">UNIX
+Bauer facts</a> (in <a href="[% base_path %]humour/fortunes/">UNIX
 fortunes format</a>) - also about a tough man.
 </li>
 </ul>
@@ -841,7 +839,7 @@ Whatsup.org.il</a>). Also
 Digg</a>.
 </li>
 <li>
-<a href="$(PATH_TO_ROOT)humour/by-others/how-to-make-square-corners-with-CSS/">How
+<a href="[% base_path %]humour/by-others/how-to-make-square-corners-with-CSS/">How
 to Make Square Corners with CSS</a> - it’s much harder than it seems.
 </li>
 <li>
@@ -909,7 +907,7 @@ Frequently Asked Questions [Satire]”</a> - by chromatic.
 Letter”</a>
 </li>
 <li>
-<a href="$(PATH_TO_ROOT)humour/by-others/grad-student-jokes-from-jnoakes/">Grad
+<a href="[% base_path %]humour/by-others/grad-student-jokes-from-jnoakes/">Grad
 Student Humour</a> - contains the famous Rabbit joke, as well as “Why God
 didn’t receive Tenure”, and a lot of other funny stuff.
 </li>
@@ -1072,7 +1070,7 @@ R &amp; U ARE FUCKING LETTERS!”</a> - image posted to Reddit.
 <li>
 <a href="http://pbs.twimg.com/media/CeVnsGlXIAANrZX.jpg">FizzBuzz - npm
 edition</a> (via Su-Shee from Freenode’s #perl channel).
-(<a href="$(PATH_TO_ROOT)humour/by-others/images/FizzBuzz-npm-edition.jpg">Local
+(<a href="[% base_path %]humour/by-others/images/FizzBuzz-npm-edition.jpg">Local
 mirror</a>.)
 </li>
 
@@ -1302,7 +1300,7 @@ interesting Manga graphics and sketches.
 </li>
 <li>
 <a href="http://web-server.net/g/brasil/">Pictures from Brazil</a> - Pictures
-of Brazil from a trip by an <my_acronym key="IRC"/> correspondent.
+of Brazil from a trip by an [% my_acronym( "key" => "IRC",) %] correspondent.
 </li>
 <li>
 <a href="http://www.daemonisch.be/">BSDs Wallpapers</a> - Wallpapers based
@@ -1461,3 +1459,5 @@ predictions of 2009.”</a>.
 </ul>
 </section>
 </div>
+
+[% END %]

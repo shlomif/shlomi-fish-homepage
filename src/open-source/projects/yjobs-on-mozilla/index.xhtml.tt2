@@ -1,10 +1,9 @@
-#include "template.wml"
+[%- SET title = "Make www.yjobs.co.il Work with Mozilla-based Browsers" -%]
+[%- SET desc = "Make www.yjobs.co.il Work with Mozilla-based Browsers" -%]
 
-#include "Inc/cpan_dists.wml"
 
-<latemp_subject "Make www.yjobs.co.il Work with Mozilla-based Browsers" />
-
-<latemp_meta_desc "Make www.yjobs.co.il Work with Mozilla-based Browsers" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a local HTTP proxy to make
@@ -16,15 +15,15 @@ to do so.
 </p>
 
 <p>
-It is written in <a href="http://www.perl.org/">Perl</a> and uses the
-<cpan_dist d="HTTP-Proxy">CPAN HTTP-Proxy module</cpan_dist> which needs to be
+It is written in <a href="http://www.perl.org/">Perl</a> and uses
+the [%- WRAPPER cpan_dist d = "HTTP-Proxy" -%]CPAN HTTP-Proxy module[%- END -%] which needs to be
 installed prior to running the proxy. More
 instructions for deploying it are provided in a comment at the beginning
 of the file.
 </p>
 
 <p>
-Please report any problems with it to <a href="mailto:<main_email />">my
+Please report any problems with it to <a href="mailto:[% main_email %]">my
 email</a>.
 </p>
 
@@ -66,7 +65,7 @@ nor requires it.
 </li>
 
 <li>
-<cpan_self_dist d="HTTP-Proxy" /> - an
+[% cpan_self_dist( "d" => "HTTP-Proxy", ) %] - an
 excellent CPAN module for building your own HTTP proxies in Perl.
 </li>
 
@@ -102,3 +101,5 @@ English about how the initial version of the script was developed.
 </li>
 
 </ul>
+
+[% END %]

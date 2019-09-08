@@ -1,8 +1,10 @@
-#include "template.wml"
+[%- SET title = "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" -%]
+[%- SET desc = "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" -%]
+[%- SET more_keywords = "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety,html5,javascript" -%]
 
-<latemp_subject "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" />
-<latemp_meta_desc "February 2014 Update to the “Stop Using Microsoft Internet Explorer Page”" />
-<latemp_more_keywords "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety,html5,javascript" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Back when <a href="../">the original page</a> criticising
@@ -117,3 +119,5 @@ maintaining the last release, or even
 </li>
 
 </ol>
+
+[% END %]

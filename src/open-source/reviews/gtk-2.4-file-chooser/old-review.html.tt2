@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Mini-Review: the Gtk+ 2.4.x File Chooser" -%]
+[%- SET desc = "Mini-Review: the Gtk+ 2.4.x File Chooser" -%]
 
-<latemp_subject "Mini-Review: the Gtk+ 2.4.x File Chooser" />
 
-<latemp_meta_desc "Mini-Review: the Gtk+ 2.4.x File Chooser" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2>Important Note!</h2>
 
@@ -26,7 +27,7 @@ for something quite decent. So here’s my review.
 First of all it looks something like this:
 </p>
 
-<img src="gtk-2.4.x-file-chooser.png" />
+<img alt="Gtk 2.4.x file chooser screenshot" src="gtk-2.4.x-file-chooser.png" />
 
 <p>
 There is
@@ -93,3 +94,5 @@ thing I cancelled in Windows 95. (and never enabled it afterwards). And in
 GNOME, one needs to issue an obscure gconf command to disable it. (where in
 Windows 95, it was somewhere clear in the options dialogue box).
 </p>
+
+[% END %]

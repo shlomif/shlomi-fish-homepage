@@ -1,16 +1,13 @@
-#include "template.wml"
+[%- SET title = "Privacy Policy for the www.shlomifish.org Web Site" -%]
+[%- SET desc = "Privacy Policy for the www.shlomifish.org Web Site" -%]
 
-<latemp_subject "Privacy Policy for the www.shlomifish.org Web Site" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "Privacy Policy for the www.shlomifish.org Web Site" />
-
-<define-tag self_link>
-<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>
-</define-tag>
+[% SET self_link='<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>' %]
 
 <p>
-The Webmaster of the <self_link />
-Web site is committed to
+The Webmaster of the [% self_link %] Web site is committed to
 protecting the privacy of contributors and users of this Web site.
 </p>
 
@@ -18,13 +15,13 @@ protecting the privacy of contributors and users of this Web site.
 The Webmaster of this Web site intends to give you as much control as
 possible over your personal information, including registration data if and
 when applicable.  As part of the normal operation of the
-<self_link /> Web site,
+[% self_link %] Web site,
 we may, at our discretion, collect information from you. This Privacy
 Statement describes the information we collect about you and how that
 information may be used.
 </p>
 
-<h2>Information Gathered through the <self_link /> Web site</h2>
+<h2>Information Gathered through the [% self_link %] Web site</h2>
 
 <p>
 The Webmaster of this Web site will track the domains from which people
@@ -175,3 +172,5 @@ sites.
 </p>
 
 <p><b>Last modified:</b> 12 May 2009</p>
+
+[% END %]

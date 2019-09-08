@@ -1,60 +1,53 @@
-<ifeq "<get-var lang />" "heb" "<set-var rtl_layout="1" />" />
-#include "template.wml"
-#include "toc_div.wml"
+[% IF lang == "eng" %]
+[%- SET title = "Shlomi Fish’s Aphorisms and Quotes Collection" -%]
+[% ELSE %]
+[%- SET title = "מקבץ אמרות השפר והציטוטים של שלומי פיש" %]
+[% SET rtl_layout = "1" %]
+[% END %]
 
-<ifeq "<get-var lang />" "eng"
-    "<set-var subject="Shlomi Fish’s Aphorisms and Quotes Collection" />"
-    "<set-var subject="מקבץ אמרות השפר והציטוטים של שלומי פיש" />"
-    />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "<get-var subject />" />
-<latemp_meta_desc "<get-var subject />" />
-
-#include "lang_switch.wml"
-
-<lang_switch url:eng="humour.html" url:heb="humour-heb.html" />
+[% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 
 <div class="main_text side_toc">
 
-<define-tag joke endtag="required">
-%body
+[% BLOCK joke %]
+[% content %]
 <hr class="joke"/>
-</define-tag>
+[% END %]
 
-<define-tag header_joke endtag="required">
-<preserve id header />
-<set-var %attributes />
-<joke>
-<h3 id="<get-var id />"><get-var header /></h3>
+[% BLOCK header_joke %]
+[% WRAPPER joke  %]
+<h3 id="[% id %]">[% header %]</h3>
 
-%body
-</joke>
-<restore id header />
-</define-tag>
+[% content %]
+[%- END -%]
+[% END %]
 
-<define-tag eng_header_joke endtag="required">
-<ifeq "<get-var lang />" "eng" "<header_joke %attributes>%body</header_joke>" />
-</define-tag>
+[% BLOCK eng_header_joke %]
+[% IF lang == "eng" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
+[% END %]
 
-<define-tag heb_header_joke endtag="required">
-<ifeq "<get-var lang />" "heb" "<header_joke %attributes>%body</header_joke>" />
-</define-tag>
+[% BLOCK heb_header_joke %]
+[% IF lang == "heb" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
+[% END %]
 
-<define-tag quote endtag="required">
+[% BLOCK quote %]
 <blockquote>
-%body
+[% content %]
 </blockquote>
-</define-tag>
+[% END %]
 
-<define-tag comment endtag="required">
+[% BLOCK comment %]
 <div class="comment">
-%body
+[% content %]
 </div>
-</define-tag>
+[% END %]
 
-<img src="$(PATH_TO_ROOT)humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" style="float:left;width:20%;"/>
+<img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" style="float:left;width:20%;"/>
 
-<define-tag eng_intro>
+[% BLOCK eng_intro %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -64,11 +57,11 @@ throughout the years. They are arranged in roughly chronological order.
 </p>
 
 <p>
-You can also find them and others <a href="$(PATH_TO_ROOT)humour/fortunes/">in machine-readable UNIX fortune cookies collections</a>.
+You can also find them and others <a href="[% base_path %]humour/fortunes/">in machine-readable UNIX fortune cookies collections</a>.
 </p>
-</define-tag>
+[% END %]
 
-<define-tag heb_intro>
+[% BLOCK heb_intro %]
 
 <h2 id="intro">מבוא</h2>
 
@@ -81,31 +74,31 @@ You can also find them and others <a href="$(PATH_TO_ROOT)humour/fortunes/">in m
 הם תורגמו על ידי
 <a href="humour.html">מהמקור האנגלי</a>
 ותוכלו למצוא אותם ואחרים
-<a href="$(PATH_TO_ROOT)humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
+<a href="[% base_path %]humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
 מבוססות XML הניתנות לקריאה על ידי מכונה.
 </p>
 
-</define-tag>
+[% END %]
 
-<ifeq "<get-var lang />" "heb" "<heb_intro />" "<eng_intro />" />
+[% IF lang == "heb" %][% INCLUDE heb_intro  %][% ELSE %][% INCLUDE eng_intro  %][% END %]
 
-<ifeq "<get-var lang />" "heb" "<toc_div lang="he" />" "<toc_div />" />
+[% IF lang == "heb" %][% toc_div( "lang" => "he", ) %][% ELSE %][% toc_div( ) %][% END %]
 
-<define-tag eng_list_h2>
+[% BLOCK eng_list_h2 %]
 <h2 id="list">List of Aphorisms</h2>
-</define-tag>
+[% END %]
 
-<define-tag heb_list_h2>
+[% BLOCK heb_list_h2 %]
 <h2 id="list">רשימת אמרות השפר</h2>
-</define-tag>
+[% END %]
 
-<ifeq "<get-var lang />" "heb" "<heb_list_h2 />" "<eng_list_h2 />" />
+[% IF lang == "heb" %][% INCLUDE heb_list_h2  %][% ELSE %][% INCLUDE eng_list_h2  %][% END %]
 
 <div class="aphorisms wrap-me lim_width">
 
-<eng_header_joke id="jewish_deduction" header="A Jewish Deduction">
+[% WRAPPER eng_header_joke id = "jewish_deduction"  header = "A Jewish Deduction"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 The Bible dictates that “Thou shalt not seethe [=cook] a kid [= young goat]
 in his mother’s milk”. To avoid any possibility of breaking that regulation,
@@ -121,16 +114,16 @@ milk production, may not be eaten along with any mammal’s milk either.
 We are fortunate that most mathematicians were not Jewish. Otherwise,
 it would have been forbidden to divide by all numbers between -1 and 1.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This bit used to appear on my signature for a short while, but people
 got mad because it was too long, so I replaced it.
 </p>
-</comment>
+[%- END -%]
 
-<heb_header_joke id="jewish_deduction" header="הגיון יהודי">
+[% WRAPPER heb_header_joke id = "jewish_deduction"  header = "הגיון יהודי"  %]
 
 <p>
 בתורה מצווה „לא תבשל גדי בחלב אמו“. כדי להימנע מכל אפשרות של שבירת מצווה
@@ -153,27 +146,27 @@ got mad because it was too long, so I replaced it.
 </i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="used_to_be_arrogant" header="I Used to be Arrogant">
+[% WRAPPER eng_header_joke id = "used_to_be_arrogant"  header = "I Used to be Arrogant"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 I used to be arrogant. Now I’m simply perfect.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This bit was once said by a relative of mine…
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="used_to_be_arrogant" header="פעם הייתי גאוותן">
+[% WRAPPER heb_header_joke id = "used_to_be_arrogant"  header = "פעם הייתי גאוותן"  %]
 
 <p>
 פעם הייתי גאוותן. עכשיו אני פשוט מושלם.
@@ -183,11 +176,11 @@ This bit was once said by a relative of mine…
 <i>זה נאמר על-ידי אחד מקרוביי המשפחה שלי.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="murphys_law_greeks" header="Murphy’s Law">
+[% WRAPPER eng_header_joke id = "murphys_law_greeks"  header = "Murphy’s Law"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 If the ancient Greeks had invented UNIX, Murphy’s Law would have been known
 as Aristotle’s Law.
@@ -197,14 +190,14 @@ as Aristotle’s Law.
 Had they invented MS-Windows, Murphy’s Law would have been known as the
 Law of Socrates.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="microsoft_slogan" header="Microsoft’s Slogan">
+[% WRAPPER eng_header_joke id = "microsoft_slogan"  header = "Microsoft’s Slogan"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Microsoft’s slogan used to be “Microsoft - making it all make sense.”
 </p>
@@ -222,51 +215,51 @@ And another twist:
 mess up your computer work, we will always consider you our friend.”
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="american_lottery" header="The American Lottery">
+[% WRAPPER eng_header_joke id = "american_lottery"  header = "The American Lottery"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 The American Lottery - all you need is a dollar and a dream. We will take the
 dollar, but you can keep the dream.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="american_lottery" header="הלוטו האמריקאי">
+[% WRAPPER heb_header_joke id = "american_lottery"  header = "הלוטו האמריקאי"  %]
 
 <p>
 הלוטו האמריקאי - כל מה שאתה צריך זה דולר וחלום. אנחנו ניקח את הדולר אבל נשאיר
 לך את החלום.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="believe_in_fairies" header="I don’t Believe in Fairies">
+[% WRAPPER eng_header_joke id = "believe_in_fairies"  header = "I don’t Believe in Fairies"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I don’t believe in fairies. Oops! A fairy died.<br />
 I don’t believe in fairies. Oops! Another fairy died.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 I don’t really know who said it, so it’s possible that I invented it.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="believe_in_fairies" header="אני לא מאמינה בפיות">
+[% WRAPPER heb_header_joke id = "believe_in_fairies"  header = "אני לא מאמינה בפיות"  %]
 
 <p>
 אני לא מאמינה בפיות. אופס! פיה מתה.<br />
@@ -275,20 +268,20 @@ I don’t really know who said it, so it’s possible that I invented it.
 
 <p class="indent"><i>אני לא יודע מי אמר את זה במקור, אבל ייתכן שאני המצאתי את זה.</i></p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="moses_the_smiley" header="Moses the Smiley">
+[% WRAPPER eng_header_joke id = "moses_the_smiley"  header = "Moses the Smiley"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <pre>
 :)-&lt;
  +--
 </pre>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="moses_the_smiley" header="משה הסמליל">
+[% WRAPPER heb_header_joke id = "moses_the_smiley"  header = "משה הסמליל"  %]
 
 <div class="english">
 <pre>
@@ -297,31 +290,31 @@ I don’t really know who said it, so it’s possible that I invented it.
 </pre>
 </div>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="prefix_god_said" header="The prefix “God Said”">
+[% WRAPPER eng_header_joke id = "prefix_god_said"  header = "The prefix “God Said”"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 The prefix “God Said” has the extraordinary logical property of converting
 any statement that follows it into a true one.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="prefix_god_said" header="התחילית „אלוהים אמר“">
+[% WRAPPER heb_header_joke id = "prefix_god_said"  header = "התחילית „אלוהים אמר“"  %]
 
 <p>
 לתחילית „אלוהים אמר“ יש את התכונה הלוגית המופלאה של הפיכת כל הצהרה שבאה
 אחריה לנכונה.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="shit_happens" header="Deltas to “Shit Happens” according to Religions">
+[% WRAPPER eng_header_joke id = "shit_happens"  header = "Deltas to “Shit Happens” according to Religions"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Judaism: God knows you will do shit, does nothing to prevent it, but makes you take
@@ -335,87 +328,87 @@ God is all the shit, all the non-shit and all the intermediate demi-shits in
 between.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="interpret_the_past" header="Interpret the Past">
+[% WRAPPER eng_header_joke id = "interpret_the_past"  header = "Interpret the Past"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Let’s interpret the past according to the present and not the present
 according to the past.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 (From an E-mail discussion with Ben Pfaff)
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="computer_science_and_c_programming" header="Computer Science and C Programming">
+[% WRAPPER eng_header_joke id = "computer_science_and_c_programming"  header = "Computer Science and C Programming"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 “Computer Science is no more about computers than astronomy is about
 telescopes”
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Edsger W. Dijkstra
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 “C programming is no more about computers than astronomy is about
 stars.”
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Shlomi Fish
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="more_experienced_programmer" header="A more experienced programmer…">
+[% WRAPPER eng_header_joke id = "more_experienced_programmer"  header = "A more experienced programmer…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 A more experienced programmer does not make less bugs. He just realizes
 what went wrong more quickly.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="I_promised" header="I promised, I forgot, I broke my promise…">
+[% WRAPPER eng_header_joke id = "I_promised"  header = "I promised, I forgot, I broke my promise…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 I promised, I forgot, I broke my promise - just shoot me and get on
 with it!
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Potentially some famous last words, I also came up with this bit, and I’m
 not sure if I heard it before.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="I_promised" header="הבטחתי, שכחתי, לא קיימתי…">
+[% WRAPPER heb_header_joke id = "I_promised"  header = "הבטחתי, שכחתי, לא קיימתי…"  %]
 
 <p>
 הבטחתי, שכחתי, לא קיימתי - תהרגו אותי וזהו!
@@ -427,12 +420,12 @@ not sure if I heard it before.
 שמעתי אותו קודם-לכן.
 </i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="first_phrase"
-header="The First Phrase that needs to be Taught">
+[% WRAPPER eng_header_joke id = "first_phrase"
+header = "The First Phrase that needs to be Taught"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 The first phrase that needs to be taught when teaching a new language is how to
@@ -444,12 +437,12 @@ The first thing that needs to be taught when teaching a new computer tool
 is how to exit it.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="first_phrase"
-header="המשפט הראשון שיש ללמד">
+[% WRAPPER heb_header_joke id = "first_phrase"
+header = "המשפט הראשון שיש ללמד"  %]
 
 <p>
 המשפט הראשון שיש ללמד כאשר מלמדים שפה חדשה היא איך לומר „האם אתה מדבר אנגלית?“.
@@ -459,12 +452,12 @@ header="המשפט הראשון שיש ללמד">
 הדבר הראשון שיש ללמד כאשר מלמדים תכנה חדשה, היא כיצד לצאת ממנה.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="if_A_is_A" header="If A is A and A is not not-A…">
+[% WRAPPER eng_header_joke id = "if_A_is_A"  header = "If A is A and A is not not-A…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 If:<br />
@@ -475,9 +468,9 @@ does it also imply that:<br />
 2. B is not not-B.<br />
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 If you don’t understand it, either forget it or consult the following
 threads:
@@ -485,11 +478,11 @@ threads:
 <a href="http://www.mail-archive.com/lin-club@vipe.technion.ac.il/msg00750.html">Haifa
 Linux Club</a>
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="if_A_is_A" header="אם A הוא A ו-A אינו לא A…">
+[% WRAPPER heb_header_joke id = "if_A_is_A"  header = "אם A הוא A ו-A אינו לא A…"  %]
 <p>
 אם:<br/>
 ‫1. A הוא A.‬
@@ -515,11 +508,11 @@ Linux Club</a>
 <a href="http://www.mail-archive.com/lin-club@vipe.technion.ac.il/msg00750.html">Haifa
 Linux Club</a></i>.
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="know_im_blond" header="I know I’m blonde…">
+[% WRAPPER eng_header_joke id = "know_im_blond"  header = "I know I’m blonde…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I know I’m blonde, but I have to colour my hair brown, so people would
@@ -531,11 +524,11 @@ got Three Seconds”.
 Actually, since Amazon sent us two books like that, you’ve only got six seconds.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="know_im_blond" header="אני יודעת שאני בלונדינית…">
+[% WRAPPER heb_header_joke id = "know_im_blond"  header = "אני יודעת שאני בלונדינית…"  %]
 
 <p>
 אני יודעת שאני בלונדינית, אבל אני צריכה לצבוע את השער שלי בצבע חום, כדי שאנשים
@@ -551,43 +544,43 @@ Actually, since Amazon sent us two books like that, you’ve only got six second
 <i>משפט זה נאמר על-ידי קרובת משפחה שלי.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="reinvent_the_wheel" header="Re-inventing the Wheel">
+[% WRAPPER eng_header_joke id = "reinvent_the_wheel"  header = "Re-inventing the Wheel"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 He who re-invents the wheel, will understand much better how a
 wheel works.
 </p>
 
-</quote>
+[%- END -%]
 
 <p>Or:</p>
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 He who re-invents the wheel, may actually invent a much better wheel.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 <a href="http://nadav.harel.org.il/">Nadav Har’El</a>’s response was:
 </p>
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 He who re-invents the wheel will likely design a square wheel and spend
 a year trying to figure out why it doesn’t work properly.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="reinvent_the_wheel" header="להמציא מחדש את הגלגל">
+[% WRAPPER heb_header_joke id = "reinvent_the_wheel"  header = "להמציא מחדש את הגלגל"  %]
 
 <p>
 מי שממציא מחדש את הגלגל, יבין יותר טוב כיצד גלגל פועל.
@@ -610,29 +603,29 @@ a year trying to figure out why it doesn’t work properly.
 מדוע הוא לא עובד כמו שצריך.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="cpp_and_oop" header="C++ and Object-Oriented Programming">
-<quote>
+[% WRAPPER eng_header_joke id = "cpp_and_oop"  header = "C++ and Object-Oriented Programming"  %]
+[% WRAPPER quote  %]
 
 <p>
 IMO, C++ supports Object-Oriented Programming roughly as much as COBOL supports
 Functional Programming.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 You have to be a relatively experienced hacker to get this joke. So don’t
 worry if you don’t understand it.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="cpp_and_oop" header="C++‎ ותכנות מונחה עצמים">
+[% WRAPPER heb_header_joke id = "cpp_and_oop"  header = "C++‎ ותכנות מונחה עצמים"  %]
 <p>
 לדעתי, C++‎‏ תומכת בתכנות מונחה עצמים, בערך באותה מידה שקובול תומכת בתכנות פונקציונאלי.
 </p>
@@ -643,27 +636,27 @@ worry if you don’t understand it.
 אם אתם לא מבינים.
 </i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="better_alternative" header="A Better Alternative">
+[% WRAPPER eng_header_joke id = "better_alternative"  header = "A Better Alternative"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Sometimes you don’t need to be familiar with a better alternative to know
 that something sucks. Take Microsoft Word for example.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>This was said by my friend</p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="better_alternative" header="משהו יותר טוב">
+[% WRAPPER heb_header_joke id = "better_alternative"  header = "משהו יותר טוב"  %]
 <p>
 לפעמים, לא צריך להכיר משהו יותר טוב כדי לדעת שמשהו הוא גרוע. קח את מיקרוסופט וורד
 לדוגמה.
@@ -672,11 +665,11 @@ that something sucks. Take Microsoft Word for example.
 <p class="indent">
 <i>אמרה זאת נאמרה על ידי אחד החברים שלי.</i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="good_student_vs_bad_student" header="Good Student vs. Bad Student">
+[% WRAPPER eng_header_joke id = "good_student_vs_bad_student"  header = "Good Student vs. Bad Student"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 The difference between a good student and a bad student is that a bad student
@@ -684,17 +677,17 @@ forgets the material five minutes before the test, while a good student five
 minutes afterwards.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This was said by a lecturer of mine.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="good_student_vs_bad_student" header="סטודנט טוב לעומת סטודנט רע">
+[% WRAPPER heb_header_joke id = "good_student_vs_bad_student"  header = "סטודנט טוב לעומת סטודנט רע"  %]
 
 <p>
 ההבדל בין סטודנט טוב לעומת סטודנט רע היא שסטודנט רע שוכח את כל החומר 5 דקות לפני
@@ -705,27 +698,27 @@ This was said by a lecturer of mine.
 <i>אמרה זאת נאמרה על-ידי אחד המרצים שלי, אבל אני לא בטוח אם הוא המציא אותה או לא.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="not_clear" header="If it was not Clear">
+[% WRAPPER eng_header_joke id = "not_clear"  header = "If it was not Clear"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I hope that if it was not clear before, it is not less clear now.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Also by a lecturer.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="not_clear" header="אם זה לא היה ברור…">
+[% WRAPPER heb_header_joke id = "not_clear"  header = "אם זה לא היה ברור…"  %]
 
 <p>
 אם זה לא היה ברור מקודם, אני מקווה שזה לא פחות ברור עכשיו.
@@ -734,18 +727,18 @@ Also by a lecturer.
 <p class="indent">
 <i>גם כן נאמרה על-ידי מרצה.</i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="apple_a_day" header="An Apple a Day">
+[% WRAPPER eng_header_joke id = "apple_a_day"  header = "An Apple a Day"  %]
 <p>
 An apple a day keeps a doctor away. Two apples a day will keep two doctors
 away.
 </p>
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="smg_next_film" header="Sarah Michelle Gellar’s Next Movie">
+[% WRAPPER eng_header_joke id = "smg_next_film"  header = "Sarah Michelle Gellar’s Next Movie"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 [Discussing the shortage of IT workers as of 1998 on E-mail]
@@ -763,32 +756,32 @@ Omer Zak to Shlomi Fish: “And as opposed to <i>I Know What You Did Last
 Summer</i>, it is going to be scary.”
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="objective_philosophy" Header="Objective Philosophy…">
+[% WRAPPER eng_header_joke id = "objective_philosophy"  Header = "Objective Philosophy…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Objective philosophy is like a pencil sharpener for one’s mind.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="turing_test" header="Taking a Turing Test">
+[% WRAPPER eng_header_joke id = "turing_test"  header = "Taking a Turing Test"  %]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 From <a href="http://groups.yahoo.com/group/hackers-il/message/2465">
 Hackers-IL message No. 2465</a>:
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 &gt;<br />
@@ -807,13 +800,13 @@ not detect that the latter fact was true.<br />
 &lt;/sarcasm&gt;<br />
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="hi_sophie" header="Hi, Sophie!">
+[% WRAPPER eng_header_joke id = "hi_sophie"  header = "Hi, Sophie!"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Jack</b>: Hi, Sophie!
@@ -827,13 +820,13 @@ not detect that the latter fact was true.<br />
 <b>Jack</b>: Don’t “Don’t ‘Hi, Sophie!’ me” me!
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="corollary_of_godwyn" header="Corollary of Godwyn’s Law">
+[% WRAPPER eng_header_joke id = "corollary_of_godwyn"  header = "Corollary of Godwyn’s Law"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Shlomi, I’m considering naming a corollary of Godwyn’s law after you -
@@ -841,15 +834,15 @@ any discussion of anything is over when you mention Freecell Solver.
 </p>
 
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Muli Ben-Yehuda on #kernelnewbies (irc.kernelnewbies.org)
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Muli: BTW, I think that any discussion only begins to gain momentum
@@ -857,84 +850,84 @@ when I mention Freecell Solver.
 </p>
 
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Shlomi Fish on #offtopic (irc.kernelnewbies.org)
 </p>
-</comment>
-</eng_header_joke>
+[%- END -%]
+[%- END -%]
 
-<eng_header_joke id="keeping_an_idea_to_yourself" header="Keeping an Idea to Yourself">
+[% WRAPPER eng_header_joke id = "keeping_an_idea_to_yourself"  header = "Keeping an Idea to Yourself"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 There’s no point in keeping an idea to yourself since there’s a 10 to 1
 chance that somebody already has it and will share it before you.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="keeping_an_idea_to_yourself" header="לשמור רעיון לעצמך">
+[% WRAPPER heb_header_joke id = "keeping_an_idea_to_yourself"  header = "לשמור רעיון לעצמך"  %]
 <p>
 אין טעם לשמור רעיון לעצמך מפני שיש סיכוי של 10 ל-1 שלמישהו כבר היה אותו והוא
 ישתף אחרים בו לפניך.
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="you_are_banished" header="You are banished!">
+[% WRAPPER eng_header_joke id = "you_are_banished"  header = "You are banished!"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 You are banished! You are banished! You are banished! - Hey! I’m just
 kidding!
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="you_are_banished" header="את מגורשת">
+[% WRAPPER heb_header_joke id = "you_are_banished"  header = "את מגורשת"  %]
 <p>
 את מגורשת! את מגורשת! את מגורשת! - סתם!!!!…
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="opinions_crazy" header="Crazy Opinions">
+[% WRAPPER eng_header_joke id = "opinions_crazy"  header = "Crazy Opinions"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 My opinions may seem crazy but they all make sense. Insane sense, but
 sense nonetheless.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="opinions_crazy" header="דעות משוגעות">
+[% WRAPPER heb_header_joke id = "opinions_crazy"  header = "דעות משוגעות"  %]
 <p>
 הדעות שלי נראות משוגעות, אבל יש בהן הגיון. הגיון לא שפוי - אבל בכל זאת - הגיון.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="foreign_languages" header="Foreign Languages">
+[% WRAPPER eng_header_joke id = "foreign_languages"  header = "Foreign Languages"  %]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 [Discussing Foreign Languages Knowledge in the U.S.A]
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Ben Collins-Sussman</b>: Tis’ true, unlike Europe, the language doesn’t
@@ -948,13 +941,13 @@ change every 100 miles.
 miles.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="happened_to_cmpilato" header="What Happened to Christopher Michael Pilato?">
+[% WRAPPER eng_header_joke id = "happened_to_cmpilato"  header = "What Happened to Christopher Michael Pilato?"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 What happened to Christopher Michael Pilato?<br />
@@ -968,13 +961,13 @@ Who is Christopher Michael Pilato, anyway?
 </p>
 
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="in_philosophy_as_in_soft_eng" header="In Philosophy, as much as in software engineering,">
+[% WRAPPER eng_header_joke id = "in_philosophy_as_in_soft_eng"  header = "In Philosophy, as much as in software engineering,"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 In Philosophy, as much as in software engineering, you don’t get credit for
@@ -982,22 +975,22 @@ originality. What matters is the final product, not who came up with
 the idea for each feature first.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="he_has_high_degree" header="He has a high degree of…">
+[% WRAPPER eng_header_joke id = "he_has_high_degree"  header = "He has a high degree of…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 He has a high degree of idealism, a high degree of stubbornness, and an even
 higher degree of inability to distinguish between the two.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 I originally thought of something similar to that about
 <a href="http://www.stallman.org/">Richard M. Stallman</a> who has headed the
@@ -1008,40 +1001,40 @@ a great and noble guy, and I had the opportunity of meeting and talking
 him during his visit to Israel. (He is much more pleasant in real life than
 online.)
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="he_has_high_degree" header="יש לו מידה גדולה של…">
+[% WRAPPER heb_header_joke id = "he_has_high_degree"  header = "יש לו מידה גדולה של…"  %]
 <p>
 יש לו מידה גדולה של אידאליזם, מידה גדולה של עקשנות, ומידה גדולה עוד יותר
 של חוסר יכולת להבדיל בין השניים.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="hacker_sees_bug" header="Hacker Sees Bug">
+[% WRAPPER eng_header_joke id = "hacker_sees_bug"  header = "Hacker Sees Bug"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Hacker sees bug. Hacker does not want bug. Hacker fixes bug.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 
 <p>
 I was told that the natural continuation to this should be “Hack, hacker,
 hack!”
 </p>
 
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="hacker_sees_bug" header="האקר רואה באג">
+[% WRAPPER heb_header_joke id = "hacker_sees_bug"  header = "האקר רואה באג"  %]
 <p>
 האקר רואה באג. האקר לא רוצה באג. האקר מתקן באג.
 </p>
@@ -1050,12 +1043,12 @@ hack!”
 <i>אמרו לי שההמשך צריך להיות „שפצר, האקר, שפצר!“</i>
 </p>
 </div>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="linus_95_percent_of_programmers" header="95% of Programmers">
+[% WRAPPER eng_header_joke id = "linus_95_percent_of_programmers"  header = "95% of Programmers"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Linus Torvalds: “95% of Programmers consider themselves in the top 5%”.
@@ -1066,18 +1059,18 @@ Shlomi Fish’s Corollary: “95% of Programmers consider 95% of the code they d
 not write, in the bottom 5%”.
 </p>
 
-</quote>
+[%- END -%]
 
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">a discussion of it on the Joel on Software forum</a>
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="linus_95_percent_of_programmers" header="95% מהמתכנתים">
+[% WRAPPER heb_header_joke id = "linus_95_percent_of_programmers"  header = "95% מהמתכנתים"  %]
 <p>
 לינוס טורבלדס: „95% מהמתכנתים מחשיבים את עצמם ב-5% העליונים.“
 </p>
@@ -1093,11 +1086,11 @@ Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14
 <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14">דיון על כך (באנגלית) בפורום של „יואל על תכנה“</a>.</i>
 </p>
 </div>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="too_girly" header="Too Girly">
+[% WRAPPER eng_header_joke id = "too_girly"  header = "Too Girly"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <pre>
   &lt;rindolf&gt;    Linuxgrrl: well The Gilmore Girls is also a drama. Sort
@@ -1112,17 +1105,17 @@ Also see <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.125980.14
   &lt;rindolf&gt;    Linuxgrrl: no self-respecting tomboy would use Mandrake.
 </pre>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>rindolf here is Shlomi Fish</p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="cpp_is_complex" header="C++ is…">
+[% WRAPPER eng_header_joke id = "cpp_is_complex"  header = "C++ is…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 C++ is complex, complexifying and complexified.
@@ -1132,93 +1125,93 @@ C++ is complex, complexifying and complexified.
 (With apologies to the Oxford English Dictionary.)
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="cpp_is_complex" header="C++‎ הנה…">
+[% WRAPPER heb_header_joke id = "cpp_is_complex"  header = "C++‎ הנה…"  %]
 <p>
 C++‎ הנה שפה מסובכת, מתסבכת ומתוסבכת.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="linux_because_software_problems" header="Linux - Because Software Problems…">
+[% WRAPPER eng_header_joke id = "linux_because_software_problems"  header = "Linux - Because Software Problems…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Linux - Because Software Problems Should not Cost Money
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
-Refer to <a href="$(PATH_TO_ROOT)art/linux_banner/">this page about that Slogan
+Refer to <a href="[% base_path %]art/linux_banner/">this page about that Slogan
 and a resultant graphics made from it.</a>
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
 
-<heb_header_joke id="linux_because_software_problems" header="לינוקס - כי בעיות תכנה…">
+[% WRAPPER heb_header_joke id = "linux_because_software_problems"  header = "לינוקס - כי בעיות תכנה…"  %]
 <p>
 לינוקס - כי בעיות תכנה לא צריכות לעלות כסף.
 </p>
 <p>
-<i>פנו ל <a href="$(PATH_TO_ROOT)art/linux_banner/">דף זה על אודות הססמה והגרפיקה שנוצרה ממנה.</a>
+<i>פנו ל <a href="[% base_path %]art/linux_banner/">דף זה על אודות הססמה והגרפיקה שנוצרה ממנה.</a>
 </i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="real_programmers_dont_write" header="Real Programmers Don’t Write">
+[% WRAPPER eng_header_joke id = "real_programmers_dont_write"  header = "Real Programmers Don’t Write"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Real programmers don’t write workarounds. They tell their users to
 upgrade their software.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="real_programmers_dont_write" header="מתכנתים אמתיים לא כותבים">
+[% WRAPPER heb_header_joke id = "real_programmers_dont_write"  header = "מתכנתים אמתיים לא כותבים"  %]
 <p>
 מתכנתים אמתיים לא כותבים מעקפים.
 הם אומרים למשתמשים שלהם שעליהם לשדרג את התכנות שלהם.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
 
 
 
-<eng_header_joke id="if_his_programming" header="If his Programming…">
+[% WRAPPER eng_header_joke id = "if_his_programming"  header = "If his Programming…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>If his programming is anything like his philosophising, he would find 10
 imaginary bugs in the “Hello World” program.</p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="if_his_programming" header="אם התכנות שלו…">
+[% WRAPPER heb_header_joke id = "if_his_programming"  header = "אם התכנות שלו…"  %]
 <p>
 אם התכנות שלו הוא פחות או יותר כמו ההתפלספות שלו,
 הוא ימצא עשרה באגים דמיוניים בתוכנית ה„שלום עולם“.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="blogging_memes" header="Blogging Memes">
+[% WRAPPER eng_header_joke id = "blogging_memes"  header = "Blogging Memes"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <pre>
   &lt;rindolf&gt;  I’m siicckk of blogging memes.
@@ -1230,19 +1223,19 @@ imaginary bugs in the “Hello World” program.</p>
              turns out I’m a Joey type”
 </pre>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 rindolf here is Shlomi Fish
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="tcl_is_lisp_on_drugs" header="Tcl is Lisp on Drugs…">
+[% WRAPPER eng_header_joke id = "tcl_is_lisp_on_drugs"  header = "Tcl is Lisp on Drugs…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Tcl is LISP on drugs. Using strings instead of S-expressions for closures is
@@ -1250,31 +1243,31 @@ Evil with one of those gigantic “E”s you can find at the beginning of
 book chapters.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="jewish_atheists" header="Jewish Atheists">
+[% WRAPPER eng_header_joke id = "jewish_atheists"  header = "Jewish Atheists"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Jewish Atheists are the only true Atheists. They beat the hell out of Goy
 Atheists.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Yet more Jew-over-Gentile superiority, this time by me. In case you’re
 wondering, Judaism is primarily a peopleship and the Jewish religion is
 only a part of it.
 </p>
-</comment>
-</eng_header_joke>
+[%- END -%]
+[%- END -%]
 
-<heb_header_joke id="jewish_atheists" header="אתאיסטים יהודים">
+[% WRAPPER heb_header_joke id = "jewish_atheists"  header = "אתאיסטים יהודים"  %]
 <p>
 יהודים אתאיסטים הם האתאיסטיים האמתיים היחידים.
 הם לוקחים את כל האתאיסטיים הגויים בקטנה.
@@ -1283,37 +1276,37 @@ only a part of it.
 <i>עוד אליטיזם יהודי, הפעם מצדי. במקרה שאתם תוהים, היהודים הם בראש
 ובראשונה עם, והדת היהודית היא רק חלק מההוויה היהודית.</i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="original_philosopher" header="An Original Philosopher…">
+[% WRAPPER eng_header_joke id = "original_philosopher"  header = "An Original Philosopher…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 An original philosopher knows the right combination of ideas to steal.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="original_philosopher" header="פילוסוף מקורי…">
+[% WRAPPER heb_header_joke id = "original_philosopher"  header = "פילוסוף מקורי…"  %]
 <p>
 פילוסוף מקורי יודע מה הצירוף הנכון של רעיונות שיש לגנוב מאנשים אחרים.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="to_err_is_human_corollaries" header="Corollaries to “To err is human…”">
+[% WRAPPER eng_header_joke id = "to_err_is_human_corollaries"  header = "Corollaries to “To err is human…”"  %]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Here are some corollaries to <q>To err is human - to forgive divine</q>.
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 
 <ul>
 <li>
@@ -1327,55 +1320,55 @@ To have bugs is human - to find them - divine.
 </li>
 </ul>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="might_be_mad" header="Might be mad…">
+[% WRAPPER eng_header_joke id = "might_be_mad"  header = "Might be mad…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I might be mad. But I’m a mad genius.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="might_be_mad" header="ייתכן שאני משוגע…">
+[% WRAPPER heb_header_joke id = "might_be_mad"  header = "ייתכן שאני משוגע…"  %]
 
 <p>
 ייתכן שאני משוגע. אבל אני גאון משוגע.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="if_god_exists" header="If God exists…">
+[% WRAPPER eng_header_joke id = "if_god_exists"  header = "If God exists…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 If God exists and is the ego-maniacal, sadistic and helpless creature that
 is described in the Old Testament, then we’re in deep trouble.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="if_god_exists" header="אם אלוהים קיים…">
+[% WRAPPER heb_header_joke id = "if_god_exists"  header = "אם אלוהים קיים…"  %]
 
 <p>
 אם אלוהים קיים והוא היצור האגו-מאני, הסדיסטי וחסר הישע
 שמתואר בתנ״ך, אז אנחנו בצרות צרורות.
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="bad_thing_about_hardware" header="The bad thing about hardware">
+[% WRAPPER eng_header_joke id = "bad_thing_about_hardware"  header = "The bad thing about hardware"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 The bad thing about hardware is that it sometimes works and it sometimes
@@ -1384,162 +1377,162 @@ not work, and it always does not work in exactly the same way.
 </p>
 
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="bad_thing_about_hardware" header="מה שרע בחומרה">
+[% WRAPPER heb_header_joke id = "bad_thing_about_hardware"  header = "מה שרע בחומרה"  %]
 
 <p>
 מה שרע בחומרה זה שהיא לפעמים עובדת ולפעמים לא. מה שטוב בתכנה זה שהיא עקבית:
 היא כל הזמן לא עובדת, וכל הזמן לא עובדת בדיוק באותה צורה.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="table_with_cups" header="Let’s suppose you have a table">
+[% WRAPPER eng_header_joke id = "table_with_cups"  header = "Let’s suppose you have a table"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Sophie:</b> Let’s suppose you have a table with 2<sup>n</sup> cups…<br />
 <b>Jack:</b> Wait a second - is “n” a natural number?
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="table_with_cups" header="נניח שיש לך שולחן">
+[% WRAPPER heb_header_joke id = "table_with_cups"  header = "נניח שיש לך שולחן"  %]
 
 <p>
 <b>דפנה:</b> נניח שיש לך שולחן עם 2 בגובה n כוסות…<br />
 <b>קובי:</b> רגע, רגע  - האם „n“ הוא מספר טבעי?
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="chuck_norris_and_perl6" header="Chuck Norris and Perl 6">
+[% WRAPPER eng_header_joke id = "chuck_norris_and_perl6"  header = "Chuck Norris and Perl 6"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Chuck Norris wrote a complete Perl 6 implementation in a day, but then
 destroyed all evidence with his bare hands so no one will know his secrets.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 There’s more about Chuck Norris and Perl 6
-<a href="$(PATH_TO_ROOT)humour/fortunes/shlomif.html">in this
+<a href="[% base_path %]humour/fortunes/shlomif.html">in this
 Unix fortune file</a> and more about Norris on
 <a href="http://www.chucknorrisfacts.com/">the Chuck Norris Facts
 web-site.</a>.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="chuck_norris_and_perl6" header="צ‘אק נוריס ופרל 6">
+[% WRAPPER heb_header_joke id = "chuck_norris_and_perl6"  header = "צ‘אק נוריס ופרל 6"  %]
 
 <p>
 צ‘אק נוריס כתב מימוש מלא של פרל 6 ביממה אחת, אבל אז העלים את כל העובדות בעזרת ידיו
 הריקות כדי שאיש לא ידע את סודותיו.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="ee_in_the_technion" header="Electrical Engineering studies.">
+[% WRAPPER eng_header_joke id = "ee_in_the_technion"  header = "Electrical Engineering studies."  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Electrical Engineering studies. In the Technion. Been there. Done that.
 Forgot a lot. Remember too much.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="ee_in_the_technion" header="לימודי הנדסת חשמל">
+[% WRAPPER heb_header_joke id = "ee_in_the_technion"  header = "לימודי הנדסת חשמל"  %]
 <p>
 לימודי הנדסת חשמל. בטכניון. הייתי שם. עשיתי את זה.
 שכחתי הרבה. זוכר יותר מדי.
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="not_an_actor" header="I’m not an Actor">
+[% WRAPPER eng_header_joke id = "not_an_actor"  header = "I’m not an Actor"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I’m not an actor - I just play one on T.V.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="not_an_actor" header="אני לא שחקן">
+[% WRAPPER heb_header_joke id = "not_an_actor"  header = "אני לא שחקן"  %]
 <p>
 אני לא שחקן. אני רק מגלם אחד כזה בטלוויזיה.
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="internet_porn" header="Blocking Internet Pornography">
+[% WRAPPER eng_header_joke id = "internet_porn"  header = "Blocking Internet Pornography"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Trying to block Internet pornography is like climbing a waterfall and trying
 to stay dry.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Drew Dexter
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="internet_porn" header="לחסום פורנוגרפית אינטרנט">
+[% WRAPPER heb_header_joke id = "internet_porn"  header = "לחסום פורנוגרפית אינטרנט"  %]
 <p>
 לנסות לחסום פורנוגרפיית-אינטרנט זה כמו לטפס במעלה מפל-מים ולנסות להישאר יבש.
 </p>
 <p>
 <i>Drew Dexter</i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="Im_not_straight" header="I’m not straight…">
+[% WRAPPER eng_header_joke id = "Im_not_straight"  header = "I’m not straight…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I’m not straight - I’m Israeli!
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Just for the record, I am straight, and I hate being a macho. Perhaps the
 sentence is better as “I'm not straight - I'm Italian!” but one should always
 look at their side of the fence.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="Im_not_straight" header="אני לא סטרייט…">
+[% WRAPPER heb_header_joke id = "Im_not_straight"  header = "אני לא סטרייט…"  %]
 <p>
 אני לא סטרייט - אני ישראלי!
 </p>
@@ -1548,12 +1541,12 @@ look at their side of the fence.
 ייתכן שהמשפט צריך להיות „אני לא סטרייט - אני איטלקי!“
 במקום, אבל תמיד כדאי להסתכל על הצד של הגדר שלך.</i>
 </p>
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="i_do_not_think_it_means" header="I do not think it means…">
+[% WRAPPER eng_header_joke id = "i_do_not_think_it_means"  header = "I do not think it means…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <pre>
 &gt; You keep using that word.  I do not think it means what you think it
@@ -1565,16 +1558,16 @@ means.
 &lt;evil-laugh&gt;Muahahahah…&lt;/evil-laugh&gt;
 </pre>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Taken from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011935.html">this E-mail to the Linux-Elitists mailing list</a>
 </p>
-</comment>
-</eng_header_joke>
+[%- END -%]
+[%- END -%]
 
-<heb_header_joke id="i_do_not_think_it_means" header="אני לא חושב שהמשמעות שלה…">
+[% WRAPPER heb_header_joke id = "i_do_not_think_it_means"  header = "אני לא חושב שהמשמעות שלה…"  %]
 
 <blockquote>
 <p>
@@ -1595,30 +1588,30 @@ Taken from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/01
 <i>מבוסס על <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011935.html">ההודעה הזאת לרשימת הדיוור linux-elitists</a>.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="chuck_norris_2" header="Chuck Norris Fact #2">
+[% WRAPPER eng_header_joke id = "chuck_norris_2"  header = "Chuck Norris Fact #2"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 If Chuck Norris had been born before World War II, there would have been only
 one world war.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 I feel a bit uneasy about saying it, but it is still kind of funny, for
 those who like <a href="http://www.chucknorrisfacts.com/">Chuck
 Norris facts</a>
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="chuck_norris_2" header="עובדת צ‘אק נוריס מס׳ 2">
+[% WRAPPER heb_header_joke id = "chuck_norris_2"  header = "עובדת צ‘אק נוריס מס׳ 2"  %]
 
 <p>
 אילו צ‘אק נוריס היה נולד לפני מלחמת העולם השנייה,
@@ -1626,22 +1619,22 @@ Norris facts</a>
 אבל היו שלוש הריגות עולמיות המוניות של צ‘אק נוריס.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="we_dont_know_his_cellphone_numer" header="We don’t know his cellphone number">
+[% WRAPPER eng_header_joke id = "we_dont_know_his_cellphone_numer"  header = "We don’t know his cellphone number"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 We don’t know his cellphone number, and even if we did, we would tell you that
 we didn’t know it.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="we_dont_know_his_cellphone_numer" header="איננו יודעים את מספר הטלפון הנייד  שלו">
+[% WRAPPER heb_header_joke id = "we_dont_know_his_cellphone_numer"  header = "איננו יודעים את מספר הטלפון הנייד  שלו"  %]
 
 <p>
 אנחנו לא יודעים את מספר הטלפון הנייד שלו,
@@ -1649,12 +1642,12 @@ we didn’t know it.
 לא יודעים אותו.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="sometimes_two_bugs" header="Sometimes two bugs…">
+[% WRAPPER eng_header_joke id = "sometimes_two_bugs"  header = "Sometimes two bugs…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <pre>
  &lt;rindolf&gt;  sarnold: you go to OGI?
@@ -1676,25 +1669,25 @@ we didn’t know it.
     -- #offtopic on OFTC
 </pre>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="what_do_you_mean" header="What do you mean…">
+[% WRAPPER eng_header_joke id = "what_do_you_mean"  header = "What do you mean…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 What do you mean by “WDYM”?
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="windows_vs_linux" header="Windows vs. Linux">
+[% WRAPPER eng_header_joke id = "windows_vs_linux"  header = "Windows vs. Linux"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Chen Shapira:</b>  spent 5 hours yesterday trying to get Windows to print
@@ -1711,30 +1704,30 @@ few minutes.
 underflow.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="pedantic_people" header="Pedantic People">
+[% WRAPPER eng_header_joke id = "pedantic_people"  header = "Pedantic People"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I often wonder why I hang out with so many people who are so pedantic. And
 then I remember - because they are so pedantic.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 An Israeli Perl Monger
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="pedantic_people" header="אנשים פדנטים">
+[% WRAPPER heb_header_joke id = "pedantic_people"  header = "אנשים פדנטים"  %]
 
 <p>
 ”לפעמים אני תוהה מדוע אני ממשיך להסתובב
@@ -1746,22 +1739,22 @@ An Israeli Perl Monger
 <i>שוחר פרל ישראלי</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
 
 
-<eng_header_joke id="met_a_guy_in_the_bar" header="I Met a Guy in the Bar">
+[% WRAPPER eng_header_joke id = "met_a_guy_in_the_bar"  header = "I Met a Guy in the Bar"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 I met a guy in the bar, talked to her and she gave me her phone number.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 
 <p>
 This is an anti-thesis to the fact that many <a
@@ -1796,13 +1789,13 @@ who’s unnecessarily strict</a> or calling Black people “Negros”, which is
 just the Spanish word for the colour “Black”.
 </p>
 
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="on_the_Internet" header="On the Internet">
+[% WRAPPER eng_header_joke id = "on_the_Internet"  header = "On the Internet"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Two female dogs talking about modern-life:
@@ -1816,180 +1809,180 @@ Two female dogs talking about modern-life:
 <b>Daisy:</b> Yeah, but everyone can tell right away that you’re a bitch!
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 
 <p>
 <a href="http://www.unc.edu/depts/jomc/academics/dri/idog.html">See this page
 about “On the Internet”</a> for context.
 </p>
 
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="God_gave_us_two_eyes" header="God gave us…">
+[% WRAPPER eng_header_joke id = "God_gave_us_two_eyes"  header = "God gave us…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 God gave us two eyes and ten fingers so we will type five times as much as
 we read.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="God_gave_us_two_eyes" header="אלוהים נתן לנו">
+[% WRAPPER heb_header_joke id = "God_gave_us_two_eyes"  header = "אלוהים נתן לנו"  %]
 
 <p>
 אלוהים נתן לנו שתי עיניים ועשר אצבעות, כדי שנקליד פי חמש יותר ממה שאנו קוראים.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="only_wimps_complain_about_bad_code" header="Only wimps complain about bad code">
+[% WRAPPER eng_header_joke id = "only_wimps_complain_about_bad_code"  header = "Only wimps complain about bad code"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Only wimps complain about bad code. Real men clean it up.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="only_wimps_complain_about_bad_code" header="רק נמושות מתלוננים על קוד גרוע.">
+[% WRAPPER heb_header_joke id = "only_wimps_complain_about_bad_code"  header = "רק נמושות מתלוננים על קוד גרוע."  %]
 
 <p>
 רק נמושות מתלוננים על קוד גרוע.
 גברים אמתיים מנקים אותו.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="wikipedia_has" header="Wikipedia has…">
+[% WRAPPER eng_header_joke id = "wikipedia_has"  header = "Wikipedia has…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Wikipedia has a page about everything including the
 <a href="http://en.wikipedia.org/wiki/Kitchen_sink">http://en.wikipedia.org/wiki/Kitchen_sink</a> .
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="what_does_IDK_stand_for" header="What does IDK stand for?">
+[% WRAPPER eng_header_joke id = "what_does_IDK_stand_for"  header = "What does IDK stand for?"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 What does “IDK” stand for? I don’t know.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="siginificance-of-being-18" header="Significance of Being 18">
+[% WRAPPER eng_header_joke id = "siginificance-of-being-18"  header = "Significance of Being 18"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 A kid always wishes they were older until they are 18. Afterwards, they always
 wish they were younger.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="siginificance-of-being-18" header="המשמעות של להיות בן 18">
+[% WRAPPER heb_header_joke id = "siginificance-of-being-18"  header = "המשמעות של להיות בן 18"  %]
 
 <p>
 נער או נערה תמיד רוצים להיות מבוגרים יותר עד שהם בני 18.
 אחר-כך, הם תמיד רוצים להיות צעירים יותר.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="chuck-norris-and-the-wikipedia" header="Chuck Norris and the Wikipedia">
+[% WRAPPER eng_header_joke id = "chuck-norris-and-the-wikipedia"  header = "Chuck Norris and the Wikipedia"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Chuck Norris read the entire English Wikipedia in 24 hours. Twice.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="chuck-norris-and-the-wikipedia" header="צ‘אק נוריס והוויקיפדיה">
+[% WRAPPER heb_header_joke id = "chuck-norris-and-the-wikipedia"  header = "צ‘אק נוריס והוויקיפדיה"  %]
 
 <p>
 צ‘אק נוריס קרא את כל הוויקיפדיה האנגלית ב-24 שעות. פעמיים.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="give-me-ascii" header="Give me ASCII">
+[% WRAPPER eng_header_joke id = "give-me-ascii"  header = "Give me ASCII"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Give me ASCII or give me deaþ!
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="technion-ways" header="Technion Ways">
+[% WRAPPER eng_header_joke id = "technion-ways"  header = "Technion Ways"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 In the Technion, there are many ways to get from one place to the other,
 but they are all the same length.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="technion-ways" header="דרכים בטכניון">
+[% WRAPPER heb_header_joke id = "technion-ways"  header = "דרכים בטכניון"  %]
 
 <p>
 בטכניון, יש דרכים רבות ללכת ממקום אחד לאחר, אבל הן כולן באותו אורך.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="chuck-norris-and-wikipedia-deletionists" header="Chuck Norris and Wikipedia Deletionists">
+[% WRAPPER eng_header_joke id = "chuck-norris-and-wikipedia-deletionists"  header = "Chuck Norris and Wikipedia Deletionists"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Deletionists beware! If you delete Chuck Norris’ Wikipedia submission, he
 will delete you!
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Or:
 </p>
-</comment>
+[%- END -%]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Deletionists delete Wikipedia articles that they consider lame.
@@ -1999,32 +1992,32 @@ Deletionists delete Wikipedia articles that they consider lame.
 Chuck Norris deletes deletionists that he considers lame.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 See <a href="http://opendotdotdot.blogspot.com/2008/04/includipedia-count-us-in.html">“Includipedia - Count Us In” on open-dot-dot-dot</a> for the context.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
 
-<eng_header_joke id="english-spelling" header="English Spelling">
+[% WRAPPER eng_header_joke id = "english-spelling"  header = "English Spelling"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 English spelling aims to be consistent. Publicly and methodically.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="sorting-the-dishes" header="Sorting the Dishes">
+[% WRAPPER eng_header_joke id = "sorting-the-dishes"  header = "Sorting the Dishes"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Shlomi’s Father:</b> If you don’t sort the dishwasher, the dishwasher won’t
@@ -2044,11 +2037,11 @@ dishwasher.
 <b>Together:</b> Along with all the dishes.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="sorting-the-dishes" header="סידור המדיח">
+[% WRAPPER heb_header_joke id = "sorting-the-dishes"  header = "סידור המדיח"  %]
 
 <p>
 <b>אביו של שלומי:</b> אם לא תסדר את המדיח, המדיח לא יסודר.
@@ -2066,59 +2059,59 @@ dishwasher.
 <b>ביחד:</b> ביחד עם כל הכלים.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="cats-in-soviet-russia" header="Cats in Soviet Russia">
+[% WRAPPER eng_header_joke id = "cats-in-soviet-russia"  header = "Cats in Soviet Russia"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 In Soviet Russia, cats own you. No, wait! Cats own you everywhere.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="cats-in-soviet-russia" header="חתולים ברוסיה הסובייטית">
+[% WRAPPER heb_header_joke id = "cats-in-soviet-russia"  header = "חתולים ברוסיה הסובייטית"  %]
 
 <p>
 ברוסיה הסובייטית, חתולים הם הבעלים שלך. רגע אחד! הם הבעלים שלך בכל מקום.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="email-web-feeds" header="E-mail, web feeds…">
+[% WRAPPER eng_header_joke id = "email-web-feeds"  header = "E-mail, web feeds…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 E-mail, web feeds, and doing something productive — choose two.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="email-web-feeds" header="דוא״ל, הזנות רשת…">
+[% WRAPPER heb_header_joke id = "email-web-feeds"  header = "דוא״ל, הזנות רשת…"  %]
 
 <p>
 דוא״ל, הזנות רשת, ולעשות משהו יצרני ֹֹֹ— בחר שניים.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="waste-time" header="Wasting time">
+[% WRAPPER eng_header_joke id = "waste-time"  header = "Wasting time"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 The worst way to waste your time is to never waste it.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 
 <p>
 For more information about that, see the book
@@ -2127,11 +2120,11 @@ Ende and <a href="http://unarmed.shlomifish.org/1342.html">this
 post on my blog</a>.
 </p>
 
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="waste-time" header="בזבוז זמן">
+[% WRAPPER heb_header_joke id = "waste-time"  header = "בזבוז זמן"  %]
 
 <p>
 הדרך הגרועה ביותר לבזבז את הזמן שלך היא לעולם לא לבזבז אותו.
@@ -2145,26 +2138,26 @@ post on my blog</a>.
 <a href="http://unarmed.shlomifish.org/1342.html">רשומה זאת בבלוג שלי</a>.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="intersting-vs-successful" header="Interesting vs. Successful">
+[% WRAPPER eng_header_joke id = "intersting-vs-successful"  header = "Interesting vs. Successful"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 There's a negative correlation between “interesting” and “successful”.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 That was said by Anno on
 <a href="irc://irc.freenode.net/#perl">Freenode's #perl</a>.
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="intersting-vs-successful" header="מעניין נגד מצליח">
+[% WRAPPER heb_header_joke id = "intersting-vs-successful"  header = "מעניין נגד מצליח"  %]
 
 <p>
 יש התאמה שלילית בין דברים מעניינים לבין דברים מצליחים.
@@ -2174,122 +2167,122 @@ That was said by Anno on
 <i>זה נאמר על-ידי אנו (Anno) בערוץ פרל בפרינוד.</i>
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="Im_hungry_today" header="I'm hungry today…">
+[% WRAPPER eng_header_joke id = "Im_hungry_today"  header = "I'm hungry today…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 <b>Sophie:</b> I’m hungry today.<br />
 <b>Jack:</b> well, wait until tomorrow - maybe this feeling will pass.
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="Im_hungry_today" header="אני רעבה היום…">
+[% WRAPPER heb_header_joke id = "Im_hungry_today"  header = "אני רעבה היום…"  %]
 
 <p>
 <b>דפנה:</b> אני רעבה היום.<br />
 <b>קובי:</b> אז חכי עד מחר - אולי זה יעבור.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="We_agree" header="We agree…">
+[% WRAPPER eng_header_joke id = "We_agree"  header = "We agree…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 We agree. But do we agree to agree?
 </p>
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="We_agree" header="אנחנו מסכימים…">
+[% WRAPPER heb_header_joke id = "We_agree"  header = "אנחנו מסכימים…"  %]
 
 <p>
 אנחנו מסכימים. אבל האם אנחנו מסכימים להסכים?
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="soviet_superstitions" header="In Soviet Russia">
+[% WRAPPER eng_header_joke id = "soviet_superstitions"  header = "In Soviet Russia"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 In Soviet Russia, superstition believe in you.
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 <a href="http://mail.perl.org.il/pipermail/perl/2012-September/012757.html">Sawyer X</a>
 </p>
-</comment>
+[%- END -%]
 
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="soviet_superstitions" header="ברוסיה הסובייטית">
+[% WRAPPER heb_header_joke id = "soviet_superstitions"  header = "ברוסיה הסובייטית"  %]
 
 <p>
 ברוסיה הסובייטית אמונה תפלה מאמינה בך.
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 <a href="http://mail.perl.org.il/pipermail/perl/2012-September/012757.html">Sawyer X</a>
 </p>
-</comment>
+[%- END -%]
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="if-isnt-in-my-email" header="If it isn’t in my E-mail">
+[% WRAPPER eng_header_joke id = "if-isnt-in-my-email"  header = "If it isn’t in my E-mail"  %]
 
 <p>
 If it isn’t in my E-mail, it doesn’t exist. And if the whole world says
 one thing and E-mail says another, Email will conquer
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Said to me in a private conversation by an Israeli Linux enthusiast.
 </p>
-</comment>
+[%- END -%]
 
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="if-isnt-in-my-email" header="אם זה לא באימייל שלי">
+[% WRAPPER heb_header_joke id = "if-isnt-in-my-email"  header = "אם זה לא באימייל שלי"  %]
 
 <p>
 אם זה לא באימייל שלי, זה לא קיים. ואם האימייל שלי אומר משהו אחד
 וכל העולם אומר משהו אחר, האימייל ינצח.
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 זה נאמר לי באופן פרטי על ידי חובב לינוקס ישראלי.
 </p>
-</comment>
+[%- END -%]
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="english-wikipedia-1" header="The English Wikipedia…">
+[% WRAPPER eng_header_joke id = "english-wikipedia-1"  header = "The English Wikipedia…"  %]
 
 <p>
 The English Wikipedia: now you don’t see it - now you do.
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="if-you-start-something" header="If you start something">
+[% WRAPPER eng_header_joke id = "if-you-start-something"  header = "If you start something"  %]
 
 <p>
 <i>Shlomi is sorting the dishwasher.</i>
@@ -2303,15 +2296,15 @@ The English Wikipedia: now you don’t see it - now you do.
 <b>Shlomi:</b> and if you finish something, you’ve got to start it all over again.
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/exp-abc/hey/%D7%94%D7%9E%D7%AA%D7%97%D7%99%D7%9C+%D7%91%D7%9E%D7%A6%D7%95%D7%95%D7%94+%D7%90%D7%95%D7%9E%D7%A8%D7%99%D7%9D+%D7%9C%D7%95+%D7%92%D7%9E%D7%95%D7%A8">an idiom about that</a>.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="if-you-start-something" header="המתחיל במצווה">
+[% WRAPPER heb_header_joke id = "if-you-start-something"  header = "המתחיל במצווה"  %]
 
 <p>
 <i>שלומי מסדר את המדיח</i>
@@ -2325,37 +2318,32 @@ That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/
 <b>שלומי:</b> והמסיים את המצווה אומרים לו להתחיל מחדש.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<define-tag github_captioned_image_joke endtag="required">
+[% BLOCK github_captioned_image_joke %]
 
-<preserve alt header id img_style repo_href src />
-<set-var %attributes />
+[% WRAPPER eng_header_joke id=id header=header %]
 
-<eng_header_joke id="<get-var id />" header="<get-var header />">
-
-<img src="<get-var src />" alt="<get-var alt />" <if "<get-var img_style />" "style=\"<get-var img_style />\"" /> /><br />
+<img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %] /> /><br />
 
 <ul>
 <li>
 <p>
-<a href="<get-var repo_href />">VCS Repository for the Sources</a>
+<a href="[% repo_href %]">VCS Repository for the Sources</a>
 </p>
 </li>
 </ul>
 
-%body
+[% content %]
 
-</eng_header_joke>
+[%- END -%]
 
-<restore alt header id img_style repo_href src />
+[% END %]
 
-</define-tag> ;;; github_captioned_image_joke
-
-<github_captioned_image_joke id="yo-nsa-publish-or-perish" header="Yo NSA, Publish or Perish" repo_href="http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish" src="$(PATH_TO_ROOT)images/nsa-publish-or-perish.jpg" alt="Yo NSA, Publish or Perish">
+[% WRAPPER github_captioned_image_joke id = "yo-nsa-publish-or-perish"  header = "Yo NSA, Publish or Perish"  repo_href = "http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish"  src = "${base_path}images/nsa-publish-or-perish.jpg"  alt = "Yo NSA, Publish or Perish"  %]
 
 <p>
-Also see <a href="$(PATH_TO_ROOT)philosophy/SummerNSA/">the #SummerNSA initiative</a>.
+Also see <a href="[% base_path %]philosophy/SummerNSA/">the #SummerNSA initiative</a>.
 </p>
 
 <p>
@@ -2363,26 +2351,26 @@ Image taken from
 <a href="http://commons.wikimedia.org/wiki/File:Vitoria-University-Library-food-science-journals-4489.jpg">Wikimedia Commons</a> under CC-by-sa/GFDL.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<eng_header_joke id="initial-reaction-to-Aristotle-organon" header="Initial Reaction to Aristotle’s Organon">
+[% WRAPPER eng_header_joke id = "initial-reaction-to-Aristotle-organon"  header = "Initial Reaction to Aristotle’s Organon"  %]
 
 <p>
 “A is A, and A is not not-A? What the f**k is he talking about??! Of course A
 can be not-A! I want a little of the stuff he’s on!”
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 Aristotle’s <a href="http://en.wikipedia.org/wiki/Organon">Organon</a> is
 now considered the foundation of science and modern thought, but I believe
 that back then, it was not taken for granted as it is today.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="initial-reaction-to-Aristotle-organon" header="תגובה ראשונית לאורגנון של אריסטו">
+[% WRAPPER heb_header_joke id = "initial-reaction-to-Aristotle-organon"  header = "תגובה ראשונית לאורגנון של אריסטו"  %]
 
 <p>
 ”A
@@ -2390,118 +2378,118 @@ that back then, it was not taken for granted as it is today.
 להיות לא-A! אני רוצה קצת מהחומר שהוא מעשן.
 </p>
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 <a href="http://he.wikipedia.org/wiki/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%95%D7%9F">האורגנון של אריסטו</a>
 נחשב היום למסד של המדע והמחשבה המודרנית, אבל לדעתי בזמנו של אריסטו, הוא לא
 נתפס כמובן מאליו כפי שהוא עכשיו.
 </p>
-</comment>
+[%- END -%]
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="laziness" header="Laziness">
+[% WRAPPER eng_header_joke id = "laziness"  header = "Laziness"  %]
 
 <p>
 Laziness will be the downfall of mankind, but I cannot be arsed to do anything
 about it.
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="laziness" header="עצלנות">
+[% WRAPPER heb_header_joke id = "laziness"  header = "עצלנות"  %]
 
 <p>
 עצלנות תביא את הגזע האנושי לאבדון, אבל אין לי כוח לעשות משהו בנידון.
 </p>
 
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="deletionists_dont_die" header="Wikipedia Deletionists Don’t Die">
+[% WRAPPER eng_header_joke id = "deletionists_dont_die"  header = "Wikipedia Deletionists Don’t Die"  %]
 
 <p>
 Wikipedia deletionists don’t die. They lose notability and get deleted.
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="kinda" header="It’s kinda…">
+[% WRAPPER eng_header_joke id = "kinda"  header = "It’s kinda…"  %]
 
 <p>
 It’s kinda, sort-of… pretty much… quite… awesome I tell you - awesome!
 Got it? It’s kinda awesome!
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="two_kinds_of_fools" header="Two Kinds of Fools (Extended)">
+[% WRAPPER eng_header_joke id = "two_kinds_of_fools"  header = "Two Kinds of Fools (Extended)"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 There are two kinds of fools. One says, “This is old, and therefore good”.<br />
 And one says, “This is new, and therefore better”.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 — <a href="http://en.wikiquote.org/wiki/John_Brunner">John Brunner</a>,
 <i>The Shockwave Rider</i>
 </p>
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Two more kinds of fools. One says: “This is popular, and therefore good”.<br />
 The other says: “This is good because it’s not popular”.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 — Shlomi Fish (though may not be a 100% original sentiment).
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<heb_header_joke id="two_kinds_of_fools" header="שני סוגי כסילים">
+[% WRAPPER heb_header_joke id = "two_kinds_of_fools"  header = "שני סוגי כסילים"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 יש שני סוגי כסילים. אחד אומר: ”זה ישן, ולכן זה טוב“.<br />
 השני אומר: ”זה חדש, ועל-כן זה טוב יותר”.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 — <a href="http://en.wikiquote.org/wiki/John_Brunner">John Brunner</a>,
 <i>The Shockwave Rider</i>
 </p>
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 שני סוגים נוספים של כסילים. אחד אומר: ”זה פופולרי ולכן זה טוב”.<br />
 השני אומר: ”זה טוב מפני שזה לא פופולרי“.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 — שלומי פיש (אם כי לא בטוח שזה לא נאמר קודם לכן)
 </p>
-</heb_header_joke>
+[%- END -%]
 
-<eng_header_joke id="princess_bride_remake" header="Scary Thought of the Day">
+[% WRAPPER eng_header_joke id = "princess_bride_remake"  header = "Scary Thought of the Day"  %]
 
 <p>
 Scary thought of the day: <i>The Princess Bride</i>: the 3-D Remake.
 </p>
 
-</eng_header_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="if_ayn_rand_was_born_in_the_1990s" header="If Ayn Rand was born in the 1990s…" repo_href="https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie" src="$(PATH_TO_ROOT)humour/images/Ayn_Rand--to--Christina_Grimmie--reduced.png" alt="Ayn Rand→Christina Grimmie">
+[% WRAPPER github_captioned_image_joke id = "if_ayn_rand_was_born_in_the_1990s"  header = "If Ayn Rand was born in the 1990s…"  repo_href = "https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie"  src = "${base_path}humour/images/Ayn_Rand--to--Christina_Grimmie--reduced.png"  alt = "Ayn Rand→Christina Grimmie"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 If Ayn Rand was born in the 1990s, she would be <a href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina Grimmie</a>.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 Very much inspired by what
@@ -2584,52 +2572,52 @@ for money, and not liking that.
 
 </ul>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<eng_header_joke id="being_convinced_of_being_wrong" header="Being convinced of being wrong.">
+[% WRAPPER eng_header_joke id = "being_convinced_of_being_wrong"  header = "Being convinced of being wrong."  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 I love being convinced that I was wrong before. That way I knew I
 improved and am now wiser. Like the Klingon warriors say when it happens:
 “What a great day it was for me to die!”.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="finding_a_good_SO" header="Where to Find a Good Significant Other">
+[% WRAPPER eng_header_joke id = "finding_a_good_SO"  header = "Where to Find a Good Significant Other"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 You are much more likely to find a good significant other -
 with a perfectly sound mind and body - in a
 Sci-Fi/Fantasy/etc. conference than you are
 in the middle of the wilderness.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="a_woman_is_a_lady" header="A woman is a lady">
+[% WRAPPER eng_header_joke id = "a_woman_is_a_lady"  header = "A woman is a lady"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 A woman is a lady even if she is or was a porn actress or
 a prostitute. Treat her with respect, be honest to her
 — be a gentleman.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="carpe_diem" header="Carpe diem, motherfucker!! Do you speak it?!!" repo_href="https://github.com/shlomif/Captioned-Image-Carpe-Diem--Mofo" src="$(PATH_TO_ROOT)humour/images/carpe-diem-mofo--reduced.jpg" alt="Carpe diem, motherfucker!! Do you speak it?!!">
+[% WRAPPER github_captioned_image_joke id = "carpe_diem"  header = "Carpe diem, motherfucker!! Do you speak it?!!"  repo_href = "https://github.com/shlomif/Captioned-Image-Carpe-Diem--Mofo"  src = "${base_path}humour/images/carpe-diem-mofo--reduced.jpg"  alt = "Carpe diem, motherfucker!! Do you speak it?!!"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 <a href="http://en.wikipedia.org/wiki/Carpe_diem">Carpe diem</a>, motherfucker!! Do you speak it?!!
 </p>
-</quote>
+[%- END -%]
 
 <p>
 Here I combine the old Latin adage meaning something like “seize the day”
@@ -2664,13 +2652,13 @@ a blazing success.
 
 <li>
 <p>
-<a href="$(PATH_TO_ROOT)humour/Summerschool-at-the-NSA/">“Summerschool at the NSA”</a>
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/">“Summerschool at the NSA”</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(PATH_TO_ROOT)humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Summer
+<a href="[% base_path %]humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Summer
 Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe Diem” message].
 </p>
 </li>
@@ -2678,16 +2666,16 @@ Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe 
 </ol>
 
 
-</github_captioned_image_joke>
+[%- END -%]
 
 
-<github_captioned_image_joke id="holocaust_denial" header="Holocaust Denial" repo_href="http://github.com/shlomif/Captioned-Image-Holocaust" src="$(PATH_TO_ROOT)humour/images/Holocaust.jpg" alt="“The holocaust did not happen, so shoot me, bitch!”">
+[% WRAPPER github_captioned_image_joke id = "holocaust_denial"  header = "Holocaust Denial"  repo_href = "http://github.com/shlomif/Captioned-Image-Holocaust"  src = base_path _ "humour/images/Holocaust.jpg"  alt = "“The holocaust did not happen, so shoot me, bitch!”"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 The holocaust did not happen, so shoot me, bitch!
 </p>
-</quote>
+[%- END -%]
 
 <p>
 ( Photo of a white picket fence surrounding a pastoral field, and a caption
@@ -2731,15 +2719,15 @@ treating the acts of the Nazis as holy. ( This may be a good thing. ) This
 image is primarily intended at Israelis and Europeans as intellectual activism.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="pbride_philosophers" header="Have you heard of Plato? Aristotle?" repo_href="http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers" src="$(PATH_TO_ROOT)humour/images/philosophers-princess-bride.svg.jpg" alt="Princess Bride + Greek Philosophers">
+[% WRAPPER github_captioned_image_joke id = "pbride_philosophers"  header = "Have you heard of Plato? Aristotle?"  repo_href = "http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers"  src = base_path _ "humour/images/philosophers-princess-bride.svg.jpg"  alt = "Princess Bride + Greek Philosophers"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Have you heard of Plato? Aristotle? Socrates? Models!!
 </p>
-</quote>
+[%- END -%]
 
 <p>
 Philosophers at ancient times were essentially a form of entertainers, and
@@ -2749,41 +2737,41 @@ recently (as of 2014) — reality T.V. show contestants, or independent music
 some modelling even back then.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="mighty_klingon_warriors" header="Mighty Klingon Warriors" repo_href="https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior" src="$(PATH_TO_ROOT)humour/images/Every-mighty-Klingon-Warrior.svg.jpg" alt="Every Mighty Klingon warrior has watched Sesame Street!">
+[% WRAPPER github_captioned_image_joke id = "mighty_klingon_warriors"  header = "Mighty Klingon Warriors"  repo_href = "https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior"  src = base_path _ "humour/images/Every-mighty-Klingon-Warrior.svg.jpg"  alt = "Every Mighty Klingon warrior has watched Sesame Street!"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Every Mighty Klingon warrior has watched Sesame Street!
 </p>
-</quote>
+[%- END -%]
 
 <p>
 Originally a funny quote from a
-<a href="$(PATH_TO_ROOT)humour/fortunes/show.cgi?id=selina-mandrake-the-three">a
+<a href="[% base_path %]humour/fortunes/show.cgi?id=selina-mandrake-the-three">a
 scene</a> from my screenplay
-<a href="$(PATH_TO_ROOT)humour/Selina-Mandrake/"><i>Selina Mandrake -
+<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake -
 The Slayer</i></a>, it stuck in my mind and grew some life of its own. Here is
 <a href="http://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/best_warriors.html">the
 rest</a> of the explanation for the grain of truth behind it.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
 
-<github_captioned_image_joke id="evolution_of_girls_w_weapons" header="Evolution of Girls with Weapons" repo_href="http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons" src="$(PATH_TO_ROOT)humour/images/evolution-of-girls-with-weapons.svg.png" alt="Evolution of Girls with Weapons" img_style="border: 0.2em solid black; border-radius: 0.15em;">
+[% WRAPPER github_captioned_image_joke id = "evolution_of_girls_w_weapons"  header = "Evolution of Girls with Weapons"  repo_href = "http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons"  src = base_path _ "humour/images/evolution-of-girls-with-weapons.svg.png"  alt = "Evolution of Girls with Weapons"  img_style = "border: 0.2em solid black; border-radius: 0.15em;"  %]
 
 <p>
 Another captioned image / info graphics with some fun at the expense of
 actresses with their most associated weapons.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<eng_header_joke id="unbirthdays_best_days" header="Every unbirthday can be the best day of your life">
+[% WRAPPER eng_header_joke id = "unbirthdays_best_days"  header = "Every unbirthday can be the best day of your life"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 It’s OK if you forget my birthday, but please don’t forget my 364
 <a href="http://www.youtube.com/watch?v=RdsZT7WKjW8">unbirthdays</a>.
@@ -2792,17 +2780,17 @@ you love me</a>, and every day can be the
 <a href="http://www.youtube.com/watch?v=RW3rK-giAaM">best day of my
 life</a> so far!
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="dizzying_intellect" header="What I say after someone implies that correlation implies causation" repo_href="https://github.com/shlomif/Captioned-Image-Truly-You-Have" src="$(PATH_TO_ROOT)humour/images/Truly-You-Have.svg.jpg" alt="Truly You Have a Dizzying Intellect">
+[% WRAPPER github_captioned_image_joke id = "dizzying_intellect"  header = "What I say after someone implies that correlation implies causation"  repo_href = "https://github.com/shlomif/Captioned-Image-Truly-You-Have"  src = base_path _ "humour/images/Truly-You-Have.svg.jpg"  alt = "Truly You Have a Dizzying Intellect"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Truly You Have a Dizzying Intellect.
 </p>
-</quote>
+[%- END -%]
 
 <p>
 This is a quote from the film
@@ -2813,15 +2801,15 @@ that
 implies causation</a>.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="pin_it_all_on_me" header="“And the boss called me in to his office and tried to pin it all on me.”" repo_href="https://github.com/shlomif/Captioned-Image-SLP-Pinned-It-On-Me" src="$(PATH_TO_ROOT)humour/images/SLP-excerpt-pinned-it-on-me.jpg" alt="Tried to Pin it All on Me">
+[% WRAPPER github_captioned_image_joke id = "pin_it_all_on_me"  header = "“And the boss called me in to his office and tried to pin it all on me.”"  repo_href = "https://github.com/shlomif/Captioned-Image-SLP-Pinned-It-On-Me"  src = base_path _ "humour/images/SLP-excerpt-pinned-it-on-me.jpg"  alt = "Tried to Pin it All on Me"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 “And the boss called me in to his office and tried to pin it all on me.”
 </p>
-</quote>
+[%- END -%]
 
 <p>
 This is a quote from the film
@@ -2832,82 +2820,82 @@ someone else as a
 to shift the blame on them.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<eng_header_joke id="the_world_is_full_of_people" header="The World is Full of People…">
+[% WRAPPER eng_header_joke id = "the_world_is_full_of_people"  header = "The World is Full of People…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 The world is full of people, who each have their own personal whims and quirks,
 and which they expect you to remember and accommodate for, all the time.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="it_always_works_at_the_end" header="It always works at the end…">
+[% WRAPPER eng_header_joke id = "it_always_works_at_the_end"  header = "It always works at the end…"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 It always works at the end. Too bad it doesn't work right at the beginning.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This bit was once said by a relative of mine.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="grow_older" header="Growing Old">
+[% WRAPPER eng_header_joke id = "grow_older"  header = "Growing Old"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Some people grow older and wiser. Not I. I grow older and more foolish.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="prog_lang_that_will_be_good_for_everything" header="A programming language that will be good for everything">
+[% WRAPPER eng_header_joke id = "prog_lang_that_will_be_good_for_everything"  header = "A programming language that will be good for everything"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 How can you make a programming language that will be good for everything
 if you cannot even make such a screwdriver?
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This bit was once said by a fellow Israeli open source enthusiast.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="understanding_monads" header="Understanding Monads">
+[% WRAPPER eng_header_joke id = "understanding_monads"  header = "Understanding Monads"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 I understood what Monads are for 5 minutes. Then I had to let go of the
 understanding. It was too intense to be kept inside my head.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This bit was once said by a fellow Israeli open source enthusiast.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="taking_good_care_of_a_book" header="Taking Good Care of a Book">
+[% WRAPPER eng_header_joke id = "taking_good_care_of_a_book"  header = "Taking Good Care of a Book"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 <b>Shlomi’s Friend:</b> You will take good care of this book, right?
 </p>
@@ -2921,34 +2909,34 @@ black hole.
 <p>
 <b>Shlomi’s Friend:</b> That’s it? I do it to it every day.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 This conversation had taken place many years ago with one of my friends.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="stop_worry" header="A Good Idea">
+[% WRAPPER eng_header_joke id = "stop_worry"  header = "A Good Idea"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 It is a good idea to stop worrying about problems (or “problems” in quotes)
 that cannot be fixed.
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<github_captioned_image_joke id="nothing_sexier" header="“There’s nothing sexier than a man who does not want to have sex.”" repo_href="http://github.com/shlomif/Captioned-Image-Nothing-Sexier" src="$(PATH_TO_ROOT)humour/images/Nothing-Sexier.svg.jpg" alt="“As a woman, there is nothing sexier than a man who does not want to have sex.”">
+[% WRAPPER github_captioned_image_joke id = "nothing_sexier"  header = "“There’s nothing sexier than a man who does not want to have sex.”"  repo_href = "http://github.com/shlomif/Captioned-Image-Nothing-Sexier"  src = base_path _ "humour/images/Nothing-Sexier.svg.jpg"  alt = "“As a woman, there is nothing sexier than a man who does not want to have sex.”"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 “As a woman, there is nothing sexier than a man who does not want to have sex.”
 </p>
-</quote>
+[%- END -%]
 
 <p>
 This is a quote from the Television series
@@ -2958,11 +2946,11 @@ reused in a screenplay and also decided to place here. Also see
 Reddit discussion</a> of this captioned image.
 </p>
 
-</github_captioned_image_joke>
+[%- END -%]
 
-<eng_header_joke id="how_to_hide_code" header="How to hide your Perl code">
+[% WRAPPER eng_header_joke id = "how_to_hide_code"  header = "How to hide your Perl code"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 Step 1: Be Clever. Step 2: Use this to write obfuscated code.
 </p>
@@ -2978,50 +2966,50 @@ Step 5: Burn in hell for a milliard years for writing obfuscated code.
 <p>
 Step 6: Profit??
 </p>
-</quote>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="prog_lang_mult" header="A new programming language">
+[% WRAPPER eng_header_joke id = "prog_lang_mult"  header = "A new programming language"  %]
 
-<quote>
+[% WRAPPER quote  %]
 <p>
 I want to create a programming language called “Multiply” so people can say
 “I program in Go, Forth, and Multiply”.
 </p>
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 <a href="https://twitter.com/shlomif/status/880376410820542466">Tweet</a>
 </p>
-</comment>
+[%- END -%]
 
 
-</eng_header_joke>
+[%- END -%]
 
-<eng_header_joke id="multiply_by_pi" header="Multiply by Pi">
+[% WRAPPER eng_header_joke id = "multiply_by_pi"  header = "Multiply by Pi"  %]
 
-<quote>
+[% WRAPPER quote  %]
 
 <p>
 Take your schedule estimates and multiply them by <a href="https://en.wikipedia.org/wiki/Pi">Pi</a>. Take your expected profits and divide them by Pi.
 </p>
 
-</quote>
+[%- END -%]
 
-<comment>
+[% WRAPPER comment  %]
 <p>
 My father’s mentor advice.
 </p>
-</comment>
+[%- END -%]
 
-</eng_header_joke>
+[%- END -%]
 </div> ;;; End of aphorisms div.
 
 <h2 id="license">Copyright and Licence</h2>
 
-<cc_by_sa_british_blurb year="2002" />
+[% cc_by_sa_british_blurb( "year" => "2002", ) %]
 
 <h2 id="credits">Credits</h2>
 
@@ -3035,3 +3023,5 @@ My father’s mentor advice.
 </ul>
 
 </div> ;;; End for main_text
+
+[% END %]

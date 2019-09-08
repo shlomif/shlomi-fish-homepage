@@ -21,7 +21,7 @@ s#<(rindolf_floaty_img|w2l_devel_talk__license|project_euler_progress|story_ongo
     "[% PROCESS $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
     #egms;
 
-s#<(picture_tag|url_body_link)\s([^>]*?)/>#
+s#<(eng_intro|heb_intro|eng_list_h2|heb_list_h2|picture_tag|url_body_link)\s([^>]*?)/>#
     my ($tag, $args) = ($1, ($2 // ''));
     $tag =~ tr/-/_/;
     "[% INCLUDE $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
@@ -32,9 +32,10 @@ s#<(bit_link|repo_bit_link)\s+"([^"]+)"\s*/>#
     #egms;
 s#<pdoc_f f="(\w+)">#[%- WRAPPER pdoc_f f = "$1" -%]#g;
 s#<cpan_dist d="([^"]*)">#[%- WRAPPER cpan_dist d = "$1" -%]#g;
+s#%body#[% content %]#g;
 s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;
 my $re =
-qr#(?:about_sect|shot|detailed|undetailed|hebrew_div|he|en|mydesign|riddle|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
+qr#(?:about_sect|github_captioned_image_joke|joke|header_joke|eng_header_joke|heb_header_joke|quote|comment|shot|detailed|undetailed|hebrew_div|he|en|mydesign|riddle|bitbucket_cpan_dist_links|github_cpan_dist_links|intro|perl_for_newbies_entry|news_sect|note|screenplay_read_online|modern_perl_entry|nav_blocks|beginning_perl_entry|cpan_dist|pdoc|pdoc_f|licence_sect|links_sect|see_also|h[234]_section|art__my_image)#;
 
 s#<($re)(?:\s([^>]*?))?>#    my ($tag, $args) = ($1, ($2 // ''));
     "[% WRAPPER $tag " . ($args =~ s{([a-z_]+)="([^"]+)"}{$1 = "$2" }gmrs) . " %]"

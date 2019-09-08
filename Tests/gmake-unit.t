@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 9;
+use Test::More tests => 8;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
@@ -37,9 +37,6 @@ sub dest_test
         ? gmake_test( 'T2_SOFTWARE_DOCS_SRC', 't2/open-source/index.xhtml.wml',
         "found a file" )
         : pass();
-
-    # TEST
-    dest_test( 'T2_HUMOUR_DOCS_DEST', 'humour.html', "found a file" );
 
     # TEST
     dest_test(

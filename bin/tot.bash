@@ -1,5 +1,5 @@
 ./gen-helpers && make fastrender && make -j 17
-a="dest/post-incs/t2/open-source/projects/japanese-puzzle-games/kakurasu/index.xhtml"
+a="dest/post-incs/t2/philosophy/politics/define-zionism/heb/index.xhtml"
 b=/home/shlomif/Backup/Arcs/post-$a
 dir=../temp-compare-out--to-del
 mkdir -p "$dir"

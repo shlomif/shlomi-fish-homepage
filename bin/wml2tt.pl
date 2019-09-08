@@ -21,6 +21,11 @@ s#<(rindolf_floaty_img|w2l_devel_talk__license|project_euler_progress|story_ongo
     "[% PROCESS $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
     #egms;
 
+s#<(url_body_link)\s([^>]*?)/>#
+    my ($tag, $args) = ($1, ($2 // ''));
+    $tag =~ tr/-/_/;
+    "[% INCLUDE $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
+    #egms;
 s#<pdoc_f f="(\w+)">#[%- WRAPPER pdoc_f f = "$1" -%]#g;
 s#<cpan_dist d="([^"]*)">#[%- WRAPPER cpan_dist d = "$1" -%]#g;
 s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;

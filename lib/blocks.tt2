@@ -564,6 +564,9 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 
 [%- END -%]
 
+[% BLOCK url_body_link %]
+<a href="[% href %]">[% href %]</a>
+[% END %]
 [%- BLOCK start_html -%]
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>

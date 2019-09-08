@@ -1,4 +1,4 @@
-#include "utils.wml"
+[% PROCESS "blocks.tt2" %]
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -30,7 +30,7 @@ td > p:first-child
 
 <h1>Shlomi Fish’s Résumé</h1>
 
-<define-tag contact_details>
+[% BLOCK contact_details %]
 
 <h2>Contact Details</h2>
 
@@ -42,14 +42,14 @@ Israel<br />
 Phone Number: 03-6424668<br />
 Cell Phone: 054-6232377<br />
 Fax Number: 03-6414319<br />
-E-mail Address: <mailto_link_to_self email="<main_email />" /><br />
-Home Page: <url_body_link href="http://www.shlomifish.org/" /><br />
+E-mail Address: [% PROCESS mailto_link_to_self email=main_email %]<br />
+Home Page: [% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]<br />
 Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ; MSN - shlomif@iglu.org.il ;
 ICQ - #207733823; AIM - ShlomiFish<br />
 </p>
-</define-tag>
+[% END %]
 
-<define-tag objective>
+[% BLOCK objective %]
 
 <h2>Objective</h2>
 
@@ -69,9 +69,9 @@ to tread on the fine line between modularity (DRY) and making sure
 the code is not overly clever and hard to read (KISS).
 </p>
 
-</define-tag>
+[% END %]
 
-<define-tag specialisations>
+[% BLOCK specialisations %]
 
 <table>
 
@@ -169,10 +169,10 @@ Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
 </tr>
 </table>
 
-</define-tag>
+[% END %]
 
-<specialisations />
-<contact_details />
+[% INCLUDE specialisations %]
+[% INCLUDE contact_details %]
 
 </body>
 </html>

@@ -1,7 +1,8 @@
-#include "template.wml"
+[%- SET title = "The Eternal Jew" -%]
+[%- SET desc = "This is a philosophical essay that nicely summarises the principles of my view on myself and of life. Do you think highly of yourself? Do you think highly of yourself enough? Do you think you can influence the world? It’s all there." -%]
 
-<latemp_subject "The Eternal Jew" />
-<latemp_meta_desc "This is a philosophical essay that nicely summarises the principles of my view on myself and of life. Do you think highly of yourself? Do you think highly of yourself enough? Do you think you can influence the world? It’s all there." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a philosophical essay that nicely summarises the principles of my view
@@ -100,3 +101,5 @@ the greatest compliments I can possibly get.
 <p>
 (Photo of Chuck Norris holding guns with the caption of “I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”.).
 </p>
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "The Lotg Pseudocode" -%]
+[%- SET desc = "“Lotg” (originally standing for “Language of the Gods”) is a pseudocode I developed during my first year at the Technion. I wanted to develop such a code with a minimal set of instructions. Initially it had eight instructions, but I was able to reduce it to five. I believe it is Turing-complete. Here is an explanation of it." -%]
 
-<latemp_subject "The Lotg Pseudocode" />
 
-<latemp_meta_desc "“Lotg” (originally standing for “Language of the Gods”) is a pseudocode I developed during my first year at the Technion. I wanted to develop such a code with a minimal set of instructions. Initially it had eight instructions, but I was able to reduce it to five. I believe it is Turing-complete. Here is an explanation of it." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 “Lotg” (originally standing for “Language of the Gods”) is a
@@ -109,3 +110,5 @@ if r &gt; 0 jump p
     [BLOCK]
 <i>end</i>:
 </pre>
+
+[% END %]

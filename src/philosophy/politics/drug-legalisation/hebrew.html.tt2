@@ -1,16 +1,15 @@
-<set-var rtl_layout="1" />
-#include "template.wml"
-#include "toc_div.wml"
+[% SET rtl_layout = "1" %]
+[%- SET title = "בעד הלגליזציה של הסמים" -%]
+[%- SET desc = "Why the so-called “War on Drugs” is the real drug problem, and why a legalisation of the currently illegal narcotics is the right solution." -%]
 
-<latemp_subject "בעד הלגליזציה של הסמים" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_meta_desc "Why the so-called “War on Drugs” is the real drug problem, and why a legalisation of the currently illegal narcotics is the right solution." />
-
-#include "pages/t2/philosophy/drug-legalisation.wml"
+[% INCLUDE "pages/t2/philosophy/drug-legalisation.tt2" %]
 
 <div class="main_text side_toc">
 
-<toc_div lang="he" />
+[% toc_div( "lang" => "he", ) %]
 
 <p class="en">
 <!--Creative Commons License-->
@@ -35,7 +34,7 @@ This work is licensed under the <a href="http://creativecommons.org/licenses/by/
 
 <h3 id="body">Body</h3>
 
-#include "docbook/5/rendered/case-for-drug-legalisation--hebrew-v3.xhtml"
+[% INCLUDE "docbook/5/rendered/case-for-drug-legalisation--hebrew-v3.xhtml" %]
 
 <h2 id="other_formats">Other Formats</h2>
 
@@ -47,4 +46,6 @@ This work is licensed under the <a href="http://creativecommons.org/licenses/by/
 </li>
 </ul>
 
-</div> ;;; main_text
+</div>
+
+[% END %]

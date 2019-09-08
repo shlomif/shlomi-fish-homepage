@@ -1,23 +1,23 @@
-#include "template.wml"
-#include "Inc/mathjax.wml"
-
-<latemp_subject "Solution to the modulo 5^n riddle" />
-
-<latemp_meta_desc "Solution to the modulo 5^n riddle as asked by Orna Agmon Ben-Yehuda on her blog." />
-
-<page_extra_head_elements>
-<link rel="stylesheet" href="$(ROOT)/images/css/puzzles.css"
+[%- SET title = "Solution to the modulo 5^n riddle" -%]
+[%- SET desc = "Solution to the modulo 5^n riddle as asked by Orna Agmon Ben-Yehuda on her blog." -%]
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-</page_extra_head_elements>
+[% END %]
 
-<js_script>
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[%- PROCESS "Inc/mathjax.tt2" %]
+
+<script>
 MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
     processEscapes: true
   }
 });
-</js_script>
+</script>
 <div class="logic">
 
 <h2 id="intro">Introduction</h2>
@@ -31,7 +31,7 @@ back in 1 December, 2009</a>. Here is my solution to it.
 <ul>
 
 <li>
-<a href="$(ROOT)/puzzles/n5-riddle.pdf">In PDF (Acrobat Reader) Format</a>
+<a href="[% base_path %]puzzles/n5-riddle.pdf">In PDF (Acrobat Reader) Format</a>
 </li>
 
 <li>
@@ -42,7 +42,7 @@ back in 1 December, 2009</a>. Here is my solution to it.
 
 </div>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 
@@ -128,3 +128,5 @@ $5^{n+1}$ as well.
 <p>
 Q.E.D.
 </p>
+
+[% END %]

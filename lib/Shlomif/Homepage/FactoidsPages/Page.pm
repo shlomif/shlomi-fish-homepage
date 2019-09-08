@@ -27,6 +27,13 @@ s#<(rindolf_floaty_img|w2l_devel_talk__license|project_euler_progress|story_ongo
     #egmrs;
 }
 
+sub abstract_tt2
+{
+    my $self = shift;
+
+    return $self->abstract =~ s/%%/%/gr;
+}
+
 sub img_src_tt2
 {
     my ($self) = @_;

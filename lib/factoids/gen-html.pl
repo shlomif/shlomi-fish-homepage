@@ -992,7 +992,7 @@ my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
 [% "\[\% INCLUDE facts__img__${p.short_id()} \%\]" %]
 
 <div class="desc">
-[% p.abstract() %]
+[% p.abstract_tt2() %]
 </div>
 
 </div>

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "My Résumés" -%]
+[%- SET desc = "Shlomi Fish’s Résumés - English brief, English detailed and in Hebrew." -%]
 
-<latemp_subject "My Résumés" />
 
-<latemp_meta_desc "Shlomi Fish’s Résumés - English brief, English detailed and in Hebrew." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2><a href="Shlomi-Fish-Resume-as-Software-Dev.html">Résumé
 as a Software Developer</a></h2>
@@ -11,13 +12,13 @@ as a Software Developer</a></h2>
 A short C.V. as a software developer.
 </p>
 
-<h2><a href="$(ROOT)/SFresume.html">English Résumé</a></h2>
+<h2><a href="[% base_path %]SFresume.html">English Résumé</a></h2>
 
 <p>
 A C.V. in English.
 </p>
 
-<h2><a href="$(ROOT)/SFresume_detailed.html">A Detailed English Résumé</a></h2>
+<h2><a href="[% base_path %]SFresume_detailed.html">A Detailed English Résumé</a></h2>
 
 <p>
 A more detailed Curriculum Vitae in English as well.
@@ -35,3 +36,5 @@ as a Writer and an Entertainer</a></h2>
 <p>
 A short C.V. as a writer and entertainer.
 </p>
+
+[% END %]

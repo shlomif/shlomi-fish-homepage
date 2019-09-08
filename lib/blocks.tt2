@@ -18,6 +18,36 @@
 [% BLOCK t2_lect %]
 [% base_path %]lecture/Perl/Lightning/[% url %]/
 [% END %]
+[% BLOCK webmaster_footer %]
+<ul class="bt_nav">
+<li>
+<a href="[% base_path || "./" %]">Home</a>
+</li>
+<li>
+<a href="[% base_path %]me/">About</a>
+</li>
+<li>
+<a href="[% base_path %]me/contact-me/">Contact Us</a>
+</li>
+<li>
+<a href="[% base_path %]meta/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a href="[% base_path %]meta/anti-spam-policy/">Anti-Spam Policy</a>
+</li>
+<li>
+<a href="[% base_path %]meta/FAQ/" title="Frequently asked questions list">FAQ</a>
+</li>
+<li>
+<a href="[% base_path %]me/blogs/">RSS/Atom Feeds</a>
+</li>
+</ul>
+
+<p>
+Written, designed, and maintained by Shlomi Fish,
+[% PROCESS mailto_link_to_self email="shlomif@shlomifish.org" -%].
+</p>
+[% END %]
 
 [% BLOCK lightning_talks_list %]
 
@@ -805,40 +835,15 @@ deviantART</a></p>
 
 <div class="foot_left">
 
-<ul class="bt_nav">
-<li>
-<a href="[% base_path || "./" %]">Home</a>
-</li>
-<li>
-<a href="[% base_path %]me/">About</a>
-</li>
-<li>
-<a href="[% base_path %]me/contact-me/">Contact Us</a>
-</li>
-<li>
-<a href="[% base_path %]meta/privacy-policy/">Privacy Policy</a>
-</li>
-<li>
-<a href="[% base_path %]meta/anti-spam-policy/">Anti-Spam Policy</a>
-</li>
-<li>
-<a href="[% base_path %]meta/FAQ/" title="Frequently asked questions list">FAQ</a>
-</li>
-<li>
-<a href="[% base_path %]me/blogs/">RSS/Atom Feeds</a>
-</li>
-</ul>
+[% INCLUDE webmaster_footer %]
 
-<p>
-Written, designed, and maintained by Shlomi Fish,
-[% PROCESS mailto_link_to_self email="shlomif@shlomifish.org" -%].
-</p>
 <p>
 If you like what you see here, or have any comments, suggestions, or
 corrections, feel free to E-mail me about it. I’d love to hear from you. If
 you have found what I did helpful or entertaining, please consider
 <a href="[% base_path %]meta/how-to-help/">helping</a>.
 </p>
+
 <p>
 Style and look based on the
 <a href="http://wordpress.org/extend/themes/smoked">Smoked WordPress Theme</a>

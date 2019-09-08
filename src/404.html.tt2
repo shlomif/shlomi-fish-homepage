@@ -1,5 +1,4 @@
-#include "utils.wml"
-#include "Inc/footer.wml"
+[%- PROCESS "blocks.tt2" -%]
 
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
@@ -50,7 +49,7 @@ In the meanwhile, you may wish to read other resources in this site, such as:
 <hr />
 
 <footer>
-<webmaster_footer />
+[% INCLUDE webmaster_footer %]
 </footer>
 
 </body>

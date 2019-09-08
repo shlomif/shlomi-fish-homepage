@@ -26,6 +26,10 @@ s#<(picture_tag|url_body_link)\s([^>]*?)/>#
     $tag =~ tr/-/_/;
     "[% INCLUDE $tag " . ($args =~ s{([a-z_A-Z]+)="([^"]+)"}{$1 = "$2",}gmrs) . " %]"
     #egms;
+s#<(bit_link|repo_bit_link)\s+"([^"]+)"\s*/>#
+    my ($tag, $href) = ($1, ($2 // ''));
+    "[% INCLUDE $tag href = \"$href\" , %]"
+    #egms;
 s#<pdoc_f f="(\w+)">#[%- WRAPPER pdoc_f f = "$1" -%]#g;
 s#<cpan_dist d="([^"]*)">#[%- WRAPPER cpan_dist d = "$1" -%]#g;
 s#<pdoc d="(\w+)">#[%- WRAPPER pdoc d = "$1" -%]#g;

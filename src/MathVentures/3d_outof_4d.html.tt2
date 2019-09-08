@@ -1,8 +1,9 @@
-#include "template.wml"
-#include "Inc/riddle.wml"
+[%- SET title = "Combinatorics and the art of Dungeons and Dragons" -%]
+[%- SET desc = "Roll 4 dice, get rid of the lowest score - what is the mean of such throws?" -%]
 
-<latemp_subject "Combinatorics and the art of Dungeons and Dragons" />
-<latemp_meta_desc "Roll 4 dice, get rid of the lowest score - what is the mean of such throws?" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 I used to play “Advanced Dungeons &amp; Dragons” in the 8th and 9th grades. I
@@ -53,7 +54,7 @@ Before you see my answer, here is a summary of the problem. You may try to
 figure it yourself, before looking at my solution:
 </p>
 
-<riddle>
+[% WRAPPER riddle  %]
 <p>
 <b>1.</b> Throw 4 dice, sum the numbers they generated and subtract the
 lowest value from the sum. (if there is more than one die with the lowest
@@ -72,13 +73,13 @@ And yet more generally:
 <b>3.</b> Throw n dice each in the range 1..m, sum them and subtract the p
 lowest dice (p &lt; n). What is the average outcome of this throw?
 </p>
-</riddle>
+[%- END -%]
 
 <p>
 The solution can be found some space below:
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 
@@ -221,3 +222,5 @@ complicated. Maybe I’ll get to it one day.
 <a href="http://carnalreason.org/2006/07/29/a-mathematical-diversion/">An alternate solution in the Carnal Reason blog</a>
 </li>
 </ul>
+
+[% END %]

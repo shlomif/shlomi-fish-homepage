@@ -145,6 +145,8 @@ my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
     ( $printable ? ( PRINTABLE => 1 ) : () ),
+    mytan =>
+qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
     d2url            => "http://divisiontwo.shlomifish.org/",
     in_nav_block_set => sub {
         $Shlomif::Homepage::in_nav_block = 1;

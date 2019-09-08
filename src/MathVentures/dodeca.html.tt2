@@ -1,10 +1,10 @@
-#include "template.wml"
-#include "Inc/mathjax.wml"
+[%- SET title = "What’s the Volume of a Dodecahedron?" -%]
+[%- SET desc = "Calculates the volume of a Dodecahedron, a Platonic solid with 12 identical sides that are themselves perfect pentagons." -%]
+[%- SET more_keywords = "volume, dodecahedron, pythagoran solid, solid, pythagoran, perfect, pentagons, 12, 5, geometry, mathematics, maths, math, spatial geometry" -%]
 
-<latemp_subject "What’s the Volume of a Dodecahedron?" />
-<latemp_meta_desc "Calculates the volume of a Dodecahedron, a Platonic solid with 12 identical sides that are themselves perfect pentagons." />
-
-<latemp_more_keywords "volume, dodecahedron, pythagoran solid, solid, pythagoran, perfect, pentagons, 12, 5, geometry, mathematics, maths, math, spatial geometry" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[%- PROCESS "Inc/mathjax.tt2" -%]
 
 <img src="dodeca.gif" alt="A Dodecahedron" /> <br />
 
@@ -27,7 +27,7 @@ a?
  The solution can be found some space below:
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 
@@ -114,11 +114,9 @@ base is 5*(OA*<b>a</b>/2) = 5*tan(54°)*<b>a</b>/2*<b>a</b>/2 =
 to arcsin(1/(2*sin(36°))), and therefore:
 </p>
 
-<set-var mytan="\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}" />
 <p>
 \[
-OD = OA \cdot <get-var mytan />
-= \frac{1}{2} \tan{54°} <get-var mytan /> \cdot
+OD = OA \cdot [% mytan %] = \frac{1}{2} \tan{54°} [% mytan %] \cdot
 {\bf a}
 \]
 </p>
@@ -133,8 +131,8 @@ divided by 3 and so it is equal to:
 <p>
 \[
 \frac{5}{4} \cdot \tan{54°} \cdot {\bf a}^2 \cdot \\*
-\frac{1}{2} \cdot tan{54°} \cdot <get-var mytan /> \cdot {\bf a} \cdot \frac{1}{3} = \\*
-\frac{5}{24} \cdot \tan^2{54°} \cdot <get-var mytan />  \cdot {\bf a}^3
+\frac{1}{2} \cdot tan{54°} \cdot [% mytan %] \cdot {\bf a} \cdot \frac{1}{3} = \\*
+\frac{5}{24} \cdot \tan^2{54°} \cdot [% mytan %]  \cdot {\bf a}^3
 \]
 </p>
 
@@ -144,7 +142,9 @@ volume of a dodecahedron is:</p>
 
 <p>
 \[
-\frac{5}{2} \cdot \tan{54°}^2 \cdot <get-var mytan /> \cdot
+\frac{5}{2} \cdot \tan{54°}^2 \cdot [% mytan %] \cdot
 {\bf a}^3 = ~7.66 * {\bf a}^3.
 \]
 </p>
+
+[% END %]

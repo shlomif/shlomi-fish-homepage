@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Math-Ventures - Mathematics in Real-Life" -%]
+[%- SET desc = "Mathematical problems and their solutions by Shlomi Fish and friends." -%]
+[%- SET more_keywords = "math, maths, adventures, mathematics, puzzles, riddles, original" -%]
 
-<latemp_subject "Math-Ventures - Mathematics in Real-Life" />
-<latemp_more_keywords "math, maths, adventures, mathematics, puzzles, riddles, original" />
-<latemp_meta_desc "Mathematical problems and their solutions by Shlomi Fish and friends." />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This section of my homepage is dedicated to various maths problems that I
@@ -78,3 +79,5 @@ with a Twist</a></h2>
 A variation on the famous riddles of the two gates guarded by two
 angels.
 </p>
+
+[% END %]

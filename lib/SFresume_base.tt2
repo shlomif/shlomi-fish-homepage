@@ -14,13 +14,7 @@ td > p:first-child
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% BLOCK detailed %]
-[% IF is_detailed %][% content %][% END %]
-[% END %]
-
-[% BLOCK undetailed %]
-[% UNLESS is_detailed %][% content %][% END %]
-[% END %]
+[%- PROCESS "lib/Inc/resume-common.tt2" -%]
 
 <p>
 Shlomi Fish<br />

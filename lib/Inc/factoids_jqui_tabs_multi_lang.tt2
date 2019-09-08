@@ -2,8 +2,8 @@
 
 [% BLOCK en_he_tabs %]
 
-<set-var en_id="[% id_base %]_en" />
-<set-var he_id="[% id_base %]_he" />
+[% SET en_id="${id_base}_en" %]
+[% SET he_id="${id_base}_he" %]
 
 <div class="jqueryui_tabs">
 

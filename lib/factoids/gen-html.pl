@@ -933,7 +933,7 @@ my @pages_proto = ( @chuck_pages, @main_pages, @soviet_pages );
 my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
 my $tt2__tags_output = <<'EOF';
-#include "Inc/emma_watson.tt2"
+[% PROCESS "Inc/emma_watson.tt2" %]
 
 EOF
 my $tags_output = <<'EOF';
@@ -973,7 +973,7 @@ my $tt2__img_tt_text = <<'END_OF_TEMPLATE';
 
 <!-- Taken from [% p.img_attribution() %] -->
 
-<img src="[% p.img_src() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
+<img src="[% p.img_src_tt2() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
 [% "\[\% END \%\]" %]
 END_OF_TEMPLATE
 my $img_tt_text = <<'END_OF_TEMPLATE';
@@ -1025,6 +1025,9 @@ foreach my $page (@pages)
 
     # create Template object
     my $template = Template->new($config);
+    my $tt2__template =
+        Template->new(
+        +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
 
     my $vars = { p => $page, };
 
@@ -1033,6 +1036,8 @@ foreach my $page (@pages)
 [% SET desc = "{{p.meta_desc()}}" %]
 
 [% PROCESS "blocks.tt2" %]
+
+[% WRAPPER wrap_html %]
 
 [% PROCESS "Inc/emma_watson.tt2" %]
 [% PROCESS "Inc/factoids_jqui_tabs_multi_lang.tt2" %]
@@ -1059,6 +1064,8 @@ foreach my $page (@pages)
 {{ p.see_also_tt2() }}
 
 {{ p.nav_blocks_tt2() }}
+
+[% END %]
 END_OF_TEMPLATE
 
     my $tt_text = <<'END_OF_TEMPLATE';
@@ -1093,8 +1100,10 @@ END_OF_TEMPLATE
 [% p.nav_blocks_wml() %]
 END_OF_TEMPLATE
 
-    my $out = '';
-    $template->process( \$tt_text,          $vars, \$out ) or die $!;
+    my $out      = '';
+    my $tt2__out = '';
+    $template->process( \$tt_text, $vars, \$out ) or die $!;
+    $tt2__template->process( \$tt2__tt_text, $vars, \$tt2__out ) or die $!;
     $template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
         or die $!;
     $template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
@@ -1104,6 +1113,9 @@ END_OF_TEMPLATE
     $template->process( \$main_page_tt, $vars, \$main_page_tag_list ) or die $!;
     $template->process( \$tt2__main_page_tt, $vars, \$tt2__main_page_tag_list )
         or die $!;
+    write_on_change(
+        scalar( path( "lib/factoids/pages/" . $page->id_base() . '.tt2' ) ),
+        \$tt2__out, );
     write_on_change(
         scalar( path( "lib/factoids/pages/" . $page->id_base() . '.wml' ) ),
         \$out, );

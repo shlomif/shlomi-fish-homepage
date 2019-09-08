@@ -14,6 +14,7 @@ use XML::LibXML::XPathContext ();
 use XML::Grammar::Fortune 0.0600;
 use Template                               ();
 use Shlomif::Homepage::FactoidsPages::Page ();
+use Carp::Always;
 
 my $p = XML::LibXML->new;
 
@@ -931,14 +932,31 @@ my @pages_proto = ( @chuck_pages, @main_pages, @soviet_pages );
 
 my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
+my $tt2__tags_output = <<'EOF';
+#include "Inc/emma_watson.tt2"
+
+EOF
 my $tags_output = <<'EOF';
 #include "Inc/emma_watson.wml"
 
 EOF
 
+my $tt2__main_page_tag_list = <<'EOF';
+[% BLOCK facts__list %]
+EOF
 my $main_page_tag_list = <<'EOF';
 <define-tag facts__list>
 EOF
+
+my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
+<section class="h3">
+<header>
+<h3 id="facts-[% p.short_id() %]" class="facts"><a href="[% p.url_base() %]/">[% p.title() %]</a></h3>
+</header>
+[% "\[\% INCLUDE facts__${p.short_id()} \%\]" %]
+
+</section>
+END_OF_TEMPLATE
 
 my $main_page_tt = <<'END_OF_TEMPLATE';
 <section class="h3">
@@ -950,6 +968,14 @@ my $main_page_tt = <<'END_OF_TEMPLATE';
 </section>
 END_OF_TEMPLATE
 
+my $tt2__img_tt_text = <<'END_OF_TEMPLATE';
+[% "\[\% BLOCK " %]facts__img__[% p.short_id() %] [% "\%\]" %]
+
+<!-- Taken from [% p.img_attribution() %] -->
+
+<img src="[% p.img_src() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
+[% "\[\% END \%\]" %]
+END_OF_TEMPLATE
 my $img_tt_text = <<'END_OF_TEMPLATE';
 <define-tag facts__img__[% p.short_id() %]>
 
@@ -957,6 +983,21 @@ my $img_tt_text = <<'END_OF_TEMPLATE';
 
 <img src="[% p.img_src() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
 </define-tag>
+END_OF_TEMPLATE
+
+my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
+[% "\[\% BLOCK " %]facts__[% p.short_id() %] [% "\%\]" %]
+
+<div class="facts_wrap">
+[% "\[\% INCLUDE facts__img__${p.short_id()} \%\]" %]
+
+<div class="desc">
+[% p.abstract() %]
+</div>
+
+</div>
+
+[% "\[\% END \%\]" %]
 END_OF_TEMPLATE
 
 my $tag_tt_text = <<'END_OF_TEMPLATE';
@@ -986,6 +1027,39 @@ foreach my $page (@pages)
     my $template = Template->new($config);
 
     my $vars = { p => $page, };
+
+    my $tt2__tt_text = <<'END_OF_TEMPLATE';
+[% SET title = "{{p.title() }}" %]
+[% SET desc = "{{p.meta_desc()}}" %]
+
+[% PROCESS "blocks.tt2" %]
+
+[% PROCESS "Inc/emma_watson.tt2" %]
+[% PROCESS "Inc/factoids_jqui_tabs_multi_lang.tt2" %]
+[% PROCESS "Inc/nav_blocks.tt2" %]
+[% PROCESS "Inc/summer_glau.tt2" %]
+[% PROCESS "factoids/common-out/tags.tt2" %]
+[% PROCESS "stories/stories-list.tt2" %]
+
+
+[% INCLUDE facts__{{ p.short_id() }} %]
+
+[% INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" %]
+
+<h2 id="license">Copyright and Licence</h2>
+
+[% {{ p.license_tag() }} (year=>"{{ p.license_year() }}") %]
+
+<h2 id="links">Links</h2>
+
+{{ p.links_tt2() }}
+
+<h2 id="see_also">See Also</h2>
+
+{{ p.see_also_tt2() }}
+
+{{ p.nav_blocks_tt2() }}
+END_OF_TEMPLATE
 
     my $tt_text = <<'END_OF_TEMPLATE';
 #include "template.wml"
@@ -1020,10 +1094,16 @@ foreach my $page (@pages)
 END_OF_TEMPLATE
 
     my $out = '';
-    $template->process( \$tt_text,      $vars, \$out )                or die $!;
+    $template->process( \$tt_text,          $vars, \$out ) or die $!;
+    $template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
+        or die $!;
+    $template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
+        or die $!;
     $template->process( \$img_tt_text,  $vars, \$tags_output )        or die $!;
     $template->process( \$tag_tt_text,  $vars, \$tags_output )        or die $!;
     $template->process( \$main_page_tt, $vars, \$main_page_tag_list ) or die $!;
+    $template->process( \$tt2__main_page_tt, $vars, \$tt2__main_page_tag_list )
+        or die $!;
     write_on_change(
         scalar( path( "lib/factoids/pages/" . $page->id_base() . '.wml' ) ),
         \$out, );
@@ -1032,6 +1112,10 @@ END_OF_TEMPLATE
 write_on_change(
     scalar( path("lib/factoids/common-out/tags.wml") ),
     \( $tags_output . $main_page_tag_list . "\n</define-tag>\n" ),
+);
+write_on_change(
+    scalar( path("lib/factoids/common-out/tags.tt2") ),
+    \( $tt2__tags_output . $tt2__main_page_tag_list . "\n[% END %]\n" ),
 );
 
 my $new_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(

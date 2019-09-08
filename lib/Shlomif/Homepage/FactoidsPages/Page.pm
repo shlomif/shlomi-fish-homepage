@@ -12,6 +12,33 @@ has [
     'short_id',  'tabs_title', 'title',          'url_base',
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
+sub see_also_tt2
+{
+    my ($self) = @_;
+
+    my $ret = $self->see_also_wml;
+
+    return $ret;
+}
+
+sub links_tt2
+{
+    my ($self) = @_;
+
+    my $ret = $self->links_wml;
+
+    return $ret;
+}
+
+sub nav_blocks_tt2
+{
+    my ($self) = @_;
+
+    my $ret = $self->nav_blocks_wml;
+
+    return $ret;
+}
+
 =begin foo
 
 has ['entry_id', 'entry_text', 'href',

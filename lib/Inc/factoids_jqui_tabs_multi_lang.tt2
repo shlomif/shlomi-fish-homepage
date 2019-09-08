@@ -1,0 +1,47 @@
+[% PROCESS "Inc/jqui_tabs.tt2" %]
+
+[% BLOCK en_he_tabs %]
+
+<set-var en_id="[% id_base %]_en" />
+<set-var he_id="[% id_base %]_he" />
+
+<div class="jqueryui_tabs">
+
+<ul class="selector">
+<li><a href="#[% en_id %]">English</a></li>
+<li><a href="#[% he_id %]">Hebrew (עברית)</a></li>
+</ul>
+
+<div id="[% en_id %]" class="tab">
+
+[% common_prefix %]
+[% INCLUDE "factoids/indiv-lists-xhtmls/${id_base}--en-US.xhtml.reduced" %]
+[% common_suffix %]
+
+</div>
+
+<div id="[% he_id %]" class="hebrew tab">
+
+[% common_prefix %]
+[% INCLUDE "factoids/indiv-lists-xhtmls/${id_base}--he-IL.xhtml.reduced" %]
+[% common_suffix %]
+
+</div>
+
+</div>
+
+[% END %]
+
+[% BLOCK facts__en_he_tabs %]
+
+[% INCLUDE en_he_tabs id_base=id_base common_prefix="" common_suffix="" %]
+
+[% END %]
+
+[% BLOCK facts__header_tabs %]
+
+<h2 id="facts">[% h %]</h2>
+
+[% INCLUDE facts__en_he_tabs id_base=id_base %]
+
+[% END %]

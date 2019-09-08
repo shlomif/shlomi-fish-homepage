@@ -1,20 +1,21 @@
-#include "template.wml"
+[%- SET title = "Greasemonkey Scripts" -%]
+[%- SET desc = "Greasemonkey Scripts by Shlomi Fish" -%]
 
-<latemp_subject "Greasemonkey Scripts" />
 
-<latemp_meta_desc "Greasemonkey Scripts by Shlomi Fish" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<h2_section id="ddg-highlight" title="DuckDuckGo Active Item: More visible red border" href="duckduckgo-better-highlight-active-result.user.js">
+[% WRAPPER h2_section id = "ddg-highlight"  title = "DuckDuckGo Active Item: More visible red border"  href = "duckduckgo-better-highlight-active-result.user.js"  %]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="validate-key" title="Use the “v” keyboard key to validate an HTML page" href="validate-key.user.js">
+[% WRAPPER h2_section id = "validate-key"  title = "Use the “v” keyboard key to validate an HTML page"  href = "validate-key.user.js"  %]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="check-mageia-org--nobody" title="Set empty check.mageia.org maintainers to “nobody”" href="check.mageia.org--set-empty-maint-to-nobody.user.js">
+[% WRAPPER h2_section id = "check-mageia-org--nobody"  title = "Set empty check.mageia.org maintainers to “nobody”"  href = "check.mageia.org--set-empty-maint-to-nobody.user.js"  %]
 
-</h2_section>
+[%- END -%]
 
 <h2 id="no-accesskey"><a href="no-accesskey.user.js">Eliminate
 Access Keys</a></h2>
@@ -133,3 +134,5 @@ So, for example “*Oz” Becomes “* '''Ozy''': ”, and “**Ms” becomes
 Since this script is also intended for a specialised purpose, I haven’t
 uploaded it to userscripts.org either.
 </p>
+
+[% END %]

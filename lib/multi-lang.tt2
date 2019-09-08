@@ -1,0 +1,9 @@
+[% SET shlomif_lang = "en" %]
+
+[% BLOCK he %]
+[% IF shlomif_lang == "he"%][%content%][% END %]
+[% END %]
+
+[% BLOCK en %]
+[% IF shlomif_lang == "en"%][%content%][% END %]
+[% END %]

@@ -1,19 +1,12 @@
-#include "template.wml"
+[%- SET title = "Shlomi Fish’s Personal Ad" -%]
+[%- SET desc = "Shlomi Fish’s Personal Ad" -%]
 
-#include "Inc/shlomif_head_photo_tag.wml"
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "Shlomi Fish’s Personal Ad" />
+[% PROCESS "Inc/shlomif_head_photo_tag.tt2" %]
 
-<latemp_meta_desc "Shlomi Fish’s Personal Ad" />
-
-<:{
-    use strict;
-    use warnings;
-
-    use Shlomif::Age;
-}:>
-
-<picture_tag alt="Picture of Shlomi Fish" class="eng" title="Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr" />
+[% INCLUDE picture_tag alt = "Picture of Shlomi Fish", class = "eng", title = "Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr",  %]
 
 <p>
 I, Shlomi Fish (a.k.a Rindolf “Aim-very-high” Hitlower) am looking for a
@@ -80,7 +73,7 @@ Now, about me, here's
 <a href="http://github.com/shlomif/shlomif-business-card">my card</a>:
 </p>
 
-<img src="$(ROOT)/me/images/bizcard-400w.png" alt="Shlomi Fish’s Business Card" class="bizcard" />
+<img src="[% base_path %]me/images/bizcard-400w.png" alt="Shlomi Fish’s Business Card" class="bizcard" />
 
 <p>
 It reads: «Shlomi Fish (“Shlomif” or “Rindolf”); Humorist, Writer, and Software
@@ -116,7 +109,7 @@ proclaim they are sure of the certainty of certain things).
 
 <li>
 <p>
-I belong to the <a href="$(ROOT)/me/rindolf/#rindolfism">“Rindolfism” school
+I belong to the <a href="[% base_path %]me/rindolf/#rindolfism">“Rindolfism” school
 of philosophy</a> where Rindolfism is my personal, one-man, and dynamic (=
 constantly changes) idea system with many influences.
 </p>
@@ -144,3 +137,5 @@ flirt with other people.
 
 
 </ul>
+
+[% END %]

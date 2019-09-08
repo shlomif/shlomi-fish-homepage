@@ -1,0 +1,49 @@
+[%- SET title = "CPANHQ Screenshots" -%]
+[%- SET desc = "CPANHQ Screenshots" -%]
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+<h3 id="screenshots-2009-06-29">29-June-2009</h3>
+
+[% BLOCK shot %]
+<h4>[% title %]</h4>
+<p>
+<a href="2009-06-29/[% filename %]"><img src="2009-06-29/thumbnails/[% filename %]" title="[% title %]" alt="[% title %]" /></a>
+</p>
+[% content %]
+[% END %]
+
+[% WRAPPER shot filename = "cpanhq-front-page.jpg"  title = "The CPANHQ Front Page"  %]
+<p>
+The front page of CPANHQ.
+</p>
+[%- END -%]
+
+[% WRAPPER shot filename = "cpanhq-author-distributions-mschwern.jpg"  title = "An author distribution’s table"  %]
+<p>
+A sample author distribution’s table.
+</p>
+[%- END -%]
+
+[% WRAPPER shot filename = "cpanhq-author-releases-mschwern.jpg"  title = "An author releases list"  %]
+<p>
+A sample author releases’ list.
+</p>
+[%- END -%]
+
+[% WRAPPER shot filename = "cpanhq-dist-acme-cpanauthors-authors.jpg"
+title = "A sample CPAN distribution"  %]
+<p>
+A sample CPAN distributions with some keywords/tags/labels defined.
+</p>
+[%- END -%]
+
+[% WRAPPER shot filename = "cpanhq-tag-CPAN.jpg"
+title = "A sample tag"  %]
+<p>
+A sample tag URL, pointing to the distributions that have defined it.
+</p>
+[%- END -%]
+
+[% END %]

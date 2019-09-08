@@ -239,7 +239,7 @@ my @main_pages = (
 Facts about
 <a href="http://buffy.wikia.com/wiki/Buffy_Summers">Buffy Summers</a>,
 the main protagonist of the television show
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29"><i>Buffy
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%%28TV_series%%29"><i>Buffy
 the Vampire Slayer</i></a>, as created by
 <a href="http://en.wikipedia.org/wiki/Joss_Whedon">Joss
 Whedon</a> and portrayed by
@@ -516,7 +516,7 @@ EOF
 <p>
 <a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
 creator of the Perl programming language, and the inventor of the
-<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>.
+<a href="http://en.wikipedia.org/wiki/Patch_%%28Unix%%29">patch program</a>.
 These facts illustrate his “hacky” (= rule bending) awesomeness.
 </p>
 

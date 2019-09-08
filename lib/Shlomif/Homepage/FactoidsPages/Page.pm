@@ -31,7 +31,7 @@ sub abstract_tt2
 {
     my $self = shift;
 
-    return $self->abstract =~ s/%%/%/gr;
+    return _tt2( $self->abstract =~ s/%%/%/gr );
 }
 
 sub img_src_tt2

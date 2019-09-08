@@ -1,13 +1,13 @@
-#include "prelude.wml"
-
-<define-tag latemp_html_doctype>
+[%- SET title = "Ideas for “The Blue Rabbit’s Log”" -%]
+[%- SET desc = "Random and unimplemented ideas for “The Blue Rabbit’s Log” series of screenplays for films that parody Fantasy Role Playing Games" -%]
+[%- SET xhtml1 = 1 %]
+[% BLOCK latemp_html_doctype %]
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-</define-tag>
+[% END %]
 
-#include "driver.wml"
 
-<latemp_subject "Ideas for “The Blue Rabbit’s Log”" />
-<latemp_meta_desc "Random and unimplemented ideas for “The Blue Rabbit’s Log” series of screenplays for films that parody Fantasy Role Playing Games" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
 
@@ -455,7 +455,7 @@ certificates.
 
 <h2 id="licence">Licence</h2>
 
-<define-tag old_non_rdfa_licence>
+[% BLOCK old_non_rdfa_licence %]
 <p>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
 alt="Creative Commons License" style="border-width:0"
@@ -472,15 +472,15 @@ this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
 href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
 rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
 </p>
-</define-tag>
+[% END %]
 
-<define-tag rdfa_enabled_licence>
+[% BLOCK rdfa_enabled_licence %]
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="$(ROOT)/images/CC-by-nc-sa-88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="[% base_path %]images/CC-by-nc-sa-88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
 </p>
-</define-tag>
+[% END %]
 
-<rdfa_enabled_licence />
+[% INCLUDE rdfa_enabled_licence %]
 
 <h1 id="integrated-ideas">Integrated Ideas</h1>
 
@@ -527,3 +527,5 @@ his machine-bow’s string of arrows.
 deserted Island. </p>
 </li>
 </ul>
+
+[% END %]

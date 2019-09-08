@@ -1,16 +1,20 @@
-#include "prelude.wml"
-<define-tag latemp_html_doctype>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" >
-</define-tag>
-#include "driver.wml"
+[%- SET title = "Bugs in a Square (MathML Enabled Version)" -%]
+[%- SET desc = "My own solution to the bugs in the square following each other riddle" -%]
+[%- SET xhtml1 = 1 %]
 
-<page_extra_head_elements>
+[% BLOCK latemp_html_doctype %]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+[% END %]
+[% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="bugs-in-square.css" />
-</page_extra_head_elements>
-<latemp_subject "Bugs in a Square (MathML Enabled Version)" />
-<latemp_meta_desc "My own solution to the bugs in the square following each other riddle" />
-#include "Inc/mathjax.wml"
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[% INCLUDE "Inc/mathjax.tt2" %]
 
 <p>
 I first encountered this problem in the science journal of a laboratory
@@ -43,7 +47,7 @@ of the square?
 The solution can be found some space below:
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 <object data="bugs-in-square.svg" type="image/svg+xml"
@@ -385,3 +389,5 @@ Here’s <a href="gen-bugs-in-square-svg-pl.txt">a Perl script</a> to generate a
 <a href="http://www.w3.org/Graphics/SVG/">SVG</a> image of the squares inside
 each other (that was displayed above).
 </p>
+
+[% END %]

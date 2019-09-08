@@ -54,12 +54,16 @@ if (s{^<latemp_more_keywords\s+"([^"]+)"\s*/>}{}ms)
 {
     $meta .= "[%- SET more_keywords = \"$1\" -%]\n";
 }
+while (s{^<(define-tag) (latemp_html_doctype)>(.*?)</\1>}{}ms)
+{
+    $meta .= "[% BLOCK $2 %]${3}[% END %]\n";
+}
 while (s{^<(page_extra_head_elements)>(.*?)</\1>}{}ms)
 {
     $meta .= "[% BLOCK $1 %]${2}[% END %]\n";
 }
 
-s{\A[\s\n\r]*#include "(?:multi-lang|template).wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{${assigns}[%- SET title = $1 -%]
+s{\A[\s\n\r]*#include "(?:driver|multi-lang|prelude|template).wml"(?:#include[^\n]*\n|\n)*<latemp_subject ("[^"]*") />\n+}{${assigns}[%- SET title = $1 -%]
 ${meta}
 
 [%- PROCESS "blocks.tt2" -%]

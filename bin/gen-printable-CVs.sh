@@ -38,5 +38,5 @@ render()
 mkdir -p "$dest"
 render "SFresume_detailed.html"
 render "SFresume.html"
-render_i_o "me/resumes/Resume-Recent.html" "SFresume-Recent.html"
+tt2__render_i_o "me/resumes/Resume-Recent.html" "SFresume-Recent.html"
 tt2__render_i_o "me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html" "Shlomi-Fish-Resume-as-Software-Dev.html"

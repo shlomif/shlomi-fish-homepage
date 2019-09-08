@@ -1,17 +1,6 @@
-#include "template.wml"
-
-<define-tag detailed endtag="required">
-<if "<get-var is:detailed />" "%body" "" />
-</define-tag>
-
-<define-tag undetailed endtag="required">
-<if "<get-var is:detailed />" "" "%body" />
-</define-tag>
-
-<latemp_subject "Shlomi Fish’s Résumé" />
-<latemp_meta_desc "Shlomi Fish’s Résumé : education, experience, areas of expertise, past accomplishments." />
-
-<page_extra_head_elements>
+[%- SET title = "Shlomi Fish’s Résumé" -%]
+[%- SET desc = "Shlomi Fish’s Résumé : education, experience, areas of expertise, past accomplishments." -%]
+[% BLOCK page_extra_head_elements %]
 <style>
 td > p:first-child
 {
@@ -19,7 +8,13 @@ td > p:first-child
     padding-top: 0;
 }
 </style>
-</page_extra_head_elements>
+[% END %]
+
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+
+[%- PROCESS "lib/Inc/resume-common.tt2" -%]
 
 <p>
 Shlomi Fish<br />
@@ -29,8 +24,8 @@ Israel<br />
 Phone Number: 03-6424668<br />
 Cell Phone: 054-6232377<br />
 Fax Number: 03-6414319<br />
-E-mail Address: <mailto_link_to_self email="<main_email />" /><br />
-Home Page: <url_body_link href="http://www.shlomifish.org/" /><br />
+E-mail Address: [% PROCESS mailto_link_to_self email=main_email  %]<br />
+Home Page: [% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]<br />
 Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ; MSN - shlomif@iglu.org.il ;
 ICQ - #207733823; AIM - ShlomiFish<br />
 </p>
@@ -163,7 +158,7 @@ A C program and library that automatically solves games of Freecell and
 similar variants of card solitaire.
 </p>
 
-<detailed>
+[% WRAPPER detailed  %]
 
 <p>
 Started a C project to automatically solve games of Freecell. Continued in
@@ -178,7 +173,7 @@ Freecell Solver is distributed under the MIT/Expat licence, and has been
 integrated into at least three Freecell implementations so far.
 </p>
 
-</detailed>
+[%- END -%]
 </td>
 </tr>
 <tr>
@@ -277,7 +272,7 @@ of a soft-modem. Writing test procedures.  Programming various utilities in
 Visual C++, MFC, and Perl.
 </p>
 
-<detailed>
+[% WRAPPER detailed  %]
 <p>
 I began working at SmartLink as a tester for their software-based modem
 which was based on a soundcard and implemented the connection logic and the DSP
@@ -289,7 +284,7 @@ high-level programmer/general jack-of-all-trades.
 I worked with the Windows Drivers, MFC, Perl for Win32, DJGPP, Cygwin, a myriad
 of games and modem-related software, as well as Microsoft IIS.
 </p>
-</detailed>
+[%- END -%]
 
 </td>
 </tr>
@@ -308,21 +303,21 @@ Programmer, WWW Site Maintainer, Limited UNIX Maintenance
 <p>
 HTML composition, CGI programming, TCP/IP client/server programs.
 </p>
-<undetailed>
+[% WRAPPER undetailed  %]
 <p>
 Worked with Perl 5, various UNIX flavours (FreeBSD, IRIX, SunOS 4.1.3),
 and several Windows 95 workstations. Did web development using HTML, Perl
 and UNIX.
 </p>
-</undetailed>
-<detailed>
+[%- END -%]
+[% WRAPPER detailed  %]
 <p>
 I worked at Cortext as a web-designer and CGI programmer. I worked with HTML,
 Apache, Perl, various UNIX flavours (FreeBSD, SunOS 4.1.3, IRIX) and Windows
 95 Workstations. Built several sites there, while still using almost exclusively
 Perl due to my limited knowledge (at that point) of UNIX.
 </p>
-</detailed>
+[%- END -%]
 </td>
 </tr>
 
@@ -342,14 +337,14 @@ Databases, client/server programs (with NetDDE), English/Hebrew
 MS-Windows GUI
 </p>
 
-<undetailed>
+[% WRAPPER undetailed  %]
 <p>
 Programmed using C and C++ on Windows 3.11. Experienced with networking,
 SQL, databases, ODBC, NetDDE, Borland C++ 4.5 and MSDN.
 </p>
-</undetailed>
+[%- END -%]
 
-<detailed>
+[% WRAPPER detailed  %]
 
 <p>
 Elpas developed a network of sensors that was installed in each room of a
@@ -367,7 +362,7 @@ application.
 Specialised in Windows (16-bit) Programming, SQL, ODBC, ANSI C and C++. Worked
 primarily with Borland C++ 4.5 and the Microsoft Developer Network.
 </p>
-</detailed>
+[%- END -%]
 
 </td>
 </tr>
@@ -476,7 +471,7 @@ Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
     2001 - Present
     </td>
     <td>
-<undetailed>
+[% WRAPPER undetailed  %]
 <p>
 The Israeli Group of Linux Users Server<br />
 Co-Administrator
@@ -485,8 +480,8 @@ Co-Administrator
 Administrating a 100% uptime server carrying FTP, SMTP and numerous
 WWW-services.
 </p>
-</undetailed>
-<detailed>
+[%- END -%]
+[% WRAPPER detailed  %]
 <p>
 An Administrator for the
 <a href="http://www.iglu.org.il/">iglu.org.il</a> site.
@@ -497,10 +492,10 @@ the Israeli Group of Linux Users (IGLU). Experience with Apache,
 Perl, rsync, qmail and other programs. Created several online pieces
 of content using these tools.
 </p>
-</detailed>
+[%- END -%]
     </td>
 </tr>
-<detailed>
+[% WRAPPER detailed  %]
 <tr>
     <td>
         1999-Present
@@ -519,7 +514,7 @@ of content using these tools.
         </p>
     </td>
 </tr>
-</detailed>
+[%- END -%]
 
 <tr>
 <td colspan="2">
@@ -783,3 +778,5 @@ Single<br />
 </tr>
 
 </table>
+
+[% END %]

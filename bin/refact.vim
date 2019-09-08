@@ -48,6 +48,7 @@ function! MyRename()
 endfunction
 command! R call MyRename()
 command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
+command! -bar D execute("S") | :s/\v\.wml/.tt2/
 command! M :s/\v^\<latemp_meta_desc *\"([^\"]+)\" *\/ *\>$/[% SET desc="\1" %]/
 command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_(abstract|common_top_elems|logo)\((\'\w+')\)\; \:\>/[% long_stories__calc_\1(id => \2) %]/
 let @s='[% IF 0 %]'

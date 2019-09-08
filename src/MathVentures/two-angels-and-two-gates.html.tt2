@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Two Gates and Two Angels - with a Twist" -%]
+[%- SET desc = "The two gates and two angels riddle - with a twist" -%]
 
-<latemp_subject "Two Gates and Two Angels - with a Twist" />
-<latemp_meta_desc "The two gates and two angels riddle - with a twist" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 There’s a famous riddle that goes like this:
@@ -51,7 +53,7 @@ gate you should follow. What would that question be?
 The solution can be found some space below.
 </p>
 
-<longblank />
+[% longblank %]
 
 <h2>Solution:</h2>
 
@@ -113,3 +115,5 @@ I could simply ask an angel “If I asked you which gate leads to paradise - wha
 would you say?” and he’d give the right answer. However, this leads
 to interesting philosophical problems.
 </p>
+
+[% END %]

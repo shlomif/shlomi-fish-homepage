@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "On and on it seems to go…" -%]
+[%- SET desc = "How many different codes can be broadcast repeatedly" -%]
 
-<latemp_subject "On and on it seems to go…" />
-<latemp_meta_desc "How many different codes can be broadcast repeatedly" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 A while ago, I was introduced to some questions about
@@ -50,7 +52,7 @@ found a couple of pages below.
 </p>
 
 
-<longblank />
+[% longblank %]
 
 <p>
 Well, the rec.puzzles guys did not know how to solve it either,
@@ -170,3 +172,5 @@ for all other numbers<br />
 <p>Otherwise the solution is fine. You can view a C program that
 calculates the number of such codes for all numbers up to 24 <a
 href="check_codes.c">here</a>.</p>
+
+[% END %]

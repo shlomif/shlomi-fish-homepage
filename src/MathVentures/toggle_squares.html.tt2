@@ -1,7 +1,9 @@
-#include "template.wml"
+[%- SET title = "Toggling Squares is not that Trivial…" -%]
+[%- SET desc = "Mathematical/Algorithmic analysis of a simple riddle game called “Toggle Squares”" -%]
 
-<latemp_subject "Toggling Squares is not that Trivial…" />
-<latemp_meta_desc "Mathematical/Algorithmic analysis of a simple riddle game called “Toggle Squares”" />
+
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 Well, this page is not ready yet, and will take some time to be written.
@@ -26,3 +28,5 @@ familiar with this field to fully understand it. When I prepare this page,
 I will try to explain everything with more basic material, but for now, this
 will have to do.
 </p>
+
+[% END %]

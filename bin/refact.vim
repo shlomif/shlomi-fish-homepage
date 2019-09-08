@@ -53,3 +53,4 @@ command! M :s/\v^\<latemp_meta_desc *\"([^\"]+)\" *\/ *\>$/[% SET desc="\1" %]/
 command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_(abstract|common_top_elems|logo)\((\'\w+')\)\; \:\>/[% long_stories__calc_\1(id => \2) %]/
 let @s='[% IF 0 %]'
 let @e='[% END %]'
+map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>

@@ -6,7 +6,7 @@ use warnings;
 use Path::Tiny qw/ path /;
 use Text::WrapAsUtf8 qw/ print_utf8 /;
 
-sub my_slurp
+sub my_calc
 {
     my ( $class, $args ) = @_;
 
@@ -19,7 +19,14 @@ sub my_slurp
     $text =~ s# xml:space="preserve"([ >]|/>)#$1#g;
     $text =~ s#^[ \t]+(<)#$1#gms;
 
-    print_utf8($text);
+    return $text;
+}
+
+sub my_slurp
+{
+    my ( $class, $args ) = @_;
+
+    print_utf8( $class->my_calc($args) );
 
     return;
 }

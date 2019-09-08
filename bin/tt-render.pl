@@ -12,7 +12,7 @@ use File::Basename qw( basename );
 use File::Path qw( mkpath );
 use File::Spec ();
 use Path::Tiny qw/ path /;
-use Encode qw/ decode /;
+use Encode qw/ decode_utf8 /;
 use Getopt::Long qw/ GetOptions /;
 
 use HTML::Latemp::AddToc   ();
@@ -302,6 +302,11 @@ EOF
 
         return PerlBegin::TopicsExamples::FilesAndDirs->_run();
     },
+    p__Shlomif_XmlFictionSlurp_slurp => sub {
+        require Shlomif::XmlFictionSlurp;
+        my $args = shift() // {};
+        return Shlomif::XmlFictionSlurp->my_calc($args);
+    },
     long_stories__calc_all_stories_entries => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift() // {};
@@ -319,13 +324,22 @@ EOF
         my $args = shift() // {};
         return Shlomif::Homepage::LongStories->calc_abstract( $args->{id} );
     },
+    shlomif_include_colorized_file => sub {
+        require VimIface;
+        my $args = shift() // {};
+        return decode_utf8(
+            VimIface::get_syntax_highlighted_html_from_file(
+                +{ 'filename' => $args->{filename}, }
+            )
+        );
+    },
     long_stories__calc_logo => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift() // {};
         return Shlomif::Homepage::LongStories->calc_logo( $args->{id} );
     },
     p4n_lecture5_heb_notes => sub {
-        return decode( 'UTF-8', scalar `bash bin/lecture5-txt2html.bash` );
+        return decode_utf8( scalar `bash bin/lecture5-txt2html.bash` );
     },
 };
 

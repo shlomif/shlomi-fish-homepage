@@ -1,22 +1,21 @@
-#include "template.wml"
-#include "vim_include_code.wml"
-#include "Inc/cpan_dists.wml"
-#include "toc_div.wml"
+[% SET cpan_dist="XML-Grammar-Fiction" %]
+[%- SET title = "${cpan_dist} - Markup Languages for Writing Prose" -%]
+[%- SET desc = "${cpan_dist} - Markup Languages for Writing Prose: screenplays and fiction." -%]
+[%- SET apply_screenplay_style = 1 -%]
 
-<set-var cpan_dist="XML-Grammar-Fiction" />
 
-<latemp_subject "<get-var cpan_dist /> - Markup Languages for Writing Prose" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
+[%- PROCESS "vim_include_code.tt2" -%]
 
-<latemp_meta_desc "<get-var cpan_dist /> - Markup Languages for Writing Prose: screenplays and fiction." />
 
-<apply_screenplay_style />
 
 <div class="wrap-me">
 
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
-<get-var cpan_dist /> provides <b>Fiction-Text</b>, a lightweight
+[% cpan_dist %] provides <b>Fiction-Text</b>, a lightweight
 plaintext-based markup language, which can be used to write such fiction as
 stories, novellas, or possibly even novels. Fiction-Text is in turn converted
 to <b>Fiction-XML</b>, which is an XML-based grammar (which can be used
@@ -35,54 +34,47 @@ Encoding Initiative)</a>
 </p>
 
 <p>
-<get-var cpan_dist /> is part of the <a href="../">Web-CPAN XML-Grammar
+[% cpan_dist %] is part of the <a href="../">Web-CPAN XML-Grammar
 project</a> that provides several specialised processors for XML grammars
 for various tasks.
 </p>
 
-</about_sect>
+[%- END -%]
 
-<toc_div />
+[% toc_div( ) %]
 
-<h2_section id="links" title="Project Links">
+[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 
-<h3_section id="links-xml-grammar-fiction" title="For <get-var cpan_dist />">
+[% WRAPPER h3_section id = "links-xml-grammar-fiction"  title="For ${cpan_dist}" %]
 
-<bitbucket_cpan_dist_links
-    dist="<get-var cpan_dist />"
+[% WRAPPER bitbucket_cpan_dist_links     dist="${cpan_dist}"
     freecode_url="http://freecode.com/projects/xml-grammar-fiction/"
-    bitbucket_url="https://bitbucket.org/shlomif/fiction-xml">
-</bitbucket_cpan_dist_links>
+    bitbucket_url="https://bitbucket.org/shlomif/fiction-xml" %]
+[%- END -%]
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<x11_licence name="<get-var cpan_dist />" />
+[% PROCESS x11_licence name="${cpan_dist}" %]
 
-<h2_section id="examples" title="Examples">
+[% WRAPPER h2_section id = "examples"  title = "Examples"  %]
 
-<h3_section id="fiction_examples" title="Fiction-Text Examples">
+[% WRAPPER h3_section id = "fiction_examples"  title = "Fiction-Text Examples"  %]
 
-<define-tag __OLD__url_to_data_examples whitespace="delete">
-<preserve base />
-<set-var %attributes />
-https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text/
-<restore base />
-</define-tag>
+[% BLOCK __OLD__url_to_data_examples %]
+https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t/[% base %]/data/proto-text/
+[% END %]
 
-<define-tag url_to_data_examples whitespace="delete">
-<preserve base />
-<set-var %attributes />
-https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fiction/t/<get-var base />/data/proto-text
-<restore base />
-</define-tag>
+[% BLOCK url_to_data_examples %]
+https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fiction/t/[% base %]/data/proto-text
+[% END %]
 
 <ul>
 
 <li>
 <p>
-<a href="<url_to_data_examples base="fiction" />"><b>Distributed Examples</b></a>- there are some short examples under
+<a href="[% INCLUDE url_to_data_examples base="fiction" %]"><b>Distributed Examples</b></a>- there are some short examples under
 <code>t/fiction/data/</code> in the distribution (mostly in English).
 </p>
 </li>
@@ -112,15 +104,15 @@ Fiction-Text.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="screenplay_examples" title="Screenplay-Text Examples">
+[% WRAPPER h3_section id = "screenplay_examples"  title = "Screenplay-Text Examples"  %]
 
 <ul>
 
 <li>
 <p>
-<a href="<url_to_data_examples base="screenplay" />"><b>Distributed
+<a href="[% INCLUDE url_to_data_examples base="screenplay" %]"><b>Distributed
 Examples</b></a>- there are some short and silly examples
 in the <code>t/screenplay/data</code> directory in the distribution.
 </p>
@@ -188,13 +180,13 @@ well-known people (celebrities/etc.).
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<news_sect>
+[% WRAPPER news_sect  %]
 
-<h3_section id="news-2011-05-22" title="2011-05-22: <get-var cpan_dist /> version 0.5.1 is out">
+[% WRAPPER h3_section id = "news-2011-05-22"  title="2011-05-22: ${cpan_dist} version 0.5.1 is out"%]
 
 <p>
 There are many improvements in this release. Since the last news item here,
@@ -239,9 +231,9 @@ Add support for numeric entities such as <code>&amp;#91;</code>.
 
 </ol>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="news-2011-04-05" title="2011-04-05: <get-var cpan_dist /> version 0.1.5 is out">
+[% WRAPPER h3_section id = "news-2011-04-05"  title="2011-04-05: ${cpan_dist} version 0.1.5 is out"%]
 
 <p>
 This release has many small bug-fixes and improvements:
@@ -275,24 +267,24 @@ Add support for &lt;i&gt; tags in XML-Grammar-Screenplay.
 Everyone are recommended to upgrade.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="news-2009-11-25" title="2009-11-25: <get-var cpan_dist /> version 0.0.2 was released">
+[% WRAPPER h3_section id = "news-2009-11-25"  title="2009-11-25: ${cpan_dist} version 0.0.2 was released"%]
 
 <p>
-<get-var cpan_dist /> was released today, and should be available on CPAN
+[% cpan_dist %] was released today, and should be available on CPAN
 mirrors. This release features several improvements to the code’s
 internals and automated tests suites. The external behaviour of the code
 should remain the same, but the code is now much more malleable for future
 improvements, and there may have been a few accidental fixes.
 </p>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="news-2009-11-05" title="2009-11-05: <get-var cpan_dist /> version 0.0.1 was released">
+[% WRAPPER h3_section id = "news-2009-11-05"  title="2009-11-05: ${cpan_dist} version 0.0.1 was released"%]
 
 <p>
-The first version of <get-var cpan_dist /> (v0.0.1) was unleashed onto the
+The first version of [% cpan_dist %] (v0.0.1) was unleashed onto the
 world today. It was written for my own personal use as a writer of Hebrew
 stories, but I naturally decided to release it as open-source software.
 As first versions go, this version is rough on the edges, and has hairy
@@ -302,16 +294,16 @@ who are clueful enough.
 
 <p>
 Happy <a href="http://www.nanowrimo.org/">NaNoWriMo (National Novel
-Writing Month)</a> and hopefully <get-var cpan_dist /> will prove of assistance
+Writing Month)</a> and hopefully [% cpan_dist %] will prove of assistance
 to you for this NaNoWriMo or future ones.
 </p>
 
-</h3_section>
-</news_sect>
+[%- END -%]
+[%- END -%]
 
-<h2_section id="coverage" title="Coverage of <get-var cpan_dist />">
+[% WRAPPER h2_section id = "coverage"  title="Coverage of ${cpan_dist}" %]
 
-<h3_section id="coverage-shlomif" title="Coverage in Shlomi Fish’s Blogs">
+[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage in Shlomi Fish’s Blogs"  %]
 
 <ul>
 
@@ -348,80 +340,60 @@ to you for this NaNoWriMo or future ones.
 
 </ul>
 
-</h3_section>
+[%- END -%]
 
-</h2_section>
+[%- END -%]
 
-<h2_section id="demos" title="Demos">
+[% WRAPPER h2_section id = "demos"  title = "Demos"  %]
 
-<h3_section id="demo-fiction1" title="Fiction Demo 1">
+[% WRAPPER h3_section id = "demo-fiction1"  title = "Fiction Demo 1"  %]
 
 <p>
 If we have this sample Fiction-Text document:
 </p>
 
-<shlomif_code_block>
-<shlomif_include_colorized_file filename="../lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt" />
-</shlomif_code_block>
+[% WRAPPER shlomif_code_block %]
+[% shlomif_include_colorized_file(filename=>"lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt") %]
+[% END %]
 
 <p>
 Then after converting it to XML and then to XHTML we get this:
 </p>
 
 <div class="fiction_xml">
-<:{
-
-use strict;
-use warnings;
-
-use Shlomif::XmlFictionSlurp;
-
-Shlomif::XmlFictionSlurp->my_slurp(
-    +{
-        fn => '../lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
+[% p__Shlomif_XmlFictionSlurp_slurp(
+        fn => 'lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
         index_id => 'fiction_text_index',
-    }
-);
-}:>
-
+    ) %]
 </div>
 
-</h3_section>
+[%- END -%]
 
-<h3_section id="demo-screenplay1" title="Screenplay Demo 1">
+[% WRAPPER h3_section id = "demo-screenplay1"  title = "Screenplay Demo 1"  %]
 
 <p>
 If we have this sample screenplay:
 </p>
 
-<shlomif_code_block>
-<shlomif_include_colorized_file filename="../lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt" />
-</shlomif_code_block>
+[% WRAPPER shlomif_code_block %]
+[% shlomif_include_colorized_file(filename=>"lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt") %]
+[% END %]
 
 <p>
 Then after converting it to XML and then to XHTML we get this:
 </p>
 
-<:{
-
-use strict;
-use warnings;
-
-Shlomif::XmlFictionSlurp->my_slurp(
-    {
-    fn =>'../lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html',
+[% p__Shlomif_XmlFictionSlurp_slurp(
+    fn =>'lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html',
     index_id => 'screenplay_text_index',
+    )
+%]
 
-    }
-);
+[%- END -%]
 
-}:>
+[%- END -%]
 
-</h3_section>
-
-</h2_section>
-
-<h2_section id="similar" title="Similar Projects">
+[% WRAPPER h2_section id = "similar"  title = "Similar Projects"  %]
 
 <ul>
 
@@ -454,6 +426,8 @@ Also see <a href="https://asciidoctor.org/">Asciidoctor</a>.
 
 </ul>
 
-</h2_section>
+[%- END -%]
 
 </div>
+
+[% END %]

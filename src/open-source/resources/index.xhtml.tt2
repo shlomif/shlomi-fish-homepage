@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Software Resources Pages" -%]
+[%- SET desc = "Software Resources Pages - lists of prominent alternatives, and beginner and adovcacy sites" -%]
 
-<latemp_subject "Software Resources Pages" />
 
-<latemp_meta_desc "Software Resources Pages - lists of prominent alternatives, and beginner and adovcacy sites" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <section class="h2">
 
@@ -10,7 +11,7 @@
 
 <div class="sub_section">
 
-<h3><a href="$(ROOT)/open-source/portability-libs/">Cross-Platform Abstraction Libraries for Portability</a></h3>
+<h3><a href="[% base_path %]open-source/portability-libs/">Cross-Platform Abstraction Libraries for Portability</a></h3>
 
 <p>
 A small directory of libraries that make writing applications that run on
@@ -200,3 +201,5 @@ source community.
 </p>
 
 </section>
+
+[% END %]

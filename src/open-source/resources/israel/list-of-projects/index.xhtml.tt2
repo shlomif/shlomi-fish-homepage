@@ -1,11 +1,11 @@
-#include "template.wml"
-#include "toc_div.wml"
+[%- SET title = "List of Israeli Open-Source Projects" -%]
+[%- SET desc = "List of Israeli Open-Source Projects" -%]
 
-<latemp_subject "List of Israeli Open-Source Projects" />
 
-<latemp_meta_desc "List of Israeli Open-Source Projects" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<toc_div />
+[% toc_div( ) %]
 
 <h2 id="intro">Introduction</h2>
 
@@ -501,4 +501,6 @@ the site of the Knesset, the Israeli parliament.
 
 <h2 id="licence">Licence</h2>
 
-<cc_by_british_blurb year="2011" />
+[% cc_by_british_blurb( "year" => "2011", ) %]
+
+[% END %]

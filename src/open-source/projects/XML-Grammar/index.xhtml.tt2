@@ -1,12 +1,10 @@
-#include "template.wml"
+[%- SET title = "The XML-Grammar Meta-Project" -%]
+[%- SET desc = "The XML-Grammar Meta-Project: XML-Grammar-Fiction, XML-Grammar-Screenplay, XML-Grammar-Fortune, etc." -%]
 
-#include "Inc/cpan_dists.wml"
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
-<latemp_subject "The XML-Grammar Meta-Project" />
-
-<latemp_meta_desc "The XML-Grammar Meta-Project: XML-Grammar-Fiction, XML-Grammar-Screenplay, XML-Grammar-Fortune, etc." />
-
-<about_sect>
+[% WRAPPER about_sect  %]
 
 <p>
 The XML-Grammar project aims to define several XML grammars for specialised
@@ -29,9 +27,9 @@ Sometimes, we define simpler and less verbose <b>text-based
 markup languages</b> that are in turn converted to the XML.
 </p>
 
-</about_sect>
+[%- END -%]
 
-<h2_section id="list-of-projects" title="List of Modules">
+[% WRAPPER h2_section id = "list-of-projects"  title = "List of Modules"  %]
 
 <ol>
 
@@ -73,17 +71,19 @@ plain-text from them.
 </li>
 
 <li>
-<cpan_self_dist d="XML-Grammar-ProductsSyndication" /> -
+[% cpan_self_dist( "d" => "XML-Grammar-ProductsSyndication", ) %] -
 an XML grammar for creating lists of products. See
-<a href="$(ROOT)/recommendations/">my recommendations page</a> for examples.
+<a href="[% base_path %]recommendations/">my recommendations page</a> for examples.
 </li>
 
 <li>
 <p>
-<cpan_self_dist d="XML-Grammar-Vered" /> -
+[% cpan_self_dist( "d" => "XML-Grammar-Vered", ) %] -
 an XML grammar for managing some technical documents.
 </p>
 </li>
 </ol>
 
-</h2_section>
+[%- END -%]
+
+[% END %]

@@ -1,8 +1,9 @@
-#include "template.wml"
+[%- SET title = "Kakurasu Solver" -%]
+[%- SET desc = "Kakurasu Solver" -%]
 
-<latemp_subject "Kakurasu Solver" />
 
-<latemp_meta_desc "Kakurasu Solver" />
+[%- PROCESS "blocks.tt2" -%]
+[%- WRAPPER wrap_html -%]
 
 <p>
 This is a solver for
@@ -16,17 +17,17 @@ be freely re-used under the terms of the
 
 <h2 id="download">Download</h2>
 
-<set-var ver="0.2.0" />
-<set-var arc="kakurasu_solver-<get-var ver />.tar.gz" />
+[% SET ver = "0.2.0" %]
+[% SET arc = "kakurasu_solver-${ver}.tar.gz" %]
 
 <ul>
 
 <li>
-<a href="http://bitbucket.org/shlomif/lp-based-puzzle-solvers/downloads/<get-var arc />"><get-var arc /></a> - requires python-lp_solve to run.
+<a href="http://bitbucket.org/shlomif/lp-based-puzzle-solvers/downloads/[% arc %]">[% arc %]</a> - requires python-lp_solve to run.
 </li>
 
 <li>
-<a href="<get-var arc />"><get-var arc /> - Locally mirrored copy</a>.
+<a href="[% arc %]">[% arc %] - Locally mirrored copy</a>.
 </li>
 
 </ul>
@@ -41,9 +42,7 @@ code, a web-interface to it, an issue tracker and some downloads.
 </li>
 
 <!--
-
 TO ADD : Freecode record.
-
 <li>
 <a href="http://freecode.com/projects/black-hole-solitaire-solver">Freecode
 Record</a>
@@ -68,4 +67,6 @@ for many puzzles.
 </li>
 </ul>
 
-<x11_licence name="The Kakurasu Solver" />
+[% PROCESS x11_licence name = "The Kakurasu Solver",  %]
+
+[% END %]

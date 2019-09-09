@@ -760,7 +760,7 @@ Summer</i>, it is going to be scary.”
 
 [%- END -%]
 
-[% WRAPPER eng_header_joke id = "objective_philosophy"  Header = "Objective Philosophy…"  %]
+[% WRAPPER eng_header_joke id = "objective_philosophy"  header = "Objective Philosophy…"  %]
 
 [% WRAPPER quote  %]
 
@@ -3005,7 +3005,7 @@ My father’s mentor advice.
 [%- END -%]
 
 [%- END -%]
-</div> ;;; End of aphorisms div.
+</div>
 
 <h2 id="license">Copyright and Licence</h2>
 
@@ -3022,6 +3022,6 @@ My father’s mentor advice.
 </li>
 </ul>
 
-</div> ;;; End for main_text
+</div>
 
 [% END %]

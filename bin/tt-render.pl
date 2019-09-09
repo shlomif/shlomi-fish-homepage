@@ -6,7 +6,8 @@ use 5.014;
 use utf8;
 
 use lib './lib';
-use Template ();
+use Template                         ();
+use Parallel::ForkManager::Segmented ();
 
 use File::Basename qw( basename );
 use File::Path qw( mkpath );
@@ -395,8 +396,9 @@ sub _inc
     return sprintf( "%s/%s/%s%s", $INC_PREF, $result, $id, $INC_SUFFIX );
 }
 
-foreach my $result (@tt)
+sub proc
 {
+    my $result = shift;
     $::latemp_filename = $result;
     my $myinc    = sub { return _inc( $result, shift ); };
     my $basename = basename($result);
@@ -484,3 +486,11 @@ foreach my $result (@tt)
 =cut
 
 }
+Parallel::ForkManager::Segmented->new->run(
+    {
+        items        => \@tt,
+        nproc        => 4,
+        batch_size   => 64,
+        process_item => \&proc,
+    }
+);

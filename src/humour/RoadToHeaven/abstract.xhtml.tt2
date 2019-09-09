@@ -13,12 +13,12 @@
 
 <div class="jqueryui_tabs">
 
-<ul class="selector">
+<ul>
 <li><a href="#[% en_id %]">English</a></li>
 <li><a href="#[% he_id %]">Hebrew (עברית)</a></li>
 </ul>
 
-[% FOREACH lang in ["en", "he"] %]
+[% FOREACH shlomif_lang in ["en", "he"] %]
 
 [% WRAPPER en  %]
 

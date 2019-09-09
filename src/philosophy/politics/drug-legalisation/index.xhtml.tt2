@@ -19,7 +19,7 @@
 
 <h3 id="body">Body</h3>
 
-[% INCLUDE "docbook/5/rendered/case-for-drug-legalisation-v3.xhtml" %]
+[% path_slurp("docbook/5/rendered/case-for-drug-legalisation-v3.xhtml") %]
 
 [% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "case-for-drug-legalisation-v3",  %]
 

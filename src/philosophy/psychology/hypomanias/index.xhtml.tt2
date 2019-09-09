@@ -27,7 +27,7 @@ clinical depressions, clinical anxieties and especially hypomanias (=
 
 <h3 id="itself">The Article Itself - 2nd Revision</h3>
 
-[% INCLUDE "docbook/5/rendered/dealing-with-hypomanias.xhtml" %]
+[% path_slurp("docbook/5/rendered/dealing-with-hypomanias.xhtml") %]
 
 [% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "dealing-with-hypomanias",  %]
 

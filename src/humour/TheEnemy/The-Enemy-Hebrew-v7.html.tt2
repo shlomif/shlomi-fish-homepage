@@ -14,7 +14,7 @@
 
 <div class="wrap-me">
 
-[% INCLUDE "docbook/5/rendered/The-Enemy-Hebrew-v7.xhtml" %]
+[% path_slurp("docbook/5/rendered/The-Enemy-Hebrew-v7.xhtml") %]
 
 </div>
 

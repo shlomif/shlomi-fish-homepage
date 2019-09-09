@@ -13,7 +13,7 @@ one can sharpen them using an image retouching program.
 </p>
 
 <table class="thumbs">
-[% INCLUDE "photos/2005-11-27/thumbs.html" %]
+[% path_slurp("photos/2005-11-27/thumbs.html") %]
 </table>
 
 <h2>Licence</h2>

@@ -10,7 +10,7 @@
 
 <h2 id="text">הטקסט של הסיפור</h2>
 
-[% INCLUDE "docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml" %]
+[% path_slurp("docbook/5/rendered/The-Enemy-Hebrew-rev6.xhtml") %]
 
 <div class="english">
 [% cc_by_sa_license_british( "year" => "1997", head_tag => "h2", ) %]

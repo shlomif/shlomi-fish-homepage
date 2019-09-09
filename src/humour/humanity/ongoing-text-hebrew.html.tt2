@@ -8,7 +8,7 @@
 
 <h2 id="text">הטקסט של התסריט</h2>
 
-[% INCLUDE "screenplay-xml/rendered-html/Humanity-Movie-hebrew.html" %]
+[% path_slurp("screenplay-xml/rendered-html/Humanity-Movie-hebrew.html") %]
 
 <div class="english">
 [% PROCESS humanity_licensing  %]

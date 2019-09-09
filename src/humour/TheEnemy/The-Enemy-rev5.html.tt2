@@ -10,6 +10,6 @@
 
 <p><b>מאת:</b> שלומי פיש </p>
 
-[% INCLUDE "htmls/The-Enemy-rev5.html-part" %]
+[% path_slurp("htmls/The-Enemy-rev5.html-part") %]
 
 [% END %]

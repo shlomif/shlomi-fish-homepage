@@ -11,7 +11,7 @@
 
 <h3 id="itself3">Article</h3>
 
-[% INCLUDE "docbook/5/rendered/case-for-file-swapping-rev3.xhtml" %]
+[% path_slurp("docbook/5/rendered/case-for-file-swapping-rev3.xhtml") %]
 
 <h2 id="coverage">Coverage</h2>
 

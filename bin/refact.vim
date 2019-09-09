@@ -47,10 +47,12 @@ function! MyRename()
      execute "e " . substitute(expand("%"), "^t2/\\(.*\\)\\.wml$", "src/\\1.tt2", "")
 endfunction
 command! R call MyRename()
-command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
+" command! S :s/\v^\#include \"([^\"]+)\"$/[% INCLUDE "\1" %]/
+command! S :s/\v^\[\% INCLUDE \"([^\"]+)\" \%\]$/[% path_slurp("\1") %]/
 command! -bar D execute("S") | :s/\v\.wml/.tt2/
 command! M :s/\v^\<latemp_meta_desc *\"([^\"]+)\" *\/ *\>$/[% SET desc="\1" %]/
 command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_(abstract|common_top_elems|logo)\((\'\w+')\)\; \:\>/[% long_stories__calc_\1(id => \2) %]/
 let @s='[% IF 0 %]'
 let @e='[% END %]'
-map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>
+" map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>
+map <F6> :S<cr>

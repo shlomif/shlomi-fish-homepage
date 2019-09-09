@@ -5,6 +5,6 @@
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE "screenplay-xml/rendered-html/ae-interview.html" %]
+[% path_slurp("screenplay-xml/rendered-html/ae-interview.html") %]
 
 [% END %]

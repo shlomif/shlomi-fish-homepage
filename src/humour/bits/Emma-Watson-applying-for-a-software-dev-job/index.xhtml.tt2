@@ -37,7 +37,7 @@ software</a> developer… ;-).
 
 <h2 id="text">Text</h2>
 
-[% INCLUDE "screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html" %]
+[% path_slurp("screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html") %]
 
 </section>
 

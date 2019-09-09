@@ -4,6 +4,6 @@
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE "prod-synd/films/include-me.html" %]
+[% path_slurp("prod-synd/films/include-me.html") %]
 
 [% END %]

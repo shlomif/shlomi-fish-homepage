@@ -18,7 +18,7 @@
 
 <h3 id="the-story">The Text</h3>
 
-[% INCLUDE "docbook/5/rendered/The-Pope-Died-on-Sunday-english.xhtml" %]
+[% path_slurp("docbook/5/rendered/The-Pope-Died-on-Sunday-english.xhtml") %]
 
 </div>
 

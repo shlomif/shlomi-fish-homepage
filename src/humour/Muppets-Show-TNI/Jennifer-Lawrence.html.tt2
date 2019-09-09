@@ -7,6 +7,6 @@
 
 [% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]
 
-[% INCLUDE "screenplay-xml/rendered-html/Muppets-Show--Jennifer-Lawrence.html" %]
+[% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Jennifer-Lawrence.html") %]
 
 [% END %]

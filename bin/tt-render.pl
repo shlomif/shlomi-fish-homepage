@@ -94,6 +94,11 @@ sub cpan_dist
     return qq#<a href="http://metacpan.org/release/$args{d}">$args{body}</a>#;
 }
 
+sub path_slurp
+{
+    return slurp( "lib/" . shift );
+}
+
 sub retrieved_slurp
 {
     return slurp( "lib/retrieved-html-parts/" . shift );
@@ -313,6 +318,7 @@ EOF
         return cpan_dist( { %args, body => $args{d} } );
     },
     retrieved_slurp => \&retrieved_slurp,
+    path_slurp      => \&path_slurp,
     p4n_slurp       => sub {
         my $idx = shift;
         return path(

@@ -52,6 +52,6 @@ and on <a href="http://www.youtube.com/user/ShlomiFish">my YouTube page</a>.
 ;;; + Explosive - the best of bond
 [% END %]
 
-[% INCLUDE "prod-synd/music/include-me.html" %]
+[% path_slurp("prod-synd/music/include-me.html") %]
 
 [% END %]

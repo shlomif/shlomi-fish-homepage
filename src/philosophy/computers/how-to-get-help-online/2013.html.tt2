@@ -10,7 +10,7 @@
 
 <h2 id="content">Content</h2>
 
-[% INCLUDE "pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped" %]
+[% path_slurp("pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped") %]
 
 <h2 id="coverage">Coverage</h2>
 

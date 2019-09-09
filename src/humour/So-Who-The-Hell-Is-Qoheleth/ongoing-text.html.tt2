@@ -11,7 +11,7 @@
 
 
 <div class="who_is_qoheleth">
-[% INCLUDE "screenplay-xml/rendered-html/So-Who-the-Hell-is-Qoheleth.html" %]
+[% path_slurp("screenplay-xml/rendered-html/So-Who-the-Hell-is-Qoheleth.html") %]
 </div>
 
 [% END %]

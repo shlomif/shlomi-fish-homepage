@@ -13,7 +13,7 @@
 
 <div class="wrap-me">
 
-[% INCLUDE "lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml" %]
+[% path_slurp("docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml") %]
 
 </div>
 

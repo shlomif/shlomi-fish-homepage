@@ -11,6 +11,6 @@
 
 <h2 id="content">Content</h2>
 
-[% INCLUDE "docbook/5/rendered/SummerNSA-2014-09-call-for-action.xhtml" %]
+[% path_slurp("docbook/5/rendered/SummerNSA-2014-09-call-for-action.xhtml") %]
 
 [% END %]

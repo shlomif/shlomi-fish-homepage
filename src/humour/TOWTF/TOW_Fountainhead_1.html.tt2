@@ -7,6 +7,6 @@
 
 [% long_stories__calc_common_top_elems(id => 'tow_the_fountainhead') %]
 
-[% INCLUDE "screenplay-xml/rendered-html/TOW_Fountainhead_1.html" %]
+[% path_slurp("screenplay-xml/rendered-html/TOW_Fountainhead_1.html") %]
 
 [% END %]

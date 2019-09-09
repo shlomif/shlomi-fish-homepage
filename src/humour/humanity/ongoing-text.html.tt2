@@ -6,7 +6,7 @@
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE "screenplay-xml/rendered-html/Humanity-Movie.html" %]
+[% path_slurp("screenplay-xml/rendered-html/Humanity-Movie.html") %]
 
 [% PROCESS humanity_licensing  %]
 

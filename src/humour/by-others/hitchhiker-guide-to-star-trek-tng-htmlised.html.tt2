@@ -6,6 +6,6 @@
 [%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE "screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html" %]
+[% path_slurp("screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html") %]
 
 [% END %]

@@ -22,7 +22,7 @@
 
 <h3 id="the-story">The Story</h3>
 
-[% INCLUDE "docbook/5/rendered/human-hacking-field-guide-v2-arabic.xhtml" %]
+[% path_slurp("docbook/5/rendered/human-hacking-field-guide-v2-arabic.xhtml") %]
 
 </div>
 

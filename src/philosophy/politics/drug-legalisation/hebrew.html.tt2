@@ -34,7 +34,7 @@ This work is licensed under the <a href="http://creativecommons.org/licenses/by/
 
 <h3 id="body">Body</h3>
 
-[% INCLUDE "docbook/5/rendered/case-for-drug-legalisation--hebrew-v3.xhtml" %]
+[% path_slurp("docbook/5/rendered/case-for-drug-legalisation--hebrew-v3.xhtml") %]
 
 <h2 id="other_formats">Other Formats</h2>
 

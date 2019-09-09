@@ -490,7 +490,7 @@ Parallel::ForkManager::Segmented->new->run(
     {
         items        => \@tt,
         nproc        => 4,
-        batch_size   => 64,
+        batch_size   => 100,
         process_item => \&proc,
     }
 );

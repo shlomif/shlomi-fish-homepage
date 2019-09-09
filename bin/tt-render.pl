@@ -83,16 +83,17 @@ sub cpan_mod
 
 sub cpan_homepage
 {
-    my %args = %{ shift() };
-    return qq#http://metacpan.org/author/\U$args{who}\E#;
+    my $args = shift();
+    return qq#http://metacpan.org/author/\U$args->{who}\E#;
 }
 
 my $shlomif_cpan = cpan_homepage( +{ who => 'shlomif' } );
 
 sub cpan_dist
 {
-    my %args = %{ shift() };
-    return qq#<a href="http://metacpan.org/release/$args{d}">$args{body}</a>#;
+    my $args = shift;
+    return
+        qq#<a href="http://metacpan.org/release/$args->{d}">$args->{body}</a>#;
 }
 
 sub path_slurp
@@ -112,8 +113,8 @@ sub slurp
 
 sub cc_by_sa_british_blurb
 {
-    my %args = %{ shift() // {} };
-    my $year = $args{year};
+    my $args = shift;
+    my $year = $args->{year};
 
     return <<"EOF";
 <p>
@@ -136,14 +137,14 @@ EOF
 
 sub cc_by_sa_license_british
 {
-    my %args = %{ shift() // {} };
+    my $args = shift() // {};
 
-    my $head_tag = $args{head_tag} // 'h3';
+    my $head_tag = $args->{head_tag} // 'h3';
 
     return qq#
 <$head_tag id="license">Copyright and Licence</$head_tag># .
 
-        cc_by_sa_british_blurb( \%args );
+        cc_by_sa_british_blurb($args);
 
 }
 
@@ -163,8 +164,8 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
         return;
     },
     print_nav_block => sub {
-        my %args = %{ shift() // {} };
-        return _print_nav_block( $args{name} );
+        my $args = shift;
+        return _print_nav_block( $args->{name} );
     },
     p_ArticleIndex__calc_string => sub {
         require Shlomif::Homepage::ArticleIndex;
@@ -192,9 +193,10 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             { dir => "lib/feeds/shlomif_hsite" } )->render_old;
     },
     print_markdown => sub {
-        my %args = %{ shift() // {} };
+        my $args = shift;
+
         require Shlomif::MD;
-        return Shlomif::MD::as_text( $args{fn} );
+        return Shlomif::MD::as_text( $args->{fn} );
     },
     longblank => <<'EOF',
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -204,16 +206,18 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
 EOF
     main_email => 'shlomif@shlomifish.org',
     my_acronym => sub {
-        my %args = %{ shift() // {} };
-        return $latemp_acroman->abbr( { key => $args{key}, } )->{html};
+        my $args = shift;
+
+        return $latemp_acroman->abbr( { key => $args->{key}, } )->{html};
     },
     shlomif_cpan             => $shlomif_cpan,
     cpan_homepage            => \&cpan_homepage,
     cc_by_sa_british_blurb   => \&cc_by_sa_british_blurb,
     cc_by_sa_license_british => \&cc_by_sa_license_british,
     cc_by_british_blurb      => sub {
-        my %args = %{ shift() // {} };
-        my $year = $args{year};
+        my $args = shift;
+
+        my $year = $args->{year};
 
         return <<"EOF";
 <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
@@ -236,8 +240,9 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 EOF
     },
     cc_by_hebrew_blurb => sub {
-        my %args = %{ shift() // {} };
-        my $year = $args{year};
+        my $args = shift;
+
+        my $year = $args->{year};
 
         return <<"EOF";
 <p><a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
@@ -282,22 +287,26 @@ EOF
         return qq#<nav class="page_toc">$c</nav>#;
     },
     wiki_link => sub {
-        my %args = %{ shift() // {} };
+        my $args = shift() // {};
+
         return qq#http://perl.net.au/wiki/Beginners#
-            . ( $args{url} ? '/' . $args{url} : '' );
+            . ( $args->{url} ? '/' . $args->{url} : '' );
     },
     cpan_self_mod => sub {
-        my %args = %{ shift() };
-        return cpan_mod( %args, body => $args{'m'} );
+        my $args = shift;
+
+        return cpan_mod( %$args, body => $args->{'m'} );
     },
     cpan_b_self_dist => sub {
-        my %args = %{ shift() };
-        return cpan_dist( { %args, body => "<b>$args{d}</b>", } );
+        my $args = shift;
+
+        return cpan_dist( { %$args, body => "<b>$args->{d}</b>", } );
     },
     irc_channel => sub {
-        my %args    = %{ shift() };
-        my $net     = $args{net};
-        my $chan    = $args{chan};
+        my $args = shift;
+
+        my $net     = $args->{net};
+        my $chan    = $args->{chan};
         my %servers = (
             'freenode' => "irc.freenode.net",
             'efnet'    => "irc.Prison.NET",
@@ -315,8 +324,9 @@ EOF
             . "/%23$chan\"><code>#$chan</code></a>";
     },
     cpan_self_dist => sub {
-        my %args = %{ shift() };
-        return cpan_dist( { %args, body => $args{d} } );
+        my $args = shift;
+
+        return cpan_dist( { %$args, body => $args->{d} } );
     },
     retrieved_slurp => \&retrieved_slurp,
     path_slurp      => \&path_slurp,
@@ -348,18 +358,21 @@ EOF
     },
     long_stories__calc_common_top_elems => sub {
         require Shlomif::Homepage::LongStories;
-        my %args = %{ shift() // {} };
+        my $args = shift;
+
         return Shlomif::Homepage::LongStories->calc_common_top_elems(
-            $args{id} );
+            $args->{id} );
     },
     long_stories__calc_abstract => sub {
         require Shlomif::Homepage::LongStories;
-        my $args = shift() // {};
+        my $args = shift;
+
         return Shlomif::Homepage::LongStories->calc_abstract( $args->{id} );
     },
     shlomif_include_colorized_file => sub {
         require VimIface;
-        my $args = shift() // {};
+        my $args = shift;
+
         return decode_utf8(
             VimIface::get_syntax_highlighted_html_from_file(
                 +{ 'filename' => $args->{filename}, }
@@ -368,7 +381,8 @@ EOF
     },
     long_stories__calc_logo => sub {
         require Shlomif::Homepage::LongStories;
-        my $args = shift() // {};
+        my $args = shift;
+
         return Shlomif::Homepage::LongStories->calc_logo( $args->{id} );
     },
     p4n_lecture5_heb_notes => sub {

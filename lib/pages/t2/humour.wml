@@ -3,9 +3,12 @@
 #include "toc_div.wml"
 
 <ifeq "<get-var lang />" "eng"
-    "<latemp_subject "Shlomi Fish’s Aphorisms and Quotes Collection" />"
-    "<latemp_subject "מקבץ אמרות השפר והציטוטים של שלומי פיש" />"
+    "<set-var subject="Shlomi Fish’s Aphorisms and Quotes Collection" />"
+    "<set-var subject="מקבץ אמרות השפר והציטוטים של שלומי פיש" />"
     />
+
+<latemp_subject "<get-var subject />" />
+<latemp_meta_desc "<get-var subject />" />
 
 #include "lang_switch.wml"
 

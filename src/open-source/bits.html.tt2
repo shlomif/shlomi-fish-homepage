@@ -70,9 +70,8 @@ under the terms of the MIT/Expat license. It queries either
 </p>
 
 <p>
-You need to install the
-[%- WRAPPER cpan_dist d = "Xmms-Perl" -%]Xmms-Perl distribution[%- END -%]
-and have the X-Chat Perl interface. To use, make it executable and put it
+You need to install the [% WRAPPER cpan_dist d = "Xmms-Perl" -%]Xmms-Perl distribution[%- END
+%] and have the X-Chat Perl interface. To use, make it executable and put it
 under your <code>$HOME/.xchat2</code> directory.
 </p>
 

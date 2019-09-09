@@ -250,8 +250,7 @@ $(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
 rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
-	touch $(T2_SRC_DIR)/index.xhtml.wml
-	touch $(T2_SRC_DIR)/old-news.html.wml
+	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
 PROD_SYND_MUSIC_DIR = lib/prod-synd/music
 PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
@@ -434,11 +433,9 @@ $(T2_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml
 # Rebuild the pages containing the links to $(T2_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
 
-$(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.wml
+$(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.tt2
 
-$(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.wml
-
-$(T2_DEST)/links.html $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/index.xhtml $(T2_DEST)/philosophy/computers/web/create-a-great-personal-homesite/rev2.html $(DEST_HUMOUR)/by-others/division-two/index.xhtml: lib/div2mag.wml
+$(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.tt2
 
 tidy: all
 	$(PERL) bin/run-tidy.pl
@@ -782,11 +779,9 @@ $(Mater_JS):
 
 $(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
-$(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.wml
-$(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.wml
-$(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.wml
-
-$(T2_DEST)/open-source/projects/Module-Format/index.xhtml $(T2_DEST)/open-source/projects/File-Find-Object/index.xhtml $(T2_DEST)/open-source/projects/File-Dir-Dumper/index.html $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml $(T2_DEST)/open-source/projects/black-hole-solitaire-solver/index.xhtml $(T2_DEST)/open-source/projects/japanese-puzzle-games/abc-path/index.xhtml $(T2_DEST)/meta/FAQ/index.xhtml $(T2_DEST)/open-source/contributions/index.xhtml: lib/Inc/cpan_dists.wml
+$(T2_DEST)/personal.html $(T2_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
+$(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.tt2
+$(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.tt2
 
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 

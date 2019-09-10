@@ -144,7 +144,6 @@ sub get_fortune_all_in_one_page_html_tt2
 
 @{[$class->_get_common_tt2]}
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <nav class="page_toc">
@@ -291,7 +290,6 @@ sub get_single_fortune_page_html_tt2
 
 @{[$class->_get_common_tt2]}
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2>About</h2>

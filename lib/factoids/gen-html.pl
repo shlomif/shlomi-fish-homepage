@@ -995,8 +995,6 @@ foreach my $page (@pages)
 [% SET title = "{{p.title() }}" %]
 [% SET desc = "{{p.meta_desc()}}" %]
 
-[% PROCESS "blocks.tt2" %]
-
 [% WRAPPER wrap_html %]
 
 [% PROCESS "Inc/emma_watson.tt2" %]

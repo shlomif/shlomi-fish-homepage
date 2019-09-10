@@ -10,8 +10,6 @@ td > p:first-child
 </style>
 [% END %]
 
-
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [%- PROCESS "lib/Inc/resume-common.tt2" -%]

@@ -6,7 +6,6 @@
 [%- SET desc = "שלומי פיש - שכור לך שפצר!" %]
 [% END %]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% INCLUDE lang_switch url_eng="./" url_heb="hebrew.html" %]

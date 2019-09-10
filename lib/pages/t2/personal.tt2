@@ -6,7 +6,6 @@
 [%- SET desc = "הביוגרפיה של שלומי פיש - לימודים, עבודה, כתיבה, מיזמי קוד פתוח ותוכן פתוח, פילוסופיה וחיבורים." %]
 [% END %]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/shlomif_head_photo_tag.tt2" %]

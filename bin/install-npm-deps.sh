@@ -6,13 +6,19 @@
 # Distributed under terms of the MIT license.
 #
     # hackmyresume \
-npm install \
-    camel-case \
-    eslint \
-    eslint-config-google \
-    html-minifier \
-    jquery \
-    param-case \
-    prettier \
-    sass \
-    uglify-es \
+(
+npm install
+exit
+
+########### Not needed due to package.json .
+#     camel-case \
+#     eslint \
+#     eslint-config-google \
+#     html-minifier \
+#     jquery \
+#     param-case \
+#     prettier \
+#     sass \
+#     uglify-es \
+
+)

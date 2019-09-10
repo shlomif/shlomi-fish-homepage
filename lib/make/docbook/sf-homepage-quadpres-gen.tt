@@ -37,7 +37,7 @@ QUADPRES__WML_OPTS := --passoption=3,-I$(QUADPRES_COMMON_INC_DIR) -I$(QUADPRES_C
 [% l %]: [% targets %]
 
 [% BLOCK cmd %]
-[% "\t" %]export T2_DEST="$(PWD)/$(T2_DEST)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) multi_run render -a --cache \; render_all_in_one_page[% IF val.lang == 'he' %] --html-dir rtl[% END %] --output-dir all-in-one \; pack \; upload)
+[% "\t" %]export T2_DEST="$(PWD)/$(T2_DEST)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% v %]_BASE) && $(QUADPRES_EXE) multi_run render -a --cache \; render_all_in_one_page[% IF val.lang == 'he' %] --html-dir rtl[% END %] --output-dir all-in-one \; pack)
 [% "\t" %]touch [% vstamp %]
 [% END %]
 

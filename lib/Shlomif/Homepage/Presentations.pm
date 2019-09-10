@@ -91,14 +91,15 @@ EOF
 -DROOT~src --passoption=2,-X3330 -DTHEME=shlomif-text
 EOF
 
+        my $ini_dest_dir = qq#[% ENV.T2_DEST %]/$dest_dir#;
         path("$dir/quadpres.ini")->spew_utf8(<<"EOF");
 [quadpres]
-server_dest_dir=./rendered
+tt_server_dest_dir=$ini_dest_dir
 setgid_group=
 
 [upload]
 util=rsync
-tt_upload_path=[% ENV.T2_DEST %]/$dest_dir/
+tt_upload_path=$ini_dest_dir/
 
 [hard-disk]
 dest_dir=./hard-disk-html
